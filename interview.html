@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="vi" data-district="consumer">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bàn làm việc — Năm cuộc phỏng vấn — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Bài tập Tuần 3: phỏng vấn 5 người về lần mua gần nhất. Trang tự bắt câu trả lời mang tính dự đoán và nhắc nếu chưa ai chọn “không làm gì”.">
+<meta property="og:title" content="Bàn làm việc — Năm cuộc phỏng vấn">
+<meta property="og:description" content="Ghi lại 5 cuộc phỏng vấn về hành vi đã xảy ra, không phải ý định. Trang tự bắt câu dự đoán.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .setup{border-top:1px solid var(--ink);padding-top:16px;margin:clamp(20px,3vw,44px) 0;display:grid;gap:14px}
+  @media(min-width:820px){.setup{grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,44px)}}
+  .people{display:grid;gap:clamp(20px,2.6vw,38px);margin:clamp(20px,3vw,44px) 0}
+  .pp{border-top:var(--rule);padding-top:14px;display:grid;gap:12px}
+  .pp__top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .pp .row{display:grid;gap:5px}
+  .pp .row .label{color:var(--ink-38)}
+  .quote{font-family:var(--serif);font-style:italic;font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.45}
+  .pp[data-flag] .pp__flag{display:block}
+  .pp__flag{display:none;font-size:13px;line-height:1.5;color:var(--accent);border-left:2px solid var(--accent);padding-left:14px}
+  .verdictbox{border-left:2px solid var(--accent);padding:4px 0 4px 20px;display:grid;gap:10px;margin-top:clamp(24px,3vw,44px)}
+  .verdictbox ul{margin:0;padding-left:18px;display:grid;gap:8px;font-size:14px;line-height:1.55}
+  .altlist{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+  .altlist span{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--ink-14);padding:6px 10px}
+  .cover{display:grid;gap:clamp(12px,1.6vw,22px);margin-top:clamp(20px,2.6vw,36px)}
+  @media(min-width:760px){.cover{grid-template-columns:repeat(4,1fr)}}
+  .cover div{border-top:var(--rule);padding-top:10px;display:grid;gap:4px}
+  .cover b{font-family:var(--serif);font-weight:400;font-size:1.05rem;line-height:1.2}
+  .cover b[data-none]{color:var(--accent);font-style:italic}
+  .bar{display:flex;gap:10px;flex-wrap:wrap;margin:clamp(26px,3.4vw,50px) 0}
+  .script{display:grid;gap:clamp(14px,2vw,28px);margin:clamp(20px,3vw,40px) 0}
+  @media(min-width:760px){.script{grid-template-columns:repeat(3,1fr)}}
+  .script div{border-top:var(--rule);padding-top:12px}
+  .script p{font-size:13.5px;line-height:1.55;margin:6px 0 0}
+  .script em{font-style:italic;color:var(--ink-38)}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Bàn làm việc chạy hoàn toàn trong trình duyệt của bạn, không gọi về máy chủ nào và không gửi gì đi.</p>
+</div></noscript>
+
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Năm người,<br><em>một câu hỏi.</em></h1>
+      <p class="caption" data-reveal data-delay=".08">Bài tập Tuần 3. Ngồi với năm người đã mua thật trong 30 ngày gần đây.
+        Không hỏi họ thích gì, không hỏi họ có sẵn sàng mua không — chỉ hỏi về <strong>lần gần nhất</strong>.
+        Trang này sẽ bắt giúp bạn những câu trả lời mang tính dự đoán thay vì hành vi.</p>
+    </div>
+  </section>
+
+  <section class="script">
+    <div><span class="label label--accent">Hỏi thế này</span>
+      <p>“Kể lại lần gần nhất bạn mua ___. Hôm đó đang định làm gì?”<br><em>Hành vi đã xảy ra, có ngữ cảnh.</em></p></div>
+    <div><span class="label label--accent">Rồi hỏi tiếp</span>
+      <p>“Lúc đó bạn cân nhắc những gì khác?”<br><em>Đây mới là tập cạnh tranh thật của bạn.</em></p></div>
+    <div><span class="label">Đừng hỏi</span>
+      <p>“Bạn có thích không?” · “Bạn có sẵn sàng trả 200k không?”<br><em>Trả lời không tốn gì, nên câu trả lời không đáng tin.</em></p></div>
+  </section>
+
+  <section class="setup">
+    <div><span class="label">Category / sản phẩm đang tìm hiểu</span>
+      <input class="field" id="w-cat" placeholder="Ví dụ: gói tập gym 6 tháng ở khu dân cư"></div>
+    <div><span class="label">Giả thuyết bạn muốn kiểm chứng</span>
+      <input class="field" id="w-hyp" placeholder="Viết trước khi phỏng vấn — để sau đó biết mình đã sai chỗ nào"></div>
+  </section>
+
+  <div class="people" id="people"></div>
+
+  <div class="label">Phân khúc nào đã gặp người thật</div>
+  <div class="cover" id="cover"></div>
+  <section class="verdictbox" id="verdict" data-reveal></section>
+
+  <div class="bar">
+    <button class="btn" id="tojournal">Lưu vào sổ tay</button>
+    <button class="btn btn--ghost" id="export">Xuất .txt</button>
+    <button class="btn btn--ghost" id="clear">Xoá hết</button>
+    <a class="btn btn--ghost" href="segmentation.html">Bàn Tuần 1</a>
+    <a class="btn btn--ghost" href="roadmap.html">Về lộ trình</a>
+  </div>
+</main>
+
+<script src="assets/js/core.js?v=7"></script>
+<script>
+shell('roadmap.html');
+
+const WKEY='int3';
+/* Dấu hiệu của câu dự đoán: người ta đang nói về tương lai hoặc giả định,
+   tức là đang đoán về bản thân — thứ con người làm rất tệ. */
+const FUTURE = ['sẽ ','chắc là','có thể sẽ','nếu mà','nếu có','chắc mình','mình nghĩ mình','chắc chắn sẽ','trong tương lai','sắp tới mình'];
+const NOTHING = ['không làm gì','không mua gì','tự làm','để đó','thôi không','vẫn dùng cái cũ','không dùng gì'];
+const ROWS=[
+  ['who','Ai · ngữ cảnh','Nghề, tình huống sống — không cần tên thật'],
+  ['seg','Thuộc phân khúc nào (tên ở Tuần 1)','Chép đúng tên bạn đặt bên bàn phân khúc'],
+  ['last','Lần gần nhất (nguyên văn)','Chép đúng chữ họ dùng, đừng tóm tắt'],
+  ['alts','Đã cân nhắc gì khác','Kể cả “không làm gì cả” — nếu họ có nói'],
+  ['almost','Suýt không mua vì','Đây là rào cản chuyển đổi thật của bạn'],
+  ['quote','Câu đáng nhớ nhất (nguyên văn)','Câu bạn sẽ nhớ ba tháng nữa'],
+];
+const blank=()=>({who:'',seg:'',last:'',alts:'',almost:'',quote:''});
+const load=()=>{const w=(State.get().work||{})[WKEY];return w&&w.pp?w:{cat:'',hyp:'',pp:[blank(),blank(),blank(),blank(),blank()]}};
+const save=w=>{const work={...(State.get().work||{})};work[WKEY]=w;State.set({work})};
+
+let W=load();
+document.getElementById('w-cat').value=W.cat||'';
+document.getElementById('w-hyp').value=W.hyp||'';
+
+document.getElementById('people').innerHTML = W.pp.map((p,i)=>`
+  <div class="pp" data-i="${i}">
+    <div class="pp__top">
+      <span class="label">Người ${String(i+1).padStart(2,'0')}</span>
+      <span class="label" data-count="${i}"></span>
+    </div>
+    ${ROWS.map(([k,label,hint])=>`
+      <div class="row">
+        <span class="label">${label}</span>
+        <textarea class="field ${k==='quote'||k==='last'?'quote':''}" data-k="${k}" rows="${k==='last'?2:1}" placeholder="${hint}">${esc(p[k]||'')}</textarea>
+      </div>`).join('')}
+    <p class="pp__flag" data-flag="${i}"></p>
+  </div>`).join('');
+
+const hits = (t,list) => list.filter(w=>t.toLowerCase().includes(w));
+
+function check(){
+  const pp=W.pp;
+  const done = pp.filter(p=>ROWS.every(([k])=>String(p[k]||'').trim().length>2));
+  let futureCount=0, nothingCount=0;
+
+  document.querySelectorAll('.pp').forEach((el,i)=>{
+    const p=pp[i];
+    const n=ROWS.filter(([k])=>String(p[k]||'').trim().length>2).length;
+    el.querySelector(`[data-count="${i}"]`).textContent = n+' / '+ROWS.length+' dòng';
+    const f=hits([p.last,p.quote].join(' '), FUTURE);
+    if(f.length) futureCount++;
+    if(hits(p.alts||'', NOTHING).length) nothingCount++;
+    const msgs=[];
+    if(f.length) msgs.push(`Câu này đang nói về tương lai (“${f[0].trim()}”). Đó là dự đoán, không phải hành vi — hỏi lại: “lần gần nhất thì sao?”`);
+    if(String(p.alts||'').trim() && String(p.alts).trim().split(/[,;]|hoặc/).length<2)
+      msgs.push('Mới có một lựa chọn thay thế. Hỏi thêm: “còn gì nữa không, kể cả không làm gì cả?”');
+    el.toggleAttribute('data-flag', msgs.length>0);
+    el.querySelector(`[data-flag="${i}"]`).innerHTML = msgs.join('<br>');
+  });
+
+  /* Đối chiếu với bốn phân khúc của Tuần 1 — phân khúc chưa gặp ai thì vẫn chỉ là giả thuyết. */
+  const flat=t=>String(t||'').trim().toLowerCase();
+  const seg1=(State.get().work||{}).seg1;
+  const segNames=((seg1&&seg1.segs)||[])
+    .map((x,i)=>flat(x.name)?x.name.trim():'')
+    .filter(Boolean);
+  const cover=document.getElementById('cover');
+  const unseen=[];
+  if(segNames.length){
+    cover.innerHTML=segNames.map(nm=>{
+      const c=pp.filter(p=>flat(p.seg) && (flat(p.seg)===flat(nm) || flat(nm).includes(flat(p.seg)) || flat(p.seg).includes(flat(nm)))).length;
+      if(!c) unseen.push(nm);
+      return `<div><span class="label">${esc(nm)}</span><b ${c?'':'data-none'}>${c?c+' người':'chưa ai'}</b></div>`;
+    }).join('');
+  } else {
+    cover.innerHTML=`<div style="grid-column:1/-1"><span class="caption">Chưa đặt tên phân khúc nào ở
+      <a href="segmentation.html">bàn Tuần 1</a>. Làm xong bên đó, bảng này sẽ chỉ ra phân khúc nào vẫn chỉ nằm trong đầu bạn.</span></div>`;
+  }
+
+  /* Tập cạnh tranh thật: gom mọi lựa chọn thay thế mà người thật đã nhắc tới. */
+  const alts=[...new Set(pp.flatMap(p=>String(p.alts||'').split(/[,;]|hoặc/).map(x=>x.trim()).filter(x=>x.length>2)))];
+  const v=document.getElementById('verdict');
+
+  if(done.length<3){
+    v.innerHTML=`<span class="label label--accent">${done.length} / 5 người · cần ít nhất 3 để đọc được gì đó</span>
+      <p class="caption">Ba người là ngưỡng tối thiểu để bắt đầu thấy trùng lặp. Năm là chỗ bạn bắt đầu nghe cùng một câu
+      bằng ba giọng khác nhau — đó là lúc dừng được.</p>`;
+    return;
+  }
+  const parts=[`<span class="label label--accent">${done.length} / 5 người · ${alts.length} lựa chọn thay thế được nhắc tên</span>`];
+  if(alts.length) parts.push(`<div><span class="label">Tập cạnh tranh thật của bạn</span><div class="altlist">${alts.slice(0,14).map(a=>`<span>${esc(a)}</span>`).join('')}</div></div>`);
+  const notes=[];
+  if(futureCount) notes.push(`<li><strong>${futureCount} người</strong> đang trả lời bằng dự đoán. Quay lại hỏi về lần gần nhất — bạn sẽ nhận được một câu chuyện khác hẳn.</li>`);
+  if(!nothingCount) notes.push('<li>Chưa ai nhắc tới phương án <em>không làm gì cả</em>. Trong hầu hết category đó là đối thủ lớn nhất — nếu không ai nói, khả năng cao câu hỏi của bạn đang gợi ý sẵn câu trả lời.</li>');
+  if(unseen.length) notes.push(`<li><strong>${unseen.map(esc).join(', ')}</strong> chưa gặp một người thật nào.
+    Phân khúc chưa có ai kể đúng dịp đó thì vẫn là giả thuyết — đi phỏng vấn tiếp, hoặc quay lại
+    <a href="segmentation.html">bàn Tuần 1</a> và xoá nó đi. Xoá được một phân khúc là kết quả tốt.</li>`);
+  notes.push('<li>Đọc lại cột “suýt không mua vì”. Rào cản xuất hiện từ hai người trở lên là việc cần sửa trước, trước cả quảng cáo.</li>');
+  notes.push('<li>Gạch dưới những chữ họ dùng mà bạn không dùng. Đó là copy cho lần viết tới — miễn phí và đúng giọng.</li>');
+  parts.push(`<ul>${notes.join('')}</ul>`);
+  if(W.hyp) parts.push(`<p class="caption">Giả thuyết ban đầu của bạn: “${esc(W.hyp)}”. Sau năm cuộc, nó còn đúng bao nhiêu phần?
+    Ghi câu trả lời vào sổ tay — sáu tháng nữa đọc lại sẽ rất khác.</p>`);
+  v.innerHTML=parts.join('');
+}
+
+document.getElementById('people').addEventListener('input', e=>{
+  const el=e.target, k=el.dataset.k; if(!k) return;
+  W.pp[+el.closest('.pp').dataset.i][k]=el.value; save(W); check();
+});
+['w-cat','w-hyp'].forEach(id=>document.getElementById(id).addEventListener('input',e=>{
+  W[id==='w-cat'?'cat':'hyp']=e.target.value; save(W); check();
+}));
+
+const asText=()=>{
+  const L=['BÀI TẬP TUẦN 3 — NĂM CUỘC PHỎNG VẤN',`Category: ${W.cat||'(chưa ghi)'}`,
+    `Giả thuyết ban đầu: ${W.hyp||'(chưa ghi)'}`,''];
+  W.pp.forEach((p,i)=>{
+    if(!ROWS.some(([k])=>String(p[k]||'').trim())) return;
+    L.push(`— NGƯỜI ${i+1}`);
+    ROWS.forEach(([k,label])=>L.push(`${label}: ${p[k]||'(trống)'}`));
+    L.push('');
+  });
+  return L.join('\n');
+};
+document.getElementById('tojournal').onclick=()=>{
+  if(!W.pp.some(p=>ROWS.some(([k])=>String(p[k]||'').trim()))) return toast('Chưa có gì để lưu');
+  const s=State.get(), wid='worksheet:'+WKEY;
+  const i=s.notes.findIndex(x=>x.wid===wid);
+  const note={t:'Tuần 3 — Năm cuộc phỏng vấn'+(W.cat?' · '+W.cat:''), body:asText(),
+    when:new Date().toISOString().slice(0,10), kind:'Bàn làm việc', href:'interview.html', wid};
+  i>-1 ? s.notes[i]=note : s.notes.unshift(note);
+  State.set({notes:s.notes}); toast(i>-1?'Đã cập nhật trong sổ tay':'Đã lưu vào sổ tay');
+};
+document.getElementById('export').onclick=()=>{
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([asText()],{type:'text/plain'}));
+  a.download='nam-cuoc-phong-van.txt'; a.click(); URL.revokeObjectURL(a.href);
+};
+document.getElementById('clear').onclick=()=>{
+  if(!confirm('Xoá toàn bộ nội dung bàn làm việc này?')) return;
+  W={cat:'',hyp:'',pp:[blank(),blank(),blank(),blank(),blank()]}; save(W); location.reload();
+};
+check(); reveal();
+</script>
+</body></html>

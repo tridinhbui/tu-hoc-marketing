@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="vi" data-district="brand">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bộ sưu tập — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Sáu bộ đọc có chủ đề, mở khoá theo tiến trình học. Phần thưởng duy nhất ở đây là được đọc thêm.">
+<meta property="og:title" content="Bộ sưu tập — Nhìn thấy">
+<meta property="og:description" content="Sáu bộ đọc có chủ đề, mở khoá theo tiến trình học. Phần thưởng duy nhất ở đây là được đọc thêm.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .col{border-top:var(--rule);padding:clamp(32px,4.6vw,78px) 0;display:grid;gap:clamp(18px,3vw,44px)}
+  @media(min-width:1000px){.col{grid-template-columns:.62fr 1.38fr;align-items:start}}
+  .col[data-locked] .colart{filter:grayscale(1);opacity:.32}
+  .col[data-locked] .colbody{opacity:.55}
+  .col__n{font-family:var(--serif);font-size:clamp(1.9rem,3.6vw,3rem);line-height:1;letter-spacing:-.028em}
+  .col__s{font-family:var(--serif);font-style:italic;color:var(--ink-60);margin-top:8px}
+  .col__e{font-size:1.02rem;line-height:1.62;max-width:60ch;margin:20px 0 0;color:rgba(21,18,14,.86)}
+  .items{margin-top:26px}
+  .items>a,.items>span{display:grid;grid-template-columns:12ch minmax(0,1fr) auto;gap:16px;align-items:baseline;
+    padding:13px 0;border-bottom:var(--rule);transition:padding-left .35s var(--ease)}
+  .items>a:hover{padding-left:8px;color:var(--accent)}
+  @media(max-width:720px){
+    /* mobile: nhãn lên một dòng riêng, tiêu đề được trọn chiều ngang */
+    .items>a,.items>span{grid-template-columns:minmax(0,1fr) auto;gap:6px 14px}
+    .items>a>.label,.items>span>.label{grid-column:1/-1}
+  }
+  .items b{font-family:var(--serif);font-weight:400;font-size:1.08rem;line-height:1.2}
+  .lockline{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-top:22px}
+  .bar{height:1px;background:var(--ink-14);position:relative;margin-top:14px}
+  .bar i{position:absolute;inset:0 auto 0 0;background:var(--accent);display:block}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Toàn bộ nội dung — bài học, case study, thư viện nguyên lý — được dựng ngay trong trình duyệt của bạn,
+  không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
+</div></noscript>
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Bộ<br><em>sưu tập</em></h1>
+      <p class="caption" data-reveal data-delay=".1">Phần thưởng duy nhất ở đây là được đọc thêm. Sáu bộ đọc có chủ đề,
+        mỗi bộ mở ra ở một mốc tiến trình — không huy hiệu, không điểm bay tung toé.
+        Cái mở khoá không phải nội dung bị giấu, mà là thời điểm nó có ích cho bạn.</p>
+    </div>
+  </section>
+  <section id="status" style="padding:clamp(20px,3vw,40px) 0"></section>
+  <div id="list"></div>
+</main>
+<script src="assets/js/core.js?v=7"></script>
+<script src="assets/js/data/collections.js?v=7"></script>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/campaigns.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/brands.js?v=7"></script>
+<script src="assets/js/data/taste.js?v=7"></script>
+<script>
+shell('collections.html');
+const n = score(), r = rank(n);
+
+document.getElementById('status').innerHTML = `
+  <div class="grid g2" data-reveal>
+    <div>
+      <div class="label label--accent">Tiến trình</div>
+      <h2 class="h-mid" style="margin:10px 0 6px">${r[0]} · ${n} bước</h2>
+      <p class="caption">${r[2]}</p>
+    </div>
+    <div>
+      <div class="label">Đã mở ${COLLECTIONS.filter(c=>n>=c.need).length}/${COLLECTIONS.length} bộ</div>
+      <div class="bar"><i style="width:${Math.min(100,Math.round(n/88*100))}%"></i></div>
+      <p class="caption" style="margin-top:12px">Bước cộng thêm khi bạn đọc một bài, lưu một case, bóc tách một thương hiệu,
+        làm một challenge hoặc ghi một quan sát. <a class="label label--accent" href="journal.html">Xem sổ tay →</a></p>
+    </div>
+  </div>`;
+
+const label = {lesson:'Bài học',campaign:'Case study',principle:'Nguyên lý',brand:'Brand X-Ray',taste:'Taste',era:'Thời kỳ'};
+function resolve(it){
+  switch(it.k){
+    case 'lesson':{const x=LESSONS.find(l=>l.day===it.id);return x&&{t:x.t,h:'lesson.html?day='+x.day};}
+    case 'campaign':{const x=CAMPAIGNS.find(c=>c.id===it.id);return x&&{t:x.brand+' — '+x.title,h:'campaign.html?id='+x.id};}
+    case 'principle':{const x=PRINCIPLES.find(p=>p.id===it.id);return x&&{t:x.t+' · '+x.vi,h:'principle.html?id='+x.id};}
+    case 'brand':{const x=BRANDS.find(b=>b.id===it.id);return x&&{t:x.name,h:'brand.html?id='+x.id};}
+    case 'taste':{const x=TASTE.find(t=>t.id===it.id);return x&&{t:'Cặp '+x.kind.toLowerCase(),h:'taste.html'};}
+    case 'era':return {t:'2020s — Creator, cộng đồng & AI',h:'timeline.html#'+it.id};
+  }
+}
+document.getElementById('list').innerHTML = COLLECTIONS.map((c,i)=>{
+  const open = n>=c.need;
+  const rows = c.items.map(it=>{const x=resolve(it); if(!x) return '';
+    return open
+      ? `<a href="${x.h}"><span class="label">${label[it.k]}</span><b>${x.t}</b><span class="num">→</span></a>`
+      : `<span><span class="label">${label[it.k]}</span><b>${x.t}</b><span class="num">✳</span></span>`;}).join('');
+  return `<section class="col" ${open?'':'data-locked'} style="--accent:${c.color==='#15120E'?'#B3320F':c.color}" data-reveal>
+    <div class="colart">${plate({color:c.color,mark:c.mark,kicker:open?'Đã mở':'Còn khoá',meta:c.need+' bước',title:c.name,shape:'plate--tall'})}</div>
+    <div class="colbody">
+      <div class="label ${open?'label--accent':''}">${open?'Bộ '+c.mark+' · đã mở':'Bộ '+c.mark+' · mở ở '+c.need+' bước'}</div>
+      <h2 class="col__n" style="margin-top:12px">${c.name}</h2>
+      <div class="col__s">${c.sub}</div>
+      <p class="col__e">${c.essay}</p>
+      ${open?'':`<div class="lockline"><span class="label">Còn ${c.need-n} bước</span>
+        <a class="label label--accent" href="lesson.html">Đọc bài hôm nay →</a>
+        <a class="label label--accent" href="xray.html">Bóc tách một thương hiệu →</a></div>`}
+      <div class="items">${rows}</div>
+    </div>
+  </section>`;
+}).join('');
+reveal();
+</script>
+</body></html>

@@ -1,0 +1,351 @@
+/* ==========================================================================
+   NOTICE — Art direction system
+   Paper, ink, one accent per district. Type does the work; no decoration
+   that isn't information. Hairlines instead of boxes. Asymmetry by default.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter+Tight:ital,wght@0,300..700;1,300..600&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+:root{
+  --paper:#F7F5F0;          /* giấy ngà, ấm hơn trắng */
+  --paper-2:#EFEBE3;
+  --mist:#E6E9EE;           /* sương xa */
+  --ink:#1E2C3C;            /* mực chàm đậm */
+  --ink-60:rgba(30,44,60,.62);
+  --ink-38:rgba(30,44,60,.4);
+  --ink-14:rgba(30,44,60,.16);
+  --ink-08:rgba(30,44,60,.08);
+  --accent:#35516F;         /* chàm nhạt — màu dẫn */
+  --accent-ink:#F7F5F0;
+  --seal:#B03A2E;           /* triện son, dùng rất ít */
+
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Inter Tight',-apple-system,Segoe UI,Helvetica,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+
+  --gut:clamp(18px,3.2vw,54px);
+  --rule:1px solid var(--ink-14);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+/* District palettes — every area of the world has its own dominant colour,
+   but the system (paper + ink + hairline) never changes. */
+[data-district="brand"]      { --accent:#2F4A63; }
+[data-district="creative"]   { --accent:#4C4660; }
+[data-district="consumer"]   { --accent:#37564E; }
+[data-district="growth"]     { --accent:#2B4560; }
+[data-district="media"]      { --accent:#6B5A45; }
+[data-district="strategy"]   { --accent:#3A4550; }
+[data-district="taste"]      { --accent:#5C4550; }
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.55;
+  font-synthesis-weight:none;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+/* paper grain — one SVG turbulence, fixed, never animates */
+body::after{
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.14;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+/* ---------- type scale ---------- */
+.display{
+  font-family:var(--serif);font-weight:300;
+  font-variation-settings:'opsz' 144,'SOFT' 0,'WONK' 1;
+  line-height:.86;letter-spacing:-.028em;margin:0;
+  font-size:clamp(2.45rem,11vw,10.5rem);overflow-wrap:break-word;
+}
+.display em{font-style:italic;font-weight:300;color:var(--accent)}
+h1,h2,h3,h4{margin:0;font-weight:400}
+.h-serif{font-family:var(--serif);font-weight:400;line-height:1.04;letter-spacing:-.012em;
+  font-size:clamp(1.9rem,4vw,3.4rem)}
+.h-mid{font-family:var(--serif);font-weight:400;line-height:1.1;letter-spacing:-.008em;
+  font-size:clamp(1.5rem,2.5vw,2.15rem)}
+.lede{font-family:var(--serif);font-size:clamp(1.25rem,2vw,1.75rem);line-height:1.34;font-weight:300;letter-spacing:0}
+.body p{font-size:1.02rem;line-height:1.62;max-width:64ch;color:rgba(21,18,14,.86)}
+.label{font-family:var(--mono);font-weight:400;font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-60)}
+.label--accent{color:var(--accent)}
+.num{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--ink-38)}
+.caption{font-size:12.5px;line-height:1.45;color:var(--ink-60);max-width:46ch}
+.kicker{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--ink-60)}
+
+/* ---------- shell ---------- */
+.wrap{padding-inline:var(--gut)}
+.rule{border-top:var(--rule)}
+.rule-b{border-bottom:var(--rule)}
+
+.masthead{
+  position:sticky;top:0;z-index:80;background:rgba(247,245,240,.88);backdrop-filter:blur(10px);
+  border-bottom:var(--rule);
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:clamp(14px,2vw,34px);
+  padding:12px var(--gut);
+}
+.masthead__brand{display:flex;align-items:center;gap:11px;white-space:nowrap}
+.masthead__seal{width:30px;height:30px;flex:none}
+.masthead__logo{font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.24em;text-transform:uppercase}
+.masthead__tag{font-family:var(--sans);font-size:10.5px;letter-spacing:.05em;color:var(--ink-38);
+  border-left:var(--rule);padding-left:11px;margin-left:2px}
+@media(max-width:1100px){.masthead__tag{display:none}}
+.masthead nav{display:flex;gap:clamp(10px,1.6vw,26px);justify-content:center;flex-wrap:nowrap}
+.masthead nav a{white-space:nowrap;font-family:var(--sans);font-size:11.5px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-60);padding-bottom:3px;border-bottom:1px solid transparent;
+  transition:color .3s,border-color .3s}
+.masthead nav a:hover{color:var(--ink)}
+.masthead nav a[aria-current]{color:var(--ink);border-bottom-color:var(--accent)}
+/* cụm phải: cấp bậc · XP · chuỗi · sổ tay */
+.crest{display:flex;align-items:center;gap:clamp(10px,1.4vw,20px)}
+.crest__rank{display:flex;align-items:center;gap:9px}
+.crest__drop{width:30px;height:30px;border:1px solid var(--ink-14);border-radius:50%;display:grid;place-items:center;flex:none}
+.crest__name{font-family:var(--sans);font-size:12.5px;font-weight:500;white-space:nowrap}
+.crest__cell{border-left:var(--rule);padding-left:clamp(10px,1.4vw,18px);display:grid;gap:2px}
+.crest__cell b{font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:.02em;white-space:nowrap}
+.crest__cell .label{font-size:8.5px;letter-spacing:.2em}
+.crest__me{width:32px;height:32px;border-radius:50%;border:1px solid var(--ink-14);
+  background:radial-gradient(circle at 34% 30%,#DDE3EA,#9FB0C1);display:block;flex:none;
+  transition:box-shadow .3s}
+.crest__me:hover{box-shadow:0 0 0 3px var(--ink-08)}
+@media(max-width:1240px){.crest__cell{display:none}}
+@media(max-width:1000px){
+  .masthead{grid-template-columns:auto auto;gap:12px}
+  .masthead nav{grid-column:1/-1;order:3;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;
+    padding-top:9px;border-top:var(--rule);margin-top:2px;
+    mask-image:linear-gradient(90deg,#000 88%,transparent)}
+  .masthead nav::-webkit-scrollbar{display:none}
+  .crest{margin-left:auto}
+}
+
+/* page header block, used by every interior page */
+.pagehead{padding:clamp(38px,7vw,96px) 0 clamp(24px,4vw,52px);border-bottom:var(--rule)}
+.pagehead__grid{display:grid;grid-template-columns:1fr;gap:clamp(16px,2.6vw,40px)}
+@media(min-width:900px){.pagehead__grid{grid-template-columns:minmax(0,1fr) 30ch;align-items:end}}
+
+footer.colophon{
+  border-top:var(--rule);margin-top:clamp(60px,9vw,140px);padding:clamp(32px,5vw,64px) var(--gut) 40px;
+  display:grid;gap:26px;grid-template-columns:1fr;
+}
+@media(min-width:820px){footer.colophon{grid-template-columns:1.4fr 1fr 1fr}}
+footer.colophon p{max-width:40ch;font-size:13px;color:var(--ink-60);line-height:1.5;margin:.5em 0 0}
+footer.colophon a{display:block;font-size:13px;color:var(--ink-60);padding:2px 0}
+footer.colophon a:hover{color:var(--accent)}
+
+/* ---------- reveal ---------- */
+[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+[data-reveal].is-in{opacity:1;transform:none}
+[data-reveal-clip]{clip-path:inset(0 0 100% 0);transition:clip-path 1.05s var(--ease)}
+[data-reveal-clip].is-in{clip-path:inset(0 0 0 0)}
+@media(prefers-reduced-motion:reduce){
+  [data-reveal],[data-reveal-clip]{opacity:1;transform:none;clip-path:none;transition:none}
+}
+
+/* ---------- poster / plate system ----------
+   No stock photography, no 3D blobs. Every "image" is a typographic plate:
+   colour field + oversized letterform + halftone. Built from data attributes. */
+.plate{
+  position:relative;overflow:hidden;background:var(--pl,#2F4A63);
+  color:var(--paper);aspect-ratio:4/5;display:block;isolation:isolate;
+}
+.plate--wide{aspect-ratio:16/9}
+.plate--tall{aspect-ratio:3/5}
+.plate--sq{aspect-ratio:1/1}
+/* Mảng mực loang: hai lớp gradient mềm + nhiễu, không dùng ảnh chụp */
+.plate__wash{position:absolute;inset:0;
+  background:
+    radial-gradient(110% 75% at 22% 8%,rgba(255,255,255,.5),transparent 60%),
+    radial-gradient(95% 75% at 84% 92%,rgba(0,0,0,.5),transparent 66%),
+    linear-gradient(166deg,rgba(255,255,255,.2),transparent 44%,rgba(0,0,0,.4))}
+.plate__halftone{position:absolute;inset:0;mix-blend-mode:soft-light;opacity:.42;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.008' numOctaves='4' seed='9'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeGaussianBlur stdDeviation='1.1'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23f)'/%3E%3C/svg%3E");
+  background-size:cover}
+/* dải mực loang ngang — cho tấm có nhịp như tranh, không phải một mảng phẳng */
+.plate::after{content:"";position:absolute;left:-10%;right:-10%;bottom:14%;height:38%;
+  background:radial-gradient(60% 100% at 30% 50%,rgba(255,255,255,.22),transparent 70%),
+             radial-gradient(70% 100% at 78% 40%,rgba(0,0,0,.3),transparent 72%);
+  filter:blur(14px);pointer-events:none}
+.plate__mark{
+  position:absolute;z-index:2;font-family:var(--serif);font-weight:300;line-height:.78;
+  font-size:clamp(5rem,20vw,13rem);letter-spacing:-.02em;opacity:.44;
+  inset:auto -3% -7% auto;transition:transform 1.2s var(--ease),opacity 1.2s var(--ease);
+}
+.plate--wide .plate__mark{font-size:clamp(4rem,14vw,10rem)}
+.plate__top{position:absolute;z-index:3;top:15px;left:17px;right:17px;display:flex;justify-content:space-between;gap:10px}
+.plate__top .label{color:rgba(255,255,255,.7)}
+.plate__foot{position:absolute;z-index:3;left:17px;right:17px;bottom:15px}
+.plate__foot h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.2rem,2vw,1.85rem);line-height:1.06}
+.plate__foot .label{color:rgba(255,255,255,.62)}
+a.plate:hover .plate__mark{transform:translate(-8px,-10px);opacity:.6}
+
+/* Triện son — dùng đúng một lần mỗi trang, ở chỗ đáng ký tên */
+.seal{width:34px;height:34px;flex:none}
+.quoteblock{display:grid;gap:14px;max-width:34ch}
+.quoteblock p{font-family:var(--sans);font-size:14px;line-height:1.75;color:var(--ink-60);margin:0}
+.quoteblock cite{font-style:normal;font-family:var(--sans);font-size:12.5px;color:var(--ink-38)}
+.quoteblock__mark{font-family:var(--serif);font-size:2.4rem;line-height:.6;color:var(--ink-14)}
+
+/* ---------- generic grid helpers ---------- */
+.grid{display:grid;gap:clamp(18px,2.4vw,38px)}
+.g2{grid-template-columns:1fr}
+.g3{grid-template-columns:1fr}
+.g4{grid-template-columns:repeat(2,1fr)}
+@media(min-width:760px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}}
+.offset-1{margin-top:clamp(20px,5vw,88px)}
+.offset-2{margin-top:clamp(10px,3vw,44px)}
+
+/* ---------- entry rows (list-as-index, magazine contents page) ---------- */
+.index-row{
+  display:grid;grid-template-columns:3.2ch minmax(0,1fr);gap:14px;align-items:baseline;
+  padding:16px 0;border-bottom:var(--rule);position:relative;transition:padding-left .4s var(--ease)
+}
+@media(min-width:860px){.index-row{grid-template-columns:3.2ch minmax(0,1.6fr) minmax(0,1fr) 12ch}}
+.index-row:hover{padding-left:10px}
+.index-row:hover .index-row__t{color:var(--accent)}
+.index-row__t{font-family:var(--serif);font-size:clamp(1.25rem,2.3vw,1.85rem);line-height:1.05;letter-spacing:-.018em;transition:color .3s}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.2em;text-transform:uppercase;padding:14px 24px;border:1px solid var(--ink);border-radius:3px;
+  background:var(--ink);color:var(--paper);transition:background .3s,color .3s,transform .3s var(--ease)
+}
+.btn:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:var(--ink)}
+.btn--ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn--accent{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+/* ---------- interactive blocks (challenges / taste / x-ray) ---------- */
+.choice{
+  width:100%;text-align:left;border:1px solid var(--ink-14);background:transparent;
+  padding:18px 20px;display:grid;gap:6px;transition:border-color .3s,background .3s,transform .3s var(--ease)
+}
+.choice:hover{border-color:var(--ink);transform:translateX(4px)}
+.choice[data-state="right"]{border-color:var(--accent);background:rgba(0,0,0,.02)}
+.choice[data-state="wrong"]{border-color:var(--ink-38);opacity:.55}
+.choice__t{font-family:var(--serif);font-size:1.22rem;line-height:1.15}
+.verdict{border-left:2px solid var(--accent);padding:4px 0 4px 18px;margin-top:22px}
+.verdict h4{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.hidden{display:none}
+
+.field{
+  width:100%;background:transparent;border:0;border-bottom:1px solid var(--ink-14);
+  font-family:var(--serif);font-size:1.15rem;padding:12px 0;resize:vertical;line-height:1.4;color:var(--ink)
+}
+.field:focus{outline:0;border-bottom-color:var(--accent)}
+.field::placeholder{color:var(--ink-38);font-style:italic}
+
+/* ---------- ticker ---------- */
+.ticker{overflow:hidden;border-block:var(--rule);padding:9px 0;background:var(--paper)}
+.ticker__track{display:flex;gap:44px;width:max-content;animation:slide 46s linear infinite}
+.ticker span{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-60);white-space:nowrap}
+.ticker span b{color:var(--accent);font-weight:500}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker__track{animation:none}}
+
+/* ---------- horizontal editorial rail ---------- */
+.rail{display:flex;gap:clamp(14px,2vw,30px);overflow-x:auto;scroll-snap-type:x mandatory;
+  padding-bottom:14px;scrollbar-width:thin}
+.rail>*{flex:0 0 clamp(250px,30vw,400px);scroll-snap-align:start}
+.rail::-webkit-scrollbar{height:2px}
+.rail::-webkit-scrollbar-thumb{background:var(--ink-38)}
+
+/* ---------- pull quote ---------- */
+.pull{font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,3.8vw,3.1rem);line-height:1.14;
+  letter-spacing:-.012em;max-width:24ch}
+.pull em{font-style:italic}
+
+/* ---------- small stat ---------- */
+.stat{border-top:1px solid var(--ink);padding-top:10px}
+.stat b{display:block;font-family:var(--serif);font-size:clamp(2rem,4.4vw,3.4rem);line-height:1;font-weight:300}
+
+/* ---------- toast ---------- */
+#toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,140%);z-index:200;
+  background:var(--ink);color:var(--paper);padding:11px 20px;font-family:var(--mono);
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;transition:transform .5s var(--ease)}
+#toast.on{transform:translate(-50%,0)}
+
+/* ---------- focus & bỏ qua điều hướng ----------
+   Viền focus dùng chính accent của khu vực, offset 3px để không dính vào chữ.
+   Không tắt outline ở bất kỳ đâu: thanh mục lục dài, người dùng bàn phím cần thấy mình đang ở đâu. */
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.plate:focus-visible{outline-offset:2px}
+.skip{
+  position:fixed;top:8px;left:8px;z-index:200;transform:translateY(-160%);
+  background:var(--ink);color:var(--paper);padding:11px 18px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  transition:transform .3s var(--ease)
+}
+.skip:focus{transform:none}
+
+/* Không có JS thì trang chỉ còn phần chữ tĩnh — nói thẳng thay vì để trắng. */
+.nojs{border:1px solid var(--ink);padding:22px;margin:22px var(--gut)}
+.nojs h2{font-family:var(--serif);font-size:1.4rem;margin-bottom:8px}
+.nojs p{font-size:14px;line-height:1.6;max-width:56ch;margin:0;color:var(--ink-60)}
+
+/* selection */
+::selection{background:var(--accent);color:#fff}
+
+/* Guard: page-level `padding` shorthands must never eat the gutter. */
+.wrap.wrap{padding-inline:var(--gut)}
+
+/* ---------- Hero thuỷ mặc ----------
+   Chữ bên trái, tranh mực tràn sang phải và chạy dưới chữ. Không có hộp nào cả. */
+.hero{position:relative;min-height:clamp(520px,74vh,760px);display:flex;align-items:center;overflow:hidden}
+.inkscene{position:absolute;top:0;right:calc(var(--gut)*-1);width:min(82%,1240px);height:112%;pointer-events:none;opacity:.95;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 34%,#000 88%,transparent 100%),
+                     linear-gradient(180deg,transparent 2%,#000 22%,#000 76%,transparent 98%);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 34%,#000 88%,transparent 100%),
+                     linear-gradient(180deg,transparent 2%,#000 22%,#000 76%,transparent 98%);
+  mask-composite:intersect}
+@media(max-width:900px){.inkscene{width:150%;right:-42%;opacity:.42}}
+.hero__inner{position:relative;z-index:2;display:grid;gap:clamp(20px,3vw,40px);width:100%;
+  padding-block:clamp(40px,7vw,90px)}
+@media(min-width:1100px){.hero__inner{grid-template-columns:minmax(0,1.05fr) minmax(0,.55fr);align-items:center;gap:clamp(30px,5vw,90px)}}
+.hero__eyebrow{color:var(--ink-38)}
+.hero__title{margin:clamp(14px,2vw,26px) 0 clamp(16px,2vw,28px);font-size:clamp(2.7rem,5.4vw,4.9rem);line-height:1.02}
+.hero__body{text-shadow:0 0 22px var(--paper),0 0 12px var(--paper)}
+.hero__body{font-size:15.5px;line-height:1.72;color:var(--ink-60);max-width:46ch}
+.hero__cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:clamp(20px,2.6vw,34px)}
+.hero__aside{display:flex;justify-content:flex-start;gap:16px;align-items:flex-start}
+@media(min-width:1100px){.hero__aside{justify-content:flex-end}}
+
+/* ---------- Dải trạng thái dưới hero ---------- */
+.strip{border-block:var(--rule);display:grid;grid-template-columns:1fr;background:rgba(255,255,255,.35)}
+@media(min-width:700px){.strip{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip__cell{padding:clamp(18px,2.2vw,30px) clamp(16px,2vw,28px);border-bottom:var(--rule);display:grid;gap:8px;align-content:start}
+@media(min-width:700px){.strip__cell{border-bottom:0;border-left:var(--rule)}.strip__cell:first-child{border-left:0}}
+.strip__cell h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.15rem,1.6vw,1.4rem);line-height:1.18;letter-spacing:-.005em}
+.strip__meta{display:flex;gap:14px;align-items:center;font-family:var(--sans);font-size:11.5px;color:var(--ink-38)}
+.strip__btn{justify-self:start;font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  border:1px solid var(--ink-14);border-radius:3px;padding:8px 14px;margin-top:4px;transition:.3s}
+.strip__btn:hover{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+.strip__big{font-family:var(--serif);font-size:clamp(1.9rem,3vw,2.5rem);line-height:1;font-weight:300}
+.strip__dots{display:flex;gap:7px;margin-top:6px}
+.strip__dots i{width:9px;height:9px;border-radius:50%;border:1px solid var(--ink-14);display:block}
+.strip__dots i.on{background:var(--seal);border-color:var(--seal)}
+.strip__bar{height:2px;background:var(--ink-08);position:relative;margin-top:8px}
+.strip__bar i{position:absolute;inset:0 auto 0 0;background:var(--accent)}
+
+/* Tiêu đề mục kiểu bản đồ */
+.sectionhead{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;
+  padding-top:clamp(40px,6vw,88px);padding-bottom:clamp(16px,2vw,28px)}
+.sectionhead h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:.06em}
+.sectionhead a{font-family:var(--sans);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-60)}
+.sectionhead a:hover{color:var(--accent)}
+
+/* ---------- Ô để lại email ---------- */
+.subbox{border-top:1px solid var(--ink);padding:clamp(24px,3.4vw,44px) 0;display:grid;gap:clamp(16px,2.4vw,40px)}
+@media(min-width:860px){.subbox{grid-template-columns:1.1fr .9fr;align-items:start}}
+.subbox h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.1;margin:10px 0 8px}
+.subbox p{font-size:14px;line-height:1.65;color:var(--ink-60);max-width:48ch;margin:0}
+.subbox__f{display:grid;gap:12px;align-content:start}
+@media(min-width:560px){.subbox__f{grid-template-columns:1fr auto;align-items:end}}
+.subbox__f .field{font-family:var(--sans);font-size:15px}
+.subbox__msg{grid-column:1/-1;font-family:var(--mono);font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);min-height:1em;margin:0}

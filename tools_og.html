@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<title>og</title>
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  html,body{margin:0;padding:0;width:1200px;height:630px;overflow:hidden}
+  .og{position:relative;width:1200px;height:630px;background:var(--paper);display:flex;flex-direction:column;
+      justify-content:space-between;padding:56px 64px;box-sizing:border-box;overflow:hidden}
+  .og .inkscene{position:absolute;top:0;right:-60px;width:78%;height:118%;opacity:.9;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%,#000 90%,transparent 100%);
+    mask-image:linear-gradient(90deg,transparent 0%,#000 38%,#000 90%,transparent 100%)}
+  .og__top{display:flex;align-items:center;gap:14px;position:relative;z-index:2}
+  .og__logo{font-family:var(--sans);font-weight:600;font-size:19px;letter-spacing:.26em;text-transform:uppercase}
+  .og__kick{font-family:var(--mono);font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);
+    border-left:1px solid var(--ink-14);padding-left:14px}
+  .og__mid{position:relative;z-index:2;max-width:62%}
+  .og__t{font-family:var(--serif);font-weight:300;font-size:66px;line-height:1.02;letter-spacing:-.015em;margin:0}
+  .og__t em{font-style:italic;color:var(--accent)}
+  .og__s{font-family:var(--sans);font-size:19px;line-height:1.55;color:var(--ink-60);margin:20px 0 0;max-width:34ch}
+  .og__foot{display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:2}
+  .og__meta{font-family:var(--mono);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-38)}
+  body::after{opacity:.1}
+</style></head>
+<body>
+<div class="og">
+  <div id="ink"></div>
+  <div class="og__top"><span id="sealbox"></span><span class="og__logo">Nhìn thấy</span><span class="og__kick" id="kick"></span></div>
+  <div class="og__mid"><h1 class="og__t" id="t"></h1><p class="og__s" id="s"></p></div>
+  <div class="og__foot"><span class="og__meta" id="m1"></span><span class="og__meta" id="m2"></span></div>
+</div>
+<script src="assets/js/core.js?v=7"></script>
+<script src="assets/js/data/campaigns.js?v=7"></script>
+<script src="assets/js/data/brands.js?v=7"></script>
+<script>
+const p=new URLSearchParams(location.search), kind=p.get('kind'), id=p.get('id');
+let d={kick:'Tự học Marketing',t:'Learn to see<br>what marketers <em>see.</em>',
+  s:'Tạp chí tự học marketing qua thương hiệu, campaign và consumer insight — phần lớn từ thị trường Việt Nam.',
+  m1:'nhinthay',m2:'Quan sát · Bóc tách · Luyện gu',seal:'見',district:'brand'};
+if(kind==='case'){const c=CAMPAIGNS.find(x=>x.id===id);
+  if(c) d={kick:'Case study · '+c.year,t:c.brand+' — <em>'+c.title+'</em>',s:c.idea,m1:c.tag,m2:c.market,seal:'案',district:c.district};}
+if(kind==='brand'){const b=BRANDS.find(x=>x.id===id);
+  if(b) d={kick:'Brand X-Ray',t:'Bóc tách<br><em>'+b.name+'</em>',s:b.q[0].q,m1:b.cat,m2:b.market,seal:'觀',district:'brand'};}
+document.documentElement.setAttribute('data-district',d.district||'brand');
+document.getElementById('kick').textContent=d.kick;
+document.getElementById('t').innerHTML=d.t;
+document.getElementById('s').textContent=d.s;
+document.getElementById('m1').textContent=d.m1;
+document.getElementById('m2').textContent=d.m2;
+document.getElementById('sealbox').innerHTML=seal(d.seal,34);
+document.getElementById('ink').innerHTML=inkScene('og');
+document.querySelectorAll('[data-reveal],[data-reveal-clip]').forEach(e=>e.classList.add('is-in'));
+</script>
+</body></html>

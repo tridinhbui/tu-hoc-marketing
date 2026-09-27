@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi" data-district="media">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dòng thời gian — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Bảy mươi năm marketing trong năm chương: quảng cáo đại chúng, xây thương hiệu, digital, social và kỷ nguyên creator.">
+<meta property="og:title" content="Dòng thời gian — Nhìn thấy">
+<meta property="og:description" content="Bảy mươi năm marketing trong năm chương: quảng cáo đại chúng, xây thương hiệu, digital, social và kỷ nguyên creator.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .era{border-top:var(--rule);padding:clamp(36px,5vw,90px) 0;display:grid;gap:clamp(18px,3vw,44px)}
+  @media(min-width:1000px){.era{grid-template-columns:.42fr .58fr;align-items:start}}
+  .era__y{font-family:var(--serif);font-size:clamp(4rem,13vw,11rem);line-height:.78;font-weight:300;letter-spacing:-.05em;color:var(--accent)}
+  .era__t{font-family:var(--serif);font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1;letter-spacing:-.025em;margin-top:14px}
+  .era__line{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,1.8vw,1.4rem);line-height:1.3;color:var(--ink-60);margin-top:16px;max-width:32ch}
+  .era p{font-size:1.02rem;line-height:1.62;max-width:58ch}
+  .marks{list-style:none;margin:24px 0 0;padding:0}
+  .marks li{border-bottom:var(--rule);padding:11px 0;font-size:14.5px;display:flex;justify-content:space-between;gap:16px}
+  .brands{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+  .brands span{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--ink-14);padding:6px 10px}
+  .lesson{border-left:2px solid var(--accent);padding-left:18px;margin-top:26px;font-family:var(--serif);font-size:1.15rem;line-height:1.3;max-width:34ch}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Toàn bộ nội dung — bài học, case study, thư viện nguyên lý — được dựng ngay trong trình duyệt của bạn,
+  không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
+</div></noscript>
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Bảy mươi năm<br>trong <em>năm chương.</em></h1>
+      <p class="caption" data-reveal data-delay=".1">Marketing thay đổi khi phương tiện thay đổi, không phải khi con người thay đổi.
+        Đọc dọc dòng thời gian này để thấy: mỗi thời kỳ giải một bài toán mới do chính phương tiện của nó tạo ra.</p>
+    </div>
+  </section>
+  <div id="eras"></div>
+</main>
+<script src="assets/js/core.js?v=7"></script>
+<script src="assets/js/data/timeline.js?v=7"></script>
+<script>
+shell('timeline.html');
+document.getElementById('eras').innerHTML = ERAS.map((e,i)=>`
+  <section class="era" style="--accent:${e.color}" data-reveal>
+    <div>
+      <div class="era__y">${e.era}</div>
+      <h2 class="era__t">${e.t}</h2>
+      <p class="era__line">${e.line}</p>
+      <div style="max-width:230px;margin-top:26px">${plate({color:e.color,mark:e.mark,kicker:'Chương '+(i+1),meta:e.era,title:'',shape:'plate--sq'})}</div>
+    </div>
+    <div>
+      <p>${e.body}</p>
+      <div class="label" style="margin-top:26px">Cột mốc</div>
+      <ul class="marks">${e.marks.map(m=>`<li><span>${m}</span></li>`).join('')}</ul>
+      <div class="label" style="margin-top:22px">Thương hiệu tiêu biểu</div>
+      <div class="brands">${e.brands.map(b=>`<span>${b}</span>`).join('')}</div>
+      <p class="lesson">${e.lesson}</p>
+    </div>
+  </section>`).join('');
+reveal();
+</script>
+</body></html>

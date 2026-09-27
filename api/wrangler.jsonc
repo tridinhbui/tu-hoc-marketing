@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "nhinthay-api",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-01",
+  "observability": { "enabled": true },
+
+  // Tạo bằng: wrangler d1 create nhinthay
+  // rồi dán database_id vào đây.
+  "d1_databases": [
+    { "binding": "DB", "database_name": "nhinthay", "database_id": "<D1_DATABASE_ID>" }
+  ],
+
+  // Tạo bằng: wrangler kv namespace create SESSIONS
+  "kv_namespaces": [
+    { "binding": "SESSIONS", "id": "<KV_NAMESPACE_ID>" }
+  ],
+
+  "vars": {
+    "ALLOWED_ORIGIN": "https://nhinthay.pages.dev",
+    "GRADING_MODEL": "claude-opus-5",
+    "FREE_GRADES_PER_MONTH": "3"
+  }
+
+  // Khoá API đặt bằng: wrangler secret put ANTHROPIC_API_KEY
+  // Không bao giờ để trong file này.
+}

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="vi" data-district="growth">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bàn làm việc — Ở mức CAC nào thì chết — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Bài tập Tuần 10: phễu → LTV → điểm hoà vốn CAC. Nhập giả định của bạn, trang tính ra mức chi phí có khách mà quá đó thì kế hoạch chết.">
+<meta property="og:title" content="Bàn làm việc — Ở mức CAC nào thì chết">
+<meta property="og:description" content="Traffic → CVR → AOV → tần suất → LTV, rồi tính ngược ra trần CAC. Không có ô nào là ý kiến.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .setup{border-top:1px solid var(--ink);padding-top:16px;margin:clamp(20px,3vw,40px) 0}
+  .grid2{display:grid;gap:clamp(20px,3vw,44px)}
+  @media(min-width:960px){.grid2{grid-template-columns:.85fr 1.15fr;align-items:start}}
+  .inp{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border-bottom:var(--rule);padding:11px 0}
+  .inp label{font-size:14px;line-height:1.35}
+  .inp .hint{display:block;font-size:12.5px;color:var(--ink-38);margin-top:3px}
+  .inp input{border:0;border-bottom:1px solid var(--ink-14);background:none;text-align:right;
+    font-family:var(--mono);font-size:14px;width:118px;padding:5px 0;color:inherit}
+  .inp input:focus{outline:0;border-bottom-color:var(--accent)}
+  .inp .unit{font-family:var(--mono);font-size:10px;color:var(--ink-38);margin-left:6px}
+  .out{border:var(--rule);padding:clamp(16px,2.2vw,26px);display:grid;gap:14px;position:sticky;top:12px}
+  .big{display:grid;gap:4px}
+  .big b{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,3.4rem);line-height:1;letter-spacing:-.03em}
+  .big b[data-bad]{color:var(--accent)}
+  .lines{display:grid;gap:1px;background:var(--ink-14);border:var(--rule)}
+  .lines div{background:var(--paper);padding:10px 12px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+  .lines b{font-family:var(--mono);font-size:12.5px;font-weight:400}
+  .funnel{display:grid;gap:6px;margin-top:6px}
+  .funnel div{position:relative;height:26px;background:var(--ink-08)}
+  .funnel i{position:absolute;inset:0 auto 0 0;background:var(--accent);opacity:.85}
+  .funnel span{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;padding:0 8px;
+    font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;mix-blend-mode:difference;color:#fff}
+  .verdictbox{border-left:2px solid var(--accent);padding:4px 0 4px 20px;display:grid;gap:10px;margin-top:clamp(22px,3vw,40px)}
+  .verdictbox ul{margin:0;padding-left:18px;font-size:14px;line-height:1.6;display:grid;gap:6px}
+  .bar{display:flex;gap:10px;flex-wrap:wrap;margin:clamp(22px,3vw,44px) 0}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Bàn làm việc chạy hoàn toàn trong trình duyệt của bạn, không gọi về máy chủ nào và không gửi gì đi.</p>
+</div></noscript>
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Ở mức CAC nào<br><em>thì kế hoạch này chết?</em></h1>
+      <p class="caption" data-reveal data-delay=".08">Bài tập Tuần 10. Đây là chỗ chia đôi giữa người nói hay và người làm được.
+        Nhập giả định của bạn — mỗi ô là một con số bạn phải chịu trách nhiệm — trang tính ngược ra
+        <strong>trần CAC</strong>: mức chi phí có được một khách mà vượt qua đó thì mỗi khách mới làm bạn nghèo đi.
+        Không ai bắt bạn đoán đúng. Chỉ cần đoán <em>ra thành số</em>, rồi tháng sau so với thực tế.</p>
+    </div>
+  </section>
+
+  <section class="setup">
+    <input class="field" id="w-name" placeholder="Sản phẩm / mô hình đang tính — ví dụ: gói tập 6 tháng, 2,4 triệu">
+  </section>
+
+  <div class="grid2">
+    <div id="inputs"></div>
+    <aside class="out" id="out"></aside>
+  </div>
+
+  <section class="verdictbox" id="verdict"></section>
+
+  <div class="bar">
+    <button class="btn" id="tojournal">Lưu vào sổ tay</button>
+    <button class="btn btn--ghost" id="export">Xuất .txt</button>
+    <button class="btn btn--ghost" id="clear">Về mặc định</button>
+    <a class="btn btn--ghost" href="principle.html?id=cac">Nguyên lý CAC</a>
+    <a class="btn btn--ghost" href="roadmap.html">Về lộ trình</a>
+  </div>
+</main>
+
+<script src="assets/js/core.js?v=7"></script>
+<script>
+shell('roadmap.html');
+
+const WKEY='econ10';
+const F=[
+  ['visits','Người vào trang mỗi tháng','ng',1000,'Đếm được, đừng ước — lấy từ analytics'],
+  ['cvr','Tỉ lệ mua trong tháng đầu','%',2,'Thương mại điện tử thường 1–3%; dịch vụ có tư vấn cao hơn'],
+  ['aov','Giá trị một đơn','đ',300000,'Trung bình thật, không phải gói đắt nhất'],
+  ['margin','Biên lợi nhuận gộp','%',40,'Sau giá vốn, trước quảng cáo và lương'],
+  ['freq','Số lần mua mỗi năm','lần',2,'Một lần thì ghi 1 — và LTV của bạn chỉ có thế'],
+  ['years','Số năm giữ được khách','năm',1.5,'Thành thật: phần lớn khách không ở lại ba năm'],
+  ['refer','Mỗi khách kéo thêm bao nhiêu khách','ng',0.2,'Không đo được thì để 0'],
+  ['spend','Ngân sách quảng cáo mỗi tháng','đ',10000000,'Chỉ tiền media, chưa tính lương'],
+];
+const DEF=Object.fromEntries(F.map(([k,,,d])=>[k,d]));
+const load=()=>{const w=(State.get().work||{})[WKEY];return w&&w.v?w:{name:'',v:{...DEF}}};
+const save=w=>{const work={...(State.get().work||{})};work[WKEY]=w;State.set({work})};
+let W=load();
+document.getElementById('w-name').value=W.name||'';
+
+const vnd=n=>{
+  if(!isFinite(n)) return '—';
+  const a=Math.round(n);
+  if(Math.abs(a)>=1e9) return (a/1e9).toFixed(2).replace(/\.?0+$/,'')+' tỉ';
+  if(Math.abs(a)>=1e6) return (a/1e6).toFixed(2).replace(/\.?0+$/,'')+' tr';
+  return a.toLocaleString('vi-VN');
+};
+const num=n=>isFinite(n)?(Math.round(n*100)/100).toLocaleString('vi-VN'):'—';
+
+document.getElementById('inputs').innerHTML = F.map(([k,label,unit,,hint])=>`
+  <div class="inp">
+    <label for="f-${k}">${label}<span class="hint">${hint}</span></label>
+    <span><input id="f-${k}" data-k="${k}" inputmode="decimal" value="${W.v[k]}"><span class="unit">${unit}</span></span>
+  </div>`).join('');
+
+function calc(){
+  const v=W.v;
+  const buyers = v.visits * (v.cvr/100);                    // khách mới mỗi tháng
+  const grossPerOrder = v.aov * (v.margin/100);             // lãi gộp một đơn
+  const ordersLife = v.freq * v.years;                      // số đơn cả đời khách
+  const ltv = grossPerOrder * ordersLife;                   // LTV tính bằng lãi gộp, không phải doanh thu
+  const ltvRef = ltv * (1 + v.refer);                       // cộng phần khách kéo khách
+  const cac = buyers>0 ? v.spend / buyers : Infinity;        // CAC thực tế theo ngân sách đang chi
+  const capBreakeven = ltvRef;                              // hoà vốn cả đời khách
+  const capHealthy = ltvRef/3;                              // ngưỡng LTV:CAC = 3
+  const ratio = cac>0 ? ltvRef/cac : Infinity;
+  const monthsBack = grossPerOrder>0 ? cac / (grossPerOrder * (v.freq/12)) : Infinity; // tháng để hoàn vốn
+  const profitMonth = buyers*ltvRef - v.spend;
+  return {buyers,grossPerOrder,ordersLife,ltv,ltvRef,cac,capBreakeven,capHealthy,ratio,monthsBack,profitMonth};
+}
+
+function render(){
+  const v=W.v, r=calc();
+  const bad = !(r.ratio>=3);
+  document.getElementById('out').innerHTML=`
+    <div class="big"><span class="label label--accent">Trần CAC lành mạnh · LTV:CAC = 3</span>
+      <b>${vnd(r.capHealthy)}<span class="unit"> đ</span></b>
+      <span class="caption">Trả hơn mức này thì bạn đang mua tăng trưởng bằng vốn, không phải bằng lãi.</span></div>
+    <div class="big"><span class="label">CAC bạn đang trả</span>
+      <b ${bad?'data-bad':''} style="font-size:clamp(1.4rem,3vw,2.1rem)">${vnd(r.cac)}<span class="unit"> đ</span></b></div>
+    <div class="lines">
+      <div><span class="label">Khách mới mỗi tháng</span><b>${num(r.buyers)}</b></div>
+      <div><span class="label">Lãi gộp một đơn</span><b>${vnd(r.grossPerOrder)} đ</b></div>
+      <div><span class="label">Số đơn cả đời khách</span><b>${num(r.ordersLife)}</b></div>
+      <div><span class="label">LTV (lãi gộp)</span><b>${vnd(r.ltv)} đ</b></div>
+      <div><span class="label">LTV kể cả giới thiệu</span><b>${vnd(r.ltvRef)} đ</b></div>
+      <div><span class="label">Hoà vốn tuyệt đối</span><b>${vnd(r.capBreakeven)} đ</b></div>
+      <div><span class="label">LTV : CAC</span><b ${bad?'style="color:var(--accent)"':''}>${isFinite(r.ratio)?num(r.ratio):'—'}</b></div>
+      <div><span class="label">Số tháng hoàn vốn một khách</span><b>${isFinite(r.monthsBack)?num(r.monthsBack):'—'}</b></div>
+      <div><span class="label">Lãi gộp còn lại mỗi tháng</span><b ${r.profitMonth<0?'style="color:var(--accent)"':''}>${vnd(r.profitMonth)} đ</b></div>
+    </div>
+    <div class="funnel">
+      ${[['Vào trang',v.visits,1],['Mua lần đầu',r.buyers,v.visits?r.buyers/v.visits:0],
+         ['Mua lại trong đời',r.buyers*Math.max(r.ordersLife-1,0),v.visits?r.buyers*Math.max(r.ordersLife-1,0)/v.visits:0]]
+        .map(([l,n,p])=>`<div><i style="width:${Math.max(Math.min(p*100,100),.6)}%"></i>
+          <span><em style="font-style:normal">${l}</em><em style="font-style:normal">${num(n)}</em></span></div>`).join('')}
+    </div>`;
+
+  const bits=[];
+  if(!isFinite(r.cac)||r.buyers<=0) bits.push('<li>Chưa có khách nào: kiểm tra lại lượt truy cập và tỉ lệ mua. Một trong hai đang bằng 0.</li>');
+  else if(r.ratio<1) bits.push(`<li><strong>Mỗi khách mới đang làm bạn lỗ.</strong> CAC ${vnd(r.cac)}đ trong khi cả đời khách chỉ mang về ${vnd(r.ltvRef)}đ lãi gộp. Đổ thêm tiền quảng cáo lúc này là đổ nhanh hơn về đích sai.</li>`);
+  else if(r.ratio<3) bits.push(`<li>Tỉ lệ LTV:CAC đang là ${num(r.ratio)}. Sống được nhưng không còn gì để trả lương, mặt bằng và sai lầm. Ngưỡng quen dùng là 3.</li>`);
+  else bits.push(`<li>Tỉ lệ LTV:CAC ${num(r.ratio)} — còn dư địa. Nếu số này thật, chỗ đáng làm tiếp là <em>tăng ngân sách</em> chứ không phải tối ưu thêm 0,2% chuyển đổi.</li>`);
+
+  if(isFinite(r.monthsBack)&&r.monthsBack>12) bits.push(`<li>Mất ${num(r.monthsBack)} tháng mới hoàn vốn một khách. Bạn đang cần vốn lưu động, không phải cần thêm quảng cáo — trừ khi bạn thu tiền trước.</li>`);
+  if(v.years>3) bits.push('<li>Giả định giữ khách hơn ba năm là chỗ dễ tự lừa nhất trong bảng này. Có dữ liệu thật chưa, hay đang mong?</li>');
+  if(v.refer>0.5) bits.push('<li>Hệ số giới thiệu trên 0,5 là rất cao. Nếu chưa đo được bằng mã giới thiệu hay khảo sát, để 0 và xem kế hoạch có còn đứng vững.</li>');
+  if(v.margin>=80) bits.push('<li>Biên gộp ≥80% chỉ hợp lý với sản phẩm số. Hàng vật lý mà để mức này thì bạn đang quên giá vốn, đóng gói hoặc vận chuyển.</li>');
+
+  const half=(()=>{const t={...v,cvr:v.cvr/2}; const s=W; W={...W,v:t}; const rr=calc(); W=s; return rr;})();
+  bits.push(`<li><strong>Thử độ mong manh:</strong> nếu tỉ lệ mua chỉ còn một nửa (${num(v.cvr/2)}%), CAC nhảy lên ${vnd(half.cac)}đ và tỉ lệ còn ${isFinite(half.ratio)?num(half.ratio):'—'}. Kế hoạch nào chỉ đúng ở kịch bản tốt nhất thì chưa phải kế hoạch.</li>`);
+
+  document.getElementById('verdict').innerHTML=
+    `<span class="label label--accent">Đọc bảng</span><ul>${bits.join('')}</ul>
+     <p class="caption">Chép ba con số này ra giấy dán ở bàn: trần CAC lành mạnh, số tháng hoàn vốn, lãi gộp một đơn.
+     Mọi quyết định chi tiền tháng sau đều phải trả lời được ba con số đó.</p>`;
+}
+
+document.getElementById('inputs').addEventListener('input', e=>{
+  const k=e.target.dataset.k; if(!k) return;
+  const n=parseFloat(String(e.target.value).replace(/[^\d.,-]/g,'').replace(/\./g,'').replace(',','.'));
+  W.v[k]=isFinite(n)?n:0; save(W); render();
+});
+document.getElementById('w-name').addEventListener('input',e=>{W.name=e.target.value;save(W)});
+
+const asText=()=>{
+  const r=calc();
+  return ['BÀI TẬP TUẦN 10 — UNIT ECONOMICS',`Mô hình: ${W.name||'(chưa ghi)'}`,'','GIẢ ĐỊNH',
+    ...F.map(([k,label,unit])=>`  ${label}: ${W.v[k]} ${unit}`),'','KẾT QUẢ',
+    `  Khách mới mỗi tháng: ${num(r.buyers)}`,
+    `  Lãi gộp một đơn: ${vnd(r.grossPerOrder)} đ`,
+    `  LTV (kể cả giới thiệu): ${vnd(r.ltvRef)} đ`,
+    `  CAC đang trả: ${vnd(r.cac)} đ`,
+    `  Trần CAC lành mạnh (LTV:CAC=3): ${vnd(r.capHealthy)} đ`,
+    `  Hoà vốn tuyệt đối: ${vnd(r.capBreakeven)} đ`,
+    `  LTV:CAC = ${isFinite(r.ratio)?num(r.ratio):'—'} · hoàn vốn sau ${isFinite(r.monthsBack)?num(r.monthsBack):'—'} tháng`,
+    `  Lãi gộp còn lại mỗi tháng: ${vnd(r.profitMonth)} đ`].join('\n');
+};
+document.querySelector('.bar').addEventListener('click', e=>{
+  if(e.target.id==='tojournal'){
+    const s=State.get(), wid='worksheet:'+WKEY;
+    const i=s.notes.findIndex(x=>x.wid===wid);
+    const note={t:'Tuần 10 — Unit economics'+(W.name?' · '+W.name:''), body:asText(),
+      when:new Date().toISOString().slice(0,10), kind:'Bàn làm việc', href:'unit-economics.html', wid};
+    i>-1 ? s.notes[i]=note : s.notes.unshift(note);
+    State.set({notes:s.notes}); toast(i>-1?'Đã cập nhật trong sổ tay':'Đã lưu vào sổ tay');
+  }
+  if(e.target.id==='export'){
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([asText()],{type:'text/plain'}));
+    a.download='tuan-10-unit-economics.txt'; a.click(); URL.revokeObjectURL(a.href);
+  }
+  if(e.target.id==='clear'){
+    if(!confirm('Đưa mọi ô về giá trị mặc định? Ghi chép đã lưu trong sổ tay vẫn còn.')) return;
+    W={name:W.name,v:{...DEF}}; save(W); location.reload();
+  }
+});
+render(); reveal();
+</script>
+</body></html>

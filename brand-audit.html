@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="vi" data-district="brand">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bàn làm việc — Brand audit — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Bài tập Tuần 8: gộp bốn tuần của tháng thành một bản brand audit — định vị, tài sản nhận diện, cửa vào category, ba chỗ đang rò rỉ.">
+<meta property="og:title" content="Bàn làm việc — Brand audit">
+<meta property="og:description" content="Sản phẩm đầu ra của Tháng 2: một bản audit người ngoài đọc được, không phải một tập ghi chú rời.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .setup{border-top:1px solid var(--ink);padding-top:16px;margin:clamp(20px,3vw,44px) 0;display:grid;gap:14px}
+  @media(min-width:820px){.setup{grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,44px)}}
+  .pull-in{display:grid;gap:clamp(14px,2vw,26px);margin:clamp(20px,3vw,40px) 0}
+  @media(min-width:900px){.pull-in{grid-template-columns:repeat(3,1fr)}}
+  .pull-in div{border-top:var(--rule);padding-top:12px;display:grid;gap:8px;align-content:start}
+  .pull-in ul{margin:0;padding-left:16px;font-size:13.5px;line-height:1.55}
+  .pull-in .miss{font-size:13.5px;line-height:1.55;color:var(--ink-38);font-style:italic}
+  .sec{border-top:1px solid var(--ink);padding-top:14px;margin-top:clamp(24px,3.2vw,46px);display:grid;gap:12px}
+  .sec__top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .sec h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.25rem,2.2vw,1.75rem);letter-spacing:-.02em}
+  .sec .why{font-size:13.5px;line-height:1.55;color:var(--ink-60);max-width:62ch}
+  .leaks{display:grid;gap:12px}
+  .leak{display:grid;grid-template-columns:auto 1fr 1fr;gap:12px;align-items:start}
+  @media(max-width:760px){.leak{grid-template-columns:1fr}}
+  .leak .n{font-family:var(--mono);font-size:10px;color:var(--ink-38);padding-top:10px}
+  .verdictbox{border-left:2px solid var(--accent);padding:4px 0 4px 20px;display:grid;gap:10px;margin-top:clamp(24px,3vw,44px)}
+  .verdictbox ul{margin:0;padding-left:18px;font-size:14px;line-height:1.6;display:grid;gap:6px}
+  .prev{border:var(--rule);padding:clamp(18px,2.4vw,30px);margin-top:clamp(20px,3vw,40px);
+    white-space:pre-wrap;font-family:var(--mono);font-size:12px;line-height:1.75;max-height:340px;overflow:auto}
+  .bar{display:flex;gap:10px;flex-wrap:wrap;margin:clamp(22px,3vw,44px) 0}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Bàn làm việc chạy hoàn toàn trong trình duyệt của bạn, không gọi về máy chủ nào và không gửi gì đi.</p>
+</div></noscript>
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Bốn tuần rời<br><em>thành một bản.</em></h1>
+      <p class="caption" data-reveal data-delay=".08">Bài tập Tuần 8 — sản phẩm đầu ra của Tháng 2.
+        Một bản audit không phải là chỗ khoe bạn biết nhiều thuật ngữ; nó phải trả lời được đúng ba câu:
+        thương hiệu này <strong>đứng ở đâu</strong>, <strong>được nhớ bằng gì</strong>, và <strong>đang rò rỉ ở chỗ nào</strong>.
+        Những gì bạn đã chấm ở Tuần 6 và Tuần 7 được kéo sẵn vào đây.</p>
+    </div>
+  </section>
+
+  <section class="setup">
+    <div><span class="label">Thương hiệu được audit</span>
+      <input class="field" id="w-brand" placeholder="Một thương hiệu Việt bạn quan sát được ngoài đời"></div>
+    <div><span class="label">Người đọc bản này là ai</span>
+      <input class="field" id="w-reader" placeholder="Viết cho ai đọc — sếp, khách hàng, hay chính bạn sáu tháng nữa"></div>
+  </section>
+
+  <div class="label label--accent">Kéo sẵn từ ba tuần trước</div>
+  <div class="pull-in" id="pull"></div>
+
+  <div id="secs"></div>
+
+  <section class="verdictbox" id="verdict"></section>
+
+  <div class="label label--accent" style="margin-top:clamp(24px,3vw,44px)">Bản audit đang thành hình</div>
+  <div class="prev" id="prev"></div>
+
+  <div class="bar">
+    <button class="btn" id="tojournal">Lưu vào sổ tay</button>
+    <button class="btn btn--ghost" id="export">Xuất .txt</button>
+    <button class="btn btn--ghost" id="clear">Xoá hết</button>
+    <a class="btn btn--ghost" href="xray.html">Brand X-Ray</a>
+    <a class="btn btn--ghost" href="roadmap.html">Về lộ trình</a>
+  </div>
+</main>
+
+<script src="assets/js/core.js?v=7"></script>
+<script>
+shell('roadmap.html');
+
+const WKEY='aud8';
+const SECS=[
+  ['stand','Thương hiệu này đứng ở đâu','Một câu. Nếu thay tên đối thủ vào mà vẫn đúng thì viết lại.'],
+  ['who','Nó phục vụ ai, và cố tình bỏ ai','Không có ai bị bỏ thì chưa có định vị.'],
+  ['remember','Được nhớ bằng gì ngoài logo','Lấy từ ô “giữ” bên dưới; cái nào phải giải thích thì chưa tính.'],
+  ['doors','Nó bật ra ở tình huống nào','Cửa nào đã chiếm, cửa nào để trống cho người khác.'],
+  ['proof','Bằng chứng bạn nhìn thấy ngoài đời','Cửa hàng, bao bì, quảng cáo, cách nhân viên nói. Không đoán trong đầu.'],
+  ['risk','Điều gì có thể giết thương hiệu này trong ba năm','Viết cả khi nó đang bán tốt.'],
+];
+const blankLeak=()=>({what:'',fix:''});
+const load=()=>{const w=(State.get().work||{})[WKEY];
+  return w&&w.leaks?w:{brand:'',reader:'',secs:Object.fromEntries(SECS.map(([k])=>[k,''])),leaks:[blankLeak(),blankLeak(),blankLeak()]}};
+const save=w=>{const work={...(State.get().work||{})};work[WKEY]=w;State.set({work})};
+let W=load();
+document.getElementById('w-brand').value=W.brand||'';
+document.getElementById('w-reader').value=W.reader||'';
+
+/* Kéo dữ liệu từ bàn Tuần 6 và Tuần 7 — người học không phải chép lại,
+   và nếu chưa làm hai tuần đó thì trang nói thẳng là còn thiếu. */
+const work=()=>State.get().work||{};
+function pulled(){
+  const a=work().ass6, c=work().cep7;
+  const keep=[], build=[];
+  ((a&&a.brands)||[]).forEach(br=>((br.list)||[]).forEach(x=>{
+    if(!String(x.t||'').trim()) return;
+    const hi=n=>n>=2, tag=(br.name||'').trim()?`${br.name.trim()} · `:'';
+    if(hi(x.fame)&&hi(x.uniq)) keep.push(tag+x.t.trim());
+    else if(!hi(x.fame)&&hi(x.uniq)) build.push(tag+x.t.trim());
+  }));
+  const list=(c&&c.list)||[];
+  const mine=list.filter(x=>x.own==='mine'&&String(x.t).trim()).map(x=>x.t.trim());
+  const open=list.filter(x=>x.own==='none'&&String(x.t).trim()).map(x=>x.t.trim());
+  return {keep,build,mine,open,hasA:!!a,hasC:!!c};
+}
+
+function renderPull(){
+  const p=pulled();
+  const box=(label,items,empty,href)=>`<div><span class="label">${label}</span>
+    ${items.length?`<ul>${items.slice(0,6).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:`<p class="miss">${empty} <a href="${href}">Mở bàn →</a></p>`}</div>`;
+  document.getElementById('pull').innerHTML =
+    box('Tài sản ở ô “giữ” · Tuần 6', p.keep, 'Chưa có tài sản nào đủ mạnh — hoặc chưa chấm.', 'assets-audit.html') +
+    box('Cửa đã chiếm · Tuần 7', p.mine, 'Chưa chiếm được cửa nào — hoặc chưa chấm.', 'cep.html') +
+    box('Cửa còn bỏ trống · Tuần 7', p.open, 'Chưa đánh dấu cửa nào bỏ trống.', 'cep.html');
+  return p;
+}
+
+document.getElementById('secs').innerHTML = SECS.map(([k,q,why])=>`
+  <section class="sec">
+    <div class="sec__top"><h2>${q}</h2><span class="label" data-len="${k}"></span></div>
+    <p class="why">${why}</p>
+    <textarea class="field" data-k="${k}" rows="3" placeholder="Viết bằng câu, không viết bằng gạch đầu dòng rời rạc">${esc(W.secs[k]||'')}</textarea>
+  </section>`).join('') + `
+  <section class="sec">
+    <div class="sec__top"><h2>Ba chỗ đang rò rỉ</h2><span class="label" data-len="leaks"></span></div>
+    <p class="why">Rò rỉ là chỗ thương hiệu tự làm mất đi thứ nó đã mua bằng tiền: một điểm chạm nói khác đi,
+      một tài sản bị đổi vì chán, một cửa để trống cho đối thủ. Mỗi chỗ kèm một việc sửa được trong tháng tới.</p>
+    <div class="leaks">
+      ${W.leaks.map((l,i)=>`<div class="leak" data-i="${i}">
+        <span class="n">${String(i+1).padStart(2,'0')}</span>
+        <textarea class="field" data-l="what" rows="2" placeholder="Rò ở đâu — mô tả cụ thể, có chỗ có lúc">${esc(l.what)}</textarea>
+        <textarea class="field" data-l="fix" rows="2" placeholder="Sửa thế nào — một việc làm được trong 30 ngày">${esc(l.fix)}</textarea>
+      </div>`).join('')}
+    </div>
+  </section>`;
+
+const g=t=>String(t||'').trim();
+const words=t=>g(t).split(/\s+/).filter(Boolean).length;
+
+const asText=()=>{
+  const p=pulled();
+  const L=[`BRAND AUDIT — ${W.brand||'(chưa đặt tên)'}`,
+    W.reader?`Viết cho: ${W.reader}`:'', new Date().toLocaleDateString('vi-VN'),''];
+  SECS.forEach(([k,q])=>{ L.push(q.toUpperCase()); L.push(g(W.secs[k])||'(chưa viết)'); L.push(''); });
+  if(p.keep.length){ L.push('TÀI SẢN ĐÁNG GIỮ (Tuần 6)'); p.keep.forEach(x=>L.push('  · '+x)); L.push(''); }
+  if(p.mine.length||p.open.length){
+    L.push('CỬA VÀO CATEGORY (Tuần 7)');
+    p.mine.forEach(x=>L.push('  [đã chiếm] '+x));
+    p.open.forEach(x=>L.push('  [bỏ trống] '+x)); L.push('');
+  }
+  L.push('BA CHỖ RÒ RỈ');
+  W.leaks.forEach((l,i)=>{ if(!g(l.what)&&!g(l.fix)) return;
+    L.push(`  ${i+1}. ${g(l.what)||'—'}`); L.push(`     Sửa: ${g(l.fix)||'—'}`); });
+  return L.filter(x=>x!==undefined).join('\n');
+};
+
+function check(){
+  const p=renderPull();
+  SECS.forEach(([k])=>{ const n=words(W.secs[k]);
+    document.querySelector(`[data-len="${k}"]`).textContent = n?n+' từ':''; });
+  const leaksDone=W.leaks.filter(l=>g(l.what)&&g(l.fix)).length;
+  document.querySelector('[data-len="leaks"]').textContent = leaksDone+' / 3 đủ cả rò lẫn cách sửa';
+
+  const written=SECS.filter(([k])=>words(W.secs[k])>=8).length;
+  const bits=[];
+  if(!p.hasA||!p.hasC) bits.push('<li>Chưa có dữ liệu từ <a href="assets-audit.html">Tuần 6</a> hoặc <a href="cep.html">Tuần 7</a>. Làm hai bàn đó trước — bản audit viết bằng trí nhớ luôn nghe hay hơn sự thật.</li>');
+  if(p.keep.length===0 && p.hasA) bits.push('<li>Không có tài sản nào vào ô “giữ”. Nếu đúng vậy, câu “được nhớ bằng gì” phải trả lời thẳng: <em>chưa có gì ngoài cái tên</em> — và đó là phát hiện đáng giá nhất của bản audit này.</li>');
+  if(p.open.length>=3) bits.push(`<li>${p.open.length} cửa còn bỏ trống. Ít nhất một chỗ rò rỉ nên là một trong số đó.</li>`);
+  if(g(W.secs.who) && !/không|bỏ|loại|tránh|chấp nhận mất/i.test(W.secs.who)) bits.push('<li>Phần “phục vụ ai” chưa nói ai bị bỏ lại. Một thương hiệu phục vụ tất cả mọi người thì không nằm trong đầu ai cả.</li>');
+  if(leaksDone<3 && written>=3) bits.push(`<li>Mới ${leaksDone}/3 chỗ rò rỉ có cả cách sửa. Phần này là thứ duy nhất người đọc sẽ hành động — đừng để trống.</li>`);
+
+  const v=document.getElementById('verdict');
+  if(!written && !leaksDone){
+    v.innerHTML=`<span class="label label--accent">Chưa bắt đầu</span>
+      <p class="caption">Viết câu đầu tiên trước: <strong>thương hiệu này đứng ở đâu</strong>. Nếu viết mãi không xong một câu,
+      đó không phải lỗi của bạn — nhiều thương hiệu thật sự không đứng ở đâu cả, và câu đó chính là kết luận.</p>`;
+  } else {
+    v.innerHTML=`<span class="label label--accent">${written} / ${SECS.length} phần đã viết · ${leaksDone} / 3 chỗ rò rỉ</span>
+      ${bits.length?`<ul>${bits.join('')}</ul>`:`<p class="caption">Đủ phần. Giờ đọc lại một lượt và gạch mọi câu bạn không có bằng chứng ngoài đời.</p>`}
+      <p class="caption">Xong thì đưa cho <strong>một người không làm marketing</strong> đọc. Nếu họ không tóm tắt lại được thương hiệu này
+      đứng ở đâu sau khi đọc, bản audit chưa xong — dù nó dài bao nhiêu.</p>`;
+  }
+  document.getElementById('prev').textContent = asText();
+}
+
+document.getElementById('secs').addEventListener('input', e=>{
+  const k=e.target.dataset.k, l=e.target.dataset.l;
+  if(k) W.secs[k]=e.target.value;
+  else if(l) W.leaks[+e.target.closest('.leak').dataset.i][l]=e.target.value;
+  else return;
+  save(W); check();
+});
+['w-brand','w-reader'].forEach(id=>document.getElementById(id).addEventListener('input',e=>{
+  W[id==='w-brand'?'brand':'reader']=e.target.value; save(W); check();
+}));
+
+document.querySelector('.bar').addEventListener('click', e=>{
+  if(e.target.id==='tojournal'){
+    if(!SECS.some(([k])=>g(W.secs[k])) && !W.leaks.some(l=>g(l.what))) return toast('Chưa có gì để lưu');
+    const s=State.get(), wid='worksheet:'+WKEY;
+    const i=s.notes.findIndex(x=>x.wid===wid);
+    const note={t:'Tuần 8 — Brand audit'+(W.brand?' · '+W.brand:''), body:asText(),
+      when:new Date().toISOString().slice(0,10), kind:'Bàn làm việc', href:'brand-audit.html', wid};
+    i>-1 ? s.notes[i]=note : s.notes.unshift(note);
+    State.set({notes:s.notes}); toast(i>-1?'Đã cập nhật trong sổ tay':'Đã lưu vào sổ tay');
+  }
+  if(e.target.id==='export'){
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([asText()],{type:'text/plain'}));
+    a.download='tuan-8-brand-audit.txt'; a.click(); URL.revokeObjectURL(a.href);
+  }
+  if(e.target.id==='clear'){
+    if(!confirm('Xoá toàn bộ nội dung bàn làm việc này? Ghi chép đã lưu trong sổ tay vẫn còn.')) return;
+    W={brand:'',reader:'',secs:Object.fromEntries(SECS.map(([k])=>[k,''])),leaks:[blankLeak(),blankLeak(),blankLeak()]};
+    save(W); location.reload();
+  }
+});
+check(); reveal();
+</script>
+</body></html>

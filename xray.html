@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi" data-district="brand">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brand X-Ray — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Bóc tách thương hiệu: tự trả lời trước, phân tích mở ra sau. Nike, Apple, MUJI, Vinamilk, Biti’s và nhiều hơn.">
+<meta property="og:title" content="Brand X-Ray — Nhìn thấy">
+<meta property="og:description" content="Bóc tách thương hiệu: tự trả lời trước, phân tích mở ra sau. Nike, Apple, MUJI, Vinamilk, Biti’s và nhiều hơn.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .rowlist{padding:clamp(24px,4vw,60px) 0}
+  .brow{display:grid;grid-template-columns:1fr;gap:14px;padding:clamp(18px,2.4vw,30px) 0;border-bottom:var(--rule);align-items:center}
+  @media(min-width:900px){.brow{grid-template-columns:9ch minmax(0,1.1fr) minmax(0,1.4fr) 12ch}}
+  .brow:hover .bt{color:var(--accent)}
+  .bt{font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.7rem);line-height:1;letter-spacing:-.028em;transition:color .35s}
+  .chip{width:64px;height:80px;position:relative;overflow:hidden}
+  .done{color:var(--accent)}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Toàn bộ nội dung — bài học, case study, thư viện nguyên lý — được dựng ngay trong trình duyệt của bạn,
+  không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
+</div></noscript>
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Brand<br><em>X-Ray</em></h1>
+      <p class="caption" data-reveal data-delay=".1">Chọn một thương hiệu. Trả lời bốn đến năm câu hỏi bằng chính lời của bạn —
+        không có đáp án gợi ý. Chỉ sau khi bạn viết xong, phần phân tích mới mở ra.
+        Cái bạn học không nằm ở phần phân tích, nó nằm ở khoảng cách giữa hai bên.</p>
+    </div>
+  </section>
+  <div class="rowlist" id="list"></div>
+</main>
+<script src="assets/js/core.js?v=7"></script>
+<script src="assets/js/data/brands.js?v=7"></script>
+<script>
+shell('xray.html');
+document.getElementById('list').innerHTML = BRANDS.map((b,i)=>{
+  const done = State.has('brands', b.id);
+  return `<a class="brow" href="thuong-hieu/${b.id}.html" data-reveal data-delay="${(i%5)*.05}">
+    <span class="chip">${plate({color:b.color,mark:b.mark,kicker:'',meta:'',title:'',shape:'plate--tall'})}</span>
+    <span><span class="bt">${b.name}</span><br><span class="label">${b.cat} · ${b.market}</span></span>
+    <span class="caption">${b.promise}</span>
+    <span class="label ${done?'done':''}">${done?'Đã bóc tách ✓':b.q.length+' câu hỏi'}</span>
+  </a>`;
+}).join('');
+reveal();
+</script>
+</body></html>

@@ -1,0 +1,17 @@
+{
+  "name": "nhinthay-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "eval": "node eval/run.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1",
+    "zod": "^3"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}

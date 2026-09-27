@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="vi" data-district="brand">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bàn làm việc — Mười cửa vào — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Bài tập Tuần 7: liệt kê mười điểm vào category và xem thương hiệu của bạn chiếm được mấy cái, đối thủ nào đang giữ phần còn lại.">
+<meta property="og:title" content="Bàn làm việc — Mười cửa vào">
+<meta property="og:description" content="Người ta không nhớ thương hiệu, người ta nhớ dịp. Mỗi dịp là một cửa, và mỗi cửa đã có người đứng.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .setup{border-top:1px solid var(--ink);padding-top:16px;margin:clamp(20px,3vw,44px) 0;display:grid;gap:14px}
+  @media(min-width:820px){.setup{grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,44px)}}
+  .head{display:grid;grid-template-columns:24px 1.5fr 1fr auto;gap:12px;align-items:end;
+    border-bottom:1px solid var(--ink);padding-bottom:8px;margin-top:clamp(20px,3vw,36px)}
+  .cep{display:grid;grid-template-columns:24px 1.5fr 1fr auto;gap:12px;align-items:center;
+    border-bottom:var(--rule);padding:11px 0}
+  @media(max-width:760px){.head{display:none}.cep{grid-template-columns:24px 1fr;gap:8px;padding:14px 0}
+    .cep .own{grid-column:2}}
+  .cep .n{font-family:var(--mono);font-size:10px;color:var(--ink-38)}
+  .cep input{border:0;border-bottom:1px solid var(--ink-14);background:none;padding:6px 0;width:100%;color:inherit;font:inherit}
+  .cep input:focus{outline:0;border-bottom-color:var(--accent)}
+  .own{display:flex;gap:4px}
+  .own button{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+    border:1px solid var(--ink-14);background:none;cursor:pointer;color:var(--ink-38);padding:5px 9px}
+  .own button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+  .cep[data-own="mine"] .n{color:var(--accent)}
+  .meter{display:grid;gap:8px;margin:clamp(22px,3vw,40px) 0}
+  .meter__bar{height:8px;background:var(--ink-08);display:flex;overflow:hidden}
+  .meter__bar i{display:block;height:100%}
+  .meter__bar .mine{background:var(--accent)}
+  .meter__bar .rival{background:var(--ink-38)}
+  .meter__row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .prompts{display:grid;gap:clamp(12px,1.8vw,24px);margin:clamp(20px,3vw,40px) 0}
+  @media(min-width:760px){.prompts{grid-template-columns:repeat(4,1fr)}}
+  .prompts div{border-top:var(--rule);padding-top:10px}
+  .prompts p{font-size:13.5px;line-height:1.5;margin-top:6px}
+  .verdictbox{border-left:2px solid var(--accent);padding:4px 0 4px 20px;display:grid;gap:10px;margin-top:clamp(20px,3vw,40px)}
+  .verdictbox ul{margin:0;padding-left:18px;font-size:14px;line-height:1.6;display:grid;gap:6px}
+  .bar{display:flex;gap:10px;flex-wrap:wrap;margin:clamp(22px,3vw,44px) 0}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Bàn làm việc chạy hoàn toàn trong trình duyệt của bạn, không gọi về máy chủ nào và không gửi gì đi.</p>
+</div></noscript>
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Mười cửa vào,<br><em>bạn đứng ở mấy cửa?</em></h1>
+      <p class="caption" data-reveal data-delay=".08">Bài tập Tuần 7. Không ai thức dậy và nghĩ về thương hiệu của bạn.
+        Người ta nghĩ về <strong>một tình huống</strong> — sắp có khách, trời nóng quá, con đòi ăn vặt, deadline 11 giờ đêm —
+        rồi mới lôi ra vài cái tên gắn với tình huống đó. Mỗi tình huống là một cửa vào category.
+        Thương hiệu lớn không phải thứ được yêu nhiều hơn, nó là thứ đứng ở nhiều cửa hơn.</p>
+    </div>
+  </section>
+
+  <section class="setup">
+    <div><span class="label">Category</span>
+      <input class="field" id="w-cat" placeholder="Ví dụ: cà phê đóng chai · phòng gym · phần mềm kế toán"></div>
+    <div><span class="label">Thương hiệu của bạn</span>
+      <input class="field" id="w-brand" placeholder="Tên thương hiệu bạn đang xét"></div>
+  </section>
+
+  <div class="prompts">
+    <div><span class="label label--accent">Khi nào</span><p>Giờ nào trong ngày, mùa nào, trước hay sau việc gì.</p></div>
+    <div><span class="label label--accent">Ở đâu</span><p>Ở nhà, trên đường, trong văn phòng, ở quán.</p></div>
+    <div><span class="label label--accent">Với ai</span><p>Một mình, với đồng nghiệp, với con, đi tiếp khách.</p></div>
+    <div><span class="label label--accent">Đang thấy thế nào</span><p>Mệt, vội, muốn thưởng cho mình, muốn gây ấn tượng.</p></div>
+  </div>
+
+  <div class="head">
+    <span class="label">#</span><span class="label">Tình huống — “khi ___ thì tôi cần ___”</span>
+    <span class="label">Ai đang chiếm cửa này</span><span class="label">Của ai</span>
+  </div>
+  <div id="ceps"></div>
+
+  <section class="meter">
+    <div class="meter__bar" id="bar"></div>
+    <div class="meter__row"><span class="label" id="m1">—</span><span class="label" id="m2"></span></div>
+  </section>
+
+  <section class="verdictbox" id="verdict"></section>
+
+  <div class="bar">
+    <button class="btn" id="tojournal">Lưu vào sổ tay</button>
+    <button class="btn btn--ghost" id="export">Xuất .txt</button>
+    <button class="btn btn--ghost" id="clear">Xoá hết</button>
+    <a class="btn btn--ghost" href="principle.html?id=category-entry-point">Nguyên lý</a>
+    <a class="btn btn--ghost" href="roadmap.html">Về lộ trình</a>
+  </div>
+</main>
+
+<script src="assets/js/core.js?v=7"></script>
+<script>
+shell('roadmap.html');
+
+const WKEY='cep7', N=10;
+const OWN=[['mine','Của tôi'],['rival','Đối thủ'],['none','Bỏ trống']];
+const blank=()=>({t:'',who:'',own:''});
+const load=()=>{const w=(State.get().work||{})[WKEY];return w&&w.list?w:{cat:'',brand:'',list:Array.from({length:N},blank)}};
+const save=w=>{const work={...(State.get().work||{})};work[WKEY]=w;State.set({work})};
+let W=load();
+document.getElementById('w-cat').value=W.cat||'';
+document.getElementById('w-brand').value=W.brand||'';
+
+document.getElementById('ceps').innerHTML = W.list.map((c,i)=>`
+  <div class="cep" data-i="${i}" ${c.own?`data-own="${c.own}"`:''}>
+    <span class="n">${String(i+1).padStart(2,'0')}</span>
+    <input data-k="t" placeholder="${i===0?'Khi sắp có khách đến nhà mà chưa kịp chuẩn bị gì':'…'}" value="${esc(c.t)}">
+    <input data-k="who" placeholder="thương hiệu nào bật ra trước" value="${esc(c.who)}">
+    <span class="own">${OWN.map(([k,l])=>`<button type="button" data-own="${k}" data-i="${i}" aria-pressed="${c.own===k}">${l}</button>`).join('')}</span>
+  </div>`).join('');
+
+function check(){
+  const filled=W.list.filter(c=>String(c.t).trim().length>2);
+  const mine=W.list.filter(c=>c.own==='mine').length;
+  const rival=W.list.filter(c=>c.own==='rival').length;
+  const none=W.list.filter(c=>c.own==='none').length;
+  const rated=mine+rival+none;
+
+  document.getElementById('bar').innerHTML =
+    `<i class="mine" style="width:${mine/N*100}%"></i><i class="rival" style="width:${rival/N*100}%"></i>`;
+  document.getElementById('m1').textContent = `${mine} cửa của bạn · ${rival} của đối thủ · ${none} bỏ trống`;
+  document.getElementById('m2').textContent = `${filled.length} / ${N} tình huống đã viết`;
+
+  const v=document.getElementById('verdict');
+  if(filled.length<4){
+    v.innerHTML=`<span class="label label--accent">Mới ${filled.length} tình huống</span>
+      <p class="caption">Viết cho đủ mười trước khi chấm. Bốn cái đầu ai cũng nghĩ ra; cái thứ bảy, thứ tám mới là chỗ
+      chưa ai giành — và đó mới là chỗ đáng đọc. Dùng bốn cột gợi ý ở trên khi bí: đổi giờ, đổi chỗ, đổi người đi cùng, đổi tâm trạng.</p>`;
+    return;
+  }
+  const bits=[];
+  const emptyRival=W.list.filter(c=>String(c.t).trim() && c.own==='none').map(c=>c.t.trim());
+  if(!rated) bits.push('<li>Chưa chấm cửa nào. Với mỗi tình huống, tự hỏi: <em>nếu bây giờ hỏi mười người trong tình huống đó, tên nào bật ra trước?</em></li>');
+  if(mine===0 && rated) bits.push('<li>Bạn chưa chiếm được cửa nào. Đó không phải thảm hoạ — đó là lý do vì sao doanh số phụ thuộc vào khuyến mãi: không có tình huống nào tự động gọi tên bạn.</li>');
+  if(mine>=1) bits.push(`<li>Giữ chặt ${mine} cửa đang có: mọi thứ bạn làm nên nhắc lại đúng tình huống đó, bằng đúng chữ khách dùng. Đừng đổi thông điệp vì bạn thấy chán — khách mới nghe lần đầu.</li>`);
+  if(emptyRival.length) bits.push(`<li>Cửa còn bỏ trống: <strong>${emptyRival.slice(0,3).map(esc).join(' · ')}</strong>${emptyRival.length>3?` (và ${emptyRival.length-3} cái nữa)`:''}. Đây là chỗ rẻ nhất để giành — không phải đấu với ai, chỉ cần nói về tình huống đó trước khi có người khác nói.</li>`);
+  if(rival>=5) bits.push('<li>Đối thủ đang giữ quá nửa số cửa. Đừng đánh trực diện vào cửa mạnh nhất của họ; chọn hai cửa họ chưa nhắc tới bao giờ và cắm rễ ở đó.</li>');
+  bits.push('<li>Kiểm chứng: hỏi mười người ngoài — “khi ___ thì bạn nghĩ tới cái gì?” Ghi nguyên văn tên bật ra <em>đầu tiên</em>. Bảng này chỉ là giả thuyết cho tới lúc đó.</li>');
+  v.innerHTML=`<span class="label label--accent">${mine} / ${N} cửa mang tên bạn</span><ul>${bits.join('')}</ul>`;
+}
+
+document.getElementById('ceps').addEventListener('input', e=>{
+  const k=e.target.dataset.k; if(!k) return;
+  W.list[+e.target.closest('.cep').dataset.i][k]=e.target.value; save(W); check();
+});
+document.getElementById('ceps').addEventListener('click', e=>{
+  const b=e.target.closest('button[data-own]'); if(!b) return;
+  const i=+b.dataset.i, c=W.list[i];
+  c.own = c.own===b.dataset.own ? '' : b.dataset.own;
+  const row=b.closest('.cep');
+  row.querySelectorAll('button[data-own]').forEach(x=>x.setAttribute('aria-pressed', x.dataset.own===c.own));
+  c.own ? row.setAttribute('data-own',c.own) : row.removeAttribute('data-own');
+  save(W); check();
+});
+['w-cat','w-brand'].forEach(id=>document.getElementById(id).addEventListener('input',e=>{
+  W[id==='w-cat'?'cat':'brand']=e.target.value; save(W);
+}));
+
+const asText=()=>{
+  const L=['BÀI TẬP TUẦN 7 — MƯỜI ĐIỂM VÀO CATEGORY',`Category: ${W.cat||'(chưa ghi)'}`,
+    `Thương hiệu: ${W.brand||'(chưa ghi)'}`,''];
+  W.list.forEach((c,i)=>{ if(!String(c.t).trim()) return;
+    const own=(OWN.find(o=>o[0]===c.own)||[,'chưa chấm'])[1];
+    L.push(`${String(i+1).padStart(2,'0')}. ${c.t} — ${c.who||'—'} [${own}]`); });
+  return L.join('\n');
+};
+document.querySelector('.bar').addEventListener('click', e=>{
+  if(e.target.id==='tojournal'){
+    if(!W.list.some(c=>String(c.t).trim())) return toast('Chưa có gì để lưu');
+    const s=State.get(), wid='worksheet:'+WKEY;
+    const i=s.notes.findIndex(x=>x.wid===wid);
+    const note={t:'Tuần 7 — Điểm vào category'+(W.brand?' · '+W.brand:''), body:asText(),
+      when:new Date().toISOString().slice(0,10), kind:'Bàn làm việc', href:'cep.html', wid};
+    i>-1 ? s.notes[i]=note : s.notes.unshift(note);
+    State.set({notes:s.notes}); toast(i>-1?'Đã cập nhật trong sổ tay':'Đã lưu vào sổ tay');
+  }
+  if(e.target.id==='export'){
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([asText()],{type:'text/plain'}));
+    a.download='tuan-7-diem-vao-category.txt'; a.click(); URL.revokeObjectURL(a.href);
+  }
+  if(e.target.id==='clear'){
+    if(!confirm('Xoá toàn bộ nội dung bàn làm việc này? Ghi chép đã lưu trong sổ tay vẫn còn.')) return;
+    W={cat:'',brand:'',list:Array.from({length:N},blank)}; save(W); location.reload();
+  }
+});
+check(); reveal();
+</script>
+</body></html>

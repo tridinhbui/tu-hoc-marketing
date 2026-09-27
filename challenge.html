@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="vi" data-district="creative">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Creative Challenge — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Bảy bài tập sáng tạo: viết headline, tìm insight, tái định vị, sửa landing page, dựng ý tưởng ra mắt.">
+<meta property="og:title" content="Creative Challenge — Nhìn thấy">
+<meta property="og:description" content="Bảy bài tập sáng tạo: viết headline, tìm insight, tái định vị, sửa landing page, dựng ý tưởng ra mắt.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .ch{border-top:var(--rule);padding:clamp(34px,5vw,80px) 0;display:grid;gap:clamp(18px,3vw,44px)}
+  @media(min-width:1000px){.ch{grid-template-columns:.8fr 1.2fr;align-items:start}}
+  .ch__side{position:sticky;top:74px}
+  .ch__kind{font-family:var(--serif);font-size:clamp(1.8rem,3.6vw,3rem);line-height:.98;letter-spacing:-.028em}
+  .ch__brief{margin-top:16px;font-size:14.5px;line-height:1.6;color:var(--ink-60);max-width:44ch}
+  .ch__q{font-family:var(--serif);font-size:clamp(1.25rem,2.2vw,1.75rem);line-height:1.15;margin-bottom:22px;max-width:32ch}
+  .opts{display:grid;gap:10px}
+  .why{margin-top:12px;font-size:14px;line-height:1.6;color:var(--ink-60);max-width:60ch}
+  .badge{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Toàn bộ nội dung — bài học, case study, thư viện nguyên lý — được dựng ngay trong trình duyệt của bạn,
+  không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
+</div></noscript>
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Creative<br><em>Challenge</em></h1>
+      <p class="caption" data-reveal data-delay=".1">Bảy bài tập. Bạn chọn trước, rồi mới đọc vì sao một hướng mạnh và các hướng kia yếu.
+        Cái quan trọng không phải chọn đúng — mà là bạn có lý do rõ ràng cho lựa chọn của mình trước khi đọc lời giải hay không.</p>
+    </div>
+  </section>
+  <div id="list"></div>
+</main>
+<script src="assets/js/core.js?v=7"></script>
+<script src="assets/js/data/challenges.js?v=7"></script>
+<script>
+shell('challenge.html');
+document.getElementById('list').innerHTML = CHALLENGES.map((c,ci)=>`
+  <section class="ch" id="${c.id}" data-district="${c.d}" data-reveal>
+    <div class="ch__side">
+      <div class="label label--accent">Challenge ${String(ci+1).padStart(2,'0')}</div>
+      <h2 class="ch__kind">${c.kind}</h2>
+      <p class="ch__brief">${c.brief}</p>
+      <div style="margin-top:20px;max-width:200px">${plate({color:c.color,mark:String(ci+1),kicker:'',meta:'',title:'',shape:'plate--sq'})}</div>
+    </div>
+    <div>
+      <p class="ch__q">${c.q}</p>
+      <div class="opts">
+        ${c.opts.map((o,oi)=>`
+          <div>
+            <button class="choice" data-c="${ci}" data-o="${oi}">
+              <span class="label">${String.fromCharCode(65+oi)}</span>
+              <span class="choice__t">${o.t}</span>
+            </button>
+            <div class="why hidden" id="w${ci}-${oi}">${o.ok?'<span class="badge">Hướng mạnh nhất</span><br>':''}${o.why}</div>
+          </div>`).join('')}
+      </div>
+      <div class="verdict hidden" id="v${ci}">
+        <h4>Ghi lại</h4>
+        <textarea class="field" rows="2" id="n${ci}" placeholder="Bạn định chọn vì lý do gì? Ghi lại trước khi quên."></textarea>
+        <button class="btn btn--ghost" style="margin-top:16px" data-save="${ci}">Lưu vào sổ tay</button>
+      </div>
+    </div>
+  </section>`).join('');
+
+document.addEventListener('click', e=>{
+  const b=e.target.closest('.choice'); if(!b) return;
+  const ci=+b.dataset.c, oi=+b.dataset.o, c=CHALLENGES[ci];
+  document.querySelectorAll(`.choice[data-c="${ci}"]`).forEach(x=>{
+    const o=+x.dataset.o;
+    x.dataset.state = c.opts[o].ok ? 'right' : (o===oi?'wrong':'');
+    document.getElementById(`w${ci}-${o}`).classList.remove('hidden');
+  });
+  document.getElementById('v'+ci).classList.remove('hidden');
+  State.push('challenges', c.id);
+  toast(c.opts[oi].ok?'Đúng hướng — đọc kỹ phần vì sao':'Đọc phần vì sao, chỗ đó mới là bài học');
+});
+document.addEventListener('click', e=>{
+  const b=e.target.closest('[data-save]'); if(!b) return;
+  const ci=+b.dataset.save, v=document.getElementById('n'+ci).value.trim();
+  if(!v) return toast('Chưa có gì để lưu');
+  const s=State.get();
+  s.notes.unshift({t:'Challenge · '+CHALLENGES[ci].kind, body:v, when:new Date().toISOString().slice(0,10), kind:'Challenge', href:'challenge.html#'+CHALLENGES[ci].id});
+  State.set({notes:s.notes}); toast('Đã lưu vào sổ tay');
+});
+reveal();
+if(location.hash) setTimeout(()=>document.querySelector(location.hash)?.scrollIntoView({behavior:'smooth'}),300);
+</script>
+</body></html>

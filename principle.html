@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nguyên lý — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Một nguyên lý marketing giải thích bằng ví dụ, phản ví dụ, thương hiệu thật, lỗi phổ biến và một bài tập nhỏ.">
+<meta property="og:title" content="Nguyên lý — Nhìn thấy">
+<meta property="og:description" content="Một nguyên lý marketing giải thích bằng ví dụ, phản ví dụ, thương hiệu thật, lỗi phổ biến và một bài tập nhỏ.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .top{padding:clamp(30px,5vw,80px) 0 clamp(20px,3vw,50px);border-bottom:var(--rule)}
+  .one{font-family:var(--serif);font-weight:300;font-size:clamp(1.5rem,3.4vw,2.7rem);line-height:1.1;letter-spacing:-.025em;max-width:26ch;margin-top:26px}
+  .pair{display:grid;gap:1px;background:var(--ink-14);border:1px solid var(--ink-14);margin-top:clamp(28px,4vw,60px)}
+  @media(min-width:820px){.pair{grid-template-columns:1fr 1fr}}
+  .pane{background:var(--paper);padding:clamp(20px,2.6vw,36px)}
+  .pane h3{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .pane--x h3{color:var(--ink-38)}
+  .pane p{margin:0;font-size:15px;line-height:1.6;color:rgba(21,18,14,.86)}
+  .sec{display:grid;gap:clamp(10px,2vw,40px);padding:clamp(24px,3.4vw,52px) 0;border-bottom:var(--rule)}
+  @media(min-width:900px){.sec{grid-template-columns:18ch minmax(0,1fr)}}
+  .sec h2{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-60);padding-top:5px}
+  .sec p{margin:0;font-size:1.02rem;line-height:1.62;max-width:60ch}
+  .nav2{display:flex;justify-content:space-between;gap:20px;padding:clamp(28px,4vw,60px) 0}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Toàn bộ nội dung — bài học, case study, thư viện nguyên lý — được dựng ngay trong trình duyệt của bạn,
+  không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
+</div></noscript>
+<main class="wrap" id="app"></main>
+<script src="assets/js/core.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/districts.js?v=7"></script>
+<script>
+shell('library.html');
+const p = PRINCIPLES.find(x=>x.id===qs('id')) || PRINCIPLES[0];
+const i = PRINCIPLES.indexOf(p);
+const prev=PRINCIPLES[(i-1+PRINCIPLES.length)%PRINCIPLES.length], next=PRINCIPLES[(i+1)%PRINCIPLES.length];
+const dist = DISTRICTS.find(d=>d.key===p.d);
+document.documentElement.setAttribute('data-district', p.d);
+document.title = p.t+' — Nhìn thấy';
+State.push('principles', p.id);
+
+document.getElementById('app').innerHTML = `
+  <section class="top">
+    <div class="label"><a href="library.html">← Nguyên lý</a> · ${p.n} · ${dist?dist.name:''}</div>
+    <h1 class="display" style="font-size:clamp(2.8rem,9vw,7.5rem);margin-top:20px" data-reveal>${p.t}</h1>
+    <div class="kicker" data-reveal data-delay=".05">${p.vi}</div>
+    <p class="one" data-reveal data-delay=".1">${p.one}</p>
+  </section>
+
+  <div class="pair" data-reveal>
+    <div class="pane"><h3>Ví dụ</h3><p>${p.ex}</p></div>
+    <div class="pane pane--x"><h3>Phản ví dụ</h3><p>${p.counter}</p></div>
+  </div>
+
+  <section class="sec" style="border-top:var(--rule);margin-top:clamp(28px,4vw,60px)" data-reveal><h2>Thương hiệu thật</h2><p>${p.brand}</p></section>
+  <section class="sec" data-reveal><h2>Lỗi phổ biến</h2><p>${p.mistake}</p></section>
+  <section class="sec" data-reveal><h2>Bài tập nhỏ</h2><div>
+    <p>${p.drill}</p>
+    <textarea class="field" id="note" rows="3" placeholder="Làm luôn ở đây — kết quả sẽ nằm trong Sổ tay."></textarea>
+    <button class="btn" style="margin-top:20px" id="save">Lưu vào sổ tay</button>
+  </div></section>
+
+  <div class="nav2">
+    <a href="principle.html?id=${prev.id}"><span class="label">← ${prev.n}</span><h3 class="h-mid">${prev.t}</h3></a>
+    <a href="principle.html?id=${next.id}" style="text-align:right"><span class="label">${next.n} →</span><h3 class="h-mid">${next.t}</h3></a>
+  </div>`;
+
+document.getElementById('save').onclick=()=>{
+  const v=document.getElementById('note').value.trim(); if(!v) return toast('Chưa có gì để lưu');
+  const s=State.get(); s.notes.unshift({t:'Nguyên lý · '+p.t, body:v, when:new Date().toISOString().slice(0,10), kind:'Nguyên lý', href:'principle.html?id='+p.id});
+  State.set({notes:s.notes}); toast('Đã lưu vào sổ tay');
+};
+reveal();
+</script>
+</body></html>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="vi" data-district="consumer">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bàn làm việc — Bản đồ khách hàng — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Bài tập Tuần 4: gộp phân khúc và phỏng vấn thành một bản đồ khách hàng. Mỗi insight phải có cấu trúc “muốn — nhưng — nên” và một trích dẫn thật.">
+<meta property="og:title" content="Bàn làm việc — Bản đồ khách hàng">
+<meta property="og:description" content="Gộp phân khúc và phỏng vấn thành bản đồ khách hàng. Insight không có trích dẫn thật chỉ là giả thuyết.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .src{display:grid;gap:clamp(14px,2vw,30px);border-top:1px solid var(--ink);padding-top:14px;margin:clamp(20px,3vw,44px) 0}
+  @media(min-width:760px){.src{grid-template-columns:repeat(3,1fr)}}
+  .src div{border-top:var(--rule);padding-top:10px}
+  .src b{display:block;font-family:var(--serif);font-size:clamp(1.4rem,2.4vw,2rem);font-weight:300;line-height:1;margin:6px 0}
+  .src a{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+  .seg{border-top:var(--rule);padding:clamp(16px,2.2vw,26px) 0;display:grid;gap:14px}
+  @media(min-width:960px){.seg{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(20px,3vw,50px)}}
+  .seg__facts{display:grid;gap:9px;align-content:start}
+  .seg__name{font-family:var(--serif);font-size:clamp(1.35rem,2.4vw,1.95rem);line-height:1.05;letter-spacing:-.02em}
+  .fact{display:grid;gap:2px}
+  .fact p{margin:0;font-size:13.5px;line-height:1.5;color:rgba(21,18,14,.82)}
+  .fact--none p{color:var(--ink-38);font-style:italic}
+  .work{display:grid;gap:12px;align-content:start}
+  .quotes{display:grid;gap:6px}
+  .qpick{display:flex;gap:9px;align-items:flex-start;padding:9px 0;border-bottom:var(--rule);cursor:pointer}
+  .qpick input{appearance:none;width:14px;height:14px;border:1px solid var(--ink-38);margin-top:3px;flex:none;transition:.25s}
+  .qpick input:checked{background:var(--accent);border-color:var(--accent)}
+  .qpick span{font-family:var(--serif);font-style:italic;font-size:14.5px;line-height:1.45}
+  .qpick em{font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-38);display:block;margin-bottom:3px}
+  .noq{font-size:13px;line-height:1.55;color:var(--ink-60)}
+  .seg[data-flag] .seg__flag{display:block}
+  .seg__flag{display:none;grid-column:1/-1;font-size:13px;line-height:1.5;color:var(--accent);border-left:2px solid var(--accent);padding-left:14px}
+  .verdictbox{border-left:2px solid var(--accent);padding:4px 0 4px 20px;display:grid;gap:10px;margin-top:clamp(24px,3vw,44px)}
+  .verdictbox ul{margin:0;padding-left:18px;display:grid;gap:8px;font-size:14px;line-height:1.55}
+  .bar{display:flex;gap:10px;flex-wrap:wrap;margin:clamp(26px,3.4vw,50px) 0}
+  .empty{border-left:2px solid var(--accent);padding-left:20px;margin:clamp(24px,4vw,60px) 0;display:grid;gap:12px;max-width:60ch}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Bản đồ được dựng từ dữ liệu bạn đã gõ ở hai bàn trước, ngay trong trình duyệt này. Không có gì được gửi đi.</p>
+</div></noscript>
+
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Bản đồ<br><em>khách hàng.</em></h1>
+      <p class="caption" data-reveal data-delay=".08">Bài tập Tuần 4. Trang này không hỏi lại những gì bạn đã gõ — nó kéo phân khúc
+        từ <a href="segmentation.html">bàn Tuần 1</a> và trích dẫn từ <a href="interview.html">bàn Tuần 3</a> về đây.
+        Việc của bạn chỉ còn một: gắn <strong>bằng chứng thật</strong> vào từng phân khúc, rồi viết insight.</p>
+    </div>
+  </section>
+
+  <section class="src" id="src"></section>
+  <div id="body"></div>
+</main>
+
+<script src="assets/js/core.js?v=7"></script>
+<script>
+shell('roadmap.html');
+
+const WKEY='map4';
+const work = () => State.get().work || {};
+const SEG = work().seg1 || null;          // bàn Tuần 1 — phân khúc theo dịp
+const INT = work().int3 || null;          // bàn Tuần 3 — năm cuộc phỏng vấn
+const POS = work().pos2 || null;          // bàn Tuần 2 — định vị
+
+/* Mọi trích dẫn thật đã ghi ở bàn phỏng vấn, gom lại thành kho bằng chứng. */
+const QUOTES = INT ? (INT.pp||[]).flatMap((p,i)=>[
+    p.quote && {id:'q'+i+'a', who:p.who||('Người '+(i+1)), text:p.quote},
+    p.last  && {id:'q'+i+'b', who:p.who||('Người '+(i+1)), text:p.last},
+  ].filter(Boolean)) : [];
+
+const load=()=>{const w=work()[WKEY];return w&&w.rows?w:{rows:{}}};
+const save=w=>{const wk={...work()};wk[WKEY]=w;State.set({work:wk})};
+let W=load();
+
+document.getElementById('src').innerHTML = [
+  ['Phân khúc đã chia', SEG?(SEG.segs||[]).filter(s=>s.name||s.occ).length:0, 'segmentation.html','Bàn Tuần 1'],
+  ['Trích dẫn thật đã ghi', QUOTES.length, 'interview.html','Bàn Tuần 3'],
+  ['Câu định vị đã viết', POS?(POS.list||[]).filter(x=>x&&x.we).length:0, 'positioning.html','Bàn Tuần 2'],
+].map(([l,n,href,cta])=>`<div><span class="label">${l}</span><b>${n}</b><a href="${href}">${cta} →</a></div>`).join('');
+
+const segs = SEG ? (SEG.segs||[]).filter(s=>s.name||s.occ||s.job) : [];
+
+function render(){
+  const body=document.getElementById('body');
+  if(!segs.length){
+    body.innerHTML=`<section class="empty" data-reveal>
+      <span class="label label--accent">Chưa có gì để dựng bản đồ</span>
+      <p class="lede">Bản đồ này được ghép từ việc bạn đã làm, không phải một tờ giấy trắng khác.</p>
+      <p class="caption">Hãy chia phân khúc ở bàn Tuần 1 trước — mỗi phân khúc bắt đầu từ một <strong>dịp sử dụng</strong>.
+      Sau đó ngồi với năm người thật ở bàn Tuần 3. Quay lại đây khi có ít nhất hai phân khúc và vài câu trích dẫn.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+        <a class="btn" href="segmentation.html">Mở bàn Tuần 1</a>
+        <a class="btn btn--ghost" href="interview.html">Mở bàn Tuần 3</a>
+        <a class="btn btn--ghost" href="roadmap.html">Về lộ trình</a>
+      </div></section>`;
+    reveal(); return;
+  }
+
+  body.innerHTML = segs.map((s,i)=>{
+    const r = W.rows[i] || {ins:'', q:[]};
+    const fact=(label,val)=>`<div class="fact ${val?'':'fact--none'}"><span class="label">${label}</span>
+      <p>${val?esc(val):'chưa điền ở bàn Tuần 1'}</p></div>`;
+    return `<section class="seg" data-i="${i}" data-reveal>
+      <div class="seg__facts">
+        <span class="label label--accent">Phân khúc ${String(i+1).padStart(2,'0')}</span>
+        <div class="seg__name">${esc(s.name||'(chưa đặt tên)')}</div>
+        ${fact('Dịp',s.occ)}${fact('Việc cần làm',s.job)}${fact('Thay thế',s.alt)}${fact('Nên phải làm khác ở chỗ',s.plan)}
+      </div>
+      <div class="work">
+        <div>
+          <span class="label">Bằng chứng thật — chọn trích dẫn thuộc về phân khúc này</span>
+          ${QUOTES.length?`<div class="quotes">${QUOTES.map(q=>`
+            <label class="qpick"><input type="checkbox" data-q="${q.id}" ${r.q.includes(q.id)?'checked':''}>
+            <span><em>${esc(q.who)}</em>“${esc(q.text)}”</span></label>`).join('')}</div>`
+          :`<p class="noq">Chưa có trích dẫn nào. <a class="label label--accent" href="interview.html">Ghi ở bàn phỏng vấn →</a>
+             Không có câu của người thật thì mọi dòng dưới đây vẫn chỉ là giả thuyết của bạn.</p>`}
+        </div>
+        <div>
+          <span class="label">Insight — theo mẫu “muốn ___ nhưng ___ nên ___”</span>
+          <textarea class="field" data-ins rows="3" placeholder="Tôi muốn ___, nhưng ___, nên tôi ___">${esc(r.ins||'')}</textarea>
+        </div>
+      </div>
+      <p class="seg__flag" data-flag></p>
+    </section>`;
+  }).join('') + `
+    <section class="verdictbox" id="verdict" data-reveal></section>
+    <div class="bar">
+      <button class="btn" id="tojournal">Lưu bản đồ vào sổ tay</button>
+      <button class="btn btn--ghost" id="export">Xuất .txt</button>
+      <a class="btn btn--ghost" href="roadmap.html">Về lộ trình</a>
+    </div>`;
+  check(); reveal();
+}
+
+/* Hai phép thử: insight phải có chữ "nhưng" (có căng thẳng), và phải có ít nhất một câu người thật. */
+const hasTension = t => /\bnhưng\b|\btuy nhiên\b|\bmà lại\b/i.test(t||'');
+
+function check(){
+  let withQuote=0, withTension=0, filled=0;
+  document.querySelectorAll('.seg').forEach((el,i)=>{
+    const r=W.rows[i]||{ins:'',q:[]};
+    const msgs=[];
+    const has=String(r.ins||'').trim().length>10;
+    if(has) filled++;
+    if(has && !hasTension(r.ins)) msgs.push('Câu này chưa có chữ “nhưng”. Không có căng thẳng thì đó là một quan sát, chưa phải insight — ai nghe cũng gật đầu và không dẫn tới ý tưởng nào.');
+    else if(has) withTension++;
+    if(has && !r.q.length) msgs.push('Insight chưa gắn với câu nói nào của người thật. Nó vẫn đúng — nhưng đúng theo cách bạn nghĩ, không phải theo cách thị trường nói.');
+    if(r.q.length) withQuote++;
+    el.toggleAttribute('data-flag', msgs.length>0);
+    el.querySelector('[data-flag]').innerHTML=msgs.join('<br>');
+  });
+
+  const v=document.getElementById('verdict'); if(!v) return;
+  if(!filled){
+    v.innerHTML=`<span class="label label--accent">Chưa chấm được</span>
+      <p class="caption">Viết insight cho ít nhất một phân khúc. Mẫu “muốn — nhưng — nên” không phải hình thức:
+      chữ <strong>nhưng</strong> là chỗ chứa mâu thuẫn, và mâu thuẫn mới là thứ sinh ra ý tưởng.</p>`;
+    return;
+  }
+  const solid = [...document.querySelectorAll('.seg')].filter((el,i)=>{
+    const r=W.rows[i]||{ins:'',q:[]};
+    return String(r.ins||'').trim().length>10 && hasTension(r.ins) && r.q.length;
+  }).length;
+  v.innerHTML=`<span class="label label--accent">${solid} / ${segs.length} phân khúc có insight đủ chuẩn</span>
+    <p class="caption">Đủ chuẩn ở đây nghĩa là: có căng thẳng, và có ít nhất một câu của người thật đứng phía sau.
+    ${solid<segs.length?`Còn ${segs.length-solid} phân khúc đang sống bằng phỏng đoán — không sai, nhưng phải biết là mình đang đoán.`:'Cả bản đồ đều có bằng chứng. Hiếm — và nó sẽ thay đổi cách bạn tiêu tiền quý sau.'}</p>
+    <ul>
+      <li>Phân khúc nào có nhiều trích dẫn nhất? Đó thường là nhóm bạn hiểu rõ nhất — và cũng là nhóm nên đánh trước.</li>
+      <li>Có trích dẫn nào bạn gắn vào hai phân khúc khác nhau không? Nếu có, hai phân khúc đó có thể là một.</li>
+      <li>Mang bản đồ này sang <a href="positioning.html">bàn định vị</a>: mỗi phân khúc đáng một câu định vị riêng, và bạn sẽ phải chọn một.</li>
+    </ul>`;
+}
+
+document.addEventListener('input', e=>{
+  const seg=e.target.closest('.seg'); if(!seg) return;
+  const i=+seg.dataset.i; const r=W.rows[i]||{ins:'',q:[]};
+  if(e.target.hasAttribute('data-ins')) r.ins=e.target.value;
+  W.rows[i]=r; save(W); check();
+});
+document.addEventListener('change', e=>{
+  const q=e.target.dataset.q; if(!q) return;
+  const seg=e.target.closest('.seg'); const i=+seg.dataset.i;
+  const r=W.rows[i]||{ins:'',q:[]};
+  r.q = e.target.checked ? [...new Set([...r.q,q])] : r.q.filter(x=>x!==q);
+  W.rows[i]=r; save(W); check();
+});
+
+const asText=()=>{
+  const L=['BẢN ĐỒ KHÁCH HÀNG — TUẦN 4',''];
+  segs.forEach((s,i)=>{
+    const r=W.rows[i]||{ins:'',q:[]};
+    L.push(`— ${s.name||'Phân khúc '+(i+1)}`);
+    L.push(`Dịp: ${s.occ||'(trống)'}`);
+    L.push(`Việc cần làm: ${s.job||'(trống)'}`);
+    L.push(`Thay thế: ${s.alt||'(trống)'}`);
+    L.push(`Insight: ${r.ins||'(chưa viết)'}`);
+    r.q.forEach(id=>{const q=QUOTES.find(x=>x.id===id); if(q) L.push(`  “${q.text}” — ${q.who}`);});
+    L.push('');
+  });
+  return L.join('\n');
+};
+document.addEventListener('click', e=>{
+  if(e.target.id==='tojournal'){
+    const s=State.get();
+    s.notes.unshift({t:'Bàn làm việc · Bản đồ khách hàng', body:asText(), when:new Date().toISOString().slice(0,10),
+      kind:'Lộ trình', href:'customer-map.html'});
+    State.set({notes:s.notes}); toast('Đã lưu vào sổ tay');
+  }
+  if(e.target.id==='export'){
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([asText()],{type:'text/plain'}));
+    a.download='ban-do-khach-hang.txt'; a.click(); URL.revokeObjectURL(a.href);
+  }
+});
+render();
+</script>
+</body></html>

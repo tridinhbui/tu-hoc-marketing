@@ -1,0 +1,8 @@
+# build output — tạo lại bằng: node tools_build.mjs
+dist/
+node_modules/
+.wrangler/
+.dev.vars
+.env*
+.DS_Store
+.claude/

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thế giới Marketing — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Sáu khu vực của thế giới marketing và bảng tra 13 mảng nghề: brand, creative, consumer, growth, media, strategy.">
+<meta property="og:title" content="Thế giới Marketing — Nhìn thấy">
+<meta property="og:description" content="Sáu khu vực của thế giới marketing và bảng tra 13 mảng nghề: brand, creative, consumer, growth, media, strategy.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .dist{border-bottom:var(--rule);padding:clamp(46px,7vw,110px) 0;position:relative}
+  .dist__grid{display:grid;gap:clamp(18px,3vw,48px)}
+  @media(min-width:960px){
+    .dist__grid{grid-template-columns:.9fr 1.1fr;align-items:start}
+    .dist:nth-child(even) .dist__art{order:2}
+  }
+    .dist__art .plate{max-height:78vh}
+  .dist__no{font-family:var(--serif);font-size:clamp(3rem,7vw,6rem);line-height:.8;font-weight:300;color:var(--accent);opacity:.9}
+  .dist__t{font-family:var(--serif);font-size:clamp(2.2rem,5.4vw,4.6rem);line-height:.92;letter-spacing:-.03em;margin:.15em 0 .1em}
+  .dist__vi{font-family:var(--serif);font-style:italic;color:var(--ink-60);font-size:1.05rem}
+  .topics{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .topics span{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+    border:1px solid var(--ink-14);padding:6px 10px}
+  .ask{border-left:2px solid var(--accent);padding-left:18px;margin-top:26px;font-family:var(--serif);
+    font-size:clamp(1.15rem,2vw,1.55rem);line-height:1.2;max-width:32ch}
+  .reads{margin-top:26px;display:grid;gap:0}
+  .reads a{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:var(--rule);
+    font-family:var(--sans);font-size:14px;transition:padding-left .35s var(--ease)}
+  .reads a:hover{padding-left:8px;color:var(--accent)}
+  .fields{border-top:var(--rule);margin-top:clamp(10px,2vw,26px)}
+  .frow{display:grid;grid-template-columns:1fr auto;gap:10px 20px;align-items:baseline;padding:15px 0;border-bottom:var(--rule);
+    position:relative;transition:padding-left .4s var(--ease)}
+  @media(min-width:900px){.frow{grid-template-columns:22ch minmax(0,1fr) 16ch}}
+  .frow:hover{padding-left:10px}
+  .frow__t{font-family:var(--serif);font-size:clamp(1.15rem,1.9vw,1.55rem);line-height:1.05;letter-spacing:-.018em;transition:color .3s}
+  .frow:hover .frow__t{color:var(--accent)}
+  .frow__vi{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--ink-38);display:block}
+  /* hover mới lộ ngữ cảnh — không nhồi hết mọi thứ ra ngay từ đầu */
+  .frow__line{font-size:14px;line-height:1.5;color:var(--ink-60);opacity:0;transform:translateY(6px);
+    transition:opacity .4s var(--ease),transform .4s var(--ease)}
+  .frow:hover .frow__line,.frow:focus-visible .frow__line{opacity:1;transform:none}
+  @media(hover:none){.frow__line{opacity:1;transform:none}}
+  @media(max-width:899px){
+    /* Không có chuột thì không có hover: mô tả xuống hàng riêng, hiện sẵn.
+       Nếu không, cột giữa vẫn chiếm chỗ và bóp tên mảng nghề còn nửa chiều ngang. */
+    .frow{grid-template-columns:minmax(0,1fr) auto}
+    .frow>span:first-child{order:1}
+    .frow>.label{order:2;justify-self:end}
+    .frow__line{order:3;grid-column:1/-1;opacity:1;transform:none;margin-top:4px}
+  }
+  .reads a i{font-style:normal;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--ink-38)}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Toàn bộ nội dung — bài học, case study, thư viện nguyên lý — được dựng ngay trong trình duyệt của bạn,
+  không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
+</div></noscript>
+<main>
+  <section class="wrap pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Sáu khu<br>của một<br><em>thế giới.</em></h1>
+      <p class="caption" data-reveal data-delay=".1">Marketing không đi theo đường thẳng nên chương trình học ở đây cũng vậy.
+        Bạn chọn khu vực mình đang cần, đọc câu hỏi trước cửa, rồi đi vào. Có thể quay lại bất cứ lúc nào.</p>
+    </div>
+  </section>
+  <section class="wrap" style="padding-block:clamp(34px,5vw,80px);border-bottom:var(--rule)">
+    <div class="pagehead__grid" style="align-items:end">
+      <h2 class="h-serif" data-reveal>Mười ba mảng nghề,<br>sáu khu để đi.</h2>
+      <p class="caption" data-reveal data-delay=".08">Ngoài đời người ta gọi công việc bằng tên mảng — PR, content, performance, pricing.
+        Ở đây chúng được xếp vào khu vực có cùng cách nghĩ. Rê chuột lên một dòng để thấy nó nói về cái gì.</p>
+    </div>
+    <div class="fields" id="fields"></div>
+  </section>
+
+  <div id="world"></div>
+</main>
+
+<script src="assets/js/core.js?v=7"></script>
+<script src="assets/js/data/districts.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/campaigns.js?v=7"></script>
+<script>
+shell('world.html');
+document.getElementById('world').innerHTML = DISTRICTS.map((x,i)=>{
+  const reads = x.reads.map(id=>PRINCIPLES.find(p=>p.id===id)).filter(Boolean)
+    .map(p=>`<a href="principle.html?id=${p.id}"><span>${p.t} <em style="font-style:italic;color:var(--ink-38)">— ${p.vi}</em></span><i>${p.n}</i></a>`).join('');
+  const camps = CAMPAIGNS.filter(c=>c.district===x.key).slice(0,2);
+  return `<section class="dist wrap" id="${x.id}" data-district="${x.id}">
+    <div class="dist__grid">
+      <div class="dist__art" data-reveal-clip>
+        ${plate({color:x.color,mark:x.mark,kicker:x.name,meta:String(i+1).padStart(2,'0'),title:x.vi,shape:'plate--tall'})}
+        ${camps.length?`<div class="reads" style="margin-top:14px">${camps.map(c=>
+          `<a href="campaign.html?id=${c.id}"><span>${c.brand} — ${c.title}</span><i>Case</i></a>`).join('')}</div>`:''}
+      </div>
+      <div data-reveal data-delay=".08">
+        <div class="dist__no">${String(i+1).padStart(2,'0')}</div>
+        <h2 class="dist__t">${x.name}</h2>
+        <div class="dist__vi">${x.vi}</div>
+        <p class="lede" style="margin:20px 0 0;max-width:30ch">${x.line}</p>
+        <div class="topics">${x.topics.map(t=>`<span>${t}</span>`).join('')}</div>
+        <blockquote class="ask">${x.ask}</blockquote>
+        <div class="label" style="margin-top:30px">Đọc trong khu này</div>
+        <div class="reads">${reads}</div>
+      </div>
+    </div>
+  </section>`;
+}).join('');
+document.getElementById('fields').innerHTML = FIELDS.map(f=>{
+  const d = DISTRICTS.find(x=>x.key===f.d);
+  return `<a class="frow" href="#${d.id}" style="--accent:${d.color}" data-reveal>
+    <span><span class="frow__t">${f.t}</span><span class="frow__vi">${f.vi}</span></span>
+    <span class="frow__line">${f.line}</span>
+    <span class="label" style="color:${d.color}">${d.name}</span>
+  </a>`;}).join('');
+
+reveal();
+</script>
+</body></html>

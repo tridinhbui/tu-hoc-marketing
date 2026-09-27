@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="vi" data-district="consumer">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sổ tay — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Sổ tay marketing riêng: campaign đã lưu, thương hiệu đã bóc tách và những quan sát bạn nhặt được ngoài đời.">
+<meta property="og:title" content="Sổ tay — Nhìn thấy">
+<meta property="og:description" content="Sổ tay marketing riêng: campaign đã lưu, thương hiệu đã bóc tách và những quan sát bạn nhặt được ngoài đời.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .rank{display:grid;gap:clamp(18px,3vw,44px);padding:clamp(28px,4vw,64px) 0;border-bottom:var(--rule)}
+  @media(min-width:960px){.rank{grid-template-columns:1.05fr .95fr;align-items:end}}
+  .ladder{list-style:none;margin:0;padding:0}
+  .ladder li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:var(--rule);
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-38)}
+  .ladder li[data-on]{color:var(--ink)}
+  .ladder li[data-now]{color:var(--accent)}
+  .counts{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,2vw,30px);padding:clamp(26px,4vw,56px) 0;border-bottom:var(--rule)}
+  @media(min-width:760px){.counts{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:1100px){.counts{grid-template-columns:repeat(6,1fr)}}
+  .compose{padding:clamp(26px,4vw,56px) 0;border-bottom:var(--rule);display:grid;gap:clamp(14px,2vw,36px)}
+  @media(min-width:900px){.compose{grid-template-columns:.9fr 1.1fr;align-items:start}}
+  .notes{padding:clamp(26px,4vw,56px) 0;columns:1;column-gap:clamp(16px,2vw,30px)}
+  @media(min-width:760px){.notes{columns:2}}
+  @media(min-width:1200px){.notes{columns:3}}
+  .note{break-inside:avoid;border:1px solid var(--ink-14);padding:20px;margin-bottom:clamp(16px,2vw,30px);background:rgba(255,255,255,.35)}
+  .note:nth-child(3n+2){transform:rotate(-.35deg)}
+  .note:nth-child(3n){transform:rotate(.3deg)}
+  .note h3{font-family:var(--serif);font-size:1.2rem;line-height:1.1;margin:8px 0 10px}
+  .note p{margin:0;font-size:14px;line-height:1.6;white-space:pre-wrap;color:rgba(21,18,14,.82)}
+  .note__foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:10px;border-top:var(--rule)}
+  .empty{padding:clamp(40px,6vw,90px) 0;text-align:center}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Toàn bộ nội dung — bài học, case study, thư viện nguyên lý — được dựng ngay trong trình duyệt của bạn,
+  không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
+</div></noscript>
+<main class="wrap" id="app"></main>
+<script src="assets/js/core.js?v=7"></script>
+<script src="assets/js/data/campaigns.js?v=7"></script>
+<script src="assets/js/data/brands.js?v=7"></script>
+<script src="assets/js/data/collections.js?v=7"></script>
+<script>
+shell('journal.html');
+
+function render(){
+  const s=State.get(), n=score(s), r=rank(n), nx=nextRank(n);
+  const savedC = s.campaigns.map(id=>CAMPAIGNS.find(c=>c.id===id)).filter(Boolean);
+  const savedB = s.brands.map(id=>BRANDS.find(b=>b.id===id)).filter(Boolean);
+
+  document.getElementById('app').innerHTML = `
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Sổ tay<br><em>riêng</em></h1>
+      <p class="caption" data-reveal data-delay=".1">Swipe file của bạn: campaign đã lưu, thương hiệu đã bóc tách, insight nhặt được ngoài đường.
+        Không có điểm số nhấp nháy, chỉ có một thứ duy nhất đáng đếm — số ngày bạn chịu nhìn.</p>
+    </div>
+  </section>
+
+  <section class="rank">
+    <div data-reveal>
+      <div class="label label--accent">Cấp hiện tại</div>
+      <h2 class="h-serif" style="margin:14px 0 12px">${r[0]}</h2>
+      <p class="caption" style="max-width:40ch">${r[2]}</p>
+      ${nx?`<p class="label" style="margin-top:18px">Còn ${nx[1]-n} bước nữa tới ${nx[0]}</p>`:`<p class="label label--accent" style="margin-top:18px">Bạn đã đi hết thang này. Giờ là lúc tự làm case của riêng mình.</p>`}
+    </div>
+    <ul class="ladder" data-reveal data-delay=".08">
+      ${RANKS.map(x=>`<li ${n>=x[1]?'data-on':''} ${x[0]===r[0]?'data-now':''}><span>${x[0]}</span><span>${x[1]}</span></li>`).join('')}
+    </ul>
+  </section>
+
+  <section class="counts">
+    ${[['Creative streak',s.streak+' ngày'],['Bài đã đọc',s.days.length],['Campaign đã lưu',s.campaigns.length],
+       ['Brand đã bóc tách',s.brands.length],['Tuần lộ trình',(s.roadmap||[]).length+' / 48'],['Ghi chép',s.notes.length]]
+      .map(([l,v],i)=>`<div class="stat" data-reveal data-delay="${i*.04}"><span class="label">${l}</span><b>${v}</b></div>`).join('')}
+  </section>
+
+  <section style="padding:clamp(24px,3.6vw,52px) 0;border-bottom:var(--rule)" data-reveal>
+    <div class="grid g2">
+      <div>
+        <div class="label label--accent">Bộ sưu tập</div>
+        <h2 class="h-mid" style="margin:12px 0 8px">${(()=>{const open=COLLECTIONS.filter(c=>n>=c.need);const nxt=COLLECTIONS.find(c=>n<c.need);
+          return nxt?`Đã mở ${open.length}/${COLLECTIONS.length} · sắp tới: ${nxt.name}`:`Đã mở toàn bộ ${open.length} bộ`;})()}</h2>
+        <p class="caption">${(()=>{const nxt=COLLECTIONS.find(c=>n<c.need);return nxt?`“${nxt.sub}” mở ra ở ${nxt.need} bước — còn ${nxt.need-n}.`:'Không còn gì bị khoá. Giờ là lúc tự dựng case của riêng bạn.';})()}</p>
+        <a class="label label--accent" style="display:inline-block;margin-top:14px" href="collections.html">Xem bộ sưu tập →</a>
+      </div>
+      <div class="rail">
+        ${COLLECTIONS.map(c=>`<a href="collections.html" class="plate plate--wide" style="--pl:${c.color};${n>=c.need?'':'filter:grayscale(1);opacity:.35'}">
+          <span class="plate__mark" style="color:#fff">${c.mark}</span><span class="plate__grid"></span>
+          <span class="plate__halftone"></span><span class="plate__wash"></span>
+          <span class="plate__top"><span class="label">${n>=c.need?'Đã mở':'Còn khoá'}</span><span class="label">${c.need}</span></span>
+          <span class="plate__foot"><h3>${c.name}</h3></span></a>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="compose">
+    <div data-reveal>
+      <div class="label label--accent">Thêm một quan sát</div>
+      <h2 class="h-mid" style="margin:12px 0 10px">Nhìn thấy gì hôm nay?</h2>
+      <p class="caption">Một biển quảng cáo trên đường đi làm, một câu copy trên bao bì, một cách sắp giá trong menu.
+        Ghi lại kèm lý do bạn thấy nó đáng chú ý — sáu tháng nữa đây là kho tư liệu của bạn.</p>
+    </div>
+    <div data-reveal data-delay=".08">
+      <input class="field" id="nt" placeholder="Tiêu đề — ví dụ: Bảng giá tiệm cắt tóc ở Q.3">
+      <textarea class="field" id="nb" rows="4" placeholder="Bạn thấy gì, và vì sao nó đáng để ý?" style="margin-top:14px"></textarea>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+        <button class="btn" id="add">Thêm vào sổ</button>
+        <button class="btn btn--ghost" id="export">Xuất file .txt</button>
+      </div>
+    </div>
+  </section>
+
+  ${(savedC.length||savedB.length)?`
+  <section style="padding:clamp(26px,4vw,56px) 0;border-bottom:var(--rule)">
+    <div class="label">Đã lưu</div>
+    <div class="rail" style="margin-top:20px">
+      ${savedC.map(c=>plate({color:c.color,mark:c.mark,kicker:c.brand,meta:c.year,title:c.title,shape:'plate--wide',href:'campaign.html?id='+c.id})).join('')}
+      ${savedB.map(b=>plate({color:b.color,mark:b.mark,kicker:'X-Ray',meta:b.market,title:b.name,shape:'plate--wide',href:'brand.html?id='+b.id})).join('')}
+    </div>
+  </section>`:''}
+
+  ${s.notes.length?`<section class="notes">${s.notes.map((x,i)=>`
+    <article class="note">
+      <span class="label label--accent">${x.kind||'Ghi chép'} · ${x.when||''}</span>
+      <h3>${esc(x.t)}</h3><p>${esc(x.body)}</p>
+      <div class="note__foot">
+        ${x.href?`<a class="label" href="${x.href}">Mở lại →</a>`:'<span class="label">—</span>'}
+        <button class="label" data-del="${i}" style="color:var(--ink-38)">Xoá</button>
+      </div>
+    </article>`).join('')}</section>`
+  :`<section class="empty"><p class="lede" style="max-width:30ch;margin:0 auto">Sổ còn trắng.<br>Bắt đầu bằng một bài học, hoặc bằng thứ bạn nhìn thấy trên đường về nhà.</p>
+     <div style="display:flex;gap:12px;justify-content:center;margin-top:26px;flex-wrap:wrap">
+       <a class="btn" href="lesson.html">Bài hôm nay</a><a class="btn btn--ghost" href="gallery.html">Campaign Gallery</a></div></section>`}
+  `;
+  reveal();
+}
+render();
+
+document.addEventListener('click',e=>{
+  if(e.target.id==='add'){
+    const t=document.getElementById('nt').value.trim(), b=document.getElementById('nb').value.trim();
+    if(!t&&!b) return toast('Chưa có gì để lưu');
+    const s=State.get();
+    s.notes.unshift({t:t||'Quan sát', body:b, when:new Date().toISOString().slice(0,10), kind:'Quan sát'});
+    State.set({notes:s.notes}); toast('Đã thêm'); render();
+  }
+  if(e.target.id==='export'){
+    const s=State.get();
+    const txt='SỔ TAY MARKETING — Nhìn thấy\n'+new Date().toLocaleDateString('vi-VN')+'\n\n'+
+      s.notes.map(x=>`[${x.kind||'Ghi chép'} · ${x.when||''}] ${x.t}\n${x.body}\n`).join('\n');
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([txt],{type:'text/plain'}));
+    a.download='so-tay-marketing.txt'; a.click(); URL.revokeObjectURL(a.href);
+  }
+  const d=e.target.closest('[data-del]');
+  if(d){ const s=State.get(); s.notes.splice(+d.dataset.del,1); State.set({notes:s.notes}); render(); toast('Đã xoá'); }
+});
+</script>
+</body></html>

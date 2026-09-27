@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="vi" data-district="brand">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bàn làm việc — Che logo đi — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Bài tập Tuần 6: chấm tài sản nhận diện theo hai trục — bao nhiêu người nhận ra, và nhận ra là ai. Trang tự xếp mỗi tài sản vào một trong bốn ô.">
+<meta property="og:title" content="Bàn làm việc — Che logo đi">
+<meta property="og:description" content="Hai trục, bốn ô: cái nào đáng giữ, cái nào đang bị dùng chung, cái nào nên bỏ.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .setup{border-top:1px solid var(--ink);padding-top:16px;margin:clamp(20px,3vw,44px) 0;display:grid;gap:14px}
+  @media(min-width:820px){.setup{grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,44px)}}
+  .rowhead{display:grid;grid-template-columns:1.4fr .9fr auto auto;gap:12px;align-items:end;
+    border-bottom:1px solid var(--ink);padding-bottom:8px;margin-top:clamp(22px,3vw,40px)}
+  .ass{display:grid;grid-template-columns:1.4fr .9fr auto auto;gap:12px;align-items:center;
+    border-bottom:var(--rule);padding:10px 0}
+  @media(max-width:720px){.rowhead{display:none}
+    .ass{grid-template-columns:1fr 1fr;gap:8px;padding:14px 0}
+    .ass .sc{justify-self:start}}
+  .ass input{border:0;border-bottom:1px solid var(--ink-14);background:none;padding:6px 0;width:100%;color:inherit;font:inherit}
+  .ass input:focus{outline:0;border-bottom-color:var(--accent)}
+  .sc{display:flex;gap:4px}
+  .sc button{font-family:var(--mono);font-size:11px;width:26px;height:26px;border:1px solid var(--ink-14);background:none;cursor:pointer;color:var(--ink-38)}
+  .sc button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+  .verd{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-38)}
+  .verd[data-v="keep"]{color:var(--accent)}
+  .brandblock{margin-bottom:clamp(26px,3.4vw,52px)}
+  .brandname{font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,1.9rem);letter-spacing:-.02em;border:0;background:none;width:100%;color:inherit}
+  .brandname:focus{outline:0;color:var(--accent)}
+  .quad{display:grid;gap:1px;background:var(--ink-14);border:var(--rule);margin:clamp(20px,3vw,40px) 0}
+  @media(min-width:760px){.quad{grid-template-columns:repeat(2,1fr)}}
+  .quad div{background:var(--paper);padding:18px;display:grid;gap:8px;align-content:start;min-height:120px}
+  .quad h3{font-family:var(--serif);font-weight:400;font-size:1.15rem;letter-spacing:-.02em}
+  .quad ul{margin:0;padding-left:16px;font-size:13.5px;line-height:1.55}
+  .quad .caption{font-size:12.5px}
+  .verdictbox{border-left:2px solid var(--accent);padding:4px 0 4px 20px;display:grid;gap:10px;margin-top:clamp(20px,3vw,40px)}
+  .bar{display:flex;gap:10px;flex-wrap:wrap;margin:clamp(22px,3vw,44px) 0}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Bàn làm việc chạy hoàn toàn trong trình duyệt của bạn, không gọi về máy chủ nào và không gửi gì đi.</p>
+</div></noscript>
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Che logo đi,<br><em>còn nhận ra ai?</em></h1>
+      <p class="caption" data-reveal data-delay=".08">Bài tập Tuần 6. Tài sản nhận diện là những thứ không phải logo mà vẫn gọi tên bạn:
+        một màu, một dáng chai, một câu, một tiếng động, một khuôn mặt. Chấm mỗi cái theo hai trục —
+        <strong>bao nhiêu người nhận ra</strong> và <strong>nhận ra đúng là bạn hay là cả ngành</strong>.
+        Chỉ cái mạnh ở cả hai trục mới đáng để bảo vệ; cái nổi tiếng nhưng ai cũng dùng là cái bẫy đắt tiền nhất.</p>
+    </div>
+  </section>
+
+  <section class="setup">
+    <div><span class="label">Chấm cho ai xem</span>
+      <input class="field" id="w-who" placeholder="Chấm bằng mắt bạn trước; tuần sau đưa 5 người ngoài chấm lại"></div>
+    <div><span class="label">Ngành đang xét</span>
+      <input class="field" id="w-cat" placeholder="Ví dụ: cà phê đóng chai · phòng gym · sữa hạt"></div>
+  </section>
+
+  <div id="brands"></div>
+
+  <div class="label label--accent">Bốn ô</div>
+  <div class="quad" id="quad"></div>
+  <section class="verdictbox" id="verdict"></section>
+
+  <div class="bar">
+    <button class="btn" id="tojournal">Lưu vào sổ tay</button>
+    <button class="btn btn--ghost" id="export">Xuất .txt</button>
+    <button class="btn btn--ghost" id="clear">Xoá hết</button>
+    <a class="btn btn--ghost" href="xray.html">Brand X-Ray</a>
+    <a class="btn btn--ghost" href="roadmap.html">Về lộ trình</a>
+  </div>
+</main>
+
+<script src="assets/js/core.js?v=7"></script>
+<script>
+shell('roadmap.html');
+
+const WKEY='ass6', NB=5, NA=4;
+const KIND='Ví dụ: màu · dáng bao bì · câu nói · nhạc hiệu · nhân vật · font chữ';
+const blankAsset=()=>({t:'',note:'',fame:0,uniq:0});
+const blankBrand=()=>({name:'',list:Array.from({length:NA},blankAsset)});
+const load=()=>{const w=(State.get().work||{})[WKEY];return w&&w.brands?w:{who:'',cat:'',brands:Array.from({length:NB},blankBrand)}};
+const save=w=>{const work={...(State.get().work||{})};work[WKEY]=w;State.set({work})};
+let W=load();
+document.getElementById('w-who').value=W.who||'';
+document.getElementById('w-cat').value=W.cat||'';
+
+const sc=(b,a,k,v)=>`<div class="sc" role="group" aria-label="${k==='fame'?'Nhận ra':'Riêng của mình'}">
+  ${[0,1,2,3].map(n=>`<button type="button" data-b="${b}" data-a="${a}" data-k="${k}" data-n="${n}"
+     aria-pressed="${v===n}" title="${n}">${n}</button>`).join('')}</div>`;
+
+document.getElementById('brands').innerHTML = W.brands.map((br,b)=>`
+  <div class="brandblock" data-b="${b}">
+    <input class="brandname" data-b="${b}" data-k="name" placeholder="Thương hiệu ${b+1} — tên" value="${esc(br.name)}">
+    <div class="rowhead">
+      <span class="label">Tài sản</span><span class="label">Ghi chú</span>
+      <span class="label">Nhận ra 0–3</span><span class="label">Riêng mình 0–3</span>
+    </div>
+    ${br.list.map((a,i)=>`
+      <div class="ass" data-b="${b}" data-a="${i}">
+        <input data-k="t" placeholder="${i===0?KIND:'…'}" value="${esc(a.t)}">
+        <input data-k="note" placeholder="thấy ở đâu" value="${esc(a.note)}">
+        ${sc(b,i,'fame',a.fame)}${sc(b,i,'uniq',a.uniq)}
+        <span class="verd" data-verd="${b}-${i}"></span>
+      </div>`).join('')}
+  </div>`).join('');
+
+/* Hai trục, bốn ô — cách đọc quen thuộc của giới thương hiệu:
+   nổi + riêng = giữ; nổi nhưng chung = bẫy; riêng nhưng chưa ai biết = đầu tư; không cả hai = bỏ. */
+const cls=a=>{
+  if(!String(a.t).trim()) return null;
+  const hi=n=>n>=2;
+  if(hi(a.fame)&&hi(a.uniq)) return 'keep';
+  if(hi(a.fame)&&!hi(a.uniq)) return 'trap';
+  if(!hi(a.fame)&&hi(a.uniq)) return 'build';
+  return 'drop';
+};
+const LABEL={keep:'Giữ · bảo vệ',trap:'Bẫy · ai cũng dùng',build:'Đầu tư · chưa ai biết',drop:'Bỏ'};
+const BOX={
+  keep:['Giữ và bảo vệ','Nhiều người nhận ra, và nhận ra đúng là bạn. Đừng “làm mới” những cái này — mỗi lần đổi là một lần đốt trí nhớ đã mua bằng nhiều năm.'],
+  trap:['Bẫy quen thuộc','Nhiều người nhận ra nhưng đó là quy ước của cả ngành, không phải của bạn. Dùng thì an toàn, nhưng nó không mang tên bạn về.'],
+  build:['Đáng đầu tư','Rất riêng nhưng còn ít người biết. Đây là chỗ tiền quảng cáo có tác dụng cộng dồn — nếu bạn chịu lặp lại đủ lâu.'],
+  drop:['Nên bỏ','Không ai nhận ra, cũng chẳng riêng. Giữ lại chỉ làm loãng những cái ở ô đầu tiên.']
+};
+
+function check(){
+  const buckets={keep:[],trap:[],build:[],drop:[]};
+  W.brands.forEach((br,b)=>br.list.forEach((a,i)=>{
+    const c=cls(a);
+    const el=document.querySelector(`[data-verd="${b}-${i}"]`);
+    if(el){ el.textContent=c?LABEL[c]:''; c==='keep'?el.setAttribute('data-v','keep'):el.removeAttribute('data-v'); }
+    if(c) buckets[c].push((br.name.trim()||('TH'+(b+1)))+' · '+a.t.trim());
+  }));
+
+  document.getElementById('quad').innerHTML=['keep','trap','build','drop'].map(k=>`
+    <div><span class="label ${k==='keep'?'label--accent':''}">${BOX[k][0]} · ${buckets[k].length}</span>
+      <p class="caption">${BOX[k][1]}</p>
+      ${buckets[k].length?`<ul>${buckets[k].slice(0,8).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
+    </div>`).join('');
+
+  const total=Object.values(buckets).reduce((n,x)=>n+x.length,0);
+  const v=document.getElementById('verdict');
+  if(!total){
+    v.innerHTML=`<span class="label label--accent">Chưa chấm được</span>
+      <p class="caption">Bắt đầu bằng một thương hiệu bạn gặp hằng ngày. Liệt kê tài sản <strong>không phải logo</strong> —
+      nếu chỉ nghĩ ra được logo, đó đã là kết quả: thương hiệu đó chưa xây được gì ngoài cái tên.</p>`;
+    return;
+  }
+  const named=W.brands.filter(b=>b.name.trim()).length;
+  const bits=[];
+  if(!buckets.keep.length) bits.push('Chưa có tài sản nào vào ô “giữ”. Hoặc bạn đang chấm quá chặt, hoặc các thương hiệu này thật sự chỉ sống bằng logo.');
+  if(buckets.trap.length>buckets.keep.length) bits.push(`Ô “bẫy” đang đông hơn ô “giữ” (${buckets.trap.length} so với ${buckets.keep.length}) — dấu hiệu của một ngành mà ai cũng trông giống nhau. Đó là cơ hội, nếu bạn dám khác.`);
+  if(named<3) bits.push('Mới có dưới ba thương hiệu. Chấm đủ năm mới thấy được cái gì là quy ước ngành, cái gì là của riêng ai.');
+  v.innerHTML=`<span class="label label--accent">${total} tài sản đã chấm · ${named}/${NB} thương hiệu</span>
+    ${bits.length?`<p class="caption">${bits.join(' ')}</p>`:''}
+    <p class="caption">Bước cuối, và là bước duy nhất khó: đưa danh sách ô “giữ” cho <strong>năm người ngoài</strong> xem
+    mà không nói tên thương hiệu. Cái nào họ gọi đúng tên mới thật sự là tài sản; cái nào bạn phải giải thích thì chưa phải.</p>`;
+}
+
+document.getElementById('brands').addEventListener('input', e=>{
+  const k=e.target.dataset.k; if(!k) return;
+  if(k==='name'){ W.brands[+e.target.dataset.b].name=e.target.value; }
+  else { const r=e.target.closest('.ass'); W.brands[+r.dataset.b].list[+r.dataset.a][k]=e.target.value; }
+  save(W); check();
+});
+document.getElementById('brands').addEventListener('click', e=>{
+  const b=e.target.closest('button[data-k]'); if(!b) return;
+  const a=W.brands[+b.dataset.b].list[+b.dataset.a];
+  a[b.dataset.k] = a[b.dataset.k]===+b.dataset.n ? 0 : +b.dataset.n;
+  b.parentElement.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed', +x.dataset.n===a[b.dataset.k]));
+  save(W); check();
+});
+['w-who','w-cat'].forEach(id=>document.getElementById(id).addEventListener('input',e=>{
+  W[id==='w-who'?'who':'cat']=e.target.value; save(W);
+}));
+
+const asText=()=>{
+  const L=['BÀI TẬP TUẦN 6 — TÀI SẢN NHẬN DIỆN',`Ngành: ${W.cat||'(chưa ghi)'}`,''];
+  W.brands.forEach(br=>{
+    if(!br.name.trim() && !br.list.some(a=>a.t.trim())) return;
+    L.push(`— ${br.name||'(chưa đặt tên)'}`);
+    br.list.forEach(a=>{ if(a.t.trim())
+      L.push(`  ${a.t} — nhận ra ${a.fame}/3, riêng mình ${a.uniq}/3 → ${LABEL[cls(a)]}${a.note?' ('+a.note+')':''}`); });
+    L.push('');
+  });
+  return L.join('\n');
+};
+document.querySelector('.bar').addEventListener('click', e=>{
+  if(e.target.id==='tojournal'){
+    if(!W.brands.some(b=>b.name.trim()||b.list.some(a=>a.t.trim()))) return toast('Chưa có gì để lưu');
+    const s=State.get(), wid='worksheet:'+WKEY;
+    const i=s.notes.findIndex(x=>x.wid===wid);
+    const note={t:'Tuần 6 — Tài sản nhận diện'+(W.cat?' · '+W.cat:''), body:asText(),
+      when:new Date().toISOString().slice(0,10), kind:'Bàn làm việc', href:'assets-audit.html', wid};
+    i>-1 ? s.notes[i]=note : s.notes.unshift(note);
+    State.set({notes:s.notes}); toast(i>-1?'Đã cập nhật trong sổ tay':'Đã lưu vào sổ tay');
+  }
+  if(e.target.id==='export'){
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([asText()],{type:'text/plain'}));
+    a.download='tuan-6-tai-san-nhan-dien.txt'; a.click(); URL.revokeObjectURL(a.href);
+  }
+  if(e.target.id==='clear'){
+    if(!confirm('Xoá toàn bộ nội dung bàn làm việc này? Ghi chép đã lưu trong sổ tay vẫn còn.')) return;
+    W={who:'',cat:'',brands:Array.from({length:NB},blankBrand)}; save(W); location.reload();
+  }
+});
+check(); reveal();
+</script>
+</body></html>

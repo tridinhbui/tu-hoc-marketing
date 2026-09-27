@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi" data-district="strategy">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nguyên lý Marketing — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="22 nguyên lý marketing, mỗi cái một trang: ví dụ, phản ví dụ, thương hiệu thật, lỗi phổ biến và bài tập nhỏ.">
+<meta property="og:title" content="Nguyên lý Marketing — Nhìn thấy">
+<meta property="og:description" content="22 nguyên lý marketing, mỗi cái một trang: ví dụ, phản ví dụ, thương hiệu thật, lỗi phổ biến và bài tập nhỏ.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .lib{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--ink-14);border:1px solid var(--ink-14);margin:clamp(24px,4vw,60px) 0}
+  @media(min-width:700px){.lib{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:1100px){.lib{grid-template-columns:repeat(4,1fr)}}
+  .card{background:var(--paper);padding:clamp(16px,2vw,26px);display:flex;flex-direction:column;justify-content:space-between;
+    min-height:clamp(160px,17vw,230px);transition:background .35s,color .35s}
+  .card:hover{background:var(--ink);color:var(--paper)}
+  .card:hover .num,.card:hover .caption{color:rgba(240,237,230,.6)}
+  .card h2{font-family:var(--serif);font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.02;letter-spacing:-.02em;margin-top:14px}
+  .card .vi{font-family:var(--serif);font-style:italic;font-size:13px;opacity:.6}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Toàn bộ nội dung — bài học, case study, thư viện nguyên lý — được dựng ngay trong trình duyệt của bạn,
+  không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
+</div></noscript>
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>22 nguyên lý,<br>mỗi cái <em>một trang.</em></h1>
+      <p class="caption" data-reveal data-delay=".1">Không phải glossary. Mỗi khái niệm có một câu định nghĩa rất ngắn, một ví dụ,
+        một phản ví dụ, một thương hiệu thật, lỗi phổ biến và một bài tập nhỏ. Đọc một cái mỗi ngày cũng được.</p>
+    </div>
+  </section>
+  <div class="lib" id="lib"></div>
+</main>
+<script src="assets/js/core.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script>
+shell('library.html');
+document.getElementById('lib').innerHTML = PRINCIPLES.map((p,i)=>`
+  <a class="card" href="principle.html?id=${p.id}" data-reveal data-delay="${(i%6)*.04}">
+    <span class="num">${p.n}</span>
+    <span><h2>${p.t}</h2><span class="vi">${p.vi}</span></span>
+  </a>`).join('');
+reveal();
+</script>
+</body></html>

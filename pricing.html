@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="vi" data-district="growth">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bàn làm việc — Năm cách tính giá — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Bài tập Tuần 12: năm mô hình giá cho cùng một sản phẩm, chọn một và bảo vệ nó. Trang đối chiếu lựa chọn với bàn unit economics.">
+<meta property="og:title" content="Bàn làm việc — Năm cách tính giá">
+<meta property="og:description" content="Giá là tuyên bố định vị to nhất. Chọn một mô hình, nói rõ ai bị bỏ lại, và xem nó có sống nổi với CAC của bạn không.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .setup{border-top:1px solid var(--ink);padding-top:16px;margin:clamp(20px,3vw,40px) 0}
+  .model{display:grid;gap:12px;border-top:var(--rule);padding:16px 0}
+  @media(min-width:960px){.model{grid-template-columns:44px 1.1fr 1fr 1fr 1fr;align-items:start}}
+  .model[data-pick]{border-top:2px solid var(--accent)}
+  .model .pick{width:22px;height:22px;border:1px solid var(--ink-38);border-radius:50%;background:none;cursor:pointer;margin-top:4px}
+  .model[data-pick] .pick{background:var(--accent);border-color:var(--accent);box-shadow:inset 0 0 0 4px var(--paper)}
+  .model h3{font-family:var(--serif);font-weight:400;font-size:1.15rem;letter-spacing:-.02em}
+  .model .caption{font-size:12.5px;margin-top:4px}
+  .model .row{display:grid;gap:4px}
+  .model textarea,.model input{resize:vertical}
+  .defend{display:grid;gap:clamp(14px,2vw,28px);margin:clamp(26px,3.4vw,50px) 0;border-top:1px solid var(--ink);padding-top:16px}
+  @media(min-width:900px){.defend{grid-template-columns:repeat(3,1fr)}}
+  .check{border:var(--rule);padding:clamp(16px,2.2vw,24px);display:grid;gap:10px}
+  .check .lines{display:grid;gap:1px;background:var(--ink-14);border:var(--rule)}
+  .check .lines div{background:var(--paper);padding:9px 12px;display:flex;justify-content:space-between;gap:12px}
+  .check .lines b{font-family:var(--mono);font-size:12.5px;font-weight:400}
+  .verdictbox{border-left:2px solid var(--accent);padding:4px 0 4px 20px;display:grid;gap:10px;margin-top:clamp(20px,3vw,40px)}
+  .verdictbox ul{margin:0;padding-left:18px;font-size:14px;line-height:1.6;display:grid;gap:6px}
+  .bar{display:flex;gap:10px;flex-wrap:wrap;margin:clamp(22px,3vw,44px) 0}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Bàn làm việc chạy hoàn toàn trong trình duyệt của bạn, không gọi về máy chủ nào và không gửi gì đi.</p>
+</div></noscript>
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Năm cách tính giá,<br><em>một cách để bảo vệ.</em></h1>
+      <p class="caption" data-reveal data-delay=".08">Bài tập Tuần 12, bài cuối của giai đoạn Nền. Giá là tuyên bố định vị to nhất
+        mà bạn phát ra — khách đọc nó trước cả khi đọc câu slogan. Viết năm mô hình cho <strong>cùng một sản phẩm</strong>,
+        chọn đúng một, rồi bảo vệ nó: vì sao chọn, ai bị bỏ lại, và tín hiệu nào sẽ khiến bạn đổi ý.
+        Trang sẽ đối chiếu với <a href="unit-economics.html">bàn unit economics</a> để xem lựa chọn đó có sống nổi không.</p>
+    </div>
+  </section>
+
+  <section class="setup">
+    <input class="field" id="w-name" placeholder="Sản phẩm — ví dụ: phòng gym khu dân cư, ~40 khách mới mỗi tháng">
+  </section>
+
+  <div id="models"></div>
+
+  <section class="defend" id="defend">
+    <div class="row"><span class="label label--accent">Vì sao chọn mô hình này</span>
+      <textarea class="field" data-d="why" rows="3" placeholder="Nối với phân khúc và định vị bạn đã viết — không phải “vì phổ biến”"></textarea></div>
+    <div class="row"><span class="label label--accent">Ai bị bỏ lại</span>
+      <textarea class="field" data-d="lose" rows="3" placeholder="Nhóm khách nào sẽ thấy giá này không dành cho họ — và bạn chấp nhận"></textarea></div>
+    <div class="row"><span class="label label--accent">Tín hiệu khiến tôi đổi ý</span>
+      <textarea class="field" data-d="kill" rows="3" placeholder="Một con số cụ thể: “nếu sau 60 ngày tỉ lệ huỷ trên 15% thì…”"></textarea></div>
+  </section>
+
+  <section class="check" id="check"></section>
+  <section class="verdictbox" id="verdict"></section>
+
+  <div class="bar">
+    <button class="btn" id="tojournal">Lưu vào sổ tay</button>
+    <button class="btn btn--ghost" id="export">Xuất .txt</button>
+    <button class="btn btn--ghost" id="clear">Xoá hết</button>
+    <a class="btn btn--ghost" href="principle.html?id=pricing">Nguyên lý Giá</a>
+    <a class="btn btn--ghost" href="roadmap.html">Về lộ trình</a>
+  </div>
+</main>
+
+<script src="assets/js/core.js?v=7"></script>
+<script>
+shell('roadmap.html');
+
+const WKEY='price12';
+const MODELS=[
+  ['one','Một giá duy nhất','Dễ hiểu nhất, nhưng bỏ tiền trên bàn: người sẵn trả nhiều cũng chỉ trả bằng người trả ít.'],
+  ['tiers','Ba gói: tốt · tốt hơn · tốt nhất','Gói giữa thường là gói bán chạy; gói đắt tồn tại để gói giữa trông hợp lý.'],
+  ['sub','Thuê bao theo tháng','Doanh thu đều, nhưng sống chết bằng tỉ lệ huỷ. Bán dễ hơn, giữ khó hơn.'],
+  ['usage','Trả theo mức dùng','Công bằng và hạ rào cản thử, nhưng doanh thu khó đoán và khách sợ hoá đơn.'],
+  ['free','Miễn phí + trả tiền để nâng cấp','Mua được lượng người dùng, nhưng phần lớn không bao giờ trả tiền. Chỉ hợp khi chi phí phục vụ gần bằng 0.'],
+];
+const blankM=()=>({price:'',fit:'',risk:''});
+const load=()=>{const w=(State.get().work||{})[WKEY];
+  return w&&w.m?w:{name:'',pick:'',m:Object.fromEntries(MODELS.map(([k])=>[k,blankM()])),d:{why:'',lose:'',kill:''}}};
+const save=w=>{const work={...(State.get().work||{})};work[WKEY]=w;State.set({work})};
+let W=load();
+document.getElementById('w-name').value=W.name||'';
+document.querySelectorAll('[data-d]').forEach(t=>t.value=W.d[t.dataset.d]||'');
+
+document.getElementById('models').innerHTML = MODELS.map(([k,name,note],i)=>`
+  <div class="model" data-m="${k}" ${W.pick===k?'data-pick':''}>
+    <button class="pick" type="button" data-pick="${k}" aria-pressed="${W.pick===k}" aria-label="Chọn mô hình ${name}"></button>
+    <div><span class="label">${String(i+1).padStart(2,'0')}</span><h3>${name}</h3><p class="caption">${note}</p></div>
+    <div class="row"><span class="label">Con số cụ thể</span>
+      <input class="field" data-k="price" placeholder="${k==='tiers'?'199k · 349k · 599k':k==='sub'?'450k / tháng':k==='usage'?'60k / buổi':k==='free'?'0đ · nâng cấp 299k':'2,4 triệu / 6 tháng'}" value="${esc(W.m[k].price)}"></div>
+    <div class="row"><span class="label">Hợp với ai</span>
+      <textarea class="field" data-k="fit" rows="2" placeholder="Phân khúc nào ở Tuần 1">${esc(W.m[k].fit)}</textarea></div>
+    <div class="row"><span class="label">Rủi ro lớn nhất</span>
+      <textarea class="field" data-k="risk" rows="2" placeholder="Nó chết vì cái gì">${esc(W.m[k].risk)}</textarea></div>
+  </div>`).join('');
+
+const g=t=>String(t||'').trim();
+const wc=t=>g(t).split(/\s+/).filter(Boolean).length;
+/* Lấy số tiền đầu tiên trong ô giá: hiểu "2,4 triệu", "450k", "299.000". */
+function money(t){
+  const s=g(t).toLowerCase();
+  const m=s.match(/(\d+(?:[.,]\d+)*)\s*(triệu|tr|k|nghìn|ngàn)?/);
+  if(!m) return NaN;
+  let raw=m[1], unit=m[2]||'';
+  let n = unit ? parseFloat(raw.replace(',','.')) : parseFloat(raw.replace(/[.,]/g,''));
+  if(unit==='triệu'||unit==='tr') n*=1e6;
+  else if(unit==='k'||unit==='nghìn'||unit==='ngàn') n*=1e3;
+  return n;
+}
+const vnd=n=>isFinite(n)?Math.round(n).toLocaleString('vi-VN'):'—';
+
+function render(){
+  const filled=MODELS.filter(([k])=>g(W.m[k].price)&&g(W.m[k].fit)).length;
+
+  /* đối chiếu với bàn Tuần 10: thay giá trị đơn bằng giá của mô hình đã chọn */
+  const econ=(State.get().work||{}).econ10;
+  const chk=document.getElementById('check');
+  let ratio=null;
+  if(!W.pick){
+    chk.innerHTML=`<span class="label">Đối chiếu unit economics</span><p class="caption">Chọn một mô hình (chấm tròn bên trái) để đối chiếu.</p>`;
+  } else if(!econ||!econ.v){
+    chk.innerHTML=`<span class="label">Đối chiếu unit economics</span>
+      <p class="caption">Chưa có số ở <a href="unit-economics.html">bàn Tuần 10</a>. Điền bên đó trước — một mô hình giá chưa đi qua CAC thì mới là sở thích.</p>`;
+  } else {
+    const v=econ.v, price=money(W.m[W.pick].price);
+    if(!isFinite(price)||price<=0){
+      chk.innerHTML=`<span class="label">Đối chiếu unit economics</span>
+        <p class="caption">Mô hình đã chọn chưa có con số đọc được. Ghi rõ, ví dụ “450k” hoặc “2,4 triệu”.</p>`;
+    } else {
+      const buyers=v.visits*(v.cvr/100);
+      const cac=buyers>0?v.spend/buyers:Infinity;
+      const ltvOld=v.aov*(v.margin/100)*v.freq*v.years*(1+v.refer);
+      const ltvNew=price*(v.margin/100)*v.freq*v.years*(1+v.refer);
+      ratio=isFinite(cac)&&cac>0?ltvNew/cac:null;
+      chk.innerHTML=`<span class="label label--accent">Đối chiếu với bàn Tuần 10 · giá ${vnd(price)}đ thay cho ${vnd(v.aov)}đ</span>
+        <div class="lines">
+          <div><span class="label">LTV với giá cũ</span><b>${vnd(ltvOld)} đ</b></div>
+          <div><span class="label">LTV với mô hình đã chọn</span><b>${vnd(ltvNew)} đ</b></div>
+          <div><span class="label">CAC hiện tại</span><b>${vnd(cac)} đ</b></div>
+          <div><span class="label">LTV : CAC</span><b ${ratio!==null&&ratio<3?'style="color:var(--accent)"':''}>${ratio===null?'—':ratio.toFixed(2).replace('.',',')}</b></div>
+        </div>
+        <p class="caption">Giả định giữ nguyên tần suất, số năm và tỉ lệ mua của bàn Tuần 10. Nếu mô hình này đổi tần suất
+        (thuê bao mua 12 lần/năm, không phải 2), sửa bên đó rồi quay lại.</p>`;
+    }
+  }
+
+  const v=document.getElementById('verdict'), bits=[];
+  if(filled<5) bits.push(`<li>Mới viết ${filled}/5 mô hình có cả giá lẫn người hợp. Viết đủ cả những cái bạn biết chắc sẽ không chọn — lý do loại chúng thường là lý do bảo vệ cái được chọn.</li>`);
+  if(!W.pick) bits.push('<li>Chưa chọn. Bài này không có đáp án “tuỳ trường hợp”.</li>');
+  if(W.pick){
+    if(wc(W.d.why)<8) bits.push('<li>Phần “vì sao” còn mỏng. Nối nó với phân khúc ở Tuần 1 hoặc câu định vị ở Tuần 2 — giá phải kể cùng một câu chuyện với định vị.</li>');
+    if(wc(W.d.lose)<4) bits.push('<li>Chưa nói ai bị bỏ lại. Một mức giá không làm ai thấy “không dành cho mình” là một mức giá không nói gì cả.</li>');
+    if(!/\d/.test(W.d.kill)) bits.push('<li>Tín hiệu đổi ý chưa có con số. “Nếu khách phàn nàn nhiều” không phải tín hiệu; “nếu tỉ lệ huỷ tháng 2 trên 15%” mới là.</li>');
+    if(W.pick==='free') bits.push('<li>Miễn phí + nâng cấp chỉ sống khi phục vụ thêm một người gần như không tốn gì. Dịch vụ có người thật đứng sau thì mô hình này thường là cách lỗ chậm.</li>');
+    if(W.pick==='one' && MODELS.filter(([k])=>g(W.m[k].price)).length>=3) bits.push('<li>Bạn chọn một giá duy nhất dù đã viết được các mô hình khác. Hợp lý nếu khách của bạn giống nhau; nếu phân khúc ở Tuần 1 khác nhau nhiều, bạn đang bỏ tiền trên bàn.</li>');
+    if(ratio!==null && ratio<1) bits.push('<li><strong>Với mô hình này, mỗi khách mới vẫn làm bạn lỗ.</strong> Giá không cứu được — hoặc hạ CAC, hoặc tăng tần suất mua, hoặc đổi mô hình.</li>');
+    else if(ratio!==null && ratio<3) bits.push('<li>Sống được nhưng mỏng. Trước khi chốt, thử viết lại gói đắt nhất cao hơn 30% và xem có ai thật sự bỏ đi không.</li>');
+    else if(ratio!==null) bits.push('<li>Số đứng được. Việc còn lại là kiểm chứng: đưa đúng mức giá này cho năm người ở Tuần 3 và xem ai rút ví, không phải ai gật đầu.</li>');
+  }
+  if(!bits.length) bits.push('<li>Đủ năm mô hình, đã chọn và đã bảo vệ. Giai đoạn Nền khép lại ở đây.</li>');
+  v.innerHTML=`<span class="label label--accent">${W.pick?'Đã chọn: '+MODELS.find(m=>m[0]===W.pick)[1]:'Chưa chọn mô hình'}</span><ul>${bits.join('')}</ul>`;
+}
+
+document.getElementById('models').addEventListener('input', e=>{
+  const k=e.target.dataset.k; if(!k) return;
+  W.m[e.target.closest('.model').dataset.m][k]=e.target.value; save(W); render();
+});
+document.getElementById('models').addEventListener('click', e=>{
+  const b=e.target.closest('[data-pick]'); if(!b||b.classList.contains('model')) return;
+  W.pick = W.pick===b.dataset.pick ? '' : b.dataset.pick;
+  document.querySelectorAll('.model').forEach(m=>{
+    m.toggleAttribute('data-pick', m.dataset.m===W.pick);
+    m.querySelector('.pick').setAttribute('aria-pressed', m.dataset.m===W.pick);
+  });
+  save(W); render();
+});
+document.getElementById('defend').addEventListener('input', e=>{
+  const d=e.target.dataset.d; if(!d) return; W.d[d]=e.target.value; save(W); render();
+});
+document.getElementById('w-name').addEventListener('input',e=>{W.name=e.target.value;save(W)});
+
+const asText=()=>{
+  const L=['BÀI TẬP TUẦN 12 — NĂM MÔ HÌNH GIÁ',`Sản phẩm: ${W.name||'(chưa ghi)'}`,''];
+  MODELS.forEach(([k,name])=>{ const m=W.m[k]; if(!g(m.price)&&!g(m.fit)) return;
+    L.push(`${W.pick===k?'[CHỌN] ':''}${name}: ${m.price||'—'}`);
+    L.push(`  Hợp với: ${m.fit||'—'} · Rủi ro: ${m.risk||'—'}`); });
+  L.push('','BẢO VỆ',`  Vì sao: ${W.d.why||'—'}`,`  Ai bị bỏ lại: ${W.d.lose||'—'}`,`  Đổi ý khi: ${W.d.kill||'—'}`);
+  return L.join('\n');
+};
+document.querySelector('.bar').addEventListener('click', e=>{
+  if(e.target.id==='tojournal'){
+    if(!MODELS.some(([k])=>g(W.m[k].price)||g(W.m[k].fit))) return toast('Chưa có gì để lưu');
+    const s=State.get(), wid='worksheet:'+WKEY;
+    const i=s.notes.findIndex(x=>x.wid===wid);
+    const note={t:'Tuần 12 — Mô hình giá'+(W.name?' · '+W.name:''), body:asText(),
+      when:new Date().toISOString().slice(0,10), kind:'Bàn làm việc', href:'pricing.html', wid};
+    i>-1 ? s.notes[i]=note : s.notes.unshift(note);
+    State.set({notes:s.notes}); toast(i>-1?'Đã cập nhật trong sổ tay':'Đã lưu vào sổ tay');
+  }
+  if(e.target.id==='export'){
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([asText()],{type:'text/plain'}));
+    a.download='tuan-12-mo-hinh-gia.txt'; a.click(); URL.revokeObjectURL(a.href);
+  }
+  if(e.target.id==='clear'){
+    if(!confirm('Xoá toàn bộ nội dung bàn làm việc này? Ghi chép đã lưu trong sổ tay vẫn còn.')) return;
+    const s=State.get(); const work={...(s.work||{})}; delete work[WKEY]; State.set({work}); location.reload();
+  }
+});
+render(); reveal();
+</script>
+</body></html>

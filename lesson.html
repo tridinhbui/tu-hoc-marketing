@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bài hôm nay — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Bài học marketing mỗi ngày trong 5–10 phút: một ý tưởng, một ví dụ thật, lý do nó hiệu quả và một bài tập nhỏ.">
+<meta property="og:title" content="Bài hôm nay — Nhìn thấy">
+<meta property="og:description" content="Bài học marketing mỗi ngày trong 5–10 phút: một ý tưởng, một ví dụ thật, lý do nó hiệu quả và một bài tập nhỏ.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .lead{display:grid;gap:clamp(18px,3vw,44px);padding:clamp(30px,5vw,70px) 0}
+  @media(min-width:960px){.lead{grid-template-columns:1.15fr .85fr;align-items:end}}
+  .sec{display:grid;gap:clamp(12px,2vw,40px);padding:clamp(28px,4vw,60px) 0;border-top:var(--rule)}
+  @media(min-width:900px){.sec{grid-template-columns:14ch minmax(0,1fr)}}
+  .sec h2{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);padding-top:6px}
+  .sec p{font-size:1.06rem;line-height:1.62;max-width:62ch;margin:0 0 1em;color:rgba(21,18,14,.88)}
+  .sec ul{margin:0;padding:0;list-style:none;display:grid;gap:16px;max-width:64ch}
+  .sec li{padding-left:26px;position:relative;line-height:1.55}
+  .sec li::before{content:"";position:absolute;left:0;top:.62em;width:14px;height:1px;background:var(--accent)}
+  .sec--idea p{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.2;font-weight:300;letter-spacing:-.015em;max-width:26ch}
+  .archive a{display:grid;grid-template-columns:5ch 1fr auto;gap:14px;align-items:baseline;padding:14px 0;border-bottom:var(--rule)}
+  .archive a:hover .at{color:var(--accent)}
+  .at{font-family:var(--serif);font-size:1.15rem;line-height:1.15;transition:color .3s}
+  .done{color:var(--accent)}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Toàn bộ nội dung — bài học, case study, thư viện nguyên lý — được dựng ngay trong trình duyệt của bạn,
+  không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
+</div></noscript>
+<main class="wrap" id="app"></main>
+
+<script src="assets/js/core.js?v=7"></script>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/districts.js?v=7"></script>
+<script>
+shell('lesson.html');
+const want = parseInt(qs('day')||'0',10);
+const L = LESSONS.find(l=>l.day===want) || LESSONS[dayIndex(LESSONS.length)];
+const dist = DISTRICTS.find(d=>d.key===L.d);
+document.documentElement.setAttribute('data-district', L.d);
+document.title = `Day ${L.day} · ${L.t} — Nhìn thấy`;
+
+const read = State.has('days', L.day);
+document.getElementById('app').innerHTML = `
+  <section class="lead">
+    <div data-reveal>
+      <div class="label label--accent">Daily lesson · Day ${L.day} · ${L.read}</div>
+      <h1 class="h-serif" style="margin:16px 0 0;max-width:16ch">${L.t}</h1>
+      <p class="kicker" style="margin-top:16px">${dist?dist.name:''}</p>
+    </div>
+    <div data-reveal-clip data-delay=".1">
+      ${plate({color:L.color,mark:String(L.day),kicker:'Day '+L.day,meta:dist?dist.vi:'',title:'',shape:'plate--wide'})}
+    </div>
+  </section>
+
+  <section class="sec sec--idea" data-reveal><h2>Idea</h2><div><p>${L.idea}</p></div></section>
+  <section class="sec" data-reveal><h2>Real world</h2><div><p>${L.real}</p></div></section>
+  <section class="sec" data-reveal><h2>Why it works</h2><div><ul>${L.why.map(w=>`<li>${w}</li>`).join('')}</ul></div></section>
+  <section class="sec" data-reveal><h2>Look closer</h2><div><p style="border-left:2px solid var(--accent);padding-left:20px">${L.closer}</p></div></section>
+  <section class="sec" data-reveal><h2>Try it</h2><div>
+    <p>${L.try}</p>
+    <textarea class="field" id="note" rows="3" placeholder="Viết câu trả lời của bạn — nó sẽ nằm trong Sổ tay."></textarea>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
+      <button class="btn" id="save">Lưu vào sổ tay</button>
+      <button class="btn btn--ghost" id="done">${read?'Đã đọc ✓':'Đánh dấu đã đọc'}</button>
+    </div>
+  </div></section>
+
+  <section class="sec" data-reveal><h2>Các số khác</h2><div class="archive" style="width:100%">
+    ${LESSONS.slice().reverse().map(x=>`<a href="lesson.html?day=${x.day}">
+      <span class="num ${State.has('days',x.day)?'done':''}">${State.has('days',x.day)?'✓':''} ${x.day}</span>
+      <span class="at">${x.t}</span><span class="label">${x.read}</span></a>`).join('')}
+  </div></section>`;
+
+document.getElementById('save').onclick=()=>{
+  const v=document.getElementById('note').value.trim();
+  if(!v) return toast('Chưa có gì để lưu');
+  const s=State.get(); s.notes.unshift({t:'Day '+L.day+' · '+L.t, body:v, when:new Date().toISOString().slice(0,10), kind:'Bài học'});
+  State.set({notes:s.notes}); toast('Đã lưu vào sổ tay');
+};
+document.getElementById('done').onclick=e=>{
+  State.push('days', L.day); e.target.textContent='Đã đọc ✓'; toast('Day '+L.day+' — xong');
+};
+reveal();
+</script>
+</body></html>

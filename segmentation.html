@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="vi" data-district="consumer">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bàn làm việc — Phân khúc theo dịp — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Bài tập Tuần 1: chia bốn phân khúc theo dịp sử dụng. Mỗi phân khúc năm dòng, dòng cuối là dòng kiểm tra — hai phân khúc cùng một kế hoạch là một phân khúc.">
+<meta property="og:title" content="Bàn làm việc — Phân khúc theo dịp">
+<meta property="og:description" content="Bốn phân khúc, năm dòng mỗi cái, và một phép thử để biết bạn đang chia thị trường hay chỉ đang chia người.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .setup{border-top:1px solid var(--ink);padding-top:16px;margin:clamp(20px,3vw,44px) 0;display:grid;gap:14px}
+  @media(min-width:820px){.setup{grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}}
+  .segs{display:grid;gap:clamp(16px,2vw,30px);margin:clamp(20px,3vw,44px) 0}
+  @media(min-width:900px){.segs{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1300px){.segs{grid-template-columns:repeat(4,1fr)}}
+  .seg{display:grid;gap:14px;align-content:start}
+  .seg__top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:1px solid var(--ink);padding-bottom:8px}
+  .seg__name{font-family:var(--serif);font-size:1.15rem;letter-spacing:-.02em;width:100%;border:0;background:none;color:inherit}
+  .seg__name:focus{outline:0;color:var(--accent)}
+  .row{display:grid;gap:5px}
+  .row textarea{min-height:52px;resize:vertical}
+  .row--test{border-top:1px dashed var(--ink-14);padding-top:12px}
+  .seg[data-clash] .row--test textarea{border-bottom-color:var(--accent);background:rgba(194,65,12,.06)}
+  .verdictbox{border-left:2px solid var(--accent);padding:4px 0 4px 20px;display:grid;gap:10px}
+  .verdictbox ul{margin:0;padding-left:18px}
+  .verdictbox li{font-size:14.5px;line-height:1.6;margin-bottom:6px}
+  .bar{display:flex;gap:10px;flex-wrap:wrap;margin:clamp(18px,2.4vw,30px) 0}
+  .traps{display:grid;gap:clamp(14px,2vw,28px);margin-top:clamp(28px,3.5vw,52px)}
+  @media(min-width:760px){.traps{grid-template-columns:repeat(3,1fr)}}
+  .traps div{border-top:var(--rule);padding-top:12px}
+  .traps p{font-size:14px;line-height:1.55;margin-top:8px}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Bàn làm việc này chạy hoàn toàn trong trình duyệt của bạn: những gì bạn gõ được lưu tại máy,
+  không gửi đi đâu. Bật JavaScript để dùng.</p>
+</div></noscript>
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Bốn phân khúc,<br><em>một phép thử.</em></h1>
+      <p class="caption" data-reveal data-delay=".1">Bài tập Tuần 1. Chia theo <strong>dịp sử dụng</strong>, không theo tuổi hay giới tính.
+        Mỗi phân khúc năm dòng; dòng thứ năm là dòng kiểm tra. Hai phân khúc dẫn tới cùng một kế hoạch
+        thì chúng là một — trang này sẽ nói thẳng khi điều đó xảy ra. Mọi thứ bạn gõ nằm trong máy bạn.</p>
+    </div>
+  </section>
+
+  <section class="setup" data-reveal>
+    <div>
+      <span class="label label--accent">Ngành / sản phẩm</span>
+      <input class="field" id="w-field" placeholder="Ví dụ: phòng gym khu dân cư, gói 6 tháng">
+    </div>
+    <div>
+      <span class="label">Hiện tại nội bộ đang mô tả khách hàng thế nào?</span>
+      <input class="field" id="w-old" placeholder="Cứ chép y như cách mọi người vẫn nói — đây là bản mô tả ta sẽ đập bỏ">
+    </div>
+  </section>
+
+  <div class="segs" id="segs"></div>
+
+  <section class="verdictbox" id="verdict" data-reveal></section>
+
+  <div class="bar">
+    <button class="btn" id="tojournal">Lưu vào sổ tay</button>
+    <button class="btn btn--ghost" id="export">Xuất .txt</button>
+    <button class="btn btn--ghost" id="clear">Xoá hết</button>
+    <a class="btn btn--ghost" href="roadmap.html">Về lộ trình</a>
+  </div>
+
+  <section>
+    <div class="label label--accent">Ba cái bẫy quen thuộc</div>
+    <div class="traps">
+      <div><span class="num">01</span><p><strong>Chia theo nhân khẩu học.</strong> “Nữ 25–34, thu nhập khá” không nói cho bạn biết phải làm gì khác đi. Nếu bỏ dòng tuổi đi mà kế hoạch không đổi, dòng đó vô nghĩa.</p></div>
+      <div><span class="num">02</span><p><strong>Phân khúc bịa trong đầu.</strong> Nếu bạn chưa nghe ai nói câu đó bằng giọng của họ, đó là giả thuyết chứ chưa phải phân khúc. Tuần 3 sẽ kiểm chứng bằng 5 cuộc phỏng vấn.</p></div>
+      <div><span class="num">03</span><p><strong>Bốn phân khúc, một kế hoạch.</strong> Cái bẫy phổ biến nhất và là lý do dòng 5 tồn tại. Chia được thị trường nghĩa là chia được cả cách tiêu tiền.</p></div>
+    </div>
+  </section>
+</main>
+
+<script src="assets/js/core.js?v=7"></script>
+<script>
+shell('roadmap.html');
+
+const WKEY='seg1';
+const ROWS=[
+  ['occ','Dịp','Khi ___ xảy ra, họ cần ___'],
+  ['job','Việc cần làm','Họ “thuê” sản phẩm này để làm xong việc gì'],
+  ['alt','Thay thế','Không có mình thì họ dùng gì — kể cả “không làm gì”'],
+  ['crit','Tiêu chí','Họ chọn dựa trên cái gì — và cái gì họ KHÔNG quan tâm'],
+  ['plan','Nên tôi phải làm khác ở chỗ','Dòng kiểm tra. Cụ thể tới mức bắt tay làm được'],
+];
+const blank=()=>({name:'',occ:'',job:'',alt:'',crit:'',plan:''});
+
+function load(){
+  const w=(State.get().work||{})[WKEY];
+  return w && w.segs ? w : {field:'',old:'',segs:[blank(),blank(),blank(),blank()]};
+}
+function save(w){ const work={...(State.get().work||{})}; work[WKEY]=w; State.set({work}); }
+
+let W=load();
+document.getElementById('w-field').value=W.field||'';
+document.getElementById('w-old').value=W.old||'';
+
+document.getElementById('segs').innerHTML = W.segs.map((s,i)=>`
+  <div class="seg" data-i="${i}">
+    <div class="seg__top">
+      <span class="label">Phân khúc ${String(i+1).padStart(2,'0')}</span>
+      <span class="label" data-count="${i}"></span>
+    </div>
+    <input class="seg__name" data-k="name" placeholder="Tên theo dịp — “Tháng Giêng”" value="${esc(s.name)}">
+    ${ROWS.map(([k,label,hint])=>`
+      <div class="row ${k==='plan'?'row--test':''}">
+        <span class="label">${label}</span>
+        <textarea class="field" data-k="${k}" rows="2" placeholder="${hint}">${esc(s[k]||'')}</textarea>
+      </div>`).join('')}
+  </div>`).join('');
+
+/* Phép thử: hai kế hoạch giống nhau thì hai phân khúc là một.
+   So sánh thô — bỏ dấu câu, bỏ từ nối — đủ để bắt trường hợp chép lại ý cũ. */
+const norm = t => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')
+  .replace(/[^a-z0-9\s]/g,' ').split(/\s+/)
+  .filter(x=>x && !['va','hoac','thi','la','cua','cho','de','o','mot','nhung','cai','nay','do'].includes(x));
+function similar(a,b){
+  const A=new Set(norm(a)), B=new Set(norm(b));
+  if(A.size<3||B.size<3) return false;
+  let hit=0; A.forEach(x=>{ if(B.has(x)) hit++; });
+  return hit/Math.min(A.size,B.size) >= .6;
+}
+
+function check(){
+  const segs=W.segs;
+  const filled=segs.filter(s=>ROWS.every(([k])=>String(s[k]||'').trim().length>2));
+  const clash=[];
+  for(let i=0;i<segs.length;i++) for(let j=i+1;j<segs.length;j++)
+    if(segs[i].plan.trim() && segs[j].plan.trim() && similar(segs[i].plan,segs[j].plan)) clash.push([i,j]);
+
+  document.querySelectorAll('.seg').forEach((el,i)=>{
+    const s=segs[i];
+    const n=ROWS.filter(([k])=>String(s[k]||'').trim().length>2).length;
+    el.querySelector(`[data-count="${i}"]`).textContent = n+' / 5 dòng';
+    el.toggleAttribute('data-clash', clash.some(p=>p.includes(i)));
+  });
+
+  const v=document.getElementById('verdict');
+  const name=i=>W.segs[i].name.trim()||('Phân khúc '+String(i+1).padStart(2,'0'));
+  if(!filled.length){
+    v.innerHTML=`<span class="label label--accent">Chưa chấm được</span>
+      <p class="caption">Điền đủ năm dòng của ít nhất một phân khúc rồi quay lại đây. Bắt đầu bằng <strong>dịp</strong>,
+      đừng bắt đầu bằng chân dung khách hàng — chân dung là thứ suy ra sau, không phải thứ chia trước.</p>`;
+    return;
+  }
+  if(clash.length){
+    v.innerHTML=`<span class="label label--accent">Chưa đạt · ${clash.length} cặp trùng kế hoạch</span>
+      <ul>${clash.map(([i,j])=>`<li><strong>${esc(name(i))}</strong> và <strong>${esc(name(j))}</strong> đang dẫn tới cùng một việc phải làm.
+        Hoặc gộp lại thành một, hoặc đào sâu: dịp của hai nhóm này khác nhau ở điểm nào mà kế hoạch lại không khác?</li>`).join('')}</ul>
+      <p class="caption">Đây là kết quả bình thường ở lần thử đầu. Chia được người thì dễ, chia được thị trường mới khó.</p>`;
+    return;
+  }
+  v.innerHTML=`<span class="label label--accent">${filled.length} / 4 phân khúc đủ năm dòng · không có cặp nào trùng kế hoạch</span>
+    <p class="caption">Tốt ở phần cấu trúc. Nhưng đây mới là <em>giả thuyết</em>: mọi dòng ở trên vẫn đang do bạn nghĩ ra.
+    Tuần 3 bạn sẽ ngồi với 5 người thật và kiểm chứng — chuẩn bị tinh thần bỏ ít nhất một phân khúc.</p>
+    <ul><li>Phân khúc nào bạn ít chắc chắn nhất? Phỏng vấn nhóm đó trước.</li>
+    <li>Dòng “thay thế” của bạn có ai ghi là <em>không làm gì</em> chưa? Nếu chưa, khả năng cao bạn đang đánh giá quá cao nhu cầu.</li></ul>`;
+}
+
+document.getElementById('segs').addEventListener('input', e=>{
+  const el=e.target, k=el.dataset.k; if(!k) return;
+  W.segs[+el.closest('.seg').dataset.i][k]=el.value;
+  save(W); check();
+});
+['w-field','w-old'].forEach(id=>document.getElementById(id).addEventListener('input',e=>{
+  W[id==='w-field'?'field':'old']=e.target.value; save(W);
+}));
+
+const asText=()=>{
+  const L=[`BÀI TẬP TUẦN 1 — PHÂN KHÚC THEO DỊP`,`Ngành: ${W.field||'(chưa ghi)'}`,
+    `Mô tả khách hàng đang dùng nội bộ: ${W.old||'(chưa ghi)'}`,''];
+  W.segs.forEach((s,i)=>{
+    if(!ROWS.some(([k])=>String(s[k]||'').trim())) return;
+    L.push(`— PHÂN KHÚC ${String(i+1).padStart(2,'0')}: ${s.name||'(chưa đặt tên)'}`);
+    ROWS.forEach(([k,label])=>L.push(`  ${label}: ${s[k]||'—'}`));
+    L.push('');
+  });
+  return L.join('\n');
+};
+
+document.querySelector('.bar').addEventListener('click', e=>{
+  if(e.target.id==='tojournal'){
+    const body=asText();
+    if(!W.segs.some(s=>ROWS.some(([k])=>String(s[k]||'').trim()))) return toast('Chưa có gì để lưu');
+    const s=State.get();
+    const i=s.notes.findIndex(x=>x.wid==='worksheet:'+WKEY);
+    const note={t:'Tuần 1 — Phân khúc theo dịp'+(W.field?' · '+W.field:''), body,
+      when:new Date().toISOString().slice(0,10), kind:'Bàn làm việc', href:'segmentation.html', wid:'worksheet:'+WKEY};
+    i>-1 ? s.notes[i]=note : s.notes.unshift(note);
+    State.set({notes:s.notes});
+    toast(i>-1?'Đã cập nhật trong sổ tay':'Đã vào sổ tay');
+  }
+  if(e.target.id==='export'){
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([asText()],{type:'text/plain'}));
+    a.download='tuan-1-phan-khuc.txt'; a.click(); URL.revokeObjectURL(a.href);
+  }
+  if(e.target.id==='clear'){
+    if(!confirm('Xoá toàn bộ nội dung đang gõ ở trang này? Ghi chép đã lưu trong sổ tay vẫn còn.')) return;
+    W={field:'',old:'',segs:[blank(),blank(),blank(),blank()]}; save(W); location.reload();
+  }
+});
+
+check();
+reveal();
+</script>
+</body></html>

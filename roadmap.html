@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="vi" data-district="strategy">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lộ trình 12 tháng — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Lộ trình tự học marketing 12 tháng: 4 giai đoạn, 48 tuần có việc cụ thể, 12 sản phẩm đầu ra. Tick tiến độ lưu ngay trong trình duyệt.">
+<meta property="og:title" content="Lộ trình 12 tháng — Nhìn thấy">
+<meta property="og:description" content="4 giai đoạn, 48 tuần có việc cụ thể, 12 sản phẩm đầu ra.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  /* Lộ trình dùng đúng hệ thống của cả site: hairline và khoảng trống,
+     không panel tô nền, không thẻ viền kín — nếu không nó sẽ đọc như một app quản lý việc. */
+  .prog{border-top:1px solid var(--ink);padding-top:14px;margin:clamp(22px,3vw,44px) 0;display:grid;gap:12px}
+  .prog__bar{height:1px;background:var(--ink-14);position:relative}
+  .prog__bar i{position:absolute;inset:0 auto 0 0;background:var(--accent);width:0;transition:width .6s var(--ease)}
+  .prog__row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .prog__n{font-family:var(--serif);font-weight:300;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;letter-spacing:-.03em}
+  .prog p{max-width:62ch}
+
+  .rhythm{display:grid;gap:clamp(14px,2vw,26px);margin:clamp(20px,3vw,40px) 0}
+  @media(min-width:760px){.rhythm{grid-template-columns:repeat(7,1fr)}}
+  .rhythm div{border-top:var(--rule);padding-top:10px;display:grid;gap:6px;align-content:start}
+  .rhythm p{font-size:13.5px;line-height:1.45;margin:0}
+
+  .phase{border-top:1px solid var(--ink);padding-top:clamp(18px,2.4vw,30px);margin-top:clamp(44px,6vw,96px)}
+  .phase__head{display:grid;gap:10px;margin-bottom:clamp(20px,3vw,44px)}
+  @media(min-width:900px){.phase__head{grid-template-columns:1fr 1fr;align-items:end;gap:clamp(24px,4vw,60px)}}
+  .phase__t{font-family:var(--serif);font-size:clamp(2rem,5.4vw,4.2rem);line-height:.94;letter-spacing:-.03em}
+
+  .month{margin-bottom:clamp(28px,4vw,56px)}
+  .month__top{display:flex;gap:14px 18px;align-items:baseline;flex-wrap:wrap;
+    padding-bottom:12px;border-bottom:var(--rule)}
+  .month__t{font-family:var(--serif);font-size:clamp(1.25rem,2.2vw,1.75rem);letter-spacing:-.02em}
+  .weeks{list-style:none;margin:0;padding:0}
+  .week{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:15px 0;border-bottom:var(--rule);align-items:start}
+  .week input{appearance:none;width:16px;height:16px;border:1px solid var(--ink-38);background:transparent;
+    cursor:pointer;margin-top:3px;flex:none;transition:background .25s,border-color .25s}
+  .week input:hover{border-color:var(--ink)}
+  .week input:checked{background:var(--accent);border-color:var(--accent);
+    background-image:linear-gradient(45deg,transparent 44%,var(--accent-ink) 44% 56%,transparent 56%),linear-gradient(-45deg,transparent 44%,var(--accent-ink) 44% 56%,transparent 56%)}
+  .week.is-done .week__b{opacity:.42}
+  .week__b p{font-size:14.5px;line-height:1.55;margin:0;max-width:70ch}
+  /* ô ghi chép: một vạch accent bên trái, giống khối "Look closer" ở trang bài học */
+  .log{grid-column:1/-1;display:grid;gap:10px;margin:12px 0 2px;padding-left:18px;border-left:2px solid var(--accent)}
+  .log[hidden]{display:none}
+  .log__row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .log__saved{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+  .out{padding-top:14px;margin-top:2px;border-top:1px solid var(--ink);display:grid;gap:6px}
+  .out strong{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(1.05rem,1.7vw,1.35rem)}
+  .prin{display:flex;flex-wrap:wrap;gap:6px}
+  .prin a{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+    border:1px solid var(--ink-14);padding:6px 10px;text-decoration:none;transition:background .3s,color .3s}
+  .prin a:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .checks{display:grid;gap:clamp(14px,2vw,30px);margin-top:clamp(16px,2vw,26px)}
+  @media(min-width:760px){.checks{grid-template-columns:repeat(4,1fr)}}
+  .checks div{border-top:var(--rule);padding-top:10px}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Lộ trình và tiến độ của bạn được dựng ngay trong trình duyệt, không gọi về máy chủ nào.
+  Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
+</div></noscript>
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Mười hai tháng,<br>bốn mươi tám tuần,<br><em>mười hai thứ làm ra được.</em></h1>
+      <p class="caption" data-reveal data-delay=".1">Không phải danh sách bài đọc. Mỗi tuần là một việc tay,
+        mỗi tháng đẻ ra một sản phẩm người khác xem được. Tick vào ô để nhớ chỗ mình đang đứng —
+        tiến độ nằm trong trình duyệt này, không gửi đi đâu.</p>
+    </div>
+  </section>
+
+  <section class="prog" data-reveal>
+    <div class="prog__row">
+      <span class="prog__n" id="pn">0 / 48</span>
+      <span class="label" id="pl">Tuần đã xong</span>
+    </div>
+    <div class="prog__bar"><i id="pb"></i></div>
+    <div class="prog__row"><span class="caption" id="pnext"></span></div>
+  </section>
+
+  <div class="label label--accent" data-reveal>Bốn luật</div>
+  <ol class="checks" id="rules" data-reveal></ol>
+
+  <div class="label label--accent" style="margin-top:clamp(30px,4vw,56px)" data-reveal>Nhịp một tuần · 7–9 tiếng</div>
+  <div class="rhythm" id="rhythm" data-reveal></div>
+
+  <div id="phases"></div>
+
+  <section class="phase" data-reveal>
+    <div class="phase__head"><h2 class="phase__t">Đọc gì,<br><em>lúc nào.</em></h2>
+      <p class="caption">Không đọc trước tuyến. Sách của giai đoạn sau đọc sớm chỉ tạo cảm giác hiểu.</p></div>
+    <div class="rhythm" id="reading" style="grid-template-columns:1fr"></div>
+  </section>
+
+  <section class="phase" data-reveal>
+    <div class="phase__head"><h2 class="phase__t">Tự chấm<br><em>cuối mỗi giai đoạn.</em></h2>
+      <p class="caption">Nếu ba câu đầu đều “không” — giai đoạn đó bạn đọc chứ chưa học.</p></div>
+    <div class="checks" id="selfcheck"></div>
+    <p class="caption" style="margin-top:20px">Viết câu trả lời vào <a href="journal.html">sổ tay</a>, rồi xuất ra đọc lại sau ba tháng.</p>
+  </section>
+</main>
+
+<script src="assets/js/core.js?v=7"></script>
+<script src="assets/js/data/roadmap.js?v=7"></script>
+<script>
+shell('roadmap.html');
+
+const TOTAL = PHASES.reduce((n,p)=>n+p.months.reduce((m,x)=>m+x.weeks.length,0),0);
+
+document.getElementById('rules').innerHTML =
+  RULES.map((r,i)=>`<div><span class="num">${String(i+1).padStart(2,'0')}</span><p style="margin-top:8px">${r}</p></div>`).join('');
+
+document.getElementById('rhythm').innerHTML =
+  RHYTHM.map(([d,t,w])=>`<div><span class="label">${d} · ${t}</span><p>${w}</p></div>`).join('');
+
+document.getElementById('reading').innerHTML =
+  READING.map(([n,b])=>`<div><span class="label">Giai đoạn ${n}</span><p>${b}</p></div>`).join('');
+
+document.getElementById('selfcheck').innerHTML =
+  SELFCHECK.map((q,i)=>`<div><span class="num">${String(i+1).padStart(2,'0')}</span><p style="margin-top:8px">${q}</p></div>`).join('');
+
+document.getElementById('phases').innerHTML = PHASES.map(p=>`
+  <section class="phase" data-district="${p.d}" style="--accent:var(--a-${p.d})">
+    <div class="phase__head">
+      <div data-reveal>
+        <span class="label label--accent">Giai đoạn ${p.n} · ${p.span}</span>
+        <h2 class="phase__t" style="margin-top:10px">${p.name}</h2>
+      </div>
+      <div data-reveal data-delay=".08">
+        <p class="lede">${p.goal}</p>
+        <p class="caption" style="margin-top:10px">Xong giai đoạn: ${p.done}</p>
+      </div>
+    </div>
+    ${p.months.map(m=>`
+      <div class="month" data-reveal>
+        <div class="month__top">
+          <span class="label">${m.m}</span>
+          <span class="month__t">${m.t}</span>
+          ${m.prin.length?`<span class="prin">${m.prin.map(id=>`<a href="principle.html?id=${id}">${id.replace(/-/g,' ')}</a>`).join('')}</span>`:''}
+        </div>
+        <ul class="weeks">
+          ${m.weeks.map(([w,body])=>{
+            const id = p.id+':'+w;
+            return `<li class="week" data-id="${id}">
+              <input type="checkbox" aria-label="Đánh dấu ${w} đã xong">
+              <span class="week__b"><span class="label">${w}</span><p style="margin-top:5px">${body}</p></span>
+              <div class="log" hidden>
+                <span class="label">Bạn làm ra gì tuần này? Một câu cũng được — nó vào thẳng sổ tay.</span>
+                <textarea class="field" rows="2" placeholder="Ví dụ: chia được 4 phân khúc theo dịp, nhưng hai cái dẫn tới cùng một kế hoạch nên phải gộp."></textarea>
+                <div class="log__row">
+                  <button class="btn btn--ghost" data-log="${id}">Lưu vào sổ tay</button>
+                  <span class="log__saved" hidden>Đã vào sổ</span>
+                </div>
+              </div>
+            </li>`;
+          }).join('')}
+        </ul>
+        <div class="out"><span class="label">Sản phẩm đầu ra</span><strong>${m.out}</strong></div>
+      </div>`).join('')}
+  </section>`).join('');
+
+/* mỗi khu vực giữ accent riêng ngay cả khi lồng trong trang strategy */
+document.head.insertAdjacentHTML('beforeend',`<style>
+  .phase[data-district="consumer"]{--accent:#1F5C4A}
+  .phase[data-district="creative"]{--accent:#7A2E8E}
+  .phase[data-district="strategy"]{--accent:#4A3A2A}
+  .phase[data-district="growth"]{--accent:#1B4C8C}
+</style>`);
+
+function paint(){
+  const done = State.get().roadmap || [];
+  document.querySelectorAll('.week').forEach(li=>{
+    const on = done.includes(li.dataset.id);
+    li.classList.toggle('is-done', on);
+    li.querySelector('input').checked = on;
+    const log = li.querySelector('.log');
+    log.hidden = !on;
+    const logged = (State.get().notes||[]).some(x=>x.wid===li.dataset.id);
+    log.querySelector('.log__saved').hidden = !logged;
+  });
+  const n = done.length;
+  document.getElementById('pn').textContent = `${n} / ${TOTAL}`;
+  document.getElementById('pb').style.width = (n/TOTAL*100)+'%';
+  const next = [...document.querySelectorAll('.week')].find(li=>!done.includes(li.dataset.id));
+  document.getElementById('pnext').textContent = next
+    ? 'Tiếp theo: ' + next.querySelector('.label').textContent + ' — ' + next.querySelector('p').textContent
+    : 'Hết lộ trình. Giờ đến lượt bạn viết cái tiếp theo.';
+}
+
+document.getElementById('phases').addEventListener('change', e=>{
+  if(e.target.type!=='checkbox') return;
+  const li = e.target.closest('.week');
+  const on = State.toggle('roadmap', li.dataset.id);
+  paint();
+  toast(on ? 'Đã xong ' + li.querySelector('.label').textContent : 'Bỏ đánh dấu');
+});
+
+document.getElementById('phases').addEventListener('click', e=>{
+  const btn = e.target.closest('[data-log]');
+  if(!btn) return;
+  const li = btn.closest('.week');
+  const ta = li.querySelector('textarea');
+  const body = ta.value.trim();
+  if(!body) return toast('Chưa có gì để lưu');
+  const s = State.get();
+  const label = li.querySelector('.label').textContent;
+  const month = li.closest('.month').querySelector('.month__t').textContent;
+  s.notes.unshift({ t: label + ' — ' + month, body,
+    when: new Date().toISOString().slice(0,10),
+    kind: 'Lộ trình', href: 'roadmap.html', wid: li.dataset.id });
+  State.set({notes:s.notes});
+  ta.value = '';
+  li.querySelector('.log__saved').hidden = false;
+  toast('Đã vào sổ tay');
+});
+
+paint();
+reveal();
+</script>
+</body></html>

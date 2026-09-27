@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="vi" data-district="creative">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bàn làm việc — Định vị — Nhìn thấy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Bài tập Tuần 2: viết năm câu định vị cho cùng một sản phẩm, mỗi câu nhắm một đối thủ khác nhau, và thử xem câu nào sống sót.">
+<meta property="og:title" content="Bàn làm việc — Định vị">
+<meta property="og:description" content="Năm câu định vị, ba phép thử: thay tên đối thủ · ai mất gì · khách có tin không.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .setup{border:var(--rule);padding:clamp(16px,2.2vw,26px);margin:clamp(20px,3vw,40px) 0;display:grid;gap:12px}
+  @media(min-width:820px){.setup{grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}}
+  .stmt{border:var(--rule);margin-bottom:-1px;padding:clamp(16px,2vw,24px);display:grid;gap:14px}
+  .stmt__top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .sent{display:grid;gap:8px}
+  @media(min-width:900px){.sent{grid-template-columns:repeat(2,1fr)}}
+  .sent .row{display:grid;gap:4px}
+  .built{font-family:var(--serif);font-size:clamp(1.05rem,1.7vw,1.35rem);line-height:1.35;letter-spacing:-.01em;
+    border-left:2px solid var(--accent);padding:10px 0 10px 14px;color:var(--ink)}
+  .built b{font-weight:400;font-style:italic}
+  .built .gap{color:var(--ink-38);font-style:italic}
+  .tests{display:grid;gap:8px}
+  .test{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;font-size:14px;line-height:1.5}
+  .test i{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.1em;padding-top:2px;color:var(--ink-38)}
+  .test[data-fail] i{color:var(--accent)}
+  .test[data-fail] span{color:var(--accent)}
+  .test[data-pass] i{color:var(--ink)}
+  .verdictbox{border:var(--rule);border-left:3px solid var(--accent);padding:clamp(16px,2.2vw,26px);display:grid;gap:10px;margin-top:clamp(20px,3vw,40px)}
+  .bar{display:flex;gap:10px;flex-wrap:wrap;margin:clamp(18px,2.4vw,30px) 0}
+  .traps{display:grid;gap:1px;background:var(--ink-14);border:var(--rule);margin-top:clamp(24px,3vw,44px)}
+  @media(min-width:760px){.traps{grid-template-columns:repeat(3,1fr)}}
+  .traps div{background:var(--paper);padding:18px}
+  .traps p{font-size:14px;line-height:1.55;margin-top:8px}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Bàn làm việc này chạy hoàn toàn trong trình duyệt của bạn: những gì bạn gõ được lưu tại máy,
+  không gửi đi đâu. Bật JavaScript để dùng.</p>
+</div></noscript>
+<main class="wrap">
+  <section class="pagehead">
+    <div class="pagehead__grid">
+      <h1 class="display" data-reveal>Năm câu định vị,<br><em>bốn câu sẽ chết.</em></h1>
+      <p class="caption" data-reveal data-delay=".1">Bài tập Tuần 2. Cùng một sản phẩm, viết năm câu định vị —
+        mỗi câu nhắm <strong>một đối thủ khác nhau</strong>. Định vị không phải câu nói về bạn, nó là câu nói về
+        chỗ bạn đứng so với người khác. Vì thế đổi đối thủ thì câu phải đổi theo; nếu không đổi, bạn chưa định vị gì cả.</p>
+    </div>
+  </section>
+
+  <section class="setup" data-reveal>
+    <div>
+      <span class="label label--accent">Sản phẩm</span>
+      <input class="field" id="p-prod" placeholder="Ví dụ: phòng gym khu dân cư, gói 6 tháng">
+    </div>
+    <div>
+      <span class="label">Phân khúc đang nhắm (lấy từ Tuần 1)</span>
+      <input class="field" id="p-seg" placeholder="Ví dụ: “Tháng Giêng” — người quay lại tập sau một biến cố">
+    </div>
+  </section>
+
+  <div id="stmts"></div>
+
+  <section class="verdictbox" id="verdict" data-reveal></section>
+
+  <div class="bar">
+    <button class="btn" id="tojournal">Lưu vào sổ tay</button>
+    <button class="btn btn--ghost" id="export">Xuất .txt</button>
+    <button class="btn btn--ghost" id="clear">Xoá hết</button>
+    <a class="btn btn--ghost" href="segmentation.html">Bàn Tuần 1</a>
+    <a class="btn btn--ghost" href="roadmap.html">Về lộ trình</a>
+  </div>
+
+  <section>
+    <div class="label label--accent">Ba cái bẫy quen thuộc</div>
+    <div class="traps">
+      <div><span class="num">01</span><p><strong>Câu ai nói cũng được.</strong> “Chất lượng cao, giá hợp lý, dịch vụ tận tâm” — thay tên đối thủ vào vẫn đúng. Đó là quảng cáo tuyển dụng, không phải định vị.</p></div>
+      <div><span class="num">02</span><p><strong>Không ai mất gì.</strong> Định vị thật luôn có người thua: một nhóm khách bạn cố tình không phục vụ, một tính năng bạn cố tình không làm. Không hy sinh gì thì không đứng ở đâu cả.</p></div>
+      <div><span class="num">03</span><p><strong>Khách không tin.</strong> Câu đúng nhưng không có bằng chứng thì chỉ là mong muốn. Mỗi câu phải trả lời được: <em>vì sao tôi tin bạn?</em></p></div>
+    </div>
+  </section>
+</main>
+
+<script src="assets/js/core.js?v=7"></script>
+<script>
+shell('roadmap.html');
+
+const WKEY='pos2';
+const N=5;
+const F=[
+  ['rival','Đối thủ / cái thay thế','Ai đang chiếm chỗ đó — kể cả “không làm gì”'],
+  ['for','Cho ai','Nhóm người rất cụ thể, không phải “mọi người”'],
+  ['unlike','Khác với','Tên đối thủ, viết thẳng'],
+  ['we','Chúng tôi là','Một câu, một ý — không liệt kê ba tính từ'],
+  ['because','Vì','Bằng chứng khiến người ta tin, không phải lời hứa'],
+  ['giveup','Chúng tôi chấp nhận mất','Nhóm khách hoặc thứ bạn cố tình không làm'],
+];
+const blank=()=>Object.fromEntries(F.map(([k])=>[k,'']));
+
+function load(){ const w=(State.get().work||{})[WKEY]; return w&&w.list?w:{prod:'',seg:'',list:Array.from({length:N},blank)}; }
+function save(w){ const work={...(State.get().work||{})}; work[WKEY]=w; State.set({work}); }
+
+let W=load();
+document.getElementById('p-prod').value=W.prod||'';
+document.getElementById('p-seg').value=W.seg||'';
+
+document.getElementById('stmts').innerHTML = W.list.map((s,i)=>`
+  <div class="stmt" data-i="${i}" data-reveal data-delay="${i*.03}">
+    <div class="stmt__top">
+      <span class="label label--accent">Câu ${String(i+1).padStart(2,'0')}</span>
+      <span class="label" data-count="${i}"></span>
+    </div>
+    <div class="sent">
+      ${F.map(([k,label,hint])=>`
+        <div class="row">
+          <span class="label">${label}</span>
+          <textarea class="field" data-k="${k}" rows="2" placeholder="${hint}">${esc(s[k]||'')}</textarea>
+        </div>`).join('')}
+    </div>
+    <p class="built" data-built="${i}"></p>
+    <div class="tests" data-tests="${i}"></div>
+  </div>`).join('');
+
+const g = t => String(t||'').trim();
+const words = t => g(t).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').split(/\s+/).filter(Boolean);
+
+/* Phép thử 1 — thay tên đối thủ mà câu vẫn đúng thì câu đó rỗng.
+   Máy không đọc được ý, nên nó bắt dấu hiệu: câu "chúng tôi là" toàn tính từ chung chung. */
+const VAGUE=['chat luong','uy tin','tan tam','chuyen nghiep','hang dau','tot nhat','hop ly','gia re','nhanh chong','hien dai','dang cap','tan tinh','uy tin'];
+function isSwappable(s){
+  const t=g(s.we).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  if(!t) return null;
+  const hits=VAGUE.filter(v=>t.includes(v));
+  const namesRival = g(s.unlike).length>2;
+  return hits.length>0 || (!namesRival && words(s.we).length<8);
+}
+
+function check(){
+  let ok=0, issues=[];
+  W.list.forEach((s,i)=>{
+    const filled=F.filter(([k])=>g(s[k]).length>2).length;
+    document.querySelector(`[data-count="${i}"]`).textContent = filled?filled+' / 6 dòng':'';
+
+    const part = (v,ph)=> g(v)?`<b>${esc(g(v))}</b>`:`<span class="gap">${ph}</span>`;
+    document.querySelector(`[data-built="${i}"]`).innerHTML = filled
+      ? `Cho ${part(s.for,'ai')}, khác với ${part(s.unlike,'đối thủ nào')}, ${part(s.we,'chúng tôi là gì')} — vì ${part(s.because,'bằng chứng nào')}. Chúng tôi chấp nhận mất ${part(s.giveup,'gì')}.`
+      : '';
+
+    const swap=isSwappable(s);
+    const tests=[
+      ['Thay tên', swap===null?null:!swap, swap===null?'Chưa viết “chúng tôi là”.':(swap?'Thay tên đối thủ vào câu này vẫn đúng — nó chưa nói bạn đứng ở đâu.':'Câu này gắn với một đối thủ cụ thể.')],
+      ['Hy sinh', g(s.giveup)? (words(s.giveup).length>=3) : null, g(s.giveup)? (words(s.giveup).length>=3?'Có thứ bị bỏ lại. Đó là dấu hiệu của một lựa chọn thật.':'Ghi cụ thể hơn: mất nhóm khách nào, mất tính năng gì.') : 'Chưa ghi bạn chấp nhận mất gì.'],
+      ['Bằng chứng', g(s.because)? (words(s.because).length>=4) : null, g(s.because)? (words(s.because).length>=4?'Có lý do để tin.':'“Vì” quá ngắn — đây đang là lời hứa chứ chưa phải bằng chứng.') : 'Chưa có phần “vì”.'],
+    ];
+    document.querySelector(`[data-tests="${i}"]`).innerHTML = filled? tests.map(([name,pass,msg])=>`
+      <div class="test" ${pass===true?'data-pass':''} ${pass===false?'data-fail':''}>
+        <i>${name}</i><span>${msg}</span></div>`).join('') : '';
+
+    if(filled===F.length && tests.every(t=>t[1]===true)) ok++;
+    else if(filled) issues.push(i+1);
+  });
+
+  const rivals=W.list.map(s=>g(s.unlike).toLowerCase()).filter(Boolean);
+  const dupRival = rivals.length !== new Set(rivals).size;
+  const v=document.getElementById('verdict');
+  if(!rivals.length){
+    v.innerHTML=`<span class="label label--accent">Chưa chấm được</span>
+      <p class="caption">Bắt đầu bằng cột <strong>đối thủ</strong> của từng câu — năm đối thủ khác nhau, và ít nhất một trong
+      số đó nên là <em>“không làm gì cả”</em>. Đối thủ lớn nhất của phần lớn sản phẩm là sự lười, không phải công ty bên cạnh.</p>`;
+    return;
+  }
+  v.innerHTML=`<span class="label label--accent">${ok} / ${N} câu qua cả ba phép thử${dupRival?' · có đối thủ bị lặp':''}</span>
+    <p class="caption">${dupRival?'Hai câu đang nhắm cùng một đối thủ — bạn mất một góc nhìn. Đổi một cái sang thứ thay thế khác hẳn (tự làm ở nhà, không làm gì, sản phẩm rẻ hơn hẳn).':''}
+    ${ok>=1?'Câu qua được cả ba phép thử mới đáng đem đi thử với người thật. ':''}
+    Tuần 3 bạn sẽ đọc từng câu cho 5 người nghe và hỏi đúng một câu: <em>“câu này có đúng với anh/chị không, và vì sao không?”</em>
+    Câu nào bị phản đối mạnh nhất thường là câu đúng nhất — vì nó có chọn phe.</p>`;
+}
+
+document.getElementById('stmts').addEventListener('input', e=>{
+  const k=e.target.dataset.k; if(!k) return;
+  W.list[+e.target.closest('.stmt').dataset.i][k]=e.target.value;
+  save(W); check();
+});
+document.getElementById('p-prod').addEventListener('input',e=>{W.prod=e.target.value;save(W)});
+document.getElementById('p-seg').addEventListener('input',e=>{W.seg=e.target.value;save(W)});
+
+const asText=()=>{
+  const L=['BÀI TẬP TUẦN 2 — ĐỊNH VỊ',`Sản phẩm: ${W.prod||'(chưa ghi)'}`,`Phân khúc: ${W.seg||'(chưa ghi)'}`,''];
+  W.list.forEach((s,i)=>{
+    if(!F.some(([k])=>g(s[k]))) return;
+    L.push(`— CÂU ${String(i+1).padStart(2,'0')} (đối thủ: ${s.rival||'—'})`);
+    L.push(`  Cho ${s.for||'—'}, khác với ${s.unlike||'—'}, ${s.we||'—'} — vì ${s.because||'—'}.`);
+    L.push(`  Chấp nhận mất: ${s.giveup||'—'}`); L.push('');
+  });
+  return L.join('\n');
+};
+
+document.querySelector('.bar').addEventListener('click', e=>{
+  if(e.target.id==='tojournal'){
+    if(!W.list.some(s=>F.some(([k])=>g(s[k])))) return toast('Chưa có gì để lưu');
+    const s=State.get(); const wid='worksheet:'+WKEY;
+    const i=s.notes.findIndex(x=>x.wid===wid);
+    const note={t:'Tuần 2 — Định vị'+(W.prod?' · '+W.prod:''), body:asText(),
+      when:new Date().toISOString().slice(0,10), kind:'Bàn làm việc', href:'positioning.html', wid};
+    i>-1 ? s.notes[i]=note : s.notes.unshift(note);
+    State.set({notes:s.notes}); toast(i>-1?'Đã cập nhật trong sổ tay':'Đã vào sổ tay');
+  }
+  if(e.target.id==='export'){
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([asText()],{type:'text/plain'}));
+    a.download='tuan-2-dinh-vi.txt'; a.click(); URL.revokeObjectURL(a.href);
+  }
+  if(e.target.id==='clear'){
+    if(!confirm('Xoá toàn bộ nội dung đang gõ ở trang này? Ghi chép đã lưu trong sổ tay vẫn còn.')) return;
+    W={prod:'',seg:'',list:Array.from({length:N},blank)}; save(W); location.reload();
+  }
+});
+
+check();
+reveal();
+</script>
+</body></html>

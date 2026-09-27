@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<base href="/">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nike — Dream Crazy (2018) · Case study marketing</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Một thương hiệu thể thao không bán giày, nó bán quyền tin rằng mình có thể vượt qua giới hạn. Mà giới hạn lớn nhất không nằm ở cơ thể, nó nằm ở cái giá phải …">
+<meta property="og:title" content="Nike — Dream Crazy (2018) · Case study marketing">
+<meta property="og:description" content="Một thương hiệu thể thao không bán giày, nó bán quyền tin rằng mình có thể vượt qua giới hạn. Mà giới hạn lớn nhất không nằm ở cơ thể, nó nằm ở cái giá phải …">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://nhinthay.pages.dev/case/nike-dream-crazy.html">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/case-nike-dream-crazy.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://nhinthay.pages.dev/case/nike-dream-crazy.html">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .hero{padding:clamp(28px,4vw,60px) 0 0}
+  .hero__meta{display:flex;gap:22px;flex-wrap:wrap;border-bottom:var(--rule);padding-bottom:12px}
+  .hero__t{margin:clamp(20px,3vw,44px) 0 clamp(18px,3vw,40px)}
+  .full{margin:0 calc(var(--gut)*-1)}
+  .sec{display:grid;gap:clamp(12px,2vw,40px);padding:clamp(28px,4vw,58px) 0;border-top:var(--rule)}
+  @media(min-width:900px){.sec{grid-template-columns:16ch minmax(0,1fr)}}
+  .sec h2{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);padding-top:6px}
+  .sec p{font-size:1.06rem;line-height:1.62;max-width:62ch;margin:0}
+  .sec ul{margin:0;padding:0;list-style:none;display:grid;gap:14px;max-width:64ch}
+  .sec li{padding-left:26px;position:relative;line-height:1.55}
+  .sec li::before{content:"";position:absolute;left:0;top:.62em;width:14px;height:1px;background:var(--accent)}
+  .idea{font-family:var(--serif);font-size:clamp(1.6rem,3.6vw,2.9rem);line-height:1.06;letter-spacing:-.025em;max-width:20ch;font-weight:300}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chips span{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--ink-14);padding:6px 10px}
+  .next{display:grid;gap:20px;padding:clamp(30px,5vw,70px) 0;border-top:var(--rule)}
+  @media(min-width:760px){.next{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Toàn bộ nội dung — bài học, case study, thư viện nguyên lý — được dựng ngay trong trình duyệt của bạn,
+  không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
+</div></noscript>
+<main class="wrap" id="app"></main>
+<script>window.__ID__="nike-dream-crazy"</script>
+<script src="assets/js/core.js?v=7"></script>
+<script src="assets/js/subscribe.js?v=7"></script>
+<script src="assets/js/data/campaigns.js?v=7"></script>
+<script src="assets/js/data/districts.js?v=7"></script>
+<script>
+shell('gallery.html');
+const c = CAMPAIGNS.find(x=>x.id===(window.__ID__||qs('id'))) || CAMPAIGNS[0];
+document.documentElement.setAttribute('data-district', c.district);
+document.title = `${c.brand} — ${c.title} · Nhìn thấy`;
+const i = CAMPAIGNS.indexOf(c);
+const prev = CAMPAIGNS[(i-1+CAMPAIGNS.length)%CAMPAIGNS.length], next = CAMPAIGNS[(i+1)%CAMPAIGNS.length];
+const saved = State.has('campaigns', c.id);
+
+document.getElementById('app').innerHTML = `
+  <section class="hero">
+    <div class="hero__meta">
+      <span class="label"><a href="gallery.html">← Gallery</a></span>
+      <span class="label">${c.tag}</span><span class="label">${c.market}</span>
+      <span class="label label--accent" style="margin-left:auto">${c.year}</span>
+    </div>
+    <div class="hero__t">
+      <div class="kicker" data-reveal>${c.brand}</div>
+      <h1 class="display" style="font-size:clamp(3rem,9vw,8rem)" data-reveal data-delay=".05">${c.title}</h1>
+    </div>
+    <div class="full" data-reveal-clip>${plate({color:c.color,mark:c.mark,kicker:c.brand,meta:c.year,title:'',shape:'plate--wide'})}</div>
+  </section>
+
+  <section class="sec" data-reveal><h2>Context</h2><p>${c.context}</p></section>
+  <section class="sec" data-reveal><h2>Insight</h2><p>${c.insight}</p></section>
+  <section class="sec" data-reveal><h2>Big idea</h2><p class="idea">${c.idea}</p></section>
+  <section class="sec" data-reveal><h2>Execution</h2><ul>${c.execution.map(x=>`<li>${x}</li>`).join('')}</ul></section>
+  <section class="sec" data-reveal><h2>Visual language</h2><p>${c.visual}</p></section>
+  <section class="sec" data-reveal><h2>Channels</h2><div class="chips">${c.channels.map(x=>`<span>${x}</span>`).join('')}</div></section>
+  <section class="sec" data-reveal><h2>Why it worked</h2><ul>${c.why.map(x=>`<li>${x}</li>`).join('')}</ul></section>
+  <section class="sec" data-reveal><h2>What to learn</h2><ul>${c.learn.map(x=>`<li>${x}</li>`).join('')}</ul></section>
+
+  <section style="padding:clamp(40px,6vw,90px) 0;border-top:var(--rule)" data-reveal>
+    <p class="pull">${c.quote}</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:34px">
+      <button class="btn ${saved?'btn--accent':''}" id="save">${saved?'Đã lưu vào sổ tay ✓':'Lưu case này'}</button>
+      <a class="btn btn--ghost" href="challenge.html">Thử một challenge</a>
+    </div>
+  </section>
+
+  <section id="subcase"></section>
+
+  <section class="next">
+    <a href="case/${prev.id}.html"><span class="label">← Trước</span>
+      <h3 class="h-mid" style="margin-top:8px">${prev.brand} — ${prev.title}</h3></a>
+    <a href="case/${next.id}.html" style="text-align:right"><span class="label">Tiếp →</span>
+      <h3 class="h-mid" style="margin-top:8px">${next.brand} — ${next.title}</h3></a>
+  </section>`;
+
+document.getElementById('save').onclick=e=>{
+  const on = State.toggle('campaigns', c.id);
+  e.target.textContent = on?'Đã lưu vào sổ tay ✓':'Lưu case này';
+  e.target.classList.toggle('btn--accent', on);
+  if(on){ const s=State.get(); s.notes.unshift({t:c.brand+' — '+c.title, body:c.quote, when:new Date().toISOString().slice(0,10), kind:'Campaign', href:'campaign.html?id='+c.id}); State.set({notes:s.notes}); }
+  toast(on?'Đã lưu':'Đã bỏ lưu');
+};
+document.getElementById('subcase').innerHTML = subscribeBox('case:'+c.id,{kicker:'Còn 19 case nữa',title:'Mỗi tuần một case được mổ',body:'Bối cảnh, insight, big idea và bài học — gửi thẳng vào hộp thư. Không quảng cáo, bỏ theo dõi bằng một cú bấm.'});
+reveal();
+</script>
+</body></html>
