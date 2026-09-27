@@ -44,3 +44,17 @@ Toàn bộ nằm ở `localStorage` khoá `nhinthay.v1` (streak, bài đã đọ
 - Viền focus dùng chính accent của khu vực đang đứng, offset 3px; không có chỗ nào tắt `outline`.
 - Mỗi trang có khối `<noscript>` nói thẳng rằng nội dung được dựng trong trình duyệt và không gửi đi đâu.
 - CSS và JS đều có `?v=` để một người quay lại không chạy JS cũ với HTML mới.
+
+## Tự Học Marketing Case — nền tảng mới (đang dựng)
+
+Giao diện casebook nền trắng: `assets/css/case.css`. Lõi: `assets/js/app.js` (trạng thái ở localStorage khoá `thmc.v1`).
+
+| Trang | Vai trò |
+|---|---|
+| `hoc.html` | Dashboard: chọn nhóm người học → lộ trình, bài tiếp theo, cấp độ /30, XP, streak + thẻ đóng băng, nhiệm vụ ngày/tuần, Pomodoro 25′ |
+| `ban-do.html` | Bắt đầu từ đâu: 6 chặng → 16 module → 48 bài, "Bạn ở đây", chặng mở khi xong 60% chặng trước |
+| `bai.html?id=` | Bài học 5 phần: bài đọc · bài tập tính số · nói trong 60 giây · case · ôn lỗi. Chỉnh cỡ chữ, chế độ Sáng / Giấy ngà / Tối |
+| `on-loi.html` | Lỗi theo mã có tên, nhắc ôn sau 1 · 3 · 7 ngày, lỗi ≥3 lần thành bài luyện bắt buộc |
+
+Dữ liệu: `curriculum.js` (chặng, module, lộ trình, nhóm người học — xếp 26 daily lesson + 22 nguyên lý có sẵn),
+`drills.js` (bài tính số, câu trả lời mẫu 60 giây, mã lỗi — mọi số liệu là minh hoạ).

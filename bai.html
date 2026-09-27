@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Bài học — Tự Học Marketing Case</title>
+<meta name="description" content="Một bài học 6 phút: bài đọc, bài tập tính số, nói ra trong 60 giây, case và ôn lỗi.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn, không gửi về máy chủ nào.</p></div></noscript>
+<main class="wrap narrow" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=1"></script>
+<script src="assets/js/app.js?v=1"></script>
+<script>
+appShell('');
+const key=qp('id')||nextLesson()||ALL[0].key;
+const M=lessonMeta(key), W=where(key), D=DRILLS[key];
+const app=document.getElementById('app');
+const P=(n,t,body)=>`<section class="part" id="p${n}"><div class="part__h"><span class="mono mono--red">Phần ${n}</span><h2 class="h2">${t}</h2></div>${body}</section>`;
+
+function readPart(){
+  const s=M.src;
+  if(M.kind==='L') return `<div class="reader">
+    <p class="mono">Tình huống</p><p>${s.real}</p>
+    <p class="mono">Ý chính</p><p><b>${s.idea}</b></p>
+    <p class="mono">Vì sao nó hoạt động</p><ul>${(s.why||[]).map(x=>`<li>${x}</li>`).join('')}</ul>
+    <p class="mono">Nhìn kỹ hơn</p><p>${s.closer}</p>
+    ${D?commonMistakes():''}${D?`<div class="note"><span class="mono">Câu sếp hay hỏi tiếp</span><br>${D.boss}</div>`:''}
+  </div>`;
+  return `<div class="reader">
+    <p class="mono">Tình huống</p><p>${s.brand?s.brand+' ':''}${s.ex}</p>
+    <p class="mono">Nói gọn</p><p><b>${s.one}</b></p>
+    <p class="mono">Phản ví dụ</p><p>${s.counter}</p>
+    <p class="mono">Chỗ hay sai</p><p>${s.mistake}</p>
+    ${D?commonMistakes():''}${D?`<div class="note"><span class="mono">Câu sếp hay hỏi tiếp</span><br>${D.boss}</div>`:''}
+  </div>`;
+}
+function commonMistakes(){
+  const codes=[...new Set(D.wrong.map(w=>w[1]))];
+  return `<p class="mono">Lỗi tính toán hay gặp ở dạng bài này</p><ul>${codes.map(c=>`<li>${escH(ERRORS[c])}</li>`).join('')}</ul>`;
+}
+
+function drillPart(){
+  const s=S.get();
+  if(!D) return `<p class="small muted">Bài này là bài tư duy, không có đáp án số duy nhất — bài tính số nằm ở các bài về phễu, CAC, LTV, giá và media.</p>
+    <div class="drill"><span class="mono">Bài tập áp dụng</span><p style="margin:8px 0 0">${M.kind==='L'?M.src.try:M.src.drill}</p></div>`;
+  return `<div class="drill">
+    <span class="mono">Exhibit 1 · ${escH(D.t)} · số liệu minh hoạ</span>
+    <p style="margin:10px 0">${D.ctx}</p>
+    <div class="scroll"><table class="t"><tbody>${D.rows.map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]}</td></tr>`).join('')}</tbody></table></div>
+    <p style="margin:16px 0 0"><b>${D.q}</b></p>
+    <form class="answer" id="dForm" autocomplete="off">
+      <input class="field" id="dIn" inputmode="decimal" placeholder="Đáp án" aria-label="Đáp án">
+      <span class="mono">${escH(D.unit)}</span>
+      <button class="btn">Kiểm tra</button>
+    </form>
+    <div class="verdict" id="dV" aria-live="polite">${s.drills[key]?'Bạn đã làm đúng bài này trước đây.':''}</div>
+    <div id="dSteps" ${s.drills[key]?'':'hidden'} style="margin-top:14px"><span class="mono">Lời giải</span>
+      <ol style="margin:8px 0 0;padding-left:1.2em">${D.steps.map(x=>`<li style="margin-bottom:6px">${x}</li>`).join('')}</ol></div>
+  </div>`;
+}
+
+function talkPart(){
+  const s=S.get(), saved=s.talks[key]||'';
+  const prompt=D?`Sếp hỏi: “Vậy rốt cuộc chiến dịch này ổn không?” Trả lời trong 60 giây, dùng số ở Exhibit 1.`
+    :`Giải thích ý chính của bài này cho một người sếp bận, trong 60 giây, kèm một ví dụ có số hoặc một thương hiệu cụ thể.`;
+  return `<div class="frame">
+      <div><span class="mono">Kết luận trước</span><span>Một câu trả lời thẳng câu hỏi.</span></div>
+      <div><span class="mono">Ba lý do có số</span><span>Mỗi lý do một con số hoặc một bằng chứng kiểm chứng được.</span></div>
+      <div><span class="mono">Bước tiếp theo</span><span>Việc cụ thể sẽ làm, không phải “cần nghiên cứu thêm”.</span></div>
+    </div>
+    <p style="margin:18px 0 8px"><b>${prompt}</b></p>
+    <div class="row between"><span class="mono" id="tClock">60 giây</span><button class="btn btn--ghost" type="button" id="tGo">Bấm giờ</button></div>
+    <textarea class="field" id="tIn" rows="6" placeholder="Kết luận: …&#10;Lý do 1: …&#10;Lý do 2: …&#10;Lý do 3: …&#10;Bước tiếp: …">${escH(saved)}</textarea>
+    <div class="row" style="margin-top:12px"><button class="btn" type="button" id="tSave">Lưu câu trả lời</button>
+      ${D?`<button class="btn btn--ghost" type="button" id="tShow" ${saved.length>=40?'':'disabled'}>Xem câu trả lời mẫu</button>`:''}</div>
+    ${D?`<p class="small muted" style="margin-top:8px">Câu mẫu chỉ mở sau khi bạn đã viết — đọc trước thì không còn là luyện.</p>
+    <div id="tModel" hidden class="exhibit"><div class="exhibit__cap"><b>Câu trả lời mẫu</b><span class="mono">Exhibit 2</span></div>
+      <div class="frame">
+        <div><span class="mono">Kết luận</span><span>${D.talk.c}</span></div>
+        ${D.talk.r.map((r,i)=>`<div><span class="mono">Lý do ${i+1}</span><span>${r}</span></div>`).join('')}
+        <div><span class="mono">Bước tiếp</span><span>${D.talk.n}</span></div>
+      </div></div>`:''}`;
+}
+
+function casePart(){
+  const idx=W.mod.lessons.indexOf(key), last=idx===W.mod.lessons.length-1;
+  return `<p>${last?'Đây là bài cuối của module <b>'+escH(W.mod.t)+'</b>. Đến lúc ghép lại trên một tình huống đầy đủ.'
+      :'Case của module <b>'+escH(W.mod.t)+'</b> — nên làm sau khi xong cả '+W.mod.lessons.length+' bài.'}</p>
+    <a class="btn ${last?'':'btn--ghost'}" href="${W.mod.caseLink.href}">${escH(W.mod.caseLink.t)} →</a>`;
+}
+
+function reviewPart(){
+  const s=S.get(), mine=Object.entries(s.errors).filter(([,e])=>e.lessons.includes(key));
+  if(!mine.length) return `<p class="small muted">Chưa có lỗi nào ghi ở bài này. Làm sai ở phần 2, lỗi sẽ được lưu theo mã và app nhắc ôn sau 1, 3 và 7 ngày.</p>`;
+  return `<ul class="list">${mine.map(([c,e])=>`<li class="row between" style="padding:11px 0">
+    <span><b>${escH(ERRORS[c]||c)}</b><br><span class="small muted">${e.count} lần · ${e.due?'ôn lại ngày '+e.due:'đã ôn đủ ba lượt'}</span></span>
+    ${e.count>=3?'<span class="tag tag--red">Luyện bắt buộc</span>':''}</li>`).join('')}</ul>
+    <a class="mono" href="on-loi.html" style="display:inline-block;margin-top:10px">Trang ôn lỗi →</a>`;
+}
+
+function render(){
+  if(!M||!W){ app.innerHTML=`<section class="section"><h1 class="h2">Không tìm thấy bài này.</h1><a class="btn" href="hoc.html">Về trang học</a></section>`; return; }
+  const s=S.get();
+  if(!lessonOpen(key,s)){
+    const n=nextLesson(s);
+    app.innerHTML=`<section class="section"><span class="mono">Chặng ${W.stage.n} · khoá</span>
+      <h1 class="h2" style="margin:12px 0">${escH(M.t)}</h1>
+      <p class="lede">Chặng này mở khi bạn xong ít nhất 60% chặng trước. Không phải để làm khó — các bài ở đây dùng khái niệm của chặng trước.</p>
+      ${n?`<a class="btn" style="margin-top:18px" href="bai.html?id=${encodeURIComponent(n)}">Học bài tiếp theo của bạn</a>`:''}</section>`;
+    return;
+  }
+  const order=ALL.map(x=>x.key), i=order.indexOf(key);
+  const prev=order[i-1], next=order[i+1];
+  app.innerHTML=`
+  <section style="padding-top:clamp(24px,4vw,48px)">
+    <div class="row between">
+      <span class="mono">Chặng ${W.stage.n} · ${escH(W.stage.t)} · ${escH(W.mod.t)}</span>
+      <span class="row" style="gap:8px">
+        <span class="seg" role="group" aria-label="Cỡ chữ"><button type="button" data-fs="-1" aria-label="Chữ nhỏ hơn">A−</button><button type="button" data-fs="1" aria-label="Chữ lớn hơn">A+</button></span>
+        <span class="seg" role="group" aria-label="Chế độ đọc">${[['light','Sáng'],['ivory','Giấy ngà'],['dark','Tối']].map(([k,l])=>`<button type="button" data-th="${k}" aria-pressed="${s.theme===k}">${l}</button>`).join('')}</span>
+      </span>
+    </div>
+    <h1 class="h1" style="margin:18px 0 12px">${escH(M.t)}</h1>
+    <div class="row"><span class="tag">${escH(M.read)}</span>${D?'<span class="tag">Có bài tính số</span>':''}${s.done[key]?'<span class="tag" style="color:var(--ok);border-color:var(--ok)">Đã học</span>':''}</div>
+  </section>
+  ${P(1,'Bài đọc',readPart())}
+  ${P(2,D?'Bài tập tính số':'Bài tập áp dụng',drillPart())}
+  ${P(3,'Nói ra trong 60 giây',talkPart())}
+  ${P(4,'Case',casePart())}
+  ${P(5,'Ôn lỗi',reviewPart())}
+  <section class="part row between">
+    ${prev?`<a class="mono" href="bai.html?id=${encodeURIComponent(prev)}">← Bài trước</a>`:'<span></span>'}
+    <button class="btn" id="finish">${s.done[key]?'Sang bài tiếp theo':'Đánh dấu đã học · +'+XP.lesson+' XP'}</button>
+    ${next?`<a class="mono" href="bai.html?id=${encodeURIComponent(next)}">Bài sau →</a>`:'<span></span>'}
+  </section>`;
+  wire();
+}
+
+const logged=new Set();
+function wire(){
+  document.querySelectorAll('[data-fs]').forEach(b=>b.onclick=()=>{const s=S.get();S.set({read:Math.min(24,Math.max(15,(s.read||18)+(+b.dataset.fs)))});applyTheme();});
+  document.querySelectorAll('[data-th]').forEach(b=>b.onclick=()=>{S.set({theme:b.dataset.th});applyTheme();
+    document.querySelectorAll('[data-th]').forEach(x=>x.setAttribute('aria-pressed',x===b));});
+
+  const f=document.getElementById('dForm');
+  if(f) f.onsubmit=e=>{
+    e.preventDefault();
+    let n=parseNum(document.getElementById('dIn').value);
+    const v=document.getElementById('dV');
+    if(!isFinite(n)){ v.dataset.v='bad'; v.textContent='Chưa đọc được số. Gõ ví dụ: 400000, 400.000 hoặc 400k.'; return; }
+    if(/triệu/.test(D.unit)&&n>=1e5) n=n/1e6;
+    const near=x=>Math.abs(n-x)<=Math.max(Math.abs(x)*D.tol,1e-9);
+    if(near(D.ans)){
+      v.dataset.v='ok'; v.innerHTML=`Đúng — ${fmt(D.ans)} ${escH(D.unit)}.`;
+      document.getElementById('dSteps').hidden=false;
+      const s=S.get(); if(!s.drills[key]){ S.set({drills:{...s.drills,[key]:today()}}); award('drill',key); }
+      return;
+    }
+    const hit=D.wrong.find(([x])=>near(x)), code=hit?hit[1]:'SAI_TINH_TOAN';
+    v.dataset.v='bad';
+    v.innerHTML=`Chưa đúng. ${hit?'Đây là lỗi <b>'+escH(ERRORS[code])+'</b> — lỗi rất hay gặp ở dạng bài này.':'Thử tính lại từng bước từ bảng số.'}
+      <br><span class="small">Đã lưu vào danh sách ôn lỗi. <button type="button" class="small" style="background:none;border:0;padding:0;text-decoration:underline;cursor:pointer;color:inherit" id="showSteps">Xem lời giải</button></span>`;
+    if(!logged.has(code)){ logged.add(code); logError(code,key); }
+    document.getElementById('showSteps').onclick=()=>document.getElementById('dSteps').hidden=false;
+  };
+
+  const ta=document.getElementById('tIn'), show=document.getElementById('tShow');
+  ta.oninput=()=>{ if(show) show.disabled=ta.value.trim().length<40; };
+  document.getElementById('tSave').onclick=()=>{
+    const t=ta.value.trim(); if(t.length<40) return toast('Viết đủ kết luận và ba lý do đã (ít nhất vài câu).');
+    const s=S.get(), first=!s.talks[key]; S.set({talks:{...s.talks,[key]:t}});
+    first?award('talk',key):toast('Đã lưu');
+    if(show) show.disabled=false;
+  };
+  if(show) show.onclick=()=>{ document.getElementById('tModel').hidden=false; show.hidden=true; };
+  let tt=null; document.getElementById('tGo').onclick=e=>{
+    const c=document.getElementById('tClock'); if(tt){clearInterval(tt);tt=null;e.target.textContent='Bấm giờ';c.textContent='60 giây';return;}
+    let left=60; e.target.textContent='Dừng'; ta.focus();
+    tt=setInterval(()=>{left--; c.textContent=left+' giây'; if(left<=0){clearInterval(tt);tt=null;e.target.textContent='Bấm giờ';c.textContent='Hết giờ';c.classList.add('mono--red');}},1000);
+  };
+
+  document.getElementById('finish').onclick=()=>{
+    const s=S.get();
+    if(!s.done[key]){ S.set({done:{...s.done,[key]:today()}}); award('lesson',key); }
+    const n=nextLesson(); location.href=n?'bai.html?id='+encodeURIComponent(n):'hoc.html';
+  };
+}
+document.title=(M?M.t:'Bài học')+' — Tự Học Marketing Case';
+render();
+</script>
+</body>
+</html>

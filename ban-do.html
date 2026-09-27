@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Bắt đầu từ đâu — Tự Học Marketing Case</title>
+<meta name="description" content="Bản đồ sáu chặng: bạn đang ở đâu, chặng nào đã mở, bài nào nằm trong lộ trình của bạn.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn, không gửi về máy chủ nào.</p></div></noscript>
+<main class="wrap" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=1"></script>
+<script src="assets/js/app.js?v=1"></script>
+<script>
+appShell('ban-do.html');
+const s=S.get(), here=hereStage(s), pl=pathLessons(s.path||'full'), path=PATHS.find(p=>p.id===(s.path||'full'));
+const total=ALL.length, mods=STAGES.reduce((n,x)=>n+x.mods.length,0);
+document.getElementById('app').innerHTML=`
+<section class="section">
+  <span class="mono mono--red">Bắt đầu từ đâu</span>
+  <h1 class="h1" style="margin:14px 0 16px">${STAGES.length} chặng, ${mods} module,<br><em>${total} bài học.</em></h1>
+  <p class="lede" style="max-width:62ch">Mỗi bài khoảng sáu phút. Chặng sau mở khi bạn xong 60% chặng trước.
+    Bài thuộc lộ trình <b>${escH(path.t)}</b> luôn mở, dù nằm ở chặng nào — đánh dấu <span class="tag">Lộ trình</span>.</p>
+</section>
+${STAGES.map(st=>{
+  const open=stageOpen(st.id,s), isHere=st.id===here, ks=st.mods.flatMap(m=>m.lessons), d=ks.filter(k=>s.done[k]).length;
+  return `<section class="stage" id="${st.id}" ${open?'data-open':''} ${isHere?'data-here':''}>
+    <div class="stage__n">${st.n}</div>
+    <div>
+      <div class="row between"><h2 class="h2">${escH(st.t)}</h2>
+        <span class="mono">${isHere?'<span class="here">● Bạn ở đây</span> · ':''}${ks.length?d+' / '+ks.length+' bài':st.mods.length+' case'}${open?'':' · mở khi xong 60% chặng trước'}</span></div>
+      <p class="muted" style="margin:6px 0 0">${escH(st.q)}</p>
+      <div class="mods">${st.mods.map(m=>`<div class="mod">
+        <span class="mono mono--ink">${escH(m.t)}</span>
+        <ul class="list" style="border-top:0;margin-top:6px">${m.lessons.map(k=>{const me=lessonMeta(k), ok=lessonOpen(k,s), dn=!!s.done[k];
+          return `<li><a class="item" style="grid-template-columns:26px 1fr auto;padding:9px 0" href="bai.html?id=${encodeURIComponent(k)}" ${ok?'':'aria-disabled="true"'} ${dn?'data-done':''}>
+            <span class="item__n">${dn?'✓':ok?'○':'—'}</span><span class="small">${escH(me.t)}</span>
+            <span>${pl.includes(k)&&path.lessons?'<span class="tag">Lộ trình</span>':''}${DRILLS[k]?' <span class="tag">Số</span>':''}</span></a></li>`}).join('')}</ul>
+        <a class="small" href="${m.caseLink.href}">${escH(m.caseLink.t)} →</a></div>`).join('')}</div>
+    </div></section>`}).join('')}`;
+if(here) setTimeout(()=>document.getElementById(here)?.scrollIntoView({block:'start'}),0);
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* BÀI TẬP TÍNH SỐ · NÓI TRONG 60 GIÂY · MÃ LỖI
+   Mọi số liệu ở đây là MINH HOẠ, không phải số thật của thương hiệu nào.
+   Mỗi đề có đúng một đáp án, tính lại được từ dữ liệu trong đề. Các đáp án sai hay gặp
+   được gắn mã lỗi để app nhắc ôn sau 1, 3 và 7 ngày. */
+
+const ERRORS = {
+  NHAM_CTR_CVR:            'Nhầm CTR với CVR',
+  SAI_MAU_SO:              'Chia sai mẫu số',
+  NHAM_TI_LE_ROI:          'Nhầm tỉ lệ đi tiếp với tỉ lệ rơi',
+  QUEN_CHI_PHI_CO_DINH:    'Quên chi phí cố định khi tính CAC',
+  CAC_TINH_CA_KHACH_CU:    'Tính CAC trên cả khách cũ',
+  LTV_TINH_DOANH_THU:      'Tính LTV bằng doanh thu thay vì lãi gộp',
+  RETENTION_TUYEN_TINH:    'Trừ tỉ lệ rời bỏ theo đường thẳng',
+  GIAM_GIA_QUEN_BIEN:      'Quên rằng giảm giá ăn vào biên lợi nhuận',
+  QUEN_CHI_PHI_BIEN_DOI:   'Quên chi phí biến đổi khi tính hoà vốn',
+  NHAM_GIA_VON:            'Chia cho giá vốn thay vì phần đóng góp',
+  ROAS_LA_LOI_NHUAN:       'Coi doanh thu trừ quảng cáo là lợi nhuận',
+  QUEN_TRU_CHI_PHI_QC:     'Quên trừ chi phí quảng cáo',
+  NGUOC_TAN_SUAT:          'Chia ngược khi tính tần suất',
+  NHAM_SOV_THI_PHAN:       'Nhầm share of voice với thị phần',
+  NHAM_DIEM_PHAN_TRAM:     'Nhầm điểm phần trăm với phần trăm tương đối',
+  NHAM_SO_TUYET_DOI:       'Lấy chênh lệch tuyệt đối thay cho tỉ lệ',
+  QUEN_TI_LE_CHUYEN_DOI:   'Quên tỉ lệ chuyển đổi ở bước cuối',
+  QUEN_TI_LE_GIOI_THIEU:   'Giả định mọi khách đều đi giới thiệu',
+  SAI_TINH_TOAN:           'Sai tính toán chưa phân loại',
+};
+
+const DRILLS = {
+'P:conversion':{
+  t:'CTR hay CVR?',
+  ctx:'Một shop mỹ phẩm chạy quảng cáo một tuần. Sếp nhìn báo cáo và nói: “Tỉ lệ chuyển đổi 1,5%, tạm được.”',
+  rows:[['Lượt hiển thị','200.000'],['Lượt click','3.000'],['Đơn hàng','60']],
+  q:'Tỉ lệ chuyển đổi từ click ra đơn (CVR) là bao nhiêu %?', unit:'%', ans:2, tol:0.01,
+  steps:['CTR = click ÷ hiển thị = 3.000 ÷ 200.000 = 1,5%. Đây là con số sếp vừa đọc.','CVR = đơn ÷ click = 60 ÷ 3.000 = <b>2%</b>.'],
+  wrong:[[1.5,'NHAM_CTR_CVR'],[0.03,'SAI_MAU_SO']],
+  boss:'“2% là cao hay thấp — so với cái gì?” Đừng trả lời bằng một con số trung bình ngành bạn nhớ mang máng. Trả lời bằng tuần trước, hoặc bằng trang đích khác của chính mình.',
+  talk:{c:'Quảng cáo đang làm tốt việc của nó; chỗ rò là trang đích.',
+    r:['3.000 người đã click — quảng cáo đã kéo được người tới.','Chỉ 60 người mua: CVR 2%, tức 98 trên 100 người tới rồi bỏ đi.','Nếu CVR lên 3% với cùng chi phí, đơn tăng từ 60 lên 90 — thêm 50% mà không tốn thêm đồng media nào.'],
+    n:'Xem trang đích và bước thanh toán trước khi đụng vào quảng cáo.'}},
+
+'P:funnel':{
+  t:'Rơi ở bước nào?',
+  ctx:'Một cửa hàng online nhìn phễu tháng 5 và muốn tăng ngân sách quảng cáo để “có thêm đơn”.',
+  rows:[['Lượt vào trang','20.000'],['Thêm vào giỏ','1.200'],['Đặt hàng','300'],['Thanh toán thành công','240']],
+  q:'Trong số người đã thêm vào giỏ, bao nhiêu % không đặt hàng?', unit:'%', ans:75, tol:0.01,
+  steps:['Người bỏ giỏ = 1.200 − 300 = 900.','Tỉ lệ rơi = 900 ÷ 1.200 = <b>75%</b>. Mẫu số là người ở bước ngay trước, không phải tổng lượt vào trang.'],
+  wrong:[[25,'NHAM_TI_LE_ROI'],[4.5,'SAI_MAU_SO']],
+  boss:'“Rơi 75% ở giỏ hàng là bình thường của cả ngành hay là của riêng mình?” Muốn trả lời, bạn cần số của chính mình ở các tháng trước.',
+  talk:{c:'Đừng tăng quảng cáo; sửa bước giỏ hàng trước.',
+    r:['900 trên 1.200 người bỏ giỏ — rơi 75%, bước tệ nhất trong phễu.','Bước thanh toán chỉ rơi 20% (240 ÷ 300 = 80% đi tiếp), không phải chỗ cần ưu tiên.','Nâng tỉ lệ giỏ → đặt hàng từ 25% lên 30% là thêm 60 đơn đặt, khoảng 48 đơn thanh toán, không cần thêm traffic.'],
+    n:'Xem phí ship và số bước nhập thông tin — hai lý do bỏ giỏ hay gặp nhất.'}},
+
+'P:cac':{
+  t:'CAC thật là bao nhiêu?',
+  ctx:'Báo cáo quảng cáo tháng 6 ghi “CAC 180.000đ”. Trưởng nhóm muốn tăng ngân sách vì thấy rẻ.',
+  rows:[['Chi quảng cáo','45.000.000 đ'],['Lương + công cụ của đội performance','15.000.000 đ'],['Tổng đơn','250'],['— trong đó từ khách mới','150'],['— trong đó từ khách cũ quay lại','100']],
+  q:'CAC đầy đủ (quảng cáo + chi phí đội), chỉ tính trên khách mới, là bao nhiêu đồng?', unit:'đ', ans:400000, tol:0.005,
+  steps:['Chi phí để có khách = 45 + 15 = 60 triệu.','Chỉ khách mới mới là “khách có được”: 150.','CAC = 60.000.000 ÷ 150 = <b>400.000đ</b>. Con số 180.000đ lấy 45 triệu chia cho cả 250 đơn — sai hai lần.'],
+  wrong:[[300000,'QUEN_CHI_PHI_CO_DINH'],[240000,'CAC_TINH_CA_KHACH_CU'],[180000,'CAC_TINH_CA_KHACH_CU']],
+  boss:'“Khách cũ quay lại nhờ email thì có tính vào CAC không?” Không — đó là chi phí giữ chân, đo riêng.',
+  talk:{c:'CAC thật là 400.000đ, cao gấp khoảng 2,2 lần con số trong báo cáo.',
+    r:['100 trên 250 đơn là khách cũ — họ không phải khách “có được” tháng này.','15 triệu lương và công cụ cũng là chi phí để có khách.','180.000đ × 2,2 ≈ 400.000đ: nếu ra quyết định bằng số cũ, mình đang tưởng rẻ gấp đôi thực tế.'],
+    n:'Đặt 400.000đ cạnh lãi gộp mỗi khách trước khi bàn tăng ngân sách.'}},
+
+'P:ltv':{
+  t:'Một khách đáng bao nhiêu?',
+  ctx:'Một thương hiệu cà phê hạt bán online muốn biết có thể chi tối đa bao nhiêu để có một khách mới.',
+  rows:[['Giá trị một đơn (AOV)','250.000 đ'],['Biên lợi nhuận gộp','40%'],['Số đơn mỗi năm','4'],['Số năm giữ khách','2']],
+  q:'LTV tính theo lãi gộp là bao nhiêu đồng?', unit:'đ', ans:800000, tol:0.005,
+  steps:['Lãi gộp một đơn = 250.000 × 40% = 100.000đ.','Số đơn cả đời = 4 × 2 = 8.','LTV = 100.000 × 8 = <b>800.000đ</b>. Doanh thu cả đời là 2.000.000đ, nhưng 60% trong đó là giá vốn — không dùng để trả quảng cáo được.'],
+  wrong:[[2000000,'LTV_TINH_DOANH_THU'],[400000,'SAI_TINH_TOAN']],
+  boss:'“Con số 2 năm lấy từ dữ liệu hay từ mong muốn?”',
+  talk:{c:'Mỗi khách mang về 800.000đ lãi gộp — nếu CAC là 400.000đ, mình sống được nhưng mỏng.',
+    r:['Doanh thu cả đời 2 triệu, nhưng lãi gộp chỉ 800.000đ.','LTV:CAC = 800 ÷ 400 = 2, dưới ngưỡng 3 mà nhiều đội dùng làm mốc.','Giữ khách thêm một năm (3 năm) đưa LTV lên 1.200.000đ, tỉ lệ lên 3.'],
+    n:'Đo tỉ lệ khách còn mua ở năm thứ hai bằng dữ liệu thật trước khi tin số 2 năm.'}},
+
+'L:59':{
+  t:'Xô thủng sau ba tháng',
+  ctx:'Một app học tiếng Anh có 1.000 người dùng trả phí trong tháng 1. Mỗi tháng, 70% số người còn lại tiếp tục gia hạn.',
+  rows:[['Người dùng trả phí tháng 1','1.000'],['Tỉ lệ gia hạn mỗi tháng','70%']],
+  q:'Sau ba lần gia hạn (cuối tháng 4), còn bao nhiêu người?', unit:'người', ans:343, tol:0.003,
+  steps:['Mỗi tháng giữ 70% số <em>còn lại</em>, không phải 70% của 1.000 ban đầu.','1.000 × 0,7 × 0,7 × 0,7 = <b>343</b>.'],
+  wrong:[[100,'RETENTION_TUYEN_TINH'],[700,'SAI_TINH_TOAN'],[490,'SAI_TINH_TOAN']],
+  boss:'“Người dùng rời ở tháng nào nhiều nhất, và họ làm gì ngay trước khi rời?”',
+  talk:{c:'Sau ba tháng chỉ còn 343 trên 1.000 người — chưa tới 35%.',
+    r:['Mỗi tháng mất 30%, cộng dồn lại là 657 người đã đi.','Để giữ 1.000 người trả phí, mỗi tháng phải bù thêm người mới — tức là trả CAC liên tục.','Nâng gia hạn từ 70% lên 80% thì còn 512 người, thêm 169 người mà không tốn quảng cáo.'],
+    n:'Gọi cho mười người rời ở tháng đầu và hỏi về lần cuối họ mở app.'}},
+
+'L:63':{
+  t:'Giảm 20% thì phải bán thêm bao nhiêu?',
+  ctx:'Một thương hiệu nến thơm định giảm giá 20% trong tuần sinh nhật. Tháng trước họ bán 1.000 hộp.',
+  rows:[['Giá bán','100.000 đ'],['Giá vốn','60.000 đ'],['Mức giảm','20%']],
+  q:'Sản lượng phải tăng bao nhiêu % để tổng lãi gộp không đổi?', unit:'%', ans:100, tol:0.005,
+  steps:['Lãi mỗi hộp trước giảm giá = 100.000 − 60.000 = 40.000đ.','Sau giảm: giá 80.000đ, lãi = 20.000đ — lãi mỗi hộp mất một nửa.','Muốn giữ tổng lãi, phải bán gấp đôi: tăng <b>100%</b>.'],
+  wrong:[[20,'GIAM_GIA_QUEN_BIEN'],[25,'GIAM_GIA_QUEN_BIEN']],
+  boss:'“Trong số người mua đợt giảm giá, bao nhiêu người đằng nào cũng mua?”',
+  talk:{c:'Giảm 20% chỉ hoà vốn khi bán gấp đôi — mức rất khó đạt.',
+    r:['Lãi mỗi hộp giảm từ 40.000đ xuống 20.000đ.','Giữ 40 triệu lãi gộp của 1.000 hộp thì phải bán 2.000 hộp.','Nếu chỉ bán thêm 50% (1.500 hộp), lãi còn 30 triệu — hụt 10 triệu so với không làm gì.'],
+    n:'Thử quà tặng kèm hoặc gói đôi thay vì giảm thẳng vào giá.'}},
+
+'P:pricing':{
+  t:'Bao nhiêu ly mới hoà vốn?',
+  ctx:'Một quán cà phê mới mở ở khu văn phòng, chủ quán hỏi: “Mỗi tháng phải bán bao nhiêu ly thì không lỗ?”',
+  rows:[['Chi phí cố định mỗi tháng (mặt bằng, lương)','30.000.000 đ'],['Giá bán trung bình một ly','60.000 đ'],['Chi phí biến đổi một ly (nguyên liệu, ly, ống hút)','35.000 đ']],
+  q:'Cần bán bao nhiêu ly mỗi tháng để hoà vốn?', unit:'ly', ans:1200, tol:0.003,
+  steps:['Mỗi ly đóng góp = 60.000 − 35.000 = 25.000đ vào việc trả chi phí cố định.','Hoà vốn = 30.000.000 ÷ 25.000 = <b>1.200 ly</b>, khoảng 40 ly mỗi ngày nếu mở 30 ngày.'],
+  wrong:[[500,'QUEN_CHI_PHI_BIEN_DOI'],[857,'NHAM_GIA_VON']],
+  boss:'“40 ly một ngày có khả thi với lượng người đi ngang mặt bằng này không?”',
+  talk:{c:'Quán cần khoảng 40 ly mỗi ngày mới bắt đầu có lãi.',
+    r:['Mỗi ly chỉ đóng góp 25.000đ, không phải 60.000đ.','30 triệu chi phí cố định ÷ 25.000đ = 1.200 ly mỗi tháng.','Tăng giá lên 65.000đ đưa phần đóng góp lên 30.000đ và hạ điểm hoà vốn xuống 1.000 ly — khoảng 33 ly mỗi ngày.'],
+    n:'Đếm lượng người đi ngang giờ cao điểm trong một tuần trước khi chốt giá.'}},
+
+'L:65':{
+  t:'ROAS 4 có lãi không?',
+  ctx:'Đội performance báo cáo: “Chiến dịch tháng này ROAS 4 — chi 20 triệu thu về 80 triệu, lãi 60 triệu.”',
+  rows:[['Chi quảng cáo','20.000.000 đ'],['Doanh thu ghi nhận','80.000.000 đ'],['Biên lợi nhuận gộp','30%']],
+  q:'Lãi gộp còn lại sau khi trừ quảng cáo là bao nhiêu triệu đồng?', unit:'triệu đ', ans:4, tol:0.01,
+  steps:['ROAS = 80 ÷ 20 = 4. Con số này đúng.','Lãi gộp từ 80 triệu doanh thu = 80 × 30% = 24 triệu.','Trừ 20 triệu quảng cáo còn <b>4 triệu</b> — không phải 60 triệu.'],
+  wrong:[[60,'ROAS_LA_LOI_NHUAN'],[24,'QUEN_TRU_CHI_PHI_QC']],
+  boss:'“Bao nhiêu trong 80 triệu đến từ người đã tìm đúng tên thương hiệu — tức là đằng nào cũng mua?”',
+  talk:{c:'ROAS 4 nghe đẹp, nhưng chiến dịch chỉ để lại 4 triệu lãi gộp.',
+    r:['80 triệu doanh thu chỉ có 24 triệu lãi gộp.','Trừ 20 triệu quảng cáo còn 4 triệu, không phải 60.','Với biên 30%, ROAS hoà vốn là 1 ÷ 0,3 ≈ 3,33 — xuống dưới mức đó là lỗ.'],
+    n:'Tách doanh thu từ từ khoá thương hiệu ra khỏi báo cáo trước khi tăng ngân sách.'}},
+
+'L:72':{
+  t:'Mỗi người thấy bao nhiêu lần?',
+  ctx:'Một chiến dịch video hai tuần. Báo cáo nền tảng ghi hai con số.',
+  rows:[['Số người tiếp cận (reach)','400.000'],['Tổng lượt hiển thị','1.600.000']],
+  q:'Tần suất trung bình mỗi người là bao nhiêu lần?', unit:'lần', ans:4, tol:0.005,
+  steps:['Tần suất = lượt hiển thị ÷ số người = 1.600.000 ÷ 400.000 = <b>4</b>.'],
+  wrong:[[0.25,'NGUOC_TAN_SUAT']],
+  boss:'“Trung bình 4 lần — nhưng bao nhiêu người chỉ thấy đúng một lần?”',
+  talk:{c:'Trung bình 4 lần, nhưng con số trung bình có thể che một phân bổ rất lệch.',
+    r:['1,6 triệu lượt chia cho 400.000 người ra 4.','Nếu 100.000 người thấy 10 lần thì họ đã ăn 1 triệu lượt.','Khi đó 300.000 người còn lại chỉ chia nhau 600.000 lượt — mỗi người 2 lần.'],
+    n:'Đặt giới hạn tần suất và xin báo cáo phân bổ theo số lần thấy.'}},
+
+'P:share-of-voice':{
+  t:'Mình đang nói to cỡ nào?',
+  ctx:'Một thương hiệu sữa hạt muốn biết mức chi quý này có đủ để tăng thị phần không.',
+  rows:[['Tổng chi media của cả ngành trong quý (gồm cả mình)','500.000.000 đ'],['Chi media của mình','75.000.000 đ'],['Thị phần hiện tại','10%']],
+  q:'Share of voice (SOV) của thương hiệu là bao nhiêu %?', unit:'%', ans:15, tol:0.005,
+  steps:['SOV = chi của mình ÷ tổng chi ngành = 75 ÷ 500 = <b>15%</b>.','So với thị phần 10%, SOV đang cao hơn 5 điểm — gọi là excess share of voice (ESOV) +5.'],
+  wrong:[[10,'NHAM_SOV_THI_PHAN'],[5,'NHAM_SOV_THI_PHAN'],[13.04,'SAI_MAU_SO']],
+  boss:'“Nếu đối thủ lớn nhất tăng gấp đôi ngân sách thì SOV của mình còn bao nhiêu?”',
+  talk:{c:'Mình đang nói to hơn thị phần của mình — ESOV +5 điểm.',
+    r:['SOV = 75 ÷ 500 = 15%.','Thị phần 10%, nên ESOV = +5 điểm.','Nghiên cứu của Binet & Field quan sát rằng ESOV dương, giữ đủ lâu, thường đi kèm tăng thị phần — đó là tương quan thống kê, không phải cam kết.'],
+    n:'Theo dõi chi của hai đối thủ lớn nhất quý sau; SOV đổi khi họ đổi.'}},
+
+'L:71':{
+  t:'Phương án B tốt hơn bao nhiêu?',
+  ctx:'Một đội growth chạy A/B test hai phiên bản trang đăng ký trong một tuần.',
+  rows:[['A — lượt truy cập','5.000'],['A — đơn','150'],['B — lượt truy cập','5.000'],['B — đơn','180']],
+  q:'B tăng tương đối bao nhiêu % so với A (theo tỉ lệ chuyển đổi)?', unit:'%', ans:20, tol:0.01,
+  steps:['Tỉ lệ A = 150 ÷ 5.000 = 3,0%. Tỉ lệ B = 180 ÷ 5.000 = 3,6%.','Chênh lệch = 0,6 <em>điểm</em> phần trăm.','Tăng tương đối = 0,6 ÷ 3,0 = <b>20%</b>.'],
+  wrong:[[0.6,'NHAM_DIEM_PHAN_TRAM'],[30,'NHAM_SO_TUYET_DOI']],
+  boss:'“Bạn quyết định dừng test lúc nào — trước hay sau khi nhìn thấy kết quả?”',
+  talk:{c:'B tốt hơn 20% tương đối, nhưng với mẫu này chưa đủ chắc để chốt.',
+    r:['3,0% so với 3,6% — chênh 0,6 điểm, tức +20% tương đối.','Chênh 30 đơn trên 5.000 lượt mỗi bên.','Kiểm định hai tỉ lệ cho z ≈ 1,68, chưa tới mức 1,96 ứng với độ tin cậy 95% quen dùng.'],
+    n:'Chạy tiếp tới cỡ mẫu đã định trước, không dừng sớm vì thấy số đẹp.'}},
+
+'P:referral':{
+  t:'Giới thiệu mang về bao nhiêu khách?',
+  ctx:'Một thương hiệu đồ ăn healthy chạy chương trình “giới thiệu bạn bè” trong một tháng.',
+  rows:[['Khách hiện có','1.000'],['Tỉ lệ khách chịu gửi lời giới thiệu','30%'],['Số lời giới thiệu mỗi người gửi','2'],['Tỉ lệ người được giới thiệu mua hàng','25%']],
+  q:'Chương trình mang về bao nhiêu khách mới?', unit:'khách', ans:150, tol:0.003,
+  steps:['Người gửi giới thiệu = 1.000 × 30% = 300.','Lời giới thiệu = 300 × 2 = 600.','Khách mới = 600 × 25% = <b>150</b>.'],
+  wrong:[[600,'QUEN_TI_LE_CHUYEN_DOI'],[500,'QUEN_TI_LE_GIOI_THIEU']],
+  boss:'“150 khách này có phải đằng nào cũng tới không?”',
+  talk:{c:'Giới thiệu mang thêm 150 khách trên 1.000 — có ích, nhưng không tự kéo tăng trưởng được.',
+    r:['Chỉ 300 trên 1.000 khách chịu giới thiệu.','600 lời mời, 25% mua, ra 150 khách — hệ số lan truyền 0,15.','Hệ số dưới 1 nghĩa là chương trình bổ sung cho quảng cáo, không thay được quảng cáo.'],
+    n:'Tăng tỉ lệ khách chịu giới thiệu trước: từ 30% lên 60% là gấp đôi, ra 300 khách.'}},
+};

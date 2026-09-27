@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Học — Tự Học Marketing Case</title>
+<meta name="description" content="Bài học tiếp theo, cấp độ, chuỗi ngày học, nhiệm vụ và lỗi cần ôn — tất cả ở một chỗ.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn, không gửi về máy chủ nào.</p></div></noscript>
+<main class="wrap" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=1"></script>
+<script src="assets/js/app.js?v=1"></script>
+<script>
+appShell('hoc.html');
+
+function render(){
+  const s=S.get();
+  const app=document.getElementById('app');
+
+  /* lần đầu: chọn nhóm người học */
+  if(!s.persona){
+    app.innerHTML=`
+    <section class="section">
+      <span class="mono mono--red">Bắt đầu</span>
+      <h1 class="h1" style="margin:14px 0 16px">Bạn đang ở đâu<br><em>trên con đường này?</em></h1>
+      <p class="lede" style="max-width:60ch">Chọn nhóm gần với bạn nhất. App sẽ gợi ý một lộ trình phù hợp —
+        đổi lúc nào cũng được, và mọi bài vẫn mở theo tiến độ của bạn.</p>
+      <ul class="list" style="margin-top:28px">${PERSONAS.map((p,i)=>`
+        <li><button class="item" style="width:100%;background:none;border:0;text-align:left;cursor:pointer" data-persona="${p.id}">
+          <span class="item__n">${String(i+1).padStart(2,'0')}</span>
+          <span><span class="item__t">${p.t}</span><br><span class="small muted">${p.d}</span></span>
+          <span class="mono">Chọn →</span></button></li>`).join('')}</ul>
+    </section>`;
+    return;
+  }
+
+  const lv=level(s.xp), nk=nextLesson(s), nm=nk&&lessonMeta(nk), nw=nk&&where(nk);
+  const doneN=Object.keys(s.done).filter(k=>where(k)).length, total=ALL.length;
+  const persona=PERSONAS.find(p=>p.id===s.persona), path=PATHS.find(p=>p.id===(s.path||persona.path));
+  const pl=pathLessons(path.id), plDone=pl.filter(k=>s.done[k]).length;
+  const due=dueErrors(s), must=mustDrill(s), ms=missions(s);
+  const pct=(a,b)=>b?Math.round(a/b*100):0;
+
+  app.innerHTML=`
+  <section class="section">
+    <div class="cols cols--2">
+      <div>
+        <span class="mono">Bài học tiếp theo · ${nw?'Chặng '+nw.stage.n+' · '+escH(nw.mod.t):'Đã xong'}</span>
+        ${nm?`<h1 class="h1" style="margin:14px 0 18px">${escH(nm.t)}</h1>
+          <div class="row"><a class="btn" href="bai.html?id=${encodeURIComponent(nk)}">Học ngay · ${escH(nm.read)}</a>
+          ${DRILLS[nk]?'<span class="tag">Có bài tính số</span>':''}</div>`
+          :`<h1 class="h1" style="margin:14px 0 18px">Bạn đã học hết${s.path&&s.path!=='full'?' lộ trình này':''}.</h1>
+          <a class="btn" href="gallery.html">Sang thư viện case</a>`}
+      </div>
+      <div class="stack">
+        <span class="mono">Lộ trình · ${escH(path.t)}</span>
+        <div class="meter"><i style="width:${pct(plDone,pl.length)}%"></i></div>
+        <span class="small muted">${plDone} / ${pl.length} bài trong lộ trình · ${doneN} / ${total} bài toàn chương trình</span>
+        <label class="small" for="pathSel" style="margin-top:6px">Đổi lộ trình</label>
+        <select class="field" id="pathSel">${PATHS.map(p=>`<option value="${p.id}" ${p.id===path.id?'selected':''}>${p.t} · ${(p.lessons||ALL).length} bài</option>`).join('')}</select>
+        <span class="small muted">Bạn là: ${escH(persona.t)} · <button class="small" style="background:none;border:0;padding:0;text-decoration:underline;cursor:pointer" id="rePersona">đổi</button></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="kpis" aria-label="Chỉ số của bạn">
+    <div class="kpi"><span class="mono">Cấp ${lv.n} / 30</span><b>${escH(lv.name)}</b>
+      ${lv.next?`<div class="meter" style="margin-top:10px"><i style="width:${pct(s.xp-lv.cur,lv.next-lv.cur)}%"></i></div>
+      <span class="small muted">${fmt(lv.next-s.xp)} XP nữa lên cấp ${lv.n+1}</span>`:''}</div>
+    <div class="kpi"><span class="mono">XP</span><b>${fmt(s.xp)}</b></div>
+    <div class="kpi"><span class="mono">Chuỗi ngày</span><b>${s.streak}</b><span class="small muted">${s.freezes} thẻ đóng băng · mỗi 7 ngày liên tiếp được thêm 1</span></div>
+    <div class="kpi"><span class="mono">Lỗi cần ôn hôm nay</span><b style="${due.length?'color:var(--red)':''}">${due.length}</b>
+      <a class="small" href="on-loi.html">Mở trang ôn lỗi →</a></div>
+  </section>
+
+  <section class="section cols cols--eq">
+    <div>
+      <span class="mono mono--ink">Nhiệm vụ hôm nay</span>
+      <ul class="list" style="margin-top:12px">${ms.daily.map(m=>`<li class="row between" style="padding:11px 0">
+        <span>${m.have>=m.need?'<s class="muted">':''}${m.t}${m.have>=m.need?'</s>':''}</span>
+        <span class="mono">${Math.min(m.have,m.need)} / ${m.need}</span></li>`).join('')}</ul>
+      <span class="mono mono--ink" style="display:block;margin-top:26px">Nhiệm vụ tuần này</span>
+      <ul class="list" style="margin-top:12px">${ms.weekly.map(m=>`<li class="row between" style="padding:11px 0">
+        <span>${m.have>=m.need?'<s class="muted">':''}${m.t}${m.have>=m.need?'</s>':''}</span>
+        <span class="mono">${Math.min(m.have,m.need)} / ${m.need}</span></li>`).join('')}</ul>
+    </div>
+    <div>
+      <span class="mono mono--ink">Phiên tập trung</span>
+      <p class="h2" id="pomo" style="margin:12px 0 10px;font-variant-numeric:tabular-nums">25:00</p>
+      <p class="small muted">25 phút không mở tab khác. Xong phiên được +${XP.focus} XP. Rời trang thì phiên dừng.</p>
+      <div class="row" style="margin-top:12px"><button class="btn btn--ghost" id="pomoBtn">Bắt đầu</button></div>
+      ${must.length?`<div class="note note--red" style="margin-top:26px"><b>Bài luyện bắt buộc.</b>
+        ${must.map(e=>escH(ERRORS[e.code]||e.code)+' · '+e.count+' lần').join('<br>')}
+        <br><a href="on-loi.html">Làm ngay →</a></div>`:''}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="row between"><span class="mono mono--ink">Các chặng</span><a class="mono" href="ban-do.html">Xem bản đồ →</a></div>
+    <ul class="list" style="margin-top:12px">${STAGES.map(st=>{const ks=st.mods.flatMap(m=>m.lessons);const d=ks.filter(k=>s.done[k]).length;const open=stageOpen(st.id,s);
+      return `<li><a class="item" href="ban-do.html#${st.id}" ${open?'':'aria-disabled="true"'}>
+        <span class="item__n">${st.n}</span><span class="item__t">${st.t}</span>
+        <span class="mono">${ks.length?d+' / '+ks.length:st.mods.length+' case'}${open?'':' · khoá'}</span></a></li>`}).join('')}</ul>
+  </section>`;
+
+  document.getElementById('pathSel').onchange=e=>{S.set({path:e.target.value});render();toast('Đã đổi lộ trình');};
+  document.getElementById('rePersona').onclick=()=>{S.set({persona:null});render();};
+  document.getElementById('pomoBtn').onclick=pomodoro;
+}
+
+let pomoT=null;
+function pomodoro(){
+  const b=document.getElementById('pomoBtn');
+  if(pomoT){ clearInterval(pomoT); pomoT=null; b.textContent='Bắt đầu'; document.getElementById('pomo').textContent='25:00'; return; }
+  const end=Date.now()+25*60e3; b.textContent='Dừng';
+  pomoT=setInterval(()=>{
+    const left=Math.max(0,end-Date.now()), m=Math.floor(left/6e4), sec=Math.floor(left%6e4/1e3);
+    const el=document.getElementById('pomo'); if(el) el.textContent=String(m).padStart(2,'0')+':'+String(sec).padStart(2,'0');
+    if(!left){ clearInterval(pomoT); pomoT=null; award('focus',today()); render(); }
+  },500);
+}
+
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-persona]'); if(!b) return;
+  const p=PERSONAS.find(x=>x.id===b.dataset.persona);
+  S.set({persona:p.id,path:p.path}); render(); toast('Đã chọn lộ trình: '+PATHS.find(x=>x.id===p.path).t);
+});
+render();
+</script>
+</body>
+</html>
