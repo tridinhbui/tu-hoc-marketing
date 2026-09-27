@@ -54,6 +54,8 @@ Giao diện casebook nền trắng: `assets/css/case.css`. Lõi: `assets/js/app.
 | `hoc.html` | Dashboard: chọn nhóm người học → lộ trình, bài tiếp theo, cấp độ /30, XP, streak + thẻ đóng băng, nhiệm vụ ngày/tuần, Pomodoro 25′ |
 | `ban-do.html` | Bắt đầu từ đâu: 6 chặng → 16 module → 48 bài, "Bạn ở đây", chặng mở khi xong 60% chặng trước |
 | `bai.html?id=` | Bài học 5 phần: bài đọc · bài tập tính số · nói trong 60 giây · case · ôn lỗi. Chỉnh cỡ chữ, chế độ Sáng / Giấy ngà / Tối |
+| `gioi-thieu.html` | Landing: sứ mệnh, thử một bài tính số không cần đăng ký, phương pháp 5 phần, 4 nhóm người học, case mẫu, số liệu nội dung đếm từ dữ liệu thật |
+| `quiz.html` | Quiz phản xạ 60 giây: câu hỏi sinh từ các bài đã học (ý chính, định nghĩa, bài tính số), 3 lượt/ngày |
 | `on-loi.html` | Lỗi theo mã có tên, nhắc ôn sau 1 · 3 · 7 ngày, lỗi ≥3 lần thành bài luyện bắt buộc |
 
 Dữ liệu: `curriculum.js` (chặng, module, lộ trình, nhóm người học — xếp 26 daily lesson + 22 nguyên lý có sẵn),

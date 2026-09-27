@@ -14,9 +14,11 @@
 <script src="assets/js/data/principles.js?v=7"></script>
 <script src="assets/js/data/curriculum.js?v=1"></script>
 <script src="assets/js/data/drills.js?v=1"></script>
-<script src="assets/js/app.js?v=1"></script>
+<script src="assets/js/app.js?v=2"></script>
 <script>
 appShell('hoc.html');
+/* đến từ landing với ?persona= : chọn luôn nhóm, không hỏi lại */
+(()=>{const q=qp('persona'), p=PERSONAS.find(x=>x.id===q); if(p&&!S.get().persona) S.set({persona:p.id,path:p.path});})();
 
 function render(){
   const s=S.get();

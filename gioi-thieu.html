@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Tự Học Marketing Case — tư duy marketing có cấu trúc, bằng số, miễn phí</title>
+<meta name="description" content="Nền tảng tự học marketing thực chiến cho người Việt: bài học 6 phút, bài tập tính số, nói trong 60 giây, ôn lỗi theo mã. Miễn phí vĩnh viễn.">
+<meta property="og:title" content="Tự Học Marketing Case">
+<meta property="og:description" content="Bài học 6 phút, bài tập tính số, nói trong 60 giây, ôn lỗi theo mã. Miễn phí vĩnh viễn.">
+<meta property="og:type" content="website">
+<style>
+  .hero{padding:clamp(40px,8vw,110px) 0 clamp(30px,5vw,70px)}
+  .hero .h1{font-size:clamp(2.5rem,7vw,5.4rem)}
+  .method{display:grid;border-top:1px solid var(--ink)}
+  @media(min-width:900px){.method{grid-template-columns:repeat(5,1fr)}}
+  .method div{padding:16px 16px 18px 0;border-bottom:var(--rule)}
+  @media(min-width:900px){.method div+div{padding-left:16px;border-left:var(--rule)}}
+  .method b{display:block;font-family:var(--serif);font-weight:400;font-size:1.2rem;margin:6px 0 6px}
+  .who{display:grid;gap:0;border-top:1px solid var(--ink)}
+  @media(min-width:760px){.who{grid-template-columns:repeat(2,1fr)}}
+  .who a{display:block;padding:18px 18px 18px 0;border-bottom:var(--rule);text-decoration:none}
+  @media(min-width:760px){.who a:nth-child(even){padding-left:18px;border-left:var(--rule)}}
+  .who a:hover .h3{text-decoration:underline}
+</style>
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Tự Học Marketing Case</h1><p>Trang này cần JavaScript để dựng nội dung. Không có dữ liệu nào được gửi đi.</p></div></noscript>
+<main class="wrap" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/campaigns.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=1"></script>
+<script src="assets/js/app.js?v=2"></script>
+<script>
+appShell('');
+const nLessons=ALL.length, nMods=STAGES.reduce((n,s)=>n+s.mods.length,0), nDrills=Object.keys(DRILLS).length,
+      nErr=Object.keys(ERRORS).length, nCase=CAMPAIGNS.length;
+const SAMPLE='L:65', D=DRILLS[SAMPLE];
+const picks=['bitis-hunter','momo-lac-xi','spotify-wrapped'].map(id=>CAMPAIGNS.find(c=>c.id===id)).filter(Boolean);
+
+document.getElementById('app').innerHTML=`
+<section class="hero">
+  <span class="mono mono--red">Miễn phí vĩnh viễn · không cần tài khoản để bắt đầu</span>
+  <h1 class="h1" style="margin:18px 0 22px">Tư duy như một<br>brand manager.<br><em>Bằng số, không bằng cảm giác.</em></h1>
+  <p class="lede" style="max-width:62ch">Từ con số 0 đến tư duy marketing có cấu trúc: bài học sáu phút mở bằng một tình huống thật,
+    bài tập có đáp án tính lại được, và luyện nói kết luận trong 60 giây — như lúc đứng trước sếp hay giám khảo.</p>
+  <div class="row" style="margin-top:26px"><a class="btn" href="hoc.html">Bắt đầu học</a><a class="btn btn--ghost" href="#thu">Thử một câu trước</a></div>
+</section>
+
+<section class="kpis" aria-label="Nội dung hiện có">
+  <div class="kpi"><span class="mono">Bài học</span><b>${nLessons}</b><span class="small muted">trong ${nMods} module, ${STAGES.length} chặng</span></div>
+  <div class="kpi"><span class="mono">Bài tập tính số</span><b>${nDrills}</b><span class="small muted">mỗi bài một đáp án duy nhất</span></div>
+  <div class="kpi"><span class="mono">Mã lỗi được theo dõi</span><b>${nErr}</b><span class="small muted">nhắc ôn sau 1 · 3 · 7 ngày</span></div>
+  <div class="kpi"><span class="mono">Case trong thư viện</span><b>${nCase}</b><span class="small muted">thương hiệu Việt và quốc tế</span></div>
+</section>
+
+<section class="section" id="thu">
+  <div class="cols cols--2">
+    <div>
+      <span class="mono mono--red">Thử ngay · không cần đăng ký</span>
+      <h2 class="h2" style="margin:12px 0 14px">${escH(D.t)}</h2>
+      <p>${D.ctx}</p>
+      <div class="exhibit"><div class="exhibit__cap"><b>Exhibit 1</b><span class="mono">số liệu minh hoạ</span></div>
+        <div class="scroll"><table class="t"><tbody>${D.rows.map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]}</td></tr>`).join('')}</tbody></table></div></div>
+      <p><b>${D.q}</b></p>
+      <form class="answer" id="f" autocomplete="off"><input class="field" id="in" inputmode="decimal" placeholder="Đáp án" aria-label="Đáp án">
+        <span class="mono">${escH(D.unit)}</span><button class="btn">Kiểm tra</button></form>
+      <div class="verdict" id="v" aria-live="polite"></div>
+    </div>
+    <div id="after" class="stack" style="align-content:start">
+      <span class="mono">Sau khi trả lời</span>
+      <p class="muted">Bạn sẽ thấy lời giải từng bước, tên lỗi nếu làm sai, và câu trả lời mẫu theo khung
+        “kết luận trước, ba lý do có số, bước tiếp theo”.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <span class="mono mono--ink">Phương pháp · mỗi bài học có năm phần</span>
+  <div class="method" style="margin-top:14px">
+    <div><span class="mono mono--red">01</span><b>Bài đọc</b><span class="small muted">Mở bằng tình huống, không mở bằng định nghĩa. Có chỗ hay sai và câu sếp hay hỏi tiếp.</span></div>
+    <div><span class="mono mono--red">02</span><b>Tính số</b><span class="small muted">Một đáp án, tính lại được từ dữ liệu trong đề.</span></div>
+    <div><span class="mono mono--red">03</span><b>Nói trong 60 giây</b><span class="small muted">Kết luận trước, ba lý do có số, bước tiếp theo.</span></div>
+    <div><span class="mono mono--red">04</span><b>Case</b><span class="small muted">Sau mỗi module, ghép lại trên một tình huống đầy đủ.</span></div>
+    <div><span class="mono mono--red">05</span><b>Ôn lỗi</b><span class="small muted">Mỗi lỗi có tên. Lặp ba lần thành bài luyện bắt buộc.</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <span class="mono mono--ink">Dành cho ai</span>
+  <div class="who" style="margin-top:14px">${PERSONAS.map(p=>{const path=PATHS.find(x=>x.id===p.path);
+    return `<a href="hoc.html?persona=${p.id}"><span class="h3">${escH(p.t)}</span>
+      <p class="small muted" style="margin:6px 0 8px">${escH(p.d)}</p>
+      <span class="mono">Lộ trình gợi ý: ${escH(path.t)} · ${(path.lessons||ALL).length} bài →</span></a>`}).join('')}</div>
+</section>
+
+<section class="section">
+  <div class="row between"><span class="mono mono--ink">Case mẫu</span><a class="mono" href="gallery.html">Cả ${nCase} case →</a></div>
+  <ul class="list" style="margin-top:12px">${picks.map((c,i)=>`<li><a class="item" href="campaign.html?id=${c.id}">
+    <span class="item__n">${String(i+1).padStart(2,'0')}</span>
+    <span><span class="item__t">${escH(c.brand)} — ${escH(c.title)}</span><br><span class="small muted">${escH(String(c.insight||'').slice(0,150))}${String(c.insight||'').length>150?'…':''}</span></span>
+    <span class="mono">${escH(c.year||'')}</span></a></li>`).join('')}</ul>
+</section>
+
+<section class="section">
+  <span class="mono mono--ink">Kết quả học viên</span>
+  <p class="lede" style="margin-top:12px;max-width:60ch">Nền tảng mới mở. Chúng tôi sẽ chỉ đăng kết quả học viên khi có số thật —
+    không đăng lời chứng thực mẫu, không đăng con số ước đoán.</p>
+</section>
+
+<section class="section">
+  <h2 class="h2">Bắt đầu bằng một bài sáu phút.</h2>
+  <p class="muted" style="margin:10px 0 20px">Không cần tài khoản. Tiến độ lưu ngay trong trình duyệt của bạn.</p>
+  <div class="row"><a class="btn" href="hoc.html">Bắt đầu học</a><a class="btn btn--ghost" href="ban-do.html">Xem bản đồ ${STAGES.length} chặng</a></div>
+</section>`;
+
+document.getElementById('f').onsubmit=e=>{
+  e.preventDefault();
+  let n=parseNum(document.getElementById('in').value); const v=document.getElementById('v');
+  if(!isFinite(n)){ v.dataset.v='bad'; v.textContent='Chưa đọc được số. Gõ ví dụ: 4 hoặc 60.'; return; }
+  if(/triệu/.test(D.unit)&&n>=1e5) n/=1e6;
+  const near=x=>Math.abs(n-x)<=Math.max(Math.abs(x)*D.tol,1e-9);
+  const hit=D.wrong.find(([x])=>near(x)), ok=near(D.ans);
+  v.dataset.v=ok?'ok':'bad';
+  v.innerHTML=ok?`Đúng — ${fmt(D.ans)} ${escH(D.unit)}.`
+    :hit?`Chưa đúng — đây là lỗi <b>${escH(ERRORS[hit[1]])}</b>, lỗi hay gặp nhất ở dạng bài này.`:'Chưa đúng. Xem lời giải bên cạnh.';
+  document.getElementById('after').innerHTML=`
+    <span class="mono">Lời giải</span>
+    <ol style="margin:0;padding-left:1.2em">${D.steps.map(x=>`<li style="margin-bottom:6px">${x}</li>`).join('')}</ol>
+    <span class="mono" style="margin-top:10px">Nói trong 60 giây</span>
+    <div class="frame"><div><span class="mono">Kết luận</span><span>${D.talk.c}</span></div>
+      ${D.talk.r.map((r,i)=>`<div><span class="mono">Lý do ${i+1}</span><span>${r}</span></div>`).join('')}
+      <div><span class="mono">Bước tiếp</span><span>${D.talk.n}</span></div></div>
+    <a class="btn" style="margin-top:14px;justify-self:start" href="hoc.html">Học tiếp từ đầu</a>`;
+};
+</script>
+</body>
+</html>

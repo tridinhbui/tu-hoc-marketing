@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Quiz 60 giây — Tự Học Marketing Case</title>
+<meta name="description" content="60 giây, câu hỏi rút từ chính những bài bạn đã học. Ba lượt mỗi ngày.">
+<style>
+  .opt{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:var(--rule);padding:14px 0;cursor:pointer;font-size:15.5px;line-height:1.5}
+  .opt:hover{background:var(--ink-06)}
+  .opt[data-r="ok"]{color:var(--ok)}
+  .opt[data-r="bad"]{color:var(--red)}
+  .clock{font-family:var(--serif);font-size:clamp(2.6rem,7vw,4.2rem);line-height:1;font-variant-numeric:tabular-nums}
+  .clock[data-low]{color:var(--red)}
+</style>
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Câu hỏi và tiến độ được dựng ngay trong trình duyệt của bạn, không gửi về máy chủ nào.</p></div></noscript>
+<main class="wrap narrow" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=1"></script>
+<script src="assets/js/app.js?v=2"></script>
+<script>
+appShell('quiz.html');
+const ROUNDS=3, SECS=60, MIN_DONE=3;
+const app=document.getElementById('app');
+let bank=[], i=0, right=0, wrong=0, timer=null, end=0, locked=false, answered=[];
+
+function roundsToday(s=S.get()){ return (s.quiz&&s.quiz.d===today())?s.quiz.n:0; }
+
+function intro(){
+  const s=S.get(), done=Object.keys(s.done).filter(k=>where(k)), used=roundsToday(s);
+  const pool=quizBank(done).length;
+  app.innerHTML=`<section class="section">
+    <span class="mono mono--red">Quiz phản xạ</span>
+    <h1 class="h1" style="margin:14px 0 16px">${SECS} giây.<br><em>Trả lời được bao nhiêu?</em></h1>
+    <p class="lede">Câu hỏi rút từ chính các bài bạn đã học: ý chính, định nghĩa, và bài tính số.
+      Mỗi ngày ${ROUNDS} lượt — ít để bạn phải nghĩ trước khi bấm. Mỗi câu đúng +${XP.quiz} XP.
+      Sai ở câu tính số thì lỗi được ghi vào trang ôn lỗi như khi làm bài.</p>
+    <div class="kpis" style="margin-top:26px">
+      <div class="kpi"><span class="mono">Bài đã học</span><b>${done.length}</b></div>
+      <div class="kpi"><span class="mono">Câu hỏi sẵn có</span><b>${pool}</b></div>
+      <div class="kpi"><span class="mono">Lượt còn hôm nay</span><b>${ROUNDS-used}</b></div>
+      <div class="kpi"><span class="mono">Kỷ lục</span><b>${(s.quizBest||0)}</b></div>
+    </div>
+    <div style="margin-top:26px">${
+      done.length<MIN_DONE ? `<p class="note">Cần học ít nhất ${MIN_DONE} bài để có đủ câu hỏi — bạn đang có ${done.length}.</p>
+         <a class="btn" style="margin-top:14px" href="bai.html?id=${encodeURIComponent(nextLesson()||ALL[0].key)}">Học bài tiếp theo</a>`
+      : used>=ROUNDS ? `<p class="note">Hết ${ROUNDS} lượt hôm nay. Quay lại ngày mai — hoặc dùng thời gian này ôn lỗi.</p>
+         <a class="btn" style="margin-top:14px" href="on-loi.html">Sang ôn lỗi</a>`
+      : `<button class="btn" id="go">Bắt đầu · ${SECS} giây</button>`}</div>
+  </section>`;
+  const g=document.getElementById('go'); if(g) g.onclick=start;
+}
+
+function start(){
+  const s=S.get(), done=Object.keys(s.done).filter(k=>where(k));
+  bank=quizBank(done); i=0; right=0; wrong=0; answered=[];
+  S.set({quiz:{d:today(),n:roundsToday(s)+1}});
+  end=Date.now()+SECS*1000;
+  timer=setInterval(tick,200); show();
+}
+function tick(){
+  const left=Math.max(0,Math.ceil((end-Date.now())/1000)), c=document.getElementById('clock');
+  if(c){ c.textContent=left; c.toggleAttribute('data-low',left<=10); }
+  if(left<=0) finish();
+}
+function show(){
+  if(i>=bank.length){ bank=bank.concat(quizBank(Object.keys(S.get().done).filter(k=>where(k)))); }
+  const q=bank[i]; locked=false;
+  app.innerHTML=`<section class="section">
+    <div class="row between"><span class="mono">Câu ${i+1} · đúng ${right} · sai ${wrong}</span><span class="clock" id="clock">${Math.max(0,Math.ceil((end-Date.now())/1000))}</span></div>
+    ${q.ctx?`<p class="small muted" style="margin:18px 0 0">${escH(q.ctx)}</p>`:''}
+    <h2 class="h3" style="margin:14px 0 10px">${escH(q.q)}</h2>
+    <div style="border-top:var(--rule)">${q.opts.map((o,j)=>`<button class="opt" data-j="${j}">${escH(o.t)}</button>`).join('')}</div>
+  </section>`;
+}
+function pick(j){
+  if(locked) return; locked=true;
+  const q=bank[i], o=q.opts[j];
+  document.querySelectorAll('.opt').forEach((b,k)=>{ if(q.opts[k].ok) b.dataset.r='ok'; });
+  if(o.ok) right++; else { wrong++; document.querySelector(`.opt[data-j="${j}"]`).dataset.r='bad';
+    if(q.type==='drill') logError(o.code||'SAI_TINH_TOAN',q.key); }
+  answered.push({q,ok:o.ok});
+  i++; setTimeout(()=>{ if(timer) show(); }, o.ok?350:1100);
+}
+function finish(){
+  clearInterval(timer); timer=null;
+  const s=S.get(), best=Math.max(s.quizBest||0,right);
+  S.set({quizBest:best}); if(right) award('quiz','round',right);
+  const missed=answered.filter(a=>!a.ok);
+  app.innerHTML=`<section class="section">
+    <span class="mono mono--red">Hết giờ</span>
+    <h1 class="h1" style="margin:14px 0 16px">${right} đúng,<br><em>${wrong} sai.</em></h1>
+    <p class="lede">${right>=best&&right>0?'Kỷ lục mới của bạn. ':''}+${right*XP.quiz} XP. Còn ${ROUNDS-roundsToday()} lượt hôm nay.</p>
+    ${missed.length?`<div class="exhibit"><div class="exhibit__cap"><b>Câu làm sai — đọc lại bài gốc</b><span class="mono">${missed.length}</span></div>
+      <ul class="list">${[...new Map(missed.map(a=>[a.q.key,a])).values()].map(a=>`<li><a class="item" style="grid-template-columns:1fr auto" href="bai.html?id=${encodeURIComponent(a.q.key)}">
+        <span class="item__t">${escH(lessonMeta(a.q.key).t)}</span><span class="mono">Đọc lại →</span></a></li>`).join('')}</ul></div>`:''}
+    <div class="row" style="margin-top:22px"><button class="btn" id="again">Về màn hình quiz</button><a class="btn btn--ghost" href="hoc.html">Về trang học</a></div>
+  </section>`;
+  document.getElementById('again').onclick=intro;
+}
+app.addEventListener('click',e=>{const b=e.target.closest('.opt'); if(b) pick(+b.dataset.j);});
+intro();
+</script>
+</body>
+</html>
