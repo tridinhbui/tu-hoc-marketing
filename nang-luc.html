@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Bản đồ năng lực — Tự Học Marketing Case</title>
+<meta name="description" content="15 năng lực, mỗi năng lực 4 mức. Mức chỉ lên từ bài bạn nộp, không phải tự đánh giá.">
+<style>
+  .comp{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:8px 18px;padding:14px 0;border-bottom:var(--rule);align-items:center}
+  @media(max-width:640px){.comp{grid-template-columns:1fr}}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+  .steps i{height:10px;background:var(--ink-12)}
+  .steps i[data-on]{background:var(--ink)}
+  .comp[data-weak] .steps i[data-on]{background:var(--red)}
+</style>
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Nội dung và tiến độ được dựng ngay trong trình duyệt của bạn, không gửi về máy chủ nào.</p></div></noscript>
+<main class="wrap" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=1"></script>
+<script src="assets/js/data/cases.js?v=1"></script>
+<script src="assets/js/app.js?v=3"></script>
+<script>
+appShell('nang-luc.html');
+const s=S.get(), rows=COMPETENCIES.map(c=>({c,...compLevel(c,s)}));
+const avg=rows.reduce((n,r)=>n+r.n,0)/rows.length, withEv=rows.filter(r=>r.n>0);
+const strong=[...withEv].sort((a,b)=>b.n-a.n)[0], weak=[...rows].sort((a,b)=>a.n-b.n)[0];
+const nextFor=r=>r.c.lessons.find(k=>!s.done[k]&&lessonOpen(k,s))||r.c.lessons.find(k=>DRILLS[k]&&!s.drills[k]&&lessonOpen(k,s));
+document.getElementById('app').innerHTML=`
+<section class="section">
+  <span class="mono mono--red">Bản đồ năng lực</span>
+  <h1 class="h1" style="margin:14px 0 16px">${COMPETENCIES.length} năng lực,<br><em>mỗi cái bốn mức.</em></h1>
+  <p class="lede" style="max-width:64ch">Mức chỉ lên từ chính bài bạn nộp — quiz, bài tính số, case có bấm giờ — không phải từ việc bạn bấm “đã học”.</p>
+  <div class="scroll" style="margin-top:20px"><table class="t"><thead><tr><th>Mức</th><th>Cần có bằng chứng gì</th></tr></thead><tbody>
+    <tr><td>1 · ${COMP_LEVELS[1]}</td><td>Đúng ít nhất một câu quiz hoặc bài tính số thuộc năng lực.</td></tr>
+    <tr><td>2 · ${COMP_LEVELS[2]}</td><td>Đúng bài tính số của năng lực (hoặc ≥3 câu quiz), không còn lỗi bắt buộc chưa xử lý.</td></tr>
+    <tr><td>3 · ${COMP_LEVELS[3]}</td><td>Đạt tiêu chí gắn với năng lực trong một case có bấm giờ.</td></tr>
+    <tr><td>4 · ${COMP_LEVELS[4]}</td><td>Đạt tiêu chí đó trong một case đạt tổng thể, và phần nói 60 giây cũng đạt.</td></tr>
+  </tbody></table></div>
+</section>
+<section class="kpis">
+  <div class="kpi"><span class="mono">Có bằng chứng</span><b>${withEv.length} / ${rows.length}</b></div>
+  <div class="kpi"><span class="mono">Mức trung bình</span><b>${avg.toFixed(1).replace('.',',')}</b></div>
+  <div class="kpi"><span class="mono">Mạnh nhất</span><b style="font-size:1.25rem">${strong?escH(strong.c.t):'—'}</b></div>
+  <div class="kpi"><span class="mono">Cần bù nhất</span><b style="font-size:1.25rem;color:var(--red)">${escH(weak.c.t)}</b></div>
+</section>
+<section class="section">
+  ${rows.map(r=>{const nk=nextFor(r), weakRow=r.n===weak.n;
+    return `<div class="comp" ${weakRow?'data-weak':''}>
+      <div><span class="h3">${escH(r.c.t)}</span><br><span class="small muted">${escH(r.why)}</span></div>
+      <div><div class="steps" aria-label="Mức ${r.n} trên 4">${[1,2,3,4].map(i=>`<i ${i<=r.n?'data-on':''}></i>`).join('')}</div>
+        <div class="row between" style="margin-top:6px"><span class="mono">${r.n} · ${COMP_LEVELS[r.n]}</span>
+        ${nk?`<a class="small" href="bai.html?id=${encodeURIComponent(nk)}">Bài nên học →</a>`:''}</div></div>
+    </div>`}).join('')}
+</section>`;
+</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Giải case — Tự Học Marketing Case</title>
+<meta name="description" content="Case có bấm giờ: dữ liệu mở dần theo câu hỏi bạn đặt ra, chấm theo bốn tiêu chí — tính toán, insight, đề xuất, cấu trúc.">
+<style>
+  .asks{list-style:none;margin:0;padding:0;border-top:var(--rule)}
+  .ask{display:flex;justify-content:space-between;gap:12px;width:100%;text-align:left;background:none;border:0;border-bottom:var(--rule);padding:12px 0;cursor:pointer;font-size:15px}
+  .ask:hover:not([disabled]){background:var(--ink-06)}
+  .ask[disabled]{cursor:default;color:var(--ink-50)}
+  .clock{font-family:var(--serif);font-size:clamp(2rem,5vw,3rem);line-height:1;font-variant-numeric:tabular-nums}
+  .clock[data-low]{color:var(--red)}
+  .pick{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:var(--rule);padding:11px 0 11px 28px;cursor:pointer;position:relative;font-size:15px;line-height:1.5}
+  .pick::before{content:"";position:absolute;left:2px;top:15px;width:14px;height:14px;border:1px solid var(--ink-50);border-radius:50%}
+  .pick[aria-pressed="true"]::before{background:var(--ink);box-shadow:inset 0 0 0 3px var(--bg)}
+  .crit{display:grid;grid-template-columns:130px 90px 1fr;gap:12px;border-bottom:var(--rule);padding:12px 0;align-items:baseline}
+  @media(max-width:640px){.crit{grid-template-columns:1fr auto}.crit>:last-child{grid-column:1/-1}}
+  .ok{color:var(--ok)} .no{color:var(--red)}
+  .sticky{position:sticky;top:64px;background:var(--bg);z-index:2;padding:10px 0;border-bottom:1px solid var(--ink)}
+</style>
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Case và tiến độ được dựng ngay trong trình duyệt của bạn, không gửi về máy chủ nào.</p></div></noscript>
+<main class="wrap" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=1"></script>
+<script src="assets/js/data/cases.js?v=1"></script>
+<script src="assets/js/app.js?v=3"></script>
+<script>
+appShell('case-thu-vien.html');
+const C=CASES.find(c=>c.id===qp('id'))||CASES[0];
+document.title=C.t+' — Tự Học Marketing Case';
+const app=document.getElementById('app');
+let end=0, timer=null, asked=[], answers={}, talk={c:'',r1:'',r2:'',r3:'',n:''}, startAt=0, over=false;
+
+function intro(){
+  const tries=(S.get().cases[C.id]||[]);
+  app.innerHTML=`<section class="section narrow">
+    <span class="mono">${escH(C.industry)} · ${escH(C.level)} · ${C.minutes} phút</span>
+    <h1 class="h1" style="margin:14px 0 12px">${escH(C.t)}</h1>
+    <p class="mono mono--ink">${escH(C.brand)}</p>
+    <p class="lede" style="margin-top:16px">${escH(C.brief)}</p>
+    <div class="note" style="margin-top:22px">Có ${C.asks.length} câu bạn có thể hỏi để lấy dữ liệu, nhưng không phải câu nào cũng đáng hỏi.
+      Đồng hồ không dừng khi bạn đọc. Hết giờ, bài tự nộp với những gì bạn đã có.
+      Chấm theo bốn tiêu chí: <b>tính toán · insight · đề xuất · cấu trúc</b>.</div>
+    ${tries.length?`<p class="small muted" style="margin-top:14px">Bạn đã làm ${tries.length} lần · gần nhất ${tries[tries.length-1].date}: ${tries[tries.length-1].passed?'đạt':'chưa đạt'}.</p>`:''}
+    <div class="row" style="margin-top:22px"><button class="btn" id="go">Bắt đầu · ${C.minutes}:00</button><a class="btn btn--ghost" href="case-thu-vien.html">Về thư viện</a></div>
+  </section>`;
+  document.getElementById('go').onclick=start;
+}
+
+function start(){
+  asked=[]; answers={}; talk={c:'',r1:'',r2:'',r3:'',n:''}; over=false;
+  startAt=Date.now(); end=startAt+C.minutes*60e3;
+  timer=setInterval(tick,500); work();
+}
+function tick(){
+  const left=Math.max(0,end-Date.now()), m=Math.floor(left/6e4), s=Math.floor(left%6e4/1e3);
+  const el=document.getElementById('clock'); if(el){ el.textContent=`${m}:${String(s).padStart(2,'0')}`; el.toggleAttribute('data-low',left<120e3); }
+  if(!left) grade(true);
+}
+function work(){
+  app.innerHTML=`
+  <div class="sticky row between"><span class="mono">${escH(C.t)}</span><span class="clock" id="clock">${C.minutes}:00</span></div>
+  <section class="section cols cols--eq" style="padding-top:22px">
+    <div>
+      <span class="mono mono--red">Hỏi để lấy dữ liệu</span>
+      <p class="small muted" style="margin:6px 0 10px">${escH(C.brief)}</p>
+      <ul class="asks" id="asks">${C.asks.map(a=>`<li><button class="ask" data-ask="${a.id}" ${asked.includes(a.id)?'disabled':''}>
+        <span>${escH(a.q)}</span><span class="mono">${asked.includes(a.id)?'Exhibit '+(asked.indexOf(a.id)+1):'Hỏi →'}</span></button></li>`).join('')}</ul>
+      <div id="exh">${asked.map((id,i)=>exhibit(id,i)).join('')}</div>
+    </div>
+    <div id="ans">${answerForm()}</div>
+  </section>`;
+  tick(); wireWork();
+}
+function exhibit(id,i){ const a=C.asks.find(x=>x.id===id);
+  return `<div class="exhibit"><div class="exhibit__cap"><b>${escH(a.t)}</b><span class="mono">Exhibit ${i+1} · minh hoạ</span></div>
+    <div class="scroll"><table class="t"><tbody>${a.rows.map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]}</td></tr>`).join('')}</tbody></table></div></div>`; }
+function answerForm(){
+  return `<span class="mono mono--red">Bài làm</span>
+  ${C.qs.map((q,i)=>`<div style="margin-top:18px"><p style="margin:0 0 6px"><b>${i+1}. ${escH(q.q)}</b></p>
+    ${q.kind==='num'?`<div class="answer" style="margin-top:0"><input class="field" data-q="${q.id}" inputmode="decimal" value="${escH(answers[q.id]||'')}" aria-label="${escH(q.q)}"><span class="mono">${escH(q.unit)}</span></div>`
+    :`<div style="border-top:var(--rule)">${q.opts.map((o,j)=>`<button type="button" class="pick" data-q="${q.id}" data-j="${j}" aria-pressed="${answers[q.id]===j}">${escH(o[0])}</button>`).join('')}</div>`}
+  </div>`).join('')}
+  <div style="margin-top:24px"><p style="margin:0 0 4px"><b>${C.qs.length+1}. ${escH(C.talkPrompt)}</b></p>
+    <p class="small muted" style="margin:0 0 8px">Kết luận trước, ba lý do có số, bước tiếp theo.</p>
+    ${[['c','Kết luận'],['r1','Lý do 1'],['r2','Lý do 2'],['r3','Lý do 3'],['n','Bước tiếp theo']].map(([k,l])=>`
+      <label class="mono" for="t-${k}" style="display:block;margin-top:10px">${l}</label>
+      <textarea class="field" id="t-${k}" data-t="${k}" rows="2">${escH(talk[k])}</textarea>`).join('')}
+  </div>
+  <div class="row" style="margin-top:22px"><button class="btn" id="submit">Nộp bài</button></div>`;
+}
+function wireWork(){
+  document.getElementById('asks').onclick=e=>{const b=e.target.closest('[data-ask]'); if(!b||over) return;
+    asked.push(b.dataset.ask); b.disabled=true; b.lastElementChild.textContent='Exhibit '+asked.length;
+    document.getElementById('exh').insertAdjacentHTML('beforeend',exhibit(b.dataset.ask,asked.length-1));};
+  const ans=document.getElementById('ans');
+  ans.oninput=e=>{ if(e.target.dataset.q) answers[e.target.dataset.q]=e.target.value; if(e.target.dataset.t) talk[e.target.dataset.t]=e.target.value; };
+  ans.onclick=e=>{const b=e.target.closest('.pick'); if(!b||over) return; answers[b.dataset.q]=+b.dataset.j;
+    ans.querySelectorAll(`.pick[data-q="${b.dataset.q}"]`).forEach(x=>x.setAttribute('aria-pressed',x===b));};
+  document.getElementById('submit').onclick=()=>{
+    const blanks=C.qs.filter(q=>answers[q.id]===undefined||answers[q.id]==='').length;
+    if(blanks&&!confirm(`Còn ${blanks} câu chưa trả lời. Nộp luôn?`)) return;
+    grade(false);
+  };
+}
+
+const words=t=>String(t||'').trim().split(/\s+/).filter(Boolean).length;
+function grade(timeout){
+  if(over) return; over=true; clearInterval(timer); timer=null;
+  const secs=Math.round((Date.now()-startAt)/1000), res={};
+  const calcQs=C.qs.filter(q=>q.crit==='calc'), fixes=[];
+  let calcOk=0;
+  for(const q of calcQs){
+    let n=parseNum(answers[q.id]); const near=x=>Math.abs(n-x)<=Math.max(Math.abs(x)*q.tol,1e-9);
+    const ok=isFinite(n)&&near(q.ans); res[q.id]=ok; if(ok){calcOk++;continue;}
+    const hit=isFinite(n)&&(q.wrong||[]).find(([x])=>near(x)), code=hit?hit[1]:(isFinite(n)?'SAI_TINH_TOAN':null);
+    if(code) logError(code,q.lesson);
+    fixes.push({q,code,blank:!isFinite(n)});
+  }
+  const pk=id=>{const q=C.qs.find(x=>x.id===id); const ok=answers[id]!==undefined&&q.opts[answers[id]]&&q.opts[answers[id]][1]; if(!ok) fixes.push({q,code:null,blank:answers[id]===undefined}); return !!ok;};
+  const insightOk=pk(C.qs.find(q=>q.crit==='insight').id), recOk=pk(C.qs.find(q=>q.crit==='rec').id);
+  const hasNum=t=>/\d/.test(t);
+  const st={c:words(talk.c)>=4&&words(talk.c)<=45, r:[talk.r1,talk.r2,talk.r3].filter(r=>words(r)>=4&&hasNum(r)).length, n:words(talk.n)>=5};
+  const structOk=st.c&&st.r===3&&st.n;
+  const pass={calc:calcOk===calcQs.length, insight:insightOk, rec:recOk, structure:structOk};
+  const passed=Object.values(pass).filter(Boolean).length>=3&&pass.calc;
+  const keyAsks=C.asks.filter(a=>a.key).map(a=>a.id), missedKey=keyAsks.filter(id=>!asked.includes(id)), noise=asked.filter(id=>!keyAsks.includes(id));
+
+  const s=S.get(), list=[...(s.cases[C.id]||[]), {date:today(),secs,timeout,pass,passed,asked:[...asked]}].slice(-10);
+  const firstPass=passed&&!(s.cases[C.id]||[]).some(a=>a.passed);
+  S.set({cases:{...s.cases,[C.id]:list}});
+  if(firstPass) award('case',C.id);
+
+  const lesson=k=>{const m=lessonMeta(k);return m?`<a href="bai.html?id=${encodeURIComponent(k)}">${escH(m.t)}</a>`:'';};
+  const row=(name,ok,detail)=>`<div class="crit"><span class="mono mono--ink">${name}</span><span class="${ok?'ok':'no'}">${ok?'Đạt':'Chưa đạt'}</span><span class="small">${detail}</span></div>`;
+  app.innerHTML=`<section class="section narrow">
+    <span class="mono mono--red">${timeout?'Hết giờ — bài tự nộp':'Đã nộp'} · ${Math.floor(secs/60)} phút ${secs%60} giây</span>
+    <h1 class="h1" style="margin:14px 0 12px">${passed?'Đạt.':'Chưa đạt.'}<br><em>${Object.values(pass).filter(Boolean).length} / 4 tiêu chí.</em></h1>
+    <p class="lede">${passed?(firstPass?`Lần đầu đạt case này: +${XP.case} XP. `:'')+'Tiêu chí đạt ở đây được tính vào bản đồ năng lực.'
+      :'Cần đúng mọi câu tính toán và đạt ít nhất ba trên bốn tiêu chí. Lỗi tính toán đã được ghi vào trang ôn lỗi.'}</p>
+    <div style="border-top:1px solid var(--ink);margin-top:22px">
+      ${row('Tính toán',pass.calc,`${calcOk} / ${calcQs.length} câu đúng.`)}
+      ${row('Insight',pass.insight,pass.insight?'Chỉ ra đúng vấn đề cốt lõi.':'Chọn chưa đúng vấn đề cốt lõi.')}
+      ${row('Đề xuất',pass.rec,pass.rec?'Khuyến nghị bám vào số.':'Khuyến nghị chưa bám vào số liệu.')}
+      ${row('Cấu trúc',pass.structure,[st.c?'':'Kết luận cần 4–45 chữ.', st.r===3?'':`Mới ${st.r}/3 lý do có số.`, st.n?'':'Bước tiếp theo còn mơ hồ.'].filter(Boolean).join(' ')||'Kết luận trước, ba lý do có số, bước tiếp cụ thể.')}
+    </div>
+    <div class="note" style="margin-top:22px"><b>Cách bạn lấy dữ liệu.</b> Hỏi ${asked.length}/${C.asks.length} câu.
+      ${missedKey.length?`Bỏ lỡ ${missedKey.length} dữ liệu quan trọng: ${missedKey.map(id=>'“'+escH(C.asks.find(a=>a.id===id).q)+'”').join(', ')}.`:'Không bỏ lỡ dữ liệu quan trọng nào.'}
+      ${noise.length?` ${noise.length} câu không cần thiết: ${noise.map(id=>'“'+escH(C.asks.find(a=>a.id===id).q)+'”').join(', ')} — trong thi case, đó là thời gian mất đi.`:''}</div>
+
+    ${fixes.length?`<div class="exhibit"><div class="exhibit__cap"><b>Sai ở đâu và học lại bài nào</b><span class="mono">${fixes.length}</span></div>
+      <ul class="list">${fixes.map(f=>`<li style="padding:12px 0"><b>${escH(f.q.q)}</b>
+        <div class="small" style="margin-top:4px">${f.blank?'Bỏ trống. ':''}${f.code?'<span class="tag tag--red">'+escH(ERRORS[f.code])+'</span> ':''}${f.q.why}</div>
+        <div class="small" style="margin-top:4px">Học lại: ${lesson(f.q.lesson)}</div></li>`).join('')}</ul></div>`:''}
+
+    <div class="exhibit"><div class="exhibit__cap"><b>Câu trả lời mẫu · 60 giây</b><span class="mono">so với bài của bạn</span></div>
+      <div class="frame">
+        <div><span class="mono">Kết luận</span><span>${C.model.c}${talk.c?`<br><span class="small muted">Bạn: ${escH(talk.c)}</span>`:''}</span></div>
+        ${C.model.r.map((r,i)=>`<div><span class="mono">Lý do ${i+1}</span><span>${r}${talk['r'+(i+1)]?`<br><span class="small muted">Bạn: ${escH(talk['r'+(i+1)])}</span>`:''}</span></div>`).join('')}
+        <div><span class="mono">Bước tiếp</span><span>${C.model.n}${talk.n?`<br><span class="small muted">Bạn: ${escH(talk.n)}</span>`:''}</span></div>
+      </div></div>
+    <div class="row" style="margin-top:22px"><button class="btn" id="again">Làm lại</button><a class="btn btn--ghost" href="nang-luc.html">Xem bản đồ năng lực</a><a class="btn btn--ghost" href="case-thu-vien.html">Case khác</a></div>
+  </section>`;
+  document.getElementById('again').onclick=intro;
+}
+intro();
+</script>
+</body>
+</html>

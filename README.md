@@ -56,6 +56,8 @@ Giao diện casebook nền trắng: `assets/css/case.css`. Lõi: `assets/js/app.
 | `bai.html?id=` | Bài học 5 phần: bài đọc · bài tập tính số · nói trong 60 giây · case · ôn lỗi. Chỉnh cỡ chữ, chế độ Sáng / Giấy ngà / Tối |
 | `gioi-thieu.html` | Landing: sứ mệnh, thử một bài tính số không cần đăng ký, phương pháp 5 phần, 4 nhóm người học, case mẫu, số liệu nội dung đếm từ dữ liệu thật |
 | `quiz.html` | Quiz phản xạ 60 giây: câu hỏi sinh từ các bài đã học (ý chính, định nghĩa, bài tính số), 3 lượt/ngày |
+| `case-thu-vien.html` · `giai-case.html?id=` | Case có bấm giờ: dữ liệu mở theo câu người học hỏi, tự nộp khi hết giờ, chấm 4 tiêu chí (tính toán · insight · đề xuất · cấu trúc), chỉ ra dữ liệu bỏ lỡ / hỏi thừa và bài cần học lại |
+| `nang-luc.html` | 15 năng lực × 4 mức, mức chỉ lên từ bài nộp (quiz, bài tính số, case) |
 | `on-loi.html` | Lỗi theo mã có tên, nhắc ôn sau 1 · 3 · 7 ngày, lỗi ≥3 lần thành bài luyện bắt buộc |
 
 Dữ liệu: `curriculum.js` (chặng, module, lộ trình, nhóm người học — xếp 26 daily lesson + 22 nguyên lý có sẵn),

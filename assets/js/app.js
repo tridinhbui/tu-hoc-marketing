@@ -4,7 +4,7 @@
 /* ---------------- state ---------------- */
 const APP_KEY='thmc.v1';
 const APP_DEFAULT={ persona:null, path:null, done:{}, drills:{}, talks:{}, xp:0,
-  streak:0, lastDay:null, freezes:0, errors:{}, log:[], theme:'light', read:18, focus:{} };
+  streak:0, lastDay:null, freezes:0, errors:{}, log:[], theme:'light', read:18, focus:{}, quizHits:{}, cases:{} };
 const S={
   get(){ try{ return {...APP_DEFAULT,...JSON.parse(localStorage.getItem(APP_KEY)||'{}')}; }catch(e){ return {...APP_DEFAULT}; } },
   set(p){ const s={...S.get(),...p}; try{ localStorage.setItem(APP_KEY,JSON.stringify(s)); }catch(e){} return s; },
@@ -52,7 +52,7 @@ const LEVELS=['Người quan sát','Người ghi chép','Người đặt câu h�
 const lvXP=n=>Math.round(10*Math.pow(n-1,1.65));           // XP cần để đạt cấp n (1..30)
 function level(xp=S.get().xp){ let n=1; for(let i=1;i<=30;i++) if(xp>=lvXP(i)) n=i;
   return {n,name:LEVELS[n-1],cur:lvXP(n),next:n<30?lvXP(n+1):null}; }
-const XP={lesson:20,drill:15,talk:10,review:5,focus:15,quiz:2};
+const XP={lesson:20,drill:15,talk:10,review:5,focus:15,quiz:2,case:40};
 
 /* ---------------- streak + thẻ đóng băng ---------------- */
 function touch(s=S.get()){
@@ -125,7 +125,7 @@ function parseNum(raw){
 const fmt=n=>Number(n).toLocaleString('vi-VN',{maximumFractionDigits:2});
 
 /* ---------------- shell ---------------- */
-const APP_NAV=[['Học','hoc.html'],['Bắt đầu từ đâu','ban-do.html'],['Quiz 60 giây','quiz.html'],['Ôn lỗi','on-loi.html'],['Thư viện case','gallery.html'],['Bàn làm việc','roadmap.html']];
+const APP_NAV=[['Học','hoc.html'],['Bắt đầu từ đâu','ban-do.html'],['Quiz 60 giây','quiz.html'],['Case có giờ','case-thu-vien.html'],['Năng lực','nang-luc.html'],['Ôn lỗi','on-loi.html'],['Bàn làm việc','roadmap.html']];
 function applyTheme(s=S.get()){
   document.documentElement.dataset.theme=s.theme==='light'?'':s.theme;
   document.documentElement.style.setProperty('--read',(s.read||18)+'px');
@@ -173,3 +173,27 @@ function conceptMCQ(key){
     opts:shuffle([{t:m.src.one,ok:true},...others.map(o=>({t:o.one,ok:false}))])};
 }
 function quizBank(keys){ return shuffle(keys.flatMap(k=>[conceptMCQ(k),drillMCQ(k)]).filter(Boolean)); }
+
+/* ---------------- năng lực: mức chỉ lên từ bài nộp, không tự đánh giá ----------------
+   1 Nhận biết  — trả lời đúng ít nhất một câu quiz hoặc bài tính số thuộc năng lực này
+   2 Áp dụng    — làm đúng bài tính số của năng lực, hoặc đúng ≥3 câu quiz, và không còn lỗi bắt buộc chưa xử lý
+   3 Phân tích  — đạt tiêu chí gắn với năng lực này trong một case có bấm giờ
+   4 Thuyết phục — đạt tiêu chí đó trong một case đạt tổng thể VÀ phần nói 60 giây cũng đạt */
+function caseAttempts(s=S.get()){ return Object.entries(s.cases||{}).flatMap(([id,list])=>list.map(a=>({id,...a}))); }
+function compLevel(c,s=S.get()){
+  const drillOk=c.lessons.filter(k=>s.drills[k]).length;
+  const qh=c.lessons.reduce((n,k)=>n+((s.quizHits||{})[k]||0),0);
+  const blocked=mustDrill(s).some(e=>e.lessons.some(k=>c.lessons.includes(k)));
+  const cs=typeof CASES!=='undefined'?CASES:[];
+  const hitsFor=a=>{const cd=cs.find(x=>x.id===a.id); if(!cd) return false;
+    return Object.entries(cd.comps).some(([crit,ids])=>ids.includes(c.id)&&a.pass&&a.pass[crit]);};
+  const att=caseAttempts(s);
+  const l3=att.filter(hitsFor), l4=l3.filter(a=>a.passed&&a.pass.structure);
+  let n=0, why='Chưa có bài nộp nào thuộc năng lực này.';
+  if(drillOk+qh>=1){ n=1; why=`${drillOk} bài tính số đúng · ${qh} câu quiz đúng.`; }
+  if((drillOk>=1||qh>=3)&&!blocked){ n=2; why=`${drillOk} bài tính số đúng · ${qh} câu quiz đúng · không còn lỗi bắt buộc.`; }
+  else if(n===1&&blocked) why+=' Còn lỗi bắt buộc chưa xử lý nên chưa lên được mức Áp dụng.';
+  if(l3.length){ n=3; why=`Đạt tiêu chí liên quan trong ${new Set(l3.map(a=>a.id)).size} case có bấm giờ.`; }
+  if(l4.length){ n=4; why='Đạt case tổng thể và phần nói 60 giây cũng đạt.'; }
+  return {n,why};
+}

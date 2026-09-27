@@ -14,7 +14,8 @@
 <script src="assets/js/data/principles.js?v=7"></script>
 <script src="assets/js/data/curriculum.js?v=1"></script>
 <script src="assets/js/data/drills.js?v=1"></script>
-<script src="assets/js/app.js?v=2"></script>
+<script src="assets/js/data/cases.js?v=1"></script>
+<script src="assets/js/app.js?v=3"></script>
 <script>
 appShell('hoc.html');
 /* đến từ landing với ?persona= : chọn luôn nhóm, không hỏi lại */
@@ -100,6 +101,15 @@ function render(){
         ${must.map(e=>escH(ERRORS[e.code]||e.code)+' · '+e.count+' lần').join('<br>')}
         <br><a href="on-loi.html">Làm ngay →</a></div>`:''}
     </div>
+  </section>
+
+  <section class="section cols cols--eq">
+    <a class="stack" style="text-decoration:none" href="case-thu-vien.html"><span class="mono mono--red">Đấu trường</span>
+      <span class="h3">Case có bấm giờ · ${CASES.length} case</span>
+      <span class="small muted">Dữ liệu mở theo câu bạn hỏi. Chấm theo tính toán, insight, đề xuất, cấu trúc.</span></a>
+    <a class="stack" style="text-decoration:none" href="nang-luc.html"><span class="mono mono--red">Năng lực</span>
+      <span class="h3">${COMPETENCIES.filter(c=>compLevel(c,s).n>0).length} / ${COMPETENCIES.length} năng lực có bằng chứng</span>
+      <span class="small muted">Mức chỉ lên từ bài bạn nộp. Xem mình mạnh, yếu ở đâu.</span></a>
   </section>
 
   <section class="section">

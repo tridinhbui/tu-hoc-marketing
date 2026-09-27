@@ -22,7 +22,7 @@
 <script src="assets/js/data/principles.js?v=7"></script>
 <script src="assets/js/data/curriculum.js?v=1"></script>
 <script src="assets/js/data/drills.js?v=1"></script>
-<script src="assets/js/app.js?v=2"></script>
+<script src="assets/js/app.js?v=3"></script>
 <script>
 appShell('quiz.html');
 const ROUNDS=3, SECS=60, MIN_DONE=3;
@@ -82,7 +82,7 @@ function pick(j){
   if(locked) return; locked=true;
   const q=bank[i], o=q.opts[j];
   document.querySelectorAll('.opt').forEach((b,k)=>{ if(q.opts[k].ok) b.dataset.r='ok'; });
-  if(o.ok) right++; else { wrong++; document.querySelector(`.opt[data-j="${j}"]`).dataset.r='bad';
+  if(o.ok){ right++; const st=S.get(); S.set({quizHits:{...st.quizHits,[q.key]:((st.quizHits||{})[q.key]||0)+1}}); } else { wrong++; document.querySelector(`.opt[data-j="${j}"]`).dataset.r='bad';
     if(q.type==='drill') logError(o.code||'SAI_TINH_TOAN',q.key); }
   answered.push({q,ok:o.ok});
   i++; setTimeout(()=>{ if(timer) show(); }, o.ok?350:1100);
