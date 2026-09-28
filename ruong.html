@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Rương thưởng — Tự Học Marketing Case</title>
+<meta name="description" content="Rương mở theo mốc chuỗi ngày học: tài liệu viết riêng và huy hiệu.">
+<style>
+  .chest{display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;padding:16px 0;border-bottom:var(--rule)}
+  .chest__n{font-family:var(--serif);font-size:2rem;line-height:1;color:var(--ink-30)}
+  .chest[data-open] .chest__n{color:var(--ink)}
+  .doc h3{font-family:var(--serif);font-weight:500;font-size:1.15rem;margin:18px 0 6px}
+  .doc ul{margin:0;padding-left:1.1em}.doc li{margin-bottom:5px}
+  @media print{.top,.foot,.noprint{display:none!important}}
+</style>
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Nội dung và tiến độ được dựng ngay trong trình duyệt của bạn, không gửi về máy chủ nào.</p></div></noscript>
+<main class="wrap narrow" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/rewards.js?v=1"></script>
+<script src="assets/js/app.js?v=5"></script>
+<script>
+appShell('');
+function render(){
+  const s=S.get(), best=Math.max(s.best||0,s.streak), open=s.chests||{};
+  const want=qp('doc'), wantC=CHESTS.find(c=>c.id===want);
+  if(wantC && best>=wantC.streak){ const d=wantC.doc;
+    document.getElementById('app').innerHTML=`<section class="section doc">
+      <div class="row between noprint"><a class="mono" href="ruong.html">← Rương thưởng</a><button class="btn btn--ghost" onclick="print()">In / lưu PDF</button></div>
+      <span class="mono mono--red" style="display:block;margin-top:20px">Tài liệu · mở ở mốc ${wantC.streak} ngày</span>
+      <h1 class="h1" style="margin:12px 0 10px">${escH(d.t)}</h1>
+      ${d.parts.map(([h,items])=>`<h3>${escH(h)}</h3><ul>${items.map(x=>`<li>${escH(x)}</li>`).join('')}</ul>`).join('')}
+    </section>`; return; }
+  const next=CHESTS.find(c=>best<c.streak);
+  document.getElementById('app').innerHTML=`<section class="section">
+    <span class="mono mono--red">Rương thưởng</span>
+    <h1 class="h1" style="margin:14px 0 16px">Học đều,<br><em>mở rương.</em></h1>
+    <p class="lede">Mỗi rương mở ở một mốc chuỗi ngày — tính theo chuỗi dài nhất bạn từng đạt, nên đứt chuỗi không làm mất rương đã có.
+      Bên trong là một tài liệu viết riêng cho nền tảng và một huy hiệu.</p>
+    <div class="kpis" style="margin-top:22px">
+      <div class="kpi"><span class="mono">Chuỗi hiện tại</span><b>${s.streak}</b></div>
+      <div class="kpi"><span class="mono">Dài nhất</span><b>${best}</b></div>
+      <div class="kpi"><span class="mono">Đã mở</span><b>${Object.keys(open).length} / ${CHESTS.length}</b></div>
+      <div class="kpi"><span class="mono">Rương kế</span><b>${next?next.streak+' ngày':'—'}</b>${next?`<span class="small muted">còn ${next.streak-best} ngày</span>`:''}</div>
+    </div></section>
+  <section>${CHESTS.map(c=>{const can=best>=c.streak, did=!!open[c.id];
+    return `<div class="chest" ${can?'data-open':''}>
+      <span class="chest__n">${c.streak}</span>
+      <span>${did?`<b>${escH(c.doc.t)}</b><br><span class="small muted">Huy hiệu: ${escH(c.badge)} · mở ngày ${open[c.id]}</span>`
+        :`<b>Rương ${c.streak} ngày</b><br><span class="small muted">${can?'Đã đủ điều kiện — mở ra xem bên trong.':'Khoá · cần chuỗi '+c.streak+' ngày.'}</span>`}</span>
+      ${did?`<a class="btn btn--ghost" href="ruong.html?doc=${c.id}">Đọc</a>`:can?`<button class="btn" data-open="${c.id}">Mở rương</button>`:'<span class="mono">Khoá</span>'}
+    </div>`}).join('')}</section>`;
+}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-open]'); if(!b) return;
+  const s=S.get(); S.set({chests:{...s.chests,[b.dataset.open]:today()}});
+  const c=CHESTS.find(x=>x.id===b.dataset.open); toast('Huy hiệu mới: '+c.badge); render();});
+render();
+</script>
+</body>
+</html>

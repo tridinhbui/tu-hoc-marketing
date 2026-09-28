@@ -15,7 +15,8 @@
 <script src="assets/js/data/curriculum.js?v=1"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
-<script src="assets/js/app.js?v=4"></script>
+<script src="assets/js/data/rewards.js?v=1"></script>
+<script src="assets/js/app.js?v=5"></script>
 <script>
 appShell('hoc.html');
 /* đến từ landing với ?persona= : chọn luôn nhóm, không hỏi lại */
@@ -110,6 +111,12 @@ function render(){
     <a class="stack" style="text-decoration:none" href="nang-luc.html"><span class="mono mono--red">Năng lực</span>
       <span class="h3">${COMPETENCIES.filter(c=>compLevel(c,s).n>0).length} / ${COMPETENCIES.length} năng lực có bằng chứng</span>
       <span class="small muted">Mức chỉ lên từ bài bạn nộp. Xem mình mạnh, yếu ở đâu.</span></a>
+    <a class="stack" style="text-decoration:none" href="ruong.html"><span class="mono mono--red">Rương thưởng</span>
+      <span class="h3">${(()=>{const b=Math.max(s.best||0,s.streak),n=CHESTS.find(c=>b<c.streak);return n?'Rương kế ở mốc '+n.streak+' ngày':'Đã mở hết rương';})()}</span>
+      <span class="small muted">Tài liệu viết riêng và huy hiệu, mở theo chuỗi ngày dài nhất.</span></a>
+    <a class="stack" style="text-decoration:none" href="tro-choi.html"><span class="mono mono--red">Trò chơi</span>
+      <span class="h3">Điều hành thương hiệu trong 8 quý</span>
+      <span class="small muted">Chia ngân sách giữa media, điểm bán, giữ chân và giảm giá.</span></a>
   </section>
 
   <section class="section">

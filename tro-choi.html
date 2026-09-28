@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Điều hành thương hiệu — Tự Học Marketing Case</title>
+<meta name="description" content="Mini-game: điều hành một thương hiệu giả lập qua 8 quý. Chia ngân sách giữa media, điểm bán, giữ chân và giảm giá.">
+<style>
+  .lever{display:grid;grid-template-columns:150px 1fr 70px;gap:12px;align-items:center;padding:10px 0;border-bottom:var(--rule)}
+  @media(max-width:560px){.lever{grid-template-columns:1fr 70px}.lever input{grid-column:1/-1;order:3}}
+  .lever input[type=range]{width:100%;accent-color:var(--ink)}
+  .lever b{font-family:var(--mono);font-weight:400;text-align:right}
+  .over{color:var(--red)}
+</style>
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Nội dung và tiến độ được dựng ngay trong trình duyệt của bạn, không gửi về máy chủ nào.</p></div></noscript>
+<main class="wrap" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/game.js?v=1"></script>
+<script src="assets/js/app.js?v=5"></script>
+<script>
+appShell('');
+let st=GAME.start(), plan={m:1,d:1,r:1,disc:0};
+const T=n=>(n/1e9).toLocaleString('vi-VN',{maximumFractionDigits:2})+' tỷ';
+const P=x=>(x*100).toLocaleString('vi-VN',{maximumFractionDigits:1})+'%';
+const N=n=>Math.round(n).toLocaleString('vi-VN');
+
+function advice(h,prev){
+  const a=[];
+  if(h.disc>0) a.push(['Giảm giá kéo thêm khách mới nhưng mỗi khách mang về ít lãi hơn, và kéo giá tham chiếu xuống cho các quý sau.','L:63']);
+  if(h.m===0&&prev&&h.A<prev.A) a.push([`Không chi media: nhận biết tụt từ ${P(prev.A)} xuống ${P(h.A)}. Trí nhớ phai nếu không được nuôi.`,'P:mental-availability']);
+  if(h.d===0&&h.D<.5) a.push([`Độ phủ ${P(h.D)}: người đã biết đến bạn vẫn không mua được nếu không thấy hàng.`,'P:physical-availability']);
+  if(h.r===0) a.push(['Không đầu tư giữ chân: một nửa số khách rời đi mỗi quý.','L:59']);
+  if(h.m>=2.5) a.push(['Dồn gần hết vào media: mỗi tỷ thêm mang về ít nhận biết hơn tỷ trước.','L:72']);
+  return a;
+}
+function render(){
+  const done=st.q>=GAME.QUARTERS, used=plan.m+plan.d+plan.r, h=st.hist, last=h[h.length-1], prev=h[h.length-2];
+  document.getElementById('app').innerHTML=`
+  <section class="section">
+    <span class="mono mono--red">Mini-game · số liệu minh hoạ</span>
+    <h1 class="h1" style="margin:14px 0 14px">Điều hành một thương hiệu<br><em>trong ${GAME.QUARTERS} quý.</em></h1>
+    <p class="lede" style="max-width:64ch">Bạn quản lý một thương hiệu nước giải khát giả định trên thị trường ${N(GAME.MARKET)} người.
+      Mỗi quý có ${GAME.BUDGET} tỷ để chia cho media, mở điểm bán và giữ chân; chi phí cố định ${T(GAME.FIXED)} mỗi quý.
+      Mô hình cố định, không có may rủi: cùng chiến lược luôn ra cùng kết quả.</p>
+  </section>
+  <section class="kpis">
+    <div class="kpi"><span class="mono">Quý</span><b>${st.q} / ${GAME.QUARTERS}</b></div>
+    <div class="kpi"><span class="mono">Khách hàng</span><b>${N(st.cust)}</b><span class="small muted">thị phần ${P(GAME.share(st))}</span></div>
+    <div class="kpi"><span class="mono">Lãi tích luỹ</span><b style="${st.cash<0?'color:var(--red)':''}">${T(st.cash)}</b></div>
+    <div class="kpi"><span class="mono">Nhận biết · Phủ · Giữ chân</span><b style="font-size:1.3rem">${P(st.A)} · ${P(st.D)} · ${P(st.R)}</b></div>
+  </section>
+  ${done?endView():`<section class="section cols cols--2">
+    <div>
+      <span class="mono mono--ink">Kế hoạch quý ${st.q+1}</span>
+      ${[['m','Media','Nuôi nhận biết. Phai 20% mỗi quý nếu không chi.'],['d','Mở điểm bán','Tăng độ phủ. Tích luỹ, không phai.'],['r','Giữ chân','Tăng tỉ lệ khách quay lại.']].map(([k,l,hint])=>`
+        <label class="lever"><span>${l}<br><span class="small muted">${hint}</span></span>
+          <input type="range" min="0" max="3" step="0.25" value="${plan[k]}" data-k="${k}" aria-label="${l}">
+          <b>${plan[k].toLocaleString('vi-VN')} tỷ</b></label>`).join('')}
+      <label class="lever"><span>Giảm giá<br><span class="small muted">Kéo khách mới, ăn vào biên.</span></span>
+        <select class="field" data-k="disc">${[0,.1,.2,.3].map(v=>`<option value="${v}" ${plan.disc===v?'selected':''}>${v*100}%</option>`).join('')}</select><b></b></label>
+      <div class="row between" style="margin-top:14px"><span id="used" class="mono ${used>GAME.BUDGET?'over':''}">Đã chia ${used.toLocaleString('vi-VN')} / ${GAME.BUDGET} tỷ</span>
+        <button class="btn" id="run" ${used>GAME.BUDGET?'disabled':''}>Chạy quý ${st.q+1}</button></div>
+    </div>
+    <div>${last?`<span class="mono mono--ink">Nhận xét quý ${last.q}</span>
+      ${advice(last,prev).map(([t,k])=>`<p class="note" style="margin:10px 0">${t} <a href="bai.html?id=${encodeURIComponent(k)}">Xem bài →</a></p>`).join('')||'<p class="muted" style="margin-top:10px">Không có cảnh báo nào. Giữ nhịp.</p>'}`
+      :'<p class="muted">Chưa chạy quý nào. Chia ngân sách rồi bấm chạy.</p>'}</div>
+  </section>`}
+  ${h.length?`<section class="section"><div class="exhibit"><div class="exhibit__cap"><b>Kết quả theo quý</b><span class="mono">Exhibit 1</span></div>
+    <div class="scroll"><table class="t"><thead><tr><th>Quý</th><th class="n">Media</th><th class="n">Điểm bán</th><th class="n">Giữ chân</th><th class="n">Giảm giá</th><th class="n">Khách mới</th><th class="n">Khách giữ</th><th class="n">Doanh thu</th><th class="n">Lãi quý</th></tr></thead>
+    <tbody>${h.map(x=>`<tr><td>${x.q}</td><td class="n">${x.m}</td><td class="n">${x.d}</td><td class="n">${x.r}</td><td class="n">${x.disc*100}%</td>
+      <td class="n">${N(x.neu)}</td><td class="n">${N(x.kept)}</td><td class="n">${T(x.rev)}</td><td class="n" style="${x.profit<0?'color:var(--red)':''}">${T(x.profit)}</td></tr>`).join('')}</tbody></table></div></div></section>`:''}`;
+  wire();
+}
+function endView(){
+  const s=S.get(), best=(s.games||[]).reduce((m,g)=>Math.max(m,g.cash),-Infinity);
+  return `<section class="section"><span class="mono mono--red">Hết ${GAME.QUARTERS} quý</span>
+    <h2 class="h2" style="margin:12px 0">Lãi tích luỹ ${T(st.cash)} · thị phần ${P(GAME.share(st))}</h2>
+    <p class="muted">${isFinite(best)?'Kỷ lục của bạn: '+T(best)+'. ':''}Thử lại với một chiến lược khác để thấy nguyên lý nào đang chi phối kết quả.</p>
+    <button class="btn" id="again" style="margin-top:14px">Chơi lại</button></section>`;
+}
+function wire(){
+  document.querySelectorAll('[data-k]').forEach(el=>el.oninput=()=>{
+    plan[el.dataset.k]=+el.value;
+    if(el.type==='range') el.nextElementSibling.textContent=plan[el.dataset.k].toLocaleString('vi-VN')+' tỷ';
+    const used=plan.m+plan.d+plan.r, u=document.getElementById('used'), r=document.getElementById('run');
+    u.textContent=`Đã chia ${used.toLocaleString('vi-VN')} / ${GAME.BUDGET} tỷ`; u.classList.toggle('over',used>GAME.BUDGET);
+    r.disabled=used>GAME.BUDGET;
+  });
+  const r=document.getElementById('run'); if(r) r.onclick=()=>{ st=GAME.step(st,plan);
+    if(st.q>=GAME.QUARTERS){ const s=S.get(), g=[...(s.games||[]),{d:today(),cash:st.cash,share:GAME.share(st)}].slice(-20);
+      const playedToday=(s.games||[]).some(x=>x.d===today()); S.set({games:g}); if(!playedToday) award('game',today()); }
+    render(); };
+  const a=document.getElementById('again'); if(a) a.onclick=()=>{st=GAME.start(); plan={m:1,d:1,r:1,disc:0}; render();};
+}
+render();
+</script>
+</body>
+</html>

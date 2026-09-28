@@ -4,7 +4,7 @@
 /* ---------------- state ---------------- */
 const APP_KEY='thmc.v1';
 const APP_DEFAULT={ persona:null, path:null, done:{}, drills:{}, talks:{}, xp:0,
-  streak:0, lastDay:null, freezes:0, errors:{}, log:[], theme:'light', read:18, focus:{}, quizHits:{}, cases:{} };
+  streak:0, lastDay:null, freezes:0, errors:{}, log:[], theme:'light', read:18, focus:{}, quizHits:{}, cases:{}, chests:{}, best:0, games:[] };
 const S={
   get(){ try{ return {...APP_DEFAULT,...JSON.parse(localStorage.getItem(APP_KEY)||'{}')}; }catch(e){ return {...APP_DEFAULT}; } },
   set(p){ const s={...S.get(),...p}; try{ localStorage.setItem(APP_KEY,JSON.stringify(s)); }catch(e){} return s; },
@@ -58,7 +58,7 @@ const LEVELS=['Người quan sát','Người ghi chép','Người đặt câu h�
 const lvXP=n=>Math.round(10*Math.pow(n-1,1.65));           // XP cần để đạt cấp n (1..30)
 function level(xp=S.get().xp){ let n=1; for(let i=1;i<=30;i++) if(xp>=lvXP(i)) n=i;
   return {n,name:LEVELS[n-1],cur:lvXP(n),next:n<30?lvXP(n+1):null}; }
-const XP={lesson:20,drill:15,talk:10,review:5,focus:15,quiz:2,case:40};
+const XP={lesson:20,drill:15,talk:10,review:5,focus:15,quiz:2,case:40,game:30};
 
 /* ---------------- streak + thẻ đóng băng ---------------- */
 function touch(s=S.get()){
@@ -69,7 +69,7 @@ function touch(s=S.get()){
   else if(gap===2 && freezes>0){ freezes--; streak++; toast('Đã dùng một thẻ đóng băng — chuỗi vẫn giữ.'); }
   else streak=1;
   if(streak>0 && streak%7===0 && freezes<2) freezes++;   // mỗi 7 ngày liên tiếp được một thẻ, giữ tối đa 2
-  return S.set({streak,freezes,lastDay:t});
+  return S.set({streak,freezes,lastDay:t,best:Math.max(s.best||0,streak)});
 }
 function award(kind,ref,times=1){
   if(times<=0) return S.get();
