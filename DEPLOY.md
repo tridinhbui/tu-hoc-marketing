@@ -57,7 +57,41 @@ Site chạy ở `https://nhinthay.pages.dev`. Gắn tên miền riêng trong das
 các trang HTML, `assets/`, `case/`, `thuong-hieu/`, `sitemap.xml`, `robots.txt`.
 `api/`, `tools_*` và mọi file `.md` **không** được copy sang.
 
-## 4. Deploy Worker nhận email
+## 4. Deploy Worker (API: tài khoản, đồng bộ, xếp hạng, cộng đồng, AI)
+
+Không deploy Worker thì site vẫn chạy đầy đủ phần học (lưu trong trình duyệt);
+các trang Tài khoản, Cộng đồng, Xếp hạng, Phỏng vấn AI sẽ tự báo "cần máy chủ".
+
+Cần có: **một tên miền riêng trên Cloudflare** (link đăng nhập gửi từ tên miền này, và route
+`/api/*` phải nằm cùng tên miền với site để cookie đăng nhập hoạt động — `*.pages.dev` không gắn route được).
+
+```bash
+cd api
+npm install
+npx wrangler d1 create nhinthay                     # dán database_id vào wrangler.jsonc
+npx wrangler kv namespace create SESSIONS           # dán id vào wrangler.jsonc
+npx wrangler d1 execute nhinthay --remote --file ./schema.sql
+npx wrangler email sending enable <ten-mien-cua-ban>   # bật gửi mail cho tên miền
+npx wrangler secret put ANTHROPIC_API_KEY           # bỏ qua bước này nếu chưa muốn bật AI
+```
+
+Sửa `vars` trong `api/wrangler.jsonc`: `APP_ORIGIN` = `https://<ten-mien>`, `MAIL_FROM` = một địa chỉ
+trên tên miền đó, `ADMIN_EMAILS` = email của bạn (được vào `quan-tri.html`). Hạn mức AI miễn phí mỗi người
+chỉnh ở `AI_GRADE_PER_MONTH`, `AI_INTERVIEW_PER_MONTH`, `AI_ASSIST_PER_DAY`. Rồi:
+
+```bash
+npx wrangler deploy
+```
+
+Chạy thử trên máy (không gửi mail, link đăng nhập trả thẳng trong phản hồi):
+
+```bash
+cp .dev.vars.example .dev.vars
+npx wrangler d1 execute nhinthay --local --file ./schema.sql
+npx wrangler dev --local --assets ../dist
+```
+
+### Worker nhận email đăng ký (phần cũ)
 
 ```bash
 cd api

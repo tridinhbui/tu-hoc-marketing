@@ -5,23 +5,31 @@
   "compatibility_date": "2026-08-01",
   "observability": { "enabled": true },
 
-  // Tạo bằng: wrangler d1 create nhinthay
-  // rồi dán database_id vào đây.
+  // Tạo bằng: npx wrangler d1 create nhinthay — rồi dán database_id vào đây.
   "d1_databases": [
     { "binding": "DB", "database_name": "nhinthay", "database_id": "<D1_DATABASE_ID>" }
   ],
 
-  // Tạo bằng: wrangler kv namespace create SESSIONS
+  // Tạo bằng: npx wrangler kv namespace create SESSIONS — phiên đăng nhập, link một lần, giới hạn tần suất.
   "kv_namespaces": [
     { "binding": "SESSIONS", "id": "<KV_NAMESPACE_ID>" }
   ],
 
+  // Gửi link đăng nhập. Tên miền của MAIL_FROM phải bật trước bằng:
+  //   npx wrangler email sending enable <ten-mien-cua-ban>
+  "send_email": [{ "name": "EMAIL" }],
+
   "vars": {
-    "ALLOWED_ORIGIN": "https://nhinthay.pages.dev",
+    "APP_ORIGIN": "https://<ten-mien-cua-ban>",
+    "MAIL_FROM": "dang-nhap@<ten-mien-cua-ban>",
+    "ADMIN_EMAILS": "",
     "GRADING_MODEL": "claude-opus-5",
-    "FREE_GRADES_PER_MONTH": "3"
+    "FREE_GRADES_PER_MONTH": "3",
+    "AI_GRADE_PER_MONTH": "5",
+    "AI_INTERVIEW_PER_MONTH": "3",
+    "AI_ASSIST_PER_DAY": "10"
   }
 
-  // Khoá API đặt bằng: wrangler secret put ANTHROPIC_API_KEY
-  // Không bao giờ để trong file này.
+  // Khoá API đặt bằng: npx wrangler secret put ANTHROPIC_API_KEY — không bao giờ để trong file này.
+  // Chạy thử cục bộ: chép .dev.vars.example thành .dev.vars (file này nằm trong .gitignore).
 }

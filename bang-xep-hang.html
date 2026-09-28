@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Bảng xếp hạng tuần — Tự Học Marketing Case</title>
+<meta name="description" content="Bảng xếp hạng tuần theo XP, chuỗi ngày và số case có bấm giờ đã đạt.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main class="wrap narrow" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/cases.js?v=2"></script>
+<script src="assets/js/app.js?v=6"></script>
+<script>
+
+appShell('bang-xep-hang.html');
+const app=document.getElementById('app');
+let by=qp('theo')||'xp';
+const COLS={xp:'XP tuần',streak:'Chuỗi ngày',cases:'Case đã đạt'};
+async function render(){
+  let d; try{ d=await api('/leaderboard?by='+by); }catch(e){ app.innerHTML=API.on===false?NOAPI:'<p class="section muted">Chưa tải được.</p>'; return; }
+  const u=await account();
+  app.innerHTML=`<section class="section">
+    <span class="mono mono--red">Tuần bắt đầu ${new Date(d.week+'T00:00:00').toLocaleDateString('vi-VN')}</span>
+    <h1 class="h1" style="margin:14px 0 14px">Bảng xếp hạng<br><em>tuần này.</em></h1>
+    <p class="lede">Làm mới mỗi thứ Hai (giờ Việt Nam). Điểm lấy từ tiến độ bạn đồng bộ lên; XP tuần được giới hạn 3.000 để con số còn ý nghĩa.</p>
+    <div class="row" style="margin-top:18px">${Object.entries(COLS).map(([k,l])=>`<button class="btn ${k===by?'':'btn--ghost'}" data-by="${k}">${l}</button>`).join('')}</div>
+  </section>
+  ${d.me?`<p class="note" style="margin-bottom:18px">Bạn đang hạng <b>${d.me.rank}</b> theo ${COLS[by].toLowerCase()} · ${fmt(d.me[by])}</p>`
+    :u?'':`<p class="note" style="margin-bottom:18px"><a href="tai-khoan.html">Đăng nhập</a> để có tên trên bảng.</p>`}
+  <div class="scroll"><table class="t"><thead><tr><th>Hạng</th><th>Người học</th><th class="n">${COLS[by]}</th></tr></thead>
+  <tbody>${d.rows.map(r=>`<tr style="${r.me?'font-weight:600':''}"><td>${r.rank}</td><td>${escH(r.name)}${r.me?' (bạn)':''}</td><td class="n">${fmt(r[by])}</td></tr>`).join('')
+    ||'<tr><td colspan="3" class="muted">Tuần này chưa ai có điểm. Học một bài là có tên ở đây.</td></tr>'}</tbody></table></div>`;
+  app.querySelectorAll('[data-by]').forEach(b=>b.onclick=()=>{by=b.dataset.by;render();});
+}
+const NOAPI=`<section class="section"><span class="mono mono--red">Chưa bật</span><h1 class="h2" style="margin:12px 0">Tính năng này cần máy chủ.</h1>
+  <p class="muted">Bản bạn đang xem chỉ có phần tĩnh. Mọi bài học, quiz, case và tiến độ vẫn chạy bình thường và lưu trong trình duyệt.</p></section>`;
+render();
+
+</script>
+</body>
+</html>

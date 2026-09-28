@@ -74,7 +74,8 @@ function touch(s=S.get()){
 function award(kind,ref,times=1){
   if(times<=0) return S.get();
   let s=touch(); const before=level(s.xp).n;
-  s=S.set({xp:s.xp+XP[kind]*times, log:[...s.log.slice(-400),{d:today(),k:kind,r:ref}]});
+  s=S.set({xp:s.xp+XP[kind]*times, log:[...s.log.slice(-400),{d:today(),k:kind,r:ref,x:XP[kind]*times,t:Date.now()}]});
+  scheduleSync();
   const after=level(s.xp);
   const st=document.querySelector('.top__stat'); if(st) st.textContent=`Cấp ${after.n} · ${fmt(s.xp)} XP · ${s.streak} ngày`;
   if(after.n>before) toast(`Lên cấp ${after.n} · ${after.name}`); else toast(`+${XP[kind]*times} XP`);
@@ -133,7 +134,7 @@ function parseNum(raw){
 const fmt=n=>Number(n).toLocaleString('vi-VN',{maximumFractionDigits:2});
 
 /* ---------------- shell ---------------- */
-const APP_NAV=[['Học','hoc.html'],['Bắt đầu từ đâu','ban-do.html'],['Quiz 60 giây','quiz.html'],['Case có giờ','case-thu-vien.html'],['Năng lực','nang-luc.html'],['Ôn lỗi','on-loi.html'],['Bàn làm việc','roadmap.html']];
+const APP_NAV=[['Học','hoc.html'],['Bắt đầu từ đâu','ban-do.html'],['Quiz 60 giây','quiz.html'],['Case có giờ','case-thu-vien.html'],['Năng lực','nang-luc.html'],['Ôn lỗi','on-loi.html'],['Cộng đồng','cong-dong.html'],['Xếp hạng','bang-xep-hang.html'],['Bàn làm việc','roadmap.html']];
 function applyTheme(s=S.get()){
   document.documentElement.dataset.theme=s.theme==='light'?'':s.theme;
   document.documentElement.style.setProperty('--read',(s.read||18)+'px');
@@ -147,12 +148,16 @@ function appShell(here){
       <a class="logo" href="gioi-thieu.html"><b>Tự Học</b> Marketing Case<span>MIỄN PHÍ</span></a>
       <nav class="nav" aria-label="Chính">${APP_NAV.map(([t,h])=>`<a href="${h}"${h===here?' aria-current="page"':''}>${t}</a>`).join('')}</nav>
       <span class="top__stat" title="Cấp độ · XP · chuỗi ngày">Cấp ${lv.n} · ${fmt(s.xp)} XP · ${s.streak} ngày</span>
+      <a class="top__stat" id="acct" href="tai-khoan.html" style="text-decoration:none">Tài khoản</a>
     </div></header>`);
   document.body.insertAdjacentHTML('beforeend',`
     <footer class="foot"><div class="wrap row between">
       <span>Tự Học Marketing Case · miễn phí. Mọi số liệu trong ví dụ là minh hoạ trừ khi ghi rõ nguồn.</span>
       <span>Tiến độ lưu trong trình duyệt này, không gửi đi đâu.</span>
     </div></footer><div class="toast" id="toast" role="status" aria-live="polite"></div>`);
+  account().then(u=>{ const a=document.getElementById('acct'); if(!a) return;
+    a.textContent = u ? u.name : (API.on ? 'Đăng nhập' : 'Tài khoản');
+    if(u){ syncNow(); mountAssistant(); } });
 }
 function toast(m){ const t=document.getElementById('toast'); if(!t) return; t.textContent=m; t.classList.add('on');
   clearTimeout(toast._t); toast._t=setTimeout(()=>t.classList.remove('on'),2200); }
@@ -204,4 +209,92 @@ function compLevel(c,s=S.get()){
   if(l3.length){ n=3; why=`Đạt tiêu chí liên quan trong ${new Set(l3.map(a=>a.id)).size} case có bấm giờ.`; }
   if(l4.length){ n=4; why='Đạt case tổng thể và phần nói 60 giây cũng đạt.'; }
   return {n,why};
+}
+
+/* ---------------- tài khoản & đồng bộ (cần backend /api) ----------------
+   Không có backend (chỉ deploy trang tĩnh) thì mọi thứ vẫn chạy bằng localStorage như cũ. */
+const API={on:null, user:undefined};
+async function api(path,{method='GET',body}={}){
+  const r=await fetch('/api'+path,{method,credentials:'same-origin',
+    headers:{'x-thmc':'1',...(body!==undefined?{'content-type':'application/json'}:{})},
+    body:body!==undefined?JSON.stringify(body):undefined});
+  const ct=r.headers.get('content-type')||'';
+  if(!ct.includes('application/json')){ API.on=false; throw Object.assign(new Error('no_api'),{status:r.status}); }
+  API.on=true;
+  const data=await r.json();
+  if(!r.ok) throw Object.assign(new Error(data.error||'error'),{status:r.status,data});
+  return data;
+}
+async function account(){
+  if(API.user!==undefined) return API.user;
+  try{ API.user=(await api('/me')).user; }catch(e){ API.user=null; }
+  return API.user;
+}
+/* Gộp hai bản trạng thái — cùng quy tắc với server (api/src/state.js). */
+function mergeState(a={},b={}){
+  const obj=(x,y)=>({...(x||{}),...(y||{})});
+  const later=(b.lastDay||'')>=(a.lastDay||'')?b:a;
+  const errors={...(a.errors||{})};
+  for(const [k,e] of Object.entries(b.errors||{})){ const o=errors[k];
+    errors[k]=!o?e:{...(e.count>=o.count?e:o),lessons:[...new Set([...(o.lessons||[]),...(e.lessons||[])])]}; }
+  const seen=new Set(), log=[];
+  for(const x of [...(a.log||[]),...(b.log||[])]){ const id=`${x.d}|${x.k}|${x.r}|${x.x??''}|${x.t??''}`; if(!seen.has(id)){seen.add(id);log.push(x);} }
+  log.sort((p,q)=>p.d<q.d?-1:p.d>q.d?1:0);
+  const cases={};
+  for(const id of new Set([...Object.keys(a.cases||{}),...Object.keys(b.cases||{})])){ const m=new Map();
+    for(const t of [...((a.cases||{})[id]||[]),...((b.cases||{})[id]||[])]) m.set(`${t.date}|${t.secs}|${(t.asked||[]).join(',')}`,t);
+    cases[id]=[...m.values()].slice(-10); }
+  const quizHits={...(a.quizHits||{})}; for(const [k,v] of Object.entries(b.quizHits||{})) quizHits[k]=Math.max(quizHits[k]||0,v);
+  const gm=new Map(); for(const g of [...(a.games||[]),...(b.games||[])]) gm.set(`${g.d}|${g.cash}`,g);
+  return {...a,...b, done:obj(a.done,b.done), drills:obj(a.drills,b.drills), talks:obj(a.talks,b.talks), chests:obj(a.chests,b.chests),
+    errors, log:log.slice(-800), cases, quizHits, games:[...gm.values()].slice(-20),
+    xp:Math.max(a.xp||0,b.xp||0), best:Math.max(a.best||0,b.best||0,a.streak||0,b.streak||0),
+    streak:later.streak||0, lastDay:later.lastDay||null, freezes:later.freezes||0,
+    quizBest:Math.max(a.quizBest||0,b.quizBest||0), quiz:(b.quiz&&(!a.quiz||b.quiz.d>=a.quiz.d))?b.quiz:a.quiz};
+}
+let syncT=null, syncing=false;
+async function syncNow(){
+  if(syncing||!(await account())) return; syncing=true;
+  try{
+    const local=S.get();
+    const r=await api('/state',{method:'PUT',body:{state:local}});
+    const merged=mergeState(r.state,S.get());          // giữ cả thay đổi xảy ra trong lúc đang gửi
+    try{ localStorage.setItem(APP_KEY,JSON.stringify(merged)); }catch(e){}
+    S.set({syncedAt:Date.now()});
+  }catch(e){} finally{ syncing=false; }
+}
+function scheduleSync(){ if(!API.user) return; clearTimeout(syncT); syncT=setTimeout(syncNow,4000); }
+
+/* ---------------- trợ lý nổi (AI, có hạn mức mỗi ngày) ---------------- */
+function mountAssistant(){
+  if(document.getElementById('ast')) return;
+  document.body.insertAdjacentHTML('beforeend',`
+  <div id="ast" style="position:fixed;right:16px;bottom:16px;z-index:15;max-width:calc(100vw - 32px)">
+    <div id="astPanel" hidden style="width:min(380px,calc(100vw - 32px));background:var(--bg);border:1px solid var(--ink);padding:14px;margin-bottom:10px">
+      <div class="row between"><span class="mono mono--red">Trợ lý học tập</span><button class="mono" id="astX" style="background:none;border:0;cursor:pointer" aria-label="Đóng">Đóng</button></div>
+      <div id="astLog" class="small" style="max-height:46vh;overflow:auto;margin:10px 0"></div>
+      <form id="astF" class="stack" style="gap:8px"><textarea class="field" id="astQ" rows="2" placeholder="Hỏi về một khái niệm, hoặc: nên học gì tiếp?" aria-label="Câu hỏi"></textarea>
+        <div class="row between"><span class="mono" id="astQuota"></span><button class="btn">Hỏi</button></div></form>
+    </div>
+    <button class="btn" id="astBtn" style="float:right">Hỏi trợ lý</button>
+  </div>`);
+  const panel=document.getElementById('astPanel'), log=document.getElementById('astLog');
+  document.getElementById('astBtn').onclick=()=>{ panel.hidden=!panel.hidden; if(!panel.hidden) document.getElementById('astQ').focus(); };
+  document.getElementById('astX').onclick=()=>panel.hidden=true;
+  const linkify=t=>escH(t).replace(/\b([LP]:[a-z0-9-]+)\b/g,(m,k)=>lessonMeta(k)?`<a href="bai.html?id=${encodeURIComponent(k)}">${escH(lessonMeta(k).t)}</a>`:m).replace(/\n/g,'<br>');
+  document.getElementById('astF').onsubmit=async e=>{
+    e.preventDefault(); const q=document.getElementById('astQ').value.trim(); if(q.length<3) return;
+    const s=S.get(); const next=nextLesson(s);
+    const context={next:next?{key:next,t:lessonMeta(next).t}:null, done:Object.keys(s.done).slice(-15),
+      weak:typeof COMPETENCIES!=='undefined'?COMPETENCIES.filter(c=>compLevel(c,s).n===0).map(c=>c.t).slice(0,5):[],
+      lessons:ALL.map(x=>({k:x.key,t:lessonMeta(x.key).t}))};
+    log.insertAdjacentHTML('beforeend',`<p style="margin:8px 0"><b>Bạn:</b> ${escH(q)}</p>`);
+    document.getElementById('astQ').value=''; log.insertAdjacentHTML('beforeend','<p class="muted" id="astWait">Đang nghĩ…</p>'); log.scrollTop=1e9;
+    try{ const r=await api('/ai/assist',{method:'POST',body:{question:q,context}});
+      document.getElementById('astWait').outerHTML=`<p style="margin:8px 0">${linkify(r.reply)}</p>`;
+      document.getElementById('astQuota').textContent=`${r.quota.used}/${r.quota.limit} lượt hôm nay`;
+    }catch(err){ const msg={quota_exceeded:'Hết lượt hỏi hôm nay. Mai quay lại nhé.',not_configured:'Trợ lý AI chưa được bật trên máy chủ.',login_required:'Cần đăng nhập để dùng trợ lý.'}[err.message]||'Chưa hỏi được, thử lại sau.';
+      document.getElementById('astWait').outerHTML=`<p class="muted">${msg}</p>`; }
+    log.scrollTop=1e9;
+  };
 }

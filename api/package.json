@@ -8,7 +8,7 @@
     "eval": "node eval/run.mjs"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^1",
+    "@anthropic-ai/sdk": "^0.128.0",
     "zod": "^3"
   },
   "devDependencies": {

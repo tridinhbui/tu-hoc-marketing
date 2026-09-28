@@ -1,6 +1,7 @@
 /**
- * Nhìn thấy · API
- * Phase 0: chỉ nhận email. Mọi thứ khác trả 404 để bề mặt tấn công nhỏ nhất có thể.
+ * Tự Học Marketing Case · API
+ * Đăng nhập bằng link email, đồng bộ tiến độ, bảng xếp hạng, cộng đồng, AI có hạn mức.
+ * Mọi đường dẫn không khai báo trả 404 để bề mặt tấn công nhỏ nhất có thể.
  *
  * Đặt route nhinthay.xx/api/* trỏ vào Worker này => front-end gọi cùng origin,
  * không cần CORS, không cần cấu hình gì thêm ở trình duyệt.
@@ -8,12 +9,46 @@
 
 import { grade } from './grade.js';
 import { RUBRICS } from './rubrics.js';
+import { json, month, currentUser } from './lib.js';
+import * as auth from './auth.js';
+import * as st from './state.js';
+import * as cm from './community.js';
+import * as ai from './ai.js';
 
-const json = (data, status = 200, extra = {}) =>
-  new Response(JSON.stringify(data), {
-    status,
-    headers: { 'content-type': 'application/json; charset=utf-8', ...extra },
-  });
+/* Chống CSRF: mọi request thay đổi dữ liệu phải mang header riêng.
+   Trình duyệt không gửi header tuỳ ý sang origin khác nếu không có CORS — mà API này không bật CORS. */
+const MUTATING = new Set(['POST', 'PUT', 'PATCH', 'DELETE']);
+const CSRF_EXEMPT = new Set(['/api/subscribe']);
+
+async function route(request, env, url) {
+  const p = url.pathname, m = request.method;
+  if (MUTATING.has(m) && !CSRF_EXEMPT.has(p) && request.headers.get('x-thmc') !== '1') return json({ error: 'csrf' }, 403);
+
+  if (p === '/api/auth/start' && m === 'POST') return auth.start(request, env);
+  if (p === '/api/auth/verify' && m === 'GET') return auth.verify(request, env);
+  if (p === '/api/auth/logout' && m === 'POST') return auth.logout(request, env);
+  if (p === '/api/me' && m === 'GET') return auth.me(request, env);
+  if (p === '/api/me' && m === 'PATCH') return auth.updateMe(request, env);
+
+  if (p === '/api/state' && m === 'GET') return st.getState(request, env);
+  if (p === '/api/state' && m === 'PUT') return st.putState(request, env);
+  if (p === '/api/leaderboard' && m === 'GET') return st.leaderboard(request, env);
+
+  if (p === '/api/posts' && m === 'GET') return cm.listPosts(request, env);
+  if (p === '/api/posts' && m === 'POST') return cm.createPost(request, env);
+  let mm;
+  if ((mm = p.match(/^\/api\/posts\/([0-9a-f-]{36})$/)) && m === 'GET') return cm.getPost(request, env, mm[1]);
+  if ((mm = p.match(/^\/api\/posts\/([0-9a-f-]{36})\/comments$/)) && m === 'POST') return cm.createComment(request, env, mm[1]);
+  if ((mm = p.match(/^\/api\/posts\/([0-9a-f-]{36})\/like$/)) && m === 'POST') return cm.toggleLike(request, env, mm[1]);
+  if (p === '/api/report' && m === 'POST') return cm.report(request, env);
+  if (p === '/api/admin/queue' && m === 'GET') return cm.adminQueue(request, env);
+  if (p === '/api/admin/moderate' && m === 'POST') return cm.moderate(request, env);
+
+  if (p === '/api/ai/quota' && m === 'GET') return ai.quotas(request, env);
+  if (p === '/api/ai/interview' && m === 'POST') return ai.interview(request, env);
+  if (p === '/api/ai/assist' && m === 'POST') return ai.assist(request, env);
+  return null;
+}
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -21,7 +56,18 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    /* Khi chạy thử cục bộ bằng `wrangler dev --assets`, mọi thứ ngoài /api/ là file tĩnh. */
+    if (!url.pathname.startsWith('/api/') && env.ASSETS) return env.ASSETS.fetch(request);
+
     if (url.pathname === '/api/health') return json({ ok: true });
+
+    try {
+      const r = await route(request, env, url);
+      if (r) return r;
+    } catch (e) {
+      if (e && e.status) return json({ error: e.message }, e.status);
+      return json({ error: 'server_error' }, 500);
+    }
 
     if (url.pathname === '/api/subscribe' && request.method === 'POST') {
       let body;
@@ -54,13 +100,21 @@ export default {
       const bench = String(body.bench || '');
       if (!RUBRICS[bench]) return json({ error: 'unknown_bench' }, 400);
 
-      /* Quota. Phase 1 sẽ đổi sang tính theo tài khoản; giờ tạm tính theo IP. */
+      /* Hạn mức: đã đăng nhập thì tính theo người (D1), chưa đăng nhập thì tạm tính theo IP. */
+      if (request.headers.get('x-thmc') !== '1') return json({ error: 'csrf' }, 403);
       const ip = request.headers.get('cf-connecting-ip') || 'unknown';
-      const month = new Date().toISOString().slice(0, 7);
-      const qkey = `q:grade:${month}:${ip}`;
-      const used = Number((await env.SESSIONS.get(qkey)) || 0);
-      const limit = Number(env.FREE_GRADES_PER_MONTH || 3);
-      if (used >= limit) return json({ error: 'quota_exceeded', used, limit }, 402);
+      const user = await currentUser(request, env);
+      let used, limit;
+      if (user) {
+        limit = Number(env.AI_GRADE_PER_MONTH || 5);
+        const q = await ai.useQuota(env, user.id, 'grade', month(), limit);
+        if (!q.ok) return json({ error: 'quota_exceeded', used: q.used, limit }, 402);
+        used = q.used - 1;
+      } else {
+        limit = Number(env.FREE_GRADES_PER_MONTH || 3);
+        used = Number((await env.SESSIONS.get(`q:grade:${month()}:${ip}`)) || 0);
+        if (used >= limit) return json({ error: 'quota_exceeded', used, limit }, 402);
+      }
 
       const payload = body.payload || {};
       if (JSON.stringify(payload).length > 20000) return json({ error: 'too_large' }, 413);
@@ -73,10 +127,12 @@ export default {
           model: env.GRADING_MODEL || 'claude-opus-5',
         });
       } catch (e) {
+        if (user) await env.DB.prepare('UPDATE ai_usage SET count = MAX(count - 1, 0) WHERE user_id = ?1 AND kind = ?2 AND period = ?3')
+          .bind(user.id, 'grade', month()).run();
         return json({ error: 'grade_failed', detail: String(e.message || e) }, 502);
       }
 
-      await env.SESSIONS.put(qkey, String(used + 1), { expirationTtl: 60 * 60 * 24 * 40 });
+      if (!user) await env.SESSIONS.put(`q:grade:${month()}:${ip}`, String(used + 1), { expirationTtl: 60 * 60 * 24 * 40 });
 
       /* Lưu lại để sau này đọc xem rubric có đang chấm đúng không, và AI ăn bao nhiêu tiền. */
       const sid = crypto.randomUUID();
@@ -84,7 +140,7 @@ export default {
         await env.DB.batch([
           env.DB.prepare(`INSERT INTO submissions (id, user_id, bench, payload_json, created_at)
                           VALUES (?1, ?2, ?3, ?4, ?5)`)
-            .bind(sid, body.user_id || ('anon:' + ip), bench, JSON.stringify(payload), Date.now()),
+            .bind(sid, user ? user.id : ('anon:' + ip), bench, JSON.stringify(payload), Date.now()),
           env.DB.prepare(`INSERT INTO feedback (id, submission_id, model, rubric_version, verdict_json, cost_usd, created_at)
                           VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)`)
             .bind(crypto.randomUUID(), sid, verdict.model || 'none', verdict.rubric_version,

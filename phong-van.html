@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Phỏng vấn mô phỏng — Tự Học Marketing Case</title>
+<meta name="description" content="Trợ lý AI đóng vai người phỏng vấn: đưa đề, hỏi vặn, rồi nhận xét theo bốn tiêu chí.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main class="wrap narrow" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/cases.js?v=2"></script>
+<script src="assets/js/app.js?v=6"></script>
+<script>
+
+appShell('phong-van.html');
+const app=document.getElementById('app');
+const TRACKS=[['mt','Management Trainee'],['brand','Brand Executive'],['perf','Performance Marketing'],['case','Hỏi đáp sau thi case']];
+let sid=null, busy=false;
+async function intro(){
+  const u=await account();
+  if(API.on===false){ app.innerHTML=NOAPI; return; }
+  let q=null; if(u) try{ q=await api('/ai/quota'); }catch(e){}
+  app.innerHTML=`<section class="section">
+    <span class="mono mono--red">Phỏng vấn mô phỏng · AI</span>
+    <h1 class="h1" style="margin:14px 0 14px">Người phỏng vấn<br><em>không dễ tính.</em></h1>
+    <p class="lede">AI đưa một tình huống có số, hỏi từng câu và hỏi vặn khi bạn trả lời thiếu số hoặc mơ hồ.
+      Sau tối đa 6 lượt trả lời — hoặc khi bạn bấm kết thúc — nó nhận xét theo cấu trúc, tính toán, insight, đề xuất. Không cho điểm.</p>
+    ${!u?`<p class="note" style="margin-top:18px"><a href="tai-khoan.html">Đăng nhập</a> để dùng. Mỗi người có một số buổi miễn phí mỗi tháng.</p>`
+    :q&&!q.configured?'<p class="note" style="margin-top:18px">AI chưa được bật trên máy chủ.</p>'
+    :`<p class="mono" style="margin-top:14px">Đã dùng ${q?q.interview.used:'?'} / ${q?q.interview.limit:'?'} buổi tháng này</p>
+      <div class="row" style="margin-top:14px">${TRACKS.map(([k,l])=>`<button class="btn btn--ghost" data-t="${k}">${l}</button>`).join('')}</div>`}
+  </section>`;
+  app.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>start(b.dataset.t));
+}
+function chat(){ return document.getElementById('log'); }
+function add(who,text){ chat().insertAdjacentHTML('beforeend',`<div style="padding:12px 0;border-bottom:var(--rule)"><span class="mono ${who==='ai'?'mono--red':''}">${who==='ai'?'Người phỏng vấn':'Bạn'}</span>
+  <p style="margin:6px 0 0">${escH(text).replace(/\n/g,'<br>')}</p></div>`); chat().scrollIntoView({block:'end'}); }
+async function start(track){
+  app.innerHTML=`<section class="section"><div class="row between"><span class="mono mono--red">${TRACKS.find(t=>t[0]===track)[1]}</span><span class="mono" id="left"></span></div>
+    <div id="log" style="margin-top:14px"></div>
+    <form id="f" class="stack" style="margin-top:16px"><textarea class="field" id="m" rows="4" maxlength="1500" placeholder="Trả lời như đang ngồi trước người phỏng vấn." aria-label="Câu trả lời"></textarea>
+      <div class="row between"><button type="button" class="btn btn--ghost" id="end">Kết thúc và nhận xét</button><button class="btn">Gửi</button></div></form></section>`;
+  add('ai','…');
+  try{ const r=await api('/ai/interview',{method:'POST',body:{track}}); sid=r.session_id; chat().lastElementChild.remove(); add('ai',r.reply); document.getElementById('left').textContent=`Còn ${r.turns_left} lượt`; }
+  catch(e){ chat().lastElementChild.remove(); add('ai',{quota_exceeded:'Bạn đã dùng hết số buổi phỏng vấn miễn phí tháng này.',not_configured:'AI chưa được bật.'}[e.message]||'Chưa bắt đầu được. Thử lại sau.'); return; }
+  const send=async(finish)=>{ if(busy) return; const m=document.getElementById('m'), t=m.value.trim();
+    if(!finish&&t.length<2) return; busy=true; if(t) add('me',t); m.value=''; add('ai','…');
+    try{ const r=await api('/ai/interview',{method:'POST',body:{session_id:sid,message:t||'Em xin kết thúc buổi phỏng vấn ở đây.',finish}});
+      chat().lastElementChild.remove(); add('ai',r.reply); document.getElementById('left').textContent=r.done?'Đã kết thúc':`Còn ${r.turns_left} lượt`;
+      if(r.done){ document.getElementById('f').outerHTML='<a class="btn" href="phong-van.html">Buổi mới</a>'; }
+    }catch(e){ chat().lastElementChild.remove(); add('ai',e.message==='session_expired'?'Buổi này đã hết hạn.':'Chưa gửi được. Thử lại.'); }
+    busy=false; };
+  document.getElementById('f').onsubmit=e=>{e.preventDefault();send(false);};
+  document.getElementById('end').onclick=()=>send(true);
+}
+const NOAPI=`<section class="section"><span class="mono mono--red">Chưa bật</span><h1 class="h2" style="margin:12px 0">Tính năng này cần máy chủ.</h1>
+  <p class="muted">Bản bạn đang xem chỉ có phần tĩnh. Mọi bài học, quiz, case và tiến độ vẫn chạy bình thường và lưu trong trình duyệt.</p></section>`;
+intro();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Tài khoản — Tự Học Marketing Case</title>
+<meta name="description" content="Đăng nhập bằng link gửi qua email để đồng bộ tiến độ giữa các thiết bị, tham gia cộng đồng và dùng AI.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main class="wrap narrow" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/cases.js?v=2"></script>
+<script src="assets/js/app.js?v=6"></script>
+<script>
+
+appShell('tai-khoan.html');
+const app=document.getElementById('app');
+const ERR={'het-han':'Link đã hết hạn hoặc đã được dùng. Xin link mới nhé.','link':'Link không hợp lệ.'};
+async function render(){
+  const u=await account();
+  if(API.on===false){ app.innerHTML=NOAPI; return; }
+  if(qp('dang-nhap')==='ok'&&u){ toast('Đã đăng nhập'); history.replaceState(null,'','tai-khoan.html'); }
+  if(!u){
+    app.innerHTML=`<section class="section">
+      <span class="mono mono--red">Tài khoản · miễn phí</span>
+      <h1 class="h1" style="margin:14px 0 14px">Đăng nhập<br><em>không cần mật khẩu.</em></h1>
+      <p class="lede">Nhập email, bấm link trong thư là vào. Đăng nhập để giữ tiến độ trên mọi thiết bị, lên bảng xếp hạng,
+        đăng bài trong cộng đồng và dùng AI (có hạn mức miễn phí). Không đăng nhập thì mọi bài học vẫn dùng được.</p>
+      ${qp('loi')?`<p class="note note--red" style="margin-top:16px">${ERR[qp('loi')]||'Có lỗi khi đăng nhập.'}</p>`:''}
+      <form id="f" class="answer" style="margin-top:22px"><input class="field" id="em" type="email" autocomplete="email" placeholder="email@cua-ban.vn" aria-label="Email" style="max-width:340px;font-family:var(--sans)" required>
+        <button class="btn">Gửi link đăng nhập</button></form>
+      <div id="msg" class="verdict" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:20px">Chúng tôi chỉ dùng email để gửi link đăng nhập. Không gửi quảng cáo.</p>
+    </section>`;
+    document.getElementById('f').onsubmit=async e=>{ e.preventDefault(); const m=document.getElementById('msg');
+      try{ const r=await api('/auth/start',{method:'POST',body:{email:document.getElementById('em').value}});
+        m.dataset.v='ok'; m.innerHTML=r.dev_link?`Chế độ chạy thử: <a href="${escH(r.dev_link)}">bấm để đăng nhập</a>`:'Đã gửi. Mở hộp thư và bấm link trong 15 phút.';
+      }catch(err){ m.dataset.v='bad'; m.textContent={email_invalid:'Email chưa đúng định dạng.',rate_limited:'Bạn xin link hơi nhiều lần. Đợi 15 phút rồi thử lại.',email_not_configured:'Máy chủ chưa cấu hình gửi mail.'}[err.message]||'Chưa gửi được, thử lại sau.'; } };
+    return;
+  }
+  let q=null; try{ q=await api('/ai/quota'); }catch(e){}
+  const s=S.get();
+  app.innerHTML=`<section class="section">
+    <span class="mono mono--red">Tài khoản</span>
+    <h1 class="h1" style="margin:14px 0 8px">${escH(u.name)}</h1>
+    <p class="muted">${escH(u.email)}</p>
+    <form id="nf" class="answer" style="margin-top:20px"><input class="field" id="nm" maxlength="40" value="${escH(u.display_name||'')}" placeholder="Tên hiện trên cộng đồng" aria-label="Tên hiển thị" style="max-width:300px;font-family:var(--sans)">
+      <button class="btn btn--ghost">Lưu tên</button></form>
+  </section>
+  <section class="section">
+    <span class="mono mono--ink">Đồng bộ tiến độ</span>
+    <p style="margin:10px 0">Tiến độ tự đồng bộ vài giây sau mỗi lần bạn được cộng XP. Lần gần nhất: <b id="sy">${s.syncedAt?new Date(s.syncedAt).toLocaleString('vi-VN'):'chưa có'}</b>.</p>
+    <button class="btn btn--ghost" id="syn">Đồng bộ ngay</button>
+  </section>
+  ${q?`<section class="section"><span class="mono mono--ink">Hạn mức AI miễn phí</span>
+    ${q.configured?`<table class="t" style="margin-top:10px"><tbody>
+      <tr><td>Phỏng vấn mô phỏng</td><td class="n">${q.interview.used} / ${q.interview.limit} mỗi ${q.interview.per}</td></tr>
+      <tr><td>Chấm bài viết</td><td class="n">${q.grade.used} / ${q.grade.limit} mỗi ${q.grade.per}</td></tr>
+      <tr><td>Trợ lý hỏi đáp</td><td class="n">${q.assist.used} / ${q.assist.limit} mỗi ${q.assist.per}</td></tr></tbody></table>`
+      :'<p class="muted" style="margin-top:10px">AI chưa được bật trên máy chủ.</p>'}</section>`:''}
+  <section class="section"><button class="btn btn--ghost" id="out">Đăng xuất</button></section>`;
+  document.getElementById('nf').onsubmit=async e=>{ e.preventDefault();
+    try{ await api('/me',{method:'PATCH',body:{display_name:document.getElementById('nm').value}}); API.user=undefined; toast('Đã lưu tên'); render(); }
+    catch(err){ toast(err.message==='name_too_short'?'Tên cần ít nhất 2 ký tự':'Chưa lưu được'); } };
+  document.getElementById('syn').onclick=async()=>{ await syncNow(); document.getElementById('sy').textContent=new Date().toLocaleString('vi-VN'); toast('Đã đồng bộ'); };
+  document.getElementById('out').onclick=async()=>{ await api('/auth/logout',{method:'POST',body:{}}); API.user=undefined; location.href='tai-khoan.html'; };
+}
+const NOAPI=`<section class="section"><span class="mono mono--red">Chưa bật</span><h1 class="h2" style="margin:12px 0">Tính năng này cần máy chủ.</h1>
+  <p class="muted">Bản bạn đang xem chỉ có phần tĩnh. Mọi bài học, quiz, case và tiến độ vẫn chạy bình thường và lưu trong trình duyệt.</p></section>`;
+render();
+
+</script>
+</body>
+</html>

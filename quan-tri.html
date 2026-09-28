@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Quản trị cộng đồng — Tự Học Marketing Case</title>
+<meta name="description" content="Hàng đợi nội dung bị báo cáo.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main class="wrap narrow" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/cases.js?v=2"></script>
+<script src="assets/js/app.js?v=6"></script>
+<script>
+
+appShell('');
+const app=document.getElementById('app');
+async function render(){
+  let d; try{ d=await api('/admin/queue'); }catch(e){ app.innerHTML=`<section class="section"><h1 class="h2">${e.status===403?'Chỉ quản trị viên mới xem được trang này.':'Chưa tải được.'}</h1></section>`; return; }
+  const why=(t,id)=>d.reasons.filter(r=>r.target_type===t&&r.target_id===id&&r.reason).map(r=>escH(r.reason)).join(' · ');
+  const row=(t,x)=>`<li style="padding:14px 0"><div class="row between"><b>${escH(x.title||x.body.slice(0,80))}</b><span class="mono">${x.reports} báo cáo${x.hidden?' · đang ẩn':''}</span></div>
+    <p class="small muted" style="margin:6px 0">${escH(x.email)} · ${new Date(x.created_at).toLocaleString('vi-VN')}${why(t,x.id)?' · Lý do: '+why(t,x.id):''}</p>
+    <p class="small" style="margin:0 0 8px">${escH(x.body.slice(0,400))}</p>
+    <div class="row">${x.hidden?`<button class="btn btn--ghost" data-a="restore" data-t="${t}" data-id="${x.id}">Khôi phục</button>`:`<button class="btn btn--ghost" data-a="hide" data-t="${t}" data-id="${x.id}">Ẩn</button>`}
+      <button class="btn" data-a="delete" data-t="${t}" data-id="${x.id}">Xoá hẳn</button>${t==='post'?`<a class="small" href="cong-dong.html?id=${x.id}">Mở bài →</a>`:''}</div></li>`;
+  app.innerHTML=`<section class="section"><span class="mono mono--red">Quản trị</span><h1 class="h2" style="margin:12px 0">Nội dung bị báo cáo</h1></section>
+    <span class="mono mono--ink">Bài đăng · ${d.posts.length}</span><ul class="list">${d.posts.map(x=>row('post',x)).join('')||'<li class="muted" style="padding:12px 0">Trống.</li>'}</ul>
+    <span class="mono mono--ink" style="display:block;margin-top:26px">Bình luận · ${d.comments.length}</span><ul class="list">${d.comments.map(x=>row('comment',x)).join('')||'<li class="muted" style="padding:12px 0">Trống.</li>'}</ul>`;
+  app.querySelectorAll('[data-a]').forEach(b=>b.onclick=async()=>{ if(b.dataset.a==='delete'&&!confirm('Xoá hẳn, không khôi phục được?')) return;
+    await api('/admin/moderate',{method:'POST',body:{type:b.dataset.t,id:b.dataset.id,action:b.dataset.a}}); render(); });
+}
+render();
+
+</script>
+</body>
+</html>

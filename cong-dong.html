@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<title>Cộng đồng — Tự Học Marketing Case</title>
+<meta name="description" content="Người học đăng bài phân tích chiến dịch, chia sẻ kinh nghiệm phỏng vấn, bình luận và thả tim.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main class="wrap narrow" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/cases.js?v=2"></script>
+<script src="assets/js/app.js?v=6"></script>
+<script>
+
+appShell('cong-dong.html');
+const app=document.getElementById('app');
+const KINDS=[['phan-tich','Phân tích chiến dịch'],['phong-van','Kinh nghiệm phỏng vấn'],['hoi','Hỏi đáp']];
+const kname=k=>(KINDS.find(x=>x[0]===k)||[,k])[1];
+const when=t=>new Date(t).toLocaleDateString('vi-VN',{day:'2-digit',month:'2-digit',year:'numeric'});
+const body=t=>escH(t).replace(/\n/g,'<br>');
+let kind=qp('loai')||'';
+async function feed(){
+  let d; try{ d=await api('/posts'+(kind?'?kind='+kind:'')); }catch(e){ if(API.on===false){ app.innerHTML=NOAPI; return; } app.innerHTML='<p class="section muted">Chưa tải được.</p>'; return; }
+  const u=await account();
+  app.innerHTML=`<section class="section">
+    <span class="mono mono--red">Cộng đồng</span>
+    <h1 class="h1" style="margin:14px 0 14px">Nhìn thấy gì,<br><em>kể cho nhau nghe.</em></h1>
+    <p class="lede">Phân tích chiến dịch, kinh nghiệm phỏng vấn, câu hỏi. Bài đăng hiện ngay; nội dung bị ba người báo cáo sẽ tạm ẩn chờ xem lại.</p>
+    <div class="row" style="margin-top:18px">${[['','Tất cả'],...KINDS].map(([k,l])=>`<button class="btn ${k===kind?'':'btn--ghost'}" data-k="${k}">${l}</button>`).join('')}</div>
+  </section>
+  ${u?`<section class="section"><span class="mono mono--ink">Đăng bài</span>
+    <form id="pf" class="stack" style="margin-top:10px">
+      <select class="field" id="pk" aria-label="Loại bài">${KINDS.map(([k,l])=>`<option value="${k}" ${k===kind?'selected':''}>${l}</option>`).join('')}</select>
+      <input class="field" id="pt" maxlength="120" placeholder="Tiêu đề" aria-label="Tiêu đề">
+      <textarea class="field" id="pb" rows="5" maxlength="5000" placeholder="Viết cụ thể: thương hiệu nào, bạn thấy gì, vì sao nó đáng chú ý, số liệu nếu có." aria-label="Nội dung"></textarea>
+      <div class="row between"><span class="small muted">Số liệu không phải của bạn thì ghi nguồn.</span><button class="btn">Đăng</button></div></form></section>`
+  :`<section class="section"><p class="muted"><a href="tai-khoan.html">Đăng nhập</a> để đăng bài, bình luận và thả tim.</p></section>`}
+  <ul class="list">${d.posts.map(p=>`<li><a class="item" style="grid-template-columns:1fr auto" href="cong-dong.html?id=${p.id}">
+    <span><span class="mono">${kname(p.kind)} · ${escH(p.author)} · ${when(p.created_at)}</span><br><span class="item__t">${escH(p.title)}</span></span>
+    <span class="mono">♥ ${p.likes} · ${p.comments} bình luận</span></a></li>`).join('')||'<li class="muted" style="padding:16px 0">Chưa có bài nào. Bạn mở hàng nhé.</li>'}</ul>`;
+  app.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{kind=b.dataset.k;feed();});
+  const f=document.getElementById('pf'); if(f) f.onsubmit=async e=>{ e.preventDefault();
+    try{ const r=await api('/posts',{method:'POST',body:{kind:pk.value,title:pt.value,body:pb.value}}); location.href='cong-dong.html?id='+r.id; }
+    catch(err){ toast({title_too_short:'Tiêu đề cần ít nhất 4 ký tự',body_too_short:'Nội dung cần ít nhất 20 ký tự',rate_limited:'Mỗi ngày đăng tối đa 5 bài'}[err.message]||'Chưa đăng được'); } };
+}
+async function detail(id){
+  let d; try{ d=await api('/posts/'+id); }catch(e){ app.innerHTML=API.on===false?NOAPI:'<section class="section"><h1 class="h2">Không tìm thấy bài này.</h1><a href="cong-dong.html">← Cộng đồng</a></section>'; return; }
+  const u=await account(), p=d.post;
+  document.title=p.title+' — Cộng đồng';
+  app.innerHTML=`<section class="section">
+    <a class="mono" href="cong-dong.html">← Cộng đồng</a>
+    <p class="mono" style="margin-top:18px">${kname(p.kind)} · ${escH(p.author)} · ${when(p.created_at)}</p>
+    <h1 class="h2" style="margin:8px 0 16px">${escH(p.title)}</h1>
+    <div class="reader">${body(p.body)}</div>
+    <div class="row" style="margin-top:18px">
+      <button class="btn ${p.liked?'':'btn--ghost'}" id="lk" ${u?'':'disabled'}>♥ ${p.likes}</button>
+      ${u&&!p.mine?`<button class="mono" style="background:none;border:0;cursor:pointer;margin-left:auto" data-rep="post" data-id="${p.id}">Báo cáo</button>`:''}</div>
+  </section>
+  <section class="section"><span class="mono mono--ink">${d.comments.length} bình luận</span>
+    <ul class="list" style="margin-top:10px">${d.comments.map(c=>`<li style="padding:12px 0"><span class="mono">${escH(c.author)} · ${when(c.created_at)}</span>
+      <p style="margin:6px 0 0">${body(c.body)}</p>
+      ${u&&!c.mine?`<button class="mono" style="background:none;border:0;cursor:pointer;padding:0;margin-top:4px" data-rep="comment" data-id="${c.id}">Báo cáo</button>`:''}</li>`).join('')}</ul>
+    ${u?`<form id="cf" class="stack" style="margin-top:14px"><textarea class="field" id="cb" rows="3" maxlength="2000" placeholder="Góp ý cụ thể, có lý do." aria-label="Bình luận"></textarea>
+      <div><button class="btn">Bình luận</button></div></form>`:`<p class="muted" style="margin-top:14px"><a href="tai-khoan.html">Đăng nhập</a> để bình luận.</p>`}
+  </section>`;
+  const lk=document.getElementById('lk'); if(lk&&u) lk.onclick=async()=>{ const r=await api(`/posts/${id}/like`,{method:'POST',body:{}}); lk.textContent='♥ '+r.likes; lk.classList.toggle('btn--ghost',!r.liked); };
+  const cf=document.getElementById('cf'); if(cf) cf.onsubmit=async e=>{ e.preventDefault();
+    try{ await api(`/posts/${id}/comments`,{method:'POST',body:{body:cb.value}}); detail(id); }
+    catch(err){ toast(err.message==='rate_limited'?'Mỗi ngày tối đa 30 bình luận':'Chưa gửi được'); } };
+  app.querySelectorAll('[data-rep]').forEach(b=>b.onclick=async()=>{ const reason=prompt('Lý do báo cáo (không bắt buộc):'); if(reason===null) return;
+    await api('/report',{method:'POST',body:{type:b.dataset.rep,id:b.dataset.id,reason}}); b.textContent='Đã báo cáo'; b.disabled=true; });
+}
+const NOAPI=`<section class="section"><span class="mono mono--red">Chưa bật</span><h1 class="h2" style="margin:12px 0">Tính năng này cần máy chủ.</h1>
+  <p class="muted">Bản bạn đang xem chỉ có phần tĩnh. Mọi bài học, quiz, case và tiến độ vẫn chạy bình thường và lưu trong trình duyệt.</p></section>`;
+qp('id')?detail(qp('id')):feed();
+
+</script>
+</body>
+</html>

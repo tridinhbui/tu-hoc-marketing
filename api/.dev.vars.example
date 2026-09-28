@@ -1,0 +1,6 @@
+# Chỉ dùng khi chạy `wrangler dev`. Chép thành .dev.vars — file đó không được commit.
+# DEV_SHOW_LINK=1 trả link đăng nhập ngay trong phản hồi thay vì gửi mail. KHÔNG đặt biến này trên production.
+DEV_SHOW_LINK=1
+APP_ORIGIN=http://localhost:8787
+ADMIN_EMAILS=admin@example.com
+# ANTHROPIC_API_KEY=sk-ant-...   (bỏ trống thì các tính năng AI trả 503 not_configured)
