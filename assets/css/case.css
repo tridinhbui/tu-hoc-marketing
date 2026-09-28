@@ -4,11 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root{
-  --bg:#FFFFFF; --bg-2:#F6F7F9;
-  --ink:#0F1B2D; --ink-70:rgba(15,27,45,.72); --ink-50:rgba(15,27,45,.52);
-  --ink-30:rgba(15,27,45,.30); --ink-12:rgba(15,27,45,.12); --ink-06:rgba(15,27,45,.06);
-  --red:#9B1C1C; --red-06:rgba(155,28,28,.06);
-  --ok:#1D5B45;
+  --bg:#FBF6EE; --bg-2:#F3E7D8;
+  --ink:#2B1A11; --ink-70:rgba(43,26,17,.74); --ink-50:rgba(43,26,17,.54);
+  --ink-30:rgba(43,26,17,.32); --ink-12:rgba(43,26,17,.15); --ink-06:rgba(43,26,17,.08);
+  --red:#8C1F1B; --red-06:rgba(140,31,27,.07);
+  --ok:#5C6B1E;
   --serif:'Newsreader',Georgia,'Times New Roman',serif;
   --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
@@ -16,12 +16,12 @@
   --read:18px;
   color-scheme:light;
 }
-html[data-theme="ivory"]{ --bg:#FAF6EC; --bg-2:#F2ECDD; }
+html[data-theme="ivory"]{ --bg:#FBF6EE; --bg-2:#F3E7D8; }
 html[data-theme="dark"]{
-  --bg:#0E1420; --bg-2:#151D2C;
-  --ink:#E7EAF0; --ink-70:rgba(231,234,240,.74); --ink-50:rgba(231,234,240,.55);
+  --bg:#1E120C; --bg-2:#2B1A11;
+  --ink:#EFE2D6; --ink-70:rgba(231,234,240,.74); --ink-50:rgba(231,234,240,.55);
   --ink-30:rgba(231,234,240,.32); --ink-12:rgba(231,234,240,.14); --ink-06:rgba(231,234,240,.06);
-  --red:#E5695F; --red-06:rgba(229,105,95,.10); --ok:#6FC3A0;
+  --red:#D4553A; --red-06:rgba(229,105,95,.10); --ok:#B9BE79;
   color-scheme:dark;
 }
 
