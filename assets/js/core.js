@@ -63,22 +63,23 @@ function nextRank(n=score()){ return RANKS.find(x=>x[1]>n) || null; }
    nên 20 tấm vẫn khác nhau mà vẫn nằm trong một bức tranh. */
 function toInk(hex){
   const h=String(hex||'').replace('#','');
-  if(h.length!==6) return '#2F4A63';
+  if(h.length!==6) return '#8A3A12';
   const r=parseInt(h.slice(0,2),16)/255,g=parseInt(h.slice(2,4),16)/255,b=parseInt(h.slice(4,6),16)/255;
   const mx=Math.max(r,g,b),mn=Math.min(r,g,b),d=mx-mn;
   let hu=0; if(d){ hu = mx===r?((g-b)/d+(g<b?6:0)):mx===g?((b-r)/d+2):((r-g)/d+4); hu*=60; }
   const l0=(mx+mn)/2;
-  /* Hai thỏi mực: chàm cho sắc lạnh, nâu đất cho sắc ấm. Không nội suy vòng quanh
-     bánh xe màu — đi vòng sẽ rơi vào tím hoặc xanh lá và làm vỡ cả bảng. */
-  /* Gần như vô sắc thì cho về chàm — mực chàm là giọng chính, nâu đất chỉ dành cho
-     những thương hiệu thật sự ấm, nếu không cả trang sẽ ngả nâu. */
-  const warm = d>=.12 && (hu>=330||hu<=62);
-  const anchor = warm?28:212;
+  /* Ba thỏi mực Hỏa: chu sa cho sắc nóng sẵn, gạch nung cho sắc lam tím,
+     hoàng thổ cho sắc lục. Không nội suy vòng quanh bánh xe màu — đi vòng sẽ
+     rơi ra ngoài họ lửa và làm vỡ cả bảng. */
+  let anchor;
+  if(hu<60||hu>=300) anchor=12;        // đỏ/cam/tím đỏ  → chu sa
+  else if(hu<180)    anchor=38;        // vàng/lục       → hoàng thổ
+  else               anchor=24;        // lam/chàm/tím   → gạch nung
   let dh=((hu-anchor+540)%360)-180;
-  if(Math.abs(dh)>90) dh=0;                       // quá xa thì bỏ hẳn cá tính hue
-  const hue=(anchor+Math.max(-20,Math.min(20,dh*.22))+360)%360;
-  const sat=d===0?.08:.14+Math.min(d,.6)*.22;     // luôn nhạt như mực pha nước
-  const lig=.23+l0*.19;                           // luôn tối vừa, đủ nền cho chữ trắng
+  if(Math.abs(dh)>90) dh=0;
+  const hue=(anchor+Math.max(-14,Math.min(14,dh*.16))+360)%360;
+  const sat=d===0?.44:.50+Math.min(d,.6)*.55;  // lửa phải rực, nâu xỉn là tro
+  const lig=.30+l0*.14;                         // sáng vừa đủ, chữ trắng vẫn đọc được
   const f=n=>{const k=(n+hue/30)%12,a=sat*Math.min(lig,1-lig);
     const v=lig-a*Math.max(-1,Math.min(Math.min(k-3,9-k),1));
     return Math.round(v*255).toString(16).padStart(2,'0');};
@@ -92,7 +93,7 @@ function inkDrop(size=18,color='var(--accent)'){
   return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" aria-hidden="true">
     <path d="M12 3.2c3.4 4.1 5.6 7 5.6 9.7a5.6 5.6 0 1 1-11.2 0c0-2.7 2.2-5.6 5.6-9.7Z"
       fill="${color}" opacity=".85"/>
-    <path d="M10.1 12.6c0 1.6.9 2.9 2.2 3.4" stroke="#F7F5F0" stroke-width="1.1" stroke-linecap="round" opacity=".7"/>
+    <path d="M10.1 12.6c0 1.6.9 2.9 2.2 3.4" stroke="#FBF6EE" stroke-width="1.1" stroke-linecap="round" opacity=".7"/>
   </svg>`;
 }
 function seal(char='觀',size=34){
@@ -105,7 +106,7 @@ function seal(char='觀',size=34){
 function inkScene(id='ink1',{boat=true,mountains=true}={}){
   const speck = Array.from({length:26},(_,i)=>{
     const x=470+((i*137)%720), y=430+((i*211)%210), r=(i%4)*.5+.9;
-    return `<circle cx="${x}" cy="${y}" r="${r}" fill="#2F4A63" opacity="${.1+(i%5)*.045}"/>`;
+    return `<circle cx="${x}" cy="${y}" r="${r}" fill="#B3350F" opacity="${.12+(i%5)*.05}"/>`;
   }).join('');
   return `<svg class="inkscene" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <defs>
@@ -120,13 +121,13 @@ function inkScene(id='ink1',{boat=true,mountains=true}={}){
         <feGaussianBlur stdDeviation="1.1"/>
       </filter>
       <linearGradient id="${id}-g" x1="0" y1="0" x2="1" y2=".6">
-        <stop offset="0" stop-color="#B9C7D6" stop-opacity=".9"/>
-        <stop offset=".45" stop-color="#6E88A6" stop-opacity=".95"/>
-        <stop offset="1" stop-color="#2F4A63" stop-opacity=".95"/>
+        <stop offset="0" stop-color="#E8A468" stop-opacity=".92"/>
+        <stop offset=".45" stop-color="#BE3E0B" stop-opacity=".96"/>
+        <stop offset="1" stop-color="#5E1D06" stop-opacity=".96"/>
       </linearGradient>
       <linearGradient id="${id}-m" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#8399AF" stop-opacity=".55"/>
-        <stop offset="1" stop-color="#8399AF" stop-opacity="0"/>
+        <stop offset="0" stop-color="#C98B5E" stop-opacity=".5"/>
+        <stop offset="1" stop-color="#C98B5E" stop-opacity="0"/>
       </linearGradient>
     </defs>
     ${mountains?`<g filter="url(#${id}-b)">
@@ -135,20 +136,20 @@ function inkScene(id='ink1',{boat=true,mountains=true}={}){
     </g>`:''}
     <g filter="url(#${id}-s)">
       <path d="M-60 548 C 250 452, 452 610, 726 506 C 928 430, 1074 486, 1272 408"
-        stroke="url(#${id}-g)" stroke-width="58" fill="none" opacity=".62" stroke-linecap="round"/>
+        stroke="url(#${id}-g)" stroke-width="58" fill="none" opacity=".7" stroke-linecap="round"/>
       <path d="M-60 604 C 268 528, 486 668, 782 570 C 998 498, 1116 546, 1272 490"
-        stroke="url(#${id}-g)" stroke-width="26" fill="none" opacity=".5" stroke-linecap="round"/>
+        stroke="url(#${id}-g)" stroke-width="26" fill="none" opacity=".58" stroke-linecap="round"/>
       <path d="M-60 492 C 232 418, 414 536, 676 458 C 894 394, 1042 428, 1272 366"
-        stroke="#2F4A63" stroke-width="6" fill="none" opacity=".28" stroke-linecap="round"/>
+        stroke="#8C3A14" stroke-width="6" fill="none" opacity=".28" stroke-linecap="round"/>
       <path d="M120 660 C 380 596, 560 706, 830 632 C 1020 580, 1140 606, 1272 566"
-        stroke="#2F4A63" stroke-width="2.4" fill="none" opacity=".2" stroke-linecap="round"/>
+        stroke="#8C3A14" stroke-width="2.4" fill="none" opacity=".2" stroke-linecap="round"/>
     </g>
     <g>${speck}</g>
     ${boat?`<g opacity=".88" transform="translate(760 528)">
-      <path d="M-36 8 C -21 18, 21 18, 36 8 C 21 12.5, -21 12.5, -36 8 Z" fill="#1E2C3C"/>
-      <path d="M0 -24 L 0 6" stroke="#1E2C3C" stroke-width="1.7"/>
-      <circle cx="0" cy="-27" r="3.2" fill="#1E2C3C"/>
-      <path d="M-52 16 C -20 22, 20 22, 52 16" stroke="#2F4A63" stroke-width="1.2" fill="none" opacity=".35"/>
+      <path d="M-36 8 C -21 18, 21 18, 36 8 C 21 12.5, -21 12.5, -36 8 Z" fill="#2B1A11"/>
+      <path d="M0 -24 L 0 6" stroke="#2B1A11" stroke-width="1.7"/>
+      <circle cx="0" cy="-27" r="3.2" fill="#2B1A11"/>
+      <path d="M-52 16 C -20 22, 20 22, 52 16" stroke="#8C3A14" stroke-width="1.2" fill="none" opacity=".4"/>
     </g>`:''}
   </svg>`;
 }

@@ -7,17 +7,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter+Tight:ital,wght@0,300..700;1,300..600&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
 :root{
-  --paper:#F7F5F0;          /* giấy ngà, ấm hơn trắng */
-  --paper-2:#EFEBE3;
-  --mist:#E6E9EE;           /* sương xa */
-  --ink:#1E2C3C;            /* mực chàm đậm */
-  --ink-60:rgba(30,44,60,.62);
-  --ink-38:rgba(30,44,60,.4);
-  --ink-14:rgba(30,44,60,.16);
-  --ink-08:rgba(30,44,60,.08);
-  --accent:#35516F;         /* chàm nhạt — màu dẫn */
-  --accent-ink:#F7F5F0;
-  --seal:#B03A2E;           /* triện son, dùng rất ít */
+  --paper:#FBF6EE;          /* giấy vàng ngà, hong qua lửa */
+  --paper-2:#F3E7D8;
+  --mist:#F0DCC9;           /* khói ấm */
+  --ink:#2B1A11;            /* mực nâu cháy, không phải đen */
+  --ink-60:rgba(43,26,17,.64);
+  --ink-38:rgba(43,26,17,.42);
+  --ink-14:rgba(43,26,17,.17);
+  --ink-08:rgba(43,26,17,.09);
+  --accent:#C2410C;         /* chu sa — màu dẫn */
+  --accent-ink:#FFF7EF;
+  --seal:#8C1F1B;           /* triện son già, đậm hơn accent để không lẫn */
 
   --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
   --sans:'Inter Tight',-apple-system,Segoe UI,Helvetica,Arial,sans-serif;
@@ -30,13 +30,13 @@
 
 /* District palettes — every area of the world has its own dominant colour,
    but the system (paper + ink + hairline) never changes. */
-[data-district="brand"]      { --accent:#2F4A63; }
-[data-district="creative"]   { --accent:#4C4660; }
-[data-district="consumer"]   { --accent:#37564E; }
-[data-district="growth"]     { --accent:#2B4560; }
-[data-district="media"]      { --accent:#6B5A45; }
-[data-district="strategy"]   { --accent:#3A4550; }
-[data-district="taste"]      { --accent:#5C4550; }
+[data-district="brand"]      { --accent:#B3350F; }  /* chu sa */
+[data-district="creative"]   { --accent:#A32B2B; }  /* huyết dụ */
+[data-district="consumer"]   { --accent:#8A4A14; }  /* hổ phách */
+[data-district="growth"]     { --accent:#9C5A0E; }  /* hoàng thổ */
+[data-district="media"]      { --accent:#7E3A12; }  /* gạch nung */
+[data-district="strategy"]   { --accent:#6B3A22; }  /* hạt dẻ */
+[data-district="taste"]      { --accent:#93233A; }  /* rượu vang */
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -109,7 +109,7 @@ h1,h2,h3,h4{margin:0;font-weight:400}
 .crest__cell b{font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:.02em;white-space:nowrap}
 .crest__cell .label{font-size:8.5px;letter-spacing:.2em}
 .crest__me{width:32px;height:32px;border-radius:50%;border:1px solid var(--ink-14);
-  background:radial-gradient(circle at 34% 30%,#DDE3EA,#9FB0C1);display:block;flex:none;
+  background:radial-gradient(circle at 34% 30%,#F2DEC9,#C08A63);display:block;flex:none;
   transition:box-shadow .3s}
 .crest__me:hover{box-shadow:0 0 0 3px var(--ink-08)}
 @media(max-width:1240px){.crest__cell{display:none}}
@@ -149,7 +149,7 @@ footer.colophon a:hover{color:var(--accent)}
    No stock photography, no 3D blobs. Every "image" is a typographic plate:
    colour field + oversized letterform + halftone. Built from data attributes. */
 .plate{
-  position:relative;overflow:hidden;background:var(--pl,#2F4A63);
+  position:relative;overflow:hidden;background:var(--pl,#8A3A12);
   color:var(--paper);aspect-ratio:4/5;display:block;isolation:isolate;
 }
 .plate--wide{aspect-ratio:16/9}
@@ -293,9 +293,12 @@ a.plate:hover .plate__mark{transform:translate(-8px,-10px);opacity:.6}
 /* Guard: page-level `padding` shorthands must never eat the gutter. */
 .wrap.wrap{padding-inline:var(--gut)}
 
-/* ---------- Hero thuỷ mặc ----------
+/* ---------- Hero tranh mực (chỉ trang bìa) ----------
+   Đặt tên riêng: .hero là class có sẵn của trang case, đụng tên sẽ
+   biến header case thành flex row và bóp mất tấm ảnh. */
+/* ---------- 
    Chữ bên trái, tranh mực tràn sang phải và chạy dưới chữ. Không có hộp nào cả. */
-.hero{position:relative;min-height:clamp(520px,74vh,760px);display:flex;align-items:center;overflow:hidden}
+.inkhero{position:relative;min-height:clamp(520px,74vh,760px);display:flex;align-items:center;overflow:hidden}
 .inkscene{position:absolute;top:0;right:calc(var(--gut)*-1);width:min(82%,1240px);height:112%;pointer-events:none;opacity:.95;
   -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 34%,#000 88%,transparent 100%),
                      linear-gradient(180deg,transparent 2%,#000 22%,#000 76%,transparent 98%);
@@ -303,16 +306,16 @@ a.plate:hover .plate__mark{transform:translate(-8px,-10px);opacity:.6}
                      linear-gradient(180deg,transparent 2%,#000 22%,#000 76%,transparent 98%);
   mask-composite:intersect}
 @media(max-width:900px){.inkscene{width:150%;right:-42%;opacity:.42}}
-.hero__inner{position:relative;z-index:2;display:grid;gap:clamp(20px,3vw,40px);width:100%;
+.inkhero__inner{position:relative;z-index:2;display:grid;gap:clamp(20px,3vw,40px);width:100%;
   padding-block:clamp(40px,7vw,90px)}
-@media(min-width:1100px){.hero__inner{grid-template-columns:minmax(0,1.05fr) minmax(0,.55fr);align-items:center;gap:clamp(30px,5vw,90px)}}
-.hero__eyebrow{color:var(--ink-38)}
-.hero__title{margin:clamp(14px,2vw,26px) 0 clamp(16px,2vw,28px);font-size:clamp(2.7rem,5.4vw,4.9rem);line-height:1.02}
-.hero__body{text-shadow:0 0 22px var(--paper),0 0 12px var(--paper)}
-.hero__body{font-size:15.5px;line-height:1.72;color:var(--ink-60);max-width:46ch}
-.hero__cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:clamp(20px,2.6vw,34px)}
-.hero__aside{display:flex;justify-content:flex-start;gap:16px;align-items:flex-start}
-@media(min-width:1100px){.hero__aside{justify-content:flex-end}}
+@media(min-width:1100px){.inkhero__inner{grid-template-columns:minmax(0,1.05fr) minmax(0,.55fr);align-items:center;gap:clamp(30px,5vw,90px)}}
+.inkhero__eyebrow{color:var(--ink-38)}
+.inkhero__title{margin:clamp(14px,2vw,26px) 0 clamp(16px,2vw,28px);font-size:clamp(2.7rem,5.4vw,4.9rem);line-height:1.02}
+.inkhero__body{text-shadow:0 0 22px var(--paper),0 0 12px var(--paper)}
+.inkhero__body{font-size:15.5px;line-height:1.72;color:var(--ink-60);max-width:46ch}
+.inkhero__cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:clamp(20px,2.6vw,34px)}
+.inkhero__aside{display:flex;justify-content:flex-start;gap:16px;align-items:flex-start}
+@media(min-width:1100px){.inkhero__aside{justify-content:flex-end}}
 
 /* ---------- Dải trạng thái dưới hero ---------- */
 .strip{border-block:var(--rule);display:grid;grid-template-columns:1fr;background:rgba(255,255,255,.35)}
