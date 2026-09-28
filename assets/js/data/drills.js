@@ -22,6 +22,8 @@ const ERRORS = {
   NHAM_SO_TUYET_DOI:       'Lấy chênh lệch tuyệt đối thay cho tỉ lệ',
   QUEN_TI_LE_CHUYEN_DOI:   'Quên tỉ lệ chuyển đổi ở bước cuối',
   QUEN_TI_LE_GIOI_THIEU:   'Giả định mọi khách đều đi giới thiệu',
+  QUEN_CHI_PHI_KHUYEN_MAI: 'Quên tính tiền khuyến mãi vào chi phí có khách',
+  TINH_TREN_KHACH_KHONG_HOAT_DONG:'Chia cho cả khách không còn hoạt động',
   SAI_TINH_TOAN:           'Sai tính toán chưa phân loại',
 };
 

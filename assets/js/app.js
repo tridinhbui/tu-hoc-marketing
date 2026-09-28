@@ -28,6 +28,12 @@ function pathLessons(pathId){ const p=PATHS.find(x=>x.id===pathId); return (p&&p
 /* Chặng mở khi chặng trước xong ít nhất 60%. Chặng 01 luôn mở. Bài trong lộ trình đã chọn luôn mở. */
 function stageOpen(sid,s=S.get()){
   const i=STAGES.findIndex(x=>x.id===sid); if(i<=0) return true;
+  /* Chặng trước có đề thi thì cổng là đề thi, không phải tỉ lệ bài đã đọc.
+     Chặng nào chưa soạn đề thì vẫn dùng luật cũ 60% — không chặn người học vì
+     mình chưa viết xong nội dung. */
+  const prevId=STAGES[i-1].id;
+  if(typeof EXAMS!=='undefined' && EXAMS[prevId])
+    return !!((s.exams||{})[prevId]||{}).passed && stageOpen(prevId,s);
   const prev=STAGES[i-1].mods.flatMap(m=>m.lessons); if(!prev.length) return true;
   return prev.filter(k=>s.done[k]).length/prev.length>=.6 && stageOpen(STAGES[i-1].id,s);
 }
@@ -114,13 +120,15 @@ function missions(s=S.get()){
 function parseNum(raw){
   let s=String(raw||'').trim().toLowerCase().replace(/\s+/g,'').replace(/đồng|vnd|lần|người|khách|ly|[đ%]/g,'');
   let mult=1;
-  if(/(triệu|tr)$/.test(s)){ mult=1e6; s=s.replace(/(triệu|tr)$/,''); }
+  if(/(tỷ|tỉ)$/.test(s)){ mult=1e9; s=s.replace(/(tỷ|tỉ)$/,''); }
+  else if(/(triệu|tr)$/.test(s)){ mult=1e6; s=s.replace(/(triệu|tr)$/,''); }
   else if(/k$/.test(s)){ mult=1e3; s=s.slice(0,-1); }
+  let sign=1; if(/^[-−]/.test(s)){ sign=-1; s=s.slice(1); }
   if(!s) return NaN;
   if(s.includes('.')&&s.includes(',')) s=s.replace(/\./g,'').replace(',','.');      // 1.234,5
   else if(/^\d{1,3}([.,]\d{3})+$/.test(s)) s=s.replace(/[.,]/g,'');                  // 1.200 · 400,000
   else s=s.replace(',','.');                                                         // 1,5 · 0.6
-  const n=Number(s); return isFinite(n)?n*mult:NaN;
+  const n=Number(s); return isFinite(n)?sign*n*mult:NaN;
 }
 const fmt=n=>Number(n).toLocaleString('vi-VN',{maximumFractionDigits:2});
 
