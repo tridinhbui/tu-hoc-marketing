@@ -58,7 +58,7 @@ const LEVELS=['Người quan sát','Người ghi chép','Người đặt câu h�
 const lvXP=n=>Math.round(10*Math.pow(n-1,1.65));           // XP cần để đạt cấp n (1..30)
 function level(xp=S.get().xp){ let n=1; for(let i=1;i<=30;i++) if(xp>=lvXP(i)) n=i;
   return {n,name:LEVELS[n-1],cur:lvXP(n),next:n<30?lvXP(n+1):null}; }
-const XP={lesson:20,drill:15,talk:10,review:5,focus:15,quiz:2,case:40,game:30};
+const XP={lesson:20,drill:15,talk:10,review:5,focus:15,quiz:2,case:40,game:30,daily:10};
 
 /* ---------------- streak + thẻ đóng băng ---------------- */
 function touch(s=S.get()){
@@ -134,7 +134,7 @@ function parseNum(raw){
 const fmt=n=>Number(n).toLocaleString('vi-VN',{maximumFractionDigits:2});
 
 /* ---------------- shell ---------------- */
-const APP_NAV=[['Học','hoc.html'],['Bắt đầu từ đâu','ban-do.html'],['Quiz 60 giây','quiz.html'],['Case có giờ','case-thu-vien.html'],['Năng lực','nang-luc.html'],['Ôn lỗi','on-loi.html'],['Cộng đồng','cong-dong.html'],['Xếp hạng','bang-xep-hang.html'],['Bàn làm việc','roadmap.html']];
+const APP_NAV=[['Học','hoc.html'],['Học bài','hoc-bai.html'],['Bắt đầu từ đâu','ban-do.html'],['Quiz 60 giây','quiz.html'],['Case có giờ','case-thu-vien.html'],['Năng lực','nang-luc.html'],['Ôn lỗi','on-loi.html'],['Cộng đồng','cong-dong.html'],['Xếp hạng','bang-xep-hang.html'],['Bàn làm việc','roadmap.html']];
 function applyTheme(s=S.get()){
   document.documentElement.dataset.theme=s.theme==='light'?'':s.theme;
   document.documentElement.style.setProperty('--read',(s.read||18)+'px');
@@ -246,7 +246,7 @@ function mergeState(a={},b={}){
     cases[id]=[...m.values()].slice(-10); }
   const quizHits={...(a.quizHits||{})}; for(const [k,v] of Object.entries(b.quizHits||{})) quizHits[k]=Math.max(quizHits[k]||0,v);
   const gm=new Map(); for(const g of [...(a.games||[]),...(b.games||[])]) gm.set(`${g.d}|${g.cash}`,g);
-  return {...a,...b, done:obj(a.done,b.done), drills:obj(a.drills,b.drills), talks:obj(a.talks,b.talks), chests:obj(a.chests,b.chests),
+  return {...a,...b, done:obj(a.done,b.done), drills:obj(a.drills,b.drills), talks:obj(a.talks,b.talks), chests:obj(a.chests,b.chests), flags:obj(a.flags,b.flags), flags:obj(a.flags,b.flags),
     errors, log:log.slice(-800), cases, quizHits, games:[...gm.values()].slice(-20),
     xp:Math.max(a.xp||0,b.xp||0), best:Math.max(a.best||0,b.best||0,a.streak||0,b.streak||0),
     streak:later.streak||0, lastDay:later.lastDay||null, freezes:later.freezes||0,

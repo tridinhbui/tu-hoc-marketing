@@ -2,7 +2,7 @@
    Server gộp bản gửi lên với bản đang lưu — không bao giờ ghi đè mù — rồi tính điểm tuần từ nhật ký. */
 import { json, now, currentUser, body, publicName } from './lib.js';
 
-const XP = { lesson: 20, drill: 15, talk: 10, review: 5, focus: 15, quiz: 2, case: 40, game: 30 };
+const XP = { lesson: 20, drill: 15, talk: 10, review: 5, focus: 15, quiz: 2, case: 40, game: 30, daily: 10 };
 const WEEK_XP_CAP = 3000;   // chặn số ảo: một tuần học rất chăm cũng hiếm khi vượt mức này
 
 export function mergeState(a = {}, b = {}) {
@@ -30,7 +30,7 @@ export function mergeState(a = {}, b = {}) {
   const gm = new Map(); for (const g of [...(a.games || []), ...(b.games || [])]) gm.set(`${g.d}|${g.cash}`, g);
   return {
     ...a, ...b,
-    done: obj(a.done, b.done), drills: obj(a.drills, b.drills), talks: obj(a.talks, b.talks), chests: obj(a.chests, b.chests),
+    done: obj(a.done, b.done), drills: obj(a.drills, b.drills), talks: obj(a.talks, b.talks), chests: obj(a.chests, b.chests), flags: obj(a.flags, b.flags),
     errors, log: log.slice(-800), cases, quizHits, games: [...gm.values()].slice(-20),
     xp: Math.max(a.xp || 0, b.xp || 0), best: Math.max(a.best || 0, b.best || 0, a.streak || 0, b.streak || 0),
     streak: later.streak || 0, lastDay: later.lastDay || null, freezes: later.freezes || 0,
