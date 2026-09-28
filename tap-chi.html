@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="vi" data-district="brand">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nhìn thấy — Tự học Marketing</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Tạp chí tự học Marketing: thương hiệu, campaign, consumer insight và những gì đang diễn ra ngoài đời thật.">
+<meta property="og:title" content="Nhìn thấy — Tự học Marketing">
+<meta property="og:description" content="Tạp chí tự học Marketing: thương hiệu, campaign, consumer insight và những gì đang diễn ra ngoài đời thật.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Nhìn thấy">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
+<style>
+  .front{display:grid;gap:clamp(20px,3vw,44px);padding:clamp(40px,6vw,90px) 0}
+  @media(min-width:1000px){.front{grid-template-columns:1.25fr .75fr}}
+  .front__side{display:grid;gap:clamp(20px,3vw,38px);align-content:start}
+  .mini{border-top:1px solid var(--ink);padding-top:12px}
+  .mini h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.3rem,2vw,1.7rem);line-height:1.1;margin:8px 0}
+  .rail__wrap{padding-bottom:clamp(30px,5vw,70px)}
+  .rcard{position:relative}
+  .rcard__meta{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--ink);margin-top:10px;padding-top:8px}
+  .rcard h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;line-height:1.1;margin-top:6px}
+  .rcard__ctx{font-size:13px;line-height:1.55;color:var(--ink-60);margin-top:8px;max-height:0;opacity:0;overflow:hidden;
+    transition:max-height .5s var(--ease),opacity .4s var(--ease)}
+  .rcard:hover .rcard__ctx,.rcard:focus-within .rcard__ctx{max-height:130px;opacity:1}
+  @media(hover:none){.rcard__ctx{max-height:130px;opacity:1}}
+  .quotebox{padding:clamp(40px,7vw,100px) 0;border-block:var(--rule);display:grid;gap:24px}
+  @media(min-width:860px){.quotebox{grid-template-columns:1.4fr 1fr;align-items:end}}
+  .districts{padding-bottom:clamp(40px,6vw,90px)}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">
+  <h2>Trang này cần JavaScript</h2>
+  <p>Toàn bộ nội dung — bài học, case study, thư viện nguyên lý — được dựng ngay trong trình duyệt của bạn,
+  không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
+</div></noscript>
+
+<main>
+  <!-- HERO -->
+  <section class="inkhero">
+    <div id="inkbg"></div>
+    <div class="wrap inkhero__inner">
+      <div>
+        <div class="label inkhero__eyebrow" data-reveal>Marketing Observation World</div>
+        <h1 class="display inkhero__title" data-reveal data-delay=".05">Learn to see<br>what marketers<br><em>see.</em></h1>
+        <p class="inkhero__body" data-reveal data-delay=".1">Marketing ở khắp nơi: trong cách một menu sắp xếp giá, trong màu của một cái lon,
+          trong câu đầu tiên của biển quảng cáo bạn lướt qua sáng nay. Tự học qua thương hiệu, campaign,
+          consumer insight và những gì đang diễn ra ngoài đời thật — phần lớn đến từ thị trường Việt Nam.</p>
+        <div class="inkhero__cta" data-reveal data-delay=".15">
+          <a class="btn" href="world.html">Bắt đầu quan sát</a>
+          <a class="btn btn--ghost" href="gallery.html">Khám phá campaign</a>
+        </div>
+      </div>
+      <div class="inkhero__aside" data-reveal data-delay=".2">
+        <div class="quoteblock">
+          <span class="quoteblock__mark">“</span>
+          <p>Ai cũng nhìn thấy quảng cáo.<br>Rất ít người nhìn thấy quyết định phía sau nó.<br>
+             Học cách nhìn trước, rồi hãy học cách làm.</p>
+          <cite>— Nguyên tắc của số này</cite>
+        </div>
+        <span id="heroseal"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DẢI TRẠNG THÁI -->
+  <section class="strip" id="strip"></section>
+
+  <!-- EDITORIAL FRONT PAGE -->
+  <section class="wrap front">
+    <article data-reveal>
+      <div class="label label--accent">Bài hôm nay</div>
+      <div id="today"></div>
+    </article>
+    <aside class="front__side">
+      <div data-reveal data-delay=".08"><div class="label">Campaign của tuần</div><div id="cotw"></div></div>
+      <div data-reveal data-delay=".14"><div class="label">Một thương hiệu để bóc tách</div><div id="botw"></div></div>
+      <div data-reveal data-delay=".2"><div class="label">Thử một challenge</div><div id="chotw"></div></div>
+    </aside>
+  </section>
+
+  <section class="wrap rmap" id="rmap">
+    <div data-reveal>
+      <div class="label label--accent">Lộ trình 12 tháng</div>
+      <div class="rmap__n" id="rmn">0 / 48</div>
+      <div class="rmap__bar"><i id="rmb"></i></div>
+    </div>
+    <div data-reveal data-delay=".08">
+      <div class="label" id="rmk">Việc tuần này</div>
+      <p class="rmap__task" id="rmt"></p>
+      <a class="btn btn--ghost" href="roadmap.html">Mở lộ trình →</a>
+    </div>
+  </section>
+
+  <section class="wrap railsec">
+    <div class="railsec__head">
+      <h2 class="h-serif" data-reveal>Trong số này</h2>
+      <p class="caption" data-reveal data-delay=".08">Kéo ngang. Rê chuột lên một tấm để thấy insight đứng sau chiến dịch đó —
+        phần còn lại nằm trong trang case study.</p>
+    </div>
+    <div class="rail" id="rail" data-reveal></div>
+  </section>
+
+  <section class="wrap quotebox">
+    <p class="pull" data-reveal>Ai cũng nhìn thấy quảng cáo. Rất ít người nhìn thấy <em>quyết định</em> phía sau nó.</p>
+    <div data-reveal data-delay=".1">
+      <p class="caption">Website này không có bài giảng, không có chứng chỉ và không có thanh tiến độ nhấp nháy.
+      Nó có <span id="ncases">20</span> case study, <span id="nbrands">14</span> thương hiệu bị bóc tách, <span id="nprin">22</span> nguyên lý, một phòng luyện gu và một cuốn sổ tay để bạn ghi lại
+      những gì mình nhìn thấy. Toàn bộ tiến trình nằm trong trình duyệt của bạn.</p>
+      <div class="grid g3" style="margin-top:26px">
+        <div class="stat"><span class="label">Case study</span><b id="ncases2">20</b></div>
+        <div class="stat"><span class="label">Nguyên lý</span><b id="nprin2">22</b></div>
+        <div class="stat"><span class="label">Bài học</span><b id="nlessons">9</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="subhome"></section>
+
+  <!-- DISTRICTS -->
+  <section class="wrap districts">
+    <div class="pagehead__grid" style="margin-bottom:clamp(20px,3vw,44px)">
+      <h2 class="h-serif" data-reveal>Thế giới Marketing<br>chia làm sáu khu.</h2>
+      <p class="caption" data-reveal data-delay=".1">Không có Bài 1, Bài 2. Có sáu khu vực, mỗi khu một màu, một cách nghĩ
+        và một câu hỏi mà bạn phải tự trả lời trước khi bước vào.</p>
+    </div>
+    <div id="dlist"></div>
+  </section>
+</main>
+
+<script src="assets/js/core.js?v=8"></script>
+<script src="assets/js/subscribe.js?v=7"></script>
+<script src="assets/js/data/districts.js?v=7"></script>
+<script src="assets/js/data/campaigns.js?v=7"></script>
+<script src="assets/js/data/brands.js?v=7"></script>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/challenges.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/roadmap.js?v=7"></script>
+<script>
+shell('tap-chi.html');
+
+/* Các con số này từng được gõ tay và đã sai sau khi thêm case — giờ đếm từ chính data. */
+const N={ncases:CAMPAIGNS.length,ncases2:CAMPAIGNS.length,nbrands:BRANDS.length,
+         nprin:PRINCIPLES.length,nprin2:PRINCIPLES.length,nlessons:LESSONS.length};
+Object.entries(N).forEach(([id,v])=>{const el=document.getElementById(id); if(el) el.textContent=v;});
+document.getElementById('inkbg').innerHTML = inkScene('hero');
+document.getElementById('heroseal').innerHTML = seal('見',34);
+
+/* cover art — hai tấm poster chữ, không ảnh stock */
+const L = LESSONS[dayIndex(LESSONS.length)];
+const C = CAMPAIGNS[dayIndex(CAMPAIGNS.length)];
+const B = BRANDS[dayIndex(BRANDS.length)];
+const CH = CHALLENGES[dayIndex(CHALLENGES.length)];
+
+/* dải trạng thái: bài hôm nay · việc đang dở · cấp bậc · chuỗi */
+const st=State.get(), sc=score(st), rk=rank(sc), nx=nextRank(sc);
+const dots=Array.from({length:10},(_,i)=>`<i class="${i<Math.min(st.streak,10)?'on':''}"></i>`).join('');
+document.getElementById('strip').innerHTML = `
+  <div class="strip__cell">
+    <span class="label">Bài hôm nay</span>
+    <h3>${L.t}</h3>
+    <div class="strip__meta"><span>${L.read}</span><span>·</span><span>Day ${L.day}</span></div>
+    <a class="strip__btn" href="lesson.html?day=${L.day}">Đọc ngay</a>
+  </div>
+  <div class="strip__cell">
+    <span class="label">Case của tuần</span>
+    <h3>${C.brand} — ${C.title}</h3>
+    <div class="strip__meta"><span>${C.tag}</span><span>·</span><span>${C.year}</span></div>
+    <a class="strip__btn" href="campaign.html?id=${C.id}">Xem case</a>
+  </div>
+  <div class="strip__cell">
+    <span class="label">Cấp bậc hiện tại</span>
+    <div class="strip__big" style="color:var(--accent)">${rk[0]}</div>
+    <div class="strip__meta"><span>${sc}${nx?' / '+nx[1]:''} bước</span>${nx?`<span>·</span><span>tới ${nx[0]}</span>`:''}</div>
+    <div class="strip__bar"><i style="width:${nx?Math.min(100,Math.round(sc/nx[1]*100)):100}%"></i></div>
+  </div>
+  <div class="strip__cell">
+    <span class="label">Chuỗi quan sát</span>
+    <div class="strip__big">${st.streak}<span style="font-size:13px;font-family:var(--sans);color:var(--ink-38)"> ngày liên tục</span></div>
+    <div class="strip__dots">${dots}</div>
+  </div>`;
+
+/* bài hôm nay */
+document.getElementById('today').innerHTML = `
+  <a href="lesson.html?day=${L.day}">
+    ${plate({color:L.color,mark:String(L.day),kicker:'Day '+L.day,meta:L.read,title:'',shape:'plate--wide',href:''})}
+    <h2 class="h-serif" style="margin:18px 0 10px;max-width:20ch">${L.t}</h2>
+  </a>
+  <p class="caption" style="max-width:56ch">${L.idea}</p>
+  <a class="btn btn--ghost" style="margin-top:20px" href="lesson.html?day=${L.day}">Đọc trong ${L.read}</a>`;
+
+const mini=(kicker,plateHtml,title,text,href,cta)=>`
+  <div class="mini">${plateHtml}<h3>${title}</h3><p class="caption">${text}</p>
+  <a class="label label--accent" style="display:inline-block;margin-top:10px" href="${href}">${cta} →</a></div>`;
+
+document.getElementById('cotw').innerHTML = mini('',
+  plate({color:C.color,mark:C.mark,kicker:C.brand,meta:C.year,title:C.title,shape:'plate--sq',href:'case/'+C.id+'.html'}),
+  '', C.insight.slice(0,140)+'…', 'case/'+C.id+'.html', 'Xem case study');
+
+document.getElementById('botw').innerHTML = mini('',
+  plate({color:B.color,mark:B.mark,kicker:'Brand X-Ray',meta:B.market,title:B.name,shape:'plate--wide',href:'thuong-hieu/'+B.id+'.html'}),
+  '', B.q[0].q, 'thuong-hieu/'+B.id+'.html', 'Tự trả lời trước');
+
+document.getElementById('chotw').innerHTML = `<div class="mini">
+  <h3>${CH.kind}</h3><p class="caption">${CH.brief}</p>
+  <a class="label label--accent" style="display:inline-block;margin-top:10px" href="challenge.html#${CH.id}">Thử ngay →</a></div>`;
+
+/* rail ngang — 8 case, hover mới lộ insight */
+document.getElementById('rail').innerHTML = CAMPAIGNS.slice(0,8).map(c=>`
+  <article class="rcard">
+    ${plate({color:c.color,mark:c.mark,kicker:c.brand,meta:c.year,title:c.title,shape:'plate--tall',href:'case/'+c.id+'.html'})}
+    <div class="rcard__meta"><span class="label">${c.tag}</span><span class="label">${c.market}</span></div>
+    <a href="case/${c.id}.html"><h3>${c.title}</h3></a>
+    <p class="rcard__ctx">${c.insight}</p>
+  </article>`).join('');
+
+/* lộ trình — chỉ nói một việc: tuần kế tiếp chưa tick */
+(function(){
+  const flat=[];
+  PHASES.forEach(p=>p.months.forEach(m=>m.weeks.forEach(([w,body])=>flat.push({id:p.id+':'+w,w,body,phase:p.name,month:m.m}))));
+  const done=State.get().roadmap||[];
+  const next=flat.find(x=>!done.includes(x.id));
+  document.getElementById('rmn').textContent = `${done.length} / ${flat.length}`;
+  document.getElementById('rmb').style.width = (done.length/flat.length*100)+'%';
+  document.getElementById('rmk').textContent = next
+    ? `${next.phase} · ${next.month} · ${next.w}` : 'Hết lộ trình';
+  document.getElementById('rmt').innerHTML = next
+    ? next.body : 'Bạn đã đi hết 48 tuần. Giờ đến lượt bạn viết cái tiếp theo.';
+})();
+
+/* districts index */
+document.getElementById('dlist').innerHTML = DISTRICTS.map((x,i)=>`
+  <a class="index-row" href="world.html#${x.id}" data-reveal>
+    <span class="num">${String(i+1).padStart(2,'0')}</span>
+    <span class="index-row__t">${x.name}</span>
+    <span class="caption" style="max-width:38ch">${x.line}</span>
+    <span class="label" style="color:${x.color}">${x.topics.length} chủ đề</span>
+  </a>`).join('');
+document.getElementById('subhome').innerHTML = subscribeBox('home');
+reveal();
+</script>
+</body>
+</html>

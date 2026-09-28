@@ -15,7 +15,7 @@
 <script src="assets/js/data/curriculum.js?v=1"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
-<script src="assets/js/app.js?v=7"></script>
+<script src="assets/js/app.js?v=9"></script>
 <script>
 
 appShell('tai-khoan.html');
@@ -24,7 +24,13 @@ const ERR={'het-han':'Link đã hết hạn hoặc đã được dùng. Xin link
 async function render(){
   const u=await account();
   if(API.on===false){ app.innerHTML=NOAPI; return; }
-  if(qp('dang-nhap')==='ok'&&u){ toast('Đã đăng nhập'); history.replaceState(null,'','tai-khoan.html'); }
+  /* Trang đích sau đăng nhập: chỉ nhận đường dẫn nội bộ dạng "trang.html?…", không nhận URL ngoài. */
+  const safe=v=>/^[a-z0-9-]+\.html(\?[^<>"'\s]*)?$/.test(v||'')?v:null;
+  if(safe(qp('next'))) try{ localStorage.setItem('thmc.next',qp('next')); }catch(e){}
+  if(qp('dang-nhap')==='ok'&&u){
+    let nx=null; try{ nx=safe(localStorage.getItem('thmc.next')); localStorage.removeItem('thmc.next'); }catch(e){}
+    if(nx){ location.replace(nx); return; }
+    toast('Đã đăng nhập'); history.replaceState(null,'','tai-khoan.html'); }
   if(!u){
     app.innerHTML=`<section class="section">
       <span class="mono mono--red">Tài khoản · miễn phí</span>
@@ -36,6 +42,7 @@ async function render(){
         <button class="btn">Gửi link đăng nhập</button></form>
       <div id="msg" class="verdict" aria-live="polite"></div>
       <p class="small muted" style="margin-top:20px">Chúng tôi chỉ dùng email để gửi link đăng nhập. Không gửi quảng cáo.</p>
+      <p style="margin-top:14px"><a href="${safe(qp('next'))||'hoc.html'}">Học ngay không cần tài khoản →</a></p>
     </section>`;
     document.getElementById('f').onsubmit=async e=>{ e.preventDefault(); const m=document.getElementById('msg');
       try{ const r=await api('/auth/start',{method:'POST',body:{email:document.getElementById('em').value}});

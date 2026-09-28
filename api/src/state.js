@@ -28,12 +28,36 @@ export function mergeState(a = {}, b = {}) {
   const quizHits = { ...(a.quizHits || {}) };
   for (const [k, v] of Object.entries(b.quizHits || {})) quizHits[k] = Math.max(quizHits[k] || 0, v);
   const gm = new Map(); for (const g of [...(a.games || []), ...(b.games || [])]) gm.set(`${g.d}|${g.cash}`, g);
+  /* Cùng quy tắc với client (assets/js/app.js → mergeState). Sửa một bên thì sửa cả hai. */
+  const RANK = { learned: 1, passed: 2, solid: 3 };
+  const xpl = { ...(a.xpl || {}) };
+  for (const [k, e] of Object.entries(b.xpl || {})) { const o = xpl[k]; xpl[k] = !o || Math.abs(e.x || 0) >= Math.abs(o.x || 0) ? e : o; }
+  const hasLedger = !!(a.xpl || b.xpl);
+  const xpSum = (m) => Math.max(0, Object.values(m).reduce((n, e) => n + (e.x || 0), 0));
+  const lessons = { ...(a.lessons || {}) };
+  for (const [k, r] of Object.entries(b.lessons || {})) { const o = lessons[k];
+    if (!o) { lessons[k] = r; continue; }
+    const hi = (RANK[r.state] || 0) >= (RANK[o.state] || 0) ? r : o, early = (o.at || '9') <= (r.at || '9') ? o : r;
+    lessons[k] = { ...hi, score: early.score, right: early.right, total: early.total, at: early.at }; }
+  /* Thi vượt chặng: đã qua ở máy nào thì giữ (lấy ngày sớm nhất); số lần và điểm tốt nhất lấy lớn hơn. */
+  const exams={...(a.exams||{})};
+  for(const [k,e] of Object.entries(b.exams||{})){ const o=exams[k]; if(!o){ exams[k]=e; continue; }
+    const passed=[o.passed,e.passed].filter(Boolean).sort()[0]||null;
+    exams[k]={attempts:Math.max(o.attempts||0,e.attempts||0),best:Math.max(o.best||0,e.best||0),passed,
+      lockUntil:passed?null:Math.max(o.lockUntil||0,e.lockUntil||0)||null}; }
+  const modq={...(a.modq||{})};
+  for(const [k,e] of Object.entries(b.modq||{})){ const o=modq[k]; if(!o){ modq[k]=e; continue; }
+    modq[k]={best:Math.max(o.best||0,e.best||0),of:Math.max(o.of||0,e.of||0),tries:Math.max(o.tries||0,e.tries||0),
+      last:[o.last,e.last].filter(Boolean).sort().pop()||null,passed:!!(o.passed||e.passed)}; }
   return {
     ...a, ...b,
     done: obj(a.done, b.done), drills: obj(a.drills, b.drills), talks: obj(a.talks, b.talks), chests: obj(a.chests, b.chests), flags: obj(a.flags, b.flags),
     errors, log: log.slice(-800), cases, quizHits, games: [...gm.values()].slice(-20),
-    xp: Math.max(a.xp || 0, b.xp || 0), best: Math.max(a.best || 0, b.best || 0, a.streak || 0, b.streak || 0),
+    xpl: hasLedger ? xpl : undefined, lessons, exams, modq,
+    xp: hasLedger ? xpSum(xpl) : Math.max(a.xp || 0, b.xp || 0), best: Math.max(a.best || 0, b.best || 0, a.streak || 0, b.streak || 0),
     streak: later.streak || 0, lastDay: later.lastDay || null, freezes: later.freezes || 0,
+    fzUsed: Math.max(a.fzUsed || 0, b.fzUsed || 0), fzBought: Math.max(a.fzBought || 0, b.fzBought || 0),
+    brokeFrom: later.brokeFrom || null, brokeAt: later.brokeAt || null,
     quizBest: Math.max(a.quizBest || 0, b.quizBest || 0),
     quiz: (b.quiz && (!a.quiz || b.quiz.d >= a.quiz.d)) ? b.quiz : a.quiz,
   };

@@ -34,6 +34,16 @@ async function route(request, env, url) {
   if (p === '/api/state' && m === 'PUT') return st.putState(request, env);
   if (p === '/api/leaderboard' && m === 'GET') return st.leaderboard(request, env);
 
+  /* Số thật cho trang chủ. Chỉ đếm, không lộ ai; cache ngắn để trang chủ không gõ D1 mỗi lượt xem. */
+  if (p === '/api/stats' && m === 'GET') {
+    const r = await env.DB.prepare(`SELECT
+        (SELECT COUNT(*) FROM users) AS learners,
+        (SELECT COUNT(*) FROM users WHERE created_at > ?1) AS joined_7d`)
+      .bind(Date.now() - 7 * 864e5).first();
+    return json({ learners: r?.learners || 0, joined_7d: r?.joined_7d || 0 }, 200,
+                { 'cache-control': 'public, max-age=300' });
+  }
+
   if (p === '/api/posts' && m === 'GET') return cm.listPosts(request, env);
   if (p === '/api/posts' && m === 'POST') return cm.createPost(request, env);
   let mm;

@@ -109,8 +109,16 @@ function saveExam(sid, res) {
     .forEach(m => (m.it.teaches || []).slice(0, 1)
       .forEach(pid => logError(conceptCode(pid), pid)));
 
-  if (res.passed) award('case', 'exam:' + sid);
+  if (res.passed) { award('exam', sid); creditStage(sid); }
   return e;
+}
+
+/* Qua đề vượt chặng = chứng minh đã nắm: bài nào của chặng chưa học được tính Đạt
+   (nguồn 'stage_exam', không cộng XP bài). Bài 'đã học' được nâng lên Đạt; điểm quiz lần đầu giữ nguyên. */
+function creditStage(sid) {
+  if (typeof completeLesson !== 'function') return;
+  const st = STAGES.find(x => x.id === sid); if (!st) return;
+  st.mods.flatMap(m => m.lessons).forEach(k => { const r = lessonState(k); if (!r || r.state === 'learned') completeLesson(k, null, null, 'stage_exam'); });
 }
 
 /* ---------------- triện ----------------
@@ -164,7 +172,7 @@ function syncCaseGate(sid) {
   if (!e.passed) {
     e.passed = g.date; e.attempts = (e.attempts || 0) + 1;
     S.set({ exams: { ...(s.exams || {}), [sid]: e } });
-    award('case', 'exam:' + sid);
+    award('exam', sid); creditStage(sid);
   }
   return g;
 }

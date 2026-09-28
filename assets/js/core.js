@@ -156,14 +156,14 @@ function inkScene(id='ink1',{boat=true,mountains=true}={}){
 
 /* ---------------- shell ---------------- */
 function shell(current){
-  const here = current || location.pathname.split('/').pop() || 'index.html';
+  const here = current || location.pathname.split('/').pop() || 'tap-chi.html';
   const nav = NAV.map(([t,h])=>`<a href="${h}"${h===here?' aria-current="page"':''}>${t}</a>`).join('');
   const s = State.get(), n = score(s), r = rank(n), nx = nextRank(n);
   const m = document.querySelector('main'); if(m && !m.id) m.id='main';
   document.body.insertAdjacentHTML('afterbegin',`
     <a class="skip" href="${location.pathname}#main">Tới nội dung chính</a>
     <header class="masthead">
-      <a class="masthead__brand" href="index.html">
+      <a class="masthead__brand" href="tap-chi.html">
         <span class="masthead__seal">${seal('觀',30)}</span>
         <span class="masthead__logo">Nhìn thấy</span>
         <span class="masthead__tag">Marketing Observation World</span>

@@ -55,31 +55,120 @@ const LEVELS=['Người quan sát','Người ghi chép','Người đặt câu h�
  'Người lập kế hoạch','Senior Executive','Assistant Brand Manager','Người bảo vệ ngân sách','Growth Manager',
  'Brand Manager','Người ra mắt sản phẩm','Senior Brand Manager','Category Lead','Head of Growth',
  'Marketing Manager','Head of Brand','Marketing Director','CMO','Người nhìn thấy'];
-const lvXP=n=>Math.round(10*Math.pow(n-1,1.65));           // XP cần để đạt cấp n (1..30)
+/* ---------------- cấp độ ----------------
+   Bảng 30 mốc cố định (đặc tả cơ chế XP). Tên cấp giữ theo nghề marketing.
+   Một bảng duy nhất: server tính bảng xếp hạng cũng đọc XP rồi tra đúng bảng này. */
+const LEVEL_MIN=[0,30,100,250,500,900,1500,2400,3600,5200,7500,10500,14500,20000,27000,
+  35000,44000,54000,65000,77000,90000,104000,120000,138000,158000,180000,205000,233000,265000,300000];
+const lvXP=n=>LEVEL_MIN[Math.max(1,Math.min(30,n))-1];
 function level(xp=S.get().xp){ let n=1; for(let i=1;i<=30;i++) if(xp>=lvXP(i)) n=i;
   return {n,name:LEVELS[n-1],cur:lvXP(n),next:n<30?lvXP(n+1):null}; }
-const XP={lesson:20,drill:15,talk:10,review:5,focus:15,quiz:2,case:40,game:30,daily:10};
 
-/* ---------------- streak + thẻ đóng băng ---------------- */
+/* ---------------- XP: thưởng HỌC, không thưởng BẤM ----------------
+   Mọi con số hứa trên giao diện đọc từ đây.
+   ONE_TIME: mỗi (loại, mục) chỉ cộng một lần, có chống cộng trùng giữa các máy.
+   DAILY_CAP: nguồn lặp lại được, có trần theo ngày địa phương. */
+const XP={lesson:10,learned:5,solid:10,exam:50,drill:15,talk:10,review:2,focus:15,quiz:2,case:40,game:30,daily:10};
+const XP_ONCE={lesson:'lesson',learned:'lesson',solid:'solid',exam:'exam',drill:'drill',talk:'talk',case:'case'};
+const XP_CAP={review:40,quiz:60,game:50,focus:15,daily:10};
+const STREAK_RESTORE_XP=150, STREAK_RESTORE_DAYS=3, FREE_FREEZES=3;
+/* "Một ngày học" = có hoạt động học thật: bài, ôn, bài tính, case, thi. Mở quiz 60 giây hay chơi game không tính. */
+const STREAK_KINDS=new Set(['lesson','learned','solid','review','drill','talk','case','exam','focus']);
+
+/* Sổ cái: s.xpl = { khoá: {x, d} }. Tổng XP là phép cộng của sổ — không cộng dồn mù.
+   Lần đầu chạy: toàn bộ XP cũ vào một dòng "legacy" để không ai mất điểm, và mọi thứ đã làm
+   được đánh dấu "đã trả" (x = 0) để làm lại không được cộng lần hai. */
+function ledger(s=S.get()){
+  if(s.xpl) return s;
+  const xpl={'legacy:base':{x:s.xp||0,d:today()}};
+  for(const k of Object.keys(s.done||{})) xpl['lesson:'+k]={x:0,d:s.done[k]};
+  for(const k of Object.keys(s.drills||{})) xpl['drill:'+k]={x:0,d:s.drills[k]};
+  for(const k of Object.keys(s.talks||{})) xpl['talk:'+k]={x:0,d:today()};
+  for(const [id,list] of Object.entries(s.cases||{})) if((list||[]).some(a=>a.passed)) xpl['case:'+id]={x:0,d:today()};
+  return S.set({xpl, xp:xpSum(xpl), fzBought:Math.max(s.fzBought||0,s.freezes||0), fzUsed:s.fzUsed||0});
+}
+const xpSum=(xpl)=>Math.max(0,Object.values(xpl||{}).reduce((n,e)=>n+(e.x||0),0));
+function xpToday(kind,s=S.get()){ return ((s.xpl||{})[kind+'@'+today()]||{}).x||0; }
+const freezesLeft=(s=S.get())=>Math.max(0,FREE_FREEZES+(s.fzBought||0)-(s.fzUsed||0));
+
+/* ---------------- streak + thẻ đóng băng ----------------
+   Bỏ lỡ bao nhiêu ngày cũng vậy: còn thẻ thì tốn một thẻ và chuỗi vẫn giữ; hết thẻ thì chuỗi về 1,
+   nhưng chuỗi cũ được nhớ lại để mua lại trong 3 ngày bằng 150 XP. Không bao giờ trừ XP khi mất chuỗi. */
 function touch(s=S.get()){
   const t=today(); if(s.lastDay===t) return s;
-  let {streak,freezes}=s;
+  let {streak=0}=s, fzUsed=s.fzUsed||0, brokeFrom=s.brokeFrom||null, brokeAt=s.brokeAt||null;
   const gap=s.lastDay?diffDays(s.lastDay,t):null;
   if(gap===1) streak++;
-  else if(gap===2 && freezes>0){ freezes--; streak++; toast('Đã dùng một thẻ đóng băng — chuỗi vẫn giữ.'); }
+  else if(gap!==null && gap>1 && freezesLeft(s)>0){ fzUsed++; streak++;
+    setTimeout(()=>toast(`Đã dùng 1 thẻ đóng băng — chuỗi ${streak} ngày vẫn giữ. Còn ${Math.max(0,FREE_FREEZES+(s.fzBought||0)-fzUsed)} thẻ.`),600); }
+  else if(gap!==null && gap>1){ brokeFrom=streak; brokeAt=t; streak=1; }
   else streak=1;
-  if(streak>0 && streak%7===0 && freezes<2) freezes++;   // mỗi 7 ngày liên tiếp được một thẻ, giữ tối đa 2
-  return S.set({streak,freezes,lastDay:t,best:Math.max(s.best||0,streak)});
+  if(streak>1){ brokeFrom=null; brokeAt=null; }
+  return S.set({streak,fzUsed,brokeFrom,brokeAt,lastDay:t,best:Math.max(s.best||0,streak)});
 }
+function canRestoreStreak(s=S.get()){
+  return !!(s.brokeFrom && s.brokeFrom>(s.streak||0) && s.brokeAt && diffDays(s.brokeAt,today())<=STREAK_RESTORE_DAYS
+    && (s.xp||0)>=STREAK_RESTORE_XP);
+}
+function restoreStreak(){
+  let s=ledger(); if(!canRestoreStreak(s)) return false;
+  const xpl={...s.xpl,['spend:restore:'+today()]:{x:-STREAK_RESTORE_XP,d:today()}};
+  s=S.set({xpl,xp:xpSum(xpl),streak:s.brokeFrom,brokeFrom:null,brokeAt:null,lastDay:today(),best:Math.max(s.best||0,s.brokeFrom)});
+  scheduleSync(); toast(`Đã mua lại chuỗi ${s.streak} ngày · −${STREAK_RESTORE_XP} XP`); return true;
+}
+
+/* award(kind, ref, times): trả về state; số XP thật sự cộng nằm ở award.last. */
 function award(kind,ref,times=1){
-  if(times<=0) return S.get();
-  let s=touch(); const before=level(s.xp).n;
-  s=S.set({xp:s.xp+XP[kind]*times, log:[...s.log.slice(-400),{d:today(),k:kind,r:ref,x:XP[kind]*times,t:Date.now()}]});
-  scheduleSync();
+  award.last=0;
+  if(times<=0||!(kind in XP)) return S.get();
+  let s=ledger();
+  if(STREAK_KINDS.has(kind)) s=touch(s);
+  const before=level(s.xp).n, want=XP[kind]*times, xpl={...s.xpl};
+  let key, got=want;
+  // Mốc một lần: chỉ bù phần chênh (đã học 5 → đạt 10 thì cộng thêm 5). Mốc 0 XP của dữ liệu cũ thì không bù.
+  if(XP_ONCE[kind]){ key=XP_ONCE[kind]+':'+ref; if(xpl[key]) got=xpl[key].x>0?Math.max(0,want-xpl[key].x):0; }
+  else if(XP_CAP[kind]){ key=kind+'@'+today(); got=Math.max(0,Math.min(want,XP_CAP[kind]-((xpl[key]||{}).x||0))); }
+  else key=kind+':'+ref+':'+Date.now();
+  if(got>0){ xpl[key]={x:((xpl[key]||{}).x||0)+got,d:today()}; }
+  else if(XP_ONCE[kind]&&!xpl[key]) xpl[key]={x:0,d:today()};
+  s=S.set({xpl, xp:xpSum(xpl), log:got>0?[...s.log.slice(-400),{d:today(),k:kind,r:ref,x:got,t:Date.now()}]:s.log});
+  award.last=got;
+  if(got>0) scheduleSync();
   const after=level(s.xp);
   const st=document.querySelector('.top__stat'); if(st) st.textContent=`Cấp ${after.n} · ${fmt(s.xp)} XP · ${s.streak} ngày`;
-  if(after.n>before) toast(`Lên cấp ${after.n} · ${after.name}`); else toast(`+${XP[kind]*times} XP`);
+  if(after.n>before) toast(`Lên cấp ${after.n} · ${after.name}`);
+  else if(got>0) toast(`+${got} XP`);
+  else if(XP_CAP[kind]&&want>0) toast('Đã đủ XP hôm nay cho mục này — vẫn học được, chỉ không cộng thêm.');
   return s;
+}
+
+/* ---------------- trạng thái bài: đang học → đã học (chưa vững) → đạt → vững ----------------
+   Điểm bài là điểm LẦN ĐẦU. Làm lại để học, không để nâng điểm. */
+const LESSON_PASS=0.6;
+const LESSON_RANK={learned:1,passed:2,solid:3};
+function lessonState(k,s=S.get()){
+  const r=(s.lessons||{})[k]; if(r) return r;
+  return s.done&&s.done[k]?{state:'learned',source:'legacy'}:null;
+}
+function completeLesson(k,right,total,source='lesson'){
+  const s=ledger(), prev=(s.lessons||{})[k];
+  if(source==='lesson' && prev && prev.score!=null) return prev;   // đã có điểm lần đầu: giữ nguyên
+  const graded=source==='lesson'&&total>0;
+  const score=graded?Math.round(right/total*100):(prev?prev.score:null)??null;
+  let state=(source!=='lesson'||score>=LESSON_PASS*100)?'passed':'learned';
+  if(prev&&LESSON_RANK[prev.state]>LESSON_RANK[state]) state=prev.state;   // không bao giờ tụt trạng thái
+  const rec={...(prev||{}),state,score,
+    right:graded?right:prev?prev.right:null, total:graded?total:prev?prev.total:null,
+    source:graded||!prev?source:source==='stage_exam'?'stage_exam':prev.source, at:(prev&&prev.at)||today()};
+  S.set({lessons:{...(s.lessons||{}),[k]:rec}, done:{...(s.done||{}),[k]:(s.done||{})[k]||today()}});
+  if(source!=='stage_exam') award(state==='passed'?'lesson':'learned',k);   // qua đề chặng đã có XP của đề
+  return rec;
+}
+/* Vững = nhớ lại đúng ở một ngày khác, cách lần học ít nhất 3 ngày. */
+function markSolid(k){
+  const s=S.get(), r=(s.lessons||{})[k];
+  if(!r||r.state==='solid'||diffDays(r.at,today())<3) return false;
+  S.set({lessons:{...s.lessons,[k]:{...r,state:'solid',solidAt:today()}}}); award('solid',k); return true;
 }
 
 /* ---------------- lỗi: ôn sau 1, 3, 7 ngày ---------------- */
@@ -157,6 +246,10 @@ function appShell(here){
     </div></footer><div class="toast" id="toast" role="status" aria-live="polite"></div>`);
   account().then(u=>{ const a=document.getElementById('acct'); if(!a) return;
     a.textContent = u ? u.name : (API.on ? 'Đăng nhập' : 'Tài khoản');
+    if(!u && API.on){                       // chưa đăng nhập: nút rõ ràng, quay lại đúng trang đang đọc
+      const here=(location.pathname.split('/').pop()||'hoc.html')+location.search;
+      a.className='btn'; a.style.cssText='padding:7px 14px;font-size:13px;text-decoration:none';
+      if(!/^tai-khoan\.html/.test(here)) a.href='tai-khoan.html?next='+encodeURIComponent(here); }
     if(u){ syncNow(); mountAssistant(); } });
 }
 function toast(m){ const t=document.getElementById('toast'); if(!t) return; t.textContent=m; t.classList.add('on');
@@ -246,10 +339,33 @@ function mergeState(a={},b={}){
     cases[id]=[...m.values()].slice(-10); }
   const quizHits={...(a.quizHits||{})}; for(const [k,v] of Object.entries(b.quizHits||{})) quizHits[k]=Math.max(quizHits[k]||0,v);
   const gm=new Map(); for(const g of [...(a.games||[]),...(b.games||[])]) gm.set(`${g.d}|${g.cash}`,g);
+  /* Sổ cái XP: hợp theo khoá. Cùng khoá ở hai máy (ví dụ trần ngày) lấy dòng lớn hơn — không bao giờ cộng trùng. */
+  const xpl={...(a.xpl||{})};
+  for(const [k,e] of Object.entries(b.xpl||{})){ const o=xpl[k]; xpl[k]=!o||Math.abs(e.x||0)>=Math.abs(o.x||0)?e:o; }
+  /* Trạng thái bài: giữ bậc cao hơn; điểm lần đầu lấy bản sớm hơn. */
+  const lessons={...(a.lessons||{})};
+  for(const [k,r] of Object.entries(b.lessons||{})){ const o=lessons[k];
+    if(!o){ lessons[k]=r; continue; }
+    const hi=(LESSON_RANK[r.state]||0)>=(LESSON_RANK[o.state]||0)?r:o, early=(o.at||'9')<=(r.at||'9')?o:r;
+    lessons[k]={...hi,score:early.score,right:early.right,total:early.total,at:early.at}; }
+  const hasLedger=!!(a.xpl||b.xpl);
+  /* Thi vượt chặng: đã qua ở máy nào thì giữ (lấy ngày sớm nhất); số lần và điểm tốt nhất lấy lớn hơn. */
+  const exams={...(a.exams||{})};
+  for(const [k,e] of Object.entries(b.exams||{})){ const o=exams[k]; if(!o){ exams[k]=e; continue; }
+    const passed=[o.passed,e.passed].filter(Boolean).sort()[0]||null;
+    exams[k]={attempts:Math.max(o.attempts||0,e.attempts||0),best:Math.max(o.best||0,e.best||0),passed,
+      lockUntil:passed?null:Math.max(o.lockUntil||0,e.lockUntil||0)||null}; }
+  const modq={...(a.modq||{})};
+  for(const [k,e] of Object.entries(b.modq||{})){ const o=modq[k]; if(!o){ modq[k]=e; continue; }
+    modq[k]={best:Math.max(o.best||0,e.best||0),of:Math.max(o.of||0,e.of||0),tries:Math.max(o.tries||0,e.tries||0),
+      last:[o.last,e.last].filter(Boolean).sort().pop()||null,passed:!!(o.passed||e.passed)}; }
   return {...a,...b, done:obj(a.done,b.done), drills:obj(a.drills,b.drills), talks:obj(a.talks,b.talks), chests:obj(a.chests,b.chests), flags:obj(a.flags,b.flags), flags:obj(a.flags,b.flags),
     errors, log:log.slice(-800), cases, quizHits, games:[...gm.values()].slice(-20),
-    xp:Math.max(a.xp||0,b.xp||0), best:Math.max(a.best||0,b.best||0,a.streak||0,b.streak||0),
+    xpl:hasLedger?xpl:undefined, lessons, exams, modq,
+    xp:hasLedger?xpSum(xpl):Math.max(a.xp||0,b.xp||0), best:Math.max(a.best||0,b.best||0,a.streak||0,b.streak||0),
     streak:later.streak||0, lastDay:later.lastDay||null, freezes:later.freezes||0,
+    fzUsed:Math.max(a.fzUsed||0,b.fzUsed||0), fzBought:Math.max(a.fzBought||0,b.fzBought||0),
+    brokeFrom:later.brokeFrom||null, brokeAt:later.brokeAt||null,
     quizBest:Math.max(a.quizBest||0,b.quizBest||0), quiz:(b.quiz&&(!a.quiz||b.quiz.d>=a.quiz.d))?b.quiz:a.quiz};
 }
 let syncT=null, syncing=false;
