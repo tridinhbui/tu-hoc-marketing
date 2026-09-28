@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Luyện cuối module — Tự Học Marketing Case</title>
+<meta name="description" content="Luyện tập cuối module: trả lời từng câu và đọc ngay lời giải thích cho cả đáp án đúng lẫn các phương án sai.">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<style>
+  .opt{display:block;width:100%;text-align:left;border:1px solid var(--ink-12);background:transparent;
+    border-radius:6px;padding:14px 16px;margin:8px 0;cursor:pointer;transition:border-color .2s,background .2s}
+  .opt:hover:not([disabled]){border-color:var(--ink-30)}
+  .opt b{font-family:var(--mono);font-size:11px;margin-right:10px;opacity:.55}
+  .opt[data-r="right"]{border-color:var(--ok);background:rgba(92,107,30,.07)}
+  .opt[data-r="wrong"]{border-color:var(--red);background:var(--red-06)}
+  .opt[disabled]{cursor:default}
+  .why{font-size:14.5px;line-height:1.6;margin:4px 0 10px 16px;padding-left:14px;border-left:2px solid var(--ink-12)}
+  .why--right{border-left-color:var(--ok)}
+  .why--wrong{border-left-color:var(--red)}
+  .dots{display:flex;gap:5px;flex-wrap:wrap}
+  .dots i{width:7px;height:7px;border-radius:50%;background:var(--ink-12);display:block}
+  .dots i.ok{background:var(--ok)} .dots i.no{background:var(--red)} .dots i.now{outline:2px solid var(--ink-30)}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">Trang luyện tập cần JavaScript. Mọi thứ chạy trong trình duyệt này, không gửi đi đâu.</div></noscript>
+<main class="wrap narrow" id="app"></main>
+
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/exam-items.js?v=6"></script>
+<script src="assets/js/data/exams.js?v=6"></script>
+<script src="assets/js/app.js?v=4"></script>
+<script src="assets/js/exam.js?v=4"></script>
+<script>
+appShell('luyen.html');
+const app = document.getElementById('app');
+const MID = new URLSearchParams(location.search).get('mod') || 's1m1';
+const STAGE = STAGES.find(st => st.mods.some(m => m.id === MID));
+const MOD = STAGE && STAGE.mods.find(m => m.id === MID);
+let items = [], idx = 0, marks = [];
+
+function intro(){
+  if(!MOD || !practicePool(MID).length){ app.innerHTML = `<section class="section"><h1 class="h1">Module này chưa có câu luyện</h1>
+    <a class="btn" href="ban-do.html">Về bản đồ</a></section>`; return; }
+  const rec = (S.get().modq || {})[MID], n = Math.min(PRACTICE_MAX, practicePool(MID).length);
+  app.innerHTML = `<section class="section">
+    <span class="mono mono--red">Luyện cuối module · Chặng ${STAGE.n}</span>
+    <h1 class="h1" style="margin:14px 0 16px">${escH(MOD.t)}</h1>
+    <p class="lede">${n} câu. Trả lời xong mỗi câu là đọc được ngay vì sao đúng — và vì sao từng phương án kia sai.
+      Không tính điểm thi, không khoá, làm lại bao nhiêu lần cũng được.</p>
+    <div class="kpis" style="margin-top:26px">
+      <div class="kpi"><span class="mono">Số câu</span><b>${n}</b></div>
+      <div class="kpi"><span class="mono">Để xong module</span><b>${practicePassMark(n)}/${n}</b></div>
+      <div class="kpi"><span class="mono">Tốt nhất</span><b>${rec ? rec.best + '/' + rec.of : '—'}</b></div>
+    </div>
+    <p class="small muted" style="margin-top:18px">Phần luyện chỉ dùng câu thường. Câu cốt lõi của chặng được để dành cho đề thi vượt chặng.</p>
+    <div style="margin-top:22px"><button class="btn" id="go">${rec ? 'Luyện lại' : 'Bắt đầu'}</button>
+      <a class="btn btn--ghost" href="ban-do.html#${STAGE.id}" style="margin-left:8px">Về bản đồ</a></div>
+  </section>`;
+  document.getElementById('go').onclick = () => { items = buildPractice(MID); idx = 0; marks = []; show(); };
+}
+
+function dots(){ return items.map((x,i) => {
+  const m = marks[i]; return `<i class="${m ? (m.ok ? 'ok' : 'no') : (i === idx ? 'now' : '')}"></i>`; }).join(''); }
+
+function show(){
+  const it = items[idx];
+  const body = it.type === 'calc'
+    ? `${it.ctx ? `<p class="lede">${it.ctx}</p>` : ''}
+       ${it.rows ? `<table class="exhibit"><tbody>${it.rows.map(([a,b]) => `<tr><td>${a}</td><td style="text-align:right"><b>${b}</b></td></tr>`).join('')}</tbody></table>` : ''}
+       <p class="h3" style="margin:18px 0 10px">${it.stem}</p>
+       <div class="row"><input class="field" id="num" inputmode="decimal" placeholder="Nhập số" style="max-width:200px">
+         <span class="mono" style="margin-left:10px">${it.unit || ''}</span>
+         <button class="btn" id="check" style="margin-left:12px">Kiểm tra</button></div>`
+    : `${it.ctx ? `<p class="lede">${it.ctx}</p>` : ''}
+       <p class="h3" style="margin:18px 0 10px">${it.stem}</p>
+       ${it.options.map(o => `<button class="opt" data-k="${o.k}"><b>${o.k.toUpperCase()}</b>${o.t}</button>`).join('')}`;
+
+  app.innerHTML = `<section class="section">
+    <div class="row between" style="margin-bottom:12px"><span class="mono">Câu ${idx+1} / ${items.length}</span>
+      <span class="mono">${escH(MOD.t)}</span></div>
+    <div class="dots" style="margin-bottom:22px">${dots()}</div>
+    ${body}
+    <div id="fb"></div>
+  </section>`;
+
+  if (it.type === 'calc') {
+    const go = () => { const v = document.getElementById('num').value; if (v.trim() === '') return;
+      reveal(it, v); };
+    document.getElementById('check').onclick = go;
+    document.getElementById('num').onkeydown = e => { if (e.key === 'Enter') go(); };
+  } else {
+    app.querySelectorAll('.opt').forEach(b => b.onclick = () => reveal(it, b.dataset.k));
+  }
+}
+
+/* Chỗ duy nhất trong toàn bộ hệ thống mà lời giải thích của từng phương án được hiện ra. */
+function reveal(it, given){
+  const g = gradeItem(it, given);
+  marks[idx] = { it, given, ...g };
+  const fb = document.getElementById('fb');
+  if (it.type === 'calc') {
+    document.getElementById('num').disabled = true; document.getElementById('check').remove();
+    fb.innerHTML = `<div class="${g.ok ? 'verdict' : 'note note--red'}" style="margin-top:18px">
+      <b>${g.ok ? 'Đúng.' : 'Chưa đúng.'}</b> Đáp án: <b>${it.ans} ${it.unit || ''}</b>
+      ${!g.ok && g.err ? `<br><span class="small">Lỗi hay gặp: ${escH(ERRORS[g.err] || g.err)}</span>` : ''}
+      <ol class="small" style="margin:10px 0 0 18px">${it.steps.map(x => `<li>${x}</li>`).join('')}</ol></div>`;
+  } else {
+    app.querySelectorAll('.opt').forEach(b => {
+      b.disabled = true;
+      if (b.dataset.k === it.answer) b.dataset.r = 'right';
+      else if (b.dataset.k === given) b.dataset.r = 'wrong';
+      /* giải thích nằm ngay dưới từng phương án — đọc được cả lý do các phương án kia sai */
+      b.insertAdjacentHTML('afterend', `<p class="why ${b.dataset.k === it.answer ? 'why--right' : b.dataset.k === given ? 'why--wrong' : ''}">${escH(it.why[b.dataset.k] || '')}</p>`);
+    });
+  }
+  const last = idx === items.length - 1;
+  fb.insertAdjacentHTML('beforeend', `<div class="row" style="margin-top:22px;gap:10px">
+    <button class="btn" id="next">${last ? 'Xem kết quả' : 'Câu tiếp'}</button>
+    ${(it.teaches || [])[0] && lessonMeta(it.teaches[0]) ? `<a class="small" href="bai.html?id=${encodeURIComponent(it.teaches[0])}">Đọc lại: ${escH(lessonMeta(it.teaches[0]).t)} →</a>` : ''}
+  </div>`);
+  document.getElementById('next').onclick = () => { if (last) finish(); else { idx++; show(); } };
+}
+
+function finish(){
+  const rec = savePractice(MID, marks), right = marks.filter(m => m.ok).length, n = marks.length;
+  const next = STAGE.mods[STAGE.mods.findIndex(m => m.id === MID) + 1];
+  const allDone = STAGE.mods.every(m => !practicePool(m.id).length || ((S.get().modq || {})[m.id] || {}).passed);
+  app.innerHTML = `<section class="section">
+    <span class="mono mono--red">Kết quả luyện · ${escH(MOD.t)}</span>
+    <h1 class="h1" style="margin:14px 0 8px">${right}/${n}${right >= practicePassMark(n) ? ' — xong module.' : '.'}</h1>
+    <p class="lede">${right >= practicePassMark(n)
+      ? 'Module này đã được đánh dấu xong trên bản đồ.'
+      : `Cần ${practicePassMark(n)}/${n} để xong module. Câu sai đã vào hàng ôn, kèm link về đúng bài.`}</p>
+    <div class="dots" style="margin:18px 0">${marks.map(m => `<i class="${m.ok ? 'ok' : 'no'}"></i>`).join('')}</div>
+    <div class="row" style="margin-top:22px;gap:10px;flex-wrap:wrap">
+      <button class="btn btn--ghost" id="again">Luyện lại</button>
+      ${next ? `<a class="btn" href="luyen.html?mod=${next.id}">Module tiếp: ${escH(next.t)}</a>` : ''}
+      ${allDone && EXAMS[STAGE.id] && stageOpen(STAGE.id) ? `<a class="btn" href="thi.html?stage=${STAGE.id}">Sẵn sàng — thi vượt chặng</a>` : ''}
+      ${marks.some(m => !m.ok) ? `<a class="btn btn--ghost" href="on-loi.html">Sang ôn lỗi</a>` : ''}
+    </div>
+  </section>`;
+  document.getElementById('again').onclick = () => { items = buildPractice(MID); idx = 0; marks = []; show(); };
+}
+intro();
+</script>
+</body></html>

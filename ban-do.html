@@ -14,8 +14,34 @@
 <script src="assets/js/data/principles.js?v=7"></script>
 <script src="assets/js/data/curriculum.js?v=1"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/exams.js?v=6"></script>
 <script src="assets/js/app.js?v=7"></script>
 <script>
+/* Nhãn khoá phải nói đúng luật đang chạy: chặng trước có đề thì cổng là đề thi. */
+function lockLabel(sid){
+  const i=STAGES.findIndex(x=>x.id===sid), prev=STAGES[i-1];
+  if(prev && typeof EXAMS!=='undefined' && EXAMS[prev.id]) return ' · mở khi qua đề chặng '+prev.n;
+  return ' · mở khi xong 60% chặng trước';
+}
+/* Luyện cuối module: chỉ ở chặng thi trắc nghiệm, chỉ đọc state nên không cần nạp ngân hàng đề. */
+function practiceLine(sid, mid, open, s){
+  if(!open || typeof EXAMS==='undefined' || !EXAMS[sid] || EXAMS[sid].kind==='cases') return '';
+  const r=((s.modq||{})[mid]);
+  return r
+    ? `<br><a class="small" href="luyen.html?mod=${mid}">${r.passed?'✓ Đã luyện':'Luyện lại'} · tốt nhất ${r.best}/${r.of} →</a>`
+    : `<br><a class="small" href="luyen.html?mod=${mid}">Luyện cuối module →</a>`;
+}
+/* Lối vào phòng thi — không có dòng này thì đề thi chỉ tới được bằng cách gõ URL. */
+function examLine(sid, open, s){
+  if(typeof EXAMS==='undefined' || !EXAMS[sid]) return '';
+  const e=((s.exams||{})[sid])||{}, cases=EXAMS[sid].kind==='cases';
+  const label=cases?'Vượt chặng bằng case':'Thi vượt chặng';
+  if(e.passed) return `<p class="small" style="margin-top:16px"><span class="tag tag--red">過</span> Đã vượt chặng ngày ${e.passed} · <a href="thi.html?stage=${sid}">xem lại</a></p>`;
+  if(!open) return '';
+  if(e.lockUntil && Date.now()<e.lockUntil) return `<p class="small muted" style="margin-top:16px">${label} · mở lại lúc ${new Date(e.lockUntil).toLocaleString('vi-VN')}</p>`;
+  return `<p style="margin-top:16px"><a class="btn btn--ghost" href="thi.html?stage=${sid}">${label} →</a></p>`;
+}
+
 appShell('ban-do.html');
 const s=S.get(), here=hereStage(s), pl=pathLessons(s.path||'full'), path=PATHS.find(p=>p.id===(s.path||'full'));
 const total=ALL.length, mods=STAGES.reduce((n,x)=>n+x.mods.length,0);
@@ -32,7 +58,7 @@ ${STAGES.map(st=>{
     <div class="stage__n">${st.n}</div>
     <div>
       <div class="row between"><h2 class="h2">${escH(st.t)}</h2>
-        <span class="mono">${isHere?'<span class="here">● Bạn ở đây</span> · ':''}${ks.length?d+' / '+ks.length+' bài':st.mods.length+' case'}${open?'':' · mở khi xong 60% chặng trước'}</span></div>
+        <span class="mono">${isHere?'<span class="here">● Bạn ở đây</span> · ':''}${ks.length?d+' / '+ks.length+' bài':st.mods.length+' case'}${open?'':lockLabel(st.id)}</span></div>
       <p class="muted" style="margin:6px 0 0">${escH(st.q)}</p>
       <div class="mods">${st.mods.map(m=>`<div class="mod">
         <span class="mono mono--ink">${escH(m.t)}</span>
@@ -40,7 +66,9 @@ ${STAGES.map(st=>{
           return `<li><a class="item" style="grid-template-columns:26px 1fr auto;padding:9px 0" href="bai.html?id=${encodeURIComponent(k)}" ${ok?'':'aria-disabled="true"'} ${dn?'data-done':''}>
             <span class="item__n">${dn?'✓':ok?'○':'—'}</span><span class="small">${escH(me.t)}</span>
             <span>${pl.includes(k)&&path.lessons?'<span class="tag">Lộ trình</span>':''}${DRILLS[k]?' <span class="tag">Số</span>':''}</span></a></li>`}).join('')}</ul>
-        <a class="small" href="${m.caseLink.href}">${escH(m.caseLink.t)} →</a></div>`).join('')}</div>
+        <a class="small" href="${m.caseLink.href}">${escH(m.caseLink.t)} →</a>
+        ${practiceLine(st.id, m.id, open, s)}</div>`).join('')}</div>
+      ${examLine(st.id, open, s)}
     </div></section>`}).join('')}`;
 if(here) setTimeout(()=>document.getElementById(here)?.scrollIntoView({block:'start'}),0);
 </script>

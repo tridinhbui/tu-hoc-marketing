@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thi vượt chặng — Tự Học Marketing Case</title>
+<meta name="description" content="Đề thi vượt chặng: 12 câu, 20 phút. Qua phải đúng 9 câu và không sai quá một câu cốt lõi.">
+<link rel="stylesheet" href="assets/css/case.css?v=1">
+<style>
+  .opt{display:block;width:100%;text-align:left;border:1px solid var(--ink-12);background:transparent;
+    border-radius:6px;padding:14px 16px;margin:8px 0;cursor:pointer;transition:border-color .2s,background .2s}
+  .opt:hover{border-color:var(--ink-30)}
+  .opt[aria-pressed="true"]{border-color:var(--ink);background:var(--ink-06)}
+  .opt b{font-family:var(--mono);font-size:11px;margin-right:10px;opacity:.55}
+  .qhead{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:18px}
+  .dots{display:flex;gap:5px;flex-wrap:wrap}
+  .dots i{width:7px;height:7px;border-radius:50%;background:var(--ink-12);display:block}
+  .dots i.done{background:var(--ink-30)}
+  .dots i.now{background:var(--red)}
+  .seal{color:var(--red);display:inline-block}
+  .missed{border-left:2px solid var(--red);padding-left:16px;margin:10px 0}
+</style>
+</head>
+<body>
+<noscript><div class="nojs">Trang thi cần JavaScript. Đề được dựng ngay trong trình duyệt này, không gửi đi đâu.</div></noscript>
+<main class="wrap narrow" id="app"></main>
+
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/cases.js?v=2"></script>
+<script src="assets/js/data/exam-items.js?v=6"></script>
+<script src="assets/js/data/exams.js?v=6"></script>
+<script src="assets/js/app.js?v=4"></script>
+<script src="assets/js/exam.js?v=4"></script>
+<script>
+appShell('thi.html');
+const app = document.getElementById('app');
+const SID = new URLSearchParams(location.search).get('stage') || 's1';
+const BP = EXAMS[SID];
+let items = [], idx = 0, given = {}, startedAt = 0, tick = null;
+
+const fmtLeft = (ms) => { const m = Math.max(0, Math.floor(ms/60000)), s = Math.max(0, Math.floor(ms%60000/1000)); return m + ':' + String(s).padStart(2,'0'); };
+
+/* ---------------- màn mở ---------------- */
+function intro(){
+  if(!BP){ app.innerHTML = `<section class="section"><h1 class="h1">Chặng này chưa có đề</h1>
+    <p class="lede">Mới có đề cho chặng 01. Các chặng sau đang soạn.</p>
+    <a class="btn" href="ban-do.html">Về bản đồ</a></section>`; return; }
+
+  if(BP.kind === 'cases') return caseIntro();
+
+  const s = S.get(), st = examState(SID, s), lock = examLocked(SID, s);
+  const pool = EXAM_ITEMS.filter(x => x.stage === SID);
+  const target = EXAM_POOL_TARGET(SID);
+  const due = dueErrors(s);
+
+  app.innerHTML = `<section class="section">
+    <span class="mono mono--red">Thi vượt chặng · ${SID.toUpperCase()}</span>
+    <h1 class="h1" style="margin:14px 0 16px">${BP.title}</h1>
+    <p class="lede">${BP.intro}</p>
+
+    <div class="kpis" style="margin-top:26px">
+      <div class="kpi"><span class="mono">Số câu</span><b>${BP.size}</b></div>
+      <div class="kpi"><span class="mono">Thời gian</span><b>${BP.minutes} phút</b></div>
+      <div class="kpi"><span class="mono">Cần đúng</span><b>${BP.pass}/${BP.size}</b></div>
+      <div class="kpi"><span class="mono">Đã thi</span><b>${st.attempts} lần</b></div>
+    </div>
+
+    <div class="note" style="margin-top:22px">
+      <b>Qua phải thoả cả hai:</b> đúng ít nhất ${BP.pass}/${BP.size},
+      <b>và</b> sai không quá ${BP.coreMiss} câu trong ${BP.core} câu cốt lõi.
+      Chỉ tính tổng điểm thì gỡ được ở câu dễ mà vẫn không nắm phần chính — nên có điều kiện thứ hai.
+    </div>
+
+    ${st.passed ? `<div class="verdict" style="margin-top:22px">
+        <span class="seal">${examSeal(SID, st.passed)}</span>
+        <p class="lede" style="margin-top:12px">Đã qua ngày ${st.passed}. Thi lại được, triện giữ nguyên ngày đầu tiên.</p>
+      </div>` : ''}
+
+    ${lock ? `<div class="note note--red" style="margin-top:18px">
+        <b>Đang khoá tới ${new Date(lock).toLocaleString('vi-VN')}.</b>
+        Trượt thì nghỉ ${Math.round((lock-Date.now())/3600e3)} giờ nữa — và dùng thời gian đó để ôn
+        ${due.length ? `<b>${due.length} mã lỗi</b> đang tới hạn` : 'lại các bài của chặng'}.
+        <div style="margin-top:12px"><a class="btn btn--ghost" href="on-loi.html">Sang ôn lỗi</a></div>
+      </div>` : ''}
+
+    ${pool.length < target ? `<div class="note" style="margin-top:18px">
+        <span class="mono">Ghi chú thẳng thắn</span><br>
+        Ngân hàng chặng này có ${pool.length} câu, mức cần để thi lại không trùng đề là ${target}.
+        Thi nhiều lần sẽ gặp lại câu cũ.
+      </div>` : ''}
+
+    <div style="margin-top:26px">
+      ${lock ? '' : `<button class="btn" id="go">${st.attempts ? 'Thi lại' : 'Bắt đầu'} · ${BP.size} câu</button>`}
+      <a class="btn btn--ghost" href="ban-do.html" style="margin-left:8px">Về bản đồ</a>
+    </div>
+  </section>`;
+  const g = document.getElementById('go'); if(g) g.onclick = start;
+}
+
+
+/* ---------------- chặng cuối: vượt bằng case ---------------- */
+function caseIntro(){
+  const g = syncCaseGate(SID), s = S.get(), st = examState(SID, s);
+  const open = typeof stageOpen === 'function' ? stageOpen(SID, s) : true;
+  const mark = (ok) => ok ? '✓' : '—';
+  const status = (r) => r.fullDate ? `Đạt 4/4 · ${r.fullDate}`
+    : r.okDate ? `Đạt · ${r.okDate}`
+    : r.lastTimeout ? 'Đạt nhưng hết giờ — không tính'
+    : r.tries ? `Đã làm ${r.tries} lần · chưa đạt` : 'Chưa làm';
+
+  app.innerHTML = `<section class="section">
+    <span class="mono mono--red">Vượt chặng · ${SID.toUpperCase()}</span>
+    <h1 class="h1" style="margin:14px 0 16px">${BP.title}</h1>
+    <p class="lede">${BP.intro}</p>
+
+    <div class="kpis" style="margin-top:26px">
+      <div class="kpi"><span class="mono">Case đạt trong giờ · cần ${BP.need}</span><b>${g.ok}${g.ok>=BP.need?' ✓':''}</b></div>
+      <div class="kpi"><span class="mono">Đạt đủ 4/4 · cần ${BP.full}</span><b>${g.full}${g.full>=BP.full?' ✓':''}</b></div>
+      <div class="kpi"><span class="mono">Có case khó</span><b>${g.hardOk?'Có ✓':'Chưa'}</b></div>
+    </div>
+
+    <div class="note" style="margin-top:22px">
+      <b>Vượt chặng khi thoả cả ba:</b> đạt ít nhất ${BP.need} case trong giờ;
+      trong đó ${BP.full} case đạt đủ 4/4 — tức phần nói 60 giây cũng đạt;
+      và có ít nhất một case độ <b>Khó</b>.
+      Lần đạt sau khi hết giờ không được tính: chặng này đo đúng việc ghép mọi thứ lại <em>dưới áp lực thời gian</em>.
+    </div>
+
+    ${st.passed ? `<div class="verdict" style="margin-top:22px">
+        <span class="seal">${examSeal(SID, st.passed)}</span>
+        <p class="lede" style="margin-top:12px">Đã vượt chặng cuối ngày ${st.passed} — ngày điều kiện cuối cùng được thoả.</p>
+      </div>`
+      : g.met && !open ? `<div class="note note--red" style="margin-top:18px">
+        Bạn đã đủ điều kiện về case, nhưng chặng này chỉ mở sau khi qua đề chặng 05.
+        <div style="margin-top:12px"><a class="btn btn--ghost" href="thi.html?stage=s5">Sang đề chặng 05</a></div></div>`
+      : ''}
+
+    <ul class="list" style="margin-top:26px">${g.rows.map(r => `<li>
+      <a class="item" href="giai-case.html?id=${r.c.id}" style="grid-template-columns:28px 1fr auto">
+        <span class="item__n">${mark(!!r.okDate)}</span>
+        <span><b>${escH(r.c.t)}</b><br><span class="small muted">${escH(r.c.industry)} · ${escH(r.c.level)} · ${r.c.minutes} phút</span></span>
+        <span class="small ${r.okDate?'':'muted'}">${status(r)}</span>
+      </a></li>`).join('')}</ul>
+
+    <div style="margin-top:26px"><a class="btn btn--ghost" href="ban-do.html">Về bản đồ</a></div>
+  </section>`;
+}
+
+/* ---------------- làm bài ---------------- */
+function start(){
+  items = buildExam(SID); idx = 0; given = {}; startedAt = Date.now();
+  clearInterval(tick); tick = setInterval(()=>{
+    const el = document.getElementById('clock'); if(!el) return;
+    const left = BP.minutes*60000 - (Date.now()-startedAt);
+    el.textContent = fmtLeft(left);
+    if(left <= 0){ clearInterval(tick); finish(); }
+  }, 500);
+  show();
+}
+
+function show(){
+  const it = items[idx];
+  const dots = items.map((x,i)=>`<i class="${i<idx?'done':i===idx?'now':''}"></i>`).join('');
+  const body = it.type === 'calc'
+    ? `${it.ctx?`<p class="lede">${it.ctx}</p>`:''}
+       ${it.rows?`<table class="exhibit"><tbody>${it.rows.map(([a,b])=>`<tr><td>${a}</td><td style="text-align:right"><b>${b}</b></td></tr>`).join('')}</tbody></table>`:''}
+       <p class="h3" style="margin:18px 0 10px">${it.stem}</p>
+       <div class="row"><input class="field" id="num" inputmode="decimal" placeholder="Nhập số"
+         style="max-width:200px" value="${given[it.id]??''}"><span class="mono" style="margin-left:10px">${it.unit||''}</span></div>`
+    : `${it.ctx?`<p class="lede">${it.ctx}</p>`:''}
+       <p class="h3" style="margin:18px 0 10px">${it.stem}</p>
+       ${it.options.map(o=>`<button class="opt" data-k="${o.k}" aria-pressed="${given[it.id]===o.k}">
+          <b>${o.k.toUpperCase()}</b>${o.t}</button>`).join('')}`;
+
+  app.innerHTML = `<section class="section">
+    <div class="qhead">
+      <span class="mono">Câu ${idx+1} / ${items.length}${it.core?' · cốt lõi':''}</span>
+      <span class="mono" id="clock">${fmtLeft(BP.minutes*60000-(Date.now()-startedAt))}</span>
+    </div>
+    <div class="dots" style="margin-bottom:22px">${dots}</div>
+    ${body}
+    <div class="row" style="margin-top:26px;gap:10px">
+      <button class="btn" id="next">${idx===items.length-1?'Nộp bài':'Câu tiếp'}</button>
+      <span class="small muted">Đã trả lời ${Object.keys(given).length}/${items.length}. Không quay lại câu trước được.</span>
+    </div>
+  </section>`;
+
+  app.querySelectorAll('.opt').forEach(b => b.onclick = () => {
+    given[it.id] = b.dataset.k;
+    app.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-pressed', x === b));
+  });
+  const num = document.getElementById('num');
+  if(num) num.oninput = () => { given[it.id] = num.value; };
+  document.getElementById('next').onclick = () => {
+    if(idx === items.length-1) finish(); else { idx++; show(); }
+  };
+}
+
+/* ---------------- kết quả ---------------- */
+function finish(){
+  clearInterval(tick);
+  const res = gradeExam(SID, items, given);
+  saveExam(SID, res);
+  const st = examState(SID);
+  const missed = res.marks.filter(m => !m.ok);
+
+  /* Không hiện lại toàn bộ đề. Chỉ hiện điều cần ôn — để lần sau không thuộc lòng đáp án. */
+  const topics = [...new Set(missed.flatMap(m => m.it.teaches || []))];
+  const codes  = [...new Set(missed.map(m => m.err).filter(Boolean))];
+
+  app.innerHTML = `<section class="section">
+    <span class="mono mono--red">Kết quả · ${BP.title}</span>
+    ${res.passed
+      ? `<h1 class="h1" style="margin:14px 0 8px">Qua chặng.</h1>
+         <div class="seal" style="margin:18px 0">${examSeal(SID, st.passed)}</div>
+         <p class="lede">Đúng ${res.right}/${res.total}, sai ${res.coreWrong} câu cốt lõi.
+            Triện đã đóng vào sổ tay kèm ngày ${st.passed}.</p>`
+      : `<h1 class="h1" style="margin:14px 0 8px">Chưa qua.</h1>
+         <p class="lede">${res.reason === 'thieu-diem'
+            ? `Đúng ${res.right}/${res.total}, cần ${BP.pass}.`
+            : `Đúng ${res.right}/${res.total} — đủ điểm, nhưng sai ${res.coreWrong} câu cốt lõi (cho phép ${BP.coreMiss}).`}
+            Đề mở lại sau 24 giờ.</p>`}
+
+    ${missed.length ? `<div class="missed">
+      <span class="mono">Cần xem lại</span>
+      <ul class="list">${topics.map(t => {
+        const m = lessonMeta(t);
+        return `<li>${m ? `<a href="bai.html?id=${encodeURIComponent(t)}">${m.t}</a>` : t}</li>`;
+      }).join('')}</ul>
+      ${codes.length ? `<p class="small muted">Mã lỗi đã ghi vào hàng ôn: ${codes.map(c => ERRORS[c] || c).join(' · ')}</p>` : ''}
+    </div>` : ''}
+
+    <div class="row" style="margin-top:26px;gap:10px">
+      ${codes.length || missed.length ? `<a class="btn" href="on-loi.html">Ôn lỗi ngay</a>` : ''}
+      <a class="btn btn--ghost" href="ban-do.html">Về bản đồ</a>
+    </div>
+  </section>`;
+}
+
+intro();
+</script>
+</body></html>
