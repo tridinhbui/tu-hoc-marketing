@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "nhinthay-api",
+  "name": "tuhocmarketing",
   "main": "src/index.js",
   "compatibility_date": "2026-08-01",
   "observability": { "enabled": true },
@@ -20,12 +20,9 @@
   "send_email": [{ "name": "EMAIL" }],
 
   "vars": {
-    "APP_ORIGIN": "https://<ten-mien-cua-ban>",
-    "MAIL_FROM": "dang-nhap@<ten-mien-cua-ban>",
+    "APP_ORIGIN": "https://tuhocmarketing.tridinhbui0901.workers.dev",
+    "MAIL_FROM": "",
     "ADMIN_EMAILS": "",
-    "GRADING_MODEL": "claude-opus-5",
-    "FREE_GRADES_PER_MONTH": "3",
-    "AI_GRADE_PER_MONTH": "5",
     "AI_INTERVIEW_PER_MONTH": "3",
     "AI_ASSIST_PER_DAY": "10"
   }

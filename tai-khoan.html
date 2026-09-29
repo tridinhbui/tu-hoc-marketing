@@ -74,7 +74,6 @@ async function render(){
   ${q?`<section class="section"><span class="mono mono--ink">Hạn mức AI miễn phí</span>
     ${q.configured?`<table class="t" style="margin-top:10px"><tbody>
       <tr><td>Phỏng vấn mô phỏng</td><td class="n">${q.interview.used} / ${q.interview.limit} mỗi ${q.interview.per}</td></tr>
-      <tr><td>Chấm bài viết</td><td class="n">${q.grade.used} / ${q.grade.limit} mỗi ${q.grade.per}</td></tr>
       <tr><td>Trợ lý hỏi đáp</td><td class="n">${q.assist.used} / ${q.assist.limit} mỗi ${q.assist.per}</td></tr></tbody></table>`
       :'<p class="muted" style="margin-top:10px">AI chưa được bật trên máy chủ.</p>'}</section>`:''}
   <section class="section"><button class="btn btn--ghost" id="out">Đăng xuất</button></section>`;

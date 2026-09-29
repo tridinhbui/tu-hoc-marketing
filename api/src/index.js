@@ -7,8 +7,6 @@
  * không cần CORS, không cần cấu hình gì thêm ở trình duyệt.
  */
 
-import { grade } from './grade.js';
-import { RUBRICS } from './rubrics.js';
 import { json, month, currentUser } from './lib.js';
 import * as auth from './auth.js';
 import * as st from './state.js';
@@ -39,7 +37,7 @@ async function route(request, env, url) {
   if (p === '/api/quests/claim' && m === 'POST') return pg.claimQuest(request, env);
   if (p === '/api/auth/google/start' && m === 'GET') return google.start(request, env);
   if (p === '/api/auth/google/callback' && m === 'GET') return google.callback(request, env);
-  if (p === '/api/auth/providers' && m === 'GET') return json({ email: !!(env.EMAIL || env.DEV_SHOW_LINK === '1'), google: !!(env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET) });
+  if (p === '/api/auth/providers' && m === 'GET') return json({ email: env.DEV_SHOW_LINK === '1' || !!(env.EMAIL && env.MAIL_FROM && !env.MAIL_FROM.includes('<')), google: !!(env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET) });
 
   /* Số thật cho trang chủ. Chỉ đếm, không lộ ai; cache ngắn để trang chủ không gõ D1 mỗi lượt xem. */
   if (p === '/api/stats' && m === 'GET') {
@@ -109,64 +107,8 @@ export default {
       return json({ ok: true });
     }
 
-    if (url.pathname === '/api/grade' && request.method === 'POST') {
-      if (!env.ANTHROPIC_API_KEY) return json({ error: 'not_configured' }, 503);
-
-      let body;
-      try { body = await request.json(); } catch { return json({ error: 'bad_json' }, 400); }
-      const bench = String(body.bench || '');
-      if (!RUBRICS[bench]) return json({ error: 'unknown_bench' }, 400);
-
-      /* Hạn mức: đã đăng nhập thì tính theo người (D1), chưa đăng nhập thì tạm tính theo IP. */
-      if (request.headers.get('x-thmc') !== '1') return json({ error: 'csrf' }, 403);
-      const ip = request.headers.get('cf-connecting-ip') || 'unknown';
-      const user = await currentUser(request, env);
-      let used, limit;
-      if (user) {
-        limit = Number(env.AI_GRADE_PER_MONTH || 5);
-        const q = await ai.useQuota(env, user.id, 'grade', month(), limit);
-        if (!q.ok) return json({ error: 'quota_exceeded', used: q.used, limit }, 402);
-        used = q.used - 1;
-      } else {
-        limit = Number(env.FREE_GRADES_PER_MONTH || 3);
-        used = Number((await env.SESSIONS.get(`q:grade:${month()}:${ip}`)) || 0);
-        if (used >= limit) return json({ error: 'quota_exceeded', used, limit }, 402);
-      }
-
-      const payload = body.payload || {};
-      if (JSON.stringify(payload).length > 20000) return json({ error: 'too_large' }, 413);
-
-      let verdict;
-      try {
-        verdict = await grade({
-          bench, payload, extra: body.extra || {},
-          apiKey: env.ANTHROPIC_API_KEY,
-          model: env.GRADING_MODEL || 'claude-opus-5',
-        });
-      } catch (e) {
-        if (user) await env.DB.prepare('UPDATE ai_usage SET count = MAX(count - 1, 0) WHERE user_id = ?1 AND kind = ?2 AND period = ?3')
-          .bind(user.id, 'grade', month()).run();
-        return json({ error: 'grade_failed', detail: String(e.message || e) }, 502);
-      }
-
-      if (!user) await env.SESSIONS.put(`q:grade:${month()}:${ip}`, String(used + 1), { expirationTtl: 60 * 60 * 24 * 40 });
-
-      /* Lưu lại để sau này đọc xem rubric có đang chấm đúng không, và AI ăn bao nhiêu tiền. */
-      const sid = crypto.randomUUID();
-      try {
-        await env.DB.batch([
-          env.DB.prepare(`INSERT INTO submissions (id, user_id, bench, payload_json, created_at)
-                          VALUES (?1, ?2, ?3, ?4, ?5)`)
-            .bind(sid, user ? user.id : ('anon:' + ip), bench, JSON.stringify(payload), Date.now()),
-          env.DB.prepare(`INSERT INTO feedback (id, submission_id, model, rubric_version, verdict_json, cost_usd, created_at)
-                          VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)`)
-            .bind(crypto.randomUUID(), sid, verdict.model || 'none', verdict.rubric_version,
-                  JSON.stringify(verdict), verdict.cost_usd, Date.now()),
-        ]);
-      } catch { /* lưu hỏng thì vẫn trả nhận xét cho người học */ }
-
-      return json({ ...verdict, quota: { used: used + 1, limit } });
-    }
+    /* Không chấm tự luận: mọi việc chấm là tự động và chỉ cho câu có đáp án duy nhất (trắc nghiệm, điền số). */
+    if (url.pathname === '/api/grade') return json({ error: 'essay_grading_disabled' }, 410);
 
     return json({ error: 'not_found' }, 404);
   },

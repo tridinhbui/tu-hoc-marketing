@@ -5,7 +5,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/case.css?v=3">
 <title>Giải case — Tự Học Marketing Case</title>
-<meta name="description" content="Case có bấm giờ: dữ liệu mở dần theo câu hỏi bạn đặt ra, chấm theo bốn tiêu chí — tính toán, insight, đề xuất, cấu trúc.">
+<meta name="description" content="Case có bấm giờ: dữ liệu mở dần theo câu hỏi bạn đặt ra, chấm tự động theo ba tiêu chí có đáp án — tính toán, insight, đề xuất.">
 <style>
   .asks{list-style:none;margin:0;padding:0;border-top:var(--rule)}
   .ask{display:flex;justify-content:space-between;gap:12px;width:100%;text-align:left;background:none;border:0;border-bottom:var(--rule);padding:12px 0;cursor:pointer;font-size:15px}
@@ -49,7 +49,7 @@ function intro(){
     <p class="lede" style="margin-top:16px">${escH(C.brief)}</p>
     <div class="note" style="margin-top:22px">Có ${C.asks.length} câu bạn có thể hỏi để lấy dữ liệu, nhưng không phải câu nào cũng đáng hỏi.
       Đồng hồ không dừng khi bạn đọc. Hết giờ, bài tự nộp với những gì bạn đã có.
-      Chấm theo bốn tiêu chí: <b>tính toán · insight · đề xuất · cấu trúc</b>.</div>
+      Chấm tự động ba tiêu chí có đáp án: <b>tính toán · insight · đề xuất</b>. Câu trả lời 60 giây để bạn luyện nói — không chấm, chỉ so với câu mẫu.</div>
     ${tries.length?`<p class="small muted" style="margin-top:14px">Bạn đã làm ${tries.length} lần · gần nhất ${tries[tries.length-1].date}: ${tries[tries.length-1].passed?'đạt':'chưa đạt'}.</p>`:''}
     <div class="row" style="margin-top:22px"><button class="btn" id="go">Bắt đầu · ${C.minutes}:00</button><a class="btn btn--ghost" href="case-thu-vien.html">Về thư viện</a></div>
   </section>`;
@@ -128,11 +128,9 @@ function grade(timeout){
   }
   const pk=id=>{const q=C.qs.find(x=>x.id===id); const ok=answers[id]!==undefined&&q.opts[answers[id]]&&q.opts[answers[id]][1]; if(!ok) fixes.push({q,code:null,blank:answers[id]===undefined}); return !!ok;};
   const insightOk=pk(C.qs.find(q=>q.crit==='insight').id), recOk=pk(C.qs.find(q=>q.crit==='rec').id);
-  const hasNum=t=>/\d/.test(t);
-  const st={c:words(talk.c)>=4&&words(talk.c)<=45, r:[talk.r1,talk.r2,talk.r3].filter(r=>words(r)>=4&&hasNum(r)).length, n:words(talk.n)>=5};
-  const structOk=st.c&&st.r===3&&st.n;
-  const pass={calc:calcOk===calcQs.length, insight:insightOk, rec:recOk, structure:structOk};
-  const passed=Object.values(pass).filter(Boolean).length>=3&&pass.calc;
+  /* Chỉ chấm phần có đáp án duy nhất. Câu trả lời 60 giây là phần luyện, không chấm. */
+  const pass={calc:calcOk===calcQs.length, insight:insightOk, rec:recOk};
+  const passed=pass.calc&&pass.insight&&pass.rec;
   const keyAsks=C.asks.filter(a=>a.key).map(a=>a.id), missedKey=keyAsks.filter(id=>!asked.includes(id)), noise=asked.filter(id=>!keyAsks.includes(id));
 
   const s=S.get(), list=[...(s.cases[C.id]||[]), {date:today(),secs,timeout,pass,passed,asked:[...asked]}].slice(-10);
@@ -144,14 +142,13 @@ function grade(timeout){
   const row=(name,ok,detail)=>`<div class="crit"><span class="mono mono--ink">${name}</span><span class="${ok?'ok':'no'}">${ok?'Đạt':'Chưa đạt'}</span><span class="small">${detail}</span></div>`;
   app.innerHTML=`<section class="section narrow">
     <span class="mono mono--red">${timeout?'Hết giờ — bài tự nộp':'Đã nộp'} · ${Math.floor(secs/60)} phút ${secs%60} giây</span>
-    <h1 class="h1" style="margin:14px 0 12px">${passed?'Đạt.':'Chưa đạt.'}<br><em>${Object.values(pass).filter(Boolean).length} / 4 tiêu chí.</em></h1>
+    <h1 class="h1" style="margin:14px 0 12px">${passed?'Đạt.':'Chưa đạt.'}<br><em>${Object.values(pass).filter(Boolean).length} / 3 tiêu chí.</em></h1>
     <p class="lede">${passed?(firstPass?`Lần đầu đạt case này: +${XP.case} XP. `:'')+'Tiêu chí đạt ở đây được tính vào bản đồ năng lực.'
-      :'Cần đúng mọi câu tính toán và đạt ít nhất ba trên bốn tiêu chí. Lỗi tính toán đã được ghi vào trang ôn lỗi.'}</p>
+      :'Cần đạt cả ba tiêu chí: đúng mọi câu tính toán, chọn đúng insight và đề xuất. Lỗi tính toán đã được ghi vào trang ôn lỗi.'}</p>
     <div style="border-top:1px solid var(--ink);margin-top:22px">
       ${row('Tính toán',pass.calc,`${calcOk} / ${calcQs.length} câu đúng.`)}
       ${row('Insight',pass.insight,pass.insight?'Chỉ ra đúng vấn đề cốt lõi.':'Chọn chưa đúng vấn đề cốt lõi.')}
       ${row('Đề xuất',pass.rec,pass.rec?'Khuyến nghị bám vào số.':'Khuyến nghị chưa bám vào số liệu.')}
-      ${row('Cấu trúc',pass.structure,[st.c?'':'Kết luận cần 4–45 chữ.', st.r===3?'':`Mới ${st.r}/3 lý do có số.`, st.n?'':'Bước tiếp theo còn mơ hồ.'].filter(Boolean).join(' ')||'Kết luận trước, ba lý do có số, bước tiếp cụ thể.')}
     </div>
     <div class="note" style="margin-top:22px"><b>Cách bạn lấy dữ liệu.</b> Hỏi ${asked.length}/${C.asks.length} câu.
       ${missedKey.length?`Bỏ lỡ ${missedKey.length} dữ liệu quan trọng: ${missedKey.map(id=>'“'+escH(C.asks.find(a=>a.id===id).q)+'”').join(', ')}.`:'Không bỏ lỡ dữ liệu quan trọng nào.'}

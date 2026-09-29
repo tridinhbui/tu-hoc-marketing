@@ -59,8 +59,9 @@ Cách bạn làm việc:
 - Không giảng bài và không đưa đáp án trong lúc phỏng vấn. Nếu người học hỏi ngược lại, trả lời ngắn như người phỏng vấn thật rồi quay về câu hỏi.
 - Viết tiếng Việt tự nhiên, xưng "tôi" và gọi người học là "bạn". Mỗi lượt ngắn, không quá khoảng 120 chữ.
 
-Khi nhận được chỉ dẫn kết thúc buổi, dừng hỏi và viết phần nhận xét:
-Nhận xét theo bốn tiêu chí — cấu trúc, tính toán, insight, đề xuất — mỗi tiêu chí một đến hai câu, dựa vào chính những gì người học đã nói. Sau đó nêu một điều họ làm tốt nhất và một việc cụ thể nên luyện tiếp. Không cho điểm số.`;
+Khi nhận được chỉ dẫn kết thúc buổi, dừng hỏi. Không nhận xét, không đánh giá, không chấm câu trả lời của người học.
+Chỉ viết một dàn ý trả lời mẫu cho tình huống lúc đầu theo khung: kết luận trước, ba lý do có số, bước tiếp theo —
+để người học tự so với câu trả lời của mình.`;
 
 export async function interview(req, env) {
   const u = await currentUser(req, env);
@@ -156,7 +157,6 @@ export async function quotas(req, env) {
   return json({
     configured: !!env.ANTHROPIC_API_KEY,
     interview: { used: await get('interview', month()), limit: Number(env.AI_INTERVIEW_PER_MONTH || 3), per: 'tháng' },
-    grade: { used: await get('grade', month()), limit: Number(env.AI_GRADE_PER_MONTH || 5), per: 'tháng' },
     assist: { used: await get('assist', today()), limit: Number(env.AI_ASSIST_PER_DAY || 10), per: 'ngày' },
   });
 }
