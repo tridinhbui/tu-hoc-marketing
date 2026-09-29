@@ -25,7 +25,7 @@
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
 <script src="assets/js/data/exams.js?v=7"></script>
-<script src="assets/js/app.js?v=12"></script>
+<script src="assets/js/app.js?v=13"></script>
 <script>
 appShell('nang-luc.html');
 const s=S.get(), rows=COMPETENCIES.map(c=>({c,...compLevel(c,s)}));
@@ -82,7 +82,7 @@ document.getElementById('app').innerHTML=`
     <tr><td>1 · ${COMP_LEVELS[1]}</td><td>Đúng ít nhất một câu quiz hoặc bài tính số thuộc năng lực.</td></tr>
     <tr><td>2 · ${COMP_LEVELS[2]}</td><td>Đúng bài tính số của năng lực (hoặc ≥3 câu quiz), không còn lỗi bắt buộc chưa xử lý.</td></tr>
     <tr><td>3 · ${COMP_LEVELS[3]}</td><td>Đạt tiêu chí gắn với năng lực trong một case có bấm giờ.</td></tr>
-    <tr><td>4 · ${COMP_LEVELS[4]}</td><td>Đạt tiêu chí đó trong một case đạt tổng thể, và phần nói 60 giây cũng đạt.</td></tr>
+    <tr><td>4 · ${COMP_LEVELS[4]}</td><td>Đạt tiêu chí đó trong ít nhất hai case khác nhau mà cả case đều đạt.</td></tr>
   </tbody></table></div>
 </section>
 <section class="kpis">

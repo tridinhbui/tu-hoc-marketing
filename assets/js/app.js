@@ -321,7 +321,7 @@ function quizBank(keys){ return shuffle(keys.flatMap(k=>[conceptMCQ(k),drillMCQ(
    1 Nhận biết  — trả lời đúng ít nhất một câu quiz hoặc bài tính số thuộc năng lực này
    2 Áp dụng    — làm đúng bài tính số của năng lực, hoặc đúng ≥3 câu quiz, và không còn lỗi bắt buộc chưa xử lý
    3 Phân tích  — đạt tiêu chí gắn với năng lực này trong một case có bấm giờ
-   4 Thuyết phục — đạt tiêu chí đó trong một case đạt tổng thể VÀ phần nói 60 giây cũng đạt */
+   4 Thuyết phục — đạt tiêu chí đó trong ≥2 case KHÁC NHAU mà cả case đều đạt (không chấm tự luận) */
 function caseAttempts(s=S.get()){ return Object.entries(s.cases||{}).flatMap(([id,list])=>list.map(a=>({id,...a}))); }
 function compLevel(c,s=S.get()){
   const drillOk=c.lessons.filter(k=>s.drills[k]).length;
@@ -331,13 +331,13 @@ function compLevel(c,s=S.get()){
   const hitsFor=a=>{const cd=cs.find(x=>x.id===a.id); if(!cd) return false;
     return Object.entries(cd.comps).some(([crit,ids])=>ids.includes(c.id)&&a.pass&&a.pass[crit]);};
   const att=caseAttempts(s);
-  const l3=att.filter(hitsFor), l4=l3.filter(a=>a.passed&&a.pass.structure);
+  const l3=att.filter(hitsFor), l4ids=new Set(l3.filter(a=>a.passed).map(a=>a.id));   // chỉ chấm câu có đáp án: mức 4 = đạt ở ≥2 case khác nhau
   let n=0, why='Chưa có bài nộp nào thuộc năng lực này.';
   if(drillOk+qh>=1){ n=1; why=`${drillOk} bài tính số đúng · ${qh} câu quiz đúng.`; }
   if((drillOk>=1||qh>=3)&&!blocked){ n=2; why=`${drillOk} bài tính số đúng · ${qh} câu quiz đúng · không còn lỗi bắt buộc.`; }
   else if(n===1&&blocked) why+=' Còn lỗi bắt buộc chưa xử lý nên chưa lên được mức Áp dụng.';
   if(l3.length){ n=3; why=`Đạt tiêu chí liên quan trong ${new Set(l3.map(a=>a.id)).size} case có bấm giờ.`; }
-  if(l4.length){ n=4; why='Đạt case tổng thể và phần nói 60 giây cũng đạt.'; }
+  if(l4ids.size>=2){ n=4; why=`Đạt tiêu chí liên quan trong ${l4ids.size} case khác nhau, cả case đều đạt.`; }
   return {n,why};
 }
 
