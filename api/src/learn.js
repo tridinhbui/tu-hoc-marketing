@@ -3,6 +3,7 @@
 import { json, now, rid, str, currentUser, isAdmin, body } from './lib.js';
 import { loadConfig, vnToday, recompute, invalidateConfig } from './progress.js';
 import BANK from './generated/bank.json';
+import { onStagePassed } from './realm.js';
 import { gradeItem, publicItem, updateMastery, masteryScore, reviewSession, stageExam, gradeExam, placementExam,
   gradePlacement, lockState, nextActions, seeded, hashStr, lintItem, lengthBias } from './learn-core.js';
 
@@ -179,6 +180,7 @@ export async function stageExamPost(req, env, stageId) {
   if (r.passed) {
     for (const o of BANK.order.filter((x) => x.stage === stageId)) if (await setProgress(env, u.id, o.key, 'passed', 'stage_exam')) credited++;
     xp = await grantXp(env, u.id, 'exam', 'exam:' + stageId, (await loadConfig(env)).xp_once.exam ?? 50);
+    await onStagePassed(env, u.id, stageId);
   }
   return json({ ...r, credited, xp, cooldown_ms: r.passed ? 0 : (cfg.cooldown_min || 60) * 60e3 });
 }

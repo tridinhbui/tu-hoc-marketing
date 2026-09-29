@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=3">
+<title>Chợ — Tự Học Marketing Case</title>
+<meta name="description" content="Đổi xu lấy thẻ đóng băng chuỗi, rương, booster và danh hiệu. Mở rương đã nhận.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main class="wrap narrow" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=2"></script>
+<script src="assets/js/data/bai-index.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/cases.js?v=2"></script>
+<script src="assets/js/app.js?v=13"></script>
+<script src="assets/js/quizkit.js?v=1"></script>
+<script>
+
+appShell('shop.html');
+const app=document.getElementById('app');
+async function render(){
+  if(!await needLogin(app,'Chợ')) return;
+  const d=await api('/wallet');
+  const inv=Object.fromEntries(d.inventory.map(i=>[i.item_id,i.qty]));
+  const closed=d.chests.filter(c=>!c.opened_at);
+  app.innerHTML=`<section class="section"><span class="mono mono--red">Chợ</span>
+    <h1 class="h1" style="margin:14px 0 10px">Xu kiếm bằng học,<br><em>tiêu vào việc giữ nhịp.</em></h1>
+    <p class="lede">Xu đến từ nhiệm vụ ngày, ghé toà nhà, qua đề vượt chặng, World Boss và đấu trường. Giá kiểm ở máy chủ.</p>
+    <div class="kpis" style="margin-top:20px"><div class="kpi"><span class="mono">Xu</span><b>${fmt(d.coins)}</b></div>
+      <div class="kpi"><span class="mono">Cấp</span><b>${d.level}</b></div>
+      <div class="kpi"><span class="mono">Thẻ đóng băng còn</span><b>${d.freezes_left}</b></div>
+      <div class="kpi"><span class="mono">Booster</span><b style="font-size:1.1rem">${d.booster?'×'+d.booster.mult+' tới '+new Date(d.booster.until_at).toLocaleString('vi-VN'):'Không'}</b></div></div></section>
+  ${closed.length?`<section class="section"><span class="mono mono--ink">Rương chưa mở · ${closed.length}</span>
+    <div class="row" style="margin-top:12px">${closed.map(c=>`<button class="btn btn--ghost" data-open="${c.id}">Mở rương ${c.source==='weekly'?'tuần':c.source==='stage'?'chặng '+escH(c.source_ref):'mua ở chợ'}</button>`).join('')}</div></section>`:''}
+  <section class="section"><span class="mono mono--ink">Hàng</span>
+    <ul class="list" style="margin-top:10px">${d.shop.map(i=>{ const owned=(i.kind==='title'||i.kind==='frame')&&inv[i.id];
+      return `<li class="row between" style="padding:14px 0;gap:14px"><span style="flex:1;min-width:200px"><b>${escH(i.t)}</b><br><span class="small muted">${escH(i.d)}${i.min_level?' · cần cấp '+i.min_level:''}${i.min_streak?' · cần chuỗi dài nhất '+i.min_streak+' ngày':''}</span></span>
+        <span class="mono">${fmt(i.price)} xu</span>
+        <button class="btn ${i.locked||owned||d.coins<i.price?'btn--ghost':''}" data-buy="${i.id}" ${i.locked||owned?'disabled':''}>${owned?'Đã có':i.locked?'Chưa mở':'Mua'}</button></li>`}).join('')}</ul></section>
+  ${d.chests.some(c=>c.opened_at)?`<section class="section"><span class="mono mono--ink">Đã mở</span><ul class="list" style="margin-top:10px">${d.chests.filter(c=>c.opened_at).map(c=>`<li style="padding:10px 0">${escH(c.reward.t)}${c.reward.coins?' · '+c.reward.coins+' xu':''} <span class="small muted">· ${new Date(c.opened_at).toLocaleDateString('vi-VN')}</span></li>`).join('')}</ul></section>`:''}`;
+  app.querySelectorAll('[data-buy]').forEach(b=>b.onclick=async()=>{ try{ await api('/shop/buy',{method:'POST',body:{item_id:b.dataset.buy}}); toast('Đã mua'); render(); }
+    catch(e){ toast({not_enough_coins:'Chưa đủ xu',level_required:'Chưa đủ cấp',streak_required:'Chưa đủ chuỗi ngày',already_owned:'Bạn đã có món này'}[e.message]||'Chưa mua được'); } });
+  app.querySelectorAll('[data-open]').forEach(b=>b.onclick=async()=>{ try{ const r=await api(`/chests/${b.dataset.open}/open`,{method:'POST',body:{}});
+    toast('Rương: '+r.reward.t+(r.reward.coins?' · '+r.reward.coins+' xu':'')); render(); }catch(e){ toast('Chưa mở được'); } });
+}
+render();
+
+</script>
+</body>
+</html>

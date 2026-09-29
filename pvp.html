@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=3">
+<title>Đấu trường — Tự Học Marketing Case</title>
+<meta name="description" content="Đấu 5 câu với bóng ma của một người học thật. Cược xu nếu muốn.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main class="wrap narrow" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=2"></script>
+<script src="assets/js/data/bai-index.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/cases.js?v=2"></script>
+<script src="assets/js/app.js?v=13"></script>
+<script src="assets/js/quizkit.js?v=1"></script>
+<script>
+
+appShell('pvp.html');
+const app=document.getElementById('app');
+(async()=>{
+  if(!await needLogin(app,'Đấu trường')) return;
+  let d; try{ d=await api('/pvp'); }catch(e){ app.innerHTML=`<section class="section"><h1 class="h2">${e.message==='daily_limit'?'Hết lượt đấu hôm nay. Mai quay lại nhé.':'Chưa mở được trận.'}</h1></section>`; return; }
+  app.innerHTML=`<section class="section"><span class="mono mono--red">Đấu trường · còn ${d.left_today} trận hôm nay</span>
+    <h1 class="h1" style="margin:14px 0 10px">Bạn đấu với<br><em>${escH(d.opponent)}.</em></h1>
+    <p class="lede">${d.opponent_real?'Đây là kết quả thật mà người học này đã ghi trong 7 ngày qua':'Chưa có kết quả của người học khác trong tuần, nên bạn đấu với bóng ma luyện tập'}: <b>${d.opponent_correct}/${d.items.length} câu đúng</b>.
+      Đúng nhiều hơn là thắng, bằng là hoà. Câu hỏi rút từ bài bạn đã học.</p>
+    <label class="row" style="gap:10px;margin-top:16px"><span class="mono">Cược xu (${d.bet_min}–${d.bet_max}, 0 = không cược) · đang có ${fmt(d.coins)} xu</span>
+      <input class="field" id="bet" inputmode="numeric" value="0" style="max-width:120px"></label></section>
+    <section class="section"><div id="qs"></div><button class="btn" id="go" style="margin-top:16px">Nộp bài</button></section>`;
+  const box=document.getElementById('qs'); QK.render(box,d.items);
+  document.getElementById('go').onclick=async()=>{
+    const bet=Math.trunc(Number(document.getElementById('bet').value)||0);
+    try{ const r=await api('/pvp',{method:'POST',body:{duel_id:d.duel_id,answers:QK.answers(box),bet}});
+      QK.mark(box,r.detail); document.getElementById('go').outerHTML='<a class="btn" href="pvp.html" style="margin-top:16px">Trận mới</a>';
+      const w={win:'Thắng',draw:'Hoà',lose:'Thua'}[r.outcome];
+      box.insertAdjacentHTML('beforebegin',`<p class="note" style="margin-bottom:12px"><b>${w}: ${r.correct} – ${r.opponent_correct}</b> · +${r.xp} XP${r.coins_delta?` · ${r.coins_delta>0?'+':''}${r.coins_delta} xu`:''}. Còn ${fmt(r.coins)} xu.</p>`);
+    }catch(e){ toast({bad_bet:`Cược từ ${d.bet_min} đến ${d.bet_max} xu`,not_enough_coins:'Không đủ xu để cược',already_submitted:'Trận này đã nộp'}[e.message]||'Chưa gửi được'); }
+  };
+})();
+
+</script>
+</body>
+</html>

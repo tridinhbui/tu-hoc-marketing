@@ -35,7 +35,38 @@ async function render(){
   app.querySelectorAll('[data-a]').forEach(b=>b.onclick=async()=>{ if(b.dataset.a==='delete'&&!confirm('Xoá hẳn, không khôi phục được?')) return;
     await api('/admin/moderate',{method:'POST',body:{type:b.dataset.t,id:b.dataset.id,action:b.dataset.a}}); render(); });
 }
-render();
+render().then(renderAdmin);
+/* Cấu hình sản phẩm (app_config) và cổng chất lượng câu hỏi — chỉ quản trị viên. */
+async function renderAdmin(){
+  let cfg, lint;
+  try{ [cfg,lint]=await Promise.all([api('/admin/config'),api('/admin/lint')]); }catch(e){ return; }
+  const b=lint.length_bias;
+  app.insertAdjacentHTML('beforeend',`
+  <section class="section"><span class="mono mono--red">Chất lượng câu hỏi</span>
+    <h2 class="h2" style="margin:10px 0">${lint.count} câu · ${lint.errors} câu có lỗi chặn</h2>
+    <p class="${b.share>0.35?'note note--red':'note'}">Đáp án đúng là phương án dài nhất ở <b>${Math.round(b.share*100)}%</b> câu trắc nghiệm (kỳ vọng khoảng ${Math.round(b.expected/b.n*100)}%, z = ${b.z.toFixed(1)}).
+      ${b.share>0.35?'Người học chọn bừa phương án dài nhất vẫn đúng nhiều — viết lại nhiễu cho dài và cụ thể bằng đáp án.':''}</p>
+    <div class="scroll" style="margin-top:12px"><table class="t"><thead><tr><th>Chặng</th><th class="n">Kho câu</th><th class="n">Kho ÷ 15 câu mỗi đề</th></tr></thead>
+      <tbody>${Object.entries(lint.pools).map(([k,v])=>`<tr><td>${k}</td><td class="n">${v.pool}</td><td class="n" style="${v.ratio<2?'color:var(--red)':''}">${v.ratio}×</td></tr>`).join('')}</tbody></table></div>
+    ${lint.review_queue.length?`<p style="margin-top:12px"><b>${lint.review_queue.length} câu cần xem lại</b> (tỉ lệ đúng &gt; 95% hoặc &lt; 20%, từ 20 lượt trở lên): ${lint.review_queue.map(q=>escH(q.question_id)).join(', ')}</p>`:''}
+    <details style="margin-top:12px"><summary>Chi tiết ${lint.warnings.length} câu có cảnh báo</summary>
+      <ul class="list">${lint.warnings.slice(0,200).map(x=>`<li style="padding:8px 0"><b>${escH(x.id)}</b> <span class="small muted">${escH(x.lesson||'')}</span><br>
+        ${x.w.map(w=>`<span class="small" style="color:${w.level==='error'?'var(--red)':'var(--ink-50)'}">${escH(w.msg)}</span>`).join('<br>')}</li>`).join('')}</ul></details>
+  </section>
+  <section class="section"><span class="mono mono--red">Cấu hình</span>
+    <h2 class="h2" style="margin:10px 0">Mọi con số của sản phẩm</h2>
+    <p class="muted">Sửa là có hiệu lực ngay, không cần deploy. Giá trị là JSON.</p>
+    ${cfg.config.map(c=>`<div style="border-top:1px solid var(--ink-12);padding:12px 0">
+      <div class="row between"><b>${escH(c.key)}</b><span class="small muted">${c.updated_by?'sửa bởi '+escH(c.updated_by)+' · '+new Date(c.updated_at).toLocaleString('vi-VN'):'mặc định'}</span></div>
+      <textarea class="field" data-key="${escH(c.key)}" rows="${Math.min(10,Math.max(2,JSON.stringify(c.value,null,1).split('\n').length))}" style="font-family:var(--mono);font-size:12.5px">${escH(JSON.stringify(c.value,null,1))}</textarea>
+      <button class="btn btn--ghost" data-save="${escH(c.key)}" style="margin-top:6px">Lưu</button></div>`).join('')}
+  </section>`);
+  app.querySelectorAll('[data-save]').forEach(btn=>btn.onclick=async()=>{
+    const ta=app.querySelector(`textarea[data-key="${btn.dataset.save}"]`); let v;
+    try{ v=JSON.parse(ta.value); }catch(e){ toast('JSON chưa hợp lệ'); return; }
+    try{ await api('/admin/config/'+btn.dataset.save,{method:'PUT',body:{value:v}}); toast('Đã lưu '+btn.dataset.save); }catch(e){ toast('Chưa lưu được'); }
+  });
+}
 
 </script>
 </body>

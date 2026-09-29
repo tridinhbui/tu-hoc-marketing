@@ -15,6 +15,7 @@ import * as ai from './ai.js';
 import * as pg from './progress.js';
 import * as google from './google.js';
 import * as ln from './learn.js';
+import * as rm from './realm.js';
 
 /* Chống CSRF: mọi request thay đổi dữ liệu phải mang header riêng.
    Trình duyệt không gửi header tuỳ ý sang origin khác nếu không có CORS — mà API này không bật CORS. */
@@ -48,6 +49,16 @@ async function route(request, env, url) {
   if (p === '/api/tracks' && m === 'GET') return ln.tracks(request, env);
   if (p === '/api/me/mastery' && m === 'GET') return ln.mastery(request, env);
   if (p === '/api/me/next' && m === 'GET') return ln.next(request, env);
+  if (p === '/api/wallet' && m === 'GET') return rm.wallet(request, env);
+  if (p === '/api/shop/buy' && m === 'POST') return rm.buy(request, env);
+  if ((mm = p.match(/^\/api\/chests\/([0-9a-f-]{36})\/open$/)) && m === 'POST') return rm.openChest(request, env, mm[1]);
+  if (p === '/api/kingdom' && m === 'GET') return rm.kingdom(request, env);
+  if (p === '/api/kingdom/visit' && m === 'POST') return rm.visit(request, env);
+  if (p === '/api/boss' && m === 'GET') return rm.bossGet(request, env);
+  if (p === '/api/boss' && m === 'POST') return rm.bossPost(request, env);
+  if (p === '/api/pvp' && m === 'GET') return rm.pvpGet(request, env);
+  if (p === '/api/pvp' && m === 'POST') return rm.pvpPost(request, env);
+  if (p === '/api/season' && m === 'GET') return rm.season(request, env);
   if (p === '/api/admin/config' && m === 'GET') return ln.adminConfigGet(request, env);
   if ((mm = p.match(/^\/api\/admin\/config\/([a-z_]+)$/)) && m === 'PUT') return ln.adminConfigPut(request, env, mm[1]);
   if (p === '/api/admin/lint' && m === 'GET') return ln.adminLint(request, env);

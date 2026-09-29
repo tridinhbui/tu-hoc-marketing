@@ -1,6 +1,7 @@
 /* Nối bộ máy (engine.js) với D1: nhận sổ cái, tính lại tổng hợp, nhiệm vụ ngày. */
 import { json, now, str, currentUser, body } from './lib.js';
 import { DEFAULTS, ingestLedger, computeStats, questStatus } from './engine.js';
+import { onQuestClaimed } from './realm.js';
 
 let cfgCache = null, cfgAt = 0;
 export function invalidateConfig() { cfgCache = null; }
@@ -39,7 +40,8 @@ export async function syncLedger(env, uid, state) {
 export async function recompute(env, uid, cfg) {
   cfg = cfg || await loadConfig(env);
   const evs = await events(env, uid);
-  const st = computeStats(evs, cfg, vnToday());
+  const fz = await env.DB.prepare(`SELECT qty FROM user_inventory WHERE user_id = ?1 AND item_id = 'freeze_total'`).bind(uid).first().catch(() => null);
+  const st = computeStats(evs, cfg, vnToday(), fz ? fz.qty : 0);
   await env.DB.prepare(`INSERT INTO user_stats (user_id, total_xp, level, streak_current, streak_longest, last_active_day, freezes_used, recomputed_at)
       VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)
       ON CONFLICT(user_id) DO UPDATE SET total_xp = excluded.total_xp, level = excluded.level, streak_current = excluded.streak_current,
@@ -89,6 +91,7 @@ export async function claimQuest(req, env) {
     s.xpl = { ...(s.xpl || {}), [ref]: { x: q.xp, d: day } };
     await env.DB.prepare('UPDATE user_state SET state_json = ?1, updated_at = ?2 WHERE user_id = ?3').bind(JSON.stringify(s), now(), u.id).run();
   }
+  await onQuestClaimed(env, u.id, q.id, day);
   const stats = await recompute(env, u.id, cfg);
   return json({ ok: true, xp: q.xp, total_xp: stats.total_xp, level: stats.level });
 }

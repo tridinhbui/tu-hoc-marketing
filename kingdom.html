@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=3">
+<title>Vương quốc Marketing — Tự Học Marketing Case</title>
+<meta name="description" content="Bản đồ các toà nhà: case, quiz, World Boss, đấu trường, chợ. Ghé mỗi toà mỗi ngày được thưởng xu.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main class="wrap" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=2"></script>
+<script src="assets/js/data/bai-index.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/cases.js?v=2"></script>
+<script src="assets/js/app.js?v=13"></script>
+<script src="assets/js/quizkit.js?v=1"></script>
+<script>
+
+appShell('kingdom.html');
+const app=document.getElementById('app');
+(async()=>{
+  let d; try{ d=await api('/kingdom'); }catch(e){ if(await needLogin(app,'Vương quốc')===null) return; }
+  const u=await account();
+  app.innerHTML=`<section class="section">
+    <span class="mono mono--red">Vương quốc Marketing</span>
+    <h1 class="h1" style="margin:14px 0 14px">Mỗi toà nhà<br><em>là một cách luyện.</em></h1>
+    <p class="lede">Ghé mỗi toà một lần mỗi ngày được +5 xu. Xu dùng ở Chợ: thẻ đóng băng chuỗi, rương, booster. Một số toà mở theo cấp độ.</p>
+    ${u?`<div class="kpis" style="margin-top:20px"><div class="kpi"><span class="mono">Cấp</span><b>${d.level}</b></div>
+      <div class="kpi"><span class="mono">Xu</span><b>${fmt(d.coins)}</b></div>
+      <div class="kpi"><span class="mono">Toà đã ghé hôm nay</span><b>${d.buildings.filter(b=>b.visited).length} / ${d.buildings.length}</b></div>
+      <div class="kpi"><span class="mono">Mùa giải</span><b id="ss">—</b></div></div>`:`<p class="note" style="margin-top:16px"><a href="tai-khoan.html?next=kingdom.html">Đăng nhập</a> để nhận xu khi ghé toà nhà.</p>`}
+  </section>
+  <section class="section"><div style="display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))">
+    ${d.buildings.map(b=>`<button class="kb" data-b="${b.id}" ${b.locked?'disabled':''} style="text-align:left;border:1px solid var(--ink-12);border-radius:14px;background:#fff;padding:18px;cursor:${b.locked?'not-allowed':'pointer'};opacity:${b.locked?.5:1};font:inherit;color:inherit">
+      <span class="mono">${b.locked?'Mở ở cấp '+b.min_level:b.visited?'Đã ghé hôm nay':'+5 xu hôm nay'}</span>
+      <b style="display:block;font-size:1.15rem;margin:8px 0 6px">${escH(b.t)}</b><span class="small muted">${escH(b.d)}</span></button>`).join('')}
+  </div></section>`;
+  if(u) api('/season').then(s=>{ const el=document.getElementById('ss'); if(el) el.textContent=s.season.id; }).catch(()=>{});
+  app.querySelectorAll('.kb').forEach(b=>b.onclick=async()=>{
+    const bd=d.buildings.find(x=>x.id===b.dataset.b); if(bd.locked) return;
+    if(u){ try{ const r=await api('/kingdom/visit',{method:'POST',body:{building:bd.id}}); if(r.coins_gained) toast(`+${r.coins_gained} xu`); }catch(e){} }
+    setTimeout(()=>location.href=bd.href, u?350:0);
+  });
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=3">
+<title>World Boss — Tự Học Marketing Case</title>
+<meta name="description" content="Cả server cùng hạ một boss mỗi tuần. 15 câu rút từ bài bạn đã học, chấm ở máy chủ.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main class="wrap narrow" id="app"></main>
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=2"></script>
+<script src="assets/js/data/bai-index.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/cases.js?v=2"></script>
+<script src="assets/js/app.js?v=13"></script>
+<script src="assets/js/quizkit.js?v=1"></script>
+<script>
+
+appShell('boss.html');
+const app=document.getElementById('app');
+(async()=>{
+  let d; try{ d=await api('/boss'); }catch(e){ await needLogin(app,'World Boss'); return; }
+  const pct=d.max_hp?Math.round(d.hp/d.max_hp*100):0;
+  const hp=`<div style="height:14px;border-radius:8px;background:var(--ink-06);overflow:hidden;margin-top:10px"><i style="display:block;height:100%;width:${pct}%;background:var(--red)"></i></div>
+    <p class="mono" style="margin-top:6px">${fmt(d.hp)} / ${fmt(d.max_hp)} máu · mỗi câu đúng ${fmt(d.damage_per_correct)} sát thương</p>`;
+  const top=d.top.length?`<table class="t"><tbody>${d.top.map((t,i)=>`<tr><td>${i+1}</td><td>${escH(t.name)}</td><td class="n">${fmt(t.damage)}</td></tr>`).join('')}</tbody></table>`:'<p class="muted">Chưa ai ra đòn tuần này.</p>';
+  const u=await account();
+  app.innerHTML=`<section class="section"><span class="mono mono--red">World Boss · tuần bắt đầu ${new Date(d.week+'T00:00:00').toLocaleDateString('vi-VN')}</span>
+    <h1 class="h1" style="margin:14px 0 10px">Boss Chi Phí Ẩn</h1>
+    <p class="lede">Cả server cùng đánh một boss. Mỗi người một lượt mỗi tuần: 15 câu rút từ bài bạn đã học, đề cố định trong tuần — tải lại không đổi đề. Máy chủ chấm và tính sát thương.</p>${hp}</section>
+    <section class="section" id="raid"></section>
+    <section class="section"><span class="mono mono--ink">Top sát thương tuần này</span>${top}</section>`;
+  const raid=document.getElementById('raid');
+  if(!u){ raid.innerHTML=`<p class="note"><a href="tai-khoan.html?next=boss.html">Đăng nhập</a> để ra đòn.</p>`; return; }
+  if(d.done){ raid.innerHTML=`<p class="note">Bạn đã ra đòn tuần này: đúng ${d.mine.correct} câu · ${fmt(d.mine.damage)} sát thương · +${d.mine.xp} XP · +${d.mine.coins} xu. Tuần sau có boss mới.</p>`; return; }
+  raid.innerHTML=`${d.fixed_pool?'<p class="note">Bạn chưa học đủ 8 bài nên đề lấy từ kho câu cố định của chặng 1.</p>':''}<div id="qs"></div>
+    <button class="btn" id="go" style="margin-top:16px">Ra đòn</button>`;
+  const box=document.getElementById('qs'); QK.render(box,d.items);
+  document.getElementById('go').onclick=async()=>{
+    const a=QK.answers(box); if(Object.keys(a).length<d.items.length&&!confirm(`Còn ${d.items.length-Object.keys(a).length} câu chưa trả lời. Ra đòn luôn?`)) return;
+    try{ const r=await api('/boss',{method:'POST',body:{answers:a}});
+      QK.mark(box,r.detail); document.getElementById('go').remove();
+      box.insertAdjacentHTML('beforebegin',`<p class="note" style="margin-bottom:12px"><b>${r.correct}/${r.total} câu đúng · ${fmt(r.damage)} sát thương</b> · +${r.xp} XP · +${r.coins} xu${r.booster>1?' (booster ×'+r.booster+')':''}. Boss còn ${fmt(r.hp)} máu.</p>`);
+      toast(`+${r.xp} XP · +${r.coins} xu`); }catch(e){ toast(e.message==='already_submitted'?'Bạn đã ra đòn tuần này.':'Chưa gửi được'); }
+  };
+})();
+
+</script>
+</body>
+</html>
