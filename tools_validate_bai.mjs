@@ -25,6 +25,7 @@ const bad = (id, m) => { errs++; console.log(`  ✗ ${id}: ${m}`); };
 const warn = (id, m) => { warns++; console.log(`  ! ${id}: ${m}`); };
 const stems = new Map();
 
+let mcqN = 0, longestN = 0;
 for (const mod of mods) {
   const f = `assets/js/data/bai/${mod}.js`;
   if (!fs.existsSync(f)) { bad(mod, `thiếu file ${f}`); continue; }
@@ -32,6 +33,7 @@ for (const mod of mods) {
   const pack = packs[mod]; if (!pack) { bad(mod, 'file không gọi BAI_ADD'); continue; }
   if (pack.mod !== mod) bad(mod, `BAI_ADD mod='${pack.mod}' khác tên file`);
   const man = MODULES.find(m => m.id === mod);
+  const m0 = mcqN, l0 = longestN;
   const idx = pack.lessons.map(l => ({ id:l.id, mod, skill:l.skill, read:l.read, t:l.t }));
   if (man && idx.length !== man.n) bad(mod, `có ${idx.length} bài, kế hoạch cần ${man.n}`);
   idx.forEach((b, i) => { const want = `B:${mod}-${String(i + 1).padStart(2, '0')}`; if (b.id !== want) bad(b.id, `mã bài phải là ${want}`);
@@ -75,11 +77,22 @@ for (const mod of mods) {
       if (o.some(x => /tất cả (đều|các)|không (có )?đáp án nào|cả [a-d] và [a-d]/i.test(plain(x.t)))) bad(id, 'phương án kiểu "tất cả/không đáp án nào"');
       const right = o.find(x => x.k === it.answer), others = o.filter(x => x.k !== it.answer);
       if (right && others.length) {
-        const avg = others.reduce((n, x) => n + plain(x.t).length, 0) / others.length;
-        if (plain(right.t).length > avg * 1.6 + 8) warn(id, `đáp án đúng dài hơn hẳn các phương án sai (${plain(right.t).length} so với ~${Math.round(avg)} ký tự) — dễ đoán theo độ dài`);
+        const rl = plain(right.t).length, mx = Math.max(...others.map(x => plain(x.t).length));
+        mcqN++; if (rl > mx) longestN++;
+        if (rl > mx * 1.2) bad(id, `đáp án đúng dài hơn phương án sai dài nhất ${Math.round((rl / mx - 1) * 100)}% — viết lại NHIỄU cho cụ thể và dài bằng, đừng cắt đáp án`);
+        if (others.some(x => plain(x.t).length < 12)) bad(id, 'có phương án quá ngắn/rỗng');
+        if (/^(không ảnh hưởng|không có (ý nghĩa|rủi ro|tác dụng)|ngẫu nhiên)/i.test(others.map(x => plain(x.t)).join('|').split('|').find(t => /^(không ảnh hưởng|không có (ý nghĩa|rủi ro|tác dụng)|ngẫu nhiên)/i.test(t)) || ''))
+          warn(id, 'có phương án kiểu "không ảnh hưởng/ngẫu nhiên" — thay bằng một hiểu lầm cụ thể');
       }
     });
   }
+  const pos = { a:0, b:0, c:0, d:0 }; pack.lessons.forEach(l => (l.q || []).forEach(q => { if (q.answer in pos) pos[q.answer]++; }));
+  const posN = Object.values(pos).reduce((x, y) => x + y, 0), top = Math.max(...Object.values(pos));
+  if (posN >= 20 && top / posN > 0.4) bad(mod, `đáp án đúng dồn vào một vị trí (${JSON.stringify(pos)}) — rải đều a/b/c/d`);
+  const share = (longestN - l0) / Math.max(1, mcqN - m0);
+  console.log(`  đáp án đúng là phương án dài nhất: ${Math.round(share * 100)}% (${longestN - l0}/${mcqN - m0}) — cần 15–35%`);
+  if (share > 0.35) bad(mod, `đáp án đúng dài nhất ở ${Math.round(share * 100)}% câu trắc nghiệm (trần 35%) — người học đoán được theo độ dài`);
+  if (mcqN - m0 >= 10 && share < 0.15) bad(mod, `đáp án đúng dài nhất chỉ ở ${Math.round(share * 100)}% câu (sàn 15%) — người học đoán ngược được: loại phương án dài nhất`);
 }
 console.log(`\n${lessonsN} bài · ${itemsN} câu · ${errs} lỗi · ${warns} cảnh báo`);
 process.exit(errs ? 1 : 0);
