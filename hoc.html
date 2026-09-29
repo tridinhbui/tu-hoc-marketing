@@ -2,154 +2,216 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=1">
-<title>Học — Tự Học Marketing Case</title>
-<meta name="description" content="Bài học tiếp theo, cấp độ, chuỗi ngày học, nhiệm vụ và lỗi cần ôn — tất cả ở một chỗ.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23C4552D%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E7%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=2">
+<title>Hôm nay — Tự Học Marketing Case</title>
+<meta name="description" content="Bạn đang ở bước nào của hành trình, hôm nay làm ba việc gì, yếu ở đâu và sắp mở khoá gì.">
 </head>
 <body>
-<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn, không gửi về máy chủ nào.</p></div></noscript>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn.</p></div></noscript>
 <main class="wrap" id="app"></main>
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
-<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/curriculum.js?v=2"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
 <script src="assets/js/data/rewards.js?v=1"></script>
+<script src="assets/js/data/exam-items.js?v=6"></script>
 <script src="assets/js/data/exams.js?v=6"></script>
-<script src="assets/js/app.js?v=9"></script>
+<script src="assets/js/app.js?v=10"></script>
+<script src="assets/js/exam.js?v=5"></script>
 <script>
 appShell('hoc.html');
-/* đến từ landing với ?persona= : chọn luôn nhóm, không hỏi lại */
-(()=>{const q=qp('persona'), p=PERSONAS.find(x=>x.id===q); if(p&&!S.get().persona) S.set({persona:p.id,path:p.path});})();
+const app=document.getElementById('app');
 
+/* người dùng cũ đã chọn nhóm: đổi sang mục tiêu nghề tương ứng, không hỏi lại */
+(()=>{ const s=S.get(); if(s.goal||!s.persona) return;
+  const g={student:'exec',mt:'mt',comp:'mt',worker:'owner'}[s.persona]||'exec'; S.set({goal:g,startLv:0}); })();
+
+/* ================= ONBOARDING =================
+   Không mở ra danh sách bài. Hỏi hai câu, rồi giao nhiệm vụ đầu tiên. */
+const ob={step:1,goal:null,lv:null};
+function onboarding(){
+  if(ob.step===1){
+    app.innerHTML=`<section class="ob">
+      <span class="eyebrow">Bước 1 / 2</span>
+      <h1 class="display">Bạn muốn giỏi marketing <em>để làm gì?</em></h1>
+      <p class="lede">Chọn đích đến gần nhất. App dựng lộ trình, điểm bắt đầu và nhiệm vụ đầu tiên theo lựa chọn này — đổi lúc nào cũng được.</p>
+      <div class="picks">${GOALS.map(g=>`<button class="pick" data-goal="${g.id}"><b>${g.t}</b><span>${g.d}</span></button>`).join('')}</div>
+    </section>`;
+  } else if(ob.step===2){
+    const g=GOALS.find(x=>x.id===ob.goal);
+    app.innerHTML=`<section class="ob">
+      <span class="eyebrow">Bước 2 / 2 · ${escH(g.t)}</span>
+      <h1 class="display">Bạn đang <em>ở mức nào?</em></h1>
+      <p class="lede">Trả lời thật. Người đã đi làm sẽ được thử đề vượt chặng để khỏi học lại phần đã biết.</p>
+      <div class="picks picks--4">${START_LEVELS.map(l=>`<button class="pick" data-lv="${l.id}"><b>${l.t}</b><span>${l.d}</span></button>`).join('')}</div>
+      <button class="btn btn--quiet" data-back style="margin-top:22px">← Chọn lại mục tiêu</button>
+    </section>`;
+  } else {
+    const g=GOALS.find(x=>x.id===ob.goal), p=PATHS.find(x=>x.id===g.path), lv=START_LEVELS[ob.lv];
+    const first=(p.lessons||ALL.map(x=>x.key)).find(k=>lessonOpen(k)) || nextLesson();
+    const fm=lessonMeta(first), fw=where(first);
+    const gaps=SKILLS.map(sk=>({...sk,need:g.need[sk.id]})).sort((a,b)=>b.need-a.need).slice(0,3);
+    const skip=ob.lv>=2;
+    app.innerHTML=`<section class="ob ob--done">
+      <span class="eyebrow eyebrow--gold">Đã sẵn sàng</span>
+      <h1 class="display">Nhiệm vụ đầu tiên của bạn <em>đã sẵn sàng.</em></h1>
+      <div class="brief">
+        <div class="brief__row"><span>Mục tiêu</span><b>${escH(g.t)}</b></div>
+        <div class="brief__row"><span>Lộ trình đề xuất</span><b>${escH(p.t)} · ${(p.lessons||ALL).length} bài</b></div>
+        <div class="brief__row"><span>Điểm bắt đầu</span><b>${skip?'Thử đề vượt chặng 01 — qua là bỏ được phần Quan sát':'Bước 1 · Quan sát'} <small>(${escH(lv.t)})</small></b></div>
+        <div class="brief__row"><span>Kỹ năng cần xây nhiều nhất</span><b>${gaps.map(x=>`${escH(x.t)} <small>cần ${x.need}%</small>`).join(' · ')}</b></div>
+      </div>
+      <div class="mission">
+        <span class="eyebrow">Nhiệm vụ 01 · ${fw?escH(JOURNEY.find(j=>j.mods.includes(fw.mod.id)).t):''}</span>
+        <h2 class="h2">${escH(fm.t)}</h2>
+        <p class="small muted">${escH(fm.read)} đọc · một tình huống thật, một quyết định, một quiz ngắn · <span class="gold">+${XP.lesson} XP</span></p>
+        <div class="row" style="margin-top:16px">
+          <a class="btn btn--primary btn--lg" href="bai.html?id=${encodeURIComponent(first)}" data-finish>Bắt đầu nhiệm vụ →</a>
+          ${skip?`<a class="btn btn--ghost" href="thi.html?stage=s1" data-finish>Thử đề vượt chặng 01</a>`:''}
+        </div>
+      </div>
+    </section>`;
+  }
+}
+app.addEventListener('click',e=>{
+  const g=e.target.closest('[data-goal]'), l=e.target.closest('[data-lv]');
+  if(g){ ob.goal=g.dataset.goal; ob.step=2; onboarding(); scrollTo(0,0); }
+  else if(l){ ob.lv=+l.dataset.lv; ob.step=3; onboarding(); scrollTo(0,0); }
+  else if(e.target.closest('[data-back]')){ ob.step=1; onboarding(); }
+  else if(e.target.closest('[data-finish]')){ const gg=GOALS.find(x=>x.id===ob.goal);
+    S.set({goal:gg.id,startLv:ob.lv,path:gg.path}); }
+});
+
+/* ================= TÍN HIỆU HÔM NAY =================
+   Một câu tình huống mỗi ngày, lấy từ ngân hàng đề của các chặng đã mở. Cùng ngày thì cùng câu. */
+function signalItem(s){
+  const pool=EXAM_ITEMS.filter(it=>it.type!=='calc'&&it.options&&stageOpen(it.stage,s));
+  if(!pool.length) return null;
+  const t=today(); let h=0; for(const c of t) h=(h*31+c.charCodeAt(0))>>>0;
+  const saved=(s.daily||{})[t]; return saved&&EXAM_ITEMS.find(x=>x.id===saved.id) || pool[h%pool.length];
+}
+function signalHTML(s){
+  const it=signalItem(s); if(!it) return '';
+  const res=(s.daily||{})[today()], sk=skillOfLesson(it.source||(it.teaches||[])[0]);
+  return `<section class="signal" id="signal">
+    <div class="signal__head"><span class="eyebrow eyebrow--light">Tín hiệu thị trường · ${new Date().toLocaleDateString('vi-VN',{weekday:'long',day:'numeric',month:'numeric'})}</span>
+      <span class="small">1–3 phút · <span class="gold">+${XP.daily} XP</span> · giữ chuỗi ngày</span></div>
+    <p class="signal__stem">${it.stem}</p>
+    <div class="signal__opts">${it.options.map(o=>{
+      const st=res?(o.k===it.answer?'right':o.k===res.given?'wrong':''):'';
+      return `<button class="opt" data-sig="${o.k}" ${res?'disabled':''} ${st?`data-r="${st}"`:''}>${escH(o.t)}${res&&(st||o.k===it.answer)?`<small>${escH(it.why[o.k]||'')}</small>`:''}</button>`}).join('')}</div>
+    ${res?`<div class="signal__after">
+      <span class="${res.ok?'ok':'bad'}">${res.ok?'Đúng — đọc được tín hiệu.':'Chưa đúng — câu này đã vào hàng ôn.'}</span>
+      ${sk?`<span class="skillup">${escH(sk.t)}${res.ok?' ↑':' · cần luyện'}</span>`:''}
+      <div class="sticky"><span class="eyebrow">Thẻ insight</span>${escH(it.why[it.answer]||'')}</div>
+      <a class="btn btn--ghost" href="${res.ok?'quiz.html':'on-loi.html'}">${res.ok?'Luyện tiếp 5 câu →':'Luyện lại chỗ sai →'}</a></div>`:''}
+  </section>`;
+}
+function answerSignal(k){
+  const s=S.get(), it=signalItem(s), ok=gradeItem(it,k).ok;
+  S.set({daily:{...(s.daily||{}),[today()]:{id:it.id,given:k,ok}}});
+  if(!ok) (it.teaches||[]).slice(0,1).forEach(pid=>logError(conceptCode(pid),it.source||pid));
+  award('daily',today());
+  render(); document.getElementById('signal').scrollIntoView({block:'start'});
+}
+
+/* ================= COMMAND CENTER ================= */
 function render(){
   const s=S.get();
-  const app=document.getElementById('app');
-
-  /* lần đầu: chọn nhóm người học */
-  if(!s.persona){
-    app.innerHTML=`
-    <section class="section">
-      <span class="mono mono--red">Bắt đầu</span>
-      <h1 class="h1" style="margin:14px 0 16px">Bạn đang ở đâu<br><em>trên con đường này?</em></h1>
-      <p class="lede" style="max-width:60ch">Chọn nhóm gần với bạn nhất. App sẽ gợi ý một lộ trình phù hợp —
-        đổi lúc nào cũng được, và mọi bài vẫn mở theo tiến độ của bạn.</p>
-      <ul class="list" style="margin-top:28px">${PERSONAS.map((p,i)=>`
-        <li><button class="item" style="width:100%;background:none;border:0;text-align:left;cursor:pointer" data-persona="${p.id}">
-          <span class="item__n">${String(i+1).padStart(2,'0')}</span>
-          <span><span class="item__t">${p.t}</span><br><span class="small muted">${p.d}</span></span>
-          <span class="mono">Chọn →</span></button></li>`).join('')}</ul>
-    </section>`;
-    return;
+  if(!s.goal){ onboarding(); return; }
+  const g=goalOf(s), path=PATHS.find(p=>p.id===(s.path||g.path))||PATHS[0];
+  const js=journeyState(s), ni=js.findIndex(j=>j.st==='now'), now=js[ni]||js[js.length-1];
+  const tasks=todayTasks(s), firstOpen=tasks.find(t=>!t.done);
+  const rk=rank(s), gaps=skillGaps(s), weak=gaps[0];
+  const nk=nextLesson(s), learning=nk&&skillOfLesson(nk);
+  const lp=learning&&skillPct(learning,s);
+  const nxt=js[ni+1];
+  let unlock=null;
+  if(nxt){
+    if(nxt.st==='lock'){ const i=STAGES.findIndex(x=>x.id===nxt.stage.id), pv=STAGES[i-1];
+      unlock={t:nxt.t,how:`Qua đề vượt chặng ${pv.n} để mở`,href:`thi.html?stage=${pv.id}`,cta:'Xem đề chặng'}; }
+    else unlock={t:nxt.t,how:`Còn ${now.total-now.have} bài ở bước ${now.t}`,href:nk?'bai.html?id='+encodeURIComponent(nk):'hoc-bai.html',cta:'Học tiếp'};
   }
-
-  const lv=level(s.xp), nk=nextLesson(s), nm=nk&&lessonMeta(nk), nw=nk&&where(nk);
-  const doneN=Object.keys(s.done).filter(k=>where(k)).length, total=ALL.length;
-  const persona=PERSONAS.find(p=>p.id===s.persona), path=PATHS.find(p=>p.id===(s.path||persona.path));
-  const pl=pathLessons(path.id), plDone=pl.filter(k=>s.done[k]).length;
-  const due=dueErrors(s), must=mustDrill(s), ms=missions(s);
-  const pct=(a,b)=>b?Math.round(a/b*100):0;
+  const wk=weekly(S.get());
+  const pl=path.lessons||ALL.map(x=>x.key), plDone=pl.filter(k=>s.done[k]).length;
+  const rw={learn:`+${XP.lesson} XP`,drill:`đến +${XP_CAP.review} XP`,signal:`+${XP.daily} XP`};
 
   app.innerHTML=`
-  <section class="section">
-    <div class="cols cols--2">
-      <div>
-        <span class="mono">Bài học tiếp theo · ${nw?'Chặng '+nw.stage.n+' · '+escH(nw.mod.t):'Đã xong'}</span>
-        ${nm?`<h1 class="h1" style="margin:14px 0 18px">${escH(nm.t)}</h1>
-          <div class="row"><a class="btn" href="bai.html?id=${encodeURIComponent(nk)}">Học ngay · ${escH(nm.read)}</a>
-          ${DRILLS[nk]?'<span class="tag">Có bài tính số</span>':''}</div>`
-          :`<h1 class="h1" style="margin:14px 0 18px">Bạn đã học hết${s.path&&s.path!=='full'?' lộ trình này':''}.</h1>
-          <a class="btn" href="gallery.html">Sang thư viện case</a>`}
-      </div>
-      <div class="stack">
-        <span class="mono">Lộ trình · ${escH(path.t)}</span>
-        <div class="meter"><i style="width:${pct(plDone,pl.length)}%"></i></div>
-        <span class="small muted">${plDone} / ${pl.length} bài trong lộ trình · ${doneN} / ${total} bài toàn chương trình</span>
-        <label class="small" for="pathSel" style="margin-top:6px">Đổi lộ trình</label>
-        <select class="field" id="pathSel">${PATHS.map(p=>`<option value="${p.id}" ${p.id===path.id?'selected':''}>${p.t} · ${(p.lessons||ALL).length} bài</option>`).join('')}</select>
-        <span class="small muted">Bạn là: ${escH(persona.t)} · <button class="small" style="background:none;border:0;padding:0;text-decoration:underline;cursor:pointer" id="rePersona">đổi</button></span>
+  <section class="cc">
+    <div class="cc__main">
+      <span class="eyebrow">Hành trình · ${escH(g.t)}${path.t.toLowerCase()!==g.t.toLowerCase()?' · lộ trình '+escH(path.t):''}</span>
+      <h1 class="display">Bước ${ni+1}/9 · <em>${escH(now.t)}</em></h1>
+      <p class="lede">${escH(now.stage?now.stage.q:'')}</p>
+      <div class="row" style="margin-top:22px">
+        <a class="btn btn--primary btn--lg" href="${firstOpen?firstOpen.href:'case-thu-vien.html'}">${firstOpen?'Tiếp tục hành trình →':'Hôm nay xong rồi — làm thêm một case →'}</a>
+        <span class="small muted">${firstOpen?`Tiếp theo: ${escH(firstOpen.t)}`:'Ba việc hôm nay đã xong.'}</span>
       </div>
     </div>
+    <aside class="rankcard">
+      <span class="eyebrow eyebrow--gold">Danh hiệu ${rk.n}/6</span>
+      <b class="rankcard__t">${escH(rk.t)}</b>
+      <span class="small">${fmt(s.xp)} XP · cấp ${level(s.xp).n} · chuỗi ${s.streak} ngày</span>
+      ${rk.next?`<div class="rankcard__next"><span class="small">Để thành <b>${escH(rk.next.t)}</b>:</span>
+        <ul>${rk.missing.map(m=>`<li>${m.href?`<a href="${m.href}">${escH(m.t)}</a>`:escH(m.t)}</li>`).join('')}</ul></div>`:'<span class="small">Danh hiệu cao nhất.</span>'}
+    </aside>
   </section>
 
-  <section class="kpis" aria-label="Chỉ số của bạn">
-    <div class="kpi"><span class="mono">Cấp ${lv.n} / 30</span><b>${escH(lv.name)}</b>
-      ${lv.next?`<div class="meter" style="margin-top:10px"><i style="width:${pct(s.xp-lv.cur,lv.next-lv.cur)}%"></i></div>
-      <span class="small muted">${fmt(lv.next-s.xp)} XP nữa lên cấp ${lv.n+1}</span>`:''}</div>
-    <div class="kpi"><span class="mono">XP</span><b>${fmt(s.xp)}</b></div>
-    <div class="kpi"><span class="mono">Chuỗi ngày</span><b>${s.streak}</b><span class="small muted">${s.freezes} thẻ đóng băng · mỗi 7 ngày liên tiếp được thêm 1</span></div>
-    <div class="kpi"><span class="mono">Lỗi cần ôn hôm nay</span><b style="${due.length?'color:var(--red)':''}">${due.length}</b>
-      <a class="small" href="on-loi.html">Mở trang ôn lỗi →</a></div>
+  ${journeyHTML(s)}
+
+  <section class="today">
+    <div class="today__head"><h2 class="h2">Hôm nay, <em>ba việc.</em></h2>
+      <span class="small muted">Không hơn. Xong cả ba là giữ chuỗi và có đủ lượt luyện cho ngày.</span></div>
+    <ol class="tasks">${tasks.map(t=>`<li data-st="${t.done?'done':t===firstOpen?'now':'todo'}">
+      <a href="${t.href}"><span class="tasks__n">${t.done?'✓':t.n}</span>
+        <span class="tasks__body"><b>${escH(t.t)}</b><span>${escH(t.d)}</span></span>
+        <span class="tasks__xp">${t.done?'Xong':rw[t.k]}</span></a></li>`).join('')}</ol>
   </section>
 
-  <section class="section cols cols--eq">
-    <div>
-      <span class="mono mono--ink">Nhiệm vụ hôm nay</span>
-      <ul class="list" style="margin-top:12px">${ms.daily.map(m=>`<li class="row between" style="padding:11px 0">
-        <span>${m.have>=m.need?'<s class="muted">':''}${m.t}${m.have>=m.need?'</s>':''}</span>
-        <span class="mono">${Math.min(m.have,m.need)} / ${m.need}</span></li>`).join('')}</ul>
-      <span class="mono mono--ink" style="display:block;margin-top:26px">Nhiệm vụ tuần này</span>
-      <ul class="list" style="margin-top:12px">${ms.weekly.map(m=>`<li class="row between" style="padding:11px 0">
-        <span>${m.have>=m.need?'<s class="muted">':''}${m.t}${m.have>=m.need?'</s>':''}</span>
-        <span class="mono">${Math.min(m.have,m.need)} / ${m.need}</span></li>`).join('')}</ul>
+  <section class="split">
+    <div class="skillfocus">
+      <span class="eyebrow">${learning?'Kỹ năng đang học':'Kỹ năng'}</span>
+      ${learning?`<div class="bigpct"><b>${lp}%</b><span>${escH(learning.t)}</span></div>
+        <div class="bar"><i style="width:${lp}%"></i>${g.need[learning.id]?`<em style="left:${g.need[learning.id]}%" title="Mức cần cho ${escH(g.t)}"></em>`:''}</div>
+        <span class="small muted">Vạch vàng là mức một ${escH(g.t)} thường cần: ${g.need[learning.id]}%.</span>`:''}
+      ${weak&&weak.gap?`<p class="gapnote">Khoảng cách lớn nhất: <b>${escH(weak.t)}</b> — ${weak.pct}% / cần ${weak.need}%.
+        <a href="nang-luc.html#${weak.id}">Xem cách bù →</a></p>`:''}
     </div>
-    <div>
-      <span class="mono mono--ink">Phiên tập trung</span>
-      <p class="h2" id="pomo" style="margin:12px 0 10px;font-variant-numeric:tabular-nums">25:00</p>
-      <p class="small muted">25 phút không mở tab khác. Xong phiên được +${XP.focus} XP. Rời trang thì phiên dừng.</p>
-      <div class="row" style="margin-top:12px"><button class="btn btn--ghost" id="pomoBtn">Bắt đầu</button></div>
-      ${must.length?`<div class="note note--red" style="margin-top:26px"><b>Bài luyện bắt buộc.</b>
-        ${must.map(e=>escH(ERRORS[e.code]||e.code)+' · '+e.count+' lần').join('<br>')}
-        <br><a href="on-loi.html">Làm ngay →</a></div>`:''}
+    ${unlock?`<div class="unlock">
+      <span class="eyebrow eyebrow--gold">Mở khoá tiếp theo</span>
+      <b class="unlock__t">${escH(unlock.t)}</b>
+      <span class="small">${escH(unlock.how)}</span>
+      <a class="btn btn--ghost" href="${unlock.href}">${unlock.cta} →</a>
+    </div>`:''}
+  </section>
+
+  ${signalHTML(s)}
+
+  <section class="week">
+    <span class="eyebrow">Tuần này</span>
+    <div class="week__nums">
+      <div><b>${wk.lessons}</b><span>bài học</span></div>
+      <div><b>${wk.cases}</b><span>case</span></div>
+      <div><b>${wk.reps}</b><span>lượt luyện</span></div>
+      <div><b>${plDone}/${pl.length}</b><span>bài của lộ trình</span></div>
     </div>
+    ${wk.moves.length?`<p class="small">${wk.moves.slice(0,3).map(m=>`${escH(m.t)} <b>${m.from} → ${m.to}%</b>`).join(' · ')}</p>`:''}
+    ${wk.focus?`<p class="week__focus">Trọng tâm tuần tới: <b>${escH(wk.focus.t)}</b> <a href="nang-luc.html#${wk.focus.id}">Lên kế hoạch →</a></p>`:''}
   </section>
 
-  <section class="section cols cols--eq">
-    <a class="stack" style="text-decoration:none" href="case-thu-vien.html"><span class="mono mono--red">Đấu trường</span>
-      <span class="h3">Case có bấm giờ · ${CASES.length} case</span>
-      <span class="small muted">Dữ liệu mở theo câu bạn hỏi. Chấm theo tính toán, insight, đề xuất, cấu trúc.</span></a>
-    <a class="stack" style="text-decoration:none" href="nang-luc.html"><span class="mono mono--red">Năng lực</span>
-      <span class="h3">${COMPETENCIES.filter(c=>compLevel(c,s).n>0).length} / ${COMPETENCIES.length} năng lực có bằng chứng</span>
-      <span class="small muted">Mức chỉ lên từ bài bạn nộp. Xem mình mạnh, yếu ở đâu.</span></a>
-    <a class="stack" style="text-decoration:none" href="ruong.html"><span class="mono mono--red">Rương thưởng</span>
-      <span class="h3">${(()=>{const b=Math.max(s.best||0,s.streak),n=CHESTS.find(c=>b<c.streak);return n?'Rương kế ở mốc '+n.streak+' ngày':'Đã mở hết rương';})()}</span>
-      <span class="small muted">Tài liệu viết riêng và huy hiệu, mở theo chuỗi ngày dài nhất.</span></a>
-    <a class="stack" style="text-decoration:none" href="tro-choi.html"><span class="mono mono--red">Trò chơi</span>
-      <span class="h3">Điều hành thương hiệu trong 8 quý</span>
-      <span class="small muted">Chia ngân sách giữa media, điểm bán, giữ chân và giảm giá.</span></a>
-  </section>
+  <nav class="also" aria-label="Công cụ khác">
+    <a href="on-loi.html">Ôn lỗi${dueErrors(s).length?` · <b>${dueErrors(s).length}</b> đến hạn`:''}</a>
+    <a href="ruong.html">Rương thưởng</a>
+    <a href="tro-choi.html">Trò chơi điều hành 8 quý</a>
+    <a href="ban-do.html">Bản đồ chặng</a>
+    <button type="button" id="reGoal">Đổi mục tiêu</button>
+  </nav>`;
 
-  <section class="section">
-    <div class="row between"><span class="mono mono--ink">Các chặng</span><a class="mono" href="ban-do.html">Xem bản đồ →</a></div>
-    <ul class="list" style="margin-top:12px">${STAGES.map(st=>{const ks=st.mods.flatMap(m=>m.lessons);const d=ks.filter(k=>s.done[k]).length;const open=stageOpen(st.id,s);
-      return `<li><a class="item" href="ban-do.html#${st.id}" ${open?'':'aria-disabled="true"'}>
-        <span class="item__n">${st.n}</span><span class="item__t">${st.t}</span>
-        <span class="mono">${ks.length?d+' / '+ks.length:st.mods.length+' case'}${open?'':' · khoá'}</span></a></li>`}).join('')}</ul>
-  </section>`;
-
-  document.getElementById('pathSel').onchange=e=>{S.set({path:e.target.value});render();toast('Đã đổi lộ trình');};
-  document.getElementById('rePersona').onclick=()=>{S.set({persona:null});render();};
-  document.getElementById('pomoBtn').onclick=pomodoro;
+  document.getElementById('reGoal').onclick=()=>{ S.set({goal:null}); ob.step=1; render(); scrollTo(0,0); };
+  app.querySelectorAll('[data-sig]').forEach(b=>b.onclick=()=>answerSignal(b.dataset.sig));
+  if(location.hash==='#signal') document.getElementById('signal')?.scrollIntoView();
 }
-
-let pomoT=null;
-function pomodoro(){
-  const b=document.getElementById('pomoBtn');
-  if(pomoT){ clearInterval(pomoT); pomoT=null; b.textContent='Bắt đầu'; document.getElementById('pomo').textContent='25:00'; return; }
-  const end=Date.now()+25*60e3; b.textContent='Dừng';
-  pomoT=setInterval(()=>{
-    const left=Math.max(0,end-Date.now()), m=Math.floor(left/6e4), sec=Math.floor(left%6e4/1e3);
-    const el=document.getElementById('pomo'); if(el) el.textContent=String(m).padStart(2,'0')+':'+String(sec).padStart(2,'0');
-    if(!left){ clearInterval(pomoT); pomoT=null; award('focus',today()); render(); }
-  },500);
-}
-
-document.addEventListener('click',e=>{
-  const b=e.target.closest('[data-persona]'); if(!b) return;
-  const p=PERSONAS.find(x=>x.id===b.dataset.persona);
-  S.set({persona:p.id,path:p.path}); render(); toast('Đã chọn lộ trình: '+PATHS.find(x=>x.id===p.path).t);
-});
 render();
 </script>
 </body>

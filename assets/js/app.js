@@ -73,7 +73,7 @@ const XP_ONCE={lesson:'lesson',learned:'lesson',solid:'solid',exam:'exam',drill:
 const XP_CAP={review:40,quiz:60,game:50,focus:15,daily:10};
 const STREAK_RESTORE_XP=150, STREAK_RESTORE_DAYS=3, FREE_FREEZES=3;
 /* "Một ngày học" = có hoạt động học thật: bài, ôn, bài tính, case, thi. Mở quiz 60 giây hay chơi game không tính. */
-const STREAK_KINDS=new Set(['lesson','learned','solid','review','drill','talk','case','exam','focus']);
+const STREAK_KINDS=new Set(['lesson','learned','solid','review','drill','talk','case','exam','focus','daily']);
 
 /* Sổ cái: s.xpl = { khoá: {x, d} }. Tổng XP là phép cộng của sổ — không cộng dồn mù.
    Lần đầu chạy: toàn bộ XP cũ vào một dòng "legacy" để không ai mất điểm, và mọi thứ đã làm
@@ -135,7 +135,7 @@ function award(kind,ref,times=1){
   award.last=got;
   if(got>0) scheduleSync();
   const after=level(s.xp);
-  const st=document.querySelector('.top__stat'); if(st) st.textContent=`Cấp ${after.n} · ${fmt(s.xp)} XP · ${s.streak} ngày`;
+  const st=document.querySelector('.top__stat'); if(st) st.innerHTML=`<b class="xpchip">${fmt(s.xp)} XP</b><span class="streak">${s.streak}</span>`;
   if(after.n>before) toast(`Lên cấp ${after.n} · ${after.name}`);
   else if(got>0) toast(`+${got} XP`);
   else if(XP_CAP[kind]&&want>0) toast('Đã đủ XP hôm nay cho mục này — vẫn học được, chỉ không cộng thêm.');
@@ -223,7 +223,8 @@ function parseNum(raw){
 const fmt=n=>Number(n).toLocaleString('vi-VN',{maximumFractionDigits:2});
 
 /* ---------------- shell ---------------- */
-const APP_NAV=[['Học','hoc.html'],['Học bài','hoc-bai.html'],['Bắt đầu từ đâu','ban-do.html'],['Quiz 60 giây','quiz.html'],['Case có giờ','case-thu-vien.html'],['Năng lực','nang-luc.html'],['Ôn lỗi','on-loi.html'],['Cộng đồng','cong-dong.html'],['Xếp hạng','bang-xep-hang.html'],['Bàn làm việc','roadmap.html']];
+const APP_NAV=[['Hôm nay','hoc.html'],['Hành trình','hoc-bai.html'],['Luyện','quiz.html'],['Case','case-thu-vien.html'],['Kỹ năng','nang-luc.html'],['Phỏng vấn','phong-van.html'],['Cộng đồng','cong-dong.html']];
+const APP_MORE=[['Ôn lỗi','on-loi.html'],['Luyện cuối module','luyen.html'],['Bắt đầu từ đâu','ban-do.html'],['Xếp hạng','bang-xep-hang.html'],['Rương thưởng','ruong.html'],['Trò chơi điều hành','tro-choi.html'],['Bàn làm việc','roadmap.html'],['Tạp chí Nhìn thấy','tap-chi.html']];
 function applyTheme(s=S.get()){
   document.documentElement.dataset.theme=s.theme==='light'?'':s.theme;
   document.documentElement.style.setProperty('--read',(s.read||18)+'px');
@@ -235,8 +236,9 @@ function appShell(here){
     <a class="skip" href="#main">Tới nội dung chính</a>
     <header class="top"><div class="wrap top__in">
       <a class="logo" href="gioi-thieu.html"><b>Tự Học</b> Marketing Case<span>MIỄN PHÍ</span></a>
-      <nav class="nav" aria-label="Chính">${APP_NAV.map(([t,h])=>`<a href="${h}"${h===here?' aria-current="page"':''}>${t}</a>`).join('')}</nav>
-      <span class="top__stat" title="Cấp độ · XP · chuỗi ngày">Cấp ${lv.n} · ${fmt(s.xp)} XP · ${s.streak} ngày</span>
+      <nav class="nav" aria-label="Chính">${APP_NAV.map(([t,h])=>`<a href="${h}"${h===here?' aria-current="page"':''}>${t}</a>`).join('')}
+        <details class="more"><summary${APP_MORE.some(([,h])=>h===here)?' data-on':''}>Thêm</summary><div class="more__menu">${APP_MORE.map(([t,h])=>`<a href="${h}"${h===here?' aria-current="page"':''}>${t}</a>`).join('')}</div></details></nav>
+      <span class="top__stat" title="Cấp ${lv.n} · ${fmt(s.xp)} XP · chuỗi ${s.streak} ngày"><b class="xpchip">${fmt(s.xp)} XP</b><span class="streak">${s.streak}</span></span>
       <a class="top__stat" id="acct" href="tai-khoan.html" style="text-decoration:none">Tài khoản</a>
     </div></header>`);
   document.body.insertAdjacentHTML('beforeend',`
@@ -302,6 +304,109 @@ function compLevel(c,s=S.get()){
   if(l3.length){ n=3; why=`Đạt tiêu chí liên quan trong ${new Set(l3.map(a=>a.id)).size} case có bấm giờ.`; }
   if(l4.length){ n=4; why='Đạt case tổng thể và phần nói 60 giây cũng đạt.'; }
   return {n,why};
+}
+
+/* ---------------- hành trình, kỹ năng, danh hiệu ----------------
+   Một mô hình duy nhất cho mọi trang: bạn đang ở bước nào, mạnh/yếu ở đâu, cần gì để lên hạng. */
+const SKILLS=[
+  {id:'insight', t:'Hiểu khách hàng',        comps:['c01','c02','c03']},
+  {id:'brand',   t:'Thương hiệu & định vị',  comps:['c04','c05','c06']},
+  {id:'creative',t:'Nội dung & sáng tạo',    comps:['c08']},
+  {id:'channel', t:'Kênh & performance',     comps:['c07','c09','c10']},
+  {id:'measure', t:'Đo lường & tăng trưởng', comps:['c11','c12','c13']},
+  {id:'comm',    t:'Đọc số & đề xuất',       comps:['c14','c15']},
+];
+const hasComp=()=>typeof COMPETENCIES!=='undefined';
+function skillLessons(sk){ return hasComp()?[...new Set(sk.comps.flatMap(id=>(COMPETENCIES.find(c=>c.id===id)||{lessons:[]}).lessons))]:[]; }
+function skillOfLesson(k){ return SKILLS.find(sk=>skillLessons(sk).includes(k))||null; }
+/* % kỹ năng = 70% từ trạng thái bài (đã học .35 · đạt .7 · vững 1) + 30% từ bằng chứng năng lực (bài tính số, quiz, case). */
+function skillPct(sk,s=S.get()){
+  const ks=skillLessons(sk); if(!ks.length) return 0;
+  const pt={learned:.35,passed:.7,solid:1};
+  const les=ks.reduce((n,k)=>{const r=lessonState(k,s); return n+(r?pt[r.state]||0:0);},0)/ks.length;
+  const comps=sk.comps.map(id=>COMPETENCIES.find(c=>c.id===id)).filter(Boolean);
+  const ev=comps.length?comps.reduce((n,c)=>n+compLevel(c,s).n/4,0)/comps.length:0;
+  return Math.round(100*(.7*les+.3*ev));
+}
+function skillMap(s=S.get()){ return SKILLS.map(sk=>({...sk,pct:skillPct(sk,s)})); }
+function goalOf(s=S.get()){ return typeof GOALS!=='undefined'?GOALS.find(g=>g.id===s.goal)||null:null; }
+/* Khoảng cách tới mục tiêu nghề, lớn nhất trước. */
+function skillGaps(s=S.get()){ const g=goalOf(s)||(typeof GOALS!=='undefined'?GOALS[0]:null); if(!g) return [];
+  return skillMap(s).map(x=>({...x,need:g.need[x.id],gap:Math.max(0,g.need[x.id]-x.pct)})).sort((a,b)=>b.gap-a.gap||a.pct-b.pct); }
+
+/* Bước của hành trình 9 bước: xong / đang ở đây / đã mở / khoá. */
+function journeyState(s=S.get()){
+  if(typeof JOURNEY==='undefined') return [];
+  const nk=nextLesson(s), nm=nk&&where(nk)?where(nk).mod.id:null;
+  const modOf=id=>STAGES.flatMap(st=>st.mods.map(m=>({...m,stage:st}))).find(m=>m.id===id);
+  let hereSet=false;
+  return JOURNEY.map(j=>{
+    const mods=j.mods.map(modOf).filter(Boolean), ks=mods.flatMap(m=>m.lessons);
+    const open=mods.some(m=>stageOpen(m.stage.id,s))||ks.some(k=>lessonOpen(k,s));   // bài trong lộ trình đã chọn luôn mở
+    const done=ks.length?ks.every(k=>lessonState(k,s)&&lessonState(k,s).state!=='learned'||s.done[k])
+                        :!!((s.exams||{})[mods[0]&&mods[0].stage.id]||{}).passed;
+    let st=done?'done':open?'open':'lock';
+    if(!hereSet&&(j.mods.includes(nm)||(!nm&&!done&&open))){ st='now'; hereSet=true; }
+    return {...j,st,stage:mods[0]&&mods[0].stage,total:ks.length,have:ks.filter(k=>s.done[k]).length};
+  });
+}
+function journeyHTML(s=S.get(),{compact=false}={}){
+  const js=journeyState(s); if(!js.length) return '';
+  return `<ol class="journey${compact?' journey--compact':''}" aria-label="Hành trình 9 bước">${js.map((j,i)=>`
+    <li data-st="${j.st}" title="${j.t}${j.total?` · ${j.have}/${j.total} bài`:''}">
+      <span class="journey__n">${j.st==='done'?'✓':i+1}</span><span class="journey__t">${j.t}</span>
+      ${compact?'':`<span class="journey__en">${j.en}</span>`}</li>`).join('')}</ol>`;
+}
+
+/* Danh hiệu: không thể lên chỉ bằng cày XP — cần qua đề chặng, có case đạt và đủ XP. */
+const RANKS=[
+  {t:'Người quan sát'},
+  {t:'Người phân tích',     exam:'s1', xp:150,  cases:0},
+  {t:'Người lập kế hoạch',  exam:'s2', xp:500,  cases:1},
+  {t:'Người làm chiến dịch',exam:'s3', xp:1000, cases:2},
+  {t:'Growth Thinker',      exam:'s4', xp:1800, cases:3},
+  {t:'Brand Builder',       exam:'s5', xp:3000, cases:4},
+];
+function casesPassed(s=S.get()){ return new Set(caseAttempts(s).filter(a=>a.passed).map(a=>a.id)).size; }
+function rank(s=S.get()){
+  const cp=casesPassed(s), ok=r=>!!((s.exams||{})[r.exam]||{}).passed && s.xp>=r.xp && cp>=r.cases;
+  let n=0; for(let i=1;i<RANKS.length;i++){ if(ok(RANKS[i])) n=i; else break; }
+  const nx=RANKS[n+1]; const st=nx&&STAGES.find(x=>x.id===nx.exam);
+  const missing=nx?[
+    !((s.exams||{})[nx.exam]||{}).passed&&{t:`Qua đề vượt chặng ${st?st.n:''}`,href:`thi.html?stage=${nx.exam}`},
+    s.xp<nx.xp&&{t:`Thêm ${fmt(nx.xp-s.xp)} XP`},
+    cp<nx.cases&&{t:`Đạt thêm ${nx.cases-cp} case có bấm giờ`,href:'case-thu-vien.html'},
+  ].filter(Boolean):[];
+  return {n:n+1,t:RANKS[n].t,next:nx?{n:n+2,t:nx.t}:null,missing};
+}
+
+/* Hôm nay: đúng ba việc — học một bài, luyện một lượt, xử lý một tình huống. */
+function todayTasks(s=S.get()){
+  const t=today(), got=k=>s.log.some(x=>x.d===t&&k.includes(x.k));
+  const nk=nextLesson(s), nm=nk&&lessonMeta(nk), due=dueErrors(s);
+  const learnedToday=got(['lesson','learned'])||Object.values(s.lessons||{}).some(r=>r.at===t);
+  return [
+    {k:'learn', n:1, t:learnedToday?'Đã học 1 bài hôm nay':nm?nm.t:'Đã học hết lộ trình', d:learnedToday&&nm?`Học thêm: ${nm.t}`:nm?`Bài học · ${nm.read}`:'Sang case có bấm giờ',
+      href:nm?'bai.html?id='+encodeURIComponent(nk):'case-thu-vien.html',
+      done:learnedToday},
+    {k:'drill', n:2, t:due.length?`Ôn ${due.length} lỗi đến hạn`:'Quiz 60 giây', d:due.length?'Sửa đúng chỗ bạn hay sai':'Năm quyết định nhanh',
+      href:due.length?'on-loi.html':'quiz.html', done:got(['review','drill','quiz'])},
+    {k:'signal', n:3, t:'Tín hiệu thị trường hôm nay', d:'Một tình huống, một quyết định · 1–3 phút',
+      href:'hoc.html#signal', done:!!(s.daily||{})[t]},
+  ];
+}
+
+/* Tổng kết tuần: đếm từ nhật ký thật, so kỹ năng với ảnh chụp đầu tuần. */
+function weekly(s=S.get()){
+  const w=weekStart(), inW=x=>x.d>=w;
+  let snap=s.wk; const now=Object.fromEntries(skillMap(s).map(x=>[x.id,x.pct]));
+  if(!snap||snap.start!==w){ snap={start:w,skills:now}; S.set({wk:snap}); }
+  const lessons=Object.values(s.lessons||{}).filter(r=>r.at>=w).length;
+  const cases=caseAttempts(s).filter(a=>(a.d||a.date||'')>=w).length;
+  const reps=s.log.filter(x=>inW(x)&&['quiz','review','drill','daily'].includes(x.k)).length;
+  const moves=SKILLS.map(sk=>({t:sk.t,from:snap.skills[sk.id]||0,to:now[sk.id]})).filter(x=>x.to!==x.from).sort((a,b)=>(b.to-b.from)-(a.to-a.from));
+  const gaps=skillGaps(s);
+  return {lessons,cases,reps,moves,focus:gaps[0]||null};
 }
 
 /* ---------------- tài khoản & đồng bộ (cần backend /api) ----------------

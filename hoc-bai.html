@@ -6,20 +6,22 @@
 <meta name="description" content="Lộ trình học: bài đang học, các chặng và module, câu sai cần ôn, thử thách mỗi ngày và luyện tập không giới hạn.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%233b2416%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27Arial%27 font-weight=%27800%27 font-size=%2716%27 text-anchor=%27middle%27 fill=%27%23fff%27%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400&display=swap" rel="stylesheet">
 <style>
 /* Trang Học bài — bố cục theo casebook học tập; tông kem + nâu của Tự Học Marketing Case.
    Mọi màu nằm ở :root, đổi tông chỉ cần đổi các biến dưới đây. */
 :root{
-  --page:#f8f3ea; --side:#fffdf9; --card:#fffdf8; --card2:#fbf8f1; --white:#fff;
-  --line:#e8dfd0; --line2:#efe7da; --ink:#2b1a11; --ink2:#5b4a3e; --ink3:#8a7a6d; --ink4:#b3a598;
-  --dark:#3b2416; --dark-h:#5a3a24;                 /* vai trò “xanh đậm” của bản gốc */
-  --acc:#9a6a3a; --acc-bg:#f5ecdc; --acc-bd:#e2cfae; --acc-tx:#6b4423;   /* vai trò “emerald” */
-  --amber:#f59e0b; --amber-bg:#fef3c7; --amber-bd:#fcd9a0; --amber-tx:#92400e; --amber-tx2:#b45309; --amber-card:#fffaf0;
-  --sky-bg:#eff8ff; --sky-bd:#bae0fd; --sky-tx:#0c4a6e;
-  --red:#b4232a; --ok:#4d7c0f; --ok-bg:#eef6e4; --ok-bd:#c9e2a8;
+  /* hệ "studio marketing": kem · đất nung · vàng mù tạt · nâu espresso — cùng bộ với case.css */
+  --page:#FAF3E7; --side:#F3E6D2; --card:#FFFBF4; --card2:#FAF3E7; --white:#FFFBF4;
+  --line:rgba(58,36,24,.10); --line2:rgba(58,36,24,.07); --ink:#3A2418; --ink2:#5E4637; --ink3:#8C7565; --ink4:#B7A493;
+  --dark:#3A2418; --dark-h:#A8421C;
+  --acc:#C4552D; --acc-bg:rgba(196,85,45,.10); --acc-bd:rgba(196,85,45,.28); --acc-tx:#A8421C;
+  --amber:#D9A21B; --amber-bg:#F7E6B5; --amber-bd:#EACB78; --amber-tx:#7A5704; --amber-tx2:#9A6F06; --amber-card:#FDF4DC;
+  --sky-bg:#F3E6D2; --sky-bd:#EADAC0; --sky-tx:#5E4637;
+  --red:#B0301C; --ok:#6B7A2A; --ok-bg:rgba(107,122,42,.12); --ok-bd:rgba(107,122,42,.3);
   --rw:340px;
-  --f:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --f:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --serif:'Fraunces',Georgia,serif;
 }
 *,*::before,*::after{box-sizing:border-box}
 html,body{margin:0}
@@ -32,9 +34,9 @@ img{max-width:100%;display:block}
 svg.i{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* ---------- sidebar ---------- */
-.side{position:fixed;inset:0 auto 0 0;width:256px;background:var(--side);border-right:1px solid var(--line);display:flex;flex-direction:column;z-index:30;transition:transform .25s}
+.side{position:fixed;inset:0 auto 0 0;width:256px;background:var(--side);border-right:0;display:flex;flex-direction:column;z-index:30;transition:transform .25s}
 .side__logo{display:flex;align-items:center;gap:10px;padding:18px 20px 12px;font-weight:800;font-size:15px;line-height:1.05;letter-spacing:-.01em;color:var(--dark)}
-.side__logo i{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--dark);color:#fff;font-style:normal;font-size:15px}
+.side__logo i{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--acc);font-family:var(--serif);color:#fff;font-style:normal;font-size:15px}
 .side__search{margin:6px 14px 10px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--card2);border-radius:12px;padding:8px 10px;color:var(--ink3);font-size:13px;position:relative}
 .side__search input{border:0;background:none;outline:0;flex:1;font:inherit;color:var(--ink);min-width:0}
 .side__search kbd{font:600 10px var(--f);border:1px solid var(--line);border-radius:6px;padding:1px 6px;background:#fff}
@@ -45,11 +47,11 @@ svg.i{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-widt
 .side nav{flex:1;overflow:auto;padding:0 12px 12px}
 .nav-a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;color:var(--ink2);font-weight:600;font-size:14px}
 .nav-a:hover{background:var(--card2);color:var(--ink)}
-.nav-a[aria-current="page"]{background:var(--acc-bg);color:var(--acc-tx)}
-.nav-g{display:flex;align-items:center;justify-content:space-between;width:100%;border:0;background:none;padding:14px 10px 6px;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--dark);text-transform:uppercase}
+.nav-a[aria-current="page"]{background:var(--acc);color:#fff;box-shadow:0 8px 18px -12px var(--acc)}
+.nav-g{display:flex;align-items:center;justify-content:space-between;width:100%;border:0;background:none;padding:16px 10px 6px;font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--ink3);text-transform:uppercase}
 .nav-g svg{transition:transform .2s}
 .nav-g[aria-expanded="false"] svg.chev{transform:rotate(-90deg)}
-.nav-box{border:1px solid var(--line2);border-radius:14px;padding:4px;background:#fff}
+.nav-box{padding:0}
 .badge{margin-left:auto;font-size:9.5px;font-weight:800;letter-spacing:.04em;padding:2px 7px;border-radius:6px;background:var(--acc-bg);color:var(--acc-tx);border:1px solid var(--acc-bd)}
 .badge--amber{background:var(--amber-bg);color:var(--amber-tx);border-color:var(--amber-bd)}
 .side__foot{border-top:1px solid var(--line);padding:12px 14px;display:grid;gap:10px}
@@ -257,10 +259,10 @@ svg.i{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-widt
 
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
-<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/curriculum.js?v=2"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
-<script src="assets/js/app.js?v=9"></script>
+<script src="assets/js/app.js?v=10"></script>
 <script>
 /* ---------------- icon ---------------- */
 const P={
@@ -285,10 +287,10 @@ function toast(m){const t=document.getElementById('toast');t.textContent=m;t.cla
 
 /* ---------------- sidebar ---------------- */
 const NAVS=[
-  {items:[['home','Dashboard','hoc.html'],['users','Cộng đồng','cong-dong.html']]},
-  {g:'Học tập',box:true,items:[['compass','Bắt đầu từ đâu','ban-do.html'],['book','Học bài','hoc-bai.html'],['brief','Học theo nghề','hoc-bai.html?lo-trinh=1']]},
-  {g:'Thực hành',items:[['help','Quiz 60 giây','quiz.html'],['trophy','Case có bấm giờ','case-thu-vien.html'],['game','Trò chơi thương hiệu','tro-choi.html'],['mic','Luyện phỏng vấn','phong-van.html','AI'],['sliders','Mô phỏng công cụ','roadmap.html']]},
-  {g:'Cộng đồng',items:[['lib','Thư viện case','gallery.html'],['chart','Bảng xếp hạng','bang-xep-hang.html'],['grid','Bản đồ năng lực','nang-luc.html']]},
+  {items:[['home','Hôm nay','hoc.html'],['compass','Hành trình','hoc-bai.html']]},
+  {g:'Luyện',items:[['help','Quiz 60 giây','quiz.html'],['alert','Ôn lỗi','on-loi.html'],['layers','Luyện cuối module','luyen.html']]},
+  {g:'Áp dụng',items:[['trophy','Case có bấm giờ','case-thu-vien.html'],['mic','Phỏng vấn mô phỏng','phong-van.html','AI'],['game','Trò chơi điều hành','tro-choi.html'],['sliders','Bàn làm việc','roadmap.html']]},
+  {g:'Tiến bộ',items:[['grid','Kỹ năng & nghề','nang-luc.html'],['chart','Bảng xếp hạng','bang-xep-hang.html'],['users','Cộng đồng','cong-dong.html'],['lib','Thư viện case','gallery.html']]},
 ];
 function renderSide(u){
   const s=S.get(), due=dueErrors(s).length, here='hoc-bai.html';

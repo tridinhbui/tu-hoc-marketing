@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=1">
-<title>Bản đồ năng lực — Tự Học Marketing Case</title>
+<link rel="stylesheet" href="assets/css/case.css?v=2">
+<title>Kỹ năng & nghề — Tự Học Marketing Case</title>
 <meta name="description" content="15 năng lực, mỗi năng lực 4 mức. Mức chỉ lên từ bài bạn nộp, không phải tự đánh giá.">
 <style>
   .comp{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:8px 18px;padding:14px 0;border-bottom:var(--rule);align-items:center}
@@ -20,21 +20,62 @@
 <main class="wrap" id="app"></main>
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
-<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/curriculum.js?v=2"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
 <script src="assets/js/data/exams.js?v=6"></script>
-<script src="assets/js/app.js?v=9"></script>
+<script src="assets/js/app.js?v=10"></script>
 <script>
 appShell('nang-luc.html');
 const s=S.get(), rows=COMPETENCIES.map(c=>({c,...compLevel(c,s)}));
 const avg=rows.reduce((n,r)=>n+r.n,0)/rows.length, withEv=rows.filter(r=>r.n>0);
 const strong=[...withEv].sort((a,b)=>b.n-a.n)[0], weak=[...rows].sort((a,b)=>a.n-b.n)[0];
 const nextFor=r=>r.c.lessons.find(k=>!s.done[k]&&lessonOpen(k,s))||r.c.lessons.find(k=>DRILLS[k]&&!s.drills[k]&&lessonOpen(k,s));
+/* ---- bản đồ kỹ năng theo nghề ---- */
+function skillDetail(x){
+  const ks=skillLessons(x), learned=ks.filter(k=>lessonState(k,s)), open=ks.filter(k=>!lessonState(k,s)&&lessonOpen(k,s));
+  const errs=Object.entries(s.errors||{}).filter(([,e])=>(e.lessons||[]).some(k=>ks.includes(k))).sort((a,b)=>b[1].count-a[1].count);
+  const cs=typeof CASES!=='undefined'?caseAttempts(s).filter(a=>{const cd=CASES.find(c=>c.id===a.id);return cd&&Object.values(cd.comps).flat().some(id=>x.comps.includes(id));}):[];
+  const nk=open[0];
+  return `<div class="skilldet">
+    <div><span class="eyebrow">Đã học</span><p class="small">${learned.length?learned.map(k=>`<a href="bai.html?id=${encodeURIComponent(k)}">${escH(lessonMeta(k).t.split(' · ')[0])}</a> <span class="tag ${lessonState(k,s).state==='learned'?'':'tag--gold'}">${{learned:'đã học',passed:'đạt',solid:'vững'}[lessonState(k,s).state]||''}</span>`).join('<br>'):'Chưa có bài nào.'}</p></div>
+    <div><span class="eyebrow">Case đã làm</span><p class="small">${cs.length?`${new Set(cs.map(a=>a.id)).size} case · ${cs.filter(a=>a.passed).length} lượt đạt`:'Chưa có.'}</p>
+      <span class="eyebrow">Lỗi hay gặp</span><p class="small">${errs.length?errs.slice(0,3).map(([c,e])=>`${escH(ERRORS[c]||c.replace(/^KN_/,'Khái niệm: ').replace(/_/g,' ').toLowerCase())} · ${e.count} lần`).join('<br>'):'Chưa ghi nhận lỗi.'}</p></div>
+    <div><span class="eyebrow eyebrow--terra">Việc nên làm tiếp</span>
+      ${errs.length?`<a class="btn btn--primary" href="on-loi.html">Sửa ${errs.length} lỗi của kỹ năng này</a>`:nk?`<a class="btn btn--primary" href="bai.html?id=${encodeURIComponent(nk)}">Học: ${escH(lessonMeta(nk).t.split(' · ')[0])}</a>`:`<a class="btn btn--primary" href="case-thu-vien.html">Áp dụng vào một case</a>`}
+      <p class="small muted" style="margin-top:8px">${ks.length} bài thuộc kỹ năng này · ${learned.length} đã học.</p></div>
+  </div>`;
+}
+const G=goalOf(s)||GOALS[0], gaps=skillGaps(s);
+const gapTxt=gaps.filter(x=>x.gap>0).slice(0,2).map(x=>x.t);
 document.getElementById('app').innerHTML=`
 <section class="section">
-  <span class="mono mono--red">Bản đồ năng lực</span>
-  <h1 class="h1" style="margin:14px 0 16px">${COMPETENCIES.length} năng lực,<br><em>mỗi cái bốn mức.</em></h1>
+  <span class="eyebrow eyebrow--terra">Kỹ năng & nghề</span>
+  <h1 class="display" style="margin:12px 0 14px">Bạn đang trở thành <em>${escH(G.t)}.</em></h1>
+  <p class="lede">So kỹ năng hiện tại với mức một người làm tốt vị trí này thường cần. Vạch vàng là mức cần; thanh đất nung là bạn.</p>
+  <div class="row" style="margin-top:18px"><label class="small" for="goalSel">Xem theo nghề</label>
+    <select class="field" id="goalSel" style="max-width:320px">${GOALS.map(g=>`<option value="${g.id}" ${g.id===G.id?'selected':''}>${g.t}</option>`).join('')}</select></div>
+</section>
+<section class="skillmap" aria-label="Bản đồ kỹ năng">
+  ${gaps.sort((a,b)=>SKILLS.findIndex(x=>x.id===a.id)-SKILLS.findIndex(x=>x.id===b.id)).map(x=>`
+  <details class="skillrow-wrap" id="${x.id}" ${location.hash==='#'+x.id?'open':''}>
+    <summary class="skillrow" ${x.gap?'data-gap':'data-met'}>
+      <span class="skillrow__t">${escH(x.t)}</span>
+      <span class="bar"><i style="width:${x.pct}%"></i><em style="left:${x.need}%"></em></span>
+      <span class="skillrow__v">${x.pct}% <span class="muted">/ ${x.need}%</span></span>
+    </summary>
+    ${skillDetail(x)}
+  </details>`).join('')}
+</section>
+<section class="section" style="display:grid;gap:14px">
+  <span class="eyebrow eyebrow--gold">Khoảng cách</span>
+  <h2 class="h2">${gapTxt.length?`Bạn đang thiếu <em>${gapTxt.map(escH).join(' + ')}.</em>`:'Bạn đã đạt mức cần của nghề này.'}</h2>
+  <p class="lede">Lộ trình đề xuất cho ${escH(G.t)}: bài học → luyện 60 giây → case có bấm giờ → phỏng vấn mô phỏng.</p>
+  <div class="row"><a class="btn btn--primary" href="hoc.html">Tiếp tục hành trình →</a><a class="btn btn--ghost" href="phong-van.html">Thử phỏng vấn ${escH(G.t)}</a></div>
+</section>
+<section class="section">
+  <span class="mono mono--red">Bằng chứng chi tiết · 15 năng lực</span>
+  <h2 class="h2" style="margin:14px 0 16px">${COMPETENCIES.length} năng lực, <em>mỗi cái bốn mức.</em></h2>
   <p class="lede" style="max-width:64ch">Mức chỉ lên từ chính bài bạn nộp — quiz, bài tính số, case có bấm giờ — không phải từ việc bạn bấm “đã học”.</p>
   <div class="scroll" style="margin-top:20px"><table class="t"><thead><tr><th>Mức</th><th>Cần có bằng chứng gì</th></tr></thead><tbody>
     <tr><td>1 · ${COMP_LEVELS[1]}</td><td>Đúng ít nhất một câu quiz hoặc bài tính số thuộc năng lực.</td></tr>
@@ -58,6 +99,7 @@ document.getElementById('app').innerHTML=`
         ${nk?`<a class="small" href="bai.html?id=${encodeURIComponent(nk)}">Bài nên học →</a>`:''}</div></div>
     </div>`}).join('')}
 </section>`;
+document.getElementById('goalSel').onchange=e=>{ S.set({goal:e.target.value}); location.reload(); };
 </script>
 </body>
 </html>

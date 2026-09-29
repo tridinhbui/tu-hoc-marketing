@@ -3,24 +3,26 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=1">
+<link rel="stylesheet" href="assets/css/case.css?v=2">
 <title>Bài học — Tự Học Marketing Case</title>
 <meta name="description" content="Một bài học 6 phút: bài đọc, bài tập tính số, nói ra trong 60 giây, case và ôn lỗi.">
 <style>
-  .q{border-top:var(--rule);padding:16px 0}
-  .q__stem{font-weight:600;margin:4px 0 10px}
-  .opt{display:block;width:100%;text-align:left;border:1px solid var(--ink-12);background:transparent;border-radius:6px;
-    padding:11px 14px;margin:7px 0;cursor:pointer;font:inherit;color:inherit}
-  .opt:hover:not([disabled]){border-color:var(--ink-30)}
-  .opt[data-r="right"]{border-color:var(--ok);background:rgba(92,107,30,.07)}
-  .opt[data-r="wrong"]{border-color:var(--red);background:var(--red-06)}
-  .opt[data-r="picked"]{border-color:var(--ink)}
+  /* Mỗi câu hỏi là một khoảnh khắc ra quyết định: nền giấy, phương án to, trạng thái rõ. */
+  .q{background:var(--paper);border-radius:14px;padding:18px 20px;margin:14px 0}
+  .q__stem{font-family:var(--serif);font-size:1.15rem;line-height:1.4;font-weight:500;margin:4px 0 12px}
+  .opt{display:block;width:100%;text-align:left;border:1.5px solid var(--ink-12);background:var(--bg);border-radius:10px;
+    padding:12px 15px;margin:8px 0;cursor:pointer;font:inherit;color:inherit;transition:border-color .15s}
+  .opt:hover:not([disabled]){border-color:var(--terra)}
+  .opt[data-r="right"]{border-color:var(--olive);background:var(--olive-bg)}
+  .opt[data-r="wrong"]{border-color:var(--bad);background:rgba(176,48,28,.08)}
+  .opt[data-r="picked"]{border-color:var(--terra);background:var(--terra-06)}
   .opt[disabled]{cursor:default}
-  .why{font-size:14px;line-height:1.6;margin:2px 0 8px 14px;padding-left:12px;border-left:2px solid var(--ink-12)}
-  .why--right{border-left-color:var(--ok)} .why--wrong{border-left-color:var(--red)}
-  .gate{border:1px dashed var(--ink-30);border-radius:6px;padding:16px;margin:18px 0}
-  .locked{opacity:.45;pointer-events:none;user-select:none}
-  .state{font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:3px 8px;border:1px solid currentColor;border-radius:3px}
+  .why{font-size:14.5px;line-height:1.6;margin:2px 0 10px 14px;padding-left:12px;border-left:3px solid var(--ink-12)}
+  .why--right{border-left-color:var(--olive)} .why--wrong{border-left-color:var(--bad)}
+  .gate{background:var(--gold-06);border-radius:14px;padding:6px 18px 10px;margin:22px 0}
+  .gate .q{background:var(--paper)}
+  .locked{opacity:.4;pointer-events:none;user-select:none;filter:blur(1.5px)}
+  .state{font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--ink-06)}
 </style>
 </head>
 <body>
@@ -28,11 +30,12 @@
 <main class="wrap narrow" id="app"></main>
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
-<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/curriculum.js?v=2"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/cases.js?v=2"></script>
 <script src="assets/js/data/exam-items.js?v=6"></script>
 <script src="assets/js/data/exams.js?v=6"></script>
-<script src="assets/js/app.js?v=9"></script>
+<script src="assets/js/app.js?v=10"></script>
 <script src="assets/js/exam.js?v=5"></script>
 <script>
 appShell('');
@@ -230,6 +233,7 @@ function render(){
     </div>
     <h1 class="h1" style="margin:18px 0 12px">${escH(M.t)}</h1>
     <div class="row" id="stRow"><span class="tag">${escH(M.read)}</span>${D?'<span class="tag">Có bài tính số</span>':''}${stateTag(s)}</div>
+    ${journeyHTML(s,{compact:true})}
   </section>
   ${PLAN.pre?P(1,'Đoán trước khi đọc',`<p class="small muted">Không tính điểm. Đoán sai cũng được — đoán trước rồi mới đọc thì nhớ lâu hơn.</p>${qHTML(PLAN.pre,'pre')}`):''}
   ${P(PLAN.pre?2:1,'Bài đọc',`${readPart(1)}
@@ -240,7 +244,7 @@ function render(){
   ${P((PLAN.pre?4:3),'Tự nhớ lại 60 giây',recallPart())}
   <div id="quizPart">${P((PLAN.pre?5:4),'Quiz cuối bài',quizPart())}</div>
   ${solidPart()}
-  ${P((PLAN.pre?6:5),'Nói ra trong 60 giây',talkPart())}
+  <div id="talk">${P((PLAN.pre?6:5),'Áp dụng ngay · nói ra trong 60 giây',talkPart())}</div>
   ${P((PLAN.pre?7:6),'Case',casePart())}
   ${P((PLAN.pre?8:7),'Ôn lỗi',reviewPart())}
   <section class="part row between">
@@ -249,6 +253,33 @@ function render(){
     ${next?`<a class="mono" href="bai.html?id=${encodeURIComponent(next)}">Bài sau →</a>`:'<span></span>'}
   </section>`;
   wire();
+}
+
+/* Vòng hoàn thành: XP → kỹ năng → mở khoá → việc tiếp theo. Sai thì không phải ngõ cụt:
+   nói rõ yếu ở đâu và cho đường luyện lại. */
+function completeHTML({rec,right,wrong,sk,skBefore,jBefore,before,nx}){
+  const s=S.get(), pass=rec.state!=='learned', xp=s.xp-before.xp, skAfter=sk?skillPct(sk,s):0;
+  const jAfter=journeyState(s), opened=jAfter.find((j,i)=>j.st==='done'&&jBefore[i].st!=='done');
+  const mod=W&&W.mod, modDone=mod&&mod.lessons.every(k=>lessonState(k,s));
+  const unlock=opened?`Xong bước ${opened.t}`:modDone?`Mở luyện cuối module ${mod.t}`:null;
+  const idea=M.kind==='L'?M.src.idea:M.src.one;
+  const nextHref=nx?'bai.html?id='+encodeURIComponent(nx):'hoc.html';
+  return `<div class="complete ${pass?'':'complete--fail'}">
+    <span class="eyebrow ${pass?'eyebrow--gold':'eyebrow--terra'}">${pass?'Hoàn thành':'Đã học — chưa vững'} · ${right}/${PLAN.quiz.length} đúng</span>
+    <div class="complete__grid">
+      <div class="complete__xp"><span>XP</span><b>+${xp}</b></div>
+      ${sk?`<div><span>${escH(sk.t)}</span><b class="${skAfter>skBefore?'up':''}">${skBefore}% → ${skAfter}%</b></div>`:''}
+      <div><span>Trạng thái</span><b>${{learned:'Đã học',passed:'Đạt',solid:'Vững'}[rec.state]}</b></div>
+      ${unlock?`<div><span>Mở khoá</span><b>${escH(unlock)}</b></div>`:''}
+    </div>
+    ${idea?`<div class="sticky"><span class="eyebrow">Mang theo một câu</span>${idea}</div>`:''}
+    ${wrong.length?`<p class="small" style="margin:0">Bạn đang hổng ở <b>${escH((skillOfLesson((wrong[0].teaches||[])[0])||sk||{t:'khái niệm của bài'}).t)}</b>: ${wrong.length} câu sai đã vào hàng ôn ngày mai.${pass?'':' Điểm lần đầu giữ nguyên; ôn đúng sau vài ngày để lên Vững.'}</p>`:''}
+    <div class="row">
+      ${wrong.length&&!pass?`<a class="btn btn--primary" href="on-loi.html">Luyện lại ${wrong.length} câu sai →</a><a class="btn btn--ghost" href="#talk">Áp dụng: nói 60 giây</a>`
+        :`<a class="btn btn--primary" href="#talk">Áp dụng ngay: nói 60 giây →</a>${modDone&&mod?`<a class="btn btn--gold" href="luyen.html?mod=${mod.id}">Luyện cuối module</a>`:''}`}
+      <a class="btn btn--quiet" href="${nextHref}">${nx?'Bài tiếp theo':'Về trang Hôm nay'} →</a>
+    </div>
+  </div>`;
 }
 
 const logged=new Set();
@@ -330,17 +361,17 @@ function wireQuestions(){
   /* nộp quiz: chấm một lần, lưu điểm lần đầu, rồi mới hiện lời giải */
   const sb=document.getElementById('qSubmit');
   if(sb) sb.onclick=()=>{
-    let right=0;
-    PLAN.quiz.forEach((it,i)=>{ const id='qz'+i; const g=reveal(id,it,ANS[id]); if(g.ok) right++; logMiss(it,g); });
+    const before=S.get(), sk=skillOfLesson(key), skBefore=sk?skillPct(sk,before):0, jBefore=journeyState(before);
+    let right=0; const wrong=[];
+    PLAN.quiz.forEach((it,i)=>{ const id='qz'+i; const g=reveal(id,it,ANS[id]); if(g.ok) right++; else wrong.push(it); logMiss(it,g); });
     const rec=completeLesson(key,right,PLAN.quiz.length);
     sb.remove();
-    document.getElementById('quizBox').insertAdjacentHTML('beforeend',`<div class="verdict" data-v="${rec.state==='passed'?'ok':'bad'}" style="margin-top:16px">
-      <b>${right}/${PLAN.quiz.length} · ${rec.state==='passed'?'Đạt':'Đã học, chưa vững'}.</b>
-      ${rec.state==='passed'?'Bài đã hoàn thành.':'Câu sai đã vào hàng ôn ngày mai. Lên Đạt bằng cách ôn lại sau vài ngày — điểm lần đầu giữ nguyên.'}</div>`);
     const s=S.get(); document.querySelector('#stRow .state')?.remove();
     document.getElementById('stRow').insertAdjacentHTML('beforeend',stateTag(s));
     const order=ALL.map(x=>x.key), nx=order[order.indexOf(key)+1];
     document.getElementById('nextBtn').innerHTML=nextBtn(s,nx);
+    document.getElementById('quizBox').insertAdjacentHTML('beforeend',completeHTML({rec,right,wrong,sk,skBefore,jBefore,before,nx}));
+    document.querySelector('.complete').scrollIntoView({behavior:'smooth',block:'center'});
   };
   const nq=document.getElementById('noQuizDone');
   if(nq) nq.onclick=()=>{ completeLesson(key,0,0); render(); };

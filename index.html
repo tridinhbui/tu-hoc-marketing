@@ -9,7 +9,7 @@
 <meta property="og:description" content="Bài học 6 phút, quiz có lời giải, thi vượt chặng, ôn lỗi theo lịch. Miễn phí vĩnh viễn.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
-<link rel="stylesheet" href="assets/css/case.css?v=1">
+<link rel="stylesheet" href="assets/css/case.css?v=2">
 <style>
   /* trang chủ rộng hơn trang đọc bài: hai cột hero cần chỗ */
   .wrap{max-width:1240px}
@@ -24,7 +24,7 @@
   /* ---- header ---- */
   .hd{border-bottom:var(--rule);background:var(--bg);position:sticky;top:0;z-index:20}
   .hd__in{display:flex;align-items:center;gap:18px;padding-top:14px;padding-bottom:14px}
-  .hd__tag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ink-50);border-left:var(--rule);padding-left:14px}
+  .hd__tag{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.14em;color:var(--ink-50);border-left:var(--rule);padding-left:14px}
   .hd__right{margin-left:auto;display:flex;align-items:center;gap:16px}
   .hd__login{font-size:14.5px;font-weight:500;text-decoration:none;color:var(--ink)}
   .hd__login:hover{text-decoration:underline}
@@ -33,7 +33,7 @@
   /* ---- hero ---- */
   .hero{display:grid;gap:clamp(28px,4vw,56px);padding:clamp(34px,6vw,76px) 0 clamp(30px,4vw,56px)}
   @media(min-width:1040px){.hero{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:start}}
-  .eyebrow{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--ink-50)}
+  .eyebrow{display:flex;align-items:center;gap:12px;font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.16em;color:var(--ink-50)}
   .eyebrow::after{content:"";flex:1;border-top:var(--rule)}
   .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,5.4vw,4.4rem);line-height:1.02;letter-spacing:-.022em;margin:22px 0 20px}
   .hero h1 em{font-style:italic;color:var(--red)}
@@ -43,15 +43,15 @@
   .cta__note{font-size:13px;color:var(--ink-50);margin-top:12px}
 
   .stats{margin-top:34px;max-width:430px}
-  .stats__h{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--ink-50);padding-bottom:8px;border-bottom:var(--rule)}
+  .stats__h{display:flex;justify-content:space-between;font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.12em;color:var(--ink-50);padding-bottom:8px;border-bottom:var(--rule)}
   .stats__h .live::before{content:"";display:inline-block;width:7px;height:7px;background:var(--red);margin-right:7px;vertical-align:1px}
   .stat{display:grid;grid-template-columns:34px 1fr auto;align-items:baseline;padding:12px 0;border-bottom:var(--rule)}
-  .stat i{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--ink-30)}
-  .stat b{font-family:var(--mono);font-size:19px;font-weight:500}
+  .stat i{font-style:normal;font-family:var(--sans);font-weight:600;font-size:11px;color:var(--ink-30)}
+  .stat b{font-family:var(--sans);font-weight:600;font-size:19px;font-weight:500}
 
   /* ---- khung xem thử ---- */
   .pv{border:1px solid var(--ink-30);background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(43,26,17,.35)}
-  .pv__tabs{display:flex;border-bottom:var(--rule);background:var(--bg-2);font-family:var(--mono);font-size:11px;letter-spacing:.06em}
+  .pv__tabs{display:flex;border-bottom:var(--rule);background:var(--bg-2);font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.06em}
   .pv__tabs span{padding:11px 16px;border-right:var(--rule);color:var(--ink-50)}
   .pv__tabs span[data-on]{background:#fff;color:var(--ink);box-shadow:inset 0 2px 0 var(--red)}
   .pv__tabs em{margin-left:auto;padding:11px 14px;font-style:normal;color:var(--red)}
@@ -64,12 +64,12 @@
   .pv__side section:last-child{border-bottom:0}
   .crumb{font-size:12px;color:var(--ink-50)} .crumb::before{content:"";display:inline-block;width:7px;height:7px;background:var(--red);margin-right:7px}
   .pv h2{font-family:var(--serif);font-size:23px;line-height:1.15;margin:10px 0 14px;font-weight:500}
-  .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--ink-50);text-transform:uppercase}
+  .lbl{font-family:var(--sans);font-weight:600;font-size:10.5px;letter-spacing:.14em;color:var(--ink-50);text-transform:uppercase}
   .ex{width:100%;border-collapse:collapse;margin:10px 0 0;font-size:14px}
-  .ex td{padding:8px 10px;border-bottom:var(--rule)} .ex td:last-child{text-align:right;font-family:var(--mono)}
+  .ex td{padding:8px 10px;border-bottom:var(--rule)} .ex td:last-child{text-align:right;font-family:var(--sans);font-weight:600}
   .kv{display:grid;grid-template-columns:repeat(3,1fr);margin-top:14px;border-top:var(--rule);border-bottom:var(--rule)}
   .kv div{padding:10px 12px;border-left:var(--rule)} .kv div:first-child{border-left:0}
-  .kv b{display:block;font-family:var(--mono);font-size:15px;font-weight:500;margin-top:4px}
+  .kv b{display:block;font-family:var(--sans);font-weight:600;font-size:15px;font-weight:500;margin-top:4px}
   .kv .hl{color:var(--red)}
   .qo{display:block;width:100%;text-align:left;border:1px solid var(--ink-12);background:transparent;border-radius:4px;padding:9px 11px;margin-top:7px;font-size:13.5px;cursor:pointer}
   .qo:hover:not([disabled]){border-color:var(--ink-30)}
@@ -77,10 +77,14 @@
   .qo[data-r="wrong"]{border-color:var(--red);background:var(--red-06);text-decoration:line-through;color:var(--ink-50)}
   .qwhy{font-size:12.5px;line-height:1.5;color:var(--ink-70);margin-top:8px}
   .meter{height:3px;background:var(--ink-06);margin-top:8px} .meter i{display:block;height:100%;background:var(--red)}
-  .term{background:#1E120C;color:#E9DCCB;font-family:var(--mono);font-size:12.5px;line-height:1.9;padding:14px 18px}
-  .term .p{color:#B9A58F} .term .ok{color:#E8A468}
+  .term{background:#3A2418;color:#FAF3E7;font-size:14px;line-height:1.55;padding:16px 18px;display:grid;gap:10px}
+  .term .p{color:rgba(250,243,231,.78)} .term .ok{color:#E8B83A}
+  .snap__h{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#E8B83A}
+  .snap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .snap span{display:block;font-size:11.5px;color:rgba(250,243,231,.65)} .snap b{font-family:var(--serif);font-weight:500;font-size:1.35rem}
+  @media(max-width:560px){.snap{grid-template-columns:1fr 1fr}}
   .pv__foot{display:flex;flex-wrap:wrap;gap:16px;padding:9px 14px;border-top:var(--rule);background:var(--bg-2);font-size:12px;color:var(--ink-50)}
-  .pv__foot b{color:var(--ink);font-weight:500} .pv__foot span:last-child{margin-left:auto;font-family:var(--mono)}
+  .pv__foot b{color:var(--ink);font-weight:500} .pv__foot span:last-child{margin-left:auto;font-family:var(--sans);font-weight:600}
 
   /* ---- dưới hero ---- */
   .stages{display:grid;gap:0;border-top:1px solid var(--ink)}
@@ -108,22 +112,21 @@
 
 <header class="hd"><div class="wrap hd__in">
   <a class="logo" href="index.html"><b>Tự Học</b> Marketing Case<span>MIỄN PHÍ</span></a>
-  <span class="hd__tag">THMC · VIỆT NAM</span>
+  <span class="hd__tag">Studio luyện marketing · Việt Nam</span>
   <div class="hd__right">
     <a class="hd__login" id="hdLogin" href="tai-khoan.html?next=hoc.html">Đăng nhập</a>
-    <a class="btn" id="hdGo" href="hoc.html">Vào học ngay →</a>
+    <a class="btn btn--primary" id="hdGo" href="hoc.html">Vào học ngay →</a>
   </div>
 </div></header>
 
 <main class="wrap" id="main">
   <section class="hero">
     <div>
-      <div class="eyebrow">THMC://TRANG-CHU</div>
-      <p class="lbl" style="margin-top:20px">Tư duy marketing có cấu trúc · case thật của thương hiệu Việt</p>
+      <p class="lbl">Quan sát → hiểu khách → ra quyết định → đo kết quả · case thật của thương hiệu Việt</p>
       <h1>Học marketing bằng case thật, <em>bắt đầu từ con&nbsp;số&nbsp;0.</em></h1>
       <p class="hero__sub" id="sub"></p>
       <div class="cta">
-        <a class="btn" id="goMain" href="hoc.html">Bắt đầu học miễn phí →</a>
+        <a class="btn btn--primary btn--lg" id="goMain" href="hoc.html">Bắt đầu học miễn phí →</a>
         <a class="btn btn--ghost" href="bai.html?id=L%3A65">▶ Xem thử bài học</a>
       </div>
       <p class="cta__note" id="ctaNote"></p>
@@ -136,7 +139,7 @@
 
     <!-- Khung xem thử: nội dung thật lấy từ kho, quiz bấm được — trước khi phải đăng nhập -->
     <div class="pv" aria-label="Xem thử một bài học">
-      <div class="pv__tabs"><span data-on>BAI-65 · HIEU-SUAT.MD</span><span>QUIZ</span><span>GHI-CHU.MD</span><em>+10 XP</em></div>
+      <div class="pv__tabs"><span data-on>Tình huống · Bài 65</span><span>Quyết định</span><span>Sổ tay</span><em>+10 XP</em></div>
       <div class="pv__grid">
         <div class="pv__main" id="pvMain"></div>
         <div class="pv__side" id="pvSide"></div>
@@ -147,7 +150,9 @@
   </section>
 
   <section>
-    <div class="eyebrow">LỘ TRÌNH · 6 CHẶNG</div>
+    <div class="eyebrow">Hành trình · 9 bước của một marketer</div>
+    <h2 class="h2" style="margin:10px 0 4px">Không học theo chương. <em>Học theo việc marketer làm thật.</em></h2>
+    <div id="journeyL"></div>
     <div class="stages" id="stages" style="margin-top:18px"></div>
   </section>
 
@@ -169,11 +174,11 @@
 
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
-<script src="assets/js/data/curriculum.js?v=1"></script>
+<script src="assets/js/data/curriculum.js?v=2"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
 <script src="assets/js/data/exam-items.js?v=6"></script>
-<script src="assets/js/app.js?v=9"></script>
+<script src="assets/js/app.js?v=10"></script>
 <script>
 /* Mọi con số trên trang tính từ dữ liệu — không có số nào gõ tay. */
 const nLessons = ALL.length, nItems = EXAM_ITEMS.length, nCases = (typeof CASES !== 'undefined' ? CASES.length : 0);
@@ -225,14 +230,14 @@ document.querySelectorAll('.qo').forEach(b => b.onclick = () => {
     x.dataset.r = Q.opts.find(o => o[0] === x.dataset.k)[2] ? 'right' : (x === b ? 'wrong' : ''); });
   const w = $('qwhy'); w.hidden = false; w.textContent = Q.why;
 });
-$('term').innerHTML = `<div class="p">$ thmc chay bai-65 --roas=4 --bien=30%</div>
-  <div><span class="ok">+</span> Lãi gộp: 200 × 30% = 60 triệu</div>
-  <div><span class="ok">+</span> Trừ quảng cáo: 60 − 50 = <span class="ok">10 triệu</span></div>
-  <div><span class="p">·</span> Coi 150 triệu là lãi → mã lỗi ROAS_LA_LOI_NHUAN, hẹn ôn ngày mai</div>
-  <div class="p">exit 0</div>`;
-const tick = () => { $('clock').textContent = 'STATUS OK  ' + new Date().toLocaleString('sv-SE').slice(0, 16); };
-tick(); setInterval(tick, 30000);
+$('term').innerHTML = `<div class="snap__h">Kết quả chiến dịch · tháng 6</div>
+  <div class="snap"><div><span>Doanh thu</span><b>200 tr</b></div><div><span>Chi quảng cáo</span><b>50 tr</b></div>
+  <div><span>ROAS</span><b>4,0</b></div><div><span>Lãi sau quảng cáo</span><b class="ok">10 tr</b></div></div>
+  <div class="p">Tưởng lãi 150 triệu? Đó là lỗi <b>ROAS ≠ lợi nhuận</b> — bài 65 sửa đúng chỗ này, rồi hẹn bạn ôn lại ngày mai.</div>`;
+$('clock').textContent = '';
 
+/* ---- hành trình 9 bước ---- */
+$('journeyL').innerHTML = `<ol class="journey">${JOURNEY.map((j,i)=>`<li data-st="${i===0?'now':'open'}"><span class="journey__n">${i+1}</span><span class="journey__t">${j.t}</span><span class="journey__en">${j.en}</span></li>`).join('')}</ol>`;
 /* ---- lộ trình ---- */
 $('stages').innerHTML = STAGES.map(st => {
   const n = st.mods.reduce((k, m) => k + m.lessons.length, 0);
@@ -279,7 +284,7 @@ account().then(async (u) => {
     $('hdLogin').hidden = true; $('barLogin').hidden = true; $('join').hidden = true;
     $('ctaNote').textContent = 'Tiến độ lưu trong trình duyệt này.';
   }
-  if (!u && started) $('goMain').textContent = 'Đăng nhập để giữ tiến độ →';
+  if (!u && started) $('goMain').textContent = API.on ? 'Đăng nhập để giữ tiến độ →' : 'Tiếp tục hành trình →';
 
   /* số người học thật — chỉ khi máy chủ trả về */
   if (API.on) try {
