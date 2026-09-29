@@ -19,7 +19,7 @@
   --amber:#D9A21B; --amber-bg:#F7E6B5; --amber-bd:#EACB78; --amber-tx:#7A5704; --amber-tx2:#9A6F06; --amber-card:#FDF4DC;
   --sky-bg:#F3E6D2; --sky-bd:#EADAC0; --sky-tx:#5E4637;
   --red:#B0301C; --ok:#6B7A2A; --ok-bg:rgba(107,122,42,.12); --ok-bd:rgba(107,122,42,.3);
-  --rw:340px;
+  --rw:360px;
   --f:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   --serif:'Fraunces',Georgia,serif;
 }
@@ -219,7 +219,7 @@ svg.i{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-widt
 .practice b{flex:1;font-size:14.5px;font-weight:800;line-height:1.35}
 .next{display:flex;align-items:center;gap:12px;padding:16px 18px;background:var(--card2);border:1px solid var(--line);border-radius:24px}
 .troph{display:grid;place-items:center;width:40px;height:40px;border-radius:14px;background:var(--amber-bg);border:1px solid var(--amber-bd);color:#b45309;flex:none}
-.next span{flex:1;min-width:0}.next small{display:block;font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--ink3)}
+.next>span:not(.troph){flex:1;min-width:0}.next small{display:block;font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--ink3)}
 .next strong{display:block;font-size:12px;font-weight:800;text-transform:uppercase;line-height:1.35}
 .next a{font-size:12px;font-weight:800;border:1px solid var(--line);background:#fff;border-radius:12px;padding:7px 10px;white-space:nowrap;display:inline-flex;gap:6px;align-items:center}
 .comm{padding:16px;border-radius:16px}
@@ -242,6 +242,43 @@ svg.i{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-widt
   .tab{flex-direction:column;gap:4px;padding:10px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------- đồng bộ với landing (case.css): tiêu đề Fraunces, nút bo 10px, chữ đậm vừa phải ---------- */
+.side__logo{font-family:var(--serif);font-weight:500;font-size:17px;letter-spacing:-.01em}
+.hero__t,.stage__t h3,.rc h4,.practice b,.dq{font-family:var(--serif);font-weight:500;letter-spacing:-.015em}
+.hero__t{font-size:clamp(1.3rem,2.2vw,1.75rem);line-height:1.2}
+.stage__t h3{font-size:18px}
+.btn,.submit{border-radius:10px;font-weight:600;font-size:13px}
+.tab{font-weight:600}
+.cardx,.stage,.hero,.practice,.next,.mist{border-radius:18px}
+
+/* ---------- cột phải: chống chữ đè ảnh / bị bóp hẹp ---------- */
+.rc>*{min-width:0}
+.rc h4{font-size:17px;line-height:1.25}
+/* sổ tay: ảnh chỉ nằm nửa phải, chữ giới hạn ở nửa trái có nền đặc */
+.notes{min-height:128px}
+.notes img{width:44%;opacity:.95}
+.notes::before{background:linear-gradient(90deg,var(--card) 56%,rgba(255,251,244,.6) 72%,transparent 100%)}
+.notes>div{max-width:62%}
+.notes .nb{display:none}
+/* thử thách mỗi ngày: nút gọn thành icon, hình trang trí nằm dưới nội dung */
+.daily__h{align-items:flex-start}
+.daily__h .nb{width:36px;height:36px;border-radius:12px;flex:none}
+.daily__h h4{min-width:0;padding-top:4px}
+.daily__h .ibtn{flex:none}
+#dtog{font-size:0;gap:0}
+.daily>*{position:relative;z-index:1}
+.daily .deco{z-index:0;opacity:.45;width:96px;height:84px}
+/* luyện tập không giới hạn */
+.practice{min-height:76px;gap:12px}
+.practice .im{width:84px}
+.practice b{font-size:15px}
+.practice>svg{flex:none}
+/* thử thách tiếp theo: xếp dọc để tên case không bị ép thành cột chữ */
+.next{flex-wrap:wrap;align-items:flex-start}
+.next>span:not(.troph){flex:1 1 calc(100% - 52px)}
+.next strong{text-transform:none;font-family:var(--serif);font-weight:500;font-size:15px;margin-top:2px}
+.next a{margin-left:52px}
 </style>
 </head>
 <body>
@@ -552,7 +589,7 @@ async function loadCommunity(u){
 /* ---------------- cột phải kéo giãn ---------------- */
 function wireResize(){
   const grid=document.getElementById('grid'), rez=document.getElementById('rez'), KEY='thmc:rw';
-  const set=w=>{ w=Math.max(280,Math.min(520,Math.round(w))); grid.style.setProperty('--rw',w+'px'); try{localStorage.setItem(KEY,w);}catch(e){} return w; };
+  const set=w=>{ w=Math.max(320,Math.min(520,Math.round(w))); grid.style.setProperty('--rw',w+'px'); try{localStorage.setItem(KEY,w);}catch(e){} return w; };
   let w=+(localStorage.getItem(KEY)||340); set(w);
   rez.onpointerdown=e=>{ rez.setPointerCapture(e.pointerId); rez.dataset.drag=1; const x0=e.clientX, w0=w;
     rez.onpointermove=ev=>{ w=set(w0-(ev.clientX-x0)); }; rez.onpointerup=()=>{ delete rez.dataset.drag; rez.onpointermove=null; }; };
