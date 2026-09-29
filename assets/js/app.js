@@ -231,6 +231,7 @@ const APP_NAV=[
   {g:'Luyện',items:[['bolt','Quiz 60 giây','quiz.html'],['redo','Ôn lỗi','on-loi.html','due'],['stack','Luyện cuối module','luyen.html'],['flag','Thi vượt chặng','thi.html']]},
   {g:'Áp dụng',items:[['brief','Case có bấm giờ','case-thu-vien.html'],['mic','Phỏng vấn mô phỏng','phong-van.html'],['chess','Trò chơi điều hành','tro-choi.html']]},
   {g:'Tiến bộ',items:[['radar','Kỹ năng & nghề','nang-luc.html'],['trophy','Bảng xếp hạng','bang-xep-hang.html'],['people','Cộng đồng','cong-dong.html'],['gift','Rương thưởng','ruong.html']]},
+  {g:'Vương quốc',items:[['castle','Vương quốc','kingdom.html'],['sword','World Boss','boss.html'],['shield','Đấu trường','pvp.html'],['shop','Chợ','shop.html']]},
 ];
 const APP_ICON={
   home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>', path:'<circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 000-6H9a3 3 0 010-6h6.5"/>',
@@ -243,6 +244,10 @@ const APP_ICON={
   people:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0"/><path d="M16 4.5a3.5 3.5 0 010 7M18 20a6 6 0 00-2.5-4.9"/>',
   gift:'<rect x="3" y="8" width="18" height="13" rx="2"/><path d="M3 12h18M12 8v13M12 8S10 3 7.5 4 8 8 12 8zm0 0s2-5 4.5-4S16 8 12 8z"/>',
   menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',
+  castle:'<path d="M4 21V9l3 2V7l3 2V5l2-2 2 2v4l3-2v4l3-2v12z"/><path d="M10 21v-5h4v5"/>',
+  sword:'<path d="M14.5 3H21v6.5L10 20.5 3.5 14z"/><path d="M5 19l-2 2M7.5 16.5l-3-3"/>',
+  shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',
+  shop:'<path d="M4 9l1.5-5h13L20 9"/><path d="M4 9h16v11H4z"/><path d="M9 20v-6h6v6"/>',
 };
 const appIc=n=>`<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${APP_ICON[n]||''}</svg>`;
 function applyTheme(s=S.get()){

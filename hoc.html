@@ -12,14 +12,14 @@
 <main class="wrap" id="app"></main>
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
-<script src="assets/js/data/curriculum.js?v=2"></script>
+<script src="assets/js/data/curriculum.js?v=3"></script>
 <script src="assets/js/data/bai-index.js?v=2"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
 <script src="assets/js/data/rewards.js?v=1"></script>
 <script src="assets/js/data/exam-items.js?v=7"></script>
 <script src="assets/js/data/exams.js?v=7"></script>
-<script src="assets/js/app.js?v=13"></script>
+<script src="assets/js/app.js?v=14"></script>
 <script src="assets/js/exam.js?v=5"></script>
 <script>
 appShell('hoc.html');
@@ -61,7 +61,7 @@ function onboarding(){
       <div class="brief">
         <div class="brief__row"><span>Mục tiêu</span><b>${escH(g.t)}</b></div>
         <div class="brief__row"><span>Lộ trình đề xuất</span><b>${escH(p.t)} · ${(p.lessons||ALL).length} bài</b></div>
-        <div class="brief__row"><span>Điểm bắt đầu</span><b>${skip?'Thử đề vượt chặng 01 — qua là bỏ được phần Quan sát':'Bước 1 · Quan sát'} <small>(${escH(lv.t)})</small></b></div>
+        <div class="brief__row"><span>Điểm bắt đầu</span><b>${skip?'Làm bài xếp lớp — app đặt bạn vào đúng bước, bỏ qua phần đã biết':'Bước 1 · Quan sát'} <small>(${escH(lv.t)})</small></b></div>
         <div class="brief__row"><span>Kỹ năng cần xây nhiều nhất</span><b>${gaps.map(x=>`${escH(x.t)} <small>cần ${x.need}%</small>`).join(' · ')}</b></div>
       </div>
       <div class="mission">
@@ -70,7 +70,7 @@ function onboarding(){
         <p class="small muted">${escH(fm.read)} đọc · một tình huống thật, một quyết định, một quiz ngắn · <span class="gold">+${XP.lesson} XP</span></p>
         <div class="row" style="margin-top:16px">
           <a class="btn btn--primary btn--lg" href="bai.html?id=${encodeURIComponent(first)}" data-finish>Bắt đầu nhiệm vụ →</a>
-          ${skip?`<a class="btn btn--ghost" href="thi.html?stage=s1" data-finish>Thử đề vượt chặng 01</a>`:''}
+          ${skip?`<a class="btn btn--ghost" href="xep-lop.html" data-finish>Làm bài xếp lớp</a>`:''}
         </div>
       </div>
     </section>`;

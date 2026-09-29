@@ -104,8 +104,8 @@ const GOALS = [
 const START_LEVELS = [
   { id:0, t:'Chưa biết gì', d:'Bắt đầu từ bài đầu tiên của lộ trình.' },
   { id:1, t:'Đã học cơ bản', d:'Học lại nhanh theo lộ trình, bài nào nắm rồi thì làm quiz là qua.' },
-  { id:2, t:'Đã từng làm', d:'Thử đề vượt chặng 01 để bỏ qua phần nền tảng.' },
-  { id:3, t:'Đang đi làm', d:'Thử đề vượt chặng 01, rồi đi thẳng vào case có bấm giờ.' },
+  { id:2, t:'Đã từng làm', d:'Làm bài xếp lớp để bỏ qua phần đã biết.' },
+  { id:3, t:'Đang đi làm', d:'Làm bài xếp lớp, rồi đi thẳng vào case có bấm giờ.' },
 ];
 
 /* HÀNH TRÌNH 9 BƯỚC — xương sống của app. Nội dung hiện chia 6 chặng; mỗi module rơi vào đúng một bước. */
