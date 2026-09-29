@@ -274,8 +274,8 @@ html[data-theme="dark"] .rankcard{color:var(--ink)}
 .signal__after .ok{color:#C9D47E}.signal__after .bad{color:#F5A08E}
 .signal .btn--ghost{color:var(--bg);border-color:rgba(250,243,231,.4)}
 .skillup{background:var(--gold);color:#3A2418;font-weight:700;font-size:13px;padding:4px 11px;border-radius:99px}
-.sticky{background:var(--gold-bg);color:#3A2418;padding:14px 16px;border-radius:4px;transform:rotate(-.6deg);box-shadow:0 10px 18px -14px rgba(0,0,0,.5);font-family:var(--serif);font-size:15.5px;line-height:1.45;max-width:520px;display:grid;gap:4px;flex-basis:100%}
-.sticky .eyebrow{color:var(--gold-d)}
+.stickynote{background:var(--gold-bg);color:#3A2418;padding:14px 16px;border-radius:4px;transform:rotate(-.6deg);box-shadow:0 10px 18px -14px rgba(0,0,0,.5);font-family:var(--serif);font-size:15.5px;line-height:1.45;max-width:520px;display:grid;gap:4px;flex-basis:100%}
+.stickynote .eyebrow{color:var(--gold-d)}
 
 /* Tuần này */
 .week{padding:clamp(24px,4vw,44px) 0;display:grid;gap:12px}
@@ -322,3 +322,44 @@ html[data-theme="dark"] .rankcard{color:var(--ink)}
 .skilldet{display:grid;gap:18px;padding:6px 0 22px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .skilldet p{margin:4px 0 12px}
 .top .wrap{max-width:1320px}
+
+/* =====================================================================
+   SIDEBAR DỌC — khung app chung
+   ===================================================================== */
+body.has-side{padding-left:252px}
+.side{position:fixed;inset:0 auto 0 0;width:252px;background:var(--bg-2);display:flex;flex-direction:column;z-index:30;transition:transform .25s}
+.side__logo{display:flex;align-items:center;gap:11px;padding:20px 20px 14px;text-decoration:none;line-height:1.1}
+.side__logo i{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--terra);color:#fff;font-family:var(--serif);font-style:normal;font-size:19px}
+.side__logo span{font-family:var(--serif);font-size:1.05rem}
+.side__logo b{color:var(--terra);font-weight:600}
+.side__nav{flex:1;overflow:auto;padding:4px 12px 12px;display:flex;flex-direction:column;gap:2px}
+.side__g{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-50);padding:16px 12px 6px}
+.side__nav a{display:flex;align-items:center;gap:11px;padding:9px 12px;border-radius:10px;text-decoration:none;color:var(--ink-70);font-size:14.5px;font-weight:500}
+.side__nav a:hover{background:var(--ink-06);color:var(--ink)}
+.side__nav a[aria-current="page"]{background:var(--terra);color:#fff;font-weight:600;box-shadow:0 8px 18px -12px var(--terra)}
+.side__nav a em{margin-left:auto;font-style:normal;font-size:11px;font-weight:700;background:var(--terra);color:#fff;border-radius:99px;padding:1px 7px}
+.side__nav a[aria-current="page"] em{background:#fff;color:var(--terra)}
+.ic{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.side__foot{padding:12px 14px 16px;display:grid;gap:10px}
+.side__me{display:grid;gap:6px;background:var(--paper);border-radius:var(--r);padding:12px 14px;text-decoration:none}
+.side__rank{font-family:var(--serif);font-size:1.05rem;font-weight:500}
+.side__nums{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-70)}
+.side__nums .streak::before{content:'●';color:var(--terra);margin-right:5px;font-size:9px;vertical-align:2px}
+.side__me .meter i{background:var(--gold)}
+.side__me small{font-size:12px;color:var(--ink-50)}
+.side__acct{display:block;text-align:center;padding:9px 12px;border-radius:10px;text-decoration:none;font-size:14px;font-weight:600;background:var(--ink-06)}
+.side__veil{position:fixed;inset:0;background:rgba(30,18,12,.35);z-index:25}
+.mtop{display:none}
+body.has-side .top{display:none}
+body.has-side .foot{margin-left:0}
+@media(max-width:1023px){
+  body.has-side{padding-left:0}
+  .side{transform:translateX(-100%);box-shadow:none}
+  .side[data-open]{transform:none;box-shadow:0 0 60px rgba(0,0,0,.25)}
+  .mtop{display:flex;align-items:center;gap:12px;padding:10px 16px;background:color-mix(in srgb,var(--bg) 94%,transparent);position:sticky;top:0;z-index:20;border-bottom:1px solid var(--ink-06)}
+  .mtop button{border:0;background:var(--ink-06);border-radius:10px;padding:7px;display:grid;cursor:pointer}
+  .mtop .logo{font-size:1.1rem}
+  .mtop .xpchip{margin-left:auto}
+}
+@media print{.side,.mtop{display:none!important}body.has-side{padding-left:0}}
+@media(max-height:680px){.side__me .meter,.side__me small{display:none}.side__g{padding-top:10px}.side__nav a{padding:7px 12px}}

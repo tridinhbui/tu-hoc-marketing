@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23C4552D%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E7%27%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=2">
+<link rel="stylesheet" href="assets/css/case.css?v=3">
 <title>Hôm nay — Tự Học Marketing Case</title>
 <meta name="description" content="Bạn đang ở bước nào của hành trình, hôm nay làm ba việc gì, yếu ở đâu và sắp mở khoá gì.">
 </head>
@@ -18,7 +18,7 @@
 <script src="assets/js/data/rewards.js?v=1"></script>
 <script src="assets/js/data/exam-items.js?v=6"></script>
 <script src="assets/js/data/exams.js?v=6"></script>
-<script src="assets/js/app.js?v=10"></script>
+<script src="assets/js/app.js?v=11"></script>
 <script src="assets/js/exam.js?v=5"></script>
 <script>
 appShell('hoc.html');
@@ -105,7 +105,7 @@ function signalHTML(s){
     ${res?`<div class="signal__after">
       <span class="${res.ok?'ok':'bad'}">${res.ok?'Đúng — đọc được tín hiệu.':'Chưa đúng — câu này đã vào hàng ôn.'}</span>
       ${sk?`<span class="skillup">${escH(sk.t)}${res.ok?' ↑':' · cần luyện'}</span>`:''}
-      <div class="sticky"><span class="eyebrow">Thẻ insight</span>${escH(it.why[it.answer]||'')}</div>
+      <div class="stickynote"><span class="eyebrow">Thẻ insight</span>${escH(it.why[it.answer]||'')}</div>
       <a class="btn btn--ghost" href="${res.ok?'quiz.html':'on-loi.html'}">${res.ok?'Luyện tiếp 5 câu →':'Luyện lại chỗ sai →'}</a></div>`:''}
   </section>`;
 }

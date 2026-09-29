@@ -135,7 +135,7 @@ function award(kind,ref,times=1){
   award.last=got;
   if(got>0) scheduleSync();
   const after=level(s.xp);
-  const st=document.querySelector('.top__stat'); if(st) st.innerHTML=`<b class="xpchip">${fmt(s.xp)} XP</b><span class="streak">${s.streak}</span>`;
+  document.querySelectorAll('.xpchip').forEach(x=>x.textContent=`${fmt(s.xp)} XP`); document.querySelectorAll('.side .streak').forEach(x=>x.textContent=`${s.streak} ngày`);
   if(after.n>before) toast(`Lên cấp ${after.n} · ${after.name}`);
   else if(got>0) toast(`+${got} XP`);
   else if(XP_CAP[kind]&&want>0) toast('Đã đủ XP hôm nay cho mục này — vẫn học được, chỉ không cộng thêm.');
@@ -223,8 +223,26 @@ function parseNum(raw){
 const fmt=n=>Number(n).toLocaleString('vi-VN',{maximumFractionDigits:2});
 
 /* ---------------- shell ---------------- */
-const APP_NAV=[['Hôm nay','hoc.html'],['Hành trình','hoc-bai.html'],['Luyện','quiz.html'],['Case','case-thu-vien.html'],['Kỹ năng','nang-luc.html'],['Phỏng vấn','phong-van.html'],['Cộng đồng','cong-dong.html']];
-const APP_MORE=[['Ôn lỗi','on-loi.html'],['Luyện cuối module','luyen.html'],['Bắt đầu từ đâu','ban-do.html'],['Xếp hạng','bang-xep-hang.html'],['Rương thưởng','ruong.html'],['Trò chơi điều hành','tro-choi.html'],['Bàn làm việc','roadmap.html'],['Tạp chí Nhìn thấy','tap-chi.html']];
+/* Sidebar dọc theo vòng học: Hôm nay → Luyện → Áp dụng → Tiến bộ. Ít mục, nhóm rõ. */
+const APP_NAV=[
+  {items:[['home','Hôm nay','hoc.html'],['path','Hành trình','hoc-bai.html']]},
+  {g:'Luyện',items:[['bolt','Quiz 60 giây','quiz.html'],['redo','Ôn lỗi','on-loi.html','due'],['stack','Luyện cuối module','luyen.html'],['flag','Thi vượt chặng','thi.html']]},
+  {g:'Áp dụng',items:[['brief','Case có bấm giờ','case-thu-vien.html'],['mic','Phỏng vấn mô phỏng','phong-van.html'],['chess','Trò chơi điều hành','tro-choi.html']]},
+  {g:'Tiến bộ',items:[['radar','Kỹ năng & nghề','nang-luc.html'],['trophy','Bảng xếp hạng','bang-xep-hang.html'],['people','Cộng đồng','cong-dong.html'],['gift','Rương thưởng','ruong.html']]},
+];
+const APP_ICON={
+  home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>', path:'<circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 000-6H9a3 3 0 010-6h6.5"/>',
+  bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>', redo:'<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/>',
+  stack:'<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>', flag:'<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',
+  brief:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18"/>',
+  mic:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/>',
+  chess:'<path d="M8 21h8M9 17h6l1-6H8zM12 3v4M10 5h4"/>', radar:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 12l6-6"/>',
+  trophy:'<path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0z"/><path d="M17 5h3a3 3 0 01-3 4M7 5H4a3 3 0 003 4"/>',
+  people:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0"/><path d="M16 4.5a3.5 3.5 0 010 7M18 20a6 6 0 00-2.5-4.9"/>',
+  gift:'<rect x="3" y="8" width="18" height="13" rx="2"/><path d="M3 12h18M12 8v13M12 8S10 3 7.5 4 8 8 12 8zm0 0s2-5 4.5-4S16 8 12 8z"/>',
+  menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',
+};
+const appIc=n=>`<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${APP_ICON[n]||''}</svg>`;
 function applyTheme(s=S.get()){
   document.documentElement.dataset.theme=s.theme==='light'?'':s.theme;
   document.documentElement.style.setProperty('--read',(s.read||18)+'px');
@@ -232,25 +250,40 @@ function applyTheme(s=S.get()){
 function appShell(here){
   const s=S.get(); applyTheme(s); const lv=level(s.xp);
   const main=document.querySelector('main'); if(main&&!main.id) main.id='main';
+  const due=dueErrors(s).length, rk=typeof rank==='function'?rank(s):null;
+  const lvPct=lv.next?Math.round((s.xp-lv.cur)/(lv.next-lv.cur)*100):100;
+  document.body.classList.add('has-side');
   document.body.insertAdjacentHTML('afterbegin',`
     <a class="skip" href="#main">Tới nội dung chính</a>
-    <header class="top"><div class="wrap top__in">
-      <a class="logo" href="gioi-thieu.html"><b>Tự Học</b> Marketing Case<span>MIỄN PHÍ</span></a>
-      <nav class="nav" aria-label="Chính">${APP_NAV.map(([t,h])=>`<a href="${h}"${h===here?' aria-current="page"':''}>${t}</a>`).join('')}
-        <details class="more"><summary${APP_MORE.some(([,h])=>h===here)?' data-on':''}>Thêm</summary><div class="more__menu">${APP_MORE.map(([t,h])=>`<a href="${h}"${h===here?' aria-current="page"':''}>${t}</a>`).join('')}</div></details></nav>
-      <span class="top__stat" title="Cấp ${lv.n} · ${fmt(s.xp)} XP · chuỗi ${s.streak} ngày"><b class="xpchip">${fmt(s.xp)} XP</b><span class="streak">${s.streak}</span></span>
-      <a class="top__stat" id="acct" href="tai-khoan.html" style="text-decoration:none">Tài khoản</a>
-    </div></header>`);
+    <div class="mtop"><button type="button" id="sideBtn" aria-label="Mở menu" aria-controls="side">${appIc('menu')}</button>
+      <a class="logo" href="hoc.html"><b>Tự Học</b> Marketing</a><b class="xpchip">${fmt(s.xp)} XP</b></div>
+    <aside class="side" id="side" aria-label="Điều hướng">
+      <a class="side__logo" href="hoc.html"><i>M</i><span><b>Tự Học</b><br>Marketing Case</span></a>
+      <nav class="side__nav" aria-label="Chính">${APP_NAV.map(g=>`${g.g?`<span class="side__g">${g.g}</span>`:''}
+        ${g.items.map(([ic,t,h,badge])=>`<a href="${h}"${h===here?' aria-current="page"':''}>${appIc(ic)}<span>${t}</span>${badge==='due'&&due?`<em>${due}</em>`:''}</a>`).join('')}`).join('')}</nav>
+      <div class="side__foot">
+        <a class="side__me" href="nang-luc.html" title="Cấp ${lv.n} · ${escH(lv.name)}">
+          <span class="side__rank">${rk?escH(rk.t):'Cấp '+lv.n}</span>
+          <span class="side__nums"><b class="xpchip top__stat">${fmt(s.xp)} XP</b><span class="streak">${s.streak} ngày</span></span>
+          <span class="meter"><i style="width:${lvPct}%"></i></span>
+          <small>${lv.next?`${fmt(lv.next-s.xp)} XP nữa lên cấp ${lv.n+1}`:'Cấp cao nhất'}</small></a>
+        <a class="side__acct" id="acct" href="tai-khoan.html">Tài khoản</a>
+      </div>
+    </aside><div class="side__veil" id="sideVeil" hidden></div>`);
+  const side=document.getElementById('side'), veil=document.getElementById('sideVeil');
+  const toggle=on=>{ side.toggleAttribute('data-open',on); veil.hidden=!on; };
+  document.getElementById('sideBtn').onclick=()=>toggle(!side.hasAttribute('data-open'));
+  veil.onclick=()=>toggle(false);
   document.body.insertAdjacentHTML('beforeend',`
     <footer class="foot"><div class="wrap row between">
       <span>Tự Học Marketing Case · miễn phí. Mọi số liệu trong ví dụ là minh hoạ trừ khi ghi rõ nguồn.</span>
-      <span>Tiến độ lưu trong trình duyệt này, không gửi đi đâu.</span>
+      <span><a href="gioi-thieu.html">Giới thiệu</a> · <a href="tap-chi.html">Tạp chí Nhìn thấy</a> · <a href="roadmap.html">Bàn làm việc</a></span>
     </div></footer><div class="toast" id="toast" role="status" aria-live="polite"></div>`);
   account().then(u=>{ const a=document.getElementById('acct'); if(!a) return;
     a.textContent = u ? u.name : (API.on ? 'Đăng nhập' : 'Tài khoản');
     if(!u && API.on){                       // chưa đăng nhập: nút rõ ràng, quay lại đúng trang đang đọc
       const here=(location.pathname.split('/').pop()||'hoc.html')+location.search;
-      a.className='btn'; a.style.cssText='padding:7px 14px;font-size:13px;text-decoration:none';
+      a.className='btn btn--primary side__acct';
       if(!/^tai-khoan\.html/.test(here)) a.href='tai-khoan.html?next='+encodeURIComponent(here); }
     if(u){ syncNow(); mountAssistant(); } });
 }
