@@ -7,12 +7,12 @@
 
   // Tạo bằng: npx wrangler d1 create nhinthay — rồi dán database_id vào đây.
   "d1_databases": [
-    { "binding": "DB", "database_name": "nhinthay", "database_id": "<D1_DATABASE_ID>" }
+    { "binding": "DB", "database_name": "tuhocmarketing", "database_id": "cd589309-0509-4609-8fb0-30f359f5ddbb", "migrations_dir": "migrations" }
   ],
 
   // Tạo bằng: npx wrangler kv namespace create SESSIONS — phiên đăng nhập, link một lần, giới hạn tần suất.
   "kv_namespaces": [
-    { "binding": "SESSIONS", "id": "<KV_NAMESPACE_ID>" }
+    { "binding": "SESSIONS", "id": "b9d5ef9a81fd45f990215f4706198023" }
   ],
 
   // Gửi link đăng nhập. Tên miền của MAIL_FROM phải bật trước bằng:

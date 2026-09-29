@@ -14,6 +14,8 @@ import * as auth from './auth.js';
 import * as st from './state.js';
 import * as cm from './community.js';
 import * as ai from './ai.js';
+import * as pg from './progress.js';
+import * as google from './google.js';
 
 /* Chống CSRF: mọi request thay đổi dữ liệu phải mang header riêng.
    Trình duyệt không gửi header tuỳ ý sang origin khác nếu không có CORS — mà API này không bật CORS. */
@@ -33,6 +35,11 @@ async function route(request, env, url) {
   if (p === '/api/state' && m === 'GET') return st.getState(request, env);
   if (p === '/api/state' && m === 'PUT') return st.putState(request, env);
   if (p === '/api/leaderboard' && m === 'GET') return st.leaderboard(request, env);
+  if (p === '/api/me/stats' && m === 'GET') return pg.myStats(request, env);
+  if (p === '/api/quests/claim' && m === 'POST') return pg.claimQuest(request, env);
+  if (p === '/api/auth/google/start' && m === 'GET') return google.start(request, env);
+  if (p === '/api/auth/google/callback' && m === 'GET') return google.callback(request, env);
+  if (p === '/api/auth/providers' && m === 'GET') return json({ email: !!(env.EMAIL || env.DEV_SHOW_LINK === '1'), google: !!(env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET) });
 
   /* Số thật cho trang chủ. Chỉ đếm, không lộ ai; cache ngắn để trang chủ không gõ D1 mỗi lượt xem. */
   if (p === '/api/stats' && m === 'GET') {

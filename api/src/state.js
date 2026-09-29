@@ -1,6 +1,7 @@
 /* Đồng bộ tiến độ + bảng xếp hạng tuần.
    Server gộp bản gửi lên với bản đang lưu — không bao giờ ghi đè mù — rồi tính điểm tuần từ nhật ký. */
 import { json, now, currentUser, body, publicName } from './lib.js';
+import { syncLedger, weekXp } from './progress.js';
 
 const XP = { lesson: 20, drill: 15, talk: 10, review: 5, focus: 15, quiz: 2, case: 40, game: 30, daily: 10 };
 const WEEK_XP_CAP = 3000;   // chặn số ảo: một tuần học rất chăm cũng hiếm khi vượt mức này
@@ -99,6 +100,10 @@ export async function putState(req, env) {
   const text = JSON.stringify(merged);
   if (text.length > 400000) return json({ error: 'too_large' }, 413);
   const w = weekStats(merged), t = now();
+  /* Sổ cái phía server: XP tuần lấy từ xp_events đã kẹp luật, không lấy từ số trình duyệt tự cộng. */
+  const led = await syncLedger(env, u.id, merged);
+  w.xp = Math.min(weekXp(led.events, w.week), WEEK_XP_CAP);
+  w.streak = led.streak;
   await env.DB.batch([
     env.DB.prepare(`INSERT INTO user_state (user_id, state_json, updated_at) VALUES (?1, ?2, ?3)
       ON CONFLICT(user_id) DO UPDATE SET state_json = excluded.state_json, updated_at = excluded.updated_at`).bind(u.id, text, t),
@@ -106,7 +111,8 @@ export async function putState(req, env) {
       ON CONFLICT(user_id, week) DO UPDATE SET xp = excluded.xp, streak = excluded.streak, cases = excluded.cases, updated_at = excluded.updated_at`)
       .bind(u.id, w.week, w.xp, w.streak, w.cases, t),
   ]);
-  return json({ state: merged, updated_at: t, week: w });
+  const { events: _e, ...stats } = led;
+  return json({ state: merged, updated_at: t, week: w, stats });
 }
 
 export async function leaderboard(req, env) {

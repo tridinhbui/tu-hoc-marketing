@@ -4,3 +4,6 @@ DEV_SHOW_LINK=1
 APP_ORIGIN=http://localhost:8787
 ADMIN_EMAILS=admin@example.com
 # ANTHROPIC_API_KEY=sk-ant-...   (bỏ trống thì các tính năng AI trả 503 not_configured)
+# Đăng nhập Google (Google Cloud Console → APIs & Services → Credentials → OAuth client ID, loại Web application)
+# GOOGLE_CLIENT_ID=xxxx.apps.googleusercontent.com
+# GOOGLE_CLIENT_SECRET=...        (production: npx wrangler secret put GOOGLE_CLIENT_SECRET)

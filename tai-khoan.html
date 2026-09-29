@@ -15,12 +15,13 @@
 <script src="assets/js/data/curriculum.js?v=2"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
-<script src="assets/js/app.js?v=11"></script>
+<script src="assets/js/app.js?v=12"></script>
 <script>
 
 appShell('tai-khoan.html');
 const app=document.getElementById('app');
-const ERR={'het-han':'Link đã hết hạn hoặc đã được dùng. Xin link mới nhé.','link':'Link không hợp lệ.'};
+const ERR={'het-han':'Link đã hết hạn hoặc đã được dùng. Xin link mới nhé.','link':'Link không hợp lệ.',
+  'google':'Đăng nhập Google không thành công. Thử lại, hoặc dùng link qua email.','google-huy':'Bạn đã huỷ đăng nhập Google.'};
 async function render(){
   const u=await account();
   if(API.on===false){ app.innerHTML=NOAPI; return; }
@@ -32,19 +33,25 @@ async function render(){
     if(nx){ location.replace(nx); return; }
     toast('Đã đăng nhập'); history.replaceState(null,'','tai-khoan.html'); }
   if(!u){
+    let pv={email:true,google:false}; try{ pv=await api('/auth/providers'); }catch(e){}
     app.innerHTML=`<section class="section">
       <span class="mono mono--red">Tài khoản · miễn phí</span>
       <h1 class="h1" style="margin:14px 0 14px">Đăng nhập<br><em>không cần mật khẩu.</em></h1>
       <p class="lede">Nhập email, bấm link trong thư là vào. Đăng nhập để giữ tiến độ trên mọi thiết bị, lên bảng xếp hạng,
         đăng bài trong cộng đồng và dùng AI (có hạn mức miễn phí). Không đăng nhập thì mọi bài học vẫn dùng được.</p>
       ${qp('loi')?`<p class="note note--red" style="margin-top:16px">${ERR[qp('loi')]||'Có lỗi khi đăng nhập.'}</p>`:''}
-      <form id="f" class="answer" style="margin-top:22px"><input class="field" id="em" type="email" autocomplete="email" placeholder="email@cua-ban.vn" aria-label="Email" style="max-width:340px;font-family:var(--sans)" required>
-        <button class="btn">Gửi link đăng nhập</button></form>
+      ${pv.google?`<a class="btn" id="gg" href="/api/auth/google/start?next=${encodeURIComponent('/tai-khoan.html?dang-nhap=ok')}"
+          style="margin-top:22px;display:inline-flex;align-items:center;gap:10px;background:#fff;color:#1f1f1f;border:1px solid #dadce0">
+          <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.6l6.7-6.7C35.6 2.4 30.2 0 24 0 14.6 0 6.6 5.4 2.7 13.3l7.8 6C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17z"/><path fill="#FBBC05" d="M10.5 28.7c-.5-1.4-.8-3-.8-4.7s.3-3.2.8-4.7l-7.8-6C1 16.6 0 20.2 0 24s1 7.4 2.7 10.7l7.8-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.2-13.5-9.9l-7.8 6C6.6 42.6 14.6 48 24 48z"/></svg>
+          Tiếp tục với Google</a>
+        ${pv.email?'<p class="small muted" style="margin:16px 0 0">hoặc nhận link đăng nhập qua email</p>':''}`:''}
+      ${pv.email?`<form id="f" class="answer" style="margin-top:${pv.google?'8':'22'}px"><input class="field" id="em" type="email" autocomplete="email" placeholder="email@cua-ban.vn" aria-label="Email" style="max-width:340px;font-family:var(--sans)" required>
+        <button class="btn">Gửi link đăng nhập</button></form>`:''}
       <div id="msg" class="verdict" aria-live="polite"></div>
       <p class="small muted" style="margin-top:20px">Chúng tôi chỉ dùng email để gửi link đăng nhập. Không gửi quảng cáo.</p>
       <p style="margin-top:14px"><a href="${safe(qp('next'))||'hoc.html'}">Học ngay không cần tài khoản →</a></p>
     </section>`;
-    document.getElementById('f').onsubmit=async e=>{ e.preventDefault(); const m=document.getElementById('msg');
+    if(document.getElementById('f')) document.getElementById('f').onsubmit=async e=>{ e.preventDefault(); const m=document.getElementById('msg');
       try{ const r=await api('/auth/start',{method:'POST',body:{email:document.getElementById('em').value}});
         m.dataset.v='ok'; m.innerHTML=r.dev_link?`Chế độ chạy thử: <a href="${escH(r.dev_link)}">bấm để đăng nhập</a>`:'Đã gửi. Mở hộp thư và bấm link trong 15 phút.';
       }catch(err){ m.dataset.v='bad'; m.textContent={email_invalid:'Email chưa đúng định dạng.',rate_limited:'Bạn xin link hơi nhiều lần. Đợi 15 phút rồi thử lại.',email_not_configured:'Máy chủ chưa cấu hình gửi mail.'}[err.message]||'Chưa gửi được, thử lại sau.'; } };

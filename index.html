@@ -97,6 +97,53 @@
   .join form{display:flex;gap:10px;flex-wrap:wrap}
   .join input{flex:1;min-width:220px;font-family:var(--sans)}
   .msg{font-size:14px;margin-top:10px}
+
+  /* ---- các khối nội dung mở rộng ---- */
+  .blk{padding:clamp(40px,6vw,84px) 0;border-top:var(--rule)}
+  .blk__h{display:grid;gap:14px;margin-bottom:clamp(20px,3vw,36px)}
+  @media(min-width:900px){.blk__h{grid-template-columns:1.1fr .9fr;align-items:end}}
+  .blk__h p{color:var(--ink-70);font-size:16px;line-height:1.7;margin:0;max-width:56ch}
+  .flow{display:grid;gap:0;border-top:1px solid var(--ink);counter-reset:f}
+  @media(min-width:760px){.flow{grid-template-columns:repeat(4,1fr)}}
+  .flow>div{padding:16px 16px 18px 0;border-bottom:var(--rule)}
+  @media(min-width:760px){.flow>div{padding-left:16px;border-left:var(--rule)}.flow>div:nth-child(4n+1){border-left:0;padding-left:0}}
+  .flow b{display:block;font-family:var(--serif);font-weight:500;font-size:1.18rem;margin:6px 0 6px}
+  .flow span{font-size:14px;color:var(--ink-70);line-height:1.6}
+  .flow i{font-style:normal;font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.12em;color:var(--red)}
+  .states{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:18px}
+  .states span{border:1px solid var(--ink-30);padding:6px 12px;border-radius:999px;font-size:13.5px;background:#fff}
+  .states span[data-k="solid"]{border-color:var(--red);color:var(--red)}
+  .states em{font-style:normal;color:var(--ink-50)}
+  .goals{display:grid;gap:0;border-top:1px solid var(--ink)}
+  @media(min-width:760px){.goals{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1100px){.goals{grid-template-columns:repeat(4,1fr)}}
+  .goals a{display:block;padding:16px 16px 18px 0;border-bottom:var(--rule);text-decoration:none}
+  @media(min-width:760px){.goals a{padding-left:16px;border-left:var(--rule)}}
+  .goals a:hover b{text-decoration:underline}
+  .goals b{display:block;font-family:var(--serif);font-weight:500;font-size:1.15rem;margin-bottom:6px}
+  .goals small{display:block;color:var(--ink-50);font-size:12.5px;margin-top:10px}
+  .tbl{width:100%;border-collapse:collapse;font-size:14.5px}
+  .tbl th{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.12em;color:var(--ink-50);text-align:left;border-bottom:var(--rule);padding:9px 10px 9px 0}
+  .tbl td{border-bottom:var(--rule);padding:10px 10px 10px 0;vertical-align:top}
+  .tbl td.n{text-align:right;font-family:var(--sans);font-weight:600;white-space:nowrap}
+  .two{display:grid;gap:clamp(24px,4vw,56px)}
+  @media(min-width:900px){.two{grid-template-columns:1fr 1fr}}
+  .ladder{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .ladder span{font-size:12.5px;border:var(--rule);padding:4px 9px;border-radius:4px;background:#fff}
+  .ladder b{font-family:var(--sans);font-weight:600;color:var(--red);margin-right:5px}
+  .cases{display:grid;gap:14px}
+  @media(min-width:900px){.cases{grid-template-columns:repeat(3,1fr)}}
+  .case{display:block;border:1px solid var(--ink-12);background:#fff;border-radius:6px;padding:18px;text-decoration:none;transition:border-color .2s}
+  .case:hover{border-color:var(--ink-30)}
+  .case b{display:block;font-family:var(--serif);font-weight:500;font-size:1.15rem;line-height:1.3;margin:8px 0}
+  .case p{font-size:13.5px;color:var(--ink-70);line-height:1.6;margin:0}
+  .faq details{border-bottom:var(--rule);padding:14px 0}
+  .faq summary{cursor:pointer;font-family:var(--serif);font-size:1.12rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--red);font-family:var(--sans)}
+  .faq details[open] summary::after{content:"−"}
+  .faq p{color:var(--ink-70);font-size:15px;line-height:1.7;margin:10px 0 0;max-width:72ch}
+  .gbtn{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#1f1f1f;border:1px solid #dadce0;border-radius:6px;padding:12px 16px;font-weight:600;font-size:14.5px;text-decoration:none;margin-bottom:12px}
 </style>
 </head>
 <body>
@@ -156,6 +203,78 @@
     <div class="stages" id="stages" style="margin-top:18px"></div>
   </section>
 
+
+  <section class="blk" id="mot-bai">
+    <div class="blk__h">
+      <div><div class="eyebrow">Một bài học · khoảng 6 phút</div>
+        <h2 class="h2" style="margin:10px 0 0">Đoán trước, đọc sau, <em>tự nhớ lại rồi mới được xem đáp án.</em></h2></div>
+      <p>Mỗi bài đi theo cùng một trình tự, dựa trên những gì nghiên cứu về trí nhớ đã chỉ ra: đoán trước khi học làm ta chú ý hơn,
+        tự nhớ lại làm ta nhớ lâu hơn đọc lại. Không có video dài, không có slide.</p>
+    </div>
+    <div class="flow" id="flow"></div>
+    <p class="lbl" style="margin-top:28px">Trạng thái của một bài</p>
+    <div class="states" id="states"></div>
+  </section>
+
+  <section class="blk" id="nho-lau">
+    <div class="two">
+      <div>
+        <div class="eyebrow">Ôn lỗi · có tên, có lịch</div>
+        <h2 class="h2" style="margin:10px 0 14px">Sai một lần là <em>được nhắc lại đúng lúc.</em></h2>
+        <p class="muted" style="font-size:16px;line-height:1.7">Làm sai bài tính số, lỗi được lưu theo tên — “Nhầm CTR với CVR”,
+          “Quên chi phí cố định khi tính CAC” — chứ không chỉ “sai câu 3”. App nhắc ôn sau 1, 3 rồi 7 ngày.
+          Lỗi lặp lại từ ba lần trở lên thành bài luyện bắt buộc.</p>
+      </div>
+      <div>
+        <div class="eyebrow">Mã lỗi đang theo dõi</div>
+        <div class="ladder" id="errs" style="margin-top:14px"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="theo-nghe">
+    <div class="blk__h">
+      <div><div class="eyebrow">Học theo nghề</div>
+        <h2 class="h2" style="margin:10px 0 0">Chọn nghề bạn muốn làm, <em>app xếp lộ trình cho nghề đó.</em></h2></div>
+      <p>Mỗi hướng là một danh sách bài cụ thể, xếp theo thứ tự nên học. Đổi hướng lúc nào cũng được — tiến độ đã có vẫn giữ nguyên.</p>
+    </div>
+    <div class="goals" id="goals"></div>
+  </section>
+
+  <section class="blk" id="luyen">
+    <div class="blk__h">
+      <div><div class="eyebrow">Luyện như đi làm</div>
+        <h2 class="h2" style="margin:10px 0 0">Case có bấm giờ, <em>dữ liệu chỉ mở khi bạn hỏi.</em></h2></div>
+      <p>Như ngồi trước giám đốc: bạn chọn hỏi gì, đồng hồ vẫn chạy, rồi được chấm theo bốn tiêu chí — tính toán, insight, đề xuất, cấu trúc —
+        kèm dữ liệu bạn bỏ lỡ và câu hỏi thừa.</p>
+    </div>
+    <div class="cases" id="cases"></div>
+  </section>
+
+  <section class="blk" id="xp">
+    <div class="two">
+      <div>
+        <div class="eyebrow">XP thưởng việc học, không thưởng việc bấm</div>
+        <h2 class="h2" style="margin:10px 0 14px">Khó cày điểm <em>mà không học.</em></h2>
+        <p class="muted" style="font-size:16px;line-height:1.7">Mỗi bài chỉ được cộng một lần. Nguồn lặp lại được có trần theo ngày.
+          Điểm bài là điểm lần làm đầu — làm lại để học, không để nâng điểm. Máy chủ tự kiểm lại mọi con số trước khi lên bảng xếp hạng.</p>
+        <div class="scroll" style="margin-top:18px"><table class="tbl" id="xptbl"></table></div>
+      </div>
+      <div>
+        <div class="eyebrow">30 cấp độ · tên theo nghề marketing</div>
+        <div class="ladder" id="ladder"></div>
+        <div class="eyebrow" style="margin-top:28px">Chuỗi ngày học</div>
+        <p class="muted" style="font-size:15px;line-height:1.7;margin-top:10px" id="streakTxt"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk faq" id="hoi-dap">
+    <div class="blk__h"><div><div class="eyebrow">Câu hỏi thường gặp</div>
+      <h2 class="h2" style="margin:10px 0 0">Trước khi bắt đầu</h2></div></div>
+    <div id="faq"></div>
+  </section>
+
   <section class="join" id="join">
     <div>
       <p class="lbl">Đăng nhập · không cần mật khẩu</p>
@@ -178,7 +297,7 @@
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
 <script src="assets/js/data/exam-items.js?v=6"></script>
-<script src="assets/js/app.js?v=11"></script>
+<script src="assets/js/app.js?v=12"></script>
 <script>
 /* Mọi con số trên trang tính từ dữ liệu — không có số nào gõ tay. */
 const nLessons = ALL.length, nItems = EXAM_ITEMS.length, nCases = (typeof CASES !== 'undefined' ? CASES.length : 0);
@@ -295,6 +414,78 @@ account().then(async (u) => {
     }
   } catch (e) {}
 });
+</script>
+<script>
+/* Các khối mở rộng của landing — mọi con số đọc từ dữ liệu và luật trong app.js. */
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const FLOW = [
+    ['Đoán trước', 'Một câu hỏi trước khi đọc. Không chấm điểm — chỉ để bạn biết mình đang đoán sai ở đâu.'],
+    ['Tình huống thật', 'Mở bằng một cảnh cụ thể, không mở bằng định nghĩa.'],
+    ['Câu kiểm tra giữa bài', 'Một câu chặn việc đọc lướt. Trả lời xong mới đọc tiếp.'],
+    ['Ví dụ có số', 'Số liệu minh hoạ tự khớp với nhau, tính lại được.'],
+    ['Bài tập áp dụng', 'Áp vào thương hiệu bạn biết, không chấm điểm.'],
+    ['Tự nhớ lại 60 giây', 'Viết ra điều bạn nhớ trước khi được xem lại tóm tắt.'],
+    ['Quiz cuối bài', 'Ít nhất 5 câu, lời giải cho từng phương án sai — chọn sai là biết mình sai ở bước nào.'],
+    ['Nói trong 60 giây', 'Kết luận trước, ba lý do có số, bước tiếp theo — như lúc đứng trước sếp.'],
+  ];
+  $('flow').innerHTML = FLOW.map(([t, d], i) => `<div><i>${String(i + 1).padStart(2, '0')}</i><b>${t}</b><span>${d}</span></div>`).join('');
+  const pass = Math.round((typeof LESSON_PASS !== 'undefined' ? LESSON_PASS : .6) * 100);
+  $('states').innerHTML = `<span>Đang học</span><em>→</em><span>Đã học, chưa vững <small>(&lt; ${pass}%)</small></span><em>→</em>
+    <span>Đạt <small>(≥ ${pass}% lần đầu)</small></span><em>→</em><span data-k="solid">Vững <small>(nhớ lại đúng sau ≥ 3 ngày)</small></span>`;
+
+  if (typeof ERRORS !== 'undefined') {
+    const names = Object.entries(ERRORS).filter(([k]) => k !== 'SAI_TINH_TOAN').map(([, v]) => v);
+    $('errs').innerHTML = names.map((n) => `<span>${escH(n)}</span>`).join('') + `<span><b>${names.length}</b>mã lỗi</span>`;
+  }
+
+  if (typeof GOALS !== 'undefined') {
+    $('goals').innerHTML = GOALS.map((g) => {
+      const p = PATHS.find((x) => x.id === g.path);
+      const n = p && p.lessons ? p.lessons.length : ALL.length;
+      return `<a href="hoc.html"><b>${escH(g.t)}</b><span class="muted" style="font-size:14px;line-height:1.6">${escH(g.d)}</span><small>${n} bài trong lộ trình</small></a>`;
+    }).join('');
+  }
+
+  if (typeof CASES !== 'undefined') {
+    $('cases').innerHTML = CASES.map((c) => `<a class="case" href="giai-case.html?id=${c.id}">
+      <span class="lbl">${escH(c.industry)} · ${escH(c.level)} · ${c.minutes} phút</span>
+      <b>${escH(c.t)}</b><p>${escH(c.brief).slice(0, 150)}${c.brief.length > 150 ? '…' : ''}</p></a>`).join('');
+  }
+
+  if (typeof XP !== 'undefined') {
+    const rows = [['Hoàn thành một bài, đạt', XP.lesson, 'một lần mỗi bài'], ['Bài đã học nhưng chưa đạt', XP.learned, 'một lần mỗi bài'],
+      ['Bài lên “vững”', XP.solid, 'một lần mỗi bài'], ['Làm đúng bài tính số', XP.drill, 'một lần mỗi bài'],
+      ['Đạt case có bấm giờ', XP.case, 'một lần mỗi case'], ['Qua đề vượt chặng', XP.exam, 'một lần mỗi chặng'],
+      ['Câu ôn đúng', XP.review, `tối đa ${XP_CAP.review}/ngày`], ['Quiz 60 giây, mỗi câu đúng', XP.quiz, `tối đa ${XP_CAP.quiz}/ngày`]];
+    $('xptbl').innerHTML = `<thead><tr><th>Việc</th><th>Giới hạn</th><th style="text-align:right">XP</th></tr></thead>
+      <tbody>${rows.map(([a, x, b]) => `<tr><td>${a}</td><td class="muted">${b}</td><td class="n">+${x}</td></tr>`).join('')}</tbody>`;
+    const pick = [1, 2, 5, 8, 10, 15, 20, 25, 28, 30];
+    $('ladder').innerHTML = pick.map((n) => `<span><b>${n}</b>${escH(LEVELS[n - 1])} · ${LEVEL_MIN[n - 1].toLocaleString('vi-VN')} XP</span>`).join('');
+    $('streakTxt').innerHTML = `Một ngày học là ngày có hoạt động học thật — xong một bài, ôn lỗi, làm bài tính số, case hay đề vượt chặng.
+      Mỗi người có <b>${FREE_FREEZES} thẻ đóng băng</b> để giữ chuỗi khi bận. Hết thẻ mà lỡ ngày thì chuỗi về 1 — không mất XP —
+      và trong ${STREAK_RESTORE_DAYS} ngày có thể mua lại chuỗi cũ bằng ${STREAK_RESTORE_XP} XP.`;
+  }
+
+  const FAQ = [
+    ['Có miễn phí thật không?', 'Có. Toàn bộ bài học, quiz, case và ôn lỗi miễn phí vĩnh viễn. Riêng các tính năng dùng AI (chấm bài viết, phỏng vấn mô phỏng, trợ lý) có hạn mức miễn phí mỗi người vì mỗi lượt gọi AI tốn tiền thật.'],
+    ['Có cần tạo tài khoản không?', 'Không. Mọi bài học chạy ngay trong trình duyệt và tiến độ lưu tại máy. Đăng nhập — không cần mật khẩu — chỉ để giữ tiến độ trên nhiều thiết bị, lên bảng xếp hạng và tham gia cộng đồng.'],
+    ['Số liệu trong bài lấy từ đâu?', 'Số trong ví dụ và bài tập là số minh hoạ, được thiết kế để tự khớp với nhau và tính lại được; trang nào dùng số thật sẽ ghi nguồn. Thương hiệu trong case có bấm giờ là thương hiệu giả định.'],
+    ['Khác gì một khoá học video?', 'Không có video dài để xem thụ động. Mỗi bài bắt bạn đoán trước, trả lời giữa bài, tự nhớ lại và làm quiz. Sai ở đâu, lỗi đó được lưu theo tên và nhắc ôn đúng lúc.'],
+    ['Tôi đã đi làm, có phải học lại từ đầu?', 'Không. Bạn có thể thi vượt chặng: đạt thì cả chặng được ghi công, không phải học lại những gì đã vững.'],
+    ['Học trên điện thoại được không?', 'Được. Toàn bộ trang được làm để đọc thoải mái trên màn hình nhỏ, bảng số cuộn ngang được và không bị bóp méo.'],
+  ];
+  $('faq').innerHTML = FAQ.map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join('');
+
+  /* Ô đăng nhập ở cuối trang: có Google thì hiện nút Google trước ô email. */
+  fetch('/api/auth/providers', { credentials: 'same-origin' }).then((r) => r.ok && (r.headers.get('content-type') || '').includes('json') ? r.json() : null)
+    .then((pv) => { if (!pv || !pv.google) return;
+      const box = $('joinBox'); if (!box) return;
+      box.insertAdjacentHTML('afterbegin', `<a class="gbtn" href="/api/auth/google/start?next=${encodeURIComponent('/hoc.html')}">
+        <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.6l6.7-6.7C35.6 2.4 30.2 0 24 0 14.6 0 6.6 5.4 2.7 13.3l7.8 6C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17z"/><path fill="#FBBC05" d="M10.5 28.7c-.5-1.4-.8-3-.8-4.7s.3-3.2.8-4.7l-7.8-6C1 16.6 0 20.2 0 24s1 7.4 2.7 10.7l7.8-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.2-13.5-9.9l-7.8 6C6.6 42.6 14.6 48 24 48z"/></svg>
+        Tiếp tục với Google</a>`); })
+    .catch(() => {});
+})();
 </script>
 </body>
 </html>

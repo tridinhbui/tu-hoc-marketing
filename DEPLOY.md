@@ -62,7 +62,19 @@ các trang HTML, `assets/`, `case/`, `thuong-hieu/`, `sitemap.xml`, `robots.txt`
 Không deploy Worker thì site vẫn chạy đầy đủ phần học (lưu trong trình duyệt);
 các trang Tài khoản, Cộng đồng, Xếp hạng, Phỏng vấn AI sẽ tự báo "cần máy chủ".
 
-Cần có: **một tên miền riêng trên Cloudflare** (link đăng nhập gửi từ tên miền này, và route
+**Đã làm sẵn (2026-09-29):** D1 `tuhocmarketing` (`cd589309-0509-4609-8fb0-30f359f5ddbb`) và KV `SESSIONS`
+(`b9d5ef9a81fd45f990215f4706198023`) đã tạo trên tài khoản Cloudflare, `wrangler.jsonc` đã điền id, và hai migration
+`api/migrations/0001_init.sql` + `0002_engine.sql` đã áp lên D1 thật (25 bảng + cấu hình trong `app_config`).
+Thêm bảng/cột mới thì viết file `000N_*.sql` mới rồi chạy `npx wrangler d1 migrations apply tuhocmarketing --remote`.
+
+**Đăng nhập Google** (không cần tên miền riêng — chạy được cả trên `*.workers.dev`):
+1. Google Cloud Console → APIs & Services → OAuth consent screen: loại External, điền tên app và email hỗ trợ.
+2. Credentials → Create credentials → OAuth client ID → loại **Web application**.
+   Authorized redirect URI: `https://<nơi-chạy-API>/api/auth/google/callback` (đúng từng ký tự, kể cả https).
+3. `npx wrangler secret put GOOGLE_CLIENT_SECRET`, và thêm `"GOOGLE_CLIENT_ID": "…apps.googleusercontent.com"` vào `vars`.
+   Thiếu một trong hai thì nút Google tự ẩn, API trả `google_not_configured`.
+
+Đăng nhập bằng link email thì cần: **một tên miền riêng trên Cloudflare** (link đăng nhập gửi từ tên miền này, và route
 `/api/*` phải nằm cùng tên miền với site để cookie đăng nhập hoạt động — `*.pages.dev` không gắn route được).
 
 ```bash
