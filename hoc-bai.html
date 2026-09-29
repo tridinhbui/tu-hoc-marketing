@@ -297,7 +297,7 @@ svg.i{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-widt
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
 <script src="assets/js/data/curriculum.js?v=3"></script>
-<script src="assets/js/data/bai-index.js?v=5"></script>
+<script src="assets/js/data/bai-index.js?v=6"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
 <script src="assets/js/app.js?v=14"></script>
@@ -474,7 +474,7 @@ function mcq(key,r){
   const o=sshuffle(PRINCIPLES.filter(p=>'P:'+p.id!==key),r).slice(0,3);
   return {key,q:`Câu nào nói đúng về ${m.src.vi} (${m.src.t})?`,opts:sshuffle([{t:m.src.one,ok:true},...o.map(x=>({t:x.one,ok:false}))],r)};
 }
-function dailyQ(){ const keys=ALL.map(x=>x.key), d=dayNo(); return mcq(keys[d%keys.length],seeded(d+7)); }
+function dailyQ(){ const keys=ALL.map(x=>x.key).filter(k=>!k.startsWith('B:')), d=dayNo(); return mcq(keys[d%keys.length],seeded(d+7)); }   // bài mới có 7 câu riêng, không sinh câu tự động
 
 let dailyPick=null, dailyOpen=null, collapseT=null;
 function renderR(u){
@@ -556,7 +556,7 @@ function openDailyModal(Q){
 }
 /* Luyện tập không giới hạn: câu ngẫu nhiên từ toàn bộ chương trình, chấm tại chỗ, không cộng XP, không ghi lỗi. */
 function practice(){
-  const keys=ALL.map(x=>x.key); let n=0, right=0, streak=0, best=0, Q, pick=null, shown=false;
+  const keys=ALL.map(x=>x.key).filter(k=>!k.startsWith('B:')); let n=0, right=0, streak=0, best=0, Q, pick=null, shown=false;
   const m=modal('');
   const next=()=>{ Q=mcq(keys[Math.floor(Math.random()*keys.length)],Math.random); pick=null; shown=false; draw(); };
   const draw=()=>{
