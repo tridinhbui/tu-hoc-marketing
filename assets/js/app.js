@@ -16,6 +16,8 @@ const diffDays=(a,b)=>Math.round((new Date(b+'T00:00:00')-new Date(a+'T00:00:00'
 /* ---------------- nội dung: gom bài từ dữ liệu đã có ---------------- */
 function lessonMeta(key){
   const [kind,id]=key.split(':');
+  if(kind==='B'){ const b=typeof BAI_INDEX!=='undefined'&&BAI_INDEX.find(x=>x.id===key); if(!b) return null;
+    return {key,kind,t:b.t,read:b.read,src:(typeof BAI!=='undefined'&&BAI[key])||null}; }
   if(kind==='L'){ const l=LESSONS.find(x=>String(x.day)===id); if(!l) return null;
     return {key,kind,t:l.t,read:l.read||'6 phút',src:l}; }
   const p=PRINCIPLES.find(x=>x.id===id); if(!p) return null;
@@ -303,7 +305,7 @@ function drillMCQ(key){
     opts:shuffle(uniq).map(v=>({t:fmt(v)+' '+D.unit,ok:v===D.ans,code:(D.wrong.find(w=>w[0]===v)||[])[1]||null}))};
 }
 function conceptMCQ(key){
-  const m=lessonMeta(key); if(!m) return null;
+  const m=lessonMeta(key); if(!m||m.kind==='B') return null;   // bài mới đã có 7 câu riêng, không sinh câu tự động
   if(m.kind==='L'){
     const others=shuffle(LESSONS.filter(l=>'L:'+l.day!==key)).slice(0,2);
     return {key,type:'idea',q:`Ý chính của bài “${m.t}” là gì?`,
@@ -350,7 +352,10 @@ const SKILLS=[
   {id:'comm',    t:'Đọc số & đề xuất',       comps:['c14','c15']},
 ];
 const hasComp=()=>typeof COMPETENCIES!=='undefined';
-function skillLessons(sk){ return hasComp()?[...new Set(sk.comps.flatMap(id=>(COMPETENCIES.find(c=>c.id===id)||{lessons:[]}).lessons))]:[]; }
+function skillLessons(sk){
+  const old=hasComp()?sk.comps.flatMap(id=>(COMPETENCIES.find(c=>c.id===id)||{lessons:[]}).lessons):[];
+  const neu=typeof BAI_INDEX!=='undefined'?BAI_INDEX.filter(b=>b.skill===sk.id).map(b=>b.id):[];
+  return [...new Set([...old,...neu])]; }
 function skillOfLesson(k){ return SKILLS.find(sk=>skillLessons(sk).includes(k))||null; }
 /* % kỹ năng = 70% từ trạng thái bài (đã học .35 · đạt .7 · vững 1) + 30% từ bằng chứng năng lực (bài tính số, quiz, case). */
 function skillPct(sk,s=S.get()){

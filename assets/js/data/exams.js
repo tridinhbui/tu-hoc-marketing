@@ -54,4 +54,7 @@ if (typeof ERRORS !== 'undefined' && typeof PRINCIPLES !== 'undefined') {
     if (!ERRORS[k]) ERRORS[k] = 'Hiểu chưa chắc: ' + p.vi;
   });
 }
+/* Bài mới 'B:' cũng có mã khái niệm riêng, tên lỗi là tên bài. */
+if (typeof ERRORS !== 'undefined' && typeof BAI_INDEX !== 'undefined')
+  BAI_INDEX.forEach(b => { const k = 'KN_' + b.id.replace(/-/g, '_').toUpperCase(); if (!ERRORS[k]) ERRORS[k] = 'Hiểu chưa chắc: ' + b.t; });
 const conceptCode = (pid) => 'KN_' + String(pid).replace(/^P:/, '').replace(/-/g, '_').toUpperCase();

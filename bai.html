@@ -31,11 +31,15 @@
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
 <script src="assets/js/data/curriculum.js?v=2"></script>
+<script src="assets/js/data/bai-index.js?v=1"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
 <script src="assets/js/data/exam-items.js?v=6"></script>
-<script src="assets/js/data/exams.js?v=6"></script>
-<script src="assets/js/app.js?v=11"></script>
+<script>/* bài mới 'B:<module>-NN': chỉ tải file của đúng module đang học */
+(()=>{ const m=/^B:([a-z]{2}\d{2})-/.exec(new URLSearchParams(location.search).get('id')||'');
+  if(m) document.write('<script src="assets/js/data/bai/'+m[1]+'.js?v='+BAI_V+'"><\/script>'); })();</script>
+<script src="assets/js/data/exams.js?v=7"></script>
+<script src="assets/js/app.js?v=12"></script>
 <script src="assets/js/exam.js?v=5"></script>
 <script>
 appShell('');
@@ -46,6 +50,11 @@ const P=(n,t,body)=>`<section class="part" id="p${n}"><div class="part__h"><span
 
 function readPart(half){
   const s=M.src, tail=`${D?commonMistakes():''}${D?`<div class="note"><span class="mono">Câu sếp hay hỏi tiếp</span><br>${D.boss}</div>`:''}`;
+  if(M.kind==='B') return half===1
+    ? `<div class="reader"><p class="mono">Tình huống thật</p><p>${s.situation}</p>
+       <p class="mono">Khái niệm · ${s.concept.name}</p><p>${s.concept.body}</p></div>`
+    : `<div class="reader"><p class="mono">Áp vào tình huống</p><p>${s.example}</p>
+       ${(s.mistakes||[]).length?`<p class="mono">Lỗi hay gặp</p><ul>${s.mistakes.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}${tail}</div>`;
   if(M.kind==='L') return half===1
     ? `<div class="reader"><p class="mono">Tình huống</p><p>${s.real}</p><p class="mono">Ý chính</p><p><b>${s.idea}</b></p></div>`
     : `<div class="reader"><p class="mono">Vì sao nó hoạt động</p><ul>${(s.why||[]).map(x=>`<li>${x}</li>`).join('')}</ul>
@@ -97,7 +106,7 @@ function commonMistakes(){
 function drillPart(){
   const s=S.get();
   if(!D) return `<p class="small muted">Bài này là bài tư duy, không có đáp án số duy nhất — bài tính số nằm ở các bài về phễu, CAC, LTV, giá và media.</p>
-    <div class="drill"><span class="mono">Bài tập áp dụng</span><p style="margin:8px 0 0">${M.kind==='L'?M.src.try:M.src.drill}</p></div>`;
+    <div class="drill"><span class="mono">Bài tập áp dụng</span><p style="margin:8px 0 0">${M.kind==='L'?M.src.try:M.kind==='B'?M.src.apply:M.src.drill}</p></div>`;
   return `<div class="drill">
     <span class="mono">Exhibit 1 · ${escH(D.t)} · số liệu minh hoạ</span>
     <p style="margin:10px 0">${D.ctx}</p>
@@ -148,8 +157,8 @@ function recallPart(){
     <div id="sum" ${done?'':'hidden'}>${summaryHTML()}</div>`;
 }
 function summaryHTML(){
-  const s=M.src, idea=M.kind==='L'?s.idea:s.one, act=M.kind==='L'?s.try:s.drill;
-  const mistakes=D?[...new Set(D.wrong.map(w=>ERRORS[w[1]]))]:(M.kind==='P'&&s.mistake?[s.mistake]:[]);
+  const s=M.src, idea=M.kind==='L'?s.idea:M.kind==='B'?s.takeaway:s.one, act=M.kind==='L'?s.try:M.kind==='B'?s.apply:s.drill;
+  const mistakes=D?[...new Set(D.wrong.map(w=>ERRORS[w[1]]))]:(M.kind==='P'&&s.mistake?[s.mistake]:M.kind==='B'?(s.mistakes||[]):[]);
   return `<div class="exhibit" style="margin-top:18px"><div class="exhibit__cap"><b>Tóm tắt</b><span class="mono">Bài ${escH(M.t)}</span></div>
     <div class="frame"><div><span class="mono">Ý chính</span><span>${idea}</span></div>
     ${mistakes.length?`<div><span class="mono">Lỗi hay gặp</span><span>${mistakes.map(escH).join(' · ')}</span></div>`:''}
@@ -262,7 +271,7 @@ function completeHTML({rec,right,wrong,sk,skBefore,jBefore,before,nx}){
   const jAfter=journeyState(s), opened=jAfter.find((j,i)=>j.st==='done'&&jBefore[i].st!=='done');
   const mod=W&&W.mod, modDone=mod&&mod.lessons.every(k=>lessonState(k,s));
   const unlock=opened?`Xong bước ${opened.t}`:modDone?`Mở luyện cuối module ${mod.t}`:null;
-  const idea=M.kind==='L'?M.src.idea:M.src.one;
+  const idea=M.kind==='L'?M.src.idea:M.kind==='B'?M.src.takeaway:M.src.one;
   const nextHref=nx?'bai.html?id='+encodeURIComponent(nx):'hoc.html';
   return `<div class="complete ${pass?'':'complete--fail'}">
     <span class="eyebrow ${pass?'eyebrow--gold':'eyebrow--terra'}">${pass?'Hoàn thành':'Đã học — chưa vững'} · ${right}/${PLAN.quiz.length} đúng</span>
