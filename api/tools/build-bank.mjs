@@ -1,4 +1,5 @@
 /* Build ngân hàng câu cho server từ dữ liệu phía trình duyệt (assets/js/data).
+   Deploy thật: build từ bản đã commit (git archive HEAD), không từ thư mục đang sửa dở — xem DEPLOY.md.
    Chạy: node tools/build-bank.mjs  →  src/generated/bank.json
    Server chấm từ file này; đề gửi xuống trình duyệt bị bỏ answer/ans/why. */
 import fs from 'node:fs';
