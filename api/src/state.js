@@ -2,6 +2,7 @@
    Server gộp bản gửi lên với bản đang lưu — không bao giờ ghi đè mù — rồi tính điểm tuần từ nhật ký. */
 import { json, now, currentUser, body, publicName } from './lib.js';
 import { syncLedger, weekXp } from './progress.js';
+import { ingestLessons } from './learn.js';
 
 const XP = { lesson: 20, drill: 15, talk: 10, review: 5, focus: 15, quiz: 2, case: 40, game: 30, daily: 10 };
 const WEEK_XP_CAP = 3000;   // chặn số ảo: một tuần học rất chăm cũng hiếm khi vượt mức này
@@ -102,6 +103,7 @@ export async function putState(req, env) {
   const w = weekStats(merged), t = now();
   /* Sổ cái phía server: XP tuần lấy từ xp_events đã kẹp luật, không lấy từ số trình duyệt tự cộng. */
   const led = await syncLedger(env, u.id, merged);
+  await ingestLessons(env, u.id, merged.lessons);
   w.xp = Math.min(weekXp(led.events, w.week), WEEK_XP_CAP);
   w.streak = led.streak;
   await env.DB.batch([

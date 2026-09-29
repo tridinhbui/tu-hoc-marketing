@@ -4,9 +4,10 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
+    "deploy": "node tools/build-bank.mjs && wrangler deploy",
     "eval": "node eval/run.mjs",
-    "test": "node --test test/engine.test.mjs"
+    "test": "node --test test/engine.test.mjs test/learn.test.mjs",
+    "build:bank": "node tools/build-bank.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",

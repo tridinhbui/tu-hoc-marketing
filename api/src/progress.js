@@ -3,6 +3,7 @@ import { json, now, str, currentUser, body } from './lib.js';
 import { DEFAULTS, ingestLedger, computeStats, questStatus } from './engine.js';
 
 let cfgCache = null, cfgAt = 0;
+export function invalidateConfig() { cfgCache = null; }
 export async function loadConfig(env) {
   if (cfgCache && now() - cfgAt < 60e3) return cfgCache;
   const cfg = JSON.parse(JSON.stringify(DEFAULTS));
