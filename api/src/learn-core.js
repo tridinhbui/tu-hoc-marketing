@@ -162,7 +162,8 @@ export function lintItem(it) {
   if (!opts.some((o) => o.k === it.answer)) w.push({ rule: 'answer_missing', level: 'error', msg: 'Đáp án không khớp phương án nào.' });
   for (const o of opts) {
     if (!(it.why || {})[o.k]) w.push({ rule: 'missing_feedback', level: 'warn', msg: `Phương án ${o.k} thiếu lời giải.` });
-    if (EMPTY.some((e) => o.t.toLowerCase().includes(e))) w.push({ rule: 'empty_distractor', level: 'error', msg: `Phương án rỗng: “${o.t}”.` });
+    /* Spec: phương án rỗng là phương án MỞ BẰNG cụm rỗng — không bắt cụm đó nằm giữa một hiểu nhầm có thật. */
+    if (EMPTY.some((e) => o.t.trim().toLowerCase().startsWith(e))) w.push({ rule: 'empty_distractor', level: 'error', msg: `Phương án rỗng: “${o.t}”.` });
   }
   for (const [k, t] of Object.entries(it.why || {})) if (/phương án\s+[a-dA-D]\b|phương án (cuối|đầu)/i.test(t)) w.push({ rule: 'positional_ref', level: 'error', msg: `Lời giải ${k} trỏ theo vị trí phương án.` });
   const lens = opts.map((o) => o.t.length), avg = lens.reduce((a, b) => a + b, 0) / (lens.length || 1);
