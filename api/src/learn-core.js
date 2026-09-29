@@ -165,7 +165,7 @@ export function lintItem(it) {
     /* Spec: phương án rỗng là phương án MỞ BẰNG cụm rỗng — không bắt cụm đó nằm giữa một hiểu nhầm có thật. */
     if (EMPTY.some((e) => o.t.trim().toLowerCase().startsWith(e))) w.push({ rule: 'empty_distractor', level: 'error', msg: `Phương án rỗng: “${o.t}”.` });
   }
-  for (const [k, t] of Object.entries(it.why || {})) if (/phương án\s+[a-dA-D]\b|phương án (cuối|đầu)/i.test(t)) w.push({ rule: 'positional_ref', level: 'error', msg: `Lời giải ${k} trỏ theo vị trí phương án.` });
+  for (const [k, t] of Object.entries(it.why || {})) if (/phương án\s+[a-dA-D](?!\p{L})|phương án (cuối|đầu)(?!\p{L})/iu.test(t))   /* \b của JS chỉ hiểu ASCII: “phương án cũng” từng bị bắt nhầm */ w.push({ rule: 'positional_ref', level: 'error', msg: `Lời giải ${k} trỏ theo vị trí phương án.` });
   const lens = opts.map((o) => o.t.length), avg = lens.reduce((a, b) => a + b, 0) / (lens.length || 1);
   if (opts.length >= 3 && lens.some((l) => Math.abs(l - avg) > 0.2 * avg)) w.push({ rule: 'length_spread', level: 'warn', msg: 'Độ dài phương án lệch quá ±20% trung bình.' });
   return w;

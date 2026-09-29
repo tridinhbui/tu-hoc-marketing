@@ -80,3 +80,11 @@ test('thống kê mẹo độ dài chạy được trên kho thật', () => {
   const r = lengthBias(Object.values(bank.items));
   assert.ok(r.n > 100); assert.ok(Number.isFinite(r.z));
 });
+
+test('cổng chất lượng: không bắt nhầm “phương án cũng / dự phòng / bằng / cụ thể”', () => {
+  const ok = { type: 'mcq', answer: 'a', options: [{ k: 'a', t: 'x' }, { k: 'b', t: 'y' }],
+    why: { a: 'Có phương án dự phòng và phương án cụ thể.', b: 'So hai phương án bằng tiêu chí; phương án cũng không có ngữ cảnh.' } };
+  assert.ok(!lintItem(ok).some((w) => w.rule === 'positional_ref'));
+  const bad = { ...ok, why: { a: 'Chọn phương án B vì…', b: 'Như phương án cuối.' } };
+  assert.equal(lintItem(bad).filter((w) => w.rule === 'positional_ref').length, 2);
+});
