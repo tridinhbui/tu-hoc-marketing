@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'ob02', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:ob02-01', t:'Kệ hàng nói gì trước khi bạn đọc nhãn?',
+{ id:'B:ob02-01', skill:'insight', read:'6 phút', t:'Kệ hàng nói gì trước khi bạn đọc nhãn?',
   situation:'Bạn đứng trước kệ mì gói ở một siêu thị Co.opmart. Kệ dài khoảng 3 mét, năm tầng. Chưa đọc chữ nào, bạn đã thấy một mảng đỏ – vàng chiếm gần một phần ba chiều ngang ở tầng giữa, vài hãng khác rải rác, và một hãng mới chỉ có hai gói nằm ở tầng sát đất.',
   concept:{ name:'Thị phần kệ (share of shelf)',
     body:'Mỗi gói quay mặt ra lối đi là một <b>facing</b>. Tỉ lệ facing của một hãng trên tổng facing của kệ là thị phần kệ. Nó không phải ngẫu nhiên: siêu thị chia chỗ theo doanh số và theo hợp đồng trưng bày mà hãng trả tiền. Vì vậy kệ là một bản đồ quyền lực — ai bán chạy, ai đang trả tiền để được thấy, ai mới vào và đang yếu.' },
@@ -60,7 +60,7 @@ BAI_ADD({ mod:'ob02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:ob02-02', t:'Vì sao hàng đặt ngang tầm mắt bán chạy hơn?',
+{ id:'B:ob02-02', skill:'insight', read:'6 phút', t:'Vì sao hàng đặt ngang tầm mắt bán chạy hơn?',
   situation:'Một hãng nước tăng lực đổi vị trí trên kệ ở 20 cửa hàng tiện lợi: tháng 5 nằm ở tầng sát đất, tháng 6 được đưa lên tầng ngang tầm mắt. Giá, khuyến mãi và quảng cáo không đổi. Doanh số tại 20 cửa hàng này tăng 38%, trong khi các cửa hàng không đổi vị trí gần như đứng yên.',
   concept:{ name:'Vùng vàng của kệ (eye level is buy level)',
     body:'Mắt người lướt kệ theo đường ngang ở tầm 1,2–1,6 mét và dừng ở chỗ dễ thấy nhất. Tầng này thường được gọi là "vùng vàng" và bị tính phí trưng bày cao nhất. Tầng sát đất dành cho hàng khách đã quyết định trước (mua theo thói quen, hàng cồng kềnh); tầng trên cùng cho hàng ít mua. Tầng ngang tầm tay trẻ em là chỗ của bánh kẹo, đồ chơi.' },
@@ -116,7 +116,7 @@ BAI_ADD({ mod:'ob02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:ob02-03', t:'Đọc menu: món nào quán thật sự muốn bán?',
+{ id:'B:ob02-03', skill:'measure', read:'6 phút', t:'Đọc menu: món nào quán thật sự muốn bán?',
   situation:'Menu một quán cà phê ở Đà Nẵng: cà phê sữa 29.000, bạc xỉu 32.000, "signature cà phê muối" 45.000 được đóng khung, có hình, nằm góc trên bên phải; trà trái cây 49.000; cold brew 69.000 nằm một mình ở cuối. Giá vốn ước tính: cà phê sữa 7.000, cà phê muối 9.000, cold brew 18.000.',
   concept:{ name:'Kỹ thuật thiết kế menu (menu engineering)',
     body:'Menu không chỉ liệt kê món, nó hướng mắt. Vị trí đầu tiên mắt chạm vào (thường góc trên bên phải hoặc ô được đóng khung), món có hình, và món đứng cạnh một món rất đắt đều được bán nhiều hơn. Quán giỏi đặt vào những chỗ đó món có <b>lãi gộp mỗi ly</b> cao nhất, không phải món đắt nhất.' },
@@ -168,7 +168,7 @@ BAI_ADD({ mod:'ob02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:ob02-04', t:'Giá theo gram: cách khách so hai gói hàng',
+{ id:'B:ob02-04', skill:'measure', read:'7 phút', t:'Giá theo gram: cách khách so hai gói hàng',
   situation:'Trên kệ, gói hạt điều A 250g giá 89.000đ, gói B 400g giá 135.000đ. Nhãn giá nhỏ của siêu thị có dòng "đơn giá 356đ/g" và "338đ/g". Một khách cầm gói A vì "rẻ hơn", khách khác cầm B vì "tính ra rẻ hơn".',
   concept:{ name:'Đơn giá (unit price) và cỡ gói',
     body:'Khách so giá theo hai cách: giá gói (bao nhiêu tiền phải trả ngay) và đơn giá (tiền trên mỗi gram/ml). Gói lớn thường rẻ hơn theo gram nhưng tốn nhiều tiền một lần. Hãng dùng cỡ gói để phục vụ hai nhóm: người muốn chi ít mỗi lần, và người muốn rẻ về lâu dài. Nhãn đơn giá của siêu thị làm phép so thứ hai trở nên dễ.' },
@@ -219,7 +219,7 @@ BAI_ADD({ mod:'ob02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:ob02-05', t:'Trang sản phẩm trên sàn: 3 giây đầu tiên',
+{ id:'B:ob02-05', skill:'channel', read:'6 phút', t:'Trang sản phẩm trên sàn: 3 giây đầu tiên',
   situation:'Hai shop cùng bán một loại tai nghe trên Shopee với giá gần nhau. Shop A: ảnh chính là tai nghe trên nền trắng, tiêu đề 12 chữ. Shop B: ảnh chính có tai nghe, chữ "Pin 30 giờ", logo "Mall", 4,9 sao · 12 nghìn đã bán, tiêu đề chứa "chống ồn" và "Bluetooth 5.3". Cùng lượng hiển thị, B có tỉ lệ click cao gấp 3 lần A.',
   concept:{ name:'Kệ số: ảnh chính, tiêu đề và bằng chứng',
     body:'Trên sàn, danh sách tìm kiếm là kệ hàng, còn ảnh chính là mặt trước bao bì. Khách lướt rất nhanh và chỉ dừng khi trong 3 giây thấy được: đây là gì, khác gì, có đáng tin không. Ảnh nói lợi ích chính, tiêu đề chứa từ khoá khách gõ, và số sao – số đã bán – nhãn Mall là bằng chứng.' },
@@ -276,7 +276,7 @@ BAI_ADD({ mod:'ob02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:ob02-06', t:'Đánh giá 1 sao đáng đọc hơn đánh giá 5 sao',
+{ id:'B:ob02-06', skill:'insight', read:'6 phút', t:'Đánh giá 1 sao đáng đọc hơn đánh giá 5 sao',
   situation:'Một nồi chiên không dầu trên sàn có 2.300 đánh giá, trung bình 4,7 sao. Đọc 50 đánh giá 1–2 sao gần nhất: 21 cái nói "giao thiếu phụ kiện", 14 cái nói "mùi nhựa lần đầu", 9 cái nói "giao chậm", còn lại lẻ tẻ. Đánh giá 5 sao phần lớn là "hàng đẹp", "giao nhanh", "sẽ ủng hộ".',
   concept:{ name:'Đọc đánh giá như nghiên cứu khách hàng miễn phí',
     body:'Đánh giá 5 sao thường ngắn và chung chung. Đánh giá thấp dài hơn, cụ thể hơn, chỉ ra đúng chỗ sản phẩm hoặc dịch vụ gãy. Cách đọc: lấy một mẫu đủ lớn đánh giá thấp gần đây, xếp vào nhóm lý do, đếm tần suất. Nhóm lớn nhất là việc cần sửa trước, và thường cũng là nỗi lo mà quảng cáo nên trả lời.' },
@@ -332,7 +332,7 @@ BAI_ADD({ mod:'ob02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:ob02-07', t:'Quầy thu ngân: vì sao kẹo luôn nằm ở đó?',
+{ id:'B:ob02-07', skill:'channel', read:'6 phút', t:'Quầy thu ngân: vì sao kẹo luôn nằm ở đó?',
   situation:'Ở quầy thu ngân của một chuỗi cửa hàng tiện lợi: kẹo cao su, kẹo ngậm, pin, bao cao su, nước tăng lực mini. Khách xếp hàng trung bình 90 giây. Cửa hàng ghi nhận khoảng 1/8 hoá đơn có ít nhất một món từ kệ quầy, dù gần như không ai vào cửa hàng để mua chúng.',
   concept:{ name:'Mua bốc đồng (impulse) và điểm chạm cuối',
     body:'Món ở quầy thu ngân có chung vài đặc điểm: nhỏ, rẻ, không cần suy nghĩ, và hay bị quên. Khách đang đứng chờ, tay rảnh, mắt không có gì để nhìn — đó là lúc duy nhất trong chuyến mua mà hàng không phải cạnh tranh với cả kệ đối thủ. Điểm chạm cuối không tạo nhu cầu mới, nó nhắc một nhu cầu nhỏ có sẵn đúng lúc có thể trả tiền ngay.' },
@@ -385,7 +385,7 @@ BAI_ADD({ mod:'ob02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:ob02-08', t:'Nhãn riêng của siêu thị đang cạnh tranh với ai?',
+{ id:'B:ob02-08', skill:'brand', read:'6 phút', t:'Nhãn riêng của siêu thị đang cạnh tranh với ai?',
   situation:'Một chuỗi siêu thị bán nước rửa chén nhãn riêng giá 32.000đ, đặt ngay cạnh hãng dẫn đầu giá 45.000đ, bao bì cùng tông xanh lá, chai cùng dáng. Nhãn giá có dòng "So sánh: rẻ hơn 29%". Trong 6 tháng, nhãn riêng lấy được 15% doanh số ngành hàng tại chuỗi.',
   concept:{ name:'Nhãn riêng (private label)',
     body:'Nhãn riêng là hàng mang thương hiệu của nhà bán lẻ. Chúng thường không cạnh tranh với tất cả, mà nhắm vào hãng lớn nhất ở những ngành hàng khách không thấy khác biệt nhiều giữa các hãng. Nhà bán lẻ có lợi thế không hãng nào có: quyết định vị trí trên kệ và biết dữ liệu mua của khách. Hãng lớn phòng thủ bằng khác biệt thật hoặc bằng tài sản thương hiệu mà khách sẵn sàng trả thêm.' },
@@ -442,7 +442,7 @@ BAI_ADD({ mod:'ob02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:ob02-09', t:'Khuyến mãi trên kệ: mua 2 tặng 1 có rẻ thật không?',
+{ id:'B:ob02-09', skill:'measure', read:'7 phút', t:'Khuyến mãi trên kệ: mua 2 tặng 1 có rẻ thật không?',
   situation:'Trên kệ dầu gội: hãng A "Mua 2 tặng 1" (chai 60.000đ), hãng B "Giảm 30%" (chai 65.000đ), hãng C "Tặng kèm chai dầu xả mini" (chai 70.000đ). Khách đứng trước kệ khá lâu và phần lớn chọn A vì "được thêm một chai".',
   concept:{ name:'Quy đổi khuyến mãi về giá thật mỗi đơn vị',
     body:'Mỗi kiểu khuyến mãi đánh vào một cảm giác: "tặng" cảm thấy như được cho không, "giảm %" dễ so, "quà kèm" tăng giá trị cảm nhận nhưng khó quy ra tiền. Người mua tỉnh táo và người làm marketing đều phải quy về cùng một thước đo: tiền trả cho mỗi đơn vị sản phẩm thật sự dùng — và nhớ rằng mua 2 tặng 1 bắt khách mua gấp ba.' },
@@ -493,7 +493,7 @@ BAI_ADD({ mod:'ob02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:ob02-10', t:'Viết một bản quan sát điểm bán trong 10 phút',
+{ id:'B:ob02-10', skill:'comm', read:'7 phút', t:'Viết một bản quan sát điểm bán trong 10 phút',
   situation:'Sếp nhờ bạn ghé 3 cửa hàng trong buổi trưa và gửi "nhận xét về ngành hàng sữa hạt". Người trước bạn gửi 2 trang: "kệ đẹp, nhiều hãng, giá đa dạng, khách khá đông". Sếp đọc xong vẫn không biết nên làm gì.',
   concept:{ name:'Bản quan sát: dữ kiện → điều đáng chú ý → câu hỏi',
     body:'Một bản quan sát điểm bán có ích gồm ba tầng. <b>Dữ kiện</b> đếm được: số facing, vị trí, giá, khuyến mãi, hết hàng. <b>Điều đáng chú ý</b>: chỗ dữ kiện lệch khỏi điều bạn chờ đợi. <b>Câu hỏi hoặc đề xuất</b>: điều đó gợi ra việc gì nên kiểm tra hay làm tiếp. Tính từ như "đẹp", "đông" không phải dữ kiện.' },

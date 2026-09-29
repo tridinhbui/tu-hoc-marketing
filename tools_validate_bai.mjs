@@ -10,9 +10,13 @@ const load = (f) => vm.runInContext(fs.readFileSync(f, 'utf8'), ctx, { filename:
 ['lessons', 'principles', 'curriculum', 'drills', 'exam-items', 'bai-index'].forEach(f => load(`assets/js/data/${f}.js`));
 const g = (e) => vm.runInContext(e, ctx);
 
+const { MODULES } = await import('./tools_bai_index.mjs');
 const only = process.argv[2];
-const mods = g('BAI_MODS').map(m => m.id).filter(id => !only || id === only);
+/* Có mã module: kiểm file đó kể cả khi chưa có trong mục lục (bản nháp). Không có: kiểm mọi module đã có file. */
+const mods = only ? [only] : MODULES.map(m => m.id).filter(id => fs.existsSync(`assets/js/data/bai/${id}.js`));
 const ERRORS = g('ERRORS'), INDEX = g('BAI_INDEX');
+const packs = {}; ctx.__cap = (p) => { packs[p.mod] = p; };
+vm.runInContext('const __orig = BAI_ADD; BAI_ADD = (p) => { __cap(p); __orig(p); };', ctx);
 const words = (h) => String(h || '').replace(/<[^>]+>/g, ' ').trim().split(/\s+/).filter(Boolean).length;
 const plain = (h) => String(h || '').replace(/<[^>]+>/g, '').trim().toLowerCase();
 
@@ -25,13 +29,18 @@ for (const mod of mods) {
   const f = `assets/js/data/bai/${mod}.js`;
   if (!fs.existsSync(f)) { bad(mod, `thiếu file ${f}`); continue; }
   load(f);
-  const idx = INDEX.filter(b => b.mod === mod);
-  console.log(`\n${mod} · ${idx.length} bài trong mục lục`);
+  const pack = packs[mod]; if (!pack) { bad(mod, 'file không gọi BAI_ADD'); continue; }
+  if (pack.mod !== mod) bad(mod, `BAI_ADD mod='${pack.mod}' khác tên file`);
+  const man = MODULES.find(m => m.id === mod);
+  const idx = pack.lessons.map(l => ({ id:l.id, mod, skill:l.skill, read:l.read, t:l.t }));
+  if (man && idx.length !== man.n) bad(mod, `có ${idx.length} bài, kế hoạch cần ${man.n}`);
+  idx.forEach((b, i) => { const want = `B:${mod}-${String(i + 1).padStart(2, '0')}`; if (b.id !== want) bad(b.id, `mã bài phải là ${want}`);
+    if (!/^\d+ phút$/.test(b.read || '')) bad(b.id, 'thiếu read dạng "6 phút"'); });
+  console.log(`\n${mod} · ${idx.length} bài`);
   for (const b of idx) {
     const L = g('BAI')[b.id];
     if (!L) { bad(b.id, 'có trong mục lục nhưng không có nội dung'); continue; }
     lessonsN++;
-    if (L.t !== b.t) bad(b.id, 'tiêu đề khác với mục lục');
     if (!['insight', 'brand', 'creative', 'channel', 'measure', 'comm'].includes(b.skill)) bad(b.id, `kỹ năng lạ: ${b.skill}`);
     const W = (k, lo, hi) => { const n = words(k === 'concept' ? L.concept && L.concept.body : L[k]);
       if (n < lo || n > hi) warn(b.id, `${k} ${n} chữ (nên ${lo}–${hi})`); };

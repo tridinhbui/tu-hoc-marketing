@@ -5,7 +5,7 @@
    Phải tải SAU curriculum.js và TRƯỚC app.js: file này ghép module đã xuất bản vào STAGES/JOURNEY
    để hành trình, kỹ năng, "hôm nay" thấy bài mới mà không cần tải nội dung. */
 
-const BAI_V = 1;   // tăng khi sửa nội dung bất kỳ file bài/*.js
+const BAI_V = 2;   // tăng khi sửa nội dung bất kỳ file bài/*.js
 
 /* Bước hành trình → chặng nội dung (đề vượt chặng, cổng mở khoá). */
 const STEP_STAGE = { observe:'s1', understand:'s2', hypothesis:'s2', message:'s3', channel:'s4',
@@ -25,9 +25,9 @@ const BAI_INDEX = [
   { id:'B:ob02-05', mod:'ob02', skill:'channel', read:'6 phút', t:'Trang sản phẩm trên sàn: 3 giây đầu tiên' },
   { id:'B:ob02-06', mod:'ob02', skill:'insight', read:'6 phút', t:'Đánh giá 1 sao đáng đọc hơn đánh giá 5 sao' },
   { id:'B:ob02-07', mod:'ob02', skill:'channel', read:'6 phút', t:'Quầy thu ngân: vì sao kẹo luôn nằm ở đó?' },
-  { id:'B:ob02-08', mod:'ob02', skill:'brand',   read:'6 phút', t:'Nhãn riêng của siêu thị đang cạnh tranh với ai?' },
+  { id:'B:ob02-08', mod:'ob02', skill:'brand', read:'6 phút', t:'Nhãn riêng của siêu thị đang cạnh tranh với ai?' },
   { id:'B:ob02-09', mod:'ob02', skill:'measure', read:'7 phút', t:'Khuyến mãi trên kệ: mua 2 tặng 1 có rẻ thật không?' },
-  { id:'B:ob02-10', mod:'ob02', skill:'comm',    read:'7 phút', t:'Viết một bản quan sát điểm bán trong 10 phút' },
+  { id:'B:ob02-10', mod:'ob02', skill:'comm', read:'7 phút', t:'Viết một bản quan sát điểm bán trong 10 phút' },
 ];
 
 /* Nội dung bài (được các file bài/*.js điền vào khi tải). */
