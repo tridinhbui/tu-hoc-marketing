@@ -9,8 +9,10 @@ export function gradeItem(item, chosen) {
   if (item.type === 'calc') {
     const n = Number(String(chosen ?? '').replace(',', '.'));
     if (!Number.isFinite(n)) return { correct: false, invalid: true };
-    const ok = Math.abs(n - item.ans) <= Math.max(Math.abs(item.ans) * (item.tol ?? 0.01), 1e-9);
-    const hit = !ok && Array.isArray(item.wrong) ? item.wrong.find(([v]) => Math.abs(n - v) <= Math.max(Math.abs(v) * (item.tol ?? 0.01), 1e-9)) : null;
+    /* tol là dung sai TUYỆT ĐỐI theo đơn vị của đáp án (cách nội dung được viết: ans 7200 · tol 1, ans 30 · tol 0.1). */
+    const tol = Math.max(Number(item.tol ?? 0.01), 1e-9);
+    const ok = Math.abs(n - item.ans) <= tol;
+    const hit = !ok && Array.isArray(item.wrong) ? item.wrong.find(([v]) => Math.abs(n - v) <= tol) : null;
     return { correct: ok, answer: item.ans, unit: item.unit, error_code: ok ? null : (hit ? hit[1] : (item.errors && item.errors[0]) || null), steps: item.steps || null };
   }
   const k = String(chosen ?? '');

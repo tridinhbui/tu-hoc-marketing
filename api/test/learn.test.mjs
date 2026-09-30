@@ -88,3 +88,14 @@ test('cổng chất lượng: không bắt nhầm “phương án cũng / dự p
   const bad = { ...ok, why: { a: 'Chọn phương án B vì…', b: 'Như phương án cuối.' } };
   assert.equal(lintItem(bad).filter((w) => w.rule === 'positional_ref').length, 2);
 });
+
+test('câu tính: dung sai là tuyệt đối', () => {
+  const it = { type: 'calc', ans: 45500, tol: 1, wrong: [[19500, 'GIAM_GIA_QUEN_BIEN']] };
+  assert.equal(gradeItem(it, 45500).correct, true);
+  assert.equal(gradeItem(it, 45501).correct, true);
+  assert.equal(gradeItem(it, 45000).correct, false);          // tương đối sẽ nhận nhầm (±45.500)
+  assert.equal(gradeItem(it, 19500).error_code, 'GIAM_GIA_QUEN_BIEN');
+  const pct = { type: 'calc', ans: 30, tol: 0.1 };
+  assert.equal(gradeItem(pct, 30.05).correct, true);
+  assert.equal(gradeItem(pct, 31).correct, false);             // tương đối sẽ nhận (±3)
+});
