@@ -90,6 +90,12 @@ for (const f of fs.readdirSync('.')) {
   if (!f.endsWith('.html') || SKIP_HTML(f)) continue;
   fs.copyFileSync(f, `dist/${f}`); copied++;
 }
+/* Đáp án không đi xuống trình duyệt: bỏ khỏi file câu hỏi trong dist — CHỈ khi bản deploy có server chấm
+   (/api/answers cùng origin). Bản tĩnh không có server mà bỏ đáp án thì người học không làm quiz được.
+   Bật bằng: STRIP_ANSWERS=1 node tools_build.mjs */
+if (process.env.STRIP_ANSWERS === '1')
+  import('node:child_process').then(({ execFileSync }) => execFileSync(process.execPath, ['tools_strip_answers.mjs', 'dist'], { stdio: 'inherit' }));
+else console.log('giữ đáp án trong dist (đặt STRIP_ANSWERS=1 khi deploy cùng server chấm)');
 const du = (p) => fs.readdirSync(p, { withFileTypes: true })
   .reduce((n, e) => n + (e.isDirectory() ? du(p + '/' + e.name) : fs.statSync(p + '/' + e.name).size), 0);
 

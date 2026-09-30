@@ -33,7 +33,7 @@
 <script src="assets/js/data/exam-items.js?v=7"></script>
 <script src="assets/js/data/exams.js?v=7"></script>
 <script src="assets/js/app.js?v=14"></script>
-<script src="assets/js/exam.js?v=5"></script>
+<script src="assets/js/exam.js?v=6"></script>
 <script>
 appShell('thi.html');
 const app = document.getElementById('app');
@@ -200,9 +200,13 @@ function show(){
 }
 
 /* ---------------- kết quả ---------------- */
-function finish(){
+async function finish(){
   clearInterval(tick);
-  const res = gradeExam(SID, items, given);
+  app.innerHTML = '<section class="section"><p class="lede">Đang chấm bài…</p></section>';
+  let res;
+  try { res = await gradeExamAsync(SID, items, given, 'practice'); }
+  catch (e) { app.innerHTML = `<section class="section"><p class="lede">${GRADE_OFFLINE}</p><button class="btn" id="retry">Chấm lại</button></section>`;
+    document.getElementById('retry').onclick = finish; return; }
   saveExam(SID, res);
   const st = examState(SID);
   const missed = res.marks.filter(m => !m.ok);

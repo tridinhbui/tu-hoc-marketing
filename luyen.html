@@ -36,7 +36,7 @@
   document.write('<script src="assets/js/data/bai/'+m+'.js?v='+BAI_V+'"><\/script>'); })();</script>
 <script src="assets/js/data/exams.js?v=7"></script>
 <script src="assets/js/app.js?v=14"></script>
-<script src="assets/js/exam.js?v=5"></script>
+<script src="assets/js/exam.js?v=6"></script>
 <script>
 appShell('luyen.html');
 const app = document.getElementById('app');
@@ -101,23 +101,25 @@ function show(){
 }
 
 /* Chỗ duy nhất trong toàn bộ hệ thống mà lời giải thích của từng phương án được hiện ra. */
-function reveal(it, given){
-  const g = gradeItem(it, given);
-  marks[idx] = { it, given, ...g };
+async function reveal(it, given){
   const fb = document.getElementById('fb');
+  app.querySelectorAll('.opt,#check').forEach(b => b.disabled = true);
+  let g;
+  try { g = await gradeAsync(it, given, 'practice'); }
+  catch (e) { app.querySelectorAll('.opt,#check').forEach(b => b.disabled = false); fb.innerHTML = `<p class="small bad" style="margin-top:14px">${GRADE_OFFLINE}</p>`; return; }
+  marks[idx] = { it, given, ...g };
   if (it.type === 'calc') {
     document.getElementById('num').disabled = true; document.getElementById('check').remove();
     fb.innerHTML = `<div class="${g.ok ? 'verdict' : 'note note--red'}" style="margin-top:18px">
-      <b>${g.ok ? 'Đúng.' : 'Chưa đúng.'}</b> Đáp án: <b>${it.ans} ${it.unit || ''}</b>
+      <b>${g.ok ? 'Đúng.' : 'Chưa đúng.'}</b>${g.ans !== undefined ? ` Đáp án: <b>${g.ans} ${g.unit || ''}</b>` : ''}
       ${!g.ok && g.err ? `<br><span class="small">Lỗi hay gặp: ${escH(ERRORS[g.err] || g.err)}</span>` : ''}
-      <ol class="small" style="margin:10px 0 0 18px">${it.steps.map(x => `<li>${x}</li>`).join('')}</ol></div>`;
+      ${g.steps.length ? `<ol class="small" style="margin:10px 0 0 18px">${g.steps.map(x => `<li>${x}</li>`).join('')}</ol>` : ''}</div>`;
   } else {
     app.querySelectorAll('.opt').forEach(b => {
-      b.disabled = true;
-      if (b.dataset.k === it.answer) b.dataset.r = 'right';
-      else if (b.dataset.k === given) b.dataset.r = 'wrong';
-      /* giải thích nằm ngay dưới từng phương án — đọc được cả lý do các phương án kia sai */
-      b.insertAdjacentHTML('afterend', `<p class="why ${b.dataset.k === it.answer ? 'why--right' : b.dataset.k === given ? 'why--wrong' : ''}">${escH(it.why[b.dataset.k] || '')}</p>`);
+      const k = b.dataset.k;
+      if (k === g.answer) b.dataset.r = 'right';
+      else if (k === given) b.dataset.r = 'wrong';
+      if (g.why[k]) b.insertAdjacentHTML('afterend', `<p class="why ${k === g.answer ? 'why--right' : k === given ? 'why--wrong' : ''}">${escH(g.why[k])}</p>`);
     });
   }
   const last = idx === items.length - 1;

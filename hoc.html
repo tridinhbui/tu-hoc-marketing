@@ -20,7 +20,7 @@
 <script src="assets/js/data/exam-items.js?v=7"></script>
 <script src="assets/js/data/exams.js?v=7"></script>
 <script src="assets/js/app.js?v=14"></script>
-<script src="assets/js/exam.js?v=5"></script>
+<script src="assets/js/exam.js?v=6"></script>
 <script>
 appShell('hoc.html');
 const app=document.getElementById('app');
@@ -101,18 +101,23 @@ function signalHTML(s){
       <span class="small">1–3 phút · <span class="gold">+${XP.daily} XP</span> · giữ chuỗi ngày</span></div>
     <p class="signal__stem">${it.stem}</p>
     <div class="signal__opts">${it.options.map(o=>{
-      const st=res?(o.k===it.answer?'right':o.k===res.given?'wrong':''):'';
-      return `<button class="opt" data-sig="${o.k}" ${res?'disabled':''} ${st?`data-r="${st}"`:''}>${escH(o.t)}${res&&(st||o.k===it.answer)?`<small>${escH(it.why[o.k]||'')}</small>`:''}</button>`}).join('')}</div>
+      const why=(res&&res.why)||{}, st=res?(o.k===res.answer?'right':o.k===res.given?'wrong':''):'';
+      return `<button class="opt" data-sig="${o.k}" ${res?'disabled':''} ${st?`data-r="${st}"`:''}>${escH(o.t)}${res&&why[o.k]?`<small>${escH(why[o.k])}</small>`:''}</button>`}).join('')}</div>
     ${res?`<div class="signal__after">
       <span class="${res.ok?'ok':'bad'}">${res.ok?'Đúng — đọc được tín hiệu.':'Chưa đúng — câu này đã vào hàng ôn.'}</span>
       ${sk?`<span class="skillup">${escH(sk.t)}${res.ok?' ↑':' · cần luyện'}</span>`:''}
-      <div class="stickynote"><span class="eyebrow">Thẻ insight</span>${escH(it.why[it.answer]||'')}</div>
+      ${(res.why||{})[res.answer]?`<div class="stickynote"><span class="eyebrow">Thẻ insight</span>${escH(res.why[res.answer])}</div>`:''}
       <a class="btn btn--ghost" href="${res.ok?'quiz.html':'on-loi.html'}">${res.ok?'Luyện tiếp 5 câu →':'Luyện lại chỗ sai →'}</a></div>`:''}
   </section>`;
 }
-function answerSignal(k){
-  const s=S.get(), it=signalItem(s), ok=gradeItem(it,k).ok;
-  S.set({daily:{...(s.daily||{}),[today()]:{id:it.id,given:k,ok}}});
+async function answerSignal(k){
+  const s=S.get(), it=signalItem(s);
+  document.querySelectorAll('[data-sig]').forEach(b=>b.disabled=true);
+  let g; try{ g=await gradeAsync(it,k,'practice'); }
+  catch(e){ document.querySelectorAll('[data-sig]').forEach(b=>b.disabled=false); toast(GRADE_OFFLINE); return; }
+  const ok=g.ok;
+  /* lưu đáp án + lời giải server trả về để lần mở sau vẫn hiện, không cần tải lại đáp án */
+  S.set({daily:{...(s.daily||{}),[today()]:{id:it.id,given:k,ok,answer:g.answer,why:g.why}}});
   if(!ok) (it.teaches||[]).slice(0,1).forEach(pid=>logError(conceptCode(pid),it.source||pid));
   award('daily',today());
   render(); document.getElementById('signal').scrollIntoView({block:'start'});

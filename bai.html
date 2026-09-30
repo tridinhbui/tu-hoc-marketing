@@ -40,7 +40,7 @@
   if(m) document.write('<script src="assets/js/data/bai/'+m[1]+'.js?v='+BAI_V+'"><\/script>'); })();</script>
 <script src="assets/js/data/exams.js?v=7"></script>
 <script src="assets/js/app.js?v=14"></script>
-<script src="assets/js/exam.js?v=5"></script>
+<script src="assets/js/exam.js?v=6"></script>
 <script>
 appShell('');
 const key=qp('id')||nextLesson()||ALL[0].key;
@@ -82,16 +82,23 @@ function qHTML(it,id,{note=''}={}){
     : it.options.map(o=>`<button type="button" class="opt" data-q="${id}" data-k="${o.k}">${o.t}</button>`).join('');
   return `<div class="q" id="${id}">${note}${head}<p class="q__stem">${it.stem}</p>${body}<div class="fb" aria-live="polite"></div></div>`;
 }
-/* Hiện đáp án và lời giải của MỌI phương án (đặc tả: lời giải theo nhiễu). */
-function reveal(id,it,given,{showWhy=true}={}){
-  const box=document.getElementById(id), g=gradeItem(it,given), fb=box.querySelector('.fb');
-  if(it.type==='calc'){ box.querySelectorAll('input,button').forEach(x=>x.disabled=true);
-    fb.innerHTML=`<div class="verdict" data-v="${g.ok?'ok':'bad'}" style="margin-top:10px"><b>${g.ok?'Đúng.':'Chưa đúng.'}</b> Đáp án: <b>${fmt(it.ans)} ${escH(it.unit||'')}</b>
+/* Hiện đáp án và lời giải. Chấm tại chỗ nếu còn đáp án (bản trên máy), không thì server chấm
+   và chỉ trả lời giải của đáp án đúng và phương án đã chọn. Lỗi mạng: không khoá câu, cho thử lại. */
+async function reveal(id,it,given,{showWhy=true,context='practice'}={}){
+  const box=document.getElementById(id), fb=box.querySelector('.fb');
+  box.querySelectorAll('input,button').forEach(x=>x.disabled=true);
+  let g;
+  try{ g=await gradeAsync(it,given,context); }
+  catch(e){ box.querySelectorAll('input,button').forEach(x=>x.disabled=false);
+    fb.innerHTML=`<p class="small bad" style="margin-top:8px">${GRADE_OFFLINE}</p>`; return null; }
+  if(it.type==='calc'){
+    fb.innerHTML=`<div class="verdict" data-v="${g.ok?'ok':'bad'}" style="margin-top:10px"><b>${g.ok?'Đúng.':'Chưa đúng.'}</b>${g.ans!==undefined?` Đáp án: <b>${fmt(g.ans)} ${escH(g.unit||'')}</b>`:''}
       ${!g.ok&&g.err?`<br><span class="small">Lỗi hay gặp: ${escH(ERRORS[g.err]||g.err)}</span>`:''}
-      ${showWhy?`<ol class="small" style="margin:8px 0 0 18px">${(it.steps||[]).map(x=>`<li>${x}</li>`).join('')}</ol>`:''}</div>`;
-  } else box.querySelectorAll('.opt').forEach(b=>{ b.disabled=true;
-    if(b.dataset.k===it.answer) b.dataset.r='right'; else if(b.dataset.k===given) b.dataset.r='wrong';
-    if(showWhy) b.insertAdjacentHTML('afterend',`<p class="why ${b.dataset.k===it.answer?'why--right':b.dataset.k===given?'why--wrong':''}">${escH(it.why[b.dataset.k]||'')}</p>`); });
+      ${showWhy&&g.steps.length?`<ol class="small" style="margin:8px 0 0 18px">${g.steps.map(x=>`<li>${x}</li>`).join('')}</ol>`:''}</div>`;
+  } else box.querySelectorAll('.opt').forEach(b=>{
+    const k=b.dataset.k;
+    b.dataset.r = k===g.answer?'right':k===given?'wrong':'';
+    if(showWhy&&g.why[k]) b.insertAdjacentHTML('afterend',`<p class="why ${k===g.answer?'why--right':k===given?'why--wrong':''}">${escH(g.why[k])}</p>`); });
   return g;
 }
 /* Sai ở bài (checkpoint, quiz, ôn) đều vào hàng ôn: lỗi số theo mã, lỗi hiểu theo nguyên lý. */
@@ -342,10 +349,10 @@ const ANS={}, SOLID_ANS={};
 function wireQuestions(){
   const item=id=>id==='pre'?PLAN.pre:id==='cp'?PLAN.cp:id.startsWith('qz')?PLAN.quiz[+id.slice(2)]:id.startsWith('sd')?(window.SOLID||[])[+id.slice(2)]:null;
   const firstTry=()=>{ const st=lessonState(key); return !(st&&st.score!=null); };
-  const answer=(id,given)=>{
+  const answer=async(id,given)=>{
     const it=item(id); if(!it) return;
-    if(id==='pre'){ reveal(id,it,given); return; }                         // đoán trước: không chấm, không ghi
-    if(id==='cp'){ const g=reveal(id,it,given); logMiss(it,g);
+    if(id==='pre'){ reveal(id,it,given,{context:'practice'}); return; }                         // đoán trước: không chấm, không ghi
+    if(id==='cp'){ const g=await reveal(id,it,given,{context:'checkpoint'}); if(!g) return; logMiss(it,g);
       const s=S.get(); S.set({cp:{...(s.cp||{}),[key]:today()}});
       const r=document.getElementById('read2'); if(r) r.classList.remove('locked'); document.getElementById('cpNote')?.remove(); return; }
     if(id.startsWith('qz')){
@@ -353,8 +360,8 @@ function wireQuestions(){
         ANS[id]=given; const box=document.getElementById(id);
         box.querySelectorAll('.opt').forEach(b=>b.dataset.r=b.dataset.k===given?'picked':'');
         const sb=document.getElementById('qSubmit'); if(sb) sb.disabled=Object.keys(ANS).length<PLAN.quiz.length; return; }
-      const g=reveal(id,it,given); logMiss(it,g); return; }                   // làm lại: luyện, không đổi điểm
-    if(id.startsWith('sd')){ const g=reveal(id,it,given); logMiss(it,g); SOLID_ANS[id]=g.ok;
+      const g=await reveal(id,it,given,{context:'practice'}); if(g) logMiss(it,g); return; }   // làm lại: luyện, không đổi điểm
+    if(id.startsWith('sd')){ const g=await reveal(id,it,given,{context:'review'}); if(!g) return; logMiss(it,g); SOLID_ANS[id]=g.ok;
       if(Object.keys(SOLID_ANS).length===(window.SOLID||[]).length){
         const ok=Object.values(SOLID_ANS).filter(Boolean).length;
         if(ok>=2){ markSolid(key); toast('Bài đã lên Vững'); setTimeout(render,900); }
@@ -369,10 +376,14 @@ function wireQuestions(){
 
   /* nộp quiz: chấm một lần, lưu điểm lần đầu, rồi mới hiện lời giải */
   const sb=document.getElementById('qSubmit');
-  if(sb) sb.onclick=()=>{
+  if(sb) sb.onclick=async()=>{
+    sb.disabled=true; sb.textContent='Đang chấm…';
     const before=S.get(), sk=skillOfLesson(key), skBefore=sk?skillPct(sk,before):0, jBefore=journeyState(before);
     let right=0; const wrong=[];
-    PLAN.quiz.forEach((it,i)=>{ const id='qz'+i; const g=reveal(id,it,ANS[id]); if(g.ok) right++; else wrong.push(it); logMiss(it,g); });
+    for(let i=0;i<PLAN.quiz.length;i++){ const it=PLAN.quiz[i], g=await reveal('qz'+i,it,ANS['qz'+i],{context:'lesson'});
+      if(!g){ sb.disabled=false; sb.textContent='Nộp lại'; toast(GRADE_OFFLINE); return; }
+      if(g.ok) right++; else wrong.push(it); logMiss(it,g); }
+    if(API.user) api('/lessons/'+encodeURIComponent(key)+'/complete',{method:'POST',body:{}}).catch(()=>{});   // server lưu điểm lần đầu
     const rec=completeLesson(key,right,PLAN.quiz.length);
     sb.remove();
     const s=S.get(); document.querySelector('#stRow .state')?.remove();

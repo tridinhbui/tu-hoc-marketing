@@ -72,6 +72,34 @@ function gradeItem(it, given) {
   return { ok: given === it.answer, err: null };
 }
 
+/* ---------------- chấm qua máy chủ ----------------
+   Bản xuất bản đã bỏ đáp án và lời giải khỏi các file trình duyệt tải về (tools_build.mjs).
+   Còn đáp án tại chỗ (bản chạy trên máy) thì chấm tại chỗ; không còn thì hỏi server — server chấm
+   và chỉ trả lời giải của đáp án đúng và của phương án đã chọn. Kết quả đưa về một dạng chung. */
+const hasKey = (it) => it.type === 'calc' ? it.ans !== undefined : it.answer !== undefined;
+async function gradeAsync(it, given, context = 'practice') {
+  if (hasKey(it)) {
+    const g = gradeItem(it, given);
+    return { ...g, answer: it.answer, ans: it.ans, unit: it.unit, why: it.why || {}, steps: it.steps || [], full: true };
+  }
+  if (given === undefined || given === null || given === '') return { ok: false, err: null, why: {}, steps: [], full: false, blank: true };
+  const r = await api('/answers', { method: 'POST', body: { question_id: it.id, chosen: given, context } });
+  const why = {};
+  if (r.explanation && r.answer !== undefined) why[r.answer] = r.explanation;
+  if (r.option_feedback && given !== undefined) why[given] = r.option_feedback;
+  return { ok: !!r.correct, err: r.error_code || null, answer: r.answer, ans: r.answer, unit: r.unit ?? it.unit,
+           why, steps: r.steps || [], full: false, xp: r.xp || 0 };
+}
+/* Chấm cả đề: tuần tự để không dội server, trả về dạng giống gradeExam. */
+async function gradeExamAsync(sid, items, answers, context = 'practice') {
+  const bp = EXAMS[sid], marks = [];
+  for (const it of items) marks.push({ it, given: answers[it.id], ...(await gradeAsync(it, answers[it.id], context)) });
+  const right = marks.filter(m => m.ok).length, coreWrong = marks.filter(m => m.it.core && !m.ok).length;
+  const passed = right >= bp.pass && coreWrong <= bp.coreMiss;
+  return { marks, right, total: items.length, coreWrong, passed, reason: passed ? null : (right < bp.pass ? 'thieu-diem' : 'sai-cot-loi') };
+}
+const GRADE_OFFLINE = 'Chưa chấm được: cần kết nối máy chủ. Thử lại sau ít phút.';
+
 function gradeExam(sid, items, answers) {
   const bp = EXAMS[sid];
   const marks = items.map(it => ({ it, given: answers[it.id], ...gradeItem(it, answers[it.id]) }));
