@@ -45,6 +45,8 @@ const QK = {
 async function needLogin(app, what) {
   const u = await account();
   if (API.on === false) { app.innerHTML = `<section class="section"><span class="mono mono--red">Chưa bật</span><h1 class="h2" style="margin:12px 0">${what} cần máy chủ.</h1><p class="muted">Bản bạn đang xem chỉ có phần tĩnh.</p></section>`; return null; }
+  if (!u && !(await canLogin())) { app.innerHTML = `<section class="section"><span class="mono mono--red">Chưa mở</span><h1 class="h2" style="margin:12px 0">${what} sẽ mở khi đăng nhập được bật.</h1>
+    <p class="muted">Tính năng này lưu kết quả ở máy chủ nên cần tài khoản. Trong lúc chờ, mọi bài học, quiz, case và đề thi vượt chặng vẫn dùng được.</p><a class="btn" style="margin-top:14px" href="hoc.html">Về trang Hôm nay</a></section>`; return null; }
   if (!u) { app.innerHTML = `<section class="section"><span class="mono mono--red">Cần đăng nhập</span><h1 class="h2" style="margin:12px 0">${what} cần tài khoản.</h1>
     <p class="muted">Kết quả, xu và XP được chấm và lưu ở máy chủ.</p><a class="btn" style="margin-top:14px" href="tai-khoan.html?next=${encodeURIComponent(location.pathname.slice(1) + location.search)}">Đăng nhập</a></section>`; return null; }
   return u;

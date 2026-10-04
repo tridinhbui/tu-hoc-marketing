@@ -17,12 +17,15 @@ const diffDays=(a,b)=>Math.round((new Date(b+'T00:00:00')-new Date(a+'T00:00:00'
 function lessonMeta(key){
   const [kind,id]=key.split(':');
   if(kind==='B'){ const b=typeof BAI_INDEX!=='undefined'&&BAI_INDEX.find(x=>x.id===key); if(!b) return null;
-    return {key,kind,t:b.t,read:b.read,src:(typeof BAI!=='undefined'&&BAI[key])||null}; }
+    return {key,kind,t:b.t,read:b.read,c:b.c||'',src:(typeof BAI!=='undefined'&&BAI[key])||null}; }
   if(kind==='L'){ const l=LESSONS.find(x=>String(x.day)===id); if(!l) return null;
     return {key,kind,t:l.t,read:l.read||'6 phút',src:l}; }
   const p=PRINCIPLES.find(x=>x.id===id); if(!p) return null;
   return {key,kind,t:p.vi+(p.t&&p.t!==p.vi?' · '+p.t:''),read:'6 phút',src:p};
 }
+/* Tìm bài: khớp tiêu đề, tên khái niệm, tên module và từ khoá module (Meta, GA4, KOL…), không dấu, không phân biệt hoa thường. */
+const normVN=t=>String(t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d');
+function lessonHay(key){ const w=where(key), m=lessonMeta(key); return normVN([m&&m.t, m&&m.c, w&&w.mod.t, w&&w.mod.tags, w&&w.stage.t].join(' ')); }
 const ALL=STAGES.flatMap(s=>s.mods.flatMap(m=>m.lessons.map(k=>({key:k,stage:s,mod:m}))));
 const where=key=>ALL.find(x=>x.key===key);
 function pathLessons(pathId){ const p=PATHS.find(x=>x.id===pathId); return (p&&p.lessons)||ALL.map(x=>x.key); }
@@ -286,9 +289,10 @@ function appShell(here){
       <span>Tự Học Marketing Case · miễn phí. Mọi số liệu trong ví dụ là minh hoạ trừ khi ghi rõ nguồn.</span>
       <span><a href="gioi-thieu.html">Giới thiệu</a> · <a href="tap-chi.html">Tạp chí Nhìn thấy</a> · <a href="roadmap.html">Bàn làm việc</a></span>
     </div></footer><div class="toast" id="toast" role="status" aria-live="polite"></div>`);
-  account().then(u=>{ const a=document.getElementById('acct'); if(!a) return;
-    a.textContent = u ? u.name : (API.on ? 'Đăng nhập' : 'Tài khoản');
-    if(!u && API.on){                       // chưa đăng nhập: nút rõ ràng, quay lại đúng trang đang đọc
+  Promise.all([account(),canLogin()]).then(([u,can])=>{ const a=document.getElementById('acct'); if(!a) return;
+    a.textContent = u ? u.name : (can ? 'Đăng nhập' : 'Lưu trên máy này');
+    if(!u && !can){ a.removeAttribute('href'); a.style.cssText='opacity:.7;cursor:default'; a.title='Tiến độ đang lưu trong trình duyệt này. Đăng nhập chưa được bật.'; }
+    if(!u && can){                       // chưa đăng nhập: nút rõ ràng, quay lại đúng trang đang đọc
       const here=(location.pathname.split('/').pop()||'hoc.html')+location.search;
       a.className='btn btn--primary side__acct';
       if(!/^tai-khoan\.html/.test(here)) a.href='tai-khoan.html?next='+encodeURIComponent(here); }
@@ -470,6 +474,13 @@ async function account(){
   if(API.user!==undefined) return API.user;
   try{ API.user=(await api('/me')).user; }catch(e){ API.user=null; }
   return API.user;
+}
+/* Đăng nhập chỉ "có thật" khi máy chủ có ít nhất một cách gửi link/đăng nhập (email hoặc Google).
+   Chưa cấu hình thì mọi nút "Đăng nhập" phải ẩn — không dẫn người học vào trang trống. */
+async function canLogin(){
+  if(API.login!==undefined) return API.login;
+  try{ const p=await api('/auth/providers'); API.login=!!(p.email||p.google); API.providers=p; }catch(e){ API.login=false; }
+  return API.login;
 }
 /* Gộp hai bản trạng thái — cùng quy tắc với server (api/src/state.js). */
 function mergeState(a={},b={}){

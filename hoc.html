@@ -13,13 +13,13 @@
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
 <script src="assets/js/data/curriculum.js?v=3"></script>
-<script src="assets/js/data/bai-index.js?v=6"></script>
+<script src="assets/js/data/bai-index.js?v=7"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
 <script src="assets/js/data/rewards.js?v=1"></script>
 <script src="assets/js/data/exam-items.js?v=7"></script>
 <script src="assets/js/data/exams.js?v=7"></script>
-<script src="assets/js/app.js?v=14"></script>
+<script src="assets/js/app.js?v=15"></script>
 <script src="assets/js/exam.js?v=6"></script>
 <script>
 appShell('hoc.html');
@@ -51,7 +51,7 @@ function onboarding(){
     </section>`;
   } else {
     const g=GOALS.find(x=>x.id===ob.goal), p=PATHS.find(x=>x.id===g.path), lv=START_LEVELS[ob.lv];
-    const first=(p.lessons||ALL.map(x=>x.key)).find(k=>lessonOpen(k)) || nextLesson();
+    const first=p.lessons?p.lessons.find(k=>!lessonState(k))||p.lessons[0]:(ALL.map(x=>x.key).find(k=>lessonOpen(k))||nextLesson());   // bài thuộc lộ trình luôn mở, đầu tiên theo thứ tự hành trình
     const fm=lessonMeta(first), fw=where(first);
     const gaps=SKILLS.map(sk=>({...sk,need:g.need[sk.id]})).sort((a,b)=>b.need-a.need).slice(0,3);
     const skip=ob.lv>=2;

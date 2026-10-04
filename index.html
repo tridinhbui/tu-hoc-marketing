@@ -294,13 +294,14 @@
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
 <script src="assets/js/data/curriculum.js?v=3"></script>
+<script src="assets/js/data/bai-index.js?v=7"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
 <script src="assets/js/data/exam-items.js?v=6"></script>
-<script src="assets/js/app.js?v=14"></script>
+<script src="assets/js/app.js?v=15"></script>
 <script>
 /* Mọi con số trên trang tính từ dữ liệu — không có số nào gõ tay. */
-const nLessons = ALL.length, nItems = EXAM_ITEMS.length, nCases = (typeof CASES !== 'undefined' ? CASES.length : 0);
+const nLessons = ALL.length, nItems = EXAM_ITEMS.length + (typeof BAI_INDEX !== 'undefined' ? BAI_INDEX.length * 7 : 0), nCases = (typeof CASES !== 'undefined' ? CASES.length : 0);
 const $ = (id) => document.getElementById(id);
 
 $('sub').textContent = `${nLessons} bài học 6 phút mở bằng một tình huống thật, ${nItems} câu luyện có lời giải cho từng phương án, `
@@ -327,7 +328,7 @@ $('pvMain').innerHTML = `
   <p style="font-size:14.5px;line-height:1.6;margin:8px 0 0">${EX.ctx}</p>
   <table class="ex"><tbody>${EX.rows.map(([a, b]) => `<tr><td>${a}</td><td>${b}</td></tr>`).join('')}</tbody></table>
   <div class="kv"><div><span class="lbl">ROAS</span><b>4 lần</b></div><div><span class="lbl">Lãi gộp</span><b>60 tr</b></div>
-    <div><span class="lbl">Lãi thật</span><b class="hl">${EX.ans} tr</b></div></div>`;
+    <div><span class="lbl">Lãi thật</span><b class="hl">${200 * 0.3 - 50} tr</b></div></div>`;
 
 const Q = { q: 'ROAS 4 lần nghĩa là chiến dịch lãi 150 triệu?', opts: [
   ['a', 'Sai: lãi thật chỉ 10 triệu', true], ['b', 'Đúng: 200 − 50 = 150 triệu', false]],
@@ -387,28 +388,30 @@ function joinForm() {
   };
 }
 
-account().then(async (u) => {
+Promise.all([account(), canLogin()]).then(async ([u, can]) => {
   if (u) {
     $('hdLogin').textContent = u.name; $('hdLogin').href = 'tai-khoan.html';
     $('hdGo').textContent = 'Tiếp tục học →';
     $('goMain').textContent = started ? 'Tiếp tục học →' : 'Bắt đầu bài đầu tiên →';
     $('bar').hidden = true; $('join').hidden = true;
     $('ctaNote').textContent = `Đã đăng nhập · ${u.email}`;
-  } else if (API.on) {
+  } else if (can) {
     $('goMain').href = 'tai-khoan.html?next=hoc.html';
     $('ctaNote').innerHTML = 'Đăng nhập bằng email, không cần mật khẩu. Hoặc <a href="hoc.html">học ngay không cần tài khoản</a>.';
     joinForm();
   } else {
     /* bản tĩnh: không có máy chủ đăng nhập */
     $('hdLogin').hidden = true; $('barLogin').hidden = true; $('join').hidden = true;
-    $('ctaNote').textContent = 'Tiến độ lưu trong trình duyệt này.';
+    $('goMain').href = 'hoc.html';
+    $('ctaNote').textContent = 'Không cần tài khoản — tiến độ lưu trong trình duyệt này.';
+    const bt = $('bar').querySelector('span'); if (bt) bt.innerHTML = '★ Toàn bộ bài học ở đây <b>miễn phí mãi mãi</b>. Không cần tài khoản — vào học ngay, tiến độ lưu trong trình duyệt của bạn.';
   }
-  if (!u && started) $('goMain').textContent = API.on ? 'Đăng nhập để giữ tiến độ →' : 'Tiếp tục hành trình →';
+  if (!u && started) $('goMain').textContent = can ? 'Đăng nhập để giữ tiến độ →' : 'Tiếp tục hành trình →';
 
   /* số người học thật — chỉ khi máy chủ trả về */
   if (API.on) try {
     const r = await (await fetch('/api/stats')).json();
-    if (typeof r.learners === 'number') {
+    if (typeof r.learners === 'number' && r.learners >= 100) {   // số nhỏ thì không khoe
       $('statsLbl').innerHTML = '<span class="live">LIVE</span>'; $('statsSub').textContent = 'cập nhật mỗi 5 phút';
       rows([['người học', r.learners], ['tham gia 7 ngày qua', r.joined_7d], ['bài học', nLessons], ['câu luyện có lời giải', nItems]]);
     }

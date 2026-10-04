@@ -28,14 +28,14 @@
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
 <script src="assets/js/data/curriculum.js?v=3"></script>
-<script src="assets/js/data/bai-index.js?v=6"></script>
+<script src="assets/js/data/bai-index.js?v=7"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/exam-items.js?v=7"></script>
 <script>/* module bài mới: tải câu hỏi của module đó */
 (()=>{ const m=new URLSearchParams(location.search).get('mod')||''; if(BAI_MODS.some(x=>x.id===m))
   document.write('<script src="assets/js/data/bai/'+m+'.js?v='+BAI_V+'"><\/script>'); })();</script>
 <script src="assets/js/data/exams.js?v=7"></script>
-<script src="assets/js/app.js?v=14"></script>
+<script src="assets/js/app.js?v=15"></script>
 <script src="assets/js/exam.js?v=6"></script>
 <script>
 appShell('luyen.html');

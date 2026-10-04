@@ -15,7 +15,7 @@
 <script src="assets/js/data/curriculum.js?v=3"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
-<script src="assets/js/app.js?v=14"></script>
+<script src="assets/js/app.js?v=15"></script>
 <script>
 
 appShell('tai-khoan.html');
@@ -34,6 +34,11 @@ async function render(){
     toast('Đã đăng nhập'); history.replaceState(null,'','tai-khoan.html'); }
   if(!u){
     let pv={email:true,google:false}; try{ pv=await api('/auth/providers'); }catch(e){}
+    if(!pv.email&&!pv.google){ app.innerHTML=`<section class="section"><span class="mono mono--red">Tài khoản</span>
+      <h1 class="h1" style="margin:14px 0">Chưa cần đăng nhập.</h1>
+      <p class="lede">Đăng nhập chưa được bật. Mọi bài học, quiz, case và đề thi vượt chặng vẫn dùng đầy đủ — tiến độ lưu ngay trong trình duyệt này.
+        Khi đăng nhập mở, bạn sẽ giữ được tiến độ trên mọi thiết bị.</p>
+      <p style="margin-top:18px"><a class="btn btn--primary" href="${safe(qp('next'))||'hoc.html'}">Vào học ngay →</a></p></section>`; return; }
     app.innerHTML=`<section class="section">
       <span class="mono mono--red">Tài khoản · miễn phí</span>
       <h1 class="h1" style="margin:14px 0 14px">Đăng nhập<br><em>không cần mật khẩu.</em></h1>
