@@ -31,9 +31,9 @@
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
 <script src="assets/js/data/exam-items.js?v=7"></script>
-<script src="assets/js/data/exams.js?v=7"></script>
+<script src="assets/js/data/exams.js?v=8"></script>
 <script src="assets/js/app.js?v=15"></script>
-<script src="assets/js/exam.js?v=6"></script>
+<script src="assets/js/exam.js?v=7"></script>
 <script>
 appShell('thi.html');
 const app = document.getElementById('app');
@@ -69,9 +69,8 @@ function intro(){
     </div>
 
     <div class="note" style="margin-top:22px">
-      <b>Qua phải thoả cả hai:</b> đúng ít nhất ${BP.pass}/${BP.size},
-      <b>và</b> sai không quá ${BP.coreMiss} câu trong ${BP.core} câu cốt lõi.
-      Chỉ tính tổng điểm thì gỡ được ở câu dễ mà vẫn không nắm phần chính — nên có điều kiện thứ hai.
+      Đề rút ngẫu nhiên từ <b>toàn bộ bài của chặng</b>, mỗi lần một bộ khác. Qua khi đúng ít nhất <b>${BP.pass}/${BP.size}</b> (80%).
+      Trượt thì nghỉ 60 phút rồi thi lại — dùng thời gian đó đọc lại phần "Cần xem lại" ở kết quả.
     </div>
 
     ${st.passed ? `<div class="verdict" style="margin-top:22px">
@@ -81,12 +80,12 @@ function intro(){
 
     ${lock ? `<div class="note note--red" style="margin-top:18px">
         <b>Đang khoá tới ${new Date(lock).toLocaleString('vi-VN')}.</b>
-        Trượt thì nghỉ ${Math.round((lock-Date.now())/3600e3)} giờ nữa — và dùng thời gian đó để ôn
+        Còn ${Math.max(1,Math.round((lock-Date.now())/60000))} phút nữa mở lại — dùng thời gian đó để ôn
         ${due.length ? `<b>${due.length} mã lỗi</b> đang tới hạn` : 'lại các bài của chặng'}.
         <div style="margin-top:12px"><a class="btn btn--ghost" href="on-loi.html">Sang ôn lỗi</a></div>
       </div>` : ''}
 
-    ${pool.length < target ? `<div class="note" style="margin-top:18px">
+    ${(pool.length < target && API.on === false) ? `<div class="note" style="margin-top:18px">
         <span class="mono">Ghi chú thẳng thắn</span><br>
         Ngân hàng chặng này có ${pool.length} câu, mức cần để thi lại không trùng đề là ${target}.
         Thi nhiều lần sẽ gặp lại câu cũ.
@@ -150,8 +149,9 @@ function caseIntro(){
 }
 
 /* ---------------- làm bài ---------------- */
-function start(){
-  items = buildExam(SID); idx = 0; given = {}; startedAt = Date.now();
+async function start(){
+  app.innerHTML = '<section class="section"><p class="lede">Đang chuẩn bị đề…</p></section>';
+  items = await drawExam(SID); idx = 0; given = {}; startedAt = Date.now();
   clearInterval(tick); tick = setInterval(()=>{
     const el = document.getElementById('clock'); if(!el) return;
     const left = BP.minutes*60000 - (Date.now()-startedAt);
@@ -225,8 +225,8 @@ async function finish(){
       : `<h1 class="h1" style="margin:14px 0 8px">Chưa qua.</h1>
          <p class="lede">${res.reason === 'thieu-diem'
             ? `Đúng ${res.right}/${res.total}, cần ${BP.pass}.`
-            : `Đúng ${res.right}/${res.total} — đủ điểm, nhưng sai ${res.coreWrong} câu cốt lõi (cho phép ${BP.coreMiss}).`}
-            Đề mở lại sau 24 giờ.</p>`}
+            : `Đúng ${res.right}/${res.total}.`}
+            Đề mở lại sau 60 phút.</p>`}
 
     ${missed.length ? `<div class="missed">
       <span class="mono">Cần xem lại</span>

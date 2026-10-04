@@ -6,6 +6,14 @@
 /* ---------------- dựng đề ---------------- */
 const shuf = (a) => a.map(x => [Math.random(), x]).sort((p, q) => p[0] - q[0]).map(p => p[1]);
 
+/* Đề từ máy chủ: rút từ toàn bộ kho chặng (cả bài mới), không có đáp án. Không có máy chủ thì dựng đề tại chỗ. */
+async function drawExam(sid) {
+  try {
+    const r = await api('/exams/draw/' + sid);
+    if (r.items && r.items.length >= 10) return r.items.map(it => it.options ? { ...it, options: shuf(it.options) } : it);
+  } catch (e) { /* rơi xuống đề tại chỗ */ }
+  return buildExam(sid);
+}
 function buildExam(sid) {
   const bp = EXAMS[sid]; if (!bp) return null;
   const pool = EXAM_ITEMS.filter(x => x.stage === sid);
@@ -111,7 +119,7 @@ function gradeExam(sid, items, answers) {
 }
 
 /* ---------------- ghi kết quả ---------------- */
-const LOCK_HOURS = 24;
+const LOCK_HOURS = 1;   // trượt thì nghỉ 60 phút (khớp spec chấm ở server)
 
 function examState(sid, s = S.get()) { return (s.exams || {})[sid] || { attempts:0, passed:null, lockUntil:null, best:0 }; }
 function examLocked(sid, s = S.get()) {

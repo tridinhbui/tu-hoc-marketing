@@ -42,6 +42,7 @@ async function route(request, env, url) {
   if (p === '/api/answers' && m === 'POST') return ln.answer(request, env);
   if ((mm = p.match(/^\/api\/lessons\/([LPB]:[A-Za-z0-9_.-]+)\/complete$/)) && m === 'POST') return ln.completeLesson(request, env, decodeURIComponent(mm[1]));
   if (p === '/api/review/session' && m === 'GET') return ln.reviewSessionApi(request, env);
+  if ((mm = p.match(/^\/api\/exams\/draw\/(s\d{1,2})$/)) && m === 'GET') return ln.stageExamDraw(request, env, mm[1]);
   if ((mm = p.match(/^\/api\/exams\/stage\/(s\d{1,2})$/)) && m === 'GET') return ln.stageExamGet(request, env, mm[1]);
   if ((mm = p.match(/^\/api\/exams\/stage\/(s\d{1,2})$/)) && m === 'POST') return ln.stageExamPost(request, env, mm[1]);
   if (p === '/api/placement' && m === 'GET') return ln.placementGet(request, env);
