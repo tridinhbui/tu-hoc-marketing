@@ -10,7 +10,11 @@ const shuf = (a) => a.map(x => [Math.random(), x]).sort((p, q) => p[0] - q[0]).m
 async function drawExam(sid) {
   try {
     const r = await api('/exams/draw/' + sid);
-    if (r.items && r.items.length >= 10) return r.items.map(it => it.options ? { ...it, options: shuf(it.options) } : it);
+    /* Đề từ server không mang `teaches`; lấy bài gốc của câu làm chỗ "cần xem lại" và mã lỗi khái niệm. */
+    if (r.items && r.items.length >= 10) return r.items.map(it => {
+      const x = { ...it, teaches: it.teaches || (it.lesson ? [it.lesson] : []) };
+      return x.options ? { ...x, options: shuf(x.options) } : x;
+    });
   } catch (e) { /* rơi xuống đề tại chỗ */ }
   return buildExam(sid);
 }
