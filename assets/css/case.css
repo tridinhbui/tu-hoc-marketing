@@ -363,3 +363,19 @@ body.has-side .foot{margin-left:0}
 }
 @media print{.side,.mtop{display:none!important}body.has-side{padding-left:0}}
 @media(max-height:680px){.side__me .meter,.side__me small{display:none}.side__g{padding-top:10px}.side__nav a{padding:7px 12px}}
+
+/* menu 4 mục: mục con chỉ mở khi đang ở trong nhóm */
+.side__kids{display:grid;gap:1px;margin:2px 0 8px 22px;padding-left:14px;border-left:2px solid var(--ink-12)}
+.side__kids a{padding:6px 10px;font-size:14px;border-radius:8px}
+.side__nav .side__top{font-weight:600}
+
+/* 7 bài đầu */
+.first7{padding:clamp(18px,3vw,30px) 0}
+.first7__l{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+.first7__l a{display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;padding:14px 16px;background:var(--paper);border-radius:12px;text-decoration:none;border:1.5px solid transparent}
+.first7__l a:hover{border-color:var(--terra)}
+.first7__n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--ink-06);font-weight:700;font-size:13px}
+.first7__l li:first-child .first7__n{background:var(--terra);color:#fff}
+.first7__l li[data-st=done] .first7__n{background:var(--olive);color:#fff}
+.first7__t{font-family:var(--serif);font-size:1.08rem;line-height:1.3}
+.first7__m{font-size:12.5px;color:var(--ink-50);white-space:nowrap}

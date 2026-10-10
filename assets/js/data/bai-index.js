@@ -794,3 +794,29 @@ const PATH_MODS = {
     p.lessons = all.map((k, n) => ({ k, n })).sort((a, b) => stepOf(a.k) - stepOf(b.k) || pos(a.k) - pos(b.k) || a.n - b.n).map(x => x.k);
   });
 })();
+
+/* ---------------- bài mở đầu theo mục tiêu ----------------
+   Người mới thấy đúng 7 bài đầu, chọn theo việc họ muốn làm — không phải bài đầu tiên của chương trình.
+   Sau 7 bài này mới tới phần còn lại của lộ trình (thứ tự theo hành trình 9 bước ở trên). */
+const PATH_START = {
+  full:   ['B:ob01-01','B:ob01-02','B:ob01-03','B:ob01-04','B:ob02-03','B:ob03-01','B:ob05-01'],
+  owner:  ['B:ob01-02','B:ob01-01','B:ob01-04','B:kh01-02','B:ob02-03','B:tp11-02','B:kn03-01'],
+  perf:   ['L:71','B:ob07-01','B:ob07-04','B:dl01-01','B:kn06-01','B:dl03-01','B:dl03-02'],
+  growth: ['B:dl01-01','B:dl02-01','B:dl04-02','B:tu05-01','B:tu04-01','B:dl03-02','B:dl04-03'],
+  content:['B:ob05-01','B:kh04-01','B:tp07-01','B:tp07-03','B:kn04-01','B:tp09-02','B:tn03-02'],
+  brand:  ['B:ob04-01','B:kh01-01','B:tp01-01','B:tp02-01','B:tp03-01','B:tp04-01','B:tp06-01'],
+  pmm:    ['B:kh03-01','B:kh02-01','B:tp01-01','B:tp11-03','B:tn05-01','B:dl01-01','B:in04-01'],
+  mt:     ['B:ob07-01','B:gt01-01','B:gt02-01','B:tp01-01','B:dl03-01','B:in05-01','B:in05-02'],
+  case:   ['B:gt01-01','B:gt02-01','B:gt04-01','B:dl02-01','B:dl03-02','B:in04-01','B:in05-02'],
+};
+(() => {
+  if (typeof PATHS === 'undefined' || typeof STAGES === 'undefined') return;
+  const have = new Set(STAGES.flatMap(st => st.mods.flatMap(m => m.lessons)));
+  const everything = STAGES.flatMap(st => st.mods.flatMap(m => m.lessons));
+  PATHS.forEach(p => {
+    const st = (PATH_START[p.id] || []).filter(k => have.has(k)); if (!st.length) return;
+    const rest = (p.lessons || everything).filter(k => !st.includes(k));
+    p.lessons = [...st, ...rest];
+    p.start = st;
+  });
+})();

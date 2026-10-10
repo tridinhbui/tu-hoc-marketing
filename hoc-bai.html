@@ -297,10 +297,10 @@ svg.i{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-widt
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
-<script src="assets/js/data/bai-index.js?v=7"></script>
+<script src="assets/js/data/bai-index.js?v=8"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
-<script src="assets/js/app.js?v=15"></script>
+<script src="assets/js/app.js?v=16"></script>
 <script>
 /* ---------------- icon ---------------- */
 const P={
@@ -325,10 +325,7 @@ function toast(m){const t=document.getElementById('toast');t.textContent=m;t.cla
 
 /* ---------------- sidebar ---------------- */
 const NAVS=[
-  {items:[['home','Hôm nay','hoc.html'],['compass','Hành trình','hoc-bai.html']]},
-  {g:'Luyện',items:[['help','Quiz 60 giây','quiz.html'],['alert','Ôn lỗi','on-loi.html'],['layers','Luyện cuối module','luyen.html']]},
-  {g:'Áp dụng',items:[['trophy','Case có bấm giờ','case-thu-vien.html'],['mic','Phỏng vấn mô phỏng','phong-van.html','AI'],['game','Trò chơi điều hành','tro-choi.html'],['sliders','Bàn làm việc','roadmap.html']]},
-  {g:'Tiến bộ',items:[['grid','Kỹ năng & nghề','nang-luc.html'],['chart','Bảng xếp hạng','bang-xep-hang.html'],['users','Cộng đồng','cong-dong.html'],['lib','Thư viện case','gallery.html']]},
+  {items:[['home','Hôm nay','hoc.html'],['compass','Hành trình','hoc-bai.html'],['help','Luyện','quiz.html'],['grid','Tiến bộ','nang-luc.html']]},
 ];
 function renderSide(u){
   const s=S.get(), due=dueErrors(s).length, here='hoc-bai.html';

@@ -230,11 +230,14 @@ const fmt=n=>Number(n).toLocaleString('vi-VN',{maximumFractionDigits:2});
 /* ---------------- shell ---------------- */
 /* Sidebar dọc theo vòng học: Hôm nay → Luyện → Áp dụng → Tiến bộ. Ít mục, nhóm rõ. */
 const APP_NAV=[
-  {items:[['home','Hôm nay','hoc.html'],['path','Hành trình','hoc-bai.html']]},
-  {g:'Luyện',items:[['bolt','Quiz 60 giây','quiz.html'],['redo','Ôn lỗi','on-loi.html','due'],['stack','Luyện cuối module','luyen.html'],['flag','Thi vượt chặng','thi.html']]},
-  {g:'Áp dụng',items:[['brief','Case có bấm giờ','case-thu-vien.html'],['mic','Phỏng vấn mô phỏng','phong-van.html'],['chess','Trò chơi điều hành','tro-choi.html']]},
-  {g:'Tiến bộ',items:[['radar','Kỹ năng & nghề','nang-luc.html'],['trophy','Bảng xếp hạng','bang-xep-hang.html'],['people','Cộng đồng','cong-dong.html'],['gift','Rương thưởng','ruong.html']]},
-  {g:'Vương quốc',items:[['castle','Vương quốc','kingdom.html'],['sword','World Boss','boss.html'],['shield','Đấu trường','pvp.html'],['shop','Chợ','shop.html']]},
+  {t:'Hôm nay', h:'hoc.html', i:'home'},
+  {t:'Hành trình', h:'hoc-bai.html', i:'path', also:['bai.html','ban-do.html']},
+  {t:'Luyện', h:'quiz.html', i:'bolt', kids:[
+    ['Quiz 60 giây','quiz.html'],['Ôn lỗi','on-loi.html','due'],['Luyện cuối module','luyen.html'],['Thi vượt chặng','thi.html'],
+    ['Case có bấm giờ','case-thu-vien.html',null,'giai-case.html'],['Trò chơi điều hành','tro-choi.html'],['Phỏng vấn mô phỏng','phong-van.html','L']]},
+  {t:'Tiến bộ', h:'nang-luc.html', i:'radar', kids:[
+    ['Kỹ năng & nghề','nang-luc.html'],['Rương thưởng','ruong.html'],
+    ['Bảng xếp hạng','bang-xep-hang.html','L'],['Cộng đồng','cong-dong.html','L'],['Vương quốc','kingdom.html','L'],['World Boss','boss.html','L']]},
 ];
 const APP_ICON={
   home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>', path:'<circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 000-6H9a3 3 0 010-6h6.5"/>',
@@ -261,22 +264,29 @@ function appShell(here){
   const s=S.get(); applyTheme(s); const lv=level(s.xp);
   const main=document.querySelector('main'); if(main&&!main.id) main.id='main';
   const due=dueErrors(s).length, rk=typeof rank==='function'?rank(s):null;
+  let cur=here||((location.pathname.split('/').pop()||'index')); if(!/\.html$/.test(cur)) cur+='.html';
+  const started=s.xp>0||s.streak>0;   // thẻ cấp/XP chỉ hiện sau khi học xong một việc
   const lvPct=lv.next?Math.round((s.xp-lv.cur)/(lv.next-lv.cur)*100):100;
   document.body.classList.add('has-side');
   document.body.insertAdjacentHTML('afterbegin',`
     <a class="skip" href="#main">Tới nội dung chính</a>
     <div class="mtop"><button type="button" id="sideBtn" aria-label="Mở menu" aria-controls="side">${appIc('menu')}</button>
-      <a class="logo" href="hoc.html"><b>Tự Học</b> Marketing</a><b class="xpchip">${fmt(s.xp)} XP</b></div>
+      <a class="logo" href="hoc.html"><b>Tự Học</b> Marketing</a>${started?`<b class="xpchip">${fmt(s.xp)} XP</b>`:''}</div>
     <aside class="side" id="side" aria-label="Điều hướng">
       <a class="side__logo" href="hoc.html"><i>M</i><span><b>Tự Học</b><br>Marketing Case</span></a>
-      <nav class="side__nav" aria-label="Chính">${APP_NAV.map(g=>`${g.g?`<span class="side__g">${g.g}</span>`:''}
-        ${g.items.map(([ic,t,h,badge])=>`<a href="${h}"${h===here?' aria-current="page"':''}>${appIc(ic)}<span>${t}</span>${badge==='due'&&due?`<em>${due}</em>`:''}</a>`).join('')}`).join('')}</nav>
+      <nav class="side__nav" aria-label="Chính">${APP_NAV.map(g=>{
+        const kids=g.kids||[], inGroup=h=>h===cur||(g.also||[]).includes(cur),
+              active=g.h===cur||(g.also||[]).includes(cur)||kids.some(k=>k[1]===cur||k[3]===cur),
+              dueBadge=g.kids&&g.kids.some(k=>k[2]==='due')&&due?`<em>${due}</em>`:'';
+        return `<a href="${g.h}" class="side__top"${active?' aria-current="page"':''}>${appIc(g.i)}<span>${g.t}</span>${dueBadge}</a>`
+          +(kids.length&&active?`<div class="side__kids">${kids.map(([t,h,fl,alt])=>`<a href="${h}" data-login="${fl==='L'?1:0}"${fl==='L'?' hidden':''}${h===cur||alt===cur?' aria-current="page"':''}>${t}${fl==='due'&&due?`<em>${due}</em>`:''}</a>`).join('')}</div>`:'');
+      }).join('')}</nav>
       <div class="side__foot">
-        <a class="side__me" href="nang-luc.html" title="Cấp ${lv.n} · ${escH(lv.name)}">
+        ${started?`<a class="side__me" href="nang-luc.html" title="Cấp ${lv.n} · ${escH(lv.name)}">
           <span class="side__rank">${rk?escH(rk.t):'Cấp '+lv.n}</span>
           <span class="side__nums"><b class="xpchip top__stat">${fmt(s.xp)} XP</b><span class="streak">${s.streak} ngày</span></span>
           <span class="meter"><i style="width:${lvPct}%"></i></span>
-          <small>${lv.next?`${fmt(lv.next-s.xp)} XP nữa lên cấp ${lv.n+1}`:'Cấp cao nhất'}</small></a>
+          <small>${lv.next?`${fmt(lv.next-s.xp)} XP nữa lên cấp ${lv.n+1}`:'Cấp cao nhất'}</small></a>`:''}
         <a class="side__acct" id="acct" href="tai-khoan.html">Tài khoản</a>
       </div>
     </aside><div class="side__veil" id="sideVeil" hidden></div>`);
@@ -290,6 +300,7 @@ function appShell(here){
       <span><a href="gioi-thieu.html">Giới thiệu</a> · <a href="tap-chi.html">Tạp chí Nhìn thấy</a> · <a href="roadmap.html">Bàn làm việc</a></span>
     </div></footer><div class="toast" id="toast" role="status" aria-live="polite"></div>`);
   Promise.all([account(),canLogin()]).then(([u,can])=>{ const a=document.getElementById('acct'); if(!a) return;
+    if(can) document.querySelectorAll('[data-login="1"]').forEach(x=>x.hidden=false);
     a.textContent = u ? u.name : (can ? 'Đăng nhập' : 'Lưu trên máy này');
     if(!u && !can){ a.removeAttribute('href'); a.style.cssText='opacity:.7;cursor:default'; a.title='Tiến độ đang lưu trong trình duyệt này. Đăng nhập chưa được bật.'; }
     if(!u && can){                       // chưa đăng nhập: nút rõ ràng, quay lại đúng trang đang đọc
