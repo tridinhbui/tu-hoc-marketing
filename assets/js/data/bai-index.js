@@ -5,7 +5,7 @@
    Phải tải SAU curriculum.js và TRƯỚC app.js: file này ghép module đã xuất bản vào STAGES/JOURNEY
    để hành trình, kỹ năng, "hôm nay" thấy bài mới mà không cần tải nội dung. */
 
-const BAI_V = 14;   // tăng khi sửa nội dung bất kỳ file bài/*.js
+const BAI_V = 15;   // tăng khi sửa nội dung bất kỳ file bài/*.js
 
 /* Bước hành trình → chặng nội dung (đề vượt chặng, cổng mở khoá). */
 const STEP_STAGE = { observe:'s1', understand:'s2', hypothesis:'s2', message:'s3', channel:'s4',
@@ -61,6 +61,7 @@ const BAI_MODS = [
   { id:'kn10', step:'channel', t:'Kế hoạch truyền thông tích hợp (IMC)', tags:'imc tích hợp kế hoạch truyền thông agency' },
   { id:'kn11', step:'channel', t:'Tìm kiếm tự nhiên (SEO) cho người mới: để khách tìm thấy bạn không cần trả tiền mỗi lượt', tags:'seo tìm kiếm tự nhiên search intent từ khoá google business profile search console' },
   { id:'kn12', step:'channel', t:'Quảng cáo, khuyến mại và dữ liệu khách hàng ở Việt Nam: biết khi nào phải dừng lại hỏi pháp chế', tags:'pháp lý quảng cáo khuyến mại dữ liệu cá nhân nghị định 13 nghị định 81 kol cookie' },
+  { id:'kn13', step:'channel', t:'Mạng xã hội theo nền tảng: được thấy, giữ chân, lịch nội dung, chẩn đoán và báo cáo', tags:'mạng xã hội tiktok youtube facebook instagram reels shorts retention giữ chân ctr ảnh bìa lịch nội dung content calendar reach giảm bình luận báo cáo tuần' },
   { id:'tn01', step:'test', t:'Thử nhỏ trước khi chi lớn', tags:'thử nhỏ mvp pre-order đặt cọc' },
   { id:'tn02', step:'test', t:'A/B test: thiết kế, cỡ mẫu, đọc kết quả', tags:'a/b test cỡ mẫu ab testing' },
   { id:'tn03', step:'test', t:'Thử sáng tạo: creative testing', tags:'creative testing thử sáng tạo hook thumb-stop ctr' },
@@ -522,6 +523,13 @@ const BAI_INDEX = [
   { id:'B:kn12-06', mod:'kn12', skill:'channel', read:'6 phút', t:'12.000 số điện thoại trong file Excel — được gửi tin cho ai?', c:'Dữ liệu cá nhân: đồng ý, mục đích, huỷ' },
   { id:'B:kn12-07', mod:'kn12', skill:'channel', read:'6 phút', t:'Gắn pixel lên web là xong — hay còn phải báo và xin đồng ý?', c:'Cookie, pixel, remarketing: minh bạch và đồng ý' },
   { id:'B:kn12-08', mod:'kn12', skill:'channel', read:'6 phút', t:'Đội 4 người, không có pháp chế riêng — quy trình duyệt nào đủ nhẹ để làm thật?', c:'Quy trình duyệt nhẹ: lọc – duyệt – lưu – xử lý' },
+  { id:'B:kn13-01', mod:'kn13', skill:'channel', read:'6 phút', t:'Cùng một video đăng ba nền tảng: người xem đến từ cửa nào?', c:'Ba cửa để được thấy' },
+  { id:'B:kn13-02', mod:'kn13', skill:'measure', read:'7 phút', t:'Đường cong giữ chân: người xem rơi ở giây nào?', c:'Đọc hình dạng đường giữ chân' },
+  { id:'B:kn13-03', mod:'kn13', skill:'creative', read:'6 phút', t:'Ảnh bìa hứa gì, video giữ được gì?', c:'Lời hứa và lời giữ' },
+  { id:'B:kn13-04', mod:'kn13', skill:'channel', read:'7 phút', t:'Lịch nội dung 30 ngày: lập từ mục tiêu hay từ ý tưởng?', c:'Lịch đi từ mục tiêu' },
+  { id:'B:kn13-05', mod:'kn13', skill:'measure', read:'7 phút', t:'Reach tuần này giảm 40%: kiểm theo thứ tự nào?', c:'Chẩn đoán theo thứ tự nghi phạm' },
+  { id:'B:kn13-06', mod:'kn13', skill:'comm', read:'6 phút', t:'300 bình luận một tuần: trả lời ai trước?', c:'Phân loại, hạn trả lời, đường leo thang' },
+  { id:'B:kn13-07', mod:'kn13', skill:'comm', read:'6 phút', t:'Báo cáo mạng xã hội cho quản lý: bạn mở đầu bằng gì?', c:'Ba số, một phát hiện, một đề nghị' },
   { id:'B:tn01-01', mod:'tn01', skill:'measure', read:'6 phút', t:'Chiến dịch 800 triệu hay bản thử 30 triệu trước?', c:'Bản thử tối thiểu cho marketing (marketing MVP)' },
   { id:'B:tn01-02', mod:'tn01', skill:'channel', read:'7 phút', t:'Tung toàn quốc hay thử ở một tỉnh trước?', c:'Thử theo khu vực (test market)' },
   { id:'B:tn01-03', mod:'tn01', skill:'measure', read:'7 phút', t:'Chưa có sản phẩm, làm sao biết có ai muốn mua?', c:'Thử bằng trang đích (landing page test)' },

@@ -1,7 +1,7 @@
 /* BẢN ĐỒ THẾ GIỚI — dữ liệu thuần, không phụ thuộc giao diện (kiểm bằng tests/world-map.test.mjs).
    Toạ độ trong khung WORLD.w × WORLD.h. `id` của toà khớp với cấu hình kingdom ở máy chủ (migration 0004) để vẫn nhận +xu khi ghé.
    `soon:true` = chỗ dành cho game sẽ làm; hiện sương, không bấm vào được.
-   `local:true` = toà chưa có ở cấu hình máy chủ (không gọi API ghé thăm) — hiện không còn toà nào (migration 0008 đã thêm g2–g6).
+   `local:true` = toà chưa có ở cấu hình máy chủ (không gọi API ghé thăm). g2–g6 đã có (migration 0008); g7, g8 chưa.
    `game:true` = có chấm sao (S.gw.stars[id]). */
 const WORLD = {
   w: 1200, h: 760,
@@ -33,10 +33,12 @@ const WORLD = {
     { id: 'game',    t: 'Toà điều hành thương hiệu',   d: 'Điều hành một thương hiệu qua 8 quý',      href: 'tro-choi.html',        x: 990,  y: 330, region: 'data',   min_level: 1, game: true },
     { id: 'growth',  t: 'Phòng lab tăng trưởng',       d: 'Bàn tính unit economics và giá',           href: 'unit-economics.html',  x: 1030, y: 550, region: 'data',   min_level: 3 },
     { id: 'g2',      t: 'Chọn tệp',                    d: 'Chọn nhóm khách và thông điệp cho 4 sản phẩm',  href: 'game-chon-tep.html',  x: 170,  y: 330, region: 'people', min_level: 1, game: true },
-    { id: 'g3',      t: 'Bản đồ định vị',              d: 'Đặt thương hiệu lên ma trận giá × thuộc tính',   href: 'game-ban-do-dinh-vi.html', x: 210, y: 560, region: 'people', min_level: 1, game: true },
+    { id: 'g3',      t: 'Bản đồ định vị',              d: 'Đặt thương hiệu lên ma trận giá × thuộc tính',   href: 'game-ban-do-dinh-vi.html', x: 255, y: 565, region: 'people', min_level: 1, game: true },
+    { id: 'g8',      t: 'Lịch nội dung 30 ngày',      d: 'Xếp lịch đăng vừa sức, đúng mục tiêu',           href: 'game-lich-noi-dung.html', x: 105, y: 478, region: 'people', min_level: 1, local: true, game: true },
     { id: 'g6',      t: 'Kể chuyện 60s',           d: 'Chọn 3 bằng chứng để trả lời sếp',                href: 'game-ke-chuyen.html',  x: 468, y: 235, region: 'court', min_level: 1, game: true },
     { id: 'g4',      t: 'Chia ngân sách media',        d: 'Chia tiền giữa 4 kênh qua 4 mùa — học lợi ích giảm dần', href: 'game-ngan-sach.html', x: 780, y: 400, region: 'data', min_level: 1, game: true },
     { id: 'g5',      t: 'Phễu rò',                     d: 'Sửa đúng tầng của phễu bán hàng',          href: 'game-phieu-ro.html',  x: 1110, y: 440, region: 'data',   min_level: 1, game: true },
+    { id: 'g7',      t: 'Chẩn đoán reach giảm',       d: 'Kiểm đúng thứ tự khi reach tụt',                 href: 'game-chan-doan.html',  x: 905, y: 600, region: 'data',   min_level: 1, local: true, game: true },
   ],
 };
 

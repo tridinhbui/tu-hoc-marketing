@@ -59,6 +59,7 @@ export const MODULES = [
   { id:'kn10', tags:'imc tích hợp kế hoạch truyền thông agency', step:'channel', n:10, t:'Kế hoạch truyền thông tích hợp (IMC)' },
   { id:'kn11', tags:'seo tìm kiếm tự nhiên search intent từ khoá google business profile search console', step:'channel', n:8, t:'Tìm kiếm tự nhiên (SEO) cho người mới: để khách tìm thấy bạn không cần trả tiền mỗi lượt' },
   { id:'kn12', tags:'pháp lý quảng cáo khuyến mại dữ liệu cá nhân nghị định 13 nghị định 81 kol cookie', step:'channel', n:8, t:'Quảng cáo, khuyến mại và dữ liệu khách hàng ở Việt Nam: biết khi nào phải dừng lại hỏi pháp chế' },
+  { id:'kn13', tags:'mạng xã hội tiktok youtube facebook instagram reels shorts retention giữ chân ctr ảnh bìa lịch nội dung content calendar reach giảm bình luận báo cáo tuần', step:'channel', n:7, t:'Mạng xã hội theo nền tảng: được thấy, giữ chân, lịch nội dung, chẩn đoán và báo cáo' },
   // Bước 6 · Thử nghiệm
   { id:'tn01', tags:'thử nhỏ mvp pre-order đặt cọc', step:'test', n:10, t:'Thử nhỏ trước khi chi lớn' },
   { id:'tn02', tags:'a/b test cỡ mẫu ab testing', step:'test', n:10, t:'A/B test: thiết kế, cỡ mẫu, đọc kết quả' },

@@ -108,3 +108,38 @@ test('G6: tối ưu 3 sao; có mảnh phản tác dụng không quá 2 sao; ba m
   const r = G6.rounds[0], strong = r.cards.filter((c) => c.tier === 2).map((c) => c.id), mid = r.cards.find((c) => c.tier === 1).id;
   assert.ok(G6.points(r, [strong[0], strong[1], mid]) > G6.points(r, [mid, strong[0], strong[1]]), 'nói mảnh mạnh trước phải điểm cao hơn');
 });
+
+const G7 = require(rel('assets/js/games/g7-diagnose.js'));
+const G8 = require(rel('assets/js/games/g8-calendar.js'));
+
+test('G7: mỗi vòng đúng một lượt kiểm chứa bằng chứng; kiểm các nghi phạm gần và rẻ rồi kết luận đúng đạt 3 sao', () => {
+  for (const r of G7.rounds) {
+    const ev = Object.entries(r.checks).filter(([, c]) => c.points === r.truth);
+    assert.ok(ev.length >= 1, `${r.id}: không có lượt chứa bằng chứng`);
+    assert.ok(G7.causes.some((c) => c.id === r.truth));
+    for (const k of Object.keys(G7.checkDefs)) assert.ok(r.checks[k], `${r.id}: thiếu lượt kiểm ${k}`);
+  }
+  const best = G7.rounds.map((r) => ({ picked: Object.keys(r.checks).filter((k) => r.checks[k].points === r.truth), cause: r.truth }));
+  assert.equal(G7.stars(G7.score(best)), 3);
+  assert.equal(G7.stars(G7.score(G7.rounds.map(() => ({ picked: ['period', 'paid', 'own'], cause: 'measure' })))), 0);
+});
+test('G7: kết luận đúng mà không kiểm không quá 2 sao; luôn đổ cho nền tảng thì 0 sao', () => {
+  assert.ok(G7.stars(G7.score(G7.rounds.map((r) => ({ picked: [], cause: r.truth })))) <= 2);
+  assert.equal(G7.stars(G7.score(G7.rounds.map(() => ({ picked: ['platform'], cause: 'platform' })))), 0);
+});
+test('G7: lượt kiểm theo thứ tự rẻ-gần (period, paid, own) đủ chẩn đoán cả ba vòng', () => {
+  for (const r of G7.rounds) assert.ok(['period', 'paid', 'own'].some((k) => r.checks[k].points === r.truth), r.id);
+});
+
+test('G8: lịch mẫu đạt mọi luật cho từng brief; lịch rỗng và lịch toàn bán không đạt 1 sao', () => {
+  for (const b of G8.briefs) { const r = G8.check(b, G8.example(b)); assert.equal(r.passed, r.total, `${b.id}: ${r.rules.filter((x) => !x.ok).map((x) => x.detail).join('; ')}`); }
+  assert.equal(G8.stars(G8.score(G8.briefs.map(() => new Array(30).fill(null)))), 0);
+  assert.equal(G8.stars(G8.score(G8.briefs.map(() => new Array(30).fill('sell')))), 0);
+  assert.equal(G8.stars(G8.score(G8.briefs.map((b) => G8.example(b)))), 3);
+});
+test('G8: vượt sức sản xuất hoặc mở đầu bằng bán hàng bị bắt', () => {
+  const b = G8.briefs[0];
+  const over = new Array(30).fill('aware'); assert.equal(G8.check(b, over).rules.find((x) => x.id === 'cap').ok, false);
+  const ex = G8.example(b), firstIdx = ex.findIndex(Boolean); const bad = [...ex]; bad[firstIdx] = 'sell';
+  assert.equal(G8.check(b, bad).rules.find((x) => x.id === 'open').ok, false);
+});
