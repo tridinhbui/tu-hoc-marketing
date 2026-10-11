@@ -67,7 +67,8 @@ test('câu tính: lời giải (steps) có nhắc con số bằng đáp án (b�
     const nums = numbersIn((it.steps || []).join(' '));
     /* đáp án có thể ghi theo phần trăm/triệu/nghìn khác đơn vị: chấp nhận ×/÷ 10, 100, 1000 */
     const scales = [1, 100, 0.01, 1000, 0.001, 1e6, 1e-6, 10, 0.1];
-    const ok = nums.some((n) => scales.some((s) => Math.abs(n * s - it.ans) <= tol * Math.max(1, s > 1 ? s : 1) + 1e-9) || Math.abs(Math.abs(n) - Math.abs(it.ans)) <= tol);
+    const target = Math.abs(it.ans);   // dấu có thể là '−' (U+2212) hoặc chữ 'lỗ' trong lời giải
+    const ok = nums.some((n) => scales.some((sc) => Math.abs(Math.abs(n) * sc - target) <= tol * Math.max(1, sc > 1 ? sc : 1) + 1e-9));
     if (!ok) bad.push(`${it.id}: ans=${it.ans} không xuất hiện trong steps`);
   }
   /* Có thể có ít ca bất thường vì cách trình bày; ngưỡng cứng để không tăng thêm. */
