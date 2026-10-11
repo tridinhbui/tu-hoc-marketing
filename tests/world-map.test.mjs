@@ -39,3 +39,21 @@ test('bản đồ: bước đi không vượt quá quãng cho phép và dừng �
   assert.equal(worldNearest({ x: q.x + 5, y: q.y }).id, q.id);
   assert.equal(worldNearest({ x: -100, y: -100 }), null);
 });
+
+const { worldRegionStars, worldChestReady, worldOutfitUnlocked } = require(rel('assets/js/data/world-map.js'));
+test('rương vùng và trang phục: ngưỡng đạt được, hàm thuần đúng', () => {
+  const total = WORLD.places.filter((p) => p.game && !p.soon).length * 3;
+  for (const r of WORLD.regions.filter((x) => x.chest)) {
+    const rs = worldRegionStars(r.id, {});
+    assert.ok(rs.max >= r.chest.need, `${r.id}: cần ${r.chest.need} sao nhưng vùng chỉ có tối đa ${rs.max}`);
+    assert.equal(worldChestReady(r.id, {}), false);
+  }
+  for (const o of WORLD.outfits) {
+    if (o.need && o.need.stars) assert.ok(o.need.stars <= total, `${o.id}: cần ${o.need.stars} sao, tối đa ${total}`);
+    if (o.need && o.need.chest) assert.ok(WORLD.regions.find((r) => r.id === o.need.chest && r.chest), `${o.id}: vùng không có rương`);
+  }
+  assert.equal(worldOutfitUnlocked(WORLD.outfits[0], {}, {}), true);
+  assert.equal(worldChestReady('data', { game: 3, g4: 3 }), true);
+  assert.equal(worldChestReady('data', { game: 3, g4: 2 }), false);
+  assert.equal(worldOutfitUnlocked({ need: { chest: 'data' } }, {}, { data: '2026-01-01' }), true);
+});

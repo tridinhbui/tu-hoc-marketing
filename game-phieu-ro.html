@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C85A32%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E8%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=12">
+<title>Phễu rò — Tự Học Marketing Case</title>
+<meta name="description" content="Mini-game: sửa đúng tầng của phễu bán hàng. Học vì sao tầng còn nhiều chỗ cải thiện nhất mới đáng sửa trước.">
+<style>
+:root{--gw-bg:#FBF8F3;--gw-card:#fff;--gw-ink:#24160E;--gw-ink2:rgba(36,22,14,.68);--gw-ink3:rgba(36,22,14,.48);--gw-line:rgba(36,22,14,.12);--gw-soft:rgba(36,22,14,.05);
+  --gw-acc:#C85A32;--gw-ok:#3D7A45;--gw-bad:#C0392B;--gw-gold:#B07A12;--gw-gold-soft:rgba(229,178,75,.18);--gw-dark:#2A1A12}
+html[data-theme="ivory"]{--gw-bg:#F7F0E6;--gw-card:#FFFDF9}
+html[data-theme="dark"]{--gw-bg:#16100C;--gw-card:#221913;--gw-ink:#F4ECE0;--gw-ink2:rgba(244,236,224,.74);--gw-ink3:rgba(244,236,224,.5);--gw-line:rgba(244,236,224,.14);
+  --gw-soft:rgba(244,236,224,.07);--gw-acc:#E27A52;--gw-ok:#7DBE86;--gw-bad:#E8786B;--gw-gold:#E5B24B;--gw-gold-soft:rgba(229,178,75,.14);--gw-dark:#0E0906}
+html,body{background:var(--gw-bg)!important;color:var(--gw-ink)}
+body{margin:0;padding:0!important;font-family:var(--sans,system-ui,sans-serif)}
+#app{display:block;max-width:none;padding:0;margin:0}
+.g{max-width:1100px;margin:0 auto;padding:clamp(16px,2.6vw,30px) clamp(14px,3vw,34px) 80px;display:grid;gap:16px}
+.g>*{min-width:0}
+.top{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.back{color:var(--gw-ink2);text-decoration:none;font-weight:700;font-size:14px}
+.back:hover{color:var(--gw-acc)}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gw-acc)}
+.g h1{font-family:var(--serif,Georgia,serif);font-weight:600;font-size:clamp(1.5rem,2.8vw,2.1rem);margin:6px 0 4px}
+.lede{margin:0;color:var(--gw-ink2);max-width:66ch;line-height:1.6}
+.card{background:var(--gw-card);border:1px solid var(--gw-line);border-radius:20px;padding:18px 20px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.steps i{height:8px;border-radius:9px;background:var(--gw-soft)}
+.steps i[data-s="done"]{background:var(--gw-ok)}.steps i[data-s="cur"]{background:var(--gw-acc)}
+.brief{border-left:4px solid var(--gw-gold);background:var(--gw-gold-soft);border-radius:0 16px 16px 0;padding:14px 18px}
+.brief b{display:block;font-size:16px}.brief p{margin:4px 0 0;color:var(--gw-ink2);line-height:1.55}
+.lever{display:grid;grid-template-columns:minmax(140px,1.1fr) 2fr 70px;gap:14px;align-items:center;padding:12px 0;border-top:1px solid var(--gw-line)}
+.lever:first-of-type{border-top:0}
+.lever b{display:block;font-size:15px}.lever small{color:var(--gw-ink3);font-size:12.5px;line-height:1.4}
+.lever input[type=range]{width:100%;accent-color:var(--gw-acc)}
+.lever output{font-weight:800;text-align:right}
+@media(max-width:560px){.lever{grid-template-columns:1fr 70px}.lever input{grid-column:1/-1;grid-row:2}}
+.bar{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.used{font-weight:700}.used.over{color:var(--gw-bad)}.used.under{color:var(--gw-gold)}
+.go{border:0;border-radius:12px;background:var(--gw-acc);color:#fff;font:800 13px var(--sans,system-ui);letter-spacing:.05em;text-transform:uppercase;padding:13px 20px;cursor:pointer;text-decoration:none}
+.go[disabled]{opacity:.45;cursor:default}
+.go--ghost{background:var(--gw-card);color:var(--gw-ink);border:1.5px solid var(--gw-line)}
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.cmp h3{margin:0 0 8px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gw-ink3)}
+.cmp .big{font-size:1.8rem;font-weight:800}
+.alloc{display:grid;gap:6px;margin-top:10px;font-size:13.5px}
+.alloc div{display:grid;grid-template-columns:100px 1fr 42px;gap:8px;align-items:center}
+.alloc i{display:block;height:8px;border-radius:9px;background:var(--gw-acc)}
+.alloc .opt i{background:var(--gw-ok)}
+.note{border-left:4px solid var(--gw-acc);background:var(--gw-soft);border-radius:0 14px 14px 0;padding:12px 16px;font-size:14.5px;line-height:1.55}
+.hist{width:100%;border-collapse:collapse;font-size:14px}
+.hist th,.hist td{text-align:left;padding:9px 6px;border-top:1px solid var(--gw-line)}
+.hist th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gw-ink3);border-top:0}
+.gw-result{text-align:center;padding:10px}
+.gw-stars{font-size:3rem;letter-spacing:.2em;color:var(--gw-gold)}
+.gw-result p{margin:6px 0;color:var(--gw-ink2)}
+.gw-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.gw-btn{display:inline-block;border-radius:12px;border:1.5px solid var(--gw-line);padding:12px 18px;font-weight:800;font-size:13px;text-decoration:none;color:var(--gw-ink);background:var(--gw-card)}
+
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.opt{text-align:left;border:1.5px solid var(--gw-line);background:var(--gw-card);color:var(--gw-ink);border-radius:16px;padding:14px;cursor:pointer;display:grid;gap:6px;font:inherit}
+.opt:hover{border-color:var(--gw-acc)}
+.opt[aria-pressed="true"]{border-color:var(--gw-acc);box-shadow:0 0 0 3px rgba(200,90,50,.14)}
+.opt b{font-size:15px}.opt small{color:var(--gw-ink3);font-size:12.5px}
+.mini{display:grid;grid-template-columns:78px 1fr;gap:6px;align-items:center;font-size:12px;color:var(--gw-ink2)}
+.mini i{display:block;height:6px;border-radius:9px;background:var(--gw-acc)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1.5px solid var(--gw-line);background:var(--gw-card);color:var(--gw-ink);border-radius:99px;padding:10px 16px;font-weight:700;font-size:14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--gw-ink);color:var(--gw-bg);border-color:var(--gw-ink)}
+.fun{display:grid;gap:10px}
+.fun .t{display:grid;grid-template-columns:minmax(120px,170px) 1fr auto;gap:12px;align-items:center;font-size:14px}
+.fun .track{height:26px;border-radius:9px;background:var(--gw-soft);position:relative;overflow:hidden}
+.fun .track i{position:absolute;inset:0 auto 0 0;background:var(--gw-acc);border-radius:9px}
+.fun .track s{position:absolute;top:0;bottom:0;width:2px;background:var(--gw-ok)}
+.fun small{color:var(--gw-ink3);display:block;font-size:11.5px}
+.fixbtn{border:1.5px solid var(--gw-line);background:var(--gw-card);color:var(--gw-ink);border-radius:10px;padding:8px 12px;font-weight:800;font-size:12.5px;cursor:pointer}
+.fixbtn:hover:not([disabled]){border-color:var(--gw-acc);color:var(--gw-acc)}
+.fixbtn[disabled]{opacity:.4;cursor:default}
+@media(max-width:600px){.fun .t{grid-template-columns:1fr auto}.fun .track{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main id="app"></main>
+<script src="assets/js/data/lessons.js?v=8"></script>
+<script src="assets/js/data/principles.js?v=8"></script>
+<script src="assets/js/data/curriculum.js?v=4"></script>
+<script src="assets/js/data/bai-index.js?v=11"></script>
+<script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/games/g5-funnel.js?v=1"></script>
+<script src="assets/js/games/frame.js?v=1"></script>
+<script>
+appShell('');
+const app=document.getElementById('app'), GID='g5';
+let plays=[], fixes=[], shown=null, done=null;
+const N=x=>Math.round(x).toLocaleString('vi-VN');
+const P=x=>(x*100).toLocaleString('vi-VN',{maximumFractionDigits:1})+'%';
+const tierT=id=>G5.tiers.find(t=>t.id===id).t;
+
+function notes(r,f){
+  const b=G5.best(r), out=[], cnt=id=>f.filter(x=>x===id).length;
+  if(f.every(x=>x==='aware')) out.push('Bạn sửa toàn tầng đầu phễu. Tăng khách vào mà phần sau vẫn rò thì đổ thêm nước vào xô thủng. <a href="bai.html?id=L%3A59">Xem bài Cái xô thủng →</a>');
+  const worst=G5.tiers.map(t=>[t.id,r.bench[t.id]/r.rate[t.id]]).sort((x,y)=>y[1]-x[1])[0][0];
+  if(!f.includes(worst)) out.push(`Tầng còn nhiều chỗ cải thiện nhất là <b>${tierT(worst)}</b> (đang ${P(r.rate[worst])}, ngành ${P(r.bench[worst])}), bạn chưa động tới.`);
+  if(new Set(f).size===1&&f.length>1&&f[0]!==b.fixes[0]) out.push('Sửa dồn một tầng có lợi ích giảm dần: lần sửa thứ hai chỉ kéo thêm phần còn lại nhỏ hơn.');
+  return out;
+}
+function funnelHTML(r,f,live){
+  const rates=G5.rates(r,f); let n=G5.VISITORS; const left=G5.ACTIONS-f.length;
+  return `<div class="fun">${G5.tiers.map(t=>{ n=n*rates[t.id];
+    return `<div class="t"><span><b>${t.t}</b><small>${P(rates[t.id])} · ngành ${P(r.bench[t.id])}</small></span>
+      <div class="track"><i style="width:${Math.min(100,n/G5.VISITORS*100*2.2)}%"></i></div>
+      ${live?`<button type="button" class="fixbtn" data-fix="${t.id}" ${left<=0?'disabled':''}>Sửa tầng này</button>`:`<span></span>`}</div>`; }).join('')}
+    <p class="lede" style="font-size:14px">Số đơn ước tính: <b>${N(G5.orders(r,f))}</b> trên ${N(G5.VISITORS)} người.</p></div>`;
+}
+function render(){
+  const qi=plays.length, finished=qi>=G5.rounds.length&&!shown, r=G5.rounds[Math.min(qi,G5.rounds.length-1)];
+  const head=`<div class="top"><a class="back" href="kingdom.html">← Về bản đồ vương quốc</a><span class="eyebrow">Mini-game · số liệu minh hoạ</span></div>
+    <header><h1>Phễu rò</h1>
+      <p class="lede">Mỗi vòng bạn có ${G5.ACTIONS} hành động. Mỗi hành động sửa một tầng, kéo tỉ lệ tầng đó lên ${Math.round(G5.LIFT*100)}% khoảng cách tới mức của ngành. Điểm là số đơn tăng thêm so với cách sửa tốt nhất.
+      Mô hình cố định, không may rủi.</p></header>
+    <div class="steps">${G5.rounds.map((_,i)=>`<i data-s="${i<plays.length?'done':i===plays.length&&!finished?'cur':''}"></i>`).join('')}</div>`;
+  if(finished){
+    const score=G5.score(plays), stars=G5.stars(score); if(!done) done=GW.report(GID,stars,score);
+    const rows=plays.map((f,i)=>{ const rr=G5.rounds[i], b=G5.best(rr);
+      return `<tr><td>${escH(rr.t)}</td><td>${f.map(tierT).map(escH).join(', ')}</td><td>${N(G5.orders(rr,f))}</td><td>${N(b.o)}</td></tr>`; }).join('');
+    app.innerHTML=`<div class="g">${head}<div class="card">${GW.resultHTML(done,{goal:`Điểm của bạn: <b>${Math.round(score*100)}%</b> so với cách sửa tốt nhất. Mốc sao: 60% · 85% · 99%. Sửa toàn đầu phễu chỉ đạt khoảng 10%.`})}</div>
+      <div class="card"><table class="hist"><thead><tr><th>Vòng</th><th>Bạn sửa</th><th>Đơn của bạn</th><th>Tốt nhất</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <div class="bar"><button class="go go--ghost" id="again">Chơi lại</button><a class="go" href="kingdom.html">Về bản đồ</a></div></div>`;
+    document.getElementById('again').onclick=()=>{ plays=[]; fixes=[]; shown=null; done=null; render(); };
+    return;
+  }
+  if(shown){
+    const i=plays.length-1, rr=G5.rounds[i], b=G5.best(rr);
+    app.innerHTML=`<div class="g">${head}<div class="cmp">
+      <div class="card"><h3>Bạn · ${escH(rr.t)}</h3><div class="big">${N(G5.orders(rr,plays[i]))} đơn</div><span class="lede">Sửa: ${plays[i].map(tierT).map(escH).join(', ')}</span></div>
+      <div class="card"><h3>Cách sửa tốt nhất</h3><div class="big">${N(b.o)} đơn</div><span class="lede">${b.fixes.map(tierT).map(escH).join(', ')}</span></div></div>
+      ${shown.map(n=>`<p class="note">${n}</p>`).join('')||'<p class="note">Cách sửa của bạn rất sát mức tốt nhất.</p>'}
+      <div class="bar"><span></span><button class="go" id="next">${plays.length>=G5.rounds.length?'Xem kết quả':'Phễu kế tiếp →'}</button></div></div>`;
+    document.getElementById('next').onclick=()=>{ shown=null; fixes=[]; render(); };
+    return;
+  }
+  app.innerHTML=`<div class="g">${head}
+    <div class="brief"><b>Vòng ${qi+1}/${G5.rounds.length} · ${escH(r.t)}</b><p>${escH(r.brief)}</p></div>
+    <div class="card">${funnelHTML(r,fixes,true)}
+      <div class="bar"><span class="used">Còn ${G5.ACTIONS-fixes.length}/${G5.ACTIONS} hành động${fixes.length?' · đã sửa: '+fixes.map(tierT).map(escH).join(', '):''}</span>
+        <span style="display:flex;gap:8px"><button class="go go--ghost" id="undo" ${fixes.length?'':'disabled'}>Hoàn tác</button><button class="go" id="commit" ${fixes.length<G5.ACTIONS?'disabled':''}>Chốt vòng ${qi+1}</button></span></div></div></div>`;
+  app.querySelectorAll('[data-fix]').forEach(b=>b.onclick=()=>{ if(fixes.length<G5.ACTIONS){ fixes.push(b.dataset.fix); render(); } });
+  document.getElementById('undo').onclick=()=>{ fixes.pop(); render(); };
+  document.getElementById('commit').onclick=()=>{ plays.push([...fixes]); shown=notes(r,fixes); render(); };
+}
+document.title='Phễu rò — Tự Học Marketing Case';
+render();
+</script>
+</body>
+</html>

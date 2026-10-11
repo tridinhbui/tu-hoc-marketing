@@ -156,6 +156,14 @@ export default {
           return new Response(r.body, { status: r.status, headers: h });
         }
       }
+      /* /admin là đường dẫn ngắn của trang quản trị (quan-tri.html). Quyền vẫn do /api/admin/* kiểm ở server. */
+      if (page === 'admin') {
+        const t = (path) => env.ASSETS.fetch(new Request(new URL(path, url), { method: 'GET', headers: request.headers }));
+        let r = await t('/quan-tri');
+        if (r.status >= 300 && r.status < 400 && r.headers.get('location')) r = await t(r.headers.get('location'));
+        const h = new Headers(r.headers); h.set('cache-control', 'no-store');
+        return new Response(r.body, { status: r.status, headers: h });
+      }
       return env.ASSETS.fetch(request);
     }
 

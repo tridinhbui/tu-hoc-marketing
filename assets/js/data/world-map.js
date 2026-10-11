@@ -10,8 +10,16 @@ const WORLD = {
   regions: [
     { id: 'plaza',  t: 'Quảng trường',     x: 600,  y: 560, rx: 300, ry: 170, c: '#C85A32' },
     { id: 'court',  t: 'Toà Án Case',      x: 600,  y: 200, rx: 360, ry: 130, c: '#7A2E8E' },
-    { id: 'people', t: 'Khu Khách hàng & Thương hiệu', x: 190, y: 440, rx: 175, ry: 230, c: '#1F5C4A' },
-    { id: 'data',   t: 'Khu Số liệu & Kênh', x: 985, y: 440, rx: 190, ry: 240, c: '#3F7EA6' },
+    { id: 'people', t: 'Khu Khách hàng & Thương hiệu', x: 190, y: 440, rx: 175, ry: 230, c: '#1F5C4A', chest: { need: 2, badge: 'Người chọn tệp' } },
+    { id: 'data',   t: 'Khu Số liệu & Kênh', x: 985, y: 440, rx: 190, ry: 240, c: '#3F7EA6', chest: { need: 6, badge: 'Người đọc số' } },
+  ],
+  /* Trang phục: mở bằng rương vùng hoặc tổng sao. `fill` là màu áo của nhân vật. */
+  outfits: [
+    { id: 'default', t: 'Áo cam',          fill: '#C85A32' },
+    { id: 'blue',    t: 'Áo xanh Số liệu', fill: '#3F7EA6', need: { chest: 'data' } },
+    { id: 'green',   t: 'Áo lá Khách hàng', fill: '#1F5C4A', need: { chest: 'people' } },
+    { id: 'gold',    t: 'Áo vàng',         fill: '#D9A21B', need: { stars: 6 } },
+    { id: 'ink',     t: 'Áo mực',          fill: '#2A1A12', need: { stars: 9 } },
   ],
   places: [
     { id: 'quiz',    t: 'Sảnh phản xạ',               d: 'Quiz 60 giây từ bài đã học',               href: 'quiz.html',            x: 600,  y: 480, region: 'plaza',  min_level: 1 },
@@ -22,9 +30,10 @@ const WORLD = {
     { id: 'boss',    t: 'Tháp World Boss',             d: 'Cả server cùng hạ một boss mỗi tuần',      href: 'boss.html',            x: 820,  y: 170, region: 'court',  min_level: 1 },
     { id: 'game',    t: 'Toà điều hành thương hiệu',   d: 'Điều hành một thương hiệu qua 8 quý',      href: 'tro-choi.html',        x: 990,  y: 330, region: 'data',   min_level: 1, game: true },
     { id: 'growth',  t: 'Phòng lab tăng trưởng',       d: 'Bàn tính unit economics và giá',           href: 'unit-economics.html',  x: 1030, y: 550, region: 'data',   min_level: 3 },
-    { id: 'g2',      t: 'Chọn tệp',                    d: 'Chọn nhóm khách nào để nói gì — sắp có',   href: null,                   x: 170,  y: 330, region: 'people', soon: true },
+    { id: 'g2',      t: 'Chọn tệp',                    d: 'Chọn nhóm khách và thông điệp cho 4 sản phẩm',  href: 'game-chon-tep.html',  x: 170,  y: 330, region: 'people', min_level: 1, local: true, game: true },
     { id: 'g3',      t: 'Bản đồ định vị',              d: 'Chiếm khoảng trống trên ma trận — sắp có', href: null,                   x: 210,  y: 560, region: 'people', soon: true },
     { id: 'g4',      t: 'Chia ngân sách media',        d: 'Chia tiền giữa 4 kênh qua 4 mùa — học lợi ích giảm dần', href: 'game-ngan-sach.html', x: 780, y: 400, region: 'data', min_level: 1, local: true, game: true },
+    { id: 'g5',      t: 'Phễu rò',                     d: 'Sửa đúng tầng của phễu bán hàng',          href: 'game-phieu-ro.html',  x: 1110, y: 440, region: 'data',   min_level: 1, local: true, game: true },
   ],
 };
 
@@ -43,4 +52,19 @@ function worldNearest(pos, places = WORLD.places, reach = WORLD.reach) {
   for (const p of places) { const d = Math.hypot(p.x - pos.x, p.y - pos.y); if (d < bd) { bd = d; best = p; } }
   return best && bd <= reach ? best : null;
 }
-if (typeof module !== 'undefined') module.exports = { WORLD, worldStep, worldClamp, worldNearest };
+/* Tổng sao của các game chơi được trong một vùng. `stars` = { gameId: 0–3 }. */
+function worldRegionStars(regionId, stars = {}) {
+  const games = WORLD.places.filter((p) => p.region === regionId && p.game && !p.soon);
+  return { have: games.reduce((n, p) => n + (stars[p.id] || 0), 0), max: games.length * 3 };
+}
+function worldChestReady(regionId, stars = {}) {
+  const r = WORLD.regions.find((x) => x.id === regionId);
+  return !!(r && r.chest && worldRegionStars(regionId, stars).have >= r.chest.need);
+}
+function worldOutfitUnlocked(o, stars = {}, chests = {}) {
+  if (!o.need) return true;
+  if (o.need.chest) return !!chests[o.need.chest];
+  if (o.need.stars) return Object.values(stars).reduce((n, v) => n + v, 0) >= o.need.stars;
+  return false;
+}
+if (typeof module !== 'undefined') module.exports = { WORLD, worldStep, worldClamp, worldNearest, worldRegionStars, worldChestReady, worldOutfitUnlocked };

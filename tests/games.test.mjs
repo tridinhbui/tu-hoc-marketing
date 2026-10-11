@@ -50,3 +50,31 @@ test('G4: không có chiến lược cố định nào đạt 3 sao (buộc ph�
   }
   assert.ok(G4.stars(top) < 3, `cố định tốt nhất = ${top}`);
 });
+
+const G2 = require(rel('assets/js/games/g2-segments.js'));
+const G5 = require(rel('assets/js/games/g5-funnel.js'));
+
+test('G2: tối ưu từng vòng đạt 3 sao; luôn chọn nhóm đông nhất không quá 1 sao; lựa chọn cố định không đạt 3 sao', () => {
+  assert.equal(G2.stars(G2.score(G2.rounds.map((r) => G2.best(r)))), 3);
+  const biggest = [...G2.segments].sort((a, b) => b.size - a.size)[0].id;
+  const s = G2.score(G2.rounds.map((r) => ({ seg: biggest, msg: G2.attrs.map((a) => a.id).sort((x, y) => G2.customers(r, biggest, y) - G2.customers(r, biggest, x))[0] })));
+  assert.ok(G2.stars(s) <= 1, `nhóm đông nhất = ${s}`);
+  for (const sg of G2.segments) for (const a of G2.attrs) assert.ok(G2.stars(G2.score(G2.rounds.map(() => ({ seg: sg.id, msg: a.id })))) < 3);
+});
+test('G2: nhóm đông nhất không phải nhóm tốt nhất ở phần lớn vòng; trần tiếp cận có tác dụng', () => {
+  const biggest = [...G2.segments].sort((a, b) => b.size - a.size)[0].id;
+  assert.ok(G2.rounds.filter((r) => G2.best(r).seg !== biggest).length >= 3);
+  const r = G2.rounds[0];
+  const small = G2.segments.find((s) => s.size < G2.CONTACTS);
+  assert.ok(small, 'cần ít nhất một nhóm nhỏ hơn số lượt tiếp cận');
+});
+test('G5: tối ưu đạt 3 sao; sửa toàn đầu phễu không quá 0 sao; thang đơn điệu theo số hành động', () => {
+  assert.equal(G5.stars(G5.score(G5.rounds.map((r) => G5.best(r).fixes))), 3);
+  assert.equal(G5.stars(G5.score(G5.rounds.map(() => ['aware', 'aware', 'aware']))), 0);
+  const r = G5.rounds[0];
+  assert.ok(G5.orders(r, ['buy']) > G5.orders(r, []));
+  assert.ok(G5.orders(r, ['buy', 'buy']) > G5.orders(r, ['buy']));
+});
+test('G5: tầng tốt nhất không phải tầng đầu phễu ở mọi vòng', () => {
+  for (const r of G5.rounds) assert.ok(!G5.best(r).fixes.every((x) => x === 'aware'));
+});

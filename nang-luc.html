@@ -14,6 +14,7 @@
   .steps i[data-on]{background:var(--ink)}
   .comp[data-weak] .steps i[data-on]{background:var(--red)}
 </style>
+<link rel="stylesheet" href="assets/css/paper.css?v=4">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Nội dung và tiến độ được dựng ngay trong trình duyệt của bạn và đồng bộ vào tài khoản khi đã đăng nhập.</p></div></noscript>
@@ -102,5 +103,6 @@ document.getElementById('app').innerHTML=`
 </section>`;
 document.getElementById('goalSel').onchange=e=>{ S.set({goal:e.target.value}); location.reload(); };
 </script>
+<script src="assets/js/paper.js?v=3"></script>
 </body>
 </html>

@@ -6,10 +6,31 @@
 <link rel="stylesheet" href="assets/css/case.css?v=12">
 <title>World Boss — Tự Học Marketing Case</title>
 <meta name="description" content="Cả server cùng hạ một boss mỗi tuần. 15 câu rút từ bài bạn đã học, chấm ở máy chủ.">
+<link rel="stylesheet" href="assets/css/paper.css?v=4">
+<style>
+  #app{max-width:1140px;margin:0 auto}
+  .bs{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:20px;align-items:start;padding:clamp(8px,2vw,20px) 0 60px}
+  .bs__main,.bs__side{min-width:0}
+  .bs__hp{margin-top:20px}
+  .bs__hpn{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .bs__hpn b{font:600 clamp(2rem,4vw,3rem)/1 var(--serif);color:var(--ink-dark,#24160E)}
+  .bs__hpn span{color:var(--ink-dark-50,rgba(36,22,14,.5));font-weight:600}.bs__hpn small{margin-left:auto;font-weight:800;color:var(--terra)}
+  .bs__bar{height:16px;border-radius:99px;background:rgba(36,22,14,.1);overflow:hidden;margin-top:12px}
+  .bs__bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#B8452E,#E0562A)}
+  .bs__meta{margin:10px 0 0;font-size:13px;color:rgba(36,22,14,.6)}
+  .bs__h{font:800 11.5px var(--sans);letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;color:var(--terra)}
+  .bs__top{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  .bs__top li{display:flex;gap:10px;align-items:center}.bs__top b{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}
+  .bs__top em{font-style:normal;font-weight:800;color:var(--terra)}
+  .bs__rk{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(36,22,14,.07);font:800 12px var(--sans)}
+  .bs__top li:first-child .bs__rk{background:#f6dd91}
+  .bs__tip{font-size:13.5px;line-height:1.6;color:rgba(36,22,14,.72);margin:0 0 10px}
+  @media(max-width:920px){.bs{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
-<main class="wrap narrow" id="app"></main>
+<main class="wrap" id="app"></main>
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
@@ -25,15 +46,25 @@ const app=document.getElementById('app');
 (async()=>{
   let d; try{ d=await api('/boss'); }catch(e){ await needLogin(app,'World Boss'); return; }
   const pct=d.max_hp?Math.round(d.hp/d.max_hp*100):0;
-  const hp=`<div style="height:14px;border-radius:8px;background:var(--ink-06);overflow:hidden;margin-top:10px"><i style="display:block;height:100%;width:${pct}%;background:var(--red)"></i></div>
-    <p class="mono" style="margin-top:6px">${fmt(d.hp)} / ${fmt(d.max_hp)} máu · mỗi câu đúng ${fmt(d.damage_per_correct)} sát thương</p>`;
-  const top=d.top.length?`<table class="t"><tbody>${d.top.map((t,i)=>`<tr><td>${i+1}</td><td>${escH(t.name)}</td><td class="n">${fmt(t.damage)}</td></tr>`).join('')}</tbody></table>`:'<p class="muted">Chưa ai ra đòn tuần này.</p>';
+  const wk=new Date(d.week+'T00:00:00'), left=Math.max(0,Math.ceil((wk.getTime()+7*864e5-Date.now())/864e5));
+  const top=d.top.length?`<ol class="bs__top">${d.top.map((t,i)=>`<li><span class="bs__rk">${i+1}</span><b>${escH(t.name)}</b><em>${fmt(t.damage)}</em></li>`).join('')}</ol>`:'<p class="muted" style="margin:0">Chưa ai ra đòn tuần này. Bạn có thể là người đầu tiên.</p>';
   const u=await account();
-  app.innerHTML=`<section class="section"><span class="mono mono--red">World Boss · tuần bắt đầu ${new Date(d.week+'T00:00:00').toLocaleDateString('vi-VN')}</span>
-    <h1 class="h1" style="margin:14px 0 10px">Boss Chi Phí Ẩn</h1>
-    <p class="lede">Cả server cùng đánh một boss. Mỗi người một lượt mỗi tuần: 15 câu rút từ bài bạn đã học, đề cố định trong tuần — tải lại không đổi đề. Máy chủ chấm và tính sát thương.</p>${hp}</section>
+  app.innerHTML=`<div class="bs"><div class="bs__main">
+    <section class="section bs__hero"><span class="mono mono--red">World Boss · tuần bắt đầu ${wk.toLocaleDateString('vi-VN')}</span>
+      <h1 class="h1" style="margin:12px 0 10px">Boss <em>Chi Phí Ẩn</em></h1>
+      <p class="lede">Cả server cùng đánh một boss. Mỗi người một lượt mỗi tuần: 15 câu rút từ bài bạn đã học, đề cố định trong tuần — tải lại không đổi đề. Máy chủ chấm và tính sát thương.</p>
+      <div class="bs__hp"><div class="bs__hpn"><b>${fmt(d.hp)}</b><span>/ ${fmt(d.max_hp)} máu</span><small>${pct}%</small></div>
+        <div class="bs__bar"><i style="width:${pct}%"></i></div>
+        <p class="bs__meta">Mỗi câu đúng ${fmt(d.damage_per_correct)} sát thương · boss đổi sau ${left} ngày</p></div>
+    </section>
     <section class="section" id="raid"></section>
-    <section class="section"><span class="mono mono--ink">Top sát thương tuần này</span>${top}</section>`;
+  </div>
+  <aside class="bs__side">
+    <section class="section"><h3 class="bs__h">Top sát thương tuần này</h3>${top}</section>
+    <section class="section"><h3 class="bs__h">Cách tính</h3>
+      <p class="bs__tip">Mỗi câu đúng gây ${fmt(d.damage_per_correct)} sát thương. Câu tính số và câu đoán trước đều tính như nhau; không có điểm phạt khi sai.</p>
+      <p class="bs__tip">Đủ 8 bài đã học thì đề lấy từ chính những bài đó; chưa đủ thì dùng kho câu của chặng 1.</p></section>
+  </aside></div>`;
   const raid=document.getElementById('raid');
   if(!u){ raid.innerHTML=`<p class="note"><a href="tai-khoan.html?next=boss.html">Đăng nhập</a> để ra đòn.</p>`; return; }
   if(d.done){ raid.innerHTML=`<p class="note">Bạn đã ra đòn tuần này: đúng ${d.mine.correct} câu · ${fmt(d.mine.damage)} sát thương · +${d.mine.xp} XP · +${d.mine.coins} xu. Tuần sau có boss mới.</p>`; return; }
@@ -50,5 +81,6 @@ const app=document.getElementById('app');
 })();
 
 </script>
+<script src="assets/js/paper.js?v=3"></script>
 </body>
 </html>

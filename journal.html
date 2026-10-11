@@ -36,6 +36,7 @@
   .note__foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:10px;border-top:var(--rule)}
   .empty{padding:clamp(40px,6vw,90px) 0;text-align:center}
 </style>
+<link rel="stylesheet" href="assets/css/paper.css?v=4">
 </head>
 <body>
 <noscript><div class="nojs">
@@ -165,4 +166,5 @@ document.addEventListener('click',e=>{
   if(d){ const s=State.get(); s.notes.splice(+d.dataset.del,1); State.set({notes:s.notes}); render(); toast('Đã xoá'); }
 });
 </script>
+<script src="assets/js/paper.js?v=3"></script>
 </body></html>
