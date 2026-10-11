@@ -2,16 +2,16 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nguyên lý — Nhìn thấy</title>
+<title>Nguyên lý — Tự Học Marketing Case</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
 <meta name="description" content="Một nguyên lý marketing giải thích bằng ví dụ, phản ví dụ, thương hiệu thật, lỗi phổ biến và một bài tập nhỏ.">
-<meta property="og:title" content="Nguyên lý — Nhìn thấy">
+<meta property="og:title" content="Nguyên lý — Tự Học Marketing Case">
 <meta property="og:description" content="Một nguyên lý marketing giải thích bằng ví dụ, phản ví dụ, thương hiệu thật, lỗi phổ biến và một bài tập nhỏ.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:site_name" content="Nhìn thấy">
-<link rel="stylesheet" href="assets/css/main.css?v=9">
+<meta property="og:site_name" content="Tự Học Marketing Case">
+<link rel="stylesheet" href="assets/css/main.css?v=10">
 <style>
   .top{padding:clamp(30px,5vw,80px) 0 clamp(20px,3vw,50px);border-bottom:var(--rule)}
   .one{font-family:var(--serif);font-weight:300;font-size:clamp(1.5rem,3.4vw,2.7rem);line-height:1.1;letter-spacing:-.025em;max-width:26ch;margin-top:26px}
@@ -35,7 +35,7 @@
   không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
 </div></noscript>
 <main class="wrap" id="app"></main>
-<script src="assets/js/core.js?v=10"></script>
+<script src="assets/js/core.js?v=11"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/districts.js?v=7"></script>
 <script>
@@ -45,7 +45,7 @@ const i = PRINCIPLES.indexOf(p);
 const prev=PRINCIPLES[(i-1+PRINCIPLES.length)%PRINCIPLES.length], next=PRINCIPLES[(i+1)%PRINCIPLES.length];
 const dist = DISTRICTS.find(d=>d.key===p.d);
 document.documentElement.setAttribute('data-district', p.d);
-document.title = p.t+' — Nhìn thấy';
+document.title = p.t+' — Tự Học Marketing Case';
 State.push('principles', p.id);
 
 document.getElementById('app').innerHTML = `

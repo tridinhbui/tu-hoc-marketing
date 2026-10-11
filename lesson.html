@@ -2,16 +2,16 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bài hôm nay — Nhìn thấy</title>
+<title>Bài hôm nay — Tự Học Marketing Case</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
 <meta name="description" content="Bài học marketing mỗi ngày trong 5–10 phút: một ý tưởng, một ví dụ thật, lý do nó hiệu quả và một bài tập nhỏ.">
-<meta property="og:title" content="Bài hôm nay — Nhìn thấy">
+<meta property="og:title" content="Bài hôm nay — Tự Học Marketing Case">
 <meta property="og:description" content="Bài học marketing mỗi ngày trong 5–10 phút: một ý tưởng, một ví dụ thật, lý do nó hiệu quả và một bài tập nhỏ.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:site_name" content="Nhìn thấy">
-<link rel="stylesheet" href="assets/css/main.css?v=9">
+<meta property="og:site_name" content="Tự Học Marketing Case">
+<link rel="stylesheet" href="assets/css/main.css?v=10">
 <style>
   .lead{display:grid;gap:clamp(18px,3vw,44px);padding:clamp(30px,5vw,70px) 0}
   @media(min-width:960px){.lead{grid-template-columns:1.15fr .85fr;align-items:end}}
@@ -37,7 +37,7 @@
 </div></noscript>
 <main class="wrap" id="app"></main>
 
-<script src="assets/js/core.js?v=10"></script>
+<script src="assets/js/core.js?v=11"></script>
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/districts.js?v=7"></script>
 <script>
@@ -46,7 +46,7 @@ const want = parseInt(qs('day')||'0',10);
 const L = LESSONS.find(l=>l.day===want) || LESSONS[dayIndex(LESSONS.length)];
 const dist = DISTRICTS.find(d=>d.key===L.d);
 document.documentElement.setAttribute('data-district', L.d);
-document.title = `Day ${L.day} · ${L.t} — Nhìn thấy`;
+document.title = `Day ${L.day} · ${L.t} — Tự Học Marketing Case`;
 
 const read = State.has('days', L.day);
 document.getElementById('app').innerHTML = `

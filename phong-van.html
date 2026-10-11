@@ -16,6 +16,7 @@
 <script src="assets/js/data/bai-index.js?v=11"></script>
 <script src="assets/js/data/drills.js?v=3"></script>
 <script src="assets/js/data/cases.js?v=3"></script>
+<script src="assets/js/data/interview-script.js?v=1"></script>
 <script src="assets/js/app.js?v=21"></script>
 <script>
 
@@ -25,19 +26,52 @@ const TRACKS=[['mt','Management Trainee'],['brand','Brand Executive'],['perf','P
 let sid=null, busy=false;
 async function intro(){
   const u=await account();
-  if(API.on===false){ app.innerHTML=NOAPI; return; }
+  
   let q=null; if(u) try{ q=await api('/ai/quota'); }catch(e){}
   app.innerHTML=`<section class="section">
     <span class="mono mono--red">Phỏng vấn mô phỏng · AI</span>
     <h1 class="h1" style="margin:14px 0 14px">Người phỏng vấn<br><em>không dễ tính.</em></h1>
     <p class="lede">AI đưa một tình huống có số, hỏi từng câu và hỏi vặn khi bạn trả lời thiếu số hoặc mơ hồ.
       Sau tối đa 6 lượt trả lời — hoặc khi bạn bấm kết thúc — nó đưa dàn ý trả lời mẫu để bạn tự so. Không chấm, không đánh giá câu trả lời của bạn.</p>
-    ${!u?`<p class="note" style="margin-top:18px"><a href="tai-khoan.html">Đăng nhập</a> để dùng. Mỗi người có một số buổi miễn phí mỗi tháng.</p>`
-    :q&&!q.configured?'<p class="note" style="margin-top:18px">AI chưa được bật trên máy chủ.</p>'
-    :`<p class="mono" style="margin-top:14px">Đã dùng ${q?q.interview.used:'?'} / ${q?q.interview.limit:'?'} buổi tháng này</p>
+    ${!u?`<p class="note" style="margin-top:18px"><a href="tai-khoan.html">Đăng nhập</a> để dùng AI. Mỗi người có một số buổi miễn phí mỗi tháng.</p>`
+    :q&&!q.configured?'<p class="note" style="margin-top:18px">AI chưa được bật trên máy chủ — bạn vẫn luyện được bằng kịch bản dưới đây.</p>'
+    :q&&q.interview.used>=q.interview.limit?'<p class="note" style="margin-top:18px">Bạn đã dùng hết buổi AI miễn phí tháng này — luyện tiếp bằng kịch bản dưới đây.</p>'
+    :`<p class="mono" style="margin-top:14px">Đã dùng ${q?q.interview.used:'?'} / ${q?q.interview.limit:'?'} buổi AI tháng này</p>
       <div class="row" style="margin-top:14px">${TRACKS.map(([k,l])=>`<button class="btn btn--ghost" data-t="${k}">${l}</button>`).join('')}</div>`}
+  </section>
+  <section class="section"><span class="mono mono--ink">Luyện theo kịch bản · không cần AI</span>
+    <p class="muted" style="margin:8px 0 0">Tình huống có số, hỏi vặn khi bạn thiếu số hoặc thiếu ý, cuối buổi có đáp án mẫu để tự so. Chạy hoàn toàn trong trình duyệt.</p>
+    <div class="row" style="margin-top:14px">${Object.entries(INTERVIEW_SCRIPT).map(([k,v])=>`<button class="btn" data-s="${k}">${v.title}</button>`).join('')}</div>
   </section>`;
   app.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>start(b.dataset.t));
+  app.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>startScript(b.dataset.s));
+}
+
+function startScript(key){
+  const sc=INTERVIEW_SCRIPT[key]; let i=0, probed=false; const answered=[];
+  app.innerHTML=`<section class="section"><div class="row between"><span class="mono mono--red">${sc.title} · kịch bản</span><span class="mono" id="left"></span></div>
+    <div id="log" style="margin-top:14px"></div>
+    <form id="f" class="stack" style="margin-top:16px"><textarea class="field" id="m" rows="4" maxlength="1500" placeholder="Trả lời như đang ngồi trước người phỏng vấn." aria-label="Câu trả lời"></textarea>
+      <div class="row between"><button type="button" class="btn btn--ghost" id="end">Kết thúc và xem đáp án mẫu</button><button class="btn">Gửi</button></div></form></section>`;
+  const left=()=>document.getElementById('left').textContent=`Câu ${Math.min(i+1,sc.steps.length)}/${sc.steps.length}`;
+  add('ai','Tình huống: '+sc.intro); add('ai',sc.steps[0].ask); left();
+  const finish=()=>{
+    const model=sc.steps.map((st,n)=>`${n+1}. ${st.model}`).join('\n');
+    add('ai','Hết buổi. Đáp án mẫu để bạn tự so (không phải đáp án duy nhất):\n'+model);
+    const miss=answered.filter(a=>a.flag).length;
+    if(answered.length) add('ai',miss?`Bạn bị hỏi vặn ${miss}/${answered.length} câu vì thiếu số hoặc thiếu ý. Luyện lại và chủ động đưa con số ngay từ câu đầu.`:'Bạn không bị hỏi vặn câu nào — thử một chặng khó hơn.');
+    document.getElementById('f').outerHTML='<a class="btn" href="phong-van.html">Buổi mới</a>'; document.getElementById('left').textContent='Đã kết thúc';
+  };
+  document.getElementById('f').onsubmit=e=>{ e.preventDefault();
+    const m=document.getElementById('m'), t=m.value.trim(); if(t.length<2) return; add('me',t); m.value='';
+    const st=sc.steps[i];
+    const lackNum=st.num&&!/\d/.test(t);
+    const lackKey=st.keys&&st.keys.filter(r=>r.test(t)).length<Math.ceil(st.keys.length/2);
+    if(!probed&&(lackNum||lackKey||t.length<25)){ probed=true; add('ai',st.probe||'Cụ thể hơn: nêu con số hoặc ví dụ.'); return; }
+    answered.push({flag:probed}); probed=false; i++;
+    if(i>=sc.steps.length) return finish();
+    add('ai',sc.steps[i].ask); left(); };
+  document.getElementById('end').onclick=finish;
 }
 function chat(){ return document.getElementById('log'); }
 function add(who,text){ chat().insertAdjacentHTML('beforeend',`<div style="padding:12px 0;border-bottom:var(--rule)"><span class="mono ${who==='ai'?'mono--red':''}">${who==='ai'?'Người phỏng vấn':'Bạn'}</span>

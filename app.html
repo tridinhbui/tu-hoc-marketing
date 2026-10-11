@@ -203,7 +203,7 @@ const GROUPS = [
     ] },
   ] },
   { t: 'Thực hành', ic: 'flask', items: [
-    ['Quiz', 'quiz.html', 'cap', ['quiz.html', 'challenge.html', 'luyen.html'], 'new'],
+    ['Phòng thử thách', 'quiz.html', 'cap', ['quiz.html', 'challenge.html', 'luyen.html'], 'new'],
     ['Thi vượt chặng', 'thi.html', 'trophy', ['thi.html']],
     ['Game Kingdom', 'kingdom.html', 'game', ['kingdom.html', 'tro-choi.html', 'boss.html', 'pvp.html', 'shop.html'], 'hot'],
     ['Luyện phỏng vấn', 'phong-van.html', 'brief', ['phong-van.html', 'interview.html']],
@@ -212,7 +212,7 @@ const GROUPS = [
   ] },
   { t: 'Cộng đồng', ic: 'users', items: [
     ['Thư viện', 'case-thu-vien.html', 'bank', ['case-thu-vien.html', 'giai-case.html', 'gallery.html', 'campaign.html', 'brand.html', 'xray.html', 'thuat-ngu.html']],
-    ['Học nhóm', 'bang-xep-hang.html', 'people', ['bang-xep-hang.html'], 'chk'],
+    ['Bảng xếp hạng', 'bang-xep-hang.html', 'trophy', ['bang-xep-hang.html']],
   ] },
 ];
 /* Chỉ nhận tên file .html trong cùng thư mục — không cho `p` trỏ ra ngoài (chống open-redirect). */
@@ -292,6 +292,8 @@ rail.addEventListener('click', (e) => {
   if (SAFE.test(href)) loadInto(href);
 });
 window.addEventListener('storage', refreshMe);
+/* Trang bàn làm việc (core.js) báo có thay đổi → đồng bộ lên máy chủ. */
+window.addEventListener('message', (e) => { if (e.origin === location.origin && e.data && e.data.thmc === 'sync' && typeof scheduleSync === 'function') scheduleSync(); });
 setInterval(refreshMe, 4000);
 
 /* ---- Tìm kiếm nhanh (⌘K): mục điều hướng + bài học ---- */

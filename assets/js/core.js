@@ -16,6 +16,10 @@ const NAV_MORE = [
   ['Sổ tay','journal.html'],
 ];
 
+/* Cùng giao diện với app: đọc theme đã chọn ở khung (mặc định giấy ngà), không tự đứng ở nền tối. */
+(function(){ try{ const t=(JSON.parse(localStorage.getItem('thmc.v1')||'{}')).theme;
+  document.documentElement.dataset.theme = t==='light' ? '' : (t||'ivory'); }catch(e){ document.documentElement.dataset.theme='ivory'; } })();
+
 /* ---------------- state ---------------- */
 const KEY = 'nhinthay.v1';
 const DEFAULT = {
@@ -23,9 +27,42 @@ const DEFAULT = {
   campaigns:[], brands:[], challenges:[], taste:[], principles:[], roadmap:[], work:{},
   notes:[], answers:{}
 };
+/* Sổ tay, bàn làm việc, thử thách cũ lưu ở khoá riêng của trang này. Để không chỉ nằm trên một máy, bản sao được đặt vào
+   flags.wb của trạng thái app ('thmc.v1') — chính trạng thái đó được app.html đồng bộ lên máy chủ khi đã đăng nhập. */
+const APP_KEY = 'thmc.v1';
+const WB_LISTS = ['campaigns','brands','challenges','taste','principles','roadmap'];
+function mergeWb(a, b){
+  a = a || {}; b = b || {};
+  const out = { ...DEFAULT, ...a, ...b };
+  for (const k of WB_LISTS) out[k] = [...new Set([...(a[k]||[]), ...(b[k]||[])])];
+  const seen = new Set();
+  out.notes = [...(a.notes||[]), ...(b.notes||[])].filter((n) => { const id = [n.t, n.when, n.body].join('|'); if (seen.has(id)) return false; seen.add(id); return true; });
+  out.work = { ...(a.work||{}), ...(b.work||{}) }; out.answers = { ...(a.answers||{}), ...(b.answers||{}) };
+  out.days = [...new Set([...(a.days||[]), ...(b.days||[])])].sort();
+  out._t = Math.max(a._t||0, b._t||0);
+  return out;
+}
+function wbHydrate(){
+  try{
+    const app = JSON.parse(localStorage.getItem(APP_KEY)||'{}'), remote = (app.flags||{}).wb;
+    if (!remote) return;
+    const local = JSON.parse(localStorage.getItem(KEY)||'{}');
+    if ((remote._t||0) === (local._t||0) && JSON.stringify(remote.notes||[]) === JSON.stringify(local.notes||[])) return;
+    localStorage.setItem(KEY, JSON.stringify(mergeWb(local, remote)));
+  }catch(e){}
+}
+function wbMirror(s){
+  try{
+    const app = JSON.parse(localStorage.getItem(APP_KEY)||'{}');
+    app.flags = { ...(app.flags||{}), wb: s };
+    localStorage.setItem(APP_KEY, JSON.stringify(app));
+    if (window.top !== window.self) window.parent.postMessage({ thmc: 'sync' }, location.origin);
+  }catch(e){}
+}
+wbHydrate();
 const State = {
   get(){ try{ return {...DEFAULT, ...JSON.parse(localStorage.getItem(KEY)||'{}')}; }catch(e){ return {...DEFAULT}; } },
-  set(patch){ const s={...State.get(),...patch}; localStorage.setItem(KEY,JSON.stringify(s)); return s; },
+  set(patch){ const s={...State.get(),...patch,_t:Date.now()}; localStorage.setItem(KEY,JSON.stringify(s)); wbMirror(s); return s; },
   push(list,val){ const s=State.get(); const arr=s[list]||[]; if(!arr.includes(val)){ arr.push(val); State.set({[list]:arr}); } return arr; },
   toggle(list,val){ const s=State.get(); const arr=s[list]||[];
     const i=arr.indexOf(val); i>-1?arr.splice(i,1):arr.push(val); State.set({[list]:arr}); return i<0; },

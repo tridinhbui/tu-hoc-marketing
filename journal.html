@@ -2,16 +2,16 @@
 <html lang="vi" data-district="consumer">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sổ tay — Nhìn thấy</title>
+<title>Sổ tay — Tự Học Marketing Case</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0EDE6'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='24' text-anchor='middle' fill='%2315120E'%3EN%3C/text%3E%3C/svg%3E">
 <meta name="description" content="Sổ tay marketing riêng: campaign đã lưu, thương hiệu đã bóc tách và những quan sát bạn nhặt được ngoài đời.">
-<meta property="og:title" content="Sổ tay — Nhìn thấy">
+<meta property="og:title" content="Sổ tay — Tự Học Marketing Case">
 <meta property="og:description" content="Sổ tay marketing riêng: campaign đã lưu, thương hiệu đã bóc tách và những quan sát bạn nhặt được ngoài đời.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:site_name" content="Nhìn thấy">
-<link rel="stylesheet" href="assets/css/main.css?v=9">
+<meta property="og:site_name" content="Tự Học Marketing Case">
+<link rel="stylesheet" href="assets/css/main.css?v=10">
 <style>
   .rank{display:grid;gap:clamp(18px,3vw,44px);padding:clamp(28px,4vw,64px) 0;border-bottom:var(--rule)}
   @media(min-width:960px){.rank{grid-template-columns:1.05fr .95fr;align-items:end}}
@@ -44,7 +44,7 @@
   không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
 </div></noscript>
 <main class="wrap" id="app"></main>
-<script src="assets/js/core.js?v=10"></script>
+<script src="assets/js/core.js?v=11"></script>
 <script src="assets/js/data/campaigns.js?v=8"></script>
 <script src="assets/js/data/brands.js?v=8"></script>
 <script src="assets/js/data/collections.js?v=7"></script>
@@ -155,7 +155,7 @@ document.addEventListener('click',e=>{
   }
   if(e.target.id==='export'){
     const s=State.get();
-    const txt='SỔ TAY MARKETING — Nhìn thấy\n'+new Date().toLocaleDateString('vi-VN')+'\n\n'+
+    const txt='SỔ TAY MARKETING — Tự Học Marketing Case\n'+new Date().toLocaleDateString('vi-VN')+'\n\n'+
       s.notes.map(x=>`[${x.kind||'Ghi chép'} · ${x.when||''}] ${x.t}\n${x.body}\n`).join('\n');
     const a=document.createElement('a');
     a.href=URL.createObjectURL(new Blob([txt],{type:'text/plain'}));

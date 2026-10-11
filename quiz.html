@@ -2,537 +2,186 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C85A32%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E8%27%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=12">
-<title>Creative Challenge Room — Tự Học Marketing Case</title>
-<meta name="description" content="Creative Challenge Room: Phân tích tình huống thực tế của thương hiệu, cân nhắc các lựa chọn và đưa ra quyết định chiến lược tốt nhất.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C85A32%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E7%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=13">
+<title>Phòng thử thách — Tự Học Marketing Case</title>
+<meta name="description" content="Phòng thử thách: rút ngẫu nhiên các tình huống marketing, chọn hướng đi, đọc lý do từng phương án. Làm lại bao nhiêu lần cũng được.">
 <style>
-  body{
-    background:#130E0B;
-    color:#F9F4EB;
-    overflow-x:hidden;
-  }
-  
-  /* Top Room Navigation */
-  .room-nav{
-    position:sticky;
-    top:0;
-    z-index:40;
-    background:rgba(19,14,11,.92);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(249,244,235,.08);
-  }
-  .room-nav .wrap{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding-top:14px;
-    padding-bottom:14px;
-  }
-  .room-nav-links{
-    display:flex;
-    align-items:center;
-    gap:24px;
-  }
-  .room-nav-links a{
-    font-size:14px;
-    font-weight:500;
-    color:rgba(249,244,235,.7);
-    text-decoration:none;
-  }
-  .room-nav-links a.active{
-    color:#F9F4EB;
-  }
-
-  /* Challenge Room Hero */
-  .room-hero{
-    padding:clamp(28px,5vw,56px) 0 clamp(20px,3vw,36px);
-    display:grid;
-    gap:24px;
-  }
-  @media(min-width:960px){
-    .room-hero{
-      grid-template-columns:1.2fr .8fr;
-      align-items:center;
-    }
-  }
-  .room-hero-title{
-    font-family:var(--serif);
-    font-size:clamp(2.6rem,5vw,4.2rem);
-    font-weight:400;
-    line-height:1.05;
-    margin:10px 0 14px;
-    letter-spacing:-.02em;
-  }
-  .room-hero-img-wrap{
-    position:relative;
-    border-radius:18px;
-    overflow:hidden;
-    max-width:380px;
-    margin:0 auto;
-    box-shadow:0 24px 60px -20px rgba(0,0,0,.8);
-    border:1px solid rgba(249,244,235,.15);
-  }
-  .room-hero-img-wrap img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    display:block;
-  }
-  .room-hero-script{
-    position:absolute;
-    bottom:14px;
-    right:16px;
-    font-family:var(--hand);
-    font-size:24px;
-    color:#E5B4A8;
-    text-shadow:0 2px 10px rgba(0,0,0,.9);
-    pointer-events:none;
-  }
-
-  /* Paper Situation Card (Exact parity with Screen 3) */
-  .situation-card{
-    background:var(--paper);
-    color:var(--ink-dark);
-    border-radius:20px;
-    padding:clamp(24px,4vw,44px);
-    box-shadow:0 28px 70px -20px rgba(0,0,0,.8);
-    margin:clamp(20px,3vw,36px) 0;
-    display:grid;
-    gap:28px;
-  }
-  @media(min-width:960px){
-    .situation-card{
-      grid-template-columns:1.15fr .85fr;
-      align-items:start;
-    }
-  }
-  .situation-title{
-    font-family:var(--serif);
-    font-size:clamp(1.5rem,3vw,2.2rem);
-    font-weight:600;
-    line-height:1.2;
-    margin:0 0 14px;
-    color:var(--ink-dark);
-  }
-
-  /* Market Metrics Bar */
-  .metrics-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:14px;
-    border-top:1px solid var(--rule-paper);
-    border-bottom:1px solid var(--rule-paper);
-    padding:16px 0;
-    margin-bottom:28px;
-  }
-  .metric-item b{
-    font-family:var(--serif);
-    font-size:clamp(1.4rem,2.8vw,2rem);
-    font-weight:600;
-    color:var(--terra);
-    display:block;
-  }
-  .metric-item span{
-    font-size:12.5px;
-    color:var(--ink-dark-70);
-    line-height:1.4;
-    display:block;
-    margin-top:2px;
-  }
-
-  /* 3 Interactive Visual Choices Grid */
-  .visual-choices-grid{
-    display:grid;
-    gap:16px;
-    margin-bottom:24px;
-  }
-  @media(min-width:720px){
-    .visual-choices-grid{
-      grid-template-columns:repeat(3,1fr);
-    }
-  }
-  .choice-visual-card{
-    background:#FFFDF9;
-    border:2px solid rgba(36,22,14,.12);
-    border-radius:14px;
-    overflow:hidden;
-    padding:12px;
-    cursor:pointer;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    transition:var(--transition-fast);
-    text-align:left;
-  }
-  .choice-visual-card:hover{
-    border-color:var(--terra);
-    transform:translateY(-3px);
-    box-shadow:0 14px 30px -12px rgba(36,22,14,.25);
-  }
-  .choice-visual-card.selected{
-    border-color:var(--terra);
-    background:rgba(200,90,50,.06);
-    box-shadow:0 16px 36px -12px rgba(200,90,50,.35);
-  }
-  .choice-visual-card__thumb{
-    height:130px;
-    border-radius:8px;
-    overflow:hidden;
-  }
-  .choice-visual-card__thumb img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-  }
-  .choice-visual-card__tag{
-    font-size:10.5px;
-    font-weight:700;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--terra);
-  }
-  .choice-visual-card__desc{
-    font-size:13px;
-    color:var(--ink-dark-70);
-    line-height:1.5;
-    margin:0;
-    flex:1;
-  }
-
-  /* Feedback Reveal Box */
-  .feedback-box{
-    margin-top:20px;
-    padding:20px 24px;
-    border-radius:12px;
-    background:#FAF5EE;
-    border:1.5px solid var(--terra);
-    display:none;
-    font-size:14.5px;
-    line-height:1.65;
-    color:var(--ink-dark);
-  }
-
-  /* "Sau khi trả lời" section */
-  .takeaway-list{
-    list-style:none;
-    padding:0;
-    margin:16px 0 0;
-    display:grid;
-    gap:10px;
-  }
-  .takeaway-list li{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:14px;
-    color:rgba(249,244,235,.8);
-  }
-  .takeaway-list li::before{
-    content:"✓";
-    display:grid;
-    place-items:center;
-    width:20px;
-    height:20px;
-    border-radius:50%;
-    background:var(--terra);
-    color:#fff;
-    font-size:11px;
-    font-weight:700;
-    flex:none;
-  }
+  .rm{max-width:980px;margin:0 auto;padding:clamp(20px,4vw,44px) clamp(16px,3vw,32px) 80px}
+  .rm__eyebrow{font:700 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+  .rm h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.05;letter-spacing:-.02em;margin:10px 0 12px}
+  .rm h1 em{color:var(--terra)}
+  .rm__lede{max-width:56ch;color:var(--ink-70);line-height:1.6;margin:0 0 22px}
+  .rm__stats{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 22px}
+  .rm__stat{background:var(--paper-card);color:var(--ink-dark);border:1px solid var(--ink-12);border-radius:14px;padding:12px 16px;min-width:120px}
+  .rm__stat b{display:block;font-family:var(--serif);font-size:1.6rem;font-weight:500;line-height:1.1}
+  .rm__stat span{font-size:12px;color:var(--ink-dark-50)}
+  .rm__topics{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
+  .rm__topics button{border:1px solid var(--ink-12);background:transparent;color:var(--ink);border-radius:999px;padding:7px 14px;font:600 13px var(--sans);cursor:pointer}
+  .rm__topics button[aria-pressed="true"]{background:var(--terra);border-color:var(--terra);color:#fff}
+  .rm__go{border:0;background:var(--terra);color:#fff;border-radius:999px;padding:13px 28px;font:700 15px var(--sans);cursor:pointer}
+  .rm__go:disabled{opacity:.45;cursor:not-allowed}
+  .rm__go--ghost{background:transparent;color:var(--ink);border:1px solid var(--ink-30)}
+  .rm__bar{display:flex;align-items:center;gap:12px;margin:0 0 18px;font:600 13px var(--sans);color:var(--ink-70)}
+  .rm__bar i{flex:1;height:6px;border-radius:99px;background:var(--ink-12);overflow:hidden}
+  .rm__bar i u{display:block;height:100%;background:var(--terra);width:0;transition:width .3s}
+  .rm__card{background:var(--paper-card);color:var(--ink-dark);border-radius:20px;padding:clamp(18px,3vw,32px);box-shadow:0 18px 40px -22px rgba(0,0,0,.35)}
+  .rm__kind{display:inline-block;font:700 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--terra);background:var(--terra-06);padding:6px 10px;border-radius:999px}
+  .rm__brief{font-size:15.5px;line-height:1.65;color:var(--ink-dark-70);margin:14px 0 6px}
+  .rm__q{font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.25;margin:0 0 18px}
+  .rm__opts{display:grid;gap:10px}
+  .rm__opt{display:block;width:100%;text-align:left;border:1.5px solid rgba(36,22,14,.15);background:#fff;color:var(--ink-dark);border-radius:14px;padding:14px 16px;cursor:pointer;font:500 15px/1.5 var(--sans);transition:border-color .15s,background .15s}
+  .rm__opt b{font-weight:700;color:var(--terra);margin-right:8px}
+  .rm__opt:hover:not([disabled]){border-color:var(--terra)}
+  .rm__opt[aria-pressed="true"]{border-color:var(--terra);background:rgba(200,90,50,.08)}
+  .rm__opt[data-s="right"]{border-color:#3d8a4f;background:#e8f3ea}
+  .rm__opt[data-s="wrong"]{border-color:#c0392b;background:#fbeae7}
+  .rm__opt[disabled]{cursor:default}
+  .rm__why{margin:10px 2px 0;font-size:14px;line-height:1.6;color:var(--ink-dark-70)}
+  .rm__why strong{color:#2f7a42}
+  .rm__act{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;align-items:center}
+  .rm__res{text-align:center;padding:12px 0}
+  .rm__res b{font-family:var(--serif);font-size:3.2rem;font-weight:400;display:block;line-height:1}
+  .rm__hist{margin-top:34px}
+  .rm__hist h2{font:700 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-50);margin:0 0 10px}
+  .rm__hist ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+  .rm__hist li{display:flex;gap:10px;align-items:center;font-size:14px;padding:10px 12px;border:1px solid var(--ink-12);border-radius:12px}
+  .rm__hist li span{margin-left:auto;font-size:12px;color:var(--ink-50)}
+  .rm__dot{width:10px;height:10px;border-radius:50%;flex:none}
 </style>
 </head>
 <body>
-<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Câu hỏi và tiến độ được dựng ngay trong trình duyệt của bạn.</p></div></noscript>
-
-<!-- TOP NAVIGATION -->
-<main class="wrap" id="app">
-  <!-- 1. ROOM HERO: EXPRESSIVE CINEMATIC PRESENTATION (Screen 3 Parity) -->
-  <section class="room-hero">
-    <div>
-      <span class="studio-badge studio-badge--terra">THỬ THÁCH CHIẾN DỊCH · BÀI 3/7</span>
-      <h1 class="room-hero-title">
-        Creative<br>Challenge Room
-      </h1>
-      <p style="font-size:16px;color:rgba(249,244,235,.75);line-height:1.6;max-width:44ch;margin:0">
-        Bạn là chiến lược gia. Hãy phân tích tình huống, cân nhắc các lựa chọn và đưa ra quyết định tốt nhất.
-      </p>
-    </div>
-
-    <!-- Right Portrait with Handwritten Script -->
-    <div class="room-hero-img-wrap">
-      <img src="assets/img/model_thinking.jpg" alt="Creative Strategy Thinking">
-      <div class="room-hero-script">
-        Think. Compare.<br>Choose. Learn.
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. SITUATION & PROBLEM STATEMENT (Ivory Paper Panel) -->
-  <section class="situation-card">
-    <div>
-      <span class="studio-badge studio-badge--terra" style="margin-bottom:10px">TÌNH HUỐNG THỰC TẾ</span>
-      <h2 class="situation-title">
-        Làm sao để tăng nhận biết cho một thương hiệu cà phê mới?
-      </h2>
-      <p style="font-size:15px;line-height:1.65;color:var(--ink-dark-70);margin:0 0 20px">
-        Một thương hiệu cà phê Việt Nam cao cấp sắp ra mắt, hướng đến giới trẻ thành thị. 
-        Ngân sách hạn chế, cần tạo được khác biệt so với các chuỗi lớn đang có trên thị trường.
-      </p>
-
-      <!-- DỮ LIỆU THỊ TRƯỜNG -->
-      <span class="lbl" style="color:var(--ink-dark-50);display:block;margin-bottom:8px">DỮ LIỆU THỊ TRƯỜNG</span>
-      <div class="metrics-grid">
-        <div class="metric-item">
-          <b>78%</b>
-          <span>Gen Z uống cà phê ít nhất 3 lần/tuần</span>
-        </div>
-        <div class="metric-item">
-          <b>+22%</b>
-          <span>Thị trường F&B tăng trưởng mỗi năm</span>
-        </div>
-        <div class="metric-item">
-          <b>>300</b>
-          <span>Thương hiệu cà phê đang hoạt động tại Việt Nam</span>
-        </div>
-      </div>
-
-      <!-- CHỌN HƯỚNG ĐI (3 Visual Cards) -->
-      <span class="lbl" style="color:var(--ink-dark-50);display:block;margin-bottom:12px">
-        CHỌN HƯỚNG ĐI BẠN CHO LÀ HIỆU QUẢ NHẤT:
-      </span>
-
-      <div class="visual-choices-grid">
-        <!-- Option A -->
-        <div class="choice-visual-card" id="cardA" onclick="selectRoomChoice('A')">
-          <div class="choice-visual-card__thumb">
-            <img src="assets/img/coffee_aesthetic.jpg" alt="Tập trung vào sản phẩm">
-          </div>
-          <span class="choice-visual-card__tag">A · TẬP TRUNG VÀO SẢN PHẨM</span>
-          <p class="choice-visual-card__desc">
-            Đầu tư vào hương vị độc đáo, nguyên liệu đặc biệt và trải nghiệm tại cửa hàng.
-          </p>
-        </div>
-
-        <!-- Option B (Selected in reference) -->
-        <div class="choice-visual-card selected" id="cardB" onclick="selectRoomChoice('B')">
-          <div class="choice-visual-card__thumb">
-            <img src="assets/img/coffee_lifestyle.jpg" alt="Kể câu chuyện thương hiệu">
-          </div>
-          <span class="choice-visual-card__tag">B · KỂ CÂU CHUYỆN THƯƠNG HIỆU</span>
-          <p class="choice-visual-card__desc">
-            Xây dựng câu chuyện về lối sống, con người và giá trị văn hoá Việt hiện đại.
-          </p>
-        </div>
-
-        <!-- Option C -->
-        <div class="choice-visual-card" id="cardC" onclick="selectRoomChoice('C')">
-          <div class="choice-visual-card__thumb">
-            <img src="assets/img/influencer_lifestyle.jpg" alt="Tận dụng KOL / Influencer">
-          </div>
-          <span class="choice-visual-card__tag">C · TẬN DỤNG KOL / INFLUENCER</span>
-          <p class="choice-visual-card__desc">
-            Hợp tác với KOLs, food reviewers và TikTok creators để tạo độ phủ nhanh.
-          </p>
-        </div>
-      </div>
-
-      <!-- Action Button -->
-      <div class="row" style="margin-top:18px">
-        <button type="button" class="btn btn--primary" id="confirmBtn" onclick="confirmRoomDecision()" style="border-radius:99px;padding:14px 32px;font-size:15px">
-          Xác nhận lựa chọn →
-        </button>
-      </div>
-
-      <!-- Feedback Reveal -->
-      <div class="feedback-box" id="roomFeedback"></div>
-    </div>
-
-    <!-- Right Polaroid Artifact -->
-    <div style="display:flex;flex-direction:column;align-items:center">
-      <div class="polaroid-frame" style="max-width:290px;transform:rotate(2.5deg)">
-        <div class="tape tape--top tape--pink"></div>
-        <img src="assets/img/coffee_lifestyle.jpg" alt="Coffee Cup Story">
-        <div class="polaroid-caption">Cùng một ly cà phê, nhưng khác câu chuyện sẽ tạo ra khác biệt.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. SAU KHI TRẢ LỜI: BẠN SẼ THẤY -->
-  <section style="margin:clamp(32px,5vw,60px) 0;padding-top:28px;border-top:1px solid rgba(249,244,235,.1)">
-    <span class="studio-badge">SAU KHI TRẢ LỜI</span>
-    <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);margin:12px 0 6px">
-      Bạn sẽ thấy
-    </h2>
-    <ul class="takeaway-list">
-      <li>Phân tích ưu – nhược điểm của từng hướng đi chiến lược</li>
-      <li>Dữ liệu thực tế từ các case tương tự (Highlands, Katinat, The Coffee House)</li>
-      <li>Gợi ý chiến lược tối ưu và bài học rút ra để mang thẳng vào công việc</li>
-    </ul>
-
-    <div style="margin-top:40px;text-align:center;padding:24px;background:rgba(29,21,16,.6);border-radius:14px;border:1px solid rgba(249,244,235,.08)">
-      <p class="hand" style="font-size:26px;color:#E5B4A8;margin:0 0 6px">
-        “Marketing không chỉ là làm cho sản phẩm được biết đến, mà là làm cho nó được tin, được yêu và được lựa chọn.”
-      </p>
-      <span class="small muted">— Brand Strategy Principle</span>
-    </div>
-  </section>
-</main>
-
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main class="rm" id="app"></main>
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
 <script src="assets/js/data/bai-index.js?v=11"></script>
 <script src="assets/js/data/drills.js?v=3"></script>
 <script src="assets/js/data/cases.js?v=3"></script>
-<script src="assets/js/data/exam-items.js?v=8"></script>
+<script src="assets/js/data/challenges.js?v=7"></script>
 <script src="assets/js/app.js?v=21"></script>
 <script>
 appShell('quiz.html');
-let currentChoice = 'B';
-let audioCtx = null;
+const app = document.getElementById('app');
+const TOPIC = { creative: 'Sáng tạo', brand: 'Thương hiệu', consumer: 'Khách hàng', growth: 'Tăng trưởng', strategy: 'Chiến lược' };
+const ROUND = 5, LABEL = 'ABCD';
+/* Tình huống cà phê (trang cũ) — giữ lại làm một thử thách trong ngân hàng. */
+const POOL = [...CHALLENGES, {
+  id: 'ch-coffee', kind: 'Tăng nhận biết cho thương hiệu mới', d: 'brand',
+  brief: 'Một thương hiệu cà phê Việt cao cấp sắp ra mắt, hướng đến giới trẻ thành thị. Ngân sách hạn chế, phải khác biệt với các chuỗi lớn.',
+  q: 'Bạn dồn nguồn lực vào hướng nào trước?',
+  opts: [
+    { t: 'Đầu tư vào hương vị độc đáo và trải nghiệm tại quầy', why: 'Sản phẩm tốt là điều kiện cần, nhưng khó thấy được từ bên ngoài. Với ngân sách nhỏ, khách mới không có cách nào biết bạn ngon hơn trước khi thử.' },
+    { t: 'Xây câu chuyện lối sống quanh người trẻ thành thị và một dịp dùng cụ thể', why: 'Đúng. Nó cho khách một lý do để chọn bạn mà không cần so giá, tạo tài sản nhận diện riêng và bảo vệ biên lợi nhuận khi chuỗi lớn giảm giá.', ok: true },
+    { t: 'Thuê KOL/KOC phủ nhanh trong tháng đầu', why: 'Kéo lượt thử rất nhanh nhưng khách rời đi khi voucher hết, vì họ chưa biết thương hiệu đứng cho điều gì. Dùng KOL sau khi đã có ý tưởng, không phải thay cho ý tưởng.' }]
+}];
+const roomFlags = () => (S.get().flags || {});
+const rec = (id) => roomFlags()['room:' + id];
+let topic = 'all', run = null;
 
-function playRoomSound(type) {
-  try {
-    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    if (audioCtx.state === 'suspended') audioCtx.resume();
-    const now = audioCtx.currentTime;
-
-    if (type === 'tick') {
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.type = 'triangle';
-      osc.frequency.setValueAtTime(450, now);
-      osc.frequency.exponentialRampToValueAtTime(200, now + 0.05);
-      gain.gain.setValueAtTime(0.08, now);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-      osc.start(now);
-      osc.stop(now + 0.05);
-    } else if (type === 'chord') {
-      [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, now + i * 0.06);
-        gain.gain.setValueAtTime(0.08, now + i * 0.06);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + i * 0.06 + 0.6);
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start(now + i * 0.06);
-        osc.stop(now + i * 0.06 + 0.65);
-      });
-    }
-  } catch(e) {}
+function roomStats() {
+  const done = POOL.filter((c) => rec(c.id));
+  const firstOk = done.filter((c) => rec(c.id).first).length;
+  return { done: done.length, total: POOL.length, firstOk, tries: done.reduce((n, c) => n + rec(c.id).n, 0) };
 }
-
-function launchRoomConfetti(x, y) {
-  const count = 45;
-  const colors = ['#C85A32', '#E5B24B', '#E5B4A8', '#FAF3E8', '#A8B99A'];
-  for (let i = 0; i < count; i++) {
-    const el = document.createElement('div');
-    el.style.position = 'fixed';
-    el.style.left = (x || (window.innerWidth / 2)) + 'px';
-    el.style.top = (y || (window.innerHeight / 2)) + 'px';
-    el.style.width = (Math.random() * 8 + 6) + 'px';
-    el.style.height = (Math.random() * 6 + 4) + 'px';
-    el.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    el.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
-    el.style.zIndex = '9999';
-    el.style.pointerEvents = 'none';
-    document.body.appendChild(el);
-
-    const angle = Math.random() * Math.PI * 2;
-    const velocity = Math.random() * 190 + 90;
-    const vx = Math.cos(angle) * velocity;
-    const vy = Math.sin(angle) * velocity - 120;
-    const rot = Math.random() * 720;
-
-    const anim = el.animate([
-      { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
-      { transform: `translate(${vx}px, ${vy + 260}px) rotate(${rot}deg)`, opacity: 0 }
-    ], {
-      duration: 1000 + Math.random() * 500,
-      easing: 'cubic-bezier(.12,.78,.44,1)'
-    });
-    anim.onfinish = () => el.remove();
-  }
+function roomDraw() {
+  const pool = POOL.filter((c) => topic === 'all' || c.d === topic);
+  /* chưa làm trước, rồi tới cái làm sai gần nhất, rồi cái cũ nhất */
+  const score = (c) => { const r = rec(c.id); return !r ? 0 : !r.ok ? 1 : 2; };
+  return shuffle(pool).sort((a, b) => score(a) - score(b) || (rec(a.id)?.t || 0) - (rec(b.id)?.t || 0)).slice(0, ROUND);
 }
-
-function selectRoomChoice(c) {
-  currentChoice = c;
-  playRoomSound('tick');
-  ['cardA', 'cardB', 'cardC'].forEach(id => {
-    document.getElementById(id).classList.remove('selected');
+function home() {
+  run = null;
+  const st = roomStats();
+  const poolN = POOL.filter((c) => topic === 'all' || c.d === topic).length;
+  app.innerHTML = `
+    <span class="rm__eyebrow">Phòng thử thách</span>
+    <h1>Chọn hướng đi. <em>Rồi đọc vì sao.</em></h1>
+    <p class="rm__lede">Mỗi lượt rút ${ROUND} tình huống từ ngân hàng ${POOL.length} thử thách, ưu tiên cái bạn chưa làm hoặc từng làm sai. Không có điểm thi; phần có giá trị nằm ở lý do của từng phương án.</p>
+    <div class="rm__stats">
+      <div class="rm__stat"><b>${st.done}/${st.total}</b><span>thử thách đã làm</span></div>
+      <div class="rm__stat"><b>${st.firstOk}</b><span>đúng ngay lần đầu</span></div>
+      <div class="rm__stat"><b>${st.tries}</b><span>lượt chọn</span></div>
+    </div>
+    <div class="rm__topics" role="group" aria-label="Chủ đề">
+      ${['all', ...Object.keys(TOPIC)].map((k) => `<button type="button" data-t="${k}" aria-pressed="${topic === k}">${k === 'all' ? 'Tất cả' : TOPIC[k]}</button>`).join('')}
+    </div>
+    <button class="rm__go" id="go" ${poolN ? '' : 'disabled'}>Bắt đầu lượt ${Math.min(ROUND, poolN)} thử thách →</button>
+    ${histHtml()}`;
+  app.querySelectorAll('[data-t]').forEach((b) => b.onclick = () => { topic = b.dataset.t; home(); });
+  document.getElementById('go').onclick = start;
+}
+function histHtml() {
+  const items = POOL.filter((c) => rec(c.id)).sort((a, b) => rec(b.id).t - rec(a.id).t).slice(0, 8);
+  if (!items.length) return '';
+  return `<section class="rm__hist"><h2>Gần đây</h2><ul>${items.map((c) => {
+    const r = rec(c.id);
+    return `<li><i class="rm__dot" style="background:${r.ok ? '#3d8a4f' : '#c0392b'}"></i>${escH(c.kind)}<span>${TOPIC[c.d] || ''} · ${r.n} lượt</span></li>`;
+  }).join('')}</ul></section>`;
+}
+function start() {
+  const list = roomDraw();
+  run = { list, i: 0, ok: 0, xp: 0, picked: null, shown: false };
+  step();
+}
+function step() {
+  const c = run.list[run.i];
+  const order = shuffle(c.opts.map((o, k) => k));
+  run.order = order;
+  app.innerHTML = `
+    <div class="rm__bar"><span>Thử thách ${run.i + 1}/${run.list.length}</span><i><u style="width:${(run.i / run.list.length) * 100}%"></u></i><span>${run.ok} đúng</span></div>
+    <article class="rm__card">
+      <span class="rm__kind">${escH(TOPIC[c.d] || c.d)} · ${escH(c.kind)}</span>
+      <p class="rm__brief">${escH(c.brief)}</p>
+      <h2 class="rm__q">${escH(c.q)}</h2>
+      <div class="rm__opts" id="opts">${order.map((k, n) => `<button type="button" class="rm__opt" data-k="${k}" aria-pressed="false"><b>${LABEL[n]}</b>${escH(c.opts[k].t)}</button>`).join('')}</div>
+      <div class="rm__act"><button class="rm__go" id="ok" disabled>Chốt lựa chọn</button><button class="rm__go rm__go--ghost" id="quit">Thoát</button></div>
+    </article>`;
+  run.picked = null;
+  const opts = [...app.querySelectorAll('.rm__opt')];
+  opts.forEach((b) => b.onclick = () => {
+    if (run.shown) return;
+    run.picked = +b.dataset.k;
+    opts.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    document.getElementById('ok').disabled = false;
   });
-  document.getElementById('card' + c).classList.add('selected');
+  document.getElementById('ok').onclick = reveal;
+  document.getElementById('quit').onclick = home;
 }
-
-function confirmRoomDecision() {
-  const fb = document.getElementById('roomFeedback');
-  fb.style.display = 'block';
-
-  if (currentChoice === 'B') {
-    playRoomSound('chord');
-    const btn = document.getElementById('confirmBtn');
-    const rect = btn ? btn.getBoundingClientRect() : { left: window.innerWidth / 2, top: window.innerHeight / 2, width: 0 };
-    launchRoomConfetti(rect.left + rect.width / 2, rect.top);
-
-    fb.style.background = '#E8F0E4';
-    fb.style.border = '1.5px solid var(--sage-d)';
-    fb.innerHTML = `
-      <b style="color:var(--sage-d)">★ Quyết định của một Senior Strategist: Xây dựng Bản sắc & Phong cách sống!</b><br>
-      Trong ngành F&B, sản phẩm cà phê rất dễ bị commoditize (bình thường hóa). Khi bạn kể câu chuyện về phong cách sống, bạn tạo ra <b>Biểu tượng văn hóa (Cultural Icon)</b> mà khách hàng tự hào cầm trên tay. 
-      Chiến lược này bảo vệ biên lợi nhuận cao và giúp bạn tăng trưởng bền vững mà không phụ thuộc vào tiền khuyến mãi.
-    `;
-    const s = S.get();
-    if (!s.challenges || !s.challenges['room-coffee']) {
-      award('daily', 'room-coffee');
-      S.set({ challenges: { ...(s.challenges || {}), 'room-coffee': true } });
-      const chip = document.getElementById('topXpChip');
-      if (chip) chip.textContent = `${fmt(S.get().xp)} XP`;
-    }
-  } else if (currentChoice === 'A') {
-    playRoomSound('tick');
-    fb.style.background = '#FFF3E0';
-    fb.style.border = '1.5px solid var(--gold-d)';
-    fb.innerHTML = `
-      <b>Tập trung vào sản phẩm:</b> Khách hàng sành sẽ khen ngợi, nhưng tệp khách này quá nhỏ và chi phí nguyên liệu cao sẽ bóp nghẹt biên lợi nhuận của một thương hiệu mới.
-    `;
-  } else {
-    playRoomSound('tick');
-    fb.style.background = '#FFF3E0';
-    fb.style.border = '1.5px solid var(--gold-d)';
-    fb.innerHTML = `
-      <b>Tận dụng KOLs:</b> Kéo đơn tức thì nhưng lượng khách rời bỏ (churn rate) cực cao khi hết voucher giảm giá, vì họ chưa hiểu thương hiệu là ai.
-    `;
-  }
-}
-
-function initRoomTilt() {
-  const cards = document.querySelectorAll('.choice-visual-card, .polaroid-frame');
-  cards.forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      const rotateX = (-y / (rect.height / 2)) * 6;
-      const rotateY = (x / (rect.width / 2)) * 6;
-      card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-    });
+function reveal() {
+  if (run.picked == null || run.shown) return;
+  run.shown = true;
+  const c = run.list[run.i], right = c.opts.findIndex((o) => o.ok), got = run.picked === right;
+  const prev = rec(c.id);
+  if (got) run.ok++;
+  const s = S.get();
+  S.set({ flags: { ...(s.flags || {}), ['room:' + c.id]: { n: (prev?.n || 0) + 1, ok: got, first: prev ? prev.first : got, t: Date.now() } } });
+  award('quiz', 'room:' + c.id);
+  run.xp += award.last || 0;
+  document.querySelectorAll('.rm__opt').forEach((b) => {
+    const k = +b.dataset.k;
+    b.disabled = true;
+    b.dataset.s = k === right ? 'right' : k === run.picked ? 'wrong' : '';
+    b.insertAdjacentHTML('afterend', `<p class="rm__why">${k === right ? '<strong>Hướng mạnh nhất. </strong>' : k === run.picked ? '<strong style="color:#b03a2e">Bạn chọn cái này. </strong>' : ''}${escH(c.opts[k].why)}</p>`);
   });
+  const last = run.i === run.list.length - 1;
+  const act = document.querySelector('.rm__act');
+  act.innerHTML = `<button class="rm__go" id="next">${last ? 'Xem kết quả →' : 'Thử thách kế →'}</button>`;
+  document.getElementById('next').onclick = () => { if (last) finish(); else { run.i++; run.shown = false; step(); } };
 }
-
-const s = S.get();
-const xpChip = document.getElementById('topXpChip');
-if (xpChip) xpChip.textContent = `${fmt(s.xp)} XP`;
-
-setTimeout(initRoomTilt, 150);
+function finish() {
+  const n = run.list.length;
+  app.innerHTML = `<article class="rm__card"><div class="rm__res">
+      <span class="rm__eyebrow">Kết thúc lượt</span>
+      <b>${run.ok}/${n}</b>
+      <p class="rm__lede" style="margin:12px auto 0">${run.ok === n ? 'Trọn vẹn. Thử chủ đề khác để đổi góc nhìn.' : run.ok >= n / 2 ? 'Khá. Những cái sai sẽ được rút lại ở lượt sau.' : 'Chưa sao: đọc lại phần “vì sao” của các phương án trượt — đó mới là bài học.'}${run.xp ? ` +${run.xp} XP.` : ''}</p>
+    </div>
+    <div class="rm__act" style="justify-content:center"><button class="rm__go" id="again">Lượt mới</button><button class="rm__go rm__go--ghost" id="home">Về phòng thử thách</button></div></article>`;
+  document.getElementById('again').onclick = start;
+  document.getElementById('home').onclick = home;
+}
+home();
 </script>
 </body>
 </html>
