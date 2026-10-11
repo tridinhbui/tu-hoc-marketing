@@ -202,6 +202,12 @@ export async function bossPost(req, env) {
 }
 
 /* ---------- PvP bóng ma: đối thủ là kết quả thật đã ghi của người khác trong 7 ngày ---------- */
+/* Chưa có người học thật để đối đầu: bóng ma mạnh dần theo cấp của bạn (≈45% ở cấp 1 → 75% ở cấp 11+),
+   không còn một con số cố định. Vẫn gắn nhãn “Bóng ma luyện tập”, không giả làm người thật. */
+function ghostFor(cfg, total, level) {
+  const p = Math.min(0.75, 0.45 + 0.03 * Math.max(0, (level || 1) - 1));
+  return Math.max(1, Math.min(total, Math.round(total * p) || cfg.ghost_default));
+}
 export async function pvpGet(req, env) {
   const u = await currentUser(req, env);
   if (!u) return json({ error: 'login_required' }, 401);
@@ -218,7 +224,7 @@ export async function pvpGet(req, env) {
     const items = pickSpread(pool, BANK, cfg.questions, seeded(hashStr(u.id + w + today + 'pvp')), 1);
     const id = rid();
     await env.DB.prepare(`INSERT INTO pvp_results (id, user_id, week, day_local, items_json, total, opponent_id, opponent_correct, started_at)
-       VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)`).bind(id, u.id, w, day, JSON.stringify(items), items.length, g ? g.user_id : null, g ? g.correct : cfg.ghost_default, now()).run();
+       VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)`).bind(id, u.id, w, day, JSON.stringify(items), items.length, g ? g.user_id : null, g ? g.correct : ghostFor(cfg, items.length, (await recompute(env, u.id, await loadConfig(env))).level), now()).run();
     duel = await env.DB.prepare('SELECT * FROM pvp_results WHERE id = ?1').bind(id).first();
   }
   const opp = duel.opponent_id ? await env.DB.prepare('SELECT id, display_name FROM users WHERE id = ?1').bind(duel.opponent_id).first() : null;

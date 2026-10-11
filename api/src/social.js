@@ -143,7 +143,7 @@ export async function adminMetrics(req, env) {
   const all = async (sql, ...a) => (await env.DB.prepare(sql).bind(...a).all()).results || [];
 
   const [users, active7, activeToday, lessons, ans, unread, refs, withAvatar, unreadChats] = await Promise.all([
-    one('SELECT COUNT(*) AS n FROM users'),
+    one("SELECT COUNT(*) AS n FROM users WHERE email NOT LIKE '%@system.invalid'"),
     one('SELECT COUNT(DISTINCT user_id) AS n FROM xp_events WHERE day_local >= ?1', d7),
     one('SELECT COUNT(DISTINCT user_id) AS n FROM xp_events WHERE day_local = ?1', t),
     one(`SELECT COUNT(*) AS n FROM lesson_progress WHERE state IN ('passed','solid','mastered')`),

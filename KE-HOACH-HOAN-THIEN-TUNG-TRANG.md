@@ -112,7 +112,7 @@ Cách làm: chạy `wrangler dev` thật với người dùng mới, gọi 20 en
 `ban-do`, `collections`, `library`, `tap-chi`, `timeline`, `world`, `xray` có **0 tương tác, 0 lưu trữ, 0 XP**. Mở xong không ghi "đã xem", không nối với năng lực.
 → Việc: ghi "đã đọc" (`flags`), cộng XP `learned` một lần, gợi ý bài kế; `xray` ghi lại dự đoán trước/sau (đang có UI chọn thương hiệu nhưng kết quả không lưu).
 
-### C. Sơ sài: bàn làm việc không gắn tiến độ
+### C. ~~Sơ sài: bàn làm việc không gắn tiến độ~~ — **BỎ theo yêu cầu**: gỡ mục "Sổ tay & bàn làm việc" khỏi sidebar, không gắn XP; file trang giữ nguyên, chưa xoá
 `cep`, `positioning`, `segmentation`, `pricing`, `unit-economics`, `customer-map`, `interview`, `taste`, `challenge`, `roadmap`, `journal`, `brand`, `campaign`, `lesson`, `principle`: lưu bản nháp (nay đã đồng bộ) nhưng **không gọi `award()`**, không có trạng thái "hoàn thành", không đi vào bản đồ năng lực (`nang-luc`).
 → Việc: mỗi bàn có điều kiện hoàn thành (đủ trường + qua kiểm tra ràng buộc có sẵn) → `award('case'|'talk')` một lần + ghi vào năng lực tương ứng.
 
@@ -132,7 +132,19 @@ Cách làm: chạy `wrangler dev` thật với người dùng mới, gọi 20 en
 
 ### F. Thứ tự làm tiếp
 1. Nối ba thư viện case (`case-thu-vien` ⇄ `gallery` ⇄ `xray`): một thẻ case, ba chế độ (đọc, tự dự đoán, bấm giờ).
-2. Gắn XP + hoàn thành + năng lực cho 15 bàn làm việc (mục C).
+2. ~~Gắn XP cho bàn làm việc~~ (bỏ).
 3. "Đã đọc" cho 7 trang tham khảo (mục B).
 4. Seed cộng đồng + ghost PvP (mục D, A).
 5. Mở rộng ngân hàng Phòng thử thách 13 → 30, case có bấm giờ 5 → 12.
+
+### G. Đã làm trong lượt "làm hết" (2026-10-12)
+| Mục | Kết quả |
+|---|---|
+| Nối ba thư viện case | Thanh chế độ chung (Đọc case thật · Tự dự đoán · Giải case bấm giờ) trên gallery, xray, case-thu-vien, campaign, brand, giai-case; campaign ⇄ brand nối cho 5 thương hiệu có cả hai (Nike, Apple, Biti's, Highlands, Vinamilk) |
+| "Đã đọc" cho trang tham khảo | +3 XP/trang sau 15 giây, một lần, tối đa 15 XP/ngày; ghi vào sổ XP của app và đồng bộ |
+| Cộng đồng trống | Migration `0006_seed_community.sql`: 6 bài mở hàng của "Ban biên tập" (tài khoản `.invalid`, bị loại khỏi số người học) — đã áp lên D1 production |
+| Bóng ma PvP cố định 3/5 | Điểm bóng ma nay tăng theo cấp (≈45% ở cấp 1 → 75% ở cấp 11+); vẫn gắn nhãn "Bóng ma luyện tập" |
+| Ngân hàng Phòng thử thách | 13 → 31 thử thách |
+| Case có bấm giờ | 5 → 8 case (miễn phí giao hàng, CAC khoá học, voucher sàn); số liệu đã kiểm tra thủ công, test nội dung qua |
+| Bỏ theo yêu cầu | "Sổ tay & bàn làm việc" gỡ khỏi sidebar; không gắn XP bàn làm việc |
+| Còn lại | Case có bấm giờ mới 8/12; `boss` vẫn dùng pool cố định; ghost PvP chưa lấy từ người thật khi dữ liệu còn ít |

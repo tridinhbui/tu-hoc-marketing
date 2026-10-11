@@ -191,6 +191,33 @@ function inkScene(id='ink1',{boat=true,mountains=true}={}){
   </svg>`;
 }
 
+
+/* ---------------- đã đọc: trang tham khảo ghi nhận sau 15 giây ở lại ----------------
+   Ghi thẳng vào sổ XP của app ('thmc.v1'): +3 XP mỗi trang, một lần, tối đa 15 XP mỗi ngày — để đọc không thành cách cày điểm. */
+const READ_PAGES = /^(library|collections|tap-chi|timeline|world|xray|gallery|campaign|brand|principle|lesson|taste)\.html$/;
+function markRead(){
+  try{
+    const file = location.pathname.split('/').pop() || '';
+    if (!READ_PAGES.test(file)) return;
+    const q = new URLSearchParams(location.search), id = window.__ID__ || q.get('id') || q.get('day') || '';
+    const key = 'read:' + file + (id ? ':' + id : ''), day = new Date().toISOString().slice(0,10);
+    const app = JSON.parse(localStorage.getItem(APP_KEY)||'{}');
+    app.xpl = app.xpl || {}; app.flags = app.flags || {};
+    if (app.flags[key]) return;
+    const capKey = 'readcap@' + day, used = (app.xpl[capKey] || {}).x || 0, got = Math.max(0, Math.min(3, 15 - used));
+    app.flags[key] = day;
+    if (got > 0){
+      app.xpl[capKey] = { x: used + got, d: day };
+      app.xp = Object.values(app.xpl).reduce((n, e) => n + (e.x || 0), 0);
+      app.log = [...(app.log||[]).slice(-400), { d: day, k: 'learned', r: key, x: got, t: Date.now() }];
+    }
+    localStorage.setItem(APP_KEY, JSON.stringify(app));
+    if (window.top !== window.self) window.parent.postMessage({ thmc: 'sync' }, location.origin);
+    if (got > 0 && typeof toast === 'function') toast('+' + got + ' XP · đã đọc');
+  }catch(e){}
+}
+setTimeout(markRead, 15000);
+
 /* ---------------- shell ---------------- */
 function shell(current){
   const here = current || location.pathname.split('/').pop() || 'gallery.html';
