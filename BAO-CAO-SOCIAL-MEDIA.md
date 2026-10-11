@@ -2,8 +2,10 @@
 
 Phạm vi: toàn bộ 697 bài `B:` (76 module), kho thuật ngữ, case, các mô phỏng hiện có (Marketing Lab, Game Kingdom, Mô phỏng công cụ) và bài kiểm. Số liệu bên dưới đếm trực tiếp từ nội dung trong repo ngày 2026-10-11.
 
-**Giới hạn của lần rà soát này (nói thẳng):**
-- Mình **không** đối chiếu với tài liệu chính thức của TikTok, YouTube, Meta trong phiên này. Vì vậy mọi bài mới chỉ dạy **nguyên tắc và cách tự kiểm bằng báo cáo của chính kênh**, không khẳng định cơ chế thuật toán hay con số riêng của nền tảng.
+**Cách xử lý độ chính xác của nền tảng (nói thẳng):**
+- Module `kn13` (vận hành) viết **trung lập nền tảng**, chỉ dạy nguyên tắc và cách tự kiểm bằng báo cáo của kênh.
+- Ba module theo nền tảng `kn14` (Instagram), `kn15` (YouTube), `kn16` (TikTok) **chỉ dùng điều đã đối chiếu với nguồn chính thức** (bài giải thích xếp hạng của Instagram 2023; trang trợ giúp YouTube về impressions, CTR, chỉ số; newsroom và trang Spark Ads của TikTok). Nguồn và điều được dùng ghi ở đầu từng file module. Các “trọng số %” hay “mẹo giờ đăng” chỉ có ở blog bên thứ ba **không** được đưa vào.
+- Mọi bài đều nhắc nền tảng có thể đổi cách làm, cần kiểm lại tài liệu chính thức.
 - Mọi con số trong bài và mô phỏng là **minh hoạ**, được ghi rõ là minh hoạ; không dự đoán kết quả thật.
 - Các mô phỏng mới chấm **cấu trúc quyết định** (đúng thứ tự kiểm, lịch vừa sức), không mô phỏng hành vi thật của nền tảng.
 
@@ -30,16 +32,16 @@ Ký hiệu: ● dạy riêng, có bài tập · ◐ chỉ nhắc/ví dụ hoặc
 
 | Kỹ năng | TikTok | YouTube | Facebook | Instagram | Chéo nền tảng | Sau thay đổi |
 |---|---|---|---|---|---|---|
-| Cách được thấy (follow / search / suggest) | ◐ (`kh10-04`) | ○ | ◐ (`kh10-06`) | ○ | ○ | ● `kn13-01` |
+| Cách được thấy (follow / search / suggest) | ● `kn16-01` | ● `kn15-02` | ◐ (`kh10-06`) | ● `kn14-01` | ○ | ● `kn13-01` |
 | Hook, 3 giây đầu | ● (`tn03-02`) | ◐ | ◐ | ◐ | ● | ● + `kn13-02` |
-| Giữ chân / đọc biểu đồ | ◐ (`dl08-02`, `tn03-05`) | ◐ | ○ | ○ | ○ | ● `kn13-02` |
-| Ảnh bìa, tiêu đề, CTR × giữ chân | ◐ | ◐ (`tn03-03`) | ◐ | ◐ | ○ | ● `kn13-03` |
+| Giữ chân / đọc biểu đồ | ● `kn16-02` | ● `kn15-03`, `kn15-04` | ○ | ● `kn14-02` | ○ | ● `kn13-02` |
+| Ảnh bìa, tiêu đề, CTR × giữ chân | ◐ | ● `kn15-01`, `kn15-02` | ◐ | ◐ | ○ | ● `kn13-03` |
 | Lịch nội dung 30 ngày | ○ | ○ | ○ | ○ | ○ | ● `kn13-04` + G8 |
 | Chẩn đoán reach/engagement giảm | ○ | ○ | ○ | ○ | ○ | ● `kn13-05` + G7 |
 | Quản trị cộng đồng, phân loại bình luận | ○ | ○ | ◐ (`kn04-08`) | ○ | ◐ (`kn09-09`) | ● `kn13-06` |
 | Báo cáo cho quản lý | ○ | ○ | ○ | ○ | ◐ (`dl07-06`, `dl09`) | ● `kn13-07` |
 | KOL / KOC / UGC | ● (`kn05`, 9 bài) | ◐ | ◐ | ◐ | ● | — |
-| Quảng cáo trả phí & chỉ số (CPM/CPC/CPA/ROAS) | ◐ | ○ | ● (`kn06`, Lab Meta) | ◐ | ● | — |
+| Quảng cáo trả phí & chỉ số (CPM/CPC/CPA/ROAS) | ● `kn16-05` (Spark Ads) | ○ | ● (`kn06`, Lab Meta) | ◐ | ● | — |
 | Attribution | ◐ (`dl06`, 10 bài) | ◐ | ◐ | ○ | ● | — |
 | A/B test | ● (`tn02`, `tn03`) | ◐ | ◐ | ◐ | ● | — |
 | TikTok Shop / social commerce | ● (`kn03`, `tn06-09`) | — | — | — | — | — |
@@ -60,9 +62,9 @@ Ký hiệu: ● dạy riêng, có bài tập · ◐ chỉ nhắc/ví dụ hoặc
 | 5 | Reach giảm 40%: kiểm theo thứ tự nào | Đã làm `kn13-05` + mô phỏng G7 |
 | 6 | Phân loại bình luận và hạn trả lời | Đã làm `kn13-06` |
 | 7 | Báo cáo mạng xã hội cho quản lý | Đã làm `kn13-07` |
-| 8 | Instagram: carousel, lưu/chia sẻ so với thích, Explore | **Chưa làm** — cần kiểm tài liệu chính thức |
-| 9 | YouTube: Shorts vs video dài, đọc YouTube Studio | **Chưa làm** — cần kiểm tài liệu chính thức |
-| 10 | TikTok: tìm kiếm trên TikTok (SEO), Spark Ads/Shop Ads | **Chưa làm** — cần kiểm tài liệu chính thức |
+| 8 | Instagram: bề mặt, Reels, lưu, Stories, trang cá nhân | Đã làm `kn14` (5 bài) — đã đối chiếu nguồn chính thức |
+| 9 | YouTube: CTR/impressions, nguồn, thời lượng xem, tab Tiếp cận, định dạng | Đã làm `kn15` (5 bài) — đã đối chiếu nguồn chính thức |
+| 10 | TikTok: ba nhóm tín hiệu, xem hết, follower không trực tiếp, đa dạng, Spark Ads | Đã làm `kn16` (5 bài). **Chưa làm:** TikTok Search, TikTok Shop Ads |
 | 11 | Facebook Group/cộng đồng: xây và điều hành | **Chưa làm** |
 | 12 | Social listening: bộ từ khoá, báo cáo cảm xúc | **Chưa làm** |
 | 13 | Creative brief một trang cho creator + kế hoạch campaign | Một phần (`gt05-08`, `kn05-04`); **thiếu công cụ** |
@@ -121,18 +123,20 @@ Quy tắc chung cho mọi mô phỏng: có brief thật → quyết định củ
 ## 7. Thay đổi đã thực hiện và kết quả kiểm thử
 
 **Đã thêm:**
-- Module `kn13` (`assets/js/data/bai/kn13.js`) — 7 bài × 7 câu = 49 câu (8 câu tính, 41 trắc nghiệm), đăng ký ở `tools_bai_index.mjs` và `bai-index.js` (BAI_V 14→15).
+- Module `kn13` (`assets/js/data/bai/kn13.js`) — 7 bài × 7 câu = 49 câu (8 câu tính, 41 trắc nghiệm), đăng ký ở `tools_bai_index.mjs` và `bai-index.js`.
+- Ba module theo nền tảng: `kn14` Instagram, `kn15` YouTube, `kn16` TikTok — mỗi module 5 bài × 7 câu = 105 câu, nguồn chính thức ghi ở đầu file. Tổng cộng 22 bài mới.
 - Mô phỏng `game-chan-doan.html` (G7, `assets/js/games/g7-diagnose.js`) và bài tập `game-lich-noi-dung.html` (G8, `assets/js/games/g8-calendar.js`), cùng khung sao/XP của Game Kingdom.
 - Đăng ký G7, G8 trên bản đồ vương quốc; thêm vào nhóm điều hướng Game Kingdom.
 - Test: `tests/games.test.mjs` (+5 bài kiểm cho G7, G8).
 
 **Kết quả:**
 - `node tools_validate_bai.mjs kn13`: **7 bài · 49 câu · 0 lỗi · 0 cảnh báo**; đáp án đúng là phương án dài nhất ở 22% câu (ngưỡng 15–35%), vị trí đáp án đã rải đều.
-- `node tools_validate_bai.mjs` (toàn bộ): **697 bài · 4.879 câu · 0 lỗi · 0 cảnh báo**.
-- `node --test tests/*.test.mjs`: **110 qua, 0 lỗi**.
+- `node tools_validate_bai.mjs` (toàn bộ): **712 bài · 4.984 câu · 0 lỗi · 0 cảnh báo**.
+- `node --test tests/*.test.mjs`: **120 qua, 0 lỗi**.
 - Đã chạy tay trên trình duyệt: G7 và G8 chơi đủ vòng đạt 3 sao; một bài `kn13` mở được, có câu tính.
 
 **Chưa làm / cần người duyệt:**
-- Người có kinh nghiệm social cần đọc lại 7 bài trước khi coi là "đã duyệt" (các câu hỏi đúng–sai trong quản trị cộng đồng nên được kiểm theo thực tế doanh nghiệp).
+- Người có kinh nghiệm social cần đọc lại 22 bài mới trước khi coi là "đã duyệt". Nguồn chính thức có thể đã cập nhật sau ngày đối chiếu (2026-10-11); bài xếp hạng Instagram dựa trên bản cập nhật 31/05/2023.
+- Chưa xác nhận được quy tắc đếm impressions của YouTube (hình thu nhỏ phải hiện bao lâu) nên không đưa vào bài.
 - G7, G8 chưa có toà tương ứng ở cấu hình máy chủ (không nhận +5 xu khi ghé); cần migration như `0008`.
-- Chưa deploy.
+- Đã deploy lần 1 (kn13, G7, G8); module kn14–kn16 deploy ở lần sau.
