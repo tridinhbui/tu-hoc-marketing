@@ -4,17 +4,98 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/case.css?v=12">
-<title>Bắt đầu từ đâu — Tự Học Marketing Case</title>
-<meta name="description" content="Bản đồ sáu chặng: bạn đang ở đâu, chặng nào đã mở, bài nào nằm trong lộ trình của bạn.">
+<title>Học theo nghề — Tự Học Marketing Case</title>
+<meta name="description" content="Bản đồ nghề nghiệp marketing: chọn vùng nghề, đi theo lộ trình và nhiệm vụ ưu tiên, bù khoảng cách kỹ năng.">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn và đồng bộ vào tài khoản khi đã đăng nhập.</p></div></noscript>
-<main class="wrap" id="app"></main>
+<style>
+.cm{max-width:1240px;margin:0 auto;padding:22px clamp(16px,3vw,32px) 60px}
+.cm-top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-end}
+.cm-eye{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--terra)}
+.cm-h{font-family:var(--serif,Georgia,serif);font-size:clamp(1.7rem,2.6vw,2.2rem);font-weight:500;margin:6px 0 4px;color:var(--ink)}
+.cm-sub{font-size:14px;color:var(--ink-70);margin:0}
+.cm-chips{display:flex;gap:8px;flex-wrap:wrap}
+.cm-chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:7px 12px;border-radius:99px;border:1px solid var(--ink-12);background:var(--bg-2);color:var(--ink)}
+.cm-chip--gold{border-color:rgba(229,178,75,.5);color:var(--gold);background:rgba(229,178,75,.1)}
+.cm-chip--terra{background:var(--terra);border-color:var(--terra);color:#fff}
+.cm-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 18px;padding-bottom:18px;border-bottom:1px solid var(--ink-12)}
+.cm-tab{font:600 14px var(--sans);display:inline-flex;gap:8px;align-items:center;padding:10px 18px;border-radius:99px;border:1px solid var(--ink-12);background:transparent;color:var(--ink);cursor:pointer}
+.cm-tab:hover{border-color:var(--ink-50)}
+.cm-tab[aria-selected="true"]{background:var(--terra);border-color:var(--terra);color:#fff}
+.cm-card{background:var(--bg-2);border:1px solid var(--ink-12);border-radius:18px;padding:20px}
+.cm-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:18px;align-items:start}
+.cm-stats{display:grid;grid-template-columns:auto repeat(3,1fr);gap:0;align-items:center;margin-bottom:18px}
+.cm-stats>div{padding:2px 22px;border-left:1px solid var(--ink-12)}
+.cm-stats>div:first-child{border-left:0;padding-left:0}
+.cm-k{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-50)}
+.cm-v{font-family:var(--serif,Georgia,serif);font-size:1.5rem;color:var(--ink);margin:2px 0}
+.cm-s{font-size:12px;color:var(--ink-50)}
+.cm-ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--terra) calc(var(--p)*1%),var(--ink-12) 0);display:grid;place-items:center}
+.cm-ring b{width:48px;height:48px;border-radius:50%;background:var(--bg-2);display:grid;place-items:center;font-size:13px}
+/* bản đồ */
+.cm-map{position:relative;aspect-ratio:1000/720;border-radius:18px;overflow:hidden;border:1px solid var(--ink-12);
+  background:radial-gradient(70% 70% at 30% 20%,#3a2a1f,#1a120d)}
+html[data-theme="ivory"] .cm-map{background:radial-gradient(70% 70% at 30% 20%,#f3e3cc,#dcc3a3)}
+.cm-map svg{position:absolute;inset:0;width:100%;height:100%}
+.cm-node{position:absolute;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:15px;
+  background:#f6efe4;color:#2a1c12;border:2px solid #fff;box-shadow:0 6px 14px rgba(0,0,0,.4);z-index:4;cursor:pointer;padding:0}
+.cm-node[data-on]{background:var(--terra);color:#fff;box-shadow:0 0 0 6px rgba(200,90,50,.28),0 6px 14px rgba(0,0,0,.4)}
+.cm-node[data-done]{background:var(--sage-d,#546845);color:#fff}
+.cm-lbl{position:absolute;z-index:3;width:max-content;max-width:15%;min-width:92px;background:rgba(253,249,243,.96);color:#24160E;border-radius:10px;padding:8px 11px;box-shadow:0 10px 24px rgba(0,0,0,.35);text-align:left;cursor:pointer;border:0;font:inherit}
+.cm-lbl small{display:block;font-size:10px;font-weight:700;letter-spacing:.06em;color:var(--terra-d);text-transform:uppercase}
+.cm-lbl b{display:block;font-size:12.5px;line-height:1.25;margin:1px 0}
+.cm-lbl span{font-size:11px;color:rgba(36,22,14,.6)}
+.cm-lbl[data-on]{outline:2px solid var(--terra)}
+.cm-legend{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:10px;padding:8px 4px;color:var(--ink-70);font-size:12px;font-weight:600}
+.cm-legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px}
+.cm-legend a{margin-left:auto;color:var(--terra);font-weight:700}
+/* cột phải */
+.cm-side{display:grid;gap:16px}
+.cm-sh{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin:0 0 14px;color:var(--ink)}
+.cm-q{display:block;border:1px solid var(--ink-12);border-radius:12px;padding:12px 14px;margin-bottom:10px;color:var(--ink);transition:.15s}
+.cm-q:hover{border-color:var(--terra);transform:translateY(-1px)}
+.cm-q small{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--terra);text-transform:uppercase}
+.cm-q b{display:block;font-size:14px;line-height:1.35;margin:2px 0}
+.cm-q span{font-size:12px;color:var(--ink-50)}
+.cm-more{display:block;text-align:center;font-weight:700;font-size:13.5px;margin-top:6px;color:var(--ink)}
+.cm-tip{background:rgba(229,178,75,.1);border:1px solid rgba(229,178,75,.35);border-radius:14px;padding:14px 16px;font-size:13.5px;line-height:1.5;color:var(--ink-70)}
+.cm-tip b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.cm-bar{height:7px;border-radius:99px;background:var(--ink-12);overflow:hidden}
+.cm-bar i{display:block;height:100%;background:var(--terra);border-radius:99px}
+/* tab 2 */
+.cm-zones{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.cm-zone{display:flex;flex-direction:column;gap:10px;border:1.5px solid var(--ink-12);border-radius:16px;padding:18px;background:var(--bg-2)}
+.cm-zone[data-on]{border-color:var(--terra);box-shadow:0 0 0 3px rgba(200,90,50,.16)}
+.cm-zone h3{margin:0;font-size:1.05rem;display:flex;gap:8px;align-items:center;flex-wrap:wrap;color:var(--ink)}
+.cm-zone p{margin:0;font-size:13.5px;line-height:1.5;color:var(--ink-70)}
+.cm-pill{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;background:var(--terra);color:#fff}
+.cm-row{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:auto;font-size:12.5px;color:var(--ink-50)}
+.cm-go{font:700 13px var(--sans);border-radius:99px;padding:9px 16px;border:1.5px solid var(--ink-30);background:transparent;color:var(--ink);cursor:pointer}
+.cm-go--p{background:var(--terra);border-color:var(--terra);color:#fff}
+/* tab 3 */
+.cm-goal{display:grid;grid-template-columns:320px minmax(0,1fr);gap:18px;align-items:start}
+.cm-list{display:grid;gap:8px}
+.cm-li{display:flex;flex-direction:column;gap:2px;text-align:left;padding:13px 15px;border-radius:14px;border:1.5px solid var(--ink-12);background:var(--bg-2);color:var(--ink);cursor:pointer;font:inherit}
+.cm-li b{font-size:14.5px}.cm-li span{font-size:12.5px;color:var(--ink-50)}
+.cm-li[aria-selected="true"]{border-color:var(--terra);background:var(--terra-06)}
+.cm-sk{display:grid;grid-template-columns:150px 1fr 90px;gap:12px;align-items:center;margin:12px 0;font-size:13.5px}
+.cm-sk .cm-bar{position:relative;height:10px}
+.cm-sk .cm-need{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--gold)}
+.cm-sk em{font-style:normal;font-size:12px;color:var(--ink-50);text-align:right}
+.cm-gap{color:var(--terra);font-weight:700}
+@media (max-width:1000px){.cm-grid,.cm-goal{grid-template-columns:1fr}.cm-stats{grid-template-columns:1fr 1fr;gap:14px}.cm-stats>div{border:0;padding:0}.cm-lbl{max-width:34%;padding:5px 7px}.cm-lbl b{font-size:11.5px}.cm-lbl small,.cm-lbl span{display:none}.cm-sk{grid-template-columns:110px 1fr 70px}}
+</style>
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn và đồng bộ vào tài khoản khi đã đăng nhập.</p></div></noscript>
+<main class="cm" id="app"></main>
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
 <script src="assets/js/data/bai-index.js?v=11"></script>
 <script src="assets/js/data/drills.js?v=3"></script>
+<script src="assets/js/data/cases.js?v=5"></script>
 <script src="assets/js/data/exams.js?v=10"></script>
 <script src="assets/js/app.js?v=21"></script>
 <script>
@@ -43,17 +124,115 @@ function examLine(sid, open, s){
   return `<p style="margin-top:16px"><a class="btn btn--ghost" href="thi.html?stage=${sid}">${label} →</a></p>`;
 }
 
+
 appShell('ban-do.html');
-const s=S.get(), here=hereStage(s), pl=pathLessons(s.path||'full'), path=PATHS.find(p=>p.id===(s.path||'full'));
-const total=ALL.length, mods=STAGES.reduce((n,x)=>n+x.mods.length,0);
-document.getElementById('app').innerHTML=`
-<section class="section">
-  <span class="mono mono--red">Bắt đầu từ đâu</span>
-  <h1 class="h1" style="margin:14px 0 16px">${STAGES.length} chặng, ${mods} module,<br><em>${total} bài học.</em></h1>
-  <p class="lede" style="max-width:62ch">Mỗi bài khoảng sáu phút. Chặng sau mở khi bạn xong 60% chặng trước.
-    Bài thuộc lộ trình <b>${escH(path.t)}</b> luôn mở, dù nằm ở chặng nào — đánh dấu <span class="tag">Lộ trình</span>.</p>
-</section>
-${STAGES.map(st=>{
+const $app=document.getElementById('app');
+let TAB=(location.hash.match(/tab=(\w+)/)||[])[1]||'map';
+let SEL=null;   // mục tiêu đang xem ở tab 3
+
+/* Vị trí 8 vùng nghề trên bản đồ (% của khung 1000x600) và vị trí nhãn. */
+const POS=[[10,62,'b'],[21.5,36,'t'],[33,62,'b'],[44.5,36,'t'],[56,62,'b'],[67.5,36,'t'],[79,62,'b'],[90,36,'t']];
+const ZONES=()=>GOALS.map((g,i)=>{
+  const ls=pathLessons(g.path), s=S.get(), d=ls.filter(k=>s.done[k]).length;
+  return {...g,i,lessons:ls,n:ls.length,d,pct:ls.length?Math.round(100*d/ls.length):0};
+});
+const curGoal=(s=S.get())=>GOALS.find(g=>g.id===s.goal)||GOALS.find(g=>g.path===(s.path||'full'))||GOALS[0];
+function choose(id){
+  const g=GOALS.find(x=>x.id===id); if(!g) return;
+  S.set({goal:g.id,path:g.path});
+  if(typeof syncNow==='function') try{syncNow()}catch(e){}
+  render();
+}
+function readiness(s){   // % sẵn sàng = trung bình mức kỹ năng so với yêu cầu mục tiêu (tối đa 100)
+  const g=curGoal(s), m=skillMap(s);
+  return Math.round(m.reduce((n,x)=>n+Math.min(1,x.pct/Math.max(1,g.need[x.id])),0)/m.length*100);
+}
+function header(s,z){
+  const lv=level(s.xp), g=curGoal(s), left=z.n-z.d;
+  const next=lv.next!=null?`Còn ${lv.next-s.xp} XP để lên cấp ${lv.n+1}`:'Bạn đã ở cấp cao nhất';
+  return `<div class="cm-top"><div>
+      <span class="cm-eye">01 — Lộ trình sự nghiệp &amp; kỹ năng chuẩn hoá</span>
+      <h1 class="cm-h">Bản đồ nghề nghiệp</h1>
+      <p class="cm-sub">Chọn vùng nghề, đi theo nhiệm vụ ưu tiên và bù khoảng cách kỹ năng.</p></div>
+    <div class="cm-chips">
+      <span class="cm-chip cm-chip--gold">Lv ${lv.n} · ${escH(lv.name)}</span>
+      <span class="cm-chip">${fmt(s.xp)} XP</span>
+      <span class="cm-chip cm-chip--terra">${readiness(s)}% sẵn sàng · ${escH(g.t)}</span>
+      <span class="cm-chip cm-chip--gold" title="Mốc kế tiếp">${left>0?`Mốc kế tiếp: còn ${left} bài hoàn thành lộ trình`:'Đã xong lộ trình'} · ${next}</span>
+    </div></div>
+    <div class="cm-tabs" role="tablist">${[['map','Bản đồ vùng nghề','M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z'],['quest','Nhiệm vụ & Ưu tiên','M13 2L4 14h7l-1 8 9-12h-7z'],['goal','Mục tiêu & Kỹ năng','M12 3a9 9 0 100 18 9 9 0 000-18zm0 5a4 4 0 110 8 4 4 0 010-8z'],['stage','Các chặng','M4 6h16M4 12h16M4 18h10']].map(([k,t,ic])=>
+      `<button class="cm-tab" role="tab" aria-selected="${TAB===k}" data-tab="${k}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="${ic}"/></svg>${t}</button>`).join('')}</div>`;
+}
+function tabMap(s,Z,z){
+  const g=curGoal(s), started=Z.filter(x=>x.d>0).length, done=Z.filter(x=>x.pct>=100).length;
+  const todo=z.lessons.filter(k=>!s.done[k]&&lessonOpen(k,s)).slice(0,3);
+  const gaps=skillGaps(s), top=gaps[0];
+  const nodes=Z.map((x,i)=>{const [px,py,side]=POS[i];
+    const on=x.id===g.id, dn=x.pct>=100;
+    const ly=side==='b'?py+15:py-15;
+    return `<button class="cm-node" style="left:${px}%;top:${py}%" ${on?'data-on':''} ${dn?'data-done':''} data-pick="${x.id}" aria-label="${escH(x.t)}">${i+1}</button>
+      <button class="cm-lbl" style="left:${px}%;top:${ly}%;transform:translate(-50%,-50%)" ${on?'data-on':''} data-pick="${x.id}">
+        <small>Vùng #${i+1}${on?' · đang học':''}</small><b>${escH(x.t)}</b><span>${x.d}/${x.n} bài · ${x.pct}%</span></button>`}).join('');
+  const d=POS.map((p,i)=>{const x=p[0]*10,y=p[1]*7.2; if(!i) return `M${x},${y}`; const q=POS[i-1], qx=q[0]*10, qy=q[1]*7.2, mx=(qx+x)/2; return `C${mx},${qy} ${mx},${y} ${x},${y}`;}).join(' ');
+  return `<div class="cm-card cm-stats">
+      <div class="cm-ring" style="--p:${z.pct}"><b>${z.pct}%</b></div>
+      <div><div class="cm-k">Tiến độ lộ trình</div><div class="cm-v">${z.d}/${z.n} bài</div><div class="cm-s">${z.pct}% đã xong</div></div>
+      <div><div class="cm-k">Vùng nghề đang học</div><div class="cm-v" style="font-size:1.15rem">${escH(g.t)}</div><div class="cm-s">${escH(g.d)}</div></div>
+      <div><div class="cm-k">Vùng đã bắt đầu</div><div class="cm-v">${started}/${Z.length}</div><div class="cm-s">${done} vùng đã xong</div></div>
+    </div>
+    <div class="cm-grid">
+      <div><div class="cm-map" aria-label="Bản đồ vùng nghề">
+        <svg viewBox="0 0 1000 720" preserveAspectRatio="none" aria-hidden="true">
+          <defs><linearGradient id="hl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6a4a32" stop-opacity=".75"/><stop offset="1" stop-color="#2a1c12" stop-opacity=".2"/></linearGradient></defs>
+          <path d="M0 470 C 140 380 260 430 380 360 S 600 300 720 340 S 900 280 1000 320 V600 H0Z" fill="url(#hl)"/>
+          <path d="M0 540 C 160 470 300 520 440 450 S 700 430 820 470 S 940 440 1000 460 V600 H0Z" fill="#c85a32" opacity=".16"/>
+          <path d="M-20 130 C 160 60 300 150 460 90 S 760 40 1020 120" stroke="#e5b24b" stroke-opacity=".25" stroke-width="2" fill="none" stroke-dasharray="3 9"/>
+          <path d="${d}" stroke="#f6efe4" stroke-opacity=".55" stroke-width="3" fill="none" stroke-dasharray="2 10" stroke-linecap="round"/>
+        </svg>
+        ${nodes}
+      </div>
+      <div class="cm-legend"><span><i style="background:#546845"></i>Đã xong</span><span><i style="background:var(--terra)"></i>Đang học</span><span><i style="background:#cfc3b2"></i>Chưa bắt đầu</span><a href="#" data-tab="quest">Xem tất cả vùng nghề →</a></div></div>
+      <div class="cm-side">
+        <div class="cm-card"><h3 class="cm-sh">Nhiệm vụ ưu tiên hàng đầu <span class="cm-chip" style="padding:3px 9px">${todo.length}</span></h3>
+          ${todo.length?todo.map((k,i)=>{const m=lessonMeta(k),w=where(k);return `<a class="cm-q" href="bai.html?id=${encodeURIComponent(k)}"><small>Quest #${i+1}</small><b>${escH(m?m.t:k)}</b><span>${w?escH(w.mod.t):''} · ${m?escH(m.read):''}</span></a>`}).join(''):'<p class="cm-s">Bạn đã xong mọi bài đang mở của lộ trình này.</p>'}
+          <a class="cm-more" href="#" data-tab="stage">Xem tất cả chặng →</a></div>
+        <div class="cm-card"><h3 class="cm-sh">Tổng quan kỹ năng</h3>
+          ${skillMap(s).map(x=>`<div style="margin:10px 0"><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span>${escH(x.t)}</span><b>${x.pct}%</b></div><div class="cm-bar"><i style="width:${x.pct}%"></i></div></div>`).join('')}
+          <a class="cm-more" href="#" data-tab="goal">Xem chi tiết →</a></div>
+        ${top?`<div class="cm-tip"><b>Gợi ý hôm nay</b>Kỹ năng cách mục tiêu <em>${escH(g.t)}</em> xa nhất là <b style="display:inline;color:var(--ink);letter-spacing:0;text-transform:none;font-size:inherit">${escH(top.t)}</b> (${top.pct}% / cần ${top.need}%). Một bài ngắn hôm nay là đủ để nhích lên.</div>`:''}
+      </div>
+    </div>`;
+}
+function tabQuest(s,Z){
+  const g=curGoal(s);
+  return `<div class="cm-card" style="margin-bottom:16px"><h2 class="cm-sh" style="margin:0 0 4px;font-size:1.15rem;text-transform:none;letter-spacing:0">Tất cả vùng nghề &amp; nhiệm vụ</h2>
+    <p class="cm-sub">Khám phá ${Z.length} vùng nghề marketing. Chọn một vùng làm lộ trình chính — bài trong vùng đó luôn mở.</p></div>
+    <div class="cm-zones">${Z.map(x=>{const on=x.id===g.id, nx=x.lessons.find(k=>!S.get().done[k]);
+      return `<div class="cm-zone" ${on?'data-on':''}>
+        <h3>${escH(x.t)} ${on?'<span class="cm-pill">Ưu tiên</span>':''}</h3><p>${escH(x.d)}</p>
+        <div><div class="cm-bar"><i style="width:${x.pct}%"></i></div></div>
+        <div class="cm-row"><span>${x.d}/${x.n} bài · ${x.pct}%</span>
+          ${on?`<a class="cm-go cm-go--p" href="${nx?'bai.html?id='+encodeURIComponent(nx):'#'}">Học tiếp →</a>`:`<button class="cm-go" data-pick="${x.id}">Chọn vùng này</button>`}</div></div>`}).join('')}</div>`;
+}
+function tabGoal(s,Z){
+  const cur=curGoal(s), g=GOALS.find(x=>x.id===SEL)||cur, z=Z.find(x=>x.id===g.id), m=skillMap(s);
+  const first=z.lessons.filter(k=>!s.done[k]).slice(0,5);
+  return `<div class="cm-goal"><div class="cm-list" role="tablist" aria-label="Mục tiêu nghề">${GOALS.map(x=>`<button class="cm-li" role="tab" aria-selected="${x.id===g.id}" data-sel="${x.id}"><b>${escH(x.t)}${x.id===cur.id?' · mục tiêu của bạn':''}</b><span>${escH(x.d)}</span></button>`).join('')}</div>
+    <div class="cm-card">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start">
+        <div><span class="cm-eye">Mục tiêu nghề</span><h2 class="cm-h" style="margin:4px 0">${escH(g.t)}</h2><p class="cm-sub" style="max-width:56ch">${escH(g.d)}</p></div>
+        ${g.id===cur.id?'<span class="cm-chip cm-chip--terra">Đang là mục tiêu</span>':`<button class="cm-go cm-go--p" data-pick="${g.id}">Đặt làm mục tiêu</button>`}</div>
+      <h3 class="cm-sh" style="margin-top:22px">Kỹ năng của bạn so với yêu cầu <span style="font-weight:500;text-transform:none;letter-spacing:0;color:var(--ink-50)">vạch vàng = mức cần</span></h3>
+      ${m.map(x=>{const need=g.need[x.id], gap=Math.max(0,need-x.pct);
+        return `<div class="cm-sk"><span>${escH(x.t)}</span><div class="cm-bar"><i style="width:${x.pct}%"></i><span class="cm-need" style="left:${need}%"></span></div><em>${x.pct}% / ${need}%${gap?` · <span class="cm-gap">−${gap}</span>`:' ✓'}</em></div>`}).join('')}
+      <h3 class="cm-sh" style="margin-top:22px">Bài nên học trước · ${z.d}/${z.n} xong</h3>
+      ${first.length?first.map((k,i)=>{const mm=lessonMeta(k);return `<a class="cm-q" href="bai.html?id=${encodeURIComponent(k)}"><small>Bước ${i+1}</small><b>${escH(mm?mm.t:k)}</b><span>${mm?escH(mm.read):''}</span></a>`}).join(''):'<p class="cm-s">Bạn đã xong toàn bộ lộ trình này.</p>'}
+    </div></div>`;
+}
+function tabStage(s){
+  const here=hereStage(s), pl=pathLessons(s.path||'full'), path=PATHS.find(p=>p.id===(s.path||'full'));
+  return `<p class="cm-sub" style="max-width:70ch;margin-bottom:18px">Mỗi bài khoảng sáu phút. Chặng sau mở khi bạn xong 60% chặng trước. Bài thuộc lộ trình <b>${escH(path.t)}</b> luôn mở — đánh dấu <span class="tag">Lộ trình</span>.</p>`+
+  STAGES.map(st=>{
   const open=stageOpen(st.id,s), isHere=st.id===here, ks=st.mods.flatMap(m=>m.lessons), d=ks.filter(k=>s.done[k]).length;
   return `<section class="stage" id="${st.id}" ${open?'data-open':''} ${isHere?'data-here':''}>
     <div class="stage__n">${st.n}</div>
@@ -70,8 +249,19 @@ ${STAGES.map(st=>{
         <a class="small" href="${m.caseLink.href}">${escH(m.caseLink.t)} →</a>
         ${practiceLine(st.id, m.id, open, s)}</div>`).join('')}</div>
       ${examLine(st.id, open, s)}
-    </div></section>`}).join('')}`;
-if(here) setTimeout(()=>document.getElementById(here)?.scrollIntoView({block:'start'}),0);
+    </div></section>`}).join('');
+}
+function render(){
+  const s=S.get(), Z=ZONES(), g=curGoal(s), z=Z.find(x=>x.id===g.id);
+  $app.innerHTML=header(s,z)+(TAB==='quest'?tabQuest(s,Z):TAB==='goal'?tabGoal(s,Z):TAB==='stage'?tabStage(s):tabMap(s,Z,z));
+}
+$app.addEventListener('click',e=>{
+  const t=e.target.closest('[data-tab]'); if(t){ e.preventDefault(); TAB=t.dataset.tab; try{history.replaceState(null,'','#tab='+TAB)}catch(_){} render(); return; }
+  const p=e.target.closest('[data-pick]'); if(p){ choose(p.dataset.pick); return; }
+  const l=e.target.closest('[data-sel]'); if(l){ SEL=l.dataset.sel; render(); }
+});
+render();
+if(TAB==='stage'){ const h=hereStage(S.get()); if(h) setTimeout(()=>document.getElementById(h)?.scrollIntoView({block:'start'}),0); }
 </script>
 </body>
 </html>
