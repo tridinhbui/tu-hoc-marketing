@@ -409,7 +409,7 @@ BAI_ADD({ mod:'dl07', lessons:[
   q:[
   { type:'mcq', stem:'Đoán trước: doanh thu tháng sau Tết giảm 30% so với tháng trước Tết. Đọc thế nào?',
     options:[{k:'a',t:'Shop đang gặp khủng hoảng, cần hành động ngay lập tức'},{k:'b',t:'Đối thủ đã cướp khách trong dịp Tết nên doanh thu sụt'},
-             {k:'c',t:'Có thể do mùa; cần so với cùng kỳ năm trước'},{k:'d',t:'Quảng cáo đã hết tác dụng, cần thay nội dung'}],
+             {k:'c',t:'Có thể do mùa; cần so với cùng kỳ năm trước'},{k:'d',t:'Quảng cáo hết tác dụng, cần thay nội dung'}],
     answer:'c', why:{a:'Kết luận khủng hoảng khi chưa loại trừ mùa vụ là vội.',
       b:'Chưa có dữ kiện nào về đối thủ.',
       c:'Đúng. Mùa mua sắm trước Tết làm tháng 1 cao bất thường.',

@@ -95,7 +95,7 @@ BAI_ADD({ mod:'tp05', lessons:[
       d:'Thương hiệu vô danh hiếm khi có doanh thu tự nhiên đủ để tự nuôi.'} },
   { type:'mcq', stem:'Vì sao hiệu quả của tiền xây thương hiệu thường bị đánh giá thấp trong báo cáo hàng tháng?',
     options:[{k:'a',t:'Vì tiền xây thương hiệu thật ra không làm tăng doanh số'},{k:'b',t:'Vì phần lớn tác dụng đến sau nhiều tháng, ngoài khung đo'},
-             {k:'c',t:'Vì bộ phận tài chính không hiểu marketing nên cố tình ghi thấp đi'},{k:'d',t:'Vì quảng cáo thương hiệu khó gắn đường link để đo đếm'}],
+             {k:'c',t:'Vì bộ phận tài chính không hiểu marketing nên cố tình ghi thấp đi'},{k:'d',t:'Vì quảng cáo thương hiệu khó gắn được link để đo kết quả'}],
     answer:'b', why:{a:'Nó làm tăng doanh số, nhưng qua đường vòng: nhớ tên, chịu trả giá, chọn bạn khi cần.',
       b:'Đúng. Báo cáo tháng chỉ bắt được phần ngắn hạn; phần dư âm rơi vào những tháng sau.',
       c:'Vấn đề nằm ở cách đo, không phải ý đồ của ai.',
