@@ -28,7 +28,7 @@
   .btn-go{display:inline-flex;align-items:center;gap:8px;border-radius:10px;padding:11px 20px;background:var(--terra);color:#fff;text-decoration:none;font:700 14px var(--sans)}
   .d-bar{height:8px;border-radius:99px;background:var(--ink-12);overflow:hidden}
   .d-bar i{display:block;height:100%;background:var(--terra);border-radius:99px}
-  .d-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .d-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
   .d-tabs button{border:1.5px solid var(--ink-12);background:var(--card);color:var(--ink);border-radius:14px;padding:14px 12px;cursor:pointer;
     font:800 12.5px/1.2 var(--sans);letter-spacing:.05em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px}
   .d-tabs button.on{border-color:var(--terra);color:var(--terra);box-shadow:0 0 0 3px var(--terra-06)}
@@ -43,7 +43,9 @@
   .d-pills button{border:0;border-radius:99px;padding:7px 13px;background:var(--ink-06);color:var(--ink-70);font:700 12.5px var(--sans);cursor:pointer}
   .d-pills button.on{background:var(--terra);color:#fff}
   @media(max-width:1020px){.d-dash{grid-template-columns:minmax(0,1fr)}.d-mission{grid-template-columns:1fr}}
-  @media(max-width:560px){.d-tabs{grid-template-columns:1fr}}
+  @media(max-width:760px){.d-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:420px){.d-tabs{grid-template-columns:1fr}}
+  .d-tabs button{padding:12px 8px;font-size:11.5px}
 
   /* bản đồ 30 cấp độ (dùng chung dữ liệu với cap-do.html) */
   .lvmap{background:radial-gradient(120% 120% at 0% 0%,#2A1B13,#1E130D);color:#F7EBDD;border-radius:24px;padding:20px 20px 16px;border:1px solid rgba(255,255,255,.06)}
@@ -138,7 +140,7 @@ function renderDashboard(user) {
             <span style="white-space:nowrap">Tiến độ (${doneCount}/${totalLessons} bài)</span><div class="d-bar" style="flex:1"><i style="width:${Math.max(1, pct)}%"></i></div><b>${pct}%</b>
           </div>
         </div>
-        <div class="d-mission__img"><img src="assets/img/coffee_aesthetic.jpg" alt=""></div>
+        <div class="d-mission__img"><img src="assets/img/art-megaphone.svg" alt=""></div>
       </section>
       <a href="hoc-bai.html" style="font-size:14px;color:var(--ink-70);text-decoration:none">📖 Xem toàn bộ bài học →</a>
 
@@ -148,6 +150,7 @@ function renderDashboard(user) {
         <button class="on" data-tab="q" role="tab">🎁 Thưởng &amp; nhiệm vụ</button>
         <button data-tab="m" role="tab">🧭 Mục tiêu nghề &amp; kỹ năng</button>
         <button data-tab="a" role="tab">⚔️ Đấu trường &amp; luyện tập</button>
+        <button data-tab="l" role="tab">🌱 Cấp độ &amp; XP</button>
       </div>
       <section class="d-card" id="tabBody"></section>
     </div>
@@ -156,7 +159,7 @@ function renderDashboard(user) {
       <div id="sbProfile"></div>
       <section class="d-card">
         <div style="display:flex;justify-content:space-between;align-items:center"><b>Hành trình của bạn</b><span class="d-chip d-chip--g">Cấp ${level(s.xp).n}</span></div>
-        <div class="d-journey"><img src="assets/img/hero_mountain.jpg" alt=""></div>
+        <div class="d-journey"><img src="assets/img/art-journey.svg" alt=""></div>
         <a href="ban-do.html" class="btn-go" style="display:flex;justify-content:center;background:var(--bg);color:var(--ink);border:1px solid var(--ink-12)">Xem bản đồ hành trình →</a>
       </section>
       <div>
@@ -172,8 +175,18 @@ function renderDashboard(user) {
   const tiles = (arr) => `<div class="d-tilegrid">${arr.map(([t, d, h]) => `<a class="d-tile" href="${h}"><b>${t}</b><span>${d}</span></a>`).join('')}</div>`;
   const TAB = {
     q: () => { body.innerHTML = '<div id="qList"></div>'; SocialUI.questsPanel(document.getElementById('qList'), goHref); },
-    m: () => { body.innerHTML = tiles([['30 cấp độ & cách kiếm XP', 'Mốc XP từng cấp, bảng điểm', 'cap-do.html'], ['Học theo nghề', 'Chọn mục tiêu nghề nghiệp', 'ban-do.html'], ['Kỹ năng & triện', 'Mức thành thạo từng kỹ năng', 'nang-luc.html'], ['Rương thưởng', 'Mở rương và xem phần thưởng', 'ruong.html']]); },
+    m: () => { body.innerHTML = tiles([['Học theo nghề', 'Chọn mục tiêu nghề nghiệp', 'ban-do.html'], ['Kỹ năng & triện', 'Mức thành thạo từng kỹ năng', 'nang-luc.html'], ['Rương thưởng', 'Mở rương và xem phần thưởng', 'ruong.html']]); },
     a: () => { body.innerHTML = tiles([['Quiz', 'Làm nhanh, nhận XP', 'quiz.html'], ['Thi vượt chặng', 'Chứng minh bạn đã nắm chặng', 'thi.html'], ['Game Kingdom', 'Đấu trường và boss', 'kingdom.html'], ['Luyện phỏng vấn', 'Tập trả lời như thật', 'phong-van.html']]); },
+  };
+  TAB.l = () => {
+    const L = level(s.xp), n = L.n, nxt = L.next, f = (x) => x.toLocaleString('vi-VN');
+    const WAYS = [['lesson', 'Hoàn thành một bài học'], ['drill', 'Bài tính số đúng'], ['case', 'Hoàn thành một case'], ['exam', 'Qua đề thi vượt chặng'], ['talk', 'Nói 60 giây / thực hành'], ['daily', 'Thử thách hằng ngày']];
+    body.innerHTML = `<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
+        <div><b style="font-size:1.1rem">Cấp ${n} · ${escH(L.name)}</b><div class="small muted">${f(s.xp)} XP${nxt ? ' · còn ' + f(nxt - s.xp) + ' XP lên cấp ' + (n + 1) : ' · cấp cao nhất'}</div></div>
+        <a class="btn-go" href="cap-do.html">Xem 30 cấp độ →</a></div>
+      <div class="d-bar" style="margin:14px 0"><i style="width:${nxt ? Math.max(2, Math.round((s.xp - L.cur) / (nxt - L.cur) * 100)) : 100}%"></i></div>
+      <div class="small muted" style="margin-bottom:8px">Cách kiếm XP nhanh nhất</div>
+      <div class="d-tilegrid">${WAYS.map(([k, t]) => `<div class="d-tile"><b>+${XP[k]} XP</b><span>${t}</span></div>`).join('')}</div>`;
   };
   document.querySelectorAll('[data-tab]').forEach((b) => b.onclick = () => {
     document.querySelectorAll('[data-tab]').forEach((x) => x.classList.toggle('on', x === b)); TAB[b.dataset.tab]();
