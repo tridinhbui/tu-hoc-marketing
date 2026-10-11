@@ -38,7 +38,7 @@ BAI_ADD({ mod:'dl03', lessons:[
       d:'Đúng. So ROAS giữa hai sản phẩm khác biên lãi là so hai thứ không cùng thước.'} },
   { type:'mcq', stem:'Doanh thu 40 triệu, giá vốn 60% doanh thu, phí sàn và vận chuyển 15%, quảng cáo 10 triệu. Kết quả là gì?',
     options:[{k:'a',t:'Lãi 30 triệu, vì doanh thu trừ quảng cáo'},{k:'b',t:'Lỗ 1 triệu vì chi phí đã vượt doanh thu'},
-             {k:'c',t:'Hoà vốn: 16 + 6 + 10 + 8 = 40 triệu'},{k:'d',t:'Lãi 14 triệu vì chưa trừ quảng cáo vào'}],
+             {k:'c',t:'Hoà vốn: 24 + 6 + 10 = 40 triệu'},{k:'d',t:'Lãi 14 triệu vì chưa trừ quảng cáo vào'}],
     answer:'c', why:{a:'Quên trừ giá vốn và phí — chính là coi ROAS như lợi nhuận.',
       b:'Cộng đúng lại thì chi phí vừa bằng doanh thu, không vượt.',
       c:'Đúng. Giá vốn 24, phí 6, quảng cáo 10: tổng 40 triệu, vừa bằng doanh thu. (Viết gọn: lãi trước quảng cáo 10 triệu, trừ 10 triệu quảng cáo còn 0.)',

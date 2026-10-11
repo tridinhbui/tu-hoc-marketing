@@ -41,12 +41,36 @@ const SID = new URLSearchParams(location.search).get('stage') || 's1';
 const BP = EXAMS[SID];
 let items = [], idx = 0, given = {}, startedAt = 0, tick = null;
 
+/* Bài làm dở: lưu cục bộ để mất mạng / tải lại trang / máy chủ lỗi không làm mất câu đã trả lời.
+   Đề đã bỏ đáp án nên lưu được; xoá khi đã chấm xong. Không bao giờ tự cho qua. */
+const DRAFT_KEY = 'thmc.examdraft';
+function saveDraft(){ try{ localStorage.setItem(DRAFT_KEY, JSON.stringify({ sid:SID, items, given, idx, startedAt })); }catch(e){} }
+function clearDraft(){ try{ localStorage.removeItem(DRAFT_KEY); }catch(e){} }
+function loadDraft(){
+  try{ const d = JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null');
+    if(d && d.sid === SID && Array.isArray(d.items) && d.items.length && Date.now() - d.startedAt < 24*3600e3) return d;
+  }catch(e){}
+  return null;
+}
+function resumeDraft(){
+  const d = loadDraft(); if(!d) return intro();
+  items = d.items; given = d.given || {}; idx = Math.min(d.idx || 0, items.length - 1); startedAt = d.startedAt;
+  if(Date.now() - startedAt >= BP.minutes*60000) return finish();
+  clearInterval(tick); tick = setInterval(()=>{
+    const el = document.getElementById('clock'); if(!el) return;
+    const left = BP.minutes*60000 - (Date.now()-startedAt);
+    el.textContent = fmtLeft(left);
+    if(left <= 0){ clearInterval(tick); finish(); }
+  }, 500);
+  show();
+}
+
 const fmtLeft = (ms) => { const m = Math.max(0, Math.floor(ms/60000)), s = Math.max(0, Math.floor(ms%60000/1000)); return m + ':' + String(s).padStart(2,'0'); };
 
 /* ---------------- màn mở ---------------- */
 function intro(){
   if(!BP){ app.innerHTML = `<section class="section"><h1 class="h1">Chặng này chưa có đề</h1>
-    <p class="lede">Mới có đề cho chặng 01. Các chặng sau đang soạn.</p>
+    <p class="lede">Mã chặng không có trong chương trình. Chọn lại từ bản đồ.</p>
     <a class="btn" href="ban-do.html">Về bản đồ</a></section>`; return; }
 
   if(BP.kind === 'cases') return caseIntro();
@@ -91,12 +115,18 @@ function intro(){
         Thi nhiều lần sẽ gặp lại câu cũ.
       </div>` : ''}
 
+    ${loadDraft() ? `<div class="note" style="margin-top:18px">
+        <b>Có một bài làm dở chưa chấm xong.</b> Câu đã trả lời được giữ lại trên máy này.
+        <div style="margin-top:12px"><button class="btn" id="resume">Tiếp tục bài đã làm</button></div>
+      </div>` : ''}
+
     <div style="margin-top:26px">
       ${lock ? '' : `<button class="btn" id="go">${st.attempts ? 'Thi lại' : 'Bắt đầu'} · ${BP.size} câu</button>`}
       <a class="btn btn--ghost" href="ban-do.html" style="margin-left:8px">Về bản đồ</a>
     </div>
   </section>`;
   const g = document.getElementById('go'); if(g) g.onclick = start;
+  const rs = document.getElementById('resume'); if(rs) rs.onclick = resumeDraft;
 }
 
 
@@ -123,7 +153,7 @@ function caseIntro(){
 
     <div class="note" style="margin-top:22px">
       <b>Vượt chặng khi thoả cả ba:</b> đạt ít nhất ${BP.need} case trong giờ;
-      trong đó ${BP.full} case đạt đủ 4/4 — tức phần nói 60 giây cũng đạt;
+      trong đó ${BP.full} case đạt đủ 4/4 — đúng ba tiêu chí tự chấm và đã viết đủ năm ý của phần nói 60 giây;
       và có ít nhất một case độ <b>Khó</b>.
       Lần đạt sau khi hết giờ không được tính: chặng này đo đúng việc ghép mọi thứ lại <em>dưới áp lực thời gian</em>.
     </div>
@@ -152,6 +182,16 @@ function caseIntro(){
 async function start(){
   app.innerHTML = '<section class="section"><p class="lede">Đang chuẩn bị đề…</p></section>';
   items = await drawExam(SID); idx = 0; given = {}; startedAt = Date.now();
+  /* Máy chủ không dựng được đề và bản trên máy đã bỏ đáp án → không chấm được. Nói ngay, đừng để người học
+     làm 25 phút rồi mới biết; không bắt đầu đồng hồ, không ghi lượt thi. */
+  if(!items.source && !items.every(hasKey)){
+    app.innerHTML = `<section class="section"><span class="mono mono--red">Chưa thi được</span>
+      <h1 class="h2" style="margin:12px 0">Chưa kết nối được máy chủ chấm bài.</h1>
+      <p class="lede">Chưa có đề nào bị tính lượt thi. Kiểm tra mạng rồi thử lại.</p>
+      <div class="row" style="gap:10px;margin-top:18px"><button class="btn" id="again">Thử lại</button>
+      <a class="btn btn--ghost" href="ban-do.html">Về bản đồ</a></div></section>`;
+    document.getElementById('again').onclick = start; return;
+  }
   clearInterval(tick); tick = setInterval(()=>{
     const el = document.getElementById('clock'); if(!el) return;
     const left = BP.minutes*60000 - (Date.now()-startedAt);
@@ -189,13 +229,13 @@ function show(){
   </section>`;
 
   app.querySelectorAll('.opt').forEach(b => b.onclick = () => {
-    given[it.id] = b.dataset.k;
+    given[it.id] = b.dataset.k; saveDraft();
     app.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-pressed', x === b));
   });
   const num = document.getElementById('num');
-  if(num) num.oninput = () => { given[it.id] = num.value; };
+  if(num) num.oninput = () => { given[it.id] = num.value; saveDraft(); };
   document.getElementById('next').onclick = () => {
-    if(idx === items.length-1) finish(); else { idx++; show(); }
+    if(idx === items.length-1) finish(); else { idx++; saveDraft(); show(); }
   };
 }
 
@@ -205,8 +245,12 @@ async function finish(){
   app.innerHTML = '<section class="section"><p class="lede">Đang chấm bài…</p></section>';
   let res;
   try { res = await gradeExamAsync(SID, items, given, 'practice'); }
-  catch (e) { app.innerHTML = `<section class="section"><p class="lede">${GRADE_OFFLINE}</p><button class="btn" id="retry">Chấm lại</button></section>`;
+  catch (e) { saveDraft();   // giữ nguyên câu trả lời; chưa ghi lượt thi, chưa khoá
+    app.innerHTML = `<section class="section"><p class="lede">${GRADE_OFFLINE}</p>
+      <p class="small muted">Câu trả lời của bạn được giữ trên máy này. Chưa tính lượt thi, chưa khoá.</p>
+      <button class="btn" id="retry">Chấm lại</button></section>`;
     document.getElementById('retry').onclick = finish; return; }
+  clearDraft();
   saveExam(SID, res);
   const st = examState(SID);
   const missed = res.marks.filter(m => !m.ok);
@@ -220,7 +264,7 @@ async function finish(){
     ${res.passed
       ? `<h1 class="h1" style="margin:14px 0 8px">Qua chặng.</h1>
          <div class="seal" style="margin:18px 0">${examSeal(SID, st.passed)}</div>
-         <p class="lede">Đúng ${res.right}/${res.total}, sai ${res.coreWrong} câu cốt lõi.
+         <p class="lede">Đúng ${res.right}/${res.total}.
             Triện đã đóng vào sổ tay kèm ngày ${st.passed}.</p>`
       : `<h1 class="h1" style="margin:14px 0 8px">Chưa qua.</h1>
          <p class="lede">${res.reason === 'thieu-diem'

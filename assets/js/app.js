@@ -261,66 +261,72 @@ function applyTheme(s=S.get()){
   document.documentElement.style.setProperty('--read',(s.read||18)+'px');
 }
 function appShell(here){
-  const s=S.get(); applyTheme(s); const lv=level(s.xp);
+  const s=S.get(); applyTheme(s);
   const main=document.querySelector('main'); if(main&&!main.id) main.id='main';
-  const due=dueErrors(s).length, rk=typeof rank==='function'?rank(s):null;
   let cur=here||((location.pathname.split('/').pop()||'index')); if(!/\.html$/.test(cur)) cur+='.html';
-  const started=s.xp>0||s.streak>0;   // thẻ cấp/XP chỉ hiện sau khi học xong một việc
-  const lvPct=lv.next?Math.round((s.xp-lv.cur)/(lv.next-lv.cur)*100):100;
-  const isCollapsed = localStorage.getItem('thmc.side_collapsed') === '1';
-  document.body.classList.add('has-side');
-  if(isCollapsed) document.body.classList.add('side-collapsed');
+
+  const navLinks=[
+    {t:'Học', h:'hoc.html', also:['bai.html']},
+    {t:'Case', h:'case-thu-vien.html', also:['gallery.html','campaign.html']},
+    {t:'Lộ trình', h:'ban-do.html', also:['roadmap.html']},
+    {t:'Thử thách', h:'quiz.html', also:['challenge.html','thi.html']},
+    {t:'Cộng đồng', h:'cong-dong.html'},
+  ];
+  const herePath=(location.pathname.split('/').pop()||'hoc.html')+location.search;
+
   document.body.insertAdjacentHTML('afterbegin',`
     <a class="skip" href="#main">Tới nội dung chính</a>
-    <div class="mtop"><button type="button" id="sideBtn" aria-label="Mở menu" aria-controls="side">${appIc('menu')}</button>
-      <a class="logo" href="hoc.html"><b>Tự Học</b> Marketing</a>${started?`<b class="xpchip">${fmt(s.xp)} XP</b>`:''}</div>
-    <aside class="side" id="side" aria-label="Điều hướng">
-      <a class="side__logo" href="hoc.html"><i>M</i><span><b>Tự Học</b><br>Marketing Case</span></a>
-      <nav class="side__nav" aria-label="Chính">${APP_NAV.map(g=>{
-        const kids=g.kids||[], inGroup=h=>h===cur||(g.also||[]).includes(cur),
-              active=g.h===cur||(g.also||[]).includes(cur)||kids.some(k=>k[1]===cur||k[3]===cur),
-              dueBadge=g.kids&&g.kids.some(k=>k[2]==='due')&&due?`<em>${due}</em>`:'';
-        return `<a href="${g.h}" class="side__top"${active?' aria-current="page"':''}>${appIc(g.i)}<span>${g.t}</span>${dueBadge}</a>`
-          +(kids.length&&active?`<div class="side__kids">${kids.map(([t,h,fl,alt])=>`<a href="${h}" data-login="${fl==='L'?1:0}"${fl==='L'?' hidden':''}${h===cur||alt===cur?' aria-current="page"':''}>${t}${fl==='due'&&due?`<em>${due}</em>`:''}</a>`).join('')}</div>`:'');
-      }).join('')}</nav>
-      <div class="side__foot">
-        ${started?`<a class="side__me" href="nang-luc.html" title="Cấp ${lv.n} · ${escH(lv.name)}">
-          <span class="side__rank">${rk?escH(rk.t):'Cấp '+lv.n}</span>
-          <span class="side__nums"><b class="xpchip top__stat">${fmt(s.xp)} XP</b><span class="streak">${s.streak} ngày</span></span>
-          <span class="meter"><i style="width:${lvPct}%"></i></span>
-          <small>${lv.next?`${fmt(lv.next-s.xp)} XP nữa lên cấp ${lv.n+1}`:'Cấp cao nhất'}</small></a>`:''}
-        <a class="side__acct" id="acct" href="tai-khoan.html">Tài khoản</a>
-        <button type="button" class="side-toggle" id="sideCollapseBtn" title="Thu gọn / Mở rộng thanh điều hướng">
-          <svg class="ic" viewBox="0 0 24 24"><path d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
-          <span>Thu gọn</span>
-        </button>
+    <header class="studio-top">
+      <div class="wrap">
+        <a class="studio-logo" href="index.html">
+          <b style="color:var(--terra)">Tự Học</b> Marketing Case
+          <span class="studio-badge studio-badge--terra">STUDIO</span>
+        </a>
+
+        <nav class="studio-nav" aria-label="Điều hướng chính">
+          ${navLinks.map(n=>{
+            const isActive=n.h===cur||(n.also||[]).includes(cur);
+            return `<a href="${n.h}" class="${isActive?'active':''}">${n.t}</a>`;
+          }).join('')}
+        </nav>
+
+        <div class="studio-top__right">
+          <span class="xpchip" id="topXpChip">${fmt(s.xp)} XP</span>
+          <a class="studio-login-btn" id="acct" href="dang-nhap.html?next=${encodeURIComponent(herePath)}">Đăng nhập</a>
+        </div>
       </div>
-    </aside><div class="side__veil" id="sideVeil" hidden></div>`);
-  const side=document.getElementById('side'), veil=document.getElementById('sideVeil');
-  const toggle=on=>{ side.toggleAttribute('data-open',on); veil.hidden=!on; };
-  document.getElementById('sideBtn').onclick=()=>toggle(!side.hasAttribute('data-open'));
-  veil.onclick=()=>toggle(false);
-  const colBtn=document.getElementById('sideCollapseBtn');
-  if(colBtn){
-    colBtn.onclick=()=>{
-      const nowCol = document.body.classList.toggle('side-collapsed');
-      try { localStorage.setItem('thmc.side_collapsed', nowCol ? '1' : '0'); } catch(e){}
-    };
-  }
+    </header>`);
+
   document.body.insertAdjacentHTML('beforeend',`
-    <footer class="foot"><div class="wrap row between">
-      <span>Tự Học Marketing Case · miễn phí. Mọi số liệu trong ví dụ là minh hoạ trừ khi ghi rõ nguồn.</span>
-      <span><a href="gioi-thieu.html">Giới thiệu</a> · <a href="tap-chi.html">Tạp chí Nhìn thấy</a> · <a href="roadmap.html">Bàn làm việc</a></span>
-    </div></footer><div class="toast" id="toast" role="status" aria-live="polite"></div>`);
-  Promise.all([account(),canLogin()]).then(([u,can])=>{ const a=document.getElementById('acct'); if(!a) return;
-    if(can) document.querySelectorAll('[data-login="1"]').forEach(x=>x.hidden=false);
-    a.textContent = u ? u.name : (can ? 'Đăng nhập' : 'Lưu trên máy này');
-    if(!u && !can){ a.removeAttribute('href'); a.style.cssText='opacity:.7;cursor:default'; a.title='Tiến độ đang lưu trong trình duyệt này. Đăng nhập chưa được bật.'; }
-    if(!u && can){                       // chưa đăng nhập: nút rõ ràng, quay lại đúng trang đang đọc
-      const here=(location.pathname.split('/').pop()||'hoc.html')+location.search;
-      a.className='btn btn--primary side__acct';
-      if(!/^tai-khoan\.html/.test(here)) a.href='tai-khoan.html?next='+encodeURIComponent(here); }
-    if(u){ syncNow(); mountAssistant(); } });
+    <footer class="studio-footer">
+      <div class="wrap row between">
+        <span>Tự Học Marketing Case · An Editorial Creative Strategy Studio. Miễn phí cho người học.</span>
+        <span>
+          <a href="hoc.html">Học</a> · 
+          <a href="case-thu-vien.html">Case Study</a> · 
+          <a href="ban-do.html">Lộ trình</a> · 
+          <a href="quiz.html">Thử thách</a> · 
+          <a href="dang-nhap.html">Đăng nhập</a>
+        </span>
+      </div>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>`);
+
+  account().then(u=>{
+    const a=document.getElementById('acct'); if(!a) return;
+    if(u && u.name){
+      const initial=(u.name.trim()[0]||'M').toUpperCase();
+      a.className='studio-user-badge';
+      a.href='tai-khoan.html';
+      a.innerHTML=`<span class="studio-user-avatar">${escH(initial)}</span> <span>${escH(u.name)}</span>`;
+      if(typeof syncNow==='function') syncNow();
+      if(typeof mountAssistant==='function') mountAssistant();
+    } else {
+      a.className='studio-login-btn';
+      a.href='dang-nhap.html?next='+encodeURIComponent(herePath);
+      a.textContent='Đăng nhập';
+    }
+  });
 }
 function toast(m){ const t=document.getElementById('toast'); if(!t) return; t.textContent=m; t.classList.add('on');
   clearTimeout(toast._t); toast._t=setTimeout(()=>t.classList.remove('on'),2200); }
@@ -496,15 +502,19 @@ async function api(path,{method='GET',body}={}){
 }
 async function account(){
   if(API.user!==undefined) return API.user;
-  try{ API.user=(await api('/me')).user; }catch(e){ API.user=null; }
+  try{
+    const r=await api('/me');
+    if(r && r.user){ API.user=r.user; return API.user; }
+  }catch(e){}
+  try{
+    const localU=JSON.parse(localStorage.getItem('thmc.user')||'null');
+    if(localU && localU.name){ API.user=localU; return API.user; }
+  }catch(err){}
+  API.user=null;
   return API.user;
 }
-/* Đăng nhập chỉ "có thật" khi máy chủ có ít nhất một cách gửi link/đăng nhập (email hoặc Google).
-   Chưa cấu hình thì mọi nút "Đăng nhập" phải ẩn — không dẫn người học vào trang trống. */
 async function canLogin(){
-  if(API.login!==undefined) return API.login;
-  try{ const p=await api('/auth/providers'); API.login=!!(p.email||p.google); API.providers=p; }catch(e){ API.login=false; }
-  return API.login;
+  return true;
 }
 /* Gộp hai bản trạng thái — cùng quy tắc với server (api/src/state.js). */
 function mergeState(a={},b={}){

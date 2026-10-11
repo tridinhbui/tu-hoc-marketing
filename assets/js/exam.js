@@ -11,10 +11,14 @@ async function drawExam(sid) {
   try {
     const r = await api('/exams/draw/' + sid);
     /* Đề từ server không mang `teaches`; lấy bài gốc của câu làm chỗ "cần xem lại" và mã lỗi khái niệm. */
-    if (r.items && r.items.length >= 10) return r.items.map(it => {
-      const x = { ...it, teaches: it.teaches || (it.lesson ? [it.lesson] : []) };
-      return x.options ? { ...x, options: shuf(x.options) } : x;
-    });
+    if (r.items && r.items.length >= 10) {
+      const out = r.items.map(it => {
+        const x = { ...it, teaches: it.teaches || (it.lesson ? [it.lesson] : []) };
+        return x.options ? { ...x, options: shuf(x.options) } : x;
+      });
+      out.source = 'server';   // đề do máy chủ dựng: máy chủ cũng chấm được
+      return out;
+    }
   } catch (e) { /* rơi xuống đề tại chỗ */ }
   return buildExam(sid);
 }
@@ -174,6 +178,15 @@ function examSeal(sid, date) {
 }
 
 
+/* Một lần nộp case đạt "đủ 4/4": đúng ba tiêu chí có đáp án (calc, insight, rec) VÀ đã viết đủ phần trình bày
+   60 giây (talk — giai-case.html ghi khoá này). Kiểm tên khoá, không đếm số khoá: lần trước đếm `length === 4`
+   trong khi trang chỉ ghi 3 khoá nên không ai vượt được chặng 06. Lần nộp cũ (chưa có `talk`) không tính 4/4. */
+const FULL_CASE_KEYS = ['calc', 'insight', 'rec', 'talk'];
+function isFullCase(a) {
+  const p = (a && a.pass) || {};
+  return !!(a && a.passed) && FULL_CASE_KEYS.every(k => p[k] === true);
+}
+
 /* ---------------- cổng case (chặng cuối) ----------------
    Đọc thẳng s.cases do giai-case.html ghi — không dựng hệ chấm thứ hai. */
 function caseGate(sid, s = S.get()) {
@@ -183,7 +196,7 @@ function caseGate(sid, s = S.get()) {
   const rows = cs.map(c => {
     const tries = ((s.cases || {})[c.id]) || [];
     const ok = tries.filter(a => a.passed && (!bp.inTime || !a.timeout));
-    const full = ok.filter(a => Object.values(a.pass || {}).length === 4 && Object.values(a.pass).every(Boolean));
+    const full = ok.filter(isFullCase);
     const lastTimeout = tries.some(a => a.passed && a.timeout);
     return { c, tries: tries.length, okDate: first(ok), fullDate: first(full),
              hard: /khó/i.test(c.level || ''), lastTimeout };

@@ -86,11 +86,11 @@ function qHTML(it,id,{note=''}={}){
 }
 /* Hiện đáp án và lời giải. Chấm tại chỗ nếu còn đáp án (bản trên máy), không thì server chấm
    và chỉ trả lời giải của đáp án đúng và phương án đã chọn. Lỗi mạng: không khoá câu, cho thử lại. */
-async function reveal(id,it,given,{showWhy=true,context='practice'}={}){
+async function reveal(id,it,given,{showWhy=true,context='practice',pre=null}={}){
   const box=document.getElementById(id), fb=box.querySelector('.fb');
   box.querySelectorAll('input,button').forEach(x=>x.disabled=true);
   let g;
-  try{ g=await gradeAsync(it,given,context); }
+  try{ g=pre||await gradeAsync(it,given,context); }
   catch(e){ box.querySelectorAll('input,button').forEach(x=>x.disabled=false);
     fb.innerHTML=`<p class="small bad" style="margin-top:8px">${GRADE_OFFLINE}</p>`; return null; }
   if(it.type==='calc'){
@@ -382,7 +382,12 @@ function wireQuestions(){
     sb.disabled=true; sb.textContent='Đang chấm…';
     const before=S.get(), sk=skillOfLesson(key), skBefore=sk?skillPct(sk,before):0, jBefore=journeyState(before);
     let right=0; const wrong=[];
-    for(let i=0;i<PLAN.quiz.length;i++){ const it=PLAN.quiz[i], g=await reveal('qz'+i,it,ANS['qz'+i],{context:'lesson'});
+    /* Chấm hết TRƯỚC, chưa chạm giao diện hay hàng ôn. Một câu lỗi mạng thì dừng cả lượt: câu trả lời giữ nguyên,
+       không ghi điểm, không ghi lỗi nửa chừng, không hiện lời giải nửa chừng. */
+    const grades=[];
+    try{ for(let i=0;i<PLAN.quiz.length;i++) grades[i]=await gradeAsync(PLAN.quiz[i],ANS['qz'+i],'lesson'); }
+    catch(e){ sb.disabled=false; sb.textContent='Nộp lại'; toast(GRADE_OFFLINE); return; }
+    for(let i=0;i<PLAN.quiz.length;i++){ const it=PLAN.quiz[i], g=await reveal('qz'+i,it,ANS['qz'+i],{context:'lesson',pre:grades[i]});
       if(!g){ sb.disabled=false; sb.textContent='Nộp lại'; toast(GRADE_OFFLINE); return; }
       if(g.ok) right++; else wrong.push(it); logMiss(it,g); }
     if(API.user) api('/lessons/'+encodeURIComponent(key)+'/complete',{method:'POST',body:{}}).catch(()=>{});   // server lưu điểm lần đầu

@@ -4,23 +4,23 @@
    that isn't information. Hairlines instead of boxes. Asymmetry by default.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter+Tight:ital,wght@0,300..700;1,300..600&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root{
-  --paper:#FBF6EE;          /* giấy vàng ngà, hong qua lửa */
-  --paper-2:#F3E7D8;
-  --mist:#F0DCC9;           /* khói ấm */
-  --ink:#2B1A11;            /* mực nâu cháy, không phải đen */
-  --ink-60:rgba(43,26,17,.64);
-  --ink-38:rgba(43,26,17,.42);
-  --ink-14:rgba(43,26,17,.17);
-  --ink-08:rgba(43,26,17,.09);
-  --accent:#C2410C;         /* chu sa — màu dẫn */
-  --accent-ink:#FFF7EF;
-  --seal:#8C1F1B;           /* triện son già, đậm hơn accent để không lẫn */
+  --paper:#130E0B;          /* Dark Espresso Canvas */
+  --paper-2:#1D1510;
+  --mist:#271C16;
+  --ink:#F9F4EB;            /* Crisp warm off-white */
+  --ink-60:rgba(249,244,235,.75);
+  --ink-38:rgba(249,244,235,.52);
+  --ink-14:rgba(249,244,235,.15);
+  --ink-08:rgba(249,244,235,.08);
+  --accent:#C85A32;         /* Terracotta */
+  --accent-ink:#FFFFFF;
+  --seal:#E5B24B;           /* Warm Gold */
 
-  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
-  --sans:'Inter Tight',-apple-system,Segoe UI,Helvetica,Arial,sans-serif;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Be Vietnam Pro',-apple-system,Segoe UI,Helvetica,Arial,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
 
   --gut:clamp(18px,3.2vw,54px);
@@ -352,3 +352,166 @@ a.plate:hover .plate__mark{transform:translate(-8px,-10px);opacity:.6}
 .subbox__f .field{font-family:var(--sans);font-size:15px}
 .subbox__msg{grid-column:1/-1;font-family:var(--mono);font-size:10px;letter-spacing:.16em;
   text-transform:uppercase;color:var(--accent);min-height:1em;margin:0}
+
+/* =====================================================================
+   UNIVERSAL STUDIO TOP NAVIGATION & FOOTER (in main.css)
+   ===================================================================== */
+.studio-top{
+  position:sticky;
+  top:0;
+  z-index:90;
+  background:rgba(19,14,11,.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(249,244,235,.1);
+}
+.studio-top .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  min-height:64px;
+  gap:16px;
+}
+.studio-logo{
+  font-family:var(--serif);
+  font-size:1.32rem;
+  letter-spacing:-.01em;
+  text-decoration:none;
+  white-space:nowrap;
+  color:#F9F4EB;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.studio-logo b{
+  color:var(--accent);
+  font-weight:600;
+}
+.studio-badge{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  padding:3px 8px;
+  border-radius:99px;
+  background:rgba(229,178,75,.15);
+  color:var(--seal);
+  border:1px solid rgba(229,178,75,.3);
+  display:inline-block;
+}
+.studio-badge--terra{
+  background:rgba(200,90,50,.18);
+  color:var(--accent);
+  border-color:rgba(200,90,50,.35);
+}
+.studio-nav{
+  display:flex;
+  align-items:center;
+  gap:clamp(8px,1.5vw,22px);
+}
+.studio-nav a{
+  font-size:14.5px;
+  font-weight:500;
+  color:rgba(249,244,235,.72);
+  text-decoration:none;
+  padding:6px 12px;
+  border-radius:99px;
+  transition:all .2s ease;
+  white-space:nowrap;
+}
+.studio-nav a:hover{
+  color:#F9F4EB;
+  background:rgba(249,244,235,.08);
+}
+.studio-nav a.active, .studio-nav a[aria-current="page"]{
+  color:#fff;
+  background:var(--accent);
+  font-weight:600;
+}
+.studio-top__right{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.studio-login-btn{
+  background:var(--accent);
+  border:1px solid var(--accent);
+  color:#fff!important;
+  border-radius:99px;
+  padding:8px 18px;
+  font-size:13.5px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  transition:all .2s ease;
+}
+.studio-login-btn:hover{
+  background:#A84320;
+  transform:translateY(-1px);
+}
+.studio-user-badge{
+  background:rgba(249,244,235,.08);
+  border:1px solid rgba(249,244,235,.18);
+  color:#F9F4EB;
+  padding:5px 14px 5px 6px;
+  border-radius:99px;
+  font-size:13.5px;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  transition:all .2s ease;
+}
+.studio-user-badge:hover{
+  border-color:var(--accent);
+  background:rgba(249,244,235,.14);
+}
+.studio-user-avatar{
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  background:var(--accent);
+  color:#fff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:700;
+}
+.studio-footer{
+  border-top:1px solid rgba(249,244,235,.1);
+  color:rgba(249,244,235,.5);
+  padding:32px 0;
+  margin-top:clamp(40px,7vw,80px);
+  font-size:14px;
+}
+.studio-footer a{
+  color:rgba(249,244,235,.75);
+  text-decoration:none;
+}
+.studio-footer a:hover{
+  color:#fff;
+}
+@media(max-width:860px){
+  .studio-nav{
+    overflow-x:auto;
+    max-width:calc(100vw - 220px);
+  }
+}
+@media(max-width:640px){
+  .studio-top .wrap{
+    flex-wrap:wrap;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  .studio-nav{
+    order:3;
+    width:100%;
+    max-width:100%;
+    overflow-x:auto;
+    padding-bottom:4px;
+  }
+}
+

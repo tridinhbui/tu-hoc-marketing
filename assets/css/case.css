@@ -201,14 +201,67 @@ table.t td.n,table.t th.n{text-align:right;font-family:var(--mono);font-size:13p
 
 /* ---------- bản đồ chặng ---------- */
 .stage{display:grid;grid-template-columns:64px 1fr;gap:clamp(12px,2vw,28px);padding:clamp(22px,3vw,36px) 0}
-.stage+.stage{border-top:1px solid var(--ink-06)}
-.stage__n{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);line-height:.9;color:var(--ink-30)}
+.stage+.stage{border-top:1px solid rgba(249,244,235,.1)}
+.stage__n{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);line-height:.9;color:rgba(249,244,235,.4)}
 .stage[data-open] .stage__n{color:var(--ink)}
 .stage[data-here] .stage__n{color:var(--terra)}
+.stage .h2{color:#F9F4EB;font-weight:500}
+.stage .muted{color:rgba(249,244,235,.75)}
 .here{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra)}
 .mods{display:grid;gap:18px;margin-top:14px}
 @media(min-width:900px){.mods{grid-template-columns:repeat(3,1fr)}}
-.mod{background:var(--paper);border-radius:var(--r);padding:14px 16px}
+
+/* Bề mặt giấy ngà (Paper cards) — Đảm bảo tương phản hoàn hảo, chữ KHÔNG BAO GIỜ bị chìm */
+.mod{
+  background:var(--paper);
+  color:var(--ink-dark)!important;
+  border-radius:var(--r);
+  padding:16px 18px;
+  border:1px solid rgba(36,22,14,.12);
+  box-shadow:0 12px 28px -12px rgba(0,0,0,.4);
+}
+.mod .mono, .mod .mono--ink, .mod .mono--red{
+  color:var(--ink-dark-70)!important;
+  font-weight:700!important;
+  letter-spacing:.08em;
+}
+.mod .mono--red{color:var(--terra)!important}
+.mod .item{
+  color:var(--ink-dark)!important;
+}
+.mod .item .small{
+  color:var(--ink-dark)!important;
+  font-size:13.5px;
+  font-weight:500;
+}
+.mod .item:hover .small{
+  color:var(--terra-d)!important;
+}
+.mod .item__n{
+  color:var(--ink-dark-50)!important;
+  font-weight:700;
+}
+.mod .item[data-done] .item__n{
+  color:var(--sage-d)!important;
+}
+.mod .list li+li{
+  border-top:1px solid rgba(36,22,14,.1)!important;
+}
+.mod a.small{
+  color:var(--terra-d)!important;
+  font-weight:600;
+  display:inline-block;
+  margin-top:8px;
+}
+.mod a.small:hover{
+  color:var(--terra)!important;
+}
+.mod .tag{
+  background:rgba(36,22,14,.08)!important;
+  color:var(--ink-dark)!important;
+  border:1px solid rgba(36,22,14,.14);
+}
+
 
 /* =====================================================================
    THÀNH PHẦN CỦA VÒNG HỌC — dùng chung mọi trang
@@ -361,199 +414,170 @@ html[data-theme="dark"] .rankcard{color:var(--ink)}
 .top .wrap{max-width:1320px}
 
 /* =====================================================================
-   SIDEBAR DỌC — khung app chung
+   UNIVERSAL STUDIO TOP NAVIGATION & FOOTER
    ===================================================================== */
-body.has-side{padding-left:252px}
-.side{position:fixed;inset:0 auto 0 0;width:252px;background:var(--bg-2);display:flex;flex-direction:column;z-index:30;transition:transform .25s}
-.side__logo{display:flex;align-items:center;gap:11px;padding:20px 20px 14px;text-decoration:none;line-height:1.1}
-.side__logo i{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--terra);color:#fff;font-family:var(--serif);font-style:normal;font-size:19px}
-.side__logo span{font-family:var(--serif);font-size:1.05rem}
-.side__logo b{color:var(--terra);font-weight:600}
-.side__nav{flex:1;overflow:auto;padding:4px 12px 12px;display:flex;flex-direction:column;gap:2px}
-.side__g{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-50);padding:16px 12px 6px}
-.side__nav a{display:flex;align-items:center;gap:11px;padding:9px 12px;border-radius:10px;text-decoration:none;color:var(--ink-70);font-size:14.5px;font-weight:500}
-.side__nav a:hover{background:var(--ink-06);color:var(--ink)}
-.side__nav a[aria-current="page"]{background:var(--terra);color:#fff;font-weight:600;box-shadow:0 8px 18px -12px var(--terra)}
-.side__nav a em{margin-left:auto;font-style:normal;font-size:11px;font-weight:700;background:var(--terra);color:#fff;border-radius:99px;padding:1px 7px}
-.side__nav a[aria-current="page"] em{background:#fff;color:var(--terra)}
-.ic{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-.side__foot{padding:12px 14px 16px;display:grid;gap:10px}
-.side__me{display:grid;gap:6px;background:var(--paper);border-radius:var(--r);padding:12px 14px;text-decoration:none}
-.side__rank{font-family:var(--serif);font-size:1.05rem;font-weight:500}
-.side__nums{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-70)}
-.side__nums .streak::before{content:'●';color:var(--terra);margin-right:5px;font-size:9px;vertical-align:2px}
-.side__me .meter i{background:var(--gold)}
-.side__me small{font-size:12px;color:var(--ink-50)}
-.side__acct{display:block;text-align:center;padding:9px 12px;border-radius:10px;text-decoration:none;font-size:14px;font-weight:600;background:var(--ink-06)}
-.side__veil{position:fixed;inset:0;background:rgba(30,18,12,.35);z-index:25}
-.mtop{display:none}
-body.has-side .top{display:none}
-body.has-side .foot{margin-left:0}
-@media(max-width:1023px){
-  body.has-side{padding-left:0}
-  .side{transform:translateX(-100%);box-shadow:none}
-  .side[data-open]{transform:none;box-shadow:0 0 60px rgba(0,0,0,.25)}
-  .mtop{display:flex;align-items:center;gap:12px;padding:10px 16px;background:color-mix(in srgb,var(--bg) 94%,transparent);position:sticky;top:0;z-index:20;border-bottom:1px solid var(--ink-06)}
-  .mtop button{border:0;background:var(--ink-06);border-radius:10px;padding:7px;display:grid;cursor:pointer}
-  .mtop .logo{font-size:1.1rem}
-  .mtop .xpchip{margin-left:auto}
-}
-@media print{.side,.mtop{display:none!important}body.has-side{padding-left:0}}
-@media(max-height:680px){.side__me .meter,.side__me small{display:none}.side__g{padding-top:10px}.side__nav a{padding:7px 12px}}
+body.has-side, body.has-side.side-collapsed{padding-left:0!important}
+.side, .mtop, .side__veil{display:none!important}
 
-/* menu 4 mục: mục con chỉ mở khi đang ở trong nhóm */
-.side__kids{display:grid;gap:1px;margin:2px 0 8px 22px;padding-left:14px;border-left:2px solid var(--ink-12)}
-.side__kids a{padding:6px 10px;font-size:14px;border-radius:8px}
-.side__nav .side__top{font-weight:600}
-
-/* 7 bài đầu */
-.first7{padding:clamp(18px,3vw,30px) 0}
-.first7__l{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
-.first7__l a{display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;padding:14px 16px;background:var(--paper);border-radius:12px;text-decoration:none;border:1.5px solid transparent}
-.first7__l a:hover{border-color:var(--terra)}
-.first7__n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--ink-06);font-weight:700;font-size:13px}
-.first7__l li:first-child .first7__n{background:var(--terra);color:#fff}
-.first7__l li[data-st=done] .first7__n{background:var(--sage-d);color:#fff}
-.first7__t{font-family:var(--serif);font-size:1.08rem;line-height:1.3}
-.first7__m{font-size:12.5px;color:var(--ink-50);white-space:nowrap}
-
-/* =====================================================================
-   EDITORIAL CREATIVE STRATEGY STUDIO — HỆ GIAO DIỆN MỚI
-   ===================================================================== */
-
-/* --- Sidebar tinh tế & Collapsible --- */
-.side{
-  background:var(--paper);
-  border-right:1px solid var(--ink-12);
-  width:260px;
-  box-shadow:none;
+.studio-top{
+  position:sticky;
+  top:0;
+  z-index:90;
+  background:rgba(19,14,11,.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(249,244,235,.1);
 }
-.side__logo{
-  padding:22px 20px 18px;
-  border-bottom:1px solid var(--ink-06);
+.studio-top .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  min-height:64px;
+  gap:16px;
 }
-.side__logo i{
-  background:var(--ink);
-  color:var(--bg);
-  border-radius:6px;
-  font-weight:600;
-  letter-spacing:-.02em;
-}
-.side__logo span{
+.studio-logo{
   font-family:var(--serif);
-  font-size:1.02rem;
+  font-size:1.32rem;
   letter-spacing:-.01em;
+  text-decoration:none;
+  white-space:nowrap;
+  color:#F9F4EB;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
 }
-.side__logo b{
+.studio-logo b{
   color:var(--terra);
   font-weight:600;
 }
-.side__nav{
-  padding:14px 10px;
+.studio-badge{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  padding:3px 8px;
+  border-radius:99px;
+  background:rgba(229,178,75,.15);
+  color:var(--gold);
+  border:1px solid rgba(229,178,75,.3);
+  display:inline-block;
 }
-.side__nav a{
-  font-size:14px;
-  color:var(--ink-70);
-  border-radius:8px;
-  padding:9px 12px;
-  border-left:3px solid transparent;
+.studio-badge--terra{
+  background:rgba(200,90,50,.18);
+  color:var(--terra);
+  border-color:rgba(200,90,50,.35);
+}
+.studio-nav{
+  display:flex;
+  align-items:center;
+  gap:clamp(8px,1.5vw,22px);
+}
+.studio-nav a{
+  font-size:14.5px;
+  font-weight:500;
+  color:rgba(249,244,235,.72);
+  text-decoration:none;
+  padding:6px 12px;
+  border-radius:99px;
+  transition:var(--transition-fast);
+  white-space:nowrap;
+}
+.studio-nav a:hover{
+  color:#F9F4EB;
+  background:rgba(249,244,235,.08);
+}
+.studio-nav a.active, .studio-nav a[aria-current="page"]{
+  color:#fff;
+  background:var(--terra);
+  font-weight:600;
+}
+.studio-top__right{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.studio-login-btn{
+  background:var(--terra);
+  border:1px solid var(--terra);
+  color:#fff!important;
+  border-radius:99px;
+  padding:8px 18px;
+  font-size:13.5px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
   transition:var(--transition-fast);
 }
-.side__nav a:hover{
-  background:var(--bg);
-  color:var(--ink);
+.studio-login-btn:hover{
+  background:var(--terra-d);
+  transform:translateY(-1px);
 }
-/* Active state tinh tế: không dùng mảng đỏ đục che toàn bộ */
-.side__nav a[aria-current="page"]{
-  background:var(--bg);
-  color:var(--ink);
-  font-weight:600;
-  border-left-color:var(--terra);
-  box-shadow:none;
-}
-.side__nav a em{
-  background:var(--blush-bg);
-  color:var(--terra-d);
-  font-size:11px;
-  font-weight:600;
+.studio-user-badge{
+  background:rgba(249,244,235,.08);
+  border:1px solid rgba(249,244,235,.18);
+  color:#F9F4EB;
+  padding:5px 14px 5px 6px;
   border-radius:99px;
-  padding:1px 7px;
+  font-size:13.5px;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  transition:var(--transition-fast);
 }
-.side__nav a[aria-current="page"] em{
+.studio-user-badge:hover{
+  border-color:var(--terra);
+  background:rgba(249,244,235,.14);
+}
+.studio-user-avatar{
+  width:26px;
+  height:26px;
+  border-radius:50%;
   background:var(--terra);
   color:#fff;
-}
-.side__kids{
-  margin:4px 0 10px 18px;
-  padding-left:12px;
-  border-left:1px solid var(--ink-12);
-  gap:2px;
-}
-.side__kids a{
-  font-size:13px;
-  padding:5px 8px;
-  border-left:0;
-  color:var(--ink-70);
-}
-.side__kids a:hover{
-  color:var(--terra);
-  background:transparent;
-}
-.side__kids a[aria-current="page"]{
-  background:transparent;
-  color:var(--terra-d);
-  font-weight:600;
-}
-
-/* Nút thu gọn sidebar */
-.side-toggle{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:6px;
-  background:transparent;
-  border:1px solid var(--ink-12);
-  border-radius:6px;
-  padding:6px 10px;
   font-size:12px;
-  color:var(--ink-50);
-  cursor:pointer;
-  margin-top:6px;
-  width:100%;
-  transition:var(--transition-fast);
+  font-weight:700;
 }
-.side-toggle:hover{
-  background:var(--bg);
-  color:var(--ink);
-  border-color:var(--ink-30);
+.studio-footer{
+  border-top:1px solid rgba(249,244,235,.1);
+  color:rgba(249,244,235,.5);
+  padding:32px 0;
+  margin-top:clamp(40px,7vw,80px);
+  font-size:14px;
+}
+.studio-footer a{
+  color:rgba(249,244,235,.75);
+  text-decoration:none;
+}
+.studio-footer a:hover{
+  color:#fff;
+}
+@media(max-width:860px){
+  .studio-nav{
+    overflow-x:auto;
+    max-width:calc(100vw - 220px);
+  }
+}
+@media(max-width:640px){
+  .studio-top .wrap{
+    flex-wrap:wrap;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  .studio-nav{
+    order:3;
+    width:100%;
+    max-width:100%;
+    overflow-x:auto;
+    padding-bottom:4px;
+  }
 }
 
-body.has-side.side-collapsed{
-  padding-left:72px;
-}
-body.has-side.side-collapsed .side{
-  width:72px;
-}
-body.has-side.side-collapsed .side__logo span,
-body.has-side.side-collapsed .side__nav a span,
-body.has-side.side-collapsed .side__nav a em,
-body.has-side.side-collapsed .side__kids,
-body.has-side.side-collapsed .side__me .side__rank,
-body.has-side.side-collapsed .side__me .side__nums,
-body.has-side.side-collapsed .side__me .meter,
-body.has-side.side-collapsed .side__me small,
-body.has-side.side-collapsed .side__acct,
-body.has-side.side-collapsed .side-toggle span{
-  display:none!important;
-}
-body.has-side.side-collapsed .side__nav a{
-  justify-content:center;
-  padding:10px 0;
-}
-body.has-side.side-collapsed .side__logo{
-  justify-content:center;
-  padding:16px 0;
-}
 
 /* --- Nhịp Editorial: Asymmetrical Grids & Studio Components --- */
 .studio-badge{

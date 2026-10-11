@@ -156,46 +156,67 @@ function inkScene(id='ink1',{boat=true,mountains=true}={}){
 
 /* ---------------- shell ---------------- */
 function shell(current){
-  const here = current || location.pathname.split('/').pop() || 'tap-chi.html';
-  const nav = NAV.map(([t,h])=>`<a href="${h}"${h===here?' aria-current="page"':''}>${t}</a>`).join('');
-  const s = State.get(), n = score(s), r = rank(n), nx = nextRank(n);
+  const here = current || location.pathname.split('/').pop() || 'gallery.html';
   const m = document.querySelector('main'); if(m && !m.id) m.id='main';
+  const s = State.get(), n = score(s);
+
+  const navLinks = [
+    { t: 'Học', h: 'hoc.html', also: ['lesson.html', 'bai.html'] },
+    { t: 'Case', h: 'case-thu-vien.html', also: ['gallery.html', 'campaign.html'] },
+    { t: 'Lộ trình', h: 'ban-do.html', also: ['roadmap.html'] },
+    { t: 'Thử thách', h: 'quiz.html', also: ['challenge.html'] },
+    { t: 'Cộng đồng', h: 'cong-dong.html' },
+  ];
+
+  let user = null;
+  try { user = JSON.parse(localStorage.getItem('thmc.user')||'null'); } catch(e){}
+  const herePath = (location.pathname.split('/').pop() || 'case-thu-vien.html') + location.search;
+
   document.body.insertAdjacentHTML('afterbegin',`
     <a class="skip" href="${location.pathname}#main">Tới nội dung chính</a>
-    <header class="masthead">
-      <a class="masthead__brand" href="tap-chi.html">
-        <span class="masthead__seal">${seal('觀',30)}</span>
-        <span class="masthead__logo">Nhìn thấy</span>
-        <span class="masthead__tag">Marketing Observation World</span>
-      </a>
-      <nav>${nav}</nav>
-      <div class="crest">
-        <span class="crest__rank"><span class="crest__drop">${inkDrop(15)}</span>
-          <span class="crest__name">${r[0]}</span></span>
-        <span class="crest__cell"><span class="label">Bước</span><b>${n}${nx?' / '+nx[1]:''}</b></span>
-        <span class="crest__cell"><span class="label">Chuỗi</span><b>${s.streak} ngày</b></span>
-        <a class="crest__me" href="journal.html" aria-label="Sổ tay của bạn"></a>
+    <header class="studio-top">
+      <div class="wrap">
+        <a class="studio-logo" href="index.html">
+          <b style="color:var(--accent,#C85A32)">Tự Học</b> Marketing Case
+          <span class="studio-badge studio-badge--terra">STUDIO</span>
+        </a>
+
+        <nav class="studio-nav" aria-label="Điều hướng chính">
+          ${navLinks.map(link => {
+            const isActive = link.h === here || (link.also || []).includes(here);
+            return `<a href="${link.h}" class="${isActive ? 'active' : ''}">${link.t}</a>`;
+          }).join('')}
+        </nav>
+
+        <div class="studio-top__right">
+          <span class="xpchip" id="topXpChip" style="background:#3A2A12;color:#E5B24B;padding:3px 9px;border-radius:99px;font-size:12.5px;font-weight:700">${n * 10} XP</span>
+          ${user && user.name ? `
+            <a class="studio-user-badge" href="tai-khoan.html">
+              <span class="studio-user-avatar">${esc(user.name.trim()[0] || 'M').toUpperCase()}</span>
+              <span>${esc(user.name)}</span>
+            </a>
+          ` : `
+            <a class="studio-login-btn" href="dang-nhap.html?next=${encodeURIComponent(herePath)}">Đăng nhập</a>
+          `}
+        </div>
       </div>
     </header>`);
+
   document.body.insertAdjacentHTML('beforeend',`
-    <footer class="colophon">
-      <div>
-        <div class="label">Colophon</div>
-        <p><em>Nhìn thấy</em> là một tạp chí tự học marketing: không bài giảng, không chứng chỉ.
-        Mỗi ngày một quan sát, mỗi tuần một thương hiệu bị bóc tách. Chữ xếp bằng Cormorant Garamond và Inter Tight;
-        núi, sông và thuyền đều vẽ bằng mực SVG, không dùng ảnh chụp.
-        Toàn bộ tiến trình của bạn nằm trong trình duyệt này, không gửi đi đâu cả.</p>
-      </div>
-      <div>
-        <div class="label">Khu vực</div>
-        ${NAV.slice(0,4).map(([t,h])=>`<a href="${h}">${t}</a>`).join('')}
-      </div>
-      <div>
-        <div class="label">Mục</div>
-        ${NAV.slice(4).concat(NAV_MORE).map(([t,h])=>`<a href="${h}">${t}</a>`).join('')}
+    <footer class="studio-footer">
+      <div class="wrap row between">
+        <span>Tự Học Marketing Case · An Editorial Creative Strategy Studio. Miễn phí cho người học.</span>
+        <span>
+          <a href="hoc.html">Học</a> · 
+          <a href="case-thu-vien.html">Case Study</a> · 
+          <a href="ban-do.html">Lộ trình</a> · 
+          <a href="quiz.html">Thử thách</a> · 
+          <a href="dang-nhap.html">Đăng nhập</a>
+        </span>
       </div>
     </footer>
     <div id="toast"></div>`);
+
   reveal(); State.touch();
 }
 
