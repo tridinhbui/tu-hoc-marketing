@@ -9,6 +9,15 @@
   const app = () => { try { return JSON.parse(localStorage.getItem('thmc.v1') || '{}'); } catch (e) { return {}; } };
   const flag = (k) => !!((app().flags || {})[k]);
   const stars = (id) => (((app().gw || {}).stars || {})[id]) || 0;
+  const ADV = {
+    brand: ['tang-gia-goi-thang'], consumer: ['phat-mau-thu-sampling', 'mo-diem-ban'], creative: ['ban-ship-mien-phi'],
+    growth: ['cocomi-ngan-sach', 'so-ban-hang-churn', 'the-hoan-tien', 'chia-ngan-sach-hai-kenh', 'khoa-hoc-online-cac'],
+    media: ['ngan-sach-share-of-voice'], strategy: ['la-tra-giam-gia', 'quan-an-voucher-san'],
+  };
+  const TIERS = [[100, 'Chuyên gia', '#C9981A', 20], [60, 'Cư dân', '#8E99A6', 10], [25, 'Khách', '#B87333', 5]];
+  const tierOf = (pct) => TIERS.find((t) => pct >= t[0]) || null;
+  const caseTries = (id) => ((app().cases || {})[id] || []);
+  const casePassed = (id) => caseTries(id).some((a) => a && a.passed);
   const LABEL = { new: 'Chưa ghé', go: 'Đang khám phá', done: 'Hoàn thành' };
 
   /* công cụ của từng khu: inline = dựng ngay trong phòng; game/lab = trang có sẵn; soon = đã lên kế hoạch (không có nút) */
@@ -49,7 +58,7 @@
     const tools = TOOLS[x.key] || [];
     const toolDone = tools.some((t) => (t.id === 'dna' ? dna().done : t.id === 'brief' ? !!(Lab.get('brief') || {}).done : t.id === 'insight' ? !!(Lab.get('insight') || {}).done : /^g\d$/.test(t.id) ? stars(t.id) > 0 : t.id === 'case' ? Object.keys(app().cases || {}).length > 0 : t.id === 'meta' ? !!Lab.get('meta:any') : false));
     const pct = Math.round(100 * ((reads.length ? rDone / reads.length : 1) * .25 + (camps.length ? cDone / camps.length : 1) * .25 + (chal ? 1 : 0) * .2 + (gate ? 1 : 0) * .1 + (toolDone ? 1 : 0) * .2));
-    return { reads, camps, rDone, cDone, chal, gate, toolDone, pct, state: pct >= 100 ? 'done' : pct > 0 ? 'go' : 'new', unlocked: gate || chal };
+    return { reads, camps, rDone, cDone, chal, gate, toolDone, pct, tier: tierOf(pct), advOpen: pct >= 60, state: pct >= 100 ? 'done' : pct > 0 ? 'go' : 'new', unlocked: gate || chal };
   }
 
   /* ------- bản đồ ------- */
@@ -69,7 +78,47 @@
           <span><b>${d.vi}</b><small>${i + 1} · ${LABEL[s.state]} · ${s.pct}%</small></span></button>`; }).join('')}`;
     host.querySelectorAll('.wm__node').forEach((b) => { b.onclick = () => openRoom(b.dataset.k, true); });
     const done = DISTRICTS.filter((d) => st[d.key].state === 'done').length;
+    awardBadges(st); paintCross(st);
     const el = document.getElementById('wmSum'); if (el) el.textContent = `${done}/6 khu hoàn thành · ${Math.round(DISTRICTS.reduce((n, d) => n + st[d.key].pct, 0) / 6)}% hành trình`;
+  }
+
+
+  /* ------- huy hiệu khu: ba bậc theo % hoàn thành (25 / 60 / 100), ghi lại để không mất khi tiến độ tính lại ------- */
+  function awardBadges(st) {
+    const got = Lab.get('world:badges') || { b: {} }, b = { ...(got.b || {}) }; let changed = false;
+    DISTRICTS.forEach((d) => {
+      const t = st[d.key].tier; if (!t) return;
+      const prev = b[d.key] ? b[d.key].r : 0;
+      const rank = TIERS.length - TIERS.indexOf(t);
+      if (rank > prev) {
+        b[d.key] = { r: rank, n: t[1], t: Date.now() }; changed = true;
+        const xp = Lab.xp('badge:' + d.key + ':' + rank, t[3]);
+        if (typeof toast === 'function' && prev) toast(`Huy hiệu mới: ${d.vi} · ${t[1]}${xp ? ` · +${xp} XP` : ''}`);
+      }
+    });
+    if (changed) Lab.set('world:badges', { b });
+    paintBadges(b, st);
+  }
+  function paintBadges(b, st) {
+    const host = document.getElementById('wbadges'); if (!host) return;
+    const rows = DISTRICTS.map((d) => {
+      const e = b[d.key], t = e ? TIERS[TIERS.length - e.r] : null;
+      return `<li class="wb ${t ? '' : 'wb--off'}" title="${esc(d.vi)}: ${t ? t[1] : 'chưa có huy hiệu'}">
+        <span class="wb__c" style="--c:${d.color};--r:${t ? t[2] : 'rgba(120,84,50,.25)'}">${d.mark}</span>
+        <span class="wb__t"><b>${esc(d.vi)}</b><small>${t ? t[1] : `còn ${Math.max(0, 25 - st[d.key].pct)}% để có huy hiệu`}</small></span></li>`; }).join('');
+    const all = DISTRICTS.every((d) => b[d.key]), full = DISTRICTS.every((d) => b[d.key] && b[d.key].r === 3);
+    host.innerHTML = `<h3 class="rm__sub" style="margin-top:0">Huy hiệu · ${Object.keys(b).length}/6 khu${full ? ' · Chủ thế giới' : all ? ' · Nhà thám hiểm' : ''}</h3><ul class="wb__list">${rows}</ul>`;
+  }
+  /* thử thách liên khu: mở khi có ít nhất hai khu đạt 60% */
+  function paintCross(st) {
+    const host = document.getElementById('wcross'); if (!host) return;
+    const open = DISTRICTS.filter((d) => st[d.key].pct >= 60).length >= 2;
+    if (!open) { host.innerHTML = `<div class="rm__card" data-lock="1"><span class="st">Đang khoá</span><b>Thử thách liên khu</b><span>Mở khi có hai khu đạt 60%. Hiện có ${DISTRICTS.filter((d) => st[d.key].pct >= 60).length}/2.</span></div>`; return; }
+    if (host.dataset.mounted) return; host.dataset.mounted = '1';
+    const mix = () => Lab.shuffle(DISTRICTS.flatMap((d) => CHALLENGES.filter((c) => c.d === d.key).slice(0, 1)).concat(Lab.pick(CHALLENGES, 3)))
+      .slice(0, 5).map((c) => { const ok = c.opts.findIndex((o) => o.ok); return { q: c.q, ctx: c.brief, opts: c.opts.map((o) => o.t), a: ok, why: c.opts[ok].why }; });
+    host.innerHTML = '<div id="wc-q"></div>';
+    Lab.quiz(document.getElementById('wc-q'), { id: 'world:cross', tag: 'Thử thách liên khu · 5 tình huống từ nhiều khu', items: mix(), fresh: mix, xp: 10 });
   }
 
   /* ------- phòng khu ------- */
@@ -89,14 +138,14 @@
   function tabs(s, x) {
     const t = TOOLS[x.key] || [];
     return [['intro', 'Giới thiệu', ''], ['mat', 'Học liệu', `${s.rDone}/${s.reads.length}`], ['case', 'Case thật', `${s.cDone}/${s.camps.length}`],
-      ['chal', 'Thử thách', s.chal ? '✓' : ''], ['tool', 'Công cụ', String(t.filter((z) => z.kind !== 'soon').length)]];
+      ['chal', 'Thử thách', s.chal ? '✓' : ''], ['tool', 'Công cụ', String(t.filter((z) => z.kind !== 'soon').length)], ['adv', 'Nâng cao', s.advOpen ? String((ADV[x.key] || []).length) : '🔒']];
   }
   function renderRoom() {
     const x = byKey(cur), s = stat(x), el = room();
     el.hidden = false; el.style.setProperty('--c', x.color);
     const T = tabs(s, x);
     el.innerHTML = `<header class="rm__head"><div><span class="mono" style="opacity:.85">Khu ${ORDER.indexOf(x.key) + 1}/6 · ${esc(x.name)}</span><h2>${esc(x.vi)}</h2><p>${esc(x.line)}</p></div>
-        <div class="rm__pct"><b>${s.pct}%</b>hoàn thành</div><button type="button" class="rm__close" id="rmX">← Về bản đồ</button></header>
+        <div class="rm__pct"><b>${s.pct}%</b>hoàn thành${s.tier ? `<br><span style="display:inline-block;margin-top:6px;padding:3px 10px;border-radius:99px;background:${s.tier[2]};color:#fff">${s.tier[1]}</span>` : ''}</div><button type="button" class="rm__close" id="rmX">← Về bản đồ</button></header>
       <div class="rm__tabs" role="tablist" aria-label="Nội dung khu">${T.map(([id, t, n]) => `<button type="button" role="tab" id="tb-${id}" aria-selected="${id === tab}" aria-controls="pn-${id}" data-t="${id}">${t}${n ? `<em>${n}</em>` : ''}</button>`).join('')}</div>
       <div class="rm__panel" role="tabpanel" id="pn-${tab}" aria-labelledby="tb-${tab}"></div>`;
     el.querySelector('#rmX').onclick = closeRoom;
@@ -106,8 +155,24 @@
       b.onkeydown = (e) => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); const n = tabsEl[(i + (e.key === 'ArrowRight' ? 1 : tabsEl.length - 1)) % tabsEl.length]; n.click(); } };
     });
     const p = el.querySelector('.rm__panel');
-    ({ intro: introP, mat: matP, case: caseP, chal: chalP, tool: toolP })[tab](p, x, s);
+    ({ intro: introP, mat: matP, case: caseP, chal: chalP, tool: toolP, adv: advP })[tab](p, x, s);
     paintMap();
+  }
+
+
+  function advP(p, x, s) {
+    const ids = ADV[x.key] || [];
+    if (!s.advOpen) {
+      p.innerHTML = `<div class="rm__card" data-lock="1" style="max-width:520px"><span class="st">Đang khoá</span><b>Case nâng cao của ${esc(x.vi)}</b>
+        <span>Mở khi khu đạt 60% (hiện ${s.pct}%). Còn ${Math.max(0, 60 - s.pct)}% — đọc nguyên lý, mổ case và làm thử thách để lên.</span>
+        <span>Bên trong: ${ids.length} case có bấm giờ với số liệu mở theo câu bạn hỏi.</span></div>`;
+      return;
+    }
+    const list = ids.map((id) => (typeof CASES !== 'undefined' ? CASES.find((c) => c.id === id) : null)).filter(Boolean);
+    p.innerHTML = list.length ? `<div class="rm__grid">${list.map((c) => { const ok = casePassed(c.id), n = caseTries(c.id).length;
+      return `<a class="rm__card" href="giai-case.html?id=${esc(c.id)}" data-done="${ok ? 1 : 0}"><span class="st">${ok ? '✓ Đã đạt' : n ? n + ' lần · chưa đạt' : 'Chưa làm'} · ${esc(c.level)} · ${c.minutes} phút</span>
+        <b>${esc(c.t)}</b><span>${esc(c.brand)}</span></a>`; }).join('')}</div>`
+      : '<p>Chưa có case nâng cao cho khu này.</p>';
   }
 
   function introP(p, x, s) {

@@ -28,9 +28,11 @@ Sáu công cụ yêu cầu → hiện trạng: **Media Budget Simulator** = `gam
 | 1 | Bản đồ 6 khu + phòng khu (5 tab) cho cả sáu khu; **Brand DNA Canvas** hoàn chỉnh (7 phép kiểm, tự lưu, XP, sổ tay, sao chép); thử thách Khu Truyền thông (thêm 3) | ✅ làm xong |
 | 2 | **Creative Brief Builder** (8 ô, 8 phép kiểm) và **Consumer Insight Lab** (3 trích dẫn → loại tín hiệu → insight “muốn/nhưng/nên” → trích dẫn mạnh nhất → phép thử), dùng chung bộ dựng biểu mẫu `mountForm` | ✅ làm xong |
 | 3 | Tạp chí: thư viện 68 bài (case, nguyên lý, bài hôm nay) có đánh dấu, ghi chú theo bài, tiến độ đọc theo cuộn (`reader.js` trên campaign/principle/lesson/brand), thử thách hằng ngày xoay theo khu có chuỗi ngày, “số đặc biệt” mở khoá khi đã đọc ≥ 3 bài của khu | ✅ làm xong |
-| 4 | Mở khoá nội dung theo mốc khu (case nâng cao), huy hiệu khu, đồng bộ máy chủ riêng cho bookmark | chưa |
+| 4 | Huy hiệu khu ba bậc (Khách ≥25% · Cư dân ≥60% · Chuyên gia 100%, kèm XP 5/10/20); tab **Nâng cao** mở ở 60% với case có bấm giờ theo khu; **Thử thách liên khu** mở khi có hai khu ≥60%. Bookmark/ghi chú đã đồng bộ cùng `State.work.lab` nên không cần bảng riêng | ✅ làm xong |
 
 ### Lưu trữ thêm ở GĐ2–3
 - `Lab 'brief'`, `Lab 'insight'` = `{data, done, t}` (cùng dạng `dna`).
 - `Lab 'rd:<loại>:<id>'` = `{p, bm, title, href, noted, t}`; ghi chú theo bài vào `State.notes` với `kind:'Ghi chú bài'`.
 - `Lab 'daily:<yyyy-mm-dd>'` = kết quả thử thách hằng ngày (chuỗi ngày tính từ các khoá liên tiếp).
+
+- `Lab 'world:badges'` = `{b:{<khu>:{r:1..3,n,t}}}`; `Lab 'world:cross'` = kết quả thử thách liên khu.
