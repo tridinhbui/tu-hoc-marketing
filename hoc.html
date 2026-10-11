@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C85A32%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E8%27%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=13">
+<link rel="stylesheet" href="assets/css/case.css?v=21">
 <title>Hành trình hôm nay — Tự Học Marketing Case</title>
 <meta name="description" content="Khám phá các thế giới marketing, giải quyết case study thực tế và nâng cao tư duy chiến lược mỗi ngày.">
 <style>
@@ -71,7 +71,7 @@
   .lvmap__bar{height:8px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden;margin-top:10px}.lvmap__bar i{display:block;height:100%;background:#E5B24B;border-radius:99px}
   .lvmap__go{display:inline-flex;border-radius:12px;background:var(--terra);color:#fff;font:800 12.5px var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:11px 16px;text-decoration:none}
 </style>
-<link rel="stylesheet" href="assets/css/paper.css?v=5">
+<link rel="stylesheet" href="assets/css/paper.css?v=9">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn.</p></div></noscript>
@@ -88,6 +88,7 @@
 <script src="assets/js/data/exam-items.js?v=8"></script>
 <script src="assets/js/app.js?v=21"></script>
 <script src="assets/js/social-ui.js?v=2"></script>
+<script src="assets/js/lvart.js?v=2"></script>
 <script>
 appShell('hoc.html');
 const app = document.getElementById('app');
@@ -103,16 +104,36 @@ function renderLevelMap(nextKey) {
   const f = (x) => x.toLocaleString('vi-VN'), check = '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
   el.innerHTML = `<div class="lvmap__h"><div><h2>Bản đồ cấp độ học viên</h2><p>${f(s.xp)} XP · 6 bậc, mỗi bậc 5 cấp.</p></div>
       <a class="lvmap__chip" href="cap-do.html" title="Xem chi tiết 30 cấp và cách kiếm XP">Cấp ${n}/30 →</a></div>
-    <div class="lvmap__track" id="lvTrack">${LEVELS.map((name, k) => { const i = k + 1, t = st(i);
+    <div class="lvmap__wrap"><button type="button" class="lvmap__nav lvmap__nav--l" id="lvPrev" aria-label="Xem các cấp trước">‹</button>
+    <div class="lvmap__track" id="lvTrack" tabindex="0" role="region" aria-label="30 cấp học viên, kéo ngang để xem">${LEVELS.map((name, k) => { const i = k + 1, t = st(i);
       return `<div class="lvmap__lv" data-s="${t}">${t === 'here' ? '<span class="lvmap__you">BẠN</span>' : ''}
-        <div class="lvmap__badge" style="--bg:${TIER_COLORS[Math.floor(k / 5)]}">${i}${t === 'done' ? check : ''}</div>
+        <div class="lvmap__art">${LvArt(i)}<em>${i}${t === 'done' ? check : ''}</em></div>
         <div class="lvmap__card"><small>CẤP ${i}</small><b>${escH(name)}</b><span>${f(lvXP(i))} XP</span>
           <span>${t === 'done' ? 'Đã đạt' : t === 'here' ? (nxt ? 'còn ' + f(need) + ' XP' : 'Cấp cao nhất') : 'cần ' + f(lvXP(i) - s.xp) + ' XP'}</span></div></div>`; }).join('')}</div>
+    <button type="button" class="lvmap__nav lvmap__nav--r" id="lvNext" aria-label="Xem các cấp sau">›</button></div>
     <div class="lvmap__f"><div style="flex:1;min-width:200px">${nxt ? `Còn <b style="color:#fff">${f(need)} XP</b> nữa lên cấp ${n + 1} — khoảng ${left} bài học.` : 'Bạn đang ở cấp cao nhất.'}
       <div class="lvmap__bar"><i style="width:${per}%"></i></div></div>
       <a class="lvmap__go" href="bai.html?id=${encodeURIComponent(nextKey)}">Học bài ngay →</a></div>`;
   const cur = el.querySelector('[data-s="here"]'), tr = document.getElementById('lvTrack');
   if (cur && tr) tr.scrollLeft = Math.max(0, cur.offsetLeft - tr.clientWidth / 2 + cur.clientWidth / 2);
+  slider(tr, document.getElementById('lvPrev'), document.getElementById('lvNext'));
+}
+
+/* Kéo ngang bằng chuột/ngón tay, nút trước–sau, phím ←/→. Dùng cho dải cấp độ và dải tab. */
+function slider(tr, prev, next) {
+  if (!tr || tr.dataset.sl) return; tr.dataset.sl = '1';
+  const step = () => Math.max(160, tr.clientWidth * .8);
+  const sync = () => { if (prev) prev.hidden = tr.scrollLeft < 8; if (next) next.hidden = tr.scrollLeft + tr.clientWidth >= tr.scrollWidth - 8; };
+  if (prev) prev.onclick = () => tr.scrollBy({ left: -step(), behavior: 'smooth' });
+  if (next) next.onclick = () => tr.scrollBy({ left: step(), behavior: 'smooth' });
+  tr.addEventListener('scroll', sync, { passive: true }); window.addEventListener('resize', sync); sync();
+  tr.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') { tr.scrollBy({ left: 160, behavior: 'smooth' }); e.preventDefault(); }
+    if (e.key === 'ArrowLeft') { tr.scrollBy({ left: -160, behavior: 'smooth' }); e.preventDefault(); } });
+  let down = false, x0 = 0, s0 = 0, moved = false;
+  tr.addEventListener('pointerdown', (e) => { if (e.pointerType === 'touch') return; down = true; moved = false; x0 = e.clientX; s0 = tr.scrollLeft; });
+  window.addEventListener('pointermove', (e) => { if (!down) return; const dx = e.clientX - x0; if (Math.abs(dx) > 4) { moved = true; tr.classList.add('is-drag'); } tr.scrollLeft = s0 - dx; });
+  window.addEventListener('pointerup', () => { down = false; tr.classList.remove('is-drag'); });
+  tr.addEventListener('click', (e) => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
 }
 
 function renderDashboard(user) {
@@ -171,6 +192,7 @@ function renderDashboard(user) {
   </div>`;
 
   renderLevelMap(nk);
+  slider(document.querySelector('.d-tabs'));
   const body = document.getElementById('tabBody');
   const tiles = (arr) => `<div class="d-tilegrid">${arr.map(([t, d, h]) => `<a class="d-tile" href="${h}"><b>${t}</b><span>${d}</span></a>`).join('')}</div>`;
   const TAB = {
