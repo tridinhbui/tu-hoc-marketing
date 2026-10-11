@@ -106,7 +106,7 @@
     var r = el.getBoundingClientRect(), vh = innerHeight;
     return Math.max(0, Math.min(1, (vh - r.top) / (vh + r.height)));
   }
-  function frame() {
+  var frame = function () {
     ticking = false;
     var y = scrollY, vh = innerHeight;
     var max = document.documentElement.scrollHeight - vh;
@@ -118,7 +118,8 @@
       if (heroText) { heroText.style.translate = '0 ' + (-y * .22).toFixed(1) + 'px'; heroText.style.opacity = String(Math.max(0, 1 - hp * 1.35)); }
       par.forEach(function (p) {
         if (p.el.hasAttribute('data-fx')) return;       /* đang chạy hiệu ứng vào thì chưa parallax */
-        p.el.style.translate = (mx * p.depth).toFixed(1) + 'px ' + (y * p.speed + my * p.depth).toFixed(1) + 'px';
+        var kk = innerWidth < 700 ? .45 : 1;
+        p.el.style.translate = (mx * p.depth * kk).toFixed(1) + 'px ' + (y * p.speed * kk + my * p.depth * kk).toFixed(1) + 'px';
       });
     }
     if (paper) { var pp = progress(paper.parentElement); paper.style.translate = '0 ' + ((pp - .5) * -40).toFixed(1) + 'px'; }
@@ -130,8 +131,8 @@
       if (doodle && !doodle.hasAttribute('data-fx')) doodle.style.translate = '0 ' + ((cp - .5) * 50).toFixed(1) + 'px';
     }
     if (Math.abs(tmx - mx) > .01 || Math.abs(tmy - my) > .01) request();
-  }
-  function request() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+  };
+  function request() { if (!ticking) { ticking = true; requestAnimationFrame(function () { frame(); }); } }
   addEventListener('scroll', request, { passive: true });
   addEventListener('resize', request);
   request();
@@ -158,4 +159,140 @@
       b.addEventListener('pointerleave', function () { b.style.translate = ''; });
     });
   }
+
+  /* =================== Lớp 2: sống động + tương tác =================== */
+  var fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* Từng chữ của tiêu đề là một phần tử riêng: rê/chạm là nhảy lên */
+  function wrapWords(node) {
+    Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+      if (n.nodeType === 3) {
+        var frag = document.createDocumentFragment();
+        n.nodeValue.split(/(\s+)/).forEach(function (w) {
+          if (!w) return;
+          if (/^\s+$/.test(w)) { frag.appendChild(document.createTextNode(' ')); return; }
+          var sp = document.createElement('span'); sp.className = 'fxw'; sp.textContent = w; frag.appendChild(sp);
+        });
+        node.replaceChild(frag, n);
+      } else if (n.nodeType === 1 && !/fxw/.test(n.className)) { wrapWords(n); }
+    });
+  }
+  $$('.lp-h1 .fxl > span, .lp-h2 .fxl > span').forEach(wrapWords);
+  document.addEventListener('pointerdown', function (e) {
+    var w = e.target.closest && e.target.closest('.fxw');
+    if (w && e.pointerType !== 'mouse') { w.classList.add('fx-tap'); setTimeout(function () { w.classList.remove('fx-tap'); }, 420); }
+  });
+
+  /* Trôi nhẹ không ngừng ở các mảnh trang trí */
+  ['.lp-sticky', '.lp-note-top', '.lp-city', '.lp-strips', '.lp-scrap-or', '.lp-art__note', '.lp-doodle', '.lp-sign', '.lp-note-story', '.lp-cream']
+    .forEach(function (sel, i) {
+      var el = $(sel); if (!el) return;
+      el.classList.add('fx-float');
+      el.style.setProperty('--fl', (6 + (i % 4) * 1.3).toFixed(1) + 's');
+      el.style.setProperty('--fd', (-i * .9).toFixed(1) + 's');
+    });
+  $$('.lp-kw span').forEach(function (sp, i) { sp.style.setProperty('--i', i); });
+
+  /* Dải chữ chạy ngược chiều nhau theo cuộn, đặt ngay sau hero */
+  var ribbons = null, ribA = null, ribB = null;
+  var after = $('.lp-paper');
+  if (after && after.parentNode) {
+    var words = ['Observe', 'Analyze', 'Think', 'Create', 'Apply'];
+    var line = function (rev) {
+      var arr = rev ? words.slice().reverse() : words, out = '';
+      for (var r = 0; r < 4; r++) arr.forEach(function (w) { out += w + '<i>✦</i>'; });
+      return out;
+    };
+    ribbons = document.createElement('div'); ribbons.className = 'fx-ribbons'; ribbons.setAttribute('aria-hidden', 'true');
+    ribbons.innerHTML = '<span class="fx-rib fx-rib--a">' + line(false) + '</span><span class="fx-rib fx-rib--b">' + line(true) + '</span>';
+    after.parentNode.insertBefore(ribbons, after);
+    ribA = ribbons.children[0]; ribB = ribbons.children[1];
+  }
+
+  /* Poster: nghiêng 3D theo con trỏ + vệt sáng */
+  if (fine) {
+    $$('.lp-poster').forEach(function (p) {
+      var g = document.createElement('i'); g.className = 'fx-glare'; p.appendChild(g);
+      p.addEventListener('pointermove', function (e) {
+        if (p.hasAttribute('data-fx')) return;
+        var r = p.getBoundingClientRect();
+        var nx = (e.clientX - r.left) / r.width - .5, ny = (e.clientY - r.top) / r.height - .5;
+        var a = Math.min(14, Math.hypot(nx, ny) * 26);
+        p.style.rotate = (-ny).toFixed(3) + ' ' + nx.toFixed(3) + ' 0 ' + a.toFixed(1) + 'deg';
+        p.style.setProperty('--gx', ((nx + .5) * 100).toFixed(0) + '%'); p.style.setProperty('--gy', ((ny + .5) * 100).toFixed(0) + '%');
+      });
+      p.addEventListener('pointerleave', function () { p.style.rotate = ''; });
+    });
+  }
+
+  /* Vòng con trỏ */
+  var ring = null, rx = -100, ry = -100, tx = -100, ty = -100;
+  if (fine) {
+    ring = document.createElement('div'); ring.className = 'fx-ring'; document.body.appendChild(ring);
+    addEventListener('pointermove', function (e) {
+      tx = e.clientX; ty = e.clientY; ring.classList.add('on');
+      ring.classList.toggle('big', !!(e.target.closest && e.target.closest('a,button,.fxw,.lp-poster')));
+      request();
+    }, { passive: true });
+    document.addEventListener('pointerleave', function () { ring.classList.remove('on'); });
+  }
+
+  /* Gợn sóng khi bấm nút */
+  document.addEventListener('pointerdown', function (e) {
+    var b = e.target.closest && e.target.closest('.lp-btn'); if (!b) return;
+    var r = b.getBoundingClientRect(), d = Math.max(r.width, r.height) * 2;
+    var s = document.createElement('span'); s.className = 'fx-rip';
+    s.style.cssText = 'width:' + d + 'px;height:' + d + 'px;left:' + (e.clientX - r.left - d / 2) + 'px;top:' + (e.clientY - r.top - d / 2) + 'px';
+    b.appendChild(s); setTimeout(function () { s.remove(); }, 750);
+  });
+
+  /* Chữ nhãn "xáo" rồi hiện đúng khi xuất hiện */
+  var SC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var pillIO = new IntersectionObserver(function (ents) {
+    ents.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      pillIO.unobserve(en.target);
+      var el = en.target, fin = el.textContent, t0 = performance.now(), dur = 800;
+      (function tick(now) {
+        var k = Math.min(1, (now - t0) / dur), n = Math.floor(k * fin.length), out = '';
+        for (var i = 0; i < fin.length; i++) out += (i < n || fin[i] === ' ') ? fin[i] : SC[Math.floor(Math.random() * SC.length)];
+        el.textContent = out;
+        if (k < 1) requestAnimationFrame(tick); else el.textContent = fin;
+      })(t0);
+    });
+  }, { threshold: .6 });
+  $$('.lp-pill').forEach(function (p) { pillIO.observe(p); });
+
+  /* Nút lên đầu trang + vòng tiến độ */
+  var top = document.createElement('button');
+  top.className = 'fx-top'; top.type = 'button'; top.setAttribute('aria-label', 'Lên đầu trang');
+  top.innerHTML = '<svg viewBox="0 0 48 48"><circle class="a" cx="24" cy="24" r="21"/><circle class="b" cx="24" cy="24" r="21" stroke-dasharray="132" stroke-dashoffset="132"/></svg>' +
+    '<svg viewBox="0 0 24 24" style="position:static;width:18px;height:18px;rotate:0deg" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+  document.body.appendChild(top);
+  top.onclick = function () { scrollTo({ top: 0, behavior: 'smooth' }); };
+  var topArc = top.querySelector('.b');
+
+  /* Móc vào vòng lặp cuộn có sẵn */
+  var steps = $$('.lp-steps li');
+  var baseFrame = frame;
+  frame = function () {
+    baseFrame();
+    var y = scrollY, vh = innerHeight, max = document.documentElement.scrollHeight - vh, k = innerWidth < 700 ? .45 : 1;
+    top.classList.toggle('on', y > 700);
+    topArc.style.strokeDashoffset = String(132 * (1 - (max > 0 ? y / max : 0)));
+    if (ribA && ribbons) {
+      var r = ribbons.getBoundingClientRect();
+      if (r.bottom > -50 && r.top < vh + 50) {
+        var p = (vh - r.top) / (vh + r.height);
+        ribA.style.translate = ((p - .5) * -38).toFixed(1) + '% 0';
+        ribB.style.translate = ((p - .5) * 38).toFixed(1) + '% 0';
+      }
+    }
+    if (steps.length) {
+      var mid = vh * .55, best = -1, bd = 1e9;
+      steps.forEach(function (li, i) { var r = li.getBoundingClientRect(), d = Math.abs(r.top + r.height / 2 - mid); if (d < bd) { bd = d; best = i; } });
+      steps.forEach(function (li, i) { li.classList.toggle('fx-on', i === best && bd < vh * .45); });
+    }
+    if (ring) { rx += (tx - rx) * .22; ry += (ty - ry) * .22; ring.style.translate = rx.toFixed(1) + 'px ' + ry.toFixed(1) + 'px'; if (Math.abs(tx - rx) > .3 || Math.abs(ty - ry) > .3) request(); }
+  };
 })();
