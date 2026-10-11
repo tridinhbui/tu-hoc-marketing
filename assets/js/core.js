@@ -168,6 +168,17 @@ function shell(current){
     { t: 'Cộng đồng', h: 'cong-dong.html' },
   ];
 
+  /* Trang chạy TRONG khung app.html: thanh điều hướng dọc đã có ở khung, không vẽ thêm header/footer (trước đây bị nhân đôi).
+     Mở thẳng ngoài khung (link cũ) thì đưa vào khung; chỉ trang con (case/, thuong-hieu/) giữ header riêng để tự đứng được. */
+  if (window.top !== window.self) {
+    document.body.insertAdjacentHTML('beforeend','<div id="toast" class="toast" role="status" aria-live="polite"></div>');
+    reveal(); State.touch(); return;
+  }
+  const segs = location.pathname.split('/').filter(Boolean);
+  if (segs.length <= 1 && /\.html$/.test(segs[0] || '') && !/^(index|dang-nhap|app)\.html$/.test(segs[0])) {
+    location.replace('app.html?p=' + encodeURIComponent(segs[0] + location.search)); return;
+  }
+
   let user = null;
   try { user = JSON.parse(localStorage.getItem('thmc.user')||'null'); } catch(e){}
   const herePath = (location.pathname.split('/').pop() || 'case-thu-vien.html') + location.search;

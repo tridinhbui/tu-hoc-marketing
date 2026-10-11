@@ -34,8 +34,10 @@ function pageFrom(srcFile, { title, desc, og, canonical, injectId }) {
      <base href="/"> giải quyết cả hai loại cùng lúc. */
   s = s.replace('<head>', '<head>\n<base href="/">');
   /* id lấy từ chính trang, không lấy từ query string */
-  s = s.replace('<script src="assets/js/core.js?v=7"></script>',
-    `<script>window.__ID__=${JSON.stringify(injectId)}</script>\n<script src="assets/js/core.js?v=7"></script>`);
+  /* Khớp mọi số phiên bản của core.js — trước đây gõ cứng ?v=7 nên khi file đổi phiên bản, __ID__ không được chèn
+     và mọi trang case/ đều hiện campaign đầu tiên. */
+  s = s.replace(/<script src="assets\/js\/core\.js\?v=\d+"><\/script>/,
+    (m) => `<script>window.__ID__=${JSON.stringify(injectId)}</script>\n${m}`);
   return s;
 }
 

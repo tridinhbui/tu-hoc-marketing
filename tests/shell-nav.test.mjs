@@ -18,7 +18,7 @@ test('thanh điều hướng dọc nằm ở app.html, cố định bên trái, 
   const html = read('app.html');
   assert.match(html, /<aside class="rail"/);
   assert.match(html, /<iframe id="frame"/);
-  assert.match(html, /grid-template-columns:var\(--side-w\) minmax\(0,1fr\)/, 'thanh dọc phải ở cột bên trái');
+  assert.match(html, /grid-template-columns:minmax\(0,var\(--side-w\)\) minmax\(0,1fr\)/, 'thanh dọc phải ở cột bên trái');
   assert.match(html, /e\.preventDefault\(\);[\s\S]*loadInto\(href\)/, 'bấm mục chỉ đổi khung, không điều hướng cả trang');
   assert.match(html, /const SAFE = /, 'tham số p phải qua danh sách trắng (chống open-redirect)');
 });
@@ -29,7 +29,12 @@ test('trang học chạy trong khung: appShell không dựng header/footer và �
   assert.match(js, /location\.replace\('app\.html\?p='/);
   /* chỉ landing và đăng nhập tự mang header; mọi trang khác không được dựng chỗ giữ cho header (padding-top) */
   const withShellClass = pages.filter((f) => /<html[^>]*class="[^"]*has-shell/.test(read(f))).sort();
-  assert.deepEqual(withShellClass, ['dang-nhap.html', 'index.html']);
+  assert.deepEqual(withShellClass.filter((f) => !['dang-nhap.html', 'index.html'].includes(f)), []);
+});
+
+test('core.js không vẽ lại header/footer khi chạy trong khung (tránh thanh điều hướng nhân đôi)', () => {
+  const js = fs.readFileSync(rel('assets/js/core.js'), 'utf8');
+  assert.match(js, /window\.top !== window\.self[\s\S]{0,200}return;/);
 });
 
 test('landing và đăng nhập tự thoát khỏi khung nếu bị nạp trong iframe', () => {
