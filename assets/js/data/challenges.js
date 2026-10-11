@@ -273,3 +273,33 @@ CHALLENGES.push(
   {t:'Giữ giá cho sản phẩm cốt lõi, tạo combo hoặc quà tặng có giá trị cho khách quen, và nhấn vào điều đối thủ không có', why:'Đúng. Phản ứng theo hướng khác biệt thay vì chạy đua giá: bảo vệ biên, thưởng cho khách trung thành, và đưa ra lý do chọn bạn không nằm ở giá.', ok:true},
   {t:'Tăng giá để khẳng định chất lượng', why:'Tăng giá đúng lúc đối thủ giảm 25% là tự tạo khoảng cách lớn nhất mà khách thấy được, không kèm lý do để họ trả thêm.'}]},
 );
+
+/* Đợt 4 — Khu Truyền thông (media): trước đây ngân hàng chưa có thử thách nào cho khu này. */
+CHALLENGES.push(
+{id:'ch-media-mix', kind:'Pick the media mix', d:'media', color:'#A8620B',
+ brief:'Một tiệm bánh mì online sắp ra mắt ở TP.HCM, ngân sách 30 triệu trong 3 tuần đầu. Khách mục tiêu: người 18–30 tuổi sống và làm việc trong bán kính 3km quanh điểm giao.',
+ q:'Bạn chia 30 triệu thế nào?',
+ opts:[
+  {t:'Dồn hết vào một video quảng cáo chạy rộng toàn thành phố', why:'Phủ cả thành phố khi chỉ giao được trong 3km là trả tiền cho người không mua được. Reach rộng nhưng gần như toàn lãng phí.'},
+  {t:'60% quảng cáo định vị theo bán kính 3km, 30% mời nhóm KOC nhỏ ăn thử và kể lại, 10% giữ để nhắc lại người đã xem', why:'Đúng. Mỗi phần tiền có một việc: tạo biết đến đúng nơi, mượn lời kể của người thật, rồi chốt người đã quan tâm. Bán kính giao hàng quyết định tệp.', ok:true},
+  {t:'Mời một KOL lớn đăng một bài', why:'Một lần phủ không kiểm soát, người theo dõi KOL phần lớn không ở trong bán kính giao hàng, và không có cách đo.'},
+  {t:'Đăng bài PR trên báo mạng', why:'Báo mạng cho độ tin cậy nhưng ít chuyển ra đơn trong 3 tuần với một tiệm nhỏ; nên là việc sau khi đã có khách quen.'}]},
+
+{id:'ch-media-frequency', kind:'Reach or frequency', d:'media', color:'#A8620B',
+ brief:'Chiến dịch hai tuần cho một dịch vụ mới có thông điệp khá dài. Báo cáo: reach 40% nhóm mục tiêu nhưng tần suất trung bình chỉ 1,2 lần; tỉ lệ nhớ thông điệp 6%.',
+ q:'Nên điều chỉnh thế nào?',
+ opts:[
+  {t:'Mở rộng thêm tệp để reach lên 60%', why:'Reach tăng nhưng mỗi người vẫn chỉ thấy khoảng một lần, nên thông điệp phức tạp vẫn không đọng lại.'},
+  {t:'Đổi sang tệp hẹp hơn, tăng tần suất lên 3–4 lần cho nhóm cốt lõi và rút gọn thông điệp', why:'Đúng. Thông điệp mới và dài cần lặp lại; ngân sách cố định thì đổi bớt reach lấy tần suất ở nhóm đáng nhất.', ok:true},
+  {t:'Giữ nguyên và chờ thêm một tuần', why:'Số liệu đã nói rõ vấn đề: nhìn ít và nhớ ít. Chờ thêm chỉ tốn tiền để lặp lại đúng chỗ yếu.'},
+  {t:'Tăng ngân sách gấp đôi trên cùng tệp rộng', why:'Có thể tăng tần suất, nhưng giá để đạt 3–4 lần trên tệp rộng rất cao và phần lớn người không thuộc nhóm đáng nhắm.'}]},
+
+{id:'ch-media-owned', kind:'Build owned media', d:'media', color:'#A8620B',
+ brief:'Fanpage của một thương hiệu mỹ phẩm có 80.000 người theo dõi nhưng bài đăng chỉ tiếp cận khoảng 2% số đó. Chủ thương hiệu muốn một kênh ổn định hơn không phụ thuộc thuật toán.',
+ q:'Kênh sở hữu nào nên xây trước?',
+ opts:[
+  {t:'Thêm một kênh mạng xã hội mới và đăng song song', why:'Vẫn là kênh đi thuê: tiếp cận do nền tảng quyết định, và bạn chia mỏng nội dung trên hai nơi.'},
+  {t:'Danh sách liên hệ của người đã mua (Zalo OA, email) với nội dung nhắc mua lại và chăm sóc sau mua', why:'Đúng. Đây là tài sản bạn sở hữu: liên hệ trực tiếp, đo được, và rẻ hơn mua khách mới. Bắt đầu từ người đã mua vì họ có lý do đọc.', ok:true},
+  {t:'Chạy quảng cáo để tăng thêm 50.000 lượt theo dõi', why:'Mua thêm người theo dõi vào đúng kênh đang bị hạn chế tiếp cận chỉ làm vấn đề lớn hơn.'},
+  {t:'Bỏ fanpage và chuyển hết sang quảng cáo trả tiền', why:'Quảng cáo trả tiền hợp lý nhưng không thay được tài sản sở hữu; ngừng chi là biến mất, không còn gì tích luỹ.'}]},
+);

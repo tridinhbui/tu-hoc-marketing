@@ -1,0 +1,88 @@
+/* THẾ GIỚI MARKETING — bản đồ sáu khu + phòng khu. Dùng biến của main.css/paper.css; màu từng khu truyền qua --c. */
+.wm-wrap{padding-block:clamp(10px,2vw,26px)}
+.wm{position:relative;aspect-ratio:16/9;max-height:640px;border-radius:28px;overflow:hidden;border:1px solid rgba(120,84,50,.18);
+  background:radial-gradient(60% 55% at 22% 18%,rgba(255,255,255,.7),transparent 70%),radial-gradient(50% 50% at 85% 85%,rgba(224,176,128,.35),transparent 70%),#F6EBDA}
+.wm::before{content:"";position:absolute;inset:0;background:url("../img/sprig.svg") no-repeat 98% 4%/110px auto,url("../img/sprig.svg") no-repeat 2% 104%/90px auto;opacity:.5;transform-origin:center;pointer-events:none}
+.wm__paths{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.wm__paths path{fill:none;stroke:rgba(120,84,50,.4);stroke-width:2.4;stroke-dasharray:3 9;stroke-linecap:round}
+.wm__paths path.done{stroke:var(--accent,#B8502D);stroke-dasharray:none;stroke-width:3}
+.wm__node{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);width:clamp(120px,16vw,190px);
+  border:0;background:none;padding:0;cursor:pointer;color:var(--ink,#2B1A11);text-align:center;font-family:var(--sans,system-ui)}
+.wm__isle{position:relative;margin:0 auto;width:clamp(74px,9.4vw,112px);aspect-ratio:1;border-radius:46% 54% 50% 50%/52% 46% 54% 48%;
+  background:var(--c);display:grid;place-items:center;color:#fff;font:600 clamp(1.4rem,2.6vw,2.2rem) var(--serif,Georgia,serif);
+  box-shadow:0 18px 30px -16px rgba(60,30,10,.65),inset 0 -8px 0 rgba(0,0,0,.14);transition:transform .25s}
+.wm__node:hover .wm__isle,.wm__node:focus-visible .wm__isle{transform:translateY(-4px) rotate(-2deg)}
+.wm__node:focus-visible{outline:3px solid var(--c);outline-offset:6px;border-radius:20px}
+.wm__ring{position:absolute;inset:-9px;width:calc(100% + 18px);height:calc(100% + 18px);transform:rotate(-90deg)}
+.wm__ring circle{fill:none;stroke-width:4}
+.wm__ring .bg{stroke:rgba(120,84,50,.16)}.wm__ring .fg{stroke:var(--c);stroke-linecap:round;transition:stroke-dashoffset .6s}
+.wm__node b{display:block;margin-top:12px;font:600 clamp(.95rem,1.25vw,1.12rem)/1.2 var(--serif,Georgia,serif)}
+.wm__node small{display:block;margin-top:2px;font:600 11.5px var(--sans,system-ui);color:rgba(43,26,17,.6)}
+.wm__node[data-s="done"] .wm__isle::after{content:"✓";position:absolute;right:-6px;top:-6px;width:28px;height:28px;border-radius:50%;background:#3d7a45;color:#fff;font:700 15px/28px var(--sans);text-align:center}
+.wm__hint{position:absolute;left:18px;bottom:14px;font:600 20px var(--pp-hand,'Caveat',cursive);color:#7a5a45;transform:rotate(-2deg)}
+@media(max-width:760px){
+  .wm{aspect-ratio:auto;max-height:none;display:grid;gap:10px;padding:16px}
+  .wm__paths,.wm__hint{display:none}
+  .wm__node{position:static;transform:none;width:auto;display:flex;align-items:center;gap:14px;text-align:left;
+    border:1px solid rgba(120,84,50,.18);background:rgba(255,252,246,.9);border-radius:18px;padding:10px 14px}
+  .wm__node:nth-child(even){margin-left:22px}.wm__node:nth-child(odd){margin-right:22px}
+  .wm__isle{margin:0;width:56px;flex:none;font-size:1.3rem}
+  .wm__node b{margin:0}
+}
+/* phòng khu */
+.rm{margin-top:clamp(18px,3vw,34px);border:1px solid rgba(120,84,50,.2);border-radius:26px;overflow:hidden;background:rgba(255,252,246,.94);scroll-margin-top:12px}
+.rm[hidden]{display:none}
+.rm__head{display:flex;gap:20px;align-items:center;flex-wrap:wrap;padding:clamp(18px,3vw,30px);color:#fff;background:var(--c)}
+.rm__head h2{margin:0;font:500 clamp(1.7rem,3.4vw,2.6rem)/1.1 var(--serif,Georgia,serif);color:#fff}
+.rm__head p{margin:6px 0 0;max-width:56ch;opacity:.92;line-height:1.55}
+.rm__pct{margin-left:auto;text-align:center;font:600 12px var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.rm__pct b{display:block;font:500 2.2rem/1 var(--serif,Georgia,serif);letter-spacing:0}
+.rm__close{border:1.5px solid rgba(255,255,255,.6);background:transparent;color:#fff;border-radius:999px;padding:8px 16px;font:700 13px var(--sans);cursor:pointer}
+.rm__tabs{display:flex;gap:6px;flex-wrap:wrap;padding:12px clamp(14px,2.4vw,24px) 0;border-bottom:1px solid rgba(120,84,50,.16)}
+.rm__tabs button{border:0;background:none;padding:10px 14px;border-radius:12px 12px 0 0;font:700 13.5px var(--sans);color:rgba(43,26,17,.6);cursor:pointer;border-bottom:3px solid transparent}
+.rm__tabs button[aria-selected="true"]{color:var(--c);border-bottom-color:var(--c)}
+.rm__tabs em{font-style:normal;font-size:11px;margin-left:6px;padding:2px 7px;border-radius:99px;background:rgba(120,84,50,.1)}
+.rm__panel{padding:clamp(16px,2.6vw,28px)}
+.rm__panel[hidden]{display:none}
+.rm__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.rm__card{border:1px solid rgba(120,84,50,.18);background:#fff;border-radius:18px;padding:16px;display:grid;gap:6px;align-content:start;text-decoration:none;color:inherit}
+.rm__card:hover{border-color:var(--c)}
+.rm__card b{font:600 1.08rem/1.25 var(--serif,Georgia,serif)}
+.rm__card span{font-size:13.5px;line-height:1.5;color:rgba(43,26,17,.7)}
+.rm__card .st{font:700 10.5px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:rgba(43,26,17,.5)}
+.rm__card[data-done="1"]{border-color:#3d7a45;background:#f0f7f1}
+.rm__card[data-done="1"] .st{color:#3d7a45}
+.rm__card[data-lock="1"]{opacity:.65;border-style:dashed}
+.rm__ask{font:italic 400 1.3rem/1.35 var(--serif,Georgia,serif);margin:0 0 14px;padding-left:16px;border-left:3px solid var(--c)}
+.rm__topics{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+.rm__topics span{border:1px solid rgba(120,84,50,.22);border-radius:999px;padding:6px 12px;font:600 12.5px var(--sans)}
+.rm__sub{font:800 11.5px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--c);margin:20px 0 10px}
+/* Brand DNA Canvas */
+.dna{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:start}
+@media(max-width:900px){.dna{grid-template-columns:1fr}}
+.dna__sec{border:1px solid rgba(120,84,50,.18);background:#fff;border-radius:18px;padding:16px;margin-bottom:12px}
+.dna__sec h4{margin:0 0 4px;font:600 1.1rem var(--serif,Georgia,serif)}
+.dna__sec p.h{margin:0 0 10px;font-size:13px;color:rgba(43,26,17,.62);line-height:1.5}
+.dna input[type=text],.dna textarea{width:100%;border:1.5px solid rgba(120,84,50,.22);background:#fffdf9;border-radius:12px;padding:10px 12px;font:500 14.5px/1.5 var(--sans);color:inherit;margin-top:8px}
+.dna textarea{min-height:68px;resize:vertical}
+.dna input:focus,.dna textarea:focus{outline:0;border-color:var(--c)}
+.dna__row{display:grid;grid-template-columns:130px 1fr;gap:10px}
+@media(max-width:560px){.dna__row{grid-template-columns:1fr}}
+.dna__chips{display:flex;gap:8px;flex-wrap:wrap}
+.dna__chips button{border:1.5px solid rgba(120,84,50,.25);background:#fff;border-radius:999px;padding:8px 14px;font:600 13.5px var(--sans);cursor:pointer;color:inherit}
+.dna__chips button[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:#fff}
+.dna__side{position:sticky;top:12px;border:1px solid rgba(120,84,50,.18);background:linear-gradient(160deg,#fffdf8,#fbefe6);border-radius:18px;padding:16px}
+.dna__meter{height:8px;border-radius:99px;background:rgba(120,84,50,.15);overflow:hidden;margin:8px 0 12px}
+.dna__meter i{display:block;height:100%;background:var(--c);transition:width .3s}
+.dna__chk{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:13.5px;line-height:1.45}
+.dna__chk li{display:flex;gap:8px}.dna__chk li::before{content:"○";color:rgba(43,26,17,.4)}
+.dna__chk li[data-ok="1"]::before{content:"●";color:#3d7a45}
+.dna__chk li small{display:block;color:rgba(43,26,17,.55)}
+.dna__act{display:grid;gap:8px;margin-top:14px}
+.dna__btn{border:0;background:var(--c);color:#fff;border-radius:999px;padding:11px 16px;font:700 13.5px var(--sans);cursor:pointer}
+.dna__btn--g{background:transparent;color:inherit;border:1.5px solid rgba(120,84,50,.3)}
+.dna__btn[disabled]{opacity:.45;cursor:not-allowed}
+.dna__msg{font-size:13px;color:#3d7a45;font-weight:600;min-height:18px;margin-top:8px}
+/* tiêu đề trang gọn lại để bản đồ lên sớm */
+main .pagehead{padding-block:clamp(10px,1.6vw,22px)!important}
+main .pagehead .display{font-size:clamp(2.2rem,4.6vw,3.8rem)!important;line-height:1.02!important}

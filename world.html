@@ -71,7 +71,8 @@
   .gate__saved{font-size:12px;opacity:.55;min-height:16px;margin-bottom:14px}
   .reads a i{font-style:normal;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--ink-38)}
 </style>
-<link rel="stylesheet" href="assets/css/paper.css?v=4">
+<link rel="stylesheet" href="assets/css/paper.css?v=5">
+<link rel="stylesheet" href="assets/css/world.css?v=2">
 </head>
 <body>
 <noscript><div class="nojs">
@@ -86,6 +87,12 @@
       <p class="caption" data-reveal data-delay=".1">Marketing không đi theo đường thẳng nên chương trình học ở đây cũng vậy.
         Bạn chọn khu vực mình đang cần, đọc câu hỏi trước cửa, rồi đi vào. Có thể quay lại bất cứ lúc nào.</p>
     </div>
+  </section>
+  <section class="wrap wm-wrap" id="mapsec" aria-label="Bản đồ sáu khu">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px">
+      <div class="label label--accent">Bản đồ thế giới</div><span class="caption" id="wmSum" aria-live="polite"></span></div>
+    <div class="wm" id="wmap"></div>
+    <div class="rm" id="room" hidden tabindex="-1"></div>
   </section>
   <section class="wrap wl" id="phong-tap">
     <div data-reveal>
@@ -113,6 +120,7 @@
 <script src="assets/js/data/districts.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/campaigns.js?v=8"></script>
+<script src="assets/js/data/challenges.js?v=8"></script>
 <script src="assets/js/lab.js?v=1"></script>
 <script>
 shell('world.html');
@@ -223,5 +231,6 @@ paintProgress();
 
 reveal();
 </script>
+<script src="assets/js/world.js?v=2"></script>
 <script src="assets/js/paper.js?v=5"></script>
 </body></html>
