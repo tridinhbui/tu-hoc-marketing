@@ -19,11 +19,11 @@
     ],
     consumer: [
       { id: 'g2', kind: 'game', href: 'game-chon-tep.html', t: 'Chọn tệp', d: 'Chọn phân khúc phục vụ trước khi tiền và người có hạn.' },
-      { id: 'insight', kind: 'soon', t: 'Consumer Insight Lab', d: 'Biến trích dẫn thật thành insight có căng thẳng — giai đoạn 2.' },
+      { id: 'insight', kind: 'inline', t: 'Consumer Insight Lab', d: 'Ba trích dẫn thật → loại tín hiệu → insight có “nhưng” → chọn câu mạnh nhất và kiểm.' },
     ],
     creative: [
       { id: 'g6', kind: 'game', href: 'game-ke-chuyen.html', t: 'Kể chuyện 60 giây', d: 'Kể một ý tưởng thương hiệu trong một phút.' },
-      { id: 'brief', kind: 'soon', t: 'Creative Brief Builder', d: 'Dựng brief một trang từ vấn đề tới thông điệp — giai đoạn 2.' },
+      { id: 'brief', kind: 'inline', t: 'Creative Brief Builder', d: 'Brief một trang tám ô: từ vấn đề kinh doanh tới cách đo thành công.' },
     ],
     growth: [
       { id: 'g5', kind: 'game', href: 'game-phieu-ro.html', t: 'Phễu rò', d: 'Tìm chỗ rò trong phễu và quyết định vá ở đâu.' },
@@ -47,7 +47,7 @@
     const ch = Lab.get('wd:ch:' + x.key), chal = !!(ch && ch.total);
     const gate = State.has('districts', x.id);
     const tools = TOOLS[x.key] || [];
-    const toolDone = tools.some((t) => (t.id === 'dna' ? dna().done : /^g\d$/.test(t.id) ? stars(t.id) > 0 : t.id === 'case' ? Object.keys(app().cases || {}).length > 0 : t.id === 'meta' ? !!Lab.get('meta:any') : false));
+    const toolDone = tools.some((t) => (t.id === 'dna' ? dna().done : t.id === 'brief' ? !!(Lab.get('brief') || {}).done : t.id === 'insight' ? !!(Lab.get('insight') || {}).done : /^g\d$/.test(t.id) ? stars(t.id) > 0 : t.id === 'case' ? Object.keys(app().cases || {}).length > 0 : t.id === 'meta' ? !!Lab.get('meta:any') : false));
     const pct = Math.round(100 * ((reads.length ? rDone / reads.length : 1) * .25 + (camps.length ? cDone / camps.length : 1) * .25 + (chal ? 1 : 0) * .2 + (gate ? 1 : 0) * .1 + (toolDone ? 1 : 0) * .2));
     return { reads, camps, rDone, cDone, chal, gate, toolDone, pct, state: pct >= 100 ? 'done' : pct > 0 ? 'go' : 'new', unlocked: gate || chal };
   }
@@ -157,12 +157,12 @@
       <div class="rm__grid">${list.map((t) => t.kind === 'soon'
         ? `<div class="rm__card" data-lock="1"><span class="st">Sắp có</span><b>${esc(t.t)}</b><span>${esc(t.d)}</span></div>`
         : t.kind === 'inline'
-          ? `<button type="button" class="rm__card" data-lock="${s.unlocked ? 0 : 1}" data-tool="${t.id}" ${s.unlocked ? '' : 'disabled'}><span class="st">${s.unlocked ? (dna().done ? '✓ Đã hoàn thành' : 'Mở ngay') : 'Đang khoá'}</span><b>${esc(t.t)}</b><span>${esc(t.d)}</span></button>`
+          ? `<button type="button" class="rm__card" data-lock="${s.unlocked ? 0 : 1}" data-tool="${t.id}" ${s.unlocked ? '' : 'disabled'}><span class="st">${s.unlocked ? (((Lab.get(t.id) || {}).done) ? '✓ Đã hoàn thành' : 'Mở ngay') : 'Đang khoá'}</span><b>${esc(t.t)}</b><span>${esc(t.d)}</span></button>`
           : `<a class="rm__card" ${s.unlocked ? `href="${t.href}"` : 'aria-disabled="true"'} data-lock="${s.unlocked ? 0 : 1}" data-done="${/^g\d$/.test(t.id) && stars(t.id) ? 1 : 0}"><span class="st">${s.unlocked ? (/^g\d$/.test(t.id) ? (stars(t.id) ? '★'.repeat(stars(t.id)) + '☆'.repeat(3 - stars(t.id)) : 'Chưa chơi') : 'Mở') : 'Đang khoá'}</span><b>${esc(t.t)}</b><span>${esc(t.d)}</span></a>`).join('')}</div>
       <div id="tool-host" style="margin-top:20px"></div>`;
-    p.querySelectorAll('[data-tool]').forEach((b) => b.onclick = () => { if (b.dataset.tool === 'dna') mountDNA(document.getElementById('tool-host'), x); document.getElementById('tool-host').scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+    p.querySelectorAll('[data-tool]').forEach((b) => b.onclick = () => { mountTool(b.dataset.tool, document.getElementById('tool-host'), x); document.getElementById('tool-host').scrollIntoView({ behavior: 'smooth', block: 'start' }); });
     p.querySelectorAll('a[aria-disabled]').forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); toast('Làm thử thách của khu để mở công cụ'); }));
-    if (s.unlocked && x.key === 'brand' && (dna().done || Object.keys(dna().data || {}).length)) mountDNA(document.getElementById('tool-host'), x);
+    { const first = list.find((t) => t.kind === 'inline' && Lab.get(t.id) && Object.keys((Lab.get(t.id) || {}).data || {}).length); if (s.unlocked && first) mountTool(first.id, document.getElementById('tool-host'), x); }
   }
 
   /* ------- Brand DNA Canvas ------- */
@@ -258,6 +258,124 @@
       Lab.set('dna', { data: {}, done: false }); mountDNA(host, x); msg('Đã xoá. Bắt đầu lại nhé.');
     };
     eval_();
+  }
+
+
+  /* ------- bộ dựng biểu mẫu chung cho Creative Brief Builder và Consumer Insight Lab -------
+     spec = { id, title, secs:[{h, p, fields:[{k, type:'text'|'area'|'chip1'|'chipN', ph, opts, max}]}], checks:[[tên, gợi ý, fn(d)]], summary(d), xp, kind } */
+  function mountForm(host, x, spec) {
+    const saved = Lab.get(spec.id) || { data: {}, done: false };
+    const d = { ...(saved.data || {}) };
+    const fld = (f) => {
+      const v = d[f.k];
+      if (f.type === 'area') return `<textarea data-k="${f.k}" aria-label="${esc(f.ph)}" placeholder="${esc(f.ph)}">${esc(v || '')}</textarea>`;
+      if (f.type === 'chip1' || f.type === 'chipN') return `<div class="dna__chips" data-chip="${f.k}" data-max="${f.type === 'chip1' ? 1 : f.max || 3}">${f.opts.map((o) => `<button type="button" aria-pressed="${(f.type === 'chip1' ? v === o : (v || []).includes(o))}" data-v="${esc(o)}">${esc(o)}</button>`).join('')}</div>`;
+      return `<input type="text" data-k="${f.k}" aria-label="${esc(f.ph)}" placeholder="${esc(f.ph)}" value="${esc(v || '')}">`;
+    };
+    host.innerHTML = `<div class="dna" style="--c:${x.color}"><div>
+      ${spec.secs.map((sec, i) => `<div class="dna__sec"><h4>${i + 1} · ${esc(sec.h)}</h4><p class="h">${esc(sec.p)}</p>${sec.fields.map(fld).join('')}</div>`).join('')}
+      </div><aside class="dna__side" aria-live="polite"><b style="font-family:var(--serif);font-size:1.15rem">${esc(spec.title)}</b>
+        <div class="dna__meter"><i id="f-m" style="width:0"></i></div><ul class="dna__chk" id="f-chk"></ul>
+        <div class="dna__act"><button type="button" class="dna__btn" id="f-save" disabled>Lưu vào sổ tay</button>
+          <button type="button" class="dna__btn dna__btn--g" id="f-copy">Sao chép bản tóm tắt</button>
+          <button type="button" class="dna__btn dna__btn--g" id="f-reset">Làm lại từ đầu</button></div>
+        <div class="dna__msg" id="f-msg"></div></aside></div>`;
+    const msg = (t) => { host.querySelector('#f-msg').textContent = t; };
+    let timer;
+    function ev() {
+      const res = spec.checks.map(([t, h, f]) => [t, h, !!f(d)]), n = res.filter((r) => r[2]).length;
+      host.querySelector('#f-m').style.width = Math.round(n / spec.checks.length * 100) + '%';
+      host.querySelector('#f-chk').innerHTML = res.map(([t, h, ok]) => `<li data-ok="${ok ? 1 : 0}"><span>${esc(t)}<small>${esc(h)}</small></span></li>`).join('');
+      host.querySelector('#f-save').disabled = n < spec.checks.length;
+      return n;
+    }
+    function persist() {
+      const n = ev(), prev = Lab.get(spec.id) || {}, done = n === spec.checks.length;
+      Lab.set(spec.id, { data: d, done: !!prev.done || done });
+      if (done && !prev.done) {
+        const got = Lab.xp(spec.id, spec.xp || 20);
+        msg(`Hoàn thành ${spec.title}${got ? ` · +${got} XP` : ''}. Lưu vào sổ tay để giữ bản này.`);
+        if (typeof State.touch === 'function') State.touch();
+        paintMap(); const rp = room().querySelector('.rm__pct b'); if (rp) rp.textContent = stat(x).pct + '%';
+      }
+    }
+    host.querySelectorAll('[data-k]').forEach((el) => el.addEventListener('input', () => { d[el.dataset.k] = el.value; clearTimeout(timer); ev(); timer = setTimeout(persist, 450); }));
+    host.querySelectorAll('[data-chip]').forEach((box) => box.querySelectorAll('button').forEach((b) => b.onclick = () => {
+      const k = box.dataset.chip, max = +box.dataset.max, v = b.dataset.v;
+      if (max === 1) { d[k] = d[k] === v ? '' : v; box.querySelectorAll('button').forEach((o) => o.setAttribute('aria-pressed', String(d[k] === o.dataset.v))); }
+      else { const a = d[k] = d[k] || []; const i = a.indexOf(v); if (i > -1) a.splice(i, 1); else if (a.length < max) a.push(v); else { msg(`Chọn tối đa ${max}.`); return; } b.setAttribute('aria-pressed', String(a.includes(v))); }
+      persist();
+    }));
+    host.querySelector('#f-save').onclick = () => {
+      const s = State.get(), notes = s.notes || [];
+      notes.unshift({ t: spec.title, body: spec.summary(d), when: new Date().toISOString().slice(0, 10), kind: spec.kind || spec.title, href: 'world.html#phong-' + x.key });
+      State.set({ notes }); msg('Đã lưu vào sổ tay.');
+    };
+    host.querySelector('#f-copy').onclick = async () => {
+      const t = spec.summary(d);
+      try { await navigator.clipboard.writeText(t); msg('Đã sao chép bản tóm tắt.'); }
+      catch (e) { const ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); msg('Đã sao chép bản tóm tắt.'); } catch (_) { msg('Không sao chép được — hãy chọn và chép thủ công.'); } ta.remove(); }
+    };
+    host.querySelector('#f-reset').onclick = () => { if (!confirm('Xoá toàn bộ và làm lại?')) return; Lab.set(spec.id, { data: {}, done: false }); mountForm(host, x, spec); msg('Đã xoá. Bắt đầu lại nhé.'); };
+    ev();
+  }
+  const hasNum = (t) => /\d/.test(String(t || ''));
+  const wc = (t) => words(t);
+  const BRIEF = {
+    id: 'brief', title: 'Creative Brief Builder', xp: 20, kind: 'Creative Brief',
+    secs: [
+      { h: 'Vấn đề kinh doanh', p: 'Con số nào đang không như mong muốn, bao nhiêu, từ khi nào? Cần có một con số.', fields: [{ k: 'problem', type: 'area', ph: 'Doanh thu kênh online giảm 18% so với quý trước…' }] },
+      { h: 'Mục tiêu truyền thông', p: 'Chỉ chọn MỘT. Brief có hai mục tiêu thì không có mục tiêu.', fields: [{ k: 'goal', type: 'chip1', opts: ['Được biết đến', 'Được cân nhắc', 'Được mua', 'Được mua lại'] }] },
+      { h: 'Đối tượng', p: 'Một nhóm cụ thể trong một tình huống cụ thể — không phải “mọi người” hay chỉ tuổi và giới.', fields: [{ k: 'who', type: 'area', ph: 'Người đi làm 25–32 tuổi, ăn sáng vội ở văn phòng…' }] },
+      { h: 'Insight', p: 'Theo khuôn: “Tôi muốn …, nhưng …, nên tôi …”. Không có “nhưng” thì mới là một quan sát.', fields: [{ k: 'insight', type: 'area', ph: 'Tôi muốn ăn sáng tử tế, nhưng không có thời gian, nên tôi bỏ bữa.' }] },
+      { h: 'Một điều muốn nói', p: 'Một câu, tối đa 18 từ. Nếu có hai ý, chọn một.', fields: [{ k: 'say', type: 'text', ph: 'Bữa sáng nóng, xong trong năm phút.' }] },
+      { h: 'Vì sao nên tin', p: 'Bằng chứng: số liệu, quy trình, người thật. Một lý do cụ thể.', fields: [{ k: 'rtb', type: 'area', ph: 'Mỗi phần được nấu và giao trong tối đa 5 phút kể từ lúc đặt…' }] },
+      { h: 'Ràng buộc', p: 'Kênh, thời gian, ngân sách — phải có ít nhất một con số.', fields: [{ k: 'limits', type: 'area', ph: 'Ngân sách 60 triệu, 3 tuần, chỉ Meta và điểm bán…' }] },
+      { h: 'Đo thành công', p: 'Một chỉ số và ngưỡng: đạt bao nhiêu thì coi là thành công.', fields: [{ k: 'metric', type: 'area', ph: 'Đơn lần đầu từ khách mới ≥ 400 trong 3 tuần…' }] },
+    ],
+    checks: [
+      ['Vấn đề có con số', 'Có ít nhất một chữ số và từ 20 ký tự.', (d) => hasNum(d.problem) && String(d.problem).trim().length >= 20],
+      ['Đúng một mục tiêu', 'Chọn một trong bốn.', (d) => !!d.goal],
+      ['Đối tượng đủ cụ thể', 'Từ 25 ký tự, không dùng “mọi người / tất cả”.', (d) => String(d.who || '').trim().length >= 25 && !/(mọi người|tất cả mọi|ai cũng)/i.test(d.who)],
+      ['Insight có căng thẳng', 'Có chữ “nhưng”, từ 30 ký tự.', (d) => /(^|\s)nhưng(\s|$)/i.test(d.insight || '') && String(d.insight).trim().length >= 30],
+      ['Một điều muốn nói, gọn', '4–18 từ, một câu.', (d) => wc(d.say) >= 4 && wc(d.say) <= 18],
+      ['Lý do để tin', 'Từ 25 ký tự.', (d) => String(d.rtb || '').trim().length >= 25],
+      ['Ràng buộc có số', 'Có ít nhất một chữ số.', (d) => hasNum(d.limits) && String(d.limits).trim().length >= 10],
+      ['Có ngưỡng thành công', 'Có chữ số và nêu chỉ số.', (d) => hasNum(d.metric) && String(d.metric).trim().length >= 12],
+    ],
+    summary: (d) => ['CREATIVE BRIEF', `Vấn đề: ${d.problem || ''}`, `Mục tiêu: ${d.goal || ''}`, `Đối tượng: ${d.who || ''}`, `Insight: ${d.insight || ''}`,
+      `Một điều muốn nói: ${d.say || ''}`, `Vì sao nên tin: ${d.rtb || ''}`, `Ràng buộc: ${d.limits || ''}`, `Đo thành công: ${d.metric || ''}`].join('\n'),
+  };
+  const SIG = ['Hành vi (họ làm gì)', 'Cảm xúc (họ thấy gì)', 'Rào cản (điều cản họ)'];
+  const INSIGHT = {
+    id: 'insight', title: 'Consumer Insight Lab', xp: 20, kind: 'Consumer Insight',
+    secs: [
+      { h: 'Ba trích dẫn thật', p: 'Lời người thật nói (phỏng vấn, đánh giá, bình luận) — chép đúng chữ, không tóm tắt.', fields: [
+        { k: 'q1', type: 'area', ph: 'Trích dẫn 1…' }, { k: 'q2', type: 'area', ph: 'Trích dẫn 2…' }, { k: 'q3', type: 'area', ph: 'Trích dẫn 3…' }] },
+      { h: 'Loại tín hiệu', p: 'Mỗi trích dẫn thuộc loại nào? Chọn loại nổi bật nhất cho từng câu.', fields: [
+        { k: 't1', type: 'chip1', opts: SIG }, { k: 't2', type: 'chip1', opts: SIG }, { k: 't3', type: 'chip1', opts: SIG }] },
+      { h: 'Insight', p: 'Khuôn: “Tôi muốn …, nhưng …, nên tôi …”. Ba ô, ô giữa là căng thẳng.', fields: [
+        { k: 'want', type: 'text', ph: 'Tôi muốn …' }, { k: 'but', type: 'text', ph: 'nhưng …' }, { k: 'so', type: 'text', ph: 'nên tôi …' }] },
+      { h: 'Trích dẫn mạnh nhất', p: 'Chọn một trích dẫn đỡ cho insight và nói vì sao.', fields: [
+        { k: 'best', type: 'chip1', opts: ['Trích dẫn 1', 'Trích dẫn 2', 'Trích dẫn 3'] }, { k: 'why', type: 'area', ph: 'Vì nó cho thấy …' }] },
+      { h: 'Phép thử', p: 'Một insight tốt khiến người nghe bất ngờ và hành động được.', fields: [
+        { k: 'test', type: 'chipN', opts: ['Người nghe sẽ thấy bất ngờ', 'Hành động được trong 30 ngày', 'Không ai nói điều này trong ngành'], max: 3 }] },
+    ],
+    checks: [
+      ['Ba trích dẫn thật', 'Mỗi trích dẫn từ 20 ký tự.', (d) => ['q1', 'q2', 'q3'].every((k) => String(d[k] || '').trim().length >= 20)],
+      ['Mỗi câu có loại tín hiệu', 'Chọn loại cho cả ba.', (d) => ['t1', 't2', 't3'].every((k) => !!d[k])],
+      ['Insight đủ ba vế', 'Mỗi ô từ 8 ký tự.', (d) => ['want', 'but', 'so'].every((k) => String(d[k] || '').trim().length >= 8)],
+      ['Căng thẳng khác với mong muốn', 'Ô “nhưng” không lặp lại ô “muốn”.', (d) => String(d.but || '').trim().length >= 8 && String(d.but).trim().toLowerCase() !== String(d.want || '').trim().toLowerCase()],
+      ['Chọn trích dẫn mạnh nhất và nói vì sao', 'Chọn một và viết từ 20 ký tự.', (d) => !!d.best && String(d.why || '').trim().length >= 20],
+      ['Qua phép thử', 'Tick ít nhất hai trong ba.', (d) => (d.test || []).length >= 2],
+    ],
+    summary: (d) => ['CONSUMER INSIGHT', `Trích dẫn 1 (${d.t1 || ''}): ${d.q1 || ''}`, `Trích dẫn 2 (${d.t2 || ''}): ${d.q2 || ''}`, `Trích dẫn 3 (${d.t3 || ''}): ${d.q3 || ''}`,
+      `Insight: Tôi muốn ${d.want || '…'}, nhưng ${d.but || '…'}, nên tôi ${d.so || '…'}.`, `Mạnh nhất: ${d.best || ''} — ${d.why || ''}`, `Phép thử: ${(d.test || []).join('; ')}`].join('\n'),
+  };
+  function mountTool(id, host, x) {
+    if (id === 'dna') return mountDNA(host, x);
+    if (id === 'brief') return mountForm(host, x, BRIEF);
+    if (id === 'insight') return mountForm(host, x, INSIGHT);
   }
 
   /* ------- khởi động ------- */
