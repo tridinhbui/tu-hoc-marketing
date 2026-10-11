@@ -17,7 +17,7 @@ const SocialUI = (() => {
     return `<span aria-hidden="true" style="${st}display:inline-grid;place-items:center;background:var(--terra,#C85A32);color:#fff;font-weight:700;font-size:${Math.round(size * .42)}px">${esc(name.trim()[0] || 'M').toUpperCase()}</span>`;
   }
 
-  const card = (inner, extra = '') => `<div style="background:var(--bg-2);border:1px solid var(--ink-12);border-radius:18px;padding:20px;${extra}">${inner}</div>`;
+  const card = (inner, extra = '') => `<div style="background:var(--card,var(--bg-2));border:1px solid var(--ink-12);border-radius:18px;padding:20px;${extra}">${inner}</div>`;
   const label = (t) => `<span style="font:700 11.5px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-50)">${t}</span>`;
 
   /* Chuỗi ngày + XP + cấp */
@@ -72,5 +72,54 @@ const SocialUI = (() => {
     };
   }
 
-  return { avatar, streakCard, boardCard, inviteCard, esc };
+  /* Hồ sơ gọn: ảnh, cấp, XP, chuỗi ngày, tiến độ lên cấp */
+  async function profileCard(el, user) {
+    let d; try { d = await get('/me/stats'); } catch (e) { d = null; }
+    const s = d ? d.stats : null, lv = d ? d.levels : [];
+    const xp = s ? s.total_xp : 0, level = s ? s.level : 1, streak = s ? s.streak_current : 0;
+    const cur = lv[level - 1] ?? 0, next = lv[level] ?? null;
+    const pct = next ? Math.max(0, Math.min(100, Math.round(((xp - cur) / (next - cur)) * 100))) : 100;
+    el.innerHTML = card(`
+      <div style="display:flex;gap:14px;align-items:center">
+        ${avatar(user, 64)}
+        <div style="flex:1;min-width:0">
+          <span style="display:inline-block;font:700 11px/1 var(--sans);letter-spacing:.06em;padding:5px 9px;border-radius:99px;background:var(--ink-06);color:var(--ink-70)">LV${level} • HỌC VIÊN</span>
+          <div style="font:800 2rem/1.1 var(--sans);margin-top:6px">${fmtN(xp)} XP <span style="color:var(--gold)">✦</span></div>
+        </div>
+        <div style="text-align:center;border:1px solid var(--ink-12);border-radius:14px;padding:8px 12px">
+          <div style="font:700 11px/1 var(--sans);letter-spacing:.08em;color:var(--ink-50)">STREAK</div>
+          <div style="font:800 1.2rem/1.2 var(--sans);margin-top:4px">🔥 ${fmtN(streak)} ngày</div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:18px;font-size:13px;color:var(--ink-70)">
+        <span>${next ? `Cần ${fmtN(Math.max(0, next - xp))} XP nữa lên cấp ${level + 1}` : 'Bạn đã đạt cấp cao nhất'}</span><b>${pct}%</b></div>
+      <div style="height:8px;border-radius:99px;background:var(--ink-12);overflow:hidden;margin-top:6px"><i style="display:block;height:100%;width:${pct}%;background:var(--terra,#C85A32);border-radius:99px"></i></div>`);
+  }
+
+  /* Nhiệm vụ ngày: lấy từ máy chủ; đạt điều kiện thì nhận thưởng */
+  async function questsPanel(el, goHref) {
+    let d; try { d = await get('/me/stats'); } catch (e) { el.innerHTML = '<p class="small" style="color:var(--ink-50)">Chưa tải được nhiệm vụ.</p>'; return; }
+    const done = d.quests.filter((q) => q.claimed).length;
+    el.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><b style="font-size:1.1rem">Nhiệm vụ hôm nay</b>
+        <span class="small" style="color:var(--ink-50)">${done}/${d.quests.length} đã nhận</span></div>
+      <div style="display:grid;gap:10px">${d.quests.map((q) => `
+        <div style="display:flex;align-items:center;gap:14px;padding:14px;border-radius:14px;border:1px solid var(--ink-12);background:${q.done && !q.claimed ? 'rgba(34,160,90,.10)' : 'var(--bg)'}">
+          <span style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--terra-06,rgba(200,90,50,.12));font-size:20px">${q.claimed ? '✅' : q.done ? '🎁' : '🎯'}</span>
+          <div style="flex:1;min-width:0"><b style="display:block">${esc(q.t)}</b><span class="small" style="color:var(--ink-50)">${q.have}/${q.need} · +${q.xp} XP</span></div>
+          ${q.claimed ? '<span class="small" style="color:var(--ink-50)">Đã nhận</span>'
+            : q.done ? `<button type="button" data-claim="${esc(q.id)}" style="border:0;border-radius:10px;padding:9px 16px;background:#16a34a;color:#fff;font:700 13px var(--sans);cursor:pointer">Nhận thưởng</button>`
+            : `<a href="${esc(goHref)}" style="border:1px solid var(--ink-12);border-radius:10px;padding:9px 16px;color:var(--ink);text-decoration:none;font:700 13px var(--sans)">Làm ngay →</a>`}
+        </div>`).join('') || '<p class="small" style="color:var(--ink-50)">Hôm nay chưa có nhiệm vụ.</p>'}</div>`;
+    el.querySelectorAll('[data-claim]').forEach((b) => { b.onclick = async () => {
+      b.disabled = true;
+      try {
+        const r = await fetch('/api/quests/claim', { method: 'POST', credentials: 'same-origin', headers: { 'x-thmc': '1', 'content-type': 'application/json' }, body: JSON.stringify({ quest_id: b.dataset.claim }) });
+        if (!r.ok) throw new Error('claim');
+      } catch (e) { b.disabled = false; return; }
+      questsPanel(el, goHref);
+    }; });
+  }
+
+  return { avatar, streakCard, boardCard, inviteCard, profileCard, questsPanel, esc };
 })();

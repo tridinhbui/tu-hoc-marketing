@@ -14,11 +14,11 @@ test('không trang nào tự dựng header riêng (dash-nav, room-nav, hd-univer
   assert.deepEqual(bad, []);
 });
 
-test('thanh điều hướng dọc nằm ở app.html, cố định bên phải, nạp trang vào khung', () => {
+test('thanh điều hướng dọc nằm ở app.html, cố định bên trái, nạp trang vào khung', () => {
   const html = read('app.html');
   assert.match(html, /<aside class="rail"/);
   assert.match(html, /<iframe id="frame"/);
-  assert.match(html, /grid-template-columns:minmax\(0,1fr\) var\(--side-w\)/, 'thanh dọc phải ở cột bên phải');
+  assert.match(html, /grid-template-columns:var\(--side-w\) minmax\(0,1fr\)/, 'thanh dọc phải ở cột bên trái');
   assert.match(html, /e\.preventDefault\(\);[\s\S]*loadInto\(href\)/, 'bấm mục chỉ đổi khung, không điều hướng cả trang');
   assert.match(html, /const SAFE = /, 'tham số p phải qua danh sách trắng (chống open-redirect)');
 });

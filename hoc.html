@@ -3,211 +3,46 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C85A32%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E8%27%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=12">
+<link rel="stylesheet" href="assets/css/case.css?v=13">
 <title>Hành trình hôm nay — Tự Học Marketing Case</title>
 <meta name="description" content="Khám phá các thế giới marketing, giải quyết case study thực tế và nâng cao tư duy chiến lược mỗi ngày.">
 <style>
-  body{
-    background:#130E0B;
-    color:#F9F4EB;
-    overflow-x:hidden;
-  }
-  
-  /* Top Universe Nav */
-  .dash-nav{
-    position:sticky;
-    top:0;
-    z-index:40;
-    background:rgba(19,14,11,.92);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(249,244,235,.08);
-  }
-  .dash-nav .wrap{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding-top:14px;
-    padding-bottom:14px;
-  }
-  .dash-nav-links{
-    display:flex;
-    align-items:center;
-    gap:24px;
-  }
-  .dash-nav-links a{
-    font-size:14px;
-    font-weight:500;
-    color:rgba(249,244,235,.7);
-    text-decoration:none;
-    transition:var(--transition-fast);
-  }
-  .dash-nav-links a:hover,.dash-nav-links a.active{
-    color:#F9F4EB;
-  }
-  @media(max-width:860px){
-    .dash-nav-links{display:none}
-  }
-
-  /* Hero Section: Studio & Workspace */
-  .dash-hero{
-    padding:clamp(28px,5vw,56px) 0;
-  }
-  .dash-hero-grid{
-    display:grid;
-    gap:clamp(24px,4vw,44px);
-  }
-  @media(min-width:960px){
-    .dash-hero-grid{
-      grid-template-columns:1.1fr .9fr;
-      align-items:center;
-    }
-  }
-  .dash-eyebrow{
-    font-family:var(--sans);
-    font-size:11.5px;
-    font-weight:700;
-    letter-spacing:.16em;
-    text-transform:uppercase;
-    color:var(--terra);
-    margin-bottom:12px;
-    display:block;
-  }
-  .dash-title{
-    font-family:var(--serif);
-    font-size:clamp(2.4rem,4.5vw,3.6rem);
-    font-weight:400;
-    line-height:1.1;
-    letter-spacing:-.02em;
-    margin:0 0 24px;
-  }
-  .dash-title em{
-    font-style:italic;
-    color:var(--blush);
-  }
-
-  /* Progress Card on Canvas */
-  .progress-card-floating{
-    background:#FAF5EE;
-    color:#24160E;
-    border-radius:16px;
-    padding:22px 26px;
-    box-shadow:0 20px 48px -18px rgba(0,0,0,.7);
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-    max-width:480px;
-  }
-  .progress-bar-wrap{
-    height:8px;
-    background:rgba(36,22,14,.1);
-    border-radius:99px;
-    overflow:hidden;
-    position:relative;
-  }
-  .progress-bar-fill{
-    height:100%;
-    background:var(--terra);
-    border-radius:99px;
-    transition:width .6s ease;
-  }
-
-  /* Visual Studio Workspace Image */
-  .workspace-frame{
-    position:relative;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 24px 60px -20px rgba(0,0,0,.8);
-    border:1px solid rgba(249,244,235,.15);
-  }
-  .workspace-frame img{
-    width:100%;
-    height:380px;
-    object-fit:cover;
-    display:block;
-  }
-  .workspace-note{
-    position:absolute;
-    bottom:20px;
-    right:20px;
-    background:rgba(29,21,16,.85);
-    backdrop-filter:blur(8px);
-    border:1px solid rgba(249,244,235,.2);
-    color:#F9F4EB;
-    padding:14px 18px;
-    border-radius:10px;
-    font-family:var(--hand);
-    font-size:20px;
-    line-height:1.3;
-    max-width:240px;
-    transform:rotate(-2deg);
-  }
-
-  /* Case Universe Section */
-  .universe-section{
-    padding:clamp(36px,6vw,72px) 0;
-    border-top:1px solid rgba(249,244,235,.1);
-  }
-  .universe-header{
-    display:flex;
-    align-items:flex-end;
-    justify-content:space-between;
-    gap:20px;
-    margin-bottom:24px;
-    flex-wrap:wrap;
-  }
-  .universe-title{
-    font-family:var(--serif);
-    font-size:clamp(1.8rem,3.4vw,2.6rem);
-    font-weight:400;
-    line-height:1.2;
-    margin:6px 0 0;
-  }
-
-  /* Universe Cards Grid (Exact parity with Screen 2) */
-  .universe-grid{
-    display:grid;
-    gap:20px;
-  }
-  @media(min-width:680px){
-    .universe-grid{
-      grid-template-columns:repeat(2,1fr);
-    }
-  }
-  @media(min-width:1040px){
-    .universe-grid{
-      grid-template-columns:1.3fr 1fr 1fr;
-    }
-  }
-
-  /* Daily Mission Banner (Bottom of Screen 2) */
-  .mission-bottom-banner{
-    background:#1E1612;
-    border:1px solid rgba(249,244,235,.14);
-    border-radius:20px;
-    overflow:hidden;
-    margin:clamp(40px,6vw,80px) 0;
-    display:grid;
-    position:relative;
-    box-shadow:0 24px 60px -20px rgba(0,0,0,.7);
-  }
-  @media(min-width:860px){
-    .mission-bottom-banner{
-      grid-template-columns:320px 1fr;
-      align-items:center;
-    }
-  }
-  .mission-bottom-img{
-    width:100%;
-    height:100%;
-    min-height:240px;
-    object-fit:cover;
-  }
-  .mission-bottom-content{
-    padding:clamp(28px,4vw,48px);
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-  }
+  :root{--card:var(--bg-2)}
+  html[data-theme="ivory"]{--card:#FFFFFF}
+  body{background:var(--bg);color:var(--ink)}
+  .d-dash{max-width:1240px;margin:0 auto;padding:22px clamp(14px,2.4vw,32px) 60px;display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:22px;align-items:start}
+  .d-col{display:grid;gap:18px;min-width:0}
+  .d-card{background:var(--card);border:1px solid var(--ink-12);border-radius:20px;padding:22px}
+  .d-mission{display:grid;grid-template-columns:minmax(0,1fr) 38%;gap:22px;align-items:center}
+  .d-mission__ic{width:52px;height:52px;border-radius:14px;background:var(--terra);display:grid;place-items:center;margin-bottom:12px}
+  .d-mission__ic svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+  .d-chip{font:700 11px/1 var(--sans);letter-spacing:.04em;padding:6px 10px;border-radius:99px;text-transform:uppercase}
+  .d-chip--g{background:rgba(34,160,90,.14);color:#15803d}.d-chip--y{background:rgba(229,178,75,.2);color:var(--gold-d)}
+  .d-mission h1{font:800 clamp(1.4rem,2.2vw,1.9rem)/1.2 var(--sans);margin:4px 0 14px;color:var(--ink)}
+  .d-dash .muted,.d-dash .small{color:var(--ink-50)}
+  .d-dash b{color:var(--ink)}
+  .d-mission__img{border-radius:16px;overflow:hidden;aspect-ratio:16/10}
+  .d-mission__img img{width:100%;height:100%;object-fit:cover;display:block}
+  .btn-go{display:inline-flex;align-items:center;gap:8px;border-radius:10px;padding:11px 20px;background:var(--terra);color:#fff;text-decoration:none;font:700 14px var(--sans)}
+  .d-bar{height:8px;border-radius:99px;background:var(--ink-12);overflow:hidden}
+  .d-bar i{display:block;height:100%;background:var(--terra);border-radius:99px}
+  .d-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .d-tabs button{border:1.5px solid var(--ink-12);background:var(--card);color:var(--ink);border-radius:14px;padding:14px 12px;cursor:pointer;
+    font:800 12.5px/1.2 var(--sans);letter-spacing:.05em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px}
+  .d-tabs button.on{border-color:var(--terra);color:var(--terra);box-shadow:0 0 0 3px var(--terra-06)}
+  .d-tabs em{font-style:normal;font-size:10.5px;padding:3px 7px;border-radius:99px;background:var(--ink-06);color:var(--ink-70)}
+  .d-tilegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+  .d-tile{display:block;padding:16px;border-radius:14px;border:1px solid var(--ink-12);background:var(--bg);color:var(--ink);text-decoration:none}
+  .d-tile b{display:block;font-size:15px}.d-tile span{font-size:13px;color:var(--ink-50)}
+  .d-tile:hover{border-color:var(--terra)}
+  .d-journey{border-radius:14px;overflow:hidden;margin:10px 0 12px;aspect-ratio:16/8}
+  .d-journey img{width:100%;height:100%;object-fit:cover;display:block}
+  .d-pills{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+  .d-pills button{border:0;border-radius:99px;padding:7px 13px;background:var(--ink-06);color:var(--ink-70);font:700 12.5px var(--sans);cursor:pointer}
+  .d-pills button.on{background:var(--terra);color:#fff}
+  @media(max-width:1020px){.d-dash{grid-template-columns:minmax(0,1fr)}.d-mission{grid-template-columns:1fr}}
+  @media(max-width:560px){.d-tabs{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -224,241 +59,86 @@
 <script src="assets/js/data/cases.js?v=3"></script>
 <script src="assets/js/data/exam-items.js?v=8"></script>
 <script src="assets/js/app.js?v=21"></script>
-<script src="assets/js/social-ui.js?v=1"></script>
+<script src="assets/js/social-ui.js?v=2"></script>
 <script>
 appShell('hoc.html');
 const app = document.getElementById('app');
+app.className = '';
 
-function renderDashboard() {
+function renderDashboard(user) {
   const s = S.get();
-  const xpChip = document.getElementById('topXpChip');
-  if (xpChip) xpChip.textContent = `${fmt(s.xp)} XP`;
-
   const doneCount = Object.keys(s.done || {}).length;
   const totalLessons = ALL.length;
   const pct = Math.min(100, Math.round((doneCount / Math.max(1, totalLessons)) * 100));
-  const rk = typeof rank === 'function' ? rank(s) : { t: 'Strategist' };
   const nk = nextLesson(s) || ALL[0].key;
-  const nm = lessonMeta(nk);
-
-  /* Case Universe items (Curated from real campaigns matching Screen 2) */
-  const universeCases = [
-    {
-      id: 'case-apple-1984',
-      badge: 'CHIẾN LƯỢC THƯƠNG HIỆU',
-      title: 'Lần tái định vị đỉnh cao của Apple',
-      category: 'chien-luoc',
-      img: 'assets/img/hero_model.jpg',
-      href: 'case/apple-1984.html'
-    },
-    {
-      id: 'case-nike-dream-crazy',
-      badge: 'TĂNG TRƯỞNG',
-      title: 'Cách Nike biến một insight thành phong trào toàn cầu',
-      category: 'tang-truong',
-      img: 'assets/img/billboard_city.jpg',
-      href: 'case/nike-dream-crazy.html'
-    },
-    {
-      id: 'case-highlands-third-place',
-      badge: 'SẢN PHẨM',
-      title: 'Chiến lược premium hoá của Highlands Coffee',
-      category: 'san-pham',
-      img: 'assets/img/coffee_aesthetic.jpg',
-      href: 'case/highlands-third-place.html'
-    },
-    {
-      id: 'case-dove-real-beauty',
-      badge: 'SÁNG TẠO',
-      title: 'Bài học từ chiến dịch "Real Beauty" của Dove',
-      category: 'sang-tao',
-      img: 'assets/img/model_thinking.jpg',
-      href: 'case/dove-real-beauty.html'
-    },
-    {
-      id: 'case-baemin-vietnam',
-      badge: 'THƯƠNG HIỆU VIỆT',
-      title: 'Cách Baemin chiếm trọn trái tim người trẻ thành thị',
-      category: 'viet-nam',
-      img: 'assets/og/case-baemin-vietnam.png',
-      href: 'case/baemin-vietnam.html'
-    },
-    {
-      id: 'case-bitis-hunter',
-      badge: 'THƯƠNG HIỆU VIỆT',
-      title: 'Biti\'s Hunter: Đi để trở về & Sự hồi sinh di sản',
-      category: 'viet-nam',
-      img: 'assets/og/case-bitis-hunter.png',
-      href: 'case/bitis-hunter.html'
-    }
-  ];
+  const nm = lessonMeta(nk), w = where(nk);
+  const stageN = w ? STAGES.indexOf(w.stage) + 1 : 1, lessonN = w ? w.mod.lessons.indexOf(nk) + 1 : 1;
+  const goHref = 'bai.html?id=' + encodeURIComponent(nk);
+  const hello = user && user.name ? `Chào ${escH(user.name.split(' ').slice(-1)[0])}, ` : '';
 
   app.innerHTML = `
-    <!-- 1. HERO WORKSPACE & PROGRESS -->
-    <section class="dash-hero">
-      <div class="dash-hero-grid">
-        <!-- Left: Greetings & Floating Progress -->
+  <div class="d-dash">
+    <div class="d-col">
+      <section class="d-card d-mission">
         <div>
-          <span class="dash-eyebrow">CHÀO BẠN TRỞ LẠI,</span>
-          <h1 class="dash-title">
-            Hành trình hôm nay:<br>
-            <em>Tiếp tục phá vỡ những lối mòn</em>
-          </h1>
-
-          <!-- Floating Progress Card -->
-          <div class="progress-card-floating">
-            <div class="row between">
-              <span class="lbl" style="color:var(--ink-dark-70)">LỘ TRÌNH CỦA BẠN</span>
-              <span class="gold" style="font-size:13px;font-weight:700">${pct}% HOÀN THÀNH</span>
-            </div>
-            <div>
-              <b style="font-family:var(--serif);font-size:1.35rem;display:block;margin-bottom:4px">
-                ${escH(rk ? rk.t : 'Management Trainee')}
-              </b>
-              <span class="small muted" style="color:var(--ink-dark-50)">
-                Đã giải quyết ${doneCount}/${totalLessons} case thực tế
-              </span>
-            </div>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar-fill" style="width:${Math.max(8, pct)}%"></div>
-            </div>
-            <a class="btn btn--primary" href="bai.html?id=${encodeURIComponent(nk)}" style="align-self:flex-start;border-radius:99px;padding:10px 22px;margin-top:4px">
-              Tiếp tục học →
-            </a>
+          <div class="d-mission__ic"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19V5"/></svg></div>
+          <div class="chips"><span class="d-chip d-chip--g">● Nhiệm vụ đang học</span><span class="d-chip d-chip--y">⚡ +10 XP khi hoàn thành</span></div>
+          <div class="small muted">Chặng ${stageN} · Bài ${lessonN}</div>
+          <h1>${hello ? `<span style="font-weight:600;color:var(--ink-50);font-size:.7em;display:block">${hello}tiếp tục nhé</span>` : ''}${escH(nm ? nm.t : 'Bắt đầu bài đầu tiên')}</h1>
+          <a class="btn-go" href="${goHref}">Học tiếp →</a>
+          <div style="display:flex;align-items:center;gap:12px;margin-top:16px;font-size:13px;color:var(--ink-70)">
+            <span style="white-space:nowrap">Tiến độ (${doneCount}/${totalLessons} bài)</span><div class="d-bar" style="flex:1"><i style="width:${Math.max(1, pct)}%"></i></div><b>${pct}%</b>
           </div>
         </div>
+        <div class="d-mission__img"><img src="assets/img/studio_workspace.jpg" alt=""></div>
+      </section>
+      <a href="hoc-bai.html" style="font-size:14px;color:var(--ink-70);text-decoration:none">📖 Xem toàn bộ bài học →</a>
 
-        <!-- Right: Studio Workspace Frame -->
-        <div class="workspace-frame">
-          <img src="assets/img/studio_workspace.jpg" alt="Creative Studio Workspace">
-          <div class="workspace-note">
-            Ideas. People.<br>Culture. Business.<br>A better world.
-          </div>
-        </div>
+      <div class="d-tabs" role="tablist">
+        <button class="on" data-tab="q" role="tab">🎁 Thưởng &amp; nhiệm vụ</button>
+        <button data-tab="m" role="tab">🧭 Bản đồ 30 cấp &amp; mục tiêu nghề</button>
+        <button data-tab="a" role="tab">⚔️ Đấu trường &amp; luyện tập</button>
       </div>
-    </section>
+      <section class="d-card" id="tabBody"></section>
+    </div>
 
-    <!-- 1b. CHUỖI NGÀY · BẢNG XẾP HẠNG TUẦN · MỜI BẠN -->
-    <section class="social-row" id="socialRow" aria-label="Chuỗi ngày, xếp hạng và mời bạn" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:0 0 36px">
-      <div id="sbStreak"></div><div id="sbBoard"></div><div id="sbInvite"></div>
-    </section>
-
-    <!-- 2. CASE UNIVERSE SECTION (Screen 2 Parity) -->
-    <section class="universe-section">
-      <div class="universe-header">
-        <div>
-          <span class="studio-badge studio-badge--terra">CASE UNIVERSE</span>
-          <h2 class="universe-title">Khám phá các thế giới marketing</h2>
-        </div>
-
-        <!-- Filter Pills -->
-        <div class="filter-pills" id="universeFilters">
-          <button class="filter-pill active" onclick="filterUniverse('all')">Tất cả</button>
-          <button class="filter-pill" onclick="filterUniverse('viet-nam')">Thương hiệu Việt</button>
-          <button class="filter-pill" onclick="filterUniverse('quoc-te')">Quốc tế</button>
-          <button class="filter-pill" onclick="filterUniverse('chien-luoc')">Chiến lược</button>
-          <button class="filter-pill" onclick="filterUniverse('sang-tao')">Sáng tạo</button>
-          <button class="filter-pill" onclick="filterUniverse('tang-truong')">Tăng trưởng</button>
-          <button class="filter-pill" onclick="filterUniverse('san-pham')">Sản phẩm</button>
-        </div>
+    <div class="d-col">
+      <div id="sbProfile"></div>
+      <section class="d-card">
+        <div style="display:flex;justify-content:space-between;align-items:center"><b>Hành trình của bạn</b><span class="d-chip d-chip--g">Cấp ${level(s.xp).n}</span></div>
+        <div class="d-journey"><img src="assets/img/hero_mountain.jpg" alt=""></div>
+        <a href="ban-do.html" class="btn-go" style="display:flex;justify-content:center;background:var(--bg);color:var(--ink);border:1px solid var(--ink-12)">Xem bản đồ hành trình →</a>
+      </section>
+      <div>
+        <div class="d-pills" id="boardPills"><button class="on" data-by="xp">Điểm tuần</button><button data-by="streak">Chuỗi ngày</button><button data-by="cases">Case</button></div>
+        <div id="sbBoard"></div>
       </div>
+      <div id="sbInvite"></div>
+    </div>
+  </div>`;
 
-      <!-- Universe Cards Grid -->
-      <div class="universe-grid" id="universeGrid">
-        ${universeCases.map(c => `
-          <a class="universe-card" href="${c.href}" data-cat="${c.category}">
-            <img class="universe-card__img" src="${c.img}" alt="${escH(c.title)}" loading="lazy">
-            <div class="universe-card__overlay">
-              <span class="universe-card__tag">${escH(c.badge)}</span>
-              <h3 class="universe-card__title">${escH(c.title)}</h3>
-            </div>
-          </a>
-        `).join('')}
-      </div>
-    </section>
-
-    <!-- 3. DAILY MISSION / BRIEF BANNER (Screen 2 Bottom Parity) -->
-    <section class="mission-bottom-banner">
-      <img class="mission-bottom-img" src="assets/img/hero_model.jpg" alt="Strategist Brief">
-      <div class="mission-bottom-content">
-        <div class="row between">
-          <span class="studio-badge studio-badge--terra">THỬ THÁCH HÔM NAY</span>
-          <span class="gold">+20 XP</span>
-        </div>
-        <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);margin:0;line-height:1.2">
-          Một brief mới đang chờ bạn.
-        </h2>
-        <p style="font-size:14.5px;color:rgba(249,244,235,.75);line-height:1.6;margin:0">
-          Áp dụng những gì đã học để giải quyết một bài toán marketing thực tế: 
-          Định vị lại sản phẩm cà phê cao cấp khi thị trường tràn ngập đối thủ giảm giá.
-        </p>
-        <div class="row" style="margin-top:10px">
-          <a class="btn btn--primary" href="quiz.html" style="border-radius:99px;padding:12px 28px">
-            Xác nhận lựa chọn →
-          </a>
-          <span class="hand" style="font-size:22px;color:#E5B4A8;margin-left:10px">
-            Good Strategy Brings Good Change.
-          </span>
-        </div>
-      </div>
-    </section>
-  `;
-}
-
-window.filterUniverse = function(cat) {
-  try {
-    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-    osc.type = 'triangle';
-    osc.frequency.setValueAtTime(420, audioCtx.currentTime);
-    gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
-    osc.connect(gain);
-    gain.connect(audioCtx.destination);
-    osc.start();
-    osc.stop(audioCtx.currentTime + 0.05);
-  } catch(e) {}
-
-  const pills = document.querySelectorAll('.filter-pill');
-  pills.forEach(p => p.classList.remove('active'));
-  event.target.classList.add('active');
-
-  const cards = document.querySelectorAll('.universe-card');
-  cards.forEach(c => {
-    if (cat === 'all' || c.dataset.cat === cat || (cat === 'quoc-te' && c.dataset.cat !== 'viet-nam')) {
-      c.style.display = 'flex';
-      c.style.animation = 'stamp-slam .25s ease-out';
-    } else {
-      c.style.display = 'none';
-    }
+  const body = document.getElementById('tabBody');
+  const tiles = (arr) => `<div class="d-tilegrid">${arr.map(([t, d, h]) => `<a class="d-tile" href="${h}"><b>${t}</b><span>${d}</span></a>`).join('')}</div>`;
+  const TAB = {
+    q: () => { body.innerHTML = '<div id="qList"></div>'; SocialUI.questsPanel(document.getElementById('qList'), goHref); },
+    m: () => { body.innerHTML = tiles([['Bản đồ 30 cấp', 'Xem bạn đang ở đâu trên hành trình', 'ban-do.html'], ['Học theo nghề', 'Chọn mục tiêu nghề nghiệp', 'ban-do.html'], ['Kỹ năng & triện', 'Mức thành thạo từng kỹ năng', 'nang-luc.html'], ['Rương thưởng', 'Mở rương và xem phần thưởng', 'ruong.html']]); },
+    a: () => { body.innerHTML = tiles([['Quiz', 'Làm nhanh, nhận XP', 'quiz.html'], ['Thi vượt chặng', 'Chứng minh bạn đã nắm chặng', 'thi.html'], ['Game Kingdom', 'Đấu trường và boss', 'kingdom.html'], ['Luyện phỏng vấn', 'Tập trả lời như thật', 'phong-van.html']]); },
+  };
+  document.querySelectorAll('[data-tab]').forEach((b) => b.onclick = () => {
+    document.querySelectorAll('[data-tab]').forEach((x) => x.classList.toggle('on', x === b)); TAB[b.dataset.tab]();
   });
-};
+  TAB.q();
 
-function initUniverseTilt() {
-  const cards = document.querySelectorAll('.universe-card, .progress-card-floating');
-  cards.forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      const rotateX = (-y / (rect.height / 2)) * 6;
-      const rotateY = (x / (rect.width / 2)) * 6;
-      card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-    });
+  SocialUI.profileCard(document.getElementById('sbProfile'), user);
+  const board = (by) => SocialUI.boardCard(document.getElementById('sbBoard'), by);
+  board('xp');
+  document.querySelectorAll('#boardPills [data-by]').forEach((b) => b.onclick = () => {
+    document.querySelectorAll('#boardPills [data-by]').forEach((x) => x.classList.toggle('on', x === b)); board(b.dataset.by);
   });
-}
-
-renderDashboard();
-if (typeof SocialUI !== 'undefined') {
-  SocialUI.streakCard(document.getElementById('sbStreak'));
-  SocialUI.boardCard(document.getElementById('sbBoard'));
   SocialUI.inviteCard(document.getElementById('sbInvite'));
 }
-setTimeout(initUniverseTilt, 150);
+
+account().then((u) => renderDashboard(u || {})).catch(() => renderDashboard({}));
 </script>
 </body>
 </html>

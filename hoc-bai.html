@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Học bài — Tự Học Marketing Case</title>
-<script>location.replace('hoc.html' + location.search);</script>
+<script>if(window.top!==window.self)document.documentElement.classList.add("framed")</script>
+
 <meta name="description" content="Lộ trình học: bài đang học, các chặng và module, câu sai cần ôn, thử thách mỗi ngày và luyện tập không giới hạn.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%233b2416%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27Arial%27 font-weight=%27800%27 font-size=%2716%27 text-anchor=%27middle%27 fill=%27%23fff%27%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -280,6 +281,9 @@ svg.i{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-widt
 .next>span:not(.troph){flex:1 1 calc(100% - 52px)}
 .next strong{text-transform:none;font-family:var(--serif);font-weight:500;font-size:15px;margin-top:2px}
 .next a{margin-left:52px}
+/* Chạy trong khung app.html thì thanh điều hướng của khung là duy nhất: ẩn thanh riêng của trang. */
+.framed .side,.framed .mtop{display:none!important}
+.framed .shell{padding-left:0!important}
 </style>
 </head>
 <body>

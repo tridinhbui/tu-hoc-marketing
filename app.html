@@ -5,61 +5,104 @@
 <title>Tự Học Marketing Case</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23C85A32'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23FAF3E7'%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=12">
+<link rel="stylesheet" href="assets/css/case.css?v=13">
+<script>
+/* Chọn giao diện trước khi vẽ để không chớp. Mặc định là SÁNG; người dùng cũ đang ở tối được chuyển một lần. */
+(function(){
+  try{
+    var s=JSON.parse(localStorage.getItem('thmc.v1')||'{}');
+    if(!localStorage.getItem('thmc.themeV2')){ s.theme='ivory'; localStorage.setItem('thmc.v1',JSON.stringify(s)); localStorage.setItem('thmc.themeV2','1'); }
+    document.documentElement.dataset.theme = s.theme==='ivory' ? 'ivory' : '';
+  }catch(e){ document.documentElement.dataset.theme='ivory'; }
+})();
+</script>
 <style>
-  /* KHUNG ỨNG DỤNG: thanh điều hướng dọc nằm cố định bên phải, tải đúng MỘT lần.
-     Mọi trang học chạy trong khung bên trái; đổi trang chỉ đổi khung đó, thanh điều hướng không bao giờ bị dựng lại. */
-  :root{--side-w:248px}
-  html,body{height:100%;margin:0;overflow:hidden;background:#130E0B}
+  /* KHUNG ỨNG DỤNG: thanh điều hướng dọc nằm cố định bên TRÁI, tải đúng MỘT lần.
+     Mọi trang học chạy trong khung bên phải; đổi trang chỉ đổi khung đó, thanh điều hướng không bao giờ bị dựng lại. */
+  :root{--side-w:268px;
+    --r-bg:#1A130F;--r-ink:#F9F4EB;--r-ink2:rgba(249,244,235,.62);--r-line:rgba(249,244,235,.1);--r-hover:rgba(249,244,235,.07);
+    --r-act-bg:rgba(200,90,50,.22);--r-act:#F2A07F;--r-field:rgba(249,244,235,.07);--r-pill:rgba(249,244,235,.08);--page:#130E0B;}
+  html[data-theme="ivory"]{--r-bg:#FFFFFF;--r-ink:#24160E;--r-ink2:rgba(36,22,14,.62);--r-line:rgba(36,22,14,.1);--r-hover:rgba(36,22,14,.05);
+    --r-act-bg:#FCE9E0;--r-act:#B8451F;--r-field:#F1ECE4;--r-pill:#F6F1E9;--page:#F7F0E6;}
+  html,body{height:100%;margin:0;overflow:hidden;background:var(--page)}
   body{padding:0!important}
-  .shell{position:fixed;inset:0;display:grid;grid-template-columns:minmax(0,1fr) var(--side-w)}
-  .stage{position:relative;min-width:0;height:100%;background:#130E0B}
-  .stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#130E0B;display:block}
+  .shell{position:fixed;inset:0;display:grid;grid-template-columns:var(--side-w) minmax(0,1fr)}
+  .stage{position:relative;min-width:0;height:100%;background:var(--page)}
+  .stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:var(--page);display:block}
   .stage__load{position:absolute;left:0;top:0;height:2px;width:0;background:var(--terra,#C85A32);transition:width .25s ease;z-index:2}
 
-  .rail{
-    height:100%;display:flex;flex-direction:column;box-sizing:border-box;
-    background:#1A130F;border-left:1px solid rgba(249,244,235,.1);
-    padding:18px 14px 14px;overflow-y:auto;color:#F9F4EB;
-  }
-  .rail__logo{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:#F9F4EB;font-family:var(--serif,Georgia,serif);font-size:1.25rem;line-height:1.15;padding:4px 8px 16px;border-bottom:1px solid rgba(249,244,235,.1)}
-  .rail__logo b{color:var(--terra,#C85A32);font-weight:600}
-  .rail__badge{align-self:flex-start;font:700 10px/1 var(--sans,system-ui);letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;border-radius:99px;background:rgba(200,90,50,.18);color:var(--terra,#C85A32);border:1px solid rgba(200,90,50,.35)}
-  .rail__nav{display:flex;flex-direction:column;gap:4px;margin-top:14px}
-  .rail__nav a{
-    display:flex;align-items:center;gap:10px;min-height:42px;padding:0 12px;border-radius:12px;
-    color:rgba(249,244,235,.74);text-decoration:none;font:600 15px/1.2 var(--sans,system-ui);
-    border:1px solid transparent;
-  }
-  .rail__nav a:hover{background:rgba(249,244,235,.07);color:#fff}
-  .rail__nav a[aria-current="page"]{background:var(--terra,#C85A32);color:#fff}
-  .rail__nav svg{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-  .rail__nav em{margin-left:auto;font-style:normal;font-size:11px;font-weight:700;background:#fff;color:#C85A32;border-radius:99px;padding:2px 7px}
-  .rail__sub{margin-top:18px;padding-top:12px;border-top:1px solid rgba(249,244,235,.1);display:flex;flex-direction:column;gap:2px}
-  .rail__sub a{font:500 13.5px/1.2 var(--sans,system-ui);color:rgba(249,244,235,.6);text-decoration:none;padding:8px 12px;border-radius:10px}
-  .rail__sub a:hover{background:rgba(249,244,235,.07);color:#fff}
-  .rail__sub a[aria-current="page"]{color:#fff;background:rgba(249,244,235,.12)}
-  .rail__me{margin-top:auto;padding-top:16px}
-  .rail__card{display:grid;gap:8px;padding:12px;border-radius:14px;background:rgba(249,244,235,.06);border:1px solid rgba(249,244,235,.1);text-decoration:none;color:#F9F4EB}
-  .rail__who{display:flex;align-items:center;gap:10px;min-width:0}
-  .rail__av{width:34px;height:34px;flex:none;border-radius:50%;background:var(--terra,#C85A32);color:#fff;display:grid;place-items:center;font-weight:700}
-  .rail__name{font:600 14px/1.2 var(--sans,system-ui);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .rail__sm{font:500 12px/1.3 var(--sans,system-ui);color:rgba(249,244,235,.6)}
-  .rail__bar{height:6px;border-radius:99px;background:rgba(249,244,235,.14);overflow:hidden}
-  .rail__bar i{display:block;height:100%;width:0;background:#E5B24B;border-radius:99px}
+  .rail{height:100%;display:flex;flex-direction:column;box-sizing:border-box;background:var(--r-bg);color:var(--r-ink);
+    border-right:1px solid var(--r-line);font-family:var(--sans,system-ui);position:relative;z-index:20}
+  .rail__scroll{flex:1;min-height:0;overflow-y:auto;padding:16px 12px 8px;scrollbar-width:thin}
+  .rail__logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--r-ink);padding:2px 8px 14px}
+  .rail__mark{width:36px;height:36px;border-radius:10px;background:var(--terra,#C85A32);display:grid;place-items:center;flex:none}
+  .rail__mark svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .rail__logo span{font:700 14px/1.15 var(--sans,system-ui);letter-spacing:.02em;text-transform:uppercase;color:var(--terra,#C85A32)}
+  .rail__logo span b{display:block;color:var(--r-ink);font-weight:700}
 
-  /* Điện thoại: thanh dọc thành ngăn kéo từ mép phải; nút mở cố định ở góc trên bên phải — vẫn là MỘT thanh duy nhất. */
+  .rail__search{position:relative;margin:0 0 10px}
+  .rail__search input{width:100%;box-sizing:border-box;height:40px;border-radius:12px;border:1px solid transparent;background:var(--r-field);color:var(--r-ink);
+    padding:0 52px 0 38px;font:500 14px var(--sans,system-ui);outline:none}
+  .rail__search input:focus{border-color:var(--terra,#C85A32);background:var(--r-bg)}
+  .rail__search input::placeholder{color:var(--r-ink2)}
+  .rail__search>svg{position:absolute;left:12px;top:12px;width:16px;height:16px;stroke:var(--r-ink2);fill:none;stroke-width:2;stroke-linecap:round}
+  .rail__search kbd{position:absolute;right:8px;top:9px;font:600 11px var(--sans);padding:3px 7px;border-radius:7px;background:var(--r-bg);color:var(--r-ink2);border:1px solid var(--r-line)}
+  .sres{position:absolute;left:0;right:0;top:46px;z-index:30;background:var(--r-bg);border:1px solid var(--r-line);border-radius:14px;padding:6px;box-shadow:0 18px 40px -14px rgba(0,0,0,.4);display:none;max-height:340px;overflow:auto}
+  .sres.on{display:block}
+  .sres a{display:block;padding:9px 11px;border-radius:9px;color:var(--r-ink);text-decoration:none;font:500 13.5px/1.3 var(--sans)}
+  .sres a small{display:block;color:var(--r-ink2);font-size:11.5px}
+  .sres a.sel,.sres a:hover{background:var(--r-act-bg)}
+  .sres p{margin:8px 10px;color:var(--r-ink2);font-size:13px}
+
+  .nav a,.nav button.nv{display:flex;align-items:center;gap:11px;width:100%;box-sizing:border-box;min-height:40px;padding:0 12px;border-radius:12px;border:0;background:none;
+    color:var(--r-ink);text-decoration:none;font:600 14.5px/1.2 var(--sans,system-ui);cursor:pointer;text-align:left}
+  .nav a:hover,.nav button.nv:hover{background:var(--r-hover)}
+  .nav a[aria-current="page"]{background:var(--r-act-bg);color:var(--r-act)}
+  .nav svg.i{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.8}
+  .nav .tag{margin-left:auto;font:700 10px/1 var(--sans);letter-spacing:.04em;padding:4px 7px;border-radius:7px;text-transform:uppercase}
+  .tag--new{background:#DDF5E6;color:#17803D}.tag--hot{background:#FFF0C2;color:#9A6A00}.tag--chk{background:#FFF0C2;color:#9A6A00}
+  .nav em.due{margin-left:auto;font-style:normal;font-size:11px;font-weight:700;background:var(--terra,#C85A32);color:#fff;border-radius:99px;padding:2px 7px}
+  .nav .chev{margin-left:auto;width:15px;height:15px;stroke:var(--r-ink2);fill:none;stroke-width:2;transition:transform .15s}
+  .grp{margin-top:14px}
+  .grp__h{display:flex;align-items:center;gap:8px;width:100%;border:0;background:none;color:var(--terra,#C85A32);padding:6px 10px;cursor:pointer;
+    font:800 11.5px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+  .grp__h svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .grp__h .chev{margin-left:auto;stroke:var(--r-ink2)}
+  .grp[data-shut] .grp__body{display:none}.grp[data-shut] .grp__h .chev{transform:rotate(-90deg)}
+  .grp__body.box{border:1px solid var(--r-line);border-radius:16px;padding:6px;margin-top:4px;background:var(--r-pill)}
+  .sub{display:none;padding-left:18px}.sub.on{display:block}
+  .has.on .chev{transform:rotate(90deg)}
+
+  .rail__foot{padding:10px 12px 12px;border-top:1px solid var(--r-line);position:relative}
+  .rail__row{display:flex;gap:8px;margin-bottom:10px}
+  .coin{flex:1;display:flex;align-items:center;gap:8px;height:40px;padding:0 12px;border-radius:12px;background:var(--r-pill);border:1px solid var(--r-line);
+    color:var(--r-ink);text-decoration:none;font:600 13px var(--sans)}
+  .coin i{width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFE08A,#E0A100);flex:none}
+  .coin b{margin-left:auto}
+  .bell{position:relative;width:42px;height:40px;border-radius:12px;border:1px solid var(--r-line);background:var(--r-pill);color:var(--r-ink);cursor:pointer;display:grid;place-items:center}
+  .bell svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+  .bell em{position:absolute;top:-7px;right:-6px;min-width:20px;height:20px;border-radius:99px;background:#E0344F;color:#fff;font:700 11px/20px var(--sans);text-align:center;padding:0 5px;font-style:normal}
+  .rail__card{display:flex;align-items:center;gap:10px;padding:10px;border-radius:14px;background:var(--r-pill);border:1px solid var(--r-line);text-decoration:none;color:var(--r-ink)}
+  .rail__who{display:flex;align-items:center;gap:10px;min-width:0;flex:1}
+  .rail__av{width:38px;height:38px;flex:none;border-radius:50%;background:var(--terra,#C85A32);color:#fff;display:grid;place-items:center;font-weight:700;overflow:hidden}
+  .rail__av img{width:100%;height:100%;object-fit:cover;display:block}
+  .rail__name{font:700 14px/1.2 var(--sans,system-ui);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+  .rail__sm{font:500 12px/1.3 var(--sans,system-ui);color:var(--r-ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+  .rail__card .chev{width:16px;height:16px;stroke:var(--r-ink2);fill:none;stroke-width:2;flex:none}
+  .rail__bar{display:block;height:4px;border-radius:99px;background:var(--r-line);overflow:hidden;margin:8px 2px 0}
+  .rail__bar i{display:block;height:100%;width:0;background:#E5B24B;border-radius:99px}
+  .rail__me{position:relative}
+
   .rail__open,.rail__scrim,.mbar{display:none}
   @media(max-width:860px){
     .shell{grid-template-columns:minmax(0,1fr)}
-    .rail{position:fixed;top:0;right:0;bottom:0;width:min(84vw,300px);z-index:60;transform:translateX(102%);transition:transform .22s ease;box-shadow:-18px 0 40px rgba(0,0,0,.45)}
+    .rail{position:fixed;top:0;left:0;bottom:0;width:min(86vw,300px);z-index:60;transform:translateX(-102%);transition:transform .22s ease;box-shadow:18px 0 40px rgba(0,0,0,.35)}
     .rail[data-open]{transform:none}
-    /* thanh nhỏ cố định phía trên: logo + nút mở thanh dọc. Thuộc khung nên không đổi khi chuyển trang. */
-    .mbar{display:flex;align-items:center;justify-content:space-between;position:fixed;top:0;left:0;right:0;height:56px;z-index:50;padding:0 8px 0 16px;background:#1A130F;border-bottom:1px solid rgba(249,244,235,.1);font-family:var(--serif,Georgia,serif);font-size:1.1rem;color:#F9F4EB}
-    .mbar b{color:var(--terra,#C85A32);font-weight:600}
+    .mbar{display:flex;align-items:center;position:fixed;top:0;left:0;right:0;height:56px;z-index:50;padding:0 8px 0 64px;background:var(--r-bg);border-bottom:1px solid var(--r-line);color:var(--r-ink);font:700 14px var(--sans)}
+    .mbar b{color:var(--terra,#C85A32);font-weight:700;margin-right:5px}
     .stage iframe{top:56px;height:calc(100% - 56px)}
     .stage__load{top:56px}
-    .rail__open{display:grid;place-items:center;position:fixed;top:6px;right:8px;z-index:51;width:44px;height:44px;border-radius:50%;border:1px solid rgba(249,244,235,.2);background:transparent;color:#F9F4EB;cursor:pointer}
+    .rail__open{display:grid;place-items:center;position:fixed;top:6px;left:8px;z-index:51;width:44px;height:44px;border-radius:50%;border:1px solid var(--r-line);background:var(--r-bg);color:var(--r-ink);cursor:pointer}
     .rail[data-open] ~ .rail__open{visibility:hidden}
     .rail__open svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
     .rail__scrim{position:fixed;inset:0;z-index:58;background:rgba(0,0,0,.5)}
@@ -69,28 +112,41 @@
 </style>
 </head>
 <body>
-<noscript><p style="padding:24px;color:#F9F4EB">Trang này cần JavaScript. <a href="hoc.html" style="color:#E5B24B">Mở bài học</a>.</p></noscript>
+<noscript><p style="padding:24px">Trang này cần JavaScript. <a href="hoc.html" style="color:#C85A32">Mở bài học</a>.</p></noscript>
 <a class="skip" href="#frame">Tới nội dung chính</a>
 
 <div class="shell">
+  <aside class="rail" id="rail" aria-label="Điều hướng">
+    <div class="rail__scroll">
+      <a class="rail__logo" href="hoc.html" data-go><span class="rail__mark"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 9c0-3 3-5 7-5M19 15c0 3-3 5-7 5M5 9c0 3 3 4 7 4s7 1 7 4"/></svg></span><span>Tự Học<b>Marketing</b></span></a>
+      <div class="rail__search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="sq" type="search" placeholder="Tìm kiếm…" autocomplete="off" aria-label="Tìm bài học và mục">
+        <kbd>⌘K</kbd><div class="sres" id="sres" role="listbox"></div>
+      </div>
+      <nav class="nav" id="nav" aria-label="Chính"></nav>
+    </div>
+    <div class="rail__foot">
+      <div class="rail__row">
+        <a class="coin" id="coin" href="shop.html" data-go title="Túi vàng"><i></i><span>Túi vàng</span><b id="coinN">—</b></a>
+        <button class="bell" id="bell" type="button" aria-label="Tin nhắn mới"><svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 1112 0c0 7 3 8 3 8H3s3-1 3-8"/><path d="M10 20a2 2 0 004 0"/></svg><em id="bellN" hidden></em></button>
+      </div>
+      <div class="rail__me">
+        <a class="rail__card" id="me" href="tai-khoan.html" data-go>
+          <span class="rail__who"><span class="rail__av" id="av">?</span><span style="min-width:0;flex:1"><span class="rail__name" id="nm">Tài khoản</span><span class="rail__sm" id="sm">&nbsp;</span></span></span>
+          <svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <span class="rail__bar" aria-hidden="true"><i id="xpbar"></i></span>
+      </div>
+    </div>
+  </aside>
+
   <main class="stage" id="main">
     <div class="stage__load" id="load" aria-hidden="true"></div>
     <iframe id="frame" title="Nội dung" src="about:blank"></iframe>
   </main>
-
-  <aside class="rail" id="rail" aria-label="Điều hướng">
-    <a class="rail__logo" href="hoc.html" data-go><span><b>Tự Học</b> Marketing Case</span><span class="rail__badge">Studio</span></a>
-    <nav class="rail__nav" id="nav" aria-label="Chính"></nav>
-    <div class="rail__sub" id="sub" aria-label="Công cụ"></div>
-    <div class="rail__me">
-      <a class="rail__card" id="me" href="tai-khoan.html" data-go>
-        <span class="rail__who"><span class="rail__av" id="av">?</span><span style="min-width:0"><span class="rail__name" id="nm" style="display:block">Tài khoản</span><span class="rail__sm" id="sm">&nbsp;</span></span></span>
-        <span class="rail__bar" aria-hidden="true"><i id="xpbar"></i></span>
-      </a>
-    </div>
-  </aside>
 </div>
-<div class="mbar" aria-hidden="true"><span><b>Tự Học</b> Marketing Case</span></div>
+<div class="mbar" aria-hidden="true"><b>Tự Học</b> Marketing</div>
 <button class="rail__open" id="open" type="button" aria-label="Mở menu" aria-controls="rail" aria-expanded="false">
   <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
 </button>
@@ -102,37 +158,81 @@
 <script src="assets/js/data/bai-index.js?v=11"></script>
 <script src="assets/js/data/drills.js?v=3"></script>
 <script src="assets/js/app.js?v=21"></script>
-<script src="assets/js/social.js?v=2"></script>
+<script src="assets/js/social.js?v=3"></script>
 <script>
 /* Khung chỉ làm bốn việc: dựng thanh dọc một lần; nạp trang vào khung; đánh dấu mục đang ở; giữ địa chỉ trên thanh URL
    khớp với trang đang xem (để tải lại hay chia sẻ liên kết vẫn về đúng chỗ). Nội dung trang do chính trang đó lo. */
-const NAV = [
-  { t:'Học',        h:'hoc.html',            i:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>',
-    m:['hoc.html','hoc-bai.html','bai.html','lesson.html','principle.html','library.html'] },
-  { t:'Lộ trình',   h:'ban-do.html',         i:'<circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 000-6H9a3 3 0 010-6h6.5"/>',
-    m:['ban-do.html','roadmap.html','xep-lop.html'] },
-  { t:'Case',       h:'case-thu-vien.html',  i:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18"/>',
-    m:['case-thu-vien.html','giai-case.html','gallery.html','campaign.html','brand.html','xray.html'] },
-  { t:'Thử thách',  h:'quiz.html',           i:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
-    m:['quiz.html','thi.html','luyen.html','challenge.html','tro-choi.html','phong-van.html'] },
-  { t:'Ôn lỗi',     h:'on-loi.html',         i:'<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/>', due:true, m:['on-loi.html'] },
-  { t:'Kỹ năng',    h:'nang-luc.html',       i:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 12l6-6"/>', m:['nang-luc.html','ruong.html'] },
-  { t:'Cộng đồng',  h:'cong-dong.html',      i:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0"/><path d="M16 4.5a3.5 3.5 0 010 7M18 20a6 6 0 00-2.5-4.9"/>',
-    m:['cong-dong.html','bang-xep-hang.html'] },
+const IC = {
+  home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>',
+  chat:'<path d="M21 12a8 8 0 01-11.5 7.2L4 20l1-4.3A8 8 0 1121 12z"/>',
+  compass:'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+  book:'<path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19V5"/>',
+  route:'<circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 000-6H9a3 3 0 010-6h6.5"/>',
+  medal:'<circle cx="12" cy="9" r="5"/><path d="M9 13.5L7 21l5-3 5 3-2-7.5"/>',
+  cap:'<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>',
+  trophy:'<path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0z"/><path d="M17 5h3v2a3 3 0 01-3 3M7 5H4v2a3 3 0 003 3"/>',
+  game:'<rect x="2" y="7" width="20" height="11" rx="4"/><path d="M7 10v5M4.5 12.5h5M16 11h.01M18.5 14h.01"/>',
+  brief:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18"/>',
+  term:'<path d="M4 17l6-6-6-6"/><path d="M12 19h8"/>',
+  bank:'<path d="M3 10l9-6 9 6M5 10v8M9 10v8M15 10v8M19 10v8M3 20h18"/>',
+  users:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0"/><path d="M16 4.5a3.5 3.5 0 010 7M18 20a6 6 0 00-2.5-4.9"/>',
+  redo:'<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/>',
+  sprout:'<path d="M12 21v-9"/><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6zM12 14c0-3-2-5-6-5 0 3 2 5 6 5z"/>',
+  flask:'<path d="M9 3h6M10 3v6L4.5 19a1.5 1.5 0 001.3 2h12.4a1.5 1.5 0 001.3-2L14 9V3"/>',
+  people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0112 0M15 20a5 5 0 016 0"/>',
+};
+const ico = (k, c = 'i') => `<svg class="${c}" viewBox="0 0 24 24" aria-hidden="true">${IC[k] || ''}</svg>`;
+const CHEV = '<svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>';
+/* [nhãn, tệp, biểu tượng, các tệp thuộc mục này, nhãn phụ] */
+const TOP = [
+  ['Dashboard', 'hoc.html', 'home', ['hoc.html', 'ruong.html']],
+  ['MarSocial', 'cong-dong.html', 'chat', ['cong-dong.html']],
 ];
-const SUB = [
-  { t:'Kế hoạch chiến dịch', h:'capstone.html',  m:['capstone.html','positioning.html','segmentation.html','unit-economics.html','pricing.html'] },
-  { t:'Thuật ngữ',           h:'thuat-ngu.html', m:['thuat-ngu.html'] },
-  { t:'Tài khoản',           h:'tai-khoan.html', m:['tai-khoan.html'] },
+const GROUPS = [
+  { t: 'Học tập', ic: 'sprout', box: true, items: [
+    ['Bắt đầu từ đầu', 'xep-lop.html', 'compass', ['xep-lop.html']],
+    ['Học bài', 'hoc-bai.html', 'book', ['hoc-bai.html', 'bai.html', 'lesson.html', 'principle.html', 'library.html']],
+    ['Học theo nghề', 'ban-do.html', 'route', ['ban-do.html', 'roadmap.html']],
+    { t: 'Chứng chỉ', ic: 'medal', kids: [
+      ['Kỹ năng & triện', 'nang-luc.html', 'medal', ['nang-luc.html']],
+      ['Kế hoạch chiến dịch', 'capstone.html', 'cap', ['capstone.html', 'positioning.html', 'segmentation.html', 'pricing.html']],
+    ] },
+  ] },
+  { t: 'Thực hành', ic: 'flask', items: [
+    ['Quiz', 'quiz.html', 'cap', ['quiz.html', 'challenge.html', 'luyen.html'], 'new'],
+    ['Thi vượt chặng', 'thi.html', 'trophy', ['thi.html']],
+    ['Game Kingdom', 'kingdom.html', 'game', ['kingdom.html', 'tro-choi.html', 'boss.html', 'pvp.html', 'shop.html'], 'hot'],
+    ['Luyện phỏng vấn', 'phong-van.html', 'brief', ['phong-van.html', 'interview.html']],
+    ['Mô phỏng công cụ', 'unit-economics.html', 'term', ['unit-economics.html']],
+    ['Ôn lỗi', 'on-loi.html', 'redo', ['on-loi.html'], 'due'],
+  ] },
+  { t: 'Cộng đồng', ic: 'users', items: [
+    ['Thư viện', 'case-thu-vien.html', 'bank', ['case-thu-vien.html', 'giai-case.html', 'gallery.html', 'campaign.html', 'brand.html', 'xray.html', 'thuat-ngu.html']],
+    ['Học nhóm', 'bang-xep-hang.html', 'people', ['bang-xep-hang.html'], 'chk'],
+  ] },
 ];
 /* Chỉ nhận tên file .html trong cùng thư mục — không cho `p` trỏ ra ngoài (chống open-redirect). */
 const SAFE = /^[a-z0-9][a-z0-9-]*\.html(\?[A-Za-z0-9_.:=&%-]*)?$/i;
 const frame = document.getElementById('frame'), rail = document.getElementById('rail');
-const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const TAG = { new: '<span class="tag tag--new">Tin mới</span>', hot: '<span class="tag tag--hot">Hot</span>', chk: '<span class="tag tag--chk">Check-in</span>', due: '<em class="due" hidden id="due"></em>' };
+const link = ([t, h, ic, m, tag]) => `<a href="${h}" data-go data-m="${m.join(',')}">${ico(ic)}<span>${t}</span>${TAG[tag] || ''}</a>`;
+const open = JSON.parse(localStorage.getItem('thmc.navShut') || '{}');
+document.getElementById('nav').innerHTML =
+  TOP.map(link).join('') +
+  GROUPS.map((g, gi) => `<div class="grp" data-g="${gi}" ${open[gi] ? 'data-shut' : ''}>
+    <button class="grp__h" type="button" aria-expanded="${open[gi] ? 'false' : 'true'}">${ico(g.ic, '')}<span>${g.t}</span>${CHEV}</button>
+    <div class="grp__body ${g.box ? 'box' : ''}">${g.items.map((it, ii) => Array.isArray(it) ? link(it)
+      : `<div class="has" data-has="${gi}-${ii}"><button type="button" class="nv">${ico(it.ic)}<span>${it.t}</span>${CHEV}</button>
+          <div class="sub">${it.kids.map(link).join('')}</div></div>`).join('')}</div></div>`).join('');
 
-document.getElementById('nav').innerHTML = NAV.map((n) =>
-  `<a href="${n.h}" data-go data-m="${n.m.join(',')}"><svg viewBox="0 0 24 24" aria-hidden="true">${n.i}</svg><span>${n.t}</span>${n.due ? '<em hidden id="due"></em>' : ''}</a>`).join('');
-document.getElementById('sub').innerHTML = SUB.map((n) => `<a href="${n.h}" data-go data-m="${n.m.join(',')}">${n.t}</a>`).join('');
+document.getElementById('nav').addEventListener('click', (e) => {
+  const h = e.target.closest('.grp__h');
+  if (h) { const g = h.parentElement, shut = g.toggleAttribute('data-shut'); h.setAttribute('aria-expanded', String(!shut));
+    open[g.dataset.g] = shut; try { localStorage.setItem('thmc.navShut', JSON.stringify(open)); } catch (x) {} return; }
+  const hs = e.target.closest('.has > button');
+  if (hs) { const p = hs.parentElement; p.classList.toggle('on'); p.querySelector('.sub').classList.toggle('on'); }
+});
 
 function target() {
   const p = new URLSearchParams(location.search).get('p') || 'hoc.html';
@@ -140,7 +240,9 @@ function target() {
 }
 function mark(file) {
   rail.querySelectorAll('a[data-m]').forEach((a) => {
-    if (a.dataset.m.split(',').includes(file)) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    const on = a.dataset.m.split(',').includes(file);
+    if (on) { a.setAttribute('aria-current', 'page'); const s = a.closest('.sub'); if (s) { s.classList.add('on'); s.parentElement.classList.add('on'); } }
+    else a.removeAttribute('aria-current');
   });
 }
 function refreshMe() {
@@ -166,6 +268,7 @@ frame.addEventListener('load', () => {
     const l = frame.contentWindow.location;
     if (l.href === 'about:blank') return;
     file = (l.pathname.split('/').pop() || 'hoc.html'); q = l.search;
+    if (!/\.html$/.test(file)) file += '.html';
     if (frame.contentDocument.title) document.title = frame.contentDocument.title;
   } catch (e) { return; }
   mark(file);
@@ -181,10 +284,38 @@ rail.addEventListener('click', (e) => {
   if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
   e.preventDefault();
   const href = a.getAttribute('href');
-  if (href === 'tai-khoan.html' || SAFE.test(href)) loadInto(href);
+  if (typeof Social !== 'undefined') Social.track('nav', href);
+  if (SAFE.test(href)) loadInto(href);
 });
 window.addEventListener('storage', refreshMe);
 setInterval(refreshMe, 4000);
+
+/* ---- Tìm kiếm nhanh (⌘K): mục điều hướng + bài học ---- */
+const sq = document.getElementById('sq'), sres = document.getElementById('sres');
+let hits = [], sel = 0;
+const flat = [...TOP, ...GROUPS.flatMap((g) => g.items.flatMap((i) => (Array.isArray(i) ? [i] : i.kids)))];
+function runSearch() {
+  const q = typeof normVN === 'function' ? normVN(sq.value.trim()) : sq.value.trim().toLowerCase();
+  if (!q) { sres.classList.remove('on'); return; }
+  const nav = flat.filter((i) => (typeof normVN === 'function' ? normVN(i[0]) : i[0].toLowerCase()).includes(q)).slice(0, 4)
+    .map((i) => ({ t: i[0], s: 'Mục điều hướng', h: i[1] }));
+  let les = [];
+  try { les = ALL.filter((x) => lessonHay(x.key).includes(q)).slice(0, 7).map((x) => { const m = lessonMeta(x.key); return { t: m ? m.t : x.key, s: x.mod.t, h: 'bai.html?id=' + encodeURIComponent(x.key) }; }); } catch (e) {}
+  hits = [...nav, ...les]; sel = 0;
+  sres.innerHTML = hits.length ? hits.map((h, i) => `<a href="${esc(h.h)}" data-i="${i}" class="${i === 0 ? 'sel' : ''}">${esc(h.t)}<small>${esc(h.s)}</small></a>`).join('') : '<p>Không có kết quả.</p>';
+  sres.classList.add('on');
+}
+function goHit(i) { const h = hits[i]; if (!h) return; sq.value = ''; sres.classList.remove('on'); loadInto(h.h); closeDrawer(); }
+sq.addEventListener('input', runSearch);
+sq.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); sel = Math.max(0, Math.min(hits.length - 1, sel + (e.key === 'ArrowDown' ? 1 : -1)));
+    sres.querySelectorAll('a').forEach((a, i) => a.classList.toggle('sel', i === sel)); }
+  else if (e.key === 'Enter') { e.preventDefault(); goHit(sel); }
+  else if (e.key === 'Escape') { sq.value = ''; sres.classList.remove('on'); sq.blur(); }
+});
+sres.addEventListener('mousedown', (e) => { const a = e.target.closest('a[data-i]'); if (a) { e.preventDefault(); goHit(+a.dataset.i); } });
+document.addEventListener('click', (e) => { if (!e.target.closest('.rail__search')) sres.classList.remove('on'); });
+document.addEventListener('keydown', (e) => { if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); sq.focus(); sq.select(); } });
 
 /* Ngăn kéo trên điện thoại. */
 const openBtn = document.getElementById('open'), scrim = document.getElementById('scrim');
