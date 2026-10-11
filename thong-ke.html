@@ -49,7 +49,7 @@
   .tk-empty{padding:34px 12px;text-align:center;color:var(--ink-dark-50)}
   @media(max-width:980px){.tk{grid-template-columns:1fr}.tk-podium{grid-template-columns:repeat(3,1fr)}}
 </style>
-<link rel="stylesheet" href="assets/css/paper.css?v=4">
+<link rel="stylesheet" href="assets/css/paper.css?v=5">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
@@ -93,7 +93,7 @@ async function render(){
   const my=d&&d.me, ahead=my?rows.find(r=>r.rank===my.rank-1):null;
   const gap=ahead&&my?Math.max(1,(ahead[by]||0)-(my[by]||0)+1):0;
   app.innerHTML=`<div class="tk"><div>
-    <section class="tk-card"><span class="tk-pill">♡ NHỊP HỌC & HỒ SƠ</span>
+    <section class="tk-card"><span class="tk-pill">NHỊP HỌC & HỒ SƠ</span>
       <div class="tk-tiles">
         <div class="tk-tile"><small>STREAK</small><b>${m.s.streak||0}</b><span>Kỷ lục ${m.s.best||m.s.streak||0} ngày</span></div>
         <div class="tk-tile"><small>QUIZ TB</small><b>${m.acc==null?'—':m.acc+'%'}</b><span>Chính xác</span></div>
@@ -106,7 +106,7 @@ async function render(){
       <div class="tk-dist">${m.stages.map((st,i)=>`<i style="flex:${Math.max(st.done,0)};background:${COLORS[i%6]}"></i>`).join('')}</div>
       <div class="tk-leg">${m.stages.map((st,i)=>`<div><i style="background:${COLORS[i%6]}"></i>${escH(st.t)}<span>${st.done}/${st.total}</span></div>`).join('')}</div></section>
   </div><div>
-    <section class="tk-card"><div class="tk-h"><div><span class="tk-pill tk-pill--gold">🏆 VINH DANH BXH</span><h3 style="font:600 2rem/1.1 var(--serif);margin-top:14px">Top 5 nổi bật</h3></div></div>
+    <section class="tk-card"><div class="tk-h"><div><span class="tk-pill tk-pill--gold">VINH DANH BXH</span><h3 style="font:600 2rem/1.1 var(--serif);margin-top:14px">Top 5 nổi bật</h3></div></div>
       <div class="tk-tabs">${Object.entries(COLS).map(([k,[l]])=>`<button class="${k===by?'on':''}" data-by="${k}">${l}</button>`).join('')}</div>
       ${!u?`<div class="tk-climb"><div><b>Đăng nhập để có tên trên bảng</b><p>Điểm tuần lấy từ tiến độ bạn đồng bộ.</p><a class="tk-pill tk-pill--gold" href="dang-nhap.html">Đăng nhập</a></div></div>`
       :my?`<div class="tk-climb"><div style="flex:1"><b>Bạn đang hạng #${my.rank} theo ${COLS[by][0].toLowerCase()} · ${fmt(my[by]||0)} ${COLS[by][1]}</b>

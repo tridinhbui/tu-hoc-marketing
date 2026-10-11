@@ -88,7 +88,7 @@ const SocialUI = (() => {
         </div>
         <div style="text-align:center;border:1px solid var(--ink-12);border-radius:14px;padding:8px 12px">
           <div style="font:700 11px/1 var(--sans);letter-spacing:.08em;color:var(--ink-50)">STREAK</div>
-          <div style="font:800 1.2rem/1.2 var(--sans);margin-top:4px">🔥 ${fmtN(streak)} ngày</div>
+          <div style="font:800 1.2rem/1.2 var(--sans);margin-top:4px">${fmtN(streak)} ngày</div>
         </div>
       </div>
       <div style="display:flex;justify-content:space-between;margin-top:18px;font-size:13px;color:var(--ink-70)">
@@ -105,7 +105,7 @@ const SocialUI = (() => {
         <span class="small" style="color:var(--ink-50)">${done}/${d.quests.length} đã nhận</span></div>
       <div style="display:grid;gap:10px">${d.quests.map((q) => `
         <div style="display:flex;align-items:center;gap:14px;padding:14px;border-radius:14px;border:1px solid var(--ink-12);background:${q.done && !q.claimed ? 'rgba(34,160,90,.10)' : 'var(--bg)'}">
-          <span style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--terra-06,rgba(200,90,50,.12));font-size:20px">${q.claimed ? '✅' : q.done ? '🎁' : '🎯'}</span>
+          <span style="width:42px;height:42px;border-radius:58% 42% 55% 45%/50% 55% 45% 50%;display:grid;place-items:center;background:var(--terra-06,rgba(200,90,50,.12));font:italic 600 20px var(--serif,Georgia,serif);color:var(--terra,#C85A32)">${q.claimed ? '✓' : q.done ? '+' : '·'}</span>
           <div style="flex:1;min-width:0"><b style="display:block">${esc(q.t)}</b><span class="small" style="color:var(--ink-50)">${q.have}/${q.need} · +${q.xp} XP</span></div>
           ${q.claimed ? '<span class="small" style="color:var(--ink-50)">Đã nhận</span>'
             : q.done ? `<button type="button" data-claim="${esc(q.id)}" style="border:0;border-radius:10px;padding:9px 16px;background:#16a34a;color:#fff;font:700 13px var(--sans);cursor:pointer">Nhận thưởng</button>`

@@ -71,7 +71,7 @@
   .lvmap__bar{height:8px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden;margin-top:10px}.lvmap__bar i{display:block;height:100%;background:#E5B24B;border-radius:99px}
   .lvmap__go{display:inline-flex;border-radius:12px;background:var(--terra);color:#fff;font:800 12.5px var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:11px 16px;text-decoration:none}
 </style>
-<link rel="stylesheet" href="assets/css/paper.css?v=4">
+<link rel="stylesheet" href="assets/css/paper.css?v=5">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn.</p></div></noscript>
@@ -132,7 +132,7 @@ function renderDashboard(user) {
       <section class="d-card d-mission">
         <div>
           <div class="d-mission__ic"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19V5"/></svg></div>
-          <div class="chips"><span class="d-chip d-chip--g">● Nhiệm vụ đang học</span><span class="d-chip d-chip--y">⚡ +10 XP khi hoàn thành</span></div>
+          <div class="chips"><span class="d-chip d-chip--g">Nhiệm vụ đang học</span><span class="d-chip d-chip--y">+10 XP khi hoàn thành</span></div>
           <div class="small muted">Chặng ${stageN} · Bài ${lessonN}</div>
           <h1>${hello ? `<span style="font-weight:600;color:var(--ink-50);font-size:.7em;display:block">${hello}tiếp tục nhé</span>` : ''}${escH(nm ? nm.t : 'Bắt đầu bài đầu tiên')}</h1>
           <a class="btn-go" href="${goHref}">Học tiếp →</a>
@@ -142,15 +142,15 @@ function renderDashboard(user) {
         </div>
         <div class="d-mission__img"><img src="assets/img/art-megaphone.svg" alt=""></div>
       </section>
-      <a href="hoc-bai.html" style="font-size:14px;color:var(--ink-70);text-decoration:none">📖 Xem toàn bộ bài học →</a>
+      <a href="hoc-bai.html" style="font-size:14px;color:var(--ink-70);text-decoration:none">Xem toàn bộ bài học →</a>
 
       <section class="lvmap" id="lvMap" aria-label="Bản đồ cấp độ"></section>
 
       <div class="d-tabs" role="tablist">
-        <button class="on" data-tab="q" role="tab">🎁 Thưởng &amp; nhiệm vụ</button>
-        <button data-tab="m" role="tab">🧭 Mục tiêu nghề &amp; kỹ năng</button>
-        <button data-tab="a" role="tab">⚔️ Đấu trường &amp; luyện tập</button>
-        <button data-tab="l" role="tab">🌱 Cấp độ &amp; XP</button>
+        <button class="on" data-tab="q" role="tab">Thưởng &amp; nhiệm vụ</button>
+        <button data-tab="m" role="tab">Mục tiêu nghề &amp; kỹ năng</button>
+        <button data-tab="a" role="tab">Đấu trường &amp; luyện tập</button>
+        <button data-tab="l" role="tab">Cấp độ &amp; XP</button>
       </div>
       <section class="d-card" id="tabBody"></section>
     </div>

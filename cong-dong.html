@@ -46,7 +46,7 @@
   .cm-rk{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(36,22,14,.06);font:700 12px var(--sans)}
   @media(max-width:900px){.cm-grid{grid-template-columns:1fr}.cm-head img{display:none}.cm-poll__opts{grid-template-columns:1fr}}
 </style>
-<link rel="stylesheet" href="assets/css/paper.css?v=4">
+<link rel="stylesheet" href="assets/css/paper.css?v=5">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
@@ -98,7 +98,7 @@ async function feed(){
       <a class="cm-post__t" href="cong-dong.html?id=${p.id}">${escH(p.title)}</a>
       <p>${body(excerpt(p.body))}</p>
       <div class="cm-post__a"><button class="cm-react ${p.liked?'on':''}" data-like="${p.id}" ${u?'':'disabled'}>♥ Tim <span>${p.likes}</span></button>
-        <a class="cm-react" href="cong-dong.html?id=${p.id}">💬 Bình luận (${p.comments})</a></div></article>`).join('')
+        <a class="cm-react" href="cong-dong.html?id=${p.id}">Bình luận (${p.comments})</a></div></article>`).join('')
       ||'<div class="cm-card"><p class="muted" style="margin:0">Chưa có bài nào. Bạn mở hàng nhé.</p></div>'}
   </div>
   <aside class="cm-side">
