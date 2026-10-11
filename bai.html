@@ -223,6 +223,7 @@ button{font-family:inherit}
   if(m) document.write('<script src="assets/js/data/bai/'+m[1]+'.js?v='+BAI_V+'"><\/script>'); })();</script>
 <script src="assets/js/data/exams.js?v=10"></script>
 <script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/yy.js?v=1"></script>
 <script src="assets/js/exam.js?v=9"></script>
 <script>
 appShell('');
@@ -387,10 +388,11 @@ function recallPart(){
 function summaryHTML(){
   const s=M.src, idea=M.kind==='L'?s.idea:M.kind==='B'?s.takeaway:s.one, act=M.kind==='L'?s.try:M.kind==='B'?s.apply:s.drill;
   const mistakes=D?[...new Set(D.wrong.map(w=>ERRORS[w[1]]))]:(M.kind==='P'&&s.mistake?[s.mistake]:M.kind==='B'?(s.mistakes||[]):[]);
-  return `<div class="exhibit" style="margin-top:18px"><div class="exhibit__cap"><b>Tóm tắt</b><span class="mono">Bài ${escH(M.t)}</span></div>
-    <div class="frame"><div><span class="mono">Ý chính</span><span>${idea}</span></div>
-    ${mistakes.length?`<div><span class="mono">Lỗi hay gặp</span><span>${mistakes.map(escH).join(' · ')}</span></div>`:''}
-    ${act?`<div><span class="mono">Làm ngay</span><span>${act}</span></div>`:''}</div></div>`;
+  /* Ý Ý tóm tắt: gõ chữ khi thẻ hiện ra, thay cho khối "Tóm tắt" tĩnh */
+  return YY.sumHTML({title:'Ý Ý tóm tắt · '+M.t, rows:[
+    ['Ý chính',idea],
+    mistakes.length?['Lỗi hay gặp',mistakes.map(escH).join(' · ')]:null,
+    act?['Làm ngay',act]:null].filter(Boolean)});
 }
 
 /* Kiểm tra nhanh nằm ở thanh bên: mỗi lần một câu, thanh bước, chấm điểm lần đầu khi nộp. */
@@ -476,7 +478,7 @@ function bodyHTML(s){
     LD.counter?sec('','Phản ví dụ',`<p>${LD.counter}</p>`):'',
     LD.closer?sec('','Góc nhìn đào sâu',`<p>${LD.closer}</p>`):'',
     (LD.mistakes.length||D)?sec('','Điểm khác biệt quan trọng',`${LD.mistakes.length?ulist(LD.mistakes):''}${D?commonMistakes():''}`):'',
-    `<div class="lp-quote">${LD.take||''}<small>Mang theo một câu</small></div>
+    `${LD.take?YY.sumHTML({title:'Ý Ý nhắc bạn mang theo một câu',rows:[['Ý chính',LD.take]]}):''}
      ${LD.apply?`<div class="lp-note"><b class="t">Làm ngay sau bài</b>${LD.apply}</div>`:''}
      ${D?`<div class="lp-note" style="border-left-color:var(--lp-gold);background:var(--lp-gold-soft)"><b class="t" style="color:var(--lp-gold)">Câu sếp hay hỏi tiếp (Boss Defense)</b><b style="font-family:var(--serif);font-size:1.08em">${D.boss}</b></div>`:''}`,
     sec('','Sơ đồ trực quan',`<div class="lp-flow">
@@ -610,7 +612,7 @@ function completeHTML({rec,right,wrong,sk,skBefore,jBefore,before,nx}){
       <div><span>Trạng thái</span><b>${{learned:'Đã học',passed:'Đạt',solid:'Vững'}[rec.state]}</b></div>
       ${unlock?`<div><span>Mở khoá</span><b>${escH(unlock)}</b></div>`:''}
     </div>
-    ${idea?`<div class="stickynote"><span class="eyebrow">Mang theo một câu</span>${idea}</div>`:''}
+    ${idea?YY.sumHTML({title:'Ý Ý nhắc bạn mang theo một câu',rows:[['Ý chính',idea]]}):''}
     ${wrong.length?`<p class="small" style="margin:0">Bạn đang hổng ở <b>${escH((skillOfLesson((wrong[0].teaches||[])[0])||sk||{t:'khái niệm của bài'}).t)}</b>: ${wrong.length} câu sai đã vào hàng ôn ngày mai.${pass?'':' Điểm lần đầu giữ nguyên; ôn đúng sau vài ngày để lên Vững.'}</p>`:''}
     <div class="row">
       ${wrong.length&&!pass?`<a class="btn btn--primary" href="on-loi.html">Luyện lại ${wrong.length} câu sai →</a><a class="btn btn--ghost" href="#talk">Áp dụng: nói 60 giây</a>`
