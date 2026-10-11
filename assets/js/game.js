@@ -24,5 +24,7 @@ const GAME={
     return s;
   },
   share(st){ return st.cust/this.MARKET; },
+  /* Sao theo lãi tích luỹ (tỷ đồng): có lãi / vượt chia đều / gần mức tốt nhất của chiến lược cố định. */
+  stars(cash){ const b=cash/1e9; return b>=75?3:b>=55?2:b>0?1:0; },
 };
 if(typeof module!=='undefined') module.exports=GAME;

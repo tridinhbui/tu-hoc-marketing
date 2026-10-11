@@ -23,7 +23,7 @@ test('bản đồ: toà đang chơi được khớp cấu hình kingdom ở máy
   const sql = fs.readFileSync(rel('api/migrations/0004_realm.sql'), 'utf8');
   const m = /\('kingdom', '(\[.*?\])'/s.exec(sql); assert.ok(m, 'không thấy cấu hình kingdom');
   const server = new Map(JSON.parse(m[1]).map((b) => [b.id, b]));
-  for (const p of WORLD.places.filter((x) => !x.soon)) {
+  for (const p of WORLD.places.filter((x) => !x.soon && !x.local)) {
     const s = server.get(p.id); assert.ok(s, `${p.id} không có ở máy chủ`);
     assert.equal(s.href, p.href, `${p.id}: href lệch máy chủ`);
     assert.equal(s.min_level || 1, p.min_level || 1, `${p.id}: cấp mở lệch máy chủ`);

@@ -58,6 +58,7 @@ body{margin:0;padding:0!important;font-family:var(--sans,system-ui,sans-serif)}
 .note a{color:var(--wd-acc);font-weight:700}
 .sr{position:absolute;left:-9999px}
 </style>
+<link rel="stylesheet" href="assets/css/paper.css?v=3">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
@@ -68,6 +69,7 @@ body{margin:0;padding:0!important;font-family:var(--sans,system-ui,sans-serif)}
 <script src="assets/js/data/bai-index.js?v=11"></script>
 <script src="assets/js/data/world-map.js?v=1"></script>
 <script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/games/frame.js?v=1"></script>
 <script>
 appShell('kingdom.html');
 const app=document.getElementById('app');
@@ -86,7 +88,8 @@ function regionColor(id){ return (WORLD.regions.find(r=>r.id===id)||{}).c||'#888
 function placeSVG(p){
   const c=regionColor(p.region), st=stateOf(p), vis=state.visited.has(p.id);
   const lock=st==='locked'?`<g transform="translate(0,-4)"><rect x="-9" y="-2" width="18" height="14" rx="3" fill="#fff" opacity=".9"/><path d="M-5 -2v-4a5 5 0 0110 0v4" fill="none" stroke="#fff" stroke-width="2.4"/></g>`:'';
-  const sub=st==='soon'?'SẮP CÓ':st==='locked'?'MỞ Ở CẤP '+p.min_level:vis?'ĐÃ GHÉ HÔM NAY ✓':'';
+  const stars=p.game&&st==='open'?GW.starsText(GW.stars(p.id)):'';
+  const sub=st==='soon'?'SẮP CÓ':st==='locked'?'MỞ Ở CẤP '+p.min_level:stars?stars+(vis?'  ·  ✓':''):vis?'ĐÃ GHÉ HÔM NAY ✓':'';
   return `<g class="pl" data-id="${p.id}" data-state="${st}" transform="translate(${p.x},${p.y})" role="button" tabindex="0" aria-label="${escH(p.t)}">
     <ellipse class="ring" cx="0" cy="26" rx="52" ry="14" fill="${c}" opacity=".25"/>
     <ellipse cx="0" cy="26" rx="40" ry="9" fill="#000" opacity=".12"/>
@@ -127,9 +130,10 @@ function panelHTML(p){
   if(!p) return `<div><b>Đi dạo trong vương quốc</b><p>Bấm vào một toà nhà, hoặc dùng phím mũi tên / WASD để đi. Đứng gần toà nào, thông tin hiện ở đây.</p></div>`;
   const st=stateOf(p), vis=state.visited.has(p.id);
   const tag=st==='soon'?'<span class="tag tag--gold">Sắp có</span>':st==='locked'?`<span class="tag">Mở ở cấp ${p.min_level}</span>`
-    :vis?'<span class="tag tag--ok">Đã ghé hôm nay</span>':state.user?'<span class="tag tag--gold">+5 xu hôm nay</span>':'';
+    :vis?'<span class="tag tag--ok">Đã ghé hôm nay</span>':state.user&&!p.local?'<span class="tag tag--gold">+5 xu hôm nay</span>':'';
+  const starTag=p.game&&st==='open'?`<span class="tag tag--gold">${GW.starsText(GW.stars(p.id))}</span>`:'';
   const reg=(WORLD.regions.find(r=>r.id===p.region)||{}).t||'';
-  return `<div><div>${tag}<span class="tag">${escH(reg)}</span></div><b style="display:block;margin-top:8px">${escH(p.t)}</b><p>${escH(p.d)}</p></div>
+  return `<div><div>${tag}${starTag}<span class="tag">${escH(reg)}</span></div><b style="display:block;margin-top:8px">${escH(p.t)}</b><p>${escH(p.d)}</p></div>
     ${st==='open'?`<button class="go" id="enter">Vào ${escH(p.t)} →</button>`
       :`<button class="go" disabled>${st==='soon'?'Đang được xây':'Chưa mở'}</button>`}`;
 }
@@ -140,7 +144,7 @@ function select(p){
   const en=document.getElementById('enter'); if(en) en.onclick=()=>enter(p);
 }
 async function enter(p){
-  if(state.user){ try{ const r=await api('/kingdom/visit',{method:'POST',body:{building:p.id}});
+  if(state.user&&!p.local){ try{ const r=await api('/kingdom/visit',{method:'POST',body:{building:p.id}});
       if(r.coins_gained){ toast(`+${r.coins_gained} xu`); state.visited.add(p.id); } }catch(e){} }
   setTimeout(()=>{ location.href=p.href; },state.user?300:0);
 }
@@ -215,5 +219,6 @@ document.addEventListener('keyup',e=>{ const k=e.key.length===1?e.key.toLowerCas
 document.title='Vương quốc Marketing — Tự Học Marketing Case';
 load().then(render);
 </script>
+<script src="assets/js/paper.js?v=2"></script>
 </body>
 </html>

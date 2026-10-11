@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C85A32%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E8%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=12">
+<title>Chia ngân sách media — Tự Học Marketing Case</title>
+<meta name="description" content="Mini-game: chia ngân sách giữa bốn kênh qua bốn quý có mùa vụ. Học lợi ích giảm dần, chồng lấn khán giả và đổi kênh theo mùa.">
+<style>
+:root{--gw-bg:#FBF8F3;--gw-card:#fff;--gw-ink:#24160E;--gw-ink2:rgba(36,22,14,.68);--gw-ink3:rgba(36,22,14,.48);--gw-line:rgba(36,22,14,.12);--gw-soft:rgba(36,22,14,.05);
+  --gw-acc:#C85A32;--gw-ok:#3D7A45;--gw-bad:#C0392B;--gw-gold:#B07A12;--gw-gold-soft:rgba(229,178,75,.18);--gw-dark:#2A1A12}
+html[data-theme="ivory"]{--gw-bg:#F7F0E6;--gw-card:#FFFDF9}
+html[data-theme="dark"]{--gw-bg:#16100C;--gw-card:#221913;--gw-ink:#F4ECE0;--gw-ink2:rgba(244,236,224,.74);--gw-ink3:rgba(244,236,224,.5);--gw-line:rgba(244,236,224,.14);
+  --gw-soft:rgba(244,236,224,.07);--gw-acc:#E27A52;--gw-ok:#7DBE86;--gw-bad:#E8786B;--gw-gold:#E5B24B;--gw-gold-soft:rgba(229,178,75,.14);--gw-dark:#0E0906}
+html,body{background:var(--gw-bg)!important;color:var(--gw-ink)}
+body{margin:0;padding:0!important;font-family:var(--sans,system-ui,sans-serif)}
+#app{display:block;max-width:none;padding:0;margin:0}
+.g{max-width:1100px;margin:0 auto;padding:clamp(16px,2.6vw,30px) clamp(14px,3vw,34px) 80px;display:grid;gap:16px}
+.g>*{min-width:0}
+.top{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.back{color:var(--gw-ink2);text-decoration:none;font-weight:700;font-size:14px}
+.back:hover{color:var(--gw-acc)}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gw-acc)}
+.g h1{font-family:var(--serif,Georgia,serif);font-weight:600;font-size:clamp(1.5rem,2.8vw,2.1rem);margin:6px 0 4px}
+.lede{margin:0;color:var(--gw-ink2);max-width:66ch;line-height:1.6}
+.card{background:var(--gw-card);border:1px solid var(--gw-line);border-radius:20px;padding:18px 20px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.steps i{height:8px;border-radius:9px;background:var(--gw-soft)}
+.steps i[data-s="done"]{background:var(--gw-ok)}.steps i[data-s="cur"]{background:var(--gw-acc)}
+.brief{border-left:4px solid var(--gw-gold);background:var(--gw-gold-soft);border-radius:0 16px 16px 0;padding:14px 18px}
+.brief b{display:block;font-size:16px}.brief p{margin:4px 0 0;color:var(--gw-ink2);line-height:1.55}
+.lever{display:grid;grid-template-columns:minmax(140px,1.1fr) 2fr 70px;gap:14px;align-items:center;padding:12px 0;border-top:1px solid var(--gw-line)}
+.lever:first-of-type{border-top:0}
+.lever b{display:block;font-size:15px}.lever small{color:var(--gw-ink3);font-size:12.5px;line-height:1.4}
+.lever input[type=range]{width:100%;accent-color:var(--gw-acc)}
+.lever output{font-weight:800;text-align:right}
+@media(max-width:560px){.lever{grid-template-columns:1fr 70px}.lever input{grid-column:1/-1;grid-row:2}}
+.bar{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.used{font-weight:700}.used.over{color:var(--gw-bad)}.used.under{color:var(--gw-gold)}
+.go{border:0;border-radius:12px;background:var(--gw-acc);color:#fff;font:800 13px var(--sans,system-ui);letter-spacing:.05em;text-transform:uppercase;padding:13px 20px;cursor:pointer;text-decoration:none}
+.go[disabled]{opacity:.45;cursor:default}
+.go--ghost{background:var(--gw-card);color:var(--gw-ink);border:1.5px solid var(--gw-line)}
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.cmp h3{margin:0 0 8px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gw-ink3)}
+.cmp .big{font-size:1.8rem;font-weight:800}
+.alloc{display:grid;gap:6px;margin-top:10px;font-size:13.5px}
+.alloc div{display:grid;grid-template-columns:100px 1fr 42px;gap:8px;align-items:center}
+.alloc i{display:block;height:8px;border-radius:9px;background:var(--gw-acc)}
+.alloc .opt i{background:var(--gw-ok)}
+.note{border-left:4px solid var(--gw-acc);background:var(--gw-soft);border-radius:0 14px 14px 0;padding:12px 16px;font-size:14.5px;line-height:1.55}
+.hist{width:100%;border-collapse:collapse;font-size:14px}
+.hist th,.hist td{text-align:left;padding:9px 6px;border-top:1px solid var(--gw-line)}
+.hist th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gw-ink3);border-top:0}
+.gw-result{text-align:center;padding:10px}
+.gw-stars{font-size:3rem;letter-spacing:.2em;color:var(--gw-gold)}
+.gw-result p{margin:6px 0;color:var(--gw-ink2)}
+.gw-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.gw-btn{display:inline-block;border-radius:12px;border:1.5px solid var(--gw-line);padding:12px 18px;font-weight:800;font-size:13px;text-decoration:none;color:var(--gw-ink);background:var(--gw-card)}
+</style>
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main id="app"></main>
+<script src="assets/js/data/lessons.js?v=8"></script>
+<script src="assets/js/data/principles.js?v=8"></script>
+<script src="assets/js/data/curriculum.js?v=4"></script>
+<script src="assets/js/data/bai-index.js?v=11"></script>
+<script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/games/g4-budget.js?v=1"></script>
+<script src="assets/js/games/frame.js?v=1"></script>
+<script>
+appShell('');
+const app=document.getElementById('app'), GID='g4';
+let plays=[], draft=null, shown=null, done=null;     // plays: các cách chia đã chốt; shown: kết quả quý vừa chốt
+const fresh=()=>Object.fromEntries(G4.channels.map(c=>[c.id,0]));
+const pct=x=>(x*100).toLocaleString('vi-VN',{maximumFractionDigits:1})+'%';
+const bil=x=>x.toLocaleString('vi-VN',{maximumFractionDigits:1});
+draft=fresh();
+
+function allocBars(a,cls=''){ const max=Math.max(...G4.channels.map(c=>a[c.id]||0),.5);
+  return `<div class="alloc ${cls}">${G4.channels.map(c=>`<div><span>${escH(c.t)}</span><i style="width:${(a[c.id]||0)/max*100}%"></i><b>${bil(a[c.id]||0)}</b></div>`).join('')}</div>`; }
+
+function lesson(a,q){
+  const tot=G4.total(a)||1, top=G4.channels.map(c=>[c.id,(a[c.id]||0)/tot]).sort((x,y)=>y[1]-x[1])[0];
+  const best=G4.best(q.mult).alloc, off=G4.channels.map(c=>[c,(best[c.id]||0)-(a[c.id]||0)]).sort((x,y)=>Math.abs(y[1])-Math.abs(x[1]))[0];
+  const out=[];
+  if(top[1]>=.6) out.push(`Bạn dồn ${Math.round(top[1]*100)}% vào ${G4.channels.find(c=>c.id===top[0]).t}. Tiền vào một kênh có lợi ích giảm dần — đồng thứ năm mang về ít hơn đồng thứ nhất. <a href="bai.html?id=L%3A72">Xem bài →</a>`);
+  if(G4.total(a)<G4.BUDGET-1e-9) out.push('Bạn chưa dùng hết ngân sách quý này — phần không chi không mang về khán giả nào.');
+  if(Math.abs(off[1])>=1) out.push(`Chênh lớn nhất so với cách chia tốt nhất là ở <b>${off[0].t}</b>: ${off[1]>0?'nên thêm':'nên bớt'} khoảng ${bil(Math.abs(off[1]))} tỷ. Mùa này: ${q.brief}`);
+  return out;
+}
+
+function render(){
+  const qi=plays.length, finished=qi>=G4.quarters.length&&!shown;
+  const q=G4.quarters[Math.min(qi,G4.quarters.length-1)];
+  const head=`<div class="top"><a class="back" href="kingdom.html">← Về bản đồ vương quốc</a><span class="eyebrow">Mini-game · số liệu minh hoạ</span></div>
+    <header><h1>Chia ngân sách media qua 4 quý</h1>
+      <p class="lede">Mỗi quý có ${G4.BUDGET} tỷ để chia cho 4 kênh. Mỗi kênh có trần khán giả và lợi ích giảm dần; các kênh chồng lấn nhau; và mỗi mùa làm đổi kênh nào đáng tiền. Điểm là reach hiệu dụng so với cách chia tốt nhất.
+      Mô hình cố định, không may rủi.</p></header>
+    <div class="steps">${G4.quarters.map((_,i)=>`<i data-s="${i<plays.length?'done':i===plays.length&&!finished?'cur':''}"></i>`).join('')}</div>`;
+
+  if(finished){
+    const score=G4.score(plays), stars=G4.stars(score);
+    if(!done){ done=GW.report(GID,stars,score); }
+    const table=plays.map((a,i)=>{ const qq=G4.quarters[i], r=G4.reach(a,qq.mult), b=G4.best(qq.mult).r;
+      return `<tr><td>${escH(qq.t)}</td><td>${pct(r)}</td><td>${pct(b)}</td><td>${pct(r/b)}</td></tr>`; }).join('');
+    app.innerHTML=`<div class="g">${head}
+      <div class="card">${GW.resultHTML(done,{goal:`Điểm của bạn: <b>${pct(score)}</b> so với tối ưu. Mốc sao: 85% · 96% · 98,5%. Chia đều mọi quý chỉ đạt khoảng 95% — muốn 3 sao phải đổi cách chia theo mùa.`})}</div>
+      <div class="card"><table class="hist"><thead><tr><th>Quý</th><th>Reach của bạn</th><th>Tốt nhất</th><th>Đạt</th></tr></thead><tbody>${table}</tbody></table></div>
+      <div class="bar"><button class="go go--ghost" id="again">Chơi lại</button><a class="go" href="kingdom.html">Về bản đồ</a></div></div>`;
+    document.getElementById('again').onclick=()=>{ plays=[]; draft=fresh(); shown=null; done=null; render(); };
+    return;
+  }
+
+  if(shown){      // vừa chốt một quý: so sánh với cách chia tốt nhất
+    const i=plays.length-1, qq=G4.quarters[i], r=shown.r, b=shown.best;
+    app.innerHTML=`<div class="g">${head}
+      <div class="cmp">
+        <div class="card"><h3>Bạn · ${escH(qq.t)}</h3><div class="big">${pct(r)}</div><span class="lede">reach hiệu dụng</span>${allocBars(plays[i])}</div>
+        <div class="card"><h3>Cách chia tốt nhất</h3><div class="big">${pct(b.r)}</div><span class="lede">bạn đạt ${pct(r/b.r)}</span>${allocBars(b.alloc,'opt')}</div>
+      </div>
+      ${shown.notes.map(n=>`<p class="note">${n}</p>`).join('')}
+      <div class="bar"><span></span><button class="go" id="next">${plays.length>=G4.quarters.length?'Xem kết quả':'Sang '+escH(G4.quarters[plays.length].t.split(' · ')[0])+' →'}</button></div></div>`;
+    document.getElementById('next').onclick=()=>{ shown=null; draft=fresh(); render(); };
+    return;
+  }
+
+  const used=G4.total(draft);
+  app.innerHTML=`<div class="g">${head}
+    <div class="brief"><b>${escH(q.t)}</b><p>${escH(q.brief)}</p></div>
+    <div class="card">${G4.channels.map(c=>`<label class="lever"><span><b>${escH(c.t)}</b><small>${escH(c.note)}</small></span>
+        <input type="range" min="0" max="${G4.BUDGET}" step="${G4.UNIT}" value="${draft[c.id]}" data-c="${c.id}" aria-label="${escH(c.t)}">
+        <output>${bil(draft[c.id])} tỷ</output></label>`).join('')}
+      <div class="bar"><span class="used" id="used"></span><button class="go" id="commit">Chốt ${escH(q.t.split(' · ')[0])}</button></div></div>
+    <p class="lede" style="font-size:13.5px">Kết quả chỉ hiện sau khi bạn chốt — hãy dựa vào bối cảnh mùa và đặc tính kênh, không phải dò từng nấc.</p></div>`;
+  const upd=()=>{ const u=G4.total(draft), el=document.getElementById('used'), btn=document.getElementById('commit');
+    el.textContent=`Đã chia ${bil(u)} / ${G4.BUDGET} tỷ`; el.className='used '+(u>G4.BUDGET+1e-9?'over':u<G4.BUDGET-1e-9?'under':'');
+    btn.disabled=u>G4.BUDGET+1e-9||u===0; };
+  app.querySelectorAll('input[data-c]').forEach(inp=>inp.oninput=()=>{ draft[inp.dataset.c]=+inp.value; inp.nextElementSibling.textContent=bil(draft[inp.dataset.c])+' tỷ'; upd(); });
+  upd();
+  document.getElementById('commit').onclick=()=>{ const a={...draft}, qq=G4.quarters[plays.length];
+    plays.push(a); const b=G4.best(qq.mult);
+    shown={r:G4.reach(a,qq.mult), best:b, notes:lesson(a,qq)}; render(); };
+}
+document.title='Chia ngân sách media — Tự Học Marketing Case';
+render();
+</script>
+</body>
+</html>

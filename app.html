@@ -19,10 +19,10 @@
 <style>
   /* KHUNG ỨNG DỤNG: thanh điều hướng dọc nằm cố định bên TRÁI, tải đúng MỘT lần.
      Mọi trang học chạy trong khung bên phải; đổi trang chỉ đổi khung đó, thanh điều hướng không bao giờ bị dựng lại. */
-  :root{--side-w:268px;
+  :root{--pp-noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45 0 0 0 0 .32 0 0 0 0 .2 0 0 0 .35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");--side-w:268px;
     --r-bg:#1A130F;--r-ink:#F9F4EB;--r-ink2:rgba(249,244,235,.62);--r-line:rgba(249,244,235,.1);--r-hover:rgba(249,244,235,.07);
     --r-act-bg:rgba(200,90,50,.22);--r-act:#F2A07F;--r-field:rgba(249,244,235,.07);--r-pill:rgba(249,244,235,.08);--page:#130E0B;}
-  html[data-theme="ivory"]{--r-bg:#FFFFFF;--r-ink:#24160E;--r-ink2:rgba(36,22,14,.62);--r-line:rgba(36,22,14,.1);--r-hover:rgba(36,22,14,.05);
+  html[data-theme="ivory"]{--r-bg:#FBF5EA;--r-ink:#24160E;--r-ink2:rgba(36,22,14,.62);--r-line:rgba(36,22,14,.1);--r-hover:rgba(36,22,14,.05);
     --r-act-bg:#FCE9E0;--r-act:#B8451F;--r-field:#F1ECE4;--r-pill:#F6F1E9;--page:#F7F0E6;}
   html,body{height:100%;margin:0;overflow:hidden;background:var(--page)}
   body{padding:0!important}
@@ -98,6 +98,13 @@
   .rail__me{position:relative}
 
   @media(max-width:1100px) and (min-width:861px){:root{--side-w:236px}.nav a,.nav button.nv{font-size:14px;padding:0 10px;gap:10px}}
+  /* phong cách giấy: nhành hoa góc trên và chữ viết tay dưới logo */
+  .rail::before{content:"";position:absolute;right:-10px;top:-6px;width:78px;height:118px;background:url(assets/img/sprig.svg) no-repeat center/contain;
+    transform:scaleX(-1) rotate(8deg);opacity:.9;pointer-events:none;z-index:0}
+  .rail__scroll,.rail__foot{position:relative;z-index:1}
+  .rail__logo{align-items:flex-start;flex-wrap:wrap}
+  .rail__tag{display:block;width:100%;margin:-6px 0 0 46px;font:600 17px/1 'Caveat',cursive;color:#8a6a55;text-transform:none;letter-spacing:0}
+  html[data-theme="ivory"] .rail{background-image:var(--pp-noise,none);background-size:220px 220px}
   .rail__open,.rail__scrim,.mbar{display:none}
   @media(max-width:860px){
     .shell{grid-template-columns:minmax(0,1fr)}
@@ -123,7 +130,7 @@
 <div class="shell">
   <aside class="rail" id="rail" aria-label="Điều hướng">
     <div class="rail__top">
-      <a class="rail__logo" href="hoc.html" data-go><span class="rail__mark"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 9c0-3 3-5 7-5M19 15c0 3-3 5-7 5M5 9c0 3 3 4 7 4s7 1 7 4"/></svg></span><span>Tự Học<b>Marketing</b></span></a>
+      <a class="rail__logo" href="hoc.html" data-go><span class="rail__mark"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 9c0-3 3-5 7-5M19 15c0 3-3 5-7 5M5 9c0 3 3 4 7 4s7 1 7 4"/></svg></span><span>Tự Học<b>Marketing</b></span><small class="rail__tag">Học thật. Làm được.</small></a>
       <div class="rail__search">
         <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
         <input id="sq" type="search" placeholder="Tìm kiếm…" autocomplete="off" aria-label="Tìm bài học và mục">
@@ -205,7 +212,7 @@ const GROUPS = [
   { t: 'Thực hành', ic: 'flask', items: [
     ['Phòng thử thách', 'quiz.html', 'cap', ['quiz.html', 'challenge.html', 'luyen.html'], 'new'],
     ['Thi vượt chặng', 'thi.html', 'trophy', ['thi.html']],
-    ['Game Kingdom', 'kingdom.html', 'game', ['kingdom.html', 'tro-choi.html', 'boss.html', 'pvp.html', 'shop.html'], 'hot'],
+    ['Game Kingdom', 'kingdom.html', 'game', ['kingdom.html', 'tro-choi.html', 'game-ngan-sach.html', 'boss.html', 'pvp.html', 'shop.html'], 'hot'],
     ['Luyện phỏng vấn', 'phong-van.html', 'brief', ['phong-van.html', 'interview.html']],
     ['Mô phỏng công cụ', 'unit-economics.html', 'term', ['unit-economics.html']],
   ] },

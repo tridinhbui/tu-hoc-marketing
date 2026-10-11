@@ -13,6 +13,7 @@
   .lever b{font-family:var(--mono);font-weight:400;text-align:right}
   .over{color:var(--red)}
 </style>
+<link rel="stylesheet" href="assets/css/paper.css?v=3">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Nội dung và tiến độ được dựng ngay trong trình duyệt của bạn và đồng bộ vào tài khoản khi đã đăng nhập.</p></div></noscript>
@@ -22,6 +23,7 @@
 <script src="assets/js/data/curriculum.js?v=4"></script>
 <script src="assets/js/data/bai-index.js?v=11"></script>
 <script src="assets/js/data/drills.js?v=3"></script>
+<script src="assets/js/games/frame.js?v=1"></script>
 <script src="assets/js/game.js?v=1"></script>
 <script src="assets/js/app.js?v=21"></script>
 <script>
@@ -78,12 +80,17 @@ function render(){
       <td class="n">${N(x.neu)}</td><td class="n">${N(x.kept)}</td><td class="n">${T(x.rev)}</td><td class="n" style="${x.profit<0?'color:var(--red)':''}">${T(x.profit)}</td></tr>`).join('')}</tbody></table></div></div></section>`:''}`;
   wire();
 }
+let result=null;
 function endView(){
   const s=S.get(), best=(s.games||[]).reduce((m,g)=>Math.max(m,g.cash),-Infinity);
+  if(!result) result=GW.report('game',GAME.stars(st.cash),st.cash/1e9);
   return `<section class="section"><span class="mono mono--red">Hết ${GAME.QUARTERS} quý</span>
     <h2 class="h2" style="margin:12px 0">Lãi tích luỹ ${T(st.cash)} · thị phần ${P(GAME.share(st))}</h2>
     <p class="muted">${isFinite(best)?'Kỷ lục của bạn: '+T(best)+'. ':''}Thử lại với một chiến lược khác để thấy nguyên lý nào đang chi phối kết quả.</p>
-    <button class="btn" id="again" style="margin-top:14px">Chơi lại</button></section>`;
+    <div class="note" style="margin:14px 0"><b style="font-size:1.6rem;color:var(--gold-d)">${GW.starsText(result.stars)}</b><br>
+      ${result.gain>0?(result.xp>0?`Sao mới: +${result.gain} → +${result.xp} XP.`:`Sao mới: +${result.gain}. Hôm nay đã đủ XP từ game — sao vẫn được ghi.`):'Chưa có sao mới — XP chỉ tính cho sao mới.'}
+      <br><span class="small muted">Mốc sao: có lãi · từ 55 tỷ · từ 75 tỷ.</span></div>
+    <button class="btn" id="again">Chơi lại</button> <a class="btn btn--ghost" href="kingdom.html">← Về bản đồ vương quốc</a></section>`;
 }
 function wire(){
   document.querySelectorAll('[data-k]').forEach(el=>el.oninput=()=>{
@@ -97,9 +104,10 @@ function wire(){
     if(st.q>=GAME.QUARTERS){ const s=S.get(), g=[...(s.games||[]),{d:today(),cash:st.cash,share:GAME.share(st)}].slice(-20);
       const playedToday=(s.games||[]).some(x=>x.d===today()); S.set({games:g}); if(!playedToday) award('game',today()); }
     render(); };
-  const a=document.getElementById('again'); if(a) a.onclick=()=>{st=GAME.start(); plan={m:1,d:1,r:1,disc:0}; render();};
+  const a=document.getElementById('again'); if(a) a.onclick=()=>{result=null; st=GAME.start(); plan={m:1,d:1,r:1,disc:0}; render();};
 }
 render();
 </script>
+<script src="assets/js/paper.js?v=2"></script>
 </body>
 </html>
