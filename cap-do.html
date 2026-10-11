@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C85A32%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E8%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=12">
+<title>Bản đồ 30 cấp độ — Tự Học Marketing Case</title>
+<meta name="description" content="30 cấp độ học viên, mốc XP từng cấp, bạn đang ở đâu và cách kiếm XP nhanh nhất.">
+<style>
+:root{--cd-bg:#FBF8F3;--cd-card:#fff;--cd-ink:#24160E;--cd-ink2:rgba(36,22,14,.68);--cd-ink3:rgba(36,22,14,.48);--cd-line:rgba(36,22,14,.12);
+  --cd-soft:rgba(36,22,14,.05);--cd-acc:#C85A32;--cd-acc-soft:rgba(200,90,50,.1);--cd-ok:#3D7A45;--cd-gold:#E5B24B;--cd-dark:#1E130D;--cd-dark2:#2A1B13}
+html[data-theme="ivory"]{--cd-bg:#F7F0E6;--cd-card:#FFFDF9}
+html[data-theme="dark"]{--cd-bg:#16100C;--cd-card:#221913;--cd-ink:#F4ECE0;--cd-ink2:rgba(244,236,224,.74);--cd-ink3:rgba(244,236,224,.5);--cd-line:rgba(244,236,224,.14);
+  --cd-soft:rgba(244,236,224,.07);--cd-acc:#E27A52;--cd-acc-soft:rgba(226,122,82,.15);--cd-ok:#7DBE86;--cd-dark:#0E0906;--cd-dark2:#1A110B}
+html,body{background:var(--cd-bg)!important;color:var(--cd-ink)}
+body{margin:0;padding:0!important;font-family:var(--sans,system-ui,sans-serif)}
+#app{display:block;max-width:none;padding:0;margin:0}
+.cd{max-width:1180px;margin:0 auto;padding:clamp(18px,3vw,36px) clamp(14px,3vw,36px) 90px;display:grid;gap:22px}
+.ic{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.cd>*{min-width:0}
+.cd h1{font-family:var(--serif,Georgia,serif);font-weight:600;font-size:clamp(1.7rem,3.2vw,2.4rem);margin:8px 0 6px}
+.cd h2{font-size:15px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;margin:0 0 12px}
+.cd .lede{color:var(--cd-ink2);margin:0;max-width:62ch;line-height:1.6}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--cd-acc)}
+.card{background:var(--cd-card);border:1px solid var(--cd-line);border-radius:22px;padding:22px}
+
+/* bản đồ ngang */
+.map{background:radial-gradient(120% 120% at 0% 0%,var(--cd-dark2),var(--cd-dark));color:#F7EBDD;border-radius:26px;padding:22px 22px 18px;border:1px solid rgba(255,255,255,.06)}
+.map__h{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.map__h h2{margin:0 0 4px;font-size:20px;text-transform:none;letter-spacing:0;font-family:var(--serif,Georgia,serif);font-weight:600}
+.map__h p{margin:0;color:rgba(247,235,221,.65);font-size:13.5px}
+.chip{font-size:12.5px;font-weight:800;padding:8px 14px;border-radius:99px;background:rgba(229,178,75,.14);color:var(--cd-gold);white-space:nowrap}
+.track{position:relative;display:flex;gap:14px;overflow-x:auto;padding:26px 6px 14px;margin-top:6px;scroll-snap-type:x proximity;scrollbar-width:thin}
+.track::before{content:"";position:absolute;left:0;right:0;top:68px;height:3px;background:rgba(255,255,255,.1)}
+.lv{flex:0 0 138px;scroll-snap-align:center;position:relative;display:grid;gap:8px;justify-items:center;text-align:center}
+.badge{position:relative;width:76px;height:76px;border-radius:22px;display:grid;place-items:center;background:var(--bg,#555);color:#fff;font-weight:900;font-size:26px;
+  box-shadow:inset 0 -6px 0 rgba(0,0,0,.18),0 10px 24px -10px rgba(0,0,0,.6)}
+.badge svg{position:absolute;right:-8px;bottom:-8px;width:26px;height:26px;padding:4px;border-radius:50%;background:var(--cd-ok);stroke:#fff;fill:none;stroke-width:3;box-sizing:border-box}
+.lv[data-s="locked"] .badge{filter:grayscale(1);opacity:.4}
+.lv[data-s="here"] .badge{outline:3px solid var(--cd-gold);outline-offset:4px;transform:scale(1.08)}
+.lvcard{width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:14px;padding:10px 10px 11px;display:grid;gap:3px}
+.lv[data-s="here"] .lvcard{border-color:var(--cd-gold);background:rgba(229,178,75,.08)}
+.lvcard small{font-size:11px;font-weight:800;letter-spacing:.06em;color:rgba(247,235,221,.5)}
+.lvcard b{font-size:13.5px;line-height:1.25;min-height:34px}
+.lvcard span{font-size:11.5px;color:rgba(247,235,221,.6)}
+.lv[data-s="locked"] .lvcard{opacity:.55}
+.you{position:absolute;top:-4px;left:50%;transform:translate(-50%,-100%);background:var(--cd-gold);color:#2A1B13;font-size:11px;font-weight:900;border-radius:99px;padding:3px 9px;letter-spacing:.06em}
+.map__f{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:16px;padding:14px 16px;margin-top:10px;font-size:14px}
+.go{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;background:var(--cd-acc);color:#fff;font:800 13px var(--sans,system-ui);letter-spacing:.05em;text-transform:uppercase;padding:12px 18px;text-decoration:none;cursor:pointer}
+.bar{height:8px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden;margin-top:10px}
+.bar i{display:block;height:100%;background:var(--cd-gold);border-radius:99px}
+
+/* bậc */
+.tiers{display:grid;gap:14px}
+.tier{border:1px solid var(--cd-line);background:var(--cd-card);border-radius:20px;padding:16px 18px}
+.tier__h{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:10px}
+.tier__h b{font-size:16px}.tier__h span{font-size:12.5px;color:var(--cd-ink3);font-weight:600}
+.rows{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px}
+.row2{display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:10px;align-items:center;border:1px solid var(--cd-line);border-radius:12px;padding:8px 10px;font-size:13.5px}
+.row2 .n{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font-weight:900;font-size:13px;color:#fff;background:var(--bg,#777)}
+.row2 b{display:block;line-height:1.25}.row2 small{color:var(--cd-ink3);font-size:11.5px}
+.row2 em{font-style:normal;font-weight:800;font-size:12.5px;color:var(--cd-ink2);white-space:nowrap}
+.row2[data-s="done"]{background:rgba(61,122,69,.07)}.row2[data-s="done"] em{color:var(--cd-ok)}
+.row2[data-s="here"]{border-color:var(--cd-acc);box-shadow:0 0 0 3px var(--cd-acc-soft)}
+.row2[data-s="locked"]{opacity:.7}
+
+/* cách kiếm XP */
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:11px 8px;border-top:1px solid var(--cd-line);text-align:left;vertical-align:top}
+th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--cd-ink3);border-top:0}
+td.n{font-weight:800;color:var(--cd-acc);white-space:nowrap}
+td small{display:block;color:var(--cd-ink3);margin-top:2px}
+.tabs2{display:flex;gap:8px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main id="app"></main>
+<script src="assets/js/data/lessons.js?v=8"></script>
+<script src="assets/js/data/principles.js?v=8"></script>
+<script src="assets/js/data/curriculum.js?v=4"></script>
+<script src="assets/js/data/bai-index.js?v=11"></script>
+<script src="assets/js/app.js?v=21"></script>
+<script>
+appShell('cap-do.html');
+const app=document.getElementById('app');
+/* 6 bậc × 5 cấp. Tên cấp, mốc XP và bảng điểm đều đọc thẳng từ lõi ứng dụng (LEVELS, LEVEL_MIN, XP) — một nguồn duy nhất. */
+const TIERS=[
+  {t:'Làm quen',d:'Quan sát và ghi chép thị trường',c:'#8A7B6B'},
+  {t:'Thực hành',d:'Đọc số, viết brief, hiểu khách',c:'#5E8C61'},
+  {t:'Chuyên viên',d:'Làm nội dung, đo CAC, chạy hiệu suất',c:'#3F7EA6'},
+  {t:'Senior',d:'Lập kế hoạch, giữ ngân sách',c:'#7A5BA8'},
+  {t:'Quản lý',d:'Dẫn thương hiệu, sản phẩm, tăng trưởng',c:'#C0792B'},
+  {t:'Lãnh đạo',d:'Chịu trách nhiệm toàn bộ marketing',c:'#B8452E'},
+];
+const tierOf=n=>TIERS[Math.floor((n-1)/5)];
+const KIND={lesson:['Hoàn thành bài (Đạt)','Một lần mỗi bài'],learned:['Hoàn thành bài (chưa vững)','Một lần mỗi bài, thay phần Đạt'],solid:['Ôn để lên Vững','Một lần mỗi bài, sau 3 ngày'],
+  exam:['Qua đề thi vượt chặng','Một lần mỗi chặng'],drill:['Bài tính số đúng','Một lần mỗi bài'],talk:['Nói 60 giây / thực hành có đầu ra','Một lần mỗi bài'],
+  review:['Ôn lỗi','Mỗi câu'],focus:['Phiên tập trung','Mỗi ngày'],quiz:['Câu quiz luyện tập','Mỗi câu'],case:['Hoàn thành case','Một lần mỗi case'],
+  game:['Game Kingdom','Mỗi lượt'],daily:['Thử thách hằng ngày','Mỗi ngày']};
+const check='<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+
+function render(){
+  const s=S.get(), L=level(s.xp), n=L.n, nxt=L.next, need=nxt?nxt-s.xp:0;
+  const per=Math.round((nxt?(s.xp-L.cur)/(nxt-L.cur):1)*100);
+  const nl=nextLesson(s), lessonsLeft=Math.max(1,Math.ceil(need/XP.lesson));
+  const state=i=>i<n?'done':i===n?'here':'locked';
+  const bg=i=>`style="--bg:${tierOf(i).c}"`;
+  app.innerHTML=`<div class="cd">
+    <header><span class="eyebrow">Cấp độ &amp; XP</span><h1>Bản đồ 30 cấp độ</h1>
+      <p class="lede">Mỗi bài học, bài tính số và case đều cộng XP. Đi từ “Người quan sát” tới “Người nhìn thấy”, qua 6 bậc nghề marketing.</p></header>
+
+    <section class="map" aria-label="Bản đồ cấp độ">
+      <div class="map__h"><div><h2>Bản đồ cấp độ học viên</h2><p>${s.xp.toLocaleString('vi-VN')} XP · ${TIERS.length} bậc, mỗi bậc 5 cấp.</p></div><span class="chip">Cấp ${n}/30</span></div>
+      <div class="track" id="track">
+        ${LEVELS.map((name,k)=>{ const i=k+1, st=state(i);
+          return `<div class="lv" data-s="${st}" data-i="${i}">
+            ${st==='here'?'<span class="you">BẠN</span>':''}
+            <div class="badge" ${bg(i)}>${i}${st==='done'?check:''}</div>
+            <div class="lvcard"><small>CẤP ${i}</small><b>${escH(name)}</b>
+              <span>${lvXP(i).toLocaleString('vi-VN')} XP</span>
+              <span>${st==='done'?'Đã đạt':st==='here'?(nxt?'còn '+need.toLocaleString('vi-VN')+' XP':'Cấp cao nhất'):'cần '+(lvXP(i)-s.xp).toLocaleString('vi-VN')+' XP'}</span></div></div>`; }).join('')}
+      </div>
+      <div class="map__f"><div style="flex:1;min-width:220px">${nxt
+          ?`Còn <b>${need.toLocaleString('vi-VN')} XP</b> nữa lên cấp ${n+1} — khoảng ${lessonsLeft} bài học.`
+          :'Bạn đang ở cấp cao nhất.'}<div class="bar"><i style="width:${per}%"></i></div></div>
+        <a class="go" href="${nl?'bai.html?id='+encodeURIComponent(nl):'hoc.html'}">Học bài ngay →</a></div>
+    </section>
+
+    <section><h2>Các bậc nghề</h2>
+      <div class="tiers">${TIERS.map((T,ti)=>{ const a=ti*5+1;
+        return `<div class="tier"><div class="tier__h"><b>Bậc ${ti+1} · ${T.t}</b><span>Cấp ${a}–${a+4} · ${T.d}</span></div>
+          <div class="rows">${[0,1,2,3,4].map(o=>{ const i=a+o, st=state(i), prev=i>1?lvXP(i)-lvXP(i-1):0;
+            return `<div class="row2" data-s="${st}" style="--bg:${T.c}"><span class="n">${i}</span>
+              <span><b>${escH(LEVELS[i-1])}</b><small>${i>1?'+'+prev.toLocaleString('vi-VN')+' XP so với cấp trước':'Khởi đầu'}</small></span>
+              <em>${st==='done'?'✓ ':''}${lvXP(i).toLocaleString('vi-VN')}</em></div>`; }).join('')}</div></div>`; }).join('')}</div>
+    </section>
+
+    <section class="card"><h2>Cách kiếm XP</h2>
+      <table><thead><tr><th>Việc làm</th><th>XP</th><th>Giới hạn</th></tr></thead><tbody>
+        ${Object.keys(KIND).map(k=>`<tr><td>${KIND[k][0]}</td><td class="n">+${XP[k]}</td>
+          <td>${KIND[k][1]}${XP_CAP[k]?`<small>Tối đa ${XP_CAP[k]} XP mỗi ngày</small>`:''}</td></tr>`).join('')}
+      </tbody></table>
+      <p class="lede" style="margin-top:14px;font-size:14px">XP chỉ cộng một lần cho các việc “một lần”, nên học lại để luyện không tăng cấp ảo. Bảng xếp hạng đọc đúng bảng cấp độ này.</p>
+    </section>
+  </div>`;
+  const cur=document.querySelector('.lv[data-s="here"]'), tr=document.getElementById('track');
+  if(cur&&tr) tr.scrollLeft=Math.max(0,cur.offsetLeft-tr.clientWidth/2+cur.clientWidth/2);
+}
+document.title='Bản đồ 30 cấp độ — Tự Học Marketing Case';
+render();
+</script>
+</body>
+</html>
