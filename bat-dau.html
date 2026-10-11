@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C85A32%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E8%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=12">
+<title>Bắt đầu từ đâu — Tự Học Marketing Case</title>
+<meta name="description" content="Bản đồ hành trình: chọn hướng, chọn nhịp, hiểu cách mỗi bài học vận hành và biết bạn đang ở đâu trên lộ trình.">
+<style>
+/* Trang Bắt đầu từ đâu — bản đồ hành trình + hướng dẫn. Màu theo biến --bd-*, đổi theo html[data-theme]. */
+:root{--bd-bg:#FBF8F3;--bd-card:#fff;--bd-ink:#24160E;--bd-ink2:rgba(36,22,14,.68);--bd-ink3:rgba(36,22,14,.48);--bd-line:rgba(36,22,14,.12);
+  --bd-soft:rgba(36,22,14,.05);--bd-acc:#C85A32;--bd-acc-soft:rgba(200,90,50,.1);--bd-ok:#3D7A45;--bd-ok-soft:rgba(61,122,69,.12);
+  --bd-gold:#B07A12;--bd-gold-soft:rgba(229,178,75,.18);--bd-dark:#2A1A12;--bd-dark-ink:#F7EBDD;
+  --bd-map1:#F6EBD7;--bd-map2:#EAD9BB;--bd-hill:#C9CFA1;--bd-hill2:#B5C08C;--bd-river:#BBD6DA}
+html[data-theme="ivory"]{--bd-bg:#F7F0E6;--bd-card:#FFFDF9}
+html[data-theme="dark"]{--bd-bg:#16100C;--bd-card:#221913;--bd-ink:#F4ECE0;--bd-ink2:rgba(244,236,224,.74);--bd-ink3:rgba(244,236,224,.5);--bd-line:rgba(244,236,224,.14);
+  --bd-soft:rgba(244,236,224,.07);--bd-acc:#E27A52;--bd-acc-soft:rgba(226,122,82,.15);--bd-ok:#7DBE86;--bd-ok-soft:rgba(125,190,134,.15);--bd-gold:#E5B24B;--bd-gold-soft:rgba(229,178,75,.14);
+  --bd-dark:#0E0906;--bd-map1:#2A2017;--bd-map2:#1E160F;--bd-hill:#3A4328;--bd-hill2:#2F3820;--bd-river:#2C4650}
+html,body{background:var(--bd-bg)!important;color:var(--bd-ink)}
+body{margin:0;padding:0!important;font-family:var(--sans,system-ui,sans-serif)}
+#app{display:block;max-width:none;padding:0;margin:0}
+.bd{max-width:1180px;margin:0 auto;padding:clamp(20px,3vw,40px) clamp(14px,3vw,36px) 90px}
+.ic{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.bd h1{font-family:var(--serif,Georgia,serif);font-weight:600;font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:1.15;margin:12px 0 10px;letter-spacing:-.01em}
+.bd h1 em{color:var(--bd-acc);font-style:italic}
+.bd h2{font-family:var(--serif,Georgia,serif);font-weight:600;font-size:clamp(1.35rem,2.2vw,1.75rem);margin:0 0 6px}
+.bd p{line-height:1.6}
+.bd .eyebrow{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--bd-acc)}
+.bd .lede{font-size:1.05rem;color:var(--bd-ink2);max-width:60ch;margin:0 0 16px}
+.pill{display:inline-flex;gap:10px;align-items:center;flex-wrap:wrap;border:1px solid var(--bd-line);background:var(--bd-card);border-radius:99px;padding:9px 16px;font-size:14px;color:var(--bd-ink2)}
+.pill b{color:var(--bd-ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-items:start}
+.prog{background:var(--bd-dark);color:var(--bd-dark-ink);border-radius:22px;padding:20px 22px;display:grid;gap:14px}
+.prog__top{display:flex;gap:16px;align-items:center}
+.ring{--p:0;width:78px;height:78px;border-radius:50%;background:conic-gradient(#E5B24B calc(var(--p)*1%),rgba(255,255,255,.14) 0);display:grid;place-items:center;flex:none}
+.ring span{width:60px;height:60px;border-radius:50%;background:var(--bd-dark);display:grid;place-items:center;font-weight:800;font-size:17px}
+.prog small{display:block;color:rgba(247,235,221,.62);font-size:12.5px;line-height:1.45}
+.prog b.big{font-size:15px}
+.prog .chosen{display:flex;gap:10px;align-items:center;border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:10px 12px;font-size:13.5px}
+.prog .chosen b{display:block;font-size:14px}
+.today{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--bd-card);border:1px solid var(--bd-line);border-radius:18px;padding:16px 20px;margin:22px 0 0}
+.today .ico{width:42px;height:42px;border-radius:12px;background:var(--bd-ok-soft);color:var(--bd-ok);display:grid;place-items:center;flex:none}
+.today small{display:block;font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--bd-ok)}
+.today b{font-size:15.5px;line-height:1.35}
+.go{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;background:var(--bd-acc);color:#fff;font:700 14px var(--sans,system-ui);padding:12px 18px;text-decoration:none;cursor:pointer;white-space:nowrap}
+.go:hover{opacity:.92}
+.go--ghost{background:var(--bd-card);color:var(--bd-ink);border:1.5px solid var(--bd-line)}
+.go--ghost:hover{border-color:var(--bd-acc);color:var(--bd-acc);opacity:1}
+
+/* tab */
+.tabs{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;background:var(--bd-card);border:1px solid var(--bd-line);border-radius:16px;padding:6px;margin:26px 0 0}
+.tabs button{border:0;background:none;color:var(--bd-ink2);font:700 13.5px var(--sans,system-ui);padding:12px 8px;border-radius:12px;cursor:pointer}
+.tabs button:hover{background:var(--bd-soft)}
+.tabs button.on{background:var(--bd-acc);color:#fff}
+.sec{scroll-margin-top:84px;margin-top:40px}
+
+/* bản đồ */
+.map{position:relative;border:1px solid var(--bd-line);border-radius:26px;overflow:hidden;margin-top:16px;background:linear-gradient(160deg,var(--bd-map1),var(--bd-map2));aspect-ratio:1000/600}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.node{position:absolute;transform:translate(-50%,-50%);width:16%;min-width:132px;max-width:180px;background:var(--bd-card);border:1.5px solid var(--bd-line);border-radius:16px;padding:10px 12px;text-decoration:none;color:var(--bd-ink);
+  box-shadow:0 12px 24px -14px rgba(60,30,10,.45);transition:transform .15s,border-color .15s}
+.node:hover{transform:translate(-50%,-52%);border-color:var(--bd-acc)}
+.node .no{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--bd-acc);color:#fff;font-weight:800;font-size:12px;margin-bottom:6px}
+.node b{display:block;font-size:13.5px;line-height:1.25}
+.node small{display:block;color:var(--bd-ink3);font-size:11.5px;margin-top:4px}
+.node .bar{height:5px;border-radius:9px;background:var(--bd-soft);margin-top:7px;overflow:hidden}
+.node .bar i{display:block;height:100%;background:var(--bd-acc)}
+.node[data-st="done"]{border-color:var(--bd-ok)}.node[data-st="done"] .no{background:var(--bd-ok)}.node[data-st="done"] .bar i{background:var(--bd-ok)}
+.node[data-st="here"]{border-color:var(--bd-acc);box-shadow:0 0 0 4px var(--bd-acc-soft),0 12px 24px -14px rgba(60,30,10,.45)}
+.node[data-st="lock"] .no{background:var(--bd-ink3)}
+.node[data-st="lock"]{opacity:.88}
+.pin{position:absolute;left:50%;top:-14px;transform:translate(-50%,-100%);background:var(--bd-acc);color:#fff;font-size:11.5px;font-weight:800;border-radius:99px;padding:5px 10px;white-space:nowrap}
+.pin::after{content:"";position:absolute;left:50%;bottom:-5px;transform:translateX(-50%);border:5px solid transparent;border-bottom:0;border-top-color:var(--bd-acc)}
+.flag{position:absolute;left:3%;top:88%;background:var(--bd-ok);color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;border-radius:6px;padding:5px 9px}
+.maplist{display:none}
+@media(max-width:760px){.map{display:none}.maplist{display:grid;gap:10px;margin-top:14px}
+  .maplist .node{position:static;transform:none;width:auto;max-width:none;display:grid;grid-template-columns:34px 1fr;gap:2px 12px;align-items:center}
+  .maplist .node .no{grid-row:span 3;margin:0}.maplist .pin{position:static;transform:none;display:inline-block;margin-bottom:6px}.maplist .pin::after{display:none}
+  .hero{grid-template-columns:minmax(0,1fr)}.tabs{grid-template-columns:repeat(5,auto);overflow-x:auto}}
+
+/* lộ trình dạng bậc thang */
+.steps{display:grid;gap:10px;margin-top:14px}
+.step{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:center;background:var(--bd-card);border:1px solid var(--bd-line);border-radius:16px;padding:14px 16px}
+.step .no{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:var(--bd-soft);color:var(--bd-ink2)}
+.step[data-st="done"] .no{background:var(--bd-ok);color:#fff}.step[data-st="here"] .no{background:var(--bd-acc);color:#fff}
+.step b{font-size:15.5px}.step p{margin:2px 0 0;font-size:13.5px;color:var(--bd-ink2)}
+.chip{font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:6px 11px;border-radius:99px;background:var(--bd-soft);color:var(--bd-ink2);white-space:nowrap}
+.chip--ok{background:var(--bd-ok-soft);color:var(--bd-ok)}.chip--acc{background:var(--bd-acc-soft);color:var(--bd-acc)}
+
+/* thẻ chọn */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:16px}
+.cardx{background:var(--bd-card);border:1.5px solid var(--bd-line);border-radius:18px;padding:18px;display:grid;gap:8px;align-content:start}
+.cardx[data-on]{border-color:var(--bd-acc);box-shadow:0 0 0 3px var(--bd-acc-soft)}
+.cardx b{font-size:16px}.cardx p{margin:0;font-size:14px;color:var(--bd-ink2)}.cardx .meta{font-size:12.5px;color:var(--bd-ink3);font-weight:600}
+.cardx button{margin-top:6px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:16px}
+.three .cardx .n{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--bd-acc)}
+details.faq{background:var(--bd-card);border:1px solid var(--bd-line);border-radius:14px;padding:0 18px;margin-top:10px}
+details.faq summary{cursor:pointer;font-weight:700;padding:15px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details.faq summary::after{content:"+";font-size:20px;line-height:1;color:var(--bd-ink3)}
+details.faq[open] summary::after{content:"–"}
+details.faq p{margin:0 0 16px;color:var(--bd-ink2);font-size:14.5px}
+.note2{border-left:4px solid var(--bd-gold);background:var(--bd-gold-soft);border-radius:0 14px 14px 0;padding:12px 16px;margin-top:14px;font-size:14.5px}
+@media(max-width:560px){.step{grid-template-columns:40px minmax(0,1fr)}.step .chip{grid-column:2;justify-self:start}}
+</style>
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main id="app"></main>
+<script src="assets/js/data/lessons.js?v=8"></script>
+<script src="assets/js/data/principles.js?v=8"></script>
+<script src="assets/js/data/curriculum.js?v=4"></script>
+<script src="assets/js/data/bai-index.js?v=11"></script>
+<script src="assets/js/data/exams.js?v=10"></script>
+<script src="assets/js/app.js?v=21"></script>
+<script>
+appShell('bat-dau.html');
+const app=document.getElementById('app');
+const PACES=[{n:1,t:'Nhẹ nhàng',d:'Đi đều, không áp lực'},{n:2,t:'Ổn định',d:'Tiến nhanh hơn nhưng vẫn bền'},{n:3,t:'Tăng tốc',d:'Cho tuần bạn rảnh hoặc sắp phỏng vấn'}];
+const PER_WEEK=5;                                   // một nhịp tính 5 ngày học mỗi tuần, hai ngày nghỉ hoặc bù
+const isDone=(k,s)=>!!(s.done[k]||lessonState(k,s));
+const ico={
+  play:'<svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l5 3.5-5 3.5z"/></svg>',
+  pin:'<svg class="ic" viewBox="0 0 24 24"><path d="M12 21s-6-5.2-6-10a6 6 0 0112 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>',
+  lock:'<svg class="ic" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>',
+};
+const NODE_POS=[[11,70],[27,34],[44,68],[60,32],[76,68],[91,32]];     // % trên bản đồ, khớp với đường đi trong SVG
+
+function model(){
+  const s=S.get(), pid=s.path||'full', path=PATHS.find(p=>p.id===pid)||PATHS[0];
+  const list=pathLessons(pid), total=list.length, done=list.filter(k=>isDone(k,s)).length;
+  const here=hereStage(s), nxt=nextLesson(s), pace=Math.max(1,Math.min(3,+s.pace||1));
+  const left=total-done, weeks=Math.max(0,Math.ceil(left/(pace*PER_WEEK)));
+  const stages=STAGES.map((st,i)=>{
+    const ks=st.mods.flatMap(m=>m.lessons), d=ks.filter(k=>isDone(k,s)).length, open=stageOpen(st.id,s);
+    const passed=!!((s.exams||{})[st.id]||{}).passed;
+    const state=(ks.length&&d===ks.length)||passed?'done':st.id===here?'here':open?'open':'lock';
+    return {st,i,ks,d,open,state};
+  });
+  return {s,pid,path,list,total,done,here,nxt,pace,left,weeks,stages};
+}
+
+function mapHTML(m){
+  const nodes=m.stages.map(x=>{
+    const [px,py]=NODE_POS[x.i]||[50,50], pct=x.ks.length?Math.round(x.d/x.ks.length*100):0;
+    const tag=x.state==='done'?'✓ Xong':x.state==='lock'?'Chưa mở':x.state==='here'?'Đang học':'Đã mở';
+    return {px,py,html:(cls)=>`<a class="node" ${cls} data-st="${x.state==='open'?'open':x.state}" href="ban-do.html#${x.st.id}" style="${cls?'':`left:${px}%;top:${py}%`}">
+      ${x.state==='here'?'<span class="pin">Bạn ở đây</span>':''}
+      <span class="no">${x.st.n}</span><b>${escH(x.st.t)}</b>
+      <small>${x.ks.length?x.d+'/'+x.ks.length+' bài':x.st.mods.length+' module case'} · ${tag}</small>
+      <span class="bar"><i style="width:${pct}%"></i></span></a>`};
+  });
+  const svg=`<svg viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,470 C150,400 260,500 420,450 S720,380 1000,440 L1000,600 L0,600Z" fill="var(--bd-hill)" opacity=".55"/>
+    <path d="M0,540 C200,470 380,560 560,500 S860,470 1000,520 L1000,600 L0,600Z" fill="var(--bd-hill2)" opacity=".6"/>
+    <path d="M0,120 C140,60 280,130 420,80 S700,40 1000,100" fill="none" stroke="var(--bd-river)" stroke-width="26" stroke-linecap="round" opacity=".85"/>
+    <path d="M110,420 C190,420 190,204 270,204 C355,204 355,408 440,408 C520,408 520,192 600,192 C680,192 680,408 760,408 C835,408 835,192 910,192"
+      fill="none" stroke="var(--bd-acc)" stroke-width="5" stroke-dasharray="3 14" stroke-linecap="round"/>
+    ${[[60,520],[150,555],[330,545],[520,560],[690,530],[880,560],[940,300],[40,250],[360,120],[700,110]].map(([x,y])=>`<g opacity=".7"><circle cx="${x}" cy="${y}" r="13" fill="var(--bd-hill2)"/><rect x="${x-1.5}" y="${y+10}" width="3" height="9" fill="#7A5A3A"/></g>`).join('')}
+  </svg>`;
+  return `<div class="map" role="img" aria-label="Bản đồ ${m.stages.length} chặng">${svg}<span class="flag">XUẤT PHÁT</span>${nodes.map(n=>n.html('')).join('')}</div>
+    <div class="maplist">${nodes.map(n=>n.html('data-list')).join('')}</div>`;
+}
+
+function render(){
+  const m=model(), {s,path,done,total,nxt,stages}=m, pct=total?Math.round(done/total*100):0;
+  const nm=nxt?lessonMeta(nxt):null, nw=nxt?where(nxt):null, hereSt=stages.find(x=>x.state==='here');
+  app.innerHTML=`<div class="bd">
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Bắt đầu từ đâu</span>
+      <h1>Bạn muốn học marketing<br>theo <em>hướng nào?</em></h1>
+      <p class="lede">Chọn một hướng để hệ thống sắp xếp hành trình phù hợp. Bạn có thể đổi bất kỳ lúc nào, tiến độ vẫn giữ nguyên.</p>
+      <span class="pill"><b>6 phút mỗi bài</b> · Mỗi bài gồm đọc, một câu dừng giữa bài và kiểm tra nhanh. Không cần hơn.</span>
+    </div>
+    <aside class="prog" aria-label="Tiến độ hành trình">
+      <div class="prog__top"><div class="ring" style="--p:${pct}"><span>${pct}%</span></div>
+        <div><small>TIẾN ĐỘ HÀNH TRÌNH</small><b class="big">${done}/${total} bài đã xong</b>
+          <small>${hereSt?'Đang ở: '+escH(hereSt.st.t):'Bạn đã qua mọi chặng đang mở'}</small></div></div>
+      <div class="chosen">${ico.pin}<div><small>ĐANG CHỌN</small><b>${escH(path.t)}</b></div></div>
+    </aside>
+  </section>
+
+  <section class="today">
+    <div style="display:flex;gap:14px;align-items:center;min-width:0"><span class="ico">${ico.play}</span>
+      <div style="min-width:0"><small>${nxt?'HÔM NAY BẠN HỌC BÀI NÀY':'BẠN ĐÃ HỌC HẾT BÀI ĐANG MỞ'}</small>
+        <b>${nxt&&nm?`${nw?`Chặng ${nw.stage.n} · `:''}${escH(nm.t)}`:'Làm đề thi vượt chặng để mở chặng tiếp theo.'}</b></div></div>
+    ${nxt?`<a class="go" href="bai.html?id=${encodeURIComponent(nxt)}">Mở bài học →</a>`:`<a class="go" href="thi.html">Thi vượt chặng →</a>`}
+  </section>
+
+  <nav class="tabs" id="tabs" aria-label="Các bước bắt đầu">
+    ${[['map','Bản đồ'],['s1','01 Chọn hướng'],['s2','02 Chọn nhịp'],['s3','03 Cách học'],['s4','04 Giải đáp']].map(([id,t],i)=>`<button type="button" data-go="${id}" class="${i?'':'on'}">${t}</button>`).join('')}
+  </nav>
+
+  <section class="sec" id="map">
+    <h2>Bản đồ hành trình</h2>
+    <p class="lede" style="margin:0">${stages.length} chặng đi từ nền tảng tới case tổng hợp. Bấm vào một chặng để xem toàn bộ bài.</p>
+    ${mapHTML(m)}
+    <div class="steps" aria-label="Bạn đang ở đâu trên lộ trình">
+      ${stages.map(x=>`<div class="step" data-st="${x.state}">
+        <span class="no">${x.state==='done'?'✓':x.st.n}</span>
+        <div><b>${escH(x.st.t)}</b><p>${escH(x.st.q)}</p>
+          <p style="font-size:12.5px;color:var(--bd-ink3)">${x.st.mods.length} module${x.ks.length?' · '+x.d+'/'+x.ks.length+' bài':' · case tổng hợp'}</p></div>
+        <span class="chip ${x.state==='done'?'chip--ok':x.state==='here'?'chip--acc':''}">${{done:'Xong',here:'Học tiếp',open:'Đã mở',lock:'Sắp mở'}[x.state]}</span>
+      </div>`).join('')}
+    </div>
+  </section>
+
+  <section class="sec" id="s1">
+    <span class="eyebrow">01</span><h2>Chọn một hướng</h2>
+    <p class="lede" style="margin:0">Bạn muốn đi đủ chương trình, hay chuẩn bị cho một việc cụ thể như phỏng vấn, thi case, performance?</p>
+    <div class="cards">${PATHS.map(p=>{
+      const n=p.lessons?p.lessons.length:ALL.length, on=p.id===m.pid;
+      return `<div class="cardx" ${on?'data-on':''}><span class="meta">${n} bài · khoảng ${Math.ceil(n/(m.pace*PER_WEEK))} tuần</span>
+        <b>${escH(p.t)}</b><p>${escH(p.d)}</p>
+        ${on?'<span class="chip chip--acc" style="justify-self:start">Đang chọn</span>':`<button type="button" class="go go--ghost" data-path="${p.id}">Chọn hướng này →</button>`}</div>`;}).join('')}
+    </div>
+    <div class="note2">Đã biết một phần rồi? <a href="xep-lop.html" style="color:var(--bd-acc);font-weight:700">Làm bài xếp lớp</a> — đạt từ 80% ở chặng nào thì chặng đó được ghi công, không phải học lại.</div>
+  </section>
+
+  <section class="sec" id="s2">
+    <span class="eyebrow">02</span><h2>Chọn nhịp bạn giữ được</h2>
+    <p class="lede" style="margin:0">Nhịp giữ được quan trọng hơn nhịp nhanh.</p>
+    <p class="note2" id="paceLine" style="margin-top:0"></p>
+    <div class="cards" id="paces">${PACES.map(p=>`<div class="cardx" data-pace="${p.n}" ${p.n===m.pace?'data-on':''}>
+        <b>${p.t}</b><p>${p.n} bài/ngày · khoảng ${p.n*6} phút mỗi ngày</p><span class="meta">${p.d}</span>
+        <button type="button" class="go ${p.n===m.pace?'':'go--ghost'}" data-setpace="${p.n}">${p.n===m.pace?'Đang chọn':'Chọn nhịp này'}</button></div>`).join('')}</div>
+    <details class="faq"><summary>Học dồn cuối tuần có được không?</summary>
+      <p>Được, nhưng bạn sẽ nhớ ít hơn. Câu sai được nhắc ôn lại sau 1, 3 và 7 ngày — học rải đều thì những lần nhắc đó rơi đúng lúc bạn bắt đầu quên. Dồn nhiều bài vào một buổi thì mọi lần nhắc dồn vào cùng vài ngày, hiệu quả thấp hơn.</p></details>
+  </section>
+
+  <section class="sec" id="s3">
+    <span class="eyebrow">03</span><h2>Mỗi bài học làm ba việc</h2>
+    <p class="lede" style="margin:0">Ba bước giúp kiến thức đi từ đọc hiểu sang nhớ lâu.</p>
+    <div class="three">
+      <div class="cardx"><span class="n">01 · ĐỌC</span><b>Hiểu một khái niệm</b><p>Một tình huống thật, một khái niệm, một ví dụ có số. Câu hỏi đoán trước giúp bạn chú ý hơn.</p></div>
+      <div class="cardx"><span class="n">02 · PHẢN XẠ</span><b>Kiểm tra mình thật sự hiểu chưa</b><p>Câu “Dừng &amp; Kiểm tra” giữa bài, bài tính số hoặc bài thực hành 60 giây — làm trước, xem đáp án sau.</p></div>
+      <div class="cardx"><span class="n">03 · GHI NHỚ</span><b>Hệ thống nhắc lại đúng lúc</b><p>Đổ não 60 giây, kiểm tra nhanh cuối bài, rồi câu sai quay lại sau 1, 3 và 7 ngày.</p></div>
+    </div>
+    <div class="note2">Cuộn hết bài mới được tính là đã đọc. Nhảy thẳng xuống câu hỏi thì không đọng lại gì.</div>
+  </section>
+
+  <section class="sec" id="s4">
+    <span class="eyebrow">04</span><h2>Có thể bạn đang nghĩ…</h2>
+    <details class="faq"><summary>Bỏ mất mấy ngày rồi, có phải học lại từ đầu không?</summary>
+      <p>Không. Tiến độ lưu theo từng bài; bạn mở trang này là thấy ngay bài kế tiếp. Câu sai của những ngày trước sẽ chờ ở trang Ôn lỗi.</p></details>
+    <details class="faq"><summary>Tôi chọn sai hướng thì sao?</summary>
+      <p>Đổi bất kỳ lúc nào ở bước 01. Bài đã học vẫn được tính, chỉ có thứ tự “bài kế tiếp” thay đổi.</p></details>
+    <details class="faq"><summary>Tôi đã biết một phần, có phải học lại?</summary>
+      <p>Không cần. Làm <a href="xep-lop.html" style="color:var(--bd-acc)">bài xếp lớp</a>: đạt từ 80% ở chặng nào thì mọi bài chặng đó được ghi công. Làm lại được sau 7 ngày.</p></details>
+    <details class="faq"><summary>Khi nào thì được đi tiếp sang chặng sau?</summary>
+      <p>Chặng sau mở khi bạn qua đề thi vượt chặng trước. Chặng nào chưa có đề thì mở khi bạn xong ít nhất 60% chặng trước. Bài thuộc hướng bạn chọn luôn mở, dù nằm ở chặng nào.</p></details>
+  </section>
+  </div>`;
+  wire();
+}
+
+function wire(){
+  const s=S.get(), m=model();
+  const upd=()=>{ const line=document.getElementById('paceLine'); if(!line) return;
+    line.innerHTML=`Còn <b>${m.left}</b> bài trong hướng <b>${escH(m.path.t)}</b>. Với nhịp này bạn xong trong khoảng <b>${m.weeks} tuần</b> · mỗi ngày khoảng ${m.pace*6} phút, ${PER_WEEK} ngày một tuần.`; };
+  upd();
+  app.querySelectorAll('[data-path]').forEach(b=>b.onclick=()=>{ S.set({path:b.dataset.path}); toast('Đã chọn hướng mới'); const y=window.scrollY; render(); window.scrollTo(0,y); });
+  app.querySelectorAll('[data-setpace]').forEach(b=>b.onclick=()=>{ S.set({pace:+b.dataset.setpace}); toast('Đã đổi nhịp học'); const y=window.scrollY; render(); window.scrollTo(0,y); });
+  const tabs=[...app.querySelectorAll('#tabs [data-go]')];
+  tabs.forEach(b=>b.onclick=()=>document.getElementById(b.dataset.go)?.scrollIntoView({behavior:'smooth',block:'start'}));
+  const onScroll=()=>{ let cur=tabs[0].dataset.go;
+    tabs.forEach(b=>{ const e=document.getElementById(b.dataset.go); if(e&&e.getBoundingClientRect().top<140) cur=b.dataset.go; });
+    tabs.forEach(b=>b.classList.toggle('on',b.dataset.go===cur)); };
+  window.removeEventListener('scroll',window.__bdScroll||(()=>{})); window.__bdScroll=onScroll; window.addEventListener('scroll',onScroll,{passive:true});
+}
+document.title='Bắt đầu từ đâu — Tự Học Marketing Case';
+render();
+</script>
+</body>
+</html>
