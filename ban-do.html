@@ -262,7 +262,7 @@ $app.addEventListener('click',e=>{
   const l=e.target.closest('[data-sel]'); if(l){ SEL=l.dataset.sel; render(); }
 });
 render();
-if(TAB==='stage'){ const h=hereStage(S.get()); if(h) setTimeout(()=>document.getElementById(h)?.scrollIntoView({block:'start'}),0); }
+if(TAB==='stage'){ const h=(location.hash.match(/id=(\w+)/)||[])[1]||hereStage(S.get()); if(h) setTimeout(()=>document.getElementById(h)?.scrollIntoView({block:'start'}),0); }
 </script>
 <script src="assets/js/paper.js?v=4"></script>
 </body>

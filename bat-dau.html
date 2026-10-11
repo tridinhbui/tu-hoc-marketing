@@ -104,6 +104,41 @@ details.faq[open] summary::after{content:"–"}
 details.faq p{margin:0 0 16px;color:var(--bd-ink2);font-size:14.5px}
 .note2{border-left:4px solid var(--bd-gold);background:var(--bd-gold-soft);border-radius:0 14px 14px 0;padding:12px 16px;margin-top:14px;font-size:14.5px}
 @media(max-width:560px){.step{grid-template-columns:40px minmax(0,1fr)}.step .chip{grid-column:2;justify-self:start}}
+
+/* ===== v2 — bám mockup giấy thủ công: chữ viết tay, thẻ tiến độ rách mép, bản đồ màu nước, hàng chặng ===== */
+.hero{position:relative}
+.hand{position:absolute;font-family:'Caveat','Reenie Beanie',cursive;color:rgba(70,44,26,.78);line-height:1.15;pointer-events:none;z-index:0}
+.hand--a{right:400px;top:4px;font-size:21px;transform:rotate(-5deg);width:190px}
+.prog{position:relative;background:linear-gradient(150deg,#4a2c1d,#2a1810 70%);clip-path:polygon(0.0% 1.5%,3.8% 1.8%,7.7% 1.9%,11.5% 2.3%,15.4% 1.8%,19.2% 2.2%,23.1% 0.1%,26.9% 1.1%,30.8% 2.3%,34.6% 1.6%,38.5% 2.2%,42.3% 0.3%,46.2% 1.1%,50.0% 0.6%,53.8% 1.3%,57.7% 1.4%,61.5% 0.0%,65.4% 0.5%,69.2% 0.7%,73.1% 2.2%,76.9% 1.8%,80.8% 0.4%,84.6% 1.9%,88.5% 0.3%,92.3% 1.5%,96.2% 0.3%,100.0% 0.0%,97.9% 7.7%,99.5% 15.4%,99.5% 23.1%,97.6% 30.8%,97.9% 38.5%,99.3% 46.2%,97.7% 53.8%,98.7% 61.5%,98.4% 69.2%,99.5% 76.9%,97.7% 84.6%,98.3% 92.3%,100.0% 97.7%,96.2% 97.9%,92.3% 99.3%,88.5% 99.1%,84.6% 99.6%,80.8% 99.7%,76.9% 99.8%,73.1% 99.3%,69.2% 98.6%,65.4% 100.0%,61.5% 98.4%,57.7% 99.2%,53.8% 99.3%,50.0% 98.0%,46.2% 98.8%,42.3% 99.2%,38.5% 98.8%,34.6% 98.3%,30.8% 99.9%,26.9% 97.7%,23.1% 99.9%,19.2% 98.2%,15.4% 98.0%,11.5% 100.0%,7.7% 98.1%,3.8% 99.1%,1.4% 100.0%,0.0% 92.3%,0.1% 84.6%,0.4% 76.9%,2.3% 69.2%,0.5% 61.5%,1.8% 53.8%,2.2% 46.2%,2.3% 38.5%,0.8% 30.8%,0.9% 23.1%,1.3% 15.4%,1.9% 7.7%);padding:26px 28px;box-shadow:none;border-radius:0}
+.prog .chosen{border-style:dashed;border-radius:10px}
+.prog-wrap{position:relative;filter:drop-shadow(0 18px 22px rgba(60,30,12,.35))}
+.hand--b{right:-6px;top:calc(100% + 12px);font-size:17px;transform:rotate(-4deg);width:150px;text-align:right}
+.today{position:relative;overflow:hidden;border-radius:20px;padding-left:96px}
+.today::before{content:"";position:absolute;left:12px;top:50%;transform:translateY(-50%) rotate(-6deg);width:70px;height:58px;background:#f1e3cc;clip-path:polygon(0.0% 0.3%,5.6% 2.4%,11.1% 2.6%,16.7% 2.8%,22.2% 0.1%,27.8% 3.0%,33.3% 0.3%,38.9% 1.1%,44.4% 2.0%,50.0% 2.9%,55.6% 1.1%,61.1% 3.0%,66.7% 1.7%,72.2% 1.0%,77.8% 1.0%,83.3% 0.6%,88.9% 0.3%,94.4% 0.5%,97.8% 0.0%,96.8% 11.1%,99.5% 22.2%,99.8% 33.3%,96.8% 44.4%,98.3% 55.6%,98.7% 66.7%,99.2% 77.8%,98.1% 88.9%,100.0% 97.4%,94.4% 98.5%,88.9% 98.7%,83.3% 99.8%,77.8% 97.1%,72.2% 99.9%,66.7% 98.4%,61.1% 97.3%,55.6% 99.6%,50.0% 97.7%,44.4% 97.0%,38.9% 98.0%,33.3% 97.5%,27.8% 99.7%,22.2% 98.6%,16.7% 99.5%,11.1% 97.3%,5.6% 99.1%,1.5% 100.0%,3.2% 88.9%,2.7% 77.8%,3.1% 66.7%,1.5% 55.6%,1.6% 44.4%,2.3% 33.3%,1.5% 22.2%,0.9% 11.1%);opacity:.9}
+.today .ico{display:none}
+.today small{color:var(--bd-acc)}
+.go{border-radius:12px;box-shadow:0 10px 18px -10px rgba(168,67,32,.7)}
+.sec .hand--c{position:absolute;right:10px;top:4px;font-size:18px;transform:rotate(-3deg);width:330px;text-align:left}
+#map{position:relative}
+.map{aspect-ratio:1000/400;min-height:300px;border-radius:22px;border:1px solid rgba(120,84,50,.2);background:linear-gradient(180deg,#f4ecd9 0%,#e9dcbc 100%)}
+.node{width:17%;min-width:140px;max-width:190px;padding:12px 14px;border-radius:14px;background:#fffdf8;border:1px solid rgba(120,84,50,.18);box-shadow:0 14px 26px -16px rgba(60,30,10,.6)}
+.node .no{background:#9a948a;width:24px;height:24px;font-size:11.5px;margin-bottom:5px}
+.node[data-st="here"] .no{background:var(--bd-acc)}
+.node[data-st="here"]{border:1.5px solid var(--bd-acc)}
+.node b{font-size:14px}
+.node small{font-size:11.5px}
+.node .bar{display:none}
+.flag{left:2.5%;top:auto;bottom:6%;transform:rotate(-4deg);background:#c9904f;color:#3b2412;font-size:15px;letter-spacing:.02em;border-radius:6px 12px 12px 6px;padding:5px 14px;font-family:'Caveat',cursive;font-weight:700;box-shadow:0 6px 12px -6px rgba(0,0,0,.5);text-transform:none}
+.step{position:relative;grid-template-columns:64px minmax(0,1fr) auto;gap:18px;padding:16px 22px;border-radius:18px;background:#fffdf8;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s}
+a.step:hover{transform:translateY(-1px);border-color:var(--bd-acc)}
+.step .no{width:54px;height:54px;font-size:20px;font-family:var(--serif,Georgia,serif);background:rgba(120,84,50,.08);color:var(--bd-ink2)}
+.step[data-st="here"] .no{background:rgba(200,90,50,.15);color:var(--bd-acc)}
+.step[data-st="done"] .no{background:var(--bd-ok-soft);color:var(--bd-ok)}
+.step b{font-size:16.5px}
+.step .chip{padding:10px 20px;font-size:13.5px;letter-spacing:0;text-transform:none;border-radius:12px;font-weight:700}
+.step .chip--acc{background:var(--bd-acc);color:#fff;box-shadow:0 10px 18px -10px rgba(168,67,32,.7)}
+@media(max-width:1300px){.hand--a,.hand--b,.sec .hand--c{display:none}}
+@media(max-width:560px){.step{grid-template-columns:48px minmax(0,1fr);padding:14px}.step .no{width:44px;height:44px}}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=4">
 </head>
@@ -147,21 +182,29 @@ function mapHTML(m){
   const nodes=m.stages.map(x=>{
     const [px,py]=NODE_POS[x.i]||[50,50], pct=x.ks.length?Math.round(x.d/x.ks.length*100):0;
     const tag=x.state==='done'?'✓ Xong':x.state==='lock'?'Chưa mở':x.state==='here'?'Đang học':'Đã mở';
-    return {px,py,html:(cls)=>`<a class="node" ${cls} data-st="${x.state==='open'?'open':x.state}" href="ban-do.html#${x.st.id}" style="${cls?'':`left:${px}%;top:${py}%`}">
+    return {px,py,html:(cls)=>`<a class="node" ${cls} data-st="${x.state==='open'?'open':x.state}" href="ban-do.html#tab=stage&id=${x.st.id}" style="${cls?'':`left:${px}%;top:${py}%`}">
       ${x.state==='here'?'<span class="pin">Bạn ở đây</span>':''}
       <span class="no">${x.st.n}</span><b>${escH(x.st.t)}</b>
       <small>${x.ks.length?x.d+'/'+x.ks.length+' bài':x.st.mods.length+' module case'} · ${tag}</small>
       <span class="bar"><i style="width:${pct}%"></i></span></a>`};
   });
-  const svg=`<svg viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,470 C150,400 260,500 420,450 S720,380 1000,440 L1000,600 L0,600Z" fill="var(--bd-hill)" opacity=".55"/>
-    <path d="M0,540 C200,470 380,560 560,500 S860,470 1000,520 L1000,600 L0,600Z" fill="var(--bd-hill2)" opacity=".6"/>
-    <path d="M0,120 C140,60 280,130 420,80 S700,40 1000,100" fill="none" stroke="var(--bd-river)" stroke-width="26" stroke-linecap="round" opacity=".85"/>
-    <path d="M110,420 C190,420 190,204 270,204 C355,204 355,408 440,408 C520,408 520,192 600,192 C680,192 680,408 760,408 C835,408 835,192 910,192"
-      fill="none" stroke="var(--bd-acc)" stroke-width="5" stroke-dasharray="3 14" stroke-linecap="round"/>
-    ${[[60,520],[150,555],[330,545],[520,560],[690,530],[880,560],[940,300],[40,250],[360,120],[700,110]].map(([x,y])=>`<g opacity=".7"><circle cx="${x}" cy="${y}" r="13" fill="var(--bd-hill2)"/><rect x="${x-1.5}" y="${y+10}" width="3" height="9" fill="#7A5A3A"/></g>`).join('')}
+  const tree=(x,y,k)=>k%2?`<g opacity=".85"><path d="M${x},${y-34} L${x+13},${y} L${x-13},${y}Z" fill="#7d8f55"/><path d="M${x},${y-22} L${x+16},${y+10} L${x-16},${y+10}Z" fill="#6c7f48"/><rect x="${x-2}" y="${y+10}" width="4" height="10" fill="#7a5a3a"/></g>`
+    :`<g opacity=".85"><circle cx="${x}" cy="${y-8}" r="16" fill="#8fa062"/><circle cx="${x-8}" cy="${y-2}" r="11" fill="#7d8f55"/><rect x="${x-2}" y="${y+4}" width="4" height="14" fill="#7a5a3a"/></g>`;
+  const trees=[[70,300],[130,330],[180,250],[360,170],[420,200],[520,280],[640,170],[700,150],[850,300],[960,230],[300,330],[780,340],[40,200],[560,120],[900,150]];
+  const svg=`<svg viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6efdd"/><stop offset="1" stop-color="#ecdfc0"/></linearGradient>
+      <linearGradient id="rv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a9cdd2"/><stop offset=".5" stop-color="#c3dde0"/><stop offset="1" stop-color="#a9cdd2"/></linearGradient></defs>
+    <rect width="1000" height="400" fill="url(#sky)"/>
+    <path d="M0,150 C120,90 220,160 340,120 S560,80 680,120 S900,90 1000,130 L1000,400 L0,400Z" fill="#cdd1a6" opacity=".7"/>
+    <path d="M0,200 C150,150 300,220 460,180 S760,150 1000,200 L1000,400 L0,400Z" fill="#b9c590" opacity=".75"/>
+    <path d="M-10,250 C120,230 240,300 400,270 S700,200 860,250 S980,260 1010,240" fill="none" stroke="url(#rv)" stroke-width="34" stroke-linecap="round" opacity=".95"/>
+    <path d="M0,330 C200,290 380,350 560,320 S860,300 1000,330 L1000,400 L0,400Z" fill="#a9b97f" opacity=".8"/>
+    ${trees.map(([x,y],i)=>tree(x,y,i)).join('')}
+    <path d="M110,280 C190,280 190,136 270,136 C355,136 355,272 440,272 C520,272 520,128 600,128 C680,128 680,272 760,272 C835,272 835,128 910,128"
+      fill="none" stroke="#b8502d" stroke-width="3.2" stroke-dasharray="9 8" stroke-linecap="round"/>
+    ${NODE_POS.map(([px,py])=>`<circle cx="${px*10}" cy="${py>50?py*4-38:py*4+38}" r="7" fill="#b8502d" stroke="#fff" stroke-width="2.5"/>`).join('')}
   </svg>`;
-  return `<div class="map" role="img" aria-label="Bản đồ ${m.stages.length} chặng">${svg}<span class="flag">XUẤT PHÁT</span>${nodes.map(n=>n.html('')).join('')}</div>
+  return `<div class="map" role="img" aria-label="Bản đồ ${m.stages.length} chặng">${svg}<span class="flag">Xuất phát</span>${nodes.map(n=>n.html('')).join('')}</div>
     <div class="maplist">${nodes.map(n=>n.html('data-list')).join('')}</div>`;
 }
 
@@ -174,14 +217,15 @@ function render(){
       <span class="eyebrow">Bắt đầu từ đâu</span>
       <h1>Bạn muốn học marketing<br>theo <em>hướng nào?</em></h1>
       <p class="lede">Chọn một hướng để hệ thống sắp xếp hành trình phù hợp. Bạn có thể đổi bất kỳ lúc nào, tiến độ vẫn giữ nguyên.</p>
+      <span class="hand hand--a" aria-hidden="true">Học marketing<br>theo cách của bạn,<br>— từng bước, vững vàng hơn<br>mỗi ngày.</span>
       <span class="pill"><b>6 phút mỗi bài</b> · Mỗi bài gồm đọc, một câu dừng giữa bài và kiểm tra nhanh. Không cần hơn.</span>
     </div>
-    <aside class="prog" aria-label="Tiến độ hành trình">
+    <div class="prog-wrap"><aside class="prog" aria-label="Tiến độ hành trình">
       <div class="prog__top"><div class="ring" style="--p:${pct}"><span>${pct}%</span></div>
         <div><small>TIẾN ĐỘ HÀNH TRÌNH</small><b class="big">${done}/${total} bài đã xong</b>
           <small>${hereSt?'Đang ở: '+escH(hereSt.st.t):'Bạn đã qua mọi chặng đang mở'}</small></div></div>
       <div class="chosen">${ico.pin}<div><small>ĐANG CHỌN</small><b>${escH(path.t)}</b></div></div>
-    </aside>
+    </aside><span class="hand hand--b" aria-hidden="true">Những bước nhỏ<br>tạo nên<br>hành trình lớn ♡</span></div>
   </section>
 
   <section class="today">
@@ -196,16 +240,17 @@ function render(){
   </nav>
 
   <section class="sec" id="map">
+    <span class="hand hand--c" aria-hidden="true">Từ những điều cơ bản<br>đến những điều bạn có thể<br>tự làm được trong công việc thực tế.</span>
     <h2>Bản đồ hành trình</h2>
     <p class="lede" style="margin:0">${stages.length} chặng đi từ nền tảng tới case tổng hợp. Bấm vào một chặng để xem toàn bộ bài.</p>
     ${mapHTML(m)}
     <div class="steps" aria-label="Bạn đang ở đâu trên lộ trình">
-      ${stages.map(x=>`<div class="step" data-st="${x.state}">
+      ${stages.map(x=>`<a class="step" data-st="${x.state}" href="${x.state==='here'&&m.nxt?'bai.html?id='+encodeURIComponent(m.nxt):'ban-do.html#tab=stage&id='+x.st.id}">
         <span class="no">${x.state==='done'?'✓':x.st.n}</span>
         <div><b>${escH(x.st.t)}</b><p>${escH(x.st.q)}</p>
           <p style="font-size:12.5px;color:var(--bd-ink3)">${x.st.mods.length} module${x.ks.length?' · '+x.d+'/'+x.ks.length+' bài':' · case tổng hợp'}</p></div>
-        <span class="chip ${x.state==='done'?'chip--ok':x.state==='here'?'chip--acc':''}">${{done:'Xong',here:'Học tiếp',open:'Đã mở',lock:'Sắp mở'}[x.state]}</span>
-      </div>`).join('')}
+        <span class="chip ${x.state==='done'?'chip--ok':x.state==='here'?'chip--acc':''}">${{done:'Xong',here:'Học tiếp',open:'Vào học',lock:'Sắp mở'}[x.state]}</span>
+      </a>`).join('')}
     </div>
   </section>
 
