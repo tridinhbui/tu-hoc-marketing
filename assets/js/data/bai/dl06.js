@@ -4,7 +4,7 @@ BAI_ADD({ mod:'dl06', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
 { id:'B:dl06-01', skill:'measure', read:'6 phút', t:'Khách xem TikTok, rồi tìm Google, rồi mới mua: ai được công?',
-  situation:'Shop túi vải của Hà chạy ba kênh. Một khách tiêu biểu: thấy video TikTok hôm thứ Hai, thứ Tư bấm quảng cáo Facebook xem lại, thứ Sáu gõ tên shop trên Google rồi mua đơn 600.000đ. Báo cáo Google Analytics ghi toàn bộ 600.000đ cho Google. Hà định cắt TikTok vì "không ra đơn".',
+  situation:'Shop túi vải của Hà chạy ba kênh. Một khách tiêu biểu: thấy video TikTok hôm thứ Hai, thứ Tư bấm quảng cáo Facebook xem lại, thứ Sáu gõ tên shop trên Google rồi mua đơn 600.000đ. Báo cáo nguồn lưu lượng của Google Analytics (tính theo chạm cuối của phiên) ghi toàn bộ 600.000đ cho Google. Hà định cắt TikTok vì "không ra đơn".',
   concept:{ name:'Last-click: ghi công cho chạm cuối',
     body:'Một đơn hàng thường đi qua nhiều <b>điểm chạm</b>. Mô hình <b>last-click</b> dồn 100% công cho điểm chạm cuối cùng trước khi mua. Nó đơn giản và dễ đo, nhưng thiên vị các kênh "đứng ở cửa" như tìm kiếm tên thương hiệu, và bỏ qua các kênh làm khách biết đến lần đầu. Dùng last-click để cắt kênh là dễ cắt nhầm chính kênh đang nuôi phễu.' },
   example:'Trong tháng, Google được ghi 30 đơn theo last-click, TikTok 2 đơn. Nhưng khi hỏi 30 khách đó, 20 người nói lần đầu thấy shop trên TikTok. Nếu Hà tắt TikTok, lượt tìm tên shop trên Google sẽ giảm theo, và 30 đơn "của Google" co lại. Quyết định đúng: giữ TikTok, và đọc last-click như "kênh chốt đơn", không phải "kênh tạo ra đơn".',
