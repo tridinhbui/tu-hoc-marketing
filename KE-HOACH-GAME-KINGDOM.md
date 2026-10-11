@@ -78,7 +78,7 @@ Làm trước G2 và G4 vì tái dùng đúng kiểu mô hình của G1 (hàm th
 
 | Giai đoạn | Nội dung | Hoàn thành khi |
 |---|---|---|
-| **P0 · Móng** (1 tuần) | Engine bản đồ, nhân vật đi lại, 6 vùng khoá/mở theo cấp, cổng dẫn vào trang cũ; lưu vị trí | Mở `kingdom.html` thấy bản đồ, đi vào được từng vùng, vùng chưa mở bị sương |
+| **P0 · Móng** ✅ xong | Engine bản đồ, nhân vật đi lại, 6 vùng khoá/mở theo cấp, cổng dẫn vào trang cũ; lưu vị trí | Mở `kingdom.html` thấy bản đồ, đi vào được từng vùng, vùng chưa mở bị sương |
 | **P1 · Game đầu** (1–2 tuần) | Chuyển G1 vào khung game (sao, thưởng); làm G4 Chia ngân sách | 2 game có sao và thưởng đúng, có test |
 | **P2 · Mở rộng** (2 tuần) | G2 Chọn tệp, G5 Phễu rò; rương vùng; tuỳ biến nhân vật ở Chợ | 4 game chơi được, rương vùng mở đúng |
 | **P3 · Xã hội** (1–2 tuần) | Boss có màn riêng, Đấu trường có phòng chờ, bảng xếp hạng mùa theo sao | Boss/PvP dùng chung khung; mùa giải có xếp hạng sao |

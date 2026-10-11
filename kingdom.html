@@ -2,51 +2,218 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C85A32%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E8%27%3EM%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/case.css?v=12">
 <title>Vương quốc Marketing — Tự Học Marketing Case</title>
-<meta name="description" content="Bản đồ các toà nhà: case, quiz, World Boss, đấu trường, chợ. Ghé mỗi toà mỗi ngày được thưởng xu.">
+<meta name="description" content="Bản đồ thế giới game: đi bộ giữa các toà nhà, vào từng khu để chơi case, quiz, World Boss, đấu trường và mini-game. Ghé mỗi toà mỗi ngày được thưởng xu.">
+<style>
+:root{--wd-bg:#FBF8F3;--wd-card:#fff;--wd-ink:#24160E;--wd-ink2:rgba(36,22,14,.68);--wd-ink3:rgba(36,22,14,.48);--wd-line:rgba(36,22,14,.12);
+  --wd-soft:rgba(36,22,14,.05);--wd-acc:#C85A32;--wd-ok:#3D7A45;--wd-gold:#B07A12;--wd-gold-soft:rgba(229,178,75,.18);
+  --wd-grass:#EAEFD9;--wd-grass2:#DDE6C4;--wd-road:#E9D8B8;--wd-water:#BBD6DA;--wd-dark:#2A1A12}
+html[data-theme="ivory"]{--wd-bg:#F7F0E6;--wd-card:#FFFDF9}
+html[data-theme="dark"]{--wd-bg:#16100C;--wd-card:#221913;--wd-ink:#F4ECE0;--wd-ink2:rgba(244,236,224,.74);--wd-ink3:rgba(244,236,224,.5);--wd-line:rgba(244,236,224,.14);
+  --wd-soft:rgba(244,236,224,.07);--wd-acc:#E27A52;--wd-ok:#7DBE86;--wd-gold:#E5B24B;--wd-gold-soft:rgba(229,178,75,.14);
+  --wd-grass:#232A18;--wd-grass2:#2C3520;--wd-road:#4A3C2A;--wd-water:#2C4650;--wd-dark:#0E0906}
+html,body{background:var(--wd-bg)!important;color:var(--wd-ink)}
+body{margin:0;padding:0!important;font-family:var(--sans,system-ui,sans-serif)}
+#app{display:block;max-width:none;padding:0;margin:0}
+.wd{max-width:1240px;margin:0 auto;padding:clamp(16px,2.6vw,32px) clamp(14px,3vw,36px) 80px;display:grid;gap:18px}
+.wd>*{min-width:0}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--wd-acc)}
+.wd h1{font-family:var(--serif,Georgia,serif);font-weight:600;font-size:clamp(1.6rem,3vw,2.3rem);margin:6px 0 4px}
+.wd .lede{margin:0;color:var(--wd-ink2);max-width:64ch;line-height:1.55}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kp div{background:var(--wd-card);border:1px solid var(--wd-line);border-radius:16px;padding:12px 16px}
+.kp small{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--wd-ink3)}
+.kp b{font-size:1.35rem}
+
+.stage{position:relative;border:1px solid var(--wd-line);border-radius:26px;overflow:hidden;background:var(--wd-grass);aspect-ratio:1200/760;touch-action:manipulation;user-select:none}
+.stage svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hint{position:absolute;left:14px;bottom:12px;background:var(--wd-card);border:1px solid var(--wd-line);border-radius:99px;padding:7px 14px;font-size:12.5px;color:var(--wd-ink2)}
+.region-t{font:800 15px var(--sans,system-ui);letter-spacing:.08em;text-transform:uppercase;pointer-events:none}
+.pl{cursor:pointer}
+.pl .nm{font:700 15px var(--sans,system-ui);fill:var(--wd-ink);paint-order:stroke;stroke:var(--wd-grass);stroke-width:4px;stroke-linejoin:round}
+.pl .sub{font:800 11px var(--sans,system-ui);letter-spacing:.06em;fill:var(--wd-ink3);paint-order:stroke;stroke:var(--wd-grass);stroke-width:3px}
+.pl:hover .body{transform:translateY(-3px)}
+.pl .body{transition:transform .15s}
+.pl[data-sel] .ring{opacity:1}
+.pl .ring{opacity:0;transition:opacity .15s}
+.pl[data-state="locked"],.pl[data-state="soon"]{opacity:.55}
+.pl[data-state="soon"] .roof{stroke-dasharray:5 4}
+#me{pointer-events:none}
+.panel{background:var(--wd-card);border:1px solid var(--wd-line);border-radius:20px;padding:16px 18px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;min-height:56px}
+.panel b{font-size:17px}
+.panel p{margin:2px 0 0;color:var(--wd-ink2);font-size:14px}
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:4px 9px;border-radius:99px;background:var(--wd-soft);color:var(--wd-ink2);margin-right:6px}
+.tag--ok{background:rgba(61,122,69,.14);color:var(--wd-ok)}.tag--gold{background:var(--wd-gold-soft);color:var(--wd-gold)}
+.go{border:0;border-radius:12px;background:var(--wd-acc);color:#fff;font:800 13px var(--sans,system-ui);letter-spacing:.05em;text-transform:uppercase;padding:13px 20px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.go[disabled]{opacity:.45;cursor:default}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.list button{text-align:left;border:1.5px solid var(--wd-line);background:var(--wd-card);color:var(--wd-ink);border-radius:16px;padding:14px 16px;cursor:pointer;display:grid;gap:4px;font:inherit}
+.list button:hover:not([disabled]){border-color:var(--wd-acc)}
+.list button[data-sel]{border-color:var(--wd-acc);box-shadow:0 0 0 3px rgba(200,90,50,.12)}
+.list b{font-size:15px}.list span{font-size:13px;color:var(--wd-ink2)}
+.list button[data-state="locked"],.list button[data-state="soon"]{opacity:.6}
+.note{border-left:4px solid var(--wd-gold);background:var(--wd-gold-soft);border-radius:0 14px 14px 0;padding:12px 16px;font-size:14px}
+.note a{color:var(--wd-acc);font-weight:700}
+.sr{position:absolute;left:-9999px}
+</style>
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
-<main class="wrap" id="app"></main>
+<main id="app"></main>
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
 <script src="assets/js/data/bai-index.js?v=11"></script>
-<script src="assets/js/data/drills.js?v=3"></script>
-<script src="assets/js/data/cases.js?v=5"></script>
+<script src="assets/js/data/world-map.js?v=1"></script>
 <script src="assets/js/app.js?v=21"></script>
-<script src="assets/js/quizkit.js?v=2"></script>
 <script>
-
 appShell('kingdom.html');
 const app=document.getElementById('app');
-(async()=>{
-  let d; try{ d=await api('/kingdom'); }catch(e){ if(await needLogin(app,'Vương quốc')===null) return; }
-  const u=await account();
-  app.innerHTML=`<section class="section">
-    <span class="mono mono--red">Vương quốc Marketing</span>
-    <h1 class="h1" style="margin:14px 0 14px">Mỗi toà nhà<br><em>là một cách luyện.</em></h1>
-    <p class="lede">Ghé mỗi toà một lần mỗi ngày được +5 xu. Xu dùng ở Chợ: thẻ đóng băng chuỗi, rương, booster. Một số toà mở theo cấp độ.</p>
-    ${u?`<div class="kpis" style="margin-top:20px"><div class="kpi"><span class="mono">Cấp</span><b>${d.level}</b></div>
-      <div class="kpi"><span class="mono">Xu</span><b>${fmt(d.coins)}</b></div>
-      <div class="kpi"><span class="mono">Toà đã ghé hôm nay</span><b>${d.buildings.filter(b=>b.visited).length} / ${d.buildings.length}</b></div>
-      <div class="kpi"><span class="mono">Mùa giải</span><b id="ss">—</b></div></div>`:`<p class="note" style="margin-top:16px"><a href="tai-khoan.html?next=kingdom.html">Đăng nhập</a> để nhận xu khi ghé toà nhà.</p>`}
-  </section>
-  <section class="section"><div style="display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))">
-    ${d.buildings.map(b=>`<button class="kb" data-b="${b.id}" ${b.locked?'disabled':''} style="text-align:left;border:1px solid var(--ink-12);border-radius:14px;background:#fff;padding:18px;cursor:${b.locked?'not-allowed':'pointer'};opacity:${b.locked?.5:1};font:inherit;color:inherit">
-      <span class="mono">${b.locked?'Mở ở cấp '+b.min_level:b.visited?'Đã ghé hôm nay':'+5 xu hôm nay'}</span>
-      <b style="display:block;font-size:1.15rem;margin:8px 0 6px">${escH(b.t)}</b><span class="small muted">${escH(b.d)}</span></button>`).join('')}
-  </div></section>`;
-  if(u) api('/season').then(s=>{ const el=document.getElementById('ss'); if(el) el.textContent=s.season.id; }).catch(()=>{});
-  app.querySelectorAll('.kb').forEach(b=>b.onclick=async()=>{
-    const bd=d.buildings.find(x=>x.id===b.dataset.b); if(bd.locked) return;
-    if(u){ try{ const r=await api('/kingdom/visit',{method:'POST',body:{building:bd.id}}); if(r.coins_gained) toast(`+${r.coins_gained} xu`); }catch(e){} }
-    setTimeout(()=>location.href=bd.href, u?350:0);
-  });
-})();
+const NS='http://www.w3.org/2000/svg';
+const state={user:null, srv:null, level:level().n, coins:null, visited:new Set(), sel:null, target:null, pending:null, pos:null, keys:new Set()};
+const REDUCE=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const stateOf=p=>p.soon?'soon':(state.level<(p.min_level||1)?'locked':'open');
+const visitable=()=>WORLD.places.filter(p=>!p.soon);
+
+function savedPos(){ const g=(S.get().gw||{}).pos; return g&&isFinite(g.x)&&isFinite(g.y)?worldClamp(g):{...WORLD.start}; }
+function savePos(){ const s=S.get(); S.set({gw:{...(s.gw||{}),pos:{x:Math.round(state.pos.x),y:Math.round(state.pos.y)}}}); }
+
+/* ---------- vẽ ---------- */
+function regionColor(id){ return (WORLD.regions.find(r=>r.id===id)||{}).c||'#888'; }
+function placeSVG(p){
+  const c=regionColor(p.region), st=stateOf(p), vis=state.visited.has(p.id);
+  const lock=st==='locked'?`<g transform="translate(0,-4)"><rect x="-9" y="-2" width="18" height="14" rx="3" fill="#fff" opacity=".9"/><path d="M-5 -2v-4a5 5 0 0110 0v4" fill="none" stroke="#fff" stroke-width="2.4"/></g>`:'';
+  const sub=st==='soon'?'SẮP CÓ':st==='locked'?'MỞ Ở CẤP '+p.min_level:vis?'ĐÃ GHÉ HÔM NAY ✓':'';
+  return `<g class="pl" data-id="${p.id}" data-state="${st}" transform="translate(${p.x},${p.y})" role="button" tabindex="0" aria-label="${escH(p.t)}">
+    <ellipse class="ring" cx="0" cy="26" rx="52" ry="14" fill="${c}" opacity=".25"/>
+    <ellipse cx="0" cy="26" rx="40" ry="9" fill="#000" opacity=".12"/>
+    <g class="body">
+      <rect x="-30" y="-16" width="60" height="42" rx="6" fill="var(--wd-card)" stroke="${c}" stroke-width="2.5"/>
+      <path class="roof" d="M-38 -14L0 -46L38 -14Z" fill="${c}" stroke="${c}" stroke-width="2" stroke-linejoin="round"/>
+      <rect x="-8" y="2" width="16" height="24" rx="4" fill="${c}" opacity=".85"/>
+      ${lock}
+      ${vis?'<circle cx="30" cy="-30" r="11" fill="var(--wd-ok)"/><path d="M24 -30l4 4 8 -9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>':''}
+    </g>
+    <text class="nm" y="52" text-anchor="middle">${escH(p.t)}</text>
+    ${sub?`<text class="sub" y="68" text-anchor="middle">${sub}</text>`:''}
+  </g>`;
+}
+function drawWorld(){
+  const W=WORLD, st=W.start;
+  const roads=W.places.map(p=>{ const mx=(st.x+p.x)/2+(p.y<st.y?0:0), my=Math.min(st.y,p.y)+Math.abs(st.y-p.y)*.35;
+    return `<path d="M${st.x} ${st.y} Q${mx} ${my} ${p.x} ${p.y+30}" fill="none" stroke="var(--wd-road)" stroke-width="12" stroke-linecap="round" opacity="${p.soon?.5:1}"/>`; }).join('');
+  const regions=W.regions.map(r=>`<ellipse cx="${r.x}" cy="${r.y}" rx="${r.rx}" ry="${r.ry}" fill="${r.c}" opacity=".10"/>
+      <ellipse cx="${r.x}" cy="${r.y}" rx="${r.rx}" ry="${r.ry}" fill="none" stroke="${r.c}" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round" opacity=".45"/>
+      <text class="region-t" x="${r.x}" y="${r.y-r.ry+26}" text-anchor="middle" fill="${r.c}">${escH(r.t)}</text>`).join('');
+  const trees=[[70,90],[130,690],[1130,80],[1120,690],[520,60],[760,70],[60,300],[1140,300],[330,700],[880,700],[610,720]]
+    .map(([x,y])=>`<g opacity=".7"><circle cx="${x}" cy="${y}" r="18" fill="var(--wd-grass2)"/><circle cx="${x+8}" cy="${y-8}" r="12" fill="var(--wd-grass2)"/><rect x="${x-2}" y="${y+14}" width="4" height="10" fill="#8A6A45"/></g>`).join('');
+  return `<svg viewBox="0 0 ${W.w} ${W.h}" id="svg" role="img" aria-label="Bản đồ vương quốc marketing">
+    <path d="M0 640 C220 600 360 700 600 690 S980 620 1200 680 L1200 760 L0 760Z" fill="var(--wd-grass2)" opacity=".6"/>
+    <path d="M0 70 C200 30 420 110 640 60 S1000 40 1200 90" fill="none" stroke="var(--wd-water)" stroke-width="30" stroke-linecap="round" opacity=".8"/>
+    ${regions}${trees}${roads}
+    ${W.places.map(placeSVG).join('')}
+    <g id="me"><ellipse cx="0" cy="16" rx="13" ry="5" fill="#000" opacity=".2"/><circle r="15" fill="var(--wd-acc)" stroke="#fff" stroke-width="3"/>
+      <circle cx="-5" cy="-3" r="2.2" fill="#fff"/><circle cx="5" cy="-3" r="2.2" fill="#fff"/><path d="M-6 4q6 6 12 0" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+      <text y="-26" text-anchor="middle" font-size="12" font-weight="800" fill="var(--wd-ink)" paint-order="stroke" stroke="var(--wd-grass)" stroke-width="4">Bạn</text></g>
+  </svg>`;
+}
+function drawMe(){ const me=document.getElementById('me'); if(me) me.setAttribute('transform',`translate(${state.pos.x},${state.pos.y})`); }
+
+/* ---------- bảng thông tin ---------- */
+function panelHTML(p){
+  if(!p) return `<div><b>Đi dạo trong vương quốc</b><p>Bấm vào một toà nhà, hoặc dùng phím mũi tên / WASD để đi. Đứng gần toà nào, thông tin hiện ở đây.</p></div>`;
+  const st=stateOf(p), vis=state.visited.has(p.id);
+  const tag=st==='soon'?'<span class="tag tag--gold">Sắp có</span>':st==='locked'?`<span class="tag">Mở ở cấp ${p.min_level}</span>`
+    :vis?'<span class="tag tag--ok">Đã ghé hôm nay</span>':state.user?'<span class="tag tag--gold">+5 xu hôm nay</span>':'';
+  const reg=(WORLD.regions.find(r=>r.id===p.region)||{}).t||'';
+  return `<div><div>${tag}<span class="tag">${escH(reg)}</span></div><b style="display:block;margin-top:8px">${escH(p.t)}</b><p>${escH(p.d)}</p></div>
+    ${st==='open'?`<button class="go" id="enter">Vào ${escH(p.t)} →</button>`
+      :`<button class="go" disabled>${st==='soon'?'Đang được xây':'Chưa mở'}</button>`}`;
+}
+function select(p){
+  state.sel=p?p.id:null;
+  document.querySelectorAll('.pl,.list button').forEach(e=>e.toggleAttribute('data-sel',e.dataset.id===state.sel));
+  const pn=document.getElementById('panel'); pn.innerHTML=panelHTML(p);
+  const en=document.getElementById('enter'); if(en) en.onclick=()=>enter(p);
+}
+async function enter(p){
+  if(state.user){ try{ const r=await api('/kingdom/visit',{method:'POST',body:{building:p.id}});
+      if(r.coins_gained){ toast(`+${r.coins_gained} xu`); state.visited.add(p.id); } }catch(e){} }
+  setTimeout(()=>{ location.href=p.href; },state.user?300:0);
+}
+
+/* ---------- chuyển động ---------- */
+let last=0, raf=0;
+function walkTo(pt,place){
+  state.target=worldClamp(pt); state.pending=place||null;
+  if(REDUCE){ state.pos={...state.target}; arrive(); return; }
+  if(!raf){ last=performance.now(); raf=requestAnimationFrame(tick); }
+}
+function arrive(){
+  state.target=null; savePos(); drawMe();
+  const p=state.pending||worldNearest(state.pos); state.pending=null;
+  if(p) select(p);
+}
+function tick(now){
+  raf=0; const dt=Math.min(.05,(now-last)/1000); last=now;
+  let moving=false;
+  const k=state.keys;
+  if(k.size){ const vx=(k.has('ArrowRight')||k.has('d')?1:0)-(k.has('ArrowLeft')||k.has('a')?1:0),
+      vy=(k.has('ArrowDown')||k.has('s')?1:0)-(k.has('ArrowUp')||k.has('w')?1:0);
+    if(vx||vy){ const l=Math.hypot(vx,vy); state.pos=worldClamp({x:state.pos.x+vx/l*WORLD.speed*dt,y:state.pos.y+vy/l*WORLD.speed*dt});
+      state.target=null; state.pending=null; moving=true; } }
+  if(state.target){ const s=worldStep(state.pos,state.target,WORLD.speed*dt); state.pos={x:s.x,y:s.y}; moving=true;
+    if(s.arrived){ drawMe(); arrive(); moving=k.size>0; } }
+  drawMe();
+  if(moving||k.size){ raf=requestAnimationFrame(tick); }
+  else { const n=worldNearest(state.pos); if(n&&n.id!==state.sel) select(n); }
+}
+function svgPoint(ev){ const svg=document.getElementById('svg'), pt=svg.createSVGPoint(); pt.x=ev.clientX; pt.y=ev.clientY;
+  const m=svg.getScreenCTM(); return m?pt.matrixTransform(m.inverse()):{x:0,y:0}; }
+
+function selectAndWalk(p){ select(p); walkTo({x:p.x,y:p.y+58},p); }
+
+async function load(){
+  try{ const d=await api('/kingdom'); state.srv=d; state.level=d.level||state.level; state.coins=d.coins;
+    d.buildings.filter(b=>b.visited).forEach(b=>state.visited.add(b.id)); }catch(e){}
+  try{ state.user=await account(); }catch(e){}
+}
+function render(){
+  const play=visitable(), got=play.filter(p=>state.visited.has(p.id)).length;
+  app.innerHTML=`<div class="wd">
+    <header><span class="eyebrow">Vương quốc Marketing</span><h1>Đi dạo, rồi vào một toà để chơi.</h1>
+      <p class="lede">Mỗi toà nhà là một cách luyện. Ghé mỗi toà một lần mỗi ngày được +5 xu (khi đã đăng nhập). Xu dùng ở Chợ. Chỗ có nhãn “sắp có” là game đang được xây.</p></header>
+    ${state.user?`<div class="kp"><div><small>Cấp</small><b>${state.level}</b></div>
+      <div><small>Xu</small><b>${state.coins===null?'—':fmt(state.coins)}</b></div>
+      <div><small>Toà đã ghé hôm nay</small><b>${got} / ${play.length}</b></div>
+      <div><small>Mùa giải</small><b id="ss">—</b></div></div>`
+      :`<p class="note"><a href="tai-khoan.html?next=kingdom.html">Đăng nhập</a> để nhận xu khi ghé toà nhà và lưu tiến độ lên máy chủ. Không đăng nhập vẫn đi dạo và vào chơi được.</p>`}
+    <div class="stage" id="stage">${drawWorld()}<span class="hint">Bấm để đi · phím mũi tên / WASD</span></div>
+    <div class="panel" id="panel" aria-live="polite"></div>
+    <section><div class="list">${WORLD.places.map(p=>`<button type="button" data-id="${p.id}" data-state="${stateOf(p)}">
+        <b>${escH(p.t)}</b><span>${escH(p.d)}</span></button>`).join('')}</div></section>
+  </div>`;
+  state.pos=savedPos(); drawMe(); select(null);
+  const svg=document.getElementById('svg');
+  svg.addEventListener('pointerdown',ev=>{
+    const g=ev.target.closest&&ev.target.closest('.pl');
+    if(g){ selectAndWalk(WORLD.places.find(p=>p.id===g.dataset.id)); return; }
+    walkTo(svgPoint(ev),null);
+  });
+  svg.addEventListener('keydown',ev=>{ const g=ev.target.closest&&ev.target.closest('.pl'); if(g&&(ev.key==='Enter'||ev.key===' ')){ ev.preventDefault(); selectAndWalk(WORLD.places.find(p=>p.id===g.dataset.id)); } });
+  app.querySelectorAll('.list button').forEach(b=>b.onclick=()=>selectAndWalk(WORLD.places.find(p=>p.id===b.dataset.id)));
+  if(state.user) api('/season').then(s=>{ const el=document.getElementById('ss'); if(el) el.textContent=s.season.id; }).catch(()=>{});
+}
+const MOVE=new Set(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d']);
+document.addEventListener('keydown',e=>{ if(e.target.closest&&e.target.closest('input,textarea,select')) return;
+  const k=e.key.length===1?e.key.toLowerCase():e.key; if(!MOVE.has(k)) return; e.preventDefault();
+  state.keys.add(k); if(!raf){ last=performance.now(); raf=requestAnimationFrame(tick); } });
+document.addEventListener('keyup',e=>{ const k=e.key.length===1?e.key.toLowerCase():e.key; if(state.keys.delete(k)&&!state.keys.size){ savePos(); const n=worldNearest(state.pos); select(n); } });
+document.title='Vương quốc Marketing — Tự Học Marketing Case';
+load().then(render);
 </script>
 </body>
 </html>
