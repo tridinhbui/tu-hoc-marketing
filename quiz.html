@@ -2,90 +2,403 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C95A3A%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23F7F0E6%27%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=6">
-<title>Creative Challenges — Tự Học Marketing Case</title>
-<meta name="description" content="Thử thách tư duy chiến lược, quiz phản xạ 60 giây và các bài toán kinh doanh thực tế. Rèn luyện phản xạ ra quyết định có cơ sở.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C85A32%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E8%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=8">
+<title>Creative Challenge Room — Tự Học Marketing Case</title>
+<meta name="description" content="Creative Challenge Room: Phân tích tình huống thực tế của thương hiệu, cân nhắc các lựa chọn và đưa ra quyết định chiến lược tốt nhất.">
 <style>
-  .opt{
-    display:block;
-    width:100%;
-    text-align:left;
-    background:var(--paper);
-    border:1.5px solid var(--ink-12);
-    border-radius:10px;
-    padding:14px 18px;
-    margin:10px 0;
-    cursor:pointer;
-    font-size:15px;
-    line-height:1.5;
-    transition:var(--transition-fast);
+  body{
+    background:#130E0B;
+    color:#F9F4EB;
+    overflow-x:hidden;
   }
-  .opt:hover:not([disabled]){
-    border-color:var(--terra);
-    background:var(--terra-06);
-    transform:translateY(-1px);
+  
+  /* Top Room Navigation */
+  .room-nav{
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:rgba(19,14,11,.92);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(249,244,235,.08);
   }
-  .opt[data-r="ok"]{
-    border-color:var(--sage-d);
-    background:var(--sage-bg);
-    color:var(--ink);
+  .room-nav .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:14px;
+    padding-bottom:14px;
   }
-  .opt[data-r="bad"]{
-    border-color:var(--bad);
-    background:rgba(186,56,38,.08);
-    color:var(--bad);
-    text-decoration:line-through;
+  .room-nav-links{
+    display:flex;
+    align-items:center;
+    gap:24px;
   }
-  .clock{
-    font-family:var(--serif);
-    font-size:clamp(2.6rem,7vw,4.2rem);
-    line-height:1;
-    font-variant-numeric:tabular-nums;
-    color:var(--terra);
+  .room-nav-links a{
+    font-size:14px;
+    font-weight:500;
+    color:rgba(249,244,235,.7);
+    text-decoration:none;
   }
-  .clock[data-low]{color:var(--bad)}
+  .room-nav-links a.active{
+    color:#F9F4EB;
+  }
 
-  /* Creative Challenge Demo Card */
-  .demo-challenge{
-    background:var(--paper);
-    border:1px solid var(--ink-12);
-    border-radius:14px;
-    padding:clamp(20px,3vw,30px);
-    margin:24px 0 clamp(28px,4vw,44px);
-    box-shadow:0 12px 30px -20px rgba(56,37,31,.2);
-  }
-  .challenge-grid{
+  /* Challenge Room Hero */
+  .room-hero{
+    padding:clamp(28px,5vw,56px) 0 clamp(20px,3vw,36px);
     display:grid;
-    gap:16px;
-    margin-top:28px;
+    gap:24px;
   }
-  @media(min-width:680px){
-    .challenge-grid{
-      grid-template-columns:1fr 1fr;
+  @media(min-width:960px){
+    .room-hero{
+      grid-template-columns:1.2fr .8fr;
+      align-items:center;
     }
   }
-  .challenge-card{
+  .room-hero-title{
+    font-family:var(--serif);
+    font-size:clamp(2.6rem,5vw,4.2rem);
+    font-weight:400;
+    line-height:1.05;
+    margin:10px 0 14px;
+    letter-spacing:-.02em;
+  }
+  .room-hero-img-wrap{
+    position:relative;
+    border-radius:18px;
+    overflow:hidden;
+    max-width:380px;
+    margin:0 auto;
+    box-shadow:0 24px 60px -20px rgba(0,0,0,.8);
+    border:1px solid rgba(249,244,235,.15);
+  }
+  .room-hero-img-wrap img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    display:block;
+  }
+  .room-hero-script{
+    position:absolute;
+    bottom:14px;
+    right:16px;
+    font-family:var(--hand);
+    font-size:24px;
+    color:#E5B4A8;
+    text-shadow:0 2px 10px rgba(0,0,0,.9);
+    pointer-events:none;
+  }
+
+  /* Paper Situation Card (Exact parity with Screen 3) */
+  .situation-card{
     background:var(--paper);
-    border:1px solid var(--ink-12);
-    border-radius:12px;
-    padding:18px 20px;
+    color:var(--ink-dark);
+    border-radius:20px;
+    padding:clamp(24px,4vw,44px);
+    box-shadow:0 28px 70px -20px rgba(0,0,0,.8);
+    margin:clamp(20px,3vw,36px) 0;
+    display:grid;
+    gap:28px;
+  }
+  @media(min-width:960px){
+    .situation-card{
+      grid-template-columns:1.15fr .85fr;
+      align-items:start;
+    }
+  }
+  .situation-title{
+    font-family:var(--serif);
+    font-size:clamp(1.5rem,3vw,2.2rem);
+    font-weight:600;
+    line-height:1.2;
+    margin:0 0 14px;
+    color:var(--ink-dark);
+  }
+
+  /* Market Metrics Bar */
+  .metrics-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    border-top:1px solid var(--rule-paper);
+    border-bottom:1px solid var(--rule-paper);
+    padding:16px 0;
+    margin-bottom:28px;
+  }
+  .metric-item b{
+    font-family:var(--serif);
+    font-size:clamp(1.4rem,2.8vw,2rem);
+    font-weight:600;
+    color:var(--terra);
+    display:block;
+  }
+  .metric-item span{
+    font-size:12.5px;
+    color:var(--ink-dark-70);
+    line-height:1.4;
+    display:block;
+    margin-top:2px;
+  }
+
+  /* 3 Interactive Visual Choices Grid */
+  .visual-choices-grid{
+    display:grid;
+    gap:16px;
+    margin-bottom:24px;
+  }
+  @media(min-width:720px){
+    .visual-choices-grid{
+      grid-template-columns:repeat(3,1fr);
+    }
+  }
+  .choice-visual-card{
+    background:#FFFDF9;
+    border:2px solid rgba(36,22,14,.12);
+    border-radius:14px;
+    overflow:hidden;
+    padding:12px;
+    cursor:pointer;
     display:flex;
     flex-direction:column;
-    gap:8px;
-    text-decoration:none;
-    color:inherit;
+    gap:10px;
     transition:var(--transition-fast);
+    text-align:left;
   }
-  .challenge-card:hover{
+  .choice-visual-card:hover{
     border-color:var(--terra);
-    transform:translateY(-2px);
+    transform:translateY(-3px);
+    box-shadow:0 14px 30px -12px rgba(36,22,14,.25);
+  }
+  .choice-visual-card.selected{
+    border-color:var(--terra);
+    background:rgba(200,90,50,.06);
+    box-shadow:0 16px 36px -12px rgba(200,90,50,.35);
+  }
+  .choice-visual-card__thumb{
+    height:130px;
+    border-radius:8px;
+    overflow:hidden;
+  }
+  .choice-visual-card__thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .choice-visual-card__tag{
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--terra);
+  }
+  .choice-visual-card__desc{
+    font-size:13px;
+    color:var(--ink-dark-70);
+    line-height:1.5;
+    margin:0;
+    flex:1;
+  }
+
+  /* Feedback Reveal Box */
+  .feedback-box{
+    margin-top:20px;
+    padding:20px 24px;
+    border-radius:12px;
+    background:#FAF5EE;
+    border:1.5px solid var(--terra);
+    display:none;
+    font-size:14.5px;
+    line-height:1.65;
+    color:var(--ink-dark);
+  }
+
+  /* "Sau khi trả lời" section */
+  .takeaway-list{
+    list-style:none;
+    padding:0;
+    margin:16px 0 0;
+    display:grid;
+    gap:10px;
+  }
+  .takeaway-list li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:14px;
+    color:rgba(249,244,235,.8);
+  }
+  .takeaway-list li::before{
+    content:"✓";
+    display:grid;
+    place-items:center;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:var(--terra);
+    color:#fff;
+    font-size:11px;
+    font-weight:700;
+    flex:none;
   }
 </style>
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Câu hỏi và tiến độ được dựng ngay trong trình duyệt của bạn.</p></div></noscript>
-<main class="wrap" id="app"></main>
+
+<!-- TOP NAVIGATION -->
+<header class="room-nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" style="color:#F9F4EB">
+      <b style="color:var(--terra)">Tự Học</b> Marketing Case
+    </a>
+
+    <nav class="room-nav-links" aria-label="Điều hướng">
+      <a href="hoc.html">Học</a>
+      <a href="case-thu-vien.html">Case</a>
+      <a class="active" href="quiz.html">Thử thách</a>
+      <a href="cong-dong.html">Cộng đồng</a>
+    </nav>
+
+    <div class="row" style="gap:14px">
+      <span class="xpchip" id="roomXpChip">0 XP</span>
+      <a href="hoc.html" class="btn btn--ghost" style="border-radius:99px;padding:7px 16px;font-size:13px">← Về Dashboard</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="app">
+  <!-- 1. ROOM HERO: EXPRESSIVE CINEMATIC PRESENTATION (Screen 3 Parity) -->
+  <section class="room-hero">
+    <div>
+      <span class="studio-badge studio-badge--terra">THỬ THÁCH CHIẾN DỊCH · BÀI 3/7</span>
+      <h1 class="room-hero-title">
+        Creative<br>Challenge Room
+      </h1>
+      <p style="font-size:16px;color:rgba(249,244,235,.75);line-height:1.6;max-width:44ch;margin:0">
+        Bạn là chiến lược gia. Hãy phân tích tình huống, cân nhắc các lựa chọn và đưa ra quyết định tốt nhất.
+      </p>
+    </div>
+
+    <!-- Right Portrait with Handwritten Script -->
+    <div class="room-hero-img-wrap">
+      <img src="assets/img/model_thinking.jpg" alt="Creative Strategy Thinking">
+      <div class="room-hero-script">
+        Think. Compare.<br>Choose. Learn.
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SITUATION & PROBLEM STATEMENT (Ivory Paper Panel) -->
+  <section class="situation-card">
+    <div>
+      <span class="studio-badge studio-badge--terra" style="margin-bottom:10px">TÌNH HUỐNG THỰC TẾ</span>
+      <h2 class="situation-title">
+        Làm sao để tăng nhận biết cho một thương hiệu cà phê mới?
+      </h2>
+      <p style="font-size:15px;line-height:1.65;color:var(--ink-dark-70);margin:0 0 20px">
+        Một thương hiệu cà phê Việt Nam cao cấp sắp ra mắt, hướng đến giới trẻ thành thị. 
+        Ngân sách hạn chế, cần tạo được khác biệt so với các chuỗi lớn đang có trên thị trường.
+      </p>
+
+      <!-- DỮ LIỆU THỊ TRƯỜNG -->
+      <span class="lbl" style="color:var(--ink-dark-50);display:block;margin-bottom:8px">DỮ LIỆU THỊ TRƯỜNG</span>
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <b>78%</b>
+          <span>Gen Z uống cà phê ít nhất 3 lần/tuần</span>
+        </div>
+        <div class="metric-item">
+          <b>+22%</b>
+          <span>Thị trường F&B tăng trưởng mỗi năm</span>
+        </div>
+        <div class="metric-item">
+          <b>>300</b>
+          <span>Thương hiệu cà phê đang hoạt động tại Việt Nam</span>
+        </div>
+      </div>
+
+      <!-- CHỌN HƯỚNG ĐI (3 Visual Cards) -->
+      <span class="lbl" style="color:var(--ink-dark-50);display:block;margin-bottom:12px">
+        CHỌN HƯỚNG ĐI BẠN CHO LÀ HIỆU QUẢ NHẤT:
+      </span>
+
+      <div class="visual-choices-grid">
+        <!-- Option A -->
+        <div class="choice-visual-card" id="cardA" onclick="selectRoomChoice('A')">
+          <div class="choice-visual-card__thumb">
+            <img src="assets/img/coffee_aesthetic.jpg" alt="Tập trung vào sản phẩm">
+          </div>
+          <span class="choice-visual-card__tag">A · TẬP TRUNG VÀO SẢN PHẨM</span>
+          <p class="choice-visual-card__desc">
+            Đầu tư vào hương vị độc đáo, nguyên liệu đặc biệt và trải nghiệm tại cửa hàng.
+          </p>
+        </div>
+
+        <!-- Option B (Selected in reference) -->
+        <div class="choice-visual-card selected" id="cardB" onclick="selectRoomChoice('B')">
+          <div class="choice-visual-card__thumb">
+            <img src="assets/img/coffee_lifestyle.jpg" alt="Kể câu chuyện thương hiệu">
+          </div>
+          <span class="choice-visual-card__tag">B · KỂ CÂU CHUYỆN THƯƠNG HIỆU</span>
+          <p class="choice-visual-card__desc">
+            Xây dựng câu chuyện về lối sống, con người và giá trị văn hoá Việt hiện đại.
+          </p>
+        </div>
+
+        <!-- Option C -->
+        <div class="choice-visual-card" id="cardC" onclick="selectRoomChoice('C')">
+          <div class="choice-visual-card__thumb">
+            <img src="assets/img/influencer_lifestyle.jpg" alt="Tận dụng KOL / Influencer">
+          </div>
+          <span class="choice-visual-card__tag">C · TẬN DỤNG KOL / INFLUENCER</span>
+          <p class="choice-visual-card__desc">
+            Hợp tác với KOLs, food reviewers và TikTok creators để tạo độ phủ nhanh.
+          </p>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <div class="row" style="margin-top:18px">
+        <button type="button" class="btn btn--primary" id="confirmBtn" onclick="confirmRoomDecision()" style="border-radius:99px;padding:14px 32px;font-size:15px">
+          Xác nhận lựa chọn →
+        </button>
+      </div>
+
+      <!-- Feedback Reveal -->
+      <div class="feedback-box" id="roomFeedback"></div>
+    </div>
+
+    <!-- Right Polaroid Artifact -->
+    <div style="display:flex;flex-direction:column;align-items:center">
+      <div class="polaroid-frame" style="max-width:290px;transform:rotate(2.5deg)">
+        <div class="tape tape--top tape--pink"></div>
+        <img src="assets/img/coffee_lifestyle.jpg" alt="Coffee Cup Story">
+        <div class="polaroid-caption">Cùng một ly cà phê, nhưng khác câu chuyện sẽ tạo ra khác biệt.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SAU KHI TRẢ LỜI: BẠN SẼ THẤY -->
+  <section style="margin:clamp(32px,5vw,60px) 0;padding-top:28px;border-top:1px solid rgba(249,244,235,.1)">
+    <span class="studio-badge">SAU KHI TRẢ LỜI</span>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);margin:12px 0 6px">
+      Bạn sẽ thấy
+    </h2>
+    <ul class="takeaway-list">
+      <li>Phân tích ưu – nhược điểm của từng hướng đi chiến lược</li>
+      <li>Dữ liệu thực tế từ các case tương tự (Highlands, Katinat, The Coffee House)</li>
+      <li>Gợi ý chiến lược tối ưu và bài học rút ra để mang thẳng vào công việc</li>
+    </ul>
+
+    <div style="margin-top:40px;text-align:center;padding:24px;background:rgba(29,21,16,.6);border-radius:14px;border:1px solid rgba(249,244,235,.08)">
+      <p class="hand" style="font-size:26px;color:#E5B4A8;margin:0 0 6px">
+        “Marketing không chỉ là làm cho sản phẩm được biết đến, mà là làm cho nó được tin, được yêu và được lựa chọn.”
+      </p>
+      <span class="small muted">— Brand Strategy Principle</span>
+    </div>
+  </section>
+</main>
 
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
@@ -96,217 +409,149 @@
 <script src="assets/js/data/exam-items.js?v=7"></script>
 <script src="assets/js/app.js?v=16"></script>
 <script>
-appShell('quiz.html');
-const ROUNDS=3, SECS=60, MIN_DONE=3;
-const app=document.getElementById('app');
-let bank=[], i=0, right=0, wrong=0, timer=null, end=0, locked=false, answered=[];
+let currentChoice = 'B';
+let audioCtx = null;
 
-function roundsToday(s=S.get()){ return (s.quiz&&s.quiz.d===today())?s.quiz.n:0; }
+function playRoomSound(type) {
+  try {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    const now = audioCtx.currentTime;
 
-function intro(){
-  const s=S.get(), done=Object.keys(s.done).filter(k=>where(k)), used=roundsToday(s);
-  const pool=quizBank(done).length;
-  const demoPassed = (s.challenges && s.challenges['demo-roas']) || false;
-
-  app.innerHTML=`
-  <section class="section" style="max-width:860px;margin:0 auto">
-    <div class="row between">
-      <span class="studio-badge studio-badge--terra">Creative Challenges Studio</span>
-      <span class="xpchip">${fmt(s.xp)} XP</span>
-    </div>
-    <h1 class="h1" style="margin:16px 0 12px">
-      Thử thách & <em>Phản xạ Chiến lược</em>
-    </h1>
-    <p class="lede">
-      Rèn luyện trực giác của một strategist qua các bài toán thực tế: Đọc vị dữ liệu tài chính, phát hiện rào cản tiêu dùng và ra quyết định trong thời gian giới hạn.
-    </p>
-
-    <!-- ONBOARDING DEMO CHALLENGE: KHÔNG BAO GIỜ HIỆN MÀN HÌNH TRỐNG -->
-    <div class="demo-challenge">
-      <div class="row between">
-        <span class="studio-badge studio-badge--sage">Thử thách khởi động · Demo Challenge</span>
-        <span class="gold">+15 XP THỰC CHIẾN</span>
-      </div>
-      <h3 style="font-family:var(--serif);font-size:1.35rem;margin:12px 0 8px;font-weight:500">
-        Chi 50 triệu chạy Ads, ROAS đạt 4.0: Bạn đánh giá chiến dịch thế nào?
-      </h3>
-      <p style="font-size:14px;color:var(--ink-70);line-height:1.6;margin:0 0 14px">
-        Một thương hiệu thời trang D2C chi 50 triệu cho Meta & TikTok Ads. Doanh thu mang về 200 triệu (ROAS 4.0). 
-        Biên lãi gộp của sản phẩm là 30%. Là một Creative Strategist, đánh giá của bạn là:
-      </p>
-
-      <div id="demoOptions">
-        <button class="opt" onclick="answerDemo('A')">
-          <b>A · Thành công lớn:</b> ROAS 4.0 là con số mơ ước của mọi agency, cần lập tức nhân đôi ngân sách để mở rộng quy mô.
-        </button>
-        <button class="opt" onclick="answerDemo('B')">
-          <b>B · Cảnh báo rủi ro:</b> Lợi nhuận thực tế chỉ còn 10 triệu trước chi phí vận hành; chỉ cần tỷ lệ hoàn đơn 5% là chiến dịch rơi vào lỗ ngầm.
-        </button>
-        <button class="opt" onclick="answerDemo('C')">
-          <b>C · Bế tắc định giá:</b> Lập tức tăng khuyến mãi giảm thêm 20% để kéo lượng đơn hàng bù lại chi phí.
-        </button>
-      </div>
-
-      <div id="demoFeedback" style="margin-top:14px;padding:14px 18px;border-radius:10px;display:none;font-size:14px;line-height:1.6"></div>
-    </div>
-
-    <!-- CÁC HÌNH THỨC LUYỆN TẬP -->
-    <div style="border-top:1px solid var(--ink-12);padding-top:28px">
-      <span class="lbl">Các hình thức thử thách</span>
-      <div class="challenge-grid">
-        <!-- Mode 1: 60s Timed Quiz -->
-        <div class="challenge-card">
-          <span class="studio-badge studio-badge--terra">Phản xạ 60 giây</span>
-          <h3 style="font-family:var(--serif);font-size:1.25rem;margin:4px 0 2px;font-weight:500">Timed Quiz</h3>
-          <p class="small muted" style="margin:0 0 12px">
-            Trả lời tối đa các câu hỏi chốt ý và bài toán số từ những case bạn đã học. Kỷ lục của bạn: <b>${s.quizBest||0} câu</b>.
-          </p>
-          <div style="margin-top:auto">
-            ${done.length < MIN_DONE ? `
-              <div class="note" style="margin-bottom:12px;font-size:13px">
-                Cần hoàn thành ít nhất ${MIN_DONE} case để tạo ngân hàng câu hỏi riêng (bạn đang có ${done.length}/${MIN_DONE}).
-              </div>
-              <a class="btn btn--primary" href="bai.html?id=${encodeURIComponent(nextLesson()||ALL[0].key)}">Học case đầu tiên →</a>
-            ` : used >= ROUNDS ? `
-              <p class="note" style="margin-bottom:12px;font-size:13px">Hôm nay đã dùng hết ${ROUNDS} lượt. Quay lại vào ngày mai!</p>
-              <a class="btn btn--ghost" href="on-loi.html">Sang trang ôn lỗi →</a>
-            ` : `
-              <button class="btn btn--primary" id="go">Bắt đầu ngay · ${SECS} giây</button>
-            `}
-          </div>
-        </div>
-
-        <!-- Mode 2: Spot the Insight -->
-        <a class="challenge-card" href="hoc.html#signal">
-          <span class="studio-badge studio-badge--sage">Tín hiệu thị trường</span>
-          <h3 style="font-family:var(--serif);font-size:1.25rem;margin:4px 0 2px;font-weight:500">Daily Market Signal</h3>
-          <p class="small muted" style="margin:0">
-            Một câu hỏi tình huống kinh doanh thực tế mỗi ngày. Bóc tách insight và rèn luyện phản xạ chẩn đoán.
-          </p>
-          <span class="btn btn--ghost" style="margin-top:auto">Xem tín hiệu hôm nay →</span>
-        </a>
-
-        <!-- Mode 3: Timed Case Simulation -->
-        <a class="challenge-card" href="case-thu-vien.html">
-          <span class="studio-badge studio-badge--blush">Thực chiến</span>
-          <h3 style="font-family:var(--serif);font-size:1.25rem;margin:4px 0 2px;font-weight:500">Case có bấm giờ</h3>
-          <p class="small muted" style="margin:0">
-            Đọc hồ sơ thương hiệu, phân tích bảng số liệu thực tế và viết phương án giải quyết trong 25 phút.
-          </p>
-          <span class="btn btn--ghost" style="margin-top:auto">Vào thư viện case →</span>
-        </a>
-
-        <!-- Mode 4: Defend Your Strategy -->
-        <a class="challenge-card" href="thi.html">
-          <span class="studio-badge">Vượt chặng</span>
-          <h3 style="font-family:var(--serif);font-size:1.25rem;margin:4px 0 2px;font-weight:500">Thi vượt chặng</h3>
-          <p class="small muted" style="margin:0">
-            Đề thi 15 câu tổng hợp từ toàn bộ kho bài. Vượt qua 80% để mở khóa ngay chặng tiếp theo.
-          </p>
-          <span class="btn btn--ghost" style="margin-top:auto">Xem đề vượt chặng →</span>
-        </a>
-      </div>
-    </div>
-  </section>`;
-
-  const g=document.getElementById('go'); if(g) g.onclick=start;
+    if (type === 'tick') {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(450, now);
+      osc.frequency.exponentialRampToValueAtTime(200, now + 0.05);
+      gain.gain.setValueAtTime(0.08, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start(now);
+      osc.stop(now + 0.05);
+    } else if (type === 'chord') {
+      [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now + i * 0.06);
+        gain.gain.setValueAtTime(0.08, now + i * 0.06);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + i * 0.06 + 0.6);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now + i * 0.06);
+        osc.stop(now + i * 0.06 + 0.65);
+      });
+    }
+  } catch(e) {}
 }
 
-window.answerDemo = function(choice) {
-  const fb = document.getElementById('demoFeedback');
-  const opts = document.querySelectorAll('#demoOptions .opt');
-  opts.forEach(o => o.disabled = true);
+function launchRoomConfetti(x, y) {
+  const count = 45;
+  const colors = ['#C85A32', '#E5B24B', '#E5B4A8', '#FAF3E8', '#A8B99A'];
+  for (let i = 0; i < count; i++) {
+    const el = document.createElement('div');
+    el.style.position = 'fixed';
+    el.style.left = (x || (window.innerWidth / 2)) + 'px';
+    el.style.top = (y || (window.innerHeight / 2)) + 'px';
+    el.style.width = (Math.random() * 8 + 6) + 'px';
+    el.style.height = (Math.random() * 6 + 4) + 'px';
+    el.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    el.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+    el.style.zIndex = '9999';
+    el.style.pointerEvents = 'none';
+    document.body.appendChild(el);
+
+    const angle = Math.random() * Math.PI * 2;
+    const velocity = Math.random() * 190 + 90;
+    const vx = Math.cos(angle) * velocity;
+    const vy = Math.sin(angle) * velocity - 120;
+    const rot = Math.random() * 720;
+
+    const anim = el.animate([
+      { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
+      { transform: `translate(${vx}px, ${vy + 260}px) rotate(${rot}deg)`, opacity: 0 }
+    ], {
+      duration: 1000 + Math.random() * 500,
+      easing: 'cubic-bezier(.12,.78,.44,1)'
+    });
+    anim.onfinish = () => el.remove();
+  }
+}
+
+function selectRoomChoice(c) {
+  currentChoice = c;
+  playRoomSound('tick');
+  ['cardA', 'cardB', 'cardC'].forEach(id => {
+    document.getElementById(id).classList.remove('selected');
+  });
+  document.getElementById('card' + c).classList.add('selected');
+}
+
+function confirmRoomDecision() {
+  const fb = document.getElementById('roomFeedback');
   fb.style.display = 'block';
 
-  if (choice === 'B') {
-    fb.style.background = 'var(--sage-bg)';
+  if (currentChoice === 'B') {
+    playRoomSound('chord');
+    const btn = document.getElementById('confirmBtn');
+    const rect = btn ? btn.getBoundingClientRect() : { left: window.innerWidth / 2, top: window.innerHeight / 2, width: 0 };
+    launchRoomConfetti(rect.left + rect.width / 2, rect.top);
+
+    fb.style.background = '#E8F0E4';
     fb.style.border = '1.5px solid var(--sage-d)';
     fb.innerHTML = `
-      <b style="color:var(--sage-d)">★ Tuyệt vời! Bạn có tư duy của một Strategist.</b><br>
-      Doanh thu trừ quảng cáo (200 - 50 = 150 triệu) <b>không phải là lợi nhuận</b>. 
-      Lợi nhuận gộp thực tế chỉ là <code>200 × 30% = 60 triệu</code>. 
-      Sau khi trừ 50 triệu tiền ads, thương hiệu chỉ còn lại <b>10 triệu</b> (tương đương 5% doanh thu). 
-      Chỉ cần chi phí hoàn đơn hoặc phụ phí kho vận nhích lên một chút là chiến dịch rơi vào lỗ ròng. 
-      <i>Bài học: Đừng bao giờ vội khen ROAS khi chưa đối chiếu biên lãi gộp!</i>
+      <b style="color:var(--sage-d)">★ Quyết định của một Senior Strategist: Xây dựng Bản sắc & Phong cách sống!</b><br>
+      Trong ngành F&B, sản phẩm cà phê rất dễ bị commoditize (bình thường hóa). Khi bạn kể câu chuyện về phong cách sống, bạn tạo ra <b>Biểu tượng văn hóa (Cultural Icon)</b> mà khách hàng tự hào cầm trên tay. 
+      Chiến lược này bảo vệ biên lợi nhuận cao và giúp bạn tăng trưởng bền vững mà không phụ thuộc vào tiền khuyến mãi.
     `;
     const s = S.get();
-    if (!s.challenges || !s.challenges['demo-roas']) {
-      award('daily', 'demo-roas');
-      S.set({ challenges: { ...(s.challenges || {}), 'demo-roas': true } });
+    if (!s.challenges || !s.challenges['room-coffee']) {
+      award('daily', 'room-coffee');
+      S.set({ challenges: { ...(s.challenges || {}), 'room-coffee': true } });
+      const chip = document.getElementById('roomXpChip');
+      if (chip) chip.textContent = `${fmt(S.get().xp)} XP`;
     }
-  } else {
-    fb.style.background = 'rgba(186,56,38,.08)';
-    fb.style.border = '1.5px solid var(--bad)';
+  } else if (currentChoice === 'A') {
+    playRoomSound('tick');
+    fb.style.background = '#FFF3E0';
+    fb.style.border = '1.5px solid var(--gold-d)';
     fb.innerHTML = `
-      <b style="color:var(--bad)">⚠️ Bạn đã rơi vào "Bẫy ROAS Ảo"!</b><br>
-      Doanh thu 200 triệu với biên lãi 30% chỉ tạo ra 60 triệu lãi gộp. 
-      Trừ 50 triệu ads, thương hiệu chỉ còn vỏn vẹn 10 triệu. Nếu vội vã nhân đôi ngân sách, công ty sẽ lỗ sâu vì chi phí vận hành sẽ vượt quá khoản thặng dư ít ỏi này.
+      <b>Tập trung vào sản phẩm:</b> Khách hàng sành sẽ khen ngợi, nhưng tệp khách này quá nhỏ và chi phí nguyên liệu cao sẽ bóp nghẹt biên lợi nhuận của một thương hiệu mới.
+    `;
+  } else {
+    playRoomSound('tick');
+    fb.style.background = '#FFF3E0';
+    fb.style.border = '1.5px solid var(--gold-d)';
+    fb.innerHTML = `
+      <b>Tận dụng KOLs:</b> Kéo đơn tức thì nhưng lượng khách rời bỏ (churn rate) cực cao khi hết voucher giảm giá, vì họ chưa hiểu thương hiệu là ai.
     `;
   }
-};
+}
 
-function start(){
-  const s=S.get(), done=Object.keys(s.done).filter(k=>where(k));
-  bank=quizBank(done); i=0; right=0; wrong=0; answered=[];
-  S.set({quiz:{d:today(),n:roundsToday(s)+1}});
-  end=Date.now()+SECS*1000;
-  timer=setInterval(tick,200); show();
+function initRoomTilt() {
+  const cards = document.querySelectorAll('.choice-visual-card, .polaroid-frame');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      const rotateX = (-y / (rect.height / 2)) * 6;
+      const rotateY = (x / (rect.width / 2)) * 6;
+      card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
 }
-function tick(){
-  const left=Math.max(0,Math.ceil((end-Date.now())/1000)), c=document.getElementById('clock');
-  if(c){ c.textContent=left; c.toggleAttribute('data-low',left<=10); }
-  if(left<=0) finish();
-}
-function show(){
-  if(i>=bank.length){ bank=bank.concat(quizBank(Object.keys(S.get().done).filter(k=>where(k)))); }
-  const q=bank[i]; locked=false;
-  app.innerHTML=`<section class="section" style="max-width:720px;margin:0 auto">
-    <div class="row between">
-      <span class="studio-badge studio-badge--terra">Câu ${i+1} · Đúng: ${right} · Sai: ${wrong}</span>
-      <span class="clock" id="clock">${Math.max(0,Math.ceil((end-Date.now())/1000))}</span>
-    </div>
-    ${q.ctx?`<p class="small muted" style="margin:20px 0 0;line-height:1.6">${escH(q.ctx)}</p>`:''}
-    <h2 class="h2" style="font-size:clamp(1.25rem,2.5vw,1.65rem);margin:12px 0 16px">${escH(q.q)}</h2>
-    <div>${q.opts.map((o,j)=>`<button class="opt" data-j="${j}"><b>${String.fromCharCode(65+j)}.</b> ${escH(o.t)}</button>`).join('')}</div>
-  </section>`;
-}
-function pick(j){
-  if(locked) return; locked=true;
-  const q=bank[i], o=q.opts[j];
-  document.querySelectorAll('.opt').forEach((b,k)=>{ if(q.opts[k].ok) b.dataset.r='ok'; });
-  if(o.ok){ 
-    right++; const st=S.get(); 
-    S.set({quizHits:{...st.quizHits,[q.key]:((st.quizHits||{})[q.key]||0)+1}}); 
-  } else { 
-    wrong++; 
-    const target = document.querySelector(`.opt[data-j="${j}"]`);
-    if(target) target.dataset.r='bad';
-    if(q.type==='drill') logError(o.code||'SAI_TINH_TOAN',q.key); 
-  }
-  answered.push({q,ok:o.ok});
-  i++; setTimeout(()=>{ if(timer) show(); }, o.ok?350:1100);
-}
-function finish(){
-  clearInterval(timer); timer=null;
-  const s=S.get(), best=Math.max(s.quizBest||0,right);
-  S.set({quizBest:best}); if(right) award('quiz','round',right);
-  const missed=answered.filter(a=>!a.ok);
-  app.innerHTML=`<section class="section" style="max-width:760px;margin:0 auto">
-    <span class="studio-badge studio-badge--terra">Kết thúc phiên thử thách</span>
-    <h1 class="h1" style="margin:14px 0 16px">${right} câu đúng,<br><em>${wrong} câu chưa chuẩn.</em></h1>
-    <p class="lede">${right>=best&&right>0?'★ Kỷ lục mới của bạn! ':''}+${right*XP.quiz} XP đã được lưu vào hồ sơ. Còn ${ROUNDS-roundsToday()} lượt phản xạ hôm nay.</p>
-    ${missed.length?`<div class="exhibit" style="margin-top:24px"><div class="exhibit__cap"><b>Các khái niệm cần xem lại</b><span class="studio-badge">${missed.length} câu</span></div>
-      <ul class="list">${[...new Map(missed.map(a=>[a.q.key,a])).values()].map(a=>`<li><a class="item" style="grid-template-columns:1fr auto" href="bai.html?id=${encodeURIComponent(a.q.key)}">
-        <span class="item__t">${escH(lessonMeta(a.q.key).t)}</span><span class="studio-badge studio-badge--terra">Ôn lại →</span></a></li>`).join('')}</ul></div>`:''}
-    <div class="row" style="margin-top:26px">
-      <button class="btn btn--primary" id="again">Quay lại Studio</button>
-      <a class="btn btn--ghost" href="hoc.html">Về trang học hôm nay</a>
-    </div>
-  </section>`;
-  document.getElementById('again').onclick=intro;
-}
-app.addEventListener('click',e=>{const b=e.target.closest('.opt[data-j]'); if(b) pick(+b.dataset.j);});
-intro();
+
+const s = S.get();
+const xpChip = document.getElementById('roomXpChip');
+if (xpChip) xpChip.textContent = `${fmt(s.xp)} XP`;
+
+setTimeout(initRoomTilt, 150);
 </script>
 </body>
 </html>

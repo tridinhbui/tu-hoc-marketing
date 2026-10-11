@@ -2,53 +2,60 @@
    Kem ấm làm nền, đất nung cho hành động/đang làm, vàng mù tạt cho thưởng/XP/mở khoá,
    nâu espresso cho chữ. Olive chỉ để báo "đã xong". Ít đường kẻ, ít hộp: dùng khoảng trắng,
    cỡ chữ và mảng màu để chia bố cục; thẻ chỉ dành cho thứ bấm được hoặc đứng riêng một mình. */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root{
-  /* Hệ màu Editorial Creative Strategy Studio */
-  --bg:#F7F0E6;          /* Warm Ivory */
-  --bg-2:#EFE5D8;        /* Ngà trầm */
-  --sand:#E5D7C3;        /* Cát ấm */
-  --paper:#FDFBF7;       /* Giấy sáng */
-  --ink:#38251F;         /* Espresso Brown */
-  --ink-70:rgba(56,37,31,.74);
-  --ink-50:rgba(56,37,31,.52);
-  --ink-30:rgba(56,37,31,.26);
-  --ink-12:rgba(56,37,31,.11);
-  --ink-06:rgba(56,37,31,.05);
+  /* Hệ màu Cinematic Editorial Creative Studio — Dark Espresso & Warm Paper */
+  --bg:#130E0B;          /* Dark Espresso Canvas */
+  --bg-2:#1D1510;        /* Surface cấp 2 */
+  --bg-3:#271C16;        /* Surface cấp 3 */
+  --sand:#2E221B;        /* Mảng tối ấm */
+  --paper:#F6EFE6;       /* Warm Ivory Paper Panel */
+  --paper-card:#FDF9F3;  /* Giấy sáng nổi bật */
   
-  --terra:#C95A3A;       /* Terracotta */
-  --terra-d:#A84326;     /* Terracotta trầm */
-  --terra-06:rgba(201,90,58,.08);
-  --terra-15:rgba(201,90,58,.16);
+  --ink:#F9F4EB;         /* Chữ sáng ấm trên nền tối */
+  --ink-70:rgba(249,244,235,.75);
+  --ink-50:rgba(249,244,235,.52);
+  --ink-30:rgba(249,244,235,.26);
+  --ink-12:rgba(249,244,235,.12);
+  --ink-06:rgba(249,244,235,.06);
+  --ink-dark:#24160E;    /* Chữ tối trên nền giấy ngà */
+  --ink-dark-70:rgba(36,22,14,.76);
+  --ink-dark-50:rgba(36,22,14,.52);
   
-  --blush:#E8BDB4;       /* Muted Blush */
-  --blush-bg:rgba(232,189,180,.22);
+  --terra:#C85A32;       /* Terracotta rực rỡ */
+  --terra-d:#A84320;     /* Terracotta trầm */
+  --terra-06:rgba(200,90,50,.12);
+  --terra-15:rgba(200,90,50,.24);
+  
+  --blush:#E5B4A8;       /* Muted Blush */
+  --blush-bg:rgba(229,180,168,.18);
   --blush-d:#9E5E52;
   
-  --sage:#BAC7AC;        /* Soft Sage */
-  --sage-bg:rgba(186,199,172,.24);
-  --sage-d:#4E6340;
+  --sage:#A8B99A;        /* Soft Sage */
+  --sage-bg:rgba(168,185,154,.18);
+  --sage-d:#546845;
   
-  --gold:#D4A03D;        /* Warm Ochre / XP */
+  --gold:#E5B24B;        /* Warm Gold / XP */
   --gold-d:#946A1B;
-  --gold-bg:#F5E8C7;
-  --gold-06:rgba(212,160,61,.14);
+  --gold-bg:#3A2A12;
+  --gold-06:rgba(229,178,75,.16);
   
   --olive:var(--sage-d);
   --olive-bg:var(--sage-bg);
-  --bad:#BA3826;
+  --bad:#D24B35;
   
-  /* Tên kế thừa */
-  --red:var(--terra); --red-06:var(--terra-06); --ok:var(--sage-d);
+  /* Typography */
   --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --hand:'Caveat',cursive,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
-  --rule:1px solid var(--ink-12);
-  --r:10px;
+  --rule:1px solid rgba(249,244,235,.12);
+  --rule-paper:1px solid rgba(36,22,14,.12);
+  --r:12px;
   --read:18px;
-  --transition-fast:all .2s cubic-bezier(.16,1,.3,1);
-  color-scheme:light;
+  --transition-fast:all .22s cubic-bezier(.16,1,.3,1);
+  color-scheme:dark;
 }
 html[data-theme="ivory"]{ --bg:#F7F0E6; --bg-2:#EFE5D8; }
 html[data-theme="dark"]{
@@ -930,4 +937,223 @@ body.has-side.side-collapsed .side__logo{
   line-height:1.55;
   margin:0;
 }
+
+/* =====================================================================
+   EXPERIMENTAL COLLAGE, TAPE & ART DIRECTION SYSTEM (Awwwards-Level)
+   ===================================================================== */
+.hand{font-family:var(--hand)!important}
+
+/* Washi Tape Component */
+.tape{
+  position:absolute;
+  height:24px;
+  background:rgba(245,235,220,.72);
+  backdrop-filter:blur(2px);
+  box-shadow:0 1px 4px rgba(0,0,0,.2);
+  z-index:10;
+  pointer-events:none;
+}
+.tape--top{top:-12px;left:50%;transform:translateX(-50%) rotate(-1.5deg);width:88px}
+.tape--pink{background:rgba(235,185,178,.78)}
+.tape--gold{background:rgba(229,178,75,.72)}
+.tape--angle-l{top:-10px;left:-10px;width:70px;transform:rotate(-35deg)}
+.tape--angle-r{top:-10px;right:-10px;width:70px;transform:rotate(35deg)}
+
+/* Sticky Post-it Note */
+.postit-note{
+  background:#FCEAE6;
+  color:#24160E;
+  padding:16px 20px;
+  box-shadow:0 14px 32px -10px rgba(0,0,0,.5);
+  border-radius:2px;
+  font-family:var(--hand);
+  font-size:21px;
+  line-height:1.35;
+  position:relative;
+  transition:transform .3s cubic-bezier(.16,1,.3,1);
+  display:inline-block;
+}
+.postit-note:hover{
+  transform:scale(1.05) rotate(0deg)!important;
+  z-index:20;
+}
+
+/* Polaroid Card */
+.polaroid-frame{
+  background:#FFFDF9;
+  padding:10px 10px 30px 10px;
+  box-shadow:0 16px 36px -12px rgba(0,0,0,.55);
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s ease;
+}
+.polaroid-frame:hover{
+  transform:translateY(-6px) scale(1.03)!important;
+  box-shadow:0 24px 48px -12px rgba(0,0,0,.65);
+  z-index:25;
+}
+.polaroid-frame img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.polaroid-caption{
+  font-family:var(--hand);
+  font-size:17px;
+  color:#24160E;
+  margin-top:10px;
+  text-align:center;
+}
+
+/* Rotating stamp badge */
+.rotating-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  border:1.5px dashed var(--gold);
+  color:var(--gold);
+  font-size:9.5px;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  animation:badge-spin 22s linear infinite;
+  text-align:center;
+}
+@keyframes badge-spin{100%{transform:rotate(360deg)}}
+
+/* Filter Pills for Case Universe */
+.filter-pills{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding-bottom:6px;
+  scrollbar-width:none;
+}
+.filter-pills::-webkit-scrollbar{display:none}
+.filter-pill{
+  background:rgba(249,244,235,.08);
+  border:1px solid rgba(249,244,235,.14);
+  color:var(--ink-70);
+  padding:7px 18px;
+  border-radius:99px;
+  font-size:13px;
+  font-weight:500;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:var(--transition-fast);
+}
+.filter-pill:hover{
+  background:rgba(249,244,235,.16);
+  color:var(--ink);
+}
+.filter-pill.active{
+  background:var(--terra);
+  border-color:var(--terra);
+  color:#fff;
+  font-weight:600;
+}
+
+/* Cinematic Universe Cards */
+.universe-card{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  background:#1D1510;
+  border:1px solid rgba(249,244,235,.1);
+  display:flex;
+  flex-direction:column;
+  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+  text-decoration:none;
+  color:inherit;
+}
+.universe-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(249,244,235,.3);
+  box-shadow:0 24px 44px -16px rgba(0,0,0,.65);
+}
+.universe-card__img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  transition:transform .5s ease;
+}
+.universe-card:hover .universe-card__img{
+  transform:scale(1.05);
+}
+.universe-card__overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(19,14,11,.15) 0%,rgba(19,14,11,.92) 80%);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:20px;
+}
+.universe-card__tag{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  padding:4px 10px;
+  border-radius:99px;
+  background:rgba(200,90,50,.85);
+  color:#fff;
+  align-self:flex-start;
+  margin-bottom:8px;
+}
+.universe-card__title{
+  font-family:var(--serif);
+  font-size:1.35rem;
+  font-weight:500;
+  line-height:1.25;
+  color:#fff;
+  margin:0;
+}
+
+/* =====================================================================
+   INTERACTIVE MOODBOARD & TACTILE EXPERIENCES
+   ===================================================================== */
+.tilt-card{
+  transform-style:preserve-3d;
+  will-change:transform;
+  transition:transform .12s cubic-bezier(.16,1,.3,1),box-shadow .2s ease;
+}
+.tilt-card:hover{
+  z-index:30;
+}
+.draggable-postit{
+  cursor:grab;
+  user-select:none;
+}
+.draggable-postit:active{
+  cursor:grabbing;
+}
+.rubber-stamp{
+  position:absolute;
+  z-index:99;
+  pointer-events:none;
+  border:3px dashed #C85A32;
+  color:#C85A32;
+  font-family:var(--sans);
+  font-weight:800;
+  font-size:15px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  padding:6px 16px;
+  border-radius:6px;
+  background:rgba(200,90,50,.08);
+  box-shadow:0 0 0 1px rgba(200,90,50,.2);
+  transform:rotate(-12deg) scale(1);
+  animation:stamp-slam .28s cubic-bezier(.175,.885,.32,1.275) forwards;
+}
+@keyframes stamp-slam{
+  0%{opacity:0;transform:scale(2.4) rotate(-25deg)}
+  100%{opacity:.92;transform:scale(1) rotate(-10deg)}
+}
+
+
 

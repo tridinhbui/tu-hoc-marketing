@@ -2,382 +2,471 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23C4552D%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E7%27%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=4">
-<title>Hôm nay — Tự Học Marketing Case</title>
-<meta name="description" content="Bạn đang ở bước nào của hành trình, hôm nay làm ba việc gì, yếu ở đâu và sắp mở khoá gì.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C85A32%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E8%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=8">
+<title>Hành trình hôm nay — Tự Học Marketing Case</title>
+<meta name="description" content="Khám phá các thế giới marketing, giải quyết case study thực tế và nâng cao tư duy chiến lược mỗi ngày.">
+<style>
+  body{
+    background:#130E0B;
+    color:#F9F4EB;
+    overflow-x:hidden;
+  }
+  
+  /* Top Universe Nav */
+  .dash-nav{
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:rgba(19,14,11,.92);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(249,244,235,.08);
+  }
+  .dash-nav .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:14px;
+    padding-bottom:14px;
+  }
+  .dash-nav-links{
+    display:flex;
+    align-items:center;
+    gap:24px;
+  }
+  .dash-nav-links a{
+    font-size:14px;
+    font-weight:500;
+    color:rgba(249,244,235,.7);
+    text-decoration:none;
+    transition:var(--transition-fast);
+  }
+  .dash-nav-links a:hover,.dash-nav-links a.active{
+    color:#F9F4EB;
+  }
+  @media(max-width:860px){
+    .dash-nav-links{display:none}
+  }
+
+  /* Hero Section: Studio & Workspace */
+  .dash-hero{
+    padding:clamp(28px,5vw,56px) 0;
+  }
+  .dash-hero-grid{
+    display:grid;
+    gap:clamp(24px,4vw,44px);
+  }
+  @media(min-width:960px){
+    .dash-hero-grid{
+      grid-template-columns:1.1fr .9fr;
+      align-items:center;
+    }
+  }
+  .dash-eyebrow{
+    font-family:var(--sans);
+    font-size:11.5px;
+    font-weight:700;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--terra);
+    margin-bottom:12px;
+    display:block;
+  }
+  .dash-title{
+    font-family:var(--serif);
+    font-size:clamp(2.4rem,4.5vw,3.6rem);
+    font-weight:400;
+    line-height:1.1;
+    letter-spacing:-.02em;
+    margin:0 0 24px;
+  }
+  .dash-title em{
+    font-style:italic;
+    color:var(--blush);
+  }
+
+  /* Progress Card on Canvas */
+  .progress-card-floating{
+    background:#FAF5EE;
+    color:#24160E;
+    border-radius:16px;
+    padding:22px 26px;
+    box-shadow:0 20px 48px -18px rgba(0,0,0,.7);
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    max-width:480px;
+  }
+  .progress-bar-wrap{
+    height:8px;
+    background:rgba(36,22,14,.1);
+    border-radius:99px;
+    overflow:hidden;
+    position:relative;
+  }
+  .progress-bar-fill{
+    height:100%;
+    background:var(--terra);
+    border-radius:99px;
+    transition:width .6s ease;
+  }
+
+  /* Visual Studio Workspace Image */
+  .workspace-frame{
+    position:relative;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 24px 60px -20px rgba(0,0,0,.8);
+    border:1px solid rgba(249,244,235,.15);
+  }
+  .workspace-frame img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    display:block;
+  }
+  .workspace-note{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+    background:rgba(29,21,16,.85);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(249,244,235,.2);
+    color:#F9F4EB;
+    padding:14px 18px;
+    border-radius:10px;
+    font-family:var(--hand);
+    font-size:20px;
+    line-height:1.3;
+    max-width:240px;
+    transform:rotate(-2deg);
+  }
+
+  /* Case Universe Section */
+  .universe-section{
+    padding:clamp(36px,6vw,72px) 0;
+    border-top:1px solid rgba(249,244,235,.1);
+  }
+  .universe-header{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:24px;
+    flex-wrap:wrap;
+  }
+  .universe-title{
+    font-family:var(--serif);
+    font-size:clamp(1.8rem,3.4vw,2.6rem);
+    font-weight:400;
+    line-height:1.2;
+    margin:6px 0 0;
+  }
+
+  /* Universe Cards Grid (Exact parity with Screen 2) */
+  .universe-grid{
+    display:grid;
+    gap:20px;
+  }
+  @media(min-width:680px){
+    .universe-grid{
+      grid-template-columns:repeat(2,1fr);
+    }
+  }
+  @media(min-width:1040px){
+    .universe-grid{
+      grid-template-columns:1.3fr 1fr 1fr;
+    }
+  }
+
+  /* Daily Mission Banner (Bottom of Screen 2) */
+  .mission-bottom-banner{
+    background:#1E1612;
+    border:1px solid rgba(249,244,235,.14);
+    border-radius:20px;
+    overflow:hidden;
+    margin:clamp(40px,6vw,80px) 0;
+    display:grid;
+    position:relative;
+    box-shadow:0 24px 60px -20px rgba(0,0,0,.7);
+  }
+  @media(min-width:860px){
+    .mission-bottom-banner{
+      grid-template-columns:320px 1fr;
+      align-items:center;
+    }
+  }
+  .mission-bottom-img{
+    width:100%;
+    height:100%;
+    min-height:240px;
+    object-fit:cover;
+  }
+  .mission-bottom-content{
+    padding:clamp(28px,4vw,48px);
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+</style>
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn.</p></div></noscript>
+
+<!-- TOP NAVIGATION BAR -->
+<header class="dash-nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" style="color:#F9F4EB">
+      <b style="color:var(--terra)">Tự Học</b> Marketing Case
+    </a>
+
+    <nav class="dash-nav-links" aria-label="Điều hướng">
+      <a class="active" href="hoc.html">Học</a>
+      <a href="case-thu-vien.html">Case</a>
+      <a href="ban-do.html">Lộ trình</a>
+      <a href="cong-dong.html">Cộng đồng</a>
+    </nav>
+
+    <div class="row" style="gap:14px">
+      <span class="xpchip" id="userXpChip">0 XP</span>
+      <a href="tai-khoan.html" style="display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--terra);color:#fff;text-decoration:none;font-weight:700">M</a>
+    </div>
+  </div>
+</header>
+
 <main class="wrap" id="app"></main>
+
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
 <script src="assets/js/data/bai-index.js?v=8"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
-<script src="assets/js/data/rewards.js?v=1"></script>
 <script src="assets/js/data/exam-items.js?v=7"></script>
-<script src="assets/js/data/exams.js?v=8"></script>
 <script src="assets/js/app.js?v=16"></script>
-<script src="assets/js/exam.js?v=8"></script>
 <script>
-appShell('hoc.html');
-const app=document.getElementById('app');
+const app = document.getElementById('app');
 
-/* người dùng cũ đã chọn nhóm: đổi sang mục tiêu nghề tương ứng, không hỏi lại */
-(()=>{ const s=S.get(); if(s.goal||!s.persona) return;
-  const g={student:'exec',mt:'mt',comp:'mt',worker:'owner'}[s.persona]||'exec'; S.set({goal:g,startLv:0}); })();
+function renderDashboard() {
+  const s = S.get();
+  const xpChip = document.getElementById('userXpChip');
+  if (xpChip) xpChip.textContent = `${fmt(s.xp)} XP`;
 
-/* ================= ONBOARDING =================
-   Không mở ra danh sách bài. Hỏi hai câu, rồi giao nhiệm vụ đầu tiên. */
-const ob={step:1,goal:null,lv:null};
-function onboarding(){
-  if(ob.step===1){
-    app.innerHTML=`<section class="ob">
-      <span class="eyebrow">Bước 1 / 2</span>
-      <h1 class="display">Bạn muốn giỏi marketing <em>để làm gì?</em></h1>
-      <p class="lede">Chọn đích đến gần nhất. App dựng lộ trình, điểm bắt đầu và nhiệm vụ đầu tiên theo lựa chọn này — đổi lúc nào cũng được.</p>
-      <div class="picks">${GOALS.map(g=>`<button class="pick" data-goal="${g.id}"><b>${g.t}</b><span>${g.d}</span></button>`).join('')}</div>
-    </section>`;
-  } else if(ob.step===2){
-    const g=GOALS.find(x=>x.id===ob.goal);
-    app.innerHTML=`<section class="ob">
-      <span class="eyebrow">Bước 2 / 2 · ${escH(g.t)}</span>
-      <h1 class="display">Bạn đang <em>ở mức nào?</em></h1>
-      <p class="lede">Trả lời thật. Người đã đi làm sẽ được thử đề vượt chặng để khỏi học lại phần đã biết.</p>
-      <div class="picks picks--4">${START_LEVELS.map(l=>`<button class="pick" data-lv="${l.id}"><b>${l.t}</b><span>${l.d}</span></button>`).join('')}</div>
-      <button class="btn btn--quiet" data-back style="margin-top:22px">← Chọn lại mục tiêu</button>
-    </section>`;
-  } else {
-    const g=GOALS.find(x=>x.id===ob.goal), p=PATHS.find(x=>x.id===g.path), lv=START_LEVELS[ob.lv];
-    const first=p.lessons?p.lessons.find(k=>!lessonState(k))||p.lessons[0]:(ALL.map(x=>x.key).find(k=>lessonOpen(k))||nextLesson());   // bài thuộc lộ trình luôn mở, đầu tiên theo thứ tự hành trình
-    const fm=lessonMeta(first), fw=where(first);
-    const gaps=SKILLS.map(sk=>({...sk,need:g.need[sk.id]})).sort((a,b)=>b.need-a.need).slice(0,3);
-    const skip=ob.lv>=2;
-    app.innerHTML=`<section class="ob ob--done">
-      <span class="eyebrow eyebrow--gold">Đã sẵn sàng</span>
-      <h1 class="display">Nhiệm vụ đầu tiên của bạn <em>đã sẵn sàng.</em></h1>
-      <div class="brief">
-        <div class="brief__row"><span>Mục tiêu</span><b>${escH(g.t)}</b></div>
-        <div class="brief__row"><span>Lộ trình đề xuất</span><b>${escH(p.t)} · ${(p.lessons||ALL).length} bài</b></div>
-        <div class="brief__row"><span>Điểm bắt đầu</span><b>${skip?(API.login?'Làm bài xếp lớp — app đặt bạn vào đúng bước, bỏ qua phần đã biết':'Thử đề vượt chặng 01 — qua là bỏ được phần nền tảng'):'Bước 1 · Quan sát'} <small>(${escH(lv.t)})</small></b></div>
-        <div class="brief__row"><span>Kỹ năng cần xây nhiều nhất</span><b>${gaps.map(x=>`${escH(x.t)} <small>cần ${x.need}%</small>`).join(' · ')}</b></div>
-      </div>
-      <div class="mission">
-        <span class="eyebrow">Nhiệm vụ 01 · ${fw?escH(JOURNEY.find(j=>j.mods.includes(fw.mod.id)).t):''}</span>
-        <h2 class="h2">${escH(fm.t)}</h2>
-        <p class="small muted">${escH(fm.read)} đọc · một tình huống thật, một quyết định, một quiz ngắn · <span class="gold">+${XP.lesson} XP</span></p>
-        <div class="row" style="margin-top:16px">
-          <a class="btn btn--primary btn--lg" href="bai.html?id=${encodeURIComponent(first)}" data-finish>Bắt đầu nhiệm vụ →</a>
-          ${skip?(API.login?`<a class="btn btn--ghost" href="xep-lop.html" data-finish>Làm bài xếp lớp</a>`:`<a class="btn btn--ghost" href="thi.html?stage=s1" data-finish>Thử đề vượt chặng 01</a>`):''}
-        </div>
-      </div>
-    </section>`;
-  }
-}
-app.addEventListener('click',e=>{
-  const g=e.target.closest('[data-goal]'), l=e.target.closest('[data-lv]');
-  if(g){ ob.goal=g.dataset.goal; ob.step=2; onboarding(); scrollTo(0,0); }
-  else if(l){ ob.lv=+l.dataset.lv; ob.step=3; onboarding(); scrollTo(0,0); }
-  else if(e.target.closest('[data-back]')){ ob.step=1; onboarding(); }
-  else if(e.target.closest('[data-finish]')){ const gg=GOALS.find(x=>x.id===ob.goal);
-    S.set({goal:gg.id,startLv:ob.lv,path:gg.path}); }
-});
+  const doneCount = Object.keys(s.done || {}).length;
+  const totalLessons = ALL.length;
+  const pct = Math.min(100, Math.round((doneCount / Math.max(1, totalLessons)) * 100));
+  const rk = typeof rank === 'function' ? rank(s) : { t: 'Strategist' };
+  const nk = nextLesson(s) || ALL[0].key;
+  const nm = lessonMeta(nk);
 
-/* ================= TÍN HIỆU HÔM NAY =================
-   Một câu tình huống mỗi ngày, lấy từ ngân hàng đề của các chặng đã mở. Cùng ngày thì cùng câu. */
-function signalItem(s){
-  const pool=EXAM_ITEMS.filter(it=>it.type!=='calc'&&it.options&&stageOpen(it.stage,s));
-  if(!pool.length) return null;
-  const t=today(); let h=0; for(const c of t) h=(h*31+c.charCodeAt(0))>>>0;
-  const saved=(s.daily||{})[t]; return saved&&EXAM_ITEMS.find(x=>x.id===saved.id) || pool[h%pool.length];
-}
-function signalHTML(s){
-  const it=signalItem(s); if(!it) return '';
-  const res=(s.daily||{})[today()], sk=skillOfLesson(it.source||(it.teaches||[])[0]);
-  return `<section class="signal" id="signal">
-    <div class="signal__head"><span class="eyebrow eyebrow--light">Tín hiệu thị trường · ${new Date().toLocaleDateString('vi-VN',{weekday:'long',day:'numeric',month:'numeric'})}</span>
-      <span class="small">1–3 phút · <span class="gold">+${XP.daily} XP</span> · giữ chuỗi ngày</span></div>
-    <p class="signal__stem">${it.stem}</p>
-    <div class="signal__opts">${it.options.map(o=>{
-      const why=(res&&res.why)||{}, st=res?(o.k===res.answer?'right':o.k===res.given?'wrong':''):'';
-      return `<button class="opt" data-sig="${o.k}" ${res?'disabled':''} ${st?`data-r="${st}"`:''}>${escH(o.t)}${res&&why[o.k]?`<small>${escH(why[o.k])}</small>`:''}</button>`}).join('')}</div>
-    ${res?`<div class="signal__after">
-      <span class="${res.ok?'ok':'bad'}">${res.ok?'Đúng — đọc được tín hiệu.':'Chưa đúng — câu này đã vào hàng ôn.'}</span>
-      ${sk?`<span class="skillup">${escH(sk.t)}${res.ok?' ↑':' · cần luyện'}</span>`:''}
-      ${(res.why||{})[res.answer]?`<div class="stickynote"><span class="eyebrow">Thẻ insight</span>${escH(res.why[res.answer])}</div>`:''}
-      <a class="btn btn--ghost" href="${res.ok?'quiz.html':'on-loi.html'}">${res.ok?'Luyện tiếp 5 câu →':'Luyện lại chỗ sai →'}</a></div>`:''}
-  </section>`;
-}
-async function answerSignal(k){
-  const s=S.get(), it=signalItem(s);
-  document.querySelectorAll('[data-sig]').forEach(b=>b.disabled=true);
-  let g; try{ g=await gradeAsync(it,k,'practice'); }
-  catch(e){ document.querySelectorAll('[data-sig]').forEach(b=>b.disabled=false); toast(GRADE_OFFLINE); return; }
-  const ok=g.ok;
-  /* lưu đáp án + lời giải server trả về để lần mở sau vẫn hiện, không cần tải lại đáp án */
-  S.set({daily:{...(s.daily||{}),[today()]:{id:it.id,given:k,ok,answer:g.answer,why:g.why}}});
-  if(!ok) (it.teaches||[]).slice(0,1).forEach(pid=>logError(conceptCode(pid),it.source||pid));
-  award('daily',today());
-  render(); document.getElementById('signal').scrollIntoView({block:'start'});
-}
-
-/* ================= COMMAND CENTER ================= */
-function render(){
-  const s=S.get();
-  if(!s.goal){ onboarding(); return; }
-  const g=goalOf(s), path=PATHS.find(p=>p.id===(s.path||g.path))||PATHS[0];
-  const js=journeyState(s), ni=js.findIndex(j=>j.st==='now'), now=js[ni]||js[js.length-1];
-  const tasks=todayTasks(s), firstOpen=tasks.find(t=>!t.done);
-  const rk=rank(s), gaps=skillGaps(s), weak=gaps[0];
-  const nk=nextLesson(s), learning=nk&&skillOfLesson(nk);
-  const lp=learning&&skillPct(learning,s);
-  const nxt=js[ni+1];
-  let unlock=null;
-  if(nxt){
-    if(nxt.st==='lock'){ const i=STAGES.findIndex(x=>x.id===nxt.stage.id), pv=STAGES[i-1];
-      unlock={t:nxt.t,how:`Qua đề vượt chặng ${pv.n} để mở`,href:`thi.html?stage=${pv.id}`,cta:'Xem đề chặng'}; }
-    else unlock={t:nxt.t,how:`Còn ${now.total-now.have} bài ở bước ${now.t}`,href:nk?'bai.html?id='+encodeURIComponent(nk):'hoc-bai.html',cta:'Học tiếp'};
-  }
-  const wk=weekly(S.get());
-  const pl=path.lessons||ALL.map(x=>x.key), plDone=pl.filter(k=>s.done[k]).length;
-  const rw={learn:`+${XP.lesson} XP`,drill:`đến +${XP_CAP.review} XP`,signal:`+${XP.daily} XP`};
-
-  const started=s.xp>0||s.streak>0||Object.keys(s.done||{}).length>0;
-  const startKeys=(path.start||pl.slice(0,6)).slice(0,6);
-
-  /* Định hướng câu hỏi chiến lược cho từng case */
-  function caseQuestion(k, m, w) {
-    const custom = {
-      'B:ob01-01': 'Khách hàng ghé quán nhưng không gọi món: Vấn đề ở menu hay trải nghiệm?',
-      'B:ob01-02': 'Quán trà sữa vắng khách dù ở mặt tiền: Bạn bắt đầu chẩn đoán từ đâu?',
-      'B:ob01-03': 'Tung khuyến mãi mua 1 tặng 1: Vì sao khách biến mất khi hết giảm giá?',
-      'B:ob01-04': 'Giá 68k cho một ly cà phê specialty: Khách có thấy đáng tiền?',
-      'B:ob01-05': 'Chiến dịch đẹp nghìn share nhưng không ai mua: Điểm nghẽn ở bước nào?',
-      'B:ob01-06': 'Doanh thu giảm 20%: Cắt chi phí quảng cáo hay đổi thông điệp?',
-      'B:ob01-07': 'Đối thủ copy mẫu quảng cáo và bán rẻ hơn: Bạn ứng phó thế nào?',
-      'L:1': 'Khách không mua cái máy khoan, họ mua cái lỗ trên tường: Bán tính năng hay công việc cần làm?',
-      'L:2': 'Giá 68k cho một ly cà phê: Định vị trải nghiệm hay neo giá sản phẩm?',
-      'L:3': 'Chiến dịch đẹp nhưng không ai mua: Bóc tách rào cản chuyển đổi',
-      'L:4': 'Doanh thu giảm 20%: Bạn bắt đầu chẩn đoán từ đâu?',
-      'L:65': 'ROAS 4.0 lần nhưng thương hiệu có thực sự kiếm được tiền?'
-    };
-    if (custom[k]) return custom[k];
-    if (m && m.t) {
-      if (/giá|chi phí|lợi nhuận|roas|tiền/i.test(m.t)) return `Bài toán kinh tế: ${m.t} — Doanh nghiệp có thực sự có lãi?`;
-      if (/khách|insight|hành vi|tâm lý/i.test(m.t)) return `Giải mã tâm lý: ${m.t} — Động lực ngầm đằng sau hành vi mua?`;
-      if (/định vị|thương hiệu|brand/i.test(m.t)) return `Định vị chiến lược: Làm sao để ${m.t} tạo ra sự khác biệt bền vững?`;
-      if (/quảng cáo|media|kênh|content/i.test(m.t)) return `Đo lường chiến dịch: ${m.t} — Tác động thực tế đến chuyển đổi?`;
-      return `Tình huống: ${m.t}`;
+  /* Case Universe items (Curated from real campaigns matching Screen 2) */
+  const universeCases = [
+    {
+      id: 'case-apple-1984',
+      badge: 'CHIẾN LƯỢC THƯƠNG HIỆU',
+      title: 'Lần tái định vị đỉnh cao của Apple',
+      category: 'chien-luoc',
+      img: 'assets/img/hero_model.jpg',
+      href: 'case/apple-1984.html'
+    },
+    {
+      id: 'case-nike-dream-crazy',
+      badge: 'TĂNG TRƯỞNG',
+      title: 'Cách Nike biến một insight thành phong trào toàn cầu',
+      category: 'tang-truong',
+      img: 'assets/img/billboard_city.jpg',
+      href: 'case/nike-dream-crazy.html'
+    },
+    {
+      id: 'case-highlands-third-place',
+      badge: 'SẢN PHẨM',
+      title: 'Chiến lược premium hoá của Highlands Coffee',
+      category: 'san-pham',
+      img: 'assets/img/coffee_aesthetic.jpg',
+      href: 'case/highlands-third-place.html'
+    },
+    {
+      id: 'case-dove-real-beauty',
+      badge: 'SÁNG TẠO',
+      title: 'Bài học từ chiến dịch "Real Beauty" của Dove',
+      category: 'sang-tao',
+      img: 'assets/img/model_thinking.jpg',
+      href: 'case/dove-real-beauty.html'
+    },
+    {
+      id: 'case-baemin-vietnam',
+      badge: 'THƯƠNG HIỆU VIỆT',
+      title: 'Cách Baemin chiếm trọn trái tim người trẻ thành thị',
+      category: 'viet-nam',
+      img: 'assets/og/case-baemin-vietnam.png',
+      href: 'case/baemin-vietnam.html'
+    },
+    {
+      id: 'case-bitis-hunter',
+      badge: 'THƯƠNG HIỆU VIỆT',
+      title: 'Biti\'s Hunter: Đi để trở về & Sự hồi sinh di sản',
+      category: 'viet-nam',
+      img: 'assets/og/case-bitis-hunter.png',
+      href: 'case/bitis-hunter.html'
     }
-    return 'Tình huống chiến lược marketing';
-  }
-
-  function caseContext(k, w) {
-    const sectors = [
-      'F&B · Chuỗi cà phê & Trải nghiệm',
-      'D2C · Thời trang & Phong cách sống',
-      'Bán lẻ · Mỹ phẩm & Chăm sóc cá nhân',
-      'Dịch vụ số · E-commerce & App',
-      'Hàng tiêu dùng nhanh (FMCG)'
-    ];
-    let h = 0; for (const c of k) h = (h * 31 + c.charCodeAt(0)) >>> 0;
-    return sectors[h % sectors.length];
-  }
-
-  /* Ảnh campaign hoặc plate đồ họa cho case */
-  const caseImages = [
-    'assets/og/case-baemin-vietnam.png',
-    'assets/og/case-bitis-hunter.png',
-    'assets/og/case-oatly-packaging.png',
-    'assets/og/case-highlands-third-place.png',
-    'assets/og/case-katinat-sao-la.png',
-    'assets/og/case-spotify-wrapped.png',
-    'assets/og/case-dove-real-beauty.png'
   ];
 
-  /* VISUAL CASE PREVIEWS */
-  const visualCasesHTML = `
-    <section style="margin-top:clamp(28px,4vw,44px)">
-      <div class="row between">
+  app.innerHTML = `
+    <!-- 1. HERO WORKSPACE & PROGRESS -->
+    <section class="dash-hero">
+      <div class="dash-hero-grid">
+        <!-- Left: Greetings & Floating Progress -->
         <div>
-          <span class="studio-badge studio-badge--terra">Visual Case Previews</span>
-          <h2 class="h2" style="margin:8px 0 0">Tình huống đang chờ bạn <em>giải quyết</em></h2>
-        </div>
-        <a class="btn btn--ghost" href="hoc-bai.html">Xem toàn bộ lộ trình →</a>
-      </div>
-      <div class="case-visual-grid">
-        ${startKeys.map((k, i) => {
-          const m = lessonMeta(k), st = lessonState(k, s), w = where(k), sk = skillOfLesson(k);
-          const q = caseQuestion(k, m, w);
-          const ctx = caseContext(k, w);
-          const img = caseImages[i % caseImages.length];
-          const isDone = !!st;
-          return `
-            <a class="case-card-visual" href="bai.html?id=${encodeURIComponent(k)}" data-done="${isDone}">
-              <div class="case-card-visual__thumb">
-                <img class="case-card-visual__img" src="${img}" alt="${escH(m ? m.t : k)}" loading="lazy">
-                <span class="studio-badge" style="position:absolute;top:10px;left:10px;background:rgba(26,16,11,.85);color:#fff;border-color:transparent">
-                  ${escH(ctx)}
-                </span>
-              </div>
-              <div class="case-card-visual__content">
-                <span class="lbl" style="color:var(--terra)">${sk ? escH(sk.t) : (w ? escH(w.stage.t) : 'Chiến lược')}</span>
-                <h3 class="case-card-visual__problem">${escH(q)}</h3>
-                <p class="case-card-visual__desc">Khái niệm: <b>${escH(m ? m.t : '')}</b> · Đọc bối cảnh thật, chọn phương án và đối chiếu kết quả.</p>
-                <div class="case-card-visual__foot">
-                  <span>⏱ ${escH(m ? m.read : '6 phút')} · +10 XP</span>
-                  <span class="case-card-visual__status">${isDone ? '✓ Đã hoàn thành' : 'Sẵn sàng giải quyết →'}</span>
-                </div>
-              </div>
+          <span class="dash-eyebrow">CHÀO BẠN TRỞ LẠI,</span>
+          <h1 class="dash-title">
+            Hành trình hôm nay:<br>
+            <em>Tiếp tục phá vỡ những lối mòn</em>
+          </h1>
+
+          <!-- Floating Progress Card -->
+          <div class="progress-card-floating">
+            <div class="row between">
+              <span class="lbl" style="color:var(--ink-dark-70)">LỘ TRÌNH CỦA BẠN</span>
+              <span class="gold" style="font-size:13px;font-weight:700">${pct}% HOÀN THÀNH</span>
+            </div>
+            <div>
+              <b style="font-family:var(--serif);font-size:1.35rem;display:block;margin-bottom:4px">
+                ${escH(rk ? rk.t : 'Management Trainee')}
+              </b>
+              <span class="small muted" style="color:var(--ink-dark-50)">
+                Đã giải quyết ${doneCount}/${totalLessons} case thực tế
+              </span>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" style="width:${Math.max(8, pct)}%"></div>
+            </div>
+            <a class="btn btn--primary" href="bai.html?id=${encodeURIComponent(nk)}" style="align-self:flex-start;border-radius:99px;padding:10px 22px;margin-top:4px">
+              Tiếp tục học →
             </a>
-          `;
-        }).join('')}
+          </div>
+        </div>
+
+        <!-- Right: Studio Workspace Frame -->
+        <div class="workspace-frame">
+          <img src="assets/img/studio_workspace.jpg" alt="Creative Studio Workspace">
+          <div class="workspace-note">
+            Ideas. People.<br>Culture. Business.<br>A better world.
+          </div>
+        </div>
       </div>
     </section>
-  `;
 
-  /* FEATURED DAILY MISSION */
-  const missionLesson = firstOpen ? firstOpen.href.replace('bai.html?id=', '') : (startKeys[0] || 'L:1');
-  const mm = lessonMeta(decodeURIComponent(missionLesson)) || lessonMeta('L:1');
-  const mw = where(decodeURIComponent(missionLesson));
-  const featuredMissionHTML = `
-    <section class="mission-dilemma">
-      <div class="mission-dilemma__main">
-        <div class="row between">
-          <span class="studio-badge studio-badge--terra">Nhiệm vụ chiến lược hôm nay</span>
-          <span class="studio-badge studio-badge--sage">+${XP.lesson} XP KHI HOÀN THÀNH</span>
+    <!-- 2. CASE UNIVERSE SECTION (Screen 2 Parity) -->
+    <section class="universe-section">
+      <div class="universe-header">
+        <div>
+          <span class="studio-badge studio-badge--terra">CASE UNIVERSE</span>
+          <h2 class="universe-title">Khám phá các thế giới marketing</h2>
         </div>
-        <h2 class="h2" style="margin:6px 0 0">
-          ${escH(caseQuestion(decodeURIComponent(missionLesson), mm, mw))}
+
+        <!-- Filter Pills -->
+        <div class="filter-pills" id="universeFilters">
+          <button class="filter-pill active" onclick="filterUniverse('all')">Tất cả</button>
+          <button class="filter-pill" onclick="filterUniverse('viet-nam')">Thương hiệu Việt</button>
+          <button class="filter-pill" onclick="filterUniverse('quoc-te')">Quốc tế</button>
+          <button class="filter-pill" onclick="filterUniverse('chien-luoc')">Chiến lược</button>
+          <button class="filter-pill" onclick="filterUniverse('sang-tao')">Sáng tạo</button>
+          <button class="filter-pill" onclick="filterUniverse('tang-truong')">Tăng trưởng</button>
+          <button class="filter-pill" onclick="filterUniverse('san-pham')">Sản phẩm</button>
+        </div>
+      </div>
+
+      <!-- Universe Cards Grid -->
+      <div class="universe-grid" id="universeGrid">
+        ${universeCases.map(c => `
+          <a class="universe-card" href="${c.href}" data-cat="${c.category}">
+            <img class="universe-card__img" src="${c.img}" alt="${escH(c.title)}" loading="lazy">
+            <div class="universe-card__overlay">
+              <span class="universe-card__tag">${escH(c.badge)}</span>
+              <h3 class="universe-card__title">${escH(c.title)}</h3>
+            </div>
+          </a>
+        `).join('')}
+      </div>
+    </section>
+
+    <!-- 3. DAILY MISSION / BRIEF BANNER (Screen 2 Bottom Parity) -->
+    <section class="mission-bottom-banner">
+      <img class="mission-bottom-img" src="assets/img/hero_model.jpg" alt="Strategist Brief">
+      <div class="mission-bottom-content">
+        <div class="row between">
+          <span class="studio-badge studio-badge--terra">THỬ THÁCH HÔM NAY</span>
+          <span class="gold">+20 XP</span>
+        </div>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);margin:0;line-height:1.2">
+          Một brief mới đang chờ bạn.
         </h2>
-        <p class="small" style="color:var(--ink-70);line-height:1.6;margin:0">
-          Bạn đang đóng vai trò Creative Strategist. Hãy đọc kỹ dữ kiện thực tế của thương hiệu, 
-          phân tích động lực ngầm của khách hàng và đưa ra quyết định có trách nhiệm với ngân sách.
+        <p style="font-size:14.5px;color:rgba(249,244,235,.75);line-height:1.6;margin:0">
+          Áp dụng những gì đã học để giải quyết một bài toán marketing thực tế: 
+          Định vị lại sản phẩm cà phê cao cấp khi thị trường tràn ngập đối thủ giảm giá.
         </p>
         <div class="row" style="margin-top:10px">
-          <a class="btn btn--primary btn--lg" href="${firstOpen ? firstOpen.href : 'bai.html?id=' + encodeURIComponent(missionLesson)}">
-            ${firstOpen ? 'Thực hiện nhiệm vụ ngay →' : 'Bắt đầu case hôm nay →'}
+          <a class="btn btn--primary" href="quiz.html" style="border-radius:99px;padding:12px 28px">
+            Xác nhận lựa chọn →
           </a>
-          <span class="small muted">Khoảng 6 phút · 1 bài đọc, 1 quyết định, 1 phản biện</span>
-        </div>
-      </div>
-      <div class="mission-dilemma__side">
-        <span class="lbl">Hồ sơ tình huống</span>
-        <div style="font-family:var(--serif);font-size:1.15rem;font-weight:500;line-height:1.3">
-          ${escH(mm ? mm.t : 'Chiến lược cốt lõi')}
-        </div>
-        <div class="small muted">Lĩnh vực: <b>${escH(caseContext(decodeURIComponent(missionLesson), mw))}</b></div>
-        <div class="small muted">Mục tiêu: <b>${escH(g.t)}</b> · Chặng <b>${escH(now.t)}</b></div>
-      </div>
-    </section>
-  `;
-
-  /* CASE COLLECTIONS */
-  const collectionsHTML = `
-    <section style="margin-top:clamp(32px,5vw,56px);border-top:1px solid var(--ink-12);padding-top:clamp(28px,4vw,44px)">
-      <span class="studio-badge studio-badge--blush">Chuyên đề tuyển chọn</span>
-      <h2 class="h2" style="margin:10px 0 16px">Case Collections</h2>
-      <div class="method-chain" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
-        <div class="method-card">
-          <span class="lbl" style="color:var(--terra)">BỘ SƯU TẬP 01</span>
-          <b>Sức mạnh định giá & Bản sắc</b>
-          <p class="small muted">Học cách bán giá cao gấp 3 lần đối thủ mà khách hàng vẫn tự hào cầm trên tay.</p>
-          <a class="btn btn--quiet" href="case-thu-vien.html" style="margin-top:auto">Khám phá 6 case →</a>
-        </div>
-        <div class="method-card">
-          <span class="lbl" style="color:var(--sage-d)">BỘ SƯU TẬP 02</span>
-          <b>Bóc tách Insight & Rào cản</b>
-          <p class="small muted">Những chiến dịch giải quyết mâu thuẫn văn hóa sâu sắc thay vì chỉ chạy theo trend.</p>
-          <a class="btn btn--quiet" href="case-thu-vien.html" style="margin-top:auto">Khám phá 8 case →</a>
-        </div>
-        <div class="method-card">
-          <span class="lbl" style="color:var(--gold-d)">BỘ SƯU TẬP 03</span>
-          <b>Unit Economics & Hiệu quả</b>
-          <p class="small muted">Nhìn thấu bẫy ROAS ảo và xây dựng mô hình tăng trưởng bền vững cho thương hiệu.</p>
-          <a class="btn btn--quiet" href="case-thu-vien.html" style="margin-top:auto">Khám phá 5 case →</a>
+          <span class="hand" style="font-size:22px;color:#E5B4A8;margin-left:10px">
+            Good Strategy Brings Good Change.
+          </span>
         </div>
       </div>
     </section>
   `;
-
-  app.innerHTML=`
-  <section class="cc">
-    <div class="cc__main">
-      <span class="eyebrow">Creative Strategy Studio · ${escH(g.t)}</span>
-      <h1 class="display">Your Creative <em>Journey</em></h1>
-      <p class="lede">Bước ${ni+1}/9 · ${escH(now.t)}: ${escH(now.stage ? now.stage.q : '')}</p>
-      <div class="row" style="margin-top:18px">
-        <span class="studio-badge studio-badge--terra">${escH(rk ? rk.t : 'Strategist')}</span>
-        <span class="xpchip">${fmt(s.xp)} XP</span>
-        <span class="small muted">Chuỗi ${s.streak} ngày liên tục</span>
-      </div>
-    </div>
-  </section>
-
-  ${featuredMissionHTML}
-
-  ${visualCasesHTML}
-
-  <div style="margin-top:clamp(28px,4vw,44px)">
-    ${journeyHTML(s)}
-  </div>
-
-  ${!started?'':`<section class="today">
-    <div class="today__head"><h2 class="h2">Hôm nay, <em>ba việc chiến lược.</em></h2>
-      <span class="small muted">Xong cả ba việc để giữ chuỗi ngày và phát triển trực giác ra quyết định.</span></div>
-    <ol class="tasks">${tasks.map(t=>`<li data-st="${t.done?'done':t===firstOpen?'now':'todo'}">
-      <a href="${t.href}"><span class="tasks__n">${t.done?'✓':t.n}</span>
-        <span class="tasks__body"><b>${escH(t.t)}</b><span>${escH(t.d)}</span></span>
-        <span class="tasks__xp">${t.done?'Xong':rw[t.k]}</span></a></li>`).join('')}</ol>
-  </section>`}
-
-  ${!started?'':`<section class="split">
-    <div class="skillfocus">
-      <span class="eyebrow">${learning?'Kỹ năng trọng tâm':'Kỹ năng'}</span>
-      ${learning?`<div class="bigpct"><b>${lp}%</b><span>${escH(learning.t)}</span></div>
-        <div class="bar"><i style="width:${lp}%"></i>${g.need[learning.id]?`<em style="left:${g.need[learning.id]}%" title="Mức cần cho ${escH(g.t)}"></em>`:''}</div>
-        <span class="small muted">Vạch vàng là tiêu chuẩn thị trường cho vị trí ${escH(g.t)}: ${g.need[learning.id]}%.</span>`:''}
-      ${weak&&weak.gap?`<p class="gapnote">Khoảng cách năng lực lớn nhất: <b>${escH(weak.t)}</b> — ${weak.pct}% / cần ${weak.need}%.
-        <a href="nang-luc.html#${weak.id}">Xem lộ trình bù kỹ năng →</a></p>`:''}
-    </div>
-    ${unlock?`<div class="unlock">
-      <span class="eyebrow eyebrow--gold">Mốc mở khoá tiếp theo</span>
-      <b class="unlock__t">${escH(unlock.t)}</b>
-      <span class="small">${escH(unlock.how)}</span>
-      <a class="btn btn--ghost" href="${unlock.href}">${unlock.cta} →</a>
-    </div>`:''}
-  </section>`}
-
-  ${started ? signalHTML(s) : ''}
-
-  ${collectionsHTML}
-
-  ${!started?'':`<section class="week">
-    <span class="eyebrow">Tổng kết tuần</span>
-    <div class="week__nums">
-      <div><b>${wk.lessons}</b><span>case đã giải</span></div>
-      <div><b>${wk.cases}</b><span>thử thách lớn</span></div>
-      <div><b>${wk.reps}</b><span>lượt phản xạ</span></div>
-      <div><b>${plDone}/${pl.length}</b><span>tiến độ lộ trình</span></div>
-    </div>
-    ${wk.moves.length?`<p class="small">${wk.moves.slice(0,3).map(m=>`${escH(m.t)} <b>${m.from} → ${m.to}%</b>`).join(' · ')}</p>`:''}
-  </section>`}
-
-  <nav class="also" aria-label="Công cụ khác">
-    <a href="on-loi.html">Sổ tay ôn lỗi${dueErrors(s).length?` · <b>${dueErrors(s).length}</b> đến hạn`:''}</a>
-    <a href="ruong.html">Rương thành tựu</a>
-    <a href="tro-choi.html">Trò chơi mô phỏng 8 quý</a>
-    <a href="ban-do.html">Bản đồ 9 chặng</a>
-    <button type="button" id="reGoal">Đổi mục tiêu học</button>
-  </nav>`;
-
-  document.getElementById('reGoal').onclick=()=>{ S.set({goal:null}); ob.step=1; render(); scrollTo(0,0); };
-  app.querySelectorAll('[data-sig]').forEach(b=>b.onclick=()=>answerSignal(b.dataset.sig));
-  if(location.hash==='#signal') document.getElementById('signal')?.scrollIntoView();
 }
-canLogin().then(render, render);
+
+window.filterUniverse = function(cat) {
+  try {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(420, audioCtx.currentTime);
+    gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start();
+    osc.stop(audioCtx.currentTime + 0.05);
+  } catch(e) {}
+
+  const pills = document.querySelectorAll('.filter-pill');
+  pills.forEach(p => p.classList.remove('active'));
+  event.target.classList.add('active');
+
+  const cards = document.querySelectorAll('.universe-card');
+  cards.forEach(c => {
+    if (cat === 'all' || c.dataset.cat === cat || (cat === 'quoc-te' && c.dataset.cat !== 'viet-nam')) {
+      c.style.display = 'flex';
+      c.style.animation = 'stamp-slam .25s ease-out';
+    } else {
+      c.style.display = 'none';
+    }
+  });
+};
+
+function initUniverseTilt() {
+  const cards = document.querySelectorAll('.universe-card, .progress-card-floating');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      const rotateX = (-y / (rect.height / 2)) * 6;
+      const rotateY = (x / (rect.width / 2)) * 6;
+      card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+}
+
+renderDashboard();
+setTimeout(initUniverseTilt, 150);
 </script>
 </body>
 </html>

@@ -7,22 +7,24 @@
 <title>Bài học — Tự Học Marketing Case</title>
 <meta name="description" content="Một bài học 6 phút: bài đọc, bài tập tính số, nói ra trong 60 giây, case và ôn lỗi.">
 <style>
-  /* Mỗi câu hỏi là một khoảnh khắc ra quyết định: nền giấy, phương án to, trạng thái rõ. */
-  .q{background:var(--paper);border-radius:14px;padding:18px 20px;margin:14px 0}
-  .q__stem{font-family:var(--serif);font-size:1.15rem;line-height:1.4;font-weight:500;margin:4px 0 12px}
-  .opt{display:block;width:100%;text-align:left;border:1.5px solid var(--ink-12);background:var(--bg);border-radius:10px;
-    padding:12px 15px;margin:8px 0;cursor:pointer;font:inherit;color:inherit;transition:border-color .15s}
-  .opt:hover:not([disabled]){border-color:var(--terra)}
-  .opt[data-r="right"]{border-color:var(--olive);background:var(--olive-bg)}
-  .opt[data-r="wrong"]{border-color:var(--bad);background:rgba(176,48,28,.08)}
+  body{background:#130E0B;color:#F9F4EB}
+  .q{background:#FAF5EE;color:#24160E;border-radius:14px;padding:22px 24px;margin:18px 0;box-shadow:0 14px 32px -12px rgba(0,0,0,.6)}
+  .q__stem{font-family:var(--serif);font-size:1.2rem;line-height:1.4;font-weight:600;margin:4px 0 14px;color:#24160E}
+  .opt{display:block;width:100%;text-align:left;border:1.5px solid rgba(36,22,14,.15);background:#FFFDF9;color:#24160E;border-radius:10px;
+    padding:14px 18px;margin:10px 0;cursor:pointer;font:inherit;transition:var(--transition-fast)}
+  .opt:hover:not([disabled]){border-color:var(--terra);background:var(--terra-06);transform:translateY(-1px)}
+  .opt[data-r="right"]{border-color:var(--sage-d);background:#E8F0E4;color:#24160E}
+  .opt[data-r="wrong"]{border-color:var(--bad);background:rgba(210,75,53,.08);color:var(--bad);text-decoration:line-through}
   .opt[data-r="picked"]{border-color:var(--terra);background:var(--terra-06)}
   .opt[disabled]{cursor:default}
-  .why{font-size:14.5px;line-height:1.6;margin:2px 0 10px 14px;padding-left:12px;border-left:3px solid var(--ink-12)}
-  .why--right{border-left-color:var(--olive)} .why--wrong{border-left-color:var(--bad)}
-  .gate{background:var(--gold-06);border-radius:14px;padding:6px 18px 10px;margin:22px 0}
-  .gate .q{background:var(--paper)}
+  .why{font-size:14.5px;line-height:1.6;margin:2px 0 10px 14px;padding-left:12px;border-left:3px solid rgba(36,22,14,.2);color:#24160E}
+  .why--right{border-left-color:var(--sage-d)} .why--wrong{border-left-color:var(--bad)}
+  .gate{background:rgba(229,178,75,.12);border-radius:14px;padding:8px 20px 14px;margin:24px 0;border:1px dashed var(--gold)}
+  .gate .q{background:#FAF5EE}
+  .drill{border-radius:var(--r);padding:clamp(20px,3vw,30px);background:#FAF5EE;color:#24160E;box-shadow:0 14px 32px -12px rgba(0,0,0,.6)}
+  .exhibit{background:#FAF5EE;color:#24160E;border-radius:var(--r);padding:20px;box-shadow:0 14px 32px -12px rgba(0,0,0,.6);margin:24px 0}
   .locked{opacity:.4;pointer-events:none;user-select:none;filter:blur(1.5px)}
-  .state{font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--ink-06)}
+  .state{font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;background:rgba(249,244,235,.1)}
 </style>
 </head>
 <body>
