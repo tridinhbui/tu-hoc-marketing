@@ -267,7 +267,9 @@ function appShell(here){
   let cur=here||((location.pathname.split('/').pop()||'index')); if(!/\.html$/.test(cur)) cur+='.html';
   const started=s.xp>0||s.streak>0;   // thẻ cấp/XP chỉ hiện sau khi học xong một việc
   const lvPct=lv.next?Math.round((s.xp-lv.cur)/(lv.next-lv.cur)*100):100;
+  const isCollapsed = localStorage.getItem('thmc.side_collapsed') === '1';
   document.body.classList.add('has-side');
+  if(isCollapsed) document.body.classList.add('side-collapsed');
   document.body.insertAdjacentHTML('afterbegin',`
     <a class="skip" href="#main">Tới nội dung chính</a>
     <div class="mtop"><button type="button" id="sideBtn" aria-label="Mở menu" aria-controls="side">${appIc('menu')}</button>
@@ -288,12 +290,23 @@ function appShell(here){
           <span class="meter"><i style="width:${lvPct}%"></i></span>
           <small>${lv.next?`${fmt(lv.next-s.xp)} XP nữa lên cấp ${lv.n+1}`:'Cấp cao nhất'}</small></a>`:''}
         <a class="side__acct" id="acct" href="tai-khoan.html">Tài khoản</a>
+        <button type="button" class="side-toggle" id="sideCollapseBtn" title="Thu gọn / Mở rộng thanh điều hướng">
+          <svg class="ic" viewBox="0 0 24 24"><path d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
+          <span>Thu gọn</span>
+        </button>
       </div>
     </aside><div class="side__veil" id="sideVeil" hidden></div>`);
   const side=document.getElementById('side'), veil=document.getElementById('sideVeil');
   const toggle=on=>{ side.toggleAttribute('data-open',on); veil.hidden=!on; };
   document.getElementById('sideBtn').onclick=()=>toggle(!side.hasAttribute('data-open'));
   veil.onclick=()=>toggle(false);
+  const colBtn=document.getElementById('sideCollapseBtn');
+  if(colBtn){
+    colBtn.onclick=()=>{
+      const nowCol = document.body.classList.toggle('side-collapsed');
+      try { localStorage.setItem('thmc.side_collapsed', nowCol ? '1' : '0'); } catch(e){}
+    };
+  }
   document.body.insertAdjacentHTML('beforeend',`
     <footer class="foot"><div class="wrap row between">
       <span>Tự Học Marketing Case · miễn phí. Mọi số liệu trong ví dụ là minh hoạ trừ khi ghi rõ nguồn.</span>

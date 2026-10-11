@@ -46,22 +46,22 @@ appShell('');
 const key=qp('id')||nextLesson()||ALL[0].key;
 const M=lessonMeta(key), W=where(key), D=DRILLS[key];
 const app=document.getElementById('app');
-const P=(n,t,body)=>`<section class="part" id="p${n}"><div class="part__h"><span class="mono mono--red">Phần ${n}</span><h2 class="h2">${t}</h2></div>${body}</section>`;
+const P=(n,t,body,badge)=>`<section class="part" id="p${n}"><div class="part__h">${badge?`<span class="studio-badge studio-badge--terra">${badge}</span>`:''}<h2 class="h2">${t}</h2></div>${body}</section>`;
 
 function readPart(half){
-  const s=M.src, tail=`${D?commonMistakes():''}${D?`<div class="note"><span class="mono">Câu sếp hay hỏi tiếp</span><br>${D.boss}</div>`:''}`;
+  const s=M.src, tail=`${D?commonMistakes():''}${D?`<div class="note" style="margin-top:20px"><span class="lbl" style="color:var(--terra)">CÂU SẾP HAY HỎI TIẾP (BOSS DEFENSE)</span><br><b style="font-family:var(--serif);font-size:1.15rem;display:block;margin-top:6px">${D.boss}</b></div>`:''}`;
   if(M.kind==='B') return half===1
-    ? `<div class="reader"><p class="mono">Tình huống thật</p><p>${s.situation}</p>
-       <p class="mono">Khái niệm · ${s.concept.name}</p><p>${s.concept.body}</p></div>`
-    : `<div class="reader"><p class="mono">Áp vào tình huống</p><p>${s.example}</p>
-       ${(s.mistakes||[]).length?`<p class="mono">Lỗi hay gặp</p><ul>${s.mistakes.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}${tail}</div>`;
+    ? `<div class="reader"><span class="lbl" style="color:var(--terra);display:block;margin:18px 0 6px">TÌNH HUỐNG THỰC TẾ</span><p style="font-size:1.1rem;line-height:1.65">${s.situation}</p>
+       <span class="lbl" style="color:var(--ink-50);display:block;margin:22px 0 6px">KHÁI NIỆM CHIẾN LƯỢC · ${s.concept.name}</span><p>${s.concept.body}</p></div>`
+    : `<div class="reader"><span class="lbl" style="color:var(--sage-d);display:block;margin:18px 0 6px">ÁP DỤNG VÀO THỰC TIỄN</span><p>${s.example}</p>
+       ${(s.mistakes||[]).length?`<span class="lbl" style="color:var(--bad);display:block;margin:22px 0 6px">CÁC BẪY CHIẾN LƯỢC HAY GẶP</span><ul>${s.mistakes.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}${tail}</div>`;
   if(M.kind==='L') return half===1
-    ? `<div class="reader"><p class="mono">Tình huống</p><p>${s.real}</p><p class="mono">Ý chính</p><p><b>${s.idea}</b></p></div>`
-    : `<div class="reader"><p class="mono">Vì sao nó hoạt động</p><ul>${(s.why||[]).map(x=>`<li>${x}</li>`).join('')}</ul>
-       <p class="mono">Nhìn kỹ hơn</p><p>${s.closer}</p>${tail}</div>`;
+    ? `<div class="reader"><span class="lbl" style="color:var(--terra);display:block;margin:18px 0 6px">BỐI CẢNH THỊ TRƯỜNG</span><p style="font-size:1.1rem;line-height:1.65">${s.real}</p><span class="lbl" style="color:var(--ink-50);display:block;margin:22px 0 6px">Ý CHÍNH CỐT LÕI</span><p><b>${s.idea}</b></p></div>`
+    : `<div class="reader"><span class="lbl" style="color:var(--sage-d);display:block;margin:18px 0 6px">VÌ SAO NÓ HIỆU QUẢ</span><ul>${(s.why||[]).map(x=>`<li>${x}</li>`).join('')}</ul>
+       <span class="lbl" style="color:var(--terra);display:block;margin:22px 0 6px">GÓC NHÌN ĐÀO SÂU</span><p>${s.closer}</p>${tail}</div>`;
   return half===1
-    ? `<div class="reader"><p class="mono">Tình huống</p><p>${s.brand?s.brand+' ':''}${s.ex}</p><p class="mono">Nói gọn</p><p><b>${s.one}</b></p></div>`
-    : `<div class="reader"><p class="mono">Phản ví dụ</p><p>${s.counter}</p><p class="mono">Chỗ hay sai</p><p>${s.mistake}</p>${tail}</div>`;
+    ? `<div class="reader"><span class="lbl" style="color:var(--terra);display:block;margin:18px 0 6px">TÌNH HUỐNG THƯƠNG HIỆU</span><p style="font-size:1.1rem;line-height:1.65">${s.brand?s.brand+' ':''}${s.ex}</p><span class="lbl" style="color:var(--ink-50);display:block;margin:22px 0 6px">ĐÚC KẾT 1 DÒNG</span><p><b>${s.one}</b></p></div>`
+    : `<div class="reader"><span class="lbl" style="color:var(--bad);display:block;margin:18px 0 6px">PHẢN VÍ DỤ</span><p>${s.counter}</p><span class="lbl" style="color:var(--bad);display:block;margin:22px 0 6px">CHỖ HAY SAI</span><p>${s.mistake}</p>${tail}</div>`;
 }
 
 /* ---------------- câu hỏi của bài ----------------
@@ -248,21 +248,21 @@ function render(){
       </span>
     </div>
     <h1 class="h1" style="margin:18px 0 12px">${escH(M.t)}</h1>
-    <div class="row" id="stRow"><span class="tag">${escH(M.read)}</span>${D?'<span class="tag">Có bài tính số</span>':''}${stateTag(s)}</div>
+    <div class="row" id="stRow"><span class="studio-badge studio-badge--terra">${escH(M.read)}</span>${D?'<span class="studio-badge studio-badge--sage">Có bài tính số</span>':''}${stateTag(s)}</div>
     ${journeyHTML(s,{compact:true})}
   </section>
-  ${PLAN.pre?P(1,'Đoán trước khi đọc',`<p class="small muted">Không tính điểm. Đoán sai cũng được — đoán trước rồi mới đọc thì nhớ lâu hơn.</p>${qHTML(PLAN.pre,'pre')}`):''}
-  ${P(PLAN.pre?2:1,'Bài đọc',`${readPart(1)}
-     ${PLAN.cp?`<div class="gate"><span class="mono mono--red">Kiểm tra giữa bài</span>${qHTML(PLAN.cp,'cp')}</div>`:''}
+  ${PLAN.pre?P(1,'Quan sát & Đặt cược trực giác',`<p class="small muted">Phán đoán trước khi đọc. Đoán sai cũng được — sự bất ngờ khi sai lầm giúp bạn nhớ insight sâu hơn.</p>${qHTML(PLAN.pre,'pre')}`,'01 · OBSERVE'):''}
+  ${P(PLAN.pre?2:1,'Bóc tách bối cảnh & Insight ngầm',`${readPart(1)}
+     ${PLAN.cp?`<div class="gate"><span class="studio-badge studio-badge--blush">Điểm dừng tư duy · Checkpoint</span>${qHTML(PLAN.cp,'cp')}</div>`:''}
      <div id="read2" class="${PLAN.cp&&!cpDone(s)?'locked':''}">${readPart(2)}</div>
-     ${PLAN.cp&&!cpDone(s)?'<p class="small muted" id="cpNote">Trả lời câu kiểm tra để đọc tiếp.</p>':''}`)}
-  ${P((PLAN.pre?3:2),D?'Bài tập tính số':'Bài tập áp dụng',drillPart())}
-  ${P((PLAN.pre?4:3),'Tự nhớ lại 60 giây',recallPart())}
-  <div id="quizPart">${P((PLAN.pre?5:4),'Quiz cuối bài',quizPart())}</div>
+     ${PLAN.cp&&!cpDone(s)?'<p class="small muted" id="cpNote">Chọn phương án tại điểm dừng để mở tiếp nội dung bóc tách.</p>':''}`, '02 · DECODE')}
+  ${P((PLAN.pre?3:2),D?'Ra quyết định với số liệu (Unit Economics)':'Ra quyết định chiến lược',drillPart(), '03 · DECIDE')}
+  <div id="talk">${P((PLAN.pre?4:3),'Bảo vệ chiến lược trong 60 giây (Defend the Strategy)',talkPart(), '04 · DEFEND')}</div>
+  ${P((PLAN.pre?5:4),'Tự tổng hợp & Đóng gói (Micro-Deliverable)',recallPart(), '05 · SYNTHESIZE')}
+  <div id="quizPart">${P((PLAN.pre?6:5),'Kiểm tra năng lực thực chiến (Mastery Quiz)',quizPart(), '06 · VALIDATE')}</div>
   ${solidPart()}
-  <div id="talk">${P((PLAN.pre?6:5),'Áp dụng ngay · nói ra trong 60 giây',talkPart())}</div>
-  ${P((PLAN.pre?7:6),'Case',casePart())}
-  ${P((PLAN.pre?8:7),'Ôn lỗi',reviewPart())}
+  ${P((PLAN.pre?7:6),'Case study đầy đủ của module',casePart(), 'THỰC CHIẾN')}
+  ${P((PLAN.pre?8:7),'Sổ tay ôn lỗi & Củng cố',reviewPart(), 'ÔN LỖI')}
   <section class="part row between">
     ${prev?`<a class="mono" href="bai.html?id=${encodeURIComponent(prev)}">← Bài trước</a>`:'<span></span>'}
     <span id="nextBtn">${nextBtn(s,next)}</span>

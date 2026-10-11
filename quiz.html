@@ -2,27 +2,98 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=4">
-<title>Quiz 60 giây — Tự Học Marketing Case</title>
-<meta name="description" content="60 giây, câu hỏi rút từ chính những bài bạn đã học. Ba lượt mỗi ngày.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C95A3A%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23F7F0E6%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=6">
+<title>Creative Challenges — Tự Học Marketing Case</title>
+<meta name="description" content="Thử thách tư duy chiến lược, quiz phản xạ 60 giây và các bài toán kinh doanh thực tế. Rèn luyện phản xạ ra quyết định có cơ sở.">
 <style>
-  .opt{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:var(--rule);padding:14px 0;cursor:pointer;font-size:15.5px;line-height:1.5}
-  .opt:hover{background:var(--ink-06)}
-  .opt[data-r="ok"]{color:var(--ok)}
-  .opt[data-r="bad"]{color:var(--red)}
-  .clock{font-family:var(--serif);font-size:clamp(2.6rem,7vw,4.2rem);line-height:1;font-variant-numeric:tabular-nums}
-  .clock[data-low]{color:var(--red)}
+  .opt{
+    display:block;
+    width:100%;
+    text-align:left;
+    background:var(--paper);
+    border:1.5px solid var(--ink-12);
+    border-radius:10px;
+    padding:14px 18px;
+    margin:10px 0;
+    cursor:pointer;
+    font-size:15px;
+    line-height:1.5;
+    transition:var(--transition-fast);
+  }
+  .opt:hover:not([disabled]){
+    border-color:var(--terra);
+    background:var(--terra-06);
+    transform:translateY(-1px);
+  }
+  .opt[data-r="ok"]{
+    border-color:var(--sage-d);
+    background:var(--sage-bg);
+    color:var(--ink);
+  }
+  .opt[data-r="bad"]{
+    border-color:var(--bad);
+    background:rgba(186,56,38,.08);
+    color:var(--bad);
+    text-decoration:line-through;
+  }
+  .clock{
+    font-family:var(--serif);
+    font-size:clamp(2.6rem,7vw,4.2rem);
+    line-height:1;
+    font-variant-numeric:tabular-nums;
+    color:var(--terra);
+  }
+  .clock[data-low]{color:var(--bad)}
+
+  /* Creative Challenge Demo Card */
+  .demo-challenge{
+    background:var(--paper);
+    border:1px solid var(--ink-12);
+    border-radius:14px;
+    padding:clamp(20px,3vw,30px);
+    margin:24px 0 clamp(28px,4vw,44px);
+    box-shadow:0 12px 30px -20px rgba(56,37,31,.2);
+  }
+  .challenge-grid{
+    display:grid;
+    gap:16px;
+    margin-top:28px;
+  }
+  @media(min-width:680px){
+    .challenge-grid{
+      grid-template-columns:1fr 1fr;
+    }
+  }
+  .challenge-card{
+    background:var(--paper);
+    border:1px solid var(--ink-12);
+    border-radius:12px;
+    padding:18px 20px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    text-decoration:none;
+    color:inherit;
+    transition:var(--transition-fast);
+  }
+  .challenge-card:hover{
+    border-color:var(--terra);
+    transform:translateY(-2px);
+  }
 </style>
 </head>
 <body>
-<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Câu hỏi và tiến độ được dựng ngay trong trình duyệt của bạn, không gửi về máy chủ nào.</p></div></noscript>
-<main class="wrap narrow" id="app"></main>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Câu hỏi và tiến độ được dựng ngay trong trình duyệt của bạn.</p></div></noscript>
+<main class="wrap" id="app"></main>
+
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
 <script src="assets/js/data/bai-index.js?v=8"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
+<script src="assets/js/data/cases.js?v=2"></script>
+<script src="assets/js/data/exam-items.js?v=7"></script>
 <script src="assets/js/app.js?v=16"></script>
 <script>
 appShell('quiz.html');
@@ -35,27 +106,144 @@ function roundsToday(s=S.get()){ return (s.quiz&&s.quiz.d===today())?s.quiz.n:0;
 function intro(){
   const s=S.get(), done=Object.keys(s.done).filter(k=>where(k)), used=roundsToday(s);
   const pool=quizBank(done).length;
-  app.innerHTML=`<section class="section">
-    <span class="mono mono--red">Quiz phản xạ</span>
-    <h1 class="h1" style="margin:14px 0 16px">${SECS} giây.<br><em>Trả lời được bao nhiêu?</em></h1>
-    <p class="lede">Câu hỏi rút từ chính các bài bạn đã học: ý chính, định nghĩa, và bài tính số.
-      Mỗi ngày ${ROUNDS} lượt — ít để bạn phải nghĩ trước khi bấm. Mỗi câu đúng +${XP.quiz} XP.
-      Sai ở câu tính số thì lỗi được ghi vào trang ôn lỗi như khi làm bài.</p>
-    <div class="kpis" style="margin-top:26px">
-      <div class="kpi"><span class="mono">Bài đã học</span><b>${done.length}</b></div>
-      <div class="kpi"><span class="mono">Câu hỏi sẵn có</span><b>${pool}</b></div>
-      <div class="kpi"><span class="mono">Lượt còn hôm nay</span><b>${ROUNDS-used}</b></div>
-      <div class="kpi"><span class="mono">Kỷ lục</span><b>${(s.quizBest||0)}</b></div>
+  const demoPassed = (s.challenges && s.challenges['demo-roas']) || false;
+
+  app.innerHTML=`
+  <section class="section" style="max-width:860px;margin:0 auto">
+    <div class="row between">
+      <span class="studio-badge studio-badge--terra">Creative Challenges Studio</span>
+      <span class="xpchip">${fmt(s.xp)} XP</span>
     </div>
-    <div style="margin-top:26px">${
-      done.length<MIN_DONE ? `<p class="note">Cần học ít nhất ${MIN_DONE} bài để có đủ câu hỏi — bạn đang có ${done.length}.</p>
-         <a class="btn" style="margin-top:14px" href="bai.html?id=${encodeURIComponent(nextLesson()||ALL[0].key)}">Học bài tiếp theo</a>`
-      : used>=ROUNDS ? `<p class="note">Hết ${ROUNDS} lượt hôm nay. Quay lại ngày mai — hoặc dùng thời gian này ôn lỗi.</p>
-         <a class="btn" style="margin-top:14px" href="on-loi.html">Sang ôn lỗi</a>`
-      : `<button class="btn" id="go">Bắt đầu · ${SECS} giây</button>`}</div>
+    <h1 class="h1" style="margin:16px 0 12px">
+      Thử thách & <em>Phản xạ Chiến lược</em>
+    </h1>
+    <p class="lede">
+      Rèn luyện trực giác của một strategist qua các bài toán thực tế: Đọc vị dữ liệu tài chính, phát hiện rào cản tiêu dùng và ra quyết định trong thời gian giới hạn.
+    </p>
+
+    <!-- ONBOARDING DEMO CHALLENGE: KHÔNG BAO GIỜ HIỆN MÀN HÌNH TRỐNG -->
+    <div class="demo-challenge">
+      <div class="row between">
+        <span class="studio-badge studio-badge--sage">Thử thách khởi động · Demo Challenge</span>
+        <span class="gold">+15 XP THỰC CHIẾN</span>
+      </div>
+      <h3 style="font-family:var(--serif);font-size:1.35rem;margin:12px 0 8px;font-weight:500">
+        Chi 50 triệu chạy Ads, ROAS đạt 4.0: Bạn đánh giá chiến dịch thế nào?
+      </h3>
+      <p style="font-size:14px;color:var(--ink-70);line-height:1.6;margin:0 0 14px">
+        Một thương hiệu thời trang D2C chi 50 triệu cho Meta & TikTok Ads. Doanh thu mang về 200 triệu (ROAS 4.0). 
+        Biên lãi gộp của sản phẩm là 30%. Là một Creative Strategist, đánh giá của bạn là:
+      </p>
+
+      <div id="demoOptions">
+        <button class="opt" onclick="answerDemo('A')">
+          <b>A · Thành công lớn:</b> ROAS 4.0 là con số mơ ước của mọi agency, cần lập tức nhân đôi ngân sách để mở rộng quy mô.
+        </button>
+        <button class="opt" onclick="answerDemo('B')">
+          <b>B · Cảnh báo rủi ro:</b> Lợi nhuận thực tế chỉ còn 10 triệu trước chi phí vận hành; chỉ cần tỷ lệ hoàn đơn 5% là chiến dịch rơi vào lỗ ngầm.
+        </button>
+        <button class="opt" onclick="answerDemo('C')">
+          <b>C · Bế tắc định giá:</b> Lập tức tăng khuyến mãi giảm thêm 20% để kéo lượng đơn hàng bù lại chi phí.
+        </button>
+      </div>
+
+      <div id="demoFeedback" style="margin-top:14px;padding:14px 18px;border-radius:10px;display:none;font-size:14px;line-height:1.6"></div>
+    </div>
+
+    <!-- CÁC HÌNH THỨC LUYỆN TẬP -->
+    <div style="border-top:1px solid var(--ink-12);padding-top:28px">
+      <span class="lbl">Các hình thức thử thách</span>
+      <div class="challenge-grid">
+        <!-- Mode 1: 60s Timed Quiz -->
+        <div class="challenge-card">
+          <span class="studio-badge studio-badge--terra">Phản xạ 60 giây</span>
+          <h3 style="font-family:var(--serif);font-size:1.25rem;margin:4px 0 2px;font-weight:500">Timed Quiz</h3>
+          <p class="small muted" style="margin:0 0 12px">
+            Trả lời tối đa các câu hỏi chốt ý và bài toán số từ những case bạn đã học. Kỷ lục của bạn: <b>${s.quizBest||0} câu</b>.
+          </p>
+          <div style="margin-top:auto">
+            ${done.length < MIN_DONE ? `
+              <div class="note" style="margin-bottom:12px;font-size:13px">
+                Cần hoàn thành ít nhất ${MIN_DONE} case để tạo ngân hàng câu hỏi riêng (bạn đang có ${done.length}/${MIN_DONE}).
+              </div>
+              <a class="btn btn--primary" href="bai.html?id=${encodeURIComponent(nextLesson()||ALL[0].key)}">Học case đầu tiên →</a>
+            ` : used >= ROUNDS ? `
+              <p class="note" style="margin-bottom:12px;font-size:13px">Hôm nay đã dùng hết ${ROUNDS} lượt. Quay lại vào ngày mai!</p>
+              <a class="btn btn--ghost" href="on-loi.html">Sang trang ôn lỗi →</a>
+            ` : `
+              <button class="btn btn--primary" id="go">Bắt đầu ngay · ${SECS} giây</button>
+            `}
+          </div>
+        </div>
+
+        <!-- Mode 2: Spot the Insight -->
+        <a class="challenge-card" href="hoc.html#signal">
+          <span class="studio-badge studio-badge--sage">Tín hiệu thị trường</span>
+          <h3 style="font-family:var(--serif);font-size:1.25rem;margin:4px 0 2px;font-weight:500">Daily Market Signal</h3>
+          <p class="small muted" style="margin:0">
+            Một câu hỏi tình huống kinh doanh thực tế mỗi ngày. Bóc tách insight và rèn luyện phản xạ chẩn đoán.
+          </p>
+          <span class="btn btn--ghost" style="margin-top:auto">Xem tín hiệu hôm nay →</span>
+        </a>
+
+        <!-- Mode 3: Timed Case Simulation -->
+        <a class="challenge-card" href="case-thu-vien.html">
+          <span class="studio-badge studio-badge--blush">Thực chiến</span>
+          <h3 style="font-family:var(--serif);font-size:1.25rem;margin:4px 0 2px;font-weight:500">Case có bấm giờ</h3>
+          <p class="small muted" style="margin:0">
+            Đọc hồ sơ thương hiệu, phân tích bảng số liệu thực tế và viết phương án giải quyết trong 25 phút.
+          </p>
+          <span class="btn btn--ghost" style="margin-top:auto">Vào thư viện case →</span>
+        </a>
+
+        <!-- Mode 4: Defend Your Strategy -->
+        <a class="challenge-card" href="thi.html">
+          <span class="studio-badge">Vượt chặng</span>
+          <h3 style="font-family:var(--serif);font-size:1.25rem;margin:4px 0 2px;font-weight:500">Thi vượt chặng</h3>
+          <p class="small muted" style="margin:0">
+            Đề thi 15 câu tổng hợp từ toàn bộ kho bài. Vượt qua 80% để mở khóa ngay chặng tiếp theo.
+          </p>
+          <span class="btn btn--ghost" style="margin-top:auto">Xem đề vượt chặng →</span>
+        </a>
+      </div>
+    </div>
   </section>`;
+
   const g=document.getElementById('go'); if(g) g.onclick=start;
 }
+
+window.answerDemo = function(choice) {
+  const fb = document.getElementById('demoFeedback');
+  const opts = document.querySelectorAll('#demoOptions .opt');
+  opts.forEach(o => o.disabled = true);
+  fb.style.display = 'block';
+
+  if (choice === 'B') {
+    fb.style.background = 'var(--sage-bg)';
+    fb.style.border = '1.5px solid var(--sage-d)';
+    fb.innerHTML = `
+      <b style="color:var(--sage-d)">★ Tuyệt vời! Bạn có tư duy của một Strategist.</b><br>
+      Doanh thu trừ quảng cáo (200 - 50 = 150 triệu) <b>không phải là lợi nhuận</b>. 
+      Lợi nhuận gộp thực tế chỉ là <code>200 × 30% = 60 triệu</code>. 
+      Sau khi trừ 50 triệu tiền ads, thương hiệu chỉ còn lại <b>10 triệu</b> (tương đương 5% doanh thu). 
+      Chỉ cần chi phí hoàn đơn hoặc phụ phí kho vận nhích lên một chút là chiến dịch rơi vào lỗ ròng. 
+      <i>Bài học: Đừng bao giờ vội khen ROAS khi chưa đối chiếu biên lãi gộp!</i>
+    `;
+    const s = S.get();
+    if (!s.challenges || !s.challenges['demo-roas']) {
+      award('daily', 'demo-roas');
+      S.set({ challenges: { ...(s.challenges || {}), 'demo-roas': true } });
+    }
+  } else {
+    fb.style.background = 'rgba(186,56,38,.08)';
+    fb.style.border = '1.5px solid var(--bad)';
+    fb.innerHTML = `
+      <b style="color:var(--bad)">⚠️ Bạn đã rơi vào "Bẫy ROAS Ảo"!</b><br>
+      Doanh thu 200 triệu với biên lãi 30% chỉ tạo ra 60 triệu lãi gộp. 
+      Trừ 50 triệu ads, thương hiệu chỉ còn vỏn vẹn 10 triệu. Nếu vội vã nhân đôi ngân sách, công ty sẽ lỗ sâu vì chi phí vận hành sẽ vượt quá khoản thặng dư ít ỏi này.
+    `;
+  }
+};
 
 function start(){
   const s=S.get(), done=Object.keys(s.done).filter(k=>where(k));
@@ -72,19 +260,29 @@ function tick(){
 function show(){
   if(i>=bank.length){ bank=bank.concat(quizBank(Object.keys(S.get().done).filter(k=>where(k)))); }
   const q=bank[i]; locked=false;
-  app.innerHTML=`<section class="section">
-    <div class="row between"><span class="mono">Câu ${i+1} · đúng ${right} · sai ${wrong}</span><span class="clock" id="clock">${Math.max(0,Math.ceil((end-Date.now())/1000))}</span></div>
-    ${q.ctx?`<p class="small muted" style="margin:18px 0 0">${escH(q.ctx)}</p>`:''}
-    <h2 class="h3" style="margin:14px 0 10px">${escH(q.q)}</h2>
-    <div style="border-top:var(--rule)">${q.opts.map((o,j)=>`<button class="opt" data-j="${j}">${escH(o.t)}</button>`).join('')}</div>
+  app.innerHTML=`<section class="section" style="max-width:720px;margin:0 auto">
+    <div class="row between">
+      <span class="studio-badge studio-badge--terra">Câu ${i+1} · Đúng: ${right} · Sai: ${wrong}</span>
+      <span class="clock" id="clock">${Math.max(0,Math.ceil((end-Date.now())/1000))}</span>
+    </div>
+    ${q.ctx?`<p class="small muted" style="margin:20px 0 0;line-height:1.6">${escH(q.ctx)}</p>`:''}
+    <h2 class="h2" style="font-size:clamp(1.25rem,2.5vw,1.65rem);margin:12px 0 16px">${escH(q.q)}</h2>
+    <div>${q.opts.map((o,j)=>`<button class="opt" data-j="${j}"><b>${String.fromCharCode(65+j)}.</b> ${escH(o.t)}</button>`).join('')}</div>
   </section>`;
 }
 function pick(j){
   if(locked) return; locked=true;
   const q=bank[i], o=q.opts[j];
   document.querySelectorAll('.opt').forEach((b,k)=>{ if(q.opts[k].ok) b.dataset.r='ok'; });
-  if(o.ok){ right++; const st=S.get(); S.set({quizHits:{...st.quizHits,[q.key]:((st.quizHits||{})[q.key]||0)+1}}); } else { wrong++; document.querySelector(`.opt[data-j="${j}"]`).dataset.r='bad';
-    if(q.type==='drill') logError(o.code||'SAI_TINH_TOAN',q.key); }
+  if(o.ok){ 
+    right++; const st=S.get(); 
+    S.set({quizHits:{...st.quizHits,[q.key]:((st.quizHits||{})[q.key]||0)+1}}); 
+  } else { 
+    wrong++; 
+    const target = document.querySelector(`.opt[data-j="${j}"]`);
+    if(target) target.dataset.r='bad';
+    if(q.type==='drill') logError(o.code||'SAI_TINH_TOAN',q.key); 
+  }
   answered.push({q,ok:o.ok});
   i++; setTimeout(()=>{ if(timer) show(); }, o.ok?350:1100);
 }
@@ -93,18 +291,21 @@ function finish(){
   const s=S.get(), best=Math.max(s.quizBest||0,right);
   S.set({quizBest:best}); if(right) award('quiz','round',right);
   const missed=answered.filter(a=>!a.ok);
-  app.innerHTML=`<section class="section">
-    <span class="mono mono--red">Hết giờ</span>
-    <h1 class="h1" style="margin:14px 0 16px">${right} đúng,<br><em>${wrong} sai.</em></h1>
-    <p class="lede">${right>=best&&right>0?'Kỷ lục mới của bạn. ':''}+${right*XP.quiz} XP. Còn ${ROUNDS-roundsToday()} lượt hôm nay.</p>
-    ${missed.length?`<div class="exhibit"><div class="exhibit__cap"><b>Câu làm sai — đọc lại bài gốc</b><span class="mono">${missed.length}</span></div>
+  app.innerHTML=`<section class="section" style="max-width:760px;margin:0 auto">
+    <span class="studio-badge studio-badge--terra">Kết thúc phiên thử thách</span>
+    <h1 class="h1" style="margin:14px 0 16px">${right} câu đúng,<br><em>${wrong} câu chưa chuẩn.</em></h1>
+    <p class="lede">${right>=best&&right>0?'★ Kỷ lục mới của bạn! ':''}+${right*XP.quiz} XP đã được lưu vào hồ sơ. Còn ${ROUNDS-roundsToday()} lượt phản xạ hôm nay.</p>
+    ${missed.length?`<div class="exhibit" style="margin-top:24px"><div class="exhibit__cap"><b>Các khái niệm cần xem lại</b><span class="studio-badge">${missed.length} câu</span></div>
       <ul class="list">${[...new Map(missed.map(a=>[a.q.key,a])).values()].map(a=>`<li><a class="item" style="grid-template-columns:1fr auto" href="bai.html?id=${encodeURIComponent(a.q.key)}">
-        <span class="item__t">${escH(lessonMeta(a.q.key).t)}</span><span class="mono">Đọc lại →</span></a></li>`).join('')}</ul></div>`:''}
-    <div class="row" style="margin-top:22px"><button class="btn" id="again">Về màn hình quiz</button><a class="btn btn--ghost" href="hoc.html">Về trang học</a></div>
+        <span class="item__t">${escH(lessonMeta(a.q.key).t)}</span><span class="studio-badge studio-badge--terra">Ôn lại →</span></a></li>`).join('')}</ul></div>`:''}
+    <div class="row" style="margin-top:26px">
+      <button class="btn btn--primary" id="again">Quay lại Studio</button>
+      <a class="btn btn--ghost" href="hoc.html">Về trang học hôm nay</a>
+    </div>
   </section>`;
   document.getElementById('again').onclick=intro;
 }
-app.addEventListener('click',e=>{const b=e.target.closest('.opt'); if(b) pick(+b.dataset.j);});
+app.addEventListener('click',e=>{const b=e.target.closest('.opt[data-j]'); if(b) pick(+b.dataset.j);});
 intro();
 </script>
 </body>
