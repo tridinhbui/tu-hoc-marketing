@@ -30,19 +30,22 @@
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn, không gửi về máy chủ nào.</p></div></noscript>
 <main class="wrap narrow" id="app"></main>
-<script src="assets/js/data/lessons.js?v=7"></script>
-<script src="assets/js/data/principles.js?v=7"></script>
+<script src="assets/js/data/lessons.js?v=8"></script>
+<script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
-<script src="assets/js/data/bai-index.js?v=8"></script>
-<script src="assets/js/data/drills.js?v=2"></script>
-<script src="assets/js/data/cases.js?v=2"></script>
-<script src="assets/js/data/exam-items.js?v=7"></script>
+<script src="assets/js/data/bai-index.js?v=9"></script>
+<script src="assets/js/data/tasks.js?v=1"></script>
+<script src="assets/js/data/tasks-a.js?v=1"></script>
+<script src="assets/js/data/tasks-b.js?v=1"></script>
+<script src="assets/js/data/drills.js?v=3"></script>
+<script src="assets/js/data/cases.js?v=3"></script>
+<script src="assets/js/data/exam-items.js?v=8"></script>
 <script>/* bài mới 'B:<module>-NN': chỉ tải file của đúng module đang học */
 (()=>{ const m=/^B:([a-z]{2}\d{2})-/.exec(new URLSearchParams(location.search).get('id')||'');
   if(m) document.write('<script src="assets/js/data/bai/'+m[1]+'.js?v='+BAI_V+'"><\/script>'); })();</script>
-<script src="assets/js/data/exams.js?v=8"></script>
+<script src="assets/js/data/exams.js?v=10"></script>
 <script src="assets/js/app.js?v=17"></script>
-<script src="assets/js/exam.js?v=8"></script>
+<script src="assets/js/exam.js?v=9"></script>
 <script>
 appShell('');
 const key=qp('id')||nextLesson()||ALL[0].key;
@@ -115,7 +118,7 @@ function commonMistakes(){
 function drillPart(){
   const s=S.get();
   if(!D) return `<p class="small muted">Bài này là bài tư duy, không có đáp án số duy nhất — bài tính số nằm ở các bài về phễu, CAC, LTV, giá và media.</p>
-    <div class="drill"><span class="mono">Bài tập áp dụng</span><p style="margin:8px 0 0">${M.kind==='L'?M.src.try:M.kind==='B'?M.src.apply:M.src.drill}</p></div>`;
+    <div class="drill"><span class="mono">Bài tập áp dụng</span><p style="margin:8px 0 0">${M.kind==='L'?M.src.try:M.kind==='B'?'Bài thực hành có đầu ra viết, dữ liệu cho sẵn và bài làm mẫu nằm ở phần 04.':M.src.drill}</p></div>`;
   return `<div class="drill">
     <span class="mono">Exhibit 1 · ${escH(D.t)} · số liệu minh hoạ</span>
     <p style="margin:10px 0">${D.ctx}</p>
@@ -132,7 +135,41 @@ function drillPart(){
   </div>`;
 }
 
+/* Bài mới (B:): phần thực hành có đầu ra viết, tiêu chí tự kiểm và bài làm mẫu — không chỉ "nói 60 giây".
+   Có bài tập soạn riêng trong BAI_TASKS[key] ({given, output, rubric[], model}) thì dùng; không có thì dùng
+   `apply` của bài + tiêu chí suy ra từ chính bài (ý chính, mẫu số, lỗi hay gặp) + ví dụ trong bài làm mẫu.
+   Mọi thứ chạy tại chỗ: không chấm bằng AI, người học tự đối chiếu. */
+function outputPart(){
+  const s=S.get(), saved=s.talks[key]||'', L=M.src;
+  const task=(typeof BAI_TASKS!=='undefined'&&BAI_TASKS[key])||null;
+  const instr=task?task.output:L.apply;
+  const rubric=(task&&task.rubric&&task.rubric.length)?task.rubric:[
+    `Nêu đúng ý chính: ${L.takeaway}`,
+    'Mỗi con số đều có đơn vị và mẫu số rõ ràng (chia cho cái gì).',
+    ...(L.mistakes||[]).slice(0,2).map(m=>`Tránh lỗi hay gặp: ${m}`),
+    'Kết thúc bằng một việc cụ thể sẽ làm tiếp, không phải "cần nghiên cứu thêm".'];
+  const done=((s.selfcheck||{})[key])||[];
+  const given=task&&task.given?(typeof task.given==='string'?task.given
+    :`<div class="scroll"><table class="t"><tbody>${task.given.map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]}</td></tr>`).join('')}</tbody></table></div>`):'';
+  const model=task&&task.model?task.model:`<p class="small muted">Chưa có bài làm mẫu riêng cho bài này — đối chiếu với ví dụ chạy trong bài:</p><p>${L.example}</p>`;
+  return `<div class="drill">
+      <span class="mono">Bài thực hành · có đầu ra viết</span>
+      ${given?`<p class="small muted" style="margin:10px 0 4px">Dữ liệu cho sẵn (số minh hoạ):</p>${given}`:''}
+      <p style="margin:12px 0 0"><b>${instr}</b></p>
+    </div>
+    <p class="small muted" style="margin:14px 0 6px">Viết câu trả lời của bạn (tự đo giờ nếu muốn tập nói gọn):</p>
+    <div class="row between"><span class="mono" id="tClock">60 giây</span><button class="btn btn--ghost" type="button" id="tGo">Bấm giờ</button></div>
+    <textarea class="field" id="tIn" rows="7" placeholder="Viết đầu ra tại đây…">${escH(saved)}</textarea>
+    <div class="row" style="margin-top:12px"><button class="btn" type="button" id="tSave">Lưu bài làm</button>
+      <button class="btn btn--ghost" type="button" id="tShow" ${saved.length>=40?'':'disabled'}>Xem bài làm mẫu</button></div>
+    <p class="small muted" style="margin-top:8px">Bài làm mẫu chỉ mở sau khi bạn đã viết — đọc trước thì không còn là luyện.</p>
+    <div id="tModel" hidden class="exhibit"><div class="exhibit__cap"><b>Bài làm mẫu</b><span class="mono">Exhibit 2</span></div>${model}</div>
+    <div class="note" style="margin-top:16px"><span class="mono">Tự đánh giá</span> · <span id="scN">${done.filter(Boolean).length}/${rubric.length}</span> tiêu chí
+      <div id="scBox" style="margin-top:8px">${rubric.map((r,i)=>`<label style="display:flex;gap:8px;align-items:flex-start;margin:6px 0"><input type="checkbox" data-sc="${i}" ${done[i]?'checked':''}><span>${r}</span></label>`).join('')}</div>
+      <p class="small muted" style="margin:8px 0 0">Đánh dấu một tiêu chí chỉ khi bài viết của bạn thật sự có — không phải vì bạn "biết" nó.</p></div>`;
+}
 function talkPart(){
+  if(M.kind==='B') return outputPart();
   const s=S.get(), saved=s.talks[key]||'';
   const prompt=D?`Sếp hỏi: “Vậy rốt cuộc chiến dịch này ổn không?” Trả lời trong 60 giây, dùng số ở Exhibit 1.`
     :`Giải thích ý chính của bài này cho một người sếp bận, trong 60 giây, kèm một ví dụ có số hoặc một thương hiệu cụ thể.`;
@@ -259,7 +296,7 @@ function render(){
      <div id="read2" class="${PLAN.cp&&!cpDone(s)?'locked':''}">${readPart(2)}</div>
      ${PLAN.cp&&!cpDone(s)?'<p class="small muted" id="cpNote">Chọn phương án tại điểm dừng để mở tiếp nội dung bóc tách.</p>':''}`, '02 · DECODE')}
   ${P((PLAN.pre?3:2),D?'Ra quyết định với số liệu (Unit Economics)':'Ra quyết định chiến lược',drillPart(), '03 · DECIDE')}
-  <div id="talk">${P((PLAN.pre?4:3),'Bảo vệ chiến lược trong 60 giây (Defend the Strategy)',talkPart(), '04 · DEFEND')}</div>
+  <div id="talk">${P((PLAN.pre?4:3),M.kind==='B'?'Thực hành có đầu ra (Apply)':'Bảo vệ chiến lược trong 60 giây (Defend the Strategy)',talkPart(), '04 · DEFEND')}</div>
   ${P((PLAN.pre?5:4),'Tự tổng hợp & Đóng gói (Micro-Deliverable)',recallPart(), '05 · SYNTHESIZE')}
   <div id="quizPart">${P((PLAN.pre?6:5),'Kiểm tra năng lực thực chiến (Mastery Quiz)',quizPart(), '06 · VALIDATE')}</div>
   ${solidPart()}
@@ -337,6 +374,11 @@ function wire(){
     if(show) show.disabled=false;
   };
   if(show) show.onclick=()=>{ document.getElementById('tModel').hidden=false; show.hidden=true; };
+  document.querySelectorAll('[data-sc]').forEach(c=>c.onchange=()=>{
+    const boxes=[...document.querySelectorAll('[data-sc]')].map(x=>x.checked), s=S.get();
+    S.set({selfcheck:{...(s.selfcheck||{}),[key]:boxes}});
+    const n=document.getElementById('scN'); if(n) n.textContent=boxes.filter(Boolean).length+'/'+boxes.length;
+  });
   let tt=null; document.getElementById('tGo').onclick=e=>{
     const c=document.getElementById('tClock'); if(tt){clearInterval(tt);tt=null;e.target.textContent='Bấm giờ';c.textContent='60 giây';return;}
     let left=60; e.target.textContent='Dừng'; ta.focus();

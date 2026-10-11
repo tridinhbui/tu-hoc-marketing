@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "tuhocmarketing",
+  "name": "tu-hoc-marketing",
   "main": "src/index.js",
   "compatibility_date": "2026-08-01",
   "observability": { "enabled": true },
+
+  // Trang tĩnh (dist/ do tools_build.mjs sinh ra) và API chung một origin để cookie đăng nhập hoạt động.
+  "assets": { "directory": "../dist", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
 
   // Tạo bằng: npx wrangler d1 create nhinthay — rồi dán database_id vào đây.
   "d1_databases": [
@@ -20,7 +23,8 @@
   "send_email": [{ "name": "EMAIL" }],
 
   "vars": {
-    "APP_ORIGIN": "https://tuhocmarketing.tridinhbui0901.workers.dev",
+    "APP_ORIGIN": "https://tu-hoc-marketing.tridinhbui0901.workers.dev",
+    "GOOGLE_CLIENT_ID": "652411579554-981jfkt4916oiprfk7ov78hgk8nsscqe.apps.googleusercontent.com",
     "MAIL_FROM": "",
     "ADMIN_EMAILS": "",
     "AI_INTERVIEW_PER_MONTH": "3",

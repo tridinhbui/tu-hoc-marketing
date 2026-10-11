@@ -14,6 +14,7 @@ export const MODULES = [
   { id:'ob05', tags:'hành vi giỏ hàng bỏ dở tìm kiếm google tiktok livestream cod bom hàng mua lại', step:'observe', n:10, t:'Tín hiệu hành vi: khách làm gì, không phải khách nói gì' },
   { id:'ob06', tags:'thị trường việt nam tết ngày đôi 9.9 11.11 zalo cod tạp hoá siêu thị', step:'observe', n:10, t:'Bối cảnh thị trường Việt Nam: kênh, vùng, mùa vụ, Tết' },
   { id:'ob07', tags:'dữ liệu số liệu trung bình mẫu tương quan phần trăm tăng trưởng cùng kỳ', step:'observe', n:7,  t:'Đọc số cho đúng: số nào đáng tin', old:['L:57','L:71','L:74'] },
+  { id:'ob08', tags:'4p 7p marketing mix sản phẩm giá phân phối truyền thông dịch vụ 4c', step:'observe', n:8, t:'Marketing mix 4P/7P: đọc một doanh nghiệp bằng bảng kiểm' },
   // Bước 2 · Hiểu khách hàng
   { id:'kh01', tags:'phân khúc segmentation persona thị trường', step:'understand', n:9,  t:'Phân khúc: chia thị trường theo nhu cầu, không theo tuổi', old:['P:segmentation'] },
   { id:'kh02', tags:'chọn tệp targeting khách mục tiêu', step:'understand', n:9,  t:'Chọn tệp: phục vụ ai trước', old:['P:targeting'] },
@@ -25,6 +26,7 @@ export const MODULES = [
   { id:'kh08', tags:'bằng chứng xã hội social proof khan hiếm flash sale review', step:'understand', n:8,  t:'Bằng chứng xã hội và khan hiếm dùng đúng cách', old:['P:social-proof','P:scarcity'] },
   { id:'kh09', tags:'b2b doanh nghiệp lead hợp đồng đấu thầu', step:'understand', n:10, t:'Khách B2B: nhiều người quyết định, chu kỳ dài' },
   { id:'kh10', tags:'gen z phụ huynh người tỉnh tiktok nhóm facebook', step:'understand', n:10, t:'Gen Z, phụ huynh, người tỉnh: ba nhóm hay bị hiểu sai' },
+  { id:'kh11', tags:'stp phân khúc chọn tệp định vị chuỗi segmentation targeting positioning', step:'understand', n:8, t:'STP: ghép phân khúc, chọn tệp và định vị thành một chuỗi', old:[] },
   // Bước 3 · Đặt giả thuyết
   { id:'gt01', tags:'vấn đề problem statement triệu chứng', step:'hypothesis', n:10, t:'Viết vấn đề trước khi viết giải pháp' },
   { id:'gt02', tags:'cây vấn đề mece doanh thu giảm', step:'hypothesis', n:10, t:'Cây vấn đề: doanh thu giảm thì tách ra sao' },
@@ -55,6 +57,8 @@ export const MODULES = [
   { id:'kn08', tags:'crm zalo oa sms email rfm tích điểm', step:'channel', n:10, t:'CRM, Zalo OA, email: kênh của khách cũ' },
   { id:'kn09', tags:'pr khủng hoảng truyền thông thông cáo báo chí', step:'channel', n:10, t:'PR và truyền thông khủng hoảng' },
   { id:'kn10', tags:'imc tích hợp kế hoạch truyền thông agency', step:'channel', n:10, t:'Kế hoạch truyền thông tích hợp (IMC)' },
+  { id:'kn11', tags:'seo tìm kiếm tự nhiên search intent từ khoá google business profile search console', step:'channel', n:8, t:'Tìm kiếm tự nhiên (SEO) cho người mới: để khách tìm thấy bạn không cần trả tiền mỗi lượt' },
+  { id:'kn12', tags:'pháp lý quảng cáo khuyến mại dữ liệu cá nhân nghị định 13 nghị định 81 kol cookie', step:'channel', n:8, t:'Quảng cáo, khuyến mại và dữ liệu khách hàng ở Việt Nam: biết khi nào phải dừng lại hỏi pháp chế' },
   // Bước 6 · Thử nghiệm
   { id:'tn01', tags:'thử nhỏ mvp pre-order đặt cọc', step:'test', n:10, t:'Thử nhỏ trước khi chi lớn' },
   { id:'tn02', tags:'a/b test cỡ mẫu ab testing', step:'test', n:10, t:'A/B test: thiết kế, cỡ mẫu, đọc kết quả' },
@@ -72,6 +76,7 @@ export const MODULES = [
   { id:'dl07', tags:'ga4 google analytics dashboard sự kiện utm biểu đồ', step:'measure', n:10, t:'GA4 và dashboard đọc được' },
   { id:'dl08', tags:'chỉ số phù phiếm vanity metric goodhart', step:'measure', n:10, t:'Chỉ số phù phiếm và chỉ số ra quyết định' },
   { id:'dl09', tags:'trình bày số báo cáo sếp', step:'measure', n:10, t:'Trình bày số cho sếp' },
+  { id:'dl10', tags:'roi roas lợi nhuận hoà vốn payback lãi gộp chi phí cố định', step:'measure', n:8, t:'ROI, ROAS và lợi nhuận sau quảng cáo: ba con số, ba câu hỏi khác nhau' },
   // Bước 8 · Tối ưu
   { id:'tu01', tags:'landing page tối ưu chuyển đổi cro form tốc độ', step:'optimize', n:10, t:'Tối ưu chuyển đổi trang đích' },
   { id:'tu02', tags:'tối ưu ngân sách quảng cáo từ khoá phủ định tần suất lợi suất giảm dần', step:'optimize', n:10, t:'Tối ưu ngân sách quảng cáo' },

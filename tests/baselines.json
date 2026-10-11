@@ -1,0 +1,13 @@
+{
+  "_ghi_chu": "Ngưỡng ratchet cho quiz-quality.test.mjs. Chỉ hạ xuống khi nội dung tốt lên; không nâng để cho test qua.",
+  "absWordWrongShareMax": 0.15,
+  "absWordRatioMax": 6.5,
+  "judgePositionMax": 0.7,
+  "judgeNumberCueMax": 0.75,
+  "examPositionMax": 0.4,
+  "_hien_trang_2026_10_11": {
+    "absWordWrongShare": 0.146,
+    "absWordRatio": 6.1,
+    "ghi_chu": "mục tiêu: ≤0.08 và ≤3×; hạ mốc mỗi khi sửa được"
+  }
+}

@@ -6,7 +6,7 @@
     "dev": "wrangler dev",
     "deploy": "node tools/build-bank.mjs && wrangler deploy",
     "eval": "node eval/run.mjs",
-    "test": "node --test test/engine.test.mjs test/learn.test.mjs",
+    "test": "node --test test/engine.test.mjs test/learn.test.mjs test/stage-draw.test.mjs",
     "build:bank": "node tools/build-bank.mjs"
   },
   "dependencies": {

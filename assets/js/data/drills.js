@@ -24,6 +24,9 @@ const ERRORS = {
   QUEN_TI_LE_GIOI_THIEU:   'Giả định mọi khách đều đi giới thiệu',
   QUEN_CHI_PHI_KHUYEN_MAI: 'Quên tính tiền khuyến mãi vào chi phí có khách',
   TINH_TREN_KHACH_KHONG_HOAT_DONG:'Chia cho cả khách không còn hoạt động',
+  NHAM_ROI_ROAS:          'Nhầm ROI (%) với ROAS (lần)',
+  SO_ROI_KHAC_KY:         'Tính hoặc so ROI theo kỳ ngắn khi lợi ích đến ở kỳ dài',
+  HOAN_VON_TINH_DOANH_THU:'Tính hoàn vốn bằng doanh thu thay vì lãi gộp',
   SAI_TINH_TOAN:           'Sai tính toán chưa phân loại',
 };
 
@@ -49,7 +52,7 @@ const DRILLS = {
   wrong:[[25,'NHAM_TI_LE_ROI'],[4.5,'SAI_MAU_SO']],
   boss:'“Rơi 75% ở giỏ hàng là bình thường của cả ngành hay là của riêng mình?” Muốn trả lời, bạn cần số của chính mình ở các tháng trước.',
   talk:{c:'Đừng tăng quảng cáo; sửa bước giỏ hàng trước.',
-    r:['900 trên 1.200 người bỏ giỏ — rơi 75%, bước tệ nhất trong phễu.','Bước thanh toán chỉ rơi 20% (240 ÷ 300 = 80% đi tiếp), không phải chỗ cần ưu tiên.','Nâng tỉ lệ giỏ → đặt hàng từ 25% lên 30% là thêm 60 đơn đặt, khoảng 48 đơn thanh toán, không cần thêm traffic.'],
+    r:['900 trên 1.200 người bỏ giỏ — rơi 75%. Bước vào trang → thêm giỏ rơi nhiều hơn (94%), nhưng đó là người mới lướt xem; người đã thêm giỏ là người có ý định, nên mất 75% ở đây bất thường hơn và cứu rẻ hơn.','Bước thanh toán chỉ rơi 20% (240 ÷ 300 = 80% đi tiếp), không phải chỗ cần ưu tiên.','Nâng tỉ lệ giỏ → đặt hàng từ 25% lên 30% là thêm 60 đơn đặt, khoảng 48 đơn thanh toán, không cần thêm traffic.'],
     n:'Xem phí ship và số bước nhập thông tin — hai lý do bỏ giỏ hay gặp nhất.'}},
 
 'P:cac':{

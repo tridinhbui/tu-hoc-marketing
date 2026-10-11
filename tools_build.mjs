@@ -8,7 +8,7 @@ import vm from 'node:vm';
 const SITE = process.env.SITE_URL || 'https://nhinthay.pages.dev';
 const ctx = vm.createContext({});
 /* Chỉ nạp file .js ở cấp này — thư mục con (vd. data/bai/) và README không phải dữ liệu chạy được. */
-for (const f of fs.readdirSync('assets/js/data').filter((x) => x.endsWith('.js') && fs.statSync('assets/js/data/' + x).isFile()))
+for (const f of fs.readdirSync('assets/js/data').filter((x) => x.endsWith('.js') && fs.statSync('assets/js/data/' + x).isFile()).sort((a, b) => a.replace(/\.js$/, '').localeCompare(b.replace(/\.js$/, ''))))
   vm.runInContext(fs.readFileSync('assets/js/data/' + f, 'utf8'), ctx, { filename: f });
 const g = (n) => vm.runInContext(n, ctx);
 

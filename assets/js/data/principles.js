@@ -74,11 +74,11 @@ const PRINCIPLES = [
 
 {id:'funnel',t:'Funnel',vi:'Phễu',d:'growth',n:'10',
  one:'Một mô hình đơn giản hoá hành trình mua để bạn biết chỗ nào đang rò rỉ.',
- ex:'1000 người xem → 120 click → 30 thêm giỏ → 6 mua. Vấn đề nằm ở bước có tỉ lệ rơi lớn nhất.',
+ ex:'1000 người xem → 120 click → 30 thêm giỏ → 6 mua. Không mặc định sửa bước rơi lớn nhất (xem → click rơi 88% là chuyện thường): tìm bước rơi bất thường so với kỳ vọng — so với chính mình kỳ trước — rồi ưu tiên chỗ người rơi có ý định cao và chi phí cứu thấp.',
  counter:'Coi phễu là hành trình có thật, tuyến tính. Người thật đi vòng, quay lại, bỏ dở rồi mua sau 3 tháng.',
  brand:'Bất kỳ trang thương mại điện tử nào.',
  mistake:'Tối ưu bước cuối trong khi lỗ hổng thật nằm ở bước đầu — hoặc ở việc không ai nhớ đến bạn.',
- drill:'Vẽ phễu bằng số thật của tháng trước. Khoanh bước rơi nhiều nhất và chỉ chạm vào một bước đó.'},
+ drill:'Vẽ phễu bằng số thật của tháng này và tháng trước. Khoanh bước rơi lệch kỳ vọng nhiều nhất (cân thêm ý định và chi phí cứu) và chỉ chạm vào một bước đó.'},
 
 {id:'cac',t:'CAC',vi:'Chi phí có được một khách',d:'growth',n:'11',
  one:'Tổng chi phí marketing và bán hàng chia cho số khách mới. Con số này chỉ có nghĩa khi đặt cạnh LTV.',
@@ -153,8 +153,8 @@ const PRINCIPLES = [
  drill:'Liệt kê 10 tình huống dẫn đến category của bạn. Chọn 3 chưa ai sở hữu và làm nội dung cho chúng.'},
 
 {id:'share-of-voice',t:'Share of Voice',vi:'Tỉ trọng tiếng nói',d:'media',n:'20',
- one:'Phần tiếng nói của bạn trong tổng tiếng nói của category. Cao hơn thị phần thì thường tăng trưởng, thấp hơn thì bào mòn.',
- ex:'Nike thu được tỉ trọng tiếng nói khổng lồ từ tranh cãi, gần như miễn phí.',
+ one:'Phần tiếng nói của bạn trong tổng tiếng nói của category, thường đo bằng chi tiêu quảng cáo. Cao hơn thị phần thì thường tăng trưởng, thấp hơn thì bào mòn.',
+ ex:'Cả ngành chi 100 tỷ cho quảng cáo, bạn chi 15 tỷ → SOV 15%. Thị phần của bạn 10% thì bạn đang “nói nhiều hơn phần mình có” 5 điểm. (Lượt nhắc miễn phí từ tranh cãi, như Nike 2018, là earned media — đo riêng, không cộng thẳng vào SOV chi tiêu.)',
  counter:'Đo bằng số bài đăng thay vì số người thật sự tiếp cận.',
  brand:'Ngày đôi của Shopee dồn tiếng nói vào một thời điểm.',
  mistake:'Cắt ngân sách brand khi khó khăn — đối thủ mua rẻ chính phần tiếng nói bạn bỏ lại.',

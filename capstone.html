@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kế hoạch chiến dịch một trang — Bài tập tổng hợp</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=9">
+<meta name="description" content="Bài tập tổng hợp: tự lập một kế hoạch marketing 8 tuần cho một thương hiệu giả lập, từ vấn đề kinh doanh tới ngân sách, KPI, dự báo và tiêu chí dừng. Có kiểm tra số tự động, rubric tự chấm và bài mẫu.">
+<style>
+  .cap-f{display:grid;gap:6px;margin:14px 0}
+  .cap-f>label,.cap-lab{font-size:14.5px;font-weight:600}
+  .cap-f small{color:var(--ink-50);font-size:13px;line-height:1.5}
+  .cap-num{display:flex;align-items:center;gap:8px}
+  .cap-num .field{max-width:220px;font-family:var(--mono)}
+  .cap-kpi{display:grid;gap:8px;padding:12px 0;border-bottom:1px solid var(--ink-06)}
+  @media(min-width:640px){.cap-kpi{grid-template-columns:1.6fr 1fr 1.4fr}}
+  .cap-kpi .cap-f{margin:0}
+  table.t .field{padding:6px 8px;min-width:96px;font-family:var(--mono);font-size:13px}
+  table.t select.field{min-width:64px}
+  .cap-chk{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:6px;font-size:14.5px}
+  .cap-chk li{padding-left:2px}
+  .cap-box{display:flex;gap:10px;align-items:flex-start;margin:8px 0;font-size:15px}
+  .cap-box input{margin-top:4px;width:18px;height:18px}
+  .rub fieldset{border:0;border-top:1px solid var(--ink-06);padding:14px 0;margin:0}
+  .rub legend{font-weight:600;padding:0;margin-bottom:8px}
+  .rub label{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:10px;font-size:14.5px;line-height:1.5;cursor:pointer}
+  .rub label:hover{background:var(--ink-06)}
+  .rub input{margin-top:4px}
+  .cap-ex .frame div{grid-template-columns:200px 1fr}
+  .cap-ex .frame b{white-space:pre-line;font-weight:400}
+  :focus-visible{outline:2px solid var(--terra);outline-offset:2px}
+  /* nền tối: giữ chữ sáng trên mặt tối, tránh chữ sáng trên giấy sáng */
+  #app .exhibit{background:var(--bg-2);color:var(--ink);border:1px solid var(--ink-12)}
+  #app .field{background:var(--bg-2);color:var(--ink)}
+  #app select.field option{background:var(--bg-2);color:var(--ink)}
+</style>
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài tập chạy hoàn toàn trong trình duyệt của bạn. Kế hoạch chỉ lưu trên máy này, không gửi đi đâu.</p></div></noscript>
+<main class="wrap narrow" id="app"></main>
+<script src="assets/js/data/lessons.js?v=8"></script>
+<script src="assets/js/data/principles.js?v=8"></script>
+<script src="assets/js/data/curriculum.js?v=4"></script>
+<script src="assets/js/data/bai-index.js?v=9"></script>
+<script src="assets/js/data/drills.js?v=3"></script>
+<script src="assets/js/data/exams.js?v=10"></script>
+<script src="assets/js/app.js?v=17"></script>
+<script src="assets/js/data/capstone.js?v=1"></script>
+<script>
+appShell('capstone.html');
+const C=CAPSTONE, KEY=C.storageKey, FIELDS=C.fieldList();
+const load=()=>{ try{ const x=JSON.parse(localStorage.getItem(KEY)||'null'); if(x&&x.v) return {v:x.v,rub:x.rub||{},ex:!!x.ex}; }catch(e){} return {v:{},rub:{},ex:false}; };
+const save=()=>{ try{ localStorage.setItem(KEY,JSON.stringify({...ST,at:new Date().toISOString()})); }catch(e){} };
+let ST=load();
+const V=()=>ST.v;
+
+/* ---------- định dạng ---------- */
+const vnd=n=>isFinite(n)?Math.round(n).toLocaleString('vi-VN')+'đ':'—';
+const tr=n=>isFinite(n)?(Math.round(n/1e5)/10).toLocaleString('vi-VN')+' tr':'—';
+const n0=n=>isFinite(n)?Math.round(n).toLocaleString('vi-VN'):'—';
+const pc=n=>isFinite(n)?(Math.round(n*1000)/10).toLocaleString('vi-VN')+'%':'—';
+const lessonLink=k=>{ const m=lessonMeta(k); return `<a href="bai.html?id=${encodeURIComponent(k)}">${escH(m?m.t:k)}</a>`; };
+const exhibit=(cap,no,body)=>`<div class="exhibit"><div class="exhibit__cap"><b>${cap}</b><span class="mono">Exhibit ${no}</span></div>${body}</div>`;
+const table=(head,rows,numCols=[])=>`<div class="scroll"><table class="t"><thead><tr>${head.map((h,i)=>`<th${numCols.includes(i)?' class="n"':''} scope="col">${h}</th>`).join('')}</tr></thead>
+  <tbody>${rows.map(r=>`<tr>${r.map((c,i)=>`<td${numCols.includes(i)?' class="n"':''}>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+
+/* ---------- ô nhập ---------- */
+function field(f){
+  const val=V()[f.id], id='f-'+f.id, hint=f.hint?`<small id="${id}-h">${escH(f.hint)}</small>`:'', dh=f.hint?` aria-describedby="${id}-h"`:'';
+  if(f.type==='check') return `<label class="cap-box"><input type="checkbox" id="${id}" data-f="${f.id}" ${val===true?'checked':''}> <span>${escH(f.label)}</span></label>`;
+  let ctl;
+  if(f.type==='area') ctl=`<textarea class="field" rows="3" id="${id}" data-f="${f.id}"${dh} placeholder="${escH(f.ph||'')}">${escH(val||'')}</textarea>`;
+  else if(f.type==='select') ctl=`<select class="field" id="${id}" data-f="${f.id}"${dh}><option value="">— chọn —</option>${f.opts.map(([k,t])=>`<option value="${escH(k)}" ${val===k?'selected':''}>${escH(t)}</option>`).join('')}</select>`;
+  else if(f.type==='num') ctl=`<span class="cap-num"><input class="field" inputmode="decimal" autocomplete="off" id="${id}" data-f="${f.id}"${dh} value="${escH(val??'')}"><span class="mono">${escH(f.unit||'')}</span></span>`;
+  else ctl=`<input class="field" autocomplete="off" id="${id}" data-f="${f.id}"${dh} placeholder="${escH(f.ph||'')}" value="${escH(val||'')}">`;
+  return `<div class="cap-f"><label for="${id}">${escH(f.label)}</label>${ctl}${hint}</div>`;
+}
+
+/* ---------- hồ sơ ---------- */
+function dossier(){
+  const u=C.unit, L=C.limits;
+  return `<details open class="section" style="padding-top:0"><summary class="h3" style="cursor:pointer">Hồ sơ thương hiệu ${escH(C.brand.name)} (giả lập)</summary>
+  <p class="note" style="margin-top:14px">Thương hiệu, người, đối thủ và mọi con số dưới đây là <b>giả lập để làm bài tập</b>. Chúng tự khớp với nhau, nhưng không phải số liệu thị trường thật.</p>
+  ${exhibit('Thương hiệu',1,`<p class="small">${escH(C.brand.what)} ${escH(C.brand.where)} ${escH(C.brand.team)}</p>
+     <ul class="small" style="padding-left:18px;margin:8px 0 0">${C.brand.facts.map(x=>`<li>${escH(x)}</li>`).join('')}</ul>`)}
+  ${exhibit('Kinh tế một đơn online (trung bình 2 hộp)',2,table(['Khoản','Số tiền'],[
+     ['Giá trị một đơn',vnd(u.aov)],['− Giá vốn 2 hộp',vnd(u.cogs)],['− Phí sàn và thanh toán (10%)',vnd(u.fee)],['− Ship shop chịu + đóng gói',vnd(u.shipPack)],
+     ['<b>= Lãi đóng góp một đơn</b> (trước quảng cáo)',`<b>${vnd(u.contribution)}</b>`],['Biên lãi đóng góp',pc(u.margin)]],[1])+
+     `<p class="small muted" style="margin-top:8px">Lãi đóng góp (contribution margin) là phần tiền còn lại của một đơn sau giá vốn và mọi chi phí đi theo từng đơn. Quảng cáo phải được trả từ phần này. Bài “ROAS bao nhiêu thì mới hết lỗ?” gọi tỉ lệ này là biên lãi gộp.</p>`)}
+  ${exhibit('Kênh online 3 tháng gần nhất',3,table(['Tháng','Doanh thu','Đơn','Khách mới','Chi quảng cáo','CAC'],
+     C.history.map(h=>[h.m,tr(h.revenue),n0(h.orders),n0(h.newCustomers),tr(h.adSpend),vnd(h.adSpend/h.newCustomers)]),[1,2,3,4,5])+
+     `<p class="small muted" style="margin-top:8px">40% khách mới mua lại trong 90 ngày. Trung bình một khách mua ${String(C.retention.orders12m).replace('.',',')} đơn trong 12 tháng.
+      LTV (giá trị vòng đời, tính bằng lãi đóng góp, không phải doanh thu) = ${String(C.retention.orders12m).replace('.',',')} × ${vnd(u.contribution)} = <b>${vnd(C.retention.ltv)}</b>. ${escH(C.storesNote)}</p>`)}
+  ${exhibit('Ngân sách và ràng buộc',4,`<div class="frame">
+     <div><span class="mono">Ngân sách</span><span>${vnd(C.budget)} tiền media cho ${C.weeks} tuần (chưa gồm lương)</span></div>
+     <div><span class="mono">Kho</span><span>${n0(L.stock)} hộp = ${n0(L.maxOrders)} đơn. Đóng gói tối đa 200 đơn/tuần.</span></div>
+     <div><span class="mono">Chỗ cho khách mới</span><span>${n0(L.maxOrders)} − ${n0(L.returningOrders)} đơn khách cũ dự kiến = <b>${n0(L.maxNew)} đơn</b></span></div>
+     <div><span class="mono">CAC hoà vốn đơn đầu</span><span>${vnd(L.cacBreakevenFirst)} (= lãi đóng góp một đơn; tương đương ROAS ${String(1/u.margin).replace('.',',')})</span></div>
+     <div><span class="mono">Trần CAC</span><span><b>${vnd(L.cacCeiling)}</b> = LTV ÷ ${L.ltvToCac}. Chủ thương hiệu muốn LTV:CAC ≥ ${L.ltvToCac} để còn tiền trả lương, mặt bằng.</span></div>
+     <div><span class="mono">Mục tiêu kinh doanh</span><span>${escH(L.businessGoal)}</span></div></div>`)}
+  ${exhibit('Ba đoạn phỏng vấn khách',5,C.interviews.map(x=>`<p class="small" style="margin:0 0 10px"><b>${escH(x.who)}:</b> “${escH(x.say)}”</p>`).join(''))}
+  ${exhibit('Đối thủ (tên giả lập)',6,table(['Thương hiệu','Giá','Định vị','Kênh chính'],C.competitors.map(c=>[escH(c.name),escH(c.price),escH(c.pos),escH(c.ch)])))}
+  ${exhibit('Bảng kênh',7,table(['Kênh','Giá mua','CTR','CVR','Chi tối đa hợp lý','Ghi chú'],
+     C.channels.map(c=>[escH(c.t),c.model==='cpm'?'CPM '+vnd(c.cpm):'CPC '+vnd(c.cpc),pc(c.ctr),pc(c.cvr),tr(c.cap),escH(c.role)]),[1,2,3,4])+
+     `<p class="note note--red" style="margin-top:10px">${escH(C.benchNote)} CPM = chi phí cho 1.000 lượt hiển thị. CPC = chi phí một lượt nhấp. CTR = nhấp ÷ hiển thị. CVR (tỉ lệ chuyển đổi) = đơn ÷ nhấp.</p>`)}
+  ${exhibit('Lịch mùa vụ 8 tuần',8,table(['Tuần','Ngày','Sự kiện'],C.calendar.map(c=>[c.w,c.d,escH(c.e)]),[0]))}
+  </details>`;
+}
+
+/* ---------- công cụ từng phần ---------- */
+function stpTool(){
+  return `<div class="scroll"><table class="t"><thead><tr><th scope="col">Tiêu chí</th>${C.segments.map(s=>`<th scope="col" class="n">${s.id}</th>`).join('')}</tr></thead><tbody>
+    ${C.criteria.map(c=>`<tr><td><b>${escH(c.t)}</b><br><span class="small muted">${escH(c.h)}</span></td>${C.segments.map(s=>{const id='sc_'+s.id+'_'+c.id, val=String(V()[id]??'');
+      return `<td class="n"><select class="field" data-f="${id}" aria-label="Phân khúc ${s.id}, ${escH(c.t)}"><option value="">–</option>${[1,2,3,4,5].map(n=>`<option ${val===String(n)?'selected':''}>${n}</option>`).join('')}</select></td>`;}).join('')}</tr>`).join('')}
+    <tr><td><b>Tổng điểm</b></td>${C.segments.map(s=>`<td class="n"><b data-out="seg-${s.id}">0</b></td>`).join('')}</tr></tbody></table></div>
+    <ul class="small" style="padding-left:18px">${C.segments.map(s=>`<li><b>${s.id}</b> · ${escH(s.t)}</li>`).join('')}</ul>`;
+}
+function allocTool(){
+  return `<div class="scroll"><table class="t"><thead><tr><th scope="col">Kênh</th><th scope="col">Chi (đ)</th><th scope="col" class="n">Hiển thị</th><th scope="col" class="n">Nhấp</th><th scope="col" class="n">Đơn</th><th scope="col" class="n">CAC</th></tr></thead><tbody>
+    ${C.channels.map(ch=>`<tr><td>${escH(ch.t)}</td><td><input class="field" inputmode="decimal" autocomplete="off" data-f="al_${ch.id}" aria-label="Chi cho ${escH(ch.t)}" value="${escH(V()['al_'+ch.id]??'')}"></td>
+      <td class="n" data-out="imp-${ch.id}"></td><td class="n" data-out="clk-${ch.id}"></td><td class="n" data-out="ord-${ch.id}"></td><td class="n" data-out="cac-${ch.id}"></td></tr>`).join('')}
+    <tr><td><b>Tổng</b></td><td class="n"><b data-out="al-sum"></b></td><td></td><td></td><td class="n"><b data-out="al-ord"></b></td><td class="n"><b data-out="al-cac"></b></td></tr></tbody></table></div>
+    <p class="small" data-out="al-note" aria-live="polite"></p>`;
+}
+function forecastTool(){
+  return `<details style="margin-top:14px"><summary class="btn btn--ghost">Bảng tự tính của trang (mở sau khi bạn đã tự tính)</summary><div data-out="fc"></div></details>`;
+}
+
+/* ---------- các phần kế hoạch ---------- */
+function partHTML(p){
+  const own=p.fields.filter(f=>!f.alloc&&!f.row);
+  const rows=[...new Set(p.fields.filter(f=>f.row).map(f=>f.row))];
+  return `<section class="part" id="${p.id}" aria-labelledby="${p.id}-h">
+    <div class="part__h"><span class="mono">Phần ${String(p.n).padStart(2,'0')}</span><h2 class="h2" id="${p.id}-h">${escH(p.t)}</h2></div>
+    <p class="lede" style="font-size:1.05rem">${escH(p.q)}</p>
+    <p class="note" style="margin-top:12px">${escH(p.hint)}</p>
+    ${p.tool==='stp'?stpTool():''}${p.tool==='alloc'?allocTool():''}
+    ${rows.map(i=>`<div class="cap-kpi">${p.fields.filter(f=>f.row===i).map(field).join('')}</div>`).join('')}
+    ${own.map(field).join('')}
+    ${p.tool==='forecast'?forecastTool():''}
+    <div role="status" aria-live="polite"><ul class="cap-chk" data-out="chk-${p.id}"></ul></div>
+    <p class="small muted" style="margin-top:12px">Ôn lại: ${p.learn.map(lessonLink).join(' · ')}</p>
+  </section>`;
+}
+
+function rubricHTML(){
+  return `<section class="section rub" id="rubric" aria-labelledby="rub-h">
+    <span class="mono mono--red">Tự chấm</span>
+    <h2 class="h2" id="rub-h" style="margin:10px 0">Rubric 10 tiêu chí</h2>
+    <p class="lede" style="font-size:1.05rem">Kiểm tra tự động chỉ xem số và cấu trúc. Chất lượng suy nghĩ thì bạn tự chấm — tốt nhất là sau khi đã đối chiếu với bài mẫu. Chưa đạt = 0, Đạt = 1, Tốt = 2.</p>
+    ${C.rubric.map(r=>`<fieldset><legend>${escH(r.t)}</legend>${r.l.map((d,i)=>`<label><input type="radio" name="rub-${r.id}" data-rub="${r.id}" value="${i}" ${ST.rub[r.id]===i?'checked':''}><span><b>${C.levels[i]}.</b> ${escH(d)}</span></label>`).join('')}</fieldset>`).join('')}
+    <div class="exhibit" role="status" aria-live="polite" data-out="rub"></div>
+  </section>`;
+}
+
+function render(){
+  document.getElementById('app').innerHTML=`
+  <section class="section">
+    <span class="mono mono--red">Bài tập tổng hợp · Capstone</span>
+    <h1 class="h1" style="margin:14px 0 16px">Kế hoạch chiến dịch<br><em>một trang.</em></h1>
+    <p class="lede">Bạn là người làm marketing duy nhất của ${escH(C.brand.name)}, một thương hiệu trà thảo mộc giả lập. Có ${tr(C.budget)} và ${C.weeks} tuần.
+      Đi qua 8 phần, từ vấn đề kinh doanh tới tiêu chí dừng. Trang tự kiểm số cho bạn; phần suy nghĩ thì bạn tự chấm bằng rubric.</p>
+    <p class="small muted" style="margin-top:12px">Tự lưu trên trình duyệt này sau mỗi lần gõ. Không gửi đi đâu, không cần tài khoản.</p>
+    <div style="margin-top:18px"><div class="row between"><span class="mono" id="fillTxt" aria-live="polite"></span><a class="small" href="#rubric">Tới rubric</a></div>
+      <div class="meter" style="margin-top:8px"><i id="fillBar" style="width:0"></i></div></div>
+  </section>
+  ${dossier()}
+  ${C.parts.map(partHTML).join('')}
+  <section class="section" aria-labelledby="sum-h"><span class="mono mono--ink">Tổng hợp kiểm tra</span>
+    <h2 class="h2" id="sum-h" style="margin:10px 0" data-out="sum-h"></h2><p class="small muted">Mục “cần xem lại” là cảnh báo để bạn tự soát, không chặn bạn đi tiếp.</p></section>
+  ${rubricHTML()}
+  <section class="section" id="example" aria-labelledby="ex-h"><span class="mono mono--red">Bài mẫu</span>
+    <h2 class="h2" id="ex-h" style="margin:10px 0">Một kế hoạch đã điền đủ</h2>
+    <p class="small muted">Bài mẫu chỉ mở sau khi bạn đã điền ít nhất ${Math.round(C.unlockAt*100)}% số ô — đọc trước thì không còn là luyện. Đây là một cách làm đúng số, không phải đáp án duy nhất.</p>
+    <div class="row" style="margin-top:12px"><button class="btn btn--primary" type="button" id="exBtn">Mở bài mẫu</button><span class="small" id="exWhy"></span></div>
+    <div id="exBody" class="cap-ex" hidden></div></section>
+  <div class="row" style="margin:10px 0 60px">
+    <button class="btn" type="button" id="export">Xuất .txt</button>
+    <button class="btn btn--ghost" type="button" id="reset">Làm lại</button>
+    <a class="btn btn--ghost" href="hoc.html">Về trang học</a></div>`;
+}
+
+/* ---------- cập nhật phần tính (không vẽ lại ô nhập để giữ con trỏ) ---------- */
+const out=k=>document.querySelector(`[data-out="${k}"]`);
+const set=(k,h)=>{ const e=out(k); if(e) e.innerHTML=h; };
+function chkHTML(list){ return list.map(c=>`<li>${c.ok?'<span class="ok">Đạt</span>':'<span class="bad">Cần xem lại</span>'} · ${escH(c.t)}${c.why?` — <span class="muted">${escH(c.why)}</span>`:''}</li>`).join(''); }
+function fcHTML(c){
+  const L=C.limits, half=(()=>{ const o=c.orders/2; return {cac:o>0?c.spend/o:NaN, roi:c.spend>0?(o*C.unit.contribution-c.spend)/c.spend:NaN}; })();
+  return `<div class="frame" style="margin-top:12px">
+    <div><span class="mono">Tổng đơn khách mới</span><span>${n0(c.orders)} <span class="muted">(chỗ còn lại ${n0(L.maxNew)})</span></span></div>
+    <div><span class="mono">CAC trung bình</span><span>${vnd(c.cac)} <span class="muted">(trần ${vnd(L.cacCeiling)}, hoà vốn đơn đầu ${vnd(L.cacBreakevenFirst)})</span></span></div>
+    <div><span class="mono">Doanh thu đơn đầu</span><span>${vnd(c.revenue)}</span></div>
+    <div><span class="mono">Lãi đóng góp trước QC</span><span>${vnd(c.contrib)}</span></div>
+    <div><span class="mono">Lãi sau quảng cáo</span><span>${vnd(c.net)}</span></div>
+    <div><span class="mono">ROAS / hoà vốn</span><span>${fmt(c.roas)} / ${fmt(c.roasBE)}</span></div>
+    <div><span class="mono">ROI đơn đầu</span><span>${pc(c.roi)}</span></div>
+    <div><span class="mono">ROI 12 tháng (theo LTV)</span><span>${pc(c.roiLtv)} · LTV:CAC = ${fmt(c.ltvCac)}</span></div>
+    <div><span class="mono">Hoàn vốn CAC</span><span>${isFinite(c.payback)?fmt(c.payback)+' tháng':'—'}</span></div></div>
+    <p class="small" style="margin-top:10px"><b>Thử độ mong manh:</b> nếu tỉ lệ chuyển đổi chỉ còn một nửa, CAC thành ${vnd(half.cac)} và ROI đơn đầu còn ${pc(half.roi)}. Kế hoạch chỉ đúng ở kịch bản đẹp nhất thì chưa phải kế hoạch.</p>`;
+}
+function rubHTML(){
+  const done=C.rubric.filter(r=>Number.isInteger(ST.rub[r.id]));
+  const total=done.reduce((n,r)=>n+ST.rub[r.id],0);
+  if(done.length<C.rubric.length) return `<p class="small">Đã chấm ${done.length}/10 tiêu chí · ${total} điểm. Chấm đủ 10 tiêu chí để thấy hai chỗ yếu nhất và bài nên học lại.</p>`;
+  const weak=[...C.rubric].sort((a,b)=>ST.rub[a.id]-ST.rub[b.id]).slice(0,2);
+  return `<p class="h3">${total}/20 điểm</p>
+    <p class="small" style="margin-top:8px">Hai tiêu chí yếu nhất của bạn:</p>
+    <ul class="small" style="padding-left:18px">${weak.map(r=>`<li><b>${escH(r.t)}</b> (${C.levels[ST.rub[r.id]]}) — học lại: ${r.learn.map(lessonLink).join(' · ')}</li>`).join('')}</ul>`;
+}
+function update(){
+  const v=V(), f=C.filled(v), c=C.calc(v), res=C.runChecks(v);
+  document.getElementById('fillTxt').textContent=`Đã điền ${f.have}/${f.total} ô · ${Math.round(f.pct*100)}%`;
+  document.getElementById('fillBar').style.width=Math.round(f.pct*100)+'%';
+  C.segTotals(v).forEach(s=>set('seg-'+s.id,s.total));
+  for(const r of c.rows){ set('imp-'+r.id,r.spend?n0(r.imps):''); set('clk-'+r.id,r.spend?n0(r.clicks):''); set('ord-'+r.id,r.spend?n0(r.orders):'');
+    set('cac-'+r.id,r.spend?`<span${r.cac>C.limits.cacCeiling?' class="bad"':''}>${vnd(r.cac)}</span>`:''); }
+  set('al-sum',vnd(c.spend)); set('al-ord',n0(c.orders)); set('al-cac',c.orders>0?vnd(c.cac):'—');
+  const left=C.budget-c.spend;
+  set('al-note',`Ngân sách ${vnd(C.budget)} · ${Math.abs(left)<1?'đã chia hết':left>0?'còn '+vnd(left)+' chưa chia':'vượt '+vnd(-left)}. Đơn mới tối đa: ${n0(C.limits.maxNew)}. Trần CAC: ${vnd(C.limits.cacCeiling)}.`);
+  set('fc',fcHTML(c));
+  for(const p of C.parts) set('chk-'+p.id,chkHTML(res.filter(x=>x.part===p.id)));
+  set('sum-h',`${res.filter(x=>x.ok).length}/${res.length} kiểm tra đạt`);
+  set('rub',rubHTML());
+  const open=ST.ex||f.pct>=C.unlockAt, b=document.getElementById('exBtn');
+  b.disabled=!open; document.getElementById('exWhy').textContent=open?'':`Bạn đã điền ${Math.round(f.pct*100)}% — cần ${Math.round(C.unlockAt*100)}%.`;
+}
+
+/* ---------- bài mẫu ---------- */
+function showVal(f,val){
+  if(f.type==='check') return val===true?'Đã soát':'Chưa';
+  if(f.type==='select'){ const o=f.opts.find(([k])=>k===val); return o?o[1]:''; }
+  return String(val??'');
+}
+function exampleHTML(){
+  const E=C.example, c=C.calc(E), res=C.runChecks(E);
+  return C.parts.map(p=>{
+    const rows=p.fields.filter(f=>!f.alloc).map(f=>`<div><span class="mono">${escH(f.label)}</span><b>${escH(showVal(f,E[f.id]))}</b></div>`).join('');
+    const extra=p.tool==='stp'?table(['Phân khúc','Tổng điểm'],C.segTotals(E).map(s=>[s.id,s.total]),[1])
+      :p.tool==='alloc'?table(['Kênh','Chi','Đơn','CAC'],c.rows.map(r=>[escH(r.t),tr(r.spend),n0(r.orders),vnd(r.cac)]),[1,2,3])
+      :p.tool==='forecast'?fcHTML(c):'';
+    return exhibit(`Phần ${p.n} · ${escH(p.t)}`,'M'+p.n,`${extra}<div class="frame">${rows}</div><ul class="cap-chk">${chkHTML(res.filter(x=>x.part===p.id))}</ul>`);
+  }).join('');
+}
+
+/* ---------- xuất .txt ---------- */
+function asText(){
+  const v=V(), c=C.calc(v), res=C.runChecks(v), out=['KẾ HOẠCH CHIẾN DỊCH MỘT TRANG — '+C.brand.name+' (dữ liệu giả lập, số minh hoạ)',
+    'Xuất ngày '+today(),''];
+  for(const p of C.parts){
+    out.push(`PHẦN ${p.n}. ${p.t.toUpperCase()}`);
+    if(p.tool==='stp') C.segTotals(v).forEach(s=>out.push(`  Điểm phân khúc ${s.id}: ${s.total}`));
+    if(p.tool==='alloc') c.rows.forEach(r=>out.push(`  ${r.t}: chi ${vnd(r.spend)} → ${n0(r.orders)} đơn, CAC ${vnd(r.cac)}`));
+    for(const f of p.fields.filter(f=>!f.alloc)) out.push(`  ${f.label}: ${showVal(f,v[f.id])||'(trống)'}`);
+    if(p.tool==='forecast') out.push(`  [Trang tính] đơn ${n0(c.orders)} · CAC ${vnd(c.cac)} · doanh thu ${vnd(c.revenue)} · lãi sau QC ${vnd(c.net)} · ROAS ${fmt(c.roas)} (hoà vốn ${fmt(c.roasBE)}) · ROI ${pc(c.roi)} · hoàn vốn ${fmt(c.payback)} tháng`);
+    res.filter(x=>x.part===p.id).forEach(x=>out.push(`  ${x.ok?'[Đạt]':'[Cần xem lại]'} ${x.t}${x.why?' — '+x.why:''}`));
+    out.push('');
+  }
+  out.push('TỰ CHẤM THEO RUBRIC');
+  C.rubric.forEach(r=>out.push(`  ${r.t}: ${Number.isInteger(ST.rub[r.id])?C.levels[ST.rub[r.id]]:'(chưa chấm)'}`));
+  return out.join('\n');
+}
+
+/* ---------- sự kiện ---------- */
+render(); update();
+const app=document.getElementById('app');
+const onField=e=>{
+  const t=e.target;
+  if(t.dataset.rub){ ST.rub[t.dataset.rub]=Number(t.value); save(); update(); return; }
+  const k=t.dataset.f; if(!k) return;
+  ST.v[k]=t.type==='checkbox'?t.checked:t.value; save(); update();
+};
+app.addEventListener('input',onField);
+app.addEventListener('change',onField);
+app.addEventListener('click',e=>{
+  if(e.target.id==='exBtn'){
+    if(e.target.disabled) return;
+    ST.ex=true; save();
+    const b=document.getElementById('exBody'); b.innerHTML=exampleHTML(); b.hidden=false;
+    e.target.hidden=true; b.setAttribute('tabindex','-1'); b.focus();
+  }
+  if(e.target.id==='export'){
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([asText()],{type:'text/plain;charset=utf-8'}));
+    a.download='ke-hoach-chien-dich-mot-trang.txt'; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  }
+  if(e.target.id==='reset'){
+    if(!confirm('Xoá toàn bộ kế hoạch và điểm tự chấm trên máy này để làm lại từ đầu? Không khôi phục được. Nên “Xuất .txt” trước.')) return;
+    try{ localStorage.removeItem(KEY); }catch(err){}
+    location.reload();
+  }
+});
+</script>
+</body></html>

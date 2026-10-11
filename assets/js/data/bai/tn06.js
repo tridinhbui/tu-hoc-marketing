@@ -280,7 +280,7 @@ BAI_ADD({ mod:'tn06', lessons:[
   situation:'Một cửa hàng đồ chơi gỗ thử quảng cáo trên một nền tảng mạng xã hội mới được 4 tuần, đã chi 24 triệu. Chi phí mỗi đơn 180.000đ, lãi gộp mỗi đơn 120.000đ. Mỗi tuần nhóm lại nói "tuần sau chắc khá hơn". Không ai nhớ lúc bắt đầu đã hẹn sẽ dừng khi nào.',
   concept:{ name:'Tiêu chí dừng đặt trước (kill criteria)',
     body:'Thử kênh cần ba mốc được viết ra <b>trước khi</b> chạy: ngân sách tối đa, thời gian tối đa, và ngưỡng chỉ số để tiếp tục (ví dụ chi phí mỗi đơn dưới lãi gộp). Hết tiền hoặc hết thời gian mà chưa đạt ngưỡng thì dừng, bất kể cảm giác. Lý do: tiền đã tiêu làm người ta tiếc và muốn gỡ, nên nếu không hẹn trước thì cuộc thử kéo dài mãi. Dừng không phải thất bại; đó là kết quả của thử nghiệm.' },
-  example:'Nếu lúc đầu đã hẹn: "Tối đa 15 triệu hoặc 3 tuần; chi phí mỗi đơn phải xuống dưới 120.000đ". Đến tuần 3, chi phí vẫn khoảng 180.000đ — dừng, tiết kiệm được 9 triệu của tuần 4. Mỗi đơn đang lỗ 60.000đ; với khoảng 133 đơn trong 4 tuần, riêng phần lỗ trên đơn là khoảng 8 triệu.',
+  example:'Nếu lúc đầu đã hẹn: "Tối đa 15 triệu hoặc 3 tuần; chi phí mỗi đơn phải xuống dưới 120.000đ". Khoảng giữa tuần 3 (6 triệu/tuần), tiền chi đã chạm 15 triệu mà chi phí vẫn khoảng 180.000đ — dừng ở đó, tiết kiệm được 9 triệu (24 − 15) đã chi thêm sau mốc. Mỗi đơn đang lỗ 60.000đ; với khoảng 133 đơn trong 4 tuần, riêng phần lỗ trên đơn là khoảng 8 triệu.',
   takeaway:'Viết mốc dừng trước khi tiêu đồng đầu tiên — sau đó, đừng thương lượng với nó.',
   apply:'Viết ba dòng tiêu chí dừng cho một kênh bạn định thử: tối đa bao nhiêu tiền, bao nhiêu tuần, chỉ số nào phải đạt. Đọc to trong 60 giây.',
   mistakes:['Kéo dài vì "đã chi nhiều rồi, bỏ thì phí".','Đổi mốc dừng giữa chừng cho vừa với kết quả đang có.'],

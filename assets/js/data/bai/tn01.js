@@ -170,7 +170,7 @@ BAI_ADD({ mod:'tn01', lessons:[
   situation:'Một xưởng gốm Bát Tràng định sản xuất bộ ấm chén vẽ tay giá 1,2 triệu đồng. Đơn hàng tối thiểu với lò là 500 bộ. Bài đăng giới thiệu mẫu có 2.000 lượt thích và 300 bình luận "đẹp quá, sẽ mua".',
   concept:{ name:'Đặt trước (pre-order) để đo nhu cầu thật',
     body:'Mở cho khách <b>đặt cọc</b> một phần tiền trước khi sản xuất, ghi rõ ngày giao dự kiến và cam kết hoàn tiền nếu không đủ số lượng để làm. Tiền cọc là tín hiệu mạnh nhất: khách chấp nhận rủi ro và chờ đợi. Số đặt trước cũng quyết định có đủ để đạt đơn tối thiểu của nhà máy hay không. Điều kiện: minh bạch về thời gian, hoàn tiền rõ ràng.' },
-  example:'Xưởng mở đặt trước 2 tuần, cọc 300.000 đồng/bộ, hoàn 100% nếu dưới 300 bộ. Có 180 người đặt. Chưa tới ngưỡng, xưởng hoàn tiền và học được: chỉ khoảng 1 trong 11 người bình luận "sẽ mua" thật sự bỏ tiền. Lần sau họ thử mức giá 850.000 đồng với bộ nhỏ hơn.',
+  example:'Xưởng mở đặt trước 2 tuần, cọc 300.000 đồng/bộ, hoàn 100% nếu dưới 300 bộ (xưởng tính bán thêm khoảng 200 bộ qua cửa hàng sẵn có để đủ đơn tối thiểu 500 bộ của lò). Có 180 người đặt. Chưa tới ngưỡng, xưởng hoàn tiền và học được: chỉ khoảng 1 trong 11 người bình luận "sẽ mua" thật sự bỏ tiền. Lần sau họ thử mức giá 850.000 đồng với bộ nhỏ hơn.',
   takeaway:'Lời khen miễn phí; tiền cọc mới là bằng chứng nhu cầu.',
   apply:'Chọn một sản phẩm bạn muốn làm. Nói trong 60 giây: mức cọc, ngưỡng tối thiểu và cam kết hoàn tiền bạn đưa ra.',
   mistakes:['Tính nhu cầu từ lượt thích, lượt bình luận.','Nhận cọc mà không nói rõ ngày giao và điều kiện hoàn tiền.'],

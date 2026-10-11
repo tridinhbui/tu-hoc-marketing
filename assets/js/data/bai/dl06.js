@@ -139,9 +139,9 @@ BAI_ADD({ mod:'dl06', lessons:[
   { type:'calc', stem:'Facebook nhận 80 triệu, TikTok 55 triệu, Google 45 triệu; doanh thu thật 100 triệu. Hệ số tự nhận (tổng nền tảng ÷ doanh thu thật) là bao nhiêu lần?',
     unit:'lần', ans:1.8, tol:0.01, wrong:[[0.56,'SAI_MAU_SO'],[80,'NHAM_SO_TUYET_DOI']], errors:['SAI_MAU_SO'],
     steps:['Tổng nền tảng nhận = 80 + 55 + 45 = 180 triệu.','180 ÷ 100 = <b>1,8 lần</b>.'] },
-  { type:'calc', stem:'Chi quảng cáo cả tháng là 25 triệu trên ba nền tảng. ROAS tính theo doanh thu thật (100 triệu) là bao nhiêu? (So với 7,2 nếu dùng tổng 180 triệu.)',
+  { type:'calc', stem:'Chi quảng cáo cả tháng là 25 triệu trên ba nền tảng. Doanh thu thật toàn shop (100 triệu) chia chi quảng cáo — tức MER, không phải ROAS gán — là bao nhiêu lần? (So với 7,2 nếu dùng tổng 180 triệu nền tảng nhận.)',
     unit:'lần', ans:4, tol:0.01, wrong:[[7.2,'SAI_TINH_TOAN'],[0.25,'SAI_MAU_SO']], errors:['SAI_TINH_TOAN'],
-    steps:['ROAS = doanh thu ÷ chi quảng cáo.','100 ÷ 25 = <b>4</b> (không phải 180 ÷ 25 = 7,2).'] },
+    steps:['MER = doanh thu toàn bộ ÷ chi marketing (ở đây chỉ có quảng cáo).','100 ÷ 25 = <b>4</b> (không phải 180 ÷ 25 = 7,2). Lưu ý: 100 triệu gồm cả đơn tự nhiên không qua quảng cáo, nên đây là MER; ROAS là doanh thu gán cho quảng cáo ÷ chi quảng cáo.'] },
   { type:'mcq', stem:'Tình huống mới: nền tảng A ghi nhận cả đơn của người chỉ lướt qua quảng cáo mà không bấm. Điều này làm số của A thế nào?',
     options:[{k:'a',t:'Phồng lên, vì nhiều người mua vốn sẽ mua dù không thấy'},{k:'b',t:'Chính xác hơn, vì mọi lượt xem đều có ảnh hưởng tới quyết định mua'},
              {k:'c',t:'Thấp hơn thật, vì lượt xem ít giá trị hơn lượt bấm'},{k:'d',t:'Giữ nguyên, vì nền tảng đã tự trừ phần trùng lặp với kênh khác'}],
@@ -333,7 +333,7 @@ BAI_ADD({ mod:'dl06', lessons:[
   situation:'Chuỗi trà Ngọc bán ở Hà Nội và Đà Nẵng, quy mô và mùa vụ khá giống nhau. Facebook báo quảng cáo mang về 40% doanh thu. Ngọc nghi ngờ vì nhiều khách là khách quen. Cô đề xuất: tháng 10 tắt quảng cáo Facebook ở Đà Nẵng, giữ nguyên ở Hà Nội, rồi so.',
   concept:{ name:'Đo tăng thêm (incrementality) bằng vùng đối chứng',
     body:'<b>Doanh thu tăng thêm</b> là phần sẽ mất nếu không chạy kênh đó, khác với doanh thu kênh tự nhận. Cách đơn giản: chọn hai vùng giống nhau, tắt kênh ở một vùng (<b>vùng thử</b>), giữ ở vùng kia (<b>vùng đối chứng</b>), so mức thay đổi của hai bên so với trước. Phần chênh là tác động thật. Cần đủ thời gian và hai vùng đủ giống.' },
-  example:'Tháng 9: Hà Nội 200 triệu, Đà Nẵng 100 triệu. Tháng 10 (tắt ở Đà Nẵng): Hà Nội 210 triệu (+5%), Đà Nẵng 90 triệu (−10%). Không có quảng cáo, Đà Nẵng lẽ ra tăng 5% như Hà Nội thành 105 triệu; thực tế 90 triệu. Tăng thêm do quảng cáo ≈ 15 triệu, tức khoảng 14% doanh thu dự kiến, thấp hơn nhiều so với 40% nền tảng báo. Ngọc giảm ngân sách nhắm khách quen, giữ phần tìm khách mới.',
+  example:'Tháng 9: Hà Nội 200 triệu, Đà Nẵng 100 triệu. Tháng 10 (tắt ở Đà Nẵng): Hà Nội 210 triệu (+5%), Đà Nẵng 90 triệu (−10%). Không có quảng cáo, Đà Nẵng lẽ ra tăng 5% như Hà Nội thành 105 triệu; thực tế 90 triệu. Tăng thêm do quảng cáo ≈ 15 triệu, tức khoảng 14% doanh thu dự kiến, thấp hơn nhiều so với 40% nền tảng báo. Ngọc so lãi của 15 triệu tăng thêm với tiền quảng cáo đã chi ở Đà Nẵng. Vì thử nghiệm này tắt <b>toàn bộ</b> Facebook, nó chưa cho biết phần nào (nhắm khách quen hay tìm khách mới) tạo ra 14% đó; cô lên thử nghiệm tiếp: chỉ tắt nhóm nhắm khách quen.',
   takeaway:'Muốn biết một kênh đáng bao nhiêu, hãy tắt nó ở một nơi và xem mất bao nhiêu.',
   apply:'Chọn một kênh bạn nghi bị ghi công quá cao. Nói trong 60 giây: tắt ở đâu, bao lâu, so với vùng nào.',
   mistakes:['So trước và sau ở một vùng mà không có vùng đối chứng.','Chọn hai vùng khác hẳn nhau về quy mô hay mùa vụ.'],
@@ -374,11 +374,11 @@ BAI_ADD({ mod:'dl06', lessons:[
       d:'Tăng ngân sách vấp lợi ích giảm dần, không đo được phần hiện có.'} },
   { type:'mcq', stem:'Kết quả cho thấy tăng thêm chỉ ~14%, nền tảng báo 40%. Quyết định hợp lý nhất?',
     options:[{k:'a',t:'Cắt toàn bộ quảng cáo Facebook vì nền tảng đã báo sai'},{k:'b',t:'Giữ nguyên, vì nền tảng có nhiều dữ liệu hơn thử nghiệm của shop'},
-             {k:'c',t:'Tăng gấp đôi ngân sách để bù cho phần tăng thêm thấp'},{k:'d',t:'Giảm phần nhắm khách quen, giữ phần tìm khách mới'}],
+             {k:'c',t:'Tăng gấp đôi ngân sách để bù cho phần tăng thêm thấp'},{k:'d',t:'So lãi tăng thêm với chi, rồi thử tắt riêng nhóm khách quen'}],
     answer:'d', why:{a:'Vẫn có 14% tăng thêm thật; cắt hết là mất phần đó.',
       b:'Thử nghiệm có đối chứng đo đúng câu hỏi hơn số tự nhận.',
       c:'Tăng ngân sách không làm tỉ lệ tăng thêm tốt lên.',
-      d:'Đúng. Cắt phần ít tăng thêm, giữ phần đang tạo khách mới.'} }
+      d:'Đúng. Thử nghiệm đo toàn bộ Facebook, chưa tách được khách quen với khách mới; trước hết xem 14% tăng thêm có lãi sau chi không, rồi đo tiếp từng phần trước khi cắt.'} }
   ] },
 
 /* ------------------------------------------------------------------ 08 */

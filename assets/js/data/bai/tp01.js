@@ -56,11 +56,11 @@ BAI_ADD({ mod:'tp01', lessons:[
       d:'Khách không cần đọc câu này; họ cần cảm nhận nó qua sản phẩm và lời nói.'} },
   { type:'mcq', stem:'Tình huống mới: một quán cà phê viết "Cho dân văn phòng quận 1, chúng tôi là quán cà phê có ổ cắm ở mọi bàn và Wi-Fi riêng từng tầng". Câu này còn thiếu gì?',
     options:[{k:'a',t:'Thiếu vế cho ai, vì dân văn phòng là nhóm quá rộng'},{k:'b',t:'Thiếu khẩu hiệu có vần để khách dễ nhớ mỗi khi đi ngang qua'},
-             {k:'c',t:'Thiếu vế là gì, vì chưa nói rõ đây có phải là quán cà phê không'},{k:'d',t:'Thiếu vế vì sao tin — nhưng ổ cắm là thứ khách tự thấy nên tạm đủ'}],
+             {k:'c',t:'Thiếu vế là gì, vì chưa nói rõ đây có phải là quán cà phê không'},{k:'d',t:'Thiếu vế khác gì thật sự — ổ cắm, Wi-Fi quán quanh đó cũng có'}],
     answer:'d', why:{a:'Dân văn phòng quận 1 đã khá cụ thể cho một quán cà phê.',
       b:'Khẩu hiệu không thuộc câu định vị; câu này là công cụ nội bộ.',
       c:'Câu đã nói rõ "quán cà phê".',
-      d:'Đúng. Vế bằng chứng không viết ra, nhưng điểm khác là thứ khách nhìn thấy ngay khi bước vào, nên câu vẫn dùng được.'} }
+      d:'Đúng. Với dân văn phòng, ổ cắm và Wi-Fi là điểm tương đồng (quán nào nhắm nhóm này cũng phải có), không phải điểm khác; thay tên quán khác vào câu vẫn đúng. Vế vì sao tin cũng chưa có.'} }
   ] },
 
 /* ------------------------------------------------------------------ 02 */
@@ -246,7 +246,7 @@ BAI_ADD({ mod:'tp01', lessons:[
 { id:'B:tp01-05', skill:'brand', read:'7 phút', t:'Muốn định vị rõ, bạn phải chấp nhận mất nhóm khách nào?',
   situation:'Một phòng khám nha khoa ở Đà Nẵng phục vụ đủ cả: trẻ em, người lớn tuổi, niềng răng, cấy ghép. Quảng cáo nói "nha khoa toàn diện cho cả gia đình". Doanh thu năm 4 tỷ đồng, trong đó niềng răng cho người 18–30 tuổi chiếm 2,4 tỷ dù chỉ là 30% số khách. Chủ phòng khám muốn tập trung nhưng sợ mất 70% khách còn lại.',
   concept:{ name:'Định vị là hy sinh',
-    body:'Định vị rõ nghĩa là chọn <b>không phục vụ tốt nhất</b> cho một số người. Nói với mọi người thì không ai thấy bạn nói với mình. Hy sinh không có nghĩa đuổi khách: bạn vẫn nhận người đến, nhưng thông điệp, thiết kế, ngân sách và cải tiến dồn cho một nhóm. Câu hỏi đúng không phải "mất bao nhiêu khách" mà là "nhóm nào mang lại giá trị và có thể nói với họ bằng một câu thật sắc". Nhóm bị hy sinh thường vẫn đến một phần, vì họ thấy bạn giỏi ở một việc.' },
+    body:'Định vị rõ nghĩa là chọn <b>không phục vụ tốt nhất</b> cho một số người. Nói với mọi người thì không ai thấy bạn nói với mình. Hy sinh không có nghĩa đuổi khách: bạn vẫn nhận người đến, nhưng thông điệp, thiết kế, ngân sách và cải tiến dồn cho một nhóm. Câu hỏi đúng không phải "mất bao nhiêu khách" mà là "nhóm nào mang lại giá trị và có thể nói với họ bằng một câu thật sắc". Nhóm bị hy sinh thường vẫn đến một phần, vì họ thấy bạn giỏi ở một việc. Đây là quan điểm định vị cổ điển (Ries & Trout, Kotler). Quan điểm khác (Byron Sharp, Viện Ehrenberg-Bass) cho rằng khách của các hãng cạnh tranh khá giống nhau và tăng trưởng đến từ nhiều người mua thưa — nên hy sinh ở thông điệp, đừng hy sinh độ phủ.' },
   example:'Nhóm niềng răng: 30% số khách nhưng 2,4 tỷ trên 4 tỷ, tức 60% doanh thu. Định vị lại thành "phòng khám niềng răng cho người trẻ đi làm, lịch hẹn tối và cuối tuần". Giả sử nhóm còn lại giảm một nửa doanh thu vì quảng cáo không còn nói với họ: mất 0,8 tỷ. Để bù, nhóm niềng răng chỉ cần tăng một phần ba, từ 2,4 lên 3,2 tỷ. Phòng khám kiểm tra xem thông điệp sắc hơn có đạt được mức đó trong một năm không, trước khi quyết.',
   takeaway:'Nói với mọi người thì không ai thấy bạn nói với mình — định vị là chọn ai để không chiều.',
   apply:'Với một thương hiệu bạn biết, nói trong 60 giây: nhóm khách nào họ đã chọn không chiều, và nhờ vậy họ sắc hơn ở đâu.',

@@ -175,7 +175,7 @@ BAI_ADD({ mod:'kn02', lessons:[
 
 /* ------------------------------------------------------------------ 04 */
 { id:'B:kn02-04', skill:'measure', read:'7 phút', t:'Kệ trống 3 ngày mỗi tháng thì mất bao nhiêu?',
-  situation:'Hãng sữa hạt của bạn có mặt ở 1.000 điểm bán, mỗi điểm bán 50 hộp mỗi tháng. Khảo sát cho thấy trung bình 8% điểm đang hết hàng vào bất kỳ lúc nào. Sếp nói 8% là nhỏ, không đáng lo. Bạn muốn chứng minh bằng số rằng hết hàng đang làm hãng mất tiền thật.',
+  situation:'Hãng sữa hạt của bạn có mặt ở 1.000 điểm bán, mỗi điểm bán 50 hộp mỗi tháng. Khảo sát cho thấy trung bình 8% điểm đang hết hàng vào bất kỳ lúc nào — tương đương mỗi điểm trống kệ khoảng 2–3 ngày mỗi tháng. Sếp nói 8% là nhỏ, không đáng lo. Bạn muốn chứng minh bằng số rằng hết hàng đang làm hãng mất tiền thật.',
   concept:{ name:'Tỉ lệ hết hàng và doanh số mất đi',
     body:'<b>Hết hàng</b> (out-of-stock) là lúc khách tới mà kệ không có hàng của bạn. Khi đó khách chia làm hai nhóm: một phần chờ lần sau hoặc đi chỗ khác mua đúng hãng, phần còn lại mua hãng khác và doanh số đó <b>mất hẳn</b>. Doanh số mất = số điểm hết hàng × số bán mỗi điểm × tỉ lệ khách chuyển sang hãng khác. Tệ hơn, khách thử hãng khác có thể không quay lại. Nguyên nhân thường nằm ở khâu đặt hàng và giao hàng, không phải ở quảng cáo.' },
   example:'1.000 điểm × 8% = 80 điểm hết hàng. 80 × 50 hộp = 4.000 hộp khách định mua. Nếu 60% khách lấy hãng khác, bạn mất 2.400 hộp mỗi tháng, gần 5% tổng doanh số 50.000 hộp. Với lãi 8.000 đồng mỗi hộp, đó là 19,2 triệu đồng mỗi tháng, đủ trả một nhân viên theo dõi tồn kho tại các điểm lớn.',
@@ -306,10 +306,10 @@ BAI_ADD({ mod:'kn02', lessons:[
       d:'Đang tính chi phí cả năm cho một quý.'} },
   { type:'mcq', stem:'Hàng tương tự trong chuỗi đang bán trung bình 3 gói mỗi cửa hàng mỗi tuần. Bạn làm gì?',
     options:[{k:'a',t:'Ký ngay, vì có mặt trong chuỗi lớn giúp thương hiệu uy tín hơn'},{k:'b',t:'Ký và tăng quảng cáo thật mạnh để kéo tốc độ bán lên gấp đôi'},
-             {k:'c',t:'Đàm phán thử ở ít cửa hàng hơn hoặc giảm phí trước khi ký hợp đồng'},{k:'d',t:'Từ bỏ hẳn kênh cửa hàng tiện lợi cho mọi sản phẩm của hãng'}],
+             {k:'c',t:'Đàm phán giảm phí mở mã và phí trưng bày trước khi ký hợp đồng'},{k:'d',t:'Từ bỏ hẳn kênh cửa hàng tiện lợi cho mọi sản phẩm của hãng'}],
     answer:'c', why:{a:'Uy tín không trả được 90 triệu khi mỗi cửa hàng bán thiếu một nửa mức cần.',
       b:'Kỳ vọng gấp đôi tốc độ bán là rủi ro lớn khi chưa có bằng chứng.',
-      c:'Đúng. Giảm quy mô hoặc giảm phí để mức hoà vốn gần với tốc độ bán thật.',
+      c:'Đúng. Phí cố định 90 triệu là thứ đẩy mức hoà vốn lên; giảm phí mới kéo mức hoà vốn gần tốc độ bán thật. Chỉ thu hẹp số cửa hàng mà phí giữ nguyên thì mỗi cửa hàng còn phải bán nhiều hơn (150 cửa hàng → 150 gói/quý).',
       d:'Một phép tính cho một sản phẩm không đủ để bỏ cả kênh.'} },
   { type:'calc', stem:'Phí mở mã 30 triệu đồng, phí trưng bày 60 triệu đồng/quý, lãi gộp 4.000 đồng/gói, 300 cửa hàng. Mỗi cửa hàng cần bán bao nhiêu gói trong quý đầu để hoà vốn?',
     unit:'gói', ans:75, tol:0.5, wrong:[[22500,'SAI_MAU_SO'],[50,'QUEN_CHI_PHI_CO_DINH']], errors:['QUEN_CHI_PHI_CO_DINH'],

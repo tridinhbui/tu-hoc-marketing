@@ -115,7 +115,7 @@ const BRANDS = [
   verdict:'Biti’s: nhận biết không phải là chiến thắng. Ý nghĩa mới là thứ quyết định được chọn.' },
 
 { id:'highlands', name:'Highlands Coffee', color:'#B3320F', mark:'H', cat:'Coffee Chain', market:'Việt Nam',
-  promise:'Luôn có một cái ghế ở nơi bạn cần.',
+  promise:'Luôn có một cái ghế ở nơi bạn cần. (Diễn giải của tác giả, không phải slogan chính thức; thông điệp chính thức từ 2022 là “Highlands Coffee® là của chúng mình”.)',
   assets:['Đỏ trầm + nâu','Phin sứ','Vị trí tầng trệt các toà nhà','Menu chuẩn hoá'],
   q:[
     {q:'Highlands thắng bằng cà phê ngon hay bằng thứ khác?', hint:'Đếm số quán bạn đi ngang mỗi ngày.',
@@ -128,14 +128,14 @@ const BRANDS = [
 
 { id:'vinamilk', name:'Vinamilk', color:'#1B4C8C', mark:'V', cat:'FMCG · Dairy', market:'Việt Nam',
   promise:'Sữa của người Việt, có mặt ở mọi nơi người Việt mua sữa.',
-  assets:['Xanh Vinamilk','Chữ ký viết tay (2023)','Hình ảnh đàn bò – đồng cỏ','Phủ kín kênh phân phối truyền thống'],
+  assets:['Xanh Vinamilk','Logo chữ viết tay (từ 7/2023)','Hình ảnh đàn bò – đồng cỏ','Phủ kín kênh phân phối truyền thống'],
   q:[
     {q:'Vinamilk cạnh tranh bằng sản phẩm hay bằng hệ thống?', hint:'Nghĩ xem một hộp sữa phải đi qua bao nhiêu chặng mới tới tay người mua ở một huyện xa.',
      a:'Bằng hệ thống. Sữa là category ít khác biệt cảm quan, nên lợi thế nằm ở physical availability: hàng có mặt ở tiệm tạp hoá, trường học, siêu thị, bệnh viện. Đối thủ muốn đuổi kịp phải xây lại cả mạng lưới phân phối chứ không chỉ làm truyền thông hay hơn.'},
     {q:'Vì sao độ nhận biết gần như tuyệt đối lại không đảm bảo tăng trưởng?', hint:'Ai cũng biết bạn — rồi sao nữa?',
      a:'Vì awareness chỉ là ngưỡng tối thiểu. Khi mọi người đã biết, tăng trưởng chỉ còn đến từ hai chỗ: thêm dịp dùng (category entry point mới) và thêm phân khúc giá trị cao hơn. Chi thêm cho nhận biết ở mức này gần như không sinh lời.'},
-    {q:'Trong đợt làm mới nhận diện 2023, thứ gì bắt buộc phải giữ?', hint:'Cái mà khách nhận ra trong nửa giây trên kệ.',
-     a:'Sắc xanh và cấu trúc wordmark. Đó là tài sản nhận diện đã tích luỹ hàng chục năm; đổi màu đồng nghĩa với việc vứt bỏ toàn bộ trí nhớ đã mua bằng tiền quảng cáo của bốn thập kỷ. Nét chữ, minh hoạ và khoảng thở thì có thể vẽ lại.'},
+    {q:'Trong đợt làm mới nhận diện 2023, thứ gì bắt buộc phải giữ?', hint:'Cái mà khách nhận ra ngay trên kệ.',
+     a:'Tông xanh dương và cái tên. Đó là tài sản nhận diện đã tích luỹ hàng chục năm; đổi màu đồng nghĩa với việc vứt bỏ trí nhớ đã mua bằng tiền quảng cáo của bốn thập kỷ. Logo thì Vinamilk chọn đổi hẳn — từ phù hiệu sang chữ viết tay (công bố 6/7/2023) — cùng nét chữ, minh hoạ và khoảng thở: phần có thể vẽ lại khi màu và tên vẫn giữ.'},
     {q:'Mối đe doạ lớn nhất đến từ đâu?', hint:'Không phải từ một tập đoàn sữa lớn hơn.',
      a:'Từ sự phân mảnh: sữa hạt, sữa nhập khẩu, thương hiệu chuyên biệt cho từng nhóm (trẻ dị ứng đạm bò, người tập gym, người ăn chay). Mỗi ngách nhỏ lấy đi một dịp dùng, và một thương hiệu đại chúng rất khó nói chuyện riêng với từng ngách.'},
     {q:'Nếu bạn phụ trách tăng trưởng, bạn tấn công vào đâu trước?', hint:'Dịp dùng, không phải nhóm tuổi.',
@@ -149,10 +149,10 @@ const BRANDS = [
      a:'Bán việc giảm chi phí ra quyết định. Kho phim là điều kiện cần, nhưng giá trị thật nằm ở gợi ý: nó biến một danh mục khổng lồ thành vài lựa chọn có vẻ hợp với bạn. Đối thủ có nội dung tương đương vẫn thua nếu bắt người xem tự tìm.'},
     {q:'Vì sao Netflix đầu tư vào nội dung tự sản xuất thay vì mua bản quyền?', hint:'Cái gì có thể bị lấy lại?',
      a:'Vì bản quyền thuê được thì cũng bị rút về khi chủ sở hữu tự mở nền tảng. Nội dung tự sản xuất là tài sản không ai lấy lại được, đồng thời là lý do để nhắc tên thương hiệu mỗi khi một series được bàn tán.'},
-    {q:'Âm thanh “ta-dum” hai giây có giá trị gì?', hint:'Nó xuất hiện trước mọi nội dung.',
+    {q:'Âm thanh “ta-dum” khoảng ba giây có giá trị gì?', hint:'Nó xuất hiện trước mọi nội dung.',
      a:'Đó là tài sản nhận diện gắn với khoảnh khắc cảm xúc cao nhất — lúc bắt đầu xem. Nó được lặp hàng tỉ lần mà không tốn ngân sách media nào, và hoạt động ngay cả khi người dùng đang nhìn chỗ khác.'},
     {q:'Điểm yếu lớn nhất của mô hình này là gì?', hint:'Chuyện gì xảy ra khi người ta xem xong series họ chờ?',
-     a:'Người dùng đăng ký theo nội dung chứ không theo nền tảng: xem xong thì huỷ. Đó là lý do Netflix phải liên tục đổ tiền vào nội dung mới — chi phí giữ chân không bao giờ giảm.'}],
+     a:'Người dùng đăng ký theo nội dung chứ không theo nền tảng: xem xong thì huỷ. Đó là lý do Netflix phải liên tục đổ tiền vào nội dung mới — chi phí giữ chân khó mà giảm.'}],
   verdict:'Netflix cho thấy trong category dư thừa lựa chọn, thứ bán được là sự sắp xếp chứ không phải kho hàng.' },
 
 { id:'cocoon', name:'Cocoon', color:'#1F5C4A', mark:'C', cat:'Mỹ phẩm thuần chay', market:'Việt Nam',
@@ -176,7 +176,7 @@ const BRANDS = [
     {q:'The Coffee House ban đầu thắng bằng điều gì?', hint:'Không phải cà phê.',
      a:'Bằng trải nghiệm không gian: rộng, sáng, nhiều chỗ ngồi, nhân viên thân thiện, và ngầm cho phép khách ngồi lâu. Đó là một lời hứa rõ ràng trong giai đoạn thị trường còn thiếu chỗ ngồi tử tế.'},
     {q:'Vì sao một mô hình dựa vào không gian lại dễ tổn thương?', hint:'Chi phí lớn nhất nằm ở đâu?',
-     a:'Vì nó gắn chặt với mặt bằng lớn ở vị trí đắt. Khi chi phí thuê tăng và hành vi chuyển sang mang đi hoặc giao tận nơi, mỗi mét vuông từng là lợi thế trở thành gánh nặng cố định. Giai đoạn thu hẹp mạng lưới 2024–2025 là hệ quả của chính cấu trúc đó.'},
+     a:'Vì nó gắn chặt với mặt bằng lớn ở vị trí đắt. Khi chi phí thuê tăng và hành vi chuyển sang mang đi hoặc giao tận nơi, mỗi mét vuông từng là lợi thế trở thành gánh nặng cố định. Giai đoạn thu hẹp mạng lưới (khoảng 150 cửa hàng cuối 2023 còn khoảng 93 cuối 2024) có thể đọc là hệ quả của chính cấu trúc đó — đây là diễn giải của tác giả; công ty nêu lý do tối ưu chi phí và tập trung vào ứng dụng.'},
     {q:'Chuỗi này khác Highlands ở điểm nào về mặt chiến lược?', hint:'Cùng bán chỗ ngồi, nhưng mua chỗ ngồi theo cách khác.',
      a:'Highlands ưu tiên mật độ và sự có mặt ở nơi người ta đi ngang, chấp nhận diện tích nhỏ hơn. The Coffee House ưu tiên chất lượng không gian trên mỗi điểm. Cách một là physical availability, cách hai là trải nghiệm — và cách một chịu được biến động chi phí tốt hơn.'},
     {q:'Nếu phụ trách thương hiệu này hôm nay, bạn giữ lại điều gì?', hint:'Cái gì vẫn còn trong trí nhớ khách hàng?',

@@ -199,7 +199,7 @@ BAI_ADD({ mod:'kn04', lessons:[
              {k:'c',t:'Đổi thước đo sang câu hỏi, lượt lưu, tin nhắn hỏi mua; thử nội dung hướng dẫn nấu'},{k:'d',t:'Dừng mọi hoạt động social, chuyển sang bán ở chợ'}],
     answer:'c', why:{a:'Giải to hơn kéo thêm người săn quà, càng lệch tệp.',
       b:'Trông uy tín không thành đơn, lại dạy nền tảng phân phối sai người.',
-      c:'Đúng. Đo đúng tín hiệu quan tâm và tạo nội dung thu hút người nấu ăn thật.',
+      c:'Đúng. Đo đúng tín hiệu quan tâm và tạo nội dung thu hút người nấu ăn thật. Thêm nữa, chính sách Trang của Meta không cho yêu cầu hoặc thưởng việc chia sẻ, đăng lại, gắn thẻ người khác để tham gia khuyến mại (kiểm theo tài liệu Meta Pages, Groups and Events Policies, 10/2026); minigame có giải thưởng còn có thể thuộc quy định khuyến mại (Nghị định 81/2018/NĐ-CP, đã sửa đổi) — hỏi pháp chế trước khi làm.',
       d:'Social vẫn hiệu quả ở bài hướng dẫn; bỏ cả kênh là phản ứng quá mức.'} },
   { type:'calc', stem:'Bài minigame có 6.000 bình luận, trong đó 5.800 chỉ là tag tên. Bình luận có câu hỏi thật chiếm bao nhiêu phần trăm?',
     unit:'%', ans:3.33, tol:0.05, wrong:[[96.67,'SAI_TINH_TOAN'],[200,'NHAM_SO_TUYET_DOI']], errors:['SAI_TINH_TOAN','NHAM_SO_TUYET_DOI'],
