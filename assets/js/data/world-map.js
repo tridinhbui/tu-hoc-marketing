@@ -9,8 +9,8 @@ const WORLD = {
   reach: 54,                                   // lại gần một toà trong ngần này thì coi là "tới nơi"
   regions: [
     { id: 'plaza',  t: 'Quảng trường',     x: 600,  y: 560, rx: 300, ry: 170, c: '#C85A32' },
-    { id: 'court',  t: 'Toà Án Case',      x: 600,  y: 200, rx: 360, ry: 130, c: '#7A2E8E' },
-    { id: 'people', t: 'Khu Khách hàng & Thương hiệu', x: 190, y: 440, rx: 175, ry: 230, c: '#1F5C4A', chest: { need: 2, badge: 'Người chọn tệp' } },
+    { id: 'court',  t: 'Toà Án Case',      x: 600,  y: 200, rx: 360, ry: 130, c: '#7A2E8E', chest: { need: 2, badge: 'Người bảo vệ ý kiến' } },
+    { id: 'people', t: 'Khu Khách hàng & Thương hiệu', x: 190, y: 440, rx: 175, ry: 230, c: '#1F5C4A', chest: { need: 4, badge: 'Người chọn tệp' } },
     { id: 'data',   t: 'Khu Số liệu & Kênh', x: 985, y: 440, rx: 190, ry: 240, c: '#3F7EA6', chest: { need: 6, badge: 'Người đọc số' } },
   ],
   /* Trang phục: mở bằng rương vùng hoặc tổng sao. `fill` là màu áo của nhân vật. */
@@ -18,8 +18,9 @@ const WORLD = {
     { id: 'default', t: 'Áo cam',          fill: '#C85A32' },
     { id: 'blue',    t: 'Áo xanh Số liệu', fill: '#3F7EA6', need: { chest: 'data' } },
     { id: 'green',   t: 'Áo lá Khách hàng', fill: '#1F5C4A', need: { chest: 'people' } },
-    { id: 'gold',    t: 'Áo vàng',         fill: '#D9A21B', need: { stars: 6 } },
-    { id: 'ink',     t: 'Áo mực',          fill: '#2A1A12', need: { stars: 9 } },
+    { id: 'purple',  t: 'Áo tím Toà Án',   fill: '#7A2E8E', need: { chest: 'court' } },
+    { id: 'gold',    t: 'Áo vàng',         fill: '#D9A21B', need: { stars: 9 } },
+    { id: 'ink',     t: 'Áo mực',          fill: '#2A1A12', need: { stars: 14 } },
   ],
   places: [
     { id: 'quiz',    t: 'Sảnh phản xạ',               d: 'Quiz 60 giây từ bài đã học',               href: 'quiz.html',            x: 600,  y: 480, region: 'plaza',  min_level: 1 },
@@ -31,7 +32,8 @@ const WORLD = {
     { id: 'game',    t: 'Toà điều hành thương hiệu',   d: 'Điều hành một thương hiệu qua 8 quý',      href: 'tro-choi.html',        x: 990,  y: 330, region: 'data',   min_level: 1, game: true },
     { id: 'growth',  t: 'Phòng lab tăng trưởng',       d: 'Bàn tính unit economics và giá',           href: 'unit-economics.html',  x: 1030, y: 550, region: 'data',   min_level: 3 },
     { id: 'g2',      t: 'Chọn tệp',                    d: 'Chọn nhóm khách và thông điệp cho 4 sản phẩm',  href: 'game-chon-tep.html',  x: 170,  y: 330, region: 'people', min_level: 1, local: true, game: true },
-    { id: 'g3',      t: 'Bản đồ định vị',              d: 'Chiếm khoảng trống trên ma trận — sắp có', href: null,                   x: 210,  y: 560, region: 'people', soon: true },
+    { id: 'g3',      t: 'Bản đồ định vị',              d: 'Đặt thương hiệu lên ma trận giá × thuộc tính',   href: 'game-ban-do-dinh-vi.html', x: 210, y: 560, region: 'people', min_level: 1, local: true, game: true },
+    { id: 'g6',      t: 'Kể chuyện 60 giây',           d: 'Chọn 3 bằng chứng để trả lời sếp',                href: 'game-ke-chuyen.html',  x: 900, y: 262, region: 'court', min_level: 1, local: true, game: true },
     { id: 'g4',      t: 'Chia ngân sách media',        d: 'Chia tiền giữa 4 kênh qua 4 mùa — học lợi ích giảm dần', href: 'game-ngan-sach.html', x: 780, y: 400, region: 'data', min_level: 1, local: true, game: true },
     { id: 'g5',      t: 'Phễu rò',                     d: 'Sửa đúng tầng của phễu bán hàng',          href: 'game-phieu-ro.html',  x: 1110, y: 440, region: 'data',   min_level: 1, local: true, game: true },
   ],

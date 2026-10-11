@@ -82,7 +82,7 @@ Làm trước G2 và G4 vì tái dùng đúng kiểu mô hình của G1 (hàm th
 | **P1 · Game đầu** ✅ xong | Chuyển G1 vào khung game (sao, thưởng); làm G4 Chia ngân sách | 2 game có sao và thưởng đúng, có test |
 | **P2 · Mở rộng** ✅ xong (trang phục mở bằng rương/sao, chưa mua bằng xu) | G2 Chọn tệp, G5 Phễu rò; rương vùng; tuỳ biến nhân vật ở Chợ | 4 game chơi được, rương vùng mở đúng |
 | **P3 · Xã hội** ✅ xong (boss có trận đánh, PvP có phòng chờ, bảng mùa có sao; cần triển khai máy chủ) | Boss có màn riêng, Đấu trường có phòng chờ, bảng xếp hạng mùa theo sao | Boss/PvP dùng chung khung; mùa giải có xếp hạng sao |
-| **P4 · Đánh bóng** | G3, G6, âm thanh, hoạt ảnh, hướng dẫn lần đầu, mobile | Bản chạy mượt trên điện thoại, có hướng dẫn |
+| **P4 · Đánh bóng** ✅ xong (G3, G6, hướng dẫn lần đầu, bản đồ cuộn ngang trên điện thoại; chưa có âm thanh) | G3, G6, âm thanh, hoạt ảnh, hướng dẫn lần đầu, mobile | Bản chạy mượt trên điện thoại, có hướng dẫn |
 
 ## 8. Rủi ro và cách chặn
 

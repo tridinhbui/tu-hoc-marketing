@@ -78,3 +78,33 @@ test('G5: tối ưu đạt 3 sao; sửa toàn đầu phễu không quá 0 sao; t
 test('G5: tầng tốt nhất không phải tầng đầu phễu ở mọi vòng', () => {
   for (const r of G5.rounds) assert.ok(!G5.best(r).fixes.every((x) => x === 'aware'));
 });
+
+const G3 = require(rel('assets/js/games/g3-position.js'));
+const G6 = require(rel('assets/js/games/g6-story.js'));
+
+test('G3: tối ưu từng thị trường đạt 3 sao; luôn ô trung tâm hoặc luôn ô đông nhất không quá 1 sao; không vị trí cố định nào đạt 3 sao', () => {
+  assert.equal(G3.stars(G3.score(G3.rounds.map((r) => G3.best(r).cell))), 3);
+  assert.ok(G3.stars(G3.score(G3.rounds.map(() => [2, 2]))) <= 1);
+  const peak = G3.rounds.map((r) => { const D = G3.demand(r); let b = [0, 0, -1]; for (let y = 0; y < 5; y++) for (let x = 0; x < 5; x++) if (D[y][x] > b[2]) b = [x, y, D[y][x]]; return [b[0], b[1]]; });
+  assert.ok(G3.stars(G3.score(peak)) <= 1);
+  for (let y = 0; y < 5; y++) for (let x = 0; x < 5; x++) assert.ok(G3.stars(G3.score(G3.rounds.map(() => [x, y]))) < 3);
+});
+test('G3: chia nhu cầu bảo toàn tổng; đặt trùng ô đối thủ thì chia đôi ô đó', () => {
+  const r = G3.rounds[0], t = G3.split(r, [4, 0]), all = G3.demand(r).flat().reduce((a, b) => a + b, 0);
+  assert.ok(Math.abs(t.total - all) < 1e-9 && t.mine <= t.total);
+  const rv = r.rivals[0], same = G3.split(r, rv), cell = G3.demand(r)[rv[1]][rv[0]];
+  assert.ok(same.mine >= cell / 2 - 1e-9);
+});
+
+test('G6: mỗi vòng đủ 6 mảnh, có đúng mảnh phản tác dụng, mảnh tốt nhất không luôn đứng đầu danh sách', () => {
+  for (const r of G6.rounds) { assert.equal(r.cards.length, 6); assert.ok(r.cards.some((c) => c.tier === -1)); assert.equal(new Set(r.cards.map((c) => c.id)).size, 6); }
+  const firstStrong = G6.rounds.filter((r) => r.cards[0].tier === 2).length;
+  assert.ok(firstStrong < G6.rounds.length, 'mảnh mạnh không được luôn nằm đầu');
+});
+test('G6: tối ưu 3 sao; có mảnh phản tác dụng không quá 2 sao; ba mảnh yếu 0 sao; thứ tự có ý nghĩa', () => {
+  assert.equal(G6.stars(G6.score(G6.rounds.map((r) => G6.best(r).ids))), 3);
+  assert.ok(G6.stars(G6.score(G6.rounds.map((r) => { const bad = r.cards.find((c) => c.tier === -1).id, b = G6.best(r).ids; return [b[0], b[1], bad]; })) ) < 3);
+  assert.equal(G6.stars(G6.score(G6.rounds.map((r) => r.cards.filter((c) => c.tier <= 0).slice(0, 3).map((c) => c.id)))), 0);
+  const r = G6.rounds[0], strong = r.cards.filter((c) => c.tier === 2).map((c) => c.id), mid = r.cards.find((c) => c.tier === 1).id;
+  assert.ok(G6.points(r, [strong[0], strong[1], mid]) > G6.points(r, [mid, strong[0], strong[1]]), 'nói mảnh mạnh trước phải điểm cao hơn');
+});
