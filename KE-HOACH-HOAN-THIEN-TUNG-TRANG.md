@@ -91,3 +91,48 @@ Nhãn trạng thái:
 ## 4. Thứ tự đề xuất
 1. P0 #1, #4, #5 (1 ngày — không cần dịch vụ ngoài) → 2. P0 #6 thống nhất giao diện (2–3 ngày) →
 3. P0 #2, #3 (cần key/tên miền của bạn) → 4. Cộng đồng seed + thông báo → 5. Công cụ mới + nhóm học → 6. E2E + responsive nội dung.
+
+---
+
+## 5. Rà soát vòng 2 — trang nào sơ sài / giả lập (2026-10-12)
+
+Cách làm: chạy `wrangler dev` thật với người dùng mới, gọi 20 endpoint (`/api/me`, `state`, `kingdom`, `boss`, `pvp`, `wallet`, `season`, `ai/quota`…), đếm dữ liệu trong `assets/js/data`, đếm tương tác/lưu trữ/XP từng trang, chụp màn hình các trang mỏng.
+
+**Kết luận chung:** phần máy chủ **thật** (D1 + KV, 20/20 endpoint trả đúng dạng). Không có số liệu bịa trong code ngoài landing (đã bỏ). "Giả lập" còn lại nằm ở chỗ thiếu dữ liệu/nội dung chứ không phải giả mạo.
+
+### A. Giả lập có chủ đích (đã gắn nhãn đúng, nhưng vẫn là giả lập)
+| Trang | Thực chất | Cải thiện |
+|---|---|---|
+| `pvp.html` Đấu trường | Khi chưa có người học thật trong tuần, đối thủ là "Bóng ma luyện tập" với điểm cố định `ghost_default = 3/5` (`opponent_real:false`) | Seed ghost từ kết quả thật; hiện "đối thủ thật" khi có ≥ 5 người; điểm ghost theo độ khó |
+| `tro-choi.html` | Mô hình 8 quý cố định, số liệu minh hoạ, không lưu kỷ lục | Lưu điểm tốt nhất + bảng xếp hạng tuần |
+| `capstone.html`, `giai-case.html` | 5 thương hiệu đều "giả định" (Cocomi, Lá Trà, Mơ, thẻ hoàn tiền, Sổ Bán Hàng) | Thêm case dựa trên số liệu công khai của thương hiệu thật, ghi nguồn |
+| `boss.html` | `fixed_pool:true` — bộ câu hỏi boss cố định, HP 1.000.000 dùng chung | Xoay vòng pool theo tuần |
+
+### B. Sơ sài: trang chỉ để đọc, không theo dõi gì
+`ban-do`, `collections`, `library`, `tap-chi`, `timeline`, `world`, `xray` có **0 tương tác, 0 lưu trữ, 0 XP**. Mở xong không ghi "đã xem", không nối với năng lực.
+→ Việc: ghi "đã đọc" (`flags`), cộng XP `learned` một lần, gợi ý bài kế; `xray` ghi lại dự đoán trước/sau (đang có UI chọn thương hiệu nhưng kết quả không lưu).
+
+### C. Sơ sài: bàn làm việc không gắn tiến độ
+`cep`, `positioning`, `segmentation`, `pricing`, `unit-economics`, `customer-map`, `interview`, `taste`, `challenge`, `roadmap`, `journal`, `brand`, `campaign`, `lesson`, `principle`: lưu bản nháp (nay đã đồng bộ) nhưng **không gọi `award()`**, không có trạng thái "hoàn thành", không đi vào bản đồ năng lực (`nang-luc`).
+→ Việc: mỗi bàn có điều kiện hoàn thành (đủ trường + qua kiểm tra ràng buộc có sẵn) → `award('case'|'talk')` một lần + ghi vào năng lực tương ứng.
+
+### D. Trống / mỏng dữ liệu
+| Trang | Hiện trạng |
+|---|---|
+| `cong-dong.html` | 0 bài (D1 `posts` rỗng) |
+| `bang-xep-hang.html` | Rỗng đến khi có người học; `/api/stats` hiện 11 người học |
+| `case-thu-vien.html` | 5 case có bấm giờ, trong khi `gallery` có 20 campaign và `xray` 14 thương hiệu — **ba thư viện case tách rời nhau**, không liên kết |
+| `taste.html` | 10 cặp |
+| `kingdom/shop` | Chợ có vật phẩm nhưng chưa có hàng cosmetic hiển thị ở đâu |
+
+### E. Mâu thuẫn nội dung đã sửa trong lượt này
+- `gioi-thieu`: "không cần tài khoản để bắt đầu" trong khi mọi trang yêu cầu đăng nhập → đã sửa.
+- ~30 trang ghi "không gửi gì đi / không có tài khoản" trong khi tiến độ nay đồng bộ lên máy chủ khi đăng nhập → đã sửa câu chữ (còn 4 dòng `<noscript>` nhỏ ở `capstone/luyen/thi/thuat-ngu`).
+- 11 trang **không có đường vào** từ sidebar (`journal`, `cep`, `customer-map`, `taste`, `tap-chi`, `timeline`, `world`, `collections`, `gioi-thieu`, `brand-audit`, `assets-audit`; `tap-chi` không có link trỏ tới) → thêm "Sổ tay & bàn làm việc" và "Thế giới & tạp chí" vào sidebar.
+
+### F. Thứ tự làm tiếp
+1. Nối ba thư viện case (`case-thu-vien` ⇄ `gallery` ⇄ `xray`): một thẻ case, ba chế độ (đọc, tự dự đoán, bấm giờ).
+2. Gắn XP + hoàn thành + năng lực cho 15 bàn làm việc (mục C).
+3. "Đã đọc" cho 7 trang tham khảo (mục B).
+4. Seed cộng đồng + ghost PvP (mục D, A).
+5. Mở rộng ngân hàng Phòng thử thách 13 → 30, case có bấm giờ 5 → 12.
