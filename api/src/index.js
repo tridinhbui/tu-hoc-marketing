@@ -97,6 +97,9 @@ async function route(request, env, url) {
     return json({ counts: Object.fromEntries(rows.map((r) => [r.lesson_id, r.n])) }, 200, { 'cache-control': 'public, max-age=300' });
   }
 
+  if (p === '/api/poll' && m === 'GET') return cm.pollGet(request, env);
+  if (p === '/api/poll' && m === 'POST') return cm.pollVote(request, env);
+  if (p === '/api/community/summary' && m === 'GET') return cm.communitySummary(request, env);
   if (p === '/api/posts' && m === 'GET') return cm.listPosts(request, env);
   if (p === '/api/posts' && m === 'POST') return cm.createPost(request, env);
   if ((mm = p.match(/^\/api\/posts\/([0-9a-f-]{36})$/)) && m === 'GET') return cm.getPost(request, env, mm[1]);

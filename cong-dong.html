@@ -6,10 +6,50 @@
 <link rel="stylesheet" href="assets/css/case.css?v=12">
 <title>Cộng đồng — Tự Học Marketing Case</title>
 <meta name="description" content="Người học đăng bài phân tích chiến dịch, chia sẻ kinh nghiệm phỏng vấn, bình luận và thả tim.">
+<style>
+  #app{max-width:1180px;margin:0 auto;padding:0 clamp(16px,3vw,32px) 80px}
+  main.wrap.narrow{max-width:none}
+  .cm-head{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:clamp(22px,4vw,40px) 0 clamp(18px,3vw,30px)}
+  .cm-head h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4vw,3rem);letter-spacing:-.02em;margin:12px 0 8px}
+  .cm-head p{margin:0;color:var(--ink-70);max-width:48ch}
+  .cm-head img{width:min(320px,34vw);height:130px;object-fit:cover;border-radius:18px;border:1px solid var(--ink-12)}
+  .cm-pill{display:inline-block;font:700 11px/1 var(--sans);letter-spacing:.1em;padding:7px 12px;border-radius:999px;background:var(--terra-06);color:var(--terra);border:1px solid var(--terra-15)}
+  .cm-grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:20px;align-items:start}
+  .cm-card{background:var(--paper-card);color:var(--ink-dark);border:1px solid var(--ink-12);border-radius:20px;padding:18px 20px;margin-bottom:16px}
+  .cm-av{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--terra-06);color:var(--terra);font-weight:800;flex:none}
+  .cm-comp__row{display:flex;gap:12px;align-items:center}
+  .cm-comp input,.cm-comp textarea,.cm-comp select{width:100%;border:1px solid rgba(36,22,14,.14);background:#fff;border-radius:14px;padding:12px 14px;font:500 14.5px var(--sans);color:var(--ink-dark)}
+  .cm-comp textarea{margin-top:12px;resize:vertical}
+  .cm-comp__act{display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap}.cm-comp__act select{width:auto}.cm-comp__act span{flex:1}
+  .cm-btn{border:0;background:var(--terra);color:#fff;border-radius:999px;padding:10px 22px;font:700 14px var(--sans);cursor:pointer}
+  .cm-tag{font:700 10.5px/1 var(--sans);letter-spacing:.1em;color:var(--terra);background:var(--terra-06);padding:5px 9px;border-radius:999px}
+  .cm-poll h3{font:600 1.1rem/1.3 var(--sans);margin:12px 0}
+  .cm-poll__opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .cm-poll__opts button{display:flex;justify-content:space-between;align-items:center;gap:8px;text-align:left;border:1.5px solid rgba(36,22,14,.14);background:#fff;border-radius:14px;padding:14px;font:500 14px var(--sans);cursor:pointer;color:var(--ink-dark)}
+  .cm-poll__opts button.on{border-color:var(--terra);background:var(--terra-06)}.cm-poll__opts button:disabled{cursor:default}
+  .cm-poll__opts strong{font-size:1.3rem;color:var(--terra)}
+  .cm-poll__bar{height:6px;border-radius:9px;background:rgba(36,22,14,.1);margin:14px 0 8px;overflow:hidden}.cm-poll__bar i{display:block;height:100%;background:var(--terra)}
+  .cm-chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+  .cm-chips button{border:1px solid var(--ink-12);background:transparent;color:var(--ink);border-radius:999px;padding:7px 14px;font:600 13px var(--sans);cursor:pointer}
+  .cm-chips button.on{background:var(--terra);border-color:var(--terra);color:#fff}
+  .cm-post__h{display:flex;gap:12px;align-items:center}.cm-post__h b{display:block}.cm-post__h small{color:var(--ink-dark-50);font-size:12px}
+  .cm-post__t{display:block;font:700 1.08rem/1.35 var(--sans);margin:14px 0 6px;color:var(--ink-dark)}
+  .cm-post p{margin:0;line-height:1.6;color:var(--ink-dark-70);font-size:14.5px}
+  .cm-post__a{display:flex;gap:10px;margin-top:14px;padding-top:12px;border-top:1px solid rgba(36,22,14,.08)}
+  .cm-react{border:1px solid rgba(36,22,14,.12);background:#fff;border-radius:999px;padding:7px 14px;font:600 13px var(--sans);color:var(--ink-dark);cursor:pointer;text-decoration:none}
+  .cm-react.on{border-color:var(--terra);background:var(--terra-06);color:var(--terra)}
+  .cm-side .cm-dark{background:#173d2e;color:#eaf5ee;border-radius:20px;padding:20px;margin-bottom:16px;display:grid;gap:6px}
+  .cm-dark small{font:700 11px var(--sans);letter-spacing:.1em;opacity:.8}.cm-dark b{font:600 2.6rem/1 var(--serif)}.cm-dark span{opacity:.8}.cm-dark a{margin-top:10px;font-weight:700;color:#bff0d3}
+  .cm-side h4{font:800 11.5px var(--sans);letter-spacing:.1em;margin:0 0 8px;display:flex;justify-content:space-between}.cm-side h4 small{font-weight:600;letter-spacing:0;color:var(--ink-dark-50)}
+  .cm-side ol{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}.cm-side li{display:flex;gap:10px;align-items:center}
+  .cm-side li b{flex:1;font-weight:600;font-size:14px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.cm-side li small{color:var(--ink-dark-50);font-size:12px;white-space:nowrap}
+  .cm-rk{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(36,22,14,.06);font:700 12px var(--sans)}
+  @media(max-width:900px){.cm-grid{grid-template-columns:1fr}.cm-head img{display:none}.cm-poll__opts{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
-<main class="wrap narrow" id="app"></main>
+<main id="app"></main>
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
@@ -26,29 +66,56 @@ const kname=k=>(KINDS.find(x=>x[0]===k)||[,k])[1];
 const when=t=>new Date(t).toLocaleDateString('vi-VN',{day:'2-digit',month:'2-digit',year:'numeric'});
 const body=t=>escH(t).replace(/\n/g,'<br>');
 let kind=qp('loai')||'';
+const ago=t=>{ const m=Math.max(1,Math.round((Date.now()-t)/60000)); if(m<60) return m+' phút trước'; const h=Math.round(m/60); if(h<24) return h+' giờ trước'; const d=Math.round(h/24); return d<30?d+' ngày trước':when(t); };
+const ini=n=>(String(n||'?').trim()[0]||'?').toUpperCase();
+const excerpt=t=>{ t=String(t); return t.length>300?t.slice(0,297)+'…':t; };
 async function feed(){
   let d; try{ d=await api('/posts'+(kind?'?kind='+kind:'')); }catch(e){ if(API.on===false){ app.innerHTML=NOAPI; return; } app.innerHTML='<p class="section muted">Chưa tải được.</p>'; return; }
   const u=await account();
-  app.innerHTML=`<section class="section">
-    <span class="mono mono--red">Cộng đồng</span>
-    <h1 class="h1" style="margin:14px 0 14px">Nhìn thấy gì,<br><em>kể cho nhau nghe.</em></h1>
-    <p class="lede">Phân tích chiến dịch, kinh nghiệm phỏng vấn, câu hỏi. Bài đăng hiện ngay; nội dung bị ba người báo cáo sẽ tạm ẩn chờ xem lại.</p>
-    <div class="row" style="margin-top:18px">${[['','Tất cả'],...KINDS].map(([k,l])=>`<button class="btn ${k===kind?'':'btn--ghost'}" data-k="${k}">${l}</button>`).join('')}</div>
-  </section>
-  ${u?`<section class="section"><span class="mono mono--ink">Đăng bài</span>
-    <form id="pf" class="stack" style="margin-top:10px">
-      <select class="field" id="pk" aria-label="Loại bài">${KINDS.map(([k,l])=>`<option value="${k}" ${k===kind?'selected':''}>${l}</option>`).join('')}</select>
-      <input class="field" id="pt" maxlength="120" placeholder="Tiêu đề" aria-label="Tiêu đề">
-      <textarea class="field" id="pb" rows="5" maxlength="5000" placeholder="Viết cụ thể: thương hiệu nào, bạn thấy gì, vì sao nó đáng chú ý, số liệu nếu có." aria-label="Nội dung"></textarea>
-      <div class="row between"><span class="small muted">Số liệu không phải của bạn thì ghi nguồn.</span><button class="btn">Đăng</button></div></form></section>`
-  :`<section class="section"><p class="muted"><a href="tai-khoan.html">Đăng nhập</a> để đăng bài, bình luận và thả tim.</p></section>`}
-  <ul class="list">${d.posts.map(p=>`<li><a class="item" style="grid-template-columns:1fr auto" href="cong-dong.html?id=${p.id}">
-    <span><span class="mono">${kname(p.kind)} · ${escH(p.author)} · ${when(p.created_at)}</span><br><span class="item__t">${escH(p.title)}</span></span>
-    <span class="mono">♥ ${p.likes} · ${p.comments} bình luận</span></a></li>`).join('')||'<li class="muted" style="padding:16px 0">Chưa có bài nào. Bạn mở hàng nhé.</li>'}</ul>`;
+  const [poll,sum,lb]=await Promise.all([api('/poll').catch(()=>null),api('/community/summary').catch(()=>null),api('/leaderboard?by=xp').catch(()=>null)]);
+  const pv=poll?(poll.votes.a+poll.votes.b):0, pa=pv?Math.round(poll.votes.a/pv*100):50;
+  app.innerHTML=`
+  <header class="cm-head"><div><span class="cm-pill">● CỘNG ĐỒNG MARSOCIAL</span>
+    <h1>MarSocial Feed</h1><p>Chia sẻ góc nhìn, câu hỏi và tiến bộ học tập cùng cộng đồng.</p></div>
+    <img src="assets/img/hero_mountain.jpg" alt=""></header>
+  <div class="cm-grid"><div class="cm-main">
+    ${u?`<form id="pf" class="cm-card cm-comp">
+      <div class="cm-comp__row"><span class="cm-av">${ini(u.name)}</span><input id="pt" maxlength="120" placeholder="${escH((u.name||'Bạn').split(' ').pop())} ơi, bạn đang nghĩ gì thế?" aria-label="Tiêu đề"></div>
+      <div id="pmore" hidden>
+        <textarea id="pb" rows="4" maxlength="5000" placeholder="Viết cụ thể: thương hiệu nào, bạn thấy gì, vì sao nó đáng chú ý, số liệu nếu có." aria-label="Nội dung"></textarea>
+        <div class="cm-comp__act"><select id="pk" aria-label="Loại bài">${KINDS.map(([k,l])=>`<option value="${k}" ${k===kind?'selected':''}>${l}</option>`).join('')}</select>
+          <span class="small muted">Số liệu không phải của bạn thì ghi nguồn.</span><button class="cm-btn">Đăng</button></div></div></form>`
+    :`<div class="cm-card"><p class="muted" style="margin:0"><a href="tai-khoan.html">Đăng nhập</a> để đăng bài, bình luận và thả tim.</p></div>`}
+    ${poll?`<section class="cm-card cm-poll"><span class="cm-tag">THĂM DÒ HÔM NAY</span><h3>${escH(poll.q)}</h3>
+      <div class="cm-poll__opts">
+        <button data-v="a" class="${poll.mine==='a'?'on':''}" ${poll.mine||!u?'disabled':''}><b>${escH(poll.a)}</b><strong>${poll.mine||!u?pa+'%':''}</strong></button>
+        <button data-v="b" class="${poll.mine==='b'?'on':''}" ${poll.mine||!u?'disabled':''}><b>${escH(poll.b)}</b><strong>${poll.mine||!u?(pv?100-pa:50)+'%':''}</strong></button></div>
+      <div class="cm-poll__bar"><i style="width:${pa}%"></i></div><small>${pv} lượt bình chọn${u?'':' · đăng nhập để bình chọn'}</small></section>`:''}
+    <div class="cm-chips">${[['','Tất cả'],...KINDS].map(([k,l])=>`<button class="${k===kind?'on':''}" data-k="${k}">${l}</button>`).join('')}</div>
+    ${d.posts.map(p=>`<article class="cm-card cm-post">
+      <div class="cm-post__h"><span class="cm-av">${ini(p.author)}</span><div><b>${escH(p.author)}</b><small>${kname(p.kind)} · ${ago(p.created_at)}</small></div></div>
+      <a class="cm-post__t" href="cong-dong.html?id=${p.id}">${escH(p.title)}</a>
+      <p>${body(excerpt(p.body))}</p>
+      <div class="cm-post__a"><button class="cm-react ${p.liked?'on':''}" data-like="${p.id}" ${u?'':'disabled'}>♥ Tim <span>${p.likes}</span></button>
+        <a class="cm-react" href="cong-dong.html?id=${p.id}">💬 Bình luận (${p.comments})</a></div></article>`).join('')
+      ||'<div class="cm-card"><p class="muted" style="margin:0">Chưa có bài nào. Bạn mở hàng nhé.</p></div>'}
+  </div>
+  <aside class="cm-side">
+    <section class="cm-dark"><small>CỘNG ĐỒNG HÔM NAY</small><b>${sum?fmt(sum.learned):'—'}</b><span>bài đã hoàn thành trên hệ thống</span>
+      <a href="thong-ke.html" data-go>Xem thống kê →</a></section>
+    <section class="cm-card"><h4>VINH DANH NGƯỜI ĐÓNG GÓP</h4><p class="small muted">Bài viết và bình luận trong 30 ngày qua.</p>
+      <ol>${(sum&&sum.contributors.length?sum.contributors.map((c,i)=>`<li><span class="cm-av">${ini(c.name)}</span><b>${escH(c.name)}</b><small>${c.n} đóng góp</small></li>`).join(''):'<li class="muted">Chưa có đóng góp nào — bài đầu tiên là của bạn.</li>')}</ol></section>
+    <section class="cm-card"><h4>TOP TUẦN <small>XP tuần này</small></h4>
+      <ol>${(lb&&lb.rows.length?lb.rows.slice(0,5).map(r=>`<li><span class="cm-rk">${r.rank}</span><b>${escH(r.name)}</b><small>${fmt(r.xp)} XP</small></li>`).join(''):'<li class="muted">Tuần này chưa ai có điểm.</li>')}</ol></section>
+  </aside></div>`;
   app.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{kind=b.dataset.k;feed();});
-  const f=document.getElementById('pf'); if(f) f.onsubmit=async e=>{ e.preventDefault();
-    try{ const r=await api('/posts',{method:'POST',body:{kind:pk.value,title:pt.value,body:pb.value}}); location.href='cong-dong.html?id='+r.id; }
-    catch(err){ toast({title_too_short:'Tiêu đề cần ít nhất 4 ký tự',body_too_short:'Nội dung cần ít nhất 20 ký tự',rate_limited:'Mỗi ngày đăng tối đa 5 bài'}[err.message]||'Chưa đăng được'); } };
+  app.querySelectorAll('[data-v]').forEach(b=>b.onclick=async()=>{ try{ await api('/poll',{method:'POST',body:{choice:b.dataset.v}}); feed(); }catch(e){ toast('Chưa bình chọn được'); } });
+  app.querySelectorAll('[data-like]').forEach(b=>b.onclick=async()=>{ try{ const r=await api(`/posts/${b.dataset.like}/like`,{method:'POST',body:{}}); b.classList.toggle('on',r.liked); b.querySelector('span').textContent=r.likes; }catch(e){} });
+  const f=document.getElementById('pf');
+  if(f){ const t=document.getElementById('pt'); t.onfocus=()=>document.getElementById('pmore').hidden=false;
+    f.onsubmit=async e=>{ e.preventDefault();
+      try{ const r=await api('/posts',{method:'POST',body:{kind:pk.value,title:pt.value,body:pb.value}}); location.href='cong-dong.html?id='+r.id; }
+      catch(err){ toast({title_too_short:'Tiêu đề cần ít nhất 4 ký tự',body_too_short:'Nội dung cần ít nhất 20 ký tự',rate_limited:'Mỗi ngày đăng tối đa 5 bài'}[err.message]||'Chưa đăng được'); } }; }
 }
 async function detail(id){
   let d; try{ d=await api('/posts/'+id); }catch(e){ app.innerHTML=API.on===false?NOAPI:'<section class="section"><h1 class="h2">Không tìm thấy bài này.</h1><a href="cong-dong.html">← Cộng đồng</a></section>'; return; }

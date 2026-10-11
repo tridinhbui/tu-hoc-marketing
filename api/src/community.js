@@ -140,3 +140,50 @@ export async function moderate(req, env) {
   } else return json({ error: 'bad_action' }, 400);
   return json({ ok: true });
 }
+
+/* ---------- thăm dò mỗi ngày + tóm tắt cho cột phải ---------- */
+const POLLS = [
+  ['Một thương hiệu mới ít tiền: nên dồn vào…', 'Sản phẩm thật tốt', 'Câu chuyện thương hiệu'],
+  ['Giảm giá 20% để kéo khách: bạn thấy…', 'Hợp lý nếu có ngưỡng', 'Phá giá trị thương hiệu'],
+  ['Số liệu nào đáng tin hơn khi ra quyết định?', 'Dữ liệu hành vi', 'Khảo sát khách nói gì'],
+  ['KOL lớn hay nhiều KOC nhỏ cho ngân sách vừa?', 'Một KOL lớn', 'Nhiều KOC nhỏ'],
+  ['Quảng cáo hôm nay nên đo bằng…', 'ROAS ngắn hạn', 'Sức khoẻ thương hiệu dài hạn'],
+  ['Tăng trưởng bền hơn đến từ…', 'Khách mới', 'Khách cũ mua lại'],
+  ['Khi đối thủ giảm giá mạnh, bạn…', 'Giữ giá, đổi cách nói', 'Giảm theo để giữ khách'],
+  ['Một insight tốt thường đến từ…', 'Phỏng vấn người dùng', 'Phân tích dữ liệu'],
+  ['Ra mắt sản phẩm: bắt đầu ở…', 'Một tệp hẹp, làm thật kỹ', 'Phủ rộng để học nhanh'],
+  ['Slogan hay giá trị hơn ở…', 'Dễ nhớ, vui tai', 'Nói đúng một lợi ích'],
+];
+const dayIndex = () => Math.floor(Date.parse(today()) / 864e5);
+const pollOf = () => { const i = dayIndex() % POLLS.length, [q, a, b] = POLLS[i]; return { id: today(), q, a, b }; };
+
+export async function pollGet(req, env) {
+  const u = await currentUser(req, env), p = pollOf();
+  const rows = (await env.DB.prepare('SELECT choice, COUNT(*) AS n FROM poll_votes WHERE poll_id = ?1 GROUP BY choice').bind(p.id).all()).results || [];
+  const votes = { a: 0, b: 0 }; for (const r of rows) votes[r.choice] = r.n;
+  const mine = u ? (await env.DB.prepare('SELECT choice FROM poll_votes WHERE poll_id = ?1 AND user_id = ?2').bind(p.id, u.id).first())?.choice || null : null;
+  return json({ ...p, votes, mine });
+}
+export async function pollVote(req, env) {
+  const u = await currentUser(req, env);
+  if (!u) return json({ error: 'login_required' }, 401);
+  const b = await body(req, 500), choice = b.choice === 'a' || b.choice === 'b' ? b.choice : null;
+  if (!choice) return json({ error: 'bad_choice' }, 400);
+  await env.DB.prepare('INSERT OR IGNORE INTO poll_votes (poll_id, user_id, choice, created_at) VALUES (?1, ?2, ?3, ?4)')
+    .bind(pollOf().id, u.id, choice, now()).run();
+  return pollGet(req, env);
+}
+
+/* Số thật: bài đã hoàn thành trên hệ thống + người đóng góp 30 ngày (bài, bình luận) — không tính tài khoản hệ thống. */
+export async function communitySummary(req, env) {
+  const since = now() - 30 * 864e5;
+  const learned = (await env.DB.prepare(`SELECT COUNT(*) AS n FROM lesson_progress WHERE state IN ('learned','passed','solid','mastered')`).first())?.n || 0;
+  const rows = (await env.DB.prepare(
+    `SELECT t.user_id, u.display_name, COUNT(*) AS n FROM (
+        SELECT user_id FROM posts WHERE hidden = 0 AND created_at > ?1
+        UNION ALL SELECT user_id FROM comments WHERE hidden = 0 AND created_at > ?1) t
+     JOIN users u ON u.id = t.user_id WHERE u.email NOT LIKE '%@system.invalid'
+     GROUP BY t.user_id ORDER BY n DESC LIMIT 5`).bind(since).all()).results || [];
+  return json({ learned, contributors: rows.map((r) => ({ name: publicName({ id: r.user_id, display_name: r.display_name }), n: r.n })) },
+    200, { 'cache-control': 'public, max-age=120' });
+}
