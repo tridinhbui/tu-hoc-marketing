@@ -273,10 +273,10 @@ async function load(){
   try{ state.user=await account(); }catch(e){}
 }
 function render(){
-  const play=visitable(), got=play.filter(p=>state.visited.has(p.id)).length;
+  const play=visitable().filter(p=>!p.local), got=play.filter(p=>state.visited.has(p.id)).length;
   app.innerHTML=`<div class="wd">
     <header><span class="eyebrow">Vương quốc Marketing</span><h1>Đi dạo, rồi vào một toà để chơi.</h1>
-      <p class="lede">Mỗi toà nhà là một cách luyện. Ghé mỗi toà một lần mỗi ngày được +5 xu (khi đã đăng nhập). Xu dùng ở Chợ. Chỗ có nhãn “sắp có” là game đang được xây.</p></header>
+      <p class="lede">Mỗi toà nhà là một cách luyện. Ghé mỗi toà có thưởng một lần mỗi ngày được +5 xu (khi đã đăng nhập). Các mini-game chấm sao: sao mới cho XP, đủ sao trong một khu thì mở rương, huy hiệu và áo mới. Xu dùng ở Chợ.</p></header>
     ${state.user?`<div class="kp"><div><small>Cấp</small><b>${state.level}</b></div>
       <div><small>Xu</small><b>${state.coins===null?'—':fmt(state.coins)}</b></div>
       <div><small>Toà đã ghé hôm nay</small><b>${got} / ${play.length}</b></div>

@@ -15,6 +15,8 @@ node tools_validate_bai.mjs         # kiểm định từng module bài (đã c�
 | `content-integrity.test.mjs` | Đáp án nằm trong phương án, mọi phương án có lời giải, mã lỗi tồn tại, `ans` có trong `steps`, tham chiếu bài có thật, hồi quy các lỗi số học đã xác minh |
 | `quiz-quality.test.mjs` | Thiên lệch vị trí đáp án, đáp án đúng dài nhất, từ tuyệt đối làm lộ đáp án (ngưỡng ratchet ở `baselines.json`), câu judge đoán được bằng mẹo, pool đề đủ |
 | `tasks.test.mjs` | Bài thực hành có đầu ra: đủ dữ liệu cho sẵn, rubric, bài làm mẫu |
+| `games.test.mjs` | Mô hình mini-game thuần và công bằng: tối ưu đạt 3 sao, chiến lược cố định/"đông nhất" không đạt, thang sao đơn điệu |
+| `world-map.test.mjs` | Bản đồ vương quốc: id duy nhất, toạ độ trong khung, khớp cấu hình máy chủ, ngưỡng rương/trang phục đạt được |
 | `capstone.test.mjs`, `glossary.test.mjs` | Dữ liệu capstone tự khớp; thuật ngữ đúng và liên kết bài có thật |
 
 `baselines.json` là ngưỡng ratchet: chỉ hạ khi nội dung tốt lên.

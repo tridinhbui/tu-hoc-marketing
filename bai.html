@@ -543,7 +543,7 @@ function render(){
     :'Đọc xong từng phần, tự nói lại ý chính bằng một câu rồi hãy cuộn xuống tiếp.';
   app.innerHTML=`
   <header class="lp-head"><div class="lp-head__in">
-    <a class="lp-back" href="hoc.html">${ICON.back}<span>Quay lại</span></a>
+    <a class="lp-back" href="hoc.html" id="back">${ICON.back}<span>Quay lại</span></a>
     <div class="lp-ttl"><b>${escH(M.t)}</b><span>${escH(W.mod.t)} · Bài ${nth}</span></div>
     <div class="lp-tools">
       <span class="lp-pill fs" role="group" aria-label="Cỡ chữ"><button type="button" data-fs="-1" aria-label="Chữ nhỏ hơn">A−</button><span class="v" id="fsV">100%</span><button type="button" data-fs="1" aria-label="Chữ lớn hơn">A+</button></span>
@@ -812,6 +812,7 @@ function wireExtra(){
     if(liveP>=savedP+4||(liveP>=98&&savedP<98)){ savedP=Math.round(liveP); LS.set('prog',savedP); }
     refreshHud(); };
   window.addEventListener('scroll',calc,{passive:true}); window.addEventListener('resize',calc); calc();
+  document.getElementById('back').onclick=e=>{ if(history.length>1&&document.referrer&&new URL(document.referrer).origin===location.origin){ e.preventDefault(); history.back(); } };
   document.getElementById('markRead').onclick=()=>{ savedP=100; LS.set('prog',100); refreshHud(); toast('Đã đánh dấu đọc hết bài'); };
 
   /* đánh dấu bài */
