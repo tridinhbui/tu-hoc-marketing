@@ -106,7 +106,7 @@ Cách làm: chạy `wrangler dev` thật với người dùng mới, gọi 20 en
 | `pvp.html` Đấu trường | Khi chưa có người học thật trong tuần, đối thủ là "Bóng ma luyện tập" với điểm cố định `ghost_default = 3/5` (`opponent_real:false`) | Seed ghost từ kết quả thật; hiện "đối thủ thật" khi có ≥ 5 người; điểm ghost theo độ khó |
 | `tro-choi.html` | Mô hình 8 quý cố định, số liệu minh hoạ, không lưu kỷ lục | Lưu điểm tốt nhất + bảng xếp hạng tuần |
 | `capstone.html`, `giai-case.html` | 5 thương hiệu đều "giả định" (Cocomi, Lá Trà, Mơ, thẻ hoàn tiền, Sổ Bán Hàng) | Thêm case dựa trên số liệu công khai của thương hiệu thật, ghi nguồn |
-| `boss.html` | `fixed_pool:true` — bộ câu hỏi boss cố định, HP 1.000.000 dùng chung | Xoay vòng pool theo tuần |
+| `boss.html` | Câu hỏi boss rút theo (người, tuần) từ bài đã học nên **đổi mỗi tuần**; `fixed_pool:true` chỉ là phương án dự phòng cho người chưa học bài nào. HP 1.000.000 dùng chung cả server | Giữ; có thể thêm boss theo chủ đề |
 
 ### B. Sơ sài: trang chỉ để đọc, không theo dõi gì
 `ban-do`, `collections`, `library`, `tap-chi`, `timeline`, `world`, `xray` có **0 tương tác, 0 lưu trữ, 0 XP**. Mở xong không ghi "đã xem", không nối với năng lực.
@@ -145,6 +145,8 @@ Cách làm: chạy `wrangler dev` thật với người dùng mới, gọi 20 en
 | Cộng đồng trống | Migration `0006_seed_community.sql`: 6 bài mở hàng của "Ban biên tập" (tài khoản `.invalid`, bị loại khỏi số người học) — đã áp lên D1 production |
 | Bóng ma PvP cố định 3/5 | Điểm bóng ma nay tăng theo cấp (≈45% ở cấp 1 → 75% ở cấp 11+); vẫn gắn nhãn "Bóng ma luyện tập" |
 | Ngân hàng Phòng thử thách | 13 → 31 thử thách |
-| Case có bấm giờ | 5 → 8 case (miễn phí giao hàng, CAC khoá học, voucher sàn); số liệu đã kiểm tra thủ công, test nội dung qua |
+| Case có bấm giờ | 5 → 12 case (thêm: miễn phí giao hàng, CAC khoá học, voucher sàn, tăng giá thuê bao, share of voice, sampling, chia ngân sách hai kênh); số liệu đã kiểm tra thủ công, test nội dung qua |
 | Bỏ theo yêu cầu | "Sổ tay & bàn làm việc" gỡ khỏi sidebar; không gắn XP bàn làm việc |
-| Còn lại | Case có bấm giờ mới 8/12; `boss` vẫn dùng pool cố định; ghost PvP chưa lấy từ người thật khi dữ liệu còn ít |
+| Còn lại | ghost PvP chưa lấy từ người thật khi dữ liệu còn ít (hiện 1 người học thật) |
+
+- Thêm `tests/links.test.mjs`: mọi liên kết nội bộ, mục sidebar và tài nguyên `assets/` phải tồn tại (59/59 test qua).

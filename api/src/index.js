@@ -90,6 +90,13 @@ async function route(request, env, url) {
                 { 'cache-control': 'public, max-age=300' });
   }
 
+  /* Số người đã học từng bài (đã xong ít nhất mức "learned"). Chỉ đếm, không lộ ai. */
+  if (p === '/api/lessons/learners' && m === 'GET') {
+    const rows = (await env.DB.prepare(
+      `SELECT lesson_id, COUNT(*) AS n FROM lesson_progress WHERE state IN ('learned','passed','solid','mastered') GROUP BY lesson_id`).all()).results || [];
+    return json({ counts: Object.fromEntries(rows.map((r) => [r.lesson_id, r.n])) }, 200, { 'cache-control': 'public, max-age=300' });
+  }
+
   if (p === '/api/posts' && m === 'GET') return cm.listPosts(request, env);
   if (p === '/api/posts' && m === 'POST') return cm.createPost(request, env);
   if ((mm = p.match(/^\/api\/posts\/([0-9a-f-]{36})$/)) && m === 'GET') return cm.getPost(request, env, mm[1]);
