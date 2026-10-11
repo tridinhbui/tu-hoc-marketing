@@ -30,9 +30,12 @@
   /* bong bóng chat */
   '.yy-fab{position:fixed;right:18px;bottom:84px;z-index:70;border:0;padding:0;cursor:pointer;background:none}' +
   '.yy-fab .yy-av{width:54px;height:54px;font-size:22px}' +
-  '.yy-fab--solo{bottom:22px}' +
+  '.yy-fab--solo{bottom:22px;display:flex;align-items:center;gap:10px;background:#fffdf8;border:1px solid rgba(120,84,50,.22);border-radius:999px;padding:6px 16px 6px 6px;box-shadow:0 18px 36px -16px rgba(60,30,10,.6)}' +
+  '.yy-fab--solo .yy-av{width:48px;height:48px}.yy-fab--solo b{font:700 14px var(--sans,system-ui);color:#2B1A11}' +
+  '.yy-fab--solo::before{content:"";position:absolute;inset:-5px;border-radius:999px;border:2px solid rgba(184,80,45,.35);animation:yyp 2.4s ease-out infinite;pointer-events:none}' +
+  '@keyframes yyp{0%{transform:scale(.96);opacity:.9}100%{transform:scale(1.12);opacity:0}}' +
   '.yy-tip{position:fixed;right:84px;bottom:92px;z-index:70;max-width:min(300px,calc(100vw - 120px));background:#fffdf8;color:#2B1A11;border:1px solid rgba(120,84,50,.2);border-radius:16px 16px 4px 16px;padding:11px 14px;font:500 13.5px/1.5 var(--sans,system-ui);box-shadow:0 14px 30px -14px rgba(60,30,10,.5);cursor:pointer}' +
-  '.yy-tip--solo{bottom:30px}' +
+  '.yy-tip--solo{right:22px;bottom:88px;border-radius:16px 16px 16px 4px}' +
   '.yy-panel{position:fixed;right:18px;bottom:150px;z-index:71;width:min(380px,calc(100vw - 36px));height:min(520px,calc(100vh - 190px));display:flex;flex-direction:column;background:#FFFCF6;color:#2B1A11;border:1px solid rgba(120,84,50,.2);border-radius:22px;box-shadow:0 30px 60px -24px rgba(60,30,10,.55);overflow:hidden}' +
   '.yy-panel--solo{bottom:90px}' +
   '.yy-panel[hidden]{display:none}' +
@@ -93,6 +96,37 @@
     });
   };
 
+
+  /* ---------- gõ chữ cho đoạn mô tả có sẵn trong trang ----------
+     YY.autoType('.lede, .hero p', {once:'khóa'}) — mỗi phần tử gõ khi cuộn tới, một lần cho mỗi phiên (theo khoá). */
+  YY.autoType = function(selector, opt){
+    opt = opt || {};
+    if (REDUCED) return;
+    if (opt.once) { try { if (sessionStorage.getItem('yy.typed:' + opt.once)) return; } catch(e){} }
+    var els = Array.prototype.slice.call(document.querySelectorAll(selector)).filter(function(el){
+      if (el.__yyTyped || el.closest('[hidden]') || el.querySelector('input,textarea,button,select,svg,img')) return false;
+      var n = (el.textContent || '').trim().length; return n >= 20 && n <= 420;
+    });
+    if (!els.length) return;
+    if (opt.once) { try { sessionStorage.setItem('yy.typed:' + opt.once, '1'); } catch(e){} }
+    var begin = function(el){
+      if (el.__yyGo) return; el.__yyGo = 1;
+      YY.typeHTML(el, el.__yyHTML).then(function(){ el.style.minHeight = ''; });
+    };
+    var inView = function(el){ var r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < (window.innerHeight || 800); };
+    var ob = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ ob.unobserve(e.target); begin(e.target); } });
+    }, { threshold: .4 }) : null;
+    els.forEach(function(el){
+      el.__yyTyped = 1; el.__yyHTML = el.innerHTML;
+      el.style.minHeight = el.offsetHeight + 'px'; el.textContent = '\u200b';
+      if (ob) ob.observe(el); else begin(el);
+      /* dự phòng: tab ẩn / khung chưa vẽ thì IntersectionObserver không chạy — nếu đã nằm trong màn hình thì vẫn gõ */
+      setTimeout(function(){ if (!el.__yyGo && inView(el)) begin(el); }, 2200);
+      setTimeout(function(){ if (!el.__yyGo) { el.innerHTML = el.__yyHTML; el.style.minHeight = ''; el.__yyGo = 1; } }, 20000);
+    });
+  };
+
   /* ---------- thẻ "Ý Ý tóm tắt" ---------- */
   /* rows: [[nhãn, html], …]. Trả về HTML giữ chỗ; YY tự gõ khi thẻ lọt vào màn hình. */
   YY.sumHTML = function(o){
@@ -119,6 +153,7 @@
     (root || document).querySelectorAll('.yy-sum[data-yy]').forEach(function(c){
       if (c.__yyw) return; c.__yyw = 1;
       if (io) io.observe(c); else play(c);
+      setTimeout(function(){ if (!c.__yy) { var r = c.getBoundingClientRect(); if (r.bottom > 0 && r.top < (window.innerHeight || 800) && !c.closest('[hidden]')) play(c); } }, 2200);
     });
   }
   YY.scan = scan;
@@ -241,7 +276,7 @@
   function build(){
     var solo = cfg.mode === 'landing';
     fab = document.createElement('button'); fab.className = 'yy-fab' + (solo ? ' yy-fab--solo' : ''); fab.type = 'button';
-    fab.setAttribute('aria-label', 'Mở trò chuyện với Ý Ý'); fab.innerHTML = AV();
+    fab.setAttribute('aria-label', 'Mở trò chuyện với Ý Ý'); fab.innerHTML = AV() + (solo ? '<b>Hỏi Ý Ý</b>' : '');
     panel = document.createElement('section'); panel.className = 'yy-panel' + (solo ? ' yy-panel--solo' : ''); panel.hidden = true;
     panel.setAttribute('aria-label', 'Trò chuyện với Ý Ý');
     panel.innerHTML = '<header class="yy-ph">' + AV() + '<div><b>Ý Ý</b><small>Bạn đồng hành học marketing</small></div><button class="yy-x" type="button" aria-label="Đóng">×</button></header>' +

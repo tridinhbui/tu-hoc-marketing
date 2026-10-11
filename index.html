@@ -379,14 +379,16 @@
 </script>
 <script src="assets/js/landing-sections.js?v=1"></script>
 <script src="assets/js/landing-motion.js?v=3"></script>
-<script src="assets/js/yy.js?v=1"></script>
+<script src="assets/js/yy.js?v=3"></script>
 <script>
 YY.mount({
   mode:'landing', base:'',
   greet:'Chào bạn! Mình là Ý Ý — bạn đồng hành học marketing. Mình có thể kể bạn nghe nền tảng này học thế nào, miễn phí ra sao, và nên bắt đầu từ đâu.',
   chips:['Học ở đây thế nào?','Có miễn phí không?','Nên bắt đầu từ đâu?','Case có bấm giờ là gì?'],
   go:function(h){ location.href='dang-nhap.html?next='+encodeURIComponent('/'+h); },
-  onReady:function(){ setTimeout(function(){ YY.tip('landing','Chào bạn, mình là Ý Ý. Hỏi mình bất cứ điều gì về cách học marketing ở đây nhé!'); },2500); }
+  onReady:function(){
+    setTimeout(function(){ YY.autoType('.lp-lead, .lp-p'); },900);
+    setTimeout(function(){ YY.tip('landing','Chào bạn, mình là Ý Ý. Hỏi mình bất cứ điều gì về cách học marketing ở đây nhé!'); },2500); }
 });
 </script>
 </body>

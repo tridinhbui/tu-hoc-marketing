@@ -256,6 +256,6 @@ async function show() {
   setInterval(async () => { if (tab !== 'chats' && !document.hidden) { try { const d = await api('/admin/chats'); badge = d.threads.filter((x) => x.unread).length; paintNav(); } catch (e) {} } }, 30000);
 })();
 </script>
-<script src="assets/js/paper.js?v=4"></script>
+<script src="assets/js/paper.js?v=5"></script>
 </body>
 </html>
