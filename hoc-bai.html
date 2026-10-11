@@ -436,7 +436,7 @@ function renderL(){
         <span class="btn" style="pointer-events:none">${cur?'Học tiếp':'Mở thư viện case'} ${ic('right')}</span>
         <span class="prog">Tiến độ (${doneN}/${keys.length} bài) <span class="bar"><i style="width:${Math.max(2,p)}%"></i></span><b>${p}%</b></span>
       </span>
-      <span class="hero__img"><img src="assets/img/hero_mountain.jpg" alt="" loading="eager"></span>
+      <span class="hero__img"><img src="assets/img/art-journey.svg" alt="" loading="eager"></span>
     </a>
     <div class="tabs" role="tablist" aria-label="Lộ trình">
       <button class="tab" role="tab" data-track="full" aria-selected="${track==='full'}">Chương trình đầy đủ <small>${ALL.filter(x=>s.done[x.key]).length}/${ALL.length} bài</small></button>
@@ -517,7 +517,7 @@ function renderR(u){
   const R=document.getElementById('colR');
   R.innerHTML=`
     <div class="cardx notes">
-      <img src="assets/img/notebook_field_art.jpg" alt="" loading="lazy">
+      <img src="assets/img/art-notebook.svg" alt="" loading="lazy">
       <button class="colbtn" data-col="notes" aria-label="${col.notes?'Mở rộng':'Thu gọn'}">${ic(col.notes?'down':'up')}</button>
       <div style="display:flex;gap:14px;align-items:flex-start">
         <span class="nb"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2" fill="#fef3c7" stroke="#d97706" stroke-width="1.6"/><path d="M5 7h-1.5M5 11h-1.5M5 15h-1.5M5 19h-1.5" stroke="#78350f" stroke-width="1.6" stroke-linecap="round"/><path d="M9 9h6M9 13h4" stroke="#d97706" stroke-width="1.6" stroke-linecap="round"/><path d="M15 17c1.5-3 3.5-3.5 4.5-3-0.5 2-2 3.5-4.5 3z" fill="#84a33a"/></svg></span>
@@ -540,7 +540,7 @@ function renderR(u){
         <path d="M86 26v44" stroke="#6b4423" stroke-width="2.5"/><path d="M86 26l18 6-18 6z" fill="#6b4423"/>
         <path d="M30 96l6-16 6 16z" fill="#5f7a24"/><path d="M104 100l5-13 5 13z" fill="#6b4423"/><path d="M48 104l5-12 5 12z" fill="#84a33a"/></svg>
     </div>
-    <button class="practice" id="prac"><span class="im"><img src="assets/img/mountains_panorama_banner.jpg" alt="" loading="lazy"></span>
+    <button class="practice" id="prac"><span class="im"><img src="assets/img/art-panorama.svg" alt="" loading="lazy"></span>
       <b>Luyện tập không giới hạn (không tính XP)</b>${ic('right')}</button>
     ${nextCase?`<div class="next"><span class="troph">${ic('trophy')}</span><span><small>THỬ THÁCH TIẾP THEO</small><strong>Case: ${escH(nextCase.t)}</strong></span>
       <a href="giai-case.html?id=${nextCase.id}">Vào thi ngay ${ic('right')}</a></div>`:''}

@@ -53,6 +53,22 @@
     .frow>.label{order:2;justify-self:end}
     .frow__line{order:3;grid-column:1/-1;opacity:1;transform:none;margin-top:4px}
   }
+  .wl{padding-block:clamp(26px,4vw,56px);border-bottom:var(--rule);display:grid;gap:clamp(18px,3vw,36px)}
+  @media(min-width:960px){.wl{grid-template-columns:.8fr 1.2fr;align-items:start}}
+  .wl__n{font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.6rem);line-height:1;letter-spacing:-.02em}
+  .wl__bar{display:flex;gap:6px;margin:14px 0 8px}
+  .wl__bar a{flex:1;height:8px;border-radius:99px;background:var(--ink-14,rgba(0,0,0,.12));transition:background .3s}
+  .wl__bar a.on{background:var(--c)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+  .chips button{border:1px solid var(--ink-14,rgba(0,0,0,.18));background:transparent;color:inherit;border-radius:999px;padding:7px 14px;font:600 13px var(--sans);cursor:pointer}
+  .chips button[aria-pressed="true"]{background:var(--ink);color:var(--paper-card,#fff);border-color:var(--ink)}
+  .gate{margin-top:30px;border:1px dashed rgba(120,84,50,.35);border-radius:18px;padding:18px}
+  .gate.is-open{border-style:solid;border-color:var(--accent)}
+  .gate__head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}
+  .gate__stamp{font:700 11px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+  .gate p.gate__ask{font-family:var(--serif);font-size:1.15rem;line-height:1.3;margin:4px 0 12px}
+  .gate .lab__field{margin-bottom:6px}
+  .gate__saved{font-size:12px;opacity:.55;min-height:16px;margin-bottom:14px}
   .reads a i{font-style:normal;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--ink-38)}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=4">
@@ -71,12 +87,22 @@
         Bạn chọn khu vực mình đang cần, đọc câu hỏi trước cửa, rồi đi vào. Có thể quay lại bất cứ lúc nào.</p>
     </div>
   </section>
+  <section class="wrap wl" id="phong-tap">
+    <div data-reveal>
+      <div class="label label--accent">Bài tập</div>
+      <div class="wl__n"><span id="wlN">0</span>/6 khu đã qua cửa</div>
+      <div class="wl__bar" id="wlBar"></div>
+      <p class="caption">Mỗi khu có một cánh cửa: trả lời câu hỏi trước cửa, rồi làm ba câu kiểm tra. Hoặc khởi động ở đây bằng việc xếp mảng nghề vào đúng khu.</p>
+    </div>
+    <div id="sortLab" data-reveal data-delay=".08"></div>
+  </section>
   <section class="wrap" style="padding-block:clamp(34px,5vw,80px);border-bottom:var(--rule)">
     <div class="pagehead__grid" style="align-items:end">
       <h2 class="h-serif" data-reveal>Mười ba mảng nghề,<br>sáu khu để đi.</h2>
       <p class="caption" data-reveal data-delay=".08">Ngoài đời người ta gọi công việc bằng tên mảng — PR, content, performance, pricing.
         Ở đây chúng được xếp vào khu vực có cùng cách nghĩ. Rê chuột lên một dòng để thấy nó nói về cái gì.</p>
     </div>
+    <div class="chips" id="fchips" role="group" aria-label="Lọc theo khu"></div>
     <div class="fields" id="fields"></div>
   </section>
 
@@ -87,6 +113,7 @@
 <script src="assets/js/data/districts.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/campaigns.js?v=8"></script>
+<script src="assets/js/lab.js?v=1"></script>
 <script>
 shell('world.html');
 document.getElementById('world').innerHTML = DISTRICTS.map((x,i)=>{
@@ -109,6 +136,13 @@ document.getElementById('world').innerHTML = DISTRICTS.map((x,i)=>{
         <blockquote class="ask">${x.ask}</blockquote>
         <div class="label" style="margin-top:30px">Đọc trong khu này</div>
         <div class="reads">${reads}</div>
+        <div class="gate" id="gate-${x.id}" data-gate="${x.id}" style="--accent:${x.color}">
+          <div class="gate__head"><span class="label">Cửa vào khu</span><span class="gate__stamp" id="stamp-${x.id}"></span></div>
+          <p class="gate__ask">${x.ask}</p>
+          <textarea class="lab__field" data-door="${x.id}" placeholder="Viết câu trả lời của bạn trước khi vào khu (lưu trên máy này)"></textarea>
+          <div class="gate__saved" id="saved-${x.id}"></div>
+          <div class="gate__quiz" id="gq-${x.id}"></div>
+        </div>
       </div>
     </div>
   </section>`;
@@ -120,6 +154,72 @@ document.getElementById('fields').innerHTML = FIELDS.map(f=>{
     <span class="frow__line">${f.line}</span>
     <span class="label" style="color:${d.color}">${d.name}</span>
   </a>`;}).join('');
+
+/* ---------------- tương tác & bài tập ---------------- */
+const passed = () => DISTRICTS.filter(d => State.has('districts', d.id));
+function paintProgress(){
+  const p = passed();
+  document.getElementById('wlN').textContent = p.length;
+  document.getElementById('wlBar').innerHTML = DISTRICTS.map(d =>
+    `<a href="#${d.id}" title="${d.name}" class="${p.includes(d) ? 'on' : ''}" style="--c:${d.color}"></a>`).join('');
+  DISTRICTS.forEach(d => {
+    const g = document.getElementById('gate-' + d.id), on = State.has('districts', d.id);
+    g.classList.toggle('is-open', on);
+    document.getElementById('stamp-' + d.id).textContent = on ? '✓ Đã qua cửa' : '';
+  });
+}
+
+/* lọc bảng mảng nghề theo khu */
+let fcur = 'all';
+function paintChips(){
+  document.getElementById('fchips').innerHTML = [['all','Tất cả'], ...DISTRICTS.map(d => [d.key, d.name])]
+    .map(([k, t]) => `<button type="button" data-f="${k}" aria-pressed="${fcur === k}">${t}</button>`).join('');
+  document.querySelectorAll('#fchips [data-f]').forEach(b => b.onclick = () => { fcur = b.dataset.f; paintChips(); filterRows(); });
+}
+function filterRows(){
+  document.querySelectorAll('#fields .frow').forEach((r, i) => { r.hidden = fcur !== 'all' && FIELDS[i].d !== fcur; });
+}
+paintChips();
+
+/* bài tập khởi động: mảng nghề thuộc khu nào */
+function sortItems(){
+  const opts = DISTRICTS.map(d => ({ t: d.name, c: d.color }));
+  return Lab.pick(FIELDS, 6).map(f => ({
+    q: `${f.t} (${f.vi}) thuộc khu nào?`, ctx: f.line, opts, a: DISTRICTS.findIndex(d => d.key === f.d),
+    why: `${f.t} nằm trong ${DISTRICTS.find(d => d.key === f.d).name} (${DISTRICTS.find(d => d.key === f.d).vi}): ${DISTRICTS.find(d => d.key === f.d).line}`
+  }));
+}
+Lab.quiz(document.getElementById('sortLab'), { id: 'world:sort', tag: 'Khởi động · xếp nghề vào khu', items: sortItems(), chips: true, xp: 5, fresh: sortItems });
+
+/* cửa từng khu: câu hỏi trước cửa + ba câu kiểm tra sinh từ chính dữ liệu của khu */
+function gateItems(x){
+  const others = DISTRICTS.filter(d => d.key !== x.key);
+  const mine = FIELDS.filter(f => f.d === x.key), theirs = FIELDS.filter(f => f.d !== x.key);
+  const topicOpts = Lab.shuffle([Lab.pick(x.topics, 1)[0], ...Lab.pick(others.flatMap(d => d.topics).filter(t => !x.topics.includes(t)), 3)]);
+  const topicOk = topicOpts.find(t => x.topics.includes(t));
+  const nameOpts = Lab.shuffle([x, ...Lab.pick(others, 3)]);
+  const fieldOpts = Lab.shuffle([Lab.pick(mine, 1)[0], ...Lab.pick(theirs, 3)]);
+  const fieldOk = fieldOpts.find(f => f.d === x.key);
+  return [
+    { q: `Chủ đề nào thuộc khu ${x.name}?`, opts: topicOpts, a: topicOpts.indexOf(topicOk),
+      why: `"${topicOk}" là một trong sáu chủ đề của ${x.name}: ${x.topics.join(' · ')}.` },
+    { q: 'Câu hỏi sau là cánh cửa của khu nào?', ctx: x.ask, opts: nameOpts.map(d => d.name), a: nameOpts.indexOf(x),
+      why: `Đó là câu hỏi trước cửa của ${x.name} — ${x.line}` },
+    { q: `Mảng nghề nào thuộc ${x.name}?`, opts: fieldOpts.map(f => `${f.t} (${f.vi})`), a: fieldOpts.indexOf(fieldOk),
+      why: `${fieldOk.t}: ${fieldOk.line}` }
+  ];
+}
+DISTRICTS.forEach(x => {
+  const ta = document.querySelector(`[data-door="${x.id}"]`), sv = document.getElementById('saved-' + x.id);
+  ta.value = (State.get().answers || {})['door:' + x.id] || '';
+  let t; ta.oninput = () => { clearTimeout(t); t = setTimeout(() => {
+    State.set({ answers: { ...(State.get().answers || {}), ['door:' + x.id]: ta.value } }); sv.textContent = 'Đã lưu trên máy này.'; }, 500); };
+  Lab.quiz(document.getElementById('gq-' + x.id), {
+    id: 'world:gate:' + x.id, tag: `Qua cửa · ${x.name}`, items: gateItems(x), fresh: () => gateItems(x), xp: 5,
+    onDone: (ok, total) => { if (ok >= 2) { State.push('districts', x.id); paintProgress(); } }
+  });
+});
+paintProgress();
 
 reveal();
 </script>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#5a2a12" flood-opacity=".28"/></filter></defs>
+<rect width="800" height="400" fill="#F4DFC4"/>
+<g filter="url(#sh)">
+<path d="M150 70 H650 L610 140 H190Z" fill="#EFB59A"/>
+<path d="M200 150 H600 L566 220 H234Z" fill="#E08A62"/>
+<path d="M248 230 H552 L526 296 H274Z" fill="#C85A32"/>
+<path d="M290 306 H510 L496 360 H304Z" fill="#7A2E14"/>
+</g>
+<g font-family="Georgia,serif" font-size="30" text-anchor="middle" fill="#2B1A11"><text x="400" y="116">1000</text><text x="400" y="198" fill="#FFF8EC">320</text><text x="400" y="274" fill="#FFF8EC">64</text><text x="400" y="344" fill="#FFF8EC">12</text></g>
+<g fill="#E5B24B"><circle cx="90" cy="110" r="10"/><circle cx="120" cy="150" r="7"/><circle cx="710" cy="120" r="9"/><circle cx="690" cy="170" r="6"/></g>
+</svg>

@@ -30,6 +30,15 @@
   .quotebox{padding:clamp(40px,7vw,100px) 0;border-block:var(--rule);display:grid;gap:24px}
   @media(min-width:860px){.quotebox{grid-template-columns:1.4fr 1fr;align-items:end}}
   .districts{padding-bottom:clamp(40px,6vw,90px)}
+  .gym{padding-top:clamp(28px,4vw,56px)}
+  .gym__head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+  .gym__prog{display:flex;gap:6px;align-items:center;font:600 13px var(--sans)}
+  .gym__prog i{width:34px;height:7px;border-radius:99px;background:var(--ink-14,rgba(0,0,0,.14))}
+  .gym__prog i.on{background:var(--accent)}
+  .gym__grid{display:grid;gap:16px}
+  @media(min-width:1000px){.gym__grid{grid-template-columns:repeat(3,1fr);align-items:start}}
+  .gym__step{font:700 11px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
+  .gym .lab__q{font-size:1.15rem}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=4">
 </head>
@@ -82,6 +91,20 @@
       <div data-reveal data-delay=".14"><div class="label">Một thương hiệu để bóc tách</div><div id="botw"></div></div>
       <div data-reveal data-delay=".2"><div class="label">Thử một challenge</div><div id="chotw"></div></div>
     </aside>
+  </section>
+
+  <!-- PHÒNG TẬP HÔM NAY -->
+  <section class="wrap gym" id="gym">
+    <div class="gym__head">
+      <div><div class="label label--accent">Phòng tập hôm nay</div>
+        <h2 class="h-serif" style="margin:6px 0 0">Ba bước để học số này.</h2></div>
+      <div class="gym__prog" id="gymProg"></div>
+    </div>
+    <div class="gym__grid">
+      <div><p class="gym__step">1 · Đoán insight</p><div id="gym1"></div></div>
+      <div><p class="gym__step">2 · Tự trả lời trước</p><div id="gym2"></div></div>
+      <div><p class="gym__step">3 · Chọn hướng đi</p><div id="gym3"></div></div>
+    </div>
   </section>
 
   <section class="wrap rmap" id="rmap">
@@ -142,6 +165,7 @@
 <script src="assets/js/data/challenges.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/roadmap.js?v=7"></script>
+<script src="assets/js/lab.js?v=1"></script>
 <script>
 shell('tap-chi.html');
 
@@ -243,8 +267,60 @@ document.getElementById('dlist').innerHTML = DISTRICTS.map((x,i)=>`
     <span class="label" style="color:${x.color}">${x.topics.length} chủ đề</span>
   </a>`).join('');
 document.getElementById('subhome').innerHTML = subscribeBox('home');
+/* ---------------- phòng tập hôm nay ---------------- */
+(function(){
+  const today = new Date().toISOString().slice(0,10), K = 'gym:' + today;
+  const state = () => Lab.get(K) || { s: [0,0,0] };
+  const mark = (i) => { const g = state(); g.s[i] = 1; Lab.set(K, g); paint();
+    if (g.s.every(Boolean)) { State.touch(); Lab.xp(K, 6); } };
+  function paint(){
+    const s = state().s;
+    document.getElementById('gymProg').innerHTML = s.map(v => `<i class="${v ? 'on' : ''}"></i>`).join('') +
+      `<span>${s.filter(Boolean).length}/3 xong</span>`;
+  }
+  paint();
+
+  /* 1 · đoán insight thật của case hôm nay trong ba phương án */
+  const cut = (t) => { const x = t.split(/(?<=[.!?])\s/)[0]; return x.length > 170 ? x.slice(0, 167).replace(/\s\S*$/, '') + '…' : x; };
+  const others = Lab.pick(CAMPAIGNS.filter(c => c.id !== C.id), 2);
+  const opts = Lab.shuffle([C, ...others]).map(c => ({ c, t: cut(c.insight) }));
+  Lab.quiz(document.getElementById('gym1'), {
+    id: K + ':insight', tag: 'Case · ' + C.brand,
+    items: [{ q: `Insight nào đứng sau “${C.title}” (${C.brand}, ${C.year})?`, ctx: cut(C.context),
+      opts: opts.map(o => o.t), a: opts.findIndex(o => o.c.id === C.id),
+      why: C.insight, link: { href: 'case/' + C.id + '.html', label: 'Đọc case' } }],
+    onDone: () => mark(0)
+  });
+
+  /* 2 · tự viết trước, rồi mới xem gợi ý và đáp án */
+  const q = B.q[0], box = document.getElementById('gym2'), mine = Lab.get(K + ':ans') || { v: '' };
+  box.innerHTML = `<div class="lab"><div class="lab__top"><span class="lab__tag">Bóc tách · ${esc(B.name)}</span></div>
+    <h3 class="lab__q">${esc(q.q)}</h3>
+    <textarea class="lab__field" id="gAns" placeholder="Viết 1–2 câu của bạn trước khi xem gợi ý">${esc(mine.v || '')}</textarea>
+    <div class="lab__act"><button type="button" class="lab__btn" id="gShow">Xem gợi ý và đáp án</button></div>
+    <div id="gOut"></div></div>`;
+  const ans = document.getElementById('gAns');
+  ans.oninput = () => Lab.set(K + ':ans', { v: ans.value });
+  document.getElementById('gShow').onclick = () => {
+    if (ans.value.trim().length < 8) { ans.focus(); ans.placeholder = 'Viết ít nhất một câu rồi hãy xem đáp án.'; return; }
+    document.getElementById('gOut').innerHTML = `<div class="lab__why"><b>Gợi ý</b>${esc(q.hint)}</div>
+      <div class="lab__why" style="margin-top:8px"><b>Một cách trả lời</b>${esc(q.a)}</div>
+      <div class="lab__act"><a class="lab__btn lab__btn--ghost" href="thuong-hieu/${B.id}.html">Bóc tách cả thương hiệu</a></div>`;
+    mark(1);
+  };
+  if (state().s[1]) document.getElementById('gShow').click();
+
+  /* 3 · challenge làm ngay tại chỗ */
+  Lab.quiz(document.getElementById('gym3'), {
+    id: K + ':challenge', tag: CH.kind,
+    items: [{ q: CH.q, ctx: CH.brief, opts: CH.opts.map(o => o.t), a: CH.opts.findIndex(o => o.ok),
+      why: (CH.opts.find(o => o.ok) || {}).why || '', link: { href: 'challenge.html#' + CH.id, label: 'Thêm challenge' } }],
+    onDone: () => mark(2)
+  });
+})();
+
 reveal();
 </script>
-<script src="assets/js/paper.js?v=4"></script>
+<script src="assets/js/paper.js?v=5"></script>
 </body>
 </html>

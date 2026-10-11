@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#5a2a12" flood-opacity=".3"/></filter></defs>
+<rect width="800" height="400" fill="#F4DFC4"/>
+<circle cx="330" cy="210" r="170" fill="#F0C7A5" opacity=".65"/>
+<g filter="url(#sh)">
+<path d="M170 170 L420 80 L420 340 L170 250Z" fill="#C85A32"/>
+<path d="M420 80 C470 80 470 340 420 340Z" fill="#A84320"/>
+<rect x="110" y="170" width="70" height="80" rx="14" fill="#7A2E14"/>
+<path d="M200 262 L250 262 L262 330 L214 330Z" fill="#7A2E14"/>
+</g>
+<g fill="none" stroke="#C85A32" stroke-width="10" stroke-linecap="round"><path d="M500 160 q40 50 0 100"/><path d="M550 130 q66 80 0 160" opacity=".7"/><path d="M600 100 q92 110 0 220" opacity=".4"/></g>
+<g fill="#E5B24B"><rect x="600" y="60" width="22" height="22" rx="4" transform="rotate(20 611 71)"/><circle cx="690" cy="150" r="11"/><rect x="660" y="300" width="18" height="18" rx="3" transform="rotate(-18 669 309)"/></g>
+<g fill="#EFB59A"><circle cx="560" cy="60" r="9"/><rect x="720" y="230" width="20" height="20" rx="4" transform="rotate(30 730 240)"/></g>
+</svg>

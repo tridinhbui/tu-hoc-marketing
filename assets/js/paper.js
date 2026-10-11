@@ -5,8 +5,8 @@
   var SKIP={'hoc':1,'hoc-bai':1,'cong-dong':1,'bai':1,'index':1,'dang-nhap':1,'luyen':1,'giai-case':1,'quiz':1,'phong-van':1};
   var BIG={'thi':1,'xep-lop':1,'kingdom':1};
   if(SKIP[file]) return;
-  var ART=['hero_mountain.jpg','notebook_field_art.jpg','mountains_panorama_banner.jpg','coffee_aesthetic.jpg','studio_workspace.jpg'];
-  var CAP=['Good Ideas Grow Together','Small progress, big change','Học thật. Làm được.','Better marketing, brighter you','Mỗi ngày một bước'];
+  var ART=['art-journey.svg','art-notebook.svg','art-panorama.svg','art-megaphone.svg','art-funnel.svg'];
+  var CAP=['Nhìn kỹ trước, làm sau','Từng bước nhỏ, đổi lớn','Học thật. Làm được.','Mỗi quyết định có một lý do','Mỗi ngày một bước'];
   var h=0; for(var i=0;i<file.length;i++) h=(h*31+file.charCodeAt(i))>>>0;
   function put(){
     if(document.querySelector('.pp-art')) return;

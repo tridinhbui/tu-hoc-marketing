@@ -218,7 +218,7 @@ async function home(){
         <h2>${aiOn?'Phỏng vấn AI':'Luyện phỏng vấn'}<br><em>${escH(tr.t)}</em></h2>
         <p>${aiOn?'AI đưa một tình huống có số, hỏi vặn khi bạn thiếu số hoặc mơ hồ, và đưa dàn ý trả lời mẫu cuối buổi.':'Tình huống có số, '+tr.n+' câu hỏi nối tiếp, hỏi vặn khi bạn thiếu số hoặc thiếu ý, cuối buổi có đáp án mẫu để tự so.'}</p>
         <p style="margin-top:10px;font-size:13px;color:var(--pv-ink3)">${done?`Bạn đã luyện vị trí này ${done} lần.`:'Bạn chưa luyện vị trí này.'}</p></div>
-      <div class="hero__art" style="background-image:url(assets/img/coffee_aesthetic.jpg)">
+      <div class="hero__art" style="background-image:url(assets/img/art-funnel.svg)">
         <button type="button" class="go go--dark" id="start" ${sel.mode==='ai'&&!a.ok?'disabled':''}>Bắt đầu luyện</button></div>
     </section>
     ${sel.mode==='ai'&&!a.ok?`<p class="note">${escH(a.why)} <a href="#" id="toScript" style="color:var(--pv-acc);font-weight:700">Chuyển sang kịch bản</a></p>`

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" preserveAspectRatio="xMidYMid slice">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#5a2a12" flood-opacity=".3"/></filter></defs>
+<rect width="900" height="500" fill="#EBD7BD"/>
+<g opacity=".35" stroke="#C85A32" stroke-width="1"><path d="M0 60H900M0 120H900M0 180H900M0 240H900M0 300H900M0 360H900M0 420H900"/></g>
+<g filter="url(#sh)">
+<path d="M90 110 L440 90 L450 410 L100 420Z" fill="#C85A32"/>
+<path d="M460 90 L820 110 L810 420 L450 410Z" fill="#B24A26"/>
+<path d="M105 122 L440 104 L448 396 L113 406Z" fill="#FCF6EA"/>
+<path d="M452 104 L806 122 L798 406 L452 396Z" fill="#FFFBF2"/>
+</g>
+<path d="M446 100V400" stroke="#D9B79A" stroke-width="4"/>
+<g stroke="#B9A184" stroke-width="2.5" stroke-linecap="round"><path d="M140 170L420 156M142 210L422 196M144 250L424 236M146 290L426 276M148 330L428 316"/>
+<path d="M480 170L774 184M480 210L774 224M480 250L700 262"/></g>
+<g stroke="#2B1A11" stroke-width="3.5" stroke-linecap="round" fill="none"><path d="M500 300 q18 -34 36 0 t36 0 t36 0"/></g>
+<g fill="#C85A32"><circle cx="190" cy="170" r="9"/><circle cx="190" cy="250" r="9" opacity=".6"/></g>
+<rect x="640" y="60" width="130" height="110" rx="6" fill="#F3C65B" transform="rotate(7 705 115)" filter="url(#sh)"/>
+<text x="705" y="132" font-family="Georgia,serif" font-size="50" text-anchor="middle" fill="#7A2E14" transform="rotate(7 705 115)">?</text>
+<rect x="150" y="330" width="120" height="92" rx="6" fill="#EFB59A" transform="rotate(-6 210 376)" filter="url(#sh)"/>
+<path d="M610 380 L760 330 L770 346 L620 398Z" fill="#2B1A11" filter="url(#sh)"/>
+<path d="M760 330 L800 316 L808 332 L770 346Z" fill="#E5B24B"/>
+</svg>
