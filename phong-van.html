@@ -2,14 +2,115 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23C85A32%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23FAF3E8%27%3EM%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/case.css?v=12">
-<title>Phỏng vấn mô phỏng — Tự Học Marketing Case</title>
-<meta name="description" content="Trợ lý AI đóng vai người phỏng vấn: đưa đề, hỏi vặn, cuối buổi đưa dàn ý trả lời mẫu để bạn tự so. Không chấm điểm.">
+<title>Luyện phỏng vấn — Tự Học Marketing Case</title>
+<meta name="description" content="Luyện phỏng vấn marketing theo kịch bản có số liệu, hoặc với người phỏng vấn AI. Hỏi vặn khi thiếu số, cuối buổi có đáp án mẫu để tự so.">
+<style>
+/* Trang Luyện phỏng vấn — chọn vị trí → chọn chế độ → xem trước → bắt đầu; thanh bên là tiến độ thật của bạn. */
+:root{--pv-bg:#FBF8F3;--pv-card:#fff;--pv-ink:#24160E;--pv-ink2:rgba(36,22,14,.68);--pv-ink3:rgba(36,22,14,.48);--pv-line:rgba(36,22,14,.12);
+  --pv-soft:rgba(36,22,14,.05);--pv-acc:#C85A32;--pv-acc-soft:rgba(200,90,50,.1);--pv-ok:#3D7A45;--pv-ok-soft:rgba(61,122,69,.12);
+  --pv-gold:#B07A12;--pv-gold-soft:rgba(229,178,75,.18);--pv-dark:#2A1A12;--pv-dark-ink:#F7EBDD;--pv-head:rgba(255,255,255,.92)}
+html[data-theme="ivory"]{--pv-bg:#F7F0E6;--pv-card:#FFFDF9;--pv-head:rgba(247,240,230,.94)}
+html[data-theme="dark"]{--pv-bg:#16100C;--pv-card:#221913;--pv-ink:#F4ECE0;--pv-ink2:rgba(244,236,224,.74);--pv-ink3:rgba(244,236,224,.5);--pv-line:rgba(244,236,224,.14);
+  --pv-soft:rgba(244,236,224,.07);--pv-acc:#E27A52;--pv-acc-soft:rgba(226,122,82,.15);--pv-ok:#7DBE86;--pv-ok-soft:rgba(125,190,134,.15);--pv-gold:#E5B24B;--pv-gold-soft:rgba(229,178,75,.14);
+  --pv-dark:#0E0906;--pv-head:rgba(22,16,12,.92)}
+html,body{background:var(--pv-bg)!important;color:var(--pv-ink)}
+body{margin:0;padding:0!important;font-family:var(--sans,system-ui,sans-serif)}
+#app{display:block;max-width:none;padding:0;margin:0}
+.ic{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+button{font-family:inherit}
+
+.pv-top{position:sticky;top:0;z-index:20;background:var(--pv-head);backdrop-filter:blur(10px);border-bottom:1px solid var(--pv-line)}
+.pv-top__in{max-width:1240px;margin:0 auto;padding:14px clamp(14px,3vw,36px);display:flex;align-items:center;gap:14px}
+.pv-top a.back{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;color:var(--pv-ink2);text-decoration:none;border:1px solid var(--pv-line);background:var(--pv-card)}
+.pv-top h1{font-size:20px;margin:0;flex:1;font-family:var(--sans,system-ui);font-weight:800}
+.pv-chip{font-size:12.5px;font-weight:700;padding:8px 14px;border-radius:99px;background:var(--pv-gold-soft);color:var(--pv-gold);white-space:nowrap}
+
+.pv{max-width:1240px;margin:0 auto;padding:clamp(16px,2.4vw,28px) clamp(14px,3vw,36px) 80px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start}
+.pv-main{display:grid;gap:18px;min-width:0}
+.pv-side{display:grid;gap:16px;position:sticky;top:84px}
+@media(max-width:1000px){.pv{grid-template-columns:minmax(0,1fr)}.pv-side{position:static}}
+
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mode{text-align:left;border:1.5px solid var(--pv-line);background:var(--pv-card);color:var(--pv-ink);border-radius:18px;padding:16px 18px;cursor:pointer;display:grid;gap:3px}
+.mode b{font-size:16px}.mode span{font-size:13px;color:var(--pv-ink2)}
+.mode[aria-pressed="true"]{background:var(--pv-dark);border-color:var(--pv-dark);color:var(--pv-dark-ink)}
+.mode[aria-pressed="true"] span{color:rgba(247,235,221,.7)}
+.mode[disabled]{opacity:.6}
+@media(max-width:560px){.modes{grid-template-columns:1fr}}
+
+.card{background:var(--pv-card);border:1px solid var(--pv-line);border-radius:22px;padding:22px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 36%;gap:22px;align-items:stretch}
+.hero__tag{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--pv-ok);background:var(--pv-ok-soft);border-radius:99px;padding:6px 12px}
+.hero h2{font-size:clamp(1.35rem,2.2vw,1.8rem);margin:12px 0 6px;line-height:1.2;font-family:var(--serif,Georgia,serif);font-weight:600}
+.hero p{margin:0;color:var(--pv-ink2);font-size:14.5px;line-height:1.55}
+.hero__art{position:relative;border-radius:18px;overflow:hidden;min-height:170px;background:var(--pv-soft) center/cover no-repeat}
+.hero__art button{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);white-space:nowrap}
+@media(max-width:700px){.hero{grid-template-columns:1fr}}
+.go{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;background:var(--pv-acc);color:#fff;font:800 13.5px var(--sans,system-ui);letter-spacing:.04em;text-transform:uppercase;padding:13px 20px;cursor:pointer;text-decoration:none}
+.go[disabled]{opacity:.45;cursor:default}
+.go--dark{background:var(--pv-dark);color:var(--pv-dark-ink)}
+.go--ghost{background:var(--pv-card);color:var(--pv-ink);border:1.5px solid var(--pv-line);text-transform:none;letter-spacing:0}
+.go--ghost:hover{border-color:var(--pv-acc);color:var(--pv-acc)}
+
+.stepper{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.stepper div{display:flex;gap:10px;align-items:center;min-width:0}
+.stepper .n{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:13px;background:var(--pv-soft);color:var(--pv-ink2);flex:none}
+.stepper [data-on] .n,.stepper [data-ok] .n{background:var(--pv-dark);color:var(--pv-dark-ink)}
+.stepper [data-ok] .n{background:var(--pv-ok)}
+.stepper b{display:block;font-size:13.5px}.stepper small{display:block;font-size:12px;color:var(--pv-ink3)}
+@media(max-width:620px){.stepper small{display:none}.stepper{grid-template-columns:repeat(2,1fr)}}
+
+.h{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 10px}
+.tracks{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+.track{text-align:left;border:1.5px solid var(--pv-line);background:var(--pv-card);color:var(--pv-ink);border-radius:16px;padding:14px;cursor:pointer;display:grid;gap:6px;align-content:start;min-height:112px}
+.track b{font-size:14.5px;line-height:1.3}.track small{font-size:12.5px;color:var(--pv-ink3);font-weight:600}
+.track[aria-pressed="true"]{background:var(--pv-dark);border-color:var(--pv-dark);color:var(--pv-dark-ink)}
+.track[aria-pressed="true"] small{color:rgba(247,235,221,.72)}
+.preview{display:grid;gap:12px}
+.preview p{margin:0;line-height:1.65;font-size:15px}
+.preview ol{margin:0;padding-left:1.2em;display:grid;gap:8px;color:var(--pv-ink2);font-size:14.5px;line-height:1.55}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:4px}
+.rules div{border:1px solid var(--pv-line);border-radius:14px;padding:12px 14px;font-size:13.5px;color:var(--pv-ink2);line-height:1.5}
+.rules b{display:block;color:var(--pv-ink);font-size:13.5px;margin-bottom:2px}
+.note{border-left:4px solid var(--pv-gold);background:var(--pv-gold-soft);border-radius:0 14px 14px 0;padding:12px 16px;font-size:14px;color:var(--pv-ink)}
+
+/* thanh bên */
+.sbc h3{margin:0 0 12px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.big{text-align:center}
+.big .lv{display:inline-grid;place-items:center;min-width:76px;height:64px;padding:0 14px;border-radius:16px;background:var(--pv-dark);color:var(--pv-dark-ink);font-weight:800;font-size:20px}
+.big p{margin:8px 0 0;font-size:13px;color:var(--pv-ink2)}
+.bar{height:8px;border-radius:99px;background:var(--pv-soft);margin:12px 0 0;overflow:hidden}.bar i{display:block;height:100%;background:var(--pv-acc)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;padding-top:14px;border-top:1px solid var(--pv-line);text-align:center}
+.stats small{display:block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--pv-ink3);font-weight:700}
+.stats b{font-size:17px;color:var(--pv-acc)}
+.hist{display:grid;gap:8px;margin:0;padding:0;list-style:none;font-size:13.5px}
+.hist li{display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--pv-line);padding-top:8px}
+.hist li:first-child{border-top:0;padding-top:0}
+.hist span{color:var(--pv-ink3);white-space:nowrap}
+
+/* buổi luyện */
+.sess{display:grid;gap:14px}
+.sess__top{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.sess__top b{font-size:16px}
+.sess__bar{height:6px;border-radius:99px;background:var(--pv-soft);overflow:hidden;flex:1;min-width:120px;max-width:260px}
+.sess__bar i{display:block;height:100%;background:var(--pv-acc);width:0;transition:width .3s}
+.log{display:grid;gap:12px}
+.msg{max-width:88%;padding:14px 16px;border-radius:18px;line-height:1.6;font-size:15px;border:1px solid var(--pv-line);background:var(--pv-card)}
+.msg small{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-acc);margin-bottom:4px}
+.msg--me{justify-self:end;background:var(--pv-dark);color:var(--pv-dark-ink);border-color:var(--pv-dark)}
+.msg--me small{color:rgba(247,235,221,.65)}
+.msg--sys{max-width:none;background:var(--pv-gold-soft);border-color:transparent}
+.compose{display:grid;gap:10px}
+.compose textarea{width:100%;box-sizing:border-box;font:inherit;font-size:15px;line-height:1.5;padding:14px;border-radius:16px;border:1.5px solid var(--pv-line);background:var(--pv-card);color:var(--pv-ink);resize:vertical}
+.compose textarea:focus{outline:0;border-color:var(--pv-acc)}
+.compose .row{display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap}
+</style>
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
-<main class="wrap narrow" id="app"></main>
+<main id="app"></main>
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
@@ -19,48 +120,137 @@
 <script src="assets/js/data/interview-script.js?v=1"></script>
 <script src="assets/js/app.js?v=21"></script>
 <script>
-
 appShell('phong-van.html');
 const app=document.getElementById('app');
-const TRACKS=[['mt','Management Trainee'],['brand','Brand Executive'],['perf','Performance Marketing'],['case','Hỏi đáp sau thi case']];
-let sid=null, busy=false;
-async function intro(){
-  const u=await account();
-  
-  let q=null; if(u) try{ q=await api('/ai/quota'); }catch(e){}
-  app.innerHTML=`<section class="section">
-    <span class="mono mono--red">Phỏng vấn mô phỏng · AI</span>
-    <h1 class="h1" style="margin:14px 0 14px">Người phỏng vấn<br><em>không dễ tính.</em></h1>
-    <p class="lede">AI đưa một tình huống có số, hỏi từng câu và hỏi vặn khi bạn trả lời thiếu số hoặc mơ hồ.
-      Sau tối đa 6 lượt trả lời — hoặc khi bạn bấm kết thúc — nó đưa dàn ý trả lời mẫu để bạn tự so. Không chấm, không đánh giá câu trả lời của bạn.</p>
-    ${!u?`<p class="note" style="margin-top:18px"><a href="tai-khoan.html">Đăng nhập</a> để dùng AI. Mỗi người có một số buổi miễn phí mỗi tháng.</p>`
-    :q&&!q.configured?'<p class="note" style="margin-top:18px">AI chưa được bật trên máy chủ — bạn vẫn luyện được bằng kịch bản dưới đây.</p>'
-    :q&&q.interview.used>=q.interview.limit?'<p class="note" style="margin-top:18px">Bạn đã dùng hết buổi AI miễn phí tháng này — luyện tiếp bằng kịch bản dưới đây.</p>'
-    :`<p class="mono" style="margin-top:14px">Đã dùng ${q?q.interview.used:'?'} / ${q?q.interview.limit:'?'} buổi AI tháng này</p>
-      <div class="row" style="margin-top:14px">${TRACKS.map(([k,l])=>`<button class="btn btn--ghost" data-t="${k}">${l}</button>`).join('')}</div>`}
-  </section>
-  <section class="section"><span class="mono mono--ink">Luyện theo kịch bản · không cần AI</span>
-    <p class="muted" style="margin:8px 0 0">Tình huống có số, hỏi vặn khi bạn thiếu số hoặc thiếu ý, cuối buổi có đáp án mẫu để tự so. Chạy hoàn toàn trong trình duyệt.</p>
-    <div class="row" style="margin-top:14px">${Object.entries(INTERVIEW_SCRIPT).map(([k,v])=>`<button class="btn" data-s="${k}">${v.title}</button>`).join('')}</div>
-  </section>`;
-  app.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>start(b.dataset.t));
-  app.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>startScript(b.dataset.s));
+/* Vị trí lấy thẳng từ kịch bản có sẵn, không bịa thêm ngân hàng câu hỏi. */
+const TRACKS=Object.entries(INTERVIEW_SCRIPT).map(([k,v])=>({k,t:v.title,n:v.steps.length,intro:v.intro,steps:v.steps}));
+const AI_LABEL={mt:'Management Trainee',brand:'Brand Executive',perf:'Performance Marketing',case:'Hỏi đáp sau thi case'};
+const ico={back:'<svg class="ic" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>',
+  brief:'<svg class="ic" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M3 13h18"/></svg>'};
+const sel={track:TRACKS[0].k, mode:'script'};
+let ai={checked:false,user:null,quota:null}, sid=null, busy=false;
+
+/* tiến độ thật: mỗi buổi kết thúc được ghi lại trong trình duyệt */
+const hist=()=>((S.get().iv||{}).sessions||[]);
+function record(entry){ const s=S.get(), cur=(s.iv||{}).sessions||[]; S.set({iv:{sessions:[{...entry,at:today()},...cur].slice(0,60)}}); }
+function stats(){ const h=hist(), answered=h.reduce((n,x)=>n+(x.answered||0),0), flagged=h.reduce((n,x)=>n+(x.flag||0),0);
+  const tried=new Set(h.map(x=>x.track)).size;
+  return {sessions:h.length, answered, tried, clean:answered?Math.round((1-flagged/answered)*100):null, last:h[0]||null}; }
+
+async function checkAI(){
+  if(ai.checked) return; ai.checked=true;
+  try{ ai.user=await account(); if(ai.user) ai.quota=await api('/ai/quota'); }catch(e){}
+}
+function aiState(){
+  if(!ai.user) return {ok:false,why:'Đăng nhập để dùng người phỏng vấn AI. Mỗi người có một số buổi miễn phí mỗi tháng.'};
+  if(!ai.quota||!ai.quota.configured) return {ok:false,why:'AI chưa được bật trên máy chủ — bạn vẫn luyện được bằng kịch bản.'};
+  if(ai.quota.interview.used>=ai.quota.interview.limit) return {ok:false,why:'Bạn đã dùng hết buổi AI miễn phí tháng này — luyện tiếp bằng kịch bản.'};
+  return {ok:true,why:`Đã dùng ${ai.quota.interview.used} / ${ai.quota.interview.limit} buổi AI tháng này.`};
+}
+
+function sideHTML(){
+  const st=stats(), total=TRACKS.length, pct=Math.round(st.tried/total*100), h=hist().slice(0,4);
+  return `<div class="card big sbc"><h3>Tiến độ của bạn</h3>
+      <span class="lv">${st.sessions} buổi</span>
+      <p>${st.tried}/${total} vị trí đã thử</p><div class="bar"><i style="width:${pct}%"></i></div>
+      <div class="stats"><div><small>Câu đã trả lời</small><b>${st.answered}</b></div>
+        <div><small>Không bị hỏi vặn</small><b>${st.clean===null?'--':st.clean+'%'}</b></div>
+        <div><small>Lần gần nhất</small><b style="font-size:13px">${st.last?escH(st.last.at.slice(5).split('-').reverse().join('/')):'--'}</b></div></div></div>
+    <div class="card sbc"><h3>Buổi gần đây</h3>${h.length?`<ul class="hist">${h.map(x=>`<li><b>${escH(AI_LABEL[x.track]||x.track)}</b><span>${x.mode==='ai'?'AI':'Kịch bản'} · ${x.answered||0} câu</span></li>`).join('')}</ul>`
+      :'<p style="margin:0;font-size:13.5px;color:var(--pv-ink2)">Chưa có buổi nào. Chọn một vị trí rồi bắt đầu — buổi đầu chỉ mất vài phút.</p>'}</div>
+    <div class="card sbc"><h3>Luyện sao cho có ích</h3>
+      <p style="margin:0;font-size:13.5px;line-height:1.6;color:var(--pv-ink2)">Nói con số ngay câu đầu, nêu một việc cụ thể sẽ làm, và đừng đọc đáp án mẫu trước khi trả lời. Bị hỏi vặn không phải là sai — đó là chỗ để lộ ra điểm cần luyện.</p></div>`;
+}
+
+async function home(){
+  await checkAI();
+  const tr=TRACKS.find(t=>t.k===sel.track), a=aiState(), done=hist().filter(x=>x.track===sel.track).length;
+  const aiOn=sel.mode==='ai'&&a.ok;
+  app.innerHTML=`
+  <header class="pv-top"><div class="pv-top__in"><a class="back" href="hoc.html" aria-label="Về trang học">${ico.back}</a><h1>Luyện phỏng vấn</h1>
+    <span class="pv-chip">Không chấm điểm · tự so đáp án mẫu</span></div></header>
+  <div class="pv"><div class="pv-main">
+    <div class="modes" role="group" aria-label="Chế độ luyện">
+      <button type="button" class="mode" data-mode="script" aria-pressed="${sel.mode==='script'}"><b>Theo kịch bản</b><span>Có số liệu, hỏi vặn khi thiếu số, chạy ngay trong trình duyệt</span></button>
+      <button type="button" class="mode" data-mode="ai" aria-pressed="${sel.mode==='ai'}"><b>Với người phỏng vấn AI</b><span>${a.ok?'Hỏi tự do, tối đa 6 lượt trả lời':'Cần đăng nhập và AI được bật'}</span></button>
+    </div>
+
+    <section class="card hero">
+      <div><span class="hero__tag">${ico.brief} Lộ trình phỏng vấn</span>
+        <h2>${aiOn?'Phỏng vấn AI':'Luyện phỏng vấn'} · ${escH(tr.t)}</h2>
+        <p>${aiOn?'AI đưa một tình huống có số, hỏi vặn khi bạn thiếu số hoặc mơ hồ, và đưa dàn ý trả lời mẫu cuối buổi.':'Tình huống có số, '+tr.n+' câu hỏi nối tiếp, hỏi vặn khi bạn thiếu số hoặc thiếu ý, cuối buổi có đáp án mẫu để tự so.'}</p>
+        <p style="margin-top:10px;font-size:13px;color:var(--pv-ink3)">${done?`Bạn đã luyện vị trí này ${done} lần.`:'Bạn chưa luyện vị trí này.'}</p></div>
+      <div class="hero__art" style="background-image:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.35)),url(assets/img/studio_workspace.jpg)">
+        <button type="button" class="go go--dark" id="start" ${sel.mode==='ai'&&!a.ok?'disabled':''}>Bắt đầu luyện</button></div>
+    </section>
+    ${sel.mode==='ai'&&!a.ok?`<p class="note">${escH(a.why)} <a href="#" id="toScript" style="color:var(--pv-acc);font-weight:700">Chuyển sang kịch bản</a></p>`
+      :sel.mode==='ai'?`<p class="note">${escH(a.why)}</p>`:''}
+
+    <section class="card"><div class="stepper">
+      <div data-ok><span class="n">01</span><span><b>Chọn vị trí</b><small>Định hướng đúng</small></span></div>
+      <div data-ok><span class="n">02</span><span><b>Chọn chế độ</b><small>Kịch bản hoặc AI</small></span></div>
+      <div data-on><span class="n">03</span><span><b>Xem trước</b><small>Tình huống và câu hỏi</small></span></div>
+      <div><span class="n">04</span><span><b>Bắt đầu</b><small>Trả lời, rồi tự so</small></span></div>
+    </div></section>
+
+    <section><h2 class="h">1. Chọn vị trí phỏng vấn</h2>
+      <div class="tracks">${TRACKS.map(t=>`<button type="button" class="track" data-track="${t.k}" aria-pressed="${t.k===sel.track}">
+        ${ico.brief}<b>${escH(t.t)}</b><small>${t.n} câu · ${hist().filter(x=>x.track===t.k).length} buổi đã luyện</small></button>`).join('')}</div></section>
+
+    <section><h2 class="h">2. Xem trước buổi luyện</h2>
+      <div class="card preview">
+        <div><b style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-acc)">Tình huống</b><p>${escH(tr.intro)}</p></div>
+        ${sel.mode==='script'?`<div><b style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-acc)">Bạn sẽ được hỏi</b>
+          <ol>${tr.steps.map(s=>`<li>${escH(s.ask)}</li>`).join('')}</ol></div>`
+          :'<p style="color:var(--pv-ink2);font-size:14px">Với AI, câu hỏi được tạo theo câu trả lời của bạn nên không xem trước được.</p>'}
+        <div class="rules"><div><b>Hỏi vặn</b>Thiếu con số hoặc thiếu ý, người phỏng vấn sẽ hỏi lại một lần.</div>
+          <div><b>Không chấm điểm</b>Cuối buổi bạn nhận đáp án mẫu để tự đối chiếu.</div>
+          <div><b>Kết thúc bất kỳ lúc nào</b>Bấm kết thúc để xem đáp án mẫu ngay.</div></div>
+      </div></section>
+  </div>
+  <aside class="pv-side">${sideHTML()}</aside></div>`;
+  app.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{ sel.mode=b.dataset.mode; home(); });
+  app.querySelectorAll('[data-track]').forEach(b=>b.onclick=()=>{ sel.track=b.dataset.track; home(); });
+  const ts=document.getElementById('toScript'); if(ts) ts.onclick=e=>{ e.preventDefault(); sel.mode='script'; home(); };
+  document.getElementById('start').onclick=()=>sel.mode==='ai'?startAI(sel.track):startScript(sel.track);
+}
+
+/* ---------- khung buổi luyện ---------- */
+function sessionShell(title,left){
+  app.innerHTML=`
+  <header class="pv-top"><div class="pv-top__in"><a class="back" href="phong-van.html" aria-label="Thoát buổi luyện">${ico.back}</a><h1>${escH(title)}</h1>
+    <span class="pv-chip" id="left">${left||''}</span></div></header>
+  <div class="pv"><div class="pv-main sess">
+    <div class="sess__top"><b>Người phỏng vấn đang chờ câu trả lời của bạn</b><span class="sess__bar"><i id="pbar"></i></span></div>
+    <div class="log" id="log"></div>
+    <form class="compose" id="f"><textarea id="m" rows="4" maxlength="1500" placeholder="Trả lời như đang ngồi trước người phỏng vấn. Nói con số và một việc cụ thể." aria-label="Câu trả lời"></textarea>
+      <div class="row"><button type="button" class="go go--ghost" id="end">Kết thúc và xem đáp án mẫu</button><button class="go">Gửi câu trả lời</button></div></form>
+  </div><aside class="pv-side">${sideHTML()}</aside></div>`;
+}
+function add(who,text,kind){
+  const log=document.getElementById('log');
+  log.insertAdjacentHTML('beforeend',`<div class="msg ${who==='me'?'msg--me':''} ${kind==='sys'?'msg--sys':''}"><small>${who==='me'?'Bạn':'Người phỏng vấn'}</small>${escH(text).replace(/\n/g,'<br>')}</div>`);
+  log.lastElementChild.scrollIntoView({block:'nearest',behavior:'smooth'});
+}
+function endView(msg){
+  const f=document.getElementById('f'); if(f) f.outerHTML=`<div class="row" style="display:flex;gap:10px;flex-wrap:wrap"><a class="go" href="phong-van.html">Buổi mới</a><a class="go go--ghost" href="hoc.html">Về trang học</a></div>`;
+  document.getElementById('left').textContent=msg||'Đã kết thúc';
+  const sb=document.querySelector('.pv-side'); if(sb) sb.innerHTML=sideHTML();
 }
 
 function startScript(key){
-  const sc=INTERVIEW_SCRIPT[key]; let i=0, probed=false; const answered=[];
-  app.innerHTML=`<section class="section"><div class="row between"><span class="mono mono--red">${sc.title} · kịch bản</span><span class="mono" id="left"></span></div>
-    <div id="log" style="margin-top:14px"></div>
-    <form id="f" class="stack" style="margin-top:16px"><textarea class="field" id="m" rows="4" maxlength="1500" placeholder="Trả lời như đang ngồi trước người phỏng vấn." aria-label="Câu trả lời"></textarea>
-      <div class="row between"><button type="button" class="btn btn--ghost" id="end">Kết thúc và xem đáp án mẫu</button><button class="btn">Gửi</button></div></form></section>`;
-  const left=()=>document.getElementById('left').textContent=`Câu ${Math.min(i+1,sc.steps.length)}/${sc.steps.length}`;
-  add('ai','Tình huống: '+sc.intro); add('ai',sc.steps[0].ask); left();
+  const sc=INTERVIEW_SCRIPT[key]; let i=0, probed=false, ended=false; const answered=[];
+  sessionShell(sc.title,'Câu 1/'+sc.steps.length);
+  const prog=()=>{ document.getElementById('pbar').style.width=Math.round(answered.length/sc.steps.length*100)+'%';
+    document.getElementById('left').textContent=ended?'Đã kết thúc':`Câu ${Math.min(i+1,sc.steps.length)}/${sc.steps.length}`; };
+  add('ai','Tình huống: '+sc.intro,'sys'); add('ai',sc.steps[0].ask); prog();
   const finish=()=>{
-    const model=sc.steps.map((st,n)=>`${n+1}. ${st.model}`).join('\n');
-    add('ai','Hết buổi. Đáp án mẫu để bạn tự so (không phải đáp án duy nhất):\n'+model);
+    if(ended) return; ended=true;
+    add('ai','Hết buổi. Đáp án mẫu để bạn tự so (không phải đáp án duy nhất):\n'+sc.steps.map((st,n)=>`${n+1}. ${st.model}`).join('\n'),'sys');
     const miss=answered.filter(a=>a.flag).length;
-    if(answered.length) add('ai',miss?`Bạn bị hỏi vặn ${miss}/${answered.length} câu vì thiếu số hoặc thiếu ý. Luyện lại và chủ động đưa con số ngay từ câu đầu.`:'Bạn không bị hỏi vặn câu nào — thử một chặng khó hơn.');
-    document.getElementById('f').outerHTML='<a class="btn" href="phong-van.html">Buổi mới</a>'; document.getElementById('left').textContent='Đã kết thúc';
+    if(answered.length) add('ai',miss?`Bạn bị hỏi vặn ${miss}/${answered.length} câu vì thiếu số hoặc thiếu ý. Luyện lại và chủ động đưa con số ngay từ câu đầu.`:'Bạn không bị hỏi vặn câu nào — thử một vị trí khác.','sys');
+    if(answered.length) record({track:key,mode:'script',answered:answered.length,flag:miss});
+    prog(); endView();
   };
   document.getElementById('f').onsubmit=e=>{ e.preventDefault();
     const m=document.getElementById('m'), t=m.value.trim(); if(t.length<2) return; add('me',t); m.value='';
@@ -68,36 +258,32 @@ function startScript(key){
     const lackNum=st.num&&!/\d/.test(t);
     const lackKey=st.keys&&st.keys.filter(r=>r.test(t)).length<Math.ceil(st.keys.length/2);
     if(!probed&&(lackNum||lackKey||t.length<25)){ probed=true; add('ai',st.probe||'Cụ thể hơn: nêu con số hoặc ví dụ.'); return; }
-    answered.push({flag:probed}); probed=false; i++;
+    answered.push({flag:probed}); probed=false; i++; prog();
     if(i>=sc.steps.length) return finish();
-    add('ai',sc.steps[i].ask); left(); };
+    add('ai',sc.steps[i].ask); };
   document.getElementById('end').onclick=finish;
 }
-function chat(){ return document.getElementById('log'); }
-function add(who,text){ chat().insertAdjacentHTML('beforeend',`<div style="padding:12px 0;border-bottom:var(--rule)"><span class="mono ${who==='ai'?'mono--red':''}">${who==='ai'?'Người phỏng vấn':'Bạn'}</span>
-  <p style="margin:6px 0 0">${escH(text).replace(/\n/g,'<br>')}</p></div>`); chat().scrollIntoView({block:'end'}); }
-async function start(track){
-  app.innerHTML=`<section class="section"><div class="row between"><span class="mono mono--red">${TRACKS.find(t=>t[0]===track)[1]}</span><span class="mono" id="left"></span></div>
-    <div id="log" style="margin-top:14px"></div>
-    <form id="f" class="stack" style="margin-top:16px"><textarea class="field" id="m" rows="4" maxlength="1500" placeholder="Trả lời như đang ngồi trước người phỏng vấn." aria-label="Câu trả lời"></textarea>
-      <div class="row between"><button type="button" class="btn btn--ghost" id="end">Kết thúc và nhận xét</button><button class="btn">Gửi</button></div></form></section>`;
+
+async function startAI(track){
+  sessionShell('AI · '+(AI_LABEL[track]||track),'Đang bắt đầu…');
+  let turns=0;
   add('ai','…');
-  try{ const r=await api('/ai/interview',{method:'POST',body:{track}}); sid=r.session_id; chat().lastElementChild.remove(); add('ai',r.reply); document.getElementById('left').textContent=`Còn ${r.turns_left} lượt`; }
-  catch(e){ chat().lastElementChild.remove(); add('ai',{quota_exceeded:'Bạn đã dùng hết số buổi phỏng vấn miễn phí tháng này.',not_configured:'AI chưa được bật.'}[e.message]||'Chưa bắt đầu được. Thử lại sau.'); return; }
+  const drop=()=>document.getElementById('log').lastElementChild.remove();
+  try{ const r=await api('/ai/interview',{method:'POST',body:{track}}); sid=r.session_id; drop(); add('ai',r.reply); document.getElementById('left').textContent=`Còn ${r.turns_left} lượt`; }
+  catch(e){ drop(); add('ai',{quota_exceeded:'Bạn đã dùng hết số buổi phỏng vấn miễn phí tháng này.',not_configured:'AI chưa được bật.'}[e.message]||'Chưa bắt đầu được. Thử lại sau.','sys'); endView('Chưa bắt đầu'); return; }
   const send=async(finish)=>{ if(busy) return; const m=document.getElementById('m'), t=m.value.trim();
-    if(!finish&&t.length<2) return; busy=true; if(t) add('me',t); m.value=''; add('ai','…');
+    if(!finish&&t.length<2) return; busy=true; if(t){ add('me',t); turns++; } m.value=''; add('ai','…');
     try{ const r=await api('/ai/interview',{method:'POST',body:{session_id:sid,message:t||'Em xin kết thúc buổi phỏng vấn ở đây.',finish}});
-      chat().lastElementChild.remove(); add('ai',r.reply); document.getElementById('left').textContent=r.done?'Đã kết thúc':`Còn ${r.turns_left} lượt`;
-      if(r.done){ document.getElementById('f').outerHTML='<a class="btn" href="phong-van.html">Buổi mới</a>'; }
-    }catch(e){ chat().lastElementChild.remove(); add('ai',e.message==='session_expired'?'Buổi này đã hết hạn.':'Chưa gửi được. Thử lại.'); }
+      drop(); add('ai',r.reply); document.getElementById('left').textContent=r.done?'Đã kết thúc':`Còn ${r.turns_left} lượt`;
+      document.getElementById('pbar').style.width=Math.min(100,Math.round(turns/6*100))+'%';
+      if(r.done){ if(turns) record({track,mode:'ai',answered:turns,flag:0}); endView(); }
+    }catch(e){ drop(); add('ai',e.message==='session_expired'?'Buổi này đã hết hạn.':'Chưa gửi được. Thử lại.','sys'); }
     busy=false; };
   document.getElementById('f').onsubmit=e=>{e.preventDefault();send(false);};
   document.getElementById('end').onclick=()=>send(true);
 }
-const NOAPI=`<section class="section"><span class="mono mono--red">Chưa bật</span><h1 class="h2" style="margin:12px 0">Tính năng này cần máy chủ.</h1>
-  <p class="muted">Bản bạn đang xem chỉ có phần tĩnh. Mọi bài học, quiz, case và tiến độ vẫn chạy bình thường và lưu trong trình duyệt.</p></section>`;
-intro();
-
+document.title='Luyện phỏng vấn — Tự Học Marketing Case';
+home();
 </script>
 </body>
 </html>
