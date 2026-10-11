@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="Nhìn thấy">
-<link rel="stylesheet" href="assets/css/main.css?v=7">
+<link rel="stylesheet" href="assets/css/main.css?v=9">
 <style>
   .hero{padding:clamp(28px,4vw,60px) 0 0}
   .hero__meta{display:flex;gap:22px;flex-wrap:wrap;border-bottom:var(--rule);padding-bottom:12px}
@@ -43,7 +43,7 @@
   không gọi về máy chủ nào. Bật JavaScript để đọc; không có tài khoản và không có dữ liệu nào được gửi đi.</p>
 </div></noscript>
 <main class="wrap" id="app"></main>
-<script src="assets/js/core.js?v=8"></script>
+<script src="assets/js/core.js?v=9"></script>
 <script src="assets/js/subscribe.js?v=7"></script>
 <script src="assets/js/data/campaigns.js?v=7"></script>
 <script src="assets/js/data/districts.js?v=7"></script>
@@ -51,7 +51,7 @@
 shell('gallery.html');
 const c = CAMPAIGNS.find(x=>x.id===(window.__ID__||qs('id'))) || CAMPAIGNS[0];
 document.documentElement.setAttribute('data-district', c.district);
-document.title = `${c.brand} — ${c.title} · Nhìn thấy`;
+document.title = `${c.brand} — ${c.title} · Tự Học Marketing Case`;
 const i = CAMPAIGNS.indexOf(c);
 const prev = CAMPAIGNS[(i-1+CAMPAIGNS.length)%CAMPAIGNS.length], next = CAMPAIGNS[(i+1)%CAMPAIGNS.length];
 const saved = State.has('campaigns', c.id);

@@ -5,6 +5,7 @@
 import fs from 'node:fs';
 import vm from 'node:vm';
 import path from 'node:path';
+import { deriveDifficulty } from '../src/difficulty.js';
 
 const DATA = path.resolve('..', 'assets/js/data');
 const ctx = vm.createContext({ console });
@@ -36,9 +37,10 @@ for (const it of ITEMS) {
   const lesson = it.source && /^[LPB]:/.test(it.source) ? it.source : (it.teaches || []).find((t) => /^[LPB]:/.test(t)) || null;
   const skill = skillOfLesson[lesson] || (it.teaches || []).map((t) => skillOfLesson[t]).find(Boolean) || null;
   const base = { id: it.id, type: it.type, stage: it.stage || null, mod: it.mod || null, core: !!it.core,
-    difficulty: it.difficulty || 2, lesson, skill, stem: it.stem, ctx: it.ctx || null, rows: it.rows || null };
+    difficulty: 2, lesson, skill, stem: it.stem, ctx: it.ctx || null, rows: it.rows || null };
   if (it.type === 'calc') Object.assign(base, { unit: it.unit || '', ans: it.ans, tol: it.tol ?? 0.01, errors: it.errors || [], steps: it.steps || null, wrong: it.wrong || null });
   else Object.assign(base, { options: (it.options || []).map((o) => ({ k: o.k, t: o.t })), answer: it.answer, why: it.why || {} });
+  base.difficulty = deriveDifficulty({ ...it, difficulty: it.difficulty || 2 });
   items[it.id] = base;
   if (lesson) (lessons[lesson] = lessons[lesson] || []).push(it.id);
   if (base.stage) (stages[base.stage] = stages[base.stage] || []).push(it.id);

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Đăng nhập — Tự Học Marketing Case</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23C85A32'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23FAF3E8'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=9">
+<style>
+  body{
+    background:#130E0B;
+    color:#F9F4EB;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  .login-stage{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:clamp(32px,6vw,72px) 20px;
+    position:relative;
+  }
+  .login-card{
+    background:#FAF5EE;
+    color:#24160E;
+    border-radius:20px;
+    padding:clamp(28px,5vw,48px);
+    width:100%;
+    max-width:480px;
+    box-shadow:0 28px 70px -20px rgba(0,0,0,.85);
+    border:1px solid rgba(249,244,235,.2);
+    position:relative;
+  }
+  .login-title{
+    font-family:var(--serif);
+    font-size:clamp(1.8rem,3.4vw,2.5rem);
+    font-weight:500;
+    line-height:1.15;
+    margin:12px 0 8px;
+    color:#24160E;
+  }
+  .login-desc{
+    font-size:14.5px;
+    line-height:1.6;
+    color:rgba(36,22,14,.72);
+    margin:0 0 24px;
+  }
+  .form-group{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    margin-bottom:16px;
+  }
+  .form-group label{
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:rgba(36,22,14,.6);
+  }
+  .login-input{
+    width:100%;
+    background:#fff;
+    border:1.5px solid rgba(36,22,14,.16);
+    border-radius:10px;
+    padding:12px 14px;
+    font-family:var(--sans);
+    font-size:15px;
+    color:#24160E;
+    transition:var(--transition-fast);
+  }
+  .login-input:focus{
+    outline:none;
+    border-color:var(--terra);
+    box-shadow:0 0 0 3px rgba(200,90,50,.15);
+  }
+  .btn-submit{
+    width:100%;
+    background:var(--terra);
+    border:1.5px solid var(--terra);
+    color:#fff;
+    border-radius:99px;
+    padding:13px 24px;
+    font-size:15.5px;
+    font-weight:600;
+    cursor:pointer;
+    transition:var(--transition-fast);
+    margin-top:10px;
+  }
+  .btn-submit:hover{
+    background:var(--terra-d);
+    border-color:var(--terra-d);
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px -8px var(--terra);
+  }
+  .divider-or{
+    text-align:center;
+    position:relative;
+    margin:22px 0;
+  }
+  .divider-or::before{
+    content:"";
+    position:absolute;
+    inset:50% 0 auto 0;
+    height:1px;
+    background:rgba(36,22,14,.12);
+  }
+  .divider-or span{
+    position:relative;
+    background:#FAF5EE;
+    padding:0 12px;
+    font-size:11.5px;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:rgba(36,22,14,.45);
+  }
+  .btn-guest{
+    width:100%;
+    background:transparent;
+    border:1.5px solid rgba(36,22,14,.2);
+    color:#24160E;
+    border-radius:99px;
+    padding:11px 20px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:var(--transition-fast);
+  }
+  .btn-guest:hover{
+    background:rgba(36,22,14,.06);
+    border-color:#24160E;
+  }
+  .user-active-card{
+    background:#E8F0E4;
+    border:1.5px solid var(--sage-d);
+    border-radius:12px;
+    padding:18px 20px;
+    margin-bottom:20px;
+  }
+</style>
+</head>
+<body>
+
+<header class="studio-top">
+  <div class="wrap">
+    <a class="studio-logo" href="index.html">
+      <b style="color:var(--terra)">Tự Học</b> Marketing Case
+      <span class="studio-badge studio-badge--terra">STUDIO</span>
+    </a>
+
+    <nav class="studio-nav" aria-label="Điều hướng">
+      <a href="hoc.html">Học</a>
+      <a href="case-thu-vien.html">Case</a>
+      <a href="ban-do.html">Lộ trình</a>
+      <a href="quiz.html">Thử thách</a>
+      <a href="cong-dong.html">Cộng đồng</a>
+    </nav>
+  </div>
+</header>
+
+<main class="login-stage">
+  <div class="login-card">
+    <div class="tape tape--top tape--pink"></div>
+
+    <div id="loggedContainer" style="display:none">
+      <span class="studio-badge studio-badge--sage">ĐÃ ĐĂNG NHẬP</span>
+      <h1 class="login-title" id="welcomeUserTitle">Chào mừng trở lại!</h1>
+      <p class="login-desc" id="userEmailDesc">Bạn đang đăng nhập với vai trò Chiến lược gia trong Studio.</p>
+
+      <div class="user-active-card">
+        <div class="row between">
+          <span style="font-size:13px;font-weight:700;color:var(--sage-d)">HỒ SƠ HIỆN TẠI</span>
+          <span class="gold" id="userXpDisplay" style="font-weight:700">0 XP</span>
+        </div>
+        <b style="font-family:var(--serif);font-size:1.3rem;display:block;margin-top:6px" id="userNameDisplay">Chiến lược gia</b>
+      </div>
+
+      <div style="display:grid;gap:10px">
+        <a class="btn btn--primary" id="btnContinueStudy" href="hoc.html" style="border-radius:99px;padding:12px 24px;text-align:center">
+          Vào học ngay →
+        </a>
+        <button type="button" class="btn btn--ghost" onclick="handleLogout()" style="color:#24160E;border-color:rgba(36,22,14,.25);border-radius:99px;padding:10px 20px">
+          Đăng xuất / Đổi tài khoản
+        </button>
+      </div>
+    </div>
+
+    <div id="loginFormContainer">
+      <span class="studio-badge studio-badge--terra">STUDIO AUTHENTICATION</span>
+      <h1 class="login-title">Đăng nhập Studio</h1>
+      <p class="login-desc">
+        Lưu giữ tiến trình học, giải case study thực tế và tích luỹ điểm XP trong hệ thống.
+      </p>
+
+      <form id="authForm" onsubmit="handleLoginSubmit(event)">
+        <div class="form-group">
+          <label for="inputName">Tên của bạn hoặc Email</label>
+          <input type="text" id="inputName" class="login-input" placeholder="Ví dụ: Minh Trí hoặc tri@marketing.vn" required autofocus>
+        </div>
+
+        <div class="form-group">
+          <label for="inputPassword">Mật khẩu / Mã PIN</label>
+          <input type="password" id="inputPassword" class="login-input" placeholder="Nhập mật khẩu (hoặc để trống)">
+        </div>
+
+        <button type="submit" class="btn-submit" id="btnSubmit">
+          Đăng nhập vào Studio →
+        </button>
+      </form>
+
+      <div class="divider-or">
+        <span>HOẶC</span>
+      </div>
+
+      <button type="button" class="btn-guest" onclick="handleGuestLogin()">
+        Tiếp tục với tư cách Khách (Lưu trên máy này)
+      </button>
+
+      <p style="font-size:12px;color:rgba(36,22,14,.5);text-align:center;margin:20px 0 0;line-height:1.5">
+        Toàn bộ tiến độ được đồng bộ tức thì trong bộ nhớ máy của bạn. Hoàn toàn miễn phí.
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer class="studio-footer">
+  <div class="wrap row between">
+    <span>Tự Học Marketing Case · An Editorial Creative Strategy Studio. Miễn phí cho người học.</span>
+    <span>
+      <a href="hoc.html">Học</a> · 
+      <a href="case-thu-vien.html">Case Study</a> · 
+      <a href="ban-do.html">Lộ trình</a> · 
+      <a href="quiz.html">Thử thách</a>
+    </span>
+  </div>
+</footer>
+
+<script src="assets/js/data/lessons.js?v=7"></script>
+<script src="assets/js/data/curriculum.js?v=4"></script>
+<script src="assets/js/app.js?v=17"></script>
+<script>
+const safeRedirect = (url) => {
+  if (!url) return 'hoc.html';
+  if (/^[a-z0-9-]+\.html(\?[^<>"'\s]*)?$/i.test(url)) return url;
+  return 'hoc.html';
+};
+
+const qp = new URLSearchParams(location.search);
+const nextUrl = safeRedirect(qp.get('next'));
+
+function checkCurrentSession() {
+  let user = null;
+  try { user = JSON.parse(localStorage.getItem('thmc.user') || 'null'); } catch(e){}
+
+  const s = S.get();
+  if (user && user.name && user.loggedIn) {
+    document.getElementById('loggedContainer').style.display = 'block';
+    document.getElementById('loginFormContainer').style.display = 'none';
+    document.getElementById('welcomeUserTitle').textContent = `Chào mừng, ${user.name}!`;
+    document.getElementById('userNameDisplay').textContent = user.name;
+    document.getElementById('userEmailDesc').textContent = user.email ? `Tài khoản: ${user.email}` : 'Chiến lược gia đang hoạt động trên thiết bị này.';
+    document.getElementById('userXpDisplay').textContent = `${fmt(s.xp)} XP`;
+    document.getElementById('btnContinueStudy').href = nextUrl;
+  } else {
+    document.getElementById('loggedContainer').style.display = 'none';
+    document.getElementById('loginFormContainer').style.display = 'block';
+  }
+}
+
+function handleLoginSubmit(e) {
+  e.preventDefault();
+  const raw = document.getElementById('inputName').value.trim();
+  if (!raw) return;
+
+  const isEmail = raw.includes('@');
+  const name = isEmail ? raw.split('@')[0] : raw;
+  const email = isEmail ? raw : '';
+
+  const user = {
+    name: name,
+    email: email,
+    loggedIn: true,
+    time: Date.now()
+  };
+
+  try {
+    localStorage.setItem('thmc.user', JSON.stringify(user));
+  } catch(err){}
+
+  const btn = document.getElementById('btnSubmit');
+  btn.textContent = 'Đăng nhập thành công ✓';
+  btn.style.background = 'var(--sage-d)';
+
+  setTimeout(() => {
+    location.href = nextUrl;
+  }, 400);
+}
+
+function handleGuestLogin() {
+  const user = {
+    name: 'Chiến lược gia',
+    email: '',
+    loggedIn: true,
+    isGuest: true,
+    time: Date.now()
+  };
+
+  try {
+    localStorage.setItem('thmc.user', JSON.stringify(user));
+  } catch(err){}
+
+  location.href = nextUrl;
+}
+
+function handleLogout() {
+  try {
+    localStorage.removeItem('thmc.user');
+  } catch(err){}
+  location.reload();
+}
+
+checkCurrentSession();
+</script>
+</body>
+</html>

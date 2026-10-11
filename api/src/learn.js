@@ -4,7 +4,7 @@ import { json, now, rid, str, currentUser, isAdmin, body } from './lib.js';
 import { loadConfig, vnToday, recompute, invalidateConfig } from './progress.js';
 import BANK from './generated/bank.json';
 import { onStagePassed } from './realm.js';
-import { gradeItem, publicItem, updateMastery, masteryScore, reviewSession, stageExam, gradeExam, placementExam,
+import { pickStageItems, STAGE_MIX, gradeItem, publicItem, updateMastery, masteryScore, reviewSession, stageExam, gradeExam, placementExam,
   gradePlacement, lockState, nextActions, seeded, hashStr, lintItem, lengthBias } from './learn-core.js';
 
 const DAY = 864e5;
@@ -142,23 +142,9 @@ export async function stageExamDraw(req, env, stageId) {
   const cfg = (await loadConfig(env)).stage_exam || { count: 15, min_pool: 30 };
   const pool = BANK.stages[stageId] || [];
   if (pool.length < (cfg.min_pool || 30)) return json({ error: 'pool_too_small', pool: pool.length }, 409);
-  const ids = pickSpreadFor(stageId, pool, cfg.count || 15);
+  const ids = pickStageItems(BANK, pool, cfg.count || 15, Math.random, cfg.mix || STAGE_MIX);
   return json({ stage: stageId, count: ids.length, items: ids.map((id) => publicItem(BANK.items[id])) });
 }
-function pickSpreadFor(stageId, pool, n) {
-  /* Chia đều theo module của chặng để đề không dồn vào một mảng kiến thức. */
-  const byMod = {};
-  for (const id of pool) (byMod[BANK.items[id].mod || '_'] = byMod[BANK.items[id].mod || '_'] || []).push(id);
-  const mods = Object.keys(byMod).sort(() => Math.random() - 0.5), out = [], used = new Set();
-  let guard = 0;
-  while (out.length < n && guard++ < n * 20) for (const m of mods) {
-    const left = byMod[m].filter((id) => !used.has(id)); if (!left.length) continue;
-    const id = left[Math.floor(Math.random() * left.length)]; used.add(id); out.push(id);
-    if (out.length === n) break;
-  }
-  return out.sort(() => Math.random() - 0.5);
-}
-
 /* ---------- GET /api/review/session ---------- */
 export async function reviewSessionApi(req, env) {
   const u = await currentUser(req, env);

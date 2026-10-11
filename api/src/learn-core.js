@@ -67,6 +67,49 @@ export function pickSpread(ids, bank, n, rnd, perLesson = 2) {
   return out;
 }
 
+/* Đề vượt chặng theo độ khó (kỹ năng cần vận dụng, xem difficulty.js) và trải theo module:
+   - mix: số câu mỗi mức (mặc định 2 nhớ · 9 vận dụng · 4 nhiều bước, cho đề 15 câu; co giãn theo `n`);
+   - không câu nào lặp trong một đề; mỗi bài tối đa perLesson câu; không hai câu liền cùng bài;
+   - mức nào thiếu câu thì bù từ mức gần nhất, chứ không trả đề ngắn. */
+export const STAGE_MIX = { 1: 2, 2: 9, 3: 4 };
+export function pickStageItems(bank, pool, n, rnd = Math.random, mix = STAGE_MIX, perLesson = 2) {
+  const total = Object.values(mix).reduce((a, b) => a + b, 0) || 1;
+  const want = {}; let left = n;
+  for (const k of [3, 1, 2]) { want[k] = k === 2 ? left : Math.min(left, Math.round((mix[k] || 0) * n / total)); left -= want[k]; }
+  const used = new Set(), per = {}, picked = [];
+  const take = (level, count) => {
+    const cand = shuffle(pool.filter((id) => !used.has(id) && (bank.items[id].difficulty || 2) === level), rnd);
+    const byMod = {};
+    for (const id of cand) (byMod[bank.items[id].mod || '_'] = byMod[bank.items[id].mod || '_'] || []).push(id);
+    const mods = shuffle(Object.keys(byMod), rnd);
+    let got = 0, progress = true;
+    while (got < count && progress) {
+      progress = false;
+      for (const m of mods) {
+        if (got >= count) break;
+        const i = byMod[m].findIndex((id) => (per[bank.items[id].lesson || id] || 0) < perLesson);
+        if (i < 0) continue;
+        const id = byMod[m].splice(i, 1)[0], l = bank.items[id].lesson || id;
+        per[l] = (per[l] || 0) + 1; used.add(id); picked.push(id); got++; progress = true;
+      }
+    }
+    return got;
+  };
+  const order = { 1: [2, 3], 2: [1, 3], 3: [2, 1] };
+  let short = 0;
+  for (const k of [3, 1, 2]) short += want[k] - take(k, want[k]);
+  for (const k of [2, 3, 1]) { if (short <= 0) break; short -= take(k, short); }
+  void order;
+  /* xen kẽ: không hai câu liền cùng bài */
+  const out = [], rest = shuffle(picked, rnd);
+  while (rest.length) {
+    const last = out.length ? bank.items[out[out.length - 1]].lesson : null;
+    const i = rest.findIndex((id) => bank.items[id].lesson !== last);
+    out.push(rest.splice(i >= 0 ? i : 0, 1)[0]);
+  }
+  return out;
+}
+
 /* ---------- hàng ôn: một hàng duy nhất ----------
    Thứ tự: câu sai ≥ 3 lần → câu đến hạn → câu của kỹ năng quá hạn → câu của kỹ năng yếu nhất.
    Không hai câu liền cùng bài; ưu tiên câu chưa thấy khi lấp theo kỹ năng. */
@@ -95,7 +138,7 @@ export function reviewSession(bank, memory, mastery, now, seen, size = 10, rnd =
 export function stageExam(bank, stageId, cfg, rnd) {
   const pool = bank.stages[stageId] || [];
   if (pool.length < cfg.min_pool) return { error: 'pool_too_small', pool: pool.length };
-  return { items: pickSpread(pool, bank, cfg.count, rnd) };
+  return { items: pickStageItems(bank, pool, cfg.count, rnd, cfg.mix || STAGE_MIX) };
 }
 export function gradeExam(bank, itemIds, answers, passRatio) {
   const detail = itemIds.map((id) => ({ id, ...gradeItem(bank.items[id], (answers || {})[id]), answered: (answers || {})[id] !== undefined && (answers || {})[id] !== '' }));

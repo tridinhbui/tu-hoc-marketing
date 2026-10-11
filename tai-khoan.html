@@ -2,96 +2,134 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=4">
-<title>Tài khoản — Tự Học Marketing Case</title>
-<meta name="description" content="Đăng nhập bằng link gửi qua email để đồng bộ tiến độ giữa các thiết bị, tham gia cộng đồng và dùng AI.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23C85A32'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23FAF3E8'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=9">
+<title>Hồ sơ Chiến lược gia — Tự Học Marketing Case</title>
+<meta name="description" content="Xem tiến trình học, điểm tích lũy XP, cấp bậc và quản lý tài khoản cá nhân.">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
 <main class="wrap narrow" id="app"></main>
+
 <script src="assets/js/data/lessons.js?v=7"></script>
 <script src="assets/js/data/principles.js?v=7"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
 <script src="assets/js/data/drills.js?v=2"></script>
 <script src="assets/js/data/cases.js?v=2"></script>
-<script src="assets/js/app.js?v=16"></script>
+<script src="assets/js/app.js?v=17"></script>
 <script>
-
 appShell('tai-khoan.html');
-const app=document.getElementById('app');
-const ERR={'het-han':'Link đã hết hạn hoặc đã được dùng. Xin link mới nhé.','link':'Link không hợp lệ.',
-  'google':'Đăng nhập Google không thành công. Thử lại, hoặc dùng link qua email.','google-huy':'Bạn đã huỷ đăng nhập Google.'};
-async function render(){
-  const u=await account();
-  if(API.on===false){ app.innerHTML=NOAPI; return; }
-  /* Trang đích sau đăng nhập: chỉ nhận đường dẫn nội bộ dạng "trang.html?…", không nhận URL ngoài. */
-  const safe=v=>/^[a-z0-9-]+\.html(\?[^<>"'\s]*)?$/.test(v||'')?v:null;
-  if(safe(qp('next'))) try{ localStorage.setItem('thmc.next',qp('next')); }catch(e){}
-  if(qp('dang-nhap')==='ok'&&u){
-    let nx=null; try{ nx=safe(localStorage.getItem('thmc.next')); localStorage.removeItem('thmc.next'); }catch(e){}
-    if(nx){ location.replace(nx); return; }
-    toast('Đã đăng nhập'); history.replaceState(null,'','tai-khoan.html'); }
-  if(!u){
-    let pv={email:true,google:false}; try{ pv=await api('/auth/providers'); }catch(e){}
-    if(!pv.email&&!pv.google){ app.innerHTML=`<section class="section"><span class="mono mono--red">Tài khoản</span>
-      <h1 class="h1" style="margin:14px 0">Chưa cần đăng nhập.</h1>
-      <p class="lede">Đăng nhập chưa được bật. Mọi bài học, quiz, case và đề thi vượt chặng vẫn dùng đầy đủ — tiến độ lưu ngay trong trình duyệt này.
-        Khi đăng nhập mở, bạn sẽ giữ được tiến độ trên mọi thiết bị.</p>
-      <p style="margin-top:18px"><a class="btn btn--primary" href="${safe(qp('next'))||'hoc.html'}">Vào học ngay →</a></p></section>`; return; }
-    app.innerHTML=`<section class="section">
-      <span class="mono mono--red">Tài khoản · miễn phí</span>
-      <h1 class="h1" style="margin:14px 0 14px">Đăng nhập<br><em>không cần mật khẩu.</em></h1>
-      <p class="lede">Nhập email, bấm link trong thư là vào. Đăng nhập để giữ tiến độ trên mọi thiết bị, lên bảng xếp hạng,
-        đăng bài trong cộng đồng và dùng AI (có hạn mức miễn phí). Không đăng nhập thì mọi bài học vẫn dùng được.</p>
-      ${qp('loi')?`<p class="note note--red" style="margin-top:16px">${ERR[qp('loi')]||'Có lỗi khi đăng nhập.'}</p>`:''}
-      ${pv.google?`<a class="btn" id="gg" href="/api/auth/google/start?next=${encodeURIComponent('/tai-khoan.html?dang-nhap=ok')}"
-          style="margin-top:22px;display:inline-flex;align-items:center;gap:10px;background:#fff;color:#1f1f1f;border:1px solid #dadce0">
-          <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.6l6.7-6.7C35.6 2.4 30.2 0 24 0 14.6 0 6.6 5.4 2.7 13.3l7.8 6C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17z"/><path fill="#FBBC05" d="M10.5 28.7c-.5-1.4-.8-3-.8-4.7s.3-3.2.8-4.7l-7.8-6C1 16.6 0 20.2 0 24s1 7.4 2.7 10.7l7.8-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.2-13.5-9.9l-7.8 6C6.6 42.6 14.6 48 24 48z"/></svg>
-          Tiếp tục với Google</a>
-        ${pv.email?'<p class="small muted" style="margin:16px 0 0">hoặc nhận link đăng nhập qua email</p>':''}`:''}
-      ${pv.email?`<form id="f" class="answer" style="margin-top:${pv.google?'8':'22'}px"><input class="field" id="em" type="email" autocomplete="email" placeholder="email@cua-ban.vn" aria-label="Email" style="max-width:340px;font-family:var(--sans)" required>
-        <button class="btn">Gửi link đăng nhập</button></form>`:''}
-      <div id="msg" class="verdict" aria-live="polite"></div>
-      <p class="small muted" style="margin-top:20px">Chúng tôi chỉ dùng email để gửi link đăng nhập. Không gửi quảng cáo.</p>
-      <p style="margin-top:14px"><a href="${safe(qp('next'))||'hoc.html'}">Học ngay không cần tài khoản →</a></p>
-    </section>`;
-    if(document.getElementById('f')) document.getElementById('f').onsubmit=async e=>{ e.preventDefault(); const m=document.getElementById('msg');
-      try{ const r=await api('/auth/start',{method:'POST',body:{email:document.getElementById('em').value}});
-        m.dataset.v='ok'; m.innerHTML=r.dev_link?`Chế độ chạy thử: <a href="${escH(r.dev_link)}">bấm để đăng nhập</a>`:'Đã gửi. Mở hộp thư và bấm link trong 15 phút.';
-      }catch(err){ m.dataset.v='bad'; m.textContent={email_invalid:'Email chưa đúng định dạng.',rate_limited:'Bạn xin link hơi nhiều lần. Đợi 15 phút rồi thử lại.',email_not_configured:'Máy chủ chưa cấu hình gửi mail.'}[err.message]||'Chưa gửi được, thử lại sau.'; } };
-    return;
-  }
-  let q=null; try{ q=await api('/ai/quota'); }catch(e){}
-  const s=S.get();
-  app.innerHTML=`<section class="section">
-    <span class="mono mono--red">Tài khoản</span>
-    <h1 class="h1" style="margin:14px 0 8px">${escH(u.name)}</h1>
-    <p class="muted">${escH(u.email)}</p>
-    <form id="nf" class="answer" style="margin-top:20px"><input class="field" id="nm" maxlength="40" value="${escH(u.display_name||'')}" placeholder="Tên hiện trên cộng đồng" aria-label="Tên hiển thị" style="max-width:300px;font-family:var(--sans)">
-      <button class="btn btn--ghost">Lưu tên</button></form>
-  </section>
-  <section class="section">
-    <span class="mono mono--ink">Đồng bộ tiến độ</span>
-    <p style="margin:10px 0">Tiến độ tự đồng bộ vài giây sau mỗi lần bạn được cộng XP. Lần gần nhất: <b id="sy">${s.syncedAt?new Date(s.syncedAt).toLocaleString('vi-VN'):'chưa có'}</b>.</p>
-    <button class="btn btn--ghost" id="syn">Đồng bộ ngay</button>
-  </section>
-  ${q?`<section class="section"><span class="mono mono--ink">Hạn mức AI miễn phí</span>
-    ${q.configured?`<table class="t" style="margin-top:10px"><tbody>
-      <tr><td>Phỏng vấn mô phỏng</td><td class="n">${q.interview.used} / ${q.interview.limit} mỗi ${q.interview.per}</td></tr>
-      <tr><td>Trợ lý hỏi đáp</td><td class="n">${q.assist.used} / ${q.assist.limit} mỗi ${q.assist.per}</td></tr></tbody></table>`
-      :'<p class="muted" style="margin-top:10px">AI chưa được bật trên máy chủ.</p>'}</section>`:''}
-  <section class="section"><button class="btn btn--ghost" id="out">Đăng xuất</button></section>`;
-  document.getElementById('nf').onsubmit=async e=>{ e.preventDefault();
-    try{ await api('/me',{method:'PATCH',body:{display_name:document.getElementById('nm').value}}); API.user=undefined; toast('Đã lưu tên'); render(); }
-    catch(err){ toast(err.message==='name_too_short'?'Tên cần ít nhất 2 ký tự':'Chưa lưu được'); } };
-  document.getElementById('syn').onclick=async()=>{ await syncNow(); document.getElementById('sy').textContent=new Date().toLocaleString('vi-VN'); toast('Đã đồng bộ'); };
-  document.getElementById('out').onclick=async()=>{ await api('/auth/logout',{method:'POST',body:{}}); API.user=undefined; location.href='tai-khoan.html'; };
-}
-const NOAPI=`<section class="section"><span class="mono mono--red">Chưa bật</span><h1 class="h2" style="margin:12px 0">Tính năng này cần máy chủ.</h1>
-  <p class="muted">Bản bạn đang xem chỉ có phần tĩnh. Mọi bài học, quiz, case và tiến độ vẫn chạy bình thường và lưu trong trình duyệt.</p></section>`;
-render();
+const app = document.getElementById('app');
 
+async function renderProfile() {
+  const u = await account();
+  const s = S.get();
+  const rk = typeof rank === 'function' ? rank(s) : { t: 'Strategist', n: 1 };
+  const doneCount = Object.keys(s.done || {}).length;
+
+  if (u && u.name) {
+    app.innerHTML = `
+      <section class="section">
+        <span class="studio-badge studio-badge--terra">HỒ SƠ CHIẾN LƯỢC GIA</span>
+        <h1 class="h1" style="margin:16px 0 8px">${escH(u.name)}</h1>
+        <p class="muted" style="margin:0 0 24px">${escH(u.email || 'Tài khoản Studio hoạt động trên trình duyệt')}</p>
+
+        <!-- Stats Grid Card -->
+        <div style="background:#FAF5EE;color:#24160E;border-radius:18px;padding:24px;border:1px solid rgba(36,22,14,.12);margin-bottom:28px;box-shadow:0 14px 32px -12px rgba(0,0,0,.6)">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:center;border-bottom:1px solid rgba(36,22,14,.1);padding-bottom:18px;margin-bottom:18px">
+            <div>
+              <b style="font-family:var(--serif);font-size:1.8rem;color:var(--terra);display:block">${fmt(s.xp)}</b>
+              <span style="font-size:12px;color:rgba(36,22,14,.6)">Tổng điểm XP</span>
+            </div>
+            <div>
+              <b style="font-family:var(--serif);font-size:1.8rem;color:var(--gold-d);display:block">${s.streak || 0}</b>
+              <span style="font-size:12px;color:rgba(36,22,14,.6)">Chuỗi ngày (Streak)</span>
+            </div>
+            <div>
+              <b style="font-family:var(--serif);font-size:1.8rem;color:var(--sage-d);display:block">${doneCount}</b>
+              <span style="font-size:12px;color:rgba(36,22,14,.6)">Case đã giải</span>
+            </div>
+          </div>
+
+          <div class="row between">
+            <div>
+              <span style="font-size:12px;font-weight:700;letter-spacing:.08em;color:rgba(36,22,14,.55);text-transform:uppercase">CẤP ĐỘ HIỆN TẠI</span>
+              <b style="font-family:var(--serif);font-size:1.25rem;display:block;margin-top:2px">${escH(rk ? rk.t : 'Strategist')}</b>
+            </div>
+            <a class="btn btn--primary" href="hoc.html" style="border-radius:99px;padding:9px 20px;font-size:13.5px">Tiếp tục giải case →</a>
+          </div>
+        </div>
+
+        <!-- Edit Profile Form -->
+        <div style="background:var(--bg-2);border-radius:14px;padding:20px;border:1px solid rgba(249,244,235,.1);margin-bottom:24px">
+          <span class="mono" style="color:var(--ink-70);margin-bottom:8px;display:block">Đổi tên hiển thị</span>
+          <form id="editNameForm" class="row" style="gap:10px">
+            <input class="field" id="inputNewName" value="${escH(u.name)}" placeholder="Tên mới..." style="max-width:280px;background:#FAF5EE;color:#24160E" required>
+            <button type="submit" class="btn btn--ghost" style="border-radius:8px;padding:9px 18px">Lưu tên</button>
+          </form>
+        </div>
+
+        <!-- Account Actions -->
+        <div class="row" style="gap:14px">
+          <button type="button" class="btn btn--ghost" id="btnLogout" onclick="signOut()" style="border-color:rgba(249,244,235,.3)">
+            Đăng xuất tài khoản
+          </button>
+        </div>
+      </section>
+    `;
+
+    document.getElementById('editNameForm').onsubmit = (e) => {
+      e.preventDefault();
+      const newName = document.getElementById('inputNewName').value.trim();
+      if (!newName) return;
+      u.name = newName;
+      try { localStorage.setItem('thmc.user', JSON.stringify(u)); } catch(err){}
+      toast('Đã cập nhật tên mới ✓');
+      setTimeout(renderProfile, 300);
+    };
+  } else {
+    app.innerHTML = `
+      <section class="section">
+        <span class="studio-badge studio-badge--terra">CHẾ ĐỘ KHÁCH</span>
+        <h1 class="h1" style="margin:16px 0 12px">Bạn chưa đăng nhập.</h1>
+        <p class="lede" style="margin-bottom:28px">
+          Tiến trình giải case và điểm tích luỹ XP hiện đang được lưu tạm thời trên trình duyệt máy này. 
+          Đăng nhập vào Studio để lưu giữ hồ sơ lâu dài và đồng bộ tiến độ.
+        </p>
+
+        <!-- Guest Stats Preview -->
+        <div style="background:#FAF5EE;color:#24160E;border-radius:16px;padding:22px;border:1px solid rgba(36,22,14,.15);margin-bottom:28px">
+          <div class="row between" style="margin-bottom:12px">
+            <span style="font-size:12px;font-weight:700;color:rgba(36,22,14,.6)">TIẾN TRÌNH TRÊN TRÌNH DUYỆT</span>
+            <span class="gold" style="font-weight:700">${fmt(s.xp)} XP</span>
+          </div>
+          <b style="font-family:var(--serif);font-size:1.3rem;display:block;margin-bottom:6px">Chiến lược gia ẩn danh</b>
+          <p style="font-size:13.5px;color:rgba(36,22,14,.7);margin:0">Đã hoàn thành ${doneCount} bài học & thử thách.</p>
+        </div>
+
+        <div class="row" style="gap:14px">
+          <a class="btn btn--primary" href="dang-nhap.html?next=tai-khoan.html" style="border-radius:99px;padding:13px 28px">
+            Đăng nhập tài khoản Studio →
+          </a>
+          <a class="btn btn--ghost" href="hoc.html" style="border-radius:99px;padding:13px 22px">
+            Học tiếp với tư cách Khách
+          </a>
+        </div>
+      </section>
+    `;
+  }
+}
+
+function signOut() {
+  try {
+    localStorage.removeItem('thmc.user');
+    if (typeof API !== 'undefined') API.user = undefined;
+  } catch(e){}
+  toast('Đã đăng xuất');
+  setTimeout(() => { location.href = 'dang-nhap.html'; }, 300);
+}
+
+renderProfile();
 </script>
 </body>
 </html>
