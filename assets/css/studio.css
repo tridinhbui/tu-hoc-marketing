@@ -210,3 +210,80 @@
 :root[data-theme="ivory"] .today,:root[data-theme="ivory"] .node,:root[data-theme="ivory"] a.step,:root[data-theme="ivory"] .step{border:0}
 :root[data-theme="ivory"] .today{border-radius:var(--st-r);background:rgba(255,251,243,.9);box-shadow:var(--st-shadow)}
 :root[data-theme="ivory"] .go{border-radius:999px}
+
+/* ---------- mọi nhóm trang còn lại: viền thẻ mờ đi, thay bằng bóng giấy ---------- */
+:root[data-theme="ivory"] .lp-card,
+:root[data-theme="ivory"] .lp-prog,
+:root[data-theme="ivory"] .drill,
+:root[data-theme="ivory"] .exhibit,
+:root[data-theme="ivory"] .cm-card,
+:root[data-theme="ivory"] .cm-map,
+:root[data-theme="ivory"] .cm-zone,
+:root[data-theme="ivory"] .cm-li,
+:root[data-theme="ivory"] .today,
+:root[data-theme="ivory"] .step,
+:root[data-theme="ivory"] .cardx,
+:root[data-theme="ivory"] .card,
+:root[data-theme="ivory"] .lvcard,
+:root[data-theme="ivory"] .tier,
+:root[data-theme="ivory"] .sc,
+:root[data-theme="ivory"] .res,
+:root[data-theme="ivory"] .mod,
+:root[data-theme="ivory"] .les,
+:root[data-theme="ivory"] .nb,
+:root[data-theme="ivory"] .mist,
+:root[data-theme="ivory"] .explain,
+:root[data-theme="ivory"] .practice,
+:root[data-theme="ivory"] .troph,
+:root[data-theme="ivory"] .per,
+:root[data-theme="ivory"] .panel,
+:root[data-theme="ivory"] .box,
+:root[data-theme="ivory"] .tk-card,
+:root[data-theme="ivory"] .tk-tile,
+:root[data-theme="ivory"] .tk-climb,
+:root[data-theme="ivory"] .tk-p,
+:root[data-theme="ivory"] .rm__kpi,
+:root[data-theme="ivory"] .th__hero,
+:root[data-theme="ivory"] .d-tile,
+:root[data-theme="ivory"] .map__f{border-color:rgba(120,84,50,.1)!important;box-shadow:0 14px 30px -26px rgba(92,48,22,.4)}
+
+/* trang cần máy chủ / trống: thẻ thông báo cùng giọng với landing */
+:root[data-theme="ivory"] .section>.h1,:root[data-theme="ivory"] .section>.h2{margin-top:6px}
+:root[data-theme="ivory"] table.t th,:root[data-theme="ivory"] table th{font-family:var(--st-serif);font-weight:500}
+:root[data-theme="ivory"] input.field,:root[data-theme="ivory"] textarea.field,:root[data-theme="ivory"] select.field,
+:root[data-theme="ivory"] .lab__field{border:0;box-shadow:inset 0 0 0 1.5px rgba(120,84,50,.2);border-radius:16px;background:#fff}
+:root[data-theme="ivory"] input.field:focus,:root[data-theme="ivory"] textarea.field:focus,:root[data-theme="ivory"] .lab__field:focus{box-shadow:inset 0 0 0 2px var(--st-terra);outline:0}
+:root[data-theme="ivory"] a:not([class]){color:var(--st-terra-d);text-underline-offset:3px;text-decoration-thickness:1px}
+:root[data-theme="ivory"] hr{border:0;height:1px;background:linear-gradient(90deg,transparent,var(--st-line),transparent)}
+
+/* ---------- Học theo nghề (bản đồ nghề) ---------- */
+:root[data-theme="ivory"] .cm-tab svg,:root[data-theme="ivory"] .hero__tag .ic,:root[data-theme="ivory"] .track>.ic,:root[data-theme="ivory"] .hud__motto svg,:root[data-theme="ivory"] .hud__title svg{display:none}
+:root[data-theme="ivory"] .cm-chip{border:0;background:none;padding:0;text-transform:none;letter-spacing:0;font:500 14px 'Be Vietnam Pro',sans-serif;color:var(--st-ink-2)}
+:root[data-theme="ivory"] .cm-chip--gold{color:var(--st-gold);font-family:var(--st-hand);font-size:19px;font-weight:600}
+:root[data-theme="ivory"] .cm-chip--terra{background:none;color:var(--st-terra);font-family:var(--st-hand);font-size:20px;font-weight:600}
+:root[data-theme="ivory"] .cm-tabs{border-bottom:1px solid var(--st-line);gap:clamp(12px,2.2vw,30px)}
+:root[data-theme="ivory"] .cm-tab{border:0;border-radius:0;background:none;padding:10px 2px 13px;font:500 16px/1.2 var(--st-serif);color:var(--st-ink-3);position:relative}
+:root[data-theme="ivory"] .cm-tab[aria-selected="true"]{background:none;color:var(--st-terra);font-style:italic;font-weight:600}
+:root[data-theme="ivory"] .cm-tab[aria-selected="true"]::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;border-radius:3px;background:var(--st-terra)}
+:root[data-theme="ivory"] .cm-pill{background:none;color:var(--st-terra);font:600 17px var(--st-hand);text-transform:none;letter-spacing:0;padding:0}
+
+/* ---------- Luyện phỏng vấn ---------- */
+:root[data-theme="ivory"] .hero__tag{background:none;padding:0;color:var(--st-terra);font:600 19px var(--st-hand);text-transform:none;letter-spacing:0}
+:root[data-theme="ivory"] .mode,:root[data-theme="ivory"] .track{border:0;box-shadow:inset 0 0 0 1.5px rgba(120,84,50,.16),0 14px 30px -26px rgba(92,48,22,.4);border-radius:22px}
+:root[data-theme="ivory"] .mode[aria-pressed="true"]{box-shadow:0 18px 34px -22px rgba(42,26,18,.7)}
+:root[data-theme="ivory"] .track{border-radius:26px 10px 26px 10px}
+
+/* ---------- Bộ sưu tập / Gallery / Kingdom: nhãn nhỏ viết tay thay cho chip chữ hoa ---------- */
+:root[data-theme="ivory"] .label{font-family:'Be Vietnam Pro',sans-serif;letter-spacing:.14em}
+:root[data-theme="ivory"] .index-row:hover{background:rgba(196,83,45,.05)}
+
+/* nút bị khoá: chỉ là dòng chữ mờ trong khung nét mảnh, không giả làm nút bấm được */
+:root[data-theme="ivory"] .th__go[aria-disabled="true"],:root[data-theme="ivory"] .btn[disabled],:root[data-theme="ivory"] .rm__go:disabled{
+  background:transparent;color:var(--st-ink-3);box-shadow:inset 0 0 0 1.5px rgba(120,84,50,.2);transform:none}
+
+/* ---------- đọc được: không chữ nào dưới 11.5px ---------- */
+:root[data-theme="ivory"] .label,:root[data-theme="ivory"] .mono,:root[data-theme="ivory"] .num,:root[data-theme="ivory"] .rng,
+:root[data-theme="ivory"] .tag,:root[data-theme="ivory"] .st,:root[data-theme="ivory"] .kick,:root[data-theme="ivory"] .qmark,
+:root[data-theme="ivory"] .log__saved,:root[data-theme="ivory"] .strip__btn,:root[data-theme="ivory"] .m,
+:root[data-theme="ivory"] .reads a i,:root[data-theme="ivory"] .topics span,:root[data-theme="ivory"] small{font-size:max(11.5px,.72rem)}
+:root[data-theme="ivory"] .label,:root[data-theme="ivory"] .mono{letter-spacing:.1em}
