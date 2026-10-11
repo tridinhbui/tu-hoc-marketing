@@ -49,6 +49,27 @@
   tag('.lp-doodle', 'rot', { base: .3 });
   tag('.lp-sign', 'drop', { base: .5 });
   tag('.lp-foot .lp-wrap', 'up');
+  /* Các phần bổ sung (landing-sections) */
+  $$('.ts .ts-h').forEach(function (h) { splitLines(h); h.setAttribute('data-fx', 'line'); h.style.opacity = 1; });
+  tag('.ts-pill', 'left');
+  tag('.ts-p, .chal__q', 'up', { base: .15 });
+  tag('.ts > .lp-wrap .ts-btn', 'up', { base: .3 });
+  tag('.lab__feat li', 'up', { base: .15, step: .12 });
+  tag('.lab__polaroid', 'rot');
+  tag('.lab__sand', 'left');
+  tag('.lab__prog', 'right');
+  tag('.lab__next', 'up', { base: .2 });
+  tag('.acc__i', 'up', { base: .2, step: .1 });
+  tag('.ana__vis', 'zoom');
+  tag('.step', 'up', { base: .05, step: .13 });
+  tag('.road__map', 'zoom');
+  tag('.sk', 'rot', { base: .1, step: .12 });
+  tag('.chal__vis', 'zoom');
+  tag('.chal__pick', 'left');
+  tag('.chal__view', 'right', { base: .15 });
+  tag('.opt', 'pop', { base: .35, step: .12 });
+  tag('.uni__stats > div', 'up', { base: .2, step: .12 });
+  tag('.pol', 'rot', { base: .05, step: .14 });
   /* Sân khấu hero: mỗi mảnh vào theo kiểu riêng, so le nhịp */
   var stage = [
     ['.lp-cream', 'zoom', .05], ['.lp-portrait', 'rot', .15], ['.lp-scrap-or', 'zoom', .35], ['.lp-city', 'drop', .45],
