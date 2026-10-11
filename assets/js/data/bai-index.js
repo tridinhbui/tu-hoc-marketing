@@ -5,7 +5,7 @@
    Phải tải SAU curriculum.js và TRƯỚC app.js: file này ghép module đã xuất bản vào STAGES/JOURNEY
    để hành trình, kỹ năng, "hôm nay" thấy bài mới mà không cần tải nội dung. */
 
-const BAI_V = 15;   // tăng khi sửa nội dung bất kỳ file bài/*.js
+const BAI_V = 16;   // tăng khi sửa nội dung bất kỳ file bài/*.js
 
 /* Bước hành trình → chặng nội dung (đề vượt chặng, cổng mở khoá). */
 const STEP_STAGE = { observe:'s1', understand:'s2', hypothesis:'s2', message:'s3', channel:'s4',
@@ -62,6 +62,9 @@ const BAI_MODS = [
   { id:'kn11', step:'channel', t:'Tìm kiếm tự nhiên (SEO) cho người mới: để khách tìm thấy bạn không cần trả tiền mỗi lượt', tags:'seo tìm kiếm tự nhiên search intent từ khoá google business profile search console' },
   { id:'kn12', step:'channel', t:'Quảng cáo, khuyến mại và dữ liệu khách hàng ở Việt Nam: biết khi nào phải dừng lại hỏi pháp chế', tags:'pháp lý quảng cáo khuyến mại dữ liệu cá nhân nghị định 13 nghị định 81 kol cookie' },
   { id:'kn13', step:'channel', t:'Mạng xã hội theo nền tảng: được thấy, giữ chân, lịch nội dung, chẩn đoán và báo cáo', tags:'mạng xã hội tiktok youtube facebook instagram reels shorts retention giữ chân ctr ảnh bìa lịch nội dung content calendar reach giảm bình luận báo cáo tuần' },
+  { id:'kn14', step:'channel', t:'Instagram: mỗi bề mặt một việc, một cách xếp hạng', tags:'instagram reels stories feed explore carousel lưu chia sẻ trang cá nhân bio highlight xếp hạng' },
+  { id:'kn15', step:'channel', t:'YouTube: đóng gói, giữ chân và đọc đúng báo cáo', tags:'youtube impressions ctr hình thu nhỏ thời lượng xem trung bình studio tab tiếp cận nguồn lưu lượng shorts' },
+  { id:'kn16', step:'channel', t:'TikTok: bảng đề xuất, độ dài đúng lời hứa, Spark Ads', tags:'tiktok for you đề xuất xem hết thông tin video âm thanh hashtag spark ads mã uỷ quyền đa dạng' },
   { id:'tn01', step:'test', t:'Thử nhỏ trước khi chi lớn', tags:'thử nhỏ mvp pre-order đặt cọc' },
   { id:'tn02', step:'test', t:'A/B test: thiết kế, cỡ mẫu, đọc kết quả', tags:'a/b test cỡ mẫu ab testing' },
   { id:'tn03', step:'test', t:'Thử sáng tạo: creative testing', tags:'creative testing thử sáng tạo hook thumb-stop ctr' },
@@ -530,6 +533,21 @@ const BAI_INDEX = [
   { id:'B:kn13-05', mod:'kn13', skill:'measure', read:'7 phút', t:'Reach tuần này giảm 40%: kiểm theo thứ tự nào?', c:'Chẩn đoán theo thứ tự nghi phạm' },
   { id:'B:kn13-06', mod:'kn13', skill:'comm', read:'6 phút', t:'300 bình luận một tuần: trả lời ai trước?', c:'Phân loại, hạn trả lời, đường leo thang' },
   { id:'B:kn13-07', mod:'kn13', skill:'comm', read:'6 phút', t:'Báo cáo mạng xã hội cho quản lý: bạn mở đầu bằng gì?', c:'Ba số, một phát hiện, một đề nghị' },
+  { id:'B:kn14-01', mod:'kn14', skill:'channel', read:'6 phút', t:'Ảnh cùng bó hoa trên Feed, Stories và Reels: ba bề mặt, ba việc khác nhau?', c:'Mỗi bề mặt một việc' },
+  { id:'B:kn14-02', mod:'kn14', skill:'creative', read:'7 phút', t:'Reels: xem hết, chia sẻ lại, thích, vào trang âm thanh — thiết kế cho điều nào?', c:'Thiết kế Reels theo những điều nền tảng nói là nhìn kỹ' },
+  { id:'B:kn14-03', mod:'kn14', skill:'creative', read:'6 phút', t:'Bài để lưu lại: đo lượt lưu trên reach, không đo trái tim', c:'Lưu là lời hẹn quay lại' },
+  { id:'B:kn14-04', mod:'kn14', skill:'channel', read:'6 phút', t:'Stories: người xem chạm vào, trả lời hay lướt sang — bạn thiết kế cho điều nào?', c:'Stories: mời trả lời, đừng chỉ phát' },
+  { id:'B:kn14-05', mod:'kn14', skill:'channel', read:'6 phút', t:'Trang cá nhân là trang đích: khách ghé vào thấy gì trong 5 giây?', c:'Trang cá nhân là một trang đích' },
+  { id:'B:kn15-01', mod:'kn15', skill:'measure', read:'6 phút', t:'CTR tụt từ 9% xuống 3,5% khi video đến người lạ: tin xấu hay tin tốt?', c:'CTR giảm khi tiếp cận rộng hơn' },
+  { id:'B:kn15-02', mod:'kn15', skill:'measure', read:'6 phút', t:'Cùng một video, CTR tìm kiếm cao còn CTR trang chủ thấp: có nên so không?', c:'CTR phụ thuộc vào ý định của người nhìn' },
+  { id:'B:kn15-03', mod:'kn15', skill:'measure', read:'6 phút', t:'Thời lượng xem trung bình 3 phút: tốt hay xấu — còn tuỳ video dài bao nhiêu?', c:'Quy thời lượng xem về phần trăm độ dài' },
+  { id:'B:kn15-04', mod:'kn15', skill:'measure', read:'7 phút', t:'Mở tab Tiếp cận trong YouTube Studio: bốn câu hỏi cần trả lời trước khi sửa', c:'Bốn câu hỏi của tab Tiếp cận' },
+  { id:'B:kn15-05', mod:'kn15', skill:'channel', read:'6 phút', t:'Video dài hay video ngắn dọc: chọn theo việc và đo từng loại riêng', c:'Chọn theo việc, đo từng loại riêng' },
+  { id:'B:kn16-01', mod:'kn16', skill:'channel', read:'6 phút', t:'Bảng đề xuất của TikTok đọc những gì — và bạn kiểm soát được phần nào?', c:'Ba nhóm yếu tố và phần bạn kiểm soát' },
+  { id:'B:kn16-02', mod:'kn16', skill:'creative', read:'6 phút', t:'Xem hết một video dài là tín hiệu mạnh: độ dài phải đúng với lời hứa', c:'Xem hết đúng độ dài lời hứa' },
+  { id:'B:kn16-03', mod:'kn16', skill:'channel', read:'6 phút', t:'Tài khoản nhỏ có được đề xuất không? Số người theo dõi không phải yếu tố trực tiếp', c:'Mỗi video được xét bằng tín hiệu của chính nó' },
+  { id:'B:kn16-04', mod:'kn16', skill:'creative', read:'6 phút', t:'Đăng cùng một âm thanh, cùng một kiểu mỗi ngày: vì sao không giúp bảng đề xuất', c:'Bảng đề xuất tìm sự đa dạng' },
+  { id:'B:kn16-05', mod:'kn16', skill:'channel', read:'7 phút', t:'Spark Ads: biến video tự nhiên đã giữ được người xem thành quảng cáo', c:'Chọn bài đã chứng minh, rồi đẩy bằng Spark Ads' },
   { id:'B:tn01-01', mod:'tn01', skill:'measure', read:'6 phút', t:'Chiến dịch 800 triệu hay bản thử 30 triệu trước?', c:'Bản thử tối thiểu cho marketing (marketing MVP)' },
   { id:'B:tn01-02', mod:'tn01', skill:'channel', read:'7 phút', t:'Tung toàn quốc hay thử ở một tỉnh trước?', c:'Thử theo khu vực (test market)' },
   { id:'B:tn01-03', mod:'tn01', skill:'measure', read:'7 phút', t:'Chưa có sản phẩm, làm sao biết có ai muốn mua?', c:'Thử bằng trang đích (landing page test)' },
