@@ -7,28 +7,63 @@
 <title>Phòng thử thách — Tự Học Marketing Case</title>
 <meta name="description" content="Phòng thử thách: rút ngẫu nhiên các tình huống marketing, chọn hướng đi, đọc lý do từng phương án. Làm lại bao nhiêu lần cũng được.">
 <style>
-  .rm{max-width:980px;margin:0 auto;padding:clamp(20px,4vw,44px) clamp(16px,3vw,32px) 80px}
+  .rm{max-width:1120px;margin:0 auto;padding:clamp(20px,4vw,40px) clamp(16px,3vw,32px) 80px}
   .rm__eyebrow{font:700 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
-  .rm h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.05;letter-spacing:-.02em;margin:10px 0 12px}
+  .rm h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4vw,3rem);line-height:1.05;letter-spacing:-.02em;margin:10px 0 10px}
   .rm h1 em{color:var(--terra)}
-  .rm__lede{max-width:56ch;color:var(--ink-70);line-height:1.6;margin:0 0 22px}
-  .rm__stats{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 22px}
-  .rm__stat{background:var(--paper-card);color:var(--ink-dark);border:1px solid var(--ink-12);border-radius:14px;padding:12px 16px;min-width:120px}
-  .rm__stat b{display:block;font-family:var(--serif);font-size:1.6rem;font-weight:500;line-height:1.1}
-  .rm__stat span{font-size:12px;color:var(--ink-dark-50)}
-  .rm__topics{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
-  .rm__topics button{border:1px solid var(--ink-12);background:transparent;color:var(--ink);border-radius:999px;padding:7px 14px;font:600 13px var(--sans);cursor:pointer}
-  .rm__topics button[aria-pressed="true"]{background:var(--terra);border-color:var(--terra);color:#fff}
-  .rm__go{border:0;background:var(--terra);color:#fff;border-radius:999px;padding:13px 28px;font:700 15px var(--sans);cursor:pointer}
+  .rm__lede{max-width:60ch;color:var(--ink-70);line-height:1.6;margin:0 0 24px}
+  .rm__grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:20px;align-items:start}
+  @media(max-width:900px){.rm__grid{grid-template-columns:1fr}}
+  .rm__col{display:grid;gap:16px}
+  .rm__panel{background:var(--paper-card);color:var(--ink-dark);border:1px solid rgba(36,22,14,.1);border-radius:20px;padding:clamp(16px,2.4vw,24px)}
+  .rm__panel h2{font:700 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dark-50);margin:0 0 14px}
+  .rm__sug{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-color:var(--terra-15);background:linear-gradient(135deg,var(--paper-card),#faeadf)}
+  .rm__sug small{font:700 10.5px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--terra)}
+  .rm__sug h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1.15;margin:8px 0 6px}
+  .rm__sug p{margin:0;font-size:13.5px;color:var(--ink-dark-70)}
+  .rm__step{display:flex;align-items:center;gap:10px;font:700 13px var(--sans);letter-spacing:.06em;text-transform:uppercase;margin:22px 0 12px}
+  .rm__step:first-of-type{margin-top:6px}
+  .rm__step i{width:24px;height:24px;border-radius:50%;background:var(--terra);color:#fff;font:700 12px/24px var(--sans);text-align:center;font-style:normal}
+  .rm__choices{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+  .rm__choice{text-align:left;border:1.5px solid rgba(36,22,14,.14);background:#fff;color:var(--ink-dark);border-radius:14px;padding:12px 14px;cursor:pointer;font:inherit;transition:border-color .15s,box-shadow .15s}
+  .rm__choice b{display:block;font:600 14px var(--sans)}
+  .rm__choice span{display:block;font-size:12px;color:var(--ink-dark-50);margin-top:3px;line-height:1.4}
+  .rm__choice:hover:not([disabled]){border-color:var(--terra)}
+  .rm__choice[aria-pressed="true"]{border-color:var(--terra);box-shadow:0 0 0 2px var(--terra-15);background:#fff7f2}
+  .rm__choice[disabled]{opacity:.4;cursor:not-allowed}
+  .rm__choice em{display:block;height:4px;border-radius:9px;background:rgba(36,22,14,.08);margin-top:9px;overflow:hidden}
+  .rm__choice em u{display:block;height:100%;background:var(--terra)}
+  .rm__counts{display:flex;gap:10px;flex-wrap:wrap}
+  .rm__counts .rm__choice{min-width:92px;text-align:center;padding:12px 18px;font:700 14px var(--sans)}
+  .rm__go{border:0;background:var(--terra);color:#fff;border-radius:999px;padding:13px 28px;font:700 15px var(--sans);cursor:pointer;white-space:nowrap}
+  .rm__go:hover:not(:disabled){background:var(--terra-d)}
   .rm__go:disabled{opacity:.45;cursor:not-allowed}
-  .rm__go--ghost{background:transparent;color:var(--ink);border:1px solid var(--ink-30)}
-  .rm__bar{display:flex;align-items:center;gap:12px;margin:0 0 18px;font:600 13px var(--sans);color:var(--ink-70)}
-  .rm__bar i{flex:1;height:6px;border-radius:99px;background:var(--ink-12);overflow:hidden}
-  .rm__bar i u{display:block;height:100%;background:var(--terra);width:0;transition:width .3s}
-  .rm__card{background:var(--paper-card);color:var(--ink-dark);border-radius:20px;padding:clamp(18px,3vw,32px);box-shadow:0 18px 40px -22px rgba(0,0,0,.35)}
+  .rm__go--ghost{background:transparent;color:var(--ink-dark);border:1px solid rgba(36,22,14,.3)}
+  .rm__go--ghost:hover:not(:disabled){background:rgba(36,22,14,.06)}
+  .rm__start{width:100%;margin-top:24px;padding:16px;border-radius:14px;font-size:15.5px}
+  .rm__kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .rm__kpi{border:1px solid rgba(36,22,14,.1);border-radius:14px;padding:12px}
+  .rm__kpi span{display:block;font:700 10px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dark-50)}
+  .rm__kpi b{display:block;font-family:var(--serif);font-weight:500;font-size:1.5rem;margin-top:6px}
+  .rm__tp{display:grid;grid-template-columns:84px 1fr auto;gap:10px;align-items:center;font-size:13px;margin:0 0 10px}
+  .rm__tp i{height:6px;border-radius:9px;background:rgba(36,22,14,.08);overflow:hidden}
+  .rm__tp u{display:block;height:100%;background:var(--terra)}
+  .rm__tp span{color:var(--ink-dark-50);font-size:12px}
+  .rm__hist{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+  .rm__hist li{display:flex;gap:10px;align-items:center;font-size:13px;padding:8px 0;border-top:1px solid rgba(36,22,14,.08);line-height:1.35}
+  .rm__hist li:first-child{border-top:0}
+  .rm__hist li span{margin-left:auto;font-size:11.5px;color:var(--ink-dark-50);white-space:nowrap}
+  .rm__dot{width:10px;height:10px;border-radius:50%;flex:none}
+  .rm__empty{font-size:13px;color:var(--ink-dark-50);margin:0}
+  /* làm bài */
+  .rm__bar{display:flex;align-items:center;gap:14px;margin:0 0 16px;font:600 13px var(--sans);color:var(--ink-70)}
+  .rm__segs{flex:1;display:flex;gap:5px}
+  .rm__segs i{flex:1;height:6px;border-radius:99px;background:var(--ink-12)}
+  .rm__segs i.is-ok{background:#3d8a4f}.rm__segs i.is-bad{background:#c0392b}.rm__segs i.is-now{background:var(--terra)}
+  .rm__run{max-width:760px;margin:0 auto}
   .rm__kind{display:inline-block;font:700 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--terra);background:var(--terra-06);padding:6px 10px;border-radius:999px}
   .rm__brief{font-size:15.5px;line-height:1.65;color:var(--ink-dark-70);margin:14px 0 6px}
-  .rm__q{font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.25;margin:0 0 18px}
+  .rm__q{font-family:var(--serif);font-weight:400;font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.25;margin:0 0 18px}
   .rm__opts{display:grid;gap:10px}
   .rm__opt{display:block;width:100%;text-align:left;border:1.5px solid rgba(36,22,14,.15);background:#fff;color:var(--ink-dark);border-radius:14px;padding:14px 16px;cursor:pointer;font:500 15px/1.5 var(--sans);transition:border-color .15s,background .15s}
   .rm__opt b{font-weight:700;color:var(--terra);margin-right:8px}
@@ -37,17 +72,14 @@
   .rm__opt[data-s="right"]{border-color:#3d8a4f;background:#e8f3ea}
   .rm__opt[data-s="wrong"]{border-color:#c0392b;background:#fbeae7}
   .rm__opt[disabled]{cursor:default}
-  .rm__why{margin:10px 2px 0;font-size:14px;line-height:1.6;color:var(--ink-dark-70)}
+  .rm__why{margin:8px 2px 4px;font-size:14px;line-height:1.6;color:var(--ink-dark-70)}
   .rm__why strong{color:#2f7a42}
   .rm__act{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;align-items:center}
-  .rm__res{text-align:center;padding:12px 0}
-  .rm__res b{font-family:var(--serif);font-size:3.2rem;font-weight:400;display:block;line-height:1}
-  .rm__hist{margin-top:34px}
-  .rm__hist h2{font:700 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-50);margin:0 0 10px}
-  .rm__hist ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-  .rm__hist li{display:flex;gap:10px;align-items:center;font-size:14px;padding:10px 12px;border:1px solid var(--ink-12);border-radius:12px}
-  .rm__hist li span{margin-left:auto;font-size:12px;color:var(--ink-50)}
-  .rm__dot{width:10px;height:10px;border-radius:50%;flex:none}
+  .rm__res{text-align:center;padding:8px 0 4px}
+  .rm__res b{font-family:var(--serif);font-size:3.4rem;font-weight:400;display:block;line-height:1;margin-top:10px}
+  .rm__res p{max-width:46ch;margin:12px auto 0;color:var(--ink-dark-70);line-height:1.6}
+  .rm__review{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:6px}
+  .rm__review li{display:flex;gap:10px;align-items:center;padding:10px 12px;border:1px solid rgba(36,22,14,.1);border-radius:12px;font-size:14px}
 </style>
 </head>
 <body>
@@ -65,7 +97,13 @@
 appShell('quiz.html');
 const app = document.getElementById('app');
 const TOPIC = { creative: 'Sáng tạo', brand: 'Thương hiệu', consumer: 'Khách hàng', growth: 'Tăng trưởng', strategy: 'Chiến lược' };
-const ROUND = 5, LABEL = 'ABCD';
+const MODES = [
+  ['smart', 'Thông minh', 'Chưa làm trước, rồi câu từng sai'],
+  ['new', 'Chỉ câu mới', 'Những thử thách bạn chưa chạm tới'],
+  ['wrong', 'Ôn câu sai', 'Làm lại những cái từng chọn trượt'],
+  ['random', 'Ngẫu nhiên', 'Trộn đều toàn bộ ngân hàng']
+];
+const SIZES = [3, 5, 8, 10], LABEL = 'ABCD';
 /* Tình huống cà phê (trang cũ) — giữ lại làm một thử thách trong ngân hàng. */
 const POOL = [...CHALLENGES, {
   id: 'ch-coffee', kind: 'Tăng nhận biết cho thương hiệu mới', d: 'brand',
@@ -78,66 +116,136 @@ const POOL = [...CHALLENGES, {
 }];
 const roomFlags = () => (S.get().flags || {});
 const rec = (id) => roomFlags()['room:' + id];
-let topic = 'all', run = null;
+let topic = 'all', mode = 'smart', size = 5, run = null;
 
+const inTopic = (t) => POOL.filter((c) => t === 'all' || c.d === t);
+function poolFor(t, m) {
+  const p = inTopic(t);
+  if (m === 'new') return p.filter((c) => !rec(c.id));
+  if (m === 'wrong') return p.filter((c) => rec(c.id) && !rec(c.id).ok);
+  return p;
+}
 function roomStats() {
   const done = POOL.filter((c) => rec(c.id));
   const firstOk = done.filter((c) => rec(c.id).first).length;
-  return { done: done.length, total: POOL.length, firstOk, tries: done.reduce((n, c) => n + rec(c.id).n, 0) };
+  const okNow = done.filter((c) => rec(c.id).ok).length;
+  return { done: done.length, total: POOL.length, firstOk, okNow, tries: done.reduce((n, c) => n + rec(c.id).n, 0) };
 }
 function roomDraw() {
-  const pool = POOL.filter((c) => topic === 'all' || c.d === topic);
-  /* chưa làm trước, rồi tới cái làm sai gần nhất, rồi cái cũ nhất */
+  const pool = poolFor(topic, mode);
   const score = (c) => { const r = rec(c.id); return !r ? 0 : !r.ok ? 1 : 2; };
-  return shuffle(pool).sort((a, b) => score(a) - score(b) || (rec(a.id)?.t || 0) - (rec(b.id)?.t || 0)).slice(0, ROUND);
+  const list = mode === 'smart'
+    ? shuffle(pool).sort((a, b) => score(a) - score(b) || (rec(a.id)?.t || 0) - (rec(b.id)?.t || 0))
+    : shuffle(pool);
+  return list.slice(0, size);
+}
+/* Gợi ý: chủ đề còn nhiều thử thách chưa làm nhất; hết thì chủ đề có câu sai. */
+function suggestion() {
+  const rows = Object.keys(TOPIC).map((k) => {
+    const p = inTopic(k);
+    return { k, left: p.filter((c) => !rec(c.id)).length, wrong: p.filter((c) => rec(c.id) && !rec(c.id).ok).length };
+  });
+  const best = rows.sort((a, b) => b.left - a.left || b.wrong - a.wrong)[0];
+  if (best.left) return { k: best.k, m: 'new', n: Math.min(5, best.left), why: `Còn ${best.left} thử thách ${TOPIC[best.k].toLowerCase()} bạn chưa làm.` };
+  if (best.wrong) return { k: best.k, m: 'wrong', n: Math.min(5, best.wrong), why: `Có ${best.wrong} thử thách bạn từng chọn trượt.` };
+  return { k: best.k, m: 'random', n: 5, why: 'Bạn đã đi hết ngân hàng. Làm lại để chắc tay hơn.' };
+}
+function clampSize() {
+  const n = poolFor(topic, mode).length;
+  if (n && size > n) size = [...SIZES].reverse().find((s) => s <= n) || n;
 }
 function home() {
   run = null;
-  const st = roomStats();
-  const poolN = POOL.filter((c) => topic === 'all' || c.d === topic).length;
+  clampSize();
+  const st = roomStats(), sg = suggestion();
+  const avail = poolFor(topic, mode).length;
+  const n = Math.min(size, avail);
+  const topics = ['all', ...Object.keys(TOPIC)];
   app.innerHTML = `
     <span class="rm__eyebrow">Phòng thử thách</span>
     <h1>Chọn hướng đi. <em>Rồi đọc vì sao.</em></h1>
-    <p class="rm__lede">Mỗi lượt rút ${ROUND} tình huống từ ngân hàng ${POOL.length} thử thách, ưu tiên cái bạn chưa làm hoặc từng làm sai. Không có điểm thi; phần có giá trị nằm ở lý do của từng phương án.</p>
-    <div class="rm__stats">
-      <div class="rm__stat"><b>${st.done}/${st.total}</b><span>thử thách đã làm</span></div>
-      <div class="rm__stat"><b>${st.firstOk}</b><span>đúng ngay lần đầu</span></div>
-      <div class="rm__stat"><b>${st.tries}</b><span>lượt chọn</span></div>
-    </div>
-    <div class="rm__topics" role="group" aria-label="Chủ đề">
-      ${['all', ...Object.keys(TOPIC)].map((k) => `<button type="button" data-t="${k}" aria-pressed="${topic === k}">${k === 'all' ? 'Tất cả' : TOPIC[k]}</button>`).join('')}
-    </div>
-    <button class="rm__go" id="go" ${poolN ? '' : 'disabled'}>Bắt đầu lượt ${Math.min(ROUND, poolN)} thử thách →</button>
-    ${histHtml()}`;
-  app.querySelectorAll('[data-t]').forEach((b) => b.onclick = () => { topic = b.dataset.t; home(); });
+    <p class="rm__lede">Tự chọn chủ đề, cách rút và số lượng. Không có điểm thi; phần có giá trị nằm ở lý do của từng phương án. Làm lại bao nhiêu lần cũng được.</p>
+    <div class="rm__grid">
+      <div class="rm__col">
+        <section class="rm__panel rm__sug">
+          <div><small>Gợi ý hôm nay</small><h3>${TOPIC[sg.k]} · ${MODES.find((m) => m[0] === sg.m)[1]}</h3><p>${sg.why} ${sg.n} thử thách, khoảng ${Math.max(2, sg.n * 1)} phút.</p></div>
+          <button class="rm__go" id="sug">Làm ngay →</button>
+        </section>
+        <section class="rm__panel">
+          <div class="rm__step"><i>1</i>Chọn chủ đề</div>
+          <div class="rm__choices" role="group" aria-label="Chủ đề">
+            ${topics.map((k) => {
+              const p = inTopic(k), d = p.filter((c) => rec(c.id)).length;
+              return `<button type="button" class="rm__choice" data-t="${k}" aria-pressed="${topic === k}"><b>${k === 'all' ? 'Tất cả chủ đề' : TOPIC[k]}</b><span>${d}/${p.length} đã làm</span><em><u style="width:${p.length ? d / p.length * 100 : 0}%"></u></em></button>`;
+            }).join('')}
+          </div>
+          <div class="rm__step"><i>2</i>Cách rút thử thách</div>
+          <div class="rm__choices" role="group" aria-label="Cách rút">
+            ${MODES.map(([k, t, s]) => `<button type="button" class="rm__choice" data-m="${k}" aria-pressed="${mode === k}" ${poolFor(topic, k).length ? '' : 'disabled'}><b>${t}</b><span>${s} · ${poolFor(topic, k).length}</span></button>`).join('')}
+          </div>
+          <div class="rm__step"><i>3</i>Số thử thách</div>
+          <div class="rm__counts" role="group" aria-label="Số thử thách">
+            ${SIZES.map((s) => `<button type="button" class="rm__choice" data-n="${s}" aria-pressed="${size === s}" ${avail >= s || (s === SIZES[0] && avail) ? '' : 'disabled'}>${s} câu</button>`).join('')}
+          </div>
+          <button class="rm__go rm__start" id="go" ${n ? '' : 'disabled'}>${n ? `Bắt đầu · ${n} thử thách →` : 'Không có thử thách phù hợp'}</button>
+        </section>
+      </div>
+      <aside class="rm__col">
+        <section class="rm__panel">
+          <h2>Thống kê luyện tập</h2>
+          <div class="rm__kpis">
+            <div class="rm__kpi"><span>Đã làm</span><b>${st.done}/${st.total}</b></div>
+            <div class="rm__kpi"><span>Đúng ngay lần đầu</span><b>${st.done ? Math.round(st.firstOk / st.done * 100) + '%' : '—'}</b></div>
+            <div class="rm__kpi"><span>Lượt chọn</span><b>${st.tries}</b></div>
+            <div class="rm__kpi"><span>Đang nắm</span><b>${st.okNow}</b></div>
+          </div>
+        </section>
+        <section class="rm__panel">
+          <h2>Theo chủ đề</h2>
+          ${Object.keys(TOPIC).map((k) => {
+            const p = inTopic(k), ok = p.filter((c) => rec(c.id)?.ok).length;
+            return `<div class="rm__tp"><b>${TOPIC[k]}</b><i><u style="width:${p.length ? ok / p.length * 100 : 0}%"></u></i><span>${ok}/${p.length}</span></div>`;
+          }).join('')}
+        </section>
+        ${histHtml()}
+      </aside>
+    </div>`;
+  const rerender = () => { home(); };
+  app.querySelectorAll('[data-t]').forEach((b) => b.onclick = () => { topic = b.dataset.t; rerender(); });
+  app.querySelectorAll('[data-m]').forEach((b) => b.onclick = () => { mode = b.dataset.m; rerender(); });
+  app.querySelectorAll('[data-n]').forEach((b) => b.onclick = () => { size = +b.dataset.n; rerender(); });
   document.getElementById('go').onclick = start;
+  document.getElementById('sug').onclick = () => { topic = sg.k; mode = sg.m; size = sg.n; start(); };
 }
 function histHtml() {
-  const items = POOL.filter((c) => rec(c.id)).sort((a, b) => rec(b.id).t - rec(a.id).t).slice(0, 8);
-  if (!items.length) return '';
-  return `<section class="rm__hist"><h2>Gần đây</h2><ul>${items.map((c) => {
+  const items = POOL.filter((c) => rec(c.id)).sort((a, b) => rec(b.id).t - rec(a.id).t).slice(0, 6);
+  return `<section class="rm__panel"><h2>Gần đây</h2>${items.length ? `<ul class="rm__hist">${items.map((c) => {
     const r = rec(c.id);
     return `<li><i class="rm__dot" style="background:${r.ok ? '#3d8a4f' : '#c0392b'}"></i>${escH(c.kind)}<span>${TOPIC[c.d] || ''} · ${r.n} lượt</span></li>`;
-  }).join('')}</ul></section>`;
+  }).join('')}</ul>` : '<p class="rm__empty">Chưa có lượt nào. Bắt đầu một lượt để thấy lịch sử ở đây.</p>'}</section>`;
 }
 function start() {
   const list = roomDraw();
-  run = { list, i: 0, ok: 0, xp: 0, picked: null, shown: false };
+  if (!list.length) return home();
+  run = { list, i: 0, ok: 0, xp: 0, picked: null, shown: false, res: [] };
   step();
+}
+function segs() {
+  return run.list.map((_, k) => `<i class="${k < run.res.length ? (run.res[k] ? 'is-ok' : 'is-bad') : k === run.i ? 'is-now' : ''}"></i>`).join('');
 }
 function step() {
   const c = run.list[run.i];
   const order = shuffle(c.opts.map((o, k) => k));
   run.order = order;
-  app.innerHTML = `
-    <div class="rm__bar"><span>Thử thách ${run.i + 1}/${run.list.length}</span><i><u style="width:${(run.i / run.list.length) * 100}%"></u></i><span>${run.ok} đúng</span></div>
-    <article class="rm__card">
+  app.innerHTML = `<div class="rm__run">
+    <div class="rm__bar"><span>Thử thách ${run.i + 1}/${run.list.length}</span><span class="rm__segs">${segs()}</span><span>${run.ok} đúng</span></div>
+    <article class="rm__panel">
       <span class="rm__kind">${escH(TOPIC[c.d] || c.d)} · ${escH(c.kind)}</span>
       <p class="rm__brief">${escH(c.brief)}</p>
       <h2 class="rm__q">${escH(c.q)}</h2>
       <div class="rm__opts" id="opts">${order.map((k, n) => `<button type="button" class="rm__opt" data-k="${k}" aria-pressed="false"><b>${LABEL[n]}</b>${escH(c.opts[k].t)}</button>`).join('')}</div>
       <div class="rm__act"><button class="rm__go" id="ok" disabled>Chốt lựa chọn</button><button class="rm__go rm__go--ghost" id="quit">Thoát</button></div>
-    </article>`;
+    </article></div>`;
   run.picked = null;
   const opts = [...app.querySelectorAll('.rm__opt')];
   opts.forEach((b) => b.onclick = () => {
@@ -155,10 +263,12 @@ function reveal() {
   const c = run.list[run.i], right = c.opts.findIndex((o) => o.ok), got = run.picked === right;
   const prev = rec(c.id);
   if (got) run.ok++;
+  run.res.push(got);
   const s = S.get();
   S.set({ flags: { ...(s.flags || {}), ['room:' + c.id]: { n: (prev?.n || 0) + 1, ok: got, first: prev ? prev.first : got, t: Date.now() } } });
   award('quiz', 'room:' + c.id);
   run.xp += award.last || 0;
+  document.querySelector('.rm__segs').innerHTML = segs();
   document.querySelectorAll('.rm__opt').forEach((b) => {
     const k = +b.dataset.k;
     b.disabled = true;
@@ -166,20 +276,28 @@ function reveal() {
     b.insertAdjacentHTML('afterend', `<p class="rm__why">${k === right ? '<strong>Hướng mạnh nhất. </strong>' : k === run.picked ? '<strong style="color:#b03a2e">Bạn chọn cái này. </strong>' : ''}${escH(c.opts[k].why)}</p>`);
   });
   const last = run.i === run.list.length - 1;
-  const act = document.querySelector('.rm__act');
-  act.innerHTML = `<button class="rm__go" id="next">${last ? 'Xem kết quả →' : 'Thử thách kế →'}</button>`;
+  document.querySelector('.rm__act').innerHTML = `<button class="rm__go" id="next">${last ? 'Xem kết quả →' : 'Thử thách kế →'}</button>`;
   document.getElementById('next').onclick = () => { if (last) finish(); else { run.i++; run.shown = false; step(); } };
 }
 function finish() {
   const n = run.list.length;
-  app.innerHTML = `<article class="rm__card"><div class="rm__res">
+  const msg = run.ok === n ? 'Trọn vẹn. Thử chủ đề khác để đổi góc nhìn.' : run.ok >= n / 2 ? 'Khá. Những cái sai sẽ được rút lại ở lượt sau.' : 'Chưa sao: đọc lại phần “vì sao” của các phương án trượt — đó mới là bài học.';
+  const wrong = run.res.filter((r) => !r).length;
+  app.innerHTML = `<div class="rm__run"><article class="rm__panel"><div class="rm__res">
       <span class="rm__eyebrow">Kết thúc lượt</span>
       <b>${run.ok}/${n}</b>
-      <p class="rm__lede" style="margin:12px auto 0">${run.ok === n ? 'Trọn vẹn. Thử chủ đề khác để đổi góc nhìn.' : run.ok >= n / 2 ? 'Khá. Những cái sai sẽ được rút lại ở lượt sau.' : 'Chưa sao: đọc lại phần “vì sao” của các phương án trượt — đó mới là bài học.'}${run.xp ? ` +${run.xp} XP.` : ''}</p>
+      <p>${msg}${run.xp ? ` +${run.xp} XP.` : ''}</p>
     </div>
-    <div class="rm__act" style="justify-content:center"><button class="rm__go" id="again">Lượt mới</button><button class="rm__go rm__go--ghost" id="home">Về phòng thử thách</button></div></article>`;
+    <ul class="rm__review">${run.list.map((c, k) => `<li><i class="rm__dot" style="background:${run.res[k] ? '#3d8a4f' : '#c0392b'}"></i>${escH(c.kind)}<span style="margin-left:auto;font-size:12px;color:var(--ink-dark-50)">${TOPIC[c.d] || ''}</span></li>`).join('')}</ul>
+    <div class="rm__act" style="justify-content:center"><button class="rm__go" id="again">Lượt mới</button>${wrong ? '<button class="rm__go rm__go--ghost" id="redo">Làm lại câu sai</button>' : ''}<button class="rm__go rm__go--ghost" id="home">Về phòng thử thách</button></div></article></div>`;
   document.getElementById('again').onclick = start;
   document.getElementById('home').onclick = home;
+  const redo = document.getElementById('redo');
+  if (redo) redo.onclick = () => {
+    const list = run.list.filter((_, k) => !run.res[k]);
+    run = { list, i: 0, ok: 0, xp: 0, picked: null, shown: false, res: [] };
+    step();
+  };
 }
 home();
 </script>

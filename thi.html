@@ -18,6 +18,35 @@
   .dots i.now{background:var(--red)}
   .seal{color:var(--red);display:inline-block}
   .missed{border-left:2px solid var(--red);padding-left:16px;margin:10px 0}
+  /* trang tổng các chặng */
+  .th{max-width:1080px;margin:0 auto}
+  .th__eyebrow{font:700 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+  .th h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4vw,3rem);line-height:1.05;letter-spacing:-.02em;margin:10px 0}
+  .th h1 em{color:var(--terra)}
+  .th__hero{background:var(--paper-card);color:var(--ink-dark);border:1px solid rgba(36,22,14,.1);border-radius:20px;padding:clamp(18px,3vw,28px);margin:22px 0 18px;display:grid;gap:14px}
+  .th__hero p{margin:0;color:var(--ink-dark-70);line-height:1.6;max-width:62ch}
+  .th__count{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .th__count b{font-family:var(--serif);font-weight:400;font-size:2.6rem;line-height:1}
+  .th__count span{color:var(--ink-dark-50);font-size:14px}
+  .th__segs{display:flex;gap:6px}
+  .th__segs i{flex:1;height:7px;border-radius:99px;background:rgba(36,22,14,.1)}
+  .th__segs i.on{background:var(--terra)}
+  .th__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .th__card{background:var(--paper-card);color:var(--ink-dark);border:1.5px solid rgba(36,22,14,.1);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:10px}
+  .th__card.is-pass{border-color:#3d8a4f}
+  .th__card.is-lock{opacity:.62}
+  .th__top{display:flex;justify-content:space-between;align-items:center}
+  .th__n{font:700 12px var(--sans);color:var(--terra);border:1px solid var(--terra-15);border-radius:99px;padding:4px 10px}
+  .th__tag{font:700 10.5px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dark-50)}
+  .th__tag.ok{color:#2f7a42}
+  .th__card h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;line-height:1.2;margin:0}
+  .th__card p{margin:0;font-size:13.5px;line-height:1.55;color:var(--ink-dark-70);flex:1}
+  .th__meta{display:flex;justify-content:space-between;gap:8px;font-size:12.5px;color:var(--ink-dark-50);flex-wrap:wrap}
+  .th__go{display:inline-block;text-align:center;background:var(--terra);color:#fff;border-radius:999px;padding:11px 20px;font:700 14px var(--sans);text-decoration:none}
+  .th__go:hover{background:var(--terra-d)}
+  .th__go[aria-disabled="true"]{background:transparent;color:var(--ink-dark-50);border:1px solid rgba(36,22,14,.2);pointer-events:none}
+  .th__go--ghost{background:transparent;color:var(--ink-dark);border:1px solid rgba(36,22,14,.3)}
+  .th__go--ghost:hover{background:rgba(36,22,14,.06)}
 </style>
 </head>
 <body>
@@ -37,7 +66,8 @@
 <script>
 appShell('thi.html');
 const app = document.getElementById('app');
-const SID = new URLSearchParams(location.search).get('stage') || 's1';
+const SID_PARAM = new URLSearchParams(location.search).get('stage');
+const SID = SID_PARAM || 's1';
 const BP = EXAMS[SID];
 let items = [], idx = 0, given = {}, startedAt = 0, tick = null;
 
@@ -68,7 +98,42 @@ function resumeDraft(){
 const fmtLeft = (ms) => { const m = Math.max(0, Math.floor(ms/60000)), s = Math.max(0, Math.floor(ms%60000/1000)); return m + ':' + String(s).padStart(2,'0'); };
 
 /* ---------------- màn mở ---------------- */
+function hub(){
+  app.className = 'wrap';
+  const s = S.get(), ids = Object.keys(EXAMS);
+  const passed = ids.filter(id => examState(id, s).passed).length;
+  const cards = ids.map((id, i) => {
+    const b = EXAMS[id], st = examState(id, s), lock = examLocked(id, s);
+    const open = typeof stageOpen === 'function' ? stageOpen(id, s) : true;
+    const cases = b.kind === 'cases';
+    const tag = st.passed ? `<span class="th__tag ok">Đã qua · ${st.passed}</span>`
+      : lock ? `<span class="th__tag">Nghỉ tới ${new Date(lock).toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'})}</span>`
+      : !open ? `<span class="th__tag">Chưa mở</span>` : `<span class="th__tag">Sẵn sàng</span>`;
+    const meta = cases
+      ? `<span>Giải case có bấm giờ</span><span>Cần ${b.need} case đạt</span>`
+      : `<span>${b.size} câu · ${b.minutes} phút</span><span>Cần ${b.pass}/${b.size} · đã thi ${st.attempts}</span>`;
+    const label = st.passed ? 'Thi lại' : cases ? 'Xem điều kiện' : 'Thi vượt';
+    return `<article class="th__card ${st.passed ? 'is-pass' : !open ? 'is-lock' : ''}">
+      <div class="th__top"><span class="th__n">Chặng ${String(i + 1).padStart(2, '0')}</span>${tag}</div>
+      <h3>${escH(b.title)}</h3><p>${escH(b.intro)}</p>
+      <div class="th__meta">${meta}</div>
+      <a class="th__go ${st.passed ? 'th__go--ghost' : ''}" href="thi.html?stage=${id}" ${open ? '' : 'aria-disabled="true"'}>${open ? label + ' →' : 'Qua chặng trước để mở'}</a>
+    </article>`;
+  }).join('');
+  app.innerHTML = `<div class="th">
+    <span class="th__eyebrow">Thi vượt chặng</span>
+    <h1>Biết rồi thì <em>chứng minh.</em></h1>
+    <section class="th__hero">
+      <p>Đã nắm nội dung một chặng? Làm một đề rút ngẫu nhiên từ toàn bộ bài của chặng, đúng từ 80% trở lên là chặng đó được tính hoàn thành — không cần học lại từng bài.</p>
+      <div class="th__count"><b>${passed}/${ids.length}</b><span>chặng đã vượt</span></div>
+      <div class="th__segs">${ids.map(id => `<i class="${examState(id, s).passed ? 'on' : ''}"></i>`).join('')}</div>
+    </section>
+    <div class="th__grid">${cards}</div>
+  </div>`;
+}
+
 function intro(){
+  if(!SID_PARAM) return hub();
   if(!BP){ app.innerHTML = `<section class="section"><h1 class="h1">Chặng này chưa có đề</h1>
     <p class="lede">Mã chặng không có trong chương trình. Chọn lại từ bản đồ.</p>
     <a class="btn" href="ban-do.html">Về bản đồ</a></section>`; return; }
@@ -122,7 +187,7 @@ function intro(){
 
     <div style="margin-top:26px">
       ${lock ? '' : `<button class="btn" id="go">${st.attempts ? 'Thi lại' : 'Bắt đầu'} · ${BP.size} câu</button>`}
-      <a class="btn btn--ghost" href="ban-do.html" style="margin-left:8px">Về bản đồ</a>
+      <a class="btn btn--ghost" href="thi.html" style="margin-left:8px">Tất cả chặng</a>
     </div>
   </section>`;
   const g = document.getElementById('go'); if(g) g.onclick = start;
