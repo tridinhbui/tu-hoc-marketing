@@ -125,9 +125,26 @@ export default {
        hợp lệ, trừ landing và trang đăng nhập; chưa đăng nhập thì chuyển sang đăng nhập rồi quay lại đúng trang đó.
        File trong /assets/ không đi qua Worker (xem run_worker_first) nên vẫn công khai. */
     if (!url.pathname.startsWith('/api/') && env.ASSETS) {
-      if (needsLogin(url.pathname) && !(await currentUser(request, env))) {
-        const next = encodeURIComponent(url.pathname + url.search);
-        return new Response(null, { status: 302, headers: { location: `/dang-nhap.html?next=${next}`, 'cache-control': 'no-store' } });
+      const page = url.pathname.replace(/^\/+|\/+$/g, '').replace(/\.html$/, '');
+      const isLanding = page === '' || page === 'index', isLogin = page === 'dang-nhap';
+      if (needsLogin(url.pathname) || isLanding || isLogin) {
+        const user = await currentUser(request, env);
+        if (!user && !isLanding && !isLogin) {
+          const next = encodeURIComponent(url.pathname + url.search);
+          return new Response(null, { status: 302, headers: { location: `/dang-nhap.html?next=${next}`, 'cache-control': 'no-store' } });
+        }
+        /* Đã đăng nhập thì không bao giờ thấy lại landing hay trang đăng nhập: vào thẳng ứng dụng. */
+        if (user && (isLanding || isLogin)) {
+          let to = '/app.html';
+          const nx = url.searchParams.get('next');
+          if (isLogin && nx && /^\/[A-Za-z0-9\-_\/]*(\.html)?(\?[A-Za-z0-9\-_=&%.]*)?$/.test(nx) && !nx.startsWith('//')) to = nx;
+          return new Response(null, { status: 302, headers: { location: to, 'cache-control': 'no-store' } });
+        }
+        if (isLanding || isLogin) {
+          const r = await env.ASSETS.fetch(request);
+          const h = new Headers(r.headers); h.set('cache-control', 'no-store');
+          return new Response(r.body, { status: r.status, headers: h });
+        }
       }
       return env.ASSETS.fetch(request);
     }
