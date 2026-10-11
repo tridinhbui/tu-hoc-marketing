@@ -107,6 +107,43 @@ button{font-family:inherit}
 .compose textarea:focus{outline:0;border-color:var(--pv-acc)}
 .compose .row{display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap}
 </style>
+<style>
+/* ---- phong cách giấy theo mẫu: hero ảnh rách mép, dải bước màu đào, thẻ vị trí như giấy ghi chú, vòng tiến độ ---- */
+.pv-top{background:transparent;backdrop-filter:none;border-bottom:1px solid rgba(120,84,50,.14)}
+.pv-top h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:22px}
+.pv-chip{background:rgba(229,178,75,.18);color:#8a5f0c;font-weight:600}
+.card{background:rgba(255,252,246,.92);border:1px solid rgba(120,84,50,.14);box-shadow:0 14px 34px -24px rgba(92,56,28,.45)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(100deg,#fffaf0 55%,#f7e6d6)}
+.hero h2{font-size:clamp(1.9rem,3.4vw,2.8rem);font-weight:500;line-height:1.08;letter-spacing:-.02em;margin:14px 0 10px}
+.hero h2 em{color:#B8502D;font-style:italic}
+.hero__tag{background:rgba(120,84,50,.1);color:#5a3f36}
+.hero__art{border-radius:0;clip-path:polygon(0.0% 0.4%,2.5% 1.5%,5.0% 1.4%,7.5% 1.1%,10.0% 0.5%,12.5% 1.7%,15.0% 1.8%,17.5% 1.1%,20.0% 1.1%,22.5% 0.5%,25.0% 0.0%,27.5% 0.8%,30.0% 1.3%,32.5% 0.2%,35.0% 1.7%,37.5% 0.5%,40.0% 0.5%,42.5% 0.1%,45.0% 2.2%,47.5% 1.6%,50.0% 1.9%,52.5% 1.4%,55.0% 0.1%,57.5% 0.7%,60.0% 1.1%,62.5% 0.3%,65.0% 2.1%,67.5% 0.8%,70.0% 0.3%,72.5% 1.8%,75.0% 0.3%,77.5% 2.0%,80.0% 1.0%,82.5% 1.2%,85.0% 0.8%,87.5% 1.1%,90.0% 0.4%,92.5% 0.1%,95.0% 1.9%,97.5% 0.5%,100.0% 1.7%,99.5% 2.5%,97.9% 5.0%,98.0% 7.5%,98.3% 10.0%,98.3% 12.5%,98.7% 15.0%,98.4% 17.5%,99.7% 20.0%,99.0% 22.5%,98.2% 25.0%,99.6% 27.5%,98.0% 30.0%,98.0% 32.5%,99.1% 35.0%,99.2% 37.5%,99.0% 40.0%,99.2% 42.5%,97.8% 45.0%,99.1% 47.5%,99.9% 50.0%,99.8% 52.5%,98.4% 55.0%,97.8% 57.5%,98.9% 60.0%,98.9% 62.5%,98.8% 65.0%,98.4% 67.5%,99.5% 70.0%,98.7% 72.5%,98.8% 75.0%,98.6% 77.5%,99.6% 80.0%,99.6% 82.5%,99.2% 85.0%,98.0% 87.5%,99.2% 90.0%,98.7% 92.5%,99.3% 95.0%,99.8% 97.5%,100.0% 99.9%,97.5% 98.2%,95.0% 98.3%,92.5% 99.2%,90.0% 98.5%,87.5% 98.5%,85.0% 98.0%,82.5% 97.9%,80.0% 99.1%,77.5% 97.8%,75.0% 97.9%,72.5% 98.7%,70.0% 98.1%,67.5% 98.9%,65.0% 99.2%,62.5% 99.5%,60.0% 98.1%,57.5% 99.6%,55.0% 99.8%,52.5% 98.2%,50.0% 98.3%,47.5% 98.9%,45.0% 98.2%,42.5% 99.9%,40.0% 99.4%,37.5% 99.4%,35.0% 99.1%,32.5% 99.6%,30.0% 99.8%,27.5% 99.3%,25.0% 98.0%,22.5% 97.8%,20.0% 98.4%,17.5% 98.9%,15.0% 99.4%,12.5% 97.9%,10.0% 98.8%,7.5% 98.4%,5.0% 99.9%,2.5% 99.5%,0.0% 98.2%,1.7% 97.5%,1.9% 95.0%,1.3% 92.5%,0.9% 90.0%,1.3% 87.5%,1.9% 85.0%,0.7% 82.5%,1.2% 80.0%,0.6% 77.5%,1.7% 75.0%,0.0% 72.5%,1.5% 70.0%,2.1% 67.5%,0.1% 65.0%,1.3% 62.5%,1.4% 60.0%,1.9% 57.5%,1.3% 55.0%,0.6% 52.5%,0.9% 50.0%,2.1% 47.5%,2.0% 45.0%,0.3% 42.5%,0.2% 40.0%,0.2% 37.5%,0.1% 35.0%,1.0% 32.5%,0.3% 30.0%,1.9% 27.5%,1.4% 25.0%,0.3% 22.5%,1.2% 20.0%,0.7% 17.5%,1.1% 15.0%,0.5% 12.5%,0.4% 10.0%,0.4% 7.5%,0.8% 5.0%,1.6% 2.5%);min-height:210px}
+.hero__art .go{border-radius:999px;background:#B8502D;color:#fff;box-shadow:0 10px 22px -10px rgba(120,40,10,.6)}
+.go{border-radius:999px}
+.card:has(>.stepper){background:#fbe4da;border:0;box-shadow:none}
+.stepper .n{background:#fff;color:#B8502D;border:2px solid #f2c4b0}
+.stepper [data-on] .n,.stepper [data-ok] .n{background:#B8502D;border-color:#B8502D;color:#fff}
+.h{font:500 1.35rem/1.2 'Fraunces',Georgia,serif;text-transform:none;letter-spacing:0;margin:10px 0 12px}
+.tracks{gap:14px}
+.track{position:relative;background:linear-gradient(135deg,#fffaf1,#f6ebdb);border:1.5px solid rgba(120,84,50,.16);border-radius:6px 18px 6px 18px;min-height:118px;
+  box-shadow:0 12px 26px -20px rgba(92,56,28,.5)}
+.track b{font:500 1.15rem/1.2 'Fraunces',Georgia,serif}
+.track .ic{display:none}
+.track[aria-pressed="true"]{background:linear-gradient(135deg,#fffaf1,#fbe9de);color:#2B1A11;border:2px solid #B8502D}
+.track[aria-pressed="true"] small{color:rgba(36,22,14,.6)}
+.track[aria-pressed="true"]::after{content:"";position:absolute;right:-8px;top:-14px;width:46px;height:80px;background:url(assets/img/sprig.svg) no-repeat center/contain;transform:rotate(10deg)}
+.preview{background:linear-gradient(120deg,#fffdf8,#fbefe6)}
+.big .lv{--p:0;width:116px;height:116px;border-radius:50%;padding:0;display:grid;place-items:center;
+  background:conic-gradient(#B8502D calc(var(--p)*1%),rgba(36,22,14,.1) 0)!important;color:#2B1A11}
+.big .lv>span{display:grid;place-items:center;width:92px;height:92px;border-radius:50%;background:#fffcf6;font:500 1.15rem 'Fraunces',Georgia,serif}
+.stats b{color:#B8502D}
+.sbc h3{font:500 1.15rem 'Fraunces',Georgia,serif;text-transform:none;letter-spacing:0}
+.big h3{font:800 11.5px var(--sans);text-transform:uppercase;letter-spacing:.1em}
+.pv-side .card:nth-child(3){background:linear-gradient(160deg,#fde9de,#fbe1d3)}
+.pv-side .card:nth-child(3)::after{content:"“Không phải để trả lời đúng, mà để nói chuyện rõ ràng hơn mỗi ngày.”";display:block;margin-top:14px;font:600 20px/1.25 'Caveat',cursive;color:#7a5a45}
+.pv-main .h:first-of-type::after{content:"Chọn đúng vị trí gần với mục tiêu của bạn nhé!";margin-left:14px;font:600 19px 'Caveat',cursive;color:#B8502D;transform:rotate(-2deg);display:inline-block}
+@media(max-width:700px){.pv-main .h:first-of-type::after{display:none}}
+</style>
 <link rel="stylesheet" href="assets/css/paper.css?v=4">
 </head>
 <body>
@@ -152,8 +189,8 @@ function aiState(){
 function sideHTML(){
   const st=stats(), total=TRACKS.length, pct=Math.round(st.tried/total*100), h=hist().slice(0,4);
   return `<div class="card big sbc"><h3>Tiến độ của bạn</h3>
-      <span class="lv">${st.sessions} buổi</span>
-      <p>${st.tried}/${total} vị trí đã thử</p><div class="bar"><i style="width:${pct}%"></i></div>
+      <span class="lv" style="--p:${pct}"><span>${st.sessions} buổi</span></span>
+      <p>${st.tried}/${total} vị trí đã thử</p>
       <div class="stats"><div><small>Câu đã trả lời</small><b>${st.answered}</b></div>
         <div><small>Không bị hỏi vặn</small><b>${st.clean===null?'--':st.clean+'%'}</b></div>
         <div><small>Lần gần nhất</small><b style="font-size:13px">${st.last?escH(st.last.at.slice(5).split('-').reverse().join('/')):'--'}</b></div></div></div>
@@ -178,10 +215,10 @@ async function home(){
 
     <section class="card hero">
       <div><span class="hero__tag">${ico.brief} Lộ trình phỏng vấn</span>
-        <h2>${aiOn?'Phỏng vấn AI':'Luyện phỏng vấn'} · ${escH(tr.t)}</h2>
+        <h2>${aiOn?'Phỏng vấn AI':'Luyện phỏng vấn'}<br><em>${escH(tr.t)}</em></h2>
         <p>${aiOn?'AI đưa một tình huống có số, hỏi vặn khi bạn thiếu số hoặc mơ hồ, và đưa dàn ý trả lời mẫu cuối buổi.':'Tình huống có số, '+tr.n+' câu hỏi nối tiếp, hỏi vặn khi bạn thiếu số hoặc thiếu ý, cuối buổi có đáp án mẫu để tự so.'}</p>
         <p style="margin-top:10px;font-size:13px;color:var(--pv-ink3)">${done?`Bạn đã luyện vị trí này ${done} lần.`:'Bạn chưa luyện vị trí này.'}</p></div>
-      <div class="hero__art" style="background-image:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.35)),url(assets/img/studio_workspace.jpg)">
+      <div class="hero__art" style="background-image:url(assets/img/coffee_aesthetic.jpg)">
         <button type="button" class="go go--dark" id="start" ${sel.mode==='ai'&&!a.ok?'disabled':''}>Bắt đầu luyện</button></div>
     </section>
     ${sel.mode==='ai'&&!a.ok?`<p class="note">${escH(a.why)} <a href="#" id="toScript" style="color:var(--pv-acc);font-weight:700">Chuyển sang kịch bản</a></p>`
@@ -286,6 +323,6 @@ async function startAI(track){
 document.title='Luyện phỏng vấn — Tự Học Marketing Case';
 home();
 </script>
-<script src="assets/js/paper.js?v=3"></script>
+<script src="assets/js/paper.js?v=4"></script>
 </body>
 </html>
