@@ -121,6 +121,25 @@
     .rail__scrim[data-open]{display:block}
   }
   @media(prefers-reduced-motion:reduce){.rail,.stage__load{transition:none}}
+
+  /* ===== thanh điều hướng v2: đều chữ, thẳng hàng, co giãn theo cỡ màn hình ===== */
+  :root{--side-w:clamp(236px,19vw,284px)}
+  .rail__scroll{padding:6px 10px 8px}
+  .nav a,.nav button.nv{min-height:42px;gap:12px;padding:0 12px;font:600 14px/1.25 var(--sans,system-ui);letter-spacing:.005em}
+  .nav a>span:not(.tag),.nav button.nv>span{flex:1 1 auto}
+  .grp{margin-top:12px}
+  .grp__h{padding:6px 12px}
+  .grp__body:not(.box){padding:2px 7px}
+  .grp__body.box{padding:6px;border-radius:18px}
+  .nav .tag{font-size:9.5px;padding:3px 6px;letter-spacing:.03em;border-radius:6px}
+  .nav svg.i{width:19px;height:19px}
+  @media(max-width:1280px){
+    /* rail hẹp: nhãn Tin mới/Hot/Check-in thu thành chấm màu để chữ không bị cắt */
+    .nav .tag{font-size:0;width:8px;height:8px;padding:0;border-radius:50%;flex:none}
+    .nav .tag--new{background:#2FA85F}.nav .tag--hot,.nav .tag--chk{background:#E5A100}
+  }
+  @media(max-width:1100px) and (min-width:861px){:root{--side-w:240px}.nav a,.nav button.nv{font-size:13.5px;padding:0 10px;gap:10px}}
+  @media(max-height:760px){.grp{margin-top:8px}.nav a,.nav button.nv{min-height:38px}.rail__logo{padding-bottom:8px}}
 </style>
 </head>
 <body>
