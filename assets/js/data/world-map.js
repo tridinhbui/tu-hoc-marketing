@@ -36,9 +36,11 @@ const WORLD = {
     { id: 'g3',      t: 'Bản đồ định vị',              d: 'Đặt thương hiệu lên ma trận giá × thuộc tính',   href: 'game-ban-do-dinh-vi.html', x: 255, y: 565, region: 'people', min_level: 1, game: true },
     { id: 'g8',      t: 'Lịch nội dung 30 ngày',      d: 'Xếp lịch đăng vừa sức, đúng mục tiêu',           href: 'game-lich-noi-dung.html', x: 105, y: 478, region: 'people', min_level: 1, game: true },
     { id: 'g6',      t: 'Kể chuyện 60s',           d: 'Chọn 3 bằng chứng để trả lời sếp',                href: 'game-ke-chuyen.html',  x: 468, y: 235, region: 'court', min_level: 1, game: true },
+    { id: 'g10',     t: 'Khủng hoảng',                 d: '60 phút đầu khi bình luận bùng nổ',                 href: 'game-khung-hoang.html', x: 715, y: 230, region: 'court', min_level: 1, game: true },
     { id: 'g4',      t: 'Chia ngân sách media',        d: 'Chia tiền giữa 4 kênh qua 4 mùa — học lợi ích giảm dần', href: 'game-ngan-sach.html', x: 780, y: 400, region: 'data', min_level: 1, game: true },
     { id: 'g5',      t: 'Phễu rò',                     d: 'Sửa đúng tầng của phễu bán hàng',          href: 'game-phieu-ro.html',  x: 1110, y: 440, region: 'data',   min_level: 1, game: true },
-    { id: 'g7',      t: 'Chẩn đoán reach giảm',       d: 'Kiểm đúng thứ tự khi reach tụt',                 href: 'game-chan-doan.html',  x: 905, y: 600, region: 'data',   min_level: 1, game: true },
+    { id: 'g7',      t: 'Chẩn đoán reach giảm',       d: 'Kiểm đúng thứ tự khi reach tụt',                 href: 'game-chan-doan.html',  x: 960, y: 640, region: 'data',   min_level: 1, game: true },
+    { id: 'g9',      t: 'Đọc Studio',                  d: 'Đọc bảng YouTube Studio: sửa gói, mở đầu hay đoạn giữa', href: 'game-doc-studio.html', x: 880, y: 490, region: 'data', min_level: 1, game: true },
   ],
 };
 

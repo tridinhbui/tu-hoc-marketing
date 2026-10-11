@@ -143,3 +143,40 @@ test('G8: vượt sức sản xuất hoặc mở đầu bằng bán hàng bị b
   const ex = G8.example(b), firstIdx = ex.findIndex(Boolean); const bad = [...ex]; bad[firstIdx] = 'sell';
   assert.equal(G8.check(b, bad).rules.find((x) => x.id === 'open').ok, false);
 });
+
+const G9 = require(rel('assets/js/games/g9-studio.js'));
+const G10 = require(rel('assets/js/games/g10-crisis.js'));
+
+test('G9: mỗi vòng có đáp án thuộc danh sách; đọc đúng đạt 3 sao; luôn đổ cho gói hoặc luôn chờ thì 0 sao', () => {
+  for (const r of G9.rounds) { assert.ok(G9.diags.some((d) => d.id === r.truth)); assert.ok(G9.acts[r.truth]); assert.equal(r.ret.length, 11); assert.equal(r.src.reduce((n, x) => n + x[1], 0), 100, `${r.id}: nguồn không cộng đủ 100%`); }
+  assert.equal(G9.stars(G9.score(G9.rounds.map((r) => ({ diag: r.truth, act: r.truth })))), 3);
+  assert.equal(G9.stars(G9.score(G9.rounds.map(() => ({ diag: 'pack', act: 'pack' })))), 0);
+  assert.equal(G9.stars(G9.score(G9.rounds.map(() => ({ diag: 'wait', act: 'wait' })))), 0);
+});
+test('G9: quy tắc đọc khớp số liệu — CTR thấp + giữ chân tốt → gói; dốc đầu → mở đầu; ít impressions → phân phối', () => {
+  const by = Object.fromEntries(G9.rounds.map((r) => [r.truth, r]));
+  assert.ok(by.pack.ctr < by.open.ctr && by.pack.avd > by.open.avd);
+  assert.ok(by.open.ret[1] < 60 && by.open.ret[1] - by.open.ret[10] < 40, 'mở đầu: rơi dốc đầu rồi đi ngang');
+  const drops = by.mid.ret.slice(1).map((v, i) => by.mid.ret[i] - v); assert.ok(Math.max(...drops) >= 30, 'đoạn giữa: có vách đứng');
+  assert.ok(by.reach.imp <= 5000 && by.reach.avd >= 50);
+  assert.ok(by.wait.imp < 1000);
+});
+test('G9: đúng chẩn đoán mà sai việc sửa không đạt 3 sao', () => {
+  assert.ok(G9.stars(G9.score(G9.rounds.map((r) => ({ diag: r.truth, act: 'pack' })))) < 3);
+});
+
+test('G10: đường tốt nhất đạt 3 sao; thang sao đơn điệu theo số quyết định đúng; toàn lựa chọn xấu là 0 sao', () => {
+  const best = G10.best(); assert.equal(G10.stars(G10.score(best)), 3);
+  const ids = ['a', 'b', 'c']; const worstByCount = {};
+  for (const a of ids) for (const b of ids) for (const c of ids) for (const d of ids) for (const e of ids) {
+    const ch = [a, b, c, d, e], k = ch.filter((x, i) => x === best[i]).length, sc = G10.score(ch);
+    (worstByCount[k] = worstByCount[k] || { lo: 9, hi: -1 }); worstByCount[k].lo = Math.min(worstByCount[k].lo, sc); worstByCount[k].hi = Math.max(worstByCount[k].hi, sc);
+  }
+  for (let k = 0; k < 5; k++) assert.ok(worstByCount[k].hi < worstByCount[k + 1].lo + 0.4, `k=${k}`);
+  assert.equal(G10.stars(G10.score(['a', 'a', 'a', 'a', 'a'])), 0);
+});
+test('G10: ẩn bình luận, phủ nhận khi chưa kiểm và xoá thông báo đều làm giảm tin', () => {
+  const worst = G10.steps.map((s) => s.options.find((o) => o.dTrust < 0 && o.dHeat > 15) || s.options[0]);
+  for (const o of worst) assert.ok(o.dTrust < 0 && o.dHeat > 0);
+  for (const s of G10.steps) assert.ok(s.options.some((o) => o.dTrust > 0 && o.dHeat < 0), `${s.id}: phải có một cách xử lý tốt`);
+});

@@ -81,9 +81,9 @@ Ký hiệu: ● dạy riêng, có bài tập · ◐ chỉ nhắc/ví dụ hoặc
 | **Chẩn đoán reach giảm** (G7) | **BUILD — đã làm** | 3 vòng; chấm thứ tự kiểm và bằng chứng |
 | **Lịch nội dung 30 ngày** (G8) | **BUILD — đã làm** | 2 brief; 7 luật kiểm cấu trúc; sao chép lịch |
 | TikTok content strategy simulator | **BUILD** (P1) | Chọn hook/độ dài/giờ → đường giữ chân minh hoạ |
-| YouTube Studio analytics simulator | **BUILD** (P1) | Đọc CTR × giữ chân, chọn sửa ảnh bìa hay thân video |
+| YouTube Studio analytics simulator (G9 `game-doc-studio.html`) | **BUILD — đã làm** | 5 vòng đọc bảng Studio minh hoạ: sửa gói, mở đầu, đoạn giữa, phân phối hay chờ dữ liệu |
 | Influencer campaign planner | **BUILD** (P1) | Ngân sách, brief, mã giảm giá riêng, đo bằng CPA |
-| Community & crisis response sim | **BUILD** (P1) | 60 phút đầu: phân loại, trả lời, leo thang |
+| Community & crisis response sim (G10 `game-khung-hoang.html`) | **BUILD — đã làm** | 5 quyết định trong 60 phút; đo độ nóng và mức tin; có dòng thời gian và giải thích |
 | Social analytics dashboard | **BUILD** (P2) | Đọc 3 chỉ số, nói 1 phát hiện |
 | Hook workshop | **IMPROVE** (P2) | `tn03-02` có lý thuyết; thiếu nơi viết và so hook |
 
@@ -101,9 +101,9 @@ Quy tắc chung cho mọi mô phỏng: có brief thật → quyết định củ
 | 6 | Bài phân loại bình luận + hạn trả lời | Cao | ✅ |
 | 7 | Bài ảnh bìa: CTR × giữ chân | Cao | ✅ |
 | 8 | Simulator TikTok content strategy | Cao | P1 |
-| 9 | Simulator YouTube Studio analytics | Cao | P1 |
+| 9 | Simulator YouTube Studio analytics | Cao | ✅ |
 | 10 | Influencer campaign planner | Cao | P1 |
-| 11 | Mô phỏng khủng hoảng 60 phút đầu | Cao | P1 |
+| 11 | Mô phỏng khủng hoảng 60 phút đầu | Cao | ✅ |
 | 12 | Module Instagram (carousel, lưu/chia sẻ, Explore) sau khi kiểm nguồn chính thức | Trung bình–cao | P1 |
 | 13 | Module YouTube (Shorts vs dài, Studio) sau khi kiểm nguồn chính thức | Trung bình–cao | P1 |
 | 14 | Module TikTok Search/Spark Ads sau khi kiểm nguồn chính thức | Trung bình–cao | P1 |
@@ -126,13 +126,14 @@ Quy tắc chung cho mọi mô phỏng: có brief thật → quyết định củ
 - Module `kn13` (`assets/js/data/bai/kn13.js`) — 7 bài × 7 câu = 49 câu (8 câu tính, 41 trắc nghiệm), đăng ký ở `tools_bai_index.mjs` và `bai-index.js`.
 - Ba module theo nền tảng: `kn14` Instagram, `kn15` YouTube, `kn16` TikTok — mỗi module 5 bài × 7 câu = 105 câu, nguồn chính thức ghi ở đầu file. Tổng cộng 22 bài mới.
 - Mô phỏng `game-chan-doan.html` (G7, `assets/js/games/g7-diagnose.js`) và bài tập `game-lich-noi-dung.html` (G8, `assets/js/games/g8-calendar.js`), cùng khung sao/XP của Game Kingdom.
-- Đăng ký G7, G8 trên bản đồ vương quốc; thêm vào nhóm điều hướng Game Kingdom.
+- Mô phỏng G9 (`game-doc-studio.html`, `assets/js/games/g9-studio.js`) và G10 (`game-khung-hoang.html`, `assets/js/games/g10-crisis.js`), migration `0010` thêm hai toà vào cấu hình kingdom.
+- Đăng ký G7, G8, G9, G10 trên bản đồ vương quốc; thêm vào nhóm điều hướng Game Kingdom.
 - Test: `tests/games.test.mjs` (+5 bài kiểm cho G7, G8).
 
 **Kết quả:**
 - `node tools_validate_bai.mjs kn13`: **7 bài · 49 câu · 0 lỗi · 0 cảnh báo**; đáp án đúng là phương án dài nhất ở 22% câu (ngưỡng 15–35%), vị trí đáp án đã rải đều.
 - `node tools_validate_bai.mjs` (toàn bộ): **712 bài · 4.984 câu · 0 lỗi · 0 cảnh báo**.
-- `node --test tests/*.test.mjs`: **120 qua, 0 lỗi**.
+- `node --test tests/*.test.mjs`: **125 qua, 0 lỗi**.
 - Đã chạy tay trên trình duyệt: G7 và G8 chơi đủ vòng đạt 3 sao; một bài `kn13` mở được, có câu tính.
 
 **Chưa làm / cần người duyệt:**
