@@ -54,7 +54,7 @@ const WorldArt = (() => {
   }
 
   function ribbon(r) {
-    const x = r.x, y = r.y - r.ry * 0.80, w = Math.max(190, r.t.length * 10.5 + 56), h = 36, c = ROOF[r.id] || r.c;
+    const x = r.x, y = Math.max(104, r.y - r.ry * 0.94 - 14), w = Math.max(190, r.t.length * 10.5 + 56), h = 36, c = ROOF[r.id] || r.c;
     return `<g class="wa-rib" transform="translate(${f(x)} ${f(y)})">
       <path d="M${-w / 2 - 18} 6L${-w / 2 + 4} 6V${h + 6}L${-w / 2 - 18} ${h + 6}L${-w / 2 - 8} ${h / 2 + 6}Z" fill="${c}" opacity=".8"/>
       <path d="M${w / 2 + 18} 6L${w / 2 - 4} 6V${h + 6}L${w / 2 + 18} ${h + 6}L${w / 2 + 8} ${h / 2 + 6}Z" fill="${c}" opacity=".8"/>
@@ -137,18 +137,20 @@ const WorldArt = (() => {
         <path d="${dc}" fill="url(#waCl-${r.id})"/>
         <path d="${d}" fill="url(#waTop-${r.id})" stroke="rgba(255,255,255,.55)" stroke-width="3"/>
         <path d="${d}" fill="none" stroke="rgba(0,0,0,.08)" stroke-width="1.2" transform="translate(0 4)"/>`; }).join('');
-    /* đường đi và cầu */
-    const st = W.start;
-    const curve = (p) => { const mx = (st.x + p.x) / 2 + (p.x < st.x ? -24 : 24), my = (st.y + p.y) / 2; return `M${st.x} ${st.y}Q${f(mx)} ${f(my)} ${p.x} ${p.y + 34}`; };
-    const roadD = W.places.map(curve);
+    /* đường đi: cổng → quảng trường → (cầu) → trung tâm từng khu → từng toà */
+    const st = W.start, hub = { plaza: { x: 600, y: 530 }, court: { x: 600, y: 345 }, people: { x: 305, y: 455 }, data: { x: 880, y: 470 } };
+    const segs = [[st, hub.plaza], [hub.plaza, hub.court], [hub.plaza, hub.people], [hub.plaza, hub.data]];
+    W.places.forEach((p) => segs.push([hub[p.region] || hub.plaza, { x: p.x, y: p.y + 36 }]));
+    const bend = (a, b, k = 0.12) => { const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2, dx = b.x - a.x, dy = b.y - a.y; return { x: mx - dy * k, y: my + dx * k }; };
+    const roadD = segs.map(([a, b]) => { const c = bend(a, b); return `M${f(a.x)} ${f(a.y)}Q${f(c.x)} ${f(c.y)} ${f(b.x)} ${f(b.y)}`; });
     const roads = roadD.map((d) => `<path d="${d}" fill="none" stroke="var(--wa-road-edge)" stroke-width="17" stroke-linecap="round"/>`).join('') +
       roadD.map((d) => `<path d="${d}" fill="none" stroke="var(--wa-road)" stroke-width="11" stroke-linecap="round"/>`).join('');
-    const bridge = (x1, y1, x2, y2) => { const a = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI, mx = (x1 + x2) / 2, my = (y1 + y2) / 2;
-      return `<g transform="translate(${f(mx)} ${f(my)}) rotate(${f(a)})"><rect x="-34" y="-12" width="68" height="24" rx="6" fill="#B58A58"/>${[-26, -14, -2, 10, 22].map((x) => `<rect x="${x}" y="-12" width="8" height="24" fill="#D8B27C"/>`).join('')}<rect x="-34" y="-14" width="68" height="3" fill="#7A5535"/><rect x="-34" y="11" width="68" height="3" fill="#7A5535"/></g>`; };
-    const bridges = bridge(560, 390, 600, 340) + bridge(420, 520, 300, 470) + bridge(790, 520, 880, 470);
+    const bridge = (a, b) => { const c = bend(a, b), mx = (a.x + b.x) / 2 + (c.x - (a.x + b.x) / 2) / 2, my = (a.y + b.y) / 2 + (c.y - (a.y + b.y) / 2) / 2, ang = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI;
+      return `<g transform="translate(${f(mx)} ${f(my)}) rotate(${f(ang)})"><rect x="-36" y="-13" width="72" height="26" rx="6" fill="#B58A58"/>${[-28, -16, -4, 8, 20].map((x) => `<rect x="${x}" y="-13" width="9" height="26" fill="#D8B27C"/>`).join('')}<rect x="-36" y="-15" width="72" height="3" fill="#7A5535"/><rect x="-36" y="12" width="72" height="3" fill="#7A5535"/></g>`; };
+    const bridges = bridge(hub.plaza, hub.court) + bridge(hub.plaza, hub.people) + bridge(hub.plaza, hub.data);
     /* cây: vị trí cố định theo hạt giống, tránh toà nhà và đường */
-    const samples = []; roadD.forEach((_, i) => { const p = W.places[i], mx = (st.x + p.x) / 2 + (p.x < st.x ? -24 : 24), my = (st.y + p.y) / 2;
-      for (let t = 0; t <= 1; t += 0.1) samples.push([(1 - t) ** 2 * st.x + 2 * (1 - t) * t * mx + t * t * p.x, (1 - t) ** 2 * st.y + 2 * (1 - t) * t * my + t * t * (p.y + 34)]); });
+    const samples = []; segs.forEach(([a, b]) => { const c = bend(a, b);
+      for (let u = 0; u <= 1; u += 0.1) samples.push([(1 - u) ** 2 * a.x + 2 * (1 - u) * u * c.x + u * u * b.x, (1 - u) ** 2 * a.y + 2 * (1 - u) * u * c.y + u * u * b.y]); });
     const trees = [];
     W.regions.forEach((r, ri) => { const R = rng(900 + ri * 31), cnt = r.id === 'plaza' ? 26 : 34;
       for (let n = 0; n < cnt * 4 && trees.filter((t) => t.r === r.id).length < cnt; n++) {

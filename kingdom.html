@@ -27,19 +27,56 @@ body{margin:0;padding:0!important;font-family:var(--sans,system-ui,sans-serif)}
 .kp small{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--wd-ink3)}
 .kp b{font-size:1.35rem}
 
-.stage{position:relative;border:1px solid var(--wd-line);border-radius:26px;overflow:hidden;background:var(--wd-grass);aspect-ratio:1200/760;touch-action:manipulation;user-select:none}
-.stage svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+:root{--wa-sky1:#8FD0F2;--wa-sky2:#CFEBF8;--wa-sky3:#F6EFD8;--wa-sea1:#9AD7EC;--wa-sea2:#6FBBD9;--wa-mt1:#A9BFD9;--wa-mt2:#C7D6E8;
+  --wa-plaza-1:#FBE2B4;--wa-plaza-2:#F2BF84;--wa-plaza-c1:#D79B63;--wa-plaza-c2:#B97A47;
+  --wa-court-1:#E4D4F4;--wa-court-2:#C2A7E3;--wa-court-c1:#9A80C4;--wa-court-c2:#7A62A6;
+  --wa-people-1:#CBE8A8;--wa-people-2:#92C772;--wa-people-c1:#76A85A;--wa-people-c2:#5C8A47;
+  --wa-data-1:#C9EAF5;--wa-data-2:#8FCFE6;--wa-data-c1:#6AA9C7;--wa-data-c2:#4D8CAD;
+  --wa-road:#FBEBC8;--wa-road-edge:#D9B87C}
+html[data-theme="dark"]{--wa-sky1:#1B2A4A;--wa-sky2:#2B3F63;--wa-sky3:#3C4A66;--wa-sea1:#25506A;--wa-sea2:#1B3C54;--wa-mt1:#3A4C6E;--wa-mt2:#4A5C80;
+  --wa-plaza-1:#8A6A44;--wa-plaza-2:#6E5236;--wa-plaza-c1:#58402A;--wa-plaza-c2:#442F1E;
+  --wa-court-1:#6A5A8C;--wa-court-2:#54467A;--wa-court-c1:#41365F;--wa-court-c2:#30284A;
+  --wa-people-1:#5C7F45;--wa-people-2:#456534;--wa-people-c1:#35502A;--wa-people-c2:#273D1F;
+  --wa-data-1:#4C8CA6;--wa-data-2:#38708A;--wa-data-c1:#285468;--wa-data-c2:#1C3F52;
+  --wa-road:#CDB98E;--wa-road-edge:#8F7A52}
+.stage{position:relative;border:1px solid var(--wd-line);border-radius:26px;overflow:hidden;background:var(--wa-sky2);aspect-ratio:1200/760;touch-action:manipulation;user-select:none;container-type:inline-size}
+.wa-cloud{animation:waDrift 40s ease-in-out infinite alternate}
+@keyframes waDrift{from{transform:translateX(0)}to{transform:translateX(18px)}}
+.wa-flag{transform-origin:left center;animation:waFlag 2.4s ease-in-out infinite alternate}
+@keyframes waFlag{from{transform:skewY(-4deg)}to{transform:skewY(4deg)}}
+@media(prefers-reduced-motion:reduce){.wa-cloud,.wa-flag{animation:none}}
+.pl .body{transform-box:fill-box}
+.hud{position:absolute;inset:0;pointer-events:none;font-family:var(--sans,system-ui)}
+.hud>*{position:absolute}
+.hud__title{left:2.4cqw;top:2.2cqw;display:flex;gap:1.2cqw;align-items:center;background:linear-gradient(180deg,#FFF7E3,#F4E3BC);border:1px solid rgba(160,110,50,.35);border-radius:1.2cqw;padding:1cqw 2.4cqw 1cqw 1.4cqw;box-shadow:0 .6cqw 1.6cqw -.8cqw rgba(60,30,10,.5)}
+.hud__title svg{width:4cqw;height:4cqw;flex:none}
+.hud__title b{display:block;font:700 2.7cqw/1.05 var(--serif,Georgia,serif);color:#3A2A1A}
+.hud__title span{display:block;font-size:1.25cqw;color:#7A5A3A;margin-top:.3cqw}
+.hud__stats{left:50%;top:1.8cqw;transform:translateX(-50%);display:flex;background:rgba(255,248,232,.92);border:1px solid rgba(160,110,50,.3);border-radius:2.4cqw;padding:.8cqw 1.4cqw;gap:0;box-shadow:0 .6cqw 1.6cqw -.8cqw rgba(60,30,10,.45);color:#3A2A1A}
+.hud__stats div{padding:0 2.2cqw;border-left:1px solid rgba(160,110,50,.25);min-width:7cqw}
+.hud__stats div:first-child{border-left:0}
+.hud__stats small{display:block;font-size:1.15cqw;color:#8A6A48;font-weight:600}
+.hud__stats b{font-size:2.1cqw;font-weight:800;line-height:1.15}
+.hud__bar{height:.6cqw;border-radius:9cqw;background:rgba(120,80,30,.2);margin-top:.35cqw;overflow:hidden}
+.hud__bar i{display:block;height:100%;background:#F2A33A}
+.hud__help{left:2cqw;bottom:2cqw;display:flex;gap:1.2cqw;align-items:center;background:linear-gradient(180deg,#FFF7E3,#F4E3BC);border:1px solid rgba(160,110,50,.35);border-radius:1.2cqw;padding:1cqw 2cqw 1cqw 1.2cqw;max-width:30cqw}
+.hud__help b{display:block;font:700 1.9cqw/1.1 var(--serif,Georgia,serif);color:#3A2A1A}
+.hud__help span{display:block;font-size:1.2cqw;color:#7A5A3A;margin-top:.2cqw}
+.hud__motto{right:2cqw;bottom:2cqw;text-align:right;display:flex;gap:1.4cqw;align-items:center;color:#3A2A1A}
+.hud__motto span{display:block;background:linear-gradient(180deg,#FFF7E3,#F4E3BC);border:1px solid rgba(160,110,50,.35);border-radius:1cqw;padding:.8cqw 1.4cqw;font-style:italic;font-size:1.25cqw;line-height:1.4;transform:rotate(-2deg)}
+.hud__motto svg{width:5.5cqw;height:5.5cqw}
+.pl .nm{font:800 14px var(--sans,system-ui);fill:#4A3220}
+.pl .sub{font:800 9.5px var(--sans,system-ui);letter-spacing:.05em;fill:#8A6A48}
+@media(max-width:820px){.hud__help,.hud__motto{display:none}}
+.stage>svg{position:absolute;inset:0;width:100%;height:100%;display:block}
 .hint{position:absolute;left:14px;bottom:12px;background:var(--wd-card);border:1px solid var(--wd-line);border-radius:99px;padding:7px 14px;font-size:12.5px;color:var(--wd-ink2)}
-.region-t{font:800 15px var(--sans,system-ui);letter-spacing:.08em;text-transform:uppercase;pointer-events:none}
 .pl{cursor:pointer}
-.pl .nm{font:700 15px var(--sans,system-ui);fill:var(--wd-ink);paint-order:stroke;stroke:var(--wd-grass);stroke-width:4px;stroke-linejoin:round}
-.pl .sub{font:800 11px var(--sans,system-ui);letter-spacing:.06em;fill:var(--wd-ink3);paint-order:stroke;stroke:var(--wd-grass);stroke-width:3px}
 .pl:hover .body{transform:translateY(-3px)}
 .pl .body{transition:transform .15s}
-.pl[data-sel] .ring{opacity:1}
+.pl[data-sel] .ring{opacity:.55}
 .pl .ring{opacity:0;transition:opacity .15s}
-.pl[data-state="locked"],.pl[data-state="soon"]{opacity:.55}
-.pl[data-state="soon"] .roof{stroke-dasharray:5 4}
+.pl[data-state="locked"] .body,.pl[data-state="soon"] .body{filter:grayscale(.85) brightness(1.05)}
+.pl[data-state="soon"]{opacity:.8}
 #me{pointer-events:none}
 .panel{background:var(--wd-card);border:1px solid var(--wd-line);border-radius:20px;padding:16px 18px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;min-height:56px}
 .panel b{font-size:17px}
@@ -100,6 +137,7 @@ body{margin:0;padding:0!important;font-family:var(--sans,system-ui,sans-serif)}
 <script src="assets/js/data/world-map.js?v=1"></script>
 <script src="assets/js/app.js?v=21"></script>
 <script src="assets/js/games/frame.js?v=1"></script>
+<script src="assets/js/world/art.js?v=1"></script>
 <script>
 appShell('kingdom.html');
 const app=document.getElementById('app');
@@ -115,43 +153,9 @@ function savePos(){ const s=S.get(); S.set({gw:{...(s.gw||{}),pos:{x:Math.round(
 
 /* ---------- vẽ ---------- */
 function regionColor(id){ return (WORLD.regions.find(r=>r.id===id)||{}).c||'#888'; }
-function placeSVG(p){
-  const c=regionColor(p.region), st=stateOf(p), vis=state.visited.has(p.id);
-  const lock=st==='locked'?`<g transform="translate(0,-4)"><rect x="-9" y="-2" width="18" height="14" rx="3" fill="#fff" opacity=".9"/><path d="M-5 -2v-4a5 5 0 0110 0v4" fill="none" stroke="#fff" stroke-width="2.4"/></g>`:'';
-  const stars=p.game&&st==='open'?GW.starsText(GW.stars(p.id)):'';
-  const sub=st==='soon'?'SẮP CÓ':st==='locked'?'MỞ Ở CẤP '+p.min_level:stars?stars+(vis?'  ·  ✓':''):vis?'ĐÃ GHÉ HÔM NAY ✓':'';
-  return `<g class="pl" data-id="${p.id}" data-state="${st}" transform="translate(${p.x},${p.y})" role="button" tabindex="0" aria-label="${escH(p.t)}">
-    <ellipse class="ring" cx="0" cy="26" rx="52" ry="14" fill="${c}" opacity=".25"/>
-    <ellipse cx="0" cy="26" rx="40" ry="9" fill="#000" opacity=".12"/>
-    <g class="body">
-      <rect x="-30" y="-16" width="60" height="42" rx="6" fill="var(--wd-card)" stroke="${c}" stroke-width="2.5"/>
-      <path class="roof" d="M-38 -14L0 -46L38 -14Z" fill="${c}" stroke="${c}" stroke-width="2" stroke-linejoin="round"/>
-      <rect x="-8" y="2" width="16" height="24" rx="4" fill="${c}" opacity=".85"/>
-      ${lock}
-      ${vis?'<circle cx="30" cy="-30" r="11" fill="var(--wd-ok)"/><path d="M24 -30l4 4 8 -9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>':''}
-    </g>
-    <text class="nm" y="52" text-anchor="middle">${escH(p.t)}</text>
-    ${sub?`<text class="sub" y="68" text-anchor="middle">${sub}</text>`:''}
-  </g>`;
-}
 function drawWorld(){
-  const W=WORLD, st=W.start;
-  const roads=W.places.map(p=>{ const mx=(st.x+p.x)/2+(p.y<st.y?0:0), my=Math.min(st.y,p.y)+Math.abs(st.y-p.y)*.35;
-    return `<path d="M${st.x} ${st.y} Q${mx} ${my} ${p.x} ${p.y+30}" fill="none" stroke="var(--wd-road)" stroke-width="12" stroke-linecap="round" opacity="${p.soon?.5:1}"/>`; }).join('');
-  const regions=W.regions.map(r=>`<ellipse cx="${r.x}" cy="${r.y}" rx="${r.rx}" ry="${r.ry}" fill="${r.c}" opacity=".10"/>
-      <ellipse cx="${r.x}" cy="${r.y}" rx="${r.rx}" ry="${r.ry}" fill="none" stroke="${r.c}" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round" opacity=".45"/>
-      <text class="region-t" x="${r.x}" y="${r.y-r.ry+26}" text-anchor="middle" fill="${r.c}">${escH(r.t)}</text>`).join('');
-  const trees=[[70,90],[130,690],[1130,80],[1120,690],[520,60],[760,70],[60,300],[1140,300],[330,700],[880,700],[610,720]]
-    .map(([x,y])=>`<g opacity=".7"><circle cx="${x}" cy="${y}" r="18" fill="var(--wd-grass2)"/><circle cx="${x+8}" cy="${y-8}" r="12" fill="var(--wd-grass2)"/><rect x="${x-2}" y="${y+14}" width="4" height="10" fill="#8A6A45"/></g>`).join('');
-  return `<svg viewBox="0 0 ${W.w} ${W.h}" id="svg" role="img" aria-label="Bản đồ vương quốc marketing">
-    <path d="M0 640 C220 600 360 700 600 690 S980 620 1200 680 L1200 760 L0 760Z" fill="var(--wd-grass2)" opacity=".6"/>
-    <path d="M0 70 C200 30 420 110 640 60 S1000 40 1200 90" fill="none" stroke="var(--wd-water)" stroke-width="30" stroke-linecap="round" opacity=".8"/>
-    ${regions}${trees}${roads}
-    ${W.places.map(placeSVG).join('')}
-    <g id="me"><ellipse cx="0" cy="16" rx="13" ry="5" fill="#000" opacity=".2"/><circle r="15" fill="var(--wd-acc)" stroke="#fff" stroke-width="3"/>
-      <circle cx="-5" cy="-3" r="2.2" fill="#fff"/><circle cx="5" cy="-3" r="2.2" fill="#fff"/><path d="M-6 4q6 6 12 0" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
-      <text y="-26" text-anchor="middle" font-size="12" font-weight="800" fill="var(--wd-ink)" paint-order="stroke" stroke="var(--wd-grass)" stroke-width="4">Bạn</text></g>
-  </svg>`;
+  return WorldArt.world(WORLD,{ fill:currentOutfit().fill,
+    placeOpts:p=>{ const st=stateOf(p); return { state:st, visited:state.visited.has(p.id), locked:st==='locked', stars:(p.game&&st==='open')?GW.stars(p.id):null }; } });
 }
 function drawMe(){ const me=document.getElementById('me'); if(me) me.setAttribute('transform',`translate(${state.pos.x},${state.pos.y})`); }
 
@@ -180,7 +184,7 @@ function tour(){
 const gwState=()=>S.get().gw||{};
 function currentOutfit(){ const g=gwState(), o=WORLD.outfits.find(x=>x.id===g.outfit);
   return o&&worldOutfitUnlocked(o,g.stars||{},g.chests||{})?o:WORLD.outfits[0]; }
-function paintOutfit(){ const c=document.querySelector('#me circle'); if(c) c.setAttribute('fill',currentOutfit().fill); }
+function paintOutfit(){ const c=document.getElementById('meBody'); if(c) c.setAttribute('fill',currentOutfit().fill); }
 function extras(){
   const el=document.getElementById('extras'); if(!el) return;
   const g=gwState(), stars=g.stars||{}, chests=g.chests||{}, cur=currentOutfit().id;
@@ -272,17 +276,26 @@ async function load(){
     d.buildings.filter(b=>b.visited).forEach(b=>state.visited.add(b.id)); }catch(e){}
   try{ state.user=await account(); }catch(e){}
 }
+const CROWN='<svg viewBox="0 0 48 48"><path d="M6 36h36l2-20-10 8-10-14-10 14L4 16z" fill="#F6B91B" stroke="#C98A00" stroke-width="2.4" stroke-linejoin="round"/><rect x="6" y="36" width="36" height="6" rx="2" fill="#E59E0B"/></svg>';
+const COMPASS='<svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="#FFF3D6" stroke="#C98A3A" stroke-width="4"/><circle cx="32" cy="32" r="21" fill="none" stroke="#E4B867" stroke-width="2"/><path d="M32 12l6 20-6 20-6-20z" fill="#D2562B"/><path d="M12 32l20-6 20 6-20 6z" fill="#F6B91B" opacity=".85"/><circle cx="32" cy="32" r="4" fill="#7A5535"/></svg>';
+function hudHTML(got,total){
+  const L=level(), pct=L.next?Math.round((S.get().xp-L.cur)/(L.next-L.cur)*100):100;
+  return `<div class="hud" aria-hidden="false">
+    <div class="hud__title">${CROWN}<div><b>Vương quốc</b><span>Học để xây dựng tương lai</span></div></div>
+    <div class="hud__stats"><div><small>Cấp ${L.n}</small><b>${L.n}</b><div class="hud__bar"><i style="width:${Math.max(3,Math.min(100,pct))}%"></i></div></div>
+      <div><small>Xu</small><b>${state.coins===null?'—':fmt(state.coins)}</b></div>
+      <div><small>Toà đã ghé hôm nay</small><b>${got} / ${total}</b></div>
+      <div><small>Mùa giải</small><b id="ss">—</b></div></div>
+    <div class="hud__help"><div><b>Bản đồ game</b><span>Bấm vào các toà, hoặc dùng phím mũi tên / WASD</span></div></div>
+    <div class="hud__motto"><span>Mỗi toà là một bài học<br>Mỗi bước là một level up</span>${COMPASS}</div></div>`;
+}
 function render(){
   const play=visitable().filter(p=>!p.local), got=play.filter(p=>state.visited.has(p.id)).length;
   app.innerHTML=`<div class="wd">
     <header><span class="eyebrow">Vương quốc Marketing</span><h1>Đi dạo, rồi vào một toà để chơi.</h1>
       <p class="lede">Mỗi toà nhà là một cách luyện. Ghé mỗi toà có thưởng một lần mỗi ngày được +5 xu (khi đã đăng nhập). Các mini-game chấm sao: sao mới cho XP, đủ sao trong một khu thì mở rương, huy hiệu và áo mới. Xu dùng ở Chợ.</p></header>
-    ${state.user?`<div class="kp"><div><small>Cấp</small><b>${state.level}</b></div>
-      <div><small>Xu</small><b>${state.coins===null?'—':fmt(state.coins)}</b></div>
-      <div><small>Toà đã ghé hôm nay</small><b>${got} / ${play.length}</b></div>
-      <div><small>Mùa giải</small><b id="ss">—</b></div></div>`
-      :`<p class="note"><a href="tai-khoan.html?next=kingdom.html">Đăng nhập</a> để nhận xu khi ghé toà nhà và lưu tiến độ lên máy chủ. Không đăng nhập vẫn đi dạo và vào chơi được.</p>`}
-    <div class="stagewrap" id="stagewrap"><div class="stage" id="stage">${drawWorld()}<span class="hint">Bấm để đi · phím mũi tên / WASD</span></div></div>
+    ${state.user?'':`<p class="note"><a href="tai-khoan.html?next=kingdom.html">Đăng nhập</a> để nhận xu khi ghé toà nhà và lưu tiến độ lên máy chủ. Không đăng nhập vẫn đi dạo và vào chơi được.</p>`}
+    <div class="stagewrap" id="stagewrap"><div class="stage" id="stage">${drawWorld()}${hudHTML(got,play.length)}</div></div>
     <div class="panel" id="panel" aria-live="polite"></div>
     <section class="extras" id="extras"></section>
     <section class="box" id="board" hidden></section>
