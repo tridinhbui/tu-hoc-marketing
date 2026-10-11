@@ -57,6 +57,10 @@ body{margin:0;padding:0!important;font-family:var(--sans,system-ui,sans-serif)}
 .note{border-left:4px solid var(--wd-gold);background:var(--wd-gold-soft);border-radius:0 14px 14px 0;padding:12px 16px;font-size:14px}
 .note a{color:var(--wd-acc);font-weight:700}
 .sr{position:absolute;left:-9999px}
+.board{width:100%;border-collapse:collapse;font-size:14px}
+.board th,.board td{text-align:left;padding:9px 6px;border-top:1px solid var(--wd-line)}
+.board th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--wd-ink3);border-top:0}
+.board td.n{text-align:right;font-variant-numeric:tabular-nums}
 .extras{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
 .box{background:var(--wd-card);border:1px solid var(--wd-line);border-radius:20px;padding:16px 18px}
 .box h2{margin:0 0 10px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
@@ -164,6 +168,19 @@ function extras(){
   el.querySelectorAll('[data-wear]').forEach(b=>b.onclick=()=>{ const s=gwState(); S.set({gw:{...s,outfit:b.dataset.wear}}); extras(); paintOutfit(); });
 }
 
+/* Bảng mùa: điểm = sát thương boss + đấu trường; sao là tổng sao game đã đồng bộ lên máy chủ. */
+function board(s){
+  const el=document.getElementById('board'); if(!el||!s||!s.rows) return;
+  const mine=gwState().stars||{}, my=Object.values(mine).reduce((n,v)=>n+v,0);
+  const rows=s.rows.slice(0,10);
+  el.hidden=false;
+  el.innerHTML=`<h2>Bảng xếp hạng mùa ${escH(String((s.season||{}).id||''))}</h2>
+    ${rows.length?`<table class="board"><thead><tr><th>#</th><th>Người học</th><th class="n">Điểm mùa</th><th class="n">Sao game</th></tr></thead><tbody>
+      ${rows.map((r,i)=>`<tr><td>${i+1}</td><td>${escH(r.name)}</td><td class="n">${r.points}</td><td class="n">★ ${r.stars||0}</td></tr>`).join('')}</tbody></table>`
+      :'<p class="lede" style="margin:0">Chưa ai có điểm mùa này. Hạ boss hoặc thắng đấu trường để lên bảng.</p>'}
+    <p class="lede" style="margin:10px 0 0;font-size:13px">Điểm mùa = sát thương boss ÷ 6.000 + điểm đấu trường (thắng 3, hoà 1). Bạn đang có ★ ${my} sao game.</p>`;
+}
+
 /* ---------- bảng thông tin ---------- */
 function panelHTML(p){
   if(!p) return `<div><b>Đi dạo trong vương quốc</b><p>Bấm vào một toà nhà, hoặc dùng phím mũi tên / WASD để đi. Đứng gần toà nào, thông tin hiện ở đây.</p></div>`;
@@ -237,6 +254,7 @@ function render(){
     <div class="stage" id="stage">${drawWorld()}<span class="hint">Bấm để đi · phím mũi tên / WASD</span></div>
     <div class="panel" id="panel" aria-live="polite"></div>
     <section class="extras" id="extras"></section>
+    <section class="box" id="board" hidden></section>
     <section><div class="list">${WORLD.places.map(p=>`<button type="button" data-id="${p.id}" data-state="${stateOf(p)}">
         <b>${escH(p.t)}</b><span>${escH(p.d)}</span></button>`).join('')}</div></section>
   </div>`;
@@ -249,7 +267,7 @@ function render(){
   });
   svg.addEventListener('keydown',ev=>{ const g=ev.target.closest&&ev.target.closest('.pl'); if(g&&(ev.key==='Enter'||ev.key===' ')){ ev.preventDefault(); selectAndWalk(WORLD.places.find(p=>p.id===g.dataset.id)); } });
   app.querySelectorAll('.list button').forEach(b=>b.onclick=()=>selectAndWalk(WORLD.places.find(p=>p.id===b.dataset.id)));
-  if(state.user) api('/season').then(s=>{ const el=document.getElementById('ss'); if(el) el.textContent=s.season.id; }).catch(()=>{});
+  if(state.user) api('/season').then(s=>{ const el=document.getElementById('ss'); if(el) el.textContent=s.season.id; board(s); }).catch(()=>{});
 }
 const MOVE=new Set(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d']);
 document.addEventListener('keydown',e=>{ if(e.target.closest&&e.target.closest('input,textarea,select')) return;
@@ -259,6 +277,6 @@ document.addEventListener('keyup',e=>{ const k=e.key.length===1?e.key.toLowerCas
 document.title='Vương quốc Marketing — Tự Học Marketing Case';
 load().then(render);
 </script>
-<script src="assets/js/paper.js?v=3"></script>
+<script src="assets/js/paper.js?v=4"></script>
 </body>
 </html>

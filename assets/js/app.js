@@ -538,6 +538,13 @@ async function canLogin(){
   return true;
 }
 /* Gộp hai bản trạng thái — cùng quy tắc với server (api/src/state.js). */
+/* S.gw (thế giới game): sao/kỷ lục lấy lớn hơn, rương lấy ngày sớm hơn — cùng quy tắc với api/src/state.js mergeGw. */
+function mergeGw(a={},b={}){
+  const max=(x={},y={})=>{ const o={...x}; for(const [k,v] of Object.entries(y)) o[k]=Math.max(Number(o[k])||0,Number(v)||0); return o; };
+  const early=(x={},y={})=>{ const o={...x}; for(const [k,v] of Object.entries(y)) o[k]=!o[k]||String(v)<String(o[k])?v:o[k]; return o; };
+  const stars=max(a.stars,b.stars); for(const k of Object.keys(stars)) stars[k]=Math.min(3,stars[k]);
+  return {...a,...b,stars,best:max(a.best,b.best),chests:early(a.chests,b.chests)};
+}
 function mergeState(a={},b={}){
   const obj=(x,y)=>({...(x||{}),...(y||{})});
   const later=(b.lastDay||'')>=(a.lastDay||'')?b:a;
@@ -575,7 +582,7 @@ function mergeState(a={},b={}){
       last:[o.last,e.last].filter(Boolean).sort().pop()||null,passed:!!(o.passed||e.passed)}; }
   return {...a,...b, done:obj(a.done,b.done), drills:obj(a.drills,b.drills), talks:obj(a.talks,b.talks), chests:obj(a.chests,b.chests), flags:obj(a.flags,b.flags), flags:obj(a.flags,b.flags),
     errors, log:log.slice(-800), cases, quizHits, games:[...gm.values()].slice(-20),
-    xpl:hasLedger?xpl:undefined, lessons, exams, modq,
+    xpl:hasLedger?xpl:undefined, lessons, exams, modq, gw:(a.gw||b.gw)?mergeGw(a.gw,b.gw):undefined,
     xp:hasLedger?xpSum(xpl):Math.max(a.xp||0,b.xp||0), best:Math.max(a.best||0,b.best||0,a.streak||0,b.streak||0),
     streak:later.streak||0, lastDay:later.lastDay||null, freezes:later.freezes||0,
     fzUsed:Math.max(a.fzUsed||0,b.fzUsed||0), fzBought:Math.max(a.fzBought||0,b.fzBought||0),

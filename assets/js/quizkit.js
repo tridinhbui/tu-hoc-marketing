@@ -18,6 +18,16 @@ const QK = {
       b.parentElement.querySelectorAll('.qk__o').forEach((x) => { x.setAttribute('aria-pressed', x === b); x.style.borderColor = x === b ? 'var(--ink)' : 'var(--ink-12)'; x.style.fontWeight = x === b ? '600' : '400'; });
     });
   },
+  /* Hiện từng câu một (đề vẫn render đủ để QK.answers/QK.mark dùng như cũ). Trả bộ điều khiển. */
+  stepper(box, onChange) {
+    const qs = [...box.querySelectorAll('.qk')]; let i = 0;
+    const show = (n) => { i = Math.max(0, Math.min(qs.length - 1, n)); qs.forEach((q, k) => { q.style.display = k === i ? '' : 'none'; });
+      if (onChange) onChange(i, qs.length); };
+    qs.forEach((q) => q.addEventListener('click', () => { if (onChange) onChange(i, qs.length); }));
+    show(0);
+    return { show, next: () => show(i + 1), prev: () => show(i - 1), get index() { return i; }, count: qs.length,
+      all() { qs.forEach((q) => { q.style.display = ''; }); }, answered() { return Object.keys(QK.answers(box)).length; } };
+  },
   answers(box) {
     const out = {};
     box.querySelectorAll('.qk').forEach((q) => {

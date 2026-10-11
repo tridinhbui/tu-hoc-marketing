@@ -269,9 +269,10 @@ export async function season(req, env) {
   const rows = (await env.DB.prepare(`
     SELECT u.id, u.display_name,
       COALESCE((SELECT SUM(damage) FROM boss_hits b WHERE b.user_id = u.id AND b.week BETWEEN ?1 AND ?2 AND b.submitted_at IS NOT NULL), 0) AS boss,
-      COALESCE((SELECT SUM(CASE outcome WHEN 'win' THEN 3 WHEN 'draw' THEN 1 ELSE 0 END) FROM pvp_results p WHERE p.user_id = u.id AND p.day_local BETWEEN ?1 AND ?2), 0) AS pvp
+      COALESCE((SELECT SUM(CASE outcome WHEN 'win' THEN 3 WHEN 'draw' THEN 1 ELSE 0 END) FROM pvp_results p WHERE p.user_id = u.id AND p.day_local BETWEEN ?1 AND ?2), 0) AS pvp,
+      COALESCE((SELECT SUM(MIN(MAX(CAST(j.value AS INTEGER), 0), 3)) FROM user_state us, json_each(json_extract(us.state_json, '$.gw.stars')) j WHERE us.user_id = u.id AND j.type = 'integer'), 0) AS stars
     FROM users u`).bind(s.start, s.end).all()).results || [];
-  const list = rows.map((r) => ({ name: publicName({ id: r.id, display_name: r.display_name }), boss: r.boss, pvp: r.pvp, points: Math.round(r.boss / 6000) + r.pvp }))
-    .filter((r) => r.points > 0).sort((a, b) => b.points - a.points).slice(0, 50);
+  const list = rows.map((r) => ({ name: publicName({ id: r.id, display_name: r.display_name }), boss: r.boss, pvp: r.pvp, stars: r.stars, points: Math.round(r.boss / 6000) + r.pvp }))
+    .filter((r) => r.points > 0 || r.stars > 0).sort((a, b) => b.points - a.points || b.stars - a.stars).slice(0, 50);
   return json({ season: s, rows: list });
 }

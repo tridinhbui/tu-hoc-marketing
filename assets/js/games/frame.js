@@ -10,6 +10,7 @@ const GW = {
     if (stars > prev) st[id] = stars;
     if (!(id in bs) || score > bs[id]) bs[id] = score;
     S.set({ gw: { ...gw, stars: st, best: bs } });
+    if (stars > prev && typeof scheduleSync === 'function') scheduleSync();     // sao mới thì đồng bộ (kể cả khi XP đã chạm trần ngày)
     let xp = 0;
     if (gain > 0) { award('game', id, gain); xp = award.last || 0; }
     return { prev, stars, gain, xp };

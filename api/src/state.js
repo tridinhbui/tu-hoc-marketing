@@ -1,5 +1,6 @@
 /* Đồng bộ tiến độ + bảng xếp hạng tuần.
    Server gộp bản gửi lên với bản đang lưu — không bao giờ ghi đè mù — rồi tính điểm tuần từ nhật ký. */
+import { mergeGw } from './gw.js';
 import { json, now, currentUser, body, publicName } from './lib.js';
 import { syncLedger, weekXp } from './progress.js';
 import { ingestLessons } from './learn.js';
@@ -55,7 +56,7 @@ export function mergeState(a = {}, b = {}) {
     ...a, ...b,
     done: obj(a.done, b.done), drills: obj(a.drills, b.drills), talks: obj(a.talks, b.talks), chests: obj(a.chests, b.chests), flags: obj(a.flags, b.flags),
     errors, log: log.slice(-800), cases, quizHits, games: [...gm.values()].slice(-20),
-    xpl: hasLedger ? xpl : undefined, lessons, exams, modq,
+    xpl: hasLedger ? xpl : undefined, lessons, exams, modq, gw: (a.gw || b.gw) ? mergeGw(a.gw, b.gw) : undefined,
     xp: hasLedger ? xpSum(xpl) : Math.max(a.xp || 0, b.xp || 0), best: Math.max(a.best || 0, b.best || 0, a.streak || 0, b.streak || 0),
     streak: later.streak || 0, lastDay: later.lastDay || null, freezes: later.freezes || 0,
     fzUsed: Math.max(a.fzUsed || 0, b.fzUsed || 0), fzBought: Math.max(a.fzBought || 0, b.fzBought || 0),
