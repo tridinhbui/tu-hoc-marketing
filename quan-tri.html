@@ -2,72 +2,258 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=9">
-<title>Quản trị cộng đồng — Tự Học Marketing Case</title>
-<meta name="description" content="Hàng đợi nội dung bị báo cáo.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23C85A32'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='%23fff'%3EA%3C/text%3E%3C/svg%3E">
+<title>Admin Panel — Tự Học Marketing Case</title>
+<style>
+  :root{--bg:#FAFAF9;--card:#fff;--ink:#1c1917;--ink-2:#57534e;--ink-3:#a8a29e;--line:#e7e5e4;--brand:#C85A32;--ok:#16a34a;--warn:#d97706;--bad:#dc2626;--blue:#2563eb}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{font:14px/1.5 'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+  button{font:inherit;cursor:pointer}
+  a{color:inherit}
+  .app{display:grid;grid-template-columns:240px 1fr;min-height:100%}
+  .side{position:sticky;top:0;height:100vh;background:#fff;border-right:1px solid var(--line);display:flex;flex-direction:column;padding:18px 12px}
+  .side h1{font-size:18px;margin:4px 10px 0}
+  .side small{display:block;margin:0 10px 18px;color:var(--ink-3)}
+  .side nav{display:grid;gap:4px}
+  .side nav button{display:flex;align-items:center;gap:10px;width:100%;border:0;background:none;text-align:left;padding:10px 12px;border-radius:10px;color:var(--ink-2);font-weight:500}
+  .side nav button:hover{background:#f5f5f4}
+  .side nav button.on{background:#1c1917;color:#fff}
+  .side nav .bd{margin-left:auto;background:#e11d48;color:#fff;border-radius:99px;font-size:11px;font-weight:700;padding:2px 7px}
+  .side .foot{margin-top:auto;border-top:1px solid var(--line);padding:12px 10px 0;color:var(--ink-3);font-size:12.5px}
+  .side .foot a{display:block;margin-top:8px;color:var(--ink-2);text-decoration:none;font-weight:600}
+  main{padding:28px clamp(16px,4vw,48px);max-width:1180px;width:100%}
+  h2{font-size:24px;margin:0 0 4px}
+  .sub{color:var(--ink-2);margin:0 0 22px}
+  .grid{display:grid;gap:14px}
+  .g5{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .stat b{display:block;font-size:30px;line-height:1.1}
+  .stat span{color:var(--ink-2);font-size:13px}
+  .stat.tint{background:#fffbeb}
+  .lbl{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin:0 0 12px}
+  .bars{display:flex;align-items:flex-end;gap:10px;height:130px}
+  .bars div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;font-size:11px;color:var(--ink-3)}
+  .bars i{display:block;width:100%;background:var(--brand);border-radius:6px 6px 0 0;min-height:2px}
+  .bars em{font-style:normal;color:var(--ink);font-weight:600;margin-bottom:3px}
+  table{width:100%;border-collapse:collapse}
+  th{text-align:left;font-size:12px;color:var(--ink-3);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line)}
+  td{padding:10px;border-bottom:1px solid #f5f5f4;vertical-align:middle}
+  .ft{display:grid;gap:8px}
+  .ft div{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-size:13px}
+  .ft i{grid-column:1/-1;display:block;height:6px;border-radius:99px;background:#f5f5f4;overflow:hidden}
+  .ft i s{display:block;height:100%;background:var(--ok)}
+  .av{width:34px;height:34px;border-radius:50%;object-fit:cover;background:#e7e5e4;display:inline-grid;place-items:center;font-weight:700;color:#57534e;flex:none}
+  .row{display:flex;align-items:center;gap:10px}
+  .btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 14px;font-weight:600}
+  .btn.p{background:#1c1917;color:#fff;border-color:#1c1917}
+  .btn.d{color:var(--bad)}
+  input[type=search],textarea.f{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 12px;background:#fff;font:inherit}
+  .chat{display:grid;grid-template-columns:300px 1fr;height:calc(100vh - 150px);min-height:420px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .threads{border-right:1px solid var(--line);overflow-y:auto}
+  .th{display:flex;gap:10px;padding:12px 14px;border-bottom:1px solid #f5f5f4;cursor:pointer;align-items:flex-start}
+  .th:hover,.th.on{background:#fafaf9}
+  .th .tx{min-width:0;flex:1}
+  .th b{display:flex;justify-content:space-between;gap:6px}
+  .th p{margin:2px 0 0;color:var(--ink-2);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .th .un{background:var(--blue);color:#fff;border-radius:99px;font-size:11px;font-weight:700;padding:1px 7px;align-self:center}
+  .conv{display:flex;flex-direction:column;min-width:0}
+  .conv header{padding:14px 18px;border-bottom:1px solid var(--line)}
+  .conv header small{color:var(--ink-3)}
+  .msgs{flex:1;overflow-y:auto;padding:16px 18px;display:flex;flex-direction:column;gap:8px;background:#fafaf9}
+  .m{max-width:70%;padding:9px 13px;border-radius:14px;white-space:pre-wrap;word-break:break-word}
+  .m.user{align-self:flex-start;background:#fff;border:1px solid var(--line)}
+  .m.admin{align-self:flex-end;background:#1c1917;color:#fff}
+  .m time{display:block;font-size:11px;opacity:.55;margin-top:3px}
+  .reply{display:flex;gap:10px;padding:12px;border-top:1px solid var(--line)}
+  .reply textarea{flex:1;resize:none;height:44px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit}
+  .empty{margin:auto;color:var(--ink-3);text-align:center;padding:30px}
+  .tag{display:inline-block;padding:2px 8px;border-radius:99px;font-size:12px;font-weight:600;background:#f5f5f4;color:var(--ink-2)}
+  @media(max-width:860px){.app{grid-template-columns:1fr}.side{position:static;height:auto}.side .foot{display:none}.side nav{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}.chat{grid-template-columns:1fr;height:auto}.threads{max-height:220px;border-right:0;border-bottom:1px solid var(--line)}.conv{min-height:420px}}
+</style>
 </head>
 <body>
-<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
-<main class="wrap narrow" id="app"></main>
-<script src="assets/js/data/lessons.js?v=8"></script>
-<script src="assets/js/data/principles.js?v=8"></script>
-<script src="assets/js/data/curriculum.js?v=4"></script>
-<script src="assets/js/data/bai-index.js?v=10"></script>
-<script src="assets/js/data/drills.js?v=3"></script>
-<script src="assets/js/data/cases.js?v=3"></script>
-<script src="assets/js/app.js?v=18"></script>
-<script>
+<noscript><p style="padding:24px">Trang này cần JavaScript.</p></noscript>
+<div class="app">
+  <aside class="side">
+    <h1>Admin Panel</h1><small>Tự Học Marketing Case</small>
+    <nav id="nav"></nav>
+    <div class="foot"><span id="who"></span><a href="app.html">← Quay lại app</a></div>
+  </aside>
+  <main id="view"><p class="sub">Đang tải…</p></main>
+</div>
 
-appShell('');
-const app=document.getElementById('app');
-async function render(){
-  let d; try{ d=await api('/admin/queue'); }catch(e){ app.innerHTML=`<section class="section"><h1 class="h2">${e.status===403?'Chỉ quản trị viên mới xem được trang này.':'Chưa tải được.'}</h1></section>`; return; }
-  const why=(t,id)=>d.reasons.filter(r=>r.target_type===t&&r.target_id===id&&r.reason).map(r=>escH(r.reason)).join(' · ');
-  const row=(t,x)=>`<li style="padding:14px 0"><div class="row between"><b>${escH(x.title||x.body.slice(0,80))}</b><span class="mono">${x.reports} báo cáo${x.hidden?' · đang ẩn':''}</span></div>
-    <p class="small muted" style="margin:6px 0">${escH(x.email)} · ${new Date(x.created_at).toLocaleString('vi-VN')}${why(t,x.id)?' · Lý do: '+why(t,x.id):''}</p>
-    <p class="small" style="margin:0 0 8px">${escH(x.body.slice(0,400))}</p>
-    <div class="row">${x.hidden?`<button class="btn btn--ghost" data-a="restore" data-t="${t}" data-id="${x.id}">Khôi phục</button>`:`<button class="btn btn--ghost" data-a="hide" data-t="${t}" data-id="${x.id}">Ẩn</button>`}
-      <button class="btn" data-a="delete" data-t="${t}" data-id="${x.id}">Xoá hẳn</button>${t==='post'?`<a class="small" href="cong-dong.html?id=${x.id}">Mở bài →</a>`:''}</div></li>`;
-  app.innerHTML=`<section class="section"><span class="mono mono--red">Quản trị</span><h1 class="h2" style="margin:12px 0">Nội dung bị báo cáo</h1></section>
-    <span class="mono mono--ink">Bài đăng · ${d.posts.length}</span><ul class="list">${d.posts.map(x=>row('post',x)).join('')||'<li class="muted" style="padding:12px 0">Trống.</li>'}</ul>
-    <span class="mono mono--ink" style="display:block;margin-top:26px">Bình luận · ${d.comments.length}</span><ul class="list">${d.comments.map(x=>row('comment',x)).join('')||'<li class="muted" style="padding:12px 0">Trống.</li>'}</ul>`;
-  app.querySelectorAll('[data-a]').forEach(b=>b.onclick=async()=>{ if(b.dataset.a==='delete'&&!confirm('Xoá hẳn, không khôi phục được?')) return;
-    await api('/admin/moderate',{method:'POST',body:{type:b.dataset.t,id:b.dataset.id,action:b.dataset.a}}); render(); });
+<script>
+const $ = (s, r = document) => r.querySelector(s);
+const esc = (t) => String(t == null ? '' : t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const n = (v) => Number(v || 0).toLocaleString('vi-VN');
+const when = (t) => new Date(t).toLocaleString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric' });
+async function api(path, opt = {}) {
+  const r = await fetch('/api' + path, { credentials: 'same-origin', ...opt,
+    headers: { 'x-thmc': '1', ...(opt.body ? { 'content-type': 'application/json' } : {}) } });
+  const d = await r.json().catch(() => ({}));
+  if (!r.ok) throw Object.assign(new Error(d.error || 'error'), { status: r.status });
+  return d;
 }
-render().then(renderAdmin);
-/* Cấu hình sản phẩm (app_config) và cổng chất lượng câu hỏi — chỉ quản trị viên. */
-async function renderAdmin(){
-  let cfg, lint;
-  try{ [cfg,lint]=await Promise.all([api('/admin/config'),api('/admin/lint')]); }catch(e){ return; }
-  const b=lint.length_bias;
-  app.insertAdjacentHTML('beforeend',`
-  <section class="section"><span class="mono mono--red">Chất lượng câu hỏi</span>
-    <h2 class="h2" style="margin:10px 0">${lint.count} câu · ${lint.errors} câu có lỗi chặn</h2>
-    <p class="${b.share>0.35?'note note--red':'note'}">Đáp án đúng là phương án dài nhất ở <b>${Math.round(b.share*100)}%</b> câu trắc nghiệm (kỳ vọng khoảng ${Math.round(b.expected/b.n*100)}%, z = ${b.z.toFixed(1)}).
-      ${b.share>0.35?'Người học chọn bừa phương án dài nhất vẫn đúng nhiều — viết lại nhiễu cho dài và cụ thể bằng đáp án.':''}</p>
-    <div class="scroll" style="margin-top:12px"><table class="t"><thead><tr><th>Chặng</th><th class="n">Kho câu</th><th class="n">Kho ÷ 15 câu mỗi đề</th></tr></thead>
-      <tbody>${Object.entries(lint.pools).map(([k,v])=>`<tr><td>${k}</td><td class="n">${v.pool}</td><td class="n" style="${v.ratio<2?'color:var(--red)':''}">${v.ratio}×</td></tr>`).join('')}</tbody></table></div>
-    ${lint.review_queue.length?`<p style="margin-top:12px"><b>${lint.review_queue.length} câu cần xem lại</b> (tỉ lệ đúng &gt; 95% hoặc &lt; 20%, từ 20 lượt trở lên): ${lint.review_queue.map(q=>escH(q.question_id)).join(', ')}</p>`:''}
-    <details style="margin-top:12px"><summary>Chi tiết ${lint.warnings.length} câu có cảnh báo</summary>
-      <ul class="list">${lint.warnings.slice(0,200).map(x=>`<li style="padding:8px 0"><b>${escH(x.id)}</b> <span class="small muted">${escH(x.lesson||'')}</span><br>
-        ${x.w.map(w=>`<span class="small" style="color:${w.level==='error'?'var(--red)':'var(--ink-50)'}">${escH(w.msg)}</span>`).join('<br>')}</li>`).join('')}</ul></details>
-  </section>
-  <section class="section"><span class="mono mono--red">Cấu hình</span>
-    <h2 class="h2" style="margin:10px 0">Mọi con số của sản phẩm</h2>
-    <p class="muted">Sửa là có hiệu lực ngay, không cần deploy. Giá trị là JSON.</p>
-    ${cfg.config.map(c=>`<div style="border-top:1px solid var(--ink-12);padding:12px 0">
-      <div class="row between"><b>${escH(c.key)}</b><span class="small muted">${c.updated_by?'sửa bởi '+escH(c.updated_by)+' · '+new Date(c.updated_at).toLocaleString('vi-VN'):'mặc định'}</span></div>
-      <textarea class="field" data-key="${escH(c.key)}" rows="${Math.min(10,Math.max(2,JSON.stringify(c.value,null,1).split('\n').length))}" style="font-family:var(--mono);font-size:12.5px">${escH(JSON.stringify(c.value,null,1))}</textarea>
-      <button class="btn btn--ghost" data-save="${escH(c.key)}" style="margin-top:6px">Lưu</button></div>`).join('')}
-  </section>`);
-  app.querySelectorAll('[data-save]').forEach(btn=>btn.onclick=async()=>{
-    const ta=app.querySelector(`textarea[data-key="${btn.dataset.save}"]`); let v;
-    try{ v=JSON.parse(ta.value); }catch(e){ toast('JSON chưa hợp lệ'); return; }
-    try{ await api('/admin/config/'+btn.dataset.save,{method:'PUT',body:{value:v}}); toast('Đã lưu '+btn.dataset.save); }catch(e){ toast('Chưa lưu được'); }
+const av = (u, size = 34) => u.avatar
+  ? `<img class="av" style="width:${size}px;height:${size}px" src="${esc(u.avatar)}" alt="" referrerpolicy="no-referrer">`
+  : `<span class="av" style="width:${size}px;height:${size}px">${esc((u.name || '?').trim()[0] || '?').toUpperCase()}</span>`;
+
+const TABS = [['overview', 'Tổng quan'], ['chats', 'Tin nhắn'], ['users', 'Người dùng'], ['mod', 'Kiểm duyệt'], ['system', 'Hệ thống']];
+let tab = (location.hash || '#overview').slice(1), timer = null, badge = 0;
+if (!TABS.some((t) => t[0] === tab)) tab = 'overview';
+
+function paintNav() {
+  $('#nav').innerHTML = TABS.map(([k, l]) => `<button data-t="${k}" class="${k === tab ? 'on' : ''}">${l}${k === 'chats' && badge ? `<span class="bd">${badge}</span>` : ''}</button>`).join('');
+  $('#nav').querySelectorAll('button').forEach((b) => { b.onclick = () => { location.hash = b.dataset.t; }; });
+}
+window.addEventListener('hashchange', () => { tab = (location.hash || '#overview').slice(1); if (!TABS.some((t) => t[0] === tab)) tab = 'overview'; show(); });
+
+/* ---------- Tổng quan ---------- */
+const FEATURE = { page: 'Mở trang', nav: 'Bấm điều hướng', click: 'Bấm nút' };
+async function overview(v) {
+  const d = await api('/admin/metrics'), t = d.totals;
+  const bars = (arr) => { const m = Math.max(1, ...arr.map((x) => x.n)); return `<div class="bars">${arr.map((x) => `<div><em>${x.n}</em><i style="height:${Math.round(x.n / m * 100)}%"></i>${x.d.slice(5)}</div>`).join('')}</div>`; };
+  const fmax = Math.max(1, ...d.features.map((f) => f.n));
+  v.innerHTML = `
+    <h2>Tổng quan &amp; Phân tích hệ thống</h2><p class="sub">Số liệu thật từ cơ sở dữ liệu, cập nhật mỗi lần mở trang.</p>
+    <div class="grid g5">
+      <div class="card stat ${t.unread_messages ? 'tint' : ''}"><b>${n(t.unread_messages)}</b><span>Tin nhắn chưa đọc (${n(t.unread_threads)} cuộc)</span></div>
+      <div class="card stat"><b>${n(t.users)}</b><span>Tổng người dùng</span></div>
+      <div class="card stat"><b>${n(t.active_today)}</b><span>Hoạt động hôm nay</span></div>
+      <div class="card stat"><b>${n(t.active_7d)}</b><span>Hoạt động 7 ngày</span></div>
+      <div class="card stat"><b>${n(t.lessons_done)}</b><span>Bài học hoàn thành</span></div>
+    </div>
+    <div class="grid g5" style="margin-top:14px">
+      <div class="card stat"><b>${t.accuracy == null ? '—' : t.accuracy + '%'}</b><span>Đúng ngay lần đầu (${n(t.answers)} câu)</span></div>
+      <div class="card stat"><b>${n(t.avg_xp)}</b><span>XP trung bình / người</span></div>
+      <div class="card stat"><b>${n(t.referrals)}</b><span>Lượt mời bạn (${n(t.referrals_rewarded)} đã thưởng)</span></div>
+      <div class="card stat"><b>${n(t.with_avatar)}</b><span>Có ảnh Google</span></div>
+      <div class="card stat"><b>${n(t.events_30d)}</b><span>Lượt tương tác 30 ngày</span></div>
+    </div>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card"><p class="lbl">Người dùng mới · 7 ngày</p>${bars(d.signups)}</div>
+      <div class="card"><p class="lbl">Người học hoạt động mỗi ngày · 7 ngày</p>${bars(d.dau)}</div>
+      <div class="card"><p class="lbl">Bài học hoàn thành nhiều nhất</p>
+        ${d.top_lessons.length ? `<table><tbody>${d.top_lessons.map((x) => `<tr><td>${esc(x.lesson_id)}</td><td style="text-align:right"><b>${n(x.n)}</b> lượt</td></tr>`).join('')}</tbody></table>` : '<div class="empty">Chưa có dữ liệu.</div>'}</div>
+      <div class="card"><p class="lbl">Tương tác tính năng · 30 ngày</p>
+        ${d.features.length ? `<div class="ft">${d.features.map((f) => `<div><span>${esc(FEATURE[f.kind] || f.kind)} · <span style="color:var(--ink-3)">${esc(f.target || '')}</span></span><b>${n(f.n)}</b><i><s style="width:${Math.round(f.n / fmax * 100)}%"></s></i></div>`).join('')}</div>` : '<div class="empty">Chưa có lượt tương tác. Số liệu bắt đầu ghi từ khi bản này chạy.</div>'}</div>
+    </div>`;
+  badge = t.unread_threads; paintNav();
+}
+
+/* ---------- Tin nhắn ---------- */
+let curUid = null;
+async function chats(v) {
+  v.innerHTML = `<h2>Tin nhắn</h2><p class="sub">Trả lời trực tiếp người học. Tin của bạn hiện ngay trong hộp chat của họ.</p>
+    <div class="chat"><div class="threads" id="threads"></div><div class="conv" id="conv"><div class="empty">Chọn một cuộc trò chuyện.</div></div></div>`;
+  await loadThreads();
+  timer = setInterval(async () => { await loadThreads(true); if (curUid) await openThread(curUid, true); }, 6000);
+}
+async function loadThreads(quiet) {
+  let d; try { d = await api('/admin/chats'); } catch (e) { return; }
+  badge = d.threads.filter((x) => x.unread).length; paintNav();
+  const el = $('#threads'); if (!el) return;
+  el.innerHTML = d.threads.map((t) => `<div class="th ${t.uid === curUid ? 'on' : ''}" data-u="${esc(t.uid)}">${av(t)}
+      <div class="tx"><b><span>${esc(t.name)}</span><small style="font-weight:400;color:var(--ink-3)">${new Date(t.last_at).toLocaleDateString('vi-VN')}</small></b>
+      <p>${t.last_from === 'admin' ? 'Bạn: ' : ''}${esc(t.last_body)}</p></div>${t.unread ? `<span class="un">${t.unread}</span>` : ''}</div>`).join('')
+    || '<div class="empty">Chưa có tin nhắn nào từ người học.</div>';
+  el.querySelectorAll('.th').forEach((r) => { r.onclick = () => { curUid = r.dataset.u; openThread(curUid); loadThreads(true); }; });
+}
+async function openThread(uid, quiet) {
+  let d; try { d = await api('/admin/chats/' + encodeURIComponent(uid)); } catch (e) { return; }
+  const c = $('#conv'); if (!c || uid !== curUid) return;
+  const keep = c.querySelector('textarea') ? c.querySelector('textarea').value : '';
+  const list = c.querySelector('.msgs');
+  const atBottom = !list || list.scrollHeight - list.scrollTop - list.clientHeight < 60;
+  c.innerHTML = `<header><b>${esc(d.user ? d.user.name : uid)}</b><br><small>${esc(d.user ? d.user.email : '')} · tham gia ${d.user ? new Date(d.user.created_at).toLocaleDateString('vi-VN') : ''}</small></header>
+    <div class="msgs">${d.messages.map((m) => `<div class="m ${m.from}">${esc(m.body)}<time>${when(m.at)}</time></div>`).join('')}</div>
+    <form class="reply"><textarea maxlength="1000" placeholder="Trả lời…">${esc(keep)}</textarea><button class="btn p" type="submit">Gửi</button></form>`;
+  const msgs = c.querySelector('.msgs'); if (!quiet || atBottom) msgs.scrollTop = msgs.scrollHeight;
+  const ta = c.querySelector('textarea');
+  ta.addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); c.querySelector('form').requestSubmit(); } });
+  c.querySelector('form').onsubmit = async (e) => {
+    e.preventDefault(); const t = ta.value.trim(); if (!t) return;
+    try { await api('/admin/chats/' + encodeURIComponent(uid), { method: 'POST', body: JSON.stringify({ body: t }) }); ta.value = ''; await openThread(uid); await loadThreads(true); }
+    catch (err) { alert('Chưa gửi được: ' + err.message); }
+  };
+}
+
+/* ---------- Người dùng ---------- */
+async function users(v) {
+  v.innerHTML = `<h2>Người dùng</h2><p class="sub">60 tài khoản mới nhất. Gõ để tìm theo tên hoặc email.</p>
+    <input type="search" id="q" placeholder="Tìm theo tên hoặc email…" style="max-width:420px;margin-bottom:14px"><div class="card" id="ulist"></div>`;
+  const load = async () => {
+    const d = await api('/admin/users?q=' + encodeURIComponent($('#q').value));
+    $('#ulist').innerHTML = `<table><thead><tr><th>Người dùng</th><th>XP</th><th>Chuỗi</th><th>Hoạt động cuối</th><th>Tham gia</th><th></th></tr></thead><tbody>
+      ${d.users.map((u) => `<tr><td><div class="row">${av(u)}<div><b>${esc(u.name)}</b><br><small style="color:var(--ink-3)">${esc(u.email)}</small></div></div></td>
+        <td>${n(u.xp)}</td><td>${n(u.streak)} ngày</td><td>${esc(u.last_active || '—')}</td><td>${new Date(u.created_at).toLocaleDateString('vi-VN')}</td>
+        <td><button class="btn" data-chat="${esc(u.id)}">Nhắn tin</button></td></tr>`).join('') || '<tr><td colspan="6" class="empty">Không có kết quả.</td></tr>'}</tbody></table>`;
+    $('#ulist').querySelectorAll('[data-chat]').forEach((b) => { b.onclick = () => { curUid = b.dataset.chat; location.hash = 'chats'; }; });
+  };
+  let t; $('#q').oninput = () => { clearTimeout(t); t = setTimeout(load, 250); };
+  await load();
+}
+
+/* ---------- Kiểm duyệt ---------- */
+async function moderation(v) {
+  const d = await api('/admin/queue');
+  const why = (t, id) => d.reasons.filter((r) => r.target_type === t && r.target_id === id && r.reason).map((r) => esc(r.reason)).join(' · ');
+  const row = (t, x) => `<tr><td><b>${esc(x.title || x.body.slice(0, 80))}</b>
+      <p style="margin:4px 0;color:var(--ink-2)">${esc(x.body.slice(0, 300))}</p>
+      <small style="color:var(--ink-3)">${esc(x.email)} · ${when(x.created_at)} · ${x.reports} báo cáo${x.hidden ? ' · đang ẩn' : ''}${why(t, x.id) ? ' · Lý do: ' + why(t, x.id) : ''}</small></td>
+      <td style="white-space:nowrap">${x.hidden ? `<button class="btn" data-a="restore" data-t="${t}" data-id="${x.id}">Khôi phục</button>` : `<button class="btn" data-a="hide" data-t="${t}" data-id="${x.id}">Ẩn</button>`}
+      <button class="btn d" data-a="delete" data-t="${t}" data-id="${x.id}">Xoá</button></td></tr>`;
+  v.innerHTML = `<h2>Kiểm duyệt</h2><p class="sub">Nội dung cộng đồng bị báo cáo.</p>
+    <div class="card"><p class="lbl">Bài đăng · ${d.posts.length}</p><table><tbody>${d.posts.map((x) => row('post', x)).join('') || '<tr><td class="empty">Trống.</td></tr>'}</tbody></table></div>
+    <div class="card" style="margin-top:14px"><p class="lbl">Bình luận · ${d.comments.length}</p><table><tbody>${d.comments.map((x) => row('comment', x)).join('') || '<tr><td class="empty">Trống.</td></tr>'}</tbody></table></div>`;
+  v.querySelectorAll('[data-a]').forEach((b) => b.onclick = async () => {
+    if (b.dataset.a === 'delete' && !confirm('Xoá hẳn, không khôi phục được?')) return;
+    await api('/admin/moderate', { method: 'POST', body: JSON.stringify({ type: b.dataset.t, id: b.dataset.id, action: b.dataset.a }) });
+    moderation(v);
   });
 }
 
+/* ---------- Hệ thống: chất lượng câu hỏi + cấu hình ---------- */
+async function system(v) {
+  const [cfg, lint] = await Promise.all([api('/admin/config'), api('/admin/lint')]);
+  const b = lint.length_bias;
+  v.innerHTML = `<h2>Hệ thống</h2><p class="sub">Chất lượng kho câu hỏi và cấu hình sản phẩm.</p>
+    <div class="card"><p class="lbl">Chất lượng câu hỏi</p>
+      <p><b>${n(lint.count)}</b> câu · <b>${n(lint.errors)}</b> câu có lỗi chặn · đáp án đúng là phương án dài nhất ở <b>${Math.round(b.share * 100)}%</b> câu trắc nghiệm.</p>
+      <table><thead><tr><th>Chặng</th><th>Kho câu</th><th>Kho ÷ 15 câu mỗi đề</th></tr></thead><tbody>
+        ${Object.entries(lint.pools).map(([k, x]) => `<tr><td>${esc(k)}</td><td>${n(x.pool)}</td><td style="${x.ratio < 2 ? 'color:var(--bad)' : ''}">${x.ratio}×</td></tr>`).join('')}</tbody></table></div>
+    <div class="card" style="margin-top:14px"><p class="lbl">Cấu hình</p><p style="color:var(--ink-2);margin-top:0">Sửa là có hiệu lực ngay (giá trị là JSON).</p>
+      ${cfg.config.map((c) => `<div style="border-top:1px solid var(--line);padding:12px 0"><div class="row" style="justify-content:space-between"><b>${esc(c.key)}</b>
+        <small style="color:var(--ink-3)">${c.updated_by ? 'sửa bởi ' + esc(c.updated_by) + ' · ' + when(c.updated_at) : 'mặc định'}</small></div>
+        <textarea class="f" data-key="${esc(c.key)}" rows="${Math.min(10, Math.max(2, JSON.stringify(c.value, null, 1).split('\n').length))}" style="font-family:ui-monospace,Menlo,monospace;font-size:12.5px;margin-top:6px">${esc(JSON.stringify(c.value, null, 1))}</textarea>
+        <button class="btn" data-save="${esc(c.key)}" style="margin-top:6px">Lưu</button></div>`).join('')}</div>`;
+  v.querySelectorAll('[data-save]').forEach((btn) => btn.onclick = async () => {
+    const ta = v.querySelector(`textarea[data-key="${btn.dataset.save}"]`); let val;
+    try { val = JSON.parse(ta.value); } catch (e) { alert('JSON chưa hợp lệ'); return; }
+    try { await api('/admin/config/' + btn.dataset.save, { method: 'PUT', body: JSON.stringify({ value: val }) }); btn.textContent = 'Đã lưu ✓'; setTimeout(() => { btn.textContent = 'Lưu'; }, 1500); }
+    catch (e) { alert('Chưa lưu được'); }
+  });
+}
+
+async function show() {
+  clearInterval(timer); paintNav();
+  const v = $('#view'); v.innerHTML = '<p class="sub">Đang tải…</p>';
+  try { await ({ overview, chats, users, mod: moderation, system }[tab])(v); }
+  catch (e) { v.innerHTML = `<div class="card empty">${e.status === 403 ? 'Chỉ quản trị viên mới xem được trang này.' : 'Chưa tải được dữ liệu (' + esc(e.message) + ').'}</div>`; }
+}
+(async () => {
+  try {
+    const m = (await api('/me')).user;
+    if (!m) { location.replace('dang-nhap.html?next=' + encodeURIComponent('/quan-tri.html')); return; }
+    $('#who').textContent = m.email;
+    if (!m.is_admin) { $('#view').innerHTML = '<div class="card empty">Tài khoản này không có quyền quản trị.</div>'; return; }
+  } catch (e) { $('#view').innerHTML = '<div class="card empty">Chưa kết nối được máy chủ.</div>'; return; }
+  show();
+  setInterval(async () => { if (tab !== 'chats' && !document.hidden) { try { const d = await api('/admin/chats'); badge = d.threads.filter((x) => x.unread).length; paintNav(); } catch (e) {} } }, 30000);
+})();
 </script>
 </body>
 </html>

@@ -280,7 +280,7 @@ BAI_ADD({ mod:'kn08', lessons:[
       d:'Chi phí phần mềm là chuyện khác với việc khách có thấy thoải mái không.'} },
   { type:'mcq', stem:'Một khách phản hồi: “Sao em biết chị xem món đó lúc nửa đêm?”. Bạn nên làm gì?',
     options:[{k:'a',t:'Giải thích kỹ thuật cookie để khách hiểu đó là chuyện bình thường'},{k:'b',t:'Im lặng không trả lời để tránh làm chuyện lớn thêm trên mạng'},
-             {k:'c',t:'Gửi mã giảm giá để làm dịu và mời khách mua món đó ngay'},{k:'d',t:'Xin lỗi, bỏ kiểu nhắc hành vi lướt web khỏi mọi tin sau này'}],
+             {k:'c',t:'Gửi mã giảm giá để làm dịu và mời khách mua món đó ngay'},{k:'d',t:'Xin lỗi, bỏ kiểu nhắc hành vi lướt web khỏi các tin sau này'}],
     answer:'d', why:{a:'Giải thích kỹ thuật không làm khách bớt cảm giác bị theo dõi.',
       b:'Im lặng khiến khách nghĩ bạn không tôn trọng họ.',
       c:'Dùng quà để lấp một lỗi về cảm giác riêng tư nghe như mua chuộc.',

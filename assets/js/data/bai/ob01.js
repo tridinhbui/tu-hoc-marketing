@@ -280,7 +280,7 @@ BAI_ADD({ mod:'ob01', lessons:[
       d:'Bán lại được hàng, nhưng chi phí ship và khách đã mất thì không lấy lại được.'} },
   { type:'mcq', stem:'Vì sao shop phải chi ngày càng nhiều cho quảng cáo để giữ doanh số khi tỉ lệ mua lại thấp?',
     options:[{k:'a',t:'Vì giá quảng cáo trên các nền tảng cứ tăng dần qua mỗi tháng'},{k:'b',t:'Vì đối thủ đang chạy quảng cáo nhiều hơn shop này'},
-             {k:'c',t:'Vì gần như mọi đơn đều phải đến từ khách mới phải trả tiền để có'},{k:'d',t:'Vì khách cũ chặn quảng cáo nên không còn thấy shop'}],
+             {k:'c',t:'Vì gần như các đơn đều phải đến từ khách mới phải trả tiền để có'},{k:'d',t:'Vì khách cũ chặn quảng cáo nên không còn thấy shop'}],
     answer:'c', why:{a:'Giá quảng cáo có biến động, nhưng không giải thích vì sao phải chi ngày càng nhiều cho cùng doanh số.',
       b:'Có thể, nhưng không có dữ kiện; nguyên nhân rõ nằm trong chính shop.',
       c:'Đúng. Khi khách cũ không quay lại, doanh số mỗi tháng phải mua lại từ đầu bằng quảng cáo.',

@@ -486,7 +486,7 @@ BAI_ADD({ mod:'dl07', lessons:[
     steps:['Đơn mất = 6 × 24 = 144 đơn.','Doanh thu mất = 144 × 350.000 đ = 50.400.000 đ = <b>50,4 triệu đồng</b>.'] },
   { type:'mcq', stem:'Nhóm đặt 25 cảnh báo, ngày nào cũng kêu vài lần. Sau một tháng, điều gì dễ xảy ra?',
     options:[{k:'a',t:'Nhóm phản ứng nhanh hơn với sự cố nhờ được luyện tập'},{k:'b',t:'Dữ liệu chính xác hơn vì được theo dõi thật sát sao'},
-             {k:'c',t:'Mọi người quen bỏ qua, kể cả khi cảnh báo thật xảy ra'},{k:'d',t:'Chi phí quảng cáo giảm vì nhóm cắt giảm được lãng phí'}],
+             {k:'c',t:'Cả nhóm quen bỏ qua, kể cả khi cảnh báo thật xảy ra'},{k:'d',t:'Chi phí quảng cáo giảm vì nhóm cắt giảm được lãng phí'}],
     answer:'c', why:{a:'Báo động giả không luyện phản xạ; chúng làm tê liệt.',
       b:'Cảnh báo không làm dữ liệu chính xác hơn.',
       c:'Đúng. Cảnh báo quá nhiều làm mất tác dụng của cảnh báo.',

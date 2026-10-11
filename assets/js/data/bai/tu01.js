@@ -87,7 +87,7 @@ BAI_ADD({ mod:'tu01', lessons:[
     unit:'người', ans:60, tol:0.5, wrong:[[1.5,'NHAM_DIEM_PHAN_TRAM'],[140,'NHAM_SO_TUYET_DOI']], errors:['NHAM_DIEM_PHAN_TRAM'],
     steps:['Trước: 4.000 × 2% = 80 người.','Sau: 4.000 × 3,5% = 140 người.','Thêm: 140 − 80 = <b>60 người</b>.'] },
   { type:'mcq', stem:'Vì sao dùng trang chủ làm trang đích cho quảng cáo "Học thử IELTS" thường kém?',
-    options:[{k:'a',t:'Trang chủ phục vụ mọi khách nên không khớp riêng lời hứa học thử'},{k:'b',t:'Trang chủ thường tải chậm hơn các trang con của website'},
+    options:[{k:'a',t:'Trang chủ phục vụ các khách nên không khớp riêng lời hứa học thử'},{k:'b',t:'Trang chủ thường tải chậm hơn các trang con của website'},
              {k:'c',t:'Nền tảng quảng cáo không cho phép gắn đường dẫn trang chủ'},{k:'d',t:'Trang chủ không đo được tỉ lệ chuyển đổi bằng công cụ phân tích web'}],
     answer:'a', why:{a:'Đúng. Khách tới vì một lời hứa cụ thể mà trang chủ lại bày cả cửa hàng.',
       b:'Tốc độ tuỳ cách làm trang, không phụ thuộc đó là trang chủ.',

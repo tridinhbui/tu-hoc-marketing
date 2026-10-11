@@ -356,7 +356,7 @@ BAI_ADD({ mod:'tp10', lessons:[
   q:[
   { type:'mcq', stem:'Đoán trước: câu "Sữa hạt nguyên chất, tốt cho sức khoẻ, mua ngay giảm 20%" có vấn đề gì?',
     options:[{k:'a',t:'Câu quá dài, cần rút xuống còn ba chữ cho dễ nhớ'},{k:'b',t:'Mức giảm 20% chưa đủ hấp dẫn so với đối thủ, nên tăng lên 35%'},
-             {k:'c',t:'Câu không có tên thương hiệu nên khách không nhớ'},{k:'d',t:'Nó cố nói với mọi bước nên không trả lời trọn câu hỏi của bước nào'}],
+             {k:'c',t:'Câu không có tên thương hiệu nên khách không nhớ'},{k:'d',t:'Nó cố nói với các bước nên không trả lời trọn câu hỏi của bước nào'}],
     answer:'d', why:{a:'Độ dài không phải vấn đề; ngắn mà vẫn chung chung thì cũng vậy.',
       b:'Giảm sâu hơn không sửa được việc đầu phễu và sau mua không cần giảm giá.',
       c:'Tên hãng hiện ở mọi quảng cáo; vấn đề là nội dung.',

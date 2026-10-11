@@ -241,7 +241,7 @@ BAI_ADD({ mod:'ob03', lessons:[
   mistakes:['Giải thích mọi vị trí dẫn đầu bằng "quảng cáo nhiều".','Đánh trực diện vào đúng thế mạnh của người dẫn đầu.'],
   q:[
   { type:'mcq', stem:'Đoán trước: ở ngành sữa tươi, nguồn dẫn đầu nào khó sao chép nhất với một hãng mới?',
-    options:[{k:'a',t:'Một câu khẩu hiệu quảng cáo dễ nhớ và vui tai'},{k:'b',t:'Độ phủ gần như mọi tạp hoá cộng nguồn sữa lớn'},
+    options:[{k:'a',t:'Một câu khẩu hiệu quảng cáo dễ nhớ và vui tai'},{k:'b',t:'Độ phủ gần như các tạp hoá cộng nguồn sữa lớn'},
              {k:'c',t:'Bao bì màu sắc tươi sáng và dễ nhận diện'},{k:'d',t:'Đợt khuyến mãi mua hai tặng một mỗi cuối tuần'}],
     answer:'b', why:{a:'Khẩu hiệu có thể viết trong một tuần.',
       b:'Đúng. Mạng lưới phân phối và nguồn nguyên liệu mất nhiều năm và nhiều vốn để xây.',
@@ -508,7 +508,7 @@ BAI_ADD({ mod:'ob03', lessons:[
       d:'Đúng. Hãng mới phải có tiền để nuôi hàng và công nợ nhiều tháng.'} },
   { type:'mcq', stem:'Đâu là cách đọc rào cản hữu ích nhất trước khi vào ngành?',
     options:[{k:'a',t:'Chỉ hỏi chi phí sản xuất một đơn vị sản phẩm'},{k:'b',t:'Đếm số lượt tìm kiếm tên ngành trên mạng'},
-             {k:'c',t:'Tính mọi chi phí từ nhà máy đến tay khách'},{k:'d',t:'Xem hãng dẫn đầu có bao nhiêu người theo dõi'}],
+             {k:'c',t:'Tính các chi phí từ nhà máy đến tay khách'},{k:'d',t:'Xem hãng dẫn đầu có bao nhiêu người theo dõi'}],
     answer:'c', why:{a:'Giá sản xuất chỉ là một phần nhỏ.',
       b:'Lượt tìm cho biết quan tâm, không cho biết rào cản.',
       c:'Đúng. Chiết khấu, vận chuyển, phí kệ, khuyến mãi mới lộ ra rào cản thật.',

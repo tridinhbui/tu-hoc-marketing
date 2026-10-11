@@ -209,7 +209,7 @@ BAI_ADD({ mod:'kh03', lessons:[
       d:'Đúng. Viết bằng động từ về tiến triển, không gọi tên giải pháp.'} },
   { type:'mcq', stem:'Vì sao câu job không được chứa tên sản phẩm?',
     options:[{k:'a',t:'Vì luật sở hữu trí tuệ không cho viết tên thương hiệu trong tài liệu nội bộ'},{k:'b',t:'Vì khách không nhớ tên sản phẩm nên viết vào cũng vô ích'},
-             {k:'c',t:'Vì câu job phải đúng cả khi giải pháp thay đổi, để so được mọi lựa chọn'},{k:'d',t:'Vì tên sản phẩm có thể đổi sau khi ra mắt nên sợ phải sửa'}],
+             {k:'c',t:'Vì câu job phải đúng cả khi giải pháp thay đổi, để so được các lựa chọn'},{k:'d',t:'Vì tên sản phẩm có thể đổi sau khi ra mắt nên sợ phải sửa'}],
     answer:'c', why:{a:'Không có luật nào như vậy.',
       b:'Khách nhớ hay không không phải lý do.',
       c:'Đúng. Việc bền hơn giải pháp; câu job trung lập cho phép so bạn với mọi thứ khách có thể thuê.',

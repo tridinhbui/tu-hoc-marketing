@@ -164,7 +164,7 @@ BAI_ADD({ mod:'tp02', lessons:[
       d:'Giá không phải lý do chọn cửa vào kề.'} },
   { type:'mcq', stem:'Một nhãn trà nói: "Chúng tôi nhỏ, nên sẽ nói về mọi dịp để ai cũng thấy mình hợp." Sai ở đâu?',
     options:[{k:'a',t:'Nhãn nhỏ không nên quảng cáo, chỉ nên dựa vào truyền miệng'},{k:'b',t:'Nói về nhiều dịp là đúng hướng, chỉ việc tăng tần suất đăng'},
-             {k:'c',t:'Nên nói về giá rẻ thay vì nói về dịp dùng'},{k:'d',t:'Tiền ít rải mọi dịp thì không dịp nào đủ đậm để khách nhớ tên'}],
+             {k:'c',t:'Nên nói về giá rẻ thay vì nói về dịp dùng'},{k:'d',t:'Tiền ít rải các dịp thì không dịp nào đủ đậm để khách nhớ tên'}],
     answer:'d', why:{a:'Quảng cáo vẫn cần; vấn đề là nói về quá nhiều thứ.',
       b:'Tăng tần suất với ngân sách nhỏ vẫn bị chia mỏng ra nhiều dịp.',
       c:'Nói giá rẻ không giúp khách nhớ đến mình đúng lúc cần.',

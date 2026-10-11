@@ -355,7 +355,7 @@ BAI_ADD({ mod:'ob05', lessons:[
   mistakes:['Chia ngân sách đều theo giờ vì "không biết khách lúc nào".','Thấy buổi tối ít đơn liền kết luận buổi tối vô dụng, không thử thông điệp khác phù hợp nhịp tối.'],
   q:[
   { type:'mcq', stem:'Trước khi đọc bài: với cơm văn phòng giao tận nơi, bạn đoán bao nhiêu phần trăm đơn rơi vào khung 10h–11h30?',
-    options:[{k:'a',t:'Khoảng 70%, vì gần trưa là lúc mọi người đói'},{k:'b',t:'Khoảng 30%, vì khách đặt rải rác cả ngày'},
+    options:[{k:'a',t:'Khoảng 70%, vì gần trưa là lúc nhiều người đói'},{k:'b',t:'Khoảng 30%, vì khách đặt rải rác cả ngày'},
              {k:'c',t:'Khoảng 50%, số còn lại chia đều cho buổi sáng sớm và buổi tối'},{k:'d',t:'Khoảng 10%, vì phần lớn đặt từ tối hôm trước'}],
     answer:'a', why:{a:'Đúng. 2.940/4.200 = 70% — nhu cầu dồn vào một khung ngắn.',
       b:'Nhu cầu ăn trưa không rải đều; dữ liệu cho thấy tập trung mạnh.',

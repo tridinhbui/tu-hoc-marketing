@@ -5,6 +5,7 @@
    - Liên kết: theo (google, sub) trước; nếu chưa có thì theo email đã xác minh (gộp với tài khoản
      đã đăng nhập bằng link email); nếu chưa có nữa thì tạo tài khoản mới. */
 import { json, now, rid, randomToken, sessionCookie } from './lib.js';
+import { attachReferral, cleanRef } from './social.js';
 
 const AUTH = 'https://accounts.google.com/o/oauth2/v2/auth';
 const TOKEN = 'https://oauth2.googleapis.com/token';
@@ -23,7 +24,7 @@ export async function start(req, env) {
   const url = new URL(req.url);
   const state = randomToken(16), verifier = randomToken(32);
   const challenge = b64url(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(verifier)));
-  await env.SESSIONS.put(`og:${state}`, JSON.stringify({ verifier, next: safeNext(url.searchParams.get('next')) }), { expirationTtl: 600 });
+  await env.SESSIONS.put(`og:${state}`, JSON.stringify({ verifier, next: safeNext(url.searchParams.get('next')), ref: cleanRef(url.searchParams.get('ref')) }), { expirationTtl: 600 });
   const q = new URLSearchParams({
     client_id: env.GOOGLE_CLIENT_ID, redirect_uri: redirectUri(req, env), response_type: 'code',
     scope: 'openid email profile', state, code_challenge: challenge, code_challenge_method: 'S256', prompt: 'select_account',
@@ -40,7 +41,7 @@ export async function callback(req, env) {
   const raw = await env.SESSIONS.get(`og:${state}`);
   if (!raw) return back('loi=het-han');
   await env.SESSIONS.delete(`og:${state}`);           // một lần duy nhất
-  const { verifier, next } = JSON.parse(raw);
+  const { verifier, next, ref } = JSON.parse(raw);
 
   /* GOOGLE_TOKEN_URL chỉ để chạy thử với máy chủ giả trên máy; production không đặt biến này. */
   const tr = await fetch(env.GOOGLE_TOKEN_URL || TOKEN, {
@@ -56,7 +57,7 @@ export async function callback(req, env) {
   if (!ISS.has(claims.iss) || claims.aud !== env.GOOGLE_CLIENT_ID || !(claims.exp * 1000 > now())
       || claims.email_verified !== true || !claims.sub || !email) return back('loi=google');
 
-  const uid = await linkUser(env, 'google', String(claims.sub), email, claims.name);
+  const uid = await linkUser(env, 'google', String(claims.sub), email, claims.name, claims.picture, ref);
   const sid = randomToken(32);
   await env.SESSIONS.put(`s:${sid}`, uid, { expirationTtl: SESSION_TTL });
   return new Response(null, { status: 302, headers: {
@@ -65,10 +66,16 @@ export async function callback(req, env) {
   } });
 }
 
-export async function linkUser(env, provider, subject, email, name) {
+/* Chỉ nhận ảnh https từ máy chủ ảnh của Google; bất cứ thứ gì khác bị bỏ để không nhúng URL tuỳ ý vào trang. */
+const safePicture = (p) => (typeof p === 'string' && p.length < 400 && /^https:\/\/[a-z0-9-]+\.googleusercontent\.com\//i.test(p)) ? p : null;
+
+export async function linkUser(env, provider, subject, email, name, picture, ref) {
+  const avatar = safePicture(picture);
+  const setAvatar = (id) => avatar && env.DB.prepare('UPDATE users SET avatar_url = ?2 WHERE id = ?1').bind(id, avatar).run();
   const idn = await env.DB.prepare('SELECT user_id FROM user_identities WHERE provider = ?1 AND subject = ?2').bind(provider, subject).first();
-  if (idn) return idn.user_id;
+  if (idn) { await setAvatar(idn.user_id); return idn.user_id; }
   let u = await env.DB.prepare('SELECT id FROM users WHERE email = ?1').bind(email).first();
+  const isNew = !u;
   if (!u) {
     u = { id: rid() };
     const display = String(name || '').replace(/[\u0000-\u001f<>]/g, '').slice(0, 40) || null;
@@ -76,5 +83,7 @@ export async function linkUser(env, provider, subject, email, name) {
   }
   await env.DB.prepare('INSERT OR IGNORE INTO user_identities (provider, subject, user_id, email, created_at) VALUES (?1, ?2, ?3, ?4, ?5)')
     .bind(provider, subject, u.id, email, now()).run();
+  await setAvatar(u.id);
+  if (isNew && ref) await attachReferral(env, u.id, ref);
   return u.id;
 }

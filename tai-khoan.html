@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23C85A32'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23FAF3E8'%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=9">
+<link rel="stylesheet" href="assets/css/case.css?v=12">
 <title>Hồ sơ Chiến lược gia — Tự Học Marketing Case</title>
 <meta name="description" content="Xem tiến trình học, điểm tích lũy XP, cấp bậc và quản lý tài khoản cá nhân.">
 </head>
@@ -16,7 +16,8 @@
 <script src="assets/js/data/curriculum.js?v=4"></script>
 <script src="assets/js/data/drills.js?v=3"></script>
 <script src="assets/js/data/cases.js?v=3"></script>
-<script src="assets/js/app.js?v=18"></script>
+<script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/social-ui.js?v=1"></script>
 <script>
 appShell('tai-khoan.html');
 const app = document.getElementById('app');
@@ -31,7 +32,7 @@ async function renderProfile() {
     app.innerHTML = `
       <section class="section">
         <span class="studio-badge studio-badge--terra">HỒ SƠ CHIẾN LƯỢC GIA</span>
-        <h1 class="h1" style="margin:16px 0 8px">${escH(u.name)}</h1>
+        <div style="display:flex;align-items:center;gap:16px;margin:16px 0 8px">${SocialUI.avatar(u, 64)}<h1 class="h1" style="margin:0">${escH(u.name)}</h1></div>
         <p class="muted" style="margin:0 0 24px">${escH(u.email || 'Tài khoản Studio hoạt động trên trình duyệt')}</p>
 
         <!-- Stats Grid Card -->
@@ -60,6 +61,8 @@ async function renderProfile() {
           </div>
         </div>
 
+        <div id="moi-ban" style="margin-bottom:24px"></div>
+
         <!-- Edit Profile Form -->
         <div style="background:var(--bg-2);border-radius:14px;padding:20px;border:1px solid rgba(249,244,235,.1);margin-bottom:24px">
           <span class="mono" style="color:var(--ink-70);margin-bottom:8px;display:block">Đổi tên hiển thị</span>
@@ -78,14 +81,19 @@ async function renderProfile() {
       </section>
     `;
 
-    document.getElementById('editNameForm').onsubmit = (e) => {
+    SocialUI.inviteCard(document.getElementById('moi-ban')).then(() => {
+      if (new URLSearchParams(location.search).get('moi')) document.getElementById('moi-ban').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    document.getElementById('editNameForm').onsubmit = async (e) => {
       e.preventDefault();
       const newName = document.getElementById('inputNewName').value.trim();
-      if (!newName) return;
-      u.name = newName;
-      try { localStorage.setItem('thmc.user', JSON.stringify(u)); } catch(err){}
-      toast('Đã cập nhật tên mới ✓');
-      setTimeout(renderProfile, 300);
+      if (newName.length < 2) { toast('Tên cần ít nhất 2 ký tự'); return; }
+      try {
+        await api('/me', { method: 'PATCH', body: { display_name: newName } });
+        API.user = undefined;
+        toast('Đã cập nhật tên mới ✓');
+        setTimeout(renderProfile, 300);
+      } catch (err) { toast('Chưa lưu được tên, thử lại sau'); }
     };
   } else {
     app.innerHTML = `

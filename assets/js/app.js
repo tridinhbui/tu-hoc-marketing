@@ -260,10 +260,27 @@ function applyTheme(s=S.get()){
   document.documentElement.dataset.theme=s.theme==='light'?'':s.theme;
   document.documentElement.style.setProperty('--read',(s.read||18)+'px');
 }
-function appShell(here){
+function appShell(here,opts={}){
   const s=S.get(); applyTheme(s);
   const main=document.querySelector('main'); if(main&&!main.id) main.id='main';
   let cur=here||((location.pathname.split('/').pop()||'index')); if(!/\.html$/.test(cur)) cur+='.html';
+
+  /* THANH ĐIỀU HƯỚNG DỌC CHỈ NẰM Ở app.html (khung). Trang học chạy TRONG khung nên ở đây không dựng header/footer nữa:
+     đổi trang chỉ đổi phần bên trong, thanh điều hướng không bao giờ bị dựng lại hay đổi. */
+  const framed=window.top!==window.self, PUBLIC=['index.html','dang-nhap.html','app.html'];
+  if(framed){
+    document.body.insertAdjacentHTML('beforeend','<div class="toast" id="toast" role="status" aria-live="polite"></div>');
+    account().then(u=>{
+      if(!u && API.on===true && !PUBLIC.includes(cur))
+        window.top.location.replace('dang-nhap.html?next='+encodeURIComponent('app.html?p='+encodeURIComponent(cur+location.search)));
+      else if(u && typeof syncNow==='function') syncNow();
+    });
+    return;
+  }
+  /* Mở thẳng một trang học ngoài khung (liên kết cũ, đăng nhập xong quay lại): đưa vào khung rồi mới hiển thị. */
+  if(!PUBLIC.includes(cur) && !opts.standalone){
+    location.replace('app.html?p='+encodeURIComponent(cur+location.search)); return;
+  }
 
   const navLinks=[
     {t:'Học', h:'hoc.html', also:['bai.html']},
@@ -297,7 +314,7 @@ function appShell(here){
       </div>
     </header>`);
 
-  document.body.insertAdjacentHTML('beforeend',`
+  document.body.insertAdjacentHTML('beforeend',`${opts.footer===false?'':`
     <footer class="studio-footer">
       <div class="wrap row between">
         <span>Tự Học Marketing Case · An Editorial Creative Strategy Studio. Miễn phí cho người học.</span>
@@ -311,7 +328,7 @@ function appShell(here){
           <a href="dang-nhap.html">Đăng nhập</a>
         </span>
       </div>
-    </footer>
+    </footer>`}
     <div class="toast" id="toast" role="status" aria-live="polite"></div>`);
 
   account().then(u=>{
@@ -327,6 +344,12 @@ function appShell(here){
       a.className='studio-login-btn';
       a.href='dang-nhap.html?next='+encodeURIComponent(herePath);
       a.textContent='Đăng nhập';
+      /* Lớp bảo vệ thứ hai ở trình duyệt. Máy chủ (Worker) đã chuyển hướng mọi trang HTML chưa đăng nhập, nhưng
+         trang tĩnh có thể được phục vụ không qua Worker (host tĩnh, bản lưu đệm, mở file). Chỉ chuyển hướng khi
+         API ĐÃ trả lời "chưa có phiên" (API.on===true); không có API (chạy cục bộ) thì để yên, không chặn người đang dev. */
+      const OPEN=['index.html','dang-nhap.html',''];
+      if(API.on===true && !OPEN.includes(cur) && !/dang-nhap/.test(location.pathname))
+        location.replace('dang-nhap.html?next='+encodeURIComponent(herePath));
     }
   });
 }

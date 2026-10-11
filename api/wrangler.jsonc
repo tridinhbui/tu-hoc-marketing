@@ -26,7 +26,7 @@
     "APP_ORIGIN": "https://tu-hoc-marketing.tridinhbui0901.workers.dev",
     "GOOGLE_CLIENT_ID": "652411579554-981jfkt4916oiprfk7ov78hgk8nsscqe.apps.googleusercontent.com",
     "MAIL_FROM": "",
-    "ADMIN_EMAILS": "",
+    "ADMIN_EMAILS": "tribd.tec@gmail.com",
     "AI_INTERVIEW_PER_MONTH": "3",
     "AI_ASSIST_PER_DAY": "10"
   }

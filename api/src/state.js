@@ -121,7 +121,7 @@ export async function leaderboard(req, env) {
   const by = ({ xp: 'xp', streak: 'streak', cases: 'cases' })[new URL(req.url).searchParams.get('by')] || 'xp';
   const w = weekStart();
   const rows = (await env.DB.prepare(
-    `SELECT w.user_id, w.xp, w.streak, w.cases, u.display_name FROM weekly w JOIN users u ON u.id = w.user_id
+    `SELECT w.user_id, w.xp, w.streak, w.cases, u.display_name, u.avatar_url FROM weekly w JOIN users u ON u.id = w.user_id
      WHERE w.week = ?1 AND w.${by} > 0 ORDER BY w.${by} DESC, w.updated_at ASC LIMIT 50`).bind(w).all()).results || [];
   const u = await currentUser(req, env);
   let me = null;
@@ -132,5 +132,5 @@ export async function leaderboard(req, env) {
       me = { ...mine, rank: (ahead?.n || 0) + 1, name: publicName(u) };
     }
   }
-  return json({ week: w, by, rows: rows.map((r, i) => ({ rank: i + 1, name: publicName({ id: r.user_id, display_name: r.display_name }), xp: r.xp, streak: r.streak, cases: r.cases, me: !!u && u.id === r.user_id })), me });
+  return json({ week: w, by, rows: rows.map((r, i) => ({ rank: i + 1, name: publicName({ id: r.user_id, display_name: r.display_name }), avatar: r.avatar_url || null, xp: r.xp, streak: r.streak, cases: r.cases, me: !!u && u.id === r.user_id })), me });
 }

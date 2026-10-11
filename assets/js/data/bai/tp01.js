@@ -166,7 +166,7 @@ BAI_ADD({ mod:'tp01', lessons:[
       c:'Thế mạnh của bạn thường là ứng viên điểm khác biệt, không phải điểm tương đồng.',
       d:'Ngân sách không quyết định khách kỳ vọng gì.'} },
   { type:'mcq', stem:'Vì sao cố "vượt trội ở mọi mặt" là cách định vị yếu?',
-    options:[{k:'a',t:'Vì khách không tin ai giỏi mọi thứ, còn nguồn lực bị chia mỏng'},{k:'b',t:'Vì làm tốt nhiều mặt sẽ khiến giá thành cao hơn đối thủ'},
+    options:[{k:'a',t:'Vì khách không tin ai giỏi các thứ, còn nguồn lực bị chia mỏng'},{k:'b',t:'Vì làm tốt nhiều mặt sẽ khiến giá thành cao hơn đối thủ'},
              {k:'c',t:'Vì đối thủ sẽ kiện nếu bạn nói mình tốt hơn ở quá nhiều điểm'},{k:'d',t:'Vì khách chỉ đọc được đúng một dòng quảng cáo mỗi lần xem'}],
     answer:'a', why:{a:'Đúng. Một điểm khác sắc dễ nhớ và dễ tin; hơn ở mọi mặt thì chẳng mặt nào được nhớ.',
       b:'Giá thành là một phần, nhưng lý do chính là trí nhớ và niềm tin của khách.',

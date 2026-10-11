@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" class="has-shell">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"><script>if(window.top!==window.self){window.top.location.replace(window.location.href);}</script>
+
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tự Học Marketing Case — An Editorial Creative Strategy Studio</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23D7512B'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23F4EDE2'%3EM%3C/text%3E%3C/svg%3E">
@@ -10,7 +11,7 @@
 <meta property="og:description" content="Những case thật. Bài học thật. Một tư duy mới để bạn nhìn marketing dưới góc độ chiến lược và sáng tạo.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/og/default.png">
-<link rel="stylesheet" href="assets/css/case.css?v=10">
+<link rel="stylesheet" href="assets/css/case.css?v=12">
 <style>
   body {
     background: #10100E;
@@ -71,26 +72,6 @@
 <noscript><div class="nojs">Trang cần JavaScript để chạy mini-case tương tác và lưu tiến độ học tập.</div></noscript>
 
 <!-- 1. TOP EDITORIAL NAVIGATION -->
-<header class="hd-universe">
-  <div class="wrap">
-    <a class="logo" href="index.html" style="color:#FBF7EE;font-size:17px;font-weight:700;letter-spacing:-0.01em;display:flex;align-items:center;text-decoration:none">
-      <span style="color:var(--studio-orange)">Tự Học</span>&nbsp;Marketing Case
-      <span style="background:rgba(229,178,75,.15);color:#E5B24B;font-size:10px;font-weight:700;letter-spacing:0.1em;padding:3px 8px;border-radius:99px;margin-left:8px">STUDIO</span>
-    </a>
-    
-    <nav class="hd-nav-links" aria-label="Điều hướng chính">
-      <a href="case-thu-vien.html">Case</a>
-      <a href="#method">Phương pháp</a>
-      <a href="#community">Cộng đồng</a>
-      <a href="tap-chi.html">Về chúng tôi</a>
-    </nav>
-
-    <div style="display:flex;align-items:center;gap:14px">
-      <a class="btn-pill-orange" href="hoc.html" style="padding:10px 22px;font-size:14px">Bắt đầu học →</a>
-    </div>
-  </div>
-</header>
-
 <main id="main">
   <!-- 2. HERO SPECTACULAR: CINEMATIC COLLAGE -->
   <section class="hero-editorial-wrap">
@@ -486,12 +467,13 @@
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
-<script src="assets/js/data/bai-index.js?v=10"></script>
+<script src="assets/js/data/bai-index.js?v=11"></script>
 <script src="assets/js/data/drills.js?v=3"></script>
 <script src="assets/js/data/cases.js?v=3"></script>
 <script src="assets/js/data/exam-items.js?v=8"></script>
-<script src="assets/js/app.js?v=18"></script>
+<script src="assets/js/app.js?v=21"></script>
 <script>
+appShell('index.html',{footer:false});   // cùng một thanh điều hướng với mọi trang
 /* Audio Engine */
 let audioCtx = null;
 function playStudioTone(type) {

@@ -413,7 +413,7 @@ BAI_ADD({ mod:'tp05', lessons:[
   q:[
   { type:'mcq', stem:'Đoán trước: rủi ro lớn nhất khi 70% đơn hàng đến từ livestream của nhà sáng lập là gì?',
     options:[{k:'a',t:'Chi phí livestream quá cao so với chạy quảng cáo'},{k:'b',t:'Khách sẽ chán vì xem một người mỗi tối quá lâu'},
-             {k:'c',t:'Đối thủ sẽ bắt chước cách livestream và lấy dần khách đi'},{k:'d',t:'Mọi sự cố của một người thành sự cố của cả công ty'}],
+             {k:'c',t:'Đối thủ sẽ bắt chước cách livestream và lấy dần khách đi'},{k:'d',t:'Các sự cố của một người thành sự cố của cả công ty'}],
     answer:'d', why:{a:'Livestream thường rẻ so với hiệu quả; vấn đề nằm ở sự phụ thuộc.',
       b:'Khách có thể chán, nhưng đó là rủi ro nhỏ hơn việc người đó vắng hẳn.',
       c:'Đối thủ bắt chước được hình thức nhưng khó lấy được niềm tin gắn với người cụ thể.',

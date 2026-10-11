@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tự Học Marketing Case</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23C85A32'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23FAF3E7'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/case.css?v=12">
+<style>
+  /* KHUNG ỨNG DỤNG: thanh điều hướng dọc nằm cố định bên phải, tải đúng MỘT lần.
+     Mọi trang học chạy trong khung bên trái; đổi trang chỉ đổi khung đó, thanh điều hướng không bao giờ bị dựng lại. */
+  :root{--side-w:248px}
+  html,body{height:100%;margin:0;overflow:hidden;background:#130E0B}
+  body{padding:0!important}
+  .shell{position:fixed;inset:0;display:grid;grid-template-columns:minmax(0,1fr) var(--side-w)}
+  .stage{position:relative;min-width:0;height:100%;background:#130E0B}
+  .stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#130E0B;display:block}
+  .stage__load{position:absolute;left:0;top:0;height:2px;width:0;background:var(--terra,#C85A32);transition:width .25s ease;z-index:2}
+
+  .rail{
+    height:100%;display:flex;flex-direction:column;box-sizing:border-box;
+    background:#1A130F;border-left:1px solid rgba(249,244,235,.1);
+    padding:18px 14px 14px;overflow-y:auto;color:#F9F4EB;
+  }
+  .rail__logo{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:#F9F4EB;font-family:var(--serif,Georgia,serif);font-size:1.25rem;line-height:1.15;padding:4px 8px 16px;border-bottom:1px solid rgba(249,244,235,.1)}
+  .rail__logo b{color:var(--terra,#C85A32);font-weight:600}
+  .rail__badge{align-self:flex-start;font:700 10px/1 var(--sans,system-ui);letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;border-radius:99px;background:rgba(200,90,50,.18);color:var(--terra,#C85A32);border:1px solid rgba(200,90,50,.35)}
+  .rail__nav{display:flex;flex-direction:column;gap:4px;margin-top:14px}
+  .rail__nav a{
+    display:flex;align-items:center;gap:10px;min-height:42px;padding:0 12px;border-radius:12px;
+    color:rgba(249,244,235,.74);text-decoration:none;font:600 15px/1.2 var(--sans,system-ui);
+    border:1px solid transparent;
+  }
+  .rail__nav a:hover{background:rgba(249,244,235,.07);color:#fff}
+  .rail__nav a[aria-current="page"]{background:var(--terra,#C85A32);color:#fff}
+  .rail__nav svg{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .rail__nav em{margin-left:auto;font-style:normal;font-size:11px;font-weight:700;background:#fff;color:#C85A32;border-radius:99px;padding:2px 7px}
+  .rail__sub{margin-top:18px;padding-top:12px;border-top:1px solid rgba(249,244,235,.1);display:flex;flex-direction:column;gap:2px}
+  .rail__sub a{font:500 13.5px/1.2 var(--sans,system-ui);color:rgba(249,244,235,.6);text-decoration:none;padding:8px 12px;border-radius:10px}
+  .rail__sub a:hover{background:rgba(249,244,235,.07);color:#fff}
+  .rail__sub a[aria-current="page"]{color:#fff;background:rgba(249,244,235,.12)}
+  .rail__me{margin-top:auto;padding-top:16px}
+  .rail__card{display:grid;gap:8px;padding:12px;border-radius:14px;background:rgba(249,244,235,.06);border:1px solid rgba(249,244,235,.1);text-decoration:none;color:#F9F4EB}
+  .rail__who{display:flex;align-items:center;gap:10px;min-width:0}
+  .rail__av{width:34px;height:34px;flex:none;border-radius:50%;background:var(--terra,#C85A32);color:#fff;display:grid;place-items:center;font-weight:700}
+  .rail__name{font:600 14px/1.2 var(--sans,system-ui);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rail__sm{font:500 12px/1.3 var(--sans,system-ui);color:rgba(249,244,235,.6)}
+  .rail__bar{height:6px;border-radius:99px;background:rgba(249,244,235,.14);overflow:hidden}
+  .rail__bar i{display:block;height:100%;width:0;background:#E5B24B;border-radius:99px}
+
+  /* Điện thoại: thanh dọc thành ngăn kéo từ mép phải; nút mở cố định ở góc trên bên phải — vẫn là MỘT thanh duy nhất. */
+  .rail__open,.rail__scrim,.mbar{display:none}
+  @media(max-width:860px){
+    .shell{grid-template-columns:minmax(0,1fr)}
+    .rail{position:fixed;top:0;right:0;bottom:0;width:min(84vw,300px);z-index:60;transform:translateX(102%);transition:transform .22s ease;box-shadow:-18px 0 40px rgba(0,0,0,.45)}
+    .rail[data-open]{transform:none}
+    /* thanh nhỏ cố định phía trên: logo + nút mở thanh dọc. Thuộc khung nên không đổi khi chuyển trang. */
+    .mbar{display:flex;align-items:center;justify-content:space-between;position:fixed;top:0;left:0;right:0;height:56px;z-index:50;padding:0 8px 0 16px;background:#1A130F;border-bottom:1px solid rgba(249,244,235,.1);font-family:var(--serif,Georgia,serif);font-size:1.1rem;color:#F9F4EB}
+    .mbar b{color:var(--terra,#C85A32);font-weight:600}
+    .stage iframe{top:56px;height:calc(100% - 56px)}
+    .stage__load{top:56px}
+    .rail__open{display:grid;place-items:center;position:fixed;top:6px;right:8px;z-index:51;width:44px;height:44px;border-radius:50%;border:1px solid rgba(249,244,235,.2);background:transparent;color:#F9F4EB;cursor:pointer}
+    .rail[data-open] ~ .rail__open{visibility:hidden}
+    .rail__open svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+    .rail__scrim{position:fixed;inset:0;z-index:58;background:rgba(0,0,0,.5)}
+    .rail__scrim[data-open]{display:block}
+  }
+  @media(prefers-reduced-motion:reduce){.rail,.stage__load{transition:none}}
+</style>
+</head>
+<body>
+<noscript><p style="padding:24px;color:#F9F4EB">Trang này cần JavaScript. <a href="hoc.html" style="color:#E5B24B">Mở bài học</a>.</p></noscript>
+<a class="skip" href="#frame">Tới nội dung chính</a>
+
+<div class="shell">
+  <main class="stage" id="main">
+    <div class="stage__load" id="load" aria-hidden="true"></div>
+    <iframe id="frame" title="Nội dung" src="about:blank"></iframe>
+  </main>
+
+  <aside class="rail" id="rail" aria-label="Điều hướng">
+    <a class="rail__logo" href="hoc.html" data-go><span><b>Tự Học</b> Marketing Case</span><span class="rail__badge">Studio</span></a>
+    <nav class="rail__nav" id="nav" aria-label="Chính"></nav>
+    <div class="rail__sub" id="sub" aria-label="Công cụ"></div>
+    <div class="rail__me">
+      <a class="rail__card" id="me" href="tai-khoan.html" data-go>
+        <span class="rail__who"><span class="rail__av" id="av">?</span><span style="min-width:0"><span class="rail__name" id="nm" style="display:block">Tài khoản</span><span class="rail__sm" id="sm">&nbsp;</span></span></span>
+        <span class="rail__bar" aria-hidden="true"><i id="xpbar"></i></span>
+      </a>
+    </div>
+  </aside>
+</div>
+<div class="mbar" aria-hidden="true"><span><b>Tự Học</b> Marketing Case</span></div>
+<button class="rail__open" id="open" type="button" aria-label="Mở menu" aria-controls="rail" aria-expanded="false">
+  <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+<div class="rail__scrim" id="scrim"></div>
+
+<script src="assets/js/data/lessons.js?v=8"></script>
+<script src="assets/js/data/principles.js?v=8"></script>
+<script src="assets/js/data/curriculum.js?v=4"></script>
+<script src="assets/js/data/bai-index.js?v=11"></script>
+<script src="assets/js/data/drills.js?v=3"></script>
+<script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/social.js?v=2"></script>
+<script>
+/* Khung chỉ làm bốn việc: dựng thanh dọc một lần; nạp trang vào khung; đánh dấu mục đang ở; giữ địa chỉ trên thanh URL
+   khớp với trang đang xem (để tải lại hay chia sẻ liên kết vẫn về đúng chỗ). Nội dung trang do chính trang đó lo. */
+const NAV = [
+  { t:'Học',        h:'hoc.html',            i:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>',
+    m:['hoc.html','hoc-bai.html','bai.html','lesson.html','principle.html','library.html'] },
+  { t:'Lộ trình',   h:'ban-do.html',         i:'<circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 000-6H9a3 3 0 010-6h6.5"/>',
+    m:['ban-do.html','roadmap.html','xep-lop.html'] },
+  { t:'Case',       h:'case-thu-vien.html',  i:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18"/>',
+    m:['case-thu-vien.html','giai-case.html','gallery.html','campaign.html','brand.html','xray.html'] },
+  { t:'Thử thách',  h:'quiz.html',           i:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+    m:['quiz.html','thi.html','luyen.html','challenge.html','tro-choi.html','phong-van.html'] },
+  { t:'Ôn lỗi',     h:'on-loi.html',         i:'<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/>', due:true, m:['on-loi.html'] },
+  { t:'Kỹ năng',    h:'nang-luc.html',       i:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 12l6-6"/>', m:['nang-luc.html','ruong.html'] },
+  { t:'Cộng đồng',  h:'cong-dong.html',      i:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0"/><path d="M16 4.5a3.5 3.5 0 010 7M18 20a6 6 0 00-2.5-4.9"/>',
+    m:['cong-dong.html','bang-xep-hang.html'] },
+];
+const SUB = [
+  { t:'Kế hoạch chiến dịch', h:'capstone.html',  m:['capstone.html','positioning.html','segmentation.html','unit-economics.html','pricing.html'] },
+  { t:'Thuật ngữ',           h:'thuat-ngu.html', m:['thuat-ngu.html'] },
+  { t:'Tài khoản',           h:'tai-khoan.html', m:['tai-khoan.html'] },
+];
+/* Chỉ nhận tên file .html trong cùng thư mục — không cho `p` trỏ ra ngoài (chống open-redirect). */
+const SAFE = /^[a-z0-9][a-z0-9-]*\.html(\?[A-Za-z0-9_.:=&%-]*)?$/i;
+const frame = document.getElementById('frame'), rail = document.getElementById('rail');
+const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+
+document.getElementById('nav').innerHTML = NAV.map((n) =>
+  `<a href="${n.h}" data-go data-m="${n.m.join(',')}"><svg viewBox="0 0 24 24" aria-hidden="true">${n.i}</svg><span>${n.t}</span>${n.due ? '<em hidden id="due"></em>' : ''}</a>`).join('');
+document.getElementById('sub').innerHTML = SUB.map((n) => `<a href="${n.h}" data-go data-m="${n.m.join(',')}">${n.t}</a>`).join('');
+
+function target() {
+  const p = new URLSearchParams(location.search).get('p') || 'hoc.html';
+  return SAFE.test(p) ? p : 'hoc.html';
+}
+function mark(file) {
+  rail.querySelectorAll('a[data-m]').forEach((a) => {
+    if (a.dataset.m.split(',').includes(file)) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+  });
+}
+function refreshMe() {
+  try {
+    const s = S.get(), lv = level(s.xp);
+    const pct = lv.next ? Math.round((s.xp - lv.cur) / (lv.next - lv.cur) * 100) : 100;
+    document.getElementById('sm').textContent = `${fmt(s.xp)} XP · cấp ${lv.n}${s.streak ? ' · ' + s.streak + ' ngày' : ''}`;
+    document.getElementById('xpbar').style.width = Math.max(0, Math.min(100, pct)) + '%';
+    const due = typeof dueErrors === 'function' ? dueErrors(s).length : 0, el = document.getElementById('due');
+    if (el) { el.hidden = !due; el.textContent = due > 9 ? '9+' : due; }
+  } catch (e) { /* thiếu dữ liệu thì để trống, không làm hỏng khung */ }
+}
+function loadInto(path) {
+  if (!SAFE.test(path)) path = 'hoc.html';
+  const bar = document.getElementById('load'); bar.style.width = '35%';
+  frame.src = path;
+}
+frame.addEventListener('load', () => {
+  document.getElementById('load').style.width = '100%';
+  setTimeout(() => { document.getElementById('load').style.width = '0'; }, 250);
+  let file = 'hoc.html', q = '';
+  try {
+    const l = frame.contentWindow.location;
+    if (l.href === 'about:blank') return;
+    file = (l.pathname.split('/').pop() || 'hoc.html'); q = l.search;
+    if (frame.contentDocument.title) document.title = frame.contentDocument.title;
+  } catch (e) { return; }
+  mark(file);
+  if (typeof Social !== 'undefined') Social.page(file);
+  const url = `app.html?p=${encodeURIComponent(file + q)}`;
+  if (location.search !== url.slice('app.html'.length)) history.replaceState(null, '', url);
+  refreshMe();
+  closeDrawer();
+});
+/* Bấm mục trên thanh: chỉ đổi khung bên trong, không điều hướng cả trang. */
+rail.addEventListener('click', (e) => {
+  const a = e.target.closest('a[data-go]'); if (!a) return;
+  if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+  e.preventDefault();
+  const href = a.getAttribute('href');
+  if (href === 'tai-khoan.html' || SAFE.test(href)) loadInto(href);
+});
+window.addEventListener('storage', refreshMe);
+setInterval(refreshMe, 4000);
+
+/* Ngăn kéo trên điện thoại. */
+const openBtn = document.getElementById('open'), scrim = document.getElementById('scrim');
+function openDrawer() { rail.setAttribute('data-open', ''); scrim.setAttribute('data-open', ''); openBtn.setAttribute('aria-expanded', 'true'); openBtn.style.visibility = 'hidden'; }
+function closeDrawer() { rail.removeAttribute('data-open'); scrim.removeAttribute('data-open'); openBtn.setAttribute('aria-expanded', 'false'); openBtn.style.visibility = ''; }
+openBtn.onclick = () => (rail.hasAttribute('data-open') ? closeDrawer() : openDrawer());
+scrim.onclick = closeDrawer;
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+
+/* Tên người dùng từ phiên đăng nhập thật. Chưa có phiên (API đã trả lời) thì về trang đăng nhập — khung không hiện cho khách. */
+account().then((u) => {
+  if (u && u.name) {
+    document.getElementById('nm').textContent = u.name;
+    document.getElementById('av').textContent = (u.name.trim()[0] || 'M').toUpperCase();
+    if (typeof Social !== 'undefined') Social.init(u);
+  } else if (API.on === true) {
+    location.replace('dang-nhap.html?next=' + encodeURIComponent('app.html?p=' + encodeURIComponent(target())));
+  }
+});
+refreshMe();
+loadInto(target());
+</script>
+</body>
+</html>

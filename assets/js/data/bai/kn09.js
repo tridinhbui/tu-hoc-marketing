@@ -202,7 +202,7 @@ BAI_ADD({ mod:'kn09', lessons:[
     steps:['Tổng chi = 500 + 300 = 800 triệu.','800.000.000 ÷ 8.000 = 100.000đ = <b>100 nghìn đồng</b> mỗi người.'] },
   { type:'mcq', stem:'Một ngân hàng hư cấu tài trợ lễ hội ẩm thực. Hoạt động kích hoạt nào hợp nhất?',
     options:[{k:'a',t:'Treo logo ngân hàng thật to ở cổng chính của lễ hội'},{k:'b',t:'Phát tờ rơi mở thẻ tín dụng ở các lối vào lễ hội'},
-             {k:'c',t:'Thanh toán QR tại mọi gian hàng, giảm 20% khi trả bằng ứng dụng'},{k:'d',t:'Tổ chức hội thảo về tài chính cá nhân và tiết kiệm cho gia đình ngay trong lễ hội'}],
+             {k:'c',t:'Thanh toán QR tại các gian hàng, giảm 20% khi trả bằng ứng dụng'},{k:'d',t:'Tổ chức hội thảo về tài chính cá nhân và tiết kiệm cho gia đình ngay trong lễ hội'}],
     answer:'c', why:{a:'Chỉ là hiện diện, không ai trải nghiệm dịch vụ.',
       b:'Tờ rơi ép bán, không giải quyết nhu cầu nào ở lễ hội.',
       c:'Đúng. Ngân hàng giải quyết việc thanh toán — nhu cầu thật trong lễ hội.',

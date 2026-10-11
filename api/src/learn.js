@@ -1,5 +1,6 @@
 /* Vòng học phía server: đề không có đáp án → chấm tự động → mastery → hàng ôn → thi vượt chặng / xếp lớp.
    Chỉ chấm câu có đáp án duy nhất (trắc nghiệm, điền số). Không có đường chấm tự luận. */
+import { rewardReferral } from './social.js';
 import { json, now, rid, str, currentUser, isAdmin, body } from './lib.js';
 import { loadConfig, vnToday, recompute, invalidateConfig } from './progress.js';
 import BANK from './generated/bank.json';
@@ -132,6 +133,7 @@ export async function completeLesson(req, env, key) {
     await env.DB.prepare(`UPDATE xp_events SET amount = ?3 WHERE user_id = ?1 AND source = 'lesson' AND source_ref = ?2`).bind(u.id, 'lesson:' + key, want).run();
     xp = want - had.amount;
   }
+  if (xp > 0) { try { await rewardReferral(env, u.id); } catch { /* thưởng mời bạn lỗi không được làm hỏng việc chấm bài */ } }
   return json({ lesson: key, state, first_score: score, xp });
 }
 

@@ -75,7 +75,7 @@ BAI_ADD({ mod:'kh04', lessons:[
   q:[
   { type:'mcq', stem:'Đoán trước: vấn đề lớn nhất của câu "mẹ nào cũng muốn con khoẻ mạnh, thông minh" là gì?',
     options:[{k:'a',t:'Câu quá dài, cần rút gọn cho dễ nhớ khi truyền đạt cho agency'},{k:'b',t:'Nó sai, vì nhiều mẹ ngày nay ưu tiên con vui hơn con khoẻ'},
-             {k:'c',t:'Nó đúng với mọi hãng nên không cho ra ý tưởng khác biệt'},{k:'d',t:'Nó nói về mẹ, trong khi người uống sữa thật sự là em bé'}],
+             {k:'c',t:'Nó đúng với các hãng nên không cho ra ý tưởng khác biệt'},{k:'d',t:'Nó nói về mẹ, trong khi người uống sữa thật sự là em bé'}],
     answer:'c', why:{a:'Độ dài không phải vấn đề; câu ngắn mà hiển nhiên vẫn vô dụng.',
       b:'Câu không sai — nó đúng tới mức vô dụng.',
       c:'Đúng. Điều hiển nhiên dẫn tới quảng cáo giống hệt đối thủ, như ba concept agency gửi.',

@@ -31,16 +31,20 @@ test('đáp án đúng là phương án dài nhất: ≤ 32% tổng thể (ngẫ
   assert.ok(longest / mcqs.length <= 0.32, `${(longest / mcqs.length * 100).toFixed(1)}%`);
 });
 
-test('từ tuyệt đối làm lộ đáp án: tỉ lệ (phương án sai chứa từ tuyệt đối) / (đáp án đúng chứa) không tệ hơn mốc', () => {
-  let w = 0, wn = 0, r = 0, rn = 0;
-  for (const q of mcqs) for (const o of q.options) {
-    const has = ABS.test(strip(o.t));
-    if (o.k === q.answer) { rn++; if (has) r++; } else { wn++; if (has) w++; }
+test('từ tuyệt đối làm lộ đáp án (cả hai chiều): ít câu bị lộ, và không đảo thành "có từ tuyệt đối = đúng"', () => {
+  let w = 0, wn = 0, r = 0, rn = 0, leakWrong = 0, leakRight = 0;
+  for (const q of mcqs) {
+    const has = q.options.filter((o) => ABS.test(strip(o.t)));
+    for (const o of q.options) {
+      if (o.k === q.answer) { rn++; if (ABS.test(strip(o.t))) r++; } else { wn++; if (ABS.test(strip(o.t))) w++; }
+    }
+    if (has.length === 1) { if (has[0].k === q.answer) leakRight++; else leakWrong++; }   // chỉ đúng một phương án có từ này
   }
-  const share = w / wn, ratio = share / Math.max(r / rn, 1e-3);
-  console.log(`  từ tuyệt đối: ${(share * 100).toFixed(1)}% phương án sai, ${(r / rn * 100).toFixed(1)}% đáp án đúng, tỉ lệ ${ratio.toFixed(1)}×`);
-  assert.ok(share <= BASE.absWordWrongShareMax, `phương án sai chứa từ tuyệt đối ${(share * 100).toFixed(1)}% > mốc ${(BASE.absWordWrongShareMax * 100).toFixed(1)}%`);
-  assert.ok(ratio <= BASE.absWordRatioMax, `tỉ lệ ${ratio.toFixed(1)}× > mốc ${BASE.absWordRatioMax}×`);
+  const n = mcqs.length;
+  console.log(`  từ tuyệt đối: ${(w / wn * 100).toFixed(1)}% phương án sai, ${(r / rn * 100).toFixed(1)}% đáp án đúng; câu lộ "chỉ phương án sai có": ${(leakWrong / n * 100).toFixed(1)}%, "chỉ đáp án đúng có": ${(leakRight / n * 100).toFixed(1)}%`);
+  assert.ok(w / wn <= BASE.absWordWrongShareMax, `phương án sai chứa từ tuyệt đối ${(w / wn * 100).toFixed(1)}% > mốc`);
+  assert.ok(leakWrong / n <= BASE.absLeakWrongMax, `${(leakWrong / n * 100).toFixed(1)}% câu chỉ phương án sai có từ tuyệt đối`);
+  assert.ok(leakRight / n <= BASE.absLeakRightMax, `${(leakRight / n * 100).toFixed(1)}% câu chỉ đáp án đúng có từ tuyệt đối`);
 });
 
 test('câu judge: ≥ 2 phương án, không dồn vị trí, không đoán được bằng "phương án nào có số thì đúng"', () => {

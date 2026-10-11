@@ -65,7 +65,7 @@ for (const b of g('BRANDS')) {
 }
 
 /* sitemap gồm cả trang gốc lẫn trang sinh */
-const roots = fs.readdirSync('.').filter(f => f.endsWith('.html') && !f.startsWith('_'));
+const roots = fs.readdirSync('.').filter(f => f.endsWith('.html') && !f.startsWith('_') && f !== 'app.html');   // app.html là khung điều hướng, noindex
 for (const f of roots) urls.unshift([`${SITE}/${f === 'index.html' ? '' : f}`, f === 'index.html' ? '1.0' : '0.6']);
 const today = new Date().toISOString().slice(0, 10);
 fs.writeFileSync('sitemap.xml',

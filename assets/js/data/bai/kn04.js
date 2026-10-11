@@ -391,7 +391,7 @@ BAI_ADD({ mod:'kn04', lessons:[
       d:'Làm lại từ đầu là mất lợi ích tiết kiệm công.'} },
   { type:'mcq', stem:'Một chuyên gia tài chính cá nhân vừa livestream 60 phút trả lời câu hỏi. Mảnh nào nên cắt ra cho Threads?',
     options:[{k:'a',t:'Nguyên đoạn livestream 60 phút đăng lại'},{k:'b',t:'Ảnh chụp màn hình lúc livestream có đông người xem nhất để khoe độ phủ của buổi phát'},
-             {k:'c',t:'Clip dọc 30 giây có nhạc nền sôi động và hiệu ứng chuyển cảnh'},{k:'d',t:'Một nhận định ngắn gây suy nghĩ kèm câu hỏi mời mọi người trả lời'}],
+             {k:'c',t:'Clip dọc 30 giây có nhạc nền sôi động và hiệu ứng chuyển cảnh'},{k:'d',t:'Một nhận định ngắn gây suy nghĩ kèm câu hỏi mời người xem trả lời'}],
     answer:'d', why:{a:'Threads chủ yếu là trò chuyện bằng chữ, không hợp video dài.',
       b:'Khoe số người xem không mở ra cuộc trò chuyện nào.',
       c:'Clip dọc hợp TikTok, Reels hơn.',

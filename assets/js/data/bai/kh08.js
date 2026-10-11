@@ -393,7 +393,7 @@ BAI_ADD({ mod:'kh08', lessons:[
       c:'Con số cố định cập nhật theo tuần vẫn là con số dựng.',
       d:'Hứa tăng giá không có thật là gây hiểu lầm về giá.'} },
   { type:'mcq', stem:'Vì sao đánh giá "shop gian" hại nặng hơn một đánh giá chê chất lượng son?',
-    options:[{k:'a',t:'Nó chạm vào sự trung thực, khiến khách nghi mọi thông tin khác'},{k:'b',t:'Sàn tính điểm đánh giá về trung thực nặng gấp đôi chất lượng'},
+    options:[{k:'a',t:'Nó chạm vào sự trung thực, khiến khách nghi các thông tin khác'},{k:'b',t:'Sàn tính điểm đánh giá về trung thực nặng gấp đôi chất lượng'},
              {k:'c',t:'Khách đọc đánh giá chê chất lượng ít hơn đánh giá chê thái độ'},{k:'d',t:'Đánh giá về gian lận không thể trả lời hay giải thích được'}],
     answer:'a', why:{a:'Đúng. Chê chất lượng là chuyện một sản phẩm; "gian" là chuyện cả shop — hàng thật, date, nguồn gốc đều bị nghi.',
       b:'Sàn không tính điểm như vậy; tác hại nằm ở niềm tin của người đọc.',

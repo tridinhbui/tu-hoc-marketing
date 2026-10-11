@@ -449,7 +449,7 @@ BAI_ADD({ mod:'tn01', lessons:[
   mistakes:['Chỉ ghi và chia sẻ bản thử thành công.','Lưu kết quả trong email, tin nhắn cá nhân, không ai tìm lại được.'],
   q:[
   { type:'mcq', stem:'Đoán trước: vì sao công ty lặp lại một bản thử đã thất bại?',
-    options:[{k:'a',t:'Vì kết quả cũ không được lưu ở nơi mọi người tìm được'},{k:'b',t:'Vì bản thử cũ đã có kết quả sai nên cần làm lại cho chắc'},
+    options:[{k:'a',t:'Vì kết quả cũ không được lưu ở nơi cả nhóm tìm được'},{k:'b',t:'Vì bản thử cũ đã có kết quả sai nên cần làm lại cho chắc'},
              {k:'c',t:'Vì phòng marketing mới cố tình muốn chứng minh người cũ sai'},{k:'d',t:'Vì thị trường đã thay đổi nhiều so với hai năm trước'}],
     answer:'a', why:{a:'Đúng. Kết quả nằm trong email cá nhân; người nghỉ thì tri thức đi theo.',
       b:'Không có dấu hiệu bản thử cũ sai; vấn đề là không ai biết nó tồn tại.',

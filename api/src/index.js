@@ -16,6 +16,7 @@ import * as pg from './progress.js';
 import * as google from './google.js';
 import * as ln from './learn.js';
 import * as rm from './realm.js';
+import * as so from './social.js';
 
 /* Chống CSRF: mọi request thay đổi dữ liệu phải mang header riêng.
    Trình duyệt không gửi header tuỳ ý sang origin khác nếu không có CORS — mà API này không bật CORS. */
@@ -63,6 +64,18 @@ async function route(request, env, url) {
   if (p === '/api/admin/config' && m === 'GET') return ln.adminConfigGet(request, env);
   if ((mm = p.match(/^\/api\/admin\/config\/([a-z_]+)$/)) && m === 'PUT') return ln.adminConfigPut(request, env, mm[1]);
   if (p === '/api/admin/lint' && m === 'GET') return ln.adminLint(request, env);
+  if (p === '/api/me/invite' && m === 'GET') return so.myInvite(request, env);
+  if (p === '/api/chat' && m === 'GET') return so.myChat(request, env);
+  if (p === '/api/chat' && m === 'POST') return so.sendChat(request, env);
+  if (p === '/api/chat/unread' && m === 'GET') return so.myChatUnread(request, env);
+  if (p === '/api/track' && m === 'POST') return so.track(request, env);
+  if (p === '/api/admin/metrics' && m === 'GET') return so.adminMetrics(request, env);
+  if (p === '/api/admin/users' && m === 'GET') return so.adminUsers(request, env);
+  if (p === '/api/admin/chats' && m === 'GET') return so.adminChats(request, env);
+  if ((mm = p.match(/^\/api\/admin\/chats\/([A-Za-z0-9-]{8,64})$/))) {
+    if (m === 'GET') return so.adminThread(request, env, mm[1]);
+    if (m === 'POST') return so.adminReply(request, env, mm[1]);
+  }
   if (p === '/api/auth/google/start' && m === 'GET') return google.start(request, env);
   if (p === '/api/auth/google/callback' && m === 'GET') return google.callback(request, env);
   if (p === '/api/auth/providers' && m === 'GET') return json({ email: env.DEV_SHOW_LINK === '1' || !!(env.EMAIL && env.MAIL_FROM && !env.MAIL_FROM.includes('<')), google: !!(env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET) });

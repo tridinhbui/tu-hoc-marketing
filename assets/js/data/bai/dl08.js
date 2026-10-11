@@ -279,7 +279,7 @@ BAI_ADD({ mod:'dl08', lessons:[
       c:'Đúng. Cắt các đơn lỗ làm doanh thu giảm nhưng lãi tăng.',
       d:'Chênh vài ngày không giải thích được lãi tăng 15%.'} },
   { type:'mcq', stem:'Bạn chuẩn bị báo cáo khuyến mãi Tết cho chủ shop. Con số nào đặt ở dòng đầu?',
-    options:[{k:'a',t:'Doanh thu tăng 40% so với tháng trước đó của shop'},{k:'b',t:'Lãi sau mọi chi phí, so với tháng không khuyến mãi'},
+    options:[{k:'a',t:'Doanh thu tăng 40% so với tháng trước đó của shop'},{k:'b',t:'Lãi sau các chi phí, so với tháng không khuyến mãi'},
              {k:'c',t:'Số đơn hàng tăng 87% và thứ hạng của shop trên sàn'},{k:'d',t:'Số khách mới mua lần đầu trong đợt khuyến mãi Tết'}],
     answer:'b', why:{a:'Doanh thu là con số làm vui, không trả lời đợt khuyến mãi có đáng không.',
       b:'Đúng. Lãi so với tháng không khuyến mãi cho biết đợt này thêm hay bớt tiền.',

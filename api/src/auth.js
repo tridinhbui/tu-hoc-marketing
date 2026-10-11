@@ -1,6 +1,6 @@
 /* Đăng nhập bằng link gửi qua email. Không có mật khẩu để lộ.
    Link dùng được một lần, sống 15 phút. Phiên sống 30 ngày trong KV. */
-import { json, now, rid, str, sha256, randomToken, sessionCookie, currentUser, allow, body, publicName, COOKIE } from './lib.js';
+import { json, now, rid, str, sha256, randomToken, sessionCookie, currentUser, allow, body, publicName, isAdmin, COOKIE } from './lib.js';
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const LINK_TTL = 15 * 60, SESSION_TTL = 30 * 24 * 3600;
@@ -68,7 +68,8 @@ export async function logout(req, env) {
 export async function me(req, env) {
   const u = await currentUser(req, env);
   if (!u) return json({ user: null });
-  return json({ user: { id: u.id, email: u.email, name: publicName(u), display_name: u.display_name, persona: u.persona } });
+  return json({ user: { id: u.id, email: u.email, name: publicName(u), display_name: u.display_name, persona: u.persona,
+    avatar: u.avatar_url || null, is_admin: isAdmin(u, env) } });
 }
 
 export async function updateMe(req, env) {

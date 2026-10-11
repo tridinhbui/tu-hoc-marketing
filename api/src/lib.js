@@ -40,11 +40,11 @@ export async function currentUser(req, env) {
   if (!sid || !/^[a-f0-9]{64}$/.test(sid)) return null;
   const uid = await env.SESSIONS.get(`s:${sid}`);
   if (!uid) return null;
-  const u = await env.DB.prepare('SELECT id, email, display_name, persona FROM users WHERE id = ?1').bind(uid).first();
+  const u = await env.DB.prepare('SELECT id, email, display_name, persona, avatar_url FROM users WHERE id = ?1').bind(uid).first();
   return u ? { ...u, sid } : null;
 }
 export const isAdmin = (u, env) =>
-  !!u && String(env.ADMIN_EMAILS || '').split(',').map((s) => s.trim().toLowerCase()).filter(Boolean).includes(u.email);
+  !!u && String(env.ADMIN_EMAILS || '').split(',').map((s) => s.trim().toLowerCase()).filter(Boolean).includes(String(u.email).toLowerCase());
 
 /* Đếm trong KV theo cửa sổ thời gian. Trả true nếu còn được phép. */
 export async function allow(env, key, limit, ttl) {

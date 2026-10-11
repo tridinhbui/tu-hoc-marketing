@@ -419,19 +419,25 @@ html[data-theme="dark"] .rankcard{color:var(--ink)}
 body.has-side, body.has-side.side-collapsed{padding-left:0!important}
 .side, .mtop, .side__veil{display:none!important}
 
+:root{--shell-h:64px}
+/* Thanh điều hướng CỐ ĐỊNH: cao cố định, fixed, và chỗ của nó được giữ sẵn bằng padding của body
+   (html.has-shell) — nên không đẩy nội dung khi script chèn header, và không nhảy khi bấm sang trang khác. */
+html.has-shell{scroll-padding-top:var(--shell-h);overflow-y:scroll}   /* luôn chừa thanh cuộn: trang ngắn/dài không làm nav lệch vài px */
+html.has-shell body{padding-top:var(--shell-h)}
 .studio-top{
-  position:sticky;
-  top:0;
+  position:fixed;
+  top:0;left:0;right:0;
+  height:var(--shell-h);
   z-index:90;
   background:rgba(19,14,11,.92);
   backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(249,244,235,.1);
 }
 .studio-top .wrap{
-  display:flex;
+  display:grid;
+  grid-template-columns:270px minmax(0,1fr) 270px;   /* hai bên rộng cố định: nút đăng nhập ↔ tên người dùng không làm nav xê dịch */
   align-items:center;
-  justify-content:space-between;
-  min-height:64px;
+  height:100%;
   gap:16px;
 }
 .studio-logo{
@@ -469,11 +475,12 @@ body.has-side, body.has-side.side-collapsed{padding-left:0!important}
 .studio-nav{
   display:flex;
   align-items:center;
-  gap:clamp(8px,1.5vw,22px);
+  justify-content:center;
+  gap:clamp(4px,1vw,16px);
 }
 .studio-nav a{
   font-size:14.5px;
-  font-weight:500;
+  font-weight:600;          /* cùng độ đậm ở mọi trạng thái: mục đang chọn không làm rộng thêm và đẩy các mục bên cạnh */
   color:rgba(249,244,235,.72);
   text-decoration:none;
   padding:6px 12px;
@@ -488,13 +495,15 @@ body.has-side, body.has-side.side-collapsed{padding-left:0!important}
 .studio-nav a.active, .studio-nav a[aria-current="page"]{
   color:#fff;
   background:var(--terra);
-  font-weight:600;
 }
 .studio-top__right{
   display:flex;
   align-items:center;
+  justify-content:flex-end;
   gap:12px;
+  min-width:0;
 }
+.studio-user-badge{max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .studio-login-btn{
   background:var(--terra);
   border:1px solid var(--terra);
@@ -511,7 +520,6 @@ body.has-side, body.has-side.side-collapsed{padding-left:0!important}
 }
 .studio-login-btn:hover{
   background:var(--terra-d);
-  transform:translateY(-1px);
 }
 .studio-user-badge{
   background:rgba(249,244,235,.08);
@@ -558,24 +566,25 @@ body.has-side, body.has-side.side-collapsed{padding-left:0!important}
   color:#fff;
 }
 @media(max-width:860px){
-  .studio-nav{
-    overflow-x:auto;
-    max-width:calc(100vw - 220px);
-  }
-}
-@media(max-width:640px){
+  :root{--shell-h:104px}
   .studio-top .wrap{
-    flex-wrap:wrap;
-    padding-top:10px;
-    padding-bottom:10px;
+    grid-template-columns:minmax(0,1fr) auto;
+    grid-template-rows:56px 44px;
+    gap:0 12px;
   }
+  .studio-logo{font-size:1.12rem;min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .studio-logo .studio-badge{display:none}
+  .studio-top__right{grid-column:2;grid-row:1}
   .studio-nav{
-    order:3;
-    width:100%;
-    max-width:100%;
+    grid-column:1 / -1;
+    grid-row:2;
+    justify-content:flex-start;
     overflow-x:auto;
-    padding-bottom:4px;
+    max-width:100%;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
   }
+  .studio-nav::-webkit-scrollbar{display:none}
 }
 
 
@@ -1948,7 +1957,18 @@ body.has-side, body.has-side.side-collapsed{padding-left:0!important}
   font-size: 13px;
   color: rgba(251, 247, 238, 0.65);
 }
+@media(max-width:520px){
+  .studio-top__right .xpchip{display:none}   /* hẹp quá thì nhường chỗ cho tên và nút đăng nhập; XP vẫn thấy ở trang Học */
+  .studio-login-btn{padding:7px 14px}
+}
 
-
-
-
+/* Giao diện SÁNG (data-theme="ivory"): bảng màu giấy ngà đầy đủ. Mặc định của site là espresso tối. */
+html[data-theme="ivory"]{
+  --bg:#F7F0E6; --bg-2:#EFE5D8; --bg-3:#E6D9C7; --sand:#E3D5C2; --paper:#FFFFFF; --paper-card:#FFFFFF;
+  --ink:#24160E; --ink-70:rgba(36,22,14,.78); --ink-50:rgba(36,22,14,.56); --ink-30:rgba(36,22,14,.3);
+  --ink-12:rgba(36,22,14,.13); --ink-06:rgba(36,22,14,.06);
+  --rule:1px solid rgba(36,22,14,.13);
+  --gold:#B07A12; --gold-d:#8A5F0C; --sage-d:#46623A; --blush:#B5594A; --blush-d:#8F3F32;
+  color-scheme:light;
+}
+html[data-theme="ivory"] body{background:var(--bg);color:var(--ink)}

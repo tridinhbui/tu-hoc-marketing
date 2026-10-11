@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" class="has-shell">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><script>if(window.top!==window.self){window.top.location.replace(window.location.href);}</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Đăng nhập — Tự Học Marketing Case</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23C85A32'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23FAF3E8'%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=9">
+<link rel="stylesheet" href="assets/css/case.css?v=12">
 <style>
   body{
     background:#130E0B;
@@ -234,13 +235,18 @@
 
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
-<script src="assets/js/app.js?v=18"></script>
+<script src="assets/js/app.js?v=21"></script>
 <script>
 const safeRedirect = (url) => {
   if (url && /^\/[A-Za-z0-9\-_\/]*(\.html)?(\?[A-Za-z0-9\-_=&%.]*)?$/.test(url) && !url.startsWith('//')) return url;
   return '/hoc.html';
 };
 const nextUrl = safeRedirect(new URLSearchParams(location.search).get('next'));
+/* Mã mời từ link bạn bè gửi: nhớ lại để đi cùng lượt đăng nhập Google đầu tiên. */
+const REF = (() => {
+  const v = new URLSearchParams(location.search).get('ref');
+  try { if (v && /^[A-Za-z0-9]{6,12}$/.test(v)) localStorage.setItem('thmc.ref', v); return localStorage.getItem('thmc.ref') || ''; } catch (e) { return /^[A-Za-z0-9]{6,12}$/.test(v || '') ? v : ''; }
+})();
 const LOI = { google: 'Đăng nhập Google không thành công. Thử lại nhé.', 'google-huy': 'Bạn đã huỷ đăng nhập Google.' };
 const $ = (id) => document.getElementById(id);
 
@@ -262,7 +268,7 @@ async function init() {
   }
   try { pv = await api('/auth/providers'); } catch (e) {}
   if (pv.google) {
-    $('btnGoogle').href = '/api/auth/google/start?next=' + encodeURIComponent(nextUrl);
+    $('btnGoogle').href = '/api/auth/google/start?next=' + encodeURIComponent(nextUrl) + (REF ? '&ref=' + encodeURIComponent(REF) : '');
     $('btnGoogle').style.display = 'block';
   }
   if (pv.email) $('emailForm').style.display = 'block';

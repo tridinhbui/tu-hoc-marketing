@@ -52,7 +52,7 @@ BAI_ADD({ mod:'kh01', lessons:[
       d:'Chép cách chia của đối thủ khiến bạn đánh cùng một trận với họ.'} },
   { type:'mcq', stem:'Dấu hiệu nào cho thấy một cách phân khúc đang VÔ DỤNG?',
     options:[{k:'a',t:'Mỗi nhóm có quy mô khác nhau, có nhóm lớn gấp đôi nhóm kia'},{k:'b',t:'Các nhóm được đặt tên hấp dẫn nhưng khó đo chính xác bằng số liệu bán hàng'},
-             {k:'c',t:'Có một nhóm hiện chưa mua sản phẩm của công ty'},{k:'d',t:'Chia xong, mọi nhóm vẫn nhận cùng sản phẩm, giá và thông điệp'}],
+             {k:'c',t:'Có một nhóm hiện chưa mua sản phẩm của công ty'},{k:'d',t:'Chia xong, các nhóm vẫn nhận cùng sản phẩm, giá và thông điệp'}],
     answer:'d', why:{a:'Quy mô chênh nhau là bình thường; không phải dấu hiệu vô dụng.',
       b:'Khó đo là một vấn đề, nhưng chưa chắc vô dụng nếu nó dẫn tới quyết định khác.',
       c:'Nhóm chưa mua có thể là cơ hội, không phải lỗi phân khúc.',
@@ -355,7 +355,7 @@ BAI_ADD({ mod:'kh01', lessons:[
   mistakes:['Làm sản phẩm riêng cho mỗi nhóm khi chỉ cần đổi gói và điểm đặt.','Viết một thông điệp chung chung đến mức không nhóm nào thấy mình trong đó.'],
   q:[
   { type:'mcq', stem:'Đoán trước: với ngân sách chỉ đủ một chiến dịch lớn, cách nào hợp lý nhất?',
-    options:[{k:'a',t:'Ba chiến dịch nhỏ riêng, mỗi cái một phần ba ngân sách'},{k:'b',t:'Một chiến dịch chung nói lợi ích mọi nhóm cần, đổi bề mặt theo điểm bán'},
+    options:[{k:'a',t:'Ba chiến dịch nhỏ riêng, mỗi cái một phần ba ngân sách'},{k:'b',t:'Một chiến dịch chung nói lợi ích các nhóm cần, đổi bề mặt theo điểm bán'},
              {k:'c',t:'Chỉ nói với nhóm học sinh vì đông nhất'},{k:'d',t:'Làm ba công thức bánh khác nhau rồi mới quảng cáo cho từng nhóm bằng ba chiến dịch riêng'}],
     answer:'b', why:{a:'Chia ba thì mỗi chiến dịch quá mỏng để được nhớ.',
       b:'Đúng. Lõi chung giữ sức nặng, bề mặt riêng giữ độ đúng người.',
