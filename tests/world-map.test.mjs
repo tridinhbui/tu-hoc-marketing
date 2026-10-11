@@ -20,9 +20,15 @@ test('bản đồ: id duy nhất, nằm trong khung, vùng tồn tại, href tr�
 });
 
 test('bản đồ: toà đang chơi được khớp cấu hình kingdom ở máy chủ (để vẫn nhận xu khi ghé)', () => {
-  const sql = fs.readFileSync(rel('api/migrations/0004_realm.sql'), 'utf8');
-  const m = /\('kingdom', '(\[.*?\])'/s.exec(sql); assert.ok(m, 'không thấy cấu hình kingdom');
-  const server = new Map(JSON.parse(m[1]).map((b) => [b.id, b]));
+  /* Cấu hình kingdom hiện hành = bản ghi cuối cùng trong các migration (INSERT ở 0004, UPDATE ở các file sau). */
+  const dir = rel('api/migrations'); let cfg = null;
+  for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.sql')).sort()) {
+    const sql = fs.readFileSync(`${dir}/${f}`, 'utf8');
+    const m = /\('kingdom', '(\[.*?\])'/s.exec(sql) || /SET value = '(\[.*?\])'[^;]*WHERE key = 'kingdom'/s.exec(sql);
+    if (m) cfg = JSON.parse(m[1].replace(/''/g, "'"));
+  }
+  assert.ok(cfg, 'không thấy cấu hình kingdom');
+  const server = new Map(cfg.map((b) => [b.id, b]));
   for (const p of WORLD.places.filter((x) => !x.soon && !x.local)) {
     const s = server.get(p.id); assert.ok(s, `${p.id} không có ở máy chủ`);
     assert.equal(s.href, p.href, `${p.id}: href lệch máy chủ`);
