@@ -16,7 +16,7 @@
 <script src="assets/js/data/curriculum.js?v=4"></script>
 <script src="assets/js/data/drills.js?v=3"></script>
 <script src="assets/js/data/cases.js?v=3"></script>
-<script src="assets/js/app.js?v=17"></script>
+<script src="assets/js/app.js?v=18"></script>
 <script>
 appShell('tai-khoan.html');
 const app = document.getElementById('app');
@@ -108,11 +108,8 @@ async function renderProfile() {
         </div>
 
         <div class="row" style="gap:14px">
-          <a class="btn btn--primary" href="dang-nhap.html?next=tai-khoan.html" style="border-radius:99px;padding:13px 28px">
+          <a class="btn btn--primary" href="/dang-nhap.html?next=/tai-khoan.html" style="border-radius:99px;padding:13px 28px">
             Đăng nhập tài khoản Studio →
-          </a>
-          <a class="btn btn--ghost" href="hoc.html" style="border-radius:99px;padding:13px 22px">
-            Học tiếp với tư cách Khách
           </a>
         </div>
       </section>
@@ -120,13 +117,12 @@ async function renderProfile() {
   }
 }
 
-function signOut() {
-  try {
-    localStorage.removeItem('thmc.user');
-    if (typeof API !== 'undefined') API.user = undefined;
-  } catch(e){}
+async function signOut() {
+  try { await api('/auth/logout', { method: 'POST' }); } catch (e) {}
+  try { localStorage.removeItem('thmc.user'); } catch (e) {}
+  API.user = undefined;
   toast('Đã đăng xuất');
-  setTimeout(() => { location.href = 'dang-nhap.html'; }, 300);
+  setTimeout(() => { location.href = '/dang-nhap.html'; }, 300);
 }
 
 renderProfile();

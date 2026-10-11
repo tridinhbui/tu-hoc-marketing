@@ -306,6 +306,8 @@ function appShell(here){
           <a href="case-thu-vien.html">Case Study</a> · 
           <a href="ban-do.html">Lộ trình</a> · 
           <a href="quiz.html">Thử thách</a> · 
+          <a href="thuat-ngu.html">Thuật ngữ</a> · 
+          <a href="capstone.html">Kế hoạch chiến dịch</a> · 
           <a href="dang-nhap.html">Đăng nhập</a>
         </span>
       </div>
@@ -506,10 +508,6 @@ async function account(){
     const r=await api('/me');
     if(r && r.user){ API.user=r.user; return API.user; }
   }catch(e){}
-  try{
-    const localU=JSON.parse(localStorage.getItem('thmc.user')||'null');
-    if(localU && localU.name){ API.user=localU; return API.user; }
-  }catch(err){}
   API.user=null;
   return API.user;
 }

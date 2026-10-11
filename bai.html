@@ -44,7 +44,7 @@
 (()=>{ const m=/^B:([a-z]{2}\d{2})-/.exec(new URLSearchParams(location.search).get('id')||'');
   if(m) document.write('<script src="assets/js/data/bai/'+m[1]+'.js?v='+BAI_V+'"><\/script>'); })();</script>
 <script src="assets/js/data/exams.js?v=10"></script>
-<script src="assets/js/app.js?v=17"></script>
+<script src="assets/js/app.js?v=18"></script>
 <script src="assets/js/exam.js?v=9"></script>
 <script>
 appShell('');
@@ -150,7 +150,7 @@ function outputPart(){
     'Kết thúc bằng một việc cụ thể sẽ làm tiếp, không phải "cần nghiên cứu thêm".'];
   const done=((s.selfcheck||{})[key])||[];
   const given=task&&task.given?(typeof task.given==='string'?task.given
-    :`<div class="scroll"><table class="t"><tbody>${task.given.map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]}</td></tr>`).join('')}</tbody></table></div>`):'';
+    :`<div class="given">${task.given.map(r=>`<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 16px;padding:7px 0;border-bottom:1px solid var(--ink-12,rgba(0,0,0,.12))"><span>${r[0]}</span><b style="text-align:right;margin-left:auto">${r[1]}</b></div>`).join('')}</div>`):'';
   const model=task&&task.model?task.model:`<p class="small muted">Chưa có bài làm mẫu riêng cho bài này — đối chiếu với ví dụ chạy trong bài:</p><p>${L.example}</p>`;
   return `<div class="drill">
       <span class="mono">Bài thực hành · có đầu ra viết</span>

@@ -194,32 +194,27 @@
         Lưu giữ tiến trình học, giải case study thực tế và tích luỹ điểm XP trong hệ thống.
       </p>
 
-      <form id="authForm" onsubmit="handleLoginSubmit(event)">
-        <div class="form-group">
-          <label for="inputName">Tên của bạn hoặc Email</label>
-          <input type="text" id="inputName" class="login-input" placeholder="Ví dụ: Minh Trí hoặc tri@marketing.vn" required autofocus>
-        </div>
+      <div id="loginErr" role="alert" style="display:none;background:#FBE9E4;color:#8A2A12;border-radius:10px;padding:10px 14px;font-size:13.5px;margin-bottom:14px"></div>
 
-        <div class="form-group">
-          <label for="inputPassword">Mật khẩu / Mã PIN</label>
-          <input type="password" id="inputPassword" class="login-input" placeholder="Nhập mật khẩu (hoặc để trống)">
-        </div>
+      <a class="btn-submit" id="btnGoogle" href="#" style="display:none;text-align:center;text-decoration:none">
+        Tiếp tục với Google →
+      </a>
 
-        <button type="submit" class="btn-submit" id="btnSubmit">
-          Đăng nhập vào Studio →
-        </button>
+      <form id="emailForm" style="display:none;margin-top:6px" onsubmit="handleEmailSubmit(event)">
+        <div class="divider-or"><span>HOẶC QUA EMAIL</span></div>
+        <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input type="email" id="inputEmail" class="login-input" placeholder="ban@email.com" required>
+        </div>
+        <button type="submit" class="btn-guest" id="btnEmail">Gửi link đăng nhập</button>
       </form>
 
-      <div class="divider-or">
-        <span>HOẶC</span>
-      </div>
-
-      <button type="button" class="btn-guest" onclick="handleGuestLogin()">
-        Tiếp tục với tư cách Khách (Lưu trên máy này)
-      </button>
+      <p id="noProvider" style="display:none;font-size:13.5px;color:#8A2A12">
+        Đăng nhập chưa được bật trên máy chủ này. Vui lòng quay lại sau.
+      </p>
 
       <p style="font-size:12px;color:rgba(36,22,14,.5);text-align:center;margin:20px 0 0;line-height:1.5">
-        Toàn bộ tiến độ được đồng bộ tức thì trong bộ nhớ máy của bạn. Hoàn toàn miễn phí.
+        Cần đăng nhập để xem nội dung và lưu tiến độ học. Hoàn toàn miễn phí.
       </p>
     </div>
   </div>
@@ -239,89 +234,63 @@
 
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
-<script src="assets/js/app.js?v=17"></script>
+<script src="assets/js/app.js?v=18"></script>
 <script>
 const safeRedirect = (url) => {
-  if (!url) return 'hoc.html';
-  if (/^[a-z0-9-]+\.html(\?[^<>"'\s]*)?$/i.test(url)) return url;
-  return 'hoc.html';
+  if (url && /^\/[A-Za-z0-9\-_\/]*(\.html)?(\?[A-Za-z0-9\-_=&%.]*)?$/.test(url) && !url.startsWith('//')) return url;
+  return '/hoc.html';
 };
+const nextUrl = safeRedirect(new URLSearchParams(location.search).get('next'));
+const LOI = { google: 'Đăng nhập Google không thành công. Thử lại nhé.', 'google-huy': 'Bạn đã huỷ đăng nhập Google.' };
+const $ = (id) => document.getElementById(id);
 
-const qp = new URLSearchParams(location.search);
-const nextUrl = safeRedirect(qp.get('next'));
+async function init() {
+  const loi = new URLSearchParams(location.search).get('loi');
+  if (loi) { $('loginErr').textContent = LOI[loi] || 'Đăng nhập không thành công.'; $('loginErr').style.display = 'block'; }
 
-function checkCurrentSession() {
-  let user = null;
-  try { user = JSON.parse(localStorage.getItem('thmc.user') || 'null'); } catch(e){}
+  let me = null, pv = { email: false, google: false };
+  try { me = (await api('/me')).user; } catch (e) {}
+  if (me) {
+    $('loggedContainer').style.display = 'block';
+    $('loginFormContainer').style.display = 'none';
+    $('welcomeUserTitle').textContent = `Chào mừng, ${me.name || 'bạn'}!`;
+    $('userNameDisplay').textContent = me.name || 'Chiến lược gia';
+    $('userEmailDesc').textContent = me.email ? `Tài khoản: ${me.email}` : 'Bạn đang đăng nhập.';
+    $('userXpDisplay').textContent = `${fmt(S.get().xp)} XP`;
+    $('btnContinueStudy').href = nextUrl;
+    return;
+  }
+  try { pv = await api('/auth/providers'); } catch (e) {}
+  if (pv.google) {
+    $('btnGoogle').href = '/api/auth/google/start?next=' + encodeURIComponent(nextUrl);
+    $('btnGoogle').style.display = 'block';
+  }
+  if (pv.email) $('emailForm').style.display = 'block';
+  if (!pv.google && !pv.email) $('noProvider').style.display = 'block';
+}
 
-  const s = S.get();
-  if (user && user.name && user.loggedIn) {
-    document.getElementById('loggedContainer').style.display = 'block';
-    document.getElementById('loginFormContainer').style.display = 'none';
-    document.getElementById('welcomeUserTitle').textContent = `Chào mừng, ${user.name}!`;
-    document.getElementById('userNameDisplay').textContent = user.name;
-    document.getElementById('userEmailDesc').textContent = user.email ? `Tài khoản: ${user.email}` : 'Chiến lược gia đang hoạt động trên thiết bị này.';
-    document.getElementById('userXpDisplay').textContent = `${fmt(s.xp)} XP`;
-    document.getElementById('btnContinueStudy').href = nextUrl;
-  } else {
-    document.getElementById('loggedContainer').style.display = 'none';
-    document.getElementById('loginFormContainer').style.display = 'block';
+async function handleEmailSubmit(e) {
+  e.preventDefault();
+  const btn = $('btnEmail');
+  btn.disabled = true;
+  try {
+    const r = await api('/auth/start', { method: 'POST', body: { email: $('inputEmail').value.trim() } });
+    btn.textContent = r.dev_link ? 'Đã tạo link (dev)' : 'Đã gửi link — kiểm tra email ✓';
+    if (r.dev_link) location.href = r.dev_link;
+  } catch (err) {
+    btn.disabled = false;
+    $('loginErr').textContent = err.message === 'rate_limited' ? 'Bạn thử quá nhiều lần, đợi một lát nhé.' : 'Không gửi được link. Kiểm tra email rồi thử lại.';
+    $('loginErr').style.display = 'block';
   }
 }
 
-function handleLoginSubmit(e) {
-  e.preventDefault();
-  const raw = document.getElementById('inputName').value.trim();
-  if (!raw) return;
-
-  const isEmail = raw.includes('@');
-  const name = isEmail ? raw.split('@')[0] : raw;
-  const email = isEmail ? raw : '';
-
-  const user = {
-    name: name,
-    email: email,
-    loggedIn: true,
-    time: Date.now()
-  };
-
-  try {
-    localStorage.setItem('thmc.user', JSON.stringify(user));
-  } catch(err){}
-
-  const btn = document.getElementById('btnSubmit');
-  btn.textContent = 'Đăng nhập thành công ✓';
-  btn.style.background = 'var(--sage-d)';
-
-  setTimeout(() => {
-    location.href = nextUrl;
-  }, 400);
+async function handleLogout() {
+  try { await api('/auth/logout', { method: 'POST' }); } catch (e) {}
+  try { localStorage.removeItem('thmc.user'); } catch (e) {}
+  location.href = '/dang-nhap.html';
 }
 
-function handleGuestLogin() {
-  const user = {
-    name: 'Chiến lược gia',
-    email: '',
-    loggedIn: true,
-    isGuest: true,
-    time: Date.now()
-  };
-
-  try {
-    localStorage.setItem('thmc.user', JSON.stringify(user));
-  } catch(err){}
-
-  location.href = nextUrl;
-}
-
-function handleLogout() {
-  try {
-    localStorage.removeItem('thmc.user');
-  } catch(err){}
-  location.reload();
-}
-
-checkCurrentSession();
+init();
 </script>
 </body>
 </html>

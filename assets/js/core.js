@@ -171,6 +171,12 @@ function shell(current){
   let user = null;
   try { user = JSON.parse(localStorage.getItem('thmc.user')||'null'); } catch(e){}
   const herePath = (location.pathname.split('/').pop() || 'case-thu-vien.html') + location.search;
+  /* Phiên thật nằm ở cookie máy chủ; bản sao trong localStorage chỉ để vẽ header. Đồng bộ một lần nếu còn thiếu. */
+  if (!user) {
+    fetch('/api/me', { credentials: 'same-origin', headers: { 'x-thmc': '1' } }).then((r) => r.json()).then((d) => {
+      if (d && d.user) { localStorage.setItem('thmc.user', JSON.stringify({ name: d.user.name, email: d.user.email, loggedIn: true })); location.reload(); }
+    }).catch(() => {});
+  }
 
   document.body.insertAdjacentHTML('afterbegin',`
     <a class="skip" href="${location.pathname}#main">Tới nội dung chính</a>

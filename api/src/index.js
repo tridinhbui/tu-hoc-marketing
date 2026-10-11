@@ -94,12 +94,30 @@ async function route(request, env, url) {
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+const OPEN_PAGES = new Set(['', 'index', 'dang-nhap']);
+const OPEN_FILES = new Set(['/robots.txt', '/sitemap.xml']);
+/* Trang HTML = đường dẫn .html hoặc không có phần mở rộng (bản rút gọn assets tự phục vụ). */
+function needsLogin(pathname) {
+  if (OPEN_FILES.has(pathname)) return false;
+  const last = pathname.split('/').pop();
+  if (last.includes('.') && !last.endsWith('.html')) return false;
+  return !OPEN_PAGES.has(pathname.replace(/^\/+|\/+$/g, '').replace(/\.html$/, ''));
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    /* Khi chạy thử cục bộ bằng `wrangler dev --assets`, mọi thứ ngoài /api/ là file tĩnh. */
-    if (!url.pathname.startsWith('/api/') && env.ASSETS) return env.ASSETS.fetch(request);
+    /* Ngoài /api/ là file tĩnh. Mọi trang HTML (kể cả đường dẫn rút gọn không có .html) phải có phiên đăng nhập
+       hợp lệ, trừ landing và trang đăng nhập; chưa đăng nhập thì chuyển sang đăng nhập rồi quay lại đúng trang đó.
+       File trong /assets/ không đi qua Worker (xem run_worker_first) nên vẫn công khai. */
+    if (!url.pathname.startsWith('/api/') && env.ASSETS) {
+      if (needsLogin(url.pathname) && !(await currentUser(request, env))) {
+        const next = encodeURIComponent(url.pathname + url.search);
+        return new Response(null, { status: 302, headers: { location: `/dang-nhap.html?next=${next}`, 'cache-control': 'no-store' } });
+      }
+      return env.ASSETS.fetch(request);
+    }
 
     if (url.pathname === '/api/health') return json({ ok: true });
 
