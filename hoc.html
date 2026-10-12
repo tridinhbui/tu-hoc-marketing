@@ -72,7 +72,7 @@
   .lvmap__go{display:inline-flex;border-radius:12px;background:var(--terra);color:#fff;font:800 12.5px var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:11px 16px;text-decoration:none}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=12">
-<link rel="stylesheet" href="assets/css/atelier.css?v=27">
+<link rel="stylesheet" href="assets/css/atelier.css?v=35">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn.</p></div></noscript>
@@ -178,13 +178,12 @@ function renderDashboard(user) {
           <div class="at-trail__line" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><i style="width:${Math.max(1, pct)}%"></i></div>
         </div>
       </div>
-      <figure class="at-hero__ph" aria-hidden="true">
-        <div class="ph"><img src="${heroPhoto}" alt="" loading="eager"></div>
-        <span class="at-scrap">+10 XP<br>khi hoàn thành</span>
-        <figcaption><b>Tư.${String(lessonN).padStart(2, '0')}</b> ${escH(STAGES[hereIdx].t)}</figcaption>
+      <figure class="at-hero__ph">
+        <div class="ph" aria-hidden="true"><img src="${heroPhoto}" alt="" loading="eager"></div>
+        <span class="at-scrap" aria-hidden="true">+10 XP<br>khi hoàn thành</span>
+        <div class="at-pass-slot"><div id="sbProfile"></div></div>
       </figure>
     </header>
-    <div class="at-pass-slot"><div id="sbProfile"></div></div>
 
     <div class="at-body">
       <section class="at-sec" aria-labelledby="atL" data-at>
@@ -197,7 +196,7 @@ function renderDashboard(user) {
 
       <section class="at-sec" aria-labelledby="atJ" data-at>
         <div class="at-sec__head">
-          <div><p class="at-kick">Hành trình</p><h2 class="at-sec__title" id="atJ">Sáu chặng, <em>một con đường</em></h2></div>
+          <div><p class="at-kick">Hành trình</p><h2 class="at-sec__title" id="atJ">Sáu chặng<em>, một con đường</em></h2></div>
           <p class="at-sec__aside">${story}</p>
         </div>
         <ol class="at-path">${stageInfo.map((x) => {

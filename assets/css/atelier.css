@@ -713,3 +713,160 @@ div.d-tile b{color:var(--at-tc)}
 :root[data-theme=ivory] .tk-card{margin-bottom:18px}
 :root[data-theme=ivory] .at-ledger{margin:8px 0 28px;padding:6px clamp(16px,2vw,24px)}
 :root[data-theme=ivory] .rm__col,:root[data-theme=ivory] .lp-side{gap:14px}
+
+/* =====================================================================
+   DASHBOARD — vừa một màn hình ở ≥1100px, xếp dọc gọn ở màn nhỏ.
+   Sửa lỗi "vỡ": mục lưới không co (min-width:auto) làm bản đồ cấp độ đẩy tràn ngang;
+   thẻ học viên không còn chiếm một hàng riêng mà nằm chồng lên góc ảnh hero.
+   ===================================================================== */
+.at-dash,.at-body,.at-body>*{min-width:0}
+.at-hero{overflow:hidden}
+.at-pass-slot{position:absolute;z-index:6;margin:0;left:clamp(-56px,-3.4vw,-14px);bottom:-30px;width:min(318px,94%)}
+.at-pass{padding:12px 16px 10px;gap:2px 14px;rotate:-1deg}
+.at-pass::after{height:14px;top:-7px}
+.at-pass-av{width:58px;height:58px}
+.at-pass-av>*:first-child{width:58px!important;height:58px!important}
+.at-pass-av .at-seal{width:28px;height:28px;font-size:.9rem;right:-8px;bottom:-6px}
+.at-pass__xp{font-size:1.55rem;margin-top:2px}
+.at-pass__line{margin-top:6px}
+.at-pass__sm{font-size:12px}
+.at-streak{margin-top:4px;padding-top:8px}
+.at-streak__n{font-size:1.5rem}
+.at-hero{padding-bottom:clamp(44px,6vh,64px)}
+
+/* ≥1100px: bố cục một màn hình */
+@media(min-width:960px){
+  .at-hero{padding-top:clamp(12px,2.2vh,24px);padding-bottom:clamp(40px,6vh,58px);align-items:center}
+  .at-hello{display:none}
+  .at-hero h1.at-display{font-size:clamp(1.5rem,2.7vw,2.6rem)}
+  .at-hero__cta{margin-top:clamp(10px,1.8vh,18px)}
+  .at-trail{margin-top:clamp(10px,1.8vh,18px);max-width:360px}
+  .at-hero__ph{min-height:0;height:clamp(150px,25vh,250px);align-self:center}
+  .at-body{grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;padding-top:12px;padding-bottom:22px}
+  .at-body>.at-sec[aria-labelledby=atL]{grid-column:1/-1}
+  .at-body>.at-sec[aria-labelledby=atJ]{grid-column:1/5}
+  .at-cols{display:contents}
+  .at-cols>section{grid-column:5/9}
+  .at-cols>aside{grid-column:9/13}
+  .at-body>.at-sec,.at-cols>section,.at-cols>aside>.at-blk,.at-cols>aside>div>.at-blk{padding:14px 18px}
+  .at-sec__head{margin-bottom:8px;padding-bottom:8px}
+  .at-sec__title{font-size:clamp(1.25rem,1.8vw,1.6rem)}
+  .at-sec__aside{display:none}
+  .at-kick{font-size:10px}
+  /* hàng trên: bản đồ cấp độ gọn */
+  .at-medal{width:56px;height:56px;font-size:1.35rem}
+  .lvmap__lv{flex:0 0 92px;gap:6px}
+  .lvmap__track{padding-top:24px;padding-bottom:4px}
+  .lvmap__track::before{top:calc(24px + 28px)}
+  .lvmap__card b{font-size:.82rem;min-height:2.3em}
+  .lvmap__card span{font-size:10.5px}
+  .lvmap__lv[data-s=locked] .lvmap__card span:last-child{display:none}
+  .lvmap__nav{top:30px;width:34px;height:34px}
+  .lvmap__f{padding-top:8px!important;margin-top:6px;font-size:13.5px}
+  .lvmap__go{padding:9px 16px!important}
+  /* hàng dưới: ba cột, mỗi cột cuộn riêng nếu dài */
+  .at-body>.at-sec[aria-labelledby=atJ],.at-cols>section,.at-cols>aside{max-height:clamp(250px,calc(100dvh - 560px),520px);overflow:auto;scrollbar-width:thin}
+  .at-cols>aside{display:grid;align-content:start;gap:12px;padding:0;border:0;background:none}
+  .at-cols>aside>.at-blk,.at-cols>aside>div>.at-blk{margin:0}
+  .at-path{grid-template-columns:1fr;row-gap:0}
+  .at-path::before{display:none}
+  .at-stop{padding:7px 0;--rise:0px;border-bottom:1px solid var(--at-rule-s)}
+  .at-stop a{display:grid;grid-template-columns:38px minmax(0,1fr);gap:0 8px;align-items:center}
+  .at-stop__no{font-size:1.5rem;grid-row:1/3}
+  .at-stop__dot,.at-stop p,.at-stop[data-s=here]::after{display:none}
+  .at-stop h3{font-size:.95rem;margin:0;line-height:1.2}
+  .at-stop small{margin:2px 0 0;font-size:10px}
+  .at-stop[data-s=here] h3{color:var(--at-tc)}
+  .at-blk__t{font-size:1.25rem}
+  .at-blk p{margin:6px 0 10px;font-size:13px}
+  .at-board li{padding:7px 0;grid-template-columns:30px auto minmax(0,1fr) auto}
+  .at-board__r{font-size:1.4rem}
+  .at-board li:first-child .at-board__r{font-size:1.8rem}
+  .at-quest{padding:9px 0}
+  .at-quest__n{width:34px;height:34px;font-size:1rem}
+  .at-quest b{font-size:1rem}
+  .d-tabs{margin-bottom:0}
+  .d-tilegrid .d-tile{padding:10px 0!important}
+}
+/* 861–1099px: đường chặng 3 cột, mọi thứ xếp dọc */
+@media(min-width:861px) and (max-width:959px){
+  .at-path{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:22px}
+  .at-path::before{display:none}
+  .at-stop{--rise:0px}
+  .at-stop[data-s=here]::after{top:-24px}
+}
+/* ≤900px: thẻ học viên nằm trong luồng dưới ảnh */
+@media(max-width:900px){
+  .at-hero__ph{height:auto;aspect-ratio:auto}
+  .at-hero__ph .ph{position:relative;inset:auto;aspect-ratio:5/4;margin-left:6%}
+  .at-hero__ph::before{bottom:34px}
+  .at-pass-slot{position:relative;left:auto;bottom:auto;margin:-26px 3% 0 auto;width:min(340px,94%)}
+  .at-hero{padding-bottom:36px}
+}
+
+/* tinh chỉnh để thực sự vừa ~780px cao */
+@media(min-width:960px){
+  .at-hero{padding-bottom:clamp(28px,4.4vh,40px)}
+  .at-hero__ph{height:clamp(130px,21vh,210px)}
+  .at-pass-slot{bottom:-18px}
+  .at-body>.at-sec[aria-labelledby=atL] .at-kick,.at-body>.at-sec[aria-labelledby=atJ] .at-kick{display:none}
+  .at-body>.at-sec[aria-labelledby=atL] .at-sec__head{align-items:center;margin-bottom:4px;padding-bottom:6px}
+  .at-body>.at-sec[aria-labelledby=atL] .at-sec__title{margin-top:0}
+  .at-medal{width:48px;height:48px;font-size:1.2rem}
+  .at-medal::before{inset:4px}
+  .lvmap__track{padding-top:20px;padding-bottom:0}
+  .lvmap__track::before{top:calc(20px + 24px)}
+  .lvmap__card small,.lvmap__card span{display:none}
+  .lvmap__lv[data-s=here] .lvmap__card span:last-child{display:block;color:var(--at-tc)}
+  .lvmap__card b{min-height:0;font-size:.8rem;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .lvmap__lv[data-tier]::before{top:-20px}
+  .lvmap__you{top:-22px}
+  .lvmap__nav{top:22px}
+  .lvmap__f{margin-top:2px;padding-top:6px!important}
+  .at-body>.at-sec[aria-labelledby=atJ],.at-cols>section,.at-cols>aside{max-height:clamp(220px,calc(100dvh - 540px),520px)}
+}
+@media(min-width:960px){
+  .at-pass{padding:10px 14px 8px;grid-template-columns:auto 1fr}
+  .at-pass__line{margin-top:4px}
+  .at-pass__sm{margin:0}
+  .at-streak__dots{display:none}
+  .at-streak{margin-top:2px;padding-top:6px}
+  .at-streak small br{display:none}
+  .at-hero{padding-top:8px;padding-bottom:26px}
+  .at-hero__ph{height:clamp(120px,19vh,180px)}
+  .at-body{padding-top:10px;gap:10px}
+  .at-body>.at-sec,.at-cols>section,.at-cols>aside>.at-blk,.at-cols>aside>div>.at-blk{padding:10px 16px 12px}
+  .at-body>.at-sec[aria-labelledby=atL] .at-sec__head{margin-bottom:0;padding-bottom:4px;border-bottom:0}
+  .at-sec__title{font-size:1.2rem}
+  .lvmap__f{display:flex;padding:6px 0 0!important;margin-top:0;font-size:13px}
+  .lvmap__bar{display:none}
+  .lvmap__f>div{min-width:0}
+  .lvmap__track{padding-top:18px}
+  .lvmap__lv{gap:4px}
+  .lvmap__go{padding:7px 14px!important;font-size:13px!important}
+  .at-blk__h .at-link{font-size:12.5px}
+}
+@media(min-width:960px){
+  :root[data-theme=ivory] .at-body>.at-sec,:root[data-theme=ivory] .at-cols>section,
+  :root[data-theme=ivory] .at-cols>aside>.at-blk,:root[data-theme=ivory] .at-cols>aside>div>.at-blk{padding:10px 16px 12px}
+  :root[data-theme=ivory] .at-body{padding-top:10px;gap:10px}
+  :root[data-theme=ivory] .lvmap__f{margin-top:0;padding-top:6px!important}
+  .lvmap__card b{-webkit-line-clamp:1}
+  .lvmap__lv{flex-basis:88px}
+  .lvmap__track{padding-top:16px}
+}
+@media(min-width:960px){
+  :root[data-theme=ivory]:has(.at-dash){padding-bottom:0}
+  .lvmap__card b{-webkit-line-clamp:2;font-size:.76rem}
+  .at-body>.at-sec[aria-labelledby=atJ],.at-cols>section,.at-cols>aside{max-height:clamp(200px,calc(100dvh - 536px),520px)}
+  .at-body>.at-sec[aria-labelledby=atJ] .at-sec__title em{display:none}
+}
+@media(min-width:960px){
+  :root[data-theme=ivory] .at-body{padding-bottom:10px}
+  .at-body>.at-sec[aria-labelledby=atJ],.at-cols>section,.at-cols>aside{max-height:clamp(200px,calc(100dvh - 570px),520px)}
+}
+@media(max-width:900px){
+  .at-hero__ph .ph{aspect-ratio:16/8;max-height:280px}
+  .at-hero h1.at-display{font-size:clamp(1.5rem,5.4vw,2.4rem)}
+}
+@media(max-width:560px){.at-hero__ph .ph{aspect-ratio:4/3;margin-left:0}}
