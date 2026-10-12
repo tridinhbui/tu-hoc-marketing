@@ -497,3 +497,16 @@ body.ed::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;
   .js .rv,.js .ln>span,.js .cu{opacity:1;translate:0 0;clip-path:none}
   .h-photo img,.mani-pic img,.met-pic img,.chal-img img,.comm>img{translate:none}
 }
+
+/* điện thoại: tránh chồng chữ ở phần Lời mở — mỗi khối một hàng riêng */
+@media (max-width:999px){
+  .mani-text{grid-row:2}
+  .mani-side{grid-row:3;margin-top:32px;padding-right:2px}
+  .mani-small{grid-row:4;margin-top:34px}
+  .mani-cap{max-width:30ch}
+}
+@media (max-width:999px){
+  .obj{box-sizing:border-box}
+  .nb{max-width:min(360px,calc(100% - 14px));margin-right:7px}
+  .nb .hand{font-size:clamp(16px,4.6vw,21px)}
+}
