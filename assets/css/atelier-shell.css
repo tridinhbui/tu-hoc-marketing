@@ -114,6 +114,26 @@
 :root[data-theme=ivory] .rail__bar{height:4px;border-radius:99px;margin:8px 2px 0}
 :root[data-theme=ivory] .rail__bar i{border-radius:99px}
 
+/* THANG CHỮ THANH BÊN — chỉ 2 họ (Fraunces cho tên thương hiệu, Be Vietnam Pro cho mọi thứ còn lại),
+   4 cỡ (10 · 12 · 14 · 11 in hoa) và 3 độ đậm (500 · 600 · 700). Đặt cuối để thắng mọi quy tắc phía trên. */
+:root[data-theme=ivory] .rail{--rt-micro:10px;--rt-small:12px;--rt-body:14px;--rt-cap:11px}
+:root[data-theme=ivory] .rail__tag{font:600 var(--rt-micro)/1 'Be Vietnam Pro',system-ui,sans-serif;letter-spacing:.18em}
+:root[data-theme=ivory] .rail__search input{font:400 var(--rt-body)/1.2 'Be Vietnam Pro',system-ui,sans-serif}
+:root[data-theme=ivory] .rail__search kbd{font:600 var(--rt-micro)/1 'Be Vietnam Pro',system-ui,sans-serif;letter-spacing:0}
+:root[data-theme=ivory] .rail .nav a,:root[data-theme=ivory] .rail .nav button.nv{font:600 var(--rt-body)/1.25 'Be Vietnam Pro',system-ui,sans-serif;letter-spacing:0}
+:root[data-theme=ivory] .rail .nav a[aria-current="page"]{font-weight:600}
+:root[data-theme=ivory] .rail .nav .tag{font:700 var(--rt-micro)/1 'Be Vietnam Pro',system-ui,sans-serif;letter-spacing:.03em;font-size:var(--rt-micro)}
+:root[data-theme=ivory] .rail .nav em.due{font:700 var(--rt-cap)/1 'Be Vietnam Pro',system-ui,sans-serif}
+:root[data-theme=ivory] .rail .grp__h{font:700 var(--rt-cap)/1 'Be Vietnam Pro',system-ui,sans-serif;letter-spacing:.12em}
+:root[data-theme=ivory] .coin{font:600 var(--rt-body)/1 'Be Vietnam Pro',system-ui,sans-serif}
+:root[data-theme=ivory] .coin b{font:700 var(--rt-body)/1 'Be Vietnam Pro',system-ui,sans-serif}
+:root[data-theme=ivory] .rail__av{font:700 var(--rt-body)/1 'Be Vietnam Pro',system-ui,sans-serif}
+:root[data-theme=ivory] .rail__name{font:700 var(--rt-body)/1.2 'Be Vietnam Pro',system-ui,sans-serif;letter-spacing:0}
+:root[data-theme=ivory] .rail__sm{font:500 var(--rt-small)/1.3 'Be Vietnam Pro',system-ui,sans-serif}
+
+:root[data-theme=ivory] .rail .grp__body.box .nav a,:root[data-theme=ivory] .rail .grp__body.box .nav button.nv,:root[data-theme=ivory] .rail .grp__body.box>a{padding-left:3px;padding-right:3px}
+:root[data-theme=ivory] .rail .grp__body.box .nav a:hover,:root[data-theme=ivory] .rail .grp__body.box .nav a[aria-current="page"]{padding-left:3px}
+
 /* khung phải: chuyển trang mờ dần thay vì bật cái rụp */
 .stage iframe{transition:opacity .3s ease}
 .stage.is-loading iframe{opacity:0}
