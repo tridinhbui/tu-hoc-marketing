@@ -316,7 +316,14 @@
       ['wheel','touchmove','keydown','pointerdown'].forEach(function(ev){ document.addEventListener(ev, gone, { once: true, passive: true, capture: true }); });
       try { var fr = document.getElementById('frame'); if (fr && fr.contentWindow) ['wheel','touchmove','pointerdown'].forEach(function(ev){ fr.contentWindow.addEventListener(ev, gone, { once: true, passive: true, capture: true }); }); } catch (e) {}
     }, 1200);
-    YY.type(el, text).then(function(){ setTimeout(gone, 5000); });
+    /* Giữ chỗ đúng cỡ cuối cùng trước khi gõ: hộp tự lớn dần theo từng chữ là nguồn gây layout shift (CLS). */
+    if (!REDUCED) {
+      el.style.visibility = 'hidden'; el.textContent = text;
+      var w = el.offsetWidth, h = el.offsetHeight;
+      el.textContent = ''; el.style.visibility = '';
+      el.style.boxSizing = 'border-box'; el.style.width = w + 'px'; el.style.minHeight = h + 'px';
+    }
+        YY.type(el, text).then(function(){ setTimeout(gone, 5000); });
   };
 
   /* cấu hình: {mode:'app'|'landing'|'page', greet, chips, go, base} */

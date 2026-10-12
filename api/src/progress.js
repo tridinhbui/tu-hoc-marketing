@@ -2,6 +2,9 @@
 import { json, now, str, currentUser, body } from './lib.js';
 import { DEFAULTS, ingestLedger, computeStats, questStatus } from './engine.js';
 import { onQuestClaimed } from './realm.js';
+import { filterClientLedger } from './xp-trust.js';
+import BANK from './generated/bank.json';
+import XP_REFS from './generated/xp-refs.json';
 
 let cfgCache = null, cfgAt = 0;
 export function invalidateConfig() { cfgCache = null; }
@@ -28,13 +31,29 @@ export async function syncLedger(env, uid, state) {
   const cfg = await loadConfig(env);
   const evs = ingestLedger(state && state.xpl, cfg);
   const t = now();
-  for (let i = 0; i < evs.length; i += 50) {
-    await env.DB.batch(evs.slice(i, i + 50).map((e) => env.DB.prepare(
+  const all = async (sql, ...b) => ((await env.DB.prepare(sql).bind(...b).all()).results) || [];
+  const [ex, att, st, srv] = await Promise.all([
+    all('SELECT source_ref AS ref, day_local AS day, amount FROM xp_events WHERE user_id = ?1', uid),
+    all(`SELECT lesson_id FROM lesson_progress WHERE user_id = ?1 AND completion_source IN ('lesson','stage_exam','placement')`, uid),
+    all(`SELECT DISTINCT stage_id FROM exam_attempts WHERE user_id = ?1 AND kind = 'stage' AND passed = 1`, uid),
+    all(`SELECT 1 AS n FROM xp_events WHERE user_id = ?1 AND source IN ('lesson','exam','review','quest','chest','boss','pvp','referral') LIMIT 1`, uid),
+  ]);
+  const { accepted, rejected } = filterClientLedger(evs, {
+    today: vnToday(),
+    existing: new Map(ex.map((r) => [r.ref, { day: r.day, amount: r.amount }])),
+    attestedLessons: new Set(att.map((r) => r.lesson_id)),
+    passedStages: new Set(st.map((r) => r.stage_id)),
+    hasServerEvents: srv.length > 0,
+    knownLessons: new Set(Object.keys(BANK.lessons)),
+    knownCases: new Set(XP_REFS.cases),
+  });
+  for (let i = 0; i < accepted.length; i += 50) {
+    await env.DB.batch(accepted.slice(i, i + 50).map((e) => env.DB.prepare(
       `INSERT INTO xp_events (user_id, source, source_ref, amount, day_local, created_at) VALUES (?1, ?2, ?3, ?4, ?5, ?6)
-       ON CONFLICT(user_id, source, source_ref) DO UPDATE SET amount = excluded.amount, day_local = excluded.day_local`)
+       ON CONFLICT(user_id, source, source_ref) DO UPDATE SET amount = excluded.amount`)
       .bind(uid, e.source, e.ref, e.amount, e.day, t)));
   }
-  return recompute(env, uid, cfg);
+  return { ...(await recompute(env, uid, cfg)), rejected: rejected.map((r) => r.ref) };
 }
 
 export async function recompute(env, uid, cfg) {
@@ -52,7 +71,8 @@ export async function recompute(env, uid, cfg) {
 
 /* XP tuần (từ thứ Hai, giờ Việt Nam) lấy thẳng từ sổ cái. */
 export function weekXp(evs, weekStart) {
-  return evs.filter((e) => e.day >= weekStart && e.amount > 0).reduce((n, e) => n + e.amount, 0);
+  /* XP mang từ bản cũ (legacy) là lịch sử, không phải hoạt động trong tuần: không tính vào bảng xếp hạng tuần. */
+  return evs.filter((e) => e.source !== 'legacy' && e.day >= weekStart && e.amount > 0).reduce((n, e) => n + e.amount, 0);
 }
 
 export async function myStats(req, env) {

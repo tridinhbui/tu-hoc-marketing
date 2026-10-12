@@ -5,7 +5,7 @@
 export const DEFAULTS = {
   xp_once: { lesson: 10, learned: 5, solid: 10, exam: 50, drill: 15, talk: 10, case: 40 },
   xp_daily_cap: { review: 40, quiz: 60, game: 50, focus: 15, daily: 10, quest: 30 },
-  legacy_cap: 2000,
+  legacy_cap: 300,   // XP mang từ bản chạy trên máy (trước khi có tài khoản). Trình duyệt tự khai nên giữ thấp; admin nâng được qua app_config.
   levels: [0, 30, 100, 250, 500, 900, 1500, 2400, 3600, 5200, 7500, 10500, 14500, 20000, 27000,
     35000, 44000, 54000, 65000, 77000, 90000, 104000, 120000, 138000, 158000, 180000, 205000, 233000, 265000, 300000],
   streak: { free_freezes: 3, restore_xp: 150, restore_days: 3,
@@ -14,6 +14,8 @@ export const DEFAULTS = {
 };
 
 const DAY = /^\d{4}-\d{2}-\d{2}$/;
+/* Trần cứng cho XP mang từ bản chạy trên máy. app_config (seed 0002) đặt 2000 — quá cao khi trình duyệt tự khai. */
+export const LEGACY_MAX = 300;
 
 /* Một dòng sổ cái của trình duyệt → một sự kiện hợp lệ, hoặc null nếu bị loại.
    Khoá có ba dạng: "kind:ref" (một lần), "kind@YYYY-MM-DD" (trần ngày), "spend:restore:YYYY-MM-DD", "legacy:base". */
@@ -23,7 +25,7 @@ export function validateEntry(key, e, cfg) {
   const d = DAY.test(e.d) ? e.d : null;
   if (!d) return null;
 
-  if (key === 'legacy:base') return { source: 'legacy', ref: key, amount: Math.max(0, Math.min(x, cfg.legacy_cap)), day: d };
+  if (key === 'legacy:base') return { source: 'legacy', ref: key, amount: Math.max(0, Math.min(x, cfg.legacy_cap, LEGACY_MAX)), day: d };
 
   const spend = key.match(/^spend:restore:(\d{4}-\d{2}-\d{2})$/);
   if (spend) return { source: 'spend', ref: key, amount: -cfg.streak.restore_xp, day: spend[1] };   // luôn đúng giá, không tin số gửi lên

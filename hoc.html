@@ -144,7 +144,10 @@ function renderDashboard(user) {
   const nm = lessonMeta(nk), w = where(nk);
   const stageN = w ? STAGES.indexOf(w.stage) + 1 : 1, lessonN = w ? w.mod.lessons.indexOf(nk) + 1 : 1;
   const goHref = 'bai.html?id=' + encodeURIComponent(nk);
-  const hello = user && user.name ? `Chào ${escH(user.name.split(' ').slice(-1)[0])}, ` : '';
+  /* Gọi bằng tên người học đặt (hoặc phần đầu email), không dùng mã "Học viên 6B9D" dành cho bảng xếp hạng ẩn danh. */
+  const callName = user ? (user.display_name ? user.display_name.trim().split(/\s+/).slice(-1)[0] : (user.friendly_name || '')) : '';
+  const hello = callName ? `Chào ${escH(callName)}, ` : '';
+  const isNew = doneCount === 0;
 
   /* Bố cục tạp chí: hero (nhiệm vụ đang học) → thẻ học viên → hành trình sáu chặng → bộ sưu tập cấp độ → nhiệm vụ | bảng xếp hạng. */
   const PHOTO = ['poster_apple_thinker.jpg', 'studio_workspace.jpg', 'cafe_community.jpg', 'coffee_lifestyle.jpg', 'poster_nike_athlete.jpg', 'hero_editorial_face.jpg'];
@@ -166,11 +169,12 @@ function renderDashboard(user) {
   <div class="at-dash">
     <header class="at-hero">
       <div class="at-hero__txt">
-        <p class="at-kick">Chặng ${stageN} · Bài ${lessonN} <span>Nhiệm vụ đang học</span></p>
-        ${hello ? `<p class="at-hello">${hello}tiếp tục nhé.</p>` : '<p class="at-hello">Hôm nay, ta bắt đầu từ đây.</p>'}
+        <p class="at-kick">Chặng ${stageN} · Bài ${lessonN} <span>${isNew ? 'Bài đầu tiên của bạn' : 'Nhiệm vụ đang học'}</span></p>
+        ${hello ? `<p class="at-hello">${hello}${isNew ? 'mình bắt đầu từ đây nhé.' : 'tiếp tục nhé.'}</p>` : '<p class="at-hello">Hôm nay, ta bắt đầu từ đây.</p>'}
         <h1 class="at-display">${titleHtml}</h1>
+        ${isNew ? '<p class="at-hello">Mỗi bài khoảng 6 phút: đọc, một câu dừng giữa bài, rồi 5 câu kiểm tra nhanh. Làm xong được +10 XP.</p>' : ''}
         <div class="at-hero__cta">
-          <a class="at-btn" href="${goHref}">Học tiếp <span aria-hidden="true">→</span></a>
+          <a class="at-btn" href="${goHref}">${isNew ? 'Bắt đầu bài đầu tiên' : 'Học tiếp'} <span aria-hidden="true">→</span></a>
           <a class="at-link" href="hoc-bai.html">Xem toàn bộ bài học</a>
         </div>
         <div class="at-trail">

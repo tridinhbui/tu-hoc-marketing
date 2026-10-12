@@ -34,7 +34,8 @@ async function renderProfile() {
     app.innerHTML = `
       <section class="section">
         <span class="studio-badge studio-badge--terra">HỒ SƠ CHIẾN LƯỢC GIA</span>
-        <div style="display:flex;align-items:center;gap:16px;margin:16px 0 8px">${SocialUI.avatar(u, 64)}<h1 class="h1" style="margin:0">${escH(u.name)}</h1></div>
+        <div style="display:flex;align-items:center;gap:16px;margin:16px 0 8px">${SocialUI.avatar(u, 64)}<h1 class="h1" style="margin:0">${escH(u.display_name || u.friendly_name || u.name)}</h1></div>
+        ${u.display_name ? '' : '<p class="small muted" style="margin:0 0 8px">Bạn chưa đặt tên hiển thị — trên bảng xếp hạng bạn đang hiện là “' + escH(u.name) + '”. Đặt tên ở mục “Đổi tên hiển thị” bên dưới.</p>'}
         <p class="muted" style="margin:0 0 24px">${escH(u.email || 'Tài khoản Studio hoạt động trên trình duyệt')}</p>
 
         <!-- Sổ cái: ba con số lớn + cấp độ hiện tại -->
@@ -56,7 +57,7 @@ async function renderProfile() {
         <div style="background:var(--bg-2);border-radius:14px;padding:20px;border:1px solid rgba(249,244,235,.1);margin-bottom:24px">
           <span class="mono" style="color:var(--ink-70);margin-bottom:8px;display:block">Đổi tên hiển thị</span>
           <form id="editNameForm" class="row" style="gap:10px">
-            <input class="field" id="inputNewName" value="${escH(u.name)}" placeholder="Tên mới..." style="max-width:280px;background:#FAF5EE;color:#24160E" required>
+            <input class="field" id="inputNewName" value="${escH(u.display_name || u.friendly_name || '')}" placeholder="Tên của bạn..." style="max-width:280px;background:#FAF5EE;color:#24160E" required>
             <button type="submit" class="btn btn--ghost" style="border-radius:8px;padding:9px 18px">Lưu tên</button>
           </form>
         </div>
