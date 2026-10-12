@@ -690,3 +690,15 @@ div.d-tile b{color:var(--at-tc)}
 .at-hero__ph{min-height:280px}
 .at-stop{--rise:clamp(8px,1.2vw,18px)}
 .at-pass-slot{margin-top:-52px}
+
+/* ---- Học bài, cột phải: mỗi khu một tấm giấy có viền để nhìn ra ranh giới ---- */
+:root[data-theme=ivory] .rc{gap:14px}
+:root[data-theme=ivory] .rc>.notes,:root[data-theme=ivory] .rc>.mist,:root[data-theme=ivory] .rc>.daily,
+:root[data-theme=ivory] .rc>.practice,:root[data-theme=ivory] .rc>.next,:root[data-theme=ivory] .rc>.comm,:root[data-theme=ivory] .rc>div>.comm{
+  background:rgba(251,246,234,.8);border:1px solid rgba(29,21,16,.16);border-radius:2px 2px 34px 2px;padding:18px 20px;box-shadow:none}
+:root[data-theme=ivory] .rc>.daily{background:var(--at-plate)}
+:root[data-theme=ivory] .rc>.mist{background:linear-gradient(135deg,rgba(236,211,196,.7),rgba(251,246,234,.8))}
+:root[data-theme=ivory] .rc>.practice{background:var(--at-blush);border-color:rgba(168,70,31,.28)}
+:root[data-theme=ivory] .rc>.next{background:var(--at-paper-2)}
+:root[data-theme=ivory] .rc .kick{display:flex;align-items:center;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--at-rule-s);margin-bottom:8px}
+:root[data-theme=ivory] .colbtn{background:transparent;border:1px solid var(--at-rule);border-radius:50%}
