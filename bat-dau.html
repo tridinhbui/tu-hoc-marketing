@@ -165,6 +165,24 @@ a.step:hover{transform:translateY(-1px);border-color:var(--bd-acc)}
 .map .pin{top:-12px;font-size:11px;padding:4px 9px}
 .map .flag{left:3%;bottom:4%;top:auto;background:#d49a52;border-radius:6px 12px 12px 6px;color:#3b2412;font-size:15px;transform:rotate(-4deg)}
 @media(max-width:1100px){.map .node{padding:5px 8px 6px}.map .node b{font-size:11px}.map .node small{font-size:9.5px}}
+
+/* ===== v4 — bản đồ giấy địa hình: cùng giọng với landing (kem, đất nung, mực), bỏ cảnh đảo hoạt hình ===== */
+.map{background:var(--bd-map1);border:0;border-radius:28px 28px 28px 8px;box-shadow:0 24px 44px -32px rgba(92,48,22,.5),inset 0 0 0 1px rgba(120,84,50,.12)}
+.mp-c{fill:none;stroke:var(--bd-line);stroke-width:1.2}
+.mp-road{fill:none;stroke:var(--bd-ink);stroke-opacity:.5;stroke-width:2;stroke-dasharray:1 9;stroke-linecap:round}
+.mp-prog{fill:none;stroke:#C4532D;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.mp-compass{fill:none;stroke:var(--bd-ink3);stroke-width:1.2}
+.mp-compass text{fill:var(--bd-ink3);stroke:none;font:600 11px 'Be Vietnam Pro',sans-serif}
+.bld .mp-disc{transition:stroke-width .2s}
+.bld:hover .mp-disc,.bld:focus-visible .mp-disc{stroke-width:4}
+.bld[data-st="lock"],.bld[data-st="lock"]:hover{filter:none;opacity:1}
+.map .node{border:0;border-radius:14px;background:rgba(255,251,243,.94);box-shadow:0 12px 22px -16px rgba(60,30,10,.6),inset 0 0 0 1px rgba(120,84,50,.12)}
+html[data-theme="dark"] .map .node{background:rgba(34,25,19,.94)}
+.map .node b{font-family:'Playfair Display',var(--serif,Georgia,serif);font-weight:500;font-size:14px}
+.map .node[data-st="here"]{box-shadow:0 0 0 2px #C4532D,0 14px 24px -14px rgba(60,30,10,.6)}
+.map .pin{background:#C4532D}
+.map .flag{background:none;color:var(--bd-ink2);box-shadow:none;border-radius:0;font-size:17px;left:3%;bottom:5%;transform:rotate(-3deg)}
+.map .flag::before{content:"";display:inline-block;width:22px;height:1px;background:currentColor;margin-right:8px;vertical-align:middle;opacity:.6}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=12">
 </head>
@@ -204,54 +222,13 @@ function model(){
   return {s,pid,path,list,total,done,here,nxt,pace,left,weeks,stages};
 }
 
-/* Bản đồ hành trình dạng cảnh minh hoạ: đảo nổi, đường quanh co nối 6 toà nhà theo từng chặng (xanh lá → tím như bản đồ Kingdom).
-   Toà nhà là SVG vẽ tay trong mã; trạng thái chặng thể hiện bằng màu (khoá = xám), dấu tick (xong) và vòng sáng + ghim (đang ở). */
-const ZONE=[
-  {wall:'#fbf0da',roof:'#4f9a5e',acc:'#3f8450'},   // 01 Nền tảng — cánh đồng
-  {wall:'#fbf0da',roof:'#d2703f',acc:'#c25a2c'},   // 02 Hiểu khách hàng
-  {wall:'#eaf3ef',roof:'#2f8a93',acc:'#23737b'},   // 03 Thương hiệu
-  {wall:'#f4eee0',roof:'#3f74bd',acc:'#2f5fa3'},   // 04 Kênh & truyền thông
-  {wall:'#eef2f6',roof:'#4a86c9',acc:'#2f6bb0'},   // 05 Đo lường & tăng trưởng
-  {wall:'#f1e8f6',roof:'#7352ad',acc:'#5f3f97'},   // 06 Case tổng hợp
-];
-function bldSVG(i){
-  const z=ZONE[i]||ZONE[0], w=z.wall, r=z.roof, a=z.acc, door='#8f6540';
-  const base=`<ellipse cx="0" cy="8" rx="50" ry="13" fill="rgba(55,38,18,.22)"/><ellipse cx="0" cy="3" rx="44" ry="11" fill="#e3d2ab"/><ellipse cx="0" cy="0" rx="40" ry="9" fill="#efe1bf"/>`;
-  const win=(x,y)=>`<rect x="${x}" y="${y}" width="9" height="11" rx="4.5" fill="#fff8e6" stroke="${a}" stroke-width="1.4"/>`;
-  const body=[
-    /* 1 · nhà nhỏ có cờ */
-    `<rect x="-27" y="-36" width="54" height="38" rx="3" fill="${w}" stroke="rgba(0,0,0,.12)"/><path d="M-36,-33 L0,-64 L36,-33Z" fill="${r}"/><path d="M-36,-33 L36,-33" stroke="rgba(0,0,0,.18)" stroke-width="3"/>
-     <rect x="-7" y="-20" width="14" height="22" rx="7" fill="${door}"/>${win(-22,-26)}${win(13,-26)}<path d="M0,-64 V-84" stroke="#6b4a2d" stroke-width="2"/><path d="M0,-84 L19,-78 L0,-72Z" fill="#c85a32"/>`,
-    /* 2 · nhà rộng có biểu tượng người */
-    `<rect x="-34" y="-38" width="68" height="40" rx="3" fill="${w}" stroke="rgba(0,0,0,.12)"/><path d="M-42,-35 L-26,-62 L26,-62 L42,-35Z" fill="${r}"/><path d="M-42,-35 L42,-35" stroke="rgba(0,0,0,.18)" stroke-width="3"/>
-     <circle cx="0" cy="-48" r="11" fill="#fff" stroke="${a}" stroke-width="1.6"/><circle cx="-3.5" cy="-50" r="3" fill="${a}"/><circle cx="3.5" cy="-50" r="3" fill="${a}" opacity=".7"/><path d="M-8,-42 q4.5,-6 8,0 q3.5,-6 8,0" fill="none" stroke="${a}" stroke-width="1.6"/>
-     <rect x="-7" y="-20" width="14" height="22" rx="7" fill="${door}"/>${win(-27,-26)}${win(18,-26)}`,
-    /* 3 · tháp có ngôi sao */
-    `<rect x="-17" y="-74" width="34" height="76" rx="3" fill="${w}" stroke="rgba(0,0,0,.12)"/><path d="M-24,-70 L0,-104 L24,-70Z" fill="${r}"/>
-     ${win(-4.5,-60)}${win(-4.5,-40)}<rect x="-6" y="-22" width="12" height="24" rx="6" fill="${door}"/>
-     <path d="M0,-124 l4,9 10,1 -7.5,6.5 2.5,10 -9,-5.5 -9,5.5 2.5,-10 -7.5,-6.5 10,-1Z" fill="#e8b24a" stroke="#b9871f" stroke-width="1"/>`,
-    /* 4 · toà truyền thông với loa phát */
-    `<rect x="-36" y="-44" width="72" height="46" rx="3" fill="${w}" stroke="rgba(0,0,0,.12)"/><rect x="-40" y="-56" width="80" height="16" rx="3" fill="${r}"/>
-     <path d="M-16,-26 L4,-34 V-10 L-16,-18Z" fill="${a}"/><rect x="-23" y="-26" width="8" height="10" rx="2" fill="${a}"/><path d="M10,-30 q8,8 0,16 M16,-35 q12,13 0,26" fill="none" stroke="${a}" stroke-width="2.4" stroke-linecap="round"/>
-     <rect x="-6" y="-60" width="12" height="6" fill="${r}"/><path d="M0,-60 V-82" stroke="#6b4a2d" stroke-width="2"/><circle cx="0" cy="-84" r="4" fill="#e8b24a"/>`,
-    /* 5 · phòng lab: mái vòm và cột biểu đồ */
-    `<rect x="-36" y="-40" width="72" height="42" rx="3" fill="${w}" stroke="rgba(0,0,0,.12)"/><path d="M-40,-40 A40,40 0 0 1 40,-40Z" fill="${r}"/><path d="M-40,-40 H40" stroke="rgba(0,0,0,.18)" stroke-width="3"/>
-     <rect x="-22" y="-20" width="9" height="20" rx="2" fill="${a}" opacity=".55"/><rect x="-9" y="-30" width="9" height="30" rx="2" fill="${a}" opacity=".75"/><rect x="4" y="-42" width="9" height="42" rx="2" fill="${a}"/><rect x="17" y="-24" width="9" height="24" rx="2" fill="#e8b24a"/>
-     <path d="M-44,-76 q10,-14 22,-4" fill="none" stroke="${a}" stroke-width="0"/>`,
-    /* 6 · lâu đài */
-    `<rect x="-32" y="-52" width="64" height="54" rx="2" fill="${w}" stroke="rgba(0,0,0,.12)"/>
-     <rect x="-44" y="-70" width="22" height="72" rx="2" fill="${w}" stroke="rgba(0,0,0,.12)"/><rect x="22" y="-70" width="22" height="72" rx="2" fill="${w}" stroke="rgba(0,0,0,.12)"/>
-     <path d="M-48,-68 L-33,-96 L-18,-68Z" fill="${r}"/><path d="M18,-68 L33,-96 L48,-68Z" fill="${r}"/>
-     <path d="M-32,-52 h6 v-6 h8 v6 h8 v-6 h8 v6 h8 v-6 h8 v6 h6" fill="${w}" stroke="rgba(0,0,0,.12)"/>
-     <path d="M-10,2 V-20 a10,10 0 0 1 20,0 V2Z" fill="${door}"/><rect x="-39" y="-50" width="9" height="12" rx="4.5" fill="#fff8e6" stroke="${a}" stroke-width="1.4"/><rect x="30" y="-50" width="9" height="12" rx="4.5" fill="#fff8e6" stroke="${a}" stroke-width="1.4"/>
-     <path d="M33,-96 V-116" stroke="#6b4a2d" stroke-width="2"/><path d="M33,-116 L53,-110 L33,-104Z" fill="#e8b24a"/>`,
-  ][i]||'';
-  return base+body;
-}
-const treeSVG=(x,y,k,s=1)=>k%3===0
-  ?`<g transform="translate(${x},${y}) scale(${s})"><ellipse cx="0" cy="3" rx="13" ry="4" fill="rgba(40,60,20,.18)"/><rect x="-2" y="-8" width="4" height="12" fill="#7a5a3a"/><circle cx="0" cy="-22" r="15" fill="#7ea45c"/><circle cx="-8" cy="-14" r="10" fill="#6c9350"/><circle cx="8" cy="-16" r="9" fill="#8bb269"/></g>`
-  :`<g transform="translate(${x},${y}) scale(${s})"><ellipse cx="0" cy="3" rx="12" ry="4" fill="rgba(40,60,20,.18)"/><rect x="-2" y="-6" width="4" height="10" fill="#7a5a3a"/><path d="M0,-52 L13,-26 L-13,-26Z" fill="#5f8f55"/><path d="M0,-38 L17,-10 L-17,-10Z" fill="#4f7f48"/></g>`;
-const cloudSVG=(x,y,s)=>`<g transform="translate(${x},${y}) scale(${s})" fill="#fff" opacity=".85"><ellipse cx="0" cy="0" rx="34" ry="12"/><ellipse cx="-20" cy="-8" rx="18" ry="12"/><ellipse cx="10" cy="-12" rx="22" ry="14"/></g>`;
+/* Bản đồ hành trình dạng "tờ giấy địa hình": đường đồng mức mờ, tuyến đi chấm bút, mỗi chặng là một con dấu số.
+   Trạng thái: xong = tick xô thơm · đang ở = đất nung + vòng đập · đã mở = viền đất nung · khoá = nét đứt xám. */
+const TERRA='#C4532D', SAGE='#5F7352', MUTE='#9a8f82';
+const blob=(cx,cy,r,seed)=>{ const n=56; let d='';
+  for(let k=0;k<=n;k++){ const a=k/n*Math.PI*2, rr=r*(1+.13*Math.sin(a*3+seed)+.07*Math.sin(a*5+seed*1.7)+.04*Math.sin(a*8+seed*2.3));
+    d+=(k?'L':'M')+(cx+Math.cos(a)*rr*1.55).toFixed(1)+','+(cy+Math.sin(a)*rr*.82).toFixed(1); }
+  return d+'Z'; };
 
 function mapHTML(m){
   const W=1000,H=520;
@@ -260,54 +237,40 @@ function mapHTML(m){
     for(let i=0;i<P.length-1;i++){ const p0=P[i-1]||P[i],p1=P[i],p2=P[i+1],p3=P[i+2]||p2;
       const c1=[p1[0]+(p2[0]-p0[0])/6,p1[1]+(p2[1]-p0[1])/6], c2=[p2[0]-(p3[0]-p1[0])/6,p2[1]-(p3[1]-p1[1])/6];
       d+=` C${c1[0].toFixed(1)},${c1[1].toFixed(1)} ${c2[0].toFixed(1)},${c2[1].toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`; } return d; };
-  const stage=[pts[0][0]-62,pts[0][1]+24], P=[stage,...pts.map(p=>[p[0],p[1]+14])];
+  const stage=[pts[0][0]-70,pts[0][1]+6], P=[stage,...pts];
   const hereIdx=Math.max(0,m.stages.findIndex(x=>x.state==='here')), lastDone=m.stages.reduce((a,x,i)=>x.state==='done'?i:a,-1);
   const reach=Math.max(hereIdx,lastDone+1,0);
   const road=cr(P), prog=cr(P.slice(0,reach+2));
-  const trees=[[70,330,0],[150,300,1],[200,420,2],[340,170,1],[392,330,0],[520,200,1],[560,420,2],[700,150,0],[740,330,1],[880,400,0],[950,250,1],[250,120,2],[830,200,2],[610,320,0],[120,200,0]];
-  const bld=m.stages.map((x,i)=>{ const [bx,by]=pts[i], href=`ban-do.html#tab=stage&id=${x.st.id}`;
-    const badge=x.state==='done'?`<g transform="translate(34,-62)"><circle r="12" fill="#3d7a45" stroke="#fff" stroke-width="2.5"/><path d="M-5,0 l4,4.5 l7,-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>`
-      :x.state==='lock'?`<g transform="translate(34,-58)"><circle r="11" fill="#8d857a" stroke="#fff" stroke-width="2.5"/><rect x="-5" y="-1" width="10" height="8" rx="2" fill="#fff"/><path d="M-3,-1 v-3 a3,3 0 0 1 6,0 v3" fill="none" stroke="#fff" stroke-width="1.8"/></g>`:'';
-    const ring=x.state==='here'?`<ellipse class="pulse" cx="0" cy="3" rx="52" ry="15" fill="none" stroke="#c85a32" stroke-width="3"/>`:'';
-    return `<a class="bld" data-st="${x.state}" href="${href}" aria-label="Chặng ${x.st.n}: ${escH(x.st.t)}"><g transform="translate(${bx.toFixed(1)},${by.toFixed(1)}) scale(1.3)">${ring}${bldSVG(i)}${badge}</g></a>`; }).join('');
+  const hills=[[210,150,1.2],[800,380,2.6],[560,120,4.1]];
+  const contours=hills.map(([cx,cy,sd])=>[30,58,86,114,142,170].map(r=>`<path class="mp-c" d="${blob(cx,cy,r,sd)}"/>`).join('')).join('');
+  const stops=m.stages.map((x,i)=>{ const [bx,by]=pts[i], st=x.state, href=`ban-do.html#tab=stage&id=${x.st.id}`;
+    const fill=st==='done'?SAGE:st==='here'?TERRA:'var(--bd-card,#FFFBF3)';
+    const stroke=st==='lock'?MUTE:st==='done'?SAGE:TERRA;
+    const ink=st==='done'||st==='here'?'#fff':st==='lock'?'#8d857a':'#9E3F1F';
+    const ring=st==='here'?`<circle class="pulse" r="38" fill="none" stroke="${TERRA}" stroke-width="2"/>`:'';
+    const badge=st==='done'?`<g transform="translate(20,-20)"><circle r="10" fill="#fff" stroke="${SAGE}" stroke-width="2"/><path d="M-4.5,0 l3.5,4 l6,-8" fill="none" stroke="${SAGE}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>`
+      :st==='lock'?`<g transform="translate(20,-20)"><circle r="10" fill="#fff" stroke="${MUTE}" stroke-width="2"/><rect x="-4" y="-1" width="8" height="6.5" rx="1.5" fill="${MUTE}"/><path d="M-2.5,-1 v-2 a2.5,2.5 0 0 1 5,0 v2" fill="none" stroke="${MUTE}" stroke-width="1.6"/></g>`:'';
+    return `<a class="bld" data-st="${st}" href="${href}" aria-label="Chặng ${x.st.n}: ${escH(x.st.t)}"><g transform="translate(${bx.toFixed(1)},${by.toFixed(1)})">${ring}
+      <circle class="mp-disc" r="29" fill="${fill}" stroke="${stroke}" stroke-width="2.4"${st==='lock'?' stroke-dasharray="5 4"':''}/>
+      <circle r="23" fill="none" stroke="${st==='done'||st==='here'?'rgba(255,255,255,.55)':stroke}" stroke-width="1" stroke-opacity=".6"/>
+      <text y="8" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-style="italic" font-size="23" font-weight="500" fill="${ink}">${escH(String(x.st.n))}</text>${badge}</g></a>`; }).join('');
   const nodes=m.stages.map((x,i)=>{ const [px,py]=NODE_POS[i]||[50,50], pct=x.ks.length?Math.round(x.d/x.ks.length*100):0;
-    const tag=x.state==='done'?'Đã xong':x.state==='lock'?'Chưa mở':x.state==='here'?'Đang học':'Đã mở', z=ZONE[i]||ZONE[0];
-    const top=((py*H/100)-[108,100,160,120,108,152][i])/H*100;     // đặt biển tên ngay trên mái từng toà
-    return {html:(cls)=>`<a class="node" ${cls} data-st="${x.state==='open'?'open':x.state}" href="ban-do.html#tab=stage&id=${x.st.id}" style="--z:${z.roof};${cls?'':`left:${px}%;top:${top.toFixed(1)}%`}">
+    const tag=x.state==='done'?'Đã xong':x.state==='lock'?'Chưa mở':x.state==='here'?'Đang học':'Đã mở';
+    const top=((py*H/100)-54)/H*100;     // biển tên nằm ngay trên con dấu của chặng
+    return {html:(cls)=>`<a class="node" ${cls} data-st="${x.state==='open'?'open':x.state}" href="ban-do.html#tab=stage&id=${x.st.id}" style="--z:${TERRA};${cls?'':`left:${px}%;top:${top.toFixed(1)}%`}">
       ${x.state==='here'?'<span class="pin">Bạn ở đây</span>':''}
       <span class="no">${x.st.n}</span><b>${escH(x.st.t)}</b>
       <small>${x.ks.length?x.d+'/'+x.ks.length+' bài':x.st.mods.length+' module case'} · ${tag}</small>
       <span class="bar"><i style="width:${pct}%"></i></span></a>`};
   });
   const svg=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" aria-hidden="false" focusable="false">
-    <defs>
-      <linearGradient id="mpSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbeedd"/><stop offset=".55" stop-color="#e8f1ec"/><stop offset="1" stop-color="#cfe5e8"/></linearGradient>
-      <linearGradient id="mpSea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfdfe2"/><stop offset="1" stop-color="#9ccbd2"/></linearGradient>
-      <linearGradient id="mpGrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfdca0"/><stop offset=".6" stop-color="#b6cb83"/><stop offset="1" stop-color="#a3bc72"/></linearGradient>
-      <linearGradient id="mpHill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9b9dc"/><stop offset="1" stop-color="#dccfe6"/></linearGradient>
-      <filter id="mpSoft" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#3b2a14" flood-opacity=".22"/></filter>
-    </defs>
-    <rect width="${W}" height="${H}" fill="url(#mpSky)"/>
-    <path d="M0,200 L90,120 L170,180 L260,90 L350,170 L440,110 L540,175 L640,85 L740,165 L840,105 L930,170 L1000,130 V300 H0Z" fill="url(#mpHill)" opacity=".75"/>
-    <path d="M0,230 L120,170 L230,215 L350,150 L470,210 L600,160 L720,215 L850,160 L1000,205 V320 H0Z" fill="#b7c9d6" opacity=".55"/>
-    ${cloudSVG(120,70,1.2)}${cloudSVG(520,48,.9)}${cloudSVG(860,82,1.1)}${cloudSVG(330,120,.7)}
-    <rect y="300" width="${W}" height="${H-300}" fill="url(#mpSea)"/>
-    <path d="M0,330 q40,-8 80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
-    <path d="M0,470 q40,-8 80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="2"/>
-    <g filter="url(#mpSoft)">
-      <path d="M30,330 C18,250 70,180 160,160 C260,100 420,100 520,128 C640,92 790,96 880,140 C965,170 992,250 972,320 C990,400 925,470 820,482 C700,508 560,492 480,500 C360,516 220,502 130,470 C55,440 38,392 30,330Z" fill="#8f7a4d"/>
-      <path d="M30,320 C18,240 70,172 160,152 C260,92 420,92 520,120 C640,84 790,88 880,132 C965,162 992,242 972,312 C990,392 925,458 820,470 C700,496 560,480 480,488 C360,504 220,490 130,458 C55,428 38,382 30,320Z" fill="url(#mpGrass)"/>
-    </g>
-    <path d="M60,300 C150,275 240,312 340,292 S560,250 700,285 S900,300 960,270" fill="none" stroke="#a9d4da" stroke-width="30" stroke-linecap="round" opacity=".95"/>
-    <path d="M60,300 C150,275 240,312 340,292 S560,250 700,285 S900,300 960,270" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round"/>
-    ${trees.map(([x,y,k])=>treeSVG(x,y,k,k===2?1.15:1)).join('')}
-    <path d="${road}" fill="none" stroke="#a88f5f" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
-    <path d="${road}" fill="none" stroke="#f3e4c0" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="${road}" fill="none" stroke="#fff8e6" stroke-width="3" stroke-dasharray="3 12" stroke-linecap="round" opacity=".9"/>
-    <path d="${prog}" fill="none" stroke="#d9683a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-    ${bld}
-    <g transform="translate(${stage[0]-6},${stage[1]-6})"><rect x="-4" y="-34" width="5" height="40" rx="2" fill="#7a5a3a"/><path d="M1,-34 h32 l-8,8 8,8 h-32Z" fill="#d9683a"/></g>
-    <path d="M300,60 q8,-9 16,0 q8,-9 16,0 M700,40 q7,-8 14,0 q7,-8 14,0" fill="none" stroke="#5b6b78" stroke-width="2" stroke-linecap="round"/>
+    <defs><filter id="mpRough"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="1.6"/></filter></defs>
+    ${contours}
+    <g class="mp-compass" transform="translate(940,70)"><circle r="20"/><path d="M0,-30 L5,0 L0,30 L-5,0Z"/><path d="M-30,0 L0,-5 L30,0 L0,5Z" opacity=".35"/><text y="-36" text-anchor="middle">B</text></g>
+    <path class="mp-road" d="${road}"/>
+    <path class="mp-prog" d="${prog}" filter="url(#mpRough)"/>
+    ${stops}
+    <g transform="translate(${stage[0]},${stage[1]})"><path d="M0,26 V-26" stroke="#2A1A12" stroke-width="2.4" stroke-linecap="round"/><path d="M1,-26 h30 l-7,8 7,8 h-30Z" fill="${TERRA}"/></g>
   </svg>`;
   return `<div class="map" role="group" aria-label="Bản đồ ${m.stages.length} chặng">${svg}<span class="flag">Start here</span>${nodes.map(n=>n.html('')).join('')}</div>
     <div class="maplist">${nodes.map(n=>n.html('data-list')).join('')}</div>`;

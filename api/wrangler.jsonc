@@ -23,7 +23,7 @@
   "send_email": [{ "name": "EMAIL" }],
 
   "vars": {
-    "APP_ORIGIN": "https://tu-hoc-marketing.tridinhbui0901.workers.dev",
+    "APP_ORIGIN": "https://tuhocmarketing.org",
     "GOOGLE_CLIENT_ID": "652411579554-981jfkt4916oiprfk7ov78hgk8nsscqe.apps.googleusercontent.com",
     "MAIL_FROM": "",
     "ADMIN_EMAILS": "tribd.tec@gmail.com",
