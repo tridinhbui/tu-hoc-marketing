@@ -178,7 +178,7 @@ a.step:hover{transform:translateY(-1px);border-color:var(--bd-acc)}
 .bld[data-st="lock"],.bld[data-st="lock"]:hover{filter:none;opacity:1}
 .map .node{border:0;border-radius:14px;background:rgba(255,251,243,.94);box-shadow:0 12px 22px -16px rgba(60,30,10,.6),inset 0 0 0 1px rgba(120,84,50,.12)}
 html[data-theme="dark"] .map .node{background:rgba(34,25,19,.94)}
-.map .node b{font-family:'Playfair Display',var(--serif,Georgia,serif);font-weight:500;font-size:14px}
+.map .node b{font-family:var(--serif,'Fraunces',Georgia,serif);font-weight:500;font-size:14px}
 .map .node[data-st="here"]{box-shadow:0 0 0 2px #C4532D,0 14px 24px -14px rgba(60,30,10,.6)}
 .map .pin{background:#C4532D}
 .map .flag{background:none;color:var(--bd-ink2);box-shadow:none;border-radius:0;font-size:17px;left:3%;bottom:5%;transform:rotate(-3deg)}
@@ -254,7 +254,7 @@ function mapHTML(m){
     return `<a class="bld" data-st="${st}" href="${href}" aria-label="Chặng ${x.st.n}: ${escH(x.st.t)}"><g transform="translate(${bx.toFixed(1)},${by.toFixed(1)})">${ring}
       <circle class="mp-disc" r="29" fill="${fill}" stroke="${stroke}" stroke-width="2.4"${st==='lock'?' stroke-dasharray="5 4"':''}/>
       <circle r="23" fill="none" stroke="${st==='done'||st==='here'?'rgba(255,255,255,.55)':stroke}" stroke-width="1" stroke-opacity=".6"/>
-      <text y="8" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-style="italic" font-size="23" font-weight="500" fill="${ink}">${escH(String(x.st.n))}</text>${badge}</g></a>`; }).join('');
+      <text y="8" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="23" font-weight="500" fill="${ink}">${escH(String(x.st.n))}</text>${badge}</g></a>`; }).join('');
   const nodes=m.stages.map((x,i)=>{ const [px,py]=NODE_POS[i]||[50,50], pct=x.ks.length?Math.round(x.d/x.ks.length*100):0;
     const tag=x.state==='done'?'Đã xong':x.state==='lock'?'Chưa mở':x.state==='here'?'Đang học':'Đã mở';
     const top=((py*H/100)-54)/H*100;     // biển tên nằm ngay trên con dấu của chặng
