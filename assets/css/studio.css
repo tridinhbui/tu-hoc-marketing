@@ -3,7 +3,6 @@
    Tinh thần lấy từ landing: kem ngà, đất nung, hồng phấn, xô thơm mờ, espresso; serif có chữ nghiêng đất nung,
    mép giấy, chữ viết tay. Ít hộp, ít đường viền, ít biểu tượng — dùng chữ, khoảng thở và mảng màu để chia. */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 :root{
   --st-ivory:#F7F0E4; --st-paper:#FFFBF3; --st-sand:#EDDFCB;
   --st-terra:#C4532D; --st-terra-d:#9E3F1F; --st-blush:#F1CDBD; --st-peach:#F8E2D2;
@@ -15,7 +14,7 @@
   --st-ease:cubic-bezier(.16,1,.3,1);
   --st-hand:'Hand VN',cursive;
   --st-ui:'Be Vietnam Pro',system-ui,sans-serif; /* nhãn chức năng tiếng Việt: dùng chữ thường, không dùng font viết tay */
-  --st-serif:'Fraunces','Playfair Display',Georgia,serif;
+  --st-serif:'Fraunces',serif;
 }
 
 /* ---------- chung: chữ, liên kết, lấy nét, chọn chữ ---------- */
@@ -362,8 +361,8 @@
    5. MarSocial: bài đăng thành mục báo, không còn hộp.
    ===================================================================== */
 :root[data-theme="ivory"]{
-  --serif:'Fraunces','Playfair Display',Georgia,serif;
-  --st-serif:'Fraunces','Playfair Display',Georgia,serif;
+  --serif:'Fraunces',serif;
+  --st-serif:'Fraunces',serif;
   --st-shadow:0 1px 0 rgba(255,255,255,.75) inset,0 16px 32px -28px rgba(92,48,22,.34);
   --st-r:24px;
 }

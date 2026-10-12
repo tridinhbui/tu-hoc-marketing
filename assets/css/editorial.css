@@ -1,3 +1,10 @@
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:700;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 600;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 600;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
+@font-face{font-family:'Hand VN';font-style:normal;font-weight:400 700;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
 /* EDITORIAL — landing "Tạp chí học marketing".
    Hệ thống: một cuốn tạp chí độc lập, mỗi mục một tâm trạng (đen · ngà · đất nung · giấy kraft).
    Không dùng thẻ lặp; bố cục lệch, chữ là hình ảnh, ảnh là bằng chứng của câu chuyện. */
@@ -5,7 +12,7 @@
   --k:#0d0b09; --k2:#16120e; --ink:#1a140f; --iv:#f2e9d8; --iv2:#e6d9c0; --kraft:#d9c7a6;
   --tc:#a8461f; --tc-d:#8a3416; --tc-l:#c9694a; --or:#ee6a30; --bl:#ecd3c4;
   --muted-d:rgba(242,233,216,.68); --muted-l:rgba(26,20,15,.72);
-  --serif:'Fraunces','Playfair Display',Georgia,serif;
+  --serif:'Fraunces',serif;
   --sans:'Be Vietnam Pro',system-ui,sans-serif;
   --hand:'Hand VN',cursive;
   --gx:clamp(20px,5vw,72px);

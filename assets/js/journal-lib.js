@@ -19,7 +19,7 @@
   const css = document.createElement('style');
   css.textContent = `
 .tv{padding-block:clamp(30px,5vw,70px);border-top:var(--rule,1px solid rgba(120,84,50,.2))}
-.tv h2{font-family:var(--serif,Georgia,serif);font-weight:400;font-size:clamp(1.8rem,3.4vw,2.6rem);margin:0 0 6px}
+.tv h2{font-family:var(--serif,'Fraunces',serif);font-weight:400;font-size:clamp(1.8rem,3.4vw,2.6rem);margin:0 0 6px}
 .tv__cap{max-width:60ch;opacity:.75;line-height:1.6;margin:0 0 18px}
 .tv__tabs,.tv__chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
 .tv__tabs button{border:0;background:none;padding:9px 14px;border-bottom:3px solid transparent;font:700 14px var(--sans,system-ui);cursor:pointer;color:inherit;opacity:.65}
@@ -30,7 +30,7 @@
 .tv__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
 .tv__card{border:1px solid rgba(120,84,50,.2);background:rgba(255,252,246,.9);border-radius:18px;padding:16px;display:grid;gap:8px;align-content:start}
 .tv__card .m{font:700 10.5px var(--sans,system-ui);letter-spacing:.1em;text-transform:uppercase;opacity:.55}
-.tv__card a.t{font:500 1.12rem/1.3 var(--serif,Georgia,serif);color:inherit;text-decoration:none}
+.tv__card a.t{font:500 1.12rem/1.3 var(--serif,'Fraunces',serif);color:inherit;text-decoration:none}
 .tv__card a.t:hover{color:var(--accent,#B8502D)}
 .tv__card p{margin:0;font-size:13.5px;line-height:1.55;opacity:.75;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .tv__bar{height:5px;border-radius:99px;background:rgba(120,84,50,.16);overflow:hidden}.tv__bar i{display:block;height:100%;background:var(--accent,#B8502D)}
@@ -42,7 +42,7 @@
 .tv__sp{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:6px}
 .tv__sp div{border:1px dashed rgba(120,84,50,.35);border-radius:16px;padding:14px;background:rgba(255,252,246,.7)}
 .tv__sp div[data-ok="1"]{border-style:solid;border-color:#3d7a45;background:#f0f7f1}
-.tv__sp b{font-family:var(--serif,Georgia,serif);font-weight:500;font-size:1.05rem;display:block}.tv__sp small{opacity:.7;display:block;margin-top:4px;line-height:1.5}
+.tv__sp b{font-family:var(--serif,'Fraunces',serif);font-weight:500;font-size:1.05rem;display:block}.tv__sp small{opacity:.7;display:block;margin-top:4px;line-height:1.5}
 .tv__daily{margin:0 0 26px}`;
   document.head.appendChild(css);
 

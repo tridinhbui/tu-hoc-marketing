@@ -3,7 +3,7 @@ const T = {
   box:'position:absolute;inset:0;padding:22px;display:flex;flex-direction:column;',
   mono:"font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;",
   serif:"font-family:'Fraunces',serif;font-weight:300;line-height:.92;letter-spacing:-.03em;",
-  sans:"font-family:'Inter Tight',sans-serif;",
+  sans:"font-family:'Be Vietnam Pro',sans-serif;",
 };
 
 const TASTE = [
@@ -65,8 +65,8 @@ const TASTE = [
   brief:'Bao bì cà phê rang xay, bán ở cửa hàng đặc sản và trên sàn thương mại điện tử.',
   a:`<div style="${T.box}background:#3B2314;color:#F5E6D3;align-items:center;justify-content:center;text-align:center;gap:8px">
       <div style="${T.mono}opacity:.6">PREMIUM QUALITY</div>
-      <div style="width:34px;height:34px;border:2px solid #C9A227;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:serif;color:#C9A227">✦</div>
-      <div style="font-family:Georgia,serif;font-size:20px;letter-spacing:.14em;color:#C9A227">HIGHLAND<br>GOLD</div>
+      <div style="width:34px;height:34px;border:2px solid #C9A227;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;color:#C9A227">✦</div>
+      <div style="font-family:'Fraunces',serif;font-size:20px;letter-spacing:.14em;color:#C9A227">HIGHLAND<br>GOLD</div>
       <div style="${T.mono}opacity:.55">ARABICA · 100% NATURAL</div>
       <div style="${T.mono}opacity:.45;margin-top:2px">EST. 2019 · VIETNAM</div>
      </div>`,

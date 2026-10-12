@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:700;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 600;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 600;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
+@font-face{font-family:'Hand VN';font-style:normal;font-weight:400 700;font-display:swap;src:url(../fonts/thm-glyphs.woff2) format('woff2');unicode-range:U+2032,U+2190-2193,U+2197,U+21B3,U+221A,U+2248,U+2264-2265,U+2605-2606,U+2665,U+2713-2715,U+2717,U+2726,U+2733,U+25B2,U+25BC,U+25CB,U+25CF}
 /* ATELIER — art direction cho toàn bộ các trang bên trong (sau đăng nhập).
    Cùng DNA với landing "Tạp chí học marketing": espresso · ngà · đất nung · kraft, Fraunces nghiêng cỡ lớn,
    đường kẻ mảnh thay cho thẻ, ảnh cắt vòm, chú thích viết tay (dùng tiết chế).
@@ -8,7 +15,7 @@
   --at-ink:#1d1510; --at-ink-2:rgba(29,21,16,.74); --at-ink-3:rgba(29,21,16,.52);
   --at-rule:rgba(29,21,16,.2); --at-rule-s:rgba(29,21,16,.1);
   --at-tc:#a8461f; --at-tc-d:#8a3416; --at-or:#e85d24; --at-blush:#ecd3c4; --at-rose:#c98c7b; --at-esp:#16100c;
-  --at-serif:'Fraunces','Playfair Display',Georgia,serif;
+  --at-serif:'Fraunces',serif;
   --at-sans:'Be Vietnam Pro',system-ui,sans-serif;
   --at-hand:'Hand VN',cursive;
   --at-gx:clamp(18px,3.6vw,60px);
@@ -17,7 +24,7 @@
 }
 
 /* cùng cặp chữ với landing: Fraunces (có trục SOFT/WONK) + Be Vietnam Pro — ghi đè Playfair của studio.css */
-:root[data-theme=ivory]{--serif:'Fraunces','Playfair Display',Georgia,serif;--st-serif:'Fraunces','Playfair Display',Georgia,serif}
+:root[data-theme=ivory]{--serif:'Fraunces',serif;--st-serif:'Fraunces',serif}
 
 /* ====================== NỀN & KHUNG TRANG ====================== */
 :root[data-theme=ivory]{background:var(--at-paper);background-image:radial-gradient(70% 50% at 0% 0%,rgba(255,250,238,.7),transparent 70%);background-attachment:fixed}
