@@ -72,7 +72,7 @@
   .lvmap__go{display:inline-flex;border-radius:12px;background:var(--terra);color:#fff;font:800 12.5px var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:11px 16px;text-decoration:none}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=12">
-<link rel="stylesheet" href="assets/css/atelier.css?v=23">
+<link rel="stylesheet" href="assets/css/atelier.css?v=25">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn.</p></div></noscript>
@@ -187,6 +187,14 @@ function renderDashboard(user) {
     <div class="at-pass-slot"><div id="sbProfile"></div></div>
 
     <div class="at-body">
+      <section class="at-sec" aria-labelledby="atL" data-at>
+        <div class="at-sec__head">
+          <div><p class="at-kick">Cấp độ &amp; XP</p><h2 class="at-sec__title" id="atL">Bộ sưu tập <em>con dấu</em></h2></div>
+          <a class="at-link" href="cap-do.html" title="Xem chi tiết 30 cấp và cách kiếm XP">Cấp ${level(s.xp).n}/30 · xem chi tiết</a>
+        </div>
+        <div class="lvmap" id="lvMap" aria-label="Bản đồ cấp độ"></div>
+      </section>
+
       <section class="at-sec" aria-labelledby="atJ" data-at>
         <div class="at-sec__head">
           <div><p class="at-kick">Hành trình</p><h2 class="at-sec__title" id="atJ">Sáu chặng, <em>một con đường</em></h2></div>
@@ -198,14 +206,6 @@ function renderDashboard(user) {
             <span class="at-stop__no">${String(x.si + 1).padStart(2, '0')}</span><span class="at-stop__dot"></span>
             <span><h3>${escH(x.st.t)}</h3><p>${escH(x.st.q || '')}</p><small>${x.d}/${x.n} bài</small></span></a></li>`;
         }).join('')}</ol>
-      </section>
-
-      <section class="at-sec" aria-labelledby="atL" data-at>
-        <div class="at-sec__head">
-          <div><p class="at-kick">Cấp độ &amp; XP</p><h2 class="at-sec__title" id="atL">Bộ sưu tập <em>con dấu</em></h2></div>
-          <a class="at-link" href="cap-do.html" title="Xem chi tiết 30 cấp và cách kiếm XP">Cấp ${level(s.xp).n}/30 · xem chi tiết</a>
-        </div>
-        <div class="lvmap" id="lvMap" aria-label="Bản đồ cấp độ"></div>
       </section>
 
       <div class="at-cols" data-at>

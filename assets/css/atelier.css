@@ -665,3 +665,28 @@ div.d-tile b{color:var(--at-tc)}
 
 /* một nền giấy duy nhất cho bài học, Lab và game (các trang này khai biến nền riêng) */
 :root[data-theme=ivory]{--lp-bg:var(--at-paper);--lb-bg:var(--at-paper);--lp-head:rgba(243,234,217,.92)}
+
+/* ---- Dashboard: các vùng rõ hơn (mỗi vùng một tấm giấy có viền mảnh) và khoảng cách gọn để cuộn ít hơn ---- */
+:root[data-theme=ivory] .at-body{display:grid;gap:clamp(14px,1.8vw,24px);padding-top:clamp(18px,2.4vw,34px);padding-bottom:clamp(48px,6vw,84px)}
+:root[data-theme=ivory] .at-body>.at-sec,
+:root[data-theme=ivory] .at-cols>section,
+:root[data-theme=ivory] .at-cols>aside>.at-blk,
+:root[data-theme=ivory] .at-cols>aside>div>.at-blk{
+  margin:0;padding:clamp(18px,2.2vw,30px);background:rgba(251,246,234,.78);border:1px solid rgba(29,21,16,.16);border-radius:2px 2px 42px 2px}
+:root[data-theme=ivory] .at-body>.at-sec[aria-labelledby=atJ]{background:var(--at-paper-2)}
+:root[data-theme=ivory] .at-sec__head{border-top:0;padding-top:0;margin-bottom:clamp(16px,2vw,26px);padding-bottom:14px;border-bottom:1px solid var(--at-rule)}
+:root[data-theme=ivory] .at-sec__title{font-size:clamp(1.6rem,2.8vw,2.5rem)}
+:root[data-theme=ivory] .at-cols{gap:clamp(14px,1.8vw,24px);align-items:start}
+:root[data-theme=ivory] .at-cols>aside{display:grid;gap:clamp(14px,1.8vw,24px)}
+:root[data-theme=ivory] .at-cols .at-blk{border-top:1px solid rgba(29,21,16,.16)}
+:root[data-theme=ivory] .lvmap__track{padding-top:28px}
+:root[data-theme=ivory] .lvmap__f{margin-top:10px}
+/* gọn hero + con đường để các vùng bên dưới lên cao hơn */
+.at-hero{padding-top:clamp(26px,3.4vw,48px);padding-bottom:clamp(54px,6vw,84px)}
+.at-hello{margin-top:clamp(12px,1.8vw,22px)}
+.at-hero h1.at-display{font-size:clamp(2rem,4.4vw,4.2rem)}
+.at-hero__cta{margin-top:clamp(18px,2.4vw,30px)}
+.at-trail{margin-top:clamp(18px,2.4vw,30px)}
+.at-hero__ph{min-height:280px}
+.at-stop{--rise:clamp(8px,1.2vw,18px)}
+.at-pass-slot{margin-top:-52px}
