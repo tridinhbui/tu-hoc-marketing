@@ -100,12 +100,17 @@ export function pickStageItems(bank, pool, n, rnd = Math.random, mix = STAGE_MIX
   for (const k of [3, 1, 2]) short += want[k] - take(k, want[k]);
   for (const k of [2, 3, 1]) { if (short <= 0) break; short -= take(k, short); }
   void order;
-  /* xen kẽ: không hai câu liền cùng bài */
+  /* xen kẽ: không hai câu liền cùng bài. Luôn lấy câu của bài còn nhiều câu nhất (khác bài vừa ra) để
+     không bị kẹt hai câu cùng bài ở cuối đề. */
   const out = [], rest = shuffle(picked, rnd);
+  const lessonOf = (id) => bank.items[id].lesson || id;
   while (rest.length) {
-    const last = out.length ? bank.items[out[out.length - 1]].lesson : null;
-    const i = rest.findIndex((id) => bank.items[id].lesson !== last);
-    out.push(rest.splice(i >= 0 ? i : 0, 1)[0]);
+    const last = out.length ? lessonOf(out[out.length - 1]) : null;
+    const left = {};
+    rest.forEach((id) => { left[lessonOf(id)] = (left[lessonOf(id)] || 0) + 1; });
+    let best = -1;
+    rest.forEach((id, k) => { if (lessonOf(id) !== last && (best < 0 || left[lessonOf(id)] > left[lessonOf(rest[best])])) best = k; });
+    out.push(rest.splice(best >= 0 ? best : 0, 1)[0]);
   }
   return out;
 }
