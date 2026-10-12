@@ -599,3 +599,34 @@ body.ed::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;
   .stats{gap:14px}
   .hero{padding-bottom:12px}
 }
+
+/* ---------- BỐ CỤC MÀN RỘNG: bớt khoảng trống lớn ở Case · Giải phẫu · Lộ trình ----------
+   Khung nội dung tối đa 1440px ở giữa; ba thẻ case xếp lệch ngay cạnh chữ; đoạn mô tả đặt cạnh tiêu đề thay vì dưới nó. */
+@media(min-width:1000px){
+  .cases-stage,.ana-head,.ana-body{max-width:1440px;margin-inline:auto}
+  .cases-stage{align-items:start}
+  .cases-title{grid-column:1/6;font-size:clamp(2.1rem,3.6vw,4.2rem)}
+  .cases-p{grid-column:1/5;margin-top:clamp(18px,2.2vw,32px)}
+  .cases-p+.link{grid-column:1/5;grid-row:3}
+  .cases-quote{grid-column:1/5;grid-row:4;align-self:start;margin-top:clamp(22px,3vw,48px)}
+  .cs-nike{grid-column:5/8;grid-row:1/5;margin-top:0}
+  .cs-duo{grid-column:8/11;grid-row:1/5;margin-top:clamp(30px,4.4vw,70px)}
+  .cs-apple{grid-column:10/13;grid-row:1/5;margin:clamp(120px,15vw,230px) 0 0;rotate:-2deg}
+
+  .ana-head{align-items:end}
+  .ana-title{grid-column:1/9;grid-row:2;font-size:clamp(2.6rem,7vw,8rem)}
+  .ana-p{grid-column:9/13;grid-row:2;align-self:end;margin:0 0 .6em}
+  .ana-head .kick{grid-row:1}
+
+  .road-sky{display:grid;grid-template-columns:repeat(12,minmax(0,calc(1440px/12 - 18px)));column-gap:18px;justify-content:center;padding-inline:var(--gx)}
+  .road-sky>.kick{grid-column:1/-1}
+  .road-title{grid-column:1/8;grid-row:2;max-width:none}
+  .road-p{grid-column:9/13;grid-row:2;align-self:end;margin:0 0 .6em}
+  .road-sky>.link{grid-column:9/13;grid-row:3;margin-top:4px;justify-self:start}
+  .road-map{grid-column:1/-1;grid-row:4;width:100vw;margin-left:calc(50% - 50vw);margin-right:0}
+}
+@media(min-width:1000px){
+  .cs-duo{grid-column:8/10;margin-top:clamp(46px,5.6vw,90px)}
+  .cs-apple{grid-column:10/13;margin-top:clamp(20px,2.4vw,40px);rotate:-1.6deg}
+  .cs-duo .cap{font-size:clamp(.85rem,1.05vw,1.15rem)}
+}
