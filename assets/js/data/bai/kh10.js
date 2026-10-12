@@ -266,7 +266,7 @@ BAI_ADD({ mod:'kh10', lessons:[
       d:'Đúng. Gọi đúng khoảnh khắc lo, rồi đưa bằng chứng cụ thể.'} },
   { type:'mcq', stem:'Vì sao không nên khuếch đại nỗi sợ dù nó làm tăng lượt nhấp ngắn hạn?',
     options:[{k:'a',t:'Nỗi sợ chỉ hiệu quả với phụ huynh có con nhỏ, không hiệu quả với phụ huynh có con lớn'},{k:'b',t:'Phụ huynh thấy bị thao túng, mất niềm tin; còn dễ vi phạm quy định'},
-             {k:'c',t:'Nền tảng quảng cáo thường từ chối duyệt mọi nội dung nhắc tới nỗi lo của phụ huynh'},{k:'d',t:'Nỗi sợ khiến khách soi giá kỹ hơn nên tỉ lệ chốt đơn tụt ngay trong tuần đầu'}],
+             {k:'c',t:'Nền tảng quảng cáo thường từ chối duyệt các nội dung nhắc tới nỗi lo của phụ huynh'},{k:'d',t:'Nỗi sợ khiến khách soi giá kỹ hơn nên tỉ lệ chốt đơn tụt ngay trong tuần đầu'}],
     answer:'b', why:{a:'Không có căn cứ phân biệt bố mẹ như vậy.',
       b:'Đúng. Niềm tin là tài sản dài hạn với phụ huynh; doạ nạt phá nó.',
       c:'Nền tảng không chặn mọi nội dung chạm nỗi lo; vấn đề là mức độ và cách nói.',

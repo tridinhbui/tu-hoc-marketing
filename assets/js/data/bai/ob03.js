@@ -336,7 +336,7 @@ BAI_ADD({ mod:'ob03', lessons:[
       c:'Thói quen tốt ở mọi ngành.',
       d:'Đúng. Điện máy biên thấp hơn nhiều; tỉ lệ ngân sách của mỹ phẩm sẽ làm lỗ.'} },
   { type:'mcq', stem:'Nhà phân phối gạo có lãi gộp 12 tỉ, chi phí vận hành 9 tỉ, muốn giữ lãi 1 tỉ. Giám đốc xin 3 tỉ cho xây thương hiệu. Bạn làm gì?',
-    options:[{k:'a',t:'Duyệt đủ 3 tỉ, vì thương hiệu mạnh sẽ tự nâng biên gộp về sau'},{k:'b',t:'Từ chối mọi chi phí marketing, vì ngành biên thấp không cần thương hiệu'},
+    options:[{k:'a',t:'Duyệt đủ 3 tỉ, vì thương hiệu mạnh sẽ tự nâng biên gộp về sau'},{k:'b',t:'Từ chối các chi phí marketing, vì ngành biên thấp không cần thương hiệu'},
              {k:'c',t:'Chỉ trần 2 tỉ theo phép tính, xin thêm khi chứng minh được tăng lãi gộp'},{k:'d',t:'Duyệt 3 tỉ và hạ lãi mong muốn xuống âm 1 tỉ cho đủ tiền'}],
     answer:'c', why:{a:'Niềm tin biên gộp sẽ tự tăng chưa có bằng chứng; chi 3 tỉ khi trần là 2 tỉ là lỗ ngay.',
       b:'Ngành biên thấp vẫn cần marketing, chỉ là ngân sách nhỏ và nhắm vào việc làm tăng khối lượng hoặc lãi gộp.',

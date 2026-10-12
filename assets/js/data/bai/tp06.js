@@ -158,7 +158,7 @@ BAI_ADD({ mod:'tp06', lessons:[
       c:'Trung thu là mùa bánh khác, không phải lúc mua bánh sinh nhật.',
       d:'Người quen giới thiệu có ích, nhưng khách vẫn phải tự nghĩ tới tên tiệm.'} },
   { type:'mcq', stem:'Hãng bánh Trung thu bán gần hết doanh số trong 6 tuần quanh Rằm tháng 8. Giám đốc muốn dồn phần lớn ngân sách vào 8 tuần quanh mùa, chừa một phần nhỏ giữ tên. Bạn nhận định thế nào?',
-    options:[{k:'a',t:'Sai, vì mọi hãng đều phải chạy đều quanh năm để trí nhớ không mòn'},{k:'b',t:'Sai, vì quảng cáo ngoài mùa sẽ tạo thêm nhu cầu mua bánh quanh năm'},
+    options:[{k:'a',t:'Sai, vì các hãng đều phải chạy đều quanh năm để trí nhớ không mòn'},{k:'b',t:'Sai, vì quảng cáo ngoài mùa sẽ tạo thêm nhu cầu mua bánh quanh năm'},
              {k:'c',t:'Hợp lý, vì khách mua theo mùa nên tiền cần nằm ở lúc quyết định xảy ra'},{k:'d',t:'Hợp lý, vì đợt dồn lớn sẽ giữ tên đọng lại tới mùa sau mà không cần nhắc'}],
     answer:'c', why:{a:'Chạy đều chỉ cần khi khách mua quanh năm; ngoài mùa bánh Trung thu không có ai mua để mà mất.',
       b:'Quảng cáo hiếm khi tạo nhu cầu mua bánh Trung thu giữa tháng 2; tiền ngoài mùa phần lớn là lãng phí.',

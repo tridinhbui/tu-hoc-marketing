@@ -152,7 +152,7 @@ BAI_ADD({ mod:'kh05', lessons:[
       d:'Đúng tệp: tiệm kín chỗ là vấn đề thật, đúng thứ cần hỏi sâu.'} },
   { type:'mcq', stem:'Một phần mềm kế toán cho tiệm tạp hoá muốn phỏng vấn chủ tạp hoá: họ bán cả ngày và hiếm đọc email. Cách tuyển nào hợp lý nhất?',
     options:[{k:'a',t:'Nhờ đồng nghiệp giới thiệu người thân hay bạn bè có mở tiệm tạp hoá'},{k:'b',t:'Gửi thư mời qua email hàng loạt tới danh sách chủ doanh nghiệp nhỏ'},
-             {k:'c',t:'Ghé tạp hoá lúc vắng khách, hỏi hai câu sàng lọc, nói 15 phút ngay tại quầy'},{k:'d',t:'Gửi tin nhắn SMS hàng loạt mời mọi chủ tạp hoá trong khu phố tham gia'}],
+             {k:'c',t:'Ghé tạp hoá lúc vắng khách, hỏi hai câu sàng lọc, nói 15 phút ngay tại quầy'},{k:'d',t:'Gửi tin nhắn SMS hàng loạt mời các chủ tạp hoá trong khu phố tham gia'}],
     answer:'c', why:{a:'Người quen muốn giúp bạn, lại là một nhóm nhỏ không chắc đúng hành vi.',
       b:'Chủ tạp hoá hiếm đọc email, và danh sách này không lọc theo hành vi.',
       c:'Đúng. Đến nơi khách thật có mặt, đúng lúc họ rảnh, sàng lọc bằng hành vi và hẹn ngắn.',

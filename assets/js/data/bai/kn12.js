@@ -22,7 +22,7 @@ BAI_ADD({ mod:'kn12', lessons:[
 { id:'B:kn12-01', skill:'channel', read:'6 phút', t:'Bài đăng nào phải dừng lại trước khi bấm "Đăng"?',
   situation:'Một shop mỹ phẩm online ở Hà Nội đăng khoảng 60 bài mỗi tháng trên Facebook, TikTok và Zalo. Trưởng nhóm đếm lại tháng trước: 8 bài có câu kiểu "trắng da số 1", "100% thiên nhiên"; 2 bài giới thiệu loại viên uống shop mới nhập; 2 bài là minigame bốc thăm tặng quà. Sáu tháng nay chưa bài nào bị gỡ, nên cả đội nghĩ "chắc không sao".',
   concept:{ name:'Bản đồ rủi ro quảng cáo (năm vùng)',
-    body:'Người làm marketing không cần thuộc luật, nhưng cần nhận ra năm vùng hay vướng: (1) <b>tuyên bố</b> cần bằng chứng ("nhất", "số 1", so sánh đối thủ); (2) <b>ngành đặc biệt</b> cần duyệt nội dung trước; (3) <b>khuyến mại</b> có thủ tục; (4) <b>KOL/KOC</b> nói thay mình; (5) <b>dữ liệu khách</b>. Khung chính: Luật Quảng cáo 2012, sửa đổi bởi Luật số 75/2025/QH15 (hiệu lực 1/1/2026); Nghị định 342/2025/NĐ-CP hướng dẫn, thay Nghị định 181/2013. Chạm vùng nào thì dừng, sửa, hỏi pháp chế hoặc lưu bằng chứng. Kiểm lần cuối 10/2026; không phải tư vấn pháp lý.' },
+    body:'Người làm marketing không cần thuộc luật, nhưng cần nhận ra năm vùng hay vướng: (1) <b>tuyên bố</b> cần bằng chứng ("nhất", "số 1", "100% thiên nhiên", so sánh đối thủ); (2) <b>ngành đặc biệt</b> cần duyệt nội dung trước (viên uống, sữa công thức cho trẻ nhỏ); (3) <b>khuyến mại</b> có thủ tục (bốc thăm, tặng quà); (4) <b>KOL/KOC</b> nói thay mình; (5) <b>dữ liệu khách</b> (số điện thoại mua từ ngoài). Khung chính: Luật Quảng cáo 2012, sửa đổi bởi Luật số 75/2025/QH15 (hiệu lực 1/1/2026); Nghị định 342/2025/NĐ-CP (hiệu lực 15/2/2026) hướng dẫn chi tiết. Chạm vùng nào thì dừng, sửa, hỏi pháp chế hoặc lưu bằng chứng. Kiểm lần cuối 10/2026; không phải tư vấn pháp lý.' },
   example:'Xếp 60 bài vào năm vùng: 8 bài thuộc vùng tuyên bố, 2 bài thuộc ngành đặc biệt (viên uống có thể là thực phẩm bảo vệ sức khoẻ, phải xin hồ sơ nhà cung cấp), 2 bài là khuyến mại may rủi. Tổng 12 bài, tức 20% (số minh hoạ). Không phải 12 bài này đều sai, nhưng chúng cần một người kiểm trước khi đăng. 48 bài còn lại (ảnh sản phẩm, hướng dẫn dùng) đi luồng thường. "Chưa bị gỡ" không chứng minh là đúng luật; có thể chỉ là chưa ai kiểm.',
   takeaway:'Không cần thuộc luật; cần nhận ra năm vùng rủi ro và dừng lại đúng chỗ.',
   apply:'Cho 6 nội dung sắp đăng của một quán trà sữa: (1) ảnh menu mới; (2) "trà sữa ngon nhất quận 3"; (3) bốc thăm hoá đơn trúng xe máy; (4) KOC được trả phí review món mới; (5) gửi tin Zalo cho 2.000 số điện thoại mua từ bên ngoài; (6) clip pha chế. Hãy xếp mỗi nội dung vào một vùng hoặc "luồng thường", và viết một hành động cho mỗi nội dung rủi ro. Đạt khi: (1) có đúng 4 nội dung rủi ro; (2) mỗi hành động là dừng, sửa, hỏi pháp chế hoặc lưu bằng chứng; (3) không bỏ sót nội dung nào.',
@@ -66,13 +66,13 @@ BAI_ADD({ mod:'kn12', lessons:[
       b:'Đúng. Tỉ lệ này cho biết đội phải kiểm bao nhiêu, không cho biết khả năng hay mức bị xử lý.',
       c:'80% là phần đi luồng thường, cũng không phải thước đo rủi ro.',
       d:'Nhân với doanh thu tạo ra một con số trông chính xác nhưng không có cơ sở.'} },
-  { type:'mcq', stem:'Khi nào người làm marketing nên chuyển câu hỏi sang pháp chế thay vì tự quyết?',
-    options:[{k:'a',t:'Khi bài đăng dùng từ ngữ cảm xúc mạnh như "mê mẩn", "đỉnh của chóp"'},{k:'b',t:'Khi bài đăng nhận nhiều bình luận chê sản phẩm ngay trong ngày đầu'},
-             {k:'c',t:'Khi đối thủ chạy nội dung tương tự mà chưa thấy bị xử lý gì'},{k:'d',t:'Khi nội dung chạm vùng rủi ro mà mình không chắc quy định hiện hành'}],
-    answer:'d', why:{a:'Từ ngữ cảm xúc không phải tuyên bố về công dụng; thường không cần pháp chế.',
-      b:'Bình luận chê là việc của chăm sóc khách hàng, trừ khi khách nói nội dung sai sự thật.',
-      c:'Đối thủ chưa bị xử lý không cho biết điều gì về nội dung của mình.',
-      d:'Đúng. Chạm vùng rủi ro cộng với không chắc chắn là tín hiệu để hỏi.'} }
+  { type:'mcq', stem:'Bài sắp đăng: "Serum niacinamide 5%, 30ml, 289.000đ, dùng 2 lần mỗi ngày sau khi rửa mặt", kèm ảnh nhãn thật. Bạn xử lý thế nào?',
+    options:[{k:'a',t:'Dừng lại, vì nêu tên thành phần là một tuyên bố công dụng phải có bằng chứng'},{k:'b',t:'Dừng lại, vì có ghi giá bán nên bài được tính là khuyến mại phải làm thủ tục'},
+             {k:'c',t:'Đăng luồng thường, chỉ đối chiếu con số 5% với nhãn và hồ sơ sản phẩm'},{k:'d',t:'Hỏi pháp chế trước, vì các bài về mỹ phẩm đều phải qua duyệt nội dung'}],
+    answer:'c', why:{a:'Nêu thành phần và hàm lượng là mô tả sự thật, chưa nói "trị", "hết" hay "nhất"; vùng tuyên bố chỉ bị chạm khi bài hứa một công dụng.',
+      b:'Giá niêm yết không phải khuyến mại; khuyến mại là giảm giá, tặng quà hay bốc thăm có điều kiện.',
+      c:'Đúng. Bài không chạm vùng nào; điều cần làm là bảo đảm con số trung thực, tức khớp nhãn và hồ sơ công bố.',
+      d:'Mỹ phẩm thường không thuộc nhóm phải duyệt nội dung trước; phân luồng để dành pháp chế cho bài thật sự chạm vùng rủi ro.'} }
   ] },
 
 /* ------------------------------------------------------------------ 02 */

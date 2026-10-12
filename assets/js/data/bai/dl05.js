@@ -477,7 +477,7 @@ BAI_ADD({ mod:'dl05', lessons:[
       c:'Ghi chú không giúp so sánh; người đọc vẫn thấy một bước nhảy giả.',
       d:'Cân nhắc là tầng quan trọng của phễu; bỏ đi là mất thông tin.'} },
   { type:'mcq', stem:'Vì sao nhịp quý thường hợp hơn nhịp tháng cho khảo sát thương hiệu ngành tiêu dùng?',
-    options:[{k:'a',t:'Công ty nghiên cứu thị trường chỉ nhận làm khảo sát theo quý'},{k:'b',t:'Mọi thương hiệu đều có chu kỳ nhập hàng cố định mỗi ba tháng'},
+    options:[{k:'a',t:'Công ty nghiên cứu thị trường chỉ nhận làm khảo sát theo quý'},{k:'b',t:'Các thương hiệu đều có chu kỳ nhập hàng cố định mỗi ba tháng'},
              {k:'c',t:'Báo cáo quý là quy định bắt buộc với doanh nghiệp niêm yết'},{k:'d',t:'Thương hiệu đổi chậm; đo tháng tốn tiền mà chủ yếu thấy nhiễu'}],
     answer:'d', why:{a:'Có thể làm theo tháng; vấn đề là chi phí so với giá trị.',
       b:'Không có chu kỳ cố định; quý là mức cân bằng thực tế.',

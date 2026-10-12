@@ -476,7 +476,7 @@ BAI_ADD({ mod:'ob05', lessons:[
       c:'Ảnh sản phẩm giống nhau vì cùng một thương hiệu.',
       d:'Đúng. Trong số liệu minh hoạ của bài, khi giá ngang 70% khách chọn sàn giao nhanh nhất.'} },
   { type:'mcq', stem:'Trên Shopee, một thương hiệu khác bán sữa rửa mặt cùng tầm giá nhưng giao nhanh hơn bạn một ngày; đơn của bạn ở sàn này giảm 10% trong tuần. Bạn chọn gì?',
-    options:[{k:'a',t:'Giảm giá 15% trên mọi sàn để lấy lại số đơn đã mất'},{k:'b',t:'Giữ giá, rút thời gian chuẩn bị và giao cho ngang đối thủ'},
+    options:[{k:'a',t:'Giảm giá 15% trên các sàn để lấy lại số đơn đã mất'},{k:'b',t:'Giữ giá, rút thời gian chuẩn bị và giao cho ngang đối thủ'},
              {k:'c',t:'Tăng giá để khách coi mình là hàng cao cấp hơn'},{k:'d',t:'Dồn tiền quảng cáo để khách nhớ tên thương hiệu hơn'}],
     answer:'b', why:{a:'Đua giá khi giá đã ngang làm mỏng lãi và đối thủ có thể giảm tiếp; trong số liệu minh hoạ, chênh lệch nằm ở tốc độ, không ở giá.',
       b:'Đúng, kèm đo lại đơn sau thay đổi. Trong số liệu minh hoạ, khi giá ngang giao nhanh quyết định; hãng nắm được giờ chuẩn bị hàng và dịch vụ giao chọn dùng, dù hạ tầng giao thuộc sàn.',

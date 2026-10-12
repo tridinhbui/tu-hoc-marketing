@@ -362,7 +362,7 @@ BAI_ADD({ mod:'tu02', lessons:[
       c:'Đúng. Nhân rộng từng nấc, và giữ nhịp thử cho lần sau.',
       d:'Dồn hết một lần sẽ gặp lợi suất giảm và bỏ các chiến dịch đang lãi.'} },
   { type:'mcq', stem:'Một quán cà phê chi 6 triệu/tháng; 1 triệu chỉ mua được vài đơn mỗi phép thử. Cách thử nào hợp lý?',
-    options:[{k:'a',t:'Không thử gì: 6 triệu quá nhỏ, mọi kết quả đều chỉ là ngẫu nhiên'},{k:'b',t:'Chia 1 triệu thành bốn phép thử nhỏ chạy cùng tuần để thử nhiều ý nhất'},
+    options:[{k:'a',t:'Không thử gì: 6 triệu quá nhỏ, các kết quả đều chỉ là ngẫu nhiên'},{k:'b',t:'Chia 1 triệu thành bốn phép thử nhỏ chạy cùng tuần để thử nhiều ý nhất'},
              {k:'c',t:'Dồn cả 6 triệu của một tháng cho thử, sau đó mới quay lại khai thác'},{k:'d',t:'Một phép thử chạy kéo dài vài tháng, đo bằng tin nhắn hỏi đặt bàn'}],
     answer:'d', why:{a:'Kết quả một tuần là ngẫu nhiên, nhưng thử chạy đủ lâu và đo bằng chỉ số trung gian vẫn tích được tín hiệu; không thử thì quán không có phương án khi mẫu mòn.',
       b:'Bốn phép thử mỗi cái vài đơn thì không cái nào phân biệt được thắng thua; ngân sách nhỏ càng phải thử ít phép.',

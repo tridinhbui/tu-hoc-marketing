@@ -13,7 +13,7 @@ BAI_ADD({ mod:'kh06', lessons:[
   mistakes:['Nghĩ nhu cầu có sẵn quanh năm nên rải ngân sách đều mọi tháng.','Chỉ nhắm theo nhân khẩu học mà bỏ qua sự kiện đang xảy ra trong đời khách.'],
   q:[
   { type:'mcq', stem:'Doanh số máy lọc nước dồn vào lúc chuyển nhà, có em bé và sau tin nước bẩn. Đoán xem vì sao?',
-    options:[{k:'a',t:'Đó là mùa cao điểm của cả ngành nên mọi hãng đều bán tốt hơn'},{k:'b',t:'Các sự kiện đó làm nhu cầu bật lên, khách bắt đầu chủ động tìm'},
+    options:[{k:'a',t:'Đó là mùa cao điểm của cả ngành nên các hãng đều bán tốt hơn'},{k:'b',t:'Các sự kiện đó làm nhu cầu bật lên, khách bắt đầu chủ động tìm'},
              {k:'c',t:'Quảng cáo cả năm dồn lại tới lúc đó mới đủ tần suất để khách nhớ'},{k:'d',t:'Người có em bé và người mua nhà thường có thu nhập cao hơn'}],
     answer:'b', why:{a:'Mùa cao điểm theo lịch sẽ lặp đúng tháng; ở đây đơn bám theo sự kiện đời sống (nhận nhà, sinh con, bản tin), không bám theo tháng.',
       b:'Đúng. Đó là các trigger: trước đó khách chưa có lý do, sau đó họ tự đi tìm.',
@@ -201,7 +201,7 @@ BAI_ADD({ mod:'kh06', lessons:[
     unit:'%', ans:35, tol:0.1, wrong:[[65,'NHAM_TI_LE_ROI'],[285.7,'SAI_MAU_SO']], errors:['NHAM_TI_LE_ROI','SAI_MAU_SO'],
     steps:['Tỉ lệ mất = số người đặt xuống ÷ số người cầm lên.','70 ÷ 200 = <b>35%</b>.'] },
   { type:'mcq', stem:'Hỏi 20 người đã đặt chai xuống: 9 nói chai bên cạnh có tem 1 tặng 1, 7 nói chai đó dễ thấy hơn, 4 nói giá rẻ hơn. Dải kệ và mặt trước đổi rất rẻ; tem ăn vào biên. Nên thử gì trước?',
-    options:[{k:'a',t:'Giảm giá thẳng 20% ở mọi siêu thị vì giá là lý do chung nhất'},{k:'b',t:'Làm chai dễ thấy hơn (dải kệ, mặt trước) trước, đo lại rồi mới cân tem'},
+    options:[{k:'a',t:'Giảm giá thẳng 20% ở các siêu thị vì giá là lý do chung nhất'},{k:'b',t:'Làm chai dễ thấy hơn (dải kệ, mặt trước) trước, đo lại rồi mới cân tem'},
              {k:'c',t:'Đưa ngay tem mua 1 tặng 1 vì đó là lý do nhiều người nêu nhất'},{k:'d',t:'Bỏ qua câu trả lời vì 20 người quá ít để rút ra điều gì cả'}],
     answer:'b', why:{a:'Chỉ 4/20 nói giá; giảm đều 20% ăn vào biên của mọi chai, kể cả người vốn đã chịu mua.',
       b:'Đúng. 20 người đủ để có giả thuyết chứ chưa đủ để chốt; thử cái rẻ và có nhiều người nêu (7/20) trước, đo tỉ lệ đặt xuống, rồi mới quyết cái đắt.',
