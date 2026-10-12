@@ -346,19 +346,19 @@ BAI_ADD({ mod:'kh01', lessons:[
 
 /* ------------------------------------------------------------------ 07 */
 { id:'B:kh01-07', skill:'brand', read:'7 phút', t:'Một sản phẩm, ba phân khúc: làm riêng hay làm chung?',
-  situation:'Một thương hiệu bánh mì sandwich đóng gói bán ở cửa hàng tiện lợi. Dữ liệu cho thấy ba nhóm: học sinh mua ăn sáng vội (bánh 10.000đ), nhân viên mua ăn trưa nhẹ (cần no, ít béo) và người đi phượt mua mang theo (cần để được lâu). Ngân sách chỉ đủ một chiến dịch lớn trong năm. Làm ba bản riêng hay một bản chung?',
+  situation:'Một thương hiệu bánh mì sandwich đóng gói bán ở cửa hàng tiện lợi. Dữ liệu cho thấy ba nhóm: học sinh mua ăn sáng vội (bánh 10.000đ), nhân viên mua ăn trưa nhẹ (cần no, ăn gọn một tay) và người đi phượt mua mang theo (cần để được lâu). Ngân sách chỉ đủ một chiến dịch lớn trong năm. Làm ba bản riêng hay một bản chung?',
   concept:{ name:'Phục vụ nhiều phân khúc bằng một sản phẩm',
     body:'Không phải mỗi phân khúc đều cần một sản phẩm riêng. Có ba cách: <b>chung lõi, khác bề mặt</b> — một sản phẩm, đổi quy cách, kênh và thông điệp theo nhóm; <b>chung thông điệp gốc</b> — tìm lợi ích mà mọi nhóm đều cần rồi nói điều đó; <b>tách dòng</b> — làm biến thể riêng khi nhu cầu khác đến mức một sản phẩm không vừa. Xa hơn nữa là <b>tách thương hiệu</b>, chỉ khi giá trị hai nhóm mâu thuẫn. Chọn bằng ba câu hỏi: nhu cầu khác ở lõi hay ở bề mặt; nhóm đủ lớn để bù chi phí cố định không; mỗi gói thêm lãi bao nhiêu. Đổi bề mặt rẻ nhất, nên thử trước.' },
-  example:'Thương hiệu chọn chung lõi, khác bề mặt: giữ một công thức bánh, làm gói đôi cho người phượt (in hạn dùng rõ), gói đơn giá 10.000đ cho học sinh đặt gần quầy thu ngân buổi sáng, và combo bánh + sữa cho bữa trưa văn phòng. Chiến dịch lớn nói lợi ích chung "no gọn trong một tay", mỗi điểm bán có biển nhỏ riêng cho dịp của mình. Chi phí thêm chỉ là bao bì và biển, không phải ba dây chuyền.',
+  example:'Thương hiệu giữ một công thức cho học sinh và văn phòng: gói đơn 10.000đ đặt gần quầy thu ngân buổi sáng, combo bánh + sữa cho bữa trưa. Chiến dịch lớn nói lợi ích chung "no gọn trong một tay", mỗi điểm bán có biển nhỏ riêng. Người phượt cần bánh để lâu hơn, tức đổi lõi: đây là ứng viên tách dòng, chỉ làm khi đủ khoảng 75 nghìn gói mỗi năm (bài toán hoà vốn ở Q3); trước đó chỉ in hạn dùng rõ trên gói đôi.',
   takeaway:'Tách bề mặt trước, tách sản phẩm chỉ khi một lõi không còn vừa.',
   apply:'Chọn một món hàng tiện lợi. Nói ba nhóm mua nó và cách đổi bề mặt (gói, kênh, lời nói) cho từng nhóm, trong 60 giây.',
   mistakes:['Làm sản phẩm riêng cho mỗi nhóm khi chỉ cần đổi gói và điểm đặt.','Viết một thông điệp chung chung đến mức không nhóm nào thấy mình trong đó.'],
   q:[
   { type:'mcq', stem:'Đoán trước: với ngân sách chỉ đủ một chiến dịch lớn, cách nào hợp lý nhất?',
-    options:[{k:'a',t:'Ba chiến dịch nhỏ riêng, mỗi cái một phần ba ngân sách'},{k:'b',t:'Một chiến dịch chung, đổi bề mặt theo từng điểm bán'},
+    options:[{k:'a',t:'Ba chiến dịch nhỏ riêng, mỗi cái một phần ba ngân sách, nói đúng ngôn ngữ riêng của từng nhóm'},{k:'b',t:'Một thông điệp gốc dùng chung, mỗi điểm bán đổi gói và biển theo nhóm khách'},
              {k:'c',t:'Chỉ nói với nhóm học sinh vì đông nhất'},{k:'d',t:'Làm ba công thức riêng, mỗi nhóm một chiến dịch riêng'}],
     answer:'b', why:{a:'Chia ba thì mỗi chiến dịch quá mỏng để được nhớ.',
-      b:'Đúng. Lõi chung giữ sức nặng, bề mặt riêng giữ độ đúng người.',
+      b:'Đúng. Thông điệp chung giữ sức nặng, gói và biển riêng giữ độ đúng người.',
       c:'Có thể là lựa chọn, nhưng bỏ hai nhóm đang mua sẵn là phí khi đổi bề mặt rất rẻ.',
       d:'Tốn chi phí sản xuất lớn trước khi biết có cần hay không.'} },
   { type:'mcq', stem:'Nhóm người phượt phàn nàn bánh hỏng sau 2 ngày. Bạn chọn làm gì?',
