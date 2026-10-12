@@ -702,3 +702,14 @@ div.d-tile b{color:var(--at-tc)}
 :root[data-theme=ivory] .rc>.next{background:var(--at-paper-2)}
 :root[data-theme=ivory] .rc .kick{display:flex;align-items:center;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--at-rule-s);margin-bottom:8px}
 :root[data-theme=ivory] .colbtn{background:transparent;border:1px solid var(--at-rule);border-radius:50%}
+
+/* ---- Các trang khác: khu chức năng/cột phụ cũng là tấm giấy có viền (cùng ngôn ngữ với Dashboard & Học bài) ---- */
+:root[data-theme=ivory] .sb,:root[data-theme=ivory] .rm__panel,:root[data-theme=ivory] .tk-card,:root[data-theme=ivory] .cm-card,
+:root[data-theme=ivory] .g .card,:root[data-theme=ivory] .at-ledger{
+  background:rgba(251,246,234,.78);border:1px solid rgba(29,21,16,.16);border-radius:2px 2px 34px 2px;padding:clamp(16px,2vw,24px);box-shadow:none}
+:root[data-theme=ivory] .sb{padding:6px 18px 4px;overflow:hidden}
+:root[data-theme=ivory] .sb__h{padding-left:0;border-bottom:1px solid var(--at-rule-s)}
+:root[data-theme=ivory] .rm__sug{border:1px solid rgba(168,70,31,.28);border-radius:2px 2px 34px 2px}
+:root[data-theme=ivory] .tk-card{margin-bottom:18px}
+:root[data-theme=ivory] .at-ledger{margin:8px 0 28px;padding:6px clamp(16px,2vw,24px)}
+:root[data-theme=ivory] .rm__col,:root[data-theme=ivory] .lp-side{gap:14px}

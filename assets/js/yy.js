@@ -30,12 +30,13 @@
   /* bong bóng chat */
   '.yy-fab{position:fixed;right:18px;bottom:84px;z-index:70;border:0;padding:0;cursor:pointer;background:none}' +
   '.yy-fab .yy-av{width:54px;height:54px;font-size:22px}' +
-  '.yy-fab--solo{bottom:22px;display:flex;align-items:center;gap:10px;background:#fffdf8;border:1px solid rgba(120,84,50,.22);border-radius:999px;padding:6px 16px 6px 6px;box-shadow:0 18px 36px -16px rgba(60,30,10,.6)}' +
+  '.yy-fab--solo{right:max(76px,calc(env(safe-area-inset-right) + 70px));bottom:16px;display:flex;align-items:center;gap:10px;background:#fffdf8;border:1px solid rgba(120,84,50,.22);border-radius:999px;padding:6px 16px 6px 6px;box-shadow:0 18px 36px -16px rgba(60,30,10,.6)}' +
   '.yy-fab--solo .yy-av{width:48px;height:48px}.yy-fab--solo b{font:700 14px var(--sans,system-ui);color:#2B1A11}' +
+  '@media(max-width:999px){.yy-fab--solo{right:12px;bottom:max(16px,env(safe-area-inset-bottom));padding:5px}.yy-fab--solo b{display:none}.yy-tip--solo{right:12px;bottom:78px}}' +
   '.yy-fab--solo::before{content:"";position:absolute;inset:-5px;border-radius:999px;border:2px solid rgba(184,80,45,.35);animation:yyp 2.4s ease-out infinite;pointer-events:none}' +
   '@keyframes yyp{0%{transform:scale(.96);opacity:.9}100%{transform:scale(1.12);opacity:0}}' +
   '.yy-tip{position:fixed;right:84px;bottom:92px;z-index:70;max-width:min(300px,calc(100vw - 120px));background:#fffdf8;color:#2B1A11;border:1px solid rgba(120,84,50,.2);border-radius:16px 16px 4px 16px;padding:11px 14px;font:500 13.5px/1.5 var(--sans,system-ui);box-shadow:0 14px 30px -14px rgba(60,30,10,.5);cursor:pointer}' +
-  '.yy-tip--solo{right:22px;bottom:88px;border-radius:16px 16px 16px 4px}' +
+  '.yy-tip--solo{right:max(76px,calc(env(safe-area-inset-right) + 70px));bottom:84px;border-radius:16px 16px 16px 4px}' +
   '.yy-panel{position:fixed;right:18px;bottom:150px;z-index:71;width:min(380px,calc(100vw - 36px));height:min(520px,calc(100vh - 190px));display:flex;flex-direction:column;background:#FFFCF6;color:#2B1A11;border:1px solid rgba(120,84,50,.2);border-radius:22px;box-shadow:0 30px 60px -24px rgba(60,30,10,.55);overflow:hidden}' +
   '.yy-panel--solo{bottom:90px}' +
   '.yy-panel[hidden]{display:none}' +
@@ -309,7 +310,13 @@
     tipEl.onclick = function(){ YY.open(); };
     document.body.appendChild(tipEl);
     var el = tipEl;
-    YY.type(el, text).then(function(){ setTimeout(function(){ if (tipEl === el) hideTip(); }, 7000); });
+    var gone = function(){ if (tipEl === el) hideTip(); };
+    YY.hideTip = gone;
+    setTimeout(function(){
+      ['wheel','touchmove','keydown','pointerdown'].forEach(function(ev){ document.addEventListener(ev, gone, { once: true, passive: true, capture: true }); });
+      try { var fr = document.getElementById('frame'); if (fr && fr.contentWindow) ['wheel','touchmove','pointerdown'].forEach(function(ev){ fr.contentWindow.addEventListener(ev, gone, { once: true, passive: true, capture: true }); }); } catch (e) {}
+    }, 1200);
+    YY.type(el, text).then(function(){ setTimeout(gone, 5000); });
   };
 
   /* cấu hình: {mode:'app'|'landing'|'page', greet, chips, go, base} */
