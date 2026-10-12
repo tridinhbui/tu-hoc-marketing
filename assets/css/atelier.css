@@ -877,3 +877,9 @@ div.d-tile b{color:var(--at-tc)}
   .at-hero h1.at-display{font-size:clamp(1.5rem,5.4vw,2.4rem)}
 }
 @media(max-width:560px){.at-hero__ph .ph{aspect-ratio:4/3;margin-left:0}}
+
+/* điện thoại: nhãn "bạn ở đây" không còn chồng lên số chặng — gắn vào dòng số bài */
+@media(max-width:959px){
+  .at-stop[data-s=here]::after{content:none;display:none}
+  .at-stop[data-s=here] small::after{content:" · bạn ở đây";font-family:var(--at-hand);font-size:17px;letter-spacing:0;text-transform:none;color:var(--at-tc);margin-left:2px}
+}

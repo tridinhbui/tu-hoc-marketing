@@ -181,13 +181,13 @@
     <div class="stage__load" id="load" aria-hidden="true"></div>
     <iframe id="frame" title="Nội dung" src="about:blank"></iframe>
   </main>
+  <!-- Nằm trong .shell: .shell (position:fixed) là một ngữ cảnh xếp chồng, nên thanh trên, nút mở, lớp phủ và ngăn kéo phải cùng ngữ cảnh để z-index so sánh đúng. -->
+  <div class="mbar" aria-hidden="true"><img src="assets/img/logo-mark-96.png" alt="" width="26" height="26"><span><b>Tự Học</b> Marketing</span></div>
+  <button class="rail__open" id="open" type="button" aria-label="Mở menu" aria-controls="rail" aria-expanded="false">
+    <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <div class="rail__scrim" id="scrim"></div>
 </div>
-<div class="mbar" aria-hidden="true"><img src="assets/img/logo-mark-96.png" alt="" width="26" height="26"><span><b>Tự Học</b> Marketing</span></div>
-<button class="rail__open" id="open" type="button" aria-label="Mở menu" aria-controls="rail" aria-expanded="false">
-  <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-</button>
-<div class="rail__scrim" id="scrim"></div>
-
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>
