@@ -57,7 +57,7 @@ BAI_ADD({ mod:'gt02', lessons:[
 
 /* ------------------------------------------------------------------ 02 */
 { id:'B:gt02-02', skill:'measure', read:'7 phút', t:'Khách mới hay khách cũ đang biến mất?',
-  situation:'Một shop mỹ phẩm online trên Shopee có doanh thu quý 3 giảm 150 triệu so với quý 2. Chủ shop định tăng gấp đôi ngân sách quảng cáo để "kéo khách về". Bạn mở dữ liệu đơn hàng và thấy mỗi đơn đều gắn mã khách, nên có thể biết đơn nào đến từ người mua lần đầu, đơn nào từ người đã mua trước đó.',
+  situation:'Một shop mỹ phẩm online trên Shopee có doanh thu quý 3 giảm 150 triệu so với quý 2. Chủ shop định tăng gấp đôi ngân sách quảng cáo để "kéo khách về". Sàn không phải lúc nào cũng cho người bán nhận diện một khách qua nhiều đơn, nên bạn ghép đơn hàng với danh sách khách của shop (CRM, Zalo, số điện thoại khách đã đồng ý để lại) và biết được đơn nào đến từ người mua lần đầu, đơn nào từ người đã mua trước đó.',
   concept:{ name:'Tách khách mới – khách cũ',
     body:'Nhánh "số khách" nên tách tiếp thành <b>khách mới</b> (lần đầu mua trong kỳ) và <b>khách cũ</b> (đã mua trước đó và quay lại). Hai nhóm này hỏng vì những lý do rất khác nhau: khách mới giảm thường do quảng cáo, hiển thị, giá so với đối thủ; khách cũ giảm thường do trải nghiệm, chất lượng, chăm sóc sau mua. Chữa sai nhánh thì tốn tiền mà doanh thu không về.' },
   example:'Quý 2: khách mới mang về 300 triệu, khách cũ 500 triệu. Quý 3: khách mới 290 triệu, khách cũ 360 triệu. Tổng giảm 150 triệu, trong đó khách cũ giảm 140 triệu, chiếm hơn 93% mức giảm. Tăng quảng cáo gấp đôi chỉ đánh vào nhánh khách mới vốn gần như không đổi. Việc cần làm trước là gọi hỏi những khách cũ đã không quay lại.',

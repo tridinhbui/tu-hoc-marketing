@@ -236,10 +236,10 @@ BAI_ADD({ mod:'tp09', lessons:[
 
 /* ------------------------------------------------------------------ 05 */
 { id:'B:tp09-05', skill:'creative', read:'6 phút', t:'Chi tiết nào làm câu chuyện đáng tin?',
-  situation:'Một hãng giày chạy bộ nội địa đăng hai bài kể chuyện khách hàng. Bài A: "Anh Minh đã vượt qua giới hạn bản thân nhờ đôi giày đồng hành." Bài B: "Anh Minh, 38 tuổi, kế toán ở Đà Nẵng, bắt đầu chạy lúc 5 giờ sáng quanh cầu Rồng vì cân nặng 86 kg; sau 7 tháng và khoảng 1.100 km, anh về đích 21 km đầu tiên." Bài A có 320 lượt tương tác, bài B có 2.400.',
+  situation:'Một hãng giày chạy bộ nội địa đăng hai bài kể chuyện khách hàng. Bài A: "Anh Minh đã vượt qua giới hạn bản thân nhờ đôi giày đồng hành." Bài B: "Anh Minh, 38 tuổi, kế toán ở Đà Nẵng, bắt đầu chạy lúc 5 giờ sáng quanh cầu Rồng vì cân nặng 86 kg; sau 7 tháng và khoảng 650 km, anh về đích 21 km đầu tiên." Bài A có 320 lượt tương tác, bài B có 2.400.',
   concept:{ name:'Chi tiết cụ thể là bằng chứng ngầm',
     body:'Tính từ ("vượt qua giới hạn", "đồng hành", "tuyệt vời") thì ai cũng viết được, nên người đọc không tin. <b>Chi tiết cụ thể</b> — tên, tuổi, nghề, giờ, nơi chốn, con số, một đồ vật — là thứ khó bịa, nên chúng làm câu chuyện đáng tin. Chi tiết còn giúp người đọc <b>nhìn thấy</b> cảnh. Nguyên tắc: thay mỗi tính từ bằng một điều có thể chụp ảnh hoặc đếm được. Nhưng đừng nhồi: 3–5 chi tiết đắt giá tốt hơn 15 chi tiết vụn.' },
-  example:'Bài B có tuổi (38), nghề (kế toán), nơi (cầu Rồng), giờ (5 giờ sáng), lý do (86 kg), quãng thời gian (7 tháng), quãng đường (1.100 km). Mỗi chi tiết khiến câu chuyện kiểm chứng được. Tương tác gấp 7,5 lần. Đôi giày không cần được khen: chỉ cần 1.100 km là người đọc tự suy ra "giày chịu được".',
+  example:'Bài B có tuổi (38), nghề (kế toán), nơi (cầu Rồng), giờ (5 giờ sáng), lý do (86 kg), quãng thời gian (7 tháng), quãng đường (650 km). Mỗi chi tiết khiến câu chuyện kiểm chứng được. Tương tác gấp 7,5 lần. Đôi giày không cần được khen: chỉ cần 650 km là người đọc tự suy ra "giày chịu được".',
   takeaway:'Thay mỗi tính từ bằng một điều chụp được hoặc đếm được.',
   apply:'Lấy một câu quảng cáo có tính từ "chất lượng" hoặc "tận tâm". Viết lại bằng một chi tiết cụ thể trong 60 giây.',
   mistakes:['Viết bằng tính từ cảm xúc vì nghĩ chúng "mạnh" hơn.','Nhồi quá nhiều số liệu khiến câu chuyện thành bảng thông số.'],
@@ -261,7 +261,7 @@ BAI_ADD({ mod:'tp09', lessons:[
   { type:'calc', stem:'Bài A có 320 lượt tương tác, bài B có 2.400. Bài B gấp bao nhiêu lần bài A?',
     unit:'lần', ans:7.5, tol:0.05, wrong:[[0.13,'SAI_MAU_SO'],[2080,'NHAM_SO_TUYET_DOI']], errors:['SAI_MAU_SO','NHAM_SO_TUYET_DOI'],
     steps:['Số lần = tương tác bài B ÷ tương tác bài A.','2.400 ÷ 320 = <b>7,5 lần</b>.'] },
-  { type:'mcq', stem:'Vì sao chi tiết "1.100 km" hiệu quả hơn câu "đôi giày cực kỳ bền"?',
+  { type:'mcq', stem:'Vì sao chi tiết "650 km" hiệu quả hơn câu "đôi giày cực kỳ bền"?',
     options:[{k:'a',t:'Vì con số lớn làm người đọc choáng ngợp'},{k:'b',t:'Vì người đọc tự suy ra độ bền từ một điều đếm được'},
              {k:'c',t:'Vì câu "cực kỳ bền" vi phạm quy định quảng cáo'},{k:'d',t:'Vì người chạy bộ chỉ đọc số, không đọc chữ trong các bài đăng mạng xã hội'}],
     answer:'b', why:{a:'Không phải choáng ngợp; con số hiệu quả vì kiểm chứng được và gợi hình.',
@@ -293,7 +293,7 @@ BAI_ADD({ mod:'tp09', lessons:[
 
 /* ------------------------------------------------------------------ 06 */
 { id:'B:tp09-06', skill:'channel', read:'6 phút', t:'Kể một câu chuyện trong 15 giây được không?',
-  situation:'Một thương hiệu trà sữa có TVC 60 giây kể chuyện hai bạn thân giận nhau rồi làm lành bên ly trà. Kế hoạch mới chạy chủ yếu trên TikTok và YouTube Shorts, với định dạng 15 giây. Bản cắt thô đầu tiên — lấy 15 giây đẹp nhất của TVC — cho tỉ lệ xem hết 12%, trong khi các clip 15 giây khác của ngành trung bình khoảng 25%.',
+  situation:'Một thương hiệu trà sữa có TVC 60 giây kể chuyện hai bạn thân giận nhau rồi làm lành bên ly trà. Kế hoạch mới chạy chủ yếu trên TikTok và YouTube Shorts, với định dạng 15 giây. Bản cắt thô đầu tiên — lấy 15 giây đẹp nhất của TVC — cho tỉ lệ xem hết 12%, trong khi các clip 15 giây khác của chính thương hiệu đạt khoảng 25% (số liệu minh hoạ của bài, không phải chuẩn ngành).',
   concept:{ name:'Nén chuyện: vào thẳng trở ngại, thay đổi bằng một hình',
     body:'15 giây vẫn đủ cho câu chuyện nếu bỏ phần dạo đầu. Cấu trúc nén: <b>giây 0–3</b> vào thẳng trở ngại (người xem phải hiểu ngay có chuyện gì), <b>giây 3–11</b> một hành động dẫn tới thay đổi, <b>giây 11–15</b> một hình ảnh cho thấy thay đổi cùng thương hiệu. Không cắt ngắn clip dài; hãy viết lại cho 15 giây. Cắt thô thường mất đúng phần trở ngại — thứ giữ người xem ở lại.' },
   example:'Viết lại: giây 0–3, tin nhắn "Thôi khỏi đi chung nữa" hiện trên màn hình điện thoại. Giây 3–11, một bạn đứng trước quầy, gọi hai ly, ghi lên ly kia tên bạn mình. Giây 11–15, hai ly đặt cạnh nhau, tin nhắn mới: "Ra cổng đi." Logo. Tỉ lệ xem hết bản viết lại: 27%, so với 12% của bản cắt thô.',
@@ -305,7 +305,7 @@ BAI_ADD({ mod:'tp09', lessons:[
     options:[{k:'a',t:'Cảnh đẹp nhất thường thiếu trở ngại, người xem không có lý do ở lại'},{k:'b',t:'Người xem TikTok không quan tâm đến trà sữa'},
              {k:'c',t:'Chất lượng hình ảnh TVC quá cao so với định dạng dọc của nền tảng'},{k:'d',t:'15 giây quá ngắn để kể một câu chuyện'}],
     answer:'a', why:{a:'Đúng. Cắt theo "đẹp" thường lấy cảnh cao trào mà bỏ bối cảnh; người xem không biết chuyện gì đang xảy ra.',
-      b:'Ngành trung bình 25% cho thấy người xem vẫn xem clip trà sữa.',
+      b:'Các clip 15 giây khác của thương hiệu vẫn được xem hết nhiều hơn, nên người xem không chê trà sữa.',
       c:'Chất lượng hình không phải lý do khiến người xem rời đi sớm.',
       d:'Bản viết lại đạt 27% cho thấy 15 giây đủ nếu được viết cho 15 giây.'} },
   { type:'mcq', stem:'Bạn có ngân sách làm lại một bản 15 giây. Bạn chọn cách nào?',

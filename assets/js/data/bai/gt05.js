@@ -175,7 +175,7 @@ BAI_ADD({ mod:'gt05', lessons:[
 
 /* ------------------------------------------------------------------ 04 */
 { id:'B:gt05-04', skill:'insight', read:'7 phút', t:'Ô “insight” trong brief đang chứa dữ kiện hay chứa sự thật về con người?',
-  situation:'Brief của nhãn nước tăng lực Sấm ghi ô insight: “70% tài xế công nghệ làm việc trên 10 tiếng mỗi ngày”. Đội sáng tạo đọc xong bảo: “Con số này đúng, nhưng tụi em không biết viết gì từ nó.” Trong phỏng vấn, một tài xế nói: “Buồn ngủ thì dừng uống ly cà phê, nhưng dừng 15 phút là mất một cuốc.”',
+  situation:'Giả sử brief của nhãn nước tăng lực Sấm (thương hiệu và số liệu minh hoạ) ghi ô insight: “70% tài xế công nghệ làm việc trên 10 tiếng mỗi ngày”. Đội sáng tạo đọc xong bảo: “Con số này đúng, nhưng tụi em không biết viết gì từ nó.” Trong phỏng vấn, một tài xế nói: “Buồn ngủ thì dừng uống ly cà phê, nhưng dừng 15 phút là mất một cuốc.”',
   concept:{ name:'Insight = sự thật + căng thẳng',
     body:'Dữ kiện nói điều gì đang xảy ra; insight nói <b>vì sao người ta kẹt</b>. Insight tốt thường có hai vế đối nhau: điều người đó muốn và điều ngăn họ. Người đọc thấy mình trong đó và gật đầu: “đúng là vậy”. Trong brief, insight là cầu nối từ chân dung sang thông điệp: nó chỉ chỗ thương hiệu có thể chen vào gỡ nút. Một câu insight nên viết bằng giọng của khách, không phải giọng báo cáo.' },
   example:'Đổi từ dữ kiện sang insight: “Tôi cần tỉnh để chạy tiếp, nhưng dừng lại nghỉ thì mất cuốc, mất tiền.” Hai vế đối nhau: muốn tỉnh và sợ mất thu nhập. Chỗ Sấm chen vào hiện ra ngay: tỉnh táo mà không phải dừng lâu. Nếu một cuốc trung bình 40.000 đồng và tài xế dừng ba lần mỗi ca, mỗi lần mất một cuốc, họ thấy rõ 120.000 đồng một ca. Con số 70% vẫn ở lại brief, nhưng ở phần bối cảnh.',

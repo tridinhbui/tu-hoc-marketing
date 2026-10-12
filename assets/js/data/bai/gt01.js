@@ -265,7 +265,7 @@ BAI_ADD({ mod:'gt01', lessons:[
       c:'Nghi ngờ mà không giúp tìm ra đích.',
       d:'Câu hỏi thực hiện, đến quá sớm.'} },
   { type:'mcq', stem:'Vì sao không nên phản bác ngay "TikTok không hợp với khách 30–45 tuổi"?',
-    options:[{k:'a',t:'Vì nên làm thử trước, sau 6 tuần dữ liệu sẽ tự trả lời'},{k:'b',t:'Vì TikTok giờ đã có nhiều người dùng ở độ tuổi 30–45'},
+    options:[{k:'a',t:'Vì nên làm thử trước, sau 6 tuần dữ liệu sẽ tự trả lời'},{k:'b',t:'Vì TikTok cũng có người dùng ở độ tuổi 30–45, không chỉ giới trẻ'},
              {k:'c',t:'Vì phản bác làm mất thời gian họp, nên cứ làm cho xong việc'},{k:'d',t:'Vì chưa rõ sếp lo gì; có thể TikTok vẫn đúng với vấn đề đó'}],
     answer:'d', why:{a:'Làm trước khi rõ đích thì 6 tuần sau vẫn không biết nên đo con số nào.',
       b:'Có thể đúng, nhưng phản bác bằng số liệu chung vẫn bỏ qua điều sếp thực sự lo; cần dữ kiện của chính thương hiệu.',

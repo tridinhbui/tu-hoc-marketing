@@ -121,7 +121,7 @@ BAI_ADD({ mod:'tn04', lessons:[
   situation:'Một thương hiệu mỹ phẩm bán serum 150k trên Shopee, giá vốn 90k. Họ thử hai kiểu khuyến mãi, mỗi kiểu chạy cho một nửa lượt khách vào trang trong cùng hai tuần. Kiểu A giảm 20% còn 120k: bán 500 đơn. Kiểu B giữ giá 150k, tặng kèm một mặt nạ giấy giá vốn 15k: bán 400 đơn. Đội bán hàng muốn chọn A vì "bán được nhiều hơn".',
   concept:{ name:'So khuyến mãi bằng lãi, không bằng doanh số',
     body:'Mỗi kiểu khuyến mãi tốn một khoản khác nhau: giảm giá tốn bằng tiền mặt trên mọi đơn, quà tặng tốn bằng giá vốn của quà, mua kèm tốn bằng biên của món kèm. Vì vậy so số đơn hay doanh thu giữa các kiểu là so hai thứ có chi phí khác nhau. Cách so đúng: với mỗi kiểu, tính <b>lãi = số đơn × (giá bán thực − giá vốn − chi phí khuyến mãi mỗi đơn)</b>, trong cùng thời gian và cùng lượng khách tiếp cận.' },
-  example:'Kiểu A: lãi mỗi đơn 120k − 90k = 30k; 500 đơn → 15 triệu. Kiểu B: lãi mỗi đơn 150k − 90k − 15k = 45k; 400 đơn → 18 triệu. B ít hơn 100 đơn nhưng lãi hơn 3 triệu. Thêm một điểm: khách của B quen với giá 150k, còn khách của A sẽ chờ đợt giảm tiếp theo.',
+  example:'Kiểu A: lãi mỗi đơn 120k − 90k = 30k; 500 đơn → 15 triệu. Kiểu B: lãi mỗi đơn 150k − 90k − 15k = 45k; 400 đơn → 18 triệu. B ít hơn 100 đơn nhưng lãi hơn 3 triệu. Thêm một điểm: khách của B quen với giá 150k, còn khách của A có thể quen với việc chờ đợt giảm tiếp theo (nhận định cần kiểm bằng tỉ lệ mua lặp).',
   takeaway:'Đếm đơn là đếm công sức; đếm lãi mới biết khuyến mãi nào đáng chạy lại.',
   apply:'Chọn hai kiểu khuyến mãi bạn từng thấy trên sàn. Nói trong 60 giây: mỗi kiểu tốn chi phí ở đâu và bạn sẽ so bằng con số nào.',
   mistakes:['Chọn kiểu khuyến mãi bán được nhiều đơn nhất.','Quên cộng giá vốn quà tặng khi tính lãi.'],

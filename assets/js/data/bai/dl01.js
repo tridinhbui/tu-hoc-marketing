@@ -420,7 +420,7 @@ BAI_ADD({ mod:'dl01', lessons:[
   { type:'calc', stem:'Mỗi quý có 50.000 lượt vào trang. Tỉ lệ ra đơn tăng từ 0,6% lên 0,75%. Số đơn mỗi quý tăng thêm bao nhiêu?',
     unit:'đơn', ans:75, tol:1, wrong:[[7500,'NHAM_DIEM_PHAN_TRAM'],[375,'NHAM_SO_TUYET_DOI']], errors:['NHAM_DIEM_PHAN_TRAM'],
     steps:['Đơn hiện tại = 50.000 × 0,6% = 300.','Đơn mục tiêu = 50.000 × 0,75% = 375.','Tăng thêm = <b>75</b> đơn.'] },
-  { type:'mcq', stem:'Một bài viết nói "tỉ lệ chuyển đổi trung bình ngành thương mại điện tử là 3%". Vì sao không nên dùng thẳng làm mục tiêu?',
+  { type:'mcq', stem:'Một bài viết không ghi nguồn nói "tỉ lệ chuyển đổi trung bình ngành thương mại điện tử là 3%". Vì sao không nên dùng thẳng làm mục tiêu?',
     options:[{k:'a',t:'Số liệu trên mạng thường do bên bán khoá học công bố'},{k:'b',t:'3% quá thấp, shop tốt nên đặt mục tiêu cao gấp đôi'},
              {k:'c',t:'Không rõ mẫu số, ngành hàng, nguồn khách và thời điểm đo'},{k:'d',t:'Mỗi nền tảng tính tỉ lệ khác nhau nên chỉ số Việt Nam mới đúng'}],
     answer:'c', why:{a:'Nguồn gốc chưa phải vấn đề chính; con số trộn quá nhiều loại hàng, nguồn khách và cách đo.',

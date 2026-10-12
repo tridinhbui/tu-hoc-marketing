@@ -4,7 +4,7 @@ const PRINCIPLES = [
  one:'Chia thị trường theo cách khiến bạn phải hành động khác đi. Nếu hai nhóm dẫn đến cùng một kế hoạch, đó không phải hai nhóm.',
  ex:'Chia theo dịp sử dụng: cà phê "để tỉnh lúc 7h sáng" và cà phê "để ngồi làm việc 2 tiếng" là hai thị trường khác nhau dù cùng một khách.',
  counter:'Chia theo nhân khẩu học chung chung: "nam 18–35, thành thị, thu nhập khá" — mô tả này đúng với hầu hết mọi thứ nên không dẫn tới quyết định nào.',
- brand:'Highlands phân khúc theo dịp ngồi, không theo tuổi.',
+ brand:'Minh hoạ: một chuỗi cà phê có thể phân khúc theo dịp ngồi (làm việc, gặp bạn, mang đi) thay vì theo tuổi.',
  mistake:'Phân khúc để làm slide, không phải để thay đổi sản phẩm, giá, kênh hay thông điệp.',
  drill:'Lấy tệp khách của bạn và chia lại theo "họ đang thuê sản phẩm này làm việc gì". So sánh với cách chia hiện tại.'},
 
@@ -12,7 +12,7 @@ const PRINCIPLES = [
  one:'Chọn nhóm bạn phục vụ tốt hơn bất kỳ ai — và chấp nhận phục vụ tệ phần còn lại.',
  ex:'Liquid Death chọn người muốn cầm một thứ trông ngầu ở nơi công cộng, bỏ hẳn nhóm wellness.',
  counter:'“Ai cũng có thể là khách hàng của chúng tôi.” Câu này luôn dẫn đến thông điệp nhạt và ngân sách bị dàn mỏng.',
- brand:'MUJI từ chối nhóm muốn thể hiện địa vị bằng đồ vật.',
+ brand:'MUJI (tên nghĩa là “hàng chất lượng không thương hiệu”) — diễn giải: không nhắm nhóm muốn khoe địa vị bằng đồ vật.',
  mistake:'Nhầm targeting (ai được ưu tiên phục vụ) với reach (ai được nhìn thấy quảng cáo). Marketing đại chúng vẫn cần một tệp ưu tiên rõ.',
  drill:'Viết một câu: "Chúng tôi cố tình không dành cho ___". Nếu không viết nổi, bạn chưa chọn.'},
 
@@ -20,7 +20,7 @@ const PRINCIPLES = [
  one:'Vị trí bạn chiếm trong đầu người khác, so với các lựa chọn thay thế. Nó nằm trong đầu họ, không nằm trong file của bạn.',
  ex:'“Chỗ thứ ba giữa nhà và công sở” đặt Starbucks cạnh không gian, không cạnh cà phê.',
  counter:'“Chất lượng cao, giá hợp lý, dịch vụ tận tâm” — không loại trừ ai, nên không chiếm chỗ nào.',
- brand:'Patagonia: đồ ngoài trời cho người thấy áy náy về tiêu dùng.',
+ brand:'Patagonia: quảng cáo “Don’t Buy This Jacket” (Black Friday 2011) định vị cho người muốn tiêu dùng có ý thức hơn.',
  mistake:'Viết định vị bằng ngôn ngữ nội bộ và không bao giờ kiểm tra bằng cách hỏi khách hàng thật.',
  drill:'Hỏi 5 người ngoài công ty: "Bạn nghĩ chúng tôi dành cho ai?" Khoảng cách với ý định của bạn chính là bài toán.'},
 
@@ -34,9 +34,9 @@ const PRINCIPLES = [
 
 {id:'awareness',t:'Awareness',vi:'Nhận biết',d:'media',n:'05',
  one:'Người ta biết bạn tồn tại. Đây là ngưỡng tối thiểu, không phải mục tiêu.',
- ex:'Ai ở Việt Nam cũng biết Biti’s — nhận biết gần như tuyệt đối.',
+ ex:'Biti’s là cái tên quen thuộc với phần lớn người Việt — nhận biết rất cao (nhận định phổ biến, không phải số đo).',
  counter:'Biết mà không nghĩ đến khi cần mua thì vô dụng. Đó là lý do salience quan trọng hơn.',
- brand:'Biti’s trước 2017: nhận biết cao, liên tưởng cũ.',
+ brand:'Biti’s trước thời Hunter: nhận biết cao, liên tưởng cũ.',
  mistake:'Coi awareness là KPI cuối cùng của một brand campaign.',
  drill:'Hỏi khách: "Kể tên 3 thương hiệu bạn nghĩ tới khi cần ___". Không nằm trong 3 cái đó thì awareness không cứu được bạn.'},
 
@@ -52,7 +52,7 @@ const PRINCIPLES = [
  one:'Những dấu hiệu khiến người ta nhận ra bạn khi che hết tên: màu, hình, âm thanh, nhân vật, nhịp câu.',
  ex:'Swoosh không cần chữ Nike. Nhạc hiệu Shopee không cần hình ảnh.',
  counter:'Một logo đẹp mà đổi mỗi hai năm thì chưa kịp trở thành tài sản.',
- brand:'Vinamilk giữ nguyên sắc xanh khi làm mới toàn bộ nhận diện.',
+ brand:'Vinamilk làm mới nhận diện năm 2023 nhưng vẫn lấy xanh làm màu chủ đạo, dù logo đổi hẳn dạng.',
  mistake:'Nhầm "khác biệt về ý nghĩa" với "dễ nhận ra". Bạn cần cả hai, nhưng dễ nhận ra kiếm tiền trước.',
  drill:'Che logo trên 3 ấn phẩm gần nhất. Còn nhận ra là bạn không? Nếu không, bạn đang thuê media để quảng cáo cho category.'},
 
@@ -60,7 +60,7 @@ const PRINCIPLES = [
  one:'Một sự thật về hành vi mà khi nghe xong người ta thấy hơi bị lộ. Nếu ai cũng gật gù thoải mái, đó chỉ là quan sát.',
  ex:'“Tôi mô tả bản thân khắt khe hơn cách người lạ mô tả tôi.” (Dove)',
  counter:'“Người tiêu dùng ngày càng quan tâm đến sức khoẻ.” — đúng, nhưng không dẫn tới ý tưởng nào.',
- brand:'Biti’s Hunter: muốn đi thật xa nhưng vẫn thấy có bổn phận trở về.',
+ brand:'Biti’s Hunter: “Đi để trở về” — người trẻ muốn đi thật xa nhưng chuyến đáng mong nhất là về nhà.',
  mistake:'Lấy dữ liệu khảo sát làm insight. Dữ liệu nói cái gì đang xảy ra; insight nói vì sao.',
  drill:'Viết insight theo mẫu: "Tôi muốn ___ nhưng ___, nên tôi ___". Nếu không có chữ "nhưng", chưa phải insight.'},
 
@@ -68,7 +68,7 @@ const PRINCIPLES = [
  one:'Khách không mua sản phẩm, họ thuê nó để hoàn thành một việc trong đời sống của họ.',
  ex:'Người ta thuê Starbucks để có một chỗ ngồi hợp lệ, không phải để uống cà phê.',
  counter:'Mô tả khách bằng nghề nghiệp và tuổi tác thay vì bằng việc họ cần làm.',
- brand:'Coolmate được thuê để khỏi phải đi mua sắm.',
+ brand:'Minh hoạ: với thương hiệu mua online như Coolmate, “công việc” được thuê có thể là khỏi mất buổi đi mua đồ cơ bản.',
  mistake:'Quên rằng đối thủ thật nằm ở mọi thứ có thể làm cùng việc đó — kể cả "không làm gì cả".',
  drill:'Hỏi 3 khách hàng: "Lần gần nhất bạn dùng sản phẩm, bạn đang cố làm xong việc gì?"'},
 
@@ -116,12 +116,12 @@ const PRINCIPLES = [
  one:'Tỉ lệ người làm hành động bạn muốn. Thường tăng nhanh nhất bằng cách bớt đi, không phải thêm vào.',
  ex:'Bỏ một trường trong form, tỉ lệ hoàn tất tăng.',
  counter:'Thêm ba lời kêu gọi hành động vào cùng một trang và chia nhỏ sự chú ý.',
- brand:'Trang sản phẩm của UNIQLO: một quyết định mỗi màn hình.',
+ brand:'Minh hoạ nguyên tắc: trang sản phẩm gọn chỉ buộc khách quyết định một việc mỗi màn hình.',
  mistake:'Tối ưu màu nút trong khi vấn đề thật là thông điệp sai người.',
  drill:'Mở landing page của bạn, đếm số quyết định người dùng phải đưa ra. Cắt còn một.'},
 
 {id:'pricing',t:'Pricing',vi:'Giá',d:'strategy',n:'16',
- one:'Đòn bẩy lợi nhuận mạnh nhất và cũng là tuyên bố định vị to nhất bạn từng phát ra.',
+ one:'Thường là một trong những đòn bẩy lợi nhuận mạnh nhất, và cũng là tuyên bố định vị to nhất bạn từng phát ra.',
  ex:'Lon nhỏ giá cao của Red Bull nói rằng đây không phải nước giải khát.',
  counter:'Định giá theo chi phí cộng lãi — cách này bỏ qua hoàn toàn giá trị cảm nhận.',
  brand:'Apple không bao giờ dẫn đầu bằng giá thấp.',
@@ -130,15 +130,15 @@ const PRINCIPLES = [
 
 {id:'social-proof',t:'Social Proof',vi:'Bằng chứng xã hội',d:'consumer',n:'17',
  one:'Khi không chắc, người ta nhìn xem người khác đang làm gì. Càng giống mình càng có sức nặng.',
- ex:'Đánh giá kèm ảnh thật của người dùng mạnh hơn con số 4,8 sao.',
+ ex:'Đánh giá kèm ảnh thật của người dùng thường thuyết phục hơn một con số 4,8 sao đứng một mình (nên tự A/B test).',
  counter:'“Được hàng triệu người tin dùng” — không cụ thể nên không được tin.',
- brand:'Nội dung do người dùng tạo của Coolmate.',
+ brand:'Minh hoạ: ảnh và đánh giá do khách tự đăng trên trang sản phẩm, cách nhiều shop thời trang online đang làm.',
  mistake:'Dùng review giả. Rẻ trong ngắn hạn, mất toàn bộ độ tin cậy trong dài hạn.',
  drill:'Thay một lời khen chung chung trên trang bằng một câu trích dẫn cụ thể có tên và ngữ cảnh.'},
 
 {id:'scarcity',t:'Scarcity',vi:'Khan hiếm',d:'consumer',n:'18',
  one:'Nguồn cung có giới hạn làm tăng giá trị cảm nhận và rút ngắn thời gian ra quyết định.',
- ex:'Zara không nhập lại mẫu cũ, nên khách quay lại thường xuyên hơn.',
+ ex:'Zara thường không nhập lại mẫu đã bán hết, nên khách có lý do ghé sớm — các phân tích hay nói khách Zara ghé cửa hàng thường xuyên hơn đối thủ (con số cụ thể chưa truy được nguồn gốc).',
  counter:'Đồng hồ đếm ngược tự khởi động lại mỗi lần tải trang — khan hiếm giả, mất niềm tin.',
  brand:'Bộ sưu tập giới hạn của các thương hiệu thời trang.',
  mistake:'Dùng khan hiếm khi chưa có nhu cầu. Không ai vội với thứ họ chưa muốn.',
@@ -170,7 +170,7 @@ const PRINCIPLES = [
 
 {id:'physical-availability',t:'Physical Availability',vi:'Sẵn có về mặt vật lý',d:'media',n:'22',
  one:'Mua bạn dễ đến mức nào: có mặt ở đâu, mấy bước, mấy giây.',
- ex:'Highlands ở tầng trệt toà nhà bạn làm việc.',
+ ex:'Minh hoạ: một quán cà phê ngay tầng trệt toà nhà bạn làm việc.',
  counter:'Chiến dịch thương hiệu xuất sắc trong khi sản phẩm hết hàng ở kênh chính.',
  brand:'Coca-Cola: "trong tầm với của khát".',
  mistake:'Coi phân phối là chuyện của vận hành, không phải của marketing.',

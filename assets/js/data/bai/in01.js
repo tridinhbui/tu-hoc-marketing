@@ -246,7 +246,7 @@ BAI_ADD({ mod:'in01', lessons:[
     answer:'c', why:{a:'Có thể, nhưng khuôn mẫu tăng rồi hụt rồi hồi phục đúng mức nền rất điển hình của tích trữ.',
       b:'Nếu sản phẩm có vấn đề, doanh số thường không hồi về mức nền.',
       c:'Đúng. Khách dùng hàng dự trữ, rồi quay lại mua bình thường khi hết.',
-      d:'Dầu gội ít phụ thuộc mùa; và nền quay lại tháng 6 cho thấy không phải do mùa.'} },
+      d:'Nền quay lại đúng mức cũ vào tháng 6 gợi ý hụt do tích trữ chứ không do mùa; nên đối chiếu cùng kỳ năm trước để chắc.'} },
   { type:'mcq', stem:'Sếp muốn lặp lại “mua 1 tặng 1” mỗi quý vì tháng 3 bán được 70.000 chai. Bạn đề xuất gì?',
     options:[{k:'a',t:'Làm theo, vì doanh số tháng đó cao nhất năm và dễ báo cáo'},{k:'b',t:'Trình số tăng thêm ròng sau khi trừ phần hụt của tháng 4 và 5'},
              {k:'c',t:'Đổi sang giảm 50% vì khách thích giảm giá trực tiếp hơn tặng'},{k:'d',t:'Bỏ hẳn khuyến mãi vì doanh số tháng 4, 5 đều giảm sau đợt này'}],

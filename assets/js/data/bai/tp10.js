@@ -4,7 +4,7 @@ BAI_ADD({ mod:'tp10', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
 { id:'B:tp10-01', skill:'comm', read:'6 phút', t:'Người chưa biết mình có vấn đề thì cần nghe gì?',
-  situation:'Một hãng máy lọc không khí nhỏ ở Hà Nội chạy video 15 giây: "Màng lọc HEPA H13, lọc 99,97% bụi mịn, giá 3,9 triệu". Sau 200.000 lượt xem, chỉ vài chục người bấm vào. Khảo sát nhanh 50 người xem cho thấy 38 người nghĩ nhà mình "không bụi lắm" và chưa từng nghĩ tới chuyện lọc không khí trong phòng ngủ.',
+  situation:'Một hãng máy lọc không khí nhỏ ở Hà Nội chạy video 15 giây: "Màng lọc HEPA H13, lọc 99,95% bụi mịn, giá 3,9 triệu". Sau 200.000 lượt xem, chỉ vài chục người bấm vào. Khảo sát nhanh 50 người xem cho thấy 38 người nghĩ nhà mình "không bụi lắm" và chưa từng nghĩ tới chuyện lọc không khí trong phòng ngủ.',
   concept:{ name:'Đầu phễu: gọi tên vấn đề trước khi bán giải pháp',
     body:'Người ở đầu phễu chưa thấy mình có vấn đề, nên thông số sản phẩm với họ là tiếng ồn. Việc của thông điệp đầu phễu là làm họ <b>nhận ra một điều đang xảy ra với chính mình</b>: một dấu hiệu họ đã thấy nhưng chưa gọi tên. Khi vấn đề được gọi tên, họ tự bước sang câu hỏi "có cách nào không" — lúc đó mới là chỗ của thông số và giá. Nói giá quá sớm với người chưa có nhu cầu giống như chào hàng cho người không hỏi. Module này dùng phễu (biết → cân nhắc → mua) như một cách đơn giản hoá. Đây là một quan điểm; quan điểm khác (McKinsey với hành trình quyết định của khách, Byron Sharp với Ehrenberg-Bass) khác ở chỗ cho rằng khách nhảy bước, quay vòng, và một quảng cáo có thể tác động cùng lúc nhiều bước.' },
   example:'Hãng đổi video: mở bằng cảnh người bố lau mặt bàn cạnh giường mỗi sáng vẫn thấy lớp bụi xám, rồi câu "Bụi bạn lau được là bụi to. Bụi bạn hít cả đêm thì không thấy." Không nêu giá, chỉ mời xem một bài kiểm tra chất lượng không khí trong phòng. Với cùng 200.000 lượt xem, số người bấm xem bài kiểm tra tăng từ vài chục lên khoảng 1.600 — một tệp đã bắt đầu thấy vấn đề để nói chuyện sản phẩm ở bước sau.',
@@ -12,7 +12,7 @@ BAI_ADD({ mod:'tp10', lessons:[
   apply:'Chọn một sản phẩm bạn biết. Viết một câu mở video chỉ gọi tên một dấu hiệu khách đã thấy mà chưa để ý, không nhắc tên sản phẩm.',
   mistakes:['Mở quảng cáo đầu phễu bằng thông số và giá.','Doạ quá đà đến mức khách thấy bị thao túng và lướt qua.'],
   q:[
-  { type:'mcq', stem:'Đoán trước: vì sao video "HEPA H13, lọc 99,97% bụi mịn, giá 3,9 triệu" có rất ít người bấm?',
+  { type:'mcq', stem:'Đoán trước: vì sao video "HEPA H13, lọc 99,95% bụi mịn, giá 3,9 triệu" có rất ít người bấm?',
     options:[{k:'a',t:'Giá 3,9 triệu quá cao so với thu nhập người xem ở Hà Nội'},{k:'b',t:'Video 15 giây quá ngắn để nói hết các thông số của máy'},
              {k:'c',t:'Người xem chưa thấy mình có vấn đề nên thông số không chạm gì'},{k:'d',t:'Cần thêm nhiều thông số hơn để chứng minh máy vượt trội đối thủ'}],
     answer:'c', why:{a:'Giá có thể là rào cản, nhưng 38/50 người còn chưa nghĩ mình cần máy — họ chưa đi tới câu hỏi giá.',
@@ -349,7 +349,7 @@ BAI_ADD({ mod:'tp10', lessons:[
   situation:'Một thương hiệu sữa hạt dùng đúng một câu cho mọi kênh: "Sữa hạt nguyên chất, tốt cho sức khoẻ, mua ngay giảm 20%". Câu này xuất hiện ở video TikTok, quảng cáo nhắc lại, trang sàn và tin nhắn cho khách cũ. Sau ba tháng, ngân sách 300 triệu nhưng doanh số gần như đứng yên, còn khách cũ phàn nàn "tháng nào cũng giảm".',
   concept:{ name:'Bản đồ thông điệp theo bước phễu',
     body:'Mỗi bước phễu có một câu hỏi khác trong đầu khách: <b>đầu phễu</b> — "chuyện này có liên quan tới tôi không?"; <b>giữa phễu</b> — "cái này có hơn cái khác không?"; <b>cuối phễu</b> — "mua bây giờ có rủi ro gì?"; <b>sau mua</b> — "dùng thế nào, khi nào mua lại?". Một câu cố trả lời cả bốn thì nói nửa vời ở từng bước. Bản đồ thông điệp là bảng bốn dòng: bước, câu hỏi của khách, thông điệp, kênh.' },
-  example:'Hãng lập bản đồ: đầu phễu trên TikTok — "Uống sữa bò xong hay đầy bụng?"; giữa phễu trên trang sàn — bảng so hàm lượng hạt 12% với sản phẩm thường 3–5%, không đường; cuối phễu ở retargeting — "đổi trả nếu bé không hợp vị"; sau mua qua Zalo — công thức sinh tố và nhắc đặt lại sau 2 tuần. Giảm giá chỉ dùng ở cuối phễu. Doanh số tháng kế tiếp tăng 18%.',
+  example:'Hãng lập bản đồ: đầu phễu trên TikTok — "Uống sữa bò xong hay đầy bụng?"; giữa phễu trên trang sàn — bảng so hàm lượng hạt của sản phẩm với mức thường thấy ở sữa hạt đại trà (số minh hoạ, hãng cần dùng số đã kiểm nghiệm của chính mình), không đường; cuối phễu ở retargeting — "đổi trả nếu bé không hợp vị"; sau mua qua Zalo — công thức sinh tố và nhắc đặt lại sau 2 tuần. Giảm giá chỉ dùng ở cuối phễu. Doanh số tháng kế tiếp tăng 18%.',
   takeaway:'Mỗi bước phễu khách hỏi một câu khác; một câu cho tất cả là trả lời nửa vời cho từng người.',
   apply:'Kẻ bảng bốn dòng — bước, câu hỏi của khách, thông điệp, kênh — cho một sản phẩm bạn đang làm.',
   mistakes:['Dán cùng một câu ưu đãi lên mọi kênh.','Lập bản đồ theo kênh thay vì theo câu hỏi của khách ở từng bước.'],

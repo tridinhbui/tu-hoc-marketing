@@ -486,7 +486,7 @@ BAI_ADD({ mod:'gt04', lessons:[
     unit:'triệu', ans:280, tol:0.5, wrong:[[1400,'SAI_MAU_SO'],[38.5,'SAI_MAU_SO']], errors:['SAI_MAU_SO'],
     steps:['Doanh thu mùa = 2.000 × 70% = 1.400 triệu.','Mỗi tuần: 1.400 ÷ 5 = <b>280 triệu</b>.'] },
   { type:'mcq', stem:'Vì sao chăm khách doanh nghiệp nên nằm ở pha chuẩn bị chứ không phải trong mùa?',
-    options:[{k:'a',t:'Vì doanh nghiệp duyệt ngân sách và đặt quà sớm, trong mùa thường đã chốt'},{k:'b',t:'Vì doanh nghiệp ít dùng mạng xã hội nên gần như không thấy quảng cáo mùa trung thu'},
+    options:[{k:'a',t:'Vì doanh nghiệp thường duyệt ngân sách và đặt quà sớm, trong mùa phần lớn đã chốt'},{k:'b',t:'Vì doanh nghiệp ít dùng mạng xã hội nên gần như không thấy quảng cáo mùa trung thu'},
              {k:'c',t:'Vì đơn doanh nghiệp nhỏ hơn đơn lẻ nên không cần ưu tiên'},{k:'d',t:'Vì trong mùa đội quá bận, chỉ nên nhận đơn từ khách lẻ quen thuộc'}],
     answer:'a', why:{a:'Đúng. Chu kỳ quyết định của doanh nghiệp dài; đến mùa mới gọi là trễ.',
       b:'Người ra quyết định ở doanh nghiệp vẫn dùng mạng xã hội; lý do là thời điểm.',

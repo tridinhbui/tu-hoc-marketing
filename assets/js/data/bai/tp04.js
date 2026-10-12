@@ -175,13 +175,13 @@ BAI_ADD({ mod:'tp04', lessons:[
 
 /* ------------------------------------------------------------------ 04 */
 { id:'B:tp04-04', skill:'creative', read:'6 phút', t:'Video ngắn của bạn có một âm thanh riêng chưa?',
-  situation:'Một hãng snack đăng 60 video TikTok trong 3 tháng. Mỗi video dùng một bài nhạc đang thịnh hành khác nhau. Lượt xem khá, nhưng khi hỏi 100 người đã xem ít nhất 3 video, chỉ 23 người nhớ đúng tên hãng. Phần lớn người xem lướt với âm thanh bật, và logo chỉ hiện ở giây cuối.',
+  situation:'Một hãng snack đăng 60 video TikTok trong 3 tháng. Mỗi video dùng một bài nhạc đang thịnh hành khác nhau. Lượt xem khá, nhưng khi hỏi 100 người đã xem ít nhất 3 video, chỉ 23 người nhớ đúng tên hãng. Nhiều người xem lướt với âm thanh bật, và logo chỉ hiện ở giây cuối.',
   concept:{ name:'Âm thanh thương hiệu',
-    body:'Trên video ngắn, người xem thường nghe trước khi kịp nhìn logo. Một <b>âm thanh cố định</b> — vài nốt nhạc, một tiếng động đặc trưng như tiếng mở gói, một câu nói ngắn — lặp lại ở cùng vị trí trong mọi video sẽ dần gắn với thương hiệu. Nhạc thịnh hành kéo lượt xem, nhưng nó thuộc về cả nền tảng. Cách làm hợp lý là giữ một âm thanh riêng thật ngắn trong vài giây đầu, còn phần nền vẫn có thể theo xu hướng.' },
+    body:'Trên video ngắn, người xem thường nghe trước khi kịp nhìn logo; riêng TikTok từng công bố rằng phần lớn người dùng xem với âm thanh bật. Một <b>âm thanh cố định</b> — vài nốt nhạc, một tiếng động đặc trưng như tiếng mở gói, một câu nói ngắn — lặp lại ở cùng vị trí trong mọi video sẽ dần gắn với thương hiệu. Nhạc thịnh hành kéo lượt xem, nhưng nó thuộc về cả nền tảng. Cách làm hợp lý là giữ một âm thanh riêng thật ngắn trong vài giây đầu, còn phần nền vẫn có thể theo xu hướng.' },
   example:'Hãng snack chọn tiếng "rắc" khi bẻ miếng bánh, ghi âm một lần và đặt ở giây thứ 1 của mọi video, kèm nền nhạc thịnh hành như cũ. Sau 3 tháng tiếp theo với 60 video, hỏi lại 100 người đã xem ít nhất 3 video: 47 người nhớ đúng tên hãng, so với 23 người trước đó. Lượt xem trung bình gần như không đổi, nên phần tăng không đến từ độ phủ. Đây vẫn là so trước – sau với hai nhóm 100 người khác nhau, chưa có nhóm đối chứng — tín hiệu mạnh, chưa phải bằng chứng nhân quả.',
   takeaway:'Nhạc thịnh hành mượn được lượt xem; chỉ âm thanh riêng lặp đi lặp lại mới để lại tên bạn.',
   apply:'Mở 5 video gần nhất của một thương hiệu. Tắt màn hình, chỉ nghe: nói trong 60 giây có âm thanh nào lặp lại giúp bạn biết đó là họ không.',
-  mistakes:['Đổi âm thanh mỗi video theo xu hướng, không có gì lặp lại.','Để dấu hiệu thương hiệu ở giây cuối, khi phần lớn người đã lướt qua.'],
+  mistakes:['Đổi âm thanh mỗi video theo xu hướng, không có gì lặp lại.','Để dấu hiệu thương hiệu ở giây cuối, khi nhiều người đã lướt qua.'],
   q:[
   { type:'mcq', stem:'Hãng snack dùng 60 bài nhạc thịnh hành khác nhau. Đoán xem vì sao người xem ít nhớ tên hãng?',
     options:[{k:'a',t:'Không có dấu hiệu nào lặp lại đủ để gắn với hãng'},{k:'b',t:'Video quá ngắn để thương hiệu kịp được nhớ'},

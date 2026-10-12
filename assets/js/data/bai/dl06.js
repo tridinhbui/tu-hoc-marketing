@@ -4,7 +4,7 @@ BAI_ADD({ mod:'dl06', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
 { id:'B:dl06-01', skill:'measure', read:'6 phút', t:'Khách xem TikTok, rồi tìm Google, rồi mới mua: ai được công?',
-  situation:'Shop túi vải của Hà chạy ba kênh. Một khách tiêu biểu: thấy video TikTok hôm thứ Hai, thứ Tư bấm quảng cáo Facebook xem lại, thứ Sáu gõ tên shop trên Google rồi mua đơn 600.000đ. Báo cáo nguồn lưu lượng của Google Analytics (tính theo chạm cuối của phiên) ghi toàn bộ 600.000đ cho Google. Hà định cắt TikTok vì "không ra đơn".',
+  situation:'Shop túi vải của Hà chạy ba kênh. Một khách tiêu biểu: thấy video TikTok hôm thứ Hai, thứ Tư bấm quảng cáo Facebook xem lại, thứ Sáu gõ tên shop trên Google rồi mua đơn 600.000đ. Báo cáo nguồn lưu lượng theo phiên của Google Analytics (nguồn của phiên là chạm cuối trước khi mua) ghi toàn bộ 600.000đ cho Google. Hà định cắt TikTok vì "không ra đơn".',
   concept:{ name:'Last-click: ghi công cho chạm cuối',
     body:'Một đơn hàng thường đi qua nhiều <b>điểm chạm</b>. Mô hình <b>last-click</b> dồn 100% công cho điểm chạm cuối cùng trước khi mua. Nó đơn giản và dễ đo, nhưng thiên vị các kênh "đứng ở cửa" như tìm kiếm tên thương hiệu, và bỏ qua các kênh làm khách biết đến lần đầu. Dùng last-click để cắt kênh là dễ cắt nhầm chính kênh đang nuôi phễu.' },
   example:'Trong tháng, Google được ghi 30 đơn theo last-click, TikTok 2 đơn. Nhưng khi hỏi 30 khách đó, 20 người nói lần đầu thấy shop trên TikTok. Nếu Hà tắt TikTok, lượt tìm tên shop trên Google sẽ giảm theo, và 30 đơn "của Google" co lại. Quyết định đúng: giữ TikTok, và đọc last-click như "kênh chốt đơn", không phải "kênh tạo ra đơn".',
@@ -169,7 +169,7 @@ BAI_ADD({ mod:'dl06', lessons:[
 { id:'B:dl06-04', skill:'measure', read:'6 phút', t:'Khách xem quảng cáo 20 ngày trước mới mua: có tính không?',
   situation:'Shop nội thất của Minh bán sofa giá 12 triệu. Khách thường cân nhắc 2–4 tuần. Báo cáo Facebook đang để cửa sổ "1 ngày sau khi bấm" và cho ra rất ít đơn; Minh định cắt quảng cáo. Bạn của Minh bán son môi thì dùng đúng cài đặt đó và thấy ổn.',
   concept:{ name:'Cửa sổ ghi nhận (attribution window)',
-    body:'<b>Cửa sổ ghi nhận</b> là khoảng thời gian sau lượt bấm (hoặc lượt xem) mà đơn hàng vẫn được tính cho quảng cáo. Cửa sổ ngắn bỏ sót đơn của sản phẩm cân nhắc lâu; cửa sổ dài gom cả đơn đằng nào cũng xảy ra. Chọn cửa sổ theo <b>thời gian cân nhắc thật</b> của khách, và giữ cố định khi so sánh giữa các tháng.' },
+    body:'<b>Cửa sổ ghi nhận</b> là khoảng thời gian sau lượt bấm (hoặc lượt xem) mà đơn hàng vẫn được tính cho quảng cáo. Cửa sổ ngắn bỏ sót đơn của sản phẩm cân nhắc lâu; cửa sổ dài gom cả đơn đằng nào cũng xảy ra. Chọn cửa sổ theo <b>thời gian cân nhắc thật</b> của khách, và giữ cố định khi so sánh giữa các tháng. Các lựa chọn cửa sổ của Meta đã đổi nhiều lần, nên hãy xem tuỳ chọn hiện có trong Ads Manager.' },
   example:'Minh kéo sổ đơn: trong 40 đơn có chạm quảng cáo, chỉ 6 đơn mua trong 1 ngày sau khi bấm, 28 đơn trong 7 ngày, 38 đơn trong 28 ngày. Cửa sổ 1 ngày chỉ thấy 15% số đơn. Minh chuyển sang 7 ngày sau bấm làm chuẩn, xem thêm 28 ngày để tham khảo, và không cắt quảng cáo.',
   takeaway:'Cửa sổ ghi nhận phải dài bằng thời gian khách thật sự cân nhắc.',
   apply:'Hỏi 5 khách gần nhất: từ lúc thấy sản phẩm đến lúc mua mất bao lâu? Chọn cửa sổ phù hợp và nói lý do trong 60 giây.',

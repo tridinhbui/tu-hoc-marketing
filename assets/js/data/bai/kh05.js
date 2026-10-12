@@ -118,7 +118,7 @@ BAI_ADD({ mod:'kh05', lessons:[
 
 /* ------------------------------------------------------------------ 03 */
 { id:'B:kh05-03', skill:'insight', read:'7 phút', t:'Phỏng vấn đồng nghiệp và bạn bè có tính không?',
-  situation:'Bạn làm cho một app đặt lịch cắt tóc nam ở Đà Nẵng. Để tiết kiệm thời gian, bạn định phỏng vấn 10 người trong phòng: đều là nam 25–30 tuổi, làm công nghệ, cắt tóc ở barber hai tuần một lần. Nhưng khách mục tiêu của app là chủ tiệm tóc bình dân, và nam giới cắt tóc khoảng mỗi tháng một lần.',
+  situation:'Bạn làm cho một app đặt lịch cắt tóc nam ở Đà Nẵng. Để tiết kiệm thời gian, bạn định phỏng vấn 10 người trong phòng: đều là nam 25–30 tuổi, làm công nghệ, cắt tóc ở barber hai tuần một lần. Nhưng khách mục tiêu của app là chủ tiệm tóc bình dân, và nam giới nói chung thường cắt tóc cách nhau chừng một tháng (khảo sát ở Mỹ cho khoảng 4–5 tuần; bạn cần tự kiểm với khách Việt).',
   concept:{ name:'Tuyển đúng người bằng câu hỏi sàng lọc hành vi',
     body:'Người dễ hẹn nhất hiếm khi là người cần nghe. Đồng nghiệp và bạn bè có hai vấn đề: họ giống bạn (cùng tuổi, cùng thu nhập, cùng thói quen), và họ muốn làm bạn vui. Trước khi hẹn, viết <b>tiêu chí sàng lọc bằng hành vi</b> chứ không bằng nhân khẩu học: "đã cắt tóc ở tiệm bình dân trong 30 ngày qua", "từng phải chờ quá 20 phút". Hỏi sàng lọc trước bằng vài câu ngắn, chỉ mời người đạt. Loại bỏ người làm marketing, làm cùng ngành, hoặc quen bạn. Tuyển ở nơi khách thật xuất hiện: tiệm tóc, nhóm Facebook khu phố, không phải bàn bên cạnh.' },
   example:'Bạn đăng tin trên hai nhóm Facebook khu phố, hỏi 3 câu sàng lọc. 60 người trả lời, 18 người đạt tiêu chí "cắt ở tiệm bình dân trong 30 ngày qua và từng phải chờ". Tỉ lệ đạt 18/60 = 30%. Bạn hẹn được 8 người, mỗi người được tặng thẻ cào 50 nghìn. Tổng chi 400 nghìn. Kết quả khác hẳn nhóm đồng nghiệp: người ở tiệm bình dân không đặt lịch trước, họ ghé khi đi ngang và chấp nhận chờ nếu tiệm có trà đá. Vấn đề không phải đặt lịch, mà là biết lúc nào tiệm vắng.',
@@ -291,7 +291,7 @@ BAI_ADD({ mod:'kh05', lessons:[
 { id:'B:kh05-06', skill:'insight', read:'6 phút', t:'Trong ghi chép của bạn, đâu là lời khách, đâu là suy diễn của bạn?',
   situation:'Sau 6 cuộc phỏng vấn khách mua bảo hiểm sức khoẻ online, ghi chép của bạn có những dòng như "Khách không tin bảo hiểm", "Chị Lan sợ bị từ chối bồi thường", "Anh Minh thấy app khó dùng". Đọc lại, bạn không chắc câu nào là họ nói, câu nào là bạn tự hiểu.',
   concept:{ name:'Ghi chép hai cột: lời nói và diễn giải',
-    body:'Trí nhớ tóm tắt rất nhanh, và khi tóm tắt nó chèn luôn cách hiểu của người nghe. Hãy chia trang thành hai cột. Cột trái: <b>lời nguyên văn</b> trong ngoặc kép, hoặc hành vi quan sát được ("mở app, tìm nút bồi thường 40 giây"). Cột phải: <b>diễn giải</b> của bạn, ghi rõ là suy đoán. Khi tổng hợp, mọi kết luận phải truy về được ít nhất một dòng ở cột trái. Nên có một người ghi riêng và ghi âm (xin phép trước), vì người hỏi không thể vừa nghe kỹ vừa chép đủ. Ghi chép ngay sau cuộc, trong vòng 30 phút, trước khi các cuộc sau lẫn vào.' },
+    body:'Trí nhớ tóm tắt rất nhanh, và khi tóm tắt nó chèn luôn cách hiểu của người nghe. Hãy chia trang thành hai cột. Cột trái: <b>lời nguyên văn</b> trong ngoặc kép, hoặc hành vi quan sát được ("mở app, tìm nút bồi thường 40 giây"). Cột phải: <b>diễn giải</b> của bạn, ghi rõ là suy đoán. Khi tổng hợp, mọi kết luận phải truy về được ít nhất một dòng ở cột trái. Nên có một người ghi riêng và ghi âm (xin phép trước), vì người hỏi không thể vừa nghe kỹ vừa chép đủ. Ghi chép ngay sau cuộc, càng sớm càng tốt (khoảng nửa giờ là mốc thực hành dễ nhớ, không phải ngưỡng khoa học), trước khi các cuộc sau lẫn vào.' },
   example:'Nghe lại băng, dòng "Chị Lan sợ bị từ chối bồi thường" thực ra là chị nói: "Hồi mẹ chị nằm viện, bên bảo hiểm bắt nộp thêm giấy ba lần mới trả". Đó không phải nỗi sợ trừu tượng mà là một trải nghiệm về giấy tờ. Trong 12 dòng kết luận ban đầu, bạn chỉ truy được 7 dòng về lời nguyên văn; 5 dòng còn lại, khoảng 42%, là suy diễn. Kết luận đổi hướng: thông điệp nên là "nộp hồ sơ một lần qua app", chứ không phải "cam kết bồi thường".',
   takeaway:'Ghi lời nguyên văn một cột, suy đoán một cột; kết luận nào không truy được về lời khách thì chưa phải kết luận.',
   apply:'Mở ghi chép cuộc trò chuyện gần nhất với khách. Tô màu những câu là suy diễn, nói trong 60 giây câu nào cần hỏi lại.',
@@ -321,7 +321,7 @@ BAI_ADD({ mod:'kh05', lessons:[
       b:'Lời kể không nhắc giá.',
       c:'Đúng. Có chữ "có thể", bám sát lời kể và kiểm được ở cuộc sau.',
       d:'Không có dữ kiện về ý định đổi công ty.'} },
-  { type:'mcq', stem:'Vì sao nên ghi chép trong vòng 30 phút sau mỗi cuộc?',
+  { type:'mcq', stem:'Vì sao nên ghi chép ngay sau mỗi cuộc, càng sớm càng tốt?',
     options:[{k:'a',t:'Người được phỏng vấn có thể đổi ý nếu để lâu hơn'},{k:'b',t:'Kịp gửi bản ghi cho khách ký xác nhận trong ngày'},
              {k:'c',t:'Bản ghi âm sẽ bị mất chất lượng sau một thời gian'},{k:'d',t:'Trí nhớ còn chi tiết, chưa bị cuộc sau trộn lẫn vào'}],
     answer:'d', why:{a:'Lời khách đã nói xong; vấn đề là trí nhớ của bạn.',

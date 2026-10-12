@@ -118,9 +118,9 @@ BAI_ADD({ mod:'tn03', lessons:[
 
 /* ------------------------------------------------------------------ 03 */
 { id:'B:tn03-03', skill:'creative', read:'6 phút', t:'Đổi tiêu đề hay đổi ảnh chính trước?',
-  situation:'Một shop giày thể thao trên Shopee có tỉ lệ bấm vào sản phẩm thấp. Ảnh chính hiện là đôi giày chụp nền trắng, tiêu đề dài 120 ký tự nhồi từ khoá. Chủ shop có một buổi chiều và muốn biết nên thử đổi thứ gì trước để thấy khác biệt nhanh nhất.',
+  situation:'Một shop giày thể thao trên Shopee có tỉ lệ bấm vào sản phẩm thấp. Ảnh chính hiện là đôi giày chụp nền trắng, tiêu đề dài khoảng 120 ký tự (ví dụ minh hoạ) nhồi từ khoá. Chủ shop có một buổi chiều và muốn biết nên thử đổi thứ gì trước để thấy khác biệt nhanh nhất.',
   concept:{ name:'Thử yếu tố chính theo thứ tự tác động',
-    body:'Trên sàn hay trang tìm kiếm, người mua nhìn <b>ảnh chính</b> trước, rồi mới đọc lướt tiêu đề. Vì vậy ảnh chính thường là yếu tố có tác động lớn nhất tới tỉ lệ bấm, còn tiêu đề ảnh hưởng cả việc bạn có xuất hiện khi họ tìm kiếm. Nguyên tắc: thử một yếu tố một lần, bắt đầu từ yếu tố người ta thấy đầu tiên. Nếu đổi cả ảnh lẫn tiêu đề cùng lúc, kết quả tốt lên bạn cũng không biết nhờ cái nào để áp dụng cho sản phẩm khác.' },
+    body:'Trên sàn hay trang tìm kiếm, ảnh chính thường là thứ mắt người mua dừng lại <b>đầu tiên</b>, rồi họ mới đọc lướt tiêu đề (cách hiểu phổ biến; hãy tự kiểm bằng thử nghiệm của shop). Vì vậy ảnh chính thường là yếu tố có tác động lớn nhất tới tỉ lệ bấm, còn tiêu đề ảnh hưởng cả việc bạn có xuất hiện khi họ tìm kiếm. Nguyên tắc: thử một yếu tố một lần, bắt đầu từ yếu tố người ta thấy đầu tiên. Nếu đổi cả ảnh lẫn tiêu đề cùng lúc, kết quả tốt lên bạn cũng không biết nhờ cái nào để áp dụng cho sản phẩm khác.' },
   example:'Tuần 1, shop giữ tiêu đề, đổi ảnh chính từ giày nền trắng sang ảnh giày đang mang trên chân chạy bộ. Tỉ lệ bấm tăng từ 1,5% lên 2,4% trên lượng hiển thị tương đương. Tuần 2, giữ ảnh mới, rút tiêu đề còn 60 ký tự, đưa "êm – nhẹ 220g" lên đầu. Tỉ lệ bấm lên 2,6%. Shop biết ảnh chính đóng góp phần lớn và áp dụng kiểu ảnh này cho 20 mẫu khác. Lưu ý: so tuần này với tuần trước là so trước–sau, dễ lẫn mùa vụ và đợt sale (xem module tn02); nếu được, chạy hai bản song song, ít nhất chọn hai tuần không có sự kiện đặc biệt.',
   takeaway:'Thử từng yếu tố một, bắt đầu từ thứ khách nhìn thấy trước — thường là ảnh chính.',
   apply:'Chọn một sản phẩm bạn đang bán online. Nói trong 60 giây: yếu tố nào khách thấy đầu tiên, bạn sẽ thử phiên bản nào thay thế, và đo bằng chỉ số gì.',
@@ -260,7 +260,7 @@ BAI_ADD({ mod:'tn03', lessons:[
   { type:'mcq', stem:'Một video có thumb-stop 30%, xem hết 25% nhưng CTR chỉ 0,3%. Phần nào đáng sửa trước?',
     options:[{k:'a',t:'Hook, vì phần mở đầu là nơi kéo theo các chỉ số phía sau'},{k:'b',t:'Thân video, vì người xem đang bỏ đi trước khi xem hết nội dung'},
              {k:'c',t:'Lời kêu gọi hành động và điều khiến người ta có lý do bấm'},{k:'d',t:'Thời lượng, vì video càng dài thì càng ít người bấm vào liên kết'}],
-    answer:'c', why:{a:'Hook đang làm tốt; 30% dừng lại là mức khá.',
+    answer:'c', why:{a:'Hook đang làm tốt hơn các chỉ số còn lại; 30% dừng lại là mức khá trong ví dụ này (không có mốc chung cho mọi ngành, hãy so với video cũ của chính bạn).',
       b:'25% xem hết là tốt; người xem đang ở lại.',
       c:'Đúng. Người ta xem hết nhưng không bấm: lời mời bấm hoặc ưu đãi đang yếu.',
       d:'Họ đã xem hết rồi; độ dài không phải chỗ gãy.'} },
