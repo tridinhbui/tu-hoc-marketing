@@ -1,34 +1,37 @@
-/* Gõ chữ cho các đoạn mô tả đầu trang (Ý Ý): nạp yy.js khi trang chưa có, một lần mỗi phiên cho mỗi trang. */
+/* ATELIER — hai việc nhỏ cho mọi trang trong khung app:
+   1) dòng folio kiểu tạp chí ở đầu trang (tên ấn phẩm · trang đang xem · ngày);
+   2) "editorial reveal": phần tử có data-at hiện dần khi cuộn tới. Không có JS thì mọi thứ hiện sẵn. */
 (function(){
-  if (window.top === window.self) return;
-  var file = (location.pathname.split('/').pop() || '').replace(/\.html$/, '');
-  if (/^(index|dang-nhap|luyen|thi|giai-case)$/.test(file)) return;      // trang có đồng hồ / thi: không làm chậm đọc đề
-  var SEL = '.lede, .rm__lede, .cm-head p, .hero p, .d-mission h1, .pv-main .hero p';
-  function run(){ try { YY.autoType(SEL, { once: 'p:' + file }); } catch (e) {} }
-  function boot(){
-    if (window.YY) return setTimeout(run, 500);
-    var s = document.createElement('script'); s.src = 'assets/js/yy.js?v=3'; s.onload = function(){ setTimeout(run, 500); };
-    document.head.appendChild(s);
-  }
-  if (document.readyState === 'complete') boot(); else window.addEventListener('load', boot);
-})();
-/* PAPER — chèn ảnh minh hoạ rách mép + chữ viết tay vào đầu trang (trong khung app). Không đụng cấu trúc trang. */
-(function(){
-  if(window.top===window.self) return;                                       // chỉ trong khung app
+  var doc=document, root=doc.documentElement, reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   var file=(location.pathname.split('/').pop()||'').replace(/\.html$/,'');
-  var SKIP={'hoc':1,'hoc-bai':1,'cong-dong':1,'bai':1,'index':1,'dang-nhap':1,'luyen':1,'giai-case':1,'quiz':1,'phong-van':1};
-  var BIG={'thi':1,'xep-lop':1,'kingdom':1};
-  if(SKIP[file]) return;
-  var ART=['art-journey.svg','art-notebook.svg','art-panorama.svg','art-megaphone.svg','art-funnel.svg'];
-  var CAP=['Nhìn kỹ trước, làm sau','Từng bước nhỏ, đổi lớn','Học thật. Làm được.','Mỗi quyết định có một lý do','Mỗi ngày một bước'];
-  var h=0; for(var i=0;i<file.length;i++) h=(h*31+file.charCodeAt(i))>>>0;
-  function put(){
-    if(document.querySelector('.pp-art')) return;
-    var el=document.createElement('div'); el.className='pp-art'+(BIG[file]?' pp-art--lg':''); el.setAttribute('aria-hidden','true');
-    el.innerHTML='<img src="assets/img/'+ART[h%ART.length]+'" alt=""><i>'+CAP[h%CAP.length]+'</i>';
-    document.body.insertBefore(el,document.body.firstChild);
+
+  /* ---- reveal ---- */
+  if(!reduce && 'IntersectionObserver' in window){
+    root.classList.add('at-js');
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.06});
+    var scan=function(n){
+      (n.querySelectorAll?n.querySelectorAll('[data-at]:not(.in)'):[]).forEach(function(el,i){
+        if(el.__at) return; el.__at=1; el.style.setProperty('--d',(Math.min(i,4)*.08)+'s'); io.observe(el); });
+    };
+    var start=function(){ scan(doc); new MutationObserver(function(ms){ ms.forEach(function(m){ m.addedNodes.forEach(function(n){ if(n.nodeType===1){ if(n.matches&&n.matches('[data-at]')) scan({querySelectorAll:function(){return [n];}}); scan(n); } }); }); }).observe(doc.body,{childList:true,subtree:true}); };
+    if(doc.readyState==='loading') doc.addEventListener('DOMContentLoaded',start); else start();
   }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',put); else put();
-  /* body cần là mốc định vị để ảnh bám góc trên */
-  var st=getComputedStyle(document.body); if(st.position==='static') document.body.style.position='relative';
+
+  /* ---- folio ---- */
+  if(window.top===window.self) return;                                       // chỉ trong khung app
+  var SKIP={'bai':1,'index':1,'dang-nhap':1,'luyen':1,'thi':1,'giai-case':1,'quiz':1,'phong-van':1,'app':1};
+  if(SKIP[file]) return;
+  function put(){
+    if(doc.querySelector('.at-folio')||!doc.body) return;
+    var parts=(doc.title||'').split(/\s[—–]\s/).filter(function(x){return x&&!/^Tự Học Marketing/.test(x);});
+    if(parts.length>1&&/^Bàn làm việc$/i.test(parts[0])) parts.shift();
+    var t=parts[0]||'';
+    var d=new Date(), mon=['Th1','Th2','Th3','Th4','Th5','Th6','Th7','Th8','Th9','Th10','Th11','Th12'][d.getMonth()];
+    var el=doc.createElement('div'); el.className='at-folio'; el.setAttribute('aria-hidden','true');
+    el.innerHTML='<span><b>Tự Học Marketing</b></span><i>'+t.replace(/[<>&]/g,'')+'</i><span>'+d.getDate()+' '+mon+' · '+d.getFullYear()+'</span>';
+    doc.body.insertBefore(el,doc.body.firstChild);
+  }
+  if(doc.readyState==='loading') doc.addEventListener('DOMContentLoaded',put); else put();
 })();

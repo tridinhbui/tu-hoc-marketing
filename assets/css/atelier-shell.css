@@ -1,0 +1,87 @@
+/* ATELIER · KHUNG — thanh điều hướng như mục lục của một cuốn tạp chí.
+   Ít nhiễu: không hộp, không huy hiệu màu; chữ serif, đường kẻ mảnh, một dấu chấm đất nung cho mục đang ở. */
+:root[data-theme=ivory]{--r-bg:#efe5d0;--r-ink:#1d1510;--r-ink2:rgba(29,21,16,.58);--r-line:rgba(29,21,16,.16);--r-hover:rgba(168,70,31,.07);--r-act-bg:transparent;--r-act:#a8461f;--r-field:transparent;--r-pill:transparent;--page:#f3ead9}
+:root[data-theme=ivory] .rail{background:var(--r-bg);background-image:none;border-right:1px solid var(--r-line)}
+:root[data-theme=ivory] .rail::before{display:none}
+:root[data-theme=ivory] .rail__top{padding:22px 18px 6px}
+:root[data-theme=ivory] .rail__scroll{padding:6px 12px 8px 18px}
+
+/* nhãn ấn phẩm */
+:root[data-theme=ivory] .rail__logo{padding:0 0 18px;gap:12px;align-items:center}
+:root[data-theme=ivory] .rail__mark{width:36px;height:36px;border-radius:0;background:none}
+:root[data-theme=ivory] .rail__mark img{width:36px;height:36px;object-fit:contain}
+:root[data-theme=ivory] .rail__mark::before{content:none}
+:root[data-theme=ivory] .rail__logo>span:not(.rail__mark){font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:300;font-size:1.22rem;line-height:1.02;letter-spacing:-.02em;text-transform:none;color:#1d1510;font-variation-settings:'opsz' 72,'SOFT' 100}
+:root[data-theme=ivory] .rail__logo span b{display:inline;font-weight:400;font-style:normal;color:#a8461f;margin-left:.2em}
+:root[data-theme=ivory] .rail__tag{margin:-8px 0 0 46px;font:600 9.5px/1 'Be Vietnam Pro',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(29,21,16,.5)}
+
+/* tìm kiếm: chỉ một đường kẻ */
+:root[data-theme=ivory] .rail__search input{height:38px;border:0;border-bottom:1px solid #1d1510;border-radius:0;background:transparent;padding:0 46px 0 26px;font:italic 400 14.5px 'Fraunces',Georgia,serif}
+:root[data-theme=ivory] .rail__search input:focus{border-color:#e85d24;background:transparent}
+:root[data-theme=ivory] .rail__search>svg{left:2px;top:11px}
+:root[data-theme=ivory] .rail__search kbd{border:0;background:none;top:11px;right:0;color:rgba(29,21,16,.45);font-size:10.5px;letter-spacing:.06em}
+:root[data-theme=ivory] .sres{background:#faf4e7;border:0;border-radius:2px 2px 24px 2px;box-shadow:0 24px 40px -18px rgba(22,16,12,.5)}
+:root[data-theme=ivory] .sres a.sel,:root[data-theme=ivory] .sres a:hover{background:rgba(168,70,31,.09)}
+
+/* mục điều hướng */
+:root[data-theme=ivory] .rail .nav a,:root[data-theme=ivory] .rail .nav button.nv{position:relative;min-height:38px;padding:0 6px 0 16px;border-radius:0;gap:12px;
+  font:400 15.5px/1.25 'Fraunces',Georgia,serif;letter-spacing:-.01em;color:#1d1510;font-variation-settings:'opsz' 36,'SOFT' 100;transition:padding .35s cubic-bezier(.2,.75,.15,1),color .2s}
+:root[data-theme=ivory] .rail .nav a::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:#e85d24;transform:scale(0);transition:transform .35s cubic-bezier(.2,.75,.15,1)}
+:root[data-theme=ivory] .rail .nav a:hover{background:transparent;padding-left:22px;color:#a8461f}
+:root[data-theme=ivory] .rail .nav a:hover::before{transform:scale(.7)}
+:root[data-theme=ivory] .rail .nav a[aria-current="page"]{background:transparent;color:#a8461f;font-style:italic;font-weight:500;padding-left:22px}
+:root[data-theme=ivory] .rail .nav a[aria-current="page"]::before{transform:scale(1)}
+:root[data-theme=ivory] .rail .nav svg.i{display:none}
+:root[data-theme=ivory] .rail .nav .tag{font:italic 400 12px 'Fraunces',Georgia,serif;letter-spacing:0;text-transform:none;background:none;color:#a8461f;padding:0;width:auto;height:auto;font-size:12px;border-radius:0}
+:root[data-theme=ivory] .rail .nav .tag--new::before{content:"mới"}
+:root[data-theme=ivory] .rail .nav .tag--hot::before{content:"hot"}
+:root[data-theme=ivory] .rail .nav .tag--chk::before{content:"check-in"}
+:root[data-theme=ivory] .rail .nav .tag{font-size:0}
+:root[data-theme=ivory] .rail .nav .tag::before{font-size:12px}
+:root[data-theme=ivory] .rail .nav em.due{background:none;color:#a8461f;font:600 12px 'Be Vietnam Pro',sans-serif;padding:0}
+:root[data-theme=ivory] .rail .nav em.due::before{content:"· "}
+
+/* nhóm = mục đề nhỏ + đường kẻ */
+:root[data-theme=ivory] .rail .grp{margin-top:20px}
+:root[data-theme=ivory] .rail .grp__h{padding:0 0 8px 0;color:rgba(29,21,16,.55);font:600 10px/1 'Be Vietnam Pro',sans-serif;letter-spacing:.2em;gap:12px;border-bottom:1px solid var(--r-line)}
+:root[data-theme=ivory] .rail .grp__h svg:not(.chev){display:none}
+:root[data-theme=ivory] .rail .grp__h .chev{margin-left:auto;stroke:rgba(29,21,16,.45)}
+:root[data-theme=ivory] .rail .grp__body.box{border:0;background:none;padding:2px 0 0;border-radius:0}
+:root[data-theme=ivory] .rail .grp__body:not(.box){padding:2px 0 0}
+:root[data-theme=ivory] .rail .sub{border-color:var(--r-line)}
+
+/* chân: túi vàng và hồ sơ như hai dòng chú thích */
+:root[data-theme=ivory] .rail__foot{padding:14px 18px 16px;border-top:1px solid #1d1510}
+:root[data-theme=ivory] .rail__row{margin-bottom:12px;align-items:center}
+:root[data-theme=ivory] .coin{height:auto;padding:0;border:0;background:none;border-radius:0;font:400 14px 'Fraunces',Georgia,serif;gap:10px}
+:root[data-theme=ivory] .coin i{width:14px;height:14px;background:#d9a441;box-shadow:0 0 0 3px rgba(217,164,65,.25)}
+:root[data-theme=ivory] .coin b{font:300 1.15rem 'Fraunces',Georgia,serif;letter-spacing:-.03em}
+:root[data-theme=ivory] .bell{width:34px;height:34px;border:0;border-radius:50%;background:none}
+:root[data-theme=ivory] .bell:hover{background:rgba(168,70,31,.09)}
+:root[data-theme=ivory] .bell em{background:#e85d24;color:#1a0e06;top:-2px;right:-4px}
+:root[data-theme=ivory] .rail__card{padding:0;border:0;background:none;border-radius:0;gap:12px}
+:root[data-theme=ivory] .rail__av{width:40px;height:40px;background:#1d1510;font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:1.2rem}
+:root[data-theme=ivory] .rail__name{font:400 15px/1.2 'Fraunces',Georgia,serif;letter-spacing:-.01em}
+:root[data-theme=ivory] .rail__sm{font:500 11.5px 'Be Vietnam Pro',sans-serif;color:rgba(29,21,16,.55)}
+:root[data-theme=ivory] .rail__bar{height:2px;border-radius:0;background:var(--r-line);margin:10px 0 0}
+:root[data-theme=ivory] .rail__bar i{background:#a8461f;border-radius:0}
+
+/* khung phải: chuyển trang mờ dần thay vì bật cái rụp */
+.stage iframe{transition:opacity .3s ease}
+.stage.is-loading iframe{opacity:0}
+.stage__load{background:#e85d24!important;height:2px}
+
+/* điện thoại */
+@media(max-width:860px){
+  :root[data-theme=ivory] .mbar{background:var(--r-bg);border-bottom:1px solid var(--r-line);font:italic 400 1.05rem 'Fraunces',Georgia,serif;color:#1d1510}
+  :root[data-theme=ivory] .mbar b{color:#a8461f;font-weight:400}
+  :root[data-theme=ivory] .rail__open{border:1px solid var(--r-line);background:var(--r-bg)}
+}
+@media(prefers-reduced-motion:reduce){.stage iframe{transition:none}}
+
+/* nút nổi nhỏ lại trên điện thoại để bớt che nội dung */
+@media(max-width:860px){
+  .yy-fab{right:10px!important;bottom:70px!important;transform:scale(.78);transform-origin:100% 100%}
+  .chat__fab{right:12px!important;bottom:12px!important;width:46px!important;height:46px!important}
+  .yy-tip{display:none!important}
+}

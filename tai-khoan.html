@@ -7,6 +7,7 @@
 <title>Hồ sơ Chiến lược gia — Tự Học Marketing Case</title>
 <meta name="description" content="Xem tiến trình học, điểm tích lũy XP, cấp bậc và quản lý tài khoản cá nhân.">
 <link rel="stylesheet" href="assets/css/paper.css?v=12">
+<link rel="stylesheet" href="assets/css/atelier.css?v=23">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
@@ -18,7 +19,7 @@
 <script src="assets/js/data/drills.js?v=3"></script>
 <script src="assets/js/data/cases.js?v=5"></script>
 <script src="assets/js/app.js?v=21"></script>
-<script src="assets/js/social-ui.js?v=2"></script>
+<script src="assets/js/social-ui.js?v=7"></script>
 <script>
 appShell('tai-khoan.html');
 const app = document.getElementById('app');
@@ -36,29 +37,16 @@ async function renderProfile() {
         <div style="display:flex;align-items:center;gap:16px;margin:16px 0 8px">${SocialUI.avatar(u, 64)}<h1 class="h1" style="margin:0">${escH(u.name)}</h1></div>
         <p class="muted" style="margin:0 0 24px">${escH(u.email || 'Tài khoản Studio hoạt động trên trình duyệt')}</p>
 
-        <!-- Stats Grid Card -->
-        <div style="background:#FAF5EE;color:#24160E;border-radius:18px;padding:24px;border:1px solid rgba(36,22,14,.12);margin-bottom:28px;box-shadow:0 14px 32px -12px rgba(0,0,0,.6)">
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:center;border-bottom:1px solid rgba(36,22,14,.1);padding-bottom:18px;margin-bottom:18px">
-            <div>
-              <b style="font-family:var(--serif);font-size:1.8rem;color:var(--terra);display:block">${fmt(s.xp)}</b>
-              <span style="font-size:12px;color:rgba(36,22,14,.6)">Tổng điểm XP</span>
-            </div>
-            <div>
-              <b style="font-family:var(--serif);font-size:1.8rem;color:var(--gold-d);display:block">${s.streak || 0}</b>
-              <span style="font-size:12px;color:rgba(36,22,14,.6)">Chuỗi ngày (Streak)</span>
-            </div>
-            <div>
-              <b style="font-family:var(--serif);font-size:1.8rem;color:var(--sage-d);display:block">${doneCount}</b>
-              <span style="font-size:12px;color:rgba(36,22,14,.6)">Case đã giải</span>
-            </div>
+        <!-- Sổ cái: ba con số lớn + cấp độ hiện tại -->
+        <div class="at-ledger">
+          <div class="at-ledger__n">
+            <div><b>${fmt(s.xp)}</b><span>Tổng điểm XP</span></div>
+            <div><b>${s.streak || 0}</b><span>Chuỗi ngày (Streak)</span></div>
+            <div><b>${doneCount}</b><span>Case đã giải</span></div>
           </div>
-
-          <div class="row between">
-            <div>
-              <span style="font-size:12px;font-weight:700;letter-spacing:.08em;color:rgba(36,22,14,.55);text-transform:uppercase">CẤP ĐỘ HIỆN TẠI</span>
-              <b style="font-family:var(--serif);font-size:1.25rem;display:block;margin-top:2px">${escH(rk ? rk.t : 'Strategist')}</b>
-            </div>
-            <a class="btn btn--primary" href="hoc.html" style="border-radius:99px;padding:9px 20px;font-size:13.5px">Tiếp tục giải case →</a>
+          <div class="at-ledger__rank">
+            <div><span class="at-ledger__k">Cấp độ hiện tại</span><b>${escH(rk ? rk.t : 'Strategist')}</b></div>
+            <a class="btn btn--primary" href="hoc.html">Tiếp tục giải case →</a>
           </div>
         </div>
 
@@ -136,6 +124,6 @@ async function signOut() {
 
 renderProfile();
 </script>
-<script src="assets/js/paper.js?v=5"></script>
+<script src="assets/js/paper.js?v=7"></script>
 </body>
 </html>

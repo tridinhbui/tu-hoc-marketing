@@ -32,34 +32,53 @@
   const modesTried = Object.values(info).reduce((s, i) => s + ['learn', 'practice', 'challenge'].filter((m) => i.by(m).length).length, 0);
   const stepState = (id) => (id === 'ga4' || id === 'seo') && info[id].atts.length ? '<span class="lb-tag lb-tag--on">Đã làm</span>' : picked[id] ? '<span class="lb-tag lb-tag--on">Đã chọn kết quả</span>' : TOOLS[id] ? `<a class="lb-btn lb-btn--ghost lb-btn--sm" href="${TOOLS[id].href}">Làm</a>` : '<span class="lb-tag">Sắp mở</span>';
 
-  app.innerHTML = `<div class="lb">
-    <div class="lb-top"><span class="lb-eyebrow">Marketing Lab</span><span class="lb-hand">practice safely — fail, fix, repeat</span></div>
-    <h1>Luyện cách dùng phần mềm marketing, trước khi dùng tiền thật</h1>
-    <p class="lb-lede">Bốn công cụ phổ biến được mô phỏng với dữ liệu nhất quán. Bạn tự đưa ra quyết định, chạy thử, nhìn KPI, hiểu vì sao sai rồi sửa và chạy lại. Điểm đo chất lượng quyết định marketing, không đo việc bấm đúng nút.</p>
+  const steps = CASE.steps.map(([id, t], i) => `<li class="lab-step" data-id="${id}"><span class="lab-step__n">${String(i + 1).padStart(2, '0')}</span><span class="lab-step__t">${escH(t)}</span><span class="lab-step__s">${stepState(id)}</span></li>`).join('');
+  const desk = (id, k) => { const T = TOOLS[id], I = info[id];
+    return `<article class="lab-desk lab-desk--${k}"><p class="lb-eyebrow">Bàn ${String(['seo', 'meta', 'gads', 'ga4'].indexOf(id) + 1).padStart(2, '0')} · ${escH(T.n)}</p>
+      <h3>${escH(T.t)}</h3><p class="lab-desk__d">${T.d}</p>
+      <p class="lab-desk__m">${I.atts.length ? `${I.atts.length} lượt chạy · điểm cao nhất <b>${I.best}</b>` : 'Chưa có lượt chạy nào'}</p>
+      <a class="lb-btn" href="${T.href}">${I.atts.length ? 'Mở bàn làm việc' : 'Nhận brief & bắt đầu'}</a></article>`; };
 
-    ${last ? `<section class="lb-sec"><h2>Tiếp tục</h2><div class="lb-row"><div><h3>${TOOLS[last.tool].t}</h3><small>${last.draft ? 'Bản nháp' : 'Lần chạy gần nhất'} · ${dt(last.when)}</small></div>
+  app.innerHTML = `<div class="lb lab">
+    <header class="lab-hero">
+      <div class="lab-hero__t">
+        <div class="lb-top"><span class="lb-eyebrow">Marketing Lab · Xưởng agency</span><span class="lb-hand">practice safely — fail, fix, repeat</span></div>
+        <h1>Luyện cách dùng phần mềm marketing, <em>trước khi dùng tiền thật</em></h1>
+        <p class="lb-lede">Bốn công cụ phổ biến được mô phỏng với dữ liệu nhất quán. Bạn nhận brief, đưa ra quyết định, chạy thử, nhìn KPI, hiểu vì sao sai rồi sửa và chạy lại. Điểm đo chất lượng quyết định marketing, không đo việc bấm đúng nút.</p>
+      </div>
+      <aside class="lab-brief" aria-label="Brief xuyên suốt">
+        <span class="lab-brief__tape" aria-hidden="true"></span>
+        <p class="lb-eyebrow">Brief của khách</p>
+        <h2>${escH(CASE.t)}</h2>
+        <p>${escH(CASE.brand)}: ${escH(CASE.product)}. ${escH(CASE.brief)}</p>
+        <dl><div><dt>Ngân sách</dt><dd>${F.vnd(CASE.totalBudget)}</dd></div><div><dt>Giá trị đơn TB</dt><dd>${F.vnd(CASE.aov)}</dd></div></dl>
+      </aside>
+    </header>
+
+    ${last ? `<section class="lb-sec lab-continue"><h2>Tiếp tục từ đây</h2><div class="lb-row"><div><h3>${TOOLS[last.tool].t}</h3><small>${last.draft ? 'Bản nháp' : 'Lần chạy gần nhất'} · ${dt(last.when)}</small></div>
       <p>${last.draft ? `Chế độ ${escH(TOOLS[last.tool].modes[last.draft.mode].t)}, bước ${(last.draft.step || 0) + 1}.` : `Điểm ${last.attempt.summary.score}${last.attempt.summary.roas !== undefined ? ', ROAS ' + F.x(last.attempt.summary.roas) : ''}.`}</p>
       <a class="lb-btn" href="${TOOLS[last.tool].href}${last.draft ? '?mode=' + last.draft.mode : ''}">${last.draft ? 'Tiếp tục bản nháp' : 'Xem lại'}</a></div></section>` : ''}
 
-    <section class="lb-sec"><h2>Công cụ</h2>
-      ${['seo', 'meta', 'gads', 'ga4'].map((id) => { const T = TOOLS[id], I = info[id];
-        return `<div class="lb-row"><div><h3>${T.t}</h3><small>${I.atts.length ? `${I.atts.length} lượt chạy · điểm cao nhất ${I.best}` : 'Chưa chạy lần nào'}</small></div><p>${T.d}</p><a class="lb-btn" href="${T.href}">${I.atts.length ? 'Mở' : 'Bắt đầu'}</a></div>`; }).join('')}
-      ${upcoming.map(([t, d, when]) => `<div class="lb-row" data-off="1"><div><h3>${t}</h3><small>Sắp mở</small></div><p>${d}</p><span class="lb-tag">${when}</span></div>`).join('')}
+    <section class="lb-sec"><h2>Từ brief đến báo cáo</h2>
+      <p class="lb-lede" style="font-size:14.5px">Mỗi bước dùng đúng dữ liệu của bước trước: nghiên cứu → chiến dịch → đọc số.</p>
+      <ol class="lab-steps">${steps}</ol>
+      <p class="lb-lede" style="font-size:14px">Từng lab có thể làm độc lập. Khi làm xuyên suốt, GA4 đọc đúng các lần chạy bạn đã chọn của Meta và Google Ads, với giả định attribution nêu rõ. Nhớ bấm "Dùng lần chạy này cho case xuyên suốt" ở màn kết quả.</p>
     </section>
 
-    <section class="lb-sec"><h2>Nên làm tiếp</h2>
-      ${rec.slice(0, 3).map(([t, d, h]) => `<div class="lb-row"><div><h3>${escH(t)}</h3></div><p>${escH(d)}</p><a class="lb-btn lb-btn--ghost" href="${h}">Làm bài</a></div>`).join('')}
+    <section class="lb-sec"><h2>Bốn bàn làm việc</h2>
+      <div class="lab-desks">
+        ${desk('seo', 'a')}${desk('meta', 'b')}${desk('gads', 'c')}${desk('ga4', 'd')}
+        ${upcoming.map(([t, d, when]) => `<article class="lab-desk lab-desk--off" data-off="1"><p class="lb-eyebrow">Sắp mở · ${when}</p><h3>${t}</h3><p class="lab-desk__d">${d}</p></article>`).join('')}
+      </div>
     </section>
 
-    <section class="lb-sec"><h2>Tiến độ</h2>
+    <section class="lb-sec lab-feedback"><h2>Feedback từ studio</h2>
+      ${rec.slice(0, 3).map(([t, d, h], i) => `<div class="lab-note"><span class="lab-note__n">${i + 1}</span><div><h3>${escH(t)}</h3><p>${escH(d)}</p></div><a class="lb-btn lb-btn--ghost" href="${h}">Làm bài</a></div>`).join('')}
+    </section>
+
+    <section class="lb-sec"><h2>Bảng thành tích</h2>
       <div class="lb-stat"><div><b>${total}</b><span>lượt chạy</span></div><div><b>${best || '—'}</b><span>điểm cao nhất</span></div><div><b>${stars}/12</b><span>sao Thử thách</span></div><div><b>${modesTried}/12</b><span>chế độ đã thử</span></div></div>
       <p class="lb-lede">Tiến độ lưu theo tài khoản và khôi phục trên máy khác khi bạn đăng nhập.</p>
-    </section>
-
-    <section class="lb-sec"><h2>Case xuyên suốt: ${escH(CASE.t)}</h2>
-      <p class="lb-lede">${escH(CASE.brand)}: ${escH(CASE.product)}. Ngân sách ${F.vnd(CASE.totalBudget)}, giá trị đơn trung bình ${F.vnd(CASE.aov)}. ${escH(CASE.brief)}</p>
-      <div style="margin-top:12px">${CASE.steps.map(([id, t], i) => `<div class="lb-row" style="grid-template-columns:34px 1fr auto;padding:12px 0"><span class="lb-hand" style="font-size:1.4rem">${i + 1}</span><span>${escH(t)}</span>${stepState(id)}</div>`).join('')}</div>
-      <p class="lb-lede" style="font-size:14px">Từng lab có thể làm độc lập. Khi làm xuyên suốt, GA4 đọc đúng các lần chạy bạn đã chọn của Meta và Google Ads, với giả định attribution nêu rõ. Nhớ bấm "Dùng lần chạy này cho case xuyên suốt" ở màn kết quả.</p>
     </section>
   </div>`;
 })();

@@ -72,6 +72,7 @@
   .lvmap__go{display:inline-flex;border-radius:12px;background:var(--terra);color:#fff;font:800 12.5px var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:11px 16px;text-decoration:none}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=12">
+<link rel="stylesheet" href="assets/css/atelier.css?v=23">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Bài học và tiến độ được dựng ngay trong trình duyệt của bạn.</p></div></noscript>
@@ -87,7 +88,7 @@
 <script src="assets/js/data/cases.js?v=5"></script>
 <script src="assets/js/data/exam-items.js?v=8"></script>
 <script src="assets/js/app.js?v=21"></script>
-<script src="assets/js/social-ui.js?v=2"></script>
+<script src="assets/js/social-ui.js?v=7"></script>
 <script src="assets/js/lvart.js?v=2"></script>
 <script>
 appShell('hoc.html');
@@ -102,16 +103,14 @@ function renderLevelMap(nextKey) {
   const per = Math.round((nxt ? (s.xp - L.cur) / (nxt - L.cur) : 1) * 100);
   const left = Math.max(1, Math.ceil(need / XP.lesson)), st = (i) => i < n ? 'done' : i === n ? 'here' : 'locked';
   const f = (x) => x.toLocaleString('vi-VN'), check = '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
-  el.innerHTML = `<div class="lvmap__h"><div><h2>Bản đồ cấp độ học viên</h2><p>${f(s.xp)} XP · 6 bậc, mỗi bậc 5 cấp.</p></div>
-      <a class="lvmap__chip" href="cap-do.html" title="Xem chi tiết 30 cấp và cách kiếm XP">Cấp ${n}/30 →</a></div>
-    <div class="lvmap__wrap"><button type="button" class="lvmap__nav lvmap__nav--l" id="lvPrev" aria-label="Xem các cấp trước">‹</button>
+  el.innerHTML = `<div class="lvmap__wrap"><button type="button" class="lvmap__nav lvmap__nav--l" id="lvPrev" aria-label="Xem các cấp trước">‹</button>
     <div class="lvmap__track" id="lvTrack" tabindex="0" role="region" aria-label="30 cấp học viên, kéo ngang để xem">${LEVELS.map((name, k) => { const i = k + 1, t = st(i);
-      return `<div class="lvmap__lv" data-s="${t}">${t === 'here' ? '<span class="lvmap__you">BẠN</span>' : ''}
-        <div class="lvmap__art">${LvArt(i)}<em>${i}${t === 'done' ? check : ''}</em></div>
+      return `<div class="lvmap__lv" data-s="${t}" ${k % 5 === 0 ? `data-tier="Bậc ${k / 5 + 1}"` : ''}>${t === 'here' ? '<span class="lvmap__you">bạn ở đây</span>' : ''}
+        <div class="at-medal" aria-hidden="true">${i}${t === 'done' ? `<i>${check}</i>` : ''}</div>
         <div class="lvmap__card"><small>CẤP ${i}</small><b>${escH(name)}</b><span>${f(lvXP(i))} XP</span>
           <span>${t === 'done' ? 'Đã đạt' : t === 'here' ? (nxt ? 'còn ' + f(need) + ' XP' : 'Cấp cao nhất') : 'cần ' + f(lvXP(i) - s.xp) + ' XP'}</span></div></div>`; }).join('')}</div>
     <button type="button" class="lvmap__nav lvmap__nav--r" id="lvNext" aria-label="Xem các cấp sau">›</button></div>
-    <div class="lvmap__f"><div style="flex:1;min-width:200px">${nxt ? `Còn <b style="color:#fff">${f(need)} XP</b> nữa lên cấp ${n + 1} — khoảng ${left} bài học.` : 'Bạn đang ở cấp cao nhất.'}
+    <div class="lvmap__f"><div style="flex:1;min-width:200px">${nxt ? `Còn <b>${f(need)} XP</b> nữa lên cấp ${n + 1} — khoảng ${left} bài học.` : 'Bạn đang ở cấp cao nhất.'}
       <div class="lvmap__bar"><i style="width:${per}%"></i></div></div>
       <a class="lvmap__go" href="bai.html?id=${encodeURIComponent(nextKey)}">Học bài ngay →</a></div>`;
   const cur = el.querySelector('[data-s="here"]'), tr = document.getElementById('lvTrack');
@@ -147,47 +146,93 @@ function renderDashboard(user) {
   const goHref = 'bai.html?id=' + encodeURIComponent(nk);
   const hello = user && user.name ? `Chào ${escH(user.name.split(' ').slice(-1)[0])}, ` : '';
 
+  /* Bố cục tạp chí: hero (nhiệm vụ đang học) → thẻ học viên → hành trình sáu chặng → bộ sưu tập cấp độ → nhiệm vụ | bảng xếp hạng. */
+  const PHOTO = ['poster_apple_thinker.jpg', 'studio_workspace.jpg', 'cafe_community.jpg', 'coffee_lifestyle.jpg', 'poster_nike_athlete.jpg', 'hero_editorial_face.jpg'];
+  const title = nm ? nm.t : 'Bắt đầu bài đầu tiên';
+  const heroPhoto = 'assets/img/' + PHOTO[Math.max(0, stageN - 1) % PHOTO.length];
+  const words = title.split(/\s+/), cut = words.length > 3 ? Math.ceil(words.length * 0.6) : words.length;
+  const titleHtml = words.length > 3 ? escH(words.slice(0, cut).join(' ')) + ' <em>' + escH(words.slice(cut).join(' ')) + '</em>' : '<em>' + escH(title) + '</em>';
+  const stageInfo = STAGES.map((st, si) => {
+    const ks = st.mods.flatMap((m) => m.lessons), d = ks.filter((k) => s.done[k]).length;
+    return { st, si, n: ks.length, d, first: ks.find((k) => !s.done[k]) || ks[0] };
+  });
+  const hereIdx = Math.max(0, stageN - 1), L0 = level(s.xp);
+  const left0 = L0.next ? Math.max(1, Math.ceil((L0.next - s.xp) / XP.lesson)) : 0;
+  const story = doneCount === 0
+    ? `Bạn chưa đi bước nào — chặng đầu tiên là <b>${escH(STAGES[0].t)}</b>. Mỗi bài chỉ mất vài phút.`
+    : `Bạn đã đi <b>${doneCount}</b> trên ${totalLessons} bài, hiện ở chặng ${stageN}: <b>${escH(STAGES[hereIdx].t)}</b>.${left0 ? ' Khoảng ' + left0 + ' bài nữa là lên cấp ' + (L0.n + 1) + '.' : ''}`;
+
   app.innerHTML = `
-  <div class="d-dash">
-    <div class="d-col">
-      <section class="d-card d-mission">
-        <div>
-          <div class="d-mission__ic"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19V5"/></svg></div>
-          <div class="chips"><span class="d-chip d-chip--g">Nhiệm vụ đang học</span><span class="d-chip d-chip--y">+10 XP khi hoàn thành</span></div>
-          <div class="small muted">Chặng ${stageN} · Bài ${lessonN}</div>
-          <h1>${hello ? `<span style="font-weight:600;color:var(--ink-50);font-size:.7em;display:block">${hello}tiếp tục nhé</span>` : ''}${escH(nm ? nm.t : 'Bắt đầu bài đầu tiên')}</h1>
-          <a class="btn-go" href="${goHref}">Học tiếp →</a>
-          <div style="display:flex;align-items:center;gap:12px;margin-top:16px;font-size:13px;color:var(--ink-70)">
-            <span style="white-space:nowrap">Tiến độ (${doneCount}/${totalLessons} bài)</span><div class="d-bar" style="flex:1"><i style="width:${Math.max(1, pct)}%"></i></div><b>${pct}%</b>
-          </div>
+  <div class="at-dash">
+    <header class="at-hero">
+      <div class="at-hero__txt">
+        <p class="at-kick">Chặng ${stageN} · Bài ${lessonN} <span>Nhiệm vụ đang học</span></p>
+        ${hello ? `<p class="at-hello">${hello}tiếp tục nhé.</p>` : '<p class="at-hello">Hôm nay, ta bắt đầu từ đây.</p>'}
+        <h1 class="at-display">${titleHtml}</h1>
+        <div class="at-hero__cta">
+          <a class="at-btn" href="${goHref}">Học tiếp <span aria-hidden="true">→</span></a>
+          <a class="at-link" href="hoc-bai.html">Xem toàn bộ bài học</a>
         </div>
-        <div class="d-mission__img"><img src="assets/img/art-megaphone.svg" alt=""></div>
-      </section>
-      <a href="hoc-bai.html" style="font-size:14px;color:var(--ink-70);text-decoration:none">Xem toàn bộ bài học →</a>
-
-      <section class="lvmap" id="lvMap" aria-label="Bản đồ cấp độ"></section>
-
-      <div class="d-tabs" role="tablist">
-        <button class="on" data-tab="q" role="tab">Thưởng &amp; nhiệm vụ</button>
-        <button data-tab="m" role="tab">Mục tiêu nghề &amp; kỹ năng</button>
-        <button data-tab="a" role="tab">Đấu trường &amp; luyện tập</button>
-        <button data-tab="l" role="tab">Cấp độ &amp; XP</button>
+        <div class="at-trail">
+          <p><b>${doneCount}</b> / ${totalLessons} bài · ${pct}% hành trình</p>
+          <div class="at-trail__line" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><i style="width:${Math.max(1, pct)}%"></i></div>
+        </div>
       </div>
-      <section class="d-card" id="tabBody"></section>
-    </div>
+      <figure class="at-hero__ph" aria-hidden="true">
+        <div class="ph"><img src="${heroPhoto}" alt="" loading="eager"></div>
+        <span class="at-scrap">+10 XP<br>khi hoàn thành</span>
+        <figcaption><b>Tư.${String(lessonN).padStart(2, '0')}</b> ${escH(STAGES[hereIdx].t)}</figcaption>
+      </figure>
+    </header>
+    <div class="at-pass-slot"><div id="sbProfile"></div></div>
 
-    <div class="d-col">
-      <div id="sbProfile"></div>
-      <section class="d-card">
-        <div style="display:flex;justify-content:space-between;align-items:center"><b>Hành trình của bạn</b><span class="d-chip d-chip--g">Cấp ${level(s.xp).n}</span></div>
-        <div class="d-journey"><img src="assets/img/art-journey.svg" alt=""></div>
-        <a href="ban-do.html" class="btn-go" style="display:flex;justify-content:center;background:var(--bg);color:var(--ink);border:1px solid var(--ink-12)">Xem bản đồ hành trình →</a>
+    <div class="at-body">
+      <section class="at-sec" aria-labelledby="atJ" data-at>
+        <div class="at-sec__head">
+          <div><p class="at-kick">Hành trình</p><h2 class="at-sec__title" id="atJ">Sáu chặng, <em>một con đường</em></h2></div>
+          <p class="at-sec__aside">${story}</p>
+        </div>
+        <ol class="at-path">${stageInfo.map((x) => {
+          const st = x.si < hereIdx ? (x.d >= x.n ? 'done' : 'done') : x.si === hereIdx ? 'here' : 'later';
+          return `<li class="at-stop" data-s="${st}" style="--i:${x.si}"><a href="bai.html?id=${encodeURIComponent(x.first)}">
+            <span class="at-stop__no">${String(x.si + 1).padStart(2, '0')}</span><span class="at-stop__dot"></span>
+            <span><h3>${escH(x.st.t)}</h3><p>${escH(x.st.q || '')}</p><small>${x.d}/${x.n} bài</small></span></a></li>`;
+        }).join('')}</ol>
       </section>
-      <div>
-        <div class="d-pills" id="boardPills"><button class="on" data-by="xp">Điểm tuần</button><button data-by="streak">Chuỗi ngày</button><button data-by="cases">Case</button></div>
-        <div id="sbBoard"></div>
+
+      <section class="at-sec" aria-labelledby="atL" data-at>
+        <div class="at-sec__head">
+          <div><p class="at-kick">Cấp độ &amp; XP</p><h2 class="at-sec__title" id="atL">Bộ sưu tập <em>con dấu</em></h2></div>
+          <a class="at-link" href="cap-do.html" title="Xem chi tiết 30 cấp và cách kiếm XP">Cấp ${level(s.xp).n}/30 · xem chi tiết</a>
+        </div>
+        <div class="lvmap" id="lvMap" aria-label="Bản đồ cấp độ"></div>
+      </section>
+
+      <div class="at-cols" data-at>
+        <section aria-label="Nhiệm vụ và lối vào">
+          <p class="at-kick">Hôm nay</p>
+          <div class="d-tabs" role="tablist">
+            <button class="on" data-tab="q" role="tab">Thưởng &amp; nhiệm vụ</button>
+            <button data-tab="m" role="tab">Mục tiêu nghề &amp; kỹ năng</button>
+            <button data-tab="a" role="tab">Đấu trường &amp; luyện tập</button>
+            <button data-tab="l" role="tab">Cấp độ &amp; XP</button>
+          </div>
+          <div id="tabBody"></div>
+        </section>
+        <aside aria-label="Cộng đồng">
+          <section class="at-blk">
+            <div class="at-blk__h"><h3 class="at-blk__t">Bảng <em>xếp hạng</em></h3><a class="at-link" href="bang-xep-hang.html">Tất cả</a></div>
+            <div class="d-pills" id="boardPills"><button class="on" data-by="xp">Điểm tuần</button><button data-by="streak">Chuỗi ngày</button><button data-by="cases">Case</button></div>
+            <div id="sbBoard"></div>
+          </section>
+          <section class="at-blk">
+            <div class="at-blk__h"><h3 class="at-blk__t">Hành trình <em>của bạn</em></h3></div>
+            <p>Mỗi chặng bạn đi qua được vẽ thêm vào bản đồ nghề nghiệp.</p>
+            <a href="ban-do.html" class="at-btn at-btn--ink">Xem bản đồ hành trình <span aria-hidden="true">→</span></a>
+          </section>
+          <div id="sbInvite"></div>
+        </aside>
       </div>
-      <div id="sbInvite"></div>
     </div>
   </div>`;
 
@@ -196,7 +241,7 @@ function renderDashboard(user) {
   const body = document.getElementById('tabBody');
   const tiles = (arr) => `<div class="d-tilegrid">${arr.map(([t, d, h]) => `<a class="d-tile" href="${h}"><b>${t}</b><span>${d}</span></a>`).join('')}</div>`;
   const TAB = {
-    q: () => { body.innerHTML = '<div id="qList"></div>'; SocialUI.questsPanel(document.getElementById('qList'), goHref); },
+    q: () => { body.innerHTML = '<div id="qList"></div>'; SocialUI.questsPanel(document.getElementById('qList'), goHref, () => SocialUI.profileCard(document.getElementById('sbProfile'), user)); },
     m: () => { body.innerHTML = tiles([['Học theo nghề', 'Chọn mục tiêu nghề nghiệp', 'ban-do.html'], ['Kỹ năng & triện', 'Mức thành thạo từng kỹ năng', 'nang-luc.html'], ['Rương thưởng', 'Mở rương và xem phần thưởng', 'ruong.html']]); },
     a: () => { body.innerHTML = tiles([['Quiz', 'Làm nhanh, nhận XP', 'quiz.html'], ['Thi vượt chặng', 'Chứng minh bạn đã nắm chặng', 'thi.html'], ['Game Kingdom', 'Đấu trường và boss', 'kingdom.html'], ['Luyện phỏng vấn', 'Tập trả lời như thật', 'phong-van.html']]); },
   };
@@ -226,6 +271,6 @@ function renderDashboard(user) {
 
 account().then((u) => renderDashboard(u || {})).catch(() => renderDashboard({}));
 </script>
-<script src="assets/js/paper.js?v=5"></script>
+<script src="assets/js/paper.js?v=7"></script>
 </body>
 </html>

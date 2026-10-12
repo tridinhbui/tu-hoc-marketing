@@ -12,7 +12,7 @@
   try{
     var s=JSON.parse(localStorage.getItem('thmc.v1')||'{}');
     if(!localStorage.getItem('thmc.themeV2')){ s.theme='ivory'; localStorage.setItem('thmc.v1',JSON.stringify(s)); localStorage.setItem('thmc.themeV2','1'); }
-    document.documentElement.dataset.theme = s.theme==='ivory' ? 'ivory' : '';
+    document.documentElement.dataset.theme = 'ivory';
   }catch(e){ document.documentElement.dataset.theme='ivory'; }
 })();
 </script>
@@ -142,6 +142,7 @@
   @media(max-height:760px){.grp{margin-top:8px}.nav a,.nav button.nv{min-height:38px}.rail__logo{padding-bottom:8px}}
 </style>
 <link rel="stylesheet" href="assets/css/studio.css?v=15">
+<link rel="stylesheet" href="assets/css/atelier-shell.css?v=3">
 </head>
 <body>
 <noscript><p style="padding:24px">Trang này cần JavaScript. <a href="hoc.html" style="color:#C85A32">Mở bài học</a>.</p></noscript>
@@ -289,9 +290,12 @@ function refreshMe() {
 function loadInto(path) {
   if (!SAFE.test(path)) path = 'hoc.html';
   const bar = document.getElementById('load'); bar.style.width = '35%';
-  frame.src = path;
+  document.getElementById('main').classList.add('is-loading');
+  setTimeout(() => { frame.src = path; }, 140);
+  setTimeout(() => document.getElementById('main').classList.remove('is-loading'), 6000);
 }
 frame.addEventListener('load', () => {
+  document.getElementById('main').classList.remove('is-loading');
   document.getElementById('load').style.width = '100%';
   setTimeout(() => { document.getElementById('load').style.width = '0'; }, 250);
   let file = 'hoc.html', q = '';

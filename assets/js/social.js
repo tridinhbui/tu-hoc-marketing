@@ -20,7 +20,8 @@ const Social = (() => {
   }
 
   /* ---------- giao diện ---------- */
-  const themeNow = () => (S.get().theme === 'ivory' ? 'ivory' : 'dark');
+  /* Một giao diện sáng duy nhất (art direction Atelier): không còn chế độ tối nửa vời. */
+  const themeNow = () => 'ivory';
   function applyThemeTop(t) {
     const v = t === 'ivory' ? 'ivory' : '';
     document.documentElement.dataset.theme = v;
@@ -91,7 +92,6 @@ const Social = (() => {
       <a id="umAdmin" href="quan-tri.html" role="menuitem" hidden>${I('<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>')}Trang quản trị</a>
       <hr>
       <div class="um__row"><span>Ngôn ngữ</span><span class="um__seg"><button class="on" type="button">VI</button><button type="button" disabled title="Bản tiếng Anh sắp có">EN</button></span></div>
-      <div class="um__row"><span>Giao diện</span><span class="um__seg"><button type="button" data-theme-set="ivory">Sáng</button><button type="button" data-theme-set="dark">Tối</button></span></div>
       <hr>
       <button type="button" class="um__i um__out" id="umOut" role="menuitem">${I('<path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/>')}Đăng xuất</button>`;
     host.appendChild(um);

@@ -303,6 +303,7 @@ svg.i{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-widt
 .framed .shell{padding-left:0!important}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=12">
+<link rel="stylesheet" href="assets/css/atelier.css?v=23">
 </head>
 <body>
 <noscript><p style="padding:24px">Trang này cần JavaScript. Bài học và tiến độ được dựng ngay trong trình duyệt của bạn.</p></noscript>
@@ -393,6 +394,7 @@ function currentIn(keys,s){ return keys.find(k=>!s.done[k])||null; }
 function renderL(){
   const s=S.get(), keys=trackKeys(), set=new Set(keys), cur=currentIn(keys,s), cw=cur&&where(cur), cm=cur&&lessonMeta(cur);
   const doneN=keys.filter(k=>s.done[k]).length, p=pct(doneN,keys.length);
+  const heroPhoto='assets/img/'+['poster_apple_thinker','studio_workspace','cafe_community','coffee_lifestyle','poster_nike_athlete','hero_editorial_face'][Math.max(0,cw?STAGES.indexOf(cw.stage):0)%6]+'.jpg';
   const path=PATHS.find(x=>x.id===(s.path&&s.path!=='full'?s.path:null));
   const order=ALL.map(x=>x.key).filter(k=>set.has(k)), num=k=>order.indexOf(k)+1;
   const n=norm(query.trim());
@@ -408,7 +410,7 @@ function renderL(){
     const d=ks.filter(k=>s.done[k]).length, fresh=st.id==='s6';
     return `<div class="stage">
       <button class="stage__h" data-stage="${st.id}" aria-expanded="${expanded}" ${hasCur?'data-lockopen':''}>
-        <span class="tile ${si===0?'tile--first':''}">${ic(TILE[si]||'book')}</span>
+        <span class="tile ${si===0?'tile--first':''}" data-n="${String(si+1).padStart(2,'0')}">${ic(TILE[si]||'book')}</span>
         <span class="stage__t"><span class="tag">Chặng ${si+1}</span>
           <h3>${escH(st.t)}</h3><p class="stage__q">${escH(st.q)}</p></span>
         <span class="stage__r"><span class="mini"><i style="width:${pct(d,ks.length)}%"></i></span><span class="cnt">${d}/${ks.length}</span>${ic('down','chev')}</span>
@@ -436,7 +438,7 @@ function renderL(){
         <span class="btn" style="pointer-events:none">${cur?'Học tiếp':'Mở thư viện case'} ${ic('right')}</span>
         <span class="prog">Tiến độ (${doneN}/${keys.length} bài) <span class="bar"><i style="width:${Math.max(2,p)}%"></i></span><b>${p}%</b></span>
       </span>
-      <span class="hero__img"><img src="assets/img/art-journey.svg" alt="" loading="eager"></span>
+      <span class="hero__img"><img src="${heroPhoto}" alt="" loading="eager"></span>
     </a>
     <div class="tabs" role="tablist" aria-label="Lộ trình">
       <button class="tab" role="tab" data-track="full" aria-selected="${track==='full'}">Chương trình đầy đủ <small>${ALL.filter(x=>s.done[x.key]).length}/${ALL.length} bài</small></button>
@@ -639,6 +641,6 @@ function wireResize(){
   if(u){ renderSide(u); renderR(u); syncNow().then(()=>{ renderL(); }); mountAssistant(); }
 })();
 </script>
-<script src="assets/js/paper.js?v=5"></script>
+<script src="assets/js/paper.js?v=7"></script>
 </body>
 </html>

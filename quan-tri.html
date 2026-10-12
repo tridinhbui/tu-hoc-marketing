@@ -74,6 +74,7 @@
   @media(max-width:860px){.app{grid-template-columns:1fr}.side{position:static;height:auto}.side .foot{display:none}.side nav{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}.chat{grid-template-columns:1fr;height:auto}.threads{max-height:220px;border-right:0;border-bottom:1px solid var(--line)}.conv{min-height:420px}}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=12">
+<link rel="stylesheet" href="assets/css/atelier.css?v=23">
 </head>
 <body>
 <noscript><p style="padding:24px">Trang này cần JavaScript.</p></noscript>
@@ -256,6 +257,6 @@ async function show() {
   setInterval(async () => { if (tab !== 'chats' && !document.hidden) { try { const d = await api('/admin/chats'); badge = d.threads.filter((x) => x.unread).length; paintNav(); } catch (e) {} } }, 30000);
 })();
 </script>
-<script src="assets/js/paper.js?v=5"></script>
+<script src="assets/js/paper.js?v=7"></script>
 </body>
 </html>

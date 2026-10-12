@@ -257,7 +257,7 @@ const APP_ICON={
 };
 const appIc=n=>`<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${APP_ICON[n]||''}</svg>`;
 function applyTheme(s=S.get()){
-  document.documentElement.dataset.theme=s.theme==='light'?'':s.theme;
+  document.documentElement.dataset.theme='ivory';   // một giao diện sáng duy nhất (Atelier)
   document.documentElement.style.setProperty('--read',(s.read||18)+'px');
 }
 function appShell(here,opts={}){

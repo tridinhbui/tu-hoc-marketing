@@ -18,7 +18,7 @@ const NAV_MORE = [
 
 /* Cùng giao diện với app: đọc theme đã chọn ở khung (mặc định giấy ngà), không tự đứng ở nền tối. */
 (function(){ try{ const t=(JSON.parse(localStorage.getItem('thmc.v1')||'{}')).theme;
-  document.documentElement.dataset.theme = t==='light' ? '' : (t||'ivory'); }catch(e){ document.documentElement.dataset.theme='ivory'; } })();
+  document.documentElement.dataset.theme = 'ivory'; }catch(e){ document.documentElement.dataset.theme='ivory'; } })();
 
 /* ---------------- state ---------------- */
 const KEY = 'nhinthay.v1';

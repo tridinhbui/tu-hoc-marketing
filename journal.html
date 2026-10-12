@@ -37,6 +37,7 @@
   .empty{padding:clamp(40px,6vw,90px) 0;text-align:center}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=12">
+<link rel="stylesheet" href="assets/css/atelier.css?v=23">
 </head>
 <body>
 <noscript><div class="nojs">
@@ -166,5 +167,5 @@ document.addEventListener('click',e=>{
   if(d){ const s=State.get(); s.notes.splice(+d.dataset.del,1); State.set({notes:s.notes}); render(); toast('Đã xoá'); }
 });
 </script>
-<script src="assets/js/paper.js?v=5"></script>
+<script src="assets/js/paper.js?v=7"></script>
 </body></html>
