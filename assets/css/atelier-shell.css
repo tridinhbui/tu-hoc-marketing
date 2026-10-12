@@ -66,6 +66,54 @@
 :root[data-theme=ivory] .rail__bar{height:2px;border-radius:0;background:var(--r-line);margin:10px 0 0}
 :root[data-theme=ivory] .rail__bar i{background:#a8461f;border-radius:0}
 
+/* BỐ CỤC GỌN — cùng khuôn với thanh bên "Tự Học Tài Chính": hẹp (≈256px), ô tìm kiếm bo tròn, mục có biểu tượng,
+   mục đang ở là một viên thuốc nền nhạt, mỗi nhóm một khung bo; giữ bảng màu ngà + đất nung của Atelier. */
+:root[data-theme=ivory]{--r-field:rgba(29,21,16,.05);--r-pill:rgba(255,252,244,.55);--r-act-bg:rgba(168,70,31,.12);--r-hover:rgba(168,70,31,.07)}
+:root[data-theme=ivory] .rail__top{padding:16px 12px 4px}
+:root[data-theme=ivory] .rail__scroll{padding:6px 10px 8px}
+:root[data-theme=ivory] .rail__logo{padding:2px 6px 12px;gap:10px}
+:root[data-theme=ivory] .rail__mark,:root[data-theme=ivory] .rail__mark img{width:32px;height:32px}
+:root[data-theme=ivory] .rail__logo>span:not(.rail__mark){font-size:1.02rem;font-style:italic}
+:root[data-theme=ivory] .rail__tag{margin:-6px 0 0 42px;font-size:9px}
+
+:root[data-theme=ivory] .rail__search input{height:38px;border:1px solid var(--r-line);border-radius:12px;background:var(--r-field);padding:0 44px 0 34px;font:400 13.5px 'Be Vietnam Pro',system-ui,sans-serif}
+:root[data-theme=ivory] .rail__search input::placeholder{font-style:normal}
+:root[data-theme=ivory] .rail__search input:focus{background:#faf4e7;border-color:#a8461f}
+:root[data-theme=ivory] .rail__search>svg{left:11px;top:11px}
+:root[data-theme=ivory] .rail__search kbd{top:8px;right:7px;border:1px solid var(--r-line);border-radius:7px;background:#faf4e7;padding:3px 7px;font:600 10.5px 'Be Vietnam Pro',sans-serif}
+
+:root[data-theme=ivory] .rail .nav a,:root[data-theme=ivory] .rail .nav button.nv{min-height:40px;padding:0 10px;border-radius:12px;gap:11px;
+  font:600 14px/1.25 'Be Vietnam Pro',system-ui,sans-serif;letter-spacing:0;font-variation-settings:normal}
+:root[data-theme=ivory] .rail .nav a::before{content:none}
+:root[data-theme=ivory] .rail .nav a:hover,:root[data-theme=ivory] .rail .nav button.nv:hover{background:var(--r-hover);padding-left:10px;color:#1d1510}
+:root[data-theme=ivory] .rail .nav a[aria-current="page"]{background:var(--r-act-bg);color:#8a3416;font-style:normal;font-weight:700;padding-left:10px}
+:root[data-theme=ivory] .rail .nav svg.i{display:block;width:18px;height:18px;opacity:.8}
+:root[data-theme=ivory] .rail .nav a[aria-current="page"] svg.i{opacity:1}
+:root[data-theme=ivory] .rail .nav .tag{font:700 9px/1 "Be Vietnam Pro",sans-serif;letter-spacing:.02em;text-transform:uppercase;padding:3px 5px;border-radius:6px;font-size:9px}
+:root[data-theme=ivory] .rail .nav .tag::before{content:none!important}
+:root[data-theme=ivory] .rail .nav .tag--new{background:#e3efd9;color:#3f6a1f}
+:root[data-theme=ivory] .rail .nav .tag--hot,:root[data-theme=ivory] .rail .nav .tag--chk{background:#fbe7b8;color:#8a5a00}
+:root[data-theme=ivory] .rail .nav em.due{background:#a8461f;color:#fff;border-radius:99px;padding:2px 7px}
+:root[data-theme=ivory] .rail .nav em.due::before{content:none}
+
+:root[data-theme=ivory] .rail .grp{margin-top:14px}
+:root[data-theme=ivory] .rail .grp__h{padding:6px 8px;border-bottom:0;gap:8px;color:#a8461f;font:800 11px/1 'Be Vietnam Pro',sans-serif;letter-spacing:.12em}
+:root[data-theme=ivory] .rail .grp__h svg:not(.chev){display:block}
+:root[data-theme=ivory] .rail .grp__body.box{border:1px solid var(--r-line);background:var(--r-pill);padding:6px;margin-top:4px;border-radius:16px}
+:root[data-theme=ivory] .rail .grp__body:not(.box){padding:2px 0 0}
+
+:root[data-theme=ivory] .rail__foot{padding:10px 12px 12px;border-top:1px solid var(--r-line)}
+:root[data-theme=ivory] .rail__row{margin-bottom:10px;gap:8px}
+:root[data-theme=ivory] .coin{flex:1;height:38px;padding:0 12px;border:1px solid var(--r-line);border-radius:12px;background:var(--r-pill);font:600 13px 'Be Vietnam Pro',sans-serif;gap:8px}
+:root[data-theme=ivory] .coin i{width:16px;height:16px;box-shadow:none}
+:root[data-theme=ivory] .coin b{font:700 14px 'Be Vietnam Pro',sans-serif;letter-spacing:0;margin-left:auto}
+:root[data-theme=ivory] .bell{width:38px;height:38px;border:1px solid var(--r-line);border-radius:12px;background:var(--r-pill)}
+:root[data-theme=ivory] .rail__card{padding:9px 10px;border:1px solid var(--r-line);border-radius:14px;background:var(--r-pill);gap:10px}
+:root[data-theme=ivory] .rail__av{width:36px;height:36px;font:700 1rem 'Be Vietnam Pro',sans-serif}
+:root[data-theme=ivory] .rail__name{font:700 13.5px/1.2 'Be Vietnam Pro',sans-serif}
+:root[data-theme=ivory] .rail__bar{height:4px;border-radius:99px;margin:8px 2px 0}
+:root[data-theme=ivory] .rail__bar i{border-radius:99px}
+
 /* khung phải: chuyển trang mờ dần thay vì bật cái rụp */
 .stage iframe{transition:opacity .3s ease}
 .stage.is-loading iframe{opacity:0}
