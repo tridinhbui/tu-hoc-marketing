@@ -535,3 +535,67 @@ body.ed::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;
 .cases-quote.hand,.met-note.hand,.w-scrib.hand,.lab figcaption.hand,.lab .hand:not(.nb .hand):not(.st .hand){
   font-family:var(--serif);font-style:italic;font-weight:300;font-variation-settings:'opsz' 72,'SOFT' 100;letter-spacing:-.01em;line-height:1.25}
 .w-scrib{color:rgba(242,233,216,.85)}
+
+/* ---------- Gọn khoảng trống (v4) ----------
+   Giảm padding dọc và độ cao các "bàn/tường" để trang đỡ phải cuộn; không đổi bố cục hay nội dung. */
+.sec{padding-top:clamp(52px,6.6vw,104px);padding-bottom:clamp(52px,6.6vw,104px)}
+.sec.torn{padding-top:calc(clamp(52px,6.6vw,104px) + 14px)}
+.mani{padding-top:calc(clamp(60px,7.4vw,112px) + 14px);padding-bottom:clamp(20px,2.6vw,40px)}
+.mani .kick{margin-bottom:clamp(16px,2.4vw,32px)}
+.mani-small{margin-top:clamp(22px,3vw,44px)}
+.cases{padding-top:clamp(20px,3vw,44px)}
+.cases-head{margin-bottom:clamp(18px,3vw,40px)}
+.ana{padding-bottom:clamp(52px,6.2vw,96px)}
+.ana-head{margin-bottom:clamp(22px,3.4vw,52px)}
+.ana-step{padding:clamp(14px,1.9vw,26px) 0 clamp(16px,2.4vw,34px)}
+.ana-foot{margin-top:clamp(22px,3vw,42px)}
+.met-top{margin-bottom:clamp(18px,3vw,42px)}
+.rung{padding:clamp(6px,.9vw,12px) 0}
+.rung h3{font-size:clamp(2.2rem,6.3vw,6.6rem)}
+.met-note{margin-top:clamp(20px,2.6vw,38px)}
+.lab-head{margin-bottom:clamp(12px,2vw,26px)}
+.road-sky{padding-top:clamp(56px,6.8vw,100px)}
+.skills{padding-top:clamp(44px,5.6vw,84px);padding-bottom:clamp(44px,5.6vw,84px)}
+.sk-head{margin-bottom:clamp(16px,2.6vw,36px)}
+.sk{padding:clamp(11px,1.5vw,22px) 0}
+.chal{padding-top:clamp(56px,7.4vw,108px);padding-bottom:clamp(56px,7.4vw,108px)}
+.opts,.view{margin-top:clamp(24px,3.2vw,46px)}
+.stats{margin-top:clamp(12px,2vw,26px);padding-top:20px}
+.comm{min-height:clamp(500px,46vw,640px)}
+.foot{padding-top:clamp(36px,5vw,70px)}
+@media (min-width:1000px){
+  .hero{min-height:max(88svh,640px)}
+  .road-map{height:clamp(340px,34vw,480px);margin-top:clamp(18px,2.6vw,38px)}
+  .desk{min-height:clamp(640px,52vw,800px)}
+  .wall{height:clamp(620px,52vw,800px);margin-top:clamp(6px,1.4vw,20px)}
+  .w-note{top:30%}
+  .w-search{top:55%}
+}
+
+/* tiêu đề và số lớn bớt chiếm chỗ */
+.ana-title{font-size:clamp(2.6rem,7.4vw,7.6rem)}
+.ana-head .kick{margin-bottom:14px}
+.ana-step .n{font-size:clamp(2.4rem,4vw,4.4rem)}
+.ana-step .k{margin:4px 0 4px}
+.ana-step h3{margin-bottom:6px}
+.kpi{font-size:clamp(1.9rem,3.4vw,3.2rem);margin-top:8px}
+.met-title{font-size:clamp(2.1rem,4.8vw,5rem)}
+.lab-title{font-size:clamp(2.4rem,5.8vw,6rem)}
+.road-title{font-size:clamp(2.2rem,5.2vw,5.4rem)}
+.sk-title{font-size:clamp(1.9rem,4.2vw,4.2rem)}
+.sk h3{font-size:clamp(1.5rem,3.1vw,3.1rem)}
+.uni-title{font-size:clamp(2.3rem,5.8vw,6rem)}
+.stats b{font-size:clamp(2.2rem,5.2vw,5rem)}
+.comm-title{font-size:clamp(2rem,5vw,5.2rem)}
+.cases-title{font-size:clamp(2rem,4.2vw,4.5rem)}
+.chal-q{font-size:clamp(1.6rem,3.8vw,3.7rem)}
+@media (max-width:999px){
+  .desk{gap:16px;padding-top:8px}
+  .wall{gap:12px;margin-top:16px}
+  .ana-spec{margin-bottom:16px;max-width:340px}
+  .mani-side{margin-top:20px}
+  .qs{margin-bottom:18px}
+  .nodes{gap:8px}
+  .stats{gap:14px}
+  .hero{padding-bottom:12px}
+}
