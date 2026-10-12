@@ -120,8 +120,8 @@ BAI_ADD({ mod:'kh07', lessons:[
 { id:'B:kh07-03', skill:'insight', read:'6 phút', t:'Menu trà sữa 48 món: nhiều lựa chọn hơn có bán được nhiều hơn?',
   situation:'Một quán trà sữa ở Hà Nội có menu 48 món, chia 6 nhóm. Chủ quán thấy khách đứng trước quầy lâu, hỏi “món nào ngon nhất?”, nhiều người gọi món quen, và vào giờ cao điểm hàng chờ dài. Một nhân viên đề xuất rút menu xuống 16 món và đánh dấu 3 món gợi ý. Chủ quán sợ mất khách vì “ít món quá”.',
   concept:{ name:'Quá tải lựa chọn (choice overload)',
-    body:'Nhiều lựa chọn nghe hấp dẫn, nhưng mỗi lựa chọn thêm là một phép so thêm trong đầu khách. Khi quá nhiều, khách có thể mệt, sợ chọn sai, và phản ứng bằng cách <b>hoãn</b>, chọn món quen, hoặc bỏ đi. Các nghiên cứu cho kết quả không đồng đều (một phân tích tổng hợp năm 2010 thấy tác động trung bình gần bằng không), hiệu ứng rõ nhất khi các món khó phân biệt và khách không có tiêu chí rõ. Cách giảm tải: bớt số món, <b>nhóm</b> lại theo tiêu chí dễ hiểu, và gắn <b>gợi ý</b> để khách có điểm bắt đầu.' },
-  example:'Quán thử hai tuần: tuần 1 menu 48 món, tuần 2 menu 16 món có 3 món gợi ý. Thời gian gọi món trung bình giảm từ 95 giây xuống 50 giây. Giờ cao điểm, quầy phục vụ được thêm khách mỗi giờ; tỉ lệ khách vào xem rồi bỏ đi giảm từ 12% xuống 7%. Ba món gợi ý chiếm 40% số ly bán — dễ chuẩn bị nguyên liệu hơn.',
+    body:'Nhiều lựa chọn nghe hấp dẫn, nhưng mỗi lựa chọn thêm là một phép so thêm trong đầu khách. Khi quá nhiều, khách có thể mệt, sợ chọn sai, sợ hối tiếc “lẽ ra chọn món kia”, và phản ứng bằng cách <b>hoãn</b>, chọn món quen, hoặc bỏ đi. Các nghiên cứu cho kết quả không đồng đều (một phân tích tổng hợp năm 2010 thấy tác động trung bình gần bằng không), hiệu ứng rõ nhất khi các món khó phân biệt và khách không có tiêu chí rõ; với khách rành, nhiều món lại là lợi thế. Cách giảm tải: bớt số món, <b>nhóm</b> lại theo tiêu chí dễ hiểu, và gắn <b>gợi ý</b> để khách có điểm bắt đầu.' },
+  example:'Quán thử hai tuần: tuần 1 menu 48 món, tuần 2 menu 16 món có 3 món gợi ý. Thời gian gọi món trung bình giảm từ 90 giây xuống 50 giây. Giờ cao điểm, quầy phục vụ được thêm khách mỗi giờ; tỉ lệ khách vào xem rồi bỏ đi giảm từ 12% xuống 7%. Ba món gợi ý chiếm 40% số ly bán — dễ chuẩn bị nguyên liệu hơn. Số liệu minh hoạ, mới so tuần với tuần: chưa tách được tác dụng của cắt món và của gợi ý, cũng chưa loại được yếu tố mùa; cần chạy lại hoặc có quán đối chứng.',
   takeaway:'Khách không mua nhiều hơn vì có nhiều món; họ mua khi chọn được nhanh mà không sợ sai.',
   apply:'Mở menu một app giao đồ ăn, đếm số món của một quán. Nói trong 60 giây: bạn sẽ cắt còn bao nhiêu món, nhóm theo gì và gợi ý món nào.',
   mistakes:['Nghĩ cắt món là mất khách, trong khi khách bỏ đi vì không chọn được.','Cắt món nhưng không có gợi ý, khách vẫn không biết bắt đầu từ đâu.'],
@@ -164,13 +164,13 @@ BAI_ADD({ mod:'kh07', lessons:[
       b:'Không có con số chuẩn ngành như vậy.',
       c:'Đúng. Đưa tranh luận về dữ liệu hành vi thay vì cảm nhận “trông chuyên nghiệp”.',
       d:'Đây là khái quát không căn cứ.'} },
-  { type:'mcq', stem:'Sau khi rút menu, 3 món gợi ý chiếm 40% số ly. Lợi ích nào ngoài phía khách?',
-    options:[{k:'a',t:'Tăng giá 3 món này 50% mà khách không nhận ra'},{k:'b',t:'Không cần nhập nguyên liệu cho 13 món còn lại'},
-             {k:'c',t:'Nhân viên không cần học công thức các món khác nữa'},{k:'d',t:'Dễ dự báo nguyên liệu và pha nhanh hơn ở giờ cao điểm'}],
-    answer:'d', why:{a:'Tăng giá mạnh khách vẫn nhận ra; đó cũng không phải lợi ích của việc giảm tải.',
-      b:'13 món còn lại vẫn chiếm 60% số ly.',
-      c:'Nhân viên vẫn pha đủ 16 món.',
-      d:'Đúng. Món tập trung giúp nhập hàng chính xác và thao tác nhanh — lợi ích vận hành.'} }
+  { type:'mcq', stem:'Quán khác cũng cắt menu từ 48 xuống 16 món, nhưng doanh thu mỗi khách giảm 8% sau hai tuần. Cách đọc nào đúng, và cần đo gì để phân biệt?',
+    options:[{k:'a',t:'Có thể cắt nhầm món giá cao hay món có khách riêng; so doanh thu từng món trước và sau'},{k:'b',t:'Lý thuyết quá tải sai với quán này; khôi phục đủ 48 món ngay để giữ doanh thu'},
+             {k:'c',t:'Chắc chắn do mùa nên không liên quan menu; chỉ cần chờ thêm vài tuần là hết'},{k:'d',t:'Chỉ là dao động ngẫu nhiên của khách; không cần phân tích gì thêm ở giai đoạn này'}],
+    answer:'a', why:{a:'Đúng. Doanh thu mỗi khách phụ thuộc cả món bị cắt lẫn mùa; tách theo món, theo nhóm khách quen/mới và so với quán không đổi menu mới phân biệt được giả thuyết.',
+      b:'Một kết quả ở một quán không bác được lý thuyết; hiệu ứng vốn phụ thuộc điều kiện, và khôi phục vội cũng mất cơ hội sửa việc cắt sai món.',
+      c:'Mùa là một giả thuyết hợp lý nhưng không thể khẳng định mà không đo; cần quán đối chứng hoặc cùng kỳ năm trước.',
+      d:'Giảm 8% trong hai tuần có thể là nhiễu, nhưng cũng có thể có nguyên nhân thật; bỏ qua mà không kiểm tra là bỏ cơ hội học.'} }
   ] },
 
 /* ------------------------------------------------------------------ 04 */

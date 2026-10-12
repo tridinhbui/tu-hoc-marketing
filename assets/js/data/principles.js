@@ -105,12 +105,12 @@ const PRINCIPLES = [
  drill:'Vẽ đường cohort 6 tháng gần nhất. Nếu đường không phẳng ra, sản phẩm chưa có chỗ đứng.'},
 
 {id:'referral',t:'Referral',vi:'Giới thiệu',d:'growth',n:'14',
- one:'Khách mang khách. Chỉ xảy ra khi việc giới thiệu làm người giới thiệu trông tốt hơn.',
- ex:'Chia sẻ Wrapped là để nói về gu nhạc của mình, không phải để quảng cáo Spotify.',
- counter:'“Giới thiệu bạn bè nhận 20k” — mua được giao dịch, không mua được sự nhiệt tình.',
- brand:'Share a Coke biến việc mua thành việc tặng.',
+ one:'Khách mang khách. Có thưởng hay không, nó bền khi việc giới thiệu cũng giúp người giới thiệu: giúp bạn bè, hoặc làm họ trông tốt.',
+ ex:'Dropbox thưởng dung lượng cho cả người mời lẫn người được mời: phần thưởng chính là thứ sản phẩm vốn bán, nên người mời đang tặng chứ không đang bán hàng.',
+ counter:'“Giới thiệu bạn bè nhận 20k” cho sản phẩm chẳng ai muốn nhắc: mua được lượt chia sẻ một lần, không mua được người nhắc lại.',
+ brand:'Share a Coke (không phải referral có thưởng) biến việc mua thành việc tặng: thứ được nhắc là tên người thân.',
  mistake:'Thiết kế phần thưởng trước khi thiết kế lý do xã hội để chia sẻ.',
- drill:'Hỏi: khi giới thiệu sản phẩm này, người giới thiệu đang nói điều gì về chính họ?'},
+ drill:'Tính hệ số K = số lời mời mỗi khách × tỉ lệ lời mời thành khách mới. Minh hoạ: 4 × 15% = 0,6, chưa tự lớn nhưng vẫn kéo CAC xuống. Rồi hỏi: người giới thiệu đang nói điều gì về chính họ?'},
 
 {id:'conversion',t:'Conversion',vi:'Chuyển đổi',d:'growth',n:'15',
  one:'Tỉ lệ người làm hành động bạn muốn. Thường tăng nhanh nhất bằng cách bớt đi, không phải thêm vào.',

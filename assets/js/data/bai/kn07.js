@@ -59,8 +59,8 @@ BAI_ADD({ mod:'kn07', lessons:[
 { id:'B:kn07-02', skill:'channel', read:'7 phút', t:'Chi nhiều hơn thị phần bao nhiêu thì đủ để lớn?',
   situation:'Một hãng nước mắm cao cấp chiếm 8% thị phần ngành. Năm nay hãng chiếm 8% tổng tiếng nói quảng cáo của ngành. Sếp hỏi: "Muốn tăng thị phần thì phải chi bao nhiêu?" Bạn có số liệu tổng chi quảng cáo của ngành năm ngoái là 200 tỉ đồng.',
   concept:{ name:'ESOV — tiếng nói vượt thị phần',
-    body:'<b>ESOV</b> = share of voice trừ share of market. Khi hãng nói to hơn phần mình đang chiếm, thị phần có xu hướng dịch lên; nói nhỏ hơn thì có xu hướng tụt. Các nghiên cứu tổng hợp trên nhiều thương hiệu cho thấy mối quan hệ này ở mức trung bình, tính theo năm, nhiều yếu tố khác xen vào như giá, phân phối, chất lượng sáng tạo. Vì vậy ESOV là la bàn để đặt mức chi, không phải công thức hứa hẹn số điểm tăng chắc chắn.' },
-  example:'Hãng nước mắm muốn ESOV +6 điểm: share of voice 14% trong khi thị phần 8%. Nếu ngành vẫn chi khoảng 200 tỉ và hãng chi X, ta có X ÷ (200 − 16 + X) = 14%, vì 16 tỉ là phần hãng chi năm ngoái nằm trong 200 tỉ. Giải ra X ≈ 30 tỉ, gần gấp đôi năm ngoái. Con số này cho sếp thấy cái giá thật của việc "muốn lớn".',
+    body:'<b>Share of voice</b> (SOV) là phần chi quảng cáo của bạn trong tổng chi cả ngành; <b>share of market</b> (SOM) là thị phần. <b>ESOV</b> = SOV trừ SOM. Khi hãng nói to hơn phần mình đang chiếm, thị phần có xu hướng dịch lên; nói nhỏ hơn thì có xu hướng tụt. Các nghiên cứu tổng hợp trên nhiều thương hiệu cho thấy mối quan hệ này ở mức trung bình, tính theo năm, nhiều yếu tố khác xen vào như giá, phân phối, chất lượng sáng tạo. Quy tắc kinh nghiệm hay được nhắc (Binet và Field, IPA): mỗi +10 điểm ESOV tương ứng khoảng +0,5 điểm thị phần mỗi năm, tuỳ ngành. Vì vậy ESOV là la bàn để đặt mức chi, không phải công thức hứa hẹn số điểm tăng chắc chắn.' },
+  example:'Hãng nước mắm muốn ESOV +6 điểm: share of voice 14% trong khi thị phần 8%. Nếu ngành vẫn chi khoảng 200 tỉ và hãng chi X, ta có X ÷ (200 − 16 + X) = 14%, vì 16 tỉ là phần hãng chi năm ngoái nằm trong 200 tỉ. Giải ra X ≈ 30 tỉ, gần gấp đôi năm ngoái. Theo quy tắc trên, ESOV +6 chỉ đáng kỳ vọng khoảng +0,3 điểm thị phần mỗi năm (8% lên khoảng 8,3%), một con số trung bình có thể lệch. Đó là cái giá thật của việc "muốn lớn".',
   takeaway:'Muốn lớn, hãy nói to hơn phần mình đang chiếm — và tính rõ cái giá của phần vượt đó.',
   apply:'Chọn một thương hiệu bạn theo dõi. Ước thị phần và độ phủ quảng cáo của nó, rồi nói trong 60 giây: nó đang có ESOV dương hay âm?',
   mistakes:['Tính share of voice theo số tiền của mình chia cho tổng ngành không gồm chính mình.','Coi ESOV như cam kết chắc chắn tăng bao nhiêu điểm thị phần.'],
@@ -100,12 +100,12 @@ BAI_ADD({ mod:'kn07', lessons:[
       c:'Đúng. ESOV chỉ phát huy khi khách thấy hàng, mua được và nhớ đúng thương hiệu.',
       d:'Cắt hẳn tạo ESOV âm sâu, thị phần có thể tụt.'} },
   { type:'mcq', stem:'Muốn đo share of voice cho ngành nước mắm, cách tiếp cận nào hợp lý nhất khi không mua được số liệu chi tiêu?',
-    options:[{k:'a',t:'Dùng thị phần doanh số thay cho share of voice vì hai số gần nhau'},{k:'b',t:'Đếm lượt nhắc tới thương hiệu trên mạng xã hội như một số thay thế'},
-             {k:'c',t:'Hỏi nhân viên bán hàng xem hãng nào quảng cáo nhiều nhất năm qua'},{k:'d',t:'Chỉ tính quảng cáo trên truyền hình vì đó là kênh lớn nhất'}],
-    answer:'b', why:{a:'Nhầm SOV với thị phần là mất luôn thứ cần so sánh.',
-      b:'Đúng. Share of search hoặc share of mention là số đại diện phổ biến, dù cần đọc cẩn thận.',
+    options:[{k:'a',t:'Dùng thị phần doanh số thay cho share of voice vì hai số gần nhau'},{k:'b',t:'Đếm lượt tìm tên thương hiệu và coi đó là share of voice của hãng'},
+             {k:'c',t:'Hỏi nhân viên bán hàng xem hãng nào quảng cáo nhiều nhất năm qua'},{k:'d',t:'Ước chi từ bảng giá quảng cáo nhân số lần xuất hiện quan sát được'}],
+    answer:'d', why:{a:'Nhầm SOV với thị phần là mất luôn thứ cần so sánh (chính ESOV là hiệu hai số này).',
+      b:'Share of search phản ánh mức quan tâm của người mua, gần với thị phần hơn là với chi tiêu; dùng nó làm chỉ báo sức khoẻ thương hiệu, không thay cho SOV.',
       c:'Cảm nhận của vài người không đo được tỉ lệ.',
-      d:'Bỏ các kênh số sẽ lệch nặng khi nhiều hãng chi phần lớn trên mạng.'} }
+      d:'Đúng. SOV là tỉ lệ chi tiêu, nên ước chi từ rate card và số lần xuất hiện quan sát được (kèm chiết khấu thực tế) là cách gần bản chất nhất khi thiếu số liệu thật.'} }
   ] },
 
 /* ------------------------------------------------------------------ 03 */

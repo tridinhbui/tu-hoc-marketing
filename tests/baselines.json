@@ -10,7 +10,7 @@
   },
   "absLeakWrongMax": 0.03,
   "absLeakRightMax": 0.03,
-  "firstWordOddCorrectMax": 116,
+  "firstWordOddCorrectMax": 112,
   "hedgedWrongWhyMax": 20,
   "_audit_2026_10_11": "Thêm sau audit chương trình: lộ đáp án qua từ mở đầu (0), phương án cụt (0), lệch từ đầu câu của đáp án đúng, lời giải phương án sai tự nhận 'cũng đúng'."
 }
