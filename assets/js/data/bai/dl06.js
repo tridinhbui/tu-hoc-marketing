@@ -392,8 +392,8 @@ BAI_ADD({ mod:'dl06', lessons:[
   mistakes:['Nghĩ MMM cần dữ liệu từng khách hàng.','Chi mọi kênh đồng loạt rồi mong mô hình tách được đóng góp.'],
   q:[
   { type:'mcq', stem:'Đoán trước: doanh thu Tết tăng gấp đôi, đúng lúc chi quảng cáo tăng gấp ba. Phần tăng chủ yếu do đâu?',
-    options:[{k:'a',t:'Chưa thể biết, vì Tết và quảng cáo luôn trùng nhau'},{k:'b',t:'Do quảng cáo, vì chi phí tăng mạnh hơn doanh thu'},
-             {k:'c',t:'Do Tết, vì tháng Tết năm ngoái cũng tăng gấp đôi'},{k:'d',t:'Do TV, vì TV là kênh đắt nhất trong kế hoạch Tết năm nay'}],
+    options:[{k:'a',t:'Chưa thể biết, vì Tết và quảng cáo luôn trùng nhau'},{k:'b',t:'Quảng cáo, vì chi phí tăng mạnh hơn doanh thu'},
+             {k:'c',t:'Tết, vì tháng Tết năm ngoái cũng tăng gấp đôi'},{k:'d',t:'TV, vì TV là kênh đắt nhất trong kế hoạch Tết năm nay'}],
     answer:'a', why:{a:'Đúng. Hai yếu tố đi cùng nhau thì dữ liệu không tách được.',
       b:'Chi phí tăng nhanh không chứng minh nó gây ra doanh thu.',
       c:'Năm ngoái tăng có thể cũng trùng quảng cáo; vẫn chưa tách được phần của Tết.',

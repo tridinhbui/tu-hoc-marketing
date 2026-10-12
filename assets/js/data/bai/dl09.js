@@ -95,7 +95,7 @@ BAI_ADD({ mod:'dl09', lessons:[
       c:'Đồng bộ hình thức tốt nhưng không nói gì về mạch ý.',
       d:'Độ dài không đo được sự mạch lạc.'} },
   { type:'mcq', stem:'Chỉ số đánh giá sao ổn định ở 4,8 suốt quý. Nên xử lý thế nào trong báo cáo?',
-    options:[{k:'a',t:'Làm hẳn một slide riêng cho chỉ số đánh giá để khoe thành tích'},{k:'b',t:'Để phụ lục hoặc một dòng, vì nó không đổi và không cần quyết gì'},
+    options:[{k:'a',t:'Làm hẳn một slide riêng cho chỉ số đánh giá để khoe thành tích'},{k:'b',t:'Chuyển xuống phụ lục hoặc một dòng, vì nó không đổi và không cần quyết gì'},
              {k:'c',t:'Bỏ hẳn, không ghi ở đâu cả để tiết kiệm chỗ'},{k:'d',t:'Đặt lên slide đầu tiên vì đó là con số đẹp nhất'}],
     answer:'b', why:{a:'Một slide riêng cho con số không đổi làm loãng các ý cần quyết.',
       b:'Đúng. Ghi nhận ngắn gọn, dành chỗ chính cho thứ thay đổi hoặc cần hành động.',

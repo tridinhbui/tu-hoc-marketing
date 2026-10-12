@@ -409,7 +409,7 @@ BAI_ADD({ mod:'kn05', lessons:[
     unit:'%', ans:5, tol:0.1, wrong:[[0.1,'NHAM_DIEM_PHAN_TRAM'],[5.26,'SAI_MAU_SO']], errors:['NHAM_DIEM_PHAN_TRAM','SAI_MAU_SO'],
     steps:['Chênh lệch = 2,0 − 1,9 = 0,1 điểm phần trăm.','Giảm tương đối = 0,1 ÷ 2,0 = <b>5%</b>.'] },
   { type:'mcq', stem:'Làm sao để một video có nhãn hợp tác vẫn giữ được sự tự nhiên?',
-    options:[{k:'a',t:'Để KOC kể trải nghiệm thật, kể cả điểm chưa hoàn hảo'},{k:'b',t:'Đặt nhãn ở giây cuối cùng khi người xem đã lướt đi hết'},
+    options:[{k:'a',t:'KOC kể trải nghiệm thật, kể cả điểm chưa hoàn hảo'},{k:'b',t:'Đặt nhãn ở giây cuối cùng khi người xem đã lướt đi hết'},
              {k:'c',t:'Viết kịch bản khen thật nhiều để bù lại phần độ tin bị mất'},{k:'d',t:'Chọn KOC ít nổi tiếng để không ai chú ý đến chuyện nhãn'}],
     answer:'a', why:{a:'Đúng. Sự thật thà về nhược điểm làm lời khen đáng tin hơn.',
       b:'Giấu nhãn ở cuối là lách tinh thần minh bạch.',

@@ -504,7 +504,7 @@ BAI_ADD({ mod:'tp09', lessons:[
       c:'Đúng. Dấu hiệu nhận diện cần xuất hiện sớm và lặp lại để gắn vào ký ức về câu chuyện.',
       d:'Người xem thích bất ngờ trong chuyện; vấn đề là thương hiệu không kịp được ghi nhớ.'} },
   { type:'mcq', stem:'Tình huống mới: phim ngắn của hãng xe máy kể chuyện hai ông cháu, xe chỉ xuất hiện đậu ở góc sân. Sửa thế nào?',
-    options:[{k:'a',t:'Thêm cảnh ông cháu khen xe đẹp và bền, nói tên dòng xe hai lần'},{k:'b',t:'Để chiếc xe là thứ đưa ông cháu đến điểm ngoặt của chuyện'},
+    options:[{k:'a',t:'Thêm cảnh ông cháu khen xe đẹp và bền, nói tên dòng xe hai lần'},{k:'b',t:'Chiếc xe là thứ đưa ông cháu đến điểm ngoặt của chuyện'},
              {k:'c',t:'Đổi màu xe sang màu nổi bật hơn để dễ thấy ở góc sân'},{k:'d',t:'Kết phim bằng thông số động cơ'}],
     answer:'b', why:{a:'Khen xe trong lời thoại làm phim giả tạo, vẫn chưa gắn vào mạch chuyện.',
       b:'Đúng. Ví dụ: ông chở cháu đi thi đúng giờ trên chiếc xe cũ — xe là mắt xích của thay đổi.',

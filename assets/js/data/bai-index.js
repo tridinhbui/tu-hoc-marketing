@@ -5,7 +5,7 @@
    Phải tải SAU curriculum.js và TRƯỚC app.js: file này ghép module đã xuất bản vào STAGES/JOURNEY
    để hành trình, kỹ năng, "hôm nay" thấy bài mới mà không cần tải nội dung. */
 
-const BAI_V = 16;   // tăng khi sửa nội dung bất kỳ file bài/*.js
+const BAI_V = 17;   // tăng khi sửa nội dung bất kỳ file bài/*.js
 
 /* Bước hành trình → chặng nội dung (đề vượt chặng, cổng mở khoá). */
 const STEP_STAGE = { observe:'s1', understand:'s2', hypothesis:'s2', message:'s3', channel:'s4',

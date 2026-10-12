@@ -558,7 +558,7 @@ BAI_ADD({ mod:'dl08', lessons:[
       d:'Người sáng lập có quá nhiều việc để tự lo từng chỉ số.'} },
   { type:'mcq', stem:'"Số lượt tìm kiếm tên thương hiệu" nên được xử lý thế nào trong dashboard mới?',
     options:[{k:'a',t:'Đặt lên đầu dashboard vì nó đo mức độ nhận biết thương hiệu'},{k:'b',t:'Xoá hẳn vì chỉ số thương hiệu là phù phiếm, không ra đơn'},
-             {k:'c',t:'Theo dõi mỗi ngày để phát hiện sớm khi thương hiệu bị giảm nhiệt'},{k:'d',t:'Để ở trang phụ, đọc theo tháng hoặc quý, dùng khi đánh giá thương hiệu'}],
+             {k:'c',t:'Theo dõi mỗi ngày để phát hiện sớm khi thương hiệu bị giảm nhiệt'},{k:'d',t:'Giữ ở trang phụ, đọc theo tháng hoặc quý, dùng khi đánh giá thương hiệu'}],
     answer:'d', why:{a:'Nó hữu ích nhưng hằng tuần nhóm không đổi hành động theo nó.',
       b:'Chỉ số thương hiệu có vai trò khi đánh giá chiến dịch dài hạn.',
       c:'Dao động theo ngày chủ yếu là nhiễu.',

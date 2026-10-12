@@ -32,7 +32,7 @@
       ['Reels kém chất lượng nên nền tảng không cho người xem hành động tiếp ở bất kỳ nội dung nào khác', 'Reels đang đến với người chưa quen, còn Stories đến với người đã sẵn sàng hỏi', 'Số liệu Stories sai vì lượt xem Stories không bao giờ đáng tin cậy', 'Người xem Reels không dùng tin nhắn nên không thể đặt hoa qua đó'], 'b',
       ['Không có cơ sở để nói Reels kém chất lượng chỉ từ hai con số này.', 'Đúng. Hai bề mặt gặp hai nhóm người khác nhau, nên hành động khác nhau là điều dễ hiểu.', 'Không có lý do để nghi số Stories; đó là số của chính tài khoản.', 'Người xem Reels vẫn có thể nhắn tin; vấn đề là họ chưa ở giai đoạn đặt hoa.']),
     mcq('Bạn làm gì với ngân sách thời gian của tuần tới để bán thêm hoa dịp 20/10?',
-      ['Dồn toàn bộ vào Reels vì đó là nơi có nhiều lượt xem nhất hiện nay', 'Dùng Reels để gặp người mới, Stories', 'Bỏ Stories vì chỉ có 350 người xem, chuyển hết sang Feed ổn định', 'Đăng cùng nội dung ở cả ba nơi, ít sửa, để tiết kiệm công dựng'], 'b',
+      ['Dồn toàn bộ vào Reels vì đó là nơi có nhiều lượt xem nhất hiện nay', 'Dùng Reels để gặp người mới, Stories để thúc người đã quen nhắn tin đặt hoa', 'Bỏ Stories vì chỉ có 350 người xem, chuyển hết sang Feed ổn định', 'Đăng cùng nội dung ở cả ba nơi, ít sửa, để tiết kiệm công dựng'], 'b',
       ['Lượt xem nhiều chưa chắc đúng việc; Stories đang chạm người sẵn sàng đặt.', 'Đúng. Mỗi bề mặt gán một việc rõ và đo bằng chỉ số của việc đó.', 'Bỏ Stories là bỏ nơi đang ra tin nhắn đặt hàng.', 'Sao chép không tận dụng khác biệt giữa các bề mặt.']),
     calc('Stories của tiệm có 350 người xem và 14 người nhắn tin đặt hoa. Tỉ lệ nhắn tin trên số người xem là bao nhiêu phần trăm?', '%', 4, 0.05,
       [[25, 'SAI_MAU_SO'], [0.04, 'NHAM_DIEM_PHAN_TRAM']],

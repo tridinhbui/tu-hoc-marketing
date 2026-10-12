@@ -87,7 +87,7 @@ BAI_ADD({ mod:'kh04', lessons:[
       b:'Đổi hình thức không sửa được gốc: insight hiển nhiên thì mọi phương án sẽ na ná.',
       c:'Tính năng đối thủ cũng có; thêm vào vẫn đứng trên cùng một câu hiển nhiên.',
       d:'Đúng. Lỗi nằm ở brief; sửa insight thì concept mới có chỗ khác biệt.'} },
-  { type:'mcq', stem:'Câu nào có cấu trúc căng thẳng của một insight?',
+  { type:'mcq', stem:'Câu nào là insight tốt nhất cho hãng sữa: có căng thẳng cảm xúc đủ cụ thể để thương hiệu gỡ, chứ không chỉ có chữ "nhưng"?',
     options:[{k:'a',t:'"Tôi muốn con ăn đủ chất, nhưng bữa nào cũng là một cuộc chiến"'},{k:'b',t:'"Tôi muốn con ăn đủ chất và lớn nhanh như các bạn cùng lớp"'},
              {k:'c',t:'"Tôi muốn con ăn đủ chất, nhưng sữa ngoại thì giá hơi cao so với thu nhập"'},{k:'d',t:'"Các mẹ ngày càng quan tâm dinh dưỡng cho con nhỏ"'}],
     answer:'a', why:{a:'Đúng. Mong muốn và rào cản cảm xúc đối nghịch nhau, tạo chỗ cho thương hiệu can thiệp.',

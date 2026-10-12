@@ -76,6 +76,12 @@ for (const mod of mods) {
       ks.forEach(k => { if (!it.why || !plain(it.why[k])) bad(id, `thiếu lời giải cho phương án ${k}`); });
       if (o.some(x => /tất cả (đều|các)|không (có )?đáp án nào|cả [a-d] và [a-d]/i.test(plain(x.t)))) bad(id, 'phương án kiểu "tất cả/không đáp án nào"');
       const right = o.find(x => x.k === it.answer), others = o.filter(x => x.k !== it.answer);
+      /* Lộ đáp án bằng từ mở đầu: đáp án đúng là phương án DUY NHẤT khác kiểu mở đầu "Vì/Do/Để/Nhờ" (audit 2026-10-11). */
+      { const st = o.map(x => ((plain(x.t).match(/^(vì|bởi vì|do|để|nhờ)\s/i) || [null, 'none'])[1] || 'none').toLowerCase());
+        const ai = o.findIndex(x => x.k === it.answer), same = st.filter(v => v === st[ai]).length;
+        const maxOther = Math.max(...st.filter((_, k) => k !== ai).map(v => st.filter(x => x === v).length));
+        if (same === 1 && maxOther >= 2 && st.some(v => v !== 'none')) bad(id, 'đáp án đúng là phương án duy nhất khác kiểu mở đầu "Vì/Do/Để/Nhờ" — thống nhất cách mở đầu 4 phương án'); }
+      o.forEach(x => { const s = plain(x.t); if (/[,;:]\s*$/.test(s) || /\s(và|hoặc|nhưng|để|của|với)\s*$/i.test(s)) bad(id, `phương án ${x.k} bị cụt giữa câu: "…${s.slice(-30)}"`); });
       if (right && others.length) {
         const rl = plain(right.t).length, mx = Math.max(...others.map(x => plain(x.t).length));
         mcqN++; if (rl > mx) longestN++;

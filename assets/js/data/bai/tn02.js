@@ -392,13 +392,13 @@ BAI_ADD({ mod:'tn02', lessons:[
       b:'Đúng. Thay đổi đánh vào cả cỡ đơn lẫn phí ship, nên chỉ số phải trừ được cả hai.',
       c:'Số đơn bỏ qua việc đơn nhỏ đi và phí ship tăng.',
       d:'Nhanh đủ mẫu nhưng không nói gì về lãi sau ship.'} },
-  { type:'mcq', stem:'Vì sao phải ghi chỉ số chính vào kế hoạch TRƯỚC khi chạy test?',
+  { type:'mcq', stem:'Lý do QUAN TRỌNG NHẤT để ghi chỉ số chính vào kế hoạch TRƯỚC khi chạy test là gì?',
     options:[{k:'a',t:'Để không ai có thể chọn thước đo theo bản mình đã thích sẵn'},{k:'b',t:'Để công cụ A/B biết cách phân bổ lượt xem cho hai nhóm'},
              {k:'c',t:'Để báo cáo gửi sếp trông chuyên nghiệp và đầy đủ hơn'},{k:'d',t:'Để tính cỡ mẫu, vì mỗi chỉ số cần một cỡ mẫu riêng của mình'}],
     answer:'a', why:{a:'Đúng. Ghi trước là cách khóa quyết định lại, tránh chọn thước sau khi thấy kết quả.',
       b:'Công cụ chia lượt không phụ thuộc chỉ số chính.',
       c:'Hình thức là chuyện phụ.',
-      d:'Cũng đúng một phần — cỡ mẫu phụ thuộc chỉ số — nhưng lý do chính là tránh chọn sau.'} },
+      d:'Đúng một phần: cỡ mẫu phụ thuộc chỉ số. Nhưng đó là lý do kỹ thuật phụ; lý do quan trọng nhất là chặn việc chọn thước đo sau khi đã thấy kết quả.'} },
   ]},
 
 /* ------------------------------------------------------------------ 08 */

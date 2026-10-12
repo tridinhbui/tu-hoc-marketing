@@ -82,3 +82,50 @@ test('pool đề vượt chặng trên máy chủ: ≥ 3× số câu mỗi đề
     assert.ok(lv[2] >= 4 * 3, `${sid}: chỉ ${lv[2]} câu mức 3 (khó)`);
   }
 });
+
+/* ---- Lỗi hình thức làm lộ đáp án / hỏng phương án (thêm sau audit 2026-10-11) ---- */
+const OPENER = /^(vì|bởi vì|do|để|nhờ)\s/i;
+const openerState = (o) => ((strip(o.t).match(OPENER) || [null, 'none'])[1] || 'none').toLowerCase();
+const firstWord = (o) => strip(o.t).replace(/^["“'(\[]+/, '').split(/\s+/)[0].toLowerCase().replace(/[,.:;]+$/, '');
+
+test('không lộ đáp án bằng từ mở đầu: đáp án đúng không được là phương án duy nhất khác kiểu mở đầu "Vì/Do/Để/Nhờ"', () => {
+  const bad = [];
+  for (const q of mcqs) {
+    const st = q.options.map(openerState), ai = q.options.findIndex((o) => o.k === q.answer);
+    const same = st.filter((s) => s === st[ai]).length;
+    const maxOther = Math.max(...st.filter((_, k) => k !== ai).map((s) => st.filter((x) => x === s).length));
+    if (same === 1 && maxOther >= 2 && st.some((s) => s !== 'none')) bad.push(q.id);
+  }
+  assert.equal(bad.length, 0, `${bad.length} câu: ${bad.slice(0, 12).join(', ')}`);
+});
+
+test('phương án không bị cụt: không kết thúc bằng dấu phẩy/chấm phẩy/hai chấm hoặc từ nối bỏ lửng', () => {
+  const bad = [];
+  for (const q of mcqs) for (const o of q.options) {
+    const s = strip(o.t);
+    if (/[,;:]\s*$/.test(s) || /\s(và|hoặc|nhưng|để|của|với)\s*$/i.test(s)) bad.push(`${q.id}/${o.k}`);
+  }
+  assert.equal(bad.length, 0, bad.join(', '));
+});
+
+test('đáp án đúng không là phương án duy nhất khác từ đầu câu (ratchet): lệch của đáp án đúng ≤ 1,3 lần mức của một phương án sai', () => {
+  let cOdd = 0, dOdd = 0;
+  for (const q of mcqs) {
+    const w = q.options.map(firstWord);
+    q.options.forEach((o, k) => {
+      const rest = w.filter((_, x) => x !== k);
+      if (rest.every((x) => x === rest[0]) && w[k] !== rest[0]) (o.k === q.answer ? cOdd++ : dOdd++);
+    });
+  }
+  const perDistractor = dOdd / 3;
+  console.log(`  đáp án đúng là cái duy nhất khác từ đầu câu: ${cOdd} câu; mỗi phương án sai: ${perDistractor.toFixed(0)} câu`);
+  assert.ok(cOdd <= Math.max(BASE.firstWordOddCorrectMax, 0), `${cOdd} > mốc ${BASE.firstWordOddCorrectMax}`);
+  assert.ok(cOdd <= perDistractor * 1.65, `đáp án đúng lệch ${(cOdd / perDistractor).toFixed(2)}× mức một phương án sai`);
+});
+
+test('lời giải phương án sai không tự nhận "cũng đúng": ratchet số câu còn phải rà tay', () => {
+  const HEDGE = /(cũng đúng|đúng một phần|cũng hợp lý|cũng có thể đúng|cũng chấp nhận)/i;
+  let n = 0;
+  for (const q of mcqs) for (const o of q.options) if (o.k !== q.answer && HEDGE.test(strip((q.why || {})[o.k]))) n++;
+  assert.ok(n <= BASE.hedgedWrongWhyMax, `${n} lời giải phương án sai có "cũng đúng/đúng một phần" > mốc ${BASE.hedgedWrongWhyMax}`);
+});

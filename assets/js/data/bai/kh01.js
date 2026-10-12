@@ -330,7 +330,7 @@ BAI_ADD({ mod:'kh01', lessons:[
       d:'Lượt tìm kiếm lẫn quá nhiều nhu cầu khác nhau.'} },
   { type:'mcq', stem:'Nên dùng ước lượng từ trên xuống (lấy báo cáo ngành rồi chia nhỏ) khi nào?',
     options:[{k:'a',t:'Hạn chế dùng, vì báo cáo ngành thường lệch với thị trường nhỏ'},{k:'b',t:'Dùng làm cách chính, vì nó nhanh và dễ thuyết phục khi trình bày'},
-             {k:'c',t:'Để kiểm tra chéo: nếu hai cách lệch nhau quá xa, có giả định sai'},{k:'d',t:'Chỉ khi phân khúc là hàng xa xỉ'}],
+             {k:'c',t:'Kiểm tra chéo: nếu hai cách lệch nhau quá xa, có giả định sai'},{k:'d',t:'Chỉ khi phân khúc là hàng xa xỉ'}],
     answer:'c', why:{a:'Báo cáo ngành có ích để so sánh, dù không đủ chi tiết.',
       b:'Từ trên xuống dễ che các giả định; dùng một mình thì yếu.',
       c:'Đúng. Hai cách gặp nhau ở cùng bậc độ lớn thì đáng tin hơn nhiều.',
