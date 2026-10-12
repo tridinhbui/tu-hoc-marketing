@@ -510,3 +510,28 @@ body.ed::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;
   .nb{max-width:min(360px,calc(100% - 14px));margin-right:7px}
   .nb .hand{font-size:clamp(16px,4.6vw,21px)}
 }
+
+/* ---------- ĐỒNG BỘ TÔNG (hạ bớt số lượng màu & kiểu chữ) ----------
+   Bảng màu còn lại: espresso · ngà · một khối đất nung (mục Giải phẫu) + cam làm điểm nhấn.
+   Kraft, hồng phấn, mấy tông đen lệch và chân trang đất nung được gộp về ngà/espresso.
+   Chữ: Fraunces + Be Vietnam Pro; chữ viết tay chỉ còn ở vài ghi chú dán (scrap, ghi chú Lời mở, ghi chú ảnh). */
+:root{--k2:var(--k);--iv2:var(--iv);--bl:var(--kraft)}
+.on-kraft,.on-bl{background:var(--iv)}
+.lab{background-color:var(--iv);background-image:linear-gradient(rgba(26,20,15,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(26,20,15,.045) 1px,transparent 1px)}
+.chal{background:var(--iv)}
+.road-sky{background:var(--iv)}
+.sheet{background:#f8f1e1}
+.comm{background:var(--k)}
+.foot{background:var(--k);border-top:1px solid rgba(242,233,216,.14)}
+.foot-big em{color:var(--or)}
+.foot-row{border-top-color:rgba(242,233,216,.2)}
+.q:nth-child(2){background:var(--iv2)}
+/* kick trên nền đất nung: ngà thay vì kraft */
+.ana-head .kick,.ana-step .k{color:rgba(242,233,216,.78)}
+.comm .kick{color:rgba(242,233,216,.7)}
+/* biên lai: bỏ Courier New, dùng chữ sans có số đều hàng */
+.w-receipt{font-family:var(--sans);font-variant-numeric:tabular-nums;letter-spacing:.01em;background:#f8f1e1}
+/* chữ viết tay → serif nghiêng ở các câu dài; giữ viết tay cho ghi chú ngắn */
+.cases-quote.hand,.met-note.hand,.w-scrib.hand,.lab figcaption.hand,.lab .hand:not(.nb .hand):not(.st .hand){
+  font-family:var(--serif);font-style:italic;font-weight:300;font-variation-settings:'opsz' 72,'SOFT' 100;letter-spacing:-.01em;line-height:1.25}
+.w-scrib{color:rgba(242,233,216,.85)}
