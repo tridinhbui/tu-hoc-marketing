@@ -2,8 +2,8 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23fff%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%230F1B2D%27%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/case.css?v=12">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="stylesheet" href="assets/css/case.css?v=21">
 <title>Cộng đồng — Tự Học Marketing Case</title>
 <meta name="description" content="Người học đăng bài phân tích chiến dịch, chia sẻ kinh nghiệm phỏng vấn, bình luận và thả tim.">
 <style>
@@ -46,7 +46,7 @@
   .cm-rk{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(36,22,14,.06);font:700 12px var(--sans)}
   @media(max-width:900px){.cm-grid{grid-template-columns:1fr}.cm-head img{display:none}.cm-poll__opts{grid-template-columns:1fr}}
 </style>
-<link rel="stylesheet" href="assets/css/paper.css?v=5">
+<link rel="stylesheet" href="assets/css/paper.css?v=12">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
@@ -76,8 +76,8 @@ async function feed(){
   const [poll,sum,lb]=await Promise.all([api('/poll').catch(()=>null),api('/community/summary').catch(()=>null),api('/leaderboard?by=xp').catch(()=>null)]);
   const pv=poll?(poll.votes.a+poll.votes.b):0, pa=pv?Math.round(poll.votes.a/pv*100):50;
   app.innerHTML=`
-  <header class="cm-head"><div><span class="cm-pill">● CỘNG ĐỒNG MARSOCIAL</span>
-    <h1>MarSocial Feed</h1><p>Chia sẻ góc nhìn, câu hỏi và tiến bộ học tập cùng cộng đồng.</p></div>
+  <header class="cm-head"><div><span class="cm-pill">Cộng đồng MarSocial</span>
+    <h1>MarSocial <em>Feed</em></h1><p>Chia sẻ góc nhìn, câu hỏi và tiến bộ học tập cùng cộng đồng.</p></div>
     <img src="assets/img/art-journey.svg" alt=""><i class="pp-sign" aria-hidden="true">Nhìn kỹ trước, làm sau</i></header>
   <div class="cm-grid"><div class="cm-main">
     ${u?`<form id="pf" class="cm-card cm-comp">
@@ -87,7 +87,7 @@ async function feed(){
         <div class="cm-comp__act"><select id="pk" aria-label="Loại bài">${KINDS.map(([k,l])=>`<option value="${k}" ${k===kind?'selected':''}>${l}</option>`).join('')}</select>
           <span class="small muted">Số liệu không phải của bạn thì ghi nguồn.</span><button class="cm-btn">Đăng</button></div></div></form>`
     :`<div class="cm-card"><p class="muted" style="margin:0"><a href="tai-khoan.html">Đăng nhập</a> để đăng bài, bình luận và thả tim.</p></div>`}
-    ${poll?`<section class="cm-card cm-poll"><span class="cm-tag">THĂM DÒ HÔM NAY</span><h3>${escH(poll.q)}</h3>
+    ${poll?`<section class="cm-card cm-poll"><span class="cm-tag">Thăm dò hôm nay</span><h3>${escH(poll.q)}</h3>
       <div class="cm-poll__opts">
         <button data-v="a" class="${poll.mine==='a'?'on':''}" ${poll.mine||!u?'disabled':''}><b>${escH(poll.a)}</b><strong>${poll.mine||!u?pa+'%':''}</strong></button>
         <button data-v="b" class="${poll.mine==='b'?'on':''}" ${poll.mine||!u?'disabled':''}><b>${escH(poll.b)}</b><strong>${poll.mine||!u?(pv?100-pa:50)+'%':''}</strong></button></div>
@@ -102,11 +102,11 @@ async function feed(){
       ||'<div class="cm-card"><p class="muted" style="margin:0">Chưa có bài nào. Bạn mở hàng nhé.</p></div>'}
   </div>
   <aside class="cm-side">
-    <section class="cm-dark"><small>CỘNG ĐỒNG HÔM NAY</small><b>${sum?fmt(sum.learned):'—'}</b><span>bài đã hoàn thành trên hệ thống</span>
+    <section class="cm-dark"><small>Cộng đồng hôm nay</small><b>${sum?fmt(sum.learned):'—'}</b><span>bài đã hoàn thành trên hệ thống</span>
       <a href="thong-ke.html" data-go>Xem thống kê →</a></section>
-    <section class="cm-card"><h4>VINH DANH NGƯỜI ĐÓNG GÓP</h4><p class="small muted">Bài viết và bình luận trong 30 ngày qua.</p>
+    <section class="cm-card"><h4>Vinh danh người đóng góp</h4><p class="small muted">Bài viết và bình luận trong 30 ngày qua.</p>
       <ol>${(sum&&sum.contributors.length?sum.contributors.map((c,i)=>`<li><span class="cm-av">${ini(c.name)}</span><b>${escH(c.name)}</b><small>${c.n} đóng góp</small></li>`).join(''):'<li class="muted">Chưa có đóng góp nào — bài đầu tiên là của bạn.</li>')}</ol></section>
-    <section class="cm-card"><h4>TOP TUẦN <small>XP tuần này</small></h4>
+    <section class="cm-card"><h4>Top tuần <small>XP tuần này</small></h4>
       <ol>${(lb&&lb.rows.length?lb.rows.slice(0,5).map(r=>`<li><span class="cm-rk">${r.rank}</span><b>${escH(r.name)}</b><small>${fmt(r.xp)} XP</small></li>`).join(''):'<li class="muted">Tuần này chưa ai có điểm.</li>')}</ol></section>
   </aside></div>`;
   app.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{kind=b.dataset.k;feed();});

@@ -10,14 +10,14 @@
   var esc = function(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
   var norm = function(t){ return String(t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d'); };
   /* Logo Ý Ý: assets/img/yy-logo.png. Chưa có file thì rơi về chữ “Ý” trên nền cam. */
-  var LOGO = 'assets/img/yy-logo.png';
+  var LOGO = 'assets/img/yy-logo.png?v=2';
   var AV = function(){ return '<span class="yy-av"><img src="' + LOGO + '" alt="Ý Ý" onerror="this.parentNode.classList.add(\'yy-av--t\');this.outerHTML=\'Ý\'"></span>'; };
   var sleep = function(ms){ return new Promise(function(r){ setTimeout(r, ms); }); };
 
   /* ---------- CSS (tự chứa; dùng biến của trang nếu có) ---------- */
   var css = '' +
   '.yy-av{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;flex:none;background:radial-gradient(circle at 30% 25%,#F0875F,#B8502D);color:#fff;font:italic 600 17px/1 "Fraunces",Georgia,serif;letter-spacing:-.03em;box-shadow:0 6px 14px -6px rgba(120,40,10,.6);position:relative}' +
-  '.yy-av img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}' +
+  '.yy-av{overflow:hidden}.yy-av img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%;transform:scale(1.12)}' +
   '.yy-av:not(.yy-av--t){background:#fff3e8;box-shadow:0 6px 16px -6px rgba(200,110,60,.55)}' +
   '.yy-caret{display:inline-block;width:2px;height:1.05em;background:currentColor;margin-left:2px;vertical-align:-.15em;animation:yyb 1s steps(1) infinite}' +
   '@keyframes yyb{50%{opacity:0}}' +

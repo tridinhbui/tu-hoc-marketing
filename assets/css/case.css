@@ -2,7 +2,8 @@
    Kem ấm làm nền, đất nung cho hành động/đang làm, vàng mù tạt cho thưởng/XP/mở khoá,
    nâu espresso cho chữ. Olive chỉ để báo "đã xong". Ít đường kẻ, ít hộp: dùng khoảng trắng,
    cỡ chữ và mảng màu để chia bố cục; thẻ chỉ dành cho thứ bấm được hoặc đứng riêng một mình. */
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('hand.css');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root{
   /* Hệ màu Cinematic Editorial Creative Studio — Dark Espresso & Warm Paper */
@@ -48,7 +49,7 @@
   /* Typography */
   --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
-  --hand:'Caveat',cursive,sans-serif;
+  --hand:'Hand VN',cursive,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
   --rule:1px solid rgba(249,244,235,.12);
   --rule-paper:1px solid rgba(36,22,14,.12);

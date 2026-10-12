@@ -166,7 +166,9 @@
       const days = res.days.map((r) => ({ day: r.day, sessions: Math.round(r.clicks * A.sessionRate),
         conversions: Math.round(r.conversions * A.convRate), revenue: Math.round(r.revenue * A.convRate), cost: r.spend }));
       const sum = (k) => days.reduce((s, d) => s + d[k], 0);
-      return { source: 'facebook', medium: 'paid_social', campaign: cfg.name || 'meta_campaign', assumptions: A,
+      const t = res.totals;
+      return { source: 'facebook', medium: 'paid_social', campaign: cfg.name || 'meta_campaign', assumptions: A, landing: 'product',
+        reported: { clicks: t.clicks, conversions: t.conversions, revenue: t.revenue, spend: t.spend },
         sessions: sum('sessions'), conversions: sum('conversions'), revenue: sum('revenue'), cost: sum('cost'), days,
         note: 'Meta tính cửa sổ 7 ngày nhấp / 1 ngày xem; GA4 mặc định last-click nên thường thấy ít hơn.' };
     },

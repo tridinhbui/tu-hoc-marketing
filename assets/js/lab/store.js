@@ -30,9 +30,9 @@ const LabStore = {
   picked(caseId, toolId) { const p = ((this.all().case || {})[caseId] || {})[toolId]; if (!p) return null; return this.attempts(toolId).find((a) => a.id === p.attemptId) || null; },
   last() {   // phiên gần nhất trong mọi công cụ — cho "Tiếp tục"
     const l = this.all(); let best = null;
-    for (const id of ['meta']) { const t = l[id]; if (!t) continue;
+    for (const id of ['meta', 'gads', 'ga4', 'seo']) { const t = l[id]; if (!t) continue;
       const when = Math.max(t.draft ? t.draft.at || 0 : 0, ...(t.attempts || []).map((a) => a.at || 0), 0);
-      if (when && (!best || when > best.when)) best = { tool: id, when, draft: t.draft, attempt: (t.attempts || []).slice(-1)[0] || null }; }
+      if (when && (!best || when > best.when)) best = { id, tool: id, when, draft: t.draft, attempt: (t.attempts || []).slice(-1)[0] || null }; }
     return best;
   },
 };

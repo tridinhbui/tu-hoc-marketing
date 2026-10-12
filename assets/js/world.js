@@ -70,7 +70,7 @@
     const path = (a, b) => { const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2 - 10; return `M${a[0] * 10},${a[1] * 5.625} Q${mx * 10},${my * 5.625} ${b[0] * 10},${b[1] * 5.625}`; };
     host.innerHTML = `<svg class="wm__paths" viewBox="0 0 1000 562.5" preserveAspectRatio="none" aria-hidden="true">${
       pts.slice(0, -1).map((p, i) => `<path class="${st[ORDER[i]].state === 'done' ? 'done' : ''}" d="${path(p, pts[i + 1])}"/>`).join('')}</svg>
-      <span class="wm__hint" aria-hidden="true">Chọn một khu để bước vào →</span>
+      <span class="wm__hint" aria-hidden="true">Pick a zone to step in →</span>
       ${ORDER.map((k, i) => { const d = byKey(k), s = st[k], off = C * (1 - s.pct / 100);
         return `<button type="button" class="wm__node" data-k="${k}" data-s="${s.state}" style="--x:${POS[k][0]}%;--y:${POS[k][1]}%;--c:${d.color}"
           aria-label="${d.vi}: ${LABEL[s.state]}, ${s.pct}%">

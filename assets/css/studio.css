@@ -3,6 +3,7 @@
    Tinh thần lấy từ landing: kem ngà, đất nung, hồng phấn, xô thơm mờ, espresso; serif có chữ nghiêng đất nung,
    mép giấy, chữ viết tay. Ít hộp, ít đường viền, ít biểu tượng — dùng chữ, khoảng thở và mảng màu để chia. */
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 :root{
   --st-ivory:#F7F0E4; --st-paper:#FFFBF3; --st-sand:#EDDFCB;
   --st-terra:#C4532D; --st-terra-d:#9E3F1F; --st-blush:#F1CDBD; --st-peach:#F8E2D2;
@@ -350,3 +351,97 @@
 .au-brand{display:flex;align-items:center;gap:10px}
 .au-brand img{display:block}
 .side__logo img{display:block;flex:none}
+
+
+/* =====================================================================
+   BIÊN TẬP — tinh chỉnh cho gần landing hơn (lớp cuối, chỉ ghi đè nhẹ)
+   1. Cùng một cặp chữ với landing: Playfair Display (tiêu đề) + Be Vietnam Pro.
+   2. Nhãn mở đầu có sợi chỉ nhỏ như đề mục tạp chí.
+   3. Thẻ nhẹ hơn: bóng mỏng, góc không đều, bớt cảm giác lưới cứng.
+   4. Game hoá tiết chế: nhãn viền mảnh thay cho viên thuốc đặc.
+   5. MarSocial: bài đăng thành mục báo, không còn hộp.
+   ===================================================================== */
+:root[data-theme="ivory"]{
+  --serif:'Playfair Display','Fraunces',Georgia,serif;
+  --st-serif:'Playfair Display','Fraunces',Georgia,serif;
+  --st-shadow:0 1px 0 rgba(255,255,255,.75) inset,0 16px 32px -28px rgba(92,48,22,.34);
+  --st-r:24px;
+}
+:root[data-theme="ivory"] h1,:root[data-theme="ivory"] .h1,:root[data-theme="ivory"] .h2,:root[data-theme="ivory"] .h-serif,
+:root[data-theme="ivory"] .display,:root[data-theme="ivory"] .d-mission h1,:root[data-theme="ivory"] .hero__t{font-weight:500;letter-spacing:-.018em;line-height:1.14}
+:root[data-theme="ivory"] h1 em,:root[data-theme="ivory"] h2 em,:root[data-theme="ivory"] .h1 em,:root[data-theme="ivory"] .display em{font-weight:400}
+
+/* nhãn mở đầu: sợi chỉ + chữ thường, giọng của landing */
+:root[data-theme="ivory"] .mono--red::before,:root[data-theme="ivory"] .label--accent::before,:root[data-theme="ivory"] .rm__eyebrow::before,
+:root[data-theme="ivory"] .th__eyebrow::before,:root[data-theme="ivory"] .lab__tag::before,:root[data-theme="ivory"] .eyebrow::before,
+:root[data-theme="ivory"] .cm-pill::before{content:"";display:inline-block;width:22px;height:1px;margin-right:10px;vertical-align:middle;
+  background:currentColor;opacity:.55}
+
+/* thẻ: góc không đều ở thẻ chẵn để lưới có nhịp; thẻ bấm được nhích lên khi rê chuột */
+:root[data-theme="ivory"] .th__card:nth-child(even),:root[data-theme="ivory"] .d-card:nth-child(even),:root[data-theme="ivory"] .tier:nth-child(even),
+:root[data-theme="ivory"] .rm__card:nth-child(even),:root[data-theme="ivory"] .tk-card:nth-child(even){border-radius:var(--st-r) var(--st-r) var(--st-r) 10px}
+:root[data-theme="ivory"] a.card,:root[data-theme="ivory"] a.tier,:root[data-theme="ivory"] a.th__card,:root[data-theme="ivory"] a.tk-card,
+:root[data-theme="ivory"] a.lvcard,:root[data-theme="ivory"] a.cm-card{transition:transform .35s var(--st-ease),box-shadow .35s var(--st-ease)}
+:root[data-theme="ivory"] a.card:hover,:root[data-theme="ivory"] a.tier:hover,:root[data-theme="ivory"] a.th__card:hover,
+:root[data-theme="ivory"] a.tk-card:hover,:root[data-theme="ivory"] a.lvcard:hover{transform:translateY(-2px);box-shadow:0 22px 36px -28px rgba(92,48,22,.48)}
+:root[data-theme="ivory"] .d-card,:root[data-theme="ivory"] .th__card{backdrop-filter:blur(2px)}
+
+/* minh hoạ: bớt rực, hoà vào giấy */
+:root[data-theme="ivory"] .d-mission__img,:root[data-theme="ivory"] .d-mission svg{filter:saturate(.86) contrast(.98)}
+
+/* điều hướng: nhãn viền mảnh, trạng thái đang xem nhẹ hơn */
+:root[data-theme="ivory"] .nav .tag,:root[data-theme="ivory"] .nav .tag--new,:root[data-theme="ivory"] .nav .tag--hot,:root[data-theme="ivory"] .nav .tag--chk{
+  background:transparent;color:var(--st-terra-d);box-shadow:inset 0 0 0 1px rgba(196,83,45,.42);
+  font:600 9.5px/1 'Be Vietnam Pro',sans-serif;letter-spacing:.12em;padding:4px 7px 3px}
+:root[data-theme="ivory"] .nav .tag--hot{background:rgba(217,164,65,.14);color:#7A5410;box-shadow:inset 0 0 0 1px rgba(217,164,65,.7)}
+:root[data-theme="ivory"] .nav .tag--chk{color:var(--st-sage-d);box-shadow:inset 0 0 0 1px rgba(95,115,82,.45)}
+:root[data-theme="ivory"] .nav a[aria-current="page"]{background:linear-gradient(90deg,rgba(196,83,45,.1),transparent);box-shadow:inset 2px 0 0 var(--st-terra)}
+:root[data-theme="ivory"] .grp__h{color:var(--st-ink-3)}
+:root[data-theme="ivory"] .nav a,:root[data-theme="ivory"] .nav button.nv{font-family:var(--st-serif);font-weight:500}
+
+/* ---------- MarSocial: mục báo ---------- */
+:root[data-theme="ivory"] .cm-head{border-bottom:1px solid var(--st-line);margin-bottom:clamp(18px,2.6vw,28px);padding-bottom:clamp(18px,3vw,28px)}
+:root[data-theme="ivory"] .cm-head h1{font-family:var(--st-serif);font-weight:500;letter-spacing:-.022em;line-height:1.04;color:var(--st-espresso)}
+:root[data-theme="ivory"] .cm-head p{font-family:var(--st-serif);font-style:italic;font-size:1.05rem;color:var(--st-ink-2)}
+:root[data-theme="ivory"] .cm-head img{border:0;border-radius:22px 22px 22px 6px;box-shadow:var(--st-shadow);filter:saturate(.9)}
+:root[data-theme="ivory"] .cm-av{background:var(--st-peach);color:var(--st-terra-d);font:italic 500 18px/1 var(--st-serif)}
+:root[data-theme="ivory"] .cm-tag{background:none;padding:0;color:var(--st-terra);font:600 13px/1 var(--st-ui);letter-spacing:0;text-transform:none}
+:root[data-theme="ivory"] .cm-poll h3{font:500 1.3rem/1.3 var(--st-serif);letter-spacing:-.01em}
+:root[data-theme="ivory"] .cm-poll__opts button{border:0;box-shadow:inset 0 0 0 1.5px rgba(120,84,50,.18);border-radius:18px;
+  transition:box-shadow .2s,transform .25s var(--st-ease)}
+:root[data-theme="ivory"] .cm-poll__opts button:not(:disabled):hover{box-shadow:inset 0 0 0 1.5px var(--st-terra);transform:translateY(-1px)}
+:root[data-theme="ivory"] .cm-poll__opts button.on{box-shadow:inset 0 0 0 2px var(--st-terra);background:#FFF3EA}
+:root[data-theme="ivory"] .cm-poll__opts strong{font-family:var(--st-serif);font-weight:500}
+:root[data-theme="ivory"] .cm-poll__bar{height:4px}
+:root[data-theme="ivory"] .cm-chips{gap:clamp(14px,2vw,26px);border-bottom:1px solid var(--st-line);margin-bottom:6px}
+:root[data-theme="ivory"] .cm-chips button{border:0;border-radius:0;background:none;padding:8px 2px 12px;position:relative;
+  font:500 16px/1.2 var(--st-serif);color:var(--st-ink-3);transition:color .2s}
+:root[data-theme="ivory"] .cm-chips button:hover{color:var(--st-terra-d)}
+:root[data-theme="ivory"] .cm-chips button.on{background:none;color:var(--st-terra);font-style:italic;font-weight:600}
+:root[data-theme="ivory"] .cm-chips button.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;border-radius:3px;background:var(--st-terra)}
+/* bài đăng: không hộp, chỉ sợi chỉ phân cách */
+:root[data-theme="ivory"] .cm-post{background:none;box-shadow:none;border-radius:0!important;border:0;border-bottom:1px solid var(--st-line)!important;
+  padding:22px 2px 18px;margin:0;transition:background .3s}
+:root[data-theme="ivory"] .cm-post__t{font:500 clamp(1.15rem,1.7vw,1.4rem)/1.28 var(--st-serif);letter-spacing:-.012em;color:var(--st-espresso);transition:color .2s}
+:root[data-theme="ivory"] .cm-post__t:hover{color:var(--st-terra);font-style:italic}
+:root[data-theme="ivory"] .cm-post p{color:var(--st-ink-2)}
+:root[data-theme="ivory"] .cm-post__a{border-top:0;padding-top:4px}
+:root[data-theme="ivory"] .cm-react{border:0;background:none;box-shadow:none;padding:6px 10px 6px 0;color:var(--st-ink-3);font-weight:600;transition:color .2s}
+:root[data-theme="ivory"] .cm-react:hover{color:var(--st-terra)}
+:root[data-theme="ivory"] .cm-react.on{background:none;color:var(--st-terra)}
+:root[data-theme="ivory"] .cm-btn{box-shadow:0 10px 22px -12px rgba(158,63,31,.7);font-weight:600;transition:transform .25s var(--st-ease),background .2s}
+:root[data-theme="ivory"] .cm-btn:hover{background:var(--st-terra-d);transform:translateY(-2px)}
+:root[data-theme="ivory"] .cm-comp input,:root[data-theme="ivory"] .cm-comp textarea,:root[data-theme="ivory"] .cm-comp select{border:0;
+  box-shadow:inset 0 0 0 1.5px rgba(120,84,50,.2);border-radius:16px}
+:root[data-theme="ivory"] .cm-comp input:focus,:root[data-theme="ivory"] .cm-comp textarea:focus{box-shadow:inset 0 0 0 2px var(--st-terra);outline:0}
+/* cột bên */
+:root[data-theme="ivory"] .cm-side .cm-dark{border-radius:26px 26px 26px 8px;background:radial-gradient(120% 120% at 0% 0%,#3A2418,#241610);
+  box-shadow:0 24px 44px -30px rgba(42,26,18,.7)}
+:root[data-theme="ivory"] .cm-dark small{font:600 13px var(--st-ui);letter-spacing:0}
+:root[data-theme="ivory"] .cm-dark b{font-family:var(--st-serif);font-weight:400}
+:root[data-theme="ivory"] .cm-side h4{font:500 1.15rem/1.2 var(--st-serif);letter-spacing:-.005em;align-items:baseline}
+:root[data-theme="ivory"] .cm-rk{background:none;font:italic 500 17px var(--st-serif);color:var(--st-terra);width:22px}
+:root[data-theme="ivory"] .cm-side li{padding-bottom:10px;border-bottom:1px solid var(--st-line)}
+:root[data-theme="ivory"] .cm-side li:last-child{border-bottom:0;padding-bottom:0}
+:root[data-theme="ivory"] .cm-pill{border:0;padding:0}
+:root[data-theme="ivory"] .cm-post__t{text-decoration:none}

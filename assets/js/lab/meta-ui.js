@@ -92,7 +92,7 @@
     const c = cfg.creative, cta = (M.ctas.find((x) => x.id === c.cta) || { t: 'Chọn CTA' }).t;
     return `<div class="adpv"><header><span class="av" aria-hidden="true">${escH(CASE.brand[0])}</span><span><b>${escH(CASE.brand)}</b><span>Được tài trợ</span></span></header>
       <div class="txt">${escH(c.primary) || '<span style="color:var(--lb-ink3)">Nội dung chính sẽ hiện ở đây…</span>'}</div>
-      <div class="img" data-f="${c.format}">${c.format === 'carousel' ? 'Nhiều ảnh · vuốt ngang' : 'Ảnh/video sản phẩm'}</div>
+      <div class="img" data-f="${c.format}">${c.format === 'carousel' ? 'Many photos · swipe sideways' : 'Product photo / video'}</div>
       <footer><span><small>tuhocmarketing.vn</small><b>${escH(c.headline) || 'Tiêu đề quảng cáo'}</b></span><i>${escH(cta)}</i></footer></div>`;
   }
 

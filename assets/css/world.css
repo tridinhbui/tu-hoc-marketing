@@ -19,7 +19,7 @@
 .wm__node b{display:block;margin-top:12px;font:600 clamp(.95rem,1.25vw,1.12rem)/1.2 var(--serif,Georgia,serif)}
 .wm__node small{display:block;margin-top:2px;font:600 11.5px var(--sans,system-ui);color:rgba(43,26,17,.6)}
 .wm__node[data-s="done"] .wm__isle::after{content:"✓";position:absolute;right:-6px;top:-6px;width:28px;height:28px;border-radius:50%;background:#3d7a45;color:#fff;font:700 15px/28px var(--sans);text-align:center}
-.wm__hint{position:absolute;left:18px;bottom:14px;font:600 20px var(--pp-hand,'Caveat',cursive);color:#7a5a45;transform:rotate(-2deg)}
+.wm__hint{position:absolute;left:18px;bottom:14px;font:600 20px var(--pp-hand,'Hand VN',cursive);color:#7a5a45;transform:rotate(-2deg)}
 @media(max-width:760px){
   .wm{aspect-ratio:auto;max-height:none;display:grid;gap:10px;padding:16px}
   .wm__paths,.wm__hint{display:none}
