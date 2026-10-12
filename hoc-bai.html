@@ -6,7 +6,7 @@
 <script>if(window.top!==window.self)document.documentElement.classList.add("framed")</script>
 
 <meta name="description" content="Lộ trình học: bài đang học, các chặng và module, câu sai cần ôn, thử thách mỗi ngày và luyện tập không giới hạn.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%233b2416%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27Arial%27 font-weight=%27800%27 font-size=%2716%27 text-anchor=%27middle%27 fill=%27%23fff%27%3EM%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400&display=swap" rel="stylesheet">
 <style>
@@ -302,7 +302,7 @@ svg.i{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-widt
 .framed .side,.framed .mtop{display:none!important}
 .framed .shell{padding-left:0!important}
 </style>
-<link rel="stylesheet" href="assets/css/paper.css?v=7">
+<link rel="stylesheet" href="assets/css/paper.css?v=10">
 </head>
 <body>
 <noscript><p style="padding:24px">Trang này cần JavaScript. Bài học và tiến độ được dựng ngay trong trình duyệt của bạn.</p></noscript>
@@ -354,7 +354,7 @@ function renderSide(u){
   const s=S.get(), due=dueErrors(s).length, here='hoc-bai.html';
   const open=JSON.parse(localStorage.getItem('thmc:navg')||'{}');
   document.getElementById('side').innerHTML=`
-    <a class="side__logo" href="gioi-thieu.html"><i>M</i><span>TỰ HỌC<br>MARKETING</span></a>
+    <a class="side__logo" href="gioi-thieu.html"><img src="assets/img/logo-mark-96.png" alt="" width="34" height="34"><span>TỰ HỌC<br>MARKETING</span></a>
     <label class="side__search">${ic('search')}<input id="q" placeholder="Tìm kiếm..." autocomplete="off" aria-label="Tìm bài học"><kbd>⌘K</kbd>
       <div class="side__res" id="qres" hidden></div></label>
     <nav>${NAVS.map((g,gi)=>{const exp=open[gi]!==false;

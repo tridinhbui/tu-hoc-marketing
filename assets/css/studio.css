@@ -13,6 +13,7 @@
   --st-shadow:0 22px 44px -30px rgba(92,48,22,.42);
   --st-ease:cubic-bezier(.16,1,.3,1);
   --st-hand:'Hand VN',cursive;
+  --st-ui:'Be Vietnam Pro',system-ui,sans-serif; /* nhãn chức năng tiếng Việt: dùng chữ thường, không dùng font viết tay */
   --st-serif:'Fraunces','Playfair Display',Georgia,serif;
 }
 
@@ -26,7 +27,7 @@
 /* chữ viết tay cho nhãn nhỏ phía trên tiêu đề: tiếng nói của landing */
 :root[data-theme="ivory"] .mono--red,:root[data-theme="ivory"] .label--accent,:root[data-theme="ivory"] .rm__eyebrow,
 :root[data-theme="ivory"] .th__eyebrow,:root[data-theme="ivory"] .lab__tag,:root[data-theme="ivory"] .eyebrow{
-  font-family:var(--st-hand)!important;font-size:21px!important;font-weight:600;letter-spacing:0!important;text-transform:none!important;color:var(--st-terra)!important;line-height:1.1}
+  font-family:var(--st-ui)!important;font-size:13px!important;font-weight:600;letter-spacing:0!important;text-transform:none!important;color:var(--st-terra)!important;line-height:1.1}
 
 /* tiêu đề: serif nhẹ, chữ nhấn nghiêng màu đất nung */
 :root[data-theme="ivory"] h1,:root[data-theme="ivory"] .h1,:root[data-theme="ivory"] .h2,:root[data-theme="ivory"] .h-serif,:root[data-theme="ivory"] .display{
@@ -123,7 +124,7 @@
 
 /* nhãn: lời ghi chú viết tay, không còn viên thuốc màu */
 :root[data-theme="ivory"] .nav .tag,:root[data-theme="ivory"] .nav .tag--new,:root[data-theme="ivory"] .nav .tag--hot,:root[data-theme="ivory"] .nav .tag--chk{
-  background:none;color:var(--st-terra);font:600 17px/1 var(--st-hand);text-transform:lowercase;letter-spacing:0;padding:0;width:auto;height:auto;border-radius:0;transform:rotate(-4deg)}
+  background:none;color:var(--st-terra);font:600 13px/1 var(--st-ui);text-transform:lowercase;letter-spacing:0;padding:0;width:auto;height:auto;border-radius:0;}
 :root[data-theme="ivory"] .nav .tag--hot{color:var(--st-gold)}
 :root[data-theme="ivory"] .nav em.due{background:var(--st-terra)}
 
@@ -150,7 +151,7 @@
 /* nhãn nhỏ: chữ thường, không viên thuốc rực màu */
 :root[data-theme="ivory"] .d-chip{background:none!important;color:var(--st-ink-3)!important;font:600 13px 'Be Vietnam Pro',sans-serif;letter-spacing:0;text-transform:none;padding:0}
 :root[data-theme="ivory"] .d-chip--g::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--st-sage-d);margin-right:7px}
-:root[data-theme="ivory"] .d-chip--y{color:var(--st-terra)!important;font-family:var(--st-hand);font-size:19px;font-weight:600}
+:root[data-theme="ivory"] .d-chip--y{color:var(--st-terra)!important;font-family:var(--st-ui);font-size:13px;font-weight:600}
 
 /* tab: chữ serif, gạch chân bằng nét bút khi đang chọn — không hộp */
 :root[data-theme="ivory"] .d-tabs{display:flex;gap:clamp(12px,2vw,28px);flex-wrap:wrap;border-bottom:1px solid var(--st-line);padding:0 2px}
@@ -172,7 +173,7 @@
 :root[data-theme="ivory"] .lvmap__h h2{font-family:var(--st-serif);font-weight:400;font-size:1.5rem}
 :root[data-theme="ivory"] .lvmap__badge{border-radius:58% 42% 55% 45%/52% 52% 48% 48%;box-shadow:0 12px 22px -12px rgba(0,0,0,.7)}
 :root[data-theme="ivory"] .lvmap__card,:root[data-theme="ivory"] .lvmap__f{border:0;background:rgba(255,255,255,.05);border-radius:20px}
-:root[data-theme="ivory"] .lvmap__chip{background:none;color:#F1CDBD;font-family:var(--st-hand);font-size:19px;font-weight:600}
+:root[data-theme="ivory"] .lvmap__chip{background:none;color:#F1CDBD;font-family:var(--st-ui);font-size:13px;font-weight:600}
 
 /* thanh tiến độ: dày hơn, đầu tròn, màu đất nung */
 :root[data-theme="ivory"] .d-bar,:root[data-theme="ivory"] .lvmap__bar{height:7px}
@@ -187,7 +188,7 @@
   border:0;border-radius:var(--st-r);background:rgba(255,251,243,.88);box-shadow:var(--st-shadow)}
 :root[data-theme="ivory"] .hero__t{font-family:var(--st-serif);font-weight:400;letter-spacing:-.02em}
 :root[data-theme="ivory"] .hero__body .pill,:root[data-theme="ivory"] .hero__body .pill--acc,:root[data-theme="ivory"] .hero__body .pill--amber{background:none!important;border:0!important;padding:0!important;
-  color:var(--st-terra)!important;font:600 18px/1.1 var(--st-hand)!important;letter-spacing:0!important;text-transform:none!important}
+  color:var(--st-terra)!important;font:600 13px/1.1 var(--st-ui)!important;letter-spacing:0!important;text-transform:none!important}
 :root[data-theme="ivory"] .tab{border:0;background:none;box-shadow:none;border-radius:0;font-family:var(--st-serif);font-size:16px;font-weight:500;color:var(--st-ink-3);position:relative;padding:10px 4px 12px}
 :root[data-theme="ivory"] .tab[aria-selected="true"]{background:none;color:var(--st-terra);font-style:italic;font-weight:600}
 :root[data-theme="ivory"] .tab[aria-selected="true"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;border-radius:3px;background:var(--st-terra)}
@@ -202,7 +203,7 @@
 
 /* ---------- Bắt đầu từ đâu ---------- */
 :root[data-theme="ivory"] .bd .pill{background:none;border:0;padding:0;color:var(--st-ink-3);font:500 14px 'Be Vietnam Pro',sans-serif;text-transform:none;letter-spacing:0}
-:root[data-theme="ivory"] .bd .pill b{color:var(--st-terra);font-family:var(--st-hand);font-size:20px;font-weight:600}
+:root[data-theme="ivory"] .bd .pill b{color:var(--st-terra);font-family:var(--st-ui);font-size:13px;font-weight:600}
 :root[data-theme="ivory"] .tabs{border:0;background:none;box-shadow:none;border-radius:0;border-bottom:1px solid var(--st-line);gap:clamp(10px,2.2vw,30px);padding:0}
 :root[data-theme="ivory"] .tabs button{background:none;border:0;border-radius:0;box-shadow:none;font:500 16px/1.2 var(--st-serif);color:var(--st-ink-3);padding:10px 2px 13px;position:relative;width:auto;flex:0 0 auto}
 :root[data-theme="ivory"] .tabs button.on{background:none;color:var(--st-terra);font-style:italic;font-weight:600}
@@ -259,16 +260,16 @@
 /* ---------- Học theo nghề (bản đồ nghề) ---------- */
 :root[data-theme="ivory"] .cm-tab svg,:root[data-theme="ivory"] .hero__tag .ic,:root[data-theme="ivory"] .track>.ic,:root[data-theme="ivory"] .hud__motto svg,:root[data-theme="ivory"] .hud__title svg{display:none}
 :root[data-theme="ivory"] .cm-chip{border:0;background:none;padding:0;text-transform:none;letter-spacing:0;font:500 14px 'Be Vietnam Pro',sans-serif;color:var(--st-ink-2)}
-:root[data-theme="ivory"] .cm-chip--gold{color:var(--st-gold);font-family:var(--st-hand);font-size:19px;font-weight:600}
-:root[data-theme="ivory"] .cm-chip--terra{background:none;color:var(--st-terra);font-family:var(--st-hand);font-size:20px;font-weight:600}
+:root[data-theme="ivory"] .cm-chip--gold{color:var(--st-gold);font-family:var(--st-ui);font-size:13px;font-weight:600}
+:root[data-theme="ivory"] .cm-chip--terra{background:none;color:var(--st-terra);font-family:var(--st-ui);font-size:13px;font-weight:600}
 :root[data-theme="ivory"] .cm-tabs{border-bottom:1px solid var(--st-line);gap:clamp(12px,2.2vw,30px)}
 :root[data-theme="ivory"] .cm-tab{border:0;border-radius:0;background:none;padding:10px 2px 13px;font:500 16px/1.2 var(--st-serif);color:var(--st-ink-3);position:relative}
 :root[data-theme="ivory"] .cm-tab[aria-selected="true"]{background:none;color:var(--st-terra);font-style:italic;font-weight:600}
 :root[data-theme="ivory"] .cm-tab[aria-selected="true"]::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;border-radius:3px;background:var(--st-terra)}
-:root[data-theme="ivory"] .cm-pill{background:none;color:var(--st-terra);font:600 17px var(--st-hand);text-transform:none;letter-spacing:0;padding:0}
+:root[data-theme="ivory"] .cm-pill{background:none;color:var(--st-terra);font:600 13px var(--st-ui);text-transform:none;letter-spacing:0;padding:0}
 
 /* ---------- Luyện phỏng vấn ---------- */
-:root[data-theme="ivory"] .hero__tag{background:none;padding:0;color:var(--st-terra);font:600 19px var(--st-hand);text-transform:none;letter-spacing:0}
+:root[data-theme="ivory"] .hero__tag{background:none;padding:0;color:var(--st-terra);font:600 13px var(--st-ui);text-transform:none;letter-spacing:0}
 :root[data-theme="ivory"] .mode,:root[data-theme="ivory"] .track{border:0;box-shadow:inset 0 0 0 1.5px rgba(120,84,50,.16),0 14px 30px -26px rgba(92,48,22,.4);border-radius:22px}
 :root[data-theme="ivory"] .mode[aria-pressed="true"]{box-shadow:0 18px 34px -22px rgba(42,26,18,.7)}
 :root[data-theme="ivory"] .track{border-radius:26px 10px 26px 10px}
@@ -336,3 +337,16 @@
   padding:4px 8px;border-radius:999px;transform:none;box-shadow:0 6px 12px -6px rgba(158,63,31,.8)}
 :root[data-theme="ivory"] .nav .tag--hot{background:var(--st-gold);color:#2A1A12;box-shadow:0 6px 12px -6px rgba(148,106,27,.8)}
 :root[data-theme="ivory"] .nav .tag--chk{background:var(--st-sage-d);box-shadow:none}
+
+/* ---------- logo thương hiệu: ngọn lửa trên cuốn sách ---------- */
+.rail__mark{width:42px;height:42px;border-radius:0;background:none!important;box-shadow:none!important;transform:none!important;display:grid;place-items:center}
+.rail__mark::before{content:none!important}
+.rail__mark img{display:block;width:42px;height:42px;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(158,63,31,.28))}
+.rail__logo span{font-family:var(--st-serif,'Fraunces',serif)}
+.mbar{gap:8px}
+.mbar img{display:block;flex:none}
+.lp-logo__mark{display:block;flex:none;margin-right:2px}
+.lp-logo{align-items:center}
+.au-brand{display:flex;align-items:center;gap:10px}
+.au-brand img{display:block}
+.side__logo img{display:block;flex:none}

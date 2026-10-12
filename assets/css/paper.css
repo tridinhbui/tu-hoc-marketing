@@ -1,6 +1,6 @@
 /* PAPER — phong cách "sổ tay giấy": nền kem có hạt, mép giấy rách, nhành hoa vẽ tay, chữ viết tay.
    Chỉ là lớp da: không đổi cấu trúc trang. Áp dụng khi data-theme="ivory" (mặc định của app). */
-@import url("studio.css?v=12");
+@import url("studio.css?v=13");
 :root{
   --pp-cream:#F6EEDF; --pp-cream2:#FBF6EC; --pp-card:#FFFCF6; --pp-ink:#2B1A11; --pp-line:rgba(120,84,50,.14);
   --pp-terra:#B8502D; --pp-hand:'Hand VN',cursive;
