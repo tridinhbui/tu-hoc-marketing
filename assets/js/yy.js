@@ -309,6 +309,13 @@
     tipEl.onclick = function(){ YY.open(); };
     document.body.appendChild(tipEl);
     var el = tipEl;
+    /* Giữ chỗ đúng cỡ cuối cùng trước khi gõ: hộp tự lớn dần theo từng chữ là nguồn gây layout shift (CLS). */
+    if (!REDUCED) {
+      el.style.visibility = 'hidden'; el.textContent = text;
+      var w = el.offsetWidth, h = el.offsetHeight;
+      el.textContent = ''; el.style.visibility = '';
+      el.style.boxSizing = 'border-box'; el.style.width = w + 'px'; el.style.minHeight = h + 'px';
+    }
     YY.type(el, text).then(function(){ setTimeout(function(){ if (tipEl === el) hideTip(); }, 7000); });
   };
 
