@@ -239,7 +239,7 @@ const minutes=()=>Math.max(1,parseInt(String(M.read||'6'),10)||6);
 
 /* Dữ liệu ba loại bài (B mới, L bài cũ, P nguyên lý) gom về một dạng để dựng chung một bố cục. */
 const LD=(()=>{ const s=(M&&M.src)||{}, k=M&&M.kind;
-  if(k==='B') return {sit:s.situation,cName:(s.concept||{}).name,cBody:(s.concept||{}).body,ex:s.example,counter:'',points:[],mistakes:s.mistakes||[],closer:'',take:s.takeaway,apply:s.apply};
+  if(k==='B') return {sit:s.situation,cName:(s.concept||{}).name,cBody:(s.concept||{}).body,ex:s.example,counter:s.counter||'',points:s.points||[],mistakes:s.mistakes||[],closer:s.deeper||'',take:s.takeaway,apply:s.apply};
   if(k==='L') return {sit:s.real,cName:'Ý chính cốt lõi',cBody:`<b>${s.idea}</b>`,ex:'',points:s.why||[],mistakes:[],counter:'',closer:s.closer,take:s.idea,apply:s.try};
   return {sit:(s.brand?s.brand+' ':'')+(s.ex||''),cName:'Đúc kết một dòng',cBody:`<b>${s.one}</b>`,ex:'',points:[],mistakes:s.mistake?[s.mistake]:[],counter:s.counter,closer:'',take:s.one,apply:s.drill}; })();
 
