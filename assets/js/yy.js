@@ -50,7 +50,7 @@
   '.yy-chips{display:flex;gap:6px;flex-wrap:wrap;padding:0 14px 10px}.yy-chips button{border:1px solid rgba(120,84,50,.22);background:#fff;border-radius:999px;padding:6px 11px;font:600 12.5px var(--sans,system-ui);cursor:pointer;color:#2B1A11}' +
   '.yy-chips button:hover{border-color:#B8502D;color:#B8502D}' +
   '.yy-f{display:flex;gap:8px;padding:10px 12px;border-top:1px solid rgba(120,84,50,.14);background:#fff}' +
-  '.yy-f input{flex:1;min-width:0;border:1.5px solid rgba(120,84,50,.2);border-radius:999px;padding:10px 14px;font:500 14px var(--sans,system-ui);outline:none}.yy-f input:focus{border-color:#B8502D}' +
+  '.yy-f input{flex:1;min-width:0;border:1.5px solid rgba(120,84,50,.2);border-radius:999px;padding:10px 14px;font:500 16px var(--sans,system-ui);outline:none}.yy-f input:focus{border-color:#B8502D}' +
   '.yy-f button{border:0;background:#B8502D;color:#fff;border-radius:999px;padding:0 16px;font:700 13.5px var(--sans,system-ui);cursor:pointer}';
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
