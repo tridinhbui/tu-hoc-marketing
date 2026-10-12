@@ -65,11 +65,18 @@ export async function logout(req, env) {
   return json({ ok: true }, 200, { 'set-cookie': `${COOKIE}=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0` });
 }
 
+/* Tên để CHÀO chính người đó (chỉ trả cho chính họ): tên đã đặt, hoặc phần đầu email. Không dùng ở nơi công khai —
+   bảng xếp hạng vẫn hiện publicName() ẩn danh. */
+function friendlyName(u) {
+  if (u.display_name) return u.display_name;
+  const local = String(u.email || '').split('@')[0].split(/[._\-+]/)[0].replace(/\d+$/, '');
+  return local ? local.charAt(0).toUpperCase() + local.slice(1) : '';
+}
 export async function me(req, env) {
   const u = await currentUser(req, env);
   if (!u) return json({ user: null });
   return json({ user: { id: u.id, email: u.email, name: publicName(u), display_name: u.display_name, persona: u.persona,
-    avatar: u.avatar_url || null, is_admin: isAdmin(u, env) } });
+    friendly_name: friendlyName(u), avatar: u.avatar_url || null, is_admin: isAdmin(u, env) } });
 }
 
 export async function updateMe(req, env) {

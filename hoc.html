@@ -145,7 +145,10 @@ function renderDashboard(user) {
   const nm = lessonMeta(nk), w = where(nk);
   const stageN = w ? STAGES.indexOf(w.stage) + 1 : 1, lessonN = w ? w.mod.lessons.indexOf(nk) + 1 : 1;
   const goHref = 'bai.html?id=' + encodeURIComponent(nk);
-  const hello = user && user.name ? `Chào ${escH(user.name.split(' ').slice(-1)[0])}, ` : '';
+  /* Gọi bằng tên người học đặt (hoặc phần đầu email), không dùng mã "Học viên 6B9D" dành cho bảng xếp hạng ẩn danh. */
+  const callName = user ? (user.display_name ? user.display_name.trim().split(/\s+/).slice(-1)[0] : (user.friendly_name || '')) : '';
+  const hello = callName ? `Chào ${escH(callName)}, ` : '';
+  const isNew = doneCount === 0;
 
   app.innerHTML = `
   <div class="d-dash">
@@ -153,10 +156,11 @@ function renderDashboard(user) {
       <section class="d-card d-mission">
         <div>
           <div class="d-mission__ic"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19V5"/></svg></div>
-          <div class="chips"><span class="d-chip d-chip--g">Nhiệm vụ đang học</span><span class="d-chip d-chip--y">+10 XP khi hoàn thành</span></div>
+          <div class="chips"><span class="d-chip d-chip--g">${isNew ? 'Bài đầu tiên của bạn' : 'Nhiệm vụ đang học'}</span><span class="d-chip d-chip--y">+10 XP khi hoàn thành</span></div>
           <div class="small muted">Chặng ${stageN} · Bài ${lessonN}</div>
-          <h1>${hello ? `<span style="font-weight:600;color:var(--ink-50);font-size:.7em;display:block">${hello}tiếp tục nhé</span>` : ''}${escH(nm ? nm.t : 'Bắt đầu bài đầu tiên')}</h1>
-          <a class="btn-go" href="${goHref}">Học tiếp →</a>
+          <h1>${hello ? `<span style="font-weight:600;color:var(--ink-50);font-size:.7em;display:block">${hello}${isNew ? 'mình bắt đầu từ đây nhé' : 'tiếp tục nhé'}</span>` : ''}${escH(nm ? nm.t : 'Bắt đầu bài đầu tiên')}</h1>
+          ${isNew ? '<p class="small" style="margin:10px 0 0;color:var(--ink-70);max-width:44ch">Mỗi bài khoảng 6 phút: đọc, một câu dừng giữa bài, rồi 5 câu kiểm tra nhanh. Làm xong bạn nhận +10 XP và mở bài kế tiếp.</p>' : ''}
+          <a class="btn-go" href="${goHref}">${isNew ? 'Bắt đầu bài đầu tiên →' : 'Học tiếp →'}</a>
           <div style="display:flex;align-items:center;gap:12px;margin-top:16px;font-size:13px;color:var(--ink-70)">
             <span style="white-space:nowrap">Tiến độ (${doneCount}/${totalLessons} bài)</span><div class="d-bar" style="flex:1"><i style="width:${Math.max(1, pct)}%"></i></div><b>${pct}%</b>
           </div>
