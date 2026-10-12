@@ -69,6 +69,10 @@ for (const b of g('BRANDS')) {
 /* sitemap gồm cả trang gốc lẫn trang sinh */
 const roots = fs.readdirSync('.').filter(f => f.endsWith('.html') && !f.startsWith('_') && f !== 'app.html');   // app.html là khung điều hướng, noindex
 for (const f of roots) urls.unshift([`${SITE}/${f === 'index.html' ? '' : f}`, f === 'index.html' ? '1.0' : '0.6']);
+/* Worker (api/src/index.js OPEN_PAGES) chuyển mọi trang khác sang đăng nhập (302). Sitemap liệt kê URL bị 302 là lỗi
+   với Google Search Console và làm lộ tên trang nội bộ (quan-tri, tools_og…). Mặc định chỉ khai báo trang công khai;
+   khi mở công khai trang case thì chạy lại với SITEMAP_ALL=1. */
+if (process.env.SITEMAP_ALL !== '1') { const open = new Set([`${SITE}/`]); urls.splice(0, urls.length, ...urls.filter(([u]) => open.has(u))); }
 const today = new Date().toISOString().slice(0, 10);
 fs.writeFileSync('sitemap.xml',
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
@@ -92,12 +96,14 @@ for (const f of fs.readdirSync('.')) {
   if (!f.endsWith('.html') || SKIP_HTML(f)) continue;
   fs.copyFileSync(f, `dist/${f}`); copied++;
 }
-/* Đáp án không đi xuống trình duyệt: bỏ khỏi file câu hỏi trong dist — CHỈ khi bản deploy có server chấm
-   (/api/answers cùng origin). Bản tĩnh không có server mà bỏ đáp án thì người học không làm quiz được.
-   Bật bằng: STRIP_ANSWERS=1 node tools_build.mjs */
-if (process.env.STRIP_ANSWERS === '1')
-  import('node:child_process').then(({ execFileSync }) => execFileSync(process.execPath, ['tools_strip_answers.mjs', 'dist'], { stdio: 'inherit' }));
-else console.log('giữ đáp án trong dist (đặt STRIP_ANSWERS=1 khi deploy cùng server chấm)');
+/* Đáp án không đi xuống trình duyệt: bỏ khỏi file câu hỏi trong dist. MẶC ĐỊNH BẬT vì mọi bản deploy đều có server
+   chấm (/api/answers cùng origin), và XP bài học chỉ được ghi khi server đã chấm câu trả lời (xem api/src/xp-trust.js).
+   Chỉ tắt cho bản xem tĩnh không có server: KEEP_ANSWERS=1 node tools_build.mjs  (bản đó không dùng để deploy). */
+if (process.env.KEEP_ANSWERS === '1') console.log('CẢNH BÁO: giữ đáp án trong dist (KEEP_ANSWERS=1) — KHÔNG deploy bản này lên production');
+else {
+  const { execFileSync } = await import('node:child_process');
+  execFileSync(process.execPath, ['tools_strip_answers.mjs', 'dist'], { stdio: 'inherit' });
+}
 const du = (p) => fs.readdirSync(p, { withFileTypes: true })
   .reduce((n, e) => n + (e.isDirectory() ? du(p + '/' + e.name) : fs.statSync(p + '/' + e.name).size), 0);
 

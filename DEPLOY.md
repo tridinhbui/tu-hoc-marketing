@@ -149,3 +149,28 @@ Không cookie, không cần banner đồng ý.
 - [ ] Điền thử email trên trang chủ, kiểm bằng lệnh D1 ở trên xem có vào bảng không
 - [ ] `https://…/sitemap.xml` mở được
 - [ ] Mở trên điện thoại thật một lần
+
+---
+
+## Phát hành production — thứ tự bắt buộc
+
+```bash
+# 1. Kiểm thử (phải xanh)
+node --test tests/*.test.mjs
+(cd api && npm test)
+
+# 2. Gói dist. Mặc định GỠ ĐÁP ÁN khỏi file công khai (exam-items.js, bai/*.js).
+#    KEEP_ANSWERS=1 chỉ dùng để xem tĩnh trên máy — không bao giờ deploy bản đó.
+SITE_URL=https://tuhocmarketing.org node tools_build.mjs
+
+# 3. Kiểm lại dist không còn đáp án
+grep -c "answer:" dist/assets/js/data/exam-items.js        # phải là 0
+
+# 4. Deploy Worker + trang tĩnh (npm run deploy sinh lại bank.json và xp-refs.json trước khi wrangler deploy)
+cd api && npm run deploy
+```
+
+Sau deploy: `curl -s https://tuhocmarketing.org/assets/js/data/exam-items.js | grep -c "answer:"` phải trả `0`.
+
+**Vì sao đáp án phải gỡ:** XP bài học và đề vượt chặng chỉ được ghi khi server đã chấm (`/api/answers`, `/api/exams/stage/:id`).
+Bản còn đáp án sẽ chấm ngay tại trình duyệt, không qua server — XP không được ghi và người học tự đọc được đáp án.

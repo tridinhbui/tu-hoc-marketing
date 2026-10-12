@@ -8,18 +8,26 @@ const shuf = (a) => a.map(x => [Math.random(), x]).sort((p, q) => p[0] - q[0]).m
 
 /* Đề từ máy chủ: rút từ toàn bộ kho chặng (cả bài mới), không có đáp án. Không có máy chủ thì dựng đề tại chỗ. */
 async function drawExam(sid) {
+  /* Đã đăng nhập: lấy đề theo LƯỢT THI của server (có attempt_id). Server chấm cả đề khi nộp, ghi lượt và cấp XP/triện —
+     trình duyệt không tự khai được "đã qua". Hết hạn nghỉ (429 cooldown) thì báo cho người học, không lén dựng đề khác. */
+  let user = null;
+  try { user = typeof account === 'function' ? await account() : null; } catch (e) { /* không có API: chạy đề tại chỗ */ }
   try {
-    const r = await api('/exams/draw/' + sid);
-    /* Đề từ server không mang `teaches`; lấy bài gốc của câu làm chỗ "cần xem lại" và mã lỗi khái niệm. */
+    const r = user ? await api('/exams/stage/' + sid) : await api('/exams/draw/' + sid);
     if (r.items && r.items.length >= 10) {
+      /* Đề từ server không mang `teaches`; lấy bài gốc của câu làm chỗ "cần xem lại" và mã lỗi khái niệm. */
       const out = r.items.map(it => {
         const x = { ...it, teaches: it.teaches || (it.lesson ? [it.lesson] : []) };
         return x.options ? { ...x, options: shuf(x.options) } : x;
       });
-      out.source = 'server';   // đề do máy chủ dựng: máy chủ cũng chấm được
+      out.source = 'server';
+      out.attempt = r.attempt_id || null;
       return out;
     }
-  } catch (e) { /* rơi xuống đề tại chỗ */ }
+  } catch (e) {
+    if (e && e.status === 429 && e.data && e.data.error === 'cooldown') throw e;   // trang thi hiện thời gian chờ
+    /* rơi xuống đề tại chỗ */
+  }
   return buildExam(sid);
 }
 function buildExam(sid) {
@@ -109,6 +117,21 @@ async function gradeAsync(it, given, context = 'practice') {
 /* Chấm cả đề: tuần tự để không dội server, trả về dạng giống gradeExam. */
 async function gradeExamAsync(sid, items, answers, context = 'practice') {
   const bp = EXAMS[sid], marks = [];
+  /* Lượt thi do server cấp: nộp cả đề một lần, server chấm và quyết định đạt/không. */
+  if (items && items.attempt) {
+    const r = await api('/exams/stage/' + sid, { method: 'POST', body: { attempt_id: items.attempt, answers } });
+    const by = new Map((r.detail || []).map(d => [d.id, d]));
+    for (const it of items) {
+      const d = by.get(it.id) || {}, given = answers[it.id], why = {};
+      if (d.explanation && d.answer !== undefined) why[d.answer] = d.explanation;
+      if (d.option_feedback && given !== undefined) why[given] = d.option_feedback;
+      marks.push({ it, given, ok: !!d.correct, err: d.error_code || null, answer: d.answer, ans: d.answer, unit: d.unit ?? it.unit,
+                   why, steps: d.steps || [], full: false });
+    }
+    const coreWrong = marks.filter(m => m.it.core && !m.ok).length;
+    const passed = !!r.passed && coreWrong <= bp.coreMiss;
+    return { marks, right: r.score, total: r.total, coreWrong, passed, reason: passed ? null : (r.score < r.need ? 'thieu-diem' : 'sai-cot-loi') };
+  }
   for (const it of items) marks.push({ it, given: answers[it.id], ...(await gradeAsync(it, answers[it.id], context)) });
   const right = marks.filter(m => m.ok).length, coreWrong = marks.filter(m => m.it.core && !m.ok).length;
   const passed = right >= bp.pass && coreWrong <= bp.coreMiss;

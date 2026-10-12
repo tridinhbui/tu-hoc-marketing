@@ -40,7 +40,7 @@ async function setProgress(env, uid, lesson, state, source, score = null) {
 export async function ingestLessons(env, uid, lessons) {
   for (const [k, r] of Object.entries(lessons || {})) {
     if (!/^[LPB]:/.test(k) || !r || !(r.state in RANK)) continue;
-    const src = ['lesson', 'stage_exam', 'placement'].includes(r.source) ? r.source : 'legacy';
+    const src = 'legacy';                                           // nguồn do trình duyệt khai không bao giờ được coi là bằng chứng của server
     await setProgress(env, uid, k, r.state, src, Number.isFinite(r.score) ? Math.max(0, Math.min(100, r.score)) : null);
   }
 }
@@ -74,15 +74,22 @@ export async function lessonQuiz(req, env, key) {
 }
 
 /* ---------- POST /api/answers ---------- */
+const ANSWER_DAILY_CAP = 3000;
 export async function answer(req, env) {
   const b = await body(req, 4000);
   const it = BANK.items[str(b.question_id, 80)];
   if (!it) return json({ error: 'unknown_question' }, 404);
   const ctxName = ['lesson', 'checkpoint', 'review', 'practice'].includes(b.context) ? b.context : 'practice';
+  /* Phương án phải là một khoá có thật của câu — gửi rác để "xem đáp án" bị từ chối, không trả đáp án. */
+  if (it.type !== 'calc' && !(it.options || []).some((o) => o.k === b.chosen)) return json({ error: 'invalid_answer' }, 400);
   const r = gradeItem(it, b.chosen);
   if (r.invalid) return json({ error: 'invalid_answer' }, 400);
   const u = await currentUser(req, env);
-  if (!u) return json({ ...r, saved: false });                       // khách: chấm được, không lưu
+  /* Khách không dùng được chấm điểm: mọi trang học đều sau đăng nhập, và API này trả đáp án đúng ngay sau khi chấm. */
+  if (!u) return json({ error: 'login_required' }, 401);
+  /* Chặn vét đáp án hàng loạt: trần số lượt chấm mỗi 24 giờ (học thật hiếm khi quá vài trăm). */
+  const used = await env.DB.prepare('SELECT COUNT(*) AS n FROM answer_events WHERE user_id = ?1 AND answered_at > ?2').bind(u.id, now() - DAY).first();
+  if ((used ? used.n : 0) >= ANSWER_DAILY_CAP) return json({ error: 'rate_limited' }, 429);
   const t = now();
   const prior = await env.DB.prepare('SELECT 1 FROM answer_events WHERE user_id = ?1 AND question_id = ?2 AND context = ?3 LIMIT 1').bind(u.id, it.id, ctxName).first();
   const m = await env.DB.prepare('SELECT * FROM skill_mastery WHERE user_id = ?1 AND skill_id = ?2').bind(u.id, it.skill).first();

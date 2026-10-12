@@ -24,7 +24,8 @@ const MUTATING = new Set(['POST', 'PUT', 'PATCH', 'DELETE']);
 const CSRF_EXEMPT = new Set(['/api/subscribe']);
 
 async function route(request, env, url) {
-  const p = url.pathname, m = request.method;
+  /* Khoá bài có dấu ':' — trình duyệt gửi encodeURIComponent → %3A. Chuẩn hoá để khớp tuyến. */
+  const p = url.pathname.replace(/%3A/gi, ':'), m = request.method;
   let mm;
   if (MUTATING.has(m) && !CSRF_EXEMPT.has(p) && request.headers.get('x-thmc') !== '1') return json({ error: 'csrf' }, 403);
 

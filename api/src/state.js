@@ -4,6 +4,7 @@ import { mergeGw } from './gw.js';
 import { json, now, currentUser, body, publicName } from './lib.js';
 import { syncLedger, weekXp } from './progress.js';
 import { ingestLessons } from './learn.js';
+import XP_REFS from './generated/xp-refs.json';
 
 const XP = { lesson: 20, drill: 15, talk: 10, review: 5, focus: 15, quiz: 2, case: 40, game: 30, daily: 10 };
 const WEEK_XP_CAP = 3000;   // chặn số ảo: một tuần học rất chăm cũng hiếm khi vượt mức này
@@ -81,7 +82,9 @@ function weekStats(s) {
   const vnDay = (x) => (Number.isFinite(x.t) ? new Date(x.t + VN_OFFSET).toISOString().slice(0, 10) : x.d);
   const xp = (s.log || []).filter((x) => vnDay(x) >= w)
     .reduce((n, x) => n + Math.min(Number.isFinite(x.x) ? x.x : (XP[x.k] || 0), 100), 0);
-  const cases = Object.values(s.cases || {}).flat().filter((a) => a.passed && a.date >= w).length;
+  /* Case đạt trong tuần: mỗi case có thật tính một lần (không tin khoá lạ hay số lượt tự khai). */
+  const known = new Set(XP_REFS.cases);
+  const cases = Object.entries(s.cases || {}).filter(([id, list]) => known.has(id) && (list || []).some((a) => a && a.passed && a.date >= w)).length;
   return { week: w, xp: Math.min(xp, WEEK_XP_CAP), streak: Math.min(s.streak || 0, 3650), cases: Math.min(cases, 200) };
 }
 
@@ -99,14 +102,20 @@ export async function putState(req, env) {
   if (!b.state || typeof b.state !== 'object') return json({ error: 'bad_state' }, 400);
   const r = await env.DB.prepare('SELECT state_json FROM user_state WHERE user_id = ?1').bind(u.id).first();
   const merged = mergeState(r ? JSON.parse(r.state_json) : {}, b.state);
-  const text = JSON.stringify(merged);
-  if (text.length > 400000) return json({ error: 'too_large' }, 413);
-  const w = weekStats(merged), t = now();
-  /* Sổ cái phía server: XP tuần lấy từ xp_events đã kẹp luật, không lấy từ số trình duyệt tự cộng. */
+  if (JSON.stringify(merged).length > 400000) return json({ error: 'too_large' }, 413);
+  const t = now();
+  /* Sổ cái phía server: XP lấy từ xp_events đã kẹp luật và đã đối chiếu bằng chứng, không lấy từ số trình duyệt tự cộng. */
   const led = await syncLedger(env, u.id, merged);
   await ingestLessons(env, u.id, merged.lessons);
+  /* Dòng bị từ chối không được nằm trong bản lưu, nếu không trình duyệt sẽ thấy số XP khác với bảng xếp hạng. */
+  if (merged.xpl && led.rejected.length) {
+    for (const k of led.rejected) delete merged.xpl[k];
+    merged.xp = Math.max(0, Object.values(merged.xpl).reduce((n, e) => n + (e.x || 0), 0));
+  }
+  const w = weekStats(merged);
   w.xp = Math.min(weekXp(led.events, w.week), WEEK_XP_CAP);
   w.streak = led.streak;
+  const text = JSON.stringify(merged);
   await env.DB.batch([
     env.DB.prepare(`INSERT INTO user_state (user_id, state_json, updated_at) VALUES (?1, ?2, ?3)
       ON CONFLICT(user_id) DO UPDATE SET state_json = excluded.state_json, updated_at = excluded.updated_at`).bind(u.id, text, t),
@@ -114,7 +123,7 @@ export async function putState(req, env) {
       ON CONFLICT(user_id, week) DO UPDATE SET xp = excluded.xp, streak = excluded.streak, cases = excluded.cases, updated_at = excluded.updated_at`)
       .bind(u.id, w.week, w.xp, w.streak, w.cases, t),
   ]);
-  const { events: _e, ...stats } = led;
+  const { events: _e, rejected: _r, ...stats } = led;
   return json({ state: merged, updated_at: t, week: w, stats });
 }
 

@@ -75,7 +75,7 @@ let items = [], idx = 0, given = {}, startedAt = 0, tick = null;
 /* Bài làm dở: lưu cục bộ để mất mạng / tải lại trang / máy chủ lỗi không làm mất câu đã trả lời.
    Đề đã bỏ đáp án nên lưu được; xoá khi đã chấm xong. Không bao giờ tự cho qua. */
 const DRAFT_KEY = 'thmc.examdraft';
-function saveDraft(){ try{ localStorage.setItem(DRAFT_KEY, JSON.stringify({ sid:SID, items, given, idx, startedAt })); }catch(e){} }
+function saveDraft(){ try{ localStorage.setItem(DRAFT_KEY, JSON.stringify({ sid:SID, items, attempt:items.attempt||null, source:items.source||null, given, idx, startedAt })); }catch(e){} }
 function clearDraft(){ try{ localStorage.removeItem(DRAFT_KEY); }catch(e){} }
 function loadDraft(){
   try{ const d = JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null');
@@ -85,7 +85,7 @@ function loadDraft(){
 }
 function resumeDraft(){
   const d = loadDraft(); if(!d) return intro();
-  items = d.items; given = d.given || {}; idx = Math.min(d.idx || 0, items.length - 1); startedAt = d.startedAt;
+  items = d.items; if(d.attempt) items.attempt = d.attempt; if(d.source) items.source = d.source; given = d.given || {}; idx = Math.min(d.idx || 0, items.length - 1); startedAt = d.startedAt;
   if(Date.now() - startedAt >= BP.minutes*60000) return finish();
   clearInterval(tick); tick = setInterval(()=>{
     const el = document.getElementById('clock'); if(!el) return;
@@ -247,7 +247,16 @@ function caseIntro(){
 /* ---------------- làm bài ---------------- */
 async function start(){
   app.innerHTML = '<section class="section"><p class="lede">Đang chuẩn bị đề…</p></section>';
-  items = await drawExam(SID); idx = 0; given = {}; startedAt = Date.now();
+  try { items = await drawExam(SID); }
+  catch (e) {   // server đang giữ thời gian nghỉ sau lần trượt gần nhất
+    const min = Math.max(1, Math.ceil((((e && e.data && e.data.cooldown_ms) || 0)) / 60000));
+    app.innerHTML = `<section class="section"><span class="mono mono--red">Chưa thi lại được</span>
+      <h1 class="h2" style="margin:12px 0">Cần nghỉ thêm khoảng ${min} phút.</h1>
+      <p class="lede">Sau mỗi lần chưa qua, chặng khoá một khoảng ngắn để bạn ôn lại. Quay lại sau nhé.</p>
+      <div class="row" style="gap:10px;margin-top:18px"><a class="btn btn--ghost" href="ban-do.html">Về bản đồ</a></div></section>`;
+    return;
+  }
+  idx = 0; given = {}; startedAt = Date.now();
   /* Máy chủ không dựng được đề và bản trên máy đã bỏ đáp án → không chấm được. Nói ngay, đừng để người học
      làm 25 phút rồi mới biết; không bắt đầu đồng hồ, không ghi lượt thi. */
   if(!items.source && !items.every(hasKey)){

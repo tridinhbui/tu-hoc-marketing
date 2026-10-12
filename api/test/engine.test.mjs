@@ -17,7 +17,8 @@ test('khoá lạ và ngày sai bị loại', () => {
   assert.equal(validateEntry('bogus@2026-09-29', { x: 10, d: '2026-09-29' }, C), null);
 });
 test('XP cũ (legacy) có trần', () => {
-  assert.equal(validateEntry('legacy:base', { x: 50000, d: '2026-09-01' }, C).amount, 2000);
+  assert.equal(validateEntry('legacy:base', { x: 50000, d: '2026-09-01' }, C).amount, C.legacy_cap);
+  assert.equal(validateEntry('legacy:base', { x: 50000, d: '2026-09-01' }, { ...C, legacy_cap: 2000 }).amount, 300);
 });
 test('bảng cấp độ theo spec: 30 XP lên cấp 2, 300000 là cấp 30', () => {
   assert.equal(levelOf(29, C.levels), 1); assert.equal(levelOf(30, C.levels), 2);
