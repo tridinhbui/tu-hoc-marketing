@@ -1,7 +1,7 @@
 /* MARKETING LAB — giao diện dùng chung. Giấy ngà, chữ serif cho tiêu đề, đường kẻ mảnh thay cho thẻ nhiều viền.
    Không biểu tượng trang trí; màu nhấn chỉ để chỉ trạng thái (tốt / cần xem / xấu). */
 :root{--lb-bg:#FBF8F3;--lb-card:#FFFDF9;--lb-ink:#2B1A11;--lb-ink2:rgba(43,26,17,.70);--lb-ink3:rgba(43,26,17,.50);--lb-line:rgba(120,84,50,.18);--lb-soft:rgba(120,84,50,.07);
-  --lb-acc:#B8502D;--lb-ok:#3D7A45;--lb-warn:#A8700F;--lb-bad:#B03A2E;--lb-sans:'Be Vietnam Pro',system-ui,sans-serif;--lb-serif:'Fraunces',Georgia,serif;--lb-hand:'Hand VN',cursive}
+  --lb-acc:#B8502D;--lb-ok:#3D7A45;--lb-warn:#A8700F;--lb-bad:#B03A2E;--lb-sans:'Be Vietnam Pro',system-ui,sans-serif;--lb-serif:'Fraunces',serif;--lb-hand:'Hand VN',cursive}
 html[data-theme="dark"]{--lb-bg:#16100C;--lb-card:#221913;--lb-ink:#F4ECE0;--lb-ink2:rgba(244,236,224,.76);--lb-ink3:rgba(244,236,224,.52);--lb-line:rgba(244,236,224,.16);--lb-soft:rgba(244,236,224,.07);
   --lb-acc:#E27A52;--lb-ok:#7DBE86;--lb-warn:#E5B24B;--lb-bad:#E8786B}
 html:not([data-theme="ivory"]) body{background:var(--lb-bg)}

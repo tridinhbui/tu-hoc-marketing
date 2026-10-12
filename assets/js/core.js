@@ -136,7 +136,7 @@ function inkDrop(size=18,color='var(--accent)'){
 function seal(char='觀',size=34){
   return `<svg class="seal" width="${size}" height="${size}" viewBox="0 0 44 44" aria-hidden="true">
     <rect x="1.4" y="1.4" width="41.2" height="41.2" rx="2.5" fill="none" stroke="var(--seal)" stroke-width="2.6" opacity=".9"/>
-    <text x="22" y="31" text-anchor="middle" font-family="serif" font-size="24" fill="var(--seal)" opacity=".92">${char}</text>
+    <text x="22" y="31" text-anchor="middle" font-family="Fraunces,serif" font-size="24" fill="var(--seal)" opacity=".92">${char}</text>
   </svg>`;
 }
 /* Tranh thuỷ mặc: dải sương, sườn núi, dòng nước, con thuyền. */

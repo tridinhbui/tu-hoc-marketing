@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" type="image/png" href="assets/img/favicon-32.png">
-<link rel="stylesheet" href="assets/css/case.css?v=21">
+<link rel="stylesheet" href="assets/css/case.css?v=21f6">
 <title>Bắt đầu từ đâu — Tự Học Marketing Case</title>
 <meta name="description" content="Bản đồ hành trình: chọn hướng, chọn nhịp, hiểu cách mỗi bài học vận hành và biết bạn đang ở đâu trên lộ trình.">
 <style>
@@ -21,9 +21,9 @@ body{margin:0;padding:0!important;font-family:var(--sans,system-ui,sans-serif)}
 #app{display:block;max-width:none;padding:0;margin:0}
 .bd{max-width:1180px;margin:0 auto;padding:clamp(20px,3vw,40px) clamp(14px,3vw,36px) 90px}
 .ic{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
-.bd h1{font-family:var(--serif,Georgia,serif);font-weight:600;font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:1.15;margin:12px 0 10px;letter-spacing:-.01em}
+.bd h1{font-family:var(--serif,'Fraunces',serif);font-weight:600;font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:1.15;margin:12px 0 10px;letter-spacing:-.01em}
 .bd h1 em{color:var(--bd-acc);font-style:italic}
-.bd h2{font-family:var(--serif,Georgia,serif);font-weight:600;font-size:clamp(1.35rem,2.2vw,1.75rem);margin:0 0 6px}
+.bd h2{font-family:var(--serif,'Fraunces',serif);font-weight:600;font-size:clamp(1.35rem,2.2vw,1.75rem);margin:0 0 6px}
 .bd p{line-height:1.6}
 .bd .eyebrow{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--bd-acc)}
 .bd .lede{font-size:1.05rem;color:var(--bd-ink2);max-width:60ch;margin:0 0 16px}
@@ -131,7 +131,7 @@ details.faq p{margin:0 0 16px;color:var(--bd-ink2);font-size:14.5px}
 .flag{left:2.5%;top:auto;bottom:6%;transform:rotate(-4deg);background:#c9904f;color:#3b2412;font-size:15px;letter-spacing:.02em;border-radius:6px 12px 12px 6px;padding:5px 14px;font-family:'Hand VN',cursive;font-weight:700;box-shadow:0 6px 12px -6px rgba(0,0,0,.5);text-transform:none}
 .step{position:relative;grid-template-columns:64px minmax(0,1fr) auto;gap:18px;padding:16px 22px;border-radius:18px;background:#fffdf8;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s}
 a.step:hover{transform:translateY(-1px);border-color:var(--bd-acc)}
-.step .no{width:54px;height:54px;font-size:20px;font-family:var(--serif,Georgia,serif);background:rgba(120,84,50,.08);color:var(--bd-ink2)}
+.step .no{width:54px;height:54px;font-size:20px;font-family:var(--serif,'Fraunces',serif);background:rgba(120,84,50,.08);color:var(--bd-ink2)}
 .step[data-st="here"] .no{background:rgba(200,90,50,.15);color:var(--bd-acc)}
 .step[data-st="done"] .no{background:var(--bd-ok-soft);color:var(--bd-ok)}
 .step b{font-size:16.5px}
@@ -178,14 +178,14 @@ a.step:hover{transform:translateY(-1px);border-color:var(--bd-acc)}
 .bld[data-st="lock"],.bld[data-st="lock"]:hover{filter:none;opacity:1}
 .map .node{border:0;border-radius:14px;background:rgba(255,251,243,.94);box-shadow:0 12px 22px -16px rgba(60,30,10,.6),inset 0 0 0 1px rgba(120,84,50,.12)}
 html[data-theme="dark"] .map .node{background:rgba(34,25,19,.94)}
-.map .node b{font-family:var(--serif,'Fraunces',Georgia,serif);font-weight:500;font-size:14px}
+.map .node b{font-family:var(--serif,'Fraunces',serif);font-weight:500;font-size:14px}
 .map .node[data-st="here"]{box-shadow:0 0 0 2px #C4532D,0 14px 24px -14px rgba(60,30,10,.6)}
 .map .pin{background:#C4532D}
 .map .flag{background:none;color:var(--bd-ink2);box-shadow:none;border-radius:0;font-size:17px;left:3%;bottom:5%;transform:rotate(-3deg)}
 .map .flag::before{content:"";display:inline-block;width:22px;height:1px;background:currentColor;margin-right:8px;vertical-align:middle;opacity:.6}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=12">
-<link rel="stylesheet" href="assets/css/atelier.css?v=27">
+<link rel="stylesheet" href="assets/css/atelier.css?v=27f6">
 </head>
 <body>
 <noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
@@ -254,7 +254,7 @@ function mapHTML(m){
     return `<a class="bld" data-st="${st}" href="${href}" aria-label="Chặng ${x.st.n}: ${escH(x.st.t)}"><g transform="translate(${bx.toFixed(1)},${by.toFixed(1)})">${ring}
       <circle class="mp-disc" r="29" fill="${fill}" stroke="${stroke}" stroke-width="2.4"${st==='lock'?' stroke-dasharray="5 4"':''}/>
       <circle r="23" fill="none" stroke="${st==='done'||st==='here'?'rgba(255,255,255,.55)':stroke}" stroke-width="1" stroke-opacity=".6"/>
-      <text y="8" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="23" font-weight="500" fill="${ink}">${escH(String(x.st.n))}</text>${badge}</g></a>`; }).join('');
+      <text y="8" text-anchor="middle" font-family="Fraunces,serif" font-style="italic" font-size="23" font-weight="500" fill="${ink}">${escH(String(x.st.n))}</text>${badge}</g></a>`; }).join('');
   const nodes=m.stages.map((x,i)=>{ const [px,py]=NODE_POS[i]||[50,50], pct=x.ks.length?Math.round(x.d/x.ks.length*100):0;
     const tag=x.state==='done'?'Đã xong':x.state==='lock'?'Chưa mở':x.state==='here'?'Đang học':'Đã mở';
     const top=((py*H/100)-54)/H*100;     // biển tên nằm ngay trên con dấu của chặng

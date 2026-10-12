@@ -194,8 +194,8 @@ function examSeal(sid, date) {
   const n = (EXAMS[sid] && EXAMS[sid].title) || sid;
   return `<svg viewBox="0 0 120 120" width="108" height="108" role="img" aria-label="Triện chặng ${n} ngày ${date}">
     <rect x="4" y="4" width="112" height="112" rx="6" fill="none" stroke="currentColor" stroke-width="5" opacity=".92"/>
-    <text x="60" y="52" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="currentColor">過</text>
-    <text x="60" y="84" text-anchor="middle" font-family="Georgia,serif" font-size="19" fill="currentColor" opacity=".9">${sid.toUpperCase()}</text>
+    <text x="60" y="52" text-anchor="middle" font-family="Fraunces,serif" font-size="34" fill="currentColor">過</text>
+    <text x="60" y="84" text-anchor="middle" font-family="Fraunces,serif" font-size="19" fill="currentColor" opacity=".9">${sid.toUpperCase()}</text>
     <text x="60" y="104" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9" fill="currentColor" opacity=".75">${date}</text>
   </svg>`;
 }

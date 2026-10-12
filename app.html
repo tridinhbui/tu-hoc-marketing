@@ -5,7 +5,7 @@
 <title>Tự Học Marketing Case</title>
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/png" href="assets/img/favicon-32.png">
-<link rel="stylesheet" href="assets/css/case.css?v=21">
+<link rel="stylesheet" href="assets/css/case.css?v=21f6">
 <script>
 /* Chọn giao diện trước khi vẽ để không chớp. Mặc định là SÁNG; người dùng cũ đang ở tối được chuyển một lần. */
 (function(){
@@ -142,8 +142,8 @@
   @media(max-width:1100px) and (min-width:861px){:root{--side-w:240px}.nav a,.nav button.nv{font-size:13.5px;padding:0 10px;gap:10px}}
   @media(max-height:760px){.grp{margin-top:8px}.nav a,.nav button.nv{min-height:38px}.rail__logo{padding-bottom:8px}}
 </style>
-<link rel="stylesheet" href="assets/css/studio.css?v=15">
-<link rel="stylesheet" href="assets/css/atelier-shell.css?v=6">
+<link rel="stylesheet" href="assets/css/studio.css?v=15f1">
+<link rel="stylesheet" href="assets/css/atelier-shell.css?v=8">
 </head>
 <body>
 <noscript><p style="padding:24px">Trang này cần JavaScript. <a href="hoc.html" style="color:#C85A32">Mở bài học</a>.</p></noscript>
@@ -181,13 +181,13 @@
     <div class="stage__load" id="load" aria-hidden="true"></div>
     <iframe id="frame" title="Nội dung" src="about:blank"></iframe>
   </main>
+  <!-- Nằm trong .shell: .shell (position:fixed) là một ngữ cảnh xếp chồng, nên thanh trên, nút mở, lớp phủ và ngăn kéo phải cùng ngữ cảnh để z-index so sánh đúng. -->
+  <div class="mbar" aria-hidden="true"><img src="assets/img/logo-mark-96.png" alt="" width="26" height="26"><span><b>Tự Học</b> Marketing</span></div>
+  <button class="rail__open" id="open" type="button" aria-label="Mở menu" aria-controls="rail" aria-expanded="false">
+    <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <div class="rail__scrim" id="scrim"></div>
 </div>
-<div class="mbar" aria-hidden="true"><img src="assets/img/logo-mark-96.png" alt="" width="26" height="26"><span><b>Tự Học</b> Marketing</span></div>
-<button class="rail__open" id="open" type="button" aria-label="Mở menu" aria-controls="rail" aria-expanded="false">
-  <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-</button>
-<div class="rail__scrim" id="scrim"></div>
-
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
 <script src="assets/js/data/curriculum.js?v=4"></script>

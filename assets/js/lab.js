@@ -36,7 +36,7 @@ const Lab = (() => {
 .lab__top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 10px}
 .lab__tag{font:700 10.5px/1 var(--sans,system-ui);letter-spacing:.12em;text-transform:uppercase;color:var(--accent,#B8502D)}
 .lab__n{font:600 12px var(--sans,system-ui);opacity:.6}
-.lab__q{font-family:var(--serif,Georgia,serif);font-weight:400;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.25;margin:6px 0 4px}
+.lab__q{font-family:var(--serif,'Fraunces',serif);font-weight:400;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.25;margin:6px 0 4px}
 .lab__ctx{font-size:14.5px;line-height:1.6;opacity:.8;margin:6px 0 4px}
 .lab__opts{display:grid;gap:8px;margin-top:12px}
 .lab__opts--chips{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
@@ -55,7 +55,7 @@ const Lab = (() => {
 .lab__bar i{flex:1;height:5px;border-radius:9px;background:rgba(120,84,50,.14)}
 .lab__bar i.ok{background:#3d8a4f}.lab__bar i.bad{background:#c0392b}.lab__bar i.now{background:var(--accent,#B8502D)}
 .lab__done{text-align:center;padding:6px 0}
-.lab__done b{font-family:var(--serif,Georgia,serif);font-weight:400;font-size:2.6rem;display:block;line-height:1.1}
+.lab__done b{font-family:var(--serif,'Fraunces',serif);font-weight:400;font-size:2.6rem;display:block;line-height:1.1}
 .lab__done p{margin:8px auto 0;max-width:46ch;line-height:1.6;opacity:.8}
 .lab__field{width:100%;min-height:84px;border:1.5px solid rgba(120,84,50,.22);border-radius:14px;background:#fff;padding:12px 14px;font:500 14.5px/1.55 var(--sans,system-ui);color:inherit;resize:vertical}
 `;
