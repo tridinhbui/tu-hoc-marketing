@@ -62,8 +62,8 @@ html[data-theme="ivory"] .d-mission__img,html[data-theme="ivory"] .cm-head img,h
 html[data-theme="ivory"] .d-mission{background:linear-gradient(100deg,var(--pp-card) 55%,rgba(255,244,226,.9));overflow:hidden}
 html[data-theme="ivory"] .d-mission h1{font-family:'Fraunces',Georgia,serif;font-weight:500;letter-spacing:-.02em}
 html[data-theme="ivory"] .btn-go,html[data-theme="ivory"] .lvmap__go{border-radius:999px}
-html[data-theme="ivory"] .cm-head{position:relative}
-html[data-theme="ivory"] .cm-head .pp-sign{position:absolute;right:8px;bottom:-12px;font:600 22px/1 var(--pp-hand);color:#6b4a35;transform:rotate(-5deg)}
+html[data-theme="ivory"] .cm-head{position:relative;padding-bottom:30px}
+html[data-theme="ivory"] .cm-head .pp-sign{position:absolute;right:8px;bottom:4px;font:600 22px/1 var(--pp-hand);color:#6b4a35;transform:rotate(-5deg)}
 html[data-theme="ivory"] .d-chip--g{background:#e3f1e3;color:#2f6b3a}
 
 /* thành phần dùng chung được làm mịn: câu hỏi (quizkit), bảng, thanh trượt, hàng danh sách */

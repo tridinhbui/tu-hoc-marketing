@@ -1,8 +1,7 @@
 /* MOBILE MAGIC — thành phần và chuyển động riêng cho điện thoại.
-   Chỉ chạy khi viewport < 1000px. Không đổi nội dung; nếu JS lỗi, trang vẫn đọc được như cũ. */
+   Bụi vàng, quầng sáng và dải chữ chạy chạy ở mọi kích thước; phần vuốt ngang / CTA dính đáy / gợn nước chỉ < 1000px. Không đổi nội dung; nếu JS lỗi, trang vẫn đọc được như cũ. */
 (function () {
   'use strict';
-  if (window.innerWidth >= 1000) return;
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -103,6 +102,8 @@
     tw.appendChild(tk);
     cases.parentNode.insertBefore(tw, cases);
   }
+
+  if (window.innerWidth >= 1000) return;
 
   /* ---------- 4. case: vuốt ngang, thẻ giữa phóng to, chấm chỉ vị trí ---------- */
   var stage = $('.cases-stage'), cards = $$('.cs');
