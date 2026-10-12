@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8"><script>if(window.top!==window.self){window.top.location.replace(window.location.href);}</script>
+<meta charset="utf-8"><script>if(window.top!==window.self){window.top.location.replace(window.location.href);}document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tự Học Marketing Case — Học cách nhìn thế giới như một strategist</title>
 <meta name="description" content="Đừng chỉ học marketing. Học cách nhìn thế giới như một strategist. Học marketing qua case thật, quyết định thật và tư duy chiến lược.">
@@ -9,377 +9,369 @@
 <meta property="og:description" content="Những case thật. Bài học thật. Một tư duy mới để bạn nhìn marketing dưới góc độ chiến lược và sáng tạo.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/og/default.png">
-<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23A8461F'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23F2E9D8'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/hand.css">
-<link rel="stylesheet" href="assets/css/landing.css?v=11">
-<link rel="stylesheet" href="assets/css/landing-sections.css?v=2">
-<link rel="stylesheet" href="assets/css/landing-motion.css?v=3">
+<link rel="stylesheet" href="assets/css/editorial.css?v=1">
 </head>
-<body class="lp">
+<body class="ed">
+<div class="prog" id="prog" aria-hidden="true"></div>
 
-<!-- ============ 1 · HERO ============ -->
-<section class="lp-hero">
-  <header class="lp-nav">
-    <a class="lp-logo" href="index.html"><img class="lp-logo__mark" src="assets/img/logo-mark-96.png" alt="" width="34" height="34"><span><i>Tự Học</i> Marketing Case</span><span class="lp-badge">STUDIO</span></a>
-    <nav class="lp-links" aria-label="Điều hướng">
-      <a href="#cases">Case</a>
-      <a href="#method">Phương pháp</a>
-      <a href="#community">Cộng đồng</a>
-      <a href="gioi-thieu.html">Về chúng tôi</a>
-    </nav>
-    <a class="lp-btn lp-btn--sm" href="dang-nhap.html">Bắt đầu học</a>
-  </header>
+<header class="nav">
+  <a class="logo" href="index.html"><span><i>Tự Học</i> Marketing Case</span><small>SỐ 01</small></a>
+  <nav class="nav-links" aria-label="Điều hướng">
+    <a href="#cases">Case</a>
+    <a href="#method">Phương pháp</a>
+    <a href="#lab">Marketing Lab</a>
+    <a href="#community">Cộng đồng</a>
+    <a href="gioi-thieu.html">Về chúng tôi</a>
+  </nav>
+  <a class="nav-cta" href="dang-nhap.html">Bắt đầu học</a>
+</header>
 
-  <div class="lp-wrap lp-hero__in">
-    <div class="lp-hero__text">
-      <h1 class="lp-h1">Đừng chỉ học<br>marketing.<br>Học cách<br><em>nhìn thế giới</em><br>như một strategist.</h1>
-      <p class="lp-lead">Những case thật. Bài học thật.<br>Một tư duy mới để bạn nhìn marketing<br>dưới góc độ chiến lược và sáng tạo.</p>
-      <div class="lp-cta">
-        <a class="lp-btn" href="dang-nhap.html">Bắt đầu miễn phí →</a>
-        <a class="lp-btn lp-btn--ghost" href="#cases"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 3 20 12 6 21"/></svg> Xem trailer</a>
-      </div>
-      <div class="lp-proof">
-        <span class="lp-avatars" aria-hidden="true">
-          <img src="assets/img/hero_editorial_face.jpg" alt="">
-          <img src="assets/img/model_thinking.jpg" alt="">
-          <img src="assets/img/influencer_lifestyle.jpg" alt="">
-          <img src="assets/img/poster_nike_athlete.jpg" alt="">
-        </span>
-        <span>Mỗi ngày một bài,<br>học từ case thật</span>
-      </div>
+<main>
+<!-- ============ 1 · HERO — bìa tạp chí ============ -->
+<section class="hero" aria-labelledby="h1">
+  <p class="kick">Số 01 · Học marketing qua case thật</p>
+
+  <figure class="h-photo">
+    <div class="ph cu"><img src="assets/img/hero_painting.jpg" alt="Chân dung vẽ sơn dầu: một người phụ nữ tóc nâu nhìn thẳng, sau lưng là bình hoa và khung tranh trong ánh vàng ấm"></div>
+    <figcaption><b>Fig. 01</b> Họ đang nhìn gì? Câu hỏi đầu tiên của một strategist.</figcaption>
+  </figure>
+
+  <h1 class="h-title disp" id="h1">
+    <span class="l1 ln"><span>Đừng chỉ học marketing.</span></span>
+    <span class="l2 ln" style="--i:1"><span>Học cách</span></span>
+    <span class="l3 ln" style="--i:2"><span>nhìn thế giới</span></span>
+    <span class="l4 ln" style="--i:3"><span>như một <b>strategist.</b></span></span>
+  </h1>
+
+  <p class="h-lead rv" style="--d:.5s">Những case thật. Bài học thật. Một tư duy mới để bạn nhìn marketing dưới góc độ chiến lược và sáng tạo.</p>
+  <div class="h-cta rv" style="--d:.65s">
+    <a class="btn" href="dang-nhap.html">Bắt đầu miễn phí →</a>
+    <a class="link" href="#cases">Xem các case</a>
+  </div>
+
+  <div class="h-scrap hand rv" style="--d:.9s" aria-hidden="true">Same products.<br>Different stories.<br>Different results.</div>
+  <div class="h-stamp" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#circ">CASE THẬT • BÀI HỌC THẬT • TƯ DUY MỚI • </textPath></text></svg></div>
+  <div class="h-words" aria-hidden="true">People · Ideas · Behavior · Brands · Culture</div>
+  <span class="h-scroll" aria-hidden="true"></span>
+</section>
+
+<!-- ============ 2 · MANIFESTO — khoảnh khắc yên ============ -->
+<section class="sec torn on-iv mani" aria-labelledby="maniT">
+  <div class="mani-in">
+    <h2 class="kick rv" id="maniT">Lời mở</h2>
+    <p class="mani-text" id="maniText">Cùng một sản phẩm có thể có hàng nghìn câu chuyện. Người ta không mua thứ bạn bán — họ mua cách bạn khiến họ cảm thấy về chính mình. Học marketing, vì thế, <span class="em">bắt đầu từ việc nhìn</span>: nhìn kỹ một người, một thói quen, một khoảnh khắc đáng ra bị bỏ qua.</p>
+    <div class="mani-side">
+      <div class="mani-pic cu"><img src="assets/img/billboard_city.jpg" alt="Một bàn tay mở ra, tay cầm chơi game lơ lửng phía trên — sản phẩm như một lời hứa" loading="lazy"></div>
+      <p class="mani-cap">Sản phẩm chỉ là chiếc tay cầm. Điều người ta thực sự muốn nằm ở bàn tay đang mở ra.</p>
+      <div class="mani-note hand" aria-hidden="true">nhìn kỹ hơn<svg viewBox="0 0 60 36"><path d="M4 4 C 6 24, 26 32, 54 28 M54 28 l-10 -7 M54 28 l-9 9"/></svg></div>
     </div>
-
-    <div class="lp-stage" aria-hidden="true">
-      <div class="lp-cream"></div>
-      <div class="lp-portrait"><img src="assets/img/hero_editorial_face.jpg" alt=""></div>
-      <div class="lp-scrap-or"></div>
-      <div class="lp-note-top">Same products.<br>Different stories.<br>Different results.
-        <svg viewBox="0 0 80 50"><path d="M8 4 C 4 26, 26 40, 60 42 M60 42 l-10 -8 M60 42 l-11 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <div class="lp-kw"><span>PEOPLE</span><span>IDEAS</span><span>BEHAVIOR</span><span>BRANDS</span><span>SOCIETY</span><span>CULTURE</span></div>
-      <div class="lp-city"><div class="lp-tape"></div>
-        <svg viewBox="0 0 100 150" preserveAspectRatio="xMidYMid slice">
-          <rect width="100" height="150" fill="#cfc9bd"/>
-          <g fill="#2a2724"><rect x="6" y="46" width="14" height="104"/><rect x="22" y="28" width="16" height="122"/><rect x="40" y="6" width="10" height="144"/><rect x="52" y="34" width="18" height="116"/><rect x="72" y="58" width="12" height="92"/><rect x="86" y="42" width="12" height="108"/></g>
-          <g fill="#cfc9bd" opacity=".5"><rect x="9" y="56" width="3" height="3"/><rect x="14" y="70" width="3" height="3"/><rect x="26" y="40" width="3" height="3"/><rect x="31" y="60" width="3" height="3"/><rect x="26" y="84" width="3" height="3"/><rect x="56" y="48" width="3" height="3"/><rect x="62" y="70" width="3" height="3"/><rect x="56" y="96" width="3" height="3"/><rect x="75" y="72" width="3" height="3"/><rect x="89" y="58" width="3" height="3"/></g>
-          <rect x="44" y="0" width="2" height="8" fill="#2a2724"/>
-        </svg>
-      </div>
-      <div class="lp-sticky">“<b>Marketing</b> is how you tell a story that means something.”</div>
-      <div class="lp-strips"><div><img src="assets/img/studio_workspace.jpg" alt=""></div><div><img src="assets/img/cafe_community.jpg" alt=""></div></div>
-      <div class="lp-note-story">A good story sells more.</div>
-      <div class="lp-globe">
-        <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="56"/><circle cx="60" cy="60" r="44" stroke-dasharray="3 5"/><ellipse cx="60" cy="60" rx="22" ry="56"/><ellipse cx="60" cy="60" rx="44" ry="56" opacity=".6"/><path d="M4 60h112M12 36h96M12 84h96"/><path d="M60 14l5 46-5 46-5-46z" fill="rgba(246,240,228,.2)"/></svg>
-      </div>
-    </div>
+    <p class="mani-small rv">Đây không phải khoá học để học thuộc. Đó là một cuốn tạp chí để đọc, thử, và dần dần nhìn thế giới khác đi.</p>
   </div>
 </section>
 
-<!-- ============ A · MARKETING LAB ============ -->
-<section class="ts lab" id="lab">
-  <div class="lp-wrap">
-    <div class="lab__top">
-      <div>
-        <span class="ts-pill">Marketing Lab</span>
-        <h2 class="ts-h">Marketing Lab /<br><em>Hành trình sáng tạo.</em></h2>
-        <p class="ts-p">Một không gian thực hành marketing, nơi bạn có thể thử nghiệm, phân tích và tạo ra chiến lược của riêng mình thông qua những case thực tế.</p>
-        <ul class="lab__feat lab__feats">
-          <li><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="11"/><circle cx="24" cy="24" r="4"/><path d="M24 24l14-14"/></svg><b>Chọn đối tượng mục tiêu</b><span>Hiểu ai, để nói đúng điều họ cần.</span></li>
-          <li><svg viewBox="0 0 48 48"><path d="M24 6a12 12 0 00-7 21.7V33h14v-5.3A12 12 0 0024 6zM18 38h12M20 42h8"/></svg><b>Định vị thương hiệu</b><span>Tìm vị trí khác biệt trong tâm trí khách hàng.</span></li>
-          <li><svg viewBox="0 0 48 48"><path d="M24 40L6 18l6-10h24l6 10z"/><path d="M6 18h36M18 8l6 32M30 8l-6 32"/></svg><b>Giá trị cốt lõi</b><span>Tạo lý do để họ chọn bạn.</span></li>
-          <li><svg viewBox="0 0 48 48"><path d="M8 10h32v22H22l-8 8v-8H8z"/><path d="M16 19h16M16 25h10"/></svg><b>Thông điệp truyền thông</b><span>Biến chiến lược thành câu chuyện chạm cảm xúc.</span></li>
-        </ul>
-      </div>
-      <div class="lab__polaroid">
-        <div class="ts-photo"><img src="assets/img/hero_editorial_face.jpg" alt="" loading="lazy"></div>
-        <div class="ts-tape ts-tape--o" style="left:6%;top:-10px;rotate:-12deg"></div>
-        <div class="ts-note ts-note--o" style="left:-4%;bottom:6%;rotate:-5deg;max-width:46%">Test.<br>Fail.<br>Learn.<br>Build a better version.</div>
-      </div>
+<!-- ============ 3 · CASE ============ -->
+<section class="sec on-iv cases" id="cases" aria-labelledby="casesT">
+  <div class="cases-head">
+    <p class="kick">Hồ sơ case</p>
+    <div class="tabs" role="group" aria-label="Lọc case">
+      <button type="button" class="on" data-f="all" aria-pressed="true">Tất cả</button>
+      <button type="button" data-f="brand" aria-pressed="false">Thương hiệu</button>
+      <button type="button" data-f="growth" aria-pressed="false">Tăng trưởng</button>
+      <button type="button" data-f="content" aria-pressed="false">Nội dung</button>
+      <button type="button" data-f="other" aria-pressed="false">Khác</button>
     </div>
+  </div>
+  <div class="cases-stage">
+    <h2 class="cases-title disp" id="casesT">
+      <span class="ln"><span>Học từ</span></span>
+      <span class="ln" style="--i:1"><span>những thương hiệu</span></span>
+      <span class="ln" style="--i:2"><span>thật, trong thế giới <em>thật.</em></span></span>
+    </h2>
+    <p class="cases-p rv">Từ các chiến dịch viral, product launch, định vị thương hiệu đến chiến lược tăng trưởng — tất cả được phân tích dưới góc nhìn chiến lược, dễ hiểu và ứng dụng được.</p>
+    <a class="link rv" href="dang-nhap.html?next=%2Fcase-thu-vien.html">Khám phá các case →</a>
 
-    <div class="lab__top" style="margin-top:clamp(28px,4vw,48px)">
-      <div class="ts-paper lab__sand"><div class="ts-in">
-        <span class="ts-pill">Creative Sandbox</span>
-        <h3>Test your own strategy</h3>
-        <div class="acc" id="labAcc">
-          <div class="acc__i open"><button class="acc__b" type="button" aria-expanded="true"><svg class="ic" viewBox="0 0 48 48"><circle cx="24" cy="18" r="8"/><path d="M8 42c2-10 8-14 16-14s14 4 16 14"/></svg><span><strong>Đối tượng mục tiêu</strong><small>Gen Z, yêu thích cà phê, sống tại thành thị</small></span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-            <div class="acc__d"><div><p>Đừng dừng ở nhân khẩu học. Hỏi: họ đang cố hoàn thành việc gì khi bước vào quán — làm việc, gặp bạn, hay tự thưởng cho mình?</p></div></div></div>
-          <div class="acc__i"><button class="acc__b" type="button" aria-expanded="false"><svg class="ic" viewBox="0 0 48 48"><path d="M24 40S6 29 6 17a9 9 0 0118-3 9 9 0 0118 3c0 12-18 23-18 23z"/></svg><span><strong>Định vị thương hiệu</strong><small>Cà phê cho những tâm hồn sáng tạo</small></span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-            <div class="acc__d"><div><p>Một định vị chỉ có giá trị khi nó loại trừ ai đó. Nếu quán nào cũng nói được câu này thì nó chưa nói gì cả.</p></div></div></div>
-          <div class="acc__i"><button class="acc__b" type="button" aria-expanded="false"><svg class="ic" viewBox="0 0 48 48"><path d="M24 40L6 18l6-10h24l6 10z"/><path d="M6 18h36"/></svg><span><strong>Giá trị cốt lõi</strong><small>Truyền cảm hứng, kết nối cộng đồng</small></span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-            <div class="acc__d"><div><p>Giá trị cốt lõi phải thấy được trong hành vi: bạn làm gì khi không ai nhìn? Đó mới là điều khách nhớ.</p></div></div></div>
-          <div class="acc__i"><button class="acc__b" type="button" aria-expanded="false"><svg class="ic" viewBox="0 0 48 48"><path d="M8 10h32v22H22l-8 8v-8H8z"/></svg><span><strong>Thông điệp truyền thông</strong><small>Cà phê không chỉ để tỉnh táo, mà để tạo ra những ý tưởng tốt hơn</small></span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-            <div class="acc__d"><div><p>Thông điệp tốt nói một việc, cho một người, bằng một cách họ nhớ được. Hãy thử viết nó trong một câu.</p></div></div></div>
-        </div>
-        <a class="ts-btn lab__go" href="dang-nhap.html?next=%2Fhoc.html">Bắt đầu thử chiến lược →</a>
-      </div></div>
-
-      <div style="display:grid;gap:18px">
-        <div class="ts-paper ts-paper--b lab__prog" id="labProg"><div class="ts-in">
-          <span class="lab__eg">Ví dụ minh hoạ</span>
-          <span class="ts-pill" style="color:var(--lp-ink);border-color:var(--lp-ink)">Tiến bộ học tập</span>
-          <h3 style="font-family:var(--lp-serif);font-size:clamp(1.5rem,2.2vw,2rem);margin:10px 0 0">Hành trình của bạn</h3>
-          <div class="row"><div class="ring" id="labRing" style="--p:0"><b>LV 3</b></div>
-            <div style="flex:1"><b><span data-count="620">620</span> / 1.000 XP</b><div class="bar" style="margin-top:8px"><i></i></div></div></div>
-          <div class="stats4"><div><b data-count="12">12</b><span>Case đã hoàn thành</span></div><div><b data-count="5">5</b><span>Thử thách đã mở khoá</span></div><div><b data-count="3">3</b><span>Huy hiệu đạt được</span></div><div><b data-count="89" data-suf="%">89%</b><span>Tiến độ hành trình</span></div></div>
-        </div></div>
-        <div class="lab__next">
-          <div class="ts-photo"><img src="assets/img/coffee_lifestyle.jpg" alt="" loading="lazy"></div>
-          <div class="bd"><div><small>Thử thách tiếp theo</small><b>Rebrand một thương hiệu địa phương</b><span class="xp">+200 XP</span></div>
-            <a class="go" href="dang-nhap.html?next=%2Fquiz.html" aria-label="Làm thử thách"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        </div>
-      </div>
-    </div>
+    <a class="cs cs-nike rv" data-c="brand" href="dang-nhap.html?next=%2Fcase-thu-vien.html" aria-label="Case Nike: Just Do It">
+      <span class="no" aria-hidden="true">01</span>
+      <div class="fr"><img src="assets/img/poster_nike_athlete.jpg" alt="Vận động viên ướt mồ hôi nhìn lên, ánh mắt tập trung" loading="lazy"><div class="cap">Just Do It.</div></div>
+      <div class="meta"><span>Nike · 1988</span><span>Thương hiệu</span></div>
+    </a>
+    <a class="cs cs-duo rv" data-c="content" style="--d:.15s" href="dang-nhap.html?next=%2Fcase-thu-vien.html" aria-label="Case Duolingo">
+      <span class="no" aria-hidden="true">02</span>
+      <div class="fr"><img src="assets/img/poster_duolingo_owl.jpg" alt="Cú xanh Duolingo với đôi mắt cam sáng" loading="lazy"><div class="cap">Cú xanh đã chinh phục internet thế nào.</div></div>
+      <div class="meta"><span>Duolingo</span><span>Nội dung</span></div>
+    </a>
+    <a class="cs cs-apple rv" data-c="brand" style="--d:.25s" href="dang-nhap.html?next=%2Fcase-thu-vien.html" aria-label="Case Apple">
+      <span class="no" aria-hidden="true">03</span>
+      <div class="fr"><img src="assets/img/poster_apple_thinker.jpg" alt="Người đàn ông ngẩng nhìn lên, đen trắng, vẻ trầm tư" loading="lazy"><div class="cap">Giản dị cũng là một chiến lược.</div></div>
+      <div class="meta"><span>Apple</span><span>Thương hiệu</span></div>
+    </a>
+    <p class="cases-quote hand rv" aria-hidden="true">mỗi case là một người<br>đã dám chọn khác đi</p>
   </div>
 </section>
 
-<!-- ============ 2 · CASE STUDY (giấy ngà rách mép) ============ -->
-<section class="lp-paper" id="cases">
-  <div class="lp-paper-wrap"><div class="lp-paper__bg"></div></div>
-  <div class="lp-wrap">
-    <div class="lp-ctop">
-      <span class="lp-pill">CASE STUDY</span>
-      <div class="lp-tabs" role="tablist" aria-label="Lọc case">
-        <button type="button" class="on" data-f="all">Tất cả</button>
-        <button type="button" data-f="brand">Thương hiệu</button>
-        <button type="button" data-f="growth">Tăng trưởng</button>
-        <button type="button" data-f="content">Nội dung</button>
-        <button type="button" data-f="other">Khác</button>
-      </div>
-    </div>
-    <div class="lp-cgrid">
-      <div>
-        <h2 class="lp-h2">Học từ những<br>thương hiệu thật<br>trong thế giới <em>thật.</em></h2>
-        <p class="lp-p">Từ các chiến dịch viral, product launch, định vị thương hiệu đến chiến lược tăng trưởng — tất cả được phân tích dưới góc nhìn chiến lược, dễ hiểu và ứng dụng được.</p>
-        <a class="lp-more" href="dang-nhap.html?next=%2Fcase-thu-vien.html">Khám phá các case →</a>
-      </div>
-      <div class="lp-posters">
-        <a class="lp-poster lp-p-nike" data-c="brand" href="dang-nhap.html?next=%2Fcase-thu-vien.html" aria-label="Case Nike">
-          <div class="lp-tape"></div>
-          <div class="lp-poster__top"><svg width="46" height="17" viewBox="0 0 100 36" fill="#fff" aria-label="Nike"><path d="M12.5 31.8C4.5 28.5 0 23.3 0 17.6C0 9.8 8.6 3.4 21.8 1.8C25.7 1.3 30.1 1.2 34.5 1.4C26.1 4.5 18.5 9.1 13.5 14.5C8.3 20.1 6.8 25.4 9.4 28.6C10.3 29.7 11.5 30.6 12.5 31.8ZM97.5 0.5C64.2 12.2 38.6 24.3 24.5 33.5C21.8 35.3 19.5 36.3 17.8 36.3C15.8 36.3 14.6 35.1 14.4 32.8C14.2 30.3 15.6 26.6 18.4 22.3C27.4 8.7 57.5 1.6 97.5 0.5Z"/></svg></div>
-          <img src="assets/img/poster_nike_athlete.jpg" alt="" loading="lazy">
-          <div class="lp-poster__t"><b>Just Do It.</b></div>
-        </a>
-        <a class="lp-poster lp-p-duo" data-c="content" href="dang-nhap.html?next=%2Fcase-thu-vien.html" aria-label="Case Duolingo">
-          <div class="lp-tape"></div>
-          <div class="lp-poster__top"><b>duolingo</b></div>
-          <img src="assets/img/poster_duolingo_owl.jpg" alt="" loading="lazy">
-          <div class="lp-poster__t"><b>How a green owl conquered the internet.</b></div>
-        </a>
-        <a class="lp-poster lp-p-apple" data-c="brand" href="dang-nhap.html?next=%2Fcase-thu-vien.html" aria-label="Case Apple">
-          <div class="lp-tape"></div>
-          <div class="lp-poster__top"><svg viewBox="0 0 170 170" aria-hidden="true"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.67-7.81-11.96-14.34-6.3-9.57-11.12-20.73-14.47-33.49-3.35-12.76-5.03-24.5-5.03-35.22 0-14.84 3.82-27.18 11.47-37.03 7.64-9.84 17.2-14.88 28.67-15.11 4.79 0 10.15 1.25 16.08 3.75 5.92 2.5 9.87 3.84 11.83 4.02 2.45-.44 6.75-1.92 12.89-4.44 6.14-2.52 11.39-3.66 15.75-3.41 12.3.66 22.37 5.37 30.2 14.13-10.78 6.52-16.07 15.54-15.86 27.05.22 9.03 3.65 16.73 10.29 23.11 6.63 6.38 14.46 10.1 23.49 11.16-2.07 6.42-4.57 12.84-7.51 19.26zM119.22 33.15c0-7.29 2.65-14.17 7.96-20.65 5.3-6.48 11.83-10.74 19.58-12.79.22 1.2.33 2.29.33 3.27 0 7.29-2.73 14.28-8.18 20.97-5.45 6.69-12.02 11.01-19.69 12.96v-3.76z"/></svg>Apple</div>
-          <img src="assets/img/poster_apple_thinker.jpg" alt="" loading="lazy">
-          <div class="lp-poster__t"><b>Simplicity is a strategy.</b></div>
-        </a>
-      </div>
-    </div>
+<!-- ============ 4 · MỔ XẺ — đất nung ============ -->
+<section class="sec torn on-tc ana" id="anatomy" aria-labelledby="anaT">
+  <div class="ana-head">
+    <p class="kick">Giải phẫu một chiến dịch</p>
+    <h2 class="ana-title disp" id="anaT">
+      <span class="ln"><span>Mổ xẻ một</span></span>
+      <span class="ln" style="--i:1"><span><span class="out">chiến dịch</span></span></span>
+      <span class="ln" style="--i:2"><span><em>Just Do It.</em></span></span>
+    </h2>
+    <p class="ana-p rv">Không chỉ là một câu slogan, Just Do It đã biến Nike từ một thương hiệu giày thành biểu tượng văn hoá toàn cầu. Cùng mổ xẻ chiến dịch này qua góc nhìn chiến lược, từng bước một.</p>
   </div>
-</section>
 
-<!-- ============ B · MỔ XẺ MỘT CHIẾN DỊCH ============ -->
-<section class="ts ana" id="anatomy">
-  <div class="lp-wrap">
-    <div class="ana__head">
-      <div>
-        <span class="ts-pill">Case Study</span>
-        <h2 class="ts-h">Mổ xẻ một<br>chiến dịch<br><em>Just Do It.</em></h2>
-        <p class="ts-p">Không chỉ là một câu slogan, Just Do It đã biến Nike từ một thương hiệu giày thành biểu tượng văn hoá toàn cầu. Cùng mổ xẻ chiến dịch này qua góc nhìn chiến lược, từng bước một.</p>
-        <a class="ts-btn" href="dang-nhap.html?next=%2Fcase-thu-vien.html">Đi sâu vào case →</a>
+  <div class="ana-body">
+    <div class="ana-spec" aria-hidden="true">
+      <div class="fr">
+        <img src="assets/img/poster_nike_athlete.jpg" alt="" loading="lazy">
+        <span class="ana-pin" id="anaPin" style="--x:26%;--y:18%">01</span>
       </div>
-      <div class="ana__vis" aria-hidden="true">
-        <div class="big"><img src="assets/img/poster_nike_athlete.jpg" alt="" loading="lazy"><span>Just<br>Do It.</span></div>
-        <div class="ts-photo pic2"><img src="assets/img/studio_workspace.jpg" alt="" loading="lazy"></div>
-        <div class="ts-note ts-note--c" style="left:40%;bottom:4%;rotate:-6deg;max-width:34%">A brand for a more human potential.</div>
-        <div class="ts-scribble" style="right:0;top:0;rotate:4deg">Some products.<br>Different stories.<br>Different results.</div>
-      </div>
+      <div class="ana-tag" id="anaTag">Vấn đề kinh doanh</div>
     </div>
-    <ol class="ana__steps">
-      <li class="step"><div class="in"><span class="n">01</span><span class="k">Vấn đề kinh doanh</span><h3>Business Problem</h3><p>Đầu những năm 1980, Nike vẫn là “người đến sau”, bị xem là thương hiệu giày chạy bộ tầm trung so với Adidas và Reebok. Họ cần bứt phá để vượt khỏi cuộc chơi giá và tính năng sản phẩm.</p></div></li>
-      <li class="step"><div class="in"><span class="n">02</span><span class="k">Thấu hiểu người tiêu dùng</span><h3>Consumer Insight</h3><p>Mọi người không chỉ chạy để chiến thắng, mà để vượt qua chính mình. Thể thao là hành trình cá nhân với những nghi ngờ, áp lực và nỗ lực mỗi ngày.</p></div></li>
-      <li class="step"><div class="in"><span class="n">03</span><span class="k">Lựa chọn chiến lược</span><h3>Strategic Choice</h3><p>Thay vì chỉ nói về sản phẩm, Nike chọn định vị thương hiệu qua một niềm tin: thúc đẩy con người khai phá tiềm năng vô hạn, bất kể họ là ai.</p></div></li>
-      <li class="step"><div class="in"><span class="n">04</span><span class="k">Triển khai</span><h3>Execution</h3><p>Chiến dịch Just Do It ra mắt năm 1988 với những thước phim chân thực, mạnh mẽ, tôn vinh nỗ lực của những con người bình thường lẫn huyền thoại. Ngôn ngữ đơn giản, cảm xúc, dễ lan toả.</p></div></li>
-      <li class="step"><div class="in"><span class="n">05</span><span class="k">Kết quả</span><h3>Results</h3><p>Doanh thu Nike tăng từ khoảng 877 triệu USD (1988) lên hơn 9 tỷ USD (1998), thị phần giày thể thao tại Mỹ tăng từ khoảng 18% lên 43%.</p><span class="kpi">877M → 9,2B</span></div></li>
-      <li class="step"><div class="in"><span class="n">06</span><span class="k">Bài học rút ra</span><h3>Lessons</h3><p>Một chiến dịch thành công không chỉ giải quyết vấn đề kinh doanh, mà còn chạm vào một sự thật sâu sắc của con người. Chiến lược tốt là khi thương hiệu trở thành một phần trong câu chuyện của khách hàng.</p></div></li>
+    <ol class="ana-steps" id="anaSteps">
+      <li class="ana-step act" data-x="26%" data-y="18%"><span class="n">01</span><p class="k">Vấn đề kinh doanh</p><h3>Business Problem</h3><p>Đầu những năm 1980, Nike vẫn là “người đến sau”, bị xem là thương hiệu giày chạy bộ tầm trung so với Adidas và Reebok. Họ cần bứt phá để vượt khỏi cuộc chơi giá và tính năng sản phẩm.</p></li>
+      <li class="ana-step" data-x="58%" data-y="30%"><span class="n">02</span><p class="k">Thấu hiểu người tiêu dùng</p><h3>Consumer Insight</h3><p>Mọi người không chỉ chạy để chiến thắng, mà để vượt qua chính mình. Thể thao là hành trình cá nhân với những nghi ngờ, áp lực và nỗ lực mỗi ngày.</p></li>
+      <li class="ana-step" data-x="46%" data-y="72%"><span class="n">03</span><p class="k">Lựa chọn chiến lược</p><h3>Strategic Choice</h3><p>Thay vì chỉ nói về sản phẩm, Nike chọn định vị thương hiệu qua một niềm tin: thúc đẩy con người khai phá tiềm năng vô hạn, bất kể họ là ai.</p></li>
+      <li class="ana-step" data-x="70%" data-y="52%"><span class="n">04</span><p class="k">Triển khai</p><h3>Execution</h3><p>Chiến dịch Just Do It ra mắt năm 1988 với những thước phim chân thực, mạnh mẽ, tôn vinh nỗ lực của những con người bình thường lẫn huyền thoại. Ngôn ngữ đơn giản, cảm xúc, dễ lan toả.</p></li>
+      <li class="ana-step" data-x="38%" data-y="50%"><span class="n">05</span><p class="k">Kết quả</p><h3>Results</h3><p>Doanh thu Nike tăng từ khoảng 877 triệu USD (1988) lên hơn 9 tỷ USD (1998), thị phần giày thể thao tại Mỹ tăng từ khoảng 18% lên 43%.</p><span class="kpi">877M → 9,2B<small>USD · 1988 → 1998</small></span></li>
+      <li class="ana-step" data-x="50%" data-y="88%"><span class="n">06</span><p class="k">Bài học rút ra</p><h3>Lessons</h3><p>Một chiến dịch thành công không chỉ giải quyết vấn đề kinh doanh, mà còn chạm vào một sự thật sâu sắc của con người. Chiến lược tốt là khi thương hiệu trở thành một phần trong câu chuyện của khách hàng.</p><a class="link" style="margin-top:18px" href="dang-nhap.html?next=%2Fcase-thu-vien.html">Đi sâu vào case →</a></li>
     </ol>
-    <p class="ana__foot">Số liệu doanh thu và thị phần là các con số thường được trích dẫn về giai đoạn 1988–1998; case đầy đủ trong thư viện nêu nguồn và cách đọc chúng.</p>
+    <p class="ana-foot">Số liệu doanh thu và thị phần là các con số thường được trích dẫn về giai đoạn 1988–1998; case đầy đủ trong thư viện nêu nguồn và cách đọc chúng.</p>
   </div>
 </section>
 
-<!-- ============ 3 · PHƯƠNG PHÁP ============ -->
-<section class="lp-method" id="method">
-  <div class="lp-wrap">
-    <div class="lp-mgrid">
-      <div>
-        <span class="lp-pill">PHƯƠNG PHÁP</span>
-        <h2 class="lp-h2">Không chỉ học.<br>Mà là tư duy,<br>phân tích, và<br><em>áp dụng.</em></h2>
-        <p class="lp-p">Một lộ trình học được thiết kế để bạn rèn tư duy marketing qua case thực tế, không phải lý thuyết suông.</p>
-        <a class="lp-btn lp-btn--line" href="dang-nhap.html?next=%2Fban-do.html">Xem lộ trình →</a>
-      </div>
+<!-- ============ 5 · PHƯƠNG PHÁP — bậc thang chữ ============ -->
+<section class="sec torn on-k met" id="method" aria-labelledby="metT">
+  <div class="met-pic cu" aria-hidden="true"><img src="assets/img/studio_workspace.jpg" alt="" loading="lazy"></div>
+  <div class="met-top">
+    <p class="kick">Phương pháp</p>
+    <h2 class="met-title disp" id="metT">
+      <span class="ln"><span>Không chỉ học.</span></span>
+      <span class="ln" style="--i:1"><span>Mà là tư duy, phân tích,</span></span>
+      <span class="ln" style="--i:2"><span>và <em>áp dụng.</em></span></span>
+    </h2>
+    <p class="met-p rv">Một lộ trình được thiết kế để bạn rèn tư duy marketing qua case thực tế, không phải lý thuyết suông. Năm bước, mỗi bước cao hơn bước trước một bậc.</p>
+  </div>
+  <ol class="ladder" id="ladder">
+    <li class="rung" style="--i:0"><span class="no">01</span><h3>Quan sát</h3><p>Nhìn vấn đề từ nhiều góc độ.</p></li>
+    <li class="rung" style="--i:1"><span class="no">02</span><h3>Phân tích</h3><p>Hiểu sâu động cơ, bối cảnh, dữ liệu.</p></li>
+    <li class="rung" style="--i:2"><span class="no">03</span><h3>Tư duy chiến lược</h3><p>Kết nối insight với cơ hội.</p></li>
+    <li class="rung" style="--i:3"><span class="no">04</span><h3>Sáng tạo</h3><p>Tìm giải pháp khác biệt.</p></li>
+    <li class="rung" style="--i:4"><span class="no">05</span><h3>Áp dụng</h3><p>Biến kiến thức thành kỹ năng thật.</p></li>
+  </ol>
+  <p class="met-note hand rv">Turn real cases into real skills.</p>
+  <a class="link met-cta rv" href="dang-nhap.html?next=%2Fban-do.html">Xem lộ trình →</a>
+</section>
 
-      <div class="lp-art" aria-hidden="true">
-        <div class="lp-art__photo"><img src="assets/img/studio_workspace.jpg" alt="" loading="lazy"></div>
-        <div class="lp-art__or"></div>
-        <div class="lp-art__list"><span style="--i:0">Observe</span><span style="--i:1">Analyze</span><span style="--i:2">Think</span><span style="--i:3">Create</span><span style="--i:4">Apply</span></div>
-        <svg class="lp-art__arrow" viewBox="0 0 70 60"><path d="M4 50 C 10 14, 40 6, 62 14 M62 14 l-12 -6 M62 14 l-8 11" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div class="lp-art__note"><div class="lp-tape"></div>TURN<br>REAL CASES<br>INTO<br>REAL SKILLS.</div>
-      </div>
+<!-- ============ 6 · MARKETING LAB — bàn làm việc ============ -->
+<section class="sec torn lab" id="lab" aria-labelledby="labT">
+  <div class="lab-head">
+    <p class="kick">Marketing Lab</p>
+    <h2 class="lab-title disp" id="labT">
+      <span class="ln"><span>Bàn làm việc</span></span>
+      <span class="ln" style="--i:1"><span>của <em>bạn.</em></span></span>
+    </h2>
+    <p class="lab-p rv">Một không gian thực hành marketing, nơi bạn thử nghiệm, phân tích và tạo ra chiến lược của riêng mình qua những case thực tế. Chọn đối tượng, định vị, tìm giá trị cốt lõi, rồi viết thông điệp.</p>
+    <p class="lab-hint">↳ Kéo các mảnh giấy để sắp lại bàn theo cách bạn nghĩ.</p>
+  </div>
 
-      <ol class="lp-steps">
-        <li><b>01</b><div><h4>Quan sát</h4><p>Nhìn vấn đề từ nhiều góc độ</p></div></li>
-        <li><b>02</b><div><h4>Phân tích</h4><p>Hiểu sâu động cơ, bối cảnh, dữ liệu</p></div></li>
-        <li><b>03</b><div><h4>Tư duy chiến lược</h4><p>Kết nối insight với cơ hội</p></div></li>
-        <li><b>04</b><div><h4>Sáng tạo</h4><p>Tìm giải pháp khác biệt</p></div></li>
-        <li><b>05</b><div><h4>Áp dụng</h4><p>Biến kiến thức thành kỹ năng thật</p></div></li>
+  <div class="desk" id="desk">
+    <article class="obj drag sheet brief" aria-label="Bản brief chiến lược">
+      <span class="tape" aria-hidden="true"></span>
+      <span class="sub">Creative sandbox</span>
+      <h3>Test your own strategy</h3>
+      <div class="acc" id="labAcc">
+        <div class="acc__i open"><button class="acc__b" type="button" aria-expanded="true"><span class="nn">1</span><span><strong>Đối tượng mục tiêu</strong><small>Gen Z, yêu thích cà phê, sống tại thành thị</small></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="acc__d"><div><p>Đừng dừng ở nhân khẩu học. Hỏi: họ đang cố hoàn thành việc gì khi bước vào quán — làm việc, gặp bạn, hay tự thưởng cho mình?</p></div></div></div>
+        <div class="acc__i"><button class="acc__b" type="button" aria-expanded="false"><span class="nn">2</span><span><strong>Định vị thương hiệu</strong><small>Cà phê cho những tâm hồn sáng tạo</small></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="acc__d"><div><p>Một định vị chỉ có giá trị khi nó loại trừ ai đó. Nếu quán nào cũng nói được câu này thì nó chưa nói gì cả.</p></div></div></div>
+        <div class="acc__i"><button class="acc__b" type="button" aria-expanded="false"><span class="nn">3</span><span><strong>Giá trị cốt lõi</strong><small>Truyền cảm hứng, kết nối cộng đồng</small></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="acc__d"><div><p>Giá trị cốt lõi phải thấy được trong hành vi: bạn làm gì khi không ai nhìn? Đó mới là điều khách nhớ.</p></div></div></div>
+        <div class="acc__i"><button class="acc__b" type="button" aria-expanded="false"><span class="nn">4</span><span><strong>Thông điệp truyền thông</strong><small>Cà phê không chỉ để tỉnh táo, mà để tạo ra những ý tưởng tốt hơn</small></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="acc__d"><div><p>Thông điệp tốt nói một việc, cho một người, bằng một cách họ nhớ được. Hãy thử viết nó trong một câu.</p></div></div></div>
+      </div>
+    </article>
+
+    <aside class="obj drag log" id="labProg" aria-label="Tiến bộ học tập (ví dụ minh hoạ)">
+      <span class="eg">Ví dụ minh hoạ</span>
+      <h3>Hành trình của bạn</h3>
+      <div class="row"><div class="ring" id="labRing" style="--p:0"><b>LV 3</b></div>
+        <div style="flex:1"><b><span data-count="620">620</span> / 1.000 XP</b><div class="bar" style="margin-top:8px"><i></i></div></div></div>
+      <div class="stats4"><div><b data-count="12">12</b><span>Case đã hoàn thành</span></div><div><b data-count="5">5</b><span>Thử thách đã mở khoá</span></div><div><b data-count="3">3</b><span>Huy hiệu đạt được</span></div><div><b data-count="89" data-suf="%">89%</b><span>Tiến độ hành trình</span></div></div>
+    </aside>
+
+    <figure class="obj drag nb" aria-label="Ghi chú: Test, fail, learn">
+      <span class="tape" aria-hidden="true" style="left:12%"></span>
+      <img src="assets/img/notebook_field_art.jpg" alt="Cuốn sổ tay mở ra giữa đồng cỏ, tranh màu nước" loading="lazy">
+      <figcaption class="hand">Test. Fail. Learn. Làm lại bản tốt hơn.</figcaption>
+    </figure>
+
+    <div class="obj drag nx">
+      <div class="im"><img src="assets/img/coffee_aesthetic.jpg" alt="Ba ly cà phê latte chạm nhau trên bàn" loading="lazy"></div>
+      <div class="bd"><div><small>Thử thách tiếp theo</small><b>Rebrand một thương hiệu địa phương</b><span class="xp">+200 XP</span></div>
+        <a class="go" href="dang-nhap.html?next=%2Fquiz.html" aria-label="Làm thử thách rebrand"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+
+    <div class="obj drag st">
+      <span class="hand">Bàn đã sẵn sàng. Còn thiếu mỗi chiến lược của bạn.</span>
+      <a class="btn" href="dang-nhap.html?next=%2Fhoc.html">Bắt đầu thử chiến lược →</a>
+    </div>
+    <span class="pen" aria-hidden="true"></span>
+  </div>
+</section>
+
+<!-- ============ 7 · LỘ TRÌNH + KỸ NĂNG ============ -->
+<section class="road" id="roadmap" aria-labelledby="roadT">
+  <div class="road-sky">
+    <p class="kick" style="position:relative;color:var(--tc-d);margin-bottom:20px">Lộ trình học</p>
+    <h2 class="road-title disp" id="roadT">
+      <span class="ln"><span>Từ tò mò</span></span>
+      <span class="ln" style="--i:1"><span>đến <em>strategist.</em></span></span>
+    </h2>
+    <p class="road-p rv">Lộ trình được viết như một câu chuyện: đi từ những câu hỏi đầu tiên, đến tư duy chiến lược, rồi kỹ năng ứng dụng vào thế giới thật.</p>
+    <a class="link rv" href="dang-nhap.html?next=%2Fban-do.html">Khám phá lộ trình →</a>
+
+    <div class="road-map" id="roadMap">
+      <img src="assets/img/mountains_panorama_banner.jpg" alt="" loading="lazy">
+      <svg viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true">
+        <path id="roadBase" d="M30 500 C 170 470, 220 520, 330 440 S 480 380, 540 320 S 700 260, 760 190 S 900 110, 960 60"/>
+        <path id="roadDraw" pathLength="1" d="M30 500 C 170 470, 220 520, 330 440 S 480 380, 540 320 S 700 260, 760 190 S 900 110, 960 60"/>
+      </svg>
+      <ol class="nodes">
+        <li class="nd" style="--x:3%;--y:89%"><i></i><div class="up"><b data-n="1">Discover</b><span>Khơi gợi sự tò mò về marketing và thế giới xung quanh.</span></div></li>
+        <li class="nd" style="--x:33%;--y:79%"><i></i><div class="up"><b data-n="2">Understand</b><span>Hiểu cách thế giới vận hành, con người và thị trường.</span></div></li>
+        <li class="nd" style="--x:54%;--y:57%"><i></i><div class="dn"><b data-n="3">Analyze</b><span>Phân tích vấn đề dưới góc nhìn marketing.</span></div></li>
+        <li class="nd" style="--x:71%;--y:45%"><i></i><div class="lf"><b data-n="4">Strategize</b><span>Xây dựng tư duy chiến lược và lựa chọn hướng đi.</span></div></li>
+        <li class="nd" style="--x:76%;--y:34%"><i></i><div><b data-n="5">Create</b><span>Biến ý tưởng thành giải pháp sáng tạo.</span></div></li>
+        <li class="nd" style="--x:96%;--y:11%"><i></i><div class="lf"><b data-n="6">Apply</b><span>Ứng dụng để tạo ra kết quả thật.</span></div></li>
       </ol>
     </div>
   </div>
-</section>
 
-<!-- ============ C · LỘ TRÌNH + KỸ NĂNG ============ -->
-<section class="ts" id="roadmap">
-  <div class="lp-wrap">
-    <div class="road">
-      <div>
-        <span class="ts-pill">Lộ trình học</span>
-        <h2 class="ts-h">Từ tò mò<br>đến <em>strategist.</em></h2>
-        <p class="ts-p">Một lộ trình học được thiết kế như câu chuyện: đi từ những câu hỏi đầu tiên, đến tư duy chiến lược, và kỹ năng ứng dụng vào thế giới thật.</p>
-        <a class="ts-btn" href="dang-nhap.html?next=%2Fban-do.html">Khám phá lộ trình →</a>
-        <div class="road__map" id="roadMap">
-          <div class="paper"></div>
-          <svg class="path" viewBox="0 0 100 85" preserveAspectRatio="none" aria-hidden="true">
-            <path id="roadBase" d="M10 74 C 18 68, 24 70, 30 62 S 42 56, 46 48 S 56 40, 64 34 S 74 24, 82 18"/>
-            <path id="roadDraw" class="draw" d="M10 74 C 18 68, 24 70, 30 62 S 42 56, 46 48 S 56 40, 64 34 S 74 24, 82 18"/>
-          </svg>
-          <div class="node" style="left:10%;top:74%"><span class="no">1</span><i></i><div><b>Discover</b><span>Khơi gợi sự tò mò về marketing và thế giới xung quanh.</span></div></div>
-          <div class="node" style="left:30%;top:62%"><span class="no">2</span><i></i><div><b>Understand</b><span>Hiểu cách thế giới vận hành, con người và thị trường.</span></div></div>
-          <div class="node" style="left:46%;top:48%"><span class="no">3</span><i></i><div><b>Analyze</b><span>Phân tích vấn đề dưới góc nhìn marketing.</span></div></div>
-          <div class="node" style="left:60%;top:35%"><span class="no">4</span><i></i><div><b>Strategize</b><span>Xây dựng tư duy chiến lược và lựa chọn hướng đi.</span></div></div>
-          <div class="node" style="left:72%;top:24%"><span class="no">5</span><i></i><div><b>Create</b><span>Biến ý tưởng thành giải pháp sáng tạo.</span></div></div>
-          <div class="node" style="left:80%;top:10%"><span class="no">6</span><i></i><div><b>Apply</b><span>Ứng dụng để tạo ra kết quả thật.</span></div></div>
-        </div>
-      </div>
-      <div>
-        <span class="ts-pill">Skill Playground</span>
-        <h2 class="ts-h">Trải nghiệm các kỹ năng marketing <em>thực chiến.</em></h2>
-        <p class="ts-p">Mỗi kỹ năng là một cánh cửa để bạn nhìn thế giới marketing rõ hơn, sâu hơn và ứng dụng tốt hơn.</p>
-        <div class="skills">
-          <a class="sk" href="dang-nhap.html?next=%2Fhoc.html"><img src="assets/img/hero_editorial_face.jpg" alt="" loading="lazy"><span class="no">01</span><span class="tx"><b>Consumer Insight</b><span>Hiểu con người thật, không chỉ dữ liệu.</span></span></a>
-          <a class="sk" href="dang-nhap.html?next=%2Fhoc.html"><img src="assets/img/poster_apple_thinker.jpg" alt="" loading="lazy"><span class="no">02</span><span class="tx"><b>Brand Positioning</b><span>Tìm vị trí khác biệt trong tâm trí khách hàng.</span></span></a>
-          <a class="sk" href="dang-nhap.html?next=%2Fhoc.html"><img src="assets/img/art-notebook.svg" alt="" loading="lazy"><span class="no">03</span><span class="tx"><b>Creative Brief</b><span>Biến chiến lược thành ý tưởng có sức sống.</span></span></a>
-          <a class="sk" href="dang-nhap.html?next=%2Fhoc.html"><img src="assets/img/studio_workspace.jpg" alt="" loading="lazy"><span class="no">04</span><span class="tx"><b>Growth Strategy</b><span>Tư duy tăng trưởng dựa trên dữ liệu và thử nghiệm.</span></span></a>
-          <a class="sk" href="dang-nhap.html?next=%2Fhoc.html"><img src="assets/img/cafe_community.jpg" alt="" loading="lazy"><span class="no">05</span><span class="tx"><b>Campaign Analysis</b><span>Giải mã chiến dịch thật, rút ra bài học thật.</span></span></a>
-        </div>
-      </div>
+  <div class="skills">
+    <div class="sk-head">
+      <p class="kick">Mục lục kỹ năng</p>
+      <h2 class="sk-title disp">
+        <span class="ln"><span>Năm kỹ năng,</span></span>
+        <span class="ln" style="--i:1"><span>năm cách nhìn <em>thực chiến.</em></span></span>
+      </h2>
+      <p class="sk-p rv">Mỗi kỹ năng là một cánh cửa để bạn nhìn thế giới marketing rõ hơn, sâu hơn và ứng dụng tốt hơn.</p>
+    </div>
+    <ul class="sk-list" id="skList">
+      <li><a class="sk rv" href="dang-nhap.html?next=%2Fhoc.html" data-img="assets/img/influencer_lifestyle.jpg"><span class="no">01</span><h3>Consumer Insight</h3><p>Hiểu con người thật, không chỉ dữ liệu.</p><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+      <li><a class="sk rv" href="dang-nhap.html?next=%2Fhoc.html" data-img="assets/img/model_thinking.jpg"><span class="no">02</span><h3>Brand Positioning</h3><p>Tìm vị trí khác biệt trong tâm trí khách hàng.</p><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+      <li><a class="sk rv" href="dang-nhap.html?next=%2Fhoc.html" data-img="assets/img/art-notebook.svg"><span class="no">03</span><h3>Creative Brief</h3><p>Biến chiến lược thành ý tưởng có sức sống.</p><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+      <li><a class="sk rv" href="dang-nhap.html?next=%2Fhoc.html" data-img="assets/img/hero_mountain.jpg"><span class="no">04</span><h3>Growth Strategy</h3><p>Tư duy tăng trưởng dựa trên dữ liệu và thử nghiệm.</p><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+      <li><a class="sk rv" href="dang-nhap.html?next=%2Fhoc.html" data-img="assets/img/cafe_community.jpg"><span class="no">05</span><h3>Campaign Analysis</h3><p>Giải mã chiến dịch thật, rút ra bài học thật.</p><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+    </ul>
+  </div>
+</section>
+<div class="sk-pv" id="skPv" aria-hidden="true"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+
+<!-- ============ 8 · THỬ THÁCH 60 GIÂY — yên, riêng tư ============ -->
+<section class="sec torn chal" id="challenge" aria-labelledby="chalT2">
+  <span class="chal-line" id="chalLine" aria-hidden="true"></span>
+  <div class="chal-img cu" aria-hidden="true"><img src="assets/img/coffee_lifestyle.jpg" alt="" loading="lazy"></div>
+  <div class="chal-in">
+    <p class="kick"><span>Thử thách chiến lược 60 giây</span><span id="chalT" aria-live="off">60s</span></p>
+    <h2 class="chal-q" id="chalT2"><span class="ln"><span>Bạn là strategist.</span></span><span class="ln" style="--i:1"><span>Điều gì bạn <em>điều tra</em> đầu tiên?</span></span></h2>
+    <p class="chal-ctx rv">Một thương hiệu cà phê đang mất dần khách hàng Gen Z. Doanh số tại nhóm 18–24 tuổi giảm 28% trong 6 tháng qua <small>(tình huống giả định)</small>. Chọn một hướng — và nghe góc nhìn bên cạnh.</p>
+
+    <div class="opts" id="opts" role="group" aria-label="Chọn hướng điều tra">
+      <button class="opt on" type="button" data-k="A" aria-pressed="true"><span class="ltr">A</span><span><b>Hành vi &amp; nhu cầu Gen Z</b><span class="d">Tìm hiểu họ đang thay đổi thói quen uống cà phê như thế nào.</span></span></button>
+      <button class="opt" type="button" data-k="B" aria-pressed="false"><span class="ltr">B</span><span><b>Trải nghiệm thương hiệu</b><span class="d">Đánh giá trải nghiệm tại cửa hàng, truyền thông và sản phẩm.</span></span></button>
+      <button class="opt" type="button" data-k="C" aria-pressed="false"><span class="ltr">C</span><span><b>Truyền thông &amp; cộng đồng</b><span class="d">Phân tích cách thương hiệu xuất hiện trên mạng xã hội.</span></span></button>
+    </div>
+    <div class="view" id="view" aria-live="polite">
+      <p class="kick">Góc nhìn chiến lược</p>
+      <div id="viewBody"></div>
+      <a class="btn" href="dang-nhap.html?next=%2Fquiz.html">Làm thử thách đầy đủ →</a>
     </div>
   </div>
 </section>
 
-<!-- ============ D · THỬ THÁCH CHIẾN LƯỢC 60 GIÂY ============ -->
-<section class="ts" id="challenge">
-  <div class="lp-wrap">
-    <div class="chal__top">
-      <div>
-        <span class="ts-pill">Thử thách chiến lược 60 giây</span>
-        <h2 class="ts-h">Bạn là<br><em>strategist.</em></h2>
-        <p class="chal__q">Một thương hiệu cà phê đang mất dần khách hàng Gen Z. Doanh số tại nhóm 18–24 tuổi giảm 28% trong 6 tháng qua (tình huống giả định).<br><br>Nếu là bạn, bạn sẽ <b>điều tra điều gì đầu tiên?</b></p>
-      </div>
-      <div class="chal__vis" aria-hidden="true">
-        <div class="ts-photo main"><img src="assets/img/coffee_lifestyle.jpg" alt="" loading="lazy"></div>
-        <div class="ts-photo small"><img src="assets/img/cafe_community.jpg" alt="" loading="lazy"></div>
-        <div class="chal__timer"><i></i><span id="chalT">60s</span></div>
-        <div class="ts-note ts-note--o" style="right:2%;bottom:6%;rotate:5deg;max-width:46%">Gen Z doesn’t just buy coffee — they buy feeling, values and community.</div>
-      </div>
-    </div>
-    <div class="chal__grid">
-      <div class="ts-paper ts-paper--c chal__pick"><div class="ts-in">
-        <h3>Chọn hướng <em>điều tra</em></h3>
-        <div class="opts" id="opts">
-          <button class="opt on" type="button" data-k="A"><span class="im"><img src="assets/img/influencer_lifestyle.jpg" alt="" loading="lazy"><span class="ltr">A</span></span><span class="bd"><b>Hành vi &amp; nhu cầu Gen Z</b><span>Tìm hiểu họ đang thay đổi thói quen uống cà phê như thế nào.</span></span></button>
-          <button class="opt" type="button" data-k="B"><span class="im"><img src="assets/img/art-megaphone.svg" alt="" loading="lazy"><span class="ltr">B</span></span><span class="bd"><b>Trải nghiệm thương hiệu</b><span>Đánh giá trải nghiệm tại cửa hàng, truyền thông và sản phẩm.</span></span></button>
-          <button class="opt" type="button" data-k="C"><span class="im"><img src="assets/img/model_thinking.jpg" alt="" loading="lazy"><span class="ltr">C</span></span><span class="bd"><b>Truyền thông &amp; cộng đồng</b><span>Phân tích cách thương hiệu xuất hiện trên mạng xã hội.</span></span></button>
-        </div>
-      </div></div>
-      <div class="chal__view" id="view">
-        <span class="ts-pill">Góc nhìn chiến lược</span>
-        <div id="viewBody"></div>
-        <a class="ts-btn" href="dang-nhap.html?next=%2Fquiz.html" style="align-self:flex-start;margin-top:auto">Làm thử thách đầy đủ →</a>
-      </div>
-    </div>
+<!-- ============ 9 · BRAND UNIVERSE — tường dấu vết ============ -->
+<section class="sec torn on-k uni" id="universe" aria-labelledby="uniT">
+  <div class="uni-head">
+    <p class="kick">Brand Universe</p>
+    <h2 class="uni-title disp" id="uniT">
+      <span class="ln"><span>Mỗi thương hiệu</span></span>
+      <span class="ln" style="--i:1"><span>là một <em>thế giới.</em></span></span>
+    </h2>
+    <p class="uni-p rv">Đằng sau mỗi logo là một nền văn hoá. Mỗi chiến dịch là kết quả của sự thấu hiểu con người, hành vi, bối cảnh và những câu chuyện thật. Chúng tôi mổ xẻ những thế giới ấy để bạn thấy tư duy chiến lược được ứng dụng ra sao.</p>
   </div>
+
+  <div class="wall" id="wall">
+    <div class="w-receipt" data-d="10" aria-label="Hoá đơn quán cà phê (minh hoạ)">
+      <h3>QUÁN CÀ PHÊ · HOÁ ĐƠN</h3>
+      <div class="r"><span>1 Flat white</span><span>55.000</span></div>
+      <div class="r"><span>Ngồi 3 tiếng</span><span>0</span></div>
+      <div class="r"><span>Wifi mạnh</span><span>0</span></div>
+      <div class="r g"><span>Cảm giác thuộc về</span><span>???</span></div>
+      <div class="r t"><span>TỔNG</span><span>không đo được</span></div>
+      <small>Khách trả tiền cho cả thứ không có trên hoá đơn.</small>
+    </div>
+    <div class="w-pic w-owl" data-d="14"><img src="assets/img/poster_duolingo_owl.jpg" alt="Cú xanh Duolingo nhìn chằm chằm" loading="lazy"></div>
+    <div class="w-pic w-bb" data-d="8"><img src="assets/img/billboard_city.jpg" alt="" loading="lazy"></div>
+    <div class="w-pic w-hands" data-d="18"><img src="assets/img/coffee_aesthetic.jpg" alt="Những ly cà phê chạm nhau — một khoảnh khắc thuộc về nhau" loading="lazy"></div>
+    <p class="w-note hand" data-d="22">A brand doesn’t just sell products — it sells a way of seeing the world.</p>
+    <div class="w-search" data-d="12"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span>quán cà phê ngồi lâu không bị đuổi gần đây<i class="cur"></i></span></div>
+    <div class="w-tag" data-d="16">Giá: 55.000đ<br>Lý do: ở lại</div>
+    <p class="w-scrib hand" data-d="9">Real people.<br>Real behavior.<br>Real stories.</p>
+    <div class="w-circle" data-d="6">Văn hoá<br>trước<br>logo</div>
+  </div>
+
+  <div class="stats">
+    <div><b><span data-count="700" data-suf="+">700+</span></b><span>bài học có bài tập thực hành</span></div>
+    <div><b><span data-count="20">20</span></b><span>case chiến dịch thật được mổ xẻ</span></div>
+    <div><b><span data-count="14">14</span></b><span>thương hiệu được phân tích sâu</span></div>
+  </div>
+  <a class="link" style="margin-top:30px" href="dang-nhap.html?next=%2Fcase-thu-vien.html">Khám phá các case →</a>
 </section>
 
-<!-- ============ E · BRAND UNIVERSE ============ -->
-<section class="ts" id="universe">
-  <div class="lp-wrap">
-    <div class="uni">
-      <div>
-        <span class="ts-pill">Brand Universe</span>
-        <h2 class="ts-h">Mỗi thương hiệu<br>là một <em>thế giới.</em></h2>
-        <p class="ts-p">Đằng sau mỗi logo là một nền văn hoá. Mỗi chiến dịch là kết quả của sự thấu hiểu con người, hành vi, bối cảnh và những câu chuyện thật. Chúng tôi mổ xẻ những thế giới thương hiệu để bạn nhìn thấy cách tư duy chiến lược được ứng dụng trong thực tế.</p>
-        <a class="ts-btn" href="dang-nhap.html?next=%2Fcase-thu-vien.html">Khám phá các case →</a>
-        <div class="uni__stats">
-          <div><b><span data-count="700" data-suf="+">700+</span></b><span>bài học có bài tập thực hành</span></div>
-          <div><b><span data-count="20">20</span></b><span>case chiến dịch thật được mổ xẻ</span></div>
-          <div><b><span data-count="14">14</span></b><span>thương hiệu được phân tích sâu</span></div>
-        </div>
-      </div>
-      <div class="uni__col" id="uniCol" aria-hidden="true">
-        <div class="pol pol--nike" data-d="14"><img src="assets/img/poster_nike_athlete.jpg" alt="" loading="lazy"></div>
-        <div class="pol pol--face" data-d="9"><img src="assets/img/hero_model.jpg" alt="" loading="lazy"></div>
-        <div class="pol pol--owl" data-d="18"><img src="assets/img/poster_duolingo_owl.jpg" alt="" loading="lazy"></div>
-        <div class="pol pol--apple" data-d="12"><img src="assets/img/poster_apple_thinker.jpg" alt="" loading="lazy"></div>
-        <div class="pol pol--city" data-d="8"><img src="assets/img/art-panorama.svg" alt="" loading="lazy"></div>
-        <div class="pol pol--cafe" data-d="16"><img src="assets/img/cafe_community.jpg" alt="" loading="lazy"></div>
-        <div class="ts-note ts-note--o" data-d="22" style="left:24%;top:46%;rotate:-5deg;max-width:30%">A brand doesn’t just sell products — it sells a way of seeing the world.</div>
-        <div class="ts-scribble" data-d="10" style="left:62%;top:92%;rotate:-3deg">Real people.<br>Real behavior.<br>Real stories.</div>
-      </div>
+<!-- ============ 10 · CỘNG ĐỒNG ============ -->
+<section class="sec comm" id="community" aria-labelledby="commT">
+  <img src="assets/img/cafe_community.jpg" alt="" loading="lazy">
+  <div class="qs" aria-label="Ví dụ những câu hỏi được thảo luận">
+    <p class="q">Nếu là Nike năm 1988, bạn có dám ngừng nói về đôi giày?<small>Câu hỏi thảo luận</small></p>
+    <p class="q">Vì sao một con cú meme lại giữ chân người học tốt hơn một quảng cáo?<small>Câu hỏi thảo luận</small></p>
+    <p class="q">Định vị của quán bạn thường ghé là gì — và nó loại trừ ai?<small>Câu hỏi thảo luận</small></p>
+  </div>
+  <div class="comm-in">
+    <p class="kick">Cộng đồng</p>
+    <h2 class="comm-title disp" id="commT">
+      <span class="ln"><span>Một cộng đồng dành</span></span>
+      <span class="ln" style="--i:1"><span>cho những người <em>tò mò</em></span></span>
+      <span class="ln" style="--i:2"><span>về marketing.</span></span>
+    </h2>
+    <div class="comm-aside">
+      <p>Nơi chia sẻ góc nhìn, thảo luận case, kết nối người cùng đam mê và không ngừng học hỏi.</p>
+      <a class="btn" href="dang-nhap.html?next=%2Fcong-dong.html">Tham gia cộng đồng →</a>
     </div>
   </div>
 </section>
+</main>
 
-<!-- ============ 4 · CỘNG ĐỒNG ============ -->
-<section class="lp-comm" id="community">
-  <img class="lp-comm__img" src="assets/img/cafe_community.jpg" alt="" loading="lazy">
-  <div class="lp-comm__shade"></div>
-  <div class="lp-doodle" aria-hidden="true">Better<br>Ideas<br>Together.
-    <svg viewBox="0 0 70 40"><circle cx="14" cy="10" r="5"/><circle cx="35" cy="8" r="5"/><circle cx="56" cy="10" r="5"/><path d="M6 36c0-9 4-15 8-15s8 6 8 15M27 36c0-9 4-15 8-15s8 6 8 15M48 36c0-9 4-15 8-15s8 6 8 15"/></svg>
-  </div>
-  <div class="lp-sign" aria-hidden="true">Good<br>Marketing<br>Better<br>People</div>
-  <div class="lp-wrap">
-    <span class="lp-pill">CỘNG ĐỒNG</span>
-    <h2 class="lp-h2">Một cộng đồng<br>dành cho những người<br><em>tò mò</em> về marketing.</h2>
-    <p class="lp-p">Nơi chia sẻ góc nhìn, thảo luận case, kết nối người cùng đam mê và không ngừng học hỏi.</p>
-    <a class="lp-btn" href="dang-nhap.html?next=%2Fcong-dong.html">Tham gia cộng đồng →</a>
-  </div>
-</section>
-
-<footer class="lp-foot">
-  <div class="lp-wrap">
+<footer class="foot">
+  <p class="foot-big" aria-hidden="true">Tự Học <em>Marketing</em></p>
+  <div class="foot-row">
     <span><b>Tự Học Marketing Case</b> · Studio học marketing qua case thật. Miễn phí cho người học.</span>
     <a href="dang-nhap.html">Đăng nhập</a>
   </div>
 </footer>
 
 <script>
-/* Lọc case theo nhãn: chỉ làm mờ các thẻ không khớp. */
-(function(){
-  var tabs=document.querySelectorAll('.lp-tabs button'), cards=document.querySelectorAll('.lp-poster');
-  tabs.forEach(function(b){b.addEventListener('click',function(){
-    tabs.forEach(function(x){x.classList.toggle('on',x===b)});
-    var f=b.dataset.f;
-    cards.forEach(function(c){c.classList.toggle('dim',f!=='all'&&c.dataset.c!==f)});
-  })});
-  /* Lớp thứ hai (Worker đã chuyển hướng): đã có phiên thì không bao giờ ở lại landing. */
-  try{fetch('/api/me',{credentials:'include',cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(j){
-    if(j&&j.user) location.replace('/app.html');
-  }).catch(function(){});}catch(e){}
-})();
+/* Lớp thứ hai (Worker đã chuyển hướng): đã có phiên thì không bao giờ ở lại landing. */
+try{fetch('/api/me',{credentials:'include',cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(j){
+  if(j&&j.user) location.replace('/app.html');
+}).catch(function(){});}catch(e){}
 </script>
-<script src="assets/js/landing-sections.js?v=1"></script>
-<script src="assets/js/landing-motion.js?v=3"></script>
+<script src="assets/js/editorial.js?v=1"></script>
 <script src="assets/js/yy.js?v=4"></script>
 <script>
 YY.mount({
@@ -388,7 +380,7 @@ YY.mount({
   chips:['Học ở đây thế nào?','Có miễn phí không?','Nên bắt đầu từ đâu?','Case có bấm giờ là gì?'],
   go:function(h){ location.href='dang-nhap.html?next='+encodeURIComponent('/'+h); },
   onReady:function(){
-    setTimeout(function(){ YY.autoType('.lp-lead, .lp-p'); },900);
+    setTimeout(function(){ YY.autoType('.h-lead'); },900);
     setTimeout(function(){ YY.tip('landing','Chào bạn, mình là Ý Ý. Hỏi mình bất cứ điều gì về cách học marketing ở đây nhé!'); },2500); }
 });
 </script>
