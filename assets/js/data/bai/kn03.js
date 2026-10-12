@@ -163,10 +163,10 @@ BAI_ADD({ mod:'kn03', lessons:[
 
 /* ------------------------------------------------------------------ 04 */
 { id:'B:kn03-04', skill:'channel', read:'7 phút', t:'Vì sao sản phẩm của bạn nằm trang 5 khi khách tìm kiếm?',
-  situation:'Shop bình giữ nhiệt của Lan có giá rẻ hơn đối thủ 10%, nhưng khi gõ "bình giữ nhiệt 500ml" thì sản phẩm nằm ở trang 5. Trang sản phẩm đặt tên "BÌNH HOT SALE SIÊU RẺ ĐẸP". Mỗi ngày có 400 lượt xem, 4 đơn. Đối thủ trang 1 có 600 lượt xem và 18 đơn mỗi ngày.',
+  situation:'Shop bình giữ nhiệt của Lan có giá rẻ hơn đối thủ 10%, nhưng khi gõ "bình giữ nhiệt 500ml" thì sản phẩm nằm ở trang 5. Trang sản phẩm đặt tên "BÌNH HOT SALE SIÊU RẺ ĐẸP". Mỗi ngày có 400 lượt xem (đa số từ link Lan tự chia sẻ, rất ít từ tìm kiếm), 4 đơn. Đối thủ trang 1 có 600 lượt xem và 18 đơn mỗi ngày.',
   concept:{ name:'Liên quan và hiệu quả bán',
     body:'Mỗi sàn có thuật toán riêng và không công bố chi tiết, nhưng logic chung dễ đoán: sàn muốn hiển thị thứ khách <b>có khả năng mua nhất</b>, vì sàn thu phí trên đơn. Vì vậy thứ hạng thường dựa trên hai nhóm tín hiệu. <b>Liên quan</b>: tiêu đề, danh mục, thuộc tính khớp đúng từ khoá khách gõ. <b>Hiệu quả</b>: tỉ lệ bấm, tỉ lệ chuyển đổi, số đơn gần đây, đánh giá, giao đúng hạn. Giá rẻ chỉ giúp khi nó làm tăng các tín hiệu hiệu quả đó.' },
-  example:'Tiêu đề của Lan không có chữ "500ml" hay "giữ nhiệt inox", nên khó khớp từ khoá. Tỉ lệ chuyển đổi 4 ÷ 400 = 1%, trong khi đối thủ 18 ÷ 600 = 3%. Sàn thấy đặt sản phẩm của Lan lên đầu sẽ bán ít hơn, nên đẩy đối thủ. Lan sửa tiêu đề thành "Bình giữ nhiệt inox 304 500ml giữ lạnh 12 giờ", thêm ảnh đo nhiệt độ, và nhắm tỉ lệ chuyển đổi 2% trước.',
+  example:'Tiêu đề của Lan không có chữ "500ml" hay "giữ nhiệt inox", nên khó khớp từ khoá. Tỉ lệ chuyển đổi 4 ÷ 400 = 1%, trong khi đối thủ 18 ÷ 600 = 3%. Sàn thấy đặt sản phẩm của Lan lên đầu sẽ bán ít hơn, nên đẩy đối thủ. Lan viết lại theo công thức [loại sản phẩm] + [chất liệu, dung tích] + [công dụng chính]: "Bình giữ nhiệt inox 304 500ml giữ lạnh 12 giờ". Cô gõ từ khoá, đọc 10 kết quả đầu xem họ dùng chữ nào, thêm ảnh đo nhiệt độ, và nhắm chuyển đổi 2% trước.',
   takeaway:'Sàn xếp hạng thứ nó tin là bán được; hãy khớp từ khoá và chứng minh bằng tỉ lệ chuyển đổi.',
   apply:'Mở trang sản phẩm chính của bạn. Nói trong 60 giây: tiêu đề có chứa đúng ba từ khoá khách hay gõ không, tỉ lệ chuyển đổi đang là bao nhiêu.',
   mistakes:['Nhồi chữ "hot, rẻ, sale" vào tiêu đề thay vì từ khoá mô tả.','Nghĩ cứ giảm giá là tự lên hạng.'],
@@ -204,14 +204,14 @@ BAI_ADD({ mod:'kn03', lessons:[
     answer:'a', why:{a:'Đúng. Đánh giá thấp làm tỉ lệ chuyển đổi giảm và giao trễ là tín hiệu vận hành xấu.',
       b:'Liên quan chỉ là một nửa; hiệu quả là nửa kia.',
       c:'Tương tác tiêu cực không làm sàn tin sản phẩm bán tốt hơn.',
-      d:'Nội dung đánh giá có thể ảnh hưởng hiển thị; sàn không công bố trọng số, nhưng số sao và vận hành thường được xem là tín hiệu rõ hơn.'} },
-  { type:'mcq', stem:'Vì sao "mua đơn ảo" để tăng lượt bán là nước đi tồi, ngoài chuyện vi phạm quy định sàn?',
-    options:[{k:'a',t:'Vì chi phí mua đơn ảo thường đắt hơn chạy quảng cáo tìm kiếm'},{k:'b',t:'Vì khách thật nhìn số bán cao sẽ nghi ngờ và bỏ đi mua shop khác'},
-             {k:'c',t:'Vì đơn ảo không có đánh giá nên không giúp gì cho thứ hạng'},{k:'d',t:'Vì kéo khách thật vào mà trang không bán được, chuyển đổi rơi'}],
-    answer:'d', why:{a:'Có thể đúng hoặc không; không phải lý do cốt lõi.',
-      b:'Phần lớn khách không nghi ngờ số bán; lý do chính nằm ở chỗ khác.',
+      d:'Sai vì biến đánh giá thành thứ chỉ có tác dụng khi chứa từ khoá; ở đây 5 đánh giá 1 sao và giao trễ đã đủ kéo tín hiệu hiệu quả xuống.'} },
+  { type:'mcq', stem:'Lan định "mua đơn ảo" để tăng lượt bán cho nhanh lên hạng. Điều nào mô tả đúng nhất rủi ro của cách này?',
+    options:[{k:'a',t:'Chi phí mua đơn ảo luôn đắt hơn chạy quảng cáo tìm kiếm nên chắc chắn lỗ'},{k:'b',t:'Khách thật nhìn số bán cao sẽ nghi ngờ rồi bỏ đi mua shop khác'},
+             {k:'c',t:'Đơn ảo không có đánh giá nên chắc chắn không giúp gì cho thứ hạng'},{k:'d',t:'Có thể bị sàn phát hiện và phạt, và không sửa được lý do khách thật chưa mua'}],
+    answer:'d', why:{a:'Chi phí tuỳ cách mua; "luôn đắt hơn" là khẳng định tuyệt đối không có căn cứ.',
+      b:'Không có căn cứ cho rằng khách hay nghi ngờ; nhiều khách còn xem số bán cao là tín hiệu tin cậy.',
       c:'Đơn ảo thường đi kèm đánh giá ảo; vấn đề không phải thiếu đánh giá.',
-      d:'Đúng. Được đẩy lên nhưng trang không thuyết phục, tỉ lệ chuyển đổi thật thấp kéo hạng xuống lại.'} }
+      d:'Đúng. Đây là rủi ro quan sát được: sàn thường có chế tài với gian lận đơn hàng, và dù không bị phát hiện, đơn ảo chỉ làm số liệu đẹp lên chứ không sửa tiêu đề hay trang bán.'} }
   ] },
 
 /* ------------------------------------------------------------------ 05 */
