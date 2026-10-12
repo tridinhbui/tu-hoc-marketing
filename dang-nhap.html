@@ -60,6 +60,7 @@ a{color:inherit;text-decoration:none}
 .au-sign{right:1.5%;bottom:3%;width:12%;height:30%;z-index:6;background:linear-gradient(180deg,#2a2622,#14110e);border:1px solid rgba(246,240,228,.1);transform:rotate(2deg);
   font-family:var(--hand);color:#f3ead9;font-size:clamp(18px,2vw,30px);line-height:1.05;padding:8% 6%;display:flex;align-items:flex-end;opacity:.95}
 /* thẻ đăng nhập */
+.au-note span{display:block}
 .au-card{right:max(24px,8.5vw);top:50%;transform:translateY(-50%) rotate(.4deg);width:min(28%,420px);min-width:340px;z-index:12;
   background:#faf5ee;color:#24160e;padding:clamp(24px,2.6vw,38px);clip-path:polygon(0.0% 1.4%,4.5% 1.6%,9.1% 1.7%,13.6% 2.1%,18.2% 1.6%,22.7% 2.0%,27.3% 0.1%,31.8% 1.0%,36.4% 2.1%,40.9% 1.4%,45.5% 2.0%,50.0% 0.2%,54.5% 1.0%,59.1% 0.5%,63.6% 1.2%,68.2% 1.3%,72.7% 0.0%,77.3% 0.5%,81.8% 0.6%,86.4% 2.0%,90.9% 1.7%,95.5% 0.4%,98.2% 0.0%,99.7% 4.5%,98.6% 9.1%,99.7% 13.6%,100.0% 18.2%,98.1% 22.7%,99.5% 27.3%,99.5% 31.8%,97.8% 36.4%,98.1% 40.9%,99.4% 45.5%,97.9% 50.0%,98.8% 54.5%,98.5% 59.1%,99.5% 63.6%,97.9% 68.2%,98.5% 72.7%,97.9% 77.3%,98.0% 81.8%,99.3% 86.4%,99.2% 90.9%,99.6% 95.5%,100.0% 99.7%,95.5% 99.9%,90.9% 99.3%,86.4% 98.7%,81.8% 100.0%,77.3% 98.5%,72.7% 99.3%,68.2% 99.3%,63.6% 98.2%,59.1% 98.9%,54.5% 99.3%,50.0% 98.9%,45.5% 98.4%,40.9% 99.9%,36.4% 97.9%,31.8% 99.9%,27.3% 98.4%,22.7% 98.1%,18.2% 100.0%,13.6% 98.3%,9.1% 99.2%,4.5% 98.7%,0.0% 100.0%,0.1% 95.5%,0.4% 90.9%,2.1% 86.4%,0.4% 81.8%,1.7% 77.3%,2.0% 72.7%,2.1% 68.2%,0.8% 63.6%,0.8% 59.1%,1.2% 54.5%,1.7% 50.0%,0.2% 45.5%,1.6% 40.9%,1.8% 36.4%,1.9% 31.8%,0.1% 27.3%,2.1% 22.7%,0.2% 18.2%,0.7% 13.6%,1.3% 9.1%,2.0% 4.5%);box-shadow:0 30px 70px -20px rgba(0,0,0,.9)}
 .au-badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--or-d);background:#f6dcd2;border:1px solid #efc4b4;border-radius:99px;padding:4px 11px}
@@ -81,12 +82,23 @@ a{color:inherit;text-decoration:none}
 .btn-primary{display:block;text-align:center;background:var(--or);color:#fff;border-radius:99px;padding:13px 22px;font-weight:600;margin-bottom:10px}
 .au-gold{color:#a8741a;font-weight:700}
 @media (max-width:1000px){
-  .au{display:flex;flex-direction:column;min-height:100vh;padding:80px 20px 40px;gap:28px}
+  /* điện thoại: giữ đủ bộ sưu tập như bản máy tính, xếp thành lưới 2 cột; thẻ đăng nhập lên ngay sau phần giới thiệu */
+  .au{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;min-height:100vh;padding:76px 20px 48px;gap:20px 16px}
   .au>*{position:relative;left:auto;right:auto;top:auto;bottom:auto}
   .au-back{position:absolute;left:20px;top:28px}
-  .au-copy{width:100%}
-  .au-card{width:100%;min-width:0;transform:none;order:3}
-  .au-face,.au-scrap,.au-tape,.au-tape2,.au-paper,.au-city,.au-polaroid,.au-film,.au-globe,.au-hand,.au-note,.au-sign,.au-kw{display:none}
+  .au-copy{grid-column:1/-1;grid-row:1;width:100%}
+  .au-card{grid-column:1/-1;grid-row:2;width:100%;min-width:0;transform:none}
+  .au-face{grid-column:1/-1;grid-row:3;width:100%;height:clamp(210px,58vw,320px);margin-top:12px}
+  .au-scrap{grid-column:1/-1;grid-row:3;align-self:end;justify-self:end;width:min(62%,250px);margin:0 4px -14px 0;padding:14px 16px;font-size:clamp(15px,4.2vw,19px);transform:rotate(-5deg)}
+  .au-h1{grid-column:1;grid-row:4;align-self:center;transform:rotate(-4deg);font-size:clamp(17px,5vw,22px);margin-top:20px}
+  .au-polaroid{grid-column:2;grid-row:4;width:100%;margin-top:20px}
+  .au-h2{grid-column:1;grid-row:5;align-self:center;transform:rotate(-5deg);font-size:clamp(18px,5.4vw,24px)}
+  .au-city{grid-column:2;grid-row:5;width:min(100%,120px);justify-self:end}
+  .au-h3{grid-column:1/-1;grid-row:6;text-align:center;transform:rotate(-2deg);font-size:clamp(18px,5vw,24px)}
+  .au-note{grid-column:1/-1;grid-row:7;width:auto;display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;padding:12px 14px;transform:rotate(1deg);font-size:14px;font-weight:600}
+  .au-note span{display:inline}
+  .au-sign{display:none}
+  .au-tape,.au-tape2,.au-paper,.au-film,.au-globe,.au-kw{display:none}
   .au-stats b{font-size:1.5rem}
 }
 </style>
@@ -117,7 +129,7 @@ a{color:inherit;text-decoration:none}
   <div class="au-polaroid"><img src="assets/img/cafe_community.jpg" alt=""></div>
   <div class="au-hand au-h2">Better<br>Ideas<br>Together.</div>
   <div class="au-hand au-h3">A good story<br>sells more.</div>
-  <div class="au-note">Observe<br>Analyze<br>Think<br>Create<br>Apply</div>
+  <div class="au-note"><span>Observe</span><span>Analyze</span><span>Think</span><span>Create</span><span>Apply</span></div>
   <div class="au-sign">Good<br>Marketing<br>Better<br>People</div>
 
   <div class="au-card">
