@@ -200,6 +200,43 @@ button{font-family:inherit}
 .grp-card{display:flex;gap:12px;align-items:center;padding:14px 18px;text-decoration:none;color:var(--lp-ink)}
 .grp-card b{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
 .grp-card span{font-size:13px;color:var(--lp-ink2)}
+
+/* ---- Kích hoạt bài đầu: 3 bước rõ ràng + thanh hành động cố định trên mobile ---- */
+.lp-steps{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:st}
+.lp-steps li{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:2px 12px;align-items:start;cursor:pointer;padding:10px 12px;border:1px solid var(--lp-line);border-radius:14px;background:var(--lp-card)}
+.lp-steps li::before{counter-increment:st;content:counter(st);grid-row:1/3;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:13px;border:2px solid var(--lp-line);color:var(--lp-ink3);box-sizing:border-box}
+.lp-steps li b{font-size:.95em;color:var(--lp-ink)}
+.lp-steps li span{grid-column:2/4;font-size:.85em;color:var(--lp-ink2);line-height:1.45}
+.lp-steps li em{grid-column:3;grid-row:1;font-style:normal;font-size:.78em;font-weight:700;color:var(--lp-ink3);white-space:nowrap}
+.lp-steps li[data-cur]{border-color:var(--lp-acc);box-shadow:0 0 0 3px var(--lp-acc-soft)}
+.lp-steps li[data-cur]::before{border-color:var(--lp-acc);color:var(--lp-acc)}
+.lp-steps li[data-ok]::before{content:"";border-color:var(--lp-ok);background:var(--lp-ok) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E") center/14px no-repeat}
+.lp-steps li[data-ok] em{color:var(--lp-ok)}
+.lp-more{margin:16px 0}
+.lp-more>summary{cursor:pointer;list-style:none;font-size:.88em;font-weight:700;color:var(--lp-ink2);padding:12px 16px;border:1px dashed var(--lp-line);border-radius:14px;background:var(--lp-card)}
+.lp-more>summary::-webkit-details-marker{display:none}
+.lp-more>summary::after{content:" +";color:var(--lp-acc)}
+.lp-more[open]>summary::after{content:" −"}
+.lp-more[open]>summary{margin-bottom:6px}
+.qsync{margin:12px 14px 0;padding:12px 14px;border-radius:14px;border:1.5px solid var(--lp-bad);background:var(--lp-bad-soft);color:var(--lp-ink);font-size:13.5px;line-height:1.5}
+.qsync[data-ok]{border-color:var(--lp-ok);background:var(--lp-ok-soft)}
+.qsync .lp-btn{margin-top:8px;padding:7px 14px;font-size:13px}
+.qdraft{margin:0 18px 8px;padding:8px 12px;border-radius:12px;background:var(--lp-gold-soft);font-size:13px;color:var(--lp-ink2);display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.qdraft button{border:0;background:none;color:var(--lp-acc);font:inherit;font-weight:700;text-decoration:underline;cursor:pointer;padding:0}
+.lp-cta{display:none}
+@media(max-width:1020px){
+  .lp-grid{padding-bottom:calc(104px + env(safe-area-inset-bottom,0px))}
+  .lp-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px));
+    background:var(--lp-head);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--lp-line);transition:transform .3s}
+  .lp-cta[data-hide]{transform:translateY(120%);pointer-events:none}
+  .lp-cta__in{display:flex;align-items:center;gap:12px;max-width:640px;margin:0 auto}
+  .lp-cta__st{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px;font-size:12.5px;font-weight:700;color:var(--lp-ink2);line-height:1.3}
+  .lp-cta__dots{display:flex;gap:5px}
+  .lp-cta__dots i{flex:1;height:5px;border-radius:9px;background:var(--lp-soft)}
+  .lp-cta__dots i[data-on]{background:var(--lp-acc)}
+  .lp-cta__dots i[data-ok]{background:var(--lp-ok)}
+  .lp-cta__btn{flex:none;border:0;border-radius:999px;background:var(--lp-acc);color:#fff;font:inherit;font-weight:800;font-size:15px;padding:13px 22px;min-height:46px;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=12">
 <link rel="stylesheet" href="assets/css/atelier.css?v=27z1">
@@ -378,7 +415,7 @@ function talkPart(){
 
 function recallPart(){
   const s=S.get(), done=!!(s.recall||{})[key];
-  return `<p>Trước khi xem tóm tắt: viết lại ý chính của bài bằng lời của bạn, trong 60 giây. Không cần đúng chữ, cần đúng ý.
+  return `<p>Tuỳ chọn, không ảnh hưởng điểm: làm xong quiz thì viết lại ý chính của bài bằng lời của bạn, trong 60 giây. Không cần đúng chữ, cần đúng ý.
       Nhớ lại trước rồi mới đọc lại — thứ tự này giúp nhớ lâu hơn đọc lại ngay.</p>
     <div class="row between"><span class="mono" id="rClock">60 giây</span><button class="btn btn--ghost" type="button" id="rGo">Bấm giờ</button></div>
     <textarea class="field" id="rIn" rows="4" placeholder="Ý chính là…">${escH((s.recall||{})[key]||'')}</textarea>
@@ -398,7 +435,7 @@ function summaryHTML(){
 
 /* Kiểm tra nhanh nằm ở thanh bên: mỗi lần một câu, thanh bước, chấm điểm lần đầu khi nộp. */
 function quizPart(){
-  const s=S.get(), st=lessonState(key,s), opened=!!(s.recall||{})[key]||!!st;
+  const s=S.get(), st=lessonState(key,s), opened=quizOpen(s);
   const n=PLAN.quiz.length, graded=!!(st&&st.score!=null);
   const chev='<svg class="ic" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg>';
   const hd=c=>`<div class="sb__h">Kiểm tra nhanh <span class="cnt" id="qCnt">${c}</span><button type="button" class="tg" id="qTg" aria-label="Thu gọn">${chev}</button></div>`;
@@ -413,6 +450,7 @@ function quizPart(){
     <div id="qBody">
     <div class="steps" id="qSteps">${PLAN.quiz.map(()=>'<i></i>').join('')}</div>
     <div class="sb__b" style="padding-bottom:4px">${short}${intro}</div>
+    <div id="qDraftNote" class="qdraft" hidden></div>
     <div id="quizBox" class="${opened?'':'locked'}">
       <div class="qs">${PLAN.quiz.map((it,i)=>qHTML(it,'qz'+i,{no:`CÂU ${i+1} / ${n}`})).join('')}</div>
       <div class="qfoot">
@@ -421,7 +459,7 @@ function quizPart(){
         ${graded?'':'<button type="button" class="qgo qgo--acc" id="qSubmit" disabled hidden>Nộp bài</button>'}
       </div>
     </div>
-    ${opened?'':'<p class="qlock" id="qLockNote">Kiểm tra nhanh mở sau phần <a data-goto="recall">Đổ não 60 giây</a> — nhớ lại trước, kiểm tra sau.</p>'}
+    ${opened?'':'<p class="qlock" id="qLockNote">Quiz mở ngay sau khi bạn trả lời câu <a data-goto="gate">“Dừng &amp; Kiểm tra”</a> ở giữa bài — chỉ một câu và không tính vào điểm bài.</p>'}
     </div></div>`;
 }
 
@@ -452,6 +490,8 @@ function reviewPart(){
 
 
 const cpDone=(s=S.get())=>!!((s.cp||{})[key])||!!lessonState(key,s);
+/* Quiz mở ngay khi người học đã trả lời câu giữa bài (hoặc bài không có câu giữa bài). Đổ não 60 giây không còn chặn quiz. */
+const quizOpen=(s=S.get())=>!PLAN.cp||cpDone(s)||!!lessonState(key,s);
 function stateTag(s){ const st=lessonState(key,s); if(!st) return '';
   const t={learned:['Đã học · chưa vững','var(--red)'],passed:['Đạt','var(--ok)'],solid:['Vững','var(--ok)']}[st.state];
   return `<span class="state" style="color:${t[1]}">${t[0]}${st.score!=null?' · '+st.score+'%':''}${st.source==='stage_exam'?' · qua đề chặng':''}</span>`; }
@@ -492,12 +532,13 @@ function bodyHTML(s){
       <div class="lp-note" style="border-left-color:var(--lp-gold);background:var(--lp-gold-soft)"><b class="t" style="color:var(--lp-gold)">Tình huống</b><span class="lp-lead">${LD.sit||''}</span></div>
     </section>
     ${sec('concept',LD.cName||'Khái niệm',`<p>${LD.cBody||''}</p>`)}
-    ${PLAN.cp?`<div class="gate"><span class="lp-tag lp-tag--acc">Dừng &amp; Kiểm tra · Điểm giữa bài</span>${qHTML(PLAN.cp,'cp')}</div>`:''}
+    ${PLAN.cp?`<div class="gate" id="gate"><span class="lp-tag lp-tag--acc">Dừng &amp; Kiểm tra · Điểm giữa bài</span>${qHTML(PLAN.cp,'cp')}</div>`:''}
     <div id="read2" class="${gateLocked?'locked':''}">${after}</div>
-    ${gateLocked?'<p class="small muted" id="cpNote">Chọn phương án tại điểm dừng để mở tiếp nội dung.</p>':''}
+    ${gateLocked?'<p class="small muted" id="cpNote">Chọn phương án tại điểm dừng để mở tiếp nội dung và mở quiz.</p>':''}
+    <div id="quizSlotM"></div>
     ${sec('drill',D?'Thử nghiệm tương tác':'Luyện tập ngay',drillPart())}
     <div id="talk">${sec('',M.kind==='B'?'Thực hành có đầu ra':'Bảo vệ chiến lược trong 60 giây',talkPart())}</div>
-    ${sec('recall','Đổ não 60 giây',recallPart())}
+    ${sec('recall','Ôn lại 60 giây · sau khi làm quiz',recallPart())}
     ${solidPart()}
     ${sec('rate','Góp ý bài học',`<p class="small muted" style="margin:0">Bài học này thế nào? Đánh giá giúp mình cải thiện nội dung.</p>
         <div class="lp-stars" id="stars">${[1,2,3,4,5].map(n=>`<button type="button" data-n="${n}" aria-label="${n} sao">★</button>`).join('')}</div>
@@ -519,7 +560,7 @@ function sideHTML(s){
       <div id="fcList"><p class="small muted" style="margin:6px 0 0">Bấm vào từ gạch chân trong bài để lưu thuật ngữ.</p></div>
     </div>
   </div>
-  ${quizPart()}
+  <div id="quizSlotD">${quizPart()}</div>
   <a class="sb grp-card" href="bang-xep-hang.html">${ICON.group}<div><b>Nhóm học tập</b><span>Check-in và bảng xếp hạng cùng nhóm →</span></div></a>`;
 }
 
@@ -566,12 +607,17 @@ function render(){
       <div class="lp-metaRow" id="stRow"><span>Khoảng <b>${minutes()} phút</b> cả bài</span><span><b>${nq}</b> câu quiz</span><span id="metaRead">Đã đọc <b>0%</b></span>${D?'<span>Có bài tính số</span>':''}${stateTag(s)}</div>
       <div class="lp-metaRow" id="metaLeft"></div>
 
-      <div class="lp-card"><h3>Điều kiện hoàn thành &amp; nhận XP</h3>
-        <ul class="lp-todo">
-          <li id="todoRead"><span>Đọc hết 100% nội dung bài</span></li>
-          ${PLAN.cp?'<li id="todoGate"><span>Trả lời câu “Dừng &amp; Kiểm tra” giữa bài</span></li>':''}
-          <li id="todoQuiz"><span>${nq?`Hoàn thành “Kiểm tra nhanh” (<span id="todoQn">0</span>/${nq} câu)`:'Hoàn thành bài sau phần Đổ não 60 giây'}</span></li>
-        </ul></div>
+      <div class="lp-card"><h3>Hoàn thành bài trong 3 bước</h3>
+        <ol class="lp-steps" id="lpSteps">
+          <li id="stLearn" data-goto="${PLAN.cp?'gate':'lpMain'}"><b>Học</b><em></em>
+            <span>Đọc phần chính${PLAN.cp?' và trả lời câu “Dừng &amp; Kiểm tra” giữa bài — câu này mở khoá quiz.':'.'}</span></li>
+          <li id="stDo" data-goto="quizPart"><b>Thực hành</b><em></em>
+            <span>${nq?`Làm ${nq} câu kiểm tra nhanh, trả lời đủ ${nq} câu rồi nộp một lần.`:'Bài này chưa có câu quiz riêng: hoàn thành bằng nút ở phần kiểm tra.'}</span></li>
+          <li id="stDone" data-goto="quizPart"><b>Hoàn thành</b><em></em>
+            <span>${nq?`Điểm lần đầu quyết định: đúng từ ${Math.ceil(nq*LESSON_PASS)}/${nq} là Đạt (+${XP.lesson} XP), thấp hơn là Đã học (+${XP.learned} XP). Ôn lại 60 giây sau quiz là tuỳ chọn.`:`Nhận +${XP.learned} XP, bài ở trạng thái Đã học.`}</span></li>
+        </ol></div>
+      <details class="lp-more" id="lpMore" ${window.matchMedia&&matchMedia('(min-width:1021px)').matches?'open':''}>
+        <summary>Gợi ý trước khi học — mẹo, vì sao bài này quan trọng, giải thích đơn giản</summary>
       <div class="lp-card lp-tip"><span class="av">T</span><div><h3 style="margin:0">Mẹo cho bài này</h3><p>${tip}</p></div></div>
       <div class="lp-card lp-why"><h3>Vì sao bài này quan trọng</h3>
         <p>Đây là bài ${nth}/${W.mod.lessons.length} của module <b>${escH(W.mod.t)}</b> (chặng ${W.stage.n}). ${LD.apply?'Bạn sẽ dùng được ngay: '+clip(LD.apply,200):''}</p></div>
@@ -581,6 +627,7 @@ function render(){
           <p><b>Một câu:</b> ${LD.take||''}</p>
           <p><b>Ví dụ đời thường:</b> ${clip(LD.ex||LD.sit,420)}</p>
           ${LD.apply?`<p><b>Thử ngay:</b> ${LD.apply}</p>`:''}</div></div>
+      </details>
 
       ${PLAN.pre?sec('pre','Bắt đầu bằng một câu hỏi',`<p class="small muted" style="margin:0 0 4px">Đoán trước khi đọc. Đoán sai cũng được — sự bất ngờ giúp bạn nhớ insight sâu hơn.</p>${qHTML(PLAN.pre,'pre')}`):''}
       ${bodyHTML(s)}
@@ -592,7 +639,10 @@ function render(){
       </div>
     </article>
     <aside class="lp-side" id="lpSide">${sideHTML(s)}</aside>
-  </div>`;
+  </div>
+  <div class="lp-cta" id="lpCta" role="region" aria-label="Tiến độ và bước tiếp theo"><div class="lp-cta__in">
+    <div class="lp-cta__st"><span class="lp-cta__dots" aria-hidden="true"><i></i><i></i><i></i></span><span id="ctaTxt">Bước 1/3 · Học</span></div>
+    <a class="lp-cta__btn" id="ctaBtn" href="#quizPart">Làm quiz</a></div></div>`;
   wire();
 }
 
@@ -621,6 +671,93 @@ function completeHTML({rec,right,wrong,sk,skBefore,jBefore,before,nx}){
       <a class="btn btn--quiet" href="${nextHref}">${nx?'Bài tiếp theo':'Về trang Hôm nay'} →</a>
     </div>
   </div>`;
+}
+
+/* ---------------- kích hoạt bài đầu: 3 bước, thanh CTA, nháp quiz, lưu kết quả lên server ---------------- */
+function stepState(){
+  const s=S.get(), st=lessonState(key,s), n=PLAN.quiz.length;
+  const done=!!st&&(n?st.score!=null:true);
+  const learn=done||(PLAN.cp?cpDone(s):Math.max(liveP,savedP)>=90);
+  const answered=done?n:Object.keys(ANS).length;
+  const doIt=done||(n>0&&answered>=n);
+  return {done,learn,doIt,answered,n,locked:!quizOpen(s)};
+}
+function nextHrefOf(){ const order=ALL.map(x=>x.key), nx=order[order.indexOf(key)+1]; return nx?'bai.html?id='+encodeURIComponent(nx):'hoc.html'; }
+function paintSteps(){
+  const x=stepState(), pct=Math.round(Math.max(liveP,savedP));
+  const set=(id,ok,cur,txt)=>{ const e=document.getElementById(id); if(!e) return; e.toggleAttribute('data-ok',!!ok); e.toggleAttribute('data-cur',!!cur&&!ok);
+    const v=e.querySelector('em'); if(v) v.textContent=txt; };
+  const cur=x.done?0:!x.learn?1:!x.doIt?2:3;
+  set('stLearn',x.learn,cur===1,x.learn?'Xong':pct+'% đã đọc');
+  set('stDo',x.doIt,cur===2,x.doIt?'Xong':(x.n?x.answered+'/'+x.n+' câu':''));
+  set('stDone',x.done,cur===3,x.done?'Xong':(cur===3?'Nộp bài':''));
+  paintCta(x,cur);
+}
+function paintCta(x,cur){
+  const bar=document.getElementById('lpCta'); if(!bar) return;
+  const btn=document.getElementById('ctaBtn'), txt=document.getElementById('ctaTxt');
+  const dots=[...bar.querySelectorAll('.lp-cta__dots i')];
+  dots.forEach((d,i)=>{ d.toggleAttribute('data-ok',x.done||i+1<cur); d.toggleAttribute('data-on',!x.done&&i+1===cur); });
+  const n=x.n;
+  if(x.done){ txt.textContent='Bài đã hoàn thành'; btn.textContent='Bài tiếp theo →'; btn.dataset.act='next'; btn.href=nextHrefOf(); }
+  else if(cur===3){ txt.textContent='Bước 3/3 · Nộp bài để hoàn thành'; btn.textContent='Nộp bài'; btn.dataset.act='submit'; btn.href='#quizPart'; }
+  else if(cur===2){ txt.textContent='Bước 2/3 · Thực hành'+(n?` · ${x.answered}/${n} câu`:''); btn.textContent='Làm quiz'; btn.dataset.act='quiz'; btn.href='#quizPart'; }
+  else { txt.textContent=x.locked?'Bước 1/3 · Trả lời câu giữa bài để mở quiz':'Bước 1/3 · Học'; btn.textContent='Làm quiz'; btn.dataset.act=x.locked?'gate':'quiz'; btn.href=x.locked?'#gate':'#quizPart'; }
+}
+function unlockQuiz(){
+  const qb=document.getElementById('quizBox'); if(qb) qb.classList.remove('locked'); document.getElementById('qLockNote')?.remove();
+  const nq2=document.getElementById('noQuizDone'); if(nq2) nq2.disabled=false; paintSteps();
+}
+const MQ_NARROW=window.matchMedia('(max-width:1020px)');
+function placeQuiz(){ const q=document.getElementById('quizPart'), t=document.getElementById(MQ_NARROW.matches?'quizSlotM':'quizSlotD'); if(q&&t&&q.parentElement!==t) t.appendChild(q); }
+
+/* nháp quiz: chọn đến đâu lưu đến đó (cùng kho đồng bộ với tiến độ), vào lại bài thì làm tiếp */
+function saveDraft(){ const st=lessonState(key); if(st&&st.score!=null) return;
+  const a={...ANS}; LS.set('qd',Object.keys(a).length?{a,t:Date.now()}:undefined); paintSteps(); }
+function clearDraft(){ LS.set('qd',undefined); }
+function restoreDraft(){
+  const d=LS.get('qd',null), st=lessonState(key); if(!d||!d.a||(st&&st.score!=null)||!PLAN.quiz.length) return;
+  let n=0;
+  PLAN.quiz.forEach((it,i)=>{ const id='qz'+i, v=d.a[id]; if(v===undefined||v===null||v==='') return;
+    ANS[id]=v; n++; QS.st[i]='done';
+    const box=document.getElementById(id); if(!box) return;
+    if(it.type==='calc'){ const inp=box.querySelector('input'); if(inp){ inp.value=v; inp.style.borderColor='var(--ink)'; } }
+    else box.querySelectorAll('.opt').forEach(b=>b.dataset.r=b.dataset.k===v?'picked':''); });
+  if(!n) return;
+  const first=PLAN.quiz.findIndex((_,i)=>ANS['qz'+i]===undefined);
+  QS.cur=first<0?PLAN.quiz.length-1:first;
+  const sb=document.getElementById('qSubmit'); if(sb) sb.disabled=Object.keys(ANS).length<PLAN.quiz.length;
+  const note=document.getElementById('qDraftNote');
+  if(note){ note.hidden=false; note.innerHTML=`<span>Đã khôi phục ${n}/${PLAN.quiz.length} câu bạn trả lời dở. Sửa được trước khi nộp.</span><button type="button" id="qDraftReset">Làm lại từ đầu</button>`;
+    document.getElementById('qDraftReset').onclick=()=>{ Object.keys(ANS).forEach(k=>delete ANS[k]); clearDraft(); render(); }; }
+}
+
+/* lưu kết quả bài lên máy chủ: không nuốt lỗi — báo rõ, cho thử lại, nhớ để tự thử lại lần sau */
+async function syncComplete(k=key){
+  const u=await account(); if(!u) return {ok:true,skipped:true};
+  try{ await api('/lessons/'+encodeURIComponent(k)+'/complete',{method:'POST',body:{}});
+    const s=S.get(), p={...(s.pend||{})}; if(p[k]){ delete p[k]; S.set({pend:p}); }
+    return {ok:true};
+  }catch(e){ const s=S.get(); S.set({pend:{...(s.pend||{}),[k]:Date.now()}}); return {ok:false,err:e}; }
+}
+function syncMsg(e){
+  const st=e&&e.status, code=e&&e.message;
+  if(st===401) return 'Bạn chưa đăng nhập, nên kết quả mới lưu trên máy này. Đăng nhập lại để lưu lên tài khoản.';
+  if(st===409||code==='quiz_incomplete') return 'Máy chủ chưa nhận đủ câu trả lời của quiz nên chưa ghi hoàn thành. Bấm “Thử lại”; nếu vẫn báo lỗi, hãy báo cho chúng mình.';
+  return 'Chưa lưu được kết quả lên máy chủ (mất kết nối hoặc máy chủ đang bận). Kết quả vẫn nằm trên máy bạn; bấm “Thử lại” khi có mạng.';
+}
+function showSyncBanner(err){
+  document.getElementById('qSync')?.remove();
+  const box=document.getElementById('quizBox')||document.getElementById('lpMain'); if(!box) return;
+  box.insertAdjacentHTML('afterbegin',`<div class="qsync" id="qSync" role="alert"><b>Chưa lưu lên tài khoản.</b> ${syncMsg(err)}<br><button type="button" class="lp-btn" id="qSyncRetry">Thử lại</button></div>`);
+  document.getElementById('qSyncRetry').onclick=async e=>{ const b=e.target; b.disabled=true; b.textContent='Đang lưu…';
+    const r=await syncComplete();
+    if(r.ok){ const el=document.getElementById('qSync'); el.setAttribute('data-ok',''); el.innerHTML='<b>Đã lưu kết quả lên tài khoản.</b>'; setTimeout(()=>el.remove(),3500); }
+    else showSyncBanner(r.err); };
+}
+async function retryPending(){
+  const p=S.get().pend||{}; for(const k of Object.keys(p)){ const r=await syncComplete(k);
+    if(!r.ok&&k===key) showSyncBanner(r.err); }
 }
 const logged=new Set();
 function wire(){
@@ -683,10 +820,11 @@ function wireQuestions(){
     if(id==='pre'){ reveal(id,it,given,{context:'practice'}); return; }                         // đoán trước: không chấm, không ghi
     if(id==='cp'){ const g=await reveal(id,it,given,{context:'checkpoint'}); if(!g) return; logMiss(it,g);
       const s=S.get(); S.set({cp:{...(s.cp||{}),[key]:today()}});
-      const r=document.getElementById('read2'); if(r) r.classList.remove('locked'); document.getElementById('cpNote')?.remove(); refreshHud(); return; }
+      const r=document.getElementById('read2'); if(r) r.classList.remove('locked'); document.getElementById('cpNote')?.remove();
+      unlockQuiz(); toast('Đã mở quiz — làm xong để hoàn thành bài'); refreshHud(); return; }
     if(id.startsWith('qz')){
       if(firstTry()){                                                        // lần đầu: chỉ ghi nhận, chưa lộ đúng sai
-        ANS[id]=given; const box=document.getElementById(id);
+        ANS[id]=given; saveDraft(); const box=document.getElementById(id);
         box.querySelectorAll('.opt').forEach(b=>b.dataset.r=b.dataset.k===given?'picked':''); QS_pick(id);
         const sb=document.getElementById('qSubmit'); if(sb) sb.disabled=Object.keys(ANS).length<PLAN.quiz.length; return; }
       const g=await reveal(id,it,given,{context:'practice'}); if(g){ logMiss(it,g); QS_result(id,g.ok); } return; }   // làm lại: luyện, không đổi điểm
@@ -699,7 +837,7 @@ function wireQuestions(){
   app.querySelectorAll('.opt[data-q]').forEach(b=>b.onclick=()=>answer(b.dataset.q,b.dataset.k));
   app.querySelectorAll('form.answer[data-q]').forEach(f=>f.onsubmit=e=>{ e.preventDefault();
     const v=f.querySelector('input').value.trim(); if(!v) return;
-    if(f.dataset.q.startsWith('qz')&&firstTry()){ ANS[f.dataset.q]=v; f.querySelector('input').style.borderColor='var(--ink)'; QS_pick(f.dataset.q);
+    if(f.dataset.q.startsWith('qz')&&firstTry()){ ANS[f.dataset.q]=v; saveDraft(); f.querySelector('input').style.borderColor='var(--ink)'; QS_pick(f.dataset.q);
       const sb=document.getElementById('qSubmit'); if(sb) sb.disabled=Object.keys(ANS).length<PLAN.quiz.length; return; }
     answer(f.dataset.q,v); });
 
@@ -717,25 +855,24 @@ function wireQuestions(){
     for(let i=0;i<PLAN.quiz.length;i++){ const it=PLAN.quiz[i], g=await reveal('qz'+i,it,ANS['qz'+i],{context:'lesson',pre:grades[i]});
       if(!g){ sb.disabled=false; sb.textContent='Nộp lại'; toast(GRADE_OFFLINE); return; }
       if(g.ok) right++; else wrong.push(it); logMiss(it,g); QS_result('qz'+i,g.ok); }
-    if(API.user) api('/lessons/'+encodeURIComponent(key)+'/complete',{method:'POST',body:{}}).catch(()=>{});   // server lưu điểm lần đầu
-    const rec=completeLesson(key,right,PLAN.quiz.length);
+    const rec=completeLesson(key,right,PLAN.quiz.length);   // điểm lần đầu lưu trên máy ngay; server lưu ở bước dưới
+    clearDraft(); const sync=await syncComplete();
     sb.remove(); QS.sent=true; QS.cur=0; QS_paint(); refreshHud();
     const s=S.get(); document.querySelector('#stRow .state')?.remove();
     document.getElementById('stRow').insertAdjacentHTML('beforeend',stateTag(s));
     const order=ALL.map(x=>x.key), nx=order[order.indexOf(key)+1];
     document.getElementById('nextBtn').innerHTML=nextBtn(s,nx);
     document.getElementById('quizBox').insertAdjacentHTML('beforeend',completeHTML({rec,right,wrong,sk,skBefore,jBefore,before,nx}));
+    if(!sync.ok) showSyncBanner(sync.err);
     document.querySelector('.complete').scrollIntoView({behavior:'smooth',block:'center'});
   };
   const nq=document.getElementById('noQuizDone');
   if(nq) nq.onclick=()=>{ completeLesson(key,0,0); render(); };
 
-  /* tự nhớ lại 60 giây → mới mở tóm tắt và quiz */
+  /* ôn lại 60 giây (sau quiz, tuỳ chọn) → mở tóm tắt */
   const rIn=document.getElementById('rIn');
   const openSummary=(text)=>{ const s=S.get(); S.set({recall:{...(s.recall||{}),[key]:text||'(bỏ qua)'}});
-    document.getElementById('sum').hidden=false;
-    const qb=document.getElementById('quizBox'); if(qb) qb.classList.remove('locked'); document.getElementById('qLockNote')?.remove();
-    const nq2=document.getElementById('noQuizDone'); if(nq2) nq2.disabled=false; };
+    document.getElementById('sum').hidden=false; };
   document.getElementById('rDone').onclick=()=>openSummary(rIn.value.trim());
   document.getElementById('rSkip').onclick=()=>openSummary('');
   let rt=null; document.getElementById('rGo').onclick=e=>{ const c=document.getElementById('rClock');
@@ -773,7 +910,7 @@ function refreshHud(){
   const hb=document.getElementById('hudBar'); if(hb) hb.style.width=p+'%';
   const ok=(id,v)=>{ const e=document.getElementById(id); if(e) e.toggleAttribute('data-ok',!!v); };
   if(st&&st.score!=null&&n){ const t=document.getElementById('todoQn'); if(t) t.textContent=n; }
-  ok('todoRead',p>=98); ok('todoGate',cpDone(s)); ok('todoQuiz',!!st&&(n?st.score!=null:true));
+  void ok; paintSteps();
 }
 const termHay=()=>{
   if(typeof GLOSSARY==='undefined') return [];
@@ -804,6 +941,19 @@ function linkTerms(){
 function wireExtra(){
   QS.first=!!document.getElementById('qSubmit'); QS.sent=false;
   savedP=LS.get('prog',0);
+  placeQuiz(); if(MQ_NARROW.addEventListener) MQ_NARROW.addEventListener('change',placeQuiz); else MQ_NARROW.addListener(placeQuiz);
+  restoreDraft(); retryPending();
+  /* thanh CTA: bấm đi tới bước đang cần; ẩn khi quiz đang trên màn hình hoặc đang gõ */
+  const cb=document.getElementById('ctaBtn');
+  if(cb) cb.onclick=e=>{ const a=cb.dataset.act; if(a==='next') return;
+    e.preventDefault();
+    const to=a==='gate'?'gate':a==='submit'?'qSubmit':'quizPart';
+    const el=document.getElementById(to)||document.getElementById('quizPart'); if(el) el.scrollIntoView({behavior:'smooth',block:a==='submit'?'center':'start'}); };
+  const bar=document.getElementById('lpCta'), qp=document.getElementById('quizPart');
+  if(bar&&qp&&'IntersectionObserver' in window){
+    new IntersectionObserver(es=>{ bar.toggleAttribute('data-hide',es[0].isIntersecting); },{rootMargin:'0px 0px -110px 0px',threshold:0}).observe(qp); }
+  const typing=e=>{ if(bar&&/^(INPUT|TEXTAREA)$/.test((e.target||{}).tagName||'')) bar.toggleAttribute('data-hide',e.type==='focusin'); };
+  document.addEventListener('focusin',typing); document.addEventListener('focusout',typing);
 
   /* cỡ chữ hiển thị theo % */
   const fsV=()=>{ const e=document.getElementById('fsV'); if(e) e.textContent=Math.round((S.get().read||18)/16*100)+'%'; };
@@ -871,6 +1021,8 @@ function wireExtra(){
   /* thanh bên: thu gọn, nhảy tới phần, bước kiểm tra */
   const qt=document.getElementById('qTg'); if(qt) qt.onclick=()=>{ const b=document.getElementById('qBody'); b.hidden=!b.hidden; qt.style.transform=b.hidden?'rotate(180deg)':''; };
   document.querySelectorAll('[data-goto]').forEach(a=>a.onclick=()=>document.getElementById(a.dataset.goto)?.scrollIntoView({behavior:'smooth',block:'start'}));
+  document.querySelectorAll('#lpSteps li[data-goto]').forEach(li=>{ li.tabIndex=0; li.setAttribute('role','link');
+    li.onkeydown=e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); li.click(); } }; });
   document.querySelectorAll('#qDots button').forEach(b=>b.onclick=()=>{ QS.cur=+b.dataset.g; QS_paint(); });
   const nx=document.getElementById('qNext');
   if(nx) nx.onclick=()=>{ if(QS.first&&!QS.sent&&QS.st[QS.cur]==='pick') QS.st[QS.cur]='done';
