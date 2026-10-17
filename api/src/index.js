@@ -17,6 +17,7 @@ import * as google from './google.js';
 import * as ln from './learn.js';
 import * as rm from './realm.js';
 import * as so from './social.js';
+import { publicStats } from './stats.js';
 
 /* Chống CSRF: mọi request thay đổi dữ liệu phải mang header riêng.
    Trình duyệt không gửi header tuỳ ý sang origin khác nếu không có CORS — mà API này không bật CORS. */
@@ -81,19 +82,7 @@ async function route(request, env, url) {
   if (p === '/api/auth/google/callback' && m === 'GET') return google.callback(request, env);
   if (p === '/api/auth/providers' && m === 'GET') return json({ email: env.DEV_SHOW_LINK === '1' || !!(env.EMAIL && env.MAIL_FROM && !env.MAIL_FROM.includes('<')), google: !!(env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET) });
 
-  /* Số thật cho trang chủ. learners = tài khoản đã đăng ký; lessons_done = tổng LƯỢT hoàn thành bài (người × bài, chỉ bài học thật,
-     không tính đề vượt chặng/xếp lớp/quản trị) — không phải số bài khác nhau. Chỉ đếm, không lộ ai; cache ngắn để trang chủ không gõ D1 mỗi lượt xem. */
-  if (p === '/api/stats' && m === 'GET') {
-    const r = await env.DB.prepare(`SELECT
-        (SELECT COUNT(*) FROM users WHERE email NOT LIKE '%@system.invalid') AS learners,
-        (SELECT COUNT(*) FROM users WHERE created_at > ?1 AND email NOT LIKE '%@system.invalid') AS joined_7d,
-        (SELECT COUNT(*) FROM lesson_progress lp JOIN users u ON u.id = lp.user_id
-           WHERE lp.state IN ('learned','passed','solid','mastered') AND lp.completion_source = 'lesson'
-             AND u.email NOT LIKE '%@system.invalid') AS lessons_done`)
-      .bind(Date.now() - 7 * 864e5).first();
-    return json({ learners: r?.learners || 0, joined_7d: r?.joined_7d || 0, lessons_done: r?.lessons_done || 0 }, 200,
-                { 'cache-control': 'public, max-age=300' });
-  }
+  if (p === '/api/stats' && m === 'GET') return publicStats(env);
 
   /* Số người đã học từng bài (đã xong ít nhất mức "learned"). Chỉ đếm, không lộ ai. */
   if (p === '/api/lessons/learners' && m === 'GET') {
