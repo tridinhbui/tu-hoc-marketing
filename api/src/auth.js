@@ -1,6 +1,8 @@
 /* Đăng nhập bằng link gửi qua email. Không có mật khẩu để lộ.
    Link dùng được một lần, sống 15 phút. Phiên sống 30 ngày trong KV. */
 import { json, now, rid, str, sha256, randomToken, sessionCookie, currentUser, allow, body, publicName, isAdmin, COOKIE } from './lib.js';
+import { loadConfig } from './progress.js';
+import { flagsFromConfig } from './experiments.js';
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const LINK_TTL = 15 * 60, SESSION_TTL = 30 * 24 * 3600;
@@ -75,8 +77,11 @@ function friendlyName(u) {
 export async function me(req, env) {
   const u = await currentUser(req, env);
   if (!u) return json({ user: null });
+  /* Cờ thí nghiệm cho trình duyệt. Lỗi đọc cấu hình → mọi cờ tắt (hành vi cũ), không làm hỏng /api/me. */
+  let exp = flagsFromConfig(null);
+  try { exp = flagsFromConfig(await loadConfig(env)); } catch { /* giữ cờ tắt */ }
   return json({ user: { id: u.id, email: u.email, name: publicName(u), display_name: u.display_name, persona: u.persona,
-    friendly_name: friendlyName(u), avatar: u.avatar_url || null, is_admin: isAdmin(u, env) } });
+    friendly_name: friendlyName(u), avatar: u.avatar_url || null, is_admin: isAdmin(u, env) }, exp });
 }
 
 export async function updateMe(req, env) {

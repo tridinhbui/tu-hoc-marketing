@@ -18,6 +18,7 @@ import * as ln from './learn.js';
 import * as rm from './realm.js';
 import * as so from './social.js';
 import { publicStats } from './stats.js';
+import { postEvents } from './experiments.js';
 
 /* Chống CSRF: mọi request thay đổi dữ liệu phải mang header riêng.
    Trình duyệt không gửi header tuỳ ý sang origin khác nếu không có CORS — mà API này không bật CORS. */
@@ -71,6 +72,7 @@ async function route(request, env, url) {
   if (p === '/api/chat' && m === 'POST') return so.sendChat(request, env);
   if (p === '/api/chat/unread' && m === 'GET') return so.myChatUnread(request, env);
   if (p === '/api/track' && m === 'POST') return so.track(request, env);
+  if (p === '/api/events' && m === 'POST') return postEvents(request, env, await pg.loadConfig(env));
   if (p === '/api/admin/metrics' && m === 'GET') return so.adminMetrics(request, env);
   if (p === '/api/admin/users' && m === 'GET') return so.adminUsers(request, env);
   if (p === '/api/admin/chats' && m === 'GET') return so.adminChats(request, env);

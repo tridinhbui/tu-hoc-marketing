@@ -200,6 +200,21 @@ button{font-family:inherit}
 .grp-card{display:flex;gap:12px;align-items:center;padding:14px 18px;text-decoration:none;color:var(--lp-ink)}
 .grp-card b{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
 .grp-card span{font-size:13px;color:var(--lp-ink2)}
+
+/* ---- EXP-01: thanh "Kiểm tra nhanh · n/5" cố định (chỉ di động, chỉ khi cờ bật). Giữ giọng tạp chí: một dòng chữ, đường kẻ mảnh, không nút màu. */
+.lp-qcta{display:none}
+@media(max-width:1020px){
+  .lp-qcta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--lp-head);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-top:1px solid var(--lp-line);padding:0 clamp(16px,4vw,32px) env(safe-area-inset-bottom,0px)}
+  .lp-qcta[hidden]{display:none}
+  .lp-qcta__btn{display:flex;align-items:center;gap:10px;width:100%;min-height:48px;background:none;border:0;padding:0;font:inherit;font-size:15px;color:var(--lp-ink);cursor:pointer;text-align:left}
+  .lp-qcta__btn b{font-weight:700;font-variant-numeric:tabular-nums}   /* chữ giữ màu mực (tương phản 15:1); màu nhấn chỉ cho mũi tên trang trí */
+  .lp-qcta__btn>span[aria-hidden]{color:var(--lp-acc)}
+  .lp-qcta__btn:focus-visible{outline:2px solid var(--lp-acc);outline-offset:-4px}
+  html.has-qcta .lp-grid{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+}
+/* Thanh này hiện/ẩn theo cuộn: không dùng hiệu ứng "trồi lên" chung của #app>* (studio.css), tránh nhấp nháy mỗi lần hiện. */
+:root[data-theme="ivory"] #app>.lp-qcta{animation:none}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=12">
 <link rel="stylesheet" href="assets/css/atelier.css?v=27z1">
@@ -223,9 +238,10 @@ button{font-family:inherit}
 (()=>{ const m=/^B:([a-z]{2}\d{2})-/.exec(new URLSearchParams(location.search).get('id')||'');
   if(m) document.write('<script src="assets/js/data/bai/'+m[1]+'.js?v='+BAI_V+'"><\/script>'); })();</script>
 <script src="assets/js/data/exams.js?v=10"></script>
-<script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/app.js?v=22"></script>
 <script src="assets/js/yy.js?v=6z1"></script>
 <script src="assets/js/exam.js?v=9f1"></script>
+<script src="assets/js/learn-events.js?v=1"></script>
 <script>
 appShell('');
 /* Không có ?id thì chọn bài kế tiếp rồi nạp lại với id rõ ràng — file dữ liệu của module chỉ tải được theo ?id. */
@@ -256,6 +272,12 @@ const CARDS={ all(){ return S.get().cards||{}; }, has(id){ return !!this.all()[i
    Thứ tự ưu tiên: câu thường trước, câu cốt lõi sau — câu cốt lõi chỉ dùng khi bài thiếu câu.
    Thiếu câu thì bỏ phần đoán trước trước tiên, và nói thẳng trên trang khi quiz ngắn hơn chuẩn. */
 const QUIZ_TARGET=5;
+/* ---- EXP-01 · lối vào quiz ----
+   Mặc định mọi cờ TẮT = hành vi cũ nguyên vẹn. Máy chủ cấp cờ qua /api/me (app_config: exp_quiz_entry, exp_pre_ungraded,
+   events_enabled); xem loadExp(). EV = bộ phát sự kiện (no-op khi đo lường tắt). */
+let EXP={quiz:false,pre:false,events:false,release:'r0',forced:false};
+let EV={enabled:false,lsid:null,emit:()=>false,flush:()=>{},pending:()=>0};
+let QS_visible=false;
 const POOL=(()=>{ const p=EXAM_ITEMS.filter(x=>x.source===key||(x.teaches||[]).includes(key)), by=(a,b)=>a.id<b.id?-1:1;
   return [...p.filter(x=>!x.core).sort(by),...p.filter(x=>x.core).sort(by)]; })();
 const PLAN=(()=>{ const q=[...POOL]; const pre=q.length>=QUIZ_TARGET?q.shift():null, cp=q.length?q.shift():null;
@@ -376,10 +398,14 @@ function talkPart(){
       </div></div>`:''}`;
 }
 
+/* EXP-01: khi cờ bật và bài có quiz, đổ não là bước TUỲ CHỌN (không còn khoá quiz). Bài không có quiz giữ nguyên:
+   đổ não vẫn là điều kiện để bấm "Hoàn thành bài". */
+const recallOptional=()=>EXP.quiz&&PLAN.quiz.length>0;
 function recallPart(){
   const s=S.get(), done=!!(s.recall||{})[key];
-  return `<p>Trước khi xem tóm tắt: viết lại ý chính của bài bằng lời của bạn, trong 60 giây. Không cần đúng chữ, cần đúng ý.
-      Nhớ lại trước rồi mới đọc lại — thứ tự này giúp nhớ lâu hơn đọc lại ngay.</p>
+  return `<p>${recallOptional()
+      ?'Tuỳ chọn, không ảnh hưởng việc mở bài kiểm tra hay điểm: viết lại ý chính của bài bằng lời của bạn, trong 60 giây. Không cần đúng chữ, cần đúng ý. Nhớ lại trước rồi mới xem tóm tắt giúp nhớ lâu hơn.'
+      :'Trước khi xem tóm tắt: viết lại ý chính của bài bằng lời của bạn, trong 60 giây. Không cần đúng chữ, cần đúng ý. Nhớ lại trước rồi mới đọc lại — thứ tự này giúp nhớ lâu hơn đọc lại ngay.'}</p>
     <div class="row between"><span class="mono" id="rClock">60 giây</span><button class="btn btn--ghost" type="button" id="rGo">Bấm giờ</button></div>
     <textarea class="field" id="rIn" rows="4" placeholder="Ý chính là…">${escH((s.recall||{})[key]||'')}</textarea>
     <div class="row" style="margin-top:10px;gap:10px"><button class="btn" type="button" id="rDone">Xong · xem tóm tắt</button>
@@ -398,13 +424,13 @@ function summaryHTML(){
 
 /* Kiểm tra nhanh nằm ở thanh bên: mỗi lần một câu, thanh bước, chấm điểm lần đầu khi nộp. */
 function quizPart(){
-  const s=S.get(), st=lessonState(key,s), opened=!!(s.recall||{})[key]||!!st;
+  const s=S.get(), st=lessonState(key,s), opened=quizOpen(s), openedByRecall=!!(s.recall||{})[key]||!!st;
   const n=PLAN.quiz.length, graded=!!(st&&st.score!=null);
   const chev='<svg class="ic" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg>';
   const hd=c=>`<div class="sb__h">Kiểm tra nhanh <span class="cnt" id="qCnt">${c}</span><button type="button" class="tg" id="qTg" aria-label="Thu gọn">${chev}</button></div>`;
   if(!n) return `<div class="sb" id="quizPart">${hd('0/0')}<div class="sb__b" id="qBody"><p class="small muted">Bài này chưa có câu quiz riêng. Hoàn thành bằng câu kiểm tra giữa bài và phần tự nhớ lại —
       bài sẽ ở trạng thái <b>Đã học</b>, chưa xác nhận được Đạt.</p>
-    <button class="btn" id="noQuizDone" ${opened?'':'disabled'}>Hoàn thành bài · +${XP.learned} XP</button></div></div>`;
+    <button class="btn" id="noQuizDone" ${openedByRecall?'':'disabled'}>Hoàn thành bài · +${XP.learned} XP</button></div></div>`;
   const short=n<QUIZ_TARGET?`<p class="small muted" style="margin:0 0 8px">Bài này mới có ${n} câu quiz (chuẩn là ${QUIZ_TARGET}). Điểm vẫn tính, nhưng ít bằng chứng hơn.</p>`:'';
   const intro=graded
     ? `<p class="small" style="margin:0 0 6px">Điểm lần đầu: <b>${st.right}/${st.total}</b> · ${st.state==='learned'?'Đã học, chưa vững':'Đạt'}. Làm lại để luyện — điểm lần đầu không đổi.</p>`
@@ -421,7 +447,9 @@ function quizPart(){
         ${graded?'':'<button type="button" class="qgo qgo--acc" id="qSubmit" disabled hidden>Nộp bài</button>'}
       </div>
     </div>
-    ${opened?'':'<p class="qlock" id="qLockNote">Kiểm tra nhanh mở sau phần <a data-goto="recall">Đổ não 60 giây</a> — nhớ lại trước, kiểm tra sau.</p>'}
+    ${opened?'':(EXP.quiz&&PLAN.cp
+      ?'<p class="qlock" id="qLockNote">Kiểm tra nhanh mở ngay sau khi bạn trả lời câu <a data-goto="gate">“Dừng &amp; Kiểm tra”</a> giữa bài.</p>'
+      :'<p class="qlock" id="qLockNote">Kiểm tra nhanh mở sau phần <a data-goto="recall">Đổ não 60 giây</a> — nhớ lại trước, kiểm tra sau.</p>')}
     </div></div>`;
 }
 
@@ -452,6 +480,9 @@ function reviewPart(){
 
 
 const cpDone=(s=S.get())=>!!((s.cp||{})[key])||!!lessonState(key,s);
+/* Quiz mở khi: đã nhớ lại (đường cũ) / đã có trạng thái bài / — chỉ khi cờ EXP-01 bật — đã trả lời câu giữa bài hoặc bài không có câu giữa bài.
+   Cờ tắt → đúng điều kiện cũ. Ngưỡng đạt, số câu, XP, cách chấm KHÔNG đổi. */
+const quizOpen=(s=S.get())=>!!((s.recall||{})[key])||!!lessonState(key,s)||(EXP.quiz&&(!PLAN.cp||cpDone(s)));
 function stateTag(s){ const st=lessonState(key,s); if(!st) return '';
   const t={learned:['Đã học · chưa vững','var(--red)'],passed:['Đạt','var(--ok)'],solid:['Vững','var(--ok)']}[st.state];
   return `<span class="state" style="color:${t[1]}">${t[0]}${st.score!=null?' · '+st.score+'%':''}${st.source==='stage_exam'?' · qua đề chặng':''}</span>`; }
@@ -492,12 +523,12 @@ function bodyHTML(s){
       <div class="lp-note" style="border-left-color:var(--lp-gold);background:var(--lp-gold-soft)"><b class="t" style="color:var(--lp-gold)">Tình huống</b><span class="lp-lead">${LD.sit||''}</span></div>
     </section>
     ${sec('concept',LD.cName||'Khái niệm',`<p>${LD.cBody||''}</p>`)}
-    ${PLAN.cp?`<div class="gate"><span class="lp-tag lp-tag--acc">Dừng &amp; Kiểm tra · Điểm giữa bài</span>${qHTML(PLAN.cp,'cp')}</div>`:''}
+    ${PLAN.cp?`<div class="gate" id="gate"><span class="lp-tag lp-tag--acc">Dừng &amp; Kiểm tra · Điểm giữa bài</span>${qHTML(PLAN.cp,'cp')}</div>`:''}
     <div id="read2" class="${gateLocked?'locked':''}">${after}</div>
     ${gateLocked?'<p class="small muted" id="cpNote">Chọn phương án tại điểm dừng để mở tiếp nội dung.</p>':''}
     ${sec('drill',D?'Thử nghiệm tương tác':'Luyện tập ngay',drillPart())}
     <div id="talk">${sec('',M.kind==='B'?'Thực hành có đầu ra':'Bảo vệ chiến lược trong 60 giây',talkPart())}</div>
-    ${sec('recall','Đổ não 60 giây',recallPart())}
+    ${sec('recall',recallOptional()?'Một câu để nhớ lâu · tuỳ chọn':'Đổ não 60 giây',recallPart())}
     ${solidPart()}
     ${sec('rate','Góp ý bài học',`<p class="small muted" style="margin:0">Bài học này thế nào? Đánh giá giúp mình cải thiện nội dung.</p>
         <div class="lp-stars" id="stars">${[1,2,3,4,5].map(n=>`<button type="button" data-n="${n}" aria-label="${n} sao">★</button>`).join('')}</div>
@@ -568,9 +599,11 @@ function render(){
 
       <div class="lp-card"><h3>Điều kiện hoàn thành &amp; nhận XP</h3>
         <ul class="lp-todo">
-          <li id="todoRead"><span>Đọc hết 100% nội dung bài</span></li>
-          ${PLAN.cp?'<li id="todoGate"><span>Trả lời câu “Dừng &amp; Kiểm tra” giữa bài</span></li>':''}
-          <li id="todoQuiz"><span>${nq?`Hoàn thành “Kiểm tra nhanh” (<span id="todoQn">0</span>/${nq} câu)`:'Hoàn thành bài sau phần Đổ não 60 giây'}</span></li>
+          ${EXP.quiz?'':'<li id="todoRead"><span>Đọc hết 100% nội dung bài</span></li>'}
+          ${PLAN.cp?`<li id="todoGate"><span>${EXP.quiz?'Trả lời câu “Dừng &amp; Kiểm tra” giữa bài — câu này mở phần còn lại và mở bài kiểm tra.':'Trả lời câu “Dừng &amp; Kiểm tra” giữa bài'}</span></li>`:''}
+          <li id="todoQuiz"><span>${nq?(EXP.quiz
+            ?`Làm ${nq} câu “Kiểm tra nhanh” (<span id="todoQn">0</span>/${nq}) rồi nộp một lần: đúng từ ${Math.ceil(nq*LESSON_PASS)}/${nq} là Đạt (+${XP.lesson} XP); thấp hơn vẫn tính là đã học (+${XP.learned} XP) và câu sai vào hàng ôn.`
+            :`Hoàn thành “Kiểm tra nhanh” (<span id="todoQn">0</span>/${nq} câu)`):'Hoàn thành bài sau phần Đổ não 60 giây'}</span></li>
         </ul></div>
       <div class="lp-card lp-tip"><span class="av">T</span><div><h3 style="margin:0">Mẹo cho bài này</h3><p>${tip}</p></div></div>
       <div class="lp-card lp-why"><h3>Vì sao bài này quan trọng</h3>
@@ -592,8 +625,66 @@ function render(){
       </div>
     </article>
     <aside class="lp-side" id="lpSide">${sideHTML(s)}</aside>
-  </div>`;
+  </div>
+  ${EXP.quiz&&nq?`<div class="lp-qcta" id="quizCta" hidden>
+    <button type="button" class="lp-qcta__btn" id="quizCtaBtn" aria-controls="quizPart">
+      <span id="qctaT">Kiểm tra nhanh · <b id="qctaN">0/${nq}</b></span><span aria-hidden="true">→</span></button></div>`:''}`;
   wire();
+}
+
+/* ---------------- EXP-01: nạp cờ, thanh "Kiểm tra nhanh" cố định trên di động, sự kiện ---------------- */
+/* Cờ do máy chủ cấp (account() → API.exp). Không có API / lỗi / quá 1,5 giây → mọi cờ tắt = hành vi cũ.
+   QA: ?exp_quiz_entry=0 luôn tắt; ?exp_quiz_entry=1 chỉ có hiệu lực khi chạy cục bộ (không có API) hoặc tài khoản admin.
+   Phiên bị ép bằng URL không phát sự kiện đo lường (không làm nhiễu số liệu). */
+async function loadExp(){
+  const force=qp('exp_quiz_entry');
+  let user;
+  try{ user=await Promise.race([account(),new Promise(r=>setTimeout(()=>r(undefined),1500))]); }catch(e){ user=undefined; }
+  const fl=API.exp||{};
+  let quiz=!!fl.quiz_entry, forced=false;
+  if(force==='0'){ quiz=false; forced=true; }
+  else if(force==='1'&&(API.on!==true||(user&&user.is_admin))){ quiz=true; forced=true; }
+  EXP={quiz,pre:!!fl.pre_ungraded&&!forced,events:!!fl.events&&!!user&&!forced&&!qp('notrack'),release:quiz?'r1':'r0',forced};
+  EV=LearnEvents.forBrowser({enabled:EXP.events,lesson:key,release:EXP.release,device:innerWidth<=1020?'mobile':'desktop'});
+}
+const isFirstLesson=()=>Object.keys(S.get().done||{}).length===0;
+function trackOpen(){
+  if(!EV.enabled) return;
+  const go=()=>EV.emit('lesson_opened',{mode:'full',lesson_kind:M&&M.kind,is_first_lesson:isFirstLesson()});
+  setTimeout(()=>{ if(document.visibilityState==='visible') go();
+    else document.addEventListener('visibilitychange',function f(){ if(document.visibilityState==='visible'){ document.removeEventListener('visibilitychange',f); go(); } }); },2000);
+}
+const answeredN=()=>QS.st.filter(Boolean).length;
+/* Thanh cố định chỉ hiện khi: cờ bật · bài có quiz · quiz đã mở · chưa nộp · đã cuộn ≥70% · quiz chưa nằm trong khung nhìn. */
+function ctaUpdate(){
+  const el=document.getElementById('quizCta'); if(!el) return;
+  const st=lessonState(key,S.get()), graded=!!(st&&st.score!=null);
+  const show=!graded&&!QS.sent&&quizOpen()&&liveP>=70&&!QS_visible;
+  if(el.hidden===show){ el.hidden=!show; document.documentElement.classList.toggle('has-qcta',show); }
+  const n=PLAN.quiz.length, a=answeredN(), c=document.getElementById('qctaN'); if(c) c.textContent=a+'/'+n;
+  const b=document.getElementById('quizCtaBtn'); if(b) b.setAttribute('aria-label','Kiểm tra nhanh, đã trả lời '+a+' trên '+n+'. Đi tới phần kiểm tra.');
+}
+let quizIO=null;
+function wireQuizEntry(){
+  if(quizIO){ quizIO.disconnect(); quizIO=null; }
+  const q=document.getElementById('quizPart');
+  if(q&&'IntersectionObserver' in window){
+    let dwell=null;
+    quizIO=new IntersectionObserver(es=>{ const e=es[es.length-1]; QS_visible=e.isIntersecting; ctaUpdate();
+      if(e.isIntersecting&&!dwell) dwell=setTimeout(()=>EV.emit('quiz_visible',{unlocked:!!quizOpen(),answered:answeredN()}),1000);
+      if(!e.isIntersecting&&dwell){ clearTimeout(dwell); dwell=null; } },{threshold:0.35});
+    quizIO.observe(q);
+  }
+  const btn=document.getElementById('quizCtaBtn');
+  if(btn) btn.onclick=()=>{
+    EV.emit('quiz_cta_clicked',{answered:answeredN()});
+    const target=document.getElementById('quizPart'); if(!target) return;
+    const reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+    const first=document.querySelector('#quizBox .q.cur button, #quizBox .q.cur input')||document.getElementById('qTg');
+    if(first) first.focus({preventScroll:true});
+  };
+  ctaUpdate();
 }
 
 /* Vòng hoàn thành: XP → kỹ năng → mở khoá → việc tiếp theo. Sai thì không phải ngõ cụt:
@@ -680,10 +771,14 @@ function wireQuestions(){
   const firstTry=()=>{ const st=lessonState(key); return !(st&&st.score!=null); };
   const answer=async(id,given)=>{
     const it=item(id); if(!it) return;
-    if(id==='pre'){ reveal(id,it,given,{context:'practice'}); return; }                         // đoán trước: không chấm, không ghi
+    /* Đoán trước = khởi động, không chấm. Cờ exp_pre_ungraded bật → ngữ cảnh 'prediction': máy chủ chỉ trả đúng/sai + lời giải,
+       KHÔNG ghi answer_events / skill_mastery / hàng ôn (đoán sai trước khi đọc không bị phạt). Cờ tắt → như cũ ('practice'). */
+    if(id==='pre'){ reveal(id,it,given,{context:EXP.pre?'prediction':'practice'}); return; }
     if(id==='cp'){ const g=await reveal(id,it,given,{context:'checkpoint'}); if(!g) return; logMiss(it,g);
       const s=S.get(); S.set({cp:{...(s.cp||{}),[key]:today()}});
-      const r=document.getElementById('read2'); if(r) r.classList.remove('locked'); document.getElementById('cpNote')?.remove(); refreshHud(); return; }
+      const r=document.getElementById('read2'); if(r) r.classList.remove('locked'); document.getElementById('cpNote')?.remove();
+      if(EXP.quiz){ const qb=document.getElementById('quizBox'); if(qb) qb.classList.remove('locked'); document.getElementById('qLockNote')?.remove(); }
+      refreshHud(); return; }
     if(id.startsWith('qz')){
       if(firstTry()){                                                        // lần đầu: chỉ ghi nhận, chưa lộ đúng sai
         ANS[id]=given; const box=document.getElementById(id);
@@ -706,6 +801,7 @@ function wireQuestions(){
   /* nộp quiz: chấm một lần, lưu điểm lần đầu, rồi mới hiện lời giải */
   const sb=document.getElementById('qSubmit');
   if(sb) sb.onclick=async()=>{
+    EV.emit('quiz_submitted',{n_answered:Object.keys(ANS).length});
     sb.disabled=true; sb.textContent='Đang chấm…';
     const before=S.get(), sk=skillOfLesson(key), skBefore=sk?skillPct(sk,before):0, jBefore=journeyState(before);
     let right=0; const wrong=[];
@@ -717,7 +813,9 @@ function wireQuestions(){
     for(let i=0;i<PLAN.quiz.length;i++){ const it=PLAN.quiz[i], g=await reveal('qz'+i,it,ANS['qz'+i],{context:'lesson',pre:grades[i]});
       if(!g){ sb.disabled=false; sb.textContent='Nộp lại'; toast(GRADE_OFFLINE); return; }
       if(g.ok) right++; else wrong.push(it); logMiss(it,g); QS_result('qz'+i,g.ok); }
-    if(API.user) api('/lessons/'+encodeURIComponent(key)+'/complete',{method:'POST',body:{}}).catch(()=>{});   // server lưu điểm lần đầu
+    /* Server lưu điểm lần đầu. Khi đo lường bật, gửi kèm lsid/release (id ngẫu nhiên của lượt học, không phải danh tính) để
+       `lesson_completed` ghi ở server khớp với lượt học này. */
+    if(API.user) api('/lessons/'+encodeURIComponent(key)+'/complete',{method:'POST',body:EV.enabled?{lsid:EV.lsid,release:EXP.release}:{}}).catch(()=>{});
     const rec=completeLesson(key,right,PLAN.quiz.length);
     sb.remove(); QS.sent=true; QS.cur=0; QS_paint(); refreshHud();
     const s=S.get(); document.querySelector('#stRow .state')?.remove();
@@ -759,8 +857,11 @@ function QS_paint(){
   const c=document.getElementById('qCnt'); if(c) c.textContent=answered+'/'+n;
   const h=document.getElementById('hudQ'); if(h) h.textContent=answered+'/'+n;
   const t=document.getElementById('todoQn'); if(t) t.textContent=answered;
+  ctaUpdate();
 }
-function QS_pick(id){ const i=+id.slice(2); if(QS.st[i]!=='done') QS.st[i]='pick'; QS_paint(); }
+function QS_pick(id){ const i=+id.slice(2); if(QS.st[i]!=='done') QS.st[i]='pick';
+  if(EV.enabled){ const s=S.get(); EV.emit('quiz_started',{n_items:PLAN.quiz.length,unlocked_by:(s.recall||{})[key]?'recall':lessonState(key,s)?'state':PLAN.cp&&cpDone(s)?'checkpoint':'none'}); }
+  QS_paint(); }
 function QS_result(id,ok){ const i=+String(id).slice(2); QS.st[i]=ok?'ok':'no'; QS_paint(); }
 function refreshHud(){
   const s=S.get(), st=lessonState(key,s), n=PLAN.quiz.length;
@@ -774,6 +875,7 @@ function refreshHud(){
   const ok=(id,v)=>{ const e=document.getElementById(id); if(e) e.toggleAttribute('data-ok',!!v); };
   if(st&&st.score!=null&&n){ const t=document.getElementById('todoQn'); if(t) t.textContent=n; }
   ok('todoRead',p>=98); ok('todoGate',cpDone(s)); ok('todoQuiz',!!st&&(n?st.score!=null:true));
+  ctaUpdate();
 }
 const termHay=()=>{
   if(typeof GLOSSARY==='undefined') return [];
@@ -876,10 +978,12 @@ function wireExtra(){
   if(nx) nx.onclick=()=>{ if(QS.first&&!QS.sent&&QS.st[QS.cur]==='pick') QS.st[QS.cur]='done';
     QS.cur=Math.min(PLAN.quiz.length-1,QS.cur+1); QS_paint(); };
   QS_paint(); refreshHud();
+  wireQuizEntry();
 }
 
 document.title=(M?M.t:'Bài học')+' — Tự Học Marketing Case';
-render();
+/* Nạp cờ trước khi vẽ để không có "nháy" đổi bố cục. Lỗi/chậm → loadExp để mọi cờ ở mặc định TẮT rồi vẽ như cũ. */
+loadExp().catch(()=>{}).then(()=>{ render(); trackOpen(); });
 </script>
 <script src="assets/js/paper.js?v=7"></script>
 </body>
