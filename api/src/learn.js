@@ -1,12 +1,13 @@
 /* Vòng học phía server: đề không có đáp án → chấm tự động → mastery → hàng ôn → thi vượt chặng / xếp lớp.
    Chỉ chấm câu có đáp án duy nhất (trắc nghiệm, điền số). Không có đường chấm tự luận. */
 import { rewardReferral } from './social.js';
-import { json, now, rid, str, currentUser, isAdmin, body } from './lib.js';
+import { json, now, rid, str, currentUser, isAdmin, body, allow } from './lib.js';
 import { loadConfig, vnToday, recompute, invalidateConfig } from './progress.js';
 import BANK from './generated/bank.json';
 import { onStagePassed } from './realm.js';
 import { pickStageItems, STAGE_MIX, gradeItem, publicItem, updateMastery, masteryScore, reviewSession, stageExam, gradeExam, placementExam,
-  gradePlacement, lockState, nextActions, seeded, hashStr, lintItem, lengthBias } from './learn-core.js';
+  gradePlacement, lockState, nextActions, seeded, hashStr, lintItem, lengthBias, ANSWER_CONTEXTS, answerEffects } from './learn-core.js';
+import { recordLessonCompleted } from './experiments.js';
 
 const DAY = 864e5;
 const RANK = { in_progress: 0, learned: 1, passed: 2, solid: 3, mastered: 4 };
@@ -79,7 +80,7 @@ export async function answer(req, env) {
   const b = await body(req, 4000);
   const it = BANK.items[str(b.question_id, 80)];
   if (!it) return json({ error: 'unknown_question' }, 404);
-  const ctxName = ['lesson', 'checkpoint', 'review', 'practice'].includes(b.context) ? b.context : 'practice';
+  const ctxName = ANSWER_CONTEXTS.includes(b.context) ? b.context : 'practice';
   /* Phương án phải là một khoá có thật của câu — gửi rác để "xem đáp án" bị từ chối, không trả đáp án. */
   if (it.type !== 'calc' && !(it.options || []).some((o) => o.k === b.chosen)) return json({ error: 'invalid_answer' }, 400);
   const r = gradeItem(it, b.chosen);
@@ -87,6 +88,12 @@ export async function answer(req, env) {
   const u = await currentUser(req, env);
   /* Khách không dùng được chấm điểm: mọi trang học đều sau đăng nhập, và API này trả đáp án đúng ngay sau khi chấm. */
   if (!u) return json({ error: 'login_required' }, 401);
+  /* Câu đoán trước: chỉ trả đúng/sai + lời giải, không ghi gì. Vì không có dòng answer_events để đếm trần 24 giờ bên dưới,
+     đặt trần riêng bằng KV (400 lượt/24 giờ) để đường này không thành cách vét đáp án không giới hạn. */
+  if (!answerEffects(ctxName).record) {
+    if (!(await allow(env, `rl:pred:${u.id}`, 400, 86400))) return json({ error: 'rate_limited' }, 429);
+    return json({ ...r, saved: false, first_attempt: false, xp: 0 });
+  }
   /* Chặn vét đáp án hàng loạt: trần số lượt chấm mỗi 24 giờ (học thật hiếm khi quá vài trăm). */
   const used = await env.DB.prepare('SELECT COUNT(*) AS n FROM answer_events WHERE user_id = ?1 AND answered_at > ?2').bind(u.id, now() - DAY).first();
   if ((used ? used.n : 0) >= ANSWER_DAILY_CAP) return json({ error: 'rate_limited' }, 429);
@@ -131,7 +138,14 @@ export async function completeLesson(req, env, key) {
   const cfg = await loadConfig(env);
   const score = Math.round(answered.filter((id) => first.get(id)).length / answered.length * 100);
   const state = score >= Number(cfg.lesson_pass_ratio || 0.6) * 100 ? 'passed' : 'learned';
+  /* Chỉ khi đo lường bật mới hỏi "đây có phải bài đầu tiên không" (một truy vấn nhẹ, trước khi ghi tiến độ mới). */
+  let isFirst = false;
+  if (flagsFromConfig(cfg).events) {
+    try { isFirst = !(await env.DB.prepare(`SELECT 1 AS n FROM lesson_progress WHERE user_id = ?1 AND completion_source = 'lesson' LIMIT 1`).bind(u.id).first()); } catch { /* không có thì coi như không phải */ }
+  }
   await setProgress(env, u.id, key, state, 'lesson', score);
+  let evb = {}; try { evb = await body(req, 500); } catch { /* thân rỗng/hỏng: bỏ qua, việc chấm không phụ thuộc */ }
+  await recordLessonCompleted(env, cfg, u, key, { state, score, isFirst, lsid: evb.lsid, release: evb.release });
   const want = state === 'passed' ? (cfg.xp_once.lesson ?? 10) : (cfg.xp_once.learned ?? 5);
   const had = await env.DB.prepare(`SELECT amount FROM xp_events WHERE user_id = ?1 AND source = 'lesson' AND source_ref = ?2`).bind(u.id, 'lesson:' + key).first();
   let xp = 0;

@@ -513,7 +513,7 @@ function weekly(s=S.get()){
 
 /* ---------------- tài khoản & đồng bộ (cần backend /api) ----------------
    Không có backend (chỉ deploy trang tĩnh) thì mọi thứ vẫn chạy bằng localStorage như cũ. */
-const API={on:null, user:undefined};
+const API={on:null, user:undefined, exp:null};
 async function api(path,{method='GET',body}={}){
   const r=await fetch('/api'+path,{method,credentials:'same-origin',
     headers:{'x-thmc':'1',...(body!==undefined?{'content-type':'application/json'}:{})},
@@ -525,14 +525,22 @@ async function api(path,{method='GET',body}={}){
   if(!r.ok) throw Object.assign(new Error(data.error||'error'),{status:r.status,data});
   return data;
 }
+/* Gọi đồng thời chỉ gửi MỘT yêu cầu /me (khung trang và trang bài cùng hỏi). `exp` = cờ thí nghiệm do máy chủ cấp
+   (mặc định mọi cờ tắt; không có API thì exp=null → hành vi cũ). */
+let accountInflight=null;
 async function account(){
   if(API.user!==undefined) return API.user;
-  try{
-    const r=await api('/me');
-    if(r && r.user){ API.user=r.user; return API.user; }
-  }catch(e){}
-  API.user=null;
-  return API.user;
+  if(accountInflight) return accountInflight;
+  accountInflight=(async()=>{
+    try{
+      const r=await api('/me');
+      API.exp=(r&&r.exp)||null;
+      if(r && r.user){ API.user=r.user; return API.user; }
+    }catch(e){}
+    API.user=null;
+    return API.user;
+  })().finally(()=>{ accountInflight=null; });
+  return accountInflight;
 }
 async function canLogin(){
   return true;

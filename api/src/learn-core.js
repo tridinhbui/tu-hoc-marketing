@@ -3,6 +3,14 @@
 
 const DAY_MS = 864e5;
 
+/* ---------- ngữ cảnh trả lời ----------
+   'prediction' = câu ĐOÁN TRƯỚC khi đọc (khởi động, không chấm điểm): trả đúng/sai + lời giải nhưng KHÔNG ghi answer_events,
+   KHÔNG cập nhật skill_mastery, KHÔNG đưa câu sai vào hàng ôn — đoán sai trước khi đọc không bị phạt. */
+export const ANSWER_CONTEXTS = ['lesson', 'checkpoint', 'review', 'practice', 'prediction'];
+export const answerEffects = (ctx) => (ctx === 'prediction'
+  ? { record: false, mastery: false, memory: false, capped: false }
+  : { record: true, mastery: true, memory: true, capped: true });
+
 /* ---------- chấm một câu ---------- */
 export function gradeItem(item, chosen) {
   if (!item) return null;
