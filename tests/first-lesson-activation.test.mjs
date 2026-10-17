@@ -56,3 +56,12 @@ test('nháp quiz: lưu khi chọn, khôi phục khi vào lại, xoá khi nộp',
   assert.equal((script.match(/saveDraft\(\);/g) || []).length >= 2, true);   // trắc nghiệm + điền số
   assert.match(script, /clearDraft\(\); const sync=await syncComplete\(\)/);
 });
+
+test('đo từng bước bằng /api/track có sẵn, mỗi sự kiện một lần, không đổi schema', () => {
+  assert.match(script, /function evt\(kind\)/);
+  assert.match(script, /fetch\('\/api\/track'/);
+  for (const k of ['lesson_open', 'gate_done', 'quiz_view', 'quiz_submit', 'lesson_done', 'sync_error']) assert.ok(script.includes(`'${k}'`) || script.includes(k), k);
+  for (const k of ['lesson_open', 'gate_done', 'quiz_view', 'quiz_submit', 'lesson_done', 'sync_error']) assert.match(k, /^[a-z_]{2,30}$/);   // đúng luật ở api/src/social.js
+  const server = fs.readFileSync(new URL('../api/src/social.js', import.meta.url), 'utf8');
+  assert.match(server, /\^\[a-z_\]\{2,30\}\$/);
+});

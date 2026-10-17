@@ -1,6 +1,6 @@
 # First Lesson Activation — thay đổi, ảnh trước/sau, kế hoạch đo 7 ngày
 
-Phase 1 của kế hoạch kích hoạt, dựa trên `FUNNEL-AUDIT-2026-10-17.md` (PR docs/funnel-audit-2026-10-17): 30 tài khoản → 12 mở bài → 8 trả lời câu giữa bài → 4 qua "Đổ não 60 giây" → **1 hoàn thành**. Không có lỗi ghi nhận; điểm rớt là cuối bài và quiz nằm quá xa trên mobile.
+Phase 1 của kế hoạch kích hoạt, dựa trên `FUNNEL-AUDIT-2026-10-17.md` (PR docs/funnel-audit-2026-10-17): 30 tài khoản → 28 vào trang Học → 17 mở bài → 8 trả lời câu giữa bài → 4 qua "Đổ não 60 giây" → **1 hoàn thành**. Không có lỗi ghi nhận; điểm rớt là cuối bài và quiz nằm quá xa trên mobile.
 
 Phạm vi: chỉ `bai.html` (+ test). Không đổi API, schema D1, dữ liệu bài học, chuẩn chấm. Yêu cầu tối thiểu 5 câu quiz để hoàn thành và việc server chấm điểm lần đầu giữ nguyên.
 
@@ -46,17 +46,18 @@ Lỗi `/complete` (giả lập 503 để kiểm tra) — báo rõ, không im l�
 ## QA đã chạy
 - Regression: `node --test tests/*.test.mjs` 143/143 (+ test mới `tests/first-lesson-activation.test.mjs`), `cd api && npm test` 43/43, `node tools_validate_bai.mjs` 712 bài 0 lỗi.
 - Trình duyệt (desktop 1440px và mobile 375px): trả lời câu giữa bài mở quiz; chọn 3/5 câu rồi tải lại → khôi phục đúng 3 câu, kể cả câu điền số; nộp bài → hoàn thành, bài đã làm hiện đủ 3 bước ✓ sau tải lại; `/complete` lỗi → khung báo + `pend`, bấm "Thử lại" → lưu được, `pend` rỗng; bài loại `L:` hiển thị đúng với quiz 3 và 5 câu; bài `P:` khoá chặng vẫn hiện trang khoá như cũ; không tràn ngang.
-- Không chạm D1 production, không tạo hoàn thành giả hay sửa dữ liệu học viên (mọi thử nghiệm dùng localStorage của server preview cục bộ).
+- Không ghi D1 production, không tạo hoàn thành giả hay sửa dữ liệu học viên (mọi thử nghiệm dùng localStorage của server preview cục bộ; các lệnh D1 production chỉ là `SELECT` tổng hợp để lấy baseline).
+- Sự kiện đo: kiểm bằng spy `fetch` trong trình duyệt, ra đúng `gate_done`, `quiz_view`, `quiz_submit`, `lesson_done`, mỗi loại một lần.
 
 ## Kế hoạch đo activation 7 ngày
-Không đổi schema. Dùng các bảng có sẵn và khoá `qd`, `pend` mới trong `user_state`. Chỉ truy vấn tổng hợp, không lấy email/tên/id.
+Không đổi schema. Dùng các bảng có sẵn (`users`, `answer_events`, `lesson_progress`, `app_events`) và hai khoá mới `qd`, `pend` trong `user_state`. Bổ sung sự kiện theo bước qua `/api/track` có sẵn (ghi vào `app_events`): `lesson_open`, `gate_done`, `quiz_view`, `quiz_submit`, `lesson_done`, `sync_error`, mỗi sự kiện một lần cho mỗi lần mở trang, `target` là mã bài (ví dụ `B:ob01-01`). Chỉ truy vấn tổng hợp, không lấy email/tên/id.
 
-**Mốc:** `T0` = thời điểm deploy. **Baseline** (2026-10-17, 30 tài khoản): hoàn thành bài đầu 1/30 (3%); trả lời câu giữa bài → nộp quiz 1/8; qua Đổ não 4; mở bài 12.
+**Mốc:** `T0` = thời điểm deploy. **Baseline** (2026-10-17, 30 tài khoản, đo từ D1 production chỉ đọc): vào trang Học 28; mở bài 17 (`app_events`, 45 lượt xem `bai.html`, chưa kèm mã bài); trả lời câu giữa bài 8; qua Đổ não 4; hoàn thành bài đầu 1/30 (3%) → câu giữa bài → nộp quiz = 1/8.
 
 **Chỉ số chính (nhóm đăng ký sau `T0`):**
 1. *Activation 7 ngày* = tỉ lệ tài khoản có ≥1 dòng `lesson_progress` với `completion_source='lesson'` trong 7 ngày sau đăng ký. Mục tiêu ≥ 20% (baseline 3%).
 2. *Câu giữa bài → nộp quiz* = số người có câu `lesson` trong `answer_events` ÷ số người có câu `checkpoint`. Mục tiêu ≥ 50% (baseline 1/8).
-3. *Mở bài → câu giữa bài* (đã 8/12) giữ ≥ 60%.
+3. *Mở bài → câu giữa bài* (baseline 8/17 = 47%) tăng lên ≥ 60%.
 
 **Chỉ số theo dõi mới:**
 - *Bỏ dở quiz* = số người có `user_state.state_json.qd` khác rỗng (đã chọn đáp án nhưng chưa nộp). Cao → quiz còn khó hoặc quá dài.
@@ -65,8 +66,8 @@ Không đổi schema. Dùng các bảng có sẵn và khoá `qd`, `pend` mới t
 
 **Ràng buộc chất lượng (không được xấu đi):**
 - Điểm lần đầu trung bình (`lesson_progress.first_score`, nguồn `lesson`) không giảm quá 10 điểm so với baseline.
-- Tỉ lệ `lessons_done` trên số người hoàn thành không có bất thường (mỗi cặp người × bài một dòng).
-- Không có tăng lỗi 5xx ở `/api/lessons/*/complete` và `/api/answers`.
+- `sync_error` chiếm ≤ 5% số `lesson_done + sync_error`.
+- Không có tăng lỗi 5xx ở `/api/lessons/*/complete` và `/api/answers`; không có tăng bất thường lượng ghi `app_events` (giới hạn chống dội 120 sự kiện / 10 phút mỗi người vẫn áp dụng).
 
 **Truy vấn mẫu (chỉ đọc; thay `:t0` bằng mili-giây của `T0`):**
 ```sql
@@ -76,6 +77,12 @@ SELECT
  (SELECT COUNT(DISTINCT a.user_id) FROM answer_events a JOIN users u ON u.id=a.user_id WHERE u.created_at >= :t0 AND a.context='checkpoint') AS checkpoint_users,
  (SELECT COUNT(DISTINCT a.user_id) FROM answer_events a JOIN users u ON u.id=a.user_id WHERE u.created_at >= :t0 AND a.context='lesson') AS quiz_submitted_users,
  (SELECT COUNT(DISTINCT lp.user_id) FROM lesson_progress lp JOIN users u ON u.id=lp.user_id WHERE u.created_at >= :t0 AND lp.completion_source='lesson') AS completed_users;
+-- 1b) Phễu theo từng bước từ sự kiện mới (từ T0; một dòng = số người khác nhau ở bước đó)
+SELECT kind, COUNT(DISTINCT user_id) AS users, COUNT(*) AS events FROM app_events
+ WHERE created_at >= :t0 AND kind IN ('lesson_open','gate_done','quiz_view','quiz_submit','lesson_done','sync_error') GROUP BY kind;
+-- 1c) Cùng phễu cho riêng bài đầu tiên
+SELECT kind, COUNT(DISTINCT user_id) AS users FROM app_events
+ WHERE created_at >= :t0 AND target = 'B:ob01-01' AND kind IN ('lesson_open','gate_done','quiz_view','quiz_submit','lesson_done','sync_error') GROUP BY kind;
 -- 2) Bỏ dở quiz và lưu server lỗi (ảnh chụp hiện tại)
 SELECT
  (SELECT COUNT(*) FROM user_state WHERE json_extract(state_json,'$.qd') IS NOT NULL AND json_extract(state_json,'$.qd')<>'{}') AS qd_open,

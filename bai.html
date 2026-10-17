@@ -674,6 +674,11 @@ function completeHTML({rec,right,wrong,sk,skBefore,jBefore,before,nx}){
 }
 
 /* ---------------- kích hoạt bài đầu: 3 bước, thanh CTA, nháp quiz, lưu kết quả lên server ---------------- */
+/* Đo từng bước bằng /api/track có sẵn (bảng app_events, chỉ ghi loại sự kiện và mã bài). Mỗi sự kiện một lần cho mỗi lần mở trang. */
+const EVT_SENT=new Set();
+function evt(kind){ const id=kind+'|'+key; if(EVT_SENT.has(id)) return; EVT_SENT.add(id);
+  try{ fetch('/api/track',{method:'POST',credentials:'same-origin',keepalive:true,headers:{'x-thmc':'1','content-type':'application/json'},
+    body:JSON.stringify({k:kind,t:key})}).catch(()=>{}); }catch(e){} }
 function stepState(){
   const s=S.get(), st=lessonState(key,s), n=PLAN.quiz.length;
   const done=!!st&&(n?st.score!=null:true);
@@ -821,7 +826,7 @@ function wireQuestions(){
     if(id==='cp'){ const g=await reveal(id,it,given,{context:'checkpoint'}); if(!g) return; logMiss(it,g);
       const s=S.get(); S.set({cp:{...(s.cp||{}),[key]:today()}});
       const r=document.getElementById('read2'); if(r) r.classList.remove('locked'); document.getElementById('cpNote')?.remove();
-      unlockQuiz(); toast('Đã mở quiz — làm xong để hoàn thành bài'); refreshHud(); return; }
+      evt('gate_done'); unlockQuiz(); toast('Đã mở quiz — làm xong để hoàn thành bài'); refreshHud(); return; }
     if(id.startsWith('qz')){
       if(firstTry()){                                                        // lần đầu: chỉ ghi nhận, chưa lộ đúng sai
         ANS[id]=given; saveDraft(); const box=document.getElementById(id);
@@ -856,7 +861,7 @@ function wireQuestions(){
       if(!g){ sb.disabled=false; sb.textContent='Nộp lại'; toast(GRADE_OFFLINE); return; }
       if(g.ok) right++; else wrong.push(it); logMiss(it,g); QS_result('qz'+i,g.ok); }
     const rec=completeLesson(key,right,PLAN.quiz.length);   // điểm lần đầu lưu trên máy ngay; server lưu ở bước dưới
-    clearDraft(); const sync=await syncComplete();
+    evt('quiz_submit'); clearDraft(); const sync=await syncComplete(); evt(sync.ok?'lesson_done':'sync_error');
     sb.remove(); QS.sent=true; QS.cur=0; QS_paint(); refreshHud();
     const s=S.get(); document.querySelector('#stRow .state')?.remove();
     document.getElementById('stRow').insertAdjacentHTML('beforeend',stateTag(s));
@@ -941,6 +946,7 @@ function linkTerms(){
 function wireExtra(){
   QS.first=!!document.getElementById('qSubmit'); QS.sent=false;
   savedP=LS.get('prog',0);
+  evt('lesson_open');
   placeQuiz(); if(MQ_NARROW.addEventListener) MQ_NARROW.addEventListener('change',placeQuiz); else MQ_NARROW.addListener(placeQuiz);
   restoreDraft(); retryPending();
   /* thanh CTA: bấm đi tới bước đang cần; ẩn khi quiz đang trên màn hình hoặc đang gõ */
@@ -951,7 +957,7 @@ function wireExtra(){
     const el=document.getElementById(to)||document.getElementById('quizPart'); if(el) el.scrollIntoView({behavior:'smooth',block:a==='submit'?'center':'start'}); };
   const bar=document.getElementById('lpCta'), qp=document.getElementById('quizPart');
   if(bar&&qp&&'IntersectionObserver' in window){
-    new IntersectionObserver(es=>{ bar.toggleAttribute('data-hide',es[0].isIntersecting); },{rootMargin:'0px 0px -110px 0px',threshold:0}).observe(qp); }
+    new IntersectionObserver(es=>{ bar.toggleAttribute('data-hide',es[0].isIntersecting); if(es[0].isIntersecting&&quizOpen()) evt('quiz_view'); },{rootMargin:'0px 0px -110px 0px',threshold:0}).observe(qp); }
   const typing=e=>{ if(bar&&/^(INPUT|TEXTAREA)$/.test((e.target||{}).tagName||'')) bar.toggleAttribute('data-hide',e.type==='focusin'); };
   document.addEventListener('focusin',typing); document.addEventListener('focusout',typing);
 
