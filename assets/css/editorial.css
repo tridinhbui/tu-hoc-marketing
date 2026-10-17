@@ -661,3 +661,6 @@ body.ed::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;
 @keyframes mqRun{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.mq__row{animation:none}}
 main{overflow-x:clip}
+
+/* iOS Safari tự phóng to trang khi ô nhập có chữ < 16px: trên màn cảm ứng mọi ô nhập dùng 16px */
+@media (hover:none) and (pointer:coarse){input:not([type=checkbox]):not([type=radio]):not([type=range]),select,textarea{font-size:16px!important}}

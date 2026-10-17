@@ -156,3 +156,6 @@
 
 /* lời nhắc Ý Ý: nằm sát góc, hẹp hơn để bớt che cột phải */
 .yy-tip{right:18px!important;bottom:146px!important;max-width:min(260px,calc(100vw - 40px))!important}
+
+/* iOS Safari tự phóng to trang khi ô nhập có chữ < 16px: trên màn cảm ứng mọi ô nhập dùng 16px */
+@media (hover:none) and (pointer:coarse){input:not([type=checkbox]):not([type=radio]):not([type=range]),select,textarea{font-size:16px!important}}
