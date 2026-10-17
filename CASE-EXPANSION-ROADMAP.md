@@ -77,7 +77,7 @@ Ràng buộc kiểm tự động ở `tests/case-deep.test.mjs`: đủ trường
 | Chuyên gia đọc lại 26 case; ký duyệt từng case | Audit này không có người duyệt | Người thật |
 | Kiểm chứng lại các nguồn chỉ đọc qua tóm tắt (Bloomberg Nike, Brands Vietnam, Fast Company, Patagonia trang chính, Momentum Works) | Giảm rủi ro nguồn thứ cấp | Hạn mức tìm kiếm / truy cập |
 | Bổ sung 4 case đã nghiên cứu một phần nhưng chưa đủ nguồn: Burger King “Moldy Whopper”, Gap logo 2010, Dollar Shave Club, Heineken Tết | Cân bằng thành công/thất bại, thêm case sáng tạo | Nghiên cứu nguồn |
-| 6 case bấm giờ mới về **phân khúc, định vị, thông điệp, hành vi khách** (hiện 0/12) | Lấp khoảng trống §3 audit | Viết mới, theo mẫu `cases.js` |
+| ~~6 case bấm giờ mới về phân khúc, định vị, thông điệp, hành vi khách~~ **Đã làm (18/10/2026)**: 6 case, xem §10 audit | — | Còn: thêm case thứ hai cho c01 (phân khúc) và c05 (tài sản thương hiệu); sửa chống lộ đáp án cho 12 case cũ |
 | Thêm bài “thí nghiệm” vào module `tn` có bài thực hành liên kết Xưởng chiến lược | Lab dạy kết quả có nhiễu | Viết bài |
 
 ### Đợt 3 — mở rộng thư viện (sau khi đợt 2 qua duyệt)

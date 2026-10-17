@@ -169,9 +169,10 @@ Không chấm lại. Chỉ ghi các phát hiện thêm: (1) 419/712 bài chưa c
 
 | Kiểm tra | Kết quả |
 |---|---|
-| `node --test tests/*.test.mjs` | 162 test đạt (gồm 7 test `case-deep`, 12 test `strategy-lab` mới) |
+| `node --test tests/*.test.mjs` | 167 test đạt (gồm 7 test `case-deep`, 12 test `strategy-lab`, 5 test `cases-new`) |
 | `cd api && npm test` | 43 test đạt |
 | `node tools_validate_bai.mjs` | 712 bài · 0 lỗi · 0 cảnh báo |
+| Giải thử một case mới trên trình duyệt (`dinh-vi-so-ngay`, gồm đáp án âm) | Chấm đúng 3/3 tiêu chí; thư viện hiện 18 case |
 | Xưởng chiến lược, 2 brief × đủ 7 bước trên trình duyệt | Hoàn thành bằng thao tác thật (DOM), không lỗi console liên quan; báo cáo hiện đúng |
 | Trang case sâu ở 375 px | Không tràn ngang; phần chọn phương án, nguồn, nhãn hiển thị |
 | Lỗi console còn lại | 404/501 từ API cục bộ không chạy (đã có từ trước khi sửa) |
@@ -180,3 +181,23 @@ Không chấm lại. Chỉ ghi các phát hiện thêm: (1) 419/712 bài chưa c
 ## 9. Khuyến nghị tiếp theo
 
 Xem `CASE-EXPANSION-ROADMAP.md`. Ba việc đáng làm trước: (1) một chuyên gia marketing thực chiến đọc lại 26 case; (2) kiểm chứng 8–10 nguồn còn đọc qua tóm tắt khi có lại hạn mức tìm kiếm; (3) thêm case bấm giờ về phân khúc, định vị và thông điệp — mảng hiện không có case mở nào.
+
+## 10. Cập nhật: 6 case bấm giờ mới (18/10/2026)
+
+Khoảng trống ở §3 (12/12 case bấm giờ là quyết định ngân sách/giá) đã được lấp một phần bằng 6 case trong `cases.js`: phân khúc, hành vi khách, định vị, thông điệp, tâm lý giá, được nhớ tới.
+
+| Case | Mảng | Mức | Điều dạy |
+|---|---|---|---|
+| `phan-khuc-sua-hat` | Phân khúc (c01) | Trung bình | Phân khúc đáng chọn là nơi lãi gộp trọn đời vượt CAC nhiều nhất, không phải nơi đông nhất |
+| `hanh-vi-rau-huu-co` | Insight, tâm lý (c02, c03) | Trung bình | Ý định nói ra ≠ hành vi; tìm “việc khách thật sự thuê sản phẩm làm” |
+| `dinh-vi-so-ngay` | Định vị (c04) | Khó | Thua tổng điểm vẫn có thể đứng ở thuộc tính quan trọng nhất mà mình hơn rõ |
+| `thong-diep-excel-ke-toan` | Thông điệp (c08) | Dễ | CTR cao với lời hứa lệch trang đích; đọc kết quả trên mẫu nhỏ |
+| `mo-than-goi-gia` | Tâm lý giá (c03, c13) | Khó | Hiệu ứng gói thứ ba, và vì sao so tháng này với tháng trước chưa chứng minh nhân quả |
+| `duoc-nho-ca-phe-lon` | Được nhớ tới (c06, c05) | Trung bình | Nhận biết có gợi ý che việc không được nghĩ tới trong tình huống mua |
+
+**Phát hiện khi làm:** các năng lực c01, c02, c04, c05, c08 trước đây **không có case nào** nên người học không thể lên mức “Phân tích” ở bản đồ năng lực qua case; nay c02, c04, c08 có 2 case, nhưng **c01 và c05 mới có 1 case** (cần ít nhất 2 để lên mức “Thuyết phục”): ưu tiên trong đợt tới.
+
+**Chất lượng đề:** 24/24 câu chọn của 12 case cũ có đáp án đúng là phương án dài nhất và chỉ ở vị trí 1–2 (đúng loại lỗi audit giáo trình đã nêu). Ở 6 case mới đã cân bằng độ dài và xáo vị trí (đúng-là-dài-nhất 6/12; vị trí 1/2/3/4 = 3/3/5/1), có test chống tái diễn (`cases-new.test.mjs`). **12 case cũ chưa sửa** — việc tiếp theo.
+
+**Đồng bộ phía máy chủ:** `api/src/generated/xp-refs.json` (danh sách case hợp lệ cho XP) phải sinh lại khi thêm case — test `xp-trust` đã bắt lỗi này; `bank.json` cũng được sinh lại (đang lệch từ khi sửa hai câu thi ở PR này).
+
