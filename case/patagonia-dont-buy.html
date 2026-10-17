@@ -16,7 +16,8 @@
 <meta property="og:image" content="https://nhinthay.pages.dev/assets/og/default.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="Tự Học Marketing Case">
-<link rel="stylesheet" href="assets/css/main.css?v=21">
+<link rel="preload" href="assets/fonts/jbmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css?v=21f6">
 <style>
   .hero{padding:clamp(28px,4vw,60px) 0 0}
   .hero__meta{display:flex;gap:22px;flex-wrap:wrap;border-bottom:var(--rule);padding-bottom:12px}
@@ -32,11 +33,26 @@
   .idea{font-family:var(--serif);font-size:clamp(1.6rem,3.6vw,2.9rem);line-height:1.06;letter-spacing:-.025em;max-width:20ch;font-weight:300}
   .chips{display:flex;gap:8px;flex-wrap:wrap}
   .chips span{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--ink-14);padding:6px 10px}
+  .jr{display:flex;gap:0;flex-wrap:wrap;border-top:var(--rule);border-bottom:var(--rule);margin-top:clamp(18px,3vw,34px)}
+  .jr a{flex:1 1 120px;padding:14px 12px;text-decoration:none;border-right:var(--rule);font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+  .jr a:last-child{border-right:0}.jr a b{display:block;font-family:var(--serif);font-size:1.1rem;letter-spacing:-.01em;text-transform:none;font-weight:400;margin-top:4px}
+  .ev{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;border:1px solid currentColor;padding:3px 7px;margin:0 8px 6px 0;border-radius:2px;white-space:nowrap}
+  .ev--v{color:#3D7A45}.ev--a{color:#A8700F}.ev--k{color:var(--accent)}
+  .sec h3{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 8px;font-weight:600}
+  .stack{display:grid;gap:24px;max-width:66ch}.stack>div>p{margin:0 0 8px}
+  .opt{display:block;width:100%;text-align:left;background:none;color:inherit;font:inherit;border:1px solid var(--ink-14);padding:12px 14px;margin:0 0 8px;cursor:pointer;line-height:1.5}
+  .opt[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 3px 0 0 var(--accent)}
+  .opt small{display:block;margin-top:6px;opacity:.82}
+  .fact{padding:12px 0;border-bottom:var(--rule)}.fact small{display:block;opacity:.7;margin-top:4px;line-height:1.5}
+  .fact a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+  .unknown{border-left:2px solid var(--accent);padding:2px 0 2px 14px;margin-top:14px}
+  .reflect textarea{width:100%;min-height:84px;font:inherit;padding:10px 12px;border:1px solid var(--ink-14);background:transparent;color:inherit;margin-top:8px}
+  .src{font-size:.9rem;opacity:.85;line-height:1.55}.src li::before{display:none}.src li{padding-left:0}
   .next{display:grid;gap:20px;padding:clamp(30px,5vw,70px) 0;border-top:var(--rule)}
   @media(min-width:760px){.next{grid-template-columns:1fr 1fr}}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=12">
-<link rel="stylesheet" href="assets/css/atelier.css?v=27">
+<link rel="stylesheet" href="assets/css/atelier.css?v=27z1">
 </head>
 <body>
 <noscript><div class="nojs">
@@ -45,10 +61,10 @@
   Bật JavaScript để đọc; nội dung được dựng ngay trong trình duyệt.</p>
 </div></noscript>
 <main class="wrap" id="app"></main>
-<script>window.__ID__="patagonia-dont-buy"</script>
-<script src="assets/js/core.js?v=12"></script>
+<script src="assets/js/core.js?v=12f1"></script>
 <script src="assets/js/subscribe.js?v=7"></script>
-<script src="assets/js/data/campaigns.js?v=8"></script>
+<script src="assets/js/data/campaigns.js?v=9"></script>
+<script src="assets/js/data/campaigns-deep.js?v=1"></script>
 <script src="assets/js/data/districts.js?v=7"></script>
 <script>
 shell('gallery.html');
@@ -58,6 +74,64 @@ document.title = `${c.brand} — ${c.title} · Tự Học Marketing Case`;
 const i = CAMPAIGNS.indexOf(c);
 const prev = CAMPAIGNS[(i-1+CAMPAIGNS.length)%CAMPAIGNS.length], next = CAMPAIGNS[(i+1)%CAMPAIGNS.length];
 const saved = State.has('campaigns', c.id);
+const D = (typeof CAMPAIGN_DEEP !== 'undefined' && CAMPAIGN_DEEP[c.id]) || null;
+/* Mỗi khối nội dung mang một nhãn bằng chứng: V = dữ kiện đã đối chiếu nguồn · A = giả định/diễn giải phân tích · K = kết luận của người viết. */
+const EV = { V:['v','Đã xác minh'], A:['a','Giả định phân tích'], K:['k','Kết luận của tác giả'] };
+const ev = k => `<span class="ev ev--${EV[k][0]}" title="${{V:'Có nguồn đối chiếu được.',A:'Cách diễn giải hoặc giả định, không phải sự thật lịch sử.',K:'Ý kiến của người viết; bạn có quyền không đồng ý.'}[k]}">${EV[k][1]}</span>`;
+const STATUS = { success:'Thành công có điều kiện', failure:'Thất bại hoặc bị phản ứng', mixed:'Kết quả hỗn hợp' };
+function deepSections(){
+  const o = D.options || [], f = D.facts || [];
+  const fact = x => `<div class="fact">${x.t}<small>${x.who} · ${x.date}${x.url?` · <a href="${x.url}" target="_blank" rel="noopener noreferrer">${esc(x.pub||'nguồn')}</a>`:(x.pub?' · '+esc(x.pub):'')}${x.caveat?`<br>Lưu ý: ${x.caveat}`:''}</small></div>`;
+  return `
+  <nav class="jr" aria-label="Hành trình phân tích case">
+    <a href="#observe"><span>1</span><b>Observe</b>Quan sát</a><a href="#analyze"><span>2</span><b>Analyze</b>Phân tích</a>
+    <a href="#strategize"><span>3</span><b>Strategize</b>Chọn chiến lược</a><a href="#create"><span>4</span><b>Create</b>Làm thử</a><a href="#measure"><span>5</span><b>Measure</b>Đo và nhìn lại</a>
+  </nav>
+  <section class="sec" data-reveal><h2>Mục tiêu học</h2><div class="stack"><div><p style="font-size:1.12rem">${D.objective}</p>
+    <span class="ev ev--k">${STATUS[D.status]||''}</span><span class="ev ev--v" title="Ngày đối chiếu nguồn lần cuối">Đối chiếu nguồn: ${D.verified}</span></div></div></section>
+
+  <section class="sec" id="observe" data-reveal><h2>1 · Observe</h2><div class="stack">
+    <div><h3>Bối cảnh ${ev('V')}</h3><p>${c.context}</p></div>
+    <div><h3>Vấn đề kinh doanh ${ev(D.problemKind||'A')}</h3><p>${D.problem}</p></div>
+    <div><h3>Điều quan sát được về khách hàng ${ev('V')}</h3><p>${D.consumer.observed}</p>
+      <h3 style="margin-top:14px">Diễn giải về tâm lý ${ev('A')}</h3><p>${D.consumer.hypothesis}</p>
+      <h3 style="margin-top:14px">Insight như thương hiệu và giới chuyên môn thường kể ${ev('A')}</h3><p>${c.insight}</p></div>
+  </div></section>
+
+  <section class="sec" id="analyze" data-reveal><h2>2 · Analyze</h2><div class="stack">
+    <div><h3>Bạn sẽ chọn hướng nào? ${ev('A')}</h3>
+      <p>Đây là các hướng chiến lược mà người viết dựng lại để bạn cân nhắc, <b>không phải biên bản họp của thương hiệu</b>. Chọn trước, đọc đánh đổi sau.</p>
+      <div id="opts">${o.map((x,k)=>`<button type="button" class="opt" data-o="${k}" aria-pressed="false"><b>${x.name}</b><br>${x.bet}<small data-more hidden><b>Được:</b> ${x.gain}<br><b>Mất:</b> ${x.cost}${x.taken?`<br><b>Hướng được ghi nhận trong nguồn:</b> ${x.taken}`:''}</small></button>`).join('')}</div></div>
+    <div><h3>Kết quả đã biết ${ev('V')}</h3>${f.length?f.map(fact).join(''):''}
+      <div class="unknown"><b>Chưa biết, đừng khẳng định:</b> ${D.unknown}</div></div>
+    <div><h3>Vì sao có kết quả đó, và điều gì khác cũng có thể giải thích ${ev('K')}</h3>
+      <ul style="display:grid;gap:14px;margin:0;padding:0;list-style:none">${D.causal.map(x=>`<li style="padding-left:0"><b>${x.claim}</b><br><span style="opacity:.85">Dấu hiệu: ${x.evidence}</span><br><span style="opacity:.85">Có thể còn do: ${x.other}</span></li>`).join('')}</ul></div>
+    <div><h3>Đánh đổi, rủi ro và phản biện ${ev('K')}</h3><ul style="display:grid;gap:10px;margin:0;padding:0;list-style:none">${D.limits.map(x=>`<li style="padding-left:0">${x}</li>`).join('')}</ul></div>
+  </div></section>
+
+  <section class="sec" id="strategize" data-reveal><h2>3 · Strategize</h2><div class="stack">
+    <div><h3>Ý tưởng lớn ${ev('A')}</h3><p class="idea" style="max-width:none;font-size:clamp(1.3rem,2.6vw,2rem)">${c.idea}</p></div>
+    <div><h3>Thực thi ${ev('V')}</h3><ul style="display:grid;gap:10px;margin:0;padding:0;list-style:none">${c.execution.map(x=>`<li>${x}</li>`).join('')}</ul>
+      <div class="chips" style="margin-top:12px">${c.channels.map(x=>`<span>${x}</span>`).join('')}</div></div>
+  </div></section>
+
+  <section class="sec" id="create" data-reveal><h2>4 · Create</h2><div class="stack">
+    <div><h3>Ngôn ngữ hình ảnh ${ev('K')}</h3><p>${c.visual}</p></div>
+    <div><h3>Làm thử</h3><p>${D.practice}</p><p><a class="btn btn--ghost" href="lab-chien-luoc.html">Mở Xưởng chiến lược (dữ liệu giả lập)</a></p></div>
+  </div></section>
+
+  <section class="sec" id="measure" data-reveal><h2>5 · Measure</h2><div class="stack">
+    <div><h3>Bạn sẽ đo gì? ${ev('K')}</h3><p>${D.measure}</p></div>
+    <div class="reflect"><h3>Nhìn lại · không có đáp án duy nhất</h3>
+      ${D.reflect.map((q,k)=>`<p style="margin:14px 0 0"><b>${k+1}. ${q}</b></p><textarea data-r="${k}" aria-label="Trả lời câu ${k+1}" maxlength="600"></textarea>`).join('')}
+      <p class="src" style="margin-top:10px">Câu trả lời chỉ nằm trên máy bạn; bấm "Lưu case này" để đưa vào sổ tay.</p></div>
+    <div><h3>Khi nào bài học này không áp dụng ${ev('K')}</h3><p>${D.transfer}</p></div>
+    <div><h3>Bài học mang đi ${ev('K')}</h3><ul style="display:grid;gap:10px;margin:0;padding:0;list-style:none">${c.learn.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+  </div></section>
+
+  <section class="sec" data-reveal><h2>Nguồn</h2><ol class="src" style="margin:0;padding-left:18px;max-width:70ch">${(D.sources||[]).map(x=>`<li>${x.url?`<a href="${x.url}" target="_blank" rel="noopener noreferrer">${esc(x.t)}</a>`:esc(x.t)} — ${esc(x.pub)}${x.date?', '+esc(x.date):''}</li>`).join('')}</ol>
+    <p class="src" style="margin-top:12px">Nhãn: <b>Đã xác minh</b> = có nguồn kiểm được; <b>Giả định phân tích</b> = cách diễn giải, không phải lịch sử; <b>Kết luận của tác giả</b> = ý kiến có thể tranh luận.</p></section>`;
+}
 
 document.getElementById('app').innerHTML = `
   <section class="hero">
@@ -73,6 +147,7 @@ document.getElementById('app').innerHTML = `
     <div class="full" data-reveal-clip>${plate({color:c.color,mark:c.mark,kicker:c.brand,meta:c.year,title:'',shape:'plate--wide'})}</div>
   </section>
 
+  ${D ? deepSections() : `
   <section class="sec" data-reveal><h2>Context</h2><p>${c.context}</p></section>
   <section class="sec" data-reveal><h2>Insight</h2><p>${c.insight}</p></section>
   <section class="sec" data-reveal><h2>Big idea</h2><p class="idea">${c.idea}</p></section>
@@ -81,6 +156,7 @@ document.getElementById('app').innerHTML = `
   <section class="sec" data-reveal><h2>Channels</h2><div class="chips">${c.channels.map(x=>`<span>${x}</span>`).join('')}</div></section>
   <section class="sec" data-reveal><h2>Why it worked</h2><ul>${c.why.map(x=>`<li>${x}</li>`).join('')}</ul></section>
   <section class="sec" data-reveal><h2>What to learn</h2><ul>${c.learn.map(x=>`<li>${x}</li>`).join('')}</ul></section>
+`}
 
   <section style="padding:clamp(40px,6vw,90px) 0;border-top:var(--rule)" data-reveal>
     <p class="pull">${c.quote}</p>
@@ -99,18 +175,24 @@ document.getElementById('app').innerHTML = `
       <h3 class="h-mid" style="margin-top:8px">${next.brand} — ${next.title}</h3></a>
   </section>`;
 
+
+if(D){
+  const opts=document.getElementById('opts');
+  if(opts) opts.onclick=e=>{const b=e.target.closest('.opt'); if(!b) return;
+    opts.querySelectorAll('.opt').forEach(x=>{x.setAttribute('aria-pressed',String(x===b)); x.querySelector('[data-more]').hidden=false;});};
+}
 document.getElementById('save').onclick=e=>{
   const on = State.toggle('campaigns', c.id);
   e.target.textContent = on?'Đã lưu vào sổ tay ✓':'Lưu case này';
   e.target.classList.toggle('btn--accent', on);
-  if(on){ const s=State.get(); s.notes.unshift({t:c.brand+' — '+c.title, body:c.quote, when:new Date().toISOString().slice(0,10), kind:'Campaign', href:'campaign.html?id='+c.id}); State.set({notes:s.notes}); }
+  if(on){ const s=State.get(); s.notes.unshift({t:c.brand+' — '+c.title, body:[c.quote,...[...document.querySelectorAll('.reflect textarea')].map((t,k)=>t.value.trim()&&('Câu '+(k+1)+': '+t.value.trim()))].filter(Boolean).join('\n'), when:new Date().toISOString().slice(0,10), kind:'Campaign', href:'campaign.html?id='+c.id}); State.set({notes:s.notes}); }
   toast(on?'Đã lưu':'Đã bỏ lưu');
 };
-document.getElementById('subcase').innerHTML = subscribeBox('case:'+c.id,{kicker:'Còn 19 case nữa',title:'Mỗi tuần một case được mổ',body:'Bối cảnh, insight, big idea và bài học — gửi thẳng vào hộp thư. Không quảng cáo, bỏ theo dõi bằng một cú bấm.'});
+document.getElementById('subcase').innerHTML = subscribeBox('case:'+c.id,{kicker:'Còn '+(CAMPAIGNS.length-1)+' case nữa',title:'Mỗi tuần một case được mổ',body:'Bối cảnh, insight, big idea và bài học — gửi thẳng vào hộp thư. Không quảng cáo, bỏ theo dõi bằng một cú bấm.'});
 reveal();
 </script>
 <script src="assets/js/library-nav.js?v=2"></script>
-<script src="assets/js/lab.js?v=1"></script>
+<script src="assets/js/lab.js?v=1f1"></script>
 <script src="assets/js/reader.js?v=1"></script>
 <script src="assets/js/paper.js?v=7"></script>
 </body></html>

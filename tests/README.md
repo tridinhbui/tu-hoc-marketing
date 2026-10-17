@@ -18,6 +18,8 @@ node tools_validate_bai.mjs         # kiểm định từng module bài (đã c�
 | `games.test.mjs` | Mô hình mini-game thuần và công bằng: tối ưu đạt 3 sao, chiến lược cố định/"đông nhất" không đạt, thang sao đơn điệu |
 | `world-map.test.mjs` | Bản đồ vương quốc: id duy nhất, toạ độ trong khung, khớp cấu hình máy chủ, ngưỡng rương/trang phục đạt được |
 | `lab.test.mjs` | Marketing Lab (Meta, Google Ads, GA4 đối soát với feed, SEO): KPI đúng công thức và mẫu số 0, mô phỏng xác định, sai đối tượng/tăng ngân sách/tệp hẹp cho hệ quả đúng chiều, chấm điểm theo quyết định, đầu ra GA4 khớp chiến dịch |
+| `case-deep.test.mjs` | Case sâu: đủ khung Observe→…→Measure, đúng một hướng "taken", nhân quả kèm yếu tố khác, mỗi dữ kiện có ai đo/ngày/nguồn, không có số ROAS/ROI, các câu đã bị fact-check bác không quay lại, thư viện cân bằng thành công/thất bại và Việt Nam/quốc tế |
+| `strategy-lab.test.mjs` | Xưởng chiến lược: dữ liệu giả lập có nhãn, tham chiếu hợp lệ, mô hình kênh (trần, mức tối thiểu, kênh cần danh sách), hai hướng khác hẳn nhau đều đạt ngưỡng còn kế hoạch tự mâu thuẫn rớt xa, cỡ mẫu, thí nghiệm giả lập xác định, đọc kết quả không nhảy sang "mở rộng" khi chưa vượt nhiễu |
 | `capstone.test.mjs`, `glossary.test.mjs` | Dữ liệu capstone tự khớp; thuật ngữ đúng và liên kết bài có thật |
 
 `baselines.json` là ngưỡng ratchet: chỉ hạ khi nội dung tốt lên.

@@ -145,3 +145,11 @@ body{margin:0!important;padding:0!important;color:var(--lb-ink);font-family:var(
 .lb select.pick{font:inherit;padding:8px 10px;border-radius:8px;border:1.5px solid var(--lb-line);background:var(--lb-card);color:var(--lb-ink);max-width:100%}
 @media(max-width:560px){.part{grid-template-columns:1fr 50px}.part .meter{grid-column:1/-1;grid-row:2}.kpis{grid-template-columns:repeat(2,1fr)}.lb-exp{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:no-preference){.meter i{transition:width .25s ease}}
+
+/* Xưởng chiến lược: bàn thứ năm chiếm cả hàng (bốn bàn công cụ nằm trên lưới bento ở atelier.css) */
+.lab-desk--e{grid-column:1/-1;background:transparent;box-shadow:inset 0 0 0 1px var(--at-ink,#2B1A11);min-height:0}
+.lab-desk--e .lab-desk__d{max-width:68ch}
+.lb-tag[title]{cursor:help}
+.tabs button[disabled]{opacity:.45;cursor:not-allowed}
+.tbl--wide{min-width:640px}
+.tbl--wide td:first-child{min-width:230px}

@@ -50,7 +50,7 @@ for (const c of g('CAMPAIGNS')) {
   fs.writeFileSync(`case/${c.id}.html`, pageFrom('campaign.html', {
     title: `${c.brand} — ${c.title} (${c.year}) · Case study marketing`,
     desc: clip(`${c.insight} Bối cảnh, big idea, cách thực thi và bài học cho marketer.`, 158),
-    og: 'case-' + c.id, canonical: url, injectId: c.id,
+    og: fs.existsSync(`assets/og/case-${c.id}.png`) ? 'case-' + c.id : 'default', canonical: url, injectId: c.id,   // case mới chưa có ảnh OG riêng → dùng ảnh mặc định, không để og:image 404
   }));
   urls.push([url, '0.8']); made++;
 }

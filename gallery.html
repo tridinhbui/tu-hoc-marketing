@@ -54,12 +54,14 @@
 </main>
 
 <script src="assets/js/core.js?v=12f1"></script>
-<script src="assets/js/data/campaigns.js?v=8"></script>
+<script src="assets/js/data/campaigns.js?v=9"></script>
+<script src="assets/js/data/campaigns-deep.js?v=1"></script>
 <script src="assets/js/data/districts.js?v=7"></script>
 <script>
 shell('gallery.html');
 const FILTERS=[['all','Tất cả'],...DISTRICTS.map(d=>[d.key,d.name])];
 let active='all';
+const STATUS={success:'Thành công có điều kiện',failure:'Bài học thất bại',mixed:'Kết quả hỗn hợp'};
 document.getElementById('filters').innerHTML=FILTERS.map(([k,l])=>
   `<button data-k="${k}" aria-pressed="${k===active}">${l}</button>`).join('');
 
@@ -69,7 +71,7 @@ function render(){
     <article class="item" data-reveal data-delay="${(i%4)*.06}">
       ${plate({color:c.color,mark:c.mark,kicker:c.brand,meta:c.year,title:c.title,
         shape:(i%6===0||i%6===4)?'plate--wide':'plate--tall',href:'case/'+c.id+'.html'})}
-      <div class="item__cap"><span class="label">${c.tag}</span><span class="label">${c.market}</span></div>
+      <div class="item__cap"><span class="label">${c.tag}</span><span class="label">${c.market}</span>${(CAMPAIGN_DEEP[c.id]||{}).status?`<span class="label label--accent">${STATUS[CAMPAIGN_DEEP[c.id].status]}</span>`:''}</div>
       <a href="case/${c.id}.html"><h2>${c.brand} — ${c.title}</h2></a>
       <p>${c.idea}</p>
     </article>`).join('');

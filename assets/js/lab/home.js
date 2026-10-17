@@ -32,6 +32,14 @@
   const modesTried = Object.values(info).reduce((s, i) => s + ['learn', 'practice', 'challenge'].filter((m) => i.by(m).length).length, 0);
   const stepState = (id) => (id === 'ga4' || id === 'seo') && info[id].atts.length ? '<span class="lb-tag lb-tag--on">Đã làm</span>' : picked[id] ? '<span class="lb-tag lb-tag--on">Đã chọn kết quả</span>' : TOOLS[id] ? `<a class="lb-btn lb-btn--ghost lb-btn--sm" href="${TOOLS[id].href}">Làm</a>` : '<span class="lb-tag">Sắp mở</span>';
 
+
+  /* Bàn thứ năm: chiến lược mở, không đáp án duy nhất. Dữ liệu riêng, giả lập có nhãn (strategy-data.js). */
+  const strategyDesk = () => { const a = LabStore.tool('strategy').attempts, best = a.reduce((b, x) => Math.max(b, x.summary.score), 0);
+    return `<article class="lab-desk lab-desk--e"><p class="lb-eyebrow">Xưởng chiến lược · dữ liệu giả lập</p>
+      <h3>Từ brief đến thí nghiệm</h3><p class="lab-desk__d">Nghiên cứu khách, định vị, thông điệp, kênh, ngân sách, KPI, thiết kế thí nghiệm rồi đọc kết quả có nhiễu. Không có đáp án duy nhất: chấm độ nhất quán của lập luận.</p>
+      <p class="lab-desk__m">${a.length ? `${a.length} lượt · điểm cao nhất <b>${best}</b>` : 'Chưa có lượt chạy nào'}</p>
+      <a class="lb-btn" href="lab-chien-luoc.html">${a.length ? 'Mở xưởng' : 'Nhận brief & bắt đầu'}</a></article>`; };
+
   const steps = CASE.steps.map(([id, t], i) => `<li class="lab-step" data-id="${id}"><span class="lab-step__n">${String(i + 1).padStart(2, '0')}</span><span class="lab-step__t">${escH(t)}</span><span class="lab-step__s">${stepState(id)}</span></li>`).join('');
   const desk = (id, k) => { const T = TOOLS[id], I = info[id];
     return `<article class="lab-desk lab-desk--${k}"><p class="lb-eyebrow">Bàn ${String(['seo', 'meta', 'gads', 'ga4'].indexOf(id) + 1).padStart(2, '0')} · ${escH(T.n)}</p>
@@ -65,9 +73,10 @@
       <p class="lb-lede" style="font-size:14px">Từng lab có thể làm độc lập. Khi làm xuyên suốt, GA4 đọc đúng các lần chạy bạn đã chọn của Meta và Google Ads, với giả định attribution nêu rõ. Nhớ bấm "Dùng lần chạy này cho case xuyên suốt" ở màn kết quả.</p>
     </section>
 
-    <section class="lb-sec"><h2>Bốn bàn làm việc</h2>
+    <section class="lb-sec"><h2>Bốn bàn công cụ và một xưởng chiến lược</h2>
       <div class="lab-desks">
         ${desk('seo', 'a')}${desk('meta', 'b')}${desk('gads', 'c')}${desk('ga4', 'd')}
+        ${strategyDesk()}
         ${upcoming.map(([t, d, when]) => `<article class="lab-desk lab-desk--off" data-off="1"><p class="lb-eyebrow">Sắp mở · ${when}</p><h3>${t}</h3><p class="lab-desk__d">${d}</p></article>`).join('')}
       </div>
     </section>
