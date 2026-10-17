@@ -88,12 +88,27 @@ test('mỗi thương hiệu giả định ghi rõ là giả định; nhóm trong
   for (const [, v] of cep) { const n = [...v.matchAll(/(\d+)%/g)].reduce((t, m) => t + +m[1], 0); assert.ok(n <= 100, v); }
 });
 
-test('chống lộ đáp án: đáp án đúng không luôn dài nhất, không dồn một vị trí (sáu case mới)', () => {
-  let longest = 0, n = 0; const pos = {};
-  for (const id of NEW) for (const q of byId(id).qs.filter((x) => x.kind === 'pick')) {
-    const L = q.opts.map((o) => o[0].length), ti = q.opts.findIndex((o) => o[1]); n++; pos[ti] = (pos[ti] || 0) + 1;
-    if (L[ti] === Math.max(...L)) longest++;
+test('chống lộ đáp án (cả 18 case): đáp án đúng không thường xuyên dài nhất, không dồn một vị trí, không cố định theo q4/q5', () => {
+  let longest = 0, n = 0; const pos = {}, byQ = {};
+  for (const c of CASES) {
+    let longestInCase = 0, picks = 0;
+    for (const q of c.qs.filter((x) => x.kind === 'pick')) {
+      const L = q.opts.map((o) => o[0].length), ti = q.opts.findIndex((o) => o[1]); n++; picks++; pos[ti] = (pos[ti] || 0) + 1;
+      (byQ[q.id] = byQ[q.id] || {})[ti] = ((byQ[q.id] || {})[ti] || 0) + 1;
+      if (L[ti] === Math.max(...L)) { longest++; longestInCase++; }
+    }
+    assert.ok(longestInCase < picks || picks < 2, `${c.id}: đáp án đúng dài nhất ở mọi câu chọn`);
   }
-  assert.ok(longest / n <= 0.6, `đáp án dài nhất ở ${longest}/${n} câu`);
-  assert.ok(Math.max(...Object.values(pos)) / n <= 0.5, JSON.stringify(pos));
+  assert.ok(longest / n <= 0.55, `đáp án dài nhất ở ${longest}/${n} câu (ngưỡng 55%)`);
+  assert.ok(Math.max(...Object.values(pos)) / n <= 0.45, `một vị trí chiếm quá nhiều: ${JSON.stringify(pos)}`);
+  for (const [q, d] of Object.entries(byQ)) assert.ok(Object.keys(d).length >= 3, `${q}: đáp án đúng chỉ rơi vào ${Object.keys(d).length} vị trí`);
+});
+
+test('chênh lệch độ dài giữa các phương án trong một câu không quá lớn (tránh phương án cụt lộ là sai)', () => {
+  for (const c of CASES) for (const q of c.qs.filter((x) => x.kind === 'pick')) {
+    const L = q.opts.map((o) => o[0].length), ti = q.opts.findIndex((o) => o[1]), others = L.filter((_, i) => i !== ti);
+    const shortest = Math.min(...others), longestOther = Math.max(...others);
+    assert.ok(L[ti] / shortest <= 2.2, `${c.id}/${q.id}: đáp án đúng dài gấp ${(L[ti] / shortest).toFixed(1)} lần phương án ngắn nhất`);
+    assert.ok(shortest / L[ti] <= 2.2 && longestOther / L[ti] <= 2.2, `${c.id}/${q.id}`);
+  }
 });

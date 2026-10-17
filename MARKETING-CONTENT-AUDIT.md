@@ -197,7 +197,7 @@ Khoảng trống ở §3 (12/12 case bấm giờ là quyết định ngân sách
 
 **Phát hiện khi làm:** các năng lực c01, c02, c04, c05, c08 trước đây **không có case nào** nên người học không thể lên mức “Phân tích” ở bản đồ năng lực qua case; nay c02, c04, c08 có 2 case, nhưng **c01 và c05 mới có 1 case** (cần ít nhất 2 để lên mức “Thuyết phục”): ưu tiên trong đợt tới.
 
-**Chất lượng đề:** 24/24 câu chọn của 12 case cũ có đáp án đúng là phương án dài nhất và chỉ ở vị trí 1–2 (đúng loại lỗi audit giáo trình đã nêu). Ở 6 case mới đã cân bằng độ dài và xáo vị trí (đúng-là-dài-nhất 6/12; vị trí 1/2/3/4 = 3/3/5/1), có test chống tái diễn (`cases-new.test.mjs`). **12 case cũ chưa sửa** — việc tiếp theo.
+**Chất lượng đề (đã sửa):** trước đây 24/24 câu chọn của 12 case cũ có đáp án đúng là phương án dài nhất và chỉ ở vị trí 1–2 (đúng loại lỗi audit giáo trình đã nêu: người học đoán được bằng hình thức). Đã viết lại các phương án sai cho đủ dài và đủ thuyết phục, rồi xáo vị trí. Kết quả trên 36 câu chọn của 18 case: đáp án đúng dài nhất ở 16/36 (44%, trước đó 24/24 ở case cũ); vị trí 1/2/3/4 = 9/9/14/4 (trước đó 12/12/0/0); không case nào có đáp án đúng dài nhất ở cả hai câu. Test `cases-new.test.mjs` khoá các ngưỡng này (≤ 55% dài nhất, ≤ 45% mỗi vị trí, mỗi câu q4/q5 rơi vào ≥ 3 vị trí, độ dài các phương án không chênh quá 2,2 lần). Lưu ý: nội dung các phương án sai nay có thêm chi tiết minh hoạ; **đã giữ nguyên ý nghĩa đúng/sai và lời giải**, nhưng chưa có người duyệt đọc lại.
 
 **Đồng bộ phía máy chủ:** `api/src/generated/xp-refs.json` (danh sách case hợp lệ cho XP) phải sinh lại khi thêm case — test `xp-trust` đã bắt lỗi này; `bank.json` cũng được sinh lại (đang lệch từ khi sửa hai câu thi ở PR này).
 
