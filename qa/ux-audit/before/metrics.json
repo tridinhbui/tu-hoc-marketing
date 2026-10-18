@@ -1,0 +1,1939 @@
+[
+ {
+  "w": 1440,
+  "page": "index.html",
+  "auth": false,
+  "title": "Tự Học Marketing Case — Học cách nhìn thế giới như một strat",
+  "h1": [
+   "Đừng chỉ học marketing.\nHọc cách\nnhìn thế giới\nnhư một strategist."
+  ],
+  "hs": 29,
+  "words": 1646,
+  "aboveWords": 149,
+  "smallPct": 20,
+  "tinyPct": 7,
+  "lowContrastPct": 22,
+  "lowSamples": [
+   "Bắt đầu miễn phí → (2.59 @14.5px)",
+   "Cùng (1.52 @59.04px)",
+   "một (1.52 @59.04px)",
+   "sản (1.52 @59.04px)",
+   "phẩm (1.52 @59.04px)",
+   "có (1.52 @59.04px)"
+  ],
+  "lhBad": 2,
+  "interactive": 29,
+  "interAbove": 10,
+  "smallTap": 10,
+  "ctaAbove": [
+   "Bắt đầu miễn phí →"
+  ],
+  "cards": 2,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 10,
+  "families": [
+   "Fraunces",
+   "Be Vietnam Pro",
+   "Hand VN"
+  ],
+  "overflowX": false,
+  "height": 12953
+ },
+ {
+  "w": 1440,
+  "page": "dang-nhap.html",
+  "auth": false,
+  "title": "Đăng nhập — Tự Học Marketing Case",
+  "h1": [
+   "Chào mừng trở lại!"
+  ],
+  "hs": 1,
+  "words": 149,
+  "aboveWords": 149,
+  "smallPct": 21,
+  "tinyPct": 2,
+  "lowContrastPct": 13,
+  "lowSamples": [
+   "TÀI KHOẢN STUDIO (3.89 @11px)",
+   "hoặc (3.31 @13px)",
+   "Bằng việc tiếp tục, bạn đồng ý với (3.31 @12px)",
+   "Điều khoản sử dụng (3.31 @12px)",
+   "Chính sách bảo mật (3.31 @12px)"
+  ],
+  "lhBad": 0,
+  "interactive": 3,
+  "interAbove": 3,
+  "smallTap": 1,
+  "ctaAbove": [],
+  "cards": 1,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "Hand VN"
+  ],
+  "overflowX": false,
+  "height": 900
+ },
+ {
+  "w": 1440,
+  "page": "gioi-thieu.html",
+  "auth": false,
+  "title": "Đăng nhập — Tự Học Marketing Case",
+  "h1": [
+   "Chào mừng trở lại!"
+  ],
+  "hs": 1,
+  "words": 149,
+  "aboveWords": 149,
+  "smallPct": 21,
+  "tinyPct": 2,
+  "lowContrastPct": 13,
+  "lowSamples": [
+   "TÀI KHOẢN STUDIO (3.89 @11px)",
+   "hoặc (3.31 @13px)",
+   "Bằng việc tiếp tục, bạn đồng ý với (3.31 @12px)",
+   "Điều khoản sử dụng (3.31 @12px)",
+   "Chính sách bảo mật (3.31 @12px)"
+  ],
+  "lhBad": 0,
+  "interactive": 3,
+  "interAbove": 3,
+  "smallTap": 1,
+  "ctaAbove": [],
+  "cards": 1,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "Hand VN"
+  ],
+  "overflowX": false,
+  "height": 900
+ },
+ {
+  "w": 1440,
+  "page": "hoc.html",
+  "auth": true,
+  "ms": 2768,
+  "title": "Hành trình hôm nay — Tự Học Marketing Case",
+  "h1": [
+   "Hai quán phở cùng dãy phố, vì sao khách đứng xếp hàng ở một quán?"
+  ],
+  "hs": 12,
+  "words": 436,
+  "aboveWords": 403,
+  "smallPct": 39,
+  "tinyPct": 6,
+  "lowContrastPct": 28,
+  "lowSamples": [
+   "18 Th10 · 2026 (3.48 @10.5px)",
+   "Học viên · cấp 1 (1.06 @10px)",
+   "2 (3.48 @19.2px)",
+   "3 (3.48 @19.2px)",
+   "4 (3.48 @19.2px)",
+   "5 (3.48 @19.2px)"
+  ],
+  "lhBad": 0,
+  "interactive": 26,
+  "interAbove": 23,
+  "smallTap": 17,
+  "ctaAbove": [
+   "Bắt đầu bài đầu tiên →",
+   "Học bài ngay →",
+   "Xem bản đồ hành trình →"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "Hand VN"
+  ],
+  "overflowX": false,
+  "height": 900,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "bat-dau.html",
+  "auth": true,
+  "ms": 2662,
+  "title": "Bắt đầu từ đâu — Tự Học Marketing Case",
+  "h1": [
+   "Bạn muốn học marketing\ntheo hướng nào?"
+  ],
+  "hs": 5,
+  "words": 1098,
+  "aboveWords": 178,
+  "smallPct": 16,
+  "tinyPct": 1,
+  "lowContrastPct": 21,
+  "lowSamples": [
+   "18 Th10 · 2026 (3.53 @10.5px)",
+   "Bắt đầu từ đâu (4.02 @13px)",
+   "6 phút mỗi bài (4.02 @13px)",
+   "· Mỗi bài gồm đọc, một câu dừng giữa bài (4.01 @14px)",
+   "TIẾN ĐỘ HÀNH TRÌNH (1.02 @11.52px)",
+   "0/760 bài đã xong (1.04 @15px)"
+  ],
+  "lhBad": 1,
+  "interactive": 37,
+  "interAbove": 9,
+  "smallTap": 0,
+  "ctaAbove": [
+   "Mở bài học →"
+  ],
+  "cards": 16,
+  "imgsNoAlt": 0,
+  "btnNoName": 1,
+  "anims": 1,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "Hand VN"
+  ],
+  "overflowX": false,
+  "height": 4330,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "hoc-bai.html",
+  "auth": true,
+  "ms": 2744,
+  "title": "Học bài — Tự Học Marketing Case",
+  "h1": [
+   "Học bài — lộ trình theo chặng"
+  ],
+  "hs": 7,
+  "words": 455,
+  "aboveWords": 256,
+  "smallPct": 24,
+  "tinyPct": 10,
+  "lowContrastPct": 22,
+  "lowSamples": [
+   "18 Th10 · 2026 (3.48 @10.5px)",
+   "Nhiệm vụ đang học (4.15 @13px)",
+   "+10 XP khi hoàn thành (4.15 @13px)",
+   "Chọn lộ trình theo nghề (3.94 @16px)",
+   "? (3.96 @11.52px)",
+   "Chặng 1 (3.48 @10.5px)"
+  ],
+  "lhBad": 0,
+  "interactive": 33,
+  "interAbove": 20,
+  "smallTap": 5,
+  "ctaAbove": [
+   "Luyện tập không giới hạn (khôn",
+   "Hỏi trợ lý"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 1,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 1040,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "bai.html?id=L:53",
+  "auth": true,
+  "ms": 2661,
+  "title": "Vì sao trường đại học cũng phải làm marketing? — Tự Học Mark",
+  "h1": [
+   "Vì sao trường đại học cũng phải làm marketing?"
+  ],
+  "hs": 16,
+  "words": 1283,
+  "aboveWords": 339,
+  "smallPct": 9,
+  "tinyPct": 2,
+  "lowContrastPct": 8,
+  "lowSamples": [
+   "Marketing trong đời thật · Bài 1 (3.05 @12.5px)",
+   "113% (3.05 @12px)",
+   "Nền tảng (3.48 @11.5px)",
+   "0/5 (3.05 @12px)",
+   "Marketing trong đời thật · Bài 1/3 (3.48 @11.5px)",
+   "Khoảng (3.05 @13.32px)"
+  ],
+  "lhBad": 0,
+  "interactive": 44,
+  "interAbove": 21,
+  "smallTap": 13,
+  "ctaAbove": [
+   "Kiểm tra →"
+  ],
+  "cards": 1,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "JetBrains Mono"
+  ],
+  "overflowX": false,
+  "height": 6927,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "bai.html?id=B:ob01-04",
+  "auth": true,
+  "ms": 2847,
+  "title": "Cùng một ổ bánh mì, vì sao chỗ này bán 25.000đ, chỗ kia bán ",
+  "h1": [
+   "Cùng một ổ bánh mì, vì sao chỗ này bán 25.000đ, chỗ kia bán 40.000đ vẫ"
+  ],
+  "hs": 19,
+  "words": 1660,
+  "aboveWords": 348,
+  "smallPct": 8,
+  "tinyPct": 2,
+  "lowContrastPct": 7,
+  "lowSamples": [
+   "Marketing là gì khi nhìn từ quầy bán hàn (3.05 @12.5px)",
+   "113% (3.05 @12px)",
+   "Nền tảng (3.48 @11.5px)",
+   "0/5 (3.05 @12px)",
+   "Marketing là gì khi nhìn từ quầy bán hàn (3.48 @11.5px)",
+   "Khoảng (3.05 @13.32px)"
+  ],
+  "lhBad": 2,
+  "interactive": 51,
+  "interAbove": 19,
+  "smallTap": 19,
+  "ctaAbove": [
+   "Chọn",
+   "Kiểm tra →"
+  ],
+  "cards": 1,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 8339,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "ban-do.html",
+  "auth": true,
+  "ms": 2652,
+  "title": "Học theo nghề — Tự Học Marketing Case",
+  "h1": [
+   "Bản đồ nghề nghiệp"
+  ],
+  "hs": 2,
+  "words": 382,
+  "aboveWords": 277,
+  "smallPct": 58,
+  "tinyPct": 14,
+  "lowContrastPct": 36,
+  "lowSamples": [
+   "18 Th10 · 2026 (3.48 @10.5px)",
+   "01 — Lộ trình sự nghiệp & kỹ năng chuẩn  (3.54 @11.5px)",
+   "Lv 1 · Người quan sát (1.88 @13px)",
+   "0% sẵn sàng · Marketing Executive (3.80 @13px)",
+   "Mốc kế tiếp: còn 760 bài hoàn thành lộ t (1.88 @13px)",
+   "Bản đồ vùng nghề (3.80 @16px)"
+  ],
+  "lhBad": 3,
+  "interactive": 26,
+  "interAbove": 23,
+  "smallTap": 3,
+  "ctaAbove": [],
+  "cards": 5,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 1678,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "case-thu-vien.html",
+  "auth": true,
+  "ms": 2687,
+  "title": "Case có bấm giờ — Tự Học Marketing Case",
+  "h1": [
+   "18 case,\ndữ liệu mở theo câu bạn hỏi."
+  ],
+  "hs": 0,
+  "words": 706,
+  "aboveWords": 251,
+  "smallPct": 25,
+  "tinyPct": 7,
+  "lowContrastPct": 50,
+  "lowSamples": [
+   "18 Th10 · 2026 (3.48 @10.5px)",
+   "Giải case có bấm giờ (4.23 @13.5px)",
+   "Số liệu mở theo câu hỏi, chấm tự động (4.23 @11.5px)",
+   "Tự giải có bấm giờ (3.80 @13px)",
+   "Ngành (3.48 @11px)",
+   "Độ khó (3.48 @11px)"
+  ],
+  "lhBad": 3,
+  "interactive": 25,
+  "interAbove": 12,
+  "smallTap": 0,
+  "ctaAbove": [
+   "Giải case có bấm giờ Số liệu m"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "JetBrains Mono"
+  ],
+  "overflowX": false,
+  "height": 2144,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "campaign.html?id=highlands-third-place",
+  "auth": true,
+  "ms": 2622,
+  "title": "Highlands Coffee — Chiếm chỗ ngồi của thành phố · Tự Học Mar",
+  "h1": [
+   "Chiếm chỗ ngồi của thành phố"
+  ],
+  "hs": 28,
+  "words": 1586,
+  "aboveWords": 72,
+  "smallPct": 21,
+  "tinyPct": 15,
+  "lowContrastPct": 3,
+  "lowSamples": [
+   "18 Th10 · 2026 (3.48 @10.5px)",
+   "2012 → (3.80 @13px)",
+   "Highlands Coffee (4.19 @11.52px)",
+   "2012 → (4.19 @11.52px)",
+   "Đối chiếu nguồn: 17/10/2026 (4.32 @9px)",
+   "Đã xác minh (4.32 @9px)"
+  ],
+  "lhBad": 1,
+  "interactive": 34,
+  "interAbove": 6,
+  "smallTap": 1,
+  "ctaAbove": [
+   "Đọc case thật Campaign kinh đi"
+  ],
+  "cards": 1,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "JetBrains Mono"
+  ],
+  "overflowX": false,
+  "height": 7350,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "giai-case.html",
+  "auth": true,
+  "ms": 2595,
+  "title": "Có nên nhân đôi ngân sách quảng cáo? — Tự Học Marketing Case",
+  "h1": [
+   "Có nên nhân đôi ngân sách quảng cáo?"
+  ],
+  "hs": 0,
+  "words": 198,
+  "aboveWords": 198,
+  "smallPct": 22,
+  "tinyPct": 10,
+  "lowContrastPct": 17,
+  "lowSamples": [
+   "Giải case có bấm giờ (4.23 @13.5px)",
+   "Số liệu mở theo câu hỏi, chấm tự động (4.23 @11.5px)",
+   "E-commerce · Trung bình · 20 phút (3.48 @11px)",
+   "Cocomi (thương hiệu giả định) — mỹ phẩm  (3.48 @11px)"
+  ],
+  "lhBad": 0,
+  "interactive": 5,
+  "interAbove": 5,
+  "smallTap": 0,
+  "ctaAbove": [
+   "Giải case có bấm giờ Số liệu m",
+   "Bắt đầu · 20:00"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 900,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "quiz.html",
+  "auth": true,
+  "ms": 2801,
+  "title": "Phòng thử thách — Tự Học Marketing Case",
+  "h1": [
+   "Chọn hướng đi. Rồi đọc vì sao."
+  ],
+  "hs": 4,
+  "words": 235,
+  "aboveWords": 216,
+  "smallPct": 40,
+  "tinyPct": 9,
+  "lowContrastPct": 39,
+  "lowSamples": [
+   "Phòng thử thách (3.80 @13px)",
+   "Gợi ý hôm nay (3.54 @11.52px)",
+   "Chọn chủ đề (3.48 @11px)",
+   "0/6 đã làm (3.42 @12px)",
+   "0/7 đã làm (3.42 @12px)",
+   "0/4 đã làm (3.42 @12px)"
+  ],
+  "lhBad": 0,
+  "interactive": 17,
+  "interAbove": 12,
+  "smallTap": 0,
+  "ctaAbove": [
+   "Làm ngay →",
+   "Tất cả chủ đề 0/34 đã làm",
+   "Thông minh Chưa làm trước, rồi"
+  ],
+  "cards": 4,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 1281,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "thi.html",
+  "auth": true,
+  "ms": 2643,
+  "title": "Thi vượt chặng — Tự Học Marketing Case",
+  "h1": [
+   "Biết rồi thì chứng minh."
+  ],
+  "hs": 6,
+  "words": 349,
+  "aboveWords": 245,
+  "smallPct": 22,
+  "tinyPct": 3,
+  "lowContrastPct": 31,
+  "lowSamples": [
+   "Thi vượt chặng (3.80 @13px)",
+   "chặng đã vượt (3.42 @14px)",
+   "Sẵn sàng (3.42 @10.5px)",
+   "15 câu · 25 phút (3.42 @12.5px)",
+   "Cần 12/15 · đã thi 0 (3.42 @12.5px)",
+   "Chưa mở (3.42 @10.5px)"
+  ],
+  "lhBad": 0,
+  "interactive": 6,
+  "interAbove": 4,
+  "smallTap": 0,
+  "ctaAbove": [
+   "Thi vượt →"
+  ],
+  "cards": 3,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 1417,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "lab.html",
+  "auth": true,
+  "ms": 2587,
+  "title": "Marketing Lab — Tự Học Marketing Case",
+  "h1": [
+   "Luyện cách dùng phần mềm marketing, trước khi dùng tiền thật"
+  ],
+  "hs": 13,
+  "words": 582,
+  "aboveWords": 223,
+  "smallPct": 10,
+  "tinyPct": 1,
+  "lowContrastPct": 6,
+  "lowSamples": [
+   "Ngân sách (3.56 @10px)",
+   "Giá trị đơn TB (3.56 @10px)",
+   "Sắp mở (3.13 @11.5px)",
+   "Sắp mở (3.13 @11.5px)",
+   "Bàn 01 · SEO (3.20 @12px)",
+   "Bàn 02 · Meta (4.12 @12px)"
+  ],
+  "lhBad": 0,
+  "interactive": 12,
+  "interAbove": 4,
+  "smallTap": 0,
+  "ctaAbove": [],
+  "cards": 1,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Hand VN",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 2863,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "lab-chien-luoc.html",
+  "auth": true,
+  "ms": 2718,
+  "title": "Xưởng chiến lược — Marketing Lab · Tự Học Marketing Case",
+  "h1": [
+   "Từ brief đến thí nghiệm: tự dựng chiến lược và tự bảo vệ nó"
+  ],
+  "hs": 4,
+  "words": 399,
+  "aboveWords": 332,
+  "smallPct": 12,
+  "tinyPct": 0,
+  "lowContrastPct": 10,
+  "lowSamples": [
+   "DỮ LIỆU GIẢ LẬP (3.13 @11.5px)",
+   "Nắng Mai (giả định) · Mỹ phẩm · D2C · 30 (3.13 @11.52px)",
+   "Lớp Chiều Nay (giả định) · Giáo dục · kh (3.13 @11.52px)"
+  ],
+  "lhBad": 1,
+  "interactive": 3,
+  "interAbove": 3,
+  "smallTap": 1,
+  "ctaAbove": [
+   "Bắt đầu",
+   "Bắt đầu"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 1235,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "lab-meta.html",
+  "auth": true,
+  "ms": 2670,
+  "title": "Meta Ads Lab — Marketing Lab · Tự Học Marketing Case",
+  "h1": [
+   "Chạy quảng cáo Meta cho một thương hiệu kem chống nắng"
+  ],
+  "hs": 4,
+  "words": 145,
+  "aboveWords": 145,
+  "smallPct": 12,
+  "tinyPct": 0,
+  "lowContrastPct": 8,
+  "lowSamples": [
+   "Hạn mức 2.000.000 ₫ (3.13 @11.52px)",
+   "Hạn mức 10.000.000 ₫ (3.13 @11.52px)",
+   "Hạn mức 5.000.000 ₫ (3.13 @11.52px)"
+  ],
+  "lhBad": 0,
+  "interactive": 4,
+  "interAbove": 4,
+  "smallTap": 1,
+  "ctaAbove": [
+   "Bắt đầu"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 900,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "lab-gads.html",
+  "auth": true,
+  "ms": 2588,
+  "title": "Google Ads Lab — Marketing Lab · Tự Học Marketing Case",
+  "h1": [
+   "Bắt người đang tìm kem chống nắng"
+  ],
+  "hs": 4,
+  "words": 160,
+  "aboveWords": 160,
+  "smallPct": 14,
+  "tinyPct": 0,
+  "lowContrastPct": 8,
+  "lowSamples": [
+   "Hạn mức 2.000.000 ₫ (3.13 @11.52px)",
+   "Hạn mức 10.000.000 ₫ (3.13 @11.52px)",
+   "Hạn mức 5.000.000 ₫ (3.13 @11.52px)"
+  ],
+  "lhBad": 0,
+  "interactive": 4,
+  "interAbove": 4,
+  "smallTap": 1,
+  "ctaAbove": [
+   "Bắt đầu"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 900,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "lab-ga4.html",
+  "auth": true,
+  "ms": 2595,
+  "title": "GA4 Lab — Marketing Lab · Tự Học Marketing Case",
+  "h1": [
+   "Đọc kết quả marketing bằng GA4"
+  ],
+  "hs": 4,
+  "words": 194,
+  "aboveWords": 194,
+  "smallPct": 7,
+  "tinyPct": 0,
+  "lowContrastPct": 4,
+  "lowSamples": [
+   "Mẫu (3.13 @11.5px)",
+   "Mẫu (3.13 @11.5px)",
+   "Chưa làm (3.13 @11.52px)",
+   "Chưa làm (3.13 @11.52px)",
+   "Chưa làm (3.13 @11.52px)"
+  ],
+  "lhBad": 0,
+  "interactive": 6,
+  "interAbove": 6,
+  "smallTap": 1,
+  "ctaAbove": [
+   "Bắt đầu"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 938,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "lab-seo.html",
+  "auth": true,
+  "ms": 2589,
+  "title": "SEO Research Lab — Marketing Lab · Tự Học Marketing Case",
+  "h1": [
+   "Lên kế hoạch SEO cho một thương hiệu mới"
+  ],
+  "hs": 4,
+  "words": 162,
+  "aboveWords": 162,
+  "smallPct": 25,
+  "tinyPct": 0,
+  "lowContrastPct": 20,
+  "lowSamples": [
+   "Tối đa 4 bài · ngân sách nội dung 7.500. (3.13 @11.52px)",
+   "Tối đa 10 bài · ngân sách nội dung 20.00 (3.13 @11.52px)",
+   "Tối đa 8 bài · ngân sách nội dung 11.000 (3.13 @11.52px)"
+  ],
+  "lhBad": 0,
+  "interactive": 4,
+  "interAbove": 4,
+  "smallTap": 1,
+  "ctaAbove": [
+   "Bắt đầu"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 900,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "cong-dong.html",
+  "auth": true,
+  "ms": 2627,
+  "title": "Cộng đồng — Tự Học Marketing Case",
+  "h1": [
+   "MarSocial Feed"
+  ],
+  "hs": 1,
+  "words": 641,
+  "aboveWords": 203,
+  "smallPct": 9,
+  "tinyPct": 1,
+  "lowContrastPct": 23,
+  "lowSamples": [
+   "18 Th10 · 2026 (3.48 @10.5px)",
+   "Cộng đồng MarSocial (3.80 @13px)",
+   "Thăm dò hôm nay (3.80 @13px)",
+   "Tất cả (3.80 @16px)",
+   "Phân tích chiến dịch (3.94 @16px)",
+   "Kinh nghiệm phỏng vấn (3.94 @16px)"
+  ],
+  "lhBad": 3,
+  "interactive": 26,
+  "interAbove": 11,
+  "smallTap": 18,
+  "ctaAbove": [],
+  "cards": 1,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "Hand VN"
+  ],
+  "overflowX": false,
+  "height": 2427,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "tai-khoan.html",
+  "auth": true,
+  "ms": 2590,
+  "title": "Hồ sơ Chiến lược gia — Tự Học Marketing Case",
+  "h1": [
+   "Ux"
+  ],
+  "hs": 1,
+  "words": 119,
+  "aboveWords": 115,
+  "smallPct": 33,
+  "tinyPct": 17,
+  "lowContrastPct": 47,
+  "lowSamples": [
+   "18 Th10 · 2026 (3.48 @10.5px)",
+   "Bạn chưa đặt tên hiển thị — trên bảng xế (3.94 @14px)",
+   "ux-1440@example.com (3.94 @16px)",
+   "Tổng điểm XP (3.48 @12.5px)",
+   "Chuỗi ngày (Streak) (3.48 @12.5px)",
+   "Case đã giải (3.48 @12.5px)"
+  ],
+  "lhBad": 0,
+  "interactive": 7,
+  "interAbove": 6,
+  "smallTap": 1,
+  "ctaAbove": [
+   "Tiếp tục giải case →"
+  ],
+  "cards": 1,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 1075,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "page": "kingdom.html",
+  "auth": true,
+  "ms": 2663,
+  "title": "Vương quốc Marketing — Tự Học Marketing Case",
+  "h1": [
+   "Đi dạo, rồi vào một toà để chơi."
+  ],
+  "hs": 4,
+  "words": 581,
+  "aboveWords": 223,
+  "smallPct": 14,
+  "tinyPct": 2,
+  "lowContrastPct": 12,
+  "lowSamples": [
+   "18 Th10 · 2026 (3.53 @10.5px)",
+   "Vương quốc Marketing (4.02 @13px)",
+   "0/2 sao để mở · tối đa 6 (3.17 @11.52px)",
+   "Mở rương (3.17 @12px)",
+   "0/4 sao để mở · tối đa 9 (3.17 @11.52px)",
+   "Mở rương (3.17 @12px)"
+  ],
+  "lhBad": 0,
+  "interactive": 45,
+  "interAbove": 19,
+  "smallTap": 0,
+  "ctaAbove": [
+   "Tiếp"
+  ],
+  "cards": 8,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 30,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 2236,
+  "shellInteractive": 24,
+  "shellInterAbove": 24
+ },
+ {
+  "w": 1440,
+  "errors": []
+ },
+ {
+  "w": 390,
+  "page": "index.html",
+  "auth": false,
+  "title": "Tự Học Marketing Case — Học cách nhìn thế giới như một strat",
+  "h1": [
+   "Đừng chỉ học marketing.\nHọc cách\nnhìn thế giới\nnhư một strategist."
+  ],
+  "hs": 29,
+  "words": 1593,
+  "aboveWords": 101,
+  "smallPct": 20,
+  "tinyPct": 6,
+  "lowContrastPct": 24,
+  "lowSamples": [
+   "Bắt đầu miễn phí → (2.59 @14.5px)",
+   "✦ (3.12 @16px)",
+   "✦ (3.12 @16px)",
+   "✦ (3.12 @16px)",
+   "✦ (3.12 @16px)",
+   "✦ (3.12 @16px)"
+  ],
+  "lhBad": 2,
+  "interactive": 30,
+  "interAbove": 5,
+  "smallTap": 5,
+  "ctaAbove": [
+   "Bắt đầu miễn phí →"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 12,
+  "families": [
+   "Fraunces",
+   "Be Vietnam Pro",
+   "Hand VN"
+  ],
+  "overflowX": false,
+  "height": 14945
+ },
+ {
+  "w": 390,
+  "page": "dang-nhap.html",
+  "auth": false,
+  "title": "Đăng nhập — Tự Học Marketing Case",
+  "h1": [
+   "Chào mừng trở lại!"
+  ],
+  "hs": 1,
+  "words": 139,
+  "aboveWords": 110,
+  "smallPct": 22,
+  "tinyPct": 2,
+  "lowContrastPct": 15,
+  "lowSamples": [
+   "Marketing (3.55 @16.38px)",
+   "TÀI KHOẢN STUDIO (3.89 @11px)",
+   "hoặc (3.31 @13px)",
+   "Bằng việc tiếp tục, bạn đồng ý với (3.31 @12px)",
+   "Điều khoản sử dụng (3.31 @12px)",
+   "Chính sách bảo mật (3.31 @12px)"
+  ],
+  "lhBad": 0,
+  "interactive": 3,
+  "interAbove": 3,
+  "smallTap": 1,
+  "ctaAbove": [],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "Hand VN"
+  ],
+  "overflowX": false,
+  "height": 1578
+ },
+ {
+  "w": 390,
+  "page": "gioi-thieu.html",
+  "auth": false,
+  "title": "Đăng nhập — Tự Học Marketing Case",
+  "h1": [
+   "Chào mừng trở lại!"
+  ],
+  "hs": 1,
+  "words": 139,
+  "aboveWords": 110,
+  "smallPct": 22,
+  "tinyPct": 2,
+  "lowContrastPct": 15,
+  "lowSamples": [
+   "Marketing (3.55 @16.38px)",
+   "TÀI KHOẢN STUDIO (3.89 @11px)",
+   "hoặc (3.31 @13px)",
+   "Bằng việc tiếp tục, bạn đồng ý với (3.31 @12px)",
+   "Điều khoản sử dụng (3.31 @12px)",
+   "Chính sách bảo mật (3.31 @12px)"
+  ],
+  "lhBad": 0,
+  "interactive": 3,
+  "interAbove": 3,
+  "smallTap": 1,
+  "ctaAbove": [],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "Hand VN"
+  ],
+  "overflowX": false,
+  "height": 1578
+ },
+ {
+  "w": 390,
+  "page": "hoc.html",
+  "auth": true,
+  "ms": 2577,
+  "title": "Hành trình hôm nay — Tự Học Marketing Case",
+  "h1": [
+   "Hai quán phở cùng dãy phố, vì sao khách đứng xếp hàng ở một quán?"
+  ],
+  "hs": 12,
+  "words": 771,
+  "aboveWords": 95,
+  "smallPct": 47,
+  "tinyPct": 3,
+  "lowContrastPct": 49,
+  "lowSamples": [
+   "Học viên · cấp 1 (1.06 @10px)",
+   "Cấp độ & XP (3.48 @11px)",
+   "CẤP 1 (3.48 @11.52px)",
+   "0 XP (3.48 @11.5px)",
+   "còn 30 XP (3.48 @11.5px)",
+   "CẤP 2 (3.48 @11.52px)"
+  ],
+  "lhBad": 0,
+  "interactive": 26,
+  "interAbove": 2,
+  "smallTap": 10,
+  "ctaAbove": [
+   "Bắt đầu bài đầu tiên →"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "Hand VN"
+  ],
+  "overflowX": false,
+  "height": 3730,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "bat-dau.html",
+  "auth": true,
+  "ms": 2583,
+  "title": "Bắt đầu từ đâu — Tự Học Marketing Case",
+  "h1": [
+   "Bạn muốn học marketing\ntheo hướng nào?"
+  ],
+  "hs": 5,
+  "words": 1091,
+  "aboveWords": 111,
+  "smallPct": 16,
+  "tinyPct": 0,
+  "lowContrastPct": 21,
+  "lowSamples": [
+   "Bắt đầu từ đâu (4.02 @13px)",
+   "6 phút mỗi bài (4.02 @13px)",
+   "· Mỗi bài gồm đọc, một câu dừng giữa bài (4.01 @14px)",
+   "TIẾN ĐỘ HÀNH TRÌNH (1.02 @11.52px)",
+   "0/760 bài đã xong (1.04 @15px)",
+   "Đang ở: Nền tảng (1.02 @11.52px)"
+  ],
+  "lhBad": 1,
+  "interactive": 31,
+  "interAbove": 1,
+  "smallTap": 0,
+  "ctaAbove": [
+   "Mở bài học →"
+  ],
+  "cards": 15,
+  "imgsNoAlt": 0,
+  "btnNoName": 1,
+  "anims": 1,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 7008,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "hoc-bai.html",
+  "auth": true,
+  "ms": 2574,
+  "title": "Học bài — Tự Học Marketing Case",
+  "h1": [
+   "Học bài — lộ trình theo chặng"
+  ],
+  "hs": 7,
+  "words": 431,
+  "aboveWords": 61,
+  "smallPct": 20,
+  "tinyPct": 5,
+  "lowContrastPct": 17,
+  "lowSamples": [
+   "Nhiệm vụ đang học (4.15 @13px)",
+   "+10 XP khi hoàn thành (4.15 @13px)",
+   "Chọn lộ trình theo nghề (3.94 @16px)",
+   "? (3.96 @11.52px)",
+   "Chặng 1 (3.48 @10.5px)",
+   "Chặng 2 (3.48 @10.5px)"
+  ],
+  "lhBad": 0,
+  "interactive": 33,
+  "interAbove": 7,
+  "smallTap": 5,
+  "ctaAbove": [
+   "Hỏi trợ lý"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 1,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 4769,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "bai.html?id=L:53",
+  "auth": true,
+  "ms": 2578,
+  "title": "Vì sao trường đại học cũng phải làm marketing? — Tự Học Mark",
+  "h1": [
+   "Vì sao trường đại học cũng phải làm marketing?"
+  ],
+  "hs": 16,
+  "words": 1264,
+  "aboveWords": 119,
+  "smallPct": 8,
+  "tinyPct": 2,
+  "lowContrastPct": 7,
+  "lowSamples": [
+   "Marketing trong đời thật · Bài 1/3 (3.48 @11.5px)",
+   "Khoảng (3.05 @13.32px)",
+   "câu quiz (3.05 @13.32px)",
+   "Đã đọc (3.05 @13.32px)",
+   "Còn khoảng 7 phút để đọc xong (3.05 @13.32px)",
+   "Mẹo cho bài này (4.12 @12.96px)"
+  ],
+  "lhBad": 0,
+  "interactive": 43,
+  "interAbove": 7,
+  "smallTap": 13,
+  "ctaAbove": [],
+  "cards": 2,
+  "imgsNoAlt": 0,
+  "btnNoName": 1,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "JetBrains Mono"
+  ],
+  "overflowX": false,
+  "height": 9260,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "bai.html?id=B:ob01-04",
+  "auth": true,
+  "ms": 2579,
+  "title": "Cùng một ổ bánh mì, vì sao chỗ này bán 25.000đ, chỗ kia bán ",
+  "h1": [
+   "Cùng một ổ bánh mì, vì sao chỗ này bán 25.000đ, chỗ kia bán 40.000đ vẫ"
+  ],
+  "hs": 19,
+  "words": 1636,
+  "aboveWords": 130,
+  "smallPct": 7,
+  "tinyPct": 2,
+  "lowContrastPct": 6,
+  "lowSamples": [
+   "Marketing là gì khi nhìn từ quầy bán hàn (3.48 @11.5px)",
+   "Khoảng (3.05 @13.32px)",
+   "câu quiz (3.05 @13.32px)",
+   "Đã đọc (3.05 @13.32px)",
+   "Còn khoảng 7 phút để đọc xong (3.05 @13.32px)",
+   "Mẹo cho bài này (4.12 @12.96px)"
+  ],
+  "lhBad": 2,
+  "interactive": 50,
+  "interAbove": 7,
+  "smallTap": 19,
+  "ctaAbove": [],
+  "cards": 1,
+  "imgsNoAlt": 0,
+  "btnNoName": 1,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 10928,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "ban-do.html",
+  "auth": true,
+  "ms": 2573,
+  "title": "Học theo nghề — Tự Học Marketing Case",
+  "h1": [
+   "Bản đồ nghề nghiệp"
+  ],
+  "hs": 2,
+  "words": 327,
+  "aboveWords": 133,
+  "smallPct": 50,
+  "tinyPct": 6,
+  "lowContrastPct": 41,
+  "lowSamples": [
+   "01 — Lộ trình sự nghiệp & kỹ năng chuẩn  (3.54 @11.5px)",
+   "Lv 1 · Người quan sát (1.88 @13px)",
+   "0% sẵn sàng · Marketing Executive (3.80 @13px)",
+   "Mốc kế tiếp: còn 760 bài hoàn thành lộ t (1.88 @13px)",
+   "Bản đồ vùng nghề (3.80 @16px)",
+   "Nhiệm vụ & Ưu tiên (3.94 @16px)"
+  ],
+  "lhBad": 3,
+  "interactive": 26,
+  "interAbove": 8,
+  "smallTap": 6,
+  "ctaAbove": [],
+  "cards": 5,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 2191,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "case-thu-vien.html",
+  "auth": true,
+  "ms": 2581,
+  "title": "Case có bấm giờ — Tự Học Marketing Case",
+  "h1": [
+   "18 case,\ndữ liệu mở theo câu bạn hỏi."
+  ],
+  "hs": 0,
+  "words": 702,
+  "aboveWords": 126,
+  "smallPct": 25,
+  "tinyPct": 6,
+  "lowContrastPct": 50,
+  "lowSamples": [
+   "Giải case có bấm giờ (4.23 @13.5px)",
+   "Số liệu mở theo câu hỏi, chấm tự động (4.23 @11.5px)",
+   "Tự giải có bấm giờ (3.80 @13px)",
+   "Ngành (3.48 @11px)",
+   "Độ khó (3.48 @11px)",
+   "Thời lượng (3.48 @11px)"
+  ],
+  "lhBad": 3,
+  "interactive": 25,
+  "interAbove": 8,
+  "smallTap": 0,
+  "ctaAbove": [
+   "Giải case có bấm giờ Số liệu m"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "JetBrains Mono"
+  ],
+  "overflowX": false,
+  "height": 7562,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "campaign.html?id=highlands-third-place",
+  "auth": true,
+  "ms": 2588,
+  "title": "Highlands Coffee — Chiếm chỗ ngồi của thành phố · Tự Học Mar",
+  "h1": [
+   "Chiếm chỗ ngồi của thành phố"
+  ],
+  "hs": 28,
+  "words": 1582,
+  "aboveWords": 77,
+  "smallPct": 21,
+  "tinyPct": 14,
+  "lowContrastPct": 3,
+  "lowSamples": [
+   "2012 → (3.80 @13px)",
+   "Highlands Coffee (4.19 @11.52px)",
+   "2012 → (4.19 @11.52px)",
+   "Đối chiếu nguồn: 17/10/2026 (4.32 @9px)",
+   "Đã xác minh (4.32 @9px)",
+   "Giả định phân tích (3.52 @9px)"
+  ],
+  "lhBad": 1,
+  "interactive": 34,
+  "interAbove": 8,
+  "smallTap": 1,
+  "ctaAbove": [
+   "Đọc case thật Campaign kinh đi"
+  ],
+  "cards": 2,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "JetBrains Mono"
+  ],
+  "overflowX": false,
+  "height": 8700,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "giai-case.html",
+  "auth": true,
+  "ms": 2574,
+  "title": "Có nên nhân đôi ngân sách quảng cáo? — Tự Học Marketing Case",
+  "h1": [
+   "Có nên nhân đôi ngân sách quảng cáo?"
+  ],
+  "hs": 0,
+  "words": 198,
+  "aboveWords": 198,
+  "smallPct": 22,
+  "tinyPct": 10,
+  "lowContrastPct": 17,
+  "lowSamples": [
+   "Giải case có bấm giờ (4.23 @13.5px)",
+   "Số liệu mở theo câu hỏi, chấm tự động (4.23 @11.5px)",
+   "E-commerce · Trung bình · 20 phút (3.48 @11px)",
+   "Cocomi (thương hiệu giả định) — mỹ phẩm  (3.48 @11px)"
+  ],
+  "lhBad": 0,
+  "interactive": 5,
+  "interAbove": 5,
+  "smallTap": 0,
+  "ctaAbove": [
+   "Giải case có bấm giờ Số liệu m",
+   "Bắt đầu · 20:00"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 956,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "quiz.html",
+  "auth": true,
+  "ms": 2571,
+  "title": "Phòng thử thách — Tự Học Marketing Case",
+  "h1": [
+   "Chọn hướng đi. Rồi đọc vì sao."
+  ],
+  "hs": 4,
+  "words": 235,
+  "aboveWords": 93,
+  "smallPct": 40,
+  "tinyPct": 9,
+  "lowContrastPct": 39,
+  "lowSamples": [
+   "Phòng thử thách (3.80 @13px)",
+   "Gợi ý hôm nay (3.54 @11.52px)",
+   "Chọn chủ đề (3.48 @11px)",
+   "0/6 đã làm (3.42 @12px)",
+   "0/7 đã làm (3.42 @12px)",
+   "0/4 đã làm (3.42 @12px)"
+  ],
+  "lhBad": 0,
+  "interactive": 17,
+  "interAbove": 5,
+  "smallTap": 0,
+  "ctaAbove": [
+   "Làm ngay →",
+   "Tất cả chủ đề 0/34 đã làm"
+  ],
+  "cards": 4,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 2440,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "thi.html",
+  "auth": true,
+  "ms": 2581,
+  "title": "Thi vượt chặng — Tự Học Marketing Case",
+  "h1": [
+   "Biết rồi thì chứng minh."
+  ],
+  "hs": 6,
+  "words": 349,
+  "aboveWords": 146,
+  "smallPct": 22,
+  "tinyPct": 3,
+  "lowContrastPct": 31,
+  "lowSamples": [
+   "Thi vượt chặng (3.80 @13px)",
+   "chặng đã vượt (3.42 @14px)",
+   "Sẵn sàng (3.42 @10.5px)",
+   "15 câu · 25 phút (3.42 @12.5px)",
+   "Cần 12/15 · đã thi 0 (3.42 @12.5px)",
+   "Chưa mở (3.42 @10.5px)"
+  ],
+  "lhBad": 0,
+  "interactive": 6,
+  "interAbove": 2,
+  "smallTap": 0,
+  "ctaAbove": [
+   "Thi vượt →"
+  ],
+  "cards": 3,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 1758,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "lab.html",
+  "auth": true,
+  "ms": 2574,
+  "title": "Marketing Lab — Tự Học Marketing Case",
+  "h1": [
+   "Luyện cách dùng phần mềm marketing, trước khi dùng tiền thật"
+  ],
+  "hs": 13,
+  "words": 582,
+  "aboveWords": 136,
+  "smallPct": 10,
+  "tinyPct": 1,
+  "lowContrastPct": 6,
+  "lowSamples": [
+   "Ngân sách (3.56 @10px)",
+   "Giá trị đơn TB (3.56 @10px)",
+   "Sắp mở (3.13 @11.5px)",
+   "Sắp mở (3.13 @11.5px)",
+   "Bàn 01 · SEO (3.20 @12px)",
+   "Bàn 02 · Meta (4.12 @12px)"
+  ],
+  "lhBad": 0,
+  "interactive": 12,
+  "interAbove": 0,
+  "smallTap": 0,
+  "ctaAbove": [],
+  "cards": 1,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Hand VN",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 4830,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "lab-chien-luoc.html",
+  "auth": true,
+  "ms": 2584,
+  "title": "Xưởng chiến lược — Marketing Lab · Tự Học Marketing Case",
+  "h1": [
+   "Từ brief đến thí nghiệm: tự dựng chiến lược và tự bảo vệ nó"
+  ],
+  "hs": 4,
+  "words": 399,
+  "aboveWords": 167,
+  "smallPct": 12,
+  "tinyPct": 0,
+  "lowContrastPct": 10,
+  "lowSamples": [
+   "DỮ LIỆU GIẢ LẬP (3.13 @11.5px)",
+   "Nắng Mai (giả định) · Mỹ phẩm · D2C · 30 (3.13 @11.52px)",
+   "Lớp Chiều Nay (giả định) · Giáo dục · kh (3.13 @11.52px)"
+  ],
+  "lhBad": 1,
+  "interactive": 3,
+  "interAbove": 1,
+  "smallTap": 1,
+  "ctaAbove": [],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 1971,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "lab-meta.html",
+  "auth": true,
+  "ms": 2580,
+  "title": "Meta Ads Lab — Marketing Lab · Tự Học Marketing Case",
+  "h1": [
+   "Chạy quảng cáo Meta cho một thương hiệu kem chống nắng"
+  ],
+  "hs": 4,
+  "words": 145,
+  "aboveWords": 115,
+  "smallPct": 12,
+  "tinyPct": 0,
+  "lowContrastPct": 8,
+  "lowSamples": [
+   "Hạn mức 2.000.000 ₫ (3.13 @11.52px)",
+   "Hạn mức 10.000.000 ₫ (3.13 @11.52px)",
+   "Hạn mức 5.000.000 ₫ (3.13 @11.52px)"
+  ],
+  "lhBad": 0,
+  "interactive": 4,
+  "interAbove": 3,
+  "smallTap": 1,
+  "ctaAbove": [
+   "Bắt đầu"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 1215,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "lab-gads.html",
+  "auth": true,
+  "ms": 2581,
+  "title": "Google Ads Lab — Marketing Lab · Tự Học Marketing Case",
+  "h1": [
+   "Bắt người đang tìm kem chống nắng"
+  ],
+  "hs": 4,
+  "words": 160,
+  "aboveWords": 130,
+  "smallPct": 14,
+  "tinyPct": 0,
+  "lowContrastPct": 8,
+  "lowSamples": [
+   "Hạn mức 2.000.000 ₫ (3.13 @11.52px)",
+   "Hạn mức 10.000.000 ₫ (3.13 @11.52px)",
+   "Hạn mức 5.000.000 ₫ (3.13 @11.52px)"
+  ],
+  "lhBad": 0,
+  "interactive": 4,
+  "interAbove": 3,
+  "smallTap": 1,
+  "ctaAbove": [
+   "Bắt đầu"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 1244,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "lab-ga4.html",
+  "auth": true,
+  "ms": 2596,
+  "title": "GA4 Lab — Marketing Lab · Tự Học Marketing Case",
+  "h1": [
+   "Đọc kết quả marketing bằng GA4"
+  ],
+  "hs": 4,
+  "words": 194,
+  "aboveWords": 134,
+  "smallPct": 7,
+  "tinyPct": 0,
+  "lowContrastPct": 4,
+  "lowSamples": [
+   "Mẫu (3.13 @11.5px)",
+   "Mẫu (3.13 @11.5px)",
+   "Chưa làm (3.13 @11.52px)",
+   "Chưa làm (3.13 @11.52px)",
+   "Chưa làm (3.13 @11.52px)"
+  ],
+  "lhBad": 0,
+  "interactive": 6,
+  "interAbove": 3,
+  "smallTap": 1,
+  "ctaAbove": [],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 1490,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "lab-seo.html",
+  "auth": true,
+  "ms": 2570,
+  "title": "SEO Research Lab — Marketing Lab · Tự Học Marketing Case",
+  "h1": [
+   "Lên kế hoạch SEO cho một thương hiệu mới"
+  ],
+  "hs": 4,
+  "words": 162,
+  "aboveWords": 123,
+  "smallPct": 25,
+  "tinyPct": 0,
+  "lowContrastPct": 20,
+  "lowSamples": [
+   "Tối đa 4 bài · ngân sách nội dung 7.500. (3.13 @11.52px)",
+   "Tối đa 10 bài · ngân sách nội dung 20.00 (3.13 @11.52px)",
+   "Tối đa 8 bài · ngân sách nội dung 11.000 (3.13 @11.52px)"
+  ],
+  "lhBad": 0,
+  "interactive": 4,
+  "interAbove": 3,
+  "smallTap": 1,
+  "ctaAbove": [
+   "Bắt đầu"
+  ],
+  "cards": 0,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 1216,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "cong-dong.html",
+  "auth": true,
+  "ms": 2569,
+  "title": "Cộng đồng — Tự Học Marketing Case",
+  "h1": [
+   "MarSocial Feed"
+  ],
+  "hs": 1,
+  "words": 637,
+  "aboveWords": 78,
+  "smallPct": 8,
+  "tinyPct": 0,
+  "lowContrastPct": 22,
+  "lowSamples": [
+   "Cộng đồng MarSocial (3.80 @13px)",
+   "Thăm dò hôm nay (3.80 @13px)",
+   "Tất cả (3.80 @16px)",
+   "Phân tích chiến dịch (3.94 @16px)",
+   "Kinh nghiệm phỏng vấn (3.94 @16px)",
+   "Hỏi đáp (3.94 @16px)"
+  ],
+  "lhBad": 3,
+  "interactive": 26,
+  "interAbove": 7,
+  "smallTap": 13,
+  "ctaAbove": [],
+  "cards": 1,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces",
+   "Hand VN"
+  ],
+  "overflowX": false,
+  "height": 3500,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "tai-khoan.html",
+  "auth": true,
+  "ms": 2576,
+  "title": "Hồ sơ Chiến lược gia — Tự Học Marketing Case",
+  "h1": [
+   "Ux"
+  ],
+  "hs": 1,
+  "words": 115,
+  "aboveWords": 91,
+  "smallPct": 30,
+  "tinyPct": 14,
+  "lowContrastPct": 45,
+  "lowSamples": [
+   "Bạn chưa đặt tên hiển thị — trên bảng xế (3.94 @14px)",
+   "ux-390@example.com (3.94 @16px)",
+   "Tổng điểm XP (3.48 @12.5px)",
+   "Chuỗi ngày (Streak) (3.48 @12.5px)",
+   "Case đã giải (3.48 @12.5px)",
+   "Cấp độ hiện tại (3.48 @10.5px)"
+  ],
+  "lhBad": 0,
+  "interactive": 7,
+  "interAbove": 3,
+  "smallTap": 1,
+  "ctaAbove": [
+   "Tiếp tục giải case →"
+  ],
+  "cards": 1,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 0,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 1244,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "page": "kingdom.html",
+  "auth": true,
+  "ms": 2574,
+  "title": "Vương quốc Marketing — Tự Học Marketing Case",
+  "h1": [
+   "Đi dạo, rồi vào một toà để chơi."
+  ],
+  "hs": 4,
+  "words": 551,
+  "aboveWords": 193,
+  "smallPct": 15,
+  "tinyPct": 2,
+  "lowContrastPct": 12,
+  "lowSamples": [
+   "Vương quốc Marketing (4.02 @13px)",
+   "0/2 sao để mở · tối đa 6 (3.17 @11.52px)",
+   "Mở rương (3.17 @12px)",
+   "0/4 sao để mở · tối đa 9 (3.17 @11.52px)",
+   "Mở rương (3.17 @12px)",
+   "0/6 sao để mở · tối đa 15 (3.17 @11.52px)"
+  ],
+  "lhBad": 0,
+  "interactive": 45,
+  "interAbove": 19,
+  "smallTap": 0,
+  "ctaAbove": [
+   "Tiếp"
+  ],
+  "cards": 7,
+  "imgsNoAlt": 0,
+  "btnNoName": 0,
+  "anims": 30,
+  "families": [
+   "Be Vietnam Pro",
+   "Fraunces"
+  ],
+  "overflowX": false,
+  "height": 3642,
+  "shellInteractive": 25,
+  "shellInterAbove": 25
+ },
+ {
+  "w": 390,
+  "errors": []
+ }
+]

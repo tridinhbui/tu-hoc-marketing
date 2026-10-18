@@ -1,6 +1,6 @@
 /* ATELIER · KHUNG — thanh điều hướng như mục lục của một cuốn tạp chí.
    Ít nhiễu: không hộp, không huy hiệu màu; chữ serif, đường kẻ mảnh, một dấu chấm đất nung cho mục đang ở. */
-:root[data-theme=ivory]{--r-bg:#efe5d0;--r-ink:#1d1510;--r-ink2:rgba(29,21,16,.58);--r-line:rgba(29,21,16,.16);--r-hover:rgba(168,70,31,.07);--r-act-bg:transparent;--r-act:#a8461f;--r-field:transparent;--r-pill:transparent;--page:#f3ead9}
+:root[data-theme=ivory]{--r-bg:#efe5d0;--r-ink:#1d1510;--r-ink2:rgba(29,21,16,.64);--r-line:rgba(29,21,16,.16);--r-hover:rgba(168,70,31,.07);--r-act-bg:transparent;--r-act:#a8461f;--r-field:transparent;--r-pill:transparent;--page:#f3ead9}
 :root[data-theme=ivory] .rail{background:var(--r-bg);background-image:none;border-right:1px solid var(--r-line)}
 :root[data-theme=ivory] .rail::before{display:none}
 :root[data-theme=ivory] .rail__top{padding:22px 18px 6px}

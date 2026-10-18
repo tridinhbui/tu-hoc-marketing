@@ -30,7 +30,7 @@
   const total = Object.values(info).reduce((s, i) => s + i.atts.length, 0), best = Math.max(0, ...Object.values(info).map((i) => i.best));
   const stars = Object.values(info).reduce((s, i) => s + i.stars, 0);
   const modesTried = Object.values(info).reduce((s, i) => s + ['learn', 'practice', 'challenge'].filter((m) => i.by(m).length).length, 0);
-  const stepState = (id) => (id === 'ga4' || id === 'seo') && info[id].atts.length ? '<span class="lb-tag lb-tag--on">Đã làm</span>' : picked[id] ? '<span class="lb-tag lb-tag--on">Đã chọn kết quả</span>' : TOOLS[id] ? `<a class="lb-btn lb-btn--ghost lb-btn--sm" href="${TOOLS[id].href}">Làm</a>` : '<span class="lb-tag">Sắp mở</span>';
+  const stepState = (id) => (id === 'ga4' || id === 'seo') && info[id].atts.length ? '<span class="lb-tag lb-tag--on">Đã làm</span>' : picked[id] ? '<span class="lb-tag lb-tag--on">Đã chọn kết quả</span>' : TOOLS[id] ? `<a class="lb-btn lb-btn--ghost lb-btn--sm" href="${TOOLS[id].href}">Làm</a>` : `<a class="lb-btn lb-btn--ghost lb-btn--sm" href="lab-chien-luoc.html" title="Bước này luyện ở Xưởng chiến lược (kịch bản riêng, cùng thương hiệu giả định)">Luyện ở Xưởng chiến lược</a>`;
 
 
   /* Bàn thứ năm: chiến lược mở, không đáp án duy nhất. Dữ liệu riêng, giả lập có nhãn (strategy-data.js). */

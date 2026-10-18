@@ -235,7 +235,7 @@ async function handleEmailSubmit(e) {
   const btn = $('btnEmail');
   btn.disabled = true;
   try {
-    const r = await api('/auth/start', { method: 'POST', body: { email: $('inputEmail').value.trim() } });
+    const r = await api('/auth/start', { method: 'POST', body: { email: $('inputEmail').value.trim(), next: nextUrl } });
     btn.textContent = r.dev_link ? 'Đã tạo link (dev)' : 'Đã gửi link — kiểm tra email ✓';
     if (r.dev_link) location.href = r.dev_link;
   } catch (err) {

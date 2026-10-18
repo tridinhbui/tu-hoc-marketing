@@ -49,6 +49,11 @@ button{font-family:inherit}
 .lp-bar{position:absolute;left:0;bottom:-1px;height:3px;width:0;background:var(--lp-acc);transition:width .15s linear}
 
 /* ---- lưới hai cột ---- */
+.lp-before summary{cursor:pointer;list-style:none;display:grid;gap:2px}.lp-before summary::-webkit-details-marker{display:none}
+.lp-before summary b{font-size:15px}.lp-before summary span{font-size:13px;color:var(--lp-ink3)}
+.lp-before summary::after{content:"Mở";justify-self:start;margin-top:6px;font-size:12.5px;font-weight:700;color:var(--lp-acc)}.lp-before[open] summary::after{content:"Thu gọn"}
+.lp-before .lp-why,.lp-before .lp-eli{margin-top:14px}
+.lp-before .lp-tip{padding:12px 14px;border-radius:12px}
 .lp-grid{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:clamp(24px,3vw,48px);max-width:1320px;margin:0 auto;padding:clamp(20px,3vw,40px) clamp(14px,3vw,40px) 80px;align-items:start}
 .lp-main{min-width:0;max-width:780px;font-size:var(--read,18px)}
 .lp-side{position:sticky;top:84px;max-height:calc(100vh - 100px);overflow-y:auto;display:flex;flex-direction:column;gap:16px;padding:2px 4px 8px 2px;scrollbar-width:thin}
@@ -572,15 +577,19 @@ function render(){
           ${PLAN.cp?'<li id="todoGate"><span>Trả lời câu “Dừng &amp; Kiểm tra” giữa bài</span></li>':''}
           <li id="todoQuiz"><span>${nq?`Hoàn thành “Kiểm tra nhanh” (<span id="todoQn">0</span>/${nq} câu)`:'Hoàn thành bài sau phần Đổ não 60 giây'}</span></li>
         </ul></div>
-      <div class="lp-card lp-tip"><span class="av">T</span><div><h3 style="margin:0">Mẹo cho bài này</h3><p>${tip}</p></div></div>
-      <div class="lp-card lp-why"><h3>Vì sao bài này quan trọng</h3>
+      <!-- Mẹo, vị trí trong module và chế độ giải thích đơn giản gộp vào một khối gập: trước đây là 3 thẻ đứng trước câu chuyện,
+           đẩy phần "Bắt đầu bằng một câu hỏi" xuống quá một màn hình trên điện thoại. -->
+      <details class="lp-card lp-before"><summary><b>Trước khi đọc</b><span>Mẹo đọc · bài này dùng vào việc gì · chế độ giải thích đơn giản</span></summary>
+      <div class="lp-tip" style="margin-top:12px"><span class="av">T</span><div><h3 style="margin:0">Mẹo cho bài này</h3><p>${tip}</p></div></div>
+      <div class="lp-why"><h3>Vì sao bài này quan trọng</h3>
         <p>Đây là bài ${nth}/${W.mod.lessons.length} của module <b>${escH(W.mod.t)}</b> (chặng ${W.stage.n}). ${LD.apply?'Bạn sẽ dùng được ngay: '+clip(LD.apply,200):''}</p></div>
-      <div class="lp-card"><div class="lp-eli"><div><h3 style="margin:0">Chế độ giải thích đơn giản</h3><p>Ý chính, ví dụ đời thường và việc nên thử — gọn trong một khung.</p></div>
+      <div><div class="lp-eli"><div><h3 style="margin:0">Chế độ giải thích đơn giản</h3><p>Ý chính, ví dụ đời thường và việc nên thử — gọn trong một khung.</p></div>
         <button type="button" class="lp-btn" id="eliBtn" aria-expanded="false">Bật</button></div>
         <div class="lp-eli__body" id="eliBody" hidden>
           <p><b>Một câu:</b> ${LD.take||''}</p>
           <p><b>Ví dụ đời thường:</b> ${clip(LD.ex||LD.sit,420)}</p>
           ${LD.apply?`<p><b>Thử ngay:</b> ${LD.apply}</p>`:''}</div></div>
+      </details>
 
       ${PLAN.pre?sec('pre','Bắt đầu bằng một câu hỏi',`<p class="small muted" style="margin:0 0 4px">Đoán trước khi đọc. Đoán sai cũng được — sự bất ngờ giúp bạn nhớ insight sâu hơn.</p>${qHTML(PLAN.pre,'pre')}`):''}
       ${bodyHTML(s)}
@@ -782,7 +791,7 @@ const termHay=()=>{
 };
 function linkTerms(){
   const roots=[...document.querySelectorAll('#lpMain .lp-sec, #lpMain .lp-note, #lpMain .lp-quote, #lpMain .lp-why')]
-    .filter(r=>!r.closest('.q,.gate,.drill,form,.lp-todo,#drill,#talk,#recall,#rate'));
+    .filter(r=>!r.closest('.q,.gate,.drill,form,.lp-todo,#drill,#talk,#recall,#rate,.lp-before'));
   const nodes=()=>{ const out=[]; roots.forEach(r=>{ const w=document.createTreeWalker(r,NodeFilter.SHOW_TEXT,{acceptNode:n=>
       n.parentElement.closest('.term,button,textarea,script,style,.q,form,b.t')||!n.nodeValue.trim()?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
     let n; while((n=w.nextNode())) out.push(n); }); return out; };

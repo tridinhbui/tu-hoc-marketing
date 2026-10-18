@@ -303,7 +303,8 @@
   function hideTip(){ if (tipEl){ tipEl.remove(); tipEl = null; } }
   /* lời nhắc ngắn, gõ chữ, tự tắt; hiện một lần mỗi phiên cho mỗi khoá key */
   YY.tip = function(key, text){
-    try { var seen = JSON.parse(sessionStorage.getItem('yy.seen') || '{}'); if (seen[key]) return; seen[key] = 1; sessionStorage.setItem('yy.seen', JSON.stringify(seen)); } catch(e){}
+    /* Tối đa 2 lời nhắc mỗi phiên: nhắc ở mọi trang thì bong bóng thành lớp che nội dung (cột phải, nút "Làm ngay"). */
+    try { var seen = JSON.parse(sessionStorage.getItem('yy.seen') || '{}'); if (seen[key] || Object.keys(seen).length >= 2) return; seen[key] = 1; sessionStorage.setItem('yy.seen', JSON.stringify(seen)); } catch(e){}
     if (!fab || !panel.hidden) return;
     hideTip();
     tipEl = document.createElement('div'); tipEl.className = 'yy-tip' + (cfg.mode === 'landing' ? ' yy-tip--solo' : ''); tipEl.setAttribute('role', 'status');

@@ -1,0 +1,299 @@
+[
+ {
+  "name": "j1-nguoi-moi",
+  "vp": 390,
+  "status": "PASS",
+  "fail": "",
+  "totalSec": 10,
+  "clicks": 2,
+  "errs": [],
+  "log": [
+   {
+    "label": "Landing",
+    "url": "/",
+    "t": 2,
+    "clicks": 0,
+    "choices": 5
+   },
+   {
+    "label": "Trang đăng nhập",
+    "url": "/dang-nhap",
+    "t": 4,
+    "clicks": 1,
+    "choices": 3
+   },
+   {
+    "label": "Sau đăng nhập",
+    "url": "/hoc",
+    "t": 7,
+    "clicks": 1,
+    "choices": 2
+   },
+   {
+    "label": "CTA bài đầu",
+    "url": "/hoc",
+    "t": 7,
+    "clicks": 1,
+    "choices": 2,
+    "target": {
+     "y": 285,
+     "text": "Bắt đầu bài đầu tiên →",
+     "vh": 788
+    }
+   },
+   {
+    "label": "Mở bài 1",
+    "url": "/bai?id=B%3Aob01-01",
+    "t": 9,
+    "clicks": 2,
+    "choices": 7
+   },
+   {
+    "label": "Tới phần nội dung đầu tiên của bài",
+    "url": "/bai?id=B%3Aob01-01",
+    "t": 9,
+    "clicks": 2,
+    "choices": 7,
+    "target": {
+     "y": 936,
+     "text": "Bắt đầu bằng một câu hỏi",
+     "vh": 788
+    }
+   },
+   {
+    "label": "Câu hỏi đầu tiên trong bài",
+    "url": "/bai?id=B%3Aob01-01",
+    "t": 9,
+    "clicks": 2,
+    "choices": 7,
+    "target": {
+     "y": 1234,
+     "text": "A Quán đông có công thức nước dùng bí truyền ngon ",
+     "vh": 788
+    }
+   },
+   {
+    "label": "Trả lời câu 1",
+    "url": "/bai?id=B%3Aob01-01",
+    "t": 10,
+    "clicks": 2,
+    "choices": 12
+   },
+   {
+    "label": "Nút kết thúc bài",
+    "url": "/bai?id=B%3Aob01-01",
+    "t": 10,
+    "clicks": 2,
+    "choices": 12,
+    "target": {
+     "y": 613,
+     "text": "ĐIỀU KIỆN HOÀN THÀNH & NHẬN XP",
+     "vh": 788
+    }
+   }
+  ]
+ },
+ {
+  "name": "j2-genz-case",
+  "vp": 390,
+  "status": "PASS",
+  "fail": "",
+  "totalSec": 10,
+  "clicks": 2,
+  "errs": [],
+  "log": [
+   {
+    "label": "Landing",
+    "url": "/",
+    "t": 2,
+    "clicks": 0,
+    "choices": 5
+   },
+   {
+    "label": "Trang đăng nhập",
+    "url": "/dang-nhap?next=%2Fgallery.html",
+    "t": 4,
+    "clicks": 1,
+    "choices": 3
+   },
+   {
+    "label": "Trang case sau đăng nhập",
+    "url": "/gallery",
+    "t": 8,
+    "clicks": 1,
+    "choices": 18
+   },
+   {
+    "label": "Thấy case thương hiệu thật?",
+    "url": "/gallery",
+    "t": 8,
+    "clicks": 1,
+    "choices": 18,
+    "target": {
+     "y": 788,
+     "text": "N NIKE 2018 Dream Crazy",
+     "vh": 844
+    }
+   },
+   {
+    "label": "Mở một case thật",
+    "url": "/case/nike-dream-crazy",
+    "t": 10,
+    "clicks": 2,
+    "choices": 13
+   },
+   {
+    "label": "Tới \"Vấn đề kinh doanh\"",
+    "url": "/case/nike-dream-crazy",
+    "t": 10,
+    "clicks": 2,
+    "choices": 13,
+    "target": {
+     "y": 550,
+     "text": "BÀI TOÁN GIẢ ĐỊNH PHÂN TÍCH",
+     "vh": 844
+    }
+   }
+  ]
+ },
+ {
+  "name": "j3-di-lam-lab",
+  "vp": 1440,
+  "status": "PASS",
+  "fail": "",
+  "totalSec": 5,
+  "clicks": 1,
+  "errs": [],
+  "log": [
+   {
+    "label": "Trang đăng nhập",
+    "url": "/dang-nhap?next=%2Flab.html",
+    "t": 0,
+    "clicks": 0,
+    "choices": 3
+   },
+   {
+    "label": "Lab home",
+    "url": "/lab",
+    "t": 3,
+    "clicks": 0,
+    "choices": 5
+   },
+   {
+    "label": "Mở bước 1",
+    "url": "/lab-seo",
+    "t": 5,
+    "clicks": 1,
+    "choices": 4
+   },
+   {
+    "label": "Hành động đầu tiên trong công cụ",
+    "url": "/lab-seo",
+    "t": 5,
+    "clicks": 1,
+    "choices": 4,
+    "target": {
+     "y": 268,
+     "text": "Chọn chế độ",
+     "vh": 900
+    }
+   }
+  ]
+ },
+ {
+  "name": "j4-chu-shop",
+  "vp": 1440,
+  "status": "PASS",
+  "fail": "",
+  "totalSec": 5,
+  "clicks": 0,
+  "errs": [],
+  "log": [
+   {
+    "label": "Trang đăng nhập",
+    "url": "/dang-nhap?next=%2Fbat-dau.html",
+    "t": 0,
+    "clicks": 0,
+    "choices": 3
+   },
+   {
+    "label": "Bắt đầu từ đâu",
+    "url": "/bat-dau",
+    "t": 3,
+    "clicks": 0,
+    "choices": 9
+   },
+   {
+    "label": "Thấy hướng \"Marketing cho business của mình\"",
+    "url": "/bat-dau",
+    "t": 3,
+    "clicks": 0,
+    "choices": 9,
+    "target": {
+     "y": 1218,
+     "text": "Marketing cho business của mình",
+     "vh": 900
+    }
+   },
+   {
+    "label": "Đã chọn hướng chủ shop",
+    "url": "/bat-dau",
+    "t": 5,
+    "clicks": 0,
+    "choices": 13
+   },
+   {
+    "label": "CTA bài đầu của hướng",
+    "url": "/bat-dau",
+    "t": 5,
+    "clicks": 0,
+    "choices": 13,
+    "target": {
+     "y": 343,
+     "text": "Mở bài học →",
+     "vh": 900
+    }
+   }
+  ]
+ },
+ {
+  "name": "j5-strategist",
+  "vp": 1440,
+  "status": "PASS",
+  "fail": "",
+  "totalSec": 5,
+  "clicks": 1,
+  "errs": [],
+  "log": [
+   {
+    "label": "Trang đăng nhập",
+    "url": "/dang-nhap?next=%2Flab-chien-luoc.html",
+    "t": 0,
+    "clicks": 0,
+    "choices": 3
+   },
+   {
+    "label": "Xưởng chiến lược",
+    "url": "/lab-chien-luoc",
+    "t": 3,
+    "clicks": 0,
+    "choices": 3
+   },
+   {
+    "label": "Bước 1",
+    "url": "/lab-chien-luoc",
+    "t": 5,
+    "clicks": 1,
+    "choices": 8
+   },
+   {
+    "label": "Số điều khiển ở bước 1",
+    "url": "/lab-chien-luoc",
+    "t": 5,
+    "clicks": 1,
+    "choices": 8,
+    "controls": 17
+   }
+  ]
+ }
+]
