@@ -15,11 +15,16 @@ export async function publicStats(env, now = Date.now()) {
       (SELECT COUNT(*) FROM users WHERE created_at > ?1 AND email NOT LIKE '%@system.invalid') AS joined_7d,
       (SELECT COUNT(*) FROM lesson_progress lp JOIN users u ON u.id = lp.user_id
          WHERE lp.state IN ('learned','passed','solid','mastered') AND lp.completion_source = 'lesson'
-           AND u.email NOT LIKE '%@system.invalid') AS lessons_done`)
+           AND u.email NOT LIKE '%@system.invalid') AS lessons_done,
+      (SELECT COUNT(*) FROM xp_events x JOIN users u ON u.id = x.user_id
+         WHERE x.source = 'case' AND u.email NOT LIKE '%@system.invalid') AS cases_done`)
     .bind(now - 7 * 864e5).first();
   const learners = r?.learners || 0, lessons_done = r?.lessons_done || 0;
+  /* cases_done = lượt giải case đạt (người × case): server chỉ ghi xp_events source 'case' cho case có thật
+     (xp-trust: knownCases) và mỗi (người, case) một dòng (UNIQUE). Lớp trước không có số case nên không cộng. */
+  const cases_done = r?.cases_done || 0;
   /* learners / lessons_done giữ nguyên là số đếm từ website; tổng hiển thị = số website + lớp trước, tách riêng để không lẫn. */
-  return json({ learners, joined_7d: r?.joined_7d || 0, lessons_done,
+  return json({ learners, joined_7d: r?.joined_7d || 0, lessons_done, cases_done,
                 prior: PRIOR_CLASSES,
                 total_learners: learners + PRIOR_CLASSES.learners, total_lessons_done: lessons_done + PRIOR_CLASSES.lessons_done }, 200,
               { 'cache-control': 'public, max-age=60' });

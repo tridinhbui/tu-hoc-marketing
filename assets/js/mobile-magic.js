@@ -109,7 +109,7 @@
   var stage = $('.cases-stage'), cards = $$('.cs');
   if (stage && cards.length > 1) {
     var rail = document.createElement('div');
-    rail.className = 'mm-rail'; rail.setAttribute('role', 'group'); rail.setAttribute('aria-label', 'Các case — vuốt ngang để xem');
+    rail.className = 'mm-rail'; rail.setAttribute('role', 'group'); rail.setAttribute('aria-label', 'Các case, vuốt ngang để xem');
     var anchor = cards[0];
     anchor.parentNode.insertBefore(rail, anchor);
     cards.forEach(function (c) { c.classList.add('in'); rail.appendChild(c); });
