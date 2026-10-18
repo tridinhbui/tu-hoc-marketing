@@ -4,6 +4,8 @@ import { json, now, rid, str, sha256, randomToken, sessionCookie, currentUser, a
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const LINK_TTL = 15 * 60, SESSION_TTL = 30 * 24 * 3600;
+/* Trang người học định tới trước khi bị hỏi đăng nhập (cùng quy tắc với google.js): chỉ đường dẫn nội bộ. */
+const safeNext = (n) => (typeof n === 'string' && /^\/[A-Za-z0-9\-_.\/?=&%]*$/.test(n) && !n.startsWith('//')) ? n : '';
 
 export async function start(req, env) {
   const b = await body(req, 2000);
@@ -15,7 +17,7 @@ export async function start(req, env) {
   if (!(await allow(env, `rl:auth:em:${await sha256(email)}`, 3, 900))) return json({ error: 'rate_limited' }, 429);
 
   const token = randomToken(32);
-  await env.SESSIONS.put(`ml:${await sha256(token)}`, email, { expirationTtl: LINK_TTL });
+  await env.SESSIONS.put(`ml:${await sha256(token)}`, JSON.stringify({ email, next: safeNext(b.next) }), { expirationTtl: LINK_TTL });
   const origin = env.APP_ORIGIN || new URL(req.url).origin;
   const link = `${origin}/api/auth/verify?t=${token}`;
 
@@ -41,8 +43,10 @@ export async function verify(req, env) {
   const back = (q) => Response.redirect(`${env.APP_ORIGIN || url.origin}/tai-khoan.html?${q}`, 302);
   if (!/^[a-f0-9]{64}$/.test(t)) return back('loi=link');
   const key = `ml:${await sha256(t)}`;
-  const email = await env.SESSIONS.get(key);
-  if (!email) return back('loi=het-han');
+  const raw = await env.SESSIONS.get(key);
+  if (!raw) return back('loi=het-han');
+  let email = raw, next = '';                         // link cũ (trước bản này) chỉ lưu email trần
+  try { const o = JSON.parse(raw); if (o && o.email) { email = o.email; next = safeNext(o.next); } } catch (e) {}
   await env.SESSIONS.delete(key);                     // một lần duy nhất
 
   let u = await env.DB.prepare('SELECT id FROM users WHERE email = ?1').bind(email).first();
@@ -54,7 +58,7 @@ export async function verify(req, env) {
   await env.SESSIONS.put(`s:${sid}`, u.id, { expirationTtl: SESSION_TTL });
   const res = back('dang-nhap=ok');
   return new Response(null, { status: 302, headers: {
-    location: res.headers.get('location'),
+    location: next ? `${env.APP_ORIGIN || url.origin}${next}` : res.headers.get('location'),
     'set-cookie': sessionCookie(sid, SESSION_TTL, url.protocol === 'https:'),
   } });
 }

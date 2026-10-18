@@ -12,7 +12,7 @@
    Nạp SAU paper.css/studio.css ở mọi trang. Chỉ là lớp trình bày — không đổi cấu trúc dữ liệu hay hành vi. */
 :root{
   --at-paper:#f3ead9; --at-paper-2:#ebdfc8; --at-plate:#faf4e7; --at-kraft:#d9c7a6;
-  --at-ink:#1d1510; --at-ink-2:rgba(29,21,16,.74); --at-ink-3:rgba(29,21,16,.52);
+  --at-ink:#1d1510; --at-ink-2:rgba(29,21,16,.74); --at-ink-3:rgba(29,21,16,.64);
   --at-rule:rgba(29,21,16,.2); --at-rule-s:rgba(29,21,16,.1);
   --at-tc:#a8461f; --at-tc-d:#8a3416; --at-or:#e85d24; --at-blush:#ecd3c4; --at-rose:#c98c7b; --at-esp:#16100c;
   --at-serif:'Fraunces',serif;
@@ -107,6 +107,7 @@ html.at-js [data-at].in{opacity:1;transform:none}
 .at-hero__txt{grid-column:1/8;position:relative;z-index:3}
 .at-hero .at-kick{color:rgba(242,233,216,.62)}
 .at-hero .at-kick span{color:var(--at-or)}
+.at-hero .at-pass__who .at-kick{color:var(--at-ink-3)}
 .at-hello{font-family:var(--at-serif);font-style:italic;font-weight:300;font-size:clamp(1.05rem,1.6vw,1.35rem);color:rgba(242,233,216,.72);margin:clamp(18px,3vw,34px) 0 6px}
 .at-hero h1.at-display{font-size:clamp(2.2rem,5.2vw,5rem);color:#f6eedd;text-wrap:balance}
 .at-hero__cta{display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:clamp(24px,3.4vw,42px)}
@@ -225,6 +226,9 @@ html.at-js [data-at].in{opacity:1;transform:none}
 .lvmap__bar i{background:var(--at-tc)!important;border-radius:0!important}
 .lvmap__go{border-radius:999px!important;background:var(--at-ink)!important;color:var(--at-paper)!important;letter-spacing:.04em!important;text-transform:none!important;font:700 14px var(--at-sans)!important;padding:13px 22px!important}
 .lvmap__go:hover{background:var(--at-tc)!important}
+/* Nút phụ: trùng đích với CTA chính ở hero (bài tiếp theo) nên không cần nền mực đặc tranh chú ý */
+.lvmap__go{background:transparent!important;color:var(--at-ink)!important;box-shadow:inset 0 0 0 1.5px var(--at-ink)}
+.lvmap__go:hover{color:#fff!important}
 
 /* hai cột: nhiệm vụ & lối vào  |  bảng xếp hạng & mời bạn */
 .at-cols{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(30px,5vw,88px);align-items:start}

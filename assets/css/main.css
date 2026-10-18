@@ -538,7 +538,7 @@ a.plate:hover .plate__mark{transform:translate(-8px,-10px);opacity:.6}
    Chỉ đổi token; mọi màu vẽ bằng var(--paper|--ink|...) tự theo. */
 html[data-theme="ivory"]{
   --paper:#F7F0E6; --paper-2:#EFE5D8; --mist:#E6D9C7;
-  --ink:#24160E; --ink-60:rgba(36,22,14,.78); --ink-38:rgba(36,22,14,.58); --ink-14:rgba(36,22,14,.16); --ink-08:rgba(36,22,14,.07);
+  --ink:#24160E; --ink-60:rgba(36,22,14,.78); --ink-38:rgba(36,22,14,.64); --ink-14:rgba(36,22,14,.16); --ink-08:rgba(36,22,14,.07);
   --seal:#9A6A10;
   color-scheme:light;
 }

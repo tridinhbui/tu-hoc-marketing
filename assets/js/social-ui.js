@@ -91,7 +91,7 @@ const SocialUI = (() => {
       </div>
       <div class="at-pass__line" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><i style="width:${pct}%"></i></div>
       <p class="at-pass__sm"><span>${next ? `Còn ${fmtN(Math.max(0, next - xp))} XP lên cấp ${level + 1}` : 'Bạn đã đạt cấp cao nhất'}</span><b>${pct}%</b></p>
-      <div class="at-streak"><span class="at-streak__n">${fmtN(streak)}</span><small>ngày<br>liên tiếp</small><span class="at-streak__dots" aria-hidden="true">${dots}</span></div>
+      <div class="at-streak"><span class="at-streak__n">${fmtN(streak)}</span><small>ngày <br>liên tiếp</small><span class="at-streak__dots" aria-hidden="true">${dots}</span></div>
     </div>`;
   }
 
