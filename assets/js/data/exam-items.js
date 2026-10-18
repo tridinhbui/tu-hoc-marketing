@@ -1194,7 +1194,7 @@ const EXAM_ITEMS = [
 
 { id:'e3.017', type:'case', stage:'s3', mod:'s3m3', core:false, difficulty:3, minutes:1.8,
   teaches:['P:salience'], source:'campaign:dienmayxanh-nguoi-xanh',
-  ctx:'Điện Máy Xanh phát quảng cáo “người xanh” với tần suất rất dày: giai điệu lặp, dàn người sơn xanh nhảy múa. Rất nhiều người nói họ thấy khó chịu. Thương hiệu vẫn giữ nguyên.',
+  ctx:'Điện Máy Xanh phát quảng cáo “người xanh” với tần suất rất dày: giai điệu lặp, nhóm người mặc đồ xanh nhảy múa. Rất nhiều người nói họ thấy khó chịu. Thương hiệu vẫn giữ nguyên.',
   stem:'Vì sao giữ nguyên là quyết định hợp lý trong trường hợp này?',
   options:[
     {k:'a',t:'Vì dừng hoặc sửa quảng cáo giữa chừng sẽ tốn thêm chi phí sản xuất lại và làm lãng phí số tiền media đã mua'},
@@ -1647,7 +1647,7 @@ const EXAM_ITEMS = [
 
 { id:'e4.016', type:'case', stage:'s4', mod:'s4m1', core:false, difficulty:2, minutes:1.8,
   teaches:['P:physical-availability'], source:'campaign:grab-super-app',
-  ctx:'Tài xế Grab mặc áo khoác xanh lá có logo, chạy khắp thành phố mỗi ngày.',
+  ctx:'Giả sử một hãng gọi xe có tài xế đối tác mặc áo khoác xanh lá có logo, chạy khắp thành phố mỗi ngày.',
   stem:'Về mặt marketing, đội tài xế này đóng vai trò gì?',
   options:[
     {k:'a',t:'Chỉ là đồng phục để khách nhận ra đúng tài xế của mình khi đặt xe ngoài đường, không có tác dụng marketing gì thêm'},

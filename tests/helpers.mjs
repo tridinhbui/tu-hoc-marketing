@@ -13,7 +13,7 @@ export function loadContent({ withBai = true } = {}) {
   const ctx = vm.createContext({ console });
   const run = (file) => vm.runInContext(fs.readFileSync(file, 'utf8'), ctx, { filename: file });
   const D = rel('assets/js/data');
-  for (const f of ['lessons', 'principles', 'curriculum', 'drills', 'cases', 'campaigns', 'brands', 'taste', 'exam-items', 'exams', 'bai-index']) run(`${D}/${f}.js`);
+  for (const f of ['lessons', 'principles', 'curriculum', 'drills', 'cases', 'campaigns', 'campaigns-deep', 'brands', 'taste', 'exam-items', 'exams', 'bai-index']) run(`${D}/${f}.js`);
   if (withBai) for (const f of fs.readdirSync(`${D}/bai`).filter((x) => x.endsWith('.js')).sort()) run(`${D}/bai/${f}`);
   const get = (expr) => vm.runInContext(`(typeof ${expr.split(/[.\[]/)[0]} !== 'undefined') ? (${expr}) : undefined`, ctx);
   return { ctx, get };

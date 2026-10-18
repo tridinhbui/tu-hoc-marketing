@@ -62,3 +62,9 @@ Giao diện casebook nền trắng: `assets/css/case.css`. Lõi: `assets/js/app.
 
 Dữ liệu: `curriculum.js` (chặng, module, lộ trình, nhóm người học — xếp 26 daily lesson + 22 nguyên lý có sẵn),
 `drills.js` (bài tính số, câu trả lời mẫu 60 giây, mã lỗi — mọi số liệu là minh hoạ).
+
+### Case sâu và Xưởng chiến lược
+
+- `assets/js/data/campaigns.js` (26 case) + `assets/js/data/campaigns-deep.js` (`CAMPAIGN_DEEP`): mỗi case có khung Observe → Analyze → Strategize → Create → Measure, ba nhãn bằng chứng (đã xác minh · giả định · kết luận), kết quả kèm ai đo/ngày/nguồn, điều chưa biết, nhân quả kèm yếu tố gây nhiễu. Trang `campaign.html` hiện khối sâu khi có dữ liệu; `node tools_build.mjs` (với `SITE_URL`) sinh lại `case/*.html`. Quy tắc và mẫu: `CASE-EXPANSION-ROADMAP.md`; chẩn đoán: `MARKETING-CONTENT-AUDIT.md`.
+- `lab-chien-luoc.html` (Xưởng chiến lược, Marketing Lab): brief → nghiên cứu → định vị → thông điệp → kênh & ngân sách → KPI → thí nghiệm → đọc kết quả. Dữ liệu `assets/js/lab/strategy-data.js` (**giả lập, có nhãn**), mô hình và chấm `strategy-eval.js` (thuần, test được), giao diện `strategy-ui.js`.
+
