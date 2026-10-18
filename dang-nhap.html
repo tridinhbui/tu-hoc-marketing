@@ -33,6 +33,7 @@ a{color:inherit;text-decoration:none}
 .au-stats{display:flex;gap:0;max-width:420px}
 .au-stats div{flex:1;min-width:0;padding:0 18px;border-left:1px solid rgba(246,240,228,.2);font-size:12.5px;line-height:1.45;color:rgba(246,240,228,.7)}
 .au-stats div:first-child{border-left:0;padding-left:0}
+.au-src{margin:14px 0 0;max-width:370px;font-size:12px;line-height:1.45;color:rgba(246,240,228,.72)}
 .au-stats b{display:block;font-family:var(--serif);font-size:clamp(1.3rem,6vw,1.8rem);max-width:100%;font-weight:500;color:#fff;position:relative;width:max-content;margin-bottom:6px}
 .au-stats b::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;background:var(--or);transform:rotate(-2deg);border-radius:2px}
 /* collage */
@@ -126,9 +127,10 @@ a{color:inherit;text-decoration:none}
     <p class="au-p">Tiến độ, điểm XP và các case bạn đã giải được lưu theo tài khoản. Miễn phí, không cần thẻ.</p>
     <div class="au-stats">
       <div><b>700+</b>bài học & case<br>thực tế</div>
-      <div><b id="stLearners">—</b>người đã<br>đăng ký</div>
+      <div><b id="stLearners">—</b>người đã<br>học cùng</div>
       <div><b id="stDone">—</b>lượt hoàn<br>thành bài</div>
     </div>
+    <p class="au-src" id="stSrc" hidden></p>
   </section>
 
   <div class="au-film"></div>
@@ -254,18 +256,24 @@ async function handleLogout() {
 init();
 </script>
 <script>
-/* Số thật: chỉ đếm, không lộ ai. Lỗi mạng thì giữ dấu —. */
+/* Số thật: đếm từ website + học viên các lớp trước (hằng số ghi ở api/src/stats.js, luôn kèm chú thích nguồn).
+   Chỉ đếm, không lộ ai. Lỗi mạng thì giữ dấu —. Tự làm mới mỗi 60 giây khi tab đang mở. */
 (function(){
   var f=function(n){ try{ return Number(n).toLocaleString('vi-VN'); }catch(e){ return String(n); } };
   /* Số lớn rút gọn (123K, 1,2M) để không tràn ô ở màn hẹp; số đầy đủ nằm trong title. */
   var short=function(n){ if(n<100000) return f(n);
     var u=n<1e6?[1e3,'K']:[1e6,'M'], v=Math.floor(n/u[0]*10)/10; return f(v)+u[1]; };
   var go=function(el,n){ if(!el||!(n>=0)) return; el.textContent=short(n); el.title=f(n); };
-  fetch('/api/stats',{credentials:'same-origin'}).then(function(r){ return r.ok?r.json():null; }).then(function(d){
+  var load=function(){ fetch('/api/stats',{credentials:'same-origin'}).then(function(r){ return r.ok?r.json():null; }).then(function(d){
     if(!d) return;
-    go(document.getElementById('stLearners'),d.learners);
-    go(document.getElementById('stDone'),d.lessons_done);
-  }).catch(function(){});
+    var pr=d.prior||{learners:0,lessons_done:0};
+    go(document.getElementById('stLearners'), d.total_learners!=null?d.total_learners:d.learners);
+    go(document.getElementById('stDone'), d.total_lessons_done!=null?d.total_lessons_done:d.lessons_done);
+    var src=document.getElementById('stSrc');
+    if(src&&(pr.learners||pr.lessons_done)){ src.textContent='Gồm '+f(pr.learners)+' học viên và '+f(pr.lessons_done)+' lượt hoàn thành bài từ các lớp trước; phần còn lại đếm trực tiếp trên website.'; src.hidden=false; }
+  }).catch(function(){}); };
+  load();
+  setInterval(function(){ if(!document.hidden) load(); }, 60000);
 })();
 </script>
 </body>
