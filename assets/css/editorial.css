@@ -778,3 +778,24 @@ main{overflow-x:clip}
   .h-photo{width:min(100%,32svh)}
   .h-title{font-size:clamp(2.6rem,min(13.5vw,7.4svh),7rem)}
 }
+
+/* ====================== GỌN HƠN NỮA: PHƯƠNG PHÁP & LAB (desktop) ====================== */
+@media (min-width:1000px){
+  /* Bậc thang: mô tả đứng cùng dòng với chữ lớn (cột phải) thay vì xuống dòng riêng; chữ lớn nhỏ lại theo chiều cao */
+  .rung{grid-template-columns:clamp(40px,6vw,90px) auto minmax(0,1fr);align-items:baseline;column-gap:clamp(14px,2vw,32px)}
+  .rung h3{font-size:clamp(2rem,min(4.6vw,7vh),4.8rem)}
+  .rung p{grid-column:3;margin:0;align-self:center}
+  .met-top{margin-bottom:clamp(14px,2.4vh,32px)}
+}
+@media (min-width:1280px){
+  /* Bàn Lab: thấp hơn theo chiều cao màn hình; brief và ảnh "Test. Fail. Learn." gọn lại để không chồng nội dung */
+  .desk{min-height:clamp(560px,min(46vw,72vh),740px)}
+  .brief{padding:clamp(18px,min(2vw,2.6vh),30px)}
+  .brief h3{font-size:clamp(1.4rem,min(2vw,3.6vh),2rem)}
+  .acc__b{padding:9px 2px}
+  .nb{width:min(25%,38vh,320px)}
+  .nb .hand{font-size:clamp(16px,1.2vw,19px);line-height:1.15;white-space:nowrap}
+  .nb img{aspect-ratio:1.35}
+  .log{width:min(34%,400px)}
+  .lab-head{margin-bottom:clamp(8px,1.6vh,22px)}
+}
