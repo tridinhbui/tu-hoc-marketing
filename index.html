@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/hand.css">
-<link rel="stylesheet" href="assets/css/editorial.css?v=11b2">
+<link rel="stylesheet" href="assets/css/editorial.css?v=11c2">
 <link rel="stylesheet" href="assets/css/mobile-magic.css?v=3">
 </head>
 <body class="ed">
@@ -65,7 +65,7 @@
 
   <!-- Số trực tiếp từ /api/stats: chỉ hiện khi đã có số thật (lỗi mạng thì ẩn cả dải, không hiện số đoán). -->
   <div class="h-live" id="hLive" hidden>
-    <p class="h-live__k"><i aria-hidden="true"></i>Trực tiếp</p>
+    <p class="h-live__k"><span class="h-live__badge"><i aria-hidden="true"></i>LIVE</span><span class="h-live__t">Cập nhật trực tiếp</span></p>
     <dl class="h-live__n">
       <div><dt>người đã học cùng</dt><dd data-k="total_learners">0</dd></div>
       <div><dt>lượt hoàn thành bài</dt><dd data-k="total_lessons_done">0</dd></div>
@@ -411,6 +411,7 @@ try{fetch('/api/me',{credentials:'include',cache:'no-store'}).then(function(r){r
   var shown={};
   var put=function(el,to){
     var from=shown[el.dataset.k]; shown[el.dataset.k]=to;
+    if(from!=null&&from!==to){ el.classList.remove('is-bump'); void el.offsetWidth; el.classList.add('is-bump'); }
     if(still||from==null||from===to){ el.textContent=fmt(to); return; }
     var t0=performance.now(), d=900;
     (function step(t){ var p=Math.min(1,(t-t0)/d), e=1-Math.pow(1-p,3); el.textContent=fmt(Math.round(from+(to-from)*e)); if(p<1) requestAnimationFrame(step); })(t0);
