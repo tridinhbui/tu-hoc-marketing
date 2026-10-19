@@ -69,7 +69,7 @@
     <dl class="h-live__n">
       <div><dt>người đã học cùng</dt><dd data-k="total_learners">0</dd></div>
       <div><dt>lượt hoàn thành bài</dt><dd data-k="total_lessons_done">0</dd></div>
-      <div><dt>lượt giải case</dt><dd data-k="cases_done">0</dd></div>
+      <div><dt>lượt giải case</dt><dd data-k="total_cases_done">0</dd></div>
     </dl>
     <p class="h-live__src" id="hLiveSrc"></p>
   </div>
@@ -420,11 +420,11 @@ try{fetch('/api/me',{credentials:'include',cache:'no-store'}).then(function(r){r
       if(!d) return;
       var v={ total_learners: d.total_learners!=null?d.total_learners:d.learners,
               total_lessons_done: d.total_lessons_done!=null?d.total_lessons_done:d.lessons_done,
-              cases_done: d.cases_done||0 };
+              total_cases_done: d.total_cases_done!=null?d.total_cases_done:(d.cases_done||0) };
       [].forEach.call(box.querySelectorAll('dd[data-k]'),function(el){ var n=v[el.dataset.k]; if(n>=0) put(el,n); });
       var pr=d.prior||{};
-      document.getElementById('hLiveSrc').textContent=(pr.learners||pr.lessons_done)
-        ?'Gồm '+fmt(pr.learners||0)+' học viên và '+fmt(pr.lessons_done||0)+' lượt hoàn thành bài từ các lớp trước; phần còn lại đếm trực tiếp trên website.':'';
+      document.getElementById('hLiveSrc').textContent=(pr.learners||pr.lessons_done||pr.cases_done)
+        ?'Gồm '+fmt(pr.learners||0)+' học viên, '+fmt(pr.lessons_done||0)+' lượt hoàn thành bài và '+fmt(pr.cases_done||0)+' lượt giải case từ các lớp trước; phần còn lại đếm trực tiếp trên website.':'';
       if(box.hidden){ box.hidden=false; requestAnimationFrame(function(){ box.classList.add('is-on'); }); }
     }).catch(function(){});
   };

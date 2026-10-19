@@ -27,7 +27,8 @@ test('/api/stats: rỗng thì mọi số bằng 0', async () => {
   const { r, body } = await stats(env);
   assert.equal(r.status, 200);
   assert.deepEqual(body, { learners: 0, joined_7d: 0, lessons_done: 0, cases_done: 0, prior: PRIOR_CLASSES,
-    total_learners: PRIOR_CLASSES.learners, total_lessons_done: PRIOR_CLASSES.lessons_done });
+    total_learners: PRIOR_CLASSES.learners, total_lessons_done: PRIOR_CLASSES.lessons_done,
+    total_cases_done: PRIOR_CLASSES.cases_done });
 });
 
 test('/api/stats: đếm đúng từ database — bỏ tài khoản hệ thống, đúng 7 ngày, mỗi (người × bài) một lượt', async () => {
@@ -60,7 +61,7 @@ test('/api/stats: chỉ trả số đếm (ba trường cũ giữ nguyên + tổ
   addUser(db, 'u1', 'nguoi.that@gmail.com', DAY);
   addLp(db, 'u1', 'B:ob01-01', 'learned', 'lesson');
   const { r, body } = await stats(env);
-  assert.deepEqual(Object.keys(body).sort(), ['cases_done', 'joined_7d', 'learners', 'lessons_done', 'prior', 'total_learners', 'total_lessons_done']);
+  assert.deepEqual(Object.keys(body).sort(), ['cases_done', 'joined_7d', 'learners', 'lessons_done', 'prior', 'total_cases_done', 'total_learners', 'total_lessons_done']);
   assert.ok([...Object.values(body), ...Object.values(body.prior)].every((v) => typeof v === 'object' || (Number.isInteger(v) && v >= 0)));
   const raw = JSON.stringify(body);
   assert.ok(!raw.includes('@') && !raw.includes('u1') && !raw.includes('nguoi'));
@@ -68,8 +69,8 @@ test('/api/stats: chỉ trả số đếm (ba trường cũ giữ nguyên + tổ
   assert.ok(!r.headers.get('set-cookie'));
 });
 
-test('/api/stats: số lớp trước là hằng số cố định, đúng như chủ dự án xác nhận (1.000 học viên, 10.000 lượt)', () => {
-  assert.deepEqual(PRIOR_CLASSES, { learners: 1000, lessons_done: 10000 });
+test('/api/stats: số lớp trước là hằng số cố định, đúng như chủ dự án xác nhận (1.000 học viên, 10.000 lượt bài, 100 lượt case)', () => {
+  assert.deepEqual(PRIOR_CLASSES, { learners: 1000, lessons_done: 10000, cases_done: 100 });
 });
 
 test('/api/stats: cases_done đếm lượt giải case (người × case), bỏ tài khoản hệ thống và nguồn XP khác', async () => {
@@ -81,4 +82,5 @@ test('/api/stats: cases_done đếm lượt giải case (người × case), bỏ
   xp('u1', 'lesson', 'lesson:B:ob01-01'); // nguồn khác: không tính
   const { body } = await stats(env);
   assert.equal(body.cases_done, 3);
+  assert.equal(body.total_cases_done, 3 + PRIOR_CLASSES.cases_done);   // số thật + lớp trước, số thật giữ riêng
 });
