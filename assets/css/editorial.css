@@ -702,3 +702,79 @@ main{overflow-x:clip}
   .nx{top:20%;left:41%}
   .desk{min-height:clamp(620px,48vw,760px)}
 }
+
+/* ====================== VỪA MỘT MÀN HÌNH (desktop ≥1000px) ======================
+   Gốc vấn đề: cỡ chữ tiêu đề, ảnh và khoảng đệm chỉ co theo CHIỀU RỘNG (vw). Màn rộng mà thấp (1874×880, 1440×760,
+   1366×680) thì hero cao 1,3 màn, section mổ xẻ case ~3 màn. Ở đây mọi kích thước lớn bị chặn thêm theo CHIỀU CAO (vh):
+   lấy số nhỏ hơn giữa hai cách tính, nên màn vuông vẫn như cũ, màn rộng-thấp được thu lại. */
+@media (min-width:1000px){
+  .sec{padding-top:clamp(56px,min(8vw,10vh),130px);padding-bottom:clamp(56px,min(8vw,10vh),130px)}
+
+  /* Hero: tiêu đề, ảnh, mô tả, CTA và dải số trực tiếp nằm gọn trong 100svh */
+  .hero{min-height:100svh;grid-template-rows:clamp(92px,11.5vh,130px) auto auto auto auto auto}
+  .h-title{font-size:clamp(2.7rem,min(9.6vw,12svh),10.6rem);padding-bottom:clamp(4px,1vh,16px)}
+  .h-photo{margin-top:clamp(20px,4vh,60px);width:min(100%,46svh);justify-self:end}
+  .h-lead{margin-top:clamp(14px,2.6vh,40px)}
+  .h-cta{margin-top:clamp(14px,2.6vh,40px)}
+  .h-live{margin:clamp(14px,2.4vh,34px) 0 clamp(14px,2.4vh,30px);padding-top:clamp(10px,1.6vh,18px)}
+  .h-live__n dd{font-size:clamp(1.7rem,min(3.2vw,5.4vh),3rem)}
+  .h-scrap{top:calc(clamp(92px,11.5vh,130px) + 2vh)}
+
+  .mani{padding-top:clamp(70px,min(10vw,12vh),150px)}
+  .mani-text{font-size:clamp(1.7rem,min(4.1vw,6.4vh),4.2rem)}
+  .cases-title{font-size:clamp(2rem,min(4.2vw,7vh),4.5rem)}
+
+  /* Mổ xẻ case: tiêu đề, ảnh dính (sticky) và từng bước */
+  .ana-title{font-size:clamp(2.6rem,min(7.4vw,10.5vh),7.6rem)}
+  .ana-spec{width:min(100%,62vh)}
+  .ana-step{padding:clamp(10px,min(1.4vw,1.9vh),22px) 0 clamp(12px,min(1.8vw,2.3vh),28px)}
+  .ana-step .n{font-size:clamp(2.2rem,min(4vw,6.4vh),4.4rem)}
+  /* Số thứ tự đứng cạnh nội dung thay vì chiếm một dòng riêng: mỗi bước thấp đi ~70px */
+  .ana-step{display:grid;grid-template-columns:clamp(64px,min(6vw,9vh),96px) minmax(0,1fr);column-gap:clamp(12px,1.6vw,24px);align-items:start}
+  .ana-step>*{grid-column:2}
+  .ana-step>.n{grid-column:1;grid-row:1/span 4}
+  .ana-step .k{margin-top:2px}
+
+  /* Phương pháp: các bậc thang chữ lớn */
+  .met-title{font-size:clamp(2.1rem,min(4.8vw,7.6vh),5rem)}
+  .rung h3{font-size:clamp(2.1rem,min(5.4vw,8vh),5.6rem)}
+  .rung{padding:clamp(4px,min(.8vw,1.1vh),12px) 0}
+  .rung p{margin-top:2px}
+  .sk-title{font-size:clamp(1.9rem,min(4.2vw,6.8vh),4.2rem)}
+  .sk h3{font-size:clamp(1.5rem,min(3.1vw,5vh),3.1rem)}
+  .sk{padding:clamp(9px,min(1.3vw,1.8vh),20px) 0}
+  .skills{padding-top:clamp(40px,min(5vw,7vh),84px);padding-bottom:clamp(40px,min(5vw,7vh),84px)}
+  .road-sky{padding-top:clamp(52px,min(6vw,8vh),100px)}
+  /* Ảnh tròn ở góc phải: nhỏ hơn và cao hơn để không đè lên đoạn mô tả bên dưới */
+  .met-pic{width:clamp(110px,min(14vw,19vh),220px);top:clamp(56px,min(7vw,8vh),110px)}
+  /* Đoạn mô tả đứng cùng hàng với tiêu đề thay vì xuống hàng riêng ở cột phải */
+  .ana-head .kick{grid-row:1}
+  .ana-title{grid-row:2;grid-column:1/9}
+  .ana-p{grid-row:2;grid-column:9/13;align-self:end;margin:0}
+
+  /* Lab, lộ trình, vũ trụ thương hiệu, cộng đồng */
+  .lab-title{font-size:clamp(2.4rem,min(5.8vw,9.4vh),6rem)}
+  .road-title{font-size:clamp(2.2rem,min(5.2vw,8.4vh),5.4rem)}
+  .road-map{height:clamp(320px,min(34vw,54vh),480px)}
+  .uni-title{font-size:clamp(2.3rem,min(5.8vw,9.4vh),6rem);grid-row:2;grid-column:1/8}
+  /* Đoạn mô tả lên cùng hàng tiêu đề (cột phải) để bức tường ảnh bắt đầu sớm hơn */
+  .uni-p{grid-row:2;grid-column:8/13;align-self:end;margin:0;max-width:46ch}
+  .wall{height:clamp(540px,min(52vw,76vh),800px);max-width:min(100%,150vh);margin-inline:auto}
+  .comm-title{font-size:clamp(2rem,min(5vw,8vh),5.2rem)}
+  .chal-q{font-size:clamp(1.6rem,min(3.8vw,6vh),3.7rem)}
+  .stats b{font-size:clamp(2.2rem,min(5.2vw,8vh),5rem)}
+}
+/* Hero tablet & điện thoại: tiêu đề và ảnh co theo chiều cao màn hình để CTA và dải số trực tiếp lên gần màn đầu */
+@media (max-width:999px){
+  .hero{grid-template-rows:96px auto auto auto auto auto;padding-bottom:4px}
+  .h-photo{width:min(100%,36svh);justify-self:end}
+  .h-photo .ph{aspect-ratio:1/1}
+  .h-title{font-size:clamp(2.6rem,min(13.5vw,8.6svh),7rem);margin-top:max(-18vw,-12svh)}
+  .h-lead{margin-top:clamp(12px,2svh,24px)}
+  .h-cta{margin-top:clamp(12px,2svh,24px)}
+  .h-live{margin:clamp(14px,2.4svh,26px) 0 clamp(8px,1.6svh,18px);padding-top:12px}
+}
+@media (min-width:600px) and (max-width:999px){
+  .h-photo{width:min(100%,32svh)}
+  .h-title{font-size:clamp(2.6rem,min(13.5vw,7.4svh),7rem)}
+}
