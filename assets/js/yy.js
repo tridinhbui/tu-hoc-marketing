@@ -164,7 +164,7 @@
 
   /* ---------- bộ não cục bộ ---------- */
   var FAQ = [
-    { k: /(ban la ai|y y la ai|ten (ban|may)|ai vay|gioi thieu ban)/, a: 'Mình là Ý Ý — bạn đồng hành học marketing của Tự Học Marketing Case. Mình giải thích thuật ngữ, gợi ý bài nên học và chỉ đường trong app. Mình không chấm điểm bài làm của bạn.' },
+    { k: /(ban la ai|y y la ai|ten (ban|may)|ai vay|gioi thieu ban)/, a: 'Mình là Ý Ý, bạn đồng hành học marketing của Tự Học Marketing Case. Mình giải thích thuật ngữ, gợi ý bài nên học và chỉ đường trong app. Mình không chấm điểm bài làm của bạn.' },
     { k: /(mien phi|gia ca|bao nhieu tien|tra phi|mat tien|hoc phi)/, a: 'Miễn phí cho người học. Bạn chỉ cần đăng nhập bằng Google để tiến độ được lưu lại và đồng bộ giữa các máy.' },
     { k: /(bat dau|moi hoc|nguoi moi|hoc tu dau|hoc gi truoc|nen hoc gi)/, a: 'Nếu mới bắt đầu: làm bài xếp lớp để app biết bạn đã vững chặng nào, rồi học theo lộ trình từ Chặng 1. Mỗi bài chỉ khoảng 6 phút.', links: [['Bài xếp lớp', 'xep-lop.html'], ['Học bài', 'hoc-bai.html']] },
     { k: /(xp|cap do|level|diem kinh nghiem|len cap)/, a: 'Mỗi bài học, bài tính số và case đều cộng XP. Có 30 cấp độ chia 6 bậc nghề, từ “Người quan sát” đến “Người nhìn thấy”. Xem tab Cấp độ & XP ở Dashboard.', links: [['Cấp độ & XP', 'cap-do.html']] },

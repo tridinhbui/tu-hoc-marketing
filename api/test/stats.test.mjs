@@ -26,7 +26,7 @@ test('/api/stats: rỗng thì mọi số bằng 0', async () => {
   const { env } = makeEnv();
   const { r, body } = await stats(env);
   assert.equal(r.status, 200);
-  assert.deepEqual(body, { learners: 0, joined_7d: 0, lessons_done: 0, prior: PRIOR_CLASSES,
+  assert.deepEqual(body, { learners: 0, joined_7d: 0, lessons_done: 0, cases_done: 0, prior: PRIOR_CLASSES,
     total_learners: PRIOR_CLASSES.learners, total_lessons_done: PRIOR_CLASSES.lessons_done });
 });
 
@@ -60,7 +60,7 @@ test('/api/stats: chỉ trả số đếm (ba trường cũ giữ nguyên + tổ
   addUser(db, 'u1', 'nguoi.that@gmail.com', DAY);
   addLp(db, 'u1', 'B:ob01-01', 'learned', 'lesson');
   const { r, body } = await stats(env);
-  assert.deepEqual(Object.keys(body).sort(), ['joined_7d', 'learners', 'lessons_done', 'prior', 'total_learners', 'total_lessons_done']);
+  assert.deepEqual(Object.keys(body).sort(), ['cases_done', 'joined_7d', 'learners', 'lessons_done', 'prior', 'total_learners', 'total_lessons_done']);
   assert.ok([...Object.values(body), ...Object.values(body.prior)].every((v) => typeof v === 'object' || (Number.isInteger(v) && v >= 0)));
   const raw = JSON.stringify(body);
   assert.ok(!raw.includes('@') && !raw.includes('u1') && !raw.includes('nguoi'));
@@ -70,4 +70,15 @@ test('/api/stats: chỉ trả số đếm (ba trường cũ giữ nguyên + tổ
 
 test('/api/stats: số lớp trước là hằng số cố định, đúng như chủ dự án xác nhận (1.000 học viên, 10.000 lượt)', () => {
   assert.deepEqual(PRIOR_CLASSES, { learners: 1000, lessons_done: 10000 });
+});
+
+test('/api/stats: cases_done đếm lượt giải case (người × case), bỏ tài khoản hệ thống và nguồn XP khác', async () => {
+  const { env, db } = makeEnv();
+  addUser(db, 'u1', 'a@x.vn', DAY); addUser(db, 'u2', 'b@x.vn', DAY); addUser(db, 's1', 'bot@system.invalid', DAY);
+  const xp = (u, src, ref) => db.prepare('INSERT INTO xp_events (user_id,source,source_ref,amount,day_local,created_at) VALUES (?,?,?,?,?,?)').run(u, src, ref, 10, '2026-10-18', now);
+  xp('u1', 'case', 'cocomi-ngan-sach'); xp('u1', 'case', 'la-tra-giam-gia'); xp('u2', 'case', 'cocomi-ngan-sach');
+  xp('s1', 'case', 'cocomi-ngan-sach');   // tài khoản hệ thống: không tính
+  xp('u1', 'lesson', 'lesson:B:ob01-01'); // nguồn khác: không tính
+  const { body } = await stats(env);
+  assert.equal(body.cases_done, 3);
 });
