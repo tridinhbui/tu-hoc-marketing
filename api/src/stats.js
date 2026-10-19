@@ -5,9 +5,9 @@ import { json } from './lib.js';
    lesson_progress có khoá chính (user_id, lesson_id) nên mỗi cặp chỉ một dòng, không đếm nhiều trạng thái của cùng một bài.
    Chỉ đếm, không lộ ai; cache ngắn để trang không gõ D1 mỗi lượt xem. */
 /* Học viên các lớp trước (học ngoài website, trước khi có hệ thống này). Số do chủ dự án xác nhận ngày 18/10/2026:
-   1.000 học viên, 10.000 lượt hoàn thành bài; ngày 19/10/2026 xác nhận thêm 100 lượt giải case. Đây là hằng số cố định, KHÔNG tăng theo thời gian — chỉ phần đếm từ
+   1.000 học viên; ngày 19/10/2026 xác nhận 100 lượt giải case và chỉnh lượt hoàn thành bài từ 10.000 xuống 100. Đây là hằng số cố định, KHÔNG tăng theo thời gian — chỉ phần đếm từ
    database mới tăng. Trang hiển thị luôn kèm chú thích "gồm học viên các lớp trước". Muốn đổi thì sửa ở đây. */
-export const PRIOR_CLASSES = { learners: 1000, lessons_done: 10000, cases_done: 100 };
+export const PRIOR_CLASSES = { learners: 1000, lessons_done: 100, cases_done: 100 };
 
 export async function publicStats(env, now = Date.now()) {
   const r = await env.DB.prepare(`SELECT
