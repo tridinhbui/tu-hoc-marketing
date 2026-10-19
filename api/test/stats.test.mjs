@@ -69,8 +69,8 @@ test('/api/stats: chỉ trả số đếm (ba trường cũ giữ nguyên + tổ
   assert.ok(!r.headers.get('set-cookie'));
 });
 
-test('/api/stats: số lớp trước là hằng số cố định, đúng như chủ dự án xác nhận (1.000 học viên, 100 lượt bài, 100 lượt case)', () => {
-  assert.deepEqual(PRIOR_CLASSES, { learners: 1000, lessons_done: 100, cases_done: 100 });
+test('/api/stats: số lớp trước là hằng số cố định, đúng như chủ dự án xác nhận (300 học viên, 100 lượt bài, 70 lượt case)', () => {
+  assert.deepEqual(PRIOR_CLASSES, { learners: 300, lessons_done: 100, cases_done: 70 });
 });
 
 test('/api/stats: cases_done đếm lượt giải case (người × case), bỏ tài khoản hệ thống và nguồn XP khác', async () => {
