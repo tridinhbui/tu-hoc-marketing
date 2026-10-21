@@ -140,9 +140,25 @@ button{font-family:inherit}
 .sbc h3{font:500 1.15rem 'Fraunces',serif;text-transform:none;letter-spacing:0}
 .big h3{font:800 11.5px var(--sans);text-transform:uppercase;letter-spacing:.1em}
 .pv-side .card:nth-child(3){background:linear-gradient(160deg,#fde9de,#fbe1d3)}
-.pv-side .card:nth-child(3)::after{content:"“Not to answer perfectly — to speak a little clearer every day.”";display:block;margin-top:14px;font:600 20px/1.25 'Hand VN',cursive;color:#7a5a45}
-.pv-main .h:first-of-type::after{content:"Pick the role closest to your goal!";margin-left:14px;font:600 19px 'Hand VN',cursive;color:#B8502D;transform:rotate(-2deg);display:inline-block}
 @media(max-width:700px){.pv-main .h:first-of-type::after{display:none}}
+.pv-intro h2{margin:6px 0 6px;font:400 clamp(1.6rem,2.6vw,2.2rem)/1.15 'Fraunces',serif;letter-spacing:-.02em}
+.pv-intro h2 em{color:var(--pv-acc)}
+.pv-intro p{margin:0;max-width:62ch;font-size:15px;line-height:1.6;color:var(--pv-ink2)}
+.pv-n{display:inline-grid;place-items:center;width:28px;height:28px;margin-right:10px;border-radius:50%;background:var(--pv-acc);color:#fff;font:700 13px/1 var(--sans,system-ui);vertical-align:2px}
+.pv-go{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 20px;align-items:center}
+.pv-go__t small{display:block;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--pv-acc)}
+.pv-go__t b{display:block;margin:4px 0 2px;font:500 1.25rem/1.25 'Fraunces',serif}
+.pv-go__t span{font-size:13.5px;color:var(--pv-ink2)}
+.pv-go .go{padding:15px 28px;font-size:14px}
+.pv-pre{grid-column:1/-1;border-top:1px solid var(--pv-line);padding-top:12px}
+.pv-pre summary{cursor:pointer;font-weight:700;font-size:14px;color:var(--pv-acc);list-style:none}
+.pv-pre summary::-webkit-details-marker{display:none}
+.pv-pre summary::after{content:" ▾"}.pv-pre[open] summary::after{content:" ▴"}
+.pv-pre .preview{margin-top:12px;background:none;padding:0;border:0;box-shadow:none}
+.tracks{grid-template-columns:repeat(auto-fill,minmax(165px,1fr))}
+.track{min-height:84px}
+.pv-lab{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-acc)}
+@media (max-width:640px){.pv-chip:not([id]){display:none}.pv-go{grid-template-columns:1fr}.pv-go .go{width:100%}.modes{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="assets/css/paper.css?v=12">
 <link rel="stylesheet" href="assets/css/atelier.css?v=27z1">
@@ -189,63 +205,65 @@ function aiState(){
 
 function sideHTML(){
   const st=stats(), total=TRACKS.length, pct=Math.round(st.tried/total*100), h=hist().slice(0,4);
+  const tips=`<div class="card sbc"><h3>Luyện sao cho có ích</h3>
+      <p style="margin:0;font-size:13.5px;line-height:1.6;color:var(--pv-ink2)">Nói con số ngay câu đầu, nêu một việc cụ thể sẽ làm, và đừng đọc đáp án mẫu trước khi trả lời. Bị hỏi vặn không phải là sai: đó là chỗ để lộ ra điểm cần luyện.</p></div>`;
+  /* Chưa luyện buổi nào: không hiện một loạt số 0 và "--", chỉ để lại mẹo */
+  if(!st.sessions) return tips;
   return `<div class="card big sbc"><h3>Tiến độ của bạn</h3>
       <span class="lv" style="--p:${pct}"><span>${st.sessions} buổi</span></span>
       <p>${st.tried}/${total} vị trí đã thử</p>
       <div class="stats"><div><small>Câu đã trả lời</small><b>${st.answered}</b></div>
         <div><small>Không bị hỏi vặn</small><b>${st.clean===null?'--':st.clean+'%'}</b></div>
         <div><small>Lần gần nhất</small><b style="font-size:13px">${st.last?escH(st.last.at.slice(5).split('-').reverse().join('/')):'--'}</b></div></div></div>
-    <div class="card sbc"><h3>Buổi gần đây</h3>${h.length?`<ul class="hist">${h.map(x=>`<li><b>${escH(AI_LABEL[x.track]||x.track)}</b><span>${x.mode==='ai'?'AI':'Kịch bản'} · ${x.answered||0} câu</span></li>`).join('')}</ul>`
-      :'<p style="margin:0;font-size:13.5px;color:var(--pv-ink2)">Chưa có buổi nào. Chọn một vị trí rồi bắt đầu — buổi đầu chỉ mất vài phút.</p>'}</div>
-    <div class="card sbc"><h3>Luyện sao cho có ích</h3>
-      <p style="margin:0;font-size:13.5px;line-height:1.6;color:var(--pv-ink2)">Nói con số ngay câu đầu, nêu một việc cụ thể sẽ làm, và đừng đọc đáp án mẫu trước khi trả lời. Bị hỏi vặn không phải là sai — đó là chỗ để lộ ra điểm cần luyện.</p></div>`;
+    <div class="card sbc"><h3>Buổi gần đây</h3><ul class="hist">${h.map(x=>`<li><b>${escH(AI_LABEL[x.track]||x.track)}</b><span>${x.mode==='ai'?'AI':'Kịch bản'} · ${x.answered||0} câu</span></li>`).join('')}</ul></div>
+    ${tips}`;
 }
 
 async function home(){
   await checkAI();
   const tr=TRACKS.find(t=>t.k===sel.track), a=aiState(), done=hist().filter(x=>x.track===sel.track).length;
   const aiOn=sel.mode==='ai'&&a.ok;
+  /* Một luồng từ trên xuống: chọn vị trí → chọn cách luyện → (xem trước, gập sẵn) → một nút Bắt đầu.
+     Trước đây: thẻ chế độ đặt trên cùng, hero có hình phễu và nút riêng, dải 4 bước lặp lại các mục đánh số. */
   app.innerHTML=`
   <header class="pv-top"><div class="pv-top__in"><a class="back" href="hoc.html" aria-label="Về trang học">${ico.back}</a><h1>Luyện phỏng vấn</h1>
     <span class="pv-chip">Không chấm điểm · tự so đáp án mẫu</span></div></header>
   <div class="pv"><div class="pv-main">
-    <div class="modes" role="group" aria-label="Chế độ luyện">
-      <button type="button" class="mode" data-mode="script" aria-pressed="${sel.mode==='script'}"><b>Theo kịch bản</b><span>Có số liệu, hỏi vặn khi thiếu số, chạy ngay trong trình duyệt</span></button>
-      <button type="button" class="mode" data-mode="ai" aria-pressed="${sel.mode==='ai'}"><b>Với người phỏng vấn AI</b><span>${a.ok?'Hỏi tự do, tối đa 6 lượt trả lời':'Cần đăng nhập và AI được bật'}</span></button>
-    </div>
-
-    <section class="card hero">
-      <div><span class="hero__tag">${ico.brief} Lộ trình phỏng vấn</span>
-        <h2>${aiOn?'Phỏng vấn AI':'Luyện phỏng vấn'}<br><em>${escH(tr.t)}</em></h2>
-        <p>${aiOn?'AI đưa một tình huống có số, hỏi vặn khi bạn thiếu số hoặc mơ hồ, và đưa dàn ý trả lời mẫu cuối buổi.':'Tình huống có số, '+tr.n+' câu hỏi nối tiếp, hỏi vặn khi bạn thiếu số hoặc thiếu ý, cuối buổi có đáp án mẫu để tự so.'}</p>
-        <p style="margin-top:10px;font-size:13px;color:var(--pv-ink3)">${done?`Bạn đã luyện vị trí này ${done} lần.`:'Bạn chưa luyện vị trí này.'}</p></div>
-      <div class="hero__art" style="background-image:url(assets/img/art-funnel.svg)">
-        <button type="button" class="go go--dark" id="start" ${sel.mode==='ai'&&!a.ok?'disabled':''}>Bắt đầu luyện</button></div>
+    <section class="pv-intro">
+      <h2>Luyện trả lời phỏng vấn marketing <em>như ngoài đời</em></h2>
+      <p>Một tình huống có số, vài câu hỏi nối tiếp. Bạn thiếu số hoặc thiếu ý thì bị hỏi vặn; cuối buổi có đáp án mẫu để tự so.</p>
     </section>
-    ${sel.mode==='ai'&&!a.ok?`<p class="note">${escH(a.why)} <a href="#" id="toScript" style="color:var(--pv-acc);font-weight:700">Chuyển sang kịch bản</a></p>`
-      :sel.mode==='ai'?`<p class="note">${escH(a.why)}</p>`:''}
 
-    <section class="card"><div class="stepper">
-      <div data-ok><span class="n">01</span><span><b>Chọn vị trí</b><small>Định hướng đúng</small></span></div>
-      <div data-ok><span class="n">02</span><span><b>Chọn chế độ</b><small>Kịch bản hoặc AI</small></span></div>
-      <div data-on><span class="n">03</span><span><b>Xem trước</b><small>Tình huống và câu hỏi</small></span></div>
-      <div><span class="n">04</span><span><b>Bắt đầu</b><small>Trả lời, rồi tự so</small></span></div>
-    </div></section>
-
-    <section><h2 class="h">1. Chọn vị trí phỏng vấn</h2>
+    <section><h2 class="h"><span class="pv-n">1</span>Chọn vị trí</h2>
       <div class="tracks">${TRACKS.map(t=>`<button type="button" class="track" data-track="${t.k}" aria-pressed="${t.k===sel.track}">
-        ${ico.brief}<b>${escH(t.t)}</b><small>${t.n} câu · ${hist().filter(x=>x.track===t.k).length} buổi đã luyện</small></button>`).join('')}</div></section>
+        ${ico.brief}<b>${escH(t.t)}</b><small>${t.n} câu${hist().filter(x=>x.track===t.k).length?' · '+hist().filter(x=>x.track===t.k).length+' buổi đã luyện':''}</small></button>`).join('')}</div></section>
 
-    <section><h2 class="h">2. Xem trước buổi luyện</h2>
-      <div class="card preview">
-        <div><b style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-acc)">Tình huống</b><p>${escH(tr.intro)}</p></div>
-        ${sel.mode==='script'?`<div><b style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--pv-acc)">Bạn sẽ được hỏi</b>
-          <ol>${tr.steps.map(s=>`<li>${escH(s.ask)}</li>`).join('')}</ol></div>`
-          :'<p style="color:var(--pv-ink2);font-size:14px">Với AI, câu hỏi được tạo theo câu trả lời của bạn nên không xem trước được.</p>'}
-        <div class="rules"><div><b>Hỏi vặn</b>Thiếu con số hoặc thiếu ý, người phỏng vấn sẽ hỏi lại một lần.</div>
-          <div><b>Không chấm điểm</b>Cuối buổi bạn nhận đáp án mẫu để tự đối chiếu.</div>
-          <div><b>Kết thúc bất kỳ lúc nào</b>Bấm kết thúc để xem đáp án mẫu ngay.</div></div>
-      </div></section>
+    <section><h2 class="h"><span class="pv-n">2</span>Chọn cách luyện</h2>
+      <div class="modes" role="group" aria-label="Chế độ luyện">
+        <button type="button" class="mode" data-mode="script" aria-pressed="${sel.mode==='script'}"><b>Theo kịch bản</b><span>Câu hỏi có sẵn, chạy ngay, xem trước được</span></button>
+        <button type="button" class="mode" data-mode="ai" aria-pressed="${sel.mode==='ai'}"><b>Với người phỏng vấn AI</b><span>${a.ok?'Hỏi tự do theo câu trả lời của bạn, tối đa 6 lượt':'Cần đăng nhập và AI được bật'}</span></button>
+      </div>
+      ${sel.mode==='ai'&&!a.ok?`<p class="note">${escH(a.why)} <a href="#" id="toScript" style="color:var(--pv-acc);font-weight:700">Chuyển sang kịch bản</a></p>`
+        :sel.mode==='ai'?`<p class="note">${escH(a.why)}</p>`:''}
+    </section>
+
+    <section class="card pv-go">
+      <div class="pv-go__t"><small>Buổi luyện của bạn</small>
+        <b>${escH(tr.t)} · ${aiOn?'Phỏng vấn AI':'Theo kịch bản ('+tr.n+' câu)'}</b>
+        <span>${done?`Bạn đã luyện vị trí này ${done} lần.`:'Khoảng 5–10 phút. Kết thúc lúc nào cũng được.'}</span></div>
+      <button type="button" class="go go--dark" id="start" ${sel.mode==='ai'&&!a.ok?'disabled':''}>Bắt đầu luyện</button>
+      <details class="pv-pre">
+        <summary>Xem trước tình huống${sel.mode==='script'?' và câu hỏi':''}</summary>
+        <div class="preview">
+          <div><b class="pv-lab">Tình huống</b><p>${escH(tr.intro)}</p></div>
+          ${sel.mode==='script'?`<div><b class="pv-lab">Bạn sẽ được hỏi</b><ol>${tr.steps.map(s=>`<li>${escH(s.ask)}</li>`).join('')}</ol></div>`
+            :'<p style="color:var(--pv-ink2);font-size:14px">Với AI, câu hỏi được tạo theo câu trả lời của bạn nên không xem trước được.</p>'}
+          <div class="rules"><div><b>Hỏi vặn</b>Thiếu con số hoặc thiếu ý, người phỏng vấn sẽ hỏi lại một lần.</div>
+            <div><b>Không chấm điểm</b>Cuối buổi bạn nhận đáp án mẫu để tự đối chiếu.</div>
+            <div><b>Kết thúc bất kỳ lúc nào</b>Bấm kết thúc để xem đáp án mẫu ngay.</div></div>
+        </div>
+      </details>
+    </section>
   </div>
   <aside class="pv-side">${sideHTML()}</aside></div>`;
   app.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{ sel.mode=b.dataset.mode; home(); });
