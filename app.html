@@ -226,18 +226,17 @@ const TOP = [
   ['MarSocial', 'cong-dong.html', 'chat', ['cong-dong.html']],
 ];
 const GROUPS = [
+  /* Mỗi nhóm 2–3 mục. Mục nào gom nhiều trang thì trỏ tới một trang chọn lối vào (lo-trinh, kho-case, thu-thach, lab-mo-phong):
+     người học chọn trước rồi mới vào trang chi tiết. Danh sách tệp ở cột thứ tư giữ cho mục sáng đúng khi đang ở trang con. */
   { t: 'Học tập', ic: 'sprout', box: true, items: [
-    ['Bắt đầu từ đâu', 'bat-dau.html', 'compass', ['bat-dau.html', 'xep-lop.html']],
-    ['Học bài', 'hoc-bai.html', 'book', ['hoc-bai.html', 'bai.html', 'lesson.html', 'principle.html', 'library.html', 'case-thu-vien.html', 'giai-case.html', 'gallery.html', 'campaign.html', 'brand.html', 'xray.html', 'thuat-ngu.html', 'on-loi.html']],
-    ['Học theo nghề', 'ban-do.html', 'route', ['ban-do.html', 'roadmap.html', 'nang-luc.html', 'capstone.html', 'positioning.html', 'segmentation.html', 'pricing.html']],
+    ['Lộ trình học', 'lo-trinh.html', 'compass', ['lo-trinh.html', 'bat-dau.html', 'xep-lop.html', 'ban-do.html', 'roadmap.html', 'nang-luc.html', 'capstone.html', 'positioning.html', 'segmentation.html', 'pricing.html']],
+    ['Học bài', 'hoc-bai.html', 'book', ['hoc-bai.html', 'bai.html', 'lesson.html', 'principle.html', 'library.html', 'thuat-ngu.html', 'on-loi.html']],
+    ['Thư viện case', 'kho-case.html', 'route', ['kho-case.html', 'gallery.html', 'campaign.html', 'brand.html', 'xray.html', 'case-thu-vien.html', 'giai-case.html']],
   ] },
   { t: 'Thực hành', ic: 'flask', items: [
-    ['Phòng thử thách', 'quiz.html', 'cap', ['quiz.html', 'challenge.html', 'luyen.html'], 'new'],
-    ['Thi vượt chặng', 'thi.html', 'trophy', ['thi.html']],
-    ['Game Kingdom', 'kingdom.html', 'game', ['kingdom.html', 'tro-choi.html', 'game-ngan-sach.html', 'game-chon-tep.html', 'game-phieu-ro.html', 'game-ban-do-dinh-vi.html', 'game-ke-chuyen.html', 'game-chan-doan.html', 'game-lich-noi-dung.html', 'game-doc-studio.html', 'game-khung-hoang.html', 'boss.html', 'pvp.html', 'shop.html'], 'hot'],
+    ['Quiz & Thử thách', 'thu-thach.html', 'cap', ['thu-thach.html', 'quiz.html', 'challenge.html', 'luyen.html', 'thi.html', 'kingdom.html', 'tro-choi.html', 'game-ngan-sach.html', 'game-chon-tep.html', 'game-phieu-ro.html', 'game-ban-do-dinh-vi.html', 'game-ke-chuyen.html', 'game-chan-doan.html', 'game-lich-noi-dung.html', 'game-doc-studio.html', 'game-khung-hoang.html', 'boss.html', 'pvp.html']],
+    ['Lab & Mô phỏng', 'lab-mo-phong.html', 'chart', ['lab-mo-phong.html', 'lab.html', 'lab-meta.html', 'lab-gads.html', 'lab-ga4.html', 'lab-seo.html', 'lab-chien-luoc.html', 'unit-economics.html']],
     ['Luyện phỏng vấn', 'phong-van.html', 'brief', ['phong-van.html', 'interview.html']],
-    ['Marketing Lab', 'lab.html', 'chart', ['lab.html', 'lab-meta.html'], 'new'],
-    ['Mô phỏng công cụ', 'unit-economics.html', 'term', ['unit-economics.html']],
   ] },
   { t: 'Cộng đồng', ic: 'users', items: [
     ['Thế giới & tạp chí', 'world.html', 'compass', ['world.html', 'tap-chi.html', 'timeline.html', 'collections.html', 'taste.html', 'gioi-thieu.html']],
@@ -392,6 +391,10 @@ loadInto(target());
     'shop.html': 'Xu kiếm từ học tập. Thẻ đóng băng chuỗi là món đáng mua đầu tiên.',
     'phong-van.html': 'Chọn vị trí, xem trước tình huống rồi trả lời. Nhớ nói con số ngay câu đầu nhé.',
     'cong-dong.html': 'MarSocial: chia sẻ phân tích chiến dịch hoặc đặt câu hỏi. Đừng quên bình chọn thăm dò hôm nay.',
+    'lo-trinh.html': 'Chọn lối vào: đi đủ từ số 0, hay đi đúng chuỗi bài của một nghề. Đổi lúc nào cũng được.',
+    'kho-case.html': 'Đọc case thật trước để thấy cách người làm nghề nghĩ, rồi tự giải case có bấm giờ.',
+    'thu-thach.html': 'Luyện quiz để kiểm tra mình, thi vượt chặng để mở chặng mới, hoặc vào Game Kingdom.',
+    'lab-mo-phong.html': 'Dữ liệu ở đây là giả lập: cứ thử, sai rồi sửa.',
     'thong-ke.html': 'Đây là nhịp học của bạn: streak, 8 tuần gần nhất và bảng vinh danh.',
     'tai-khoan.html': 'Hồ sơ của bạn: đổi tên hiển thị và mời bạn bè học cùng để nhận thêm XP.',
     'case-thu-vien.html': 'Mỗi case có bấm giờ. Chọn hỏi đúng dữ liệu cần thiết, hỏi thừa sẽ mất giờ.',
