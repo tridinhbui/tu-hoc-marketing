@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="stylesheet" href="assets/css/case.css?v=21f6">
+<link rel="stylesheet" href="assets/css/hub.css?v=2">
+<title>Lab & Mô phỏng — Tự Học Marketing Case</title>
+<meta name="description" content="Thực hành công cụ marketing với dữ liệu giả lập: Marketing Lab, Xưởng chiến lược và mô phỏng kinh tế đơn vị.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main id="app"></main>
+<script src="assets/js/data/lessons.js?v=8"></script>
+<script src="assets/js/data/principles.js?v=8"></script>
+<script src="assets/js/data/curriculum.js?v=4"></script>
+<script src="assets/js/data/bai-index.js?v=11"></script>
+<script src="assets/js/data/drills.js?v=3"></script>
+<script src="assets/js/data/cases.js?v=7"></script>
+<script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/hub.js?v=2"></script>
+<script>
+appShell('lab-mo-phong.html');
+const A=Hub.art;
+Hub.render({ key:'lab', kicker:'Lab & Mô phỏng',
+  title:'Luyện công cụ quảng cáo, hay <em>lập một chiến lược</em> từ đầu?',
+  sub:'Dữ liệu đều là giả lập, nên cứ thử, sai và sửa. Sai ở đây rẻ hơn sai bằng tiền thật.',
+  cards:[
+    { id:'lab', href:'lab.html', title:'Marketing Lab', cta:'Vào Marketing Lab',
+      desc:'Mô phỏng SEO, Meta Ads, Google Ads và GA4 trên cùng một thương hiệu. Ra quyết định, chạy thử, đọc chỉ số.',
+      art:A.chips(['SEO','Meta Ads','Google Ads','GA4'],1)+'<div style="height:12px"></div>'+A.kpis([['ROAS','3,4','+0,6'],['CPA','86.000đ',''],['CTR','1,8%','+0,3']]) },
+    { id:'xuong', href:'lab-chien-luoc.html', title:'Xưởng chiến lược', cta:'Vào Xưởng chiến lược',
+      desc:'Đi từ nghiên cứu khách hàng tới định vị, thông điệp, kênh, ngân sách và cách đo. Có nhiều hướng đúng, không một đáp án.',
+      art:A.chips(['1 Nghiên cứu','2 Khách & định vị','3 Thông điệp','4 Kênh & ngân sách','5 KPI','6 Thí nghiệm','7 Đọc kết quả'],1) },
+    { id:'mo-phong', href:'unit-economics.html', title:'Mô phỏng công cụ', cta:'Mở mô phỏng',
+      desc:'Nhập giả định về phễu và giá trị vòng đời, trang tính ra mức chi phí có khách (CAC) mà vượt quá thì kế hoạch lỗ.',
+      art:A.formula('Phễu → LTV → <em>CAC hoà vốn</em><br>LTV = giá trị đơn × biên × số lần mua<br>CAC vượt LTV thì mỗi khách mới làm bạn lỗ') },
+  ]});
+</script>
+</body>
+</html>

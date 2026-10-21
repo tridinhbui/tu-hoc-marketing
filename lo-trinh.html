@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="stylesheet" href="assets/css/case.css?v=21f6">
+<link rel="stylesheet" href="assets/css/hub.css?v=2">
+<title>Lộ trình học — Tự Học Marketing Case</title>
+<meta name="description" content="Chọn cách học: đi đủ chương trình từ số 0, hoặc đi đúng chuỗi bài của một nghề marketing.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main id="app"></main>
+<script src="assets/js/data/lessons.js?v=8"></script>
+<script src="assets/js/data/principles.js?v=8"></script>
+<script src="assets/js/data/curriculum.js?v=4"></script>
+<script src="assets/js/data/bai-index.js?v=11"></script>
+<script src="assets/js/data/drills.js?v=3"></script>
+<script src="assets/js/data/cases.js?v=7"></script>
+<script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/hub.js?v=2"></script>
+<script>
+appShell('lo-trinh.html');
+const A=Hub.art, stages=(typeof STAGES!=='undefined'?STAGES:[]), nLessons=stages.reduce((a,s)=>a+s.mods.reduce((b,m)=>b+m.lessons.length,0),0);
+const careers=(typeof PATHS!=='undefined'?PATHS:[]).filter(p=>p.id!=='full');
+Hub.render({ key:'lo-trinh', kicker:'Lộ trình học',
+  title:'Học theo lộ trình chung từ số 0, hay đi thẳng vào <em>nghề bạn nhắm tới?</em>',
+  sub:'Hai lối vào cùng một kho bài. Đổi lối lúc nào cũng được, tiến độ vẫn giữ nguyên.',
+  cards:[
+    { id:'full', href:'bat-dau.html', title:'Bắt đầu từ đầu', cta:'Vào Bắt đầu từ đầu',
+      desc:'Đi đủ '+stages.length+' chặng theo thứ tự, mỗi bài khoảng 6 phút. Hợp với người mới chưa biết marketing.',
+      meta:nLessons+' bài · '+stages.length+' chặng', alt:['Đã biết một phần? Làm bài xếp lớp →','xep-lop.html'],
+      art:A.path(stages.map(s=>s.t),0,['Chương trình đầy đủ','Theo nhịp của bạn']) },
+    { id:'nghe', href:'ban-do.html', title:'Học theo nghề', cta:'Vào Học theo nghề',
+      desc:'Chọn một vùng nghề như Brand, Performance hay Content, rồi đi đúng chuỗi bài nghề đó cần.',
+      meta:careers.length+' vùng nghề · nhiệm vụ ưu tiên theo khoảng cách kỹ năng',
+      art:A.career(careers.slice(0,6).map(p=>p.t),3) },
+  ]});
+</script>
+</body>
+</html>
