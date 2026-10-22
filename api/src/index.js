@@ -96,9 +96,11 @@ async function route(request, env, url) {
   if (p === '/api/community/summary' && m === 'GET') return cm.communitySummary(request, env);
   if (p === '/api/posts' && m === 'GET') return cm.listPosts(request, env);
   if (p === '/api/posts' && m === 'POST') return cm.createPost(request, env);
-  if ((mm = p.match(/^\/api\/posts\/([0-9a-f-]{36})$/)) && m === 'GET') return cm.getPost(request, env, mm[1]);
-  if ((mm = p.match(/^\/api\/posts\/([0-9a-f-]{36})\/comments$/)) && m === 'POST') return cm.createComment(request, env, mm[1]);
-  if ((mm = p.match(/^\/api\/posts\/([0-9a-f-]{36})\/like$/)) && m === 'POST') return cm.toggleLike(request, env, mm[1]);
+  /* id bài: uuid (rid) hoặc id bài mẫu 'seed-0000-…' (migration 0006). Trước đây chỉ nhận hex 36 ký tự nên mở/tim/bình luận
+     vào bài mẫu đều 404 ("Không tìm thấy bài này"). Id luôn đi qua bind, không ghép chuỗi SQL. */
+  if ((mm = p.match(/^\/api\/posts\/([a-z0-9-]{8,40})$/)) && m === 'GET') return cm.getPost(request, env, mm[1]);
+  if ((mm = p.match(/^\/api\/posts\/([a-z0-9-]{8,40})\/comments$/)) && m === 'POST') return cm.createComment(request, env, mm[1]);
+  if ((mm = p.match(/^\/api\/posts\/([a-z0-9-]{8,40})\/like$/)) && m === 'POST') return cm.toggleLike(request, env, mm[1]);
   if (p === '/api/report' && m === 'POST') return cm.report(request, env);
   if (p === '/api/admin/queue' && m === 'GET') return cm.adminQueue(request, env);
   if (p === '/api/admin/moderate' && m === 'POST') return cm.moderate(request, env);
