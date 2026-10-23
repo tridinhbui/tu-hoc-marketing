@@ -108,7 +108,7 @@ async function reveal(it, given){
   app.querySelectorAll('.opt,#check').forEach(b => b.disabled = true);
   let g;
   try { g = await gradeAsync(it, given, 'practice'); }
-  catch (e) { app.querySelectorAll('.opt,#check').forEach(b => b.disabled = false); fb.innerHTML = `<p class="small bad" style="margin-top:14px">${GRADE_OFFLINE}</p>`; return; }
+  catch (e) { app.querySelectorAll('.opt,#check').forEach(b => b.disabled = false); fb.innerHTML = `<p class="small bad" style="margin-top:14px">${escH(gradeErrorMsg(e))}</p>`; return; }
   marks[idx] = { it, given, ...g };
   if (it.type === 'calc') {
     document.getElementById('num').disabled = true; document.getElementById('check').remove();
