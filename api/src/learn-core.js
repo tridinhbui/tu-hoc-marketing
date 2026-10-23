@@ -4,10 +4,29 @@
 const DAY_MS = 864e5;
 
 /* ---------- chấm một câu ---------- */
+/* Đọc số người học gõ, theo cách viết Việt Nam: "20", "20%", "20 %", "12,5", "1.200.000", "200.000đ", "57,14 nghìn".
+   Bỏ ký hiệu và chữ đơn vị; dấu chấm là hàng nghìn, dấu phẩy là thập phân (có cả hai thì dấu xuất hiện sau là thập phân).
+   Trước đây server dùng Number() nên "20%" thành NaN → 400 invalid_answer, và trình duyệt báo nhầm là "cần kết nối máy chủ";
+   "1.200.000" thì bị đọc thành 1,2. Hàm này có bản giống hệt ở assets/js/exam.js (trình duyệt) — sửa thì sửa cả hai. */
+export function parseNum(v) {
+  let t = String(v ?? '').toLowerCase().replace(/[\s\u00a0]/g, '').replace(/[^0-9.,-]/g, '');
+  if (!/[0-9]/.test(t)) return NaN;
+  const neg = t.startsWith('-'); t = t.replace(/-/g, '');
+  const dots = (t.match(/\./g) || []).length, commas = (t.match(/,/g) || []).length;
+  if (dots && commas) { const dec = t.lastIndexOf('.') > t.lastIndexOf(',') ? '.' : ','; const th = dec === '.' ? ',' : '.';
+    t = t.split(th).join('').replace(dec, '.'); }
+  else if (dots > 1) t = t.split('.').join('');
+  else if (commas > 1) t = t.split(',').join('');
+  else if (dots === 1 && /^[1-9]\d{0,2}\.\d{3}$/.test(t)) t = t.replace('.', '');
+  else if (commas === 1) t = t.replace(',', '.');
+  const n = Number(t);
+  return Number.isFinite(n) ? (neg ? -n : n) : NaN;
+}
+
 export function gradeItem(item, chosen) {
   if (!item) return null;
   if (item.type === 'calc') {
-    const n = Number(String(chosen ?? '').replace(',', '.'));
+    const n = parseNum(chosen);
     if (!Number.isFinite(n)) return { correct: false, invalid: true };
     /* tol là dung sai TUYỆT ĐỐI theo đơn vị của đáp án (cách nội dung được viết: ans 7200 · tol 1, ans 30 · tol 0.1). */
     const tol = Math.max(Number(item.tol ?? 0.01), 1e-9);

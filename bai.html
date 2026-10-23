@@ -296,7 +296,7 @@ async function reveal(id,it,given,{showWhy=true,context='practice',pre=null}={})
   let g;
   try{ g=pre||await gradeAsync(it,given,context); }
   catch(e){ box.querySelectorAll('input,button').forEach(x=>x.disabled=false);
-    fb.innerHTML=`<p class="small bad" style="margin-top:8px">${GRADE_OFFLINE}</p>`; return null; }
+    fb.innerHTML=`<p class="small bad" style="margin-top:8px">${escH(gradeErrorMsg(e))}</p>`; return null; }
   if(it.type==='calc'){
     fb.innerHTML=`<div class="verdict" data-v="${g.ok?'ok':'bad'}" style="margin-top:10px"><b>${g.ok?'Đúng.':'Chưa đúng.'}</b>${g.ans!==undefined?` Đáp án: <b>${fmt(g.ans)} ${escH(g.unit||'')}</b>`:''}
       ${!g.ok&&g.err?`<br><span class="small">Lỗi hay gặp: ${escH(ERRORS[g.err]||g.err)}</span>`:''}
@@ -723,6 +723,10 @@ function wireQuestions(){
   app.querySelectorAll('.opt[data-q]').forEach(b=>b.onclick=()=>answer(b.dataset.q,b.dataset.k));
   app.querySelectorAll('form.answer[data-q]').forEach(f=>f.onsubmit=e=>{ e.preventDefault();
     const v=f.querySelector('input').value.trim(); if(!v) return;
+    /* Câu số: không phải số thì báo ngay tại câu, không gửi lên máy chủ */
+    const fb=document.getElementById(f.dataset.q)?.querySelector('.fb');
+    if(!Number.isFinite(parseNum(v))){ if(fb) fb.innerHTML='<p class="small bad" style="margin-top:8px">Hãy nhập một con số, ví dụ 20 hoặc 12,5 (có thể kèm % hoặc đ).</p>'; f.querySelector('input').focus(); return; }
+    if(fb&&!fb.querySelector('.verdict')) fb.innerHTML='';
     if(f.dataset.q.startsWith('qz')&&firstTry()){ ANS[f.dataset.q]=v; f.querySelector('input').style.borderColor='var(--ink)'; QS_pick(f.dataset.q);
       const sb=document.getElementById('qSubmit'); if(sb) sb.disabled=Object.keys(ANS).length<PLAN.quiz.length; return; }
     answer(f.dataset.q,v); });
@@ -737,7 +741,7 @@ function wireQuestions(){
        không ghi điểm, không ghi lỗi nửa chừng, không hiện lời giải nửa chừng. */
     const grades=[];
     try{ for(let i=0;i<PLAN.quiz.length;i++) grades[i]=await gradeAsync(PLAN.quiz[i],ANS['qz'+i],'lesson'); }
-    catch(e){ sb.disabled=false; sb.textContent='Nộp lại'; toast(GRADE_OFFLINE); return; }
+    catch(e){ sb.disabled=false; sb.textContent='Nộp lại'; toast(gradeErrorMsg(e)); return; }
     for(let i=0;i<PLAN.quiz.length;i++){ const it=PLAN.quiz[i], g=await reveal('qz'+i,it,ANS['qz'+i],{context:'lesson',pre:grades[i]});
       if(!g){ sb.disabled=false; sb.textContent='Nộp lại'; toast(GRADE_OFFLINE); return; }
       if(g.ok) right++; else wrong.push(it); logMiss(it,g); QS_result('qz'+i,g.ok); }
