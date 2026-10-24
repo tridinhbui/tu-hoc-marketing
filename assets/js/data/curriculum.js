@@ -50,6 +50,11 @@ const STAGES = [
       { id:'s6m1', t:'Brand audit', lessons:[], caseLink:{t:'Bàn làm việc: brand audit', href:'brand-audit.html'} },
       { id:'s6m2', t:'Thư viện case', lessons:[], caseLink:{t:'Toàn bộ case trong thư viện', href:'gallery.html'} },
     ]},
+  /* Chặng chuyên đề: luôn mở, không có đề thi chặng, không chặn và không bị chặn bởi chặng khác.
+     Module của chuyên đề có step 'ads' (bai-index.js) và tự ghép vào đây. Trang khoá: quang-cao.html. */
+  { id:'s7', n:'07', t:'Chuyên đề: Quảng cáo đa nền tảng', elective:true, href:'quang-cao.html',
+    q:'Từ chưa mở trình quản lý quảng cáo tới tự lập kế hoạch, dựng, đo và tối ưu một chiến dịch thật.',
+    mods:[]},
 ];
 
 /* Nhóm người học chọn khi bắt đầu. Mỗi nhóm được gợi ý một lộ trình; đổi lúc nào cũng được. */
@@ -79,6 +84,8 @@ const PATHS = [
     lessons:['P:segmentation','P:targeting','P:jobs-to-be-done','P:consumer-insight','L:64','P:positioning','L:55','P:category-entry-point','P:pricing','L:63','L:66','P:funnel'] },
   { id:'owner', t:'Marketing cho business của mình', d:'Ít tiền, cần ra đơn: khách là ai, có mặt ở đâu, bán giá nào, giữ khách ra sao.',
     lessons:['L:53','L:57','P:jobs-to-be-done','P:physical-availability','P:social-proof','P:funnel','P:conversion','P:cac','P:retention','P:pricing','L:63','L:59'] },
+  { id:'ads', t:'Chạy quảng cáo đa nền tảng', d:'Meta, Google, YouTube, TikTok, Zalo, Shopee/Lazada: lập kế hoạch, dựng, đo và tối ưu một chiến dịch thật.',
+    lessons:[] },
 ];
 
 /* MỤC TIÊU NGHỀ — câu hỏi đầu tiên khi vào app. `need` là mức kỹ năng (%) một người làm tốt vị trí đó

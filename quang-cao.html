@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="preload" href="assets/fonts/jbmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/case.css?v=21f6">
+<title>Khoá Quảng cáo đa nền tảng — Tự Học Marketing</title>
+<meta name="description" content="Từ chưa mở trình quản lý quảng cáo tới tự lập kế hoạch, dựng, đo và tối ưu chiến dịch trên Meta, Google, YouTube, TikTok, Zalo, Shopee/Lazada và LinkedIn. 77 bài, 3 case xuyên suốt, capstone media plan.">
+<style>
+  .qc-hero{display:grid;gap:14px;max-width:70ch}
+  .qc-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--ink);margin-top:22px}
+  .qc-kpis div{padding:12px 12px 12px 0;border-bottom:var(--rule)}
+  .qc-kpis b{display:block;font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);line-height:1;font-variant-numeric:tabular-nums}
+  @media(max-width:640px){.qc-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .qc-part{margin-top:38px}
+  .qc-part>p{max-width:62ch}
+  .qc-mod{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:12px;align-items:baseline;border-bottom:var(--rule);padding:14px 0;text-decoration:none;color:inherit}
+  .qc-mod:hover{background:var(--ink-06)}
+  .qc-mod .n{font-family:var(--mono);font-size:12px;color:var(--ink-50)}
+  .qc-mod .t{font-weight:600}
+  .qc-bar{height:4px;background:var(--ink-06);border-radius:2px;margin-top:8px;max-width:240px}
+  .qc-bar i{display:block;height:100%;background:var(--terra,#C85A32);border-radius:2px}
+  .qc-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:16px}
+  @media(max-width:860px){.qc-cards{grid-template-columns:1fr}}
+  .qc-card{border-top:2px solid var(--ink);padding-top:12px;display:grid;gap:8px;align-content:start}
+  .qc-card a{font-weight:600}
+  .qc-std{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 24px;margin-top:12px;counter-reset:a}
+  @media(max-width:860px){.qc-std{grid-template-columns:1fr}}
+  .qc-std li{list-style:none;counter-increment:a;padding-left:28px;position:relative}
+  .qc-std li::before{content:counter(a);position:absolute;left:0;top:0;font-family:var(--mono);font-size:12px;color:var(--terra,#C85A32)}
+  .qc-tbl{overflow-x:auto;margin-top:12px}
+  .qc-tbl table{min-width:520px}
+  .qc-st{font-family:var(--mono);font-size:11px;white-space:nowrap}
+  .qc-st[data-s="doc"]{color:var(--ok)} .qc-st[data-s="tim"]{color:var(--gold,#9a6a12)} .qc-st[data-s="chua"]{color:var(--red,#b3261e)}
+  details.qc-d{border-bottom:var(--rule);padding:10px 0}
+  details.qc-d summary{cursor:pointer;font-weight:600}
+</style>
+<link rel="stylesheet" href="assets/css/paper.css?v=12">
+<link rel="stylesheet" href="assets/css/atelier.css?v=27z1">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Khoá học và tiến độ được dựng ngay trong trình duyệt của bạn và đồng bộ vào tài khoản khi đã đăng nhập.</p></div></noscript>
+<main class="wrap" id="app"></main>
+<script src="assets/js/data/lessons.js?v=8"></script>
+<script src="assets/js/data/principles.js?v=8"></script>
+<script src="assets/js/data/curriculum.js?v=5"></script>
+<script src="assets/js/data/bai-index.js?v=21"></script>
+<script src="assets/js/data/ads-course.js?v=1"></script>
+<script src="assets/js/data/ads-cases.js?v=1"></script>
+<script src="assets/js/app.js?v=22"></script>
+<script>
+appShell('quang-cao.html');
+const C = ADS_COURSE, ST = STAGES.find(s => s.id === 's7');
+const MODS = ST ? ST.mods : [];
+const modById = id => MODS.find(m => m.id === id);
+const stLabel = { doc:'đã đọc trang chính thức', tim:'cần mở lại để đối chiếu', chua:'chưa xác minh' };
+
+function render(){
+  const s = S.get(), all = MODS.flatMap(m => m.lessons), done = all.filter(k => s.done[k]).length;
+  const next = all.find(k => !s.done[k]) || all[0];
+  const nm = next && lessonMeta(next);
+  const casesDone = ADS_CASES.filter(c => (((s.flags || {}).ads || {}).cases || {})[c.id] && s.flags.ads.cases[c.id].pass).length;
+  const plan = ((s.flags || {}).ads || {}).plan;
+  const modRow = (id) => { const m = modById(id); if (!m) return '';
+    const d = m.lessons.filter(k => s.done[k]).length, n = m.lessons.length, first = m.lessons.find(k => !s.done[k]) || m.lessons[0];
+    return `<a class="qc-mod" href="bai.html?id=${encodeURIComponent(first)}">
+      <span class="n">${escH(id.toUpperCase())}</span>
+      <span><span class="t">${escH(m.t)}</span><span class="qc-bar"><i style="width:${n ? Math.round(d / n * 100) : 0}%"></i></span></span>
+      <span class="mono ${d ? '' : 'muted'}">${d}/${n} bài</span></a>`; };
+
+  document.getElementById('app').innerHTML = `
+  <section class="section qc-hero">
+    <span class="mono mono--red">Chặng chuyên đề · luôn mở</span>
+    <h1 class="h1">Chạy quảng cáo<br><em>đa nền tảng.</em></h1>
+    <p class="lede">Dành cho người chưa từng mở trình quản lý quảng cáo. Học xong, bạn tự đặt mục tiêu bằng con số, chọn kênh, chia tiền, dựng chiến dịch, đọc dashboard, tìm ra vì sao chiến dịch kém và quyết định làm gì tiếp.</p>
+    <p class="small muted">Mọi con số trong ví dụ và case là <b>giả định</b> để học, không phải benchmark hay lời hứa kết quả. Tên mục và chính sách theo trang chính thức kiểm ngày ${escH(C.checked.split('-').reverse().join('/'))}; nền tảng đổi thường xuyên, nên luôn đối chiếu với tài khoản của bạn.</p>
+    <div class="row" style="gap:10px;margin-top:6px">
+      ${nm ? `<a class="btn btn--primary" href="bai.html?id=${encodeURIComponent(next)}">${done ? 'Học tiếp' : 'Bắt đầu bài 1'}: ${escH(nm.t)}</a>` : ''}
+    </div>
+    <div class="qc-kpis">
+      <div><span class="mono">Bài học</span><b>${done}/${all.length}</b></div>
+      <div><span class="mono">Module</span><b>${MODS.length}</b></div>
+      <div><span class="mono">Case xuyên suốt</span><b>${casesDone}/${ADS_CASES.length}</b></div>
+      <div><span class="mono">Capstone</span><b>${plan && plan.ready ? 'Xong' : plan ? 'Nháp' : '—'}</b></div>
+    </div>
+  </section>
+
+  ${C.parts.map((p, i) => `<section class="qc-part">
+    <span class="mono">Phần ${i + 1}</span>
+    <h2 class="h2" style="margin:6px 0">${escH(p.t)}</h2>
+    <p class="muted">${escH(p.d)}</p>
+    ${i === 1 ? `<p class="small" style="margin-top:10px"><b>Chuẩn 6 phần của mỗi nền tảng</b></p><ol class="qc-std">${C.aspects.map(a => `<li>${escH(a.t)}</li>`).join('')}</ol>` : ''}
+    <div style="margin-top:12px;border-top:1px solid var(--ink)">${p.mods.map(modRow).join('')}</div>
+  </section>`).join('')}
+
+  <section class="qc-part">
+    <span class="mono">Phần 4</span>
+    <h2 class="h2" style="margin:6px 0">Làm như thật</h2>
+    <p class="muted">Ba doanh nghiệp giả định, mỗi case 7 bước: brief, chọn kênh, chia ngân sách, viết brief creative, đọc dashboard, chẩn đoán, quyết định. Sai ở đâu thì case chỉ về bài cần học lại.</p>
+    <div class="qc-cards">${ADS_CASES.map(c => { const r = ((((s.flags || {}).ads || {}).cases) || {})[c.id];
+      return `<div class="qc-card"><span class="tag">${escH(c.kind)}</span><a href="quang-cao-case.html?id=${c.id}">${escH(c.t)}</a>
+        <span class="small muted">${escH(c.lede)}</span>
+        <span class="mono ${r ? '' : 'muted'}">${r ? (r.pass ? 'Đạt · ' : 'Chưa đạt · ') + r.total + '/100' : 'Chưa làm'}</span></div>`; }).join('')}</div>
+    <div class="qc-card" style="margin-top:22px">
+      <span class="tag">Capstone</span><a href="quang-cao-capstone.html">Lập media plan đa kênh hoàn chỉnh</a>
+      <span class="small muted">Mục tiêu, CPA trần, vai trò và ngân sách từng kênh, KPI, quy tắc dừng, kế hoạch đo, thử nghiệm, kiểm phần tăng thêm, rủi ro chính sách. Trang tự soát độ nhất quán và xuất file văn bản.</span>
+    </div>
+  </section>
+
+  <section class="qc-part">
+    <span class="mono">Phần 5</span>
+    <h2 class="h2" style="margin:6px 0">Thực hành khi chưa có ngân sách</h2>
+    <p class="muted">Sáu bài tập không tốn tiền. Mỗi bài ra một sản phẩm cụ thể để bạn giữ lại.</p>
+    <div style="margin-top:12px;border-top:1px solid var(--ink)">${C.practice.map(x => `<details class="qc-d"><summary>${escH(x.t)} <span class="small muted">· ${escH(x.tool)}</span></summary>
+      <p style="margin:8px 0">${escH(x.d)}</p><p class="small"><b>Đầu ra:</b> ${escH(x.out)}</p>
+      ${x.u ? `<p class="small">${/^https?:/.test(x.u) ? `<a href="${escH(x.u)}" target="_blank" rel="noopener">Mở ${escH(x.tool)}</a> <span class="qc-st" data-s="${x.st}">· ${stLabel[x.st]}</span>` : `<a href="${escH(x.u)}">Mở ${escH(x.tool)}</a>${x.also ? ` · <a href="${escH(x.also)}">Lab Google Search</a>` : ''}`}</p>` : ''}</details>`).join('')}</div>
+  </section>
+
+  <section class="qc-part">
+    <span class="mono">Ôn nền (tuỳ chọn)</span>
+    <h2 class="h2" style="margin:6px 0">Đã có sẵn ở các chặng khác</h2>
+    <p class="muted">Khoá không giảng lại những bài này; bài nào cần sẽ dẫn sang ở mục "Học sâu hơn".</p>
+    <ul class="list">${C.prereq.map(k => { const m = lessonMeta(k); return m ? `<li><a class="item" style="grid-template-columns:26px 1fr" href="bai.html?id=${encodeURIComponent(k)}"><span class="item__n">${s.done[k] ? '✓' : '○'}</span><span class="small">${escH(m.t)}</span></a></li>` : ''; }).join('')}</ul>
+  </section>
+
+  <section class="qc-part">
+    <span class="mono">Nguồn · kiểm ${escH(C.checked.split('-').reverse().join('/'))}</span>
+    <h2 class="h2" style="margin:6px 0">Nguồn chính thức theo nền tảng</h2>
+    ${C.sources.map(g => `<details class="qc-d"><summary>${escH(g.p)}</summary><div class="qc-tbl"><table class="t">
+      ${g.items.map(([t, u, st]) => `<tr><td>${u ? `<a href="${escH(u)}" target="_blank" rel="noopener">${escH(t)}</a>` : escH(t)}</td><td class="qc-st" data-s="${st}">${stLabel[st]}</td></tr>`).join('')}</table></div></details>`).join('')}
+  </section>
+
+  <section class="qc-part" style="margin-bottom:48px">
+    <span class="mono">Bảo trì nội dung</span>
+    <h2 class="h2" style="margin:6px 0">Phần cần cập nhật định kỳ</h2>
+    <div class="qc-tbl"><table class="t"><tr><th>Bao lâu</th><th>Rà gì</th><th>Module</th></tr>
+      ${C.review.map(r => `<tr><td class="mono">${escH(r.every)}</td><td>${escH(r.t)}</td><td class="mono">${r.mods.join(' ')}</td></tr>`).join('')}</table></div>
+  </section>`;
+}
+render();
+</script>
+<script src="assets/js/paper.js?v=7"></script>
+</body>
+</html>

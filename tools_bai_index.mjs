@@ -58,7 +58,7 @@ export const MODULES = [
   { id:'kn09', tags:'pr khủng hoảng truyền thông thông cáo báo chí', step:'channel', n:10, t:'PR và truyền thông khủng hoảng' },
   { id:'kn10', tags:'imc tích hợp kế hoạch truyền thông agency', step:'channel', n:10, t:'Kế hoạch truyền thông tích hợp (IMC)' },
   { id:'kn11', tags:'seo tìm kiếm tự nhiên search intent từ khoá google business profile search console', step:'channel', n:8, t:'Tìm kiếm tự nhiên (SEO) cho người mới: để khách tìm thấy bạn không cần trả tiền mỗi lượt' },
-  { id:'kn12', tags:'pháp lý quảng cáo khuyến mại dữ liệu cá nhân nghị định 13 nghị định 81 kol cookie', step:'channel', n:8, t:'Quảng cáo, khuyến mại và dữ liệu khách hàng ở Việt Nam: biết khi nào phải dừng lại hỏi pháp chế' },
+  { id:'kn12', tags:'pháp lý quảng cáo khuyến mại dữ liệu cá nhân nghị định 13 luật bảo vệ dữ liệu cá nhân 91/2025 nghị định 356 luật quảng cáo sửa đổi nghị định 342 nghị định 81 kol cookie', step:'channel', n:8, t:'Quảng cáo, khuyến mại và dữ liệu khách hàng ở Việt Nam: biết khi nào phải dừng lại hỏi pháp chế' },
   { id:'kn13', tags:'mạng xã hội tiktok youtube facebook instagram reels shorts retention giữ chân ctr ảnh bìa lịch nội dung content calendar reach giảm bình luận báo cáo tuần', step:'channel', n:7, t:'Mạng xã hội theo nền tảng: được thấy, giữ chân, lịch nội dung, chẩn đoán và báo cáo' },
   { id:'kn14', tags:'instagram reels stories feed explore carousel lưu chia sẻ trang cá nhân bio highlight xếp hạng', step:'channel', n:5, t:'Instagram: mỗi bề mặt một việc, một cách xếp hạng' },
   { id:'kn15', tags:'youtube impressions ctr hình thu nhỏ thời lượng xem trung bình studio tab tiếp cận nguồn lưu lượng shorts', step:'channel', n:5, t:'YouTube: đóng gói, giữ chân và đọc đúng báo cáo' },
@@ -94,6 +94,18 @@ export const MODULES = [
   { id:'in03', tags:'case quốc tế spotify dove nike apple old spice airbnb duolingo ikea coca-cola mcdonald', step:'insight', n:10, t:'Case quốc tế đáng học' },
   { id:'in04', tags:'đề xuất proposal what why how', step:'insight', n:10, t:'Viết đề xuất: What / Why / How' },
   { id:'in05', tags:'phỏng vấn case round market sizing star', step:'insight', n:10, t:'Phỏng vấn và case round' },
+  // Chặng chuyên đề s7 · Quảng cáo đa nền tảng (KHOA-QUANG-CAO-AUDIT.md)
+  { id:'qc01', tags:'kế hoạch quảng cáo mục tiêu kinh doanh chân dung offer phễu chọn kênh ngân sách', step:'ads', n:7, t:'Từ mục tiêu kinh doanh tới kế hoạch quảng cáo' },
+  { id:'qc02', tags:'chỉ số quảng cáo reach traffic lead conversion profit cpm cpc ctr cpa roas mer ltv attribution incrementality', step:'ads', n:8, t:'Đọc số quảng cáo: từ lượt hiển thị tới lợi nhuận' },
+  { id:'qc03', tags:'brief creative landing page pixel capi events api enhanced conversions utm thử nghiệm báo cáo luật quảng cáo dữ liệu cá nhân', step:'ads', n:8, t:'Creative, trang đích, đo lường, thử nghiệm và báo cáo' },
+  { id:'qc04', tags:'meta ads facebook instagram ads manager business portfolio advantage+ pixel conversions api learning phase', step:'ads', n:8, t:'Meta Ads (Facebook & Instagram) từ tài khoản tới tối ưu' },
+  { id:'qc05', tags:'google ads search từ khoá khớp cụm từ chính xác rộng quality score smart bidding target cpa roas enhanced conversions', step:'ads', n:8, t:'Google Search Ads từ tài khoản tới tối ưu' },
+  { id:'qc06', tags:'youtube demand gen display performance max pmax merchant center shopping video', step:'ads', n:7, t:'YouTube, Demand Gen, Display và Performance Max' },
+  { id:'qc07', tags:'tiktok ads manager smart+ spark ads tiktok shop gmv max events api', step:'ads', n:7, t:'TikTok Ads và quảng cáo TikTok Shop' },
+  { id:'qc08', tags:'zalo ads official account oa form tin nhắn zns zbs quảng cáo địa phương', step:'ads', n:6, t:'Zalo Ads cho doanh nghiệp địa phương và lead' },
+  { id:'qc09', tags:'shopee ads lazada sponsored dịch vụ hiển thị quảng cáo tìm kiếm khám phá tối đa doanh thu sàn tmđt', step:'ads', n:7, t:'Quảng cáo trên sàn: Shopee và Lazada' },
+  { id:'qc10', tags:'linkedin ads b2b campaign manager lead gen form pinterest snapchat x amazon ads', step:'ads', n:5, t:'LinkedIn cho B2B và các kênh nên cân nhắc kỹ' },
+  { id:'qc11', tags:'vận hành đa kênh phân bổ ngân sách dashboard chéo kênh chẩn đoán mở rộng báo cáo', step:'ads', n:6, t:'Vận hành đa kênh: chia tiền, chẩn đoán, mở rộng, báo cáo' },
 ];
 
 if (import.meta.url === `file://${process.argv[1]}`) {

@@ -109,6 +109,27 @@ button{font-family:inherit}
 .lp-flow div b{display:block;font-size:.72em;letter-spacing:.09em;text-transform:uppercase;color:var(--lp-acc);margin-bottom:3px}
 .lp-flow i{font-style:normal;text-align:center;color:var(--lp-ink3);line-height:1}
 
+/* khoá quảng cáo: từng bước (trường `how` — không dùng `steps` vì tools_strip_answers gỡ khoá đó), sơ đồ minh hoạ, nhãn số giả định, nguồn chính thức */
+.lp-steps{list-style:none;padding:0;margin:0;counter-reset:st;display:grid;gap:10px}
+.lp-steps li{counter-increment:st;display:grid;grid-template-columns:30px 1fr;gap:10px;margin:0}
+.lp-steps li::before{content:counter(st);width:26px;height:26px;border-radius:50%;background:var(--lp-ink);color:var(--lp-bg,#fff);display:grid;place-items:center;font-weight:800;font-size:12.5px;margin-top:2px}
+.lp-steps b{display:block}
+.lp-steps span{color:var(--lp-ink2);font-size:.94em}
+.lp-fig{margin:18px 0;border:1px solid var(--lp-line);border-radius:14px;background:var(--lp-card);padding:12px;overflow-x:auto}
+.lp-fig svg{display:block;width:100%;min-width:520px;height:auto}
+.lp-fig figcaption{font-size:12.5px;color:var(--lp-ink3);margin-top:8px}
+.lp-fig .bx{fill:var(--lp-card);stroke:var(--lp-line);stroke-width:1.5}
+.lp-fig .ac{fill:var(--lp-acc-soft);stroke:var(--lp-acc);stroke-width:1.5}
+.lp-fig .ln{stroke:var(--lp-ink3);stroke-width:1.5;fill:none}.lp-fig .ln.dash{stroke-dasharray:4 4}
+.lp-fig .ah{fill:var(--lp-ink3)}
+.lp-fig text{font-family:var(--sans,system-ui,sans-serif);font-size:13px;fill:var(--lp-ink2)}
+.lp-fig text.tt{font-weight:700;font-size:14.5px;fill:var(--lp-ink)}
+.lp-fig text.end{text-anchor:end}.lp-fig text.it{font-style:italic}
+.lp-assume{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--lp-gold,#9a6a12);color:var(--lp-gold,#9a6a12);border-radius:99px;padding:3px 10px;margin:0 0 10px}
+.lp-src{font-size:.86em;color:var(--lp-ink2)}
+.lp-src li{margin-bottom:.35em}
+.lp-src .st{font-size:11px;font-weight:700;color:var(--lp-ink3)}
+
 /* câu hỏi + đáp án */
 .q{background:var(--lp-card);color:var(--lp-ink);border:1px solid var(--lp-line);border-radius:18px;padding:18px 18px 14px;margin:14px 0}
 .q__stem{font-family:var(--serif,'Fraunces',serif);font-size:1.12em;line-height:1.45;font-weight:600;margin:6px 0 12px;color:var(--lp-ink)}
@@ -210,8 +231,8 @@ button{font-family:inherit}
 <div id="termPop" hidden></div>
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
-<script src="assets/js/data/curriculum.js?v=4"></script>
-<script src="assets/js/data/bai-index.js?v=11"></script>
+<script src="assets/js/data/curriculum.js?v=5"></script>
+<script src="assets/js/data/bai-index.js?v=21"></script>
 <script src="assets/js/data/tasks.js?v=1"></script>
 <script src="assets/js/data/tasks-a.js?v=1"></script>
 <script src="assets/js/data/tasks-b.js?v=1"></script>
@@ -221,9 +242,10 @@ button{font-family:inherit}
 <script src="assets/js/data/glossary.js"></script>
 <script>/* bài mới 'B:<module>-NN': chỉ tải file của đúng module đang học */
 (()=>{ const m=/^B:([a-z]{2}\d{2})-/.exec(new URLSearchParams(location.search).get('id')||'');
-  if(m) document.write('<script src="assets/js/data/bai/'+m[1]+'.js?v='+BAI_V+'"><\/script>'); })();</script>
+  if(m) document.write('<script src="assets/js/data/bai/'+m[1]+'.js?v='+BAI_V+'"><\/script>');
+  if(m && /^qc/.test(m[1])) document.write('<script src="assets/js/ads/figures.js?v='+BAI_V+'"><\/script>'); })();</script>
 <script src="assets/js/data/exams.js?v=10"></script>
-<script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/app.js?v=22"></script>
 <script src="assets/js/yy.js?v=6z1"></script>
 <script src="assets/js/exam.js?v=9f1"></script>
 <script>
@@ -239,7 +261,8 @@ const minutes=()=>Math.max(1,parseInt(String(M.read||'6'),10)||6);
 
 /* Dữ liệu ba loại bài (B mới, L bài cũ, P nguyên lý) gom về một dạng để dựng chung một bố cục. */
 const LD=(()=>{ const s=(M&&M.src)||{}, k=M&&M.kind;
-  if(k==='B') return {sit:s.situation,cName:(s.concept||{}).name,cBody:(s.concept||{}).body,ex:s.example,counter:s.counter||'',points:s.points||[],mistakes:s.mistakes||[],closer:s.deeper||'',take:s.takeaway,apply:s.apply};
+  if(k==='B') return {sit:s.situation,cName:(s.concept||{}).name,cBody:(s.concept||{}).body,ex:s.example,counter:s.counter||'',points:s.points||[],mistakes:s.mistakes||[],closer:s.deeper||'',take:s.takeaway,apply:s.apply,
+    how:s.how||[],fig:s.fig||'',assume:!!s.assume,src:s.src||[],rel:s.rel||[]};
   if(k==='L') return {sit:s.real,cName:'Ý chính cốt lõi',cBody:`<b>${s.idea}</b>`,ex:'',points:s.why||[],mistakes:[],counter:'',closer:s.closer,take:s.idea,apply:s.try};
   return {sit:(s.brand?s.brand+' ':'')+(s.ex||''),cName:'Đúc kết một dòng',cBody:`<b>${s.one}</b>`,ex:'',points:[],mistakes:s.mistake?[s.mistake]:[],counter:s.counter,closer:'',take:s.one,apply:s.drill}; })();
 
@@ -473,8 +496,11 @@ const ulist=a=>`<ul>${a.map(x=>`<li>${x}</li>`).join('')}</ul>`;
 
 function bodyHTML(s){
   const gateLocked=PLAN.cp&&!cpDone(s);
+  const fig=LD.fig&&typeof ADS_FIG!=='undefined'&&ADS_FIG[LD.fig];
   const after=[
-    LD.ex?sec('','Ví dụ thực tế',`<p>${LD.ex}</p>`):'',
+    LD.ex?sec('','Ví dụ thực tế',`${LD.assume?'<span class="lp-assume">Số liệu giả định</span>':''}<p>${LD.ex}</p>`):'',
+    (LD.how&&LD.how.length)||fig?sec('','Làm từng bước',`${LD.how&&LD.how.length?`<ol class="lp-steps">${LD.how.map(x=>`<li><div><b>${x.t}</b><span>${x.d}</span></div></li>`).join('')}</ol>`:''}
+      ${fig?`<figure class="lp-fig">${fig.svg}<figcaption>${fig.t} · Sơ đồ minh hoạ, không phải ảnh chụp giao diện. Tên mục theo tài liệu chính thức tại ngày kiểm tra.</figcaption></figure>`:''}`):'',
     LD.points.length?sec('','Vì sao nó hiệu quả',ulist(LD.points)):'',
     LD.counter?sec('','Phản ví dụ',`<p>${LD.counter}</p>`):'',
     LD.closer?sec('','Góc nhìn đào sâu',`<p>${LD.closer}</p>`):'',
@@ -486,6 +512,9 @@ function bodyHTML(s){
         <div><b>Khái niệm</b>${LD.cName||''}</div><i>↓</i>
         <div><b>Ý chính</b>${clip(LD.take,170)}</div><i>↓</i>
         <div><b>Việc làm ngay</b>${clip(LD.apply,170)}</div></div>`),
+    LD.rel&&LD.rel.length?sec('','Học sâu hơn',`<ul>${LD.rel.map(k=>{const mm=lessonMeta(k);return mm?`<li><a href="bai.html?id=${encodeURIComponent(k)}">${mm.t}</a></li>`:''}).join('')}</ul>`):'',
+    LD.src&&LD.src.length?sec('','Nguồn chính thức',`<ul class="lp-src">${LD.src.map(x=>`<li><a href="${x.u}" target="_blank" rel="noopener">${x.t}</a> <span class="st">· kiểm ${x.d}${x.st==='tim'?' · cần mở lại trang để đối chiếu':x.st==='chua'?' · chưa xác minh':''}</span></li>`).join('')}</ul>
+      <p class="small muted">Nền tảng quảng cáo đổi tên và giao diện thường xuyên. Nếu màn hình của bạn khác mô tả, tin trang chính thức.</p>`):'',
   ].join('');
   return `
     <section class="lp-sec" id="intro" style="margin-top:22px">
@@ -560,7 +589,7 @@ function render(){
 
   <div class="lp-grid">
     <article class="lp-main" id="lpMain">
-      <div class="lp-eyebrow"><span class="lp-tag lp-tag--acc">Chặng ${W.stage.n} · ${escH(W.stage.t)}</span><span class="lp-tag">${escH(W.mod.t)} · Bài ${nth}/${W.mod.lessons.length}</span></div>
+      <div class="lp-eyebrow"><span class="lp-tag lp-tag--acc">${W.stage.elective?`<a href="quang-cao.html" style="color:inherit">${escH(W.stage.t)}</a>`:`Chặng ${W.stage.n} · ${escH(W.stage.t)}`}</span><span class="lp-tag">${escH(W.mod.t)} · Bài ${nth}/${W.mod.lessons.length}</span></div>
       <h1 class="lp-h1">${escH(M.t)}</h1>
       <p class="lp-sub">${LD.take||''}</p>
       <div class="lp-metaRow" id="stRow"><span>Khoảng <b>${minutes()} phút</b> cả bài</span><span><b>${nq}</b> câu quiz</span><span id="metaRead">Đã đọc <b>0%</b></span>${D?'<span>Có bài tính số</span>':''}${stateTag(s)}</div>

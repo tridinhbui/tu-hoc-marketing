@@ -192,10 +192,10 @@ html[data-theme="dark"] .map .node{background:rgba(34,25,19,.94)}
 <main id="app"></main>
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
-<script src="assets/js/data/curriculum.js?v=4"></script>
-<script src="assets/js/data/bai-index.js?v=11"></script>
+<script src="assets/js/data/curriculum.js?v=5"></script>
+<script src="assets/js/data/bai-index.js?v=21"></script>
 <script src="assets/js/data/exams.js?v=10"></script>
-<script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/app.js?v=22"></script>
 <script>
 appShell('bat-dau.html');
 const app=document.getElementById('app');
@@ -214,7 +214,7 @@ function model(){
   const list=pathLessons(pid), total=list.length, done=list.filter(k=>isDone(k,s)).length;
   const here=hereStage(s), nxt=nextLesson(s), pace=Math.max(1,Math.min(3,+s.pace||1));
   const left=total-done, weeks=Math.max(0,Math.ceil(left/(pace*PER_WEEK)));
-  const stages=STAGES.map((st,i)=>{
+  const stages=STAGES.filter(st=>!st.elective).map((st,i)=>{   // bản đồ có đúng 6 điểm; chặng chuyên đề mở riêng ở quang-cao.html
     const ks=st.mods.flatMap(m=>m.lessons), d=ks.filter(k=>isDone(k,s)).length, open=stageOpen(st.id,s);
     const passed=!!((s.exams||{})[st.id]||{}).passed;
     const state=(ks.length&&d===ks.length)||passed?'done':st.id===here?'here':open?'open':'lock';
