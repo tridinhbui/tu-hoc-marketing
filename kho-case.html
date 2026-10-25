@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="stylesheet" href="assets/css/case.css?v=21f6">
+<link rel="stylesheet" href="assets/css/hub.css?v=2">
+<title>Thư viện case — Tự Học Marketing Case</title>
+<meta name="description" content="Ba cách học từ case: đọc case thật, tự dự đoán trước, hoặc giải case có bấm giờ.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main id="app"></main>
+<script src="assets/js/data/lessons.js?v=8"></script>
+<script src="assets/js/data/principles.js?v=8"></script>
+<script src="assets/js/data/curriculum.js?v=5"></script>
+<script src="assets/js/data/bai-index.js?v=21"></script>
+<script src="assets/js/data/drills.js?v=3"></script>
+<script src="assets/js/data/cases.js?v=7"></script>
+<script src="assets/js/data/campaigns.js?v=9"></script>
+<script src="assets/js/app.js?v=22"></script>
+<script src="assets/js/hub.js?v=2"></script>
+<script>
+appShell('kho-case.html');
+const A=Hub.art, nReal=(typeof CAMPAIGNS!=='undefined'?CAMPAIGNS.length:0), nTimed=(typeof CASES!=='undefined'?CASES.length:0);
+const pick=(typeof CAMPAIGNS!=='undefined'?CAMPAIGNS.slice(0,3):[]).map((c,i)=>[c.brand,c.year,['#2b1a12','#a8461f','#5f7352'][i]]);
+Hub.render({ key:'case', kicker:'Thư viện case',
+  title:'Đọc một case thật, hay <em>tự giải</em> một bài toán?',
+  sub:'Đọc trước để thấy cách người làm nghề nghĩ. Giải sau để biết mình đã nghĩ được như vậy chưa.',
+  cards:[
+    { id:'doc', href:'gallery.html', title:'Đọc case thật', cta:'Vào thư viện case',
+      desc:'Chiến dịch có thật, kể theo thứ tự: bối cảnh, vấn đề kinh doanh, insight, ý tưởng, kết quả có nguồn.',
+      meta:nReal+' case thương hiệu thật', art:A.tiles(pick) },
+    { id:'xray', href:'xray.html', title:'Tự dự đoán trước', cta:'Thử dự đoán',
+      desc:'Bóc tách một thương hiệu: tự trả lời trước, phân tích mới mở ra sau. Cách nhanh nhất để thấy mình nghĩ thiếu ở đâu.',
+      art:A.note('Nhận định của bạn','Khách quay lại quán vì không gian, nên giảm giá sẽ không giúp gì nhiều…') },
+    { id:'giai', href:'case-thu-vien.html', title:'Giải case có bấm giờ', cta:'Vào giải case',
+      desc:'Thương hiệu giả định với số liệu tự khớp. Bạn chọn hỏi gì, đồng hồ vẫn chạy, bài được chấm tự động.',
+      meta:nTimed+' case · 15 đến 25 phút mỗi case', art:A.timer('20:00','Có nên nhân đôi ngân sách quảng cáo?') },
+  ]});
+</script>
+</body>
+</html>

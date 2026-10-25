@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
-import { publicStats } from '../src/stats.js';
+import { publicStats, PRIOR_CLASSES } from '../src/stats.js';
 
 /* D1 giả bằng SQLite thật: chạy đúng các migration của dự án và đúng câu SQL trong handler /api/stats. */
 function makeEnv() {
@@ -26,7 +26,9 @@ test('/api/stats: rỗng thì mọi số bằng 0', async () => {
   const { env } = makeEnv();
   const { r, body } = await stats(env);
   assert.equal(r.status, 200);
-  assert.deepEqual(body, { learners: 0, joined_7d: 0, lessons_done: 0 });
+  assert.deepEqual(body, { learners: 0, joined_7d: 0, lessons_done: 0, cases_done: 0, prior: PRIOR_CLASSES,
+    total_learners: PRIOR_CLASSES.learners, total_lessons_done: PRIOR_CLASSES.lessons_done,
+    total_cases_done: PRIOR_CLASSES.cases_done });
 });
 
 test('/api/stats: đếm đúng từ database — bỏ tài khoản hệ thống, đúng 7 ngày, mỗi (người × bài) một lượt', async () => {
@@ -49,17 +51,36 @@ test('/api/stats: đếm đúng từ database — bỏ tài khoản hệ thống
   assert.equal(body.learners, 3);
   assert.equal(body.joined_7d, 2);        // u1 (1 ngày) và u3 (6 ngày)
   assert.equal(body.lessons_done, 3);     // u1×01, u1×03, u2×01
+  /* Số lớp trước cộng riêng vào tổng, không lẫn vào số đếm từ website. */
+  assert.equal(body.total_learners, 3 + PRIOR_CLASSES.learners);
+  assert.equal(body.total_lessons_done, 3 + PRIOR_CLASSES.lessons_done);
 });
 
-test('/api/stats: chỉ trả ba số đếm (tương thích cũ), không lộ thông tin cá nhân, cache công khai ngắn', async () => {
+test('/api/stats: chỉ trả số đếm (ba trường cũ giữ nguyên + tổng có lớp trước), không lộ thông tin cá nhân, cache công khai ngắn', async () => {
   const { env, db } = makeEnv();
   addUser(db, 'u1', 'nguoi.that@gmail.com', DAY);
   addLp(db, 'u1', 'B:ob01-01', 'learned', 'lesson');
   const { r, body } = await stats(env);
-  assert.deepEqual(Object.keys(body).sort(), ['joined_7d', 'learners', 'lessons_done']);
-  assert.ok(Object.values(body).every((v) => Number.isInteger(v) && v >= 0));
+  assert.deepEqual(Object.keys(body).sort(), ['cases_done', 'joined_7d', 'learners', 'lessons_done', 'prior', 'total_cases_done', 'total_learners', 'total_lessons_done']);
+  assert.ok([...Object.values(body), ...Object.values(body.prior)].every((v) => typeof v === 'object' || (Number.isInteger(v) && v >= 0)));
   const raw = JSON.stringify(body);
   assert.ok(!raw.includes('@') && !raw.includes('u1') && !raw.includes('nguoi'));
   assert.match(r.headers.get('cache-control') || '', /public, max-age=\d+/);
   assert.ok(!r.headers.get('set-cookie'));
+});
+
+test('/api/stats: số lớp trước là hằng số cố định, đúng như chủ dự án xác nhận (300 học viên, 100 lượt bài, 70 lượt case)', () => {
+  assert.deepEqual(PRIOR_CLASSES, { learners: 300, lessons_done: 100, cases_done: 70 });
+});
+
+test('/api/stats: cases_done đếm lượt giải case (người × case), bỏ tài khoản hệ thống và nguồn XP khác', async () => {
+  const { env, db } = makeEnv();
+  addUser(db, 'u1', 'a@x.vn', DAY); addUser(db, 'u2', 'b@x.vn', DAY); addUser(db, 's1', 'bot@system.invalid', DAY);
+  const xp = (u, src, ref) => db.prepare('INSERT INTO xp_events (user_id,source,source_ref,amount,day_local,created_at) VALUES (?,?,?,?,?,?)').run(u, src, ref, 10, '2026-10-18', now);
+  xp('u1', 'case', 'cocomi-ngan-sach'); xp('u1', 'case', 'la-tra-giam-gia'); xp('u2', 'case', 'cocomi-ngan-sach');
+  xp('s1', 'case', 'cocomi-ngan-sach');   // tài khoản hệ thống: không tính
+  xp('u1', 'lesson', 'lesson:B:ob01-01'); // nguồn khác: không tính
+  const { body } = await stats(env);
+  assert.equal(body.cases_done, 3);
+  assert.equal(body.total_cases_done, 3 + PRIOR_CLASSES.cases_done);   // số thật + lớp trước, số thật giữ riêng
 });

@@ -38,7 +38,7 @@
   --ink-06:rgba(249,244,235,.06);
   --ink-dark:#24160E;    /* Chữ tối trên nền giấy ngà */
   --ink-dark-70:rgba(36,22,14,.76);
-  --ink-dark-50:rgba(36,22,14,.52);
+  --ink-dark-50:rgba(36,22,14,.64);
   
   --terra:#C85A32;       /* Terracotta rực rỡ */
   --terra-d:#A84320;     /* Terracotta trầm */
@@ -1982,10 +1982,13 @@ html.has-shell body{padding-top:var(--shell-h)}
 /* Giao diện SÁNG (data-theme="ivory"): bảng màu giấy ngà đầy đủ. Mặc định của site là espresso tối. */
 html[data-theme="ivory"]{
   --bg:#F7F0E6; --bg-2:#EFE5D8; --bg-3:#E6D9C7; --sand:#E3D5C2; --paper:#FFFFFF; --paper-card:#FFFFFF;
-  --ink:#24160E; --ink-70:rgba(36,22,14,.78); --ink-50:rgba(36,22,14,.56); --ink-30:rgba(36,22,14,.3);
+  --ink:#24160E; --ink-70:rgba(36,22,14,.78); --ink-50:rgba(36,22,14,.64); --ink-30:rgba(36,22,14,.3);
   --ink-12:rgba(36,22,14,.13); --ink-06:rgba(36,22,14,.06);
   --rule:1px solid rgba(36,22,14,.13);
   --gold:#B07A12; --gold-d:#8A5F0C; --sage-d:#46623A; --blush:#B5594A; --blush-d:#8F3F32;
   color-scheme:light;
 }
 html[data-theme="ivory"] body{background:var(--bg);color:var(--ink)}
+
+/* Điện thoại: thẻ ngành/độ khó/thời lượng chiếm cả cột phải làm tiêu đề vỡ thành một chữ một dòng — đưa xuống dưới tiêu đề. */
+@media(max-width:560px){.list .item{grid-template-columns:30px minmax(0,1fr)}.list .item>.stack{grid-column:2;justify-items:start!important}}

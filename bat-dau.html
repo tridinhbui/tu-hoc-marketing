@@ -305,8 +305,20 @@ function render(){
   </section>
 
   <nav class="tabs" id="tabs" aria-label="Các bước bắt đầu">
-    ${[['map','Bản đồ'],['s1','01 Chọn hướng'],['s2','02 Chọn nhịp'],['s3','03 Cách học'],['s4','04 Giải đáp']].map(([id,t],i)=>`<button type="button" data-go="${id}" class="${i?'':'on'}">${t}</button>`).join('')}
+    ${[['s1','01 Chọn hướng'],['map','Bản đồ'],['s2','02 Chọn nhịp'],['s3','03 Cách học'],['s4','04 Giải đáp']].map(([id,t],i)=>`<button type="button" data-go="${id}" class="${i?'':'on'}">${t}</button>`).join('')}
   </nav>
+
+  <section class="sec" id="s1">
+    <span class="eyebrow">01</span><h2>Chọn một hướng</h2>
+    <p class="lede" style="margin:0">Bạn muốn đi đủ chương trình, hay chuẩn bị cho một việc cụ thể như phỏng vấn, thi case, performance?</p>
+    <div class="cards">${PATHS.map(p=>{
+      const n=p.lessons?p.lessons.length:ALL.length, on=p.id===m.pid;
+      return `<div class="cardx" ${on?'data-on':''}><span class="meta">${n} bài · khoảng ${Math.ceil(n/(m.pace*PER_WEEK))} tuần</span>
+        <b>${escH(p.t)}</b><p>${escH(p.d)}</p>
+        ${on?'<span class="chip chip--acc" style="justify-self:start">Đang chọn</span>':`<button type="button" class="go go--ghost" data-path="${p.id}">Chọn hướng này →</button>`}</div>`;}).join('')}
+    </div>
+    <div class="note2">Đã biết một phần rồi? <a href="xep-lop.html" style="color:var(--bd-acc);font-weight:700">Làm bài xếp lớp</a> — đạt từ 80% ở chặng nào thì chặng đó được ghi công, không phải học lại.</div>
+  </section>
 
   <section class="sec" id="map">
     <span class="hand hand--c" aria-hidden="true">From the basics<br>to things you can<br>do on your own at work.</span>
@@ -321,18 +333,6 @@ function render(){
         <span class="chip ${x.state==='done'?'chip--ok':x.state==='here'?'chip--acc':''}">${{done:'Xong',here:'Học tiếp',open:'Vào học',lock:'Sắp mở'}[x.state]}</span>
       </a>`).join('')}
     </div>
-  </section>
-
-  <section class="sec" id="s1">
-    <span class="eyebrow">01</span><h2>Chọn một hướng</h2>
-    <p class="lede" style="margin:0">Bạn muốn đi đủ chương trình, hay chuẩn bị cho một việc cụ thể như phỏng vấn, thi case, performance?</p>
-    <div class="cards">${PATHS.map(p=>{
-      const n=p.lessons?p.lessons.length:ALL.length, on=p.id===m.pid;
-      return `<div class="cardx" ${on?'data-on':''}><span class="meta">${n} bài · khoảng ${Math.ceil(n/(m.pace*PER_WEEK))} tuần</span>
-        <b>${escH(p.t)}</b><p>${escH(p.d)}</p>
-        ${on?'<span class="chip chip--acc" style="justify-self:start">Đang chọn</span>':`<button type="button" class="go go--ghost" data-path="${p.id}">Chọn hướng này →</button>`}</div>`;}).join('')}
-    </div>
-    <div class="note2">Đã biết một phần rồi? <a href="xep-lop.html" style="color:var(--bd-acc);font-weight:700">Làm bài xếp lớp</a> — đạt từ 80% ở chặng nào thì chặng đó được ghi công, không phải học lại.</div>
   </section>
 
   <section class="sec" id="s2">

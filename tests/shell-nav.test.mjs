@@ -57,3 +57,18 @@ test('chỉ dẫn về trang công khai: máy chủ và trình duyệt cùng m�
   const names = (s) => [...s.matchAll(/'([^']*)'/g)].map((m) => m[1].replace(/\.html$/, '')).sort();
   assert.deepEqual(names(client), names(server));
 });
+
+test('menu gọn: mỗi nhóm tối đa 3 mục, mọi mục và mọi thẻ ở trang chọn (hub) trỏ tới file có thật', () => {
+  const html = read('app.html');
+  const groups = html.match(/const GROUPS = \[([\s\S]*?)\n\];/)[1];
+  const perGroup = groups.split(/\{ t: '/).slice(1).map((g) => (g.match(/^\s*\['[^']+', '[a-z0-9-]+\.html'/gm) || []).length);
+  assert.ok(perGroup.every((n) => n >= 1 && n <= 3), 'mỗi nhóm 1–3 mục, đang là ' + perGroup.join('/'));
+  const files = [...groups.matchAll(/\['[^']+', '([a-z0-9-]+\.html)'/g)].map((m) => m[1]);
+  for (const f of files) assert.ok(fs.existsSync(rel(f)), 'menu trỏ tới file không có: ' + f);
+  for (const hub of ['lo-trinh.html', 'kho-case.html', 'thu-thach.html', 'lab-mo-phong.html']) {
+    const src = read(hub);
+    const hrefs = [...src.matchAll(/(?:href:|\[\s*'[^']*',\s*)'([a-z0-9-]+\.html)'/g)].map((m) => m[1]);
+    assert.ok(hrefs.length >= 2, hub + ' phải có ít nhất 2 lối vào');
+    for (const h of hrefs) assert.ok(fs.existsSync(rel(h)), hub + ' trỏ tới file không có: ' + h);
+  }
+});

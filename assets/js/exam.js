@@ -84,9 +84,28 @@ function buildExam(sid) {
 }
 
 /* ---------------- chấm ---------------- */
+/* Đọc số người học gõ, theo cách viết Việt Nam: "20", "20%", "20 %", "12,5", "1.200.000", "200.000đ", "57,14 nghìn".
+   Bỏ ký hiệu và chữ đơn vị; dấu chấm là hàng nghìn, dấu phẩy là thập phân (có cả hai thì dấu xuất hiện sau là thập phân).
+   Trước đây server dùng Number() nên "20%" thành NaN → 400 invalid_answer, và trình duyệt báo nhầm là "cần kết nối máy chủ";
+   "1.200.000" thì bị đọc thành 1,2. Hàm này có bản giống hệt ở api/src/learn-core.js (máy chủ) — sửa thì sửa cả hai. */
+function parseNum(v) {
+  let t = String(v ?? '').toLowerCase().replace(/[\s\u00a0]/g, '').replace(/[^0-9.,-]/g, '');
+  if (!/[0-9]/.test(t)) return NaN;
+  const neg = t.startsWith('-'); t = t.replace(/-/g, '');
+  const dots = (t.match(/\./g) || []).length, commas = (t.match(/,/g) || []).length;
+  if (dots && commas) { const dec = t.lastIndexOf('.') > t.lastIndexOf(',') ? '.' : ','; const th = dec === '.' ? ',' : '.';
+    t = t.split(th).join('').replace(dec, '.'); }
+  else if (dots > 1) t = t.split('.').join('');
+  else if (commas > 1) t = t.split(',').join('');
+  else if (dots === 1 && /^[1-9]\d{0,2}\.\d{3}$/.test(t)) t = t.replace('.', '');
+  else if (commas === 1) t = t.replace(',', '.');
+  const n = Number(t);
+  return Number.isFinite(n) ? (neg ? -n : n) : NaN;
+}
+
 function gradeItem(it, given) {
   if (it.type === 'calc') {
-    const v = parseFloat(String(given).replace(',', '.'));
+    const v = parseNum(given);
     if (!isFinite(v)) return { ok:false, err:null };
     if (Math.abs(v - it.ans) <= (it.tol || 0.01)) return { ok:true, err:null };
     /* Sai đúng vào một giá trị đã biết trước thì gọi tên được cái lỗi. */
@@ -107,7 +126,13 @@ async function gradeAsync(it, given, context = 'practice') {
     return { ...g, answer: it.answer, ans: it.ans, unit: it.unit, why: it.why || {}, steps: it.steps || [], full: true };
   }
   if (given === undefined || given === null || given === '') return { ok: false, err: null, why: {}, steps: [], full: false, blank: true };
-  const r = await api('/answers', { method: 'POST', body: { question_id: it.id, chosen: given, context } });
+  /* Câu số: gửi số đã chuẩn hoá. Lỗi mạng/máy chủ (5xx, không phải JSON) thì tự thử lại một lần trước khi báo. */
+  const chosen = it.type === 'calc' ? (Number.isFinite(parseNum(given)) ? String(parseNum(given)) : String(given)) : given;
+  const send = () => api('/answers', { method: 'POST', body: { question_id: it.id, chosen, context } });
+  let r;
+  try { r = await send(); }
+  catch (e) { if (!(e.status >= 500 || e.message === 'no_api' || e instanceof TypeError)) throw e;
+    await new Promise((ok) => setTimeout(ok, 900)); r = await send(); }
   const why = {};
   if (r.explanation && r.answer !== undefined) why[r.answer] = r.explanation;
   if (r.option_feedback && given !== undefined) why[given] = r.option_feedback;
@@ -138,6 +163,15 @@ async function gradeExamAsync(sid, items, answers, context = 'practice') {
   return { marks, right, total: items.length, coreWrong, passed, reason: passed ? null : (right < bp.pass ? 'thieu-diem' : 'sai-cot-loi') };
 }
 const GRADE_OFFLINE = 'Chưa chấm được: cần kết nối máy chủ. Thử lại sau ít phút.';
+/* Báo đúng lý do thay vì gộp mọi lỗi thành "cần kết nối máy chủ". */
+function gradeErrorMsg(e) {
+  const m = e && e.message;
+  if (m === 'invalid_answer') return 'Có câu chưa nhập đúng dạng số. Hãy nhập một con số, ví dụ 20 hoặc 12,5.';
+  if (m === 'login_required') return 'Phiên đăng nhập đã hết. Hãy tải lại trang và đăng nhập lại.';
+  if (m === 'rate_limited') return 'Bạn đã chấm rất nhiều câu trong 24 giờ qua. Thử lại sau nhé.';
+  if (m === 'unknown_question') return 'Bài vừa được cập nhật. Hãy tải lại trang để lấy bản mới rồi nộp lại.';
+  return GRADE_OFFLINE;
+}
 
 function gradeExam(sid, items, answers) {
   const bp = EXAMS[sid];

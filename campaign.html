@@ -17,6 +17,10 @@
   .hero{padding:clamp(28px,4vw,60px) 0 0}
   .hero__meta{display:flex;gap:22px;flex-wrap:wrap;border-bottom:var(--rule);padding-bottom:12px}
   .hero__t{margin:clamp(20px,3vw,44px) 0 clamp(18px,3vw,40px)}
+  .case-hook{max-width:62ch;margin:clamp(14px,2vw,22px) 0 0;font-size:clamp(1.02rem,1.4vw,1.2rem);line-height:1.6}
+  .case-hook__k{display:flex;align-items:center;gap:10px;margin-bottom:6px;font:700 11.5px/1 var(--sans,inherit);letter-spacing:.16em;text-transform:uppercase;color:var(--accent,#a8461f)}
+  /* Tấm màu là nhịp thị giác, không phải nội dung: giữ dải thấp để phần Bài toán và mục lục nằm trên màn hình đầu. */
+  .case-band .plate--wide{aspect-ratio:auto;height:clamp(120px,18vw,240px)}
   .full{margin:0 calc(var(--gut)*-1)}
   .sec{display:grid;gap:clamp(12px,2vw,40px);padding:clamp(28px,4vw,58px) 0;border-top:var(--rule)}
   @media(min-width:900px){.sec{grid-template-columns:16ch minmax(0,1fr)}}
@@ -128,6 +132,10 @@ function deepSections(){
     <p class="src" style="margin-top:12px">Nhãn: <b>Đã xác minh</b> = có nguồn kiểm được; <b>Giả định phân tích</b> = cách diễn giải, không phải lịch sử; <b>Kết luận của tác giả</b> = ý kiến có thể tranh luận.</p></section>`;
 }
 
+/* Câu mở đầu ngay dưới tiêu đề: người đọc biết thương hiệu đang gặp chuyện gì trước khi cuộn.
+   Trước đây màn hình đầu chỉ có tiêu đề cỡ 8rem và một tấm màu 16:9 (≈72 chữ trên màn đầu). */
+const hook = (() => { const t = String((D && D.problem) || c.context || '').replace(/<[^>]+>/g, '').trim(); if (t.length <= 360) return t;
+  const m = t.match(/^.{40,360}[.?!](?=\s|$)/); return m ? m[0] : t.slice(0, 340) + '…'; })();
 document.getElementById('app').innerHTML = `
   <section class="hero">
     <div class="hero__meta">
@@ -137,9 +145,10 @@ document.getElementById('app').innerHTML = `
     </div>
     <div class="hero__t">
       <div class="kicker" data-reveal>${c.brand}</div>
-      <h1 class="display" style="font-size:clamp(3rem,9vw,8rem)" data-reveal data-delay=".05">${c.title}</h1>
+      <h1 class="display" style="font-size:clamp(2.6rem,6.5vw,5.6rem)" data-reveal data-delay=".05">${c.title}</h1>
+      ${hook?`<p class="case-hook" data-reveal data-delay=".1"><span class="case-hook__k">Bài toán ${D?ev(D.problemKind||'A'):''}</span>${hook}</p>`:''}
     </div>
-    <div class="full" data-reveal-clip>${plate({color:c.color,mark:c.mark,kicker:c.brand,meta:c.year,title:'',shape:'plate--wide'})}</div>
+    <div class="full case-band" data-reveal-clip>${plate({color:c.color,mark:c.mark,kicker:c.brand,meta:c.year,title:'',shape:'plate--wide'})}</div>
   </section>
 
   ${D ? deepSections() : `

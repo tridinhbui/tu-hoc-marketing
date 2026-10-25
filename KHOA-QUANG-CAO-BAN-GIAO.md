@@ -21,7 +21,7 @@ Ngày: 2026-10-24 · Nhánh: `content/khoa-quang-cao` · Audit trước khi làm
   - Tự soát: tổng tiền, CPA trần, đủ kết quả/tuần để học, quy tắc dừng, cách đo, thử nghiệm, phần tăng thêm, rủi ro chính sách.
   - Xuất file `.txt`.
 - **Điều hướng**:
-  - Mục "Khoá Quảng cáo" ở thanh bên (`app.html`); đăng ký nốt 4 trang Lab còn thiếu.
+  - Thẻ "Khoá Quảng cáo đa nền tảng" trong trang chọn lối vào `lo-trinh.html`; các trang của khoá làm sáng mục "Lộ trình học" ở thanh bên (`app.html`, giữ luật mỗi nhóm tối đa 3 mục của `main`).
   - Lộ trình tuỳ chọn `ads` (`PATHS`, `PATH_MODS`).
   - Nhãn "Chuyên đề" thay "Chặng 7" ở `bai.html`, `hoc.html`, `hoc-bai.html`, `luyen.html`.
   - Bản đồ 6 chặng ở `bat-dau.html` và `hoc.html` bỏ qua chặng chuyên đề.

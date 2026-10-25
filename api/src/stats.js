@@ -4,14 +4,29 @@ import { json } from './lib.js';
    (người × bài, chỉ bài học thật, không tính đề vượt chặng/xếp lớp/quản trị) — không phải số bài khác nhau.
    lesson_progress có khoá chính (user_id, lesson_id) nên mỗi cặp chỉ một dòng, không đếm nhiều trạng thái của cùng một bài.
    Chỉ đếm, không lộ ai; cache ngắn để trang không gõ D1 mỗi lượt xem. */
+/* Học viên các lớp trước (học ngoài website, trước khi có hệ thống này). Số do chủ dự án xác nhận ngày 18/10/2026:
+   lần cuối (19/10/2026) chỉnh thành 300 học viên, 100 lượt hoàn thành bài, 70 lượt giải case. Đây là hằng số cố định, KHÔNG tăng theo thời gian — chỉ phần đếm từ
+   database mới tăng. Trang hiển thị luôn kèm chú thích "gồm học viên các lớp trước". Muốn đổi thì sửa ở đây. */
+export const PRIOR_CLASSES = { learners: 300, lessons_done: 100, cases_done: 70 };
+
 export async function publicStats(env, now = Date.now()) {
   const r = await env.DB.prepare(`SELECT
       (SELECT COUNT(*) FROM users WHERE email NOT LIKE '%@system.invalid') AS learners,
       (SELECT COUNT(*) FROM users WHERE created_at > ?1 AND email NOT LIKE '%@system.invalid') AS joined_7d,
       (SELECT COUNT(*) FROM lesson_progress lp JOIN users u ON u.id = lp.user_id
          WHERE lp.state IN ('learned','passed','solid','mastered') AND lp.completion_source = 'lesson'
-           AND u.email NOT LIKE '%@system.invalid') AS lessons_done`)
+           AND u.email NOT LIKE '%@system.invalid') AS lessons_done,
+      (SELECT COUNT(*) FROM xp_events x JOIN users u ON u.id = x.user_id
+         WHERE x.source = 'case' AND u.email NOT LIKE '%@system.invalid') AS cases_done`)
     .bind(now - 7 * 864e5).first();
-  return json({ learners: r?.learners || 0, joined_7d: r?.joined_7d || 0, lessons_done: r?.lessons_done || 0 }, 200,
-              { 'cache-control': 'public, max-age=300' });
+  const learners = r?.learners || 0, lessons_done = r?.lessons_done || 0;
+  /* cases_done = lượt giải case đạt (người × case): server chỉ ghi xp_events source 'case' cho case có thật
+     (xp-trust: knownCases) và mỗi (người, case) một dòng (UNIQUE). Tổng hiển thị cộng thêm lượt giải case của lớp trước. */
+  const cases_done = r?.cases_done || 0;
+  /* learners / lessons_done giữ nguyên là số đếm từ website; tổng hiển thị = số website + lớp trước, tách riêng để không lẫn. */
+  return json({ learners, joined_7d: r?.joined_7d || 0, lessons_done, cases_done,
+                prior: PRIOR_CLASSES,
+                total_learners: learners + PRIOR_CLASSES.learners, total_lessons_done: lessons_done + PRIOR_CLASSES.lessons_done,
+                total_cases_done: cases_done + PRIOR_CLASSES.cases_done }, 200,
+              { 'cache-control': 'public, max-age=60' });
 }

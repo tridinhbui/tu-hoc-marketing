@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="stylesheet" href="assets/css/case.css?v=21f6">
+<link rel="stylesheet" href="assets/css/hub.css?v=2">
+<title>Quiz & Thử thách — Tự Học Marketing Case</title>
+<meta name="description" content="Luyện câu hỏi để kiểm tra mình, thi vượt chặng để mở chặng mới, hoặc vào chơi Game Kingdom.">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1></div></noscript>
+<main id="app"></main>
+<script src="assets/js/data/lessons.js?v=8"></script>
+<script src="assets/js/data/principles.js?v=8"></script>
+<script src="assets/js/data/curriculum.js?v=5"></script>
+<script src="assets/js/data/bai-index.js?v=21"></script>
+<script src="assets/js/data/drills.js?v=3"></script>
+<script src="assets/js/data/cases.js?v=7"></script>
+<script src="assets/js/app.js?v=22"></script>
+<script src="assets/js/hub.js?v=2"></script>
+<script>
+appShell('thu-thach.html');
+const A=Hub.art;
+Hub.render({ key:'thu-thach', kicker:'Quiz & Thử thách',
+  title:'Luyện câu hỏi để kiểm tra mình, hay <em>thi vượt chặng?</em>',
+  sub:'Luyện thì sai thoải mái và đọc lời giải. Thi thì tính điểm để mở chặng tiếp theo.',
+  cards:[
+    { id:'quiz', href:'quiz.html', title:'Phòng thử thách', cta:'Vào luyện quiz',
+      desc:'Chọn chủ đề, độ khó và số câu rồi làm. Mỗi phương án đều có lời giải: đọc lý do mới là phần học.',
+      art:A.quiz('Tỉ lệ đặt lịch tăng từ 30% lên 35%: số người đặt tăng khoảng bao nhiêu?',['5%, bằng mức chênh lệch','Khoảng 17%, vì 5 trên nền 30','35%, bằng tỉ lệ mới'],1) },
+    { id:'thi', href:'thi.html', title:'Thi vượt chặng', cta:'Xem đề các chặng',
+      desc:'Mỗi chặng có một đề tổng hợp. Qua đề là mở chặng sau và được ghi công cả chặng.',
+      art:A.stages(6,0) },
+    { id:'kingdom', href:'kingdom.html', title:'Game Kingdom', cta:'Vào Game Kingdom', dark:true,
+      desc:'Bản đồ vương quốc với mini-game ra quyết định: chia ngân sách, chọn tệp, đọc phễu. Chơi để ôn, có xu và rương.',
+      art:A.kingdom() },
+  ]});
+</script>
+</body>
+</html>

@@ -950,7 +950,9 @@ const PATH_MODS = {
     const list = PATH_MODS[p.id]; if (!list || !p.lessons) return;
     const add = list.flatMap(id => (mods.find(m => m.id === id) || { lessons: [] }).lessons);
     const all = [...new Set([...p.lessons, ...add])];
-    const pos = (k) => { const m = modOf(k); const i = m ? list.indexOf(m.id) : -1; return i; };   // module cũ chưa liệt kê: -1, đứng trước trong cùng bước
+    /* Module cũ chưa liệt kê đứng SAU các module mới trong cùng bước: trước đây đứng trước (-1) nên bài ghi chú cũ
+       (L:53 danh sách thuật ngữ, L:57…) xuất hiện ngay sau 7 bài mở đầu, cắt ngang module kể chuyện. */
+    const pos = (k) => { const m = modOf(k); const i = m ? list.indexOf(m.id) : -1; return i < 0 ? list.length : i; };
     p.lessons = all.map((k, n) => ({ k, n })).sort((a, b) => stepOf(a.k) - stepOf(b.k) || pos(a.k) - pos(b.k) || a.n - b.n).map(x => x.k);
   });
 })();
@@ -975,7 +977,14 @@ const PATH_START = {
   const everything = STAGES.flatMap(st => st.mods.flatMap(m => m.lessons));
   PATHS.forEach(p => {
     const st = (PATH_START[p.id] || []).filter(k => have.has(k)); if (!st.length) return;
-    const rest = (p.lessons || everything).filter(k => !st.includes(k));
+    let rest = (p.lessons || everything).filter(k => !st.includes(k));
+    /* Lộ trình đủ: trong cùng chặng, bài kể chuyện (B:) trước bài ghi chú cũ (L:). Trước đây bài 8–13 là L:53…L:74
+       (danh sách thuật ngữ, owned media, PR) chen giữa module ob01 — người mới gặp ngay sau 7 bài mở đầu. */
+    if (p.id === 'full') {
+      const stOf = new Map(STAGES.flatMap((s, i) => s.mods.flatMap(m => m.lessons.map(k => [k, i]))));
+      rest = rest.map((k, n) => ({ k, n })).sort((a, b) => (stOf.get(a.k) ?? 99) - (stOf.get(b.k) ?? 99)
+        || (a.k.startsWith('L:') - b.k.startsWith('L:')) || a.n - b.n).map(x => x.k);
+    }
     p.lessons = [...st, ...rest];
     p.start = st;
   });

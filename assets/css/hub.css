@@ -1,0 +1,86 @@
+/* Trang chọn lối vào (hub): một câu hỏi, 2–3 thẻ lớn, mỗi thẻ có hình minh hoạ thu nhỏ đúng nội dung trang đích,
+   một dòng mô tả và đúng một nút. Giúp người học chọn trước khi bước vào trang nhiều chi tiết. */
+.hub{max-width:1180px;margin:0 auto;padding:clamp(22px,4vw,48px) clamp(16px,3vw,32px) 80px;color:var(--ink-dark,#24160E)}
+.hub__k{display:flex;align-items:center;gap:12px;margin:0 0 12px;font:700 11.5px/1 var(--sans,'Be Vietnam Pro',sans-serif);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-d,#A84320)}
+.hub__k::before{content:"";width:28px;height:1px;background:currentColor}
+.hub__t{margin:0;max-width:22ch;font-family:var(--serif,'Fraunces',serif);font-weight:300;font-size:clamp(2rem,3.6vw,3.1rem);line-height:1.08;letter-spacing:-.025em}
+.hub__t em{font-style:italic;color:var(--terra,#C85A32)}
+.hub__p{margin:12px 0 0;max-width:60ch;font-size:15.5px;line-height:1.6;color:var(--ink-dark-70,rgba(36,22,14,.76))}
+.hub__list{display:grid;gap:clamp(14px,2vw,20px);margin-top:clamp(22px,3vw,34px)}
+
+.hcard{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(16px,2.6vw,36px);align-items:center;
+  padding:clamp(12px,1.4vw,16px);border-radius:26px;background:var(--paper-card,#FDF9F3);border:1px solid rgba(36,22,14,.1);
+  box-shadow:0 18px 40px -30px rgba(40,25,10,.45);transition:border-color .25s,box-shadow .25s,translate .25s}
+.hcard:hover{border-color:rgba(200,90,50,.45);box-shadow:0 22px 44px -28px rgba(40,25,10,.55);translate:0 -2px}
+.hcard__art{position:relative;min-height:200px;border-radius:18px;overflow:hidden;background:#f3eadb;border:1px solid rgba(36,22,14,.06);
+  padding:16px;display:flex;flex-direction:column;justify-content:center}
+.hcard__body{padding:clamp(4px,1vw,14px) clamp(4px,1.4vw,18px) clamp(4px,1vw,12px) 0}
+.hcard__last{display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;padding:5px 10px;border-radius:999px;background:rgba(200,90,50,.12);color:var(--terra-d,#A84320);font:700 11.5px/1 var(--sans,sans-serif)}
+.hcard__last svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2}
+.hcard h2{margin:0;font-family:var(--serif,'Fraunces',serif);font-weight:400;font-size:clamp(1.55rem,2.4vw,2.1rem);line-height:1.1;letter-spacing:-.02em}
+.hcard p{margin:8px 0 0;font-size:15px;line-height:1.55;color:var(--ink-dark-70,rgba(36,22,14,.76));max-width:44ch}
+.hcard__meta{margin-top:8px;font-size:13px;color:var(--ink-dark-50,rgba(36,22,14,.64))}
+.hcard__go{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:13px 22px;border-radius:999px;background:var(--ink-dark,#24160E);color:#fbf6ec;
+  font:700 14.5px/1 var(--sans,sans-serif);text-decoration:none;transition:background .2s}
+.hcard__go:hover{background:var(--terra,#C85A32)}
+.hcard__go svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2}
+.hcard__alt{display:block;margin-top:12px;font:600 13px/1.3 var(--sans,sans-serif);color:var(--terra-d,#A84320)}
+
+/* ---- hình minh hoạ thu nhỏ ---- */
+.ha-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.ha-tabs span{padding:6px 11px;border-radius:999px;background:#fff;border:1px solid rgba(36,22,14,.1);font:600 12px/1 var(--sans,sans-serif)}
+.ha-tabs span.on{background:var(--terra,#C85A32);border-color:transparent;color:#fff}
+.ha-path{width:100%;height:auto;display:block}
+.ha-path .ln{fill:none;stroke:rgba(200,90,50,.45);stroke-width:3;stroke-dasharray:2 7;stroke-linecap:round}
+.ha-path .bg{fill:none;stroke:rgba(36,22,14,.07);stroke-width:14;stroke-linecap:round}
+.ha-path circle{fill:#fff;stroke:rgba(36,22,14,.14);stroke-width:1.5}
+.ha-path circle.on{fill:var(--terra,#C85A32);stroke:rgba(200,90,50,.3);stroke-width:8}
+.ha-path text{font:700 12px var(--sans,sans-serif);fill:var(--ink-dark,#24160E);text-anchor:middle;dominant-baseline:central}
+.ha-path text.on{fill:#fff}
+.ha-cap{margin-top:8px;padding:10px 12px;border-radius:12px;background:#fff;font-size:12.5px;line-height:1.45;color:var(--ink-dark-70,rgba(36,22,14,.76))}
+.ha-cap b{display:block;font-size:13px;color:var(--ink-dark,#24160E)}
+.ha-steps{display:flex;align-items:center;gap:0;margin-top:14px}
+.ha-steps i{flex:1;height:3px;background:rgba(36,22,14,.12);border-radius:3px}
+.ha-steps i.on{background:var(--terra,#C85A32)}
+.ha-steps b{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1.5px solid rgba(36,22,14,.18);font:700 12px var(--sans,sans-serif)}
+.ha-steps b.on{background:var(--terra,#C85A32);border-color:transparent;color:#fff}
+.ha-steplab{display:flex;justify-content:space-between;margin-top:6px;font-size:11.5px;color:var(--ink-dark-50,rgba(36,22,14,.64))}
+.ha-q{font:600 14px/1.4 var(--sans,sans-serif);margin-bottom:10px}
+.ha-opt{padding:9px 12px;margin-top:6px;border-radius:10px;background:#fff;border:1px solid rgba(36,22,14,.1);font-size:13px;line-height:1.35}
+.ha-opt.ok{border-color:rgba(47,122,66,.45);background:#eef6ef}
+.ha-badges{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.ha-badges span{aspect-ratio:1;border-radius:14px;display:grid;place-items:center;background:#fff;border:1px solid rgba(36,22,14,.1);font:400 1.25rem/1 var(--serif,'Fraunces',serif)}
+.ha-badges span.on{background:var(--ink-dark,#24160E);color:#fbf6ec}
+.ha-badges span.lk{color:rgba(36,22,14,.3)}
+.ha-dark{background:var(--ink-dark,#24160E)!important;color:#f3ead9}
+.ha-boss{display:flex;justify-content:space-between;font:700 12px var(--sans,sans-serif);color:#f3ead9}
+.ha-bar{height:8px;border-radius:9px;background:rgba(255,255,255,.12);margin:8px 0 16px;overflow:hidden}
+.ha-bar i{display:block;height:100%;width:72%;background:var(--terra,#C85A32)}
+.ha-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ha-tile{aspect-ratio:3/4;border-radius:10px;padding:10px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;font:700 11px/1.2 var(--sans,sans-serif);letter-spacing:.06em}
+.ha-tile b{font:400 1.25rem/1 var(--serif,'Fraunces',serif);letter-spacing:-.01em}
+.ha-note{background:#fffdf6;border-radius:12px;padding:14px;border:1px dashed rgba(200,90,50,.45);font-size:13px;line-height:1.5}
+.ha-note small{display:block;font:700 10.5px/1 var(--sans,sans-serif);letter-spacing:.12em;text-transform:uppercase;color:var(--terra-d,#A84320);margin-bottom:6px}
+.ha-timer{display:flex;align-items:baseline;gap:10px}
+.ha-timer b{font:300 2.6rem/1 var(--serif,'Fraunces',serif);letter-spacing:-.02em}
+.ha-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.ha-kpi{background:#fff;border-radius:12px;padding:10px;border:1px solid rgba(36,22,14,.08)}
+.ha-kpi small{display:block;font:700 10.5px/1 var(--sans,sans-serif);letter-spacing:.08em;color:var(--ink-dark-50,rgba(36,22,14,.64))}
+.ha-kpi b{display:block;margin-top:6px;font:400 1.35rem/1 var(--serif,'Fraunces',serif)}
+.ha-kpi em{font-style:normal;font-size:11.5px;font-weight:700;color:#2f7a42}
+.ha-chips{display:flex;flex-wrap:wrap;gap:6px}
+.ha-chips span{padding:7px 11px;border-radius:999px;background:#fff;border:1px solid rgba(36,22,14,.1);font:600 12px/1 var(--sans,sans-serif)}
+.ha-chips span.on{background:rgba(200,90,50,.14);border-color:rgba(200,90,50,.5);color:var(--terra-d,#A84320)}
+.ha-formula{margin-top:12px;padding:12px;border-radius:12px;background:#fff;font:600 13px/1.5 var(--sans,sans-serif)}
+.ha-formula em{font-style:normal;color:var(--terra-d,#A84320)}
+
+@media (max-width:760px){
+  .hcard{grid-template-columns:1fr;border-radius:22px}
+  .hcard__art{min-height:0}
+  .hcard__body{padding:2px 6px 8px}
+  .hcard__go{width:100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){.hcard{transition:none}.hcard:hover{translate:none}}
+.ha-dark .ha-chips span{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#f3ead9}
+.ha-dark .ha-chips span.on{background:rgba(200,90,50,.3);border-color:rgba(238,106,48,.7);color:#ffd2bd}
+.ha-sub{font-size:13px;color:var(--ink-dark-50,rgba(36,22,14,.64))}

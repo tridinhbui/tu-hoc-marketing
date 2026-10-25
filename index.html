@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8"><script>if(window.top!==window.self){window.top.location.replace(window.location.href);}document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tự Học Marketing Case — Học cách nhìn thế giới như một strategist</title>
+<title>Tự Học Marketing Case: Học cách nhìn thế giới như một strategist</title>
 <meta name="description" content="Đừng chỉ học marketing. Học cách nhìn thế giới như một strategist. Học marketing qua case thật, quyết định thật và tư duy chiến lược.">
-<meta property="og:title" content="Tự Học Marketing Case — Học cách nhìn thế giới như một strategist">
+<meta property="og:title" content="Tự Học Marketing Case: Học cách nhìn thế giới như một strategist">
 <meta property="og:description" content="Những case thật. Bài học thật. Một tư duy mới để bạn nhìn marketing dưới góc độ chiến lược và sáng tạo.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://tuhocmarketing.org/">
@@ -16,13 +16,13 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tự Học Marketing Case — Học cách nhìn thế giới như một strategist">
+<meta name="twitter:title" content="Tự Học Marketing Case: Học cách nhìn thế giới như một strategist">
 <meta name="twitter:image" content="https://tuhocmarketing.org/assets/og/default.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23A8461F'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23F2E9D8'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/hand.css">
-<link rel="stylesheet" href="assets/css/editorial.css?v=10z1">
+<link rel="stylesheet" href="assets/css/editorial.css?v=11d2">
 <link rel="stylesheet" href="assets/css/mobile-magic.css?v=3">
 </head>
 <body class="ed">
@@ -63,6 +63,17 @@
     <a class="link" href="#cases">Xem các case</a>
   </div>
 
+  <!-- Số trực tiếp từ /api/stats: chỉ hiện khi đã có số thật (lỗi mạng thì ẩn cả dải, không hiện số đoán). -->
+  <div class="h-live" id="hLive" hidden>
+    <p class="h-live__k"><span class="h-live__badge"><i aria-hidden="true"></i>LIVE</span><span class="h-live__t">Cập nhật trực tiếp</span></p>
+    <dl class="h-live__n">
+      <div><dt>người đã học cùng</dt><dd data-k="total_learners">0</dd></div>
+      <div><dt>lượt hoàn thành bài</dt><dd data-k="total_lessons_done">0</dd></div>
+      <div><dt>lượt giải case</dt><dd data-k="total_cases_done">0</dd></div>
+    </dl>
+    <p class="h-live__src" id="hLiveSrc"></p>
+  </div>
+
   <div class="h-scrap hand rv" style="--d:.9s" aria-hidden="true">Same products.<br>Different stories.<br>Different results.</div>
   <div class="h-stamp" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#circ">CASE THẬT • BÀI HỌC THẬT • TƯ DUY MỚI • </textPath></text></svg></div>
   <div class="h-words" aria-hidden="true">People · Ideas · Behavior · Brands · Culture</div>
@@ -76,13 +87,17 @@
 <section class="sec torn on-iv mani" aria-labelledby="maniT">
   <div class="mani-in">
     <h2 class="kick rv" id="maniT">Lời mở</h2>
-    <p class="mani-text" id="maniText">Cùng một sản phẩm có thể có hàng nghìn câu chuyện. Người ta không mua thứ bạn bán — họ mua cách bạn khiến họ cảm thấy về chính mình. Học marketing, vì thế, <span class="em">bắt đầu từ việc nhìn</span>: nhìn kỹ một người, một thói quen, một khoảnh khắc đáng ra bị bỏ qua.</p>
+    <p class="mani-text" id="maniText">Cùng một sản phẩm có thể có hàng nghìn câu chuyện. Người ta không mua thứ bạn bán. Họ mua cách bạn khiến họ cảm thấy về chính mình. Học marketing, vì thế, <span class="em">bắt đầu từ việc nhìn</span>: nhìn kỹ một người, một thói quen, một khoảnh khắc đáng ra bị bỏ qua.</p>
     <div class="mani-side">
       <div class="mani-pic cu"><img src="assets/img/hero_model.jpg" alt="Chân dung một người trẻ nhìn thẳng vào ống kính, ánh sáng xanh tím" loading="lazy"></div>
       <p class="mani-cap">Đằng sau mỗi lần mua là một con người. Nhìn kỹ họ trước, rồi mới nghĩ đến thứ bạn bán.</p>
       <div class="mani-note hand" aria-hidden="true">nhìn kỹ hơn<svg viewBox="0 0 60 36"><path d="M4 4 C 6 24, 26 32, 54 28 M54 28 l-10 -7 M54 28 l-9 9"/></svg></div>
     </div>
     <p class="mani-small rv">Đây không phải khoá học để học thuộc. Đó là một cuốn tạp chí để đọc, thử, và dần dần nhìn thế giới khác đi.</p>
+    <div class="yy-chat yy-chat--light" role="group" aria-label="Hỏi nhanh Ý Ý">
+      <p class="yy-chat__q"><span>Ý Ý ơi, học marketing nên bắt đầu từ đâu?</span></p>
+      <div class="yy-chat__a"><span class="yy-chat__av" aria-hidden="true"><img src="assets/img/yy-logo.png?v=2" alt="" loading="lazy"></span><div class="yy-chat__b"><b>Ý Ý</b><p>Từ việc nhìn kỹ một người mua. Trước khi nghĩ bán gì, hãy hỏi họ đang cố làm xong việc gì, và điều gì khiến họ chọn bên này thay vì bên kia.</p></div></div>
+    </div>
   </div>
 </section>
 
@@ -104,20 +119,20 @@
       <span class="ln" style="--i:1"><span>những thương hiệu</span></span>
       <span class="ln" style="--i:2"><span>thật, trong thế giới <em>thật.</em></span></span>
     </h2>
-    <p class="cases-p rv">Từ các chiến dịch viral, product launch, định vị thương hiệu đến chiến lược tăng trưởng — tất cả được phân tích dưới góc nhìn chiến lược, dễ hiểu và ứng dụng được.</p>
-    <a class="link rv" href="dang-nhap.html?next=%2Fcase-thu-vien.html">Khám phá các case →</a>
+    <p class="cases-p rv">Từ các chiến dịch viral, product launch, định vị thương hiệu đến chiến lược tăng trưởng. Tất cả được phân tích dưới góc nhìn chiến lược, dễ hiểu và ứng dụng được.</p>
+    <a class="link rv" href="dang-nhap.html?next=%2Fgallery.html">Khám phá các case →</a>
 
-    <a class="cs cs-nike rv" data-c="brand" href="dang-nhap.html?next=%2Fcase-thu-vien.html" aria-label="Case Nike: Just Do It">
+    <a class="cs cs-nike rv" data-c="brand" href="dang-nhap.html?next=%2Fcampaign.html%3Fid%3Dnike-dream-crazy" aria-label="Case Nike: Just Do It">
       <span class="no" aria-hidden="true">01</span>
       <div class="fr"><img src="assets/img/poster_nike_athlete.jpg" alt="Vận động viên ướt mồ hôi nhìn lên, ánh mắt tập trung" loading="lazy"><div class="cap">Just Do It.</div></div>
       <div class="meta"><span>Nike · 1988</span><span>Thương hiệu</span></div>
     </a>
-    <a class="cs cs-duo rv" data-c="content" style="--d:.15s" href="dang-nhap.html?next=%2Fcase-thu-vien.html" aria-label="Case Duolingo">
+    <a class="cs cs-duo rv" data-c="content" style="--d:.15s" href="dang-nhap.html?next=%2Fcampaign.html%3Fid%3Dduolingo-tiktok" aria-label="Case Duolingo">
       <span class="no" aria-hidden="true">02</span>
       <div class="fr"><img src="assets/img/poster_duolingo_owl.jpg" alt="Cú xanh Duolingo với đôi mắt cam sáng" loading="lazy"><div class="cap">Cú xanh đã chinh phục internet thế nào.</div></div>
       <div class="meta"><span>Duolingo</span><span>Nội dung</span></div>
     </a>
-    <a class="cs cs-apple rv" data-c="brand" style="--d:.25s" href="dang-nhap.html?next=%2Fcase-thu-vien.html" aria-label="Case Apple">
+    <a class="cs cs-apple rv" data-c="brand" style="--d:.25s" href="dang-nhap.html?next=%2Fcampaign.html%3Fid%3Dapple-1984" aria-label="Case Apple">
       <span class="no" aria-hidden="true">03</span>
       <div class="fr"><img src="assets/img/poster_apple_thinker.jpg" alt="Người đàn ông ngẩng nhìn lên, đen trắng, vẻ trầm tư" loading="lazy"><div class="cap">Giản dị cũng là một chiến lược.</div></div>
       <div class="meta"><span>Apple</span><span>Thương hiệu</span></div>
@@ -136,6 +151,10 @@
       <span class="ln" style="--i:2"><span><em>Just Do It.</em></span></span>
     </h2>
     <p class="ana-p rv">Không chỉ là một câu slogan, Just Do It đã biến Nike từ một thương hiệu giày thành biểu tượng văn hoá toàn cầu. Cùng mổ xẻ chiến dịch này qua góc nhìn chiến lược, từng bước một.</p>
+    <div class="yy-chat yy-chat--tc" role="group" aria-label="Hỏi nhanh Ý Ý">
+      <p class="yy-chat__q"><span>Just Do It hiệu quả chỉ nhờ câu slogan hay?</span></p>
+      <div class="yy-chat__a"><span class="yy-chat__av" aria-hidden="true"><img src="assets/img/yy-logo.png?v=2" alt="" loading="lazy"></span><div class="yy-chat__b"><b>Ý Ý</b><p>Slogan là phần nổi. Phần chìm là Nike đổi cách nói chuyện: bớt kể về đôi giày, nói nhiều hơn về người dám vận động. Định vị đứng được nhờ một sự thật về khách hàng, không nhờ câu chữ.</p></div></div>
+    </div>
   </div>
 
   <div class="ana-body">
@@ -152,7 +171,7 @@
       <li class="ana-step" data-x="46%" data-y="72%"><span class="n">03</span><p class="k">Lựa chọn chiến lược</p><h3>Strategic Choice</h3><p>Thay vì chỉ nói về sản phẩm, Nike chọn định vị thương hiệu qua một niềm tin: thúc đẩy con người khai phá tiềm năng vô hạn, bất kể họ là ai.</p></li>
       <li class="ana-step" data-x="70%" data-y="52%"><span class="n">04</span><p class="k">Triển khai</p><h3>Execution</h3><p>Chiến dịch Just Do It ra mắt năm 1988 với những thước phim chân thực, mạnh mẽ, tôn vinh nỗ lực của những con người bình thường lẫn huyền thoại. Ngôn ngữ đơn giản, cảm xúc, dễ lan toả.</p></li>
       <li class="ana-step" data-x="38%" data-y="50%"><span class="n">05</span><p class="k">Kết quả</p><h3>Results</h3><p>Doanh thu Nike tăng từ khoảng 877 triệu USD (1988) lên hơn 9 tỷ USD (1998), thị phần giày thể thao tại Mỹ tăng từ khoảng 18% lên 43%.</p><span class="kpi">877M → 9,2B<small>USD · 1988 → 1998</small></span></li>
-      <li class="ana-step" data-x="50%" data-y="88%"><span class="n">06</span><p class="k">Bài học rút ra</p><h3>Lessons</h3><p>Một chiến dịch thành công không chỉ giải quyết vấn đề kinh doanh, mà còn chạm vào một sự thật sâu sắc của con người. Chiến lược tốt là khi thương hiệu trở thành một phần trong câu chuyện của khách hàng.</p><a class="link" style="margin-top:18px" href="dang-nhap.html?next=%2Fcase-thu-vien.html">Đi sâu vào case →</a></li>
+      <li class="ana-step" data-x="50%" data-y="88%"><span class="n">06</span><p class="k">Bài học rút ra</p><h3>Lessons</h3><p>Một chiến dịch thành công không chỉ giải quyết vấn đề kinh doanh, mà còn chạm vào một sự thật sâu sắc của con người. Chiến lược tốt là khi thương hiệu trở thành một phần trong câu chuyện của khách hàng.</p><a class="link" style="margin-top:18px" href="dang-nhap.html?next=%2Fgallery.html">Đi sâu vào case →</a></li>
     </ol>
     <p class="ana-foot">Số liệu doanh thu và thị phần là các con số thường được trích dẫn về giai đoạn 1988–1998; case đầy đủ trong thư viện nêu nguồn và cách đọc chúng.</p>
   </div>
@@ -191,6 +210,10 @@
     </h2>
     <p class="lab-p rv">Một không gian thực hành marketing, nơi bạn thử nghiệm, phân tích và tạo ra chiến lược của riêng mình qua những case thực tế. Chọn đối tượng, định vị, tìm giá trị cốt lõi, rồi viết thông điệp.</p>
     <p class="lab-hint">↳ Kéo các mảnh giấy để sắp lại bàn theo cách bạn nghĩ.</p>
+    <div class="yy-chat yy-chat--light" role="group" aria-label="Hỏi nhanh Ý Ý">
+      <p class="yy-chat__q"><span>Trong Lab mình làm sai thì sao?</span></p>
+      <div class="yy-chat__a"><span class="yy-chat__av" aria-hidden="true"><img src="assets/img/yy-logo.png?v=2" alt="" loading="lazy"></span><div class="yy-chat__b"><b>Ý Ý</b><p>Cứ sai, đó là mục đích. Dữ liệu ở đây là giả lập: bạn đổi tệp khách, chia lại ngân sách, xem chỉ số thay đổi rồi sửa. Sai ở đây rẻ hơn nhiều so với sai bằng tiền thật.</p></div></div>
+    </div>
   </div>
 
   <div class="desk" id="desk">
@@ -200,7 +223,7 @@
       <h3>Test your own strategy</h3>
       <div class="acc" id="labAcc">
         <div class="acc__i open"><button class="acc__b" type="button" aria-expanded="true"><span class="nn">1</span><span><strong>Đối tượng mục tiêu</strong><small>Gen Z, yêu thích cà phê, sống tại thành thị</small></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="acc__d"><div><p>Đừng dừng ở nhân khẩu học. Hỏi: họ đang cố hoàn thành việc gì khi bước vào quán — làm việc, gặp bạn, hay tự thưởng cho mình?</p></div></div></div>
+          <div class="acc__d"><div><p>Đừng dừng ở nhân khẩu học. Hỏi: họ đang cố hoàn thành việc gì khi bước vào quán: làm việc, gặp bạn, hay tự thưởng cho mình?</p></div></div></div>
         <div class="acc__i"><button class="acc__b" type="button" aria-expanded="false"><span class="nn">2</span><span><strong>Định vị thương hiệu</strong><small>Cà phê cho những tâm hồn sáng tạo</small></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
           <div class="acc__d"><div><p>Một định vị chỉ có giá trị khi nó loại trừ ai đó. Nếu quán nào cũng nói được câu này thì nó chưa nói gì cả.</p></div></div></div>
         <div class="acc__i"><button class="acc__b" type="button" aria-expanded="false"><span class="nn">3</span><span><strong>Giá trị cốt lõi</strong><small>Truyền cảm hứng, kết nối cộng đồng</small></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -293,7 +316,7 @@
   <div class="chal-in">
     <p class="kick"><span>Thử thách chiến lược 60 giây</span><span id="chalT" aria-live="off">60s</span></p>
     <h2 class="chal-q" id="chalT2"><span class="ln"><span>Bạn là strategist.</span></span><span class="ln" style="--i:1"><span>Điều gì bạn <em>điều tra</em> đầu tiên?</span></span></h2>
-    <p class="chal-ctx rv">Một thương hiệu cà phê đang mất dần khách hàng Gen Z. Doanh số tại nhóm 18–24 tuổi giảm 28% trong 6 tháng qua <small>(tình huống giả định)</small>. Chọn một hướng — và nghe góc nhìn bên cạnh.</p>
+    <p class="chal-ctx rv">Một thương hiệu cà phê đang mất dần khách hàng Gen Z. Doanh số tại nhóm 18–24 tuổi giảm 28% trong 6 tháng qua <small>(tình huống giả định)</small>. Chọn một hướng, rồi nghe góc nhìn bên cạnh.</p>
 
     <div class="opts" id="opts" role="group" aria-label="Chọn hướng điều tra">
       <button class="opt on" type="button" data-k="A" aria-pressed="true"><span class="ltr">A</span><span><b>Hành vi &amp; nhu cầu Gen Z</b><span class="d">Tìm hiểu họ đang thay đổi thói quen uống cà phê như thế nào.</span></span></button>
@@ -331,8 +354,8 @@
     </div>
     <div class="w-pic w-owl" data-d="14"><img src="assets/img/poster_duolingo_owl.jpg" alt="Cú xanh Duolingo nhìn chằm chằm" loading="lazy"></div>
     <div class="w-pic w-bb" data-d="8"><img src="assets/img/billboard_city.jpg" alt="" loading="lazy"></div>
-    <div class="w-pic w-hands" data-d="18"><img src="assets/img/coffee_aesthetic.jpg" alt="Những ly cà phê chạm nhau — một khoảnh khắc thuộc về nhau" loading="lazy"></div>
-    <p class="w-note hand" data-d="22">A brand doesn’t just sell products — it sells a way of seeing the world.</p>
+    <div class="w-pic w-hands" data-d="18"><img src="assets/img/coffee_aesthetic.jpg" alt="Những ly cà phê chạm nhau, một khoảnh khắc thuộc về nhau" loading="lazy"></div>
+    <p class="w-note hand" data-d="22">A brand doesn’t just sell products. It sells a way of seeing the world.</p>
     <div class="w-search" data-d="12"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span>quán cà phê ngồi lâu không bị đuổi gần đây<i class="cur"></i></span></div>
     <div class="w-tag" data-d="16">Giá: 55.000đ<br>Lý do: ở lại</div>
     <p class="w-scrib hand" data-d="9">Real people.<br>Real behavior.<br>Real stories.</p>
@@ -344,7 +367,7 @@
     <div><b><span data-count="20">20</span></b><span>case chiến dịch thật được mổ xẻ</span></div>
     <div><b><span data-count="14">14</span></b><span>thương hiệu được phân tích sâu</span></div>
   </div>
-  <a class="link" style="margin-top:30px" href="dang-nhap.html?next=%2Fcase-thu-vien.html">Khám phá các case →</a>
+  <a class="link" style="margin-top:30px" href="dang-nhap.html?next=%2Fgallery.html">Khám phá các case →</a>
 </section>
 
 <!-- ============ DẢI CHỮ CHẠY 2 ============ -->
@@ -356,7 +379,7 @@
   <div class="qs" aria-label="Ví dụ những câu hỏi được thảo luận">
     <p class="q">Nếu là Nike năm 1988, bạn có dám ngừng nói về đôi giày?<small>Câu hỏi thảo luận</small></p>
     <p class="q">Vì sao một con cú meme lại giữ chân người học tốt hơn một quảng cáo?<small>Câu hỏi thảo luận</small></p>
-    <p class="q">Định vị của quán bạn thường ghé là gì — và nó loại trừ ai?<small>Câu hỏi thảo luận</small></p>
+    <p class="q">Định vị của quán bạn thường ghé là gì, và nó loại trừ ai?<small>Câu hỏi thảo luận</small></p>
   </div>
   <div class="comm-in">
     <p class="kick">Cộng đồng</p>
@@ -391,9 +414,66 @@ try{fetch('/api/me',{credentials:'include',cache:'no-store'}).then(function(r){r
 <script src="assets/js/mobile-magic.js?v=4" defer></script>
 <script src="assets/js/yy.js?v=6z1"></script>
 <script>
+/* Hỏi nhanh Ý Ý: khi khối hội thoại lọt vào màn hình, hiện câu hỏi, ba chấm "đang gõ", rồi Ý Ý gõ câu trả lời (YY.type).
+   Nội dung viết sẵn trong HTML; giảm chuyển động hoặc trình duyệt cũ thì để nguyên chữ tĩnh. */
+(function(){
+  var chats=[].slice.call(document.querySelectorAll('.yy-chat')); if(!chats.length) return;
+  if((window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)||!('IntersectionObserver' in window)) return;
+  var wait=function(ms){ return new Promise(function(r){ setTimeout(r,ms); }); };
+  var play=function(c){
+    if(c.__go) return; c.__go=1;
+    var p=c.querySelector('.yy-chat__b p'), t=c.__t;
+    c.classList.add('is-q');
+    wait(650).then(function(){
+      p.innerHTML='<span class="yy-dots" aria-hidden="true"><i></i><i></i><i></i></span>'; c.classList.add('is-a');
+      return wait(1100);
+    }).then(function(){
+      if(window.YY&&YY.type) return YY.type(p,t); p.textContent=t;
+    }).then(function(){ p.style.minHeight=''; c.removeAttribute('aria-busy'); });
+  };
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ io.unobserve(e.target); play(e.target); } }); },{threshold:.55});
+  chats.forEach(function(c){
+    var p=c.querySelector('.yy-chat__b p'); if(!p) return;
+    c.__t=p.textContent; p.style.minHeight=p.offsetHeight+'px'; p.textContent='';
+    c.setAttribute('aria-busy','true'); c.classList.add('is-armed'); io.observe(c);
+    /* dự phòng: nếu vì lý do nào đó không chạy trong 25 giây thì hiện chữ tĩnh */
+    setTimeout(function(){ if(!c.__go){ c.__go=1; p.textContent=c.__t; p.style.minHeight=''; c.classList.add('is-q','is-a'); c.removeAttribute('aria-busy'); } },25000);
+  });
+})();
+</script>
+<script>
+/* Bảng số trực tiếp ở hero. Số = đếm từ website + học viên các lớp trước (hằng số có ghi nguồn ở api/src/stats.js,
+   luôn kèm chú thích). Làm mới mỗi 60 giây khi tab đang mở; số chạy lên khi thay đổi, trừ khi người dùng giảm chuyển động. */
+(function(){
+  var box=document.getElementById('hLive'); if(!box||!window.fetch) return;
+  var still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fmt=function(n){ try{ return Number(n).toLocaleString('vi-VN'); }catch(e){ return String(n); } };
+  var shown={};
+  var put=function(el,to){
+    var from=shown[el.dataset.k]; shown[el.dataset.k]=to;
+    if(from!=null&&from!==to){ el.classList.remove('is-bump'); void el.offsetWidth; el.classList.add('is-bump'); }
+    if(still||from==null||from===to){ el.textContent=fmt(to); return; }
+    var t0=performance.now(), d=900;
+    (function step(t){ var p=Math.min(1,(t-t0)/d), e=1-Math.pow(1-p,3); el.textContent=fmt(Math.round(from+(to-from)*e)); if(p<1) requestAnimationFrame(step); })(t0);
+  };
+  var load=function(){
+    fetch('/api/stats',{credentials:'same-origin'}).then(function(r){ return r.ok?r.json():null; }).then(function(d){
+      if(!d) return;
+      var v={ total_learners: d.total_learners!=null?d.total_learners:d.learners,
+              total_lessons_done: d.total_lessons_done!=null?d.total_lessons_done:d.lessons_done,
+              total_cases_done: d.total_cases_done!=null?d.total_cases_done:(d.cases_done||0) };
+      [].forEach.call(box.querySelectorAll('dd[data-k]'),function(el){ var n=v[el.dataset.k]; if(n>=0) put(el,n); });
+      var pr=d.prior||{};
+      document.getElementById('hLiveSrc').textContent=(pr.learners||pr.lessons_done||pr.cases_done)
+        ?'Gồm '+fmt(pr.learners||0)+' học viên, '+fmt(pr.lessons_done||0)+' lượt hoàn thành bài và '+fmt(pr.cases_done||0)+' lượt giải case từ các lớp trước; phần còn lại đếm trực tiếp trên website.':'';
+      if(box.hidden){ box.hidden=false; requestAnimationFrame(function(){ box.classList.add('is-on'); }); }
+    }).catch(function(){});
+  };
+  load(); setInterval(function(){ if(!document.hidden) load(); },60000);
+})();
 YY.mount({
   mode:'landing', base:'',
-  greet:'Chào bạn! Mình là Ý Ý — bạn đồng hành học marketing. Mình có thể kể bạn nghe nền tảng này học thế nào, miễn phí ra sao, và nên bắt đầu từ đâu.',
+  greet:'Chào bạn! Mình là Ý Ý, bạn đồng hành học marketing. Mình có thể kể bạn nghe nền tảng này học thế nào, miễn phí ra sao, và nên bắt đầu từ đâu.',
   chips:['Học ở đây thế nào?','Có miễn phí không?','Nên bắt đầu từ đâu?','Case có bấm giờ là gì?'],
   go:function(h){ location.href='dang-nhap.html?next='+encodeURIComponent('/'+h); },
   onReady:function(){

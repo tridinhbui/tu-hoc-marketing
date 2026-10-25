@@ -664,3 +664,181 @@ main{overflow-x:clip}
 
 /* iOS Safari tự phóng to trang khi ô nhập có chữ < 16px: trên màn cảm ứng mọi ô nhập dùng 16px */
 @media (hover:none) and (pointer:coarse){input:not([type=checkbox]):not([type=radio]):not([type=range]),select,textarea{font-size:16px!important}}
+
+/* ====================== SỐ TRỰC TIẾP Ở HERO ====================== */
+.hero{grid-template-rows:clamp(96px,13vh,140px) auto auto auto 1fr auto}
+.h-live{grid-column:1/13;grid-row:6;z-index:4;position:relative;display:flex;align-items:flex-end;gap:clamp(18px,3vw,48px);flex-wrap:wrap;
+  margin:clamp(26px,4vh,44px) 0 clamp(26px,4vh,40px);padding-top:18px;border-top:1px solid rgba(242,233,216,.16)}
+.h-live[hidden]{display:none}
+.h-live{opacity:0;translate:0 10px;transition:opacity .7s ease,translate .7s ease}.h-live.is-on{opacity:1;translate:0 0}
+.h-live__k{margin:0 0 6px;display:flex;align-items:center;gap:9px;font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--or)}
+.h-live__k i{width:8px;height:8px;border-radius:50%;background:var(--or);box-shadow:0 0 0 0 rgba(238,106,48,.55);animation:hLivePulse 2.4s ease-out infinite}
+@keyframes hLivePulse{0%{box-shadow:0 0 0 0 rgba(238,106,48,.55)}70%{box-shadow:0 0 0 9px rgba(238,106,48,0)}100%{box-shadow:0 0 0 0 rgba(238,106,48,0)}}
+.h-live__n{display:flex;gap:clamp(20px,3.4vw,56px);margin:0;flex-wrap:wrap}
+.h-live__n div{display:flex;flex-direction:column-reverse;gap:6px;min-width:0}
+.h-live__n dd{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,3.2vw,3rem);line-height:1;color:var(--iv);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.h-live__n dt{font-size:12.5px;color:var(--muted-d)}
+.h-live__src{flex:0 1 44ch;margin:0 0 0 auto;max-width:44ch;font-size:12px;line-height:1.5;color:var(--muted-d);text-align:right;align-self:flex-end}
+@media (max-width:999px){
+  .hero{grid-template-rows:96px auto auto auto auto auto}
+  .h-live{gap:16px}
+  .h-live__n{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .h-live__n dd{font-size:clamp(1.45rem,7vw,2.2rem)}
+  .h-live__n dt{font-size:11.5px;line-height:1.35}
+  .h-live__src{text-align:left;flex-basis:100%}
+}
+@media (prefers-reduced-motion:reduce){.h-live__k i{animation:none}.h-live{transition:none;translate:none}}
+
+/* ====================== LAB: BỚT KHOẢNG TRỐNG (desktop) ======================
+   Trước: đoạn mô tả nằm ở cột 8–13, cách tiêu đề ~500px; giữa bàn có một ô trống ~570×450px
+   vì ảnh "Thử thách tiếp theo" nằm sát đáy (top:56%). Giờ đoạn mô tả đứng gần tiêu đề, ảnh lấp chỗ giữa bàn. */
+@media (min-width:1000px){
+  .lab-title{grid-row:2;grid-column:1/8}
+  .lab-p{grid-row:2;grid-column:6/11;align-self:end}
+  .lab-hint{grid-row:3;grid-column:6/11}
+}
+/* Dời ảnh vào giữa bàn chỉ khi bàn đủ rộng; 1000–1279px ảnh chồng lên brief nên giữ vị trí cũ */
+@media (min-width:1280px){
+  .nx{top:20%;left:41%}
+  .desk{min-height:clamp(620px,48vw,760px)}
+}
+
+/* ====================== VỪA MỘT MÀN HÌNH (desktop ≥1000px) ======================
+   Gốc vấn đề: cỡ chữ tiêu đề, ảnh và khoảng đệm chỉ co theo CHIỀU RỘNG (vw). Màn rộng mà thấp (1874×880, 1440×760,
+   1366×680) thì hero cao 1,3 màn, section mổ xẻ case ~3 màn. Ở đây mọi kích thước lớn bị chặn thêm theo CHIỀU CAO (vh):
+   lấy số nhỏ hơn giữa hai cách tính, nên màn vuông vẫn như cũ, màn rộng-thấp được thu lại. */
+@media (min-width:1000px){
+  .sec{padding-top:clamp(56px,min(8vw,10vh),130px);padding-bottom:clamp(56px,min(8vw,10vh),130px)}
+
+  /* Hero: tiêu đề, ảnh, mô tả, CTA và dải số trực tiếp nằm gọn trong 100svh */
+  .hero{min-height:100svh;grid-template-rows:clamp(92px,11.5vh,130px) auto auto auto auto auto}
+  .h-title{font-size:clamp(2.7rem,min(9.6vw,12svh),10.6rem);padding-bottom:clamp(4px,1vh,16px)}
+  .h-photo{margin-top:clamp(20px,4vh,60px);width:min(100%,46svh);justify-self:end}
+  .h-lead{margin-top:clamp(14px,2.6vh,40px)}
+  .h-cta{margin-top:clamp(14px,2.6vh,40px)}
+  .h-live{margin:clamp(14px,2.4vh,34px) 0 clamp(14px,2.4vh,30px);padding-top:clamp(10px,1.6vh,18px)}
+  .h-live__n dd{font-size:clamp(1.7rem,min(3.2vw,5.4vh),3rem)}
+  .h-scrap{top:calc(clamp(92px,11.5vh,130px) + 2vh)}
+
+  .mani{padding-top:clamp(70px,min(10vw,12vh),150px)}
+  .mani-text{font-size:clamp(1.7rem,min(4.1vw,6.4vh),4.2rem)}
+  .cases-title{font-size:clamp(2rem,min(4.2vw,7vh),4.5rem)}
+
+  /* Mổ xẻ case: tiêu đề, ảnh dính (sticky) và từng bước */
+  .ana-title{font-size:clamp(2.6rem,min(7.4vw,10.5vh),7.6rem)}
+  .ana-spec{width:min(100%,62vh)}
+  .ana-step{padding:clamp(10px,min(1.4vw,1.9vh),22px) 0 clamp(12px,min(1.8vw,2.3vh),28px)}
+  .ana-step .n{font-size:clamp(2.2rem,min(4vw,6.4vh),4.4rem)}
+  /* Số thứ tự đứng cạnh nội dung thay vì chiếm một dòng riêng: mỗi bước thấp đi ~70px */
+  .ana-step{display:grid;grid-template-columns:clamp(64px,min(6vw,9vh),96px) minmax(0,1fr);column-gap:clamp(12px,1.6vw,24px);align-items:start}
+  .ana-step>*{grid-column:2}
+  .ana-step>.n{grid-column:1;grid-row:1/span 4}
+  .ana-step .k{margin-top:2px}
+
+  /* Phương pháp: các bậc thang chữ lớn */
+  .met-title{font-size:clamp(2.1rem,min(4.8vw,7.6vh),5rem)}
+  .rung h3{font-size:clamp(2.1rem,min(5.4vw,8vh),5.6rem)}
+  .rung{padding:clamp(4px,min(.8vw,1.1vh),12px) 0}
+  .rung p{margin-top:2px}
+  .sk-title{font-size:clamp(1.9rem,min(4.2vw,6.8vh),4.2rem)}
+  .sk h3{font-size:clamp(1.5rem,min(3.1vw,5vh),3.1rem)}
+  .sk{padding:clamp(9px,min(1.3vw,1.8vh),20px) 0}
+  .skills{padding-top:clamp(40px,min(5vw,7vh),84px);padding-bottom:clamp(40px,min(5vw,7vh),84px)}
+  .road-sky{padding-top:clamp(52px,min(6vw,8vh),100px)}
+  /* Ảnh tròn ở góc phải: nhỏ hơn và cao hơn để không đè lên đoạn mô tả bên dưới */
+  .met-pic{width:clamp(110px,min(14vw,19vh),220px);top:clamp(56px,min(7vw,8vh),110px)}
+  /* Đoạn mô tả đứng cùng hàng với tiêu đề thay vì xuống hàng riêng ở cột phải */
+  .ana-head .kick{grid-row:1}
+  .ana-title{grid-row:2;grid-column:1/9}
+  .ana-p{grid-row:2;grid-column:9/13;align-self:end;margin:0}
+
+  /* Lab, lộ trình, vũ trụ thương hiệu, cộng đồng */
+  .lab-title{font-size:clamp(2.4rem,min(5.8vw,9.4vh),6rem)}
+  .road-title{font-size:clamp(2.2rem,min(5.2vw,8.4vh),5.4rem)}
+  .road-map{height:clamp(320px,min(34vw,54vh),480px)}
+  .uni-title{font-size:clamp(2.3rem,min(5.8vw,9.4vh),6rem);grid-row:2;grid-column:1/8}
+  /* Đoạn mô tả lên cùng hàng tiêu đề (cột phải) để bức tường ảnh bắt đầu sớm hơn */
+  .uni-p{grid-row:2;grid-column:8/13;align-self:end;margin:0;max-width:46ch}
+  .wall{height:clamp(540px,min(52vw,76vh),800px);max-width:min(100%,150vh);margin-inline:auto}
+  .comm-title{font-size:clamp(2rem,min(5vw,8vh),5.2rem)}
+  .chal-q{font-size:clamp(1.6rem,min(3.8vw,6vh),3.7rem)}
+  .stats b{font-size:clamp(2.2rem,min(5.2vw,8vh),5rem)}
+}
+/* Hero tablet & điện thoại: tiêu đề và ảnh co theo chiều cao màn hình để CTA và dải số trực tiếp lên gần màn đầu */
+@media (max-width:999px){
+  .hero{grid-template-rows:96px auto auto auto auto auto;padding-bottom:4px}
+  .h-photo{width:min(100%,36svh);justify-self:end}
+  .h-photo .ph{aspect-ratio:1/1}
+  .h-title{font-size:clamp(2.6rem,min(13.5vw,8.6svh),7rem);margin-top:max(-18vw,-12svh)}
+  .h-lead{margin-top:clamp(12px,2svh,24px)}
+  .h-cta{margin-top:clamp(12px,2svh,24px)}
+  .h-live{margin:clamp(14px,2.4svh,26px) 0 clamp(8px,1.6svh,18px);padding-top:12px}
+}
+@media (min-width:600px) and (max-width:999px){
+  .h-photo{width:min(100%,32svh)}
+  .h-title{font-size:clamp(2.6rem,min(13.5vw,7.4svh),7rem)}
+}
+
+/* ====================== GỌN HƠN NỮA: PHƯƠNG PHÁP & LAB (desktop) ====================== */
+@media (min-width:1000px){
+  /* Bậc thang: mô tả đứng cùng dòng với chữ lớn (cột phải) thay vì xuống dòng riêng; chữ lớn nhỏ lại theo chiều cao */
+  .rung{grid-template-columns:clamp(40px,6vw,90px) auto minmax(0,1fr);align-items:baseline;column-gap:clamp(14px,2vw,32px)}
+  .rung h3{font-size:clamp(2rem,min(4.6vw,7vh),4.8rem)}
+  .rung p{grid-column:3;margin:0;align-self:center}
+  .met-top{margin-bottom:clamp(14px,2.4vh,32px)}
+}
+@media (min-width:1280px){
+  /* Bàn Lab: thấp hơn theo chiều cao màn hình; brief và ảnh "Test. Fail. Learn." gọn lại để không chồng nội dung */
+  .desk{min-height:clamp(560px,min(46vw,72vh),740px)}
+  .brief{padding:clamp(18px,min(2vw,2.6vh),30px)}
+  .brief h3{font-size:clamp(1.4rem,min(2vw,3.6vh),2rem)}
+  .acc__b{padding:9px 2px}
+  .nb{width:min(25%,38vh,320px)}
+  .nb .hand{font-size:clamp(16px,1.2vw,19px);line-height:1.15;white-space:nowrap}
+  .nb img{aspect-ratio:1.35}
+  .log{width:min(34%,400px)}
+  .lab-head{margin-bottom:clamp(8px,1.6vh,22px)}
+}
+
+/* Ký hiệu LIVE: nhãn viên thuốc, chấm đỏ nhấp nháy, viền phát sáng; số nháy cam khi vừa tăng */
+.h-live__k{gap:12px;margin-bottom:8px;letter-spacing:normal;text-transform:none}
+.h-live__badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 10px;border-radius:999px;
+  font:800 11.5px/1 var(--sans);letter-spacing:.18em;color:#ffb38f;background:rgba(238,106,48,.14);
+  border:1px solid rgba(238,106,48,.6);box-shadow:0 0 0 0 rgba(238,106,48,.0),0 0 22px -4px rgba(238,106,48,.55);
+  animation:hLiveGlow 2.4s ease-in-out infinite}
+.h-live__badge i{width:8px;height:8px;border-radius:50%;background:#ff4b2b;box-shadow:0 0 0 0 rgba(255,75,43,.6);animation:hLivePulse 1.6s ease-out infinite}
+@keyframes hLivePulse{0%{box-shadow:0 0 0 0 rgba(255,75,43,.65)}70%{box-shadow:0 0 0 8px rgba(255,75,43,0)}100%{box-shadow:0 0 0 0 rgba(255,75,43,0)}}
+@keyframes hLiveGlow{0%,100%{box-shadow:0 0 22px -6px rgba(238,106,48,.45)}50%{box-shadow:0 0 28px -2px rgba(238,106,48,.75)}}
+.h-live__t{font:500 12.5px/1.2 var(--sans);color:var(--muted-d)}
+.h-live__n dd.is-bump{animation:hLiveBump 1.4s ease-out}
+@keyframes hLiveBump{0%{color:var(--or);text-shadow:0 0 18px rgba(238,106,48,.6)}100%{color:var(--iv);text-shadow:none}}
+@media (prefers-reduced-motion:reduce){.h-live__badge,.h-live__badge i,.h-live__n dd.is-bump{animation:none}}
+/* Con dấu tròn trang trí đè lên hàng số trực tiếp: ẩn khi dải số đang hiện */
+.hero:has(.h-live:not([hidden])) .h-stamp{display:none!important}
+
+/* ====================== HỎI NHANH Ý Ý (hội thoại cố định trong section) ======================
+   Chữ có sẵn trong HTML (đọc được khi tắt JS / giảm chuyển động); JS chỉ phát lại: câu hỏi hiện, ba chấm, Ý Ý gõ trả lời. */
+.yy-chat{display:grid;gap:10px;max-width:440px;font-size:14.5px;line-height:1.55;position:relative;z-index:4}
+.yy-chat__q{justify-self:end;margin:0;max-width:88%}
+.yy-chat__q span{display:inline-block;padding:10px 15px;border-radius:18px 18px 4px 18px;background:var(--ink);color:var(--iv);font-weight:500}
+.yy-chat__a{display:flex;gap:10px;align-items:flex-start}
+.yy-chat__av{flex:none;width:36px;height:36px;border-radius:50%;overflow:hidden;background:#fff3e8;box-shadow:0 6px 16px -6px rgba(200,110,60,.55)}
+.yy-chat__av img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.12)}
+.yy-chat__b{flex:1;min-width:0;background:#fffaf2;color:var(--ink);border:1px solid rgba(26,20,15,.12);border-radius:4px 18px 18px 18px;padding:10px 15px 12px;box-shadow:0 16px 28px -18px rgba(40,25,10,.5)}
+.yy-chat__b b{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tc);margin-bottom:4px}
+.yy-chat__b p{margin:0}
+.yy-chat--tc .yy-chat__q span{background:rgba(26,20,15,.42);color:#fbf1e6}
+.yy-chat.is-armed .yy-chat__q,.yy-chat.is-armed .yy-chat__a{opacity:0;translate:0 10px;transition:opacity .45s ease,translate .45s ease}
+.yy-chat.is-q .yy-chat__q,.yy-chat.is-a .yy-chat__a{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.yy-chat.is-armed .yy-chat__q,.yy-chat.is-armed .yy-chat__a{opacity:1;translate:none;transition:none}}
+
+/* vị trí: đặt vào chỗ trống sẵn có của từng section */
+.mani-in .yy-chat,.ana-head .yy-chat,.lab-head .yy-chat{grid-column:1/13;margin-top:24px}
+@media (min-width:1000px){
+  .mani-in .yy-chat{grid-column:6/10;grid-row:3;align-self:start;justify-self:center;width:100%;margin-top:clamp(22px,3vw,44px)}
+  .ana-title{grid-row:2/4}
+  .ana-head .yy-chat{grid-column:9/13;grid-row:3;margin-top:clamp(14px,2vh,24px);align-self:start}
+  .lab-head .yy-chat{grid-column:1/6;grid-row:3;margin-top:clamp(8px,1.4vh,16px);align-self:start}
+}
+@media (min-width:561px) and (max-width:999px){.mani-in .yy-chat{grid-row:4}}
+@media (max-width:560px){.mani-in .yy-chat{grid-row:5}}

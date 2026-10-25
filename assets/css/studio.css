@@ -7,7 +7,7 @@
   --st-ivory:#F7F0E4; --st-paper:#FFFBF3; --st-sand:#EDDFCB;
   --st-terra:#C4532D; --st-terra-d:#9E3F1F; --st-blush:#F1CDBD; --st-peach:#F8E2D2;
   --st-sage:#A3B296; --st-sage-d:#5F7352; --st-espresso:#2A1A12; --st-gold:#D9A441;
-  --st-ink:#2A1A12; --st-ink-2:rgba(42,26,18,.72); --st-ink-3:rgba(42,26,18,.58);
+  --st-ink:#2A1A12; --st-ink-2:rgba(42,26,18,.72); --st-ink-3:rgba(42,26,18,.64);
   --st-line:rgba(120,84,50,.14);
   --st-r:26px; --st-r-sm:16px;
   --st-shadow:0 22px 44px -30px rgba(92,48,22,.42);
@@ -260,7 +260,7 @@
 /* ---------- Học theo nghề (bản đồ nghề) ---------- */
 :root[data-theme="ivory"] .cm-tab svg,:root[data-theme="ivory"] .hero__tag .ic,:root[data-theme="ivory"] .track>.ic,:root[data-theme="ivory"] .hud__motto svg,:root[data-theme="ivory"] .hud__title svg{display:none}
 :root[data-theme="ivory"] .cm-chip{border:0;background:none;padding:0;text-transform:none;letter-spacing:0;font:500 14px 'Be Vietnam Pro',sans-serif;color:var(--st-ink-2)}
-:root[data-theme="ivory"] .cm-chip--gold{color:var(--st-gold);font-family:var(--st-ui);font-size:13px;font-weight:600}
+:root[data-theme="ivory"] .cm-chip--gold{color:#7a5410;font-family:var(--st-ui);font-size:13px;font-weight:600}
 :root[data-theme="ivory"] .cm-chip--terra{background:none;color:var(--st-terra);font-family:var(--st-ui);font-size:13px;font-weight:600}
 :root[data-theme="ivory"] .cm-tabs{border-bottom:1px solid var(--st-line);gap:clamp(12px,2.2vw,30px)}
 :root[data-theme="ivory"] .cm-tab{border:0;border-radius:0;background:none;padding:10px 2px 13px;font:500 16px/1.2 var(--st-serif);color:var(--st-ink-3);position:relative}

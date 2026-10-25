@@ -44,7 +44,10 @@ export async function createPost(req, env) {
   if (!u) return json({ error: 'login_required' }, 401);
   const b = await body(req, 30000);
   const kind = KINDS.includes(b.kind) ? b.kind : null;
-  const title = clean(str(b.title, 120)), text = clean(str(b.body, 5000));
+  const text = clean(str(b.body, 5000));
+  /* Đăng kiểu mạng xã hội: không bắt buộc tiêu đề. Bỏ trống thì lấy dòng đầu của nội dung (không đủ 4 ký tự thì lấy 120 ký tự đầu). */
+  let title = clean(str(b.title, 120)).trim();
+  if (!title) { const first = text.trim().split('\n')[0].trim(); title = (first.length >= 4 ? first : text.trim()).slice(0, 120); }
   if (!kind) return json({ error: 'bad_kind' }, 400);
   if (title.length < 4) return json({ error: 'title_too_short' }, 400);
   if (text.length < 20) return json({ error: 'body_too_short' }, 400);
