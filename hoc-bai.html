@@ -329,11 +329,11 @@ svg.i{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-widt
 
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
-<script src="assets/js/data/curriculum.js?v=4"></script>
-<script src="assets/js/data/bai-index.js?v=11"></script>
+<script src="assets/js/data/curriculum.js?v=5"></script>
+<script src="assets/js/data/bai-index.js?v=21"></script>
 <script src="assets/js/data/drills.js?v=3"></script>
 <script src="assets/js/data/cases.js?v=7"></script>
-<script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/app.js?v=22"></script>
 <script>
 /* ---------------- icon ---------------- */
 const P={
@@ -420,7 +420,7 @@ function renderL(){
     return `<div class="stage">
       <button class="stage__h" data-stage="${st.id}" aria-expanded="${expanded}" ${hasCur?'data-lockopen':''}>
         <span class="tile ${si===0?'tile--first':''}" data-n="${String(si+1).padStart(2,'0')}">${ic(TILE[si]||'book')}</span>
-        <span class="stage__t"><span class="tag">Chặng ${si+1}</span>
+        <span class="stage__t"><span class="tag">${st.elective?'Chuyên đề · luôn mở':'Chặng '+(si+1)}</span>
           <h3>${escH(st.t)}</h3><p class="stage__q">${escH(st.q)}</p></span>
         <span class="stage__r"><span class="mini"><i style="width:${pct(d,ks.length)}%"></i></span><span class="cnt">${d}/${ks.length}</span>${ic('down','chev')}</span>
       </button>
@@ -442,7 +442,7 @@ function renderL(){
       <span class="hero__body">
         <span style="display:flex;gap:8px;flex-wrap:wrap"><span class="pill pill--acc"><span class="dot"></span>${cur?'Nhiệm vụ đang học':'Đã xong lộ trình'}</span>
           <span class="pill pill--amber">${ic('spark')}+${XP.lesson} XP khi hoàn thành</span></span>
-        <p class="hero__meta">${cur?`Chặng ${STAGES.indexOf(cw.stage)+1} · Bài ${num(cur)}`:'Tất cả bài trong lộ trình'}</p>
+        <p class="hero__meta">${cur?`${cw.stage.elective?'Chuyên đề':'Chặng '+(STAGES.indexOf(cw.stage)+1)} · Bài ${num(cur)}`:'Tất cả bài trong lộ trình'}</p>
         <h2 class="hero__t">${cur?escH(cm.t):'Bạn đã học hết lộ trình này — sang case có bấm giờ.'}</h2>
         <span class="btn" style="pointer-events:none">${cur?'Học tiếp':'Mở thư viện case'} ${ic('right')}</span>
         <span class="prog">Tiến độ (${doneN}/${keys.length} bài) <span class="bar"><i style="width:${Math.max(2,p)}%"></i></span><b>${p}%</b></span>

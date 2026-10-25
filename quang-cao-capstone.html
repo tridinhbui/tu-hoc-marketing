@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="stylesheet" href="assets/css/case.css?v=21f6">
+<title>Capstone media plan đa kênh — Tự Học Marketing</title>
+<meta name="description" content="Lập media plan đa kênh hoàn chỉnh: mục tiêu, CPA trần, vai trò và ngân sách từng kênh, KPI, quy tắc dừng, đo lường, thử nghiệm, kiểm phần tăng thêm, rủi ro chính sách. Trang tự soát độ nhất quán.">
+<style>
+  .cp-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:32px;align-items:start}
+  @media(max-width:960px){.cp-grid{grid-template-columns:1fr}}
+  .cp-f{display:grid;gap:4px;margin-top:12px}
+  .cp-f textarea,.cp-f input{width:100%;font:inherit}
+  .cp-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  @media(max-width:560px){.cp-row{grid-template-columns:1fr}}
+  .cp-ch{border-top:1px solid var(--ink);padding:12px 0;margin-top:14px}
+  .cp-ch .cp-row{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr)}
+  @media(max-width:560px){.cp-ch .cp-row{grid-template-columns:1fr}}
+  .cp-side{position:sticky;top:12px}
+  @media(max-width:960px){.cp-side{position:static}}
+  .cp-chk li{margin:6px 0;list-style:none;padding-left:22px;position:relative}
+  .cp-chk li::before{position:absolute;left:0;font-family:var(--mono);font-size:12px}
+  .cp-chk li[data-lv="ok"]::before{content:"✓";color:var(--ok)}
+  .cp-chk li[data-lv="warn"]::before{content:"!";color:var(--gold,#9a6a12)}
+  .cp-chk li[data-lv="bad"]::before{content:"✗";color:var(--red)}
+  .cp-chk{padding:0;margin:8px 0}
+</style>
+<link rel="stylesheet" href="assets/css/paper.css?v=12">
+<link rel="stylesheet" href="assets/css/atelier.css?v=27z1">
+</head>
+<body>
+<noscript><div class="nojs"><h1 class="h2">Trang này cần JavaScript</h1><p>Kế hoạch được dựng ngay trong trình duyệt của bạn và đồng bộ vào tài khoản khi đã đăng nhập.</p></div></noscript>
+<main class="wrap" id="app"></main>
+<script src="assets/js/data/lessons.js?v=8"></script>
+<script src="assets/js/data/principles.js?v=8"></script>
+<script src="assets/js/data/curriculum.js?v=5"></script>
+<script src="assets/js/data/bai-index.js?v=21"></script>
+<script src="assets/js/app.js?v=22"></script>
+<script src="assets/js/ads/plan-eval.js?v=1"></script>
+<script>
+appShell('quang-cao.html');
+const P = AdsPlanEval, $app = document.getElementById('app');
+const blankCh = () => ({ name:'', role:'', budget:0, kpi:'', cpa:0, stop:'', track:false });
+const load = () => { const a = (S.get().flags || {}).ads || {}; return a.plan && a.plan.p ? a.plan.p : { ...P.sample(), sample:true }; };
+let plan = load();
+const save = () => { const s = S.get(), a = { ...((s.flags || {}).ads || {}) }; const list = P.check(plan);
+  a.plan = { p: plan, ready: P.summary(list).ready && !plan.sample, at: Date.now() };
+  S.set({ flags: { ...(s.flags || {}), ads: a } }); if (typeof scheduleSync === 'function') scheduleSync(); };
+
+const F = (k, label, v, attrs = '', ta = false) => `<label class="cp-f"><span class="mono">${label}</span>${ta
+  ? `<textarea class="field" rows="2" data-k="${k}" ${attrs}>${escH(v ?? '')}</textarea>` : `<input class="field" data-k="${k}" value="${escH(v ?? '')}" ${attrs}>`}</label>`;
+
+function checks() {
+  const list = P.check(plan), sm = P.summary(list);
+  return `<p class="mono">${sm.bad} cần sửa · ${sm.warn} lưu ý · ${sm.ok} ổn</p>
+    <ul class="cp-chk">${list.map(x => `<li data-lv="${x.lv}">${escH(x.msg)}</li>`).join('')}</ul>
+    ${sm.ready && !plan.sample ? '<p class="note">Không còn mục "cần sửa". Kế hoạch đủ để trình bày; phần "lưu ý" là chỗ người duyệt sẽ hỏi.</p>' : ''}`;
+}
+function render() {
+  $app.innerHTML = `<section class="section" style="padding-bottom:8px">
+    <a class="small" href="quang-cao.html">← Khoá Quảng cáo đa nền tảng</a>
+    <span class="mono mono--red" style="display:block;margin-top:10px">Capstone</span>
+    <h1 class="h2" style="margin:8px 0">Media plan đa kênh cho một tháng</h1>
+    <p class="lede" style="max-width:66ch">Dùng một trong ba case (Bếp Nhà Lá, Nội thất An Cư, KhoViệt) hoặc doanh nghiệp của chính bạn. Trang không chấm chiến lược đúng/sai; nó soát xem các con số có khớp nhau và có đủ những thứ một kế hoạch thật phải có hay không.</p>
+    ${plan.sample ? `<p class="note">Đang hiện <b>kế hoạch mẫu</b> của case Bếp Nhà Lá (số liệu giả định). Sửa trực tiếp, hoặc <button class="btn btn--quiet" data-act="blank">bắt đầu từ trang trắng</button>.</p>` : ''}
+  </section>
+  <section class="section cp-grid" style="padding-top:8px">
+    <div>
+      ${F('name', 'Tên kế hoạch', plan.name)}
+      ${F('goal', 'Mục tiêu kinh doanh (có số và thời hạn)', plan.goal, '', true)}
+      <div class="cp-row">
+        ${F('aov', 'Giá trị đơn / hợp đồng (đ)', plan.aov, 'type="number" inputmode="numeric" min="0"')}
+        ${F('margin', 'Biên đóng góp (%)', Math.round((+plan.margin || 0) * 1000) / 10, 'type="number" inputmode="decimal" min="0" max="100" step="0.1"')}
+        ${F('budget', 'Ngân sách (triệu/tháng)', plan.budget, 'type="number" inputmode="decimal" min="0"')}
+      </div>
+      <h2 class="h3" style="margin-top:24px">Kênh</h2>
+      ${plan.channels.map((c, i) => `<div class="cp-ch">
+        <div class="cp-row">${F('ch.' + i + '.name', 'Kênh', c.name)}${F('ch.' + i + '.budget', 'Ngân sách (triệu)', c.budget, 'type="number" inputmode="decimal" min="0"')}${F('ch.' + i + '.cpa', 'CPA mục tiêu (đ)', c.cpa, 'type="number" inputmode="numeric" min="0"')}</div>
+        <div class="cp-row">${F('ch.' + i + '.role', 'Vai trò', c.role)}${F('ch.' + i + '.kpi', 'KPI chính', c.kpi)}
+          <label class="cp-f"><span class="mono">Đã có cách đo?</span><span class="row" style="gap:8px"><input type="checkbox" data-k="ch.${i}.track" ${c.track ? 'checked' : ''}> Pixel/tag, server, UTM hoặc CRM</span></label></div>
+        ${F('ch.' + i + '.stop', 'Quy tắc dừng / tăng tiền', c.stop, '', true)}
+        <button class="btn btn--quiet" data-del="${i}" style="margin-top:8px">Bỏ kênh này</button></div>`).join('')}
+      <button class="btn btn--ghost" data-act="add" style="margin-top:12px">+ Thêm kênh</button>
+      ${F('test', 'Thử nghiệm tháng này (giả thuyết, một biến, chỉ số, thời gian)', plan.test, '', true)}
+      ${F('incr', 'Cách kiểm phần tăng thêm', plan.incr, '', true)}
+      ${F('risk', 'Rủi ro chính sách và luật cần kiểm', plan.risk, '', true)}
+      <div class="row" style="gap:10px;margin:22px 0 40px"><button class="btn btn--primary" data-act="export">Tải file .txt</button>
+        <a class="btn btn--quiet" href="bai.html?id=B%3Aqc11-06">Bài: báo cáo cho sếp/khách</a></div>
+    </div>
+    <aside class="cp-side"><h2 class="h3">Tự soát</h2><div id="chk">${checks()}</div>
+      <p class="small muted">Ngưỡng "kết quả/tuần" là ngưỡng của bài tập để bạn thấy khi nào tiền bị chia quá mỏng, không phải quy định của nền tảng.</p></aside>
+  </section>`;
+}
+const setK = (k, v) => {
+  const num = ['aov', 'budget', 'margin'];
+  if (k.startsWith('ch.')) { const [, i, f] = k.split('.'); plan.channels[+i][f] = f === 'budget' || f === 'cpa' ? +v || 0 : v; }
+  else plan[k] = k === 'margin' ? (+v || 0) / 100 : num.includes(k) ? +v || 0 : v;
+  if (plan.sample) plan.sample = false;
+};
+$app.addEventListener('input', e => { const k = e.target.dataset.k; if (!k || e.target.type === 'checkbox') return; setK(k, e.target.value); save(); document.getElementById('chk').innerHTML = checks(); });
+$app.addEventListener('change', e => { const k = e.target.dataset.k; if (!k || e.target.type !== 'checkbox') return; setK(k, e.target.checked); save(); document.getElementById('chk').innerHTML = checks(); });
+$app.addEventListener('click', e => {
+  const t = e.target.closest('button'); if (!t) return;
+  if (t.dataset.del !== undefined) { plan.channels.splice(+t.dataset.del, 1); plan.sample = false; save(); return render(); }
+  const a = t.dataset.act;
+  if (a === 'add') { plan.channels.push(blankCh()); plan.sample = false; save(); render(); }
+  if (a === 'blank') { plan = { name:'', goal:'', aov:0, margin:0, budget:0, channels:[blankCh(), blankCh()], test:'', incr:'', risk:'' }; save(); render(); }
+  if (a === 'export') { const blob = new Blob([P.text(plan)], { type:'text/plain;charset=utf-8' }), u = URL.createObjectURL(blob), l = document.createElement('a');
+    l.href = u; l.download = 'media-plan-' + (plan.name || 'ke-hoach').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '.txt';
+    document.body.appendChild(l); l.click(); l.remove(); setTimeout(() => URL.revokeObjectURL(u), 1000); }
+});
+render();
+</script>
+<script src="assets/js/paper.js?v=7"></script>
+</body>
+</html>

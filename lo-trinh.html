@@ -13,19 +13,19 @@
 <main id="app"></main>
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
-<script src="assets/js/data/curriculum.js?v=4"></script>
-<script src="assets/js/data/bai-index.js?v=11"></script>
+<script src="assets/js/data/curriculum.js?v=5"></script>
+<script src="assets/js/data/bai-index.js?v=21"></script>
 <script src="assets/js/data/drills.js?v=3"></script>
 <script src="assets/js/data/cases.js?v=7"></script>
-<script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/app.js?v=22"></script>
 <script src="assets/js/hub.js?v=2"></script>
 <script>
 appShell('lo-trinh.html');
-const A=Hub.art, stages=(typeof STAGES!=='undefined'?STAGES:[]), nLessons=stages.reduce((a,s)=>a+s.mods.reduce((b,m)=>b+m.lessons.length,0),0);
+const A=Hub.art, ads=(typeof STAGES!=='undefined'?STAGES:[]).find(s=>s.elective), stages=(typeof STAGES!=='undefined'?STAGES:[]).filter(s=>!s.elective), nLessons=stages.reduce((a,s)=>a+s.mods.reduce((b,m)=>b+m.lessons.length,0),0);
 const careers=(typeof PATHS!=='undefined'?PATHS:[]).filter(p=>p.id!=='full');
 Hub.render({ key:'lo-trinh', kicker:'Lộ trình học',
   title:'Học theo lộ trình chung từ số 0, hay đi thẳng vào <em>nghề bạn nhắm tới?</em>',
-  sub:'Hai lối vào cùng một kho bài. Đổi lối lúc nào cũng được, tiến độ vẫn giữ nguyên.',
+  sub:'Ba lối vào cùng một kho bài. Đổi lối lúc nào cũng được, tiến độ vẫn giữ nguyên.',
   cards:[
     { id:'full', href:'bat-dau.html', title:'Bắt đầu từ đầu', cta:'Vào Bắt đầu từ đầu',
       desc:'Đi đủ '+stages.length+' chặng theo thứ tự, mỗi bài khoảng 6 phút. Hợp với người mới chưa biết marketing.',
@@ -35,6 +35,10 @@ Hub.render({ key:'lo-trinh', kicker:'Lộ trình học',
       desc:'Chọn một vùng nghề như Brand, Performance hay Content, rồi đi đúng chuỗi bài nghề đó cần.',
       meta:careers.length+' vùng nghề · nhiệm vụ ưu tiên theo khoảng cách kỹ năng',
       art:A.career(careers.slice(0,6).map(p=>p.t),3) },
+    { id:'ads', href:'quang-cao.html', title:'Khoá Quảng cáo đa nền tảng', cta:'Vào khoá Quảng cáo',
+      desc:'Luôn mở: lập kế hoạch, dựng, đo và tối ưu chiến dịch trên Meta, Google, TikTok, Zalo, Shopee/Lazada, LinkedIn. Có 3 case xuyên suốt và capstone.',
+      meta:(ads?ads.mods.reduce((b,m)=>b+m.lessons.length,0):0)+' bài · '+(ads?ads.mods.length:0)+' module · chuyên đề',
+      art:A.path(['Kế hoạch','Đọc số','Meta','Google','TikTok','Zalo · Sàn'],0,['Chuyên đề','Luôn mở']) },
   ]});
 </script>
 </body>

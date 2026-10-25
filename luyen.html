@@ -29,15 +29,15 @@
 
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
-<script src="assets/js/data/curriculum.js?v=4"></script>
-<script src="assets/js/data/bai-index.js?v=11"></script>
+<script src="assets/js/data/curriculum.js?v=5"></script>
+<script src="assets/js/data/bai-index.js?v=21"></script>
 <script src="assets/js/data/drills.js?v=3"></script>
 <script src="assets/js/data/exam-items.js?v=9"></script>
 <script>/* module bài mới: tải câu hỏi của module đó */
 (()=>{ const m=new URLSearchParams(location.search).get('mod')||''; if(BAI_MODS.some(x=>x.id===m))
   document.write('<script src="assets/js/data/bai/'+m+'.js?v='+BAI_V+'"><\/script>'); })();</script>
 <script src="assets/js/data/exams.js?v=10"></script>
-<script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/app.js?v=22"></script>
 <script src="assets/js/exam.js?v=9f1"></script>
 <script>
 appShell('luyen.html');
@@ -52,7 +52,7 @@ function intro(){
     <a class="btn" href="ban-do.html">Về bản đồ</a></section>`; return; }
   const rec = (S.get().modq || {})[MID], n = Math.min(PRACTICE_MAX, practicePool(MID).length);
   app.innerHTML = `<section class="section">
-    <span class="mono mono--red">Luyện cuối module · Chặng ${STAGE.n}</span>
+    <span class="mono mono--red">Luyện cuối module · ${STAGE.elective?'Chuyên đề':'Chặng '+STAGE.n}</span>
     <h1 class="h1" style="margin:14px 0 16px">${escH(MOD.t)}</h1>
     <p class="lede">${n} câu. Trả lời xong mỗi câu là đọc được ngay vì sao đúng — và vì sao từng phương án kia sai.
       Không tính điểm thi, không khoá, làm lại bao nhiêu lần cũng được.</p>

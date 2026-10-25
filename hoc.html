@@ -82,12 +82,12 @@
 
 <script src="assets/js/data/lessons.js?v=8"></script>
 <script src="assets/js/data/principles.js?v=8"></script>
-<script src="assets/js/data/curriculum.js?v=4"></script>
-<script src="assets/js/data/bai-index.js?v=11"></script>
+<script src="assets/js/data/curriculum.js?v=5"></script>
+<script src="assets/js/data/bai-index.js?v=21"></script>
 <script src="assets/js/data/drills.js?v=3"></script>
 <script src="assets/js/data/cases.js?v=7"></script>
 <script src="assets/js/data/exam-items.js?v=9"></script>
-<script src="assets/js/app.js?v=21"></script>
+<script src="assets/js/app.js?v=22"></script>
 <script src="assets/js/social-ui.js?v=7"></script>
 <script src="assets/js/lvart.js?v=2"></script>
 <script>
@@ -155,7 +155,7 @@ function renderDashboard(user) {
   const heroPhoto = 'assets/img/' + PHOTO[Math.max(0, stageN - 1) % PHOTO.length];
   const words = title.split(/\s+/), cut = words.length > 3 ? Math.ceil(words.length * 0.6) : words.length;
   const titleHtml = words.length > 3 ? escH(words.slice(0, cut).join(' ')) + ' <em>' + escH(words.slice(cut).join(' ')) + '</em>' : '<em>' + escH(title) + '</em>';
-  const stageInfo = STAGES.map((st, si) => {
+  const stageInfo = STAGES.filter((st) => !st.elective).map((st, si) => {   // chặng chuyên đề không nằm trên con đường sáu chặng
     const ks = st.mods.flatMap((m) => m.lessons), d = ks.filter((k) => s.done[k]).length;
     return { st, si, n: ks.length, d, first: ks.find((k) => !s.done[k]) || ks[0] };
   });
@@ -163,13 +163,13 @@ function renderDashboard(user) {
   const left0 = L0.next ? Math.max(1, Math.ceil((L0.next - s.xp) / XP.lesson)) : 0;
   const story = doneCount === 0
     ? `Bạn chưa đi bước nào — chặng đầu tiên là <b>${escH(STAGES[0].t)}</b>. Mỗi bài chỉ mất vài phút.`
-    : `Bạn đã đi <b>${doneCount}</b> trên ${totalLessons} bài, hiện ở chặng ${stageN}: <b>${escH(STAGES[hereIdx].t)}</b>.${left0 ? ' Khoảng ' + left0 + ' bài nữa là lên cấp ' + (L0.n + 1) + '.' : ''}`;
+    : `Bạn đã đi <b>${doneCount}</b> trên ${totalLessons} bài, hiện ở ${w && w.stage.elective ? '' : 'chặng ' + stageN + ': '}<b>${escH(STAGES[hereIdx].t)}</b>.${left0 ? ' Khoảng ' + left0 + ' bài nữa là lên cấp ' + (L0.n + 1) + '.' : ''}`;
 
   app.innerHTML = `
   <div class="at-dash">
     <header class="at-hero">
       <div class="at-hero__txt">
-        <p class="at-kick">Chặng ${stageN} · Bài ${lessonN} <span>${isNew ? 'Bài đầu tiên của bạn' : 'Nhiệm vụ đang học'}</span></p>
+        <p class="at-kick">${w && w.stage.elective ? 'Chuyên đề' : 'Chặng ' + stageN} · Bài ${lessonN} <span>${isNew ? 'Bài đầu tiên của bạn' : 'Nhiệm vụ đang học'}</span></p>
         ${hello ? `<p class="at-hello">${hello}${isNew ? 'mình bắt đầu từ đây nhé.' : 'tiếp tục nhé.'}</p>` : '<p class="at-hello">Hôm nay, ta bắt đầu từ đây.</p>'}
         <h1 class="at-display">${titleHtml}</h1>
         ${isNew ? '<p class="at-hello">Mỗi bài khoảng 6 phút: đọc, một câu dừng giữa bài, rồi 5 câu kiểm tra nhanh. Làm xong được +10 XP.</p>' : ''}

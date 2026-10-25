@@ -33,6 +33,7 @@ function pathLessons(pathId){ const p=PATHS.find(x=>x.id===pathId); return (p&&p
 /* Chặng mở khi chặng trước xong ít nhất 60%. Chặng 01 luôn mở. Bài trong lộ trình đã chọn luôn mở. */
 function stageOpen(sid,s=S.get()){
   const i=STAGES.findIndex(x=>x.id===sid); if(i<=0) return true;
+  if(STAGES[i].elective) return true;                 // chặng chuyên đề luôn mở
   /* Chặng trước có đề thi thì cổng là đề thi, không phải tỉ lệ bài đã đọc.
      Chặng nào chưa soạn đề thì vẫn dùng luật cũ 60% — không chặn người học vì
      mình chưa viết xong nội dung. */
