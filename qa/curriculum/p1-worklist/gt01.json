@@ -1,0 +1,20 @@
+{
+ "mod": "gt01",
+ "lessons": [
+  {
+   "id": "B:gt01-04",
+   "title": "Vấn đề này là vấn đề của ai?",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ / Q2",
+     "quote": "Giải pháp: giá treo gọn cộng thưởng 20.000đ mỗi tháng",
+     "issue": "Giải pháp được chốt là đúng (Q2a) mà không tính chi phí: mục tiêu 1.000 tạp hoá treo × 20.000đ = 20 triệu/tháng cộng giá treo, trong khi bài không cho doanh số hay lãi mỗi tạp hoá để so; với biên lãi tạp hoá 8%, không rõ 20.000đ có đủ bù chỗ kệ nhường cho hàng lãi hơn không. Quyết định thiếu ràng buộc tiền.",
+     "fix": "Thêm số: doanh số bánh trung bình/tạp hoá/tháng và lãi hãng thu thêm khi treo (ví dụ +300.000đ doanh số, hãng lãi 90.000đ) để chứng minh thưởng 20.000đ có lời; hoặc đặt Q3 thành câu tính hoà vốn của thưởng."
+    }
+   ],
+   "upgrade": "Thêm số để chứng minh giải pháp thưởng có lời (hoà vốn của 20.000đ/tháng); nêu cỡ mẫu và cách kiểm lại; thêm phản ví dụ và đào sâu như các bài khác; thay Q5 (L2) bằng câu tính chi phí chương trình treo so với lãi tăng thêm; thêm bước làm \"đi dọc chuỗi\" (ghé bao nhiêu điểm, hỏi gì)."
+  }
+ ]
+}

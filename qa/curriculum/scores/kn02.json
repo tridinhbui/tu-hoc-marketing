@@ -1,0 +1,555 @@
+{
+  "mod": "kn02",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn02-01",
+      "scores": {
+        "accuracy": 13,
+        "depth": 9,
+        "practical": 13,
+        "examples": 9,
+        "pedagogy": 7,
+        "assessment": 7,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 69,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L4",
+        "L2",
+        "L4",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q7",
+          "quote": "Khách chưa kịp biết nên cần thêm vài tháng là doanh số tự tăng theo",
+          "issue": "Stem hỏi \"Điều gì có khả năng đang xảy ra?\" nhưng b (độ trễ sell-out sau khi mở điểm) là giả thuyết có thật trong FMCG và không bị dữ kiện loại bỏ; lời giải tự thừa nhận \"Có thể có độ trễ\". Đáp án a chỉ là giả thuyết *kiểm được ngay*, không phải giả thuyết duy nhất hợp lý.",
+          "fix": "Đổi stem thành \"Giả thuyết nào kiểm được ngay bằng dữ liệu đã có?\" hoặc thêm dữ kiện \"các điểm mới đã có hàng 2 tháng\" để loại b."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "400 điểm bán cả ngành hàng bán 100.000 lon mỗi tháng. 120 điểm có hàng của bạn bán tổng 60.000 lon",
+          "issue": "Số không gắn nhãn minh hoạ; không nói lấy \"doanh số ngành tại điểm bán\" từ đâu (retail audit, số nhà phân phối, ước theo loại cửa hàng) — đây là rào cản thật khi áp dụng.",
+          "fix": "Gắn nhãn và thêm một câu về 2–3 nguồn ước doanh số ngành theo điểm."
+        },
+        {
+          "sev": "P2",
+          "where": "Toàn bài",
+          "quote": "Hai con số đọc cùng nhau mới cho biết bạn đang có mặt ở đâu",
+          "issue": "Không có phản ví dụ/đào sâu: thiếu điều kiện khi độ phủ theo doanh số cao mà vẫn nên mở rộng (vd. đối thủ chiếm kệ ở điểm nhỏ trước; chi phí phục vụ điểm nhỏ do nhà phân phối chịu).",
+          "fix": "Thêm phản ví dụ và nối sang kn02-03."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 60.000/100.000 = 60% ✓; sai 30% = 120/400 (độ phủ số) đúng nhãn. Q6: 50% điểm còn lại = 20% doanh số ngành nhất quán với 80%."
+      },
+      "claims": [
+        {
+          "claim": "Độ phủ số (numeric) và độ phủ theo doanh số (weighted distribution)",
+          "status": "verified",
+          "note": "Định nghĩa chuẩn ngành FMCG."
+        },
+        {
+          "claim": "400 điểm, 100.000 lon/tháng, 120 điểm bán 60.000 lon",
+          "status": "illustrative-unlabelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Định nghĩa hai chỉ số chính xác và tách bạch; Q4/Q6/Q7 đều là tình huống mới buộc đọc hai số cùng lúc (hãng X, dầu gội, tăng 30→45%).",
+      "upgrade": "Sửa stem Q7. Gắn nhãn số, thêm nguồn ước doanh số ngành theo điểm. Thêm bảng 3 nhóm cửa hàng (tiện lợi · căng tin KCN · tạp hoá) với số điểm, lon/tháng để học viên tự tính hai độ phủ. Thêm phản ví dụ và đào sâu về chi phí phục vụ mỗi điểm nhỏ (nối kn02-03) và share-within-handlers (bán được bao nhiêu trong các điểm đã có)."
+    },
+    {
+      "id": "B:kn02-02",
+      "scores": {
+        "accuracy": 13,
+        "depth": 12,
+        "practical": 15,
+        "examples": 10,
+        "pedagogy": 8,
+        "assessment": 7,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 77,
+      "bloom_items": [
+        "L3",
+        "L5",
+        "L3",
+        "L2",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q5",
+          "quote": "Nhà phân phối mua đứt và giữ kho; đại lý thường bán hộ hãng",
+          "issue": "Đúng theo nghĩa pháp lý (Luật Thương mại: đại lý bán hộ hưởng thù lao) nhưng trong thực tế Việt Nam \"đại lý\" rất thường chỉ cửa hàng mua đứt; bài nêu như phân biệt \"quan trọng nhất\" mà không nói đây là nghĩa pháp lý.",
+          "fix": "Thêm \"theo nghĩa pháp lý; trên thực tế cần hỏi hợp đồng: ai sở hữu hàng tồn\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q4",
+          "quote": "Không có quy định chung như vậy; đây là chuyện động lực thương mại",
+          "issue": "Khẳng định về luật (không có chiết khấu tối thiểu) không nguồn — có vẻ đúng nhưng bài không có src.",
+          "fix": "Hạ thành \"người chấm không biết quy định chung nào như vậy\" hoặc thêm src."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Tạp hoá bán 20.000 đồng, lãi 15% nên mua vào 20.000 × 0,85 = 17.000 đồng",
+          "issue": "Số không gắn nhãn minh hoạ; không nói mức chiết khấu kênh thường gặp là bao nhiêu để học viên biết 15%/8% là mỏng hay dày.",
+          "fix": "Gắn nhãn và cho khoảng tham khảo kèm nguồn, hoặc nói rõ \"mức tuỳ ngành, hỏi nhà phân phối\"."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 20.000×0,85 = 17.000; ×0,92 = 15.640 ✓; 15.400 = trừ 23% một lần; 18.400 = 8% trên 20.000 (sai mẫu số) ✓. 15.640/20.000 = 78,2% ✓. Q6: (50.000−39.000)/50.000 = 22% ✓. Q1 a/b/c/d khớp các giá trị sai của Q3."
+      },
+      "claims": [
+        {
+          "claim": "Giá bán lẻ 20.000đ, tạp hoá lãi 15%, NPP lãi 8%, giá vốn 11.000đ",
+          "status": "illustrative-unlabelled",
+          "note": ""
+        },
+        {
+          "claim": "Đại lý bán hộ hãng (phân biệt với nhà phân phối mua đứt)",
+          "status": "unverified",
+          "note": "Khớp Luật Thương mại 2005 về đại lý thương mại, nhưng bài không dẫn."
+        }
+      ],
+      "strengths": "Cơ chế \"mỗi mắt xích tính lãi trên giá bán của chính nó\" được giải thích và kiểm bằng đúng lỗi 23%; có phản ví dụ bán thẳng cho chuỗi; Q2 là câu đàm phán đổi phần tăng lấy cam kết đo được.",
+      "upgrade": "Gắn nhãn số và cho khoảng chiết khấu tham khảo có nguồn. Thêm bảng tính ngược 3 cột (bán lẻ · tạp hoá mua vào · NPP mua vào) và biến thể 3 tầng (đại lý cấp 2). Thay Q4/Q5 (L2) bằng câu: NPP đòi 12% — tính giá hãng thu về mới (17.000×0,88 = 14.960) và lãi còn lại so với 4.640; câu Q5 chuyển thành đọc hợp đồng \"ai giữ tồn kho\"."
+    },
+    {
+      "id": "B:kn02-03",
+      "scores": {
+        "accuracy": 11,
+        "depth": 10,
+        "practical": 16,
+        "examples": 10,
+        "pedagogy": 7,
+        "assessment": 9,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 75,
+      "bloom_items": [
+        "L3",
+        "L5",
+        "L3",
+        "L4",
+        "L4",
+        "L4",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Ví dụ",
+          "quote": "Tính 6 tháng: mở rộng 5 × 6.000 = 30.000 hộp, 3.333 đ/hộp",
+          "issue": "Phép so 6 tháng coi mở điểm là \"khoản chi một lần\" và bỏ hẳn chi phí phục vụ lặp lại cho 500 điểm vùng xa (giao hàng, ghé thăm, công nợ) — chính kn02-01 nói điểm nhỏ \"tốn công giao hàng\". Nếu phục vụ 20.000đ/điểm/tháng thì thêm 50 triệu/5 tháng → 150 triệu/30.000 = 5.000 đ/hộp; ở 40.000đ/điểm/tháng → 6.667 đ/hộp, gần bằng 7.500 của khuyến mãi. Phép tính thiếu giả định có thể làm kết luận đổi.",
+          "fix": "Thêm dòng \"chi phí phục vụ mỗi điểm mới mỗi tháng\" vào cả ví dụ và Q2/Q4, nêu ngưỡng chi phí phục vụ khiến hai phương án hoà nhau."
+        },
+        {
+          "sev": "P2",
+          "where": "Q7",
+          "quote": "Tăng ít hơn 25%, vì quầy nhỏ chỉ chiếm phần nhỏ doanh số của ngành hàng",
+          "issue": "Lẫn mức tăng tương đối với điểm %: độ phủ theo doanh số tăng tương đối = (doanh số ngành tại 500 điểm mới)/(doanh số ngành tại 2.000 điểm cũ); kết luận \"<25%\" đúng với số của bài (điểm cũ bán 30, điểm mới 12) nhưng lý do nêu chưa đủ — nếu 2.000 điểm cũ cũng là quầy nhỏ thì mức tăng tương đối có thể vượt 25%.",
+          "fix": "Viết lời giải: \"(500×12)/(2.000×30) ≈ 10% < 25% vì điểm mới bán ít hơn điểm cũ\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Toàn bài",
+          "quote": "Con số 12 hộp mỗi điểm mới chỉ là dự kiến, nên thử vài chục điểm trước",
+          "issue": "Không có mục phản ví dụ/đào sâu; không bàn phần dư sau khuyến mãi (Q6 mới nêu) hay rủi ro điểm mới đóng cửa/không tái đặt hàng.",
+          "fix": "Thêm đào sâu: tỉ lệ điểm mới còn đặt hàng sau 3 tháng, và phần \"lift còn lại\" sau khuyến mãi làm 7.500 đ/hộp giảm bao nhiêu."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 2.000×4×2 = 16.000; 120.000.000/16.000 = 7.500 ✓. Ví dụ: 500×200.000 = 100 triệu; 100tr/12.000 = 8.333; 100tr/30.000 = 3.333 ✓. Q4: 500×7×5 = 17.500; 100tr/17.500 ≈ 5.714 (\"khoảng 5.700\") ✓."
+      },
+      "claims": [
+        {
+          "claim": "2.000 điểm × 30 hộp; 500 điểm mới 200.000đ/điểm bán 12 hộp; khuyến mãi 120 triệu lift 4 hộp 2 tháng",
+          "status": "illustrative-unlabelled",
+          "note": "Được gọi là \"dự kiến\" trong tình huống nhưng không nhãn minh hoạ."
+        },
+        {
+          "claim": "rate of sale (tốc độ bán)",
+          "status": "verified",
+          "note": "Thuật ngữ chuẩn."
+        }
+      ],
+      "strengths": "Bài quyết định thật: cùng một dữ kiện cho hai kết luận khác nhau theo khung thời gian (quý vs 6 tháng), rồi buộc thử nhỏ; bộ câu hỏi mạnh nhất module (Q4 tính lại với số thực 7 hộp, Q6 hỏi đúng chỉ số cần xem).",
+      "upgrade": "Thêm chi phí phục vụ điểm mới (P1) và điều kiện hoà. Sửa lời giải Q7. Gắn nhãn số. Thêm bảng 2 phương án × 3 mốc thời gian (1 tháng · quý · 6 tháng) với đ/hộp để học viên đọc bảng. Thêm phản ví dụ: khuyến mãi để lại lift 1 hộp/tháng vĩnh viễn thì phương án sâu thắng ở mốc nào."
+    },
+    {
+      "id": "B:kn02-04",
+      "scores": {
+        "accuracy": 14,
+        "depth": 12,
+        "practical": 15,
+        "examples": 11,
+        "pedagogy": 8,
+        "assessment": 7,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 79,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L2",
+        "L4",
+        "L3",
+        "L3"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q1",
+          "quote": "Trên 8%, vì khách hết hàng một lần sẽ bỏ hẳn hãng mãi mãi",
+          "issue": "Phương án sai dùng từ tuyệt đối (\"mãi mãi\", Q4 d \"cắt hợp đồng ngay lần hết hàng đầu tiên\", Q1 d \"gần 0%\") → đáp án đoán được bằng hình thức; Q1 và Q4 đều L2 nhắc lại khái niệm.",
+          "fix": "Viết phương án sai ôn hoà (vd. \"Trên 8%, vì điểm hết hàng thường là điểm bán nhanh\") — câu này còn làm người học phải nghĩ về phân bố OOS theo điểm (ý đào sâu)."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Nếu 60% khách lấy hãng khác, bạn mất 2.400 hộp mỗi tháng",
+          "issue": "Hệ số 60% là giả định không nêu khoảng thường gặp hay cách ước; bài không gắn nhãn minh hoạ (Q6 b có nói 60% không cố định, tốt).",
+          "fix": "Gắn nhãn, cho khoảng (vd. 30–70% tuỳ ngành) và cách đo (hỏi tại quầy lúc hết hàng)."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "Doanh số mất = số điểm hết hàng × số bán mỗi điểm × tỉ lệ khách chuyển sang hãng khác",
+          "issue": "Công thức dùng \"số điểm hết hàng\" nhưng dữ kiện là \"8% điểm hết hàng vào bất kỳ lúc nào\" (tỉ lệ thời gian); hai cách đọc ra cùng số ở đây nhưng bài không nói vì sao tương đương (8% thời gian × tổng nhu cầu).",
+          "fix": "Thêm một câu: 8% điểm tại một thời điểm ≈ mỗi điểm trống 8% thời gian → mất 8% nhu cầu tháng."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 1.000×8% = 80; ×50 = 4.000; ×60% = 2.400 ✓ (tol 0 chấp nhận vì số nguyên). Ví dụ: 2.400/50.000 = 4,8% \"gần 5%\" ✓; ×8.000 = 19,2 triệu ✓; 8%×30 ngày = 2,4 ngày khớp \"2–3 ngày\"."
+      },
+      "claims": [
+        {
+          "claim": "8% điểm hết hàng, 60% khách chuyển hãng, lãi 8.000đ/hộp",
+          "status": "illustrative-unlabelled",
+          "note": "60% được nêu dạng \"Nếu\"."
+        },
+        {
+          "claim": "Có chuỗi có điều khoản phạt khi kệ trống",
+          "status": "unverified",
+          "note": "Khẳng định chung về hợp đồng chuỗi, không nguồn."
+        }
+      ],
+      "strengths": "Biến tỉ lệ nhỏ thành tiền (19,2 triệu) để so với chi phí sửa là đúng tinh thần thực chiến; phản ví dụ (cố ý ngưng bổ sung điểm nhỏ) và đào sâu (OOS ở đâu, lúc nào; đánh đổi tồn kho vs vốn) đều có chất.",
+      "upgrade": "Viết lại phương án sai Q1/Q4 (P1). Gắn nhãn và cho cách ước 60%. Thêm bảng OOS theo nhóm điểm (lớn/nhỏ, cuối tuần/ngày thường) để một câu hỏi đọc bảng thay Q4. Thêm chi phí đối ứng: nhân viên theo dõi tồn kho X triệu/tháng vs 19,2 triệu → thời gian hoàn vốn; nêu nhiễu khảo sát kệ (mẫu bao nhiêu điểm, ngày nào)."
+    },
+    {
+      "id": "B:kn02-05",
+      "scores": {
+        "accuracy": 11,
+        "depth": 10,
+        "practical": 16,
+        "examples": 12,
+        "pedagogy": 7,
+        "assessment": 9,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 77,
+      "bloom_items": [
+        "L3",
+        "L5",
+        "L3",
+        "L4",
+        "L5",
+        "L4",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Ví dụ",
+          "quote": "Trừ thất thoát 5% (1,28 triệu)",
+          "issue": "Thất thoát 5% *số hộp* được tính bằng 5% *lãi gộp* (0,05 × 25,6 triệu). Hộp mất đi tốn *giá vốn* của hộp, không phải 5.000đ lãi gộp. Bài không cho giá vốn; nếu giá vốn 10.000đ/hộp, 256 hộp mất = 2,56 triệu, lãi còn 5,04 triệu (không phải 6,32) và ngưỡng hoà vốn Q3 cũng đổi (4.750đ/hộp sau thất thoát là cách tính sai cùng gốc).",
+          "fix": "Cho giá vốn và tính thất thoát = số hộp mất × giá vốn; hoặc ghi rõ \"giả định đơn giản hoá: thất thoát tính 5% lãi gộp\" và nêu nó làm lãi trông cao hơn thật."
+        },
+        {
+          "sev": "P2",
+          "where": "Toàn bài",
+          "quote": "Bệnh viện chỉ là một điểm với hồ sơ riêng, chưa đủ số để so",
+          "issue": "Không có phản ví dụ/đào sâu; không bàn chi phí người gác cổng (hoa hồng, hợp đồng độc quyền, thời gian xin phép) dù khái niệm nêu \"ai gác cổng\".",
+          "fix": "Thêm đào sâu: chi phí và thời gian qua cổng, điều khoản độc quyền, và phản ví dụ nơi đông người nhưng đi ra cổng mua dễ (Q7 đã chạm)."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Văn phòng: 40 công ty × 80 người × 20% mua × 8 hộp",
+          "issue": "Chuỗi 4 hệ số nhân, mỗi hệ số là giả định (20%, 8 hộp) không nêu độ chắc; Q2 cho thấy thực tế 10% — tốt — nhưng phần đọc không cảnh báo trước.",
+          "fix": "Thêm câu \"20% và 8 hộp là giả định cần kiểm bằng 2 tháng thử; ngưỡng hoà vốn ~14,8% nên thử ở nhóm ít công ty trước\"."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 5.000×95% = 4.750; 450.000/4.750 = 94,7 hộp; 94,7/640 = 14,8% ✓ (18 triệu/40 công ty = 450.000 ✓). Ví dụ: 40×80×20%×8 = 5.120 ✓; ×5.000 = 25,6tr ✓; −1,28 −10 −8 = 6,32tr ✓; căng tin 4×600×10%×6 = 1.440 ✓; ×3.000 = 4,32tr; −4tr = 0,32tr ✓. Q4 b: 2.400 vs 3.200 ✓."
+      },
+      "claims": [
+        {
+          "claim": "lãi gộp 5.000đ/hộp (minh hoạ)",
+          "status": "illustrative-labelled",
+          "note": "Tình huống ghi \"(minh hoạ)\"."
+        },
+        {
+          "claim": "thuê tủ 10 triệu, người châm hàng 8 triệu, thất thoát 5%, căng tin giữ 2.000đ/hộp",
+          "status": "illustrative-unlabelled",
+          "note": "Các số chi phí kênh không gắn nhãn."
+        }
+      ],
+      "strengths": "So kênh bằng lãi sau chi phí và đúng khách mục tiêu, có ngưỡng hoà vốn theo từng công ty để cắt riêng chỗ lỗ (Q2); Q6 là câu tách tương quan/nhân quả (tủ trống ↔ bán giảm) hiếm và đúng; Q5 bàn hợp đồng cam kết sản lượng.",
+      "upgrade": "Sửa cách tính thất thoát (P1) bằng cách cho giá vốn. Gắn nhãn chi phí kênh. Thêm bảng 3 kênh × (số người · % mua · hộp/người · lãi/hộp · chi phí cố định · lãi sau chi phí) để Q4 đọc từ bảng. Thêm phản ví dụ và đào sâu về người gác cổng. Nêu độ nhạy: lãi sau chi phí đổi bao nhiêu khi % mua lệch ±5 điểm."
+    },
+    {
+      "id": "B:kn02-06",
+      "scores": {
+        "accuracy": 14,
+        "depth": 12,
+        "practical": 15,
+        "examples": 10,
+        "pedagogy": 8,
+        "assessment": 6,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 77,
+      "bloom_items": [
+        "L3",
+        "L5",
+        "L3",
+        "L2",
+        "L3",
+        "L3",
+        "L2"
+      ],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Quý đầu: 30 triệu phí mở mã + 60 triệu phí trưng bày = 90 triệu",
+          "issue": "Mức phí và \"hàng tương tự đang bán 10 gói mỗi tuần\" không gắn nhãn minh hoạ; phí vào chuỗi là loại số thay đổi theo chuỗi và thời kỳ (periodic) nhưng không có src/ngày kiểm.",
+          "fix": "Gắn nhãn \"(minh hoạ; phí thật lấy từ hợp đồng chuỗi)\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q7",
+          "quote": "Giao đúng hẹn, đủ lượng về kho tổng liên tục",
+          "issue": "Khẳng định đây là điều kiện khó nhất với hãng nhỏ — hợp lý nhưng không nguồn; phương án sai (quảng cáo truyền hình, website) quá yếu → câu L2 dễ.",
+          "fix": "Thay bằng câu đọc dữ liệu: cho tốc độ bán theo tuần của 3 nhóm cửa hàng, hỏi nhóm nào dưới ngưỡng và nên làm gì."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "tổng chi phí cố định chia lãi gộp mỗi gói",
+          "issue": "Hoà vốn chỉ tính phí cố định quý đầu; hàng cận hạn trả về và phí trưng bày các quý sau được nhắc (Q5, Q6) nhưng không đưa vào số; không nói về chi phí vốn khi chuỗi thanh toán chậm.",
+          "fix": "Thêm dòng \"hàng trả về ước x% × giá vốn\" và điều khoản thanh toán vào phép tính; nêu ngưỡng tốc độ bán chuỗi dùng để rút mã (hỏi chuỗi)."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 30+60 = 90 triệu; 90.000.000/4.000 = 22.500; /300 = 75 ✓; 75/13 tuần ≈ 5,8 (\"gần 6\") ✓. Q6: 60tr/4.000/300 = 50 ✓. Q2 lời giải: 22.500/150 = 150 ✓."
+      },
+      "claims": [
+        {
+          "claim": "listing fee (phí mở mã), phí trưng bày, chuỗi rút mã bán chậm",
+          "status": "unverified",
+          "note": "Cơ chế đúng với thực hành bán lẻ hiện đại; không nguồn."
+        },
+        {
+          "claim": "30 triệu phí mở mã, 60 triệu/quý trưng bày, lãi gộp 4.000đ/gói, 300 cửa hàng",
+          "status": "illustrative-unlabelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Chia chi phí cố định về \"gói/cửa hàng/tuần\" là phép đổi đơn vị đúng nghề và dễ dùng khi đứng quan sát một cửa hàng; phản ví dụ (hàng mới chưa ai biết vị) và đào sâu (chuỗi mang lại gì ngoài doanh số) hợp lý.",
+      "upgrade": "Gắn nhãn phí. Đưa hàng trả về và thanh toán chậm vào phép tính. Thêm bảng tốc độ bán theo nhóm cửa hàng để có câu L4 thay Q4/Q7. Thêm mục \"ngưỡng rút mã\" của chuỗi là bao nhiêu gói/tuần (hỏi và ghi vào hợp đồng). Nối kn02-08: lãi đóng góp của kênh chuỗi sau mọi phí."
+    },
+    {
+      "id": "B:kn02-07",
+      "scores": {
+        "accuracy": 12,
+        "depth": 12,
+        "practical": 14,
+        "examples": 10,
+        "pedagogy": 8,
+        "assessment": 6,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 73,
+      "bloom_items": [
+        "L3",
+        "L5",
+        "L3",
+        "L2",
+        "L3",
+        "L2",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Khái niệm",
+          "quote": "giữ giá bán thống nhất giữa các kênh",
+          "issue": "Nêu như cách xử lý mà không có điều kiện pháp lý. Thoả thuận ấn định giá bán lại với đại lý có thể vi phạm Luật Cạnh tranh 2018; bài cùng chủ đề kn03-09 cảnh báo rõ \"ép giá đại lý bằng thoả thuận có thể vướng luật cạnh tranh, nên hỏi pháp chế\" — hai bài mâu thuẫn. Trong ví dụ hãng chỉ sửa giá ở gian hàng *của chính hãng* (hợp lệ) nhưng khái niệm nói chung cho \"các kênh\".",
+          "fix": "Viết \"giữ giá ở kênh của chính hãng bằng giá khuyến nghị; với đối tác chỉ dùng giá *khuyến nghị* và chính sách chiết khấu, không thoả thuận ấn định giá bán lại — hỏi pháp chế\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "lãi chỉ còn 4.000 đồng, khoảng 4,5%, không đủ trả mặt bằng",
+          "issue": "Số không gắn nhãn minh hoạ; \"không đủ trả mặt bằng\" là khẳng định không có số (mặt bằng bao nhiêu/tháng, bán bao nhiêu bộ).",
+          "fix": "Gắn nhãn; thêm một dòng: đại lý bán 50 bộ/tháng × 4.000 = 200.000đ không trả được gì."
+        },
+        {
+          "sev": "P2",
+          "where": "Q4/Q6",
+          "quote": "Cách \"chia vai trò\" giữa kênh online và đại lý nghĩa là gì?",
+          "issue": "Q4, Q6 nhận lại khái niệm (L2); bài này trùng gần hết với kn03-09 (cùng xung đột giá online–đại lý, cùng giải pháp mã riêng/combo).",
+          "fix": "Gộp hoặc phân vai: kn02-07 tập trung xung đột lấn vùng giữa NPP (Q5) và chính sách vùng; kn03-09 giữ xung đột giá online."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: (89.000−85.000)/89.000 = 4,49% ≈ 4,5 ✓; 4,7% = chia 85.000 đúng nhãn SAI_MAU_SO. Ví dụ: 14.000/99.000 = 14,1% ✓."
+      },
+      "claims": [
+        {
+          "claim": "Giữ giá bán thống nhất giữa các kênh (cách xử lý xung đột)",
+          "status": "unverified",
+          "note": "Thiếu điều kiện pháp lý; xem defect P1."
+        },
+        {
+          "claim": "Giá đề xuất 99.000đ, đại lý mua 85.000đ, sàn bán 89.000đ",
+          "status": "illustrative-unlabelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Giải thích vì sao đại lý bỏ hãng (công tư vấn không được trả) và giải pháp chia vai trò có lý do riêng cho mỗi kênh; phản ví dụ xả hàng đời cũ là tình huống thật.",
+      "upgrade": "Thêm điều kiện pháp lý (P1) và dẫn kn03-09. Gắn nhãn số, thêm phép tính lãi đại lý/tháng. Thay Q4/Q6 bằng câu đọc dữ liệu: bảng 3 tháng số đại lý nhập, lượng bày kệ, doanh số sàn — hỏi dấu hiệu nào báo xung đột trước khi hội đại lý lên tiếng. Tách chủ đề khỏi kn03-09 để bớt trùng."
+    },
+    {
+      "id": "B:kn02-08",
+      "scores": {
+        "accuracy": 14,
+        "depth": 12,
+        "practical": 14,
+        "examples": 10,
+        "pedagogy": 8,
+        "assessment": 6,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 76,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L2",
+        "L3",
+        "L2",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Siêu thị: 400 triệu − giá vốn 240 triệu − chi phí kênh 100 triệu = 60 triệu, tức 15%",
+          "issue": "Số không gắn nhãn minh hoạ; không nói chi phí \"riêng của kênh\" nào thật sự biến mất khi bỏ kênh (đội đi thị trường là bán cố định) — ý này chỉ nằm ở \"vì sao (1)\".",
+          "fix": "Gắn nhãn; thêm bảng chi phí riêng tách \"mất ngay khi bỏ kênh\" và \"mất sau 3–6 tháng\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q3",
+          "quote": "[40,\"QUEN_CHI_PHI_BIEN_DOI\"]",
+          "issue": "Giá trị sai 40% = quên chi phí riêng của kênh (30 triệu); chi phí này không phải \"biến đổi\" — nhãn gọi sai bản chất lỗi.",
+          "fix": "Đổi nhãn thành QUEN_CHI_PHI_KENH."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1/Q4/Q6",
+          "quote": "Chưa biết, cần trừ giá vốn và chi phí riêng",
+          "issue": "Ba câu L2 nhận lại ý bài; Q1 đoán trước gần như tự trả lời bằng tiêu đề bài.",
+          "fix": "Thay Q4 bằng câu đọc bảng: cho chi phí chung 60 triệu chia đều 2 kênh, hỏi kênh nào \"trông lỗ\" và vì sao kết luận đó sai."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 300−180−30 = 90; 90/300 = 30% ✓. Siêu thị: (400−240−100)/400 = 15% ✓. Q5: (100−60−35)/100 = 5% ✓. Giá vốn 60% doanh thu ở cả ba kênh nhất quán."
+      },
+      "claims": [
+        {
+          "claim": "Siêu thị thu 400 triệu, tạp hoá 300 triệu, chi phí kênh 100/30 triệu, online phí sàn + ship 35%",
+          "status": "illustrative-unlabelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Khái niệm lãi đóng góp theo kênh và lý do không chia đều chi phí chung được giải thích đúng; phản ví dụ (kênh đã chạm trần địa bàn) và đào sâu (lãi trung bình vs lãi biên, vai trò hiện diện của siêu thị) đúng tư duy nghề; Q7 là câu đánh đổi.",
+      "upgrade": "Gắn nhãn số. Thêm bảng 3 kênh (siêu thị · tạp hoá · online) để Q1/Q4 đọc từ bảng và một câu về chia chi phí chung sai. Thêm phép tính lãi biên: thêm 1 nhân viên thị trường 12 triệu/tháng cần thêm bao nhiêu doanh thu tạp hoá để hoà (12/30% = 40 triệu). Nêu vòng quay vốn bằng số (ngày công nợ mỗi kênh) để Q6 có dữ kiện."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự tốt cho kênh truyền thống/FMCG: đo độ phủ (01) → giá qua kênh (02) → rộng hay sâu (03) → hết hàng (04) → kênh đặc biệt (05) → vào chuỗi (06) → xung đột kênh (07) → lãi đóng góp theo kênh (08). 08 là bài tổng hợp hợp lý ở cuối. 03 nên nối ngược về 01 (độ phủ theo doanh số của điểm mới) và 06 nên nối tới 08 (lãi đóng góp của kênh chuỗi).",
+    "overlap": [
+      "07 (xung đột kênh online–đại lý, mã riêng) trùng gần hết với kn03-09 (kỷ luật giá sàn–đại lý, combo riêng); kn03-09 còn có cảnh báo pháp lý mà 07 thiếu",
+      "01 và 03 cùng dạy độ phủ theo doanh số (Q7 của 03 lặp ý Q1 của 01)",
+      "02, 05, 06, 08 đều lặp lời \"khái niệm kề cận là chiết khấu kênh\" mà không nối cụ thể"
+    ],
+    "gaps": [
+      "Chưa có bài về sell-in vs sell-out và tồn kho ở nhà phân phối (nhồi hàng, ngày tồn) — nguyên nhân sâu của hết hàng ở 04 và của \"độ phủ tăng mà doanh số không đổi\" ở 01",
+      "Chưa có bài về tổ chức đội thị trường (tần suất ghé, số điểm/nhân viên) dù 03, 08 đều giả định \"thêm người\"",
+      "Thiếu back margin/rebate và điều khoản thanh toán của bán lẻ hiện đại (06 chỉ có phí mở mã và trưng bày)",
+      "Không bài nào có src; 06 và 07 thuộc lớp periodic (phí chuỗi, luật cạnh tranh)"
+    ],
+    "best_lesson": "B:kn02-04",
+    "weakest_lesson": "B:kn02-01"
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "mod": "kn08",
+ "lessons": [
+  {
+   "id": "B:kn08-02",
+   "total": 86,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "ĐÀO SÂU",
+     "quote": "chấm RFM cho 200 khách bất kỳ, chừa 20 người không nhắn rồi so tỉ lệ mua hai nhóm",
+     "issue": "Vừa giải thích đối chứng 100 người là quá nhỏ (chênh 3 điểm ≈ 1 sai số chuẩn) và khuyên chừa ≥ 20%, bài lại đề xuất đối chứng 20 người. Mỗi người là 5 điểm %, nên phép so này vô nghĩa. Bài tự mâu thuẫn.",
+     "fix": "Đổi thành 'dùng cho cả đợt 1.000 tin, chừa 200' hoặc nói rõ phép thử 20 người chỉ để tập quy trình, không để kết luận."
+    }
+   ]
+  }
+ ]
+}

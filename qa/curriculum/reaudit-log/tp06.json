@@ -1,0 +1,3 @@
+{ "mod":"tp06", "fixed_at":"2026-11-08", "items":[
+  { "id":"B:tp06-05", "where":"ĐÀO SÂU", "status":"fixed", "change":"Phép kiểm tra 5 người đổi thành: cho 5 người lướt bản sửa như lướt bảng tin để tìm chỗ tên bị rơi; nói rõ 5 người chỉ cho lỗi định tính (mỗi người 20 điểm %, chưa so được với 30%); muốn so với 30% cần vài trăm người trong điều kiện lướt được phép bỏ đi, không phải được mời xem hết.", "key_changed":false, "note":"" } ],
+  "validator":"0 lỗi, 0 cảnh báo", "tests":"pass" }

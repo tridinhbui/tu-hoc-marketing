@@ -1,0 +1,80 @@
+{
+ "mod": "qc01",
+ "lessons": [
+  {
+   "id": "B:qc01-02",
+   "title": "Chân dung \"nữ 25–40\" có giúp bạn chọn kênh và viết quảng cáo không?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "ĐÀO SÂU, Q4",
+     "quote": "Trên Meta và TikTok, thuật toán phân phối dựa nhiều vào việc ai dừng lại xem creative",
+     "issue": "Khẳng định về cơ chế thuật toán phân phối của hai nền tảng, nêu như sự thật; hai `src` của bài chỉ bao phủ loại trừ nhắm chọn và chính sách sức khoẻ, không bao phủ cơ chế phân phối. Loại fast bắt buộc nguồn và câu 'nếu tài liệu chính thức khác, tin tài liệu'.",
+     "fix": "Thêm src Meta 'About ad delivery / How Meta uses machine learning to deliver ads' và TikTok 'How the TikTok ad auction works' với ngày kiểm; viết lại thành 'tín hiệu tương tác với creative là một đầu vào quan trọng của phân phối'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm src cho cơ chế phân phối và câu 'tin trang chính thức'; (2) nêu cách kiểm giả thuyết từ 8 phỏng vấn bằng số chạy thật; (3) thêm phép tính thứ hai: nếu chân dung mới nâng tỉ lệ hỏi trọn căn từ 15% lên 35% với cùng 18 triệu thì chi phí mỗi người hỏi trọn căn giảm còn bao nhiêu (≈430.000đ); (4) cân lại Q1 để không đoán được theo độ bao quát."
+  },
+  {
+   "id": "B:qc01-03",
+   "title": "Cùng một chiếc chảo, vì sao offer này CPA 90.000đ còn offer kia 150.000đ?",
+   "total": 80,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1 (lời giải a, d)",
+     "quote": "nền tảng không biết giá trị đơn của bạn khi tính CPM … Lượt hiển thị phụ thuộc ngân sách và CPM; offer không làm nền tảng chia thêm chỗ",
+     "issue": "Lời giải phương án sai nêu cơ chế nền tảng quá tuyệt đối và không nguồn: đấu giá Meta/TikTok xếp hạng theo giá thầu × tỉ lệ hành động ước tính (+ chất lượng), nên quảng cáo có CTR/CVR cao hơn thường thắng với giá thấp hơn và cùng ngân sách có thể mua được nhiều lượt hiển thị hơn; khi tối ưu theo giá trị, nền tảng có dùng giá trị đơn. Người học sẽ hiểu sai rằng offer hoàn toàn không tác động tới CPM/lượt hiển thị.",
+     "fix": "Viết lại: 'CPM chủ yếu do cạnh tranh và tệp; offer chỉ tác động gián tiếp qua tỉ lệ hành động ước tính, không có cơ chế ưu tiên riêng' và giữ đáp án c là nơi tác động mạnh nhất."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) sửa lời giải Q1 về cơ chế đấu giá; (2) nêu giả định của chi phí đổi trả và cách ước sai số; (3) thêm tình huống hoàn đơn của B cao hơn (ví dụ 12% so với 5%) để thấy kết luận đổi và nối với bài qc02-03; (4) thêm một câu L5: chọn giữa B (lãi 64.000đ/đơn, 55 đơn) và một offer D lãi 90.000đ/đơn nhưng 30 đơn với cùng 5 triệu."
+  },
+  {
+   "id": "B:qc01-04",
+   "title": "Chỉ chạy quảng cáo cho người đã ghé web: vì sao tháng thứ ba hết đơn?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q2",
+     "quote": "Khoảng 60% lạnh, 25% ấm, 15% nóng, rồi chỉnh theo kích thước tệp",
+     "issue": "Đáp án là chép lại đúng con số chia tiền của Ví dụ (nhận lại, L2) và là phương án duy nhất có vế 'rồi chỉnh theo' trong khi ba phương án sai đều tuyệt đối ('90%', 'cả 30 triệu', 'giữ nguyên cả năm'); đoán được bằng hình thức.",
+     "fix": "Cho tình huống mới (tệp ghé web 30 ngày 20.000 người, tần suất 2) và bốn cách chia đều có vế điều kiện; đáp án đúng phải suy từ kích thước tệp, không chép số ví dụ."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) viết lại Q2 thành tình huống mới không chép số ví dụ; (2) nối tần suất 9/tuần với kích thước tệp bằng phép tính; (3) thêm tình huống thứ hai đổi kết luận (shop có 50.000 khách cũ đồng ý nhận tin → dồn tầng nóng vẫn đúng 2 tháng, kèm ngưỡng tần suất để dừng); (4) thêm câu kiểm trang chính thức cho phần Advantage+/Smart+."
+  },
+  {
+   "id": "B:qc01-06",
+   "title": "9 triệu một tuần nuôi nổi mấy nhóm quảng cáo?",
+   "total": 81,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "PHẢN VÍ DỤ",
+     "quote": "TikTok nói biến động bắt đầu giảm sau khoảng 25 kết quả hoặc 7 ngày; Google khuyến nghị Demand Gen có ngân sách ít nhất 10 lần CPA mục tiêu",
+     "issue": "Hai con số nền tảng nêu như sự thật nhưng không trích nguyên văn. Theo hiểu biết của người chấm, tài liệu Google cho Demand Gen/Video action thường khuyến nghị ngân sách ngày ≥ 15 lần CPA mục tiêu, và mốc TikTok hay được nêu là 50 chuyển đổi trong 7 ngày; con số 10 và 25 có thể sai hoặc đã đổi. src 'Demand Gen campaigns' là trang tổng quan, tiêu đề không bao phủ khuyến nghị ngân sách.",
+     "fix": "Mở hai trang src, trích nguyên văn con số và ghi ngày; nếu Google nêu 15 lần thì sửa; thêm câu 'nếu tài liệu chính thức khác, tin tài liệu'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) trích nguyên văn hai con số TikTok/Google từ src (hoặc bỏ) và thêm câu tin trang chính thức; (2) đồng bộ tiêu đề-URL src với qc03-07; (3) sửa đáp án sai 0,6 ở Q3; (4) thêm một câu L5 đánh đổi: gộp 1 nhóm rộng (học đủ) hay giữ 2 nhóm 4,5 triệu (gần ngưỡng) khi hai tệp có CPA chênh 40% trong 3 tuần."
+  },
+  {
+   "id": "B:qc01-07",
+   "title": "Trước khi bấm đăng quảng cáo, bạn đã viết sẵn khi nào dừng, khi nào tăng tiền chưa?",
+   "total": 80,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ (quy tắc 1 và 2), Q2",
+     "quote": "(1) 7 ngày đầu sau khi bật hoặc sửa lớn, không đụng, trừ lỗi đo lường, lỗi trang hoặc chi vượt ngân sách. (2) Dừng một quảng cáo khi đã tiêu bằng 2 lần CPA hoà vốn (320.000đ) mà chưa ra đơn nào.",
+     "issue": "Hai quy tắc xung đột: với 30 triệu/tháng ≈ 1 triệu/ngày chia vài quảng cáo, một quảng cáo chạm 320.000đ ngay ngày 1–2, tức quy tắc (2) kích hoạt trong vùng cấm đụng của (1), mà (1) không liệt kê (2) là ngoại lệ. Lời giải Q2 dùng cả hai cùng lúc ('Quy tắc nói 320.000đ, và đang trong 7 ngày cấm đụng') nên người học không biết luật nào thắng khi quảng cáo tiêu 350.000đ ở ngày 3 mà chưa có đơn.",
+     "fix": "Ghi thứ tự ưu tiên: (1) áp cho cấp nhóm quảng cáo và tệp; (2) là ngoại lệ ở cấp quảng cáo lẻ; hoặc đổi (2) thành 'sau vùng cấm đụng'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) sửa xung đột giữa quy tắc 1 và 2 bằng thứ tự ưu tiên; (2) biện hộ con số 30 đơn như đã làm với 320.000đ; (3) thêm tình huống thứ hai đổi kết luận (ngân sách 5 triệu/tháng → ngưỡng tiền 320.000đ chiếm 2 ngày chi tiêu, cần quy tắc khác); (4) thay Q1/Q7 bằng câu áp quy tắc vào số mới."
+  }
+ ]
+}

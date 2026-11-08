@@ -1,0 +1,155 @@
+{
+  "mod": "qc09", "scored_at": "2026-11-07", "scorer": "independent-agent", "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    { "id": "B:qc09-01",
+      "scores": { "accuracy": 11, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 9, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L3","L5","L3","L3","L2","L5","L4"], "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm / Q3", "quote": "lấy giá bán chia cho số đó ra ROAS hoà vốn", "issue": "ROAS hoà vốn tính trên giá niêm yết 250.000đ, nhưng lãi 50.000đ đã trừ voucher và theo qc09-04 \"Doanh số\" trên báo cáo Shopee từ 16/1/2026 không tính trợ giá người bán. Nếu voucher 20.000đ, Doanh số/đơn là 230.000đ và ROAS hoà vốn so với báo cáo là 4,6 chứ không phải 5. So vạch 5 với ROAS báo cáo sẽ lệch có hệ thống.", "fix": "Định nghĩa ROAS hoà vốn = Doanh số ghi nhận mỗi đơn ÷ lãi mỗi đơn, ghi rõ Doanh số là số sàn báo (đã trừ trợ giá), hoặc dùng tỉ lệ lãi đóng góp trên Doanh số như qc09-04 để nhất quán cả module." },
+        { "sev": "P2", "where": "Tình huống ↔ Khái niệm", "quote": "Sau phí sàn, voucher và giá vốn, mỗi đơn còn khoảng 50.000đ", "issue": "Khái niệm liệt kê thêm \"đóng gói\" nhưng tình huống không trừ đóng gói; không rõ 50.000đ đã gồm chưa.", "fix": "Thêm \"đóng gói\" vào câu tình huống." },
+        { "sev": "P2", "where": "Toàn bài", "quote": "quảng cáo Tìm kiếm 5 triệu/tháng", "issue": "Không có src dù nhắc tên dịch vụ (Tìm kiếm, Khám phá) và cơ chế CPC (fast); ít khẳng định giao diện nên không trừ nặng, nhưng cần ngày kiểm.", "fix": "Thêm src ads.shopee.vn (dùng chung với 02)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Ví dụ: 1.500/1% = 150.000 ✓; 250/50 = 5 ✓; 250/150 ≈ 1,67 ✓; 250/229 = +9% ✓; 5tr/150k ≈ 33 đơn ✓. Q3: 5 ✓; sai 0,2 ✓. Q4: 1.500/3% = 50.000; 80−50 = 30 ✓; sai 78,5 = 80−1,5 ✓." },
+      "claims": [
+        { "claim": "Shopee có quảng cáo Tìm kiếm, Khám phá; tính theo click", "status": "unverified", "note": "Không có src trong bài; src ở 02" },
+        { "claim": "Đồ chơi gỗ 250.000đ, 3 đánh giá, CVR 1%, lãi 50.000đ; đối thủ 229.000đ, 500 đánh giá", "status": "illustrative-labelled", "note": "" },
+        { "claim": "Khách trên sàn so giá ngay trên cùng màn hình", "status": "unverified", "note": "Mô tả giao diện, hợp lý, không cần src" }
+      ],
+      "strengths": "\"Quảng cáo khuếch đại tỉ lệ chuyển đổi sẵn có\" được chứng minh bằng số (150.000đ/đơn vs lãi 50.000đ) và phản ví dụ chi phí ra mắt có trần biến quyết định lỗ thành có chủ ý; Q2/Q6 là câu đánh đổi.",
+      "upgrade": "Để đạt ≥85: (1) sửa cơ sở tính ROAS hoà vốn cho khớp định nghĩa Doanh số của sàn; (2) thêm src; (3) thêm bảng 10 kết quả đầu mẫu (giá, đánh giá) để người học thực hành đặt sản phẩm vào giữa; (4) thêm câu calc cho kịch bản ra mắt: trần 2 triệu, CVR 1%, mục tiêu 30 đánh giá với 40% người mua đánh giá — đủ hay không (L4)." },
+    { "id": "B:qc09-02",
+      "scores": { "accuracy": 10, "depth": 9, "practical": 13, "examples": 9, "pedagogy": 7, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 63,
+      "bloom_items": ["L2","L5","L3","L1","L1","L3","L4"], "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm / Q4", "quote": "mục \"Ghé Shop nhận Nước\"", "issue": "Tên vị trí hiển thị gắn với trò chơi trong app Shopee — loại tính năng đổi theo mùa; possibly outdated so với trang FAQ ngày kiểm 2026-10-24. Là một nửa đáp án Q4 (L1).", "fix": "Kiểm lại FAQ 399/1648 và ghi \"tại thời điểm kiểm\"; bỏ tên mục khỏi đáp án Q4, chỉ giữ \"đầu kết quả tìm kiếm, trả theo click\"." },
+        { "sev": "P1", "where": "Khái niệm", "quote": "Lazada có Sponsored Solutions; tên từng sản phẩm quảng cáo và điều kiện cụ thể chưa xác minh được", "issue": "Bài đã trung thực nhưng kết quả là một bài về \"Shopee và Lazada\" không dạy được gì về Lazada ngoài \"đọc Seller Center\"; tiêu đề hứa \"Lazada khác gì\" mà không trả lời.", "fix": "Hoặc bỏ Lazada khỏi tiêu đề/phạm vi bài, hoặc dẫn Lazada University (public) cho ít nhất tên công cụ (Sponsored Discovery/Affiliate) với ngày kiểm." },
+        { "sev": "P2", "where": "Q4, Q5", "quote": "Theo FAQ của Shopee Ads, quảng cáo Shop xuất hiện ở đâu / Nguồn nào nên tin trước?", "issue": "Hai câu L1; Q5 đáp án hiển nhiên (ba phương án sai là nhóm mạng xã hội năm ngoái, luật Shopee, nhân viên giao hàng).", "fix": "Thay Q5 bằng câu đọc dữ liệu: cho CPC và CVR giả định của Tìm kiếm vs Khám phá vs Shop, hỏi chỗ nào ra đơn rẻ nhất (L3–L4)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "2,5% người vào gian hàng đặt đơn", "issue": "Chỉ một kịch bản, số 2,5% không gắn với CVR tự nhiên nào của gian hàng; không có phản ví dụ bằng số (Khám phá CVR thấp hơn → chi phí mỗi đơn cao hơn).", "fix": "Thêm dòng so: Khám phá CPC 800đ nhưng CVR 1% → 80.000đ/đơn, đắt hơn Shop 60.000đ dù click rẻ hơn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 400 × 1.500 = 600.000; 400 × 2,5% = 10; 600/10 = 60 ✓; sai 1,5 = CPC ✓, 600 = tổng tiền (nhãn SAI_MAU_SO tạm chấp nhận)." },
+      "claims": [
+        { "claim": "Shopee VN gọi chung là \"Dịch vụ Hiển thị\": Trang chủ, Sản phẩm – Tìm Kiếm, Sản phẩm – Khám Phá, Shop, Livestream, Video, Trên Facebook", "status": "verified", "note": "src ads.shopee.vn" },
+        { "claim": "Quảng cáo Shop: đầu kết quả tìm kiếm và \"Ghé Shop nhận Nước\", trả theo click, cần ≥10 đánh giá đơn hàng và 4 sản phẩm đang bán", "status": "verified", "note": "src FAQ Dịch vụ Hiển thị Shop; tên mục trò chơi possibly outdated" },
+        { "claim": "Lazada có Sponsored Solutions", "status": "unverified", "note": "Bài tự ghi chưa xác minh (src 'chua')" },
+        { "claim": "Phụ kiện điện thoại: Lazada 20% doanh số; Shop ads 400 click × 1.500đ, CVR 2,5%", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Phân loại chỗ hiển thị theo \"tư thế của khách\" (gõ từ khoá vs lướt) là khung dùng được cho mọi sàn; phản ví dụ chống bật mọi chỗ với ngân sách nhỏ dẫn tới Q7.",
+      "upgrade": "Để đạt ≥85: (1) kiểm lại tên \"Ghé Shop nhận Nước\" và bỏ khỏi đáp án; (2) quyết định phạm vi Lazada: hoặc có nguồn, hoặc đổi tiêu đề; (3) thêm bảng 7 chỗ × tư thế khách × cách tính phí × điều kiện; (4) thêm ví dụ số so Tìm kiếm/Khám phá/Shop bằng chi phí mỗi đơn; (5) thay Q4/Q5 L1 bằng câu đọc bảng." },
+    { "id": "B:qc09-03",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 17, "examples": 12, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 82,
+      "bloom_items": ["L3","L5","L3","L3","L1","L5","L4"], "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ", "quote": "ROAS hoà vốn = 180.000 ÷ 45.000 = 4", "issue": "Cùng lỗi cơ sở với qc09-01: lãi 45.000đ đã trừ voucher nhưng tử số dùng giá niêm yết 180.000đ; \"Doanh số\" sàn báo (từ 16/1/2026) không tính trợ giá người bán nên ROAS mục tiêu 5 đặt trong Tối Đa Doanh Thu so với vạch 4 trên giá niêm yết là so hai cơ sở khác nhau.", "fix": "Tính vạch trên Doanh số ghi nhận mỗi đơn (giá sau voucher người bán) hoặc dùng tỉ lệ lãi đóng góp trên Doanh số; nhắc người học kiểm cách sàn tính Doanh số trước khi đặt ROAS mục tiêu." },
+        { "sev": "P2", "where": "Q5", "quote": "Shop có 45 sản phẩm muốn đưa vào Tối Đa Doanh Thu cùng lúc trên máy tính. Theo FAQ của Shopee (từ 5/2025), điều gì đúng?", "issue": "Câu L1 nhớ giới hạn 30/10 — con số fast, đổi theo quý.", "fix": "Thay bằng câu đánh đổi: 45 sản phẩm, chỉ chọn được 30 — tiêu chí chọn (biên, lịch sử đơn, vai trò) và cách xử lý 15 món còn lại (L5)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Khi sản phẩm có khoảng 40 đơn từ quảng cáo (mốc tự đặt, giả định), anh chuyển sang Tối Đa Doanh Thu", "issue": "Mốc 40 đơn không được giải thích vì sao (tối thiểu dữ liệu để ROAS mục tiêu có nghĩa); người học không biết chỉnh mốc theo CVR/ngân sách.", "fix": "Thêm một câu: 40 đơn ở CVR 3% ≈ 1.300 click, đủ để từ khoá có ít nhất vài đơn mỗi từ; mốc tăng nếu CVR thấp." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q1: 45.000 × 3% = 1.350 ✓; 1/3% ≈ 33 click ✓. Q3: 70 × 2% = 1,4 ✓; sai 35 = 70/2 ✓, 70 ✓. Q4: 180/45 = 4 ✓; sai 0,25 ✓. Q7: 300 × 3% = 9 đơn kỳ vọng ✓." },
+      "claims": [
+        { "claim": "Tối Đa Doanh Thu (Tùy chỉnh ROAS): đặt ROAS mục tiêu theo sản phẩm, tự hiển thị ở Tìm kiếm và Khám phá; từ 5/2025 tối đa 30 sản phẩm trên máy tính, 10 trên app", "status": "verified", "note": "src FAQ 398/1800 bao phủ" },
+        { "claim": "Giá thầu chịu được = lãi mỗi đơn × tỉ lệ chuyển đổi", "status": "verified", "note": "Công thức đúng: CPC ≤ lãi × CVR ⇔ CPA ≤ lãi" },
+        { "claim": "Đặt ROAS mục tiêu quá cao thì hệ thống tiêu ít", "status": "unverified", "note": "Cơ chế hợp lý, bài ghi \"về nguyên lý\" — chấp nhận" },
+        { "claim": "Bát ăn 180.000đ, 120 đánh giá, CVR 3%, lãi 45.000đ; 12 từ khoá, 4 từ ra 80% đơn", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Nối giá click với lãi qua công thức giá thầu chịu được (trần trước khi đấu), lộ trình \"thủ công để học → ROAS mục tiêu để mở rộng\" có mốc chuyển, và Đào sâu nêu đúng đánh đổi của ROAS mục tiêu (cao → ít đơn, sát → lãi mỏng); Q7 là chẩn đoán từ khoá với kỳ vọng thống kê (9 đơn).",
+      "upgrade": "Để đạt ≥85: (1) sửa cơ sở ROAS hoà vốn theo Doanh số sàn; (2) thay Q5 bằng câu đánh đổi; (3) giải thích mốc 40 đơn; (4) thêm bảng 12 từ khoá mẫu (click, đơn, chi phí/đơn) và một câu L4 đọc bảng để quyết định tắt/tăng; (5) nêu nhiễu: từ có 30 click 0 đơn chưa kết luận được ở CVR 3% (kỳ vọng 0,9 đơn)." },
+    { "id": "B:qc09-04",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 9, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 83,
+      "bloom_items": ["L2","L3","L3","L3","L4","L3","L5"], "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Giả định mỗi 100đ Doanh số: giá vốn 55đ, phí sàn và thanh toán 18đ, hoàn hàng và đơn hỏng 8đ, đóng gói 8đ", "issue": "Nếu Doanh số đã trừ trợ giá người bán (như bài nói), giá vốn 55% tính trên Doanh số ròng — đúng — nhưng bài không nhắc rằng voucher người bán không cần trừ thêm; người học từng học qc09-01 (trừ voucher riêng) có thể trừ hai lần.", "fix": "Thêm một câu: \"Doanh số theo định nghĩa mới đã trừ trợ giá của bạn, nên không trừ voucher lần nữa\"." },
+        { "sev": "P2", "where": "Tình huống", "quote": "Nhân viên báo \"ROAS 8 là rất tốt\"", "issue": "Phí sàn 18% là giả định; thực tế phí Shopee đổi theo ngành và năm (fast) nhưng bài không dẫn trang phí sàn.", "fix": "Thêm src bảng phí Shopee (Kênh Người Bán) với ngày kiểm hoặc ghi rõ \"kiểm phí ngành của bạn\"." },
+        { "sev": "P2", "where": "Q2", "quote": "Đặt 11, vì tỉ lệ lãi là 11% thì ROAS cũng phải đúng bằng 11", "issue": "Phương án nhiễu trùng ý với giá trị sai của Q3 (11); hai câu kiểm cùng một nhầm lẫn.", "fix": "Đổi phương án c của Q2 thành nhiễu khác: \"đặt ROAS bằng ROAS trung bình ngành 6\"." }
+      ],
+      "calc_check": { "n": 3, "ok": 3, "notes": "Q3: 100−55−18−8−8 = 11; 1/0,11 = 9,09 ✓; sai 0,11, 11 ✓. Q4: 60.000 × 11% = 6.600; −7.500 = −900 ✓; sai 52.500 = 60.000−7.500 ✓, 6.600 ✓. Q6: 100−50−18−6−6 = 20 → 1/0,2 = 5 ✓; sai 2 = 1/0,5 ✓, 0,2 ✓." },
+      "claims": [
+        { "claim": "Từ 16/1/2026 \"Doanh thu (GMV)\" của Shopee Ads đổi thành \"Doanh số (Sales)\" và không tính phần trợ giá của người bán", "status": "verified", "note": "src FAQ 396/2187 tiêu đề khớp" },
+        { "claim": "ROAS tối thiểu = 1 ÷ tỉ lệ lãi đóng góp", "status": "verified", "note": "Công thức đúng" },
+        { "claim": "Phí sàn và thanh toán 18% Doanh số", "status": "illustrative-labelled", "note": "Ghi giả định; nên dẫn bảng phí thật" },
+        { "claim": "Chăn ga gối: 7,5 triệu, Doanh số 60 triệu, ROAS 8", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Cách ROAS-trên-sàn → lãi thật được tính đúng và đủ: phí sàn, hoàn/hỏng, đóng gói đều trừ trước khi so với chi quảng cáo; chỉ ra đổi định nghĩa chỉ số từ 16/1/2026 với nguồn — đúng kiểu kiến thức fast có ngày kiểm; Q6 cho cấu trúc biên thứ hai để luyện lại.",
+      "upgrade": "Để đạt ≥85 (hiện 83): (1) nhắc không trừ voucher hai lần; (2) dẫn bảng phí sàn; (3) thêm bảng \"100đ Doanh số đi đâu\" dạng bảng cho 2 sản phẩm (hiện văn xuôi); (4) thêm câu L6: thiết kế đối soát hằng tháng ROAS sàn ↔ tiền thực về (các bước, cột nào); (5) nêu nhiễu hoàn hàng theo mùa (8% là trung bình, tháng sale có thể 15%)." },
+    { "id": "B:qc09-05",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 15, "examples": 13, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 81,
+      "bloom_items": ["L3","L5","L3","L3","L4","L4","L4"], "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Q2", "quote": "Giữ nguyên tới hết ngày vì vẫn còn lãi 8.000đ mỗi đơn bán được", "issue": "Phương án c bênh được một phần về kinh tế (lãi biên vẫn dương); đáp án b dựa vào quy tắc đặt trước. Lời giải nói \"8.000đ chưa trừ đơn hoàn và sai số\" là hợp lý nhưng phần đọc không nêu lý do vạch 75.000đ là 90.000đ trừ dự phòng hoàn hàng.", "fix": "Trong ví dụ, ghi rõ vì sao vạch là 75.000đ (90.000đ − ~15.000đ dự phòng hoàn/hỏng) để c rõ ràng sai." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "ngày đôi và mega sale có nhiều shop đấu cùng lúc nên CPC thường tăng", "issue": "Khẳng định về CPC ngày sale không nguồn, không số; bài không có src nào (fast).", "fix": "Gắn nhãn \"quan sát; đo trên tài khoản của bạn\" hoặc dẫn báo cáo Shopee về mùa sale; thêm src ads.shopee.vn." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Anh Hưng thêm ảnh đo kích thước thật với laptop 15,6 inch, đưa 40 đánh giá có ảnh lên đầu: chuyển đổi lên 3%", "issue": "Tăng CVR 2%→3% quy cho hai thay đổi cùng lúc, không nêu mẫu đo (bao nhiêu click) để tin mức tăng.", "fix": "Thêm \"(đo trên ≥1.000 click sau khi đổi; 2%→3% trên 300 click chỉ là nhiễu)\"." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Ví dụ: 1.200/2% = 60.000; 1.200/3% = 40.000 (−1/3) ✓; 2.000/4% = 50.000; 2.000/2,5% = 80.000 ✓. Q3: 80 ✓; sai 2 = CPC, 50 = /4% ✓. Q4: 90−50 = 40 ✓; sai 88 = 90−2 ✓. Q2: 82.000 ứng CVR ≈ 2,44% ✓ hợp lý." },
+      "claims": [
+        { "claim": "Chi phí mỗi đơn = CPC ÷ tỉ lệ chuyển đổi", "status": "verified", "note": "Công thức đúng" },
+        { "claim": "CPC thường tăng ngày đôi/mega sale; khách sẵn mua hơn", "status": "unverified", "note": "Không src, không số" },
+        { "claim": "Dự phòng 20–30% ngân sách cho ngày cao điểm", "status": "illustrative-labelled", "note": "Ghi giả định" },
+        { "claim": "Balo laptop: CPC 1.200đ, CVR 2%, lãi 90.000đ; 11/11 CPC 2.000đ", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Tách chi phí mỗi đơn thành hai nửa và cho hai kịch bản ngày sale (CVR 4% → dồn tiền; 2,5% → gần hết lãi) làm quyết định đổi theo số; quy tắc dừng theo giờ đặt trước ngày sale là vận hành thật; phản ví dụ vận hành (hết size, giao chậm) dẫn tới Q7 L4.",
+      "upgrade": "Để đạt ≥85: (1) giải thích vạch 75.000đ; (2) gắn nhãn/dẫn nguồn cho CPC ngày sale và thêm src; (3) nêu cỡ mẫu khi đo CVR; (4) thêm bảng giờ (CPC, CVR, chi phí/đơn) cho 6 giờ đầu ngày sale với một câu L4 đọc bảng; (5) thêm câu calc về ngân sách tháng theo lịch sàn (nền + dự phòng)." },
+    { "id": "B:qc09-06",
+      "scores": { "accuracy": 13, "depth": 13, "practical": 17, "examples": 14, "pedagogy": 9, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 87,
+      "bloom_items": ["L4","L5","L3","L3","L3","L4","L5"], "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Tỉ lệ lãi đóng góp (giả định): nồi chiên 15% (ROAS tối thiểu ≈ 6,67), dao 25% (4), hộp 20% (5). Chia: nồi 12 triệu, dao 8 triệu, hộp 5 triệu. Dự báo ROAS: 7; 6; 5,5", "issue": "Ba sản phẩm × 6 chỉ số trình bày bằng văn xuôi; người học phải tự dựng bảng để theo dõi (Áp dụng yêu cầu bảng 6 cột nhưng bài không cho bảng mẫu).", "fix": "Đưa bảng 3 dòng × 6 cột vào bài." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "nồi giảm còn 6 triệu, chuyển sang Tối Đa Doanh Thu với ROAS mục tiêu 7,5", "issue": "Mục tiêu \"giữ thứ hạng cho nồi chiên\" không có chỉ số đo (vị trí từ khoá, đơn tự nhiên); cắt nửa ngân sách mà không nói sẽ kiểm thứ hạng bằng gì.", "fix": "Thêm một chỉ số theo dõi: vị trí trung bình của từ khoá chính hoặc đơn tự nhiên của nồi tuần trước/sau khi giảm tiền." },
+        { "sev": "P2", "where": "Toàn bài", "quote": "Tối Đa Doanh Thu", "issue": "Không có src dù nhắc tên tính năng và cơ chế đặt ROAS theo sản phẩm (fast); src nằm ở 03.", "fix": "Thêm src FAQ 398/1800." }
+      ],
+      "calc_check": { "n": 3, "ok": 3, "notes": "Nồi: 12 × 5,5 = 66; × 15% = 9,9; −12 = −2,1 ✓. Dao: 8 × 7 = 56; × 25% = 14; −8 = +6 ✓. Hộp: 5 × 5,2 = 26; × 20% = 5,2; −5 = +0,2 ✓. Tổng 4,1 ✓. Vạch: 1/0,15 = 6,67; 1/0,25 = 4; 1/0,2 = 5 ✓. Dự báo Doanh số 84/48/27,5 ✓, cả ba trên vạch ✓. ROAS tổng (66+56+26)/25 = 5,92 ✓ \"khoảng 5,9\". Tháng 2: 6+12+5+2 = 25 ✓. Q3 sai 9.900, 54.000 ✓; Q4 sai 0,15, 15 ✓; Q5 sai 29,1, 123 = 148−25 ✓." },
+      "claims": [
+        { "claim": "Tối Đa Doanh Thu cho đặt ROAS mục tiêu theo từng sản phẩm", "status": "unverified", "note": "Không có src trong bài; đã verified ở 03" },
+        { "claim": "Đồ bếp: nồi 1.290.000đ/15%, dao 390.000đ/25%, hộp 199.000đ/20%; 25 triệu/tháng", "status": "illustrative-labelled", "note": "" },
+        { "claim": "Phần tiền thêm thường mua về đơn đắt hơn (lợi suất giảm dần)", "status": "unverified", "note": "Nguyên lý kinh tế, hợp lý; nên nối tới bài về đường cong chi tiêu" }
+      ],
+      "strengths": "Bài tốt nhất module: cùng ROAS 5,5 lỗ ở nồi và lãi ở dao chứng minh bằng số tự khớp hoàn toàn; dự báo vs kết quả mẫu làm đổi phân bổ; Q7 kiểm ROAS của phần tăng thêm so vạch (tư duy biên) là câu L5 hiếm thấy; phản ví dụ về giỏ hàng/mua kèm đúng chỗ.",
+      "upgrade": "Để lên 90+: (1) đưa bảng 3×6 vào bài; (2) thêm chỉ số đo \"giữ thứ hạng\"; (3) thêm src; (4) thêm câu L6: thiết kế lịch tăng dao theo nấc (8→10→12) với tiêu chí đọc ROAS phần tăng thêm mỗi nấc; (5) nêu nhiễu: ROAS tháng của hộp 5,2 vs vạch 5 là sát — chênh 0,2 có đáng tin với Doanh số 26 triệu không." },
+    { "id": "B:qc09-07",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 3 },
+      "total": 79,
+      "bloom_items": ["L4","L5","L3","L3","L4","L4","L2"], "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "Bốn triệu chứng, bốn chỗ cần xem", "issue": "Bốn tình huống (từ khoá, ngày sale, ngân sách bị nuốt, Lazada) dồn trong một đoạn 9 phút; mỗi tình huống chỉ được 1–2 câu, không có bảng chẩn đoán dù Áp dụng yêu cầu bảng 4 dòng.", "fix": "Đưa bảng 4 dòng (triệu chứng → số xem đầu → nguyên nhân → cách sửa) vào bài; cân nhắc tách Lazada sang bài riêng hoặc gộp với 02." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Ngày 10/10: CPC tăng 60%, chuyển đổi giảm vì đối thủ giảm giá 30%; chị không đua giá, hạ ngân sách ngày đó", "issue": "ROAS tụt 6→3 (−50%) trong khi CPC +60% một mình đã làm ROAS còn 6/1,6 = 3,75; phần còn lại do CVR giảm ~20% — bài không tách số cho hai nửa dù đó chính là phương pháp dạy ở Q5.", "fix": "Viết rõ: CPC +60% → ROAS 3,75; CVR −20% → 3,0; vậy nửa CPC gây phần lớn." },
+        { "sev": "P2", "where": "Q7", "quote": "Shop trợ giá mạnh trong ngày sale năm 2026 và thấy ROAS thấp hơn hẳn đợt sale năm ngoái. Điều cần nhớ là gì?", "issue": "Lặp đúng ý Q5 của qc09-04 (đổi định nghĩa Doanh số); ba phương án sai đều có từ tuyệt đối (\"mọi shop\", \"luôn\", \"chỉ năm nay\").", "fix": "Thay bằng câu phân tích: cho Doanh số theo hai định nghĩa cho cùng tháng (có/không trợ giá 15%), hỏi ROAS lệch bao nhiêu (L3)." },
+        { "sev": "P2", "where": "Tình huống", "quote": "Lazada chạy 3 tháng, mỗi tháng 3 triệu, ROAS khoảng 2,5", "issue": "Dùng ROAS cho Lazada mà bài 02 nói chưa xác minh tên công cụ/chỉ số của Lazada; không rõ \"Doanh số\" Lazada có cùng định nghĩa Shopee không — ảnh hưởng tới vạch 4.", "fix": "Ghi \"ROAS theo báo cáo Lazada, kiểm định nghĩa doanh thu trong Seller Center trước khi so vạch\"." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 1.000 × 1.000 = 1 triệu; /5 = 200 nghìn ✓; 200/80 = 2,5 lần lãi ✓; sai 1 = CPC ✓. Q4: 3.000 × 2,5 = 7.500; × 25% = 1.875; −3.000 = −1.125 ✓; sai 4.500, 1.875 ✓. Vạch Lazada 1/0,25 = 4 ✓. Từ \"váy\" 700/1.000 click ✓. Q5 lời giải ROAS = AOV × CVR ÷ CPC ✓ đúng đại số." },
+      "claims": [
+        { "claim": "\"Doanh số\" từ 16/1/2026 không tính trợ giá người bán", "status": "verified", "note": "src FAQ 396/2187" },
+        { "claim": "Hệ thống dồn tiền ngân sách chung vào món nhiều click", "status": "unverified", "note": "Cơ chế hợp lý, không src" },
+        { "claim": "Trên Lazada, tên công cụ và cách chỉnh cần xem trong Seller Center", "status": "illustrative-labelled", "note": "Bài tự nói chưa xác minh — đúng cách" },
+        { "claim": "Thời trang công sở: 1.000 click/5 đơn, lãi 80.000đ; Lazada 3 triệu/tháng ROAS 2,5, lãi 25%", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Mỗi triệu chứng gắn với \"con số xem đầu tiên\" (từ khoá, hai nửa, ngân sách từng món, vạch dừng); tiêu chí dừng đặt trước và lỗi chi phí chìm được kiểm ở Q2; Đào sâu hỏi \"kênh có mang khách kênh khác không mang được không\" và đề xuất thử dừng 4 tuần — đo tăng thêm đúng cách.",
+      "upgrade": "Để đạt ≥85: (1) đưa bảng chẩn đoán 4 dòng vào bài; (2) tách số hai nửa cho ngày 10/10; (3) thay Q7 trùng ý bằng câu tính lệch ROAS theo hai định nghĩa; (4) nêu cỡ mẫu: 5 đơn/1.000 click là CVR 0,5% với sai số lớn — bao nhiêu click mới kết luận; (5) làm rõ cơ sở ROAS Lazada." }
+  ],
+  "module_notes": {
+    "progression": "Hợp lý: sẵn sàng chưa (01) → bản đồ chỗ hiển thị (02) → dựng Tìm kiếm & ROAS mục tiêu (03) → ROAS sàn → lãi thật (04) → đòn bẩy ngoài giá thầu (05) → chia tiền theo sản phẩm (06) → chẩn đoán tổng hợp (07). Tuy nhiên cơ sở tính ROAS hoà vốn đổi giữa 01/03 (giá niêm yết ÷ lãi) và 04/06/07 (1 ÷ tỉ lệ lãi trên Doanh số sàn) mà không nói hai cách chỉ trùng khi không có voucher người bán; bài 04 giới thiệu định nghĩa Doanh số mới sau khi 01/03 đã dùng ROAS.",
+    "overlap": [
+      "ROAS hoà vốn/tối thiểu được dạy lại ở 01 (Q3), 03 (Q4), 04 (Q3, Q6), 06 (Q4) — bốn câu calc cùng một công thức.",
+      "Đổi định nghĩa Doanh số 16/1/2026 lặp ở 04 (khái niệm, Q5) và 07 (khái niệm, Q7).",
+      "\"Click Facebook rẻ hơn nhưng so bằng chi phí mỗi đơn\" lặp ở 02 (Q6) và 05 (Q6), đều trỏ kn03-03."
+    ],
+    "gaps": [
+      "Lazada chỉ được nhắc với ghi chú \"chưa xác minh\" ở 02 và 07; module tên \"Shopee/Lazada\" nhưng không dạy được công cụ Lazada nào.",
+      "Chưa có bài về quảng cáo Livestream/Video trên Shopee dù 02 liệt kê và tình huống 07 là thời trang.",
+      "Thiếu src về bảng phí sàn (phí cố định, phí thanh toán, Freeship Xtra) dù mọi phép tính biên phụ thuộc vào nó.",
+      "Chưa dạy đọc báo cáo Shopee Ads theo từ khoá/vị trí (cột nào, cửa sổ ghi nhận 7 ngày) dù 03 và 07 yêu cầu đọc theo từ khoá.",
+      "Không có bài về voucher/trợ giá tương tác với quảng cáo (voucher làm tăng CVR nhưng giảm lãi và không vào Doanh số) — đây chính là chỗ gây lệch cơ sở ROAS giữa các bài."
+    ],
+    "best_lesson": "B:qc09-06",
+    "weakest_lesson": "B:qc09-02"
+  }
+}

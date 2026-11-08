@@ -1,0 +1,323 @@
+{
+  "mod": "qc01",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:qc01-01",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q3",
+          "quote": "sai hay gặp: [[320,\"ROAS_LA_LOI_NHUAN\"],[160,\"SAI_TINH_TOAN\"]]",
+          "issue": "Nhãn lỗi không khớp lời giải: 320 là lấy giá bán 400 thay lãi gộp 160 (nhầm giá bán với lãi gộp, không phải nhầm ROAS với lợi nhuận); 160 là CPA hoà vốn (nhầm hoà vốn với trần), không phải lỗi tính toán.",
+          "fix": "Đổi nhãn 320 → NHAM_GIA_BAN_VOI_LAI_GOP, 160 → NHAM_HOA_VON_VOI_TRAN để phản hồi đúng hiểu lầm."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Lần chạy thử ba tháng trước cho CPA khoảng 100.000đ",
+          "issue": "CPA dự kiến là đầu vào quyết định nhưng không nói lần chạy thử có bao nhiêu đơn, chi bao nhiêu; CPA từ mẫu nhỏ có sai số lớn, bài không nêu độ chắc.",
+          "fix": "Thêm 'thử 8 triệu ra 80 đơn' và một câu: 'với vài chục đơn, CPA dự kiến có thể lệch ±20%, nên tính cả kịch bản 80.000đ và 120.000đ'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1, Q5",
+          "quote": "Vì sao CPA trần phải tính từ lãi gộp mỗi đơn chứ không từ giá bán?",
+          "issue": "Hai câu nhận lại ý chính của bài (L2); bài đã có đủ số để ra câu chẩn đoán dữ liệu.",
+          "fix": "Thay Q5 bằng tình huống: 'Tháng này CPA 75.000đ nhưng kế toán báo lãi âm; dữ liệu nào bạn kiểm trước?' (phí sàn tăng → lãi gộp đổi → trần đổi)."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (600×160 − 48.000)/600 = 80 ✓ (tol 0,5); sai 320 = (600×400−48.000)/600 ✓, 160 = lãi gộp ✓. Q4: 600×160 − 600×100 = 96 − 60 = 36 ✓ (tol 0,1); sai 96, 180 = 240−60 ✓. Ví dụ: 96 − 48 = 48; 48/600 = 80 ✓; 'doanh thu 240 triệu' = 600×400 ✓. Đào sâu: CPA hoà vốn 160 = lãi gộp ✓." },
+      "claims": [
+        { "claim": "Bếp Gọn, chảo 400.000đ, lãi gộp 160.000đ, 600 đơn, 48 triệu lãi", "status": "illustrative-labelled", "note": "Bài ghi 'số liệu giả định'." },
+        { "claim": "Đồng tiền cuối cùng luôn đắt hơn trung bình (lợi suất giảm dần)", "status": "illustrative-labelled", "note": "Nguyên lý kinh tế nền, nêu như cơ chế có điều kiện; chấp nhận." }
+      ],
+      "strengths": "Chuỗi lãi mục tiêu → số đơn → lãi gộp → CPA trần → ngân sách được dựng rõ, số tự khớp, tách CPA hoà vốn với CPA mục tiêu; Q2 là câu quyết định có ba phương án thật, Q7 chuyển sang mô hình thuê bao.",
+      "upgrade": "Để ≥85: (1) nêu nguồn và độ chắc của CPA dự kiến 100.000đ (số đơn của lần thử, hai kịch bản); (2) thay Q1/Q5 bằng câu chẩn đoán từ bảng số; (3) thêm tình huống thứ hai đổi kết luận (giá vốn tăng 30.000đ → trần còn 50.000đ, kế hoạch vỡ) ngay trong Ví dụ; (4) sửa nhãn lỗi Q3."
+    },
+    {
+      "id": "B:qc01-02",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "ĐÀO SÂU, Q4",
+          "quote": "Trên Meta và TikTok, thuật toán phân phối dựa nhiều vào việc ai dừng lại xem creative",
+          "issue": "Khẳng định về cơ chế thuật toán phân phối của hai nền tảng, nêu như sự thật; hai `src` của bài chỉ bao phủ loại trừ nhắm chọn và chính sách sức khoẻ, không bao phủ cơ chế phân phối. Loại fast bắt buộc nguồn và câu 'nếu tài liệu chính thức khác, tin tài liệu'.",
+          "fix": "Thêm src Meta 'About ad delivery / How Meta uses machine learning to deliver ads' và TikTok 'How the TikTok ad auction works' với ngày kiểm; viết lại thành 'tín hiệu tương tác với creative là một đầu vào quan trọng của phân phối'."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Phỏng vấn 8 khách đã ký, An Cư thấy 6 người tìm tới trong hai tháng sau khi nhận bàn giao",
+          "issue": "Mẫu 8 người được dùng để quyết định kênh, thông điệp và trang đích; bài không nói đây là giả thuyết cần kiểm bằng dữ liệu chạy thật.",
+          "fix": "Thêm: '8 khách đủ để ra giả thuyết; kiểm bằng tỉ lệ lead hỏi trọn căn sau 2 tuần chạy theo chân dung mới (mục tiêu > 30% so với 15% cũ)'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1",
+          "quote": "Kênh, thời điểm chạy, câu mở đầu quảng cáo và nội dung trang đích",
+          "issue": "Phương án đúng là phương án liệt kê đầy đủ nhất (bốn hệ quả) trong khi ba phương án sai mỗi cái một ý; người học đoán được theo độ bao quát.",
+          "fix": "Cho mỗi phương án sai cũng là một cụm 3–4 hệ quả nhưng sai hướng (vd 'tăng ngân sách, mở rộng tuổi, thêm sở thích decor, đổi màu ảnh')."
+        },
+        {
+          "sev": "P2",
+          "where": "NGUỒN",
+          "quote": "Meta Marketing API v22.0 changelog (loại trừ nhắm chọn chi tiết)",
+          "issue": "Bài loại fast có src nhưng thiếu câu 'nếu màn hình/tài liệu khác, tin trang chính thức' theo rubric.",
+          "fix": "Thêm một câu cuối Đào sâu hoặc Lỗi hay gặp."
+        }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 120×150 = 18.000; 18.000/18 = 1.000 nghìn ✓ (tol 1); 'gấp gần 7 lần' = 1.000/150 = 6,7 ✓; '15% đúng người' = 18/120 ✓. Sai 150 = chi phí mỗi tin nhắn ✓." },
+      "claims": [
+        { "claim": "Meta đã không còn cho tạo mới loại trừ nhắm chọn chi tiết từ 2025 (Q7)", "status": "verified", "note": "src: Meta Marketing API v22.0 changelog, tiêu đề nêu rõ loại trừ nhắm chọn chi tiết; ngày kiểm 2026-10-24." },
+        { "claim": "Một số sản phẩm sức khoẻ phải nhắm 18+ (chính sách nền tảng)", "status": "verified", "note": "src: Meta Advertising Standards: Health and wellness." },
+        { "claim": "Thuật toán Meta/TikTok phân phối dựa nhiều vào ai dừng lại xem creative", "status": "unverified", "note": "Không có src bao phủ; xem defect P1." },
+        { "claim": "Nội thất An Cư, hợp đồng 180 triệu, 8 khách phỏng vấn, 120 tin nhắn/18 hỏi trọn căn", "status": "illustrative-labelled", "note": "Bài ghi 'số liệu giả định'." }
+      ],
+      "strengths": "Bốn câu chân dung (ai quyết định, lúc nào, thay thế gì, sợ gì) mỗi câu dẫn tới một quyết định quảng cáo cụ thể; phản ví dụ hàng mua lặp (Q5) và phân biệt Meta (qua creative) với Search (qua từ khoá) là điểm hiếm.",
+      "upgrade": "Để ≥85: (1) thêm src cho cơ chế phân phối và câu 'tin trang chính thức'; (2) nêu cách kiểm giả thuyết từ 8 phỏng vấn bằng số chạy thật; (3) thêm phép tính thứ hai: nếu chân dung mới nâng tỉ lệ hỏi trọn căn từ 15% lên 35% với cùng 18 triệu thì chi phí mỗi người hỏi trọn căn giảm còn bao nhiêu (≈430.000đ); (4) cân lại Q1 để không đoán được theo độ bao quát."
+    },
+    {
+      "id": "B:qc01-03",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q1 (lời giải a, d)",
+          "quote": "nền tảng không biết giá trị đơn của bạn khi tính CPM … Lượt hiển thị phụ thuộc ngân sách và CPM; offer không làm nền tảng chia thêm chỗ",
+          "issue": "Lời giải phương án sai nêu cơ chế nền tảng quá tuyệt đối và không nguồn: đấu giá Meta/TikTok xếp hạng theo giá thầu × tỉ lệ hành động ước tính (+ chất lượng), nên quảng cáo có CTR/CVR cao hơn thường thắng với giá thấp hơn và cùng ngân sách có thể mua được nhiều lượt hiển thị hơn; khi tối ưu theo giá trị, nền tảng có dùng giá trị đơn. Người học sẽ hiểu sai rằng offer hoàn toàn không tác động tới CPM/lượt hiển thị.",
+          "fix": "Viết lại: 'CPM chủ yếu do cạnh tranh và tệp; offer chỉ tác động gián tiếp qua tỉ lệ hành động ước tính, không có cơ chế ưu tiên riêng' và giữ đáp án c là nơi tác động mạnh nhất."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "đổi trả ước tốn thêm 10.000đ/đơn",
+          "issue": "Con số bình quân không nêu giả định tạo ra nó (tỉ lệ đổi trả × chi phí mỗi lần), trong khi đây là biến quyết định giữa A và B.",
+          "fix": "Ghi '5% đơn đổi trả × 200.000đ phí ship hai chiều và xử lý ≈ 10.000đ/đơn'."
+        },
+        {
+          "sev": "P2",
+          "where": "ĐÀO SÂU",
+          "quote": "Chênh 33 với 55 đơn khó là may rủi; chênh 8 với 11 đơn thì chưa nói được gì",
+          "issue": "Kết luận đúng nhưng không cho người học cách ước nhanh để tự áp cho số khác.",
+          "fix": "Thêm: 'ước nhanh: sai số ≈ √(tổng đơn hai bên); 33 với 55 có sai số ≈ 9, chênh 22 gấp hơn 2 lần sai số; 8 với 11 sai số ≈ 4, chênh 3 chưa tới một lần'."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: CPA B = 5.000/55 = 90,9; 155 − 90,9 = 64,1 → 64 ✓ (tol 1); sai 339 = 430 − 91 ✓, 155 ✓. Q4: A = 33×160 − 5.000 = 280; B = 55×155 − 5.000 = 3.525; chênh 3.245 → 3,2 ✓ (tol 0,1); sai 3,5 = (55×160−5.000) − 280 = 3.520 ✓, 22 = 55 − 33 ✓. Ví dụ: CPA A = 5.000/33 = 151,5 ✓; lãi A = 160 − 151,5 = 8,5 ✓; lãi gộp B = 160 + 30 − 25 − 10 = 155 ✓. Q5: 160 − 100 = 60 < 70 → lỗ 10.000đ/đơn ✓." },
+      "claims": [
+        { "claim": "Bếp Gọn offer A/B/C, 33/55 đơn, giá vốn xẻng 25.000đ", "status": "illustrative-labelled", "note": "Bài ghi 'số liệu giả định'." },
+        { "claim": "Nền tảng không biết giá trị đơn khi tính CPM; offer không làm nền tảng chia thêm chỗ (Q1)", "status": "unverified", "note": "Khẳng định cơ chế đấu giá, không nguồn, quá tuyệt đối; xem P1." },
+        { "claim": "Không có cơ chế hạ điểm quảng cáo có chữ giảm giá trong tài liệu chính thức (Q5)", "status": "unverified", "note": "Lời phủ định hợp lý nhưng không có src." }
+      ],
+      "strengths": "So offer bằng lãi sau quảng cáo mỗi đơn thay vì CPA là bài học thực chiến hiếm thấy; ví dụ có ba offer (A, B, C) với kết luận đổi theo lãi gộp; cách kiểm offer không tốn tiền (hỏi 10 khách cũ) là việc làm ngay.",
+      "upgrade": "Để ≥85: (1) sửa lời giải Q1 về cơ chế đấu giá; (2) nêu giả định của chi phí đổi trả và cách ước sai số; (3) thêm tình huống hoàn đơn của B cao hơn (ví dụ 12% so với 5%) để thấy kết luận đổi và nối với bài qc02-03; (4) thêm một câu L5: chọn giữa B (lãi 64.000đ/đơn, 55 đơn) và một offer D lãi 90.000đ/đơn nhưng 30 đơn với cùng 5 triệu."
+    },
+    {
+      "id": "B:qc01-04",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L2", "L3", "L4", "L2", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q2",
+          "quote": "Khoảng 60% lạnh, 25% ấm, 15% nóng, rồi chỉnh theo kích thước tệp",
+          "issue": "Đáp án là chép lại đúng con số chia tiền của Ví dụ (nhận lại, L2) và là phương án duy nhất có vế 'rồi chỉnh theo' trong khi ba phương án sai đều tuyệt đối ('90%', 'cả 30 triệu', 'giữ nguyên cả năm'); đoán được bằng hình thức.",
+          "fix": "Cho tình huống mới (tệp ghé web 30 ngày 20.000 người, tần suất 2) và bốn cách chia đều có vế điều kiện; đáp án đúng phải suy từ kích thước tệp, không chép số ví dụ."
+        },
+        {
+          "sev": "P2",
+          "where": "Q5",
+          "quote": "Một phần đơn của nó về sau qua tầng nóng, nên CPA trực tiếp luôn cao",
+          "issue": "Từ tuyệt đối 'luôn' trong đáp án đúng; tầng lạnh với Search (bài Q4 chính nó nói) có thể CPA trực tiếp thấp.",
+          "fix": "Đổi 'luôn cao' → 'thường trông đắt hơn thật'."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Tệp ghé web 30 ngày của Bếp Gọn từ khoảng 12.000 người còn 4.000 người",
+          "issue": "Không nói khoảng thời gian co lại (từ tháng nào tới tháng nào) và không nối với tần suất 9 lần/tuần ở Tình huống bằng phép tính (27 triệu/CPM → số lượt hiển thị / 4.000 người).",
+          "fix": "Thêm: 'với CPM 60.000đ, 27 triệu mua 450.000 lượt hiển thị; chia cho 4.000 người là hơn 100 lần/tháng — tần suất 9/tuần tự giải thích'."
+        },
+        {
+          "sev": "P2",
+          "where": "NGUỒN",
+          "quote": "Meta: Advantage+ sales campaigns … TikTok Ads: About Smart+ Web Campaigns",
+          "issue": "Bài loại fast có src nhưng thiếu câu 'nếu màn hình khác, tin trang chính thức'.",
+          "fix": "Thêm câu đó vào Đào sâu."
+        }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 4.000×3% = 120 đơn; 27.000/120 = 225 nghìn ✓ (tol 1); 27 triệu = 90% của 30 triệu khớp Tình huống ✓; sai 6,75 = 27.000/4.000 ✓. Ví dụ: 60/25/15% của 30 triệu = 18/7,5/4,5 triệu (bài không ghi số tuyệt đối)." },
+      "claims": [
+        { "claim": "Advantage+ sales campaigns (Meta) và Smart+ (TikTok) phân phối cho cả người lạ và người đã ghé trong một chiến dịch", "status": "verified", "note": "Hai src tiêu đề khớp, ngày kiểm 2026-10-24; bài còn hedging 'nếu nền tảng có báo cáo tách khách mới'." },
+        { "claim": "Chiến dịch bám đuổi chỉ chạy trong tệp bạn chọn; nó không tự lấy thêm người lạ (Q1)", "status": "unverified", "note": "Đúng với tệp tuỳ chỉnh thuần, nhưng tuỳ cài đặt mở rộng đối tượng; không nguồn." },
+        { "claim": "Tệp 12.000 → 4.000, chia 60/25/15", "status": "illustrative-labelled", "note": "Bài ghi 'điểm xuất phát giả định'." }
+      ],
+      "strengths": "Ý 'tầng nóng rẻ nhất nhưng do tầng lạnh bơm đầy' được nối với tín hiệu cảnh báo sớm (kích thước tệp theo tuần); Q4 chuyển độ nóng sang Search theo nhu cầu là câu chuyển giao tốt.",
+      "upgrade": "Để ≥85: (1) viết lại Q2 thành tình huống mới không chép số ví dụ; (2) nối tần suất 9/tuần với kích thước tệp bằng phép tính; (3) thêm tình huống thứ hai đổi kết luận (shop có 50.000 khách cũ đồng ý nhận tin → dồn tầng nóng vẫn đúng 2 tháng, kèm ngưỡng tần suất để dừng); (4) thêm câu kiểm trang chính thức cho phần Advantage+/Smart+."
+    },
+    {
+      "id": "B:qc01-05",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 12, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L3", "L5", "L3", "L4", "L2", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "LỖI HAY GẶP",
+          "quote": "chưa kiểm ngành mình có thuộc danh mục quảng cáo đặc biệt (nhà ở, việc làm, tài chính…) hay không",
+          "issue": "Danh mục đặc biệt nhà ở/việc làm/tín dụng của Meta chủ yếu áp cho quảng cáo nhắm tới một số quốc gia (Mỹ, Canada…); bài không nói phạm vi quốc gia nên người học ở Việt Nam có thể tưởng bị áp cho mọi quảng cáo nhà ở. Có hedging 'kiểm trong tài khoản trước' nên không P1.",
+          "fix": "Thêm 'áp theo quốc gia nhắm quảng cáo; với Việt Nam hiện chủ yếu là nhóm tài chính — kiểm danh sách trong src'."
+        },
+        {
+          "sev": "P2",
+          "where": "VÌ SAO HIỆU QUẢ (2)",
+          "quote": "Mỗi kênh cần một lượng kết quả tối thiểu để thuật toán học và để bạn đọc được số",
+          "issue": "Luận điểm trung tâm (ngân sách nhỏ → một kênh) không có con số ngưỡng, Q3 ra 6,25 đơn/tuần nhưng bài không nói 'quá ít' so với mốc nào.",
+          "fix": "Dẫn mốc ~50 sự kiện/tuần của Meta (bài qc01-06) ngay tại đây: '6 đơn/tuần so với mốc ~50 là thiếu 8 lần'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q5, Q6",
+          "quote": "Trong trường hợp nào chỉ nên chạy MỘT kênh quảng cáo?",
+          "issue": "Hai câu L2 nhận lại ý bài; phương án sai của Q5 (b, c, d) đều nói ngược hiển nhiên.",
+          "fix": "Thay Q6 bằng câu dữ liệu: 'An Cư chạy Search 25 triệu ra 40 lead, Zalo OA tốn 5 triệu phí tin nhắn, 12 hợp đồng; nếu bỏ OA thì chỉ số nào sẽ xấu trước?'"
+        }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 12/4 = 3 triệu/kênh/tháng; 3/4 = 0,75 triệu/tuần; 750/120 = 6,25 ✓ (tol 0,1); sai 25 = 3.000/120 ✓, 100 = 12.000/120 ✓." },
+      "claims": [
+        { "claim": "Dịch vụ tài chính, sức khoẻ chịu giới hạn quảng cáo riêng trên Meta", "status": "verified", "note": "src Special Ad Category + Health and wellness, ngày kiểm 2026-10-24." },
+        { "claim": "Một số sản phẩm cần giấy phép mới chạy được Zalo Ads", "status": "verified", "note": "src Zalo Ads: Sản phẩm cần giấy phép." },
+        { "claim": "Danh mục đặc biệt gồm nhà ở, việc làm, tài chính", "status": "unverified", "note": "Danh mục đúng nhưng phạm vi quốc gia áp dụng không nêu; xem P2." },
+        { "claim": "Bếp Gọn 30 triệu, An Cư 40 triệu, Trà Mộc 12 triệu", "status": "illustrative-labelled", "note": "Bài ghi 'số liệu giả định'." }
+      ],
+      "strengths": "Ba doanh nghiệp, ba ngân sách là ba tình huống thật sự khác nhau trong một bài; phân loại bắt/tạo/chốt nhu cầu kèm cách kiểm nhanh (gõ từ khoá vào Google và ô tìm kiếm sàn) là việc làm ngay.",
+      "upgrade": "Để ≥85: (1) đưa mốc ~50 sự kiện/tuần vào lập luận một kênh và cho Q3 so với mốc đó; (2) nói rõ phạm vi quốc gia của danh mục quảng cáo đặc biệt; (3) thêm phép tính cho An Cư (40 triệu, CPL đạt chuẩn 600.000đ → 67 lead đạt chuẩn/tháng; chia 4 kênh thì mỗi kênh 17); (4) thay Q6 bằng câu chẩn đoán dữ liệu."
+    },
+    {
+      "id": "B:qc01-06",
+      "scores": { "accuracy": 12, "depth": 13, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 81,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L2", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "PHẢN VÍ DỤ",
+          "quote": "TikTok nói biến động bắt đầu giảm sau khoảng 25 kết quả hoặc 7 ngày; Google khuyến nghị Demand Gen có ngân sách ít nhất 10 lần CPA mục tiêu",
+          "issue": "Hai con số nền tảng nêu như sự thật nhưng không trích nguyên văn. Theo hiểu biết của người chấm, tài liệu Google cho Demand Gen/Video action thường khuyến nghị ngân sách ngày ≥ 15 lần CPA mục tiêu, và mốc TikTok hay được nêu là 50 chuyển đổi trong 7 ngày; con số 10 và 25 có thể sai hoặc đã đổi. src 'Demand Gen campaigns' là trang tổng quan, tiêu đề không bao phủ khuyến nghị ngân sách.",
+          "fix": "Mở hai trang src, trích nguyên văn con số và ghi ngày; nếu Google nêu 15 lần thì sửa; thêm câu 'nếu tài liệu chính thức khác, tin tài liệu'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q3",
+          "quote": "sai hay gặp: [[0.6,\"SAI_TINH_TOAN\"],[24,\"SAI_TINH_TOAN\"]]",
+          "issue": "0,6 không ứng với lỗi tự nhiên nào (120.000×50 = 6 triệu; 0,6 triệu là nhân 5?). 24 đúng là nhân thêm 4 tuần.",
+          "fix": "Đổi 0,6 thành 2,4 (chia 120.000 cho 50) hoặc 6.000 (nhầm đơn vị nghìn/triệu) với nhãn tương ứng."
+        },
+        {
+          "sev": "P2",
+          "where": "NGUỒN",
+          "quote": "Meta Business Help Center: Learning limited <https://en-gb.facebook.com/business/help/269269737396981>; About the learning phase <https://www.facebook.com/business/help/942374239243867>",
+          "issue": "Bài qc03-07 dẫn hai URL này với tiêu đề đảo ngược (269269737396981 = About the learning phase, 942374239243867 = Learning limited). Một trong hai bài gắn sai tiêu đề nguồn.",
+          "fix": "Mở hai URL, gắn đúng tiêu đề và đồng bộ ở cả hai bài."
+        },
+        {
+          "sev": "P2",
+          "where": "ĐÀO SÂU",
+          "quote": "Chỉnh sửa lớn — đổi sự kiện tối ưu, đối tượng, creative, tạm dừng, và cả thay đổi lớn về ngân sách hay giá thầu",
+          "issue": "Bài loại fast có src nhưng thiếu câu 'nếu màn hình khác, tin trang chính thức'.",
+          "fix": "Thêm câu đó sau danh sách chỉnh sửa lớn."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 120.000×50 = 6.000.000 = 6 triệu ✓ (tol 0,05); sai 24 = ×4 tuần ✓, 0,6 không khớp lỗi nào. Q4: 10.000/150 = 66,7 lead form; ×1/4 = 16,7 ✓ (tol 0,2); sai 66,7 ✓. Ví dụ: 100.000×50 = 5 triệu/tuần ✓; 9 triệu/5 = 1,8 → '1 nhóm' ✓; An Cư 600.000×50 = 30 triệu ✓; 10 triệu/150.000 = 67 lead ✓; 600.000 = 150.000×4 khớp Q4 ✓. Q1 lời giải: 9.000/100 = 90 đơn, /4 = 22,5 ✓ khớp '15–25 đơn' ở Tình huống." },
+      "claims": [
+        { "claim": "Meta gắn 'Learning limited' khi nhóm khó đạt khoảng 50 sự kiện tối ưu trong 7 ngày sau chỉnh sửa lớn", "status": "verified", "note": "src Meta Learning limited / About the learning phase, ngày kiểm 2026-10-24 (tiêu đề-URL cần đồng bộ với qc03-07)." },
+        { "claim": "TikTok: biến động giảm sau khoảng 25 kết quả hoặc 7 ngày", "status": "verified", "note": "src 'TikTok Ads Manager: Learning phase' bao phủ chủ đề; con số 25 cần đối chiếu nguyên văn (người chấm nhớ mốc 50/7 ngày)." },
+        { "claim": "Google khuyến nghị Demand Gen ngân sách ít nhất 10 lần CPA mục tiêu", "status": "unverified", "note": "src là trang tổng quan Demand Gen; con số có thể là 15 lần. Xem P1." },
+        { "claim": "Chỉnh sửa lớn (sự kiện, đối tượng, creative, tạm dừng, ngân sách/giá thầu lớn) đưa nhóm về học lại", "status": "verified", "note": "src About the learning phase." },
+        { "claim": "Bếp Gọn 9 triệu/tuần, 4 nhóm; An Cư 600.000đ/lead đạt chuẩn", "status": "illustrative-labelled", "note": "Bài ghi 'số liệu giả định'." }
+      ],
+      "strengths": "Biến 'giai đoạn học' thành công thức ngân sách (CPA × 50) rồi áp cho hai doanh nghiệp với hai lối ra khác nhau (gộp nhóm; tối ưu sự kiện sớm kèm theo dõi lead đạt chuẩn); Q6 chẩn đoán đúng cái giá của tối ưu sự kiện sớm.",
+      "upgrade": "Để ≥85: (1) trích nguyên văn hai con số TikTok/Google từ src (hoặc bỏ) và thêm câu tin trang chính thức; (2) đồng bộ tiêu đề-URL src với qc03-07; (3) sửa đáp án sai 0,6 ở Q3; (4) thêm một câu L5 đánh đổi: gộp 1 nhóm rộng (học đủ) hay giữ 2 nhóm 4,5 triệu (gần ngưỡng) khi hai tệp có CPA chênh 40% trong 3 tuần."
+    },
+    {
+      "id": "B:qc01-07",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 17, "examples": 10, "pedagogy": 9, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L2", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "VÍ DỤ (quy tắc 1 và 2), Q2",
+          "quote": "(1) 7 ngày đầu sau khi bật hoặc sửa lớn, không đụng, trừ lỗi đo lường, lỗi trang hoặc chi vượt ngân sách. (2) Dừng một quảng cáo khi đã tiêu bằng 2 lần CPA hoà vốn (320.000đ) mà chưa ra đơn nào.",
+          "issue": "Hai quy tắc xung đột: với 30 triệu/tháng ≈ 1 triệu/ngày chia vài quảng cáo, một quảng cáo chạm 320.000đ ngay ngày 1–2, tức quy tắc (2) kích hoạt trong vùng cấm đụng của (1), mà (1) không liệt kê (2) là ngoại lệ. Lời giải Q2 dùng cả hai cùng lúc ('Quy tắc nói 320.000đ, và đang trong 7 ngày cấm đụng') nên người học không biết luật nào thắng khi quảng cáo tiêu 350.000đ ở ngày 3 mà chưa có đơn.",
+          "fix": "Ghi thứ tự ưu tiên: (1) áp cho cấp nhóm quảng cáo và tệp; (2) là ngoại lệ ở cấp quảng cáo lẻ; hoặc đổi (2) thành 'sau vùng cấm đụng'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1, Q7",
+          "quote": "Chặng Mở rộng (ngày 61–90) khác chặng Thử ở điểm nào?",
+          "issue": "Hai câu nhận lại cấu trúc bài (L2); Q7 phương án đúng là tóm tắt khái niệm.",
+          "fix": "Thay Q7 bằng tình huống: 'Ngày 65, CPA 7 ngày 76.000đ với 45 đơn; CPM tuần sale tăng 30%. Áp quy tắc nào, tăng hay chờ?'"
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ (quy tắc 4)",
+          "quote": "Tăng ngân sách 20% mỗi lần khi CPA 7 ngày dưới 80.000đ và có ít nhất 30 đơn trong 7 ngày",
+          "issue": "Không giải thích vì sao 30 đơn (sai số ≈ ±18% CPA) — con số nhìn như chép; bài Đào sâu đã làm điều này cho quy tắc 2 nhưng không cho quy tắc 4.",
+          "fix": "Thêm một câu: 'với 30 đơn, CPA 7 ngày có sai số khoảng ±18%; 76.000đ có thể là 90.000đ thật — nên đòi CPA dưới trần một khoảng đệm 10%'."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 2,5×160 = 400 ✓ (tol 1); sai 200 = 2,5×80 ✓, 64 = 160/2,5 ✓. Q4: 1.000×1,2³ = 1.728 ✓ (tol 1); sai 1.600 = +20% gốc ×3 ✓, 1.200 ✓. Đào sâu: P(0 đơn | kỳ vọng 2) = e⁻² = 13,5% ≈ 1/7 ✓. Ví dụ: 2×160.000 = 320.000 ✓; CPA trần 80.000 và hoà vốn 160.000 khớp qc01-01 ✓." },
+      "claims": [
+        { "claim": "Xác suất chưa ra đơn nào khi kỳ vọng 2 đơn ≈ 1/7 (Poisson)", "status": "verified", "note": "Người chấm tính lại e⁻² = 0,135." },
+        { "claim": "Bảng quy tắc Bếp Gọn (320.000đ, 14 ngày, 20%, 30 đơn)", "status": "illustrative-labelled", "note": "Bài ghi 'Mọi ngưỡng ở đây là giả định'." }
+      ],
+      "strengths": "Bài hiếm hoi dạy viết luật trước khi chạy với từng bước, có ngoại lệ, có biện hộ xác suất cho ngưỡng dừng; Q4 bắt người học tính lãi kép của tăng ngân sách từng nấc; Q6 nối ngưỡng với lãi gộp đổi.",
+      "upgrade": "Để ≥85: (1) sửa xung đột giữa quy tắc 1 và 2 bằng thứ tự ưu tiên; (2) biện hộ con số 30 đơn như đã làm với 320.000đ; (3) thêm tình huống thứ hai đổi kết luận (ngân sách 5 triệu/tháng → ngưỡng tiền 320.000đ chiếm 2 ngày chi tiêu, cần quy tắc khác); (4) thay Q1/Q7 bằng câu áp quy tắc vào số mới."
+    }
+  ],
+  "module_notes": {
+    "progression": "Thứ tự mạch: kinh tế đơn hàng và CPA trần (01) → chân dung theo tình huống mua (02) → offer (03) → ba tầng độ nóng và chia tiền (04) → chọn kênh theo bắt/tạo/chốt nhu cầu (05) → ngân sách học và số nhóm (06) → kế hoạch 90 ngày và quy tắc viết trước (07). Mạch hợp lý: từ 'được chi bao nhiêu' tới 'chi ở đâu, cho ai, với lời mời gì, cấu trúc nào, theo luật nào'. Bếp Gọn là case xuyên suốt với số nhất quán (400.000đ, lãi gộp 160.000đ, trần 80.000đ, hoà vốn 160.000đ, 30 triệu/tháng) trừ chỗ qc02 sau đó dùng 170.000đ. 06 nên đứng trước 05 hoặc 05 phải dẫn mốc 50 sự kiện/tuần, vì lập luận 'một kênh làm tới nơi' của 05 cần con số của 06. Mọi bài đều có Phản ví dụ, Đào sâu, ví dụ gắn nhãn giả định và câu Q2 là quyết định — khác hẳn kn06; điểm trung bình 78 phản ánh điều đó.",
+    "overlap": [
+      "06 (chỉnh sửa lớn đưa nhóm về học lại) và 07 (vùng cấm đụng 7 ngày) nói cùng một cơ chế; qc03-07 lặp lại cả hai lần nữa với cùng con số 50.",
+      "04 ('CPA rẻ của bám đuổi một phần là đơn khách đằng nào cũng mua') là lời hứa cho qc02-08; hai bài không dẫn nhau trong LIÊN KẾT.",
+      "01 và 07 cùng dùng CPA trần 80.000đ / hoà vốn 160.000đ — tốt cho case, nhưng 07 Q3 (2,5 × 160) và 01 Q3 là cùng một kiểu phép tính một bước.",
+      "02 Q6 và qc02-01 Q6 cùng ý 'lead rẻ nhưng tỉ lệ đạt chuẩn thấp'."
+    ],
+    "gaps": [
+      "Không có bài về chiến lược giá thầu (chi phí thấp nhất, giới hạn chi phí, ROAS mục tiêu) dù 01 nói 'mức chi tối đa cho một đơn' — người học không biết cách đưa CPA trần vào tài khoản.",
+      "Chuỗi CPM → CTR → CPC → CVR → CPA chưa được dựng trong module này (chỉ xuất hiện ở qc02-02 như công cụ chẩn đoán); 03 Q1 và 04 Q3 đã dùng CPM, tần suất mà chưa định nghĩa.",
+      "Không có bài creative/định dạng cho tầng lạnh dù 02, 04 đều kết luận 'creative làm việc lọc người' — chỉ qc03-01 (brief) chạm tới.",
+      "Google Search chỉ được nêu ở mức chọn kênh (05); không có từ khoá, đối sánh, từ khoá phủ định, quảng cáo tên thương hiệu — Trà Mộc Q7 khuyên 'mở Search tên thương hiệu' nhưng không bài nào dạy.",
+      "Bài loại fast (02, 04, 05, 06) có src nhưng không bài nào có câu 'nếu màn hình khác, tin trang chính thức' theo yêu cầu rubric.",
+      "Không có bài thực hành có đầu ra (BAI_TASKS) cho module; phần ÁP DỤNG mỗi bài tốt nhưng chưa có rubric chấm."
+    ],
+    "best_lesson": "B:qc01-06",
+    "weakest_lesson": "B:qc01-04"
+  }
+}

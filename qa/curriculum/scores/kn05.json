@@ -1,0 +1,208 @@
+{
+  "mod": "kn05",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn05-01",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 12, "examples": 8, "pedagogy": 5, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 60,
+      "bloom_items": ["L2", "L2", "L3", "L3", "L2", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q2", "quote": "Chia KOL tầm trung và KOC, mở affiliate khi đã có đơn và đánh giá", "issue": "Câu quyết định nhận lại nguyên ví dụ; ba phương án sai là 'dồn hết', 'chỉ affiliate', 'để dành' — đoán được. Không có số để cân nhắc (vd KOL tầm trung 30 triệu mua được bao nhiêu lượt xem so với 10 KOC).", "fix": "Cho lượt xem điển hình: KOL lớn 800 nghìn (60 triệu), KOL tầm trung 250 nghìn (30 triệu), KOC 15 nghìn/người (3 triệu) — hỏi phương án nào cho nhiều người xem đúng tệp nhất và còn lời chứng; buộc tính." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Với affiliate, bạn trả sau, theo đơn hàng thực: rủi ro thấp", "issue": "Thiếu điều kiện: affiliate vẫn có chi phí cố định (nền tảng, mã, quản lý, hàng mẫu) và rủi ro gian lận mã; 'không tốn đồng nào trước' ở tình huống là nói quá.", "fix": "Thêm một câu về chi phí nền tảng affiliate và rủi ro săn mã; nối tới bài kn05-06 và kn05-09." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Sau khi có vài trăm đơn và đánh giá, tháng thứ hai mới mở affiliate 15%", "issue": "Không có Phản ví dụ/Đào sâu; ví dụ không gắn nhãn minh hoạ và không có kết quả số của tháng ra mắt (bao nhiêu lượt xem, bao nhiêu đơn) để biết phương án chia 30/30 có hợp lý.", "fix": "Gắn nhãn minh hoạ, thêm kết quả: KOL tầm trung 220 nghìn lượt xem, 10 KOC 150 nghìn lượt xem cộng lại, 380 đơn tháng đầu; thêm phản ví dụ (thương hiệu đã có tên: bỏ KOL, mở affiliate ngay)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 15% × 120.000 = 18.000; × 400 = 7.200.000 = 7,2 triệu ✓ (tol 0,05). Sai 48 = 120.000 × 400 quên tỉ lệ ✓; sai 0,018 = 18.000/1.000.000 ✓. Ví dụ 30 + 30 = 60 ✓, 10 KOC × 3 triệu = 30 ✓ khớp tình huống." },
+      "claims": [
+        { "claim": "KOL 800 nghìn người theo dõi lấy 60 triệu/video; KOC 3 triệu/người; affiliate 15%", "status": "illustrative-unlabelled", "note": "Mức giá minh hoạ không gắn nhãn." }
+      ],
+      "strengths": "Khung 'trả tiền cho độ phủ / lời chứng / kết quả' và câu hỏi 'giai đoạn này mình cần mua gì' là lăng kính dùng lại được; Q7 (hoa hồng 40% phải trừ vào biên) nối sang bài 06 tốt.",
+      "upgrade": "Thêm Phản ví dụ (thương hiệu đã nổi → bỏ KOL) và Đào sâu (ba hình thức có thể nối tiếp theo thời gian; chi phí ẩn của affiliate). Đưa lượt xem điển hình và kết quả có nhãn minh hoạ vào ví dụ. Nâng Q2 thành câu có số; thêm một calc thứ hai so CPM ba phương án; thêm câu L5 '60 triệu nhưng chỉ có 2 tuần trước Tết — còn chọn chia không'."
+    },
+    {
+      "id": "B:kn05-02",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 14, "examples": 9, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L3", "L3"],
+      "bloom_max": "L3",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "theo TikTok Newsroom, bài “How TikTok recommends videos #ForYou”, 6/2020; cách vận hành có thể đã thay đổi", "issue": "Khẳng định về thuật toán đề xuất nêu nguồn trong văn bản nhưng bài không có trường src với link bấm được và ngày kiểm; nguồn từ 2020 cho một khẳng định fast.", "fix": "Thêm src (URL newsroom.tiktok.com) với ngày kiểm 2026 hoặc thay bằng câu chung 'trên nền tảng đề xuất, lượt xem không chỉ đến từ người theo dõi'." },
+        { "sev": "P1", "where": "Q6", "quote": "Chỉ khoảng 40% lượt xem có thể đúng tệp — tính lại giá theo con số đó", "issue": "40% = phần không phải nam 25–35, nhưng phần còn lại gồm cả nam ngoài 25–35 và nữ ngoài tuổi công sở; bài coi 'không phải nam 25–35' = 'đúng tệp nữ công sở' là thiếu giả định làm con số đổi. Đáp án vẫn đúng nhất nhưng lời giải dạy phép suy luận sai.", "fix": "Đổi dữ kiện: '60% nam, 40% nữ, trong nữ 70% ở 22–35' → đúng tệp ≈ 28%; hoặc sửa lời giải: 'tối đa 40%, cần thống kê nữ theo tuổi'." },
+        { "sev": "P2", "where": "Q7", "quote": "Dùng mức điển hình (trung vị) để định giá", "issue": "Phương án nói 'mức thường gặp khoảng 30 nghìn' (mode) nhưng lời giải gọi là trung vị; với 1 video 2 triệu và nhiều video 30 nghìn thì trung vị ≈ 30 nghìn nên không sai, nhưng thuật ngữ không nhất quán.", "fix": "Dùng một từ: 'trung vị của 10 video gần nhất' trong cả phương án và lời giải; khái niệm nên nêu trung vị thay cho trung bình." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "70% khán giả của Hạ là nữ 18–30 ở Hà Nội và TP.HCM", "issue": "Số minh hoạ không gắn nhãn; không có Phản ví dụ (KOL tỉ lệ xem/theo dõi thấp nhưng khán giả tích luỹ đúng tệp và mua) hay Đào sâu.", "fix": "Gắn nhãn minh hoạ; thêm phản ví dụ và đào sâu (ảnh thống kê có thể bị chỉnh — xin quay màn hình trực tiếp hoặc dùng công cụ bên thứ ba)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 45.000/300.000 = 15% ✓ (tol 0,1); sai 666,7 = 300.000/45.000 × 100 ✓; sai 1,5 ✓. Q4: 80.000 × 35% = 28.000 ✓; sai 80 = quên tỉ lệ ✓; sai 52 = 80 × 65% ✓. Ví dụ: 20.000/500.000 = 4% ✓, 60.000/120.000 = 50% ✓, 'lớn gấp ba' 60k/20k ✓." },
+      "claims": [
+        { "claim": "Trên TikTok/Reels lượt xem phần lớn đến từ đề xuất; số người theo dõi không phải yếu tố trực tiếp để video được đề xuất (TikTok Newsroom 6/2020)", "status": "unverified", "note": "Nguồn nêu trong văn bản, không có src link, nguồn cũ; có hedge 'có thể đã thay đổi'." },
+        { "claim": "Hồ sơ Vân 500k theo dõi/20k xem; Hạ 120k/60k; 70% khán giả Hạ nữ 18–30", "status": "illustrative-unlabelled", "note": "Không gắn nhãn." }
+      ],
+      "strengths": "Ba lớp đọc (lượt xem trung bình 10 video, chất bình luận, thống kê khán giả) là checklist dùng ngay; hai câu calc nối nhau (tỉ lệ xem → người đúng tệp) và Q7 về giá trị ngoại lệ là chiều dữ liệu tốt hơn trung bình module.",
+      "upgrade": "Thêm src cho khẳng định TikTok hoặc bỏ. Sửa suy luận Q6. Thêm Phản ví dụ và Đào sâu (xác thực ảnh thống kê; tệp trùng khi thuê nhiều KOL — nối kn05-05). Gắn nhãn số minh hoạ. Thêm câu L5: Hạ đúng tệp nhưng lấy 15 triệu, Vân 8 triệu — tính giá mỗi nghìn lượt xem đúng tệp rồi chọn (nối sang kn05-03)."
+    },
+    {
+      "id": "B:kn05-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q3–Q5", "quote": "đáp án: 200 nghìn đồng … đáp án: 200 nghìn đồng … đáp án: 200 nghìn đồng", "issue": "Ba câu calc liên tiếp cùng đáp án 200 nghìn; người học nhận ra mẫu sau câu thứ hai và có thể điền đúng không cần tính. Đáp án đoán được bằng mẹo.", "fix": "Đổi số: Q4 → 30 triệu / 120 đơn = 250 nghìn; Q5 → 18 triệu, 90.000 lượt xem, 0,2% → 100 nghìn." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Sau chiến dịch thử, video Minh Khoa ra 160 đơn, Tú Linh ra 60 đơn", "issue": "Số đơn minh hoạ không gắn nhãn; không nêu nhiễu khi so 160 vs 60 đơn từ một video mỗi người (kết luận 'Tú Linh rẻ hơn' có thể đảo nếu ±20 đơn).", "fix": "Gắn nhãn minh hoạ; thêm một câu ở Đào sâu: chênh 250k vs 200k là nhỏ, một video mỗi người là mẫu 1 — cần lặp 2–3 video trước khi dồn tiền." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "dùng để so KOL với nhau và với quảng cáo trả tiền", "issue": "So CPM KOL (lượt xem video) với CPM quảng cáo (lượt hiển thị) là so hai đơn vị khác nhau (xem ≥ 3 giây vs hiển thị); bài không nêu điều kiện quy đổi.", "fix": "Thêm: 'so với CPM quảng cáo chỉ khi cùng định nghĩa lượt xem (vd ThruPlay/xem 6 giây), nếu không thì so chi phí mỗi đơn'." }
+      ],
+      "calc_check": { "n": 3, "ok": 3, "notes": "Q3: 25.000.000/125.000 × 1.000 = 200.000 ✓ (tol 0,5); sai 5 = 125.000/25.000 ✓; sai 0,2 = quên ×1.000 ✓. Q4: 30.000.000/150 = 200.000 ✓; sai 5 = 150/30 ✓. Q5: 90.000 × 0,1% = 90; 18.000.000/90 = 200.000 ✓; sai 0,2 = 18M/90.000 → 200đ ✓; sai 2 = dùng 1% ✓. Ví dụ: CPM 200.000 và 300.000 ✓; CPA 250.000 và 200.000 ✓. Q2: 40 − 12 = 28 ✓, 40 + 12 = 52 ✓." },
+      "claims": [
+        { "claim": "Minh Khoa 40 triệu/200 nghìn xem/160 đơn; Tú Linh 12 triệu/40 nghìn xem/60 đơn", "status": "illustrative-unlabelled", "note": "Tự khớp hoàn toàn; không gắn nhãn." }
+      ],
+      "strengths": "Hai thước đo trả lời hai câu hỏi khác nhau được minh hoạ bằng cùng một cặp KOL với kết luận đảo chiều — đúng tinh thần 'điều kiện làm kết luận đổi'; phản ví dụ (mục tiêu nhận biết → CPM đúng tệp) và Đào sâu (CPM đúng tệp) nối chặt với kn05-02.",
+      "upgrade": "Đổi số Q4, Q5 để không trùng đáp án. Gắn nhãn minh hoạ; thêm câu về nhiễu mẫu 1 video. Nêu điều kiện so CPM KOL với CPM quảng cáo. Thêm một câu L5: Minh Khoa CPA 250k nhưng 200 nghìn người biết tên; Tú Linh CPA 200k — tháng ra mắt vs tháng xả hàng chọn ai, biện hộ."
+    },
+    {
+      "id": "B:kn05-04",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L2", "L2", "L3", "L3", "L3", "L2", "L2"],
+      "bloom_max": "L3",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "vài điều cấm nói (tuyên bố về sức khoẻ không có căn cứ, so sánh chê đối thủ)", "issue": "Bài dạy 'cấm nói tăng chiều cao' và nhắc 'quy định quảng cáo chặt… tuyên bố dinh dưỡng phải dùng đúng từng chữ đã đăng ký' nhưng không dẫn văn bản nào (Luật Quảng cáo, quy định về quảng cáo thực phẩm/sữa); người học không biết căn cứ pháp lý ở đâu để ghi vào brief.", "fix": "Thêm src: điều khoản liên quan trong Luật Quảng cáo (sửa đổi 2025) và quy định quảng cáo thực phẩm; hoặc ghi rõ 'hỏi pháp chế về danh mục tuyên bố bị cấm với sản phẩm dinh dưỡng cho trẻ'." },
+        { "sev": "P1", "where": "Q2", "quote": "Một thông điệp chính, mã giảm giá, ghi nhãn hợp tác và điều cấm nói", "issue": "Đáp án nhận lại nguyên danh sách 'phần không được đổi' của khái niệm; ba phương án sai là hai cực (kịch bản từng câu / không gì cả) và 'ép hình thức'. Q6, Q7 cũng chỉ hỏi lại định nghĩa brief khung. Bốn trong bảy câu là L2.", "fix": "Thay Q2 bằng bản nháp brief 8 dòng, hỏi gạch dòng nào (L4); thay Q7 bằng bản nháp video có 5 chi tiết, hỏi chi tiết nào vi phạm phần cố định." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Video đạt 180 nghìn lượt xem, gấp ba lần bản đọc kịch bản, mã TRANG10 ra 240 đơn", "issue": "Số minh hoạ không gắn nhãn; không có chi phí nên không tính được CPA (bài kề cận kn05-03 vừa dạy). So hai video ở hai thời điểm khác nhau mà kết luận do brief là tương quan chưa kiểm.", "fix": "Gắn nhãn minh hoạ, thêm phí (vd 25 triệu → 104 nghìn/đơn) và một câu 'khác thời điểm nên chỉ là bằng chứng gợi ý'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: (180.000 − 60.000)/60.000 = 200% ✓ (tol 0,5); sai 300 = tỉ số ×100 ✓; sai 66,7 = 120/180 ✓. Khớp ví dụ 'gấp ba' và tình huống (bản kịch bản = ½ video thường → video thường 120k; bản khung 180k = 1,5× video thường) — nhất quán." },
+      "claims": [
+        { "claim": "Tuyên bố dinh dưỡng phải dùng đúng từng chữ đã đăng ký / cấm nói 'tăng chiều cao'", "status": "unverified", "note": "Không dẫn văn bản pháp luật; nêu như ràng buộc có thật." },
+        { "claim": "Video brief khung 180 nghìn lượt xem, 240 đơn mã TRANG10", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Chia brief thành 'phần không được đổi / phần tự do' với checklist duyệt 4 mục là công cụ dùng ngay; phản ví dụ (quy định chặt → phần cố định rộng hơn) và Đào sâu (brief là hợp đồng về kết quả) nêu được đánh đổi kiểm soát – tự nhiên.",
+      "upgrade": "Dẫn nguồn pháp lý cho điều cấm. Gắn nhãn số, thêm phí để tính CPA, nêu hạn chế so sánh khác thời điểm. Đổi Q2, Q6, Q7 từ nhận lại thành phân tích bản nháp (L4); thêm câu L5: KOL đề nghị bỏ mã giảm giá để video tự nhiên hơn, đổi lại giảm phí 20% — nhận hay không, biện hộ bằng khả năng đo."
+    },
+    {
+      "id": "B:kn05-05",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[100,\"SAI_TINH_TOAN\"],[4,\"SAI_MAU_SO\"]]", "issue": "Giá trị sai 100 là CPM của KOL lớn (nhầm đối tượng, không phải sai tính toán); giá trị 4 không suy ra được từ lỗi tự nhiên nào (90M/750k = 120; 3M/25k = 120).", "fix": "Đổi nhãn 100 → NHAM_DOI_TUONG; thay 4 bằng 0,12 (quên ×1.000) với nhãn SAI_DON_VI." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "5 trong 25 video KOC đạt trên 100 nghìn lượt xem … Video KOL lớn chỉ đạt 400 nghìn", "issue": "Kết quả minh hoạ không gắn nhãn và nghiêng rõ về phương án B (KOL hụt 60%, 5 KOC bùng nổ); không có số đơn nên không so được CPA hai phương án như bài thực hành yêu cầu.", "fix": "Gắn nhãn minh hoạ; thêm số đơn hai phương án hoặc dẫn người học sang bài thực hành để tự tính." },
+        { "sev": "P2", "where": "Q4", "quote": "ước tính 20% lượt xem là cùng một người xem lại video của nhiều KOC", "issue": "Phép trừ trùng lặp tuyến tính (750k × 0,8) không nêu đây là ước lượng thô; không nói lấy 20% từ đâu (thống kê theo dõi chéo?).", "fix": "Thêm bước: 'ước 20% từ tỉ lệ người theo dõi chéo giữa các KOC' và ghi 'ước lượng thô'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 30 × 3M = 90M; 30 × 25.000 = 750.000; 90M/750.000 × 1.000 = 120.000 ✓ (tol 0,5). Q4: 750.000 × (1 − 20%) = 600.000 ✓ (tol 1); sai 750 ✓, 150 = phần trùng ✓. Ví dụ: 100M/1M × 1.000 = 100.000 ✓; 25 × 30.000 = 750.000; 100M/750.000 × 1.000 = 133.333 ✓; 25 × 4M = 100M ✓." },
+      "claims": [
+        { "claim": "KOL lớn 1 triệu lượt xem điển hình/100 triệu; 25 KOC × 4 triệu × 30 nghìn lượt xem; 5/25 vượt 100 nghìn; KOL lớn chỉ đạt 400 nghìn", "status": "illustrative-unlabelled", "note": "Tự khớp; không gắn nhãn." },
+        { "claim": "Nguồn quen thuộc lặp lại làm lời chứng đáng tin", "status": "unverified", "note": "Nêu hiệu ứng tâm lý chung không nguồn, nhưng không phóng đại." }
+      ],
+      "strengths": "Khung 'cần học hay cần phủ' và điều kiện để cách rải đúng (tệp ít trùng + còn tiền khuếch đại) là lập luận có điều kiện làm sai; bài thực hành có đầu ra (bảng CPM/CPA/lãi lỗ + kịch bản KOL hụt) là phần mạnh nhất module về áp dụng; phản ví dụ (hạn chót cứng) đổi kết luận đúng.",
+      "upgrade": "Sửa nhãn đáp án sai Q3. Gắn nhãn minh hoạ và thêm số đơn để ví dụ tính được CPA. Nêu nguồn ước lượng 20% trùng. Thêm một câu L5 dùng dữ kiện bài thực hành (KOL 0,03% vs KOC 0,1% ra đơn) hỏi điểm hoà vốn: KOL lớn phải đạt bao nhiêu lượt xem để CPA bằng KOC."
+    },
+    {
+      "id": "B:kn05-06",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 17, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 83,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L4", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Mức trần hoa hồng = biên đóng góp ÷ giá bán", "issue": "Không nhắc tỉ lệ trả hàng/hoàn tiền và chi phí thuế (VAT đầu ra) khi tính biên — hai khoản thường làm trần thấp hơn; Đào sâu có nhắc trả hàng là 'tín hiệu' nhưng không đưa vào công thức.", "fix": "Thêm dòng: 'nếu 8% đơn bị trả, chia biên cho 0,92 trước khi tính trần' và ghi chú giá bán đã gồm VAT hay chưa." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Biên đóng góp của Mây Tre = 300.000 − 120.000 − 45.000 = 135.000đ", "issue": "Số minh hoạ không gắn nhãn (không có cờ assume), dù hoàn toàn tự khớp.", "fix": "Gắn nhãn minh hoạ." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì còn cần phần lãi để trả chi phí cố định như lương, kho, mặt bằng", "issue": "Câu nhận lại ý khái niệm (L2), ba phương án sai dễ loại.", "fix": "Thay bằng calc: chi phí cố định 9 triệu/tháng, còn 45.000đ/đơn sau hoa hồng 30% → cần bao nhiêu đơn mới hoà vốn (200 đơn); so với 75.000đ/đơn ở mức 20% (120 đơn)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 300 − 120 − 45 = 135; 135/300 = 45% ✓ (tol 0,1); sai 60 = 180/300 quên phí ✓; sai 40 = 120/300 ✓. Q4: 300 × 0,9 = 270; 30% × 270 = 81; 270 − 120 − 45 − 81 = 24 ✓ (tol 0,5); sai 45 = không trừ giảm giá ✓; sai 15 = hoa hồng trên giá gốc (270 − 165 − 90) ✓ và lời giải nêu rõ điều kiện. Ví dụ: 30% → 90k, còn 45k ✓; 20% → 60k, còn 75k ✓." },
+      "claims": [
+        { "claim": "Túi 300.000đ, giá vốn 120.000đ, phí sàn + vận chuyển 45.000đ; 'shop khác trả 30% hết rồi'", "status": "illustrative-unlabelled", "note": "Tự khớp; không gắn nhãn; '30% thị trường' chỉ là lời nhân vật." }
+      ],
+      "strengths": "Toàn bộ bài là một phép cộng trừ minh bạch với giả định được nêu rõ (hoa hồng tính trên giá sau giảm — 'kiểm điều khoản sàn'); Q4 phân biệt hai cách tính theo hợp đồng; Q5 và Q7 là câu chẩn đoán/thiết kế thật (cấu trúc lãi không hợp affiliate; hoa hồng theo biên từng sản phẩm); phản ví dụ (biên khác nhau giữa các mẫu) đổi cách làm.",
+      "upgrade": "Đưa trả hàng và VAT vào công thức trần. Gắn nhãn số. Đổi Q6 thành calc hoà vốn chi phí cố định. Thêm một câu L6 nhỏ: thiết kế bậc hoa hồng (nền + thưởng mốc) sao cho tổng trả cho affiliate đạt 100 đơn không vượt 25% doanh thu."
+    },
+    {
+      "id": "B:kn05-07",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 14, "examples": 8, "pedagogy": 8, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L2", "L5", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Hợp đồng có điều khoản đạo đức nên hãng không phải trả phần phí của 2 video chưa lên", "issue": "Hiệu lực của 'điều khoản đạo đức' trong pháp luật hợp đồng Việt Nam (có được đơn phương chấm dứt không, có phải bồi thường không, định nghĩa 'hành vi gây ảnh hưởng xấu') được nêu như chắc chắn, không nguồn, không 'hỏi pháp chế'.", "fix": "Thêm câu: 'điều khoản phải nêu rõ sự kiện kích hoạt và cách thanh toán phần đã làm — soạn cùng luật sư'; đổi 'không phải trả' thành 'theo điều khoản đã thoả thuận, hãng chỉ trả 3 video đã lên'." },
+        { "sev": "P2", "where": "Q3", "quote": "Hợp đồng 5 video, tổng 150 triệu, trả theo từng video. Đã lên 3 video", "issue": "Calc duy nhất chỉ là chia đều rồi nhân — L3 nhẹ; bài không đo được gì khác (vd thiệt hại tiếp cận, tỉ lệ bình luận tiêu cực từ khách mục tiêu) dù Đào sâu nêu tín hiệu 'bình luận từ đúng khách mục tiêu'.", "fix": "Thêm calc: 300 bình luận 'tẩy chay', khảo sát 200 khách mục tiêu: 15% nói sẽ ngừng mua nếu giữ KOL — ước thiệt hại doanh thu tháng khi doanh thu 400 triệu, so với 60 triệu tiết kiệm." },
+        { "sev": "P2", "where": "Q5", "quote": "Rà nội dung và bình luận vài năm gần đây, tìm tên họ kèm từ khoá tiêu cực", "issue": "Đáp án đúng cụ thể và dài nhất; ba phương án sai mang từ 'tin', 'chỉ chọn', 'yên tâm' — đoán được bằng hình thức.", "fix": "Thêm phương án nhiễu hợp lý: 'Yêu cầu KOL ký cam kết không phát ngôn gây tranh cãi trong thời gian hợp tác' (có ích nhưng không phát hiện rủi ro quá khứ)." },
+        { "sev": "P2", "where": "Q4", "quote": "Chúng tôi tôn trọng người lao động và đã dừng hợp tác", "issue": "Đáp án đúng là câu ngắn nhất nằm giữa ba câu dài rõ sai (phủi / xin lỗi quá / im lặng) — nhận lại ví dụ (L2).", "fix": "Đưa bốn câu phản hồi đều ngắn, khác nhau ở một chi tiết (nêu giá trị / nêu hành động / nêu lý do / kết tội KOL) để phân biệt tinh tế." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 150/5 = 30; 2 × 30 = 60 ✓ (tol 0,1); 60/150 = 40% khớp ví dụ 'tiết kiệm 40%' ✓. Sai 90 = 3 × 30 ✓; sai 40 = nhầm % thành triệu ✓." },
+      "claims": [
+        { "claim": "Hợp đồng có điều khoản đạo đức → hãng không phải trả phí 2 video chưa lên", "status": "unverified", "note": "Hiệu lực pháp lý nêu như chắc chắn, không nguồn." },
+        { "claim": "Hợp đồng 3 tháng, 5 video, tiết kiệm 40%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phân hai mức 'tạm dừng phân phối (nhẹ, đảo ngược được) / chấm dứt (nặng)' và nguyên tắc 'đo theo khách mục tiêu, không theo độ ồn' là khung quyết định rõ; phản ví dụ (clip cắt ngắn, ít người chia sẻ → không dừng hợp đồng) nêu đúng điều kiện; Q6 là câu đánh đổi có biện hộ.",
+      "upgrade": "Sửa khẳng định pháp lý về điều khoản đạo đức và thêm 'soạn cùng luật sư'. Thêm calc đo thiệt hại/ích lợi bằng số khách mục tiêu. Nâng Q4, Q5 thành câu phân biệt tinh tế. Thêm câu L6: thiết kế quy trình 24 giờ đầu (ai tắt quảng cáo, ai xác minh, ngưỡng bình luận tiêu cực từ khách mục tiêu để chuyển từ tạm dừng sang chấm dứt)."
+    },
+    {
+      "id": "B:kn05-08",
+      "scores": { "accuracy": 11, "depth": 9, "practical": 12, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 62,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L1", "L3", "L2"],
+      "bloom_max": "L3",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Luật Quảng cáo sửa đổi bởi Luật số 75/2025/QH15 (hiệu lực từ 1/1/2026) buộc người chuyển tải quảng cáo thông báo rõ trước và trong khi quảng cáo (Điều 15a)", "issue": "Khẳng định pháp luật cụ thể (số luật, ngày hiệu lực, số điều) nêu như sự thật và là căn cứ của đáp án Q5, nhưng bài không có src link và ngày kiểm; loại periodic bắt buộc nguồn.", "fix": "Thêm src tới văn bản luật trên cơ sở dữ liệu pháp luật chính thức (vanban.chinhphu.vn hoặc thuvienphapluat) với ngày kiểm; thêm câu 'nếu văn bản thay đổi, tin bản chính thức'." },
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "5 video thử không nhãn trước đó mua 2,0%, 15 video có nhãn mua 1,9%, tức giảm 5% tương đối", "issue": "So 5 video với 15 video ở hai thời điểm khác nhau, chênh 0,1 điểm % — nằm trong nhiễu; bài kết luận 'đó là cái giá' như thể đo được tác động của nhãn. Thiếu giả định làm kết quả đổi (nếu nhiễu, 'giá' có thể bằng 0 hoặc âm).", "fix": "Thêm câu: 'chênh 0,1 điểm % trên vài trăm đơn không phân biệt được với nhiễu; điều học được là nhãn không làm sụt mạnh, chứ không phải nhãn làm giảm 5%'." },
+        { "sev": "P2", "where": "Q7", "quote": "Vì nó tạo văn hoá nói dối trong đội, và hãng phải nhớ giữ mọi lời khai khớp nhau về sau", "issue": "Lý do 'đúng nhất' bỏ qua lý do pháp lý mà bài vừa dạy (giấu hợp tác trả phí vi phạm nghĩa vụ thông báo) — đề giới hạn 'kể cả khi không ai phát hiện' nhưng phương án đúng vẫn yếu hơn lý do 'đó là hành vi vi phạm luật dù có bị phát hiện hay không'.", "fix": "Thêm phương án 'Vì đó là hành vi vi phạm nghĩa vụ thông báo, dù bị phát hiện hay không' làm đáp án đúng, hoặc gộp vào c." },
+        { "sev": "P2", "where": "Q5", "quote": "Phải thông báo rõ là quảng cáo trước và trong khi đăng; chi tiết hỏi pháp chế", "issue": "Câu nhớ luật (L1) với đáp án là phương án duy nhất có hedge 'hỏi pháp chế'; ba phương án sai đặt ngưỡng tự chế rõ sai.", "fix": "Đổi thành tình huống: KOC ghi '#ad' ở cuối caption dài 300 chữ, video không nói — đạt yêu cầu 'rõ trước và trong khi' chưa? (L3)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (2,0 − 1,9)/2,0 = 5% ✓ (tol 0,1); sai 0,1 = điểm % ✓; sai 5,26 = 0,1/1,9 ✓. Ví dụ ghi 'Giả sử (số minh hoạ)' ✓ nhưng không nêu nhiễu." },
+      "claims": [
+        { "claim": "Luật số 75/2025/QH15 sửa Luật Quảng cáo, hiệu lực 1/1/2026, Điều 15a buộc người chuyển tải quảng cáo thông báo rõ trước và trong khi quảng cáo", "status": "unverified", "note": "Không có src link/ngày kiểm trong bài; có hedge 'hỏi pháp chế'." },
+        { "claim": "Review không nhãn mua 2,0% vs có nhãn 1,9%", "status": "illustrative-labelled", "note": "Bài ghi 'Giả sử (số minh hoạ)'." },
+        { "claim": "Ghi rõ hợp tác là thực hành minh bạch được khuyến nghị rộng rãi", "status": "unverified", "note": "Khái quát, không nguồn." }
+      ],
+      "strengths": "Số minh hoạ có gắn nhãn; lập luận 'nhãn tốn chút độ tự nhiên, giấu tốn cả thương hiệu' và cách giữ tự nhiên bằng việc cho nói nhược điểm là lời khuyên dùng được; Q6 đọc tín hiệu bình luận tốt.",
+      "upgrade": "Thêm src luật với ngày kiểm. Nêu nhiễu của so sánh 2,0% vs 1,9% và sửa kết luận. Thêm Phản ví dụ (KOC tự mua thật và tự review — không có hợp tác thì không ghi nhãn, ranh giới ở đâu khi hãng gửi tặng) và Đào sâu (cách ghi nhãn trên từng nền tảng — có src). Đổi Q5 thành câu áp dụng, sửa Q7; thêm câu L5 đánh đổi: KOC lớn chỉ nhận nếu không ghi nhãn — từ chối hay thương lượng gì."
+    },
+    {
+      "id": "B:kn05-09",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L4", "L4", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "KOL Linh lấy 18 triệu → 100.000đ mỗi đơn có mã; Bảo lấy 12 triệu → 300.000đ … Rang Mộc thuê lại Linh và Khoa, thay Bảo", "issue": "Không nêu phí của Khoa và An nên không so được đủ 4 người; quyết định thay Bảo dựa trên 40 đơn có mã mà phản ví dụ ngay bên dưới cảnh báo 'dễ loại oan' — ví dụ không áp dụng chính cảnh báo của bài (không kiểm lượt tìm tên sau video Bảo).", "fix": "Thêm phí Khoa, An; thêm một dòng 'kiểm lượt tìm tên thương hiệu sau video Bảo không tăng, nên mới thay'." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[10,\"SAI_TINH_TOAN\"],[0.01,\"SAI_MAU_SO\"]]", "issue": "Giá trị 10 = 180/18 là đảo mẫu số (SAI_MAU_SO), 0,01 = 180/18.000.000 cũng là đảo mẫu số; hai nhãn gán ngược/không phân biệt.", "fix": "10 → SAI_MAU_SO; 0,01 → SAI_DON_VI." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "hoặc đường link có gắn tham số riêng", "issue": "Không nói tham số riêng là gì (UTM) và tại sao mã giảm giá được ưu tiên hơn link (sàn không cho link đo) — thiếu điều kiện chọn công cụ.", "fix": "Thêm: 'link gắn UTM dùng được khi bán trên website; bán trên sàn thì mã giảm giá hoặc link affiliate của sàn'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "doanh số tăng từ 1.000 lên 1.600 đơn", "issue": "Số minh hoạ không gắn nhãn.", "fix": "Gắn nhãn minh hoạ." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 18.000.000/180 = 100.000 ✓ (tol 0,5). Q4: 12.000.000/120 = 100.000; + 10% × 200.000 = 20.000 → 120.000 ✓; sai 100 = quên giảm giá ✓; sai 20 ✓. Ví dụ: 180 + 120 + 60 + 40 = 400 ✓; 600 − 400 = 200 ✓; Bảo 12M/40 = 300.000 ✓." },
+      "claims": [
+        { "claim": "Rang Mộc 1.000 → 1.600 đơn; mã LINH10 180, KHOA10 120, AN10 60, BAO10 40", "status": "illustrative-unlabelled", "note": "Tự khớp; không gắn nhãn." },
+        { "claim": "Sai số do mã bỏ sót thường tác động gần đều lên các KOL", "status": "unverified", "note": "Giả định hợp lý nhưng nêu như quy luật; phản ví dụ ngay sau đó tự mâu thuẫn một phần (KOL nội dung dài bị bỏ sót nhiều hơn)." }
+      ],
+      "strengths": "Nêu rõ số đơn theo mã là mức sàn, đối chiếu với mức tăng tổng, nhận diện mã rò rỉ (Q5) và đề xuất đo phần tăng thêm bằng vùng/tuần đối chứng — chiều đo lường tốt nhất module; Q5–Q7 đều là câu chẩn đoán từ dữ liệu.",
+      "upgrade": "Bổ sung phí Khoa, An và áp dụng cảnh báo 'loại oan' vào ví dụ. Sửa nhãn đáp án sai Q3. Thêm điều kiện chọn mã vs UTM. Gắn nhãn minh hoạ. Thêm câu L5: mã giảm 10% làm giảm giá bán — so chi phí marketing mỗi đơn có mã (120k) với CPA quảng cáo 150k không giảm giá, và quyết định; thêm câu L6 thiết kế tuần đối chứng."
+    }
+  ],
+  "module_notes": {
+    "progression": "Thứ tự hợp lý về mặt ý: ba hình thức (01) → đọc chỉ số KOL (02) → CPM/CPA (03) → brief (04) → tập trung hay rải (05) → trần hoa hồng (06) → rủi ro (07) → minh bạch (08) → mã riêng (09). Tuy nhiên 03 và 05 đều yêu cầu 'đo bằng mã giảm giá riêng' mà kỹ thuật này chỉ dạy ở 09 — nên đưa 09 lên sau 03. 06 (trần hoa hồng) nối tốt với 01 Q7. 04 và 08 cùng nói về nội dung của KOL (brief, ghi nhãn) nhưng cách nhau 4 bài. 6/9 bài có Phản ví dụ và Đào sâu (03–07, 09); 01, 02, 08 không có.",
+    "overlap": [
+      "02 và 05 cùng dạy 'khán giả trùng/ảo làm độ phủ thật nhỏ hơn' (02 Q5, 05 Q4, Q6).",
+      "03 và 09 cùng tính chi phí mỗi đơn có mã cho từng KOL; 09 Q3 gần như 03 Q4.",
+      "01 Q7 và 06 cùng lập luận 'hoa hồng phải trừ vào biên'.",
+      "04 phản ví dụ và 08 cùng chạm quy định quảng cáo nhưng mỗi bài dẫn một kiểu, không nối nhau."
+    ],
+    "gaps": [
+      "Không có bài về hợp đồng KOL ngoài điều khoản đạo đức: quyền sử dụng lại nội dung (usage rights), thời hạn, độc quyền ngành, whitelisting/Spark Ads để chạy quảng cáo trên tài khoản KOL — 05 ví dụ 'chạy quảng cáo tăng hiển thị cho 5 video KOC' giả định quyền này mà không bài nào dạy.",
+      "Không có bài về đàm phán giá và cấu trúc trả (cố định + thưởng theo kết quả) với KOL, dù 06 có bậc thưởng cho affiliate.",
+      "Không có bài về affiliate trên sàn (Shopee/TikTok Shop affiliate: cách hoạt động, phí nền tảng, cửa sổ ghi nhận) — 01, 06, 09 nói affiliate chung chung.",
+      "Không có bài về seeding/gửi tặng sản phẩm (không trả tiền) và ranh giới ghi nhãn trong trường hợp này (08 Q2 d chỉ chạm một câu).",
+      "Chiều Dữ liệu: không bài nào nói về nhiễu khi so vài video/vài chục đơn (03 ví dụ 160 vs 60 đơn, 08 ví dụ 2,0% vs 1,9%, 05 ví dụ 5/25 video)."
+    ],
+    "best_lesson": "B:kn05-06",
+    "weakest_lesson": "B:kn05-01"
+  }
+}

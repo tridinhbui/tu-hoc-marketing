@@ -1,0 +1,79 @@
+{
+ "mod": "tn04",
+ "lessons": [
+  {
+   "id": "B:tn04-03",
+   "title": "Giảm 20% hay tặng quà: kiểu nào thắng khi đo bằng lãi?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÌ SAO HIỆU QUẢ (3)",
+     "quote": "Quà tặng có chi phí thật nhưng nhìn nhẹ hơn trong mắt khách. Khách thường thấy rõ thứ được thêm vào hơn một con số giá thấp",
+     "issue": "Nêu hiệu ứng tâm lý như quy luật chung, không nguồn, không điều kiện (phụ thuộc giá trị cảm nhận của quà, ngành hàng, mức giảm).",
+     "fix": "Hạ giọng: \"với một số ngành, quà có giá trị cảm nhận cao hơn giá vốn — đây là giả thuyết cần kiểm bằng chính đợt thử\"."
+    }
+   ],
+   "upgrade": "Gắn nhãn minh hoạ; hạ giọng khẳng định tâm lý; sửa Q1; thêm chi phí sàn/ship vào bảng lãi để sát thực tế Shopee; thêm câu L4 đọc bảng 2 kiểu khuyến mãi với tỉ lệ mua lặp sau 60 ngày khác nhau."
+  },
+  {
+   "id": "B:tn04-04",
+   "title": "Tuần khuyến mãi bán gấp đôi, hai tuần sau tụt — đợt đó thật sự bán thêm được bao nhiêu?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Bán thêm thật chỉ 100 túi, không phải 800",
+     "issue": "100 túi trên nền 3.000 túi/3 tuần (3,3%) nằm trong dao động tuần thường thấy của hàng tiêu dùng; bài không nêu dao động của mức nền nên 100 có thể là 0 hoặc 200.",
+     "fix": "Thêm: mức nền 1.000 ± bao nhiêu? Nếu các tuần thường dao động ±80 túi thì 100 túi chưa khác 0; cần đối chứng hoặc nhiều đợt."
+    },
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ / KHÁI NIỆM",
+     "quote": "hãng đã tặng quà cho hơn 1.700 túi mà khách vốn sẽ mua",
+     "issue": "Bài về đo khuyến mãi bằng lãi nhưng không có giá vốn gói tặng và không tính lãi của đợt; người học không ra được quyết định lỗ/lãi bằng số.",
+     "fix": "Thêm giá vốn gói nhỏ (vd 8k) → chi phí đợt 1.800×8k = 14,4tr cho 100 túi thêm = 144k/túi thêm, so với lãi mỗi túi."
+    }
+   ],
+   "upgrade": "Thêm giá vốn quà và bảng lãi của đợt; nêu dao động mức nền và vì sao 100 túi chưa chắc khác 0; thêm câu L4 đọc chuỗi 8 tuần có 2 đợt KM để tách pull-forward khỏi mùa; gắn nhãn minh hoạ."
+  },
+  {
+   "id": "B:tn04-05",
+   "title": "Mã giảm 30k có 400 người dùng — bao nhiêu người là khách mới thật?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Chỉ 100 người là khách mới. Chi phí cho mỗi khách mới thật: 12 triệu ÷ 100 = 120k",
+     "issue": "Giả định ngầm: 100 khách mới đều nhờ mã, 300 khách cũ đều vốn sẽ mua. Chính KHÁI NIỆM nói phải có nhóm không nhận mã mới biết — ví dụ tự mâu thuẫn với khái niệm, và \"khách mới\" ≠ \"đơn tăng thêm\".",
+     "fix": "Ghi rõ đây là ước lượng thô, giới hạn trên của hiệu quả; thêm số holdout minh hoạ: 1.000 người chưa mua không nhận mã có 20 người tự mua → mã chỉ tạo thêm 80 khách → 150k/khách tăng thêm."
+    }
+   ],
+   "upgrade": "Sửa ví dụ để nhất quán với holdout (tách khách mới ↔ đơn tăng thêm); bổ sung giá trị đơn và lãi để Q4 có số; thêm câu L4 đọc bảng 2 nhóm chưa mua (có mã / không mã) với tỉ lệ mua 8% vs 2%."
+  },
+  {
+   "id": "B:tn04-10",
+   "title": "Khi nào thử giá lại gây hại cho thương hiệu?",
+   "total": 65,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "sàn A niêm yết 290k, sàn B 320k kèm hộp quà, mỗi nơi ghi rõ trong mô tả",
+     "issue": "Thiết kế thử bị trộn biến: khác giá VÀ khác quà VÀ khác tệp khách — không đo được độ nhạy giá, chỉ đo \"gói nào bán hơn\". Bài thừa nhận tệp khác nhau nhưng không nói quà làm trộn biến.",
+     "fix": "Dùng cùng gói ở hai sàn, chỉ khác giá; hoặc nói rõ đây là thử gói (bundle) không phải thử giá."
+    },
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "giá hiển thị là giá phải bán, nên kiểm tra quy định niêm yết giá trước khi thử",
+     "issue": "Nhắc đến quy định pháp luật nhưng không nêu văn bản (Luật Giá 2023, nghị định về niêm yết giá), không có src/ngày kiểm.",
+     "fix": "Thêm src tới văn bản và câu \"nếu quy định đổi, tin trang chính thức\"."
+    }
+   ],
+   "upgrade": "Sửa ví dụ để không trộn biến; thêm src quy định niêm yết giá; thêm phản ví dụ về khi nào thử giá ngẫu nhiên là chấp nhận được; đổi Q6 thành câu so chi phí khắc phục với giá trị thông tin của thử nghiệm; thêm câu L4 đọc dấu hiệu rủi ro (số bình luận, tỉ lệ hoàn) trong tuần thử."
+  }
+ ]
+}

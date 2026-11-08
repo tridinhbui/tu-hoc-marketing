@@ -1,0 +1,18 @@
+{
+ "mod": "gt06",
+ "lessons": [
+  {
+   "id": "B:gt06-02",
+   "total": 81,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q6 (vì của c)",
+     "quote": "đều giúp gán doanh thu cho kênh",
+     "issue": "Phương án c (\"doanh thu khó tách riêng cho từng kênh\") là một lý do có thật; chính bài nói mã riêng chỉ là \"cận dưới\". Lời giải nói quá và mâu thuẫn với phần đọc, làm c bênh được một phần.",
+     "fix": "Viết lại c thành lý do sai rõ hơn, hoặc lời giải thừa nhận gán kênh khó nhưng làm được ở mức cận dưới."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+  "mod": "kn04",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn04-01",
+      "scores": { "accuracy": 11, "depth": 7, "practical": 11, "examples": 6, "pedagogy": 5, "assessment": 5, "data": 3, "clarity": 4 },
+      "total": 52,
+      "bloom_items": ["L2", "L2", "L1", "L3", "L3", "L2", "L3"],
+      "bloom_max": "L3",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Q2", "quote": "Giao vai cho ba kênh: TikTok khám phá, fanpage chốt đơn, Zalo giữ khách", "issue": "Đáp án chép lại nguyên văn ví dụ trong bài; câu quyết định thành câu nhận lại (L2), không buộc người học cân nhắc ràng buộc 8 giờ/tuần bằng số.", "fix": "Cho số giờ cần cho mỗi vai (vd TikTok 4 giờ/tuần cho 2 video, fanpage 2 giờ, Zalo 1 giờ) và một phương án 4 kênh vừa đủ 8 giờ nhưng bỏ Zalo; người học phải chọn bỏ vai nào và biện hộ." },
+        { "sev": "P1", "where": "Q6", "quote": "Khi có một vai rõ mà kênh hiện tại chưa làm, và đủ sức duy trì", "issue": "Đáp án đúng là phương án duy nhất có điều kiện kép và không có từ tuyệt đối; ba phương án sai đều là lý do 'theo trào lưu' lộ liễu. Đoán được bằng hình thức.", "fix": "Thêm phương án nhiễu hợp lý: 'Khi kênh hiện tại đã đạt mục tiêu đo được và còn dư 3 giờ/tuần' (sai vì chưa nêu vai còn trống) để buộc phân biệt." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Sau một quý chị đo từng vai: video xem hết, tin nhắn hỏi giá, khách đặt lại", "issue": "Ví dụ không có một con số nào (không có mức nền, không có mục tiêu), nên không minh hoạ được cách 'đo được' mà khái niệm yêu cầu.", "fix": "Thêm bảng mục tiêu quý: TikTok 30% xem hết, fanpage 40 tin nhắn hỏi giá/tháng, Zalo 25% khách đặt lại trong 60 ngày; gắn nhãn số minh hoạ." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "tin gửi hàng loạt có thể mất phí", "issue": "Khẳng định về cơ chế phí Zalo OA không có nguồn, không ngày kiểm; thuộc loại fast.", "fix": "Thêm src trang chính thức Zalo OA kèm ngày kiểm hoặc bỏ mệnh đề này." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính. Số duy nhất trong bài là '80% đơn' ở tình huống, không được dùng lại trong câu hỏi." },
+      "claims": [
+        { "claim": "TikTok và Reels giỏi đưa bạn tới người lạ; Zalo là kênh giữ chân; Website/YouTube là nơi Google dẫn người tìm tới", "status": "unverified", "note": "Mô tả vai nền tảng nêu như sự thật chung, không nguồn; chấp nhận được ở mức khái quát nhưng cần ghi 'tại thời điểm kiểm'." },
+        { "claim": "Tin gửi hàng loạt Zalo OA có thể mất phí", "status": "unverified", "note": "Không có src." }
+      ],
+      "strengths": "Khung 'mỗi nền tảng một vai + thước đo riêng cho từng vai' rõ và dễ áp dụng; Q5 (TikTok khám phá → fanpage chốt) là câu đọc tình huống tốt.",
+      "upgrade": "Thêm phần Phản ví dụ (khi nào một kênh phải kiêm hai vai, vd shop không có Zalo khách) và Đào sâu (chi phí cơ hội theo giờ). Đưa số vào ví dụ: giờ/tuần mỗi vai và mục tiêu đo quý. Thêm 1 câu calc (tính giờ còn lại sau khi gán vai) và đổi Q2, Q6 thành câu có ràng buộc số. Gắn src cho Zalo OA."
+    },
+    {
+      "id": "B:kn04-02",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L2", "L2", "L3", "L2", "L3", "L2", "L3"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q6", "quote": "Xem trụ cột có giúp khách nhớ đúng điều cần nhớ và có ra hành động mong muốn không", "issue": "Đáp án đúng dài nhất, bao quát nhất và là phương án duy nhất không có từ tuyệt đối ('bỏ', 'giữ hết'); đoán được bằng hình thức. Lời giải không cho biết đo 'khách nhớ' bằng gì.", "fix": "Cho một bảng mini 4 trụ cột × (bài, lượt lưu, tin nhắn, bình luận nhắc đúng từ khoá định vị) và hỏi bỏ trụ cột nào — câu L4 từ dữ liệu." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Sau hai tháng, bình luận bắt đầu có câu kiểu \"nhà này pha phin chỉ kỹ ghê\"", "issue": "Kết quả minh hoạ không gắn nhãn, không có số (bao nhiêu bình luận trên bao nhiêu bài) nên không kiểm được tuyên bố 'đúng điều thương hiệu muốn được nhớ'.", "fix": "Gắn nhãn minh hoạ và thêm số: 'trong 40 bình luận tháng 2, 11 câu nhắc tới cách pha' so với 1/40 trước đó." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "gom 20 câu khách hay nhắn hoặc bình luận thành 3 đến 5 nhóm", "issue": "Thiếu điều kiện: với trang chưa có khách nhắn (mới mở) thì lấy câu hỏi ở đâu; không nói trụ cột đổi khi định vị đổi.", "fix": "Thêm một câu: trang mới lấy câu hỏi từ nhóm cộng đồng ngành hoặc phần hỏi đáp của đối thủ; rà trụ cột mỗi quý." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 14/30 = 46,67%; 4/20 = 20%; chênh 26,67 điểm % ✓ (tol 0,1). Sai 10 = 14−4 ✓ nhầm số tuyệt đối; sai 33,3 = (14−4)/30 ✓ sai mẫu số. Ví dụ: 8+5+3+4 = 20 ✓, 4/20 = 20% ✓. Q5: 18/9 = 2 ✓." },
+      "claims": [
+        { "claim": "30 bài tháng trước: 14 khuyến mãi, 9 ảnh, 7 ngẫu hứng; lịch mới 20 bài chia 8/5/3/4", "status": "illustrative-unlabelled", "note": "Số tự khớp nhưng bài không nói là minh hoạ." }
+      ],
+      "strengths": "Cách chọn trụ cột từ 20 câu khách hay hỏi là bước làm cụ thể; Q3 (điểm phần trăm vs số tuyệt đối) và Q5 (18 ÷ 9) buộc đọc số.",
+      "upgrade": "Thêm Phản ví dụ (thương hiệu một sản phẩm, một dịp mua — vd bánh trung thu — có cần 4 trụ cột quanh năm không) và Đào sâu (trụ cột ↔ định vị, đánh đổi giữa 'điều muốn được nhớ' và 'điều khách hỏi nhiều'). Thêm số cho kết quả và gắn nhãn minh hoạ. Nâng Q6 thành câu đọc bảng dữ liệu 4 trụ cột; thêm một câu L5 chọn giữa trụ cột khách hỏi nhiều nhưng không khác biệt vs trụ cột khác biệt nhưng ít người hỏi."
+    },
+    {
+      "id": "B:kn04-03",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 13, "examples": 9, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L2", "L2", "L3", "L3", "L4", "L2", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Nhiều thương hiệu nhắm quanh mức khoảng 70 đến 80% giá trị, 20 đến 30% bán hàng", "issue": "Benchmark nêu như thực hành phổ biến, không nguồn, không gắn nhãn; dù có câu 'không phải luật', Q2 và Q3 vẫn dùng 30% như mốc mặc định.", "fix": "Ghi rõ 'quy ước nghề, không có nghiên cứu kiểm chứng' hoặc dẫn nguồn; trong Q2 nêu lý do chọn 30% từ dữ liệu của chính Lan (vd tỉ lệ lưu bài mẹo so với bài giá)." },
+        { "sev": "P1", "where": "Q5", "quote": "Giữ tỉ lệ, tiếp tục theo dõi, vì tỉ lệ là điểm xuất phát, số liệu mới là thước đo", "issue": "Đáp án đúng là phương án dài nhất, có vế giải thích; hai phương án sai dùng từ tuyệt đối ('ngay', 'ngừng'). Đoán được bằng hình thức.", "fix": "Rút ngắn đáp án đúng còn 'Giữ tỉ lệ, theo dõi thêm' và làm phương án a, d bớt cực đoan." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[21,\"SAI_TINH_TOAN\"],[7,\"NHAM_DIEM_PHAN_TRAM\"]]", "issue": "Giá trị sai 7 không suy ra được từ một lỗi tự nhiên (30 × 30% = 9; 70/10 = 7 là gượng); nhãn 'nhầm điểm phần trăm' không khớp.", "fix": "Thay bằng 10 (nhẩm 1/3) hoặc 3 (30% của 10) với nhãn đúng." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Sau hai tháng, bài bán hàng ít hơn nhưng mỗi bài nhận nhiều tin nhắn hơn", "issue": "Kết quả không có số, không gắn nhãn minh hoạ; không so được với mức nền 'bình luận chủ yếu là giá bao nhiêu rồi im'.", "fix": "Thêm: trước 24 bài bán → 1,2 tin nhắn/bài; sau 9 bài bán → 4 tin nhắn/bài, tổng tin nhắn 36 so với 29 (minh hoạ)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30 × (1 − 70%) = 9 ✓ (tol 0). Sai 21 = 30 × 70% ✓. Sai 7: không suy ra được từ lỗi tự nhiên (xem defect). Ví dụ 21 + 9 = 30 ✓, 21/30 = 70% ✓." },
+      "claims": [
+        { "claim": "Nhiều thương hiệu nhắm quanh mức 70–80% giá trị / 20–30% bán hàng", "status": "unverified", "note": "Quy ước nghề không nguồn; bài có hedge 'không phải luật'." },
+        { "claim": "Nền tảng phân phối theo phản ứng của người xem; tín hiệu yếu thì bài sau được đẩy cho ít người hơn", "status": "unverified", "note": "Cơ chế thuật toán nêu như sự thật chung, không src; evergreen ở mức nguyên lý nhưng cần ghi nhận." }
+      ],
+      "strengths": "Phản ví dụ (mùa Tết, bài bán hàng chính là bài giá trị) và Đào sâu có phép kiểm tra 2×2 trong tuần — đúng tinh thần 'tỉ lệ là giả thuyết'. Q5 là câu đánh đổi từ dữ liệu.",
+      "upgrade": "Gắn nhãn/nguồn cho mốc 70/30. Thêm số cho kết quả ví dụ và một câu calc đọc dữ liệu 4 bài (lượt lưu, tin nhắn) để kết luận tỉ lệ mới — câu L4 thay Q6 (L2 cơ chế). Rút ngắn đáp án Q5. Thêm một câu L5: tăng bài bán hàng ngắn hạn mùa cao điểm đổi lấy tiếp cận dài hạn — chọn và biện hộ."
+    },
+    {
+      "id": "B:kn04-04",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 13, "examples": 9, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 3 },
+      "total": 67,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L2", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Bài nhỏ này mang về nhiều khách tiềm năng hơn bài minigame lớn gấp hơn mười lần", "issue": "Số trong ví dụ không chứng minh kết luận: bài minigame có 200 bình luận hỏi thật, bài thường chỉ có 45 câu hỏi + 30 tin nhắn = 75. Chỉ khi tính 350 lượt lưu là 'khách tiềm năng' thì bài thường mới hơn, nhưng bài không nói cách đếm.", "fix": "Định nghĩa 'khách tiềm năng' = tin nhắn hỏi mua (minigame: 0 được nêu → thêm số, vd 4 tin nhắn) rồi so 30 vs 4; hoặc đổi số minigame còn 60 câu hỏi thật và sửa Q3 tương ứng." },
+        { "sev": "P1", "where": "Q2", "quote": "chính sách Trang của Meta không cho yêu cầu hoặc thưởng việc chia sẻ, đăng lại, gắn thẻ người khác để tham gia khuyến mại (kiểm theo tài liệu Meta Pages, Groups and Events Policies, 10/2026); minigame có giải thưởng còn có thể thuộc quy định khuyến mại (Nghị định 81/2018/NĐ-CP, đã sửa đổi)", "issue": "Khẳng định về chính sách nền tảng và luật nêu trong lời giải, có tên tài liệu và ngày nhưng bài không có trường src với link bấm được; đây là nội dung fast/periodic đặt ở lời giải Q2 thay vì ở thân bài, nên người học bỏ qua phần đọc sẽ không gặp.", "fix": "Chuyển hai khẳng định này lên Đào sâu, thêm src (URL Meta Promotions guidelines, văn bản NĐ 81/2018 trên thuvienphapluat) với ngày kiểm; lời giải Q2 chỉ còn một câu." },
+        { "sev": "P2", "where": "PHẢN VÍ DỤ", "quote": "Một minigame đại chúng có thể hữu ích vì mục tiêu là cho nhiều người biết tên", "issue": "Phản ví dụ gợi giữ minigame 'tag bạn bè' cho mục tiêu nhận biết, trong khi lời giải Q2 nói thể lệ tag/share bị chính sách Meta cấm — hai phần không nói chuyện với nhau.", "fix": "Trong phản ví dụ ghi rõ: minigame cho nhận biết phải đổi thể lệ (bình luận trả lời câu hỏi về sản phẩm) để không vi phạm chính sách." },
+        { "sev": "P2", "where": "Q7", "quote": "Người tương tác không phải khách, làm số liệu sai và dạy nền tảng phân phối sai", "issue": "Đáp án đúng gồm hai mệnh đề và dài nhất; nhận lại nguyên ý chính của bài (L2).", "fix": "Thay bằng câu dữ liệu: trang vào nhóm đổi tương tác 1 tháng, lượt thích tăng 300%, tin nhắn hỏi mua giảm 40%, tiếp cận tự nhiên giảm 25% — chẩn đoán." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (6.000 − 5.800)/6.000 = 3,33% ✓ (tol 0,05). Sai 96,67 = 5.800/6.000 ✓; sai 200 = số tuyệt đối ✓. Q6: so 80 lưu/300 thích vs 5 lưu/2.000 thích — không có tiếp cận nên chỉ so được tỉ lệ lưu/thích (26,7% vs 0,25%), kết luận vẫn đứng." },
+      "claims": [
+        { "claim": "Chính sách Trang của Meta không cho yêu cầu/thưởng việc chia sẻ, gắn thẻ để tham gia khuyến mại", "status": "unverified", "note": "Nêu tên tài liệu và ngày kiểm 10/2026 nhưng không có src link trong bài." },
+        { "claim": "Minigame có giải thưởng có thể thuộc Nghị định 81/2018/NĐ-CP về xúc tiến thương mại", "status": "unverified", "note": "Không có src; có hedge 'hỏi pháp chế'." },
+        { "claim": "Nền tảng học rằng nội dung của bạn hợp với người săn quà và phân phối tiếp cho họ", "status": "unverified", "note": "Cơ chế phân phối nêu như sự thật, không nguồn." },
+        { "claim": "Minigame 10.000 thích/6.000 bình luận/80.000 tiếp cận/12 đơn; bài thường 900 thích/60 bình luận/350 lưu/30 tin nhắn", "status": "illustrative-unlabelled", "note": "Không gắn nhãn minh hoạ; mâu thuẫn nội tại về 'khách tiềm năng' (xem defect)." }
+      ],
+      "strengths": "Đào sâu đưa ra đòn bẩy thiết kế (quà là sản phẩm/dùng thử để lọc người) thay vì chỉ cấm minigame; Q6 là câu so dữ liệu hai bài tốt.",
+      "upgrade": "Sửa số ví dụ để kết luận 'bài nhỏ hơn bài lớn' đứng được, định nghĩa rõ 'khách tiềm năng' và gắn nhãn minh hoạ. Chuyển khẳng định chính sách Meta và NĐ 81 lên thân bài với src. Thêm một câu calc thứ hai so tỉ lệ tin nhắn/tiếp cận hai bài (30/… vs …/80.000) và một câu L5 về thiết kế thể lệ minigame hợp chính sách."
+    },
+    {
+      "id": "B:kn04-05",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L3", "L3", "L3", "L2", "L3", "L2", "L3"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q2", "quote": "Làm thêm nội dung kiểu B, đo bằng tỉ lệ lưu và bấm link; giữ ít clip hài cho nhận biết", "issue": "Đáp án đúng dài nhất, cân bằng nhất ('vừa… vừa…'), ba phương án sai đều cực đoan hoặc 'chia đều'; đoán được bằng hình thức.", "fix": "Thêm ràng buộc số: đội làm được 8 video/tháng, clip hài mất 2 giờ, thực đơn mất 6 giờ, có 36 giờ — hỏi chia bao nhiêu mỗi loại; biến thành calc hoặc MCQ có số." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[2000,\"SAI_MAU_SO\"],[1.25,\"SAI_MAU_SO\"]]", "issue": "Giá trị sai 2000 không suy ra tự nhiên (30.000/1.500 = 20, không phải 2.000); 1,25 = 1.500/120.000 là 'nhầm tiếp cận của A', nhãn đúng hơn là NHAM_SO_LIEU.", "fix": "Đổi 2000 thành 20 (đảo mẫu số) và đổi nhãn của 1,25." },
+        { "sev": "P2", "where": "ĐÀO SÂU", "quote": "nhận biết cần nhiều tuần mới thấy", "issue": "Không nói đo nhận biết bằng gì (lượt tìm tên thương hiệu, khảo sát nhớ tên), nên 'A vẫn có ích nếu mục tiêu là nhận biết' chưa kiểm được.", "fix": "Thêm một câu: đo nhận biết bằng lượt tìm tên thương hiệu trên Google/TikTok sau mỗi đợt clip hài, hoặc khảo sát 100 khách mới 'biết chúng tôi từ đâu'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Video A (clip hài) tiếp cận 120.000 người, 240 lượt lưu, 60 lượt bấm link", "issue": "Số không gắn nhãn minh hoạ (không có cờ assume).", "fix": "Thêm nhãn số minh hoạ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.500/30.000 = 5% ✓ (tol 0,05). Ví dụ: 240/120.000 = 0,2% ✓; 60/120.000 = 0,05% ✓; 450/30.000 = 1,5% ✓. Q5: 200/5.000 = 4% ✓, 600/50.000 = 1,2% ✓. Q1 lời giải 'B vượt cả số tuyệt đối' 450 > 60 ✓." },
+      "claims": [
+        { "claim": "Video A 120.000 tiếp cận/240 lưu/60 bấm; Video B 30.000/1.500/450", "status": "illustrative-unlabelled", "note": "Tự khớp hoàn toàn, nhưng không gắn nhãn." }
+      ],
+      "strengths": "Nguyên tắc 'chia cho tiếp cận trước khi so' được minh hoạ bằng số tự khớp xuyên suốt tình huống → ví dụ → Q3 → Q5; phản ví dụ đổi kết luận đúng cách (mục tiêu nhận biết → A thắng).",
+      "upgrade": "Gắn nhãn số minh hoạ. Thêm điều kiện mẫu nhỏ (lượt lưu 5 trên 50.000 tiếp cận có nhiễu thế nào) vào Đào sâu để chiều Dữ liệu đạt 9–10. Nâng Q2 thành câu phân bổ có ràng buộc giờ; đổi Q4/Q6 (L2 định nghĩa chỉ số) thành một câu đọc bảng 3 bài với 4 chỉ số và chọn bài cho từng mục tiêu (L4), và một câu L5 'tháng này cần cả đơn lẫn tệp mới — chia thế nào, vì sao'."
+    },
+    {
+      "id": "B:kn04-06",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "ép lịch 2 video TikTok/ngày. Mỗi video anh chỉ còn 1 giờ để làm", "issue": "2 video/ngày × 7 ngày × 1 giờ = 14 giờ/tuần, vượt 12 giờ Tuấn 'có' trong ví dụ; hiểu được là anh tăng ca nhưng bài không nói, số nền giữa tình huống và ví dụ lệch nhẹ.", "fix": "Ghi 'anh phải lấn 2 giờ ngoài 12 giờ dự định' hoặc đổi thành 2 video/ngày làm việc (10/tuần)." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Đăng đều giúp khách quen nhịp và nền tảng có đủ bài để học ai thích nội dung của bạn", "issue": "Cơ chế nền tảng nêu như sự thật, không nguồn; không có phản ví dụ (kênh tin tức/thời vụ cần nhịp khác) hay đào sâu, nên chiều Độ sâu mỏng.", "fix": "Thêm Phản ví dụ (kênh bán theo mùa hoa — xem Q7 — hoặc kênh dài YouTube 1 video/tháng vẫn tăng) và Đào sâu (đánh đổi giữa thử nhịp 4 tuần và chi phí 8 tuần không tối ưu)." },
+        { "sev": "P2", "where": "Q4", "quote": "Vì kênh lớn có cả đội sản xuất; shop nhỏ không giữ nổi chất lượng ở nhịp đó", "issue": "Nhận lại ý 'Lỗi hay gặp' thứ nhất (L2); ba phương án sai dễ loại.", "fix": "Thay bằng câu dữ liệu: kênh lớn 3 video/ngày với đội 4 người (≈ 10 giờ/video); shop 1 người 12 giờ/tuần — hỏi nhịp tương đương (calc)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 12 × 0,8 = 9,6; 9,6/2,5 = 3,84 → 3 bài ✓ (tol 0). Sai 4 = 12/2,5 = 4,8 → 4 ✓; sai 0,26 = 2,5/9,6 ✓ ngược. Ví dụ: 12/3 = 4; 12/5 = 2,4 ✓. Q6: 3 × 2.800 = 8.400 vs 5 × 1.500 = 7.500 ✓; kém 10,7% ≈ 11% ✓; 18 − 12 = 6 giờ ✓." },
+      "claims": [
+        { "claim": "Nhịp 5 video: 1.500 lượt xem/video, 18 giờ; nhịp 3: 2.800, 12 giờ", "status": "illustrative-labelled", "note": "Bài ghi '(số minh hoạ)'." },
+        { "claim": "Nền tảng có đủ bài để học ai thích nội dung của bạn", "status": "unverified", "note": "Cơ chế thuật toán nêu chung, không nguồn." }
+      ],
+      "strengths": "Công thức tần suất = giờ có ÷ giờ/bài đạt chuẩn, chừa dự phòng, thử mỗi nhịp 4 tuần — một quyết định cụ thể với số; Q6 là câu đánh đổi đọc dữ liệu tốt (tổng lượt xem và giờ công), số minh hoạ có gắn nhãn.",
+      "upgrade": "Thêm Phản ví dụ và Đào sâu (xem defect). Nêu điều kiện so sánh hai nhịp 4 tuần: cùng mùa, cùng loại nội dung, nhiễu của trung bình 12 vs 20 video. Đổi Q4 thành calc; thêm một câu L5: nhịp 3 video/tuần nhưng xem hết 45% vs nhịp 4 video/tuần xem hết 38% và tổng lượt xem cao hơn 20% — chọn nhịp nào khi mục tiêu là tin nhắn đặt lịch."
+    },
+    {
+      "id": "B:kn04-07",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 12, "examples": 8, "pedagogy": 5, "assessment": 5, "data": 5, "clarity": 4 },
+      "total": 59,
+      "bloom_items": ["L2", "L2", "L3", "L2", "L1", "L3", "L2"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q2", "quote": "Mỗi tháng làm một nội dung gốc, rồi chuyển thể thành các bài hợp từng nền tảng", "issue": "Câu quyết định nhận lại nguyên 'Mang theo'; không có ràng buộc số (giờ, số bài cần/tháng) để cân nhắc; đoán được vì ba phương án sai là 'đăng lại y hệt', 'tuyển thêm', 'bỏ YouTube'.", "fix": "Cho ràng buộc: cần 24 bài/tháng, có 40 giờ; video gốc 10 giờ + 6 giờ/9 bài — hỏi làm mấy video gốc và còn bao nhiêu giờ cho bài riêng (calc hoặc MCQ có số)." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[21,\"SAI_TINH_TOAN\"],[27,\"QUEN_CHI_PHI_BIEN_DOI\"]]", "issue": "Giá trị 27 là tổng giờ làm riêng lẻ, không phải kết quả của việc 'quên chi phí biến đổi'; nhãn không khớp. 21 (= 27 − 6) mới là 'quên chi phí quay gốc', nhãn SAI_TINH_TOAN mờ.", "fix": "Đổi nhãn: 21 → QUEN_CHI_PHI_GOC; thay 27 bằng 16 (nhầm lấy tổng giờ chuyển thể) với nhãn NHAM_SO_TUYET_DOI." },
+        { "sev": "P2", "where": "Q5", "quote": "Chuyển thể khác đăng lại y hệt ở điểm nào?", "issue": "Câu định nghĩa L1, lặp lại khái niệm và Lỗi hay gặp; đáp án c là phương án duy nhất có cấu trúc 'đổi… giữ…'.", "fix": "Thay bằng câu đọc biểu đồ giữ chân (cho 4 mốc thời gian với % người xem còn lại) và chọn đoạn cắt — L3/L4." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tổng 9 bài, mất thêm khoảng 6 giờ", "issue": "Số không gắn nhãn minh hoạ; không nói chất lượng/hiệu quả 9 bài cắt so với bài làm riêng (tiết kiệm giờ nhưng kết quả thế nào?), nên 'đánh đổi' không được nêu.", "fix": "Gắn nhãn minh hoạ; thêm một dòng so lượt xem trung bình clip cắt vs clip làm riêng và nêu điều kiện (video gốc phải có cảnh đủ tốt)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 9 × 3 = 27; 10 + 6 = 16; 27 − 16 = 11 ✓ (tol 0). Ghi chú về 21 (coi 10 giờ là chi phí đã bỏ) đúng. Ví dụ 5 + 1 + 2 + 1 = 9 ✓." },
+      "claims": [
+        { "claim": "Video 12 phút tốn 10 giờ, 4.000 lượt xem; 9 bài chuyển thể 6 giờ; bài riêng 3 giờ/bài", "status": "illustrative-unlabelled", "note": "Số tự khớp, không gắn nhãn." }
+      ],
+      "strengths": "Bước 'chọn khúc cắt theo biểu đồ giữ chân' và 'mỗi khúc cần câu mở riêng' là hướng dẫn kỹ thuật cụ thể; Q3 phân biệt chi phí gốc/chi phí đã bỏ là phép tính có ý nghĩa.",
+      "upgrade": "Thêm Phản ví dụ (khi video gốc yếu/không có cảnh giữ chân thì chuyển thể chỉ nhân bản cái dở; hoặc nội dung thời sự hết hạn trước khi cắt xong) và Đào sâu (đánh đổi tiết kiệm giờ vs hiệu quả từng mảnh, tín hiệu: lượt xem clip cắt so với clip gốc). Sửa nhãn đáp án sai Q3. Đổi Q2 và Q5 thành câu có số/đọc dữ liệu; thêm câu L5 chọn giữa 1 video gốc/tháng + 9 mảnh và 2 video gốc + 4 mảnh với cùng 32 giờ."
+    },
+    {
+      "id": "B:kn04-08",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 14, "examples": 8, "pedagogy": 8, "assessment": 6, "data": 4, "clarity": 4 },
+      "total": 67,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L2", "L3", "L2"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q3", "quote": "mỗi giờ có thêm 6 lượt đồng tình. Nếu quán đợi tới 17 giờ mới trả lời", "issue": "Phép tính tuyến tính giả định tốc độ đồng tình đều 6/giờ suốt 9 giờ mà không nêu đây là giả định đơn giản hoá; thực tế lan truyền không tuyến tính. Câu calc duy nhất của bài không dạy được gì về đo lường xử lý bình luận (thời gian phản hồi, tỉ lệ sửa lời chê).", "fix": "Thay bằng calc đo đúng tín hiệu Đào sâu nêu: 'tháng này 40 bình luận chê, 28 được trả lời trong 2 giờ, 9 người sửa lời chê — tỉ lệ phản hồi đúng hạn và tỉ lệ sửa là bao nhiêu'." },
+        { "sev": "P2", "where": "Q4", "quote": "\"Tối đó đông, ai cũng phải chờ, anh không hài lòng thì có thể sang quán khác.\"", "issue": "Phương án sai lộ liễu, ba phương án còn lại đều là mẫu tốt; câu nhận lại (L2) không phân biệt được mức tinh tế (vd b hứa 'kiểm camera' nhưng không nhận lỗi).", "fix": "Làm bốn câu trả lời đều 'nghe ổn' nhưng một câu thiếu một trong ba phần (nhận lỗi / việc sẽ làm / mời nhắn riêng) và hỏi câu nào thiếu gì." },
+        { "sev": "P2", "where": "Q2", "quote": "Ẩn bình luận để người viết và bạn bè họ vẫn thấy, còn người khác không thấy", "issue": "Mô tả cơ chế 'ẩn bình luận' của Facebook nêu như sự thật, không nguồn/ngày kiểm.", "fix": "Thêm '(theo trung tâm trợ giúp Meta, kiểm tháng…)' hoặc viết chung 'ẩn khỏi người xem khác'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Người khách sửa bình luận thành \"quán phản hồi nhanh, sẽ quay lại thử\"", "issue": "Kết quả minh hoạ lý tưởng hoá, không gắn nhãn; không nói trường hợp khách không sửa và tiếp tục chê.", "fix": "Gắn nhãn minh hoạ; thêm một câu về kịch bản khách không hạ giọng: trả lời một lần nữa rồi dừng, không cãi tiếp." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (17 − 8) × 6 = 54; 30 + 54 = 84 ✓ (tol 0). Sai 54 = quên gốc 30 ✓; sai 30 = quên phần tăng ✓. Phép tính đúng nhưng mô hình tuyến tính không nêu giả định (xem defect)." },
+      "claims": [
+        { "claim": "Ẩn bình luận: người viết và bạn bè họ vẫn thấy, người khác không thấy", "status": "unverified", "note": "Mô tả tính năng Facebook, không nguồn." }
+      ],
+      "strengths": "Khung phân loại ba loại bình luận với cách xử lý khác nhau và mẫu trả lời ba phần là thứ dùng được ngay; phản ví dụ (tài khoản lạ lăng mạ → ẩn/xoá theo quy tắc đã công bố) đổi kết luận đúng chỗ; Đào sâu có quy trình trước sự cố.",
+      "upgrade": "Thay Q3 bằng calc đo tín hiệu thật (thời gian phản hồi, tỉ lệ sửa lời chê). Thêm số vào ví dụ và gắn nhãn minh hoạ. Nâng Q4 thành câu phân tích tinh tế; thêm câu L5 đánh đổi: bù một phần lẩu công khai cho mọi lời chê có thể tạo 'chê để được bù' — đặt ngưỡng nào. Thêm src cho cơ chế ẩn bình luận."
+    }
+  ],
+  "module_notes": {
+    "progression": "Thứ tự hợp lý: chọn vai kênh (01) → trụ cột (02) → tỉ lệ giá trị/bán hàng (03) → tương tác thật (04) → đo theo mục tiêu (05) → tần suất (06) → chuyển thể (07) → xử lý bình luận chê (08). Tuy nhiên 05 (đo theo mục tiêu, chia cho tiếp cận) là nền cho 03, 04, 06 — nên đưa lên trước 03 để các bài sau dùng được 'tỉ lệ trên tiếp cận'. 07 (chuyển thể) nối tự nhiên với 06 (tần suất) nhưng không bài nào gộp hai thứ thành lịch nội dung cụ thể. Chỉ 4/8 bài (03, 04, 05, 08) có Phản ví dụ và Đào sâu; 4 bài còn lại dừng ở tình huống → khái niệm → ví dụ.",
+    "overlap": [
+      "Cơ chế 'nền tảng phân phối theo phản ứng người xem' được nêu lại như sự thật trong 03 (Q6), 04 (khái niệm, Q5), 06 (khái niệm) mà không bài nào gắn nguồn.",
+      "04 và 05 cùng dạy 'đọc tương tác theo chất lượng/mục tiêu' với cùng cặp chỉ số lưu – tin nhắn; 04 Q6 gần như là 05 Q5.",
+      "01 Q5 và 05 Đào sâu cùng nói 'kênh khám phá nuôi kênh chốt đơn'."
+    ],
+    "gaps": [
+      "Không có bài gộp trụ cột + tần suất + chuyển thể thành một lịch nội dung tháng có số giờ — đầu ra thực hành của cả module đang thiếu (không bài nào có BÀI THỰC HÀNH CÓ ĐẦU RA).",
+      "Không có bài về câu mở/hook và caption cho nội dung tự nhiên, dù 07 nhắc 'câu mở riêng' và 06 nói 'xem hết'.",
+      "Không có bài nối nội dung tự nhiên với đơn hàng (cách ghi nhận khách đến từ bài tự nhiên: mã, câu hỏi 'biết từ đâu', lượt tìm tên) — 04/05 dừng ở tin nhắn hỏi mua.",
+      "Không có bài về nhóm/cộng đồng (Facebook Group, Zalo nhóm) dù 01 nhắc 'nhóm'.",
+      "Không có cảnh báo mẫu nhỏ/nhiễu khi so tỉ lệ giữa các bài (chiều Dữ liệu toàn module dừng ở phép chia một bước)."
+    ],
+    "best_lesson": "B:kn04-05",
+    "weakest_lesson": "B:kn04-01"
+  }
+}

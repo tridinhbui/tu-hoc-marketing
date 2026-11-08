@@ -1,0 +1,145 @@
+{
+  "mod": "qc08", "scored_at": "2026-11-07", "scorer": "independent-agent", "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    { "id": "B:qc08-01",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L4","L5","L3","L3","L4","L3","L4"], "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "khi bạn cần nhắm theo tỉnh/huyện hoặc bán kính quanh cửa hàng", "issue": "Bài không có src nào; tính năng nhắm theo huyện/bán kính của Zalo Ads nêu như sự thật, không gắn nhãn, không ngày kiểm (kiến thức fast).", "fix": "Thêm src trang hướng dẫn nhắm chọn của Zalo Ads (như qc08-04 dùng) hoặc viết \"theo trang hướng dẫn tại thời điểm kiểm\"." },
+        { "sev": "P1", "where": "Q6 / Q7", "quote": "Zalo Ads có danh sách sản phẩm cần giấy phép (ví dụ ngân hàng, cho vay) / vi phạm Luật Bảo vệ dữ liệu cá nhân 91/2025", "issue": "Hai lời giải dựa vào danh sách sản phẩm cần giấy phép và Luật 91/2025 — chưa được dạy trong bài này và bài không có src (src nằm ở 02 và 04). Câu hỏi kiểm thứ chưa học.", "fix": "Thêm hai src tương ứng vào bài 01 hoặc chuyển Q6/Q7 sang bài 02/04 và thay bằng câu về trần ngân sách theo người trực (Đào sâu) có tính." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Nếu trả lời sau 2 giờ, tỉ lệ hẹn tụt còn 10%", "issue": "Mối quan hệ tốc độ phản hồi → tỉ lệ hẹn (25% vs 10%) là giả định then chốt nhưng không nói đó là số minh hoạ riêng hay có cơ sở; dễ bị nhớ như benchmark.", "fix": "Ghi \"(hai tỉ lệ là giả định để minh hoạ; đo trên 30 cuộc gần nhất của bạn)\" và nêu cách đo trong Áp dụng." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 200 × 10% × 80% = 16; 6.000/16 = 375 ✓; sai 300 = /20 hẹn ✓, 30 = giá mỗi cuộc ✓. Q4: 200 × 25% × 80% = 40; 40 × 300 − 6.000 = 6.000 ✓; sai 12.000 ✓, 9.000 (=30 khách×300: quên 80%? 50×300−6.000=9.000 ✓). Đào sâu: 15 × 30 × 30.000 = 13,5 triệu ✓. Q5: 900/30 = 30/ngày ✓." },
+      "claims": [
+        { "claim": "Zalo Ads nhắm theo tỉnh/huyện hoặc bán kính quanh điểm", "status": "unverified", "note": "Không có src trong bài" },
+        { "claim": "Zalo Ads có danh sách sản phẩm cần giấy phép (ngân hàng, cho vay)", "status": "unverified", "note": "src ở bài 02, không ở bài này" },
+        { "claim": "Luật Bảo vệ dữ liệu cá nhân 91/2025 cấm dùng số không có đồng ý", "status": "unverified", "note": "src ở bài 04" },
+        { "claim": "Tiệm điều hoà: 30.000đ/cuộc, 25%/10% hẹn, 80% thành đơn, lãi gộp 300.000đ", "status": "illustrative-labelled", "note": "" },
+        { "claim": "Khách 35–60 tuổi quen nhắn Zalo", "status": "illustrative-labelled", "note": "Phản ví dụ đã nói \"chỉ là xu hướng, hỏi 20 khách\"" }
+      ],
+      "strengths": "Luận điểm \"Zalo bán cuộc trò chuyện, không bán đơn\" dẫn tới trần ngân sách tính từ sức người trực (13,5 triệu) — một cách nghĩ hiếm thấy trong tài liệu kênh; hai kịch bản trả lời nhanh/chậm làm đổi kết luận lãi/lỗ.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho nhắm chọn, sản phẩm cần giấy phép và Luật 91/2025; (2) gắn nhãn hai tỉ lệ hẹn là giả định và đưa cách đo vào Áp dụng; (3) thêm câu calc về trần ngân sách theo người trực (15 cuộc/ngày → tối đa bao nhiêu triệu); (4) thêm bảng 4 doanh nghiệp × 3 câu kiểm; (5) nối sang qc08-04 (tầng sau cú bấm) trong Liên kết." },
+    { "id": "B:qc08-02",
+      "scores": { "accuracy": 11, "depth": 9, "practical": 13, "examples": 9, "pedagogy": 7, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L2","L5","L3","L3","L2","L5","L3"], "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Đào sâu", "quote": "ngân sách tổng tối thiểu 200.000đ/ngày, quảng cáo OA tối thiểu 500.000đ/ngày", "issue": "Hai mức tối thiểu không có src tương ứng trong danh sách nguồn (6 src không có trang ngân sách tối thiểu); bài nói \"theo trang hướng dẫn\" nhưng không dẫn trang. Possibly outdated.", "fix": "Thêm src trang quy định ngân sách tối thiểu của Zalo Ads với ngày kiểm, hoặc bỏ số và chỉ nói \"có mức tối thiểu theo hình thức, kiểm trong tài khoản\"." },
+        { "sev": "P1", "where": "Đào sâu", "quote": "tin gửi ngoài khung 48 giờ tính 55đ/tin khi vượt hạn mức miễn phí của gói", "issue": "Giá 55đ/tin tư vấn nêu như sự thật, không rõ src nào bao phủ (trang giá gói OA có thể có, nhưng tiêu đề không nói về tin tư vấn); trong khi qc08-04 nói giá ZNS chưa xác minh — người học dễ lẫn hai loại tin.", "fix": "Dẫn đúng mục trong trang giá, phân biệt rõ \"tin tư vấn OA\" với \"ZNS\", ghi ngày kiểm." },
+        { "sev": "P1", "where": "Khái niệm", "quote": "hồ sơ đã xác thực được ưu tiên vị trí tốt hơn", "issue": "Khẳng định về cơ chế phân phối (ưu tiên vị trí) không gắn nhãn; nếu trang OA/Hồ sơ của Zalo không nói rõ thì đây là suy diễn.", "fix": "Trích nguyên văn trang Zalo hoặc bỏ." },
+        { "sev": "P2", "where": "Q3, Q4", "quote": "Mua theo năm tiết kiệm bao nhiêu / Giá trước VAT là bao nhiêu", "issue": "Hai câu calc là số học thuần (2×1.400−2.500; 2.500/1,1), không kiểm năng lực marketing; bài không có phép tính nào về dòng tiền quảng cáo.", "fix": "Thay Q4 bằng: nạp 8 triệu, chạy OA 500.000đ/ngày + Form 200.000đ/ngày → số ngày chạy được và ngày phải nạp tiếp." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Hoá đơn VAT xuất theo số tiền nạp, không theo số đã tiêu", "issue": "Đúng với src Nghị định 70 nhưng không nêu hệ quả kế toán (chi phí trả trước, phân bổ) — chỉ nói \"kế toán đối chiếu theo lần nạp\".", "fix": "Thêm một câu: khoản nạp chưa tiêu là chi phí trả trước, phân bổ theo báo cáo chi tiêu; hỏi kế toán cách hạch toán." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 2 × 1.400 − 2.500 = 300 ✓; sai 1.100 = 2.500−1.400 ✓. Q4: 2.500/1,1 = 2.272,7 ✓; sai 2.250 = 2.500×0,9 ✓. Đào sâu: 8.000/500 = 16 ngày ✓." },
+      "claims": [
+        { "claim": "OA xác thực cần giấy phép kinh doanh hoặc giấy chứng nhận thương hiệu; quảng cáo OA và bài viết OA đòi OA xác thực; Form cần Hồ sơ quảng cáo", "status": "verified", "note": "src OA xác thực & Hồ sơ quảng cáo; src hình thức" },
+        { "claim": "Nạp bằng Visa/Master/JCB, ATM/Internet Banking, ZaloPay, MoMo, VietQR, voucher, chuyển khoản nhanh (~30 phút)", "status": "verified", "note": "src hướng dẫn nạp tiền" },
+        { "claim": "Hoá đơn VAT xuất theo số tiền nạp", "status": "verified", "note": "src thông báo xuất hoá đơn theo Nghị định 70 (tim)" },
+        { "claim": "Gói Tăng trưởng 1.400.000đ/6 tháng, 2.500.000đ/năm, gồm VAT 10%; gói Cơ bản miễn phí", "status": "verified", "note": "src zalo.solutions/oa/pricing" },
+        { "claim": "Ngân sách tối thiểu 200.000đ/ngày; quảng cáo OA tối thiểu 500.000đ/ngày", "status": "unverified", "note": "Không có src tương ứng" },
+        { "claim": "Tin tư vấn ngoài 48 giờ 55đ/tin", "status": "unverified", "note": "" },
+        { "claim": "Hồ sơ đã xác thực được ưu tiên vị trí tốt hơn", "status": "unverified", "note": "" },
+        { "claim": "Sản phẩm cần giấy phép: ngân hàng, cho vay, sách", "status": "verified", "note": "src sản phẩm cần giấy phép (tim)" }
+      ],
+      "strengths": "Nguồn nhiều nhất module (6 src) và tách rõ hai danh tính (OA xác thực để chăm sóc, Hồ sơ quảng cáo để chạy) — giúp tránh lỗi làm creative rồi mới biết không chọn được hình thức.",
+      "upgrade": "Để đạt ≥85: (1) dẫn nguồn hoặc bỏ ba khẳng định chưa xác minh (ngân sách tối thiểu, 55đ/tin, ưu tiên vị trí); (2) thay hai calc số học bằng calc dòng tiền nạp/ngày chạy; (3) thêm ví dụ thứ hai làm đổi quyết định (hộ kinh doanh chưa có giấy phép: chạy Form bằng Hồ sơ trong lúc chờ, lộ trình 30 ngày); (4) thêm bảng \"hình thức → danh tính cần → cách tính phí\" (nối 03); (5) nêu hệ quả kế toán của hoá đơn theo số nạp." },
+    { "id": "B:qc08-03",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 16, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L4","L5","L3","L3","L2","L3","L1"], "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Q7", "quote": "Luật 91/2025 (hiệu lực 1/1/2026) yêu cầu sự đồng ý, cách từ chối và dừng khi khách yêu cầu", "issue": "Lời giải viện dẫn luật với chi tiết (hiệu lực, yêu cầu) nhưng bài này không có src về Luật 91/2025 (src nằm ở 04); phần đọc chỉ nói \"ghi rõ bạn dùng số điện thoại\" không nêu luật.", "fix": "Thêm src Bộ Công an về Luật 91/2025 vào bài này hoặc chuyển Q7 sang bài 04." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[2,\"QUEN_TI_LE_CHUYEN_DOI\"],[80,\"SAI_TINH_TOAN\"]]", "issue": "Giá trị sai 80 không được giải thích trong các bước (có thể là 2.000 × 4% = 80đ, nhân thay vì chia) — nhãn SAI_TINH_TOAN không nói đúng lỗi.", "fix": "Ghi trong bước: \"80 là nhân CPC với tỉ lệ điền thay vì chia\" và đổi nhãn thành NHAN_THAY_CHIA (hoặc nhãn hệ thống tương đương)." },
+        { "sev": "P2", "where": "Q5", "quote": "Quảng cáo thương mại chỉ dành cho hàng hoá vật lý, dịch vụ sơn không hợp", "issue": "Câu L2 nhận lại quy định; ba phương án sai đều là \"chỉ CPM/chỉ gói Toàn diện/chỉ Zing MP3\" cùng cấu trúc \"chỉ…\" — đoán được bằng hình thức.", "fix": "Thay bằng câu đánh đổi: cùng 5 triệu, Form CPC 2.000đ/4% điền vs Website CPC 1.500đ/2% điền nhưng lead xem giá trước — chọn gì nếu đo bằng chi phí mỗi lịch đo (L5)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Giả định CPC 2.000đ: 5 triệu mua 2.500 lượt bấm; 4% điền form ra 100 yêu cầu", "issue": "Chỉ một kịch bản; không có kịch bản thứ hai (vd. 1,5% điền → 133.000đ/yêu cầu) để thấy độ nhạy theo tỉ lệ điền.", "fix": "Thêm dòng \"nếu chỉ 1,5% điền: 37 yêu cầu, 135.000đ/yêu cầu — vẫn chạy tiếp nếu mỗi lịch đo đáng giá hơn X\"." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 5.000/2 = 2.500 bấm; ×4% = 100; 5.000/100 = 50 nghìn = 2/0,04 ✓; sai 2 = CPC ✓; 80 chưa giải thích." },
+      "claims": [
+        { "claim": "Danh mục hình thức và cách tính phí: OA (CPC/CPF), Website (CPC), Bài viết OA (CPC), Form (CPC/CPA/CPM, ngành hỗ trợ), Tin nhắn (CPC/CPA), Video (CPM), Hiển thị Báo Mới/Zing MP3/Zalo (CPM, Medium Rectangle CPC), Thương mại (CPC/CPA, hàng hoá vật lý)", "status": "verified", "note": "src các hình thức quảng cáo bao phủ" },
+        { "claim": "Zalo Ads Pixel cho quảng cáo Website", "status": "unverified", "note": "src Pixel nằm ở bài 04" },
+        { "claim": "Luật 91/2025 yêu cầu đồng ý và cách từ chối (Q7)", "status": "unverified", "note": "src ở bài 04" },
+        { "claim": "Rèm cửa Cần Thơ: CPC 2.000đ, 4% điền, 50.000đ/yêu cầu", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "8 bước dựng chiến dịch Form rất cụ thể (form 4 trường, lời hứa gọi lại 15 phút, tự điền thử, bảng theo dõi 5 cột); Đào sâu về \"cách tính phí quyết định ai gánh rủi ro\" là cơ chế ít tài liệu nói.",
+      "upgrade": "Để đạt ≥85: (1) thêm src Luật 91/2025 và Pixel vào bài; (2) sửa lời giải giá trị sai 80; (3) thay Q5 bằng câu đánh đổi Form vs Website có số; (4) thêm kịch bản tỉ lệ điền thấp để thấy độ nhạy; (5) thêm bảng hình thức × điểm đến × cách tính phí × điều kiện (bài liệt kê 9 hình thức trong một đoạn văn dài)." },
+    { "id": "B:qc08-04",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L4","L5","L3","L3","L1","L3","L4"], "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "tỉnh/huyện hoặc bán kính quanh một điểm, khoảng tuổi hệ thống cho phép, danh sách số điện thoại tải lên để bao gồm hoặc loại trừ", "issue": "Các tuỳ chọn nhắm chọn (bán kính, tải danh sách số) nêu như sự thật; 5 src của bài là Pixel, ZNS, ZBS, luật, phạt — không có trang nhắm chọn. Possibly outdated (tính năng tải danh sách số có thể bị hạn chế sau Luật 91/2025).", "fix": "Thêm src trang hướng dẫn nhắm chọn/đối tượng tuỳ chỉnh của Zalo Ads với ngày kiểm; nếu không tìm được, ghi \"kiểm trong tài khoản\"." },
+        { "sev": "P2", "where": "Q5", "quote": "Chị Ngân muốn gửi tin nhắc lịch qua ZNS. Điều kiện nào mô tả đúng?", "issue": "Câu L1 nhớ điều kiện ZNS (OA xác thực trùng tên, ZBS Account, mẫu duyệt) — kiến thức fast, phương án đúng dài và đầy đủ nhất, đoán được.", "fix": "Thay bằng câu áp dụng: lead hẹn thứ Bảy, OA chưa xác thực, muốn nhắc lịch — phương án nào làm được trong tuần này (L3)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Giả định tỉ lệ hẹn lên 40%, tỉ lệ đến lên 75%", "issue": "Nhảy từ 20%→40% và 50%→75% là bước nhảy lớn, không nêu cơ sở hay cách kiểm; Q4 có tách một đòn bẩy (tốt) nhưng ví dụ chính quy toàn bộ cải thiện cho ba thay đổi cùng lúc.", "fix": "Ghi \"(mức giả định để minh hoạ; đo trên 30 lead đầu sau khi đổi)\" và gợi ý đổi từng thứ hoặc đo theo tuần." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Ví dụ: 300 × 20% × 50% = 30; 9.000/30 = 300 ✓; 300 × 40% × 75% = 90; 9.000/90 = 100 ✓. Q3: 100 ✓; sai 75 = /120 hẹn ✓, 30 = giá mỗi cuộc ✓. Q4: 300 × 20% × 75% = 45; 9.000/45 = 200 ✓; sai 150 = /60 hẹn ✓." },
+      "claims": [
+        { "claim": "Luật Bảo vệ dữ liệu cá nhân 91/2025 cấm mua bán dữ liệu cá nhân, hiệu lực 1/1/2026", "status": "verified", "note": "src Bộ Công an" },
+        { "claim": "Nghị định 330/2026 (hiệu lực 19/8/2026) phạt 30–50 triệu cho xử lý dữ liệu không có đồng ý", "status": "verified", "note": "src Báo Chính phủ; nên trích đúng điều khoản vì mức phạt có nhiều khung" },
+        { "claim": "ZNS cần OA xác thực trùng tên công ty, ZBS Account liên kết và nạp tiền, mẫu duyệt trước; Zalo Cloud Account đổi tên ZBS Account từ 1/1/2026", "status": "verified", "note": "src Zalo Cloud + developers.zalo.me changelog (tim)" },
+        { "claim": "Zalo Ads Pixel ghi chuyển đổi theo nút bấm hoặc URL; có bản cho LadiPage", "status": "verified", "note": "src hướng dẫn Pixel (tim)" },
+        { "claim": "Nhắm chọn theo huyện/bán kính, khoảng tuổi, tải danh sách số để bao gồm/loại trừ", "status": "unverified", "note": "Không có src nhắm chọn" },
+        { "claim": "Giá ZNS chưa xác minh", "status": "illustrative-labelled", "note": "Bài tự ghi chưa xác minh — đúng cách" },
+        { "claim": "Gym Biên Hoà: 9 triệu, 300 cuộc, 20%→40% hẹn, 50%→75% đến", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Tách chi phí thành ba tầng (lead → hẹn → đến) và Q4 cô lập một đòn bẩy để thấy đóng góp riêng; xử lý dứt khoát chuyện mua danh sách số với nguồn luật và mức phạt.",
+      "upgrade": "Để đạt ≥85: (1) thêm src nhắm chọn; (2) thay Q5 bằng câu áp dụng; (3) gắn nhãn và nêu cách kiểm cho hai tỉ lệ cải thiện; (4) thêm bảng lead 4 cột mẫu (10 dòng) để người học tính tỉ lệ hẹn/đến trước khi làm Áp dụng; (5) nối với qc08-01 (trần theo người trực) — hiện chỉ liên kết kn12-07." },
+    { "id": "B:qc08-05",
+      "scores": { "accuracy": 12, "depth": 13, "practical": 17, "examples": 13, "pedagogy": 9, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 85,
+      "bloom_items": ["L4","L5","L3","L3","L3","L5","L4"], "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Chi phí mỗi hợp đồng khoảng 6,67 triệu", "issue": "Tính 20 triệu/3 hợp đồng bỏ qua độ trễ 1–2 tháng mà bài vừa nhấn (hợp đồng tháng 1 có thể từ lead tháng trước; lead tháng 1 ký tháng 2) — con số đúng phép chia nhưng mâu thuẫn nhẹ với lập luận chu kỳ dài.", "fix": "Ghi \"tạm tính theo tháng; đọc lại theo cohort lead tháng 1 sau 60 ngày\"." },
+        { "sev": "P2", "where": "Q3", "quote": "Cần tối thiểu bao nhiêu lead (làm tròn lên số nguyên)? → đáp án: 134 (tol 0.5)", "issue": "Người nhập 133,3 (đúng phép tính, chưa làm tròn) bị chấm sai dù hiểu đúng; tol 0,5 không cho phép.", "fix": "Nới tol lên 1 hoặc chấp nhận 133,3 trong \"wrong\" với nhãn CHUA_LAM_TRON có lời giải." },
+        { "sev": "P2", "where": "Toàn bài", "quote": "Form 10 triệu, Tin nhắn 6 triệu, quảng cáo OA 4 triệu", "issue": "Không có src nào dù nhắc 3 hình thức và cách tính phí (fast); bài chủ yếu là lập kế hoạch nên chấp nhận được nhưng nên nối src từ 03.", "fix": "Thêm src các hình thức quảng cáo (dùng chung với 03) và liên kết tới qc08-03." }
+      ],
+      "calc_check": { "n": 3, "ok": 3, "notes": "Q3: 4/0,2 = 20; 20/0,15 = 133,3 → 134 ✓; sai 27 = 4/0,15 ✓, 20 ✓. Q4: 10.000/6 = 1.666,7 ✓; sai 125 = /80 lead ✓. Q5: 3 × 45 − 20 = 115 ✓; sai 520 = 540−20 ✓, 135 ✓. Dự báo: 10tr/125k = 80; 6tr/100k = 60; 140 × 15% = 21; 21 × 20% = 4,2 ≈ 4 ✓; 6tr/12 = 500k ✓; 20/3 = 6,67 ✓." },
+      "claims": [
+        { "claim": "Nội thất Hà Nội: hợp đồng 180 triệu, lãi gộp 25%, 20 triệu/tháng, tỉ lệ hẹn 15%, chốt 20%", "status": "illustrative-labelled", "note": "" },
+        { "claim": "Mỗi sales khảo sát tử tế ~15 buổi/tháng", "status": "illustrative-labelled", "note": "Ghi \"giả định\"" },
+        { "claim": "Form, Tin nhắn, quảng cáo OA là các hình thức Zalo Ads", "status": "unverified", "note": "Không có src trong bài; đã có ở 03" }
+      ],
+      "strengths": "Bài tốt nhất module: tính ngược từ hợp đồng, kết quả mẫu lệch dự báo và làm đổi quyết định (Form rẻ lead nhưng đắt khảo sát gấp 3), Đào sâu nêu trần theo sức sales và lợi suất giảm dần; Q6–Q7 là câu đánh đổi có biện hộ.",
+      "upgrade": "Để giữ ≥85 và lên 90: (1) thêm bảng tính ngược 5 dòng dạng bảng thật trong bài (hiện là văn xuôi); (2) ghi rõ độ trễ cohort khi tính chi phí mỗi hợp đồng; (3) thêm câu L6 thiết kế: lập lịch đọc kết quả tuần 2 với mốc 'số khảo sát phải đạt'; (4) nới tol Q3; (5) thêm src hình thức và liên kết tới 03/04." },
+    { "id": "B:qc08-06",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L4","L5","L3","L3","L4","L4","L5"], "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "cùng 15 triệu ra 150 lead, mỗi lead 100.000đ, gọi được 105, đạt chuẩn 60", "issue": "Đổi hai thứ cùng lúc (câu lọc trong form + nhắn Zalo trước khi gọi) rồi quy toàn bộ cải thiện cho cả hai; không tách phần nào do form, phần nào do nhắn trước — trái với nguyên tắc \"đổi từng thứ\" ở qc07.", "fix": "Tách thành hai bước có số (thêm câu lọc → 150 lead/45 đạt chuẩn; thêm nhắn trước → nghe máy 70%) hoặc ghi rõ không tách được." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Form nhiều lead rác: xem lời hứa (quà quá hấp dẫn kéo sai người) và vùng nhắm", "issue": "Bốn triệu chứng được liệt kê trong một đoạn dài; không có bảng triệu chứng → số cần xem → cách sửa dù Áp dụng yêu cầu người học tự lập bảng đó.", "fix": "Đưa bảng 4 dòng vào bài làm mẫu." },
+        { "sev": "P2", "where": "Q2", "quote": "Gỡ phần vay khỏi quảng cáo hoặc bổ sung đúng giấy tờ, không lách duyệt", "issue": "Phương án đúng gộp hai hành động và có chữ \"không lách\" — đoán được vì ba phương án sai đều là lách.", "fix": "Thêm một phương án sai nghe hợp lý: \"đưa gói vay vào tin nhắn tư vấn sau cú bấm thay vì trong quảng cáo\" (vẫn cần giấy phép khi quảng bá dịch vụ vay)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 15.000/30 = 500 ✓; sai 60 = /250 ✓. Q4: 15.000/60 = 250 ✓; sai 100 = /150 ✓, 142,9 = /105 ✓. Ví dụ: 90/250 = 36% ✓." },
+      "claims": [
+        { "claim": "Cho vay thuộc nhóm sản phẩm cần giấy phép trên Zalo Ads", "status": "verified", "note": "src sản phẩm cần giấy phép (tim)" },
+        { "claim": "Điện mặt trời Long An: 15 triệu, 250 lead, 60.000đ/lead, 36% nghe máy, 30 đạt chuẩn", "status": "illustrative-labelled", "note": "" },
+        { "claim": "Số gọi đi bị đánh dấu làm phiền làm tỉ lệ nghe máy thấp", "status": "unverified", "note": "Cơ chế hợp lý, không cần src nhưng nên nêu cách kiểm (gọi thử từ số khác)" }
+      ],
+      "strengths": "Đo bằng chi phí mỗi lead đạt chuẩn khiến \"lead đắt gấp đôi nhưng rẻ hơn\" trở thành quyết định có số; phản ví dụ (nghe máy thấp ở mọi nguồn → lỗi số gọi) và Q6 là chẩn đoán L4 đúng kiểu loại trừ giả thuyết.",
+      "upgrade": "Để đạt ≥85: (1) tách hai thay đổi trong ví dụ; (2) đưa bảng chẩn đoán 4 dòng vào bài; (3) thêm câu L6: thiết kế thử A/B form có/không câu lọc với cỡ mẫu tối thiểu; (4) nêu nhiễu: 30 vs 60 lead đạt chuẩn là mẫu nhỏ, chênh bao nhiêu mới đáng tin; (5) thêm src về chính sách duyệt quảng cáo/khoá tài khoản để câu \"rủi ro bị khoá\" có nguồn." }
+  ],
+  "module_notes": {
+    "progression": "Hợp lý và tuyến tính: hợp kênh (01) → danh tính/nạp tiền (02) → chọn hình thức & dựng Form (03) → tầng sau cú bấm (04) → kế hoạch ngân sách ngược (05) → chẩn đoán (06). Nhưng 01 kiểm Luật 91/2025 và danh mục giấy phép trước khi 02/04 dạy; 05 và 06 không nối lại với trần người trực của 01.",
+    "overlap": [
+      "Ý \"tốc độ phản hồi quyết định tỉ lệ hẹn\" lặp ở 01 (ví dụ), 04 (toàn bài) và 06 (gọi trong 5–15 phút).",
+      "Sản phẩm cần giấy phép (cho vay, sách) lặp ở 01 Q6, 02 Q7, 06 Q2.",
+      "Luật 91/2025 về danh sách số lặp ở 01 Q7, 03 Q7, 04 (Q1, Q2)."
+    ],
+    "gaps": [
+      "Chưa có bài về creative/mẫu quảng cáo Zalo (ảnh, tiêu đề, giới hạn ký tự, duyệt) — chỉ một bước trong 03.",
+      "Chưa dạy đọc báo cáo Zalo Ads (chỉ số nào, cửa sổ ghi nhận, xuất dữ liệu) dù 04–06 dựa vào số lead/cuộc trò chuyện.",
+      "Không có bài về OA như kênh giữ khách (broadcast, hạn mức tin, chi phí tin tư vấn) dù 01/02/05 đều viện dẫn vai trò này.",
+      "Nhắm chọn (bán kính, tải danh sách) được dùng ở 01 và 04 nhưng không có src nào trong module.",
+      "Thiếu so sánh có số Zalo Ads vs Meta Messenger ads cho cùng mục tiêu hội thoại."
+    ],
+    "best_lesson": "B:qc08-05",
+    "weakest_lesson": "B:qc08-02"
+  }
+}

@@ -1,0 +1,31 @@
+{
+ "mod": "tp02",
+ "lessons": [
+  {
+   "id": "B:tp02-02",
+   "total": 83,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "theo quan điểm này hiếm hãng nào độc quyền một cửa vào",
+     "issue": "Câu \"Lưu ý\" chèn vào mâu thuẫn với khung xung quanh: tiêu chí \"chưa bị ai giữ\", ví dụ \"trống 1 (hai hãng đã chiếm)\", Q6 \"giữ chặt\", và tiêu đề \"chiếm cửa vào\"; nêu Ries & Trout mà không nói bài theo quan điểm nào.",
+     "fix": "Viết lại độ trống thành \"mức đối thủ đã gắn trong trí nhớ khách (đo bằng câu hỏi gợi tình huống)\", bỏ chữ \"chiếm/giữ chặt\", hoặc nói rõ bài dùng khung Romaniuk."
+    }
+   ]
+  },
+  {
+   "id": "B:tp02-01",
+   "total": 81,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q5 đáp án d + lời giải a",
+     "quote": "Dừng phỏng vấn, đếm mức phổ biến … / thêm người chỉ tốn công",
+     "issue": "Khái niệm và phản ví dụ dạy rằng 20 phỏng vấn chỉ cho giả thuyết định tính, muốn biết mức phổ biến phải khảo sát vài trăm người. Đáp án Q5 lại bảo 'đếm mức phổ biến' từ 20 người, và lời giải a coi việc hỏi thêm là tốn công. Lời giải mâu thuẫn với phần đọc. Q6 tiếp tục tính % trên 20 người như số định lượng.",
+     "fix": "Đáp án: 'Dừng phỏng vấn, chọn 2–3 cửa vào để viết thử; đưa danh sách vào khảo sát định lượng trước khi dồn ngân sách'. Q6 thêm câu 'chỉ là tín hiệu từ mẫu 20 người'."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "mod": "kh08",
+ "lessons": [
+  {
+   "id": "B:kh08-01",
+   "title": "Khách này tin số đông, chuyên gia hay người giống mình?",
+   "total": 62,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "Quảng cáo sản phẩm dinh dưỡng cho trẻ nhỏ bị luật giới hạn",
+     "issue": "Khẳng định pháp lý nêu như sự thật nhưng bài không nêu văn bản (Luật Quảng cáo Điều 7, Nghị định 100/2014/NĐ-CP về sản phẩm thay thế sữa mẹ cho trẻ dưới 24 tháng), không có ngày kiểm; người học không có gì để tra.",
+     "fix": "Thêm `src` tới văn bản luật và ngày kiểm; trong lời giải ghi rõ phạm vi (nhóm tuổi, loại sản phẩm) thay vì 'bị luật giới hạn' chung chung."
+    }
+   ],
+   "upgrade": "Thêm PHẢN VÍ DỤ (khi số đông mới là bằng chứng đúng: hàng rẻ, quen, rủi ro thấp) và ĐÀO SÂU (chi phí thu video người dùng, thiên lệch chọn lọc, nghĩa vụ công khai khi tặng hàng). Gắn nhãn số minh hoạ. Thêm bảng 3 cột 'nỗi lo → nguồn → ví dụ bằng chứng'. Áp dụng đổi thành: cho một sản phẩm có sẵn 3 loại bằng chứng, viết quyết định xếp thứ tự + lý do bằng 3 câu. Dẫn nguồn luật ở Q5 với ngày kiểm."
+  },
+  {
+   "id": "B:kh08-02",
+   "title": "Vì sao 4,9 sao với toàn lời khen lại bán kém hơn 4,6 sao?",
+   "total": 62,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Một nghiên cứu của Spiegel Research Center (Đại học Northwestern) thấy khả năng mua cao nhất ở khoảng 4,2–4,5 sao",
+     "issue": "Benchmark nghiên cứu nêu như sự thật, không `src`, không ngày kiểm; khoảng điểm trích có thể không khớp bản gốc (báo cáo Spiegel 2017 thường được dẫn với khoảng 4,0–4,7). Đây là chỗ người học sẽ đem đi kể lại.",
+     "fix": "Thêm `src` tới báo cáo Spiegel 'How Online Reviews Influence Sales' với ngày kiểm; sửa khoảng điểm theo đúng báo cáo; ghi rõ nghiên cứu trên dữ liệu bán lẻ Mỹ, chưa kiểm ở sàn Việt Nam."
+    }
+   ],
+   "upgrade": "Dẫn nguồn và sửa khoảng điểm Spiegel, thêm ngày kiểm. Thêm PHẢN VÍ DỤ: ngành hàng mà lời chê chi tiết thật sự làm mất đơn (hàng kỹ thuật, an toàn) và cách xử lý. Thêm ĐÀO SÂU: sàn xếp hạng theo điểm nên điểm 4,6 có thể mất vị trí tìm kiếm — đánh đổi phải tính. Gắn nhãn số. Sửa Q7 cho khớp hedging. Thêm một câu L4 buộc đọc bảng: cho 10 đánh giá, đếm bao nhiêu cái 'dùng được'."
+  },
+  {
+   "id": "B:kh08-03",
+   "title": "\"Đã bán 12\" có nên hiện lên trang không?",
+   "total": 59,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Gộp lại thành 6 trang, mỗi trang có lựa chọn màu, mẫu chủ lực lên \"Đã bán 58\"",
+     "issue": "Cơ chế nền tảng nêu như sự thật nhưng không nguồn: trên Shopee, số 'Đã bán' thuộc từng trang sản phẩm; xoá 24 trang để tạo 6 trang mới thì lượt bán cũ không chuyển sang trang mới. Con số 58 chỉ đạt được nếu tích luỹ lại từ đầu — bài không nói vậy, người học sẽ tin 'gộp là cộng dồn'.",
+     "fix": "Viết lại: 'tạo 6 trang có phân loại màu ngay từ đầu (hoặc chấp nhận đếm lại từ 0); sau 6 tuần mẫu chủ lực đạt 58'. Thêm `src` hướng dẫn phân loại hàng của Shopee với ngày kiểm và câu 'nếu màn hình khác, tin trang chính thức'."
+    }
+   ],
+   "upgrade": "Sửa cơ chế gộp trang theo đúng cách Shopee đếm lượt bán, thêm `src` và ngày kiểm (lớp fast). Tách tác động: ví dụ chỉ đổi một thứ mỗi lần hoặc nói rõ không tách được. Thêm PHẢN VÍ DỤ: hàng thủ công/niche nơi 'Đã bán 12' đọc là hiếm và được giá. Thêm ĐÀO SÂU về đánh đổi gộp trang (mất thứ hạng tìm kiếm theo từ khoá màu, khó quản tồn kho). Nâng 2 câu L2 lên L4 đọc bảng lượt bán theo mẫu."
+  },
+  {
+   "id": "B:kh08-04",
+   "title": "Testimonial nào khiến người đọc tin, testimonial nào bị lướt qua?",
+   "total": 64,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q7",
+     "quote": "Chỉ dùng chữ vì khách đọc nhanh hơn xem video",
+     "issue": "Đáp án đoán được bằng hình thức: ba phương án sai đều dùng từ tuyệt đối/cực đoan ('Chỉ dùng chữ', 'Chỉ dùng video', 'video dài 10 phút'), phương án đúng là phương án 'kết hợp' duy nhất.",
+     "fix": "Viết lại hai phương án sai thành lựa chọn kết hợp nhưng sai cơ chế, ví dụ 'video có phụ đề nhưng ẩn con số trước – sau để giữ bí mật', 'chữ kèm ảnh chân dung nhưng ẩn tên'."
+    }
+   ],
+   "upgrade": "Sửa Q7 để không đoán được bằng hình thức. Thêm PHẢN VÍ DỤ: testimonial đủ bốn phần nhưng đến từ ca ngoại lệ (5.0 → 8.0 trong 8 tuần) tạo kỳ vọng sai và rủi ro quảng cáo. Thêm ĐÀO SÂU về đồng ý sử dụng hình ảnh, cách ghi 'kết quả cá nhân'. Gắn nhãn số. Thêm câu L4: cho 4 testimonial thô, chấm từng cái theo 4 phần rồi chọn cái đưa lên đầu cho một nhóm khách cụ thể."
+  },
+  {
+   "id": "B:kh08-08",
+   "title": "Mua review, bịa \"khách nói gì\": ranh giới pháp lý và đạo đức ở đâu?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Điều 8 Luật Quảng cáo 2012 cấm quảng cáo sai hoặc gây nhầm lẫn về chất lượng, công dụng; thực phẩm chức năng còn phải có giấy xác nhận nội dung quảng cáo trước khi phát hành (Nghị định 15/2018/NĐ-CP)",
+     "issue": "Hai dẫn chiếu đúng hướng nhưng bài không có `src`, không ngày kiểm, và không nhắc Luật sửa đổi Luật Quảng cáo 2025 (hiệu lực từ 2026) bổ sung nghĩa vụ của người có ảnh hưởng khi quảng cáo (phải công khai, phải kiểm chứng) — đúng chủ đề KOC của bài. Với lớp periodic/fast, thiếu nguồn và ngày là lỗi phải sửa.",
+     "fix": "Thêm `src` tới Luật Quảng cáo (bản hợp nhất sau sửa đổi 2025), NĐ 15/2018, và quy định về người chuyển tải sản phẩm quảng cáo; ghi ngày kiểm; thêm câu 'nếu văn bản mới hơn, tin bản mới'."
+    }
+   ],
+   "upgrade": "Cập nhật pháp lý: dẫn bản Luật Quảng cáo sau sửa đổi 2025 và nghĩa vụ người có ảnh hưởng, NĐ 15/2018, chính sách nhãn của TikTok/Meta, tất cả có ngày kiểm. Thêm PHẢN VÍ DỤ: thương hiệu công khai đầy đủ nhưng chọn lọc chỉ mời người đã khen (vi phạm 'không gây hiểu lầm' dù mọi đánh giá thật). Thêm ĐÀO SÂU: chi phí tuân thủ, cách lưu bằng chứng (ảnh chụp nhãn, hợp đồng KOC). Gắn nhãn toàn bộ số. Cân độ dài phương án Q1."
+  }
+ ]
+}

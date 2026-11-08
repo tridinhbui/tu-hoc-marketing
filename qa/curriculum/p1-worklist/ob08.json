@@ -1,0 +1,20 @@
+{
+ "mod": "ob08",
+ "lessons": [
+  {
+   "id": "B:ob08-07",
+   "title": "Trà \"cao cấp\" mà lúc nào cũng giảm 30%: các P có khớp nhau không?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q2",
+     "quote": "a) Đổi định vị sang \"trà giá rẻ\" cho khớp với giá và kênh đang có — vì: Một lựa chọn có lý nếu dữ liệu cho thấy khách chỉ mua khi giảm",
+     "issue": "Dữ kiện trong đề chính là 'khách chỉ mua khi giảm' (80% qua mã, hàng ở thùng xả). Lời giải tự thừa nhận a 'có lý', và lãi 18.000đ/chai mỏng là đánh đổi chứ không phải lý do loại. Hai phương án a và c đều bênh được; đáp án phụ thuộc giả định chưa nêu (khách văn phòng có chịu mua ở 60.000đ không).",
+     "fix": "Thêm dữ kiện quyết định vào đề (ví dụ: 'tháng thử không mã ở 5 căng tin văn phòng bán 400 chai ở giá gốc') hoặc đổi câu hỏi thành 'bước nào làm trước để biết nên chọn a hay c' với đáp án là thử thưa mã ở một kênh."
+    }
+   ],
+   "upgrade": "Sửa Q2 cho chỉ một phương án bênh được hoặc đổi thành câu 'thử gì trước'; thêm phản ví dụ về khuyến mãi có kiểm soát; thêm phép tính điểm hoà sản lượng ở giá gốc; thay Q7 L1 bằng tình huống mới; thêm src."
+  }
+ ]
+}

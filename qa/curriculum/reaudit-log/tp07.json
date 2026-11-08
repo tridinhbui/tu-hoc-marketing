@@ -1,0 +1,16 @@
+{
+ "mod": "tp07",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:tp07-01",
+   "where": "Tình huống / Ví dụ / Q1 (vì của d)",
+   "status": "fixed",
+   "change": "Tình huống: hai bài chạy “trong công cụ thử nghiệm A/B của Meta”. Ví dụ: “Khác biệt duy nhất là dòng đầu.” → “Công cụ thử nghiệm A/B chia người xem thành hai nhóm ngẫu nhiên, nên khác biệt chủ ý duy nhất là dòng đầu.” Lời giải Q1 d: thừa nhận phân phối khác nhau là rủi ro thật nếu chỉ chạy hai bài song song; công cụ A/B của Meta chia ngẫu nhiên người xem nên mới đo được.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: hai quảng cáo chạy song song không được chia ngẫu nhiên người xem; nay tình huống nói rõ dùng công cụ A/B nên kết luận ở ví dụ và Q1 có cơ sở."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

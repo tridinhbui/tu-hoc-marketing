@@ -1,0 +1,117 @@
+{
+ "mod": "qc05",
+ "lessons": [
+  {
+   "id": "B:qc05-01",
+   "title": "Sản phẩm mới chưa ai gõ tìm: chạy Google Search có phí tiền không?",
+   "total": 80,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Toàn bài",
+     "quote": "Công cụ lập kế hoạch từ khoá trong Google Ads cho thêm khoảng lượt tìm ước tính",
+     "issue": "Bài fast (Keyword Planner, Google Ads Transparency Center, gợi ý tự động) không có src nào và không có câu 'nếu màn hình khác, tin trang chính thức'.",
+     "fix": "Thêm src trợ giúp Keyword Planner (về khoảng ước tính) và Ads Transparency Center, ghi ngày kiểm."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src Keyword Planner / Transparency Center và câu về màn hình khác; (2) đổi 'tối đa chịu được' thành 'CPC hoà vốn' và thêm biên; (3) thêm bảng 3 dòng cho 3 cụm (tên sản phẩm, 'trồng rau thuỷ canh', 'mua kệ trồng rau') với khoảng lượt tìm, loại trang kết quả, quyết định; (4) thêm phép tính thứ hai: 1,5 triệu/tháng cho tên thương hiệu — ước click và đơn để thấy quy mô thật của 'Search đi sau'; (5) thay Q5 bằng câu đọc dữ liệu L4."
+  },
+  {
+   "id": "B:qc05-02",
+   "title": "Mở tài khoản Google Ads cho công ty: ai đứng tên, trả bằng gì, hoá đơn ra sao?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm và Q3",
+     "quote": "MoMo trả trước, mỗi lần tối thiểu 170.000đ",
+     "issue": "Con số rất cụ thể, gắn với kiến thức fast; src 'Phương thức thanh toán tại Việt Nam' có tiêu đề bao được nhưng trạng thái 'tim' (chưa đọc kỹ?) và con số có thể đổi; ngoài ra ví dụ và Q3 giả định 'VAT 8% tính thêm trên tiền quảng cáo' nhưng với trả trước Google có thể khấu trừ thuế từ số tiền nạp (nạp 7.560 không chắc được 7.000 tiền quảng cáo) — bài có ghi 'đối chiếu hoá đơn thật' nhưng Q3 chấm như sự thật.",
+     "fix": "Ghi lại số 170.000đ với ngày kiểm từ trang thanh toán; sửa đề Q3 thành 'Giả định hoá đơn cộng 8% VAT ngoài tiền quảng cáo' và thêm trong Đào sâu cách Google tính thuế trên khoản trả trước (kiểm bằng một hoá đơn thật)."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) làm rõ cách Google tính VAT trên khoản trả trước và sửa đề Q3; (2) thêm bảng so trả trước / thanh toán tự động với ngưỡng; (3) nâng Bloom: thay 2 câu L2 bằng câu tình huống agency–MCC và câu tính số ngày chạy; (4) thêm 'nếu màn hình khác, tin trang chính thức' và lịch kiểm lại 3 tháng cho các con số (170.000đ, 8%); (5) nối với bài 03 bằng một dòng 'sau khi xong ba việc này, bước đo là việc đầu tiên'."
+  },
+  {
+   "id": "B:qc05-03",
+   "title": "Dựng chiến dịch Search đầu tiên: làm theo thứ tự nào để không đốt tiền tuần đầu?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Toàn bài",
+     "quote": "Cài Google tag, đặt chuyển đổi cho \"gửi form thành công\" và \"bấm gọi\" … Trong phần cài đặt mạng, bỏ phần mở rộng sang mạng hiển thị",
+     "issue": "Bài hướng dẫn 8 bước màn hình (Google tag, hành động chuyển đổi, mạng, lịch, Maximize conversions, RSA 15 tiêu đề/4 mô tả, thành phần) nhưng không có bất kỳ src nào và không có câu 'nếu màn hình khác'. Theo quy ước chấm, bài mô tả màn hình thiết lập không nguồn: accuracy ≤ 8.",
+     "fix": "Thêm src: tạo hành động chuyển đổi (Google tag), cài đặt mạng của chiến dịch Search, RSA, Maximize conversions; ghi ngày kiểm và câu về màn hình khác."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm 4 src cho các màn hình được mô tả và câu 'nếu màn hình khác'; (2) thêm quy tắc chi gấp đôi ngày / trần tháng; (3) đưa CPA hoà vốn vào ví dụ để 94.000đ có mốc so; (4) thêm bảng 8 bước có cột 'ô nào trên màn hình / chọn gì / dấu hiệu sai'; (5) thay Q4 bằng câu đọc báo cáo L4; (6) nhắc tới bài 04 (kiểu khớp) và 06 (Target CPA) bằng liên kết rõ."
+  },
+  {
+   "id": "B:qc05-04",
+   "title": "Từ khoá rộng, cụm từ hay chính xác — và khi Google tự nới rộng thì giữ tiền thế nào?",
+   "total": 80,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Tình huống, Đào sâu, Q5",
+     "quote": "chiến dịch dùng khớp rộng cấp chiến dịch và thành phần tự tạo được tự nâng cấp từ 9/2026; chiến dịch quảng cáo tìm kiếm động dời sang 2/2027",
+     "issue": "Lộ trình nâng cấp AI Max được nêu như sự thật với ngày cụ thể trong khi bài thừa nhận 'chỉ thấy qua trích đoạn tìm kiếm'; src blog có tiêu đề về DSA nên bao được phần DSA, phần 'khớp rộng cấp chiến dịch tự nâng cấp' chưa chắc. Q5 xây trên mệnh đề này (đáp án vẫn đúng về mặt việc cần làm).",
+     "fix": "Đọc trọn bài blog, ghi đúng phạm vi và ngày; nếu không mở được thì viết 'Google công bố lộ trình nâng cấp lên AI Max (kiểm thông báo trong tài khoản)' thay cho ngày."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) xác minh lộ trình AI Max và viết đúng phạm vi; (2) thêm kiểu khớp của từ khoá phủ định; (3) thêm bảng báo cáo cụm từ mẫu 8 dòng (cụm, chi, đơn, quyết định: giữ / phủ định / tách nhóm) làm mẫu cho Áp dụng; (4) thêm ví dụ thứ hai làm đổi kết luận: tài khoản 200 chuyển đổi/tháng mở khớp rộng tìm ra cụm mới có CPA tốt; (5) đổi Q1/Q7 (L2) sang câu đọc báo cáo cụm từ."
+  },
+  {
+   "id": "B:qc05-06",
+   "title": "Khi nào chuyển từ Maximize conversions sang Target CPA, và đặt mục tiêu bao nhiêu?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm và Q5",
+     "quote": "Từ 6/2026 Google hiển thị gọn tên \"Target CPA\" và \"Target ROAS\" thay tên dài cũ; cách đặt giá không đổi",
+     "issue": "Khẳng định đổi nhãn giao diện có ngày cụ thể, không thấy src nào trong bài có tiêu đề bao được (src 'Về Smart Bidding' là trang tổng quan); người chấm không xác nhận được. Q5 là câu quiz hoàn toàn dựa trên mệnh đề này — nếu sai, Q5 sai đáp án. Có thể lạc hậu hoặc chưa chính xác (possibly outdated).",
+     "fix": "Dẫn thông báo chính thức (trang 'Thông báo' Google Ads hoặc bài trợ giúp về đổi tên), ghi ngày kiểm; nếu không có, bỏ ngày và viết 'tên hiển thị có thể là … ; kiểm trong tài khoản', và thay Q5 bằng câu khác."
+    },
+    {
+     "sev": "P1",
+     "where": "Đào sâu",
+     "quote": "nay bản cho web và cho lead là một công tắc",
+     "issue": "Khẳng định giao diện Enhanced conversions không có src riêng (src EC là trang tổng quan, trạng thái 'tim'); có thể lạc hậu.",
+     "fix": "Kiểm trang trợ giúp Enhanced conversions phần thiết lập, ghi ngày; hoặc viết 'kiểm trong phần Cài đặt chuyển đổi'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) xác minh hoặc gỡ ngày 6/2026 và sửa Q5; (2) kiểm 'một công tắc' Enhanced conversions; (3) thêm bước đối soát sau khi đổi chuyển đổi chính; (4) thêm ví dụ thứ hai với đơn nhiều mức giá để thấy khi nào chuyển sang giá trị/Target ROAS (phản ví dụ chỉ nói lời); (5) thay Q6 bằng câu quyết định về chuyển đổi offline; (6) ghi 'nếu màn hình khác, tin trang chính thức'."
+  },
+  {
+   "id": "B:qc05-07",
+   "title": "Diệt mối ở Hà Nội với 15 triệu/tháng: từ brief tới quyết định sau 2 tuần",
+   "total": 84,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Toàn bài",
+     "quote": "Nếu chiến dịch báo bị giới hạn ngân sách, tỉ lệ hiển thị thấp là do tiền",
+     "issue": "Bài không có src nào dù dùng khái niệm nền tảng (tỉ lệ hiển thị / impression share, trạng thái 'Limited by budget', báo cáo cụm từ) và không có câu 'nếu màn hình khác'. Mức độ nhẹ hơn các bài khác vì phần lớn nội dung là toán kế hoạch.",
+     "fix": "Thêm src trợ giúp về tỉ lệ hiển thị và trạng thái ngân sách bị giới hạn; thêm câu về màn hình khác."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src về tỉ lệ hiển thị / giới hạn ngân sách và câu 'nếu màn hình khác'; (2) nói rõ tỉ lệ hiển thị là số dựng từ ngân sách; (3) thêm giá trị hợp đồng định kỳ để nhóm nhà hàng có số; (4) thêm một dòng về nhiễu: với 21 khách hỏi, lệch ±5 là thường (√21 ≈ 4,6) để Q1 có cơ sở số; (5) nối ngược về bài 04 (phủ định) và 06 (Target CPA) bằng một câu ở bước Quyết định."
+  },
+  {
+   "id": "B:qc05-08",
+   "title": "Quảng cáo không hiện, click không ra cuộc gọi, CPA tăng sau khi bật khớp rộng: kiểm theo thứ tự nào?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Đào sâu",
+     "quote": "Từ 9/2026 chiến dịch khớp rộng cấp chiến dịch được tự nâng cấp lên AI Max",
+     "issue": "Lặp lại khẳng định chưa xác minh của bài 04 (bài 04 tự nhận chỉ thấy trích đoạn) nhưng ở đây bỏ luôn lời dè dặt, nêu như sự thật.",
+     "fix": "Dẫn đúng nguồn đã đọc trọn, hoặc thêm 'theo thông báo của Google, kiểm trong tài khoản'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa khẳng định AI Max cho khớp mức xác minh; (2) đưa lãi gộp/tỉ lệ chốt vào tình huống để ra 450.000đ; (3) làm nhất quán thời điểm rút khớp rộng với phản ví dụ; (4) thêm cây chẩn đoán dạng bảng 4 nhánh × 3–4 điều kiểm × số xác nhận (phần Áp dụng yêu cầu nhưng bài chưa cho mẫu); (5) thay Q5 (L2 về xác minh) bằng câu đọc dữ liệu: ngân sách 300.000đ, tiêu 0, trạng thái 'Đủ điều kiện' — kiểm gì tiếp (giá thầu/từ khoá ít lượt tìm) để phân biệt với bị chặn."
+  }
+ ]
+}

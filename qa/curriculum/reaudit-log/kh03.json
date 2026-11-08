@@ -1,0 +1,16 @@
+{
+ "mod": "kh03",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:kh03-05",
+   "where": "Q7 (vì của b)",
+   "status": "fixed",
+   "change": "Lời giải b: “Họ từng tải ứng dụng — họ có việc, chỉ là giải pháp chưa đáng.” → “Chưa đủ căn cứ để loại: tải về chưa chứng tỏ có việc hay không; trước hết kiểm họ từng nhập dữ liệu chưa rồi mới quyết.”",
+   "key_changed": false,
+   "note": "Đã tự kiểm: lời giải cũ ngược với PHẢN VÍ DỤ (phần lớn tải vì tò mò). Lời giải mới khớp cách lọc trong phản ví dụ."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

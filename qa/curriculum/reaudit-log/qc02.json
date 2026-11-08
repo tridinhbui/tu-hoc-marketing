@@ -1,0 +1,16 @@
+{
+ "mod": "qc02",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:qc02-04",
+   "where": "Q1",
+   "status": "fixed",
+   "change": "Bỏ từ tuyệt đối ở cả ba nhiễu: a “Lãi chắc chắn… mọi cửa hàng online” → “Lãi, vì ROAS 3,2 nghĩa là mỗi đồng quảng cáo mang về 3,2 đồng lãi”; b “Lỗ chắc chắn… luôn bị thổi lên gấp đôi” → “Lỗ, vì ROAS nền tảng báo thường bị thổi lên khoảng gấp đôi”; c “…của mọi ngành” → “…mức hoà vốn trung bình của shop online”. Lời giải a, b, c viết lại cho khớp.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: ba nhiễu đều có “chắc chắn/luôn/mọi”, đáp án là phương án duy nhất có rào. Lỗi thật; đáp án d giữ nguyên, không dài nhất."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

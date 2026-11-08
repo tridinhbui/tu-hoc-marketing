@@ -1,0 +1,102 @@
+{
+ "mod": "qc07",
+ "lessons": [
+  {
+   "id": "B:qc07-01",
+   "title": "TikTok Ads có hợp với việc kinh doanh của bạn không?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "TikTok phân phối gần như hoàn toàn bằng video dọc, xem lướt, và nội dung mệt rất nhanh",
+     "issue": "Khẳng định về cơ chế phân phối/độ mệt creative nêu như sự thật, không có src và không gắn nhãn (src duy nhất là trang chọn mục tiêu, không nói về creative fatigue). Cả bài xoay quanh luận điểm này.",
+     "fix": "Gắn nhãn \"quan sát thực hành, chưa có số liệu công khai\" hoặc dẫn trang TikTok Business về creative best practices; nêu điều kiện (tần suất, kích cỡ đối tượng) khi nào video mệt nhanh/chậm."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) gắn nhãn hoặc dẫn nguồn cho luận điểm creative fatigue và nêu điều kiện (kích cỡ đối tượng, tần suất); (2) thêm tình huống thứ hai có số làm đổi kết luận (vd. Ngọc với CPA 110.000đ > lãi gộp 95.000đ thì qua ba câu kiểm vẫn không chạy); (3) thay Q6 bằng câu đọc dữ liệu CTR 3 tuần để chẩn đoán mệt creative (L4); (4) thêm bảng 3 doanh nghiệp × 3 câu kiểm."
+  },
+  {
+   "id": "B:qc07-02",
+   "title": "Mở tài khoản TikTok Ads ở Việt Nam: Business Center, thanh toán, VAT, xác minh",
+   "total": 65,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm / Q6",
+     "quote": "bắt buộc khi chi tiêu vượt ngưỡng TikTok đặt cho thị trường",
+     "issue": "Điều kiện kích hoạt xác minh doanh nghiệp nêu như quy tắc và là đáp án Q6, nhưng src chỉ là trang \"giấy tờ chấp nhận khi xác minh\", không nói khi nào bắt buộc; Đào sâu cũng thừa nhận chưa xác minh được ngưỡng. TikTok có thể yêu cầu xác minh ngay khi tạo tài khoản ở một số thị trường/ngành — possibly outdated hoặc không đầy đủ.",
+     "fix": "Hoặc dẫn trang TikTok nói rõ điều kiện kích hoạt, hoặc sửa Q6 thành câu áp dụng (\"nên chuẩn bị giấy tờ lúc nào\") không phụ thuộc quy tắc chưa xác minh."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) làm rõ hoặc dẫn nguồn điều kiện kích hoạt xác minh; (2) thêm ví dụ thứ hai làm đổi quyết định kiểu thanh toán (shop chi 3 triệu/tháng không đều → trả trước; công ty chi 60 triệu đều → hoá đơn tháng) với bảng so dòng tiền; (3) đổi ít nhất 2 câu L1 sang câu tình huống đọc bảng; (4) thêm \"Lỗi hay gặp\" về tên pháp lý không trùng giữa giấy tờ – thuế – Business Center kèm hậu quả cụ thể."
+  },
+  {
+   "id": "B:qc07-03",
+   "title": "Dựng chiến dịch TikTok đầu tiên: Sales hay Lead generation, Smart+ hay thủ công?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "bản nâng cấp cho chọn tự động hoàn toàn, một phần hay thủ công, và không phải tài khoản nào cũng có đủ tính năng",
+     "issue": "Mô tả ba mức điều khiển của Smart+ \"bản nâng cấp\" không có src (src Smart+ chỉ là trang Smart+ Web campaigns), không gắn nhãn; tên các mức và phạm vi (Web, App, Traffic, Lead Generation) possibly outdated vì Smart+ đổi nhanh — bài tự nói vậy nhưng vẫn nêu như sự thật.",
+     "fix": "Dẫn trang TikTok về Smart+ \"control levels\" (nếu có) hoặc viết \"tại thời điểm kiểm, giao diện cho chọn mức tự động; tên gọi kiểm trong tài khoản\" và bỏ liệt kê cứng."
+    },
+    {
+     "sev": "P1",
+     "where": "Q7 lời giải",
+     "quote": "Trang trợ giúp TikTok nói biến động giảm sau khoảng 25 kết quả hoặc 7 ngày",
+     "issue": "Lời giải viện dẫn trang trợ giúp nhưng bài này không liệt kê src giai đoạn học (src đó nằm ở qc07-05); người học bài này chưa được dạy con số 25/7 nên câu hỏi kiểm thứ chưa học.",
+     "fix": "Thêm src learning-phase vào bài này hoặc sửa lời giải Q7 thành lý do chung (cần đủ kết quả để ổn định) và để con số cho qc07-05."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) dẫn nguồn hoặc hạ cấp các khẳng định về Smart+; (2) thêm src giai đoạn học hoặc bỏ con số ở Q7; (3) thay Q4 bằng câu chẩn đoán cấu hình; (4) thêm tình huống thứ hai: trung tâm có 300 lead/tháng đều → khi nào chuyển sang tự động, với bảng so song song Smart+ vs thủ công cùng ngân sách 7 ngày; (5) thêm cột \"số kết quả cần/tuần\" vào bảng ví dụ để nối với giai đoạn học."
+  },
+  {
+   "id": "B:qc07-04",
+   "title": "Creative trên TikTok: làm video kiểu gì, và khi nào dùng Spark Ads?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "video trông như nội dung trên bảng tin thường giữ người hơn video trông như quảng cáo truyền hình",
+     "issue": "Khẳng định hiệu quả creative nêu như quy luật, không có src (src Spark Ads không nói về điều này) và không gắn nhãn; phản ví dụ có nêu ngoại lệ nhưng luận điểm chính vẫn không nguồn.",
+     "fix": "Gắn nhãn \"quan sát thực hành\" hoặc dẫn trang TikTok Creative Center/best practices; nêu điều kiện (ngành, giá trị đơn) khi nào studio thắng."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa nhãn \"video đang thắng\" cho khớp số; (2) gắn nhãn/dẫn nguồn cho luận điểm creative gốc nền tảng; (3) thêm bảng CTR theo tuần cho 3 video (4 tuần) và một câu L4 đọc bảng để quyết định thay video nào; (4) nêu ngưỡng mẫu tối thiểu khi so CTR; (5) đổi Q7 sang câu áp dụng về hồ sơ cần lưu."
+  },
+  {
+   "id": "B:qc07-05",
+   "title": "Đo và học trên TikTok: Pixel, Events API và giai đoạn học",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm / Q7",
+     "quote": "không có lập trình viên thì có Events API Gateway",
+     "issue": "Tên sản phẩm \"Events API Gateway\" là đáp án Q7 nhưng không có src nào bao phủ (hai src là learning-phase và event-deduplication); tính năng này có thể tồn tại nhưng chưa xác minh — possibly renamed/limited theo thị trường.",
+     "fix": "Thêm src trang TikTok về Events API Gateway (hoặc partner integrations) hoặc sửa Q7 thành \"dùng tích hợp sẵn của nền tảng web/đối tác\" và nêu tên là ví dụ cần kiểm."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) dẫn nguồn hoặc hạ cấp Events API Gateway; (2) đổi Q4 sang câu đọc nhật ký thay đổi; (3) thêm bảng 7 ngày CPA với 2 lần chỉnh để minh hoạ \"biến động quay lại\" và một câu L4 trên bảng; (4) nói về độ chắc chắn: với 12 kết quả/ngày, CPA ngày dao động ±X% là nhiễu bình thường (nêu cách ước lượng thô); (5) nối với qc07-03 về việc chọn sự kiện nông hơn khi ngân sách không đủ 25 kết quả/tuần."
+  },
+  {
+   "id": "B:qc07-06",
+   "title": "Quảng cáo TikTok Shop: GMV Max báo ROAS 8, có thật là gấp đôi Meta?",
+   "total": 83,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Tình huống / Khái niệm",
+     "quote": "Meta cùng kỳ báo ROAS 4",
+     "issue": "Bài chỉ nói ROAS GMV Max ghi nhận rộng, ngầm coi ROAS Meta 4 là \"sạch\" hơn; ROAS Meta cũng là ghi nhận theo click/view, không phải tăng thêm. Người học có thể kết luận sai rằng chỉ GMV Max cần đo tăng thêm.",
+     "fix": "Thêm một câu trong Đào sâu: ROAS Meta cũng là ghi nhận, không phải tăng thêm; so hai kênh đều phải bằng đơn tăng thêm (nối tn06-09)."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) nói rõ ROAS Meta cũng là ghi nhận; (2) trừ phí sàn/affiliate trong ví dụ chính hoặc ghi rõ chưa trừ; (3) thêm bảng 4 tuần bật/tắt với đơn theo nguồn và một câu L4 đọc bảng; (4) nêu nhiễu: mức nền 1.000 đơn dao động ±bao nhiêu thì 300 đơn tăng thêm mới đáng tin."
+  }
+ ]
+}

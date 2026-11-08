@@ -1,0 +1,16 @@
+{
+ "mod": "ob01",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:ob01-01",
+   "where": "example",
+   "status": "fixed",
+   "change": "“nên khó đổ cho giờ hay vị trí ngẫu nhiên” → “nên khó đổ cho may rủi một buổi. Nhưng đếm lặp chưa loại được vị trí hay thâm niên quán; phải đổi biển ở quán B rồi đếm lại mới biết.” (khớp Q4).",
+   "key_changed": false,
+   "note": "Đã tự kiểm: đếm lặp không loại được vị trí cố định hay thâm niên (giả thuyết của chủ quán B). Lỗi thật. Không chạm bài thí điểm B:ob01-02."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

@@ -1,0 +1,50 @@
+{
+ "mod": "dl01",
+ "lessons": [
+  {
+   "id": "B:dl01-02",
+   "title": "Bước nào rò nhất: nơi mất nhiều người hay nơi tỉ lệ thấp nhất?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM / VÍ DỤ",
+     "quote": "sửa form thường chỉ là bớt ô nhập, rẻ hơn nhiều so với làm lại trang",
+     "issue": "Tiêu chí quyết định của bài là 'số khách thêm ở đáy trên mỗi đồng công sức' nhưng vế công sức chưa bao giờ được định lượng; kết luận 'sửa form trước' dựa trên khẳng định 'rẻ hơn nhiều' chứ không trên phép chia. Nếu làm lại trang chỉ tốn 1,5 lần công thì kết luận đổi (150 người so với 120 người).",
+     "fix": "Thêm số: ví dụ bớt ô nhập = 2 ngày công; làm lại trang = 15 ngày công → 60 người/ngày so với 10 người/ngày; nêu điều kiện khi nào bước đầu thắng (công làm lại trang dưới 2,5 ngày)."
+    }
+   ],
+   "upgrade": "Định lượng vế công sức và viết công thức 'khách thêm ở đáy ÷ ngày công' thành bảng hai dòng; bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU (trần tự nhiên của từng bước, chi phí cơ hội); đổi Q2 (đã trùng ví dụ) thành tình huống số khác để người học phải tính lại thay vì nhận lại."
+  },
+  {
+   "id": "B:dl01-05",
+   "title": "Bán phần mềm cho doanh nghiệp: phễu lead → gặp → báo giá → ký đo thế nào?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Bước gặp → báo giá 40% (cứ 10 lần gặp có 4 lần đủ nhu cầu để báo giá) chưa có gì bất thường so với kỳ vọng của dịch vụ cần tư vấn",
+     "issue": "Đưa một mức benchmark ngầm ('kỳ vọng của dịch vụ cần tư vấn') không nguồn, không gắn nhãn, rồi dùng nó để kết luận bước lead → gặp mới là chỗ cần xem; đi ngược chính bài dl01-08 (không dùng mốc ngành không mẫu số).",
+     "fix": "Bỏ mốc ngầm; lập luận bằng dữ liệu nội bộ: 70% lead rơi trước khi gặp và hai đội chưa có định nghĩa chung, nên đó là chỗ rẻ nhất để làm rõ trước."
+    }
+   ],
+   "upgrade": "Bỏ benchmark ngầm; thêm bảng cohort 3 tháng (lead tháng 1/2/3 và số ký theo tháng) rồi đặt một câu L4 đọc bảng; bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU gồm phễu theo giá trị; làm ÁP DỤNG có đầu ra số (số lead cần cho quý tới kèm thời điểm)."
+  },
+  {
+   "id": "B:dl01-07",
+   "title": "Phễu báo 130% người thêm giỏ đã mua — phễu gãy hay đo gãy?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Trình quảng cáo báo 610 vì còn tính cả đơn của người chỉ xem quảng cáo",
+     "issue": "Khẳng định về cách nền tảng gán đơn (view-through) nêu như sự thật chung, không nguồn, không nói nền tảng nào và cửa sổ nào; cách gán thay đổi theo nền tảng và cài đặt.",
+     "fix": "Viết 'theo cài đặt gán mặc định của nhiều nền tảng, đơn của người chỉ xem quảng cáo trong 1 ngày cũng được tính — kiểm cài đặt trong tài khoản của bạn' và thêm src với ngày kiểm."
+    }
+   ],
+   "upgrade": "Gắn src và ngày kiểm cho cơ chế gán/khử trùng; bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU (bảng đối soát ba nguồn theo tuần, sai số chấp nhận được ví dụ ±5%); thêm một câu calc thứ hai tính độ lệch quảng cáo so với đơn thật (610/470 − 1 = 30%)."
+  }
+ ]
+}

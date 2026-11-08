@@ -1,0 +1,206 @@
+{
+  "mod": "qc05",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:qc05-01",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 15, "examples": 12, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L4", "L5", "L3", "L4", "L2", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Toàn bài", "quote": "Công cụ lập kế hoạch từ khoá trong Google Ads cho thêm khoảng lượt tìm ước tính", "issue": "Bài fast (Keyword Planner, Google Ads Transparency Center, gợi ý tự động) không có src nào và không có câu 'nếu màn hình khác, tin trang chính thức'.", "fix": "Thêm src trợ giúp Keyword Planner (về khoảng ước tính) và Ads Transparency Center, ghi ngày kiểm." },
+        { "sev": "P2", "where": "Khái niệm – câu hai", "quote": "Giá click tối đa chịu được = lãi gộp mỗi đơn × tỉ lệ click ra đơn", "issue": "Đây là CPC hoà vốn (lãi bằng 0), gọi là 'tối đa chịu được' dễ làm người học đặt giá thầu sát mức này và không còn lãi; bài không nói chừa biên.", "fix": "Gọi là 'CPC hoà vốn' và thêm: 'giá thầu thực nên thấp hơn mức này, ví dụ 60–70%, để còn lãi'." },
+        { "sev": "P2", "where": "Q5", "quote": "Là cỡ lớn nhỏ của cả cụm, chưa nói gì về ý định mua của người tìm", "issue": "Câu L2 nhận lại ý Đào sâu; đáp án đúng là phương án duy nhất có sắc thái hạn chế ('chưa nói gì'), đoán được bằng hình thức.", "fix": "Đổi sang câu đọc dữ liệu: cho hai cụm với khoảng lượt tìm và trang kết quả (toàn bài hướng dẫn / toàn trang bán), hỏi cụm nào đưa vào nhóm mua." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 180 × 5% = 9 nghìn ✓; sai 180 = quên tỉ lệ ✓; sai 90 = nhân 50% ✓. Ví dụ: 900.000 × 1% = 9.000đ ✓ < 12.000đ. Q2 lời giải a: 10 triệu ÷ 12.000 ≈ 833 click × 1% ≈ 8 đơn × 900.000 ≈ 7,5 triệu ✓." },
+      "claims": [
+        { "claim": "Keyword Planner cho khoảng lượt tìm ước tính, gộp cụm gần nghĩa", "status": "unverified", "note": "đúng theo hiểu biết, không src" },
+        { "claim": "Google Ads Transparency Center cho xem quảng cáo của đối thủ", "status": "unverified", "note": "" },
+        { "claim": "Giá click đầu trang ước tính 12.000đ; 1% click ra đơn; 'trồng rau thuỷ canh' 10.000–100.000 lượt/tháng", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Ba câu hỏi (có người tìm? biên trả nổi? khách quyết bằng tìm kiếm?) là khung đi/không đi đúng; phản ví dụ 'sơn chống thấm kiểu mới: chạy theo vấn đề, không theo tên' đổi kết luận đúng chỗ; Q7 là câu chẩn đoán tốt (tiêu 40.000/200.000 dù đã hiện gần hết → giới hạn là nhu cầu).",
+      "upgrade": "Để đạt ≥85: (1) thêm src Keyword Planner / Transparency Center và câu về màn hình khác; (2) đổi 'tối đa chịu được' thành 'CPC hoà vốn' và thêm biên; (3) thêm bảng 3 dòng cho 3 cụm (tên sản phẩm, 'trồng rau thuỷ canh', 'mua kệ trồng rau') với khoảng lượt tìm, loại trang kết quả, quyết định; (4) thêm phép tính thứ hai: 1,5 triệu/tháng cho tên thương hiệu — ước click và đơn để thấy quy mô thật của 'Search đi sau'; (5) thay Q5 bằng câu đọc dữ liệu L4."
+    },
+    {
+      "id": "B:qc05-02",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L2"],
+      "bloom_max": "L3",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm và Q3", "quote": "MoMo trả trước, mỗi lần tối thiểu 170.000đ", "issue": "Con số rất cụ thể, gắn với kiến thức fast; src 'Phương thức thanh toán tại Việt Nam' có tiêu đề bao được nhưng trạng thái 'tim' (chưa đọc kỹ?) và con số có thể đổi; ngoài ra ví dụ và Q3 giả định 'VAT 8% tính thêm trên tiền quảng cáo' nhưng với trả trước Google có thể khấu trừ thuế từ số tiền nạp (nạp 7.560 không chắc được 7.000 tiền quảng cáo) — bài có ghi 'đối chiếu hoá đơn thật' nhưng Q3 chấm như sự thật.", "fix": "Ghi lại số 170.000đ với ngày kiểm từ trang thanh toán; sửa đề Q3 thành 'Giả định hoá đơn cộng 8% VAT ngoài tiền quảng cáo' và thêm trong Đào sâu cách Google tính thuế trên khoản trả trước (kiểm bằng một hoá đơn thật)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Ngân sách 400.000đ/ngày, nạp MoMo trả trước mỗi 2 tuần", "issue": "Ví dụ chỉ có một phép nhân; không có quyết định nào đổi theo số (ví dụ trả trước hay trả sau theo quy mô, ngưỡng tín dụng).", "fix": "Thêm so sánh trả trước vs thanh toán tự động theo ngưỡng (ai nên chọn gì, rủi ro hết tiền giữa tuần cao điểm) với một con số minh hoạ." },
+        { "sev": "P2", "where": "Câu hỏi", "quote": "Tháng 10/2026, hoá đơn Google Ads của công ty ghi VAT 8% thay vì 10%. Đọc thế nào?", "issue": "5/7 câu là L2 nhận lại sự kiện/ngày tháng (Q4, Q6, Q7); Bloom tối đa chỉ L3; không câu nào buộc ra quyết định có đánh đổi.", "fix": "Thay Q4 và Q7 bằng: (a) tình huống agency đòi tạo tài khoản dưới MCC của họ và giữ hồ sơ thanh toán — hỏi rủi ro và điều khoản cần có; (b) câu tính: nạp 10 triệu, ngân sách 400.000đ/ngày, VAT 8% — đủ bao nhiêu ngày." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 500 × 14 = 7.000; × 1,08 = 7.560 nghìn ✓; sai 7.700 = 10% ✓. Ví dụ: 400.000 × 14 = 5,6 triệu; × 1,08 = 6,048 ≈ 6,05 triệu ✓." },
+      "claims": [
+        { "claim": "Cấu trúc MCC → tài khoản → chiến dịch → nhóm → từ khoá", "status": "verified", "note": "src Cấu trúc tài khoản" },
+        { "claim": "Việt Nam có MoMo trả trước, tối thiểu 170.000đ", "status": "verified", "note": "src tiêu đề bao được; con số cần kiểm lại định kỳ (fast)" },
+        { "claim": "Thẻ chủ thẻ Việt Nam cần xác thực sinh trắc học với ngân hàng từ 1/1/2025", "status": "verified", "note": "quy định NHNN; src thanh toán Việt Nam" },
+        { "claim": "Từ 1/4/2025 Google Việt Nam xuất hoá đơn; VAT 10%, giảm 8% tới 31/12/2026", "status": "verified", "note": "src thuế và hoá đơn (doc); mức giảm 8% khớp Nghị quyết kéo dài giảm VAT" },
+        { "claim": "Điều khoản dịch vụ mới cho tài khoản Việt Nam hiệu lực 1/7/2026", "status": "verified", "note": "src answer/16875158 (doc)" },
+        { "claim": "Xác minh nhà quảng cáo có thể mất tới 5 ngày làm việc; đổi tên pháp lý phải xác minh lại", "status": "verified", "note": "src chính sách xác minh (doc)" }
+      ],
+      "strengths": "Bài có nguồn đầy đủ nhất module (5 src, có ngày); ba việc trước đồng đầu tiên (email công ty, thanh toán đúng pháp nhân, xác minh sớm) là checklist dùng được ngay; phản ví dụ nói rõ ai không cần khung này.",
+      "upgrade": "Để đạt ≥85: (1) làm rõ cách Google tính VAT trên khoản trả trước và sửa đề Q3; (2) thêm bảng so trả trước / thanh toán tự động với ngưỡng; (3) nâng Bloom: thay 2 câu L2 bằng câu tình huống agency–MCC và câu tính số ngày chạy; (4) thêm 'nếu màn hình khác, tin trang chính thức' và lịch kiểm lại 3 tháng cho các con số (170.000đ, 8%); (5) nối với bài 03 bằng một dòng 'sau khi xong ba việc này, bước đo là việc đầu tiên'."
+    },
+    {
+      "id": "B:qc05-03",
+      "scores": { "accuracy": 8, "depth": 11, "practical": 16, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L4", "L5", "L3", "L2", "L3", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Toàn bài", "quote": "Cài Google tag, đặt chuyển đổi cho \"gửi form thành công\" và \"bấm gọi\" … Trong phần cài đặt mạng, bỏ phần mở rộng sang mạng hiển thị", "issue": "Bài hướng dẫn 8 bước màn hình (Google tag, hành động chuyển đổi, mạng, lịch, Maximize conversions, RSA 15 tiêu đề/4 mô tả, thành phần) nhưng không có bất kỳ src nào và không có câu 'nếu màn hình khác'. Theo quy ước chấm, bài mô tả màn hình thiết lập không nguồn: accuracy ≤ 8.", "fix": "Thêm src: tạo hành động chuyển đổi (Google tag), cài đặt mạng của chiến dịch Search, RSA, Maximize conversions; ghi ngày kiểm và câu về màn hình khác." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Ngân sách ngày = ngân sách tháng ÷ 30", "issue": "Google có thể chi tới 2 lần ngân sách ngày trong một ngày và chỉ giới hạn theo tháng (≈ 30,4 × ngân sách ngày); bài không nói, người mới sẽ hoang mang khi thấy ngày tiêu 600.000đ với ngân sách 300.000đ.", "fix": "Thêm một câu: 'Có ngày Google tiêu tới gấp đôi ngân sách ngày, nhưng cả tháng không vượt ngân sách ngày × 30,4'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Nếu 8% người bấm gọi hoặc gửi form, mỗi ngày có khoảng 3 khách hỏi, tức khoảng 94.000đ mỗi khách hỏi", "issue": "Ví dụ ra chi phí mỗi khách hỏi nhưng không có CPA hoà vốn để so (các bài 06, 07 có); người học không biết 94.000đ là tốt hay xấu.", "fix": "Thêm lãi gộp mỗi hợp đồng chuyển nhà và tỉ lệ chốt giả định để tính CPA hoà vốn ngay trong ví dụ." },
+        { "sev": "P2", "where": "Q4", "quote": "Mạng hiển thị bị cấm với tài khoản chưa xác minh nhà quảng cáo", "issue": "Hai phương án sai (a, d) là 'quy định bịa' dễ loại; câu L2.", "fix": "Thay bằng câu đọc báo cáo: chiến dịch có 60% click từ mạng hiển thị với 0 cuộc gọi — hỏi kết luận và việc sửa." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 300.000 ÷ 7.500 = 40 click; × 8% = 3,2 ✓; sai 40 = quên tỉ lệ ✓; sai 32 = nhầm 80% ✓. Ví dụ: 9 triệu ÷ 30 = 300.000đ/ngày ✓; 300.000 ÷ 3,2 ≈ 93.750 ≈ 94.000đ ✓." },
+      "claims": [
+        { "claim": "RSA tối đa 15 tiêu đề, 4 mô tả", "status": "unverified", "note": "đúng theo hiểu biết; src có ở bài 05, không ở bài này" },
+        { "claim": "Chiến dịch Search có tuỳ chọn mở rộng sang mạng hiển thị, có thể tắt", "status": "unverified", "note": "" },
+        { "claim": "Maximize conversions lấy ngân sách ngày làm trần", "status": "unverified", "note": "" },
+        { "claim": "CPC 7.500đ, 8% click thành khách hỏi", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Thứ tự Đo → nhắm → tiền → chữ → kiểm với lý do 'đo sau thì những ngày đầu là ngày mù' là đúng và dễ nhớ; bước 'tự gửi một form thật trước khi chi tiền' là thói quen nghề; phản ví dụ về ngân sách dưới 100.000đ/ngày gộp còn một nhóm hợp lý.",
+      "upgrade": "Để đạt ≥85: (1) thêm 4 src cho các màn hình được mô tả và câu 'nếu màn hình khác'; (2) thêm quy tắc chi gấp đôi ngày / trần tháng; (3) đưa CPA hoà vốn vào ví dụ để 94.000đ có mốc so; (4) thêm bảng 8 bước có cột 'ô nào trên màn hình / chọn gì / dấu hiệu sai'; (5) thay Q4 bằng câu đọc báo cáo L4; (6) nhắc tới bài 04 (kiểu khớp) và 06 (Target CPA) bằng liên kết rõ."
+    },
+    {
+      "id": "B:qc05-04",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 15, "examples": 12, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Tình huống, Đào sâu, Q5", "quote": "chiến dịch dùng khớp rộng cấp chiến dịch và thành phần tự tạo được tự nâng cấp từ 9/2026; chiến dịch quảng cáo tìm kiếm động dời sang 2/2027", "issue": "Lộ trình nâng cấp AI Max được nêu như sự thật với ngày cụ thể trong khi bài thừa nhận 'chỉ thấy qua trích đoạn tìm kiếm'; src blog có tiêu đề về DSA nên bao được phần DSA, phần 'khớp rộng cấp chiến dịch tự nâng cấp' chưa chắc. Q5 xây trên mệnh đề này (đáp án vẫn đúng về mặt việc cần làm).", "fix": "Đọc trọn bài blog, ghi đúng phạm vi và ngày; nếu không mở được thì viết 'Google công bố lộ trình nâng cấp lên AI Max (kiểm thông báo trong tài khoản)' thay cho ngày." },
+        { "sev": "P2", "where": "Q3", "quote": "Nếu chặn được phần đó và vẫn giữ 14 đơn", "issue": "Giả định 'chặn 30% chi tiêu mà giữ nguyên 14 đơn' là lý tưởng; thực tế phủ định luôn cắt nhầm một phần lượt tìm tốt. Bài có nêu rủi ro ở Lỗi hay gặp nhưng Q3 chấm như chắc chắn.", "fix": "Giữ đề nhưng thêm vào bước giải: 'đây là mức tốt nhất có thể; thực tế thường mất vài đơn kèm theo'." },
+        { "sev": "P2", "where": "Q4", "quote": "Phủ định áp lên lượt tìm, bất kể từ khoá của bạn dùng kiểu khớp nào", "issue": "Đúng nhưng bỏ qua việc từ khoá phủ định cũng có kiểu khớp riêng (phủ định rộng/cụm/chính xác, không khớp biến thể gần); người học sẽ ngạc nhiên khi phủ định 'cũ' không chặn 'second hand'.", "fix": "Thêm một câu trong Khái niệm: 'từ khoá phủ định cũng có ba kiểu khớp và không tự chặn từ đồng nghĩa hay lỗi chính tả'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3.500 − 1.050 = 2.450; ÷ 14 = 175 nghìn ✓; sai 250 = 3.500 ÷ 14 ✓; sai 75 = 1.050 ÷ 14 ✓. Tình huống: 1,05/3,5 = 30% ✓." },
+      "claims": [
+        { "claim": "Ba kiểu khớp: rộng (mặc định), cụm từ \"…\", chính xác […]; phủ định để chặn", "status": "verified", "note": "src Kiểu khớp từ khoá (doc)" },
+        { "claim": "AI Max for Search mở rộng theo nghĩa, tự tạo thành phần; tự nâng cấp từ 9/2026; DSA 2/2027", "status": "unverified", "note": "src blog về DSA, phần khớp rộng cấp chiến dịch chưa chắc; bài tự nhận chỉ thấy trích đoạn" },
+        { "claim": "3,5 triệu/tuần, 14 đơn, 30% lạc", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Ẩn dụ 'van và lưới' rõ; chia nhóm theo ý định (mua / so sánh) với trang riêng và Q6 kiểm đúng kỹ năng phân loại ý định; phản ví dụ nói đúng khi nào khớp rộng tốt hơn (đo chuẩn + Smart Bidding).",
+      "upgrade": "Để đạt ≥85: (1) xác minh lộ trình AI Max và viết đúng phạm vi; (2) thêm kiểu khớp của từ khoá phủ định; (3) thêm bảng báo cáo cụm từ mẫu 8 dòng (cụm, chi, đơn, quyết định: giữ / phủ định / tách nhóm) làm mẫu cho Áp dụng; (4) thêm ví dụ thứ hai làm đổi kết luận: tài khoản 200 chuyển đổi/tháng mở khớp rộng tìm ra cụm mới có CPA tốt; (5) đổi Q1/Q7 (L2) sang câu đọc báo cáo cụm từ."
+    },
+    {
+      "id": "B:qc05-05",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L4", "L4", "L3", "L1", "L3", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Q3 sai hay gặp", "quote": "[0.56,\"SAI_MAU_SO\"]", "issue": "0,56 = 8 × 7% là lỗi nhân thay chia (sai công thức), không phải sai mẫu số; mã lỗi gắn sai làm phản hồi cho người học lệch.", "fix": "Đổi mã thành SAI_TINH_TOAN hoặc thêm mã 'NHAN_THAY_CHIA'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Giả định giá click giữ 8.000đ, tỉ lệ đặt lịch lên 7%", "issue": "Chỉ một tình huống và đổi hai thứ cùng lúc (RSA và trang đích) rồi quy kết quả cho cả hai; không có tình huống thứ hai làm đổi kết luận (ví dụ điểm tăng mà chi phí mỗi khách không đổi, như Lỗi hay gặp nêu).", "fix": "Tách ví dụ: sửa trang trước → 5,5%; sửa RSA sau → 7%; hoặc thêm ví dụ ngược: điểm 4 → 7 nhưng tỉ lệ đặt lịch vẫn 4%." },
+        { "sev": "P2", "where": "Q4", "quote": "Một quảng cáo tìm kiếm thích ứng (RSA) cho phép tối đa bao nhiêu tiêu đề và mô tả?", "issue": "Câu L1 nhớ số; có nguồn nên đúng, nhưng chỗ này dùng được câu L3+ (ví dụ bốc ba tiêu đề và xét có đứng được một mình không).", "fix": "Thay bằng câu cho 3 tiêu đề ghép ngẫu nhiên, hỏi tiêu đề nào vi phạm quy tắc 'đứng được một mình'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 8.000 ÷ 7% ≈ 114.286 → 114,3 nghìn ✓; trước 8.000 ÷ 4% = 200.000 ✓ (tình huống 1/25 = 4% ✓); sai 200 = số cũ ✓; sai 0,56 = 8 × 0,07 (nhân thay chia; mã lỗi ghi SAI_MAU_SO chưa đúng bản chất)." },
+      "claims": [
+        { "claim": "Điểm chất lượng 1–10 từ ba thành phần; là công cụ chẩn đoán, không phải đầu vào đấu giá", "status": "verified", "note": "src Về Điểm chất lượng" },
+        { "claim": "RSA tối đa 15 tiêu đề, 4 mô tả", "status": "verified", "note": "src RSA" },
+        { "claim": "Giá click 8.000đ; 4% → 7%; 'Đã giặt cho 1.200 nhà'", "status": "illustrative-labelled", "note": "Q5 có nhắc 'con số phải có thật'" }
+      ],
+      "strengths": "Định vị Điểm chất lượng là 'phiếu khám' và phản ví dụ 'từ khoá điểm 5 có chi phí mỗi khách tốt nhất' chống đúng lỗi chạy theo điểm; kỹ thuật chia tiêu đề theo vai (từ khoá / lợi ích / bằng chứng / giá / CTA) và bài tập bốc 3 tiêu đề đọc liền là thực hành đúng nghề.",
+      "upgrade": "Để đạt ≥85: (1) sửa mã lỗi 0,56; (2) tách hai thay đổi trong ví dụ hoặc thêm ví dụ ngược; (3) thêm bảng 3 thành phần × (trạng thái / chỗ sửa / số đo kiểm) để phần Áp dụng có mẫu; (4) thêm độ chắc chắn: với 25 click/khách, cần bao nhiêu click để tin tỉ lệ đổi từ 4% lên 7% (nêu con số thô, ví dụ vài trăm click); (5) thay Q4 bằng câu L3 về tiêu đề đứng một mình."
+    },
+    {
+      "id": "B:qc05-06",
+      "scores": { "accuracy": 10, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 9, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L1", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm và Q5", "quote": "Từ 6/2026 Google hiển thị gọn tên \"Target CPA\" và \"Target ROAS\" thay tên dài cũ; cách đặt giá không đổi", "issue": "Khẳng định đổi nhãn giao diện có ngày cụ thể, không thấy src nào trong bài có tiêu đề bao được (src 'Về Smart Bidding' là trang tổng quan); người chấm không xác nhận được. Q5 là câu quiz hoàn toàn dựa trên mệnh đề này — nếu sai, Q5 sai đáp án. Có thể lạc hậu hoặc chưa chính xác (possibly outdated).", "fix": "Dẫn thông báo chính thức (trang 'Thông báo' Google Ads hoặc bài trợ giúp về đổi tên), ghi ngày kiểm; nếu không có, bỏ ngày và viết 'tên hiển thị có thể là … ; kiểm trong tài khoản', và thay Q5 bằng câu khác." },
+        { "sev": "P1", "where": "Đào sâu", "quote": "nay bản cho web và cho lead là một công tắc", "issue": "Khẳng định giao diện Enhanced conversions không có src riêng (src EC là trang tổng quan, trạng thái 'tim'); có thể lạc hậu.", "fix": "Kiểm trang trợ giúp Enhanced conversions phần thiết lập, ghi ngày; hoặc viết 'kiểm trong phần Cài đặt chuyển đổi'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Chi phí thật: 10,5 triệu ÷ 38 ≈ 276.000đ mỗi khách hỏi", "issue": "Ví dụ dùng 6 tuần dữ liệu nhưng không nói 38 khách hỏi đến từ đâu (sổ sale) và cách đối soát với tài khoản sau khi đổi chuyển đổi chính; phép tính đúng nhưng thiếu bước đo lại.", "fix": "Thêm một câu: 'sau khi đổi, đối soát hằng tuần: số chuyển đổi trong tài khoản so với số khách hỏi sổ sale; lệch lớn thì kiểm đo cuộc gọi'." },
+        { "sev": "P2", "where": "Q6", "quote": "Cho phép nhắm quảng cáo tới danh sách số điện thoại mua bên ngoài", "issue": "Câu L2 nhận lại; phương án sai b, d phi lý dễ loại.", "fix": "Đổi sang câu quyết định: đã có 60 khách hỏi/tháng, 18 ký — có nên nhập chuyển đổi offline và đặt mục tiêu theo hợp đồng không, mục tiêu bao nhiêu." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 2.000 × 30% = 600 nghìn ✓; sai 6.667 = 2.000 ÷ 0,3 ✓. Q4: 10.500 ÷ 38 ≈ 276,3 → 276 ✓; sai 75 = 10.500 ÷ 140 ✓. Tình huống: 250.000 × 42 ngày = 10,5 triệu ✓. Target CPA đề xuất 280.000 ≈ mức đang đạt, dưới 600.000 ✓." },
+      "claims": [
+        { "claim": "Smart Bidding có Maximize conversions, Target CPA, Maximize conversion value, Target ROAS", "status": "verified", "note": "src Về Smart Bidding (doc)" },
+        { "claim": "Từ 6/2026 hiển thị gọn 'Target CPA' / 'Target ROAS'", "status": "unverified", "note": "không src bao được; possibly outdated" },
+        { "claim": "Enhanced conversions gửi dữ liệu đã băm; web và lead là một công tắc", "status": "unverified", "note": "phần băm đúng theo src tổng quan; 'một công tắc' chưa kiểm" },
+        { "claim": "Consent Mode v2 chủ yếu bắt buộc ở châu Âu", "status": "verified", "note": "src Consent Mode" },
+        { "claim": "Luật 91/2025 cấm mua bán dữ liệu cá nhân", "status": "unverified", "note": "nêu trong lời giải Q6 b, không src trong bài" },
+        { "claim": "140 chuyển đổi / 38 khách hỏi / 10,5 triệu / lãi 2 triệu / 30% chốt", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Nguyên tắc 'đếm đúng trước, rồi mới bảo máy nhắm giá' với ví dụ 75.000đ vs 276.000đ làm lộ lỗi đếm 'xem trang bảng giá' — rất thực tế; Q7 dạy đọc 'ngân sách bị giới hạn' + CPA dưới hoà vốn = tăng tiền, đúng phản xạ nghề.",
+      "upgrade": "Để đạt ≥85: (1) xác minh hoặc gỡ ngày 6/2026 và sửa Q5; (2) kiểm 'một công tắc' Enhanced conversions; (3) thêm bước đối soát sau khi đổi chuyển đổi chính; (4) thêm ví dụ thứ hai với đơn nhiều mức giá để thấy khi nào chuyển sang giá trị/Target ROAS (phản ví dụ chỉ nói lời); (5) thay Q6 bằng câu quyết định về chuyển đổi offline; (6) ghi 'nếu màn hình khác, tin trang chính thức'."
+    },
+    {
+      "id": "B:qc05-07",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 17, "examples": 13, "pedagogy": 9, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 84,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L4", "L5", "L5"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Toàn bài", "quote": "Nếu chiến dịch báo bị giới hạn ngân sách, tỉ lệ hiển thị thấp là do tiền", "issue": "Bài không có src nào dù dùng khái niệm nền tảng (tỉ lệ hiển thị / impression share, trạng thái 'Limited by budget', báo cáo cụm từ) và không có câu 'nếu màn hình khác'. Mức độ nhẹ hơn các bài khác vì phần lớn nội dung là toán kế hoạch.", "fix": "Thêm src trợ giúp về tỉ lệ hiển thị và trạng thái ngân sách bị giới hạn; thêm câu về màn hình khác." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "20.000 lượt tìm/tháng × 50% hiển thị × 6% CTR = 600 click; giá click 15.000đ thì vừa 9 triệu", "issue": "Dự báo 'vừa khớp' ngân sách là số dựng ngược từ ngân sách; bài không nói đó là cách làm (chọn tỉ lệ hiển thị sao cho tiêu hết tiền) nên người học có thể nghĩ tỉ lệ hiển thị là số đoán độc lập.", "fix": "Ghi: 'tỉ lệ hiển thị 50% là mức ta mua được với 9 triệu ở giá click 15.000đ; đổi tiền thì tỉ lệ đổi'." },
+        { "sev": "P2", "where": "Kết quả 2 tuần", "quote": "Nhà hàng: 0,75 triệu, 2 khách hỏi, cả 2 ký hợp đồng định kỳ", "issue": "Bài nói đánh giá theo giá trị hợp đồng định kỳ nhưng không cho con số giá trị năm nào, nên 'đáng nhiều hơn chi phí' (Q6 b) là khẳng định không có số.", "fix": "Thêm giả định: hợp đồng định kỳ lãi gộp 6 triệu/năm → 2 hợp đồng = 12 triệu trên 0,75 triệu chi." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 20.000 × 50% = 10.000; × 6% = 600; × 8% = 48 ✓; sai 96 = quên 50% ✓. Q4: 1.200 × 40% = 480 ✓; sai 3.000 = 1.200 ÷ 0,4 ✓. Ví dụ: 600 × 15.000 = 9 triệu ✓; 48 × 40% ≈ 19 hợp đồng ✓; 4,5 triệu ÷ 15.000 = 300 click ✓; 21/300 = 7% (dự báo 8%) ✓; 4,5 triệu ÷ 21 ≈ 214.000 ✓; 2,25 triệu ÷ 6 = 375.000 ✓; nửa tháng ≈ 24 khách ✓." },
+      "claims": [
+        { "claim": "Trạng thái 'bị giới hạn ngân sách' và tỉ lệ hiển thị trong Google Ads", "status": "unverified", "note": "khái niệm nền tảng, không src" },
+        { "claim": "Mối bay nhiều đầu mùa mưa", "status": "unverified", "note": "hiểu biết chung, không ảnh hưởng kết luận" },
+        { "claim": "Toàn bộ số kế hoạch (15 triệu, 1,2 triệu lãi, 40% chốt, 20.000 lượt tìm…)", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Bài tốt nhất module: brief → chia tiền → dự báo chuỗi → kết quả 2 tuần theo nhóm → quyết định, mỗi bước đều có số và quyết định cuối phân biệt rõ 'dưới hoà vốn nhưng còn chỗ tăng' với 'dưới hoà vốn nhưng cụm lạc'; Q5–Q7 đều là câu chẩn đoán/quyết định có biện hộ; phản ví dụ nêu mẫu nhỏ và mùa vụ.",
+      "upgrade": "Để đạt ≥85: (1) thêm src về tỉ lệ hiển thị / giới hạn ngân sách và câu 'nếu màn hình khác'; (2) nói rõ tỉ lệ hiển thị là số dựng từ ngân sách; (3) thêm giá trị hợp đồng định kỳ để nhóm nhà hàng có số; (4) thêm một dòng về nhiễu: với 21 khách hỏi, lệch ±5 là thường (√21 ≈ 4,6) để Q1 có cơ sở số; (5) nối ngược về bài 04 (phủ định) và 06 (Target CPA) bằng một câu ở bước Quyết định."
+    },
+    {
+      "id": "B:qc05-08",
+      "scores": { "accuracy": 11, "depth": 12, "practical": 15, "examples": 12, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L4", "L4", "L3", "L4", "L2", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Đào sâu", "quote": "Từ 9/2026 chiến dịch khớp rộng cấp chiến dịch được tự nâng cấp lên AI Max", "issue": "Lặp lại khẳng định chưa xác minh của bài 04 (bài 04 tự nhận chỉ thấy trích đoạn) nhưng ở đây bỏ luôn lời dè dặt, nêu như sự thật.", "fix": "Dẫn đúng nguồn đã đọc trọn, hoặc thêm 'theo thông báo của Google, kiểm trong tài khoản'." },
+        { "sev": "P2", "where": "Q7", "quote": "CPA hoà vốn 450.000đ", "issue": "Con số hoà vốn xuất hiện lần đầu trong đề Q7, tình huống và ví dụ không có lãi gộp/tỉ lệ chốt của công ty chống thấm; người học không tự kiểm được mốc.", "fix": "Thêm vào tình huống: lãi gộp mỗi hợp đồng và tỉ lệ chốt để ra 450.000đ." },
+        { "sev": "P2", "where": "Ví dụ – tuần 4", "quote": "Công ty đưa nhóm chính về cụm từ và chính xác, giữ khớp rộng ở một nhóm thử ngân sách nhỏ", "issue": "Phản ví dụ nói đúng rằng vài tuần đầu thuật toán còn thử và nên nhìn 2–3 tuần, nhưng ví dụ lại rút về ngay sau 1 tuần (tuần 4) — hai phần mâu thuẫn nhẹ về thời điểm quyết định.", "fix": "Ghi trong ví dụ: 'sau 2 tuần theo dõi phần tăng thêm vẫn ~1 triệu/khách thì rút', hoặc nêu rõ vì sao rút sớm (gấp hơn 2 lần hoà vốn)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (6.000 − 4.000) ÷ (22 − 20) = 1.000 nghìn ✓; sai 272,7 = 6.000 ÷ 22 ✓; sai 200 = 4.000 ÷ 20 ✓. Ví dụ: chi phí trung bình sau ≈ 273.000 ✓." },
+      "claims": [
+        { "claim": "Tài khoản có thể bị tạm dừng vì chưa hoàn tất xác minh nhà quảng cáo; xét duyệt tới 5 ngày làm việc", "status": "verified", "note": "src chính sách xác minh (doc)" },
+        { "claim": "Khớp rộng cấp chiến dịch tự nâng cấp lên AI Max từ 9/2026", "status": "unverified", "note": "src blog về DSA; phần này chưa chắc" },
+        { "claim": "Luật 91/2025 hiệu lực 1/1/2026", "status": "verified", "note": "nguồn ở bài qc04-04; bài này không liệt kê" },
+        { "claim": "220 click / 3 cuộc gọi; 4 → 6 triệu; 20 → 22 khách hỏi", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Dạy chi phí biên (1 triệu/khách tăng thêm so với trung bình 273.000đ) — kỹ năng phân tích ít bài nào có; thứ tự 'cổng vào trước' (chính sách, xác minh, thanh toán) đúng với thực tế chi tiêu bằng 0; Q6 nhấn kiểm đo trước khi sửa.",
+      "upgrade": "Để đạt ≥85: (1) sửa khẳng định AI Max cho khớp mức xác minh; (2) đưa lãi gộp/tỉ lệ chốt vào tình huống để ra 450.000đ; (3) làm nhất quán thời điểm rút khớp rộng với phản ví dụ; (4) thêm cây chẩn đoán dạng bảng 4 nhánh × 3–4 điều kiểm × số xác nhận (phần Áp dụng yêu cầu nhưng bài chưa cho mẫu); (5) thay Q5 (L2 về xác minh) bằng câu đọc dữ liệu: ngân sách 300.000đ, tiêu 0, trạng thái 'Đủ điều kiện' — kiểm gì tiếp (giá thầu/từ khoá ít lượt tìm) để phân biệt với bị chặn."
+    }
+  ],
+  "module_notes": {
+    "progression": "Tiến trình chuẩn: có nên chạy (01) → tài khoản (02) → dựng (03) → kiểu khớp (04) → RSA/Điểm chất lượng (05) → Smart Bidding (06) → ví dụ xuyên suốt (07) → chẩn đoán (08). Bài 07 là mẫu tốt cho cả ba module. Điểm yếu chung: các bài hướng dẫn màn hình (03) và bài kế hoạch (01, 07) không có src; các mốc thời gian nền tảng (AI Max 9/2026, đổi tên Target CPA 6/2026) được nêu như sự thật dù chưa đọc trọn nguồn.",
+    "overlap": [
+      "AI Max nâng cấp 9/2026: B:qc05-04 (dè dặt) và B:qc05-08 (nêu như sự thật) — cần thống nhất mức xác minh",
+      "Xác minh nhà quảng cáo và 5 ngày làm việc: B:qc05-02 và B:qc05-08",
+      "CPA hoà vốn = lãi gộp × tỉ lệ chốt: B:qc05-01 (dạng CPC), 06, 07, 08 — nên có một bài chủ và các bài dẫn về",
+      "Đo trước khi chạy / kiểm đo khi sổ khách lệch báo cáo: B:qc05-03 Q1/Q2 và B:qc05-08 Q6"
+    ],
+    "gaps": [
+      "Đọc tỉ lệ hiển thị / Auction insights để biết mình thua vì giá hay vì ngân sách — bài 07, 08 dùng khái niệm nhưng không bài nào dạy đọc",
+      "Quảng cáo gọi điện (call ads), thành phần cuộc gọi và đo cuộc gọi từ quảng cáo — module dịch vụ địa phương (chuyển nhà, diệt mối, chống thấm) mà chỉ nhắc 'bấm gọi'",
+      "Hồ sơ doanh nghiệp Google / Maps cho dịch vụ địa phương — nhắc ở qc04-01 và qc06-01 nhưng không dạy",
+      "Cách Google tiêu gấp đôi ngân sách ngày và trần tháng — gây hoang mang tuần đầu",
+      "Chuyển đổi offline (nhập hợp đồng đã ký) — bài 06 nhắc một câu, chưa có bước làm",
+      "Mạng đối tác tìm kiếm (Search partners) — không nhắc dù là ô mặc định bật",
+      "Lịch kiểm lại 3 tháng cho các con số fast (170.000đ MoMo, VAT 8%, ngày hiệu lực điều khoản)"
+    ],
+    "best_lesson": "B:qc05-07",
+    "weakest_lesson": "B:qc05-02"
+  }
+}

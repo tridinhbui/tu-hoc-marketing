@@ -1,0 +1,20 @@
+{
+ "mod": "in05",
+ "lessons": [
+  {
+   "id": "B:in05-07",
+   "title": "Case 30 phút — chia thời gian thế nào để không hết giờ ở giữa bài?",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Khoảng 2 phút làm rõ, 6 phân tích, 4 đề xuất, 3 chuẩn bị nói — vì: Đúng. Giữ tỉ lệ tương tự, chỉ co lại theo tổng thời gian.",
+     "issue": "Phương án đúng cộng đủ 15 phút nhưng không chừa phút nào cho 'trình bày thật' — phần thứ năm của chính khung bài (10/35/30/10/15%). Tỉ lệ cũng không 'tương tự': chuẩn bị 20% (bài: 10%), trình bày 0% (bài: 15%). Lời giải mâu thuẫn với phần đọc; người học áp khung sẽ không biết cắt phần nào.",
+     "fix": "Sửa phương án a thành '1,5 làm rõ, 5 phân tích, 4,5 đề xuất, 1,5 chuẩn bị, 2,5 trình bày' hoặc ghi rõ 'case 15 phút không có phần trình bày riêng' trong đề."
+    }
+   ],
+   "upgrade": "Sửa Q6 để khung 5 phần nhất quán; gắn nhãn tỉ lệ và thêm Phản ví dụ đề chẩn đoán; nối Q3 sang quyết định cắt gì; thêm Đào sâu về đọc đề để chọn tỉ lệ; thêm bài thực hành có đầu ra: bảng mốc phút cho case 45 phút kèm câu kết luận nháp ở mốc giữa."
+  }
+ ]
+}

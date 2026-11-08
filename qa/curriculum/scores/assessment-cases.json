@@ -1,0 +1,351 @@
+{
+  "scope": "timed cases, ads cases, tasks, capstone",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "method": "10 tiêu chí × 0–10 (context, objective, data, constraints, hypotheses, tasks, quant, solution, alternatives, implementation). Tính lại độc lập mọi đáp án số của 18 case bấm giờ, 3 case quảng cáo, 37 bài thực hành và bài mẫu capstone. Đọc thêm giai-case.html để biết cách chấm thật (asks không mất giờ, phần 60 giây không chấm). Không tính lại những gì tests/*.test.mjs đã khoá (cấu trúc, mã bài, vị trí/độ dài đáp án, số liệu 6 case mới, dashboard ads, capstone).",
+  "cases": [
+    {
+      "id": "cocomi-ngan-sach", "kind": "timed",
+      "scores": {"context": 7, "objective": 9, "data": 7, "constraints": 5, "hypotheses": 5, "tasks": 7, "quant": 8, "solution": 7, "alternatives": 5, "implementation": 5},
+      "total": 65, "domains": ["D1", "D6", "D8", "D7"],
+      "defects": [
+        {"sev": "P2", "where": "q1 / e1+e3", "quote": "100.000.000 ÷ 800 khách mới = 125.000đ", "issue": "Toàn bộ 100 triệu chi quảng cáo bị gán cho khách mới, trong khi e3 nói rõ một phần doanh thu đến từ retargeting khách cũ (tức có chi phí quảng cáo cho khách cũ). CAC khách mới thật thấp hơn 125.000đ; lời giải chỉ cảnh báo chiều ngược lại (chia cho 1.400 đơn).", "fix": "Thêm dòng trong e1 hoặc e3: 'Chi retargeting khách cũ: 20 triệu' và sửa q1 thành 80 triệu ÷ 800 = 100.000đ; hoặc ghi rõ giả định 'coi toàn bộ chi là để có khách mới'."},
+        {"sev": "P2", "where": "q5 / model.n", "quote": "dồn nguồn lực nâng tỉ lệ mua lại từ 30% lên 45%", "issue": "Đòn bẩy được khuyến nghị không có dữ liệu nào về chi phí hay tính khả thi (nâng 15 điểm mua lại là rất lớn); người học không thể kiểm được đề xuất bằng số.", "fix": "Thêm exhibit key:true: 'Thử email/Zalo nhắc mua lại trên 500 khách: mua lại 30% → 36%, chi 15.000đ/khách' để đề xuất tính được ROI."},
+        {"sev": "P3", "where": "e5, e6", "quote": "Mạng xã hội đang tăng trưởng thế nào? · Đối thủ đang làm gì?", "issue": "Hai exhibit nhiễu quá hiển nhiên là nhiễu; không cám dỗ người đã học xong bước 5.", "fix": "Thay một nhiễu bằng số trông liên quan nhưng gây lạc: 'ROAS tháng 9 của nhóm retargeting: 7,2' (kéo người học tới kết luận sai 'tăng retargeting')."}
+      ],
+      "calc_check": "q1 125.000 ✓ · q2 100.000 + 0,3×1,5×100.000 = 145.000 ✓ · q3 50 triệu ÷ 160 = 312.500 ✓ · lỗ mỗi khách 167.500 ✓ · LTV ở 45% = 167.500 ✓ (trùng số với mức lỗ, vô tình). Doanh thu e3 (800×250k=200tr, 600×250k=150tr) khớp e1.",
+      "upgrade": "Thêm exhibit chi phí/hiệu quả của đòn bẩy mua lại; tách chi retargeting; thay một nhiễu bằng số liệu 'trông đẹp nhưng sai' (ROAS retargeting)."
+    },
+    {
+      "id": "la-tra-giam-gia", "kind": "timed",
+      "scores": {"context": 6, "objective": 9, "data": 6, "constraints": 4, "hypotheses": 4, "tasks": 6, "quant": 8, "solution": 7, "alternatives": 5, "implementation": 6},
+      "total": 61, "domains": ["D10", "D1", "D2"],
+      "defects": [
+        {"sev": "P2", "where": "brief", "quote": "dự báo lượng bán sẽ tăng 40%", "issue": "Con số 40% không có gốc (không có dữ liệu độ nhạy giá, không có lần thử nào). Case chỉ chứng minh 'kể cả 40% cũng không đủ', nhưng không cho người học cách đánh giá dự báo đó đúng hay sai.", "fix": "Thêm exhibit: 'Lần giảm 10% hồi tháng 3: lượng +12%' để người học ước độ nhạy giá và thấy 40% là lạc quan."},
+        {"sev": "P2", "where": "q5", "quote": "thử ưu đãi chỉ trong khung 14:00–17:00 hoặc combo hai ly", "issue": "Phương án được chọn không có dữ liệu để tính (bao nhiêu ly bán trong khung 14–17h, lãi khi combo); người học chọn vì nó 'nghe hợp lý', không vì số.", "fix": "Thêm vào e3: 'Khung 14:00–17:00 bán 60 ly (20%)' để người học tính được mức lỗ tối đa của ưu đãi khoanh giờ."},
+        {"sev": "P3", "where": "e4, e5", "quote": "Đánh giá trên Google · Thời tiết", "issue": "Nhiễu quá hiển nhiên.", "fix": "Thay bằng 'Thứ Ba của đối thủ cạnh bên: giảm 20%, đông khách' để cám dỗ bắt chước."}
+      ],
+      "calc_check": "q1 300×30.000 = 9.000.000 ✓ · q2 420×20.000 = 8.400.000 ✓ · q3 9.000.000 ÷ 20.000 = 450 (+50%) ✓ · 25% = 75 ly khách quen ✓.",
+      "upgrade": "Thêm dữ liệu độ nhạy giá và doanh số theo khung giờ để phương án khoanh giờ tính được."
+    },
+    {
+      "id": "mo-diem-ban", "kind": "timed",
+      "scores": {"context": 8, "objective": 9, "data": 7, "constraints": 5, "hypotheses": 5, "tasks": 7, "quant": 8, "solution": 6, "alternatives": 5, "implementation": 5},
+      "total": 65, "domains": ["D5", "D4", "D1", "D8"],
+      "defects": [
+        {"sev": "P1", "where": "e3 / q2 / q5", "quote": "4.000 điểm × 72 thùng × 40.000đ = 11,52 tỷ. Trừ 5 tỷ còn 6,52 tỷ", "issue": "Kinh tế hai phương án chênh gấp 3 (11,52 tỷ so với 3,84 tỷ) nên quyết định hiển nhiên ngay sau phép nhân; không có trade-off thật. Đồng thời phương án B bỏ qua chi phí phục vụ 4.000 điểm mới hằng năm (nhân viên bán hàng, giao hàng, chiết khấu duy trì) và giả định điểm thứ 4.000 bán được 60% như 800 điểm tốt nhất năm ngoái (chọn lọc).", "fix": "Thêm vào e3: 'Chi phí phục vụ mỗi điểm 600.000đ/năm' và 'Điểm mở sau 500 điểm đầu năm ngoái bán 45% điểm cũ' → B còn khoảng 4.000×(54×40.000−600.000)−5 tỷ ≈ 1,24 tỷ, đủ sát để phải cân nhắc."},
+        {"sev": "P2", "where": "e2 / q5", "quote": "Dự báo từ mô hình media mix: +4%", "issue": "TVC bị loại hoàn toàn dựa trên hiệu ứng một năm; không nhắc hiệu ứng tích luỹ của thương hiệu (bài tp05-02, dl10-06 chính site dạy). Phương án 'phần lớn mở điểm, giữ media duy trì' đúng nhưng mức 'duy trì' không có số.", "fix": "Thêm exhibit: 'Mức media duy trì tối thiểu theo agency: 1,5 tỷ/năm' để người học chia 5 tỷ có cơ sở."},
+        {"sev": "P3", "where": "e5", "quote": "Chi media năm ngoái thấp hơn Mơ khoảng 10%", "issue": "Exhibit key:true nhưng không có câu nào dùng tới; chỉ để 'đọc cho biết'.", "fix": "Dùng trong q4 (đối thủ phủ nhiều hơn 60% nhưng chi media ít hơn) hoặc đổi key:false."}
+      ],
+      "calc_check": "q1 2,4 triệu thùng × 4% × 40.000 = 3,84 tỷ ✓ · q2 4.000×72×40.000 = 11,52 tỷ ✓ · q3 1.250.000 ÷ 40.000 = 31,25 thùng (26% của 120) ✓ · 32.000 − 20.000 = 12.000 điểm ✓.",
+      "upgrade": "Thêm chi phí phục vụ điểm bán và suy giảm chất lượng điểm biên để hai phương án sát nhau; thêm mức media duy trì."
+    },
+    {
+      "id": "the-hoan-tien", "kind": "timed",
+      "scores": {"context": 7, "objective": 9, "data": 8, "constraints": 5, "hypotheses": 5, "tasks": 7, "quant": 8, "solution": 7, "alternatives": 5, "implementation": 5},
+      "total": 66, "domains": ["D1", "D7", "D10", "D2"],
+      "defects": [
+        {"sev": "P2", "where": "q5 / model.n", "quote": "đổi thưởng một lần thành hoàn tiền trải đều 3–6 tháng", "issue": "Phương án thay thế không có dữ liệu chi phí/hiệu quả nào; người học không thể so bằng số với chương trình cũ.", "fix": "Thêm exhibit: 'Ngân hàng khác chạy hoàn tiền trải 6 tháng: tỉ lệ thẻ còn dùng tháng 6 là 55%, chi thưởng trung bình 420.000đ/thẻ' để tính chi phí trên thẻ hoạt động mới (~1,13 triệu)."},
+        {"sev": "P2", "where": "q3", "quote": "1.571.429 ÷ 100.000 ≈ 15,7 tháng", "issue": "Hoàn vốn giả định thẻ hoạt động giữ nguyên 16 tháng dù e3 cho thấy mất 65% trong 6 tháng đầu; lời giải có nhắc nhưng không yêu cầu người học điều chỉnh.", "fix": "Thêm q tuỳ chọn: 'Nếu mỗi tháng mất thêm 3% thẻ hoạt động, thời gian hoàn vốn?' hoặc ít nhất đưa vào model.r."},
+        {"sev": "P3", "where": "e5, e6", "quote": "Lượt tải app +30% · NPS 42", "issue": "Nhiễu hiển nhiên.", "fix": "Thay NPS bằng 'Doanh thu phí thường niên thu được đợt này: 1,2 tỷ' — số thật nhưng dễ bị dùng sai."}
+      ],
+      "calc_check": "Thưởng 7.000×500.000 = 3,5 tỷ; (2+3,5) tỷ ÷ 10.000 = 550.000 ✓ · 5,5 tỷ ÷ 3.500 = 1.571.429 ✓ · 1.200.000 ÷ 12 = 100.000; 15,71 tháng ✓.",
+      "upgrade": "Cho dữ liệu của phương án hoàn tiền trải đều để so được bằng số; thêm suy giảm thẻ hoạt động vào hoàn vốn."
+    },
+    {
+      "id": "so-ban-hang-churn", "kind": "timed",
+      "scores": {"context": 8, "objective": 9, "data": 8, "constraints": 5, "hypotheses": 5, "tasks": 7, "quant": 8, "solution": 7, "alternatives": 5, "implementation": 6},
+      "total": 68, "domains": ["D7", "D1", "D9", "D8"],
+      "defects": [
+        {"sev": "P2", "where": "q5 / model", "quote": "Dùng 200 triệu để giảm tỉ lệ huỷ, chưa tăng quảng cáo", "issue": "Case không bắt tính ROI của chính dự án giữ chân: 200 triệu/tháng đổi lấy +330.000đ × 1.000 khách mới = 330 triệu LTV/tháng (chưa kể 12.500 khách hiện có). So sánh với quảng cáo (200 triệu → 225 khách × 990.000 = 223 triệu LTV) chỉ nằm ngầm trong lời giải; người học chọn theo cảm giác 'giữ chân tốt hơn'.", "fix": "Thêm q4b (calc): 'LTV tăng thêm của 1.000 khách mới mỗi tháng khi huỷ còn 6%?' = 330 triệu, rồi q5 so với 223 triệu của quảng cáo."},
+        {"sev": "P2", "where": "e5", "quote": "dựa trên thử nghiệm với 1.000 khách", "issue": "Không nói có nhóm đối chứng; mức 8% → 6% có thể do chọn mẫu. Case thong-diep và mo-than dạy đúng điểm này nhưng ở đây bỏ qua.", "fix": "Ghi rõ 'so với nhóm đối chứng cùng tháng' hoặc thêm phương án sai 'tin ngay kết quả 1.000 khách' để dạy."},
+        {"sev": "P3", "where": "q2", "quote": "wrong:[[8000,'SAI_MAU_SO']]", "issue": "Chỉ một bẫy sai; lỗi 'chia 400 triệu cho 15.000 đăng ký thêm' không được gắn mã.", "fix": "Thêm wrong [26667,'SAI_MAU_SO']."}
+      ],
+      "calc_check": "79.200 ÷ 8% = 990.000 ✓ · 400 triệu ÷ 1.000 = 400.000 ✓ · 79.200 ÷ 6% = 1.320.000 ✓ · 200 triệu ÷ 225 = 888.889 ✓ · 12.500 khách trả phí hiện có (1.000 ÷ 8%) không được nêu.",
+      "upgrade": "Bắt tính ROI dự án giữ chân so với quảng cáo; nêu nhóm đối chứng cho thử nghiệm 1.000 khách."
+    },
+    {
+      "id": "ban-ship-mien-phi", "kind": "timed",
+      "scores": {"context": 7, "objective": 9, "data": 7, "constraints": 5, "hypotheses": 5, "tasks": 7, "quant": 8, "solution": 7, "alternatives": 6, "implementation": 6},
+      "total": 67, "domains": ["D10", "D6", "D1"],
+      "defects": [
+        {"sev": "P2", "where": "model.r[1]", "quote": "lãi tổng cao hơn hiện tại", "issue": "Khẳng định then chốt (ngưỡng 400.000đ làm lãi tăng) không được bất kỳ câu hỏi nào yêu cầu tính: 2.160×340.000×35% − 1.296×25.000 = 224,6 triệu so với 210 triệu. Người học phải tin lời mẫu.", "fix": "Đổi q3 hoặc thêm q: 'Lãi đóng góp tháng 5 với ngưỡng 400.000đ?' ans 224.640.000."},
+        {"sev": "P2", "where": "e4 vs model.r[2]", "quote": "Đối thủ miễn phí giao nhưng giá sản phẩm cao hơn, cho thấy phí giao được bù ở nơi khác", "issue": "Exhibit e4 được gắn key:false (nhiễu) nhưng câu trả lời mẫu dùng nó làm lý do thứ ba. Mâu thuẫn giữa nhãn nhiễu và lời giải; người học không hỏi e4 bị coi là đúng nhưng thiếu luận điểm.", "fix": "Đổi e4 thành key:true hoặc bỏ lý do 3 khỏi model."},
+        {"sev": "P3", "where": "e5", "quote": "Giao hàng 4,4 / 5", "issue": "Nhiễu hiển nhiên.", "fix": "Thay bằng 'Tỉ lệ bỏ giỏ ở bước phí ship: 38%' — số liên quan nhưng không đủ để kết luận miễn phí mọi đơn."}
+      ],
+      "calc_check": "2.000×105.000 = 210 triệu ✓ · 2.400×80.000 = 192 triệu ✓ · 210 ÷ 0,08 = 2.625 đơn (+31,25%) ✓ · Lần thử ngưỡng: 224,6 triệu > 210 triệu ✓ (đúng nhưng không được hỏi).",
+      "upgrade": "Thêm câu tính lãi của lần thử có ngưỡng; thống nhất nhãn key của e4 với lời giải."
+    },
+    {
+      "id": "khoa-hoc-online-cac", "kind": "timed",
+      "scores": {"context": 7, "objective": 9, "data": 7, "constraints": 6, "hypotheses": 4, "tasks": 7, "quant": 6, "solution": 7, "alternatives": 5, "implementation": 5},
+      "total": 63, "domains": ["D1", "D6", "D8"],
+      "defects": [
+        {"sev": "P0", "where": "e4 / q3", "quote": "Tăng gấp đôi ngân sách làm CAC kênh B tăng 20% so với hiện tại → LTV/CAC của phần tăng thêm = 1.440.000 ÷ 900.000 = 1,6", "issue": "Câu hỏi hỏi tỉ lệ 'của phần tăng thêm' (biên) nhưng đáp án dùng CAC trung bình mới của kênh B. Nếu CAC trung bình B lên 900.000đ khi chi gấp đôi thì CAC biên của phần thêm là 1.125.000đ (chi thêm 750k·N mua được 0,667·N học viên) → LTV/CAC biên = 1,28, không phải 1,6. Người học hiểu đúng bài L:65 (biên ≠ trung bình) sẽ bị chấm sai. Chính case cocomi và chia-ngan-sach dạy cách tính biên đúng.", "fix": "Hoặc sửa e4 thành 'phần ngân sách tăng thêm vào kênh B có CAC 900.000đ' (giữ ans 1,6), hoặc giữ e4 và sửa ans thành 1,28 với wrong [1.6,'SAI_MAU_SO']."},
+        {"sev": "P2", "where": "q5 / model.r[2]", "quote": "Nâng mua thêm từ 20% lên 30% đưa LTV lên 1.560.000đ", "issue": "Đòn bẩy không có dữ liệu chi phí hay bằng chứng khả thi; và chính mẫu thừa nhận 'chưa đủ' (1,73 < 2,0) nhưng vẫn chọn làm bước tiếp.", "fix": "Thêm exhibit về chương trình mua thêm đã thử (chi phí, tỉ lệ) hoặc đổi lever sang giảm hoàn tiền (10% → 5% cho LTV 1,53 triệu) có số."},
+        {"sev": "P3", "where": "e3", "quote": "Kênh A (giới thiệu, tìm kiếm tự nhiên) 450.000đ", "issue": "Kênh organic/referral có 'CAC 450.000đ' nhưng không nói chi gì (hoa hồng giới thiệu? SEO?). Khó hiểu vì sao 'nhân đôi ngân sách' không đụng kênh A.", "fix": "Ghi 'thưởng giới thiệu + nội dung SEO' để CAC kênh A có nghĩa."}
+      ],
+      "calc_check": "1.500.000×90% − 150.000 = 1.200.000 ✓ · +20%×1,2 triệu = 1.440.000 ✓ · 1.440.000 ÷ 600.000 = 2,4 ✓ · q3: 1.440.000 ÷ 900.000 = 1,6 ĐÚNG SỐ nhưng SAI KHÁI NIỆM (biên thật 1,28) · 30% mua thêm → 1.560.000; ÷ 900.000 = 1,73 ✓.",
+      "upgrade": "Sửa q3 cho khớp giữa câu hỏi (biên) và dữ liệu (trung bình); cho đòn bẩy nâng LTV một bằng chứng số."
+    },
+    {
+      "id": "quan-an-voucher-san", "kind": "timed",
+      "scores": {"context": 6, "objective": 9, "data": 6, "constraints": 5, "hypotheses": 4, "tasks": 6, "quant": 8, "solution": 7, "alternatives": 5, "implementation": 6},
+      "total": 62, "domains": ["D10", "D5", "D1"],
+      "defects": [
+        {"sev": "P2", "where": "q3", "quote": "Mất lãi của 20 suất lẽ ra bán tại quán: 20 × 60.000", "issue": "Giả định 100% khách quen chuyển kênh đều sẽ ăn tại quán giá đầy đủ cùng ngày đó (ăn mòn hoàn toàn) — không được nêu là giả định, dù một phần trong 20 đơn có thể là đơn tăng thêm (ăn thêm bữa). Người học không được nhắc kiểm giả định này.", "fix": "Thêm vào e3: 'Trong 20 đơn khách quen, 15 nói sẽ ăn tại quán nếu không có khuyến mãi' → lỗ ròng 800k − 900k = −100k; vẫn lỗ nhưng dạy cách hỏi."},
+        {"sev": "P2", "where": "q5", "quote": "đặt giá trên sàn cao hơn quán khoảng 10–15%", "issue": "Nhiều sàn giao đồ ăn có điều khoản ngang giá; khuyến nghị không nhắc rủi ro chính sách (khoá qc09 có dạy về điều khoản sàn).", "fix": "Thêm điều kiện 'nếu điều khoản sàn cho phép' hoặc thêm exhibit điều khoản."},
+        {"sev": "P3", "where": "e4", "quote": "Điểm 4,7 / 5", "issue": "Chỉ một exhibit nhiễu, hiển nhiên.", "fix": "Thêm nhiễu kiểu 'Sàn báo doanh thu quán tăng 35%' để cám dỗ."}
+      ],
+      "calc_check": "70.000 − 14.000 − 40.000 = 16.000 ✓ · 100.000 − 40.000 = 60.000 ✓ · 50×16.000 − 20×60.000 = −400.000 ✓.",
+      "upgrade": "Nêu rõ giả định ăn mòn và điều khoản ngang giá; thêm nhiễu có sức cám dỗ."
+    },
+    {
+      "id": "tang-gia-goi-thang", "kind": "timed",
+      "scores": {"context": 7, "objective": 9, "data": 8, "constraints": 5, "hypotheses": 6, "tasks": 7, "quant": 8, "solution": 7, "alternatives": 6, "implementation": 7},
+      "total": 70, "domains": ["D10", "D7", "D8"],
+      "defects": [
+        {"sev": "P2", "where": "brief vs e1", "quote": "vì 'chi phí máy chủ tăng' · Chi phí phục vụ mỗi thuê bao 20.000đ/tháng", "issue": "Lý do tăng giá trong brief không bao giờ được kiểm (chi phí phục vụ không đổi); cơ hội dạy 'kiểm lý do của sếp' bị bỏ.", "fix": "Thêm dòng e1: 'Chi phí phục vụ năm ngoái 17.000đ' hoặc thêm phương án sai 'tăng giá vì chi phí tăng 3.000đ nên tăng 30.000đ'."},
+        {"sev": "P2", "where": "q5", "quote": "giữ giá cũ cho khách cũ vài tháng", "issue": "Tác động ở cấp danh mục (10.000 thuê bao × 30.000đ/tháng = 300 triệu doanh thu/tháng bị bỏ qua khi giữ giá cũ) không được tính; quyết định grandfathering không có con số.", "fix": "Thêm q: 'Nếu áp giá mới cho toàn bộ 10.000 thuê bao và huỷ lên 7%, lãi gộp tháng đầu thay đổi bao nhiêu?'"},
+        {"sev": "P3", "where": "e3", "quote": "Thử giá 129.000đ trên 10% khách mới, 8 tuần", "issue": "8 tuần chỉ quan sát được ~2 chu kỳ huỷ; con số 7% mong manh nhưng không được nhắc.", "fix": "Ghi 'ước lượng, khoảng tin cậy 5–9%' và dùng trong lý do cần ngưỡng dừng."}
+      ],
+      "calc_check": "79.000×20 = 1.580.000 ✓ · 109.000 ÷ 7% = 1.557.143 ✓ · 300.000 ÷ 109.000 = 2,75; ÷ 79.000 = 3,80 ✓ · ngưỡng huỷ hoà LTV: 109.000 ÷ 1.580.000 = 6,9% ✓.",
+      "upgrade": "Thêm câu tính tác động cấp danh mục và kiểm lý do 'chi phí máy chủ'."
+    },
+    {
+      "id": "ngan-sach-share-of-voice", "kind": "timed",
+      "scores": {"context": 5, "objective": 7, "data": 4, "constraints": 3, "hypotheses": 2, "tasks": 5, "quant": 7, "solution": 4, "alternatives": 3, "implementation": 4},
+      "total": 44, "domains": ["D4", "D6", "D1"],
+      "defects": [
+        {"sev": "P1", "where": "e3 / q5", "quote": "Mục tiêu: Thị phần quảng cáo (SOV) tối thiểu bằng thị phần (SOM) → Tăng chi lên khoảng 1,25 tỷ", "issue": "Khuyến nghị được quyết bởi một 'quy tắc nội bộ' trong exhibit, không bởi kinh tế: không có quy mô ngành, biên lãi, giá trị một điểm thị phần, nên không thể biết chi thêm 455 triệu/tháng (5,5 tỷ/năm) có đáng không. Case dạy áp công thức SOV=SOM như luật, trái với tinh thần 'bám vào số' của 17 case còn lại.", "fix": "Thêm exhibit: 'Doanh thu ngành 400 tỷ/tháng; biên gộp 35%' → 1 điểm thị phần ≈ 1,4 tỷ lãi gộp/tháng; thêm q: 'Cần giành thêm bao nhiêu điểm thị phần để trả được 455 triệu chi thêm?' (≈0,33 điểm)."},
+        {"sev": "P1", "where": "asks", "quote": "4 exhibit, 1 key:false", "issue": "Chỉ 4 câu hỏi, 1 nhiễu hiển nhiên ('doanh số tuần trước +3%') — phần 'chọn hỏi gì' vô nghĩa; không có giả thuyết thay thế nào cho việc thị phần chững (phân phối, giá, sản phẩm) dù chính case mo-diem-ban cùng ngành FMCG dạy điều đó.", "fix": "Thêm ít nhất 2 exhibit: độ phủ điểm bán so với đối thủ, chỉ số giá tương đối; cho một trong hai là nguyên nhân thật để SOV không phải câu trả lời duy nhất."},
+        {"sev": "P2", "where": "model.n", "quote": "Tăng ngân sách theo nấc 150 triệu mỗi tháng, đo thị phần sau 2 quý", "issue": "Nấc 150 triệu/tháng × 6 tháng = chi hết mức mục tiêu trước khi có dữ liệu đo (2 quý) — kế hoạch đo không nhất quán với kế hoạch chi.", "fix": "Đổi thành 'tăng 2 nấc rồi giữ, đo thị phần theo quý, tăng tiếp nếu +0,5 điểm'."}
+      ],
+      "calc_check": "800 ÷ 10.000 = 8% ✓ · 12 − 8 = 4 điểm ✓ · x/(9,2 tỷ + x) = 0,12 → x = 1.254.545.455 ✓.",
+      "upgrade": "Viết lại gần như toàn bộ: thêm kinh tế thị phần, thêm giả thuyết thay thế (phân phối/giá), thêm 2–3 exhibit, để khuyến nghị phải được chứng minh thay vì được quy tắc nội bộ quyết."
+    },
+    {
+      "id": "phat-mau-thu-sampling", "kind": "timed",
+      "scores": {"context": 6, "objective": 9, "data": 7, "constraints": 4, "hypotheses": 4, "tasks": 6, "quant": 8, "solution": 7, "alternatives": 5, "implementation": 6},
+      "total": 62, "domains": ["D5", "D1", "D7"],
+      "defects": [
+        {"sev": "P2", "where": "e2 vs q5", "quote": "Thử nghiệm quy mô nhỏ: 6% → thử 1.500 mẫu trước và so tỉ lệ mua với 6%", "issue": "Đã có một thử nghiệm nhỏ cho 6%; khuyến nghị 'thử 1.500 mẫu nữa' chỉ có nghĩa nếu nói rõ cái gì khác (mã đổi, địa điểm) và kỳ vọng bao nhiêu; ngưỡng 8% trong model.n không có cơ sở tính.", "fix": "Thêm q: 'Tỉ lệ mua cần đạt để LTV/CAC = 2?' = 5.000×8.000 ÷ (162.000/2) ÷ 5.000 ≈ 9,9% → ngưỡng mở rộng có gốc."},
+        {"sev": "P2", "where": "q3 / model", "quote": "Toàn chiến dịch chỉ lãi khoảng 8,6 triệu trên 40 triệu chi", "issue": "Ra mắt sản phẩm mới mà chỉ tính lãi 6 tháng của 300 người mua, bỏ qua mục tiêu ra mắt (phân phối, dùng thử tạo truyền miệng) — ít nhất nên nêu là giới hạn của phép tính.", "fix": "Thêm một câu trong model.r: 'Chưa tính giá trị thử/truyền miệng; nếu muốn tính phải đo được'."},
+        {"sev": "P3", "where": "e5", "quote": "Hài lòng 4,3 / 5", "issue": "Nhiễu hiển nhiên.", "fix": "Thay bằng 'Ý định mua sau khi thử: 65%' — số tự khai cám dỗ hơn (dạy ý định ≠ hành vi như case rau hữu cơ)."}
+      ],
+      "calc_check": "40 triệu ÷ 300 = 133.333 ✓ · 90.000 + 0,4×2×90.000 = 162.000 ✓ · 300×162.000 − 40 triệu = 8,6 triệu ✓ · LTV/CAC 1,215 ✓.",
+      "upgrade": "Cho ngưỡng mở rộng một phép tính; thay nhiễu bằng số tự khai; nêu giới hạn của việc chỉ tính lãi 6 tháng."
+    },
+    {
+      "id": "chia-ngan-sach-hai-kenh", "kind": "timed",
+      "scores": {"context": 6, "objective": 9, "data": 6, "constraints": 4, "hypotheses": 4, "tasks": 6, "quant": 8, "solution": 7, "alternatives": 5, "implementation": 6},
+      "total": 61, "domains": ["D6", "D1", "D8"],
+      "defects": [
+        {"sev": "P2", "where": "q5", "quote": "Dồn 20 triệu vào Google, giữ nguyên Facebook", "issue": "Phương án tự nhiên nhất — chuyển một phần ngân sách Facebook hiện có sang Google (CAC biên FB 250k > LTV gợi ý những đồng cuối của FB có thể cũng lỗ) — không có trong lựa chọn và không có dữ liệu để tính (không biết FB ở mức 40 triệu ra bao nhiêu khách).", "fix": "Thêm exhibit: 'Thử giảm Facebook xuống 40 triệu: 320 khách' → biên 20 triệu cuối của FB = 250.000đ, lỗ; mở phương án tái phân bổ."},
+        {"sev": "P2", "where": "e2", "quote": "Thử chi thêm 20 triệu cho từng kênh, riêng rẽ", "issue": "Chỉ một bậc thử; không nói Google giữ được 200.000đ ở bậc thứ hai không — model.n có nhắc đo lại nhưng không có ngưỡng dừng bằng tiền.", "fix": "model.n: 'dừng nếu CAC biên vượt 220.000đ' đã có; thêm 'hoặc nếu lượt tìm kiếm thương hiệu không tăng'."},
+        {"sev": "P3", "where": "e4", "quote": "Hiển thị: Facebook 2,4 triệu · Google 0,6 triệu", "issue": "Chỉ một nhiễu, dễ nhận.", "fix": "Thêm 'ROAS tự báo: Facebook 4,1 · Google 3,2' để cám dỗ."}
+      ],
+      "calc_check": "100 triệu ÷ 800 = 125.000 ✓ · 20 triệu ÷ 80 = 250.000 ✓ · 20 triệu ÷ 100 = 200.000 ✓ · FB TB 150.000, Google TB 100.000 ✓.",
+      "upgrade": "Thêm dữ liệu giảm ngân sách FB để phương án tái phân bổ tính được."
+    },
+    {
+      "id": "phan-khuc-sua-hat", "kind": "timed",
+      "scores": {"context": 8, "objective": 9, "data": 8, "constraints": 7, "hypotheses": 6, "tasks": 8, "quant": 8, "solution": 8, "alternatives": 6, "implementation": 7},
+      "total": 75, "domains": ["D1", "D5", "D2"],
+      "defects": [
+        {"sev": "P2", "where": "e6 (key:false)", "quote": "Cả ba nhóm đều có 2–3 thương hiệu sữa hạt nhập khẩu, giá cao hơn 20–30%", "issue": "Thông tin đối thủ là một trong bốn tiêu chí chọn tệp mà bài kh02-01 dạy ('khả năng thắng'), nhưng ở đây bị gắn nhiễu. Không nhất quán với khung chọn phân khúc của chính site.", "fix": "Đổi key:true và cho đối thủ khác nhau theo nhóm (ví dụ nhóm văn phòng đã có 3 thương hiệu, nhóm phụ huynh 1) để tiêu chí 'khả năng thắng' có số."},
+        {"sev": "P2", "where": "e3", "quote": "CAC (ước tính từ thử nghiệm 40 triệu mỗi nhóm)", "issue": "Toàn bộ kết luận 'sinh viên lỗ' dựa trên CAC từ 40 triệu thử; mẫu nhỏ được model nhắc cho phụ huynh nhưng không nhắc cho sinh viên (có thể CAC sinh viên giảm mạnh khi lan truyền).", "fix": "Thêm phương án sai 'sinh viên lan truyền nên CAC sẽ giảm' với lời giải vì sao chưa tin được."},
+        {"sev": "P3", "where": "level", "quote": "Trung bình, 20 phút", "issue": "Ba câu tính nhiều bước (q3 bốn phép) nặng hơn các case 'Trung bình' khác; gần mức 'Khó'.", "fix": "Nâng lên Khó/25 phút hoặc bỏ một bước ở q3."}
+      ],
+      "calc_check": "126.000×5 = 630.000 ✓ · 144.000×8 = 1.152.000; ÷ 200.000 = 5,76 ✓ · 3.000×952.000 = 2,856 tỷ ✓ · sinh viên 80.000 vs CAC 90.000 lỗ ✓ · 150.000×40% = 60.000 người sẵn sàng ✓.",
+      "upgrade": "Đưa đối thủ vào tiêu chí chấm; cân lại độ khó."
+    },
+    {
+      "id": "hanh-vi-rau-huu-co", "kind": "timed",
+      "scores": {"context": 8, "objective": 8, "data": 8, "constraints": 5, "hypotheses": 7, "tasks": 8, "quant": 7, "solution": 8, "alternatives": 6, "implementation": 7},
+      "total": 72, "domains": ["D2", "D3", "D8", "D10"],
+      "defects": [
+        {"sev": "P1", "where": "q4.why", "quote": "Giảm giá hữu cơ về 200.000đ làm lãi gộp mỗi gói âm (giá vốn 168.000đ chỉ chừa 32.000đ)", "issue": "Sai số học trong lời giải của đáp án đúng: 200.000 − 168.000 = +32.000đ, dương, không 'âm'. Câu tự mâu thuẫn và sẽ làm người học nghi ngờ phần còn lại của lời giải.", "fix": "Sửa thành 'làm lãi gộp mỗi gói tụt từ 72.000đ xuống 32.000đ, thấp hơn gói thường 70.000đ'."},
+        {"sev": "P2", "where": "q2", "quote": "doanh thu mỗi tháng bị ước tính cao hơn bao nhiêu đồng", "issue": "Câu hỏi ngầm hiểu 'phần doanh thu tăng thêm so với gói thường' (40.000đ/đơn); cách đọc 'doanh thu gói hữu cơ' (240.000đ/đơn → 648 triệu) cũng hợp lý theo chữ nghĩa và bị gắn SAI_TINH_TOAN thay vì mã lỗi mô tả đúng.", "fix": "Viết rõ 'doanh thu tăng thêm so với khi mọi người chọn gói thường' hoặc đổi mã lỗi thành QUEN_TRU_GOI_THUONG."},
+        {"sev": "P3", "where": "e6", "quote": "Bài đăng hữu cơ gần nhất: 2.100 lượt thích", "issue": "Nhiễu hiển nhiên.", "fix": "Thay bằng 'Khách chọn hữu cơ mua lại 52% so với 40% toàn mẫu' — số cám dỗ, cần nghĩ tới tự chọn mẫu."}
+      ],
+      "calc_check": "18 ÷ 72 = 25% ✓ · 2.700 × 40.000 = 108 triệu ✓ · 900×72.000 + 4.100×70.000 = 351,8 triệu ✓ · q4.why: 200.000 − 168.000 = 32.000 > 0 ✗ (lời giải nói 'âm').",
+      "upgrade": "Sửa lời giải q4; viết rõ mẫu số ở q2."
+    },
+    {
+      "id": "dinh-vi-so-ngay", "kind": "timed",
+      "scores": {"context": 8, "objective": 9, "data": 8, "constraints": 5, "hypotheses": 6, "tasks": 8, "quant": 8, "solution": 8, "alternatives": 6, "implementation": 6},
+      "total": 72, "domains": ["D4", "D2", "D3", "D9"],
+      "defects": [
+        {"sev": "P2", "where": "q3 / q5", "quote": "đưa 'tự động đọc tin nhắn' vào lộ trình quý tới", "issue": "Nâng từ 5,0 lên 7,0 trong một quý được coi là khả thi mà không có dữ liệu (đọc SMS ngân hàng là tính năng nặng về kỹ thuật và quyền riêng tư); case không có ràng buộc nguồn lực sản phẩm.", "fix": "Thêm exhibit: 'Đội sản phẩm: làm tự động đọc tin nhắn mất 2 quý, 1 kỹ sư' để quyết định định vị có ràng buộc."},
+        {"sev": "P2", "where": "e1", "quote": "Tỉ trọng quan trọng (tổng 100%)", "issue": "Trọng số và điểm đều tự khai từ 300 người dùng; không nói mẫu là người dùng SốNgay hay cả người dùng A (thiên lệch). Case rau hữu cơ cùng bộ dạy ý định ≠ hành vi nhưng ở đây tin khảo sát hoàn toàn.", "fix": "Ghi rõ 'khảo sát người dùng cả hai app' và thêm một dòng nhắc giới hạn trong model.r."},
+        {"sev": "P3", "where": "q2", "quote": "ans:-0.1, tol:.01", "issue": "Nhập -0,1 với sai số tương đối 1% = ±0,001, chặt hơn các câu khác (0,5%) tương đương; người làm tròn 7,3 − 7,4 = −0,1 vẫn đúng, nhưng ai tính A = 7,35 và mình 7,25 rồi gõ −0,10 ok; chấp nhận được.", "fix": "Không cần sửa; ghi chú để nhất quán tol."}
+      ],
+      "calc_check": "Gia quyền SốNgay 7,25 ✓ · A 7,35 ✓ · −0,10 ✓ · +0,25×2 = 7,75 ✓ · Sổ tay/Excel 6,0·0,3+2·0,25+5·0,2+4·0,15+10·0,1 = 5,9 (không hỏi).",
+      "upgrade": "Thêm ràng buộc nguồn lực sản phẩm; nêu giới hạn khảo sát."
+    },
+    {
+      "id": "thong-diep-excel-ke-toan", "kind": "timed",
+      "scores": {"context": 7, "objective": 9, "data": 8, "constraints": 5, "hypotheses": 6, "tasks": 7, "quant": 8, "solution": 8, "alternatives": 6, "implementation": 7},
+      "total": 71, "domains": ["D11", "D7", "D6", "D8"],
+      "defects": [
+        {"sev": "P2", "where": "e1", "quote": "mỗi nhánh 100.000 lượt hiển thị và 10 triệu chi tiêu", "issue": "Cùng chi tiêu và cùng hiển thị nghĩa là CPM giống hệt dù CTR khác đôi — trong đấu giá thật, CTR cao thường kéo CPM/CPC xuống, nên chi tiêu bằng nhau là giả định ngầm làm CPA của B bị ước cao. Không được nêu.", "fix": "Thêm ghi chú 'chia ngân sách cố định theo hiển thị' hoặc cho chi tiêu khác nhau và yêu cầu tính CPC."},
+        {"sev": "P3", "where": "e5, e6", "quote": "Độ tuổi · Lịch", "issue": "e6 (chạy cùng lúc, ngẫu nhiên) thực ra là thông tin thiết kế thử nghiệm cần biết (loại nhiễu thời gian) — gắn key:false hợp lý về điểm, nhưng mâu thuẫn với bài học của case mo-than (phải hỏi cách chia).", "fix": "Đổi e6 key:true và cho model.r nhắc 'chia ngẫu nhiên cùng lúc nên có thể so'."}
+      ],
+      "calc_check": "10 triệu ÷ 30 = 333.333 ✓ · 500.000 vs 333.333 = +50% ✓ · 20 ÷ 100 = 0,2 đơn/1.000 hiển thị ✓ · cỡ mẫu 16×0,025×0,975 ÷ 0,01² ≈ 3.900 ≈ 3.800 ✓.",
+      "upgrade": "Nêu giả định chi tiêu cố định; nâng e6 thành key:true."
+    },
+    {
+      "id": "mo-than-goi-gia", "kind": "timed",
+      "scores": {"context": 8, "objective": 9, "data": 8, "constraints": 5, "hypotheses": 7, "tasks": 8, "quant": 8, "solution": 8, "alternatives": 6, "implementation": 7},
+      "total": 74, "domains": ["D10", "D2", "D7", "D8"],
+      "defects": [
+        {"sev": "P2", "where": "q1–q3", "quote": "Doanh thu mỗi tháng trên 1.000 lượt truy cập", "issue": "Chỉ tính tháng đầu; gói Pro có thể huỷ nhanh hơn Cơ bản (người bị 'neo' lên Pro dễ hạ gói) — LTV theo gói không có dữ liệu, nên '+12,5% lãi gộp' có thể đảo chiều. Không nêu là rủi ro.", "fix": "Thêm exhibit 'Huỷ tháng 2: Cơ bản 4% · Pro 6%' hoặc thêm vào model.r một câu về rủi ro hạ gói."},
+        {"sev": "P3", "where": "e5", "quote": "Pro Lite thiếu xuất PDF và đồng bộ nhiều thiết bị", "issue": "Thông tin này giúp hiểu vì sao Pro Lite là 'mồi' (gần giá Pro, kém hẳn) — là một phần của cơ chế, không hoàn toàn nhiễu.", "fix": "Giữ key:false nhưng nhắc trong q4.why."}
+      ],
+      "calc_check": "0,7×99k + 0,3×249k = 144.000; ×50 = 7,2 triệu ✓ · 180.500×44 = 7.942.000 ✓ · lãi gộp 105.000×50 = 5,25 triệu; 134.250×44 = 5,907 triệu; +12,5% ✓ · doanh thu +10,3% ✓.",
+      "upgrade": "Thêm dữ liệu huỷ theo gói để kết luận lãi gộp có chiều thời gian."
+    },
+    {
+      "id": "duoc-nho-ca-phe-lon", "kind": "timed",
+      "scores": {"context": 8, "objective": 8, "data": 8, "constraints": 5, "hypotheses": 6, "tasks": 8, "quant": 8, "solution": 7, "alternatives": 5, "implementation": 6},
+      "total": 69, "domains": ["D4", "D2", "D6"],
+      "defects": [
+        {"sev": "P2", "where": "q5", "quote": "Chuyển phần lớn ngân sách từ 'sáng' sang củng cố 'thức khuya' và mở rộng 'sau bữa trưa'", "issue": "Không có dữ liệu chi phí để dịch 1 điểm 'nghĩ đến đầu tiên' ở từng tình huống, nên lập luận 'A ở 55% nên khó dịch chuyển hơn' là định tính. Phương án giữ 'sáng' (tình huống 70% người gặp, lớn nhất) bị loại mà không có số so sánh.", "fix": "Thêm exhibit: 'Chi phí ước tính cho +1 điểm nghĩ đến đầu tiên: sáng 40 triệu · trưa 15 triệu · khuya 12 triệu' → người học tính được điểm hiện diện trên mỗi đồng."},
+        {"sev": "P2", "where": "q1", "quote": "'Điểm hiện diện trong đầu' (cộng tỉ lệ nghĩ đến đầu tiên × tỉ lệ gặp tình huống)", "issue": "Chỉ số tự chế, không nêu đơn vị/ý nghĩa (không phải xác suất vì các tình huống chồng nhau); học viên có thể nhầm với 'thị phần tâm trí'.", "fix": "Ghi 'điểm minh hoạ, dùng để so giữa thương hiệu' trong e2 hoặc q1."},
+        {"sev": "P3", "where": "e5, e6", "quote": "48.000 người theo dõi · 4,5/5", "issue": "Nhiễu hiển nhiên.", "fix": "Thay một nhiễu bằng 'Nhận biết không gợi ý: Sáng Nay 30% · A 60%' — số liên quan nhưng dẫn tới kết luận 'tăng nhận biết' sai."}
+      ],
+      "calc_check": "0,7×8 + 0,55×22 + 0,4×35 + 0,25×5 = 32,95 ✓ · A = 38,5+22+12+7,5 = 80 ✓ · 41,2% ✓ · +0,55×10 = 38,45 ✓ · 40−22 = 18 điểm ✓.",
+      "upgrade": "Thêm chi phí dịch chuyển theo tình huống để quyết định chuyển ngân sách tính được."
+    },
+    {
+      "id": "bep-nha-la", "kind": "ads",
+      "scores": {"context": 9, "objective": 7, "data": 9, "constraints": 8, "hypotheses": 7, "tasks": 8, "quant": 7, "solution": 8, "alternatives": 6, "implementation": 7},
+      "total": 76, "domains": ["D6", "D8", "D11", "D12", "D1"],
+      "defects": [
+        {"sev": "P2", "where": "brief", "quote": "tăng số đơn thêm 40% so với quý trước", "issue": "Không có số đơn quý trước nên mục tiêu không kiểm được ở bất kỳ bước nào; dashboard tuần 2 (245 đơn sổ) không thể so với mục tiêu.", "fix": "Thêm dòng brief 'Quý trước: trung bình 180 đơn/tuần' để tuần 2 (245 đơn) đọc được là +36%."},
+        {"sev": "P2", "where": "dash.qs", "quote": "ROAS hoà vốn của đơn website (biên đóng góp 37%)", "issue": "Mục tiêu số 1 là 'lãi sau quảng cáo dương' nhưng không câu nào bắt tính lãi sau quảng cáo của một kênh bằng tiền (ví dụ Meta: 70×450.000×37% − 10,5 triệu = +1,16 triệu); học viên chỉ so ROAS với ngưỡng.", "fix": "Thêm d: 'Lãi đóng góp sau quảng cáo tuần 2 của Meta?' ans 1.155.000."},
+        {"sev": "P2", "where": "channels.opts v:'no'", "quote": "Zalo Ads · LinkedIn Ads", "issue": "Hai kênh 'không hợp' quá hiển nhiên cho đồ gia dụng; bước chọn kênh không có cạm bẫy thật (ví dụ 'PMax ngay tháng đầu' chỉ là 'ok', không bị trừ).", "fix": "Đổi một 'no' thành kênh nghe hợp lý nhưng sai thời điểm/sai cơ chế (ví dụ 'Google Display nhắm sở thích nấu ăn' với lý do CTR thấp, không có nhu cầu)."},
+        {"sev": "P3", "where": "creative", "quote": "check: 7 mục tự kiểm", "issue": "Bước creative không có chấm (tick tự kiểm), nên 'brief creative' là mục không được đánh giá dù chiếm 1/7 case.", "fix": "Chấm ít nhất 2 mục bằng máy: có số đo được trong promise (regex số), có ≥2 hook."}
+      ],
+      "calc_check": "AOV mọi dòng 450.000 ✓ · CPA Meta 150k, Shopee 125k, TikTok 100k, Google 125k ✓ · ROAS 3,0/3,6/4,5/3,6 ✓ · CTR 1%/2%/0,8%/5% ✓ · MER 110,25 ÷ 27 = 4,08 ✓ · ROAS hoà vốn web 2,70 ✓ · Tuần 3: 6.200 ÷ (1000×0,0067×0,004018) ≈ 230.000 ✓ · Meta học: 150k×50 = 7,5 triệu/tuần ≈ 32 triệu/tháng ✓.",
+      "upgrade": "Thêm baseline đơn quý trước; thêm câu tính lãi sau quảng cáo bằng tiền; chấm máy 2 mục của brief creative."
+    },
+    {
+      "id": "noi-that-an-cu", "kind": "ads",
+      "scores": {"context": 9, "objective": 9, "data": 8, "constraints": 8, "hypotheses": 7, "tasks": 8, "quant": 7, "solution": 8, "alternatives": 6, "implementation": 7},
+      "total": 77, "domains": ["D6", "D8", "D9", "D11"],
+      "defects": [
+        {"sev": "P2", "where": "dash d2", "quote": "54 triệu ÷ 8 hợp đồng = 6,75 triệu — dưới trần 13,5 triệu", "issue": "Chi phí mỗi hợp đồng chỉ bằng nửa trần, nên không có áp lực quyết định ở bước dashboard; mọi kênh đều 'đạt'. Case thiếu một kênh/tháng vượt trần để dạy cắt.", "fix": "Hạ ngân sách hoặc nâng trần thực tế: ví dụ trần 7 triệu để Meta (20 triệu ÷ 2 = 10 triệu/hợp đồng) rõ ràng vượt và câu d3 có sức nặng."},
+        {"sev": "P2", "where": "diag", "quote": "Đổi duy nhất giữa hai tháng là form", "issue": "Chẩn đoán có đáp án đơn nguyên nhân; thực tế lead tăng 44% với cùng tiền cũng có thể do CPM giảm theo mùa — không có bảng CPM để loại trừ, học viên phải tin câu 'đổi duy nhất'.", "fix": "Thêm check 'CPM/CPL theo tháng' key:false để loại trừ bằng số."},
+        {"sev": "P3", "where": "lesson", "quote": "B:qc03-02 (creative, d1, diag)", "issue": "Cùng một mã bài học lại cho ba bước khác nhau; học lại kém trúng.", "fix": "d1 → bài về chi phí mỗi lead đạt chuẩn (qc02), diag → bài về form sàng lọc (qc04-06)."}
+      ],
+      "calc_check": "Meta 20 triệu ÷ 25 = 800.000 ✓ · Google 727.000, Zalo 625.000 ✓ · 54 triệu ÷ 8 = 6,75 triệu ✓ · trần/lead 13,5 triệu × 5% = 675.000 ✓ · CPL Google 400k, Meta 160k, Zalo 250k ✓ · Tháng 2: 20 triệu ÷ 22 = 909.000 ✓ · tỉ lệ đạt chuẩn Google 55% ✓.",
+      "upgrade": "Siết trần chi phí/hợp đồng để dashboard có quyết định khó; thêm bảng CPM vào chẩn đoán."
+    },
+    {
+      "id": "kho-viet", "kind": "ads",
+      "scores": {"context": 9, "objective": 8, "data": 8, "constraints": 7, "hypotheses": 7, "tasks": 8, "quant": 7, "solution": 8, "alternatives": 6, "implementation": 7},
+      "total": 75, "domains": ["D9", "D6", "D8", "D12"],
+      "defects": [
+        {"sev": "P2", "where": "brief vs dash", "quote": "Mục tiêu năm 40 khách mới · Quý 1: won 9, open 14", "issue": "Không câu nào bắt chiếu kết quả quý lên mục tiêu năm (9 đóng + 14 mở × tỉ lệ thắng lịch sử ≈ ? so với 10/quý); bước 'đọc dashboard' bỏ qua chính mục tiêu đã nêu.", "fix": "Thêm d: 'Nếu cơ hội mở đóng với tỉ lệ 50%, quý 1 đạt bao nhiêu % mục tiêu quý?' = (9+7)/10 = 160%."},
+        {"sev": "P2", "where": "budget.why", "quote": "tối thiểu 10 USD/ngày theo LinkedIn", "issue": "Case tự nhận 'mọi con số giả định' nhưng viện dẫn một quy định thật của nền tảng (có thể đổi) làm cơ sở chia ngân sách; khi LinkedIn đổi chính sách thì lời giải sai.", "fix": "Viết 'mức tối thiểu nền tảng (xem bài qc10-02, kiểm lại trong tài khoản)' thay vì con số cứng."},
+        {"sev": "P3", "where": "dash.title", "quote": "YouTube chưa bật nên tổng chi 75 triệu/tháng", "issue": "Ngân sách mẫu bắt phân bổ 80 triệu kể cả 5 triệu YouTube, nhưng dashboard không có YouTube; học viên phân bổ 0 cho YouTube (trong khoảng cho phép) không biết mình 'đúng' hơn mẫu.", "fix": "Ghi rõ trong budget.why: 'YouTube bật từ tháng 3' để nhất quán."}
+      ],
+      "calc_check": "LinkedIn 75 ÷ 24 = 3,13 triệu/SQL ✓ · Google 120 ÷ 36 = 3,33 ✓ · 75 ÷ 3 = 25 triệu/hợp đồng; 96×80% ÷ 12 = 6,4; 3,9 tháng ✓ · Google 20 triệu/hợp đồng ✓ · CPL Meta 333k, LinkedIn 1,25 triệu ✓ · chi quý = 3 × ngân sách mẫu ✓.",
+      "upgrade": "Nối dashboard với mục tiêu năm; bỏ số cứng về chính sách nền tảng."
+    }
+  ],
+  "tasks": [
+    {"id": "B:ob04-06", "total": 70, "domains": ["D10", "D1"], "defects": [{"sev": "P2", "where": "given", "quote": "Phương án 1: Giảm theo 15%", "issue": "Không có dữ liệu phản ứng của khách nên bài chỉ tính 'cần bán thêm bao nhiêu', không đánh giá được phương án nào khả thi; rubric câu kết đòi 'chọn phương án' mà không có cơ sở ngoài con số cần.", "fix": "Thêm dòng 'Lần đối thủ giảm 15% hồi tháng 3, mình không giảm: sản lượng −12%' để so với mức cần."}], "calc_check": "75.000 × 1.200 = 90 triệu ✓ · 37.500 → 2.400 (+100%) ✓ · 50.000 → 1.800 (+50%) ✓ · 60.000 → 1.500 (+25%) ✓.", "upgrade": "Thêm dữ liệu phản ứng khách để câu kết có số."},
+    {"id": "B:ob04-08", "total": 62, "domains": ["D3", "D4", "D5"], "defects": [{"sev": "P3", "where": "rubric", "quote": "Đề xuất là một việc cụ thể", "issue": "Không có số nào về chi phí mở điểm bán hay tác động, nên 'đề xuất' không kiểm được bằng số; bài thuần sắp xếp dữ liệu.", "fix": "Thêm 'mở một điểm bán mới tốn 3 triệu/tháng' để đề xuất gắn ngân sách."}], "calc_check": "A+B+C = 75% thị phần ✓ · 4 tiêu chí 62/55/40/31% ✓ · chênh giá với A 60.000đ ✓.", "upgrade": "Thêm một con số kinh tế để dòng đề xuất tính được."},
+    {"id": "B:ob07-05", "total": 64, "domains": ["D8", "D3"], "defects": [{"sev": "P3", "where": "output", "quote": "dưới 30 chữ", "issue": "Tiêu đề mẫu 'Quý 2: mình thêm 1.800 đơn/tháng (lên 19.800); app Y thêm 1.200 (từ 300 lên 1.500).' ≈ 18 chữ ✓; rubric không yêu cầu đếm chữ nên giới hạn 30 không được kiểm.", "fix": "Thêm tiêu chí 'tiêu đề ≤ 30 chữ' vào rubric."}], "calc_check": "Y +1.200 (+400%) ✓ · mình +1.800 (+10%) ✓ · 19.800 ÷ 1.500 = 13,2 ✓ · 1.400/1.550/1.550 TB 1.500 ✓.", "upgrade": "Đưa giới hạn chữ vào rubric."},
+    {"id": "B:kh01-06", "total": 72, "domains": ["D3", "D1"], "defects": [{"sev": "P3", "where": "given", "quote": "Có ít nhất một đôi giày thể thao từ 1 triệu: 30% (khảo sát 150 người ở 2 trường và 1 toà văn phòng)", "issue": "Mẫu 150 người ở 3 địa điểm cũng là nguồn yếu (thiên lệch chọn địa điểm) nhưng rubric chỉ cho gọi 25% là yếu nhất; người học nêu 30% bị coi sai.", "fix": "Rubric: 'gọi 25% là yếu nhất và nhận xét 30% cũng cần kiểm'."}], "calc_check": "300.000×30%×25%×4×80.000 = 7,2 tỉ ✓ · 15% → 4,32 tỉ; 35% → 10,08 tỉ ✓.", "upgrade": "Mềm hoá rubric về nguồn yếu."},
+    {"id": "B:kh02-01", "total": 74, "domains": ["D1", "D5", "D3"], "defects": [{"sev": "P3", "where": "rubric", "quote": "Mỗi điểm 1–5 có một dữ kiện đi kèm", "issue": "Điểm 1–5 vẫn chủ quan; hai người cùng dữ kiện có thể chấm khác và đổi thứ hạng (yoga 15 vs sau sinh 12 khá sát). Lãi sau tiếp cận (104 vs 40 vs 15) mới là tiêu chí quyết định — rubric nên nói rõ điểm số không được đảo kết luận lãi.", "fix": "Thêm tiêu chí: 'Nếu tổng điểm và lãi sau tiếp cận chọn hai tệp khác nhau, phải giải thích'."}], "calc_check": "1.000/800/240 khách ✓ · 120−80 = 40; 144−40 = 104; 60−45 = 15 triệu ✓ · 104/40 = 2,6 ✓.", "upgrade": "Nối bảng điểm với bảng lãi trong rubric."},
+    {"id": "B:kh04-09", "total": 60, "domains": ["D3", "D2", "D11"], "defects": [{"sev": "P3", "where": "output", "quote": "MỘT câu insight dưới 45 chữ", "issue": "Bài hoàn toàn định tính, không có phần tính; phù hợp mục tiêu bài nhưng rubric 'khó xử thật của người con' cần người chấm hiểu — mức quan sát được thấp hơn các bài khác.", "fix": "Thêm tiêu chí máy kiểm được: 'câu có từ nhưng/mà'."}], "calc_check": "Câu mẫu 38 chữ < 45 ✓; không chứa 70% và tên sản phẩm ✓.", "upgrade": "Thêm tiêu chí hình thức kiểm máy."},
+    {"id": "B:kh05-08", "total": 70, "domains": ["D3", "D8"], "defects": [{"sev": "P3", "where": "given", "quote": "Sai số tối đa (95%) ước nhanh ≈ 1 ÷ căn bậc hai của số phiếu", "issue": "Công thức cho sẵn đúng cho p≈50%, không nêu điều kiện; học viên có thể áp cho mọi tỉ lệ.", "fix": "Ghi 'cho tỉ lệ gần 50%, các tỉ lệ khác sai số nhỏ hơn'."}], "calc_check": "180 phiếu → ±7,5 ✓ · 324 → ±5,6 ✓ · 400 ÷ 0,108 = 3.704 > 3.000 ✓.", "upgrade": "Ghi điều kiện của công thức."},
+    {"id": "B:gt01-02", "total": 58, "domains": ["D8", "D1"], "defects": [{"sev": "P3", "where": "scope", "quote": "Viết lại câu vấn đề thành 1–2 câu", "issue": "Bài rất nhỏ: một phép chia và một phép trừ; rubric 6 tiêu chí cho một câu — hợp với bài học nhưng ít giá trị đánh giá ứng dụng.", "fix": "Thêm phần 'quy mục tiêu ra doanh thu giữ được' (36 người × giá gói) để có tầng kinh tế."}], "calc_check": "96 ÷ 240 = 40% ✓ · 25% × 240 = 60; −36 ✓.", "upgrade": "Thêm tầng tiền."},
+    {"id": "B:gt02-05", "total": 70, "domains": ["D8"], "defects": [], "calc_check": "540 − 469,8 = 70,2 ✓ · đổi đơn trước: 54 + 16,2 ✓ · đổi giá trước: 18 + 52,2 ✓ · TB 53,1 (76%) / 17,1 (24%) ✓.", "upgrade": "Thêm một dòng về việc kiểm tiếp vì sao mất 900 đơn (giả thuyết)."},
+    {"id": "B:gt05-02", "total": 60, "domains": ["D8", "D1"], "defects": [{"sev": "P3", "where": "scope", "quote": "Viết MỘT câu mục tiêu", "issue": "Chỉ số học cơ bản; không có ràng buộc hay phương án.", "fix": "Thêm 'mỗi hội viên tham gia lớp nhóm gia hạn thêm 3 tháng, gói 600.000đ/tháng' để quy ra tiền."}], "calc_check": "480/2.400 = 20% → 720 = 30% ✓ · +240; +10 điểm; +50% ✓.", "upgrade": "Thêm tầng tiền."},
+    {"id": "B:gt06-01", "total": 66, "domains": ["D1", "D8", "D6"], "defects": [{"sev": "P3", "where": "rubric 4", "quote": "Câu kết nêu một đòn bẩy cụ thể", "issue": "Rubric cho phép bất kỳ đòn bẩy; không yêu cầu so các đòn bẩy với nhau (tỉ lệ chốt 32% vs AOV +15% vs tần suất) nên 'nhiều nhất' không kiểm được.", "fix": "Yêu cầu tính ít nhất hai đòn bẩy rồi chọn."}], "calc_check": "480 → 400 → 1.600 → 24 triệu ✓ · 400 ÷ 0,32 = 1.250 → 18,75 triệu ✓.", "upgrade": "So hai đòn bẩy."},
+    {"id": "B:tp01-01", "total": 66, "domains": ["D4", "D11"], "defects": [], "calc_check": "Câu mẫu ≈ 48 chữ < 60 ✓; 1,2g/lát từ phiếu kiểm nghiệm ✓.", "upgrade": "Thêm câu 'định vị này loại khách nào' để có trade-off."},
+    {"id": "B:tp07-01", "total": 62, "domains": ["D11", "D6"], "defects": [{"sev": "P3", "where": "rubric 5", "quote": "Thay tên một tiệm khác vào, tiêu đề không còn tự động đúng", "issue": "Tiêu đề 2 ('150.000đ/bộ, báo giá trước') tiệm nào cũng viết được — chính mẫu không chắc qua tiêu chí 5.", "fix": "Sửa mẫu 2 thành có bằng chứng riêng (ví dụ '4.200 bộ máy năm ngoái')."}], "calc_check": "126 ÷ 18.000 = 0,7% ✓ · 252 lượt (1,4%) ✓ · 3 tiêu đề 10/11/12 chữ ✓.", "upgrade": "Mẫu phải tự qua rubric 5."},
+    {"id": "B:tp11-03", "total": 68, "domains": ["D10"], "defects": [{"sev": "P3", "where": "output", "quote": "Đề xuất một mức giá nằm giữa", "issue": "Bất kỳ số từ 6,3 đến 22 triệu đều qua rubric; không có tiêu chí về lý do chọn 15 (ví dụ tiết kiệm cho khách bao nhiêu %).", "fix": "Thêm tiêu chí 'giải thích vì sao không cao hơn/thấp hơn bằng một con số'."}], "calc_check": "6,3 triệu ✓ · 9 triệu; 312.500đ/giờ ✓ · 15 triệu → 562.500đ/giờ; 68% ✓.", "upgrade": "Rubric cho lý do chọn mức giá."},
+    {"id": "B:ob02-09", "total": 64, "domains": ["D2", "D10"], "defects": [], "calc_check": "A 13.333đ/100ml, giảm 33,3% ✓ · B 15.000đ, 25% ✓ · C 16.667đ, 20%; gốc 20.833đ ✓ · 150.000đ chỉ mua được C lẻ ✓.", "upgrade": "Thêm ràng buộc hạn dùng để A (1.350ml ≈ 2+ tháng) có trade-off."},
+    {"id": "B:kn01-06", "total": 60, "domains": ["D1", "D7"], "defects": [{"sev": "P2", "where": "rubric 2", "quote": "phần lớn giờ nằm ở owned", "issue": "Dữ liệu cho sẵn không có gì về hiệu quả của giờ (bao nhiêu đơn/giờ nhắn Zalo) nên tiêu chí này là áp đặt, trái với rubric 5 'không áp tỉ lệ chuẩn'.", "fix": "Thêm dữ liệu: 'Lần nhắn Zalo tháng trước: 2 giờ → 25 đơn' để việc dồn giờ cho owned tính được."}], "calc_check": "Tổng tiền 7,0 triệu ✓ · tổng giờ 25 ✓ · 6 triệu ÷ 60 = 100.000đ ✓.", "upgrade": "Cho dữ liệu hiệu suất giờ."},
+    {"id": "B:kn05-05", "total": 72, "domains": ["D6", "D11", "D1"], "defects": [{"sev": "P2", "where": "rubric 4", "quote": "Nhắc rủi ro của B: KOC có khán giả trùng nhau thì phải lọc trước khi ký", "issue": "Dữ liệu cho sẵn không có gì về trùng khán giả; tiêu chí đòi kiến thức ngoài bài, không quan sát được từ given.", "fix": "Thêm dòng given 'Ước 20% khán giả 15 KOC trùng nhau' và yêu cầu tính lại lượt xem thuần (300.000)."}], "calc_check": "A: CPM 75.000; 240 đơn; 250.000đ/đơn; −16,8 triệu ✓ · B: 375.000 lượt; CPM 160.000; 375 đơn; 160.000đ; +7,5 triệu ✓ · KOL hụt: 120 đơn, 500.000đ ✓.", "upgrade": "Đưa trùng khán giả vào given."},
+    {"id": "B:kn06-09", "total": 74, "domains": ["D6", "D8"], "defects": [], "calc_check": "150.000 hiển thị → 1.500 bấm (CPC 4.000) → 1.200 xem → 24 đơn (CPA 250.000) ✓ · hoà vốn 40 đơn ✓ · sửa cả hai: 42,75 đơn, CPA 140.351 ✓ · sửa một: 28,5 / 36 ✓.", "upgrade": "Thêm chi phí sửa tốc độ trang để so với lợi ích."},
+    {"id": "B:kn07-04", "total": 70, "domains": ["D6"], "defects": [{"sev": "P3", "where": "model", "quote": "Đổ tiền theo thứ hạng đến khi hết chỗ bán", "issue": "Giả định lượt thấy đúng nhóm có giá trị như nhau giữa màn hình sảnh và banner (độ chú ý khác) — không nêu.", "fix": "Thêm một câu giới hạn trong model."}], "calc_check": "142.857 / 160.000 / 171.429 ✓ · 420 / 250 / 116,7 nghìn lượt; tổng 786,7 ✓ · tổng 120 triệu ✓.", "upgrade": "Nêu giới hạn so sánh định dạng."},
+    {"id": "B:kn08-03", "total": 70, "domains": ["D6", "D7"], "defects": [{"sev": "P3", "where": "model", "quote": "Zalo cho 4.000 người → khoảng 84 lượt đặt (2,1%)", "issue": "Tỉ lệ 2,1% từ 21 lượt đặt (mẫu nhỏ) được ngoại suy thẳng; bài tn02-04 cùng kho dạy khoảng tin cậy nhưng ở đây không nhắc.", "fix": "Thêm 'khoảng 60–110 lượt' hoặc một dòng cảnh báo mẫu nhỏ."}], "calc_check": "SMS 1.125.000 ÷ 18 = 62.500 ✓ · Zalo 350.000 ÷ 21 = 16.667 ✓ · Email 150.000 ✓ · tháng tới 2,9 triệu, 108 lượt, 26.900đ ✓.", "upgrade": "Thêm khoảng dao động."},
+    {"id": "B:tn01-05", "total": 72, "domains": ["D7", "D8"], "defects": [], "calc_check": "800 lượt vào; 4,8 triệu; 7 ngày ✓ · 3 triệu → 500 lượt → 25 đặt ✓ · 32 đặt ↔ 150.000đ ✓.", "upgrade": "Thêm kịch bản tỉ lệ 4% để quy tắc dừng có khoảng."},
+    {"id": "B:tn02-04", "total": 74, "domains": ["D7", "D8"], "defects": [], "calc_check": "3.600 mỗi nhóm ✓ · 9 ngày → 14 ✓ · 2×√(360+432) ≈ 56 ✓ · 1 điểm: 14.400; 36 ngày ✓.", "upgrade": "Thêm điều kiện dừng sớm/không nhìn giữa chừng vào rubric."},
+    {"id": "B:tn04-02", "total": 68, "domains": ["D10"], "defects": [], "calc_check": "42.000 × 500 = 21 triệu ✓ · 30.000 → 700 (+40%) ✓ · 24.000 → 875 (+75%) ✓ · 650 hộp: 66,3 triệu doanh thu, 15,6 triệu lãi (−5,4) ✓.", "upgrade": "Thêm dữ liệu độ nhạy để chọn mức giảm."},
+    {"id": "B:dl02-03", "total": 72, "domains": ["D1", "D8"], "defects": [], "calc_check": "CAC 150.000 ✓ · LTV DT 1,4 triệu ✓ · 102.500 × 4 = 410.000 ✓ · 2,73 ✓ · 136.667 ✓ · tỉ lệ sai 28 ✓.", "upgrade": "Thêm câu 'giảm số lần mua xuống 3 thì sao' để có độ mong manh."},
+    {"id": "B:dl02-05", "total": 74, "domains": ["D8", "D1", "D7"], "defects": [], "calc_check": "105.000 / 78.750 / 66.150 / 59.850 / 55.650 / 52.500 ✓ · cộng dồn vượt 300.000 ở tháng 4 (309.750) ✓ · không huỷ: 2,9 tháng ✓.", "upgrade": "Thêm câu 'nếu giữ được 85% ở tháng 2 thì hoàn vốn tháng nào'."},
+    {"id": "B:dl03-02", "total": 74, "domains": ["D8", "D6", "D1"], "defects": [], "calc_check": "130.000 chi phí; biên 35% ✓ · 2,86 ✓ · 38,4 triệu → +1,44 triệu ✓ · ROAS mục tiêu 4 ✓ · quên phí: 59%, 1,69 ✓.", "upgrade": "Thêm tầng 'ROAS nền tảng báo vs sổ' (có ở dl06-03)."},
+    {"id": "B:dl07-06", "total": 72, "domains": ["D8"], "defects": [{"sev": "P3", "where": "given", "quote": "Phiên truy cập: Tuần này 12.000 · tuần trước 12.000", "issue": "Thứ tự 'tuần này · tuần trước' chỉ nêu ở dòng đầu; các dòng sau học viên dễ đọc ngược (3,0% · 3,5% có thể hiểu là tăng).", "fix": "Ghi nhãn cột ở mỗi dòng hoặc đổi sang bảng 2 cột."}], "calc_check": "12.000×3%×75%×800.000 = 216 triệu ✓ · 262,08 triệu ✓ · 111.000 / 89.000đ mỗi lượt khám ✓.", "upgrade": "Đổi given sang bảng."},
+    {"id": "B:dl09-09", "total": 66, "domains": ["D8", "D11"], "defects": [], "calc_check": "171/180 = 95% ✓ · hoàn thêm (90−40)×80.000 = 4 triệu ✓ · thùng 3.000×1.000 = 3 triệu ✓ · 120/40 = 3 ngày ✓ · 5 dòng ≤ 25 chữ ✓.", "upgrade": "Thêm tiêu chí 'không có việc đã làm trong dòng 2–4'."},
+    {"id": "B:tu02-02", "total": 74, "domains": ["D6", "D1", "D7"], "defects": [{"sev": "P3", "where": "model", "quote": "nếu 1 triệu mới của B mang về dưới 15 đơn (lãi biên âm)", "issue": "Hoà vốn biên là 1.000.000 ÷ 70.000 = 14,3 đơn; 'dưới 15' làm tròn lên, chấp nhận được nhưng nên viết '14 đơn trở xuống'.", "fix": "Sửa thành 'từ 14 đơn trở xuống'."}], "calc_check": "A 50.000; 8 đơn; −440.000 ✓ · B 80.000; 18; +260.000 ✓ · C 100.000; 5; −650.000 ✓.", "upgrade": "Chuẩn hoá ngưỡng hoà vốn biên."},
+    {"id": "B:in04-04", "total": 74, "domains": ["D1", "D7", "D11"], "defects": [], "calc_check": "10.000 ổ; 56/ngày; 5,6/điểm ✓ · 4.800 → 57,6 triệu (−62,4) ✓ · 12.000 → 144 (+24) ✓ · 19.200 → 230,4 (+110,4) ✓ · hoà vốn +4,17 điểm ✓.", "upgrade": "Thêm chi phí ổ tặng tách riêng để thấy biến phí theo kịch bản."},
+    {"id": "B:kh05-07", "total": 80, "domains": ["D3", "D2"], "defects": [], "calc_check": "Chủ đề 1: N1,N2,N4,N5,N7 = 5 ✓ · chủ đề 2: N1,N3,N5,N6 = 4 ✓ · chủ đề 3: N2,N3,N6 = 3 ✓ · wifi chỉ N8 ✓.", "upgrade": "Giữ; mẫu tốt nhất về nghiên cứu định tính của kho."},
+    {"id": "B:gt05-09", "total": 78, "domains": ["D11", "D5"], "defects": [], "calc_check": "3.000 − 1.800 = 1.200 (+67%) ✓ · 150 triệu ÷ 1.200 = 125.000 < 155.600 ✓ · 389.000×40% = 155.600 ✓ · 389.000 ÷ 9 ≈ 43.000 ✓ · thông điệp 7 từ ✓.", "upgrade": "Thêm 'chi phí sản xuất nội dung ước 40 triệu' để trần media rõ hơn."},
+    {"id": "B:kh11-07", "total": 80, "domains": ["D5", "D1", "D10", "D8"], "defects": [], "calc_check": "App 16.500đ · trực tiếp 25.000đ · chuyển kênh +8.500đ ✓ · tuần: 1.785.000 + 3.750.000 = 5.535.000 ✓ · hoàn vốn 3,6 tuần ✓ · ngân sách 5+6+5+1,5+2,5 = 20 ✓.", "upgrade": "Thêm rủi ro app phạt khi kéo khách khỏi app (điều khoản)."},
+    {"id": "B:kn07-08", "total": 80, "domains": ["D6", "D4", "D8"], "defects": [], "calc_check": "10,08 + 3,2 + 3,6 + 2,4 = 19,28; +0,72 = 20 ✓ · cắt: TV 7,14; tổng 13,86 (−30,7%) ✓ · lượt 233 (−113) ✓ · mất người 2,4 triệu (12%) ✓ · cắt đều 68,9%: 8,3/5,5/6,9/4,1 ✓ · khôi phục TV 10: +1,26 ✓.", "upgrade": "Thêm trùng lặp FB/TikTok với TV để bài không chỉ có một con số trùng."},
+    {"id": "B:dl02-04", "total": 80, "domains": ["D1", "D10", "D8"], "defects": [], "calc_check": "80.000 · LTV 240.000 · trần 80.000 ✓ · 24 / 52,5 / 95 triệu ✓ · 4,0 / 3,2 / 2,5 ✓ · lãi 72 / 115,5 / 145 ✓ · CAC biên 141.667; 95.000 ✓ · 2,81 đơn ✓.", "upgrade": "Giữ."},
+    {"id": "B:dl06-03", "total": 82, "domains": ["D8", "D6", "D7"], "defects": [], "calc_check": "195 vs 130 (+65) ✓ · FB 1,27; TikTok 1,10; thử tắt 1,4 (0,9–1,9) ✓ · hoà vốn 2,0 ✓ · cắt 8 → mất 11,2 (7,2–15,2); biên 5,6; ròng +2,4 (+0,4..+4,4) ✓ · điều kiện sai 16 triệu ✓.", "upgrade": "Giữ; bài mạnh nhất về đo lường."},
+    {"id": "B:in01-04", "total": 80, "domains": ["D8", "D7", "D5"], "defects": [], "calc_check": "600×35% − 200 = +10 ✓ · +43 / +12,5 / −18 / −11,5 / −16 = +10 ✓ · KOL 2: +14,75; 6: −32,75 ✓ · tìm kiếm +1,5 / −13 ✓ · năm sau 71,75 ✓ · ngưỡng 2,86 ✓.", "upgrade": "Giữ."}
+  ],
+  "capstone": {
+    "total": 72,
+    "defects": [
+      {"sev": "P1", "where": "channels / calc", "quote": "orders = clicks × cvr; cap = mức chi hợp lý tối đa", "issue": "Mô hình kênh tuyến tính theo chi tiêu (không có lợi suất giảm dần, chỉ có 'cap' cảnh báo), nên phân bổ tối ưu là máy móc: đổ đầy Google (CAC 80k) rồi Facebook/KOC (100k). Bài mẫu làm đúng điều đó; phần 'quyết định' của kênh & ngân sách gần như không có trade-off thật và không phản ứng với lịch mùa vụ đã cho.", "fix": "Thêm bậc thứ hai cho mỗi kênh (ví dụ CVR giảm 30% sau 60% cap) hoặc hệ số CPM theo tuần (11/11, Black Friday +40%) để phân bổ phải cân."},
+      {"sev": "P2", "where": "limits", "quote": "cacCeiling 100.000 · cacBreakevenFirst 120.000", "issue": "TikTok (CAC 125.000) lỗ ngay đơn đầu và Zalo (111.000) vượt trần, nhưng bài mẫu vẫn đổ 15 triệu (19%) vào hai kênh này và chỉ bị 'alloc-loss' cho phép tới 20%. Mẫu 'thử' không có giả thuyết đo gì ở TikTok ngoài CAC.", "fix": "Yêu cầu p5_roles ghi giả thuyết thử bằng số cho mỗi kênh lỗ (ví dụ 'TikTok phải đạt CVR 2,5% để đáng mở rộng')."},
+      {"sev": "P2", "where": "checks p3 insight-tension", "quote": "/(nhưng|mà lại|lại sợ|ngại|sợ|không muốn)/i", "issue": "Kiểm insight bằng regex từ 'nhưng'; mọi câu có 'nhưng' đều đạt (kể cả dữ kiện). Rubric r4 thì tự chấm. Mục quan trọng nhất của kế hoạch thực tế không được đánh giá.", "fix": "Thêm kiểm 'có trích từ phỏng vấn' (so khớp 3 từ liên tiếp với interviews[].say) để ít nhất buộc dựa vào dữ liệu."},
+      {"sev": "P2", "where": "parts p7 / rubric r9", "quote": "Tốt: nói được độ mong manh: CVR giảm một nửa thì CAC, ROI còn bao nhiêu", "issue": "Rubric đòi phân tích độ nhạy nhưng không có ô/công cụ nào trong trang hỗ trợ; người học tự tính ngoài.", "fix": "Thêm nút 'CVR −50%' vào tool forecast và ô f_cac_stress."},
+      {"sev": "P3", "where": "unit.fee", "quote": "phí sàn & cổng thanh toán (10% giá trị đơn)", "issue": "Áp 10% phí sàn cho mọi đơn kể cả đơn website; chấp nhận được là trung bình nhưng không ghi.", "fix": "Ghi 'trung bình giữa web và sàn'."}
+    ],
+    "notes": "Số liệu gốc tự khớp: 300.000 − 105.000 − 30.000 − 45.000 = 120.000 (biên 40%) ✓ · LTV 2,5 × 120.000 = 300.000; trần CAC 100.000 ✓ · lãi mua lại/tháng 15.000 ✓ · lịch sử CAC 100k/100k/103k ✓. Bài mẫu: FB 34 triệu → 340 đơn (100k) · TT 10 → 80 (125k) · GG 16 → 200 (80k) · ZL 5 → 45 (111k) · KOC 15 → 150 (100k); tổng 815 ✓ · CAC 98.160 ✓ · doanh thu 244,5 triệu ✓ · lãi sau QC 17,8 triệu ✓ · ROAS 3,06 > 2,5 ✓ · ROI 22,25% ✓ · mục tiêu 430 triệu: 195 + 244,5 = 439,5 ✓. Điểm mạnh: ràng buộc đầy đủ (kho, năng lực, trần CAC, pháp lý), checks nhất quán, kế hoạch sai bị bắt (test v). Điểm yếu: mô hình kênh tuyến tính làm bước phân bổ không có trade-off; nội dung (insight, định vị) không được đánh giá ngoài regex; không có phần giả thuyết hay phương án thay thế."
+  },
+  "domain_coverage": {
+    "D1": ["cocomi-ngan-sach", "mo-diem-ban", "the-hoan-tien", "so-ban-hang-churn", "ban-ship-mien-phi", "khoa-hoc-online-cac", "quan-an-voucher-san", "ngan-sach-share-of-voice", "phat-mau-thu-sampling", "chia-ngan-sach-hai-kenh", "phan-khuc-sua-hat", "la-tra-giam-gia", "bep-nha-la", "B:ob04-06", "B:kh01-06", "B:kh02-01", "B:gt01-02", "B:gt05-02", "B:gt06-01", "B:kn01-06", "B:kn05-05", "B:dl02-03", "B:dl02-05", "B:dl03-02", "B:tu02-02", "B:in04-04", "B:kh11-07", "B:dl02-04", "capstone"],
+    "D2": ["la-tra-giam-gia", "the-hoan-tien", "phan-khuc-sua-hat", "hanh-vi-rau-huu-co", "dinh-vi-so-ngay", "mo-than-goi-gia", "duoc-nho-ca-phe-lon", "B:kh04-09", "B:ob02-09", "B:kh05-07", "capstone"],
+    "D3": ["hanh-vi-rau-huu-co", "dinh-vi-so-ngay", "B:ob04-08", "B:ob07-05", "B:kh01-06", "B:kh02-01", "B:kh04-09", "B:kh05-08", "B:kh05-07", "capstone"],
+    "D4": ["mo-diem-ban", "ngan-sach-share-of-voice", "dinh-vi-so-ngay", "duoc-nho-ca-phe-lon", "B:ob04-08", "B:tp01-01", "B:kn07-08", "capstone"],
+    "D5": ["mo-diem-ban", "quan-an-voucher-san", "phat-mau-thu-sampling", "phan-khuc-sua-hat", "B:ob04-08", "B:kh02-01", "B:gt05-09", "B:kh11-07", "B:in01-04", "capstone"],
+    "D6": ["cocomi-ngan-sach", "ban-ship-mien-phi", "khoa-hoc-online-cac", "ngan-sach-share-of-voice", "chia-ngan-sach-hai-kenh", "thong-diep-excel-ke-toan", "duoc-nho-ca-phe-lon", "bep-nha-la", "noi-that-an-cu", "kho-viet", "B:gt06-01", "B:tp07-01", "B:kn05-05", "B:kn06-09", "B:kn07-04", "B:kn08-03", "B:dl03-02", "B:tu02-02", "B:kn07-08", "B:dl06-03", "capstone"],
+    "D7": ["cocomi-ngan-sach", "the-hoan-tien", "so-ban-hang-churn", "tang-gia-goi-thang", "phat-mau-thu-sampling", "thong-diep-excel-ke-toan", "mo-than-goi-gia", "B:kn01-06", "B:kn08-03", "B:tn01-05", "B:tn02-04", "B:dl02-05", "B:tu02-02", "B:in04-04", "B:dl06-03", "B:in01-04"],
+    "D8": ["cocomi-ngan-sach", "mo-diem-ban", "so-ban-hang-churn", "khoa-hoc-online-cac", "tang-gia-goi-thang", "chia-ngan-sach-hai-kenh", "hanh-vi-rau-huu-co", "thong-diep-excel-ke-toan", "mo-than-goi-gia", "bep-nha-la", "noi-that-an-cu", "kho-viet", "B:ob07-05", "B:kh05-08", "B:gt01-02", "B:gt02-05", "B:gt05-02", "B:gt06-01", "B:kn06-09", "B:tn01-05", "B:tn02-04", "B:dl02-03", "B:dl02-05", "B:dl03-02", "B:dl07-06", "B:dl09-09", "B:kh11-07", "B:kn07-08", "B:dl02-04", "B:dl06-03", "B:in01-04", "capstone"],
+    "D9": ["so-ban-hang-churn", "dinh-vi-so-ngay", "noi-that-an-cu", "kho-viet"],
+    "D10": ["la-tra-giam-gia", "the-hoan-tien", "ban-ship-mien-phi", "quan-an-voucher-san", "tang-gia-goi-thang", "hanh-vi-rau-huu-co", "mo-than-goi-gia", "B:ob04-06", "B:tp11-03", "B:ob02-09", "B:tn04-02", "B:kh11-07", "B:dl02-04"],
+    "D11": ["thong-diep-excel-ke-toan", "bep-nha-la", "noi-that-an-cu", "B:kh04-09", "B:tp01-01", "B:tp07-01", "B:dl09-09", "B:in04-04", "B:gt05-09", "capstone"],
+    "D12": []
+  },
+  "domains_without_applied_assessment": ["D12"],
+  "domains_partial": {
+    "D12": "Chỉ xuất hiện như bối cảnh (Pixel/Conversions API trong brief bep-nha-la, CRM trong kho-viet); không có câu hỏi, phép tính hay quyết định nào kiểm năng lực martech/AI.",
+    "D9": "Không có bài thực hành (task) nào; chỉ 2 case bấm giờ về app và 2 case quảng cáo (lead dịch vụ, B2B).",
+    "D3": "Không có case bấm giờ nào lấy nghiên cứu làm quyết định trung tâm (chỉ chạm qua rau hữu cơ, SốNgay); đánh giá D3 dựa hết vào task.",
+    "D4": "Không có task định lượng về thương hiệu ngoài kn07-08 (media plan); theo dõi thương hiệu (dl05) không có bài ứng dụng."
+  },
+  "systemic": [
+    "Mẫu khuyến nghị lộ: 16/18 case bấm giờ có đáp án đúng là 'không làm điều sếp đề xuất; thử nhỏ/đi từng nấc và đo' (ngoại lệ: ngan-sach-share-of-voice, tang-gia-goi-thang một phần). Đáp án đúng gần như luôn chứa động từ đo lường (đo, thử, so, từng nấc, ngưỡng dừng) trong khi phương án sai thường không. Tests chỉ kiểm vị trí/độ dài, không kiểm dấu hiệu từ vựng; người học có thể đoán đúng rec mà không tính.",
+    "Hỏi exhibit nhiễu không mất gì: giai-case.html chỉ ghi chú 'đó là thời gian mất đi' sau khi nộp, không trừ giờ, không trừ điểm, không ảnh hưởng đạt/chưa đạt. Chiến lược trội là hỏi tất cả. Năng lực 'chọn hỏi cái gì' (lời tựa của cases.js) không được đánh giá; key:false hiện vô nghĩa về chấm.",
+    "Tiêu chí 'Cấu trúc / trình bày 60 giây' (comps.structure → c15) được tính đạt khi mỗi ô ≥ 3 chữ; không chấm nội dung. Năng lực c15 'Đọc số & trình bày' được ghi nhận trên bản đồ năng lực mà không có bằng chứng.",
+    "Exhibit nhiễu yếu: 30/32 exhibit key:false là follower, lượt thích, điểm đánh giá, thời tiết, độ tuổi — hiển nhiên không liên quan; chỉ ads-cases (CPM, pixel, tốc độ gọi lại) có nhiễu 'trông như nguyên nhân'. Hai exhibit key:false lại được dùng trong lời giải/mẫu (ban-ship e4, thong-diep e6) → nhãn key không nhất quán.",
+    "Không có bước giả thuyết hay phương án thay thế do người học tạo: cả 18 case, 3 ads case và capstone đều cho insight/đề xuất dưới dạng chọn 1 trong 3–4; phương án thay thế và trade-off chỉ tồn tại trong lời giải của đáp án sai. Kế hoạch triển khai là một câu (model.n), không có chủ sở hữu, mốc, ngưỡng dừng theo kênh — ngoại trừ capstone.",
+    "Kinh tế lệch một chiều ở nhiều case (mo-diem-ban 3×, phan-khuc 5,8× so với lỗ, chia-ngan-sach 250k vs 200k với LTV 220k ở giữa — ok): sau phép tính, quyết định hiển nhiên; chỉ tang-gia (LTV gần bằng), mo-than (tăng lãi nhưng nhiễu mùa), dinh-vi (−0,1 điểm), thong-diep (mẫu nhỏ) là quyết định thật sự khó.",
+    "Đòn bẩy được khuyến nghị thường không có dữ liệu để tính (cocomi: mua lại 30→45%; khoa-hoc: mua thêm 20→30%; the-hoan-tien: hoàn tiền trải đều; la-tra: khung giờ vắng): người học bị buộc chọn phương án 'nghe hợp lý' thay vì tính được — trái với tiêu chí 'Khuyến nghị bám vào số'.",
+    "Chấm đạt/chưa đạt bằng MCQ 3–4 phương án không phạt đoán: xác suất đoán trúng cả insight lẫn rec ≈ 6–11%; phần calc phải đúng hết nên tổng thể vẫn chặt, nhưng bản đồ năng lực ghi c-insight/c-rec từ một lần chọn đúng.",
+    "Bài thực hành (37/37) tính đúng; rubric nhìn chung quan sát được (số cụ thể, điều kiện hình thức). Nhưng 30/37 là bài tính một đường (given → công thức → số); chỉ 7 bài Phase 5 đòi hỏi giả thuyết, điều kiện sai, mức tin cậy. Rubric lệ thuộc tự chấm, không có mẫu sai để đối chiếu.",
+    "Phân bố bài học lại tập trung: L:63, L:65, L:59, P:ltv, P:cac chiếm phần lớn lesson của qs; comps dồn vào c11, c13, c15; c05 (tài sản thương hiệu) chỉ xuất hiện ở một case (ca-phe, rec).",
+    "D12 (AI & martech) không có bất kỳ đánh giá ứng dụng nào; D9 không có task; D3 không có case bấm giờ trung tâm."
+  ],
+  "top_defects": [
+    {"id": "khoa-hoc-online-cac/q3", "sev": "P0", "issue": "Câu hỏi 'LTV/CAC của phần tăng thêm' nhưng đáp án 1,6 dùng CAC trung bình mới của kênh B (900.000đ); CAC biên theo chính dữ liệu e4 là 1.125.000đ → 1,28. Người học hiểu đúng bài L:65 (biên ≠ trung bình) bị chấm sai."},
+    {"id": "ngan-sach-share-of-voice", "sev": "P1", "issue": "Khuyến nghị do 'quy tắc nội bộ SOV=SOM' quyết; không có biên lãi, quy mô ngành hay giá trị điểm thị phần để biết chi thêm 5,5 tỷ/năm có đáng; 4 exhibit, 1 nhiễu, không giả thuyết thay thế. Tổng 44/100."},
+    {"id": "systemic/asks", "sev": "P1", "issue": "Hỏi exhibit nhiễu không mất giờ/điểm (giai-case.html) nên 'chọn hỏi gì' — ý tưởng trung tâm của case bấm giờ — không được đánh giá; đồng thời 16/18 case có đáp án rec cùng một mẫu 'không làm theo sếp, thử nhỏ và đo'."},
+    {"id": "hanh-vi-rau-huu-co/q4.why", "sev": "P1", "issue": "Lời giải nói giảm giá hữu cơ về 200.000đ làm 'lãi gộp mỗi gói âm' trong khi 200.000 − 168.000 = +32.000đ."},
+    {"id": "mo-diem-ban", "sev": "P1", "issue": "Phương án B thắng gấp 3 nhờ bỏ qua chi phí phục vụ 4.000 điểm và suy giảm chất lượng điểm biên; quyết định hiển nhiên, không có trade-off."},
+    {"id": "capstone/channels", "sev": "P1", "issue": "Mô hình kênh tuyến tính theo chi, không lợi suất giảm dần, không phụ thuộc lịch mùa vụ → phân bổ tối ưu là máy móc; bước 5 không có quyết định thật."}
+  ]
+}

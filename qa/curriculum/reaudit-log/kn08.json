@@ -1,0 +1,16 @@
+{
+ "mod": "kn08",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:kn08-02",
+   "where": "ĐÀO SÂU",
+   "status": "fixed",
+   "change": "Phép kiểm tra trong tuần: “chấm RFM cho 200 khách, chừa 20 người không nhắn rồi so” → chấm 200 khách để tập cách chấm; phép so có đối chứng để dành cho đợt gửi thật (chọn 1.250 khách điểm cao, nhắn 1.000, chừa 250 = 20% không nhắn rồi so).",
+   "key_changed": false,
+   "note": "Đã tự kiểm: đối chứng 20 người mâu thuẫn với chính ví dụ (100 người đã quá nhỏ, khuyên ≥ 20%). Lỗi thật."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

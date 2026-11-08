@@ -1,0 +1,223 @@
+{
+  "mod": "ob05",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:ob05-01",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 8, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Một chuỗi trà sữa ở Hà Nội khảo sát 500 khách: 62%", "issue": "Số tự đặt không gắn nhãn minh hoạ; không nói khảo sát hỏi ai (khách đang ở quán? online?) nên không đánh giá được lệch mẫu.", "fix": "Thêm '(số minh hoạ)' và một câu về cách lấy mẫu." },
+        { "sev": "P2", "where": "Q1", "quote": "Bạn đoán bao nhiêu phần trăm ly bán ra thật sự chọn ít đường?", "issue": "Câu đoán trước; đáp án c 'dưới 15%' chỉ chứng minh được bằng số trong bài, mọi lời giải đều quy về 'thực tế chỉ 9%'. Không kiểm năng lực, chỉ kiểm đã đọc.", "fix": "Giữ làm câu khởi động nhưng đổi lời giải sang cơ chế (thiên lệch mong muốn xã hội, thói quen vị) thay cho 'con số thật là 9%'." },
+        { "sev": "P2", "where": "Q4, Q7", "quote": "Điều nào dưới đây là dữ liệu hành vi, không phải dữ liệu lời nói?", "issue": "Hai câu nhận lại định nghĩa (L2).", "fix": "Thay Q7 bằng câu đọc bảng: tỉ lệ 'muốn' theo khảo sát và tỉ lệ 'mua' theo POS cho 4 dòng sản phẩm — hỏi dòng nào lệch ít nhất và vì sao đáng đầu tư (L4)." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Khảo sát cho biết khách muốn mình là ai", "issue": "Không có PHẢN VÍ DỤ (khi lời nói đi trước hành vi: nhu cầu mới, sản phẩm chưa có để mua) và ĐÀO SÂU (cách hỏi giảm lệch: hỏi về lần mua gần nhất thay cho 'bạn có muốn').", "fix": "Thêm hai mục này; nêu kỹ thuật hỏi hành vi quá khứ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 62 − 9 = 53 điểm % ✓; sai 85,5 = 53/62 (nhầm % tương đối) ✓, 6,9 = 62/9 ✓. Bài tự nêu rõ hai mẫu số khác nhau (người vs ly)." },
+      "claims": [
+        { "claim": "Khách trả lời khảo sát theo hình ảnh họ muốn có về bản thân (thiên lệch mong muốn xã hội)", "status": "illustrative-labelled", "note": "Khái niệm nền, không gắn số; chấp nhận được không nguồn." },
+        { "claim": "500 khách, 62%, POS 9%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ví dụ tự chỉ ra lỗi mẫu số (62% trên người, 9% trên ly) — hiếm bài làm được; quyết định 'giữ dòng ít đường cho khung giờ sáng' là quyết định có điều kiện thay cho bỏ/giữ.",
+      "upgrade": "Thêm PHẢN VÍ DỤ, ĐÀO SÂU (kỹ thuật hỏi hành vi quá khứ, bán thử cạnh nhau); gắn nhãn minh hoạ và nêu cách lấy mẫu; thay 2 câu L2 bằng câu đọc bảng 4 dòng sản phẩm và một câu thiết kế thử nghiệm (L6: bán thử hai mức đường cùng giá ở 5 cửa hàng, đo tỉ lệ khách chọn)."
+    },
+    {
+      "id": "B:ob05-02",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 9, "pedagogy": 6, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L2", "L4", "L3", "L4", "L3", "L4", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "quan sát kệ dầu gội ở một cửa hàng Guardian trong 2 giờ cuối tuần", "issue": "Tên chuỗi bán lẻ thật được dùng làm bối cảnh cho số liệu tự đặt (120/48/30/9). Không phải khẳng định về Guardian nên không sai, nhưng chưa gắn nhãn minh hoạ.", "fix": "Thêm '(số minh hoạ)' hoặc đổi thành 'một cửa hàng dược mỹ phẩm'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "mua chỉ 9/30 = 30% — chỗ rơi lớn nhất nằm sau khi cầm lên", "issue": "9 người mua trong 2 giờ là mẫu rất nhỏ; 30% có thể dao động mạnh giữa hai buổi. Bài không nói cần quan sát mấy buổi/mấy cửa hàng trước khi sửa bao bì mặt sau.", "fix": "Thêm câu: 'Lặp lại ở 3 cửa hàng × 2 buổi (≥ 150 người cầm) trước khi đổi nhãn; nếu tỉ lệ mua vẫn < 40% ở mọi nơi thì sửa.'" },
+        { "sev": "P2", "where": "Q6", "quote": "Khách đang so giá trên mỗi ml giữa hai chai", "issue": "Dữ kiện 'xem nhãn giá' cho thấy so giá; 'trên mỗi ml' là suy diễn thêm một bước chưa có trong stem. Đáp án vẫn hợp lý nhất nên không P0.", "fix": "Sửa d thành 'Khách đang so giá hoặc giá theo dung tích giữa hai chai'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Đừng hỏi khách có thích không — hãy đếm họ rơi ở bước nào trước kệ", "issue": "Thiếu PHẢN VÍ DỤ (kệ ở lối đi tới quầy tính tiền: dừng cao nhưng không phải vì kệ hấp dẫn) và ĐÀO SÂU (phễu tại kệ khác với doanh số POS vì nhiều người mua không cầm xem).", "fix": "Thêm hai mục; nối sang ob05-03 (phễu online)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 9/30 = 30% ✓; sai 18,75 = 9/48, 7,5 = 9/120 ✓. Ví dụ: 48/120 = 40%, 30/48 = 62,5% ✓." },
+      "claims": [
+        { "claim": "Cửa hàng Guardian", "status": "illustrative-unlabelled", "note": "Tên thật dùng làm bối cảnh; không gắn số liệu của hãng." }
+      ],
+      "strengths": "Phễu đi qua – dừng – cầm – mua với quy tắc chẩn đoán theo bước rơi là công cụ quan sát rẻ và cụ thể; 5/6 câu trắc nghiệm là tình huống mới hoặc chẩn đoán (Q4, Q6, Q7 tốt).",
+      "upgrade": "Thêm PHẢN VÍ DỤ/ĐÀO SÂU; nêu cỡ mẫu tối thiểu và số buổi quan sát; gắn nhãn minh hoạ; thêm một câu L5: với 20 triệu, chọn sửa mặt sau (5 triệu, đổi được 30%→?%) hay mua thêm vị trí kệ (20 triệu, tăng dừng 40%→?%) — buộc tính qua phễu."
+    },
+    {
+      "id": "B:ob05-03",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 16, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L5", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "miễn phí ship từ ngưỡng giá trị đơn", "issue": "Đề xuất miễn ship nhưng không tính chi phí: 35.000đ × số đơn thêm so với lãi mỗi đơn. ĐÀO SÂU chỉ nói 'tăng chi phí mỗi đơn' mà không có số. Số liệu tự đặt không gắn nhãn.", "fix": "Thêm: 'nếu 150 đơn thêm, miễn ship tốn 150 × 35.000 = 5,25 triệu; với lãi gộp 120.000đ/đơn thì vẫn lời 12,75 triệu' và ghi '(số minh hoạ)'." },
+        { "sev": "P2", "where": "Q6", "quote": "Thêm 50.000đ nữa là được miễn phí ship", "issue": "Giả định shop đã có ngưỡng miễn ship, chưa xuất hiện trong stem; phương án đúng vẫn rõ.", "fix": "Thêm vào stem 'shop đã đặt ngưỡng miễn ship 500.000đ'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (1.400 − 600)/1.400 = 57,1% ✓; sai 40 = 800/2.000 ✓, 42,9 = 600/1.400 (tỉ lệ còn lại) ✓. Ví dụ: 1.500/2.000 = 75%, 1.400/1.500 = 93%, 600/1.400 = 43%, 500 + 100 = 600 < 800 ✓. Q5: 750/600 = +25% ✓." },
+      "claims": [
+        { "claim": "Phí phát sinh bất ngờ, bắt tạo tài khoản, thiếu phương thức thanh toán quen là vật cản phổ biến", "status": "illustrative-labelled", "note": "Nêu như kinh nghiệm chung, không gắn benchmark." }
+      ],
+      "strengths": "Phân biệt 'rơi đều' (khách lướt) với 'rơi dồn' (vật cản) cho một quy tắc chẩn đoán rõ; Q5 vừa cho kết luận vừa cảnh báo so trước–sau chưa có đối chứng (L5 hiếm thấy); PHẢN VÍ DỤ (hàng giá trị lớn, giỏ là danh sách so giá) đúng thực tế.",
+      "upgrade": "Thêm phép tính chi phí của phương án miễn ship vào ví dụ; gắn nhãn minh hoạ; thêm một câu L6 thiết kế A/B (50% traffic thấy phí ship ở trang sản phẩm, đo đơn hoàn tất 2 tuần, cần bao nhiêu đơn để tin kết quả). Làm vậy bài đạt ~87."
+    },
+    {
+      "id": "B:ob05-04",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Trong Google Trends và thanh tìm kiếm TikTok, cụm 'máy lọc không khí' ở Hà Nội tăng mạnh: chỉ số tháng 9 là 25, tháng 11 lên 100", "issue": "Chỉ số 0–100 là của Google Trends; thanh tìm kiếm TikTok không cho chỉ số như vậy (TikTok có công cụ xu hướng riêng, cách đo khác). Gộp hai nguồn vào một con số gây hiểu lầm về công cụ. Chỉ số Trends là tương đối theo khung thời gian chọn, nên 'tăng đều 20%/năm trong ba năm' chỉ đúng khi xem một khung 3–5 năm liền — bài không nói.", "fix": "Ghi rõ 'chỉ số Google Trends (0–100, tương đối trong khung đã chọn)'; với TikTok chỉ nói 'lượt tìm/nhắc tăng'. Thêm câu 'xem một khung 5 năm, không ghép hai khung'." },
+        { "sev": "P2", "where": "Q3", "quote": "Cụm 'máy lọc không khí cho phòng ngủ nhỏ' có chỉ số 50 năm đầu và tăng đều 20% mỗi năm", "issue": "Phép lãi kép trên chỉ số Trends là bài toán số học hợp lý nhưng hơi gượng với bản chất chỉ số (tương đối, trần 100); người học có thể nghĩ chỉ số là lượt tìm tuyệt đối.", "fix": "Đổi thành số lượt tìm ước lượng (ví dụ 5.000 lượt/tháng tăng 20%/năm) hoặc ghi chú 'coi chỉ số như số tương đối'." },
+        { "sev": "P2", "where": "Q1", "quote": "Đoán trước: tìm kiếm 'máy lọc không khí' tăng gấp 4 lần trong hai tháng. Bạn đoán điều gì đang xảy ra?", "issue": "Từ stem đơn lẻ, c và d đều là giả thuyết hợp lý; lời giải phải dựa vào dữ kiện 'các năm trước' chưa có trong stem. Là câu đoán nên không P0, nhưng không kiểm năng lực.", "fix": "Thêm vào stem 'tháng 9 → tháng 11 ở Hà Nội' và lời giải nhấn vào gợi ý mùa." },
+        { "sev": "P2", "where": "Dữ liệu", "quote": "Google Trends", "issue": "Công cụ đo (lớp periodic) không có src/ngày kiểm.", "fix": "Thêm src trang trợ giúp Google Trends về cách chuẩn hoá chỉ số." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50 × 1,2 × 1,2 = 72 ✓; sai 70 = tuyến tính ✓, 60 = một năm ✓. Ví dụ: 25 → 100 là ×4 ✓." },
+      "claims": [
+        { "claim": "Google Trends cho chỉ số 0–100 theo thời gian", "status": "unverified", "note": "Đúng theo hiểu biết chung; cần src vì là công cụ (periodic)." },
+        { "claim": "Thanh tìm kiếm TikTok cho 'chỉ số' tương tự", "status": "unverified", "note": "Diễn đạt lỏng; TikTok không có chỉ số 0–100 công khai kiểu Trends." },
+        { "claim": "Mù không khí Hà Nội dày đặc tháng 11–1, rơi vào tháng 4", "status": "unverified", "note": "Phù hợp hiểu biết chung về mùa ô nhiễm miền Bắc; không nguồn." }
+      ],
+      "strengths": "Tách 'đỉnh mùa' và 'xu hướng nền' rồi gắn mỗi loại với một quyết định khác (lịch nhập hàng vs thiết kế sản phẩm); PHẢN VÍ DỤ về cơn sốt một lần và dấu hiệu nhận ra (đỉnh nhọn, không lặp, cụm dài không tăng) rất dùng được.",
+      "upgrade": "Sửa cách nói về chỉ số Trends và TikTok, thêm src; đổi Q3 sang số lượt tìm hoặc chú thích; thêm bảng 3 năm × 12 tháng của hai cụm và một câu đọc bảng (tháng đỉnh đến sớm hơn năm trước bao nhiêu tuần → lịch nhập hàng); nối sang ob06-07 (lịch mùa vụ) vì cùng kỹ thuật chỉ số mùa."
+    },
+    {
+      "id": "B:ob05-05",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 9, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1 option c (lời giải)", "quote": "Có người hỏi, nhưng ít hơn hẳn câu hỏi về size", "issue": "Tình huống phân loại 400 bình luận thành size 160, giá 90, vải 60, chào 90 — không có nhóm 'giao hàng/phí ship'. Lời giải nói 'có người hỏi' là mâu thuẫn nhỏ với dữ liệu.", "fix": "Sửa lời giải c: 'Trong phiên này không có nhóm câu hỏi ship đáng kể; size áp đảo.'" },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "nhiều người hỏi giá thật ra là hỏi 'có rẻ hơn không'", "issue": "Diễn giải hợp lý nhưng là giả thuyết chưa kiểm; bài không gắn nhãn 'giả thuyết'. Số 400 bình luận/120 đơn không gắn nhãn minh hoạ và không tính tỉ lệ chốt trên người xem (không có số người xem).", "fix": "Ghi 'giả thuyết' và '(số minh hoạ)'; thêm số người xem phiên để tính tỉ lệ chốt làm mẫu số chuẩn." },
+        { "sev": "P2", "where": "Q7", "quote": "câu hỏi size giảm từ 160 xuống 40 và đơn tăng từ 120 lên 150", "issue": "Hai phiên khác nhau có thể khác lượng người xem/khuyến mãi; lời giải không nhắc kiểm đối chứng như ob05-03 Q5 đã làm — không nhất quán chuẩn giữa hai bài.", "fix": "Thêm vào lời giải d: 'và kiểm lượng người xem hai phiên có tương đương không'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 160/310 = 51,6% ✓; sai 40 = 160/400 ✓, 133,3 = 160/120 ✓. 160+90+60+90 = 400 ✓." },
+      "claims": [
+        { "claim": "TikTok Shop livestream, 400 bình luận, 120 đơn", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Biến bình luận live thành bảng rào cản có mẫu số đúng (310 câu hỏi, không phải 400 bình luận); PHẢN VÍ DỤ 'khách chủ yếu hỏi giá và nhắc đắt' chỉ ra khi khung thông tin không còn đúng; ĐÀO SÂU có phép kiểm tuần (thêm một câu trả lời sẵn rồi đếm câu lặp).",
+      "upgrade": "Sửa lời giải Q1c; gắn nhãn minh hoạ và thêm số người xem để có tỉ lệ chốt; thêm bảng phân loại 3 phiên liên tiếp và câu hỏi đọc bảng (rào cản nào giảm sau khi ghim bảng size, rào cản nào nổi lên — L4); thêm câu L5 đánh đổi 'dừng live trả lời vs ghim sẵn' với số đơn/phút."
+    },
+    {
+      "id": "B:ob05-06",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L2", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Tiệm bên cạnh 4,5 sao có tỉ lệ đặt lại tháng sau là 35%", "issue": "Tỉ lệ quay lại của tiệm đối thủ là dữ liệu nội bộ, thực tế gần như không thể biết; bài không nói lấy từ đâu, làm người học tưởng số này tra được.", "fix": "Đổi thành 'ước lượng từ 50 khách khu văn phòng được hỏi: 35% nói tháng này đã đặt lại tiệm bên cạnh' hoặc dùng benchmark nội bộ của chuỗi; ghi '(số minh hoạ)'." },
+        { "sev": "P2", "where": "Q5", "quote": "Vì sao nên so tỉ lệ quay lại theo từng nhóm tháng mua đầu", "issue": "Câu nhận lại ý bài (L2), nhiễu yếu ('để báo cáo trông chuyên nghiệp hơn').", "fix": "Thay bằng bảng cohort 3 tháng × 3 kỳ và hỏi nhóm nào cho thấy thay đổi tháng 5 có tác dụng (L4)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "tìm vì sao 850 người không quay lại: so phí ship, thời gian giao, giá combo buổi sáng", "issue": "Cách tìm nguyên nhân chỉ liệt kê, không có bước (gọi bao nhiêu người, hỏi gì). ĐÀO SÂU có 'hỏi thẳng vài người' nhưng không có kịch bản.", "fix": "Thêm: gọi 30 người trong 850 (chọn ngẫu nhiên), hỏi 'lần gần nhất bạn ăn sáng ở đâu, vì sao không đặt lại tiệm', mã hoá thành 4 nhóm lý do." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 90/1.000 = 9% ✓; sai 60 = 90/150 (chia nhầm cho tháng 4) ✓, 85 = 100 − 15 (tỉ lệ rời) ✓. Ví dụ: 150/1.000 = 15% ✓." },
+      "claims": [
+        { "claim": "Điểm 4,8 sao / 4,5 sao trên app giao đồ ăn; tiệm bên cạnh giữ 35%", "status": "illustrative-unlabelled", "note": "Số đối thủ không thể có trong thực tế." }
+      ],
+      "strengths": "Định nghĩa cohort với mẫu số cố định và lỗi hay gặp 'chia cho tháng trước' được kiểm đúng ở Q3; Q6 dạy thận trọng nhân quả khi so hai cohort; PHẢN VÍ DỤ (khách công tác, tách theo nơi ở) là điều kiện làm khái niệm sai mà ít bài nêu.",
+      "upgrade": "Sửa nguồn của số 35%; thêm bảng cohort 3×3 vào phần đọc và đổi Q5 thành câu đọc bảng; thêm kịch bản gọi 30 khách không quay lại; gắn nhãn minh hoạ. Sau sửa đạt ~85."
+    },
+    {
+      "id": "B:ob05-07",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 15, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 8, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L3", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q2 ↔ TÌNH HUỐNG", "quote": "CPA trưa 28.000đ, CPA tối 60.000đ", "issue": "Tình huống nói ngân sách chia đều 14 giờ: khung 10h–11h30 (1,5 giờ) nhận 1,5/14 ngân sách cho 2.940 đơn, khung 19h–22h (3 giờ) nhận 3/14 cho 210 đơn → CPA tối phải gấp CPA trưa 28 lần, không phải 2,1 lần như stem. Nếu CPA trưa thật là 28.000đ trên toàn bộ đơn trưa thì tổng ngân sách ≈ 768 triệu/tháng và CPA tối ≈ 784.000đ. Số trong câu hỏi không khớp số trong bài; kết luận chọn c vẫn đúng nhưng người học tính lại sẽ thấy mâu thuẫn.", "fix": "Đổi stem Q2 thành CPA tính trên đơn do quảng cáo mang về theo khung giờ (ghi rõ), hoặc sửa số: ví dụ 'CPA trưa 6.000đ, CPA tối 170.000đ' cho khớp chia đều; hoặc bỏ CPA và dùng tỉ lệ ngân sách/đơn (10,7% ngân sách → 70% đơn; 21,4% → 5%)." },
+        { "sev": "P2", "where": "Q1", "quote": "bạn đoán bao nhiêu phần trăm đơn rơi vào khung 10h–11h30?", "issue": "Đáp án trùng đúng con số trong tình huống; câu đoán không kiểm gì ngoài việc đã đọc.", "fix": "Giữ nhưng đổi lời giải sang cơ chế nhịp bữa trưa; hoặc hỏi về ngành khác (mỹ phẩm) để buộc suy luận." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Đặt quảng cáo theo nhịp khách tự có nhu cầu", "issue": "Thiếu PHẢN VÍ DỤ/ĐÀO SÂU dù khái niệm đã nêu đúng vấn đề đơn tự đến; chưa nói giới hạn bão hoà khung trưa (tăng 30% ngân sách có thể không thêm đơn vì khách trưa đã mua hết).", "fix": "Thêm PHẢN VÍ DỤ: tăng 30% ngân sách trưa, đơn chỉ +3% → khung đã bão hoà; dấu hiệu CPA tăng dần theo ngân sách." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3/14 = 21,4% ✓; sai 5 = tỉ lệ đơn ✓, 30 = 3/10 ✓. Ví dụ: 2.940/4.200 = 70%, 210/4.200 = 5% ✓. Kiểm chéo Q2: với chia đều theo giờ, CPA tối/CPA trưa = (3/14 ÷ 210)/(1,5/14 ÷ 2.940) = 28 ≠ 60.000/28.000 = 2,14 → không khớp." },
+      "claims": [
+        { "claim": "80% đơn trưa là khách tự đến", "status": "illustrative-labelled", "note": "Bài ghi 'giả sử (số minh hoạ)'." },
+        { "claim": "4.200 đơn/tháng, 2.940 trong 10h–11h30", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Khái niệm nêu ngay cảnh báo nhân quả (đơn dồn vào khung giờ không chứng minh quảng cáo tạo đơn) và đề xuất thử tăng 30% có kiểm soát để đo đơn tăng thêm — đúng tư duy incrementality; Q2 và Q7 là câu quyết định có biện hộ.",
+      "upgrade": "Sửa số CPA trong Q2 cho khớp tình huống; thêm PHẢN VÍ DỤ bão hoà và ĐÀO SÂU (so CPA biên vs CPA trung bình, cách đo đơn tăng thêm bằng tắt/mở theo ngày); thêm bảng đơn × ngân sách theo 6 khung giờ và câu đọc bảng tính CPA từng khung (L3→L4)."
+    },
+    {
+      "id": "B:ob05-08",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 16, "examples": 12, "pedagogy": 6, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 82,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q6 stem ↔ KHÁI NIỆM", "quote": "tỉ lệ hoàn mỗi nhóm giữ 25% và 3%", "issue": "Khái niệm vừa cảnh báo tỉ lệ 3% là do tự chọn lọc nên 'ép đổi phương thức chưa chắc đưa tỉ lệ hoàn của họ về 3%', nhưng Q6 lại giả định người chuyển sang trả trước hoàn 3%. Giả định được nêu trong stem nên không sai, nhưng lời giải không nhắc đây là trường hợp lạc quan.", "fix": "Thêm vào lời giải c: 'đây là giả định lạc quan nhất; nếu nhóm chuyển vẫn hoàn 10%, khoản tránh được còn thấp hơn'." },
+        { "sev": "P2", "where": "Q1 option d (lời giải)", "quote": "Chuyển khoản nội địa phần lớn miễn phí", "issue": "Khẳng định về phí ngân hàng nêu như sự thật, không nguồn, thay đổi theo thời gian.", "fix": "Thêm 'hiện nay' và src một bài tổng hợp phí chuyển khoản, hoặc đổi lời giải sang 'phí chuyển khoản không giải thích được chênh lệch hoàn đơn'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: COD và bom hàng đo độ tin của khách", "issue": "Thiếu PHẢN VÍ DỤ (ngành/giá trị đơn mà bắt cọc là chuẩn: đồ đặt may, hàng giá trị > 2 triệu) và ĐÀO SÂU dù ví dụ đã rất sâu về số.", "fix": "Thêm PHẢN VÍ DỤ với dấu hiệu nhận ra (tỉ lệ hoàn > 40% ở đơn lớn, khách quen vẫn chọn COD) và nối sang ob06-09." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 800 × 25% × 40.000 = 8 triệu ✓; sai 10 = tính trên 1.000 đơn ✓, 32 = 800 × 40.000 ✓. Ví dụ: EV đơn COD = 0,75×60.000 − 0,25×40.000 = 35.000 ✓; EV trả trước = 0,97×60.000 − 0,03×40.000 = 57.000 ✓; 400 × 35.000 = 14 triệu, 400 × 22.000 = 8,8 triệu, ròng −5,2 triệu ✓; ưu đãi hoà vốn 22% × 40.000 = 8.800 ✓. Q6: 450 × 15.000 = 6,75 triệu; 250 × 8.800 = 2,2 triệu ✓." },
+      "claims": [
+        { "claim": "Lãi 60.000đ/đơn, nửa khách COD bỏ đi", "status": "illustrative-labelled", "note": "Bài ghi 'Giả sử (số minh hoạ)'." },
+        { "claim": "Chuyển khoản nội địa phần lớn miễn phí", "status": "unverified", "note": "" },
+        { "claim": "Shop lâu năm cùng ngành có 60% COD (Q7)", "status": "illustrative-unlabelled", "note": "Số trong câu hỏi, hợp lý." }
+      ],
+      "strengths": "Ví dụ tính kỳ vọng hai vế bằng lãi (không bằng chi phí hoàn), nêu đúng tự chọn lọc của nhóm trả trước và suy ra ngưỡng ưu đãi hoà vốn 8.800đ — đây là chuẩn phân tích chuyên nghiệp; Q6 buộc so ưu đãi với hoàn tránh được (L5).",
+      "upgrade": "Thêm PHẢN VÍ DỤ/ĐÀO SÂU; nhắc giả định lạc quan trong Q6; thêm bảng độ nhạy (tỉ lệ khách COD bỏ đi 20%/35%/50% × hoàn của nhóm chuyển 3%/10%) để người học thấy điểm đổi dấu; thêm src cho khẳng định phí chuyển khoản. Sau đó đạt ~90."
+    },
+    {
+      "id": "B:ob05-09",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Q4 option b (lời giải)", "quote": "Thường không có quy định phạt như vậy", "issue": "Khẳng định về chính sách sàn (lớp fast) không nguồn; một số chương trình của sàn có yêu cầu giá ngang hoặc 'giá tốt nhất' khi tham gia chiến dịch, nên câu này có thể sai theo thời điểm/chương trình. Không ảnh hưởng đáp án a.", "fix": "Đổi lời giải thành 'tuỳ chương trình sàn; nhưng rủi ro lớn hơn là khách mất tin vào giá niêm yết' và thêm src chính sách sàn với ngày kiểm." },
+        { "sev": "P2", "where": "Q3", "quote": "20.000 ÷ 189.000 ≈ 0,106 = 10,6%", "issue": "Câu tính một bước; bài có chỗ cần tính hơn (lãi mất khi mã 20.000đ chỉ dời đơn giữa sàn: 20.000 × số đơn).", "fix": "Thay bằng: 'tháng có mã ở Lazada: 1.200 đơn, không có mã: 1.180 đơn tổng ba sàn; mã tốn bao nhiêu và tạo thêm bao nhiêu đơn?' (L4)." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: giữ giá đồng nhất và thắng bằng giao nhanh, tin cậy", "issue": "Thiếu PHẢN VÍ DỤ (khi khách không so sàn: hàng độc quyền, khách trung thành một sàn) và ĐÀO SÂU (chi phí của dịch vụ giao nhanh so với lãi mỗi đơn).", "fix": "Thêm hai mục; nêu phí dịch vụ giao nhanh minh hoạ và điểm hoà vốn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20.000/189.000 = 10,58% ✓; sai 11,8 = 20.000/169.000 ✓, 20 = số tuyệt đối ✓." },
+      "claims": [
+        { "claim": "60% khách xem từ hai sàn trở lên; 70% chọn sàn giao nhanh nhất khi giá ngang", "status": "illustrative-labelled", "note": "Bài ghi rõ 'số minh hoạ cho bài này' và lặp lại trong lời giải." },
+        { "claim": "Sàn không phạt giá không đồng nhất", "status": "unverified", "note": "Lớp fast, cần src." }
+      ],
+      "strengths": "Gắn nhãn minh hoạ nhất quán từ tình huống tới lời giải; khái niệm phân biệt rõ đòn nào trong tay hãng (giá, mã, giờ chuẩn bị, dịch vụ giao) và đòn nào thuộc sàn; Q7 (mã chỉ dời đơn giữa sàn) là câu phân tích tốt.",
+      "upgrade": "Thêm PHẢN VÍ DỤ/ĐÀO SÂU có số về phí giao nhanh; đổi Q3 thành câu tính lãi mất khi mã dời đơn; thêm src chính sách sàn với ngày kiểm; thêm một câu thiết kế thử (đổi một yếu tố/2 tuần, đo đơn gộp ba sàn — L6)."
+    },
+    {
+      "id": "B:ob05-10",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 9, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L4", "L3", "L4", "L2", "L4", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "khoảng cách giữa hai lần mua của phần lớn khách mua túi 2kg là 28–32 ngày", "issue": "Không nói 'phần lớn' là bao nhiêu % và không nói cách tính (trung vị? trung bình?) trên 2.000 khách; không gắn nhãn minh hoạ. Nhắc ngày 25 là hợp lý nhưng không có số đo kết quả kỳ vọng.", "fix": "Thêm: '70% khách 2kg có khoảng cách trung vị 28–32 ngày; 30% còn lại rải rộng (mua gom) → chỉ áp nhắc nhịp cho nhóm 70%' và ghi '(số minh hoạ)'." },
+        { "sev": "P2", "where": "Q5", "quote": "Vì sao dữ liệu đơn cho biết thói quen tốt hơn câu hỏi", "issue": "Câu nhận lại ý bài (L2), lặp ý của ob05-01/ob05-07 Q6 trong cùng module.", "fix": "Thay bằng câu đọc bảng khoảng cách mua của 8 khách và hỏi khách nào nên gắn cờ rủi ro rời bỏ (L4)." },
+        { "sev": "P2", "where": "Q3", "quote": "Chu kỳ mua lại túi 2kg khoảng 28 ngày, shop gửi 1 tin mỗi tuần", "issue": "Giả định 'chỉ 1 tin rơi đúng lúc' được cho sẵn; phép tính còn lại tầm thường.", "fix": "Hỏi: 'khách 5kg (chu kỳ 72 ngày) nhận bao nhiêu tin/chu kỳ và bao nhiêu % lệch nhịp nếu cửa sổ đúng lúc là 7 ngày' (≈10 tin, 90%)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 28/7 = 4 tin; (4 − 1)/4 = 75% ✓; sai 25 = 1/4 ✓, 300 = 3/1 ✓." },
+      "claims": [
+        { "claim": "2.000 khách, chu kỳ 28–32 ngày (2kg) và 70–75 ngày (5kg)", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Chu kỳ mua lại tách theo cỡ gói và quy tắc 'trễ nhịp → hỏi thăm trước giảm giá' là quyết định cụ thể; ĐÀO SÂU đưa thử nghiệm A/B hai nhóm (L6) và nêu rủi ro dạy khách chờ tin; PHẢN VÍ DỤ (mua gom theo khuyến mãi) đúng điều kiện làm nhịp sai.",
+      "upgrade": "Định lượng 'phần lớn' và cách tính khoảng cách; gắn nhãn minh hoạ; đưa thử nghiệm A/B từ ĐÀO SÂU vào phần đọc với chỉ số đo (tỉ lệ mua trong 5 ngày sau tin, số tin/khách); thay Q5 bằng câu đọc bảng; nâng Q3 như gợi ý."
+    }
+  ],
+  "module_notes": {
+    "progression": "Module đi từ nguyên lý (01: nói–làm) → quan sát hành vi tại kệ (02) → online (03 giỏ hàng) → tín hiệu công khai (04 tìm kiếm, 05 bình luận live) → đo lường theo thời gian (06 cohort, 07 giờ, 10 chu kỳ) → tín hiệu thanh toán/sàn (08, 09). Hợp lý, nhưng 06 và 10 (đều về dữ liệu đơn theo thời gian) nên đứng cạnh nhau; 07 nên đứng sau 10 vì cùng dùng dấu thời gian đơn. Chuẩn phân tích không đồng đều: ob05-03 Q5 và ob05-06 Q6 yêu cầu đối chứng/so nhiều cohort, nhưng ob05-05 Q7 và ob05-07 Q2 chấp nhận so trước–sau không cảnh báo.",
+    "overlap": [
+      "ob05-01 Q7, ob05-07 Q6, ob05-10 Q5 cùng hỏi 'vì sao dữ liệu hành vi đáng tin hơn lời nói' — ba lần một ý; giữ ở 01, thay hai câu kia bằng câu đọc dữ liệu.",
+      "ob05-08 (COD) trùng chủ đề với ob06-09 (COD/Zalo); ob06-09 nên tham chiếu phép tính kỳ vọng của ob05-08 thay vì làm lại.",
+      "ob05-02 (phễu kệ) và ob05-03 (phễu giỏ hàng) cùng khung 'tìm bước rơi dồn' — nên nói rõ 03 là bản online của 02."
+    ],
+    "gaps": [
+      "Chưa có bài về cỡ mẫu/nhiễu khi đọc hành vi (ob05-02 kết luận từ 9 người mua; ob05-05 từ một phiên) — module cần một bài 'khi nào con số đủ để tin'.",
+      "Chưa có bài về thiết kế thử nghiệm có đối chứng (A/B, nhóm tiệm đối chứng) dù 03, 06, 10 đều nhắc; hiện kỹ thuật này nằm rải trong ĐÀO SÂU.",
+      "Không bài nào có `src`. ob05-04 (Google Trends/TikTok) và ob05-09 (chính sách giá sàn) cần nguồn và ngày kiểm.",
+      "Chưa đề cập quyền riêng tư/đồng thuận khi nối đơn theo số điện thoại (ob05-06, ob05-10 dùng SĐT để nhận diện khách)."
+    ],
+    "best_lesson": "B:ob05-08",
+    "weakest_lesson": "B:ob05-01"
+  }
+}

@@ -1,0 +1,115 @@
+{
+ "mod": "kn16",
+ "lessons": [
+  {
+   "id": "B:kn16-01",
+   "title": "Bảng đề xuất của TikTok đọc những gì — và bạn kiểm soát được phần nào?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "TikTok mô tả bảng đề xuất “Dành cho bạn” dựa trên ba nhóm yếu tố. Tương tác của người dùng: video họ thích hay chia sẻ, tài khoản họ theo dõi, bình luận họ đăng, nội dung họ tạo. Thông tin video: chú thích, âm thanh, hashtag. Thiết lập thiết bị và tài khoản",
+     "issue": "Mô tả thuật toán TikTok (theo hiểu biết của người chấm là từ bài đăng trên trang tin của TikTok năm 2020) nêu như hiện hành, không có `src`, không năm công bố, không ngày kiểm; đến 11/2026 đã ~6 năm. Có hedge 'có thể đã đổi' nhưng không đủ cho lớp fast.",
+     "fix": "Thêm src (URL, năm công bố, ngày kiểm), ghi 'mô tả năm 20xx' ngay trong câu, và kiểm xem TikTok có mô tả mới hơn."
+    },
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "Nguồn chính thức không nêu giờ đăng là yếu tố; đây là suy đoán chưa được kiểm.",
+     "issue": "Lời giải lấy 'nguồn chính thức không nêu' làm bằng chứng phủ định — nguồn không nêu không có nghĩa yếu tố không tồn tại; cách lập luận này dạy sai về đọc nguồn.",
+     "fix": "Sửa lời giải: 'giờ đăng không nằm trong ba nhóm được mô tả; muốn biết có tác dụng với kênh bạn thì phải thử, không kết luận từ việc nguồn không nhắc'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) src + năm + ngày kiểm, kiểm mô tả mới hơn; (2) sửa lập luận 'nguồn không nêu' ở Q5; (3) thêm phản ví dụ: video đủ danh sách kiểm nhưng 300 lượt xem vì chủ đề quá hẹp — danh sách kiểm không thay được lời hứa; (4) thêm chỉ số đọc được trong TikTok Analytics (nguồn: Dành cho bạn / Đang theo dõi / Tìm kiếm) với src, để 'đo kênh' có chỗ mở; (5) thay Q4/Q6 bằng câu dữ liệu."
+  },
+  {
+   "id": "B:kn16-02",
+   "title": "Xem hết một video dài là tín hiệu mạnh: độ dài phải đúng với lời hứa",
+   "total": 60,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "TikTok mô tả rằng các tín hiệu được tính theo mức độ chúng thể hiện sự quan tâm, và nêu ví dụ: xem hết một video dài là tín hiệu mạnh, có trọng số lớn hơn một tín hiệu yếu như người xem và người đăng cùng một quốc gia.",
+     "issue": "Mô tả thuật toán không có `src`, năm công bố, ngày kiểm; không có câu 'mô tả này có thể đã đổi' như kn16-01.",
+     "fix": "Thêm src + năm + ngày kiểm + câu dự phòng."
+    },
+    {
+     "sev": "P1",
+     "where": "Q1 / Q5 / Q6",
+     "quote": "Video ngắn luôn tốt hơn video dài ở các chủ đề",
+     "issue": "Nhiễu dùng 'luôn' (Q1 d), 'Đúng hoàn toàn' / 'Sai hoàn toàn' (Q5 a, c), 'dài nhất có thể' (Q6 b); đáp án Q5 là câu ngắn nhất và trung dung — đoán được bằng hình thức. Q5 là L1 nhắc lại nguyên văn tiêu đề.",
+     "fix": "Viết nhiễu có lý lẽ ('video dài hơn cho nhiều tổng giây xem hơn dù % xem hết thấp hơn — nên giữ 2 phút 10') để buộc cân nhắc % xem hết với tổng giây xem."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) src + năm + ngày kiểm; (2) gắn nhãn minh hoạ, nêu nhiễu khi so bản cắt; (3) thêm đánh đổi ngược (lời hứa cần dài) và chỉ số thứ hai (tổng giây xem, hoặc tỉ lệ xem lại) để quyết độ dài; (4) viết lại quiz: bỏ từ tuyệt đối, thay Q5 (L1) bằng câu đọc bảng 4 video khác độ dài với % xem hết và tổng giây xem, một câu L5 chọn độ dài cho một lời hứa cho sẵn; (5) nối sang kn13-02 (đường giữ chân cho biết cắt ở đâu)."
+  },
+  {
+   "id": "B:kn16-03",
+   "title": "Tài khoản nhỏ có được đề xuất không? Số người theo dõi không phải yếu tố trực tiếp",
+   "total": 54,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "TikTok nêu rõ rằng số người theo dõi và các video từng hiệu quả không phải là yếu tố trực tiếp cho đề xuất.",
+     "issue": "Khẳng định cơ chế nền tảng không có `src`, năm, ngày kiểm; không câu dự phòng. Cả Q1 và Q6 chấm điểm theo nội dung này.",
+     "fix": "Thêm src + năm + ngày kiểm + câu dự phòng."
+    },
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "một video về “cách chọn bát ăn cơm không bị bỏng tay” có tỉ lệ xem hết cao gần gấp ba các video còn lại và được gửi nhiều",
+     "issue": "Ví dụ không có con số nào (không lượt xem, không % xem hết, không số gửi); Q3 lại dùng số 3.000/1.350 không liên quan tới cửa hàng gốm. Bài về 'đo từng video' mà không có phép đo nào.",
+     "fix": "Cho số minh hoạ: '18 video, trung vị 900 lượt xem, xem hết 22%; video bát ăn cơm 7.400 lượt, xem hết 61%, 210 lượt gửi' và dùng chính số đó cho Q3."
+    },
+    {
+     "sev": "P1",
+     "where": "Q1 / Q6",
+     "quote": "Điều đó chứng minh số người theo dõi là yếu tố trực tiếp và duy nhất của đề xuất",
+     "issue": "Q1 và Q6 hỏi cùng một điều (follower không phải yếu tố trực tiếp nhưng tài khoản lớn vẫn có thể nhiều view); nhiễu dùng 'duy nhất', 'bất kỳ lợi thế nào', 'quan trọng nhất' — đoán được. Q7 c lặp lại nguyên văn tình huống.",
+     "fix": "Gộp Q1/Q6; thêm câu L4: cho 6 video của tài khoản 120 follower với lượt xem/xem hết/gửi, hỏi lời hứa nào nên lặp và vì sao không phải video nhiều view nhất."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) src + năm + ngày kiểm; (2) viết lại ví dụ với bảng số 6 tuần và dùng số đó cho calc; (3) thêm cơ chế phân phối thử và mốc kỳ vọng; (4) thêm phản ví dụ: tài khoản nhỏ có video 50.000 lượt nhưng 0 đơn vì không có bước kế tiếp — nối kn14-05 (trang cá nhân/đường dẫn); (5) gộp Q1/Q6, thêm câu L4 đọc bảng và câu L5 chọn lời hứa để lặp; (6) nêu ràng buộc sản xuất: 3 video/tuần tốn bao nhiêu giờ cho một cửa hàng 2 người."
+  },
+  {
+   "id": "B:kn16-04",
+   "title": "Đăng cùng một âm thanh, cùng một kiểu mỗi ngày: vì sao không giúp bảng đề xuất",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "TikTok mô tả rằng bảng “Dành cho bạn” thường tránh cho người xem thấy hai video liền nhau cùng âm thanh hoặc cùng người đăng, loại nội dung trùng lặp và nội dung đã xem, và cố ý đưa vào một số video ngoài sở thích để tạo đa dạng.",
+     "issue": "Mô tả thuật toán không có `src`, năm, ngày kiểm. Q1 chấm điểm theo trí nhớ về mô tả này.",
+     "fix": "Thêm src + năm + ngày kiểm + câu dự phòng."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) src + năm + ngày kiểm; (2) sửa mốc so 700 và nói rõ nền so; (3) thêm phản ví dụ: kênh đăng 5 video khác lời hứa nhưng vẫn 600 lượt vì chủ đề hẹp — đa dạng không thay được lời hứa đúng người; (4) thêm cách kiểm 'âm thanh nguội' bằng số (lượt dùng âm thanh theo ngày trong ứng dụng, với ghi chú kiểm màn hình); (5) thay Q1/Q4/Q7 bằng câu đọc dữ liệu 5 video tuần sau (xem hết, gửi, âm thanh) và câu L5 chọn biến đổi ở vòng kế."
+  },
+  {
+   "id": "B:kn16-05",
+   "title": "Spark Ads: biến video tự nhiên đã giữ được người xem thành quảng cáo",
+   "total": 65,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Theo trang trợ giúp của TikTok, Spark Ads là định dạng quảng cáo cho phép quảng bá một bài đăng tự nhiên có sẵn, và tương tác từ quảng cáo được tính cho bài đăng gốc. Nếu bài đăng là của creator, họ cấp cho nhà quảng cáo một mã uỷ quyền với thời hạn do họ chọn.",
+     "issue": "Mô tả tính năng và thủ tục của sản phẩm quảng cáo (lớp fast: giao diện/chính sách) không có `src`, ngày kiểm; Q5 và Q6 là câu nhớ nguyên văn mô tả này. Có hedge 'Kiểm lại điều kiện hiện hành trong Ads Manager' nhưng không có nguồn.",
+     "fix": "Thêm src trang trợ giúp Spark Ads (URL, ngày kiểm) và câu 'nếu Ads Manager khác, tin màn hình hiện hành'."
+    },
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "CPA: Spark Ads 10.000.000 ÷ 36 ≈ 277.800đ; video studio 10.000.000 ÷ 25 = 400.000đ. Thấp hơn khoảng 30%.",
+     "issue": "So CPA của hai quảng cáo khác creative mà không nêu cùng mục tiêu tối ưu, cùng đối tượng, cùng thời gian (Q2 có nói nhưng ví dụ không); với 36 vs 25 đơn, chênh 30% nằm trong vùng nhiễu của mẫu nhỏ — bài không nhắc. Số cũng không gắn nhãn minh hoạ.",
+     "fix": "Ghi điều kiện chạy (cùng mục tiêu, đối tượng, 14 ngày), gắn nhãn minh hoạ và thêm 'với vài chục đơn, chênh 30% chưa chắc; chạy thêm hoặc lặp'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) src + ngày kiểm cho Spark Ads và mã uỷ quyền; (2) gắn nhãn minh hoạ, nêu điều kiện chạy và nhiễu mẫu nhỏ; (3) thêm đánh đổi (bình luận hiện cùng quảng cáo, không sửa chú thích, thời hạn uỷ quyền) và liên kết kn12-05 về công bố tài trợ; (4) thêm bước quyết định với biên: 'biên mỗi đơn 350.000đ → CPA 400.000 lỗ, 278.000 lãi 72.000' để Q7 có số; (5) sửa mã lỗi calc, gộp Q3–Q4, thay Q5/Q6 (L1) bằng câu L4 đọc bảng ba quảng cáo (chi, đơn, biên) và câu L5 chọn video creator hay video của mình khi ngân sách còn 5 triệu."
+  }
+ ]
+}

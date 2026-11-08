@@ -1,0 +1,245 @@
+{
+  "mod": "dl07",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:dl07-01",
+      "scores": { "accuracy": 11, "depth": 7, "practical": 12, "examples": 8, "pedagogy": 5, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 60,
+      "bloom_items": ["L3", "L2", "L3", "L4", "L4", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "GA4 mặc định báo “người dùng hoạt động” (có phiên tương tác)", "issue": "Định nghĩa Active users của GA4 rộng hơn: người có phiên tương tác HOẶC khi GA thu được first_visit / engagement_time_msec. Khẳng định về nền tảng nêu như sự thật, không có `src`, rút gọn làm người học hiểu hẹp.", "fix": "Viết đủ định nghĩa, thêm `src` trỏ GA Help 'Active users' kèm ngày kiểm và câu 'nếu màn hình khác, tin trang chính thức'." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Luôn có: lượt xem ≥ phiên ≥ người dùng", "issue": "Trong GA4 một phiên có thể không có page_view (chỉ có sự kiện), nên 'luôn' là nói quá; đúng trong hầu hết web nhưng không phải định lý.", "fix": "Đổi thành 'trong thực tế gần như luôn…; ngoại lệ hiếm là phiên chỉ ghi sự kiện, không ghi lượt xem trang'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "12.000 lượt xem trang, 4.000 phiên, 2.500 người dùng", "issue": "Bộ số tự khớp (1,6 phiên/người, 3 trang/phiên) nhưng không gắn nhãn minh hoạ; không có tình huống thứ hai làm đổi kết luận.", "fix": "Đặt cờ assume; thêm phản ví dụ: web tin tức có 1,05 phiên/người và 1,2 trang/phiên — cùng ba con số nhưng câu chuyện khác." },
+        { "sev": "P2", "where": "Q7", "quote": "chỉ khi khách đăng nhập và web gửi mã người dùng thì mới gộp được", "issue": "Bỏ qua các cách gộp khác (Google signals cho người đăng nhập Google, dữ liệu mô hình hoá) — phát biểu tuyệt đối về nền tảng không nguồn.", "fix": "Đổi 'chỉ khi' thành 'cách chắc nhất là'; ghi chú các phương án khác có điều kiện." },
+        { "sev": "P2", "where": "Q2, Q5, Q7", "quote": "Số người dùng mới trong tuần", "issue": "Ba câu nhận lại ý chính của bài (L2); không câu nào buộc đọc một bảng hai kỳ hay đánh đổi.", "fix": "Thay Q2 bằng bảng 3 tuần với người dùng mới tăng nhưng phiên/người giảm và hỏi nên lo gì trước." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3.000 ÷ 2.000 = 1,5 ✓; sai 4,5 = 9.000/2.000 (lấy lượt xem) ✓, 3 = 9.000/3.000 (trang mỗi phiên) ✓ — cả hai là nhầm tử số, mã SAI_MAU_SO chưa chính xác. Ví dụ: 4.000/2.500 = 1,6 ✓; 12.000/4.000 = 3 ✓; 12.000/2.500 = 4,8 ≈ 'gần gấp năm' ✓." },
+      "claims": [
+        { "claim": "GA4 mặc định báo 'người dùng hoạt động' (có phiên tương tác)", "status": "unverified", "note": "Rút gọn so với định nghĩa GA Help (còn first_visit / engagement_time_msec). Không có src." },
+        { "claim": "Một người dùng cả điện thoại lẫn laptop có thể bị đếm thành hai", "status": "unverified", "note": "Đúng với reporting identity theo thiết bị; không nguồn." },
+        { "claim": "Shop gốm Bát Tràng: 12.000 / 4.000 / 2.500", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Q4 và Q6 buộc chẩn đoán từ hai chỉ số cùng đổi (người dùng đứng yên, phiên/người tăng); 'Lỗi hay gặp' về cộng người dùng theo ngày là lỗi thật và được kiểm lại ở Q5.",
+      "upgrade": "Thêm `src` GA Help cho định nghĩa Active users và Users/Sessions/Views (fast knowledge). Gắn nhãn minh hoạ cho bộ số. Thêm VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ (web tin tức: nhiều phiên/người nhưng ít trang/phiên) và ĐÀO SÂU (reporting identity, ngưỡng dữ liệu). Đổi Q2/Q7 thành câu đọc bảng 3 tuần (L4) và câu chọn chỉ số đầu báo cáo có biện hộ (L5)."
+    },
+    {
+      "id": "B:dl07-02",
+      "scores": { "accuracy": 11, "depth": 8, "practical": 13, "examples": 9, "pedagogy": 5, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 63,
+      "bloom_items": ["L4", "L3", "L3", "L3", "L2", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM / Q7", "quote": "Đánh dấu tràn lan làm tỉ lệ chuyển đổi đẹp giả và khiến nền tảng quảng cáo tối ưu sai hướng.", "issue": "Thiếu điều kiện: đánh dấu key event trong GA4 chỉ ảnh hưởng tối ưu quảng cáo khi key event đó được nhập làm conversion cho Google Ads (hoặc dùng làm mục tiêu đấu thầu). Tự nó chỉ đổi báo cáo.", "fix": "Thêm 'khi các key event này được nhập làm mục tiêu chuyển đổi của Google Ads / Meta…'; Q7 phương án a sửa tương ứng." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "(kiểm theo Google Analytics Help, 10/2026)", "issue": "Có câu 'kiểm theo' nhưng không có trường `src` với link bấm được; kiến thức fast bắt buộc có src.", "fix": "Thêm `src` 'Key events' và 'Session key event rate' của GA Help, ngày kiểm." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[2,\"SAI_TINH_TOAN\"],[40,\"SAI_MAU_SO\"]]", "issue": "40% = 6.000 ÷ 15.000 là dùng tử số cũ (mọi sự kiện), không phải sai mẫu số; 2% = 300/15.000 là quên bấm gọi.", "fix": "Gắn mã NHAM_TU_SO cho 40 và ghi lời giải 'bạn vẫn đếm 6.000 sự kiện cũ'; mã QUEN_MOT_THANH_PHAN cho 2." },
+        { "sev": "P2", "where": "Q5, Q7", "quote": "Nếu nó tăng gấp đôi, doanh nghiệp có vui hơn không", "issue": "Nhận lại nguyên văn quy tắc trong bài (L2); nhiễu của Q7 (phí, web chậm, giới hạn 3) phi lý nên đoán được.", "fix": "Đổi Q5 thành ba sự kiện ứng viên (gửi form, xem giá, bấm chat) và hỏi cái nào không nên là key event với lý do." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "300 form và 150 lượt bấm gọi trên 15.000 phiên", "issue": "Số minh hoạ không gắn nhãn; không có tình huống trong đó 'bấm gọi' không nên là chuyển đổi (ví dụ nút gọi bị bấm nhầm trên mobile 30%).", "fix": "Đặt cờ assume; thêm phản ví dụ về bấm gọi nhầm để dạy kiểm chất lượng key event." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (300 + 150) ÷ 15.000 = 3% ✓ với điều kiện không phiên nào có cả hai được nêu rõ ✓; sai 40 = 6.000/15.000 ✓ (tử số cũ), 2 = 300/15.000 ✓." },
+      "claims": [
+        { "claim": "GA4 gọi chỉ số này là session key event rate = số phiên có ít nhất một key event ÷ tổng phiên", "status": "unverified", "note": "Khớp định nghĩa GA Help theo hiểu biết của người chấm; bài ghi 'kiểm theo GA Help 10/2026' nhưng không có src." },
+        { "claim": "Đánh dấu nhiều key event khiến nền tảng quảng cáo tối ưu sai hướng", "status": "unverified", "note": "Chỉ đúng khi key event được nhập làm conversion cho nền tảng quảng cáo." },
+        { "claim": "Chuỗi lẩu: 6.000 chuyển đổi vs 300 đặt bàn; 15.000 phiên", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Quy tắc 'tăng gấp đôi mà không vui hơn thì không phải chuyển đổi' dễ dùng; Q6 (đổi định nghĩa → cắt chuỗi, lập mốc mới) là câu chẩn đoán tốt và nối với dl07-04 Q5.",
+      "upgrade": "Thêm điều kiện 'khi được nhập làm conversion' cho luận điểm tối ưu quảng cáo; thêm src GA Help. Thêm PHẢN VÍ DỤ (bấm gọi nhầm trên mobile) và ĐÀO SÂU (micro vs macro conversion, counting method once-per-session vs once-per-event). Thay Q5/Q7 bằng câu đánh đổi L5: web B2B có 2 chuyển đổi/tuần — nên thêm micro-conversion để nền tảng đủ tín hiệu không?"
+    },
+    {
+      "id": "B:dl07-03",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 14, "examples": 8, "pedagogy": 5, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L4", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "(GA4 không mở phiên mới khi gặp UTM giữa phiên như bản Universal Analytics cũ — kiểm theo Google Analytics Help, 10/2026.)", "issue": "Khẳng định về cách nền tảng vận hành (fast) không có trường `src`; đồng thời cơ chế 'chuyển đổi bị ghi công cho banner nội bộ' không được giải thích (phạm vi sự kiện vs phạm vi phiên), người học không biết vì sao vừa 'không mở phiên mới' vừa 'ghi đè nguồn'.", "fix": "Thêm src GA Help về session và traffic-source dimensions; giải thích 2 câu: nguồn phiên giữ nguyên, nhưng nguồn gắn với sự kiện/ghi công có thể lấy UTM mới." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "hệ thống không biết khách từ đâu và xếp vào direct", "issue": "Bài không nhắc 'Unassigned' — lỗi phổ biến không kém direct khi utm_medium không khớp quy tắc nhóm kênh mặc định (ví dụ medium = 'zalo'). Người học gắn UTM xong vẫn có thể thấy Unassigned và không hiểu.", "fix": "Thêm một đoạn: medium phải thuộc danh sách GA4 nhận (social, email, cpc, paid_social…) nếu không sẽ rơi vào Unassigned; thêm Q về trường hợp này." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[500,\"SAI_MAU_SO\"],[2.4,\"SAI_TINH_TOAN\"]]", "issue": "2,4 không phát sinh từ phép tính nào tự nhiên (2.400/12.000 = 0,2); phương án sai không định danh được lỗi.", "fix": "Thay 2,4 bằng 0,2 (quên nhân 100) với mã QUEN_NHAN_100." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "direct giảm từ 48% xuống 15%", "issue": "Số minh hoạ không gắn nhãn; không có ví dụ link UTM hoàn chỉnh dù ÁP DỤNG yêu cầu viết link.", "fix": "Đặt cờ assume; chèn một link mẫu đầy đủ: ?utm_source=zalo&utm_medium=social&utm_campaign=tet-2027." },
+        { "sev": "P2", "where": "Q1", "quote": "Vì link không mang thông tin nguồn nên hệ thống không biết khách từ đâu", "issue": "Nhận lại ý bài (L2); ba nhiễu dễ loại.", "fix": "Đổi thành câu phân biệt: link từ app Zalo không referrer (direct) vs link từ web zalo.me có referrer (referral) — hỏi báo cáo sẽ ghi gì." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2.400 ÷ 12.000 = 20% ✓; sai 500 = 12.000/2.400 × 100 (đảo mẫu số) ✓; 2,4 không có cơ chế lỗi rõ." },
+      "claims": [
+        { "claim": "GA4 không mở phiên mới khi gặp UTM giữa phiên như Universal Analytics", "status": "unverified", "note": "Khớp hiểu biết của người chấm về GA4; bài ghi 'kiểm theo GA Help' nhưng không có src." },
+        { "claim": "Giá trị UTM phân biệt chữ hoa và cách viết", "status": "unverified", "note": "Đúng (case-sensitive); không nguồn." },
+        { "claim": "Cà phê Đà Lạt: direct 48% → 15%; Zalo 2.400/12.000", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Quy ước viết thường + bảng chung là việc làm ngay rất cụ thể; Q5 (banner nội bộ: dùng sự kiện, không UTM) và Q6 (QR tờ rơi) mở rộng khái niệm sang tình huống mới.",
+      "upgrade": "Thêm đoạn về Unassigned và nhóm kênh mặc định, kèm src GA Help. Giải thích cơ chế UTM nội bộ ghi đè nguồn. Chèn link UTM mẫu và một bảng quy ước 3 dòng. Thêm PHẢN VÍ DỤ (Google Ads auto-tagging gclid: không cần UTM, gắn thêm có thể xung đột) và ĐÀO SÂU (referral exclusion cho cổng thanh toán). Đổi Q1 thành câu phân biệt direct/referral/Unassigned."
+    },
+    {
+      "id": "B:dl07-04",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L4", "L3", "L4", "L4", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "khách ở lại đủ lâu (thường khoảng 10 giây), hoặc xem từ hai trang, hoặc làm một chuyển đổi", "issue": "Khớp định nghĩa engaged session của GA4 nhưng không nói mốc 10 giây là mặc định có thể chỉnh (10–60 giây) và không có `src`.", "fix": "Thêm 'mặc định 10 giây, chỉnh được trong cài đặt luồng dữ liệu' + src GA Help 'Engaged sessions'." },
+        { "sev": "P2", "where": "TÌNH HUỐNG ↔ VÍ DỤ", "quote": "Con số 70% sếp thấy là “chỉ xem một trang” theo cách hiểu cũ", "issue": "Tình huống nói báo cáo hiện tại ghi 'tỉ lệ thoát 70%' nhưng GA4 không còn báo tỉ lệ thoát kiểu cũ; bài không nói con số 70% đến từ công cụ nào, người học không rõ hai con số 70%/30% cùng đến từ đâu.", "fix": "Nêu rõ: '70% là tỉ lệ phiên chỉ xem một trang lấy từ báo cáo tự dựng/cũ; GA4 báo tỉ lệ thoát = 1 − tỉ lệ tương tác = 30%'." },
+        { "sev": "P2", "where": "Q6", "quote": "GA4 chỉ đếm thời gian khi trang đang được chọn (in focus) trên trình duyệt", "issue": "Khẳng định nền tảng đúng theo hiểu biết người chấm nhưng nằm trong lời giải, không có src; lời giải dài hơn cả câu hỏi.", "fix": "Chuyển ghi chú này lên ĐÀO SÂU kèm src; lời giải chỉ giữ ý trung vị/phân bố." },
+        { "sev": "P2", "where": "Q1, Q3", "quote": "Phiên có tương tác, vì khách ở lại đủ lâu", "issue": "Q1 nhận lại định nghĩa; Q3 chỉ là 100 − 70.", "fix": "Thay Q3 bằng bảng: 5.000 phiên, 3.500 tương tác, 2.100 có cuộn 50%, 90 bấm CTA — hỏi tỉ lệ bấm CTA trên phiên tương tác và kết luận." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3.500/5.000 = 70% → thoát 30% ✓; sai 70 (nhầm chỉ số) ✓; 42,9 = 1.500/3.500 (chia cho phiên tương tác) ✓." },
+      "claims": [
+        { "claim": "Phiên có tương tác: ≥10 giây, hoặc ≥2 lượt xem, hoặc có chuyển đổi; tỉ lệ thoát = phần còn lại", "status": "unverified", "note": "Khớp định nghĩa GA4 theo hiểu biết người chấm; không src; thiếu ghi chú 10 giây là mặc định chỉnh được." },
+        { "claim": "GA4 chỉ cộng thời gian tương tác khi trang in focus", "status": "unverified", "note": "Khớp engagement_time_msec; bài ghi 'kiểm theo GA Help 10/2026' nhưng không src." },
+        { "claim": "Bài cold brew: 5.000 phiên, 3.500 tương tác", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ đúng trọng tâm (tab để mở >10 giây đạt mốc tương tác giả) và ĐÀO SÂU nêu đánh đổi của chỉ số mới; Q4 (blog 40% vs giỏ hàng 40%) và Q7 (trang Liên hệ: đo bấm gọi) dạy đọc chỉ số theo mục đích trang.",
+      "upgrade": "Thêm src GA Help và ghi chú mốc 10 giây chỉnh được. Làm rõ nguồn của con số 70% trong tình huống. Thêm bảng 4 cột (phiên, tương tác, cuộn, bấm CTA) vào ví dụ để phản ví dụ có số. Nâng Q3 lên L4 đọc bảng; thêm một câu L5: trang đích quảng cáo có tỉ lệ tương tác 85% nhưng chuyển đổi 0,3% — nên sửa trang hay sửa quảng cáo?"
+    },
+    {
+      "id": "B:dl07-05",
+      "scores": { "accuracy": 11, "depth": 8, "practical": 13, "examples": 8, "pedagogy": 5, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 62,
+      "bloom_items": ["L4", "L5", "L3", "L4", "L3", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM / Q4", "quote": "người làm tại nhà đổi IP liên tục nên cần gắn cờ trên thiết bị hoặc đi qua VPN có IP cố định", "issue": "Bộ lọc lưu lượng nội bộ của GA4 định nghĩa theo IP; 'gắn cờ trên thiết bị' đòi hỏi tự cài tham số traffic_type (qua GTM/cookie) — bài không nói cách làm, cũng không nói đây là việc kỹ thuật, nên đáp án Q4 nghe như một nút bấm sẵn có.", "fix": "Thêm một câu: 'gắn cờ = đặt tham số traffic_type=internal qua Tag Manager cho thiết bị đã đánh dấu; cần người kỹ thuật' + src GA Help 'Filter out internal traffic'." },
+        { "sev": "P2", "where": "Q6 ↔ VÍ DỤ", "quote": "tỉ lệ chuyển đổi toàn web tăng từ 1,2% lên 1,6%", "issue": "Ví dụ bớt 30% phiên (14.000 → 9.800) nên 1,2% phải thành ≈1,71%, không phải 1,6% (1,6% tương ứng bớt 25%). Kết luận không đổi nhưng số không khớp giữa ví dụ và câu hỏi.", "fix": "Đổi Q6 thành 'từ 1,2% lên 1,7%' hoặc nói rõ Q6 là web khác." },
+        { "sev": "P2", "where": "Q1", "quote": "Bạn chỉ xem được một lát cắt dữ liệu của phần phiên tăng thêm. Lát cắt nào tách được hai nghi vấn?", "issue": "Đáp án đúng 'Thành phố kèm thời gian ở lại' là hai chiều, mâu thuẫn với ràng buộc 'một lát cắt' của đề.", "fix": "Sửa đề thành 'một bảng hai chiều' hoặc đổi đáp án thành một chiều duy nhất (thời gian tương tác trung bình theo nguồn)." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "bộ lọc GA4 chỉ áp cho dữ liệu từ lúc bật và đã bật thì không hoàn tác được", "issue": "Khẳng định nền tảng (đúng theo hiểu biết người chấm: trạng thái Testing/Active/Inactive) nhưng không có src; kiến thức fast.", "fix": "Thêm src GA Help 'Data filters' và ngày kiểm." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "14.000 phiên, trong đó 2.800 từ IP văn phòng và 1.400 phiên dưới 1 giây", "issue": "Số minh hoạ không gắn nhãn; không nói GA4 lấy 'phiên dưới 1 giây' ở đâu (cần khám phá với thời gian tương tác).", "fix": "Đặt cờ assume; ghi 'đọc từ báo cáo khám phá: thời gian tương tác trung bình theo thành phố'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 14.000 − 2.800 − 1.400 = 9.800 ✓; sai 11.200 (quên bot), 12.600 (quên nội bộ) ✓. Q4 lời giải '20% phiên' = 2.800/14.000 ✓. Q6: 1,2% × 14.000 / 9.800 = 1,71% ≠ 1,6% (lệch nhẹ với ví dụ)." },
+      "claims": [
+        { "claim": "Bộ lọc GA4 chỉ áp từ lúc bật, không hoàn tác; nên để thử nghiệm trước", "status": "unverified", "note": "Khớp cơ chế Data filters (Testing → Active); không src." },
+        { "claim": "Phần lớn bot đã biết được lọc sẵn", "status": "unverified", "note": "GA4 tự loại bot theo danh sách IAB; không src." },
+        { "claim": "Gắn cờ nội bộ trên thiết bị khi IP đổi", "status": "unverified", "note": "Cần tự cài traffic_type; bài không nêu." },
+        { "claim": "Nội thất Bình Dương: 14.000 / 2.800 / 1.400 / 9.800 phiên", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Nguyên tắc 'ghi chú ngày bắt đầu lọc, không sửa tay số cũ, giữ bản thô' là thực hành đúng và được kiểm ở Q2/Q7; Q4 (nhân viên làm tại nhà) và Q5 (agency) mở rộng đúng hướng.",
+      "upgrade": "Giải thích cách gắn cờ nội bộ (traffic_type qua GTM) và ghi rõ là việc kỹ thuật; thêm src GA Help cho data filters và internal traffic. Sửa Q6 về 1,7% và Q1 về 'một bảng'. Thêm PHẢN VÍ DỤ (lọc theo hành vi xoá nhầm khách thật — hiện chỉ nằm ở Q4d) và ĐÀO SÂU (so sánh số GA4 đã lọc với hệ thống đơn để ước phần bot còn lọt). Thay Q7 (L2) bằng câu đọc bảng trước/sau lọc theo nguồn."
+    },
+    {
+      "id": "B:dl07-06",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 16, "examples": 10, "pedagogy": 6, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L2", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Doanh thu = phiên × tỉ lệ chuyển đổi × giá trị đơn", "issue": "Chuỗi nhân đúng nhưng bài không nêu trường hợp chuỗi đánh lừa: tỉ lệ chuyển đổi rơi vì cơ cấu lưu lượng đổi (thêm khách lạnh từ kênh mới), không phải web/ưu đãi hỏng — kết luận 'vấn đề nằm ở trang web hoặc ưu đãi' trong ví dụ là một trong vài khả năng.", "fix": "Thêm PHẢN VÍ DỤ: phiên không đổi nhưng 40% phiên nay đến từ TikTok thay vì tìm kiếm; tỉ lệ rơi do cơ cấu, cần tách theo kênh trước khi sửa web." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "20.000 × 2% × 60.000 đ = 24 triệu đồng", "issue": "Số minh hoạ không gắn nhãn (có bài thực hành với bộ số thứ hai nên mức phạt nhẹ).", "fix": "Đặt cờ assume." },
+        { "sev": "P2", "where": "Q5", "quote": "Khi số này xấu đi, ai sẽ làm gì khác đi?", "issue": "Nhận lại nguyên văn 'Mang theo'; trùng ý với dl08-10 (phép thử ra quyết định).", "fix": "Đổi thành câu tình huống: đồng nghiệp đưa 'tỉ lệ thoát' lên dashboard chính với lý lẽ nghe hợp lý; hỏi phản biện." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Mỗi ô trên dashboard phải trả lời được: nếu nó xấu đi, ai làm gì?", "issue": "Thiếu VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU; không nối sang dl07-10 (dashboard theo người đọc) dù hai bài kề nhau về chủ đề.", "fix": "Bổ sung ba phần và câu nối 'bài 10 sẽ tách dashboard theo người đọc'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30.000.000/60.000 = 500 đơn; 500/2% = 25.000 phiên ✓; sai 500 (quên chia tỉ lệ) ✓, 2.500 (chia 20%) ✓. Q6: 70/400 = 17,5% ✓ (vàng). Ví dụ: 20.000 × 2% × 60.000 = 24 triệu ✓. Bài thực hành: 12.000 × 3% × 75% × 800.000 = 216 triệu ✓; 12.000 × 3,5% × 80% × 780.000 = 262,08 triệu ✓." },
+      "claims": [
+        { "claim": "Chuỗi trà sữa 15 cửa hàng: 20.000 phiên, 2%, 60.000 đ", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Ngưỡng xanh/vàng/đỏ: vàng khi thấp hơn mục tiêu tới 25%", "status": "illustrative-labelled", "note": "Bài ghi 'ngưỡng tuỳ nghiệp vụ, thống nhất trước'." }
+      ],
+      "strengths": "Bài thực hành có đầu ra với bộ số thật (phòng khám nha khoa, hai tuần, chuỗi 4 bước) và rubric kiểm số học — hiếm trong module. Q6 buộc tính 17,5% rồi áp ngưỡng và nói việc làm (L4); Q2 so bốn bộ chỉ số có biện hộ.",
+      "upgrade": "Thêm PHẢN VÍ DỤ về cơ cấu lưu lượng đổi làm tỉ lệ chuyển đổi rơi, kèm bảng tách theo kênh; thêm ĐÀO SÂU về nhiễu tuần (đơn 400 ± bao nhiêu là bình thường) để ngưỡng vàng/đỏ không bắt nhiễu. Gắn nhãn số minh hoạ. Đổi Q5 sang câu phản biện tình huống; thêm câu L5 chọn giữa 'doanh thu' và 'lợi nhuận đóng góp' làm ô kết quả."
+    },
+    {
+      "id": "B:dl07-07",
+      "scores": { "accuracy": 13, "depth": 8, "practical": 13, "examples": 8, "pedagogy": 5, "assessment": 8, "data": 6, "clarity": 4 },
+      "total": 65,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L3", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Hỏi trước: xu hướng, so sánh hay tỉ trọng? Rồi mới chọn biểu đồ.", "issue": "Thiếu VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU; không có trường hợp bảng số thắng biểu đồ (ví dụ kế toán cần số chính xác, hay 2 giá trị thì ghi số còn hơn vẽ).", "fix": "Thêm PHẢN VÍ DỤ: so 2 cửa hàng chỉ cần hai ô số; bảng cho người cần tra số chính xác." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "cửa hàng Quận 1 đạt 320 triệu, gấp đôi cửa hàng Thủ Đức 160 triệu", "issue": "Số minh hoạ không gắn nhãn; ví dụ chỉ mô tả bằng chữ, bài về biểu đồ mà không có hình/bảng nào.", "fix": "Đặt cờ assume; chèn một bảng 5 cửa hàng xếp giảm dần để người học 'nhìn' được thanh ngang." },
+        { "sev": "P2", "where": "Q3", "quote": "Quận 1 cao hơn Thủ Đức bao nhiêu phần trăm?", "issue": "Phép tính không liên quan kỹ năng chọn biểu đồ; là chỗ duy nhất có số của bài quiz.", "fix": "Thay bằng câu đọc hình: trục cắt từ 90, cột 95 và 100 — chênh thật là mấy %, chênh nhìn thấy gấp mấy lần." },
+        { "sev": "P2", "where": "Q1, Q6", "quote": "Biểu đồ đường, trục ngang là tháng", "issue": "Nhận lại ý bài (L2); Q6 đáp án là câu tiêu đề mẫu trích nguyên trong KHÁI NIỆM.", "fix": "Q6 đổi thành chọn tiêu đề cho một bảng số cho sẵn (người học phải rút kết luận rồi mới chọn)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (320 − 160)/160 = 100% ✓; sai 50 = 160/320 ✓, 200 = 320/160 × 100 (tỉ số, không phải mức tăng) ✓. Q4: trục cắt 90: cột 5 và 10 đơn vị → trông gấp đôi, thật 5,3% ✓." },
+      "claims": [
+        { "claim": "Cột phải bắt đầu từ 0; tròn chỉ khi ≤ 3–5 phần; tránh 3D và trục kép", "status": "illustrative-labelled", "note": "Quy ước trình bày phổ biến, bài nêu như quy tắc thực hành (không phải khẳng định có số)." },
+        { "claim": "Shop giày: sàn 45%, web 30%, cửa hàng 25%; Quận 1 320 triệu, Thủ Đức 160 triệu", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Q2 so bốn hình cùng dữ liệu để trả lời một câu hỏi cụ thể (L5) và Q7 về trục kép tạo giao điểm vô nghĩa là hai câu hay; quy tắc 'tiêu đề là kết luận' nối tốt sang dl09-02.",
+      "upgrade": "Thêm bảng số minh hoạ (5 cửa hàng, 12 tháng) để bài có 'hình'. Thêm PHẢN VÍ DỤ (bảng thắng biểu đồ) và ĐÀO SÂU (biểu đồ đường cắt trục khi nào chấp nhận, small multiples thay trục kép). Thay Q3 bằng câu đọc hình L4 và Q6 bằng câu rút kết luận từ bảng. Gắn nhãn số minh hoạ. Ghi chú trùng với dl09-06 và phân công: dl07-07 chọn dạng, dl09-06 phát hiện bẫy."
+    },
+    {
+      "id": "B:dl07-08",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L5", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "tháng 2 năm nay 140 triệu, tháng 1 là 200 triệu → giảm 30%. Nhưng tháng 2 năm ngoái (cũng là tháng sau Tết) chỉ 125 triệu", "issue": "Số minh hoạ không gắn nhãn; ví dụ chưa cho thấy cách 'so theo tuần tương ứng với Tết' bằng số dù đó là ý riêng của bài cho Việt Nam.", "fix": "Đặt cờ assume; thêm bảng 4 dòng: tuần −2, −1, +1, +2 quanh Tết của hai năm." },
+        { "sev": "P2", "where": "ĐÀO SÂU", "quote": "Khái niệm kề cận là dự báo mùa vụ.", "issue": "Nêu tên khái niệm mà không có một bước làm (chỉ số mùa vụ = tháng ÷ trung bình năm).", "fix": "Thêm một câu: 'chỉ số mùa vụ tháng 1 = doanh thu tháng 1 ÷ doanh thu trung bình tháng; dùng để đặt mục tiêu tháng'." },
+        { "sev": "P2", "where": "Q7", "quote": "Chi phí tăng nhanh hơn doanh thu; cần xem lãi", "issue": "Đáp án dừng ở 'cần xem lãi' chung chung; có thể tính được: doanh thu +12% với chi quảng cáo +50% nghĩa là mỗi đồng quảng cáo tăng thêm sinh ít doanh thu hơn.", "fix": "Cho số chi quảng cáo hai kỳ và hỏi doanh thu tăng thêm trên mỗi đồng quảng cáo tăng thêm (L4)." },
+        { "sev": "P2", "where": "Q1", "quote": "Có thể do mùa; cần so với cùng kỳ năm trước", "issue": "Nhận lại ý tiêu đề (L2).", "fix": "Đổi thành bảng 3 tháng × 2 năm và hỏi tháng nào thật sự đáng lo." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (140 − 125)/125 = 12% ✓; sai 10,7 = 15/140 (chia năm nay) ✓, 15 = số tuyệt đối ✓. Ví dụ: 140/200 − 1 = −30% ✓." },
+      "claims": [
+        { "claim": "Tết âm lịch rơi vào các ngày dương lịch khác nhau mỗi năm", "status": "unverified", "note": "Đúng (cuối tháng 1 – giữa tháng 2); kiến thức phổ thông, không cần nguồn." },
+        { "claim": "Shop đồ ăn vặt: 200 / 140 / 125 triệu", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ (kỳ gốc bất thường vì xả hàng) và ĐÀO SÂU (đặt hai mốc cạnh nhau, để ý khi chúng trái chiều) là lập luận đúng nghề; Q4 (Tết lệch tháng) và Q5 (cửa hàng 8 tháng tuổi) là tình huống mới có biện hộ.",
+      "upgrade": "Thêm bảng tuần-quanh-Tết hai năm để ý 'so theo tuần tương ứng' có số; gắn nhãn số minh hoạ. Thêm một bước tính chỉ số mùa vụ trong ĐÀO SÂU. Nâng Q1 và Q7 lên L4 với số chi quảng cáo. Ghi nhận trùng với dl09-03 (ba mốc so sánh) và nối rõ hai bài."
+    },
+    {
+      "id": "B:dl07-09",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 15, "examples": 9, "pedagogy": 5, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM / Q5", "quote": "Lấy tín hiệu từ hệ thống đơn hàng, vì báo cáo GA4 có thể trễ nhiều giờ.", "issue": "Đúng cho báo cáo chuẩn (xử lý tới 24–48 giờ) nhưng bỏ qua báo cáo Realtime của GA4 (30 phút gần nhất, không có lịch sử/cảnh báo); người học có thể tưởng GA4 hoàn toàn không xem được tức thời. Không src.", "fix": "Thêm 'GA4 có Realtime nhưng không lưu lịch sử và không gửi cảnh báo; hệ thống đơn vẫn là nguồn đúng' + src." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "nếu đơn trong một giờ thấp hơn 50% mức trung bình cùng giờ của bốn tuần trước", "issue": "Ngưỡng 50% không có lý giải thống kê; với 24 đơn/giờ, độ lệch chuẩn ≈ √24 ≈ 5, nên 12 đơn ≈ 2,4 độ lệch — bài có thể nói vì sao 50% hợp ở mức này mà không hợp ở 1,5 đơn/giờ (Q7).", "fix": "Thêm vào ĐÀO SÂU quy tắc √n: ngưỡng nên cách mức thường ≥ 2√n; từ đó suy ra vì sao phải gộp khung giờ ít đơn." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Mỗi cảnh báo cần ba thứ: ngưỡng dựa trên mức bình thường, người nhận, việc làm đầu tiên.", "issue": "Thiếu VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU dù nội dung về báo động giả đã có trong Q7.", "fix": "Tách ý 'quá nhiều cảnh báo thì mọi người bỏ qua' thành PHẢN VÍ DỤ có số (mỗi ngày 6 cảnh báo giả → sau 2 tuần không ai mở)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Mức bình thường 11 giờ sáng thứ Bảy là 24 đơn, ngưỡng là 12", "issue": "Số minh hoạ không gắn nhãn.", "fix": "Đặt cờ assume." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 24 × 50% = 12 ✓; sai 36 (×1,5), 48 (×2) ✓. Q4: 6 × 24 = 144 đơn × 350.000 = 50,4 triệu ✓; sai 8,4 = 1 giờ ✓, 144 = số đơn ✓. Q7: 3 × 1,5 = 4,5 ≈ '4–5 đơn' ✓; 10% × 1,5 < 1 nên 0 đơn vẫn kích ✓." },
+      "claims": [
+        { "claim": "Báo cáo GA4 có thể trễ nhiều giờ", "status": "unverified", "note": "Đúng với báo cáo chuẩn; bỏ qua Realtime. Không src." },
+        { "claim": "Thương hiệu mỹ phẩm: 24 đơn/giờ, 6 giờ, 350.000 đ", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ba thành phần của cảnh báo (ngưỡng theo mức thường, người nhận, việc đầu tiên) là khung làm ngay; Q7 (gộp khung 3 giờ để mức thường đủ lớn) là câu L5 hay nhất module về nhiễu mẫu nhỏ, lời giải phương án a (10% vẫn kích) chỉ đúng hiểu lầm.",
+      "upgrade": "Thêm ghi chú về Realtime GA4 + src. Đưa quy tắc √n vào ĐÀO SÂU để ngưỡng 50% có lý do và nối với Q7. Bổ sung VÌ SAO HIỆU QUẢ và PHẢN VÍ DỤ (cảnh báo quá nhạy). Gắn nhãn số. Thêm câu L4 đọc bảng đơn theo giờ hai tuần và chọn giờ nào thật sự bất thường."
+    },
+    {
+      "id": "B:dl07-10",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 14, "examples": 10, "pedagogy": 5, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L2", "L5", "L3", "L5", "L4", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "lợi nhuận đóng góp = lãi gộp trừ chi quảng cáo", "issue": "Định nghĩa hẹp hơn thông lệ (biên đóng góp trừ cả phí sàn, vận chuyển, quà tặng — như dl08-05 dạy). Bài có định nghĩa rõ nên không sai, nhưng hai module dùng hai nghĩa cho cùng tên.", "fix": "Ghi 'lợi nhuận đóng góp sau quảng cáo' hoặc nói rõ đã gộp các chi phí biến đổi khác vào giá vốn; nối với dl08-05." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Hỏi “dashboard này cho ai, để quyết định gì?” trước khi chọn một con số nào.", "issue": "Thiếu VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU; Q7 (công ty 5 người) thực chất là phản ví dụ nhưng không có trong phần đọc.", "fix": "Đưa tình huống công ty nhỏ lên PHẢN VÍ DỤ; ĐÀO SÂU về bảng định nghĩa chỉ số (nguồn, công thức, kỳ tính) kèm 3 dòng mẫu." },
+        { "sev": "P2", "where": "Q1, Q6", "quote": "Mỗi tuần anh cần ra quyết định gì dựa trên số liệu?", "issue": "Nhận lại ý bài (L2).", "fix": "Đổi Q6 thành đoạn hội thoại trưởng phòng bán hàng liệt kê 8 chỉ số; hỏi chọn 3 và lý do." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 300 × 40% = 120; 120 − 45 = 75 triệu ✓; sai 255 = 300 − 45 (quên giá vốn) ✓, 120 (quên quảng cáo) ✓. Q4: nhóm B 6 chuyển đổi — mẫu nhỏ, kết luận đúng ✓." },
+      "claims": [
+        { "claim": "Công ty gia dụng Đà Nẵng: doanh thu 300 triệu, lãi gộp 40%, quảng cáo 45 triệu", "status": "illustrative-labelled", "note": "Bài ghi '(số minh hoạ)'." },
+        { "claim": "Nhóm A 90.000 đ/chuyển đổi (60), nhóm B 60.000 đ (6)", "status": "illustrative-labelled", "note": "Trong câu hỏi, bối cảnh rõ." }
+      ],
+      "strengths": "Ví dụ gắn nhãn minh hoạ (hiếm trong module); bảng định nghĩa chỉ số ('đơn' từ hệ thống bán hàng vs 'chuyển đổi' từ web) giải thích đúng vì sao hai dashboard cãi nhau (Q5). Q4 dạy không tắt nhóm theo 6 chuyển đổi; Q7 cho thấy nguyên tắc theo quyết định, không theo số lượng dashboard.",
+      "upgrade": "Thống nhất định nghĩa lợi nhuận đóng góp với dl08-05. Bổ sung VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ (công ty 5 người), ĐÀO SÂU (bảng định nghĩa 3 dòng mẫu; vì sao đơn 320 ≠ chuyển đổi 410: huỷ đơn, chặn cookie, đếm trùng). Nâng Q1/Q6 lên L4–L5. Thêm trong Q4 một quy tắc tay: cần ≥ 30–50 chuyển đổi mỗi nhóm trước khi so chi phí."
+    }
+  ],
+  "module_notes": {
+    "progression": "Mạch 01→05 (người dùng/phiên/lượt xem → key event → UTM/direct → tương tác/thoát → lọc nội bộ & bot) là trình tự đúng để làm sạch dữ liệu GA4 trước khi đọc; 06→10 chuyển sang dashboard, biểu đồ, so cùng kỳ, cảnh báo, dashboard theo người đọc — hợp lý. Tuy nhiên 5 bài GA4 (01–05) đều là kiến thức fast/periodic mà không bài nào có trường `src`, chỉ có câu 'kiểm theo GA Help 10/2026' trong văn bản ở 02, 03, 04; và chỉ 04, 08 có đủ ba phần VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU — tám bài còn lại cụt ở ví dụ, kéo điểm sư phạm và độ sâu xuống.",
+    "overlap": [
+      "dl07-06 Q5 ('khi số này xấu đi, ai làm gì khác') trùng ý với toàn bài dl08-10 (phép thử ra quyết định).",
+      "dl07-07 Q4/Q7 (trục cắt, trục kép) trùng với dl09-06 (biểu đồ gây hiểu lầm); dl07-07 Q6 (tiêu đề là kết luận) trùng dl09-02.",
+      "dl07-08 (so cùng kỳ) trùng phần lớn với dl09-03 (ba mốc so sánh) — cùng ý 'Tết/sale làm méo kỳ liền trước'.",
+      "dl07-06 và dl07-10 cùng dạy chọn ô dashboard; chưa phân vai rõ (06: chuỗi nhân; 10: theo người đọc)."
+    ],
+    "gaps": [
+      "Nhóm kênh mặc định và 'Unassigned' — nguyên nhân phổ biến thứ hai sau direct khi utm_medium đặt sai; bài 03 không nhắc.",
+      "Nhập key event sang Google Ads/Meta làm conversion và vì sao điều đó mới ảnh hưởng tối ưu quảng cáo (bài 02 nói như tự động).",
+      "Sự kiện thương mại điện tử (purchase, value, currency) và đối chiếu doanh thu GA4 với hệ thống đơn — lý do con số 320 đơn vs 410 chuyển đổi ở bài 10 chưa được giải thích.",
+      "Mất dữ liệu do chặn cookie/consent và ngưỡng dữ liệu (thresholding) khiến số GA4 thấp hơn thật — không bài nào cảnh báo.",
+      "Nhiễu thống kê khi đặt ngưỡng dashboard/cảnh báo (quy tắc √n) chỉ xuất hiện ngầm ở bài 09 Q7."
+    ],
+    "best_lesson": "B:dl07-08",
+    "weakest_lesson": "B:dl07-01"
+  }
+}

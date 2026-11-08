@@ -1,0 +1,186 @@
+{
+  "mod": "kn07",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn07-01",
+      "scores": { "accuracy": 12, "depth": 7, "practical": 13, "examples": 8, "pedagogy": 6, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 63,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L2", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "9 triệu lượt hiển thị có chất lượng, cộng sampling tại cửa hàng mới, tổng khoảng 3 tỉ", "issue": "Con số then chốt (CPM 250.000đ cho Hà Nội, 1,5 triệu người, 6 lần) không được gắn nhãn minh hoạ và không nói CPM này là kênh gì; 250.000đ/CPM cao hơn hẳn mức số thường gặp nên người học có thể tưởng là chuẩn thị trường.", "fix": "Thêm 'số minh hoạ' và một dòng: '1,5 triệu người × 6 lần = 9 triệu lượt; với CPM giả định 250.000đ (kênh video/OOH) → 2,25 tỉ; sampling ~0,75 tỉ'. Nhắc rằng CPM phụ thuộc kênh, xin báo giá hiện hành." },
+        { "sev": "P2", "where": "Q2", "quote": "Chi hết số vốn gọi được để tăng trưởng nhanh nhất có thể", "issue": "Phương án nhiễu ở Q2 và Q7 là người rơm (chép đối thủ +10%, chi hết vốn) nên đáp án đúng nhận ra bằng giọng 'hợp lý' mà không cần đọc bài.", "fix": "Thay một nhiễu bằng phương án bênh được, ví dụ 'lấy 5% doanh thu dự phóng năm sau (gồm Hà Nội) thay vì năm nay' và giải thích vì sao vẫn thiếu phần xây nhận biết ban đầu." },
+        { "sev": "P2", "where": "Q3 wrong[0]", "quote": "[3.75,\"NHAM_SO_TUYET_DOI\"]", "issue": "3,75% = 4,5 ÷ 120 là quên cộng nhiệm vụ Hà Nội, không phải nhầm số tuyệt đối; nhãn lỗi không khớp.", "fix": "Đổi nhãn thành QUEN_CONG_NHIEM_VU hoặc tương tự." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (4,5+3)/120 = 6,25% ✓ (16 = 120/7,5 ✓ SAI_MAU_SO). Q6: 9.000 × 250.000 = 2.250.000.000đ = 2.250 triệu ✓; 375 = 1,5 triệu người × 250.000/1.000 ✓ quên tần suất. Ví dụ: 7,5/120 = 6,25% ✓ khớp Q3." },
+      "claims": [
+        { "claim": "Chuỗi trà sữa 40 cửa hàng, doanh thu 120 tỉ, CPM Hà Nội 250.000đ", "status": "illustrative-unlabelled", "note": "Không có tên thật; số tự đặt nhưng bài không nói là minh hoạ." },
+        { "claim": "Cách theo % doanh thu 'đi ngược logic', năm khó cắt đúng lúc cần giữ trí nhớ", "status": "unverified", "note": "Lập luận chuẩn trong giáo trình ngân sách, không gắn nguồn; không cần nguồn nhưng nên nói đây là lý lẽ, không phải bằng chứng." }
+      ],
+      "strengths": "Tình huống có xung đột thật (CFO vs mở thị trường mới) và ví dụ nối thẳng nhiệm vụ → lượt hiển thị → tiền; Q6 buộc tính CPM từ lượt.",
+      "upgrade": "Để đạt ≥85: (1) thêm 'Vì sao hiệu quả', 'Phản ví dụ' (ví dụ: ngành phân phối bão hoà, % doanh thu lại là mốc hợp lý vì nhiệm vụ không đổi) và 'Đào sâu' (ngân sách theo mục tiêu cần giả định CPM, tần suất hiệu dụng — nêu cách lấy); (2) gắn nhãn minh hoạ mọi số và tách bảng nhiệm vụ–chi phí 3 dòng; (3) thay Q4, Q7 (L2) bằng câu đọc bảng ngân sách 2 kịch bản và chọn kịch bản với lý do; (4) nối rõ sang kn07-03 (reach × tần suất) và kn07-02 (so với SOV đối thủ ở Hà Nội)."
+    },
+    {
+      "id": "B:kn07-02",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 14, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Quy tắc kinh nghiệm hay được nhắc (Binet và Field, IPA): mỗi +10 điểm ESOV tương ứng khoảng +0,5 điểm thị phần mỗi năm", "issue": "Benchmark nghiên cứu nêu tên tác giả nhưng không có `src` (link, năm, ngày kiểm). Theo thang, kiến thức periodic bắt buộc có nguồn và ngày kiểm.", "fix": "Thêm src: Binet & Field, 'Marketing in the Era of Accountability' / IPA Databank (2007) hoặc Jones (1990) 'Ad spending: growing market share', kèm ngày kiểm và câu 'hệ số dao động theo ngành, thương hiệu lớn thường cần ít ESOV hơn'." },
+        { "sev": "P2", "where": "LỖI HAY GẶP", "quote": "Tính share of voice theo số tiền của mình chia cho tổng ngành không gồm chính mình", "issue": "Lỗi hay gặp này đúng nhưng ví dụ chỉ nói '200 − 16 + X' mà không giải thích vì sao 16 nằm trong 200 trước khi dùng; người học lần đầu dễ không hiểu phép trừ.", "fix": "Viết rõ: 'Năm ngoái hãng chi 16 tỉ = 8% × 200, nên đối thủ chi 184; năm nay tổng ngành = 184 + X'." },
+        { "sev": "P2", "where": "Q7", "quote": "Ước chi từ bảng giá quảng cáo nhân số lần xuất hiện quan sát được", "issue": "Đáp án đúng là phương án duy nhất mô tả một phép đo cụ thể; ba nhiễu đều phủ định dễ. Chưa có nhiễu bênh được (ví dụ dùng share of search làm proxy có điều kiện).", "fix": "Biến b thành phương án có điều kiện 'dùng share of search khi không có rate card, nhưng gọi đúng tên là chỉ báo sức khoẻ' và yêu cầu chọn phương án gần SOV nhất." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 14 − 8 = 6 điểm ✓ (75 = 6/8 tăng tương đối ✓; 22 = 14+8 ✓). Q4: X = 0,14 × 184 / 0,86 = 29,95 ≈ 30 ✓ (28 = 0,14 × 200 ✓ quên tổng tăng; 25,8 = 0,14 × 184 ✓). Ví dụ: ESOV +6 → +0,3 điểm/năm = 6/10 × 0,5 ✓." },
+      "claims": [
+        { "claim": "Binet và Field (IPA): +10 điểm ESOV ≈ +0,5 điểm thị phần/năm", "status": "unverified", "note": "Đúng với hiểu biết phổ biến về IPA Databank nhưng bài không có src/ngày kiểm." },
+        { "claim": "Hãng nước mắm 8% thị phần, ngành chi 200 tỉ", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Hedging tốt: nói rõ ESOV là 'la bàn', quan hệ trung bình, nhiều yếu tố xen vào; Q4 có bẫy mẫu số thật (14% × 200 = 28 sai) và lời giải nêu đúng hiểu lầm.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho quy tắc IPA kèm ngày kiểm; (2) thêm 'Phản ví dụ' (thương hiệu dẫn đầu ESOV âm nhẹ vẫn giữ thị phần nhờ phân phối — khi nào ESOV không giải thích) và 'Đào sâu' (ESOV theo nhóm khách/kênh, chất lượng sáng tạo nhân hệ số); (3) ví dụ bổ sung dòng chi phí: 30 tỉ thay 16 tỉ đổi lấy ~0,3 điểm thị phần ≈ bao nhiêu doanh thu, để người học ra quyết định đáng/không đáng; (4) thêm một câu L6: thiết kế cách theo dõi SOV quý (nguồn số, tần suất, ngưỡng cảnh báo)."
+    },
+    {
+      "id": "B:kn07-03",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L5", "L2", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q7 a", "quote": "Có người thấy 1 lần, có người thấy 10 lần; 3 là trung bình", "issue": "Đáp án đúng khẳng định chi tiết (có người 10 lần) không suy ra được từ dữ kiện; đúng về tinh thần nhưng sai về logic 'điều này có nghĩa là gì'.", "fix": "Viết lại: 'Mỗi người trong reach thấy số lần khác nhau; 3 chỉ là trung bình, cần xem phân bố'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "mở rộng reach lên 70%, tần suất khoảng 7", "issue": "Giả định ngầm là tổng lượt vẫn 20 triệu khi chuyển kênh (20 ÷ 2,8 = 7,1). Không nói kênh mới có CPM khác nên cùng tiền chưa chắc cùng lượt.", "fix": "Thêm 'giả sử cùng tiền mua được cùng số lượt ở kênh mới' hoặc nối sang kn07-04 (CPM hiệu dụng khác nhau)." },
+        { "sev": "P2", "where": "Q6", "quote": "Tăng gấp đôi ngân sách cho cùng một kênh số, reach thường thay đổi thế nào?", "issue": "Câu L2 nhận lại ý 'reach bão hoà' không có dữ kiện; có thể thay bằng câu đọc đường cong reach (bảng ngân sách–reach) để chẩn đoán điểm bão hoà.", "fix": "Cho bảng 3 mức ngân sách với reach 40/55/60% và hỏi mức nào tiền thêm chủ yếu mua tần suất." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 20.000.000 ÷ 2.000.000 = 10 ✓. Q4: reach% = 2/4 = 50; GRP = 50 × 10 = 500 ✓ (20 = 2 × 10 ✓; 5 = 0,5 × 10 ✓). Q5: 75 × 4 = 300 = 30 × 10 ✓. Ví dụ reach 70% → 20/(0,7 × 4) = 7,14 ✓ 'khoảng 7'." },
+      "claims": [
+        { "claim": "Hãng sữa hạt, 20 triệu lượt, nhóm 4 triệu nữ 25–40", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Mười lần trong bốn tuần cho một sản phẩm đã quen là dư", "status": "unverified", "note": "Ngưỡng tần suất hiệu dụng tuỳ ngành/kênh; Q5 có hedging 'ngưỡng tần suất còn tuỳ ngành và kênh' nhưng phần đọc nói như chắc chắn." }
+      ],
+      "strengths": "Đủ cấu trúc (vì sao, phản ví dụ, đào sâu) và 'Đào sâu' nêu đúng hai thứ agency hay giấu: reach cộng dồn theo tuần và phân bố tần suất. Q5 là câu đánh đổi thật (X vs Y cùng GRP).",
+      "upgrade": "Để đạt ≥85: (1) thêm bảng phân bố tần suất minh hoạ (1 lần: 40%, 2–3: 30%, 4–9: 20%, 10+: 10%) và hỏi 'reach hiệu dụng 3+' để biến Q7 thành L4; (2) gắn nhãn số minh hoạ và nêu ngưỡng tần suất là giả định theo ngành; (3) nối rõ sang kn07-04 khi chuyển kênh (CPM khác → lượt khác); (4) thay Q6 bằng câu đọc đường cong reach theo ngân sách."
+    },
+    {
+      "id": "B:kn07-04",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L5", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q5 c", "quote": "Chênh 7% không đủ để bỏ một kênh có thể chạm nhóm khác", "issue": "Nền tảng phim 160.000 chênh 6,7% so với video ngắn (150.000) nhưng chênh 20% so với thang máy (133.000) — kênh rẻ nhất; lời giải chọn mốc so sánh không nói rõ, và đáp án a gọi 'ba kênh gần nhau' trong khi 133 vs 160 là 20%.", "fix": "Viết: 'Chênh 7–20% tuỳ mốc; chưa đủ để loại hẳn một kênh có vai trò reach khác' và bỏ chữ 'gần nhau' ở a." },
+        { "sev": "P2", "where": "Q5 b", "quote": "Thang máy có giới hạn số người; dồn hết thì tần suất quá dày", "issue": "Dữ kiện 'giới hạn số người' của thang máy chỉ xuất hiện trong lời giải, không có trong bài đọc, nên người học không thể loại b bằng dữ kiện.", "fix": "Thêm vào tình huống hoặc đào sâu: 'màn hình thang máy chỉ phủ ~X toà nhà, reach tối đa Y người'." },
+        { "sev": "P2", "where": "Q7", "quote": "Vì sao CPM hiệu dụng vẫn chưa phải toàn bộ câu chuyện khi chọn kênh?", "issue": "Câu L2 nhận lại ý 'Đào sâu'; nhiễu a, b, d dễ loại.", "fix": "Thay bằng bài tập: nhà cung cấp A tự báo xem đủ 60%, bên đo độc lập báo 35% — tính lại CPM hiệu dụng và quyết định có giữ A không (L4)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 30.000 ÷ 0,2 = 150.000 ✓ (6 = 30 × 0,2 ✓; 36 = 30 × 1,2 ✓). Q4: 80.000 ÷ (0,6 × 0,5) = 266.667 ≈ 267 nghìn ✓ (133 = 80/0,6 ✓; 24 = 80 × 0,3 ✓). Ví dụ: 120.000/0,75 = 160.000 ✓; 80.000/0,6 = 133.333 ✓. Bài thực hành: sảnh 90/0,63 = 142,9k; banner 20/0,125 = 160k; YouTube 60/0,35 = 171,4k; 60tr/142,9k = 420; 40tr/160k = 250; 20tr/171,4k = 116,7 → tổng ≈ 787 nghìn ✓." },
+      "claims": [
+        { "claim": "CPM video ngắn 30.000, nền tảng phim 120.000, thang máy 80.000; tỉ lệ xem đủ 20%/75%/60%", "status": "illustrative-labelled", "note": "Ví dụ mở bằng 'Giả sử' cho tỉ lệ xem; CPM báo giá không gắn nhãn." },
+        { "claim": "tỉ lệ xem đủ do nhà cung cấp tự báo thường có độ lệch", "status": "unverified", "note": "Nhận định nghề hợp lý, không cần nguồn nhưng nên nêu cách đo độc lập (MRC/IAB viewability) với src." }
+      ],
+      "strengths": "Bài thực hành có ràng buộc thật (giới hạn chỗ bán, 120 triệu) và rubric đúng; phản ví dụ đổi hẳn thước đo (CPO thay eCPM) khi mục tiêu là đơn.",
+      "upgrade": "Để đạt ≥85: (1) đưa 'giới hạn reach của thang máy' vào bài đọc để Q5 có dữ kiện; (2) sửa lời giải Q5 về mốc chênh lệch; (3) thêm bảng 3 kênh × (CPM, tỉ lệ xem, tỉ lệ đúng nhóm, CPM hiệu dụng) ngay trong ví dụ; (4) thêm src định nghĩa viewability (MRC 50%/2s video) để chuẩn hoá '2 giây có logo' và ghi ngày kiểm; (5) thay Q7 bằng câu chẩn đoán số tự báo vs số độc lập."
+    },
+    {
+      "id": "B:kn07-05",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 13, "examples": 10, "pedagogy": 6, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 66,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Tức 85% tiền cho mùa có 70% doanh số: lệch có chủ ý, vì đó là lúc khách quyết định mua và giá mua đắt lên", "issue": "Lý do 'giá mua đắt lên' đi ngược chiều: nếu CPM mùa nắng tăng 25% thì 1,7 tỉ chỉ mua được 1,36 tỉ giá thường, tức phần hiển thị thực mùa nắng chỉ ≈ 8,16/(8,16+1,8) = 82%, không phải 85%; bài dùng giá đắt làm lý do dồn tiền nhưng chính giá đắt làm phần hiển thị thật thấp hơn tỉ lệ tiền. Người học sẽ không phân biệt được 'tỉ lệ tiền' và 'tỉ lệ hiển thị'.", "fix": "Tách hai con số: 85% tiền ≈ 82% lượt hiển thị quy đổi; nói rõ lý do dồn là nhịp mua, còn giá cao là chi phí phải chịu (và là lý do cân nhắc 'nền' ngoài mùa rẻ hơn)." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "quảng cáo còn tác dụng sau khi tắt nhưng phai dần, nên nền mỏng giữ ký ức rẻ hơn dựng lại", "issue": "Khẳng định định lượng (rẻ hơn) không có số/giả định; không có phản ví dụ hay đào sâu để nói khi nào dồn đợt lại đúng (ngân sách quá nhỏ để có nền trên ngưỡng).", "fix": "Thêm 'Phản ví dụ': ngân sách 1,2 tỉ thì nền 100 triệu/tháng dưới ngưỡng nhận ra, dồn đợt hợp lý hơn; thêm 'Đào sâu' về adstock/half-life ở mức khái niệm." },
+        { "sev": "P2", "where": "Q6 d", "quote": "Ký ức về hãng tan hết sau vài tuần, khách mùa sau coi như chưa biết", "issue": "Nhiễu cực đoan ('tan hết') nên dễ loại bằng từ tuyệt đối; cùng với 'khoá tài khoản' và 'tăng gấp đôi' làm Q6 thành L2 đoán được.", "fix": "Thay d bằng 'Ký ức phai nên tháng 3 phải chi thêm để dựng lại' — cũng đúng một phần — và yêu cầu chọn rủi ro *chính*, giải thích vì sao khách ngoài mùa chọn đối thủ nặng hơn." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 12 − 0,3 × 6 = 10,2; 10,2/6 = 1,7 ✓ (2 = 12/6 ✓; 1,95 = (12 − 0,3)/6 ✓). Q4: 1,7/1,25 = 1,36 ✓ (2,13 = 1,7 × 1,25 ✓; 1,28 = 1,7 × 0,75 ✓). Ví dụ 10,2/12 = 85% ✓." },
+      "claims": [
+        { "claim": "Kem chống nắng, 12 tỉ media, 70% doanh số tháng 3–8", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "CPM mùa nắng tăng 25% (số minh hoạ)", "status": "illustrative-labelled", "note": "Bài tự gắn nhãn." }
+      ],
+      "strengths": "Khái niệm nêu đủ ba kiểu (liên tục/dồn đợt/nhịp) và hai lực điều chỉnh (phai dần, giá mùa cao); Q4 là phép quy đổi giá có bẫy chiều.",
+      "upgrade": "Để đạt ≥85: (1) sửa đoạn 85% vs 82% như trên; (2) thêm 'Vì sao hiệu quả', 'Phản ví dụ' (ngân sách nhỏ → dồn đợt), 'Đào sâu' (phân bố 12 cột theo doanh số tháng, điều kiện bão hoà đo bằng gì); (3) thêm bảng 12 tháng × (doanh số %, tiền %, CPM hệ số) để người học tự chia; (4) đổi Q1/Q6 (L2) thành câu đọc bảng doanh số 3 năm và quyết định tháng nào đẩy (L4)."
+    },
+    {
+      "id": "B:kn07-06",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 13, "examples": 9, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÌ SAO HIỆU QUẢ (1)", "quote": "Tiếng nói chỉ có tác dụng khi vượt một ngưỡng để người ta nhận ra. Dưới ngưỡng đó, tiền chi vẫn nằm trong báo cáo nhưng không để lại gì trong trí nhớ khách", "issue": "Hiệu ứng ngưỡng nêu như luật phổ quát, không có nguồn, không có điều kiện; mâu thuẫn một phần với kn07-03 (reach có giá trị ở tần suất thấp) và với quan điểm 'không có ngưỡng, hiệu ứng cận biên giảm dần'.", "fix": "Viết mềm: 'Dưới một mức hiện diện nhất định, hiệu quả trên mỗi đồng thường thấp vì không đủ tần suất để nhớ và bị át bởi hãng lớn' và nối sang kn07-03." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Hãng lớn chi cho Cần Thơ khoảng 1,5 tỉ mỗi năm", "issue": "Không nói ước số này bằng cách nào (tỉ lệ dân số? quan sát rate card?); đây chính là bước khó nhất của phép kiểm tra trong tuần nhưng bài bỏ qua. Số không gắn nhãn minh hoạ.", "fix": "Thêm: 'ước bằng tỉ trọng dân số/ doanh số Cần Thơ (~3% của 50 tỉ) hoặc bằng số lần xuất hiện quan sát × rate card (xem kn07-02 Q7)'." },
+        { "sev": "P2", "where": "Q3, Q4", "quote": "SOV toàn quốc của hãng nhỏ là bao nhiêu %", "issue": "Hai câu calc chỉ là phép chia một bước đã có sẵn trong ví dụ (2/52, 1,5/3); không câu nào buộc ước chi đối thủ theo vùng hay so hai chiến trường ứng viên.", "fix": "Thay Q4 bằng: 'Hãng lớn chi 1,5 tỉ ở Cần Thơ và 4 tỉ ở Đà Nẵng; với 1,5 tỉ của bạn, SOV ở mỗi nơi là bao nhiêu, chọn nơi nào?'" }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 2/52 = 3,846 ≈ 3,8% ✓ (tol 0,1 bao được 3,85); 4 = 2/50 ✓; 96,2 ✓. Q4: 1,5/3 = 50% ✓; 2,9 ≈ 1,5/52 ✓. Ví dụ 1,5 + 0,5 = 2 tỉ ✓." },
+      "claims": [
+        { "claim": "Nước tăng lực mới 2 tỉ, hãng dẫn đầu 50 tỉ, Cần Thơ 1,5 tỉ", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Hãng lớn thường không phản ứng với tiếng thì thầm", "status": "unverified", "note": "Nhận định nghề, hợp lý, không cần nguồn nhưng là giả định." }
+      ],
+      "strengths": "Phản ví dụ đổi hẳn trục chiến trường (địa lý → kênh/nhóm khách khi hành vi mua online) và đào sâu nêu đánh đổi nội bộ thật (đội khó chịu khi thấy đối thủ ở chỗ mình bỏ).",
+      "upgrade": "Để đạt ≥85: (1) mềm hoá 'ngưỡng' và nối với kn07-03; (2) thêm bảng 3 chiến trường ứng viên (chi đối thủ ước, SOV nếu dồn, quy mô khách) để thực hiện ngay 'phép kiểm tra trong tuần'; (3) nêu cách ước chi đối thủ theo vùng; (4) thay Q4/Q7 bằng câu so hai chiến trường và câu L6 'đo gì sau 6 tháng ở Cần Thơ để xin mở rộng' (nhận biết, thị phần cửa hàng, doanh số/điểm bán)."
+    },
+    {
+      "id": "B:kn07-07",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L3", "L4", "L3", "L3", "L3", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q6 c (lời giải)", "quote": "Thấy nhiều thì dễ nhớ đúng hơn, không nhầm sang đối thủ", "issue": "Nói quá: nhớ nhầm sang đối thủ là lỗi gắn thương hiệu của mẫu (branding), tần suất cao không bảo đảm gắn đúng; lời giải tạo hiểu lầm 'cứ lặp là nhớ đúng'.", "fix": "Viết: 'Tần suất giải thích việc có nhớ hay không; nhớ nhầm sang hãng khác là dấu hiệu mẫu không gắn thương hiệu đủ rõ'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Nếu 10% trong số đó rơi vào lượt thừa tần suất", "issue": "Tầng 'mẫu yếu' được nêu trong khái niệm nhưng ví dụ dừng ở ba tầng; không nói cách đo tầng 4 (nhận biết gắn thương hiệu) nên chuỗi không khép.", "fix": "Thêm một dòng: 'tầng mẫu yếu đo bằng khảo sát nhớ có gắn tên; giả sử 70% nhớ đúng → 1,94 tỉ thật sự làm việc' kèm nhãn minh hoạ." },
+        { "sev": "P2", "where": "Q4 wrong[0]", "quote": "[61.5,\"QUEN_TI_LE_CHUYEN_DOI\"]", "issue": "61,5% là quên tầng thừa tần suất, không phải 'quên tỉ lệ chuyển đổi'; nhãn lỗi lệch nghĩa.", "fix": "Đổi nhãn thành QUEN_TANG_TAN_SUAT." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q1: 0,82 × 0,75 = 0,615 ✓. Q3: 5 × 0,82 × 0,75 = 3,075 ✓ (2,85 = 5 × 0,57 ✓; 3,75 = 5 × 0,75 ✓). Q4: 3,075 × 0,9 = 2,7675; /5 = 55,35% ≈ 55,4 ✓ (tol 0,2). Ví dụ: tầng không xem mất 4,1 × 0,25 = 1,025 tỉ ✓ 'hơn 1 tỉ'; sai người 0,9 tỉ ✓ khớp Q2." },
+      "claims": [
+        { "claim": "Hãng mỹ phẩm 5 tỉ; 18% sai người, 25% không xem, 10% thừa tần suất", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Lần thứ 20 mang lại rất ít và có thể gây khó chịu", "status": "unverified", "note": "Hợp lý, không gắn nguồn; ngưỡng tuỳ ngành." }
+      ],
+      "strengths": "Cơ chế nhân (không cộng) được dạy bằng Q1 có bẫy cộng 43%; ưu tiên vá tầng lớn nhất nối trực tiếp với số (1,025 vs 0,9 vs 0,3 tỉ); phản ví dụ chỉ đúng điều kiện (ra mắt → lặp có chủ đích).",
+      "upgrade": "Để đạt ≥85: (1) khép chuỗi với tầng 4 (mẫu yếu) và cách đo; (2) gắn nhãn minh hoạ, trình bày thành bảng 4 tầng × (tỉ lệ, tiền còn, tiền mất); (3) sửa lời giải Q6 c; (4) thêm câu L5: 'siết nhóm mục tiêu để sai người 18% → 8% làm CPM tăng 30%: tiền làm việc tăng hay giảm?' để dạy đánh đổi nêu ở Đào sâu; (5) nối sang kn07-04 (CPM hiệu dụng là cùng phép tính nhìn từ giá)."
+    },
+    {
+      "id": "B:kn07-08",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 16, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L5", "L5", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q7 c (lời giải)", "quote": "Hai chỉ số này thường báo trước khi thị phần kịp tụt", "issue": "Khẳng định share of search là chỉ báo dẫn trước thị phần là kết quả nghiên cứu (Binet, IPA 2020) nêu như sự thật, không nguồn, không điều kiện (chỉ đúng với ngành có hành vi tìm kiếm thương hiệu).", "fix": "Thêm src (Les Binet, 'Share of Search as a predictor of market share', IPA/EffWorks 2020) với ngày kiểm, và câu 'áp dụng khi khách có tìm tên thương hiệu; bột giặt mua ở siêu thị thì tín hiệu yếu hơn, nên kèm nhận biết'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Thị phần hãng 15%, SOV hiện 18%", "issue": "Tổng chi ngành (110 tỉ) chỉ xuất hiện ở Q3, không có trong tình huống/ví dụ, nên người đọc không tự kiểm được 18% và 13,5% khi đọc bài; số không gắn nhãn minh hoạ.", "fix": "Thêm vào tình huống: 'ngành chi khoảng 110 tỉ nửa năm (số minh hoạ)' và bảng 3 phương án × (chi, SOV, ESOV, tiết kiệm)." },
+        { "sev": "P2", "where": "Q6", "quote": "Cắt tầng rò trước, giữ tiền ở mùa bán chạy và thị trường chính", "issue": "Đáp án đúng gói đúng ba từ khoá của bài (tầng rò, mùa, thị trường chính) nên nhận ra bằng từ khoá; ba nhiễu là ba sai lầm điển hình đã nêu trong 'Lỗi hay gặp'.", "fix": "Cho dữ kiện bảng 4 kênh (như bài thực hành) và hỏi kênh nào cắt trước, vì sao — chuyển thành L4 có số." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 14/(110 − 20 + 14) = 14/104 = 13,46 ≈ 13,5% ✓ (12,7 = 14/110 ✓; 18,2 = 20/110 ✓). Q4: 13,5 − 15 = −1,5 ✓. Q5 lời giải: 17/107 = 15,9% ✓. Bài thực hành: 168 × 60k + 64 × 50k + 90 × 40k + 24 × 100k = 10,08 + 3,2 + 3,6 + 2,4 = 19,28 tỉ + 0,72 = 20 ✓; kịch bản cắt 7,14 + 3,6 + 2,4 + 0,72 = 13,86 ✓; cắt đều 13,28/19,28 = 68,9% → tần suất 8,3/5,5/6,9/4,1 ✓." },
+      "claims": [
+        { "claim": "Hãng bột giặt 20 tỉ nửa năm, thị phần 15%, ngành 110 tỉ", "status": "illustrative-labelled", "note": "Bài thực hành ghi 'Bối cảnh (minh hoạ)'; phần đọc không ghi." },
+        { "claim": "Share of search và nhận biết thường báo trước khi thị phần tụt", "status": "unverified", "note": "Không có src." },
+        { "claim": "lấy lại thường đắt hơn giữ (tuỳ ngành và quy mô thương hiệu)", "status": "unverified", "note": "Có hedging, không có nguồn." }
+      ],
+      "strengths": "Bài thực hành là media plan thật: reach × tần suất = lượt, chi = lượt/1.000 × CPM, trùng lặp YouTube–TV 70%, ngưỡng tần suất 6, mốc kiểm tra và điều kiện khôi phục — đúng chuẩn đào tạo thực chiến. Phản ví dụ nêu điều kiện cắt là đúng (dòng tiền, ngành co).",
+      "upgrade": "Để đạt ≥85: (1) đưa 110 tỉ và bảng 3 phương án vào phần đọc; (2) thêm src cho share of search và điều kiện áp dụng; (3) thay Q6 bằng câu đọc bảng 4 kênh và chọn kênh cắt (L4); (4) thêm câu về đối thủ cũng cắt (ngành 110 → 95): SOV mới là bao nhiêu, kết luận đổi không — dạy giả định về đối thủ mà Đào sâu đã nêu."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý: đặt ngân sách (01) → so với đối thủ bằng SOV/ESOV (02) → đọc kế hoạch media bằng reach/tần suất/GRP (03) → so kênh bằng CPM hiệu dụng (04) → chia theo thời gian (05) → chia theo không gian/chiến trường (06) → chẩn đoán rò rỉ (07) → tổng hợp để bảo vệ ngân sách (08). Bài 08 dùng lại đúng các công cụ của 02, 05, 07 nên đóng module tốt. Ba bài ngắn (01, 02, 05) thiếu 'Vì sao', 'Phản ví dụ', 'Đào sâu' nên kéo điểm module xuống; năm bài còn lại có đủ cấu trúc. Hai bài thực hành (04, 08) là điểm mạnh nhất của module.",
+    "overlap": [
+      "kn07-06 lặp cách tính SOV của kn07-02 (hai câu calc Q3/Q4 cùng dạng chia a/(a+b)) mà không thêm bước ước chi đối thủ theo vùng.",
+      "kn07-07 (tầng 'không được xem', 'sai người') là cùng phép tính với kn07-04 (CPM ÷ tỉ lệ xem ÷ tỉ lệ đúng nhóm) nhìn từ phía tiền thay vì giá; hai bài không nối với nhau rõ.",
+      "kn07-08 Q2 và kn07-01 Q2 cùng mô-típ 'trình nhiều phương án kèm số' — đáp án đúng cùng kiểu."
+    ],
+    "gaps": [
+      "Tần suất hiệu dụng và phân bố tần suất (reach 1+/3+, frequency cap theo kênh) chỉ được nhắc ở Đào sâu kn07-03, chưa có bài tính.",
+      "Chia ngân sách xây thương hiệu vs kích hoạt bán (brand/performance) — kn07-08 Q6 nhắc nhưng không có bài riêng.",
+      "Cách đo hiệu quả media sau khi chi: brand lift, nhận biết theo tháng, so trước–sau có đối chứng vùng (geo test) — module dừng ở lập kế hoạch, chưa có bài đo.",
+      "Ước chi đối thủ (SOV) từ dữ liệu quan sát: kn07-02 Q7 và kn07-06 đều cần nhưng không bài nào dạy cách làm.",
+      "CPM số theo đấu giá (CPM đổi theo mùa/nhóm mục tiêu) chỉ xuất hiện như giả định 25% ở kn07-05."
+    ],
+    "best_lesson": "B:kn07-04",
+    "weakest_lesson": "B:kn07-01"
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "mod": "tn02",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:tn02-01",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 9, "pedagogy": 6, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L2", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "TÌNH HUỐNG, Q1", "quote": "Cả gói thay đổi tốt hơn bản cũ, chưa rõ nhờ yếu tố nào", "issue": "Với 10.000 lượt/tuần chia đôi, 2,0% và 2,6% là ~100 so với ~130 đơn; dao động ±2√230 ≈ ±30 bằng đúng chênh lệch 30 đơn. Theo quy tắc của chính module (tn02-03), 'gói tốt hơn' chưa đứng vững, nhưng bài và đáp án Q1 coi là đã thắng.", "fix": "Thêm vào lời giải Q1 và ví dụ: 'và chỉ khi chênh lệch vượt dao động may rủi — ở đây ~100 vs ~130 đơn, chênh 30 ≈ ±30, nên gói mới cũng chưa chắc hơn (bài 03)'. Hoặc tăng lượt xem trong tình huống lên 50.000/tuần." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Khi cần thay nhiều thứ, hãy tách thành các lượt test nối tiếp", "issue": "Không nhắc phương án thay thế là thiết kế ma trận/factorial (tn03-04 dạy 2×2), vốn cho phép đổi hai yếu tố cùng lúc mà vẫn tách được tác động khi đủ lượt; lời giải Q7b 'Nhiều lượt xem không tự tách được yếu tố' vì thế hơi tuyệt đối.", "fix": "Thêm một câu: 'nếu lượt xem lớn, có thể dùng ma trận 2×2 (tn03-04) để test hai yếu tố cùng lúc mà vẫn tách được'." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Đổi nhiều thứ cùng lúc chỉ trả lời được \"gói nào tốt hơn\"", "issue": "Thiếu VÌ SAO HIỆU QUẢ / PHẢN VÍ DỤ / ĐÀO SÂU.", "fix": "Thêm phản ví dụ: trang cũ quá tệ, đổi gói là hợp lý rồi tách sau (chính Q7a); ĐÀO SÂU về chi phí thời gian của ba lượt test nối tiếp." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "rất có thể giá giảm 10% đóng góp phần lớn", "issue": "Phỏng đoán nêu như khả năng cao mà không có dữ liệu; chưa tính lãi mỗi đơn mất bao nhiêu khi giảm 20.000đ.", "fix": "Thêm phép tính: 'giảm 20.000đ trên đơn 199.000đ, nếu biên gộp 40% (≈80.000đ) thì lãi mỗi đơn giảm 25%; chuyển đổi phải tăng >33% mới hoà'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (2,6 − 2,0)/2,0 = 30% ✓; wrong 0.6 (điểm %) ✓, 23.1 = 0,6/2,6 ✓." },
+      "claims": [
+        { "claim": "Shop mỹ phẩm online, 10.000 lượt/tuần, 2,0% → 2,6%", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Hiện ngẫu nhiên hai giá cho hai khách là không công bằng (xem tn04-10)", "status": "unverified", "note": "Nhận định đạo đức/hành vi hợp lý, có liên kết bài, chưa có nguồn." }
+      ],
+      "strengths": "Ghi chú về công bằng giá khi test giá (dùng mã ưu đãi, theo khu vực) là chi tiết nghề ít bài dạy; Q6 (trang B tải chậm 2 giây) dạy 'khác biệt vô ý vẫn là khác biệt' và Q7 nêu đúng khi nào được đổi cả gói.",
+      "upgrade": "Thêm kiểm nhiễu cho 2,0% vs 2,6%; nhắc thiết kế ma trận là phương án thay thế; bổ sung ba phần cấu trúc; thêm phép tính lãi mỗi đơn khi hạ giá để Q2 'giá đi trước' có số."
+    },
+    {
+      "id": "B:tn02-02",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 16, "examples": 11, "pedagogy": 9, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 82,
+      "bloom_items": ["L4", "L3", "L3", "L4", "L4", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Voucher tạo thêm 2 điểm, tức 200 lượt mua lại trên 10.000 khách", "issue": "Không nói 2 điểm có vượt nhiễu không (1.200 vs 1.000, ±2√2.200 ≈ ±94 → vượt) và không tính chi phí voucher dù VÌ SAO (3) nói đó là bước quyết định: 1.200 lượt dùng voucher 15% trên đơn ~50.000đ ≈ 9 triệu để có 200 lượt thêm ≈ 45.000đ/lượt thêm.", "fix": "Thêm hai câu tính này vào ví dụ; chúng biến bài từ 'đo đúng' thành 'quyết định đúng'." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì sao chia theo số cuối mã khách chẵn/lẻ được coi là gần như ngẫu nhiên?", "issue": "L2 nhận lại ý bài; đáp án d lặp gần nguyên văn khái niệm.", "fix": "Đổi thành tình huống: 'mã khách cấp tăng dần theo ngày đăng ký; chia chẵn/lẻ vs chia nửa đầu/nửa sau danh sách — cách nào hỏng, vì sao'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "lấy 20.000 khách đã mua trong 30 ngày", "issue": "Số không gắn nhãn minh hoạ.", "fix": "Thêm '(số minh hoạ)'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 10.000 × (12% − 10%) = 200 ✓; wrong 400 = dùng 20.000 ✓, 2400 = 20.000×12% ✓. Kiểm thêm: chênh 200 trên nhiễu ±94 → đáng tin." },
+      "claims": [
+        { "claim": "Chuỗi trà sữa, voucher 15%, 18% vs 6%, 12% vs 10%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Bài tốt nhất module: giải thích thiên lệch chọn nhóm bằng ví dụ cụ thể, phản ví dụ 'kéo đơn về trước' (pull-forward) đúng và hiếm thấy ở tài liệu tiếng Việt; Q5 (kiểm cân bằng 61%/60%) và Q7 (giả định 'khách nguội đằng nào cũng không mua') là câu phân tích và đánh đổi thật.",
+      "upgrade": "Thêm kiểm nhiễu và chi phí voucher trên mỗi lượt mua thêm vào ví dụ (đủ để chạm 85+); thay Q6 bằng tình huống cách chia hỏng; gắn nhãn số minh hoạ."
+    },
+    {
+      "id": "B:tn02-03",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L3", "L3", "L3", "L4", "L4", "L2", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Khi so hai bản, cả hai cùng dao động nên chênh lệch dao động khoảng ±2×√(kA + kB)", "issue": "Quy tắc so số đơn tuyệt đối chỉ đúng khi hai bản có cùng số lượt xem (ví dụ bài luôn cho 1.000/1.000, 5.000/5.000). Bài không nêu điều kiện này; người học áp cho hai bản lệch lượt (thường gặp khi chia 60/40 hoặc một bản tắt sớm) sẽ ra kết luận sai. Cũng chưa nói quy tắc là xấp xỉ cho tỉ lệ nhỏ (dưới ~10%).", "fix": "Thêm hai câu điều kiện: 'chỉ dùng khi hai bản có lượt xem gần bằng nhau; nếu lệch, so tỉ lệ thay cho số đơn (hoặc quy về cùng 1.000 lượt). Quy tắc là xấp xỉ, đủ tốt khi tỉ lệ dưới khoảng 10%'." },
+        { "sev": "P2", "where": "Q5 why a", "quote": "Cỡ gửi không phải là thước đo; số đơn mới quyết định", "issue": "Nói quá: với tỉ lệ 8–10%, số gửi vẫn ảnh hưởng phương sai (n·p·(1−p)); với tỉ lệ nhỏ thì câu đúng, nhưng lời giải nêu như quy tắc chung.", "fix": "Viết 'ở tỉ lệ thấp, số đơn quyết định độ chắc nhiều hơn số gửi'." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "LỖI HAY GẶP: Thấy phần trăm tăng lớn mà không nhìn số đơn tuyệt đối", "issue": "Thiếu VÌ SAO / PHẢN VÍ DỤ / ĐÀO SÂU; không có trường hợp 'chênh vượt dao động nhưng vẫn không đáng làm' (được dạy ở bài 08) hay 'không vượt dao động không có nghĩa là bằng nhau' ngoài Q1c.", "fix": "Thêm phản ví dụ hai bản lệch lượt xem và ĐÀO SÂU nối sang bài 04 (cỡ mẫu) và 08 (ý nghĩa kinh doanh)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2√100 = 20 ✓. Kiểm ví dụ: 2√70 = 16,7 ≈ 17 ✓; 2√700 = 52,9 ≈ 53 ✓. Q5: 2√920 = 60,7 ≈ 61 ✓, chênh 120 ≈ 2× ✓. Q1a: 2√30 = 11 ✓. Q4: gấp đôi → giảm 29,3% ✓; gấp 10 → 3,16 lần ✓. Bài ÁP DỤNG: 2√140 = 23,7; chênh 20 < 23,7 → chưa kết luận." },
+      "claims": [
+        { "claim": "Quy tắc ±2√k ứng với mức tin cậy khoảng 95%", "status": "verified", "note": "Xấp xỉ Poisson/chuẩn, đúng cho đếm sự kiện hiếm; tự kiểm bằng tính toán." },
+        { "claim": "Shop giày, 30 vs 40 đơn trên 1.000 lượt", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Quy tắc ±2√k được nêu đúng, có mức tin cậy đi kèm, có quan hệ căn bậc hai (gấp 4 → nửa sai số) và mọi con số trong bài đều tự khớp; bài ÁP DỤNG có tiêu chí đạt rõ. Q4 và Q5 buộc tính thật.",
+      "upgrade": "Nêu điều kiện cùng lượt xem và giới hạn tỉ lệ nhỏ; bổ sung ba phần cấu trúc với phản ví dụ hai bản lệch lượt; thêm một câu L5: 'chênh 10 đơn trong ±17 — chạy thêm tốn 3 ngày hay chuyển sang B rẻ hơn, biện hộ'."
+    },
+    {
+      "id": "B:tn02-04",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 16, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L5", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "mỗi nhóm cần khoảng 16 × p × (1 − p) ÷ d² người", "issue": "Quy tắc Lehr đúng về dạng, nhưng dùng p của bản gốc; với p trung bình hai nhóm (4,5%) ra ≈ 6.900, tức công thức ước thấp khoảng 12%. Bài không dặn 'làm tròn lên'.", "fix": "Thêm: 'quy tắc hơi ước thấp; làm tròn lên 10–20% hoặc dùng p trung bình của hai bản'." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "khả năng phát hiện chênh thật khoảng 80%", "issue": "Nêu con số 80% nhưng không giải nghĩa: còn 20% khả năng bỏ lỡ chênh 1 điểm thật — hệ quả quan trọng khi đọc kết quả 'không khác biệt'.", "fix": "Thêm một câu: 'tức cứ 5 lần có chênh thật 1 điểm thì khoảng 1 lần test vẫn báo chưa thấy; kết quả hoà không chứng minh hai bản bằng nhau'." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "LỖI HAY GẶP: Muốn phát hiện chênh rất nhỏ trên trang ít lượt xem", "issue": "Thiếu VÌ SAO / PHẢN VÍ DỤ / ĐÀO SÂU.", "fix": "Phản ví dụ: trang có 100.000 lượt/ngày, cỡ mẫu không phải vấn đề mà vấn đề là chu kỳ tuần (bài 06)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 16×0,04×0,96/0,0001 = 6.144 ✓. Ví dụ: 2×6.144/1.500 = 8,2 → 9 ngày ✓; d = 0,005 → 24.576/nhóm, 49.152/1.500 = 32,8 ngày ✓. Q2: 12.288/300 = 41 ngày ✓. Q1b: 1.000 lượt → 40 đơn, ±12,6 ✓. Bài thực hành: 16×0,1×0,9/0,0004 = 3.600 ✓." },
+      "claims": [
+        { "claim": "Quy tắc 16·p(1−p)/d² ứng với hai phía, 5%, 80%", "status": "verified", "note": "Quy tắc Lehr (van Belle), đúng dạng; tự kiểm." },
+        { "claim": "Nước mắm online, 4%, 1.500 lượt/ngày", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Công thức có đủ điều kiện áp dụng, mọi phép tính tự khớp, bài thực hành có rubric số; Q5 là câu đánh đổi thật (thêm vào giỏ vs đặt hàng) và Q7 (Flash Sale) dạy mẫu phải đại diện, không chỉ đủ lớn.",
+      "upgrade": "Dặn làm tròn lên và giải nghĩa 80%; bổ sung ba phần cấu trúc; thêm một câu L4 đọc kết quả 'hoà' sau đủ mẫu (không khẳng định bằng nhau)."
+    },
+    {
+      "id": "B:tn02-05",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L2", "L5", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Cách đúng: chốt cỡ mẫu trước, xem để kiểm tra lỗi kỹ thuật, nhưng chỉ ra quyết định khi đủ mẫu.", "issue": "Nêu kiểm định cỡ mẫu cố định là 'cách đúng' duy nhất; mọi lần đọc giữa chừng bị gọi là nhìn trộm. Thực tế có thiết kế đọc nhiều lần hợp lệ (kiểm định tuần tự / chia ngưỡng theo lần đọc) mà nhiều công cụ A/B dùng. Oversimplification nêu như sự thật; người học sẽ bác kết quả của công cụ có 'always valid' một cách sai.", "fix": "Thêm một câu: 'nếu muốn đọc nhiều lần, phải dùng phương pháp thiết kế cho việc đó (kiểm định tuần tự; mỗi lần đọc đòi ngưỡng chặt hơn) — đọc nhiều lần với ngưỡng 5% thường mới là nhìn trộm'." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "xem 15 lần và dừng ở lần đầu thấy \"có ý nghĩa\" thì khoảng 20–30% số test báo thắng giả", "issue": "Số từ 'mô phỏng' không nguồn, không nhãn. Tự mô phỏng (2 bản p = 5%, 15 lần đọc đều, z > 1,96) cho ≈ 22% → con số đúng cỡ, nhưng cần ghi cách ra số.", "fix": "Ghi 'mô phỏng của chúng tôi: hai bản 5%, 400 lượt/nhóm mỗi lần đọc, 15 lần → ~22%' hoặc dẫn nguồn." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "LỖI HAY GẶP: Coi \"B dẫn liên tục 3 ngày\" là bằng chứng đủ mạnh", "issue": "Thiếu VÌ SAO / PHẢN VÍ DỤ / ĐÀO SÂU.", "fix": "Phản ví dụ: test đang gây lỗ lớn rõ ràng (B làm doanh thu giảm 40% trên mẫu đã khá) — dừng vì thiệt hại, có ghi là 'dừng sớm, không kết luận'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2×6.000/800 = 15 ngày ✓. Ví dụ: ngày 3 = 2.400 lượt = 20% ✓; 1.200×5% = 60 đơn, ±2√60 = 15,5; ±2√75 = 17,3 ✓; chênh 15 đơn trong ±2√135 ≈ 23 ✓. Q6: 300 vs 312 đơn, ±2√612 ≈ 49 → chênh 4% trong nhiễu ✓ khớp đề." },
+      "claims": [
+        { "claim": "Đọc 15 lần, dừng khi có ý nghĩa → 20–30% thắng giả thay vì 5%", "status": "unverified", "note": "Mô phỏng độc lập cho ~22%; hướng và cỡ đúng, thiếu nguồn/nhãn." },
+        { "claim": "App giao đồ ăn, 800 lượt/ngày, B dẫn 25% ngày 3", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Giải thích cơ chế 'mỗi lần nhìn là một lần cho may rủi cơ hội' đúng và dễ nhớ; Q4 (lý do chính đáng dừng sớm = lỗi thanh toán) và Q6 (hoà sau đủ mẫu → chọn bản rẻ) là hai quyết định đúng nghề; ví dụ số tự khớp với quy tắc bài 03.",
+      "upgrade": "Nêu kiểm định tuần tự là phương án hợp lệ để không tuyệt đối hoá; ghi cách ra số 20–30%; bổ sung ba phần cấu trúc; thêm một câu L4: cho bảng chênh theo ngày của một test (25%, 12%, −3%, 6%…) và hỏi ngày nào được đọc."
+    },
+    {
+      "id": "B:tn02-06",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 9, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L5", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "ĐÀO SÂU", "quote": "xem kết quả theo ngày thường và cuối tuần ngay trong lúc chạy, dừng sớm với bản thua rõ ở nhóm lớn", "issue": "Mâu thuẫn trực tiếp với bài 05 vừa dạy (chỉ dừng sớm khi có lỗi kỹ thuật; nhìn giữa chừng rồi dừng là nhìn trộm). 'Thua rõ' giữa chừng chính là điều bài 05 nói là chưa chắc.", "fix": "Viết lại: 'xem theo nhóm ngày để chuẩn bị giả thuyết, nhưng không dừng theo con số giữa chừng (bài 05); chỉ dừng khi bản mới gây lỗi hoặc thiệt hại rõ ràng, có ghi là chưa kết luận'." },
+        { "sev": "P2", "where": "Q5", "quote": "Hai kiểu khách phản ứng khác nhau; cân nhắc hiển thị theo ngày", "issue": "Chia nhóm sau khi thấy kết quả là so nhiều phép (bài 07, 09); lời giải nhắc 'test xác nhận' nhưng không nói vì sao bắt buộc.", "fix": "Thêm 'phát hiện theo nhóm sau khi chạy là giả thuyết, vì xem nhiều nhóm sẽ có nhóm lệch do may (bài 09); phải test lại riêng'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Hơn một nửa đơn đến từ cuối tuần", "issue": "Số đúng (200/350 = 57%) nhưng không gắn nhãn minh hoạ (đã có 'Giả sử' nên chấp nhận một phần).", "fix": "Giữ 'Giả sử', thêm '(số minh hoạ)'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (150 + 200)/9.000 = 3,89% ✓ (khác trung bình cộng 4% như lời giải nói). Q6: 10 ngày liền → 3 thứ xuất hiện 2 lần, 4 thứ 1 lần ✓." },
+      "claims": [
+        { "claim": "Cơm văn phòng: cuối tuần lượt xem gấp đôi, khách gia đình", "status": "illustrative-labelled", "note": "Ví dụ mở bằng 'Giả sử'." }
+      ],
+      "strengths": "Phân biệt rõ 'đủ cỡ mẫu' với 'mẫu đại diện' và 'chia ngẫu nhiên công bằng' với 'đủ kiểu khách' (Q7); phản ví dụ bếp đóng cuối tuần đổi đúng kết luận; Q3 dạy trung bình có trọng số thay cho trung bình cộng.",
+      "upgrade": "Sửa ĐÀO SÂU để khớp bài 05; nêu rủi ro so nhiều nhóm ở Q5; thêm câu L4 đọc bảng lượt/đơn theo thứ trong tuần để tự quyết định độ dài test."
+    },
+    {
+      "id": "B:tn02-07",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 16, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L3", "L5", "L3", "L4", "L5", "L5", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "A dẫn 3,2%, và thắng nếu mức chênh này vượt dao động may rủi của số lượt đã chạy", "issue": "Doanh thu mỗi lượt xem là chỉ số liên tục (phụ thuộc phương sai giá trị đơn), quy tắc ±2√k đếm đơn của bài 03 không áp dụng được; bài không cho cách ước nhiễu nào khác và không nói chỉ số 'gần tiền' cần mẫu lớn hơn nhiều so với chuyển đổi. Thiếu điều kiện này, lời khuyên 'chọn chỉ số càng gần tiền càng tốt' có thể làm test không bao giờ đọc được.", "fix": "Thêm: 'doanh thu mỗi lượt xem dao động mạnh hơn tỉ lệ đơn (vài đơn lớn kéo lệch), nên cần mẫu lớn hơn nhiều; cách thô: cắt bỏ đơn ngoại lệ hoặc dùng tỉ lệ đơn làm chỉ số chính và giá trị đơn làm rào chắn khi lượt xem ít'." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "LỖI HAY GẶP: Xem hàng chục chỉ số rồi báo cáo cái đang thắng", "issue": "Thiếu VÌ SAO / PHẢN VÍ DỤ / ĐÀO SÂU.", "fix": "Phản ví dụ: rào chắn đặt quá chặt (hoàn đơn không được tăng dù 0,1 điểm) chặn mọi cải tiến; cần biên dung sai." },
+        { "sev": "P2", "where": "Q7", "quote": "Lý do QUAN TRỌNG NHẤT để ghi chỉ số chính vào kế hoạch TRƯỚC khi chạy test là gì?", "issue": "L2, lặp MANG THEO; đáp án dài và trang trọng hơn nhiễu.", "fix": "Thay bằng câu L4: cho 6 chỉ số sau test với dấu ±, hỏi cái nào được phép dùng để kết luận." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3,4%×250.000 = 8.500đ; ×0,84 = 7.140đ ✓; A: 7.500×0,96 = 7.200đ ✓ khớp đề. Ví dụ: A 7.500 vs B 7.260, chênh 240 = 3,2% ✓. Khái niệm: 20 chỉ số × 5% = 1 thắng giả kỳ vọng ✓." },
+      "claims": [
+        { "claim": "Xem 20 chỉ số ở ngưỡng 5% → trung bình 1 chỉ số thắng nhờ may", "status": "verified", "note": "Kỳ vọng dưới giả thuyết không, giả định độc lập; tự kiểm." },
+        { "claim": "Shop gia dụng, freeship 150k vs 300k, A 3,0%/250k, B 3,3%/220k", "status": "illustrative-unlabelled", "note": "Q3 có nhãn '(số minh hoạ)', ví dụ chính không." }
+      ],
+      "strengths": "Khái niệm chỉ số chính + rào chắn đúng chuẩn nghề; ví dụ freeship đổi kết luận khi quy về doanh thu/lượt xem; Q5 (mở app tăng, tắt thông báo gấp đôi) và Q6 (lãi gộp sau phí ship) là câu đánh đổi tốt.",
+      "upgrade": "Nêu phương sai của chỉ số tiền và cách xử lý; bổ sung ba phần cấu trúc; thay Q7; thêm số lượt xem cho ví dụ để người học tự kiểm 'A dẫn 3,2%' có vượt nhiễu không."
+    },
+    {
+      "id": "B:tn02-08",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 17, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L4", "L3", "L2", "L5", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Hỏi \"thắng thật không\" xong, phải hỏi tiếp \"thắng bao nhiêu tiền\"", "issue": "Thiếu VÌ SAO / PHẢN VÍ DỤ / ĐÀO SÂU; ví dụ đã có hai tình huống đổi kết luận nên thiếu phần này ít hại hơn các bài khác.", "fix": "Thêm ĐÀO SÂU: ước lượng lãi tăng thêm cũng có khoảng (0,05 điểm ± nhiễu) → tính hoàn vốn ở kịch bản xấu." },
+        { "sev": "P2", "where": "Q7", "quote": "Chọn Y vì sau 3 tháng hoàn vốn, lãi mỗi tháng gấp gần 7 lần X", "issue": "Giả định mức tăng của Y kéo dài vô hạn; không xét rủi ro mức tăng phai (bài 10) hay chi phí vốn; a (ít rủi ro) có phần đúng nhưng lời giải chỉ nói 'giá trị dài hạn nhỏ hơn'.", "fix": "Thêm điều kiện 'nếu mức tăng giữ được ít nhất 6 tháng' vào đề để a rõ là kém hơn." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "bài này giả sử mức tăng là thật để hỏi câu tiếp theo", "issue": "Trung thực nhưng làm ví dụ tự mâu thuẫn với module (0,05 điểm cần 1,25 triệu lượt/nhóm); người học có thể nhớ nhầm rằng 0,05 điểm là mức đọc được.", "fix": "Đổi số: chuyển đổi 2,0% → 2,3% trên 50.000 lượt (đọc được) và giữ phép tính tương ứng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50.000×0,05% = 25 đơn; 25×3tr = 75tr; ×30% = 22,5tr ✓. Ví dụ: 22,5 − 5 = 17,5; 40/17,5 = 2,3 tháng ✓; cỡ mẫu cho d = 0,0005: 16×0,02×0,98/0,0005² ≈ 1,25 triệu ✓. Q2: 25×300.000×30% = 2,25tr < 5tr ✓. Q7: 60/20 = 3 tháng; 20/3 ≈ 6,7 ✓." },
+      "claims": [
+        { "claim": "Shop nội thất, 50.000 lượt/tháng, đơn 3 triệu, lãi gộp 30%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phân biệt ý nghĩa thống kê với ý nghĩa kinh doanh bằng hai kịch bản (đơn 3 triệu vs 300.000đ) đổi hẳn quyết định; tính hoàn vốn có trừ bảo trì; Q5 (đổi chữ nút gần miễn phí) chặn hiểu sai 'phải có ngưỡng tuyệt đối'.",
+      "upgrade": "Đổi số tình huống để ví dụ tự đọc được; thêm ĐÀO SÂU về khoảng của mức tăng và kịch bản xấu; thêm điều kiện thời gian cho Q7; nối rõ sang tn01-06 (ngưỡng đáng làm đặt trước)."
+    },
+    {
+      "id": "B:tn02-09",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L3", "L5", "L3", "L4", "L2", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "mốc 5.000 lượt mỗi nhóm cũng phải tăng theo", "issue": "Đúng hướng nhưng không cho độ lớn: ngưỡng 1% thay 5% làm cỡ mẫu tăng khoảng 1,6–1,7 lần; người học không biết 'tăng theo' là bao nhiêu để lập kế hoạch.", "fix": "Thêm 'khoảng gấp 1,6–1,7 lần, tức ~8.000–8.500 lượt mỗi nhóm'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "làm vòng loại bằng chỉ số xảy ra nhiều (tỉ lệ bấm), rồi lấy 2 bản dẫn đầu vào vòng chung kết đo bằng đơn hàng", "issue": "Không cảnh báo bản thắng CTR có thể thua về đơn (tn03-05 dạy chính điều này); vòng loại có thể loại oan bản bán tốt.", "fix": "Thêm 'rủi ro: vòng loại theo bấm có thể loại bản bán tốt nhưng ít gây tò mò; giữ bản cũ luôn vào chung kết'." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "LỖI HAY GẶP: Tin rằng test nhiều bản cùng lúc là cách nhanh nhất", "issue": "Thiếu VÌ SAO / PHẢN VÍ DỤ / ĐÀO SÂU.", "fix": "Phản ví dụ: lượt xem rất lớn (sàn lớn) thì 6 bản vẫn đủ mẫu trong 2 ngày; vấn đề chỉ còn là so nhiều phép." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 6×5.000/3.000 = 10 ngày ✓. Khái niệm: 1 − 0,95⁵ = 22,6% ≈ 'gần 23%' ✓; Bonferroni 5%/5 = 1% ✓. Q1: 1/2 → 1/6 lượt → gấp 3 ✓. Q2: 15.000/3.000 = 5 ngày → trọn tuần ✓." },
+      "claims": [
+        { "claim": "So 5 bản với gốc ở ngưỡng 5% → ≥1 thắng giả gần 23%", "status": "verified", "note": "1 − 0,95⁵ = 0,226; tự kiểm." },
+        { "claim": "Bonferroni: chia ngưỡng cho số phép so", "status": "verified", "note": "Đúng, có ghi tên phương pháp." }
+      ],
+      "strengths": "Nêu đúng hai cái giá của nhiều biến thể (chia mỏng lượt, so nhiều phép) với con số kiểm được; Bonferroni được gọi tên; Q4 ('vừa đủ vượt ngưỡng trong 6 bản' → test xác nhận) là cách đọc đúng nghề.",
+      "upgrade": "Định lượng mức tăng cỡ mẫu khi dùng 1%; cảnh báo vòng loại theo CTR; bổ sung ba phần cấu trúc; thêm câu L4 cho bảng 6 bản với số đơn để người học tự tính khoảng dao động và nhận ra bản D 'vừa đủ vượt'."
+    },
+    {
+      "id": "B:tn02-10",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 10, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L3", "L3", "L3", "L2", "L4", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Nếu người dùng mới cũng chỉ hơn khoảng 5%, con số đáng báo cáo là 5%", "issue": "Không có số người dùng trong mỗi tuần; 10% vs 10,5% có thể nằm trong nhiễu (ĐÀO SÂU nói vậy nhưng ví dụ vẫn chốt '5%'). Người đọc không tự kiểm được 5% có thật.", "fix": "Cho số: 'mỗi tuần ~20.000 người/nhóm → 2.000 vs 2.100 lượt bấm, ±2√4.100 ≈ ±128 → chênh 100 chưa vượt; cần gộp 2–3 tuần đi ngang mới đọc'." },
+        { "sev": "P2", "where": "Q7", "quote": "Đường đã đi ngang quanh 4–5%; đó là mức tăng lâu dài đáng tin hơn", "issue": "Kết luận 'đi ngang' không có khoảng nhiễu đi kèm; 4–5% lên xuống 1 điểm có thể là may rủi hoặc không, tuỳ mẫu.", "fix": "Thêm vào đề số lượt mỗi tuần để người học kiểm bằng ±2√k." },
+        { "sev": "P2", "where": "Q4, Q6", "quote": "Vì sao so riêng nhóm người dùng mới giúp nhận ra hiệu ứng mới lạ?", "issue": "Hai câu L2 nhận lại khái niệm; Q6 nhiễu dễ loại.", "fix": "Gộp thành một câu L4: cho chênh theo tuần của người cũ (40/15/5) và người mới (6/5/5) rồi hỏi kết luận." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (10,5 − 10)/10 = 5% ✓; wrong 0.5 (điểm %) ✓, 4.76 = 0,5/10,5 ✓." },
+      "claims": [
+        { "claim": "App đặt đồ ăn, nút nổi, 40% → 15% → 5%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Nêu cả hai chiều (tò mò phai và bỡ ngỡ rồi hồi — Q5 app ngân hàng), hai cách tách (đường theo tuần đi ngang, nhóm người dùng mới) đều đúng chuẩn; phản ví dụ 'nút nổi giảm bấm nhầm' ngăn chiết khấu máy móc.",
+      "upgrade": "Thêm cỡ mẫu theo tuần để 5% kiểm được; gộp Q4/Q6 thành câu đọc dữ liệu; thêm cảnh báo nhịp tuần (so tuần 1 với tuần 3 cần cùng cơ cấu ngày, bài 06)."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự chặt: một biến (01) → ngẫu nhiên (02) → nhiễu (03) → cỡ mẫu (04) → nhìn trộm (05) → chu kỳ tuần (06) → chỉ số chính (07) → ý nghĩa kinh doanh (08) → nhiều biến thể (09) → mới lạ (10). Bài 03–04 là trục; các bài sau đều dùng lại ±2√k và cỡ mẫu nên tính nhất quán số liệu tốt. Điểm gãy: ĐÀO SÂU của 06 cho phép dừng sớm theo kết quả nhóm, trái với 05; bài 01 kết luận 'gói thắng' trên mẫu mà 03 sẽ bảo là chưa đủ. 7/10 bài (01, 03, 04, 05, 07, 08, 09) dùng định dạng rút gọn thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU, kéo điểm sư phạm xuống dù nội dung thống kê đúng.",
+    "overlap": [
+      "tn02-10 (hiệu ứng mới lạ) trùng tn01-07 Q5 và chạm tn03-06 (creative mỏi) — cần phân vai: mới lạ = phản ứng người dùng cũ với giao diện; mỏi = lặp quảng cáo.",
+      "tn02-01 'mỗi lần một thứ' và tn03-04 'ma trận 2×2' dạy hai cách tiếp cận mà không bài nào nối với bài kia.",
+      "tn02-04 Q6 và tn02-05 cùng nói chốt cỡ mẫu trước để tránh dừng khi số đẹp."
+    ],
+    "gaps": [
+      "Không bài nào nói kiểm định tuần tự / phương pháp đọc nhiều lần hợp lệ; 05 tuyệt đối hoá cỡ mẫu cố định.",
+      "Thiếu điều kiện áp dụng ±2√k (cùng lượt xem, tỉ lệ nhỏ) và cách ước nhiễu cho chỉ số tiền (doanh thu/lượt xem) dù 07 khuyên dùng chỉ số đó.",
+      "Thiếu cách xử lý khi hai nhóm lệch lượt xem (chia 70/30, SRM) và khi người dùng vào cả hai nhóm (chia theo thiết bị/cookie).",
+      "Chưa nói 'hoà' sau đủ mẫu không chứng minh bằng nhau (khả năng phát hiện 80% nêu mà không giải nghĩa).",
+      "Không bài nào có src; mọi số đều minh hoạ, chỉ 06 và Q3 của 07 có nhãn."
+    ],
+    "best_lesson": "B:tn02-02",
+    "weakest_lesson": "B:tn02-01"
+  }
+}

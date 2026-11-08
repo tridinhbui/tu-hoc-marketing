@@ -1,0 +1,35 @@
+{
+ "mod": "kn10",
+ "lessons": [
+  {
+   "id": "B:kn10-01",
+   "title": "Năm kênh chạy năm câu chuyện — sao khách không nhớ gì?",
+   "total": 65,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q4",
+     "quote": "Cách kể nào trên TikTok vẫn giữ đúng ý?",
+     "issue": "Đề chỉ hỏi 'giữ đúng ý'; phương án d (đăng lại nguyên TVC) cũng giữ đúng ý, chính lời giải thừa nhận 'Đúng ý nhưng sai định dạng'. Theo nghĩa đen của đề có hai phương án thoả.",
+     "fix": "Sửa đề thành 'Cách kể nào vừa giữ đúng ý vừa hợp định dạng TikTok?'"
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa đề Q4; (2) thêm phần PHẢN VÍ DỤ (khi nào một ý xuyên kênh là thừa: đợt xả hàng ngắn, thương hiệu đã rất nổi) và ĐÀO SÂU (đánh đổi reach vs frequency, cách đo 'nhớ' bằng khảo sát có gợi ý/không gợi ý); (3) gắn số minh hoạ cho ví dụ (mức nhớ trước/sau, tần suất) và nhãn 'số minh hoạ'; (4) thay Q3 bằng câu chẩn đoán từ hai ấn phẩm mô tả cụ thể; (5) thêm một câu L5 chọn giữa hai ứng viên ý tưởng với lý do đánh đổi."
+  },
+  {
+   "id": "B:kn10-05",
+   "title": "Có 50 triệu thì kế hoạch khác 5 tỷ ở đâu?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM, Q3",
+     "quote": "Meta thường cần khoảng 50 sự kiện tối ưu mỗi 7 ngày cho mỗi nhóm quảng cáo thì hệ thống mới học xong",
+     "issue": "Ngưỡng của nền tảng (giai đoạn học của Meta) nêu như sự thật, là kiến thức 'fast' nhưng bài không có trường src, không ngày kiểm, không câu 'nếu màn hình khác, tin trang chính thức'. Đề Q3 lặp lại ngưỡng này như dữ kiện.",
+     "fix": "Thêm src tới trang Meta Business Help về giai đoạn học (learning phase) với ngày kiểm; sửa đề Q3 thành 'Giả định nền tảng cần khoảng 50 sự kiện/tuần (kiểm trang chính thức)'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src Meta (learning phase) kèm ngày kiểm và câu 'nếu màn hình khác, tin trang chính thức'; (2) giải thích 150.000đ; (3) thêm PHẢN VÍ DỤ (sản phẩm giá cao, ít đơn: tối ưu theo sự kiện nhẹ dễ kéo khách không mua — nêu cách kiểm bằng số đơn thật sau 2 tuần) và ĐÀO SÂU (đánh đổi khi đổi sự kiện tối ưu: nhiều sự kiện nhưng chất lượng tệp giảm); (4) gắn nhãn minh hoạ cho phân bổ 5 tỷ và nêu ngưỡng tối thiểu của TVC (chi phí sản xuất + phát sóng) là số minh hoạ; (5) thay Q4/Q6 bằng câu tính và câu đọc dữ liệu."
+  }
+ ]
+}

@@ -1,0 +1,3 @@
+{ "mod":"tu03", "fixed_at":"2026-11-08", "items":[
+  { "id":"B:tu03-01", "where":"Q6 key/why", "status":"fixed", "change":"Phương án b “Người dưới ngưỡng vẫn mua giá thường như trước, không mất gì so với không có chương trình” → “Phần lớn người dưới ngưỡng mua như cũ; đo số đơn và tỉ lệ bỏ giỏ để kiểm”; why(b) nêu số đơn và tỉ lệ bỏ giỏ cho biết có ai bỏ đi hay gộp đơn. Why(d) “Không có căn cứ rằng bỏ giỏ sẽ tăng” → bỏ giỏ có thể tăng ở một số shop (như phản ví dụ), nhưng cần đo, không mặc định phải hy sinh khách.", "key_changed":false, "note":"Đã tự kiểm: đáp án cũ khẳng định tuyệt đối, ngược phản ví dụ (khách bỏ đi) và đào sâu (gộp đơn) — lỗi thật. Khoá vẫn là b." } ],
+  "validator":"0 lỗi", "tests":"pass" }

@@ -1,0 +1,207 @@
+{
+  "mod": "gt05",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:gt05-01",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L3", "L1", "L4", "L4", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Một ô vấn đề kinh doanh tốt cần đủ ba mảnh nào?", "issue": "Câu L1 nhắc lại định nghĩa vừa đọc; đáp án b lặp nguyên văn khái niệm.", "fix": "Thay bằng câu chẩn đoán: cho 3 dòng 'vấn đề' của 3 brief, hỏi dòng nào thiếu mảnh nào." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Vấn đề kinh doanh là con số đang lệch và mức lệch", "issue": "Thiếu Vì sao – Phản ví dụ – Đào sâu; không nói trường hợp vấn đề thật đúng là nhận biết (thương hiệu mới, khách sáng cũng không đến) để người học không rút ra 'nhận biết luôn là giải pháp trá hình'.", "fix": "Thêm phản ví dụ: chuỗi mới mở 3 cửa hàng ở Hà Nội, lượt khách cả ngày thấp, khảo sát 200 người quanh 1 km chỉ 12% biết tên → nhận biết là vấn đề thật, viết bằng số đó." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Chuỗi bánh mì Nắng Sớm có 24 cửa hàng", "issue": "Thương hiệu hư cấu không gắn nhãn, trong khi bài 05-04 làm mẫu tốt '(thương hiệu và số liệu minh hoạ)'; không nhất quán trong module.", "fix": "Thêm '(thương hiệu minh hoạ)' ở lần nhắc đầu." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q5: trước 2.000 × 30% = 600, phần còn lại 1.400; sau 1.400 = 82% → tổng 1.707,3; chiều 307,3; giảm 292,7 ≈ 293 ✓. Sai 240 = 600 − 18%×2.000 (sai mẫu số) ✓; 12 = 30 − 18 ✓. Câu tính hai bước, bắt hiểu tỉ trọng đổi khi tổng đổi — L4." },
+      "claims": [
+        { "claim": "Chuỗi bánh mì Nắng Sớm 24 cửa hàng, doanh thu chiều 30% → 18%", "status": "illustrative-unlabelled", "note": "Thương hiệu và số hư cấu, chưa ghi nhãn." }
+      ],
+      "strengths": "Phân biệt 'cách chữa' với 'bệnh' bằng ba mảnh (số lệch – mức lệch – nghi vấn nguyên nhân) và Q7 buộc tìm dữ kiện chứng minh khách đã biết thương hiệu. Q5 là câu tính hiếm: tỉ trọng 18% trên tổng đã co, không trên tổng cũ.",
+      "upgrade": "Để ≥85: (1) thêm Vì sao/Phản ví dụ (khi nhận biết là vấn đề thật)/Đào sâu; (2) thay Q3 bằng câu chẩn đoán ba brief; (3) gắn nhãn thương hiệu minh hoạ; (4) thêm bài thực hành có đầu ra như 05-02/05-09: viết lại ô vấn đề cho một brief cho sẵn."
+    },
+    {
+      "id": "B:gt05-02",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 17, "examples": 11, "pedagogy": 9, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L3"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q2, Q7", "quote": "Nâng người đặt lịch hằng tháng từ 6.000 lên 8.000 trước 31/12 … Tăng tỉ lệ hội viên gia hạn từ 45% lên 55% trong quý 3", "issue": "Ở cả hai câu, đáp án là phương án duy nhất có số; ba phương án sai đều không có số. Đoán được bằng hình thức, và dạng này lặp ở 05-01 Q2/Q6.", "fix": "Thêm phương án sai có số nhưng sai khuôn: 'Tăng lượt mở app từ 20.000 lên 30.000 trước 31/12' (hành vi không làm ra tiền) hoặc 'Tăng đặt lịch 33% trong 3 tháng' (thiếu điểm xuất phát)." },
+        { "sev": "P2", "where": "CÂU HỎI", "quote": "Q4 Vì sao brief chỉ nên có một mục tiêu chính? … Q6 Mục tiêu … có điều kiện gì để hai người chấm giống nhau?", "issue": "Năm trong bảy câu là L2–L3 nhận lại; không câu nào kiểm Phản ví dụ (đặt lịch tăng nhưng huỷ sát giờ) bằng dữ liệu.", "fix": "Thay Q6 bằng bảng: đặt lịch 8.100, huỷ 2.300 (28%), lịch hoàn thành 5.800 so 5.400 trước — mục tiêu đạt chưa, sửa câu mục tiêu thế nào (L4)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tăng số người dùng đã tải app đặt ít nhất một lịch mỗi tháng từ 6.000 lên 8.000 trong 3 tháng", "issue": "Không nêu vì sao 8.000 (không phải 7.000 hay 10.000): không nối với năng lực tiệm, ngân sách hay dao động hằng tháng của con số 6.000.", "fix": "Thêm một câu: 3 tháng gần nhất 5.800–6.300 → tăng lên 8.000 là ngoài dao động; 2.000 người thêm ≈ ngân sách X chia chi phí kéo một người đặt lịch." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 6.000/40.000 = 15%; 8.000/40.000 = 20%; chênh 5 điểm % ✓ (tương đối 33,3%) ✓. Bài thực hành: 480/2.400 = 20%; 30% = 720; +240; +10 điểm %; +50% ✓." },
+      "claims": [
+        { "claim": "App Tóc Gọn, 40.000 tải, 6.000 đặt lịch/tháng", "status": "illustrative-unlabelled", "note": "Thương hiệu hư cấu chưa gắn nhãn." }
+      ],
+      "strengths": "Có đủ Vì sao – Phản ví dụ (đặt rồi huỷ) – Đào sâu (cái giá của chọn một hành vi; người quyết ký nhận số) và bài thực hành có đầu ra với rubric phân biệt điểm % và % tương đối — bài hoàn chỉnh nhất về sư phạm trong ba module.",
+      "upgrade": "Để ≥85: (1) thêm phương án sai có số ở Q2/Q7; (2) thay một câu L2 bằng câu đọc bảng huỷ lịch (L4); (3) nêu cơ sở của đích 8.000; (4) gắn nhãn minh hoạ; (5) thêm một câu L5: chọn 'đặt lịch' hay 'lịch hoàn thành' làm hành vi khi dữ liệu hoàn thành chỉ có sau 2 tuần."
+    },
+    {
+      "id": "B:gt05-03",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 14, "examples": 10, "pedagogy": 7, "assessment": 6, "data": 4, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L3", "L3"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "quan điểm khác (Byron Sharp, Viện Ehrenberg-Bass) cho rằng tăng trưởng chủ yếu đến từ rất nhiều người mua thưa", "issue": "Nêu hai trường phái thật (Kotler; Sharp/Ehrenberg-Bass) không có nguồn/`src`; mô tả đúng về đại ý nhưng người học không có chỗ kiểm.", "fix": "Thêm `src` tới How Brands Grow (2010) và Marketing Management; ghi ngày kiểm." },
+        { "sev": "P2", "where": "Q6", "quote": "Mây Trắng bán 5.000 đơn mỗi tháng, 60% đến từ nữ văn phòng… Nhóm này mang về bao nhiêu đơn", "issue": "Phép nhân một bước, không gắn với quyết định nào trong bài; bài về chân dung gần như không có kỹ năng đọc số.", "fix": "Hỏi: 60% đơn từ nhóm A nhưng nhóm A chỉ chiếm 20% tệp nhắm — tỉ lệ mua của nhóm A so với phần còn lại (3,0 vs 0,5 → gấp 6) để biện hộ chọn chân dung (L4)." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Nhân khẩu học để mua quảng cáo; chân dung một người để viết thông điệp", "issue": "Thiếu Vì sao – Phản ví dụ – Đào sâu riêng; phản ví dụ (chân dung làm hẹp tiếp cận) chỉ nằm trong khái niệm, không có tình huống số cho thấy khi nào chọn nhóm tăng trưởng thay cho nhóm doanh thu.", "fix": "Thêm phản ví dụ: nhóm sinh viên chỉ 15% đơn nhưng tăng 40%/quý → chọn chân dung nào cho chiến dịch 12 tháng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q6: 5.000 × 60% = 3.000 ✓; sai 2.000 (lấy 40%) ✓, 8.333 (chia) ✓." },
+      "claims": [
+        { "claim": "Trường phái phân khúc – nhắm chọn (Kotler)", "status": "unverified", "note": "Tên thật, không `src`; nội dung không sai." },
+        { "claim": "Byron Sharp / Viện Ehrenberg-Bass: tăng trưởng chủ yếu từ rất nhiều người mua thưa", "status": "unverified", "note": "Tóm tắt đúng tinh thần How Brands Grow; cần nguồn và ngày kiểm." },
+        { "claim": "Kem chống nắng Mây Trắng, 60% đơn từ nữ văn phòng 24–30", "status": "illustrative-unlabelled", "note": "Thương hiệu hư cấu chưa gắn nhãn." }
+      ],
+      "strengths": "Trình bày hai trường phái đối lập và dung hoà đúng ('chân dung giúp viết sắc, không thu hẹp tiếp cận theo nó') — độ chính xác cao hơn tài liệu phổ thông. Chân dung 'Linh' có khoảnh khắc vướng và sản phẩm thay thế (khẩu trang, áo chống nắng) — Q3 kiểm đúng chỗ.",
+      "upgrade": "Để ≥85: (1) thêm `src` cho Kotler và Sharp; (2) đổi Q6 thành phép so tỉ lệ mua giữa nhóm để biện hộ chọn chân dung; (3) thêm Phản ví dụ về nhóm tăng trưởng vs nhóm doanh thu và Đào sâu về nguồn dữ liệu chân dung (phỏng vấn bao nhiêu người); (4) gắn nhãn minh hoạ."
+    },
+    {
+      "id": "B:gt05-04",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 11, "pedagogy": 8, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L2"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q2, Q5", "quote": "Tôi cần tỉnh để chạy tiếp, nhưng dừng nghỉ thì mất cuốc … Tôi biết nên mua, nhưng trả tiền cho chuyện chưa xảy ra thấy phí", "issue": "Ở cả hai câu, đáp án là phương án duy nhất viết ở ngôi 'Tôi' với 'nhưng'; ba phương án sai đều ở ngôi thứ ba. Đoán được bằng hình thức, không cần hiểu 'căng thẳng'.", "fix": "Thêm phương án sai cũng ở ngôi 'Tôi… nhưng…' mà không có căng thẳng thật hoặc là giọng thương hiệu trá hình: 'Tôi muốn một thức uống ngon, nhưng ít hãng làm được' ." },
+        { "sev": "P2", "where": "CÂU HỔI", "quote": "Q6 Trong brief, con số \"70% tài xế làm trên 10 tiếng\" nên nằm ở đâu? … Q7 Vì sao insight nên viết bằng giọng của khách?", "issue": "Ba câu cuối là L2 nhắc ý bài; không câu nào kiểm Phản ví dụ (căng thẳng bịa) hay Đào sâu (insight càng sắc càng ít người thấy mình).", "fix": "Thay Q7 bằng: phỏng vấn 8 tài xế, 1 người kể chuyện mất cuốc, 7 người nói 'uống cho quen' — insight 'sợ mất cuốc' có dùng được không, làm gì tiếp (L4)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Nếu một cuốc trung bình 40.000 đồng và tài xế dừng ba lần mỗi ca, mỗi lần mất một cuốc, họ thấy rõ 120.000 đồng một ca", "issue": "Giả định 'mỗi lần dừng mất đúng một cuốc' là mạnh (dừng 15 phút không luôn bằng một cuốc) và Q3 lấy đó làm đề; số 120.000 có thể bị dùng làm 'lý do để tin' sau này.", "fix": "Ghi 'giả định minh hoạ để thấy độ lớn; không dùng làm số trong quảng cáo nếu chưa đo'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3 × 40.000 = 120.000 ✓; sai 40 (quên nhân) ✓, 13,3 (chia) ✓." },
+      "claims": [
+        { "claim": "Nhãn nước tăng lực Sấm; 70% tài xế công nghệ làm trên 10 tiếng/ngày", "status": "illustrative-labelled", "note": "Ghi rõ '(thương hiệu và số liệu minh hoạ)' — mẫu tốt cho cả module." },
+        { "claim": "Insight = sự thật + căng thẳng (muốn nhưng)", "status": "unverified", "note": "Một trường phái viết brief; bài không nêu như luật, có phản ví dụ." }
+      ],
+      "strengths": "Gắn nhãn thương hiệu và số liệu minh hoạ ngay đầu bài; có Vì sao – Phản ví dụ (căng thẳng không có thật) – Đào sâu (insight sắc vs rộng; quan sát ≠ insight) đầy đủ. Quy trình bốn bước từ dữ kiện tới insight là làm được.",
+      "upgrade": "Để ≥85: (1) thêm phương án sai ở ngôi 'Tôi' cho Q2/Q5; (2) thay hai câu L2 bằng câu đọc kết quả phỏng vấn (L4) và câu chọn giữa insight sắc cho 30% tài xế hay insight rộng cho 80% (L5); (3) ghi giới hạn của giả định 120.000; (4) thêm bài thực hành: viết insight từ 3 trích dẫn phỏng vấn cho sẵn."
+    },
+    {
+      "id": "B:gt05-05",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 4, "clarity": 5 },
+      "total": 73,
+      "bloom_items": ["L2", "L3", "L2", "L2", "L3", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÌ SAO HIỆU QUẢ", "quote": "Ý đối thủ đã chiếm thì mình nói to hơn cũng dễ làm lợi cho họ, vì khách gán điều đó cho người đến trước", "issue": "Hiệu ứng 'người đến trước' nêu như cơ chế chung, không điều kiện (chỉ đúng khi đối thủ đã có mức nhận biết cao hơn hẳn và ý đó đã gắn với họ); không nguồn.", "fix": "Thêm điều kiện 'khi đối thủ đã được nhớ với ý đó' và dẫn tới bài định vị; hoặc giảm thành 'thường'." },
+        { "sev": "P2", "where": "Q6", "quote": "Nồi của đối thủ giá 2.000 nghìn đồng. Bếp Xanh rẻ hơn 15%. Giá Bếp Xanh là bao nhiêu", "issue": "Phép tính không phục vụ quyết định nào của bài (giá đã bị loại khỏi thông điệp); bài về trí nhớ thông điệp không có số đo nào (khảo sát nhớ ý).", "fix": "Thay bằng: khảo sát 50 người xem bản 5 ý: 6 người nhớ đúng ít nhất một ý; bản 1 ý: 31 người nhớ 'rửa 2 phút' — tính tỉ lệ nhớ và nói giới hạn mẫu (L3–L4)." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Khảo sát nhanh sau khi xem, hầu hết người xem không nhớ được ý nào", "issue": "'Hầu hết' không có số; bài khuyên 'đếm người nhắc đúng ý' nhưng tình huống không làm mẫu.", "fix": "Ghi: 40 người xem, 4 nhắc được một ý bất kỳ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q6: 2.000 × 85% = 1.700 ✓; sai 300 (phần giảm) ✓, 1.739,1 = 2.000/1,15 ✓." },
+      "claims": [
+        { "claim": "Nồi chiên Bếp Xanh: 5 điểm mạnh, rẻ hơn đối thủ 15%", "status": "illustrative-unlabelled", "note": "Thương hiệu hư cấu chưa gắn nhãn." },
+        { "claim": "Trí nhớ người xem trong 15 giây rất hạn chế; đối thủ đều nói 'ít dầu'", "status": "unverified", "note": "Nhận định chung, không nguồn, không quá lời." }
+      ],
+      "strengths": "Quy tắc 'ý bị bỏ không bị vứt — xuống lý do để tin hoặc trang sản phẩm' và Phản ví dụ (khách so thông số tại kệ) làm khái niệm có giới hạn rõ. Q7 là câu biện hộ với người duyệt (L4) dùng được ngoài đời.",
+      "upgrade": "Để ≥85: (1) thêm số cho khảo sát nhớ ý trong tình huống và đổi Q6 thành phép tính tỉ lệ nhớ; (2) thêm điều kiện cho hiệu ứng 'người đến trước'; (3) thêm câu L5: chọn thông điệp khác cho chân dung sinh viên ở trọ (giá) và biện hộ việc chạy hai chiến dịch hay một; (4) gắn nhãn minh hoạ."
+    },
+    {
+      "id": "B:gt05-06",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 11, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L4", "L1"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q2, Q5", "quote": "Vi hạt tinh dầu tan dần và 38/50 người thử thấy thơm lúc 14 giờ … Cân thực tế 210g, so với các mẫu cùng tầm giá đang bán", "issue": "Ở cả hai câu, đáp án là phương án duy nhất có con số; các phương án sai đều là tính từ/khen chung. Đoán được bằng hình thức.", "fix": "Thêm phương án sai có số nhưng lệch thước đo: 'Hơi thở thơm ngay sau đánh răng ở 50/50 người thử' (đo sai thời điểm) và 'Đế giày dày 32 mm, êm nhất tầm giá' (đo sai đại lượng)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "38/50 người thử, tức 76%, còn thấy thơm lúc 14 giờ — ghi rõ là thử nghiệm nội bộ", "issue": "Bài dạy 'ghi rõ nguồn và cỡ mẫu' nhưng không nói 76% trên 50 người có khoảng tin cậy rộng (≈ ±12 điểm) và không có nhóm so sánh (kem thường), nên bằng chứng chưa nói được 'đến tận chiều' tốt hơn kem khác.", "fix": "Thêm: 'với 50 người, 76% có thể dao động 64–88%; thử thêm kem đối chứng mới nói được hơn/kém'." },
+        { "sev": "P2", "where": "Q7", "quote": "Loại nào KHÔNG phải một lý do để tin đúng nghĩa?", "issue": "Câu L1 liệt kê; đáp án d là nhóm 'tính từ khen' đã bị bác ngay trong tình huống.", "fix": "Thay bằng câu đọc bình luận nghi ngờ của khách (3 kiểu nghi) và chọn lý do để tin trả lời đúng chỗ (L4), như Đào sâu gợi ý." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 38 ÷ 50 = 76% ✓; sai 131,6 = 50/38 ✓, 24 = 12/50 ✓. CI 95% ≈ ±11,8 điểm." },
+      "claims": [
+        { "claim": "Kem đánh răng Răng Mộc: vi hạt tinh dầu bạc hà/đinh hương tan dần; 38/50 thử nội bộ", "status": "illustrative-unlabelled", "note": "Cơ chế và số hư cấu, bài có ghi 'thử nghiệm nội bộ' nhưng không ghi 'minh hoạ'." },
+        { "claim": "50 người là cỡ mẫu tối thiểu luật quảng cáo bắt buộc (phương án sai Q4)", "status": "illustrative-labelled", "note": "Lời giải nói rõ 'Bài không khẳng định con số luật định nào' — xử lý đúng." }
+      ],
+      "strengths": "Ba loại lý do để tin (cơ chế – kết quả kiểm chứng – người thật) và nguyên tắc 'bằng chứng phải đo đúng thước của lời hứa (buổi chiều thì đo buổi chiều)' rất thực dụng; Q6 (không tìm được lý do → có thể lời hứa quá) là câu đọc ngược hay. Nhắc pháp chế mà không bịa điều luật.",
+      "upgrade": "Để ≥85: (1) thêm phương án sai có số ở Q2/Q5; (2) nêu khoảng tin cậy và nhu cầu nhóm so sánh cho 38/50; (3) thay Q7 bằng câu đọc bình luận nghi ngờ; (4) gắn nhãn minh hoạ; (5) thêm Đào sâu về quy định quảng cáo cần `src` và ngày kiểm (freshness periodic cho phần pháp chế)."
+    },
+    {
+      "id": "B:gt05-07",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L5", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Ghi ràng buộc bằng con số từ ngày đầu", "issue": "Thiếu Vì sao – Phản ví dụ – Đào sâu; không nói trường hợp nên giấu một phần ngân sách (đấu thầu nhiều agency, giữ dự phòng có kế hoạch) hay khi ràng buộc cứng xung đột với nhau (hạn và pháp lý).", "fix": "Thêm phản ví dụ: pitch 3 agency → công bố khung ngân sách nhưng giữ 10% dự phòng ghi rõ; đào sâu về phí agency trong/ngoài ngân sách và quyền hình ảnh." },
+        { "sev": "P2", "where": "Q3", "quote": "Tổng ngân sách 800 triệu đồng, 25% dành cho sản xuất… Tiền mua quảng cáo là bao nhiêu", "issue": "Phép nhân một bước; bài về ràng buộc không có phép tính nào ràng buộc thật (ví dụ 200 triệu sản xuất đủ cho gì, 4 tuần đủ cho mốc nào).", "fix": "Hỏi lịch ngược: lên sóng 15/12, dựng 10 ngày, quay 3 ngày, duyệt 5 ngày → ngày chốt ý tưởng muộn nhất (L3–L4); hoặc hỏi phí agency 15% nằm trong 800 triệu thì sản xuất còn bao nhiêu." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Với 200 triệu sản xuất và 4 tuần, agency biết ngay không có Phú Quốc hay ca sĩ lớn", "issue": "Khẳng định về mức giá sản xuất/ca sĩ không có số tham chiếu; người học không biết 200 triệu 'mua' được gì.", "fix": "Thêm một dòng khung giá minh hoạ (quay một ngày tại bếp thật ~X, ca sĩ hạng A ~Y) gắn nhãn minh hoạ và ngày." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 800 × 25% = 200; 800 − 200 = 600 ✓; sai 200 (lấy phần sản xuất) ✓, 775 (trừ 25) ✓." },
+      "claims": [
+        { "claim": "Nước mắm Cá Cơm Vàng, 800 triệu, 25/75 sản xuất/quảng cáo", "status": "illustrative-labelled", "note": "Ghi 'Tỉ lệ chia này chỉ là minh hoạ; thực tế tuỳ kênh' — tốt." },
+        { "claim": "Cấm so sánh trực tiếp tên đối thủ", "status": "unverified", "note": "Nêu như điều cấm của brief, không gắn với luật nào — chấp nhận được." }
+      ],
+      "strengths": "Phân loại ràng buộc cứng/mềm và Q5 (đổi địa điểm, giữ hạn và logo) là câu đánh đổi L5 thật; nhắc phí agency và quyền dùng hình ảnh người nổi tiếng — chi tiết nghề ít tài liệu nêu. Q6 trả lời đúng nỗi sợ 'agency tiêu hết'.",
+      "upgrade": "Để ≥85: (1) thêm Vì sao/Phản ví dụ/Đào sâu; (2) đổi Q3 thành lịch ngược hoặc phí agency; (3) thêm khung giá minh hoạ cho 200 triệu; (4) thay Q7 (L2) bằng câu L6: viết dòng ràng buộc cho chiến dịch 30 triệu của quán cà phê (Q6) với 5 mục; (5) gắn nhãn thương hiệu minh hoạ."
+    },
+    {
+      "id": "B:gt05-08",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L2", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "gắn nhãn quảng cáo theo quy định nền tảng", "issue": "Nêu nghĩa vụ gắn nhãn như quy định nền tảng mà không nêu nền tảng nào, không `src`, không nhắc quy định pháp luật Việt Nam về quảng cáo của người có ảnh hưởng; đây là nội dung đổi nhanh cần nguồn và ngày kiểm.", "fix": "Thêm `src` tới trang chính sách nội dung thương mại của nền tảng dùng (TikTok/Facebook) và văn bản pháp luật liên quan, ghi ngày kiểm và câu 'nếu màn hình khác, tin trang chính thức'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "chi phí mỗi lượt dùng mã là 80.000 đồng — con số để so với các kênh khác", "issue": "Đo bằng mã riêng bỏ sót người xem rồi mua không nhập mã và cộng nhầm người vốn định mua; bài không nói giới hạn nên 80.000 có thể bị so thẳng với CAC kênh khác.", "fix": "Thêm: 'mã đếm thiếu người mua không nhập mã và đếm thừa khách cũ; so với kênh khác cần cùng cách gán'." },
+        { "sev": "P2", "where": "CÂU HỔI", "quote": "Q1 … Q5 … Q7", "issue": "Ba câu có đáp án ở vị trí a (Q1, Q5, Q7) và đều là nhận lại ý bài (L2); không câu nào buộc viết hay chấm một brief KOL.", "fix": "Thay Q7 bằng câu chấm: cho brief KOL 6 dòng có lỗi (thiếu điều cấm, có lời thoại mẫu), hỏi sửa gì (L4); trộn vị trí đáp án." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Agency cần đề bài để nghĩ; KOL cần một màn hình", "issue": "Thiếu Vì sao – Phản ví dụ – Đào sâu; không nói khi nào KOL cần nhiều hơn một màn hình (sản phẩm có rủi ro pháp lý như thực phẩm chức năng, KOL mới chưa quen thương hiệu).", "fix": "Thêm phản ví dụ về ngành cần kịch bản khung (điều không được nói) và đào sâu về họp 15 phút thay cho brief dài." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 120.000 nghìn ÷ 1.500 = 80 nghìn ✓; sai 10.000 (= 120tr/12 KOL) ✓, 12,5 (1.500/120) ✓." },
+      "claims": [
+        { "claim": "Sữa chua uống Men Việt, 12 KOL, 120 triệu, mã MENVIET20", "status": "illustrative-unlabelled", "note": "Thương hiệu hư cấu chưa gắn nhãn." },
+        { "claim": "Gắn nhãn quảng cáo theo quy định nền tảng", "status": "unverified", "note": "Không nền tảng cụ thể, không nguồn, không ngày kiểm." },
+        { "claim": "Cấm nói chữa bệnh (sữa chua)", "status": "unverified", "note": "Hợp lý về mặt quảng cáo thực phẩm, nhưng không dẫn quy định." }
+      ],
+      "strengths": "Brief KOL một màn hình (ý chính – bắt buộc – cấm – hạn – đo) là mẫu dùng ngay; Q6 (brief chiến lược cho agency rồi rút ra brief KOL) đặt đúng thứ tự. Chi phí mỗi lượt dùng mã cho một thước so kênh.",
+      "upgrade": "Để ≥85: (1) thêm `src` và ngày kiểm cho nghĩa vụ gắn nhãn, ghi lớp freshness; (2) nêu giới hạn của đo bằng mã; (3) thêm câu chấm brief KOL (L4) và trộn vị trí đáp án; (4) thêm Phản ví dụ/Đào sâu; (5) gắn nhãn minh hoạ."
+    },
+    {
+      "id": "B:gt05-09",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 17, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L4", "L3", "L3", "L3", "L3", "L3", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ ↔ BÀI THỰC HÀNH", "quote": "doanh số mùa tựu trường năm ngoái 8.000 đôi… ngân sách 300 triệu; lên sóng trước 15/8 … Năm ngoái bán 1.800 đôi trong 6 tuần… Ràng buộc đủ: 150 triệu, 4 tuần lên sóng", "issue": "Cùng thương hiệu Bước Nhỏ nhưng ví dụ và bài thực hành dùng hai bộ số khác nhau (8.000 vs 1.800 đôi; 300 vs 150 triệu); người học vừa đọc ví dụ sang làm bài sẽ lẫn.", "fix": "Dùng cùng bộ số, hoặc đổi tên thương hiệu trong bài thực hành và ghi 'bộ số khác'." },
+        { "sev": "P2", "where": "Q1", "quote": "Ô vấn đề chỉ ghi giải pháp \"cần viral\", không có con số", "issue": "Đáp án đúng chứa từ khoá của khái niệm ('không có con số') và vị trí đầu chuỗi được bài nhấn nhiều lần; dễ nhận lại.", "fix": "Bỏ cụm 'không có con số' trong phương án; để người học tự nối." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Mục tiêu viết lại: giữ 8.000 đôi, đích 9.000 đôi, tức tăng 12,5%", "issue": "Đích 9.000 không có cơ sở (đối thủ giá rẻ vào mà vẫn đặt tăng 12,5%?), và 'giữ 8.000' với 'đích 9.000' là hai mốc chưa gọi tên (vạch dừng/vạch thắng như gt03-02).", "fix": "Ghi: vạch dừng 8.000 (không mất thị phần), vạch thắng 9.000; nêu cơ sở từ tăng trưởng học sinh/kênh mới." },
+        { "sev": "P2", "where": "CÂU HỔI", "quote": "Q4 … Q5 … Q6", "issue": "Các câu quiz đều L3 áp một bước; không câu nào kiểm Phản ví dụ (hãng đã rõ chân dung, chỉ thiếu ràng buộc → nhảy thẳng vào ràng buộc).", "fix": "Thay Q6 bằng: hãng trả lời trôi chảy vấn đề/chân dung, ngập ngừng ở tiền — bạn dành 20 phút còn lại cho gì (L5)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (9.000 − 8.000)/8.000 = 12,5% ✓; sai 1.000 (số tuyệt đối) ✓, 11,1 = 1.000/9.000 ✓. Bài thực hành: 389.000 × 40% = 155.600 ✓; 1.800 → 3.000 = +1.200 ✓." },
+      "claims": [
+        { "claim": "Giày học sinh Bước Nhỏ: 8.000 đôi, 300 triệu (ví dụ); 1.800 → 3.000 đôi, 150 triệu (bài thực hành, ghi 'thương hiệu minh hoạ')", "status": "illustrative-labelled", "note": "Bài thực hành có nhãn; phần ví dụ không, và hai bộ số khác nhau." }
+      ],
+      "strengths": "Chuỗi phụ thuộc vấn đề → mục tiêu → chân dung → insight → thông điệp → lý do để tin là xương sống tổng kết đúng cho cả module; Phản ví dụ (hãng đã rõ chân dung, chỉ thiếu ràng buộc) và Đào sâu (sửa brief là đàm phán) đúng nghề. Bài thực hành một trang với rubric 7 mục là đầu ra đo được.",
+      "upgrade": "Để ≥85: (1) đồng bộ số giữa ví dụ và bài thực hành; (2) gọi tên vạch dừng/vạch thắng và nêu cơ sở đích 9.000; (3) thêm câu L5 kiểm phản ví dụ và câu L6: viết 4 câu hỏi theo thứ tự cho một brief khác; (4) bỏ từ khoá lộ ở Q1."
+    }
+  ],
+  "module_notes": {
+    "progression": "Rất mạch lạc: đi đúng thứ tự các ô của creative brief — vấn đề (01) → mục tiêu (02) → chân dung (03) → insight (04) → thông điệp duy nhất (05) → lý do để tin (06) → ràng buộc (07) → biến thể brief KOL (08) → sửa brief theo chuỗi phụ thuộc (09, tổng kết). Bài 02 và 09 có bài thực hành với rubric; 05-04 là mẫu gắn nhãn minh hoạ tốt nhất. Điểm yếu chung: quiz chủ yếu L2–L3 (chỉ 05-01 Q5, 05-07 Q5, 05-09 Q1 vượt L3) và 5/9 bài thiếu Vì sao – Phản ví dụ – Đào sâu (01, 03, 07, 08; 05-05/06 có).",
+    "overlap": [
+      "'Chọn một thông điệp từ năm ý, nối vào insight của chân dung' dạy ở 05-05 rồi lặp nguyên khuôn ở 05-09 (bền, êm, rẻ, đẹp, chống trơn).",
+      "Dạng câu 'chọn câu đúng khuôn — phương án duy nhất có số' lặp ở 05-01 Q2/Q6, 05-02 Q2/Q7, 05-06 Q2/Q5.",
+      "Ý 'nhận biết không phải vấn đề vì khách đã biết' xuất hiện ở 05-01 (Q7) và 05-02 (Q2 lời giải).",
+      "Phần 'cấm/bắt buộc' được dạy ở 05-07 rồi lại ở 05-08 và 05-09 Q7 mà không thêm nội dung mới."
+    ],
+    "gaps": [
+      "Đo lường và gán kết quả trong brief (KPI, cách đo, nhóm đối chứng) chỉ xuất hiện rời rạc (05-02 hạn, 05-08 mã) — chưa có bài về ô 'đo lường' của brief.",
+      "Bối cảnh cạnh tranh / định vị đối thủ chỉ được nhắc trong 05-05 ('đối thủ đều nói ít dầu'); brief chuẩn có ô này.",
+      "Tính cách/giọng thương hiệu (tone) và điều bắt buộc về nhận diện không có bài riêng, dù 05-07 nhắc logo/câu định vị.",
+      "Cơ sở pháp lý khi viết 'điều cấm' (quảng cáo thực phẩm, so sánh, người có ảnh hưởng) không có `src`; nội dung periodic/fast đang nằm trong bài evergreen (05-06, 05-08).",
+      "Cách đánh giá ý tưởng agency trả về so với brief (debrief/feedback) — bước khép vòng — chưa có."
+    ],
+    "best_lesson": "B:gt05-09",
+    "weakest_lesson": "B:gt05-03"
+  }
+}

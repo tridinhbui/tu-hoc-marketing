@@ -1,0 +1,65 @@
+{
+ "mod": "dl07",
+ "lessons": [
+  {
+   "id": "B:dl07-01",
+   "title": "Báo cáo ghi 12.000 lượt xem — vậy có bao nhiêu người đã vào web?",
+   "total": 60,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "GA4 mặc định báo “người dùng hoạt động” (có phiên tương tác)",
+     "issue": "Định nghĩa Active users của GA4 rộng hơn: người có phiên tương tác HOẶC khi GA thu được first_visit / engagement_time_msec. Khẳng định về nền tảng nêu như sự thật, không có `src`, rút gọn làm người học hiểu hẹp.",
+     "fix": "Viết đủ định nghĩa, thêm `src` trỏ GA Help 'Active users' kèm ngày kiểm và câu 'nếu màn hình khác, tin trang chính thức'."
+    }
+   ],
+   "upgrade": "Thêm `src` GA Help cho định nghĩa Active users và Users/Sessions/Views (fast knowledge). Gắn nhãn minh hoạ cho bộ số. Thêm VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ (web tin tức: nhiều phiên/người nhưng ít trang/phiên) và ĐÀO SÂU (reporting identity, ngưỡng dữ liệu). Đổi Q2/Q7 thành câu đọc bảng 3 tuần (L4) và câu chọn chỉ số đầu báo cáo có biện hộ (L5)."
+  },
+  {
+   "id": "B:dl07-02",
+   "title": "Web có hàng trăm sự kiện — nên đánh dấu cái nào là chuyển đổi?",
+   "total": 63,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM / Q7",
+     "quote": "Đánh dấu tràn lan làm tỉ lệ chuyển đổi đẹp giả và khiến nền tảng quảng cáo tối ưu sai hướng.",
+     "issue": "Thiếu điều kiện: đánh dấu key event trong GA4 chỉ ảnh hưởng tối ưu quảng cáo khi key event đó được nhập làm conversion cho Google Ads (hoặc dùng làm mục tiêu đấu thầu). Tự nó chỉ đổi báo cáo.",
+     "fix": "Thêm 'khi các key event này được nhập làm mục tiêu chuyển đổi của Google Ads / Meta…'; Q7 phương án a sửa tương ứng."
+    }
+   ],
+   "upgrade": "Thêm điều kiện 'khi được nhập làm conversion' cho luận điểm tối ưu quảng cáo; thêm src GA Help. Thêm PHẢN VÍ DỤ (bấm gọi nhầm trên mobile) và ĐÀO SÂU (micro vs macro conversion, counting method once-per-session vs once-per-event). Thay Q5/Q7 bằng câu đánh đổi L5: web B2B có 2 chuyển đổi/tuần — nên thêm micro-conversion để nền tảng đủ tín hiệu không?"
+  },
+  {
+   "id": "B:dl07-03",
+   "title": "Vì sao một nửa lưu lượng hiện là “direct” dù bạn chạy quảng cáo khắp nơi?",
+   "total": 64,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "(GA4 không mở phiên mới khi gặp UTM giữa phiên như bản Universal Analytics cũ — kiểm theo Google Analytics Help, 10/2026.)",
+     "issue": "Khẳng định về cách nền tảng vận hành (fast) không có trường `src`; đồng thời cơ chế 'chuyển đổi bị ghi công cho banner nội bộ' không được giải thích (phạm vi sự kiện vs phạm vi phiên), người học không biết vì sao vừa 'không mở phiên mới' vừa 'ghi đè nguồn'.",
+     "fix": "Thêm src GA Help về session và traffic-source dimensions; giải thích 2 câu: nguồn phiên giữ nguyên, nhưng nguồn gắn với sự kiện/ghi công có thể lấy UTM mới."
+    }
+   ],
+   "upgrade": "Thêm đoạn về Unassigned và nhóm kênh mặc định, kèm src GA Help. Giải thích cơ chế UTM nội bộ ghi đè nguồn. Chèn link UTM mẫu và một bảng quy ước 3 dòng. Thêm PHẢN VÍ DỤ (Google Ads auto-tagging gclid: không cần UTM, gắn thêm có thể xung đột) và ĐÀO SÂU (referral exclusion cho cổng thanh toán). Đổi Q1 thành câu phân biệt direct/referral/Unassigned."
+  },
+  {
+   "id": "B:dl07-05",
+   "title": "Lưu lượng tăng vọt đêm qua — khách thật hay chính nhân viên và bot?",
+   "total": 62,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM / Q4",
+     "quote": "người làm tại nhà đổi IP liên tục nên cần gắn cờ trên thiết bị hoặc đi qua VPN có IP cố định",
+     "issue": "Bộ lọc lưu lượng nội bộ của GA4 định nghĩa theo IP; 'gắn cờ trên thiết bị' đòi hỏi tự cài tham số traffic_type (qua GTM/cookie) — bài không nói cách làm, cũng không nói đây là việc kỹ thuật, nên đáp án Q4 nghe như một nút bấm sẵn có.",
+     "fix": "Thêm một câu: 'gắn cờ = đặt tham số traffic_type=internal qua Tag Manager cho thiết bị đã đánh dấu; cần người kỹ thuật' + src GA Help 'Filter out internal traffic'."
+    }
+   ],
+   "upgrade": "Giải thích cách gắn cờ nội bộ (traffic_type qua GTM) và ghi rõ là việc kỹ thuật; thêm src GA Help cho data filters và internal traffic. Sửa Q6 về 1,7% và Q1 về 'một bảng'. Thêm PHẢN VÍ DỤ (lọc theo hành vi xoá nhầm khách thật — hiện chỉ nằm ở Q4d) và ĐÀO SÂU (so sánh số GA4 đã lọc với hệ thống đơn để ước phần bot còn lọt). Thay Q7 (L2) bằng câu đọc bảng trước/sau lọc theo nguồn."
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "mod": "tp05",
+ "lessons": [
+  {
+   "id": "B:tp05-02",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "concept",
+     "quote": "khoảng 60/40 nghiêng về xây (từ nghiên cứu của Les Binet & Peter Field cho IPA, là mức trung bình nhiều ngành)",
+     "issue": "Benchmark có tên nghiên cứu nhưng bài không có src, không ngày kiểm; cũng không nói tỉ lệ khác nhau theo ngành/giai đoạn trong chính nghiên cứu đó.",
+     "fix": "Thêm src (IPA, The Long and the Short of It) và một câu về phạm vi áp dụng."
+    }
+   ]
+  }
+ ]
+}

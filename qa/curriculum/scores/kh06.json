@@ -1,0 +1,220 @@
+{
+  "mod": "kh06",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kh06-01",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 5 },
+      "total": 73,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q7", "quote": "Nên nhắm theo sự kiện: đang mang thai, sắp sinh, con sắp cai sữa", "issue": "Khuyến nghị nhắm quảng cáo sữa bột cho người đang mang thai/sắp sinh bỏ qua điều kiện pháp lý: ở Việt Nam quảng cáo sản phẩm sữa thay thế sữa mẹ cho trẻ dưới 24 tháng bị cấm (Luật Quảng cáo 2012 Đ.7; Nghị định 100/2014). Đáp án đúng về cơ chế trigger nhưng ví dụ ngành chọn sai, dạy người học một việc có thể vi phạm.", "fix": "Đổi ví dụ sang ngành không bị hạn chế (ghế ăn dặm, xe đẩy, bỉm) hoặc thêm lời giải: 'với sữa công thức cho trẻ dưới 24 tháng, luật cấm quảng cáo — kiểm tra trước khi nhắm'." },
+        { "sev": "P2", "where": "Q3 wrong", "quote": "[35,\"SAI_MAU_SO\"]", "issue": "35% = 420/1.200 là chỉ cộng một trigger (nhầm tử số), không phải sai mẫu số.", "fix": "Đổi nhãn thành THIEU_TU_SO hoặc thay bằng 900/300 = 300% (SAI_MAU_SO thật)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Hãng xem lại 1.200 đơn năm ngoái: 420 đơn đến từ nhà mới", "issue": "Nguồn gán trigger là câu hỏi tự khai lúc chốt đơn (bài có nói) nhưng không bàn: người mua kể lại lý do sau khi mua (hậu nghiệm), có thể gán cho sự kiện dễ nhớ; 75% nên đọc là 'ít nhất gắn với', không phải 'do'.", "fix": "Thêm một câu: 'câu trả lời lúc chốt là tự khai hồi tưởng; dùng để xếp hạng trigger, không để tính phần ngân sách chính xác'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 420+300+180 = 900; 900/1.200 = 75% ✓. Q6: 22/40 = 55%, 9/40 = 22,5%, 5/40 = 12,5%, 4/40 = 10% ✓ (lời giải d làm tròn 22%, 12%); 1/√40 = 15,8 ≈ ±15 điểm ✓." },
+      "claims": [
+        { "claim": "1.200 đơn, 75% gắn với ba trigger; 40 khách hỏi lúc chốt", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Nhắm quảng cáo sữa bột theo sự kiện mang thai/sắp sinh là góp ý có căn cứ nhất", "status": "wrong", "note": "Thiếu điều kiện pháp lý về quảng cáo sữa thay thế sữa mẹ cho trẻ dưới 24 tháng tại Việt Nam (chưa tra nguồn trong bước này; cần kiểm Luật Quảng cáo 2012 và NĐ 100/2014)." }
+      ],
+      "strengths": "Phân biệt trigger nhìn thấy được / không thấy được và đánh đổi khi dồn quá tay, kèm cách kiểm bằng tỉnh đối chứng; Q6 đọc mẫu 40 người với sai số ±15 là câu dữ liệu tốt.",
+      "upgrade": "(1) Sửa Q7 (đổi ngành hoặc thêm lời cảnh báo luật). (2) Gắn nhãn số minh hoạ. (3) Thêm phản ví dụ: ngành không có trigger rõ (nước giải khát) — khi đó nền hiện diện mới là chính. (4) Thêm 'đào sâu': cách đặt câu hỏi trigger lúc chốt đơn (một câu mở, gom nhóm sau) và cách tính phần ngân sách theo tỉ lệ đơn × độ dễ tiếp cận. (5) Đổi 'Áp dụng' từ hồi tưởng cá nhân thành việc với dữ liệu: lấy 30 đơn gần nhất, ghi trigger."
+    },
+    {
+      "id": "B:kh06-02",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 14, "examples": 9, "pedagogy": 9, "assessment": 7, "data": 6, "clarity": 5 },
+      "total": 77,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L2", "L3", "L3"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Câu hỏi", "quote": "Q3: 12 ÷ 30 = 0,4 = 40%", "issue": "Cả 7 câu không vượt L3; Q3 là phép chia một bước; Q4/Q7 là chuyển cảnh nhưng cùng một kết luận 'đối thủ là thói quen/loại sản phẩm khác'. Không có câu đánh đổi dù phần đào sâu nêu đánh đổi (đứng cạnh lò nướng kéo đối thủ lớn vào).", "fix": "Thay Q3 bằng câu đọc bảng 30 người × 4 lựa chọn, hỏi hai lựa chọn thường đi cùng nhau; thêm câu L5 từ đánh đổi trong 'đào sâu'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Trong 30 người phỏng vấn, 22 người có lò nướng mini trong danh sách", "issue": "Không gắn nhãn minh hoạ; không nói 30 người vừa mua là mẫu người đã CHỌN nồi chiên — người chọn lò nướng không có trong mẫu, nên danh sách đối thủ bị lệch về phía người thắng (bài tự nói 'dữ liệu bán hàng chỉ cho thấy người thắng' nhưng mẫu phỏng vấn cũng vậy).", "fix": "Thêm: 'để biết vì sao thua, phải hỏi cả người cuối cùng mua lò nướng'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 12/30 = 40% ✓; 30/12 = 250% ✓; 12 là số tuyệt đối ✓. Ví dụ 22/14/9/12 trên 30 là chọn nhiều — hợp lệ." },
+      "claims": [
+        { "claim": "Tập cân nhắc thường chỉ vài lựa chọn (con số khác nhau tuỳ ngành và cách đo)", "status": "unverified", "note": "Có hedge tốt, không nguồn." },
+        { "claim": "30 người mua nồi chiên 1,9 triệu: 22 xét lò nướng mini", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Có đủ phản ví dụ (nhóm quen chiên rán truyền thống) và đào sâu với đánh đổi, tín hiệu theo dõi (nhắc tên không gợi ý) và phép kiểm trong tuần; thông điệp 'đối thủ là thứ khách đặt cạnh bạn' nối tự nhiên sang định vị.",
+      "upgrade": "(1) Nâng bộ câu hỏi: thêm câu L4 đọc bảng tập cân nhắc và câu L5 về đánh đổi so với lò nướng. (2) Nêu lệch mẫu 'chỉ hỏi người thắng' và cách sửa. (3) Gắn nhãn minh hoạ. (4) Thêm một số đo cụ thể cho tín hiệu 'nhắc tên không gợi ý' (ví dụ 5/30 → mục tiêu 12/30 sau 3 tháng)."
+    },
+    {
+      "id": "B:kh06-03",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 9, "data": 7, "clarity": 5 },
+      "total": 80,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L6", "L3"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3 wrong", "quote": "[36,\"SAI_MAU_SO\"]", "issue": "36% = 18/50 (số người nhắn Zalo) là lấy nhầm tử số, không phải sai mẫu số.", "fix": "Đổi nhãn thành NHAM_TU_SO." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "cần vẽ lại chuỗi điểm chạm của khách thật và hỏi: bỏ một điểm chạm thì hành trình có còn đi tới cuối không?", "issue": "Không nêu tên các phương án phân bổ (last-click, gán theo tự khai, thử nghiệm địa lý) và vì sao bài chọn hỏi khách + thử vùng thay cho phần mềm; Q5 có nêu nhưng phần đọc không.", "fix": "Thêm 2 câu đào sâu: ba cách gán công, cách rẻ nhất cho chuỗi nhỏ, giới hạn của tự khai (quên, thiên về kênh nổi)." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Nơi khách trả tiền chỉ là điểm chạm cuối", "issue": "Không có phản ví dụ / đào sâu như các bài 02, 06, 08, 10 trong cùng module; cấu trúc không đồng đều.", "fix": "Thêm phản ví dụ: cắt TikTok ở 2 chi nhánh mà doanh số không đổi — khi nào kết luận TikTok thật sự thừa." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 31/50 = 62% ✓; 50/31 = 161,3% ✓. Ví dụ: 19+15+18 = 52 > 31 vì chọn nhiều nơi — bài nói rõ ✓." },
+      "claims": [
+        { "claim": "50 khách mua tại cửa hàng: 31 đã xem online; 19 TikTok, 15 Shopee, 18 Zalo", "status": "illustrative-labelled", "note": "Bài ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Nhãn minh hoạ rõ, caveat 'có chạm online chưa có nghĩa là nhờ online' đúng chỗ; Q6 (thiết kế tắt TikTok ở 2 chi nhánh có đối chứng và đo giai đoạn trước) là câu L6 hiếm và lời giải nêu đúng vì sao từng thiết kế sai.",
+      "upgrade": "(1) Thêm phản ví dụ và đào sâu để đồng đều với module. (2) Nêu ba cách gán công và giới hạn tự khai. (3) Sửa nhãn wrong Q3. (4) Thay Q7 (Shopee) — cùng ý với Q2 — bằng câu đọc kết quả thử nghiệm Q6 (bảng 4 chi nhánh × trước/sau) và kết luận."
+    },
+    {
+      "id": "B:kh06-04",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 9, "data": 7, "clarity": 5 },
+      "total": 82,
+      "bloom_items": ["L2", "L5", "L3", "L5", "L2", "L3", "L6"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "200 khách cầm chai của hãng lên, 70 người đặt xuống và lấy hãng khác", "issue": "Chỉ đếm người ĐÃ cầm chai lên; bỏ qua người đi thẳng tới chai bên cạnh — tỉ lệ 35% là mất sau khi có ý định, nhưng bài không nói phần mất trước khi cầm (có thể lớn hơn và do cùng nguyên nhân kệ).", "fix": "Thêm một câu: 'Số này chưa gồm người không cầm chai nào của hãng; muốn biết phần đó, đếm cả người dừng trước kệ.'" },
+        { "sev": "P2", "where": "Q5", "quote": "Vì sao bao bì chỉ in tên thương hiệu thật to lại có thể thua tại kệ?", "issue": "Câu L2, ba phương án sai phi lý (siêu thị cấm chữ lớn, tưởng hàng hết hạn); đoán được ngay.", "fix": "Thay bằng câu so hai mặt trước (tên to vs lợi ích to) kèm số đặt xuống ở hai siêu thị ghép cặp, hỏi kết luận được gì và chưa được gì." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Ý định mua mang từ nhà không bảo đảm", "issue": "Thiếu phản ví dụ / đào sâu (hàng đắt, mua có kế hoạch — ý định từ nhà bền hơn; nối sang kh06-09).", "fix": "Thêm phản ví dụ về ngành mà điểm bán ít lật được ý định (sữa công thức khách trung thành nhãn) và dấu hiệu nhận ra." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 70/200 = 35% ✓; 65% là phần giữ được ✓; 200/70 = 285,7% ✓. Q4: 9+7+4 = 20 ✓." },
+      "claims": [
+        { "claim": "Khách FMCG chốt trước kệ trong vài giây (cách nói phổ biến trong ngành, thời gian cụ thể tuỳ hàng)", "status": "unverified", "note": "Có hedge tốt; không nguồn." },
+        { "claim": "200 khách cầm chai, 70 đặt xuống; 20 người hỏi nhanh: 9/7/4", "status": "illustrative-labelled", "note": "Ghi '(số minh hoạ)'." },
+        { "claim": "Vị trí ngang tầm mắt thường phải trả phí trưng bày", "status": "unverified", "note": "Thực tế ngành bán lẻ hiện đại; không nguồn." }
+      ],
+      "strengths": "Nêu rõ chi phí của từng cách sửa ở kệ (dải kệ rẻ, tầm mắt tốn phí, tem ăn biên) và trình tự thử từ rẻ nhất với siêu thị ghép cặp; Q4 là câu ưu tiên có ràng buộc chi phí thật, Q7 là thiết kế thử nghiệm. Tình huống nhắc 'ý định khai báo, chưa phải hành vi' nối với kh05.",
+      "upgrade": "(1) Thêm phản ví dụ và đào sâu. (2) Nêu phần mất trước khi cầm chai. (3) Thay Q5 bằng câu đọc kết quả thử nghiệm. (4) Thêm con số chi phí minh hoạ cho phí trưng bày và tem để Q4 tính được hoà vốn (ví dụ tem 1 tặng 1 trên 10.000 chai vs doanh thu lấy lại 35% × 200 khách/tuần)."
+    },
+    {
+      "id": "B:kh06-05",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 9, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 5 },
+      "total": 73,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L2", "L3"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ", "quote": "Chi phí in thẻ khoảng 1.500 đồng một hộp", "issue": "Có chi phí (1.500 × 800 = 1,2 triệu/tháng) nhưng không có chi phí một lần trả hàng, nên không tính được lợi ích (52 đơn trả ít hơn × ? đồng). Người học không ra được quyết định có số như rubric chiều 3 yêu cầu; bài về 'rẻ hơn nhiều so với xử lý trả hàng' mà không chứng minh bằng số.", "fix": "Thêm: 'mỗi đơn trả tốn ~60.000đ ship hai chiều và kiểm hàng → 52 × 60.000 = 3,1 triệu tiết kiệm so với 1,2 triệu in thẻ' (gắn nhãn minh hoạ)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Đọc lý do: 60 đơn vì không ghép đôi được hoặc đeo không vừa… Tháng sau, cũng 800 đơn, số trả còn 44", "issue": "Bài nói 'lý do trả giảm đúng ở nhóm không ghép đôi mới là bằng chứng mạnh hơn' nhưng không cho con số nhóm đó tháng sau (60 → ?). Caveat đúng nhưng ví dụ không làm theo chính lời khuyên.", "fix": "Thêm: 'trong 44 đơn trả, nhóm ghép đôi/không vừa còn 12 (từ 60)' để Q có thể đọc." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì bảo hành chỉ áp dụng cho lỗi xảy ra trong tuần đầu tiên", "issue": "Câu L2 với nhiễu phi lý; cả 7 câu không vượt L3.", "fix": "Thay bằng câu đọc bảng lý do trả trước/sau theo nhóm và kết luận thẻ có tác dụng ở nhóm nào." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 44/800 = 5,5% ✓ (96/800 = 12% ✓). Q4: 12 − 5,5 = 6,5 điểm ✓; giảm tương đối 6,5/12 = 54,2% ✓; 96 − 44 = 52 ✓." },
+      "claims": [
+        { "claim": "800 đơn/tháng, 96 trả → 44 trả sau thẻ; chi phí in 1.500đ/hộp", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phân biệt điểm phần trăm và giảm tương đối (Q4, lời giải) chính xác; caveat 'so trước–sau một tháng, chưa có đối chứng' đặt đúng chỗ; giải pháp 'đặt lời giải ngay chỗ khách vấp' cụ thể (thẻ trên nắp, QR 30 giây).",
+      "upgrade": "(1) Thêm chi phí trả hàng để tính lợi ích ròng. (2) Cho số nhóm lý do tháng sau để chứng minh theo đúng caveat. (3) Thêm phản ví dụ: trả hàng do kỳ vọng bị thổi phồng lúc bán (nối kh06-06 đào sâu) — thẻ hướng dẫn không sửa được. (4) Nâng ít nhất 2 câu lên L4/L5 (đọc bảng lý do; đánh đổi tăng thời gian đổi trả vs chi phí). (5) Gắn nhãn minh hoạ."
+    },
+    {
+      "id": "B:kh06-06",
+      "scores": { "accuracy": 13, "depth": 13, "practical": 15, "examples": 10, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 5 },
+      "total": 79,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Câu hỏi", "quote": "Q6: Nỗi lo sau mua thường mạnh nhất với loại mua nào?", "issue": "Q4 và Q6 là L2 nhận lại ý bài; không có câu nào dùng phản ví dụ (huỷ vì trùng giờ) hay đào sâu (chia theo giá trị đơn, tín hiệu hỏi hoàn tiền) — hai phần hay nhất của bài không được kiểm.", "fix": "Thay Q6 bằng câu phân loại 5 tin nhắn xin huỷ: cái nào là lo, cái nào là trở ngại thực tế; thay Q4 bằng câu ưu tiên gọi ai trước khi chỉ có 2 giờ nhân viên." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Trung tâm có 250 học viên mới mỗi tháng, 20 người xin huỷ trong tuần đầu", "issue": "Chưa gắn nhãn minh hoạ; không có chi phí giờ nhân viên (3 việc × 250 học viên) để so với 11 học viên × 18 triệu giữ lại.", "fix": "Thêm: 'ước 250 × 20 phút = 83 giờ nhân viên/tháng; 11 học viên giữ lại ≈ 198 triệu doanh thu' (minh hoạ)." },
+        { "sev": "P2", "where": "Q5", "quote": "Ghi nhận nỗi lo, nhắc gói bảo dưỡng khách đã có", "issue": "Phương án đúng ngắn nhất và khác giọng ba phương án còn lại; đoán được bằng hình thức.", "fix": "Viết lại 4 phương án cùng độ dài và cùng dạng câu trả lời mẫu." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20/250 = 8%; 9/250 = 3,6%; 8 − 3,6 = 4,4 điểm ✓; (20−9)/20 = 55% tương đối ✓; 11 là số tuyệt đối ✓. Tình huống 'khoảng 8%' khớp ví dụ." },
+      "claims": [
+        { "claim": "Nỗi lo sau mua mạnh nhất trong vài ngày đầu khi chưa có kết quả tự trấn an", "status": "unverified", "note": "Khớp post-purchase dissonance; không nêu tên hay nguồn." },
+        { "claim": "250 học viên/tháng, 20 → 9 xin huỷ", "status": "illustrative-unlabelled", "note": "Có caveat số nhỏ dao động." }
+      ],
+      "strengths": "Cấu trúc đầy đủ nhất module: ba việc cụ thể theo ngày (ngày 1, buổi 2, ngày 5), phản ví dụ phân biệt lo với trở ngại thực tế, đào sâu nêu đánh đổi giờ nhân viên và nối sang kỳ vọng lúc bán; caveat '20 với 9 là số nhỏ dễ dao động' đúng.",
+      "upgrade": "(1) Nâng Q4/Q6 lên L4 dùng phản ví dụ và đào sâu. (2) Thêm chi phí giờ nhân viên và doanh thu giữ lại để ra quyết định có số. (3) Gắn nhãn minh hoạ. (4) Nêu tên khái niệm (post-purchase dissonance) để tra tiếp. (5) Sửa hình thức Q5."
+    },
+    {
+      "id": "B:kh06-07",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 5 },
+      "total": 76,
+      "bloom_items": ["L4", "L3", "L3", "L3", "L2", "L3", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q1", "quote": "Gọi 100 người không mua lại: 60 nói hết hàng lúc nào không để ý", "issue": "Tình huống và ví dụ nói gọi 10 người (6/2/1/1), Q1 nói gọi 100 người (60/15/13/12) — cùng câu chuyện nhưng con số đổi; người học vừa đọc '10 người' sẽ tưởng đề nhầm. Ví dụ với 10 người cũng không nói độ nhiễu (6/10).", "fix": "Thống nhất: ví dụ gọi 10 người là 'đợt thăm dò', Q1 nêu rõ 'sau đó gọi tiếp 100 người'; hoặc đổi Q1 về 10 người và hỏi độ chắc chắn." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Thói quen hình thành khi việc mua lại gắn với một nhịp có sẵn: hết túi, cuối tuần, ngày lương", "issue": "Nêu như cơ chế không điều kiện; không nói khi nào nhắc theo nhịp phản tác dụng (tốc độ dùng khác nhau nhiều giữa khách — người uống 2 ly/ngày hết túi sau 12 ngày) hay cách ước tốc độ dùng từ khoảng cách hai đơn.", "fix": "Thêm: 'ước nhịp từ khoảng cách giữa đơn 1 và đơn 2 của từng khách; ai chưa có đơn 2 thì dùng trung vị nhóm'." },
+        { "sev": "P2", "where": "Q5", "quote": "Vì sàn thương mại điện tử yêu cầu shop phải có nút này", "issue": "Nhiễu phi lý; câu L2.", "fix": "Thay bằng câu đọc hai nhóm nhắc ngày 20 có/không có nút đặt lại và kết luận phần tăng do nút." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 280/1.000 = 28%; 430/1.000 = 43%; 43 − 28 = 15 điểm ✓; 150/280 = 53,6% tương đối ✓. Q1: 60+15+13+12 = 100 ✓; 1.000 − 280 = 720 ✓." },
+      "claims": [
+        { "claim": "Gọi 10 khách không quay lại: 6 quên, 2 chua, 1 đắt, 1 thử; 280 → 430 mua lại", "status": "illustrative-labelled", "note": "Ghi '(số minh hoạ)' và caveat hai đợt khách khác nhau." },
+        { "claim": "Túi 500 g dùng khoảng 25 ngày", "status": "illustrative-unlabelled", "note": "Giả định tốc độ dùng, không ghi nhãn." }
+      ],
+      "strengths": "Nguyên tắc 'hỏi người không quay lại trước khi chọn cách nhắc' và 'nhắc theo nhịp dùng, không theo lịch của bạn' chuyển thẳng thành việc làm (ngày 20, nút đặt lại, giao định kỳ sau 2 lần); Q1 buộc đọc đúng mẫu số (60% của 720, không phải của 1.000).",
+      "upgrade": "(1) Thống nhất 10 vs 100 người giữa ví dụ và Q1. (2) Thêm cách ước nhịp dùng từng khách và điều kiện khi nhịp khác nhau nhiều. (3) Thêm phản ví dụ: sản phẩm không có nhịp hết (áo quần) — thói quen gắn vào gì. (4) Thêm đào sâu: nhóm đối chứng giữ lịch cũ để tách phần tăng (bài nhắc nhưng chưa dạy cách chia). (5) Thay Q5."
+    },
+    {
+      "id": "B:kh06-08",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 9, "pedagogy": 9, "assessment": 7, "data": 6, "clarity": 5 },
+      "total": 78,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L2", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Câu hỏi", "quote": "Q4: Vì sao nên ghi câu nói nguyên văn… Q5: Một điểm gãy đã được tìm ra nhưng không có ai phụ trách… Q7: Đâu là dấu hiệu một bản đồ hành trình đang được dùng thật?", "issue": "Ba câu L2 nhận lại ý bài với nhiễu yếu ('trông sinh động hơn', 'tự biến mất khi nâng cấp'); không câu nào dùng phản ví dụ ba đường đi hay số 390/600 để ra quyết định.", "fix": "Thay Q5 bằng câu đọc bảng: 3 điểm gãy × số người rơi × công sửa → chọn cái nào đầu; thay Q7 bằng câu nhận ra dấu hiệu bản đồ chỉ vẽ một đường (phản ví dụ)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Phỏng vấn 15 người và xem dữ liệu 600 hồ sơ bắt đầu điền online: 390 hồ sơ dừng ở bước tải giấy khai sinh", "issue": "Không gắn nhãn minh hoạ; không có kết quả sau khi cho chụp ảnh (hạn 4 tuần) nên vòng 'đo lại' trong khái niệm không được minh hoạ.", "fix": "Thêm một câu kết quả (minh hoạ): 'sau 4 tuần, 600 hồ sơ chỉ còn 150 dừng ở bước này'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 600 − 390 = 210; 210/600 = 35% ✓; 65% là tỉ lệ dừng ✓; 210 là số tuyệt đối ✓." },
+      "claims": [
+        { "claim": "600 hồ sơ online, 390 dừng ở bước tải giấy khai sinh", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Tiêu chí bản đồ dùng được (một nhóm, hành động thật, câu nguyên văn, số, người phụ trách, hạn) rất thực dụng; phản ví dụ ba đường đi (đại lý/tổng đài/web) và đào sâu về độ chi tiết vs tốc độ đúng với thực tế nghề; Q6 (phạm vi bản đầu tiên) là câu áp dụng tốt.",
+      "upgrade": "(1) Nâng Q4/Q5/Q7 lên L4–L5 dùng dữ liệu và phản ví dụ. (2) Thêm kết quả đo lại để khép vòng. (3) Thêm mẫu một dòng của bản đồ (bước · hành động · nơi · thời gian · câu nói · số rơi · người · việc thử) để người học sao chép. (4) Gắn nhãn minh hoạ."
+    },
+    {
+      "id": "B:kh06-09",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 12, "examples": 9, "pedagogy": 7, "assessment": 7, "data": 5, "clarity": 5 },
+      "total": 68,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L2", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Căn hộ giá 3 tỉ đồng, ngân hàng cho vay 70%. Khách cần tự có bao nhiêu triệu đồng?", "issue": "Phép tính tài chính cá nhân, không rèn kỹ năng của bài (phân biệt hai hành trình, chọn điểm chạm). Câu calc duy nhất của bài không đo được gì về marketing.", "fix": "Thay bằng câu đọc bảng: 100 khách đặt cọc, số lần xem nhà mẫu trung vị 2, 60% có bố mẹ đi cùng — hỏi điểm chạm nào cần tài liệu riêng và vì sao." },
+        { "sev": "P2", "where": "Q5", "quote": "Vì hành trình kéo dài khoảng 90 ngày, tuần đầu chưa kịp ra kết quả", "issue": "Số 90 ngày là giả định minh hoạ trong ví dụ nhưng ở Q5 được dùng như sự thật; nhiễu d ('số nhỏ') cũng đúng một phần — lời giải thừa nhận, làm phương án đúng mỏng hơn.", "fix": "Viết Q5 là 'với giả định hành trình 90 ngày'; đổi d thành phương án rõ sai." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Với hàng rẻ, mua thường xuyên, hành trình ngắn vài giây: khách chọn cái quen mắt nhất, dễ lấy nhất", "issue": "Hai cực được mô tả tốt nhưng không có tiêu chí xếp một sản phẩm vào đâu (giá × tần suất × rủi ro × số người quyết); Q6 (máy giặt 12 triệu) hỏi điều bài chưa dạy. Thiếu phản ví dụ/đào sâu.", "fix": "Thêm bảng 4 tiêu chí với 3 ví dụ (nước suối, máy giặt, căn hộ) để Q6 có căn cứ trong bài." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3.000 triệu × 30% = 900 triệu ✓ (tol 1); 2.100 là phần vay ✓; 210 = 3.000 × 7% ✓ lỗi tính." },
+      "claims": [
+        { "claim": "Khách căn hộ mất khoảng 90 ngày, xem nhà mẫu 2–3 lần, cả vợ chồng và bố mẹ góp ý", "status": "illustrative-labelled", "note": "Bài ghi 'số ngày và số lần là giả định minh hoạ'." },
+        { "claim": "Nước suối 10.000đ, khách chọn trong 3 giây ở tủ lạnh", "status": "illustrative-unlabelled", "note": "Cùng đoạn nhưng chỉ nhãn cho phần căn hộ." }
+      ],
+      "strengths": "Tương phản hai cực rõ và dễ nhớ ('có mặt khắp nơi' vs 'đi cùng từng bước'); Q6 (máy giặt ở giữa, hay bị trigger rút ngắn) nối tốt với kh06-01 và đẩy người học ra khỏi nhị phân.",
+      "upgrade": "(1) Thêm bảng tiêu chí xếp loại hành trình (giá, tần suất, rủi ro, số người quyết) với 3 ví dụ. (2) Thay Q3 bằng câu đọc dữ liệu điểm chạm. (3) Thêm phản ví dụ: hàng rẻ nhưng hành trình dài (sữa công thức lần đầu làm mẹ) và hàng đắt nhưng mua nhanh (thay máy cũ hỏng gấp). (4) Thêm đào sâu về đo lường theo hành trình: hàng đắt đo bằng lead chất lượng và tỉ lệ đi xem, không bằng hợp đồng tuần đầu. (5) Gắn nhãn minh hoạ cho phần nước suối."
+    },
+    {
+      "id": "B:kh06-10",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 16, "examples": 10, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 5 },
+      "total": 83,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Đếm từng bước: 2.000 người xem trang dịch vụ; 800 người bấm \"đặt lịch\"; 150 người chọn xong giờ; 60 người xác nhận", "issue": "Không gắn nhãn minh hoạ; bước 150 → 60 (rơi 60%) cũng lớn nhưng bài không nói vì sao chưa sửa — đào sâu nói 'xếp theo số người lẫn công sửa' nhưng ví dụ không áp dụng.", "fix": "Thêm một câu: 'bước xác nhận mất 90 người, sửa sau vì cần đổi cổng OTP (tốn hơn)'." },
+        { "sev": "P2", "where": "Q4 wrong", "quote": "[3,\"SAI_TINH_TOAN\"]", "issue": "3% là tỉ lệ cũ (60/2.000), tức lấy nhầm bộ số, không phải sai tính toán.", "fix": "Đổi nhãn thành NHAM_BO_DU_LIEU." },
+        { "sev": "P2", "where": "Câu hỏi", "quote": "Q5: Một shop quần áo thấy nhiều khách bỏ giỏ hàng ngay khi thấy phí giao hàng… Q6: …phải chờ 2 tiếng mới được trả lời. Đây là loại chỗ gãy nào?", "issue": "Hai câu phân loại L3 liên tiếp cùng dạng; không câu nào dùng phản ví dụ (lịch tối kín) để chẩn đoán từ dữ liệu.", "fix": "Thay Q6 bằng câu: form đã rút gọn, tỉ lệ qua bước chọn giờ vẫn 20%, tin nhắn hỏi 'còn giờ 19h không' — chẩn đoán và việc làm." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (800 − 150)/800 = 81,25% ✓; 18,75% là tỉ lệ qua ✓; 650/2.000 = 32,5% ✓. Q4: 160/2.000 = 8% ✓; 160/800 = 20% ✓; 60/2.000 = 3% ✓. Ví dụ: 160/60 = 2,67 'gần gấp ba' ✓." },
+      "claims": [
+        { "claim": "Phễu 2.000 → 800 → 150 → 60; sau sửa 2.000 → 800 → 400 → 160", "status": "illustrative-unlabelled", "note": "Có caveat so trước–sau và gợi A/B." }
+      ],
+      "strengths": "Lập luận 'thêm người vào đầu chỉ nhân bản tỉ lệ rơi' và 'ưu tiên theo số người mất × công sửa' rõ, có phản ví dụ (lịch kín) và đào sâu (tách rơi vì không muốn / vì vướng, nối sang chi phí trên mỗi đơn); caveat so trước–sau và điều kiện A/B 'nếu lượng truy cập đủ' đúng.",
+      "upgrade": "(1) Áp dụng quy tắc ưu tiên của đào sâu vào ví dụ (vì sao chưa sửa 150 → 60). (2) Thay Q6 bằng câu chẩn đoán từ phản ví dụ. (3) Gắn nhãn minh hoạ. (4) Thêm 'đào sâu' một câu về cỡ mẫu A/B: với 800 người bấm/tháng, phát hiện chênh 150 → 400 cần bao lâu (nối kh05-08). (5) Sửa nhãn wrong Q4."
+    }
+  ],
+  "module_notes": {
+    "progression": "Theo đúng trục hành trình: trigger (01) → tập cân nhắc (02) → điểm chạm đan xen (03) → điểm bán (04) → mở hộp (05) → lo sau mua (06) → mua lại (07) → bản đồ hành trình (08) → rẻ vs đắt (09) → điểm gãy (10). Bài 08 (bản đồ) và 10 (điểm gãy) nên đứng cạnh nhau hoặc đảo: 10 dạy đếm từng bước, 08 dùng kết quả đếm; bài 09 (rẻ vs đắt) là khung bao trùm, hợp hơn ở vị trí 02. Năm bài (02, 06, 08, 10 có đủ points/counter/deeper; 03, 04 có nhãn minh hoạ) chất lượng cao hơn hẳn các bài còn lại — cấu trúc không đồng đều trong cùng module.",
+    "overlap": [
+      "kh06-03 Q6 (tắt TikTok 2 chi nhánh có đối chứng) và kh06-04 Q7 (ghép cặp siêu thị) và kh06-01 Q2 (tỉnh đối chứng) — cùng dạy một thiết kế thử nghiệm; tốt để củng cố nhưng nên có một bài chủ về 'vùng đối chứng' và các bài khác chỉ tham chiếu.",
+      "kh06-05 Q3/Q4, kh06-06 Q3, kh06-07 Q3 đều là 'tính điểm phần trăm chênh' — ba lần cùng một kỹ năng.",
+      "kh06-08 (điểm gãy trong bản đồ) và kh06-10 (điểm gãy) trùng khái niệm 'điểm gãy'; kh06-08 đào sâu đã tự nhận 'khái niệm kề cận là điểm gãy'."
+    ],
+    "gaps": [
+      "Thiếu bài về đo hành trình bằng dữ liệu hành vi (sự kiện trên web/app, UTM, mã khuyến mãi theo kênh) — module dựa gần hết vào tự khai của khách; kh06-03 Q5 chỉ chạm.",
+      "Thiếu bài về vai trò người ảnh hưởng trong hộ gia đình/B2B (ai khởi xướng, ai quyết, ai dùng) — kh06-09 nhắc 'nhiều người cùng quyết' nhưng không dạy.",
+      "Thiếu bài về giới thiệu/truyền miệng sau mua (bước cuối hành trình, nối từ 05–07 sang khách mới).",
+      "Ba trong mười bài gắn nhãn 'số minh hoạ' trong văn bản (03, 04, 07 và một phần 09); bảy bài còn lại không — cần nhãn đồng nhất.",
+      "kh06-01 Q7 cần kiểm pháp lý quảng cáo sữa thay thế sữa mẹ (dưới 24 tháng) trước khi lên app."
+    ],
+    "best_lesson": "B:kh06-10",
+    "weakest_lesson": "B:kh06-09"
+  }
+}

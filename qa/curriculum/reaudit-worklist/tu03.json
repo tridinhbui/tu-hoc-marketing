@@ -1,0 +1,18 @@
+{
+ "mod": "tu03",
+ "lessons": [
+  {
+   "id": "B:tu03-01",
+   "total": 84,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q6 key/why",
+     "quote": "Người dưới ngưỡng vẫn mua giá thường như trước, không mất gì so với không có chương trình",
+     "issue": "Đáp án khẳng định tuyệt đối, mâu thuẫn chính phần đọc: phản ví dụ nói ngưỡng có thể khiến khách \"bỏ đi\", đào sâu nói khách có thể gộp hai lần mua. Lời giải (d) \"Không có căn cứ rằng bỏ giỏ sẽ tăng\" cũng ngược với phản ví dụ.",
+     "fix": "Sửa đáp án: \"Phần lớn người dưới ngưỡng mua như cũ; đo số đơn và tỉ lệ bỏ giỏ để kiểm, như phản ví dụ\" và sửa why(d)."
+    }
+   ]
+  }
+ ]
+}

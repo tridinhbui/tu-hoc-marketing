@@ -1,0 +1,31 @@
+{
+ "mod": "ob03",
+ "lessons": [
+  {
+   "id": "B:ob03-02",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm + toàn bài",
+     "quote": "Phép tính đủ là tiền tuyệt đối tăng thêm × phần giành được × biên gộp",
+     "issue": "Mô hình chỉ cho người mới lấy doanh số từ phần ngành tăng thêm. Người mới thường lấy phần lớn doanh số từ thị phần hiện có (giật từ hãng khác); chỉ 0,1% của 20.000 tỉ ở A đã là 20 tỉ, hơn mọi kịch bản ở B trong ví dụ. \"Phép tính đủ\" bỏ vế này nên có thể dẫn tới quyết định sai.",
+     "fix": "Viết phép tính đủ = (thị phần giành từ quy mô hiện có + phần giành của tiền mới) × biên, và nói rõ khi nào chỉ xét tiền mới là hợp lý (chi phí giật khách ở ngành bão hoà rất cao)."
+    }
+   ]
+  },
+  {
+   "id": "B:ob03-03",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1 lời giải d / concept",
+     "quote": "Quảng cáo đều quanh năm tốn tiền cho những người chưa đến lúc mua",
+     "issue": "Mâu thuẫn với chính nguồn bài dẫn (Sharp/Ehrenberg-Bass): với hàng mua thưa, không biết ai sắp vào thị trường nên cần duy trì độ nhớ đều đặn. Bài đơn giản hoá thành \"chỉ đánh vào lúc cân nhắc\".",
+     "fix": "Nêu cả hai: duy trì độ nhớ ở mức nền + tăng sức thuyết phục ở điểm tìm hiểu; sửa lời giải d thành \"không đủ một mình\"."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+{ "mod":"tu02", "fixed_at":"2026-11-07", "items":[
+  { "id":"B:tu02-04", "where":"KHÁI NIỆM", "status":"fixed", "change":"Thêm src hai trang Google Ads Help (About negative keywords; About the search terms report), ngày kiểm 2026-11-07, st:'chua'; khái niệm nêu rõ lấy Google Ads làm ví dụ và câu “nếu màn hình của bạn khác bài, tin trang chính thức”.", "key_changed":false, "note":"đã sửa ở lượt trước" },
+  { "id":"B:tu02-09", "where":"VÍ DỤ", "status":"fixed", "change":"Thêm vào VÍ DỤ: ví dụ coi lãi biên không đổi trong khoảng cắt (giả định tuyến tính) để tính nhanh; thực tế lãi biên C tăng khi C nhỏ lại (ước: triệu thứ 10 của C hoà vốn), nên cắt C tới khi biên C ≈ biên B rồi mới cắt B.", "key_changed":false, "note":"đã sửa ở lượt trước" }
+ ],
+ "validator":"0 lỗi", "tests":"pass" }

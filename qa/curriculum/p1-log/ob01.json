@@ -1,0 +1,72 @@
+{
+ "mod": "ob01",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:ob01-01",
+   "where": "VÍ DỤ",
+   "status": "fixed",
+   "change": "Thêm sau câu đếm: “(số đếm minh hoạ, không phải tỉ lệ vào quán chuẩn của ngành)”.",
+   "key_changed": false,
+   "note": "Bài đã có assume:true (giao diện in nhãn “Số liệu giả định”), nên phần “không gắn nhãn” chỉ đúng một nửa; lỗi thật là 20%/5% có thể bị hiểu như benchmark — câu thêm chặn cách hiểu đó. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob01-03",
+   "where": "VÍ DỤ ↔ Q7",
+   "status": "fixed",
+   "change": "Thêm vào VÍ DỤ phép tính tiền (số minh hoạ): lãi gộp ước máy khoan 400.000đ, móc dán 50.000đ, thợ 60.000đ/lượt; lãi gộp mỗi lượt hỏi 80.000đ → ≈ 92.000đ, doanh thu 18 → 17,88 triệu. Lời giải Q7a dẫn lại con số này và nói kết luận còn tuỳ lãi thật.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: Q7 lời giải dùng 18,0/17,88 triệu mà phần đọc không có — lỗi đúng. Tính lại: 8×400k+14×50k+12×60k = 4,62 triệu ÷ 50 = 92.400đ. Khoá Q7 (a) giữ nguyên. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob01-04",
+   "where": "MANG THEO",
+   "status": "fixed",
+   "change": "“Giá bán do giá trị khách cảm nhận quyết định, không do chi phí…” → “Giá trị khách cảm nhận đặt trần cho giá, chi phí đặt sàn; hãy làm cho giá trị nhìn thấy được rồi mới đụng vào giá.”",
+   "key_changed": false,
+   "note": "Đã tự kiểm: câu cũ mâu thuẫn với VÌ SAO HIỆU QUẢ (3). Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob01-04",
+   "where": "VÍ DỤ",
+   "status": "fixed",
+   "change": "Thêm phép thử độ nhạy: nếu xe A thêm các chi tiết (chi phí lên 16.000đ), nâng giá 30.000đ mà mất 20% lượng (176 ổ), lãi gộp 176 × 14.000 = 2.464.000đ < 2.640.000đ hiện tại → phải đo lượng mất trước khi tăng giá.",
+   "key_changed": false,
+   "note": "Số 14.000đ/ổ của người chấm chỉ đúng khi xe A cũng gánh thêm 3.000đ chi phí (30.000 − 16.000); đã ghi rõ giả định đó trong câu. Phần “không gắn nhãn” không đúng: bài đã có assume:true. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob01-05",
+   "where": "Q3 ↔ TÌNH HUỐNG",
+   "status": "fixed",
+   "change": "Đề Q3: “Mỗi tháng có 500 khách” → “Giả sử mỗi tháng có 500 khách mua lần đầu (mỗi khách một đơn). Tỉ lệ khách quay lại mua trong 3 tháng sau lần đầu tăng từ 10% lên 22%. Mỗi nhóm khách mua lần đầu trong một tháng có thêm bao nhiêu người quay lại?”; steps ghi rõ đo theo nhóm (cohort), không phải 60 khách cộng thêm mỗi tháng lịch.",
+   "key_changed": false,
+   "note": "Đáp án 60 giữ nguyên; wrong 110/12 vẫn hợp lệ. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob01-05",
+   "where": "Q6 đáp án a",
+   "status": "fixed",
+   "change": "Phương án a: “…và mất một khách” → “Đơn hoàn tốn ship hai chiều, và khách hoàn ít khi quay lại”; lời giải a: “phần lớn khách hoàn ít quay lại (shop nên kiểm bằng dữ liệu của mình)”; lời giải d bỏ “khách đã mất” tuyệt đối.",
+   "key_changed": false,
+   "note": "Giữ độ dài phương án a ngang nhiễu (validator 0 lỗi). Khoá a giữ. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob01-06",
+   "where": "Q3 ↔ VÍ DỤ",
+   "status": "fixed",
+   "change": "VÍ DỤ thêm: “Với chỉ 10 đơn mỗi tháng, dao động vài đơn giữa các tháng là bình thường; cần 2–3 tháng trước khi coi 3% là mức mới.” Steps Q3 thêm: 9 triệu là mức tăng nếu 3% giữ được, mẫu nhỏ, cần theo dõi 2–3 tháng.",
+   "key_changed": false,
+   "note": "Đáp án 9.000 giữ nguyên. Không thêm con số ±6 đơn của người chấm (không cần để sửa lỗi). Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob01-07",
+   "where": "VÍ DỤ",
+   "status": "fixed",
+   "change": "Thêm: mỗi khách mới qua thẻ tốn khoảng 35.000đ (giảm 20.000đ + một lần gội cho người giới thiệu, giá vốn ước 15.000đ; số minh hoạ), gần 1 triệu/tháng cho 27 khách; thẻ chỉ có lợi nếu phần lớn số khách này quay lại ít nhất một lần nữa với giá đủ 80.000đ.",
+   "key_changed": false,
+   "note": "27 × 35.000 = 945.000đ. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

@@ -1,0 +1,18 @@
+{
+ "mod": "qc04",
+ "lessons": [
+  {
+   "id": "B:qc04-01",
+   "total": 85,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ (Lan)",
+     "quote": "Giả định CPA 120.000đ, thấp hơn lãi gộp 180.000đ: qua cả bốn câu.",
+     "issue": "Câu (4) là ngân sách nuôi được ~50 sự kiện/tuần, nhưng ví dụ không cho ngân sách của Lan; ở CPA 120.000đ cần ~6 triệu/tuần (~24 triệu/tháng). Kết luận \"qua cả bốn câu\" không có số chống đỡ, ngay trong bài dạy tính đúng phép thử này cho Hà.",
+     "fix": "Thêm ngân sách của Lan (vd. 7 triệu/tuần → ~58 đơn) hoặc nói Lan qua câu 4 nếu tối ưu sự kiện nông hơn."
+    }
+   ]
+  }
+ ]
+}

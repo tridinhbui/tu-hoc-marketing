@@ -1,0 +1,18 @@
+{
+ "mod": "kn02",
+ "lessons": [
+  {
+   "id": "B:kn02-01",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ / Q3",
+     "quote": "120 điểm có hàng của bạn bán tổng 60.000 lon nước tăng lực các loại",
+     "issue": "Tình huống định nghĩa vũ trụ là \"400 điểm bán có bán nước giải khát\", tổng 100.000 lon \"cả ngành hàng\" không rõ là nước giải khát hay nước tăng lực, trong khi tử số là nước tăng lực. Độ phủ theo doanh số chỉ đúng khi tử và mẫu cùng một ngành hàng.",
+     "fix": "Ghi rõ: 100.000 lon nước tăng lực mọi hãng tại 400 điểm; 60.000 là nước tăng lực mọi hãng tại 120 điểm."
+    }
+   ]
+  }
+ ]
+}

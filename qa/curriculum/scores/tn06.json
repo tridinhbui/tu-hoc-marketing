@@ -1,0 +1,229 @@
+{
+  "mod": "tn06",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:tn06-01",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 14, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 66,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L5", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM / VÍ DỤ", "quote": "Shop muốn có khoảng 40 đơn để đọc được kết quả", "issue": "Con số 40 (và \"thường vài chục đơn\") không có cơ sở nêu ra: không nói với 40 đơn thì chi phí mỗi đơn dao động ±bao nhiêu, nên người học không biết khi nào cần 20 hay 100 đơn.", "fix": "Thêm: với n đơn, sai số tương đối của chi phí/đơn ≈ 1/√n; 40 đơn → ±16%; muốn phân biệt kênh mới đắt hơn 20% thì cần ~100 đơn; chọn số đơn theo mức chênh muốn thấy." },
+        { "sev": "P2", "where": "Q5", "quote": "Nếu trần thử kênh là 10%, số tiền tối đa cho kênh mới là bao nhiêu triệu?", "issue": "200 × 10% là phép tính L1; cùng với Q3 (40 × 375k) chiếm 2/7 câu cho hai phép nhân một bước.", "fix": "Gộp Q3+Q5 thành một câu L4: cho 3 kênh với CPO dự kiến và số đơn cần, ngân sách 200tr, hỏi kênh nào thử được dưới trần." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Tính tiền thử từ số đơn cần để kết luận", "issue": "Thiếu PHẢN VÍ DỤ, ĐÀO SÂU; không nối tới tiêu chí dừng (tn06-06) dù ngân sách thử chính là một trong ba mốc dừng.", "fix": "Thêm phản ví dụ: kênh có chu kỳ mua dài (nội thất), 40 đơn cần 3 tháng — đổi sang chỉ số dẫn đầu (tn06-02); nối sang 06-06." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 40×375.000 = 15tr ✓. Q5: 200×10% = 20tr ✓. Ví dụ: 3tr/375k = 8 đơn ✓; 100tr = 50% ngân sách ✓." },
+      "claims": [
+        { "claim": "Quy tắc kinh nghiệm trần 10–15% ngân sách cho thử kênh", "status": "illustrative-labelled", "note": "Bài ghi rõ \"không phải chuẩn chung\"." },
+        { "claim": "Nền tảng không tính giá khác theo tuổi tài khoản (lời giải Q4 b)", "status": "unverified", "note": "Khẳng định về nền tảng, hợp lý nhưng không nguồn." },
+        { "claim": "Shop mỹ phẩm 200tr/tháng, Facebook/Shopee, thử Zalo Ads", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Tính ngược ngân sách thử từ số đơn × CPO dự kiến và kẹp bằng trần % là quy trình rõ, làm được ngay; Q6 (quán nhỏ 10tr) cho thấy trần là công cụ bảo vệ, không phải luật — đánh đổi tốt.",
+      "upgrade": "Thêm cơ sở thống kê sơ cấp cho số đơn cần; gộp hai câu tính thành một câu L4; thêm phản ví dụ chu kỳ mua dài; nối với tn06-02 và tn06-06; gắn nhãn minh hoạ."
+    },
+    {
+      "id": "B:tn06-02",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 6, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "120 giỏ phải ra khoảng 24 đơn, mà mới có 3", "issue": "Kết luận \"quan hệ gãy\" đúng hướng nhưng không nói 3 so với 24 có nằm trong dao động không (với kỳ vọng 24, quan sát 3 là cực hiếm — nên nói ra để người học biết khi nào chênh nhỏ hơn thì chưa gãy).", "fix": "Thêm: nếu chỉ 18–20 đơn thì chưa chắc; 3/24 là xa quá mức ngẫu nhiên nên chắc chắn có vấn đề." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Khi đơn còn ít, hãy đọc các bước trước đơn", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; không nhắc chỉ số dẫn đầu khác nhau theo nền tảng (thêm giỏ trên TikTok có thể \"rẻ\" vì hành vi lướt) ngoài một câu.", "fix": "Thêm phản ví dụ: kênh mới có giỏ → đơn cao hơn kênh cũ nhưng giỏ đắt gấp 3 — vẫn có thể tốt nếu CPO cuối thấp hơn." },
+        { "sev": "P2", "where": "Q3", "quote": "Chi phí mỗi lượt thêm giỏ là bao nhiêu nghìn đồng?", "issue": "Phép chia một bước; Q5 đã là câu tính tốt hơn.", "fix": "Thay Q3 bằng câu L4: cho bảng 3 bước (nhấp, giỏ, đơn) của 2 kênh và hỏi bước nào gãy." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 6.000.000/120 = 50.000 ✓. Q5: 120×20% = 24 ✓. Ví dụ: 6.000.000/70 ≈ 85.700 ✓." },
+      "claims": [
+        { "claim": "Facebook cứ 10 giỏ ra 2 đơn", "status": "illustrative-labelled", "note": "Bài ghi \"(số minh hoạ)\"." },
+        { "claim": "Giày thể thao nội địa, TikTok 5 ngày 6tr 3 đơn, 120 giỏ", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ví dụ đảo được trực giác: giỏ rẻ hơn nhưng quan hệ giỏ→đơn gãy là tín hiệu cảnh báo — đúng cách người làm nghề đọc; điều kiện \"phải biết chỉ số dẫn đầu từng dẫn tới đơn\" (Q4) là điểm đúng hiếm thấy; Q7 chuyển sang sản phẩm cân nhắc lâu.",
+      "upgrade": "Nói về mức chênh nào mới gọi là gãy; thêm các phần cấu trúc còn thiếu; thay Q3 bằng câu đọc bảng 3 bước; gắn nhãn minh hoạ cho tình huống."
+    },
+    {
+      "id": "B:tn06-03",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L2", "L5", "L3", "L5", "L2", "L5", "L6"],
+      "bloom_max": "L6",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Q4 stem / KHÁI NIỆM", "quote": "Nền tảng khuyến nghị khoảng 50 chuyển đổi mỗi tuần để thoát giai đoạn học", "issue": "Con số 50/tuần là hướng dẫn của Meta cho learning phase, nêu như của \"nền tảng\" chung, không src, không ngày kiểm; bài thuộc nhóm fast nhưng không có câu \"nếu màn hình khác, tin trang chính thức\".", "fix": "Ghi rõ nguồn (Meta Business Help: learning phase, ~50 optimization events/7 ngày, kiểm ngày …) và câu nhắc kiểm tra trang chính thức." },
+        { "sev": "P1", "where": "Q5 đáp án d và lời giải", "quote": "Sửa một lỗi chính tả trong phần mô tả của quảng cáo … Sửa nhỏ không đổi bản chất quảng cáo", "issue": "Trên Meta, mọi chỉnh sửa creative (kể cả text) được xem là \"significant edit\" và có thể đưa ad set học lại; lời giải nêu như quy luật chung là gây hiểu lầm. Đáp án vẫn \"ít khả năng nhất\" trong 4 phương án nên không P0.", "fix": "Sửa lời giải: \"ít khả năng nhất trong bốn, nhưng một số nền tảng vẫn coi sửa text là sửa creative — kiểm tra quy định của nền tảng, và gom các sửa nhỏ vào một lần\"." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Chi phí mỗi đơn đang giảm: 120 → 95 → 88 nghìn", "issue": "Không cho số đơn mỗi ngày; với kênh mới 3 ngày đầu có thể 2–5 đơn/ngày, chênh 120→88 chưa chắc là xu hướng.", "fix": "Thêm số đơn/ngày và câu: với dưới 10 đơn/ngày, đọc trung bình 3 ngày (như Q7) thay vì từng ngày." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (120−88)/120 = 26,7% ✓. Wrong 36,4 = 32/88 ✓." },
+      "claims": [
+        { "claim": "Nền tảng khuyến nghị ~50 chuyển đổi/tuần để thoát giai đoạn học", "status": "unverified", "note": "Khớp hướng dẫn Meta nhưng không src, nêu như của nền tảng chung." },
+        { "claim": "Mỗi lần sửa lớn (nhắm chọn, mẫu, ngân sách mạnh) hệ thống có thể học lại", "status": "unverified", "note": "Đúng với Meta/Google nói chung, không nguồn." },
+        { "claim": "Sửa lỗi chính tả không làm hệ thống học lại", "status": "wrong", "note": "Với Meta, sửa text creative là significant edit; chỉ đúng tương đối so với 3 phương án khác." },
+        { "claim": "Chuỗi trà sữa Hà Nội, CPO 120k→95k→88k, kênh cũ 45k", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ (chi phí đi ngang, ít đơn → chờ là đốt tiền) và Q6 (hết giai đoạn học mà vẫn vượt ngưỡng lãi → dừng) cho đủ hai mặt của \"chờ\"; Q4 (nội thất 5 đơn/tuần → tối ưu bước sớm hơn) là giải pháp đúng.",
+      "upgrade": "Thêm src và ngày kiểm cho mọi khẳng định về learning phase; sửa lời giải Q5; thêm số đơn/ngày vào ví dụ và dạy đọc trung bình trượt tại đó; thêm câu L4 đọc bảng 7 ngày CPO + số đơn để phân biệt xu hướng và nhiễu."
+    },
+    {
+      "id": "B:tn06-04",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L5", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Q4 stem", "quote": "Facebook đếm một đơn nếu khách xem quảng cáo trong 1 ngày rồi mua; Google chỉ đếm khi khách nhấp rồi mua", "issue": "Mô tả cửa sổ quy công (attribution window) của hai nền tảng thật được nêu như sự thật đơn giản hoá: Meta mặc định 7 ngày nhấp + 1 ngày xem; Google Ads cũng có view-through cho video/display. Không src, không ngày kiểm.", "fix": "Đổi stem thành \"Giả sử kênh A đếm cả lượt xem 1 ngày, kênh B chỉ đếm lượt nhấp\" hoặc thêm src và ghi \"cài đặt mặc định tại ngày kiểm\"." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Phần nhắm lại: 135 đơn, chi 3,15 triệu. Phần khách mới: 165 đơn, chi 14,85 triệu → 90.000đ/đơn", "issue": "Số tự khớp nhưng không gắn nhãn minh hoạ; không nói kết luận \"đắt hơn 22%\" đã tính đến việc Google mới chạy 3 tuần chưa (bài chỉ nêu, không điều chỉnh).", "fix": "Gắn nhãn; thêm: so với Facebook ở 3 tuần đầu (vd 130k/đơn) thì Google đang rẻ hơn — đổi kết luận." },
+        { "sev": "P2", "where": "VÌ SAO (3)", "quote": "Mỗi nền tảng tính đơn theo cách riêng và thường ghi nhận rộng tay", "issue": "Khẳng định chung về nền tảng không nguồn; hợp lý nhưng cần hedge.", "fix": "Thêm: \"thường tổng đơn các nền tảng tự báo lớn hơn đơn thật trên web — kiểm bằng cách cộng lại và so\"." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 14.850.000/165 = 90.000 ✓. Kiểm: 135+165 = 300 đơn; 3,15+14,85 = 18tr ✓; 135/300 = 45% ✓; 110/90 − 1 = 22% ✓." },
+      "claims": [
+        { "claim": "Facebook đếm đơn theo lượt xem 1 ngày; Google chỉ theo nhấp", "status": "unverified", "note": "Đơn giản hoá cài đặt mặc định; không src." },
+        { "claim": "Nền tảng không giảm giá theo thâm niên (lời giải Q1 b)", "status": "unverified", "note": "" },
+        { "claim": "Cà phê rang xay: Facebook 60k/đơn, Google 110k/đơn, 45% đơn FB từ nhắm lại", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ba điều kiện like-for-like (cùng chỉ số, cùng giai đoạn, cùng loại khách) rõ và có ví dụ tách số thuyết phục; phản ví dụ (truy vấn tên thương hiệu trên Google) đảo chiều lệch — đúng chỗ; Q5, Q6, Q7 đều là câu đánh đổi/thiết kế.",
+      "upgrade": "Trung hoà Q4 hoặc thêm src/ngày kiểm; gắn nhãn minh hoạ; làm nốt phép so cùng giai đoạn bằng số; thêm câu L4 đọc bảng 2 kênh × (khách mới/cũ) × (nền tảng báo/đơn web)."
+    },
+    {
+      "id": "B:tn06-05",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 16, "examples": 13, "pedagogy": 6, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 82,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L5", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Q3 wrong[750]", "quote": "[750,\"RETENTION_TUYEN_TINH\"]", "issue": "Nhãn lỗi không liên quan (retention); lỗi là cộng % thay vì nhân chồng.", "fix": "Đổi nhãn thành CONG_PHAN_TRAM_THAY_NHAN." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Chi phí mỗi đơn trung bình: 74k, 77k, 80k, 92k", "issue": "Bảng chi phí trung bình và chi phí biên trình bày thành câu văn dài; với 5 mức ngân sách × 3 cột số, cần bảng để người học kiểm được 96k/92k/95k/232k.", "fix": "Thêm bảng 5 hàng: ngân sách, CPO trung bình, đơn/ngày, tiền thêm, đơn thêm, chi phí biên." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Mỗi lần đổi ngân sách, nhiều nền tảng cần vài ngày để học lại nên số ngày đầu hay nhiễu", "issue": "Khẳng định về nền tảng không nguồn; và với ~10–13 đơn/ngày, chênh 80k→92k giữa hai bậc 3 ngày (~35 đơn) chưa chắc khác nhiễu — bài không nói.", "fix": "Hedge nguồn; thêm: mỗi bậc giữ 3 ngày với ~12 đơn/ngày là ~36 đơn — đủ để thấy chênh lớn (232k) nhưng không đủ cho chênh nhỏ; giữ lâu hơn khi CPO sát ngưỡng." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Tăng từng bậc nhỏ và dừng ở bậc cuối mà phần tiền thêm còn lãi", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU chính thức (Q6 làm phản ví dụ nhưng phần đọc không có).", "fix": "Đưa kịch bản Q6 (CPO đứng yên qua 3 bậc) vào PHẢN VÍ DỤ; ĐÀO SÂU về creative mệt mỏi khi tăng quy mô." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 500×1,25 = 625; ×1,25 = 781,25 ✓. Q4: 977/80 = 12,21 đơn; 1.220/92 = 13,26; +1,05 đơn; 243/1,05 ≈ 232k ✓. Kiểm chuỗi biên trong ví dụ với 500k@70k: 125/(8,45−7,14) ≈ 96k; 156/(10,14−8,45) ≈ 92k; 196/(12,21−10,14) ≈ 95k; 243/1,05 ≈ 232k ✓ — tất cả khớp." },
+      "claims": [
+        { "claim": "Quy tắc tăng 20–30% mỗi bậc", "status": "illustrative-labelled", "note": "Bài ghi \"không phải chuẩn chung\"." },
+        { "claim": "Chuỗi ngân sách và CPO 500k→1,22tr", "status": "illustrative-labelled", "note": "Bài ghi \"(số minh hoạ)\"." },
+        { "claim": "Quảng cáo đấu giá không có chiết khấu theo khối lượng (lời giải Q1 a)", "status": "unverified", "note": "Đúng về nguyên tắc đấu giá, không nguồn." },
+        { "claim": "Nhiều nền tảng cần vài ngày học lại sau khi đổi ngân sách", "status": "unverified", "note": "" }
+      ],
+      "strengths": "Bài duy nhất trong batch dạy chi phí biên vs chi phí trung bình với số tự khớp hoàn toàn và kết luận đổi ở bậc cuối (92k trung bình vẫn dưới ngưỡng nhưng 232k biên vượt) — đúng chuẩn người làm nghề; Q4 là câu tính L4 thật; Q5 xử lý nhiễu ngày đầu đúng.",
+      "upgrade": "Thêm bảng số; sửa nhãn lỗi Q3; nói về cỡ mẫu mỗi bậc; thêm PHẢN VÍ DỤ/ĐÀO SÂU chính thức; thêm src cho khẳng định học lại; thêm câu L6 thiết kế lịch tăng bậc với ngày đọc và điều kiện lùi."
+    },
+    {
+      "id": "B:tn06-06",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L6", "L3", "L5", "L4", "L2", "L4"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q4", "quote": "chi phí mỗi đơn 125.000đ, ngưỡng 120.000đ … 5 ngày cuối xu hướng đang giảm đều. Làm gì?", "issue": "Hai phương án bênh được: a) dừng đúng mốc rồi \"thử lại sau với một biến đổi và mốc mới\" thực chất là chi thêm tiền sau một khoảng nghỉ; b) gia hạn 2 tuần có mốc mới cũng là quyết định hợp lý khi xu hướng giảm và chênh 4%. Lời giải b) viện \"thương lượng với mốc\" nhưng a) cũng mở lại thử. Ranh giới giữa a và b không rõ với người học.", "fix": "Làm a) khác hẳn b): \"Dừng, phân tích vì sao 5 ngày cuối giảm (creative? tệp?), rồi nếu có giả thuyết mới thì mở thử mới với mốc mới\"; hoặc đổi dữ kiện (xu hướng đi ngang) để b) sai rõ." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Khoảng giữa tuần 3 (6 triệu/tuần), tiền chi đã chạm 15 triệu", "issue": "Ngưỡng 120k = lãi gộp nghĩa là hoà vốn đơn đầu, chưa tính chi phí vận hành; bài không nói ngưỡng nên thấp hơn lãi gộp bao nhiêu để có lãi thật.", "fix": "Thêm: ngưỡng tiếp tục = lãi gộp − phần lãi muốn giữ (vd 120k × 70% = 84k) nếu không tính giá trị mua lại." },
+        { "sev": "P2", "where": "Q6", "quote": "Dừng một kênh sau khi thử, việc nào nên làm tiếp", "issue": "Câu L2, nhiễu yếu (xoá tài khoản, không nhắc lại).", "fix": "Thay bằng câu L4: cho log thử nghiệm 3 kênh đã dừng, hỏi kênh nào đáng thử lại khi điều kiện X đổi." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 120 − 180 = −60k ✓. Q5: 24 − 15 = 9tr; 9tr/180k = 50 đơn; 50×60k = 3tr ✓. Ví dụ: 15/6 = 2,5 tuần ✓." },
+      "claims": [
+        { "claim": "Cửa hàng đồ chơi gỗ, 4 tuần 24tr, CPO 180k, lãi gộp 120k", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ba mốc (tiền, thời gian, chỉ số gắn lãi) cụ thể và Q2 buộc người học viết đúng dạng; Q5 tách \"tiền chi thêm\" khỏi \"lỗ ròng\" (9tr vs 3tr) là phân biệt tinh; phản ví dụ về lãi vòng đời đúng chỗ.",
+      "upgrade": "Sửa Q4 để chỉ một phương án đúng; nói ngưỡng nên có biên an toàn dưới lãi gộp; thay Q6 bằng câu đọc log; thêm bảng mẫu tiêu chí dừng; gắn nhãn minh hoạ."
+    },
+    {
+      "id": "B:tn06-07",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 9, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L4", "L3", "L4", "L2", "L4", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tổng tăng 2.000 → 2.100, tức 100 đơn thật sự mới", "issue": "Tăng 5% tháng-tháng nằm trong dao động thường thấy của shop 2.000 đơn; bài có hedge \"ước lượng thô\" nhưng không cho người học thước đo dao động tháng để biết 100 có khác 0 không.", "fix": "Thêm: 6 tháng trước dao động ±120 đơn/tháng → 100 đơn chưa chắc khác 0; vì vậy cần holdout (Q4)." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "tắt kênh ở vài tỉnh trong 2 tuần rồi so với tỉnh còn chạy có số đơn trước đó tương đương", "issue": "Holdout theo tỉnh đúng, nhưng chưa nói hai điều kiện thường gặp: nhắm theo địa lý có rò (khách di chuyển, địa chỉ IP), và số đơn mỗi tỉnh nhỏ nên cần gộp tỉnh/kéo dài; không nói so sánh dùng diff-in-diff (chênh trước–sau của hai nhóm) như tn04-01.", "fix": "Thêm: dùng chênh trước–sau của hai nhóm tỉnh (nối tn04-01); gộp tỉnh để mỗi nhóm có ≥ 200 đơn/2 tuần; rò địa lý là nguồn lệch." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Nhìn tổng đơn, không cộng đơn từng kênh", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; trường hợp quảng cáo tên thương hiệu đáng giữ để chặn đối thủ chỉ một câu.", "fix": "Thêm phản ví dụ có số: tắt quảng cáo tên thương hiệu, đối thủ mua từ khoá, đơn organic giảm 15% — phần tăng thêm thật của quảng cáo tên thương hiệu là phần chặn mất mát." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 20tr/100 = 200k ✓ (20tr/400 = 50k là sai). Q4: 300 − 240 = 60; 60/300 = 20% ✓; 60/240 = 25% là nhầm mẫu số ✓. Ví dụ: 100/400 = 25% ✓. Q7: 1.500 − 1.100 = 400 ✓." },
+      "claims": [
+        { "claim": "Mỹ phẩm web: Google brand 400 đơn, tổng 2.000→2.100, Facebook 1.200→950", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Quảng cáo tên thương hiệu đáng giữ ở mức thấp để chặn đối thủ mua từ khoá", "status": "unverified", "note": "Lý lẽ thực hành phổ biến, không nguồn, có hedge \"có thể\"." }
+      ],
+      "strengths": "Khái niệm incrementality và holdout theo tỉnh đúng; Q6 (hai nhóm tỉnh không có mức nền trước) là câu chẩn đoán xuất sắc buộc người học nghĩ về đối chứng tương đương; Q7 chuyển sang ShopeeFood/quầy tốt; Q3–Q4 gắn tính với quyết định.",
+      "upgrade": "Thêm dao động tháng để biết 100 đơn có khác 0; nêu diff-in-diff và cỡ mẫu theo tỉnh; thêm phản ví dụ chặn đối thủ có số; thêm các phần cấu trúc; gắn nhãn minh hoạ; thêm câu L6 thiết kế holdout (chọn tỉnh, thời gian, chỉ số)."
+    },
+    {
+      "id": "B:tn06-08",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L6", "L3", "L4", "L5", "L3", "L4"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "TR30 có 24 người đăng ký, CC30 có 40 … Ngang nhau", "issue": "24 và 40 người là mẫu nhỏ; chênh vài người đổi thứ hạng kênh. Bài nói \"lệch vài người là chấp nhận được\" nhưng không nói với 24 người thì sai số lớn bao nhiêu.", "fix": "Thêm: với 24 đăng ký, ±5 người là bình thường (±20%) — hai kênh \"ngang\" nghĩa là chưa phân biệt được, không phải bằng nhau." },
+        { "sev": "P2", "where": "Q6", "quote": "Doanh thu mang về trên mỗi đồng chi phí là bao nhiêu lần?", "issue": "Dùng doanh thu, không phải lãi (phòng gym có chi phí vận hành/khách); nhãn lỗi \"LTV_TINH_DOANH_THU\" cho 2 lại mô tả chính cách tính của đáp án đúng (cũng là doanh thu).", "fix": "Đổi câu sang lãi gộp (vd biên 60%) hoặc đổi nhãn [2] thành CHI_TINH_1_THANG." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Nếu làm được, có thể chọn vài khu phát và vài khu không phát để so", "issue": "Thiết kế geo-holdout cho tờ rơi chỉ một câu; không nói đọc bằng chênh đăng ký giữa khu có/không (không cần mã) — đây là cách đo tốt hơn mã.", "fix": "Thêm 2 câu: chia 10 khu thành 5 phát/5 không, so số đăng ký theo địa chỉ khách; mã chỉ là sàn, khu đối chứng cho ước lượng đầy đủ." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 6tr/24 = 250k ✓. Q6: 40×500k×4 = 80tr; 80/10 = 8 lần ✓. Ví dụ: 10tr/40 = 250k ✓." },
+      "claims": [
+        { "claim": "Phòng gym Biên Hoà, 5.000 tờ rơi 6tr, bàn tư vấn 10tr", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Danh sách dấu vết offline (mã riêng, QR, hotline, câu hỏi nguồn) cụ thể; phản ví dụ về mã đếm thiếu và cách đọc \"khoảng\" (Q4) thực tế; Q5 chuyển từ chi phí/đăng ký sang giá trị ở lại đúng hướng.",
+      "upgrade": "Nói sai số của mẫu 24–40; đổi Q6 sang lãi; phát triển geo-holdout thành một đoạn có số; thêm câu L4 đọc bảng mã vs tự khai vs khu đối chứng để ước lượng khoảng."
+    },
+    {
+      "id": "B:tn06-09",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L5", "L4", "L3", "L4", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Mục tiêu tuần 6: 300 đơn/tháng trên TikTok Shop với lãi mỗi đơn không thấp hơn Shopee quá 20%", "issue": "Mốc 300 đơn và 20% không được suy ra (từ công một người? từ điểm hoà vốn chi phí nhân sự?); không có chi phí người làm video trong phép tính lãi.", "fix": "Thêm: lương 1 người 12tr/tháng ÷ lãi 40k/đơn = 300 đơn hoà vốn nhân sự → mốc 300." },
+        { "sev": "P2", "where": "Q3", "quote": "Chỉ khoảng 50 đơn là thêm thật; phần lớn là khách chuyển sàn", "issue": "Kết luận từ so trước–sau trên một shop, tháng sau có thể khác mùa; lời giải có \"cần kiểm tra thêm\" nhưng không nói kiểm bằng gì (mùa cùng kỳ, đối thủ, tỉ lệ khách mới trên TikTok).", "fix": "Thêm trong lời giải: đối chiếu đơn Shopee cùng kỳ năm trước và tỉ lệ người mua TikTok chưa từng mua trên Shopee (theo số điện thoại)." },
+        { "sev": "P2", "where": "Q4", "quote": "Shopee, giá 159.000đ, phí sàn và thanh toán tổng 15%", "issue": "Phí Shopee 15% không gắn nhãn minh hoạ như phí TikTok 12% ở cùng câu.", "fix": "Thêm \"(số minh hoạ)\" cho cả hai." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 159.000×85% = 135.150; 159.000×88% − 8.000 = 131.920; chênh −3.230 ✓. Wrong 4.770 = quên quà ✓. Q3 (mcq): 3.050 − 3.000 = 50 ✓." },
+      "claims": [
+        { "claim": "Phí TikTok Shop ~12%", "status": "illustrative-labelled", "note": "Bài ghi \"(số minh hoạ; phí thật đổi theo ngành và thời điểm)\"." },
+        { "claim": "Phí Shopee + thanh toán ~15%", "status": "illustrative-unlabelled", "note": "Cùng câu nhưng không gắn nhãn." },
+        { "claim": "Shop áo thun 3.000 đơn/tháng Shopee, 5 người", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Kế hoạch thử gọn (5 mẫu, 1 người, 6 tuần, mốc) với ràng buộc người thật; phản ví dụ (có khách mới nhưng lãi mỏng vì quà) tách hai câu hỏi khác nhau; Q6 (chọn mẫu đã bán chạy để chỉ còn một ẩn số) và Q7 (ràng buộc giao bánh 2 ngày) là tư duy thử nghiệm tốt.",
+      "upgrade": "Suy mốc 300 đơn từ chi phí nhân sự; thêm chi phí người vào lãi; nói cách kiểm chuyển sàn (số điện thoại, cùng kỳ); gắn nhãn phí Shopee; thêm câu L4 đọc bảng 6 tuần đơn Shopee + TikTok + tỉ lệ khách mới."
+    },
+    {
+      "id": "B:tn06-10",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L2", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "chỉ lệch 3 khách là chi phí từ 1,5 đến 2,9 triệu", "issue": "Khoảng ±3 khách trên 10 là trực giác hợp lý nhưng không nói từ đâu (√10 ≈ 3,2); người học không tái dùng được cho 25 hay 60 khách.", "fix": "Thêm: với n khách, lệch thường thấy ≈ √n; 10 → ±3, 60 → ±8 (nối Q7)." },
+        { "sev": "P2", "where": "Q5", "quote": "Bạn nên để 25 trang biểu đồ ở đâu?", "issue": "Câu L2 nhận lại ý bài, nhiễu yếu.", "fix": "Thay bằng câu L4: cho một báo cáo 6 dòng lộn thứ tự, hỏi sắp lại và bỏ dòng nào." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "doanh thu 60 triệu, chưa trừ giá vốn dịch vụ", "issue": "Báo cáo mẫu không có lãi dù Q4 nói phải trừ giá vốn; mốc 2,5tr/khách không được giải thích đến từ lãi dịch vụ nào.", "fix": "Thêm biên dịch vụ (vd 50%) → lãi 30tr so với 20tr chi, và mốc 2,5tr = lãi gộp mỗi khách 3tr trừ biên an toàn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20tr/10 = 2tr ✓; 20/80 = 0,25; 20/16 = 1,25 là bước sớm ✓. Ví dụ: 20/13 ≈ 1,54; 20/7 ≈ 2,86 ✓. Q7: Facebook 60 khách × 2,3tr = 138tr chi." },
+      "claims": [
+        { "claim": "Chuỗi nha khoa Cần Thơ, Zalo Ads 4 tuần 20tr, 80 số → 16 khám → 10 dịch vụ", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Cấu trúc báo cáo một trang (đề xuất → số so mốc → điều chưa chắc → bước tiếp) và ví dụ mẫu đầy đủ, có nêu khoảng không chắc bằng số; Q7 (Zalo 2,0tr/10 khách vs Facebook 2,3tr/60 khách) buộc cân mẫu với con số — câu đánh đổi tốt.",
+      "upgrade": "Nêu quy tắc √n cho khoảng không chắc; thêm lãi dịch vụ và nguồn gốc mốc 2,5tr; thay Q5 bằng câu sắp lại báo cáo; thêm phiên bản báo cáo \"dừng\" để người học thấy cấu trúc không đổi khi kết quả xấu."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự theo vòng đời thử kênh rất hợp lý: ngân sách thử (01) → chỉ số dẫn đầu khi đơn ít (02) → giai đoạn học (03) → so cùng điều kiện (04) → tăng bậc (05) → tiêu chí dừng (06) → phần tăng thêm thật (07) → offline (08) → kênh bán song song (09) → báo cáo (10). Các bài nối chéo nhau rõ (03↔04↔06, 01→06, 07↔09). Điểm yếu chung: nhiều kết luận trên mẫu nhỏ (3 đơn, 24 đăng ký, 100 đơn chênh) mà chỉ 10 nêu khoảng không chắc; các khẳng định về cơ chế nền tảng (learning phase, attribution window) không có src dù thuộc nhóm fast.",
+    "overlap": [
+      "tn06-07 và tn06-09 cùng đọc \"tổng đơn trước–sau, kênh cũ giảm\" (Google/Facebook vs TikTok/Shopee); 09 nên dẫn 07 thay vì lặp lại.",
+      "tn06-07 (holdout theo tỉnh) và tn04-01 (đối chứng cửa hàng) cùng logic diff-in-diff nhưng không tham chiếu nhau.",
+      "tn06-03 và tn06-05 cùng nói \"đổi ngân sách làm nền tảng học lại\"; tn06-06 và tn06-01 cùng nói trần ngân sách thử."
+    ],
+    "gaps": [
+      "Không có bài về cỡ mẫu và khoảng không chắc cho thử kênh (bao nhiêu đơn để phân biệt chênh 20% CPO), dù mọi bài đều cần.",
+      "Thiếu bài về diff-in-diff / holdout chi tiết (chọn vùng tương đương, kiểm mức nền trước, rò địa lý) — tn06-07 chỉ chạm bằng một câu hỏi.",
+      "Thiếu bài về cộng dồn số đơn các nền tảng vượt đơn thật (attribution overlap) và cách dùng đơn web làm nguồn chung — tn06-04 nêu nhưng không có ví dụ số.",
+      "Thiếu bài về chi phí nhân sự/thời gian khi thử kênh đòi nội dung (TikTok, livestream) — tn06-09 chạm nhưng không tính."
+    ],
+    "best_lesson": "B:tn06-05",
+    "weakest_lesson": "B:tn06-01"
+  }
+}

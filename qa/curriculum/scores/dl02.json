@@ -1,0 +1,187 @@
+{
+  "mod": "dl02",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:dl02-01",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 8, "pedagogy": 6, "assessment": 9, "data": 8, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L5", "L3", "L5", "L2", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "thấp hơn mức 200.000đ mà shop chịu được", "issue": "Ngưỡng CAC chịu được xuất hiện như dữ kiện cho sẵn, không nói nó phải đến từ LTV lãi gộp (bài 03–04); người học có thể coi ngưỡng là con số tự đặt.", "fix": "Thêm nửa câu: 'ngưỡng này tính từ lãi gộp vòng đời mỗi khách, bài 03 sẽ dựng lại'." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[428571,\"SAI_TINH_TOAN\"],[200000,\"SAI_MAU_SO\"]]", "issue": "428.571 = 30 triệu ÷ 70 là CAC bình quân mới của TikTok — chính là hiểu lầm bài muốn chữa (bình quân thay cho biên) nhưng gắn mã 'sai tính toán chưa phân loại'.", "fix": "Gắn lời giải riêng: 'bạn tính CAC bình quân sau khi tăng; đề hỏi CAC của phần tiền tăng thêm'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: CAC gộp cho biết cỗ máy có lời không", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; hiệu ứng liên kênh (TikTok mồi cho Google) chỉ nằm ở Q7 và một nửa câu trong KHÁI NIỆM.", "fix": "Đưa tình huống Q7 thành PHẢN VÍ DỤ; thêm ĐÀO SÂU về cách thử cắt kênh để đo đóng góp thật." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (30 − 20) triệu ÷ (70 − 50) = 500.000đ ✓; 428.571 = 30 triệu/70 ✓, 200.000 = 10 triệu/50 ✓. Ví dụ: 30 triệu/250 = 120k, 10 triệu/100 = 100k, 20 triệu/50 = 400k, 60 triệu/400 = 150k, 40 triệu/350 ≈ 114k ✓. Q7 b: 10 triệu/80 = 125k ✓." },
+      "claims": [
+        { "claim": "Shop mỹ phẩm: Facebook 30 triệu/250 khách, TikTok 20 triệu/50, Google 10 triệu/100", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Kênh đầu phễu có thể mồi khách rồi mua qua kênh khác", "status": "unverified", "note": "Cơ chế liên kênh được chấp nhận rộng; nêu đúng mức ('có thể', 'gần đúng')." }
+      ],
+      "strengths": "Q3 đưa CAC biên vào ngay bài đầu; Q7 (cắt TikTok làm khách Google giảm) dạy CAC theo kênh chỉ là ước lượng — hiếm bài nhập môn làm được.",
+      "upgrade": "Bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU từ Q7; nối ngưỡng 200.000đ với LTV lãi gộp; gắn nhãn minh hoạ; thêm một câu L4 đọc bảng ba kênh có cả giá trị đơn trung bình để buộc so CAC với giá trị khách (Q4 hiện chỉ nói nguyên tắc)."
+    },
+    {
+      "id": "B:dl02-02",
+      "scores": { "accuracy": 11, "depth": 12, "practical": 15, "examples": 9, "pedagogy": 8, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L6", "L4", "L2"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q6", "quote": "Hai chỉ số độc lập: thu hút rẻ hơn, và giữ chân cũng tốt lên", "issue": "Đáp án khẳng định 'giữ chân tốt lên' từ dữ kiện 'tỉ lệ khách cũ trong tổng đơn tăng' — không suy ra được: tỉ trọng khách cũ tăng cũng xảy ra khi số khách mới giảm. Chính ĐÀO SÂU của bài nói 'có thể là tín hiệu tốt của việc giữ chân, cũng có thể là quảng cáo thu hút đang yếu đi' — lời giải mâu thuẫn với phần đọc.", "fix": "Sửa phương án d thành 'Hai chỉ số đo hai việc khác nhau; CAC giảm là tín hiệu tốt, còn tỉ trọng khách cũ tăng cần xem số khách mới tuyệt đối trước khi gọi là giữ chân tốt'." },
+        { "sev": "P1", "where": "Q7", "quote": "c) Báo cáo khó trình bày hơn · d) Nền tảng quảng cáo sẽ phạt tài khoản khi tính sai", "issue": "Hai phương án nhiễu vô lý (một câu 4 chữ, một câu bịa) làm đáp án đoán được bằng hình thức; câu chỉ còn là nhận lại ý bài (L2).", "fix": "Thay bằng nhiễu bênh được: 'Làm CAC dao động theo mùa mua lại nên không so được giữa các tháng' và 'Làm LTV bị đếm hai lần vì khách cũ đã nằm trong LTV'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "800 đơn − 500 đơn của khách cũ = 300 đơn của khách mới (giả sử mỗi khách mới đặt một đơn)", "issue": "Giả định nêu rõ (tốt) nhưng bộ số 60 triệu/800/500 không gắn nhãn minh hoạ; con số '150.000đ lãi gộp vòng đời' xuất hiện đột ngột.", "fix": "Gắn nhãn minh hoạ; nói 150.000đ là giả định để nối sang bài LTV." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 60.000.000 ÷ (800 − 500) = 200.000đ ✓; sai 75.000 = /800 ✓, 120.000 = /500 ✓. Ví dụ: 200k ≈ 2,67 × 75k ('gấp gần ba') ✓." },
+      "claims": [
+        { "claim": "Thương hiệu cà phê: 60 triệu quảng cáo, 800 đơn, 500 đơn khách cũ", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Khách cũ quay lại phần lớn nhờ sản phẩm và chăm sóc, không nhờ quảng cáo thu hút", "status": "unverified", "note": "Khái quát; PHẢN VÍ DỤ đã tự giới hạn lại." }
+      ],
+      "strengths": "Có đủ VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; phản ví dụ (khách cũ quay lại đúng ngày ưu đãi) và đề xuất theo dõi hai CAC cạnh nhau là đúng nghề; Q5 (mã ưu đãi riêng cho lần mua đầu) là câu thiết kế đo lường.",
+      "upgrade": "Sửa Q6 và Q7; thêm một câu calc thứ hai (khách mới đặt trung bình 1,2 đơn → mẫu số 250 → CAC 240.000đ) để dạy đếm người không đếm đơn bằng số; gắn nhãn minh hoạ; viết ÁP DỤNG thành đầu ra số (hai CAC và khoảng cách)."
+    },
+    {
+      "id": "B:dl02-03",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 15, "examples": 8, "pedagogy": 6, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L3", "L3", "L3", "L5", "L3", "L2", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "khách mua trung bình 4 lần trong vòng đời", "issue": "LTV không nêu khung thời gian (4 lần trong 12 tháng hay 3 năm?) và không nói '4 lần' là số của nhóm khách cũ đã trưởng thành, thường cao hơn nhóm mới; không nhắc chiết khấu thời gian. Thiếu điều kiện này thì so LTV với CAC trả hôm nay bị lệch — bài 05 mới vá.", "fix": "Thêm một câu: 'LTV luôn kèm khung thời gian (ví dụ 12 tháng) và nên lấy từ nhóm khách cùng thời điểm vào; bài 05 nói về thời gian tiền về'." },
+        { "sev": "P2", "where": "Q7", "quote": "c) LTV nên tính trên lợi nhuận ròng", "issue": "Phương án này bênh được trong một số khung (fully-loaded unit economics); lời giải loại nó hợp lý nhưng phần đọc chưa nói tầng chi phí cố định xử lý ở đâu.", "fix": "Thêm vào KHÁI NIỆM: 'chi phí cố định không chia vào LTV; nó được so với tổng đóng góp ở bài kinh tế đơn vị'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: CAC trả bằng lãi, nên LTV phải tính bằng lãi", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; không có tình huống LTV lãi gộp cao nhưng vẫn không nên chi (ví dụ tiền về sau 2 năm).", "fix": "Thêm PHẢN VÍ DỤ nối sang payback." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 300.000 × 4 × 40% = 480.000đ ✓; sai 1.200.000 ✓, 120.000 = 300k × 40% ✓. Q5: 200.000 × 6 × (1 − 55%) = 540.000đ ✓; sai 660.000 = 1,2 triệu × 55% ✓. Ví dụ: 480k − 500k = −20k ✓; 1,2 triệu/500k = 2,4 ✓. Q4 c: giảm 60k trên lãi 120k = một nửa ✓. Task: CAC 45 triệu/300 = 150k; LTV sau ship = (350k × 35% − 20k) × 4 = 410k; LTV/CAC 2,73; CAC trần cho 3 lần ≈ 136,7k; tỉ lệ sai 1,4 triệu/50k = 28 — rubric nhất quán ✓." },
+      "claims": [
+        { "claim": "Shop hạt dinh dưỡng: đơn 300.000đ, 4 lần, biên 40%, CAC 500.000đ", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "App tiếng Anh: 200.000đ/tháng, 6 tháng, chi phí biến đổi 55%", "status": "illustrative-unlabelled", "note": "Chỉ trong Q5." },
+        { "claim": "Kế toán gọi phần sau giá vốn là 'biên lãi gộp'; phần sau ship, phí sàn là biên đóng góp", "status": "verified", "note": "Định nghĩa kế toán quản trị chuẩn; không cần nguồn ngoài." }
+      ],
+      "strengths": "Công thức LTV = giá trị đơn × số lần × biên lãi gộp đúng và ghi chú thuật ngữ biên gộp/biên đóng góp rất tốt; BÀI THỰC HÀNH có 5 con số với rubric rõ, kể cả CAC trần để đạt 3 lần.",
+      "upgrade": "Thêm khung thời gian và nguồn cohort cho '4 lần'; bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU (vị trí của chi phí cố định, chiết khấu); thay Q6/Q7 (L2) bằng một câu L4 đọc bảng hai sản phẩm có biên khác nhau và hỏi sản phẩm nào chịu được CAC cao hơn."
+    },
+    {
+      "id": "B:dl02-04",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 15, "examples": 9, "pedagogy": 6, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L5", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Mốc khoảng 3 phổ biến từ giới đầu tư phần mềm đăng ký (SaaS) và do David Skok nêu như một ước lượng kinh nghiệm", "issue": "Nêu tên người thật và nguồn gốc benchmark mà không có src/ngày kiểm; bài có gắn nhãn 'ước lượng kinh nghiệm, không phải quy luật' (tốt) nhưng quy ước freshness periodic đòi nguồn bấm được.", "fix": "Thêm src: bài 'SaaS Metrics 2.0' của David Skok (forentrepreneurs.com) với ngày kiểm, hoặc bỏ tên người và chỉ nói 'mốc kinh nghiệm của giới SaaS'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "ba doanh nghiệp cùng tỉ lệ 3 có thời gian hoàn vốn 2, 10 và 24 tháng", "issue": "Minh hoạ được gắn nhãn (tốt) nhưng không chỉ cách tính ra 2/10/24 từ lãi gộp mỗi tháng; người học chưa học payback (bài 05) nên đây là con số rơi từ trên xuống.", "fix": "Thêm một dòng: 'hoàn vốn = CAC ÷ lãi gộp mỗi tháng; 300.000 ÷ 150.000 = 2 tháng, 300.000 ÷ 12.500 = 24 tháng'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: LTV/CAC cho biết mỗi đồng thu hút mang về bao nhiêu đồng lãi", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU trong phần đọc; nội dung 'LTV là dự báo sau 5 tháng hoạt động' (Q6) rất quan trọng nhưng chỉ ở quiz.", "fix": "Đưa Q6 thành PHẢN VÍ DỤ: tách phần lãi đã thu với phần dự báo." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2.250.000 × 40% = 900.000; 900.000 ÷ 300.000 = 3 ✓; sai 7,5 ✓, 0,33 ✓. Task: đóng góp 180k − 72k − 28k = 80k ✓; LTV 3 × 80k = 240k ✓; CAC trần 80k ✓; ngân sách 400 × 60k = 24 triệu, 700 × 75k = 52,5 triệu, 1.000 × 95k = 95 triệu ✓; CAC biên cơ sở → cao = 42,5 triệu/300 = 141.667đ ✓; n đơn tối thiểu để LTV/CAC ≥ 3 ở 75k: 225k/80k = 2,81 ✓." },
+      "claims": [
+        { "claim": "Mốc LTV/CAC ≈ 3 từ giới SaaS, David Skok nêu", "status": "unverified", "note": "Tên người thật, không src; nội dung đúng với nguồn gốc phổ biến của mốc." },
+        { "claim": "Thực phẩm sạch: LTV lãi gộp 900.000đ, CAC 300.000đ, doanh thu vòng đời 2,25 triệu", "status": "illustrative-unlabelled", "note": "Khớp biên 40%." },
+        { "claim": "Ba doanh nghiệp hoàn vốn 2, 10, 24 tháng", "status": "illustrative-labelled", "note": "Mở bằng 'Minh hoạ:'." }
+      ],
+      "strengths": "Đọc hai chiều của tỉ lệ (quá cao = chi quá ít) và nhấn tỉ lệ không nói thời gian tiền về; Q6 tách lãi đã thu với lãi dự báo; BÀI THỰC HÀNH 3 kịch bản với CAC biên và điều kiện làm lựa chọn sai là bài tập cấp quyết định.",
+      "upgrade": "Gắn src cho mốc 3; thêm công thức payback vào ví dụ; bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; thêm một câu calc về CAC biên giữa hai nấc chi (như trong task) để quiz không chỉ có một phép tính."
+    },
+    {
+      "id": "B:dl02-05",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 16, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3, Q4, Q6", "quote": "sai hay gặp: [[1.6,\"LTV_TINH_DOANH_THU\"],…] · [[3.2,\"LTV_TINH_DOANH_THU\"]]", "issue": "1,6 = 400k/250k và 3,2 = 400k/125k là hoàn vốn tính trên doanh thu; mã hiện lời nhắc 'Tính LTV bằng doanh thu thay vì lãi gộp' trong khi đã có mã HOAN_VON_TINH_DOANH_THU đúng nghĩa hơn.", "fix": "Đổi ba chỗ sang HOAN_VON_TINH_DOANH_THU." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: LTV nói bạn lời bao nhiêu, payback nói bạn phải chờ bao lâu", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; không nêu đánh đổi của gói đăng ký (chi phí giao định kỳ, tỉ lệ huỷ) ngoài Q5/Q6.", "fix": "Đưa Q5 (40% huỷ sau 3 tháng) thành PHẢN VÍ DỤ với phép tính payback trung bình nhóm." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Bán lẻ mua ở tháng 0, 2, 4, 6 và chỉ đủ ở tháng 6", "issue": "Lịch dòng tiền tốt nhưng không gắn nhãn minh hoạ và giả định 'mua đúng mỗi 2 tháng' là trung bình, tần suất thật phân tán.", "fix": "Ghi 'minh hoạ, giả định mua đều' và nhắc dùng cohort thật (task đã có)." }
+      ],
+      "calc_check": { "n": 3, "ok": 3, "notes": "Q3: 400.000 ÷ (250.000 × 40%) = 4 ✓. Q4: 100.000/2 tháng = 50.000/tháng → 8 ✓; sai 4 ✓, 3,2 = 400k/125k ✓. Q6: 400.000 ÷ (100.000 − 30.000) = 5,71 ✓ (tol 0,05); sai 3,08 = 400k/130k ✓. Lịch: gói thu 4 × 100k ở tháng 0–3 = 400k ✓; lẻ tháng 0,2,4,6 = 400k ✓. Q5 a: 3 × 100k = 300k < 400k ✓. Q7: payback 20 tháng, ở 48 tháng → LTV/CAC = 2,4 ≈ 2,5 ✓. Task: 105k × (1; 0,75; 0,63; 0,57) cộng dồn 105 / 183,75 / 249,9 / 309,75 → vượt 300k ở tháng 4 ✓; không huỷ: tháng 3 (315k) ✓." },
+      "claims": [
+        { "claim": "Xưởng cà phê Đà Lạt: CAC 400.000đ, túi 250.000đ, biên 40%, mua lại mỗi 2 tháng", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Mô hình đăng ký thường rút ngắn payback vì tiền về đều và dày hơn — với điều kiện khách không huỷ sớm", "status": "illustrative-labelled", "note": "Có điều kiện áp dụng." }
+      ],
+      "strengths": "Nêu rõ giả định của công thức nhanh ('lãi về đều') rồi kiểm lại bằng lịch dòng tiền thật — đúng chuẩn 'phân biệt giả định · dữ kiện'; BÀI THỰC HÀNH cohort với tỉ lệ còn lại là bài tập đo lường thật.",
+      "upgrade": "Sửa mã lỗi; bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU từ Q5 và bảng cohort; thêm một câu L4 đọc bảng cohort 6 tháng (như task) để hỏi tháng hoàn vốn thật; gắn nhãn minh hoạ."
+    },
+    {
+      "id": "B:dl02-06",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 10, "pedagogy": 8, "assessment": 9, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L4", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "trên Shopee … phí sàn khoảng 12% giá bán", "issue": "Gắn tên sàn thật với một mức phí cụ thể, không src/ngày kiểm; phí sàn đổi theo thời gian và ngành hàng.", "fix": "Viết 'phí sàn minh hoạ 12% — kiểm biểu phí hiện hành của sàn bạn đang bán' hoặc bỏ tên sàn." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Quảng cáo trong sàn tính ra khoảng 60.000đ mỗi đơn", "issue": "Chi quảng cáo chia đều cho mọi đơn (kể cả đơn tự nhiên) — PHẢN VÍ DỤ có nhắc nhưng phần tính chính không nói đây là trung bình.", "fix": "Thêm 'tính trung bình trên mọi đơn trong tháng' và trong ĐÀO SÂU nêu cách tách đơn từ quảng cáo." },
+        { "sev": "P2", "where": "Q7", "quote": "Cách nào tăng đóng góp mỗi đơn mà không phải đổi sản phẩm?", "issue": "Ba nhiễu quá yếu (tăng chi quảng cáo, giảm giá sâu, ship nhanh hơn) — câu L2 trong một bộ câu hỏi khá tốt.", "fix": "Thay bằng câu so hai cách bằng số: combo (phí sàn tăng theo giá) so với tăng giá 10% (mất bao nhiêu đơn thì hoà)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 250.000 − 100.000 − 20.000 − 30.000 − 5.000 − 60.000 = 35.000đ ✓; sai 95.000 ✓, 65.000 = quên phí sàn ✓, 150.000 ✓. Q4: 14.000.000 ÷ 35.000 = 400 ✓; 147,4 = /95k ✓, 93,3 = /150k ✓. Q5: 225.000 − 100.000 − 20.000 − 27.000 − 5.000 − 60.000 = 13.000 ✓. Q2: 250 × 35k = 8,75 triệu, thiếu 5,25 ✓." },
+      "claims": [
+        { "claim": "Shopee thu phí sàn khoảng 12% giá bán", "status": "unverified", "note": "Tên sàn thật + con số; không nguồn, không ngày kiểm." },
+        { "claim": "Shop gốm: đơn 250.000đ, giá vốn 100.000đ, ship 20.000đ, đóng gói 5.000đ, quảng cáo 60.000đ, cố định 14 triệu", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Chuỗi trừ từ trên xuống tới đóng góp và điểm hoà vốn theo đơn, có PHẢN VÍ DỤ (đơn khác kết cấu) và ĐÀO SÂU (đóng góp là khoảng đệm); Q5 (sale 10% mất gần 2/3 đóng góp) buộc tính lại trong MCQ.",
+      "upgrade": "Gỡ hoặc gắn nguồn cho phí Shopee; nói rõ 60.000đ là trung bình trên mọi đơn; thay Q7 bằng câu so hai cách bằng số; thêm bảng 6 dòng (giá bán → đóng góp) để trực quan."
+    },
+    {
+      "id": "B:dl02-07",
+      "scores": { "accuracy": 13, "depth": 13, "practical": 15, "examples": 9, "pedagogy": 8, "assessment": 9, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L3", "L5", "L3", "L2", "L4", "L2", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÌ SAO HIỆU QUẢ", "quote": "Nền tảng xếp người theo xác suất mua. Nhóm dễ mua được phục vụ trước và rẻ", "issue": "Mô tả cơ chế thuật toán phân phối của nền tảng quảng cáo như sự thật chung, không nguồn, không gắn nhãn 'cách hiểu thường dùng'. Kết luận CAC biên tăng là đúng về kinh tế, nhưng lý do thuật toán cần nhãn.", "fix": "Viết 'cách hiểu thường dùng: hệ thống phân phối ưu tiên người có xác suất mua cao hơn; chi tiết thuật toán không công khai' và thêm src trang trợ giúp nền tảng với ngày kiểm." },
+        { "sev": "P2", "where": "Q2", "quote": "tuỳ giả định CAC biên tăng theo kiểu nào, nấc đó có thể rơi vào khoảng 26–29 triệu", "issue": "Khoảng 26–29 triệu không có phép tính kèm; với CAC biên tuyến tính từ 100k (ở 20 triệu) lên 300k (ở 40 triệu) thì nấc hoà 180k ở 28 triệu, còn giả định CAC biên phẳng 200k thì không có nấc nào trên 20 triệu còn lời.", "fix": "Thêm một dòng tính minh hoạ cho một giả định, hoặc bỏ con số và chỉ nói 'phải đo'." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "Nhớ lại một lần bạn hoặc công ty tăng ngân sách quảng cáo", "issue": "Bài tập phụ thuộc ký ức, không có đầu ra số kiểm được.", "fix": "Cho bảng 3 nấc chi × khách mới và yêu cầu tính 2 CAC biên và chọn nấc dừng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20.000.000 ÷ 100 = 200.000đ ✓; sai 133.333 = 40 triệu/300 ✓, 100.000 ✓. Ví dụ: 100 × (200k − 180k) = 2 triệu lỗ ✓. Q5: 2 triệu/18 ≈ 111.111 ✓; bình quân 12 triệu/118 ≈ 101.700 ✓." },
+      "claims": [
+        { "claim": "Nước ép lạnh TP.HCM: 20 triệu → 200 khách; 40 triệu → 300 khách; LTV lãi gộp 180.000đ", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Nền tảng xếp người theo xác suất mua, nhóm dễ mua được phục vụ trước và rẻ", "status": "unverified", "note": "Cơ chế thuật toán, không nguồn, không nhãn." }
+      ],
+      "strengths": "Có đủ VÌ SAO/PHẢN VÍ DỤ (kênh mới làm CAC biên thấp hơn bình quân)/ĐÀO SÂU (CAC biên là đường cong, tần suất là tín hiệu sớm); Q5 buộc tính CAC biên trong MCQ và so với LTV.",
+      "upgrade": "Gắn nhãn/nguồn cho cơ chế thuật toán; thêm phép tính cho khoảng 26–29 triệu hoặc bỏ; đổi ÁP DỤNG thành bảng 3 nấc; thay Q6/Q7 (L2) bằng một câu L4 đọc đường cong CAC biên 4 nấc và chọn điểm dừng."
+    },
+    {
+      "id": "B:dl02-08",
+      "scores": { "accuracy": 12, "depth": 13, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L5", "L3", "L5", "L4", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q3", "quote": "Cứ mỗi hội viên trả tiền thì trung bình kéo thêm 0,5 hội viên qua giới thiệu … sai hay gặp: [[600000,\"SAI_TINH_TOAN\"]]", "issue": "Đề nói 'mỗi hội viên trả tiền' kéo 0,5 — hội viên được giới thiệu cũng trả tiền và cũng kéo 0,5, nên chuỗi cho 1/(1 − 0,5) = 2 hội viên và CAC hiệu dụng 600.000đ. Đáp án 800.000đ chỉ đúng khi tính một vòng giới thiệu; 600.000đ bị gắn mã 'sai tính toán' dù bênh được.", "fix": "Thêm vào đề 'chỉ tính một vòng giới thiệu (không tính người được giới thiệu rủ tiếp)'; lời giải cho 600.000 ghi 'bạn tính chuỗi vô hạn — hợp lệ nếu đề cho phép, nhưng cần đo tỉ lệ ở vòng hai'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Hoàn vốn = 1,2 triệu ÷ 300.000 = 4 tháng, trong ngưỡng 6 tháng", "issue": "Hoàn vốn tính riêng từng hội viên, chưa nói phần lãi của người được giới thiệu cũng góp vào hoàn vốn (hai cách tính cho hai kết quả); bộ số không gắn nhãn minh hoạ.", "fix": "Thêm một câu: 'nếu tính cả người được giới thiệu, hoàn vốn ngắn hơn — nhưng chỉ dùng khi đã đo được' và gắn nhãn minh hoạ." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "Nói trong 60 giây bốn điều kiện khiến CAC cao đó vẫn đáng", "issue": "Đầu ra là lời nói, không có số; bài có đủ dữ liệu để yêu cầu tính LTV/CAC, hoàn vốn, CAC hiệu dụng cho một ngành khác.", "fix": "Cho bộ số trung tâm tiếng Anh (Q5) và yêu cầu ba con số kèm điều kiện dễ gãy." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.200.000 ÷ 1,5 = 800.000đ ✓ (một vòng); chuỗi vô hạn: 1.200.000 ÷ 2 = 600.000 — bênh được, xem defect. Ví dụ: 300k × 12 = 3,6 triệu; 3,6/1,2 = 3; 1,2/0,3 = 4 tháng ✓. Q2: 1,5 triệu/300k = 5 tháng, 3,6/1,5 = 2,4 ✓. Q4: 300k × 4 = 1,2 triệu = CAC ✓. Q5: 2 + 0,4 × 2 = 2,8 < 3 ✓." },
+      "claims": [
+        { "claim": "Phòng tập yoga Hà Nội: CAC 1,2 triệu, lãi gộp 300.000đ/tháng, ở lại 12 tháng, 0,5 giới thiệu", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "CAC phòng tập cao gấp ba shop mỹ phẩm bên cạnh (400.000đ)", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Bốn điều kiện để CAC cao vẫn đáng và câu hỏi 'giả định nào dễ gãy nhất' (Q4, ĐÀO SÂU) là tư duy cấp quyết định; có đủ VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; Q7 (CAC thấp đáng lo) đảo chiều tốt.",
+      "upgrade": "Làm rõ quy ước một vòng giới thiệu trong Q3 và ví dụ; gắn nhãn minh hoạ; đổi ÁP DỤNG thành bài tính ba con số; thêm một câu L4 đọc bảng cohort hội viên (còn lại theo tháng) để kiểm giả định 12 tháng."
+    }
+  ],
+  "module_notes": {
+    "progression": "Rất hợp lý: CAC gộp/theo kênh (01) → mẫu số khách mới (02) → LTV trên lãi gộp (03) → tỉ lệ LTV/CAC (04) → payback (05) → kinh tế đơn vị một đơn (06) → CAC biên (07) → tổng hợp quyết định CAC cao (08). Hai điểm lệch: bài 01 đã dùng CAC biên (Q3) trước khi bài 07 dạy; bài 04 dùng payback (2/10/24 tháng) trước khi bài 05 định nghĩa. Bài 06 (đơn hàng) nên đứng trước 03 vì LTV cần biên đóng góp mỗi đơn.",
+    "overlap": [
+      "dl02-01 Q3 và dl02-07 cùng dạy CAC biên; dl02-04 Q2 và dl02-07 Q2 cùng khuyên 'tăng từng nấc, đo CAC phần tăng thêm'.",
+      "dl02-03 và dl02-04 cùng lặp 'LTV doanh thu làm tỉ lệ đẹp giả' (Q1/Q3 của 04 gần như lặp 03).",
+      "dl02-05 và dl02-08 cùng tính payback 4 tháng với ngưỡng vốn 6 tháng — cùng cấu trúc số."
+    ],
+    "gaps": [
+      "Chưa có bài về đường cong giữ chân/churn để dựng LTV từ cohort (chỉ task của 05 chạm tới); LTV '4 lần trong vòng đời' luôn cho sẵn.",
+      "Chưa nói LTV theo khung thời gian (12 tháng) và chiết khấu; chưa phân biệt LTV dự báo với LTV đã thu ngoài một câu hỏi.",
+      "Chưa có bài tổng hợp: từ biên đóng góp mỗi đơn (06) → LTV (03) → CAC trần (04) → payback (05) trong một bộ số duy nhất.",
+      "Khẳng định về cơ chế nền tảng (07) và benchmark (04 Skok) không có src.",
+      "6/8 bài dùng số dựng không nhãn; 4/8 bài thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU (01, 03, 04, 05)."
+    ],
+    "best_lesson": "B:dl02-06",
+    "weakest_lesson": "B:dl02-02"
+  }
+}

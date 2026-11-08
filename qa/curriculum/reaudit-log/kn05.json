@@ -1,0 +1,16 @@
+{
+ "mod": "kn05",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:kn05-02",
+   "where": "Khái niệm ↔ ÁP DỤNG ↔ Q1, Q3, Q7",
+   "status": "fixed",
+   "change": "Khái niệm: “Lượt xem trung bình của 10 video gần nhất” → “Lượt xem trung vị của 10 video gần nhất (xếp từ thấp đến cao, lấy mức ở giữa, để một video lan truyền không kéo lệch)”; ÁP DỤNG: “trung bình của 5 video” → “trung vị của 5 video”; Q1 phương án c và lời giải c, Q3 đề và bước giải: “trung bình” → “trung vị” cho cùng một cách đọc.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: khái niệm dạy trung bình, Q7 dạy trung vị (2 triệu + 9×30 nghìn kéo trung bình lên ~227 nghìn). Nay cả bài dùng trung vị, khớp Q7. Đáp án Q3 vẫn 15%."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

@@ -1,0 +1,208 @@
+{
+  "mod": "kh01",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kh01-01",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 13, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L5", "L2", "L3", "L3", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "example", "quote": "khoảng 60% là \"mua nhanh mang đi\" trước 9h, 25% là \"ngồi làm việc\" buổi chiều, 15% là \"hẹn gặp\" buổi tối", "issue": "Số minh hoạ không gắn nhãn; chỉ có tỉ trọng hoá đơn, không có doanh thu hay thời gian chiếm chỗ mỗi nhóm nên hai quyết định (quầy nhanh, bàn dài) chưa có cơ sở tiền.", "fix": "Thêm cột giá trị hoá đơn và phút chiếm chỗ mỗi nhóm; gắn nhãn minh hoạ; tính doanh thu mỗi giờ-ghế để thấy nhóm ngồi lâu đáng phục vụ không." },
+        { "sev": "P2", "where": "Q4", "quote": "2.400 × 60% = 1.440 hoá đơn.", "issue": "Câu tính một phép nhân không kiểm được khái niệm phân khúc; là chỗ dễ nhất trong bài.", "fix": "Thay bằng: cho bảng 3 nhóm × (số hoá đơn, giá trị TB, phút chiếm chỗ), hỏi nhóm nào mang doanh thu/giờ-ghế cao nhất." },
+        { "sev": "P2", "where": "apply", "quote": "Kể ra hai nhóm khách có cùng độ tuổi nhưng cần quán phục vụ khác nhau, trong 60 giây.", "issue": "Bài tập không có số, không có đầu ra kiểm được, không dẫn tới quyết định vận hành.", "fix": "Đổi thành: lấy 20 hoá đơn (hoặc bảng cho sẵn) chia theo giờ/thời gian ngồi, viết cho mỗi nhóm một thay đổi và nhóm nào không viết nổi thì gộp — như phần đào sâu đã gợi." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 2.400×60% = 1.440 ✓; sai 960 = 40% (thực chất là nhầm tỉ lệ rơi, nhãn SAI_MAU_SO chưa chuẩn); 4.000 = 2.400/0,6 ✓." },
+      "claims": [
+        { "claim": "Chuỗi cà phê TP.HCM, tệp 'nữ 22–30 văn phòng', 60/25/15%", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Tã theo cân nặng bé là ví dụ nhân khẩu học tạo nhu cầu (Q6)", "status": "verified", "note": "Dữ kiện phổ thông về sản phẩm, không cần nguồn." }
+      ],
+      "strengths": "Tiêu chí 'nhóm nào không dẫn tới quyết định riêng thì gộp' là phép thử sắc và được lặp ở Q7; phản ví dụ (cùng một người ở hai nhóm → chia theo dịp) nối tự nhiên sang bài 02. Q6 hỏi khi nào nhân khẩu học đúng là câu hiếm thấy.",
+      "upgrade": "Gắn nhãn số và thêm doanh thu/giờ-ghế để quyết định có cơ sở tiền; đổi Q4 và bài áp dụng thành bài đọc bảng hoá đơn; thêm một câu L5: quán nhỏ chỉ đủ chỗ phục vụ một nhóm, chọn nhóm nào và biện hộ bằng biên lãi."
+    },
+    {
+      "id": "B:kh01-02",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L2", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "situation ↔ Q3", "quote": "chuẩn bị mùa Trung thu với 3.000 hộp … tồn gần 600 hộp loại 4 bánh … Năm ngoái tiệm làm 1.500 hộp 4 bánh", "issue": "Con số 1.500 hộp 4 bánh chỉ xuất hiện ở Q3, tình huống không nêu cơ cấu 3.000 hộp; người học không kiểm được 1.500 từ đâu ra.", "fix": "Ghi trong tình huống: '3.000 hộp gồm 1.500 hộp 4 bánh và 1.500 hộp 2 bánh'." },
+        { "sev": "P2", "where": "example", "quote": "Tồn kho hộp lớn giảm vì không làm sẵn theo cảm tính nữa.", "issue": "Bài không tính cái giá của tồn 600 hộp (≈270 triệu theo giá bán, hoặc chi phí vốn) nên quyết định 'làm theo đơn' không có con số so với rủi ro mất đơn gấp.", "fix": "Thêm: 600 × 450.000 = 270 triệu doanh thu không về, hoặc 600 × giá vốn; đặt cạnh mức tồn chấp nhận được." },
+        { "sev": "P2", "where": "apply", "quote": "Kể ra ba dịp mua và mỗi dịp khách cần gì khác nhau, trong 60 giây.", "issue": "Không có đầu ra kiểm được; không dùng dữ liệu đơn như phần đào sâu gợi.", "fix": "Cho bảng 10 đơn (số hộp, có hoá đơn công ty?, ngày đặt) và yêu cầu gán dịp rồi tính tỉ lệ hết hàng theo loại hộp." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (1.500−600)/1.500 = 60% ✓; 40 = 600/1.500 (tỉ lệ tồn) ✓ NHAM_TI_LE_ROI; 20 = 600/3.000 ✓ SAI_MAU_SO." },
+      "claims": [
+        { "claim": "Tiệm bánh Hà Nội, 3.000 hộp, tồn 600 hộp 450.000đ, hộp 180.000đ hết tuần thứ hai", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ba dịp (biếu doanh nghiệp / mang về quê / ăn nhà) được nối với tiêu chí chọn, nhịp đặt hàng và kênh bán — đủ để ra quyết định sản xuất theo đơn. Q7 (kiểm giả thuyết bằng dữ liệu đơn sẵn có) và Q6 (một người thuộc hai phân khúc) là câu hiểu đúng bản chất.",
+      "upgrade": "Đưa cơ cấu 1.500/1.500 vào tình huống; tính cái giá của tồn và điểm hoà giữa làm sẵn và làm theo đơn; đổi bài áp dụng thành bài gán dịp trên bảng đơn; gắn nhãn số; thêm một câu L5 về đánh đổi hộp lõi dùng chung vs hai dòng hộp (phản ví dụ đã nêu nhưng không có câu hỏi)."
+    },
+    {
+      "id": "B:kh01-03",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 13, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L3", "L5", "L3", "L2", "L4", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "example", "quote": "giảm 20% cho họ chủ yếu là mất lãi", "issue": "Khẳng định đúng nhưng không tính: 20% × 2,2 tỉ = 440 triệu doanh thu cho đi nếu cả nhóm dùng mã — con số này mới làm quyết định có sức nặng; cũng không nói tỉ lệ dùng mã dự kiến.", "fix": "Thêm phép tính 440 triệu (nếu 100% dùng) và biến thể 50% dùng; so với chi phí quà nhỏ cho 1.500 khách." },
+        { "sev": "P2", "where": "concept", "quote": "mua bao lâu một lần, mua bao nhiêu, mua gần nhất khi nào", "issue": "Mô tả đúng ba trục RFM nhưng không gọi tên, nên người học không nối được với công cụ CRM thực tế; cũng không nêu ngưỡng chia (vì sao '4 lần trở lên').", "fix": "Gọi tên RFM (Recency–Frequency–Monetary) và nói ngưỡng 4 lần là chọn theo phân phối của shop, cần xem lại theo ngành." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu phản ví dụ khi giảm giá cho khách trung thành vẫn đúng (mở rộng giỏ, chuyển sang dòng cao hơn, chặn đối thủ đang săn) và thiếu đánh đổi về chi phí vận hành nhiều chương trình.", "fix": "Thêm ba phần như bài 01, 02, 06, 08." },
+        { "sev": "P2", "where": "apply", "quote": "Chia khách thành ba nhóm theo số lần mua và nói mỗi nhóm nên nhận gì, trong 60 giây.", "issue": "Lặp lại ví dụ, không có đầu ra số.", "fix": "Cho bảng 12 khách (lần mua, lần cuối, tổng chi) và yêu cầu chia nhóm, tính doanh thu từng nhóm và chi phí ưu đãi." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 4.000 triệu × 55% = 2.200; 2.200/1.500 = 1,4667 ✓ (ans 1.467, tol 0,01 — người nhập 1,47 vẫn đạt); 0,22 = 2.200/10.000 ✓; 2,667 = 4.000/1.500 ✓. Tình huống: 10.000 − 1.500 − 6.000 = 2.500 khách mua 2–3 lần, nhất quán." },
+      "claims": [
+        { "claim": "Shop mỹ phẩm 10.000 khách, 1.500 khách ≥4 lần chiếm 55% doanh thu, 4 tỉ/năm", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Khảo sát bị cấm theo quy định mới về dữ liệu cá nhân ở Việt Nam (phương án nhiễu Q4)", "status": "unverified", "note": "Lời giải nói khảo sát vẫn hợp pháp nếu làm đúng — đúng tinh thần Nghị định 13/2023 nhưng không có src." }
+      ],
+      "strengths": "Q6 (so tỉ lệ mua lần hai với nhóm không nhận mã) dạy đúng cách đo bằng đối chứng; Q5 (30% chỉ đặt khi có freeship) là tình huống mới và lời giải 'luật riêng dựa trên lãi' đúng nghề.",
+      "upgrade": "Tính cái giá của mã 20% cho nhóm trung thành; gọi tên RFM và nêu cách chọn ngưỡng; thêm phản ví dụ/đào sâu; đổi bài áp dụng thành bảng khách; gắn nhãn số; thay Q7 (L2) bằng câu đọc bảng RFM và chọn nhóm 'đánh thức'."
+    },
+    {
+      "id": "B:kh01-04",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 12, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 4, "clarity": 4 },
+      "total": 63,
+      "bloom_items": ["L2", "L5", "L2", "L3", "L3", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "example", "quote": "bản \"chạy bền\" nói 50 km/lít, bảo dưỡng mỗi 4.000 km, bảo hành 3 năm, kèm lời một anh giao hàng đã chạy 60.000 km", "issue": "Thông số kỹ thuật cụ thể nêu như của một mẫu xe thật mà không gắn nhãn minh hoạ; người học có thể tin đó là mức chuẩn của xe tay ga.", "fix": "Thêm '(thông số minh hoạ)'." },
+        { "sev": "P2", "where": "Q5", "quote": "120 ÷ 200 = 60%.", "issue": "Câu tính một phép chia, không kiểm khái niệm; bài không có phép tính nào khác nên chiều 'đọc số' gần trống.", "fix": "Thay bằng: cho 200 khách với câu hỏi đầu tiên được ghi lại (4 loại), tính tỉ trọng mỗi nhóm giá trị và tỉ lệ chốt của từng nhóm khi được đưa đúng/sai tờ rơi." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu phản ví dụ (khách nói 'tiết kiệm' nhưng mua vì đẹp — giá trị khai báo ≠ giá trị thật; Q6 chạm nhưng bài không giải thích), thiếu đánh đổi khi tách hai tờ rơi (chi phí, nhân viên hỏi sai), thiếu nối với kh01-02 ngoài một câu.", "fix": "Thêm ba phần; đưa phép kiểm 'câu hỏi đầu tiên' của Q6 vào khái niệm." },
+        { "sev": "P2", "where": "apply", "quote": "Nêu hai nhóm khách tìm hai giá trị khác nhau ở cùng chiếc máy và câu mở đầu cho mỗi nhóm, trong 60 giây.", "issue": "Không có đầu ra kiểm được.", "fix": "Yêu cầu viết hai tờ rơi 3 dòng với một bằng chứng/lời chứng cho mỗi giá trị và tiêu chí đạt." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q5: 120/200 = 60% ✓; 40 = 80/200 ✓ NHAM_TI_LE_ROI; 166,7 = 200/120 ✓ SAI_MAU_SO." },
+      "claims": [
+        { "claim": "Russell Haley đề xuất 'benefit segmentation' năm 1968", "status": "unverified", "note": "Khớp bài Journal of Marketing 1968; không có src." },
+        { "claim": "Xe tay ga 35–45 triệu: 50 km/lít, bảo dưỡng 4.000 km, bảo hành 3 năm", "status": "illustrative-unlabelled", "note": "Thông số như xe thật, không gắn nhãn." }
+      ],
+      "strengths": "Phân biệt rõ giá trị tìm kiếm với dịp (Q3) và đề xuất cách hỏi rẻ nhất (một câu mở đầu); Q6 (buộc chọn một hoặc xem câu hỏi đầu tiên) dạy đúng cách lộ ưu tiên thật.",
+      "upgrade": "Gắn nhãn thông số; thêm phép tính có ý nghĩa (tỉ lệ chốt theo nhóm × tờ rơi); thêm phản ví dụ giá trị khai báo ≠ thật và đào sâu về chi phí tách tài liệu; thêm src Haley; đổi bài áp dụng thành viết hai tờ rơi có bằng chứng; thay Q3 (L2) bằng tình huống xếp 6 khách vào nhóm giá trị từ câu hỏi đầu tiên của họ."
+    },
+    {
+      "id": "B:kh01-05",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 13, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L3", "L5", "L2", "L3", "L4", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q5", "quote": "Chạy hai mẫu quảng cáo, một nhấn gây tê, một nhấn giá, rồi so tỉ lệ đặt lịch của hai bên — vì: Khác biệt chỉ lộ khi hai nhóm phản ứng khác nhau với cùng một lời mời.", "issue": "Thiết kế trong đáp án so hai thông điệp trên cùng một tệp, nên chỉ cho biết thông điệp nào kéo đặt lịch hơn trong tệp chung — không cho biết có một nhóm 'sợ đau' phản ứng khác nhóm còn lại. Lời giải lại nói 'hai nhóm phản ứng khác nhau với cùng một lời mời', mâu thuẫn với chính thiết kế đó. Người học sẽ nhầm thử A/B thông điệp với kiểm 'khác biệt' của phân khúc.", "fix": "Sửa đáp án: 'Nhắm tệp tìm từ khoá sợ đau và tệp chung, cho cả hai cùng xem hai mẫu, so chênh tỉ lệ đặt lịch giữa hai tệp' hoặc đổi lời giải cho khớp với thiết kế A/B và nói rõ giới hạn." },
+        { "sev": "P2", "where": "Q4", "quote": "hai thành phố có 1,2 triệu nhân viên văn phòng; 25% uống trà buổi chiều; một nửa trong số đó dùng trà túi lọc", "issue": "Ba con số không nguồn, không gắn nhãn giả định, dù khái niệm vừa nói 'đo được' cần cách ước lượng có căn cứ.", "fix": "Ghi 'giả định minh hoạ' và nói tỉ lệ nào yếu nhất (nối với kh01-06)." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu phản ví dụ (phân khúc trượt 'đủ lớn' nhưng vẫn đáng theo vì biên lãi rất cao hoặc là bàn đạp — Q7 chạm) và thiếu nói về xung đột giữa các phép thử (càng khác biệt càng nhỏ).", "fix": "Thêm ba phần, nêu đánh đổi 'khác biệt ↔ đủ lớn'." },
+        { "sev": "P2", "where": "apply", "quote": "Chạy qua bốn phép thử và nói nó trượt ở đâu, trong 60 giây.", "issue": "Không có đầu ra kiểm được.", "fix": "Cho 3 mô tả phân khúc, yêu cầu bảng 3×4 đạt/trượt với một dòng bằng chứng mỗi ô." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 1.200 nghìn × 25% = 300; × 50% = 150 nghìn ✓; 300 = quên lớp lọc thứ hai ✓; 600 = 1.200×50% ✓." },
+      "claims": [
+        { "claim": "Tiêu chí kinh điển của Kotler: đo được, đủ lớn, tiếp cận được, khác biệt, hành động được", "status": "unverified", "note": "Khớp Kotler & Keller (measurable, substantial, accessible, differentiable, actionable); không có src." },
+        { "claim": "Hai thành phố có 1,2 triệu nhân viên văn phòng", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Viết lại phân khúc 'thái độ' thành 'hành vi + dịp đo được' là ví dụ sửa đúng cách; Q6 (phân khúc qua bốn phép thử nhưng đối thủ đã phục vụ tốt) tách rõ 'phân khúc có thật' với 'nên chọn không'.",
+      "upgrade": "Sửa Q5 cho đúng thiết kế kiểm 'khác biệt'; gắn nhãn giả định ở Q4; thêm phản ví dụ và đánh đổi khác biệt ↔ đủ lớn; đổi bài áp dụng thành bảng 3×4; thêm src Kotler; thay Q3 (L2) bằng câu đọc kết quả hai thông điệp trên hai tệp và kết luận có/không khác biệt."
+    },
+    {
+      "id": "B:kh01-06",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 17, "examples": 13, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 85,
+      "bloom_items": ["L3", "L5", "L3", "L4", "L3", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "example ↔ deeper", "quote": "Quy mô ≈ 80.000 × 96 × 60.000đ ≈ 460 tỉ đồng/năm. … Người làm nghề đưa ra khoảng thấp và cao", "issue": "Đào sâu nói nên đưa khoảng, nhưng ví dụ chỉ đưa một con số; bài thực hành mới có khoảng (4,32–10,08 tỉ).", "fix": "Thêm vào ví dụ: với 20% là 10%–30%, quy mô 230–690 tỉ; nói quyết định có đổi không ở hai đầu." },
+        { "sev": "P2", "where": "Q7", "quote": "Không; đó là trần của cả phân khúc, startup chỉ lấy được một phần", "issue": "Ý đúng nhưng không giới thiệu khái niệm quy mô có thể phục vụ / có thể lấy được (SAM/SOM) và không gợi cách ước phần lấy được (độ phủ kênh, năng lực bếp).", "fix": "Thêm một câu trong đào sâu: 'phần lấy được = quy mô × độ phủ kênh × tỉ lệ thắng; với 2 bếp phục vụ 2.000 bữa/ngày thì trần vận hành là 2.000 × 240 ngày × 60.000 = 28,8 tỉ'." },
+        { "sev": "P2", "where": "example", "quote": "48 tuần/năm", "issue": "Giả định 48 tuần làm việc không được giải thích (nghỉ lễ, Tết) dù các giả định khác đều có lý do.", "fix": "Thêm '(trừ ~4 tuần nghỉ lễ, Tết)'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Ví dụ: 800.000×20%×50% = 80.000 ✓; 2×48 = 96 ✓. Q3: 80.000×96 = 7.680.000 bữa × 60.000 = 460,8 tỉ ✓ (tol 0,5); 4,8 = quên tần suất ✓ NGUOC_TAN_SUAT; 9,6 = chỉ nhân 2 bữa ✓. Bài thực hành: 300.000×30%×25% = 22.500 người × 4 × 80.000 = 7,2 tỉ; 15% → 4,32 tỉ; 35% → 10,08 tỉ ✓ khớp rubric." },
+      "claims": [
+        { "claim": "800.000 nhân viên văn phòng ở các quận trung tâm Hà Nội; 20% ăn kiêng; một nửa trả 60.000đ", "status": "illustrative-labelled", "note": "Bài ghi rõ 'Giả định minh hoạ, không phải số thống kê' — đúng chuẩn." },
+        { "claim": "Dân số Đà Nẵng 1.200.000 người; 300.000 người 18–35 ở quận trung tâm (niên giám) — bài thực hành", "status": "illustrative-labelled", "note": "Ghi 'nguồn khá chắc' nhưng không có link; chấp nhận vì là dữ kiện đề bài." }
+      ],
+      "strengths": "Bài duy nhất trong ba module gắn nhãn giả định rõ ràng, chỉ ra tỉ lệ yếu nhất và kế hoạch kiểm nó; phản ví dụ về các lớp lọc không độc lập là cơ chế 'vì sao sai' thật; bài thực hành có rubric với khoảng quy mô khi đổi tỉ lệ yếu.",
+      "upgrade": "Đưa khoảng thấp–cao vào ví dụ; thêm khái niệm phần lấy được (SAM/SOM) với trần vận hành; giải thích 48 tuần; thêm một câu L6: thiết kế khảo sát 200 người hỏi cả hai điều kiện trên cùng người để tránh lỗi lớp lọc không độc lập."
+    },
+    {
+      "id": "B:kh01-07",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L3", "L5", "L3", "L4", "L3", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q6", "quote": "Thêm men chống mốc vào bột để bánh không mốc trong 5 ngày", "issue": "'Men' (nấm men) không chống mốc; đúng phải là chất bảo quản (ví dụ calcium propionate). Sai thuật ngữ trong phương án nhiễu làm người biết nghề khó chịu.", "fix": "Đổi thành 'thêm chất bảo quản vào bột'." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[1.2,\"SAI_TINH_TOAN\"]", "issue": "1,2 không tương ứng lỗi tự nhiên nào (300 triệu × 4.000 = 1,2 nghìn tỉ chỉ ra nếu nhân thay chia rồi đổi đơn vị lạ); phản hồi tự động sẽ hiếm khi khớp.", "fix": "Thay bằng 750 (quên đổi sang nghìn) hoặc 30 (300.000/10.000 — chia cho giá bán thay lãi) với nhãn SAI_MAU_SO." },
+        { "sev": "P2", "where": "example", "quote": "chỉ làm khi đủ khoảng 75 nghìn gói mỗi năm (bài toán hoà vốn ở Q3)", "issue": "Ví dụ tham chiếu tới câu hỏi thay vì trình bày phép tính; 300 triệu chi phí cố định và lãi 4.000đ/gói không gắn nhãn minh hoạ.", "fix": "Đưa phép tính 300 triệu ÷ 4.000đ = 75.000 gói vào ví dụ, gắn nhãn, và so với quy mô ước của nhóm phượt." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu phản ví dụ (thông điệp gốc chung quá nhạt — 'lỗi hay gặp' nêu nhưng không có tình huống) và thiếu rủi ro ăn thịt dòng (biến thể để lâu hút khách gói thường).", "fix": "Thêm ba phần." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 300.000.000/4.000 = 75.000 = 75 nghìn gói ✓ (tol 0,5); 7,5 = lệch 10 lần ✓; 1,2 không tái tạo được từ lỗi tự nhiên." },
+      "claims": [
+        { "claim": "Bánh sandwich đóng gói ở cửa hàng tiện lợi 10.000đ, lãi 4.000đ/gói, dòng để lâu tốn thêm 300 triệu/năm", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ba mức (đổi bề mặt / thông điệp gốc / tách dòng / tách thương hiệu) với ba câu hỏi chọn và nguyên tắc 'rẻ nhất thử trước'; Q4 (gluten phải tách lõi, gói giá và combo chỉ bề mặt) và Q5 (dầu gội tách theo nhu cầu tóc, không theo giới) là câu phân tích tốt.",
+      "upgrade": "Sửa thuật ngữ Q6 và phương án sai Q3; đưa phép hoà vốn vào ví dụ với nhãn và so với quy mô nhóm phượt; thêm phản ví dụ thông điệp nhạt và rủi ro ăn thịt dòng; đổi bài áp dụng 60 giây thành bảng 3 nhóm × (nhu cầu ở lõi/bề mặt, quy mô, lãi thêm)."
+    },
+    {
+      "id": "B:kh01-08",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L5", "L2", "L3", "L2", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1", "quote": "d) Sống ở thành phố lớn với nước máy có mùi — vì: Chi tiết này thậm chí không có trong bản gốc", "issue": "Phương án nhiễu nằm ngoài dữ kiện của đề (persona gốc không có dòng này), lời giải tự thừa nhận; nhiễu kiểu này loại được bằng hình thức.", "fix": "Thay bằng một dòng có trong persona gốc, ví dụ 'nhân viên ngân hàng' đã dùng ở b → thêm 'có ảnh stock đang cười'." },
+        { "sev": "P2", "where": "Q3 / Q5", "quote": "Dòng nào là dòng persona có ích? … Nên có bao nhiêu persona cho một thương hiệu?", "issue": "Hai câu nhận lại ý bài (L2); Q5 có hai phương án gần nhau (b 'mỗi phân khúc một persona, ít' và c 'một persona') mà lý do loại c khá mềm.", "fix": "Thay Q3 bằng: cho persona 8 dòng, chọn 3 dòng gạch bỏ và nêu quyết định mỗi dòng còn lại dẫn tới; Q5 đổi thành câu quyết định theo số phân khúc đã chọn." },
+        { "sev": "P2", "where": "example", "quote": "chi phí lõi dưới 100.000đ/tháng", "issue": "Ngưỡng 100.000đ nêu như lời khách nhưng là số dựng không gắn nhãn; Q7 dựa trên nó.", "fix": "Ghi 'theo 5 cuộc gọi khách (số minh hoạ)'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q7: 1.080.000/12 = 90.000đ = 90 nghìn ✓ (< 100.000 ✓); 1.080 = quên chia ✓ NGUOC_TAN_SUAT; 12.960 = nhân thay chia ✓." },
+      "claims": [
+        { "claim": "Persona 'Chị Hoa 32 tuổi, nhân viên ngân hàng…', nước máy có mùi clo, nhóm Zalo phụ huynh", "status": "illustrative-unlabelled", "note": "Bối cảnh dựng, không khẳng định về Zalo." }
+      ],
+      "strengths": "Năm câu hỏi của persona có ích (đang cố làm gì, lo gì, dùng gì thay thế, điều gì khiến đổi, tìm thông tin ở đâu) và phép thử 'gạch dòng không dẫn tới quyết định'; phản ví dụ (anh độc thân nước giếng vàng) chỉ đúng giới hạn một persona cho cả tệp. Đào sâu nhắc ghi rõ dòng đã kiểm chứng/dòng còn đoán.",
+      "upgrade": "Sửa nhiễu Q1d; thay Q3/Q5 bằng câu phân tích persona 8 dòng; gắn nhãn ngưỡng 100.000đ; thêm số: 5 cuộc gọi → bao nhiêu người nêu lo lõi (ví dụ 4/5) để persona có bằng chứng định lượng; thêm một câu L6: thiết kế 5 câu hỏi phỏng vấn để điền persona."
+    },
+    {
+      "id": "B:kh01-09",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "situation ↔ example", "quote": "một nhóm nam đặt vào tuần trước 14/2 và 20/10 … Nhóm nam chỉ chiếm 12% đơn nhưng tập trung vào ba dịp lễ.", "issue": "Tình huống nêu hai dịp, ví dụ nói ba dịp; dịp thứ ba không được gọi tên (8/3?).", "fix": "Ghi đủ '14/2, 8/3 và 20/10' ở cả hai chỗ." },
+        { "sev": "P2", "where": "concept", "quote": "nó phản ánh chính nơi bạn đã quảng cáo — nhắm nữ thì khách ra nữ", "issue": "Cơ chế vòng lặp nhắm → dữ liệu được nêu đúng nhưng không có cách kiểm (chạy một tệp rộng giữ lại làm đối chứng, so tỉ lệ chuyển đổi theo giới), nên người học biết bẫy mà không biết gỡ.", "fix": "Thêm: 'dành 10–15% ngân sách cho tệp rộng không lọc giới/tuổi; nếu tỉ lệ chuyển đổi của nam không thấp hơn, 70% chỉ là vết nhắm'." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu phản ví dụ khi nhân khẩu học không đánh lừa (tã, sản phẩm theo giới thật) — kh01-01 Q6 có nhưng bài này cần tự nêu để tránh người học bỏ hẳn nhân khẩu học; thiếu đánh đổi chi phí đợt quà tặng.", "fix": "Thêm ba phần." },
+        { "sev": "P2", "where": "example", "quote": "Đơn \"quà tặng\" — cả nam lẫn nữ — giá trị trung bình 420.000đ", "issue": "Số minh hoạ không gắn nhãn.", "fix": "Thêm '(số minh hoạ)'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 700×250.000 = 175 triệu; 300×420.000 = 126 triệu; 126/301 = 41,86% ≈ 41,9 ✓ (tol 0,2); 30 = tỉ trọng đơn ✓; 72 = 126/175 ✓ SAI_MAU_SO." },
+      "claims": [
+        { "claim": "Nhóm nam đặt vào tuần trước 14/2 và 20/10", "status": "verified", "note": "Valentine và Ngày Phụ nữ Việt Nam là dịp thật; không cần nguồn." },
+        { "claim": "70% người mua là nữ 25–34; 30% đơn ghi chú gói quà; đơn quà 420.000đ vs 250.000đ", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ba cách nhân khẩu học đánh lừa (vết nhắm, giấu dịp, bỏ sót nhóm nhỏ giá trị cao) là khung đọc báo cáo dùng ngay; Q3 buộc tính tỉ trọng doanh thu (41,9%) để thấy nhóm 30% đơn đáng 42% tiền; Q5 (người mua ≠ người dùng) là chuyển giao tốt.",
+      "upgrade": "Thống nhất số dịp lễ; thêm cách kiểm vòng lặp nhắm bằng tệp rộng đối chứng; gắn nhãn số; thêm phản ví dụ và chi phí đợt quà tặng so với 126 triệu doanh thu quà; thay Q7 (L2, lặp 'mang theo') bằng câu đọc bảng báo cáo nền tảng có cột tệp nhắm và kết luận."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý: nhu cầu → dịp → hành vi → giá trị → bốn phép thử → ước lượng quy mô → phục vụ nhiều phân khúc → persona → bẫy nhân khẩu học. Bài 09 khép vòng về bài 01 (nhân khẩu học) nên có phần lặp. Chất lượng không đều: 4 bài (01, 02, 06, 08) có đủ vì sao/phản ví dụ/đào sâu, 5 bài còn lại không; mọi bài 'áp dụng' trừ 06 đều là 'nói trong 60 giây' không có đầu ra kiểm được.",
+    "overlap": [
+      "kh01-01 và kh01-09 cùng dạy 'nhân khẩu học mô tả, không giải thích'; 09 nên tham chiếu 01 và chỉ thêm cơ chế vết nhắm.",
+      "kh01-01 (phản ví dụ) và kh01-02 cùng dạy 'cùng một người ở hai dịp' — tốt để nối nhưng hiện lặp lời.",
+      "kh01-05 'khác biệt' và kh01-01 'nhóm không dẫn tới quyết định riêng thì gộp' là một ý; kh01-07 Q1 cũng lặp ý thông điệp chung.",
+      "Câu tính đơn giản (một phép nhân/chia) lặp ở 01-Q4, 04-Q5, 02-Q3 — đều L3 thấp."
+    ],
+    "gaps": [
+      "Thiếu bước chọn tệp (targeting) sau phân khúc — kh01-05 Q6 nói 'đó là bước chọn tệp' nhưng module không có bài; nếu kh02 làm việc này, cần `rel` nối.",
+      "Thiếu lợi nhuận theo phân khúc (biên lãi, chi phí phục vụ) — kh01-03 và 07 chạm nhưng không có bài tính lãi từng nhóm.",
+      "Không gọi tên RFM dù kh01-03 mô tả đúng ba trục.",
+      "Thiếu phân khúc B2B (quy mô công ty, người quyết định) dù kh01-02 có khách doanh nghiệp.",
+      "Không có `src` cho Haley 1968, Kotler; không bài nào có `rel` nối với ob07 (mẫu lệch, mẫu số) dù nhiều câu dùng kiến thức đó."
+    ],
+    "best_lesson": "B:kh01-06",
+    "weakest_lesson": "B:kh01-04"
+  }
+}

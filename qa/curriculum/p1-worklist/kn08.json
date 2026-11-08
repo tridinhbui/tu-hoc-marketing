@@ -1,0 +1,72 @@
+{
+ "mod": "kn08",
+ "lessons": [
+  {
+   "id": "B:kn08-02",
+   "title": "Nên nhắn ai trước khi chỉ có ngân sách cho 1.000 tin?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "700 khách được nhắn ra 84 đơn (12%); 100 khách bị giữ lại tự mua 9 đơn (9%). Chọn đúng người ra nhiều đơn, nhưng đơn tăng thêm nhờ tin chỉ khoảng 21",
+     "issue": "Nhóm đối chứng 100 người: sai số chuẩn của chênh 12% − 9% ≈ 3,1 điểm, tức chênh 3 điểm chỉ ≈ 1 sai số chuẩn — 21 đơn tăng thêm có thể là 0 hoặc 40. Bài kết luận '21' như số đo chắc và Q3 chấm 21 ± 0,5, trong khi thang yêu cầu 'nêu nhiễu/khoảng tin cậy khi mẫu nhỏ'.",
+     "fix": "Thêm một câu: 'Với 100 người đối chứng, chênh 3 điểm còn trong khoảng nhiễu (±3 điểm); đây là ước lượng điểm, cần lặp qua 2–3 đợt hoặc chừa đối chứng lớn hơn (≥ 20%) trước khi tin'. Giữ Q3 là phép tính nhưng thêm bước nêu độ chắc."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm câu nhiễu/khoảng tin cậy cho đối chứng 100 người và khuyến nghị cỡ đối chứng; (2) nêu cách chia điểm 1–5; (3) thêm bảng 5 nhóm RFM × (số khách, thông điệp, ưu tiên tin) để Q6 có dữ kiện; (4) thêm câu L4 đọc bảng kết quả theo nhóm (nhóm ngủ quên 300 tin ra bao nhiêu đơn so với đối chứng của riêng nhóm đó); (5) nối rõ với kn08-10 (cùng phép đo tăng thêm)."
+  },
+  {
+   "id": "B:kn08-03",
+   "title": "Zalo OA, SMS hay email: kênh nào rẻ hơn cho mỗi đơn?",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1",
+     "quote": "Chắc chắn, vì chi phí mỗi đơn tỉ lệ thuận với giá mỗi tin gửi đi",
+     "issue": "Hai nhiễu mở bằng 'Chắc chắn' và một nhiễu chứa 'luôn hiệu quả nhất'; đáp án đúng là phương án 'Chưa chắc' có lý. Đoán được bằng từ tuyệt đối, không cần đọc bài.",
+     "fix": "Viết lại bốn phương án cùng dạng 'Chưa chắc/Thường' với lý do khác nhau, trong đó chỉ một lý do đúng (số đơn), các lý do khác sai (giá tin, độ dài tin, thời gian gửi)."
+    },
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Tỉ lệ mở email còn bị phóng đại khi người nhận dùng Apple Mail bật Mail Privacy Protection, nên so bằng lượt bấm và đơn (kiểm theo tài liệu Apple Support, 10/2026)",
+     "issue": "Khẳng định về nền tảng (kiến thức fast) có ghi ngày kiểm trong văn bản nhưng không có trường `src` với link bấm được; không có câu 'nếu màn hình khác, tin trang chính thức'. Ngoài ra số email 'mở 15%' vẫn được dùng để so với Zalo 'mở 60%' ngay sau khi nói tỉ lệ mở email không tin được.",
+     "fix": "Thêm src Apple Support 'Mail Privacy Protection' kèm ngày kiểm; trong ví dụ so email bằng tỉ lệ bấm thay cho mở, hoặc ghi rõ 15% là 'mở báo cáo, có thể cao hơn thật'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src cho MPP và cơ chế ZNS/OA kèm ngày kiểm và câu 'nếu khác, tin trang chính thức'; (2) viết lại Q1 không dùng từ tuyệt đối; (3) chuyển ví dụ thành bảng; (4) thêm 'Phản ví dụ' (tin giao dịch cần độ đến máy, SMS thắng dù đắt — hiện chỉ ở Q5) và 'Đào sâu' (phí cố định/biến đổi, điểm hoà vốn số khách để email rẻ hơn Zalo: 1,5tr ÷ (300đ − 0) = 5.000 tin/tháng); (5) thêm câu L6 thiết kế thử nghiệm 3 kênh có kích cỡ mẫu tối thiểu."
+  },
+  {
+   "id": "B:kn08-08",
+   "title": "Một khách, bốn hồ sơ: dữ liệu nằm rải rác thì làm sao?",
+   "total": 64,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Đơn sàn thương mại điện tử thường che số người mua, nên giữ riêng đến khi khách tự cho số",
+     "issue": "Khẳng định về cách nền tảng vận hành (che số điện thoại người mua) không nguồn, không ngày kiểm, không câu 'nếu khác, tin trang chính thức'; chính sách sàn đổi thường xuyên (kiến thức fast).",
+     "fix": "Thêm src chính sách bảo vệ dữ liệu người mua của Shopee/TikTok Shop với ngày kiểm, hoặc viết 'tuỳ sàn và thời điểm; kiểm tra chính sách hiện hành'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) bổ sung ba phần cấu trúc còn thiếu; (2) thêm src/ngày kiểm cho chính sách sàn; (3) thêm bảng gộp mẫu 6–8 dòng và câu L4 đọc bảng; (4) nêu quy tắc ưu tiên khi hai hồ sơ mâu thuẫn (tên, địa chỉ mới nhất thắng) và tỉ lệ gộp nhầm chấp nhận được; (5) nối với kn08-02 (RFM chỉ đúng sau gộp: chị Hạnh 6 lần/9 triệu đổi nhóm) bằng một câu hỏi chung."
+  },
+  {
+   "id": "B:kn08-09",
+   "title": "File khách hàng gửi qua Zalo cho cả nhóm: có vấn đề gì?",
+   "total": 62,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Ở Việt Nam là Luật Bảo vệ dữ liệu cá nhân 2025 (Luật số 91/2025/QH15, hiệu lực từ 1/1/2026, thay cho Nghị định 13/2023/NĐ-CP)",
+     "issue": "Khẳng định pháp lý có số hiệu, ngày hiệu lực và quan hệ thay thế nghị định nêu như sự thật nhưng không có `src` (link văn bản, ngày kiểm). Kiến thức periodic bắt buộc nguồn; quan hệ 'thay cho Nghị định 13' cần kiểm (nghị định hướng dẫn mới có thể vẫn kế thừa một phần).",
+     "fix": "Thêm src tới văn bản luật trên cơ sở dữ liệu pháp luật chính thức với ngày kiểm; viết 'Nghị định 13/2023 được thay bằng nghị định hướng dẫn mới — kiểm văn bản hiện hành với pháp chế'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src văn bản luật + ngày kiểm và câu 'hỏi pháp chế về thời hạn thông báo'; (2) bổ sung ba phần cấu trúc; (3) thay Q3 bằng phép đo phạm vi lộ; (4) thêm bảng 'ai được xem gì' (vai trò × trường dữ liệu) làm công cụ phân quyền cho doanh nghiệp nhỏ; (5) nhất quán mức chắc chắn giữa khái niệm và lời giải Q7."
+  }
+ ]
+}

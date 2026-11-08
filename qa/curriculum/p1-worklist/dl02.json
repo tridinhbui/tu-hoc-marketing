@@ -1,0 +1,50 @@
+{
+ "mod": "dl02",
+ "lessons": [
+  {
+   "id": "B:dl02-04",
+   "title": "Tỉ lệ LTV/CAC bằng 3 thì nên làm gì tiếp?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Mốc khoảng 3 phổ biến từ giới đầu tư phần mềm đăng ký (SaaS) và do David Skok nêu như một ước lượng kinh nghiệm",
+     "issue": "Nêu tên người thật và nguồn gốc benchmark mà không có src/ngày kiểm; bài có gắn nhãn 'ước lượng kinh nghiệm, không phải quy luật' (tốt) nhưng quy ước freshness periodic đòi nguồn bấm được.",
+     "fix": "Thêm src: bài 'SaaS Metrics 2.0' của David Skok (forentrepreneurs.com) với ngày kiểm, hoặc bỏ tên người và chỉ nói 'mốc kinh nghiệm của giới SaaS'."
+    }
+   ],
+   "upgrade": "Gắn src cho mốc 3; thêm công thức payback vào ví dụ; bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; thêm một câu calc về CAC biên giữa hai nấc chi (như trong task) để quiz không chỉ có một phép tính."
+  },
+  {
+   "id": "B:dl02-07",
+   "title": "Nhân đôi ngân sách thì CAC có giữ nguyên không?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÌ SAO HIỆU QUẢ",
+     "quote": "Nền tảng xếp người theo xác suất mua. Nhóm dễ mua được phục vụ trước và rẻ",
+     "issue": "Mô tả cơ chế thuật toán phân phối của nền tảng quảng cáo như sự thật chung, không nguồn, không gắn nhãn 'cách hiểu thường dùng'. Kết luận CAC biên tăng là đúng về kinh tế, nhưng lý do thuật toán cần nhãn.",
+     "fix": "Viết 'cách hiểu thường dùng: hệ thống phân phối ưu tiên người có xác suất mua cao hơn; chi tiết thuật toán không công khai' và thêm src trang trợ giúp nền tảng với ngày kiểm."
+    }
+   ],
+   "upgrade": "Gắn nhãn/nguồn cho cơ chế thuật toán; thêm phép tính cho khoảng 26–29 triệu hoặc bỏ; đổi ÁP DỤNG thành bảng 3 nấc; thay Q6/Q7 (L2) bằng một câu L4 đọc đường cong CAC biên 4 nấc và chọn điểm dừng."
+  },
+  {
+   "id": "B:dl02-08",
+   "title": "Khi nào nên chấp nhận CAC 1,2 triệu cho một khách?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q3",
+     "quote": "Cứ mỗi hội viên trả tiền thì trung bình kéo thêm 0,5 hội viên qua giới thiệu … sai hay gặp: [[600000,\"SAI_TINH_TOAN\"]]",
+     "issue": "Đề nói 'mỗi hội viên trả tiền' kéo 0,5 — hội viên được giới thiệu cũng trả tiền và cũng kéo 0,5, nên chuỗi cho 1/(1 − 0,5) = 2 hội viên và CAC hiệu dụng 600.000đ. Đáp án 800.000đ chỉ đúng khi tính một vòng giới thiệu; 600.000đ bị gắn mã 'sai tính toán' dù bênh được.",
+     "fix": "Thêm vào đề 'chỉ tính một vòng giới thiệu (không tính người được giới thiệu rủ tiếp)'; lời giải cho 600.000 ghi 'bạn tính chuỗi vô hạn — hợp lệ nếu đề cho phép, nhưng cần đo tỉ lệ ở vòng hai'."
+    }
+   ],
+   "upgrade": "Làm rõ quy ước một vòng giới thiệu trong Q3 và ví dụ; gắn nhãn minh hoạ; đổi ÁP DỤNG thành bài tính ba con số; thêm một câu L4 đọc bảng cohort hội viên (còn lại theo tháng) để kiểm giả định 12 tháng."
+  }
+ ]
+}

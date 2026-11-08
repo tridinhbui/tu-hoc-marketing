@@ -1,0 +1,94 @@
+{
+ "mod": "qc04",
+ "lessons": [
+  {
+   "id": "B:qc04-01",
+   "title": "Shop của bạn có nên chạy Meta Ads lúc này không?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm (3) và Q6",
+     "quote": "Việc làm thuộc danh mục đặc biệt (cùng nhà ở, tài chính, vấn đề xã hội/chính trị)",
+     "issue": "Danh mục quảng cáo đặc biệt về nhà ở / việc làm / tín dụng của Meta theo hiểu biết của người chấm chỉ bắt buộc với quảng cáo nhắm một số thị trường (Mỹ, Canada…); chưa chắc áp cho quảng cáo tuyển dụng nhắm Việt Nam. Nguồn liệt kê là tài liệu Marketing API, không nói phạm vi quốc gia. Nếu không áp cho Việt Nam thì đáp án Q6 (d) sai và câu trở thành P0.",
+     "fix": "Kiểm trang 'About Special Ad Categories' của Meta, ghi rõ phạm vi quốc gia áp dụng; nếu không áp cho Việt Nam, đổi Q6 thành câu về chính sách sức khoẻ (có nguồn) hoặc viết lại đáp án theo đúng phạm vi."
+    },
+    {
+     "sev": "P1",
+     "where": "Q2 lời giải b",
+     "quote": "Tệp gợi ý tình trạng sức khoẻ bị Meta gắn cờ và chặn dùng từ 2/9/2025",
+     "issue": "Khẳng định có ngày cụ thể nhưng bài này không liệt kê nguồn Custom Audience (nguồn đó chỉ có ở B:qc04-04); người học đọc bài 01 không kiểm được.",
+     "fix": "Thêm nguồn Marketing API Custom Audience vào src của bài 01 hoặc bỏ ngày khỏi lời giải, dẫn sang bài 04."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) kiểm và ghi phạm vi quốc gia của danh mục quảng cáo đặc biệt, sửa Q6 nếu cần; (2) thêm nguồn cho khẳng định pháp lý về thực phẩm bảo vệ sức khoẻ và cho mốc 2/9/2025; (3) thêm bảng 3 dòng tính 'ngân sách tuần ÷ CPA chịu được = số sự kiện/tuần' cho cả ba shop (hiện chỉ tính cho Hà) để câu (4) có số ở mọi trường hợp; (4) thay Q6 (L1 nhận lại danh mục) bằng câu chẩn đoán từ dữ liệu, ví dụ đọc một báo cáo 5 ngày có 2 đơn và chọn việc kiểm đầu tiên; (5) thêm câu 'nếu màn hình khác, tin trang chính thức' vì đây là kiến thức fast."
+  },
+  {
+   "id": "B:qc04-02",
+   "title": "Mở tài khoản quảng cáo Meta: chọn gì lúc đầu để sau khỏi phải làm lại?",
+   "total": 67,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm và Q1",
+     "quote": "MoMo và VNPay (trả trước, thủ công) chỉ có khi tài khoản đặt quốc gia Việt Nam, tiền VND ngay lúc tạo",
+     "issue": "Khẳng định về phương thức thanh toán nêu như sự thật, trong khi chính bài thừa nhận 'trang không tải được khi kiểm' và 'chỉ thấy qua trích đoạn'. Đáp án Q1 (c) dựa trên khẳng định này. Kiến thức fast không có nguồn kiểm được.",
+     "fix": "Kiểm lại trang trợ giúp thanh toán tại Việt Nam (hoặc chụp màn hình phần Thanh toán của một tài khoản VND), ghi ngày kiểm; nếu không kiểm được thì viết Q1 theo logic chắc hơn: 'tiền tệ không đổi được sau khi tạo' và liệt kê phương thức dưới dạng 'kiểm trong tài khoản'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) xác minh phương thức thanh toán và mức thuế GTGT của Meta tại Việt Nam, ghi ngày kiểm; (2) thêm sơ đồ tài sản mẫu (portfolio → Trang/IG/tài khoản QC → ai là admin) dưới dạng bảng để phần Áp dụng có mẫu; (3) thêm quyết định có số: chọn trả trước hay trả sau, ngưỡng nạp, ngưỡng chi tiêu tài khoản (spending limit) và cách đặt; (4) thay Q3 và Q6 (L2) bằng câu chẩn đoán từ báo cáo lệch múi giờ và câu quyết định khi portfolio mới bị giới hạn ngay trước đợt sale; (5) nối rõ bài trước (01) và bài sau (03) trong phần Đào sâu."
+  },
+  {
+   "id": "B:qc04-04",
+   "title": "Nhắm đối tượng trên Meta 2025–2026: còn tự khoanh tệp được tới đâu?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm và Q6",
+     "quote": "nhà ở, việc làm, tài chính, vấn đề xã hội/chính trị phải khai danh mục quảng cáo đặc biệt",
+     "issue": "Như bài 01: phạm vi quốc gia của danh mục đặc biệt về việc làm chưa được kiểm; nếu không áp cho quảng cáo nhắm Việt Nam, Q6 đáp án (c) sai và phương án (a) đúng → P0. Nguồn API không nêu phạm vi.",
+     "fix": "Kiểm trang trợ giúp 'About Special Ad Categories', ghi rõ quốc gia áp dụng và ngày kiểm; sửa Q6 theo kết quả."
+    },
+    {
+     "sev": "P1",
+     "where": "Khái niệm (1)",
+     "quote": "Meta gọi phần tự mở rộng là Advantage+ audience (tên hiển thị kiểm trong tài khoản)",
+     "issue": "Tên tính năng nền tảng nêu không có src; luồng Advantage+ 2025–2026 đổi tên và cách hiển thị nhiều lần. Có thể lệch (possibly outdated).",
+     "fix": "Thêm nguồn trợ giúp Meta về Advantage+ audience hoặc viết 'phần tự mở rộng đối tượng (tên trên màn hình có thể là Advantage+ audience)'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) kiểm phạm vi quốc gia danh mục đặc biệt và sửa Q6; (2) thêm src cho Advantage+ audience; (3) dẫn văn bản luật thay bài tin để xác nhận Điều 28; (4) thêm ví dụ thứ hai làm đổi kết luận: sản phẩm ngách (dụng cụ thợ làm bánh) với CPM cao nhưng CVR cao, tính CPA hai cách để người học thấy phải so CPA; (5) gộp Q4/Q5 thành câu tình huống L4; (6) ghi câu 'nếu màn hình khác, tin trang chính thức'."
+  },
+  {
+   "id": "B:qc04-05",
+   "title": "Vị trí, ngân sách, giá thầu trên Meta: để máy chọn hay tự cầm lái?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Giá thầu, theo nguyên lý có ba kiểu: để hệ thống chi hết ngân sách lấy nhiều kết quả nhất; đặt mục tiêu chi phí mỗi kết quả; đặt trần giá thầu",
+     "issue": "Toàn bộ phần vị trí (Advantage+ placements), ngân sách cấp chiến dịch (Advantage campaign budget) và ba kiểu giá thầu (Highest volume / Cost per result goal / Bid cap) là mô tả giao diện và cơ chế nền tảng nhưng bài chỉ có một nguồn (Learning limited). Thiếu kiểu 'ROAS goal' và 'Highest value' cho chiến dịch Sales có giá trị đơn. Không nguồn cho 3 trong 4 nhóm khẳng định.",
+     "fix": "Thêm src trợ giúp Meta về chiến lược giá thầu, về Advantage campaign budget và về vị trí tự động; bổ sung một câu về kiểu giá thầu theo giá trị (ROAS goal) để không thiếu kiểu."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm nguồn cho giá thầu, ngân sách chiến dịch, vị trí; bổ sung kiểu giá thầu theo giá trị; (2) thêm bảng so hai tuần (chi, khách, CPL, số sự kiện/nhóm) kèm một dòng về nhiễu; (3) viết ví dụ về cách đặt mục tiêu chi phí từ CPL hoà vốn 600.000đ (ví dụ đặt 450.000đ để chừa biên) — hiện Đào sâu nêu con số nhưng không ra quyết định; (4) thay Q7 bằng câu quyết định có số; (5) ghi câu 'nếu màn hình khác, tin trang chính thức'."
+  },
+  {
+   "id": "B:qc04-07",
+   "title": "Ví dụ xuyên suốt: 30 triệu/tháng cho shop đồ bếp — chia tiền, dự báo, đọc tuần đầu",
+   "total": 83,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Toàn bài",
+     "quote": "24 triệu cho Sales Advantage+ tìm khách mới, 6 triệu cho chiến dịch thử 3 ý creative",
+     "issue": "Bài không có src nào dù là kiến thức fast (Advantage+, giai đoạn học, cách tách chiến dịch thử creative); rubric yêu cầu bài fast bắt buộc có src và câu 'nếu màn hình khác, tin trang chính thức'. Riêng khẳng định 'thêm creative vào nhóm chính là chỉnh sửa lớn' (Q6) cần nguồn.",
+     "fix": "Thêm src giai đoạn học (có mục 'thêm quảng cáo mới là chỉnh sửa lớn') và src Advantage+ sales; thêm câu về màn hình khác."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src (giai đoạn học, Advantage+) và câu 'nếu màn hình khác'; (2) ghi quy ước tháng = 4 tuần; (3) thêm bảng dự báo vs thực tế 5 dòng (CPM, CTR, CVR, đơn, CPA) với cột % lệch để phần Áp dụng có mẫu; (4) thay Q5 bằng câu tính CPA hoà vốn sau đổi trả; (5) thêm khoảng tin cậy thô: với 36 đơn, dao động ±6 đơn là bình thường (√36) để Q7 có cơ sở số thay vì 'lệch nhỏ'."
+  }
+ ]
+}

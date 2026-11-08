@@ -1,0 +1,2456 @@
+{
+  "scope": "standalone exam items + drills",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1 (severity/Bloom)",
+  "counts": {
+    "items": 198,
+    "byType": {
+      "mcq": 84,
+      "case": 49,
+      "calc": 38,
+      "judge": 27
+    },
+    "byStage": {
+      "s1": 37,
+      "s2": 39,
+      "s3": 38,
+      "s4": 41,
+      "s5": 43
+    },
+    "verdicts": {
+      "ok": 136,
+      "P2": 49,
+      "P1": 13,
+      "P0": 0
+    },
+    "bloom": {
+      "L3": 62,
+      "L4": 56,
+      "L2": 34,
+      "L5": 34,
+      "L1": 7,
+      "L6": 5
+    },
+    "teaches_mismatch": 21
+  },
+  "items": [
+    {
+      "id": "e1.001",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.002",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.003",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L2",
+      "difficulty": 1,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: câu hỏi về media sở hữu (L:56) nhưng gắn P:physical-availability; mã ôn KN_ sai chỗ.",
+      "fix": "Đổi teaches sang L:56.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e1.004",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.005",
+      "type": "case",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.006",
+      "type": "case",
+      "stage": "s1",
+      "bloom": "L5",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.007",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L2",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.008",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.009",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Nhận lại ý bài L:74 (dòng \"lý do để tin\"); gắn P:consumer-insight là lỏng.",
+      "fix": "Đổi teaches sang L:74; hoặc chuyển thành tình huống: cho một brief, hỏi dòng nào không viết nổi vì sao.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e1.010",
+      "type": "case",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: câu kiểm \"dữ kiện thay tính từ\" (L:57) nhưng gắn P:distinctive-assets.",
+      "fix": "Đổi teaches sang L:57.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e1.011",
+      "type": "calc",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.012",
+      "type": "calc",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.013",
+      "type": "judge",
+      "stage": "s1",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.014",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L2",
+      "difficulty": 1,
+      "verdict": "P2",
+      "issue": "Câu dễ (L2); đáp án là phương án gộp cả ba nhóm — kiểu \"đáp án bao trùm\" đoán được không cần đọc bài.",
+      "fix": "Đổi thành tình huống: cho một thông điệp tuyển sinh, hỏi nó đang nói với nhóm nào và bỏ sót nỗi lo của nhóm nào.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.015",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.016",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: media sở hữu (L:56) gắn P:physical-availability.",
+      "fix": "Đổi teaches sang L:56.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e1.017",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.018",
+      "type": "calc",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.019",
+      "type": "judge",
+      "stage": "s1",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.020",
+      "type": "case",
+      "stage": "s1",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.021",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.022",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L2",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.023",
+      "type": "case",
+      "stage": "s1",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.024",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.025",
+      "type": "case",
+      "stage": "s1",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: điểm chạm đã trả tiền (L:56) gắn P:physical-availability.",
+      "fix": "Đổi teaches sang L:56.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e1.026",
+      "type": "case",
+      "stage": "s1",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: earned media / tính đáng đưa tin (L:61) nhưng gắn P:share-of-voice — hoàn toàn khác khái niệm.",
+      "fix": "Đổi teaches sang L:61.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e1.027",
+      "type": "case",
+      "stage": "s1",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: chỉ số phù phiếm (L:71) gắn P:awareness.",
+      "fix": "Đổi teaches sang L:71 hoặc P:conversion.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e1.028",
+      "type": "case",
+      "stage": "s1",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.029",
+      "type": "calc",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.030",
+      "type": "calc",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "P2",
+      "issue": "Chỉ hỏi CVR của trang B — một phép chia (L3, độ khó 1) nhưng ghi difficulty 3; teaches P:awareness không khớp (đây là chuyển đổi).",
+      "fix": "Hỏi \"trang nào chuyển đổi tốt hơn và gấp bao nhiêu lần\" để buộc so sánh; đổi teaches sang P:conversion.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e1.031",
+      "type": "calc",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "P2",
+      "issue": "Phép nhân 300×2×12, độ khó thực 1; mã lỗi cho 600 ghi SAI_MAU_SO nhưng lỗi thật là quên nhân 12 tháng (không có mẫu số nào); teaches P:physical-availability không khớp (L:56).",
+      "fix": "Đổi mã của 600 sang SAI_TINH_TOAN; teaches → L:56; hạ difficulty 1.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e1.032",
+      "type": "judge",
+      "stage": "s1",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.033",
+      "type": "judge",
+      "stage": "s1",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: slide mở đầu đặt vấn đề bằng số là chuyện báo cáo/chỉ số (L:71), không phải consumer insight.",
+      "fix": "Đổi teaches sang L:71.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e1.034",
+      "type": "judge",
+      "stage": "s1",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.035",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.036",
+      "type": "mcq",
+      "stage": "s1",
+      "bloom": "L2",
+      "difficulty": 1,
+      "verdict": "P2",
+      "issue": "Đáp án là phương án duy nhất chứa con số — đúng là nội dung cần kiểm nhưng đoán được tức thì; ghi difficulty 3 trong khi là L2/độ khó 1.",
+      "fix": "Cho cả bốn phương án đều có số, trong đó ba số không kiểm chứng được (\"giảm tới 50%\", \"hơn 1.000 khách hài lòng\"), để buộc phân biệt dữ kiện kiểm được với số trang trí.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e1.037",
+      "type": "judge",
+      "stage": "s1",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.001",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.002",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.003",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.004",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Phương án d (máy tính tiền) cũng là \"hiện trạng\" theo đúng logic của L:73; why.d loại nó bằng khẳng định tần suất không nguồn (\"sổ tay và Excel phổ biến hơn nhiều\").",
+      "fix": "Đổi d thành đối thủ không phải hiện trạng (vd. \"ngân hàng cung cấp máy POS\") để chỉ còn một phương án hiện trạng.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.005",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.006",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.007",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L1",
+      "difficulty": 1,
+      "verdict": "P2",
+      "issue": "Nhận lại mẫu câu \"muốn–nhưng–nên\" (L1).",
+      "fix": "Thay bằng câu cho 4 insight viết sẵn, hỏi cái nào thiếu lực cản — như e2.006/e2.033 đã làm.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.008",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Stem đã nói \"vào quán ... để làm việc\" nên đáp án d gần như là lặp lại đề; phần \"phần lớn\" cũng là khẳng định không nguồn.",
+      "fix": "Mô tả hành vi quan sát (mang laptop, ngồi 2 tiếng, gọi một ly) thay cho cụm \"để làm việc\".",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.009",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.010",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.011",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.012",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: mỏ neo giá (L:54, P:pricing) nhưng gắn P:scarcity.",
+      "fix": "Đổi teaches sang P:pricing.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e2.013",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: lựa chọn mặc định (L:70) gắn P:social-proof.",
+      "fix": "Đổi teaches sang L:70.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e2.014",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.015",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.016",
+      "type": "case",
+      "stage": "s2",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.017",
+      "type": "case",
+      "stage": "s2",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.018",
+      "type": "case",
+      "stage": "s2",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.019",
+      "type": "case",
+      "stage": "s2",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: cốc có tên là media sở hữu + cá nhân hoá, không phải jobs-to-be-done.",
+      "fix": "Đổi teaches sang L:56 hoặc P:distinctive-assets.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e2.020",
+      "type": "case",
+      "stage": "s2",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.021",
+      "type": "case",
+      "stage": "s2",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P1",
+      "issue": "Hai phương án bênh được: Liquid Death tự định vị mạnh trên \"Death to Plastic\" (bền vững), nên b không phải nhu cầu bị \"bỏ qua\"; d còn dài hơn mọi phương án khác 14 ký tự.",
+      "fix": "Đổi b thành nhu cầu rõ ràng không khớp (vd. \"nước có vị để uống ngon hơn\"); rút d xuống ngang độ dài a/b.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.022",
+      "type": "case",
+      "stage": "s2",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.023",
+      "type": "case",
+      "stage": "s2",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "P1",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+15 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Rút đáp án về độ dài ngang các phương án khác; bỏ cấu trúc \"X — giải thích\" hoặc dùng nó ở cả 4 phương án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.024",
+      "type": "case",
+      "stage": "s2",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.025",
+      "type": "calc",
+      "stage": "s2",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.026",
+      "type": "calc",
+      "stage": "s2",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.027",
+      "type": "calc",
+      "stage": "s2",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.028",
+      "type": "calc",
+      "stage": "s2",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.029",
+      "type": "calc",
+      "stage": "s2",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.030",
+      "type": "calc",
+      "stage": "s2",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: điểm hoà vốn là P:pricing, gắn P:targeting.",
+      "fix": "Đổi teaches sang P:pricing.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e2.031",
+      "type": "judge",
+      "stage": "s2",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.032",
+      "type": "judge",
+      "stage": "s2",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.033",
+      "type": "judge",
+      "stage": "s2",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.034",
+      "type": "judge",
+      "stage": "s2",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "why.b gọi \"Còn 9 chỗ\" là khan hiếm \"kiểm được\" — người đọc trang không kiểm được con số này, mâu thuẫn với tiêu chí chính của câu (số phải kiểm được).",
+      "fix": "Đổi \"Còn 9 chỗ\" thành chi tiết kiểm được (vd. \"lớp tối đa 12 người, danh sách công khai\") hoặc bỏ lập luận \"kiểm được\" trong why.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.035",
+      "type": "judge",
+      "stage": "s2",
+      "bloom": "L5",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.036",
+      "type": "judge",
+      "stage": "s2",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: nhận diện + lời hứa kiểm được, không phải social proof.",
+      "fix": "Đổi teaches sang P:distinctive-assets hoặc L:57.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e3.001",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L1",
+      "difficulty": 1,
+      "verdict": "P2",
+      "issue": "Định nghĩa thuần (L1), thay được bằng câu L3+.",
+      "fix": "Cho một câu định vị nội bộ và kết quả hỏi 5 khách; hỏi định vị thật đang nằm ở đâu.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.002",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.003",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.004",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L1",
+      "difficulty": 1,
+      "verdict": "P2",
+      "issue": "Định nghĩa (L1) nhưng ghi difficulty 3.",
+      "fix": "Cho danh sách 4 \"tình huống\", hỏi cái nào là điểm vào category thật của một sản phẩm cụ thể.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.005",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.006",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.007",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+1 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Dùng gạch ngang ở ít nhất một phương án sai hoặc bỏ ở đáp án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.008",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L5",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.009",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L5",
+      "difficulty": 3,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: độ mòn thông điệp (L:78) thuộc P:mental-availability hơn distinctive-assets.",
+      "fix": "Đổi teaches sang P:mental-availability.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e3.010",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L1",
+      "difficulty": 1,
+      "verdict": "P2",
+      "issue": "Phân biệt định nghĩa (L1).",
+      "fix": "Cho số liệu khảo sát (biết 80%, tự nhắc 12%) và hỏi cần đầu tư vào đâu — ghép với e3.030.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.011",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.012",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L1",
+      "difficulty": 1,
+      "verdict": "P2",
+      "issue": "Nhớ lại ba thành phần trong định nghĩa P:mental-availability (L1) nhưng ghi difficulty 3.",
+      "fix": "Cho ba kế hoạch media, hỏi kế hoạch nào xây được trí nhớ — tương tự e3.034.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.013",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "P1",
+      "issue": "Đáp án là ý kiến chủ quan nêu như sự thật: \"âm thanh bị đánh giá thấp nhất\" không có nguồn; why.c (\"màu thường đã được quản lý kỹ\") và why.b (\"font riêng không rẻ\") cũng là khẳng định không nguồn. Người học đã đọc L:60 (nhận ra bằng màu) hoàn toàn có thể chọn c; hai phương án bênh được.",
+      "fix": "Đổi stem thành tình huống có dữ kiện: \"thương hiệu podcast/radio, người nghe không nhìn màn hình — tài sản nào đáng xây trước?\" để đáp án âm thanh suy ra được từ đề, không từ ý kiến.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.014",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.015",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "P1",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+10 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Rút đáp án về độ dài ngang các phương án khác; bỏ cấu trúc \"X — giải thích\" hoặc dùng nó ở cả 4 phương án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.016",
+      "type": "case",
+      "stage": "s3",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+8 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Dùng gạch ngang ở ít nhất một phương án sai hoặc bỏ ở đáp án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.017",
+      "type": "case",
+      "stage": "s3",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "P2",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+4 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Dùng gạch ngang ở ít nhất một phương án sai hoặc bỏ ở đáp án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.018",
+      "type": "case",
+      "stage": "s3",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.019",
+      "type": "case",
+      "stage": "s3",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.020",
+      "type": "case",
+      "stage": "s3",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+3 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Dùng gạch ngang ở ít nhất một phương án sai hoặc bỏ ở đáp án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.021",
+      "type": "case",
+      "stage": "s3",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.022",
+      "type": "case",
+      "stage": "s3",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P1",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+10 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Rút đáp án về độ dài ngang các phương án khác; bỏ cấu trúc \"X — giải thích\" hoặc dùng nó ở cả 4 phương án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.023",
+      "type": "case",
+      "stage": "s3",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.024",
+      "type": "case",
+      "stage": "s3",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+7 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Dùng gạch ngang ở ít nhất một phương án sai hoặc bỏ ở đáp án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.025",
+      "type": "calc",
+      "stage": "s3",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "steps kết luận \"SOV thấp hơn thị phần — dấu hiệu đang bị bào mòn\" như chắc chắn, trong khi e4.012 và drill P:share-of-voice gắn nhãn đây là xu hướng thống kê.",
+      "fix": "Thêm \"theo xu hướng quan sát được trên nhiều thương hiệu\" vào steps.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.026",
+      "type": "calc",
+      "stage": "s3",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.027",
+      "type": "calc",
+      "stage": "s3",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.028",
+      "type": "calc",
+      "stage": "s3",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.029",
+      "type": "calc",
+      "stage": "s3",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.030",
+      "type": "calc",
+      "stage": "s3",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.031",
+      "type": "judge",
+      "stage": "s3",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.032",
+      "type": "judge",
+      "stage": "s3",
+      "bloom": "L5",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.033",
+      "type": "judge",
+      "stage": "s3",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.034",
+      "type": "judge",
+      "stage": "s3",
+      "bloom": "L6",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Số trong phương án B không khớp: \"dồn 70% vào 3 tuần ra mắt, chín tháng còn lại\" — 12 tháng trừ 3 tuần là hơn 11 tháng, không phải 9.",
+      "fix": "Sửa thành \"11 tháng còn lại\" hoặc đổi 3 tuần thành 3 tháng.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.035",
+      "type": "judge",
+      "stage": "s3",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.036",
+      "type": "judge",
+      "stage": "s3",
+      "bloom": "L6",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.001",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.002",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Phương án c \"Không có đánh đổi nào\" là tuyệt đối, loại ngay; thực tế chỉ còn 3 phương án.",
+      "fix": "Thay c bằng đánh đổi có thật nhưng không phải lớn nhất (vd. \"tăng doanh số nhưng tăng tỉ lệ trả hàng\").",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.003",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.004",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.005",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.006",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L1",
+      "difficulty": 1,
+      "verdict": "P2",
+      "issue": "Nhớ lại ba chữ \"dạy, giải trí, chứng minh\" (L1); đáp án ngắn nhất.",
+      "fix": "Cho 4 bài đăng cụ thể, hỏi bài nào không làm được việc nào trong ba việc — như e4.007/e4.031.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.007",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.008",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Key đã gắn nhãn \"quan sát của người làm nghề\" (tốt), nhưng why.a khẳng định cách thuật toán hoạt động (\"không đo độ chỉn chu, đo người xem có ở lại\") không nguồn, không nhãn.",
+      "fix": "Thêm \"theo tài liệu công khai của nền tảng, kiểm 2026\" hoặc đổi thành \"không có bằng chứng công khai nào cho thấy...\".",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.009",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.010",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.011",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.012",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.013",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.014",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "P1",
+      "issue": "Đoán được bằng từ tuyệt đối: hai phương án sai mở đầu bằng \"Luôn chọn...\", phương án đúng mở đầu bằng \"Tuỳ mục tiêu\" — đúng mẹo mà luật viết item số 4 cấm.",
+      "fix": "Bỏ chữ \"Luôn\"; viết a và c thành lập luận có điều kiện (\"Độ phủ, vì sản phẩm mua thưa nên...\"), và cho d một giá cụ thể để không còn là phương án \"trung dung\".",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.015",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "P2",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+3 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Dùng gạch ngang ở ít nhất một phương án sai hoặc bỏ ở đáp án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.016",
+      "type": "case",
+      "stage": "s4",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.017",
+      "type": "case",
+      "stage": "s4",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P1",
+      "issue": "Đáp án b dài 141 ký tự, hơn phương án kế 17 ký tự và là phương án duy nhất có \"—\"; why.c khẳng định về cơ chế phân phối của TikTok (\"không có ưu tiên như vậy\") không nguồn, không nhãn — rubric xếp P1.",
+      "fix": "Rút b về ~100 ký tự, kéo a lên tương đương; gắn nhãn/nguồn cho khẳng định về nền tảng hoặc thay c bằng lý do không cần nói về thuật toán.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.018",
+      "type": "case",
+      "stage": "s4",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.019",
+      "type": "case",
+      "stage": "s4",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P1",
+      "issue": "Đáp án a dài 130 ký tự, hơn phương án kế 20 ký tự, duy nhất có \"—\" và là phương án duy nhất có hai mệnh đề giải thích — chọn được bằng hình thức.",
+      "fix": "Rút a còn một ý (\"Trong vị trí cửa hàng: mặt bằng đắt nhất chính là kênh media\") và kéo b, c lên độ dài tương đương.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.020",
+      "type": "case",
+      "stage": "s4",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.021",
+      "type": "case",
+      "stage": "s4",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+4 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Dùng gạch ngang ở ít nhất một phương án sai hoặc bỏ ở đáp án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.022",
+      "type": "case",
+      "stage": "s4",
+      "bloom": "L5",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.023",
+      "type": "case",
+      "stage": "s4",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.024",
+      "type": "case",
+      "stage": "s4",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.025",
+      "type": "calc",
+      "stage": "s4",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: ROAS và lãi gộp (L:65) gắn P:funnel.",
+      "fix": "Đổi teaches sang L:65 hoặc P:cac.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e4.026",
+      "type": "calc",
+      "stage": "s4",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.027",
+      "type": "calc",
+      "stage": "s4",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.028",
+      "type": "calc",
+      "stage": "s4",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: chi phí mỗi đơn theo KOL (L:76) gắn P:social-proof — khái niệm đúng là hiệu quả chi phí.",
+      "fix": "Đổi teaches sang L:76 hoặc P:cac.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e4.029",
+      "type": "calc",
+      "stage": "s4",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.030",
+      "type": "calc",
+      "stage": "s4",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.031",
+      "type": "judge",
+      "stage": "s4",
+      "bloom": "L6",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.032",
+      "type": "judge",
+      "stage": "s4",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.033",
+      "type": "judge",
+      "stage": "s4",
+      "bloom": "L5",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.034",
+      "type": "judge",
+      "stage": "s4",
+      "bloom": "L6",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.035",
+      "type": "judge",
+      "stage": "s4",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.036",
+      "type": "judge",
+      "stage": "s4",
+      "bloom": "L5",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.001",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.002",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "P2",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+4 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Dùng gạch ngang ở ít nhất một phương án sai hoặc bỏ ở đáp án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.003",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.004",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.005",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Key dùng \"luôn che giấu một kênh đang lỗ\" — nói quá; trung bình che được chênh lệch, không nhất thiết có kênh lỗ.",
+      "fix": "Đổi \"luôn\" thành \"có thể\".",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.006",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.007",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L1",
+      "difficulty": 1,
+      "verdict": "P1",
+      "issue": "Định nghĩa ẩn dụ (L1); đáp án dài nhất hơn 14 ký tự. Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+14 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Cho số: khách mới +30%/tháng, rời 35%; hỏi hình ảnh nào mô tả và sửa đâu — e5.013 đã làm, nên bỏ hoặc gộp.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.008",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.009",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "P1",
+      "issue": "Stem tuyệt đối \"chỉ thật sự xảy ra khi\" và key thu hẹp về \"trông tốt hơn\", trong khi chính P:referral nói \"giúp bạn bè HOẶC làm họ trông tốt\" và các chương trình thưởng (Dropbox, ví điện tử) là phản ví dụ có thật — phương án a bênh được. why.b dẫn \"Wrapped\" không có ngữ cảnh trong câu thi.",
+      "fix": "Đổi stem thành \"điều kiện nào làm giới thiệu bền hơn phần thưởng tiền\" và viết a thành lỗi rõ (\"chỉ cần thưởng đủ lớn, không cần lý do xã hội\"); bỏ chữ Wrapped khỏi why hoặc giải thích một dòng.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.010",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "P1",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+15 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Rút đáp án về độ dài ngang các phương án khác; bỏ cấu trúc \"X — giải thích\" hoặc dùng nó ở cả 4 phương án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.011",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L5",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.012",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L5",
+      "difficulty": 3,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: thời điểm ra mắt (L:66) gắn P:pricing.",
+      "fix": "Đổi teaches sang L:66.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e5.013",
+      "type": "judge",
+      "stage": "s5",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.014",
+      "type": "judge",
+      "stage": "s5",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.015",
+      "type": "judge",
+      "stage": "s5",
+      "bloom": "L6",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.016",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.017",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.018",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.019",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.020",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.021",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.022",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.023",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 1,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.024",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.025",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.026",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.027",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.028",
+      "type": "case",
+      "stage": "s5",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.029",
+      "type": "case",
+      "stage": "s5",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.030",
+      "type": "case",
+      "stage": "s5",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P1",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+13 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Rút đáp án về độ dài ngang các phương án khác; bỏ cấu trúc \"X — giải thích\" hoặc dùng nó ở cả 4 phương án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.031",
+      "type": "case",
+      "stage": "s5",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.032",
+      "type": "case",
+      "stage": "s5",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+6 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Dùng gạch ngang ở ít nhất một phương án sai hoặc bỏ ở đáp án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.033",
+      "type": "case",
+      "stage": "s5",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: cấu trúc chi phí vs định vị (P:positioning/L:77), gắn P:pricing.",
+      "fix": "Đổi teaches sang P:positioning.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e5.034",
+      "type": "case",
+      "stage": "s5",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "teaches không khớp ý được kiểm: độ tin của tuyên bố nhờ hành động đi kèm (P:positioning / L:61), gắn P:pricing.",
+      "fix": "Đổi teaches sang P:positioning.",
+      "teaches_ok": false
+    },
+    {
+      "id": "e5.035",
+      "type": "case",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.036",
+      "type": "case",
+      "stage": "s5",
+      "bloom": "L5",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.037",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.038",
+      "type": "mcq",
+      "stage": "s2",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e2.039",
+      "type": "case",
+      "stage": "s2",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.037",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e3.038",
+      "type": "mcq",
+      "stage": "s3",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.037",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.038",
+      "type": "case",
+      "stage": "s4",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+7 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Dùng gạch ngang ở ít nhất một phương án sai hoặc bỏ ở đáp án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.039",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Phương án c \"Từ lịch đăng bài\" (16 ký tự) là phương án vứt đi, vi phạm luật 1 của bank; còn 3 phương án thật.",
+      "fix": "Thay c bằng lỗi có thật: \"Từ sản phẩm bán chạy nhất, để nhân vật luôn nói về nó\".",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.040",
+      "type": "case",
+      "stage": "s4",
+      "bloom": "L5",
+      "difficulty": 2,
+      "verdict": "P1",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+13 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Rút đáp án về độ dài ngang các phương án khác; bỏ cấu trúc \"X — giải thích\" hoặc dùng nó ở cả 4 phương án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e4.041",
+      "type": "mcq",
+      "stage": "s4",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.037",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L4",
+      "difficulty": 2,
+      "verdict": "P2",
+      "issue": "Đáp án là phương án duy nhất có gạch ngang \"—\" và dài nhất (+5 ký tự) — mẹo hình thức (xem systemic).",
+      "fix": "Dùng gạch ngang ở ít nhất một phương án sai hoặc bỏ ở đáp án.",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.038",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.039",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.040",
+      "type": "case",
+      "stage": "s5",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.041",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L2",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.042",
+      "type": "mcq",
+      "stage": "s5",
+      "bloom": "L3",
+      "difficulty": 2,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    },
+    {
+      "id": "e5.043",
+      "type": "calc",
+      "stage": "s5",
+      "bloom": "L4",
+      "difficulty": 3,
+      "verdict": "ok",
+      "issue": "",
+      "fix": "",
+      "teaches_ok": true
+    }
+  ],
+  "drills": [
+    {
+      "id": "P:conversion",
+      "calc_ok": true,
+      "issue": "60÷3.000 = 2% đúng; wrong 1,5 (CTR) và 0,03 (chia cho hiển thị) đúng mã. Không lỗi."
+    },
+    {
+      "id": "P:funnel",
+      "calc_ok": true,
+      "issue": "900÷1.200 = 75% đúng; talk 94%/80%/+60 đơn→48 khớp. P2 hiển thị: app.js lấp phương án bằng ans×2 → sinh lựa chọn \"150 %\" vô nghĩa cho một tỉ lệ người."
+    },
+    {
+      "id": "P:cac",
+      "calc_ok": true,
+      "issue": "60tr÷150 = 400.000đ đúng; ba đáp án sai 300k/240k/180k đúng mã. tol 0,005 viết như dung sai tương đối nhưng máy chủ chấm tuyệt đối — vô hại vì drill hiển thị trắc nghiệm, nên thống nhất lại."
+    },
+    {
+      "id": "P:ltv",
+      "calc_ok": true,
+      "issue": "100.000×8 = 800.000đ đúng; LTV:CAC 2 và 1,2tr khi 3 năm khớp."
+    },
+    {
+      "id": "L:59",
+      "calc_ok": true,
+      "issue": "1.000×0,7³ = 343 đúng; 100 (tuyến tính), 490, 700 đúng mã; 80% → 512 khớp."
+    },
+    {
+      "id": "L:63",
+      "calc_ok": true,
+      "issue": "40k→20k, phải bán gấp đôi = +100% đúng; 1.500 hộp → 30tr khớp."
+    },
+    {
+      "id": "P:pricing",
+      "calc_ok": true,
+      "issue": "30tr÷25k = 1.200 ly đúng; 500 và 857 đúng mã; 65k → 1.000 ly khớp."
+    },
+    {
+      "id": "L:65",
+      "calc_ok": true,
+      "issue": "80×30% − 20 = 4tr đúng; ROAS hoà vốn 1÷0,3 ≈ 3,33 đúng."
+    },
+    {
+      "id": "L:72",
+      "calc_ok": true,
+      "issue": "1,6tr÷400k = 4 đúng; phân bổ 10×100k = 1tr, còn 600k cho 300k người = 2 khớp."
+    },
+    {
+      "id": "P:share-of-voice",
+      "calc_ok": true,
+      "issue": "75÷500 = 15%, ESOV +5 đúng; 13,04 = 75÷575 đúng mã SAI_MAU_SO; Binet & Field gắn nhãn tương quan — tốt."
+    },
+    {
+      "id": "L:71",
+      "calc_ok": true,
+      "issue": "3,0%→3,6% = +20% đúng; kiểm định hai tỉ lệ z ≈ 1,68 tính lại khớp (p gộp 3,3%, se 0,357 điểm)."
+    },
+    {
+      "id": "P:referral",
+      "calc_ok": true,
+      "issue": "1.000×30%×2×25% = 150 đúng; 600 và 500 đúng mã; hệ số 0,15 khớp."
+    }
+  ],
+  "errors_catalog": {
+    "codes": 48,
+    "note": "Mọi mã dùng trong errors/wrong của item đều tồn tại trong ERRORS; 24 mã, 3 mã (NHAM_ROI_ROAS, SO_ROI_KHAC_KY, HOAN_VON_TINH_DOANH_THU) chưa có item độc lập nào dùng."
+  },
+  "stage_summary": [
+    {
+      "stage": "s1",
+      "items": 37,
+      "byType": {
+        "mcq": 16,
+        "case": 9,
+        "calc": 6,
+        "judge": 6
+      },
+      "bloom": {
+        "L3": 14,
+        "L4": 8,
+        "L2": 7,
+        "L5": 8
+      },
+      "verdicts": {
+        "ok": 25,
+        "P2": 12,
+        "P1": 0,
+        "P0": 0
+      },
+      "pool_vs_blueprint": "Chỉ item độc lập: mcq 16/24 THIẾU 8 · case 9/9 (vừa đủ, không dư) · calc 6/6 (vừa đủ, không dư) · judge 6/6 (vừa đủ, không dư). Lưu ý buildExam() lấy cả item '#' của bài B: cùng chặng, nên mcq/calc thực tế dư rất nhiều; case và judge không có nguồn bù, đang đúng ngưỡng 3× hoặc sát ngưỡng."
+    },
+    {
+      "stage": "s2",
+      "items": 39,
+      "byType": {
+        "mcq": 17,
+        "case": 10,
+        "calc": 6,
+        "judge": 6
+      },
+      "bloom": {
+        "L3": 12,
+        "L2": 7,
+        "L4": 13,
+        "L1": 1,
+        "L5": 6
+      },
+      "verdicts": {
+        "ok": 28,
+        "P2": 9,
+        "P1": 2,
+        "P0": 0
+      },
+      "pool_vs_blueprint": "Chỉ item độc lập: mcq 17/24 THIẾU 7 · case 10/9 · calc 6/6 (vừa đủ, không dư) · judge 6/6 (vừa đủ, không dư). Lưu ý buildExam() lấy cả item '#' của bài B: cùng chặng, nên mcq/calc thực tế dư rất nhiều; case và judge không có nguồn bù, đang đúng ngưỡng 3× hoặc sát ngưỡng."
+    },
+    {
+      "stage": "s3",
+      "items": 38,
+      "byType": {
+        "mcq": 17,
+        "case": 9,
+        "calc": 6,
+        "judge": 6
+      },
+      "bloom": {
+        "L1": 4,
+        "L3": 8,
+        "L4": 12,
+        "L2": 5,
+        "L5": 7,
+        "L6": 2
+      },
+      "verdicts": {
+        "ok": 23,
+        "P2": 12,
+        "P1": 3,
+        "P0": 0
+      },
+      "pool_vs_blueprint": "Chỉ item độc lập: mcq 17/24 THIẾU 7 · case 9/9 (vừa đủ, không dư) · calc 6/6 (vừa đủ, không dư) · judge 6/6 (vừa đủ, không dư). Lưu ý buildExam() lấy cả item '#' của bài B: cùng chặng, nên mcq/calc thực tế dư rất nhiều; case và judge không có nguồn bù, đang đúng ngưỡng 3× hoặc sát ngưỡng."
+    },
+    {
+      "stage": "s4",
+      "items": 41,
+      "byType": {
+        "mcq": 18,
+        "case": 11,
+        "calc": 6,
+        "judge": 6
+      },
+      "bloom": {
+        "L2": 9,
+        "L5": 8,
+        "L3": 11,
+        "L1": 1,
+        "L4": 10,
+        "L6": 2
+      },
+      "verdicts": {
+        "ok": 28,
+        "P2": 9,
+        "P1": 4,
+        "P0": 0
+      },
+      "pool_vs_blueprint": "Chỉ item độc lập: mcq 18/24 THIẾU 6 · case 11/9 · calc 6/6 (vừa đủ, không dư) · judge 6/6 (vừa đủ, không dư). Lưu ý buildExam() lấy cả item '#' của bài B: cùng chặng, nên mcq/calc thực tế dư rất nhiều; case và judge không có nguồn bù, đang đúng ngưỡng 3× hoặc sát ngưỡng."
+    },
+    {
+      "stage": "s5",
+      "items": 43,
+      "byType": {
+        "mcq": 16,
+        "judge": 3,
+        "calc": 14,
+        "case": 10
+      },
+      "bloom": {
+        "L3": 17,
+        "L4": 13,
+        "L2": 6,
+        "L1": 1,
+        "L5": 5,
+        "L6": 1
+      },
+      "verdicts": {
+        "ok": 32,
+        "P2": 7,
+        "P1": 4,
+        "P0": 0
+      },
+      "pool_vs_blueprint": "Chỉ item độc lập: mcq 16/21 THIẾU 5 · case 10/9 · calc 14/12 · judge 3/3 (vừa đủ, không dư). Lưu ý buildExam() lấy cả item '#' của bài B: cùng chặng, nên mcq/calc thực tế dư rất nhiều; case và judge không có nguồn bù, đang đúng ngưỡng 3× hoặc sát ngưỡng."
+    }
+  ],
+  "systemic": [
+    "Mẹo hình thức lớn nhất (P1): 56/133 đáp án đúng của mcq/case chứa gạch ngang \"—\" (cấu trúc \"kết luận — giải thích\") so với 10/399 phương án sai (42% so với 2,5%). Người học thi 2–3 lần sẽ học được \"chọn phương án có gạch ngang\". Cần viết phương án sai cùng cấu trúc hoặc bỏ cấu trúc này ở đáp án.",
+    "Phương án vứt đi (P2): 24 item có ít nhất một phương án sai dưới 35 ký tự trong khi đáp án dài trên 55 (vd. e4.039 \"Từ lịch đăng bài\", e4.012 \"Giá bán phải giảm\", e4.013 \"Nhân viên marketing mất việc\", e4.022 \"Đối thủ sẽ mua lại các giải đấu\"). Vi phạm luật 1 của bank; xác suất đoán thực tế là 1/3 chứ không phải 1/4.",
+    "Judge (P2): phương án sai thường mang số to tròn hoặc từ giục (\"10.000 khách\", \"#1\", \"98%\", \"nhanh tay kẻo hết\"): 25 lần ở phương án sai so với 11 lần ở phương án đúng. Thông điệp dạy là đúng (\"số không kiểm được không có giá trị\") nhưng nếu lặp y một khuôn thì người học bắt mẹo \"có số to = sai\" thay vì học cách kiểm số. Nên có 3–4 judge mà phương án đúng là phương án có số lớn kiểm được.",
+    "teaches lệch khái niệm (P2, 20 item): chuỗi s1m1 gắn media sở hữu (L:56) vào P:physical-availability (e1.003, e1.016, e1.025, e1.031); e1.026 gắn earned media vào P:share-of-voice; e2.012 mỏ neo → P:scarcity; e2.013 mặc định → P:social-proof; e2.030 hoà vốn → P:targeting; e4.025 ROAS → P:funnel; e5.033/e5.034 → P:pricing. Hậu quả: mã ôn KN_ (exams.js sinh từ teaches) nhắc ôn sai nguyên lý.",
+    "Pool thực tế: buildExam() lọc EXAM_ITEMS theo stage, không loại item \"#\", nên slot mcq (8/15) và calc chủ yếu rút từ hàng trăm câu quiz bài B: (s1 409 mcq, s5 1.199 mcq); 84 mcq và 38 calc độc lập gần như không bao giờ xuất hiện trong đề. Ngược lại case và judge chỉ có nguồn độc lập và đang đúng ngưỡng 3× không dư (s1 case 9/9, judge 6/6; s3 case 9/9; s5 judge 3/3) — thi lại lần 2–3 chắc chắn lặp nhiều case/judge.",
+    "Bloom tổng: không có P0; mcq độc lập thiên về L2 (nhận lại ý bài) với 8 câu L1 định nghĩa (e2.007, e3.001, e3.004, e3.010, e3.012, e4.006, e5.007, e1.014) — thay được bằng câu L3+ như rubric yêu cầu; L6 chỉ xuất hiện ở 5 judge (e3.034, e3.036, e4.031, e4.034, e5.015).",
+    "Trường difficulty lệch với Bloom thực: nhiều câu định nghĩa/một phép chia ghi difficulty 3 (e1.030, e1.036, e3.004, e3.012) trong khi calc nhiều bước ghi 2. Trường này không ảnh hưởng chấm nhưng làm lệch báo cáo năng lực.",
+    "Khẳng định về nền tảng/thuật toán không nguồn trong why (e4.008 why.a, e4.017 why.c, e4.013 why.d) — rubric xếp P1 khi nêu như sự thật; key của e4.008 đã gắn nhãn \"quan sát của người làm nghề\" là mẫu tốt nên áp dụng cho phần why.",
+    "Số liệu thương hiệu thật trong ctx đều kiểm được hoặc đã gắn nhãn: Vinamilk 6/7/2023 (verified), Nike +31% Edison Trends (labelled estimate), The Coffee House ~150→~93 (verified, có \"giả sử\"), Patagonia +30% (labelled), MoMo \"thể lệ một số năm\" (labelled), Grab \"diễn giải của tác giả\" (labelled). Không phát hiện khẳng định sai sự thật.",
+    "Dung sai: exam.js và api/learn-core.js chấm tuyệt đối (|v−ans| ≤ tol); parseNum xử lý đúng \"7.200\", \"1,25\", \"33,3\". Mọi đáp án sai đã khai báo đều nằm ngoài dung sai của đáp án đúng. drills.js lại ghi tol kiểu tương đối (0,003–0,01) — không gây lỗi vì drill hiển thị trắc nghiệm, nhưng nên thống nhất một quy ước."
+  ],
+  "top_defects": [
+    {
+      "id": "e3.013",
+      "sev": "P1",
+      "issue": "Đáp án \"âm thanh bị đánh giá thấp nhất\" là ý kiến nêu như sự thật, không nguồn; phương án c (màu) bênh được từ chính L:60 — hai phương án đúng tiềm năng."
+    },
+    {
+      "id": "e5.009",
+      "sev": "P1",
+      "issue": "Stem tuyệt đối \"chỉ thật sự xảy ra khi\", key hẹp hơn chính P:referral (\"giúp bạn bè hoặc trông tốt\"); phương án a (thưởng) có phản ví dụ thật; why dẫn \"Wrapped\" không ngữ cảnh."
+    },
+    {
+      "id": "e4.014",
+      "sev": "P1",
+      "issue": "Hai phương án sai mở đầu \"Luôn chọn…\", đáp án mở đầu \"Tuỳ mục tiêu\" — đoán được bằng từ tuyệt đối."
+    },
+    {
+      "id": "systemic:em-dash",
+      "sev": "P1",
+      "issue": "42% đáp án đúng có gạch ngang \"—\" so với 2,5% phương án sai — mẹo hình thức xuyên bank."
+    },
+    {
+      "id": "e2.021",
+      "sev": "P1",
+      "issue": "Phương án b (bền vững) là trụ định vị thật của Liquid Death nên cũng bênh được; đáp án d dài nhất +14 ký tự."
+    },
+    {
+      "id": "e4.019",
+      "sev": "P1",
+      "issue": "Đáp án dài hơn 20 ký tự, duy nhất có \"—\" và hai mệnh đề — chọn được bằng hình thức."
+    },
+    {
+      "id": "e4.017",
+      "sev": "P1",
+      "issue": "Đáp án dài nhất +17 ký tự; why.c khẳng định về phân phối TikTok không nguồn."
+    }
+  ]
+}

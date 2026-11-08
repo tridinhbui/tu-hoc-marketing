@@ -1,0 +1,231 @@
+{
+  "mod": "ob03",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:ob03-01",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 13, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "[30,\"SAI_MAU_SO\"]", "issue": "30 = 60/200 là thị phần của cả ngành nước suối trong giải khát — nhầm tử số (lấy toàn ngành con thay cho hãng), không phải sai mẫu số.", "fix": "Đổi nhãn thành NHAM_TU_SO hoặc thay bằng 24/60/… một giá trị khác." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Nhóm hỏi thêm 30 khách … 18 người nêu trà hoặc nước điện giải", "issue": "Kết luận chiến lược (thêm vị) dựa trên 30 người hỏi một buổi chiều ở một tủ mát; bài không nói độ chắc hay cần lặp ở cửa hàng khác, dù khái niệm nói 'kiểm tra bằng hành vi'.", "fix": "Thêm: 'lặp ở 3 cửa hàng, 2 khung giờ; nếu vẫn ≥ 50% nêu trà/điện giải thì mới thử dòng có vị'." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "(bài không có PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Không có phản ví dụ về định nghĩa ngành quá hẹp/quá rộng trong phần đọc (chỉ có ở Q5) và không có đánh đổi của việc 'thêm vị' (rời định vị tinh khiết, thêm SKU).", "fix": "Thêm phản ví dụ (hãng nước suối cao cấp ở nhà hàng: ngành là 'nước phục vụ bàn', không phải tủ mát) và đánh đổi SKU." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 24/200 = 12% ✓; wrong 40 = 24/60 ✓, 30 = 60/200 (nhãn chưa đúng). VD 30+25+20+25 = 100 ✓; 12/30 = 40%, 12/100 = 12% ✓." },
+      "claims": [
+        { "claim": "100 lượt khách: 30 nước suối, 25 trà, 20 điện giải, 25 có ga; 18/30 nêu trà/điện giải", "status": "illustrative-labelled", "note": "Bài ghi '(số minh hoạ)'." },
+        { "claim": "Nước suối 500 ml giá 6.000đ; trà/điện giải 10.000đ", "status": "illustrative-unlabelled", "note": "Mức giá tham chiếu, không ảnh hưởng kết luận." }
+      ],
+      "strengths": "Cho hai cách tính thị phần (40% vs 12%) trên cùng dữ liệu để thấy định nghĩa ngành đổi kết luận; Q7 (doanh số tăng, thị phần giảm) và Q6 (bánh mì vs xôi) là câu chẩn đoán tốt; nêu phép kiểm hành vi ('hết nước suối bạn lấy gì?').",
+      "upgrade": "Thêm phản ví dụ và đánh đổi (SKU, định vị) vào phần đọc; nói độ chắc của mẫu 30 người và cách lặp; sửa nhãn giá trị sai; thêm câu L6 thiết kế khảo sát thay thế ở 3 cửa hàng; ÁP DỤNG nên kết bằng việc vẽ 'bản đồ ngành' 3 vòng (gần/trung/xa) cho một sản phẩm."
+    },
+    {
+      "id": "B:ob03-02",
+      "scores": { "accuracy": 12, "depth": 13, "practical": 14, "examples": 13, "pedagogy": 7, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L5", "L3", "L3", "L4", "L3", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "nghiên cứu hành vi mua (quy luật Double Jeopardy, Ehrenberg – Sharp) nhắc rằng hãng nhỏ luôn ít khách và ít được mua lại", "issue": "Nêu tên nghiên cứu/quy luật như sự thật nhưng không có `src`; chữ 'luôn' tuyệt đối hoá một quy luật thống kê (có ngoại lệ niche brands). Người học không có đường kiểm.", "fix": "Thêm src (Sharp, How Brands Grow, 2010; Ehrenberg et al. 1990) và sửa 'luôn' thành 'hầu như luôn, trừ hãng ngách'." },
+        { "sev": "P1", "where": "Q1", "quote": "Ngành B, vì tiền mới không kém xa A và khách chưa gắn hãng", "issue": "Lời giải tự thêm điều kiện 'với điều kiện giành được phần tăng ngang A', trong khi ví dụ cho thấy chỉ cần giành 1% ở B là B thua A — bài dạy 'phải tìm bằng chứng cho giả định trước khi chọn' nhưng Q1 lại chốt một đáp án. Đáp án đoán được: phương án duy nhất chọn B.", "fix": "Đổi đề thành 'Với dữ kiện này, kết luận nào là đúng mức?' và đáp án 'Chưa chọn được; cần ước phần giành được ở mỗi ngành — ngưỡng hoà là 1,33% ở B so với 1% ở A'." },
+        { "sev": "P2", "where": "Q7", "quote": "Rủi ro nào người mới hay bỏ qua?", "issue": "Câu L2 nhắc ý 'cơn sốt' cuối khái niệm; ba nhiễu đều có từ tuyệt đối ('không có', 'không còn', 'sẽ tăng theo hằng năm').", "fix": "Thay bằng câu đọc bảng tăng trưởng 3 năm của hai ngành (30%, 25%, 8% vs 12%, 12%, 11%) hỏi ngành nào bền (L4)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.000×30%×10% = 30 tỉ ✓; wrong 100 = 10% cả ngành ✓, 130 ✓. VD: 400 vs 300 tỉ ✓; 4/300 = 1,33% ✓; 0,5%×400 = 2; 5%×300 = 15; 1%×300 = 3 ✓. Q4: 4×25% = 1; 30×10% = 3; 30/4 = 7,5 ✓. Q5: 150 vs 200 tỉ, 1,33 lần ✓." },
+      "claims": [
+        { "claim": "Ngành nước ngọt có ga 20.000 tỉ tăng 2%; nước lên men 1.000 tỉ tăng 30%", "status": "illustrative-labelled", "note": "Ghi '(số liệu minh hoạ)'." },
+        { "claim": "Double Jeopardy (Ehrenberg – Sharp): hãng nhỏ ít khách và ít được mua lại", "status": "unverified", "note": "Quy luật thật, không có src trong bài." },
+        { "claim": "Biên gộp ngành A 25%, ngành B 10% (Q4)", "status": "illustrative-labelled", "note": "Ghi '(số minh hoạ…)'." }
+      ],
+      "strengths": "Ví dụ làm phân tích độ nhạy trên giả định 'phần giành được' và cho thấy kết luận lật ở hai kịch bản — đúng tinh thần 'dữ kiện · diễn giải · giả định'; Q4 bắt nhân biên vào doanh số, Q6 tách tăng trưởng thật với dịch kênh.",
+      "upgrade": "Thêm src cho Double Jeopardy và bỏ 'luôn'; viết lại Q1 thành câu 'kết luận đúng mức' thay vì chốt ngành B; thay Q7 bằng câu đọc chuỗi tăng trưởng 3 năm; thêm phản ví dụ ngắn (ngành nhỏ tăng nhanh nhưng 80% tiền mới do một hãng ngoại nắm kênh) và đánh đổi thời gian hoàn vốn; ÁP DỤNG nên yêu cầu ghi nguồn và năm của hai con số tìm được."
+    },
+    {
+      "id": "B:ob03-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 12, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "họ hay mua luân phiên vài hãng", "issue": "Khẳng định hành vi (repertoire buying) nêu như sự thật, không nguồn, không gắn nhãn; là nền cho Q4 nhưng người học không có đường kiểm.", "fix": "Thêm 'theo các nghiên cứu panel mua hàng (Ehrenberg)' kèm src, hoặc gắn nhãn 'quan sát phổ biến ở FMCG'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Hãng nồi chiên đầu tư vào đánh giá, video so sánh, chính sách bảo hành", "issue": "Ví dụ chỉ mô tả, không có số nào ngoài phép nhân 12×100.000 và 3,6 triệu/3 — không có số về cửa sổ mua (bao nhiêu tuần), tỉ lệ đọc đánh giá, hay ngân sách phân bổ; số tình huống không gắn nhãn minh hoạ.", "fix": "Thêm hai dòng số: 'khách nồi chiên cân nhắc trung bình 3 tuần (số minh hoạ), 70% đọc đánh giá; hãng dầu gội mất 1 lần mua trong 12 nếu vắng kệ 1 tháng = 8% doanh số năm'." },
+        { "sev": "P2", "where": "Q4", "quote": "Vì quy định pháp luật không cho hãng giữ chân khách", "issue": "Nhiễu vô lý; cả ba nhiễu đều dễ loại; câu L2.", "fix": "Thay bằng câu đọc bảng mua 6 tháng của 5 khách (hãng A/B/C luân phiên) hỏi tỉ lệ trung thành (L4)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3×52 = 156 lần × 28.000 = 4.368.000 = 4.368 nghìn ✓; wrong 1456 = 52×28 ✓, 84 = 3×28 ✓. Tình huống 12×100k = 1,2 tr; 3,6 tr/3 = 1,2 tr ✓. Q7: X 3×80 = 240; Y 2×100 = 200 ✓. Q5: 400×2 = 800 nghìn/năm ✓." },
+      "claims": [
+        { "claim": "Khách mua dầu gội 12 lần/năm 100.000đ; nồi chiên 3,6 triệu/3 năm", "status": "illustrative-unlabelled", "note": "Số tự đặt không ghi nhãn (Q7 có ghi minh hoạ)." },
+        { "claim": "Ngành mua thường xuyên: khách hay mua luân phiên vài hãng", "status": "unverified", "note": "" }
+      ],
+      "strengths": "Khái niệm tự nêu giới hạn của chính nó (mua thường xuyên vẫn có thể trung thành; mua thưa vẫn lặp lại theo vòng đời) và Q5–Q6 kiểm đúng hai ngoại lệ đó (lõi lọc, gia hạn phần mềm); Q7 so hai đòn bẩy tần suất vs giá trị đơn với caveat biên gộp.",
+      "upgrade": "Gắn nguồn/nhãn cho 'mua luân phiên'; thêm số vào ví dụ (cửa sổ mua, chi phí vắng kệ 1 tháng) và gắn nhãn minh hoạ; thay Q4 bằng câu đọc bảng mua lặp (L4); thêm phản ví dụ và đánh đổi (nhắc mua lại quá dày làm khách khó chịu); ÁP DỤNG kết bằng quyết định: với một sản phẩm, chọn đánh vào tần suất hay giá trị đơn và nêu một chỉ số đo."
+    },
+    {
+      "id": "B:ob03-04",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 12, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 6, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L3", "L2", "L3", "L3", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Lưới FCB (Richard Vaughn, 1980) xếp sản phẩm theo mức dấn thân và theo việc khách mua bằng lý trí hay cảm xúc.", "issue": "Nêu tên mô hình và tác giả nhưng không có `src`; trục cảm xúc/lý trí được nhắc rồi bỏ, không dùng trong ví dụ hay câu hỏi.", "fix": "Thêm src (Vaughn, Journal of Advertising Research, 1980) và một câu ví dụ trục thứ hai (kem chống nắng: dấn thân vừa, cảm xúc + lý trí)." },
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Chung một kịch bản cho cả hai là phí một nửa ngân sách.", "issue": "Khẳng định định lượng ('một nửa') không có phép tính nào đỡ; ví dụ hoàn toàn định tính, không có số về tỉ lệ xem hết video, thời gian quyết định, hay ngân sách.", "fix": "Thay bằng 'phí phần ngân sách rót vào bên không khớp' hoặc cho số: video 3 phút nước mắm xem hết 4% vs 38% với xe điện (số minh hoạ)." },
+        { "sev": "P2", "where": "Q3, Q6", "quote": "Dấu hiệu nào cho thấy một ngành là mua cân nhắc? · Máy pha là mua cân nhắc, gói hoà tan là mua thói quen", "issue": "Hai câu nhận lại định nghĩa (L2); phần đọc không dạy cách ĐO mức dấn thân (thời gian quyết, số nguồn tham khảo) nên câu hỏi chỉ kiểm nhớ.", "fix": "Thêm vào khái niệm 3 chỉ báo đo được (thời gian từ nhận biết đến mua, số nguồn tham khảo, tỉ lệ đọc đánh giá) và thay Q3 bằng câu xếp 4 sản phẩm theo bảng chỉ báo (L4)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 175/250 = 70%; 25/250 = 10%; chênh 60 điểm % ✓; wrong 600 = tăng tương đối ✓, 80 = cộng ✓." },
+      "claims": [
+        { "claim": "Lưới FCB, Richard Vaughn 1980", "status": "unverified", "note": "Mô hình thật, không src." },
+        { "claim": "175/250 khách điện thoại đọc đánh giá, 25/250 với bột giặt (Q4)", "status": "illustrative-labelled", "note": "Ghi '(số minh hoạ)'." },
+        { "claim": "Cặp vợ chồng hỏi 40 phút ở cửa hàng xe; bà nội trợ chọn nước mắm 3 giây", "status": "illustrative-unlabelled", "note": "Quan sát minh hoạ." }
+      ],
+      "strengths": "Nêu rõ 'hai cực chỉ là hai đầu của một phổ' và 'nhận biết là điều kiện để lọt vào danh sách cân nhắc' — tránh dạy nhị phân; Q7 (kem chống nắng ở giữa) là câu đánh đổi tốt với lời giải phương án sai nêu đúng hiểu lầm.",
+      "upgrade": "Thêm src FCB và dùng trục cảm xúc/lý trí ít nhất một lần; đưa 3 chỉ báo đo mức dấn thân vào phần đọc và một bảng số minh hoạ (thời gian quyết, % đọc đánh giá) để ví dụ có số; bỏ 'phí một nửa'; thay Q3/Q6 bằng câu xếp sản phẩm theo bảng chỉ báo (L4) và câu thiết kế phép đo mức dấn thân cho sản phẩm của mình (L6)."
+    },
+    {
+      "id": "B:ob03-05",
+      "scores": { "accuracy": 11, "depth": 13, "practical": 13, "examples": 8, "pedagogy": 7, "assessment": 9, "data": 7, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "TÌNH HUỐNG / VÍ DỤ", "quote": "19 nơi có Vinamilk, 12 nơi có TH true MILK, 5 nơi có hãng khác … Vinamilk có mặt 19/20 tạp hoá = 95%; TH 12/20 = 60%", "issue": "Hai thương hiệu thật gắn với số độ phủ tự đặt, không gắn nhãn minh hoạ (khác với 01, 02, 08 cùng khoá đã gắn). Người học có thể dẫn lại '95% / 60%' như số liệu thật. 'Vinamilk dẫn đầu' sữa tươi cũng là khẳng định thị trường không nguồn và sẽ cũ (periodic).", "fix": "Thêm '(số đếm minh hoạ, không phải khảo sát thật)' và src cho vị trí dẫn đầu (vd báo cáo ngành có ngày), hoặc đổi thành hãng V/T." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Hướng thực tế: chọn một khu vực hẹp, phủ dày tạp hoá ở đó trước.", "issue": "Đề xuất không có ràng buộc số (bao nhiêu điểm, chi phí mỗi điểm, bao lâu để thói quen hình thành); Q2 cho 400 điểm nhưng phần đọc không có cơ sở để biết 400 điểm phủ được bao nhiêu % một quận.", "fix": "Thêm: 'một quận có ~800 tạp hoá (minh hoạ); 400 điểm = 50% độ phủ tại chỗ, đủ để khách gặp hãng ở 1 trong 2 tiệm gần nhà'." },
+        { "sev": "P2", "where": "Q1", "quote": "nguồn dẫn đầu nào khó sao chép nhất", "issue": "Ba nhiễu (khẩu hiệu, bao bì, khuyến mãi) đều hiển nhiên dễ sao chép; câu dễ hơn mức cần.", "fix": "Thay một nhiễu bằng 'ngân sách quảng cáo gấp 5 lần' để buộc phân biệt tiền vs thời gian." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 34/40 = 85% ✓; wrong 117,6 = 40/34 ✓, 15 = 6/40 (phần bù) ✓. VD 19/20 = 95%, 12/20 = 60%, 5/20 = 25% ✓." },
+      "claims": [
+        { "claim": "Vinamilk dẫn đầu ngành sữa tươi; Vinamilk và TH true MILK chiếm phần lớn tủ mát siêu thị", "status": "unverified", "note": "Thương hiệu thật, khẳng định thị trường không nguồn, không ngày." },
+        { "claim": "Độ phủ 19/20 và 12/20 tạp hoá trong một quận", "status": "illustrative-unlabelled", "note": "Số đếm tự đặt gắn với thương hiệu thật, không gắn nhãn." }
+      ],
+      "strengths": "Bộ câu hỏi mạnh nhất module: Q4 (quảng cáo vừa là nguyên nhân vừa là kết quả của thị phần), Q6 (sức mạnh phụ thuộc kênh → suy ra nguồn dẫn đầu), Q7 (cách nào dễ thất bại nhất, với lời giải nêu điều kiện cho cả ba phương án còn lại). Khái niệm xếp hạng các nguồn (phân phối là điều kiện cần) thay vì liệt kê ngang hàng.",
+      "upgrade": "Gắn nhãn minh hoạ cho số đếm và thêm nguồn có ngày cho vị trí dẫn đầu (hoặc ẩn tên hãng); thêm số cho đề xuất phủ dày (số tạp hoá/quận, chi phí/điểm, mốc thời gian); thêm phản ví dụ (ngành mà quảng cáo thật sự là nguồn chính, vd nước tăng lực) và đánh đổi của 'đánh vào kênh hãng lớn yếu' (kênh nhỏ, phí cao); thay Q1 bằng nhiễu khó hơn."
+    },
+    {
+      "id": "B:ob03-06",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 11, "pedagogy": 7, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L4", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Mỹ phẩm, đồ uống có thương hiệu thường có biên gộp cao … Gạo, xăng, điện tử phổ thông có biên gộp thấp", "issue": "Benchmark biên gộp theo ngành nêu không số, không nguồn, không ngày; ví dụ 70% vs 12% không gắn nhãn minh hoạ nên dễ bị nhớ như 'biên điển hình'.", "fix": "Gắn nhãn '(số minh hoạ)' cho 70%/12% và thêm src một bảng biên gộp theo ngành (vd dữ liệu Damodaran hoặc báo cáo tài chính công khai của một hãng VN) với ngày kiểm." },
+        { "sev": "P2", "where": "Q6", "quote": "a) … vì: Thói quen tốt ở mọi ngành. b) … vì: Thói quen tốt ở mọi ngành. c) … vì: Thói quen tốt ở mọi ngành.", "issue": "Ba lời giải phương án sai lặp một câu, không nêu hiểu lầm nào; đáp án d là phương án duy nhất nói về ngân sách — đoán được.", "fix": "Thay nhiễu bằng những thói quen cũng phải sửa ở mức độ khác (vd 'đo hiệu quả bằng lượt xem' — cũng cần sửa nhưng không riêng điện máy) và viết lời giải riêng." },
+        { "sev": "P2", "where": "Q1", "quote": "ngành nào thường có biên lợi nhuận gộp cao hơn?", "issue": "Câu L2 nhắc lại khái niệm; đáp án suy từ câu 'phần lớn giá trị nằm ở thương hiệu'.", "fix": "Thay bằng câu đọc báo cáo rút gọn 2 công ty (doanh thu, giá vốn, chi phí bán hàng) hỏi công ty nào có dư địa marketing (L4)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (400.000−120.000)/400.000 = 70% ✓; wrong 30 = 120/400 ✓, 233,3 = 280/120 ✓. VD: 100−30 = 70; 70−25−25 = 20; gạo 100−88 = 12; 12−25 = −13; trần 12−9−1 = 2 ✓. Q5: (45.000−13.500)/45.000 = 70% ✓." },
+      "claims": [
+        { "claim": "Hãng mỹ phẩm biên gộp 70%, nhà phân phối gạo 12%", "status": "illustrative-unlabelled", "note": "Số tự đặt không ghi nhãn." },
+        { "claim": "Giá xăng được điều tiết, biên bán lẻ thấp (Q1 b)", "status": "unverified", "note": "Đúng với bối cảnh VN, không nguồn." },
+        { "claim": "Mỹ phẩm/đồ uống có thương hiệu biên cao; gạo/xăng/điện tử phổ thông biên thấp", "status": "unverified", "note": "Benchmark ngành không số, không nguồn." }
+      ],
+      "strengths": "Công thức 'trần ngân sách = lãi gộp − vận hành − lãi mong muốn' được dùng xuyên suốt ví dụ và Q7 (quyết định có ràng buộc); Q5 tách biên gộp với lãi ròng (mặt bằng, phí app) đúng chỗ người mới hay nhầm.",
+      "upgrade": "Gắn nhãn minh hoạ và thêm nguồn có ngày cho biên theo ngành; viết lại Q6 với lời giải riêng từng nhiễu; thay Q1 bằng câu đọc báo cáo rút gọn (L4); thêm phản ví dụ (ngành biên thấp nhưng vẫn cần thương hiệu: gạo đóng túi cao cấp) và đánh đổi 'tăng biên bằng thương hiệu vs tăng khối lượng' có số; ÁP DỤNG nên yêu cầu tính trần ngân sách cho một doanh nghiệp giả định."
+    },
+    {
+      "id": "B:ob03-07",
+      "scores": { "accuracy": 13, "depth": 13, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L4", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "TÌNH HUỐNG", "quote": "tháng trước Tết âm lịch chiếm 35% doanh số cả năm, dịp Trung thu chiếm thêm 15%", "issue": "Tỉ trọng mùa vụ bánh kẹo nêu như số liệu năm ngoái, không gắn nhãn minh hoạ (Q7 có ghi minh hoạ cho 40% nhưng 35%/15% thì không); khái niệm yêu cầu 'tính từ ít nhất ba năm' nhưng ví dụ chỉ dùng một năm.", "fix": "Ghi '(số minh hoạ)' và cho bảng 3 năm (vd 33%, 36%, 35%) để minh hoạ chính yêu cầu của bài." },
+        { "sev": "P2", "where": "Q4", "quote": "Vì Nhà nước tăng thuế quảng cáo vào dịp lễ Tết", "issue": "Nhiễu vô lý; câu L2. Lời giải 'Giá thường do đấu giá' đúng với digital nhưng TV/OOH là bảng giá — bài không phân biệt kênh.", "fix": "Thay nhiễu và thêm vào lời giải: 'với TV/OOH là bảng giá mùa cao điểm, cơ chế khác nhưng kết quả giống: cầu tăng, giá tăng'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "nên bắt đầu từ 5–6 tuần trước Tết, vì các gia đình và doanh nghiệp đặt giỏ quà sớm", "issue": "Mốc 5–6 tuần là khẳng định hành vi không nguồn, không gắn nhãn; là đáp án Q2.", "fix": "Thêm cách tự đo: 'xem đường cong tìm kiếm/đơn đặt giỏ quà năm trước để tìm tuần khởi phát', và gắn nhãn kinh nghiệm." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 12×15% = 1,8 tỉ ✓; wrong 1 = chia đều ✓, 0,8 ✓. VD: 35%×12 = 4,2; 50%×12 = 6 → 0,6/tháng ✓; chỉ số mùa vụ 0,35/(1/12) = 4,2 ✓." },
+      "claims": [
+        { "claim": "Bánh kẹo: Tết 35%, Trung thu 15% doanh số năm", "status": "illustrative-unlabelled", "note": "Nêu như số liệu năm ngoái của hãng." },
+        { "claim": "Gia đình và doanh nghiệp đặt giỏ quà 5–6 tuần trước Tết", "status": "unverified", "note": "Hành vi không nguồn." },
+        { "claim": "Giá thầu Tết cao hơn ~40% (Q7)", "status": "illustrative-labelled", "note": "Ghi '(số minh hoạ)'." },
+        { "claim": "Điều hoà mùa nóng, đồ dùng học tập tháng 8", "status": "unverified", "note": "Hợp lý, không nguồn, không ảnh hưởng kết luận." }
+      ],
+      "strengths": "Không dừng ở 'phân bổ theo tỉ trọng' mà nêu ba hiệu chỉnh (giá thầu đỉnh, bắt đầu sớm, hiện diện tối thiểu) và Q7 kiểm chính hiệu chỉnh đó như một đánh đổi; đưa công thức chỉ số mùa vụ với yêu cầu 3 năm và loại khuyến mãi trái mùa.",
+      "upgrade": "Gắn nhãn số và cho bảng 3 năm để tính chỉ số mùa vụ thật; thêm cách tự đo tuần khởi phát; thêm phản ví dụ (ngành có mùa vụ giả do chính khuyến mãi của hãng tạo ra) và đánh đổi dòng tiền khi dồn 4,2 tỉ vào 6 tuần; thay Q4 bằng câu đọc bảng CPM theo tuần (L4); ÁP DỤNG kết bằng bảng phân bổ 12 tháng cho một ngành tự chọn."
+    },
+    {
+      "id": "B:ob03-08",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 12, "examples": 11, "pedagogy": 7, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L1", "L4"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Nếu giành 2% kênh tạp hoá, bạn có 120 tỉ, nhưng cần đội bán hàng và nhà phân phối. … Quyết định đúng: xây kênh tạp hoá từng vùng", "issue": "So 100 tỉ (online) với 120 tỉ (tạp hoá) rồi kết luận 'đúng' mà không trừ chi phí kênh: chiết khấu nhà phân phối, đội bán hàng, công nợ (bài 09 cùng khoá nói chiết khấu 25–30%). Thiếu giả định làm kết quả có thể đổi.", "fix": "Thêm một dòng: 'trừ chiết khấu 20% và chi phí đội bán 15 tỉ, tạp hoá còn ~81 tỉ; online trừ phí sàn 15% còn 85 tỉ — gần nhau, nên quyết định phải dựa vào khả năng giành 2% thật sự và kênh nào bền hơn'." },
+        { "sev": "P2", "where": "Q6", "quote": "Dữ kiện nào cho biết kênh chính của một ngành?", "issue": "Câu L1; đáp án lặp lại định nghĩa; ba nhiễu là 'báo chí/đăng bài/phí rẻ' đều hiển nhiên.", "fix": "Thay bằng câu tự ước lượng: cho số facing ở 5 điểm bán và lời chủ tiệm về nguồn nhập, hỏi kênh chính ước là gì (L4) — đúng kỹ năng bài đã dạy." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "ngành mỹ phẩm chăm sóc da bán online khoảng 45%", "issue": "Số đã gắn nhãn 'không phải thống kê chính thức' ở câu trước, nhưng 45% đứng riêng và sẽ cũ nhanh (periodic); không có ngày.", "fix": "Thêm '(cũng là số minh hoạ)' và một src báo cáo ngành có ngày để người học biết đi đâu kiểm." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 10.000×60% = 6.000; 2% = 120 tỉ ✓; wrong 200 = 2% cả ngành ✓, 1.200 ✓. VD: online 10%×1.000 = 100 ✓." },
+      "claims": [
+        { "claim": "Dầu ăn: 60% chợ/tạp hoá, 30% siêu thị/tiện lợi, 10% sàn; mỹ phẩm online 45%", "status": "illustrative-labelled", "note": "Ghi 'số minh hoạ cho bài, không phải thống kê chính thức'." },
+        { "claim": "Nồi cơm điện: 40% doanh số qua chuỗi điện máy (Q5)", "status": "illustrative-unlabelled", "note": "Tình huống mới, không ghi nhãn." },
+        { "claim": "Kênh B2B (nhà hàng, bếp ăn) có thể là kênh lớn của dầu ăn", "status": "unverified", "note": "Hợp lý, có 'có thể'." }
+      ],
+      "strengths": "Gắn nhãn rõ 'không phải thống kê chính thức' và đưa cách tự ước lượng khi không có báo cáo (5 điểm bán, đếm facing, hỏi nguồn nhập); Q7 chọn chỉ báo dịch chuyển kênh (tỉ trọng theo kỳ, không phải lượt xem) là câu đọc số tốt.",
+      "upgrade": "Trừ chi phí kênh trong ví dụ để quyết định có cơ sở (và nối sang 09); thêm src có ngày cho tỉ trọng kênh; thay Q6 bằng câu tự ước lượng từ facing (L4); thêm phản ví dụ (ngành kênh chính đang dịch: hoá mỹ phẩm sang livestream) và đánh đổi 'kênh lớn nhưng chậm/ công nợ vs kênh nhỏ nhưng tiền về nhanh'; ÁP DỤNG kết bằng bảng kênh × tỉ trọng × chi phí kênh."
+    },
+    {
+      "id": "B:ob03-09",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 14, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L5", "L3", "L5", "L4", "L2", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Porter (1979, Harvard Business Review) xếp mối đe doạ từ người mới vào làm một trong năm lực cạnh tranh của ngành.", "issue": "Trích nguồn đúng nhưng không có `src` bấm được; 'các hãng lớn chi hàng trăm tỉ mỗi năm cho quảng cáo và khuyến mãi' là khẳng định số về thị trường thật không nguồn.", "fix": "Thêm src HBR 1979 (hoặc bản 2008) và sửa 'hàng trăm tỉ' thành 'ngân sách lớn hơn vốn của bạn nhiều lần (kiểm báo cáo tài chính công khai)'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Cửa vào hợp lý hơn: bán online trực tiếp cho một nhóm khách cụ thể trước.", "issue": "Bài vừa nói 'Online cũng không miễn rào cản: chi phí có khách cao vẫn chặn người mới' nhưng ví dụ không tính chi phí có khách online để so với 27.000đ/can còn lại; kết luận 'hợp lý hơn' chưa có số.", "fix": "Thêm: 'với CPA online ~40.000đ/khách mới (minh hoạ), cần khách mua ≥ 2 can mới hoà; kiểm bằng 2 tháng chạy nhỏ'." },
+        { "sev": "P2", "where": "Q6, Q7", "quote": "Vì sao vốn lưu động là rào cản … Đâu là cách đọc rào cản hữu ích nhất", "issue": "Hai câu L2 cuối nhắc lại khái niệm; nhiễu Q6 'ngân hàng không cho vay' vô lý.", "fix": "Thay Q7 bằng câu tính vốn lưu động: 10.000 can/tháng, công nợ 60 ngày, giá vốn 15.000đ → vốn kẹt (L3/L4)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 60×(1−30%) = 42; 42−15 = 27 nghìn ✓; wrong 45 = quên chiết khấu ✓, 42 = quên gia công ✓. VD: 500 triệu/27.000 = 18.519 ≈ 18.500 can ✓. Q2 b: 10 mã × 3 chuỗi × 50 triệu = 1,5 tỉ ✓." },
+      "claims": [
+        { "claim": "Phí mở mã ~50 triệu/mã, chiết khấu 25–30%", "status": "illustrative-labelled", "note": "Ghi 'giả sử, để tính cho bài… con số thật khác nhau tuỳ chuỗi và hợp đồng'." },
+        { "claim": "Porter 1979 HBR, năm lực cạnh tranh", "status": "unverified", "note": "Nguồn thật, không có link/ngày kiểm trong bài." },
+        { "claim": "Các hãng lớn chi hàng trăm tỉ mỗi năm cho quảng cáo và khuyến mãi", "status": "unverified", "note": "Khẳng định thị trường thật không nguồn." }
+      ],
+      "strengths": "Phân loại rào cản theo 'vượt bằng tiền' vs 'vượt bằng thời gian' là khung ra quyết định thật, và Q4 kiểm đúng khung đó; ví dụ đi hết chuỗi giá → chiết khấu → gia công → phí mở mã → số can hoà vốn với giả định được gắn nhãn rõ.",
+      "upgrade": "Thêm src Porter và sửa khẳng định 'hàng trăm tỉ'; tính chi phí có khách online để kết luận 'cửa vào' có số; thay Q7 bằng câu tính vốn lưu động kẹt trong công nợ (L4); thêm phản ví dụ (ngành rào cản thấp nhưng vẫn có lãi nhờ địa phương/ngách) và đánh đổi của cửa vào online (chậm, phụ thuộc nền tảng)."
+    },
+    {
+      "id": "B:ob03-10",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 14, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "thử 3 ki-ốt gần văn phòng, rồi sau 3 tháng so lãi trên mỗi mét vuông của ki-ốt với cửa hàng lớn", "issue": "Thử nghiệm không có tiêu chí thành công đặt trước (ki-ốt phải đạt bao nhiêu % lãi/m² của cửa hàng lớn thì mở rộng) dù khái niệm nói 'đặt ngưỡng hành động trước'; 3 ki-ốt × 3 tháng chưa nói về mùa và vị trí làm lệch.", "fix": "Thêm: 'ngưỡng: lãi/m² ≥ 1,5 lần cửa hàng lớn và hoà vốn ki-ốt < 6 tháng; chọn 3 vị trí khác nhau, chạy qua ít nhất 1 mùa thấp điểm'." },
+        { "sev": "P2", "where": "Q4, Q6", "quote": "Vì sao hãng dẫn đầu cũ thường phản ứng chậm … dấu hiệu nào cho thấy kênh đang đổi?", "issue": "Hai câu L2 nhắc lại khái niệm; nhiễu 'pháp luật cấm hãng lớn mở mô hình mới' vô lý.", "fix": "Thay Q6 bằng câu đọc bảng tỉ trọng livestream 6 quý của 3 hãng (một hãng tăng, hai hãng không) hỏi đó là tín hiệu ngành hay của một hãng (L4)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Doanh thu đơn giao qua app tăng từ 15 tỉ lên 35 tỉ", "issue": "Bài nói cần 'đo biên của đơn giao sau phí app và đóng gói' nhưng không cho số nào (phí app thường 20–25% là con số người học cần để thấy 35 tỉ qua app có thể lãi ít hơn 15 tỉ tại quán).", "fix": "Thêm phép tính minh hoạ: 35 tỉ × (1 − 25% phí − 5% đóng gói) = 24,5 tỉ doanh thu thực so với 65 tỉ tại quán." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 100×85% − 100×65% = 20 tỉ ✓; wrong 23,5 = 20/85 ✓, 65 ✓. VD 15 → 35 tỉ, 85 → 65 tỉ ✓." },
+      "claims": [
+        { "claim": "Cà phê chuỗi dịch sang mang đi/ki-ốt; mỹ phẩm online dịch sang livestream", "status": "illustrative-labelled", "note": "Ghi 'Ví dụ minh hoạ (xu hướng được bàn nhiều, không dùng làm số liệu)'." },
+        { "claim": "Chuỗi 30 cửa hàng, 100 tỉ/năm, giao app 15% → 35%", "status": "illustrative-unlabelled", "note": "Số nội bộ tự đặt của tình huống." }
+      ],
+      "strengths": "Tách rõ 'đổi kênh bán' với 'đổi luật chơi' trên cùng dữ liệu (35 tỉ qua app có thể vẫn do 30 cửa hàng làm); nêu tiêu chí tín hiệu vs nhiễu (độ bền, độ rộng) và ngưỡng hành động đặt trước; Q5 dạy coi tín hiệu là giả thuyết với các giả thuyết cạnh tranh được nêu trong lời giải.",
+      "upgrade": "Đặt tiêu chí thành công cho thử nghiệm ki-ốt và tính biên đơn giao sau phí app; thay Q6 bằng câu đọc bảng 6 quý (L4) và thêm câu L6 thiết kế thử nghiệm ki-ốt (vị trí, thời gian, chỉ số dừng); thêm phản ví dụ (tín hiệu rộng nhưng không bền: cơn sốt một mùa) có số; gắn nhãn số tình huống."
+    }
+  ],
+  "module_notes": {
+    "progression": "Mạch 'đọc một ngành' đi đúng thứ tự người làm nghề dùng: định nghĩa ngành (01) → quy mô/tăng trưởng (02) → tần suất × giá trị (03) → mức dấn thân (04) → ai dẫn đầu và nhờ đâu (05) → biên gộp (06) → mùa vụ (07) → kênh chính (08) → rào cản (09) → luật chơi đổi (10). Các bài nối nhau tốt qua ví dụ (08 dùng lại tỉ trọng kênh, 09 dùng lại chiết khấu, 10 dùng lại tỉ trọng kênh). Điểm yếu chung của cả 10 bài: không bài nào có VÌ SAO HIỆU QUẢ · PHẢN VÍ DỤ · ĐÀO SÂU như ob02 (phản ví dụ chỉ xuất hiện qua câu hỏi), nên chiều depth/pedagogy bị kẹt ở 7/10 dù lập luận trong ví dụ thường tốt. Nhiều bài nêu nghiên cứu thật (Double Jeopardy, FCB, Porter) nhưng không có src nào.",
+    "overlap": [
+      "03 (tần suất mua) và 04 (mua thói quen vs cân nhắc) cùng rút ra 'thắng bằng hiện diện' vs 'thắng bằng bằng chứng'; 04 nên dẫn lại 03 thay vì dạy lại kết luận.",
+      "05 (nguồn dẫn đầu: độ phủ) và 08 (kênh chính) và 09 (rào cản phân phối) ba lần nói 'không có mặt thì không có doanh số'; nên gom thành một bản đồ phân phối dùng chung.",
+      "02 Q6 và 10 (tăng trưởng do dịch kênh hay tiền mới) cùng một phân biệt; nối tường minh."
+    ],
+    "gaps": [
+      "Thiếu bài về nguồn dữ liệu ngành ở Việt Nam (báo cáo nào, số nào tin được, cách đọc số từ báo cáo tài chính công khai) — toàn module bảo 'tìm con số công khai' nhưng không chỉ đường, và không bài nào có src.",
+      "Thiếu bài về cấu trúc chi phí/kênh trọn chuỗi (chiết khấu, phí sàn, công nợ) dùng chung cho 06, 08, 09 — mỗi bài tự đặt một con số khác nhau.",
+      "Thiếu hẳn phần đo độ chắc: mẫu 30 người (01), 20 tạp hoá (05), 3 ki-ốt (10) đều dùng để kết luận mà không nói sai số hay cách lặp.",
+      "Chưa có bài về khách hàng của ngành (phân khúc/nhóm mua) dù 01, 04, 08 đều dựa vào 'khách của ngành'."
+    ],
+    "best_lesson": "B:ob03-02",
+    "weakest_lesson": "B:ob03-04"
+  }
+}

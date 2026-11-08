@@ -1,0 +1,18 @@
+{
+ "mod": "dl06",
+ "lessons": [
+  {
+   "id": "B:dl06-10",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q6 + VÍ DỤ + KHÁI NIỆM",
+     "quote": "phân bổ sai 10% đã tốn 12 triệu, gấp bốn phí công cụ",
+     "issue": "Coi toàn bộ tiền phân bổ sai là tiền mất. Chính Q5 của bài lại tính đúng: lợi ích = tiền chuyển × chênh iROAS × lãi gộp. Lấy số của Q5 (0,8 × 30%) thì shop B chỉ mất khoảng 12 × 0,24 ≈ 2,9 triệu, thấp hơn phí 3 triệu, nên kết luận đảo chiều. Phép thử ở phần khái niệm ('ngân sách × tỉ lệ có thể đang phân bổ sai') mắc cùng lỗi.",
+     "fix": "Đổi phép thử thành: ngân sách × tỉ lệ phân bổ sai × chênh hiệu quả × lãi gộp × phần công cụ sửa được, so với phí. Viết lại Q6 và quy tắc 100 triệu theo công thức này, hoặc ghi rõ đây là cận trên."
+    }
+   ]
+  }
+ ]
+}

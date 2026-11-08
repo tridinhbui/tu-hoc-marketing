@@ -1,0 +1,18 @@
+{
+ "mod": "ob07",
+ "lessons": [
+  {
+   "id": "B:ob07-03",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q2 why (b) ↔ Ví dụ",
+     "quote": "Chia ngẫu nhiên loại được cỡ tiệm và các khác biệt khác, đo đúng phần poster tạo ra.",
+     "issue": "Lời giải nói thử 100 tiệm \"đo đúng phần poster tạo ra\", trong khi ví dụ kết luận chính thử 50/50 đó \"chưa phân biệt được với nhiễu\" và phải chạy vài trăm tiệm mỗi nhóm. Lời giải mâu thuẫn với phần đọc.",
+     "fix": "Đáp án b: \"Thử ngẫu nhiên có nhóm đối chứng, đủ cỡ mẫu (vài trăm tiệm mỗi nhóm)\"; why nêu 50/50 chỉ là vòng thử đầu."
+    }
+   ]
+  }
+ ]
+}

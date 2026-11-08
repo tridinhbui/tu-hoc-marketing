@@ -1,0 +1,224 @@
+{
+  "mod": "kn12",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn12-01",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 6, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L4", "L3", "L3", "L2", "L4", "L4"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Q7 lời giải d", "quote": "Mỹ phẩm thường không thuộc nhóm phải duyệt nội dung trước", "issue": "Khẳng định pháp lý nêu như sự thật trong lời giải, trong khi bài kn12-03 cùng module viết 'Thuốc và thủ tục mỹ phẩm: chưa kiểm văn bản gốc, hỏi pháp chế'. Hai bài mâu thuẫn về cùng một điểm; đáp án Q7 (c) phụ thuộc vào khẳng định chưa kiểm này.", "fix": "Pháp chế xác nhận hiện trạng thủ tục quảng cáo mỹ phẩm theo Nghị định 342/2025; nếu chưa chắc, sửa lời giải d thành 'bài này không nêu công dụng nên không chạm vùng tuyên bố; thủ tục riêng của mỹ phẩm (nếu có) hỏi pháp chế'." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Luật Quảng cáo 2012, sửa đổi bởi Luật số 75/2025/QH15 (hiệu lực 1/1/2026); Nghị định 342/2025/NĐ-CP (hiệu lực 15/2/2026)", "issue": "Văn bản pháp luật nêu số hiệu và ngày hiệu lực nhưng không có trường src (link văn bản) — nội dung periodic cần nguồn bấm được.", "fix": "Thêm src tới văn bản trên cơ sở dữ liệu pháp luật chính thức, ghi ngày kiểm." },
+        { "sev": "P2", "where": "Q3", "quote": "Bao nhiêu % số bài cần dừng lại kiểm?", "issue": "Phép cộng-chia một bước; bài không có phép tính nào về chi phí/thời gian của việc kiểm (xuất hiện ở kn12-08).", "fix": "Đổi thành: '12 bài × 15 phút kiểm + 3 bài hỏi pháp chế × 500.000đ/giờ (số minh hoạ): chi phí tháng là bao nhiêu, so với một lần in lại 5 triệu?'" },
+        { "sev": "P2", "where": "Q5", "quote": "Đồng nghiệp nói: \"Facebook đã duyệt quảng cáo này rồi, vậy là hợp pháp.\"", "issue": "Lặp ý Q1 (chưa bị gỡ ≠ đúng luật) với cùng lập luận; L2.", "fix": "Thay bằng câu xếp vùng: cho 4 bài ngắn mô tả cụ thể, hỏi bài nào chạm 2 vùng cùng lúc." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 8 + 2 + 2 = 12; 12 ÷ 60 = 20% ✓; 8 ÷ 60 = 13,33% ✓." },
+      "claims": [
+        { "claim": "Luật Quảng cáo 2012 (16/2012/QH13)", "status": "unverified", "note": "Văn bản gốc; pháp chế xác nhận số hiệu." },
+        { "claim": "Luật số 75/2025/QH15 sửa đổi Luật Quảng cáo, hiệu lực 1/1/2026", "status": "unverified", "note": "Số hiệu, năm và ngày hiệu lực cần pháp chế xác nhận." },
+        { "claim": "Nghị định 342/2025/NĐ-CP hướng dẫn chi tiết, hiệu lực 15/2/2026", "status": "unverified", "note": "Số hiệu và ngày hiệu lực cần pháp chế xác nhận." },
+        { "claim": "Viên uống có thể là thực phẩm bảo vệ sức khoẻ, thuộc nhóm cần duyệt nội dung trước", "status": "unverified", "note": "Phụ thuộc Nghị định 342/2025; pháp chế xác nhận." },
+        { "claim": "Bốc thăm trúng thưởng là khuyến mại may rủi, có thủ tục riêng", "status": "unverified", "note": "Theo Luật Thương mại/Nghị định 81/2018 và sửa đổi; pháp chế xác nhận." },
+        { "claim": "Mỹ phẩm thường không thuộc nhóm phải duyệt nội dung trước", "status": "unverified", "note": "Mâu thuẫn với caveat ở kn12-03; cần pháp chế xác nhận trước khi giữ." },
+        { "claim": "Bài đăng tự nhiên giới thiệu sản phẩm để bán vẫn là quảng cáo (Q1 lời giải c)", "status": "unverified", "note": "Diễn giải định nghĩa quảng cáo trong Luật Quảng cáo; pháp chế xác nhận." },
+        { "claim": "8/2/2 trên 60 bài; 20%", "status": "illustrative-labelled", "note": "Bài ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Bản đồ năm vùng là công cụ phân luồng dùng được ngay cho đội không có pháp chế; bài ghi rõ 'Kiểm lần cuối 10/2026; không phải tư vấn pháp lý'; Q6 bắt đúng lỗi coi tỉ lệ khối lượng kiểm là xác suất bị phạt.",
+      "upgrade": "Để đạt ≥85: (1) pháp chế xác nhận hoặc sửa lời giải Q7 d cho khớp kn12-03; (2) thêm src văn bản luật; (3) thêm PHẢN VÍ DỤ (bài không chạm vùng nào nhưng vẫn gây rủi ro: dùng ảnh người khác không phép — vùng dữ liệu/ bản quyền) và ĐÀO SÂU (năm vùng nối với bài 02–07; mức phạt tham khảo theo văn bản khi pháp chế xác nhận); (4) thay Q3/Q5 bằng câu tính chi phí kiểm và câu xếp vùng đa lớp."
+    },
+    {
+      "id": "B:kn12-02",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 6, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L4", "L4", "L3", "L4", "L4", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Luật Quảng cáo (sửa đổi bởi Luật 75/2025/QH15) cấm dùng từ như \"nhất\", \"duy nhất\", \"tốt nhất\", \"số một\" khi không có tài liệu hợp pháp chứng minh", "issue": "Điều cấm này đã có trong Luật Quảng cáo 2012 (khoản 11 Điều 8 theo hiểu biết chung); bài quy cho luật sửa đổi khiến người học nghĩ đây là quy định mới. Không có src.", "fix": "Ghi 'Luật Quảng cáo 2012, Điều 8 (giữ nguyên/sửa đổi theo Luật 75/2025 — pháp chế xác nhận điều khoản)'; thêm src." },
+        { "sev": "P2", "where": "Q3", "quote": "tem 700đ/hộp và công dán 300đ/hộp, chi phí làm lại là bao nhiêu đồng?", "issue": "Phép tính đơn giản, không nối với quyết định (so với chi phí dừng in 2 ngày, chi phí thu hồi hộp đã bán).", "fix": "Thêm nhánh: '1.500 hộp đã ra kệ không thu hồi được, chi phí thu hồi ước 20.000đ/hộp (số minh hoạ): tổng rủi ro nếu in như cũ là bao nhiêu so với lùi lịch 2 ngày?'" },
+        { "sev": "P2", "where": "Q7", "quote": "Vì sao nên lưu tài liệu chứng minh cùng chỗ với bản thiết kế cuối, thay vì rải rác trong email?", "issue": "Câu L2; nhiễu b 'email bị xoá sau ba tháng theo quy định chung' vô lý; trùng chủ đề với kn12-08 Q6.", "fix": "Thay bằng câu L4: cho một câu tuyên bố và 3 tài liệu (khảo sát nội bộ 200 người, báo cáo sàn tháng 5, bài báo), hỏi tài liệu nào chứng minh được phạm vi nào." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "dán nhãn đè 5.000 hộp tốn khoảng 5 triệu đồng (số minh hoạ)", "issue": "Ví dụ chỉ có một số chi phí; không có số về rủi ro khác (gỡ quảng cáo, khiếu nại) nên 'cái giá của tuyên bố sai' chưa đủ hình.", "fix": "Thêm bảng chi phí nếu phát hiện sau khi bán: dán đè + thu hồi + gỡ quảng cáo (số minh hoạ)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (700 + 300) × 5.000 = 5.000.000đ ✓; 700 × 5.000 = 3.500.000 ✓." },
+      "claims": [
+        { "claim": "Luật Quảng cáo (sửa đổi bởi Luật 75/2025/QH15) cấm 'nhất', 'duy nhất', 'tốt nhất', 'số một' và từ có ý nghĩa tương tự khi không có tài liệu hợp pháp chứng minh", "status": "unverified", "note": "Điều khoản gốc thuộc Luật 2012; pháp chế xác nhận điều khoản hiện hành sau sửa đổi." },
+        { "claim": "Cấm so sánh với sản phẩm cùng loại của người khác khi không có tài liệu hợp pháp chứng minh", "status": "unverified", "note": "Pháp chế xác nhận điều khoản và cách diễn đạt hiện hành." },
+        { "claim": "Luật Bảo vệ quyền lợi người tiêu dùng 2023, số 19/2023/QH15, cấm đưa thông tin sai lệch, gây nhầm lẫn", "status": "unverified", "note": "Số hiệu và điều khoản cần pháp chế xác nhận." },
+        { "claim": "'Top 1', 'hàng đầu' là từ có ý nghĩa tương tự, vẫn cần chứng minh", "status": "unverified", "note": "Diễn giải câu chữ luật; pháp chế xác nhận." },
+        { "claim": "5.000 hộp; 3% chất tổng hợp; 5 triệu dán nhãn đè", "status": "illustrative-labelled", "note": "Số dán nhãn ghi '(số minh hoạ)'; tình huống là giả định." }
+      ],
+      "strengths": "Tách ba tuyên bố và xử lý khác nhau (bỏ / dừng / hỏi pháp chế) là cách làm nghề rõ; Q4 dạy đúng nguyên tắc 'phạm vi tuyên bố khớp phạm vi dữ liệu'; Q6 chọn bằng chứng khớp tuyên bố.",
+      "upgrade": "Để đạt ≥85: (1) sửa quy chiếu điều khoản và thêm src; (2) mở rộng ví dụ thành bảng chi phí rủi ro nhiều dòng và biến Q3 thành so sánh hai kịch bản; (3) thêm PHẢN VÍ DỤ (tuyên bố cảm tính không đo được như 'thơm dịu' — không cần tài liệu nhưng vẫn không được gây nhầm) và ĐÀO SÂU (tài liệu hợp pháp là gì theo pháp chế: báo cáo thử nghiệm, chứng nhận bên thứ ba, dữ liệu sàn có xác nhận); (4) thay Q7 bằng câu ghép tài liệu–phạm vi."
+    },
+    {
+      "id": "B:kn12-03",
+      "scores": { "accuracy": 10, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 5, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L3", "L4", "L3", "L4", "L4", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Từ 1/7/2026, Nghị quyết 21/2026/NQ-CP chuyển thẩm quyền cấp xác nhận về Chủ tịch UBND cấp tỉnh", "issue": "Chỉ dẫn vận hành cụ thể (nộp hồ sơ ở đâu, từ ngày nào) dựa trên một văn bản được nêu như sự thật, không src; hình thức 'Nghị quyết của Chính phủ' để chuyển thẩm quyền hành chính là chi tiết dễ sai và nếu sai sẽ làm người học nộp hồ sơ nhầm cơ quan.", "fix": "Pháp chế xác nhận số hiệu, hình thức văn bản và ngày hiệu lực; thêm src; nếu chưa chắc, bỏ ngày và viết 'cơ quan tiếp nhận có thể đổi — hỏi pháp chế'." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Nghị định 100/2014/NĐ-CP cấm quảng cáo sữa thay thế sữa mẹ cho trẻ dưới 24 tháng", "issue": "Điều cấm này theo hiểu biết chung nằm ở Luật Quảng cáo 2012 (Điều 7) và được Nghị định 100/2014 cụ thể hoá; bài quy toàn bộ cho Nghị định. Không src.", "fix": "Ghi 'Luật Quảng cáo 2012 Điều 7 và Nghị định 100/2014/NĐ-CP' sau khi pháp chế xác nhận; thêm src." },
+        { "sev": "P2", "where": "Q3", "quote": "Cần tối thiểu bao nhiêu ngày làm việc trước ngày lên sóng?", "issue": "Phép cộng ba số; các mốc 5/10/10 ngày là minh hoạ nhưng không nói thời hạn xét theo văn bản là bao nhiêu.", "fix": "Pháp chế xác nhận thời hạn giải quyết theo Nghị định 342/2025 rồi dùng số đó; thêm câu tính ngày lên sóng sớm nhất theo lịch (có cuối tuần, lễ)." },
+        { "sev": "P2", "where": "Q4", "quote": "sữa thay thế sữa mẹ không được khuyến mại, bình bú không được quảng cáo", "issue": "Hai khẳng định pháp lý chồng nhau trong một phương án; lời giải viện 'Nghị định 100/2014 và quy định khuyến mại' không nêu điều khoản; không src.", "fix": "Pháp chế xác nhận căn cứ cấm khuyến mại (Luật Thương mại/Nghị định 81) và cấm quảng cáo bình bú (Luật Quảng cáo Điều 7); ghi điều khoản." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 5 + 10 + 10 = 25 ngày làm việc ✓." },
+      "claims": [
+        { "claim": "Nghị định 342/2025/NĐ-CP liệt kê nhóm sản phẩm đặc biệt; thực phẩm bảo vệ sức khoẻ cần giấy xác nhận nội dung trước khi chạy", "status": "unverified", "note": "Pháp chế xác nhận điều khoản." },
+        { "claim": "Quảng cáo TPBVSK phải có cụm 'Thực phẩm bảo vệ sức khỏe' và câu 'Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh'; không dùng hình ảnh, trang phục bác sĩ, nhân viên y tế", "status": "unverified", "note": "Khớp quy định lâu nay theo hiểu biết chung (Nghị định 15/2018 trước đây); pháp chế xác nhận điều khoản hiện hành trong 342/2025." },
+        { "claim": "Nghị định 100/2014/NĐ-CP cấm quảng cáo sữa thay thế sữa mẹ cho trẻ dưới 24 tháng; bình bú không được quảng cáo", "status": "unverified", "note": "Căn cứ gốc có thể là Luật Quảng cáo 2012 Điều 7; pháp chế xác nhận." },
+        { "claim": "Nghị quyết 21/2026/NQ-CP, từ 1/7/2026 chuyển thẩm quyền cấp xác nhận về Chủ tịch UBND cấp tỉnh", "status": "unverified", "note": "Số hiệu, hình thức văn bản, ngày hiệu lực cần pháp chế xác nhận; rủi ro cao nếu sai." },
+        { "claim": "Điều 31 Nghị định 342/2025 cho giấy xác nhận đã cấp theo quy định cũ tiếp tục áp dụng tới khi bị thay thế hoặc huỷ", "status": "unverified", "note": "Điều khoản chuyển tiếp cụ thể; pháp chế xác nhận số điều." },
+        { "claim": "Sữa thay thế sữa mẹ không được khuyến mại", "status": "unverified", "note": "Pháp chế xác nhận căn cứ." },
+        { "claim": "Lịch 5 + 10 + 10 ngày làm việc", "status": "illustrative-labelled", "note": "Bài ghi 'Lịch minh hoạ'." }
+      ],
+      "strengths": "Phân biệt rõ 'bản công bố sản phẩm' với 'giấy xác nhận nội dung quảng cáo' — nhầm lẫn thật rất phổ biến; Q7 cho câu lời thoại an toàn cụ thể, dùng được ngay; bài tự khoanh vùng 'chưa kiểm văn bản gốc, hỏi pháp chế' cho thuốc và mỹ phẩm.",
+      "upgrade": "Để đạt ≥85: (1) pháp chế xác nhận bốn văn bản (342/2025, 100/2014, Nghị quyết 21/2026, Điều 31) và thêm src; (2) dùng thời hạn giải quyết theo văn bản cho lịch, kèm câu tính lịch thực; (3) thêm PHẢN VÍ DỤ (thực phẩm thường không phải TPBVSK: không cần xác nhận nhưng vẫn không được nói công dụng chữa bệnh) và ĐÀO SÂU (chi phí xin xác nhận, thời gian, ai nộp — thương nhân hay nhà cung cấp); (4) tách Q4 thành hai câu để mỗi khẳng định pháp lý có căn cứ riêng."
+    },
+    {
+      "id": "B:kn12-04",
+      "scores": { "accuracy": 10, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L3", "L4", "L3", "L4", "L2", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Theo tóm tắt của KPMG và Luật Việt Nam, Nghị định 239 bỏ các giới hạn cũ như mức giảm giá tối đa 50%, giá trị hàng tặng và tổng thời gian giảm giá", "issue": "Nội dung pháp lý trọng yếu (bỏ trần giảm giá 50%, bỏ trần giá trị hàng tặng, ngưỡng thông báo 100 triệu) được lấy từ tóm tắt của bên thứ ba, không từ văn bản gốc, không src; Q1 b và Q2 d dựa vào tóm tắt này để chấm sai/đúng. Nếu tóm tắt sai, đáp án sai theo.", "fix": "Pháp chế đối chiếu toàn văn Nghị định 239/2026/NĐ-CP (và 81/2018, 128/2024) cho từng điểm; thêm src văn bản gốc và link tóm tắt KPMG/Luật Việt Nam với ngày kiểm." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Nghị định 239/2026/NĐ-CP (ban hành, có hiệu lực 26/6/2026)", "issue": "Ngày ban hành và ngày hiệu lực ghi chung một mốc; cần pháp chế xác nhận.", "fix": "Ghi tách 'ban hành ngày…, hiệu lực ngày…' theo văn bản." },
+        { "sev": "P2", "where": "Q5", "quote": "Theo quy định đã tóm tắt trong bài, điều gì xảy ra?", "issue": "Câu L2 nhận lại; đề đã khoanh vùng 'theo tóm tắt trong bài' (tốt), nhưng có thể nâng thành câu tính.", "fix": "Đổi thành: 'Giải xe máy 30 triệu không ai nhận: khoản phải trích nộp là bao nhiêu, và tổng chi phí chương trình may rủi tăng thành bao nhiêu so với dự toán?'" },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "giảm giá và mua 1 tặng 1 là hình thức đơn giản, nhưng vẫn hỏi pháp chế có phải thông báo không", "issue": "Chưa nói rõ ngưỡng/điều kiện thông báo cho hình thức không may rủi theo quy định mới — người học không biết hỏi pháp chế câu gì cụ thể.", "fix": "Pháp chế xác nhận điều kiện thông báo (tổng giá trị, phạm vi địa bàn) rồi ghi câu hỏi cụ thể cần đặt." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 3.000 × 14.000 = 42 triệu + 3 triệu = 45 triệu ✓; 3.000 × 40.000 = 120 triệu ✓. Q7: lãi gộp/ly 26.000; tuần thường 1.500 × 26.000 = 39 triệu; tuần KM 3.000 × 26.000 − 42 − 3 = 33 triệu; chênh 6 triệu ✓; quên ly tặng → +36 triệu ✓; so doanh thu → 60 triệu ✓. Áp dụng: 500 × 8.000 = 4 triệu ✓." },
+      "claims": [
+        { "claim": "Luật Thương mại 2005 và Nghị định 81/2018/NĐ-CP chia khuyến mại theo hình thức: giảm giá, tặng hàng, phiếu mua hàng, may rủi…", "status": "unverified", "note": "Pháp chế xác nhận điều khoản." },
+        { "claim": "Nghị định 81/2018 đã sửa bởi Nghị định 128/2024 và Nghị định 239/2026/NĐ-CP (hiệu lực 26/6/2026)", "status": "unverified", "note": "Số hiệu, ngày hiệu lực cần pháp chế xác nhận." },
+        { "claim": "Nghị định 239/2026 bỏ mức giảm giá tối đa 50%, giới hạn giá trị hàng tặng và tổng thời gian giảm giá (theo tóm tắt KPMG, Luật Việt Nam)", "status": "unverified", "note": "Nguồn thứ cấp; cần đối chiếu toàn văn." },
+        { "claim": "Chương trình may rủi phải có khách chứng kiến trực tiếp hoặc trực tuyến khi xác định trúng thưởng", "status": "unverified", "note": "Theo tóm tắt; pháp chế xác nhận." },
+        { "claim": "Giải không có người trúng phải trích 50% giá trị nộp ngân sách nhà nước, trừ bất khả kháng", "status": "unverified", "note": "Khớp quy định lâu nay theo hiểu biết chung (Nghị định 81/2018); pháp chế xác nhận điều khoản hiện hành." },
+        { "claim": "Ngưỡng thông báo khuyến mại: tổng giá trị giải từ 100 triệu đồng (theo KPMG)", "status": "unverified", "note": "Nguồn thứ cấp; pháp chế xác nhận." },
+        { "claim": "Thông báo chương trình với Sở Công Thương (Q4 b)", "status": "unverified", "note": "Cơ quan tiếp nhận có thể đổi theo sắp xếp hành chính; pháp chế xác nhận." },
+        { "claim": "3.000 ly, giá vốn 14.000đ, in ấn 3 triệu, xe máy 30 triệu", "status": "illustrative-labelled", "note": "Bài ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Bài duy nhất trong module có hai phép tính nối thẳng vào quyết định (chi phí thật theo giá vốn; lãi gộp tuần khuyến mại vs tuần thường) với đáp án sai định danh đúng lỗi; Q6 là câu đánh đổi thật giữa độ chú ý và thủ tục; bài tự nhận 'đây là tóm tắt chứ chưa phải toàn văn'.",
+      "upgrade": "Để đạt ≥85: (1) pháp chế đối chiếu toàn văn Nghị định 239/2026 cho từng điểm đã tóm tắt, thêm src văn bản gốc; (2) ghi điều kiện thông báo cụ thể cho hình thức không may rủi; (3) thêm PHẢN VÍ DỤ (khuyến mại kéo dài làm giá tham chiếu bị hạ — khách chờ giảm giá; khi nào mua 1 tặng 1 không đáng dù hợp lệ) và ĐÀO SÂU (chi phí ẩn 50% giải không người nhận đưa vào dự toán; cách đo khách mới quay lại để biện hộ 6 triệu lãi gộp mất); (4) nâng Q5 thành câu tính."
+    },
+    {
+      "id": "B:kn12-05",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L4", "L3", "L3", "L3", "L5", "L3"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM, Q5", "quote": "thông báo việc quảng cáo ngay trước và trong khi quảng cáo", "issue": "Cách diễn đạt nghĩa vụ thông báo ('ngay trước và trong khi') quyết định việc loại phương án b ở Q5 ('nói ở giây cuối'); câu chữ luật chưa được đối chiếu nguyên văn, không src.", "fix": "Pháp chế trích đúng câu chữ Điều 15a về thời điểm/cách thông báo; sửa lời giải Q5 theo nguyên văn." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Mức phạt theo Nghị định 87/2026/NĐ-CP: chưa đọc toàn văn, hỏi pháp chế.", "issue": "Nêu số hiệu văn bản xử phạt mà bài tự nhận chưa đọc; nếu số hiệu sai, người học tra nhầm. Không src.", "fix": "Pháp chế xác nhận số hiệu; hoặc bỏ số hiệu, chỉ ghi 'nghị định xử phạt hành chính lĩnh vực quảng cáo hiện hành'." },
+        { "sev": "P2", "where": "Q3", "quote": "Có bao nhiêu video cần sửa hoặc gỡ?", "issue": "Phép hợp hai tập (L3 thấp); bài không có phép tính nào về tiền (50 triệu/30 video, chi phí quay lại 8 video).", "fix": "Đổi thành: 'Phí trọn gói 50 triệu cho 30 video; 8 video phải sửa, mỗi video sửa tốn 1,2 triệu (số minh hoạ): chi phí sửa bằng bao nhiêu % ngân sách, và video của KOC chưa dùng (3 video) bị dừng làm mất bao nhiêu tiền đã trả?'" },
+        { "sev": "P2", "where": "Q4 lời giải c", "quote": "Ngưỡng người theo dõi cụ thể chưa kiểm được trong bài; không nên tự đặt ngưỡng.", "issue": "Lời giải loại phương án bằng 'chưa kiểm được' thay vì nêu luật có hay không có ngưỡng — người học không biết luật định nghĩa 'người có ảnh hưởng' thế nào.", "fix": "Pháp chế xác nhận định nghĩa 'người có ảnh hưởng' trong Luật 75/2025 (có ngưỡng người theo dõi hay không) và ghi vào khái niệm." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 6 + 4 − 2 = 8 ✓." },
+      "claims": [
+        { "claim": "Luật số 75/2025/QH15 (hiệu lực 1/1/2026) bổ sung Điều 15a về người chuyển tải sản phẩm quảng cáo", "status": "unverified", "note": "Số điều và nội dung cần pháp chế xác nhận." },
+        { "claim": "Người có ảnh hưởng phải xác minh người quảng cáo, kiểm tài liệu sản phẩm, không giới thiệu sản phẩm chưa dùng/chưa hiểu rõ, thông báo việc quảng cáo ngay trước và trong khi quảng cáo", "status": "unverified", "note": "Câu chữ từng nghĩa vụ cần đối chiếu nguyên văn." },
+        { "claim": "Thương hiệu vẫn là người quảng cáo, không đẩy hết rủi ro sang KOC", "status": "unverified", "note": "Diễn giải trách nhiệm theo Luật Quảng cáo; pháp chế xác nhận." },
+        { "claim": "Nghị định 87/2026/NĐ-CP quy định mức phạt", "status": "unverified", "note": "Bài tự nhận chưa đọc toàn văn; số hiệu cần xác nhận." },
+        { "claim": "Nền tảng có nghĩa vụ gỡ khi được yêu cầu (Q1 lời giải d)", "status": "unverified", "note": "Pháp chế xác nhận điều khoản." },
+        { "claim": "Nhãn nội dung trả phí của nền tảng (Q5 c)", "status": "unverified", "note": "Tính năng nền tảng TikTok, có thể đổi; không src." },
+        { "claim": "10 KOC, 30 video, 50 triệu, 6/4/2 video lỗi", "status": "illustrative-labelled", "note": "Tình huống giả định; số ở ví dụ ghi rõ cách đếm." }
+      ],
+      "strengths": "Chuyển đúng từ luật sang việc làm (brief câu được nói/câu cấm, duyệt nháp, gắn nhãn, lưu hồ sơ); Q6 là câu đánh đổi hiệu quả–tuân thủ rất thật; ví dụ chỉ ra lỗi đếm trùng.",
+      "upgrade": "Để đạt ≥85: (1) pháp chế trích nguyên văn Điều 15a (thời điểm thông báo, định nghĩa người có ảnh hưởng) và xác nhận số hiệu nghị định xử phạt; thêm src; (2) thêm phép tính tiền (chi phí sửa, tiền mất cho video bị dừng) thay Q3; (3) thêm PHẢN VÍ DỤ (KOC tự mua và review không nhận tiền: không phải quảng cáo trả phí nhưng tuyên bố sai vẫn là của họ) và ĐÀO SÂU (điều khoản hợp đồng cụ thể: quyền duyệt, quyền gỡ, bồi hoàn); (4) thêm câu L4 đọc 3 kịch bản KOC và đánh dấu câu cấm."
+    },
+    {
+      "id": "B:kn12-06",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 6, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L3", "L4", "L3", "L4", "L4", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Nghị định 356/2025/NĐ-CP hướng dẫn (theo tóm tắt của EY, thay Nghị định 13/2023; kiểm lại)", "issue": "Khung pháp lý về dữ liệu cá nhân (luật mới hiệu lực 1/1/2026, nghị định hướng dẫn) dựa trên tóm tắt của bên thứ ba và chính bài ghi 'kiểm lại'; không src. Toàn bộ kết luận gửi/không gửi của bài tựa vào khung này.", "fix": "Pháp chế đối chiếu Luật 91/2025/QH15 và nghị định hướng dẫn hiện hành (số hiệu, ngày hiệu lực, điều khoản về đồng ý, rút đồng ý, dữ liệu mua từ bên thứ ba); thêm src văn bản gốc." },
+        { "sev": "P2", "where": "KHÁI NIỆM/VÍ DỤ", "quote": "Nghị định 91/2020/NĐ-CP về tin nhắn, thư điện tử, cuộc gọi rác yêu cầu có đồng ý trước khi gửi quảng cáo", "issue": "Bài áp Nghị định 91/2020 cho tin Zalo; phạm vi của nghị định này (tin nhắn SMS, email, cuộc gọi) có bao gồm tin nhắn OTT như Zalo OA hay không chưa được nói rõ — đây là câu hỏi pháp lý thực tế mà đội marketing hay gặp.", "fix": "Pháp chế xác nhận phạm vi áp dụng với tin nhắn OTT/Zalo OA; nếu khác, ghi rõ căn cứ áp dụng cho Zalo (chính sách Zalo OA + Luật BVDLCN)." },
+        { "sev": "P2", "where": "Q3", "quote": "Spa được gửi tin khuyến mại cho bao nhiêu số?", "issue": "Phép trừ đã làm sẵn trong ví dụ; không có phép tính về chi phí/lợi ích (ví dụ 4.800 số mua ngoài tốn bao nhiêu, rủi ro gì) để quyết định có mua danh sách không.", "fix": "Đổi thành: 'Tin Zalo 500đ/tin (số minh hoạ); gửi 6.600 số tốn bao nhiêu; nếu tỉ lệ đặt lịch 2% và lãi gộp 300.000đ/lịch, lãi gộp kỳ vọng là bao nhiêu?'" },
+        { "sev": "P2", "where": "Q5 lời giải d", "quote": "Tin \"hỏi lại\" kèm mã giảm giá vẫn là tin quảng cáo gửi cho người đã từ chối.", "issue": "Kết luận hợp lý nhưng là diễn giải pháp lý không nguồn; ranh giới 'tin xin đồng ý lại' có hợp lệ không là câu pháp chế phải trả lời.", "fix": "Pháp chế xác nhận; nếu chưa chắc, sửa lời giải thành 'rủi ro cao, hỏi pháp chế trước khi làm'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 7.200 − 600 = 6.600 ✓; 12.000 − 600 = 11.400 ✓." },
+      "claims": [
+        { "claim": "Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 có hiệu lực từ 1/1/2026", "status": "unverified", "note": "Số hiệu, ngày hiệu lực cần pháp chế xác nhận." },
+        { "claim": "Nghị định 356/2025/NĐ-CP hướng dẫn, thay Nghị định 13/2023 (theo tóm tắt EY)", "status": "unverified", "note": "Nguồn thứ cấp; bài tự ghi 'kiểm lại'." },
+        { "claim": "Luật Bảo vệ quyền lợi người tiêu dùng 2023 yêu cầu báo rõ mục đích, phạm vi, thời hạn lưu trước khi thu thập, được đồng ý; đổi mục đích phải xin lại", "status": "unverified", "note": "Pháp chế xác nhận điều khoản." },
+        { "claim": "Nghị định 91/2020/NĐ-CP yêu cầu đồng ý trước khi gửi tin quảng cáo và dừng khi người nhận từ chối", "status": "unverified", "note": "Phạm vi áp dụng với Zalo OA cần pháp chế xác nhận." },
+        { "claim": "Ảnh khuôn mặt là dữ liệu cá nhân; ảnh trước–sau dịch vụ làm đẹp có thể vướng quy định ngành", "status": "unverified", "note": "Diễn giải; bài đã ghi 'hỏi pháp chế'." },
+        { "claim": "12.000 số: 7.200 đồng ý, 600 huỷ, 4.800 mua ngoài", "status": "illustrative-labelled", "note": "Tình huống giả định, số tự khớp." }
+      ],
+      "strengths": "Ba câu tự hỏi (đã đồng ý cho việc này chưa – đúng mục đích không – đã huỷ chưa) là công cụ dùng được ngay; Q5 (danh sách huỷ thắng mọi lần nhập) và Q6 (cam kết của bên bán không phải đồng ý của khách) là hai tình huống thật rất hay gặp.",
+      "upgrade": "Để đạt ≥85: (1) pháp chế xác nhận khung pháp lý (91/2025, nghị định hướng dẫn, phạm vi 91/2020 với Zalo) và thêm src; (2) thêm phép tính chi phí–lợi ích gửi tin và chi phí của danh sách mua ngoài; (3) thêm PHẢN VÍ DỤ (tin giao dịch — xác nhận lịch, nhắc hẹn — không phải quảng cáo, gửi được cho khách đã huỷ nhận khuyến mại) và ĐÀO SÂU (cách lưu bằng chứng đồng ý: thời điểm, câu chữ, kênh; thời hạn lưu); (4) thêm câu L5 chọn giữa gửi 6.600 số ngay vs xin đồng ý lại 4.800 số bằng chiến dịch opt-in."
+    },
+    {
+      "id": "B:kn12-07",
+      "scores": { "accuracy": 11, "depth": 12, "practical": 14, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L4", "L3", "L4", "L4", "L5", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Điều khoản Công cụ kinh doanh của Meta yêu cầu thông báo rõ ràng trên mỗi trang có pixel và xin đồng ý ở nơi luật đòi; Google hạn chế tệp tự tạo với chủ đề nhạy cảm", "issue": "Khẳng định về điều khoản nền tảng (nội dung fast) không có src bấm được, không ngày kiểm riêng; Q7 yêu cầu người học 'đọc bản gốc' nhưng bài không dẫn link bản gốc.", "fix": "Thêm src: Meta Business Tools Terms, Google Customer Match policy (URL, ngày kiểm) và câu 'nếu điều khoản đổi, tin trang chính thức'." },
+        { "sev": "P2", "where": "Q4", "quote": "Thiết kế đẩy người xem đồng ý; khó coi là lựa chọn tự nguyện", "issue": "Phần Áp dụng ghi nút từ chối ngang nút đồng ý là 'thực hành tốt, chưa phải yêu cầu đã kiểm', nhưng Q4 chấm phương án c như kết luận pháp lý ('khó coi là tự nguyện'). Bài tự mâu thuẫn về mức chắc chắn.", "fix": "Sửa lời giải Q4 c thành 'theo nguyên tắc đồng ý tự nguyện trong luật dữ liệu cá nhân (pháp chế xác nhận điều khoản) và thực hành tốt'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "nền tảng khớp được khoảng 70% thành người dùng của họ", "issue": "Tỉ lệ khớp 70% và tỉ lệ đồng ý 60% không nêu cơ sở (số minh hoạ có ghi, nhưng không nói tỉ lệ đồng ý thật thường thấy dao động rộng theo thiết kế thông báo).", "fix": "Thêm: 'tỉ lệ đồng ý thay đổi mạnh theo cách trình bày (từ dưới 30% đến trên 80% trong thực hành, số tham khảo chưa kiểm) — đo trên web của bạn'." },
+        { "sev": "P2", "where": "Q7", "quote": "Tài liệu nào bạn nên đọc trực tiếp trước khi kết luận về yêu cầu của nền tảng?", "issue": "Câu L2 với nhiễu rõ sai (email nhân viên bán quảng cáo, chép chính sách đối thủ).", "fix": "Thay bằng câu đọc đoạn trích điều khoản (giả lập) và hỏi website đang thiếu nghĩa vụ nào." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50.000 × 60% = 30.000; × 70% = 21.000 ✓; 50.000 × 70% = 35.000 ✓. Áp dụng: 20.000 × 55% × 80% = 8.800 ✓. Q6: 21.000/35.000 = 60% còn lại, giảm 40% ✓." },
+      "claims": [
+        { "claim": "Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 áp dụng; cách xin đồng ý cookie cụ thể chưa kiểm được", "status": "unverified", "note": "Bài tự khoanh vùng 'hỏi pháp chế' — tốt; số hiệu cần xác nhận." },
+        { "claim": "Điều khoản Công cụ kinh doanh của Meta yêu cầu thông báo rõ ràng trên trang có pixel và xin đồng ý ở nơi luật đòi", "status": "unverified", "note": "Khớp Meta Business Tools Terms theo hiểu biết chung; không src; nội dung fast." },
+        { "claim": "Google hạn chế tệp tự tạo (Customer Match) với chủ đề nhạy cảm", "status": "unverified", "note": "Khớp chính sách Google theo hiểu biết chung; không src." },
+        { "claim": "Tỉ lệ đồng ý cookie 60%, tỉ lệ khớp 70%", "status": "illustrative-labelled", "note": "Bài ghi 'Theo số minh hoạ'." }
+      ],
+      "strengths": "Tách rõ hai lớp (luật và điều khoản nền tảng) và hai loại đồng ý (cookie vs tải danh sách khách); Q6 là câu L5 tốt về so trước–sau không đối chứng với số tự khớp; ví dụ nói thật 'tệp nhỏ hơn nhưng có cơ sở'.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho điều khoản Meta/Google (fast) và ngày kiểm; (2) thống nhất mức chắc chắn giữa phần Áp dụng và Q4; (3) thêm PHẢN VÍ DỤ (web B2B ít truy cập: remarketing không đủ tệp dù đồng ý 100% — bỏ pixel quảng cáo, giữ đo lường) và ĐÀO SÂU (chế độ đồng ý/consent mode là gì, pixel đo lường vs pixel quảng cáo, thời hạn lưu); (4) thay Q7 bằng câu đọc trích điều khoản."
+    },
+    {
+      "id": "B:kn12-08",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L3", "L4", "L3", "L4", "L3", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Luật 75/2025/QH15 yêu cầu gỡ quảng cáo trên mạng vi phạm chậm nhất 24 giờ khi cơ quan nhà nước yêu cầu", "issue": "Thời hạn 24 giờ là chi tiết pháp lý cụ thể, không src, không nêu điều khoản; nếu sai (ví dụ áp cho nền tảng chứ không cho người quảng cáo) thì chỉ dẫn 'ai có quyền gỡ' vẫn đúng nhưng căn cứ sai.", "fix": "Pháp chế xác nhận điều khoản và chủ thể bị ràng buộc (người quảng cáo, người kinh doanh dịch vụ, nền tảng); thêm src." },
+        { "sev": "P2", "where": "Q1, Q3", "quote": "Tổng thiệt hại bằng tiền của sự cố là bao nhiêu đồng?", "issue": "Q1 là phép nhân 10 × 15 phút trong vỏ trắc nghiệm, Q3 là phép cộng ba số đã cho sẵn trong ví dụ — hai câu số cùng mức L3 thấp, không câu nào buộc so chi phí quy trình với kỳ vọng thiệt hại.", "fix": "Gộp thành một câu: 'Quy trình tốn 2,5 giờ/tháng × 400.000đ/giờ + 2 giờ luật sư × 1,5 triệu (số minh hoạ) = ? mỗi năm; nếu quy trình giảm xác suất sự cố 50 triệu từ 1 lần/năm xuống 1 lần/4 năm, có đáng không?'" },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "khoản phạt giả định 30 triệu", "issue": "Bài ghi rõ 'không phải mức phạt theo văn bản' (tốt) nhưng không chỉ người học tới khung phạt thật, nên không ước được rủi ro.", "fix": "Sau khi pháp chế xác nhận, thêm 'khung phạt tham khảo theo nghị định xử phạt hiện hành: từ … đến … (kiểm ngày…)'." },
+        { "sev": "P2", "where": "Q5", "quote": "Checklist trước khi đăng nào phù hợp nhất cho đội nhỏ?", "issue": "Câu L2 nhận lại; nhiễu a (60 câu) và b (một câu chung) cực đoan, đoán được.", "fix": "Thay bằng câu áp checklist: cho 3 nội dung mô tả ngắn, hỏi nội dung nào bị lọc và người duyệt cần tài liệu gì." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30 + 8 + 12 = 50 triệu ✓. Q1 (mcq có số): 10 × 15 = 150 phút = 2,5 giờ ✓." },
+      "claims": [
+        { "claim": "Luật 75/2025/QH15 yêu cầu gỡ quảng cáo trên mạng vi phạm chậm nhất 24 giờ khi cơ quan nhà nước yêu cầu", "status": "unverified", "note": "Điều khoản, chủ thể bị ràng buộc cần pháp chế xác nhận." },
+        { "claim": "Lách bằng tài khoản khác thường vi phạm chính sách nền tảng và có thể làm khoá tài khoản (Q7 lời giải a)", "status": "unverified", "note": "Chính sách nền tảng, không src." },
+        { "claim": "Phạt 30 triệu, dán nhãn 8 triệu, gỡ quảng cáo 12 triệu; 10/40 nội dung; 15 phút/nội dung", "status": "illustrative-labelled", "note": "Bài ghi 'số minh hoạ (không phải mức phạt theo văn bản)'." }
+      ],
+      "strengths": "Quy trình bốn bước (lọc – duyệt – lưu – xử lý) đúng cỡ đội 4 người và nối lại cả năm vùng của bài 01; Q4 (tạm dừng, mở hồ sơ, hỏi pháp chế rồi mới trả lời) và Q6 (đánh đổi cách lưu) là tình huống thật.",
+      "upgrade": "Để đạt ≥85: (1) pháp chế xác nhận điều khoản 24 giờ và khung phạt tham khảo, thêm src; (2) gộp Q1/Q3 thành một câu so chi phí quy trình với kỳ vọng thiệt hại; (3) thêm PHẢN VÍ DỤ (đội 1 người bán hàng cá nhân: quy trình còn nhẹ hơn — checklist 5 câu + một thư mục, không có người duyệt riêng) và ĐÀO SÂU (hồi tố: rà lại nội dung đã đăng còn hiển thị, thứ tự ưu tiên theo lượt xem); (4) thay Q5 bằng câu áp checklist lên nội dung cụ thể."
+    }
+  ],
+  "module_notes": {
+    "progression": "Tiến trình hợp lý và khép kín: bản đồ năm vùng (01) → từng vùng (02 tuyên bố, 03 ngành đặc biệt, 04 khuyến mại, 05 KOL/KOC, 06 dữ liệu khách, 07 cookie/pixel) → quy trình vận hành gộp lại (08). Mọi bài có dòng 'Kiểm lần cuối 10/2026; không phải tư vấn pháp lý' và thường xuyên khoanh vùng 'hỏi pháp chế' — thái độ đúng. Điểm yếu hệ thống: không bài nào có trường src tới văn bản gốc; hai bài (04, 06) dựa vào tóm tắt của KPMG/Luật Việt Nam/EY; một mâu thuẫn nội module về thủ tục mỹ phẩm (01 Q7 vs 03). Toàn bộ danh mục văn bản (Luật 75/2025, NĐ 342/2025, NĐ 100/2014, NQ 21/2026, Luật 19/2023, NĐ 81/2018, NĐ 128/2024, NĐ 239/2026, NĐ 87/2026, Luật 91/2025, NĐ 356/2025, NĐ 13/2023, NĐ 91/2020) đã gắn 'unverified' và cần một người có chuyên môn pháp lý rà trước khi lên app.",
+    "overlap": [
+      "'Chưa bị gỡ / nền tảng đã duyệt / đối thủ chưa bị gì ≠ đúng luật' được hỏi ở 01 Q1, 01 Q5, 02 Q5 với cùng lập luận.",
+      "Lưu hồ sơ theo nội dung (bản cuối + tài liệu + người duyệt) xuất hiện ở 02 Q7, 05 Q7, 08 Q6 — ba câu cùng đáp án.",
+      "Chuyển nội dung sang KOC/tài khoản khác để 'lách' bị bác ở 03 Q2 d, 05 Q2 b, 06 Q7 d, 08 Q7 a."
+    ],
+    "gaps": [
+      "Chưa có bài về bản quyền và quyền hình ảnh trong nội dung marketing (nhạc, ảnh stock, ảnh khách) — chỉ chạm nhẹ ở 06 Q7.",
+      "Chưa có bài về quảng cáo so sánh/đánh giá và nói về đối thủ trên mạng xã hội (phỉ báng, cạnh tranh không lành mạnh) dù 02 cấm so sánh không tài liệu.",
+      "Chưa nêu khung phạt tham khảo nào (mọi bài dùng số phạt minh hoạ) — người học không ước được rủi ro bằng tiền.",
+      "Chưa có bài về quảng cáo xuyên biên giới và nghĩa vụ với nền tảng nước ngoài (Luật 75/2025 có nội dung này theo hiểu biết chung) — liên quan trực tiếp đến Facebook/TikTok Ads."
+    ],
+    "best_lesson": "B:kn12-04",
+    "weakest_lesson": "B:kn12-03"
+  }
+}

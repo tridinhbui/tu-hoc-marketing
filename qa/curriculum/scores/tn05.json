@@ -1,0 +1,203 @@
+{
+  "mod": "tn05",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:tn05-01",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 65,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L6", "L5"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM / VÍ DỤ", "quote": "2.400 khách mua lần đầu, 480 người mua lần hai, tỉ lệ mua lại 20%", "issue": "Tỉ lệ mua lại không nêu cửa sổ đo (mua lại trong bao nhiêu tuần kể từ lần đầu) và cách nhận diện cùng một người ở cửa hàng tạp hoá (không có tài khoản). Khách mua tuần 6 chưa có cơ hội mua lại nên 20% bị kéo thấp; so với 34% đo trong \"4 tuần\" là so hai cửa sổ khác nhau.", "fix": "Định nghĩa: tỉ lệ mua lại trong 4 tuần của người mua lần đầu ở tuần 1–2; nêu cách đo (thẻ thành viên, số điện thoại, hoặc panel hộ gia đình)." },
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Hãng đặt ngưỡng trước là 30%", "issue": "Ngưỡng 30% là benchmark không nguồn, không nói lấy từ đâu (sản phẩm tương tự? ngành?).", "fix": "Ghi \"(số minh hoạ; ngưỡng lấy từ tỉ lệ mua lại của dòng trà hiện có của hãng)\"." },
+        { "sev": "P2", "where": "Q5 d lời giải", "quote": "Các app lớn đều có mặt ở Đà Nẵng", "issue": "Khẳng định thị trường thật không nguồn trong lời giải.", "fix": "Đổi thành lý lẽ không phụ thuộc sự thật thị trường: \"nếu không có cạnh tranh thì kết quả càng khó suy ra cho nơi khác\"." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Bán thử nhỏ để biết khách có quay lại không", "issue": "Thiếu PHẢN VÍ DỤ, VÌ SAO, ĐÀO SÂU; đánh đổi tốc độ-chắc chắn chỉ nằm trong Q2/Q7.", "fix": "Thêm phản ví dụ: sản phẩm hiệu ứng mạng hoặc hàng mùa vụ ngắn, soft launch không đáng (nội dung Q7)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 480/2.400 = 20% ✓. Wrong 16,7 = 480/2.880 ✓; 500 = 2.400/480 ✓." },
+      "claims": [
+        { "claim": "Hãng nước uống Bình Dương, 150 cửa hàng Thủ Dầu Một, 3.000 cửa hàng toàn quốc", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Ngưỡng mua lại 30%", "status": "illustrative-unlabelled", "note": "Benchmark không nguồn." },
+        { "claim": "Các app giao đồ ăn lớn đều có mặt ở Đà Nẵng", "status": "unverified", "note": "" }
+      ],
+      "strengths": "Chọn đúng chỉ số trọng tâm (mua lại) và lý do; Q4 (mẫu lệch quanh nhà máy) và Q7 (khi nào không đáng soft launch) là câu phân tích tốt.",
+      "upgrade": "Định nghĩa cửa sổ và cách đo mua lại ở kênh tạp hoá; gắn nhãn ngưỡng 30%; thêm PHẢN VÍ DỤ và ĐÀO SÂU về chi phí trì hoãn 6 tuần so với chi phí ra mắt hỏng (có số); thêm câu L4 đọc bảng mua lại theo cohort tuần."
+    },
+    {
+      "id": "B:tn05-02",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L4", "L5", "L2", "L3", "L3", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ / Q4", "quote": "Độ phủ 30% nghĩa là khoảng 70% người xem quảng cáo sống quanh những tiệm chưa có hàng", "issue": "Đánh đồng % điểm bán có hàng với % người xem không mua được; thực tế phủ thường ưu tiên tiệm lớn, đông khách nên độ phủ theo lượt khách (weighted) cao hơn 30%. Phép tính 420 triệu thiếu giả định này.", "fix": "Nêu giả định \"các tiệm có lượng khách tương đương\" và giới thiệu độ phủ theo trọng số doanh số (weighted distribution)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "chỉ chạy ở các quận đã phủ trên 70%, dồn đội bán hàng đưa hàng ra tiệm trong 3 tuần, rồi mới bật lại diện rộng khi độ phủ chung đạt 65%", "issue": "Hai ngưỡng 70% và 65% không được giải thích; không có chi phí/kết quả sau khi sửa để thấy quyết định đúng.", "fix": "Thêm kết quả minh hoạ: sau 3 tuần phủ 65%, doanh số trên mỗi triệu quảng cáo tăng từ X lên Y." },
+        { "sev": "P2", "where": "Q3", "quote": "Nhà phân phối báo \"đã nhận đủ 100% hàng\". Vì sao con số này chưa đủ", "issue": "Câu L2 nhận lại ý bài; 3 phương án nhiễu quá yếu (\"không được phép bán\", \"ba tháng\").", "fix": "Thay bằng câu L4: cho bảng xuất kho NPP 100%, tiệm nhận 70%, lên kệ 45% — hỏi độ phủ dùng để quyết bật quảng cáo là số nào." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 600 × (1 − 0,3) = 420 triệu ✓ (với giả định tiệm đồng đều). Wrong 180 = 600×30% ✓." },
+      "claims": [
+        { "claim": "Hãng snack chạy YouTube/TikTok 600 triệu tháng đầu, phủ 30%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Thứ tự phân phối trước – quảng cáo sau có cơ chế rõ, phản ví dụ online đổi kết luận; Q5 (phủ hàng trên Shopee là gì) và Q6 (có mặt ≠ hiển thị) mở rộng khái niệm đúng chỗ.",
+      "upgrade": "Nêu giả định của phép 600×70% và giới thiệu độ phủ theo trọng số; thêm số sau khi sửa; thay Q3 bằng câu đọc bảng 3 chặng; gắn nhãn minh hoạ; thêm chi phí kiểm kệ (người đi kiểm) vào ràng buộc thực tế."
+    },
+    {
+      "id": "B:tn05-03",
+      "scores": { "accuracy": 10, "depth": 8, "practical": 13, "examples": 8, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 60,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L6", "L4", "L5"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Chênh lệch 18% và 7% gợi ý phần lớn khoảng cách đến từ đào tạo, vì 40 cửa hàng cùng giá và cùng quảng cáo", "issue": "12 cửa hàng tự tổ chức uống thử là nhóm tự chọn: quản lý chủ động thường vận hành tốt hơn ở mọi mặt (trưng bày, tốc độ, upsell). Kết luận nhân quả bỏ qua lệch chọn mẫu; chính bài sau (28 cửa hàng chỉ lên 15%, không tới 18%) gợi ý một phần chênh là do quản lý, nhưng bài không nhận xét.", "fix": "Ghi rõ: \"đây là tương quan; 28 cửa hàng chỉ lên 15% cho thấy một phần chênh ban đầu đến từ chất lượng quản lý\". Muốn chắc: chọn ngẫu nhiên cửa hàng được đào tạo trước." },
+        { "sev": "P1", "where": "Q1", "quote": "cùng một món mới, cùng quảng cáo, vì sao cửa hàng này bán gấp đôi cửa hàng kia?", "issue": "Đề không cho dữ kiện nào để loại b) (khu thu nhập cao) hay d) (poster lớn); lời giải b) viện \"các cửa hàng khác cũng ở khu tương tự\" là dữ kiện không có trong đề. Câu đoán trước thành đoán ý tác giả.", "fix": "Bổ sung vào stem: \"các cửa hàng cùng vị trí loại, cùng vật phẩm trưng bày\" hoặc đổi thành câu hỏi \"bạn cần thêm dữ kiện nào để tách nguyên nhân\"." },
+        { "sev": "P2", "where": "Q3", "quote": "Trước đào tạo, 7% hoá đơn có món mới; sau đào tạo lên 15%", "issue": "Câu tính trừ hai số (L3 đơn giản); không buộc người học tính giá trị lãi của 80 hoá đơn so với chi phí đào tạo (ca uống thử).", "fix": "Thêm lãi/món và chi phí uống thử để hỏi \"bao nhiêu tuần hoàn vốn đào tạo\"." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "ÁP DỤNG: Viết một câu gợi ý dài dưới 15 chữ", "issue": "Thiếu PHẢN VÍ DỤ, ĐÀO SÂU; không nói khi nào đào tạo nội bộ không đủ (món dở, giá sai) để tránh đổ hết lên nhân viên.", "fix": "Thêm phản ví dụ: cả 40 cửa hàng đã uống thử, tỉ lệ vẫn 7% → vấn đề ở sản phẩm/giá, nối sang tn05-07." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.000×15% − 1.000×7% = 150 − 70 = 80 ✓." },
+      "claims": [
+        { "claim": "Chuỗi 40 cửa hàng cà phê, 12 cửa hàng uống thử 18% vs 7%", "status": "illustrative-unlabelled", "note": "Tương quan trình bày như nhân quả." }
+      ],
+      "strengths": "Ba điều kiện của ra mắt nội bộ (tự dùng, một câu vì sao, hai câu hỏi hay gặp) cụ thể, làm được ngay; Q5 (đóng vai khách) kiểm đúng hành vi cần có.",
+      "upgrade": "Sửa ví dụ thành tương quan có cảnh báo lệch chọn mẫu và đề xuất chọn ngẫu nhiên; thêm chi phí đào tạo và lãi để ra quyết định bằng số; thêm phản ví dụ sản phẩm có vấn đề; thay Q1 bằng câu hỏi dữ kiện cần thêm; thêm câu L4 đọc bảng 4 nhóm cửa hàng (đào tạo × khu vực)."
+    },
+    {
+      "id": "B:tn05-04",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L2", "L5", "L2", "L3", "L3", "L5", "L2"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "nghiên cứu của Spiegel Research Center ghi nhận mức tăng rõ khi trang có vài đánh giá đầu tiên", "issue": "Dẫn nghiên cứu thật nhưng không có src, năm, hay con số; bài thuộc nhóm periodic cần nguồn và ngày kiểm.", "fix": "Thêm src (Spiegel Research Center, Northwestern, 2017, \"How Online Reviews Influence Sales\") và ngày kiểm, hoặc bỏ tên nghiên cứu." },
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "640 người mua, 20%. Họ để lại 150 đánh giá có ảnh", "issue": "Chi phí đợt (tặng chai 60 ml × 640, tin nhắn) và lãi của 640 đơn không có, nên không biết beachhead này có lãi hay là chi phí mua đánh giá; Q2 nói \"20 triệu\" nhưng ví dụ không dùng con số đó.", "fix": "Thêm: giá vốn chai 60 ml, chi phí tin nhắn, lãi/đơn → chi phí mỗi đánh giá, so với 20 triệu ngân sách." },
+        { "sev": "P2", "where": "Q5", "quote": "Tỉ lệ người mua để lại đánh giá là bao nhiêu phần trăm?", "issue": "Phép chia một bước, không gắn với quyết định nào (23,4% để làm gì?).", "fix": "Đổi thành: cần bao nhiêu đơn từ nhóm đầu để có 50 đánh giá trước ngày chạy quảng cáo rộng, với tỉ lệ 23,4%." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Bán cho người sẵn sàng nhất trước", "issue": "Thiếu PHẢN VÍ DỤ, ĐÀO SÂU; không nêu rủi ro beachhead quá hẹp (khách cũ bão hoà nhanh, đánh giá thiên lệch vì fan).", "fix": "Thêm phản ví dụ: sản phẩm cần mạng lưới (app hẹn), beachhead khách cũ không đủ; và lưu ý đánh giá từ fan có thể làm nhóm hai nghi ngờ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q5: 150/640 = 23,4% ✓; 640/3.200 = 20% ✓. Wrong 4,7 = 150/3.200 ✓." },
+      "claims": [
+        { "claim": "Spiegel Research Center: trang có vài đánh giá đầu tiên tăng chuyển đổi rõ", "status": "unverified", "note": "Nghiên cứu có thật (Northwestern, 2017) nhưng bài không có src/ngày kiểm." },
+        { "claim": "Nước mắm nhĩ 40 độ đạm 180.000đ/chai, gấp ba loại phổ thông", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Sàn không yêu cầu đủ đánh giá mới cho bán (lời giải Q3 a)", "status": "unverified", "note": "Hợp lý nhưng là khẳng định về nền tảng." }
+      ],
+      "strengths": "Chuyển khái niệm beachhead sang ngữ cảnh Việt Nam dễ hiểu (khách cũ 3.200 người); Q4 (phần mềm quán ăn) và Q6 (mở rộng sang nhóm gần) chuyển ngữ cảnh tốt.",
+      "upgrade": "Thêm src cho Spiegel hoặc bỏ; thêm chi phí và lãi của đợt beachhead; thêm phản ví dụ và đào sâu; nâng Q3, Q5, Q7 từ L2–L3 lên L4 (đọc bảng tỉ lệ mở tin, mua, đánh giá theo phân khúc khách cũ)."
+    },
+    {
+      "id": "B:tn05-05",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 16, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L4", "L5", "L3", "L4", "L3", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "tuần 2 có 6.000 người mua thử, tuần 4 tỉ lệ mua lại 25%, điểm đánh giá từ 4,5 sao", "issue": "Các mốc không được suy ra từ đâu (từ 3 tỉ doanh số? từ sản phẩm cũ?); phản ví dụ nói mốc là đoán nhưng ví dụ chính không cho thấy cách đặt mốc.", "fix": "Thêm một dòng tính ngược: 3 tỉ ÷ giá 35k ≈ 86.000 đơn/tháng; với mua lại 25% và 2 lần/tháng cần ~X người mua thử → mốc 6.000 tuần 2." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "mua lại ở nhóm đầu 31%", "issue": "Đo mua lại ở tuần 2 trên \"nhóm đầu\" mà không nói nhóm đầu là ai, cửa sổ bao lâu — cùng lỗi với tn05-01.", "fix": "Ghi: người mua tuần 1 trên Shopee, mua lại trong 14 ngày." },
+        { "sev": "P2", "where": "Q3", "quote": "Còn thiếu bao nhiêu cửa hàng để đạt mục tiêu?", "issue": "Phép tính 2 bước đơn giản, thay được bằng câu L4 đọc bảng 4 mốc để chẩn đoán khâu hụt.", "fix": "Cho bảng 4 mốc kế hoạch/thực tế và hỏi khâu nào hụt nhiều nhất theo % kế hoạch." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 200×80% = 160; 160 − 110 = 50 ✓." },
+      "claims": [
+        { "claim": "Sữa hạt ra mắt Shopee + 200 cửa hàng tiện lợi, mục tiêu 3 tỉ tháng đầu", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Chuỗi mốc dẫn dắt gắn với \"chủ\" từng khâu (phủ – bán hàng, thử – quảng cáo, mua lại – sản phẩm) rất thực dụng; phản ví dụ về mốc là giả thuyết và ĐÀO SÂU về kỷ luật/linh hoạt đúng đánh đổi; Q4 và Q7 là chẩn đoán tốt.",
+      "upgrade": "Cho thấy cách tính ngược mốc từ mục tiêu doanh số; định nghĩa cửa sổ mua lại; thay Q3 bằng câu đọc bảng 4 mốc; thêm bảng mẫu \"mốc – chủ – ngày – hành động nếu trượt\" dưới dạng bảng thật."
+    },
+    {
+      "id": "B:tn05-06",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 13, "pedagogy": 6, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Ngày mở bán chỉ có 800 đôi", "issue": "Nếu 800 đôi vốn sẽ hết (lần trước hết trong hai ngày), thì phần bán thêm bị chặn bởi tồn kho: teaser không thể thêm đơn mà chỉ bán nhanh hơn. Ví dụ có khung incremental đúng nhưng chưa nói trần tồn kho này.", "fix": "Thêm câu: với 800 đôi và lần trước hết trong 2 ngày, teaser chỉ đáng nếu đổi được giá hoặc giảm quảng cáo tuần mở bán — tồn kho là trần của phần bán thêm." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Teaser đáng khi khán giả đã quan tâm", "issue": "Thiếu VÌ SAO, PHẢN VÍ DỤ, ĐÀO SÂU dù ví dụ đã làm việc của chúng; không nối sang bài sau.", "fix": "Tách phần \"nếu kênh miễn phí chỉ bán 300 đôi\" thành PHẢN VÍ DỤ chính thức; thêm ĐÀO SÂU về cách ước lượng baseline (nhắn 50% người theo dõi không kèm teaser)." },
+        { "sev": "P2", "where": "Q3", "quote": "Chi phí cho mỗi người đăng ký là bao nhiêu nghìn đồng?", "issue": "Phép chia một bước; bài có đủ số để hỏi câu L4: với baseline 400 đôi, teaser hoà vốn ở bao nhiêu đôi bán thêm (150tr ÷ 600k = 250 đôi).", "fix": "Thay Q3 bằng câu hoà vốn 250 đôi hoặc giữ Q3 và thêm câu này." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 150.000k/4.000 = 37,5k ✓. Ví dụ: 4.000×15% = 600 đôi; lãi 600k/đôi → 360tr; thêm 200 đôi → 120tr < 150tr; thêm 300 → 180tr > 150tr ✓. Q7: 1/0,15 ≈ 6,7 ✓." },
+      "claims": [
+        { "claim": "Hãng giày 40.000 người theo dõi, teaser 150 triệu, lãi gộp 40%", "status": "illustrative-labelled", "note": "Bài ghi \"(số minh hoạ)\" và \"(giả định)\" cho baseline." }
+      ],
+      "strengths": "Ví dụ hiếm hoi trong batch tính phần bán thêm so với baseline có nhãn giả định, và cho thấy kết luận đổi khi baseline đổi (400 vs 300 đôi); Q7 (so chi phí đăng ký với chi phí đơn) là câu đánh đổi đơn vị rất tốt.",
+      "upgrade": "Nêu trần tồn kho; chính thức hoá phản ví dụ và đào sâu (cách đo baseline bằng chia nhóm người theo dõi); thêm câu hoà vốn 250 đôi; nối sang tn04-09 về đọc phần tăng thêm."
+    },
+    {
+      "id": "B:tn05-07",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L4", "L3", "L4", "L4", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Mỗi khâu có một con số: độ phủ, tỉ lệ nhận biết, tỉ lệ dùng thử, tỉ lệ mua lại", "issue": "Không nói nhận biết và dùng thử đo bằng gì (khảo sát mẫu bao nhiêu người, trong vùng nào), nên người học không biết chi phí và độ chắc của hai số giữa phễu.", "fix": "Thêm: nhận biết/dùng thử từ khảo sát 300–500 người trong vùng có hàng, sai số ±5 điểm; mua lại từ dữ liệu bán hoặc panel." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Hãng thử lại vị ở 200 người, phát hiện vị chua quá gắt so với khẩu vị miền Bắc", "issue": "Nhảy từ chẩn đoán khâu sang nguyên nhân cụ thể mà không nói cách kiểm (thử mù? so với đối thủ?).", "fix": "Thêm một câu: thử mù 200 người từng mua nhưng không mua lại, so với 2 vị đối thủ." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì sao không nên chỉ nhìn doanh số tổng khi ra mắt ế?", "issue": "Câu L2 nhận lại ý bài, nhiễu yếu; có thể thay bằng câu đọc phễu thứ ba.", "fix": "Thay bằng câu L4: phủ 70%, biết 50%, thử 20%, mua lại 35% đều đạt nhưng doanh số 60% kế hoạch — nguyên nhân (kế hoạch quá cao / tần suất mua thấp hơn giả định)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.000.000×0,48×0,19×0,14 = 12.768 ✓. Ví dụ: 14/35 = 40% kế hoạch ✓." },
+      "claims": [
+        { "claim": "Hãng mì vị lẩu Thái, doanh số 40% kế hoạch sau 6 tuần", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phễu có hàng – biết – thử – mua lại với bảng chẩn đoán \"khâu hụt → nhóm nguyên nhân\" là công cụ dùng được ngay; phản ví dụ (mọi khâu đạt mà tổng không đạt) sâu; Q4, Q5, Q7 là ba kịch bản khác nhau buộc chẩn đoán.",
+      "upgrade": "Nêu cách đo và sai số của nhận biết/dùng thử; thêm bảng kế hoạch/thực tế/% đạt thật; thay Q6 bằng câu phễu thứ ba; thêm chi phí sửa từng khâu để câu Q2 có yếu tố ngân sách."
+    },
+    {
+      "id": "B:tn05-08",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L4", "L5", "L3", "L2", "L3", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "TÌNH HUỐNG / VÍ DỤ", "quote": "trà xanh có đường của chính hãng giảm 120.000 chai so với cùng kỳ", "issue": "Mức mất lấy từ so cùng kỳ năm trước, không có đối chứng; bài tách 40.000 chai \"xu hướng\" nhưng không nói 40.000 lấy từ đâu (thị trường? đối thủ? năm trước?). Lãi tăng thêm 220 triệu phụ thuộc hoàn toàn vào giả định này.", "fix": "Nêu nguồn của 40.000: ví dụ mức giảm của dòng có đường ở khu vực chưa phân phối bản không đường, hoặc xu hướng ngành; gắn nhãn minh hoạ." },
+        { "sev": "P2", "where": "Q5", "quote": "Số pizza cỡ vừa bán ra trước và sau khi có combo", "issue": "Đáp án đúng chấp nhận so trước–sau không đối chứng, trong khi tn04-06 dạy phải xem món cũ ở cửa hàng đối chứng. Mâu thuẫn nhẹ giữa hai bài.", "fix": "Sửa đáp án: \"Số pizza cỡ vừa trước và sau, ở cửa hàng có combo so với cửa hàng chưa có\"." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Đo ra mắt bằng lãi tăng thêm của cả hãng", "issue": "Thiếu PHẢN VÍ DỤ / ĐÀO SÂU; trường hợp \"ăn thịt mà vẫn tốt\" chỉ nằm trong Q4.", "fix": "Thêm phản ví dụ có số: nếu 100.000 chai có đường đằng nào cũng mất sang đối thủ, lãi tăng thêm thật là bao nhiêu." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 200.000×3.000 = 600tr; 120.000×4.000 = 480tr; 120tr ✓; tỉ lệ ăn thịt 60% ✓. Q7: (120.000−40.000)×4.000 = 320tr; 600 − 320 − 60 = 220tr ✓. Wrong 280 = quên chi phí ra mắt ✓." },
+      "claims": [
+        { "claim": "Trà xanh không đường 200.000 chai tháng đầu, lãi 3.000đ; có đường lãi 4.000đ", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Xu hướng giảm đường làm dòng có đường giảm 40.000 chai", "status": "illustrative-unlabelled", "note": "Giả định quyết định kết quả, không nêu nguồn." }
+      ],
+      "strengths": "Có bước tách xu hướng vốn có và trừ chi phí ra mắt (Q7) — đi xa hơn tn04-06; định nghĩa tỉ lệ ăn thịt đúng; Q2 cho hành động cụ thể (nhắm khách chưa uống trà của hãng).",
+      "upgrade": "Nêu nguồn của con số xu hướng và cách ước lượng (vùng đối chứng); sửa Q5 có đối chứng; thêm phản ví dụ/đào sâu; nối rõ với tn04-06; thêm câu L4 đọc bảng 2 vùng (có/không phân phối bản mới) để tự tách 40.000."
+    },
+    {
+      "id": "B:tn05-09",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 16, "examples": 12, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L5", "L3", "L6", "L5", "L2", "L5"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "cắt 40 triệu quảng cáo, giữ trưng bày. Khi đó hoà vốn cần 80 ÷ 0,004 = 20.000 gói", "issue": "Giả định cắt quảng cáo làm doanh số rơi ≤ 20% không được biện hộ; không nói sẽ đọc kết quả bằng gì ngoài số gói (mua lại?).", "fix": "Thêm: quảng cáo duy trì 40tr đang mang bao nhiêu gói (nếu biết chi phí/gói từ quảng cáo) để ước mức rơi trước khi cắt." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "sản phẩm yếu đang chiếm chỗ của một sản phẩm khác có thể bán tốt hơn", "issue": "Chi phí cơ hội chỗ kệ chỉ nêu định tính; ví dụ có \"vị bánh quy bơ đang thiếu hàng\" nhưng không có số lãi/tháng của nó.", "fix": "Thêm: bánh quy bơ lãi 150tr/tháng trên cùng diện tích kệ → chi phí cơ hội 150tr, lớn hơn cả khoản lỗ 20tr." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì sao \"chỗ trên kệ\" cũng là một chi phí", "issue": "Câu L2 nhận lại ý bài.", "fix": "Thay bằng câu L4: cho lãi/tháng và diện tích của 2 sản phẩm, hỏi giữ cái nào." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 25.000×4.000 = 100tr; 100 − 120 = −20tr ✓. Ví dụ: 80tr/4.000 = 20.000 gói (−20%) ✓; 17.000 gói → 68 − 80 = −12 ✓; 22.000 → 88 − 80 = +8 ✓." },
+      "claims": [
+        { "claim": "Bánh quy yến mạch 25.000 gói/tháng, lãi 4.000đ, trưng bày 80tr, quảng cáo 40tr, nghiên cứu 2 tỉ", "status": "illustrative-labelled", "note": "Bài ghi \"(số minh hoạ)\" cho kịch bản 17.000 gói." }
+      ],
+      "strengths": "Tách chi phí chìm khỏi chi phí sẽ mất đi nếu rút, và đưa ra phương án trung gian (cắt quảng cáo) với ngưỡng hoà vốn tính được — đúng cách người làm nghề quyết; Q4 (viết tiêu chí rút) và Q5 (lỗ nhẹ nhưng mua lại tăng) là câu đánh đổi tốt.",
+      "upgrade": "Định lượng chi phí cơ hội chỗ kệ; biện hộ giả định mức rơi khi cắt quảng cáo; thêm PHẢN VÍ DỤ (sản phẩm chiến lược giữ dù lỗ, có điều kiện) và ĐÀO SÂU; thay Q6 bằng câu so hai sản phẩm trên cùng kệ."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự theo vòng đời ra mắt là hợp lý: soft launch (01) → phủ hàng (02) → nội bộ (03) → beachhead (04) → mốc theo giai đoạn (05) → teaser (06) → phễu chẩn đoán (07) → cannibalisation (08) → rút (09). Bài 05 và 07 là xương sống (mốc và phễu) và nối nhau tốt. Tuy nhiên 01, 03, 04, 06, 08, 09 thiếu PHẢN VÍ DỤ/ĐÀO SÂU nên độ sâu không đều; khái niệm \"tỉ lệ mua lại\" được dùng ở 01, 05, 07, 09 nhưng chưa bài nào định nghĩa cửa sổ đo và cách nhận diện người mua ở kênh tạp hoá.",
+    "overlap": [
+      "tn05-08 trùng tn04-06 (cannibalisation, cùng công thức lãi ròng); 05-08 thêm tách xu hướng và chi phí ra mắt — nên tham chiếu chéo thay vì dạy lại.",
+      "tn05-02 và tn05-05/07 cùng nói \"độ phủ là khâu đầu\"; chấp nhận được nhưng 05 và 07 nên dẫn lại 02.",
+      "tn05-01 Q6 và tn05-05 cùng ý \"đặt ngưỡng trước\"."
+    ],
+    "gaps": [
+      "Không có bài định nghĩa và đo tỉ lệ mua lại (cửa sổ, cohort, cách nhận diện ở offline) dù là chỉ số trung tâm của module.",
+      "Thiếu bài về định giá ra mắt (giá thâm nhập vs giá hớt váng) và cách thử giá cho sản phẩm mới — chỉ nhắc ở tn04-10.",
+      "Thiếu bài về dự báo nhu cầu/tồn kho cho ra mắt (hết hàng tuần đầu, hàng tồn khi ế) — tn05-06 chạm 800 đôi nhưng không khai thác.",
+      "Thiếu bài về đo nhận biết (survey) — tn05-07 dùng tỉ lệ nhận biết mà không nói cách đo."
+    ],
+    "best_lesson": "B:tn05-07",
+    "weakest_lesson": "B:tn05-03"
+  }
+}

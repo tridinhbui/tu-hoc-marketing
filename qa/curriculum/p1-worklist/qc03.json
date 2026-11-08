@@ -1,0 +1,72 @@
+{
+ "mod": "qc03",
+ "lessons": [
+  {
+   "id": "B:qc03-02",
+   "title": "Sau cú bấm, đưa khách về website, form, Zalo OA hay Messenger?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Form ngay trên nền tảng (Facebook, Zalo) giữ khách trong ứng dụng … Nhắn tin (Messenger, Zalo OA) mở một cuộc trò chuyện: hiệu quả nếu trả lời trong vài phút, phí tiền nếu để khách chờ nửa ngày",
+     "issue": "Bài không có trường `src` nào: tính năng form trong ứng dụng của Facebook/Zalo là khẳng định nền tảng (fast), và 'hiệu quả nếu trả lời trong vài phút' là benchmark tốc độ phản hồi nêu như sự thật, không nguồn, không nhãn. Rubric: khẳng định nền tảng/benchmark không nguồn không nhãn là P1.",
+     "fix": "Thêm src Meta 'About instant forms', Zalo Ads 'Quảng cáo Form'; đổi 'vài phút' thành 'càng sớm càng tốt — đo thời gian phản hồi của chính bạn so với tỉ lệ hẹn' hoặc dẫn nghiên cứu có ngày."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm src cho form trong ứng dụng và bỏ/ghi nguồn cho benchmark 'vài phút'; (2) thêm rel; (3) nêu cách kiểm hai tỉ lệ giả định của website và sai số; (4) thêm một câu L5 đánh đổi: form có câu hỏi lọc (lead giảm 40%, đạt chuẩn tăng 30→50%) có đáng không."
+  },
+  {
+   "id": "B:qc03-03",
+   "title": "Gắn pixel rồi, có cần gửi sự kiện từ máy chủ nữa không?",
+   "total": 81,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "TikTok cũng có Events API Gateway (xem điều kiện trong tài khoản)",
+     "issue": "Khẳng định tồn tại một sản phẩm nền tảng với tên cụ thể; bốn src của bài không có trang nào về sản phẩm này (chỉ có TikTok 'Event deduplication'); người chấm không xác nhận được TikTok có sản phẩm mang tên này. Loại fast, nêu như sự thật, không nguồn.",
+     "fix": "Bỏ câu này hoặc thêm src trang TikTok chính thức mô tả đúng tên sản phẩm; nếu không có, viết 'TikTok có các cách tích hợp Events API qua đối tác, xem trong tài khoản'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) bỏ hoặc có nguồn cho 'Events API Gateway' của TikTok; (2) nối 245/410 với khảo sát 6/10; (3) thay Q4 bằng câu đọc màn hình kiểm sự kiện; (4) thêm tình huống thứ hai đổi kết luận: shop chốt qua điện thoại (Q6) với số — bảng trạng thái 200 lead → 40 mua → cách gửi 'lead đạt chuẩn' về nền tảng (nối qc02-01)."
+  },
+  {
+   "id": "B:qc03-05",
+   "title": "Trước khi bấm Đăng ở Việt Nam năm 2026: kiểm những gì để không vi phạm luật?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Theo Nghị định 330/2026, xử lý dữ liệu không có sự đồng ý có thể bị phạt 30–50 triệu đồng",
+     "issue": "Mức phạt cụ thể nêu như sự thật nhưng nguồn là bài báo tổng hợp, không trích điều/khoản. Hành vi trong tình huống là MUA dữ liệu (file 8.000 số từ 'nguồn data'), là vi phạm 'mua bán dữ liệu cá nhân' có khung xử lý riêng theo Luật 91/2025 (theo hiểu biết của người chấm có thể tính theo nhiều lần doanh thu), không phải chỉ 'xử lý không có sự đồng ý'. Ghép hai hành vi vào một mức 30–50 triệu có thể làm người học đánh giá thấp rủi ro.",
+     "fix": "Trích đúng điều, khoản, ngày của Nghị định 330/2026 cho hai hành vi riêng (mua bán dữ liệu; xử lý không có sự đồng ý), ghi 'mức tại ngày kiểm' và dẫn pháp chế."
+    },
+    {
+     "sev": "P1",
+     "where": "ĐÀO SÂU",
+     "quote": "Từ 2/9/2025, Meta gắn cờ và chặn dùng tệp tuỳ chỉnh gợi ý tình trạng sức khoẻ hoặc tài chính",
+     "issue": "Mốc ngày và hành vi 'chặn' cụ thể là khẳng định nền tảng loại fast; src là trang tham chiếu API Custom Audience, không rõ có nêu mốc ngày; không có trích dẫn nguyên văn.",
+     "fix": "Trích câu nguyên văn và ngày từ trang Meta (developer changelog hoặc Business Help) hoặc bỏ mốc ngày, giữ 'Meta có thể gắn cờ và hạn chế'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) trích điều khoản và tách hai hành vi vi phạm dữ liệu với mức phạt đúng; (2) có trích dẫn nguyên văn cho mốc 2/9/2025 của Meta hoặc bỏ ngày; (3) ánh xạ 5 lớp ↔ 8 bước; (4) thay Q3 L1 bằng câu tình huống và thêm một câu L5: KOC đòi bỏ câu 'đây là quảng cáo' vì 'mất tự nhiên' — đánh đổi gì, ai chịu trách nhiệm."
+  },
+  {
+   "id": "B:qc03-06",
+   "title": "Muốn biết trang đích mới có tốt hơn không: cần bao nhiêu click, chạy bao lâu?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM, VÍ DỤ, Q2",
+     "quote": "Theo cách tính cỡ mẫu thông dụng trong thống kê, để phân biệt 2% với 3% cần khoảng 3.800 click mỗi bản",
+     "issue": "Con số đúng với mức ý nghĩa 5% hai phía và lực 80% (người chấm tính lại: 3.822) nhưng bài không nêu hai giả định này. Với lực 90% cần ≈ 5.100 click/bản, chi phí và 'khoảng 23 ngày' trong Ví dụ và đáp án Q2 đổi theo. Rubric: phép tính thiếu giả định làm kết quả đổi.",
+     "fix": "Ghi 'ở mức tin cậy 95%, lực 80%' và một câu 'đòi chắc hơn (lực 90%) thì cần thêm khoảng một phần ba mẫu'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) nêu mức tin cậy và lực của con số 3.800 và cho biết đổi lực thì mẫu đổi bao nhiêu; (2) nêu tên và src công cụ A/B của nền tảng; (3) sửa chữ ở Q5 và thay Q6 bằng câu đọc dữ liệu theo ngày; (4) thêm tình huống thứ hai đổi kết luận: thử offer đổi trả 30 ngày (kỳ vọng 2% → 4%) chỉ cần ≈ 1.100 click/bản, nên với 1 triệu/ngày xong trong một tuần."
+  }
+ ]
+}

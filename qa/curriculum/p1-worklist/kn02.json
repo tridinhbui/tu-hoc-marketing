@@ -1,0 +1,80 @@
+{
+ "mod": "kn02",
+ "lessons": [
+  {
+   "id": "B:kn02-01",
+   "title": "Có mặt ở 30% cửa hàng là nhiều hay ít?",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q7",
+     "quote": "Khách chưa kịp biết nên cần thêm vài tháng là doanh số tự tăng theo",
+     "issue": "Stem hỏi \"Điều gì có khả năng đang xảy ra?\" nhưng b (độ trễ sell-out sau khi mở điểm) là giả thuyết có thật trong FMCG và không bị dữ kiện loại bỏ; lời giải tự thừa nhận \"Có thể có độ trễ\". Đáp án a chỉ là giả thuyết *kiểm được ngay*, không phải giả thuyết duy nhất hợp lý.",
+     "fix": "Đổi stem thành \"Giả thuyết nào kiểm được ngay bằng dữ liệu đã có?\" hoặc thêm dữ kiện \"các điểm mới đã có hàng 2 tháng\" để loại b."
+    }
+   ],
+   "upgrade": "Sửa stem Q7. Gắn nhãn số, thêm nguồn ước doanh số ngành theo điểm. Thêm bảng 3 nhóm cửa hàng (tiện lợi · căng tin KCN · tạp hoá) với số điểm, lon/tháng để học viên tự tính hai độ phủ. Thêm phản ví dụ và đào sâu về chi phí phục vụ mỗi điểm nhỏ (nối kn02-03) và share-within-handlers (bán được bao nhiêu trong các điểm đã có)."
+  },
+  {
+   "id": "B:kn02-03",
+   "title": "Mở thêm 500 điểm bán hay bán thêm ở 2.000 điểm cũ?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Tính 6 tháng: mở rộng 5 × 6.000 = 30.000 hộp, 3.333 đ/hộp",
+     "issue": "Phép so 6 tháng coi mở điểm là \"khoản chi một lần\" và bỏ hẳn chi phí phục vụ lặp lại cho 500 điểm vùng xa (giao hàng, ghé thăm, công nợ) — chính kn02-01 nói điểm nhỏ \"tốn công giao hàng\". Nếu phục vụ 20.000đ/điểm/tháng thì thêm 50 triệu/5 tháng → 150 triệu/30.000 = 5.000 đ/hộp; ở 40.000đ/điểm/tháng → 6.667 đ/hộp, gần bằng 7.500 của khuyến mãi. Phép tính thiếu giả định có thể làm kết luận đổi.",
+     "fix": "Thêm dòng \"chi phí phục vụ mỗi điểm mới mỗi tháng\" vào cả ví dụ và Q2/Q4, nêu ngưỡng chi phí phục vụ khiến hai phương án hoà nhau."
+    }
+   ],
+   "upgrade": "Thêm chi phí phục vụ điểm mới (P1) và điều kiện hoà. Sửa lời giải Q7. Gắn nhãn số. Thêm bảng 2 phương án × 3 mốc thời gian (1 tháng · quý · 6 tháng) với đ/hộp để học viên đọc bảng. Thêm phản ví dụ: khuyến mãi để lại lift 1 hộp/tháng vĩnh viễn thì phương án sâu thắng ở mốc nào."
+  },
+  {
+   "id": "B:kn02-04",
+   "title": "Kệ trống 3 ngày mỗi tháng thì mất bao nhiêu?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1",
+     "quote": "Trên 8%, vì khách hết hàng một lần sẽ bỏ hẳn hãng mãi mãi",
+     "issue": "Phương án sai dùng từ tuyệt đối (\"mãi mãi\", Q4 d \"cắt hợp đồng ngay lần hết hàng đầu tiên\", Q1 d \"gần 0%\") → đáp án đoán được bằng hình thức; Q1 và Q4 đều L2 nhắc lại khái niệm.",
+     "fix": "Viết phương án sai ôn hoà (vd. \"Trên 8%, vì điểm hết hàng thường là điểm bán nhanh\") — câu này còn làm người học phải nghĩ về phân bố OOS theo điểm (ý đào sâu)."
+    }
+   ],
+   "upgrade": "Viết lại phương án sai Q1/Q4 (P1). Gắn nhãn và cho cách ước 60%. Thêm bảng OOS theo nhóm điểm (lớn/nhỏ, cuối tuần/ngày thường) để một câu hỏi đọc bảng thay Q4. Thêm chi phí đối ứng: nhân viên theo dõi tồn kho X triệu/tháng vs 19,2 triệu → thời gian hoàn vốn; nêu nhiễu khảo sát kệ (mẫu bao nhiêu điểm, ngày nào)."
+  },
+  {
+   "id": "B:kn02-05",
+   "title": "Bán vào trường học, văn phòng hay bệnh viện?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Trừ thất thoát 5% (1,28 triệu)",
+     "issue": "Thất thoát 5% *số hộp* được tính bằng 5% *lãi gộp* (0,05 × 25,6 triệu). Hộp mất đi tốn *giá vốn* của hộp, không phải 5.000đ lãi gộp. Bài không cho giá vốn; nếu giá vốn 10.000đ/hộp, 256 hộp mất = 2,56 triệu, lãi còn 5,04 triệu (không phải 6,32) và ngưỡng hoà vốn Q3 cũng đổi (4.750đ/hộp sau thất thoát là cách tính sai cùng gốc).",
+     "fix": "Cho giá vốn và tính thất thoát = số hộp mất × giá vốn; hoặc ghi rõ \"giả định đơn giản hoá: thất thoát tính 5% lãi gộp\" và nêu nó làm lãi trông cao hơn thật."
+    }
+   ],
+   "upgrade": "Sửa cách tính thất thoát (P1) bằng cách cho giá vốn. Gắn nhãn chi phí kênh. Thêm bảng 3 kênh × (số người · % mua · hộp/người · lãi/hộp · chi phí cố định · lãi sau chi phí) để Q4 đọc từ bảng. Thêm phản ví dụ và đào sâu về người gác cổng. Nêu độ nhạy: lãi sau chi phí đổi bao nhiêu khi % mua lệch ±5 điểm."
+  },
+  {
+   "id": "B:kn02-07",
+   "title": "Đại lý giận vì hãng bán online rẻ hơn, xử lý sao?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "giữ giá bán thống nhất giữa các kênh",
+     "issue": "Nêu như cách xử lý mà không có điều kiện pháp lý. Thoả thuận ấn định giá bán lại với đại lý có thể vi phạm Luật Cạnh tranh 2018; bài cùng chủ đề kn03-09 cảnh báo rõ \"ép giá đại lý bằng thoả thuận có thể vướng luật cạnh tranh, nên hỏi pháp chế\" — hai bài mâu thuẫn. Trong ví dụ hãng chỉ sửa giá ở gian hàng *của chính hãng* (hợp lệ) nhưng khái niệm nói chung cho \"các kênh\".",
+     "fix": "Viết \"giữ giá ở kênh của chính hãng bằng giá khuyến nghị; với đối tác chỉ dùng giá *khuyến nghị* và chính sách chiết khấu, không thoả thuận ấn định giá bán lại — hỏi pháp chế\"."
+    }
+   ],
+   "upgrade": "Thêm điều kiện pháp lý (P1) và dẫn kn03-09. Gắn nhãn số, thêm phép tính lãi đại lý/tháng. Thay Q4/Q6 bằng câu đọc dữ liệu: bảng 3 tháng số đại lý nhập, lượng bày kệ, doanh số sàn — hỏi dấu hiệu nào báo xung đột trước khi hội đại lý lên tiếng. Tách chủ đề khỏi kn03-09 để bớt trùng."
+  }
+ ]
+}

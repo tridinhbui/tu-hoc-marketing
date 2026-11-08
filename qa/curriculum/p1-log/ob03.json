@@ -1,0 +1,88 @@
+{
+ "mod": "ob03",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:ob03-02",
+   "where": "KHÁI NIỆM",
+   "status": "fixed",
+   "change": "“hãng nhỏ luôn ít khách và ít được mua lại” → “hãng nhỏ hầu như luôn có ít khách hơn và được chính khách của mình mua lại ít hơn một chút (trừ một số hãng ngách)”; thêm src Ehrenberg, Goodhardt & Barwise 1990 (doi 10.1177/002224299005400307) và Sharp 2010, How Brands Grow (trang sách OUP).",
+   "key_changed": false,
+   "note": "DOI và trang OUP đã kiểm qua tìm kiếm ngày 2026-11-08; st:'chua'. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob03-02",
+   "where": "Q1",
+   "status": "fixed",
+   "change": "Đề Q1 thêm “chưa biết sẽ giành được bao nhiêu phần tăng thêm ở mỗi ngành… kết luận nào là đúng mức?”; đáp án d đổi từ “Ngành B, vì tiền mới không kém xa A…” thành “Chưa chọn được: phải ước phần giành ở mỗi ngành (hoà ở 1,33% B so với 1% A)”; nhiễu a, b, c viết lại (b thành “Chọn B, vì ngành tăng 30% thì người mới sẽ giành được phần lớn hơn”), lời giải viết lại theo.",
+   "key_changed": true,
+   "note": "Đáp án cũ sai thật theo chính VÍ DỤ (giành 1% ở B thì B thua A). Chữ khoá vẫn là d nhưng NỘI DUNG đáp án đúng đổi (từ chọn B sang chưa chọn được) — ghi key_changed:true. Ngưỡng hoà: 4 tỉ ÷ 300 tỉ ≈ 1,33%. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob03-03",
+   "where": "KHÁI NIỆM",
+   "status": "fixed",
+   "change": "“(họ hay mua luân phiên vài hãng)” → “(theo các nghiên cứu dữ liệu panel mua hàng của Ehrenberg và Sharp, khách thường mua luân phiên vài hãng)”; thêm src Sharp 2010 (trang OUP) và Ehrenberg và cộng sự 1990 (doi).",
+   "key_changed": false,
+   "note": "Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob03-04",
+   "where": "KHÁI NIỆM",
+   "status": "fixed",
+   "change": "Thêm src Vaughn 1980, Journal of Advertising Research (doi 10.1080/00218499.1980.12518790, kiểm qua Crossref); câu FCB viết lại có dùng trục thứ hai: “Lưới FCB (Vaughn, 1980) thêm trục lý trí – cảm xúc: kem chống nắng dấn thân vừa, vừa lý trí (chỉ số chống nắng) vừa cảm xúc (cảm giác trên da).”",
+   "key_changed": false,
+   "note": "Khái niệm giữ ≤170 chữ. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob03-04",
+   "where": "VÍ DỤ",
+   "status": "fixed",
+   "change": "“Chung một kịch bản cho cả hai là phí một nửa ngân sách.” → “… là phí phần ngân sách rót vào bên không khớp.”",
+   "key_changed": false,
+   "note": "Không thêm số tỉ lệ xem hết video (không cần để sửa lỗi). Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob03-05",
+   "where": "TÌNH HUỐNG / VÍ DỤ",
+   "status": "needs-human",
+   "change": "Đã gắn nhãn ở TÌNH HUỐNG: “(số đếm minh hoạ, không phải khảo sát thật; thứ hạng thật giữa các hãng sữa đổi theo năm, kiểm báo cáo thị trường có ngày trước khi dẫn lại)”. VÍ DỤ đã có nhãn assume:true.",
+   "key_changed": false,
+   "note": "Phần nhãn minh hoạ đã sửa. Còn lại cần người: “Vinamilk dẫn đầu sữa tươi” có cần một nguồn có ngày (báo cáo thị phần sữa nước Việt Nam, vd của hãng nghiên cứu thị trường hoặc báo cáo thường niên Vinamilk) không, hay đổi tên hai hãng thành hãng V/T? Tôi không chắc URL nguồn nên chưa thêm src. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob03-06",
+   "where": "KHÁI NIỆM",
+   "status": "fixed",
+   "change": "Thêm vào câu biên gộp theo ngành: “(muốn xem thứ tự giữa các ngành, tham khảo bảng biên gộp theo ngành của Damodaran — dữ liệu doanh nghiệp niêm yết ở Mỹ, không phải số của Việt Nam)”; thêm src Damodaran Margins by Sector (pages.stern.nyu.edu, đã mở trang ngày 2026-11-08, dữ liệu 01/2026); VÍ DỤ gắn “(số minh hoạ)” sau 70% và 12%.",
+   "key_changed": false,
+   "note": "Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob03-07",
+   "where": "TÌNH HUỐNG",
+   "status": "fixed",
+   "change": "TÌNH HUỐNG: “Bạn xem số liệu năm ngoái (số minh hoạ): …”; VÍ DỤ thêm: “Ba năm gần nhất, tháng Tết chiếm 33%, 36% và 35% (trung bình ≈ 35%), nên 35% của năm ngoái không phải một năm bất thường.”",
+   "key_changed": false,
+   "note": "Giữ 35% để 4,2 tỉ, Q2, Q3 không đổi. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob03-08",
+   "where": "VÍ DỤ",
+   "status": "fixed",
+   "change": "Thêm phép trừ chi phí kênh (giả định): tạp hoá 120 tỉ trừ chiết khấu 20% và đội bán 15 tỉ còn ~81 tỉ; online 100 tỉ trừ phí sàn 15% còn 85 tỉ — gần nhau, nên quyết định dựa vào khả năng giành 2% thật và độ bền kênh; “Quyết định đúng” → “Với giả định đó, hướng hợp lý hơn”.",
+   "key_changed": false,
+   "note": "Khoá Q2 (b: xây tạp hoá theo vùng, online phụ) vẫn đứng nhờ giả định khách online chủ yếu mua kèm đơn lớn đã có trong bài. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob03-09",
+   "where": "KHÁI NIỆM",
+   "status": "fixed",
+   "change": "Thêm src Porter 1979 (hbr.org/1979/03/how-competitive-forces-shape-strategy) và bản 2008; TÌNH HUỐNG: “các hãng lớn chi hàng trăm tỉ mỗi năm…” → “các hãng lớn có ngân sách quảng cáo, khuyến mãi lớn hơn vốn của bạn nhiều lần (kiểm báo cáo tài chính công khai của họ)”.",
+   "key_changed": false,
+   "note": "URL HBR đã kiểm qua tìm kiếm ngày 2026-11-08. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

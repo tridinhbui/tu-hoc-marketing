@@ -1,0 +1,18 @@
+{
+ "mod": "kh07",
+ "lessons": [
+  {
+   "id": "B:kh07-01",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1 phương án a (lời giải)",
+     "quote": "khác biệt đo ở tỉ lệ để lại số, tức phản ứng của người xem, không phải phân phối",
+     "issue": "Trên Meta/TikTok, hai mẫu cùng ngân sách vẫn có thể được phân phối tới hai tập người khác nhau (divergent delivery). Vì vậy chênh lệch trên mỗi lượt hiển thị không tách riêng được tác động của khung. Lời giải dạy sai về cách A/B trong nền tảng vận hành.",
+     "fix": "Sửa lời giải: 'chênh có thể một phần do nền tảng phân phối mỗi mẫu tới người khác nhau; muốn tách khung cần A/B test chia tệp của nền tảng'. Gắn src."
+    }
+   ]
+  }
+ ]
+}

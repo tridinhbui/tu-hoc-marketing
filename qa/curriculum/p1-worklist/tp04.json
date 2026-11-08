@@ -1,0 +1,50 @@
+{
+ "mod": "tp04",
+ "lessons": [
+  {
+   "id": "B:tp04-04",
+   "title": "Video ngắn của bạn có một âm thanh riêng chưa?",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "concept",
+     "quote": "riêng TikTok từng công bố rằng phần lớn người dùng xem với âm thanh bật",
+     "issue": "Khẳng định về nền tảng, nêu như sự thật, không có src, không ngày kiểm. Đây là kiến thức lớp 'fast' (hành vi/tính năng nền tảng) nên bắt buộc có nguồn và câu 'nếu khác, tin trang chính thức'.",
+     "fix": "Thêm src tới tài liệu TikTok for Business về âm thanh (ngày kiểm) hoặc bỏ tên nền tảng, viết 'nhiều nền tảng video ngắn báo cáo phần lớn người xem bật âm thanh'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src cho khẳng định TikTok và câu 'nếu khác, tin trang chính thức' (lớp fast, xem lại 3 tháng); (2) đưa tỉ lệ xem hết video vào tình huống; (3) gắn nhãn số minh hoạ, nêu sai số; (4) thêm phản ví dụ: âm thanh riêng đặt ở giây 1 làm tỉ lệ lướt tăng (bị coi là quảng cáo) → cần đo cả tỉ lệ giữ chân, không chỉ nhớ tên; (5) thêm đào sâu về bản quyền nhạc thịnh hành dùng cho tài khoản doanh nghiệp; (6) thêm câu L6 thiết kế A/B 60 video có/không âm thanh riêng."
+  },
+  {
+   "id": "B:tp04-05",
+   "title": "Có nên tạo linh vật cho thương hiệu?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "sai hay gặp: [[1,\"QUEN_CHI_PHI_CO_DINH\"],[4.67,\"SAI_TINH_TOAN\"]]",
+     "issue": "Giá trị sai 1 được gắn mã 'quên chi phí cố định' nhưng quên chi phí cố định (30 triệu) cho ra 40 ÷ 30 = 1,33 đồng, không phải 1. Giá trị 1 đồng = 30 ÷ 30, tức là QUÊN CHI PHÍ VẬN HÀNH (chỉ tính 30 triệu thiết kế). Người học mắc đúng lỗi 'quên cố định' (1,33) không được phản hồi; người ra 1 được giải thích sai lỗi.",
+     "fix": "Đổi thành [[1.33,\"QUEN_CHI_PHI_CO_DINH\"],[1,\"QUEN_CHI_PHI_VAN_HANH\"],[4.67,\"SAI_TINH_TOAN\"]] hoặc sửa nhãn của 1."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa giá trị/nhãn sai của Q5; (2) thêm mốc so sánh cho 2,33 đồng/lần thấy; (3) thêm phản ví dụ trong phần đọc (linh vật dùng đều 3 năm nhưng khách không gọi tên nó → chưa thành tài sản, đo bằng lưới bài 02); (4) thêm đào sâu về hướng dẫn nhân vật (brand character guide: dáng, biểu cảm, giọng) và chi phí bản quyền hình ảnh; (5) điều chỉnh khẳng định về ngành ngân hàng/luật."
+  },
+  {
+   "id": "B:tp04-06",
+   "title": "Nên đưa tài sản vào điểm chạm nào trước?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q2",
+     "quote": "Tổng 1,8 triệu, phủ 470.000 trong 495.000 lượt gặp",
+     "issue": "Số 495.000 không tái tạo được từ đề: bốn điểm chạm nêu trong Q2 cộng lại là 300.000 + 150.000 + 20.000 + 5.000 = 475.000; sáu điểm của ví dụ là 515.000. 470.000 (KOL + Shopee + túi) đúng. Lời giải sai số, dù không đổi kết luận.",
+     "fix": "Sửa thành 'phủ 470.000 trong 475.000 lượt của bốn điểm nêu trong đề' (hoặc 490.000/515.000 nếu tính cả hộp và tin nhắn như Q3)."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa số 495.000 trong Q2; (2) sửa 'điểm chạm online'; (3) thêm phản ví dụ: điểm chạm lượt cao nhưng khách lướt 0,5 giây (banner sàn) nên 'lượt gặp' phải cân theo thời gian chú ý; (4) thêm đào sâu về bộ quy tắc tối thiểu (cỡ, vị trí, thời lượng) và cách kiểm tuân thủ với KOL/xưởng in; (5) thêm câu L6 thiết kế đo lại nhóm online sau 6 tháng với nhóm đối chứng (khu vực chưa đổi túi)."
+  }
+ ]
+}

@@ -1,0 +1,180 @@
+{
+  "mod": "kh11",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kh11-01",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 15, "examples": 9, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L4", "L5", "L3", "L2", "L3", "L1", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q6", "quote": "Theo bài viết của Smith (1956), phân khúc khác \"khác biệt hoá sản phẩm\" ở điểm nào?", "issue": "Phần đọc chỉ nói \"Ý tưởng phân khúc được Wendell Smith nêu năm 1956\", không trình bày sự đối lập với khác biệt hoá; câu hỏi kiểm tra kiến thức ngoài bài (L1), đáp án đúng cũng là phương án dài nhất.", "fix": "Thêm 2 câu vào Khái niệm nêu hai chiến lược thay thế của Smith, hoặc thay Q6 bằng câu tình huống: cho một thương hiệu đang \"uốn cầu theo cung\" và hỏi đó là chiến lược nào." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "ăn sáng văn phòng khoảng 55%, ăn vặt gia đình 30%, quà biếu 15%", "issue": "Số 400 đơn, 55/30/15% và \"25% người cầm tờ rơi là dân văn phòng\" không gắn nhãn minh hoạ; không nói 25% đo bằng cách nào.", "fix": "Thêm \"(số minh hoạ)\" như các bài sau trong module; ghi cách ước 25% (ví dụ hỏi 100 người nhận tờ rơi)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "chưa đối thủ nào làm hộp cho văn phòng", "issue": "Khẳng định về đối thủ nêu như dữ kiện mà không nói đã kiểm bằng gì.", "fix": "Viết \"theo khảo sát 10 quán quanh toà nhà\" hoặc gắn nhãn giả định." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20.000×25% = 5.000 tờ; 10.000.000/5.000 = 2.000đ ✓; sai 500 = chia cả 20.000 tờ ✓; sai 125 = 500/4 (nhân thay chia) hợp lý." },
+      "claims": [
+        { "claim": "Ý tưởng phân khúc được Wendell Smith nêu năm 1956", "status": "unverified", "note": "Đúng theo hiểu biết chung (Journal of Marketing 1956) nhưng bài không có src." },
+        { "claim": "Kotler & Keller (Marketing Management) đặt ba bước thành khung chuẩn", "status": "unverified", "note": "Không có src." },
+        { "claim": "Số liệu bánh mì que: 400 đơn, 55/30/15%, 25% tờ rơi trúng nhóm", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Tình huống mở bằng lỗi thật (slogan trước, khách sau) và phần Áp dụng có tiêu chí đạt rõ (dòng T chọn một nhóm, dòng P nhắc lại đúng nhóm, cấm chữ \"mọi người\").",
+      "upgrade": "Gắn nhãn số minh hoạ; thêm phản ví dụ khi đi ngược chiều vẫn ổn (sản phẩm đã có khách tự nhiên rõ, định vị chỉ cần gọi tên lại); đưa đối lập Smith vào phần đọc hoặc thay Q6 bằng câu tình huống; thêm một phép tính thứ hai (lãi/đơn văn phòng so với gia đình) để quyết định T có số; thêm src cho Smith và Kotler."
+    },
+    {
+      "id": "B:kh11-02",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 6, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L2", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q2 lời giải / Ví dụ", "quote": "Nhóm này rời đi vì không giữ được thói quen; việc cần làm là giúp họ quay lại phòng tập.", "issue": "Chênh 40 điểm % giữa hai nhóm là tương quan (người tập đều gia hạn nhiều), bài nói thẳng thành nhân quả và kê giải pháp; không nêu khả năng ngược (người đã định gia hạn nên mới tập đều) hay biến ẩn (nhà gần).", "fix": "Thêm một câu trong Ví dụ: \"đây là tương quan; thử nhắc tin cho 100 người thất thường, so gia hạn với 100 người không nhắc\" — giống cách B:gt01-04 Q4 đã làm." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Kotler & Keller nêu bốn cơ sở chia thị trường tiêu dùng", "issue": "Không có src; bài cũng không nói khi nào nhân khẩu học là cơ sở chính (sản phẩm theo tuổi: sữa bột, bỉm) ngoài một câu ở cuối.", "fix": "Thêm src và một phản ví dụ ngắn (bỉm trẻ em: tuổi con chính là nhu cầu)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 70−30 = 40 điểm % ✓; sai 133,3 = 40/30 ✓; sai 57,1 = 40/70 ✓. Kiểm chéo: (300×70%+500×30%)/800 = 45% khớp dải 44–48% theo tuổi." },
+      "claims": [
+        { "claim": "Kotler & Keller: bốn cơ sở phân khúc địa lý/nhân khẩu/tâm lý/hành vi", "status": "unverified", "note": "Đúng theo giáo trình phổ biến, thiếu src." },
+        { "claim": "Số phòng gym 800 hội viên, 70%/30%", "status": "illustrative-labelled", "note": "Có \"(số minh hoạ)\"." },
+        { "claim": "Shop sữa hạt 38/41/72/12%", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Phân biệt rõ điểm phần trăm và chênh lệch tương đối trong các bước giải; Q7 là câu đánh đổi thật (nhắm được ngay vs phải nối dữ liệu) với lời giải nêu đúng vai trò mỗi cơ sở.",
+      "upgrade": "Thêm câu cảnh báo tương quan/nhân quả và một phép thử nhỏ có đối chứng; thêm phản ví dụ nhân khẩu học là cơ sở chính; thêm src Kotler & Keller; đổi Q5 (L2) thành câu đọc bảng: cho 4 nhóm với tỉ lệ gia hạn và quy mô, hỏi nhóm nào đáng chăm trước tính theo số người cứu được."
+    },
+    {
+      "id": "B:kh11-03",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L2", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "giành 10% là 600 triệu, hơn 300 triệu chi phí", "issue": "Tỉ lệ giành 10% là giả định quyết định kết luận nhưng không được gắn nhãn là giả định yếu, cũng không thử độ nhạy (giành 4% thì 240 triệu < 300 triệu, A cũng trượt).", "fix": "Thêm một câu thử độ nhạy và nối sang B:kh11-05 (nơi tỉ lệ giành được coi là giả định yếu nhất)." },
+        { "sev": "P2", "where": "Q3 nhãn lỗi", "quote": "[[120,\"QUEN_CHI_PHI_BIEN_DOI\"]]", "issue": "120 = 300/2,5 là chia cho doanh thu thay cho lãi gộp; nhãn tạm chấp nhận nhưng nên là \"NHAM_DOANH_THU_VOI_LAI_GOP\" để lời giải đúng hiểu lầm.", "fix": "Đổi nhãn hoặc thêm chú thích." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 300 triệu / 1 triệu = 300 khách ✓ (> 200 người trong phân khúc). Kiểm chéo ví dụ: 1.500×4 triệu = 6 tỉ, 10% = 600 triệu ✓; C: 200×1 = 200 triệu ✓; Áp dụng D: 400×6×20% = 480 triệu ✓." },
+      "claims": [
+        { "claim": "Kotler & Keller nêu năm tiêu chí (đo được, đủ lớn, tiếp cận được, khác biệt, hành động được)", "status": "unverified", "note": "Khớp giáo trình, không src." },
+        { "claim": "Số gốm Bát Tràng: 1.500 quán/năm, 4 triệu/quán, 200 người sưu tầm, 300 triệu/dòng", "status": "illustrative-labelled", "note": "Có \"(số minh hoạ)\"." }
+      ],
+      "strengths": "Năm tiêu chí được dùng như cửa lọc có số (C trượt dù giành 100%), Q7 bắt đúng lỗi phổ biến doanh thu so với chi phí; Q6 phân biệt tiêu chí là cửa lọc nhưng \"hành động được\" có thể xây.",
+      "upgrade": "Thêm thử độ nhạy cho tỉ lệ giành 10% của A; thêm phản ví dụ phân khúc qua đủ năm cửa nhưng vẫn không nên chọn (đối thủ mạnh — nối kh11-05); nêu cách đếm \"1.500 quán mới/năm\" (nguồn đăng ký kinh doanh) để tiêu chí đo lường có bước làm; thêm src."
+    },
+    {
+      "id": "B:kh11-04",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L3", "L5", "L3", "L2", "L3", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "Byron Sharp (How Brands Grow, 2010, Viện Ehrenberg-Bass) cho rằng thương hiệu lớn lên chủ yếu nhờ với tới thật nhiều người mua của cả ngành hàng", "issue": "Tóm tắt hợp lý và đã gắn nhãn là tranh luận, nhưng không có src bấm được; Q4 lời giải nói \"phần lớn dữ liệu của Sharp đến từ hàng tiêu dùng nhanh\" là khẳng định thêm không nguồn.", "fix": "Thêm src (sách/ trang viện Ehrenberg-Bass) kèm ngày kiểm." },
+        { "sev": "P2", "where": "Q3 nhãn lỗi", "quote": "[[670,\"QUEN_CHI_PHI_CO_DINH\"]", "issue": "670 = 800 − 130 là quên nhân chi phí theo số dòng (3 dòng), không phải quên hẳn chi phí cố định; nhãn không khớp hiểu lầm.", "fix": "Đổi nhãn thành QUEN_NHAN_SO_DONG hoặc ghi chú trong bước giải." },
+        { "sev": "P2", "where": "Q4", "quote": "Quan điểm của Byron Sharp (2010) nên được trình bày thế nào trong bài này?", "issue": "Câu hỏi về cách trình bày quan điểm (meta), nhận lại ý bài (L2), thay được bằng câu tình huống.", "fix": "Thay bằng: cho dữ liệu người mua nhẹ chiếm 60% doanh số ngành, hỏi phương án phủ rộng hay tách dòng hợp giả định nào." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3×130 = 390; 800−390 = 410 ✓; tập trung 520−130 = 390; chênh 20 ✓; ước cao 10%: 720−390 = 330 ✓; Áp dụng: 300−80 = 220, 450−240 = 210 ✓." },
+      "claims": [
+        { "claim": "Kotler & Armstrong: bốn mức đại trà / phân hoá / tập trung / vi mô", "status": "unverified", "note": "Khớp Principles of Marketing, không src." },
+        { "claim": "Byron Sharp, How Brands Grow (2010), Ehrenberg-Bass", "status": "unverified", "note": "Có tên sách và năm, không có link; đã gắn nhãn là tranh luận mở." },
+        { "claim": "Nước mắm Phú Quốc 520/800/130 triệu", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Hiếm bài trình bày cả hai trường phái (STP truyền thống và Sharp) như tranh luận có đánh đổi, và dùng độ nhạy 10% để cho thấy kết luận đổi chiều; Q7 là câu đánh đổi đúng nghĩa.",
+      "upgrade": "Thêm src cho Sharp và Kotler & Armstrong; thay Q4 bằng câu tình huống có số; nêu thêm ràng buộc thực tế của phương án Sharp (phí lên kệ siêu thị, chiết khấu) để \"lối thứ ba\" cũng có số; ghi rõ 130 triệu/dòng là giả định cần kiểm."
+    },
+    {
+      "id": "B:kh11-05",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 17, "examples": 12, "pedagogy": 8, "assessment": 9, "data": 8, "clarity": 4 },
+      "total": 83,
+      "bloom_items": ["L3", "L5", "L3", "L2", "L4", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "lãi kỳ vọng = số khách trong phân khúc × tỉ lệ mình có thể giành × lãi gộp mỗi khách", "issue": "Công thức bỏ qua chi phí để giành (CAC) và thời gian đạt tỉ lệ giành — hai phân khúc cùng lãi kỳ vọng nhưng chi phí với tới khác nhau sẽ xếp khác (Q7 có nhắc \"chi phí với tới\" nhưng phần đọc không).", "fix": "Thêm một câu: \"trừ tiếp chi phí với tới mỗi khách (xem B:kh02-07) trước khi chốt\"." },
+        { "sev": "P2", "where": "Q4", "quote": "Vì sao phép nhân hợp hơn phép cộng điểm khi đánh giá độ hấp dẫn phân khúc?", "issue": "Nhận lại ý bài (L2).", "fix": "Thay bằng bảng 3 phân khúc chấm điểm cộng cho kết quả ngược với phép nhân, hỏi vì sao lệch." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 12.000×15% = 1.800; ×450.000 = 810 triệu ✓; sai 5.400 = quên 15% ✓. Kiểm chéo: A 600, C 400, B ở 8% = 432 ✓; Áp dụng D 120, E 300, ngưỡng E = 8% ✓; Q7 X 300, Y 288 ✓." },
+      "claims": [
+        { "claim": "Kotler & Keller đánh giá phân khúc theo quy mô-tăng trưởng, hấp dẫn cấu trúc, mục tiêu-nguồn lực", "status": "unverified", "note": "Khớp giáo trình, không src." },
+        { "claim": "Số app spa 50.000/12.000/80.000 người, tỉ lệ giành 4/15/1%", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Gọi đúng tên giả định yếu nhất (tỉ lệ giành) và thử độ nhạy làm đổi thứ hạng, rồi đề xuất phép thử 200 mẹ sau sinh; Áp dụng yêu cầu tính ngưỡng giành tối thiểu (8%) — đúng mức L5.",
+      "upgrade": "Bổ sung chi phí với tới vào công thức; thay Q4 bằng câu đọc bảng; thêm phản ví dụ phân khúc lãi kỳ vọng cao nhưng vòng đời ngắn (mẹ sau sinh chỉ dùng 6 tháng) để nối sang giá trị vòng đời; thêm src."
+    },
+    {
+      "id": "B:kh11-06",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 6, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L4", "L5", "L3", "L2", "L4", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Làm được: mới đạt 85% (1.020 trên 1.200 đơn)", "issue": "85% là trung bình tháng; không tách theo khung giờ cao điểm (11h30–12h) nơi tỉ lệ trễ thường cao hơn nhiều — quyết định in lời hứa phụ thuộc số này.", "fix": "Thêm một dòng: tách tỉ lệ đúng hạn theo khung 15 phút, lấy khung xấu nhất làm căn cứ hứa." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Kotler & Keller (dựa trên Keller) nêu ba nhóm tiêu chí", "issue": "Không src.", "fix": "Thêm src Marketing Management chương định vị." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.020/1.200 = 85% ✓; sai 15 = tỉ lệ trễ ✓; sai 117,6 = 1.200/1.020 ✓." },
+      "claims": [
+        { "claim": "Ba tiêu chí điểm khác biệt: đáng muốn / làm được / khác đối thủ (Keller)", "status": "unverified", "note": "Khớp khung desirability-deliverability-differentiation, không src." },
+        { "claim": "Tiệm cơm 1.200 đơn, 1.020 đúng hạn", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Nối chặt T→P bằng vế \"cho ai\" lấy nguyên tệp; Q7 đánh đổi sức hút với khả năng giữ lời; Q5 chuyển sang tệp khác cho thấy điểm khác biệt tốt vẫn vô dụng nếu sai tệp.",
+      "upgrade": "Thêm tách tỉ lệ đúng hạn theo khung giờ; thêm phản ví dụ điểm khác biệt đạt cả ba tiêu chí nhưng đối thủ bắt chước trong 2 tháng (tính bền); viết bước làm cho câu định vị (4 vế, 45 chữ, kiểm tra thay tên đối thủ); thêm src."
+    },
+    {
+      "id": "B:kh11-07",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 17, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L4", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ ↔ Bài thực hành", "quote": "trừ hoa hồng 12.500đ và giá vốn 18.000đ còn 19.500đ mỗi hộp", "issue": "Phần đọc tính lãi gộp 19.500đ (không có bao bì), bài thực hành lại cho \"bao bì 3.000đ\" và \"giao 4.000đ/hộp\" nên lãi app là 16.500đ, Zalo 25.000đ; người học đọc hai con số lãi/hộp khác nhau cho cùng tiệm mà không được giải thích.", "fix": "Thêm bao bì 3.000đ vào phần đọc (lãi 16.500đ) hoặc ghi rõ trong bài thực hành rằng số này bổ sung chi phí mới." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì sao giá cũng là hệ quả của định vị, không chỉ của chi phí?", "issue": "Nhận lại ý bài (L2); phương án a về nhà nước định giá là nhiễu yếu.", "fix": "Thay bằng câu tình huống: cho giá cơm vỉa hè 35.000đ và cơm nhà hàng 80.000đ, hỏi mức giá nào báo đúng chỗ đứng \"nhanh, không rẻ nhất\"." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50.000×25% = 12.500; 50.000−12.500−18.000 = 19.500đ (39%) ✓; sai 32.000 (quên hoa hồng), 37.500 (quên giá vốn), 27.500 (hoa hồng tính trên giá vốn) ✓. Bài thực hành: Zalo 50−18−3−4 = 25.000; app 50−12,5−18−3 = 16.500; chênh 8.500 ✓." },
+      "claims": [
+        { "claim": "4P của McCarthy (1960)", "status": "unverified", "note": "Đúng theo lịch sử ngành, không src." },
+        { "claim": "Hoa hồng app 25%, giá vốn 18.000đ", "status": "illustrative-labelled", "note": "Có \"(số minh hoạ)\"; không gán cho app cụ thể." }
+      ],
+      "strengths": "Bài thực hành có đầu ra là bản chiến lược 6 tuần với ngân sách khớp 20 triệu, KPI tuần 3/6, lãi tăng thêm theo nhóm khách và hoàn vốn — đúng mức \"thiết kế\" (L6); câu kiểm \"P này phục vụ tệp nào, giữ lời hứa nào\" dùng được ngay.",
+      "upgrade": "Đồng bộ chi phí bao bì giữa phần đọc và bài thực hành; thay Q6 bằng câu tình huống có giá; thêm phản ví dụ đổi 4P quá tay (cắt còn 8 món làm khách quen đặt tối bỏ đi) để có đánh đổi; thêm src McCarthy."
+    },
+    {
+      "id": "B:kh11-08",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 9, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L4", "L5", "L3", "L4", "L4", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Tình huống", "quote": "khảo sát lúc giao hàng cho thấy chỉ 90 người là dân đi làm mua để ăn sáng", "issue": "Không nói khảo sát được bao nhiêu trong 300 khách; nếu chỉ hỏi được một phần thì 90/300 là ước có sai số, phép tính 666.667đ phụ thuộc giả định này.", "fix": "Ghi \"khảo sát đủ 300 khách\" hoặc nêu tỉ lệ trả lời và cách ngoại suy." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "chạy vào khung 6h–8h sáng", "issue": "Đề xuất sửa brief gắn với khung giờ phát quảng cáo nhưng không nói đo tỉ lệ đúng tệp bằng cách nào mỗi tuần (câu hỏi lúc giao hay form sau mua).", "fix": "Thêm một dòng cách đo: một câu hỏi \"mua để làm gì\" ở bước xác nhận đơn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 60.000.000/90 = 666.667đ ✓ (gấp 3,33 lần 200.000); sai 200.000 = chia 300, 285.714 = chia 210 ✓. Áp dụng: 50 triệu/100 = 500.000đ ✓." },
+      "claims": [
+        { "claim": "Yến mạch 60 triệu, 300 khách, 90 đúng tệp", "status": "illustrative-labelled", "note": "Có \"(số minh hoạ)\"." }
+      ],
+      "strengths": "Bảng bốn dòng đối chiếu (tệp – câu định vị – brief – khách thực tế) là công cụ kiểm trước khi tiêu tiền; Q7 nêu đúng giới hạn so trước/sau không đối chứng và yêu cầu đo tỉ lệ khách đúng tệp.",
+      "upgrade": "Nêu cỡ mẫu và cách đo tỉ lệ đúng tệp hằng tuần; thêm phản ví dụ khi \"đứt\" lại là tín hiệu nên mở tệp mới (210 khách ăn vặt mua lại 3 lần/tháng) để có đánh đổi giữ hay mở tệp; thêm bài thực hành có đầu ra như kh11-07 (viết lại brief một trang)."
+    }
+  ],
+  "module_notes": {
+    "progression": "Chuỗi S (01 thứ tự, 02 cơ sở chia, 03 cửa lọc) → T (04 rộng/hẹp, 05 chấm hấp dẫn) → P (06 câu định vị) → 4P (07) → kiểm chuỗi (08) đi đúng logic và tái dùng tiệm cơm văn phòng ở 06–07 tạo liên tục. Mọi bài có Áp dụng với tiêu chí đạt bằng số và Q7 là câu đánh đổi — điểm mạnh chung. Điểm yếu chung: không bài nào có mục phản ví dụ / đào sâu riêng, mọi trích dẫn Kotler, Smith, Sharp, McCarthy không có src; chỉ kh11-01 không gắn nhãn số minh hoạ.",
+    "overlap": [
+      "kh11-03 (năm cửa lọc) và kh11-05 (chấm hấp dẫn) cùng đánh giá phân khúc bằng lãi so với chi phí làm riêng; bài 05 nên nói rõ 03 là bước lọc trước, 05 là bước xếp hạng sau (hiện chỉ 03 có câu nối).",
+      "kh11-06 Q6 và kh11-01 Q7 cùng kiểm lỗi \"cho ai\" không phải tệp; có thể gộp ý.",
+      "kh11-08 mắt xích (3) P → 4P trùng nội dung kh11-07; bài 08 nên chỉ dẫn sang 07 thay vì giảng lại."
+    ],
+    "gaps": [
+      "Chưa có bài hướng dẫn tự dựng bảng phân khúc từ dữ liệu đơn (gom theo dịp/lợi ích, cỡ mẫu tối thiểu) — module dựa vào kh01 nhưng người học không có bước làm trong module này.",
+      "Chưa có bản đồ định vị so với đối thủ bằng số (giá × tốc độ) để bước P có dữ kiện cạnh tranh, không chỉ lời hứa của đối thủ.",
+      "Chưa có bài về chi phí với tới từng phân khúc (CAC theo tệp) ghép vào công thức hấp dẫn của kh11-05 — Q7 bài 05 nhắc nhưng không dạy.",
+      "Chưa nói khi nào xem lại STP (phân khúc co lại, đối thủ vào) — tần suất rà soát."
+    ],
+    "best_lesson": "B:kh11-05",
+    "weakest_lesson": "B:kh11-01"
+  }
+}

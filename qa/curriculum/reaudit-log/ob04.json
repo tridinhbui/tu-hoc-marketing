@@ -1,0 +1,16 @@
+{
+ "mod": "ob04",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:ob04-01",
+   "where": "Q2 đáp án a",
+   "status": "fixed",
+   "change": "Lời giải a: “Nhóm 45% lớn nhất nhưng chưa rõ…” → “Chưa biết lý do và khả năng kéo lại của nhóm này; phỏng vấn 20 người rẻ hơn mọi bước khác và cho biết nên thử gì.” Lời giải d cùng câu: bỏ “nơi tiền chảy đi nhiều nhất” (mâu thuẫn Q7) → “lại tốn tiền khi chưa biết khách bỏ đi vì hạt cà phê”.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: biện hộ bằng quy mô nhóm trái với khái niệm và Q7 (nhóm sang quán khác lấy lại được gấp hơn 4 lần). Lời giải d có cùng lỗi nên sửa luôn. Khoá vẫn là a."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

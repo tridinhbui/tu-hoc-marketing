@@ -1,0 +1,5 @@
+{ "mod":"tu01", "fixed_at":"2026-11-07", "items":[
+  { "id":"B:tu01-04", "where":"VÍ DỤ", "status":"fixed", "change":"Gắn nhãn “(Số minh hoạ; 20 điểm không phải benchmark…)” và câu “chỉ tách được như vậy khi so trước/sau trên cùng chiến dịch, cùng tuần, không đổi gì khác”; 15% còn lại ghi rõ do bấm không hợp lệ, mã đo bị chặn/từ chối, khác cách đếm.", "key_changed":false, "note":"đã sửa ở lượt trước" },
+  { "id":"B:tu01-09", "where":"KHÁI NIỆM", "status":"fixed", "change":"Thêm src Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 (Cổng thông tin điện tử Chính phủ, vanban.chinhphu.vn), ngày kiểm 2026-11-07, st:'chua'; khái niệm thêm hedge “theo hiểu biết chung tại ngày kiểm… nếu văn bản đã sửa đổi hoặc có nghị định hướng dẫn mới, tin trang chính thức”.", "key_changed":false, "note":"đã sửa ở lượt trước; src trỏ trang tra cứu chung, người kiểm nên thay bằng đường dẫn tới đúng văn bản. Validator cảnh báo concept 187 chữ (không phải lỗi)." }
+ ],
+ "validator":"0 lỗi", "tests":"pass" }

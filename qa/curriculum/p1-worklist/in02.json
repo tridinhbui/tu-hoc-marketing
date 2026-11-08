@@ -1,0 +1,64 @@
+{
+ "mod": "in02",
+ "lessons": [
+  {
+   "id": "B:in02-02",
+   "title": "Vì sao \"Đi để trở về\" giúp Biti's Hunter trẻ lại?",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Tiêu đề",
+     "quote": "Vì sao \"Đi để trở về\" giúp Biti's Hunter trẻ lại?",
+     "issue": "Tiêu đề khẳng định kết quả (thương hiệu đã trẻ lại nhờ chiến dịch) như sự thật, trong khi chính ví dụ thừa nhận không có số nội bộ và Q7 dạy chỉ dựa trên dấu hiệu công khai. Kết quả được gán cho thương hiệu thật mà không nguồn.",
+     "fix": "Đổi tiêu đề thành câu hỏi mở: \"\"Đi để trở về\": một thương hiệu lâu năm có thể trẻ lại bằng câu chuyện nào?\" và ghi trong Tình huống \"bài đọc case từ dấu hiệu công khai, không có số bán hàng\"."
+    },
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Chuỗi \"Đi để trở về\" do Soobin Hoàng Sơn thể hiện bắt đầu từ Tết 2017 rồi được kể tiếp qua nhiều phần.",
+     "issue": "Tên người thật và mốc thời gian nêu như sự thật, không có src và ngày kiểm.",
+     "fix": "Thêm src (trang/kênh chính thức của chiến dịch hoặc bài báo lớn) kèm ngày kiểm, hoặc bỏ mốc năm."
+    }
+   ],
+   "upgrade": "Đổi tiêu đề thành câu hỏi mở và gắn nhãn mọi diễn giải; thêm src cho tên ca sĩ/mốc năm hoặc bỏ; tách Phản ví dụ, thêm Vì sao / Đào sâu (cách đo trẻ lại); thêm một câu L4 đọc hai dòng lượt tìm tên theo tháng (trước/trong/sau) và hỏi tác động có kéo dài không."
+  },
+  {
+   "id": "B:in02-06",
+   "title": "Mixue lan nhanh ở Việt Nam nhờ những gì ai cũng thấy?",
+   "total": 66,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "nền móng là nhượng quyền gắn với cung ứng nội bộ: hệ thống tự cung cấp nguyên liệu cho chủ cửa hàng ở quy mô lớn",
+     "issue": "Khẳng định về mô hình kinh doanh của một công ty thật, nêu như sự thật, không src và không gắn nhãn \"theo thông tin công khai\". Đây là mảnh ghép \"nền móng\" của cả bài nên nếu sai thì kết luận đổi.",
+     "fix": "Thêm src (bài báo lớn hoặc tài liệu nhượng quyền công khai của chuỗi) kèm ngày kiểm, hoặc viết \"theo các bài báo trong nước (xem nguồn)\"."
+    },
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "báo chí trong nước đã đưa tin chuỗi đóng bớt cửa hàng kém hiệu quả",
+     "issue": "Dẫn \"báo chí\" như nguồn nhưng không có link, không ngày, không con số; là một kết quả gán cho thương hiệu thật.",
+     "fix": "Thêm src cụ thể (tên báo, ngày) hoặc bỏ câu này và thay bằng giới hạn chung: \"mở nhanh thường kèm đóng bớt điểm kém\"."
+    }
+   ],
+   "upgrade": "Thêm src cho hai khẳng định về mô hình cung ứng và việc đóng cửa hàng; thêm vế chi phí/chuyển đổi vào ví dụ; thay Q3 bằng câu tính giá vốn theo hai mô hình cung ứng; thêm Vì sao / Phản ví dụ (chuỗi phủ dày nhưng vị không đồng đều → nhận diện phản tác dụng) / Đào sâu (cách đếm độ phủ và tần suất tiếp xúc thật trong một quận)."
+  },
+  {
+   "id": "B:in02-08",
+   "title": "Bánh trung thu Kido: người mua có phải người ăn?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Tình huống",
+     "quote": "Phần lớn hộp được mua để biếu đối tác, người thân, thầy cô.",
+     "issue": "Khẳng định định lượng (\"phần lớn\") về hành vi thị trường nêu như sự thật, không nguồn, không gắn nhãn; chính Q7 của bài chấm phương án \"hầu như ai cũng chỉ để biếu\" là khái quát quá mức — phần đọc tự mâu thuẫn với tiêu chí của quiz.",
+     "fix": "Viết \"một phần đáng kể hộp bánh được mua để biếu (quan sát tại quầy; không có số thị phần công khai)\" hoặc dẫn khảo sát có nguồn."
+    }
+   ],
+   "upgrade": "Sửa \"phần lớn\" thành câu có nhãn hoặc có nguồn; thêm Vì sao / Phản ví dụ (kênh mua lẻ để ăn) / Đào sâu (cách ước tỉ lệ mua biếu bằng quan sát 100 giao dịch tại quầy: số hộp/đơn, có hoá đơn hay không); gắn mã lỗi riêng; thêm một câu L5 chọn giữa đầu tư hộp (+40.000đ/hộp) và giảm giá 5% cho khách doanh nghiệp."
+  }
+ ]
+}

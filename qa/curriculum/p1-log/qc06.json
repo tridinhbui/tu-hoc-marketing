@@ -1,0 +1,96 @@
+{
+ "mod": "qc06",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:qc06-01",
+   "where": "Lỗi hay gặp",
+   "status": "fixed",
+   "change": "Dấu hiệu nhận ra thành “khi tổng chuyển đổi tài khoản lớn hơn số đơn thật (kiểm hành động chuyển đổi trùng, cửa sổ ghi nhận) hoặc khi PMax báo nhiều mà tổng đơn web không tăng”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; đã kiểm lại văn bản hiện tại, không áp lại."
+  },
+  {
+   "id": "B:qc06-02",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "“Kiểu Drive conversions vẫn có tên trong danh sách” → “Danh sách kiểu con này theo tài liệu Google tại ngày kiểm; kiểu Drive conversions có thể vẫn hiện hoặc đã bỏ (kiểm danh sách kiểu con trong tài khoản; nếu màn hình khác, tin trang chính thức)”; thêm src Về chiến dịch Video, các kiểu con (search, st:chua).",
+   "key_changed": false,
+   "note": ""
+  },
+  {
+   "id": "B:qc06-03",
+   "where": "Khái niệm, Ví dụ, Q2, Q3",
+   "status": "needs-human",
+   "change": "Khái niệm: “theo trang trợ giúp Demand Gen tại ngày kiểm… (bội số này có thể đã đổi: kiểm trang chính thức trước khi đặt)”; bước “Ngân sách và giá thầu” thêm “theo trang trợ giúp tại ngày kiểm; kiểm lại bội số”. Giữ số 10× và khoá Q2 (b), Q3 (1800).",
+   "key_changed": false,
+   "note": "Câu hỏi cho người thật: trang “Về chiến dịch Demand Gen” (answer/13695777) hiện khuyến nghị ngân sách ít nhất bao nhiêu lần Target CPA (10× hay 15×), và có nói rõ là ngân sách ngày không? Nếu khác 10×, cập nhật đồng bộ bài 03 (ví dụ, Q2, Q3), 06 (Q2, chia tiền) và 07 (Q3, Q5, ví dụ)."
+  },
+  {
+   "id": "B:qc06-03",
+   "where": "Khái niệm và Q4",
+   "status": "needs-human",
+   "change": "Khái niệm: bỏ Maps khỏi danh sách khẳng định, thêm “(có tài liệu nhắc thêm Maps, chưa xác nhận: kiểm danh sách bề mặt trên trang chính thức)”; bước “Bề mặt hiển thị” tương tự; phương án đúng Q4a bỏ Maps (“YouTube (cả Shorts), Discover, Gmail và mạng hiển thị Google”), lời giải a ghi “theo trang trợ giúp Demand Gen tại ngày kiểm”.",
+   "key_changed": false,
+   "note": "Giữ khoá a; phương án đúng không còn dựa vào chi tiết chưa xác nhận. Câu hỏi cho người thật: Demand Gen có hiển thị trên Google Maps không? Nếu có (có nguồn), có thể thêm lại."
+  },
+  {
+   "id": "B:qc06-04",
+   "where": "Lỗi hay gặp",
+   "status": "fixed",
+   "change": "Dấu hiệu nhận ra thành “khi doanh thu PMax tự báo lớn hơn nhiều phần tăng thêm của tổng doanh thu web”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; đã kiểm lại văn bản hiện tại, không áp lại."
+  },
+  {
+   "id": "B:qc06-06",
+   "where": "Q1",
+   "status": "fixed",
+   "change": "Đề hỏi so với PHẦN TĂNG THÊM của doanh thu web; phương án b thành mệnh đề sai rõ; đáp án c “nền tảng ghi công cả đơn vốn sẽ đến từ Search thương hiệu hay khách quay lại”; Khái niệm nêu đúng cơ chế chia công trong một tài khoản. Lượt này chỉ sửa thêm lời giải c: “tổng tự báo (200 triệu)” (số không có trong ví dụ) → “riêng PMax đã tự báo 140 triệu”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước (đề, phương án, Khái niệm); khoá vẫn là c. Lượt này chỉ chữa con số 200 triệu không suy ra được từ ví dụ."
+  },
+  {
+   "id": "B:qc06-06",
+   "where": "Lỗi hay gặp",
+   "status": "fixed",
+   "change": "Dấu hiệu nhận ra thành “khi tổng tự báo lớn hơn phần tăng thêm của doanh thu web”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; đã kiểm lại văn bản hiện tại, không áp lại."
+  },
+  {
+   "id": "B:qc06-06",
+   "where": "Chia tiền và Q2",
+   "status": "needs-human",
+   "change": "Bước “Chia tiền” ghi “theo bội số ngân sách gấp 10 lần CPA mà bài Demand Gen ghi nhận (kiểm trang chính thức)”; lời giải Q2d “đúng mức 10 lần bài Demand Gen ghi nhận”. Giữ khoá d.",
+   "key_changed": false,
+   "note": "Phụ thuộc câu hỏi bội số ở B:qc06-03; nếu Google nêu 15×, đổi lịch 1,5 triệu/ngày × 10 ngày và lời giải Q2 a/d."
+  },
+  {
+   "id": "B:qc06-06",
+   "where": "Toàn bài",
+   "status": "fixed",
+   "change": "Thêm src Về chiến dịch Demand Gen (answer/13695777) và loại trừ thương hiệu trong Performance Max (search, st:chua); Đào sâu thêm câu “theo tài liệu Google tại ngày kiểm; nếu màn hình khác, tin trang chính thức”.",
+   "key_changed": false,
+   "note": ""
+  },
+  {
+   "id": "B:qc06-07",
+   "where": "Khái niệm, Ví dụ, Q3, Q5",
+   "status": "needs-human",
+   "change": "Khái niệm: “(khuyến nghị ít nhất 10 lần theo trang trợ giúp tại ngày kiểm, xem bài Demand Gen)”; bước giải Q3: “xa mức khuyến nghị 10 lần mà bài Demand Gen ghi nhận”. Giữ đáp án Q3 = 1,6 và khoá Q5 (c).",
+   "key_changed": false,
+   "note": "Phụ thuộc câu hỏi bội số ở B:qc06-03; nếu khác 10×, đổi “2,5 triệu/ngày” ở ví dụ và bước giải Q3."
+  },
+  {
+   "id": "B:qc06-07",
+   "where": "Ví dụ – shop nến",
+   "status": "fixed",
+   "change": "Thêm dữ kiện “năm ngoái tháng này cũng xấp xỉ tháng trước và không có đợt sale” và đổi kết luận thành “ROAS phần tăng thêm gần bằng 0: kết luận tạm, kiểm bằng đợt tắt PMax 2 tuần”.",
+   "key_changed": false,
+   "note": ""
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

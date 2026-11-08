@@ -1,0 +1,35 @@
+{
+ "mod": "kn09",
+ "lessons": [
+  {
+   "id": "B:kn09-01",
+   "title": "Câu chuyện của bạn có đáng thành tin không?",
+   "total": 65,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q4",
+     "quote": "120 hộ ở Lào Cai bán óc chó cao hơn thương lái 15%, có hợp đồng và hộ dân đồng ý trả lời",
+     "issue": "Đáp án đúng là phương án dài nhất, duy nhất có thêm hai bổ ngữ xác minh ('có hợp đồng', 'hộ dân đồng ý trả lời') và lặp lại đúng góc đã khen ở ví dụ; đoán được bằng độ dài và lặp từ.",
+     "fix": "Rút c về cùng độ dài; cho các nhiễu cũng có yếu tố kiểm chứng (ví dụ a: 'doanh thu quý tăng 12%, theo báo cáo đã kiểm toán') để người học phải cân 'gần với độc giả' thay vì 'có kiểm chứng'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm ba phần cấu trúc còn thiếu; (2) thêm bảng chấm góc × yếu tố tin làm công cụ và câu L4 đọc bảng; (3) cân lại độ dài Q4; (4) thêm ràng buộc thực tế: cần gì để góc 'đứng được' (hợp đồng, hộ dân đồng ý, ảnh, số kiểm được) và thời gian chuẩn bị; (5) nối sang kn09-02 (viết góc thành thông cáo) và kn09-03 (gửi đúng phóng viên)."
+  },
+  {
+   "id": "B:kn09-05",
+   "title": "Đây là khủng hoảng loại gì?",
+   "total": 67,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Giới học thuật (Coombs, 2007, lý thuyết SCCT) xếp theo mức trách nhiệm khách gán cho công ty",
+     "issue": "Trích dẫn nghiên cứu có tên và năm nhưng không có `src`; theo thang, khẳng định nghiên cứu cần nguồn bấm được.",
+     "fix": "Thêm src: Coombs, W.T. (2007), 'Protecting Organization Reputations During a Crisis: The Development and Application of Situational Crisis Communication Theory', Corporate Reputation Review 10(3), kèm ngày kiểm."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src SCCT và một dòng về mức trách nhiệm (victim/accidental/preventable) nối với ba loại; (2) thêm 'Phản ví dụ' khủng hoảng lai và 'Đào sâu' về nhóm dữ liệu/pháp lý; (3) đưa bảng phân loại 3 × 4 (loại / đụng gì / hành động đầu / ai nói / sai lầm hay gặp) làm công cụ; (4) nêu điều kiện người phát ngôn; (5) thay Q4 bằng câu đánh đổi mức bồi hoàn."
+  }
+ ]
+}

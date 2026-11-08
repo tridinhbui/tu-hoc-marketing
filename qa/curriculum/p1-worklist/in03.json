@@ -1,0 +1,232 @@
+{
+ "mod": "in03",
+ "lessons": [
+  {
+   "id": "B:in03-01",
+   "title": "Spotify Wrapped: vì sao người dùng tự đi khoe dữ liệu của chính mình?",
+   "total": 61,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm · Q1",
+     "quote": "Điều được biết rộng rãi về Wrapped: Spotify gói thói quen nghe cả năm của từng người thành vài thẻ đẹp",
+     "issue": "Toàn bộ dữ kiện về Spotify (cơ chế thẻ story, nhãn tính cách, 'hàng triệu người tự đăng' ở Q1) nêu như sự thật, không có `src`, không ngày kiểm. 'Được biết rộng rãi' không thay được nguồn.",
+     "fix": "Thêm 1–2 `src` (trang Spotify Newsroom về Wrapped, một bài phân tích có ngày) và ghi rõ năm Wrapped được nhắc tới."
+    },
+    {
+     "sev": "P1",
+     "where": "Q5 · Q7",
+     "quote": "Cứ cuối năm thì làm bản tổng kết · Dùng dữ liệu người dùng càng nhiều càng tốt",
+     "issue": "Phương án sai dùng từ tuyệt đối ('Cứ', 'càng… càng'); phương án đúng là câu duy nhất có cấu trúc hai điều kiện, lặp nguyên văn MANG THEO. Đoán được bằng hình thức, không cần đọc bài.",
+     "fix": "Viết lại phương án sai thành phát biểu có điều kiện nhưng sai vị trí điều kiện (ví dụ: 'Dữ liệu dày là đủ; nhãn bản sắc chỉ là trang trí')."
+    }
+   ],
+   "upgrade": "Thêm src cho case Spotify; thêm Phản ví dụ (nhãn gây xấu hổ / quyền riêng tư) và Đào sâu (chọn nhãn, phễu đo thẻ→đăng→cài); viết lại Q5/Q7 để phương án sai không dùng từ tuyệt đối; nối Q3 tới quyết định có chi phí (CAC); thêm bài thực hành có đầu ra: thiết kế 5 nhãn cho app đọc truyện kèm tiêu chí loại nhãn."
+  },
+  {
+   "id": "B:in03-02",
+   "title": "Dove Real Beauty: khi nào chạm vào nỗi đau thật thì bán được hàng?",
+   "total": 61,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Điều ai cũng biết về Dove Real Beauty: thương hiệu chọn đứng về một quan điểm",
+     "issue": "Case thật không có `src`. Quan trọng hơn: bài dùng Dove làm mẫu của 'thương hiệu phải sống được với quan điểm' mà không nhắc phê phán nổi tiếng rằng tập đoàn mẹ của Dove đồng thời bán sản phẩm làm trắng da — chính mâu thuẫn bài đang cảnh báo. Người học Việt (thị trường 'trắng da') cần biết điều này để không coi Dove là chuẩn tuyệt đối.",
+     "fix": "Thêm src; thêm một đoạn Phản ví dụ: 'Ngay Dove cũng bị soi khi cùng tập đoàn bán dòng làm trắng; bài học: khách soi cả danh mục, không chỉ một thương hiệu' (ghi nhãn cần kiểm chứng/nguồn)."
+    },
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "Cứ nói về vẻ đẹp là phụ nữ sẽ đồng cảm, bất kể thương hiệu bán gì",
+     "issue": "Phương án sai dùng 'Cứ… bất kể'; phương án đúng (a) là câu dài nhất, có cấu trúc 'và'. Đoán được bằng hình thức.",
+     "fix": "Cân độ dài; viết phương án sai có điều kiện nhưng sai (ví dụ: 'Căng thẳng thật là đủ; sản phẩm có nói ngược cũng không sao nếu quảng cáo đủ xúc động')."
+    }
+   ],
+   "upgrade": "Thêm src và phản ví dụ về chính Dove/tập đoàn mẹ; thêm giả định mẫu khảo sát và sai số; thêm Đào sâu về chỉ số đo chiến dịch quan điểm và đánh đổi doanh số dòng làm trắng; viết lại Q5 để không đoán được; thêm câu L5: cho ba câu quan điểm, hỏi câu nào sản phẩm hiện tại 'chống lưng' được."
+  },
+  {
+   "id": "B:in03-03",
+   "title": "Nike \"Just Do It\": vì sao một câu ba chữ sống được hàng chục năm?",
+   "total": 64,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm · Tiêu đề",
+     "quote": "vì sao một câu ba chữ sống được hàng chục năm?",
+     "issue": "Kết quả quy cho Nike ('sống được hàng chục năm', 'dùng được qua rất nhiều chiến dịch') nêu như sự thật, không có src, không năm ra mắt.",
+     "fix": "Thêm src (trang Nike hoặc bài báo có ngày) và ghi năm bắt đầu để người học tự tính tuổi khẩu hiệu."
+    },
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Khẩu hiệu càng ngắn càng tốt, dưới ba chữ mới là lý tưởng · Khẩu hiệu phải dùng tiếng Anh · Khẩu hiệu phải nhắc tên sản phẩm",
+     "issue": "Ba phương án sai đều dùng 'càng/phải'; phương án đúng (d) là câu ba vế dài nhất. Đoán được bằng hình thức.",
+     "fix": "Viết phương án sai thành câu có điều kiện: 'Khẩu hiệu bền khi nói đúng lợi ích sản phẩm nổi nhất và đổi khi lợi ích đổi'."
+    }
+   ],
+   "upgrade": "Thêm src và năm ra mắt; đặt tên lỗi riêng cho Q3 và nói rõ mô hình đơn giản hoá; chuyển Q5 thành Phản ví dụ trong bài, thêm Đào sâu về đo nhận biết khẩu hiệu; cân độ dài phương án Q6; thêm bài thực hành: chấm 12 phương án khẩu hiệu theo 3 tiêu chí (khoảnh khắc / độ ngắn / không cũ theo sản phẩm)."
+  },
+  {
+   "id": "B:in03-04",
+   "title": "Apple \"Think Different\": định vị bằng người khách muốn trở thành?",
+   "total": 59,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm · Q1",
+     "quote": "Điều được biết rộng rãi: \"Think Different\" không nói về cấu hình máy. Nó ca ngợi những người khác thường",
+     "issue": "Case Apple không có src, không năm; Q1 b 'Apple nổi tiếng với giá cao' và Q6 b 'Apple vẫn nói thông số ở nhiều chỗ khác' là khẳng định về thương hiệu thật không nguồn.",
+     "fix": "Thêm src (ví dụ bản lưu quảng cáo và bài phân tích có ngày); ghi năm chiến dịch."
+    },
+    {
+     "sev": "P1",
+     "where": "Q5 · Q6",
+     "quote": "Nên tránh nói về thông số hay giá trong quảng cáo thương hiệu · Thương hiệu cao cấp nên giữ giá cao nhất trong ngành hàng",
+     "issue": "Phương án sai là câu tuyệt đối một vế; phương án đúng (c) là câu hai vế 'có khác biệt thật chống lưng' lặp MANG THEO. Q5 d cũng vậy. Đoán được bằng hình thức.",
+     "fix": "Viết phương án sai dạng hai vế nhưng sai thứ tự ưu tiên (ví dụ: 'Định vị bản ngã trước, rồi tìm khác biệt sản phẩm sau')."
+    }
+   ],
+   "upgrade": "Thêm src/năm cho Apple; thay Q3 bằng câu đọc dữ liệu lý do mua; thêm Phản ví dụ (đối thủ hạ giá) và Đào sâu về khác biệt bền; viết lại phương án sai Q5/Q6 cho không đoán được; thêm bài thực hành: viết câu định vị 'bản ngã + bằng chứng' cho 3 sản phẩm và chấm bằng hai điều kiện."
+  },
+  {
+   "id": "B:in03-05",
+   "title": "Old Spice: làm mới một thương hiệu \"của bố\" bằng sự hài hước?",
+   "total": 62,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm · Q1",
+     "quote": "Chiến dịch được nhớ nhiều nhờ lan truyền trực tuyến và video trả lời bình luận",
+     "issue": "Nhiều dữ kiện về chiến dịch Old Spice (nói với phụ nữ, trả lời bình luận bằng video, lan truyền trực tuyến) và kết quả 'được nhớ nhiều' nêu như sự thật, không src, không năm, không tên chiến dịch đầy đủ ngoài một câu.",
+     "fix": "Thêm src (bản lưu chiến dịch, bài phân tích có ngày) và năm; đổi 'được nhớ nhiều' thành dữ kiện có nguồn hoặc bỏ."
+    },
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "Cứ làm video phi lý là sẽ lan truyền, bất kể thương hiệu là gì · Hài hước hợp hàng giá rẻ; hàng cao cấp nên nghiêm túc",
+     "issue": "Phương án sai dùng 'Cứ… bất kể', 'nên'; phương án đúng (c) lặp cấu trúc ba vế của bài. Đoán được bằng hình thức.",
+     "fix": "Viết phương án sai thành phát biểu có điều kiện nhưng thiếu vế 'đúng người mua'."
+    }
+   ],
+   "upgrade": "Thêm src/năm; đưa rủi ro khách trung thành (Q4) và cách thử 30 người vào bài làm Phản ví dụ / Đào sâu; cho Q3 một mốc so sánh để thành quyết định; sửa nhãn lỗi; viết lại Q5 không dùng từ tuyệt đối."
+  },
+  {
+   "id": "B:in03-06",
+   "title": "Airbnb: bán nỗi sợ ở nhà người lạ hay bán cảm giác thuộc về?",
+   "total": 67,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Airbnb giải bằng các cơ chế niềm tin: hồ sơ chủ nhà có ảnh và giới thiệu, đánh giá hai chiều sau mỗi chuyến, ảnh chụp chỗ ở chất lượng. Về thương hiệu, họ nói về cảm giác \"thuộc về\"",
+     "issue": "Dữ kiện về sản phẩm và định vị Airbnb nêu như sự thật, không src, không năm; thứ tự 'cơ chế trước, cảm xúc sau' được gán cho lịch sử Airbnb mà không có nguồn.",
+     "fix": "Thêm src (trang Trust & Safety của Airbnb, bài về chiến dịch 'Belong Anywhere' có ngày) và ghi năm."
+    },
+    {
+     "sev": "P1",
+     "where": "Q4",
+     "quote": "Tăng 4 điểm phần trăm là quá nhỏ để có ý nghĩa — vì: Từ 5% lên 9% là gần gấp đôi số đặt trên cùng lượng người xem.",
+     "issue": "Lời giải bác lo ngại về ý nghĩa thống kê bằng 'gần gấp đôi' mà đề không cho cỡ mẫu kỳ sau; với 20 lượt đặt ban đầu, nhiễu lớn. Người học bị dạy rằng gấp đôi là đủ, bất kể mẫu.",
+     "fix": "Thêm vào đề: 'trên cùng 400 người xem chi tiết/tuần, trong 4 tuần' và sửa lời giải: 'với 1.600 lượt xem mỗi kỳ, 5%→9% vượt nhiễu mẫu; nếu chỉ 1 tuần thì chưa chắc'."
+    },
+    {
+     "sev": "P1",
+     "where": "Q7",
+     "quote": "Xây cảm xúc thương hiệu quan trọng hơn sửa tính năng sản phẩm · Có nhiều đánh giá tốt là đủ · Ảnh đẹp là yếu tố quyết định",
+     "issue": "Ba phương án sai là câu tuyệt đối một vế ('đủ', 'quyết định', 'quan trọng hơn'); phương án đúng (d) nêu thứ tự hai vế. Đoán được bằng hình thức.",
+     "fix": "Viết phương án sai có hai vế nhưng đảo thứ tự: 'Kể chuyện cảm xúc trước để kéo khách, cơ chế tin bổ sung sau khi có khối lượng'."
+    }
+   ],
+   "upgrade": "Thêm src/năm; thêm ngưỡng chuyển sang cảm xúc và Phản ví dụ phễu rò ở bước khác; sửa Q4 bằng cỡ mẫu và câu về nhiễu; viết lại Q7; thêm bài thực hành: từ bảng phễu 3 tuần, chỉ ra bước rò và chọn 2 cơ chế niềm tin kèm chỉ số đo."
+  },
+  {
+   "id": "B:in03-07",
+   "title": "Duolingo trên TikTok: thương hiệu nghiêm túc có nên \"nhây\" không?",
+   "total": 58,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm · Q1",
+     "quote": "Duolingo dùng linh vật cú xanh trên TikTok với giọng lầy, bắt trend, tự trêu chuyện \"cú đòi nợ bài học\"",
+     "issue": "Case về hành vi thương hiệu trên nền tảng thay đổi nhanh (TikTok) nêu như sự thật hiện tại, không src, không ngày kiểm; Q1 a còn khẳng định về thuật toán ('Thuật toán không ưu tiên linh vật') không nguồn. Theo RUBRIC, lớp 'fast' bắt buộc có src và câu 'nếu màn hình khác, tin trang chính thức'.",
+     "fix": "Thêm src (kênh TikTok chính thức, bài phỏng vấn đội social Duolingo có ngày), ghi 'tính đến tháng/năm'; bỏ hoặc gắn nhãn khẳng định về thuật toán."
+    },
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "Thương hiệu nào cũng nên có linh vật · Đăng càng nhiều video mỗi ngày càng dễ thành công · Bắt trend thật nhanh là cách để thương hiệu được nhớ lâu",
+     "issue": "Phương án sai là câu tuyệt đối ('nào cũng', 'càng… càng'); phương án đúng (b) là câu hai vế lặp MANG THEO. Đoán được bằng hình thức.",
+     "fix": "Viết phương án sai dạng hai vế nhưng thiếu 'gốc thật': 'Nhân vật hợp giọng nền tảng và bắt trend đều mỗi tuần'."
+    }
+   ],
+   "upgrade": "Thêm src với ngày kiểm và câu 'nếu khác, tin trang chính thức'; thay Q3 bằng câu so nhóm có/không nhân vật; cho tiêu chí định lượng khi người mua là phụ huynh; thêm Phản ví dụ/Đào sâu; viết lại Q5."
+  },
+  {
+   "id": "B:in03-08",
+   "title": "IKEA: khi khách tự làm, họ quý sản phẩm hơn?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "các nhà nghiên cứu hành vi dùng tên \"hiệu ứng IKEA\" để chỉ hiện tượng người ta định giá cao hơn thứ mình góp công làm ra",
+     "issue": "Dẫn nghiên cứu hành vi nhưng không nêu tác giả/năm/nguồn; lớp periodic yêu cầu nguồn và ngày kiểm. Điều kiện 'chỉ khi hoàn thành được' là kết quả nghiên cứu nhưng người học không biết dựa vào đâu.",
+     "fix": "Thêm src bài nghiên cứu gốc về IKEA effect (tác giả, năm) và ghi rõ điều kiện hoàn thành lấy từ đó."
+    },
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Để khách làm càng nhiều việc càng tốt · Chỉ ngành nội thất mới áp dụng được",
+     "issue": "Phương án sai dùng 'càng… càng', 'Chỉ… mới'; phương án đúng (a) lặp nguyên văn MANG THEO 'miễn là họ làm thành công'. Đoán được bằng hình thức.",
+     "fix": "Viết phương án sai có điều kiện nhưng sai: 'Công sức làm khách gắn bó hơn, miễn là bộ tự làm rẻ hơn bản làm sẵn'."
+    }
+   ],
+   "upgrade": "Thêm src nghiên cứu; sửa nhãn lỗi Q3 và nối sang chi phí hỗ trợ; viết lại Q6; thêm một câu L5: cho số liệu thử 5 người (3 làm xong, 2 bỏ ở bước đổ sáp) và hỏi nên sửa hướng dẫn hay đổi nguyên liệu, kèm lý do."
+  },
+  {
+   "id": "B:in03-09",
+   "title": "Share a Coke: in tên người lên chai có dùng được cho mọi thương hiệu?",
+   "total": 62,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm · Q1",
+     "quote": "Coca-Cola thay logo trên nhãn bằng các tên phổ biến và, ở một số thị trường, cả những cách gọi thân mật",
+     "issue": "Dữ kiện và kết quả về Share a Coke ('được nhiều người tham gia', 'phủ rộng, không phải phiên bản giới hạn', 'giá không đổi') nêu như sự thật, không src, không năm/thị trường.",
+     "fix": "Thêm src (trang Coca-Cola hoặc bài phân tích có ngày) và ghi thị trường/năm khởi đầu."
+    },
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "Cá nhân hoá càng chính xác càng tốt · Cứ in tên người lên bao bì là doanh số sẽ tăng · Chỉ thương hiệu nước ngọt mới dùng được",
+     "issue": "Ba phương án sai là câu tuyệt đối; phương án đúng (d) là câu hai điều kiện lặp bài. Đoán được bằng hình thức.",
+     "fix": "Viết phương án sai dạng hai vế sai: 'Cá nhân hoá tạo cớ xã hội, và càng nhiều tên càng tốt kể cả khi bỏ logo'."
+    }
+   ],
+   "upgrade": "Thêm src/năm; đưa Q6 thành Phản ví dụ trong bài; thêm Đào sâu về ước độ phủ tên từ CRM và chi phí SKU nhãn; khoá dữ kiện Q7 bằng số lượng in; viết lại Q5."
+  },
+  {
+   "id": "B:in03-10",
+   "title": "McDonald's: sự nhất quán đáng giá bao nhiêu khi mở chuỗi?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "McDonald's cũng được biết là có món riêng theo từng thị trường, chỉ giữ chặt phần làm nên thương hiệu",
+     "issue": "Dữ kiện về McDonald's (quy trình chuẩn hoá, món riêng theo thị trường) nêu như sự thật, không src.",
+     "fix": "Thêm src (trang McDonald's về thực đơn theo quốc gia hoặc bài phân tích vận hành có ngày)."
+    },
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "Chuỗi phải giống nhau từng chi tiết ở các điểm bán · Đồ ăn nhanh mới cần nhất quán, món truyền thống cần tự do",
+     "issue": "Phương án sai là câu tuyệt đối; phương án đúng (c) là câu hai vế 'cốt lõi… linh hoạt' lặp MANG THEO. Đoán được bằng hình thức.",
+     "fix": "Viết phương án sai hai vế nhưng đảo: 'Linh hoạt phần cốt lõi theo tay bếp trưởng; chuẩn hoá phần phục vụ'."
+    }
+   ],
+   "upgrade": "Thêm src; khoá điều kiện so trước–sau và mục tiêu trước trong Q3; viết lại Q5; thêm bài thực hành: lập bảng 'giữ chặt / được khác' cho 8 khâu của một bát bún bò kèm cách đo từng khâu."
+  }
+ ]
+}

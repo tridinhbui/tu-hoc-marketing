@@ -1,0 +1,25 @@
+{
+ "mod": "kn10",
+ "lessons": [
+  {
+   "id": "B:kn10-01",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q7 steps",
+     "quote": "Chia thành năm ý, số người nhớ còn 400.000 mỗi ý, và đó là một ý trong năm chứ không phải năm lần thắng",
+     "issue": "Theo đúng mô hình của câu, 5 ý × 400.000 = 2.000.000 người đạt 3 lần — bằng đúng trường hợp một ý. Phép tính không chứng minh được lợi thế của ý tưởng chung; lợi thế chỉ có khi các ý rơi vào cùng một nhóm người (trùng tệp), điều câu không nêu.",
+     "fix": "Giả định rõ cùng 2 triệu người thấy cả năm ý (mỗi người 3 lượt tổng): một ý → 2 triệu người đủ 3 lần; năm ý → mỗi người chỉ thấy mỗi ý 0,6 lần → gần như không ai đủ 3 lần."
+    },
+    {
+     "sev": "P1",
+     "where": "Q7 stem",
+     "quote": "Một người cần thấy cùng một ý khoảng 3 lần mới bắt đầu nhớ",
+     "issue": "Mốc \"3 lần\" (tần suất hiệu quả) nêu như sự thật, không nguồn, không gắn nhãn minh hoạ — chỉ 6 triệu được gắn nhãn.",
+     "fix": "Ghi \"(giả định minh hoạ, ngưỡng thật tuỳ ngành và định dạng)\"."
+    }
+   ]
+  }
+ ]
+}

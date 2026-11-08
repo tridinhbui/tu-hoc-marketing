@@ -1,0 +1,35 @@
+{
+ "mod": "kh09",
+ "lessons": [
+  {
+   "id": "B:kh09-08",
+   "title": "500 lead rẻ hay 80 lead đúng người?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q2",
+     "quote": "Đo theo hợp đồng, B hiệu quả gấp đôi; tiền nên theo hiệu quả thật.",
+     "issue": "Lời giải mâu thuẫn với PHẢN VÍ DỤ của chính bài ('số hợp đồng quá ít, thêm hay bớt một hai hợp đồng là tỉ lệ nhảy mạnh'): 5 vs 8 hợp đồng sau 3 tháng là mẫu nhỏ, kết luận 'gấp đôi' và 'chuyển phần lớn ngân sách' được nêu như chắc chắn, không kèm chỉ số sớm (25 vs 32 lead đủ điều kiện) mà bài khuyên dùng.",
+     "fix": "Sửa lời giải b: 'cả chi phí/hợp đồng (10 vs 5 triệu) và tỉ lệ lead đủ điều kiện (5% vs 40%) cùng chỉ về B; với 13 hợp đồng còn ít, chuyển dần và theo tiếp 1–2 quý'."
+    }
+   ],
+   "upgrade": "Sửa lời giải Q2 cho khớp phản ví dụ (mẫu nhỏ, dùng chỉ số sớm, chuyển dần). Quy giờ sales ra tiền trong ví dụ. Gắn nhãn số theo kênh. Thêm bảng phễu 2 kênh × 4 bước. Thay 2 câu L2 bằng câu đọc bảng phễu (L4) và câu đánh đổi siết tiêu chí khi sales kêu thiếu lead (L5)."
+  },
+  {
+   "id": "B:kh09-10",
+   "title": "Chạy quảng cáo B2B như bán trà sữa có được không?",
+   "total": 59,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "không ai ký hợp đồng doanh nghiệp trong một ngày",
+     "issue": "Khẳng định tuyệt đối sai với chính ví dụ của bài: phần mềm hoá đơn điện tử 12 triệu/năm bán cho doanh nghiệp nhỏ — chủ doanh nghiệp/kế toán thường tự quyết trong ngày. Bài trộn 'B2B' với 'B2B doanh nghiệp lớn, nhóm mua', không nêu điều kiện (giá trị hợp đồng, số người duyệt) làm khái niệm sai cho phân khúc SMB.",
+     "fix": "Viết lại: 'hợp đồng cần nhiều người duyệt hiếm khi ký trong một ngày; với doanh nghiệp nhỏ một người quyết, công cụ B2C vẫn có chỗ' và thêm tiêu chí phân biệt theo giá trị × số người duyệt."
+    }
+   ],
+   "upgrade": "Sửa khẳng định tuyệt đối thành điều kiện (giá trị × số người duyệt); thêm PHẢN VÍ DỤ về SMB một người quyết nơi khuyến mãi có hạn vẫn hiệu quả; đổi vị trí bài lên đầu module hoặc đổi trọng tâm để không trùng 01/02/08. Hedging so sánh hai chiến dịch khác cửa sổ thời gian. Thay 2 câu L2 bằng câu phân loại sản phẩm B2B theo trục giá trị/số người duyệt (L4)."
+  }
+ ]
+}

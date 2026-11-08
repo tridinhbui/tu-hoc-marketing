@@ -1,0 +1,18 @@
+{
+ "mod": "ob04",
+ "lessons": [
+  {
+   "id": "B:ob04-01",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q2 đáp án a",
+     "quote": "Nhóm 45% lớn nhất nhưng chưa rõ họ thuê trà sữa làm việc gì",
+     "issue": "Đáp án biện hộ bằng quy mô nhóm. Khái niệm lại dặn 'Đừng xếp ưu tiên chỉ theo số khách', và Q7 kết luận nhóm sang quán khác có số tiền lấy lại được gấp hơn 4 lần. Lời giải mâu thuẫn với phần đọc và với Q7.",
+     "fix": "Biện hộ bằng thông tin còn thiếu: 'chưa biết lý do và khả năng kéo lại của nhóm lớn nhất; phỏng vấn rẻ hơn mọi bước khác'. Hoặc cho Q2 dữ kiện tần suất để học viên chọn nhóm theo tiền."
+    }
+   ]
+  }
+ ]
+}

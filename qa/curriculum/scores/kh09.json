@@ -1,0 +1,223 @@
+{
+  "mod": "kh09",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kh09-01",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L3", "L2", "L3", "L3", "L2", "L2"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4", "quote": "Phần mềm cũ tốn 40 triệu/năm, phần mềm mới 30 triệu/năm. Tính trên 3 năm, công ty tiết kiệm bao nhiêu triệu đồng?", "issue": "Phép tính một bước (40×3 − 30×3) không buộc đọc dữ liệu; và 'bảng so chi phí 3 năm' bỏ qua chi phí chuyển đổi (di chuyển dữ liệu, đào tạo, song song hai hệ thống) — chính điều giám đốc tài chính sẽ hỏi và kh09-05 dạy là tổng chi phí sở hữu.", "fix": "Thêm chi phí chuyển đổi một lần (ví dụ 25 triệu) vào đề để tiết kiệm thật = 5 triệu/3 năm, và hỏi 'có đủ thuyết phục CFO không'." },
+        { "sev": "P2", "where": "CÂU HỎI", "quote": "Trưởng phòng IT không ký hợp đồng và cũng không dùng phần mềm kế toán. Vai của họ trong nhóm mua là gì?", "issue": "Q1, Q3, Q6, Q7 đều nhận lại ý bài (L2); không có câu đọc dữ liệu hay đánh đổi dù ĐÀO SÂU nêu đánh đổi 'thêm một vai là thêm một tài liệu'.", "fix": "Thay Q6 bằng câu L5: sales chỉ còn 2 buổi hẹn trong tuần, chọn gặp vai nào trước (IT chặn vs TGĐ duyệt) và vì sao." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "phần mềm cũ tốn 120 triệu, phần mềm mới 90 triệu", "issue": "Số tự đặt không gắn nhãn; ví dụ dừng ở 'ba tài liệu' mà không nói kết quả (hợp đồng có ký không, sau bao lâu).", "fix": "Gắn nhãn minh hoạ; thêm một câu kết quả có hedging." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 40×3 = 120; 30×3 = 90; 120 − 90 = 30 triệu ✓, khớp ví dụ (120/90). Sai định danh 10 (chênh một năm) đúng tên; 25 không rõ lỗi gì." },
+      "claims": [
+        { "claim": "Công ty may Bình Dương 200 người, phần mềm cũ 120 triệu/3 năm", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Có đủ cơ chế → phản ví dụ (công ty nhỏ, một người ba vai, 'để tôi ký luôn') → đào sâu (ưu tiên vai chặn, rủi ro cá nhân, tín hiệu theo dõi); câu hỏi 'còn ai phải gật đầu nữa' là kỹ thuật dùng được ngay.",
+      "upgrade": "Nâng Q4 thành tổng chi phí sở hữu có chi phí chuyển đổi; thay 2 câu L2 bằng câu ưu tiên vai (L5) và câu đọc bản đồ nhóm mua từ ghi chú cuộc gọi (L4). Gắn nhãn số, thêm kết quả ví dụ. Thêm bảng mẫu 'vai · nỗi lo · bằng chứng · ai gửi · khi nào' làm đầu ra của ÁP DỤNG thay cho nói 60 giây."
+    },
+    {
+      "id": "B:kh09-02",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 9, "pedagogy": 8, "assessment": 5, "data": 4, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L2"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Chuỗi có 20 cửa hàng. Bạn đề xuất triển khai thử ở 2 cửa hàng. Phần trăm cửa hàng chịu rủi ro", "issue": "Phép chia một bước (2/20) không có giá trị học; bài về rủi ro cá nhân mà không có phép tính nào về rủi ro (ví dụ: chi phí nếu thí điểm hỏng vs chi phí cả chuỗi).", "fix": "Thay bằng: cả chuỗi 20 cửa hàng × 15 triệu/cửa hàng triển khai; nếu hỏng mất 3 tháng vận hành 8 triệu/cửa hàng/tháng — tính số tiền tối đa mất khi thí điểm 2 cửa hàng so với làm cả chuỗi." },
+        { "sev": "P2", "where": "CÂU HỔI", "quote": "Câu \"không ai bị đuổi việc vì chọn hãng lớn\" nói lên điều gì", "issue": "Q1, Q4, Q6, Q7 nhận lại ý bài (L2), không câu nào đánh đổi dù ĐÀO SÂU nói 'SLA hay thí điểm đều tốn chi phí của bên bán, nên chỉ đưa cho khách đủ điều kiện'.", "fix": "Thêm câu L5: hai khách cùng xin SLA có bồi hoàn và thí điểm miễn phí, ngân sách chỉ đủ một — chọn theo tiêu chí nào." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "cam kết SLA 99,5% thời gian hoạt động kèm bồi hoàn", "issue": "Số tự đặt không gắn nhãn; không nói chi phí của SLA/bồi hoàn với bên bán nên người học không thấy đánh đổi bằng số.", "fix": "Gắn nhãn; thêm 'bồi hoàn tối đa 10% phí tháng' và ước chi phí dự phòng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2/20 = 10% ✓. Sai định danh 2 (số tuyệt đối) đúng; 1000 = 20/2×100 là SAI_MAU_SO ✓. Phép tính quá đơn giản (P2)." },
+      "claims": [
+        { "claim": "\"không ai bị đuổi việc vì chọn hãng lớn\"", "status": "illustrative-labelled", "note": "Được giới thiệu là 'câu nói cũ', không gán nguồn — chấp nhận." },
+        { "claim": "Hãng quốc tế đắt hơn 30%, 12 chuỗi bán lẻ đang dùng, SLA 99,5%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Nêu đúng cơ chế cán cân rủi ro (tiết kiệm thuộc công ty, hậu quả thuộc cá nhân) và ba 'lý do an toàn' mang đi trình được; ÁP DỤNG yêu cầu viết 3 câu người mua dùng với sếp — đầu ra cụ thể.",
+      "upgrade": "Thay Q3 bằng phép tính rủi ro tối đa khi thí điểm vs toàn chuỗi; thêm câu đánh đổi chi phí SLA/thí điểm theo tiêu chí khách đủ điều kiện (L5) và câu đọc câu hỏi của khách để chẩn đoán 'rủi ro đang chặn' (L4). Gắn nhãn số, thêm chi phí SLA cho bên bán. Thêm sơ đồ 'rủi ro cảm nhận = xác suất hỏng × hậu quả cá nhân' và cách mỗi công cụ hạ một vế."
+    },
+    {
+      "id": "B:kh09-03",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 14, "examples": 11, "pedagogy": 6, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L4", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "Chu kỳ dài cần nội dung cho từng chặng, không chỉ một form ở đầu và một cuộc gọi ở cuối.", "issue": "Bài không có PHẢN VÍ DỤ và ĐÀO SÂU như các bài 01, 02, 04 trong module: không nói khi nào gọi ngay là đúng (khách tự xin báo giá, lead inbound nóng), không nói chi phí làm 8 email + webinar hằng tháng + case study bằng người và thời gian.", "fix": "Thêm PHẢN VÍ DỤ: lead đến từ trang 'yêu cầu báo giá' mà bị đẩy vào chuỗi nuôi 12 tuần → mất cho đối thủ. Thêm ĐÀO SÂU: ước giờ công nội dung, điểm hành vi để bàn giao, đánh đổi nuôi lâu vs tốc độ." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Sau một quý, nhóm nuôi có 75 lead xin khảo sát mái (30%), nhóm gọi ngay chỉ 18 (12%).", "issue": "Thiết kế chia ngẫu nhiên tốt nhưng không nói chênh lệch có đủ lớn để tin không với 250/150 lead; cũng không đo tới hợp đồng (khảo sát mái chưa phải ký).", "fix": "Thêm một câu: 'với cỡ mẫu này, chênh 18 điểm là rõ; nhưng khảo sát ≠ hợp đồng — theo tiếp tỉ lệ ký sau 6 tháng'." },
+        { "sev": "P2", "where": "Q7", "quote": "Lượt mở email dễ bị thổi phồng (một số ứng dụng thư tự tải trước)", "issue": "Khẳng định kỹ thuật đúng (Apple Mail Privacy Protection) nhưng không nguồn; thuộc lớp fast.", "fix": "Dẫn tài liệu Apple/ESP về mở email tự động với ngày kiểm." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 75/250 = 30%; 18/150 = 12%; chênh 18 điểm % ✓. Bước 2 nhắc 'chia ngẫu nhiên nên chênh này mới đọc được là tác dụng' — đúng. Sai định danh 150 (tăng tương đối 0,18/0,12) và 57 (75−18) đúng tên." },
+      "claims": [
+        { "claim": "Lượt mở email bị thổi phồng do ứng dụng thư tự tải trước", "status": "unverified", "note": "Đúng về kỹ thuật (Apple MPP) nhưng không dẫn nguồn." },
+        { "claim": "400 lead chia ngẫu nhiên 250/150; 30% vs 12% xin khảo sát", "status": "illustrative-labelled", "note": "Bài ghi 'Số minh hoạ'." }
+      ],
+      "strengths": "Ví dụ gắn nhãn minh hoạ và có thiết kế chia ngẫu nhiên — hiếm trong batch; Q7 (A xem trang giá hai lần / B mở 8 email / C vừa tải bài) là câu chẩn đoán từ dữ liệu hành vi thật sự, lời giải phương án sai nêu đúng hiểu lầm (mở email ≠ ý định).",
+      "upgrade": "Thêm PHẢN VÍ DỤ (lead inbound nóng bị nuôi quá lâu) và ĐÀO SÂU (giờ công nội dung, điểm hành vi, đo tới hợp đồng). Thêm bảng 'chặng · câu hỏi của khách · nội dung · tín hiệu chuyển chặng'. Dẫn nguồn cho khẳng định về mở email. Thêm câu L6: thiết kế quy tắc chấm điểm lead 0–10 từ 4 hành vi."
+    },
+    {
+      "id": "B:kh09-04",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 8, "pedagogy": 8, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L4", "L2", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Thiệt hại giảm từ 600 triệu xuống 150 triệu.", "issue": "Case study nêu lợi ích 450 triệu nhưng không nêu chi phí hợp đồng bảo trì — giám đốc nhà máy sẽ hỏi lợi ích ròng; và gán toàn bộ giảm sự cố cho bảo trì (máy mới hơn, tải thấp hơn cũng có thể góp phần) không hedging.", "fix": "Thêm 'phí bảo trì 120 triệu/năm → lợi ích ròng 330 triệu' và một câu về yếu tố khác có thể góp phần." },
+        { "sev": "P2", "where": "Q3", "quote": "Thiệt hại mỗi năm giảm bao nhiêu triệu đồng?", "issue": "Phép tính hai bước chỉ nhân trừ; không buộc so với chi phí dịch vụ (ROI) — đúng chỗ case study B2B cần.", "fix": "Thêm phí bảo trì vào đề, hỏi lợi ích ròng hoặc thời gian hoàn vốn." },
+        { "sev": "P2", "where": "CÂU HỔI", "quote": "Yếu tố nào làm một case study B2B đáng tin nhất?", "issue": "Q1, Q4, Q6 nhận lại ý bài (L2); Q6 trùng ý Q1/Q2.", "fix": "Thay Q6 bằng câu L4: cho 3 bản case study rút gọn, chỉ ra bản nào thiếu phần nào (ai/trước/sau/khó khăn)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "máy nén dừng đột ngột 12 lần/năm, mỗi lần mất khoảng 50 triệu", "issue": "Số tự đặt không gắn nhãn.", "fix": "Gắn nhãn minh hoạ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 12×50 = 600; 3×50 = 150; 600 − 150 = 450 triệu ✓. Sai định danh 9 (12−3 lần) và 150 (lấy thiệt hại còn lại) đúng tên." },
+      "claims": [
+        { "claim": "Nhà máy nhựa 300 công nhân, 12 → 3 lần dừng máy, 50 triệu/lần", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ về 'sai mức giống nhau' (case nhựa cho nhà máy thực phẩm) và Q5 (dùng case khác ngành bằng cách nhấn điểm chung) dạy đúng cách chuyển bằng chứng; ĐÀO SÂU nêu đánh đổi thật (khách chịu đứng tên không dễ có).",
+      "upgrade": "Thêm chi phí dịch vụ vào ví dụ và Q3 để case nói lợi ích ròng/hoàn vốn; hedging nguyên nhân. Gắn nhãn số. Thay Q6 bằng câu chẩn đoán 3 bản case. Thêm mẫu 1 trang case study (ai · trước · sau · vì sao · khó khăn · người đứng tên · ngày) làm đầu ra của ÁP DỤNG. Nối rõ tới kh09-02 (rủi ro cá nhân) và kh08-04 (testimonial)."
+    },
+    {
+      "id": "B:kh09-05",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 16, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L3", "L5", "L4", "L2", "L3", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Hạ giá chỉ đáng khi nó nâng xác suất thắng đủ bù phần lãi mất", "issue": "Quy tắc kỳ vọng bỏ qua một đánh đổi B2B hay gặp: hợp đồng 1.500 suất/ngày có thể đáng thắng ở lãi mỏng để phủ chi phí cố định/giữ công suất, hoặc để có khách tham chiếu — bài không nêu khi nào quy tắc này không áp dụng.", "fix": "Thêm PHẢN VÍ DỤ: bếp đang chạy 50% công suất, chi phí cố định lớn → lãi biên 500đ/suất vẫn hơn để trống; nêu dấu hiệu nhận ra." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "thắng chắc 90% ở 27.500", "issue": "Xác suất thắng 90% và 60% là ước đoán; bài không nói ước từ đâu (lịch sử thầu, số đối thủ) hay độ nhạy khi ước sai.", "fix": "Thêm câu: 'xác suất lấy từ tỉ lệ thắng các gói thầu trước ở từng mức giá; thử ±15% xem kết luận có đổi'." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Trong B2B, giá không chỉ là con số trên đơn vị.", "issue": "Đoạn khái niệm dài, trộn ba ý (tổng chi phí sở hữu, quy tắc kỳ vọng, điều kiện cách chấm) không tách đoạn — khó theo dõi.", "fix": "Tách thành 3 câu/ý có đánh số hoặc chuyển quy tắc kỳ vọng xuống LÀM TỪNG BƯỚC." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 60% × 1.000 × 39.000 = 23,4 triệu; 3.000 × 39.000 = 117 triệu; 23,4/117 = 20% ✓. Ví dụ tự khớp: 1.500 × 26 ngày = 39.000; 117 triệu; 19,5 triệu; 90% × 19,5 = 17,55; 17,55/117 = 15% ✓; 3.000/500 = 6 lần ✓. Sai định danh 60 (lấy nguyên xác suất) hợp lý; 33,3 (=1.000/3.000) hợp lý." },
+      "claims": [
+        { "claim": "Khu công nghiệp Bắc Ninh 1.500 suất/ngày, đối thủ 28.000đ, lãi 3.000đ/suất", "status": "illustrative-labelled", "note": "Bài ghi 'Số liệu minh hoạ'." }
+      ],
+      "strengths": "Bài duy nhất trong batch cho người học một quy tắc quyết định định lượng (xác suất hoà vốn = kỳ vọng phương án giảm giá ÷ lãi phương án giữ giá) với mọi số tự khớp và điều kiện áp dụng rõ (chấm theo giá hay điểm tổng hợp); Q2 đặt câu hỏi đúng trước khi chốt giá, Q3 là phép tính kỳ vọng thật (L4).",
+      "upgrade": "Thêm PHẢN VÍ DỤ về công suất/chi phí cố định và ĐÀO SÂU về nguồn ước xác suất thắng và độ nhạy. Tách đoạn khái niệm. Thêm bảng 2 phương án × (lãi nếu thắng · xác suất · kỳ vọng). Thêm câu L6: thiết kế hai phương án chào (giá A kèm cam kết X; giá B không cam kết) và tiêu chí chọn theo cách chấm hồ sơ. Nhắc Luật Đấu thầu chỉ áp dụng cho bên mua công — tư nhân tự đặt tiêu chí."
+    },
+    {
+      "id": "B:kh09-06",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 14, "examples": 8, "pedagogy": 6, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 66,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Chi phí thêm là 2 chuyên viên, nhưng doanh thu mới gấp ba.", "issue": "Không có giá gói nên không kiểm được 'gấp ba' có bù 2 chuyên viên không; 20 hợp đồng thêm/tháng × giá ? so với lương 2 người — đúng phép tính người quản lý cần.", "fix": "Thêm giá gói (ví dụ 2 triệu/tháng) và lương 2 chuyên viên (30 triệu/tháng) → lợi ích ròng tháng đầu và sau 12 tháng." },
+        { "sev": "P2", "where": "Q3", "quote": "Tỉ lệ chuyển đổi từ dùng thử sang trả tiền là bao nhiêu phần trăm?", "issue": "Phép chia một bước (30/200) đã có sẵn trong ví dụ (15%) — người học chép lại.", "fix": "Đổi thành bài toán hoàn vốn: 2 chuyên viên 30 triệu/tháng, thêm 20 hợp đồng × 2 triệu/tháng — sau bao nhiêu tháng chi phí được bù." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "Demo thì hợp khi nhóm mua cần thấy tổng thể trước khi bỏ công dùng thử.", "issue": "Không có PHẢN VÍ DỤ/ĐÀO SÂU: không nói khi nào dùng thử có hướng dẫn thất bại (khách không có file dữ liệu, dữ liệu nhạy cảm không gửi được), không nói giới hạn mở rộng (2 người gọi 200 công ty/tháng = 10 cuộc/ngày).", "fix": "Thêm PHẢN VÍ DỤ về khách không chịu gửi dữ liệu và ĐÀO SÂU về khả năng mở rộng + tự động hoá nhập liệu." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "200 công ty đăng ký mỗi tháng, nhưng chỉ 10 công ty trả tiền", "issue": "Số tự đặt không gắn nhãn (dù ví dụ đã hedging 'so tháng trước – tháng sau, chưa có đối chứng').", "fix": "Gắn nhãn minh hoạ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30/200 = 15% ✓; 10/200 = 5% ✓ khớp ví dụ. Sai định danh 666,7 (200/30) và 30 đúng tên. Q4 (5% → 15% = 10 điểm %, gấp 3 = +200%) đúng." },
+      "claims": [
+        { "claim": "Dùng thử có hướng dẫn thường chuyển đổi tốt hơn dùng thử tự do", "status": "illustrative-labelled", "note": "Bài tự ghi 'theo kinh nghiệm phổ biến trong ngành... cần tự thử' — hedging đúng." },
+        { "claim": "200 đăng ký/tháng, 10 → 30 trả tiền, 30% → 75% nhập xong dữ liệu", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Khái niệm 'khoảnh khắc thấy giá trị' gắn với một chỉ số theo dõi hằng ngày cụ thể (tỉ lệ nhập xong dữ liệu); Q4 dạy đúng điểm phần trăm vs phần trăm với lời giải phân biệt 'gấp 3 = tăng 200%'; ví dụ tự hedging và đề nghị chia nửa để kiểm.",
+      "upgrade": "Thêm giá gói và chi phí nhân sự để tính lợi ích ròng/hoàn vốn (thay Q3). Thêm PHẢN VÍ DỤ (khách không gửi dữ liệu) và ĐÀO SÂU (giới hạn mở rộng, tự động hoá). Gắn nhãn số. Thêm câu L5: chọn giữa thuê thêm chuyên viên hay xây công cụ nhập tự động theo số đăng ký/tháng."
+    },
+    {
+      "id": "B:kh09-07",
+      "scores": { "accuracy": 13, "depth": 8, "practical": 14, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "Công ty cần biến quan hệ cá nhân thành quan hệ tổ chức", "issue": "Không có PHẢN VÍ DỤ/ĐÀO SÂU: không nói mặt trái của 'hai đầu mối' (khách khó chịu vì phải quen hai người, chi phí nhân sự gấp đôi cho khách nhỏ), không nói gì về thoả thuận bảo mật/không lôi kéo khách và cách thiết kế hoa hồng để sales không giữ khách làm của riêng.", "fix": "Thêm PHẢN VÍ DỤ: áp 'hai đầu mối' cho cả 100 khách nhỏ → chi phí tăng, khách lớn vẫn mất. Thêm ĐÀO SÂU về điều khoản hợp đồng lao động, hoa hồng theo đội." },
+        { "sev": "P2", "where": "Q2", "quote": "Rủi ro mất bằng giá trị nhân thời điểm", "issue": "Tiêu chí ưu tiên 'giá trị × thời điểm' chỉ xuất hiện trong lời giải, không có trong phần đọc — người học không được dạy trước khi bị hỏi.", "fix": "Đưa quy tắc ưu tiên này vào KHÁI NIỆM hoặc ĐÀO SÂU kèm bảng xếp hạng 15 bệnh viện." },
+        { "sev": "P2", "where": "CÂU HỔI", "quote": "Báo cáo quý gửi khách mang logo công ty, không chỉ chữ ký cá nhân, nhằm mục đích gì?", "issue": "Q4, Q6, Q7 nhận lại ý bài (L2–L3); Q6 phương án sai quá yếu ('để khách không biết ai đang phụ trách').", "fix": "Thay Q6 bằng câu L4: cho bảng 15 bệnh viện (doanh thu, ngày hết hạn, số đầu mối), xếp 6 nơi gặp trước." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (40 − 10)/40 = 75% ✓; theo số khách 12/15 = 80% — bước giải nêu đúng vì sao hai con số lệch. Khớp tình huống: 15 bệnh viện = 40% doanh thu, mất 10/40 nhóm = 10% doanh thu công ty ✓. Sai định danh 80 và 25 đúng tên." },
+      "claims": [
+        { "claim": "Nhóm 15 bệnh viện 40 tỉ/năm, mất 3 nơi 10 tỉ", "status": "illustrative-labelled", "note": "Bài ghi 'số minh hoạ'." }
+      ],
+      "strengths": "Q2 là câu ưu tiên dưới ràng buộc (chỉ gặp được 6/15) với lời giải phân tích từng tiêu chí — câu L5 tốt; Q3 dạy đo giữ chân theo doanh thu thay vì số khách, nêu rõ con số 80% 'che mất' khách lớn.",
+      "upgrade": "Đưa quy tắc 'giá trị × thời điểm' vào phần đọc kèm bảng 15 bệnh viện; thêm PHẢN VÍ DỤ (áp hai đầu mối cho mọi khách) và ĐÀO SÂU (điều khoản không lôi kéo khách, hoa hồng đội, CRM). Thay Q6 bằng câu đọc bảng. Gắn nhãn số đã có — giữ."
+    },
+    {
+      "id": "B:kh09-08",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 9, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L3"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q2", "quote": "Đo theo hợp đồng, B hiệu quả gấp đôi; tiền nên theo hiệu quả thật.", "issue": "Lời giải mâu thuẫn với PHẢN VÍ DỤ của chính bài ('số hợp đồng quá ít, thêm hay bớt một hai hợp đồng là tỉ lệ nhảy mạnh'): 5 vs 8 hợp đồng sau 3 tháng là mẫu nhỏ, kết luận 'gấp đôi' và 'chuyển phần lớn ngân sách' được nêu như chắc chắn, không kèm chỉ số sớm (25 vs 32 lead đủ điều kiện) mà bài khuyên dùng.", "fix": "Sửa lời giải b: 'cả chi phí/hợp đồng (10 vs 5 triệu) và tỉ lệ lead đủ điều kiện (5% vs 40%) cùng chỉ về B; với 13 hợp đồng còn ít, chuyển dần và theo tiếp 1–2 quý'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Chưa kể sales mất gần 100 giờ gọi 475 lead không đủ điều kiện của A.", "issue": "Chi phí giờ sales không được quy ra tiền dù khái niệm nói 'làm chi phí thật cao hơn' — thiếu bước để chi phí/hợp đồng thật của A lớn hơn 10 triệu.", "fix": "Thêm: 100 giờ × 150.000đ/giờ = 15 triệu → chi phí thật A = 65 triệu/5 = 13 triệu/hợp đồng." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Chiến dịch A trên Facebook tạo 500 lead, chi phí 50 triệu. Chiến dịch B trên LinkedIn tạo 80 lead, chi phí 40 triệu.", "issue": "Nêu tên hai nền tảng với chi phí/lead cụ thể (100 nghìn vs 500 nghìn) không gắn nhãn minh hoạ — dễ bị đọc như benchmark giá kênh.", "fix": "Gắn nhãn 'số minh hoạ, không phải giá chuẩn của kênh'." },
+        { "sev": "P2", "where": "CÂU HỔI", "quote": "Vì sao marketing và sales phải thống nhất định nghĩa \"lead đủ điều kiện\" trước?", "issue": "Q1, Q4, Q6, Q7 nhận lại ý bài; không câu nào buộc tính tỉ lệ đủ điều kiện theo kênh hay đọc bảng.", "fix": "Thay Q6 bằng câu L4: cho bảng 3 kênh × (lead, đủ điều kiện, hẹn demo, hợp đồng), chỉ ra kênh nào nên tăng khi hợp đồng còn ít." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50/5 = 10; 40/8 = 5; chênh 5 triệu ✓. Khớp ví dụ (100 nghìn vs 500 nghìn/lead; 10 vs 5 triệu/hợp đồng). Sai định danh 0,4 (chênh chi phí/lead theo triệu) và 10 (lấy số của A) hợp lý." },
+      "claims": [
+        { "claim": "Facebook 100 nghìn/lead vs LinkedIn 500 nghìn/lead cho phần mềm nhân sự", "status": "illustrative-unlabelled", "note": "Có tên nền tảng, không nhãn — dễ bị hiểu là benchmark." }
+      ],
+      "strengths": "Đo tới hợp đồng, có định nghĩa lead đủ điều kiện đo được từ form, có PHẢN VÍ DỤ về mẫu hợp đồng nhỏ và ĐÀO SÂU về đánh đổi siết lọc — khung đầy đủ; ÁP DỤNG đòi viết định nghĩa lead đủ điều kiện (đầu ra cụ thể).",
+      "upgrade": "Sửa lời giải Q2 cho khớp phản ví dụ (mẫu nhỏ, dùng chỉ số sớm, chuyển dần). Quy giờ sales ra tiền trong ví dụ. Gắn nhãn số theo kênh. Thêm bảng phễu 2 kênh × 4 bước. Thay 2 câu L2 bằng câu đọc bảng phễu (L4) và câu đánh đổi siết tiêu chí khi sales kêu thiếu lead (L5)."
+    },
+    {
+      "id": "B:kh09-09",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 9, "pedagogy": 8, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L2", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Có 200 khách, năm sau chỉ 30 khách không gia hạn. Tỉ lệ gia hạn là bao nhiêu phần trăm?", "issue": "Phép tính một bước, kết quả (85%) đã nằm trong ví dụ; Q7 mới là câu đọc số thật nhưng vẫn lặp lại cùng con số.", "fix": "Thay Q3 bằng: 200 khách × 24 triệu/năm; giữ thêm 20 hợp đồng so với chi phí tìm khách mới 15 triệu/khách — tính giá trị giữ thêm và so với chi phí đội chăm sóc thêm 1 người." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Năm sau, số khách không gia hạn giảm từ 50 xuống 30 trên 200 khách.", "issue": "Số tự đặt không gắn nhãn (có hedging về giá, đối thủ, ngành và đề nghị giữ nhóm đối chứng — tốt).", "fix": "Gắn nhãn minh hoạ." },
+        { "sev": "P2", "where": "Q4", "quote": "Số người dùng thật giảm mạnh trong 2 tháng", "issue": "Phương án a 'gọi hỗ trợ nhiều lần' bị gạt với lý do 'đôi khi là dấu hiệu đang dùng tích cực' — nhưng phần đọc liệt kê 'số lần gọi hỗ trợ' là tín hiệu sức khoẻ không nói chiều nào; người học đọc xong không biết đọc tín hiệu này thế nào.", "fix": "Trong KHÁI NIỆM ghi rõ: gọi hỗ trợ tăng kèm người dùng tăng = tốt; gọi hỗ trợ tăng kèm người dùng giảm = xấu." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (200 − 30)/200 = 85% ✓; 50/200 → 75% ✓; 170 − 150 = 20 hợp đồng ✓ (Q7); rời bỏ 25% → 15% ✓. Sai định danh 15 (tỉ lệ rời) và 30 đúng tên." },
+      "claims": [
+        { "claim": "Phần mềm nhà hàng 200 khách, 50 → 30 không gia hạn; chốt ca 45 → 15 phút", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Tín hiệu sức khoẻ đi trước (người dùng thật, số chức năng, hỗ trợ) và buổi tổng kết giá trị 90 ngày với cả người duyệt ngân sách là quy trình cụ thể; PHẢN VÍ DỤ (ngân sách bị cắt dù giá trị đẹp) và Q7 phân biệt điểm % vs % đúng.",
+      "upgrade": "Thay Q3 bằng bài toán giá trị giữ chân vs chi phí tìm mới; làm rõ cách đọc tín hiệu 'gọi hỗ trợ'. Gắn nhãn số. Thêm bảng 'tín hiệu · ngưỡng · hành động · ai làm'. Thêm câu L5: đội 2 người, 60 khách còn 90 ngày — chọn 10 khách gặp theo tiêu chí nào (giá trị × tín hiệu yếu)."
+    },
+    {
+      "id": "B:kh09-10",
+      "scores": { "accuracy": 11, "depth": 7, "practical": 12, "examples": 10, "pedagogy": 5, "assessment": 5, "data": 5, "clarity": 4 },
+      "total": 59,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L2"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "không ai ký hợp đồng doanh nghiệp trong một ngày", "issue": "Khẳng định tuyệt đối sai với chính ví dụ của bài: phần mềm hoá đơn điện tử 12 triệu/năm bán cho doanh nghiệp nhỏ — chủ doanh nghiệp/kế toán thường tự quyết trong ngày. Bài trộn 'B2B' với 'B2B doanh nghiệp lớn, nhóm mua', không nêu điều kiện (giá trị hợp đồng, số người duyệt) làm khái niệm sai cho phân khúc SMB.", "fix": "Viết lại: 'hợp đồng cần nhiều người duyệt hiếm khi ký trong một ngày; với doanh nghiệp nhỏ một người quyết, công cụ B2C vẫn có chỗ' và thêm tiêu chí phân biệt theo giá trị × số người duyệt." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "B2B mua bằng nhóm, bằng bằng chứng và theo thời gian dài", "issue": "Bài là bản tóm tắt kh09-01, 02, 08 (nhóm mua, rủi ro cá nhân, đo tới hợp đồng) đặt ở cuối module; không có PHẢN VÍ DỤ/ĐÀO SÂU; không thêm khái niệm mới.", "fix": "Chuyển thành bài mở module (01) với vai trò định hướng, hoặc đổi trọng tâm sang 'B2B cho doanh nghiệp nhỏ: khi nào dùng công cụ B2C' làm phản ví dụ cho cả module." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Chiến dịch TikTok cũ tốn 60 triệu cho 3 hợp đồng.", "issue": "So 2 tháng TikTok với 1 quý nội dung, khác thời điểm, khác độ dài theo dõi (phần mềm cần 2–3 tháng để ký nên 3 hợp đồng của TikTok có thể chưa đếm hết) — không hedging.", "fix": "Thêm: 'TikTok chỉ theo 2 tháng, có thể còn hợp đồng chưa ký; so bằng cùng cửa sổ 90 ngày'." },
+        { "sev": "P2", "where": "CÂU HỎI", "quote": "Điều gì trong B2B khiến giá trị trọn đời của một khách thường cao hơn B2C?", "issue": "Q1, Q4, Q6, Q7 là nhận lại ý bài; Q7 hỏi khái niệm LTV chưa được dạy trong bài.", "fix": "Thay Q7 bằng câu L4: cho 2 sản phẩm B2B (hoá đơn điện tử 12 triệu, ERP 600 triệu) chọn kênh/khuyến mãi phù hợp từng cái." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 60/3 = 20; 90/18 = 5; chênh 15 triệu ✓; bước 2 nhắc tổng chi tăng 30 triệu nhưng chi phí/hợp đồng giảm — tốt. Sai định danh 30 (chênh tổng chi) và 5 đúng tên." },
+      "claims": [
+        { "claim": "TikTok 300.000 lượt xem → 3 hợp đồng; nội dung 15.000 lượt xem → 240 lead → 18 hợp đồng", "status": "illustrative-labelled", "note": "Bài ghi 'Số minh hoạ'." }
+      ],
+      "strengths": "Tình huống 'người làm B2C chuyển sang B2B' đời thật; ví dụ gắn nhãn minh hoạ và Q3 nêu đúng điểm 'tổng chi tăng nhưng chi phí/hợp đồng giảm'.",
+      "upgrade": "Sửa khẳng định tuyệt đối thành điều kiện (giá trị × số người duyệt); thêm PHẢN VÍ DỤ về SMB một người quyết nơi khuyến mãi có hạn vẫn hiệu quả; đổi vị trí bài lên đầu module hoặc đổi trọng tâm để không trùng 01/02/08. Hedging so sánh hai chiến dịch khác cửa sổ thời gian. Thay 2 câu L2 bằng câu phân loại sản phẩm B2B theo trục giá trị/số người duyệt (L4)."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý: nhóm mua (01) → rủi ro cá nhân (02) → chu kỳ dài & nuôi dưỡng (03) → bằng chứng (04) → giá & tổng chi phí sở hữu (05) → dùng thử (06) → quan hệ gắn với công ty (07) → đo lead tới hợp đồng (08) → gia hạn (09) → tóm tắt B2B vs B2C (10). Nửa đầu đi theo hành trình mua, nửa sau theo vòng đời khách — mạch rõ. Điểm lệch: bài 10 là bản tóm tắt nên hợp làm bài mở hơn bài đóng; 5/10 bài (03, 05, 06, 07, 10) thiếu PHẢN VÍ DỤ/ĐÀO SÂU trong khi 01, 02, 04, 08, 09 có đủ — chất lượng cấu trúc không đồng đều. 7/10 câu calc là phép chia một bước có đáp án sẵn trong ví dụ.",
+    "overlap": [
+      "kh09-02 và kh09-04 cùng dạy 'bằng chứng giảm rủi ro cá nhân' (khách tương tự, case study) — 04 có thể tập trung hẳn vào cách viết case, bỏ phần cơ chế đã có ở 02.",
+      "kh09-10 lặp lại nội dung 01 (nhóm mua), 02 (cảm giác an tâm), 08 (đo lead đủ điều kiện và hợp đồng thay lượt thích).",
+      "kh09-03 và kh09-08 cùng bàn chuyển lead cho sales theo tín hiệu/tiêu chí — nên dẫn chéo thay vì mỗi bài định nghĩa lại.",
+      "kh09-01 và kh09-09 cùng ý 'phải gặp người duyệt ngân sách, không chỉ người dùng'."
+    ],
+    "gaps": [
+      "Chưa có bài định nghĩa khách mục tiêu B2B (ICP: ngành, quy mô, tín hiệu nhu cầu) trước khi chạy chiến dịch — 08 giả định đã có.",
+      "Chưa có bài về phễu/pipeline B2B với tỉ lệ chuyển từng bước và cách dự báo (lead → đủ điều kiện → hẹn → báo giá → ký), dù 03, 06, 08 đều cần nó.",
+      "Thiếu kinh tế đơn vị B2B: CAC, thời gian hoàn vốn CAC, giá trị trọn đời — Q7 bài 10 hỏi LTV nhưng không bài nào dạy.",
+      "Thiếu bài về mua sắm công/đấu thầu (Luật Đấu thầu 2023) khi khách là cơ quan nhà nước, bệnh viện công — 05 chỉ nói thầu tư nhân, 07 bán cho bệnh viện tư.",
+      "Không bài nào có `src`; mọi số đều tự đặt — cần ít nhất một benchmark B2B có nguồn (chu kỳ bán trung bình, tỉ lệ dùng thử → trả tiền) với ngày kiểm."
+    ],
+    "best_lesson": "B:kh09-05",
+    "weakest_lesson": "B:kh09-10"
+  }
+}

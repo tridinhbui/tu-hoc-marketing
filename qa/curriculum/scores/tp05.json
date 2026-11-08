@@ -1,0 +1,172 @@
+{
+  "mod": "tp05",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:tp05-01",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 6, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "concept", "quote": "Price premium là một thước đo tài sản thương hiệu trong mô hình của David Aaker; Kevin Keller đo thêm nhận biết và liên tưởng, còn Ehrenberg-Bass nhấn mạnh độ phủ và mức dễ được nhớ tới", "issue": "Ba trường phái thật được nêu đúng ở mức khái quát nhưng không có src nào; người học không có đường đọc tiếp và không có ngày kiểm.", "fix": "Thêm src: Aaker, Managing Brand Equity / Brand Equity Ten; Keller, Strategic Brand Management; Sharp & Romaniuk (Ehrenberg-Bass), How Brands Grow." },
+        { "sev": "P2", "where": "example", "quote": "Vậy thương hiệu mang lại khoảng 15.000đ × 40.000 = 600 triệu đồng doanh thu thêm mỗi năm so với việc bán như hàng không tên.", "issue": "Phép tính đúng nhưng ngầm giả định nếu bán ở 50.000đ vẫn bán đúng 40.000 chai (không tăng lượng), và không trừ phần chênh có thể do bao bì/kênh phân phối; không gắn nhãn 'ước lượng thô'.", "fix": "Thêm 'ước lượng thô, giả định sản lượng không đổi và cùng kênh' và nhắc rằng đây là doanh thu, chưa trừ chi phí xây thương hiệu." },
+        { "sev": "P2", "where": "Q6", "quote": "Hai quán bún bò cùng phố, cùng chất lượng. Quán A bán 50.000đ vẫn đông, quán B bán 40.000đ vắng hơn.", "issue": "Kết luận 'A có premium thật' bỏ qua các nguyên nhân khác (vị trí, chỗ ngồi, giờ mở) dù đề nói 'cùng chất lượng'; lời giải d) gạt 'nguyên liệu' nhưng không gạt các yếu tố ngoài sản phẩm.", "fix": "Thêm vào đề 'cùng vị trí, cùng giờ mở, cùng chỗ ngồi' hoặc đổi đáp án thành 'nhiều khả năng có premium, cần loại trừ vị trí'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (65.000 − 50.000) ÷ 50.000 = 30% ✓ (tol 0.1). Sai 23,1 = 15.000/65.000 (chia giá mình) ✓; 15 = số tuyệt đối nghìn đồng ✓. Ví dụ 15.000 × 40.000 = 600 triệu ✓. Q5 d) 72.000 × 0,75 = 54.000 < 65.000 ✓." },
+      "claims": [
+        { "claim": "Price premium là thước đo trong mô hình của David Aaker", "status": "unverified", "note": "Đúng theo hiểu biết chung (Brand Equity Ten), không src." },
+        { "claim": "Kevin Keller đo thêm nhận biết và liên tưởng", "status": "unverified", "note": "Đúng theo hiểu biết chung (CBBE), không src." },
+        { "claim": "Ehrenberg-Bass nhấn mạnh độ phủ và mental availability hơn giá cao", "status": "unverified", "note": "Đúng theo hiểu biết chung, không src." }
+      ],
+      "strengths": "Điều kiện 'sản lượng phải giữ được' làm premium thành chỉ số có kiểm chứng, và Q5/Q7 kiểm đúng hai chiều (vượt trần; khoảng cách co vì bên so sánh tăng giá); bài tự nói đây 'là một thước đo, không phải duy nhất'.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho ba mô hình; (2) ghi giả định của phép 600 triệu và gắn nhãn ước lượng; (3) thêm phản ví dụ trong phần đọc: premium 30% nhưng sản lượng giảm 8%/năm → đang thu hẹp thị trường, tính doanh thu mất; (4) thêm đào sâu về cách thử giá an toàn (một kênh, một tháng, đo sản lượng) và về premium theo kênh (siêu thị vs online); (5) sửa Q6 cho chặt; thêm câu L6 thiết kế thử tăng giá."
+    },
+    {
+      "id": "B:tp05-02",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 14, "examples": 9, "pedagogy": 6, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "example", "quote": "Sang quý ba, số khách mua giá gốc tăng từ 35% lên 48% tổng hoá đơn, nghĩa là mỗi đồng khuyến mãi phải gánh ít hơn.", "issue": "Ví dụ gán kết quả 35→48% cho việc chuyển sang 50/50 mà không có nhóm đối chứng, không loại mùa vụ, và không gắn nhãn số minh hoạ — trái với chính các bài tp04-03/04/06 vốn luôn ghi 'so trước–sau, chưa chứng minh nhân quả'. Tỉ lệ mua giá gốc cũng tự tăng khi bớt phát voucher (ít mã hơn → ít hoá đơn dùng mã) nên chưa nói được gì về thương hiệu.", "fix": "Gắn nhãn '(số minh hoạ)', thêm 'so cùng kỳ năm trước; phần tăng có thể do bớt mã chứ chưa chắc do thương hiệu mạnh hơn — cần kèm chỉ số tìm tên/nhắc tên'." },
+        { "sev": "P2", "where": "concept", "quote": "quy tắc tham khảo khoảng 60/40 nghiêng về xây (từ nghiên cứu của Les Binet & Peter Field cho IPA, là mức trung bình nhiều ngành)", "issue": "Nguồn được nêu tên và có hạn định tốt, nhưng không có link/ngày kiểm; nghiên cứu này có cập nhật (tỉ lệ khác theo ngành, online) nên thuộc lớp periodic cần src.", "fix": "Thêm src: Binet & Field, The Long and the Short of It (IPA, 2013) và bản cập nhật Media in Focus (2017), ngày kiểm." },
+        { "sev": "P2", "where": "Q7", "quote": "Số lượt tìm kiếm tên thương hiệu so với cùng kỳ", "issue": "Đáp án hợp lý nhưng bài không nói lượt tìm tên bị nhiễu bởi khuyến mãi lớn (khách tìm tên để lấy mã) — chính thứ bài đang muốn tách.", "fix": "Thêm vào lời giải: 'loại các tuần có flash sale, hoặc so tỉ lệ tìm tên / tìm mã'." },
+        { "sev": "P2", "where": "example", "quote": "Chuỗi trà sữa quyết định chuyển sang 50/50", "issue": "Không giải thích vì sao chọn 50/50 thay vì 60/40 như quy tắc tham khảo, và không nói chi phí chuyển đổi (doanh số quý đầu giảm bao nhiêu).", "fix": "Thêm lý do (giai đoạn chuyển, không cắt sốc) và số doanh số quý đầu để người học thấy đánh đổi." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (48% − 35%) × 100.000 = 13.000 hoá đơn ✓ (tol 1). Sai 48.000 = 48% × 100.000 ✓; 13 = điểm phần trăm ✓. Khớp ví dụ 'thêm 13.000 hoá đơn' ✓." },
+      "claims": [
+        { "claim": "Quy tắc tham khảo ~60/40 nghiêng về xây từ Binet & Field (IPA), là mức trung bình nhiều ngành", "status": "unverified", "note": "Nguồn nêu tên, có hạn định, không link/ngày kiểm." }
+      ],
+      "strengths": "Nêu đúng hai loại tiền và cảnh báo 'đừng để một bên về gần 0' thay vì áp một tỉ lệ cứng; Q6 (tắt quảng cáo một năm, doanh số không đổi) dạy đúng hiệu ứng mòn chậm.",
+      "upgrade": "Để đạt ≥85: (1) gắn nhãn và thêm caveat nhân quả cho ví dụ 35→48%; (2) thêm src Binet & Field; (3) thêm phản ví dụ: hãng mới toanh hay hàng mua theo mùa có tỉ lệ khác, hoặc chuỗi đang lỗ dòng tiền phải nghiêng về kích; (4) thêm đào sâu về cách đo tiền xây bằng hai–ba chỉ số (nhắc tên, tìm tên, mua giá gốc) và chu kỳ đọc (quý, không tháng); (5) thêm câu L4 đọc bảng 4 quý có cả khuyến mãi và tìm tên để tách hai hiệu ứng."
+    },
+    {
+      "id": "B:tp05-03",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 66,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "concept", "quote": "nghiên cứu của Loken và John năm 1993 cho thấy nguy cơ này tăng khi sản phẩm mới càng lệch với tên gốc", "issue": "Nghiên cứu thật được dẫn tên và năm nhưng không có src; diễn đạt đơn giản hoá (nghiên cứu nói về pha loãng niềm tin khi mở rộng không nhất quán với niềm tin về thương hiệu, có điều kiện 'điển hình/không điển hình').", "fix": "Thêm src (Loken & John, Journal of Marketing 1993) và sửa thành 'khi sản phẩm mới không khớp với điều khách tin về tên gốc'." },
+        { "sev": "P2", "where": "Q3", "quote": "Khảo sát 200 khách quen, 30 người thấy nước tăng lực mang tên hãng sữa chua là hợp lý. Tỉ lệ thấy hợp lý là bao nhiêu phần trăm?", "issue": "Câu tính một bước trên số đã có sẵn trong ví dụ (15%); không buộc đọc gì mới.", "fix": "Đổi thành so hai dòng: chênh 75% − 15% = 60 điểm, hoặc hỏi ngưỡng nào thì đáng dùng tên cũ và vì sao." },
+        { "sev": "P2", "where": "example", "quote": "Hãng sữa chua thử khảo sát 200 khách quen.", "issue": "Chỉ hỏi khách quen — nhóm thiên về tên cũ; không hỏi người uống nước tăng lực (khách mục tiêu của dòng mới). Không gắn nhãn số minh hoạ.", "fix": "Thêm nhóm thứ hai: 100 người uống nước tăng lực, bao nhiêu % thấy hợp lý; gắn nhãn minh hoạ." },
+        { "sev": "P2", "where": "concept", "quote": "Mở rộng thương hiệu (brand extension)", "issue": "Trùng đáng kể với tp03-08 (kiến trúc một nhà/nhiều nhà/bảo chứng) nhưng không tham chiếu; người học gặp cùng kết luận hai lần với hai bộ thuật ngữ.", "fix": "Nối rõ: 'bài tp03-08 trả lời đặt tên thế nào; bài này trả lời có nên mượn tên không và đo độ khớp'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30 ÷ 200 = 15% ✓; sai 30 = số tuyệt đối ✓; 666,7 = 200/30 ✓. Ví dụ 150/200 = 75% ✓." },
+      "claims": [
+        { "claim": "Loken và John (1993): nguy cơ pha loãng tăng khi sản phẩm mới càng lệch tên gốc", "status": "unverified", "note": "Nghiên cứu thật, không src; diễn đạt đơn giản hoá." }
+      ],
+      "strengths": "Hai câu kiểm (khách thấy hợp lý không? thất bại có kéo tên gốc không?) ngắn và dùng được; Q7 (khách bánh mì ghé quán phở) cho một tín hiệu đo được của 'hai bên nâng nhau'.",
+      "upgrade": "Để đạt ≥85: (1) thêm src Loken & John và sửa diễn đạt; (2) khảo sát thêm nhóm khách mục tiêu của dòng mới, gắn nhãn minh hoạ; (3) thêm phản ví dụ: độ khớp cao (sữa chua uống) nhưng dòng mới ăn thịt dòng cũ → đo doanh thu tăng thêm (nối tp05-04); (4) thêm đào sâu về ngưỡng quyết định và về mở rộng theo chiều 'lợi ích' (tốt cho bụng) thay vì chiều 'ngành hàng'; (5) nối rõ với tp03-08; nâng Q3 lên hai bước."
+    },
+    {
+      "id": "B:tp05-04",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 16, "examples": 12, "pedagogy": 6, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q7", "quote": "Cỡ logo hai bên, quyền duyệt nội dung và quyền rút khi đối tác khủng hoảng", "issue": "Phương án đúng là phương án duy nhất gộp ba điều khoản và lặp nguyên văn phần khái niệm; đoán được bằng hình thức.", "fix": "Tách thành bốn phương án đơn (cỡ logo / quyền duyệt / quyền rút / chia doanh thu) và hỏi 'nếu chỉ chốt được một điều khoản trước Trung thu thì chốt cái nào' để thành câu L5 thật." },
+        { "sev": "P2", "where": "example", "quote": "khoảng 400 triệu (40%) là khách quen vốn vẫn mua hộp thường (số minh hoạ)", "issue": "Gắn nhãn tốt, nhưng không nói cách ước lượng 40% (so với doanh số hộp thường cùng kỳ năm trước? khảo sát người mua?) — đây là bước khó nhất của phép tính doanh thu tăng thêm.", "fix": "Thêm một câu: 'ước từ việc doanh số hộp thường năm nay giảm 400 triệu so cùng kỳ'." },
+        { "sev": "P2", "where": "example", "quote": "Khảo sát: 60% người mua là khách lần đầu", "issue": "60% khách lần đầu và 40% doanh thu từ khách quen là hai con số khớp nhau một cách gọn gàng nhưng đo hai thứ khác nhau (người vs tiền); bài không nói rõ nên dễ bị đọc là cùng một số.", "fix": "Ghi rõ 'tính theo số người, khác với 40% tính theo doanh thu'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 4.000 × 500.000 = 2.000 triệu; ½ = 1.000; − 400 = 600; − 240/2 = 480 triệu ✓ (tol 1). Sai 600 = quên chi phí ✓; 880 = 1.000 − 120 (quên trừ khách quen) ✓. Ví dụ khớp hoàn toàn với Q3." },
+      "claims": [],
+      "strengths": "Khái niệm doanh thu tăng thêm (trừ khách quen vốn vẫn mua) và câu 'chưa trừ giá vốn nên chưa phải lãi' là cách đọc số đúng chuẩn nghề; Q5 (bốn lời mời, chỉ một bổ sung khách mới) là câu phân tích tốt.",
+      "upgrade": "Để đạt ≥85: (1) nêu cách ước lượng 40% khách quen; (2) phân biệt rõ % người và % tiền; (3) thêm phản ví dụ trong phần đọc: hợp tác bán 4.000 hộp nhưng 80% là khách quen → doanh thu tăng thêm âm sau chi phí; (4) thêm đào sâu về đo mua lại sau 6 tháng của khách mới (chi phí mỗi khách mới giữ được) và về điều kiện rút lui; (5) sửa Q7 cho khỏi đoán được; thêm câu L6 thiết kế đo doanh thu tăng thêm trước khi ký."
+    },
+    {
+      "id": "B:tp05-05",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L3", "L5", "L3", "L4", "L3", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q6", "quote": "Vì sao một thương hiệu có nhiều năm uy tín thường phục hồi sau khủng hoảng nhanh hơn thương hiệu mới?", "issue": "Nêu như quy luật với 'thường'; nghiên cứu về khủng hoảng cho thấy thương hiệu mạnh được đệm khi sự cố ngoài lời hứa cốt lõi, nhưng có thể bị phạt nặng hơn khi sự cố đi ngược đúng lời hứa (kỳ vọng cao hơn). Bài không nêu điều kiện này dù chính bài nói 'chạm lời hứa cốt lõi' là biến quyết định.", "fix": "Thêm điều kiện vào lời giải: 'đệm này mỏng đi khi sự cố đánh đúng lời hứa cốt lõi'." },
+        { "sev": "P2", "where": "example", "quote": "mức giảm lần lượt 40%, 30%, 22%, 15% trong bốn tuần đầu rồi gần về mức cũ vào tuần mười", "issue": "Gắn nhãn minh hoạ tốt, nhưng tổng 535 triệu chỉ tính bốn tuần; tuần 5–10 vẫn giảm (từ 15% về 0) nên thiệt hại thật lớn hơn; bài không nói đây là ước lượng thấp.", "fix": "Thêm 'tuần 5–10 còn mất thêm, ước thêm khoảng 150–200 triệu (số minh hoạ)'." },
+        { "sev": "P2", "where": "concept", "quote": "Trước khi xin lỗi, dành vài giờ xác minh sự thật và phân vai", "issue": "Không nêu mốc thời gian cụ thể cho phát ngôn đầu (ví dụ ghi nhận trong 2–4 giờ, kết quả xác minh trong 24 giờ) dù Q2 và Q7 đều xoay quanh mốc giờ.", "fix": "Thêm hai mốc minh hoạ vào khái niệm và ghi 'tuỳ quy mô, điều quan trọng là mốc được định trước'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 500 × (0,40 + 0,30 + 0,22 + 0,15) = 500 × 1,07 = 535 triệu ✓ (tol 1). Sai 800 = 500 × 4 × 0,4 (áp 40% cho cả bốn tuần) ✓; 107 = tổng % đọc nhầm thành triệu ✓." },
+      "claims": [],
+      "strengths": "Nguyên tắc 'mức nhận lỗi phải khớp mức trách nhiệm thật; xin lỗi cho điều chưa xảy ra cũng sai như phủ nhận điều đã xảy ra' là điểm hiếm và đúng; Q2 tách đúng ba phản xạ sai (im lặng / xin lỗi quá / phủ nhận) và ví dụ tách doanh số với niềm tin.",
+      "upgrade": "Để đạt ≥85: (1) nêu điều kiện cho 'đệm uy tín' ở Q6; (2) hoàn chỉnh ước lượng thiệt hại tới tuần 10 và tách chi phí kiểm định/đóng cửa; (3) thêm phản ví dụ trong phần đọc: clip là dàn dựng/cũ → xin lỗi ngay là nhận lỗi oan, cách nói đúng mức; (4) thêm đào sâu về quy trình (ai quyết, ai xác minh, kênh đăng, mốc giờ) dạng checklist một trang và về đo niềm tin trước–sau; (5) thêm câu L6 thiết kế khảo sát 'làm bánh sạch' trước–sau sự cố."
+    },
+    {
+      "id": "B:tp05-06",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 14, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "concept", "quote": "Thương hiệu nhà tuyển dụng mạnh thường giúp tuyển nhanh hơn, rẻ hơn, giữ người lâu hơn (các khảo sát của nền tảng tuyển dụng cho thấy mối liên hệ này, dù con số mỗi nơi một khác)", "issue": "Dẫn 'các khảo sát của nền tảng tuyển dụng' không tên, không src; hạn định tốt nhưng người học không kiểm được. Thuộc lớp periodic.", "fix": "Nêu một nguồn cụ thể (ví dụ báo cáo LinkedIn Talent Solutions về employer brand) với ngày kiểm, hoặc bỏ câu dẫn." },
+        { "sev": "P2", "where": "example", "quote": "tin cũ 40 hồ sơ, 4 đạt vòng 1 (10%); tin mới 120 hồ sơ, 30 đạt (25%)", "issue": "Số gắn nhãn minh hoạ và có caveat mùa tuyển dụng — tốt; nhưng bài không nói tin mới đăng ở cùng kênh, cùng ngân sách đăng tin không, và không nhắc thời gian tuyển/chi phí mỗi người dù khái niệm nói đo ba thứ này.", "fix": "Thêm 'cùng kênh, cùng ngân sách' và một dòng số cho thời gian tuyển và chi phí/người (minh hoạ)." },
+        { "sev": "P2", "where": "Q5", "quote": "Vì sao thương hiệu nhà tuyển dụng lại liên quan tới thương hiệu sản phẩm?", "issue": "Ba nhiễu (cùng logo, ngồi chung tầng, khách đọc tin tuyển dụng) đều yếu rõ; đáp án đoán được không cần đọc bài.", "fix": "Thay một nhiễu bằng lý lẽ nửa đúng: 'vì ứng viên cũng là khách hàng tiềm năng của sản phẩm'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30 ÷ 120 = 25% ✓ (tol 0.5); tin cũ 4/40 = 10% ✓; sai 75 = tỉ lệ loại ✓; 750 = 30/4 ✓." },
+      "claims": [
+        { "claim": "Các khảo sát của nền tảng tuyển dụng cho thấy employer brand mạnh giúp tuyển nhanh hơn, rẻ hơn, giữ lâu hơn", "status": "unverified", "note": "Không tên nguồn, không src; có hạn định." }
+      ],
+      "strengths": "Chỉ số đúng (hồ sơ đạt, không phải tổng hồ sơ) được làm mẫu và kiểm bằng Q3; Q6 (nghỉ 5/10 sau 6 tháng → phỏng vấn người nghỉ trước khi tăng lương) là câu chẩn đoán tốt.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cụ thể cho khẳng định về lợi ích employer brand; (2) bổ sung thời gian tuyển và chi phí/người vào ví dụ; (3) thêm phản ví dụ: tin tuyển kể câu chuyện hay nhưng thực tế không đúng → tỉ lệ nghỉ sau thử việc tăng, hồ sơ đạt tăng mà giữ người giảm; (4) thêm đào sâu về EVP ba lý do (cách phỏng vấn nhân viên, cách kiểm bằng dữ liệu nghỉ việc) và nối với tp03-06 (lời hứa phải qua vận hành); (5) sửa nhiễu Q5; thêm câu L4 đọc bảng hồ sơ/đạt/thời gian/chi phí của hai tin."
+    },
+    {
+      "id": "B:tp05-07",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "concept", "quote": "(2) được chọn lại — tỉ lệ khách mua lại trong 90 ngày", "issue": "Hãng bán qua siêu thị không có dữ liệu khách lẻ nên không tính được mua lại 90 ngày 'gần như không tốn tiền' như phần áp dụng hứa; chỉ kênh sàn có dữ liệu này. Bài không nói đo chỉ số này ở kênh nào.", "fix": "Ghi rõ: mua lại tính trên kênh sàn/online (có mã khách); với siêu thị dùng câu hỏi 'lần mua gạo túi trước bạn mua hãng nào' trong cùng cuộc hỏi." },
+        { "sev": "P2", "where": "example", "quote": "Quý 1: hỏi 250 khách ở siêu thị, 50 người tự nhắc tên hãng — 20%.", "issue": "Số tự khớp nhưng không gắn nhãn minh hoạ; đào sâu có nói sai số 'khá lớn' nhưng không cho con số (±6 điểm với n=250) nên 20→28% không được đánh giá là vượt sai số hay chưa.", "fix": "Thêm '(số minh hoạ; sai số ≈ ±6 điểm, mức tăng 8 điểm vừa vượt sai số)'." },
+        { "sev": "P2", "where": "example", "quote": "Premium: 12%. ... premium lên 14%", "issue": "Không nói premium so với hàng gì (nhãn riêng siêu thị? gạo không tên?) và lấy giá ở đâu; bài trước (tp05-01) có quy ước này nhưng không được nhắc.", "fix": "Ghi 'so với nhãn riêng cùng loại gạo, giá kệ siêu thị, nối tp05-01'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 70 ÷ 250 = 28% ✓ (tol 0.1); sai 70 = số tuyệt đối ✓; 357,1 = 250/70 ✓. Ví dụ Q1: 50/250 = 20% ✓; quý 3 28% khớp Q3 ✓." },
+      "claims": [],
+      "strengths": "Ba chỉ số đo ba khâu của một lần mua và được đọc theo 'chỗ lệch' (Q4, Q6) thay vì gộp điểm (Q7); đào sâu nêu đúng rằng chỉ số là triệu chứng, mẫu 250 có sai số, và cách đo phải giữ nguyên qua quý; có phản ví dụ về nơi hỏi lệch kênh bán.",
+      "upgrade": "Để đạt ≥85: (1) nói rõ cách tính mua lại theo kênh; (2) gắn nhãn số minh hoạ và nêu sai số cụ thể; (3) nêu quy ước premium và nối tp05-01; (4) thêm một bảng 3 chỉ số × 3 quý để người học đọc chỗ lệch bằng mắt; (5) thêm câu L6: viết trang 'cách đo' (câu hỏi, nơi hỏi, cỡ mẫu, công thức) cho một thương hiệu khác, và một câu L4 đọc bảng có một chỉ số đổi cách hỏi giữa hai quý."
+    },
+    {
+      "id": "B:tp05-08",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1-Q7", "quote": "Vì sao không nên \"giấu\" hẳn nhà sáng lập đi ngay khi công ty lớn?", "issue": "Bộ câu hỏi nhẹ hơn phần đọc: phản ví dụ về 'phần trăm giảm vì tổng đơn giảm' rất tốt nhưng không có câu nào kiểm nó; Q3 là phép nhân một bước; Q4, Q6 là L2 nhận lại ý.", "fix": "Thay Q6 bằng câu L4: cho bảng tổng đơn và đơn từ live qua 6 tháng (tổng giảm 10.000→7.000, phần live 70%→55%) và hỏi niềm tin đã chuyển chưa." },
+        { "sev": "P2", "where": "example", "quote": "Nếu tổng đơn giữ 10.000 đơn/tháng, số đơn phụ thuộc chị giảm từ 7.000 xuống 4.000.", "issue": "Số minh hoạ không gắn nhãn; mục tiêu 18 tháng không có mốc trung gian hay chi phí (đào tạo hai người dẫn, Zalo, bao bì) nên không đánh giá được tính khả thi.", "fix": "Thêm mốc 6/12/18 tháng (70→60→50→40%) và chi phí minh hoạ từng chân đỡ." },
+        { "sev": "P2", "where": "concept", "quote": "chuyển niềm tin sang những thứ công ty sở hữu: chất lượng sản phẩm, dấu hiệu nhận diện, đội ngũ và kênh bán không phụ thuộc một người", "issue": "Không nhắc rủi ro pháp lý–sở hữu: tài khoản 500.000 người theo dõi thuộc cá nhân hay công ty, hợp đồng hình ảnh khi chị rời đi — đây là phần 'công ty sở hữu' quan trọng nhất với nhà đầu tư.", "fix": "Thêm một câu về quyền sở hữu tài khoản/kênh và thoả thuận sử dụng hình ảnh, kèm 'hỏi người có chuyên môn'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 10.000 × 70% − 10.000 × 40% = 7.000 − 4.000 = 3.000 đơn ✓ (tol 1); sai 4.000 = số sau ✓; 30 = điểm phần trăm ✓. Ví dụ khớp." },
+      "claims": [],
+      "strengths": "Phản ví dụ (phần trăm giảm vì tổng đơn giảm, phải đo số đơn thực) và đào sâu (so đơn ba buổi live có/không có chị) biến một bài khái niệm thành bài có phép kiểm; Q7 (quán cà phê mới) cân đúng hai cực 'giấu hẳn' và 'dồn hết vào người'.",
+      "upgrade": "Để đạt ≥85: (1) đưa bảng tổng đơn × đơn từ live theo tháng vào ví dụ và ra một câu L4 kiểm phản ví dụ; (2) gắn nhãn số minh hoạ, thêm mốc và chi phí chuyển đổi; (3) thêm quyền sở hữu tài khoản/hình ảnh vào khái niệm; (4) thêm đào sâu về ngưỡng phụ thuộc chấp nhận được theo giai đoạn (ví dụ dưới 40% sau 18 tháng, dưới 25% khi gọi vốn) và cách thử 'chị vắng một tuần' có kiểm soát; (5) nâng Q4/Q6 lên L3–L4."
+    }
+  ],
+  "module_notes": {
+    "progression": "Module đi từ đo giá trị thương hiệu bằng tiền (01 premium) → chia tiền xây/kích (02) → hai cách 'tiêu' tài sản: mở rộng (03) và hợp tác (04) → hai cách mất tài sản: khủng hoảng (05) và phụ thuộc nhà sáng lập (08) → tài sản bên trong: nhà tuyển dụng (06) → bảng đo sức khoẻ (07). Thứ tự hợp lý nhưng 07 (bảng đo) nên đứng ngay sau 01–02 vì các bài 03–06 đều cần ba chỉ số của nó để đo kết quả; 06 (employer brand) hơi lạc khỏi mạch 'tài sản thương hiệu với khách'.",
+    "overlap": [
+      "tp05-03 (mở rộng thương hiệu) trùng cốt lõi với tp03-08 (kiến trúc tên mẹ/con): cùng câu hỏi 'khớp lời hứa gốc không', cùng kết luận 'xa thì tách tên', không tham chiếu nhau.",
+      "tp05-01 Q2/Q5 và tp05-07 Q6 cùng dạy đọc premium (giữ giá khi sản lượng giữ; premium rơi khi khác biệt mờ) — tốt về củng cố nhưng 07 không nhắc quy ước mẫu số của 01.",
+      "tp05-05 (xác minh trước khi phản hồi) và tp05-08 Q4 (phát ngôn nhà sáng lập) cùng chạm khủng hoảng; có thể nối thành một phép kiểm chung 'sự cố có chạm lời hứa cốt lõi không'."
+    ],
+    "gaps": [
+      "Không bài nào nói cách đo tài sản thương hiệu thành một con số tiền tổng (định giá thương hiệu đơn giản: premium × sản lượng − chi phí duy trì, hoặc so biên lợi nhuận với hàng không tên theo thời gian) dù 01 đã mở đường.",
+      "Thiếu bài về thiết kế khảo sát nhắc tên không gợi ý (chọn mẫu, câu hỏi, sai số) — 01, 03, 05, 07 đều dựa vào khảo sát 200–250 người mà không bài nào dạy làm.",
+      "Thiếu phần về tài sản thương hiệu trong B2B (chỉ Q6 của tp04-05 chạm) và về giấy phép/nhượng quyền thương hiệu (licensing, franchise) — một cách 'tiêu' tài sản phổ biến ở Việt Nam.",
+      "tp05-02 không có bài tiếp theo về cách thiết lập một thí nghiệm có đối chứng cho tiền xây thương hiệu (geo-test, giữ một vùng không chạy), nên lời khuyên 'đo bằng chỉ số chậm' vẫn dừng ở tương quan."
+    ],
+    "best_lesson": "B:tp05-04",
+    "weakest_lesson": "B:tp05-03"
+  }
+}

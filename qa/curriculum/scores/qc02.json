@@ -1,0 +1,371 @@
+{
+  "mod": "qc02",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:qc02-01",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "ĐÀO SÂU, Q2",
+          "quote": "Khi đủ dữ liệu, chiến dịch có thể tối ưu theo lead đạt chuẩn thay vì mọi lượt điền form",
+          "issue": "Với An Cư chỉ 28 lead đạt chuẩn/tháng (≈7/tuần), mốc ~50 sự kiện/tuần của bài qc01-06 không bao giờ đạt; 'khi đủ dữ liệu' không nói điều kiện đó nghĩa là gì ở đây, nên đáp án Q2 (a) hứa một bước mà case này không làm được.",
+          "fix": "Ghi rõ: 'An Cư không đủ để tối ưu theo lead đạt chuẩn; gửi ngược để làm tín hiệu/giá trị chuyển đổi và để đo, không để làm sự kiện tối ưu'."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Profit: 3 × lãi gộp 45 triệu = 135 triệu, trừ 30 triệu quảng cáo còn 105 triệu",
+          "issue": "Lãi gộp 45 triệu/hợp đồng là số mới, không nối với hợp đồng trung bình 180 triệu ở qc01-02 (25%); người học không kiểm được.",
+          "fix": "Thêm '(25% của hợp đồng trung bình 180 triệu)'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1",
+          "quote": "Câu hỏi nào báo cáo đó chưa trả lời được?",
+          "issue": "Đáp án c là câu giám đốc hỏi nguyên văn trong Tình huống; L2 nhận lại.",
+          "fix": "Đổi thành câu đọc bảng: cho 5 dòng số liệu, hỏi tầng nào đang trống."
+        },
+        {
+          "sev": "P2",
+          "where": "NGUỒN",
+          "quote": "Meta Business Help Center: Conversions API … Google Ads Help: About enhanced conversions",
+          "issue": "Bài loại fast có src nhưng thiếu câu 'nếu màn hình khác, tin trang chính thức'.",
+          "fix": "Thêm câu đó vào Đào sâu."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 30.000/28 = 1.071,4 → 1.071 ✓ (tol 2); sai 214 = 30.000/140 ✓. Q4: 214/0,3 = 713,3 ✓ (tol 1); sai 64,2 = 214×0,3 ✓, 1.070 = 214/0,2 ✓. Ví dụ: 140×214.000 = 29,96 triệu ≈ 30 triệu ✓; tần suất 2,1 triệu/380.000 = 5,5 ✓; 28/140 = 20% khớp Q4 ✓; 30/3 = 10 triệu/hợp đồng ✓; 135 − 30 = 105 ✓." },
+      "claims": [
+        { "claim": "Gửi lead đạt chuẩn về nền tảng qua Conversions API (Meta) hoặc Enhanced conversions for leads (Google)", "status": "verified", "note": "Hai src tiêu đề khớp, ngày kiểm 2026-10-24." },
+        { "claim": "Thuật toán tối ưu đúng sự kiện bạn chọn; chọn Lưu lượng/Tương tác thì không ra đơn", "status": "verified", "note": "src Meta 'chọn mục tiêu quảng cáo' bao phủ." },
+        { "claim": "Báo cáo An Cư: 2,1 triệu hiển thị, 380.000 reach, 140 lead, 28 đạt chuẩn, 3 hợp đồng", "status": "illustrative-labelled", "note": "Bài ghi 'số liệu giả định'." }
+      ],
+      "strengths": "Năm tầng được áp thẳng vào một báo cáo thật để lộ 'chỗ rơi' (lead → lead đạt chuẩn) và dẫn tới việc làm (sửa form, không mua thêm hiển thị); Q4 cho thấy tăng tỉ lệ đạt chuẩn giảm chi phí mà không cần tăng tiền.",
+      "upgrade": "Để ≥85: (1) nói rõ với An Cư việc gửi ngược lead đạt chuẩn chưa đủ dữ liệu để làm sự kiện tối ưu; (2) nối lãi gộp 45 triệu với hợp đồng 180 triệu; (3) thay Q1 bằng câu đọc bảng 5 tầng có một tầng trống; (4) thêm tình huống thứ hai đổi kết luận: cùng 140 lead nhưng tỉ lệ đạt chuẩn 60% → chỗ rơi dời sang khâu tư vấn, việc làm khác hẳn."
+    },
+    {
+      "id": "B:qc02-02",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 83,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L2", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q2",
+          "quote": "Thay một video mới cho phần CTR, chấp nhận CPM cao trong vài ngày sale",
+          "issue": "Đáp án đúng chép nguyên câu 'Quyết định' trong Ví dụ; câu quyết định thành câu nhận lại.",
+          "fix": "Đổi số: CPM +5%, CTR −35%, CVR −10% với 15 đơn/tuần; hỏi sửa gì trước và vì sao CVR −10% chưa đáng sửa."
+        },
+        {
+          "sev": "P2",
+          "where": "PHẢN VÍ DỤ, Q6",
+          "quote": "Khi mỗi tuần chỉ vài chục đơn, CVR dao động mạnh vì may rủi; chênh 2% với 1,6% có thể chỉ là nhiễu",
+          "issue": "Kết luận đúng nhưng không cho cách ước nhanh để người học tự áp.",
+          "fix": "Thêm: 'với 12 đơn, sai số ≈ √12 ≈ 3,5 đơn, tức ±30% — CVR 2% hay 1,6% nằm trong cùng một dải'."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "CTR giảm vì video đã chạy 5 tuần, tần suất lên 4",
+          "issue": "Chỉ một tình huống; không có tình huống thứ hai (ví dụ CVR rơi đúng ngày đổi giao diện web) để thấy phép tách dẫn tới việc làm khác.",
+          "fix": "Thêm hai dòng: 'Tuần khác: CPM −5%, CTR +10%, CVR 2% → 1,1%: CPA tăng 72%, kiểm pixel trang cảm ơn trước khi đụng trang đích'."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 1.000×0,015×0,02 = 0,3 đơn/1.000 hiển thị; 72.000/0,3 = 240.000 = 240 nghìn ✓ (tol 1); sai 200 ✓, 240.000 nghìn = quên ×1.000 ✓. Q4: 1,6/2 = 0,8; 200×1,25 = 250 ✓ (tol 1); sai 240 = 200×1,2 ✓, 160 = 200×0,8 ✓. Ví dụ: 60.000/(1.000×0,015×0,02) = 200.000 ✓; 72.000/(1.000×0,012×0,02) = 300.000 ✓; 1,2×1,25 = 1,5 ✓." },
+      "claims": [
+        { "claim": "CPA = CPM ÷ (1.000 × CTR × CVR)", "status": "verified", "note": "Công thức đúng theo định nghĩa, người chấm kiểm lại bằng số ví dụ." },
+        { "claim": "Bếp Gọn tuần trước/tuần này: CPM 60k→72k, CTR 1,5→1,2%, CVR 2%", "status": "illustrative-labelled", "note": "Bài ghi 'số liệu giả định'." }
+      ],
+      "strengths": "Phép tách nhân tính được kiểm chéo (1,2 × 1,25 = 1,5) và mỗi thừa số gắn với một nhóm nguyên nhân và một người chịu trách nhiệm; có bước kiểm đo lường trước, có cảnh báo nhiễu và cảnh báo số gộp che chiến dịch hỏng (Q7).",
+      "upgrade": "Để ≥85: (1) đổi Q2 sang số mới không chép ví dụ; (2) thêm cách ước sai số cho CVR với ít đơn; (3) thêm tình huống thứ hai (CVR rơi do mất mã đo) với số; (4) thêm một câu L5: CPM tăng do sale nhưng CVR cũng tăng — có nên tăng ngân sách trong tuần sale không."
+    },
+    {
+      "id": "B:qc02-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "hoàn COD bình quân 12.000 = 170.000đ … CPA trên đơn giao thành công là 102.000 ÷ 0,85 = 120.000đ, vừa chạm trần",
+          "issue": "Mẫu số của biên 170.000đ không nói rõ (tính trên mỗi đơn đặt hay mỗi đơn giao thành công). Nếu 170.000đ đã là bình quân trên đơn giao thành công thì so với CPA/0,85 là đúng; nếu trên đơn đặt thì hai số khác mẫu số. Rubric: 'đơn vị/mẫu số mập mờ'.",
+          "fix": "Ghi 'biên đóng góp 170.000đ tính trên mỗi đơn giao thành công, đã gánh phí hoàn của đơn không giao được'."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Web: 400.000 − giá vốn 180.000 − vận chuyển 30.000 − phí thanh toán 8.000 − hoàn COD bình quân 12.000 = 170.000đ",
+          "issue": "Cùng chiếc chảo Bếp Gọn, qc01-01 nói 'mỗi đơn còn 160.000đ lãi gộp sau giá vốn, phí sàn, vận chuyển' còn qc02-06 lại dùng 160.000đ; qc02-04 và qc02-08 dùng 170.000đ. Không đổi kết luận bài nào nhưng case xuyên suốt bị lệch.",
+          "fix": "Thống nhất: 170.000đ (web), 138.000đ (Shopee), và nói 160.000đ ở qc01 là bình quân hai kênh — hoặc sửa qc01/qc02-06."
+        },
+        {
+          "sev": "P2",
+          "where": "Q2",
+          "quote": "Thử chuyển đích về web, nơi 110.000đ còn dưới trần, rồi so lãi",
+          "issue": "Phương án đúng ngầm giả định CPA giữ 110.000đ khi đổi đích về web, trong khi tỉ lệ mua trên web thường thấp hơn trên sàn; lời giải có 'thử… rồi so lãi' nên không sai, nhưng giả định không nêu.",
+          "fix": "Thêm vào lời giải: 'CPA web thường cao hơn; chỉ thắng nếu CPA web dưới 120.000đ + (phần lãi vòng đời nhờ có số điện thoại)'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1, Q5",
+          "quote": "Vì sao chi phí hoàn đơn COD phải đưa vào biên đóng góp?",
+          "issue": "Hai câu L2 nhận lại ý bài.",
+          "fix": "Thay Q5 bằng câu dữ liệu: cho bảng đối soát sàn một tháng (doanh thu, phí, hoàn), hỏi biên đóng góp thật và CPA trần."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 400 − 180 − 30 − 8 − 12 = 170 ✓ (tol 0,5); sai 220 = 400 − 180 ✓, 400 ✓. Q4: 102/0,85 = 120 ✓ (tol 0,5); sai 86,7 = 102×0,85 ✓. Ví dụ: Shopee 18%×400 = 72; 400 − 180 − 72 − 10 = 138 ✓; trần 170 − 50 = 120, 138 − 50 = 88 ✓; 150 − 88 = 62 ✓. Q6: 3%×400 = 12 ✓." },
+      "claims": [
+        { "claim": "Shopee từ 16/1/2026 đổi 'Doanh thu (GMV)' thành 'Doanh số (Sales)', không tính trợ giá người bán", "status": "verified", "note": "src Shopee Ads FAQ về chỉ số Doanh số (Sales), ngày kiểm 2026-10-24; mốc ngày cần đối chiếu nguyên văn." },
+        { "claim": "Phí sàn và thanh toán Shopee 18%", "status": "illustrative-labelled", "note": "Bài ghi 'giả định 18%'." },
+        { "claim": "15% đơn COD trên web bị hoàn", "status": "illustrative-labelled", "note": "Trong ví dụ gắn nhãn giả định." }
+      ],
+      "strengths": "Tính CPA trần riêng từng kênh từ bảng phí, lộ ra kênh bị 'nuông chiều' bởi ngưỡng chung (62.000đ/đơn); bước chia cho tỉ lệ giao thành công là điểm người chạy quảng cáo VN hay bỏ; Q7 (biên 9.000đ) đổi câu hỏi từ quảng cáo sang giá trị đơn.",
+      "upgrade": "Để ≥85: (1) nói rõ mẫu số của biên và của CPA (đơn đặt / đơn giao thành công); (2) thống nhất 160 vs 170 trong case Bếp Gọn; (3) thay Q5 bằng câu đọc bảng đối soát; (4) thêm tình huống thứ hai đổi kết luận: khách web mua lại 30% trong 6 tháng → trần web nới lên bao nhiêu (nối qc02-06)."
+    },
+    {
+      "id": "B:qc02-04",
+      "scores": { "accuracy": 12, "depth": 13, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 81,
+      "bloom_items": ["L4", "L3", "L3", "L3", "L2", "L4", "L4"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "VÍ DỤ",
+          "quote": "khoảng 10,4 triệu là đơn khách vào web qua Google sau khi chỉ xem quảng cáo Meta (Google cũng nhận đơn này). Doanh thu gán được cho Meta còn khoảng 44 triệu, ROAS thật 2,2",
+          "issue": "Trừ toàn bộ 10,4 triệu khỏi Meta là một quy ước gán công (cho Meta 0 công với đơn sau lượt xem, cho Google 100%), không phải 'sự thật'; gọi kết quả là 'ROAS thật' mâu thuẫn với qc02-07 ('Không số nào là sự thật duy nhất') và qc02-08 (chỉ nhóm đối chứng mới nói quảng cáo thêm bao nhiêu). Người học sẽ coi số đối soát lượt cuối là lãi thật và cắt kênh tạo nhu cầu.",
+          "fix": "Đổi 'ROAS thật' → 'ROAS đã đối soát (quy ước lượt nhấp cuối, ước lượng thận trọng)'; thêm câu 'muốn biết Meta thật sự thêm bao nhiêu, xem bài đo phần tăng thêm'."
+        },
+        {
+          "sev": "P2",
+          "where": "PHẢN VÍ DỤ, Q7",
+          "quote": "Với Product GMV Max của TikTok Shop, nền tảng ghi nhận mọi đơn của sản phẩm được quảng bá, kể cả đơn tự nhiên và affiliate",
+          "issue": "src duy nhất là trang 'tạo quảng cáo Product GMV Max trong Seller Center', tiêu đề về cách tạo, không rõ bao phủ cách ghi nhận/báo cáo; khẳng định nền tảng loại fast cần nguồn đúng chỗ.",
+          "fix": "Thêm src trang trợ giúp về báo cáo/ghi nhận của GMV Max và trích câu nguyên văn."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Nếu ROAS thật thường chỉ bằng khoảng 70% số báo",
+          "issue": "Hệ số 0,7 lấy từ một tháng (44/64 = 0,69); bài Phản ví dụ nói hệ số chỉ dùng khi ổn định qua vài tháng nhưng ví dụ lại dùng ngay.",
+          "fix": "Ghi 'ba tháng gần nhất 0,68–0,72' để ví dụ tự nhất quán với điều kiện."
+        },
+        {
+          "sev": "P2",
+          "where": "NGUỒN",
+          "quote": "TikTok Ads: tạo quảng cáo Product GMV Max trong Seller Center",
+          "issue": "Bài loại fast thiếu câu 'nếu màn hình khác, tin trang chính thức'.",
+          "fix": "Thêm câu đó."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 1/0,425 = 2,353 → 2,35 ✓ (tol 0,02); sai 2,22 = 1/0,45 ✓, 0,43 ✓. Q4: 44×0,425 = 18,7; 18,7 − 20 = −1,3 ✓ (tol 0,05); sai 24 = 44 − 20 ✓, 18,7 ✓. Ví dụ: 64 − 9,6 − 10,4 = 44 ✓; 44/20 = 2,2 ✓; 2,35/0,7 = 3,36 ≈ 3,4 ✓; 42,5% = 170/400 khớp qc02-03 ✓. Q6: 400×15% = 60; 170 − 60 = 110; 340/110 = 3,09 ≈ 3,1 ✓; nhiễu 2,7 = 2,35×1,15 ✓. Q2 lời giải: 2,35×0,7 = 1,645 ≈ 1,6 ✓; 3,2×0,7 = 2,24 ≈ 2,2 ✓." },
+      "claims": [
+        { "claim": "ROAS hoà vốn = 1 ÷ biên đóng góp %", "status": "verified", "note": "Đúng theo định nghĩa." },
+        { "claim": "Product GMV Max của TikTok Shop ghi nhận mọi đơn của sản phẩm, kể cả tự nhiên và affiliate", "status": "unverified", "note": "src chỉ bao phủ cách tạo quảng cáo; nội dung khớp hiểu biết chung nhưng chưa có trích dẫn." },
+        { "claim": "ROAS nền tảng gồm đơn sau lượt xem, đơn kênh khác cũng nhận, đơn bị hoàn", "status": "unverified", "note": "Cơ chế chung đúng nhưng không có src về cửa sổ ghi nhận trong bài này." },
+        { "claim": "Meta tháng 10 chi 20 triệu, giá trị chuyển đổi 64 triệu", "status": "illustrative-labelled", "note": "Bài ghi 'số liệu giả định'." }
+      ],
+      "strengths": "Phân biệt rõ ROAS màn hình, ROAS đối soát và ROAS hoà vốn rồi dịch ngược mục tiêu cho đội vận hành (3,4) — đúng việc một trưởng nhóm phải làm; Q6 buộc tính lại hoà vốn tuần sale; Q7 cảnh báo GMV Max không so được với ROAS kênh khác.",
+      "upgrade": "Để ≥85: (1) bỏ chữ 'thật' cho số đối soát lượt cuối và nối sang qc02-08; (2) thêm src đúng chỗ cho GMV Max; (3) làm hệ số đối soát nhất quán với điều kiện 'ổn định vài tháng'; (4) thêm tình huống thứ hai: ROAS báo 2,8 nhưng hệ số 0,9 (shop ít kênh) → lãi dương, để người học thấy số màn hình thấp hơn vẫn có thể tốt hơn."
+    },
+    {
+      "id": "B:qc02-05",
+      "scores": { "accuracy": 12, "depth": 13, "practical": 15, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L2", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "VÍ DỤ, Q2, Q3",
+          "quote": "tháng 10 là 240 triệu, nên MER khách mới = 2,4, dưới ngưỡng hoà vốn trên khách mới 2,5",
+          "issue": "MER khách mới chia doanh thu khách mới cho TOÀN BỘ 100 triệu chi quảng cáo, gồm cả tiền bám đuổi và nhắc khách cũ (bài qc01-04 nói Bếp Gọn chi 15–90% cho tầng nóng). Giả định 'mọi đồng quảng cáo đều mua khách mới' không nêu; nếu 30% chi nhắm khách cũ thì MER khách mới = 240/70 = 3,4 > 2,5 và đề xuất 'giữ 100 triệu' đổi thành 'được tăng'. Phép tính thiếu giả định làm kết quả đổi.",
+          "fix": "Nêu giả định hoặc tách chi theo tầng (chi cho tầng lạnh+ấm làm mẫu số); sửa Q3 cho rõ 'toàn bộ chi quảng cáo, giả định đều nhắm khách mới'."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "so với tháng 11 năm ngoái (MER 7,5), quảng cáo năm nay kém hơn",
+          "issue": "Một năm so sánh duy nhất; không nêu các yếu tố khác đổi (giá, danh mục, kênh mới) nên kết luận 'kém hơn' nêu chắc hơn dữ liệu cho phép.",
+          "fix": "Thêm 'nếu cơ cấu sản phẩm và giá không đổi nhiều' hoặc so 2 năm."
+        },
+        {
+          "sev": "P2",
+          "where": "Q2",
+          "quote": "Giữ 100 triệu, kéo MER khách mới vượt 2,5 rồi mới tăng tiền",
+          "issue": "Bài qc02-06 ngay sau cho phép lỗ đơn đầu nếu hoàn vốn trong thời gian dòng tiền chịu được; hai bài không nối với nhau nên người học nhận hai lời khuyên có vẻ ngược.",
+          "fix": "Thêm vào lời giải: 'nếu đã có số mua lại thật (bài sau), ngưỡng 2,5 có thể hạ theo lãi vòng đời'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q5",
+          "quote": "Vì sao MER không thay được ROAS từng kênh?",
+          "issue": "L2 nhận lại; phương án sai (a, c) vô lý dễ loại.",
+          "fix": "Thay bằng câu dữ liệu: MER giữ 6 nhưng ROAS Meta rơi 4→2,5 và Google tăng — chuyện gì xảy ra, cần kiểm gì."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 600 − 360 = 240; 240/100 = 2,4 ✓ (tol 0,05); sai 6 ✓, 3,6 = 360/100 ✓. Q4: 40% − 10% = 30%; 1/0,3 = 3,33 ✓ (tol 0,02); sai 2,5 = 1/0,4 ✓, 2 = 1/0,5 ✓. Ví dụ: 600/100 = 6, 1.050/150 = 7, 520/100 = 5,2 ✓; 1/0,4 = 2,5 ✓. Q7: (700−600)/(150−100) = 2 ✓; 40%×100 = 40 < 50 ✓; nhiễu 4,7 = 700/150 ✓." },
+      "claims": [
+        { "claim": "MER = tổng doanh thu ÷ tổng chi quảng cáo; MER tối thiểu = 1 ÷ (biên − lãi muốn giữ)", "status": "verified", "note": "Đúng theo định nghĩa." },
+        { "claim": "Bếp Gọn T10/T11/T12: 100/150/100 triệu chi, 600/1.050/520 triệu doanh thu, MER năm trước 7,5", "status": "illustrative-labelled", "note": "Bài ghi 'số liệu giả định'." }
+      ],
+      "strengths": "Dạy đúng chỗ dùng MER (tổng ngân sách) và chỗ không dùng (chia kênh), có so cùng mùa, tách khách mới và MER biên — ba lớp mà báo cáo thực tế hay thiếu; Q7 bắt tính MER biên và so với hoà vốn.",
+      "upgrade": "Để ≥85: (1) nêu giả định mẫu số của MER khách mới hoặc tách chi theo tầng; (2) nối ngưỡng 2,5 với lãi vòng đời ở qc02-06; (3) thêm phép tính thứ hai đổi kết luận (30% chi cho khách cũ → MER khách mới 3,4 → được tăng từng nấc); (4) thay Q5 bằng câu chẩn đoán dữ liệu."
+    },
+    {
+      "id": "B:qc02-06",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 12, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 81,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "TÌNH HUỐNG",
+          "quote": "đơn đầu (chiếc chảo) chỉ để lại 160.000đ lãi gộp",
+          "issue": "Bài qc02-03/04/08 cùng module dùng biên đóng góp đơn web 170.000đ cho cùng chiếc chảo; bài này quay về 160.000đ của qc01. Không đổi kết luận nhưng case bị lệch.",
+          "fix": "Dùng 170.000đ (hoặc nói 160.000đ là bình quân hai kênh)."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Theo dõi 500 khách mua chảo trong tháng 4: trong 3 tháng sau, 30% mua đơn thứ hai",
+          "issue": "Không nêu độ chắc của 30% (với n = 500, sai số ≈ ±4 điểm) trong khi bài nhấn mạnh 'không phải ước'; biên an toàn 205.000 so với CAC 200.000 chỉ 5.000đ, lọt trong sai số đó.",
+          "fix": "Thêm: 'với 500 khách, 30% có sai số khoảng ±4 điểm → lãi gộp mốc 3 tháng 199.000–211.000đ; hoàn vốn 3 tháng là sát nút, không phải chắc chắn'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1, Q6",
+          "quote": "Vì sao CAC phải chia cho số khách mới, không chia cho tổng số đơn trong kỳ?",
+          "issue": "Hai câu nhận lại ý bài; Q1 lời giải cho sẵn 227.500 là đáp án Q3.",
+          "fix": "Thay Q6 bằng câu tính: tháng có 420 đơn web, 300 là khách mới, chi 60 triệu — CAC là bao nhiêu và CAC 'đẹp' nếu chia cho mọi đơn là bao nhiêu."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 0,45×150 = 67,5; 160 + 67,5 = 227,5 ✓ (tol 0,5); sai 580 = 400 + 0,45×400 ✓, 310 = 160 + 150 ✓. Q4: 160, 175, 190, 205 → tháng 4 ✓ (tol 0,1); sai 1, 3 ✓. Ví dụ: 160 + 0,3×150 = 205 ✓; + 0,15×150 = 227,5 ✓; 227,5 − 500 = −272,5 ≈ 'khoảng 270.000đ' ✓; 0,45 = 0,3 + 0,15 ✓; tốc độ 15.000đ/tháng trong Q4 khớp 45.000/3 tháng của ví dụ ✓." },
+      "claims": [
+        { "claim": "LTV cho quyết định quảng cáo phải tính bằng lãi gộp, thời gian hoàn vốn so với sức chịu dòng tiền", "status": "verified", "note": "Nguyên lý tài chính nền, nêu có điều kiện." },
+        { "claim": "500 khách, 30%/15% mua lại, lãi đơn sau 150.000đ, CAC 200.000đ", "status": "illustrative-labelled", "note": "Bài ghi 'số liệu giả định'." }
+      ],
+      "strengths": "Ba điều kiện để được chịu lỗ đơn đầu (cohort thật, hoàn vốn ≤ sức chịu dòng tiền, có kênh kéo quay lại) là khung quyết định dùng được ngay; ví dụ lộ đúng lỗi 'LTV 600.000đ là doanh thu'; phản ví dụ An Cư và Q7 (mã giảm giá trừ vào lãi đơn 2) đều đổi kết luận.",
+      "upgrade": "Để ≥85: (1) thống nhất biên 160/170 với các bài cùng module; (2) nêu sai số của tỉ lệ mua lại và kết luận 'sát nút'; (3) thay Q6 bằng câu tính CAC đúng/sai mẫu số; (4) thêm một câu L5: chọn giữa combo đơn đầu (lãi 190.000đ, mua lại giảm còn 20%) và giữ chảo lẻ (160.000đ, mua lại 30%)."
+    },
+    {
+      "id": "B:qc02-07",
+      "scores": { "accuracy": 12, "depth": 13, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L1", "L5", "L3", "L3", "L4", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "KHÁI NIỆM, ĐÀO SÂU",
+          "quote": "trong cửa sổ ghi nhận (một số ngày sau lượt nhấp, sau lượt xem, theo cài đặt của tài khoản)",
+          "issue": "Cả bài mô tả cơ chế ghi nhận của Meta, Google, TikTok (cửa sổ nhấp/xem, cài đặt tài khoản, đổi cửa sổ làm số đổi) — loại fast — nhưng không có trường `src` nào và không có câu 'tin trang chính thức'. Rubric: khẳng định nền tảng không nguồn là P1.",
+          "fix": "Thêm src Meta 'About attribution settings', Google Ads 'About attribution models / conversion windows', TikTok 'Attribution window' với ngày kiểm."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Chi Meta 30 triệu: CPA báo 100.000đ",
+          "issue": "Cùng tháng 10 của Bếp Gọn, qc02-04 nói 'chiến dịch Meta kéo khách về web … chi 20 triệu, giá trị chuyển đổi 64 triệu' (≈160 đơn), ở đây Meta chi 30 triệu và nhận 300 đơn. Case xuyên suốt không khớp.",
+          "fix": "Chọn một bộ số tháng 10 cho Meta (chi, đơn báo, doanh thu báo) dùng chung cho 04, 05, 07."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1",
+          "quote": "Sổ bán hàng ghi đơn đó mấy lần?",
+          "issue": "Câu L1, ba phương án sai vô lý ('ba lần', 'không lần nào', 'hai lần'); không đo được gì.",
+          "fix": "Thay bằng câu đoán trước có số: 'ba nền tảng báo 610, sổ 420 — hệ số đối soát nằm trong khoảng nào và vì sao không thể trên 1'."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Sổ bán hàng (theo UTM lượt cuối) gán cho Meta 170 đơn, Google 150, TikTok 40, còn 60 đơn trực tiếp",
+          "issue": "Chỉ một tình huống; không có tình huống thứ hai (ví dụ shop chỉ chạy Meta và Google Search tên thương hiệu) để thấy lượt cuối thiên vị Search tới mức nào bằng số.",
+          "fix": "Thêm hai dòng số cho trường hợp Search tên thương hiệu nhận 150 đơn nhưng tắt Meta một tuần thì lượt tìm tên giảm 40%."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 300 − 90 = 210; 30.000/210 = 142,9 → 143 ✓ (tol 1); sai 100 = 30.000/300 ✓, 333 = 30.000/90 ✓. Q4: 420/610 = 0,689; 220×0,689 = 151,5 ✓ (tol 1); sai 319 = 220/0,689 ✓. Ví dụ: 300 + 220 + 90 = 610 ✓; 610 − 420 = 190 ✓; 170 + 150 + 40 + 60 = 420 ✓; hệ số 0,69 khớp '70%' ở qc02-04 ✓. Q2 lời giải: 136.000đ Google là số mới, không kiểm được trong bài." },
+      "claims": [
+        { "claim": "Mỗi nền tảng nhận công theo cửa sổ ghi nhận sau nhấp/sau xem, theo cài đặt tài khoản; đổi cửa sổ làm số đổi ngay", "status": "unverified", "note": "Cơ chế chung đúng nhưng bài không có src; xem P1." },
+        { "claim": "Meta 300 (90 sau lượt xem), Google 220, TikTok 90, sổ 420", "status": "illustrative-labelled", "note": "Bài ghi 'số liệu giả định'." }
+      ],
+      "strengths": "Ba lớp số (nền tảng để tối ưu, chỉ lượt nhấp để so kênh, sổ bán hàng để kiểm tổng) là quy trình dùng được ngay; phản ví dụ về thiên vị lượt cuối với TikTok và Q6 ngăn đúng lỗi cắt kênh tạo nhu cầu; Q7 xử lý đơn chốt trên sàn là chi tiết rất Việt Nam.",
+      "upgrade": "Để ≥85: (1) thêm src cho cơ chế ghi nhận của ba nền tảng và câu tin trang chính thức; (2) thống nhất số tháng 10 của Meta với qc02-04; (3) thay Q1 L1 bằng câu đoán trước có số; (4) thêm tình huống thứ hai về Search tên thương hiệu để lượng hoá thiên vị lượt cuối."
+    },
+    {
+      "id": "B:qc02-08",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 81,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ, Q2",
+          "quote": "Bốn tuần với hai nhóm tỉnh đã cho kết quả rõ; chờ thêm ba tháng là tiếp tục lỗ",
+          "issue": "Bài không nêu vì sao 'rõ': 4 tuần × (130 so với 110) → tổng 520 so với 440, sai số ≈ √960 ≈ 31 đơn, chênh 80 ≈ 2,6 lần sai số. Không có con số này, người học không biết khi nào phép thử của mình là 'rõ' (Phản ví dụ chỉ nói 'cần đủ đơn').",
+          "fix": "Thêm cách ước: 'chênh tổng phải lớn hơn khoảng 2 lần √(tổng đơn hai vùng)'; nối với qc03-06."
+        },
+        {
+          "sev": "P2",
+          "where": "KHÁI NIỆM",
+          "quote": "Cách đo là giữ một nhóm đối chứng không thấy quảng cáo: holdout … hoặc thử theo vùng",
+          "issue": "Không nhắc các công cụ đo lift có sẵn của nền tảng (Meta Conversion Lift, Google Conversion Lift / geo experiments) là phương án thay thế việc tự chia tỉnh; người học shop nhỏ không biết lối đi này tồn tại.",
+          "fix": "Thêm một câu trong Đào sâu kèm src và điều kiện ngân sách tối thiểu."
+        },
+        {
+          "sev": "P2",
+          "where": "Q7",
+          "quote": "Chỉ số nào nói được 'creative có gây chú ý không' nhưng KHÔNG nói được 'quảng cáo có mang lại lãi không'?",
+          "issue": "Đọc lại bảng Đào sâu (L2).",
+          "fix": "Thay bằng câu áp bảng vào tình huống: cho 4 chỉ số của một tuần, hỏi chỉ số nào đủ để quyết tăng ngân sách bám đuổi và chỉ số nào thiếu."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 130 − 110 = 20; 6.000/20 = 300 ✓ (tol 1); sai 200 = 6.000/30 ✓, 46,2 = 6.000/130 ✓. Q4: 20/40 = 0,5; 170×0,5 = 85 ✓ (tol 0,5); sai 340 = 170/0,5 ✓. Ví dụ: CPA báo 6.000/40 = 150 ✓; CPA tăng thêm 300 = 2 × 150 ✓; hoà vốn 170 khớp qc02-03 ✓." },
+      "claims": [
+        { "claim": "Phần tăng thêm chỉ đo được bằng nhóm đối chứng (holdout, thử theo vùng)", "status": "verified", "note": "Nguyên lý thí nghiệm nền; bài nêu điều kiện (đủ đơn, vùng tương đương, hạn dùng)." },
+        { "claim": "Hai nhóm tỉnh 100 đơn/tuần; A 130, B 110; Meta báo 40", "status": "illustrative-labelled", "note": "Bài ghi 'số liệu giả định'." }
+      ],
+      "strengths": "Bài kết module đúng chỗ: đo bám đuổi (chiến dịch 'rẻ nhất') bằng vùng đối chứng, ra CPA tăng thêm gấp đôi CPA báo và một quyết định có hạn (cắt nửa, dời tiền, đo lại sau 6 tuần); bảng 'mỗi chỉ số nói được gì / không nói được gì' là tổng kết sạch cho cả module.",
+      "upgrade": "Để ≥85: (1) nêu cách ước sai số để biết khi nào phép thử 'rõ'; (2) nhắc công cụ lift của nền tảng với src; (3) thay Q7 bằng câu áp bảng vào dữ liệu; (4) thêm tình huống thứ hai đổi kết luận: tỉ lệ tăng thêm 0,8 (từ khoá tên thương hiệu của Trà Mộc sau TikTok) → giữ, không cắt."
+    }
+  ],
+  "module_notes": {
+    "progression": "Mạch: năm tầng kết quả (01) → tách CPA thành CPM/CTR/CVR (02) → biên đóng góp và CPA trần theo kênh (03) → ROAS hoà vốn và đối soát (04) → MER cấp công ty (05) → LTV và hoàn vốn CAC (06) → ghi nhận và sổ bán hàng (07) → phần tăng thêm (08). Đây là chuỗi đo lường đúng thứ tự từ chỉ số nền tảng tới lãi thật, mỗi bài một thước đo và bài 08 tổng kết thước nào nói được gì. MER và ROAS nền tảng được phân biệt đúng (04: ROAS màn hình ≠ đối soát; 05: MER cho tổng ngân sách, ROAS kênh để chia tiền; 08: chỉ đối chứng mới nói phần tăng thêm) — chỉ có 04 gọi số đối soát lượt cuối là 'ROAS thật', mâu thuẫn với 07 và 08. Chuỗi số học CPM→CTR→CVR→CPA→ROAS→MER→lãi được kiểm lại toàn bộ: 16/16 câu tính đúng, ví dụ tự khớp; lệch duy nhất là biên chảo 160.000đ (01, 06) so với 170.000đ (03, 04, 08) và số tháng 10 của Meta (20 triệu ở 04, 30 triệu ở 07). 07 nên đứng trước 04 vì 04 dùng kết quả đối soát (9,6 + 10,4 triệu) mà 07 mới dạy cách làm.",
+    "overlap": [
+      "03 lặp lại phép tính CPA trần của qc01-01 với số khác (170 so với 160) — nên dẫn và giải thích vì sao khác.",
+      "04 (hệ số đối soát 0,7) và 07 (420/610 = 0,69) cùng dạy một hệ số; 04 dùng trước khi 07 dạy cách tính.",
+      "05 Q2 ('giữ chi vì MER khách mới dưới hoà vốn đơn đầu') và 06 ('được chịu lỗ đơn đầu nếu hoàn vốn kịp') nói về cùng một quyết định mà không nối nhau.",
+      "01 Q6, qc01-02 Q6 và qc03-02 Q5 cùng ý 'lead rẻ nhưng tỉ lệ đạt chuẩn thấp'.",
+      "02 Q6, 08 Phản ví dụ, qc01-03 Đào sâu, qc03-06 đều nói 'ít đơn thì nhiễu' nhưng không bài nào cho công thức ước nhanh (√n)."
+    ],
+    "gaps": [
+      "Không có bài về cài đặt ghi nhận cụ thể của từng nền tảng (cửa sổ 7 ngày nhấp/1 ngày xem, mô hình gán công của Google, cách đọc cột 'Attribution setting') — 07 mô tả cơ chế nhưng không có src và không có màn hình nào.",
+      "Không có bài về nhiễu và cỡ mẫu dù 5 bài dựa vào 'chưa đủ đơn để kết luận'; qc03-06 có nhưng chỉ cho thử trang đích.",
+      "Không có bài về giá trị chuyển đổi (gửi giá trị đơn, tối ưu theo giá trị/ROAS mục tiêu) dù 04 nói 'giá trị chuyển đổi lấy theo dữ liệu bạn gửi về'.",
+      "MER khách mới (05) cần số khách mới/cũ nhưng không bài nào dạy cách tách khách mới trong sổ bán hàng hoặc trên sàn.",
+      "Không có bài về đọc báo cáo sàn (Shopee/TikTok Shop Ads: ROAS trong sàn, GMV Max) dù Bếp Gọn chạy quảng cáo trong sàn — 03 và 04 chỉ chạm ở một câu.",
+      "Không bài nào có bài thực hành có đầu ra (BAI_TASKS); module đo lường rất hợp để có một bảng đối soát mẫu chấm được."
+    ],
+    "best_lesson": "B:qc02-02",
+    "weakest_lesson": "B:qc02-07"
+  }
+}

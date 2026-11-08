@@ -1,0 +1,3 @@
+{ "mod":"tp03", "fixed_at":"2026-11-08", "items":[
+  { "id":"B:tp03-02", "where":"Q1", "status":"fixed", "change":"Đề đổi từ “phép thử nào thường bị bỏ qua nhất” (không có dữ liệu) sang dữ kiện tình huống: “với tên ‘Quýnh’, phép thử nào cho thấy khách được bạn bè giới thiệu dễ không tìm ra shop nhất?”; viết lại bốn lời giải: d dựa trên 14/40 gõ đúng, a/b/c sai rõ (fanpage không có số khách lạc; kết quả không dấu chỉ xảy ra sau khi đã gõ đúng chữ; tình huống không có nghĩa xấu nào).", "key_changed":false, "note":"Khoá giữ d; phương án giữ nguyên chữ." } ],
+  "validator":"0 lỗi (1 cảnh báo có sẵn: tp03-07 không có câu tính)", "tests":"pass" }

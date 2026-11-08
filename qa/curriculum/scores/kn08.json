@@ -1,0 +1,233 @@
+{
+  "mod": "kn08",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn08-01",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 9, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Còn lại bao nhiêu phần trăm danh sách ban đầu dùng được?", "issue": "Câu calc chỉ là trừ rồi chia một bước, số đã có sẵn trong ví dụ; không buộc đọc dữ liệu mới. Không có phép tính nào về chi phí gửi sai (9.000 tin × giá tin) để lượng hoá thiệt hại mà bài nói 'tốn tiền gửi'.", "fix": "Thay bằng: 'Mỗi tin 700đ, mỗi tháng gửi 2 lần cho cả 20.000 dòng: một năm tốn bao nhiêu cho 11.500 dòng vô dụng?' (11.500 × 700 × 24 = 193 triệu)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "3.000 số sai định dạng hoặc trùng, 6.000 số không còn nhận tin, 2.500 số nhân viên tự nhập", "issue": "Số không gắn nhãn minh hoạ; không nói cách phân biệt 'số không còn nhận tin' (bounce) với 'số đúng nhưng khách không mở' — hai việc khác nhau khi lọc.", "fix": "Gắn nhãn 'số minh hoạ' và thêm một dòng định nghĩa: không đến máy = nhà mạng báo lỗi/không tồn tại; khác với đến máy nhưng không phản hồi." },
+        { "sev": "P2", "where": "Q2 a", "quote": "Giao chỉ tiêu mỗi ca 50 số, nhân viên tự điền nếu khách ngại đọc số", "issue": "Nhiễu tự tố cáo ('nhân viên tự điền'), cùng với c 'bắt buộc' và d 'mua danh sách' đều là lỗi đã nêu — đáp án đoán được không cần đọc bài.", "fix": "Thay a bằng phương án bênh được: 'thu số qua mã QR tích điểm, ô đồng ý nhận tin bỏ trống mặc định' và hỏi phương án nào vừa sạch vừa thu được nhiều nhất." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20.000 − 3.000 − 6.000 − 2.500 = 8.500; 8.500/20.000 = 42,5% ✓ (57,5 = 11.500/20.000 ✓; 77,3 = 8.500/11.000 ✓). Tình huống 11.000 tin đến máy khớp 20.000 − 3.000 − 6.000 = 11.000 ✓." },
+      "claims": [
+        { "claim": "Chuỗi trà sữa Đà Nẵng 20.000 số, 11.000 đến máy", "status": "illustrative-unlabelled", "note": "Số khớp nội bộ nhưng không gắn nhãn." },
+        { "claim": "Đổi nhà mạng thường vẫn giữ số", "status": "unverified", "note": "Đúng với chuyển mạng giữ số ở Việt Nam, không có nguồn." },
+        { "claim": "mỗi tin gửi sai làm giảm uy tín của kênh với cả nhà mạng lẫn khách", "status": "unverified", "note": "Cơ chế lọc spam/brandname của nhà mạng không được nêu nguồn." }
+      ],
+      "strengths": "Ba điều kiện (đúng · đúng người · có đồng ý) rõ và kịch bản hỏi tại quầy có câu nói mẫu cụ thể; phản ví dụ hợp lý (khách thân nói miệng → xin xác nhận thay vì xoá).",
+      "upgrade": "Để đạt ≥85: (1) lượng hoá thiệt hại (chi phí gửi sai/năm, tỉ lệ bị chặn) và thêm bảng 4 nhóm sau lọc; (2) gắn nhãn minh hoạ; (3) nêu ngắn căn cứ pháp lý về đồng ý (nối sang kn08-09) với src; (4) thay Q2/Q3 bằng câu đọc kết quả thử 100 dòng (đúng 70, đúng người 60, có đồng ý 35) và quyết định gửi cho nhóm nào (L4); (5) thêm chỉ số theo dõi có ngưỡng: tỉ lệ đến máy < 90% hoặc từ chối > 1%/đợt thì dừng."
+    },
+    {
+      "id": "B:kn08-02",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L5", "L4", "L3", "L3", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "700 khách được nhắn ra 84 đơn (12%); 100 khách bị giữ lại tự mua 9 đơn (9%). Chọn đúng người ra nhiều đơn, nhưng đơn tăng thêm nhờ tin chỉ khoảng 21", "issue": "Nhóm đối chứng 100 người: sai số chuẩn của chênh 12% − 9% ≈ 3,1 điểm, tức chênh 3 điểm chỉ ≈ 1 sai số chuẩn — 21 đơn tăng thêm có thể là 0 hoặc 40. Bài kết luận '21' như số đo chắc và Q3 chấm 21 ± 0,5, trong khi thang yêu cầu 'nêu nhiễu/khoảng tin cậy khi mẫu nhỏ'.", "fix": "Thêm một câu: 'Với 100 người đối chứng, chênh 3 điểm còn trong khoảng nhiễu (±3 điểm); đây là ước lượng điểm, cần lặp qua 2–3 đợt hoặc chừa đối chứng lớn hơn (≥ 20%) trước khi tin'. Giữ Q3 là phép tính nhưng thêm bước nêu độ chắc." },
+        { "sev": "P2", "where": "Q1 d", "quote": "R — người vừa mua gần đây thường phản hồi nhanh hơn hẳn", "issue": "Khẳng định R là trục dự đoán tốt nhất nêu như quy luật, không nguồn, không điều kiện (với hàng chu kỳ dài, R cao có thể là người vừa mua xong và không cần mua nữa — chính phản ví dụ của bài).", "fix": "Thêm 'với hàng mua lặp lại nhanh' vào đề và lời giải; nối với phản ví dụ." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Một bảng tính ba cột là đủ làm", "issue": "Không nói cách chia điểm 1–5 (ngũ phân vị hay ngưỡng cố định) — bước mà người học sẽ vấp đầu tiên khi làm thật.", "fix": "Thêm: 'chia mỗi trục thành 5 nhóm bằng nhau theo thứ hạng (20% mỗi nhóm) hoặc theo ngưỡng ngành; chọn một cách và giữ nhất quán'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 84/700 = 12%; 9/100 = 9%; 700 × 9% = 63; 84 − 63 = 21 ✓ (75 = 84 − 9 ✓; 3 = 12 − 9 ✓). Ví dụ: 800 + 400 = 1.200 = 20% × 6.000 ✓; 700 + 300 = 1.000 tin ✓, 100 giữ lại từ nhóm 800 ✓. Kiểm nhiễu: SE ≈ √(0,09·0,91/100 + 0,12·0,88/700) ≈ 0,031 → chênh 0,03 ≈ 1 SE (không chắc)." },
+      "claims": [
+        { "claim": "Cửa hàng giày 6.000 khách, 1.000 tin, 84/700 vs 9/100", "status": "illustrative-labelled", "note": "Ví dụ mở bằng 'Số liệu minh hoạ'." },
+        { "claim": "R thường dự đoán tốt nhất ai sẽ mở tin và mua tiếp", "status": "unverified", "note": "Kinh nghiệm phổ biến trong CRM, không có nguồn/điều kiện." }
+      ],
+      "strengths": "Đưa nhóm đối chứng vào ngay bài RFM và Q3 buộc tính đơn tăng thêm (84 − 63, không phải 84 − 9) — đúng hiểu lầm hay gặp; phản ví dụ chỉ đúng điều kiện RFM thất bại (sản phẩm khác lịch sử mua).",
+      "upgrade": "Để đạt ≥85: (1) thêm câu nhiễu/khoảng tin cậy cho đối chứng 100 người và khuyến nghị cỡ đối chứng; (2) nêu cách chia điểm 1–5; (3) thêm bảng 5 nhóm RFM × (số khách, thông điệp, ưu tiên tin) để Q6 có dữ kiện; (4) thêm câu L4 đọc bảng kết quả theo nhóm (nhóm ngủ quên 300 tin ra bao nhiêu đơn so với đối chứng của riêng nhóm đó); (5) nối rõ với kn08-10 (cùng phép đo tăng thêm)."
+    },
+    {
+      "id": "B:kn08-03",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 3 },
+      "total": 70,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L3", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Q1", "quote": "Chắc chắn, vì chi phí mỗi đơn tỉ lệ thuận với giá mỗi tin gửi đi", "issue": "Hai nhiễu mở bằng 'Chắc chắn' và một nhiễu chứa 'luôn hiệu quả nhất'; đáp án đúng là phương án 'Chưa chắc' có lý. Đoán được bằng từ tuyệt đối, không cần đọc bài.", "fix": "Viết lại bốn phương án cùng dạng 'Chưa chắc/Thường' với lý do khác nhau, trong đó chỉ một lý do đúng (số đơn), các lý do khác sai (giá tin, độ dài tin, thời gian gửi)." },
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Tỉ lệ mở email còn bị phóng đại khi người nhận dùng Apple Mail bật Mail Privacy Protection, nên so bằng lượt bấm và đơn (kiểm theo tài liệu Apple Support, 10/2026)", "issue": "Khẳng định về nền tảng (kiến thức fast) có ghi ngày kiểm trong văn bản nhưng không có trường `src` với link bấm được; không có câu 'nếu màn hình khác, tin trang chính thức'. Ngoài ra số email 'mở 15%' vẫn được dùng để so với Zalo 'mở 60%' ngay sau khi nói tỉ lệ mở email không tin được.", "fix": "Thêm src Apple Support 'Mail Privacy Protection' kèm ngày kiểm; trong ví dụ so email bằng tỉ lệ bấm thay cho mở, hoặc ghi rõ 15% là 'mở báo cáo, có thể cao hơn thật'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Nếu gán cả phí công cụ tháng 1,5 triệu vào đợt thử → 150.000 đồng/đơn; nhưng phí đó dùng chung cho cả 10.000 khách, chia theo phần 2.000 người (một quy ước, hãy chọn một cách chia và giữ nhất quán) thì khoảng 300.000 → 30.000 đồng/đơn", "issue": "Đoạn ví dụ dồn ba ý (hai cách phân bổ phí cố định, cảnh báo MPP, ba kênh) trong một đoạn dài, nhiều ngoặc đơn; người học khó theo. Thiếu bảng.", "fix": "Tách thành bảng 3 kênh × (số tin, giá/tin, chi phí, đơn, chi phí/đơn) và một dòng riêng cho phí cố định với hai cách phân bổ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2.000 × 300 = 600.000; /36 = 16.666,7 ≈ 16.667 ✓. Ví dụ: email 1,5tr/10 = 150.000 ✓; 300.000/10 = 30.000 ✓; SMS 2.000 × 800 = 1,6tr/20 = 80.000 ✓. Q7 d: 30.000/16.700 ≈ 1,8 'gần gấp đôi' ✓. Bài thực hành: SMS 1.125.000/18 = 62.500; Zalo 350.000/21 = 16.667; email 900.000/6 = 150.000 — so với lãi gộp 80.000 thì email lỗ ✓." },
+      "claims": [
+        { "claim": "SMS thương hiệu ~800đ/tin, Zalo OA ~300đ/tin, email ~0đ + công cụ 1,5 triệu/tháng", "status": "illustrative-labelled", "note": "Bài nói rõ 'Giả sử báo giá… hãy xin báo giá hiện hành'." },
+        { "claim": "Apple Mail Privacy Protection phóng đại tỉ lệ mở email", "status": "unverified", "note": "Có ghi 'kiểm theo tài liệu Apple Support, 10/2026' nhưng không có src bấm được trong dữ liệu bài." },
+        { "claim": "Zalo OA… khách phải quan tâm OA hoặc đủ điều kiện nhận", "status": "unverified", "note": "Mô tả cơ chế nền tảng (OA/ZNS) không nguồn; kiến thức fast." }
+      ],
+      "strengths": "Chuyển thước đo từ giá/tin sang chi phí/đơn với cùng thông điệp, và bài thực hành buộc so chi phí/đơn với lãi gộp 80.000đ — đúng quyết định thật. Q7 giữ email cho đúng việc thay vì bỏ hẳn.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho MPP và cơ chế ZNS/OA kèm ngày kiểm và câu 'nếu khác, tin trang chính thức'; (2) viết lại Q1 không dùng từ tuyệt đối; (3) chuyển ví dụ thành bảng; (4) thêm 'Phản ví dụ' (tin giao dịch cần độ đến máy, SMS thắng dù đắt — hiện chỉ ở Q5) và 'Đào sâu' (phí cố định/biến đổi, điểm hoà vốn số khách để email rẻ hơn Zalo: 1,5tr ÷ (300đ − 0) = 5.000 tin/tháng); (5) thêm câu L6 thiết kế thử nghiệm 3 kênh có kích cỡ mẫu tối thiểu."
+    },
+    {
+      "id": "B:kn08-04",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L5", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Sau: 7 tin/tuần, mỗi tin 1% huỷ và chỉ 10 đơn/tin vì khách chai", "issue": "Hai tham số then chốt (1% huỷ/tin, 10 đơn/tin) không gắn nhãn minh hoạ; không nói tỉ lệ huỷ bao nhiêu là 'cao' theo kinh nghiệm để người học có mốc.", "fix": "Gắn nhãn 'số minh hoạ' và thêm 'mốc tham khảo: huỷ > 0,5%/tin kéo dài là tín hiệu đỏ với danh sách bán lẻ (giả định, tự đo lại)'." },
+        { "sev": "P2", "where": "Q6", "quote": "Cần cân đơn hôm nay với đơn tương lai mất theo 400 người đó", "issue": "Câu đánh đổi đúng hướng nhưng không cho số để cân (giá trị một người theo dõi/năm), nên dừng ở nhận định; đây là chỗ đáng ra có phép tính.", "fix": "Cho dữ kiện: mỗi người theo dõi mua trung bình 0,4 đơn/năm × lãi 80.000đ; hỏi 400 người mất ≈ bao nhiêu lãi/năm so với 40 đơn hôm nay (12,8 triệu vs 3,2 triệu)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Trước: 2 tin/tuần… 40 đơn/tin → khoảng 320 đơn/tháng", "issue": "2 tin/tuần × 4 tuần = 8 tin ×40 = 320 nhưng tháng 'sau' tính 28 tin (7 × 4) — nhất quán, song bài không nói cùng dùng 4 tuần; người đọc nhanh có thể thấy 320 vs 280 'gần nhau' mà bỏ qua việc mất 2.000 người theo dõi là tổn thất chính.", "fix": "Thêm bảng Trước/Sau: số tin, đơn/tin, tổng đơn, người mất, lãi tháng và giá trị người mất." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 8.000 × 0,99⁴ = 7.684,8 ≈ 7.685 ✓ (7.680 = 8.000 × 0,96 ✓ tuyến tính; 320 = 8.000 × 4% ✓). Ví dụ: 8.000 × 0,99²⁸ = 6.037,6 ✓; 28 × 10 = 280 ✓; 8 × 40 = 320 ✓." },
+      "claims": [
+        { "claim": "Shop quần áo trẻ em 8.000 người theo dõi; 0,2% → 1% huỷ/tin; 40 → 10 đơn/tin", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Người đã chặn thì không bao giờ nhận được tin nữa", "status": "unverified", "note": "Mô tả cơ chế Zalo OA (bỏ quan tâm/chặn) không nguồn; đúng về nguyên tắc." }
+      ],
+      "strengths": "Dạy đúng phép nhân luỹ kế (0,99ⁿ) với bẫy tuyến tính; 'Vì sao' nêu tỉ lệ huỷ là chỉ báo sớm hơn doanh số; phản ví dụ chỉ điều kiện gửi dày hợp lý (mùa đồng phục) và dấu hiệu để giữ nhịp.",
+      "upgrade": "Để đạt ≥85: (1) thêm bảng Trước/Sau và giá trị một người theo dõi để Q6 có số (L5 có biện hộ); (2) gắn nhãn minh hoạ, nêu mốc tỉ lệ huỷ tham khảo kèm 'tự đo'; (3) thêm 'điểm gãy': đồ thị đơn/tin theo số tin/tuần (2→3→5→7) để người học tìm mức tối ưu; (4) thay Q1 (L2) bằng câu đọc bảng 10 tin gần nhất và chỉ ra tin nào gây huỷ cao (L4)."
+    },
+    {
+      "id": "B:kn08-05",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L3", "L5", "L3", "L4", "L3", "L5", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tỉ lệ bấm tăng từ 2% lên 5%, lời phàn nàn gần như không còn", "issue": "Số kết quả không gắn nhãn minh hoạ và không tách hai thay đổi (chia theo món đã mua + bỏ nhắc giờ xem) nên không biết phần tăng do đâu; Q3 lấy số này làm phép tính nhưng chỉ là nhân–trừ một bước.", "fix": "Gắn nhãn minh hoạ; nói rõ 'hai thay đổi cùng lúc, chưa tách được'; đổi Q3 thành so hai nhóm (chống nắng vs da dầu) có số khác nhau để buộc đọc bảng." },
+        { "sev": "P2", "where": "Q2 a (lời giải)", "quote": "dữ liệu lướt web cần khách đồng ý trước, và dù có đồng ý cũng không nên nhắc ra", "issue": "Lời giải đúng nhưng mâu thuẫn nhẹ với phản ví dụ (khách tự lưu yêu thích và bật thông báo → nhắc đúng món được hoan nghênh); cần phân biệt 'hành vi có chủ đích' với 'dấu vết thu thầm' ngay trong lời giải.", "fix": "Thêm: 'trừ khi khách chủ động lưu/bật thông báo như ở phản ví dụ'." },
+        { "sev": "P2", "where": "Q6 b", "quote": "Giữ nếu thử nghiệm A/B cho thấy tỉ lệ bấm tăng, vì số liệu đã chứng minh hiệu quả", "issue": "Phương án b bênh được một phần (A/B là cách đo); lời giải bác bằng 'mất niềm tin' mà không nói đo niềm tin bằng gì (huỷ theo dõi, phàn nàn) — khiến tiêu chí a thành cảm tính.", "fix": "Lời giải: 'A/B đo bấm; muốn giữ phải đo cả huỷ theo dõi và phàn nàn trong cùng thử nghiệm — nếu bấm tăng mà huỷ cũng tăng thì bỏ'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 15.000 × 5% − 15.000 × 2% = 750 − 300 = 450 ✓ (3 = 5 − 2 điểm ✓; 750 ✓)." },
+      "claims": [
+        { "claim": "Hãng mỹ phẩm 15.000 khách; CTR 2% → 5%", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "lịch sử lướt web thu qua cookie mà khách chưa đồng ý cho dùng… rủi ro pháp lý", "status": "unverified", "note": "Đúng tinh thần Luật BVDLCN nhưng không nêu nguồn/điều khoản; nối sang kn08-09." },
+        { "claim": "Cá nhân hoá có đường cong hình chuông", "status": "unverified", "note": "Mô hình nghề (personalization–privacy paradox) không nguồn." }
+      ],
+      "strengths": "Phép thử 'nhân viên đứng trước khách nói câu đó' là công cụ quyết định cụ thể, dùng được ngay; Q2 phân loại ba nguồn dữ liệu theo mức đồng ý là câu quyết định thật.",
+      "upgrade": "Để đạt ≥85: (1) thêm bảng 3 loại dữ liệu × (khách có biết đã cho? / có đồng ý? / có nhắc trong tin?) làm công cụ; (2) đo niềm tin bằng số (huỷ theo dõi, phàn nàn/10.000 tin) và đưa vào ví dụ cùng CTR; (3) gắn nhãn minh hoạ và tách hai thay đổi; (4) thay Q3 bằng câu đọc bảng kết quả hai phiên bản có cả bấm và huỷ, kết luận giữ phiên bản nào (L5)."
+    },
+    {
+      "id": "B:kn08-06",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L5", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "thành viên ghé 3,2 lần/tháng, nhóm kia 2,6 lần. Phần tăng 0,6 lần/tháng là tác dụng thật", "issue": "Không quy 0,6 lần/tháng ra tiền để so với tỉ lệ thưởng 5%: 0,6 lần × giá trị ổ bánh × biên so với 5% × doanh thu thành viên — đây là phép tính quyết định 'giữ hay bỏ chương trình' mà bài dừng trước.", "fix": "Thêm: 'thành viên chi ~30.000đ/lần → tăng 18.000đ/tháng/thành viên; chi phí thưởng 5% × 96.000 = 4.800đ; với biên 40% lãi tăng 7.200 − 4.800 > 0 (số minh hoạ)'." },
+        { "sev": "P2", "where": "Q3", "quote": "Tỉ lệ thưởng là bao nhiêu phần trăm?", "issue": "Phép tính 25.000/500.000 đã có sẵn trong ví dụ; không có câu nào buộc tính quy mô chi phí thưởng toàn chương trình (12.000 thành viên × tần suất × 5%) dù 'Vì sao (2)' nói 'nhân với số thành viên mới thấy quy mô thật'.", "fix": "Thêm hoặc thay bằng: '12.000 thành viên, 3,2 lần/tháng, 30.000đ/lần: chi phí thưởng tối đa mỗi tháng là bao nhiêu nếu đổi hết điểm?' (57,6 triệu)." },
+        { "sev": "P2", "where": "Q6 b", "quote": "Một khoản nợ quà với khách, và dấu hiệu nhiều người đã quên thẻ", "issue": "Đúng, nhưng không nhắc tỉ lệ điểm hết hạn (breakage) là một thiết kế hợp pháp nếu công bố trước — người học có thể hiểu điểm tồn lớn luôn là xấu.", "fix": "Thêm vào lời giải: 'điểm hết hạn có báo trước là bình thường; tồn lớn + không đổi + không hết hạn mới là tín hiệu chương trình chết'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50 × 10.000 = 500.000; 25.000/500.000 = 5% ✓ (50 = 25.000/500 ✓; 0,5 ✓). Q4: 3,2 − 2,6 = 0,6 ✓." },
+      "claims": [
+        { "claim": "Chuỗi bánh mì Hà Nội 12.000 thành viên; 3,2 vs 2,6 lần/tháng", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "khách tự đăng ký thường đã gắn bó hơn", "status": "unverified", "note": "Thiên lệch tự chọn — đúng về phương pháp, không cần nguồn; bài đã nêu điều kiện so nhóm tương đương." }
+      ],
+      "strengths": "Nêu rõ thiên lệch tự chọn và điều kiện so nhóm tương đương ngay trong ví dụ và Q4; 'điểm tồn là nợ' và 'danh sách có đồng ý là giá trị lớn nhất' là hai insight nghề đúng.",
+      "upgrade": "Để đạt ≥85: (1) khép phép tính ra tiền (tăng thêm × biên so với chi phí thưởng) với bảng; (2) thêm câu calc quy mô chi phí thưởng và câu L5 'tăng mốc lên 60 điểm thì mất bao nhiêu % người đổi' với dữ kiện; (3) gắn nhãn minh hoạ; (4) nêu breakage và kế toán nợ điểm ngắn gọn; (5) nối sang kn08-10 (cùng logic đối chứng)."
+    },
+    {
+      "id": "B:kn08-07",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "So với giảm 50% cho tất cả, chuỗi bậc thang mang về ít khách hơn một chút nhưng lãi cao hơn nhiều", "issue": "Kết luận định tính dù số đã đủ để tính: bậc thang 90 × 300.000 + 150 × 180.000 = 54 triệu lãi vs 0 đồng; bài không ghi, để Q3 chỉ tính nhánh 50%.", "fix": "Thêm hai dòng tính lãi hai phương án (54 triệu vs 0) vào ví dụ, gắn nhãn minh hoạ; Q3 có thể hỏi chênh lệch." },
+        { "sev": "P2", "where": "Q3", "quote": "chi phí dịch vụ 300.000 đồng", "issue": "Không nói 300.000 là chi phí biến đổi (nhân công, vật tư) hay gồm cố định; nếu gồm cố định thì 'lãi gộp 0' không hẳn là 'không lời đồng nào' về mặt đóng góp.", "fix": "Ghi 'chi phí biến đổi mỗi liệu trình 300.000đ'." },
+        { "sev": "P2", "where": "ĐÀO SÂU", "quote": "gửi tin đầu cho 250 người, chừa 50 người không nhắn rồi so số đặt lịch", "issue": "Đối chứng 50 người quá nhỏ để thấy chênh vài phần trăm (90/3.000 = 3%); phép kiểm tra đề xuất sẽ cho kết quả nhiễu mà bài không cảnh báo.", "fix": "Nâng đối chứng (ví dụ 300/300) hoặc nói rõ 'đủ để thấy xu hướng, chưa đủ kết luận; lặp qua 2–3 đợt'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 600.000 × 50% = 300.000; 300.000 − 300.000 = 0; 300 × 0 = 0 ✓ (90 triệu = 300 × 300.000 ✓ quên chi phí; 180 triệu = 300 × 600.000 ✓). Ví dụ: 90 + 150 = 240 < 300 'ít hơn một chút' ✓; lãi bậc thang 90 × 300k + 150 × (480k − 300k) = 27 + 27 = 54 triệu." },
+      "claims": [
+        { "claim": "Spa Cần Thơ 3.000 khách ngủ quên; 90/150/400 phản hồi", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Ai không phản hồi sau chuỗi này thì giảm tần suất hoặc ngừng gửi, để danh sách sạch và không bị chặn", "status": "unverified", "note": "Thực hành chuẩn (sunset policy), không cần nguồn." }
+      ],
+      "strengths": "Bậc thang ba tin với thứ tự có lý (lý do mới → ưu đãi vừa → hỏi ở lại), Q3 bẫy 'giảm 50% về đúng giá vốn' rất thực, Q6 chuyển sang ngành chu kỳ dài (nệm) đúng cách.",
+      "upgrade": "Để đạt ≥85: (1) tính lãi hai phương án trong ví dụ và bảng 3 bậc × (số gửi, phản hồi, lãi); (2) ghi rõ chi phí biến đổi; (3) sửa cỡ đối chứng ở phép kiểm tra; (4) thêm 'khách quay lại lần thứ hai' vào ví dụ bằng số (bao nhiêu trong 240 quay lại lần 2 sau 60 ngày) vì Đào sâu gọi đó là tín hiệu chính; (5) thêm câu L5: ưu đãi 20% hay 30% ở tin 2 — cho số phản hồi và biên, chọn mức."
+    },
+    {
+      "id": "B:kn08-08",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 14, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Đơn sàn thương mại điện tử thường che số người mua, nên giữ riêng đến khi khách tự cho số", "issue": "Khẳng định về cách nền tảng vận hành (che số điện thoại người mua) không nguồn, không ngày kiểm, không câu 'nếu khác, tin trang chính thức'; chính sách sàn đổi thường xuyên (kiến thức fast).", "fix": "Thêm src chính sách bảo vệ dữ liệu người mua của Shopee/TikTok Shop với ngày kiểm, hoặc viết 'tuỳ sàn và thời điểm; kiểm tra chính sách hiện hành'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "20.000 hồ sơ còn 14.000 khách thật", "issue": "Không gắn nhãn minh hoạ; không nói tỉ lệ gộp nhầm (số gia đình dùng chung) dù khái niệm cảnh báo — thiếu con số để người học biết soi bao nhiêu dòng.", "fix": "Thêm: 'soi 100 dòng trùng ngẫu nhiên: 6 dòng là hai người dùng chung số (số minh hoạ) → tách bằng tên + địa chỉ'." },
+        { "sev": "P2", "where": "Q3, Q4", "quote": "Bao nhiêu phần trăm hồ sơ ban đầu là trùng lặp?", "issue": "Q3 là phép trừ–chia một bước; Q4 (vì sao chuẩn hoá) là L2 với nhiễu dễ ('trông đẹp', '+84 là nước ngoài'). Không câu nào buộc đọc một bảng gộp thật.", "fix": "Thay Q4 bằng bảng 6 dòng (3 định dạng số, 2 tên viết khác, 1 số dùng chung) và hỏi còn bao nhiêu khách thật sau gộp (L4)." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Chọn một khoá chung, gộp hồ sơ, rồi mới đếm khách và chia nhóm.", "issue": "Bài thiếu 'Vì sao hiệu quả', 'Phản ví dụ', 'Đào sâu' so với các bài khác trong module; không nói khi nào email hay mã thành viên là khoá tốt hơn số điện thoại (B2B, khách nước ngoài).", "fix": "Thêm ba phần theo khuôn module; phản ví dụ: khách B2B dùng số công ty chung → khoá là email cá nhân/mã khách." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20.000 − 14.000 = 6.000; 6.000/20.000 = 30% ✓ (42,9 = 6.000/14.000 ✓; 70 ✓)." },
+      "claims": [
+        { "claim": "Sàn TMĐT thường che số điện thoại người mua", "status": "unverified", "note": "Không có src; kiến thức fast." },
+        { "claim": "Kéo khách ra khỏi sàn có thể vi phạm chính sách sàn", "status": "unverified", "note": "Không có src." },
+        { "claim": "Thương hiệu đồ gia dụng 4 kênh, 20.000 → 14.000", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Cách bắt đầu không cần CRM lớn (một khoá, một bảng, một người cập nhật) và cảnh báo gộp nhầm số gia đình là chi tiết nghề đúng; Q6 chuyển sang dữ liệu sức khoẻ với yêu cầu đồng ý/phân quyền.",
+      "upgrade": "Để đạt ≥85: (1) bổ sung ba phần cấu trúc còn thiếu; (2) thêm src/ngày kiểm cho chính sách sàn; (3) thêm bảng gộp mẫu 6–8 dòng và câu L4 đọc bảng; (4) nêu quy tắc ưu tiên khi hai hồ sơ mâu thuẫn (tên, địa chỉ mới nhất thắng) và tỉ lệ gộp nhầm chấp nhận được; (5) nối với kn08-02 (RFM chỉ đúng sau gộp: chị Hạnh 6 lần/9 triệu đổi nhóm) bằng một câu hỏi chung."
+    },
+    {
+      "id": "B:kn08-09",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 14, "examples": 8, "pedagogy": 6, "assessment": 6, "data": 4, "clarity": 4 },
+      "total": 62,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L5", "L2"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Ở Việt Nam là Luật Bảo vệ dữ liệu cá nhân 2025 (Luật số 91/2025/QH15, hiệu lực từ 1/1/2026, thay cho Nghị định 13/2023/NĐ-CP)", "issue": "Khẳng định pháp lý có số hiệu, ngày hiệu lực và quan hệ thay thế nghị định nêu như sự thật nhưng không có `src` (link văn bản, ngày kiểm). Kiến thức periodic bắt buộc nguồn; quan hệ 'thay cho Nghị định 13' cần kiểm (nghị định hướng dẫn mới có thể vẫn kế thừa một phần).", "fix": "Thêm src tới văn bản luật trên cơ sở dữ liệu pháp luật chính thức với ngày kiểm; viết 'Nghị định 13/2023 được thay bằng nghị định hướng dẫn mới — kiểm văn bản hiện hành với pháp chế'." },
+        { "sev": "P2", "where": "Q3", "quote": "Số khách bị lộ chiếm bao nhiêu phần trăm so với trước, khi tài khoản đó thấy toàn bộ 30.000?", "issue": "Câu calc chỉ là 3.000/30.000; không dạy được gì về đo rủi ro (ví dụ số bản sao đã tải × số khách mỗi bản).", "fix": "Thay bằng: '12 người đã tải file 30.000 dòng, 3 đã nghỉ: số 'bản khách ngoài kiểm soát' tối thiểu là bao nhiêu dòng?' (3 × 30.000 = 90.000 dòng-bản) để nối Q5." },
+        { "sev": "P2", "where": "Q7 c (lời giải)", "quote": "Không nên khẳng định luật quy định như vậy; trách nhiệm tuỳ tổ chức và quy định cụ thể", "issue": "Lời giải né khi chính bài đã nêu luật cụ thể ở khái niệm — không nhất quán về mức chắc chắn; người học không biết luật đặt trách nhiệm cho 'bên kiểm soát dữ liệu' (tổ chức), không cho cá nhân marketer.", "fix": "Viết: 'Luật đặt nghĩa vụ lên tổ chức (bên kiểm soát/xử lý), không gọi tên marketer; nhưng marketer là người ra quyết định dùng dữ liệu nên phải biết nghĩa vụ đó'." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Ai cần mới được xem, dùng đúng mục đích khách đã đồng ý, không gửi file qua chat.", "issue": "Thiếu 'Vì sao', 'Phản ví dụ' (khi nào chia sẻ nội bộ rộng là hợp lý: dữ liệu đã ẩn danh/tổng hợp), 'Đào sâu' (đánh đổi tiện–an toàn, chi phí phân quyền với doanh nghiệp nhỏ).", "fix": "Thêm ba phần theo khuôn module." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 10 × 3.000 = 30.000; 3.000/30.000 = 10% ✓." },
+      "claims": [
+        { "claim": "Luật Bảo vệ dữ liệu cá nhân 2025, Luật số 91/2025/QH15, hiệu lực 1/1/2026, thay Nghị định 13/2023/NĐ-CP", "status": "unverified", "note": "Khớp với hiểu biết về luật được Quốc hội thông qua 6/2025, nhưng bài không có src/ngày kiểm; quan hệ thay thế nghị định cần kiểm." },
+        { "claim": "báo cáo nội bộ trong 24 giờ (quy trình nội bộ của chuỗi)", "status": "illustrative-labelled", "note": "Bài gắn nhãn là quy trình nội bộ, không phải thời hạn luật." },
+        { "claim": "lộ dữ liệu khách thường bắt nguồn từ cách làm việc nội bộ lỏng lẻo (Q1)", "status": "unverified", "note": "Nhận định chung không nguồn." }
+      ],
+      "strengths": "Ba nghĩa vụ cốt lõi nói bằng ngôn ngữ marketer (thu gì–để làm gì–đồng ý; rút lại; báo lộ) và ví dụ xử lý sự cố có bước cụ thể (khoá file, thống kê ai tải, báo nội bộ, khoá tài khoản ngày nghỉ việc); Q5 và Q6 là câu quyết định thật.",
+      "upgrade": "Để đạt ≥85: (1) thêm src văn bản luật + ngày kiểm và câu 'hỏi pháp chế về thời hạn thông báo'; (2) bổ sung ba phần cấu trúc; (3) thay Q3 bằng phép đo phạm vi lộ; (4) thêm bảng 'ai được xem gì' (vai trò × trường dữ liệu) làm công cụ phân quyền cho doanh nghiệp nhỏ; (5) nhất quán mức chắc chắn giữa khái niệm và lời giải Q7."
+    },
+    {
+      "id": "B:kn08-10",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L5", "L4", "L2", "L5", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q5 c (lời giải)", "quote": "Vài nghìn khách đã đủ để thấy chênh lệch rõ", "issue": "Khẳng định về cỡ mẫu không có điều kiện; với chi tiêu lệch phải (bài tự nêu) và chênh 3.000đ trên nền 7.000đ, 2.000 đối chứng có thể đủ nhưng chênh 100đ (Q6) thì không — lời giải nên gắn với độ lớn hiệu ứng.", "fix": "Viết: 'đủ khi hiệu ứng lớn (như 3.000 trên 7.000); hiệu ứng nhỏ cần đối chứng lớn hơn hoặc lặp nhiều đợt'." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Doanh thu từ CRM là phần chênh so với nhóm không nhận tin", "issue": "Thiếu 'Phản ví dụ' (khi không thể giữ đối chứng: tin giao dịch, chương trình bắt buộc; hoặc hiệu ứng lan nhóm — khách đối chứng vẫn thấy ưu đãi qua bạn bè) và 'Đào sâu' (holdout lâu dài vs theo đợt, đo trễ).", "fix": "Thêm hai phần; phản ví dụ về rò rỉ ưu đãi sang đối chứng làm chênh bị ước thấp." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "trừ chi phí gửi và ưu đãi 12 triệu còn 15 triệu", "issue": "Chi phí ưu đãi (mã giảm) được tính vào 12 triệu nhưng doanh thu 10.000đ/khách là trước hay sau giảm không nói; nếu doanh thu đã trừ giảm giá thì cộng ưu đãi vào chi phí là trừ hai lần.", "fix": "Ghi rõ 'doanh thu trước giảm giá; ưu đãi tính riêng trong 12 triệu'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (10.000 − 7.000) × 18.000 = 54 triệu; × 50% = 27; − 12 = 15 ✓ (42 = 54 − 12 ✓ quên giá vốn; 27 ✓ quên chi phí). Tình huống: 18.000 × 10.000 = 180 triệu ✓ khớp báo cáo." },
+      "claims": [
+        { "claim": "Shop thời trang 20.000 khách; 10.000 vs 7.000đ/khách; biên gộp 50%", "status": "illustrative-labelled", "note": "Biên gộp ghi 'giả định'; các số khác khớp 180 triệu của tình huống." },
+        { "claim": "Chi tiêu khách lệch phải, vài đơn lớn kéo trung bình", "status": "unverified", "note": "Đúng về thống kê phân phối chi tiêu; không cần nguồn." }
+      ],
+      "strengths": "Khái niệm nêu đủ ba cảnh báo nghề (doanh thu ≠ lãi; lệch phải và nhiễu; đo vài tuần và lặp đợt); Q3 chuỗi ba bước có hai bẫy đúng; Q6 dạy đọc 'không chênh' thay vì kết luận gây hại.",
+      "upgrade": "Để đạt ≥85: (1) thêm 'Phản ví dụ' và 'Đào sâu' (rò rỉ ưu đãi, holdout cố định theo quý, đo trễ 2–4 tuần); (2) làm rõ doanh thu trước/sau giảm; (3) thêm bảng 2 nhóm × (số khách, doanh thu/khách, trung vị, % mua) để nói về lệch phải bằng số; (4) thêm câu L6: thiết kế holdout 10% — chọn ngẫu nhiên cách nào, giữ bao lâu, báo cáo chỉ số gì; (5) nối ngược về kn08-02, 06, 07 (cùng phép đo) bằng một dòng."
+    }
+  ],
+  "module_notes": {
+    "progression": "Chuỗi đi từ tài sản dữ liệu (01 danh sách sạch) → chọn ai (02 RFM) → kênh nào (03) → bao nhiêu lần (04) → nói gì (05) → cơ chế giữ (06 tích điểm, 07 đánh thức) → hạ tầng (08 gộp hồ sơ, 09 bảo vệ) → đo (10 tăng thêm). Logic tốt nhưng 08 (gộp hồ sơ) nên đứng trước 02 vì RFM chỉ đúng khi hồ sơ đã gộp (chính ví dụ chị Hạnh cho thấy). Bốn bài ngắn (03, 08, 09, 10) thiếu 'Vì sao/Phản ví dụ/Đào sâu'; sáu bài còn lại đủ khuôn. Bài 10 là bài đo mạnh nhất và nên được tham chiếu từ 02, 06, 07 thay vì mỗi bài tự giới thiệu lại nhóm đối chứng.",
+    "overlap": [
+      "Nhóm đối chứng được giới thiệu lại bốn lần (02 ví dụ + Đào sâu, 06 'so nhóm tương đương', 07 Q7 + Đào sâu, 10 toàn bài) với cùng lập luận; nên dạy một lần ở 10 (hoặc đưa 10 lên sớm) và các bài khác chỉ áp dụng.",
+      "01 và 09 cùng nói về đồng ý và dữ liệu mua ngoài (01 Q2 d, Q7 b vs 09 Q6); 05 Q2 lại nói đồng ý cookie — ba bài chạm cùng điểm pháp lý mà chỉ 09 nêu luật.",
+      "04 (tần suất/huỷ) và 07 (bậc thang đánh thức, 'hỏi có muốn tiếp tục nhận tin') cùng kết luận 'làm sạch danh sách để không bị chặn'; 07 Q5 gần trùng 04 Q7."
+    ],
+    "gaps": [
+      "Giá trị vòng đời khách (CLV/LTV) và biên theo nhóm — 04 Q6 và 07 cần nó để cân đánh đổi nhưng không bài nào tính.",
+      "Đường cong giữ chân/cohort (bao nhiêu % khách tháng 1 còn mua tháng 3, 6) — nền để định nghĩa 'ngủ quên' theo ngành (07 Q4) bằng số thay vì cảm tính.",
+      "Chuỗi tự động theo vòng đời (chào mừng, sau mua đầu, sắp hết hàng, bỏ giỏ) — 06 Q2 và 05 ví dụ chạm vào nhưng không có bài thiết kế luồng.",
+      "Khả năng đến máy/giao được (deliverability): brandname SMS, template ZNS được duyệt, domain email ấm — 03 nêu giá mà không nêu điều kiện gửi được.",
+      "Thử nghiệm A/B nội dung tin với cỡ mẫu và thời gian đọc kết quả — 05 Q6 b bị bác mà không có bài dạy cách làm đúng.",
+      "Đồng ý và hồ sơ xử lý dữ liệu theo luật mới (quyền rút, xoá, thời hạn lưu) chỉ nêu ở 09 với một câu luật không nguồn."
+    ],
+    "best_lesson": "B:kn08-10",
+    "weakest_lesson": "B:kn08-09"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "mod": "tp11",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:tp11-01",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L3", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Xưởng thử nâng giá lên 210.000đ, kèm ảnh phiếu kiểm nghiệm và video quay tổ ong. … tỉ lệ chuyển đổi lên 1,6%.", "issue": "Đổi hai thứ cùng lúc (giá và bằng chứng) rồi quy kết quả cho cả hai; Đào sâu khuyên \"chỉ đổi một thứ mỗi lần\" nhưng ví dụ chính không làm vậy; số không gắn nhãn minh hoạ.", "fix": "Ghi \"(số minh hoạ)\" và tách ví dụ thành hai bước (tăng giá trước → 1,1%; thêm bằng chứng → 1,6%) hoặc nói rõ không tách được." },
+        { "sev": "P2", "where": "Tình huống", "quote": "tỉ lệ chuyển đổi chỉ 0,8%, thấp hơn nửa các shop giá cao", "issue": "Chủ xưởng không thể biết tỉ lệ chuyển đổi của shop khác trên sàn; dữ kiện không thực tế làm tình huống kém tin.", "fix": "Đổi thành mốc tự có: \"thấp hơn nửa so với tỉ lệ của chính xưởng khi bán ở hội chợ\" hoặc so với mức trung bình ngành hàng sàn công bố (có src)." },
+        { "sev": "P2", "where": "Q2 phương án c", "quote": "Đưa giá về mặt bằng và thêm bằng chứng", "issue": "210.000đ vẫn dưới mặt bằng 220.000–280.000đ (Q6 lời giải c nói rõ điều này); \"về mặt bằng\" không chính xác.", "fix": "Sửa thành \"Đưa giá về gần mặt bằng\"." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 5.000 × 0,8% × 120.000 = 4,8 triệu; 5.000 × 1,6% × 210.000 = 16,8 triệu; chênh 12 triệu ✓; sai 4,8 = doanh thu cũ ✓; sai 9,6 = 80 hũ × 120.000 (quên đổi giá) ✓." },
+      "claims": [
+        { "claim": "Mật ong 500ml 120.000đ vs mặt bằng 220.000–280.000đ trên Shopee; chuyển đổi 0,8% → 1,6%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Nêu rõ điều kiện làm hiệu ứng yếu đi (hàng dễ so, có bằng chứng khác) — Q4 và Q7 kiểm đúng điều kiện biên; phản ví dụ (khách quen không cần giá làm manh mối) đúng; Đào sâu khuyên đổi một biến mỗi lần.",
+      "upgrade": "Để đạt ≥85: (1) tách hai biến trong ví dụ hoặc thừa nhận không tách được, gắn nhãn số; (2) sửa dữ kiện \"thấp hơn nửa các shop\" thành mốc chủ shop tự có; (3) thêm phép tính lãi (không chỉ doanh thu): giá vốn hũ, lãi/tháng trước–sau, và ngưỡng chuyển đổi hoà vốn khi tăng giá; (4) thêm bước làm: cách thử giá trên sàn (hai mã sản phẩm, hai tuần) và cách đọc bình luận hoài nghi."
+    },
+    {
+      "id": "B:tp11-02",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 10, "pedagogy": 7, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L6", "L5", "L4", "L2", "L3", "L3", "L4"],
+      "bloom_max": "L6",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "hiệu ứng chữ số đầu, Thomas và Morwitz, 2005 … theo thí nghiệm của Wadhwa và Zhang (2015)", "issue": "Hai nghiên cứu được dẫn tên–năm nhưng không có `src` bấm được, không ngày kiểm; lớp periodic yêu cầu nguồn. Bài cũng không nói hai thí nghiệm làm với người tiêu dùng Mỹ, nên \"khách Việt Nam cần thử giá thật\" là đúng nhưng chưa nêu lý do.", "fix": "Thêm src (Thomas & Morwitz, JCR 2005 \"Penny Wise and Pound Foolish\"; Wadhwa & Zhang, JCR 2015 \"This Number Just Feels Right\") kèm ngày kiểm và câu \"mẫu là người tiêu dùng Mỹ\"." },
+        { "sev": "P2", "where": "Q5 so với Q1", "quote": "Nên đổi sang 5.000.000đ; dịch vụ y tế cần giọng chắc chắn hơn giọng khuyến mãi", "issue": "Q1 dạy \"xu hướng không phải quy luật, phải thử\", nhưng Q5 chấm đáp án khẳng định đổi sang giá tròn không cần thử; hai câu hỏi nói hai giọng.", "fix": "Sửa đáp án a thành \"Nên thử 5.000.000đ với một nhóm; dịch vụ y tế thường hợp giọng chắc chắn hơn\"." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "Giá lẻ nói \"đáng tiền\"; giá tròn nói \"đáng giá\"", "issue": "Không có Vì sao/Phản ví dụ/Đào sâu; thiếu đánh đổi (giá lẻ làm khó cộng tiền mặt, giá tròn mất 0,5% doanh thu) và thiếu điều kiện ngược ngoài câu 891.000đ.", "fix": "Thêm phản ví dụ: quán ăn thanh toán tiền mặt dùng giá tròn cho dễ trả tiền dù định vị bình dân; thêm Đào sâu về đo doanh thu không chỉ số đơn." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "tức 3 triệu cho 300 chiếc nếu số chiếc không đổi", "issue": "Giả định \"số chiếc không đổi\" nêu rõ, nhưng không có số nào về việc giá tròn có làm đổi số chiếc không (chính là điều cần thử).", "fix": "Thêm kết quả thử minh hoạ hai tuần với nhãn, hoặc nói rõ \"chưa có dữ liệu\"." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.200 × 199.000 = 238,8 triệu; 1.164 × 200.000 = 232,8 triệu; chênh −6.000 nghìn ✓; sai 1.200 = quên giảm số chiếc (1.200 × 1.000đ) ✓; sai −7.164 = −36 × 199.000 (quên giá mới) ✓. Ghi chú về ngưỡng 0,5% đúng." },
+      "claims": [
+        { "claim": "Thomas & Morwitz 2005 — hiệu ứng chữ số đầu", "status": "unverified", "note": "Khớp hiểu biết chung; không có src." },
+        { "claim": "Wadhwa & Zhang 2015 — giá tròn hợp mua cảm xúc, giá lẻ hợp mua lý trí", "status": "unverified", "note": "Khớp hiểu biết chung; không có src." },
+        { "claim": "Dòng cơ bản 199.000đ, dòng giới hạn 890.000đ, 300 chiếc", "status": "illustrative-unlabelled", "note": "Giả định giảm 3% trong Q3 được gắn nhãn." }
+      ],
+      "strengths": "Hedge đúng (\"xu hướng trong thí nghiệm, không phải quy luật\") và Q1 là câu thiết kế thử giá (L6); nêu điều kiện kỹ thuật (đuôi 9 chỉ có tác dụng khi đổi chữ số đầu); Q3 có nhãn giả định và ghi chú ngưỡng 0,5%.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho hai nghiên cứu và nói về mẫu; (2) đồng bộ giọng Q5 với Q1; (3) thêm Vì sao/Phản ví dụ/Đào sâu với đánh đổi tiền mặt và đo doanh thu; (4) thêm bước làm: quy trình thử giá 2×2 (hai mức, hai nhóm, hai tuần) với cỡ mẫu tối thiểu và cách đọc kết quả khi chênh nhỏ."
+    },
+    {
+      "id": "B:tp11-03",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 16, "examples": 11, "pedagogy": 7, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L4", "L5", "L3", "L2", "L3", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Giả sử 5 chi nhánh × 100 thẻ thêm × 5 triệu = 2,5 tỉ (số minh hoạ; phải lấy số thật từ khách)", "issue": "Gán 500 thẻ tăng thêm cho logo là giả định rất mạnh; nhãn minh hoạ có, nhưng bài không nói cách ước lượng thận trọng hơn (phần đóng góp của nhận diện trong quyết định mua thẻ) nên người học dễ \"hét giá\" theo trần.", "fix": "Thêm: \"trần giá trị thường không đòi được; mốc thực tế là phương án thay thế (30 triệu)\" và đưa ví dụ trần thận trọng (ví dụ 10% số thẻ)." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "Chi phí là sàn, giá trị là trần.", "issue": "Không có Vì sao/Phản ví dụ/Đào sâu riêng; điều kiện ngược (hàng không khác biệt → thị trường đặt trần) chỉ xuất hiện ở Q7, không có trong phần đọc.", "fix": "Thêm Phản ví dụ hàng phổ thông (ốp lưng) vào phần đọc và Đào sâu về đánh đổi: báo giá theo giá trị tốn công tìm hiểu khách, dễ mất khách nhỏ." },
+        { "sev": "P2", "where": "Q4", "quote": "Trong định giá theo giá trị, vai trò của chi phí là gì?", "issue": "L2 nhận lại câu \"chi phí là sàn\".", "fix": "Thay bằng câu tính: cho chi phí cố định, số giờ, mức công tối thiểu và trần thay thế; hỏi mức giá nào trong 4 mức nằm ngoài khoảng sàn–trần." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 15.000.000/40 = 375.000; − 250.000 = 125.000đ ✓; sai 375 = quên trừ ✓; sai 1.625 = lệch đơn vị/sai phép ✓. Bài thực hành: sàn 24 × 200.000 + 1,5 triệu = 6,3 triệu ✓; cách cũ 12 × 5 × 150.000 = 9 triệu ✓; (9 − 1,5)/24 = 312.500đ/giờ ✓." },
+      "claims": [
+        { "claim": "Agency báo bộ nhận diện khoảng 30 triệu; 15 triệu/40 giờ = 375.000đ/giờ", "status": "illustrative-labelled", "note": "Ví dụ ghi \"số minh hoạ; phải lấy số thật từ khách\" cho phần giá trị." }
+      ],
+      "strengths": "Bài thực hành có đầu ra với rubric 5 mục (sàn, giá cũ, trần, giá đề xuất, câu báo giá) là phần áp dụng tốt nhất module; Q6 (trả lời \"sao 40 giờ mà 15 triệu\") và Q7 (hàng phổ thông) là câu L4–L5 đúng nghề.",
+      "upgrade": "Để đạt ≥85: (1) thêm Vì sao/Phản ví dụ/Đào sâu (trần thận trọng, chi phí tìm hiểu khách); (2) thay Q4 bằng câu tính khoảng sàn–trần; (3) thêm bảng ba mốc (sàn · thay thế · trần giá trị) với cách ước lượng từng mốc và câu hỏi khách tương ứng; (4) nối sang tp11-01: giá quá thấp với khách lớn gợi nghi ngờ tay nghề (Q2a đã nhắc, đưa vào phần đọc)."
+    },
+    {
+      "id": "B:tp11-04",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L3", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Đào sâu", "quote": "tính điểm hoà vốn cho mức tăng, tức số ổ tối đa có thể mất trước khi lãi ngày thấp hơn hiện tại", "issue": "Giao người học tính nhưng bài không làm mẫu (2.500.000/7.000 ≈ 357 ổ, tức được phép mất tới 143 ổ); đây là con số quyết định quan trọng nhất của bài.", "fix": "Tính mẫu trong Đào sâu và biến thành câu calc thay Q3 hoặc thêm vào Q7." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Nếu số ổ giảm từ 500 xuống 460/ngày, lãi/ngày vẫn tăng từ 2,5 triệu lên 3,22 triệu.", "issue": "Số 460 là giả định không gắn nhãn; không nói giảm 8% là ước đoán hay đo được sau tăng giá.", "fix": "Thêm \"(giả định minh hoạ; đo lại sau 2 tuần)\"." },
+        { "sev": "P2", "where": "Q4", "quote": "Với tiệm bánh mì, câu lý do nào tốt nhất trên thông báo tăng giá?", "issue": "Đáp án a trùng nguyên văn thông báo trong ví dụ; người đọc kỹ ví dụ không cần suy luận.", "fix": "Đổi tình huống sang quán cà phê hoặc dịch vụ, giữ cùng tiêu chí (lý do thật + điều giữ nguyên)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 460 × 7.000 − 500 × 5.000 = 3.220.000 − 2.500.000 = 720.000đ ✓; sai 1.000 = quên giảm số ổ (500 × 7.000 − 2,5 triệu) ✓; sai −780 = dùng lãi cũ 8.000đ (460 × 7.000 − 500 × 8.000) ✓ nhãn NHAM_GIA_VON hợp. Lãi 7.000 = 22.000 − 15.000 (giá vốn suy từ 20.000 − 5.000) ✓." },
+      "claims": [
+        { "claim": "Bánh mì 20.000đ → 22.000đ, lãi 8.000 → 5.000 → 7.000; 500 → 460 ổ/ngày", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Bốn phần của thông báo tăng giá (báo trước, lý do, điều giữ nguyên, đường chuyển) là checklist dùng ngay; phản ví dụ (khách đi ngang) đúng; Q7 là câu đánh giá đánh đổi lượng–lãi có số; Q5 (giảm định lượng lặng lẽ) nêu rủi ro thật.",
+      "upgrade": "Để đạt ≥85: (1) tính mẫu điểm hoà vốn số ổ trong Đào sâu và đưa vào quiz; (2) gắn nhãn giả định 460 ổ và nêu cách đo sau tăng giá (theo nhóm khách thẻ vs khách lạ); (3) đổi tình huống Q4 để không trùng ví dụ; (4) thêm tình huống thứ hai làm đổi kết luận: nếu khách thẻ chiếm 70% doanh số và nhạy giá, đường chuyển (giữ giá cũ 1 tháng) tốn bao nhiêu và có đáng không."
+    },
+    {
+      "id": "B:tp11-05",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L4", "L5", "L4", "L2", "L4", "L3", "L6"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "Gói năm bán sự cam kết", "issue": "Không có Vì sao/Phản ví dụ/Đào sâu riêng; phần ví dụ đã gánh gần hết (hoàn tiền, thiên lệch chọn, hoà vốn, A/B) nên đọc dày và lẫn giữa ví dụ và lập luận.", "fix": "Tách phần \"Giới hạn của phép so… Nên thử A/B\" ra thành Đào sâu; thêm Phản ví dụ: sản phẩm dùng theo mùa (ôn thi) nơi gói năm không hợp." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Người dùng gói tháng mang về trung bình 4 × 149.000 = 596.000đ.", "issue": "Chưa nói \"ở lại trung bình 4 tháng\" là trung bình cộng hay trung vị; với phân bố lệch (nhiều người bỏ sau 1 tháng, ít người ở 2 năm) kết luận đổi.", "fix": "Thêm một dòng: \"dùng trung vị nếu phân bố lệch; nêu cả tỉ lệ còn lại sau 12 tháng\"." },
+        { "sev": "P2", "where": "Q4", "quote": "Vì sao so gói năm với \"12 tháng trả lẻ\" có thể làm đội ngũ đánh giá sai?", "issue": "L2 nhận lại ý trong \"Lỗi hay gặp\"; nhiễu a–c yếu.", "fix": "Thay bằng câu đọc bảng giữ chân theo tháng (tháng 1: 100%, tháng 4: 40%, tháng 8: 15%) hỏi doanh thu kỳ vọng của khách gói tháng là bao nhiêu." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30 × (1.190.000 − 4 × 149.000) = 30 × 594.000 = 17.820.000; − 10 × 300.000 = 14.820.000đ ✓; sai 17.820 = quên khoản giảm của 10 khách gói năm ✓; sai −20.940 = so với 12 tháng ✓. Giả định 30 người chuyển được gắn nhãn. Kiểm thêm: 12 × 149.000 − 1.190.000 = 598.000 ✓; 598/1.788 = 33% ✓; hoà vốn 1.190/149 ≈ 8 tháng ✓." },
+      "claims": [
+        { "claim": "Gói tháng 149.000đ, gói năm 1.490.000đ → 1.190.000đ; 90% chọn tháng, ở lại 4 tháng", "status": "illustrative-unlabelled", "note": "Giả định trong Q3 có nhãn \"số minh hoạ\"." }
+      ],
+      "strengths": "Phần đọc số tốt nhất module: so với thời gian ở lại thật, hoà vốn 8 tháng, thiên lệch chọn, rủi ro hoàn tiền, A/B — đủ giả định và điều kiện; Q7 là câu thiết kế thí nghiệm (L6); Q6 kiểm chuẩn trung thực trình bày giá.",
+      "upgrade": "Để đạt ≥85: (1) tách Đào sâu và thêm Phản ví dụ sản phẩm theo mùa; (2) nói rõ trung bình/trung vị và tỉ lệ còn lại theo tháng; (3) thay Q4 bằng câu đọc bảng giữ chân; (4) thêm bước làm: bảng tính 4 dòng (giá, số người, tháng ở lại, doanh thu) để người học thử kịch bản khác (ví dụ 15 người chuyển)."
+    },
+    {
+      "id": "B:tp11-06",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 7, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L4", "L5", "L3", "L4", "L3", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "hiệu ứng giá 0, Shampanier, Mazar &amp; Ariely, 2007; vẫn nên A/B trên shop bạn", "issue": "Nghiên cứu dẫn tên–năm nhưng không có `src` bấm được và ngày kiểm (lớp periodic); đồng thời chuỗi \"&amp;\" lọt vào văn bản, cần kiểm cách render trên app (có thể hiện nguyên \"&amp;\").", "fix": "Thêm src (Shampanier, Mazar & Ariely, Marketing Science 2007 \"Zero as a Special Price\") kèm ngày kiểm; sửa ký tự & trong dữ liệu." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Giả định minh hoạ: trong 1.000 giỏ, bỏ giỏ giảm từ 40% còn 30%", "issue": "Nhãn minh hoạ có, nhưng mức giảm 10 điểm % là giả định quyết định toàn bộ kết luận (56 vs 48,3 triệu) mà không có ngưỡng hoà vốn: bỏ giỏ phải giảm bao nhiêu để tổng lãi không giảm.", "fix": "Thêm: \"tổng lãi hoà vốn khi số đơn ≥ 48,3/0,08 ≈ 604 đơn, tức bỏ giỏ chỉ cần giảm dưới 39,6%\"." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Ngưỡng nên đặt hơi trên đơn trung bình (299.000đ cao hơn 230.000đ khoảng 30%)", "issue": "Quy tắc \"hơi trên trung bình ~30%\" nêu như hướng dẫn chung, không nguồn; câu sau (\"nhìn phân bố giá trị đơn\") mới là cách đúng nhưng không có ví dụ phân bố.", "fix": "Thêm bảng phân bố minh hoạ 5 khoảng giá trị đơn để chọn mốc có nhiều đơn ngay dưới." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 300.000 × 35% = 105.000; − 25.000 = 80.000đ ✓; sai 105 = quên ship ✓; sai 275 = 300 − 25 (nhầm doanh thu với lãi) ✓. Ví dụ: 230.000 × 35% = 80.500 ✓; 600 × 80.500 = 48,3 triệu ✓; 700 × 80.000 = 56 triệu ✓; Q2a: 50.000 × 35% = 17.500 < 25.000 ✓." },
+      "claims": [
+        { "claim": "Shampanier, Mazar & Ariely 2007 — hiệu ứng giá 0", "status": "unverified", "note": "Khớp hiểu biết chung; không có src; có hedge A/B." },
+        { "claim": "Đơn trung bình 230.000đ, phí ship 25.000đ, bỏ giỏ 40% → 30%, biên 35%", "status": "illustrative-labelled", "note": "Bài ghi \"Giả định minh hoạ\"." }
+      ],
+      "strengths": "Ba lựa chọn (freeship mọi đơn / theo ngưỡng / ghi rõ phí sớm) với phép tính lãi gộp mỗi đơn đủ giả định; Q7 buộc nhìn tổng lãi thay lãi/đơn; Q2 lời giải a tính ra lỗ đơn nhỏ bằng số.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho nghiên cứu và sửa \"&amp;\"; (2) thêm ngưỡng hoà vốn của tỉ lệ bỏ giỏ và bảng phân bố giá trị đơn minh hoạ; (3) thêm Phản ví dụ (hàng nặng/cồng kềnh nơi phí ship 25.000đ không đủ, hoặc hàng giá rất thấp) và Đào sâu về lạm dụng ngưỡng (khách thêm món rồi trả lại); (4) thay Q6 (L3) bằng câu đọc phân bố đơn để chọn ngưỡng."
+    },
+    {
+      "id": "B:tp11-07",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 14, "examples": 9, "pedagogy": 7, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 67,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L3", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Với 120 đại lý, nếu mỗi đại lý giữ nhập thêm 5 máy/tháng, biên lãi thương hiệu 400.000đ/máy, đó là 240 triệu lãi/tháng không mất đi.", "issue": "Giả định 5 máy/đại lý và biên 400.000đ không gắn nhãn; coi toàn bộ 600 máy là lãi \"không mất đi\" trong khi một phần sẽ chuyển sang bán trên sàn (thương hiệu vẫn thu, chỉ khác kênh) — bỏ qua chuyển dịch kênh; và không trừ chi phí gói riêng (lắp đặt, bảo hành đổi mới).", "fix": "Ghi nhãn, trừ phần máy sẽ bán qua sàn (ví dụ 50%) và chi phí lắp đặt/bảo hành đổi mới mỗi máy, rồi tính lại." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "có thể vướng quy định về thoả thuận hạn chế cạnh tranh trong Luật Cạnh tranh", "issue": "Cảnh báo pháp lý đúng hướng và có hedge (\"hỏi pháp chế\"), nhưng không dẫn điều khoản/src và ngày kiểm; lớp periodic.", "fix": "Thêm src Luật Cạnh tranh 2018 (Điều 11, 12 về thoả thuận hạn chế cạnh tranh) kèm ngày kiểm." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "Khách nhìn một thương hiệu, không nhìn kênh", "issue": "Không có Vì sao/Phản ví dụ/Đào sâu; thiếu điều kiện khi chênh lớn vẫn chấp nhận (xả tồn mẫu cũ chỉ trên sàn, mã riêng cho sàn) và đánh đổi (gói riêng tốn chi phí, khó quản lý mã hàng).", "fix": "Thêm phản ví dụ xả tồn bằng mã hàng riêng và Đào sâu về chi phí vận hành hai gói." },
+        { "sev": "P2", "where": "Q3", "quote": "120 đại lý, mỗi đại lý giữ nhập thêm 5 máy/tháng … Lãi tháng giữ được là bao nhiêu triệu đồng?", "issue": "Phép nhân ba số, không có suy luận; lặp lại nguyên ví dụ.", "fix": "Thay bằng calc: chênh giá 15% vs 6% trên giá niêm yết 2.490.000đ — tính số tiền chênh mỗi máy ở hai mức và so với giá trị gói lắp đặt + bảo hành đổi mới (ví dụ 150.000đ) để xem gói có bù được chênh không." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 120 × 5 × 400.000 = 240.000.000 = 240 triệu ✓; sai 48 = 120 × 400.000 (quên ×5) ✓; sai 600 = số máy ✓. Kiểm: 2.120/2.490 → chênh 14,9% ✓; 2.350/2.490 → 5,6% ≈ 6% ✓." },
+      "claims": [
+        { "claim": "Ép đại lý không bán dưới mức giá có thể vướng Luật Cạnh tranh (thoả thuận hạn chế cạnh tranh)", "status": "unverified", "note": "Hướng đúng theo hiểu biết chung; không dẫn điều khoản." },
+        { "claim": "Gian hàng chính hãng Shopee; 120 đại lý; 2.490.000đ → 2.120.000đ; biên 400.000đ/máy", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Nêu đúng cơ chế đại lý thành \"phòng trưng bày miễn phí\" và ba cách xử lý (chênh nhỏ có lý do, gói khác nhau, chia đơn online); cảnh báo pháp lý về giá bán lại tối thiểu là điểm hiếm; Q6 (chiến giá lan ra) đúng.",
+      "upgrade": "Để đạt ≥85: (1) sửa ví dụ 240 triệu: gắn nhãn, trừ chuyển dịch kênh và chi phí gói riêng; (2) thêm src Luật Cạnh tranh; (3) thêm Vì sao/Phản ví dụ/Đào sâu; (4) thay Q3 bằng calc so chênh giá với giá trị gói, thêm câu đọc dữ liệu (bảng nhập hàng của đại lý theo tháng cạnh mức giảm trên sàn) để chẩn đoán."
+    },
+    {
+      "id": "B:tp11-08",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L4", "L5", "L4", "L2", "L4", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "Nó chỉ trung thực khi giá đó thực sự được áp dụng một thời gian hợp lý và có người mua ở giá đó.", "issue": "Bài dừng ở đạo đức/uy tín, không nhắc khung pháp lý Việt Nam về khuyến mại (Nghị định 81/2018/NĐ-CP: hạn mức giảm giá tối đa, thời gian, nghĩa vụ thông báo; Luật Bảo vệ quyền lợi người tiêu dùng 2023 về thông tin gây nhầm lẫn) — thiếu điều kiện ràng buộc thật cho \"sale 50% suốt 11 tháng\" ở Q5.", "fix": "Thêm một đoạn với src: hạn mức và thời gian khuyến mại theo Nghị định 81/2018, nghĩa vụ không gây nhầm lẫn; ghi ngày kiểm." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "shop cần bán thêm khoảng 69% số đôi để giữ nguyên tổng lãi", "issue": "Phép tính đúng nhưng không nêu giả định phí sàn/phí vận chuyển theo % giá bán thay đổi khi hạ giá, và không nói 69% là mức tăng khó đạt hay dễ (không có co giãn cầu).", "fix": "Thêm: \"nếu phí sàn ~10% giá bán thì lãi gộp 329.000đ còn thấp hơn, mức cần tăng cao hơn\"; thêm so với mức tăng số đôi ở đợt sale trước." },
+        { "sev": "P2", "where": "Q4", "quote": "Giá gạch ngang nào dưới đây trung thực nhất?", "issue": "L2 nhận lại khái niệm; nhiễu d (\"một ngày trước sale\") quá lộ.", "fix": "Thay bằng câu đọc dữ liệu: cho lịch sử giá 8 tuần của một mẫu (390 → 390 → 450 → 450 → 590 → 390 sale) hỏi mốc gạch ngang nào bênh được." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 150.000/89.000 = 1,685 → tăng 68,5% ✓; sai 40,7 = (150 − 89)/150 ✓; sai 15,6 = (390 − 329)/390 (nhầm giảm giá với giảm lãi) ✓. Kiểm: 590 → 390 giảm 33,9% ≈ 34% ✓; 390 → 329 giảm 15,6% ≈ 16% ✓." },
+      "claims": [
+        { "claim": "Khách hiện nay có công cụ xem lịch sử giá", "status": "unverified", "note": "Khẳng định chung về công cụ bên thứ ba, không nêu tên/nguồn; rủi ro thấp." },
+        { "claim": "Giày 390.000đ, lãi gộp 150.000đ; sale 329.000đ còn 89.000đ", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phân biệt rõ gạch ngang trung thực (giá đã bán thật, có người mua) và dựng mốc so; phản ví dụ (mẫu từng bán 590.000đ mùa trước) nêu đúng điều kiện ngược; Q3 nối giảm giá với số đôi phải bán thêm; Q7 (shop mới) là câu L5 khéo.",
+      "upgrade": "Để đạt ≥85: (1) thêm khung pháp lý khuyến mại với src; (2) thêm giả định phí sàn và so với co giãn thực tế vào ví dụ, gắn nhãn số; (3) thay Q4 bằng câu đọc lịch sử giá 8 tuần; (4) thêm Đào sâu định lượng: tín hiệu \"đợt sale kế tiếp bán ít hơn\" đo thế nào (so cùng mức giảm, cùng mẫu)."
+    }
+  ],
+  "module_notes": {
+    "progression": "Module đi từ giá như tín hiệu (01) → đuôi giá (02) → chi phí vs giá trị (03) → báo tăng giá (04) → gói tháng/năm (05) → phí ship (06) → xung đột kênh (07) → gạch ngang (08). Mạch \"giá là một câu trong thông điệp\" được giữ xuyên suốt và các bài nối nhau qua Khái niệm kề cận (01↔04↔08). Tuy nhiên bài 03 (sàn chi phí – trần giá trị) là nền của mọi bài khác nên nên đứng đầu; 01–02–08 là cụm \"giá nói gì với khách\", 04–07 là cụm \"đổi giá và kênh\", 05–06 là cụm \"cấu trúc giá\" — xếp lại theo cụm sẽ dễ học hơn. 5/8 bài (02, 03, 05, 06, 07) thiếu Vì sao/Phản ví dụ/Đào sâu riêng.",
+    "overlap": [
+      "01 (giá quá thấp làm khách nghi) và 08 (giá gạch ngang dựng lên làm mất tin) cùng cơ chế \"giá là lời khẳng định, mâu thuẫn thì khách tin giá\".",
+      "04 (lén bớt định lượng) và 08 (dựng mốc so) cùng rủi ro \"khách phát hiện qua mạng xã hội, mất niềm tin\".",
+      "05 và 06 cùng dạy \"nhìn tổng lãi, không nhìn lãi mỗi đơn/mỗi tháng\" (Q7 ở cả hai bài)."
+    ],
+    "gaps": [
+      "Không có bài về đo sẵn lòng chi trả / co giãn cầu (thử giá có kiểm soát, Van Westendorp, khảo sát) dù 01, 02, 04 đều kết bằng \"phải thử giá\".",
+      "Không có bài về cấu trúc gói/bậc giá (good-better-best, mồi nhử, gói kèm) — chủ đề cốt lõi của giá như thông điệp.",
+      "Không có bài về kinh tế khuyến mại (độ sâu giảm, tần suất, lịch sale, dạy khách chờ mã) ngoài góc trung thực ở 08; khung pháp lý khuyến mại (Nghị định 81/2018) không xuất hiện.",
+      "Không có bài phân biệt markup và biên lãi, giá vốn gồm gì — 03 và 06 dùng \"biên lãi gộp\" mà không định nghĩa.",
+      "Toàn bộ ví dụ là B2C; thiếu định giá dịch vụ B2B/đấu thầu dù 03 chạm vào."
+    ],
+    "best_lesson": "B:tp11-05",
+    "weakest_lesson": "B:tp11-07"
+  }
+}

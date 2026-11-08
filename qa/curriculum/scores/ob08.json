@@ -1,0 +1,198 @@
+{
+  "mod": "ob08",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:ob08-01",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L3", "L5", "L3", "L1", "L4", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "situation", "quote": "54 người chê giá 55.000đ … 30 người than khó gửi xe, 21 người khen nước dùng, 15 người biết quán qua bạn bè.", "issue": "Bốn 'ý' không cùng loại: hai lời chê, một lời khen, một nguồn biết quán. Ép 'mỗi người nêu một ý' để cộng đủ 120 làm dữ liệu khảo sát trông giả; thực tế một khách có thể vừa khen nước dùng vừa chê giá.", "fix": "Cho phép nhiều ý/người, báo cáo theo 'số người nhắc tới' và nói rõ mẫu số là 120 người; bỏ 'biết quán qua bạn bè' khỏi bảng vấn đề." },
+        { "sev": "P2", "where": "Q1", "quote": "Đoán trước: khoản 5 triệu quảng cáo Facebook thuộc P nào, và nó có nhắm vào điều khách nêu nhiều nhất không?", "issue": "Đề hỏi hai điều nhưng chỉ phương án b có nửa thứ hai ('chưa nhắm vào…'), nên đáp án lộ bằng hình thức.", "fix": "Cho mọi phương án đều có hai nửa (P + có/không nhắm) để phải nghĩ cả hai." },
+        { "sev": "P2", "where": "Q4", "quote": "Theo giáo trình, câu nào mô tả đúng vai trò của 4P?", "issue": "Câu L1 nhận lại định nghĩa; lặp ý Q7.", "fix": "Thay bằng tình huống: cho báo cáo tháng của một shop với 4 số liệu, hỏi P nào có bằng chứng gãy và P nào chưa có dữ liệu." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu phản ví dụ khi bảng kiểm 4P cho kết quả sai (ví dụ: khách chê giá nhưng vấn đề thật là Product không đủ khác biệt — bài chỉ gợi ở Q2b).", "fix": "Thêm phần phản ví dụ và đào sâu như các bài ob07." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (54+30)/120 = 70% ✓; 45 = 54/120 ✓; 84 là số người ✓. Tình huống: 54+30+21+15 = 120 ✓. Áp dụng: 70+40+60+30 = 200 ✓ (35/20/30/15%)." },
+      "claims": [
+        { "claim": "Cụm từ marketing mix do Neil Borden phổ biến", "status": "unverified", "note": "Khớp tài liệu phổ biến (Borden 1964 'The Concept of the Marketing Mix'); bài không có src." },
+        { "claim": "E. Jerome McCarthy (1960, Basic Marketing) gom thành bốn nhóm", "status": "unverified", "note": "Khớp tài liệu phổ biến; không có src." },
+        { "claim": "Philip Kotler đưa khung này vào giáo trình phổ biến nhất ngành", "status": "unverified", "note": "Khẳng định 'phổ biến nhất' không nguồn." },
+        { "claim": "Quán bún bò Thủ Đức, 120 khách, 55.000đ vs 40.000đ (số minh hoạ)", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Định vị 4P đúng là bảng kiểm, không phải công thức; ví dụ tự nêu giới hạn 'khảo sát chỉ hỏi người đã đến' và Q5 kiểm đúng lỗi mẫu đó. Bài áp dụng có tiêu chí đạt rõ (xếp 'hết bánh từ 7h' vào Place).",
+      "upgrade": "Sửa dữ liệu khảo sát cho nhiều ý/người; thêm phản ví dụ (chê giá nhưng gãy ở Product) và đào sâu (chi phí/thời gian sửa từng P); thay Q4 L1 bằng câu chẩn đoán từ bảng số; thêm bảng 4 dòng P × bằng chứng × % × chi phí sửa ước tính; thêm src cho Borden/McCarthy/Kotler."
+    },
+    {
+      "id": "B:ob08-02",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 16, "examples": 12, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L4", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "situation ↔ example", "quote": "Chủ cơ sở muốn tăng giá lên 35.000đ", "issue": "Tình huống đặt câu hỏi tăng giá nhưng ví dụ và câu hỏi không trả lời có nên tăng hay không; sợi dây bị bỏ lửng.", "fix": "Thêm một dòng: 'tăng giá chỉ nên bàn sau khi đánh giá 1 sao giảm; đo tỉ lệ 1 sao 4 tuần sau khi có túi giữ lạnh'." },
+        { "sev": "P2", "where": "Q1", "quote": "Hũ thuỷ tinh hay nhựa đều ấm lên sau 30 phút giao nếu không có túi giữ lạnh.", "issue": "Khẳng định vật lý nêu như sự thật, không nguồn và không điều kiện (nhiệt độ ngoài trời, hũ có nắp kín).", "fix": "Viết 'trong điều kiện giao thường, cả hai loại hũ đều không giữ lạnh được lâu' hoặc bỏ chi tiết 30 phút." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu tình huống mà sửa tầng mở rộng là sai (khách chê vị, tức lợi ích cốt lõi không đạt) và thiếu đánh đổi khi tầng mở rộng tốn chi phí lặp mỗi đơn.", "fix": "Thêm phản ví dụ: đánh giá 1 sao chủ yếu 'chua quá' → lỗi tầng thực/cốt lõi, túi lạnh vô ích." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.800/2 = 900 đơn × 1.500 = 1.350.000đ ✓; 2.700.000 = 1.800×1.500; 4.500.000 = 3.000×1.500 ✓ cùng nhãn SAI_MAU_SO. Ví dụ: 4.000×3.000 = 12 triệu ✓." },
+      "claims": [
+        { "claim": "Kotler & Armstrong (Principles of Marketing): ba tầng core customer value / actual / augmented product", "status": "unverified", "note": "Khớp giáo trình; bài không có src." },
+        { "claim": "Túi giữ lạnh kèm đá gel khoảng 1.500đ/đơn (số minh hoạ)", "status": "illustrative-labelled", "note": "" },
+        { "claim": "Hũ thuỷ tinh hay nhựa đều ấm lên sau 30 phút giao", "status": "unverified", "note": "Khẳng định vật lý không nguồn." }
+      ],
+      "strengths": "Quyết định có số và so sánh hai phương án (1,35 triệu đúng tầng vs 12 triệu sai tầng) kèm chỉ số theo dõi (số đánh giá 1 sao). Q4 (khoá bơi) và Q6 (nồi chiên) chuyển khái niệm sang ngành khác.",
+      "upgrade": "Khép lại câu hỏi tăng giá 35.000đ; thêm phản ví dụ gãy ở tầng cốt lõi; thêm đào sâu về chi phí lặp mỗi đơn vs chi phí một lần; thêm src giáo trình; thay Q7 (L2) bằng câu đọc bảng 10 đánh giá và xếp tầng rồi chọn khoản chi."
+    },
+    {
+      "id": "B:ob08-03",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 17, "examples": 12, "pedagogy": 6, "assessment": 7, "data": 9, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L3", "L5", "L3", "L1", "L4", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "example", "quote": "cần 28.800.000 ÷ 54.000 ≈ 534 hũ, tức tăng khoảng 33%", "issue": "Tính đúng số cần bán nhưng không hỏi liệu cầu có thể tăng 33% khi giá giảm 10% (độ co giãn); người học không có công cụ để đánh giá 'có khả thi không'.", "fix": "Thêm: 'để biết có đạt 534 hũ không, cần ước độ co giãn: lần giảm giá trước giảm 10% bán thêm bao nhiêu %? Nếu dưới 33% thì giảm giá chắc chắn mất lãi'." },
+        { "sev": "P2", "where": "Q4 / Q7", "quote": "Theo giáo trình, chi phí và giá trị khách cảm nhận đóng vai trò gì khi định giá? … Vì sao Price được gọi là P \"khác\" ba P còn lại?", "issue": "Hai câu nhận lại ý bài (L1–L2) trong một bài rất giàu số; có thể thay bằng câu tính.", "fix": "Thay Q7 bằng: cho giá, chi phí biến đổi và sản lượng của hai sản phẩm, hỏi sản phẩm nào chịu được giảm giá hơn và vì sao." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu tình huống giảm giá vẫn đúng (xả tồn hết hạn, chi phí cố định lớn chưa dùng hết công suất, giá thâm nhập) — Q6 chỉ cho chiều tăng giá.", "fix": "Thêm phản ví dụ: tồn 300 hũ sắp hết hạn → giảm 30% vẫn tốt hơn vứt; nêu điều kiện 'khi hàng là chi phí chìm'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: lãi cũ 72.000, lãi mới 54.000, 72/54 = 1,333 → +33,3% ✓; 400→533,3 (≈534) ✓; sai 10 (quên biên), 25 (lãi/hũ giảm) ✓. Q1: 18.000/72.000 = 25% ✓. Q2a: 28,8 triệu/42.000 = 685,7 → 'gần 686, tăng hơn 70%' ✓. Q5: 480×54.000 = 25,92 triệu, kém 2,88 triệu ✓. Q6: 25.000×0,9 = 22.500 vs 20.000 → +12,5% ✓. Áp dụng: 100→50; 120×100/50 = 240 (+100%) ✓." },
+      "claims": [
+        { "claim": "Price là P duy nhất mang tiền về; ba P còn lại tốn tiền", "status": "unverified", "note": "Luận điểm quen thuộc của Kotler; không có src." },
+        { "claim": "Kotler & Armstrong mô tả ba cách định giá: theo giá trị, theo chi phí, theo đối thủ", "status": "unverified", "note": "Khớp giáo trình; không có src." },
+        { "claim": "Shop nến Đà Nẵng 180.000đ, chi phí 108.000đ, 400 hũ (số minh hoạ)", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Chuỗi tính giá → lãi gộp → sản lượng hoà lãi trình bày đủ bước, có bài áp dụng với tiêu chí số (240 cái, +100%); Q5 (480 hũ 'thành công') và Q6 (tăng giá mất 10% tô) là hai câu đánh giá từ dữ liệu thật sự tốt.",
+      "upgrade": "Thêm độ co giãn làm bước kiểm khả thi; thêm phản ví dụ khi giảm giá đúng; thêm bảng 'giá / lãi mỗi hũ / sản lượng cần' cho 3 mức giảm (5–10–17%); thay Q4, Q7 bằng câu tính/so sánh; thêm src giáo trình."
+    },
+    {
+      "id": "B:ob08-04",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 12, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L4", "L5", "L3", "L1", "L4", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "situation ↔ example", "quote": "cộng một gian hàng trên sàn. Tháng trước một video đạt 500.000 lượt xem … nhưng doanh số tạp hoá gần như đứng yên.", "issue": "Kết luận 'Promotion chạy trước Place' bỏ qua gian hàng sàn: nếu đơn sàn tăng mạnh sau video thì chỗ nghẽn khác hẳn. Bài không kiểm dữ liệu sàn trước khi kết luận.", "fix": "Thêm dữ kiện 'đơn trên sàn cũng chỉ tăng từ 80 lên 95 chai' hoặc nêu bước kiểm: xem đơn sàn trước khi kết luận nghẽn ở tạp hoá." },
+        { "sev": "P2", "where": "Q2", "quote": "Tương ớt thường được mua kèm khi đi chợ, tạp hoá; thêm sàn ít giúp người đang đứng trước kệ.", "issue": "Khẳng định hành vi mua ngành hàng nêu như sự thật, không nguồn; nó quyết định việc loại phương án d.", "fix": "Ghi 'giả định từ đơn hàng hiện có của hãng: 90% chai bán qua tạp hoá' để có căn cứ trong đề." },
+        { "sev": "P2", "where": "Q4", "quote": "Kênh \"cấp 2\" trong giáo trình nghĩa là gì?", "issue": "Câu L1 nhận lại định nghĩa.", "fix": "Thay bằng: cho ba cấu hình kênh với chiết khấu, tính hãng nhận về mỗi chai và số điểm bán phủ được, chọn cấu hình." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu tình huống mở điểm bán là sai (hàng chưa có nhu cầu kéo, tạp hoá nhận nhưng không bán, hàng hết hạn trên kệ) và chi phí thật của phủ rộng (đội bán, hàng tồn kênh, công nợ).", "fix": "Thêm phản ví dụ về 'phủ trước, không có kéo' và đào sâu về vòng quay hàng trên kệ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20.000×80% = 16.000; 10%×16.000 = 1.600; 16.000−1.600 = 14.400 ✓ (72% giá lẻ ✓); 14.000 = 20.000×70% ✓ SAI_MAU_SO; 16.000 quên nhà phân phối ✓. Ví dụ: 300/2.000 = 15% ✓. Q5: 400×10.000 = 4 triệu ✓. Áp dụng: 150/1.000 = 15%; 15.000×75% = 11.250 ✓." },
+      "claims": [
+        { "claim": "Kotler mô tả ba mức phủ: rộng khắp, chọn lọc, độc quyền; kênh cấp 0/1/2", "status": "unverified", "note": "Khớp giáo trình; không có src." },
+        { "claim": "Hãng tương ớt Bình Định, 300/2.000 tạp hoá, video 500.000 lượt xem (số minh hoạ)", "status": "illustrative-labelled", "note": "" },
+        { "claim": "Tương ớt thường được mua kèm khi đi chợ, tạp hoá", "status": "unverified", "note": "Hành vi ngành hàng nêu như sự thật." }
+      ],
+      "strengths": "Phép tính chiết khấu nhiều tầng (10% trên giá nhập, không trên giá lẻ) được dạy đúng và Q5 kiểm chính lỗi đó với quy mô tiền (4 triệu/10.000 chai). Chẩn đoán 'Promotion chạy trước Place' là bài học thực chiến đúng cho FMCG.",
+      "upgrade": "Bổ sung dữ kiện kênh sàn để kết luận có căn cứ; gắn nhãn giả định về hành vi mua; thêm phản ví dụ 'phủ trước không có kéo' và đào sâu về vòng quay kệ/công nợ; thay Q4 bằng câu tính so hai cấu hình kênh; thêm bảng dòng tiền 3 tầng."
+    },
+    {
+      "id": "B:ob08-05",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L3", "L5", "L3", "L2", "L4", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "example", "quote": "Owned và earned không tốn tiền media nhưng không miễn phí: 3 bài/tuần là thời gian người làm", "issue": "Nói owned không miễn phí nhưng không quy ra tiền, nên không so được chi phí mỗi lượt đặt của fanpage với 250.000đ của quảng cáo — chính là câu Q5 đặt ra.", "fix": "Thêm: '12 bài/tháng × 2 giờ × 100.000đ/giờ ≈ 2,4 triệu → ~96.000đ mỗi lượt đặt từ owned (số minh hoạ)'." },
+        { "sev": "P2", "where": "Q5", "quote": "Fanpage không thu phí duy trì; chỉ tốn tiền khi chạy quảng cáo.", "issue": "Khẳng định về chính sách nền tảng (lớp fast) không có src và ngày kiểm.", "fix": "Thêm 'tính tới ngày kiểm …; nếu chính sách đổi, tin trang chính thức của Meta'." },
+        { "sev": "P2", "where": "Q4 / Q7", "quote": "Bài review của một chị trong nhóm các mẹ … thuộc loại kênh nào? … Vì sao nói \"marketing không đồng nghĩa với quảng cáo\"?", "issue": "Hai câu phân loại/nhận lại ý bài; Q7 lặp nguyên 'mang theo'.", "fix": "Thay Q7 bằng câu quyết định: ngân sách 10 triệu, cho chi phí mỗi lượt đặt của 3 nhóm quảng cáo và owned, phân bổ lại." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu phản ví dụ khi earned/owned không thể thay paid (ra mắt mới, cần tốc độ) và thiếu đào sâu về quy kết nhiều chạm — ví dụ chỉ nhắc một câu.", "fix": "Thêm phản ví dụ về thương hiệu mới không có khách cũ để giới thiệu; đào sâu một đoạn về 'hỏi khách biết từ đâu' vs link/mã riêng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 10.000.000/40 = 250.000đ ✓; 2.500 = chia 4.000 click ✓; 125.000 = chia 80 lượt ✓. Ví dụ: 40+25+15 = 80, 50% ✓. Áp dụng: 48/120 = 40%, 42/120 = 35%, 30/120 = 25%; 6 triệu/48 = 125.000 ✓." },
+      "claims": [
+        { "claim": "Kotler liệt kê công cụ: quảng cáo, khuyến mãi, bán hàng trực tiếp, PR, marketing trực tiếp và số", "status": "unverified", "note": "Khớp promotion mix của Kotler & Armstrong; không có src." },
+        { "claim": "Định nghĩa của AMA (2017) gồm tạo ra, truyền thông, đưa tới và trao đổi những thứ có giá trị", "status": "unverified", "note": "Khớp định nghĩa AMA được duyệt lại 2017; không có src, không ngày kiểm." },
+        { "claim": "Fanpage không thu phí duy trì", "status": "unverified", "note": "Chính sách nền tảng, lớp fast, không có src." },
+        { "claim": "Studio Hải Phòng: 10 triệu, 4.000 click, 40 lượt đặt (số minh hoạ)", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Nhắc đúng hai bẫy: owned/earned không miễn phí và quy kết theo chạm cuối bỏ sót người thấy quảng cáo trước; Q2 (cắt 30% chi phí) là câu quyết định có ràng buộc tiền.",
+      "upgrade": "Quy chi phí owned ra tiền để so được; thêm src cho AMA/Kotler và ngày kiểm cho khẳng định về fanpage; thêm phản ví dụ và đào sâu quy kết; thay Q4/Q7 bằng câu phân bổ ngân sách từ bảng chi phí mỗi lượt đặt."
+    },
+    {
+      "id": "B:ob08-06",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L4", "L5", "L3", "L2", "L4", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "situation ↔ Q1", "quote": "Trung tâm cạnh đó đắt hơn nhưng nghe nói tỉ lệ đăng ký sau học thử cao hơn.", "issue": "Dữ kiện 'nghe nói' được Q1 dùng như sự thật ('rẻ hơn đối thủ nhưng tỉ lệ đăng ký thấp hơn'); bài đọc số (ob07) vừa dạy không tin số mồ côi.", "fix": "Đổi thành dữ kiện có nguồn ('tư vấn viên cũ của trung tâm kia cho biết khoảng 40%') hoặc để Q1 chỉ dựa trên ba ghi chú nội bộ." },
+        { "sev": "P2", "where": "example", "quote": "thêm 12 học viên, tức 72 triệu học phí/tháng (số minh hoạ)", "issue": "Nêu doanh thu, không nêu chi phí của việc sửa (cố định giáo viên, góc chờ) nên không có phép so đáng/không đáng; Q2 nói có 20 triệu nhưng ví dụ không dùng con số này.", "fix": "Thêm ước chi phí sửa ba điểm (ví dụ 15 triệu một lần + 3 triệu/tháng) để so với 72 triệu/tháng." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu phản ví dụ khi ba P mới không phải chỗ gãy (giáo trình lệch trình độ, lịch học không hợp) và thiếu phê phán rằng People/Process/Physical evidence có thể xem là tầng mở rộng của Product (nối với ob08-02).", "fix": "Thêm hai đoạn này." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (35−25)/25 = 40% ✓; 10 = điểm phần trăm ✓. Ví dụ: 120×35% = 42 − 30 = 12 ✓; 12×6 triệu = 72 triệu ✓. Áp dụng: 18/40 = 45%, 12/40 = 30%, 10/40 = 25% ✓." },
+      "claims": [
+        { "claim": "Bernard Booms và Mary Jo Bitner (1981) đề xuất thêm People, Process, Physical evidence", "status": "unverified", "note": "Khớp tài liệu phổ biến; không có src." },
+        { "claim": "Trung tâm tiếng Anh Vũng Tàu: 6 triệu/khoá, 120 học thử, 30 đăng ký (số minh hoạ)", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Q5 nối thẳng sang bài so cùng kỳ/đối chứng (ob07-06) và Q3 nối sang điểm phần trăm (ob07-07) — module tự nhắc lại kiến thức trước. Q6 (quán cà phê xếp hàng 15 phút) buộc chọn đúng P trong 7P.",
+      "upgrade": "Sửa dữ kiện 'nghe nói'; thêm chi phí sửa để so với 72 triệu và dùng ràng buộc 20 triệu của Q2; thêm phản ví dụ và đào sâu (7P vs tầng mở rộng); thêm src Booms & Bitner; thay Q7 (L2) bằng câu đọc 10 đánh giá Google và xếp P rồi chọn việc sửa đầu tiên có chi phí."
+    },
+    {
+      "id": "B:ob08-07",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 16, "examples": 12, "pedagogy": 6, "assessment": 6, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L3", "L5", "L3", "L2", "L4", "L4", "L1"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q2", "quote": "a) Đổi định vị sang \"trà giá rẻ\" cho khớp với giá và kênh đang có — vì: Một lựa chọn có lý nếu dữ liệu cho thấy khách chỉ mua khi giảm", "issue": "Dữ kiện trong đề chính là 'khách chỉ mua khi giảm' (80% qua mã, hàng ở thùng xả). Lời giải tự thừa nhận a 'có lý', và lãi 18.000đ/chai mỏng là đánh đổi chứ không phải lý do loại. Hai phương án a và c đều bênh được; đáp án phụ thuộc giả định chưa nêu (khách văn phòng có chịu mua ở 60.000đ không).", "fix": "Thêm dữ kiện quyết định vào đề (ví dụ: 'tháng thử không mã ở 5 căng tin văn phòng bán 400 chai ở giá gốc') hoặc đổi câu hỏi thành 'bước nào làm trước để biết nên chọn a hay c' với đáp án là thử thưa mã ở một kênh." },
+        { "sev": "P2", "where": "Q7", "quote": "Bước nào nên làm ĐẦU TIÊN khi dùng bảng kiểm nhất quán?", "issue": "Câu L1 nhận lại bước (1) của khái niệm.", "fix": "Thay bằng tình huống mới có 4 dữ kiện, hỏi P nào đứt gãy và tính cái giá của nó." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu phản ví dụ khi 'không khớp' là cố ý và đúng (khuyến mãi theo mùa cho thương hiệu cao cấp, kênh xả riêng dưới tên khác) và thiếu đánh đổi khi kéo giá về gốc (mất sản lượng bao nhiêu thì vẫn hơn).", "fix": "Thêm phản ví dụ và một phép tính điểm hoà: ở giá gốc cần bán ≥ 3.000 chai để lãi ≥ 108 triệu (108/0,036)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: lãi gốc 36.000; giá giảm 42.000 → lãi 18.000; giảm 50% ✓; 30 = nhầm với % giảm giá ✓. Ví dụ: 1.000×36.000 + 4.000×18.000 = 108 triệu ✓; 5.000×36.000 = 180 triệu ✓. Q5: 1.000×60.000 + 4.000×42.000 = 228 triệu ✓; 300 triệu theo giá niêm yết ✓. Áp dụng: 192.000 → 240.000−128.000 = 112.000 ✓." },
+      "claims": [
+        { "claim": "Kotler & Armstrong nhấn mạnh marketing mix phải là một chương trình tích hợp phục vụ cùng một định vị", "status": "unverified", "note": "Khớp giáo trình; không có src." },
+        { "claim": "Trà ô long TP.HCM 60.000đ, 5.000 chai, 80% qua mã (số minh hoạ)", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Tính được 'cái giá của chỗ đứt gãy' bằng số (108 vs 180 triệu) và Q5 tách doanh thu kỷ lục khỏi lãi — đúng cách một giám đốc marketing đọc báo cáo sàn. Q6 (bánh mì 6 phút) chuyển sang Process của 7P.",
+      "upgrade": "Sửa Q2 cho chỉ một phương án bênh được hoặc đổi thành câu 'thử gì trước'; thêm phản ví dụ về khuyến mãi có kiểm soát; thêm phép tính điểm hoà sản lượng ở giá gốc; thay Q7 L1 bằng tình huống mới; thêm src."
+    },
+    {
+      "id": "B:ob08-08",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L3", "L5", "L3", "L2", "L4", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "example", "quote": "lớp học xen kẽ trực tuyến, lớp gần khu văn phòng", "issue": "Hai phương án nêu ra nhưng không có chi phí, không có cách đo (Q2 nói 'đo tỉ lệ bỏ học' nhưng ví dụ không nêu mốc: 40% hiện tại → mục tiêu bao nhiêu, đo trên cohort nào).", "fix": "Thêm: 'thử với 2 lớp (60 học viên) trong một khoá, mục tiêu bỏ học dưới 25%, so với 2 lớp thường cùng kỳ'." },
+        { "sev": "P2", "where": "Q7", "quote": "Sau module này, câu nào mô tả đúng nhất cách dùng 4P?", "issue": "Câu tổng kết L2, trùng ý Q5 và trùng 'mang theo'.", "fix": "Thay bằng tình huống: cho một doanh nghiệp với 4 dữ kiện, viết lại bằng 4C và chỉ ra phương án mà 4P không gợi." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu phản ví dụ khi 4C dẫn sai (chiều mọi 'tiện' của khách làm tăng chi phí vận hành, học trực tuyến giảm hiệu quả học) và đánh đổi của việc đổi lăng kính.", "fix": "Thêm hai đoạn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30×20.000 = 600.000; 4.000.000+600.000 = 4.600.000 ✓; 4.020.000 = cộng một lần ✓. Q1: 600.000/4.000.000 = 15% ✓; 30 buổi × ~1 giờ ≈ 30 tiếng ✓. Áp dụng: 500.000 + 12×15.000 = 680.000 ✓; 12×40 phút = 8 giờ ✓." },
+      "claims": [
+        { "claim": "Robert Lauterborn (1990) đề xuất 4C: Consumer wants and needs, Cost, Convenience, Communication", "status": "unverified", "note": "Khớp bài Advertising Age 1990; không có src." },
+        { "claim": "4P ra đời trong bối cảnh hàng tiêu dùng ở Mỹ thập niên 1960", "status": "unverified", "note": "Khớp lịch sử McCarthy 1960; không có src." },
+        { "claim": "Định nghĩa AMA không định nghĩa marketing bằng 4P (Q5)", "status": "unverified", "note": "Đúng theo định nghĩa AMA hiện hành; không có src." },
+        { "claim": "Trung tâm quận 7: 4 triệu/30 buổi, 40% bỏ ngang, 20.000đ/buổi đi lại (số minh hoạ)", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Chuyển câu hỏi từ 'giảm giá bao nhiêu' sang 'giảm Cost và tăng Convenience thế nào' bằng phép tính 4,6 triệu + 30 giờ — đúng giá trị của 4C. Q5 kiểm đúng hiểu lầm '4P lỗi thời' và bài áp dụng cấm kết luận '4C đúng hơn 4P'.",
+      "upgrade": "Thêm chi phí và cách đo cho phương án lớp trực tuyến; thêm phản ví dụ khi 4C dẫn sai; thêm src Lauterborn/AMA; thay Q7 bằng tình huống mới; thêm bảng 4 dòng 4P ↔ 4C với số cho trung tâm."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý: bảng kiểm 4P → từng P (Product, Price, Place, Promotion) → 7P cho dịch vụ → nhất quán giữa các P → 4C và giới hạn. Mọi bài đều gắn nhãn '(số minh hoạ)' và có bài áp dụng với tiêu chí 'Đạt khi' — điểm mạnh nhất của module. Điểm yếu đồng loạt: không bài nào có phản ví dụ/đào sâu, không bài nào có src cho các tên tác giả (Borden, McCarthy, Kotler, Booms & Bitner, Lauterborn, AMA), và câu #4/#7 ở hầu hết bài là nhận lại định nghĩa.",
+    "overlap": [
+      "ob08-01 Q5 (mẫu chỉ gồm người đã đến) lặp ob07-02; nên tham chiếu thay vì dạy lại.",
+      "ob08-06 Q3 (25%→35% là +40%) lặp nguyên dạng ob07-07.",
+      "ob08-03 và ob08-07 cùng tính lãi gộp sau giảm giá (−25% và −50%); hợp lý để củng cố nhưng nên nối rõ.",
+      "ob08-05 Q7 và ob08-08 Q7 cùng hỏi 'marketing ≠ quảng cáo / 4P là bảng kiểm' (L2)."
+    ],
+    "gaps": [
+      "Thiếu bài về định vị trước mix (STP → 4P): ob08-07 dùng 'câu định vị' nhưng chưa bài nào dạy viết nó.",
+      "Thiếu phân bổ ngân sách giữa các P (bao nhiêu cho Place vs Promotion) với phép tính.",
+      "Thiếu độ co giãn giá — ob08-03 tính sản lượng cần bù nhưng không có công cụ ước cầu.",
+      "Thiếu quy kết nhiều chạm cho Promotion (ob08-05 chỉ nhắc một câu).",
+      "Không có src nào trong module; khẳng định về nền tảng (fanpage miễn phí) cần ngày kiểm."
+    ],
+    "best_lesson": "B:ob08-03",
+    "weakest_lesson": "B:ob08-01"
+  }
+}

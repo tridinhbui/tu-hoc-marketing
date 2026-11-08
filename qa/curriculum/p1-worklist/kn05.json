@@ -1,0 +1,116 @@
+{
+ "mod": "kn05",
+ "lessons": [
+  {
+   "id": "B:kn05-01",
+   "title": "KOL, KOC hay affiliate: rốt cuộc bạn đang trả tiền cho cái gì?",
+   "total": 60,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q2",
+     "quote": "Chia KOL tầm trung và KOC, mở affiliate khi đã có đơn và đánh giá",
+     "issue": "Câu quyết định nhận lại nguyên ví dụ; ba phương án sai là 'dồn hết', 'chỉ affiliate', 'để dành' — đoán được. Không có số để cân nhắc (vd KOL tầm trung 30 triệu mua được bao nhiêu lượt xem so với 10 KOC).",
+     "fix": "Cho lượt xem điển hình: KOL lớn 800 nghìn (60 triệu), KOL tầm trung 250 nghìn (30 triệu), KOC 15 nghìn/người (3 triệu) — hỏi phương án nào cho nhiều người xem đúng tệp nhất và còn lời chứng; buộc tính."
+    }
+   ],
+   "upgrade": "Thêm Phản ví dụ (thương hiệu đã nổi → bỏ KOL) và Đào sâu (ba hình thức có thể nối tiếp theo thời gian; chi phí ẩn của affiliate). Đưa lượt xem điển hình và kết quả có nhãn minh hoạ vào ví dụ. Nâng Q2 thành câu có số; thêm một calc thứ hai so CPM ba phương án; thêm câu L5 '60 triệu nhưng chỉ có 2 tuần trước Tết — còn chọn chia không'."
+  },
+  {
+   "id": "B:kn05-02",
+   "title": "KOL 500 nghìn người theo dõi: bao nhiêu người thật sự đang xem?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "theo TikTok Newsroom, bài “How TikTok recommends videos #ForYou”, 6/2020; cách vận hành có thể đã thay đổi",
+     "issue": "Khẳng định về thuật toán đề xuất nêu nguồn trong văn bản nhưng bài không có trường src với link bấm được và ngày kiểm; nguồn từ 2020 cho một khẳng định fast.",
+     "fix": "Thêm src (URL newsroom.tiktok.com) với ngày kiểm 2026 hoặc thay bằng câu chung 'trên nền tảng đề xuất, lượt xem không chỉ đến từ người theo dõi'."
+    },
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Chỉ khoảng 40% lượt xem có thể đúng tệp — tính lại giá theo con số đó",
+     "issue": "40% = phần không phải nam 25–35, nhưng phần còn lại gồm cả nam ngoài 25–35 và nữ ngoài tuổi công sở; bài coi 'không phải nam 25–35' = 'đúng tệp nữ công sở' là thiếu giả định làm con số đổi. Đáp án vẫn đúng nhất nhưng lời giải dạy phép suy luận sai.",
+     "fix": "Đổi dữ kiện: '60% nam, 40% nữ, trong nữ 70% ở 22–35' → đúng tệp ≈ 28%; hoặc sửa lời giải: 'tối đa 40%, cần thống kê nữ theo tuổi'."
+    }
+   ],
+   "upgrade": "Thêm src cho khẳng định TikTok hoặc bỏ. Sửa suy luận Q6. Thêm Phản ví dụ và Đào sâu (xác thực ảnh thống kê; tệp trùng khi thuê nhiều KOL — nối kn05-05). Gắn nhãn số minh hoạ. Thêm câu L5: Hạ đúng tệp nhưng lấy 15 triệu, Vân 8 triệu — tính giá mỗi nghìn lượt xem đúng tệp rồi chọn (nối sang kn05-03)."
+  },
+  {
+   "id": "B:kn05-03",
+   "title": "Video 40 triệu đắt hay rẻ: quy về giá mỗi nghìn lượt xem và mỗi đơn",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q3–Q5",
+     "quote": "đáp án: 200 nghìn đồng … đáp án: 200 nghìn đồng … đáp án: 200 nghìn đồng",
+     "issue": "Ba câu calc liên tiếp cùng đáp án 200 nghìn; người học nhận ra mẫu sau câu thứ hai và có thể điền đúng không cần tính. Đáp án đoán được bằng mẹo.",
+     "fix": "Đổi số: Q4 → 30 triệu / 120 đơn = 250 nghìn; Q5 → 18 triệu, 90.000 lượt xem, 0,2% → 100 nghìn."
+    }
+   ],
+   "upgrade": "Đổi số Q4, Q5 để không trùng đáp án. Gắn nhãn minh hoạ; thêm câu về nhiễu mẫu 1 video. Nêu điều kiện so CPM KOL với CPM quảng cáo. Thêm một câu L5: Minh Khoa CPA 250k nhưng 200 nghìn người biết tên; Tú Linh CPA 200k — tháng ra mắt vs tháng xả hàng chọn ai, biện hộ."
+  },
+  {
+   "id": "B:kn05-04",
+   "title": "Brief cho KOL: để họ tự do đến đâu mà vẫn đúng thông điệp?",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "vài điều cấm nói (tuyên bố về sức khoẻ không có căn cứ, so sánh chê đối thủ)",
+     "issue": "Bài dạy 'cấm nói tăng chiều cao' và nhắc 'quy định quảng cáo chặt… tuyên bố dinh dưỡng phải dùng đúng từng chữ đã đăng ký' nhưng không dẫn văn bản nào (Luật Quảng cáo, quy định về quảng cáo thực phẩm/sữa); người học không biết căn cứ pháp lý ở đâu để ghi vào brief.",
+     "fix": "Thêm src: điều khoản liên quan trong Luật Quảng cáo (sửa đổi 2025) và quy định quảng cáo thực phẩm; hoặc ghi rõ 'hỏi pháp chế về danh mục tuyên bố bị cấm với sản phẩm dinh dưỡng cho trẻ'."
+    },
+    {
+     "sev": "P1",
+     "where": "Q2",
+     "quote": "Một thông điệp chính, mã giảm giá, ghi nhãn hợp tác và điều cấm nói",
+     "issue": "Đáp án nhận lại nguyên danh sách 'phần không được đổi' của khái niệm; ba phương án sai là hai cực (kịch bản từng câu / không gì cả) và 'ép hình thức'. Q6, Q7 cũng chỉ hỏi lại định nghĩa brief khung. Bốn trong bảy câu là L2.",
+     "fix": "Thay Q2 bằng bản nháp brief 8 dòng, hỏi gạch dòng nào (L4); thay Q7 bằng bản nháp video có 5 chi tiết, hỏi chi tiết nào vi phạm phần cố định."
+    }
+   ],
+   "upgrade": "Dẫn nguồn pháp lý cho điều cấm. Gắn nhãn số, thêm phí để tính CPA, nêu hạn chế so sánh khác thời điểm. Đổi Q2, Q6, Q7 từ nhận lại thành phân tích bản nháp (L4); thêm câu L5: KOL đề nghị bỏ mã giảm giá để video tự nhiên hơn, đổi lại giảm phí 20% — nhận hay không, biện hộ bằng khả năng đo."
+  },
+  {
+   "id": "B:kn05-07",
+   "title": "KOL bạn vừa ký dính lùm xùm: dừng ngay hay chờ gió lặng?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Hợp đồng có điều khoản đạo đức nên hãng không phải trả phần phí của 2 video chưa lên",
+     "issue": "Hiệu lực của 'điều khoản đạo đức' trong pháp luật hợp đồng Việt Nam (có được đơn phương chấm dứt không, có phải bồi thường không, định nghĩa 'hành vi gây ảnh hưởng xấu') được nêu như chắc chắn, không nguồn, không 'hỏi pháp chế'.",
+     "fix": "Thêm câu: 'điều khoản phải nêu rõ sự kiện kích hoạt và cách thanh toán phần đã làm — soạn cùng luật sư'; đổi 'không phải trả' thành 'theo điều khoản đã thoả thuận, hãng chỉ trả 3 video đã lên'."
+    }
+   ],
+   "upgrade": "Sửa khẳng định pháp lý về điều khoản đạo đức và thêm 'soạn cùng luật sư'. Thêm calc đo thiệt hại/ích lợi bằng số khách mục tiêu. Nâng Q4, Q5 thành câu phân biệt tinh tế. Thêm câu L6: thiết kế quy trình 24 giờ đầu (ai tắt quảng cáo, ai xác minh, ngưỡng bình luận tiêu cực từ khách mục tiêu để chuyển từ tạm dừng sang chấm dứt)."
+  },
+  {
+   "id": "B:kn05-08",
+   "title": "Có nên để KOL ghi rõ \"hợp tác quảng cáo\" không?",
+   "total": 62,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Luật Quảng cáo sửa đổi bởi Luật số 75/2025/QH15 (hiệu lực từ 1/1/2026) buộc người chuyển tải quảng cáo thông báo rõ trước và trong khi quảng cáo (Điều 15a)",
+     "issue": "Khẳng định pháp luật cụ thể (số luật, ngày hiệu lực, số điều) nêu như sự thật và là căn cứ của đáp án Q5, nhưng bài không có src link và ngày kiểm; loại periodic bắt buộc nguồn.",
+     "fix": "Thêm src tới văn bản luật trên cơ sở dữ liệu pháp luật chính thức (vanban.chinhphu.vn hoặc thuvienphapluat) với ngày kiểm; thêm câu 'nếu văn bản thay đổi, tin bản chính thức'."
+    },
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "5 video thử không nhãn trước đó mua 2,0%, 15 video có nhãn mua 1,9%, tức giảm 5% tương đối",
+     "issue": "So 5 video với 15 video ở hai thời điểm khác nhau, chênh 0,1 điểm % — nằm trong nhiễu; bài kết luận 'đó là cái giá' như thể đo được tác động của nhãn. Thiếu giả định làm kết quả đổi (nếu nhiễu, 'giá' có thể bằng 0 hoặc âm).",
+     "fix": "Thêm câu: 'chênh 0,1 điểm % trên vài trăm đơn không phân biệt được với nhiễu; điều học được là nhãn không làm sụt mạnh, chứ không phải nhãn làm giảm 5%'."
+    }
+   ],
+   "upgrade": "Thêm src luật với ngày kiểm. Nêu nhiễu của so sánh 2,0% vs 1,9% và sửa kết luận. Thêm Phản ví dụ (KOC tự mua thật và tự review — không có hợp tác thì không ghi nhãn, ranh giới ở đâu khi hãng gửi tặng) và Đào sâu (cách ghi nhãn trên từng nền tảng — có src). Đổi Q5 thành câu áp dụng, sửa Q7; thêm câu L5 đánh đổi: KOC lớn chỉ nhận nếu không ghi nhãn — từ chối hay thương lượng gì."
+  }
+ ]
+}

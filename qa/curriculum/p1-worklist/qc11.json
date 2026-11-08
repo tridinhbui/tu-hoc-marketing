@@ -1,0 +1,35 @@
+{
+ "mod": "qc11",
+ "lessons": [
+  {
+   "id": "B:qc11-02",
+   "title": "Ba nền tảng cộng lại 900 đơn, sổ bán hàng 600: đọc dashboard chéo kênh thế nào?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "MER 3 cao hơn hoà vốn, tổng thể có lãi: 270 × 45% − 90 = 31,5 triệu. … Trong 600 đơn có khoảng 150 đơn khách cũ",
+     "issue": "Bài có đủ số để tính MER khách mới (Đào sâu nêu khái niệm) nhưng không tính: (600 − 150) × 450.000 = 202,5 triệu ÷ 90 = 2,25 — sát hoà vốn 2,22. Kết luận \"tổng thể có lãi 31,5 triệu\" đứng được chỉ khi coi 150 đơn khách cũ là nhờ quảng cáo; nếu không, lãi từ khách mới ≈ 202,5 × 45% − 90 = 1,1 triệu. Thiếu phép tính này làm người học tin quảng cáo đang lãi rõ trong khi nó đang hoà vốn với khách mới.",
+     "fix": "Thêm vào ví dụ: \"MER khách mới = 202,5 ÷ 90 = 2,25, chỉ vừa hoà vốn → quảng cáo đang nuôi khách mới ở mức hoà vốn, lãi 31,5 triệu đến phần lớn từ khách cũ\"; đổi quyết định thành \"giữ chi, kiểm khách mới theo kênh trước khi tăng\"."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) tính MER khách mới trong ví dụ và sửa kết luận theo đó; (2) đồng bộ ROAS 4 ↔ 4,5; (3) thêm src đúng cho quy tắc ghi nhận GMV Max; (4) thay Q5, Q7 bằng câu đọc bảng tầng dưới và câu tính MER khách mới; (5) thêm điều kiện khi MER hoà vốn 1 ÷ biên không đủ: chi phí vận hành cố định, đơn huỷ/hoàn — nêu MER mục tiêu cao hơn hoà vốn bao nhiêu và vì sao."
+  },
+  {
+   "id": "B:qc11-04",
+   "title": "Chiến dịch đang lãi: tăng tiền bao nhiêu mỗi lần và khi nào phải dừng?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Ở 6,5 triệu: 33 đơn; 1,5 triệu thêm chỉ mua 3 đơn, chi phí biên 500.000đ, vượt lãi gộp 300.000đ",
+     "issue": "Chi phí biên 500.000 tính từ chênh 3 đơn/ngày (30 → 33) quan sát 3–4 ngày. Với ~30 đơn/ngày, dao động ngẫu nhiên ngày-qua-ngày khoảng ±5–6 đơn; qua 4 ngày, 120 so với 132 đơn vẫn trong nhiễu (độ lệch chuẩn của chênh ≈ 16). Kết luận \"lùi về 5 triệu\" đứng trên một con số không phân biệt được với nhiễu; nếu đơn thật là 35 thay vì 33, biên = 300.000 = hoà vốn và quyết định đổi. Bài không nói gì về nhiễu dù rubric yêu cầu khi mẫu nhỏ.",
+     "fix": "Thêm: \"chênh vài đơn/ngày là nhiễu; cần giữ nấc 5–7 ngày và đọc cùng tần suất, CPM (ở đây tần suất 1,9 → 3,4 mới là tín hiệu chắc hơn)\". Đổi ví dụ sang số lớn hơn (ví dụ 150 → 165 đơn/ngày) hoặc giữ nấc 7 ngày."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) nêu nhiễu khi chênh chỉ vài đơn/ngày và điều kiện số ngày/số đơn tối thiểu mỗi nấc, hoặc đổi ví dụ sang số lớn hơn; (2) điều kiện hoá \"CPM tăng\"; (3) so tệp mới trong Meta với kênh mới trước khi chọn TikTok; (4) thay Q5 bằng câu đọc bảng 4 nấc; (5) thêm lưu ý về ngân sách chiến dịch (CBO/Advantage campaign budget) vs ngân sách nhóm khi tăng — nấc áp ở tầng nào, với src."
+  }
+ ]
+}

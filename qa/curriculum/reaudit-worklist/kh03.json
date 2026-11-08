@@ -1,0 +1,18 @@
+{
+ "mod": "kh03",
+ "lessons": [
+  {
+   "id": "B:kh03-05",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q7 (vì của b)",
+     "quote": "Họ từng tải ứng dụng — họ có việc",
+     "issue": "Mâu thuẫn với PHẢN VÍ DỤ của chính bài: \"phần lớn tải vì tò mò và chưa từng có nhu cầu theo dõi chi tiêu\".",
+     "fix": "Viết lại: \"Chưa đủ căn cứ loại; trước hết kiểm họ từng nhập dữ liệu chưa\"."
+    }
+   ]
+  }
+ ]
+}

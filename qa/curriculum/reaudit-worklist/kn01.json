@@ -1,0 +1,18 @@
+{
+ "mod": "kn01",
+ "lessons": [
+  {
+   "id": "B:kn01-01",
+   "total": 82,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q6 đáp án b",
+     "quote": "Giữ vài ngày phát túi trơn làm đối chứng, rồi so đơn với ngày phát túi QR",
+     "issue": "Tác dụng của QR là kéo khách quay lại về sau (qua nhóm Zalo, mã giảm lần sau), không phải đơn trong ngày phát túi. So đơn giữa ngày túi trơn và ngày túi QR gần như không đo được gì. Khách quay lại rơi vào mọi ngày nên hai nhóm lẫn vào nhau.",
+     "fix": "Đổi đáp án sang đo trực tiếp: đếm lượt dùng mã giảm riêng in trên túi QR, hoặc so tỉ lệ quay lại của nhóm khách nhận túi QR với nhóm nhận túi trơn theo số điện thoại hay mã."
+    }
+   ]
+  }
+ ]
+}

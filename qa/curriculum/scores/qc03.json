@@ -1,0 +1,396 @@
+{
+  "mod": "qc03",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:qc03-01",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "KHÁI NIỆM",
+          "quote": "video dọc 9:16 cho Reels, TikTok, YouTube Shorts; quảng cáo tìm kiếm Google là chữ (quảng cáo tìm kiếm thích ứng nhận tối đa 15 tiêu đề, 4 mô tả)",
+          "issue": "Hai khẳng định định dạng nền tảng (fast); src chỉ bao phủ RSA, không bao phủ 9:16 cho ba nền tảng video; không có câu 'kiểm spec trong tài khoản/trang chính thức'.",
+          "fix": "Thêm src spec của Meta Reels, TikTok, YouTube Shorts hoặc đổi thành 'kiểm tỉ lệ khung hình trong trang spec của từng nền tảng'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1, Q4, Q7",
+          "quote": "Dòng CTA trong brief tốt nhất là gì?",
+          "issue": "Ba câu L2 nhận lại định nghĩa dòng brief; chỉ Q3 tính và Q6 đọc dữ liệu. Bài creative nhưng không có câu đánh giá một brief/câu mở đầu cụ thể.",
+          "fix": "Thay Q4 bằng câu cho 3 dòng 'lời hứa' thật và hỏi dòng nào đạt (cụ thể, chữ của khách); thay Q7 bằng câu chẩn đoán: 20 tin nhắn nhưng 0 gửi kích thước — lỗi ở CTA hay ở điểm đến."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Ngân sách thử 3 triệu chia đều 3 bản; chỉ đổi câu mở đầu, phần thân giữ nguyên",
+          "issue": "Phần bài không nói mỗi bản 1 triệu (~20 tin nhắn ở 50.000đ/tin) có đủ để kết luận không; chỉ lời giải Q6 nhắc '20 tin nhắn vẫn ít'. Số minh hoạ chỉ một tình huống, không có phản ví dụ bằng số.",
+          "fix": "Thêm vào Ví dụ: 'với ~20 tin nhắn/bản, chỉ chênh từ 2 lần trở lên mới đáng tin; 12/20/8 là tín hiệu, chưa là kết luận'."
+        }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20×25% = 5; 1.000/5 = 200 nghìn ✓ (tol 1); sai 50 = 1.000/20 ✓. Q6: 12/20/8 tin nhắn với 1 triệu/bản → 83/50/125 nghìn mỗi tin nhắn (bài không tính nhưng nhất quán với Q3)." },
+      "claims": [
+        { "claim": "Quảng cáo tìm kiếm thích ứng (RSA) nhận tối đa 15 tiêu đề, 4 mô tả", "status": "verified", "note": "src Google Ads Help — About responsive search ads, ngày kiểm 2026-10-24." },
+        { "claim": "Video dọc 9:16 cho Reels, TikTok, YouTube Shorts", "status": "unverified", "note": "Không có src; đúng theo hiểu biết chung nhưng là spec nền tảng loại fast." },
+        { "claim": "Xưởng tủ bếp Thủ Đức, 2 triệu/3 tin nhắn, brief 3 triệu", "status": "illustrative-labelled", "note": "Bài ghi 'số giả định'." }
+      ],
+      "strengths": "Brief bảy dòng với ba câu mở đầu viết sẵn biến chiến dịch thành một phép thử một biến; phản ví dụ 'brief làm phỏng đoán trông chuyên nghiệp hơn' và Q2 (chỉ đổi câu mở đầu) đúng tinh thần thử nghiệm.",
+      "upgrade": "Để ≥85: (1) thêm src/câu kiểm spec cho định dạng; (2) đưa ngưỡng 'bao nhiêu tin nhắn mới kết luận' vào phần bài; (3) thay 2 câu L2 bằng câu đánh giá brief thật và câu chẩn đoán; (4) thêm tình huống thứ hai đổi kết luận: cùng brief cho khách cũ mua lại (rút lời hứa, giữ offer+CTA) với số."
+    },
+    {
+      "id": "B:qc03-02",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 15, "examples": 12, "pedagogy": 7, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "KHÁI NIỆM",
+          "quote": "Form ngay trên nền tảng (Facebook, Zalo) giữ khách trong ứng dụng … Nhắn tin (Messenger, Zalo OA) mở một cuộc trò chuyện: hiệu quả nếu trả lời trong vài phút, phí tiền nếu để khách chờ nửa ngày",
+          "issue": "Bài không có trường `src` nào: tính năng form trong ứng dụng của Facebook/Zalo là khẳng định nền tảng (fast), và 'hiệu quả nếu trả lời trong vài phút' là benchmark tốc độ phản hồi nêu như sự thật, không nguồn, không nhãn. Rubric: khẳng định nền tảng/benchmark không nguồn không nhãn là P1.",
+          "fix": "Thêm src Meta 'About instant forms', Zalo Ads 'Quảng cáo Form'; đổi 'vài phút' thành 'càng sớm càng tốt — đo thời gian phản hồi của chính bạn so với tỉ lệ hẹn' hoặc dẫn nghiên cứu có ngày."
+        },
+        {
+          "sev": "P2",
+          "where": "LIÊN KẾT",
+          "quote": "(không có LIÊN KẾT)",
+          "issue": "Bài duy nhất trong ba module không có `rel`; không nối với qc02-01 (năm tầng, chi phí mỗi lead đạt chuẩn) hay qc01-06 (sự kiện tối ưu) dù dùng cùng khái niệm.",
+          "fix": "Thêm rel: B:qc02-01, B:qc01-06, B:qc03-03."
+        },
+        {
+          "sev": "P2",
+          "where": "Q2",
+          "quote": "Chỉ chạy nhắn tin khi có người trực, các giờ khác dẫn về website",
+          "issue": "Phương án đúng nhưng không nói ràng buộc thực hiện: trên Meta, lên lịch theo giờ cần ngân sách trọn đời; cách đơn giản là hai chiến dịch bật/tắt theo ca.",
+          "fix": "Thêm một dòng vào lời giải về cách cài."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Website có bảng học phí: 100 lead, 60% đạt chuẩn, 25% chốt: 15 học viên",
+          "issue": "Hai tỉ lệ 60% và 25% của phương án chưa chạy là giả định thuần (có nhãn) nhưng bài không nói cách kiểm chúng (chạy song song 2 tuần, mỗi bên bao nhiêu lead).",
+          "fix": "Thêm: 'kiểm bằng cách chia 50/50 trong 2 tuần, ghi trạng thái từng lead; với 50 lead/bên, tỉ lệ đạt chuẩn có sai số ±13 điểm'."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 300×30% = 90; 90×10% = 9; 7.500/9 = 833 ✓ (tol 1); sai 25 = 7.500/300 ✓, 250 = 7.500/30 ✓. Q4: 100×60%×25% = 15; 7.500/15 = 500; (833−500)/833 = 40% ✓ (tol 1); sai 67 = 333/500 ✓. Ví dụ: 7,5 triệu/300 = 25.000đ ✓, /100 = 75.000đ ✓ 'gấp ba' ✓; 9 học viên khớp Tình huống ✓." },
+      "claims": [
+        { "claim": "Facebook và Zalo có form thu lead ngay trong ứng dụng", "status": "unverified", "note": "Không có src; tính năng có thật theo hiểu biết chung." },
+        { "claim": "Nhắn tin hiệu quả nếu trả lời trong vài phút, phí tiền nếu chờ nửa ngày", "status": "unverified", "note": "Benchmark không nguồn, không nhãn." },
+        { "claim": "Trung tâm tiếng Anh Gò Vấp, 300 lead/25.000đ, 9 học viên", "status": "illustrative-labelled", "note": "Bài ghi 'số giả định'." }
+      ],
+      "strengths": "Công thức chi phí mỗi khách thật = tiền ÷ (lead × đạt chuẩn × chốt) đưa mọi điểm đến về một thước; ví dụ cho kết luận ngược trực giác (lead đắt gấp ba nhưng học viên rẻ hơn 40%); ghép điểm đến với năng lực trực (Q2) là ràng buộc thực tế hiếm bài nào nêu.",
+      "upgrade": "Để ≥85: (1) thêm src cho form trong ứng dụng và bỏ/ghi nguồn cho benchmark 'vài phút'; (2) thêm rel; (3) nêu cách kiểm hai tỉ lệ giả định của website và sai số; (4) thêm một câu L5 đánh đổi: form có câu hỏi lọc (lead giảm 40%, đạt chuẩn tăng 30→50%) có đáng không."
+    },
+    {
+      "id": "B:qc03-03",
+      "scores": { "accuracy": 12, "depth": 13, "practical": 16, "examples": 12, "pedagogy": 9, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 81,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "KHÁI NIỆM",
+          "quote": "TikTok cũng có Events API Gateway (xem điều kiện trong tài khoản)",
+          "issue": "Khẳng định tồn tại một sản phẩm nền tảng với tên cụ thể; bốn src của bài không có trang nào về sản phẩm này (chỉ có TikTok 'Event deduplication'); người chấm không xác nhận được TikTok có sản phẩm mang tên này. Loại fast, nêu như sự thật, không nguồn.",
+          "fix": "Bỏ câu này hoặc thêm src trang TikTok chính thức mô tả đúng tên sản phẩm; nếu không có, viết 'TikTok có các cách tích hợp Events API qua đối tác, xem trong tài khoản'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1, Q4",
+          "quote": "event_id nên lấy từ đâu để hai đường gửi khớp được nhau?",
+          "issue": "Q4 là L2 nhận lại ('cùng một event_id, thường là mã đơn'); Q1 đáp án suy ra trực tiếp từ Khái niệm.",
+          "fix": "Thay Q4 bằng câu đọc màn hình kiểm sự kiện: hai bản ghi Purchase cùng giờ, event_id 'ORD-1021' và 'ord-1021' — có khử trùng được không (phân biệt hoa/thường)."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Đối soát cùng kỳ: sổ có 410 đơn web, Meta ghi 245, TikTok ghi 120",
+          "issue": "Không nói TikTok 120 đã khử trùng hay chưa, và không nêu hệ số đối soát (245/410 = 60%) để nối với 'khảo sát 6/10 khách biết qua Meta' ở Tình huống — hai số khớp đẹp nhưng bài không chỉ ra.",
+          "fix": "Thêm một câu: '245/410 ≈ 60%, trùng với khảo sát 6/10 — hai nguồn độc lập cùng nói một điều là dấu hiệu đo lường đã ổn'."
+        }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 350 − 245 = 105; 105/350 = 30% ✓ (tol 0,5); sai 42,9 = 105/245 ✓. Q7: 450 so với 450.000 → ROAS nhỏ đi 1.000 lần ✓. Ví dụ: 245/410 = 59,8% ≈ 6/10 ở Tình huống ✓ (bài không nêu)." },
+      "claims": [
+        { "claim": "Meta khử trùng pixel và server khi cùng event_name và event_id trong khoảng 48 giờ", "status": "verified", "note": "src Meta for Developers — Deduplicate pixel and server events, ngày kiểm 2026-10-24." },
+        { "claim": "Meta có Conversions API Gateway thiết lập không cần code", "status": "verified", "note": "src About Conversions API bao phủ chủ đề CAPI; tên Gateway cần đối chiếu nguyên văn." },
+        { "claim": "TikTok có Events API và cơ chế khử trùng", "status": "verified", "note": "src TikTok Ads Help — Event deduplication." },
+        { "claim": "TikTok có Events API Gateway", "status": "unverified", "note": "Không có src; xem P1." },
+        { "claim": "Google Enhanced conversions gửi email/số điện thoại đã băm để khớp", "status": "verified", "note": "src Google Ads Help — About enhanced conversions." },
+        { "claim": "Shop mỹ phẩm: 410 đơn, Meta 190→350→245, TikTok 120", "status": "illustrative-labelled", "note": "Bài ghi 'số giả định'." }
+      ],
+      "strengths": "Ba trạng thái đo (chỉ pixel 190 → đếm đôi 350 → khử trùng 245) đặt cạnh sổ 410 dạy đúng hai bài học cùng lúc (đếm đủ hơn ≠ hiệu quả hơn; số nền tảng ≠ số đơn thật); checklist 6 bước có đơn thử, event_id, tiền tệ, đối soát 7 ngày là quy trình làm được ngay; Q2 chặn đúng lỗi khen ROAS sau khi đổi cách đo.",
+      "upgrade": "Để ≥85: (1) bỏ hoặc có nguồn cho 'Events API Gateway' của TikTok; (2) nối 245/410 với khảo sát 6/10; (3) thay Q4 bằng câu đọc màn hình kiểm sự kiện; (4) thêm tình huống thứ hai đổi kết luận: shop chốt qua điện thoại (Q6) với số — bảng trạng thái 200 lead → 40 mua → cách gửi 'lead đạt chuẩn' về nền tảng (nối qc02-01)."
+    },
+    {
+      "id": "B:qc03-04",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L2", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Tuần sau Meta vẫn quanh 25–30% là ổn; nhảy lên 60% là có gì đó hỏng",
+          "issue": "Ngưỡng báo động chọn tuỳ ý; bài không nói cách đặt ngưỡng (ví dụ ±10 điểm so với trung bình 4 tuần) nên người học không tự đặt được cho shop mình.",
+          "fix": "Thêm quy tắc: 'lấy trung bình 4 tuần gần nhất, báo động khi lệch quá 10 điểm phần trăm'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q5, Q7",
+          "quote": "Quy ước nào cho tên quảng cáo dễ đọc nhất khi phân tích?",
+          "issue": "Hai câu L2; Q7 phương án đúng là ví dụ nguyên văn 'video_gia-re_v2' của bài.",
+          "fix": "Thay Q7 bằng câu đọc bảng: cho 6 dòng tên quảng cáo và số đơn, hỏi góc nội dung nào đang thắng (đòi lọc theo phần giữa của tên)."
+        },
+        {
+          "sev": "P2",
+          "where": "ĐÀO SÂU",
+          "quote": "Một số nền tảng cho chèn tham số động vào link để tự điền tên chiến dịch, tên quảng cáo; tên tham số khác nhau theo nền tảng và chưa có trong nguồn đã kiểm cho bài này",
+          "issue": "Trung thực về giới hạn nguồn (tốt), nhưng bài không có `src` nào kể cả cho quy ước UTM/kênh mặc định của công cụ phân tích web; 'công cụ phân tích web' không nêu tên.",
+          "fix": "Thêm src GA4 'Default channel group' và Meta/TikTok 'URL parameters' với ngày kiểm; nói rõ ví dụ dùng GA4."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 230 − 180 = 50; 50/180 = 27,8% → 28 ✓ (tol 0,6); sai 22 = 50/230 ✓. Q4: 330 − 200 = 130; 130/200 = 65%; 65 − 28 = 37 điểm ✓ (tol 1; chính xác 37,2); sai 132 = 65/28 − 1 ✓. Ví dụ: TikTok (140−95)/95 = 47% ✓; 180 + 95 = 275 trong 520 đơn sổ, phần còn lại không gắn UTM (bài không nêu)." },
+      "claims": [
+        { "claim": "Không có UTM, đơn từ quảng cáo Facebook lẫn vào nguồn giới thiệu hoặc trực tiếp trong công cụ phân tích web", "status": "verified", "note": "Đúng theo cách GA4 phân loại (referral facebook.com hoặc direct khi mất referrer trong ứng dụng); bài không có src." },
+        { "claim": "utm_source nền tảng, utm_medium paid_social/cpc, utm_campaign trùng tên chiến dịch", "status": "verified", "note": "Quy ước phổ biến, không phải khẳng định nền tảng." },
+        { "claim": "Agency trà sữa: 520 đơn, meta 180/230, tiktok 95/140", "status": "illustrative-labelled", "note": "Bài ghi 'số giả định'." }
+      ],
+      "strengths": "Quy ước ba tầng + UTM trùng tên + bảng chênh theo tuần biến đối soát thành báo động sớm; Q2 (không đổi tên 40 chiến dịch đang chạy, dùng bảng tra) là quyết định vận hành thật; phản ví dụ nêu đúng điểm mù của UTM với đơn qua tin nhắn/sàn và Q6 cho lối ra (mã riêng kênh, hỏi nguồn).",
+      "upgrade": "Để ≥85: (1) cho quy tắc đặt ngưỡng báo động; (2) thêm src GA4/kênh mặc định và tham số động; (3) thay Q7 bằng câu đọc bảng tên quảng cáo; (4) thêm tình huống thứ hai: 520 đơn sổ nhưng chỉ 275 có UTM — 245 đơn còn lại nằm đâu và việc đầu tiên là gì (kiểm link thiếu UTM trước khi đọc chênh)."
+    },
+    {
+      "id": "B:qc03-05",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L3", "L5", "L1", "L3", "L3", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "VÍ DỤ",
+          "quote": "Theo Nghị định 330/2026, xử lý dữ liệu không có sự đồng ý có thể bị phạt 30–50 triệu đồng",
+          "issue": "Mức phạt cụ thể nêu như sự thật nhưng nguồn là bài báo tổng hợp, không trích điều/khoản. Hành vi trong tình huống là MUA dữ liệu (file 8.000 số từ 'nguồn data'), là vi phạm 'mua bán dữ liệu cá nhân' có khung xử lý riêng theo Luật 91/2025 (theo hiểu biết của người chấm có thể tính theo nhiều lần doanh thu), không phải chỉ 'xử lý không có sự đồng ý'. Ghép hai hành vi vào một mức 30–50 triệu có thể làm người học đánh giá thấp rủi ro.",
+          "fix": "Trích đúng điều, khoản, ngày của Nghị định 330/2026 cho hai hành vi riêng (mua bán dữ liệu; xử lý không có sự đồng ý), ghi 'mức tại ngày kiểm' và dẫn pháp chế."
+        },
+        {
+          "sev": "P1",
+          "where": "ĐÀO SÂU",
+          "quote": "Từ 2/9/2025, Meta gắn cờ và chặn dùng tệp tuỳ chỉnh gợi ý tình trạng sức khoẻ hoặc tài chính",
+          "issue": "Mốc ngày và hành vi 'chặn' cụ thể là khẳng định nền tảng loại fast; src là trang tham chiếu API Custom Audience, không rõ có nêu mốc ngày; không có trích dẫn nguyên văn.",
+          "fix": "Trích câu nguyên văn và ngày từ trang Meta (developer changelog hoặc Business Help) hoặc bỏ mốc ngày, giữ 'Meta có thể gắn cờ và hạn chế'."
+        },
+        {
+          "sev": "P2",
+          "where": "KHÁI NIỆM, LÀM TỪNG BƯỚC, ÁP DỤNG",
+          "quote": "Năm lớp kiểm trước khi đăng … Bốn văn bản mới áp dụng từ 2026 cần nhớ … chạy qua checklist 8 bước",
+          "issue": "Ba cách đếm trong một bài (5 lớp, 4 văn bản, 8 bước) không ánh xạ với nhau; người học không biết 'lớp' nào ứng với 'bước' nào.",
+          "fix": "Đặt tên 5 lớp (quảng cáo, hiển thị, dữ liệu, người chuyển tải, ngành) và ghi bước nào thuộc lớp nào."
+        },
+        {
+          "sev": "P2",
+          "where": "Q3",
+          "quote": "Nghị định 342/2025 nói gì về quảng cáo video che nội dung trên mạng?",
+          "issue": "Câu L1 nhớ chi tiết văn bản; bài có đủ chất liệu cho câu tình huống.",
+          "fix": "Đổi thành: 'Web của shop tự đặt banner che nội dung có nút X nhưng bấm vào mở trang khác; điều nào vi phạm và sửa gì'."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Kịch bản của 5 KOC phải có câu \"Thực phẩm này không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh\"",
+          "issue": "Câu bắt buộc nêu như sự thật; src về Nghị định 15/2018 chỉ là bài báo 'tiếp tục áp dụng', không trích điều khoản quy định nội dung câu.",
+          "fix": "Dẫn điều khoản của Nghị định 15/2018 (hoặc văn bản thay thế tại ngày kiểm) quy định câu cảnh báo."
+        }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 3×4 = 12; 12 + 25 = 37 ✓ (tol 0,1); sai 65 = 40 + 25 ✓, 12 ✓. Câu tính duy nhất là chi phí chìm một bước, không kiểm được khái niệm pháp lý nào." },
+      "claims": [
+        { "claim": "Luật 75/2025/QH15 sửa đổi Luật Quảng cáo, hiệu lực 1/1/2026, thêm trách nhiệm cho người chuyển tải (KOL, KOC): kiểm bên thuê, kiểm tài liệu, cung cấp tài liệu, thông báo là quảng cáo", "status": "verified", "note": "src Bộ VHTTDL, ngày kiểm 2026-10-24; tiêu đề bao phủ." },
+        { "claim": "Nghị định 342/2025/NĐ-CP hiệu lực 15/2/2026: đóng bằng một thao tác, video chờ tối đa 5 giây, cấm nút đóng giả, gỡ trong 24 giờ", "status": "verified", "note": "src Báo Chính phủ về Nghị định 342/2025; chi tiết số (5 giây, 24 giờ, ngày hiệu lực) cần đối chiếu nguyên văn." },
+        { "claim": "Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 và Nghị định 356/2025: cấm mua bán dữ liệu cá nhân; dùng cho quảng cáo cần đồng ý, khách phải từ chối được", "status": "verified", "note": "src Bộ Công an (hiệu lực 1/1/2026) và Cổng văn bản Chính phủ NĐ 356/2025." },
+        { "claim": "Nghị định 330/2026: xử lý dữ liệu không có sự đồng ý phạt 30–50 triệu đồng", "status": "unverified", "note": "src là bài báo về mức phạt; con số cụ thể chưa có trích dẫn điều khoản; xem P1." },
+        { "claim": "Nghị định 15/2018 vẫn áp dụng; câu cảnh báo 'không phải là thuốc…' bắt buộc; nội dung phải đăng ký trước", "status": "unverified", "note": "src chỉ xác nhận 15/2018 còn hiệu lực; nội dung câu bắt buộc không có trích dẫn." },
+        { "claim": "Từ 2/9/2025 Meta gắn cờ và chặn tệp tuỳ chỉnh gợi ý sức khoẻ/tài chính", "status": "unverified", "note": "src là trang tham chiếu API; mốc ngày không có trích dẫn; xem P1." },
+        { "claim": "Meta có quy định riêng cho quảng cáo sức khoẻ", "status": "verified", "note": "src Meta Transparency Center — Health and wellness." }
+      ],
+      "strengths": "Checklist 8 bước gắn thẳng vào một chiến dịch thật (file số mua, KOC, câu bắt buộc, người trực gỡ 24 giờ) và nói rõ ranh giới 'không phải ý kiến pháp lý, chuyển pháp chế'; tách luật và chính sách nền tảng thành hai lớp độc lập (Q7) là ý quan trọng ít bài nào nêu; nguồn đều là trang chính phủ/bộ với ngày kiểm.",
+      "upgrade": "Để ≥85: (1) trích điều khoản và tách hai hành vi vi phạm dữ liệu với mức phạt đúng; (2) có trích dẫn nguyên văn cho mốc 2/9/2025 của Meta hoặc bỏ ngày; (3) ánh xạ 5 lớp ↔ 8 bước; (4) thay Q3 L1 bằng câu tình huống và thêm một câu L5: KOC đòi bỏ câu 'đây là quảng cáo' vì 'mất tự nhiên' — đánh đổi gì, ai chịu trách nhiệm."
+    },
+    {
+      "id": "B:qc03-06",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L4", "L5", "L3", "L2", "L3", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "KHÁI NIỆM, VÍ DỤ, Q2",
+          "quote": "Theo cách tính cỡ mẫu thông dụng trong thống kê, để phân biệt 2% với 3% cần khoảng 3.800 click mỗi bản",
+          "issue": "Con số đúng với mức ý nghĩa 5% hai phía và lực 80% (người chấm tính lại: 3.822) nhưng bài không nêu hai giả định này. Với lực 90% cần ≈ 5.100 click/bản, chi phí và 'khoảng 23 ngày' trong Ví dụ và đáp án Q2 đổi theo. Rubric: phép tính thiếu giả định làm kết quả đổi.",
+          "fix": "Ghi 'ở mức tin cậy 95%, lực 80%' và một câu 'đòi chắc hơn (lực 90%) thì cần thêm khoảng một phần ba mẫu'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q5",
+          "quote": "Tăng khoảng gấp bốn, vì mẫu tăng theo bình phương",
+          "issue": "Phương án đúng nói 'mẫu tăng theo bình phương' (mơ hồ: bình phương của gì); lời giải mới nói đúng 'tỉ lệ nghịch với bình phương mức chênh'.",
+          "fix": "Sửa phương án: 'gấp bốn, vì cỡ mẫu tỉ lệ nghịch với bình phương mức chênh'."
+        },
+        {
+          "sev": "P2",
+          "where": "ĐÀO SÂU",
+          "quote": "Nhiều nền tảng quảng cáo có công cụ thử nghiệm A/B riêng, thường chia người xem thành các nhóm tách biệt",
+          "issue": "Không nêu tên và không có src (Meta A/B test, Google Ads Experiments, TikTok Split test); người học không tìm được.",
+          "fix": "Thêm tên công cụ và src với ngày kiểm, giữ câu 'kiểm trong tài khoản'."
+        },
+        {
+          "sev": "P2",
+          "where": "Q4, Q6",
+          "quote": "Đủ click từ ngày thứ 4, vì sao vẫn nên chạy thử nghiệm trọn ít nhất một tuần?",
+          "issue": "Hai câu L2 nhận lại ba điều kiện của bài.",
+          "fix": "Thay Q6 bằng câu dữ liệu: cho CVR theo ngày (T2–CN) của trang cũ, hỏi dừng ngày thứ 4 (T5) sẽ lệch về phía nào."
+        }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3.800×2 = 7.600; ×3.000 = 22,8 triệu ✓ (tol 0,1); sai 11,4 ✓. Cỡ mẫu: với p1 = 2%, p2 = 3%, α = 0,05 hai phía, lực 80%: n ≈ (1,96+0,84)²×(0,02×0,98+0,03×0,97)/0,01² ≈ 3.822 ✓ 'khoảng 3.800'. Ví dụ: 150×3% = 4,5 ≈ '4–5 đơn' ✓; 22,8/1 triệu/ngày ≈ 23 ngày ✓; 7 triệu/3.000 = 2.333 click ≈ '2.300' ✓, 2.333/7.600 = 31% 'chưa tới một phần ba' ✓. Q5: chênh ½ → mẫu ×4 ✓." },
+      "claims": [
+        { "claim": "Phân biệt 2% với 3% cần khoảng 3.800 click mỗi bản", "status": "verified", "note": "Người chấm tính lại 3.822 ở α = 0,05, lực 80%; bài không nêu giả định (P1)." },
+        { "claim": "Chênh nhỏ đi một nửa cần khoảng gấp bốn mẫu", "status": "verified", "note": "Đúng theo công thức cỡ mẫu." },
+        { "claim": "Dừng lúc số đang đẹp làm tỉ lệ kết luận sai tăng mạnh", "status": "verified", "note": "Hiện tượng nhìn trộm (optional stopping) là kiến thức thống kê nền." },
+        { "claim": "Nhiều nền tảng có công cụ A/B test chia nhóm tách biệt", "status": "unverified", "note": "Không tên, không src." },
+        { "claim": "Shop giày: 150 click, 3 so với 6 đơn, CPC 3.000đ, 1 triệu/ngày", "status": "illustrative-labelled", "note": "Bài ghi 'số giả định'." }
+      ],
+      "strengths": "Ba điều kiện (một biến, đủ mẫu, đủ thời gian) được đổi thành tiền và ngày cho một shop cụ thể, rồi đưa sếp ba lựa chọn thật (thêm tiền, thêm thời gian, đổi câu hỏi); Q7 giữ ngày dừng đã ghi là câu L5 đúng nghĩa; phản ví dụ cho shop nhỏ ('thay đổi rủi ro thấp thì cứ làm') tránh biến thống kê thành giáo điều.",
+      "upgrade": "Để ≥85: (1) nêu mức tin cậy và lực của con số 3.800 và cho biết đổi lực thì mẫu đổi bao nhiêu; (2) nêu tên và src công cụ A/B của nền tảng; (3) sửa chữ ở Q5 và thay Q6 bằng câu đọc dữ liệu theo ngày; (4) thêm tình huống thứ hai đổi kết luận: thử offer đổi trả 30 ngày (kỳ vọng 2% → 4%) chỉ cần ≈ 1.100 click/bản, nên với 1 triệu/ngày xong trong một tuần."
+    },
+    {
+      "id": "B:qc03-07",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L5", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "KHÁI NIỆM",
+          "quote": "Theo trang trợ giúp của Meta, nhóm quảng cáo bị gắn \"Learning limited\" khi khó đạt khoảng 50 sự kiện tối ưu trong một tuần sau lần chỉnh sửa lớn. Chỉnh sửa lớn gồm đổi sự kiện tối ưu, đối tượng, creative, tạm dừng",
+          "issue": "Lặp gần nguyên văn Khái niệm và Đào sâu của qc01-06, và ý 'luật viết trước' của qc01-07 (kể cả mẫu quy tắc 'không sửa N ngày đầu trừ lỗi', 'tiêu X lần CPA chưa có kết quả thì kiểm'); LIÊN KẾT không dẫn hai bài đó. Bài không nói mình thêm gì mới (ở đây: ai được sửa, nhật ký thay đổi, lỗi-sai sửa ngay).",
+          "fix": "Mở bài bằng 'bạn đã có luật từ qc01-07; bài này thêm ba thứ…' và thêm rel B:qc01-06, B:qc01-07; cắt phần lặp về giai đoạn học còn một câu dẫn."
+        },
+        {
+          "sev": "P2",
+          "where": "NGUỒN",
+          "quote": "Meta Business Help — About the learning phase <https://en-gb.facebook.com/business/help/269269737396981>; Meta Business Help — Learning limited <https://www.facebook.com/business/help/942374239243867>",
+          "issue": "qc01-06 dẫn hai URL này với tiêu đề đảo ngược; một trong hai bài gắn sai tiêu đề nguồn.",
+          "fix": "Mở hai URL, gắn đúng tiêu đề và đồng bộ ở cả hai bài."
+        },
+        {
+          "sev": "P2",
+          "where": "ĐÀO SÂU",
+          "quote": "gộp các nhóm quảng cáo nhỏ, tăng ngân sách nếu kinh tế cho phép, hoặc tối ưu cho một sự kiện sớm hơn",
+          "issue": "Không cho số: để đạt ~50 lượt/tuần ở CPA 250.000đ cần 12,5 triệu/tuần ≈ 1,8 triệu/ngày (tăng 20%); người học không thấy 'tăng ngân sách' là bao nhiêu.",
+          "fix": "Thêm phép tính 50 × 250.000 = 12,5 triệu/tuần."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1, Q7",
+          "quote": "Nhật ký thay đổi giúp gì nhiều nhất khi CPA tăng vọt vào tuần sau?",
+          "issue": "Hai câu L2; Q7 phương án sai (a, b, d) vô lý dễ loại.",
+          "fix": "Thay Q7 bằng câu đọc nhật ký: cho 4 dòng nhật ký và CPA theo ngày, hỏi thay đổi nào khả nghi nhất."
+        },
+        {
+          "sev": "P2",
+          "where": "KHÁI NIỆM",
+          "quote": "đổi ngân sách hay giá thầu nhiều cũng có thể tính",
+          "issue": "Bài loại fast có src nhưng thiếu câu 'nếu màn hình khác, tin trang chính thức'.",
+          "fix": "Thêm câu đó."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 1.500 + 1.500 = 3.000; 4 + 7 = 11; 3.000/11 = 272,7 → 273 ✓ (tol 1); sai 295 = (375 + 214)/2 ✓. Q4: 1,5×7 = 10,5 triệu; 10.500/250 = 42 ✓ (tol 0,5); sai 6 = 1.500/250 ✓. Ví dụ: ngày 1 1.500/4 = 375 ✓; 3×250 = 750 ✓; 150%×250 = 375 ✓; 42 < 50 ✓." },
+      "claims": [
+        { "claim": "Meta gắn 'Learning limited' khi khó đạt khoảng 50 sự kiện tối ưu/tuần; chỉnh sửa lớn gồm sự kiện, đối tượng, creative, tạm dừng; ngân sách/giá thầu lớn có thể tính", "status": "verified", "note": "src Meta Business Help (hai URL; tiêu đề cần đồng bộ với qc01-06), ngày kiểm 2026-10-24." },
+        { "claim": "Spa Đà Nẵng 1,5 triệu/ngày, 4 và 7 lượt đặt lịch", "status": "illustrative-labelled", "note": "Bài ghi 'số giả định'." }
+      ],
+      "strengths": "Phản ví dụ 'lỗi sai (giá, link, tracking) sửa ngay bất kể ngày thứ mấy' (Q6) lấp đúng khoảng trống của qc01-07; Q5 đánh giá chất lượng một ngưỡng hành động (có mốc, có số, có việc, có ghi) là câu L5 hiếm; Đào sâu chẩn đoán cấu trúc (42 < 50) thay vì creative.",
+      "upgrade": "Để ≥85: (1) cắt phần lặp qc01-06/07, nêu rõ phần thêm mới và dẫn rel; (2) đồng bộ tiêu đề src; (3) cho số 12,5 triệu/tuần ở Đào sâu; (4) thay Q7 bằng câu đọc nhật ký; (5) thêm tình huống thứ hai đổi kết luận: ngày 2 chỉ 1 lượt (CPA 2 ngày 600.000đ) nhưng vẫn chưa tới ngưỡng 750.000đ chưa có lượt nào — kiểm form trước hay chờ."
+    },
+    {
+      "id": "B:qc03-08",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 6, "data": 8, "clarity": 5 },
+      "total": 79,
+      "bloom_items": ["L1", "L5", "L3", "L3", "L3", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q4",
+          "quote": "lãi sau quảng cáo là bao nhiêu triệu đồng (làm tròn một chữ số thập phân)? → đáp án: 13.45",
+          "issue": "Đề yêu cầu một chữ số thập phân nhưng `ans` ghi hai chữ số (13,45); người học nhập 13,5 vẫn đúng nhờ tol 0,1 nên không sai, nhưng đề và đáp án không khớp.",
+          "fix": "Đặt ans 13.5 hoặc bỏ yêu cầu làm tròn trong đề."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "lãi gộp 35% doanh thu là khoảng 65,5 triệu, trừ quảng cáo còn khoảng 13,5 triệu",
+          "issue": "Dùng 'lãi gộp' trong khi qc02-03/04 đã dạy phải dùng biên đóng góp (đã trừ phí sàn, vận chuyển, hoàn) để ra lãi sau quảng cáo; thuật ngữ không nhất quán giữa hai module, và báo cáo tầng 1 có thể nói lãi khi thực tế âm nếu phí theo đơn lớn.",
+          "fix": "Đổi thành 'biên đóng góp 35%' và dẫn qc02-03."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1, Q7",
+          "quote": "Sếp đọc báo cáo tuần thường muốn biết điều gì trước tiên?",
+          "issue": "Q1 là L1 (câu trả lời nằm trong Tình huống), Q7 L2; phương án sai của Q7 (b, c) là thái độ xấu, dễ loại.",
+          "fix": "Thay Q1 bằng câu đọc báo cáo mẫu 5 tầng có một lỗi (cộng đơn nền tảng) và hỏi dòng nào sai; Q7 thành câu viết 'điều chưa biết' cho tình huống Google trong Ví dụ."
+        },
+        {
+          "sev": "P2",
+          "where": "VÍ DỤ",
+          "quote": "Giải thích: CPA TikTok tăng 30% vì video chính đã chạy 4 tuần, tần suất tăng",
+          "issue": "Chỉ một tuần, một tình huống; không có tình huống thứ hai (tuần lãi giảm dù MER tăng, do mix sản phẩm biên thấp) để thấy tầng 3 đổi theo tầng 1.",
+          "fix": "Thêm hai dòng cho tuần 47 với MER tăng nhưng lãi giảm."
+        }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 187/52 = 3,596 → 3,6 ✓ (tol 0,05); sai 0,3 = 52/187 ✓. Q4: 187×35% = 65,45; 65,45 − 52 = 13,45 ✓ (tol 0,1; đề đòi một chữ số → 13,5 vẫn trong tol); sai 135 = 187 − 52 ✓, 65,5 ✓. Ví dụ: 28 + 16 + 8 = 52 ✓; Q5: 390 so với 312 ✓ nhất quán với qc02-07." },
+      "claims": [
+        { "claim": "MER không quan tâm nền tảng nào nhận công nên khó bị thổi phồng khi cộng kênh, nhưng gộp cả đơn tự nhiên và khách cũ", "status": "verified", "note": "Đúng theo định nghĩa, nhất quán với qc02-05." },
+        { "claim": "Shop gia dụng tuần 46: 312 đơn, 187 triệu, chi 52 triệu, lãi gộp 35%", "status": "illustrative-labelled", "note": "Bài ghi 'số giả định'." }
+      ],
+      "strengths": "Thứ tự năm tầng theo câu sếp hỏi (lãi/lỗ → kênh → vì sao → quyết định → chưa biết) là mẫu dùng ngay; tầng 1 dùng số sổ bán hàng và Q5 chặn đúng lỗi cộng đơn nền tảng; mục 'điều chưa biết' và dòng 'quyết định tuần trước và kết quả' khép vòng học; bài ngắn, rõ, không thừa.",
+      "upgrade": "Để ≥85: (1) sửa ans Q4 cho khớp đề; (2) dùng 'biên đóng góp' thay 'lãi gộp' và dẫn qc02-03; (3) thay Q1 L1 bằng câu tìm lỗi trong báo cáo mẫu; (4) thêm tuần thứ hai đổi kết luận (MER tăng, lãi giảm) để tầng 3 có việc thật; (5) kèm một mẫu báo cáo một trang có sẵn số để người học sửa."
+    }
+  ],
+  "module_notes": {
+    "progression": "Mạch: brief creative (01) → điểm đến sau cú bấm (02) → pixel + máy chủ + khử trùng (03) → đặt tên và UTM (04) → luật Việt Nam 2026 (05) → thử nghiệm đủ mẫu (06) → luật vận hành khi đang chạy (07) → báo cáo tuần một trang (08). Đây là module 'dựng và vận hành': từ trước khi bấm Đăng (01–05) tới khi đang chạy (06–07) và báo cáo (08). Hợp lý về ý, nhưng 05 (kiểm luật trước khi đăng) đang kẹp giữa hai bài đo lường (04, 06); nên đưa 05 lên ngay sau 02 để theo đúng trình tự 'brief → điểm đến → luật → đo → chạy'. 07 lặp phần lớn qc01-06 và qc01-07 (mốc 50 sự kiện, luật viết trước) mà không dẫn; phần thực sự mới của 07 (ai được sửa, nhật ký, lỗi-sai sửa ngay) chỉ chiếm một phần ba bài. Tất cả 12 câu tính đúng; số ví dụ tự khớp trong từng bài. Khẳng định nền tảng và luật phần lớn có src với ngày kiểm (03, 05, 07) — tốt hơn hẳn các module cũ — nhưng còn bốn chỗ nêu như sự thật mà nguồn không bao phủ: 'Events API Gateway' của TikTok (03), mức phạt 30–50 triệu và mốc 2/9/2025 của Meta (05), form trong ứng dụng và benchmark 'vài phút' (02). Không bài fast nào có câu 'nếu màn hình khác, tin trang chính thức' đúng nghĩa, chỉ 03 có hedging gần với nó.",
+    "overlap": [
+      "07 lặp qc01-06 (Learning limited ~50 sự kiện, danh sách chỉnh sửa lớn) và qc01-07 (luật viết trước, 'không đụng N ngày đầu', ngưỡng theo tiền) với cùng nguồn Meta; hai bài còn gắn tiêu đề-URL src ngược nhau.",
+      "02 (chi phí mỗi khách thật = tiền ÷ lead × đạt chuẩn × chốt) và qc02-01 (chi phí mỗi lead đạt chuẩn) là cùng một phép tính; 02 không có rel để dẫn.",
+      "06 và qc01-03 Đào sâu, qc02-02 Q6, qc02-08 cùng nói 'ít đơn thì nhiễu'; 06 là bài duy nhất có công thức nhưng không được các bài kia dẫn.",
+      "08 tầng 1 (MER, không cộng đơn nền tảng) lặp qc02-05 và qc02-07 — hợp lý vì là bài tổng hợp, nhưng dùng 'lãi gộp' trong khi qc02 dùng 'biên đóng góp'.",
+      "03 (sổ 410 so với Meta 245 + TikTok 120) và qc02-07 (sổ 420 so với 610) dạy cùng một ý 'nền tảng tự nhận công' với hai case khác nhau."
+    ],
+    "gaps": [
+      "Không có bài về trang đích/consent và quyền riêng tư khi cài pixel (03 nhắc 'xem bài về pixel và sự đồng ý' nhưng không bài nào trong ba module là bài đó; rel trỏ sang kn12-07).",
+      "Không có bài về chẩn đoán creative mệt bằng số (tần suất, CTR theo tuổi creative) dù 07, 08 và qc02-02 đều kết luận 'thay một video vì mệt'.",
+      "Không có bài về gửi chuyển đổi ngoại tuyến (offline conversion import / CRM → nền tảng) dù 02, 03 Q6 và qc02-01 đều kết thúc ở 'ghi trạng thái lead vào bảng rồi đưa về nền tảng'.",
+      "Luật (05) không có phần về quảng cáo trên sàn (Shopee/TikTok Shop) và livestream — hai kênh chính của case Bếp Gọn — và không có checklist cho ngành không có điều kiện (đa số người học).",
+      "Không bài nào có bài thực hành có đầu ra (BAI_TASKS); 01 (brief), 04 (quy ước đặt tên), 06 (phiếu thử nghiệm), 08 (mẫu báo cáo) đều rất hợp để chấm bằng rubric.",
+      "Thiếu bài về Google Search vận hành (từ khoá, đối sánh, phủ định, điểm chất lượng) — ba module quảng cáo chỉ nhắc Search ở mức chọn kênh và '15 tiêu đề, 4 mô tả'."
+    ],
+    "best_lesson": "B:qc03-03",
+    "weakest_lesson": "B:qc03-01"
+  }
+}

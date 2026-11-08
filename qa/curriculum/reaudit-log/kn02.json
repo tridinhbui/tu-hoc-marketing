@@ -1,0 +1,16 @@
+{
+ "mod": "kn02",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:kn02-01",
+   "where": "Ví dụ / Q3",
+   "status": "fixed",
+   "change": "Ví dụ và đề Q3: “400 điểm bán cả ngành (hàng) bán 100.000 lon” → “Cả 400 điểm cộng lại bán 100.000 lon nước tăng lực (mọi hãng)”; “60.000 lon nước tăng lực các loại / (mọi hãng)” → “60.000 lon nước tăng lực (mọi hãng)”. Tử và mẫu cùng một ngành hàng.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: mẫu số trước đó không rõ là nước giải khát hay nước tăng lực. Lỗi thật; đáp án 60% không đổi. Cảnh báo độ dài ví dụ của B:kn02-03 có từ trước, không do đợt này."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

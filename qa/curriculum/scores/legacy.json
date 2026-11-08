@@ -1,0 +1,3168 @@
+{
+ "mod": "legacy",
+ "scored_at": "2026-11-07",
+ "scorer": "independent-agent",
+ "rubric": "RUBRIC-100 v1",
+ "lessons": [
+  {
+   "id": "L:53",
+   "scores": {
+    "accuracy": 12,
+    "depth": 9,
+    "practical": 12,
+    "examples": 8,
+    "pedagogy": 6,
+    "assessment": 8,
+    "data": 5,
+    "clarity": 4
+   },
+   "total": 64,
+   "bloom_items": [
+    "L3",
+    "L4",
+    "L3",
+    "L2",
+    "L3",
+    "L4",
+    "L3",
+    "L3"
+   ],
+   "bloom_max": "L4",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "cạnh tranh với 40 trường khác",
+     "issue": "Con số 40 là số tự đặt, không gắn nhãn minh hoạ; bài không có phép tính nào trong thân bài dù khái niệm lõi là phễu tuyển sinh.",
+     "fix": "Gắn nhãn “minh hoạ” và đưa phễu 40.000→9.000→3.200→1.100 (đang nằm ở e1.002) vào phần NHÌN KỸ kèm hai tỉ lệ rơi để người học tự so."
+    },
+    {
+     "sev": "P2",
+     "where": "e1.035",
+     "quote": "Học 18 tháng, đi làm ngay — không dành cho người muốn bằng đại học",
+     "issue": "Đáp án đúng là phương án duy nhất chứa cụm “không dành cho” — đúng mẫu câu bài vừa dạy, nên đoán được bằng hình thức.",
+     "fix": "Cho một phương án nhiễu cũng có cấu trúc loại trừ nhưng loại trừ sai nhóm (ví dụ “không dành cho người lười”)."
+    },
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (6)",
+     "quote": "Mỗi bước rơi rụng theo một lý do khác nhau.",
+     "issue": "Nêu 6 ý dạng liệt kê, không có ý nào nói khi nào mô hình không áp dụng (trường công có chỉ tiêu nhà nước, ngành hot không cần tuyển sinh).",
+     "fix": "Thêm một câu điều kiện: “Mô hình này chỉ cần khi người học có nhiều lựa chọn thay thế thật — trường có điểm chuẩn cao nhất ngành không có bài toán này.”"
+    }
+   ],
+   "calc_check": {
+    "n": 2,
+    "ok": 2,
+    "notes": "e1.012: 180 ÷ 900 = 20% ✓ (80% là tỉ lệ rơi). e1.029: 96 ÷ 480 = 20% ✓; 96 ÷ 1.200 = 8% là tỉ lệ cả phễu ✓. e1.002 lời giải: rơi 1.100/3.200 ≈ 65,6% (“khoảng 66%”) ✓, 9.000/40.000 rơi 77,5% (“gần 78%”) ✓."
+   },
+   "claims": [
+    {
+     "claim": "một trường đại học cạnh tranh với 40 trường khác",
+     "status": "illustrative-unlabelled",
+     "note": ""
+    },
+    {
+     "claim": "người đã trúng tuyển … thường rẻ hơn để giữ so với kéo thêm người mới",
+     "status": "unverified",
+     "note": "Hợp lý về cơ chế nhưng không có số; đã hedge bằng “thường”."
+    }
+   ],
+   "strengths": "Mở bằng tình huống phi thương mại làm rõ marketing là bài toán lựa chọn, không phải bán hàng; bộ 8 câu đề gắn kèm có 2 calc, 2 case và phân biệt được “rơi nhiều” với “rơi bất thường”.",
+   "upgrade": "Đưa phễu có số vào thân bài, thêm bảng 4 bước × tỉ lệ rơi × chi phí cứu ước lượng; viết lại VÌ SAO thành 3 cơ chế (định vị loại trừ, ba người quyết định, phễu rơi bất thường) thay cho 6 gạch đầu dòng; thêm phản ví dụ (trường có điểm chuẩn cao nhất không cần marketing tuyển sinh, nhưng vẫn cần giữ người trúng tuyển); gắn nhãn số minh hoạ. Mục tiêu ≥85 cần thêm một quyết định có ràng buộc: “với 200 triệu và 3 tháng, chi vào bước nào”."
+  },
+  {
+   "id": "L:54",
+   "scores": {
+    "accuracy": 9,
+    "depth": 8,
+    "practical": 11,
+    "examples": 8,
+    "pedagogy": 5,
+    "assessment": 5,
+    "data": 4,
+    "clarity": 4
+   },
+   "total": 54,
+   "bloom_items": [
+    "L2",
+    "L3"
+   ],
+   "bloom_max": "L3",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ý CHÍNH",
+     "quote": "Người ta không định giá theo giá trị tuyệt đối. Người ta so sánh với thứ đứng cạnh — đó là hiệu ứng mỏ neo.",
+     "issue": "Nêu một hiệu ứng tâm lý như luật phổ quát, không có điều kiện (mỏ neo yếu khi khách biết giá tham chiếu ngoài menu, khi mua lặp lại thường xuyên, khi khoảng cách giá quá xa gây nghi ngờ).",
+     "fix": "Thêm câu: “Mỏ neo mạnh nhất khi khách chưa có giá tham chiếu sẵn; với món mua hằng ngày đã quen giá, hiệu ứng rất nhỏ — hãy đo bằng tỉ lệ chọn món giữa trước và sau khi thêm mỏ neo.”"
+    },
+    {
+     "sev": "P1",
+     "where": "ĐỜI THẬT",
+     "quote": "Món 120.000 hiếm khi bán chạy, nhưng nó không tồn tại để bán. Nó tồn tại để món 65.000 trông hợp lý.",
+     "issue": "Ví dụ có số nhưng không có kết quả đo (tỉ lệ chọn món giữa đổi bao nhiêu) và không gắn nhãn minh hoạ; dữ kiện “tăng từ 30% lên 42%” chỉ xuất hiện trong câu đề e2.027, không có trong bài.",
+     "fix": "Gắn nhãn “minh hoạ” và đưa cặp số 30% → 42% (tăng tương đối 40%) vào NHÌN KỸ, kèm điều kiện so cùng lượng khách."
+    },
+    {
+     "sev": "P2",
+     "where": "NHÌN KỸ",
+     "quote": "Lý thuyết menu engineering khuyên đặt món có biên lợi nhuận cao ở vị trí dễ thấy",
+     "issue": "Trích “lý thuyết” không có nguồn; đã hedge “không có một góc cố định nào” nhưng vẫn là khẳng định không gắn nhãn.",
+     "fix": "Ghi nguồn (ví dụ Kasavana & Smith 1982) hoặc đổi thành “quan sát phổ biến trong ngành F&B”."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "e2.027: (42 − 30) ÷ 30 = 40% ✓; 12 là điểm phần trăm ✓."
+   },
+   "claims": [
+    {
+     "claim": "hiệu ứng mỏ neo (anchoring) quyết định cảm nhận giá trên menu",
+     "status": "unverified",
+     "note": "Hiệu ứng có thật trong tài liệu hành vi nhưng bài nêu như luật, không nguồn, không điều kiện."
+    },
+    {
+     "claim": "Lý thuyết menu engineering khuyên đặt món biên cao ở vị trí dễ thấy",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Một quán có ba mức: 45.000, 65.000 và 120.000",
+     "status": "illustrative-unlabelled",
+     "note": ""
+    }
+   ],
+   "strengths": "Ý “chuyển câu hỏi từ có nên mua sang mua cái nào” là cơ chế đúng và dễ nhớ; bài THỬ bắt người học soi bảng giá thật.",
+   "upgrade": "Thêm điều kiện áp dụng và cách đo (A/B hai bản menu, tỉ lệ chọn món giữa, giá trị đơn trung bình); gắn nhãn số; thêm phản ví dụ mỏ neo phản tác dụng (khoảng cách giá quá lớn làm quán trông “chặt chém”); đưa calc 30%→42% vào bài; nối sang P:pricing và kh07. Hiện 2 câu đề là quá ít — cần thêm một case đọc số menu thật (L4) và một judge (L5)."
+  },
+  {
+   "id": "L:55",
+   "scores": {
+    "accuracy": 11,
+    "depth": 9,
+    "practical": 13,
+    "examples": 8,
+    "pedagogy": 6,
+    "assessment": 5,
+    "data": 2,
+    "clarity": 4
+   },
+   "total": 58,
+   "bloom_items": [
+    "L2",
+    "L5"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "ĐỜI THẬT",
+     "quote": "UNIQLO cùng Toray ra mắt HEATTECH năm 2003 — vải tạo nhiệt từ hơi ẩm của cơ thể.",
+     "issue": "Dữ kiện thương hiệu thật (năm, đối tác, cơ chế vải) nêu như sự thật mà không có nguồn hay ngày kiểm.",
+     "fix": "Thêm src (trang công bố của UNIQLO/Toray) với ngày kiểm, hoặc ghi “theo công bố của hãng”."
+    },
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (1)",
+     "quote": "Tên riêng làm thuộc tính không so sánh trực tiếp được, nên thoát khỏi cuộc đua giá.",
+     "issue": "Nói quá: tên riêng chỉ làm so sánh khó hơn; khách vẫn so “áo giữ nhiệt” giữa các hãng. Không nêu điều kiện (thuộc tính phải cảm nhận được và lặp đủ lâu).",
+     "fix": "Sửa thành “khó so sánh trực tiếp hơn” và thêm điều kiện: thuộc tính phải thật và khách phải cảm nhận được, nếu không tên chỉ là chi phí."
+    },
+    {
+     "sev": "P2",
+     "where": "toàn bài",
+     "quote": "Đặt tên riêng cho một trong số đó và dùng nó suốt 6 tháng.",
+     "issue": "Bài không có một con số đo nào (tỉ lệ nhớ tên, tỉ lệ tìm kiếm tên riêng), nên không biết “tên có tác dụng” nghĩa là gì.",
+     "fix": "Thêm thước đo: lượt tìm kiếm tên riêng, tỉ lệ khách gọi đúng tên khi hỏi tại quầy, so trước/sau 6 tháng."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [
+    {
+     "claim": "UNIQLO cùng Toray ra mắt HEATTECH năm 2003",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "vải tạo nhiệt từ hơi ẩm của cơ thể",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "e3.003: Không có quy định [luật] yêu cầu công nghệ mới phải có tên đăng ký nhãn hiệu",
+     "status": "unverified",
+     "note": "Khẳng định pháp lý đúng về bản chất nhưng không nguồn."
+    }
+   ],
+   "strengths": "Khái niệm “cái gì không có tên thì thuộc về cả ngành” sắc và áp dụng ngay; bài THỬ ra việc cụ thể (chọn 1 thuộc tính, đặt tên, giữ 6 tháng).",
+   "upgrade": "Thêm nguồn cho dữ kiện HEATTECH; thêm phản ví dụ (tên riêng cho thuộc tính khách không cảm nhận được → chi phí); thêm cách đo (lượt tìm tên riêng, nhắc tên không gợi ý); thêm điều kiện nhất quán tối thiểu (số lần/thời gian). Bộ câu hỏi cần thêm ít nhất một case đọc dữ liệu (L4) — hiện chỉ 2 câu."
+  },
+  {
+   "id": "L:56",
+   "scores": {
+    "accuracy": 9,
+    "depth": 8,
+    "practical": 14,
+    "examples": 8,
+    "pedagogy": 6,
+    "assessment": 7,
+    "data": 4,
+    "clarity": 4
+   },
+   "total": 60,
+   "bloom_items": [
+    "L2",
+    "L3",
+    "L5",
+    "L4",
+    "L3"
+   ],
+   "bloom_max": "L5",
+   "freshness": "periodic",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "NHÌN KỸ",
+     "quote": "Các báo cáo benchmark email (ví dụ Experian 2010) cho thấy email xác nhận đơn hàng được mở nhiều hơn hẳn email quảng cáo",
+     "issue": "Benchmark 15 năm tuổi nêu như bằng chứng hiện hành, không có nguồn bấm được, không có con số, không có ngày kiểm — vi phạm quy ước lớp “periodic”.",
+     "fix": "Hoặc bỏ tên báo cáo và viết “email giao dịch thường được mở nhiều hơn vì khách đang chờ nó — hãy so tỉ lệ mở hai loại trong hệ thống của bạn”, hoặc thay bằng nguồn ≤ 12 tháng có src và ngày kiểm."
+    },
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (1)",
+     "quote": "chi phí biên gần bằng không",
+     "issue": "Đúng với in ấn sẵn có nhưng bỏ qua chi phí thiết kế, viết, duyệt và rủi ro pháp lý (email giao dịch chèn quảng cáo có thể vi phạm quy định chống thư rác).",
+     "fix": "Thêm điều kiện: “chi phí biên thấp nhưng cần một lần đầu tư nội dung; email giao dịch chỉ nên chèn thông tin có ích, không chèn khuyến mãi để không thành thư rác”."
+    },
+    {
+     "sev": "P2",
+     "where": "gắn bài",
+     "quote": "e1.003, e1.016, e1.025, e1.031 … teaches: P:physical-availability",
+     "issue": "Bốn câu về media sở hữu được gắn dạy nguyên lý Physical Availability — hai khái niệm khác nhau (dễ mua ≠ điểm chạm đã trả tiền).",
+     "fix": "Đổi teaches sang một nguyên lý/ bài về owned media (kn01) để báo cáo năng lực không lệch."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "e1.031: 300 × 2 = 600/tháng; × 12 = 7.200 ✓."
+   },
+   "claims": [
+    {
+     "claim": "Experian 2010: email xác nhận được mở nhiều hơn hẳn email quảng cáo",
+     "status": "unverified",
+     "note": "Nguồn cũ, không link, không số."
+    },
+    {
+     "claim": "Áo tài xế Grab, cốc Starbucks có tên … là media đã sở hữu",
+     "status": "illustrative-labelled",
+     "note": "Chỉ là liệt kê điểm chạm, không gắn số."
+    }
+   ],
+   "strengths": "Bài THỬ (liệt kê mọi điểm chạm sau mua, đánh dấu chỗ chỉ có thông tin hành chính, viết lại một chỗ) là việc làm được trong một buổi; câu e1.019 và e1.025 buộc so hai phương án thật.",
+   "upgrade": "Thay benchmark 2010 bằng hướng dẫn tự đo (tỉ lệ mở email giao dịch vs khuyến mãi trong hệ thống của mình); thêm bảng điểm chạm × số lượt/tháng × hiện dùng để làm gì × đề xuất; thêm phản ví dụ (chèn khuyến mãi vào email giao dịch làm giảm niềm tin/ vi phạm chống spam); nối sang kn01 thay vì Physical Availability."
+  },
+  {
+   "id": "L:57",
+   "scores": {
+    "accuracy": 13,
+    "depth": 9,
+    "practical": 14,
+    "examples": 9,
+    "pedagogy": 6,
+    "assessment": 5,
+    "data": 2,
+    "clarity": 5
+   },
+   "total": 63,
+   "bloom_items": [
+    "L3",
+    "L2",
+    "L3"
+   ],
+   "bloom_max": "L3",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "“At 60 miles an hour the loudest noise in this new Rolls-Royce comes from the electric clock.” Ogilvy không viết chữ \"yên tĩnh\" nào.",
+     "issue": "Dữ kiện lịch sử (Ogilvy, 1958) nêu không nguồn; chỉ có một ví dụ, không có tình huống thứ hai trong ngành hàng Việt.",
+     "fix": "Thêm năm và nguồn (Ogilvy, Confessions of an Advertising Man) và một ví dụ Việt có dữ kiện thật (ví dụ dòng “rang ngày 04.08” đã dùng ở e1.037)."
+    },
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (2)",
+     "quote": "Dữ kiện khó bắt chước: đối thủ có thể nói \"chất lượng cao\", nhưng không nói được đúng dữ kiện của bạn.",
+     "issue": "Không nêu khi nào dữ kiện phản tác dụng: dữ kiện không liên quan tới lý do mua (“động cơ 1.5L” với người mua vì an toàn) hoặc dữ kiện không kiểm được.",
+     "fix": "Thêm điều kiện: dữ kiện phải (a) kiểm được, (b) nối thẳng tới lợi ích khách quan tâm; cho một phản ví dụ dữ kiện vô nghĩa."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [
+    {
+     "claim": "Tiêu đề Rolls-Royce của Ogilvy “At 60 miles an hour…”",
+     "status": "unverified",
+     "note": "Dữ kiện lịch sử nổi tiếng; chưa có src."
+    }
+   ],
+   "strengths": "Việc THỬ (gạch mọi tính từ, thay bằng số hoặc chi tiết quan sát được) là bài tập chuyển hoá rõ nhất trong 26 bài; e1.036 buộc phân biệt dữ kiện với tính từ ở mức áp dụng.",
+   "upgrade": "Thêm một ví dụ Việt có trước/sau và điều kiện “dữ kiện phải nối tới lợi ích”; thêm bước kiểm chứng (dữ kiện có đúng không — rủi ro quảng cáo sai sự thật); thêm một câu case đọc dữ liệu (ví dụ chọn dữ kiện nào trong 5 dữ kiện kỹ thuật dựa trên lý do mua khách nói) để nâng Bloom lên L4."
+  },
+  {
+   "id": "L:58",
+   "scores": {
+    "accuracy": 11,
+    "depth": 9,
+    "practical": 13,
+    "examples": 6,
+    "pedagogy": 6,
+    "assessment": 5,
+    "data": 2,
+    "clarity": 5
+   },
+   "total": 57,
+   "bloom_items": [
+    "L2",
+    "L5"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ý CHÍNH",
+     "quote": "câu này gần như luôn cho câu trả lời sai, vì trả lời không tốn gì cả.",
+     "issue": "Khẳng định tuyệt đối về khoảng cách ý định–hành vi, không nguồn, không điều kiện (với hàng giá thấp, mua lặp lại, ý định dự báo khá tốt; với hàng mới/đắt thì kém).",
+     "fix": "Thêm điều kiện: “sai nhiều nhất với sản phẩm mới và đắt; với hàng quen giá thấp, ý định dự báo tốt hơn” và gợi một nguồn tổng hợp về intention–behavior gap."
+    },
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "Khảo sát ý định mua thường cho tỉ lệ rất cao; doanh số thực tế thì không.",
+     "issue": "Ví dụ không có số, không có tình huống cụ thể — là một khẳng định, không phải ví dụ.",
+     "fix": "Thay bằng một cặp số minh hoạ gắn nhãn: “khảo sát 72% nói sẽ mua; sau 3 tháng 6% mua” và cách đọc."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [
+    {
+     "claim": "Khảo sát ý định mua thường cho tỉ lệ rất cao; doanh số thực tế thì không",
+     "status": "unverified",
+     "note": "Không số, không nguồn."
+    }
+   ],
+   "strengths": "Câu hỏi thay thế “Kể cho tôi nghe lần cuối cùng bạn ___” là công cụ dùng được ngay; e2.032 (judge) phân biệt tốt thang 1–10 trông định lượng với dữ liệu hành vi.",
+   "upgrade": "Thêm cặp số minh hoạ ý định vs hành vi; thêm điều kiện khi nào ý định còn dùng được (sản phẩm quen, mẫu lớn, có hiệu chỉnh); thêm cách “mua thử bằng tiền cọc” (nối tn01-04) làm phương án thay thế; thêm 2–3 câu đề: một case đọc kết quả khảo sát (L4), một calc quy đổi ý định→dự báo có hệ số chiết khấu."
+  },
+  {
+   "id": "L:59",
+   "scores": {
+    "accuracy": 11,
+    "depth": 10,
+    "practical": 13,
+    "examples": 10,
+    "pedagogy": 6,
+    "assessment": 6,
+    "data": 7,
+    "clarity": 5
+   },
+   "total": 68,
+   "bloom_items": [
+    "L2",
+    "L5",
+    "L3"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÌ SAO (1)",
+     "quote": "Acquisition có chi phí tăng dần; retention thì không.",
+     "issue": "Nói quá: giữ chân cũng có chi phí tăng dần (CRM, ưu đãi, hỗ trợ) và có trần (không giữ được người không có nhu cầu). Nêu như quy luật.",
+     "fix": "Sửa: “Chi phí có khách mới thường tăng theo quy mô; chi phí giữ chân thường rẻ hơn trên mỗi khách nhưng không bằng không — hãy so cả hai bằng số của bạn.”"
+    },
+    {
+     "sev": "P2",
+     "where": "THỬ",
+     "quote": "Đếm còn bao nhiêu người còn mua đến hôm nay. Con số đó quyết định bạn có nên tăng chi hay không.",
+     "issue": "Không nêu ngưỡng hay cách đọc (bao nhiêu % là “phẳng”?), không nói cần nhiều cohort để tách mùa vụ.",
+     "fix": "Thêm: so ít nhất 3 cohort liên tiếp, nhìn đường có phẳng ra sau tháng 3–4 không; nêu một ngưỡng minh hoạ theo ngành."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "Drill: 1.000 × 0,7³ = 343 ✓; 0,8³ → 512 ✓ (+169). Thân bài: +30% mới − 35% rời = −5%/tháng ✓."
+   },
+   "claims": [
+    {
+     "claim": "mỗi tháng có thêm số người dùng mới bằng 30% tập hiện có, nhưng mất 35% người cũ",
+     "status": "illustrative-unlabelled",
+     "note": "Số tự khớp (−5%) nhưng không ghi “minh hoạ”."
+    },
+    {
+     "claim": "Người ở lại mua nhiều hơn, giới thiệu nhiều hơn và ít nhạy cảm về giá hơn",
+     "status": "unverified",
+     "note": "Khẳng định phổ quát, không nguồn."
+    }
+   ],
+   "strengths": "Số trong tình huống tự khớp (+30/−35 = −5); drill buộc hiểu giữ chân là luỹ thừa trên số còn lại, có độ nhạy 70%→80%; e5.013 (judge) vạch đúng sai lầm “gấp đôi ngân sách = gấp đôi khách”.",
+   "upgrade": "Sửa khẳng định tuyệt đối về chi phí; thêm bảng cohort 3 tháng × 6 kỳ minh hoạ để người học thấy “đường phẳng ra”; thêm điều kiện khi nào vẫn nên tăng chi dù rò (sản phẩm theo mùa, mô hình mua một lần); đưa drill vào thân bài; nối dl04. Cần thêm một case đọc cohort thật (L4)."
+  },
+  {
+   "id": "L:60",
+   "scores": {
+    "accuracy": 12,
+    "depth": 9,
+    "practical": 13,
+    "examples": 8,
+    "pedagogy": 6,
+    "assessment": 5,
+    "data": 2,
+    "clarity": 5
+   },
+   "total": 60,
+   "bloom_items": [
+    "L2",
+    "L5"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "(Ví dụ minh hoạ) Chân dung đen trắng độ tương phản cao, một câu mệnh lệnh ngắn kiểu \"Just Do It\" — nhiều người đoán ra đó là Nike",
+     "issue": "Đã gắn nhãn minh hoạ (tốt) nhưng không có số: bao nhiêu người đoán đúng là “khoẻ”? Không có ngưỡng.",
+     "fix": "Thêm thước đo: tỉ lệ nhận ra khi che logo trên 10–20 người ngoài, ngưỡng minh hoạ (ví dụ ≥ 50% là đã có tài sản) và nhắc Romaniuk về “fame & uniqueness” nếu muốn có nguồn."
+    },
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (2)",
+     "quote": "Tài sản nhận diện được xây bằng sự lặp lại, nên nó là khoản đầu tư có lãi kép.",
+     "issue": "Ẩn dụ “lãi kép” không có cơ chế và không có điều kiện (lặp lại cái gì, bao lâu, lệch nhau thì sao).",
+     "fix": "Thêm: tài sản chỉ tích luỹ khi cùng một dấu hiệu xuất hiện trên mọi kênh; đổi một dấu hiệu là đặt lại bộ đếm."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [
+    {
+     "claim": "Nike: ảnh đen trắng tương phản cao + câu mệnh lệnh ngắn đủ để nhận ra trước khi thấy swoosh",
+     "status": "illustrative-labelled",
+     "note": ""
+    }
+   ],
+   "strengths": "Phép thử “che logo” là bài tập thực hành rẻ, làm được trong ngày; e3.035 có số kiểm được (6/10 người lạ đoán đúng) đối lập với “tương tác tăng 40%” quy nhân quả vội.",
+   "upgrade": "Thêm thước đo và ngưỡng cho phép thử; thêm phản ví dụ (nhận diện riêng nhưng không gắn với tên → khách nhớ hình mà không nhớ hãng); thêm điều kiện “riêng so với category” (nâu–vàng trên kệ cà phê); gộp với L:69 và L:78 vì ba bài cùng ý “nhất quán tài sản”; thêm một case đọc kết quả khảo sát nhận ra (L4)."
+  },
+  {
+   "id": "L:61",
+   "scores": {
+    "accuracy": 11,
+    "depth": 9,
+    "practical": 13,
+    "examples": 8,
+    "pedagogy": 6,
+    "assessment": 6,
+    "data": 2,
+    "clarity": 5
+   },
+   "total": 60,
+   "bloom_items": [
+    "L3",
+    "L2",
+    "L4"
+   ],
+   "bloom_max": "L4",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "ĐỜI THẬT",
+     "quote": "Patagonia mua một trang New York Times đúng Black Friday để bảo người đọc đừng mua áo khoác của mình. Hành động đó được báo chí đưa tin rộng rãi, nhiều hơn những gì một thông cáo thông thường thường đạt được.",
+     "issue": "Sự kiện thật (2011) nhưng không năm, không nguồn; “được đưa tin rộng rãi … nhiều hơn” là khẳng định định lượng không số.",
+     "fix": "Thêm năm 2011 và src; đổi mệnh đề so sánh thành dữ kiện kiểm được hoặc bỏ."
+    },
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (1)",
+     "quote": "Earned media không mua được",
+     "issue": "Tuyệt đối hoá: PR trả phí/ bài tài trợ, quan hệ báo chí có chi phí; earned media khó mua trực tiếp nhưng không phải “không mua được”.",
+     "fix": "Sửa: “không mua được trực tiếp bằng tiền media; nó được kích hoạt bởi hành động đáng kể lại”."
+    },
+    {
+     "sev": "P2",
+     "where": "gắn bài",
+     "quote": "e1.026 … teaches: P:share-of-voice",
+     "issue": "Câu về tin đáng đăng (earned media) gắn dạy Share of Voice — lệch khái niệm.",
+     "fix": "Đổi teaches sang bài PR (kn09)."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [
+    {
+     "claim": "Patagonia mua một trang New York Times đúng Black Friday để bảo người đọc đừng mua áo khoác",
+     "status": "unverified",
+     "note": "Đúng với sự kiện 2011 theo hiểu biết chung; bài không ghi năm/nguồn."
+    },
+    {
+     "claim": "được báo chí đưa tin rộng rãi, nhiều hơn những gì một thông cáo thông thường đạt được",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Phép thử “gạch mọi câu đối thủ cũng viết được” và bài THỬ “viết tiêu đề báo muốn có rồi liệt kê việc phải làm” biến PR thành việc vận hành; e1.026 (case) nêu đúng cơ chế tín hiệu tốn kém.",
+   "upgrade": "Thêm nguồn/năm cho Patagonia; thêm phản ví dụ PR phản tác dụng (hành động không khớp thực tế → khủng hoảng); thêm cách đo (lượt nhắc, sentiment, lượt tìm tên sau sự kiện) với lưu ý nhiễu; nối kn09; thêm một judge so hai thông cáo (L5)."
+  },
+  {
+   "id": "L:62",
+   "scores": {
+    "accuracy": 12,
+    "depth": 8,
+    "practical": 13,
+    "examples": 7,
+    "pedagogy": 6,
+    "assessment": 6,
+    "data": 2,
+    "clarity": 5
+   },
+   "total": 59,
+   "bloom_items": [
+    "L2",
+    "L2",
+    "L5"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "Ý CHÍNH",
+     "quote": "nội dung chỉ có giá trị khi nó làm được một trong ba việc: dạy, giải trí, hoặc chứng minh",
+     "issue": "Khung ba việc không có nguồn và không có điều kiện; bỏ qua nội dung phục vụ chuyển đổi (hướng dẫn mua, FAQ) vốn có giá trị dù không “dạy/giải trí/chứng minh”.",
+     "fix": "Ghi rõ đây là khung của tác giả và thêm ngoại lệ: nội dung ở bước cuối phễu đo bằng chuyển đổi, không bằng ba việc này."
+    },
+    {
+     "sev": "P2",
+     "where": "NHÌN KỸ",
+     "quote": "Kiểm tra 30 bài gần nhất: bao nhiêu bài vẫn còn ý nghĩa nếu xoá logo? Đó là tỉ lệ nội dung thật của bạn.",
+     "issue": "Không nêu tỉ lệ nào là đủ, không nối với kết quả kinh doanh (tin nhắn hỏi mua, lượt lưu), nên không ra quyết định.",
+     "fix": "Thêm thước đo kết quả như e4.031 đã làm (số tin nhắn hỏi mua) và một ngưỡng minh hoạ."
+    },
+    {
+     "sev": "P2",
+     "where": "e4.006",
+     "quote": "Một nội dung chỉ có giá trị khi làm được ít nhất một trong ba việc nào?",
+     "issue": "Câu nhớ lại danh sách (L1–L2), phương án đúng là phương án duy nhất gồm ba động từ — đoán được bằng hình thức.",
+     "fix": "Thay bằng case: cho 4 bài đăng thật, hỏi bài nào qua phép thử xoá logo."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [
+    {
+     "claim": "Chuỗi \"ghi chép của lò\" của một tiệm bánh … khách canh giờ để đến",
+     "status": "illustrative-labelled",
+     "note": ""
+    }
+   ],
+   "strengths": "Phép thử “xoá logo còn ý nghĩa không” và bài THỬ (một chi tiết nghề chưa ai thấy, ba câu) cho ra bài đăng ngày mai; e4.031 đo bằng tín hiệu gần mua thay vì lượt theo dõi.",
+   "upgrade": "Gắn nhãn khung ba việc là của tác giả, thêm ngoại lệ nội dung chuyển đổi; thêm thước đo và ngưỡng; thêm phản ví dụ (nội dung dạy hay nhưng không ai nhận ra là của ai → quảng cáo hộ ngành, nối L:60); thay e4.006 bằng case; nối kn13."
+  },
+  {
+   "id": "L:63",
+   "scores": {
+    "accuracy": 14,
+    "depth": 12,
+    "practical": 16,
+    "examples": 12,
+    "pedagogy": 7,
+    "assessment": 7,
+    "data": 9,
+    "clarity": 4
+   },
+   "total": 81,
+   "bloom_items": [
+    "L2",
+    "L3",
+    "L3"
+   ],
+   "bloom_max": "L3",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (3)",
+     "quote": "sản lượng cần tăng = mức giảm ÷ (biên gộp − mức giảm). Số minh hoạ: biên 40% mà giảm 20% phải bán gấp đôi (+100%); biên 30% mà giảm 10% cần +50%; biên 30% mà giảm 20% cần +200%.",
+     "issue": "Công thức và ba số đều đúng nhưng nhồi vào một câu dài; không có bảng; không nói công thức giả định chi phí biến đổi không đổi theo sản lượng.",
+     "fix": "Tách thành bảng biên × mức giảm → % sản lượng cần tăng; ghi giả định chi phí biến đổi/đơn vị không đổi."
+    },
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (1)",
+     "quote": "Giá là một trong những tín hiệu chất lượng mạnh nhất khi người mua chưa tự đánh giá được sản phẩm.",
+     "issue": "Đúng có điều kiện (đã nêu “khi chưa tự đánh giá được”) nhưng không nguồn; chấp nhận được, chỉ cần một nguồn.",
+     "fix": "Thêm một nguồn về price–quality inference hoặc ghi “quan sát hành vi phổ biến”."
+    }
+   ],
+   "calc_check": {
+    "n": 2,
+    "ok": 2,
+    "notes": "e5.024: lãi 100.000 → 75.000; 100/75 = 1,333 → +33,3% ✓; 25% là mức lãi mất ✓. Drill: 40.000 → 20.000, cần gấp đôi (+100%) ✓; bán 1.500 hộp lãi 30 triệu, hụt 10 triệu ✓. Công thức d/(m−d): 0,2/(0,4−0,2)=100% ✓; 0,1/(0,3−0,1)=50% ✓; 0,2/(0,3−0,2)=200% ✓."
+   },
+   "claims": [
+    {
+     "claim": "Một thương hiệu thời trang chạy sale mỗi tháng. Sau một năm, gần như không còn đơn hàng nào ở giá gốc",
+     "status": "illustrative-unlabelled",
+     "note": ""
+    },
+    {
+     "claim": "Khuyến mãi kéo về nhóm khách nhạy giá — nhóm thường có LTV thấp hơn",
+     "status": "unverified",
+     "note": "Đã hedge “thường” và bảo kiểm bằng cohort của mình — chấp nhận được."
+    }
+   ],
+   "strengths": "Bài duy nhất trong nhóm L: có công thức hoà vốn đúng, ba số minh hoạ gắn nhãn, điều kiện khi giảm giá hợp lý (biên dày, xả tồn), cách giảm ít hại (có điều kiện) và bài THỬ bắt trừ phần khách vốn định mua giá gốc.",
+   "upgrade": "Để ≥85: dựng bảng biên × mức giảm; thêm ví dụ thứ hai làm đổi kết luận (biên 60% giảm 15% chỉ cần +33% → có thể hợp lý); nêu giả định chi phí biến đổi; thêm cách đo sau sale (tỉ lệ đơn giá gốc 3 tháng sau, cohort khách sale); thêm case đọc số sale thật (L4) và judge hai kế hoạch khuyến mãi (L5)."
+  },
+  {
+   "id": "L:64",
+   "scores": {
+    "accuracy": 12,
+    "depth": 9,
+    "practical": 14,
+    "examples": 7,
+    "pedagogy": 6,
+    "assessment": 7,
+    "data": 3,
+    "clarity": 5
+   },
+   "total": 63,
+   "bloom_items": [
+    "L2",
+    "L4",
+    "L3",
+    "L2"
+   ],
+   "bloom_max": "L4",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "Ba câu đủ cho phần lớn tình huống",
+     "issue": "Khẳng định “đủ cho phần lớn” không có điều kiện; không nói khi nào ba câu không đủ (B2B nhiều người quyết, hàng mua theo thói quen không nhớ lần gần nhất).",
+     "fix": "Thêm điều kiện và một câu bổ sung cho B2B (“ai phải đồng ý để mua được?”)."
+    },
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (1)",
+     "quote": "Câu một cho bạn category entry point thật.",
+     "issue": "Dùng thuật ngữ chưa giải thích trong bài này (CEP) — người học chưa qua P:category-entry-point sẽ không hiểu.",
+     "fix": "Chú một dòng “tình huống khiến họ bắt đầu nghĩ tới sản phẩm” và nối tới P:category-entry-point."
+    },
+    {
+     "sev": "P2",
+     "where": "e2.028",
+     "quote": "Tỉ lệ khách gọi thành công phỏng vấn được là bao nhiêu phần trăm?",
+     "issue": "Calc một bước (40 ÷ 250) gắn với bài về chất lượng câu hỏi; không dạy gì về ba câu hỏi.",
+     "fix": "Thay bằng case: cho 5 câu trả lời nguyên văn, hỏi câu nào là tập cạnh tranh, câu nào là rào cản."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "e2.028: 40 ÷ 250 = 16% ✓; 40% chỉ là tỉ lệ đồng ý trên 100 người bắt máy ✓."
+   },
+   "claims": [],
+   "strengths": "Ba câu hỏi gắn với ba đầu ra rõ (dịp dùng, tập cạnh tranh, rào cản) và bài THỬ bắt ghi nguyên văn; e2.023 là case chẩn đoán tốt về “lời bào chữa dễ nói” vs nguyên nhân.",
+   "upgrade": "Thêm điều kiện áp dụng và biến thể B2B; thêm một ví dụ có ba câu trả lời nguyên văn minh hoạ để người học thấy cách mã hoá; thêm cách tránh dẫn dắt (nối kh05); thay calc bằng case mã hoá câu trả lời; nối L:58 (hai bài gần trùng ý — nên gộp)."
+  },
+  {
+   "id": "L:65",
+   "scores": {
+    "accuracy": 13,
+    "depth": 12,
+    "practical": 15,
+    "examples": 11,
+    "pedagogy": 7,
+    "assessment": 8,
+    "data": 8,
+    "clarity": 4
+   },
+   "total": 78,
+   "bloom_items": [
+    "L2",
+    "L4",
+    "L3",
+    "L5",
+    "L2"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "THỬ",
+     "quote": "tỉ lệ hợp lý tuỳ ngành và giai đoạn, nên hãy thử theo bước nhỏ",
+     "issue": "Đúng về mặt thận trọng nhưng không cho người học một điểm xuất phát hay cách chọn bước; e4.034 lại nêu 70/30 “chỉ là ví dụ minh hoạ” — hai chỗ chưa nối nhau.",
+     "fix": "Nêu dải tham chiếu minh hoạ (ví dụ 60/40–80/20) với nhãn minh hoạ và quy tắc dịch 10 điểm mỗi quý kèm chỉ số theo dõi."
+    },
+    {
+     "sev": "P2",
+     "where": "NHÌN KỸ",
+     "quote": "Chọn hai tỉnh tương đương, giảm 50% quảng cáo xây nhận biết ở một tỉnh trong 8 tuần",
+     "issue": "Thiết kế geo-test tốt nhưng thiếu điều kiện cỡ: hai tỉnh phải đủ đơn để thấy khác biệt, và không nói kiểm trước (pre-period) để xác nhận hai tỉnh thật tương đương.",
+     "fix": "Thêm: so 8 tuần trước thử để chắc hai tỉnh cùng xu hướng; nêu số đơn tối thiểu mỗi tỉnh minh hoạ."
+    },
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (3)",
+     "quote": "Mô hình last-click ghi công cho kênh chạm cuối, nên báo cáo hiếm khi cho thấy phần đóng góp của brand.",
+     "issue": "Đúng nhưng không nêu phương án thay thế (data-driven/ MMM/ geo holdout) và giới hạn của chúng.",
+     "fix": "Thêm một câu: “Các mô hình quy kết khác cũng chỉ chia công trong phạm vi có click; chỉ thí nghiệm có vùng đối chứng mới đo được phần brand” và nối dl06."
+    }
+   ],
+   "calc_check": {
+    "n": 2,
+    "ok": 2,
+    "notes": "Thân bài: CAC 120k × 2 ÷ 1,14 ≈ 210k ✓. e4.025: 200 × 30% = 60; 60 − 50 = 10 triệu ✓; 150 = coi doanh thu là lợi nhuận ✓. Drill: 80 × 30% = 24; 24 − 20 = 4 triệu ✓; ROAS hoà vốn 1 ÷ 0,3 = 3,33 ✓."
+   },
+   "claims": [
+    {
+     "claim": "một thương hiệu D2C nhân đôi ngân sách … số đơn chỉ tăng 14%, nên CAC từ 120k lên 210k",
+     "status": "illustrative-labelled",
+     "note": "Ghi rõ “số giả định”; số tự khớp."
+    },
+    {
+     "claim": "Người đã biết thương hiệu thường có tỉ lệ nhấp và chuyển đổi cao hơn",
+     "status": "unverified",
+     "note": "Đã hedge “hãy kiểm tra trong số liệu của bạn”."
+    }
+   ],
+   "strengths": "Mọi số được gắn nhãn giả định và tự khớp; có thiết kế thí nghiệm với vùng đối chứng và nêu rõ một lần tắt chưa chứng minh nhân quả (e4.024); drill ROAS→lãi gộp→ROAS hoà vốn là chuỗi tính đúng và hữu ích.",
+   "upgrade": "Thêm dải tham chiếu gieo/gặt gắn nhãn minh hoạ và quy tắc dịch chuyển; bổ sung pre-period và cỡ mẫu cho geo-test; nối dl06 (attribution) và dl03/dl10 (ROAS); thêm bảng dòng thời gian tắt brand → CAC 3 tháng sau để người học đọc độ trễ; thêm một calc tách doanh thu từ khoá thương hiệu ra khỏi ROAS (đúng câu hỏi “boss” của drill)."
+  },
+  {
+   "id": "L:66",
+   "scores": {
+    "accuracy": 12,
+    "depth": 9,
+    "practical": 13,
+    "examples": 9,
+    "pedagogy": 6,
+    "assessment": 5,
+    "data": 3,
+    "clarity": 5
+   },
+   "total": 62,
+   "bloom_items": [
+    "L2",
+    "L5"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "Nếu hơn nửa quay lại, tuần 3 mở cho nhóm sinh viên năm cuối.",
+     "issue": "Ngưỡng “hơn nửa quay lại sau ngày 7” là số minh hoạ gắn nhãn (tốt) nhưng không giải thích vì sao 50% và không nói đo trên 50 người thì nhiễu lớn.",
+     "fix": "Thêm: với n = 50, 25 ± 7 người là dao động ngẫu nhiên — đặt ngưỡng kèm khoảng, hoặc tăng n."
+    },
+    {
+     "sev": "P2",
+     "where": "toàn bài",
+     "quote": "Ra mắt sản phẩm là một bài toán thứ tự",
+     "issue": "Trùng tiêu đề và ý với module tn05 “Ra mắt sản phẩm là bài toán thứ tự” (8 bài) — bài này không còn thêm gì.",
+     "fix": "Chuyển hướng người học sang tn05; giữ bài này như trang tóm tắt hoặc gỡ."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [
+    {
+     "claim": "ứng dụng quản lý chi tiêu … mời 50 người dùng thân thiết thử … tuần 6 mới chạy quảng cáo đại chúng",
+     "status": "illustrative-labelled",
+     "note": ""
+    }
+   ],
+   "strengths": "Bản ra mắt ba dòng (cho ai, thay cái gì, vì sao bây giờ) và tiêu chí chọn nhóm đầu (nỗi đau gay gắt, tiếp cận được, hay kể lại) là khung dùng được ngay; e5.015 đo bằng “dùng hằng ngày” thay lượt cài.",
+   "upgrade": "Thêm nhiễu mẫu nhỏ cho tín hiệu đi tiếp; thêm phản ví dụ (nhóm đầu quá hẹp kể câu chuyện sai cho thị trường rộng); thêm bảng tín hiệu theo từng bước (giữ chân D7, giới thiệu, sẵn sàng trả); hợp nhất với tn05."
+  },
+  {
+   "id": "L:67",
+   "scores": {
+    "accuracy": 10,
+    "depth": 9,
+    "practical": 13,
+    "examples": 9,
+    "pedagogy": 6,
+    "assessment": 5,
+    "data": 3,
+    "clarity": 4
+   },
+   "total": 59,
+   "bloom_items": [
+    "L3",
+    "L2",
+    "L2"
+   ],
+   "bloom_max": "L3",
+   "freshness": "fast",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÌ SAO (2)",
+     "quote": "Nền tảng thường đo tỉ lệ xem hết, chia sẻ và quay lại.",
+     "issue": "Khẳng định về cách thuật toán nền tảng vận hành (lớp “fast”) không có src, không ngày kiểm, không câu “nếu màn hình khác, tin trang chính thức”.",
+     "fix": "Thêm src tới tài liệu Creator Center/“How TikTok recommends” với ngày kiểm, hoặc viết “theo tài liệu công khai của nền tảng tại ngày …”."
+    },
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "Kênh A … mỗi video khoảng 80 nghìn lượt xem nhưng người theo dõi gần như đứng yên. Kênh B … khoảng 20 nghìn … người theo dõi tăng đều",
+     "issue": "Số gắn nhãn giả định (tốt) nhưng không có chỉ số kết quả kinh doanh (tin nhắn, đơn) nên không rõ B “tốt hơn” về gì.",
+     "fix": "Thêm một dòng kết quả gần mua (tin nhắn hỏi, mã giảm giá dùng) cho hai kênh."
+    },
+    {
+     "sev": "P2",
+     "where": "e4.008",
+     "quote": "Một cách giải thích hay gặp trong nghề cho việc video quá chỉn chu dễ bị lướt qua trên TikTok là gì?",
+     "issue": "Câu hỏi về một “cách giải thích hay gặp” — đáp án là quan sát nghề (đã ghi rõ trong lời giải), không kiểm được; ba nhiễu đều dễ loại.",
+     "fix": "Đổi thành case: cho tỉ lệ xem qua 3 giây của 4 video, hỏi giả thuyết nào khớp và cách kiểm."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [
+    {
+     "claim": "Nền tảng thường đo tỉ lệ xem hết, chia sẻ và quay lại",
+     "status": "unverified",
+     "note": "Lớp fast, bắt buộc có src và ngày kiểm."
+    },
+    {
+     "claim": "hai kênh TikTok của hai quán trà sữa … 80 nghìn / 20 nghìn lượt xem",
+     "status": "illustrative-labelled",
+     "note": ""
+    }
+   ],
+   "strengths": "Bài THỬ (định nghĩa nhân vật bằng ba tính từ, chấm 5 bài, so tỉ lệ xem hết và người theo dõi mới) là một thí nghiệm nhỏ có đối chứng nội bộ; ý (3) được ghi rõ là giả thuyết cần kiểm.",
+   "upgrade": "Thêm src + ngày kiểm cho mọi khẳng định về nền tảng và câu “nếu màn hình khác, tin trang chính thức”; thêm chỉ số kết quả gần mua; thêm phản ví dụ nhân vật nhất quán nhưng không liên quan sản phẩm; nối kn13/kn16; thay e4.008 bằng case đọc số."
+  },
+  {
+   "id": "L:68",
+   "scores": {
+    "accuracy": 11,
+    "depth": 9,
+    "practical": 13,
+    "examples": 7,
+    "pedagogy": 6,
+    "assessment": 7,
+    "data": 3,
+    "clarity": 5
+   },
+   "total": 61,
+   "bloom_items": [
+    "L2",
+    "L2",
+    "L3",
+    "L5",
+    "L4"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "e4.010",
+     "quote": "Phần lớn ngân sách quảng cáo “chết” ở đâu? … ✔ d) Ở vài giây đầu tiên",
+     "issue": "Đề nêu như sự thật một khẳng định định lượng (“phần lớn ngân sách”) mà bài chỉ nói mơ hồ “rất nhiều người xem rời đi”; không có nguồn đo chú ý. Ba phương án kia cũng là chỗ mất tiền thật, nên “phần lớn” phụ thuộc ngành.",
+     "fix": "Đổi stem thành “Theo bài, điều kiện tiên quyết để quảng cáo có tác dụng là gì?” hoặc cung cấp số (như e4.029: 76% rời trước giây 3) ngay trong stem."
+    },
+    {
+     "sev": "P2",
+     "where": "Ý CHÍNH",
+     "quote": "Với nhiều quảng cáo, rất nhiều người xem rời đi ngay ở khoảnh khắc đó.",
+     "issue": "Mơ hồ hai lần (“nhiều”, “rất nhiều”) trong một câu lõi; không có số.",
+     "fix": "Dùng số minh hoạ gắn nhãn (ví dụ 500.000 hiển thị → 120.000 qua 3 giây, như e4.029) ngay trong bài."
+    },
+    {
+     "sev": "P2",
+     "where": "e4.040",
+     "quote": "Không ai quét mã hay ghi số ở tốc độ 80 km/h",
+     "issue": "Lời giải đưa dữ kiện (80 km/h) không có trong tình huống (chỉ nói “đường cao tốc”).",
+     "fix": "Thêm tốc độ vào ctx hoặc bỏ số trong lời giải."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "e4.029: 120.000 ÷ 500.000 = 24% ✓; 76% rời trước giây 3 ✓."
+   },
+   "claims": [
+    {
+     "claim": "quy tắc ngón tay cái của dân làm ngoài trời là chừng bảy từ (kinh nghiệm, không phải số đo chuẩn)",
+     "status": "illustrative-labelled",
+     "note": ""
+    }
+   ],
+   "strengths": "Phép thử một giây và bài THỬ “rút còn một câu một hình, xem có yếu đi không” là hai kiểm tra rẻ, đo đúng thứ người xem nhận được; e4.032 (judge) đặt logo ở giây 4 là quyết định có lý do.",
+   "upgrade": "Đưa số minh hoạ vào Ý CHÍNH; sửa e4.010 thành câu có dữ kiện; thêm điều kiện (quảng cáo tìm kiếm/ remarketing không theo luật “giây đầu”); thêm thước đo (tỉ lệ xem qua 3 giây theo creative, hook rate) và nối tp07/kn16; thêm phản ví dụ hook gây sốc nhưng không gắn thương hiệu."
+  },
+  {
+   "id": "L:69",
+   "scores": {
+    "accuracy": 12,
+    "depth": 9,
+    "practical": 12,
+    "examples": 8,
+    "pedagogy": 6,
+    "assessment": 5,
+    "data": 2,
+    "clarity": 5
+   },
+   "total": 59,
+   "bloom_items": [
+    "L3",
+    "L3"
+   ],
+   "bloom_max": "L3",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "(Ví dụ minh hoạ) Một chuỗi cà phê nội địa chi ba tháng và một khoản không nhỏ để vẽ lại logo. Sáu tháng sau doanh thu vẫn vậy — vì vấn đề nằm ở chỗ họ mở sai vị trí và menu đắt hơn đối thủ 15%.",
+     "issue": "Ví dụ có nhãn (tốt) nhưng kết luận nhân quả “vì vấn đề nằm ở…” không cho thấy cách họ biết; không có số về nhận diện trước/sau.",
+     "fix": "Thêm hai dòng dữ liệu: khảo sát nhận ra trước/sau không đổi; lý do không mua từ 3 câu hỏi (L:64) chỉ ra giá và vị trí."
+    },
+    {
+     "sev": "P2",
+     "where": "toàn bài",
+     "quote": "Đổi logo hiếm khi là câu trả lời",
+     "issue": "Lặp ý với L:60 (che logo), L:78 (chán thông điệp) và P:distinctive-assets — ba bài L: cùng một bài học “giữ tài sản, đừng đổi”.",
+     "fix": "Gộp L:60/L:69/L:78 thành một bài có ba tình huống hoặc trỏ sang tp04."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [
+    {
+     "claim": "chuỗi cà phê nội địa … menu đắt hơn đối thủ 15%",
+     "status": "illustrative-labelled",
+     "note": ""
+    }
+   ],
+   "strengths": "Câu kiểm tra “nếu ngày mai logo mới xuất hiện, một khách đang do dự có mua không?” là bộ lọc quyết định rõ; e3.015 dạy bước đầu đúng của rebrand (liệt kê cái không được chạm).",
+   "upgrade": "Thêm dữ liệu minh hoạ trước/sau; thêm điều kiện khi rebrand là đúng (sáp nhập, đổi category, liên tưởng tiêu cực thật như Biti’s “đồ của bố mẹ” — nối e3.021); thêm bảng “giữ/đổi” cho từng tài sản; gộp với L:60/L:78; thêm case đọc số nhận diện (L4)."
+  },
+  {
+   "id": "L:70",
+   "scores": {
+    "accuracy": 11,
+    "depth": 10,
+    "practical": 12,
+    "examples": 6,
+    "pedagogy": 6,
+    "assessment": 3,
+    "data": 2,
+    "clarity": 5
+   },
+   "total": 55,
+   "bloom_items": [
+    "L3"
+   ],
+   "bloom_max": "L3",
+   "freshness": "periodic",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÌ SAO (3)",
+     "quote": "Nghiên cứu thực nghiệm (Loewenstein và cộng sự, 2015; Bruns và cộng sự, 2018) cho thấy mặc định thường vẫn có tác dụng ngay cả khi người ta được báo trước",
+     "issue": "Trích hai nghiên cứu theo tên nhưng không có nguồn bấm được, không ngày kiểm, không nói hiệu ứng lớn cỡ nào — lớp periodic cần src.",
+     "fix": "Thêm src (DOI) và một con số hiệu ứng minh hoạ từ nghiên cứu; giữ câu hedge “bằng chứng chưa hoàn toàn thống nhất”."
+    },
+    {
+     "sev": "P1",
+     "where": "câu hỏi gắn bài",
+     "quote": "CÂU HỎI ĐỀ CHẶNG GẮN VỚI BÀI (1)",
+     "issue": "Chỉ một câu đề (e2.013) và câu đó lại được gắn teaches P:social-proof; người học không được kiểm về cơ chế mặc định hay cách kiểm toán mặc định.",
+     "fix": "Thêm ít nhất 3 câu: một case đọc tỉ lệ chọn gói tick sẵn vs không (L4), một judge thiết kế mặc định phục vụ khách vs người bán (L5), một calc doanh thu thêm vs tỉ lệ huỷ/khiếu nại."
+    },
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "tỉ lệ chọn của chúng luôn cao bất thường so với chất lượng thật của lựa chọn",
+     "issue": "Không có số; “luôn” là tuyệt đối.",
+     "fix": "Thay bằng một cặp số minh hoạ gắn nhãn (ví dụ gói tick sẵn 61% vs 23% khi không tick)."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [
+    {
+     "claim": "Loewenstein và cộng sự, 2015; Bruns và cộng sự, 2018: mặc định vẫn có tác dụng khi được báo trước",
+     "status": "unverified",
+     "note": "Có hedge nhưng không src."
+    }
+   ],
+   "strengths": "Ranh giới đạo đức được đặt thành câu hỏi kiểm tra cụ thể (“mặc định này phục vụ ai?”) và bài THỬ bắt kiểm toán mọi giá trị mặc định trong sản phẩm.",
+   "upgrade": "Thêm src cho nghiên cứu; thêm số minh hoạ; thêm điều kiện khi mặc định yếu (quyết định lớn, người dùng chuyên); thêm cách đo hậu quả (tỉ lệ huỷ, khiếu nại, hoàn tiền) để lượng hoá “mất niềm tin đắt hơn”; thêm 3 câu đề như trên; nối kh07 (bài này trùng với kh07)."
+  },
+  {
+   "id": "L:71",
+   "scores": {
+    "accuracy": 13,
+    "depth": 10,
+    "practical": 14,
+    "examples": 8,
+    "pedagogy": 6,
+    "assessment": 9,
+    "data": 8,
+    "clarity": 5
+   },
+   "total": 73,
+   "bloom_items": [
+    "L2",
+    "L3",
+    "L3",
+    "L3",
+    "L3",
+    "L4",
+    "L3"
+   ],
+   "bloom_max": "L4",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "Lượt tiếp cận, lượt xem, số người theo dõi luôn tăng theo thời gian và ngân sách",
+     "issue": "Không có một con số nào trong thân bài về một báo cáo cụ thể, dù toàn bộ bộ câu hỏi và drill đều có số.",
+     "fix": "Đưa báo cáo của e1.027 (truy cập +38%, theo dõi +52%, xem video +140%, doanh thu đi ngang) vào ĐỜI THẬT và hỏi người học câu đầu tiên."
+    },
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (1)",
+     "quote": "Chỉ số tích luỹ chỉ có thể tăng, nên chúng không bao giờ báo tin xấu.",
+     "issue": "Đúng với số cộng dồn, nhưng “lượt tiếp cận tháng” không phải tích luỹ và vẫn có thể giảm — bài trộn “tích luỹ” với “chỉ số đầu vào”.",
+     "fix": "Tách hai loại: tích luỹ (chỉ tăng) và đầu vào (tăng theo ngân sách); e1.017 lời giải đã dùng đúng “đầu vào”."
+    }
+   ],
+   "calc_check": {
+    "n": 4,
+    "ok": 4,
+    "notes": "e1.011: 60 ÷ 4.800 = 1,25% ✓ (CTR 3% ✓). e1.018: (3−2)/2 = 50% ✓. e1.030: B 240 ÷ 8.000 = 3% ✓; A 1% ✓. Drill: 3,0% vs 3,6% → +20% tương đối ✓; z hai tỉ lệ ≈ 1,68 < 1,96 ✓ (tự tính lại: 1,679)."
+   },
+   "claims": [],
+   "strengths": "Bộ 7 câu + drill là bộ đánh giá tốt nhất của nhóm L:: ba calc phân biệt điểm phần trăm/mức tăng/mẫu số, một case đọc báo cáo, drill có kiểm định z và nhắc không dừng test sớm; phép thử “che cột lượt tiếp cận” là quyết định làm được ngay.",
+   "upgrade": "Đưa số vào thân bài; tách “tích luỹ” và “đầu vào”; thêm bảng 3 chỉ số dám để sếp chấm × vì sao; thêm điều kiện khi chỉ số đầu vào vẫn cần theo dõi (giai đoạn xây nhận biết, nối L:65); nối dl08. Cần thêm một judge chọn bộ chỉ số cho một mục tiêu cụ thể (L5)."
+  },
+  {
+   "id": "L:72",
+   "scores": {
+    "accuracy": 12,
+    "depth": 11,
+    "practical": 13,
+    "examples": 9,
+    "pedagogy": 6,
+    "assessment": 6,
+    "data": 7,
+    "clarity": 4
+   },
+   "total": 68,
+   "bloom_items": [
+    "L3",
+    "L3",
+    "L3"
+   ],
+   "bloom_max": "L3",
+   "freshness": "periodic",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÌ SAO (1)",
+     "quote": "Con số \"ba lần\" bắt nguồn từ Krugman (1972) và thành quy tắc tần suất hiệu dụng, nhưng bằng chứng yếu",
+     "issue": "Trích nghiên cứu theo tên và năm, cộng khẳng định “bằng chứng yếu” và “có ý kiến cho rằng một lần tiếp xúc đã có thể có tác dụng” — không có src, không ngày kiểm.",
+     "fix": "Thêm src cho Krugman 1972 và cho ý kiến đối lập (ví dụ Jones 1995 “single-source”), hoặc rút gọn thành “không có ngưỡng thần kỳ; đo bằng số liệu của bạn”."
+    },
+    {
+     "sev": "P1",
+     "where": "NHÌN KỸ",
+     "quote": "Nghiên cứu IPA của Binet & Field cho thấy hiệu quả kinh doanh tăng khi chiến dịch kéo dài hơn",
+     "issue": "Trích nghiên cứu không src, không năm, không ngày kiểm.",
+     "fix": "Thêm src (The Long and the Short of It, 2013) và ngày kiểm."
+    },
+    {
+     "sev": "P2",
+     "where": "THỦ",
+     "quote": "ước lượng bao nhiêu khách mục tiêu chưa từng thấy bạn",
+     "issue": "Không nói ước lượng bằng gì (reach báo cáo nền tảng ÷ quy mô tệp; khảo sát nhận biết).",
+     "fix": "Thêm công thức: % chưa thấy ≈ 1 − reach duy nhất ÷ quy mô tệp mục tiêu, kèm lưu ý reach nền tảng đếm thiết bị."
+    }
+   ],
+   "calc_check": {
+    "n": 2,
+    "ok": 2,
+    "notes": "e4.027: 3.600.000 ÷ 900.000 = 4 ✓. e4.030: 36.000.000 ÷ 1.200 = 30.000đ/CPM ✓. Thân bài: 25.000 × 4 = 100.000 hiển thị = 100.000 × 1 ✓. Drill: 1,6 triệu ÷ 400.000 = 4 ✓; phân bổ lệch 100.000×10 + 300.000×2 = 1,6 triệu ✓."
+   },
+   "claims": [
+    {
+     "claim": "Con số \"ba lần\" bắt nguồn từ Krugman (1972)",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Nghiên cứu IPA của Binet & Field: hiệu quả tăng khi chiến dịch kéo dài hơn",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "100.000 người × 1 lần vs 25.000 × 4 lần",
+     "status": "illustrative-unlabelled",
+     "note": "Số tự khớp."
+    }
+   ],
+   "strengths": "Phân biệt độ phủ/tần suất theo mục tiêu (chưa biết vs đang cân nhắc) là điều kiện áp dụng rõ; drill chỉ ra trung bình 4 lần có thể che phân bổ 10/2 — đúng kiểu đọc số nghi ngờ.",
+   "upgrade": "Thêm src cho Krugman và Binet & Field; thêm công thức ước lượng % chưa thấy; thêm bảng reach × frequency × ngân sách cố định; thêm phản ví dụ (hàng mùa vụ nên dồn đợt); thêm case đọc báo cáo phân bổ tần suất thật (L4) và judge hai lịch media (L5); nối kn07."
+  },
+  {
+   "id": "L:73",
+   "scores": {
+    "accuracy": 13,
+    "depth": 9,
+    "practical": 12,
+    "examples": 7,
+    "pedagogy": 6,
+    "assessment": 4,
+    "data": 1,
+    "clarity": 5
+   },
+   "total": 57,
+   "bloom_items": [
+    "L3",
+    "L3"
+   ],
+   "bloom_max": "L3",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "Ý CHÍNH",
+     "quote": "Trong hầu hết category, phần lớn thị trường không chọn đối thủ của bạn — họ chọn cách không mua gì.",
+     "issue": "Khẳng định định lượng (“phần lớn”) không số, không điều kiện (sai với category thiết yếu đã bão hoà như gạo, điện thoại).",
+     "fix": "Sửa: “Trong category mới hoặc thâm nhập thấp, nhóm chưa mua gì thường lớn hơn mọi đối thủ cộng lại; với category thiết yếu đã bão hoà, đối thủ thật là thương hiệu đang được mua” và cho một cách ước lượng."
+    },
+    {
+     "sev": "P1",
+     "where": "câu hỏi gắn bài",
+     "quote": "CÂU HỎI ĐỀ CHẶNG GẮN VỚI BÀI (2) … e2.004 … e2.005",
+     "issue": "Hai câu đều là nhận lại ý bài ở mức L2–L3; không có câu nào buộc đọc dữ liệu (thị phần của “không làm gì”) hay ra quyết định về cách làm rõ “cái giá của việc không đổi”.",
+     "fix": "Thêm case: cho kết quả hỏi 5 người chưa mua “đang giải quyết bằng cách nào?”, hỏi thông điệp nào đánh đúng hiện trạng; thêm calc ước lượng chi phí hiện trạng (giờ công sổ tay × lương)."
+    },
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (2)",
+     "quote": "bạn phải làm cho cái giá của việc không đổi trở nên rõ ràng",
+     "issue": "Nêu nguyên tắc nhưng không có một ví dụ lượng hoá “cái giá của việc không đổi”.",
+     "fix": "Thêm ví dụ: chủ tiệm mất 40 phút/ngày đối sổ = 20 giờ/tháng ≈ X đồng; so với phí phần mềm."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [],
+   "strengths": "Câu hỏi THỬ “Hiện giờ bạn đang giải quyết việc này bằng cách nào?” là cách rẻ nhất tìm đối thủ thật; ví dụ sổ tay/Excel cụ thể và đúng với thực tế tiệm tạp hoá.",
+   "upgrade": "Thêm điều kiện áp dụng theo độ thâm nhập category; thêm phép tính “chi phí của hiện trạng”; thêm phản ví dụ (category bão hoà); thêm bảng cạnh tranh có hàng “tự xoay xở”; thêm 2–3 câu đề L4–L5; nối ob04."
+  },
+  {
+   "id": "L:74",
+   "scores": {
+    "accuracy": 13,
+    "depth": 10,
+    "practical": 14,
+    "examples": 7,
+    "pedagogy": 6,
+    "assessment": 6,
+    "data": 1,
+    "clarity": 5
+   },
+   "total": 62,
+   "bloom_items": [
+    "L2",
+    "L4",
+    "L4"
+   ],
+   "bloom_max": "L4",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "toàn bài",
+     "quote": "Brief một trang",
+     "issue": "Trùng tiêu đề và nội dung với module gt05 “Brief một trang” (8 bài); bài này không còn giá trị riêng.",
+     "fix": "Trỏ sang gt05; giữ như tóm tắt hoặc gỡ."
+    },
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "Sáu dòng là đủ: chúng ta đang nói với ai, họ đang tin gì, ta muốn họ tin gì, vì sao họ nên tin, ta được phép làm trong giới hạn nào, và cái gì bắt buộc phải có.",
+     "issue": "Không có một brief mẫu điền sẵn; người học không thấy “dòng tốt” trông thế nào (ví dụ chỉ nằm trong e1.028).",
+     "fix": "Đưa brief B của e1.028 (“ghi xong là mất”) vào bài làm mẫu sáu dòng điền sẵn."
+    },
+    {
+     "sev": "P2",
+     "where": "NHÌN KỸ",
+     "quote": "Nếu không viết nổi, vấn đề không nằm ở khâu sáng tạo mà nằm ở sản phẩm.",
+     "issue": "Kết luận nhị nguyên: không viết nổi “vì sao họ nên tin” cũng có thể do chưa nghiên cứu khách (thiếu bằng chứng, không phải thiếu sản phẩm).",
+     "fix": "Thêm nhánh thứ ba: chưa đi hỏi khách/chưa có bằng chứng — nối L:64."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [],
+   "strengths": "Sáu dòng brief là khung gọn, đúng; e1.020 và e1.028 là hai case chẩn đoán brief thật ở mức L4 với lời giải nêu đúng hiểu lầm (nhân khẩu học + tính từ).",
+   "upgrade": "Thêm brief mẫu điền sẵn và một brief xấu để so; thêm nhánh “chưa có bằng chứng”; thêm tiêu chí chấm brief (bảng 6 dòng × đạt/không); hợp nhất với gt05."
+  },
+  {
+   "id": "L:75",
+   "scores": {
+    "accuracy": 12,
+    "depth": 10,
+    "practical": 14,
+    "examples": 7,
+    "pedagogy": 6,
+    "assessment": 6,
+    "data": 4,
+    "clarity": 5
+   },
+   "total": 64,
+   "bloom_items": [
+    "L3",
+    "L4",
+    "L3"
+   ],
+   "bloom_max": "L4",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "Cùng một mức giá, khách mua ngay khi hiểu rõ mình nhận được gì, và chê đắt khi giá đứng một mình không có gì đỡ.",
+     "issue": "Là khẳng định, không phải ví dụ: không có sản phẩm, không có số, không có tình huống (ví dụ bàn 18 triệu chỉ nằm trong e2.024).",
+     "fix": "Đưa tình huống xưởng mộc 18 triệu + bảo hành 10 năm vào bài và thêm số: tỉ lệ chốt trước/sau khi gửi thêm bằng chứng."
+    },
+    {
+     "sev": "P2",
+     "where": "THỬ",
+     "quote": "Phân loại: thiếu tham chiếu, thiếu niềm tin, hay thật sự không đủ ngân sách.",
+     "issue": "Có khung phân loại tốt nhưng không nói mỗi loại thì làm gì khác đi (tham chiếu → so với chi phí không làm; niềm tin → bảo hành/bằng chứng; ngân sách → gói nhỏ hơn, không giảm giá).",
+     "fix": "Thêm bảng 3 loại phản đối × việc làm tiếp."
+    },
+    {
+     "sev": "P2",
+     "where": "e2.025",
+     "quote": "Sau khi giảm 10%, lợi nhuận gộp trên mỗi sản phẩm giảm bao nhiêu phần trăm?",
+     "issue": "Calc đúng nhưng lặp y nguyên ý e5.024 của L:63 (giảm 10% ăn 25% lãi); không gắn với ý bài này (phản đối giá không phải về tiền).",
+     "fix": "Thay bằng calc “chi phí của việc không mua” (ví dụ bàn rẻ 9 triệu thay sau 4 năm vs 18 triệu bảo hành 10 năm → chi phí mỗi năm)."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "e2.025: 80.000 → 60.000, giảm 25% ✓; 16,7% = 20.000 ÷ 120.000 (nhầm giá vốn) ✓."
+   },
+   "claims": [],
+   "strengths": "Câu hỏi thay thế “so với cái gì thì anh thấy đắt?” là hành vi bán hàng đổi được ngay; e2.024 là case đọc tình huống đúng cơ chế “rủi ro chuyển sang người bán”.",
+   "upgrade": "Đưa tình huống có số vào thân bài; thêm bảng 3 loại phản đối × việc làm; thêm calc chi phí vòng đời; thêm phản ví dụ (khách đúng là lệch ngân sách — khi nào nên để họ đi); nối tp11 và kh05."
+  },
+  {
+   "id": "L:76",
+   "scores": {
+    "accuracy": 12,
+    "depth": 10,
+    "practical": 13,
+    "examples": 7,
+    "pedagogy": 6,
+    "assessment": 8,
+    "data": 5,
+    "clarity": 5
+   },
+   "total": 66,
+   "bloom_items": [
+    "L2",
+    "L3",
+    "L3",
+    "L5",
+    "L4"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "Một người có một triệu người theo dõi bán được sự chú ý. Một người có ba mươi nghìn người theo dõi trong đúng ngành có thể bán được sự tin tưởng — thường là vậy, nhưng không phải luôn luôn",
+     "issue": "Ví dụ không có số kết quả trong bài (CPA, chuyển đổi) dù e4.028 có (200k vs 80k/đơn); không gắn nhãn minh hoạ.",
+     "fix": "Đưa bảng KOL A/B của e4.028 vào bài kèm nhãn minh hoạ và nói rõ mục tiêu khác → thước đo khác (CPM vs CPA)."
+    },
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (1)",
+     "quote": "hãy tính theo chi phí trên mỗi lượt tiếp cận và đừng kỳ vọng chuyển đổi",
+     "issue": "Đúng hướng nhưng không nêu rủi ro đo: lượt xem/ người theo dõi ảo, lượt tiếp cận trùng, không có nhóm đối chứng khi quy đơn cho KOL.",
+     "fix": "Thêm hai dòng: kiểm tỉ lệ tương tác thật, dùng mã riêng/ link riêng và so với nền tự nhiên trước chiến dịch."
+    },
+    {
+     "sev": "P2",
+     "where": "e4.033",
+     "quote": "yêu cầu dùng 14 ngày rồi nói “da sáng hơn 30% sau 2 tuần” theo số liệu hãng công bố",
+     "issue": "Lời giải nhắc “rủi ro quảng cáo sai sự thật” nhưng không nối với quy định quảng cáo mỹ phẩm — điểm cần thiết cho ngành này.",
+     "fix": "Nối kn12 (pháp chế) và nêu rõ tuyên bố hiệu quả cần hồ sơ công bố."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "e4.028: B 12.000.000 ÷ 150 = 80.000đ ✓; A 80.000.000 ÷ 400 = 200.000đ ✓ (gấp 2,5) ✓. e4.038: 200 triệu ÷ 40 = 5 triệu/sản phẩm (không hỏi nhưng khớp kết luận)."
+   },
+   "claims": [],
+   "strengths": "Tách hai mục tiêu (chú ý vs niềm tin) với hai thước đo là khung quyết định sạch; bộ 5 câu phủ L2–L5, có calc CPA và case đọc kết quả 1,2 triệu view/40 đơn.",
+   "upgrade": "Đưa bảng KOL A/B vào bài; thêm cách đo sạch (mã riêng, đối chứng, kiểm tương tác thật); thêm bảng mục tiêu × loại KOL × thước đo × mức giá tham chiếu (gắn nhãn minh hoạ); thêm điều kiện pháp lý; nối kn05."
+  },
+  {
+   "id": "L:77",
+   "scores": {
+    "accuracy": 13,
+    "depth": 11,
+    "practical": 14,
+    "examples": 10,
+    "pedagogy": 6,
+    "assessment": 7,
+    "data": 6,
+    "clarity": 5
+   },
+   "total": 72,
+   "bloom_items": [
+    "L2",
+    "L3",
+    "L5",
+    "L2"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "VÌ SAO (3)",
+     "quote": "chiết khấu kênh 10%, 20%, 30% thì biên còn 40.000đ, 30.000đ, 20.000đ",
+     "issue": "Số đúng và gắn nhãn minh hoạ, nhưng không nói chiết khấu 30% có thể đổi lại sản lượng gấp nhiều lần — bài chỉ nhìn biên trên đơn vị, chưa nhìn tổng lãi.",
+     "fix": "Thêm hàng “sản lượng kỳ vọng” để người học thấy kênh biên 20.000đ × 10.000 chai vẫn hơn 40.000đ × 2.000 chai — rồi mới hỏi “tiền để làm thương hiệu” còn bao nhiêu."
+    },
+    {
+     "sev": "P2",
+     "where": "e4.002",
+     "quote": "Mở rộng sang một kênh bán giá rẻ thường có đánh đổi nào? ✔ a) Tăng doanh số ngắn hạn, giảm giá trị cảm nhận dài hạn",
+     "issue": "Phương án đúng ngắn nhất và là câu lặp ý bài (L2); phương án b “Ngược chiều thực tế” là nhiễu vô lý.",
+     "fix": "Thay b bằng nhiễu có thật (“tăng nhận biết nhờ có mặt nhiều hơn, bù được phần giá trị cảm nhận”) và thêm điều kiện vào stem (thương hiệu cao cấp)."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "Thân bài: 100.000 − 50.000 − chiết khấu 10/20/30% → 40.000/30.000/20.000 ✓. e4.035: mua 1 tặng 1 → giá thật 90.000 ✓."
+   },
+   "claims": [
+    {
+     "claim": "giá lẻ 100.000đ, vốn 50.000đ; chiết khấu kênh 10%, 20%, 30%",
+     "status": "illustrative-labelled",
+     "note": ""
+    }
+   ],
+   "strengths": "Nêu rõ điều kiện trái chiều (FMCG thêm điểm bán là lõi tăng trưởng; cao cấp phải kiểm soát kênh giảm giá) và nối sang Physical Availability; số minh hoạ gắn nhãn và khớp; e4.035 (judge) tính đúng “giá thật” của mua 1 tặng 1.",
+   "upgrade": "Thêm cột sản lượng để so tổng lãi, không chỉ biên đơn vị; thêm bảng kênh × chiết khấu × biên × sản lượng × “nơi này nói gì”; thêm case đọc số kênh thật (L4); sửa e4.002; nối kn02 (bài này trùng kn02-02/-08)."
+  },
+  {
+   "id": "L:78",
+   "scores": {
+    "accuracy": 12,
+    "depth": 10,
+    "practical": 13,
+    "examples": 6,
+    "pedagogy": 6,
+    "assessment": 5,
+    "data": 3,
+    "clarity": 5
+   },
+   "total": 60,
+   "bloom_items": [
+    "L3",
+    "L5"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "ĐỜI THẬT",
+     "quote": "Bạn thấy chán câu tagline sau sáu tháng. Người mua vừa mới bắt đầu nhớ được nó.",
+     "issue": "Là khẳng định, không có ví dụ hay số (tỉ lệ nhắc lại thông điệp sau 6/12 tháng).",
+     "fix": "Thêm cặp số minh hoạ: nội bộ thấy thông điệp ~200 lần/tháng; khách mục tiêu thấy ~3 lần/tháng; tỉ lệ nhắc không gợi ý 8% sau 6 tháng."
+    },
+    {
+     "sev": "P2",
+     "where": "THỦ",
+     "quote": "có ba nguyên nhân khả dĩ: lặp chưa đủ, thông điệp không đáng nhớ, hoặc kênh sai người",
+     "issue": "Khung chẩn đoán tốt nhưng không nói mỗi nguyên nhân dẫn tới việc gì và cỡ mẫu 10 khách quá nhỏ để tách ba nguyên nhân.",
+     "fix": "Thêm bảng nguyên nhân × dấu hiệu (nhận ra khi gợi ý? thấy ở đâu?) × việc làm; nâng mẫu lên 30–50 hoặc nói rõ 10 chỉ để thăm dò."
+    },
+    {
+     "sev": "P2",
+     "where": "toàn bài",
+     "quote": "Nhất quán không có nghĩa bất biến: giữ tài sản nhận diện (câu chữ, màu, nhân vật) và đổi cách thể hiện.",
+     "issue": "Lặp ý L:60, L:69, P:mental-availability (LỖI) và e3.038 — bốn chỗ cùng một bài học.",
+     "fix": "Gộp vào một bài “nhất quán vs mới” có ba tình huống."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [
+    {
+     "claim": "Nhiều thương hiệu lớn nhớ rõ cũng nhờ ngân sách",
+     "status": "unverified",
+     "note": "Hedge hợp lý, không số."
+    }
+   ],
+   "strengths": "Bài nói đúng điểm mù nghề nghiệp (đội ngũ chán trước khách) và cho cách kiểm bằng dữ liệu khách thay cảm giác; e3.033 (judge) vạch rõ lỗi “đo sai người” (40 nhân viên).",
+   "upgrade": "Thêm cặp số minh hoạ tần suất tiếp xúc nội bộ vs khách; thêm bảng chẩn đoán ba nguyên nhân; thêm điều kiện khi nên đổi thông điệp (sai định vị, liên tưởng tiêu cực); gộp với L:60/L:69; thêm case đọc kết quả khảo sát nhắc nhớ có/không gợi ý (L4); nối tp06/dl05."
+  },
+  {
+   "id": "P:segmentation",
+   "scores": {
+    "accuracy": 12,
+    "depth": 7,
+    "practical": 11,
+    "examples": 7,
+    "pedagogy": 5,
+    "assessment": 7,
+    "data": 3,
+    "clarity": 5
+   },
+   "total": 57,
+   "bloom_items": [
+    "L3",
+    "L3",
+    "L3",
+    "L4",
+    "L3",
+    "L2"
+   ],
+   "bloom_max": "L4",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "e2.016",
+     "quote": "Khi thị trường đã bão hoà, tăng tần suất quan trọng hơn tăng số người dùng.",
+     "issue": "Nêu như luật một khẳng định trái với bằng chứng phổ biến (tăng trưởng thương hiệu chủ yếu đến từ thâm nhập — Ehrenberg-Bass/double jeopardy); với Grab có thể đúng vì gần như ai cũng đã cài, nhưng lời giải không nêu điều kiện đó.",
+     "fix": "Sửa: “Khi gần như mọi người trong tệp đã dùng (như Grab ở thành phố lớn), đòn bẩy còn lại là tần suất; ở category thâm nhập thấp, số người dùng mới vẫn là đòn bẩy chính.”"
+    },
+    {
+     "sev": "P2",
+     "where": "gắn bài",
+     "quote": "e2.005 … Trong bảng phân tích cạnh tranh, dấu hiệu nào cho thấy nhóm làm bảng đã bỏ sót đối thủ lớn nhất?",
+     "issue": "Câu về đối thủ “không làm gì” (L:73) gắn teaches P:segmentation — không đo năng lực phân khúc.",
+     "fix": "Đổi teaches sang L:73/ob04."
+    },
+    {
+     "sev": "P2",
+     "where": "VÍ DỤ · THƯƠNG HIỆU",
+     "quote": "cà phê \"để tỉnh lúc 7h sáng\" và cà phê \"để ngồi làm việc 2 tiếng\" … Minh hoạ: một chuỗi cà phê có thể phân khúc theo dịp",
+     "issue": "Ví dụ và phần thương hiệu lặp cùng một ý (chia theo dịp của quán cà phê), không có số (quy mô mỗi phân khúc, giá trị đơn) và không có phản ví dụ đổi kết luận.",
+     "fix": "Thêm bảng 3 phân khúc theo dịp × số đơn × giá trị đơn × việc làm khác đi (như e2.026 có 360/200/160/80); thêm phản ví dụ: hai dịp dẫn tới cùng menu và giờ → gộp lại."
+    },
+    {
+     "sev": "P2",
+     "where": "metadata",
+     "quote": "P:segmentation · nguyên lý · creative",
+     "issue": "Nguyên lý phân khúc xếp vào nhóm “creative”.",
+     "fix": "Đổi sang strategy/consumer."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "e2.026: 200 ÷ 800 = 25% ✓; 200 ÷ 360 = 55,6% là sai mẫu số ✓."
+   },
+   "claims": [
+    {
+     "claim": "Grab … truyền thông được gắn với từng khung giờ trong ngày (e2.016)",
+     "status": "illustrative-labelled",
+     "note": "Ctx ghi rõ “diễn giải của tác giả”."
+    },
+    {
+     "claim": "chuỗi cà phê phân khúc theo dịp ngồi",
+     "status": "illustrative-labelled",
+     "note": ""
+    }
+   ],
+   "strengths": "Phép thử “hai nhóm dẫn tới cùng một kế hoạch thì không phải hai nhóm” là tiêu chí hành động rõ; e2.037 nêu đủ ba điều kiện (đủ lớn, đủ khác, mình phục vụ tốt hơn).",
+   "upgrade": "Bài chỉ có 6 câu, không có cơ chế vì sao; để ≥85 cần: bảng phân khúc theo dịp có số (quy mô, giá trị đơn, việc làm khác đi), phản ví dụ gộp phân khúc, cách ước lượng quy mô (nối kh01-06), điều kiện áp dụng (penetration vs frequency), sửa e2.016, đổi teaches e2.005. Thực tế bài đã được kh01 (8 bài) thay thế."
+  },
+  {
+   "id": "P:targeting",
+   "scores": {
+    "accuracy": 10,
+    "depth": 7,
+    "practical": 11,
+    "examples": 7,
+    "pedagogy": 5,
+    "assessment": 7,
+    "data": 3,
+    "clarity": 5
+   },
+   "total": 55,
+   "bloom_items": [
+    "L3",
+    "L3",
+    "L4",
+    "L3",
+    "L5"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ · THƯƠNG HIỆU",
+     "quote": "Liquid Death chọn người muốn cầm một thứ trông ngầu ở nơi công cộng, bỏ hẳn nhóm wellness. … MUJI (tên nghĩa là “hàng chất lượng không thương hiệu”) — diễn giải: không nhắm nhóm muốn khoe địa vị",
+     "issue": "Hai diễn giải về chiến lược thật của thương hiệu thật nêu như sự thật (“bỏ hẳn nhóm wellness”), không nguồn; MUJI có gắn nhãn “diễn giải”, Liquid Death thì không.",
+     "fix": "Gắn nhãn “diễn giải của tác giả” cho Liquid Death hoặc dẫn nguồn (phỏng vấn founder)."
+    },
+    {
+     "sev": "P2",
+     "where": "PHẢN VÍ DỤ",
+     "quote": "Câu này luôn dẫn đến thông điệp nhạt và ngân sách bị dàn mỏng.",
+     "issue": "“Luôn” tuyệt đối; hàng tiêu dùng đại chúng (nước ngọt, bột giặt) vẫn nhắm “mọi người mua category” mà không nhạt.",
+     "fix": "Sửa “thường” và nêu ngoại lệ FMCG đại chúng: vẫn cần một hình ảnh người dùng ưu tiên trong sáng tạo (LỖI đã chạm ý này — nên nối)."
+    },
+    {
+     "sev": "P2",
+     "where": "gắn bài",
+     "quote": "e2.004 (đối thủ sổ tay/Excel), e2.030 (hoà vốn 20 học viên)",
+     "issue": "Hai trong 5 câu không đo năng lực chọn tệp: e2.004 là L:73, e2.030 là hoà vốn (pricing).",
+     "fix": "Đổi teaches; thêm một calc đúng chủ đề: ước lượng quy mô tệp × tỉ lệ tiếp cận × tỉ lệ mua để so hai tệp."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "e2.030: (3.000.000 − 600.000) = 2.400.000; 48.000.000 ÷ 2.400.000 = 20 ✓; 16 = chia giá bán, 80 = chia chi phí biến đổi ✓."
+   },
+   "claims": [
+    {
+     "claim": "Liquid Death … bỏ hẳn nhóm wellness",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "MUJI tên nghĩa là “hàng chất lượng không thương hiệu”",
+     "status": "unverified",
+     "note": "Đúng với nghĩa 無印良品; chưa có src."
+    },
+    {
+     "claim": "Liquid Death bán ở quán bar và sự kiện (e2.021)",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Câu “Chúng tôi cố tình không dành cho ___” là phép thử một dòng dùng ngay; e2.035 (judge) đối lập mô tả theo tình huống (quyết định được giờ mở cửa, giá) với nhân khẩu học có số nhưng vô dụng.",
+   "upgrade": "Gắn nhãn/nguồn cho hai thương hiệu; sửa “luôn”; thêm cơ chế (vì sao chọn tệp làm sáng tạo và media rẻ hơn) và một phép so hai tệp bằng số (quy mô × khả năng thắng × chi phí tiếp cận); thêm phản ví dụ tệp quá hẹp không đủ sống; đổi teaches hai câu lệch. Đã được kh02 thay thế."
+  },
+  {
+   "id": "P:positioning",
+   "scores": {
+    "accuracy": 11,
+    "depth": 7,
+    "practical": 11,
+    "examples": 7,
+    "pedagogy": 5,
+    "assessment": 7,
+    "data": 2,
+    "clarity": 5
+   },
+   "total": 55,
+   "bloom_items": [
+    "L3",
+    "L2",
+    "L3",
+    "L2",
+    "L3",
+    "L3",
+    "L4",
+    "L4",
+    "L5"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "e3.014",
+     "quote": "✔ a) Đồ ngoài trời cho người thấy áy náy về tiêu dùng — không dành cho người muốn đồ rẻ thay hằng năm",
+     "issue": "Đáp án là phương án duy nhất có cấu trúc “cho ai — không dành cho ai” đúng mẫu bài dạy, và ba nhiễu đều là câu sáo rỗng rõ — đoán được bằng hình thức.",
+     "fix": "Thêm một nhiễu có cấu trúc loại trừ nhưng loại trừ sai (ví dụ “không dành cho người không yêu thiên nhiên” — loại trừ không ai tự nhận)."
+    },
+    {
+     "sev": "P1",
+     "where": "e3.018",
+     "quote": "(Doanh số online những ngày đầu thực tế còn tăng khoảng 31% theo ước tính của Edison Trends — nhưng lúc ra quyết định, rủi ro tẩy chay là có thật.)",
+     "issue": "Con số cụ thể gắn nguồn theo tên nhưng không link, không ngày kiểm; là số lớp periodic.",
+     "fix": "Thêm src (bài của Edison Trends, 9/2018) với ngày kiểm hoặc bỏ số."
+    },
+    {
+     "sev": "P2",
+     "where": "VÍ DỤ · THƯƠNG HIỆU",
+     "quote": "“Chỗ thứ ba giữa nhà và công sở” đặt Starbucks cạnh không gian … Patagonia: quảng cáo “Don’t Buy This Jacket” (Black Friday 2011)",
+     "issue": "Hai thương hiệu thật, có năm cho Patagonia nhưng không nguồn; không có ví dụ Việt; không có số đo định vị (nhận biết liên tưởng).",
+     "fix": "Thêm src; thêm một ví dụ Việt có kết quả khảo sát “dành cho ai” trước/sau."
+    },
+    {
+     "sev": "P2",
+     "where": "gắn bài",
+     "quote": "e1.021 … Câu hỏi nào giúp kiểm tra nhanh nhất một thông cáo báo chí có tin hay không?",
+     "issue": "Câu về PR gắn teaches P:positioning.",
+     "fix": "Đổi teaches sang L:61/kn09."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [
+    {
+     "claim": "“Chỗ thứ ba giữa nhà và công sở” — Starbucks",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Patagonia “Don’t Buy This Jacket” Black Friday 2011",
+     "status": "unverified",
+     "note": "Khớp với e5.034; không src."
+    },
+    {
+     "claim": "Doanh số online của Nike tăng khoảng 31% theo Edison Trends (e3.018)",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "MUJI không in logo lên sản phẩm, dùng giấy kraft (e3.023)",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Định nghĩa “nằm trong đầu họ, không nằm trong file của bạn” và bài tập hỏi 5 người ngoài là kiểm định rẻ, đúng; e3.018 và e3.023 là hai case buộc suy luận về chi phí của định vị.",
+   "upgrade": "Thêm cơ chế (vì sao loại trừ tạo chỗ: trí nhớ liên tưởng, chi phí xử lý) và điều kiện (định vị theo category mới vs trong category cũ); thêm cách đo (liên tưởng không gợi ý, “dành cho ai” khớp bao nhiêu %); thêm ví dụ Việt; sửa e3.014; src cho ba dữ kiện thương hiệu. Đã được tp01 thay thế."
+  },
+  {
+   "id": "P:brand-equity",
+   "scores": {
+    "accuracy": 9,
+    "depth": 7,
+    "practical": 10,
+    "examples": 7,
+    "pedagogy": 5,
+    "assessment": 7,
+    "data": 4,
+    "clarity": 5
+   },
+   "total": 54,
+   "bloom_items": [
+    "L3",
+    "L3",
+    "L3",
+    "L4",
+    "L3",
+    "L3",
+    "L5"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "THƯƠNG HIỆU",
+     "quote": "Apple giữ giá trong khi cả ngành giảm giá.",
+     "issue": "Khẳng định tuyệt đối về thương hiệu thật (“cả ngành”, không thời gian, không sản phẩm) nêu như sự thật, không nguồn; Apple cũng giảm giá/ ra bản rẻ (iPhone SE).",
+     "fix": "Thay bằng dữ kiện kiểm được có src (ví dụ giá bán trung bình điện thoại theo hãng, năm X) hoặc gắn nhãn “diễn giải”."
+    },
+    {
+     "sev": "P2",
+     "where": "MỘT DÒNG",
+     "quote": "Bỏ tên đi, doanh thu tụt bao nhiêu — đó là equity.",
+     "issue": "Định nghĩa thao tác hay nhưng không nêu cách đo khả thi (không ai “bỏ tên” được); bài tập “Ước tính … bao nhiêu phần trăm khách vẫn chọn bạn” không có phương pháp (thử mù, conjoint, so giá không nhãn).",
+     "fix": "Thêm hai cách đo tiếp cận được: thử mù so với có nhãn (như e3.029: 450.000 vs 300.000) và tỉ lệ mua lại/giữ giá theo cohort."
+    },
+    {
+     "sev": "P2",
+     "where": "VÍ DỤ",
+     "quote": "Cùng một chiếc áo phông, gắn tên khác nhau sẽ bán được ở hai mức giá khác nhau.",
+     "issue": "Không có số trong bài dù e3.029 có bộ số đầy đủ (450/300/200 → lãi gộp +150%).",
+     "fix": "Đưa bộ số e3.029 vào ví dụ với nhãn minh hoạ."
+    }
+   ],
+   "calc_check": {
+    "n": 2,
+    "ok": 2,
+    "notes": "e3.027: (18−12)/12 = 50% ✓ (6 là điểm phần trăm). e3.029: lãi 100.000 → 250.000, tăng 150% ✓; giá tăng 50%, lãi gấp 2,5 ✓."
+   },
+   "claims": [
+    {
+     "claim": "Apple giữ giá trong khi cả ngành giảm giá",
+     "status": "unverified",
+     "note": "Tuyệt đối, không thời gian."
+    },
+    {
+     "claim": "Biti’s có độ nhận biết gần như tuyệt đối … gắn với “đồ của bố mẹ” (e3.021)",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Biti’s tạo dòng Hunter — một cánh cửa riêng cho nhóm mới (e3.021)",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Phản ví dụ “doanh số tăng nhờ giảm giá 40% không phải equity” nối đúng với L:63; e3.029 cho thấy equity hiện ra ở lãi gộp (+150%) chứ không ở giá (+50%) — một tính toán sáng.",
+   "upgrade": "Thêm phương pháp đo (thử mù, giữ giá, mua lại); đưa số e3.029 vào bài; sửa khẳng định Apple; thêm cơ chế (equity đến từ liên tưởng + sẵn có trong trí nhớ, không từ “tình cảm”); thêm phản ví dụ thứ hai (nhận biết cao, equity thấp — Biti’s trước Hunter) ngay trong bài; nối tp05/dl05. Đã được tp05 thay thế."
+  },
+  {
+   "id": "P:awareness",
+   "scores": {
+    "accuracy": 11,
+    "depth": 6,
+    "practical": 10,
+    "examples": 6,
+    "pedagogy": 4,
+    "assessment": 4,
+    "data": 3,
+    "clarity": 5
+   },
+   "total": 49,
+   "bloom_items": [
+    "L2",
+    "L4",
+    "L3",
+    "L3",
+    "L3",
+    "L3"
+   ],
+   "bloom_max": "L4",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "câu hỏi gắn bài",
+     "quote": "e1.014 (ai quyết định tuyển sinh), e1.027 (báo cáo cửa hàng), e1.030 (CVR trang B), e3.026 (tần suất), e4.030 (CPM)",
+     "issue": "5 trong 6 câu gắn bài không đo nhận biết; chỉ e3.011 đúng chủ đề. Người học “đỗ” phần awareness mà chưa từng tính nhận biết có/không gợi ý.",
+     "fix": "Đổi teaches 5 câu kia; thêm calc nhận biết có gợi ý vs không gợi ý (như e3.030) và một case đọc kết quả khảo sát nhận biết theo tệp."
+    },
+    {
+     "sev": "P2",
+     "where": "VÍ DỤ · THƯƠNG HIỆU",
+     "quote": "Biti’s là cái tên quen thuộc với phần lớn người Việt — nhận biết rất cao (nhận định phổ biến, không phải số đo). … Biti’s trước thời Hunter: nhận biết cao, liên tưởng cũ.",
+     "issue": "Ví dụ và thương hiệu trùng một ý; không có số và không nói cách đo nhận biết (top-of-mind, không gợi ý, có gợi ý).",
+     "fix": "Thêm ba cấp đo nhận biết với một bộ số minh hoạ (ví dụ 95% có gợi ý, 60% không gợi ý, 12% nhắc đầu tiên) và cách đọc."
+    },
+    {
+     "sev": "P2",
+     "where": "MỘT DÒNG",
+     "quote": "Đây là ngưỡng tối thiểu, không phải mục tiêu.",
+     "issue": "Không nêu khi nào nhận biết vẫn là mục tiêu đúng (thương hiệu mới, category mới) — bài quá nghiêng về phản bác.",
+     "fix": "Thêm điều kiện: với thương hiệu <20% nhận biết trong tệp, nhận biết vẫn là KPI chính; ở mức bão hoà mới chuyển sang salience."
+    }
+   ],
+   "calc_check": {
+    "n": 3,
+    "ok": 3,
+    "notes": "e1.030: 240 ÷ 8.000 = 3% ✓. e3.026: 2.000.000 ÷ 500.000 = 4 ✓. e4.030: 36 triệu ÷ 1.200 = 30.000 ✓. (Cả ba không đo nhận biết.)"
+   },
+   "claims": [
+    {
+     "claim": "Biti’s là cái tên quen thuộc với phần lớn người Việt — nhận biết rất cao",
+     "status": "illustrative-labelled",
+     "note": "Đã ghi “nhận định phổ biến, không phải số đo”."
+    }
+   ],
+   "strengths": "Thành thật gắn nhãn nhận định về Biti’s; bài tập “kể tên 3 thương hiệu khi cần ___” là cách đo top-of-mind đơn giản đúng.",
+   "upgrade": "Thêm ba cấp đo nhận biết với số minh hoạ và cách đọc; thêm điều kiện khi nhận biết là KPI đúng; thêm cơ chế nối sang salience/CEP; thay toàn bộ câu gắn lệch bằng 4–5 câu đúng chủ đề (calc nhận biết, case đọc khảo sát, judge chọn KPI). Đã được tp06/dl05 thay thế."
+  },
+  {
+   "id": "P:salience",
+   "scores": {
+    "accuracy": 11,
+    "depth": 7,
+    "practical": 11,
+    "examples": 7,
+    "pedagogy": 5,
+    "assessment": 7,
+    "data": 4,
+    "clarity": 5
+   },
+   "total": 57,
+   "bloom_items": [
+    "L2",
+    "L4",
+    "L3",
+    "L5",
+    "L2",
+    "L3",
+    "L5",
+    "L4"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "e3.017",
+     "quote": "Rất nhiều người nói họ thấy khó chịu. Thương hiệu vẫn giữ nguyên. … ✔ d) … được nhớ quan trọng hơn được yêu … Tranh cãi còn tạo thêm lượt nhắc miễn phí.",
+     "issue": "Case về chiến dịch thật (Điện Máy Xanh) không có dữ liệu kết quả (nhận biết, doanh số) — lời giải kết luận “hợp lý” như sự thật đã kiểm; “được nhớ quan trọng hơn được yêu” nêu không điều kiện (với category cảm xúc/cao cấp, bị ghét có giá).",
+     "fix": "Thêm điều kiện (category mua thưa, quyết định nhanh, ít khác biệt) và một dòng dữ liệu công khai có src, hoặc gắn nhãn “diễn giải của tác giả”."
+    },
+    {
+     "sev": "P2",
+     "where": "gắn bài",
+     "quote": "e4.010, e4.029, e4.032, e4.040 (từ L:68 — chú ý vài giây đầu)",
+     "issue": "4 trong 8 câu đo “sống sót qua giây đầu” (attention), không đo salience (bật ra trong đầu lúc cần mua).",
+     "fix": "Đổi teaches sang L:68/tp07; bù bằng case đọc khảo sát “kể tên 3 thương hiệu” theo tình huống."
+    },
+    {
+     "sev": "P2",
+     "where": "THƯƠNG HIỆU",
+     "quote": "Shopee với 9.9 — sở hữu một ngày trong lịch của người mua.",
+     "issue": "Khẳng định không nguồn, không số; không có phản ví dụ thương hiệu Việt được yêu mà không nổi bật.",
+     "fix": "Gắn nhãn diễn giải; thêm số minh hoạ như e3.030 (80% nhận biết, 12% tự nhắc) ngay trong bài."
+    }
+   ],
+   "calc_check": {
+    "n": 2,
+    "ok": 2,
+    "notes": "e3.030: 96 ÷ 800 = 12% ✓; 96 ÷ 640 = 15% sai mẫu số ✓. e4.029: 24% ✓ (không đo salience)."
+   },
+   "claims": [
+    {
+     "claim": "Shopee với 9.9 — sở hữu một ngày trong lịch của người mua",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Điện Máy Xanh “người xanh” … Rất nhiều người nói họ thấy khó chịu. Thương hiệu vẫn giữ nguyên (e3.017)",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Phân biệt “được nhớ ra đúng lúc” với “được yêu thích” là đúng lõi; e3.036 (judge) đặt mục tiêu theo 4 tình huống đời sống và đo % nghĩ tới ở mỗi tình huống — mục tiêu đo được.",
+   "upgrade": "Thêm cơ chế (trí nhớ liên tưởng, số móc tình huống) và điều kiện khi thiện cảm vẫn quan trọng; đưa bộ số 80%/12% vào bài; đổi 4 câu attention sang L:68; thêm src hoặc nhãn cho Shopee và Điện Máy Xanh; nối P:category-entry-point và P:mental-availability (ba bài này trùng ý — gộp). Đã được tp06 thay thế."
+  },
+  {
+   "id": "P:distinctive-assets",
+   "scores": {
+    "accuracy": 10,
+    "depth": 7,
+    "practical": 11,
+    "examples": 8,
+    "pedagogy": 5,
+    "assessment": 6,
+    "data": 2,
+    "clarity": 5
+   },
+   "total": 54,
+   "bloom_items": [
+    "L4",
+    "L5",
+    "L5",
+    "L5",
+    "L2",
+    "L2",
+    "L3",
+    "L3",
+    "L4",
+    "L4",
+    "L4",
+    "L5",
+    "L5",
+    "L2",
+    "L2",
+    "L3",
+    "L2",
+    "L4",
+    "L4",
+    "L5",
+    "L2",
+    "L2"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "e3.013",
+     "quote": "Tài sản nhận diện nào thường bị đánh giá thấp nhất dù rẻ và hiệu quả? … ✔ d) Âm thanh",
+     "issue": "Câu hỏi “nhất” về một nhận định chủ quan không có nguồn; phương án c (bảng màu) cũng bênh được — nhiều nghiên cứu tài sản nhận diện cho thấy màu được dùng nhiều nhưng hiếm khi đủ riêng. Lời giải cho c (“thường đã được chú ý và quản lý kỹ”) là khẳng định không kiểm được.",
+     "fix": "Đổi stem thành câu có điều kiện kiểm được: “Tài sản nào vẫn hoạt động khi người dùng không nhìn màn hình?” hoặc cung cấp dữ liệu khảo sát trong stem."
+    },
+    {
+     "sev": "P2",
+     "where": "gắn bài",
+     "quote": "CÂU HỎI ĐỀ CHẶNG GẮN VỚI BÀI (22)",
+     "issue": "22 câu gắn một nguyên lý 6 dòng; khoảng 10 câu không về tài sản nhận diện (e4.006/e4.007 nội dung, e4.008/e4.039 TikTok, e4.022 Red Bull nội dung, e1.010 copy dữ kiện, e3.009 thông điệp).",
+     "fix": "Giữ ~10 câu đúng chủ đề (e3.007, e3.013, e3.016, e3.022, e3.024, e3.032, e3.035, e3.037, e1.037, e4.021); đổi teaches số còn lại."
+    },
+    {
+     "sev": "P2",
+     "where": "THƯƠNG HIỆU",
+     "quote": "Vinamilk làm mới nhận diện năm 2023 nhưng vẫn lấy xanh làm màu chủ đạo, dù logo đổi hẳn dạng.",
+     "issue": "Dữ kiện thật, có năm, nhưng không src (ctx e3.016 có ngày 6/7/2023 — tốt hơn bài); không có số đo nhận ra trước/sau.",
+     "fix": "Thêm src công bố Vinamilk 6/7/2023 và nếu có, số khảo sát nhận ra."
+    },
+    {
+     "sev": "P2",
+     "where": "LỖI",
+     "quote": "Bạn cần cả hai, nhưng dễ nhận ra kiếm tiền trước.",
+     "issue": "Khẳng định không điều kiện; với hàng cân nhắc cao (B2B, xe) “khác biệt ý nghĩa” quyết định trước.",
+     "fix": "Thêm điều kiện: đúng với hàng mua nhanh, ít khác biệt; đảo lại với hàng cân nhắc lâu."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính trong 22 câu gắn bài."
+   },
+   "claims": [
+    {
+     "claim": "Vinamilk làm mới nhận diện năm 2023, giữ xanh chủ đạo (công bố 6/7/2023 theo ctx e3.016)",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Swoosh không cần chữ Nike. Nhạc hiệu Shopee không cần hình ảnh.",
+     "status": "unverified",
+     "note": "Nhận định hợp lý, không số."
+    },
+    {
+     "claim": "Netflix “ta-dum” … lặp hàng tỉ lần (e3.022)",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Oatly … bị ngành sữa kiện (e4.021)",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Liquid Death dùng lon nhôm đen đỏ, chữ blackletter (e3.024)",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Red Bull có đơn vị sản xuất nội dung quy mô như một hãng phim (e4.022)",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Phân biệt “khác biệt về ý nghĩa” với “dễ nhận ra” (e3.037) là điểm sâu nhất trong 22 nguyên lý; nhiều judge (e1.013, e1.037, e3.035) buộc so hai phương án thật với lý do kiểm được.",
+   "upgrade": "Thêm cơ chế và cách đo (fame × uniqueness: % nhận ra × % gắn đúng thương hiệu) với bộ số minh hoạ; thêm điều kiện theo loại hàng; sửa e3.013; cắt câu gắn lệch còn ~10; src cho Vinamilk; thêm phản ví dụ (tài sản riêng nhưng không gắn tên — nhận ra hình không nhận ra hãng). Đã được tp04 thay thế."
+  },
+  {
+   "id": "P:consumer-insight",
+   "scores": {
+    "accuracy": 11,
+    "depth": 8,
+    "practical": 12,
+    "examples": 8,
+    "pedagogy": 5,
+    "assessment": 7,
+    "data": 2,
+    "clarity": 5
+   },
+   "total": 58,
+   "bloom_items": [
+    "L2",
+    "L4",
+    "L4",
+    "L5",
+    "L3",
+    "L2",
+    "L2",
+    "L2",
+    "L4",
+    "L4",
+    "L3",
+    "L5",
+    "L5",
+    "L2"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "e2.006",
+     "quote": "✔ c) Tôi muốn thay đổi cơ thể, nhưng ba tuần đầu tôi trông tệ hơn và không ai công nhận nỗ lực, nên tôi bỏ",
+     "issue": "Đáp án là phương án duy nhất viết ở ngôi “Tôi” theo đúng mẫu “muốn – nhưng – nên” bài dạy; ba nhiễu đều ở ngôi ba — đoán được bằng hình thức.",
+     "fix": "Viết ít nhất một nhiễu ở ngôi “Tôi” nhưng không có mâu thuẫn (“Tôi muốn khoẻ hơn, nên tôi đăng ký phòng gym gần nhà”)."
+    },
+    {
+     "sev": "P2",
+     "where": "VÍ DỤ · THƯƠNG HIỆU",
+     "quote": "“Tôi mô tả bản thân khắt khe hơn cách người lạ mô tả tôi.” (Dove) … Biti’s Hunter: “Đi để trở về”",
+     "issue": "Hai thương hiệu thật không nguồn; không nói insight được tìm ra bằng phương pháp nào (phỏng vấn? dữ liệu?), nên người học không học được cách tìm.",
+     "fix": "Thêm src và một dòng “insight này đến từ đâu” cho mỗi ví dụ; thêm quy trình 3 bước (quan sát → mâu thuẫn → vì sao)."
+    },
+    {
+     "sev": "P2",
+     "where": "gắn bài",
+     "quote": "e1.033 … Slide mở đầu buổi trình bày kế hoạch quý cho ban lãnh đạo",
+     "issue": "Câu về trình bày số cho sếp (dl09) gắn teaches P:consumer-insight.",
+     "fix": "Đổi teaches sang dl09/gt06."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "e2.028: 40 ÷ 250 = 16% ✓ (không đo insight)."
+   },
+   "claims": [
+    {
+     "claim": "Dove: “Tôi mô tả bản thân khắt khe hơn cách người lạ mô tả tôi.”",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Biti’s Hunter: “Đi để trở về”",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Dove dựng thí nghiệm hoạ sĩ pháp y vẽ chân dung (e2.017)",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Mẫu “Tôi muốn ___ nhưng ___ nên tôi ___” và tiêu chí “nghe xong thấy hơi bị lộ” là bộ lọc dùng được; e2.033 và e2.017 là judge/case tốt về mâu thuẫn và cơ chế tự thấy.",
+   "upgrade": "Thêm quy trình tìm insight và cách kiểm (hỏi 5 khách có gật “đúng, hơi ngại” không); thêm phản ví dụ insight sai (mâu thuẫn bịa không ai nhận); sửa e2.006; src cho Dove/Biti’s; đổi teaches e1.033; nối kh04/kh05 (đã thay thế)."
+  },
+  {
+   "id": "P:jobs-to-be-done",
+   "scores": {
+    "accuracy": 11,
+    "depth": 7,
+    "practical": 11,
+    "examples": 8,
+    "pedagogy": 5,
+    "assessment": 6,
+    "data": 1,
+    "clarity": 5
+   },
+   "total": 54,
+   "bloom_items": [
+    "L3",
+    "L3",
+    "L4",
+    "L4"
+   ],
+   "bloom_max": "L4",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Người ta thuê Starbucks để có một chỗ ngồi hợp lệ, không phải để uống cà phê.",
+     "issue": "Diễn giải tuyệt đối về thương hiệu thật nêu như sự thật (“không phải để uống cà phê”) — bỏ qua phần lớn đơn mang đi; không nguồn, không điều kiện.",
+     "fix": "Sửa: “Với nhóm ngồi làm việc, công việc được thuê là chỗ ngồi hợp lệ; với nhóm mua mang đi là một việc khác” — và nối sang phân khúc theo dịp."
+    },
+    {
+     "sev": "P2",
+     "where": "gắn bài",
+     "quote": "e2.019 … ✔ c) Biến mỗi khách thành một biển quảng cáo di động",
+     "issue": "Câu về cốc có tên là owned media/ nhận diện, không đo JTBD.",
+     "fix": "Đổi teaches sang L:56/kn01."
+    },
+    {
+     "sev": "P2",
+     "where": "BÀI TẬP",
+     "quote": "Hỏi 3 khách hàng: \"Lần gần nhất bạn dùng sản phẩm, bạn đang cố làm xong việc gì?\"",
+     "issue": "Không có khung ghi kết quả (tình huống, kết quả mong muốn, giải pháp đang dùng, điều làm họ bỏ) và không nói làm gì với 3 câu trả lời.",
+     "fix": "Thêm bảng 4 cột và bước “so với mô tả sản phẩm hiện tại — lệch ở đâu?”."
+    }
+   ],
+   "calc_check": {
+    "n": 0,
+    "ok": 0,
+    "notes": "Không có câu tính."
+   },
+   "claims": [
+    {
+     "claim": "Người ta thuê Starbucks để có một chỗ ngồi hợp lệ, không phải để uống cà phê",
+     "status": "unverified",
+     "note": "Diễn giải tuyệt đối."
+    },
+    {
+     "claim": "Coolmate: công việc được thuê có thể là khỏi mất buổi đi mua đồ cơ bản",
+     "status": "illustrative-labelled",
+     "note": ""
+    },
+    {
+     "claim": "Starbucks viết tên khách lên cốc giấy trắng có in logo (e2.019)",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "e2.039 (sữa chua 6h30–7h30 cạnh trường) là case JTBD đúng kiểu: suy công việc từ thời điểm/địa điểm mua và chỉ ra đối thủ thật (bánh mì, hộp sữa); e2.009 chỉ ra lỗi định nghĩa công việc quá rộng.",
+   "upgrade": "Sửa diễn giải Starbucks có điều kiện; thêm cơ chế (công việc = tình huống + kết quả mong muốn + ràng buộc) và bảng ghi phỏng vấn; thêm phản ví dụ (công việc quá rộng/ quá hẹp); thêm calc (ước lượng số lần “công việc” xảy ra/tuần × tệp); đổi teaches e2.019. Đã được kh03 thay thế."
+  },
+  {
+   "id": "P:funnel",
+   "scores": {
+    "accuracy": 14,
+    "depth": 11,
+    "practical": 13,
+    "examples": 11,
+    "pedagogy": 6,
+    "assessment": 8,
+    "data": 8,
+    "clarity": 4
+   },
+   "total": 75,
+   "bloom_items": [
+    "L4",
+    "L3",
+    "L4",
+    "L3",
+    "L4",
+    "L3",
+    "L2",
+    "L2",
+    "L4",
+    "L4",
+    "L4"
+   ],
+   "bloom_max": "L4",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "e5.035",
+     "quote": "Khi thị trường đã bão hoà, đòn bẩy tăng trưởng lớn nhất là gì? … ✔ c) Tăng tần suất và số lý do quay lại … d) Mở rộng ngay sang thị trường mới … vì: Là một hướng khác, không giải quyết bài toán tăng trưởng ở thị trường hiện tại.",
+     "issue": "Stem hỏi tổng quát “khi thị trường bão hoà” nhưng đáp án chỉ đúng khi tự giới hạn “ở thị trường hiện tại” (điều lời giải d thêm vào sau). Với câu hỏi như đang viết, d là phương án bênh được (Grab thực tế cũng mở rộng vùng).",
+     "fix": "Thêm “ở thị trường hiện tại” vào stem, hoặc bỏ phương án d thay bằng nhiễu khác."
+    },
+    {
+     "sev": "P2",
+     "where": "VÍ DỤ",
+     "quote": "1000 người xem → 120 click → 30 thêm giỏ → 6 mua. Không mặc định sửa bước rơi lớn nhất (xem → click rơi 88% là chuyện thường)",
+     "issue": "Bộ số tốt nhưng không gắn nhãn minh hoạ và không có “kỳ vọng” để so (số kỳ trước), nên câu “so với chính mình kỳ trước” chưa có dữ liệu để minh hoạ.",
+     "fix": "Thêm hàng tháng trước (ví dụ 1000 → 125 → 45 → 9) để người học thấy bước giỏ → mua rơi bất thường."
+    },
+    {
+     "sev": "P2",
+     "where": "câu hỏi gắn bài",
+     "quote": "e4.018 … Lối thoát là xây mental availability để có người tìm đến mà không cần mua lượt.",
+     "issue": "Case về CAC tăng dần gắn teaches P:funnel; lời giải nhảy sang mental availability mà không nối với phễu (tỉ lệ traffic thương hiệu).",
+     "fix": "Đổi teaches sang P:cac/L:65 hoặc thêm một dòng nối: “tỉ lệ traffic tự nhiên/ thương hiệu trong đầu phễu đang giảm”."
+    }
+   ],
+   "calc_check": {
+    "n": 4,
+    "ok": 4,
+    "notes": "e1.012: 20% ✓. e1.029: 20% ✓. e4.025: 60 − 50 = 10 triệu ✓. Drill: 900 ÷ 1.200 = 75% ✓; thanh toán 240 ÷ 300 = 80% ✓; giỏ→đặt 25%→30% = +60 đơn đặt, ×0,8 ≈ 48 thanh toán ✓. e5.040: 6.000→900 rơi 85% ✓; 900→300 mất 2/3 ✓. e1.002: 1.100/3.200 rơi 65,6% ✓."
+   },
+   "claims": [],
+   "strengths": "Nguyên lý được viết lại kỹ nhất trong 22 bài: phân biệt “rơi nhiều” với “rơi bất thường so với kỳ vọng”, cân ý định và chi phí cứu, nêu giới hạn mô hình (hành trình không tuyến tính); bộ 11 câu + drill có nhiều case L4 với lời giải nêu đúng hiểu lầm.",
+   "upgrade": "Thêm hàng “kỳ trước” vào ví dụ; thêm bảng bước × tỉ lệ × kỳ vọng × ý định × chi phí cứu; thêm phần “khi nào không dùng phễu” (mua thưa, B2B nhiều người quyết — nối dl01-05); sửa e5.035; nối dl01 (đã thay thế phần lớn) và tu01."
+  },
+  {
+   "id": "P:cac",
+   "scores": {
+    "accuracy": 12,
+    "depth": 7,
+    "practical": 12,
+    "examples": 9,
+    "pedagogy": 5,
+    "assessment": 7,
+    "data": 8,
+    "clarity": 5
+   },
+   "total": 65,
+   "bloom_items": [
+    "L2",
+    "L2",
+    "L3",
+    "L3",
+    "L3",
+    "L3"
+   ],
+   "bloom_max": "L3",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "THƯƠNG HIỆU",
+     "quote": "Thương hiệu D2C nào cũng sống hoặc chết bởi tỉ số này.",
+     "issue": "Tuyệt đối hoá và không có thương hiệu/ số nào — mục “Thương hiệu” trống nghĩa.",
+     "fix": "Thay bằng một ví dụ có số (có thể lấy từ drill: báo cáo 180.000đ vs CAC thật 400.000đ) hoặc bỏ mục."
+    },
+    {
+     "sev": "P2",
+     "where": "MỘT DÒNG",
+     "quote": "Tổng chi phí marketing và bán hàng chia cho số khách mới.",
+     "issue": "Định nghĩa đúng nhưng không phân biệt CAC gộp/ CAC trả phí/ CAC biên, và không nói kỳ đo (độ trễ giữa chi và khách).",
+     "fix": "Thêm hai dòng: ba cách tính và khi dùng cái nào; nhắc độ trễ khi so tháng."
+    },
+    {
+     "sev": "P2",
+     "where": "bộ câu hỏi",
+     "quote": "e5.016, e5.017, e5.021, e5.027 [calc]",
+     "issue": "Bốn calc đúng và có bẫy tốt nhưng tất cả ở mức L3; không có câu quyết định (có nên tăng ngân sách khi CAC X, LTV Y) hay case đọc CAC theo kênh.",
+     "fix": "Thêm judge chọn kênh theo bảng CAC × LTV theo kênh (L5) và case CAC tăng theo quy mô (L4)."
+    }
+   ],
+   "calc_check": {
+    "n": 4,
+    "ok": 4,
+    "notes": "e5.016: (60+40) triệu ÷ 500 = 200.000 ✓ (120.000 nếu quên lương). e5.017: 90 triệu ÷ 600 = 150.000 ✓ (60.000 nếu chia 1.500). e5.021: (40 + 400×0,05) triệu ÷ 400 = 150.000 ✓. e5.027: 400.000 × 37,5% = 150.000; 600.000 ÷ 150.000 = 4 tháng ✓ (1,5 nếu dùng doanh thu). Drill: (45+15) ÷ 150 = 400.000 ✓; 45 ÷ 250 = 180.000 ✓; gấp 2,22 ✓. Ví dụ: 100 triệu ÷ 500 = 200.000 ✓."
+   },
+   "claims": [],
+   "strengths": "Phần đọc số là mạnh nhất nhóm P:: bốn calc cộng drill phủ đủ bẫy (quên lương, tính cả khách cũ, quên voucher, payback bằng doanh thu) với lời giải nêu đúng hiểu lầm; bài tập “tính theo từng kênh” đúng.",
+   "upgrade": "Thêm ba biến thể CAC và kỳ đo; thêm ví dụ thương hiệu có số; thêm cơ chế vì sao CAC tăng theo quy mô (nối L:65); thêm bảng CAC theo kênh × LTV theo kênh và một judge; thêm phản ví dụ CAC thấp nhưng khách rời nhanh (nối P:retention). Đã được dl02 thay thế hoàn toàn."
+  },
+  {
+   "id": "P:ltv",
+   "scores": {
+    "accuracy": 11,
+    "depth": 7,
+    "practical": 10,
+    "examples": 8,
+    "pedagogy": 5,
+    "assessment": 6,
+    "data": 7,
+    "clarity": 5
+   },
+   "total": 59,
+   "bloom_items": [
+    "L2",
+    "L3",
+    "L3",
+    "L4"
+   ],
+   "bloom_max": "L4",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "VÍ DỤ",
+     "quote": "Biên 40%, mua 4 lần/năm, ở lại 3 năm → LTV tính được và quyết định bạn dám chi bao nhiêu để có họ.",
+     "issue": "Ví dụ thiếu giá trị đơn nên không tính được — nói “tính được” mà không tính; drill có bộ số đầy đủ (250.000 × 40% × 4 × 2 = 800.000) nhưng không nằm trong bài.",
+     "fix": "Thêm AOV vào ví dụ và viết ra kết quả; đưa drill vào bài."
+    },
+    {
+     "sev": "P2",
+     "where": "BÀI TẬP",
+     "quote": "Nếu tăng tỉ lệ giữ chân thêm 5%, LTV của bạn thay đổi bao nhiêu?",
+     "issue": "“5%” mập mờ điểm phần trăm hay tương đối; không cho công thức LTV theo churn (biên × AOV × tần suất ÷ churn) nên người học không làm được.",
+     "fix": "Viết “5 điểm phần trăm (70% → 75%)” và cho công thức vòng đời kỳ vọng ≈ 1 ÷ churn."
+    },
+    {
+     "sev": "P1",
+     "where": "THƯƠNG HIỆU",
+     "quote": "Hệ sinh thái Apple kéo dài LTV bằng chi phí chuyển đổi.",
+     "issue": "Khẳng định về thương hiệu thật, không nguồn, không số; đồng thời LỖI nói “Coi LTV là số cố định” nhưng bài không cho cách cải thiện nào ngoài giữ chân.",
+     "fix": "Gắn nhãn diễn giải hoặc src; thêm ba đòn bẩy LTV (tần suất, giá trị đơn, thời gian ở lại) với số minh hoạ."
+    }
+   ],
+   "calc_check": {
+    "n": 2,
+    "ok": 2,
+    "notes": "e5.018: 400.000 × 5 = 2.000.000; × 35% = 700.000 ✓. e5.023: 900 ÷ 300 = 3 ✓. Drill: 100.000 × 8 = 800.000 ✓; 3 năm → 1.200.000, LTV:CAC 3 ✓."
+   },
+   "claims": [
+    {
+     "claim": "Hệ sinh thái Apple kéo dài LTV bằng chi phí chuyển đổi",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Baemin … rút khỏi thị trường sau vài năm cạnh tranh bằng mã giảm giá (e5.031)",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "ngưỡng 3 mà nhiều đội dùng làm mốc (drill)",
+     "status": "illustrative-labelled",
+     "note": "Hedge hợp lý."
+    }
+   ],
+   "strengths": "Phản ví dụ “dùng doanh thu thay lãi gộp” được cả e5.006, e5.018 và drill củng cố; drill có câu “boss” đúng (“2 năm lấy từ dữ liệu hay mong muốn?”) và độ nhạy 2→3 năm.",
+   "upgrade": "Hoàn thiện ví dụ có AOV; cho công thức LTV theo churn và ví dụ 5 điểm; thêm ba đòn bẩy LTV; thêm điều kiện (LTV dự báo vs LTV lịch sử, chiết khấu thời gian); src/nhãn cho Apple; thêm judge chi bao nhiêu để có khách khi LTV X (L5). Đã được dl02 thay thế hoàn toàn."
+  },
+  {
+   "id": "P:retention",
+   "scores": {
+    "accuracy": 11,
+    "depth": 8,
+    "practical": 12,
+    "examples": 7,
+    "pedagogy": 5,
+    "assessment": 8,
+    "data": 6,
+    "clarity": 5
+   },
+   "total": 62,
+   "bloom_items": [
+    "L2",
+    "L4",
+    "L5",
+    "L3",
+    "L3",
+    "L4",
+    "L4"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "LỖI",
+     "quote": "Dùng khuyến mãi để cứu retention. Nó chỉ hoãn việc rời đi và làm hỏng giá.",
+     "issue": "Tuyệt đối hoá: ưu đãi có điều kiện trong 30 ngày đầu (onboarding) là cách giữ chân hợp lệ; bài không phân biệt.",
+     "fix": "Sửa: “Khuyến mãi không sửa được lý do rời đi; chỉ dùng như cầu nối khi đã biết lý do và đang sửa nó.”"
+    },
+    {
+     "sev": "P2",
+     "where": "VÍ DỤ · THƯƠNG HIỆU",
+     "quote": "Wrapped của Spotify là một nghi lễ giữ chân được nguỵ trang thành quà tặng. … Grab tăng số dịch vụ để tăng số lý do quay lại.",
+     "issue": "Hai diễn giải thương hiệu thật, không số, không nguồn; không có ví dụ Việt nhỏ (quán, shop) để người học quy chiếu.",
+     "fix": "Gắn nhãn diễn giải; thêm ví dụ shop nhỏ với cohort có số (như e5.019: 8.000 → 6.000 → 4.500 → 3.375)."
+    },
+    {
+     "sev": "P2",
+     "where": "BÀI TẬP",
+     "quote": "Vẽ đường cohort 6 tháng gần nhất. Nếu đường không phẳng ra, sản phẩm chưa có chỗ đứng.",
+     "issue": "Không nói “phẳng ra” đo thế nào (độ dốc giữa tháng 3 và 6 < X điểm) và không nhắc mùa vụ/ cỡ cohort.",
+     "fix": "Thêm tiêu chí minh hoạ và lưu ý cohort < 100 người nhiễu lớn."
+    }
+   ],
+   "calc_check": {
+    "n": 2,
+    "ok": 2,
+    "notes": "e5.019: 8.000 × 0,75³ = 3.375 ✓ (2.000 nếu trừ tuyến tính). e5.022: 120 triệu ÷ 3.000 = 40.000 ✓ (12.000 nếu chia 10.000)."
+   },
+   "claims": [
+    {
+     "claim": "Wrapped của Spotify là một nghi lễ giữ chân",
+     "status": "unverified",
+     "note": "Diễn giải."
+    },
+    {
+     "claim": "Grab tăng số dịch vụ để tăng số lý do quay lại",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "e5.008 (đọc dạng đường cohort) và e5.029 (trung thành với nội dung, không với nền tảng) là hai câu chẩn đoán tốt; e5.022 dạy đúng mẫu số “người đang hoạt động”.",
+   "upgrade": "Thêm cơ chế (retention = giá trị lặp lại + thói quen + chi phí chuyển đổi), tiêu chí “phẳng ra”, điều kiện mô hình mua một lần; thêm ví dụ Việt có cohort số; sửa khẳng định về khuyến mãi; nối L:59 (trùng) và dl04 (đã thay thế)."
+  },
+  {
+   "id": "P:referral",
+   "scores": {
+    "accuracy": 10,
+    "depth": 8,
+    "practical": 12,
+    "examples": 9,
+    "pedagogy": 5,
+    "assessment": 6,
+    "data": 7,
+    "clarity": 5
+   },
+   "total": 62,
+   "bloom_items": [
+    "L2",
+    "L5",
+    "L3",
+    "L4"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "e5.009",
+     "quote": "Giới thiệu bạn bè chỉ thật sự xảy ra khi nào? … ✔ b) Khi việc giới thiệu làm người giới thiệu trông tốt hơn … a) Khi phần thưởng cho cả hai bên đủ lớn … vì: Thưởng tiền mua được giao dịch, không mua được sự nhiệt tình",
+     "issue": "Mâu thuẫn với chính phần đọc: bài lấy Dropbox (thưởng dung lượng cho cả hai bên) làm ví dụ thành công và nói “Có thưởng hay không, nó bền khi…”. Với stem “chỉ … khi”, phương án a bênh được bằng ví dụ của bài.",
+     "fix": "Đổi stem thành “Điều kiện khiến giới thiệu bền, có thưởng hay không, là gì?” và sửa lời giải a: “Thưởng giúp khởi động nhưng chỉ bền khi còn lý do xã hội — như Dropbox thưởng bằng chính sản phẩm”."
+    },
+    {
+     "sev": "P1",
+     "where": "e5.014",
+     "quote": "A — “Mời bạn, cả hai nhận 1 tháng Premium” … ✔ B — Cuối năm tạo bản tổng kết gu nhạc cá nhân",
+     "issue": "So một chương trình referral thật (A) với một tính năng chia sẻ không có cơ chế mời (B) và kết luận B “hiệu quả hơn” không có số; A bênh được vì thưởng bằng sản phẩm đúng tinh thần Dropbox mà bài khen; lời giải A chỉ chê kế hoạch “3 bạn/người” là giả định, không chê cơ chế.",
+     "fix": "Đổi thành judge cùng loại (hai cơ chế mời) hoặc cho số K-factor của hai phương án để so."
+    },
+    {
+     "sev": "P2",
+     "where": "THƯƠNG HIỆU",
+     "quote": "Share a Coke (không phải referral có thưởng) biến việc mua thành việc tặng",
+     "issue": "Đã gắn nhãn tốt; nhưng Dropbox trong VÍ DỤ không nguồn, không số (chương trình nổi tiếng với số tăng trưởng công khai).",
+     "fix": "Thêm src (bài Drew Houston 2010) hoặc nhãn."
+    }
+   ],
+   "calc_check": {
+    "n": 2,
+    "ok": 2,
+    "notes": "e5.020: 2.500 × 12% = 300; × 3 = 900; × 20% = 180 ✓ (1.500 nếu quên 12%; 900 nếu quên 20%). Drill: 1.000 × 30% × 2 × 25% = 150 ✓; K = 0,15 ✓. Bài tập: 4 × 15% = 0,6 ✓."
+   },
+   "claims": [
+    {
+     "claim": "Dropbox thưởng dung lượng cho cả người mời lẫn người được mời",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Share a Coke … biến việc mua thành việc tặng",
+     "status": "illustrative-labelled",
+     "note": "Ghi rõ không phải referral có thưởng."
+    },
+    {
+     "claim": "MoMo lắc lì xì … thể lệ một số năm, ví dụ 2021, 2023 (e5.030)",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Hệ số K được định nghĩa và tính với số minh hoạ (0,6 và 0,15) kèm cách đọc “<1 là bổ sung, không thay quảng cáo”; nguyên tắc “thiết kế lý do xã hội trước phần thưởng” rõ và có phản ví dụ.",
+   "upgrade": "Sửa e5.009 và e5.014 cho khớp phần đọc; thêm điều kiện khi thưởng tiền hợp lý (sản phẩm tiện ích, giá trị đơn cao); thêm cách đo (K theo kênh, tỉ lệ khách giới thiệu thật vs tự đến); thêm bảng cơ chế × lý do xã hội × thưởng; src Dropbox; nối tu04 (đã thay thế)."
+  },
+  {
+   "id": "P:conversion",
+   "scores": {
+    "accuracy": 13,
+    "depth": 9,
+    "practical": 13,
+    "examples": 8,
+    "pedagogy": 5,
+    "assessment": 8,
+    "data": 8,
+    "clarity": 5
+   },
+   "total": 69,
+   "bloom_items": [
+    "L3",
+    "L3",
+    "L2",
+    "L3",
+    "L5",
+    "L4",
+    "L3"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "VÍ DỤ",
+     "quote": "Bỏ một trường không cần thiết trong form thường làm tỉ lệ hoàn tất tăng; đổi lại có thể mất thông tin lọc chất lượng",
+     "issue": "Ví dụ không có số dù e5.036 (11% → 19%) và drill có đủ; không gắn nhãn.",
+     "fix": "Đưa cặp 11% → 19% kèm điều kiện đo “số người đi học thật” vào ví dụ."
+    },
+    {
+     "sev": "P2",
+     "where": "BÀI TẬP",
+     "quote": "tìm bước rơi lớn nhất. Ở bước đó, đếm các quyết định",
+     "issue": "Mâu thuẫn với P:funnel (không sửa bước rơi lớn nhất mà sửa bước rơi bất thường/ ý định cao) — hai nguyên lý kề nhau dạy hai luật.",
+     "fix": "Sửa thành “bước rơi bất thường so với kỳ trước” cho nhất quán với P:funnel."
+    },
+    {
+     "sev": "P2",
+     "where": "e5.003",
+     "quote": "Cách tăng tỉ lệ chuyển đổi nhanh nhất trên một trang thường là gì?",
+     "issue": "Câu nhận lại ý bài (L2), phương án đúng ngắn nhất và là câu lặp MỘT DÒNG.",
+     "fix": "Thay bằng case: cho 5 phần tử trên trang và số click, hỏi bỏ gì trước."
+    }
+   ],
+   "calc_check": {
+    "n": 4,
+    "ok": 4,
+    "notes": "e1.011: 1,25% ✓. e1.018: +50% ✓. e5.026: 10.000 × 8% × 40% = 320 ✓. e5.039: (5−4)/4 = 25% ✓. Drill: 60 ÷ 3.000 = 2% ✓; CTR 1,5% ✓; CVR 3% → 90 đơn (+50%) ✓."
+   },
+   "claims": [
+    {
+     "claim": "trang sản phẩm gọn chỉ buộc khách quyết định một việc mỗi màn hình",
+     "status": "illustrative-labelled",
+     "note": ""
+    }
+   ],
+   "strengths": "Hedge đúng (“thường”), nêu đánh đổi chất lượng lead ngay trong ví dụ; e5.036 (đọc kết quả thử nghiệm, nhắc so trước/sau cần kiểm nguồn traffic) và e5.037 (dấu hiệu lỗi thông điệp vs giao diện) là hai câu chẩn đoán tốt; bốn calc phủ CTR/CVR/điểm %/phễu nhân.",
+   "upgrade": "Đưa số vào ví dụ; sửa bài tập cho nhất quán với P:funnel; thêm cơ chế (ma sát, số quyết định, niềm tin) và điều kiện khi “bớt đi” sai (hàng cần tư vấn, lead B2B cần lọc); thêm cỡ mẫu tối thiểu khi đọc tăng 2%→3% (nối tn02); thay e5.003 bằng case. Đã được dl01/tu01 thay thế."
+  },
+  {
+   "id": "P:pricing",
+   "scores": {
+    "accuracy": 11,
+    "depth": 8,
+    "practical": 13,
+    "examples": 8,
+    "pedagogy": 5,
+    "assessment": 8,
+    "data": 7,
+    "clarity": 5
+   },
+   "total": 65,
+   "bloom_items": [
+    "L3",
+    "L4",
+    "L4",
+    "L3",
+    "L3",
+    "L5",
+    "L2",
+    "L3",
+    "L2",
+    "L3",
+    "L3",
+    "L4",
+    "L4",
+    "L4",
+    "L2",
+    "L3",
+    "L3"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ · THƯƠNG HIỆU",
+     "quote": "Lon nhỏ giá cao của Red Bull nói rằng đây không phải nước giải khát. … Apple hiếm khi dẫn đầu bằng giá thấp.",
+     "issue": "Hai diễn giải về thương hiệu thật nêu như sự thật, không nguồn, không số (giá/ml so với nước ngọt).",
+     "fix": "Thêm so sánh giá/ml có src và ngày kiểm (ví dụ giá kệ cửa hàng tiện lợi) hoặc gắn nhãn diễn giải."
+    },
+    {
+     "sev": "P2",
+     "where": "e5.032",
+     "quote": "c) Là yêu cầu pháp lý … vì: 60 ngày vượt xa mức pháp luật yêu cầu",
+     "issue": "Khẳng định về luật bảo vệ người tiêu dùng Việt Nam không nguồn (lớp periodic/luật).",
+     "fix": "Dẫn điều luật/ nghị định với ngày kiểm hoặc viết “pháp luật không bắt buộc đổi trả không lý do cho hàng không lỗi”."
+    },
+    {
+     "sev": "P2",
+     "where": "e5.033",
+     "quote": "The Coffee House: khoảng 150 cửa hàng cuối 2023 còn khoảng 93 cuối 2024",
+     "issue": "Số liệu thương hiệu thật, lớp periodic, không src; đã gắn nhãn “Giả sử, như cách bài đọc tình huống” cho nguyên nhân (tốt).",
+     "fix": "Thêm src báo chí và ngày kiểm cho hai con số."
+    },
+    {
+     "sev": "P2",
+     "where": "BÀI TẬP",
+     "quote": "thử tăng giá 10% trong vài tuần, rồi so lượng bán và biên lợi nhuận với nhóm giữ giá cũ",
+     "issue": "Thiết kế thử đúng hướng nhưng không nói chia nhóm ngẫu nhiên/ cùng kỳ, rủi ro khách so giá giữa hai nhóm, và cỡ mẫu.",
+     "fix": "Thêm: chia theo khu vực hoặc theo ngày luân phiên, không để hai giá cùng xuất hiện trước một khách; nêu số đơn tối thiểu."
+    }
+   ],
+   "calc_check": {
+    "n": 5,
+    "ok": 5,
+    "notes": "e2.025: 25% ✓. e2.027: 40% ✓. e5.024: 33,3% ✓. e5.025: 30 triệu ÷ 150.000 = 200 ✓ (120 nếu chia giá bán; 300 nếu chia 100.000). e5.043: 60 → 67,5 triệu = +12,5% ✓. Drill: 30 triệu ÷ 25.000 = 1.200 ly ✓ (40/ngày); 65.000đ → 1.000 ly ✓."
+   },
+   "claims": [
+    {
+     "claim": "Lon nhỏ giá cao của Red Bull nói rằng đây không phải nước giải khát",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Apple hiếm khi dẫn đầu bằng giá thấp",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "The Coffee House: ~150 cửa hàng cuối 2023 còn ~93 cuối 2024 (e5.033)",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Patagonia: doanh số còn tăng khoảng 30% trong những tháng sau (e5.034)",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "60 ngày vượt xa mức pháp luật yêu cầu (e5.032)",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Bộ 17 câu rộng nhất (L2–L5, 5 calc đúng với bẫy rõ: quên chi phí biến đổi, nhầm giá vốn, lãi mất ≠ sản lượng cần tăng); bài tập thử giá trên nhóm nhỏ so với nhóm đối chứng là tư duy thí nghiệm đúng.",
+   "upgrade": "Thêm cơ chế (giá là tín hiệu + tham chiếu + biên), bảng độ co giãn minh hoạ (giá +10% → lượng −10% → lãi +12,5% như e5.043 nhưng đổi biên để thấy kết luận đổi); thêm điều kiện thử giá; src cho Red Bull/Apple/TCH/luật; thêm phản ví dụ tăng giá làm mất khách lặp lại (nối P:retention). Đã được tp11/tn04/tu03 thay thế."
+  },
+  {
+   "id": "P:social-proof",
+   "scores": {
+    "accuracy": 11,
+    "depth": 7,
+    "practical": 11,
+    "examples": 7,
+    "pedagogy": 5,
+    "assessment": 6,
+    "data": 2,
+    "clarity": 5
+   },
+   "total": 54,
+   "bloom_items": [
+    "L2",
+    "L5",
+    "L3",
+    "L2",
+    "L4",
+    "L5",
+    "L5",
+    "L2",
+    "L3",
+    "L3",
+    "L5",
+    "L4"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "gắn bài",
+     "quote": "e2.013 (mặc định), e2.036 (nhận diện phòng khám), e4.004/e4.005/e4.028/e4.033/e4.038 (KOL)",
+     "issue": "7 trong 12 câu không đo bằng chứng xã hội (mặc định, nhận diện, KOL là uy tín/ khán giả); phần đánh giá thật của chủ đề chỉ còn e1.015, e1.034, e2.014, e2.022, e2.034.",
+     "fix": "Đổi teaches; thêm calc (ví dụ tỉ lệ chuyển đổi trang có review ảnh vs không, kèm cỡ mẫu) và case đọc phân bố sao."
+    },
+    {
+     "sev": "P2",
+     "where": "VÍ DỤ",
+     "quote": "Đánh giá kèm ảnh thật của người dùng thường thuyết phục hơn một con số 4,8 sao đứng một mình (nên tự A/B test).",
+     "issue": "Hedge tốt nhưng không có số, không có điều kiện (số lượng review quá ít làm ảnh thật phản tác dụng; review quá hoàn hảo gây nghi).",
+     "fix": "Thêm bộ số minh hoạ A/B và điều kiện “càng giống mình” được đo thế nào (ngành, cỡ, tình huống)."
+    },
+    {
+     "sev": "P2",
+     "where": "LỖI",
+     "quote": "Dùng review giả. Rẻ trong ngắn hạn, mất toàn bộ độ tin cậy trong dài hạn.",
+     "issue": "Không nhắc rủi ro pháp lý (quảng cáo sai sự thật) — điểm quan trọng ở Việt Nam.",
+     "fix": "Nối kn12 và nêu một dòng về hậu quả pháp lý."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "e4.028: 80.000đ ✓ (không đo bằng chứng xã hội)."
+   },
+   "claims": [
+    {
+     "claim": "ảnh và đánh giá do khách tự đăng trên trang sản phẩm, cách nhiều shop thời trang online đang làm",
+     "status": "illustrative-labelled",
+     "note": ""
+    },
+    {
+     "claim": "Coca-Cola thay logo trên nhãn chai bằng 150 cái tên phổ biến nhất (e2.022)",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Ý “càng giống mình càng có sức nặng” và phản ví dụ “được hàng triệu người tin dùng” rõ; e1.034 và e2.034 (judge) đối lập số tự đếm không kiểm được với chi tiết người xem tự thấy được.",
+   "upgrade": "Thêm cơ chế (bất định → nhìn người khác; độ tương đồng; tính kiểm được), điều kiện phản tác dụng (ít review, review hoàn hảo, số “#1” không nguồn), cách đo A/B có cỡ mẫu, rủi ro pháp lý; cắt câu gắn lệch; nối kh08 (đã thay thế cùng P:scarcity)."
+  },
+  {
+   "id": "P:scarcity",
+   "scores": {
+    "accuracy": 12,
+    "depth": 7,
+    "practical": 11,
+    "examples": 7,
+    "pedagogy": 5,
+    "assessment": 4,
+    "data": 3,
+    "clarity": 5
+   },
+   "total": 54,
+   "bloom_items": [
+    "L2",
+    "L4",
+    "L3"
+   ],
+   "bloom_max": "L4",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "câu hỏi gắn bài",
+     "quote": "CÂU HỎI ĐỀ CHẶNG GẮN VỚI BÀI (3): e2.012 (mỏ neo trên menu) …",
+     "issue": "Chỉ 3 câu, trong đó e2.012 đo hiệu ứng mỏ neo (L:54), không đo khan hiếm; còn lại một case và một calc. Không có câu nào về khan hiếm giả/ đạo đức hay điều kiện “chưa có nhu cầu”.",
+     "fix": "Đổi teaches e2.012; thêm judge hai cách nêu giới hạn (thật vs đồng hồ giả) và case đọc dữ liệu đợt giới hạn so với nền (kiểm xem có kéo doanh số từ tuần sau — nối L:63)."
+    },
+    {
+     "sev": "P2",
+     "where": "VÍ DỤ",
+     "quote": "các phân tích hay nói khách Zara ghé cửa hàng thường xuyên hơn đối thủ (con số cụ thể chưa truy được nguồn gốc)",
+     "issue": "Thành thật về nguồn (tốt) nhưng vì vậy ví dụ không có số; không có ví dụ Việt.",
+     "fix": "Thay bằng ví dụ Việt có số minh hoạ (đợt 48 giờ: 1.200 xem → 120 vé, như e2.029) ngay trong bài."
+    },
+    {
+     "sev": "P2",
+     "where": "e2.029",
+     "quote": "Tỉ lệ chuyển đổi của đợt giới hạn là bao nhiêu phần trăm?",
+     "issue": "Calc đúng nhưng lời giải kết luận “chuyển đổi gấp đôi” mà không nhắc đợt giới hạn có thể chỉ kéo người mua sẵn ý định về sớm (vay từ tương lai) — đúng chủ đề khan hiếm cần cảnh báo.",
+     "fix": "Thêm một dòng: so tổng vé 4 tuần có/không đợt giới hạn để biết có tăng ròng."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "e2.029: 120 ÷ 1.200 = 10% ✓; đợt thường 250 ÷ 5.000 = 5% ✓."
+   },
+   "claims": [
+    {
+     "claim": "Zara thường không nhập lại mẫu đã bán hết",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "khách Zara ghé cửa hàng thường xuyên hơn đối thủ",
+     "status": "unverified",
+     "note": "Bài tự ghi “con số cụ thể chưa truy được nguồn gốc”."
+    }
+   ],
+   "strengths": "Phản ví dụ đồng hồ đếm ngược tự reset và LỖI “không ai vội với thứ họ chưa muốn” nêu đúng điều kiện áp dụng; bài thành thật về nguồn Zara.",
+   "upgrade": "Thêm cơ chế (sợ mất > ham được; tín hiệu nhu cầu người khác), cách đo tăng ròng vs vay tương lai, điều kiện đạo đức/pháp lý về khan hiếm giả (nối kn12), ví dụ Việt có số; thêm 2–3 câu đúng chủ đề. Đã được kh08 thay thế."
+  },
+  {
+   "id": "P:category-entry-point",
+   "scores": {
+    "accuracy": 12,
+    "depth": 8,
+    "practical": 12,
+    "examples": 7,
+    "pedagogy": 5,
+    "assessment": 8,
+    "data": 4,
+    "clarity": 5
+   },
+   "total": 61,
+   "bloom_items": [
+    "L5",
+    "L2",
+    "L3",
+    "L4",
+    "L3",
+    "L5"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "THƯƠNG HIỆU",
+     "quote": "Grab gắn vào từng khung giờ trong ngày.",
+     "issue": "Diễn giải không nguồn (e2.016 đã gắn nhãn “diễn giải của tác giả” nhưng bài thì không); không có số về số CEP/ tỉ lệ nhắc.",
+     "fix": "Gắn nhãn diễn giải; đưa bộ số e3.028 (B được nhắc 3/10 tình huống, 135/900 lượt) vào bài làm ví dụ đo."
+    },
+    {
+     "sev": "P2",
+     "where": "MỘT DÒNG",
+     "quote": "Sở hữu càng nhiều điểm, càng được nhớ nhiều lần.",
+     "issue": "Không nêu đánh đổi: nhiều CEP mà thông điệp loãng/ ngân sách mỏng thì không gắn được cái nào — bài tập chọn 3 có chạm ý này nhưng không giải thích.",
+     "fix": "Thêm điều kiện: ưu tiên CEP theo quy mô × mức độ cạnh tranh × độ khớp sản phẩm (nối tp02-02/-03)."
+    },
+    {
+     "sev": "P2",
+     "where": "BÀI TẬP",
+     "quote": "Liệt kê 10 tình huống dẫn đến category của bạn. Chọn 3 chưa ai sở hữu và làm nội dung cho chúng.",
+     "issue": "“Chưa ai sở hữu” không có cách kiểm (khảo sát nhắc nhớ theo tình huống) và “chưa ai sở hữu” có thể vì tình huống không đáng tiền.",
+     "fix": "Thêm bước đo: hỏi 30 khách “tình huống X bạn nghĩ tới ai?” và ước lượng tần suất tình huống."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "e3.028: 135 ÷ 900 = 15% ✓; 30% là tỉ lệ tình huống (3/10) ✓."
+   },
+   "claims": [
+    {
+     "claim": "Grab gắn vào từng khung giờ trong ngày",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Bộ 6 câu có hai judge/case chiến lược tốt (e1.006: chọn một dịp Highlands phục vụ kém; e3.034: trải đều 12 tháng × 4 dịp) và một calc tỉ trọng lượt nhắc; ví dụ ba cửa vào của cùng một món sinh động.",
+   "upgrade": "Thêm cơ chế (trí nhớ liên tưởng theo tình huống), cách đo CEP (khảo sát nhắc nhớ theo tình huống, ma trận thương hiệu × tình huống), tiêu chí ưu tiên và đánh đổi; nhãn/nguồn cho Grab; đưa số vào bài; gộp với P:salience/P:mental-availability. Đã được tp02 thay thế."
+  },
+  {
+   "id": "P:share-of-voice",
+   "scores": {
+    "accuracy": 12,
+    "depth": 9,
+    "practical": 12,
+    "examples": 10,
+    "pedagogy": 5,
+    "assessment": 7,
+    "data": 8,
+    "clarity": 5
+   },
+   "total": 68,
+   "bloom_items": [
+    "L4",
+    "L3",
+    "L2",
+    "L3",
+    "L3",
+    "L5"
+   ],
+   "bloom_max": "L5",
+   "freshness": "periodic",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "e4.012 · drill",
+     "quote": "Mối liên hệ SOV–thị phần đã được quan sát lặp lại trên nhiều bộ dữ liệu (ví dụ các phân tích của Binet & Field cho IPA) … Nghiên cứu của Binet & Field quan sát rằng ESOV dương, giữ đủ lâu, thường đi kèm tăng thị phần",
+     "issue": "Nghiên cứu được trích hai lần theo tên, không src, không năm, không ngày kiểm (lớp periodic). Đã hedge “tương quan, không phải cam kết” (tốt).",
+     "fix": "Thêm src (Binet & Field, IPA 2007/2013; Jones 1990 về ESOV) với ngày kiểm."
+    },
+    {
+     "sev": "P2",
+     "where": "gắn bài",
+     "quote": "e1.026 … Vì sao hành động này có khả năng được báo chí đưa tin hơn",
+     "issue": "Câu PR/earned media gắn teaches P:share-of-voice; bài có nhắc “earned media đo riêng, không cộng vào SOV” nhưng câu không đo điều đó.",
+     "fix": "Đổi teaches sang L:61/kn09."
+    },
+    {
+     "sev": "P2",
+     "where": "PHẢN VÍ DỤ",
+     "quote": "Đo bằng số bài đăng thay vì số người thật sự tiếp cận.",
+     "issue": "Nêu cách đo sai nhưng không nói SOV theo chi tiêu cũng có nhược (giá media khác nhau theo kênh, không đếm organic) — cần điều kiện.",
+     "fix": "Thêm: SOV chi tiêu là ước lượng; khi kênh khác giá, so bằng impressions/GRP; ghi rõ không gồm earned/organic."
+    },
+    {
+     "sev": "P2",
+     "where": "e4.013",
+     "quote": "d) … vì: Quay lại được và nền tảng không phạt như vậy",
+     "issue": "Khẳng định về cách nền tảng quảng cáo vận hành (lớp fast) không src.",
+     "fix": "Viết “không có cơ chế phạt công khai nào như vậy theo tài liệu nền tảng tại ngày …”."
+    }
+   ],
+   "calc_check": {
+    "n": 3,
+    "ok": 3,
+    "notes": "e3.025: 6 ÷ 40 = 15% ✓ (thấp hơn thị phần 20%). e4.026: 20 ÷ 80 = 25% ✓ (< 30%). e4.036: 15 ÷ (15 + 42,5) ≈ 26,1% ✓. Ví dụ: 15/100 = 15%, ESOV +5 ✓. Drill: 75 ÷ 500 = 15%, ESOV +5 ✓; 13,04% = 75 ÷ 575 sai mẫu số ✓."
+   },
+   "claims": [
+    {
+     "claim": "Binet & Field (IPA): SOV cao hơn thị phần thường đi kèm tăng thị phần",
+     "status": "unverified",
+     "note": "Hedge đúng nhưng không src."
+    },
+    {
+     "claim": "Lượt nhắc miễn phí từ tranh cãi, như Nike 2018, là earned media",
+     "status": "unverified",
+     "note": "Dùng làm ví dụ phân loại, hợp lý."
+    },
+    {
+     "claim": "Ngày đôi của Shopee dồn tiếng nói vào một thời điểm",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Ví dụ 100/15/10 → ESOV +5 và drill đều tính đúng, có câu “boss” về đối thủ tăng gấp đôi; e4.036 (judge) tính được SOV mới 26% khi đối thủ cắt nửa; mọi khẳng định về quan hệ SOV–thị phần đều hedge “xu hướng, không phải định luật”.",
+   "upgrade": "Thêm src và ngày kiểm cho Binet & Field; thêm điều kiện đo (chi tiêu vs impressions, không gồm earned), đánh đổi (ESOV dương tốn lợi nhuận ngắn hạn — khi nào không chịu được); thêm bảng SOV × thị phần × ESOV × dự báo xu hướng cho 4 thương hiệu; đổi teaches e1.026; nối kn07 (đã thay thế)."
+  },
+  {
+   "id": "P:mental-availability",
+   "scores": {
+    "accuracy": 11,
+    "depth": 7,
+    "practical": 11,
+    "examples": 7,
+    "pedagogy": 5,
+    "assessment": 7,
+    "data": 4,
+    "clarity": 5
+   },
+   "total": 57,
+   "bloom_items": [
+    "L2",
+    "L3",
+    "L4",
+    "L3",
+    "L3",
+    "L2",
+    "L3",
+    "L4",
+    "L4",
+    "L3",
+    "L3"
+   ],
+   "bloom_max": "L4",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P2",
+     "where": "THƯƠNG HIỆU",
+     "quote": "Coca-Cola chi tiền suốt một thế kỷ cho đúng việc này.",
+     "issue": "Khẳng định thương hiệu thật không nguồn, không số; không nói việc “này” được đo bằng gì.",
+     "fix": "Gắn nhãn diễn giải và thêm thước đo (nhận biết không gợi ý theo tình huống, số CEP gắn được)."
+    },
+    {
+     "sev": "P2",
+     "where": "toàn bài",
+     "quote": "Xác suất bạn được nghĩ đến trong tình huống mua. Được xây bằng tần suất, sự nhất quán và tài sản nhận diện.",
+     "issue": "Trùng gần hoàn toàn với P:salience (MỘT DÒNG) và P:category-entry-point; LỖI trùng với L:78 và e3.038. Ba nguyên lý kề nhau nói một ý.",
+     "fix": "Gộp P:salience + P:category-entry-point + P:mental-availability thành một nguyên lý có ba thành phần (được nhớ ra · ở tình huống nào · nhờ dấu hiệu gì)."
+    },
+    {
+     "sev": "P2",
+     "where": "gắn bài",
+     "quote": "e3.025 (SOV), e3.026/e4.027 (tần suất), e4.009 (nhân vật TikTok), e4.014 (độ phủ/tần suất)",
+     "issue": "5 trong 11 câu đo SOV/ tần suất/ nội dung chứ không đo mental availability; e3.013 (P1 chủ quan, xem P:distinctive-assets) cũng gắn đây.",
+     "fix": "Giữ e3.012, e3.020, e3.038, e4.017, e4.023; đổi teaches số còn lại; thêm case đọc khảo sát “nghĩ tới ai ở tình huống X”."
+    }
+   ],
+   "calc_check": {
+    "n": 3,
+    "ok": 3,
+    "notes": "e3.025: 15% ✓. e3.026: 4 lần ✓. e4.027: 4 lần ✓. (Ba calc đo SOV/tần suất, không đo mental availability.)"
+   },
+   "claims": [
+    {
+     "claim": "Coca-Cola chi tiền suốt một thế kỷ cho đúng việc này",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Duolingo quay video TikTok bằng điện thoại … chất lượng cố tình thấp (e4.017)",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Shopee gắn thương hiệu với các ngày trùng số và một đoạn nhạc hiệu lặp (e3.020)",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Phản ví dụ “chiến dịch rực rỡ rồi im lặng chín tháng” và e3.038 (đổi thông điệp mỗi quý đặt lại trí nhớ) nói đúng cơ chế quên; e3.020 phân biệt được nhớ với được yêu.",
+   "upgrade": "Gộp với P:salience/P:category-entry-point; thêm cách đo (ma trận thương hiệu × tình huống, mental market share) với bộ số minh hoạ; thêm điều kiện (category mua thưa vs mua thường); nhãn/nguồn cho Coca-Cola/Duolingo/Shopee; đổi teaches câu lệch. Đã được tp06 thay thế."
+  },
+  {
+   "id": "P:physical-availability",
+   "scores": {
+    "accuracy": 9,
+    "depth": 7,
+    "practical": 12,
+    "examples": 7,
+    "pedagogy": 5,
+    "assessment": 6,
+    "data": 3,
+    "clarity": 5
+   },
+   "total": 54,
+   "bloom_items": [
+    "L2",
+    "L4",
+    "L3",
+    "L4",
+    "L3",
+    "L2",
+    "L2",
+    "L3",
+    "L4",
+    "L4",
+    "L4",
+    "L5",
+    "L3"
+   ],
+   "bloom_max": "L5",
+   "freshness": "evergreen",
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "e4.016",
+     "quote": "✔ c) Một mạng lưới hiển thị vật lý di động, lặp lại tài sản nhận diện hàng nghìn lần mỗi ngày … vì: Đúng. Physical availability không chỉ dành cho hàng tiêu dùng. Media đi lại được là media rẻ nhất.",
+     "issue": "Lời giải dùng sai khái niệm: áo tài xế là hiển thị tài sản nhận diện (mental availability/ owned media), không phải physical availability (mua dễ đến mức nào). Bài dạy một định nghĩa (“mua bạn dễ đến mức nào”) rồi câu đề dùng định nghĩa khác.",
+     "fix": "Sửa lời giải: “đây là owned media lặp tài sản nhận diện; nó nuôi mental availability, không phải physical availability” và đổi teaches sang P:distinctive-assets/kn01."
+    },
+    {
+     "sev": "P2",
+     "where": "gắn bài",
+     "quote": "e1.003, e1.016, e1.025, e1.031 (media sở hữu từ L:56)",
+     "issue": "4 câu owned media gắn teaches P:physical-availability — cùng lỗi lẫn khái niệm; phần đo thật của chủ đề còn e1.005, e4.003, e4.019, e4.020 và nhóm kênh phân phối (e4.001/e4.002/e4.035/e4.037).",
+     "fix": "Đổi teaches 4 câu sang kn01; thêm calc độ phủ (số điểm bán có mặt ÷ tổng điểm bán trọng số doanh số) và case kệ trống."
+    },
+    {
+     "sev": "P2",
+     "where": "VÍ DỤ · THƯƠNG HIỆU",
+     "quote": "Minh hoạ: một quán cà phê ngay tầng trệt toà nhà bạn làm việc. … Coca-Cola: \"trong tầm với của khát\".",
+     "issue": "Ví dụ có nhãn (tốt) nhưng không số; khẩu hiệu Coca-Cola không nguồn; không nói physical availability trên online (vị trí trên sàn, phí ship, số bước) dù bài tập có đếm bước.",
+     "fix": "Thêm src cho câu Coca-Cola (Woodruff, 1923); thêm bộ số độ phủ minh hoạ (có mặt 30% cửa hàng chiếm 60% doanh số category) và ví dụ online."
+    },
+    {
+     "sev": "P2",
+     "where": "metadata",
+     "quote": "P:physical-availability · nguyên lý · media",
+     "issue": "Nguyên lý phân phối xếp nhóm “media”.",
+     "fix": "Đổi sang strategy/channel."
+    }
+   ],
+   "calc_check": {
+    "n": 1,
+    "ok": 1,
+    "notes": "e1.031: 7.200 ✓ (không đo physical availability)."
+   },
+   "claims": [
+    {
+     "claim": "Coca-Cola: \"trong tầm với của khát\"",
+     "status": "unverified",
+     "note": "Khẩu hiệu nội bộ nổi tiếng, không src."
+    },
+    {
+     "claim": "Highlands Coffee mở phần lớn cửa hàng ở tầng trệt các toà văn phòng (e1.005)",
+     "status": "unverified",
+     "note": ""
+    },
+    {
+     "claim": "Zara chi rất ít cho quảng cáo truyền thống, thuê mặt bằng ở phố đắt nhất (e4.019)",
+     "status": "unverified",
+     "note": ""
+    }
+   ],
+   "strengths": "Định nghĩa thao tác “có mặt ở đâu, mấy bước, mấy giây” và bài tập “tự mua như người lạ, đếm bước và chỗ bỏ cuộc” là kiểm định rẻ; e4.020 (trà sữa trong hẻm) là case chuyển giao đúng từ Highlands.",
+   "upgrade": "Sửa lẫn khái niệm ở e4.016 và đổi teaches 4 câu owned media; thêm cách đo độ phủ có trọng số và ví dụ online (vị trí tìm kiếm trên sàn, phí ship, số bước thanh toán); thêm điều kiện (thương hiệu cao cấp kiểm soát kênh — nối L:77); thêm calc độ phủ và hoà vốn khi vào chuỗi (như kn02-06). Đã được kn02 thay thế."
+  }
+ ],
+ "module_notes": {
+  "progression": "Nhóm L:53–L:78 là 26 bài đọc rời theo ngày, xoay vòng 6 nhãn (strategy/consumer/brand/media/creative/growth) chứ không theo một chuỗi năng lực — L:63 (giảm giá) đứng cách L:75 (“đắt quá”) 12 bài dù là một cặp; L:58 và L:64 (hỏi khách) gần như một bài; L:60/L:69/L:78 cùng dạy “giữ tài sản nhận diện”. Nhóm P: là 22 thẻ nguyên lý 6 dòng (một dòng · ví dụ · phản ví dụ · thương hiệu · lỗi · bài tập) không có cơ chế “vì sao”, không có số trong thân bài (trừ P:funnel, P:cac, P:share-of-voice, P:referral), và được “đánh giá” bằng câu đề chặng gắn qua trường teaches — việc gắn này lệch nhiều: ~45 trong 198 câu được gắn vào nguyên lý không đúng chủ đề (owned media → P:physical-availability; attention → P:salience; PR → P:share-of-voice/P:positioning; KOL/mặc định → P:social-proof; nội dung/TikTok → P:distinctive-assets/P:mental-availability). Bloom trần cho cả nhóm là L5 (judge/case), không có L6; không bài nào có 7 câu tự thân, nên điểm assessment đo chất lượng câu đề chặng chứ không phải bài.",
+  "overlap": [
+   "P:cac + P:ltv → thay bằng B:dl02 (8 bài: CAC gộp/theo kênh, mẫu số khách mới, LTV lãi gộp, LTV/CAC, payback, CAC biên) — mọi calc của hai nguyên lý (e5.016/017/018/021/023/027, hai drill) đều có phiên bản sâu hơn trong dl02. Hoàn toàn dư.",
+   "P:funnel + P:conversion → B:dl01 (phễu và tỉ lệ chuyển đổi, 8 bài) và B:tu01 (tối ưu trang đích); P:funnel còn đáng giữ như trang tóm tắt vì viết nuanced (rơi bất thường vs rơi nhiều) nhưng dl01-02 dạy đúng ý này với số.",
+   "P:segmentation → B:kh01; P:targeting → B:kh02; P:jobs-to-be-done → B:kh03; P:consumer-insight → B:kh04; L:58 + L:64 → B:kh05 (phỏng vấn không dẫn dắt); L:54 + L:70 → B:kh07 (mỏ neo, mặc định); P:social-proof + P:scarcity → B:kh08.",
+   "P:positioning → B:tp01; P:category-entry-point → B:tp02; L:55 → B:tp03 (tên, slogan); P:distinctive-assets + L:60 + L:69 + L:78 → B:tp04; P:brand-equity → B:tp05; P:awareness + P:salience + P:mental-availability → B:tp06 (+ B:dl05 cho cách đo); L:57 + L:68 → B:tp07; L:63 + L:75 + P:pricing → B:tp11, B:tn04, B:tu03.",
+   "L:56 → B:kn01 (owned/earned/paid); L:77 + P:physical-availability → B:kn02; L:62 + L:67 → B:kn04/kn13/kn16; L:76 → B:kn05; L:72 + P:share-of-voice → B:kn07; L:61 → B:kn09; L:59 + P:retention → B:dl04; L:65 → B:dl03/dl10 (ROAS) + B:dl06 (attribution); L:71 → B:dl08 (chỉ số phù phiếm); P:referral → B:tu04.",
+   "L:66 trùng tiêu đề và nội dung với B:tn05 “Ra mắt sản phẩm là bài toán thứ tự”; L:74 trùng tiêu đề và nội dung với B:gt05 “Brief một trang”. Hai bài này dư 100%.",
+   "Trong nội bộ legacy: L:58 ≈ L:64; L:60 ≈ L:69 ≈ L:78 ≈ P:distinctive-assets (LỖI) ≈ P:mental-availability (LỖI); P:salience ≈ P:mental-availability ≈ P:category-entry-point; L:63 e5.024 ≈ L:75 e2.025 (cùng phép “giảm 10% ăn 25% lãi”); e2.004/e2.005 (L:73) được gắn lại cho P:targeting/P:segmentation.",
+   "Còn thêm gì riêng (theo tiêu đề module B: hiện có): L:53 (marketing cho tổ chức phi thương mại, ba người cùng quyết định — chưa thấy module nào lấy tuyển sinh làm tình huống); L:73 (đối thủ là “thôi không làm gì” — ob04 có thể đã phủ, cần kiểm); L:68 (phép thử một giây/ sống sót qua giây đầu — tp07 và ob02-05 chạm một phần); L:78 (đội ngũ chán trước khách — góc nhìn nội bộ chưa thấy trong tp04/tp06); L:65 (thiết kế geo-holdout hai tỉnh — dl06 có thể chưa có thí nghiệm vùng đối chứng). Năm bài này đáng giữ như bài đọc bổ sung, không đáng giữ như bài đánh giá."
+  ],
+  "gaps": [
+   "Không bài nào trong 48 bài có câu hỏi tự thân; đánh giá chỉ qua câu đề chặng với gán teaches lệch (~45/198 câu). Cần rà lại trường teaches của toàn bộ EXAM_ITEMS theo chủ đề thật trước khi dùng điểm năng lực theo nguyên lý.",
+   "Không nguyên lý nào có mục “khi nào không dùng” rõ (chỉ có “phản ví dụ” là lỗi hình thức), và không có nối bài trước/sau — người học không biết thứ tự đọc.",
+   "Nguồn: toàn bộ 30+ khẳng định về thương hiệu thật (UNIQLO/Toray 2003, Patagonia 2011, Vinamilk 2023, Starbucks, Liquid Death, MUJI, Dropbox, Spotify, Netflix, Oatly, Red Bull, Coca-Cola, Biti’s, Shopee, Điện Máy Xanh, The Coffee House, Baemin, MoMo) và 5 trích dẫn nghiên cứu (Experian 2010, Krugman 1972, Binet & Field, Loewenstein 2015, Bruns 2018, Edison Trends 2018) đều không có src bấm được hay ngày kiểm — vi phạm quy ước lớp periodic/fast của RUBRIC-100.",
+   "Khái niệm bị lẫn ở cấp dữ liệu: physical availability ↔ owned media/ hiển thị tài sản (e4.016 và 4 câu L:56); “chỉ số tích luỹ” ↔ “chỉ số đầu vào” (L:71); P:conversion bảo sửa “bước rơi lớn nhất” trong khi P:funnel bảo sửa “bước rơi bất thường”.",
+   "Thiếu hoàn toàn trong legacy nhưng có ở B:: cỡ mẫu/ độ tin cậy khi đọc chênh lệch tỉ lệ (chỉ drill L:71 có z), pháp chế quảng cáo (kn12), B2B (kh09), đo thương hiệu bằng khảo sát có phương pháp (dl05)."
+  ],
+  "best_lesson": "L:63",
+  "weakest_lesson": "P:awareness",
+  "redundant_fully": [
+   "L:54",
+   "L:56",
+   "L:57",
+   "L:58",
+   "L:59",
+   "L:60",
+   "L:61",
+   "L:62",
+   "L:63",
+   "L:64",
+   "L:66",
+   "L:67",
+   "L:69",
+   "L:70",
+   "L:71",
+   "L:72",
+   "L:74",
+   "L:75",
+   "L:76",
+   "L:77",
+   "P:segmentation",
+   "P:targeting",
+   "P:positioning",
+   "P:brand-equity",
+   "P:awareness",
+   "P:salience",
+   "P:distinctive-assets",
+   "P:consumer-insight",
+   "P:jobs-to-be-done",
+   "P:funnel",
+   "P:cac",
+   "P:ltv",
+   "P:retention",
+   "P:referral",
+   "P:conversion",
+   "P:pricing",
+   "P:social-proof",
+   "P:scarcity",
+   "P:category-entry-point",
+   "P:share-of-voice",
+   "P:mental-availability",
+   "P:physical-availability"
+  ],
+  "still_unique": [
+   "L:53",
+   "L:55",
+   "L:65",
+   "L:68",
+   "L:73",
+   "L:78"
+  ]
+ }
+}

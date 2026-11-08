@@ -1,0 +1,101 @@
+{
+ "mod": "tn05",
+ "lessons": [
+  {
+   "id": "B:tn05-01",
+   "title": "Ra mắt toàn quốc ngay hay bán thử ở một vùng trước?",
+   "total": 65,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM / VÍ DỤ",
+     "quote": "2.400 khách mua lần đầu, 480 người mua lần hai, tỉ lệ mua lại 20%",
+     "issue": "Tỉ lệ mua lại không nêu cửa sổ đo (mua lại trong bao nhiêu tuần kể từ lần đầu) và cách nhận diện cùng một người ở cửa hàng tạp hoá (không có tài khoản). Khách mua tuần 6 chưa có cơ hội mua lại nên 20% bị kéo thấp; so với 34% đo trong \"4 tuần\" là so hai cửa sổ khác nhau.",
+     "fix": "Định nghĩa: tỉ lệ mua lại trong 4 tuần của người mua lần đầu ở tuần 1–2; nêu cách đo (thẻ thành viên, số điện thoại, hoặc panel hộ gia đình)."
+    },
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Hãng đặt ngưỡng trước là 30%",
+     "issue": "Ngưỡng 30% là benchmark không nguồn, không nói lấy từ đâu (sản phẩm tương tự? ngành?).",
+     "fix": "Ghi \"(số minh hoạ; ngưỡng lấy từ tỉ lệ mua lại của dòng trà hiện có của hãng)\"."
+    }
+   ],
+   "upgrade": "Định nghĩa cửa sổ và cách đo mua lại ở kênh tạp hoá; gắn nhãn ngưỡng 30%; thêm PHẢN VÍ DỤ và ĐÀO SÂU về chi phí trì hoãn 6 tuần so với chi phí ra mắt hỏng (có số); thêm câu L4 đọc bảng mua lại theo cohort tuần."
+  },
+  {
+   "id": "B:tn05-02",
+   "title": "Quảng cáo đã chạy mà khách ra tiệm không thấy hàng",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ / Q4",
+     "quote": "Độ phủ 30% nghĩa là khoảng 70% người xem quảng cáo sống quanh những tiệm chưa có hàng",
+     "issue": "Đánh đồng % điểm bán có hàng với % người xem không mua được; thực tế phủ thường ưu tiên tiệm lớn, đông khách nên độ phủ theo lượt khách (weighted) cao hơn 30%. Phép tính 420 triệu thiếu giả định này.",
+     "fix": "Nêu giả định \"các tiệm có lượng khách tương đương\" và giới thiệu độ phủ theo trọng số doanh số (weighted distribution)."
+    }
+   ],
+   "upgrade": "Nêu giả định của phép 600×70% và giới thiệu độ phủ theo trọng số; thêm số sau khi sửa; thay Q3 bằng câu đọc bảng 3 chặng; gắn nhãn minh hoạ; thêm chi phí kiểm kệ (người đi kiểm) vào ràng buộc thực tế."
+  },
+  {
+   "id": "B:tn05-03",
+   "title": "Nhân viên quầy chưa biết món mới thì ai giới thiệu cho khách?",
+   "total": 60,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Chênh lệch 18% và 7% gợi ý phần lớn khoảng cách đến từ đào tạo, vì 40 cửa hàng cùng giá và cùng quảng cáo",
+     "issue": "12 cửa hàng tự tổ chức uống thử là nhóm tự chọn: quản lý chủ động thường vận hành tốt hơn ở mọi mặt (trưng bày, tốc độ, upsell). Kết luận nhân quả bỏ qua lệch chọn mẫu; chính bài sau (28 cửa hàng chỉ lên 15%, không tới 18%) gợi ý một phần chênh là do quản lý, nhưng bài không nhận xét.",
+     "fix": "Ghi rõ: \"đây là tương quan; 28 cửa hàng chỉ lên 15% cho thấy một phần chênh ban đầu đến từ chất lượng quản lý\". Muốn chắc: chọn ngẫu nhiên cửa hàng được đào tạo trước."
+    },
+    {
+     "sev": "P1",
+     "where": "Q1",
+     "quote": "cùng một món mới, cùng quảng cáo, vì sao cửa hàng này bán gấp đôi cửa hàng kia?",
+     "issue": "Đề không cho dữ kiện nào để loại b) (khu thu nhập cao) hay d) (poster lớn); lời giải b) viện \"các cửa hàng khác cũng ở khu tương tự\" là dữ kiện không có trong đề. Câu đoán trước thành đoán ý tác giả.",
+     "fix": "Bổ sung vào stem: \"các cửa hàng cùng vị trí loại, cùng vật phẩm trưng bày\" hoặc đổi thành câu hỏi \"bạn cần thêm dữ kiện nào để tách nguyên nhân\"."
+    }
+   ],
+   "upgrade": "Sửa ví dụ thành tương quan có cảnh báo lệch chọn mẫu và đề xuất chọn ngẫu nhiên; thêm chi phí đào tạo và lãi để ra quyết định bằng số; thêm phản ví dụ sản phẩm có vấn đề; thay Q1 bằng câu hỏi dữ kiện cần thêm; thêm câu L4 đọc bảng 4 nhóm cửa hàng (đào tạo × khu vực)."
+  },
+  {
+   "id": "B:tn05-04",
+   "title": "Khách đầu tiên của sản phẩm mới nên là ai?",
+   "total": 64,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "nghiên cứu của Spiegel Research Center ghi nhận mức tăng rõ khi trang có vài đánh giá đầu tiên",
+     "issue": "Dẫn nghiên cứu thật nhưng không có src, năm, hay con số; bài thuộc nhóm periodic cần nguồn và ngày kiểm.",
+     "fix": "Thêm src (Spiegel Research Center, Northwestern, 2017, \"How Online Reviews Influence Sales\") và ngày kiểm, hoặc bỏ tên nghiên cứu."
+    },
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "640 người mua, 20%. Họ để lại 150 đánh giá có ảnh",
+     "issue": "Chi phí đợt (tặng chai 60 ml × 640, tin nhắn) và lãi của 640 đơn không có, nên không biết beachhead này có lãi hay là chi phí mua đánh giá; Q2 nói \"20 triệu\" nhưng ví dụ không dùng con số đó.",
+     "fix": "Thêm: giá vốn chai 60 ml, chi phí tin nhắn, lãi/đơn → chi phí mỗi đánh giá, so với 20 triệu ngân sách."
+    }
+   ],
+   "upgrade": "Thêm src cho Spiegel hoặc bỏ; thêm chi phí và lãi của đợt beachhead; thêm phản ví dụ và đào sâu; nâng Q3, Q5, Q7 từ L2–L3 lên L4 (đọc bảng tỉ lệ mở tin, mua, đánh giá theo phân khúc khách cũ)."
+  },
+  {
+   "id": "B:tn05-08",
+   "title": "Sản phẩm mới bán chạy nhưng lấy khách của chính sản phẩm cũ",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "TÌNH HUỐNG / VÍ DỤ",
+     "quote": "trà xanh có đường của chính hãng giảm 120.000 chai so với cùng kỳ",
+     "issue": "Mức mất lấy từ so cùng kỳ năm trước, không có đối chứng; bài tách 40.000 chai \"xu hướng\" nhưng không nói 40.000 lấy từ đâu (thị trường? đối thủ? năm trước?). Lãi tăng thêm 220 triệu phụ thuộc hoàn toàn vào giả định này.",
+     "fix": "Nêu nguồn của 40.000: ví dụ mức giảm của dòng có đường ở khu vực chưa phân phối bản không đường, hoặc xu hướng ngành; gắn nhãn minh hoạ."
+    }
+   ],
+   "upgrade": "Nêu nguồn của con số xu hướng và cách ước lượng (vùng đối chứng); sửa Q5 có đối chứng; thêm phản ví dụ/đào sâu; nối rõ với tn04-06; thêm câu L4 đọc bảng 2 vùng (có/không phân phối bản mới) để tự tách 40.000."
+  }
+ ]
+}

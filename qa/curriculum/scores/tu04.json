@@ -1,0 +1,176 @@
+{
+  "mod": "tu04", "scored_at": "2026-11-07", "scorer": "independent-agent", "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    { "id": "B:tu04-01",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 5 },
+      "total": 82,
+      "bloom_items": ["L3","L4","L3","L3","L4","L4","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "Nếu K lớn hơn 1, mỗi lớp khách tự sinh ra lớp sau lớn hơn — tăng trưởng tự nuôi.", "issue": "K không có yếu tố thời gian: hai chương trình cùng K = 0,5 nhưng chu kỳ mời 3 ngày và 3 tháng cho tốc độ tăng rất khác. Bài nói 'K có độ trễ' nhưng không nêu chu kỳ lan (cycle time) là tham số thứ hai.", "fix": "Thêm một câu ở Đào sâu: 'Ghi thêm thời gian trung bình từ khi một khách đăng ký đến khi bạn họ đăng ký; K = 0,5 với chu kỳ 1 tuần mạnh hơn K = 0,8 với chu kỳ 3 tháng về tốc độ.'" },
+        { "sev": "P2", "where": "Q2 (lời giải d)", "quote": "12 khách thêm trên mỗi 100 khách vẫn là giá trị, thường rẻ hơn quảng cáo", "issue": "'Thường rẻ hơn quảng cáo' là khẳng định chung không có số; bài chưa đưa chi phí mỗi khách giới thiệu (1 tháng miễn phí) vào so với CAC quảng cáo.", "fix": "Thêm vào ví dụ: 'tháng miễn phí tốn 199.000đ/khách được mời; CAC quảng cáo 350.000đ' → so sánh rõ." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "cứ 100 học viên mua bằng quảng cáo, app được tặng thêm khoảng 12 học viên", "issue": "Tổng hiệu ứng nhiều lớp là 1/(1−K) − 1 = 13,6 khách, không phải 12 (lớp hai mời tiếp). Chênh nhỏ, nhưng bài không nói đây là một lớp.", "fix": "Ghi 'khoảng 12 ở lớp đầu, ~14 nếu tính các lớp sau (1/(1−0,12))'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 1,2 × 10% = 0,12 ✓. Q4: 1.000 × 2 = 2.000; 2.000/4.000 = 0,5; 0,5 × 20% = 0,1 ✓; đáp án sai 0,4 ✓ (chia cho người đi mời). Ví dụ: 1.600/2.000 = 0,8; 240/1.600 = 15%; 0,8 × 15% = 0,12 ✓. Q5: 1,0 × 0,15 = 0,15; 0,8 × 0,20 = 0,16 ✓. Q7: 0,6 × 25% = 0,15 ✓. Q1: 240/2.000 = 0,12 ✓." },
+      "claims": [
+        { "claim": "K = lời mời mỗi khách × tỉ lệ nhận lời; K > 1 là tự lan", "status": "verified", "note": "Định nghĩa chuẩn của viral coefficient; không cần nguồn." },
+        { "claim": "App học tiếng Anh Hà Nội: 2.000 học viên, 1.600 lời mời, 240 đăng ký", "status": "illustrative-unlabelled", "note": "Dữ kiện tình huống, tự khớp." }
+      ],
+      "strengths": "Toán K đúng và nhất quán qua 7 câu; nhấn đúng bẫy 'chia cho người đi mời' (Q4, Q7) và bẫy 'K cao nhưng khách không trả phí' (phản ví dụ); Q5 buộc nhân ra thay vì so phần trăm — bộ câu hỏi tốt nhất trong ba module.",
+      "upgrade": "Thêm chu kỳ lan là tham số thứ hai; đưa chi phí mỗi khách giới thiệu và CAC quảng cáo vào ví dụ để Q2 có số; ghi chú hiệu ứng nhiều lớp 1/(1−K)." },
+
+    { "id": "B:tu04-02",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 5 },
+      "total": 78,
+      "bloom_items": ["L3","L4","L2","L3","L3","L4","L2"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4 (nhãn đáp án sai)", "quote": "[[900,\"QUEN_TI_LE_CHUYEN_DOI\"]]", "issue": "900 = 9.000 × 10% là tổng khách mới sau khi đổi — người học quên trừ số trước (600), không phải quên tỉ lệ chuyển đổi.", "fix": "Đổi nhãn thành QUEN_TRU_MUC_TRUOC." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Thử trên một nhóm, tỉ lệ nhận lời lên 10% trong khi lời mời chỉ giảm nhẹ — K tăng mà chi phí mỗi khách mới không đổi.", "issue": "Kết quả thử không gắn nhãn minh hoạ; 'chi phí mỗi khách mới không đổi' đúng (50.000đ) nhưng tổng chi phí tăng từ 30 lên 45 triệu/tháng (Q4) — bài không nói ngân sách tổng phải tăng 50%.", "fix": "Thêm '(số minh hoạ)' và một dòng: 'tổng chi thưởng tăng từ 30 lên 45 triệu vì có thêm 300 khách — cần duyệt ngân sách'." },
+        { "sev": "P2", "where": "Q3 · Q7", "quote": "Vì sao thưởng hai phía có thể làm người mời bớt ngại hơn thưởng một phía?", "issue": "Hai câu L2 nhận lại cơ chế tâm lý đã nêu; Q7 phương án đúng là câu dài, cân đối nhất.", "fix": "Thay Q7 bằng câu đọc dữ liệu ba nhóm thử (chia 50/0, 25/25, 0/50 với lời mời và tỉ lệ nhận lời từng nhóm) và hỏi nhóm nào cho chi phí mỗi khách mới thấp nhất." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 10.000 × 6% = 600; 9.000 × 10% = 900; 900 − 600 = 300 ✓. Chi phí mỗi khách mới trước/sau đều 50.000đ ✓ khớp ví dụ." },
+      "claims": [
+        { "claim": "Thưởng người được mời giúp người mời bớt ngại vì đang 'tặng' bạn", "status": "illustrative-labelled", "note": "Bài ghi rõ 'cơ chế tâm lý hợp lý, chưa phải kết quả đo được ở mọi ngành' — cách gắn nhãn tốt." },
+        { "claim": "Ví điện tử thưởng 50.000đ, tỉ lệ mở ví 6%", "status": "illustrative-unlabelled", "note": "Dữ kiện tình huống." }
+      ],
+      "strengths": "Quy tắc 'thưởng vào thừa số đang yếu' nối thẳng với công thức K của bài 01; phản ví dụ (rớt ở bước xác minh giấy tờ) chỉ ra khi tiền thưởng không phải đòn bẩy; Q2 và Q6 là hai câu chẩn đoán từ số tốt.",
+      "upgrade": "Sửa nhãn Q4; thêm dòng ngân sách tổng; thay Q7 bằng câu đọc bảng ba mức chia (L4); gắn nhãn kết quả thử." },
+
+    { "id": "B:tu04-03",
+      "scores": { "accuracy": 14, "depth": 9, "practical": 16, "examples": 11, "pedagogy": 6, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L3","L4","L3","L3","L4","L3","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Thưởng giới thiệu so với biên đóng góp kỳ vọng trong đời của khách mới, và trả theo hành vi mua thật.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Khái niệm nêu nhiều điều kiện nhưng không có tình huống làm trần thưởng sai: khách giới thiệu có số đơn trong đời khác khách thường (Q7 chạm nhưng phần đọc không), chiết khấu thời gian (lãi 3 đơn trải 12 tháng vs thưởng trả ngay), tiền thưởng người được mời thực chất là giảm giá đơn đầu nên đã nằm trong lãi đơn đầu.", "fix": "Thêm Phản ví dụ: khách giới thiệu mua 1,5 đơn → trần âm; Đào sâu: dòng tiền (trả 200.000đ hôm nay, nhận 240.000đ còn lại sau 6–9 tháng) và ngân sách tối đa theo tháng." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Mức thưởng tối đa là biên đóng góp kỳ vọng của một khách mới trong đời (số đơn kỳ vọng × lãi mỗi đơn sau giá vốn, phí giao hàng, thanh toán, hoàn trả) trừ đi phần lãi bạn muốn giữ.", "issue": "Đoạn khái niệm 9 câu dồn 6 điều kiện; cần bảng hoặc danh sách.", "fix": "Tách thành danh sách 4 bước: lãi/đơn → số đơn kỳ vọng → trừ phần giữ → so CAC." },
+        { "sev": "P2", "where": "Q5", "quote": "chi phí thưởng cho một khách qua giới thiệu là 200.000đ. Khách giới thiệu mua lại nhiều hơn.", "issue": "Dữ kiện 'mua lại nhiều hơn' được cho sẵn khiến câu thành L2; không yêu cầu tính LTV hai kênh.", "fix": "Cho số: khách quảng cáo 2,2 đơn, khách giới thiệu 3,1 đơn, lãi 120.000đ/đơn → hỏi lãi ròng mỗi khách từng kênh (quảng cáo 14.000đ, giới thiệu 172.000đ)." }
+      ],
+      "calc_check": { "n": 3, "ok": 3, "notes": "Q3: 300.000 × 40% = 120.000; × 3 = 360.000; − 160.000 = 200.000 ✓; đáp án sai 740.000 = 900.000 − 160.000 ✓ (LTV doanh thu). Q4: 2.000 × 15% = 300; × 100.000 = 30 triệu ✓. Q6: 6 × 60% = 3,6; × 1,5 = 5,4; − 2 = 3,4 ✓; ghi chú 'giữ chân dưới 1,4 năm là hết dư': 5/3,6 = 1,39 ✓. Q7 lời giải: 1,5 × 120.000 = 180.000 < 200.000 ✓." },
+      "claims": [
+        { "claim": "Lãi gộp mỗi đơn 120.000đ (giả định đã trừ phí giao hàng và thanh toán)", "status": "illustrative-labelled", "note": "Bài ghi 'số minh hoạ, giả định...'." }
+      ],
+      "strengths": "Ba câu tính đều có bẫy đúng nghề (LTV theo doanh thu, quên số năm giữ chân, chỉ nhìn đơn đầu); quyết định 'trả thưởng khi bạn mua đơn thứ hai' là thiết kế thật; Q7 buộc tính lại khi giả định sai.",
+      "upgrade": "Bổ sung Vì sao / Phản ví dụ / Đào sâu (dòng tiền, khách giới thiệu khác khách thường); tách khái niệm thành danh sách bước; cho số vào Q5 để thành câu tính LTV hai kênh." },
+
+    { "id": "B:tu04-04",
+      "scores": { "accuracy": 14, "depth": 9, "practical": 14, "examples": 12, "pedagogy": 7, "assessment": 7, "data": 7, "clarity": 5 },
+      "total": 75,
+      "bloom_items": ["L2","L3","L3","L4","L4","L2","L3"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Xin giới thiệu khi khách vừa hài lòng, không phải khi lịch gửi tin của bạn tới hạn.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Khi nào 'khoảnh khắc hài lòng' sai: sản phẩm cần thời gian thấy kết quả (khoá học, mỹ phẩm) — hài lòng lúc nhận hàng chưa phải hài lòng về kết quả; dịch vụ nhạy cảm (spa trị liệu, y tế) khách không muốn kể. Chỉ Q5/Q7 chạm một phần.", "fix": "Thêm Phản ví dụ: kem trị mụn — khách khen bao bì ngày 1 nhưng chưa biết hiệu quả; mời ngày 1 cho lời giới thiệu rỗng và tỉ lệ bạn mua thấp; dời sang khi khách mua lần 2. Thêm Đào sâu về tần suất tối đa xin giới thiệu mỗi khách." },
+        { "sev": "P2", "where": "Q3", "quote": "Mỗi mã gửi đi mang về trung bình 0,5 khách mới", "issue": "Giả định 0,5 khách mới/mã cho sẵn, tách rời khỏi dữ kiện K của bài 01 (tỉ lệ nhận lời 15–20%); không nêu cơ sở.", "fix": "Ghi '0,5 (số minh hoạ; = 2 bạn/mã × 25% nhận lời)'." },
+        { "sev": "P2", "where": "Q1 · Q6", "quote": "App đó bắt buộc khách phải chia sẻ mới cho đánh giá được", "issue": "Q1 trả lời được từ tình huống; Q6 có nhiễu vô lý (b, a) nên đáp án lộ.", "fix": "Thay Q6 bằng câu so hai vị trí đặt nút mời với tỉ lệ bấm và tỉ lệ bạn mua (vd 5 sao: 12% bấm, 30% mua; trang chủ: 3% bấm, 10% mua) và hỏi vị trí nào ra nhiều khách hơn trên 1.000 khách." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.000 × 1% × 0,5 = 5; 1.000 × 8% × 0,5 = 40; 40 − 5 = 35 ✓; đáp án sai 70 = 80 − 10 ✓ (quên nhân 0,5). Ví dụ 10 → 80 mã khớp Q3/Q4." },
+      "claims": [
+        { "claim": "Người ta thường dễ giới thiệu nhất ngay sau một trải nghiệm tốt", "status": "illustrative-labelled", "note": "Bài ghi 'quan sát thực hành phổ biến, nên đo lại với khách của bạn'." },
+        { "claim": "80 người gửi mã so với 10 khi gửi tin đầu tháng", "status": "illustrative-labelled", "note": "Ví dụ mở đầu 'Số minh hoạ' và còn nêu nhiễu (thẻ trực tiếp + lời nhắc là thay đổi đồng thời) cùng cách tách bằng A/B — mẫu mực." }
+      ],
+      "strengths": "Ví dụ gắn nhãn, tự nêu yếu tố gây nhiễu và thiết kế thử tách riêng thời điểm — hiếm trong bộ bài; Q4 chẩn đoán phễu (mã tăng 8 lần, khách tăng 5) là câu L4 đúng chất; Q7 cân nhắc tác hại khi mời khách chưa hài lòng.",
+      "upgrade": "Bổ sung Vì sao / Phản ví dụ (sản phẩm cần thời gian thấy kết quả) / Đào sâu (tần suất mời tối đa); nêu cơ sở của 0,5 khách/mã; thay Q6 bằng câu so hai vị trí bằng số." },
+
+    { "id": "B:tu04-05",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 13, "examples": 10, "pedagogy": 9, "assessment": 6, "data": 5, "clarity": 5 },
+      "total": 73,
+      "bloom_items": ["L2","L3","L3","L3","L4","L2","L3"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "theo khung STEPPS của Jonah Berger trong sách Contagious", "issue": "Dẫn tên tác giả, sách và khung thật nhưng không có src; bài liệt kê 'khác thường, gây bất ngờ, dễ chụp, giúp người kể trông thú vị' — không khớp đúng sáu chữ của STEPPS (Social currency, Triggers, Emotion, Public, Practical value, Stories), người học sẽ tưởng đó là STEPPS.", "fix": "Thêm src (sách, năm xuất bản) và viết đúng: 'STEPPS gồm 6 yếu tố; bài này dùng ba trong đó: Social currency (kể để trông thú vị), Public (dễ thấy/dễ chụp), Stories (một câu kể lại được)'." },
+        { "sev": "P1", "where": "Ví dụ · Q3", "quote": "trong 200 khách mới được hỏi, số người nói \"bạn kể\" tăng từ 20 lên 50", "issue": "So trước–sau 2 tháng không có nhóm đối chứng, không gắn nhãn minh hoạ, không nói mẫu 200 có đủ không; đồng thời không có lãi/chi phí: chả viên mời trước tốn bao nhiêu mỗi khách và 30 khách mới thêm đem lại gì. Bài về 'rẻ hơn thưởng giới thiệu' nhưng không tính.", "fix": "Thêm: 'chả viên tốn 3.000đ × 6.000 khách/tháng = 18 triệu; 30 khách mới/200 → ước +15% khách mới = 90 khách/tháng × 45.000đ × 3 lần' và ghi '(số minh hoạ; cần so với tháng cùng kỳ)'." },
+        { "sev": "P2", "where": "Q1 · Q6", "quote": "Vì sao \"một câu\" lại quan trọng với chuyện để kể?", "issue": "Hai câu L2; Q6 ba phương án sai đều nhắc 'in ấn', 'giới hạn chữ', 'nhớ tên' — nhiễu yếu.", "fix": "Thay Q6 bằng câu chấm 4 câu khách kể lại (ghi nguyên văn) xem câu nào là 'chi tiết sắc' theo tiêu chí ngắn – cụ thể – gắn sản phẩm." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20/200 = 10%; 50/200 = 25%; 25 − 10 = 15 điểm % ✓; đáp án sai 150 = tăng tương đối ✓, 30 = 50 − 20 ✓." },
+      "claims": [
+        { "claim": "Khung STEPPS của Jonah Berger (Contagious)", "status": "unverified", "note": "Tên tác giả/sách đúng theo hiểu biết chung nhưng không có src; mô tả các yếu tố không khớp sáu chữ STEPPS." },
+        { "claim": "Quán bún chả que tre 'ăn hết 3 suất trong 20 phút, miễn phí'", "status": "illustrative-unlabelled", "note": "Tình huống dựng, không gắn tên quán thật — chấp nhận." },
+        { "claim": "Số người nói 'bạn kể' tăng từ 20 lên 50 trong 200", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ 'chép biển quán bên cạnh → công kể chuyện chảy sang đối thủ' là ý sắc; Q4 (tờ ghi 'nút thứ ba lỏng, tiệm đã khâu lại') và Q5 (đổ cà phê lấy may) là hai tình huống mới kiểm đúng tiêu chí 'gắn với sản phẩm'.",
+      "upgrade": "Gắn src và viết đúng STEPPS; thêm chi phí chi tiết và giá trị khách mới để chứng minh 'rẻ hơn thưởng'; gắn nhãn số; thay Q6 bằng câu chấm câu kể nguyên văn." },
+
+    { "id": "B:tu04-06",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 5 },
+      "total": 83,
+      "bloom_items": ["L3","L4","L3","L4","L4","L2","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "1.800 tài khoản dùng chung 60 thiết bị và mua đúng một đơn. Chỉ 600 khách là thật.", "issue": "Số không gắn nhãn minh hoạ; không nêu chi phí đơn hàng 100.000đ của tài khoản giả có hoàn lại không (đơn thật đã giao → không mất trắng toàn bộ 180 triệu nếu hàng có lãi).", "fix": "Ghi '(số minh hoạ)' và một dòng: 'đơn 100.000đ của tài khoản giả có lãi gộp ~20.000đ, nên mất ròng ≈ 1.800 × 80.000 = 144 triệu'." },
+        { "sev": "P2", "where": "Q3 (nhãn đáp án sai)", "quote": "[[240,\"SAI_MAU_SO\"]]", "issue": "240 = 2.400 × 100.000 là nhân nhầm tổng khách thay vì tài khoản giả — 'sai cơ sở', không phải mẫu số.", "fix": "Đổi nhãn thành SAI_SO_LUONG." },
+        { "sev": "P2", "where": "Q6", "quote": "Điểm được tính vào thuế thu nhập nên kẻ gian sợ bị phát hiện", "issue": "Nhiễu vô lý làm câu L2 dễ; Q6 là câu duy nhất không yêu cầu đọc dữ liệu.", "fix": "Thay bằng câu đánh đổi: 'trả sau 14 ngày làm 20% khách thật phàn nàn chậm thưởng; trả ngay mất 40 triệu/tháng cho gian lận — chọn gì, đo gì?'" }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 1.800 × 100.000 = 180 triệu ✓. Q4: 2.400 × 25% = 600; 650 × 95% = 617,5; +17,5 ✓ (tol 0,6); đáp án sai −1.750 = 650 − 2.400 ✓. 1.800/60 = 30 tài khoản/thiết bị — hợp lý." },
+      "claims": [
+        { "claim": "Yêu cầu ảnh căn cước gây rủi ro dữ liệu cá nhân", "status": "verified", "note": "Nguyên tắc chung đúng; không cần nguồn." },
+        { "claim": "App mua sắm: 2.400 khách mới, 1.800 giả, 60 thiết bị", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ (nhóm bạn ký túc xá chung địa chỉ) tránh biến dấu hiệu thành luật; Q4 và Q7 buộc tách khách thật khỏi tổng — đúng chỗ người làm nghề hay sai; bộ ba biện pháp (trả sau đổi trả, giới hạn lượt, trả bằng điểm) gắn từng biện pháp với một kiểu gian lận.",
+      "upgrade": "Gắn nhãn số, tính mất ròng sau lãi đơn; sửa nhãn Q3; thay Q6 bằng câu đánh đổi siết–nới có số." },
+
+    { "id": "B:tu04-07",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 13, "examples": 10, "pedagogy": 7, "assessment": 6, "data": 6, "clarity": 5 },
+      "total": 68,
+      "bloom_items": ["L2","L4","L3","L3","L2","L2","L3"], "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "nghiên cứu của Spiegel Research Center (Northwestern) cho thấy khả năng mua đạt đỉnh ở khoảng 4,2–4,5 sao, không phải 5 sao, và tăng theo số đánh giá", "issue": "Dẫn nghiên cứu thật với số cụ thể, không có src, không ngày kiểm, không nêu phạm vi (dữ liệu bán lẻ Mỹ, một nhà bán). Kiến thức 'periodic' bắt buộc nguồn. Dải 4,2–4,5 có thể lệch với số gốc của nghiên cứu.", "fix": "Thêm src tới báo cáo Spiegel (năm), ghi đúng dải số trong báo cáo và câu 'kết quả trên dữ liệu bán lẻ Mỹ; kiểm trên danh mục của bạn'." },
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Đánh giá và video của khách là truyền miệng tới người lạ; số lượng thật quan trọng như điểm số.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nêu khi nào xin đánh giá phản tác dụng (xin đại trà kéo cả đánh giá xấu; thưởng cho đánh giá vi phạm chính sách sàn), không có đánh đổi giữa số lượng và điểm.", "fix": "Thêm Phản ví dụ: thẻ cảm ơn kèm quà 'nếu đánh giá 5 sao' bị sàn coi là thao túng — phải xin đánh giá trung thực; Đào sâu: điểm tụt từ 4,8 xuống 4,5 khi số đánh giá tăng là bình thường, theo dõi tỉ lệ mua chứ không theo dõi điểm." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Sau 2 tháng: 900 đánh giá, 4,7 điểm. Với 40.000 lượt xem trang mỗi tháng, tỉ lệ mua lên 2,2%", "issue": "Thêm 750 đánh giá trong 2 tháng từ ≈1.480 đơn (600 + 880) là ~51% khách để lại đánh giá — tỉ lệ rất cao, không ghi là giả định lạc quan. Ví dụ có nhãn minh hoạ nhưng không nói điểm này.", "fix": "Hạ về 300 đánh giá/2 tháng (~20%) hoặc ghi 'giả định tỉ lệ để lại đánh giá 50% là mức rất cao'." },
+        { "sev": "P2", "where": "Q5 · Q6", "quote": "Thuật toán TikTok ưu tiên đẩy video người thường hơn video thương hiệu", "issue": "Hai câu L2 nhận lại ý bài; nhiễu Q5 b đưa khẳng định về thuật toán nền tảng không nguồn vào đề (dù là phương án sai, lời giải 'có thể phân phối cả hai' cũng là khẳng định không nguồn).", "fix": "Thay Q5 bằng câu đọc bảng: 3 sản phẩm cùng giá với (số đánh giá, điểm, tỉ lệ mua) và hỏi bằng chứng nào ủng hộ 'số lượng quan trọng như điểm'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 40.000 × 1,5% = 600; 40.000 × 2,2% = 880; 880 − 600 = 280 ✓; đáp án sai 28.000 = 40.000 × 0,7 ✓ (nhầm 0,7 điểm % thành 70%)." },
+      "claims": [
+        { "claim": "Spiegel Research Center (Northwestern): khả năng mua đạt đỉnh ở 4,2–4,5 sao và tăng theo số đánh giá", "status": "unverified", "note": "Nghiên cứu có thật theo hiểu biết chung; dải số và phạm vi cần kiểm; không src." },
+        { "claim": "Mua đánh giá giả có thể bị sàn phạt", "status": "unverified", "note": "Khẳng định về chính sách nền tảng (Shopee) không nguồn." },
+        { "claim": "Kem chống nắng nội địa trên Shopee: 150 đánh giá 4,8; đối thủ 3.000 đánh giá 4,6; tỉ lệ mua 1,5% vs 3%", "status": "illustrative-labelled", "note": "Ví dụ kết quả ghi '(Số minh hoạ; ngoài đời cần A/B test...)'; dữ kiện tình huống không gắn nhãn." },
+        { "claim": "Đăng lại video của khách phải xin phép", "status": "verified", "note": "Nguyên tắc quyền hình ảnh/bản quyền chung; đúng." }
+      ],
+      "strengths": "Q2 chẩn đoán đúng chỗ nghẽn (niềm tin trên trang, không phải lượt xem) và loại phương án mua đánh giá giả có lý do; Q4 trả lời đánh giá 1 sao là tình huống xử lý thật.",
+      "upgrade": "Gắn src và viết đúng phạm vi nghiên cứu Spiegel; bổ sung Vì sao / Phản ví dụ / Đào sâu; chỉnh giả định tỉ lệ để lại đánh giá; thay Q5/Q6 bằng câu đọc bảng; bỏ khẳng định về thuật toán khỏi nhiễu." },
+
+    { "id": "B:tu04-08",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L4","L3","L3","L5","L4","L2","L4"], "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm (pháp lý)", "quote": "theo Luật Quảng cáo (bản sửa đổi có hiệu lực từ 01/01/2026 bổ sung trách nhiệm của người chuyển tải quảng cáo như KOL)", "issue": "Khẳng định về văn bản luật thật với ngày hiệu lực cụ thể, không có src và ngày kiểm; loại 'periodic' bắt buộc nguồn. Có câu 'hỏi pháp chế' nhưng chưa đủ.", "fix": "Thêm src tới văn bản luật sửa đổi (số hiệu, ngày thông qua), ngày kiểm, và câu 'nếu văn bản mới hơn, tin trang chính thức'." },
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Đại sứ từ khách thật chạm ít người hơn KOL, nhưng thường được tin hơn và nói lâu hơn; hãy kiểm bằng mã riêng.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu riêng (ví dụ có nêu ba điều chưa tính nhưng không thành phần phản ví dụ). Không nêu khi nào đại sứ hỏng: đại sứ bỏ chạy, nhóm chạy tan, đại sứ nói xấu khi sản phẩm lỗi — rủi ro ngược.", "fix": "Thêm Phản ví dụ: 5/25 đại sứ bỏ chạy sau 2 tháng, nhóm chạy 60 người chỉ còn 20; chi phí mỗi đơn tăng lên 250.000đ; dấu hiệu và cách chọn lại. Thêm Đào sâu về chi phí quản lý cộng đồng (Q3 có nhưng phần đọc không)." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Đại sứ là khách đã yêu sản phẩm, được thương hiệu chăm sóc để nói về nó trong vòng tròn của mình. Họ ít người theo dõi hơn KOL...", "issue": "Đoạn khái niệm 8 câu gồm định nghĩa, tiêu chí chọn, phần thưởng, khi nào dùng KOL, pháp lý — cần tách danh sách.", "fix": "Tách thành ba mục: chọn ai / cho gì / khi nào KOL thay đại sứ; đưa pháp lý vào hộp riêng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50 + 10 = 60 triệu; 60.000.000/400 = 150.000đ ✓; đáp án sai 125 ✓ (quên lương), 2.400 = 60 triệu/25 đại sứ ✓. Q1: 50 triệu/150 = 333.000đ ✓. Q4 lời giải: 75 triệu/400 = 187.500đ ✓. Ví dụ: 25 × 2 triệu = 50 triệu ✓; 400/25 = 16 ✓." },
+      "claims": [
+        { "claim": "Luật Quảng cáo sửa đổi hiệu lực 01/01/2026 bổ sung trách nhiệm người chuyển tải quảng cáo (KOL)", "status": "unverified", "note": "Phù hợp hiểu biết chung về luật sửa đổi năm 2025; không src, không ngày kiểm." },
+        { "claim": "KOL 2 bài 50 triệu → 150 đơn; 25 đại sứ → 400 đơn", "status": "illustrative-labelled", "note": "Ví dụ ghi 'Số minh hoạ' và tự nêu ba hạn chế của so sánh (chưa tính nhận biết, chưa trừ đơn vẫn xảy ra, cần sẵn 25 người) — tốt." }
+      ],
+      "strengths": "Ví dụ tự phê bình giới hạn của phép so (nhận biết không đo được, phản thực tế) — đúng chuẩn 'phân biệt dữ kiện · diễn giải · giả định'; Q4 là câu đánh đổi thật (chi phí mỗi đơn vẫn thấp nhưng mất độ tin); Q7 cho điều kiện KOL thắng — bài không một chiều.",
+      "upgrade": "Gắn src pháp lý; thêm Vì sao / Phản ví dụ (đại sứ bỏ, rủi ro ngược) / Đào sâu (chi phí quản lý); tách khái niệm thành danh sách; thêm câu tính lãi (không chỉ chi phí mỗi đơn) với biên gộp của đồ chạy bộ." },
+
+    { "id": "B:tu04-09",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 5 },
+      "total": 80,
+      "bloom_items": ["L2","L3","L3","L3","L4","L2","L3"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm · Ví dụ", "quote": "Hỏi trên một mẫu đủ lớn, ghi đều đặn, và so theo thời gian.", "issue": "'Đủ lớn' không có số: với mẫu 300, tỉ lệ 50% có sai số ≈ ±5,7 điểm % (95%); Q5 đọc xu hướng 50 → 42 → 35 mà không nói mức dao động nào là nhiễu. Bài nói về số nhưng không nêu khoảng tin cậy khi mẫu nhỏ.", "fix": "Thêm một dòng: 'mẫu 300 → sai số khoảng ±6 điểm; chênh dưới mức này giữa hai tháng chưa phải tín hiệu'; đưa vào lời giải Q5 vì sao 8 điểm liên tiếp hai lần là tín hiệu." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Nếu tiệm có 600 khách mới trong tháng, ước khoảng 300 người đến nhờ truyền miệng", "issue": "Số không gắn nhãn minh hoạ; mẫu 300/600 là hỏi được một nửa khách mới — cách nhận ra 'khách mới' tại quầy không được nêu.", "fix": "Ghi '(số minh hoạ)' và một câu: 'khách mới = người trả lời chưa từng mua / nhân viên không nhận ra'." },
+        { "sev": "P2", "where": "Q1 · Q6", "quote": "Khách hay cố tình nói dối để được nhân viên tặng thêm quà", "issue": "Hai câu L2; nhiễu Q6 a, d vô lý.", "fix": "Thay Q6 bằng câu đọc hai tháng: 'bạn kể' 50% và 46% với mẫu 300 — có phải truyền miệng giảm?" }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 150/300 = 50%; 600 × 50% = 300 ✓. Q4: 60/300 = 20% ✓; đáp án sai 10 = 60/600 ✓. Ví dụ: 150 + 60 + 75 + 15 = 300 ✓; 600 × 20% = 120 khớp đúng con số công cụ quảng cáo báo — nhất quán tốt; 300/120 = 2,5 ✓ 'gấp hơn hai lần'." },
+      "claims": [
+        { "claim": "Tiệm bánh mì Cần Thơ: 300 khách được hỏi, 150 'bạn kể', 120 từ quảng cáo Facebook", "status": "illustrative-unlabelled", "note": "Tự khớp (20% × 600 = 120)." },
+        { "claim": "Người nghe kể thường gõ tên shop trực tiếp; báo cáo ghi là 'truy cập trực tiếp'", "status": "verified", "note": "Cơ chế đo web chuẩn (direct traffic); đúng." }
+      ],
+      "strengths": "Phản ví dụ (hỏi giờ cao điểm → mục 'khác' phình) và Đào sâu (đa điểm chạm cộng vượt 100%, hỏi 'nguồn đầu tiên') là kinh nghiệm đo thật; Q5 đọc xu hướng ba tháng là câu L4 tốt; ví dụ nhất quán tới mức số Facebook trong mẫu khớp số công cụ báo.",
+      "upgrade": "Thêm sai số mẫu (±6 điểm với n=300) vào khái niệm và Q5; gắn nhãn số; định nghĩa 'khách mới' tại quầy; thay Q6 bằng câu phân biệt nhiễu – tín hiệu." }
+  ],
+  "module_notes": {
+    "progression": "Mạch 01 (K) → 02 (thưởng phía nào) → 03 (trần thưởng) → 04 (thời điểm xin) → 05 (truyền miệng tự nhiên) → 06 (gian lận) → 07 (review/UGC) → 08 (đại sứ vs KOL) → 09 (đo khi không có mã) hợp lý: ba bài đầu là toán của chương trình giới thiệu, bốn bài sau mở sang truyền miệng không có mã, bài cuối đo. Toán K nhất quán và đúng qua 01, 02, 04 (số lời mời × tỉ lệ nhận lời). Nên đặt 06 (gian lận) ngay sau 03 vì nó là hệ quả của thưởng tiền.",
+    "overlap": ["01 Phản ví dụ, 03 Q7 và 06 cùng nói 'tính theo khách trả phí / có đơn thứ hai' — đúng nhưng lặp ba lần.", "04 (xin giới thiệu lúc hài lòng) và 07 Q7 (xin đánh giá sau vài ngày dùng) cùng một nguyên tắc thời điểm.", "05 Đào sâu và 09 cùng công cụ 'hỏi khách biết qua đâu'."],
+    "gaps": ["Chu kỳ lan (cycle time) và tốc độ tăng trưởng từ K — bài 01 chỉ có K.", "Chi phí mỗi khách giới thiệu so với CAC quảng cáo chỉ xuất hiện ở 03 Q5 dưới dạng cho sẵn; chưa có bài tính CAC hoà trộn (blended) khi thêm kênh giới thiệu.", "Hợp đồng/điều khoản với KOL và đại sứ (gắn nhãn #quảngcáo, quyền dùng nội dung) chỉ nhắc một câu ở 08.", "Ba khẳng định tên thật (STEPPS/Berger ở 05, Spiegel ở 07, Luật Quảng cáo 2026 ở 08) đều không có src — cần một lượt gắn nguồn."],
+    "best_lesson": "B:tu04-06",
+    "weakest_lesson": "B:tu04-07"
+  }
+}

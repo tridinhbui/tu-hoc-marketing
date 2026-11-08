@@ -1,0 +1,112 @@
+{
+ "mod": "ob02",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:ob02-01",
+   "where": "Q7",
+   "status": "fixed",
+   "change": "Đề Q7 thêm “(số đếm minh hoạ, không phải khảo sát thật)” sau “Kệ sữa chua ở một cửa hàng”.",
+   "key_changed": false,
+   "note": "Giữ tên hãng vì đề hỏi đọc dữ kiện; nhãn chặn việc nhớ “Vinamilk chiếm nửa kệ” như dữ kiện thật. Khoá b giữ. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob02-01",
+   "where": "KHÁI NIỆM",
+   "status": "fixed",
+   "change": "“siêu thị chia chỗ theo doanh số và theo hợp đồng trưng bày” → “theo thực hành phổ biến trong ngành bán lẻ, siêu thị thường chia chỗ theo doanh số, theo hợp đồng trưng bày… và theo sơ đồ kệ (planogram) của chính chuỗi, vốn có thể ưu tiên nhãn riêng; chi tiết khác nhau giữa các chuỗi.” Lời giải Q1a thêm “thường” và “sơ đồ kệ của chuỗi”.",
+   "key_changed": false,
+   "note": "Dùng cách gắn nhãn “thực hành phổ biến” mà worklist cho phép; không thêm src vì không có trang chính thức chắc chắn. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob02-02",
+   "where": "TÌNH HUỐNG ↔ VÍ DỤ",
+   "status": "fixed",
+   "change": "VÍ DỤ: “mỗi cửa hàng bán thêm 300 lon” → thêm “(từ khoảng 790 lên khoảng 1.090 lon/tháng, đúng mức +38%)”.",
+   "key_changed": false,
+   "note": "300 ÷ 790 ≈ 38%. Q3 (−800) không đổi. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob02-02",
+   "where": "KHÁI NIỆM",
+   "status": "fixed",
+   "change": "“bị tính phí trưng bày cao nhất” → “thường bị tính phí trưng bày cao hơn các tầng khác (thực hành phổ biến, không phải quy định; ở nhiều chuỗi, đầu kệ hay quầy thu ngân có thể còn đắt hơn)”.",
+   "key_changed": false,
+   "note": "Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob02-03",
+   "where": "Q6",
+   "status": "fixed",
+   "change": "Đề Q6 thêm dữ kiện loại trừ (chữ đủ to, giá ngang quán quanh đó, khách mất 2 phút trước khi nhân viên kịp hỏi) và đổi câu hỏi thành “Giả thuyết nào nên kiểm trước, và kiểm thế nào?”; bốn phương án viết lại thành giả thuyết + cách kiểm; đáp án b: “Quá nhiều lựa chọn: rút gọn menu ở một ngày, so thời gian gọi với ngày thường”; lời giải b nói rõ đây là giả thuyết, dẫn Scheibehenne 2010 và Chernev 2015. Thêm src cho hai nghiên cứu (doi.org, đã kiểm metadata qua Crossref).",
+   "key_changed": false,
+   "note": "Khoá vẫn là b (cùng giả thuyết quá tải lựa chọn), nhưng giờ là câu giả thuyết–kiểm nên không còn mâu thuẫn với hiệu ứng trung bình ≈ 0. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob02-03",
+   "where": "KHÁI NIỆM",
+   "status": "fixed",
+   "change": "Khái niệm: “nghiên cứu theo dõi mắt” → “một nghiên cứu theo dõi mắt — Yang, 2012 — … và không tìm thấy “điểm ngọt” ở góc trên bên phải”; thêm src Yang 2012 (International Journal of Hospitality Management, doi 10.1016/j.ijhm.2011.12.008 — người chấm ghi nhầm là Cornell Hospitality Quarterly). VÍ DỤ: bỏ “nằm đúng chỗ mắt nhìn đầu tiên”, thay bằng “được đóng khung, có hình — hai tín hiệu chắc hơn vị trí góc trên bên phải”.",
+   "key_changed": false,
+   "note": "DOI kiểm qua Crossref ngày 2026-11-08; st:'chua' để người kiểm nguồn xác nhận. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob02-03",
+   "where": "VÍ DỤ",
+   "status": "fixed",
+   "change": "Thêm số ly/ngày (trong 200 ly cả quán): cà phê sữa 80, cà phê muối 55, cold brew 5 → lãi/ngày 1,76 triệu; 1,98 triệu; 255 nghìn; kết luận cà phê muối dựa trên lãi × số ly.",
+   "key_changed": false,
+   "note": "Không thêm bảng 5 món vì bạc xỉu và trà trái cây không có giá vốn trong tình huống; 3 món có giá vốn đủ để áp tiêu chí lãi × phổ biến. Khớp Q5 (200 ly/ngày). Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob02-04",
+   "where": "Q2 phương án d",
+   "status": "fixed",
+   "change": "Phương án d (đáp án): “Gói nhỏ, giá dưới mốc tròn 100.000đ để khách dám thử” → “Gói nhỏ, rủi ro tiền thấp để người thử lần đầu dám mua”.",
+   "key_changed": false,
+   "note": "Khoá d giữ; lời giải d vốn đã nói về rủi ro nhỏ nên không phải sửa. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob02-05",
+   "where": "KHÁI NIỆM",
+   "status": "fixed",
+   "change": "“Quy tắc kinh nghiệm: chỉ chốt khi mỗi ảnh có khoảng 30 đơn…” → “Kinh nghiệm (không phải chuẩn thống kê): chờ vài chục đơn mỗi ảnh, chênh phải lớn mới tạm tin, rồi kiểm bằng máy tính A/B — chênh 30 so với 40 đơn vẫn có thể là ngẫu nhiên.” VÍ DỤ đổi theo: “chỉ chốt khi mỗi ảnh có vài chục đơn trở lên và chênh rõ”.",
+   "key_changed": false,
+   "note": "Không ghi ngưỡng ≥30–40% của người chấm vì không có nguồn. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob02-05",
+   "where": "TÌNH HUỐNG / KHÁI NIỆM",
+   "status": "fixed",
+   "change": "Thêm vào TÌNH HUỐNG: “(Nhãn Mall, số “đã bán” theo giao diện Shopee tại ngày kiểm 2026-11-07; giao diện sàn hay đổi, nếu màn hình bạn thấy khác, tin trang chính thức.)” Thêm src trang Shopee Mall (https://shopee.vn/mall), st:'chua'.",
+   "key_changed": false,
+   "note": "Đặt câu dự phòng ở tình huống để khái niệm không vượt 170 chữ. Cần người kiểm nguồn mở trang xác nhận (st:'chua'). Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob02-05",
+   "where": "Q4 lời giải",
+   "status": "fixed",
+   "change": "Lời giải b: “đủ lớn để chênh 30 đơn không còn là ngẫu nhiên” → “đủ để nghiêng về ảnh 1; nhưng kiểm thống kê cho thấy chênh này mới sát ngưỡng, nên vẫn nên chạy thêm một kỳ trước khi khoá”. Lời giải c bỏ “số đơn đã đủ lớn nên không cần chờ thêm”, thay bằng “chọn tạm ảnh 1 rồi chạy thêm một kỳ để xác nhận”.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: 120 vs 90 trên 100.000 hiển thị mỗi nhánh, z ≈ 2,07 — lỗi đúng. Khoá b giữ. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob02-07",
+   "where": "VÍ DỤ",
+   "status": "fixed",
+   "change": "“đây thường được xem là một trong những chỗ sinh tiền hiệu quả nhất cửa hàng” → phép so: 1,2 triệu ÷ 0,5 m = 2,4 triệu/m/ngày so với kệ mì 3 m bán 4,5 triệu/ngày = 1,5 triệu/m/ngày (số minh hoạ).",
+   "key_changed": false,
+   "note": "Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "id": "B:ob02-08",
+   "where": "KHÁI NIỆM",
+   "status": "fixed",
+   "change": "Khái niệm: thêm “theo quan sát phổ biến trong ngành hàng tiêu dùng nhanh (chưa phải quy luật, cần kiểm bằng số của từng ngành hàng)” trước “hãng ở giữa thường mất nhiều nhất”; lời giải Q7b thêm “(không phải quy luật)” và cách kiểm (so phần doanh số mất của từng hãng).",
+   "key_changed": false,
+   "note": "Dùng phương án hedge mà worklist cho phép; không thêm src vì không chắc một nguồn cụ thể. Khoá Q7 (b) vẫn là phương án tốt nhất. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

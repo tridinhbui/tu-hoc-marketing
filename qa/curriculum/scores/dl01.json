@@ -1,0 +1,187 @@
+{
+  "mod": "dl01",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:dl01-01",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L4", "L3", "L3", "L2", "L5", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Từng bước: vào trang → xem sản phẩm 2.000/10.000 = 20%", "issue": "Bộ số 10.000/2.000/500/200 tự khớp nhưng không gắn nhãn minh hoạ; người học có thể coi 20%/25%/40% là mức tham chiếu thật của shop giày.", "fix": "Thêm một câu 'Số liệu minh hoạ, dựng để tích ba bước ra đúng 2%' ở đầu ví dụ hoặc đặt cờ assume." },
+        { "sev": "P2", "where": "Q4", "quote": "12% này tính trên người vào trang hay trên người đã thêm giỏ?", "issue": "Ba phương án sai đều là câu hỏi 'so với bên ngoài' (ngành, ngân sách, đối thủ); phương án đúng là phương án duy nhất nói về mẫu số — đoán được từ ý chính của bài (L2).", "fix": "Đổi một phương án sai thành câu hỏi nội bộ hợp lý nhưng chưa ưu tiên, ví dụ 'Kỳ đo là tuần hay tháng?', để buộc so hai câu hỏi đều chính đáng." },
+        { "sev": "P2", "where": "Q6", "quote": "sai hay gặp: [[10,\"SAI_TINH_TOAN\"],[15,\"SAI_TINH_TOAN\"]]", "issue": "10% = 3% ÷ 30% và 15% = 3% ÷ 20% là lỗi 'chia cho một bước thay vì tích hai bước' — mã SAI_TINH_TOAN không nhắc được đúng hiểu lầm.", "fix": "Gắn mã SAI_MAU_SO và ghi lời giải 'bạn mới chia cho một bước, phải chia cho tích 0,3 × 0,2'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 96 ÷ 320 = 30% ✓ (sai 1,2 = 96/8.000; 6 = 96/1.600 ✓). Q6: 0,03 ÷ (0,3 × 0,2) = 50% ✓. Q1: 0,25 × 0,25 × 0,32 = 0,02 ✓, 40 → 32 là tụt 8 điểm ✓. Q5: 2% × 200 = 4 đơn kỳ vọng ✓." },
+      "claims": [
+        { "claim": "Phễu shop giày 10.000 → 2.000 → 500 → 200", "status": "illustrative-unlabelled", "note": "Số tự khớp (tích = 2%) nhưng bài không nói là minh hoạ." },
+        { "claim": "Q5: 6 đơn so với 4 đơn trên 200 lượt 'nằm trong dao động ngẫu nhiên thường gặp'", "status": "illustrative-labelled", "note": "Đúng về thống kê (Poisson sd ≈ 2), bài nêu như nhận định định tính." }
+      ],
+      "strengths": "Phản ví dụ (lượt vào tăng, bước giỏ → đơn giữ 40%) đổi hẳn kết luận; Q1 buộc nhìn cấu trúc bên trong một tích không đổi; Q5 dạy không kết luận trên 2 đơn chênh.",
+      "upgrade": "Gắn nhãn minh hoạ cho bộ số; thêm vào ĐÀO SÂU một quy tắc tay về nhiễu (chênh dưới ~2√n đơn chưa phải xu hướng) và dùng nó trong lời giải Q5; đổi Q4 thành câu so hai câu hỏi đều chính đáng; thêm một câu L4 đọc bảng hai tháng với ba bước đổi theo hướng khác nhau và hỏi bước nào cần xem trước."
+    },
+    {
+      "id": "B:dl01-02",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 15, "examples": 8, "pedagogy": 6, "assessment": 8, "data": 6, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM / VÍ DỤ", "quote": "sửa form thường chỉ là bớt ô nhập, rẻ hơn nhiều so với làm lại trang", "issue": "Tiêu chí quyết định của bài là 'số khách thêm ở đáy trên mỗi đồng công sức' nhưng vế công sức chưa bao giờ được định lượng; kết luận 'sửa form trước' dựa trên khẳng định 'rẻ hơn nhiều' chứ không trên phép chia. Nếu làm lại trang chỉ tốn 1,5 lần công thì kết luận đổi (150 người so với 120 người).", "fix": "Thêm số: ví dụ bớt ô nhập = 2 ngày công; làm lại trang = 15 ngày công → 60 người/ngày so với 10 người/ngày; nêu điều kiện khi nào bước đầu thắng (công làm lại trang dưới 2,5 ngày)." },
+        { "sev": "P2", "where": "Q1", "quote": "Bước to nhất gần như luôn mất nhiều người nhất; đó là tính chất của phễu", "issue": "Khái quát hoá; đúng cho phễu thu hẹp dần nhưng phễu có bước đầu cao (ví dụ 90% bấm) thì bước giữa mất nhiều hơn.", "fix": "Sửa thành 'trong phễu mà tỉ lệ từng bước tương tự nhau, bước đầu mất nhiều người nhất chỉ vì to nhất'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Đừng chọn bước để sửa theo số người mất hay tỉ lệ thấp", "issue": "Bài thiếu VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU; không có tình huống nào mà 'sửa bước đáy' là sai (ví dụ bước đã chạm trần).", "fix": "Thêm phản ví dụ: bước đến học 60% đã là trần của ngành học thử, cải thiện 5 điểm là bất khả thi, nên loại dù về số có vẻ đẹp." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 4.000 × 30% = 1.200 (+200) × 60% = 120 ✓; sai 200 = quên × 60% ✓, 1.200 = tổng điền form ✓. Ví dụ: bước đầu 25% → 5.000 × 25% × 60% = 750 (+150) ✓; form 30% → 1.200 × 60% = 720 (+120) ✓." },
+      "claims": [
+        { "claim": "Phễu trung tâm tiếng Anh Đà Nẵng 20.000 → 4.000 → 1.000 → 600", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Q2: làm lại trang 3 tuần, bớt ô nhập 2 ngày", "status": "illustrative-unlabelled", "note": "Chỉ xuất hiện ở câu hỏi, không ở phần đọc." }
+      ],
+      "strengths": "Q7 (form ngắn kéo người ít cam kết, tỉ lệ đến học giảm) dạy nhìn đáy phễu thay vì bước vừa sửa; Q5 (rò tăng đột ngột → tự đặt thử đơn) là chẩn đoán đúng nghề.",
+      "upgrade": "Định lượng vế công sức và viết công thức 'khách thêm ở đáy ÷ ngày công' thành bảng hai dòng; bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU (trần tự nhiên của từng bước, chi phí cơ hội); đổi Q2 (đã trùng ví dụ) thành tình huống số khác để người học phải tính lại thay vì nhận lại."
+    },
+    {
+      "id": "B:dl01-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 13, "examples": 9, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "nút \"Đặt hàng\" bị bàn phím che", "issue": "Chi tiết nguyên nhân được kể như phát hiện thật của shop nhưng là dựng; cùng với bộ số 4.000/12.000 không gắn nhãn minh hoạ.", "fix": "Mở ví dụ bằng 'Minh hoạ:' và viết 'giả sử tách tiếp thấy…'." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "Viết một câu: nhóm nào lớn nhất và tỉ lệ của nó so với tỉ lệ chung thế nào", "issue": "Đầu ra chỉ là một câu mô tả, chưa ra quyết định (sửa gì, đo lại khi nào).", "fix": "Yêu cầu thêm: ước số đơn thêm nếu nhóm lớn nhất lên bằng 2/3 nhóm tốt nhất, rồi chọn có đáng tự đi thử phễu trên thiết bị đó không." },
+        { "sev": "P2", "where": "Q5", "quote": "Kết luận nào vội vàng nhất?", "issue": "Câu đảo cực (chọn phương án sai) đặt giữa sáu câu chọn phương án đúng; người đọc nhanh dễ chọn a hoặc d vì chúng 'nghe đúng'.", "fix": "In đậm 'VỘI VÀNG NHẤT' hoặc đổi thành câu hỏi thuận 'Kết luận nào cần thêm dữ liệu nhất'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 12.000 × (4% − 2%) = 240 ✓; sai 480 = tổng đơn sau sửa ✓, 2 = điểm phần trăm ✓. Ví dụ: 480/16.000 = 3% ✓; 12.000 × 4% + 240 = 720 ✓ (tăng 50% ✓). Q6: 25%/3% ≈ 8,3 lần ✓." },
+      "claims": [
+        { "claim": "Shop gia dụng: máy tính 4.000 lượt/240 đơn, điện thoại 12.000 lượt/240 đơn", "status": "illustrative-unlabelled", "note": "Tự khớp với tỉ lệ gộp 3%." },
+        { "claim": "Hơn 70% khách vào bằng điện thoại", "status": "illustrative-unlabelled", "note": "Suy ra từ 12.000/16.000 = 75% ✓." }
+      ],
+      "strengths": "Dạy đủ ba bẫy của tỉ lệ gộp: che nhóm tệ, trượt do cơ cấu (Q4), và lát cắt quá nhỏ (Q6, phản ví dụ); ĐÀO SÂU có bài kiểm tra tự làm (nhân tỉ trọng cộng lại).",
+      "upgrade": "Gắn nhãn minh hoạ; thêm bảng 3 cột (nhóm, lượt vào, tỉ lệ) cho hai tháng để Q4 thành câu đọc bảng; nêu ngưỡng tối thiểu mỗi lát (ví dụ ≥ 30 đơn) trong ĐÀO SÂU; nâng ÁP DỤNG thành quyết định có số."
+    },
+    {
+      "id": "B:dl01-04",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L3", "L5", "L3", "L5", "L3", "L4", "L6"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4", "quote": "Với vài chục đơn, chênh 8 đơn nằm trong dao động thường gặp", "issue": "Nhận định đúng (sd ≈ √56 ≈ 7,5) nhưng không cho người học quy tắc để tự kiểm; lần sau gặp 60 → 40 họ không biết đã vượt nhiễu hay chưa.", "fix": "Thêm vào ĐÀO SÂU: 'quy tắc tay: chênh nhỏ hơn 2 × căn bậc hai số đơn (ở đây 2 × √60 ≈ 15) chưa đáng báo động' và dùng trong lời giải Q4." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tuần trước: 10.000 vào, 500 đơn, tỉ lệ 5%. Tuần này: 8.000 vào, 400 đơn, tỉ lệ 5%.", "issue": "Số dựng khớp quá đẹp (tỉ lệ giữ nguyên tuyệt đối) và không gắn nhãn minh hoạ.", "fix": "Ghi 'minh hoạ' và cho tỉ lệ lệch nhẹ (5,0% so với 4,9%) để dạy đọc 'gần như không đổi'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 500 → 400 = −20% ✓; sai 1 = điểm phần trăm ✓, 25 = 100/400 ✓. Q6: 13.000 × 3,5% = 455 so với 500 ✓. Q1: 400/8.000 = 5% ✓." },
+      "claims": [
+        { "claim": "Shop trà sữa 500 → 400 đơn, 10.000 → 8.000 lượt", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Tháng 1 thường là mùa mua sắm trước Tết", "status": "unverified", "note": "Hợp lý với lịch Việt Nam nhưng nêu như sự thật chung." }
+      ],
+      "strengths": "Tách 'đơn = lượt vào × tỉ lệ' thành hai nguồn biến động là khung dùng được ngay; Q7 (bảng hai cột cho cuộc họp 5 phút) là câu thiết kế hiếm thấy; phản ví dụ đổi hẳn kết luận.",
+      "upgrade": "Thêm quy tắc tay về nhiễu và bảng bốn tuần mẫu trong ĐÀO SÂU (đã gợi ý nhưng chưa vẽ); gắn nhãn minh hoạ; thêm một câu L4 cho bảng bốn tuần với một tuần có khuyến mãi để người học tự chọn mốc so."
+    },
+    {
+      "id": "B:dl01-05",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 14, "examples": 8, "pedagogy": 6, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Bước gặp → báo giá 40% (cứ 10 lần gặp có 4 lần đủ nhu cầu để báo giá) chưa có gì bất thường so với kỳ vọng của dịch vụ cần tư vấn", "issue": "Đưa một mức benchmark ngầm ('kỳ vọng của dịch vụ cần tư vấn') không nguồn, không gắn nhãn, rồi dùng nó để kết luận bước lead → gặp mới là chỗ cần xem; đi ngược chính bài dl01-08 (không dùng mốc ngành không mẫu số).", "fix": "Bỏ mốc ngầm; lập luận bằng dữ liệu nội bộ: 70% lead rơi trước khi gặp và hai đội chưa có định nghĩa chung, nên đó là chỗ rẻ nhất để làm rõ trước." },
+        { "sev": "P2", "where": "Q3", "quote": "Tỉ lệ lead → ký cả phễu là 3%. Công ty muốn ký 15 hợp đồng. Cần bao nhiêu lead?", "issue": "Giả định tỉ lệ 3% giữ nguyên khi tăng lead 67% (nguồn lead không đổi, đội bán đủ sức gặp 150 cuộc) không nêu trong đề; Q7 có nói nhưng đề Q3 không.", "fix": "Thêm vào đề: 'giả sử tỉ lệ các bước và năng lực đội bán không đổi'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Phễu B2B cần định nghĩa chung giữa hai đội", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; không nói đến giá trị hợp đồng (pipeline theo tiền) dù Q1 c nhắc.", "fix": "Thêm ĐÀO SÂU về phễu theo giá trị (weighted pipeline) và phản ví dụ: lead ít nhưng ký hợp đồng lớn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 15 ÷ 0,03 = 500 ✓; sai 45 = 15 × 3 ✓. Ví dụ: 90/300 = 30%, 36/90 = 40%, 9/36 = 25%, 9/300 = 3% ✓; 75 ngày ≈ 2,5 tháng ✓. Q6: 1/120 = 0,83% < 3% ✓." },
+      "claims": [
+        { "claim": "Công ty phần mềm kho Bình Dương: 300 lead → 90 → 36 → 9, chu kỳ 75 ngày", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "'Kỳ vọng của dịch vụ cần tư vấn' cho bước gặp → báo giá 40%", "status": "unverified", "note": "Benchmark ngầm, không nguồn." },
+        { "claim": "Quảng cáo LinkedIn và hội thảo là kênh lead B2B", "status": "unverified", "note": "Chỉ nêu tên kênh, không có số gắn." }
+      ],
+      "strengths": "Nêu đúng ba khác biệt của phễu B2B (định nghĩa chung, độ trễ/cohort, chủ thể từng bước); Q4 và Q6 buộc đọc theo nhóm lead cùng tháng; Q7 đưa ràng buộc năng lực đội bán.",
+      "upgrade": "Bỏ benchmark ngầm; thêm bảng cohort 3 tháng (lead tháng 1/2/3 và số ký theo tháng) rồi đặt một câu L4 đọc bảng; bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU gồm phễu theo giá trị; làm ÁP DỤNG có đầu ra số (số lead cần cho quý tới kèm thời điểm)."
+    },
+    {
+      "id": "B:dl01-06",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 17, "examples": 10, "pedagogy": 7, "assessment": 9, "data": 9, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L5", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4", "quote": "sai hay gặp: [[1.11,\"ROAS_LA_LOI_NHUAN\"]]", "issue": "1,11 = 40 ÷ 36 là tính hoàn vốn bằng doanh thu thay vì lãi gộp; mã ROAS_LA_LOI_NHUAN hiện lời nhắc 'Coi doanh thu trừ quảng cáo là lợi nhuận' — không khớp lỗi, trong khi mã HOAN_VON_TINH_DOANH_THU đã có sẵn.", "fix": "Đổi mã thành HOAN_VON_TINH_DOANH_THU." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "Chủ chuỗi đồng ý, kèm điều kiện đo lại sau 4 tuần", "issue": "Không có PHẢN VÍ DỤ/ĐÀO SÂU trong phần đọc; tình huống 'bước sau xấu đi' chỉ xuất hiện ở Q6, người học không làm quiz sẽ bỏ lỡ.", "fix": "Chuyển nội dung Q6 (34% × 72% → chỉ thêm 14 lượt) thành PHẢN VÍ DỤ; thêm ĐÀO SÂU về chi phí phục vụ biến đổi và sức chứa spa." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Nếu biên lãi gộp dịch vụ khoảng 50%", "issue": "Biên là giả định nêu bằng 'nếu' (tốt) nhưng toàn bộ phễu 30.000/3.000/900/720 và giá 600.000đ không gắn nhãn minh hoạ.", "fix": "Thêm 'Minh hoạ:' ở đầu tình huống hoặc đặt cờ assume." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 3.000 × 5% = 150 × 80% = 120 × 600.000 = 72 triệu ✓; sai 90 = 150 × 600k ✓, 630 = 1.050 × 600k ✓. Q4: 36 × 50% = 18; 40 ÷ 18 = 2,22 ✓ (tol 0,05 ✓). Ví dụ: 40/36 = 1,11 ✓. Q5: 30.000 × 1% × 30% × 80% = 72 so với 900 × 10% = 90 ✓. Q6: 3.000 × 34% × 72% = 734 ✓. Q1: 150/900 = 16,7% ✓." },
+      "claims": [
+        { "claim": "Spa Hà Nội 30.000 → 3.000 → 900 → 720, giá trị 600.000đ, agency 40 triệu hứa +5 điểm", "status": "illustrative-unlabelled", "note": "Số tự khớp." },
+        { "claim": "Biên lãi gộp dịch vụ khoảng 50%", "status": "illustrative-labelled", "note": "Nêu bằng 'nếu'." }
+      ],
+      "strengths": "Chuỗi tính người thêm → qua bước sau → giá trị → lãi gộp → hoàn vốn, có kịch bản thận trọng và điều kiện đo lại; Q5 so hai lựa chọn bằng số ở đáy phễu; Q6 buộc tính lại khi bước sau xấu đi.",
+      "upgrade": "Sửa mã lỗi Q4; đưa Q6 thành PHẢN VÍ DỤ và thêm ĐÀO SÂU (sức chứa, chi phí phục vụ biến đổi, rủi ro agency đo bằng chính công cụ của họ); gắn nhãn minh hoạ; thêm bảng 2 kịch bản × 3 dòng (lượt đến thêm, doanh thu, lãi gộp)."
+    },
+    {
+      "id": "B:dl01-07",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 8, "pedagogy": 6, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L4", "L5", "L3", "L4", "L6", "L5", "L2"],
+      "bloom_max": "L6",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Trình quảng cáo báo 610 vì còn tính cả đơn của người chỉ xem quảng cáo", "issue": "Khẳng định về cách nền tảng gán đơn (view-through) nêu như sự thật chung, không nguồn, không nói nền tảng nào và cửa sổ nào; cách gán thay đổi theo nền tảng và cài đặt.", "fix": "Viết 'theo cài đặt gán mặc định của nhiều nền tảng, đơn của người chỉ xem quảng cáo trong 1 ngày cũng được tính — kiểm cài đặt trong tài khoản của bạn' và thêm src với ngày kiểm." },
+        { "sev": "P2", "where": "Q2", "quote": "470, vì đó là số đơn thật đã ghi nhận trong hệ thống bán hàng", "issue": "Phương án đúng là phương án duy nhất lặp cụm 'hệ thống bán hàng/đơn hàng' của MANG THEO; đoán được bằng hình thức.", "fix": "Thêm sắc thái vào các phương án (ví dụ 'dùng 470 nhưng vẫn báo 520 cho đội quảng cáo') để buộc lập luận." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "Shop sửa gắn sự kiện, chặn bắn trùng theo mã đơn, và từ nay lấy 470 làm mốc", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; không có tình huống nào mà tỉ lệ > 100% là thật (ví dụ mua lại trong kỳ không qua giỏ) để người học phân biệt.", "fix": "Thêm phản ví dụ: đơn đặt lại qua link tái mua, không có sự kiện thêm giỏ — đo đúng nhưng phễu cần thêm nhánh." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (520 − 470) ÷ 520 = 9,62% ✓ (tol 0,1); sai 10,64 = 50/470 ✓." },
+      "claims": [
+        { "claim": "Shop thời trang: 5.000 xem, 400 thêm giỏ, 520 đơn công cụ, 610 đơn quảng cáo, 470 đơn thật", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Trình quảng cáo tính cả đơn của người chỉ xem quảng cáo", "status": "unverified", "note": "Cơ chế gán view-through; đúng với mặc định của một số nền tảng nhưng không nguồn." },
+        { "claim": "Gửi mã đơn hàng để công cụ chỉ đếm mỗi mã một lần", "status": "unverified", "note": "Cơ chế khử trùng theo transaction_id/event_id có thật ở các công cụ phổ biến; không nguồn." }
+      ],
+      "strengths": "Nguyên tắc 'nghi đo sai trước khi nghi khách' và đối chiếu với nguồn sự thật; Q5 (phễu có nút Mua ngay) và Q6 (khử trùng theo mã đơn) là câu thiết kế đo lường thật.",
+      "upgrade": "Gắn src và ngày kiểm cho cơ chế gán/khử trùng; bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU (bảng đối soát ba nguồn theo tuần, sai số chấp nhận được ví dụ ±5%); thêm một câu calc thứ hai tính độ lệch quảng cáo so với đơn thật (610/470 − 1 = 30%)."
+    },
+    {
+      "id": "B:dl01-08",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L3", "L5", "L3", "L4", "L4", "L5", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4", "quote": "Báo cáo 4% chia cho lượt đã thêm vào giỏ, báo cáo kia chia cho mọi lượt vào trang", "issue": "Phương án đúng khẳng định một nguyên nhân cụ thể không suy ra được từ dữ kiện; b (thị trường khác) cũng bênh được một phần. Câu hỏi 'hợp lý nhất' cứu được, nhưng lời giải nên nói đây là giả thuyết cần kiểm.", "fix": "Sửa phương án d thành 'Hai bên có thể dùng mẫu số khác nhau — phải hỏi mẫu số trước khi so' để không khẳng định điều chưa biết." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[75,\"NHAM_SO_TUYET_DOI\"],[50,\"SAI_MAU_SO\"],[25,\"NHAM_DIEM_PHAN_TRAM\"]]", "issue": "Giá trị 25 không có đường tính rõ (75/300 = 25% là tăng tương đối), mã NHAM_DIEM_PHAN_TRAM gượng.", "fix": "Ghi rõ lời giải cho 25: 'bạn tính mức tăng tương đối của số đơn, không phải tỉ lệ chốt'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "Hai giả định đó, số lượt để lại số và tỉ lệ chốt, là thứ cần chạy thử hai tuần", "issue": "Không có PHẢN VÍ DỤ/ĐÀO SÂU riêng; nội dung Goodhart (Q6) chỉ ở quiz.", "fix": "Đưa Q6 thành PHẢN VÍ DỤ: đạt 0,75% bằng cách thu nhỏ đầu vào." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (375 − 300) ÷ 600 = 12,5% ✓. Q1: 500 × 15% = 75; 75/50.000 = 0,15 điểm; 0,6% + 0,15% = 0,75% ✓. Ví dụ: 300/50.000 = 0,6% ✓." },
+      "claims": [
+        { "claim": "Hàng giá vài chục nghìn mua lặp lại: tỉ lệ vài phần trăm; nệm 8 triệu: dưới 1%", "status": "illustrative-labelled", "note": "Mở bằng 'Minh hoạ:'." },
+        { "claim": "Nút tư vấn kéo 500 số/quý, tổ tư vấn chốt 15%", "status": "illustrative-labelled", "note": "Ghi rõ 'Giả định minh hoạ'." },
+        { "claim": "'Shop giỏi có tỉ lệ chuyển đổi 10%' (bài viết giám đốc đọc)", "status": "illustrative-labelled", "note": "Được bài phê phán, không nêu như sự thật." }
+      ],
+      "strengths": "Ví dụ duy nhất trong module gắn nhãn minh hoạ và nêu rõ hai giả định cần kiểm chứng; mục tiêu được dựng ngược từ bước sẽ sửa; Q6 (đạt tỉ lệ nhờ thu nhỏ mẫu số) và Q7 (tách dòng hàng) là L5.",
+      "upgrade": "Đưa Q6 thành PHẢN VÍ DỤ và thêm ĐÀO SÂU về tỉ lệ theo loại hàng/giá; sửa Q4 để không khẳng định nguyên nhân chưa biết; thêm một câu calc: với 600 số và tỉ lệ chốt 10% thì tỉ lệ ra đơn đạt bao nhiêu (để phân biệt điểm phần trăm)."
+    }
+  ],
+  "module_notes": {
+    "progression": "Hợp lý: mẫu số (01) → chọn bước sửa (02) → tách lát cắt (03) → so hai kỳ (04) → phễu B2B/độ trễ (05) → quy ra tiền và hoàn vốn (06) → kiểm tra đo sai (07) → đặt mục tiêu (08). Bài 07 (đo sai) nên đứng trước 02–06 vì mọi phép tính phía trước đều giả định số đo đúng; bài 05 (B2B) lạc nhịp giữa chuỗi bán lẻ online.",
+    "overlap": [
+      "dl01-02 Q2 và dl01-06 Q5 cùng dạy 'so hai bước bằng số khách thêm ở đáy' — 06 làm tốt hơn (có giá trị tiền).",
+      "dl01-03 Q4 (cơ cấu nhóm làm tỉ lệ gộp trượt) và dl01-04 Q6 (video lan truyền kéo tỉ lệ xuống) là cùng một cơ chế trộn nhóm.",
+      "dl01-01 Q5 và dl01-04 Q4 cùng dạy 'mẫu nhỏ chênh vài đơn là nhiễu' mà cả hai đều không cho quy tắc tay."
+    ],
+    "gaps": [
+      "Không có quy tắc định lượng nào về nhiễu/khoảng tin cậy dù 3 câu hỏi dựa vào nó.",
+      "Không có bài về phễu theo thời gian (cohort nhiều tuần, thời gian từ lượt vào đến đơn) ngoài một nhắc ở 05.",
+      "Chưa nối phễu với CAC: tỉ lệ từng bước × chi phí mỗi lượt vào = chi phí mỗi đơn (cầu sang dl02).",
+      "Chỉ dl01-08 gắn nhãn minh hoạ; 7/8 bài dùng số dựng không nhãn.",
+      "Không có bài có BÀI THỰC HÀNH CÓ ĐẦU RA (tasks) trong module này."
+    ],
+    "best_lesson": "B:dl01-06",
+    "weakest_lesson": "B:dl01-02"
+  }
+}

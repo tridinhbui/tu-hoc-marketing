@@ -1,0 +1,178 @@
+{
+  "mod": "tp01", "scored_at": "2026-11-07", "scorer": "independent-agent", "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    { "id": "B:tp01-01",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 15, "examples": 9, "pedagogy": 7, "assessment": 7, "data": 5, "clarity": 5 },
+      "total": 72,
+      "bloom_items": ["L2","L4","L2","L4","L2","L2","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Thay tên mình bằng tên đối thủ: nếu câu định vị vẫn đúng, bạn chưa định vị gì.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nói khi nào phép thử thay tên đối thủ cho kết quả sai (đối thủ cũng có thể bắt chước ngày ủ, độ đạm; khác biệt trong ngắn hạn không có nghĩa là bền).", "fix": "Thêm phản ví dụ: đối thủ cũng in độ đạm — vế \"khác gì\" phải chuyển sang thứ khó chép (nhà thùng cho khách xem); thêm Đào sâu về khác biệt bền vs khác biệt chép được." },
+        { "sev": "P2", "where": "Q7", "quote": "Thiếu vế khác gì thật sự — ổ cắm, Wi-Fi quán quanh đó cũng có", "issue": "Khẳng định \"quán quanh đó cũng có\" là giả định không nằm trong đề; với một số khu, \"ổ cắm ở mọi bàn\" vẫn là khác biệt thật. Lời giải còn thừa nhận \"Vế vì sao tin cũng chưa có\" nên câu có hai điều thiếu nhưng chỉ một phương án.", "fix": "Thêm vào đề: \"ba quán kế bên đều có ổ cắm và Wi-Fi\" để khóa dữ kiện; hoặc đổi phương án thành \"thiếu vế khác gì và vì sao tin\"." },
+        { "sev": "P2", "where": "Q3, Q5, Q6", "quote": "Trong bốn vế, vế \"là gì\" có vai trò gì?", "issue": "Ba câu L2 nhận lại định nghĩa từng vế; không câu nào cho một câu định vị mới để chấm.", "fix": "Thay Q5 bằng câu đánh giá: cho ba câu định vị của ba tiệm bánh, hỏi câu nào qua được phép thử thay tên." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính; bài thực hành có số (1,2g đường/lát, 100% vs 20–30%) nhất quán với given." },
+      "claims": [
+        { "claim": "Câu định vị bốn vế: cho ai / là gì / khác gì / vì sao tin", "status": "verified", "note": "Biến thể của positioning statement (Moore/Kotler); không gắn tên nên không cần nguồn." },
+        { "claim": "Bánh \"nguyên cám\" ở siêu thị thường chỉ pha 20–30% bột nguyên cám, có đường", "status": "illustrative-unlabelled", "note": "Trong bài thực hành, nêu như dữ kiện cho bài tập; chấp nhận được nhưng nên ghi là số của tình huống." }
+      ],
+      "strengths": "Phép thử thay tên đối thủ là công cụ 10 giây dùng được ngay; ví dụ nối thẳng câu định vị sang ba quyết định thiết kế cụ thể (ngày ủ lên mặt chai, chai nhỏ, chụp nhà thùng); bài thực hành có dữ kiện và rubric rõ.",
+      "upgrade": "Thêm Vì sao / Phản ví dụ (khác biệt chép được) / Đào sâu; khóa dữ kiện Q7; thay 1–2 câu L2 bằng câu chấm ba câu định vị; thêm một con số đo (ví dụ: tỉ lệ khách nhắc đúng vế khác gì sau khảo sát, nối sang bài 09)." },
+
+    { "id": "B:tp01-02",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 10, "pedagogy": 7, "assessment": 7, "data": 6, "clarity": 5 },
+      "total": 72,
+      "bloom_items": ["L4","L5","L3","L2","L2","L4","L2"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Khung tham chiếu là nơi khách đứng khi chọn, không phải ngăn bạn tự đặt cho mình.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu điều kiện: khung có thể khác theo dịp (cùng chai trà, ở tủ mát tiện lợi so với nước ngọt, ở quán ăn so với trà đá miễn phí) và theo nhóm khách — bài coi 40 người cho một khung duy nhất.", "fix": "Thêm phản ví dụ: 40 khách thường xuyên trả lời khác 40 khách mua lần đầu; thêm Đào sâu về khung theo dịp dùng (nối sang tp02)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "thị trường ước 600 tỷ đồng trong kênh họ bán", "issue": "Hai quy mô thị trường 60 tỷ và 600 tỷ là số minh hoạ không gắn nhãn, không nói ước từ đâu.", "fix": "Ghi \"(số minh hoạ)\" và một dòng về cách ước (báo cáo ngành, số điểm bán × doanh thu/điểm)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Nhóm hỏi 40 khách mua thường xuyên câu \"nếu hết hàng, bạn mua gì thay?\". Phần lớn nói trà xanh đóng chai hoặc nước ngọt", "issue": "Kết quả định tính không có số (bao nhiêu trong 40), nên Q3 phải dựa hoàn toàn vào số thị trường.", "fix": "Ghi phân bố: 22 trà xanh, 11 nước ngọt, 4 nước lọc, 3 trà thảo mộc khác." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 6 ÷ 600 = 1% ✓; 6 ÷ 60 = 10% ✓ (lỗi SAI_MAU_SO đúng nghĩa)." },
+      "claims": [
+        { "claim": "Khung tham chiếu (frame of reference)", "status": "verified", "note": "Khái niệm chuẩn (Keller), trình bày đúng." },
+        { "claim": "thị trường trà thảo mộc đóng chai ước 60 tỷ; đồ uống giải khát đóng chai tủ mát 600 tỷ", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Câu hỏi \"nếu hết hàng, bạn mua gì thay?\" là phương pháp thực địa rẻ, dùng được ngay; Q6 chuyển khung sang app học tiếng Anh vs YouTube miễn phí là chuyển giao tốt.",
+      "upgrade": "Thêm Vì sao / Phản ví dụ (khung đổi theo dịp và nhóm khách) / Đào sâu; cho số phân bố 40 câu trả lời và dùng nó làm calc thứ hai (tỉ lệ nêu trà thảo mộc khác); gắn nhãn hai quy mô thị trường; thay Q5 (L2) bằng câu quyết định: chọn khung hẹp hay rộng khi ngân sách 500 triệu." },
+
+    { "id": "B:tp01-03",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 9, "pedagogy": 9, "assessment": 7, "data": 4, "clarity": 5 },
+      "total": 74,
+      "bloom_items": ["L2","L5","L2","L4","L2","L2","L3"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q4", "quote": "\"Không lactose\", vì đó là chuẩn chung của các loại sữa hạt", "issue": "Đề không khóa khung tham chiếu. Trong khung \"sữa hạt\" (mọi sữa hạt đều không lactose) thì \"không lactose\" đúng là điểm tương đồng của ngành — đúng như lời giải phương án a mô tả và đúng với Q5 của chính bài (\"khung quyết định danh sách\"). Đáp án b chỉ đúng khi khung là \"thay sữa bò\". Hai phương án bênh được tuỳ khung.", "fix": "Thêm vào đề: \"hãng nhắm người đang uống sữa bò muốn đổi sang sữa hạt\" để khóa khung; hoặc đổi phương án a sang nội dung sai rõ." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Ví mới thiếu hai trong ba, nên khách không kịp thấy giá trị của tính năng chia tiền.", "issue": "Toàn bài không có con số nào: tỉ lệ gỡ, bao nhiêu ngân hàng, tỉ lệ khách hỏi về nạp tiền ở CSKH — nên mục tiêu \"không cần hơn, chỉ cần không thua\" không có ngưỡng.", "fix": "Thêm số minh hoạ: 60% người gỡ trong 7 ngày nêu lý do thiếu nạp tiền/hoá đơn; liên kết 4/12 ngân hàng lớn; đặt ngưỡng \"đủ\" là 8/12." },
+        { "sev": "P2", "where": "Q3, Q5, Q6", "quote": "Với điểm tương đồng, mục tiêu là gì?", "issue": "Ba câu L2 nhận lại khái niệm liên tiếp.", "fix": "Thay Q6 bằng câu đọc 20 đánh giá 1 sao (cho bảng tần suất lý do) và yêu cầu xếp đâu là điểm tương đồng còn thiếu." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Điểm tương đồng (points of parity) và điểm khác biệt (points of difference)", "status": "verified", "note": "Khung Keller, trình bày đúng gồm cả competitive POP (\"béo như sữa bò\")." }
+      ],
+      "strengths": "Phản ví dụ (đủ tương đồng nhưng vẫn không được chọn) tách rõ \"không bị loại\" và \"được chọn\"; Đào sâu phân biệt hai kiểu tương đồng và cho phép kiểm trong tuần (đọc 20 đánh giá một sao).",
+      "upgrade": "Khóa khung ở Q4; đưa số vào ví dụ (tỉ lệ gỡ theo lý do, số ngân hàng) và thêm một calc; thay hai câu L2 bằng câu đọc bảng lý do gỡ app; nêu đánh đổi bằng tiền (bù 2 tính năng tốn bao nhiêu tháng dev so với ngân sách quảng cáo)." },
+
+    { "id": "B:tp01-04",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 13, "examples": 8, "pedagogy": 7, "assessment": 7, "data": 4, "clarity": 5 },
+      "total": 67,
+      "bloom_items": ["L4","L5","L2","L4","L2","L4","L2"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Ô trống trên bản đồ chỉ là cơ hội khi hai trục là thứ khách dùng để chọn.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nói cách chọn 2 trục khi khách nêu 5–6 tiêu chí (lấy hai tiêu chí phân biệt mạnh nhất, không phải hai tiêu chí quan trọng nhất — tiêu chí ai cũng đạt không tạo trục).", "fix": "Thêm Đào sâu: tiêu chí quan trọng nhưng ai cũng đạt (sạch) là điểm tương đồng, không làm trục; chọn trục có độ phân tán giữa các hãng." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Nhóm phỏng vấn khách mua bánh mì buổi sáng: họ chọn theo \"gần đường đi làm\" và \"lấy nhanh trong vài phút\".", "issue": "Không có số: bao nhiêu khách, bao nhiêu % nêu từng tiêu chí; vị trí các hãng trên bản đồ mới không có toạ độ nên \"nhanh nhưng xa đường đi\" không kiểm được.", "fix": "Thêm bảng: 30 khách, 24 nêu gần đường, 21 nêu nhanh, 3 nêu hiện đại; cho điểm 1–5 của 4 chuỗi trên hai trục." },
+        { "sev": "P2", "where": "Q2, Q4, Q7", "quote": "Nguồn tốt nhất để chọn hai trục cho bản đồ là gì?", "issue": "Ba câu có cùng đáp án \"hỏi khách / lấy trục từ khách\"; Q7 là L2 lặp Q2.", "fix": "Thay Q7 bằng câu đọc bản đồ có toạ độ: 4 hãng cho sẵn, hỏi hãng nào gần ta nhất và ô nào thật sự trống theo trục khách." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Bản đồ định vị (perceptual map); hai trục trùng nghĩa tạo đường chéo", "status": "verified", "note": "Khái niệm chuẩn, mô tả đúng." }
+      ],
+      "strengths": "Câu hỏi của trưởng nhóm (\"Có khách nào chọn bánh mì theo hai trục này không?\") là lõi bài và được nhắc lại trong ba cách hiểu ô trống; Q4 chuyển sang giày chạy là chuyển giao đúng.",
+      "upgrade": "Thêm Vì sao / Phản ví dụ / Đào sâu về chọn trục có độ phân tán; đưa số phỏng vấn và toạ độ các hãng vào ví dụ, kèm một calc (tỉ lệ khách nêu tiêu chí); thay câu L2 lặp bằng câu đọc bản đồ." },
+
+    { "id": "B:tp01-05",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 7, "data": 7, "clarity": 5 },
+      "total": 78,
+      "bloom_items": ["L2","L5","L3","L2","L4","L2","L2"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "Quan điểm khác (Byron Sharp, Viện Ehrenberg-Bass) cho rằng khách của các hãng cạnh tranh khá giống nhau", "issue": "Hai trường phái được nêu đúng và gắn tên, nhưng không có src; không nói phòng khám nên theo bên nào và vì sao (dịch vụ địa phương, chọn theo lý do rõ → nghiêng về định vị cổ điển).", "fix": "Thêm src (How Brands Grow, 2010; Positioning, 1981) và một câu kết: với dịch vụ chuyên môn địa phương, hy sinh thông điệp hợp hơn hy sinh độ phủ." },
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "Phòng khám kiểm tra xem thông điệp sắc hơn có đạt được mức đó trong một năm không, trước khi quyết.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Ví dụ nói \"kiểm tra\" nhưng không nói kiểm bằng gì trong một năm (chỉ số dẫn đầu nào: lượt đặt hẹn tư vấn niềng mỗi tuần, chi phí mỗi lượt); không nói biên lãi của hai nhóm — doanh thu 60% nhưng niềng răng có thể biên khác.", "fix": "Thêm Đào sâu: so lãi gộp hai nhóm thay cho doanh thu; đặt mốc kiểm 3 tháng (lượt tư vấn niềng/tuần) và phản ví dụ khi nhóm cũ giảm quá 50%." },
+        { "sev": "P2", "where": "Q4, Q6, Q7", "quote": "\"Hy sinh\" trong định vị có nghĩa đúng là gì?", "issue": "Ba câu L2 nhận lại khái niệm.", "fix": "Thay Q7 bằng câu dữ liệu: cho bảng 3 nhóm khách (số khách, doanh thu, biên), hỏi chọn nhóm nào và cần tăng bao nhiêu để bù." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: nhóm còn lại 4 − 2,4 = 1,6 tỷ; mất 0,8; 0,8 ÷ 2,4 = 33,3% ✓, khớp ví dụ 2,4 → 3,2 tỷ. Lỗi 50 = 0,8/1,6, 20 = 0,8/4 ✓." },
+      "claims": [
+        { "claim": "quan điểm định vị cổ điển (Ries & Trout, Kotler)", "status": "unverified", "note": "Gắn tên đúng, không có src." },
+        { "claim": "Byron Sharp, Viện Ehrenberg-Bass: khách của các hãng cạnh tranh khá giống nhau, tăng trưởng đến từ nhiều người mua thưa", "status": "unverified", "note": "Tóm tắt đúng tinh thần How Brands Grow, không có src." },
+        { "claim": "niềng răng 18–30 tuổi chiếm 2,4 tỷ dù chỉ 30% số khách", "status": "illustrative-labelled", "note": "Ví dụ dùng \"Giả sử\" cho phần giảm một nửa." }
+      ],
+      "strengths": "Nêu hai trường phái trái ngược và cách dung hoà (\"hy sinh ở thông điệp, đừng hy sinh độ phủ\") — hiếm bài làm được; ví dụ biến nỗi sợ \"mất 70% khách\" thành phép tính hoà vốn 0,8 tỷ / 33%.",
+      "upgrade": "Thêm Vì sao / Phản ví dụ / Đào sâu với biên lãi hai nhóm và chỉ số dẫn đầu để kiểm trong 3 tháng; thêm src cho hai trường phái; thay Q7 bằng câu đọc bảng 3 nhóm khách." },
+
+    { "id": "B:tp01-06",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 13, "examples": 8, "pedagogy": 7, "assessment": 6, "data": 4, "clarity": 5 },
+      "total": 66,
+      "bloom_items": ["L2","L5","L1","L4","L2","L2","L2"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Tái định vị ở mức gần nhất đủ giải quyết vấn đề, và giữ lại thứ khách cũ nhận ra.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nói khi nào mức nhẹ nhất KHÔNG đủ (lợi ích lõi đã mất giá trị, ví dụ nước tăng lực bị gắn với \"không lành mạnh\" ở nhóm trẻ), và không nói cách kiểm mức đã chọn có hiệu quả.", "fix": "Thêm phản ví dụ về lõi mất giá trị buộc dời hẳn; Đào sâu về đo nhận biết và liên tưởng trước/sau ở hai nhóm (tỉnh, sinh viên)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "doanh số ở tỉnh đứng yên, trong khi khách mới chủ yếu là sinh viên thành phố", "issue": "Toàn bài không có con số: tỉ trọng doanh thu tỉnh/thành phố, tốc độ tăng nhóm sinh viên, chi phí hai chiến dịch — nên \"mức gần nhất đủ\" không có căn cứ định lượng; đây là bài duy nhất trong module hoàn toàn không có số.", "fix": "Thêm số minh hoạ: tỉnh 70% doanh thu, đứng yên; thành phố 30%, tăng 25%/năm; ước chi phí ba mức tái định vị." },
+        { "sev": "P2", "where": "Q3, Q5, Q6, Q7", "quote": "Trong ba mức tái định vị, mức nào tốn kém và rủi ro nhất?", "issue": "Bốn câu L1–L2 nhận lại bài; Q3 là định nghĩa thuần; đáp án Q2 là phương án dài và cân bằng nhất.", "fix": "Thay Q3 và Q7 bằng hai tình huống mới có số (một hãng mì, một app), yêu cầu chọn mức và nêu tài sản giữ lại." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "ba mức tái định vị (đây là cách chia để dễ ra quyết định, không phải một khung chuẩn)", "status": "illustrative-labelled", "note": "Tự gắn nhãn là khung của bài — tốt." }
+      ],
+      "strengths": "Tự ghi rõ ba mức là khung của bài, không mạo danh khung chuẩn; nguyên tắc \"mức gần nhất đủ giải quyết vấn đề\" rõ và dễ áp dụng.",
+      "upgrade": "Thêm Vì sao / Phản ví dụ (lõi mất giá trị) / Đào sâu (đo trước–sau ở hai nhóm); đưa số vào tình huống (tỉ trọng, tốc độ tăng, chi phí ba mức) và thêm một calc; thay ít nhất hai câu L1/L2 bằng tình huống mới." },
+
+    { "id": "B:tp01-07",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 5 },
+      "total": 78,
+      "bloom_items": ["L2","L5","L3","L4","L4","L2","L4"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "Avis từng làm đúng vậy với Hertz năm 1962: \"Chúng tôi chỉ là số hai, nên chúng tôi cố hơn\" (\"We try harder\").", "issue": "Thương hiệu thật, năm cụ thể, nêu như sự thật nhưng không có src; không nói kết quả (bài học thường bị kể quá: Avis có lãi sau nhiều năm lỗ, nhưng tỉ trọng do quảng cáo chưa ai đo).", "fix": "Thêm src (DDB/Avis 1962, ngày kiểm) và một câu: \"kết quả kinh doanh sau đó có nhiều yếu tố; đây là ví dụ về cách đứng, không phải bằng chứng hiệu quả\"." },
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "Nên chỉ hợp khi giao hàng đều, ít điểm, nhận hàng hoàn.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu dù ví dụ đã chạm đến cái giá (biên 30% → 18%). Không nói ngưỡng hao hụt tối đa để lối đứng còn lời (bao nhiêu hũ hết hạn/100 thì biên về 0).", "fix": "Thêm Đào sâu: biên = 0 khi bán được 70/100 hũ (700k vốn); đặt ngưỡng cảnh báo hao hụt 10%; phản ví dụ khi cửa hàng không chịu kệ riêng." },
+        { "sev": "P2", "where": "Q3", "quote": "[300,\"QUEN_CHI_PHI_BIEN_DOI\"]", "issue": "300 nghìn = 85 × (10 − 7): lỗi là quên giá vốn 15 hũ hỏng, nhãn \"chi phí biến đổi\" không mô tả đúng.", "fix": "Đổi nhãn thành QUEN_HANG_HONG (hoặc tương đương)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 85 × 10 = 850; 100 × 7 = 700; lãi 150 nghìn ✓; biên 150/850 = 17,6% ≈ 18% ✓, bán hết 300/1.000 = 30% ✓. 6 triệu/điểm × 50 = 300 triệu ✓." },
+      "claims": [
+        { "claim": "Avis vs Hertz 1962, \"We try harder\"", "status": "unverified", "note": "Sự kiện thật, năm đúng theo kiến thức chung, không có src." },
+        { "claim": "Giao 100 hũ, giá vốn 7.000đ, bán 10.000đ, 15 hũ hết hạn → biên 30% còn khoảng 18%", "status": "illustrative-labelled", "note": "Bài ghi \"(số minh hoạ)\"." }
+      ],
+      "strengths": "Ví dụ hiếm hoi nêu cái giá bằng số của lối đứng (hao hụt kéo biên 30% → 18%) và điều kiện áp dụng; Q7 hỏi đúng điều kiện làm sụp định vị (giao thưa phá bằng chứng trên hũ).",
+      "upgrade": "Thêm src cho Avis; thêm Vì sao / Phản ví dụ / Đào sâu với ngưỡng hoà vốn hao hụt (70/100 hũ); sửa nhãn lỗi Q3; thay Q6 (L2) bằng câu tính: 300 triệu chia 50 điểm vs 200 điểm — số lần khách thấy mỗi điểm." },
+
+    { "id": "B:tp01-08",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 9, "pedagogy": 9, "assessment": 6, "data": 5, "clarity": 5 },
+      "total": 74,
+      "bloom_items": ["L2","L5","L1","L4","L2","L2","L3"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Thực tế giờ cao điểm khách chờ gần gấp ba", "issue": "Bài về một lời hứa có con số (5 phút) nhưng không có phép đo nào: không có phân bố thời gian chờ, không có tỉ lệ đánh giá nhắc \"chờ\", không có chi phí hai phương án (menu rút gọn vs hạ lời hứa). Đào sâu nêu \"bấm giờ 10 lượt\" nhưng không có ngưỡng đạt (ví dụ 8/10 lượt dưới 5 phút).", "fix": "Thêm bảng 10 lượt bấm giờ (phút) và quy tắc: chạy lại video khi ≥ 80% lượt giờ trưa ≤ 5 phút; thêm một calc (tỉ lệ đạt)." },
+        { "sev": "P2", "where": "Q3", "quote": "Có mấy cách thu hẹp khoảng cách lời hứa – trải nghiệm?", "issue": "Câu L1 đếm số cách; ba phương án sai chứa \"chỉ một cách\" hoặc danh sách vô lý (đổi logo).", "fix": "Thay bằng câu dữ liệu: cho 10 lượt bấm giờ (3, 4, 9, 12, 5, 6, 14, 4, 11, 7 phút), hỏi nên sửa trải nghiệm hay hạ lời hứa và lời hứa mới là gì." },
+        { "sev": "P2", "where": "Q5, Q6", "quote": "Định vị thật của thương hiệu được hình thành chủ yếu ở đâu?", "issue": "Hai câu L2 nhận lại ý Mang theo.", "fix": "Gộp thành một câu; thêm câu quyết định về khách sạn Q4 mở rộng (chi phí cách âm X vs mất giá phòng Y)." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Khi lời hứa và trải nghiệm lệch nhau, trải nghiệm thắng", "status": "verified", "note": "Nguyên lý kỳ vọng–trải nghiệm (expectation disconfirmation), trình bày đúng không nói quá." }
+      ],
+      "strengths": "Phản ví dụ (đã sửa vận hành nhưng đánh giá cũ còn đó) nêu đúng thời điểm video khẳng định mới có ích; Vì sao (2) giải thích cơ chế khuếch đại qua đánh giá trực tuyến.",
+      "upgrade": "Đưa số đo thời gian chờ và ngưỡng đạt vào ví dụ, thêm một calc; thay Q3 (L1) bằng câu đọc dữ liệu bấm giờ; thêm câu đánh đổi có chi phí cho tình huống khách sạn." },
+
+    { "id": "B:tp01-09",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 7, "data": 7, "clarity": 5 },
+      "total": 75,
+      "bloom_items": ["L4","L5","L3","L2","L3","L4","L2"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ", "quote": "Tỉ lệ nhắc đúng định vị là 23%, dù hài lòng tới 88%. [...] Hãng đặt mục tiêu 35% sau sáu tháng tới", "issue": "Bài về đo lường bằng khảo sát 200 người nhưng không nói độ nhiễu: 23% ± 5,8 điểm (95%), nên mục tiêu 35% là chênh có ý nghĩa, còn chênh 23% → 27% thì chưa kết luận được. Cũng không nói mẫu là khách đã mua (chỉ đo người đã chọn bạn, không đo thị trường).", "fix": "Thêm Đào sâu: khoảng tin cậy xấp xỉ ±6 điểm với n=200; chênh dưới ~8 điểm giữa hai đợt chưa đọc được; nêu giới hạn mẫu khách đã mua và gợi hỏi thêm người chưa mua." },
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Đo định vị bằng điều khách tự nói ra, không phải bằng mức độ hài lòng.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nói cách mã hoá câu trả lời mở (ai đếm, quy tắc đếm \"đau cổ\" vs \"mỏi vai\"), là chỗ số 46 có thể đổi 10–20%.", "fix": "Thêm quy tắc mã hoá hai người đếm độc lập và kiểm độ khớp; phản ví dụ khi tỉ lệ nhắc đúng cao nhưng khách gán điều đó cho cả gối đối thủ." },
+        { "sev": "P2", "where": "Q3", "quote": "[434.8,\"SAI_MAU_SO\"]", "issue": "434,8 = 200/46 × 100 — lỗi đảo tử số/mẫu số, nhãn chấp nhận được; nhưng 88 gắn NHAM_SO_TUYET_DOI thì không đúng (88 là lấy nhầm tỉ lệ hài lòng).", "fix": "Đổi nhãn 88 thành NHAM_CHI_SO." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 46 ÷ 200 = 23% ✓. Q5: 35% × 200 = 70; 70 − 46 = 24 ✓. Kiểm thêm: SE 95% của 23% với n=200 ≈ ±5,8 điểm." },
+      "claims": [
+        { "claim": "200 khách, 88% hài lòng, 46 người nhắc đúng định vị", "status": "illustrative-unlabelled", "note": "Nội bộ nhất quán." }
+      ],
+      "strengths": "Tách \"hài lòng\" khỏi \"hiểu định vị\" bằng số (88% vs 23%) rất thuyết phục; Q6 (trà sữa hỏi câu gợi ý, 70% nói có) là chuyển giao đúng lỗi câu hỏi đóng.",
+      "upgrade": "Thêm độ nhiễu của mẫu 200 và quy tắc mã hoá câu trả lời mở; thêm Vì sao / Phản ví dụ / Đào sâu; nêu giới hạn chỉ hỏi khách đã mua; thay Q7 (L2) bằng câu đọc hai đợt khảo sát (23% → 27%) và hỏi có kết luận được không." }
+  ],
+  "module_notes": {
+    "progression": "Mạch chuẩn STP-lite: câu định vị (01) → khung tham chiếu (02) → tương đồng/khác biệt (03) → bản đồ định vị (04) → hy sinh (05) → tái định vị (06) → kẻ thách thức (07) → lời hứa vs trải nghiệm (08) → đo định vị (09). Thứ tự hợp lý, nhưng 02 (khung) và 03 (tương đồng) là nền cho vế \"là gì\" và \"khác gì\" của 01, nên 01 đứng đầu hơi sớm; có thể mở bằng 02. Chỉ 03 và 08 có đủ Vì sao / Phản ví dụ / Đào sâu; 7/9 bài thiếu, và 4/9 bài (01, 03, 04, 06, 08) không có câu tính nào — module nghiêng về định tính rõ.",
+    "overlap": [
+      "01 và 09 cùng dựa trên phép thử \"điều đó có đúng với đối thủ không\" (thay tên / khách gán cho mọi hãng) — nên 09 nhắc lại 01 thành chuỗi viết → đo.",
+      "02 và 04 cùng dạy \"lấy khung/trục từ khách, không từ nội bộ\" với cùng phương pháp phỏng vấn; có thể gộp phần phương pháp.",
+      "03 Q4 (béo như sữa bò) và 09 Q4 (êm, mát ai cũng nói) lặp ý điểm tương đồng."
+    ],
+    "gaps": [
+      "Phân khúc và chọn nhóm mục tiêu (S và T của STP) trước khi định vị — 05 chạm vào \"chọn nhóm\" nhưng không có cách phân khúc và tiêu chí chọn (quy mô, khả năng tiếp cận, biên).",
+      "Định vị theo giá (premium/giá trị) và quan hệ giá – định vị: không bài nào.",
+      "Kiểm nghiệm định vị trước khi tung (concept test với 2–3 câu định vị, cỡ mẫu, tiêu chí chọn) — 09 chỉ đo sau 6 tháng.",
+      "Nguồn cho ba khẳng định có tên thật (Ries & Trout/Kotler, Byron Sharp, Avis 1962)."
+    ],
+    "best_lesson": "B:tp01-05",
+    "weakest_lesson": "B:tp01-06"
+  }
+}

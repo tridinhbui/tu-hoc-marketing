@@ -1,0 +1,814 @@
+{
+  "mod": "pilot-after",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:ob01-02",
+      "scores": {
+        "accuracy": 13,
+        "depth": 12,
+        "practical": 17,
+        "examples": 13,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 9,
+        "clarity": 5
+      },
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L4",
+        "L5",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q6",
+          "quote": "Chọn A: cỡ M rẻ nên dễ bán cho học sinh, 20 ly thêm là đủ bù 243 nghìn còn thiếu",
+          "issue": "Phương án c đúng về số học (20 × 15.000 = 300 nghìn > 243 nghìn). Lời giải bác nó bằng chữ \"chắc chắn\" không có trong câu và bằng rủi ro khách L chuyển sang M mà đề không nêu; người học chọn c có cơ sở bênh được.",
+          "fix": "Thêm vào đề: \"sổ cho thấy mỗi tuần có thêm vài khách L chuyển sang M\" hoặc hỏi thẳng \"hướng nào giữ được biên bình quân\"; sửa lời giải c cho khớp nội dung phương án."
+        },
+        {
+          "sev": "P2",
+          "where": "Q3 các bước",
+          "quote": "Doanh thu tăng 735 nghìn",
+          "issue": "2.241.000 − 1.505.000 = 736 nghìn, không phải 735 (distractor 735 cũng lệch 1).",
+          "fix": "Sửa thành 736."
+        },
+        {
+          "sev": "P2",
+          "where": "Tình huống / Q4",
+          "quote": "chị cần bán khoảng 71 ly",
+          "issue": "1.850.000 ÷ 26.000 = 71,15; theo quy tắc \"làm tròn lên\" của chính Q4 thì mốc cũ là 72 ly (71 ly vẫn lỗ 4 nghìn).",
+          "fix": "Ghi \"khoảng 72 ly\" ở tình huống và distractor Q4."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 43×15.000 + 37×26.000 − 43×26.000 = 489.000 ✓. Q4: 1.850.000/20.000 = 92,5 → 93 ✓; 66 = /28.000 ✓. Ví dụ: doanh thu 2,241tr ✓, lỗ 732→243 ✓, +86% ly / +44% lãi ✓, Q7 53/66 = 80% ✓."
+      },
+      "claims": [
+        {
+          "claim": "Toàn bộ số quán trà sữa Biên Hoà, cơm tấm Cần Thơ",
+          "status": "illustrative-labelled",
+          "note": "\"(Số liệu minh hoạ, tự khớp nhau.)\" + assume:true"
+        }
+      ],
+      "strengths": "Phân biệt đếm ly và đếm lãi đóng góp xuyên suốt tình huống → ví dụ → Q3/Q4/Q6; Q7 là câu đọc bảng giờ bán thật (L4); phản ví dụ chỉ dấu hiệu nhận ra.",
+      "upgrade": "Sửa Q6 để chỉ còn một phương án bênh được (nêu dữ kiện chuyển L→M trong đề); sửa 735→736 và 71→72; thêm một câu nói khi nào 4P không đủ (dịch vụ: People/Process) để chiều depth lên 13–14.",
+      "total": 86
+    },
+    {
+      "id": "B:kh05-06",
+      "scores": {
+        "accuracy": 13,
+        "depth": 12,
+        "practical": 16,
+        "examples": 12,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 5
+      },
+      "bloom_items": [
+        "L3",
+        "L5",
+        "L3",
+        "L3",
+        "L5",
+        "L4",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Vì sao hiệu quả (3)",
+          "quote": "trên 30% thì nên nghe lại băng trước khi báo cáo",
+          "issue": "Ngưỡng 30% nêu như chuẩn nghề nhưng không có nguồn, không gắn nhãn là quy ước tự đặt.",
+          "fix": "Viết \"ngưỡng tự đặt của đội, ví dụ 30%\" hoặc giải thích vì sao 30%."
+        },
+        {
+          "sev": "P2",
+          "where": "Q5",
+          "quote": "Mời khách thứ hai uống nước 10 phút, ghi nhanh cuộc đầu theo hai cột rồi mới bắt đầu",
+          "issue": "Đáp án là phương án dài nhất và duy nhất chứa quy trình của bài (\"hai cột\"); đoán được bằng hình thức.",
+          "fix": "Rút ngắn a hoặc kéo dài b/c tương đương; bỏ chữ \"hai cột\" khỏi phương án."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "ba người trở lên mới là một chủ đề đáng theo",
+          "issue": "Quy tắc đếm ngưỡng nêu tuyệt đối, không nói phụ thuộc cỡ mẫu (3/6 khác 3/30).",
+          "fix": "Thêm \"với 6–8 cuộc; với mẫu lớn hơn dùng tỉ lệ\"."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 5/12 = 41,7% ✓; 58,3 = 7/12 ✓; 71,4 = 5/7 ✓. Ví dụ \"khoảng 42%\" khớp."
+      },
+      "claims": [
+        {
+          "claim": "Số liệu phỏng vấn bảo hiểm (12 dòng, 4/6 người)",
+          "status": "illustrative-labelled",
+          "note": "Có nhãn minh hoạ"
+        }
+      ],
+      "strengths": "Ví dụ cho thấy đúng cách một dòng suy diễn (\"sợ bị từ chối\") đổi thành lời thật (\"nộp thêm giấy ba lần\") và đổi luôn giả thuyết thông điệp; phản ví dụ chỉ ra hành vi quan sát cũng bị đọc sai.",
+      "upgrade": "Thêm một câu hỏi L4 cho người học đọc một đoạn ghi chép 6 dòng và tự phân loại + đếm số người; gắn nhãn hai ngưỡng (30%, 3 người) là quy ước; thêm bảng ba cột mẫu để chiều data/clarity có chỗ bám.",
+      "total": 82
+    },
+    {
+      "id": "B:kh06-01",
+      "scores": {
+        "accuracy": 14,
+        "depth": 13,
+        "practical": 17,
+        "examples": 13,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 9,
+        "clarity": 5
+      },
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L2",
+        "L5",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q5",
+          "quote": "Vì sao thông điệp nên khác nhau cho người trước và sau trigger?",
+          "issue": "Câu L2 nhận lại ý bài; có thể thay bằng câu đọc dữ liệu mùa đơn để xác nhận trigger tự khai (ý trong Đào sâu).",
+          "fix": "Thay bằng câu cho bảng đơn theo tuần quanh ngày bàn giao chung cư và hỏi có xác nhận trigger \"nhà mới\" không."
+        },
+        {
+          "sev": "P2",
+          "where": "Q7 lời giải d",
+          "quote": "ngành bị hạn chế quảng cáo (như sữa công thức cho trẻ nhỏ)",
+          "issue": "Khẳng định pháp lý đúng theo hiểu biết chung (Luật Quảng cáo cấm quảng cáo sản phẩm thay thế sữa mẹ cho trẻ dưới 24 tháng) nhưng không có src; bài có hedge \"kiểm luật trước\".",
+          "fix": "Thêm src trỏ Luật Quảng cáo 2012, điều 7."
+        },
+        {
+          "sev": "P2",
+          "where": "Trường dữ liệu",
+          "quote": "",
+          "issue": "Bài thiếu trường prereq trong khi 11 bài còn lại đều có.",
+          "fix": "Thêm prereq (ví dụ B:kh05-02 hoặc bài mở module kh06)."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: (420+300+180)/1.200 = 75% ✓; 35% = 420/1.200 ✓; 15% = 180/1.200 ✓. Q6: 22/40 = 55%, 9/40 = 22,5%, 5/40 = 12,5%, 4/40 = 10% ✓; sai số ±15 điểm khớp 1,96×√(0,55×0,45/40) = 15,4 ✓."
+      },
+      "claims": [
+        {
+          "claim": "1.200 đơn, 75% gắn ba trigger; ngân sách 1,2 tỉ",
+          "status": "illustrative-labelled",
+          "note": ""
+        },
+        {
+          "claim": "Hạn chế quảng cáo sữa công thức cho trẻ nhỏ",
+          "status": "unverified",
+          "note": "Hedged; không có src"
+        }
+      ],
+      "strengths": "Nêu rõ số tự khai hồi tưởng chỉ dùng để xếp hạng, không chia ngân sách theo %; có vùng đối chứng để đo giá trị của nền hiện diện; Q6 cho sai số mẫu 40 người.",
+      "upgrade": "Thay Q5 (L2) bằng câu đọc dữ liệu mùa đơn; thêm src cho khẳng định pháp lý ở Q7; thêm prereq.",
+      "total": 88
+    },
+    {
+      "id": "B:kh07-02",
+      "scores": {
+        "accuracy": 14,
+        "depth": 14,
+        "practical": 17,
+        "examples": 14,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 9,
+        "clarity": 5
+      },
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L4",
+        "L4",
+        "L4",
+        "L2"
+      ],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q7",
+          "quote": "Mồi nhử chỉ có tác dụng với khách lớn tuổi",
+          "issue": "Hai phương án sai (c, d) dùng từ tuyệt đối \"chỉ\", phương án a là khẳng định pháp lý lạ; đáp án b lộ bằng loại trừ hình thức.",
+          "fix": "Viết lại c/d thành giới hạn có thật nhưng không phải chính (ví dụ \"chỉ chạy khi giá hiển thị cạnh nhau\")."
+        },
+        {
+          "sev": "P2",
+          "where": "Nguồn",
+          "quote": "Frederick, Lee & Baskin (2014)",
+          "issue": "src đúng tên bài/tạp chí/DOI theo hiểu biết, nhưng st:\"chua\" — chưa xác minh.",
+          "fix": "Mở DOI, ghi ngày kiểm, đổi st."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: trước 2.310.000, sau 3.105.000, chênh 795.000 ✓; 34,4% ✓. Ví dụ 650.000đ/tháng và 350.000đ/tháng ✓. Q4: 18→19% trên 1.000 người ≈ 1 SE, gọi là nhiễu hợp lý."
+      },
+      "claims": [
+        {
+          "claim": "Frederick, Lee & Baskin 2014, \"The Limits of Attraction\", JMR 51(4), doi 10.1509/jmr.12.0061",
+          "status": "unverified",
+          "note": "Có pointer src (st:chua); nội dung trích dẫn (\"yếu hơn với sản phẩm thật\") khớp với bài gốc theo hiểu biết."
+        },
+        {
+          "claim": "Bảng giá bắp rạp 45/75/79 nghìn",
+          "status": "illustrative-labelled",
+          "note": "Không gắn tên rạp"
+        }
+      ],
+      "strengths": "Phân biệt rõ mồi nhử và mỏ neo; nêu điều kiện (\"chiều kém phải là chiều khách quý\") và dẫn nghiên cứu cho thấy hiệu ứng yếu ngoài phòng thí nghiệm; phản ví dụ app tiếng Anh có số và dấu hiệu nhận ra; đo bằng doanh thu ròng sau huỷ.",
+      "upgrade": "Xác minh src; viết lại distractor Q7; thêm một câu calc thứ hai về doanh thu ròng sau huỷ (ví dụ 20% gói năm huỷ tháng 4) để nối Q6 với con số.",
+      "total": 90
+    },
+    {
+      "id": "B:gt04-08",
+      "scores": {
+        "accuracy": 14,
+        "depth": 14,
+        "practical": 18,
+        "examples": 14,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 9,
+        "clarity": 5
+      },
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L4",
+        "L4",
+        "L5",
+        "L2"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q5 / Q6",
+          "quote": "vì giữ khách luôn rẻ hơn tìm khách mới",
+          "issue": "Hai distractor (Q5 b, Q6 c) dựa vào từ \"luôn\"; đoán được bằng từ tuyệt đối.",
+          "fix": "Bỏ \"luôn\", đưa lý lẽ có vẻ hợp lý hơn (ví dụ \"vì LTV khách giữ lại cao hơn\" không kèm số)."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "25% mua lại một lần nữa, nên mỗi khách mới mang về trung bình 1,25 đơn",
+          "issue": "Giả định mỗi khách mua lại chỉ mua thêm đúng một đơn chưa được nói rõ là giả định đơn giản hoá.",
+          "fix": "Thêm \"(giả định đơn giản: mỗi người mua lại một lần)\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q7",
+          "quote": "Cách đo đáng tin nhất là gì?",
+          "issue": "Câu L2 lặp lại ý khái niệm sau khi Q3/Q4 đã buộc dùng nhóm chừa.",
+          "fix": "Thay bằng câu đọc kết quả hai nhóm chênh 4 điểm với 200 người chừa (dưới ngưỡng nhiễu 6 điểm trong phản ví dụ)."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 600×(35%−26%) = 54; 10tr/54 = 185.185 ✓; 47,6 = /210 ✓; 63,3 = /(210−52) ✓. Ví dụ: 250.000/1,25 = 200.000 ✓; giảm giá 10%×380.000×210 = 7,98tr ≈ 8tr ✓. Q6: 20tr/94 = 212,8k ✓; 10tr/40 = 250k ✓. Ngưỡng \"6 điểm\" với 200 người chừa: 1,96×SE chênh ≈ 7,3 điểm, nói \"khoảng 6\" chấp nhận được."
+      },
+      "claims": [
+        {
+          "claim": "Thương hiệu cà phê 50tr/tháng, CAC 250.000",
+          "status": "illustrative-labelled",
+          "note": ""
+        }
+      ],
+      "strengths": "So hai hướng trên cùng đơn vị đồng/đơn, tính đúng đơn tăng thêm bằng nhóm chừa và chi phí biên theo bậc (Q6 là câu đánh đổi có số thật); phản ví dụ nêu ngưỡng nhiễu cho mẫu 200.",
+      "upgrade": "Thay Q7 bằng câu đọc kết quả dưới ngưỡng nhiễu; bỏ từ tuyệt đối ở distractor; nêu rõ giả định 1,25 đơn.",
+      "total": 91
+    },
+    {
+      "id": "B:tp01-06",
+      "scores": {
+        "accuracy": 13,
+        "depth": 12,
+        "practical": 16,
+        "examples": 13,
+        "pedagogy": 9,
+        "assessment": 7,
+        "data": 8,
+        "clarity": 5
+      },
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L2",
+        "L4",
+        "L2"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q5, Q7",
+          "quote": "Khi tái định vị, bạn quyết định giữ lại điều gì trước tiên?",
+          "issue": "Hai câu L2 nhận lại ý bài; đáp án là cụm từ của bài (\"màu, logo\", \"cùng lợi ích lõi\"), đoán được.",
+          "fix": "Thay Q5 bằng câu đọc kết quả đo liên tưởng ở nhóm tỉnh sau 12 tháng; thay Q7 bằng câu chẩn đoán khi hai vùng bắt đầu hứa hai điều khác nhau."
+        },
+        {
+          "sev": "P2",
+          "where": "Vì sao hiệu quả (1)",
+          "quote": "mức dời hẳn đặt cược 70 tỉ chắc chắn",
+          "issue": "70 tỉ là ước \"có thể mất 20%\", không phải con số chắc chắn; chữ \"chắc chắn\" trái với nhãn giả định.",
+          "fix": "Viết \"70 tỉ ước mất\" hoặc \"đặt cược doanh thu đang có\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "giữ lõi đổi cách nói khoảng 30 tỉ ... mở rộng khoảng 60 tỉ ... dời hẳn khoảng 150 tỉ",
+          "issue": "Ba mức chi phí không có cơ sở ước tính nào (vì sao 30/60/150), chỉ để so tỉ lệ.",
+          "fix": "Thêm một dòng cơ sở (media + sản xuất + dòng sản phẩm mới) cho từng mức."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 350×20% = 70; 70/150 = 46,7% ✓; 14 = 70/500 ✓. Ví dụ ghi \"47%\" khớp làm tròn. Q6: 65→40 = −25 điểm, 25→55 = +30 điểm ✓."
+      },
+      "claims": [
+        {
+          "claim": "Hãng nước tăng lực 500 tỉ, khảo sát 300 sinh viên",
+          "status": "illustrative-labelled",
+          "note": "Ba mức tái định vị được nói rõ là \"cách chia để ra quyết định, không phải khung chuẩn\""
+        }
+      ],
+      "strengths": "Thành thật gắn nhãn khung ba mức là quy ước riêng; Q6 là câu chẩn đoán từ bốn chỉ số đo (nhận biết, liên tưởng, cân nhắc) và đổi được kết luận so với tình huống chính.",
+      "upgrade": "Nâng Q5, Q7 từ L2 lên L4; bỏ \"chắc chắn\"; thêm cơ sở cho ba mức chi phí; nói rõ sai số mẫu 300 (±5–6 điểm) để chiều data lên 9.",
+      "total": 83
+    },
+    {
+      "id": "B:tp08-04",
+      "scores": {
+        "accuracy": 14,
+        "depth": 12,
+        "practical": 17,
+        "examples": 12,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 5
+      },
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L4",
+        "L4",
+        "L5",
+        "L3"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q3",
+          "quote": "Tổng điểm của Z chiếm bao nhiêu phần trăm điểm tối đa?",
+          "issue": "Câu calc chỉ là 9/15; con số 60% không dùng vào quyết định nào (bài còn nói không cộng tổng). Calc để có calc.",
+          "fix": "Thay bằng calc từ Đào sâu: 30 người xem bản che logo, 12 gọi đúng hãng, 9 nói đúng điều cần nhớ → tỉ lệ và so với mốc."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "Nên có ít nhất ba người chấm độc lập rồi so",
+          "issue": "Không nói cách gộp ba điểm (trung bình, trung vị, hay một người ≤2 là loại) trong khi Q6 đòi người học xử lý đúng chuyện này.",
+          "fix": "Thêm một câu: \"lệch ≥2 điểm thì bàn lại rồi chấm lại; sau đó dùng trung vị\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Đào sâu",
+          "quote": "cho 30 người xem bản phác thảo đã che logo",
+          "issue": "Không nêu sai số của mẫu 30 (±17 điểm) khi đọc \"tỉ lệ gọi đúng hãng\".",
+          "fix": "Thêm \"với 30 người, chênh dưới 15–20 điểm chưa đọc được\"."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: (3+4+2)/15 = 60% ✓. Ví dụ Y 5+5+4 = 14/15 ✓. Q5: 60%×1/3 = 20% ✓. Q6: trung bình 4,33 · 4,67 · 3,67 ✓, lệch 2–5 = 3 điểm ✓."
+      },
+      "claims": [
+        {
+          "claim": "Điểm chấm X/Y/Z/W, khảo sát ngân hàng 60%",
+          "status": "illustrative-labelled",
+          "note": "\"(Tình huống và điểm chấm minh hoạ.)\""
+        }
+      ],
+      "strengths": "Quy tắc điều kiện cần (≤2 là loại, không cộng bù) được kiểm bằng Q7 và ví dụ 5-5-1; Q4 là phép thử đổi logo trên kịch bản cụ thể; Q6 xử lý bất đồng giữa người chấm (L5).",
+      "upgrade": "Thay Q3 bằng calc từ phép thử 30 người; thêm quy tắc gộp điểm; nêu sai số mẫu 30 để chiều data lên 9.",
+      "total": 84
+    },
+    {
+      "id": "B:tp11-07",
+      "scores": {
+        "accuracy": 12,
+        "depth": 13,
+        "practical": 16,
+        "examples": 12,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 4
+      },
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L2",
+        "L3",
+        "L2",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Ví dụ",
+          "quote": "Lãi giữ lại ≈ 300 × 400.000 + 300 × 100.000 − 600 × 100.000 (chi phí gói) = 120 + 30 − 60 = 90 triệu",
+          "issue": "Chi phí gói riêng (100.000đ/máy) chỉ trừ cho 600 máy tăng thêm, nhưng gói áp cho mọi máy bán qua đại lý, kể cả 800 máy nền (thêm 80 triệu/tháng). Tính đủ, lãi giữ lại còn ~10 triệu — kết luận \"đáng làm\" có thể đổi. Biên đại lý 400.000đ/máy cũng xuất hiện lần đầu trong công thức, không có trong tình huống.",
+          "fix": "Nêu biên 400.000đ trong tình huống; tính chi phí gói trên toàn bộ máy đại lý (1.400) hoặc nói rõ giả định \"gói chỉ tặng cho đơn tăng thêm\" (khó thực thi). Cân nhắc đổi gói thành thứ có chi phí biến đổi thấp hơn."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "không thấp hơn 2.350.000đ (chênh khoảng 6%, tức 149.000đ mỗi máy)",
+          "issue": "2.490.000 − 2.350.000 = 140.000đ (5,6%); 149.000 là 6% × 2.490.000. Hai số không khớp nhau.",
+          "fix": "Ghi 140.000đ (5,6%) hoặc đặt giá sàn 2.341.000đ."
+        },
+        {
+          "sev": "P2",
+          "where": "Nguồn",
+          "quote": "Luật Cạnh tranh 2018 (23/2018/QH14)",
+          "issue": "src là link tìm kiếm trên thuvienphapluat, không trỏ tới điều luật; st:\"chua\". Khẳng định pháp lý đã hedge (\"có thể vướng\", \"hỏi pháp chế\").",
+          "fix": "Trỏ thẳng văn bản 23/2018/QH14, ghi Điều 11–12; ghi ngày kiểm."
+        },
+        {
+          "sev": "P2",
+          "where": "Q2",
+          "quote": "Thu hẹp chênh còn khoảng 6%, và cho đại lý gói riêng",
+          "issue": "Đáp án là phương án duy nhất có số và hai hành động; ba distractor dùng động từ cực đoan (ép, rút, giảm sâu).",
+          "fix": "Làm distractor có số (ví dụ \"giữ chênh 15% nhưng thêm gói 300.000đ cho đại lý\")."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 300.000/2.490.000 = 12,05% → 12,0 ✓; 14,2 = /2.120.000 ✓. Ví dụ: 2.490.000×15% = 373.500 ✓; lãi 120+30−60 = 90tr ✓ về số học nhưng thiếu chi phí gói trên máy nền (xem P1). Q7: 1.400→1.380 = −1,4% ✓, rơi 230 máy ở tháng chênh 14% ✓."
+      },
+      "claims": [
+        {
+          "claim": "Luật Cạnh tranh 2018 hạn chế thoả thuận ấn định giá bán lại",
+          "status": "unverified",
+          "note": "Có pointer src (st:chua), hedge đầy đủ; số hiệu luật đúng theo hiểu biết"
+        },
+        {
+          "claim": "Shopee là kênh",
+          "status": "verified",
+          "note": "Chỉ nêu tên nền tảng, không gắn số"
+        },
+        {
+          "claim": "Nồi chiên 2.490.000đ, 120 đại lý, 1.400→800 máy",
+          "status": "illustrative-labelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Ngưỡng chênh tính được (giá trị gói ÷ giá niêm yết) và được dùng lại ở Q3 và Q7; Q7 là câu đọc bảng 6 tháng với thời điểm trùng khớp, có nói \"chẩn đoán, chưa phải chứng minh\"; phản ví dụ xả hàng bằng mã hàng riêng rất thực.",
+      "upgrade": "Sửa phép tính lãi giữ lại (chi phí gói trên toàn bộ máy đại lý, nêu biên 400.000đ trong tình huống); sửa 149→140 nghìn; viết câu lãi giữ lại thành bảng 3 dòng; trỏ src tới điều luật cụ thể.",
+      "total": 81
+    },
+    {
+      "id": "B:kn06-05",
+      "scores": {
+        "accuracy": 14,
+        "depth": 14,
+        "practical": 18,
+        "examples": 14,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 10,
+        "clarity": 5
+      },
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L4",
+        "L4",
+        "L3",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q7 lời giải b",
+          "quote": "hai nhóm như nhau: quảng cáo gần như không thay đổi hành vi mua",
+          "issue": "Với 20% tệp ~2.000/tuần × 4 tuần (≈1.600 đối chứng, 6.400 thấy), sai số chênh ≈ ±0,9 điểm; 2,7% so 2,6% chưa loại được mức tăng tới ~1 điểm (≈35% tương đối). Quyết định \"không dồn tiền\" vẫn đúng (CPA tăng thêm ≥ 375k ngay ở biên trên), nhưng lời giải nói chắc hơn dữ liệu — trái với chính bài dạy \"độ lớn mờ\".",
+          "fix": "Sửa lời giải: \"chênh nằm trong nhiễu; kể cả ở biên trên (~1 điểm) CPA tăng thêm vẫn đắt hơn khách mới, nên không dồn tiền\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Đào sâu",
+          "quote": "quá 5–7 lần thường chỉ tốn tiền và gây khó chịu",
+          "issue": "Ngưỡng tần suất nêu như kinh nghiệm nghề, không nguồn, không nhãn.",
+          "fix": "Gắn nhãn \"kinh nghiệm phổ biến, tự đo bằng CPA theo bậc tần suất\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q5",
+          "quote": "Nền tảng phạt tài khoản chỉ chạy một loại quảng cáo",
+          "issue": "Distractor vô lý, loại ngay.",
+          "fix": "Thay bằng \"cửa sổ ghi nhận bị rút từ 7 ngày về 1 ngày\" để buộc phân biệt đơn báo cáo và đơn thật."
+        },
+        {
+          "sev": "P2",
+          "where": "Nguồn",
+          "quote": "facebook.com/business/help/search?q=attribution%20setting",
+          "issue": "Hai src là link tìm kiếm, st:\"chua\"; khẳng định về cửa sổ 7 ngày bấm/1 ngày xem và Conversion Lift có hedge \"nếu màn hình khác, tin trang chính thức\".",
+          "fix": "Trỏ thẳng bài Help Center, ghi ngày kiểm, đổi st."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 4/200 = 2%; 1.800×2% = 36; 50−36 = 14; 6tr/14 = 428,6k ✓; 1.500k = 6tr/4 ✓. Q4: 2,5%→45; 5 đơn; 1,2tr ✓; 133k = 6tr/45 ✓. Ví dụ: 3 đơn → 27, 23, 261k ✓. Phản ví dụ 108/1.800 = 6%, tăng thêm 72 = 2/3 ✓. CPA báo cáo 6tr/50 = 120k ✓."
+      },
+      "claims": [
+        {
+          "claim": "Meta ghi nhận đơn theo cửa sổ 7 ngày bấm / 1 ngày xem (mặc định)",
+          "status": "unverified",
+          "note": "Có pointer src (st:chua), có câu \"nếu màn hình khác, tin trang chính thức\"; khớp hiểu biết hiện tại"
+        },
+        {
+          "claim": "Conversion Lift thường cần ngưỡng chi hoặc hỗ trợ",
+          "status": "unverified",
+          "note": "Có pointer src, hedged \"thường\""
+        },
+        {
+          "claim": "Số shop gia dụng 2.000 người, 50 đơn",
+          "status": "illustrative-labelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Phân tích độ nhạy 3/4/5 đơn đối chứng là mẫu mực cho chiều data: nói rõ dấu thì chắc, độ lớn thì mờ; phản ví dụ bỏ giỏ cho thấy cùng retargeting nhưng tăng thêm thật; Q4 buộc người học tự thấy mẫu nhỏ đổi kết quả.",
+      "upgrade": "Sửa lời giải Q7 cho khớp độ mờ; thay distractor Q5; xác minh hai src Meta và trỏ link bài cụ thể; gắn nhãn ngưỡng tần suất.",
+      "total": 92
+    },
+    {
+      "id": "B:kn13-05",
+      "scores": {
+        "accuracy": 12,
+        "depth": 13,
+        "practical": 17,
+        "examples": 12,
+        "pedagogy": 9,
+        "assessment": 7,
+        "data": 8,
+        "clarity": 5
+      },
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L4",
+        "L4",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q7 đáp án d",
+          "quote": "Không còn nghi phạm tự nhiên: ba nguồn tự nhiên trong ngưỡng dao động",
+          "issue": "Theo số trong đề, chỉ nguồn người theo dõi (−2,8%) nằm trong ±18%; không theo dõi +29% và khám phá −50% đều vượt ngưỡng. Đáp án đúng chứa một khẳng định sai so với dữ liệu; lời giải lại chuyển sang \"tổng tự nhiên 26.000→27.000 nằm trong nhiễu\" — hai cơ sở khác nhau.",
+          "fix": "Viết lại d: \"Tổng tự nhiên +3,8% nằm trong ngưỡng; nguồn nhỏ dao động mạnh là bình thường; thay đổi nằm ở trả tiền đã tắt\". Thêm vào khái niệm: ngưỡng ±18% áp cho tổng, nguồn nhỏ cần ngưỡng riêng."
+        },
+        {
+          "sev": "P1",
+          "where": "Ví dụ / Vì sao (2)",
+          "quote": "tuần trước tự nhiên 26.000 + trả tiền 15.000",
+          "issue": "Bài dạy \"reach là số tài khoản duy nhất, không cộng dồn\" nhưng ví dụ cộng reach tự nhiên và trả tiền thành tổng 41.000 như hai tập rời nhau; người vừa thấy bài vừa thấy quảng cáo bị đếm hai lần. Mâu thuẫn với chính nguyên tắc của bài, gây hiểu sai cách đọc báo cáo.",
+          "fix": "Nói rõ: \"hai con số có phần trùng nhau, nên tổng thật ≤ 41.000; đọc riêng từng dãy, không cộng\" hoặc đổi số để tổng được nêu là số báo cáo riêng."
+        },
+        {
+          "sev": "P2",
+          "where": "Q6",
+          "quote": "Coi Reels là nguyên nhân chắc chắn ... bỏ hẳn ... Chuyển toàn bộ",
+          "issue": "Ba distractor đều có từ tuyệt đối; đáp án c đoán được bằng hình thức.",
+          "fix": "Viết distractor ôn hoà hơn (ví dụ \"tăng Reels lại 5 bài tuần sau rồi so reach tổng\")."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "nguồn người xem (người theo dõi, không theo dõi, khám phá, trả tiền)",
+          "issue": "Mô tả cấu trúc báo cáo Instagram Insights nhưng fresh ghi evergreen và không có src; cách chia nguồn của nền tảng đổi theo thời gian.",
+          "fix": "Đổi fresh thành periodic hoặc thêm câu \"tên nguồn theo màn hình tại ngày kiểm\" + src Instagram Help."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: (27.000−26.000)/26.000 = +3,8% ✓; −40 = (30−50)/50 ✓; −26,8 = (30−41)/41 ✓. SD 2.300/26.500 ≈ 8,7% ≈ 9%, 2SD ≈ 18% ✓. Q7: −2,8% ✓, +28,6% ✓, 500/27.000 = 1,9% ✓, 18.000+7.000+1.000 = 26.000 ✓."
+      },
+      "claims": [
+        {
+          "claim": "Instagram Insights chia reach theo người theo dõi / không theo dõi / trả tiền",
+          "status": "unverified",
+          "note": "Không có src; fresh ghi evergreen"
+        },
+        {
+          "claim": "Reach 50.000→30.000, SD 8 tuần 2.300",
+          "status": "illustrative-labelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Thứ tự nghi phạm rẻ→đắt là quy trình dùng được ngay; ngưỡng nhiễu lấy từ 8 tuần của chính kênh (2 SD) thay cho chuẩn ngành; Q4 giải thích đúng vì sao không nhân 7/5.",
+      "upgrade": "Sửa khẳng định sai trong đáp án Q7 d; nói rõ reach tự nhiên và trả tiền có trùng, không cộng; viết lại distractor Q6; đổi fresh sang periodic với src Instagram.",
+      "total": 83
+    },
+    {
+      "id": "B:tn04-01",
+      "scores": {
+        "accuracy": 15,
+        "depth": 14,
+        "practical": 18,
+        "examples": 14,
+        "pedagogy": 9,
+        "assessment": 9,
+        "data": 9,
+        "clarity": 5
+      },
+      "bloom_items": [
+        "L3",
+        "L6",
+        "L3",
+        "L4",
+        "L4",
+        "L5",
+        "L3"
+      ],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "nên 5 điểm với 5 cửa hàng × 4 tuần là tín hiệu có thật nhưng mỏng",
+          "issue": "Không nói cách quy ±4% tuần sang độ chắc của chênh 5 điểm (20 cửa hàng-tuần mỗi nhóm → SE chênh ≈ 1,3 điểm nếu độc lập, nhưng tuần trong cùng cửa hàng tương quan); \"mỏng\" đúng hướng thận trọng nhưng không có phép tính.",
+          "fix": "Thêm một câu: \"với 5 cửa hàng, hãy xem chênh từng cặp: nếu 4/5 cặp cùng dấu thì tin được\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q6",
+          "quote": "lãi tăng chỉ là nhất thời",
+          "issue": "Distractor b, d chứa khẳng định không có dữ kiện (\"nhất thời\", \"hầu như không phản ứng\"), dễ loại.",
+          "fix": "Làm b hợp lý hơn: \"giữ giá cũ thêm 8 tuần ở cả 10 cửa hàng để đọc khách quen\" (đánh đổi thật với a)."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: −10 − (−5) = −5 điểm ✓. Q7: 380×20.000 = 7,6tr; 360×24.000 = 8,64tr; +13,7% ✓; 20 = 4.000/20.000 ✓. Vì sao (3): 400×4.000/24.000 = 66,7 ly = 16,7% ✓. Q4: −4 − 3 = −7 ✓."
+      },
+      "claims": [
+        {
+          "claim": "Chuỗi trà sữa Hà Nội 20 cửa hàng, 45.000→49.000đ",
+          "status": "illustrative-labelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Phép trừ với đối chứng → lãi gộp đảo ngược kết luận là một vòng tình huống → số → quyết định trọn vẹn; phản ví dụ nhiễm đối chứng có dấu hiệu nhận ra; Đào sâu nêu kiểm song song trước thử; Q4 (đối chứng tăng) buộc hiểu điểm phần trăm thật sự.",
+      "upgrade": "Thêm cách đọc độ chắc theo cặp cửa hàng; làm distractor Q6 thành đánh đổi thật; có thể thêm bảng 2×2 (nhóm × trước/sau) cho người học nhìn phép trừ.",
+      "total": 93
+    },
+    {
+      "id": "B:dl02-02",
+      "scores": {
+        "accuracy": 14,
+        "depth": 12,
+        "practical": 17,
+        "examples": 12,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 9,
+        "clarity": 5
+      },
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L5",
+        "L4",
+        "L2"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "nếu để lại 400.000đ thì tăng là đúng",
+          "issue": "CAC 240.000 so LTV 400.000 (1,7×) được gọi là \"tăng là đúng\" không kèm điều kiện: CAC biên thường tăng khi gấp đôi ngân sách, và chưa trừ chi phí vận hành/ hoàn trả.",
+          "fix": "Viết \"mới đáng cân nhắc tăng, và phải đo CAC biên ở mức chi mới\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "CAC đo chi phí để có một khách chưa từng mua",
+          "issue": "Không phân biệt CAC gộp (chia cho mọi người mới, kể cả tới tự nhiên) và CAC trả tiền; 250 người mới có thể gồm người không tới từ quảng cáo.",
+          "fix": "Thêm một câu: \"đây là CAC gộp; nếu có nguồn tự nhiên lớn, tách người mới theo nguồn\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q6 / Q7",
+          "quote": "Giữ chân chắc chắn tốt lên",
+          "issue": "Distractor Q6 c dùng \"chắc chắn\"; Q7 là câu L2 nhắc lại ý bài.",
+          "fix": "Bỏ từ tuyệt đối; thay Q7 bằng câu đọc bảng đơn khách cũ tăng vọt đúng ngày ưu đãi (ý phản ví dụ)."
+        },
+        {
+          "sev": "P2",
+          "where": "Phản ví dụ",
+          "quote": "Giả sử nhiều trong 500 đơn khách cũ quay lại đúng vì vừa bấm quảng cáo giảm giá",
+          "issue": "Phản ví dụ không có số; không chỉ ra cách tách chi tiêu theo tệp bằng một con số.",
+          "fix": "Thêm: \"20 triệu trong 60 triệu chạy tệp khách cũ → CAC mới = 40tr/250 = 160.000đ\"."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 60tr/(800−500) = 200.000 ✓; 75.000 = /800, 120.000 = /500 ✓. Q4: 60tr/250 = 240.000 ✓; 300/250 = 1,2 ✓. Q6: 500/800 = 62,5% ≈ 62% ✓."
+      },
+      "claims": [
+        {
+          "claim": "Thương hiệu cà phê 60tr, 800 đơn, 500 khách cũ",
+          "status": "illustrative-labelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Ba mẫu số (đơn → đơn khách mới → người mới) được tính liên tiếp ở Q3/Q4 và trong Áp dụng; Q6 là câu đọc cặp chỉ số với hai cách đọc tỉ trọng (Đào sâu) — L4 thật.",
+      "upgrade": "Thêm số vào phản ví dụ (tách chi tiêu theo tệp); nêu CAC gộp vs trả tiền; đổi \"tăng là đúng\" thành điều kiện CAC biên; thay Q7 (L2) bằng câu đọc dữ liệu.",
+      "total": 86
+    }
+  ],
+  "module_notes": {
+    "progression": "12 bài pilot sau sửa đều theo khung tình huống → khái niệm → ví dụ có số → vì sao → phản ví dụ → đào sâu, có goals đo được và prereq (trừ kh06-01). Trung bình 86,6; 9/12 đạt ≥ 85 hoặc sát; 0 P0; 4 P1 tập trung ở hai bài (tp11-07 phép tính lãi giữ lại thiếu chi phí gói trên máy nền; kn13-05 cộng reach tự nhiên + trả tiền và đáp án Q7 d chứa khẳng định sai) và một ở ob01-02 Q6 (hai phương án bênh được).",
+    "overlap": [
+      "gt04-08, kn06-05, tn04-01 đều dạy nhóm đối chứng/nhóm chừa — nhất quán về cách tính đơn tăng thêm, nhưng ba bài lặp cùng thông điệp \"so trước–sau không đủ\"; nên để một bài tham chiếu hai bài kia thay cho giải thích lại từ đầu."
+    ],
+    "gaps": [
+      "Mẫu chung: src fast/periodic (kh07-02, tp11-07, kn06-05) đều st:\"chua\" và hai bài dùng link tìm kiếm thay cho link bài — pointer có nhưng chưa phải nguồn kiểm được.",
+      "Nhiều bài dùng ngưỡng kinh nghiệm không gắn nhãn (30% dòng suy diễn, 3 người, 5–7 lần/tuần).",
+      "Distractor dùng từ tuyệt đối (luôn, chắc chắn, chỉ, bỏ hẳn) xuất hiện ở 7/12 bài."
+    ],
+    "best_lesson": "B:tn04-01",
+    "weakest_lesson": "B:tp11-07"
+  }
+}

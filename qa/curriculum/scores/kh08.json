@@ -1,0 +1,197 @@
+{
+  "mod": "kh08",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kh08-01",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 11, "examples": 8, "pedagogy": 6, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 62,
+      "bloom_items": ["L3", "L3", "L3", "L3", "L2", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q5", "quote": "Quảng cáo sản phẩm dinh dưỡng cho trẻ nhỏ bị luật giới hạn", "issue": "Khẳng định pháp lý nêu như sự thật nhưng bài không nêu văn bản (Luật Quảng cáo Điều 7, Nghị định 100/2014/NĐ-CP về sản phẩm thay thế sữa mẹ cho trẻ dưới 24 tháng), không có ngày kiểm; người học không có gì để tra.", "fix": "Thêm `src` tới văn bản luật và ngày kiểm; trong lời giải ghi rõ phạm vi (nhóm tuổi, loại sản phẩm) thay vì 'bị luật giới hạn' chung chung." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "lọc ra 12 bạn da dầu mụn ghi rõ \"sau 3 tuần không bí\"", "issue": "Lọc 12/40 video chỉ lấy kết quả tốt là chọn lọc tạo ấn tượng — đúng điều kh08-08 cấm; bài không nói các video này có được tặng hàng hay cần ghi 'hợp tác'.", "fix": "Thêm một câu: nêu tỉ lệ thật (12/40 da dầu), giữ cả video chưa hài lòng, ghi rõ nếu có tặng hàng; nối tới kh08-08." },
+        { "sev": "P2", "where": "TÌNH HUỐNG/VÍ DỤ", "quote": "\"120.000 tuýp đã bán\"", "issue": "Mọi con số (120.000, 40 video, 12 video, 8.000 lượt, 176/264 đơn) là số tự đặt nhưng không gắn nhãn minh hoạ.", "fix": "Đặt cờ `assume` hoặc ghi 'số minh hoạ' ở đầu ví dụ." },
+        { "sev": "P2", "where": "Q3", "quote": "Tỉ lệ chuyển đổi của B cao hơn A bao nhiêu điểm phần trăm?", "issue": "Thử A/B nêu kết quả mà không nói về cỡ mẫu/nhiễu; người học có thể coi mọi chênh 1,1 điểm là thật.", "fix": "Thêm bước 4: 'với 8.000 lượt mỗi bản, chênh 2,2% vs 3,3% đủ lớn để tin; nếu chỉ 800 lượt thì chưa'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 264/8000 = 3,3%; 176/8000 = 2,2%; chênh 1,1 điểm % ✓. Sai định danh 50 (tăng tương đối) và 88 (số đơn tuyệt đối) đúng tên lỗi." },
+      "claims": [
+        { "claim": "Quảng cáo sản phẩm dinh dưỡng cho trẻ nhỏ bị luật giới hạn (Q5)", "status": "unverified", "note": "Đúng về bản chất (Luật Quảng cáo Điều 7; NĐ 100/2014) nhưng bài không dẫn nguồn, không nêu phạm vi tuổi." },
+        { "claim": "Thương hiệu kem chống nắng bán 120.000 tuýp, A/B 176 vs 264 đơn", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Khung ba nguồn bằng chứng gắn với 'nỗi lo lớn nhất' là tiêu chí chọn rõ và dùng được ngay; 6 câu hỏi chuyển sang 6 ngành khác nhau (máy lọc nước, phần mềm, bún bò, sữa, mỹ phẩm 35–45) buộc người học áp dụng thay vì nhận lại.",
+      "upgrade": "Thêm PHẢN VÍ DỤ (khi số đông mới là bằng chứng đúng: hàng rẻ, quen, rủi ro thấp) và ĐÀO SÂU (chi phí thu video người dùng, thiên lệch chọn lọc, nghĩa vụ công khai khi tặng hàng). Gắn nhãn số minh hoạ. Thêm bảng 3 cột 'nỗi lo → nguồn → ví dụ bằng chứng'. Áp dụng đổi thành: cho một sản phẩm có sẵn 3 loại bằng chứng, viết quyết định xếp thứ tự + lý do bằng 3 câu. Dẫn nguồn luật ở Q5 với ngày kiểm."
+    },
+    {
+      "id": "B:kh08-02",
+      "scores": { "accuracy": 10, "depth": 8, "practical": 12, "examples": 9, "pedagogy": 6, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 62,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L4", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Một nghiên cứu của Spiegel Research Center (Đại học Northwestern) thấy khả năng mua cao nhất ở khoảng 4,2–4,5 sao", "issue": "Benchmark nghiên cứu nêu như sự thật, không `src`, không ngày kiểm; khoảng điểm trích có thể không khớp bản gốc (báo cáo Spiegel 2017 thường được dẫn với khoảng 4,0–4,7). Đây là chỗ người học sẽ đem đi kể lại.", "fix": "Thêm `src` tới báo cáo Spiegel 'How Online Reviews Influence Sales' với ngày kiểm; sửa khoảng điểm theo đúng báo cáo; ghi rõ nghiên cứu trên dữ liệu bán lẻ Mỹ, chưa kiểm ở sàn Việt Nam." },
+        { "sev": "P2", "where": "Q7", "quote": "Điểm hơi thấp đi nhưng đáng tin hơn, và khách mua theo niềm tin", "issue": "Đáp án khẳng định nhân quả, trong khi phần ví dụ vừa nói 'so trước – sau, chưa có đối chứng; mùa mua sắm hay giá cũng có thể góp phần'. Phương án c bị gạt vì viết tuyệt đối ('không liên quan') thay vì vì sai cơ chế.", "fix": "Viết lại b: 'điểm giảm nhưng chuyển đổi tăng; đề xuất giữ cách mới và kiểm yếu tố mùa bằng so với cùng kỳ' để lời giải khớp phần đọc." },
+        { "sev": "P2", "where": "Q2", "quote": "vi phạm quy định sàn và dễ bị lộ", "issue": "Khẳng định về chính sách sàn (Shopee) không có nguồn; chính sách này thuộc lớp 'fast'.", "fix": "Dẫn link chính sách đánh giá của Shopee kèm ngày kiểm, hoặc viết 'thường bị sàn cấm — tra chính sách hiện hành'." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Shop B bán gấp đôi shop A", "issue": "Số 4,9/300, 4,6/520, 'gấp đôi', '38% có ảnh' là số tự đặt không gắn nhãn; 'gấp đôi' lại gán cho đánh giá dù hai shop có thể khác quảng cáo, vị trí tìm kiếm.", "fix": "Gắn nhãn minh hoạ; thêm một câu về các yếu tố khác có thể tạo chênh doanh số." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 38%×200 = 76; (76+15)/(300+200) = 91/500 = 18,2% ✓. Sai định danh 38 (chỉ lấy tỉ lệ mới) và 45,5 (91/200) đúng tên lỗi SAI_MAU_SO." },
+      "claims": [
+        { "claim": "Spiegel Research Center: khả năng mua cao nhất 4,2–4,5 sao, giảm khi sát 5,0", "status": "unverified", "note": "Có nghiên cứu thật nhưng bài không dẫn nguồn; khoảng điểm cần đối chiếu bản gốc." },
+        { "claim": "Đổi quà lấy sửa đánh giá vi phạm quy định sàn (Shopee)", "status": "unverified", "note": "Không có link chính sách, không ngày kiểm." },
+        { "claim": "Shop A/B trên Shopee 4,9 vs 4,6 sao, bán gấp đôi", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ví dụ đưa cách xin đánh giá cụ thể ('nồi nhà bạn nấu món gì đầu tiên?') và tự hedging 'so trước – sau chưa có đối chứng'; Q5 (45 đánh giá 5 sao trong 3 ngày, cùng giọng) là câu chẩn đoán mẫu hình thật sự.",
+      "upgrade": "Dẫn nguồn và sửa khoảng điểm Spiegel, thêm ngày kiểm. Thêm PHẢN VÍ DỤ: ngành hàng mà lời chê chi tiết thật sự làm mất đơn (hàng kỹ thuật, an toàn) và cách xử lý. Thêm ĐÀO SÂU: sàn xếp hạng theo điểm nên điểm 4,6 có thể mất vị trí tìm kiếm — đánh đổi phải tính. Gắn nhãn số. Sửa Q7 cho khớp hedging. Thêm một câu L4 buộc đọc bảng: cho 10 đánh giá, đếm bao nhiêu cái 'dùng được'."
+    },
+    {
+      "id": "B:kh08-03",
+      "scores": { "accuracy": 10, "depth": 8, "practical": 13, "examples": 7, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 59,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L3"],
+      "bloom_max": "L3",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Gộp lại thành 6 trang, mỗi trang có lựa chọn màu, mẫu chủ lực lên \"Đã bán 58\"", "issue": "Cơ chế nền tảng nêu như sự thật nhưng không nguồn: trên Shopee, số 'Đã bán' thuộc từng trang sản phẩm; xoá 24 trang để tạo 6 trang mới thì lượt bán cũ không chuyển sang trang mới. Con số 58 chỉ đạt được nếu tích luỹ lại từ đầu — bài không nói vậy, người học sẽ tin 'gộp là cộng dồn'.", "fix": "Viết lại: 'tạo 6 trang có phân loại màu ngay từ đầu (hoặc chấp nhận đếm lại từ 0); sau 6 tuần mẫu chủ lực đạt 58'. Thêm `src` hướng dẫn phân loại hàng của Shopee với ngày kiểm và câu 'nếu màn hình khác, tin trang chính thức'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tỉ lệ chuyển đổi lên 1,5%.", "issue": "Ba thay đổi cùng lúc (gộp trang, đổi ảnh đầu, đổi kênh quảng cáo từ tìm kiếm sang video) rồi gán kết quả cho 'bằng chứng' — không nói tách tác động; đổi kênh làm đổi cả tệp khách nên 0,6% và 1,5% không so được trực tiếp.", "fix": "Thêm câu: 'đổi kênh làm đổi tệp khách, nên 1,5% không so trực tiếp với 0,6%; muốn biết phần nào do gộp trang, giữ kênh và chỉ đổi trang trong 2 tuần'." },
+        { "sev": "P2", "where": "Q4", "quote": "Thuật toán sàn không ưu tiên đơn giản theo số lượng mã hàng ít.", "issue": "Khẳng định về thuật toán sàn không nguồn (dù đúng hướng).", "fix": "Viết 'không có tài liệu công khai nào của sàn nói vậy' thay cho khẳng định." },
+        { "sev": "P2", "where": "CÂU HỎI", "quote": "Vì sao gộp 24 trang theo màu thành 6 trang giúp tăng niềm tin?", "issue": "Q1, Q4, Q6 đều là nhận lại ý bài (L2); không có câu đọc dữ liệu hay đánh đổi.", "fix": "Thay Q4 bằng câu L4: cho bảng 6 mẫu × lượt bán, hỏi gộp theo cách nào để mẫu chủ lực vượt ngưỡng mà không giấu lựa chọn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20.000×0,6% = 120; 20.000×1,5% = 300; +180 đơn × 90.000đ = 16,2 triệu ✓. Sai định danh 27 (lấy toàn bộ 300 đơn) đúng tên; 1,62 là lỗi đơn vị, tên SAI_TINH_TOAN chấp nhận được." },
+      "claims": [
+        { "claim": "Gộp trang trên Shopee làm số 'Đã bán' cộng dồn lên 58", "status": "unverified", "note": "Khả năng cao sai cơ chế: lượt bán không chuyển giữa các trang; cần kiểm trang trợ giúp Shopee." },
+        { "claim": "Thuật toán sàn không ưu tiên theo số mã hàng ít", "status": "unverified", "note": "Không nguồn." },
+        { "claim": "Sàn có cơ chế phạt đơn ảo", "status": "unverified", "note": "Đúng hướng (Shopee có điểm phạt) nhưng không dẫn chính sách." },
+        { "claim": "Chuyển đổi 0,6% trên sàn vs 2% web riêng; đối thủ 'Đã bán 2,3k'", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Khái niệm 'bằng chứng xã hội ngược' được hedging đúng mực ('theo cách hiểu phổ biến trong ngành, chưa phải quy luật chắc chắn'); ba lối ra (ẩn/dời/gộm) cho người học một menu hành động cụ thể.",
+      "upgrade": "Sửa cơ chế gộp trang theo đúng cách Shopee đếm lượt bán, thêm `src` và ngày kiểm (lớp fast). Tách tác động: ví dụ chỉ đổi một thứ mỗi lần hoặc nói rõ không tách được. Thêm PHẢN VÍ DỤ: hàng thủ công/niche nơi 'Đã bán 12' đọc là hiếm và được giá. Thêm ĐÀO SÂU về đánh đổi gộp trang (mất thứ hạng tìm kiếm theo từ khoá màu, khó quản tồn kho). Nâng 2 câu L2 lên L4 đọc bảng lượt bán theo mẫu."
+    },
+    {
+      "id": "B:kh08-04",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L3", "L3"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q7", "quote": "Chỉ dùng chữ vì khách đọc nhanh hơn xem video", "issue": "Đáp án đoán được bằng hình thức: ba phương án sai đều dùng từ tuyệt đối/cực đoan ('Chỉ dùng chữ', 'Chỉ dùng video', 'video dài 10 phút'), phương án đúng là phương án 'kết hợp' duy nhất.", "fix": "Viết lại hai phương án sai thành lựa chọn kết hợp nhưng sai cơ chế, ví dụ 'video có phụ đề nhưng ẩn con số trước – sau để giữ bí mật', 'chữ kèm ảnh chân dung nhưng ẩn tên'." },
+        { "sev": "P2", "where": "Q4", "quote": "Người đọc thích thấy học viên khác không hoàn hảo để tự tin hơn", "issue": "Lời giải a thừa nhận 'có thể có cảm giác đó' — a và b chồng một phần; b vẫn đúng hơn nhưng ranh giới mỏng.", "fix": "Đổi a thành lý do sai hẳn (ví dụ 'vì sàn/Google ưu tiên nội dung có điểm trừ')." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "tỉ lệ để lại số điện thoại tư vấn từ 3,0% lên 4,2%", "issue": "Số tự đặt không gắn nhãn (dù đã hedging 'bốn tuần, chưa có đối chứng').", "fix": "Gắn nhãn minh hoạ." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Em vào 5.0 ... Sau 14 tuần thi được 6.5", "issue": "Bài không nhắc rủi ro pháp lý/đạo đức của testimonial nêu điểm số đầu ra trong giáo dục (hiểu lầm thành cam kết kết quả) và việc xin đồng ý dùng tên, ảnh, bảng điểm — chỉ xuất hiện rải rác ở Q2, Q5.", "fix": "Thêm 2 câu trong KHÁI NIỆM: 'kết quả cá nhân không phải cam kết — ghi rõ', 'xin đồng ý bằng văn bản khi dùng tên, ảnh, bảng điểm'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 15.000 × (4,2% − 3,0%) = 180; × 25% = 45; × 6 triệu = 270 triệu ✓. Sai định danh 1080 (quên 25%) và 945 (lấy toàn bộ 4,2% thay vì phần tăng) đúng tên." },
+      "claims": [
+        { "claim": "Ảnh cơ thể là dữ liệu cá nhân, cần đồng ý rõ (Q5)", "status": "unverified", "note": "Đúng hướng theo NĐ 13/2023 về bảo vệ dữ liệu cá nhân nhưng không dẫn." },
+        { "claim": "Trung tâm IELTS Hà Nội: để lại số 3,0% → 4,2%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Khung 'trước – sau – vì sao – ai' ngắn, kiểm được, áp dụng được cho mọi ngành; Q2 dạy quy trình đúng (phỏng vấn thêm → viết bằng lời họ → họ duyệt) thay vì chỉ phân loại.",
+      "upgrade": "Sửa Q7 để không đoán được bằng hình thức. Thêm PHẢN VÍ DỤ: testimonial đủ bốn phần nhưng đến từ ca ngoại lệ (5.0 → 8.0 trong 8 tuần) tạo kỳ vọng sai và rủi ro quảng cáo. Thêm ĐÀO SÂU về đồng ý sử dụng hình ảnh, cách ghi 'kết quả cá nhân'. Gắn nhãn số. Thêm câu L4: cho 4 testimonial thô, chấm từng cái theo 4 phần rồi chọn cái đưa lên đầu cho một nhóm khách cụ thể."
+    },
+    {
+      "id": "B:kh08-05",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 13, "examples": 8, "pedagogy": 6, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L5", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Nó có thể kéo đơn ngắn hạn, nhưng khi bị lộ, khách dễ mất niềm tin", "issue": "Bài chỉ nói hậu quả niềm tin, bỏ qua rủi ro pháp lý: đồng hồ giả và 'chỉ hôm nay' lặp lại là thông tin gây nhầm lẫn về giá/khuyến mại (Luật Quảng cáo Điều 8; Luật Bảo vệ quyền lợi NTD 2023) — kh08-07 và kh08-08 có nhắc, bài này không.", "fix": "Thêm một câu nối tới kh08-08: 'ngoài mất tin, đây là thông tin gây nhầm lẫn về giá — xem ranh giới pháp lý ở bài 8'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Chuyển đổi hồi lại 2,2% sau một tháng.", "issue": "Số 2,5% → 1,2% → 2,2% tự đặt, không gắn nhãn, và lần này không hedging về đối chứng (bài 02, 04 có).", "fix": "Gắn nhãn minh hoạ và thêm 'so trước – sau, còn lẫn quảng cáo, mùa'." },
+        { "sev": "P2", "where": "Q4", "quote": "\"Lớp 40 người vì giảng viên chữa bài từng người, khai giảng 16/10\"", "issue": "Đáp án đúng là phương án duy nhất có con số và ngày cụ thể — đoán được bằng hình thức dù đó cũng là nội dung cần kiểm.", "fix": "Thêm một phương án sai có số và ngày nhưng không có lý do kiểm chứng được ('Chỉ 100 suất đến 23:59 hôm nay!' lặp lại mỗi ngày) để buộc đọc cơ chế." },
+        { "sev": "P2", "where": "Q2", "quote": "Gỡ đồng hồ, đặt hạn chót cố định có lý do, và trả lời thẳng trong nhóm", "issue": "Phương án đúng dài nhất, gồm ba hành động, đứng đầu — mẹo hình thức.", "fix": "Cân độ dài các phương án; tách 'trả lời trong nhóm' thành câu riêng về xử lý khủng hoảng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30.000×2,5% = 750; 30.000×1,2% = 360; 390 đơn × 1,5 triệu = 585 triệu ✓. Sai định danh 390 (số đơn) đúng tên; 1,95 = 1,3 điểm % × 1,5 (nhầm điểm % thành đơn) — tên SAI_TINH_TOAN chấp nhận." },
+      "claims": [
+        { "claim": "Landing page khoá học: chuyển đổi 2,5% → 1,2% → 2,2%; nhóm Facebook 80.000 thành viên, 600 bình luận", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phân biệt khan hiếm thật/dựng bằng tiêu chí kiểm chứng được (lý do + mốc + thật sự kết thúc) và Q6 là câu đánh đổi thật (giữ hạn khi doanh số chưa đạt) với lời giải phương án sai nêu đúng hậu quả cho khách mua sớm.",
+      "upgrade": "Thêm PHẢN VÍ DỤ: hạn chót thật nhưng không có lý do nên vẫn bị nghi; hoặc trường hợp gia hạn minh bạch có lý do thật (sự cố thanh toán) và cách bù cho người mua sớm. Thêm ĐÀO SÂU về chi phí giữ lời (doanh số hụt ngắn hạn) và tín hiệu theo dõi (tỉ lệ đơn trong 48 giờ cuối qua các đợt). Nối rủi ro pháp lý tới kh08-08. Gắn nhãn số, hedging kết quả hồi 2,2%. Sửa Q2/Q4 để không đoán được bằng hình thức."
+    },
+    {
+      "id": "B:kh08-06",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 9, "pedagogy": 6, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L3", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "với giá vốn bằng 55% giá gốc, biên lãi gộp chung còn khoảng 28%", "issue": "Con số đúng (kiểm: 60% đơn ở giá 0,6 và 40% ở giá 1 → lãi 0,21/doanh thu 0,76 = 27,6%) nhưng bài không cho công thức trộn, người học không tự tính lại được 28% và 39%.", "fix": "Thêm 3 dòng tính: doanh thu = 0,6×0,6 + 0,4×1 = 0,76; lãi = 0,6×0,05 + 0,4×0,45 = 0,21; biên = 0,21/0,76 ≈ 28%." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Doanh số ngày thứ Sáu gấp 6 lần ngày thường", "issue": "Số tự đặt không gắn nhãn (dù tự khớp: 60% đơn ở giá giảm 40% tương ứng doanh thu thứ Sáu ≈ 5,6 lần ngày thường).", "fix": "Gắn nhãn minh hoạ." },
+        { "sev": "P2", "where": "Q2", "quote": "Giảm dần tần suất, gắn sale với dịp cụ thể, thêm ưu đãi không phải giảm giá", "issue": "Phương án đúng là phương án 'ôn hoà, ba việc' dài nhất — mẹo hình thức.", "fix": "Thêm phương án sai cũng ôn hoà nhiều việc nhưng sai cơ chế (ví dụ 'giảm mức giảm xuống 20% nhưng giữ lịch thứ Sáu')." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì luật khuyến mại cấm giảm giá quá ba lần trong một tháng", "issue": "Lời giải nói 'Quy định về khuyến mại có giới hạn tổng thời gian và mức giảm' — đúng hướng (Nghị định 81/2018/NĐ-CP) nhưng không dẫn văn bản.", "fix": "Dẫn NĐ 81/2018 (mức giảm tối đa 50%, tổng thời gian khuyến mại giảm giá ≤ 120 ngày/năm) với ngày kiểm." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.000.000×0,6 − 550.000 = 50.000đ ✓; bước 3 so với 450.000đ (mất ~89% lãi) đúng. Kiểm thêm: biên trộn 60% đơn giảm = 27,6% ≈ 28% ✓; 25% đơn giảm = 38,9% ≈ 39% ✓; không có đơn giảm = 45% ✓ — ví dụ tự khớp." },
+      "claims": [
+        { "claim": "Quy định khuyến mại giới hạn tổng thời gian và mức giảm (lời giải Q6)", "status": "unverified", "note": "Đúng hướng theo NĐ 81/2018 nhưng không dẫn; lời giải đã khuyên 'tra văn bản hiện hành' — tốt." },
+        { "claim": "Thương hiệu giày: biên 45% → 28% → 39%, 60% đơn trong khung flash sale", "status": "illustrative-unlabelled", "note": "Số tự khớp khi kiểm lại." }
+      ],
+      "strengths": "Số liệu tự khớp hoàn toàn (biên 28%/39% tính lại đúng), có chỉ số dẫn trước rõ (tỉ lệ đơn trong khung giảm giá), và Q2/Q7 là câu đánh đổi thật (chuyển dần không làm rơi doanh số; lãi tổng tăng dù đơn giảm).",
+      "upgrade": "Đưa công thức biên trộn vào ví dụ dạng bảng 2 dòng (đơn giảm giá / đơn giá gốc). Thêm PHẢN VÍ DỤ: ngành hàng mà flash sale định kỳ là mô hình đúng (xả hàng tồn theo mùa, chợ phiên) và tiêu chí phân biệt. Thêm ĐÀO SÂU: giá tham chiếu, chi phí quà thành viên, cách đo 'khách chờ' bằng khoảng cách giữa hai lần mua. Gắn nhãn số. Dẫn NĐ 81/2018 ở Q6."
+    },
+    {
+      "id": "B:kh08-07",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 12, "examples": 8, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 61,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L4", "L3", "L2"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Một shop mỹ phẩm trên Lazada cài dòng \"Chỉ còn 3 sản phẩm\"", "issue": "Trên sàn, dòng 'còn X' sinh từ tồn kho người bán khai; 'cài dòng' trong khi kho 400 là mô tả cơ chế không rõ (shop khai tồn 3 hay dùng banner chữ?). Bài đã gắn nhãn 'giả định minh hoạ: sàn không chặn đặt vượt số hiển thị' nhưng chưa nói shop làm cách nào — người học không biết tình huống có xảy ra trên Lazada thật không.", "fix": "Viết rõ: 'shop khai tồn kho 3 trên hệ thống và nhập thêm mỗi ngày' hoặc chuyển sang website riêng nơi shop tự viết dòng chữ; thêm `src` trung tâm trợ giúp Lazada về hiển thị tồn kho với ngày kiểm." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "vừa có rủi ro theo luật bảo vệ người tiêu dùng", "issue": "Nêu luật chung chung, không tên văn bản, không điều khoản.", "fix": "Dẫn Luật Bảo vệ quyền lợi NTD 2023, điều cấm cung cấp thông tin không chính xác/gây nhầm lẫn; ngày kiểm." },
+        { "sev": "P2", "where": "Q7", "quote": "Sàn không tính điểm như vậy; tác hại nằm ở niềm tin của người đọc.", "issue": "Khẳng định về cách sàn tính điểm không nguồn.", "fix": "Viết 'không có tài liệu công khai nào của sàn nói vậy'." },
+        { "sev": "P2", "where": "CÂU HỏI", "quote": "Khi nào hiện \"sắp hết hàng\" là khan hiếm thật", "issue": "Q1, Q4, Q7 là nhận lại ý bài; Q3 là phép chia hai bước đơn giản không gắn với quyết định.", "fix": "Thay Q3 bằng câu tính ngưỡng: tồn kho 60, bán 6,7 thỏi/ngày, lead time nhập 5 ngày → đặt ngưỡng 'sắp hết' ở bao nhiêu để không cháy hàng; thay Q4 bằng câu đọc bảng tồn kho 5 mã hàng chọn mã nào được hiện 'sắp hết'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 60/9 = 6,67 thỏi/ngày; 6,67/3 = 2,22 → 2,2 (tol 0,05 đủ) ✓. Sai định danh 20 (60/3) và 0,45 (3/6,67) đúng tên." },
+      "claims": [
+        { "claim": "Lazada cho đặt vượt số tồn hiển thị", "status": "illustrative-labelled", "note": "Bài tự ghi 'giả định minh hoạ' — đúng cách." },
+        { "claim": "Rủi ro theo luật bảo vệ người tiêu dùng khi hiện tồn kho sai", "status": "unverified", "note": "Không tên văn bản." },
+        { "claim": "Sàn không tính điểm đánh giá về trung thực nặng hơn", "status": "unverified", "note": "" },
+        { "claim": "Dòng son theo mùa 60 thỏi bán hết 9 ngày; dòng thường 3 thỏi/ngày", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Nguyên tắc 'tồn kho hiển thị là lời cam kết khách kiểm được' ngắn và đúng; Q5 (số phòng trống biến động hợp lý theo mùa) là câu chẩn đoán tín hiệu thật từ dữ liệu, mức L4 hiếm trong module.",
+      "upgrade": "Làm rõ cơ chế shop tạo dòng 'còn 3' trên sàn, dẫn trợ giúp Lazada và luật BVQLNTD với ngày kiểm. Thêm PHẢN VÍ DỤ: tồn kho thật thấp nhưng hiện 'sắp hết' trên mã bán chậm gây hiểu lầm 'bán chạy'. Thêm ĐÀO SÂU: ngưỡng hiện 'sắp hết' dựa trên tốc độ bán và thời gian nhập; đánh đổi mất đơn khi khách thấy 'còn 400'. Nâng Q3/Q4 lên câu ra quyết định có số. Gắn nhãn số."
+    },
+    {
+      "id": "B:kh08-08",
+      "scores": { "accuracy": 11, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L2", "L4", "L6"],
+      "bloom_max": "L6",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Điều 8 Luật Quảng cáo 2012 cấm quảng cáo sai hoặc gây nhầm lẫn về chất lượng, công dụng; thực phẩm chức năng còn phải có giấy xác nhận nội dung quảng cáo trước khi phát hành (Nghị định 15/2018/NĐ-CP)", "issue": "Hai dẫn chiếu đúng hướng nhưng bài không có `src`, không ngày kiểm, và không nhắc Luật sửa đổi Luật Quảng cáo 2025 (hiệu lực từ 2026) bổ sung nghĩa vụ của người có ảnh hưởng khi quảng cáo (phải công khai, phải kiểm chứng) — đúng chủ đề KOC của bài. Với lớp periodic/fast, thiếu nguồn và ngày là lỗi phải sửa.", "fix": "Thêm `src` tới Luật Quảng cáo (bản hợp nhất sau sửa đổi 2025), NĐ 15/2018, và quy định về người chuyển tải sản phẩm quảng cáo; ghi ngày kiểm; thêm câu 'nếu văn bản mới hơn, tin bản mới'." },
+        { "sev": "P2", "where": "Q1", "quote": "Vi phạm quy định về gian dối, và mất tin khi khách thấy dấu hiệu dựng", "issue": "Phương án đúng dài nhất, đứng đầu, gồm hai ý — mẹo hình thức.", "fix": "Cân độ dài; đặt phương án đúng ở vị trí khác." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Ca xám: tặng hàng vẫn là quan hệ lợi ích nên phải ghi rõ", "issue": "Bài không nêu quy định sàn/nền tảng về nhãn 'hợp tác' (TikTok 'Nội dung quảng cáo', Facebook 'Hợp tác trả phí') — lớp fast cần nguồn.", "fix": "Thêm `src` tới chính sách nhãn nội dung thương mại của TikTok/Meta với ngày kiểm." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Thu được 64 đánh giá, điểm trung bình 4,5 (số minh hoạ)", "issue": "Chỉ điểm trung bình được gắn nhãn; 200 hộp, 64 đánh giá, 15 triệu, 75.000đ chưa gắn.", "fix": "Đưa nhãn 'số minh hoạ' lên đầu ví dụ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 200×75.000 = 15.000.000; /64 = 234.375 → 234,4 nghìn ✓; bước 3 so với gói 15 triệu giả là so sánh tốt. Sai định danh 75 (chi phí/hộp) đúng tên SAI_MAU_SO; 0,23 là lỗi đơn vị." },
+      "claims": [
+        { "claim": "Điều 8 Luật Quảng cáo 2012 cấm quảng cáo sai/gây nhầm lẫn về chất lượng, công dụng", "status": "unverified", "note": "Đúng hướng (khoản 9 Điều 8) nhưng không `src`; luật đã được sửa đổi 2025 — cần cập nhật." },
+        { "claim": "Thực phẩm chức năng phải có giấy xác nhận nội dung quảng cáo (NĐ 15/2018/NĐ-CP)", "status": "unverified", "note": "Đúng hướng cho thực phẩm bảo vệ sức khoẻ; không `src`, không ngày kiểm." },
+        { "claim": "Thương hiệu gửi 200 hộp, thu 64 đánh giá, điểm 4,5", "status": "illustrative-labelled", "note": "Nhãn chỉ gắn ở điểm trung bình." }
+      ],
+      "strengths": "Ba ranh giới (thật · công khai · không gây hiểu lầm) kèm ca xám cụ thể là khung chuẩn mực dùng được ngay; Q7 là câu thiết kế thí nghiệm (L6) hợp lệ về đạo đức, Q4/Q6 buộc phân loại hành vi biên — bộ câu hỏi tốt nhất module.",
+      "upgrade": "Cập nhật pháp lý: dẫn bản Luật Quảng cáo sau sửa đổi 2025 và nghĩa vụ người có ảnh hưởng, NĐ 15/2018, chính sách nhãn của TikTok/Meta, tất cả có ngày kiểm. Thêm PHẢN VÍ DỤ: thương hiệu công khai đầy đủ nhưng chọn lọc chỉ mời người đã khen (vi phạm 'không gây hiểu lầm' dù mọi đánh giá thật). Thêm ĐÀO SÂU: chi phí tuân thủ, cách lưu bằng chứng (ảnh chụp nhãn, hợp đồng KOC). Gắn nhãn toàn bộ số. Cân độ dài phương án Q1."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý: chọn nguồn bằng chứng (01) → đánh giá đáng tin nhờ chi tiết (02) → bằng chứng yếu phản tác dụng (03) → testimonial (04) → khan hiếm thật/dựng (05) → khan hiếm lặp lại (06) → tồn kho hiển thị (07) → ranh giới pháp lý/đạo đức (08). Đi từ 'chọn gì' sang 'khi nào hại' sang 'được phép đến đâu' là đúng. Nhưng cả 8 bài đều thiếu ba khối VÌ SAO HIỆU QUẢ / PHẢN VÍ DỤ / ĐÀO SÂU mà kh09, kh10 có — module này mỏng hơn hẳn về cấu trúc sư phạm; không bài nào có `src` dù 02, 07, 08 dẫn nghiên cứu/luật/cơ chế sàn.",
+    "overlap": [
+      "kh08-05 và kh08-07 cùng cơ chế 'khan hiếm dựng bị khách kiểm ra' với cùng mẫu câu hỏi Q2 (gỡ, nhận lỗi công khai) — có thể gộp hoặc để 07 tập trung vào ngưỡng tồn kho thật.",
+      "kh08-02, kh08-04, kh08-08 và kh10-03 cùng lặp ý 'một điểm chưa hoàn hảo làm lời khen đáng tin hơn' mà không bài nào nêu điều kiện của nó (điểm yếu phải nhỏ, có điều kiện — chỉ kh10-03 nói).",
+      "kh08-01 Q7 và kh08-04 Q6 cùng ý 'người giống mình phải đổi theo nhóm khách'."
+    ],
+    "gaps": [
+      "Không bài nào dạy cách đo tác động của bằng chứng xã hội: thiết kế A/B, cỡ mẫu tối thiểu, đọc chênh lệch có ý nghĩa — mọi ví dụ chỉ nêu kết quả trước – sau.",
+      "Thiếu bài về nghĩa vụ công khai của người có ảnh hưởng theo Luật Quảng cáo sửa đổi 2025 và chính sách nhãn nội dung thương mại của TikTok/Meta (lớp fast, cần `src`).",
+      "Thiếu bài về cơ chế đánh giá trên sàn (nhãn 'đã mua', trọng số đánh giá trong xếp hạng tìm kiếm) — kh08-02/03 dựa vào cơ chế này nhưng không giải thích.",
+      "Chưa có phản ví dụ nào cho thấy bằng chứng xã hội không phải đòn bẩy chính (sản phẩm mới hoàn toàn, B2B rủi ro cao — nối tới kh09-04)."
+    ],
+    "best_lesson": "B:kh08-08",
+    "weakest_lesson": "B:kh08-03"
+  }
+}

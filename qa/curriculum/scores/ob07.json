@@ -1,0 +1,167 @@
+{
+  "mod": "ob07",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:ob07-01",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L4", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "example", "quote": "Mười đơn trong một buổi: chín đơn 200.000đ và một đơn sỉ 5.000.000đ.", "issue": "Số minh hoạ tự khớp nhưng bài không gắn nhãn là số dựng; tình huống nói báo cáo tuần 680.000đ còn ví dụ chỉ 10 đơn một buổi — người học dễ hiểu đây là dữ liệu thật của shop.", "fix": "Thêm '(số minh hoạ)' vào đầu ví dụ, hoặc viết 'Giả sử tuần đó rút gọn thành 10 đơn tiêu biểu'." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[200,\"SAI_TINH_TOAN\"]", "issue": "200 không phải lỗi tính toán — đó là trung vị. Gắn nhãn sai làm phản hồi tự động nói sai nguyên nhân cho người học nhập 200.", "fix": "Đổi nhãn thành NHAM_TRUNG_VI (hoặc ghi 'bạn vừa tính trung vị, đề hỏi trung bình')." },
+        { "sev": "P2", "where": "apply", "quote": "Nếu hai số lệch nhau quá 30%, tìm ra đơn nào đang kéo lệch.", "issue": "Ngưỡng 30% nêu như quy tắc mà không có lý do; không nói ngưỡng này phụ thuộc ngành hàng hay cỡ mẫu.", "fix": "Viết 'ngưỡng 30% là gợi ý để bắt đầu; với ngành có đơn sỉ xen lẫn, hãy nhìn thẳng vào tỉ trọng doanh thu của 10% đơn lớn nhất'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (150+180+200+220+1.250)/5 = 400 ✓ (tol 1). Q4: dãy đã xếp, phần tử thứ 3 = 200 ✓. Ví dụ: (9×200+5.000)/10 = 680 ✓; đơn sỉ chiếm 5.000/6.800 = 73,5% ≈ 'gần ba phần tư' ✓. Q5: 50.000/4.000 = 12,5 lần ✓." },
+      "claims": [
+        { "claim": "Shop mỹ phẩm trên Shopee, giá trị đơn trung bình 680.000đ", "status": "illustrative-unlabelled", "note": "Chỉ là bối cảnh, không khẳng định gì về Shopee." },
+        { "claim": "Báo cáo lương ngành marketing ghi thu nhập trung bình 25 triệu/tháng (Q7)", "status": "illustrative-unlabelled", "note": "Con số giả định trong đề, không có nguồn; nên ghi 'giả sử'." }
+      ],
+      "strengths": "Phản ví dụ (shop chỉ bán sỉ) thật sự làm đổi kết luận — trung vị mô tả người, tổng mô tả tiền. Q5 (lượt xem 50.000 vs 4.000) và Q7 (lương ngành) buộc chuyển khái niệm sang dữ liệu mới.",
+      "upgrade": "Gắn nhãn số minh hoạ; thêm bảng 10 đơn với cột 'tỉ trọng doanh thu cộng dồn' để người học thấy 73,5% nằm ở một đơn; thay Q6 (nhận lại ý bài) bằng câu đọc bảng phân phối đơn của một shop khác và chọn mức combo; sửa nhãn lỗi Q3; thêm một câu về cỡ mẫu (10 đơn thì trung vị dao động ra sao)."
+    },
+    {
+      "id": "B:ob07-02",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "example", "quote": "Kế hoạch nhập hàng đổi từ 2.000 chai xuống 400 chai cho đợt thử", "issue": "Con số 400 không được suy ra từ 9% hay từ số cọc 45; người học không thấy phép tính nối tỉ lệ đặt cọc với lượng nhập.", "fix": "Viết rõ: 45 người cọc × ~2 chai + dự phòng, hoặc 'nhập bằng 2 tuần bán dự kiến: 4.000 lượt vào × 9% ÷ 2'." },
+        { "sev": "P2", "where": "Q4", "quote": "4.000 × 9% = 360 đơn — xa mức 2.000 chai định nhập.", "issue": "So 'đơn' với 'chai' là lẫn đơn vị; một đơn có thể nhiều chai. Cũng coi tỉ lệ đặt cọc = tỉ lệ mua, bỏ qua người cọc rồi không nhận hàng mà phần đào sâu vừa nhắc.", "fix": "Ghi 'giả sử mỗi đơn 1 chai và mọi người cọc đều nhận hàng' hoặc hỏi thẳng số chai." },
+        { "sev": "P2", "where": "points", "quote": "Với 30 người, mỗi người chiếm hơn ba điểm phần trăm", "issue": "Đúng nhưng chưa nêu độ nhiễu một cách định lượng (khoảng tin cậy của 24/30 rất rộng, khoảng 61–92%); người học không có công cụ để nói 'lung lay bao nhiêu'.", "fix": "Thêm một dòng: 'với n=30, tỉ lệ 80% có thể dao động khoảng ±15 điểm; với n=500 chỉ ±3 điểm' và nêu đó là ước lượng thô." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 45/500 = 9% ✓; sai 11,1 = 45/405 (chia cho người không cọc) ✓ SAI_MAU_SO. Q4: 4.000×0,09 = 360 ✓; 3.200 = 4.000×80% ✓; 4.000 = quên nhân tỉ lệ ✓. Points: 1/30 = 3,33 điểm % ✓." },
+      "claims": [
+        { "claim": "Khảo sát Google Form, trang đặt trước trên Facebook tới người lạ 18–30 tuổi ở TP.HCM", "status": "illustrative-unlabelled", "note": "Bối cảnh; không khẳng định tính năng nền tảng." },
+        { "claim": "'70% người Việt thích mua sắm online hơn — theo một báo cáo ngành' (Q5)", "status": "illustrative-labelled", "note": "Bài dùng chính nó làm ví dụ về con số mồ côi; không nêu như sự thật." }
+      ],
+      "strengths": "Phân biệt ba lớp lỗi (mẫu lệch, mẫu nhỏ, nói ≠ làm) và đưa cách sửa bằng hành vi có cọc; Q6 (2.000 người theo dõi fanpage) kiểm đúng hiểu lầm 'mẫu to là đủ'. Phần đào sâu đề nghị thử ngay với 24 người đã nói sẽ mua — phép kiểm rẻ và sắc.",
+      "upgrade": "Nối số: từ 45 cọc → lượng nhập 400 chai bằng một phép tính; thống nhất đơn/chai; thêm bảng 'khoảng dao động theo cỡ mẫu' (30/100/500); thêm phản ví dụ dạng câu hỏi: khi nào khảo sát bạn bè vẫn có giá trị (tìm lý do mua, không tìm tỉ lệ); thay Q7 (L2) bằng câu đọc bảng tỉ lệ cọc theo nguồn khách rồi chọn nguồn để mở rộng."
+    },
+    {
+      "id": "B:ob07-03",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 14, "examples": 9, "pedagogy": 6, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 67,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L4", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "situation ↔ Q4", "quote": "Trưởng nhóm đề xuất in 5.000 poster phát cho mọi tiệm, chi phí 150 triệu đồng. … Với 5.000 tiệm, lãi gộp tăng thêm là bao nhiêu", "issue": "Tình huống nói 5.000 poster (dữ liệu từ 200 tiệm, tổng số tiệm không nêu); ví dụ và Q4 biến thành 5.000 tiệm. Số poster và số tiệm bị đánh đồng, nên phép nhân 30 × 5.000 đứng trên một dữ kiện không có trong đề.", "fix": "Ghi rõ trong tình huống: 'khu vực có 5.000 tiệm, mỗi tiệm nhận một poster' hoặc đổi Q4 về đúng số tiệm." },
+        { "sev": "P1", "where": "example", "quote": "chênh 3%, không phải 40% … Mỗi nhóm chỉ 50 tiệm nên nên chạy thêm một vòng thử rộng hơn trước khi in hết.", "issue": "Toàn bộ phép tính 3.000 triệu lãi dựa trên chênh 3% với 50 tiệm mỗi nhóm, nhưng bài không nói chênh này có thể hoàn toàn là nhiễu (doanh số tiệm dao động vài phần trăm là thường). Thiếu giả định này thì kết luận 'poster vẫn có tác dụng' có thể sai dấu.", "fix": "Thêm: 'Với 50 tiệm/nhóm và doanh số từng tiệm dao động ±10%, chênh 3% chưa phân biệt được với nhiễu; cần nhóm lớn hơn (ước vài trăm tiệm) hoặc đo trước–sau trên cùng tiệm.' Và nêu đây là lý do thật của câu 'chạy thêm một vòng'." },
+        { "sev": "P2", "where": "example", "quote": "nhóm có poster bán trung bình 1.030 thùng, nhóm giữ nguyên 1.000 thùng", "issue": "1.000 thùng/tiệm/4 tuần (≈36 thùng mỗi ngày) là không hợp lý cho tiệm tạp hoá; số không gắn nhãn minh hoạ nên làm người làm trade marketing mất tin.", "fix": "Đổi về cỡ thật (ví dụ 103 vs 100 thùng) và gắn nhãn '(số minh hoạ)'." },
+        { "sev": "P2", "where": "example", "quote": "nên nên chạy thêm", "issue": "Lỗi gõ lặp từ.", "fix": "Bỏ một 'nên'." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có phần VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu phản ví dụ (khi nào không cần thử đối chứng: can thiệp rẻ, đảo ngược được, hoặc tương quan đủ mạnh và có cơ chế rõ) và thiếu đánh đổi chi phí/thời gian của thử nghiệm.", "fix": "Thêm ba phần như các bài 01, 02, 04, 07 cùng module." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (1.030−1.000)/1.000 = 3% ✓. Q4: 30×5.000×20.000 = 3.000 triệu ✓; 2.850 = trừ 150 chi phí (nhãn SAI_TINH_TOAN tạm chấp nhận); 103.000 = dùng 1.030 thay 30 ✓ NHAM_SO_TUYET_DOI. Tỉ lệ 3.000/150 = 20 lần ✓. Lưu ý: Q4 dựa trên '5.000 tiệm' không có trong tình huống." },
+      "claims": [
+        { "claim": "Dữ liệu 200 cửa hàng: tiệm treo ≥3 poster bán nhiều hơn 40%", "status": "illustrative-unlabelled", "note": "Số dựng, không gắn nhãn." },
+        { "claim": "Thử đối chứng 100 tiệm: 1.030 vs 1.000 thùng/4 tuần", "status": "illustrative-unlabelled", "note": "Cỡ số không hợp lý với tạp hoá." },
+        { "claim": "Tháng bán nhiều kem thì số vụ đuối nước tăng (Q6)", "status": "illustrative-unlabelled", "note": "Ví dụ kinh điển trong sách thống kê; không có nguồn nhưng dùng như minh hoạ cơ chế." }
+      ],
+      "strengths": "Nêu cả hai hướng nhân quả (tiệm lớn → poster; bán chạy → được phát thêm poster) và thiết kế thử ngẫu nhiên có đối chứng ngay trong ví dụ. Câu 'nhỏ chưa có nghĩa là không đáng' với phép tính 20 lần chi phí là góc nhìn kinh doanh đúng.",
+      "upgrade": "Sửa nhất quán 5.000 poster/5.000 tiệm; đổi số thùng về cỡ thật; thêm một đoạn về nhiễu và cỡ mẫu (vì sao 50 tiệm/nhóm chưa đủ cho chênh 3%, đề xuất đo trước–sau trên cùng tiệm để giảm phương sai); viết phản ví dụ (khi tương quan đủ dùng) và đào sâu (chi phí của thử nghiệm so với chi phí quyết định sai); thêm bảng 2×2 nhóm × trước/sau."
+    },
+    {
+      "id": "B:ob07-04",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 82,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L4", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "situation", "quote": "gấp mười lần trung bình ngành 2%", "issue": "'Trung bình ngành 2%' là benchmark không nguồn; bài dùng nó như mốc so (ở ví dụ: 'chiến dịch này đang ở mức một nửa trung bình') mà không gắn nhãn giả định.", "fix": "Thêm 'giả sử trung bình ngành mà agency trích là 2% trên lượt vào trang' và nhắc rằng benchmark ngành cũng cần hỏi mẫu số, kỳ đo, nguồn." },
+        { "sev": "P2", "where": "example", "quote": "Khâu yếu là trang đầu, không phải khâu thanh toán.", "issue": "Kết luận 'khâu yếu' chỉ từ việc 5% < 20%; chưa nói hai khâu khác bản chất nên không so trực tiếp được tỉ lệ với nhau (muốn biết khâu nào đáng sửa phải so với mức tham chiếu riêng của từng khâu hoặc tính độ nhạy).", "fix": "Thêm: 'khâu yếu' nghĩa là khâu mà cải thiện 1 điểm % cho thêm nhiều đơn nhất; làm phép thử: tăng điền form từ 5% lên 6% → 120 mua; tăng thanh toán 20% lên 21% → 105 mua." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 100/10.000 = 1% ✓; sai 20 = 100/500, 5 = 500/10.000 ✓ cùng nhãn SAI_MAU_SO. Q4: 240/20.000 = 1,2% ✓; 6 = 240/4.000 ✓; 20 = 4.000/20.000 (tỉ lệ mở) ✓. Points: 5%×20% = 1% ✓." },
+      "claims": [
+        { "claim": "Trung bình ngành chuyển đổi landing page khoá học 2%", "status": "illustrative-unlabelled", "note": "Dùng làm mốc so trong ví dụ mà không có nguồn." },
+        { "claim": "CTR là click trên hiển thị; tỉ lệ mua có thể là mua trên click (Q7)", "status": "verified", "note": "Định nghĩa chuẩn, không cần nguồn." }
+      ],
+      "strengths": "Bộ câu hỏi mạnh: Q6 (30% đơn dùng mã, tổng đơn đổi không) và Q7 (CTR 4% vs tỉ lệ mua 4%) là chẩn đoán thật, không nhận lại ý bài. Phản ví dụ (khoá học đắt, khâu quyết định ở cuộc gọi) làm đổi kết luận 'khâu yếu'.",
+      "upgrade": "Gắn nhãn benchmark 2%; thêm bảng phễu 3 dòng 'tử số / mẫu số / tỉ lệ' và phép tính độ nhạy từng khâu để câu 'khâu yếu là trang đầu' có căn cứ; thêm một nguồn thật về cách Google/Meta định nghĩa CTR, conversion rate (fast → cần src) hoặc nói rõ 'định nghĩa tuỳ nền tảng, xem trang chính thức'."
+    },
+    {
+      "id": "B:ob07-05",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 16, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L3", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "concept", "quote": "Ngưỡng hành động không đặt tuỳ ý: chọn mốc X bắt đầu ăn vào khách của bạn, ví dụ 10% quy mô của bạn.", "issue": "Tự nói 'không tuỳ ý' rồi đưa 10% không kèm lý do; chưa nói cách đo 'ăn vào khách của bạn' (khách chuyển sang, giảm tần suất mua của khách cũ).", "fix": "Nêu cơ sở của ngưỡng: mức mà nếu X lấy toàn bộ phần tăng thêm từ khách của bạn thì bạn mất tăng trưởng; và chỉ số đo: tỉ lệ khách cũ giảm mua, khảo sát 'lần gần nhất mua hãng nào'." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu tình huống đối thủ nhỏ nhưng thật sự nguy hiểm (chi phí cấu trúc thấp hơn, đánh đúng phân khúc lãi nhất của bạn, kênh mới) — Q6 chạm nhưng bài không giải thích cơ chế.", "fix": "Thêm phản ví dụ: X chỉ 200 đơn nhưng toàn bộ là khách doanh nghiệp mang 40% lãi của bạn → ngưỡng theo phân khúc, không theo tổng." },
+        { "sev": "P2", "where": "example", "quote": "X từ 50 lên 200 đơn/tháng", "issue": "Số minh hoạ không gắn nhãn; tình huống nói 'tăng trưởng 300% trên sàn' nhưng không nói kỳ so (tháng? quý? cùng kỳ?).", "fix": "Ghi 'so tháng trước' hoặc 'so cùng kỳ' trong tình huống và gắn nhãn minh hoạ." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (200−50)/50 = 300% ✓; 400 = 200/50 ✓; 75 = 150/200 ✓ SAI_MAU_SO. Q7: 200→400→800→1.600 ✓; 1.600/11.000 = 14,5% ≈ 15% ✓. Ví dụ: 1.000/150 = 6,7 ✓; 11.000/200 = 55 ✓; 10%×11.000 = 1.100 ✓. Q4 dãy 50,100,200,300,380,420: % = 100, 100, 50, 26,7, 10,5 ✓; đơn thêm +50,+100,+100,+80,+40 ✓ khớp lời giải. Bài thực hành: Y +1.200, mình +1.800, 19.800/1.500 = 13,2 ✓." },
+      "claims": [
+        { "claim": "Thương hiệu cà phê hoà tan X tăng 300% trên sàn", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "'Doanh số xe điện tăng 500%' (Q5)", "status": "illustrative-unlabelled", "note": "Tiêu đề giả định." }
+      ],
+      "strengths": "Q4 đọc dãy 6 tháng (đà nhân đôi tắt dần) là câu chẩn đoán dữ liệu thật; bài thực hành có đầu ra với rubric cụ thể (số nền, số tuyệt đối, tỉ lệ quy mô, khuyến nghị theo xu hướng) là mẫu tốt cho cả module.",
+      "upgrade": "Thêm phản ví dụ về đối thủ nhỏ đánh đúng phân khúc lãi; giải thích cơ sở ngưỡng 10% và chỉ số đo 'ăn khách'; gắn nhãn số; thêm bảng 2 hãng × (nền, tăng thêm, %) và bảng quỹ đạo 6 tháng; thay Q5/Q6 (L3) bằng câu cho bảng 3 đối thủ với nền khác nhau, chọn ai cần theo dõi."
+    },
+    {
+      "id": "B:ob07-06",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 12, "pedagogy": 6, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "concept", "quote": "bánh trung thu dồn vào tháng 8–9 âm lịch", "issue": "Trung thu là 15/8 âm lịch; mùa bán dồn vào tháng 7–8 âm lịch (trước rằm), sau rằm gần như dừng. 'Tháng 9 âm lịch' là sai dữ kiện mùa vụ, dù không đổi kết luận bài.", "fix": "Sửa thành 'tháng 7–8 âm lịch, đỉnh trong hai tuần trước rằm'." },
+        { "sev": "P2", "where": "apply", "quote": "Liệt kê ba tháng cao điểm và ba tháng thấp điểm trong năm, và lý do cho từng tháng.", "issue": "Bài tập không dẫn tới quyết định hay phép tính nào; không dùng khái niệm so cùng kỳ vừa học.", "fix": "Đổi thành: lấy doanh số 24 tháng của một ngành hàng (hoặc bảng cho sẵn), tính tăng trưởng cùng kỳ từng tháng và chỉ số mùa vụ, rồi viết một dòng kết luận về một chiến dịch." },
+        { "sev": "P2", "where": "structure", "quote": "(bài không có VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU)", "issue": "Thiếu phản ví dụ khi so cùng kỳ cũng sai (năm ngoái có sự kiện bất thường, thị trường co lại, đổi độ phủ) — ví dụ có nhắc 'còn gồm tăng trưởng nền' nhưng không thành phần riêng.", "fix": "Thêm phản ví dụ: năm ngoái tháng 1 bị đứt hàng nên nền thấp → cùng kỳ phóng đại; cần so 2–3 năm hoặc dùng vùng đối chứng." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Ví dụ: 1,38/0,86 = 1,605 → 'khoảng 60%' ✓; 1,38/1,2 = 1,15 → 15% ✓; 0,86×1,4 = 1,204 ≈ 1,2 ✓. Q3: 0,18/1,2 = 15% ✓; sai 60,5 (so tháng 12) ✓; 13 = 0,18/1,38 ✓ SAI_MAU_SO. Q4: 180×40% = 72; 72−120 = −48 ✓; 60 = 180−120 (ROAS_LA_LOI_NHUAN) ✓; 72 quên trừ ✓. Q1d: tháng 12 và tháng 1 đều 31 ngày ✓." },
+      "claims": [
+        { "claim": "Những năm không chạy chiến dịch, tháng 1 thường cao hơn tháng 12 khoảng 40% (số minh hoạ)", "status": "illustrative-labelled", "note": "Gắn nhãn đúng." },
+        { "claim": "Tháng 12 và tháng 1 đều có 31 ngày (Q1)", "status": "verified", "note": "Dữ kiện lịch." },
+        { "claim": "Bánh trung thu dồn vào tháng 8–9 âm lịch", "status": "wrong", "note": "Mùa bán là tháng 7–8 âm lịch, trước rằm 15/8." },
+        { "claim": "Doanh số tháng 1: 1,38 tỷ / 0,86 tỷ / 1,2 tỷ năm ngoái", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ví dụ đưa hai cách tách mùa vụ (cùng kỳ, chỉ số mùa vụ) và nói rõ 15% là mức trần vì còn gồm tăng trưởng nền; Q4 (−48 triệu) buộc đi từ doanh thu tới lãi gộp trừ chi phí và tự ghi là kịch bản lạc quan. Q5 (Tết rơi tháng khác) và Q7 (thương hiệu mới không có năm ngoái) là câu đánh đổi thật.",
+      "upgrade": "Sửa dữ kiện mùa Trung thu; thêm phản ví dụ về nền năm ngoái bất thường; đổi bài áp dụng thành bài tính cùng kỳ trên bảng 24 tháng; thêm bảng 3 dòng (so tháng trước / cùng kỳ / chỉ số mùa vụ) với cột 'phần có thể ghi cho chiến dịch'; nêu cách căn theo tuần trước Tết với ví dụ số."
+    },
+    {
+      "id": "B:ob07-07",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "example", "quote": "Chuỗi có 40.000 khách mua trong quý.", "issue": "Số minh hoạ không gắn nhãn; cũng chưa nói 40.000 khách là nền của kỳ nào (quý trước hay quý này) — tỉ lệ quay lại 60 ngày phải đo trên cohort mua trước đó ít nhất 60 ngày.", "fix": "Ghi '(số minh hoạ)' và 'tính trên 40.000 khách mua trong quý trước, theo dõi 60 ngày sau'." },
+        { "sev": "P2", "where": "Q1", "quote": "b) Tăng 25%, vì đây là con số lớn hơn", "issue": "Phương án nhiễu dùng lý do cố ý ngớ ngẩn ('vì con số lớn hơn') để loại; người học loại được bằng hình thức mà không cần hiểu.", "fix": "Đổi thành 'Tăng 25%, vì 5 chia 20' — đúng toán nhưng thiếu mức nền, buộc so với d." }
+      ],
+      "calc_check": { "n": 3, "ok": 3, "notes": "Q3: 5/20 = 25% ✓; 5 = NHAM_DIEM_PHAN_TRAM ✓; 20 = 5/25 ✓ SAI_MAU_SO. Q4: 40.000×(25%−20%) = 2.000 ✓; 10.000 = 40.000×25% ✓. Q5: (4−3)/4 = 25% ✓; 33,3 = 1/3 ✓ SAI_MAU_SO. Q6: 2/8 = 25% ✓. Q7: 1→2 trên 10.000 = +100% tương đối, +0,01 điểm % ✓." },
+      "claims": [
+        { "claim": "Lãi suất vay tăng từ 8% lên 10% (Q6)", "status": "illustrative-unlabelled", "note": "Đề giả định." },
+        { "claim": "Thuốc mới làm nguy cơ tác dụng phụ từ 1/10.000 lên 2/10.000 (Q7)", "status": "illustrative-unlabelled", "note": "Đề giả định, không nêu tên thuốc." }
+      ],
+      "strengths": "Quy ước viết 'trước → sau, +điểm %, +% tương đối, số người' là mẫu dùng ngay được trên slide; phản ví dụ nhắc cần đối chứng trước khi gán công cho chương trình tích điểm (nối với ob07-03, ob07-06). Q6–Q7 chuyển sang lãi suất và y tế, kiểm được sự hiểu.",
+      "upgrade": "Gắn nhãn số và định nghĩa cohort của tỉ lệ quay lại 60 ngày; thêm bảng so 'cùng +5 điểm từ nền 20% / 50% / 80%'; thêm một câu L5: hai slide cùng đúng toán, chọn cách ghi cho hai đối tượng (ban giám đốc vs truyền thông) và biện hộ; sửa nhiễu Q1b."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý: trung bình/trung vị → mẫu nhỏ, mẫu lệch → tương quan/nhân quả → mẫu số → nền thấp → cùng kỳ/mùa vụ → điểm phần trăm. Bài 04 và 07 nối nhau tốt (mẫu số ↔ điểm %). Ba bài 03, 05, 06 thiếu hẳn phần 'vì sao / phản ví dụ / đào sâu' nên chất lượng không đều với 01, 02, 04, 07.",
+    "overlap": [
+      "ob07-05 và ob07-07 cùng dạy 'phần trăm phụ thuộc nền' — nên tham chiếu chéo thay vì lặp.",
+      "ob07-03 và ob07-06 (Q7) cùng dùng nhóm/vùng đối chứng nhưng không nối với nhau; ob07-07 phản ví dụ cũng nhắc đối chứng.",
+      "ob07-02 Q6 (fanpage 2.000 người) trùng ý với ob08-01 Q5 (mẫu chỉ gồm người đã đến)."
+    ],
+    "gaps": [
+      "Không có bài về nhiễu và cỡ mẫu trong thử nghiệm (khi nào chênh 3% là thật) — ob07-03 cần nhất nhưng không có.",
+      "Thiếu thiên lệch sống sót (chỉ nhìn khách còn lại) và nghịch lý Simpson (tỉ lệ tổng ngược với từng nhóm) — hai lỗi đọc số rất hay gặp trong báo cáo marketing.",
+      "Thiếu bài về chỉ số phù phiếm vs chỉ số quyết định (lượt xem, follower) và về quy kết (last-click) — ob08-05 chạm nhưng module 'đọc số' nên có.",
+      "Không bài nào có `src`; mọi benchmark ('trung bình ngành 2%') đều không nguồn."
+    ],
+    "best_lesson": "B:ob07-04",
+    "weakest_lesson": "B:ob07-03"
+  }
+}

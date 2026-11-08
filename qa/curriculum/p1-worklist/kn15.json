@@ -1,0 +1,108 @@
+{
+ "mod": "kn15",
+ "lessons": [
+  {
+   "id": "B:kn15-01",
+   "title": "CTR tụt từ 9% xuống 3,5% khi video đến người lạ: tin xấu hay tin tốt?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Theo trang trợ giúp chính thức của YouTube, impressions là số lần hình thu nhỏ được hiển thị, còn CTR là tần suất người xem bắt đầu xem sau khi thấy hình thu nhỏ. Trang này chỉ rõ CTR có thể giảm khi impressions tăng",
+     "issue": "Dẫn 'trang trợ giúp chính thức' nhưng không có `src` (URL, ngày kiểm). Toàn bài, kể cả Q1 và Q6, dựa vào nội dung trang này.",
+     "fix": "Thêm src: trang trợ giúp YouTube về impressions và CTR, ngày kiểm, câu 'nếu trang khác, tin trang chính thức'."
+    },
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Không đưa mốc chuẩn; CTR còn phụ thuộc nguồn và khán giả của từng kênh",
+     "issue": "Câu hỏi kiểm tra trí nhớ về một trang ngoài không có trong bài (L1). Theo hiểu biết của người chấm, trang trợ giúp này có nêu một dải CTR điển hình cho 'nửa số kênh và video' — nếu đúng thì phương án 'không đưa mốc chuẩn' là tranh cãi được (có dải tham chiếu, không có mục tiêu). Không tra web ở bước này; cần người sửa kiểm.",
+     "fix": "Kiểm lại trang; nếu có dải tham chiếu thì viết lại Q6 thành 'trang nêu dải tham chiếu, không nêu mục tiêu cho kênh bạn — dùng thế nào?' và đưa dải đó vào bài kèm src."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm src + ngày kiểm, sửa Q6 theo nội dung thật của trang; (2) gắn nhãn minh hoạ; (3) thay Q6 (L1) bằng câu đọc bảng: ba video cùng tuổi 7 ngày với impressions, CTR theo nguồn — video nào có hình yếu thật; (4) thêm ngưỡng hành động: 'chỉ đổi hình khi CTR theo nguồn trang chủ thấp hơn trung vị kênh X điểm ở cùng ngày tuổi'; (5) nối rõ sang kn15-02 (CTR theo nguồn) và kn13-03 (lời hứa)."
+  },
+  {
+   "id": "B:kn15-02",
+   "title": "Cùng một video, CTR tìm kiếm cao còn CTR trang chủ thấp: có nên so không?",
+   "total": 64,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Theo trang trợ giúp của YouTube, ở tìm kiếm thường có ít impressions hơn nhưng CTR cao hơn, vì người xem có ý định cụ thể",
+     "issue": "Khẳng định cơ chế theo nguồn lưu lượng, dẫn trang trợ giúp nhưng không có `src`/ngày kiểm.",
+     "fix": "Thêm src và ngày kiểm."
+    },
+    {
+     "sev": "P1",
+     "where": "Q1 / Q7",
+     "quote": "Số liệu ở trang chủ luôn bị tính thấp hơn thực tế",
+     "issue": "Nhiễu 'luôn' (Q1 c), 'Đổi tên kênh mỗi tháng' (Q7 b), 'Tắt tính năng bình luận' (Q7 d) vô lý; Q1, Q6, Q7 là câu nhận lại ý bài có thể đoán bằng hình thức.",
+     "fix": "Viết nhiễu có lý lẽ: 'tối ưu hình thu nhỏ cho tìm kiếm vì ở đó cũng hiện hình' — buộc phân biệt yếu tố quyết định theo nguồn."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) src + ngày kiểm; (2) gắn nhãn minh hoạ; (3) thêm điều kiện: impressions trang chủ phụ thuộc phản ứng người xem, không chỉ hình; (4) thêm phản ví dụ: video có tìm kiếm 12% CTR nhưng chỉ 1.000 impressions vì không ai gõ cụm đó — tiêu đề khớp truy vấn ít người tìm; (5) thay Q1/Q6/Q7 bằng câu đọc bảng nguồn lưu lượng 3 video (impressions, CTR, lượt xem theo nguồn) và hỏi tối ưu gì cho video nào; (6) nối rõ sang kn15-01 (cùng khái niệm, khác góc)."
+  },
+  {
+   "id": "B:kn15-03",
+   "title": "Thời lượng xem trung bình 3 phút: tốt hay xấu — còn tuỳ video dài bao nhiêu?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Theo định nghĩa của YouTube, thời lượng xem trung bình là số phút người ta xem trung bình trên mỗi lượt xem.",
+     "issue": "Dẫn định nghĩa nền tảng không có `src`; câu 'đường tham chiếu điển hình trên biểu đồ giữ chân nếu Studio hiển thị' mô tả màn hình Studio — đã hedge nhưng vẫn cần nguồn và ngày kiểm.",
+     "fix": "Thêm src tới trang trợ giúp về chỉ số thời lượng xem và biểu đồ giữ chân, ngày kiểm."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) src + ngày kiểm cho định nghĩa và màn hình Studio; (2) thêm hai điều kiện làm phép quy % sai (tua lại >100%, nguồn người xem); (3) thêm phản ví dụ: video 15 phút giữ 30% nhưng chuẩn kênh là 38% — khi đó B mới là video yếu, để người học thấy kết luận đổi theo chuẩn; (4) thêm chiều tổng phút xem (lượt xem × thời lượng) để nối với mục tiêu kênh; (5) thay Q6/Q7 bằng câu đọc đường cong."
+  },
+  {
+   "id": "B:kn15-04",
+   "title": "Mở tab Tiếp cận trong YouTube Studio: bốn câu hỏi cần trả lời trước khi sửa",
+   "total": 64,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Tiêu đề / Khái niệm",
+     "quote": "Theo trang trợ giúp của YouTube, tab Tiếp cận cho biết người xem tìm thấy nội dung của bạn như thế nào, với các chỉ số như impressions, CTR và lượt xem.",
+     "issue": "Bài mô tả bố cục một tab trong YouTube Studio (tên tab, chỉ số trong tab) — kiến thức fast — mà không có `src`, ngày kiểm, và không có câu 'nếu màn hình khác, tin trang chính thức'.",
+     "fix": "Thêm src trang trợ giúp về Analytics/Reach, ngày kiểm, và câu dự phòng khi màn hình đổi tên."
+    },
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Kết luận: vấn đề là video không còn được hiển thị nhiều ở trang chủ, không phải gói video kém đi. Việc cần làm là làm video mới bám chủ đề của ba video cũ",
+     "issue": "Nhảy từ 'impressions trang chủ giảm ở ba video cũ' sang 'làm video mới cùng chủ đề' mà không loại các giả thuyết khác (mùa vụ của chủ đề làm vườn, video cũ hết vòng đời đề xuất là chuyện bình thường, khán giả đổi). Bài kn13-05 dạy loại nghi phạm theo thứ tự; bài này bỏ qua.",
+     "fix": "Thêm bước 'so cùng kỳ năm trước / xem tuổi của ba video' trước khi kết luận, và nói rõ 'làm video mới cùng chủ đề' là giả thuyết để thử."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) src + ngày kiểm + câu dự phòng màn hình đổi; (2) bổ sung bước loại giả thuyết (mùa vụ, tuổi video, cùng kỳ) trước khi kết luận và gắn nhãn minh hoạ; (3) giải thích chênh 30%/40% bằng nguồn không có impressions; (4) thêm phản ví dụ: impressions giữ nguyên, CTR tụt ở riêng nguồn gợi ý — khi đó mới là gói video; (5) thay Q6/Q7 lặp bằng câu đọc bảng; (6) đưa bài này lên trước kn15-01/02 trong trình tự vì nó dạy mở báo cáo mà hai bài kia dùng."
+  },
+  {
+   "id": "B:kn15-05",
+   "title": "Video dài hay video ngắn dọc: chọn theo việc và đo từng loại riêng",
+   "total": 65,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Tình huống ↔ Ví dụ",
+     "quote": "“tổng lượt xem tăng 150% nhờ video ngắn!”",
+     "issue": "Ví dụ cho video ngắn 400.000 lượt và video dài 60.000 lượt; nếu trước đó kênh chỉ có video dài (~60.000) thì tổng tăng ~667%, không phải 150%. Hai phần dùng hai bộ số không khớp; kết luận không đổi nhưng người học tính lại sẽ thấy sai.",
+     "fix": "Thống nhất: hoặc đổi tình huống thành 'tăng gần 8 lần', hoặc đổi số ví dụ (ngắn 90.000, dài 60.000) để ra 150%."
+    },
+    {
+     "sev": "P1",
+     "where": "Ví dụ / Q3–Q4",
+     "quote": "Video ngắn: 400.000 lượt xem, thời lượng xem hết 70%, đăng ký mới 120. Video dài: 60.000 lượt xem",
+     "issue": "So 'đăng ký trên 1.000 lượt xem' giữa video ngắn dọc và video dài mà không nói định nghĩa 'lượt xem' của hai định dạng khác nhau (ngưỡng tính một lượt xem khác) — thiếu điều kiện làm phép so định lượng sai; bài có hedge chung 'cách mỗi định dạng được phân phối có thể đổi' nhưng không nhắc định nghĩa chỉ số.",
+     "fix": "Thêm: 'lượt xem của hai định dạng được đếm theo định nghĩa khác nhau; so tỉ lệ trên 1.000 chỉ để thấy thứ bậc, không để nói gấp 27 lần' và dẫn src định nghĩa."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) sửa số 150% cho khớp ví dụ; (2) thêm điều kiện định nghĩa lượt xem khác nhau giữa định dạng với src; (3) thêm phản ví dụ: kênh mà video ngắn lại tạo nhiều đăng ký hơn vì có lời mời rõ — tránh quy ước thành luật; (4) thêm chi phí sản xuất mỗi định dạng để ra quyết định phân bổ (giờ/video, đăng ký/giờ); (5) đổi quiz: gộp calc, thêm câu L4 đọc bảng, một câu L5 chọn phân bổ 40 giờ/tháng giữa hai định dạng."
+  }
+ ]
+}

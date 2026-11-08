@@ -1,0 +1,16 @@
+{
+ "mod": "dl04",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:dl04-01",
+   "where": "situation ↔ example",
+   "status": "fixed",
+   "change": "Tình huống: “nhóm khách tải app trong một tháng” → “nhóm khách mua lần đầu trong một tháng” (khớp khái niệm và Q3). Ví dụ: “đúng lúc tiệm đổi thẻ tích điểm sang app” → “trùng lúc tiệm ra chương trình tích điểm mới trên app (một tín hiệu, chưa phải bằng chứng nguyên nhân)”.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: bài dùng ba mốc nhóm khác nhau và sự kiện tháng 3 mâu thuẫn với nhóm tải app tháng 1–2. Lỗi thật; không đổi số nào."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

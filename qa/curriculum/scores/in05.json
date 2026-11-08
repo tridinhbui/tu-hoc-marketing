@@ -1,0 +1,192 @@
+{
+  "mod": "in05", "scored_at": "2026-11-07", "scorer": "independent-agent", "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    { "id": "B:in05-01",
+      "scores": { "accuracy": 14, "depth": 9, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 7, "data": 4, "clarity": 5 },
+      "total": 71,
+      "bloom_items": ["L2","L4","L2","L4","L5","L4","L5"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Trong năm nhịp kể chiến dịch, nhịp nào thường bị ứng viên bỏ qua nhất nhưng lại được hỏi vặn nhiều nhất?", "issue": "Khẳng định thực nghiệm về hành vi ứng viên và người phỏng vấn ('bỏ qua nhất', 'hỏi vặn nhiều nhất') không có nguồn; đáp án suy ra được từ tình huống của Minh hơn là từ dữ kiện chung.", "fix": "Đổi thành câu tình huống: 'Người phỏng vấn hỏi Minh \"nó giải quyết vấn đề gì\" — nhịp nào Minh đã bỏ?' hoặc gắn nhãn 'theo kinh nghiệm người tuyển dụng'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Kết quả em thấy là độ phủ lớn trên mạng xã hội; con số doanh số thì em không có nên không dám khẳng định.", "issue": "Ví dụ chỉ có một chiến dịch và không có số nào (kể cả số công khai có thể dẫn); không có phản ví dụ về một câu trả lời 'đủ năm nhịp nhưng vẫn hỏng' (vấn đề kinh doanh bịa, bài học không nối với vị trí ứng tuyển).", "fix": "Thêm phiên bản thứ hai: cùng chiến dịch, ứng viên kể 'doanh số tăng 40%' không nguồn → bị hỏi 'số từ đâu'; chỉ ra khác biệt; gợi ý nguồn công khai (giải thưởng ngành, bài báo) để dẫn khi có." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Đừng kể mình thích gì; hãy kể chiến dịch giải bài toán gì và bạn học được gì.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu; không nói chọn chiến dịch nào (ngành gần vị trí, đủ thông tin công khai, có điểm để phản biện) — Q4 và Q6 chạm nhưng bài không bàn.", "fix": "Thêm Đào sâu: ba tiêu chí chọn chiến dịch để kể và cách chuẩn bị 'một điểm em sẽ đổi' trước buổi." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Biti's Hunter: chiến dịch Tết gắn đôi giày với hành trình về nhà; thương hiệu giày nội bị xem là cũ với người trẻ; độ phủ lớn trên mạng xã hội", "status": "unverified", "note": "Được hedge tốt trong lời nhân vật ('theo cách em đọc', 'em không có số'), nhưng bài không có src; tên chiến dịch/năm không nêu." }
+      ],
+      "strengths": "Khung năm nhịp và câu mẫu phân biệt rõ dữ kiện – suy đoán ('con số doanh số thì em không có nên không dám khẳng định') — đúng kỹ năng người tuyển dụng tìm; Q5 (nếu làm lại đổi gì) và Q7 (chấm bốn câu mở) là câu đánh giá có biện hộ.",
+      "upgrade": "Thêm phản ví dụ 'đủ năm nhịp nhưng bịa số'; thêm Đào sâu về tiêu chí chọn chiến dịch và chuẩn bị điểm phản biện; sửa Q3 thành câu tình huống; thêm src cho case Biti's; thêm bài thực hành có đầu ra: viết câu trả lời 60 giây theo năm nhịp cho một chiến dịch cho sẵn kèm rubric 'có vấn đề kinh doanh / có phân biệt dữ kiện–suy đoán / có điểm sẽ đổi'." },
+
+    { "id": "B:in05-02",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 5 },
+      "total": 83,
+      "bloom_items": ["L4","L5","L3","L3","L4","L4","L2"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "thị trường trà đóng chai tăng từ 1.000 lên 1.200 tỉ đồng; doanh số hãng giữ 250 tỉ", "issue": "Số tự đặt không gắn nhãn minh hoạ; không nói 'thị trường' đo bằng gì (doanh thu bán lẻ hay lít) — thị phần theo tiền và theo lượng có thể lệch khi khách chuyển sang cỡ chai nhỏ (chính điều Q5 hỏi).", "fix": "Ghi 'số minh hoạ' và thêm một câu: 'thị phần theo giá trị có thể giảm trong khi theo lít giữ nguyên nếu khách chuyển cỡ nhỏ — hỏi người phỏng vấn đang nói thị phần gì'." },
+        { "sev": "P2", "where": "Q7", "quote": "Vì sao nên nói khung chẩn đoán thành lời trước khi đi sâu vào từng nhánh?", "issue": "Câu L2 nhận lại ý bài trong bộ câu hỏi còn lại tốt.", "fix": "Thay bằng câu đọc dữ liệu: cho bảng doanh số theo kênh (tiện lợi +30%, tạp hoá −5%, siêu thị 0%) và hỏi nhánh nào mở tiếp." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 220/1.000 = 22% ✓; 25 = 200/800 (năm trước) ✓; 27,5 = 220/800 ✓; 3 = điểm % giảm ✓. Ví dụ: 250/1.200 = 20,8% ✓, 250/1.000 = 25% ✓." },
+      "claims": [
+        { "claim": "Thị trường trà đóng chai 1.000 → 1.200 tỉ; hãng giữ 250 tỉ", "status": "illustrative-unlabelled", "note": "Tự khớp, không ghi minh hoạ." }
+      ],
+      "strengths": "Bài tốt nhất module: tách tử số/mẫu số của thị phần, công thức người mua × tần suất × giá trị, Phản ví dụ khi không có dữ liệu để chia (nêu giả thuyết + kiểm chứng rẻ), Đào sâu thêm hai câu ngoài cây (đối thủ, danh mục lệch); Q1 kiểm tra logic tỉ lệ (L4), Q5 chẩn đoán từ biến lệch (L4), Q2 d là nhiễu tinh (xin số liệu lớn khi chưa có hướng).",
+      "upgrade": "Gắn nhãn số; thêm câu về thị phần giá trị vs lượng; thay Q7 bằng câu đọc bảng kênh; thêm bài thực hành có đầu ra: từ bảng 3 năm (thị trường, doanh số, số người mua, tần suất), viết chẩn đoán 5 dòng và 3 câu hỏi tiếp theo." },
+
+    { "id": "B:in05-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 5 },
+      "total": 81,
+      "bloom_items": ["L2","L4","L3","L2","L3","L5","L4"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Kiểm tra chéo: nếu có 20.000 điểm bán, mỗi điểm bán 600 hộp một tuần là 12 triệu hộp — khớp.", "issue": "Kiểm tra chéo chỉ có giá trị khi hai đường độc lập; ở đây 600 hộp/điểm được chọn để khớp 12 triệu (chia ngược), nên không kiểm tra gì. Bài dạy 'hai đường độc lập mà gặp nhau' nhưng ví dụ lại làm ngược.", "fix": "Ước độc lập: 'một tạp hoá bán khoảng 20 hộp/ngày = 140/tuần; siêu thị/tiện lợi 1.000/tuần; với 18.000 tạp hoá + 2.000 tiện lợi → 2,5 + 2 = 4,5 triệu/tuần — lệch gần 3 lần so với 12 triệu → nghi 40% hoặc 3 hộp/tuần'. Đó mới là kiểm tra chéo." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Khoảng 40% ăn sữa chua đều đặn → 4 triệu người. Mỗi người ăn trung bình 3 hộp một tuần", "issue": "Kết quả 624 triệu hộp/năm cho TP.HCM ≈ 62 hộp/người/năm (kể cả trẻ sơ sinh, người già) — không được đem soi bằng chính phép 'chia ngược mỗi người mỗi ngày' mà Q7 dạy; cũng không nêu kịch bản thấp/cao như Đào sâu khuyên.", "fix": "Thêm một dòng soi: '624 triệu/10 triệu/365 ≈ 0,17 hộp/người/ngày — cao hay thấp? so với 1 hộp/người/ngày của người ăn đều thì hợp lý'; thêm kịch bản thấp (25%, 2 hộp) ≈ 260 triệu." },
+        { "sev": "P2", "where": "Tiêu đề · Tình huống", "quote": "\"Mỗi năm Việt Nam bán bao nhiêu hộp sữa chua?\" ... \"Em ước lượng giúp chị: mỗi năm ở TP.HCM bán được bao nhiêu hộp sữa chua ăn?\"", "issue": "Tiêu đề nói Việt Nam, đề bài nói TP.HCM; người học đọc tiêu đề sẽ ước 100 triệu dân.", "fix": "Đồng bộ tiêu đề: 'Mỗi năm TP.HCM bán bao nhiêu hộp sữa chua?'" },
+        { "sev": "P2", "where": "Q3 · Q5", "quote": "Mỗi tháng (30 ngày) bán bao nhiêu triệu ly? · Một năm (52 tuần) bán bao nhiêu triệu hộp?", "issue": "Hai phép nhân một–hai bước; không câu nào buộc so hai đường ước lượng lệch nhau và chọn giả định để nghi (kỹ năng cốt lõi của bài).", "fix": "Thay Q5 bằng: 'Đường dân số ra 624 triệu, đường điểm bán ra 312 triệu. Giả định nào đáng nghi trước và vì sao?'" }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 8 triệu × 25% = 2 triệu; × 30 = 60 triệu ly ✓; 240 = quên 25% ✓; 2 = chỉ số người ✓. Q5: 15.000 × 400 = 6 triệu; × 52 = 312 triệu ✓; 6 = tuần, 24 = tháng ✓. Ví dụ: 10 triệu × 40% × 3 × 52 = 624 triệu ✓; 20.000 × 600 × 52 = 624 triệu ✓ (nhưng không độc lập). Q7: 5 tỉ/10 triệu/365 ≈ 1,37 ✓." },
+      "claims": [
+        { "claim": "TP.HCM khoảng 10 triệu dân", "status": "illustrative-labelled", "note": "Ghi '(giả định làm tròn)'." },
+        { "claim": "40% ăn sữa chua đều, 3 hộp/tuần, 20.000 điểm bán, 600 hộp/điểm/tuần", "status": "illustrative-labelled", "note": "Nêu như giả định của Thảo." }
+      ],
+      "strengths": "Nói đúng điều người chấm market sizing cần (chuỗi giả định, sửa một mắt xích, nêu giả định ít chắc nhất); Phản ví dụ (sản phẩm chưa có thói quen dùng → đi từ điểm bán thử) và Đào sâu (hai kịch bản để xem quyết định có đổi không) là tư duy người làm nghề; Q6 (bỉm → bắt đầu từ số trẻ dưới 2 tuổi) và Q7 (soi 1,4 hộp/người/ngày) kiểm tra đúng kỹ năng.",
+      "upgrade": "Làm kiểm tra chéo thật sự độc lập và cho nó lệch; soi kết quả bằng chia ngược và thêm kịch bản thấp; đồng bộ tiêu đề; thay Q5 bằng câu so hai đường ước lượng; thêm bài thực hành có đầu ra: ước lượng số ly trà sữa/ngày của một quận bằng hai đường, ghi giả định ít chắc nhất và kết quả hai kịch bản." },
+
+    { "id": "B:in05-04",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 5, "clarity": 5 },
+      "total": 75,
+      "bloom_items": ["L4","L4","L1","L5","L4","L2","L2"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3 · Q6 · Q7", "quote": "Câu hỏi \"vì sao họ nên tin?\" đang tìm yếu tố nào trong quảng cáo? · Thứ tự trình bày nào hợp lý · Vì sao nên hỏi \"thương hiệu có được nhớ không\"", "issue": "Ba câu L1–L2 nhận lại khung bốn câu hỏi; bài có thể cho một quảng cáo mô tả bằng chữ (30 giây, bốn cảnh) để hỏi đọc theo bốn câu (L4).", "fix": "Thay Q3 bằng: mô tả 4 cảnh của một quảng cáo nước rửa tay; hỏi 'lý do tin nằm ở cảnh nào, hay chưa có?'" },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Muốn biết hiệu quả, em cần số người nhớ đúng thương hiệu sau khi xem.", "issue": "Chỉ nêu một chỉ số, không nói đo thế nào (khảo sát bao nhiêu người, nhớ gợi ý hay không gợi ý, so với mốc nào) — chiều dữ liệu dừng ở tên chỉ số.", "fix": "Thêm: 'khảo sát 100 người trong nhóm mục tiêu sau 24 giờ: nhớ không gợi ý ≥ 30% là mốc tốt với quảng cáo 15 giây (số minh hoạ)'." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Thương hiệu có được nhớ không? — logo, màu, âm thanh xuất hiện lúc nào.", "issue": "Nhận định 'logo chỉ hiện cảnh cuối → người lướt không biết hãng' đúng cho video lướt (feed) nhưng không cho TVC xem trọn hoặc rạp; bài không phân biệt bối cảnh phát — Đào sâu có nói 'vai trò trong chiến dịch' nhưng không nói kênh.", "fix": "Thêm một câu: 'trên feed lướt, 3 giây đầu quyết định; trên TV/rạp, logo cuối chấp nhận được hơn — hỏi quảng cáo chạy ở đâu trước khi chấm'." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Quảng cáo dầu gội: phụ nữ trẻ thành thị, lợi ích sạch gàu, cảnh thử nghiệm phòng lab, logo cảnh cuối", "status": "illustrative-labelled", "note": "Rõ là ví dụ dựng." }
+      ],
+      "strengths": "Khung bốn câu + 'một điểm mạnh, một điểm cần sửa, số liệu cần có' là quy trình 60 giây dùng được ngay; Phản ví dụ (quảng cáo chỉ để nhớ tên, đổi thước đo) và Đào sâu (vai trò mẫu ngắn/dài) tránh áp một thước cho mọi quảng cáo; Q1 và Q5 là câu đánh giá nhận xét (L4).",
+      "upgrade": "Thay 2–3 câu L1–L2 bằng câu đọc một quảng cáo mô tả bằng chữ; nói rõ cách đo 'nhớ đúng thương hiệu' với cỡ mẫu và mốc; phân biệt kênh phát; thêm bài thực hành có đầu ra: phân tích ba quảng cáo cùng ngành theo bảng 4 câu × 3 quảng cáo, kết luận quảng cáo nào cần sửa gì." },
+
+    { "id": "B:in05-05",
+      "scores": { "accuracy": 14, "depth": 9, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 7, "data": 5, "clarity": 5 },
+      "total": 73,
+      "bloom_items": ["L2","L4","L4","L4","L5","L5","L3"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Tuần đó bán gấp ba tuần trước; vì gần ngày diễn ra nên em so thêm cùng kỳ năm trước, vẫn cao hơn rõ", "issue": "'Gấp ba' và 'cao hơn rõ' không có số gốc (bao nhiêu vé, năm trước bao nhiêu); kết quả R của STAR mẫu lại không đạt chuẩn 'có số' mà bài yêu cầu; cũng không nói nhóm lớp có đồng thời được giảm giá hay không (nhiễu).", "fix": "Thêm: '120 vé so với 40 vé tuần trước; cùng kỳ năm trước 70 vé; giá vé không đổi'." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "Chuẩn bị sẵn vài câu chuyện có thể xoay cho nhiều câu hỏi.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu; không nói khi nào STAR phản tác dụng (kể máy móc, câu chuyện quá cũ, Result là lời khen), hay cách chọn 3–4 câu chuyện phủ các năng lực hay hỏi (thuyết phục, thất bại, xung đột, deadline).", "fix": "Thêm Đào sâu: bảng 4 câu chuyện × 5 năng lực, đánh dấu chuyện nào xoay được cho câu nào; Phản ví dụ: STAR đủ bốn phần nhưng Action là 'em đã nỗ lực hết sức' — không có việc cụ thể." },
+        { "sev": "P2", "where": "Q1", "quote": "Đoán trước: trong STAR, phần nào nên chiếm nhiều thời gian nói nhất?", "issue": "Câu L2 nhận lại ý bài; đáp án đã nằm trong MANG THEO.", "fix": "Thay bằng câu đọc một câu trả lời STAR 6 dòng và hỏi phần nào đang chiếm sai tỉ trọng." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Khung STAR (Situation–Task–Action–Result) cho câu hỏi hành vi", "status": "verified", "note": "Khung phổ biến trong tuyển dụng, không cần nguồn riêng." },
+        { "claim": "Vé bán gấp ba tuần trước, cao hơn cùng kỳ năm trước", "status": "illustrative-unlabelled", "note": "Không có số gốc." }
+      ],
+      "strengths": "Chi tiết 'so thêm cùng kỳ năm trước' trong Result dạy loại nhiễu mùa vụ — hiếm thấy trong bài về phỏng vấn; Q5 (vì sao chọn cách đó, phương án bị loại) và Q6 (sửa câu 'tụi em') là câu đánh giá/sửa cụ thể; phép đếm 'em' vs 'tụi em' trong ÁP DỤNG đo được.",
+      "upgrade": "Cho Result số gốc; thêm Đào sâu bảng câu chuyện × năng lực và Phản ví dụ STAR rỗng; thay Q1 bằng câu đọc tỉ trọng; thêm bài thực hành có đầu ra: viết một câu chuyện STAR 8 dòng, rubric: Action ≥ 50% số dòng, có số ở Result, có phương án bị loại." },
+
+    { "id": "B:in05-06",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 4, "clarity": 5 },
+      "total": 77,
+      "bloom_items": ["L2","L4","L4","L2","L4","L3","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4", "quote": "Nên hỏi bao nhiêu câu làm rõ ở đầu một case 30 phút?", "issue": "Câu L2 nhận lại con số 'ba bốn câu' của bài; không kiểm tra kỹ năng chọn câu hỏi làm đổi hướng bài giải (tiêu chí bài nêu ở Vì sao (3)).", "fix": "Thay bằng: cho 6 câu hỏi ứng viên định hỏi, chọn 3 câu mà mỗi đáp án dẫn tới một bài giải khác; giải thích vì sao loại 3 câu kia." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Em sẽ bắt đầu từ số quán đang dùng và lượng dùng mỗi quán.", "issue": "Bài không có số nào: không ví dụ số quán, lượng dùng, mục tiêu tăng bao nhiêu — nên 'đổi hướng bài giải' (Q7) chỉ được nói, không được thấy bằng số.", "fix": "Thêm hai dòng số minh hoạ: 'mục tiêu +20% doanh thu = +10 tỉ; 2.000 quán × 4 lít/tháng × 60.000đ — tăng số quán hay lượng dùng mỗi quán?' để chuyển sang bài 02." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Hỏi ngắn, tối đa ba bốn câu, và nhắc lại đề bằng lời của mình để xác nhận.", "issue": "Không nói thứ tự hỏi khi chỉ được một câu, hay cách hỏi khi người phỏng vấn trả lời 'tự giả định' cho tất cả (Q5 chạm một phần).", "fix": "Thêm: 'nếu chỉ một câu: hỏi mục tiêu; nếu mọi câu đều \"tự giả định\": nêu ba giả định thành lời rồi giải'." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Khách B2B (chủ quán) mua vì giá, độ ổn định và dịch vụ; tiếp cận qua nhà phân phối và đội bán hàng (Q7)", "status": "unverified", "note": "Khái quát ngành hợp lý, không nguồn." }
+      ],
+      "strengths": "Ba nhóm câu hỏi (mục tiêu – phạm vi – giới hạn) + nhắc lại đề là quy trình rõ; Phản ví dụ (hỏi để trốn việc, dấu hiệu người phỏng vấn nhìn đồng hồ) và Đào sâu ('thương lượng nhỏ về phạm vi', chỉ hỏi điều làm đổi hướng) sâu hơn mức thường gặp; Q6 phân loại câu làm rõ vs xin đáp án, Q7 chỉ ra bài giải đổi thế nào.",
+      "upgrade": "Thêm số minh hoạ để thấy bài giải đổi hướng; thay Q4 bằng câu chọn 3/6 câu hỏi; bổ sung quy tắc khi chỉ được một câu; thêm bài thực hành có đầu ra: với 3 đề mơ hồ, viết 3 câu hỏi mỗi đề + dự đoán đáp án nào đổi cách giải." },
+
+    { "id": "B:in05-07",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 6, "data": 5, "clarity": 5 },
+      "total": 70,
+      "bloom_items": ["L3","L4","L3","L4","L3","L4","L2"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q6", "quote": "Khoảng 2 phút làm rõ, 6 phân tích, 4 đề xuất, 3 chuẩn bị nói — vì: Đúng. Giữ tỉ lệ tương tự, chỉ co lại theo tổng thời gian.", "issue": "Phương án đúng cộng đủ 15 phút nhưng không chừa phút nào cho 'trình bày thật' — phần thứ năm của chính khung bài (10/35/30/10/15%). Tỉ lệ cũng không 'tương tự': chuẩn bị 20% (bài: 10%), trình bày 0% (bài: 15%). Lời giải mâu thuẫn với phần đọc; người học áp khung sẽ không biết cắt phần nào.", "fix": "Sửa phương án a thành '1,5 làm rõ, 5 phân tích, 4,5 đề xuất, 1,5 chuẩn bị, 2,5 trình bày' hoặc ghi rõ 'case 15 phút không có phần trình bày riêng' trong đề." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Gợi ý cho 30 phút: khoảng 10% làm rõ đề, 35% phân tích, 30% xây đề xuất, 10% chuẩn bị, 15% trình bày thật.", "issue": "Tỉ lệ nêu như chuẩn nhưng không nói nguồn/kinh nghiệm nào, và không nói khi nào đổi (đề chẩn đoán cần phân tích nhiều hơn; đề 'đề xuất chiến dịch' cần đề xuất nhiều hơn). Không có Phản ví dụ / Đào sâu.", "fix": "Gắn nhãn 'gợi ý từ kinh nghiệm, không phải chuẩn'; thêm Phản ví dụ: đề 'vì sao doanh số giảm' → phân tích 50%, đề xuất 15%; Đào sâu về cách đọc đề để chọn tỉ lệ." },
+        { "sev": "P2", "where": "Q3", "quote": "Còn tối đa bao nhiêu phút cho đề xuất?", "issue": "Phép trừ một bước; không hỏi quyết định (5 phút có đủ không? cắt phần nào nếu không?).", "fix": "Thêm bước: 'với 5 phút, bạn giữ gì trong đề xuất: kết luận, 2 lý do, 1 bước tiếp theo — bỏ gì?'" }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30 − (3 + 14 + 3 + 5) = 5 ✓; 9 = kế hoạch cũ ✓; 8 = quên 3 phút chuẩn bị ✓. Khung 10+35+30+10+15 = 100% ✓; ví dụ 3+10+9+3+5 = 30 ✓. Q6 a: 2+6+4+3 = 15 nhưng thiếu phần trình bày." },
+      "claims": [
+        { "claim": "Phân bổ 10/35/30/10/15% cho case 30 phút", "status": "illustrative-unlabelled", "note": "Nêu như gợi ý, không nguồn, không điều kiện." }
+      ],
+      "strengths": "Ý 'viết kết luận nháp ở phút 13' và 'lấy bù từ phân tích, không từ trình bày' là hai thao tác cụ thể giải đúng lỗi của Đức; Q4 (bị ngắt 4 phút) và Q5 (nhánh thú vị ngoài đề) là tình huống thật trong phòng thi.",
+      "upgrade": "Sửa Q6 để khung 5 phần nhất quán; gắn nhãn tỉ lệ và thêm Phản ví dụ đề chẩn đoán; nối Q3 sang quyết định cắt gì; thêm Đào sâu về đọc đề để chọn tỉ lệ; thêm bài thực hành có đầu ra: bảng mốc phút cho case 45 phút kèm câu kết luận nháp ở mốc giữa." },
+
+    { "id": "B:in05-08",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 3, "clarity": 5 },
+      "total": 73,
+      "bloom_items": ["L2","L4","L3","L3","L5","L3","L2"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Hà nói ít hơn Quân nhưng được chấm cao hơn.", "issue": "Không có dữ liệu nào về cách chấm (tiêu chí, thang) nên 'được chấm cao hơn' là khẳng định không kiểm chứng; bài về assessment center mà không nêu các năng lực thường được chấm (ảnh hưởng, lắng nghe, phân tích, định hướng kết quả).", "fix": "Thêm bảng 4 năng lực thường chấm (gắn nhãn 'thường gặp') và đánh dấu mỗi câu của Hà/Quân rơi vào ô nào." },
+        { "sev": "P2", "where": "Q3 · Q6", "quote": "Cách phản biện ý của người khác nào tốt nhất? · Câu nào là cách \"xây tiếp\" ý người khác?", "issue": "Hai câu nhận diện mẫu câu (L3 thấp); phương án đúng là câu duy nhất có lý do cụ thể ('vì chi phí cao') và cấu trúc 'đồng ý, và' — đoán được bằng hình thức sau khi đọc bài.", "fix": "Thay một câu bằng tình huống: 'Nhóm còn 8 phút, chưa có kết luận, hai người đang tranh cãi, một người im. Bạn nói câu gì đầu tiên?' với bốn câu đều hợp lý ở mức khác nhau." },
+        { "sev": "P2", "where": "Q1 · Q7", "quote": "trong case nhóm, điều gì được người chấm đánh giá cao nhất? · Vì sao đề xuất cách chia thời gian ở đầu buổi là một đóng góp có giá trị?", "issue": "Hai câu L2 nhận lại ý bài; phương án sai ở Q7 ('tự động được làm trưởng nhóm', 'chỉ chấm câu đầu') phi lý rõ.", "fix": "Thay Q7 bằng câu đánh đổi: 'bạn đang điều phối tốt nhưng chưa nêu ý nội dung nào, còn 10 phút — làm gì?' (nối với Phản ví dụ)." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính; bài không có số, phù hợp chủ đề nhưng không có cách đo hành vi nhóm." },
+      "claims": [
+        { "claim": "Người chấm case nhóm xem ai giúp nhóm đi tới kết quả, không đếm ai nói nhiều", "status": "unverified", "note": "Khái quát về cách chấm assessment center, không nguồn." }
+      ],
+      "strengths": "Liệt kê cụ thể các kiểu đóng góp ngoài 'đưa ý' (chia thời gian, tóm tắt, kéo người im, 'đồng ý, và'); Phản ví dụ về điều phối quá đà không có quan điểm là giới hạn thật; phép kiểm tra trong tuần (ghi mỗi lần nói thuộc loại nào) đo được; Q5 là câu đánh đổi (lên tiếng rủi ro vs tôn trọng quyết định chung).",
+      "upgrade": "Thêm bảng năng lực thường chấm và gắn ví dụ vào; thay 2–3 câu nhận diện mẫu câu bằng tình huống có bốn phương án đều hợp lý; thêm Đào sâu về cách ghi điểm cá nhân khi trình bày nhóm; thêm bài thực hành có đầu ra: ghi nhật ký 1 buổi làm nhóm theo 5 loại đóng góp và viết 2 câu sẽ nói khác." },
+
+    { "id": "B:in05-09",
+      "scores": { "accuracy": 14, "depth": 9, "practical": 16, "examples": 11, "pedagogy": 7, "assessment": 7, "data": 3, "clarity": 5 },
+      "total": 72,
+      "bloom_items": ["L3","L4","L2","L4","L5","L4","L2"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Em để ý công ty đưa một thương hiệu sữa từ siêu thị ra cả cửa hàng tạp hoá ở nông thôn.", "issue": "Quan sát 'một giờ ở kệ' có thể sai (sản phẩm có ở tạp hoá từ lâu, hay chỉ ở tiệm đó) — bài không dạy cách nói quan sát với độ chắc chắn ('em thấy ở hai tiệm gần nhà, không chắc đại diện') hay cách xác minh nhanh; không có Phản ví dụ về quan sát sai bị người phỏng vấn sửa.", "fix": "Thêm Phản ví dụ: ứng viên nói 'công ty vừa mở kênh tạp hoá' nhưng người phỏng vấn đáp 'kênh đó 10 năm rồi' — cách phục hồi: hỏi lại và chuyển thành câu hỏi học hỏi." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Câu trả lời tốt chỉ dùng được cho đúng công ty đó; thay tên công ty mà vẫn đúng là câu trả lời yếu.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu; không nói lớp 'Bạn' nên nối với nhu cầu nào của vị trí (đọc từ mô tả công việc) hay tránh gì (nói điểm yếu quá lớn so với vị trí).", "fix": "Thêm Đào sâu: đọc mô tả công việc, chọn 1 yêu cầu để nối trải nghiệm; cảnh báo khi điểm yếu nêu ra là năng lực cốt lõi của vị trí." },
+        { "sev": "P2", "where": "Q3 · Q7", "quote": "Lớp \"Bạn\" trong câu trả lời nên chứa gì? · Thứ tự trình bày nào tự nhiên nhất cho câu trả lời ba lớp?", "issue": "Hai câu L2 nhận lại khung; Q7 đáp án là thứ tự bài nêu.", "fix": "Thay Q7 bằng câu chấm hai câu trả lời ba lớp đủ cả ba nhưng một câu có lớp 'Bạn' lệch với vị trí." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Phép thử 'thay tên công ty mà vẫn đúng là câu trả lời yếu'", "status": "verified", "note": "Phép thử suy luận tự đứng, không cần nguồn." }
+      ],
+      "strengths": "Kế hoạch chuẩn bị một giờ với ba nơi quan sát (kệ hàng, trang tuyển dụng, một người đang làm) rất thực tế cho sinh viên Việt; Q5 so hai câu trả lời X/Y với phương án 'đúng câu nhưng sai lý do' (b) là câu đánh giá tinh; phép thử thay tên công ty dùng được ngay.",
+      "upgrade": "Thêm Phản ví dụ quan sát sai và cách phục hồi; thêm Đào sâu nối lớp 'Bạn' với mô tả công việc; thay 2 câu L2 bằng câu chấm câu trả lời; thêm bài thực hành có đầu ra: câu trả lời ba lớp 80 chữ cho một công ty cho sẵn + tự chạy phép thử thay tên." },
+
+    { "id": "B:in05-10",
+      "scores": { "accuracy": 14, "depth": 9, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 7, "data": 3, "clarity": 5 },
+      "total": 70,
+      "bloom_items": ["L2","L4","L4","L3","L4","L4","L3"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "chế độ thì hỏi sau câu về công việc, hoặc khi đã có đề nghị", "issue": "Lời khuyên hoãn hỏi chế độ/làm từ xa nêu như quy tắc chung, không có điều kiện (ứng viên có kinh nghiệm, vị trí yêu cầu đi tỉnh, vòng cuối) và không nói hỏi thế nào cho đúng khi cần; Q2 a thừa nhận 'câu chính đáng' nhưng bài không cho chỗ.", "fix": "Thêm: 'nếu điều kiện làm việc là yếu tố loại trừ (ví dụ không thể đi tỉnh), hỏi sớm nhưng đặt sau một câu về công việc và nêu lý do ngắn'." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "Câu trả lời cũng là dữ liệu cho bạn: nếu ba tháng đầu được trả lời mơ hồ, quy trình đón người mới có thể yếu.", "issue": "Ý 'đánh giá ngược công ty' tốt nhưng không có Vì sao / Phản ví dụ / Đào sâu; Q6 dạy đúng 'một tín hiệu cần kiểm' nhưng bài không nói kiểm bằng gì (hỏi người đang làm, hỏi vòng sau).", "fix": "Thêm Đào sâu: bảng 3 câu hỏi × 'trả lời tốt / trả lời cần kiểm' và cách kiểm (hỏi cùng câu ở vòng sau, hỏi người đang làm)." },
+        { "sev": "P2", "where": "Q7", "quote": "Câu hỏi nào nên tránh vì tra được trên trang tuyển dụng hoặc website?", "issue": "Phương án đúng (d) rõ ràng hơn hẳn ba câu kia (ba câu kia đều là câu mẫu của bài); câu L3 thấp.", "fix": "Thay bằng câu đánh đổi: 'còn 1 phút, người phỏng vấn là trưởng phòng — hỏi về ưu tiên năm nay hay về điểm vướng của người mới? vì sao?'" }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Người phỏng vấn đọc 'không có câu hỏi' là thiếu quan tâm", "status": "unverified", "note": "Khái quát hợp lý về hành vi tuyển dụng, không nguồn." }
+      ],
+      "strengths": "Ba nhóm câu hỏi có câu mẫu dùng ngay; ý 'câu trả lời là dữ liệu cho bạn' và Q3 (đọc bốn kiểu trả lời về onboarding) dạy đánh giá ngược công ty; Q4 (nối câu trả lời với trải nghiệm của mình) biến câu hỏi thành điểm cộng.",
+      "upgrade": "Thêm điều kiện cho lời khuyên hoãn hỏi chế độ; thêm Đào sâu bảng tín hiệu và cách kiểm; thay Q7 bằng câu đánh đổi; thêm bài thực hành có đầu ra: ba câu hỏi cho một tin tuyển dụng cho sẵn, gạch câu tra được, viết dự đoán 'trả lời tốt' cho mỗi câu." }
+  ],
+  "module_notes": {
+    "progression": "Trình tự theo hành trình phỏng vấn MT/Marketing Executive: kể chiến dịch (01) → case thị phần (02) → market sizing (03) → đọc quảng cáo tại chỗ (04) → STAR (05) → làm rõ đề (06) → quản lý thời gian case (07) → case nhóm (08) → vì sao chọn công ty (09) → câu hỏi cuối buổi (10). Hợp lý nhưng 06 (làm rõ đề) đứng sau 02/03 (đã giải case) — nên đưa 06 lên trước 02; 07 (thời gian) nên kề 06. Không có `rel` nối bài. Giá trị thực hành cho ứng viên Việt cao: câu mẫu tiếng Việt tự nhiên ('Dạ em hiểu…'), bối cảnh FMCG/MT đúng thị trường.",
+    "overlap": [
+      "in05-02 Phản ví dụ (không có số → nêu giả thuyết + kiểm chứng rẻ) và in05-06 Q5 ('em tự giả định đi') dạy cùng phản xạ; nên nối tường minh.",
+      "in05-07 (chia thời gian case cá nhân) và in05-08 (Hà mở lời 'mình chia thời gian nhé') cùng cơ chế; in05-07 Q2 và in04-08 Q2 (cắt phân tích trước) trùng với module in04.",
+      "in05-01 Q7, in05-05 Q6, in05-09 Q5 cùng dạng 'chọn câu nói tốt nhất' — tốt nhưng phương án đúng luôn là câu cụ thể nhất, đoán được."
+    ],
+    "gaps": [
+      "Thiếu bài về bài tập về nhà/written case (đề 24–48 giờ, nộp slide) và bài về vòng phỏng vấn với sếp bộ phận (hỏi về số liệu thật của ngành) — hai vòng phổ biến trong tuyển MT ở Việt Nam.",
+      "Chiều dữ liệu yếu ở 7/10 bài (không có phép tính) và market sizing (03) có kiểm tra chéo không độc lập — kỹ năng số cho vòng case chỉ được luyện ở 02, 03, 07.",
+      "Không bài nào có bài thực hành có đầu ra, dù mọi bài đều có sản phẩm tự nhiên (câu trả lời 60 giây, bảng STAR, bảng mốc phút, ba câu hỏi).",
+      "Không có bài tự chấm/phản hồi: ứng viên không có rubric để tự đánh giá câu trả lời đã ghi âm (độ dài, tỉ trọng Action, có số, có phân biệt dữ kiện–suy đoán)."
+    ],
+    "best_lesson": "B:in05-02",
+    "weakest_lesson": "B:in05-07"
+  }
+}

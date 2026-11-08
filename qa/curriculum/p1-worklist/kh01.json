@@ -1,0 +1,20 @@
+{
+ "mod": "kh01",
+ "lessons": [
+  {
+   "id": "B:kh01-05",
+   "title": "Phân khúc nghe hay nhưng có dùng được không?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "Chạy hai mẫu quảng cáo, một nhấn gây tê, một nhấn giá, rồi so tỉ lệ đặt lịch của hai bên — vì: Khác biệt chỉ lộ khi hai nhóm phản ứng khác nhau với cùng một lời mời.",
+     "issue": "Thiết kế trong đáp án so hai thông điệp trên cùng một tệp, nên chỉ cho biết thông điệp nào kéo đặt lịch hơn trong tệp chung — không cho biết có một nhóm 'sợ đau' phản ứng khác nhóm còn lại. Lời giải lại nói 'hai nhóm phản ứng khác nhau với cùng một lời mời', mâu thuẫn với chính thiết kế đó. Người học sẽ nhầm thử A/B thông điệp với kiểm 'khác biệt' của phân khúc.",
+     "fix": "Sửa đáp án: 'Nhắm tệp tìm từ khoá sợ đau và tệp chung, cho cả hai cùng xem hai mẫu, so chênh tỉ lệ đặt lịch giữa hai tệp' hoặc đổi lời giải cho khớp với thiết kế A/B và nói rõ giới hạn."
+    }
+   ],
+   "upgrade": "Sửa Q5 cho đúng thiết kế kiểm 'khác biệt'; gắn nhãn giả định ở Q4; thêm phản ví dụ và đánh đổi khác biệt ↔ đủ lớn; đổi bài áp dụng thành bảng 3×4; thêm src Kotler; thay Q3 (L2) bằng câu đọc kết quả hai thông điệp trên hai tệp và kết luận có/không khác biệt."
+  }
+ ]
+}

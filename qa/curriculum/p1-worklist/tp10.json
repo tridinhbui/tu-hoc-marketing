@@ -1,0 +1,80 @@
+{
+ "mod": "tp10",
+ "lessons": [
+  {
+   "id": "B:tp10-02",
+   "title": "Người đang so sánh ba lựa chọn cần nghe gì?",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Thêm một bảng so với hai hãng kia theo đúng ba tiêu chí này.",
+     "issue": "Khuyên đặt bảng so sánh trực tiếp với hai hãng cụ thể trên trang bán hàng mà không nhắc điều kiện pháp lý: Luật Quảng cáo 2012 Điều 8 khoản 10 cấm so sánh trực tiếp giá, chất lượng, hiệu quả với sản phẩm cùng loại của tổ chức khác. Bài tp10-07 đã làm đúng (\"so với mức thường thấy ở sữa hạt đại trà\"), bài này thì không.",
+     "fix": "Sửa thành \"bảng ba tiêu chí của mình, so với mức thường thấy trên thị trường, không nêu tên hãng\" và thêm một dòng cảnh báo + src Luật Quảng cáo."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa khuyến nghị bảng so sánh cho đúng luật, thêm src; (2) gắn nhãn số và nêu cách so sạch trên sàn; (3) thay Q1/Q6 bằng câu đọc bảng phân nhóm câu hỏi và câu đánh đổi (tiêu chí khách hỏi nhiều nhưng mình thua — nói thật hay bỏ); (4) thêm bước làm: mẫu bảng gom câu hỏi (nhóm, số câu, đã trả lời ở đâu trên trang)."
+  },
+  {
+   "id": "B:tp10-07",
+   "title": "Vì sao một câu cho mọi bước phễu lại nói không trúng ai?",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q4",
+     "quote": "b) Đầu phễu, để thu hút sự chú ý của người chưa biết thương hiệu … d) Ở đầu phễu, để kéo thật nhiều người mới biết đến",
+     "issue": "Hai phương án nhiễu cùng nói \"đầu phễu\" nên người học suy ra cả hai sai và câu còn 2 lựa chọn; đáp án đoán được bằng hình thức.",
+     "fix": "Thay d bằng \"Giữa phễu, để thắng khi khách so giá với hai hãng kia\" (nhiễu có vẻ hợp lý)."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa Q4 (hai nhiễu trùng); (2) thay Q3 bằng calc chẩn đoán bước tắc và Q6 bằng câu xếp câu quảng cáo vào bước; (3) gắn nhãn 18% và nêu đối chứng; (4) thêm bước làm: bảng mẫu điền sẵn cho sữa hạt kèm cột \"chỉ số của bước\" để nối với bài 10 (chia ngân sách)."
+  },
+  {
+   "id": "B:tp10-08",
+   "title": "Email chào mừng đầu tiên nên nói điều gì?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "từ 2021, Apple Mail Privacy Protection tải sẵn email nên số mở bị thổi phồng",
+     "issue": "Khẳng định về tính năng nền tảng (lớp fast) nêu như sự thật, không có `src` với ngày kiểm và không có câu \"nếu khác, tin trang chính thức\"; nội dung đúng theo hiểu biết chung (iOS 15, 9/2021) nhưng rubric bắt buộc nguồn cho lớp này.",
+     "fix": "Thêm src: Apple Support / Apple Newsroom 2021 về Mail Privacy Protection, ngày kiểm, và câu \"tỉ lệ mở còn bị méo bởi các bộ lọc khác; xem lượt bấm\"."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src và ngày kiểm cho Apple MPP; (2) gắn nhãn số và trình bày ví dụ dưới dạng A/B; (3) thay Q4 bằng câu đọc tỉ lệ bấm theo nút; (4) thêm bước làm: khung 3 email (ngày 0, 3, 4) với mục tiêu, một CTA và chỉ số đo mỗi email, kèm luật chống thư rác (Nghị định 91/2020/NĐ-CP) như bài 09 đã nhắc."
+  },
+  {
+   "id": "B:tp10-09",
+   "title": "Khách bỏ giỏ hàng thì nên nhắn gì?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Chỉ nhắc khách đã để lại email và đồng ý nhận tin, kèm nút từ chối (Nghị định 91/2020/NĐ-CP).",
+     "issue": "Dẫn đúng nghị định về chống tin nhắn/thư điện tử rác nhưng không có `src` bấm được và ngày kiểm; lớp periodic yêu cầu nguồn. Cũng không nói điều kiện cho tin nhắn SMS/Zalo (cần đăng ký tên định danh).",
+     "fix": "Thêm src (văn bản Nghị định 91/2020/NĐ-CP trên cơ sở dữ liệu pháp luật) kèm ngày kiểm, và một dòng về kênh SMS/Zalo."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src cho Nghị định 91/2020 và dòng về SMS/Zalo; (2) thêm Phản ví dụ và Đào sâu (giỏ nhỏ, huỷ nhận tin); (3) gắn nhãn số, thêm calc tính đơn tăng thêm từ nhóm đối chứng (ví dụ 120 giỏ không nhận tin có 8 đơn → suy ra chuỗi mang thêm bao nhiêu); (4) thêm bước làm: bảng \"lý do bỏ → tin → thời điểm → chỉ số\" điền sẵn cho thời trang."
+  },
+  {
+   "id": "B:tp10-10",
+   "title": "Chia ngân sách thông điệp đầu phễu và cuối phễu thế nào?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Nghiên cứu của Les Binet & Peter Field (IPA) gợi ý mức trung bình khoảng 60% xây thương hiệu, 40% kích hoạt",
+     "issue": "Benchmark có tên nghiên cứu nhưng không có `src` bấm được, không năm, không ngày kiểm; bài có hedge \"không phải công thức\" nhưng rubric periodic yêu cầu nguồn. Cũng không nói Binet & Field tính trên ngân sách truyền thông tổng và theo ngành/giai đoạn khác nhau (ví dụ sản phẩm tài chính hay thương hiệu mới lệch khác).",
+     "fix": "Thêm src (IPA, The Long and the Short of It, 2013; Media in Focus, 2017) với ngày kiểm và câu \"tỉ lệ dao động theo ngành, thương hiệu mới nghiêng xây thương hiệu hơn\"."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src và điều kiện cho 60/40; (2) thêm Phản ví dụ và Đào sâu (khi cuối phễu dồn nhiều vẫn đúng; đo bằng khu vực đối chứng); (3) thay Q3 bằng calc tốc độ co tệp hoặc CPA gộp; (4) thêm bước làm: bảng theo dõi 4 chỉ số hằng tháng (quy mô tệp, tìm tên hãng, CPA gộp, tỉ lệ ngân sách) với ngưỡng cảnh báo."
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "mod": "tp04",
+ "lessons": [
+  {
+   "id": "B:tp04-04",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "nhiều nền tảng video ngắn từng công bố rằng phần lớn người dùng xem với âm thanh bật",
+     "issue": "Khẳng định về dữ liệu nền tảng là tiền đề của cả bài nhưng không có src nào (kể cả src chưa kiểm), chỉ có lời dặn \"tra lại\".",
+     "fix": "Thêm src chính thức (vd. trang TikTok for Business về âm thanh) với ngày kiểm, hoặc viết rõ là giả định."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "mod": "tp03",
+ "lessons": [
+  {
+   "id": "B:tp03-02",
+   "title": "Tên đã chọn xong — kiểm tra gì trước khi in biển và làm bao bì?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1",
+     "quote": "Đoán trước: phép thử nào thường bị bỏ qua nhất khi chủ shop tự đặt tên?",
+     "issue": "Đáp án đoán được bằng hình thức: trong 4 phương án chỉ d) là một trong 'năm phép thử' của bài; a) b) c) không phải phép thử nào cả (hỏi bạn bè, chọn phông, in áo). Người học không cần hiểu bài vẫn chọn đúng.",
+     "fix": "Đưa 3 nhiễu là các phép thử khác trong bài (tên miền, gõ không dấu, nghĩa lóng) để câu hỏi buộc phân biệt phép nào hay bị bỏ qua nhất và vì sao."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm phản ví dụ: tên qua cả năm phép thử nhưng khách không nhớ vì quá 'an toàn' → phép thử chỉ loại, không chọn; (2) thêm đào sâu về cỡ mẫu phép nghe–viết và ngưỡng chấp nhận (ví dụ ≥80% gõ đúng); (3) thêm src công cụ tra cứu nhãn hiệu chính thức; (4) sửa Q1 cho nhiễu là các phép thử khác; (5) thêm một câu L4 đọc bảng kết quả 3 tên × 5 phép thử rồi chọn tên."
+  },
+  {
+   "id": "B:tp03-07",
+   "title": "Sếp mới muốn đổi slogan — khi nào đổi mới là đúng?",
+   "total": 62,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "example",
+     "quote": "McDonald's giữ \"I'm lovin' it\" suốt hơn hai thập kỷ kể từ lúc ra mắt và chỉ làm mới cách kể quanh nó.",
+     "issue": "Thương hiệu thật gắn với con số thời gian, nêu như sự thật, không có src và không gắn nhãn; là bằng chứng chính của lập luận 'giữ câu, đổi cách kể'. Đúng theo hiểu biết chung (ra mắt 2003) nhưng bài cần nguồn và ngày kiểm.",
+     "fix": "Thêm src (trang/tư liệu chính thức về chiến dịch 2003) với ngày kiểm, hoặc viết 'ra mắt năm 2003' kèm nguồn."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src cho McDonald's hoặc thay bằng ví dụ có nguồn; (2) đưa số nhớ slogan vào tình huống và làm mẫu cách tách hai nguyên nhân bằng hai nhóm khách; (3) thêm phản ví dụ: câu được nhớ nhưng sản phẩm mới không còn 'thơm cả tuần' → phải đổi dù đang được nhớ, kèm cách chuyển dần (Q7) với mốc thời gian; (4) thêm đào sâu về chi phí chuyển đổi slogan (ước lượng số lần tiếp xúc cần để câu mới đạt mức nhớ cũ)."
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "mod": "kn03",
+ "lessons": [
+  {
+   "id": "B:kn03-01",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "situation/example/Q2",
+     "quote": "có sẵn 40 bài đánh giá tốt từ khách cũ",
+     "issue": "Lập luận chọn sàn tìm kiếm dựa vào 40 đánh giá trên Facebook, nhưng đánh giá không chuyển sang gian hàng mới trên sàn — shop mới bắt đầu với 0 đánh giá. Lợi thế được nêu không tồn tại ở kênh được chọn.",
+     "fix": "Nói rõ đánh giá cũ chỉ dùng được làm ảnh/feedback trong mô tả; đánh giá trên sàn phải xây lại từ đơn đầu."
+    },
+    {
+     "sev": "P1",
+     "where": "example",
+     "quote": "dồn 30 triệu vào quảng cáo từ khoá và vài đợt đánh giá đầu",
+     "issue": "\"Vài đợt đánh giá đầu\" có thể đọc là mua/tạo đánh giá — trái chính sách sàn; không giải thích.",
+     "fix": "Viết rõ cách hợp lệ: nhắc khách thật đánh giá sau giao, gửi mẫu dùng thử có ghi rõ."
+    }
+   ]
+  }
+ ]
+}

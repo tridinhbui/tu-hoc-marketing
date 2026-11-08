@@ -1,0 +1,18 @@
+{
+ "mod": "tp07",
+ "lessons": [
+  {
+   "id": "B:tp07-01",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1 (vì của d) / Ví dụ",
+     "quote": "Thử A/B cùng ngân sách, cùng tệp chính là cách đo được khác biệt do tiêu đề",
+     "issue": "Hai quảng cáo chạy song song trên Meta không được chia ngẫu nhiên người xem (hệ thống phân phối tối ưu khác nhau); chỉ công cụ A/B test mới chia ngẫu nhiên. Ví dụ còn khẳng định \"Khác biệt duy nhất là dòng đầu\".",
+     "fix": "Nói rõ dùng công cụ thử nghiệm A/B của Meta; lời giải d thừa nhận phân phối khác nhau là rủi ro thật."
+    }
+   ]
+  }
+ ]
+}

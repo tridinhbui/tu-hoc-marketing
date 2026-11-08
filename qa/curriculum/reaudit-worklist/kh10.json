@@ -1,0 +1,18 @@
+{
+ "mod": "kh10",
+ "lessons": [
+  {
+   "id": "B:kh10-01",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1 why (a)",
+     "quote": "Món trend làm tốt việc đầu, hỏng việc sau.",
+     "issue": "Lời giải khẳng định món trend \"hỏng\" việc giữ khách, trong khi ví dụ nói rõ \"90 ly tuần ba có thể toàn người thử mới; tỉ lệ giữ chân thật phải đếm người mua lần hai\". Lời giải mâu thuẫn với phần đọc.",
+     "fix": "Đổi đáp án a thành \"Trend kéo được lượt thử; số này chưa cho biết có ai mua lại\" và why nêu cần đếm người mua lần hai."
+    }
+   ]
+  }
+ ]
+}

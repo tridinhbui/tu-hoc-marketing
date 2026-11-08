@@ -1,0 +1,212 @@
+{
+  "mod": "kh02",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kh02-01",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 15, "examples": 8, "pedagogy": 7, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L2", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Tệp gym: khoảng 20.000 người trong bán kính giao hàng, dự kiến 5% mua, lãi gộp mỗi khách trong quý 200.000đ", "issue": "Số tự đặt (20.000 người, 5%, 200.000đ, 60 triệu) nêu như dữ kiện, bài không nói đây là số minh hoạ; người học không biết 5% lấy từ đâu.", "fix": "Thêm nhãn 'số minh hoạ' và ghi nguồn ước lượng cho từng số (đếm phòng tập × hội viên trung bình; 5% = giả định cần kiểm bằng bán thử)." },
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Tệp văn phòng to gấp năm nhưng granola phải đấu bánh mì 20.000đ ngay cổng công ty — khả năng thắng thấp. Tệp mẹ bỉm lãi cao nhưng cần xây niềm tin", "issue": "Chỉ tệp gym được tính lãi sau tiếp cận (140 triệu); hai tệp còn lại chỉ nhận xét định tính, nên kết luận 'tệp gym thắng nhờ cân bằng cả bốn' không phải là so sánh bằng số như khái niệm đòi hỏi.", "fix": "Lập bảng 3 tệp × 4 tiêu chí với số cho cả ba (như bảng trong bài thực hành nước ép) và tính lãi sau tiếp cận cho cả ba trước khi kết luận." },
+        { "sev": "P1", "where": "Q1", "quote": "c) Cân nhắc cả quy mô, lãi, khả năng thắng và chi phí tiếp cận", "issue": "Phương án đúng là phương án 'gom đủ bốn thứ', đoán được bằng hình thức (phương án bao quát nhất) mà không cần đọc bài.", "fix": "Viết lại Q1 thành câu đoán có số: đưa 3 tệp với quy mô, tỉ lệ mua, lãi, chi phí tiếp cận và hỏi tệp nào lãi nhất; hoặc cho 4 phương án cùng độ bao quát." },
+        { "sev": "P2", "where": "Q5", "quote": "a) Sai vì chi phí tiếp cận là phần của tính kinh tế tệp, quyết định tệp có lãi hay không", "issue": "Đáp án đúng là phương án đầu và dài nhất; hai phương án 'Đúng, vì…' dễ loại vì bài đã nói ngược.", "fix": "Cân độ dài 4 phương án, đổi thứ tự, cho một phương án 'Sai' khác có lý do nghe hợp lý hơn (ví dụ 'Sai vì team media chưa có dữ liệu giá') để buộc phân biệt lý do cốt lõi." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Chấm thô từ 1 đến 5 cũng đủ", "issue": "Không nói chấm thô có điểm liệt (Q7 mới nêu) và không nói khi nào phải thay chấm thô bằng số thật; thiếu phản ví dụ, đào sâu.", "fix": "Thêm phần phản ví dụ: tệp điểm cao đều nhưng trần tăng trưởng thấp; thêm quy tắc 'điểm 1 ở khả năng thắng = loại' ngay trong khái niệm." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20.000×5% = 1.000; ×200.000 = 200 triệu; −60 = 140 ✓ (tol 0,5). Sai định danh 200 (quên trừ) ✓, 3.940 = 4.000−60 (quên tỉ lệ) ✓. Bài thực hành: 1.000·800·240 khách; lãi 40·104·15 triệu ✓ khớp rubric. Q7: 4+4+4+3 = 15, 5+3+1+3 = 12 ✓." },
+      "claims": [
+        { "claim": "Tệp gym ~20.000 người trong bán kính giao hàng, 5% mua, lãi 200.000đ/khách/quý, tiếp cận 60 triệu", "status": "illustrative-unlabelled", "note": "Không có nhãn minh hoạ, không nguồn ước lượng." },
+        { "claim": "Bánh mì 20.000đ ngay cổng công ty là đối thủ thật của granola bữa sáng", "status": "illustrative-labelled", "note": "Giá tham chiếu hợp lý, dùng như ví dụ." }
+      ],
+      "strengths": "Bài thực hành có bảng dữ liệu 3 tệp đầy đủ và rubric kiểm được (số khách, lãi sau tiếp cận, lý do thắng). Q7 buộc phân tích vì sao không cộng điểm máy móc (điểm liệt).",
+      "upgrade": "Gắn nhãn minh hoạ và nguồn cho mọi số trong ví dụ; tính lãi sau tiếp cận cho cả ba tệp trong bài (không chỉ gym); thêm phản ví dụ (tệp chấm đẹp nhưng trần thấp) và đào sâu (độ nhạy của kết luận với tỉ lệ 5%); viết lại Q1 và Q5 để không đoán được bằng hình thức; thêm một câu L4 đọc bảng 3 tệp và chẩn đoán tệp nào có điểm liệt."
+    },
+    {
+      "id": "B:kh02-02",
+      "scores": { "accuracy": 11, "depth": 9, "practical": 12, "examples": 8, "pedagogy": 7, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 62,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ ↔ Q6", "quote": "Cùng 90 triệu, họ nhắm 100.000 người đúng tệp, mỗi người thấy 3 lần", "issue": "Ví dụ ngầm giả định 90 triệu mua được đúng 300.000 lượt hiển thị cho cả tệp rộng lẫn tệp hẹp (cùng giá mỗi nghìn lượt), nhưng Q6 lại nói 'Tệp hẹp thường còn đắt hơn mỗi nghìn lượt'. Hai phần mâu thuẫn; nếu tệp hẹp đắt hơn thì tần suất không đạt 3.", "fix": "Ghi rõ giả định giá mỗi nghìn lượt của hai phương án (ví dụ tệp hẹp đắt hơn 30% → 230.000 lượt → tần suất 2,3) và nói vì sao vẫn đáng đổi." },
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Lượt nhớ quảng cáo tăng rõ, và cả nam giới da dầu cũng bắt đầu mua theo", "issue": "Kết quả nêu như sự thật đã xảy ra, không có số, không nhãn minh hoạ; người học không biết 'tăng rõ' là bao nhiêu và đo bằng gì.", "fix": "Gắn nhãn 'kịch bản minh hoạ' và cho số đo: ví dụ lượt nhớ quảng cáo có gợi nhắc 4% → 12% (khảo sát 200 người), đơn từ nam da dầu chiếm x%." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Ngân sách 90 triệu phủ quảng cáo cho 300.000 người, mỗi người thấy khoảng một lần", "issue": "Suy ra giá 300.000đ cho mỗi nghìn lượt hiển thị — cao gấp nhiều lần mức thường gặp trên nền tảng số ở Việt Nam; số minh hoạ không hợp lý làm người học quen với thang sai.", "fix": "Đổi số: 90 triệu ≈ 1,5–3 triệu lượt hiển thị; hoặc nói rõ đây là kênh ngoài trời/báo in." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Byron Sharp (How Brands Grow) cho rằng thương hiệu lớn lên chủ yếu nhờ phủ rộng cả người mua thỉnh thoảng", "issue": "Dẫn nguồn đúng tinh thần nhưng không có `src`, không nói điều kiện áp dụng (hàng tiêu dùng nhanh, thương hiệu đã có độ phủ).", "fix": "Thêm `src` tới sách/Ehrenberg-Bass và một câu điều kiện: Sharp nói về thương hiệu lớn trong ngành hàng mua lặp; hãng nhỏ 90 triệu vẫn cần dồn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 300.000 ÷ 100.000 = 3 ✓ (tol 0,05); sai 0,33 = nghịch đảo ✓. Kiểm chéo: 90 triệu/300.000 lượt = 300.000đ CPM — bất hợp lý (xem defect P2)." },
+      "claims": [
+        { "claim": "Byron Sharp, How Brands Grow: thương hiệu lớn lên nhờ phủ rộng cả người mua thỉnh thoảng", "status": "unverified", "note": "Diễn giải đúng tinh thần nhưng không có `src`." },
+        { "claim": "Nền tảng không ưu ái tệp nhỏ; nhiều khi tệp quá nhỏ còn phân phối kém (Q6)", "status": "unverified", "note": "Khẳng định về cách phân phối của nền tảng quảng cáo, không nguồn; cần nhãn fast." },
+        { "claim": "90 triệu → 300.000 lượt hiển thị", "status": "illustrative-unlabelled", "note": "Giá ngầm 300.000đ/CPM không thực tế." }
+      ],
+      "strengths": "Nêu được tranh luận STP truyền thống và Byron Sharp thay vì dạy một chiều. Q7 là câu chẩn đoán tốt (đổi tên tệp mà thông điệp vẫn dùng được).",
+      "upgrade": "Sửa số tình huống về mức CPM thực tế và ghi giả định CPM cho hai phương án để Q6 không mâu thuẫn với ví dụ; gắn nhãn và cho số đo cho kết quả 'lượt nhớ tăng rõ'; thêm phản ví dụ (hàng tiêu dùng mua lặp đã có độ phủ: thu hẹp tệp làm giảm tăng trưởng) và đào sâu về tần suất hiệu quả; thêm câu L4 đọc bảng reach–frequency–CPM của hai phương án và chọn."
+    },
+    {
+      "id": "B:kh02-03",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 12, "examples": 10, "pedagogy": 7, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 67,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q6", "quote": "d) Có thị phần đáng kể, khách tự giới thiệu, chi phí có khách ổn định", "issue": "Phương án đúng là phương án duy nhất nêu ba dấu hiệu đo được; ba phương án sai đều là lý do 'nội bộ' hiển nhiên sai (hết ý tưởng, nhà đầu tư ép, hai tháng tăng). Đoán được bằng hình thức.", "fix": "Cho dữ liệu cụ thể (thâm nhập 3%, 12%, 35%; chi phí có khách đang giảm/tăng; tỉ lệ giới thiệu) ở 4 phương án và hỏi trường hợp nào đủ điều kiện sang tệp kế." },
+        { "sev": "P2", "where": "Q3 sai định danh", "quote": "[[1000,\"SAI_TINH_TOAN\"],[1200,\"NHAM_SO_TUYET_DOI\"]]", "issue": "1.000 triệu là kết quả của việc quên nhân 10% (4.000 × 250.000), nên nhãn đúng là QUEN_TI_LE_CHUYEN_DOI; 1.200 chỉ ra được nếu nhân 12 tháng (400 × 250.000 × 12), không khớp nhãn 'nhầm số tuyệt đối'.", "fix": "Đổi nhãn 1000 → QUEN_TI_LE_CHUYEN_DOI; đổi 1200 → nhãn 'NHAM_NAM_THANG' hoặc thay bằng 1.000.000 (quên đổi đơn vị)." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Đây là quan điểm \"bãi đổ bộ\" (Geoffrey Moore)", "issue": "Dẫn tác giả không có `src`; không nêu tên sách (Crossing the Chasm) để người học tra.", "fix": "Thêm `src` Crossing the Chasm (1991) và How Brands Grow (2010) với ngày kiểm." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "Tạp hoá đông hơn nhiều nhưng chủ lớn tuổi, rải rác, đi bán rất tốn công.", "issue": "So sánh tệp thay thế chỉ định tính; không có phản ví dụ (khi tệp đầu quá nhỏ để chứng minh gì) và không có đào sâu.", "fix": "Thêm số cho tạp hoá (số tiệm, tỉ lệ chốt/ngày của 5 người bán, chi phí mỗi tiệm) và một phản ví dụ: tệp đầu 400 tiệm nhưng không có tệp lân cận → bẫy ngách." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 4.000 × 10% = 400; × 250.000 = 100 triệu/tháng ✓ (tol 0,5). Q2 lời giải 120/4.000 = 3% ✓. Sai định danh: 1.000 = quên 10% (nhãn sai), 1.200 = ×12 tháng (nhãn không khớp)." },
+      "claims": [
+        { "claim": "Khoảng 4.000 tiệm trà sữa ở TP.HCM", "status": "illustrative-labelled", "note": "Bài ghi rõ 'con số minh hoạ, cần tự đếm lại'." },
+        { "claim": "Geoffrey Moore — quan điểm bãi đổ bộ cho B2B/công nghệ", "status": "unverified", "note": "Đúng tinh thần Crossing the Chasm; không `src`." },
+        { "claim": "Byron Sharp ưu tiên phủ rộng sớm cho hàng tiêu dùng đại trà", "status": "unverified", "note": "Không `src`." }
+      ],
+      "strengths": "Gắn nhãn minh hoạ cho số 4.000 tiệm và nêu rõ điều kiện áp dụng (B2B/công nghệ vs hàng tiêu dùng). Q2 và Q7 là tình huống quyết định thật (chuỗi siêu thị gọi; nhà đầu tư chê) với lời giải có số 3%.",
+      "upgrade": "Thêm bảng so sánh có số cho hai tệp ứng viên (trà sữa vs tạp hoá: số tiệm, tỉ lệ chốt mỗi buổi gặp, số buổi/người/tháng → tháng cần để đạt 10%); viết phản ví dụ về tệp đầu không có tệp lân cận; sửa nhãn sai định danh Q3; thay Q4/Q6 (L2) bằng câu đọc dữ liệu thâm nhập và chi phí có khách để quyết định sang tệp kế."
+    },
+    {
+      "id": "B:kh02-04",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L3", "L3", "L3", "L4", "L3", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "TÌNH HUỐNG ↔ VÍ DỤ", "quote": "mỗi đôi cần đo chân và giao sau ba tuần", "issue": "Tình huống nêu chi phí phục vụ riêng của tệp nhỏ (đo chân từng khách, sản xuất theo đơn) nhưng phép so chỉ trừ 150 triệu tiếp cận; chi phí đo chân/trả hàng/giao chậm cho 2.000 đôi có thể ăn hết phần chênh 150 triệu và đổi kết luận.", "fix": "Thêm một dòng chi phí phục vụ riêng cho tệp chân bè (ví dụ 60.000đ/đôi đo và chỉnh = 120 triệu) rồi so lại; hoặc nói rõ 400.000đ lãi gộp đã trừ khoản này." },
+        { "sev": "P2", "where": "Q4", "quote": "Giả sử nhờ đàm phán với sàn, quảng cáo cho tệp phổ thông chỉ còn 400 triệu", "issue": "Cơ chế không rõ: đàm phán với sàn thường giảm phí sàn, không giảm chi phí quảng cáo đấu với hàng chục shop.", "fix": "Đổi lời dẫn thành 'giả sử tối ưu quảng cáo giúp chi phí còn 400 triệu' hoặc 'sàn tài trợ voucher'." },
+        { "sev": "P2", "where": "Q6", "quote": "d) Lãi còn lại sau giá vốn và chi phí giành khách của mỗi tệp", "issue": "Câu nhận lại ý chính của bài (L2), phương án đúng là phương án duy nhất có chữ 'lãi còn lại'.", "fix": "Thay bằng câu đọc bảng: cho 3 tệp với doanh thu, lãi gộp, chi phí giành khách lệch nhau, hỏi tệp nào thắng và vì sao doanh thu cao nhất không thắng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20.000 × 60.000 = 1.200 triệu; −700 = 500 ✓ (tol 1). Ví dụ: 2.000 × 400.000 = 800; −150 = 650 ✓; chênh 150 ✓. Q4: 1.200 − 400 = 800 > 650 ✓. Q7: 1.900 đôi vượt ngưỡng 1.800 ✓ khớp ví dụ." },
+      "claims": [
+        { "claim": "Giày công sở 350.000đ lãi gộp 60.000đ; giày đo chân 1.100.000đ lãi gộp 400.000đ; quảng cáo 700 vs 150 triệu", "status": "illustrative-labelled", "note": "Tình huống ghi '(số liệu minh hoạ)'." }
+      ],
+      "strengths": "Có phân tích độ nhạy ngay trong ví dụ (quảng cáo còn 400 triệu thì kết luận đảo), đặt ngưỡng hành động (1.800 đôi) và Q4, Q7 kiểm đúng hai điểm đó. Số liệu được gắn nhãn minh hoạ.",
+      "upgrade": "Bổ sung chi phí phục vụ riêng của tệp đo chân vào phép so (nối sang bài 9) và tính lại; thêm phần phản ví dụ chính thức (tệp nhỏ lãi dày nhưng mục tiêu 3 năm của xưởng cần 2 tỷ lãi → tệp nhỏ không đủ trần); sửa cơ chế 'đàm phán với sàn' ở Q4; thay Q6 (L2) bằng câu đọc bảng 3 tệp; nêu khoảng bất định cho 20.000 đôi và 2.000 đôi (dự kiến ±?%)."
+    },
+    {
+      "id": "B:kh02-05",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 13, "examples": 12, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q1", "quote": "c) Giữ khách nặng và nhắc khách nhẹ nhớ để mua thêm một chút", "issue": "Phương án đúng là phương án 'cân bằng cả hai', đoán được bằng hình thức; ba phương án còn lại đều cực đoan hoặc máy móc.", "fix": "Đổi Q1 thành câu có số: cho chi phí nhắc và tỉ lệ phản hồi dự kiến của hai nhóm, hỏi nhóm nào có chi phí mỗi lượt mua thêm thấp hơn." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Nhắc 800 khách nhẹ tốn 12 triệu, 30% mua thêm một lần: 240 lượt, lãi 19,2 triệu", "issue": "Coi toàn bộ 240 lượt là tăng thêm nhờ nhắc; không trừ phần khách nhẹ vốn sẽ mua lần 3 dù không nhắc (lượt tăng thật < lượt quan sát). Thiếu phân biệt tương quan/nhân quả.", "fix": "Thêm một câu: để biết lượt tăng thật, giữ lại 100 khách nhẹ không nhắc làm nhóm đối chứng và so tỉ lệ mua trong cùng kỳ." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Byron Sharp và nhóm Ehrenberg-Bass (How Brands Grow, 2010)", "issue": "Dẫn nguồn đúng năm nhưng không có `src` bấm được.", "fix": "Thêm `src` sách và một bài tóm tắt của Ehrenberg-Bass Institute, ngày kiểm." },
+        { "sev": "P2", "where": "Q5", "quote": "một hãng bia thấy 15% người uống tạo 50% lượng bia", "issue": "Số phân bố nặng/nhẹ nêu như dữ kiện của 'một hãng', không nhãn; dễ bị nhớ như benchmark ngành.", "fix": "Ghi 'ví dụ minh hoạ' hoặc dẫn một nghiên cứu phân bố người mua có nguồn." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 200×12 = 2.400; 800×2 = 1.600; 2.400/4.000 = 60% ✓ (tol 0,5); sai 20 = 200/1.000, 150 = 2.400/1.600 ✓. Q6: 12.000.000/80.000 = 150 lượt; 150/800 = 18,75% ✓ (tol 0,3); sai 15 = 150/1.000 ✓ đúng mẫu số sai. Ví dụ: 240×80.000 = 19,2 triệu; 50×80.000 = 4 triệu; 12M/240 = 50.000đ; 12M/50 = 240.000đ; 10% → 80 lượt × 80.000 = 6,4 triệu < 12 triệu ✓." },
+      "claims": [
+        { "claim": "Byron Sharp / Ehrenberg-Bass, How Brands Grow (2010): tăng trưởng đến từ thêm người mua, phần đông là khách nhẹ", "status": "unverified", "note": "Năm và nội dung khớp sách; không `src`." },
+        { "claim": "Mỗi lượt lãi 80.000đ; 30% khách nhẹ và 25% khách nặng phản hồi", "status": "illustrative-labelled", "note": "Bài ghi 'Giả định minh hoạ'." },
+        { "claim": "15% người uống tạo 50% lượng bia (Q5)", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Trình bày tranh luận hai phía (Sharp vs CRM) rồi đưa về một phép so chi phí mỗi lượt mua thêm, có ngưỡng hoà vốn 18,75% và kịch bản 10% làm kết luận đảo. Q6 là câu tính ngưỡng (L4) hiếm gặp.",
+      "upgrade": "Thêm nhóm đối chứng vào ví dụ để tách lượt tăng thật khỏi lượt vốn có (nhân quả vs tương quan); thêm phản ví dụ chính thức (ngành mua theo hợp đồng/B2B nơi khách nặng là nguồn tăng trưởng) và đào sâu về chi phí giữ khách nặng; thêm `src`; viết lại Q1 thành câu có số; thay Q7 (L2) bằng câu đọc dữ liệu dịp mua của khách nhẹ và chọn thời điểm nhắc."
+    },
+    {
+      "id": "B:kh02-06",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L4", "L3", "L2", "L3", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "một điểm bán chỉ phục vụ khoảng 600 ly/ngày", "issue": "Công suất 600 ly/ngày và tỉ lệ 20% nêu không nhãn minh hoạ, không nguồn (quan sát quán tương tự? số máy pha?).", "fix": "Ghi '(số minh hoạ)' và nguồn ước: ví dụ 2 máy × 40 ly/giờ × 8 giờ cao điểm." },
+        { "sev": "P2", "where": "Q2 / Q7", "quote": "d) Chỉ ra giả định bất định nhất (20%) và ngưỡng nó phải đạt", "issue": "Ở cả Q2 và Q7, phương án đúng đều là phương án duy nhất nhắc tới '20%'/ngưỡng; lời giải dài gấp ba phương án sai. Dễ đoán theo hình thức.", "fix": "Cho các phương án sai cũng nêu con số (ví dụ 'kiểm số 50.000 người bằng đếm toà nhà') và cân độ dài lời giải." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "ước 20% có thể chọn mình", "issue": "Không nói vì sao 20% là mức khởi điểm hợp lý khi Quận 1 có rất nhiều quán cạnh tranh; thiếu nối tới khái niệm thị phần/tập cân nhắc.", "fix": "Thêm một câu: 20% là giả định lạc quan trong khu có n quán cạnh tranh; nêu cách ước nhanh (đếm ly của 3 quán tương tự trong 1 giờ cao điểm)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50.000×20% = 10.000; ×8 = 80.000 ly; ×15.000 = 1.200 triệu ✓ (tol 1); sai 6.000 (quên 20%) ✓, 3.200 (dùng giá bán 40.000) ✓. Ví dụ: 600×30 = 18.000 ly; ×15.000 = 270 triệu; −80 −100 = 90 ✓. Hoà vốn 180M/15.000 = 12.000 ly = 1.500 khách = 3% ✓; lấp công suất 18.000/8 = 2.250 khách = 4,5% ✓." },
+      "claims": [
+        { "claim": "50.000 người văn phòng quanh Quận 1, 20% chọn mình, 8 ly/tháng, lãi gộp 15.000đ/ly, công suất 600 ly/ngày", "status": "illustrative-unlabelled", "note": "Bài nói 'bạn có vài số' và dạy ghi nguồn giả định nhưng không gắn nhãn minh hoạ cho chính các số này." }
+      ],
+      "strengths": "Phép tính từ dưới lên đầy đủ giả định, tách giá trị tệp khỏi giá trị một điểm bán, ra hai ngưỡng hành động (3% hoà vốn, 4,5% đầy công suất) và đề xuất phép thử rẻ (xe bán thử một tuần). Q2 và Q7 kiểm đúng tư duy độ nhạy.",
+      "upgrade": "Gắn nhãn minh hoạ và nguồn ước cho từng số (đặc biệt 20% và 600 ly/ngày); thêm phản ví dụ chính thức (tệp nhỏ nhưng chi phí cố định thấp: xe đẩy 15 triệu/tháng thì ngưỡng khác hẳn) và một bảng độ nhạy 3×3 (tỉ lệ × tần suất); thêm cách ước 20% từ quan sát đối thủ; viết lại Q2/Q7 để phương án sai cũng có số."
+    },
+    {
+      "id": "B:kh02-07",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 13, "examples": 9, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q6", "quote": "b) Nền tảng Facebook không thu phí quảng cáo trong các nhóm kín — vì: Nhóm kín không có quảng cáo trả tiền", "issue": "Lời giải khẳng định về cách Facebook vận hành mà không nguồn; quảng cáo trả tiền vẫn xuất hiện trong bảng tin nhóm, chỉ là không nhắm riêng được một nhóm. Khẳng định nền tảng không nhãn, không `src` (độ tươi fast).", "fix": "Sửa lời giải thành 'Không thể mua quảng cáo nhắm riêng một nhóm; chi phí thấp đến từ cách tiếp cận qua quản trị viên, không phải vì nền tảng miễn phí' và thêm nhãn 'nếu nền tảng đổi, tin trang chính thức'." },
+        { "sev": "P1", "where": "TÌNH HUỐNG", "quote": "chi phí có một khách khoảng 250.000đ … chỉ tốn khoảng 80.000đ mỗi khách. Đơn đầu tiên cho lãi gộp 150.000đ", "issue": "Ba số lõi không gắn nhãn minh hoạ, không nói ước từ đâu (đã chạy thử? báo giá quản trị viên?); kết luận chọn tệp đứng hoàn toàn trên các số này.", "fix": "Ghi 'số minh hoạ' và nguồn: 250.000đ từ chiến dịch thử 2 tuần; 80.000đ = phí hợp tác 8 triệu/100 khách dự kiến từ nhóm." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Nếu chi phí vượt lãi của đơn đầu, doanh nghiệp chỉ sống được khi khách mua lại đủ nhiều", "issue": "Nêu điều kiện nhưng không tính: lỗ 100.000đ cần 100/150 ≈ 0,67 đơn mua lại mỗi khách để hoà; thiếu phép tính làm 'đủ nhiều' thành cảm tính.", "fix": "Thêm một dòng: số đơn mua lại cần = lỗ đơn đầu ÷ lãi gộp mỗi đơn = 100/150 ≈ 0,7 đơn; nếu tỉ lệ mua lại đo được < 70% thì tệp chung lỗ." },
+        { "sev": "P2", "where": "Q2", "quote": "c) Chia đôi cho hai tệp để so hiệu quả trước khi quyết định dồn tiền — vì: Số liệu đã cho thấy chênh lệch lớn", "issue": "Các số trong tình huống là ước 'khoảng', nên thử nhỏ để kiểm cũng có lý; lời giải bác phương án c bằng cách coi ước lượng là số đo chắc. Không tới mức hai đáp án đúng (a vẫn tốt hơn với 60 triệu) nhưng lời giải nên thừa nhận.", "fix": "Sửa lời giải c: 'Thử nhỏ là đúng nguyên tắc, nhưng chia đôi 60 triệu khi một tệp lỗ 100.000đ/khách là thử quá đắt; dành 5–10% để kiểm là đủ.'" }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 150 − 250 = −100 nghìn ✓ (tol 0,5); sai 150 (quên trừ), 100 (quên dấu) ✓. Ví dụ: 150 − 80 = 70 ✓. Bài không tính số đơn mua lại cần (100/150 ≈ 0,67) dù khái niệm nêu điều kiện." },
+      "claims": [
+        { "claim": "CAC quảng cáo đại trà ~250.000đ, qua quản trị nhóm Facebook ~80.000đ, lãi gộp đơn đầu bỉm vải 150.000đ", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Nhóm kín Facebook không có quảng cáo trả tiền (Q6)", "status": "unverified", "note": "Khẳng định nền tảng không nguồn, khả năng không chính xác." },
+        { "claim": "Facebook nhóm 'mẹ theo lối sống xanh' tụ trong vài nhóm", "status": "illustrative-labelled", "note": "Dùng như bối cảnh ví dụ." }
+      ],
+      "strengths": "Cấu trúc đầy đủ (vì sao hiệu quả, phản ví dụ về bẫy tệp rẻ chạm trần, đào sâu về bàn đạp) và Q7 là câu chẩn đoán từ dữ liệu chi phí tăng 80.000 → 140.000đ. Nối rõ sang khái niệm kề cận (lãi sau chi phí phục vụ).",
+      "upgrade": "Gắn nhãn và nguồn cho ba số lõi; thêm phép tính số đơn mua lại cần để hoà vốn và một câu hỏi L4 dựa trên tỉ lệ mua lại đo được; sửa lời giải Q6b về Facebook với nhãn độ tươi; thêm ví dụ thứ hai làm đổi kết luận (tệp rộng có mua lại 3 đơn/năm → lãi hơn tệp tụ); thay Q4 (L2) bằng câu cho dữ liệu mua lại và hỏi có nên chấp nhận lỗ đơn đầu."
+    },
+    {
+      "id": "B:kh02-08",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 12, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "1.400 ÷ 4.000 = 35% thâm nhập — mức rất cao cho một sản phẩm phần mềm", "issue": "Benchmark 'rất cao cho phần mềm' nêu như sự thật, không nguồn, không điều kiện (ngành, địa bàn, loại phần mềm); người học sẽ dùng 35% như chuẩn.", "fix": "Bỏ chữ 'rất cao cho một sản phẩm phần mềm' hoặc thay bằng lập luận từ chính dữ kiện: '35% và chi phí tăng gấp ba trong 6 tháng là hai tín hiệu cùng chiều'." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Chi phí có một tiệm mới tăng từ 300.000đ lên 900.000đ trong nửa năm", "issue": "Không so chi phí 900.000đ với giá trị tiệm (250.000đ/tháng → hoàn vốn 3,6 tháng) nên người học không biết 900.000đ đã 'quá đắt' hay chưa; tín hiệu mở rộng dựa trên xu hướng mà thiếu ngưỡng tuyệt đối.", "fix": "Thêm phép tính tháng hoàn vốn (900.000/250.000 = 3,6 tháng) và ngưỡng chấp nhận (ví dụ ≤ 6 tháng) để tín hiệu có hai chiều: xu hướng và mức." },
+        { "sev": "P2", "where": "Q1", "quote": "d) Chi phí có khách tăng đều dù cách làm không đổi", "issue": "Phương án đúng trùng nguyên văn tín hiệu trong khái niệm; ba phương án sai là lý do hiển nhiên yếu (động lực đội, chạy theo đối thủ, một tháng giảm).", "fix": "Cho 4 bộ dữ liệu (thâm nhập, xu hướng CAC, tỉ lệ giới thiệu) và hỏi bộ nào đủ điều kiện mở rộng." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "Đội mở sang cà phê, dùng 20 tiệm trà sữa làm khách tham chiếu, giữ một người chăm tệp cũ.", "issue": "Không có phản ví dụ (tệp lân cận trông giống nhưng quy trình mua khác hẳn) và không có đào sâu về cách thử tệp mới nhỏ trước khi dồn.", "fix": "Thêm phản ví dụ: quán cà phê có máy POS sẵn → nỗi đau khác; dấu hiệu: tỉ lệ chốt ở 20 quán đầu < 1/2 tệp cũ. Thêm bước thử 30 ngày với 1 người bán." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.400/4.000 = 35% ✓ (tol 0,5); sai 285,7 = 4.000/1.400 ✓. Tình huống: 900/300 = gấp ba ✓ khớp ví dụ. Không tính tháng hoàn vốn 900.000/250.000 = 3,6." },
+      "claims": [
+        { "claim": "1.400/4.000 tiệm trà sữa TP.HCM, CAC 300.000 → 900.000đ, 60% từ giới thiệu", "status": "illustrative-labelled", "note": "Tình huống ghi '(con số giả định minh hoạ)'." },
+        { "claim": "35% thâm nhập là mức rất cao cho một sản phẩm phần mềm", "status": "unverified", "note": "Benchmark không nguồn, không điều kiện." }
+      ],
+      "strengths": "Nối liền với bài 3 (cùng app, 18 tháng sau) tạo mạch kể xuyên module; ba tín hiệu mở rộng rõ và Q6 kiểm được chiều ngược (mở quá sớm) bằng dữ liệu.",
+      "upgrade": "Bỏ hoặc có nguồn cho benchmark 35%; thêm phép tính tháng hoàn vốn CAC và ngưỡng; thêm phản ví dụ về tệp lân cận giả (giống bề ngoài, khác nỗi đau) và cách thử tệp mới 30 ngày; viết lại Q1/Q4 thành câu đọc dữ liệu; thêm một câu L5 cân đánh đổi 'đào sâu 65% còn lại với CAC 900k' vs 'mở cà phê với CAC chưa biết'."
+    },
+    {
+      "id": "B:kh02-09",
+      "scores": { "accuracy": 13, "depth": 13, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Tệp đại lý tỉnh mang 500 triệu doanh thu mỗi năm, lãi gộp 20%. Nhưng chi phí vận chuyển, chiết khấu thêm và nhân viên đi tuyến cho riêng tệp này tốn 130 triệu.", "issue": "Số không gắn nhãn minh hoạ; 130 triệu không tách thành ba khoản nên người học không tự kiểm được khoản nào co giãn (điều mà phần đào sâu dạy).", "fix": "Tách 130 = vận chuyển 55 + chiết khấu thêm 25 + lương tuyến 50 (minh hoạ) và dùng lại ở Q6." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Họ chuyển các đại lý sang một nhà phân phối vùng", "issue": "Chuyển cho nhà phân phối không phải 'bỏ' hoàn toàn: doanh thu còn một phần với biên thấp hơn; bài không ước phần lãi còn lại nên phép so 'bỏ vs giữ' thiếu phương án thứ ba có số.", "fix": "Thêm một dòng: qua nhà phân phối, doanh thu còn ~300 triệu với lãi gộp 8% = 24 triệu, chi phí riêng ~0 → từ −30 lên +24." },
+        { "sev": "P2", "where": "Q1", "quote": "d) Phải so lãi gộp với chi phí phục vụ riêng rồi mới quyết định", "issue": "Phương án 'tính trước rồi mới quyết' là mẫu đáp án quen của cả khoá, đoán được không cần đọc.", "fix": "Đổi thành câu đoán có số: cho doanh thu, biên, chi phí riêng và hỏi tệp lãi hay lỗ bao nhiêu." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 500 × 20% = 100; −130 = −30 triệu ✓ (tol 0,5); sai 100 (quên chi phí), 370 = 500 − 130 (dùng doanh thu thay lãi gộp) ✓. Ví dụ: sau sửa chi phí 115 → 100 − 115 = −15 vẫn lỗ ✓." },
+      "claims": [
+        { "claim": "Đại lý tỉnh: 500 triệu doanh thu, lãi gộp 20%, chi phí riêng 130 triệu (sau sửa 115)", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phân biệt chi phí riêng và chi phí chung (Q6 kiểm trực tiếp), có bước 'sửa trước khi bỏ' với số (130 → 115), phản ví dụ về tệp nâng đỡ nhau (chung chuyến xe) và Q7 hỏi đo gì sau quyết định (L5).",
+      "upgrade": "Gắn nhãn minh hoạ và tách 130 triệu thành ba khoản để người học tự phân loại; thêm phương án 'chuyển nhà phân phối' có số để so ba phương án (giữ / sửa / chuyển); thêm bảng mẫu lãi sau chi phí phục vụ cho cả ba tệp (siêu thị, quán ăn, đại lý) để Q7 có số nền; viết lại Q1 thành câu có số và Q4 (L2) thành câu phân loại chi phí chung/riêng từ bảng."
+    }
+  ],
+  "module_notes": {
+    "progression": "Mạch hợp lý: tiêu chí chọn tệp (01) → vì sao không chọn 'mọi người' (02) → tệp đầu tiên (03) → tệp nhỏ vs lớn theo lãi sau cạnh tranh (04) → khách nặng/nhẹ (05) → định giá tệp từ dưới lên (06) → chi phí tiếp cận (07) → khi nào mở tệp (08, nối lại app bài 03) → bỏ tệp theo chi phí phục vụ (09). Bài 06 và 09 là đỉnh về đọc số; bài 02 yếu nhất vì số không khớp và kết quả không đo. Bài 05 đứng hơi lệch mạch (nói về tần suất mua trong một tệp, không phải chọn tệp) nhưng cần thiết để cân lại Sharp.",
+    "overlap": [
+      "Chi phí tiếp cận là một trong bốn tiêu chí ở bài 01, rồi được dạy lại trọn bài ở 07; hai bài dùng cùng lập luận 'tệp hấp dẫn hoá ra lỗ' — nên bài 07 tập trung vào 'họ tụ ở đâu' và tính số đơn mua lại cần, bỏ phần lặp.",
+      "Bài 04 (lãi sau chi phí giành khách) và bài 09 (lãi sau chi phí phục vụ) cùng công thức 'lãi gộp − chi phí riêng'; nên gộp thành một bảng lãi đầy đủ ở bài 09 và dẫn ngược về 04.",
+      "Phản ví dụ 'tệp nhỏ chạm trần' xuất hiện ở 04 (ngưỡng 1.800 đôi), 07 (nhóm Facebook ít thành viên) và 08 (tín hiệu mở rộng) — ba lần cùng ý."
+    ],
+    "gaps": [
+      "Chưa có bài nào dạy tiêu chí một phân khúc 'đúng' (đo được, với tới được, khác nhau về phản ứng, đủ lớn, ổn định) — người học biết chọn tệp theo lãi nhưng không biết tệp đã được định nghĩa đúng chưa.",
+      "Thiếu bài về cách ước quy mô tệp từ dữ liệu thật (tổng cục thống kê, dữ liệu nền tảng quảng cáo, đếm tại điểm) — mọi bài đều 'cho sẵn' 20.000 người / 4.000 tiệm.",
+      "Thiếu khái niệm độ chắc chắn: không bài nào nêu khoảng bất định cho tỉ lệ mua dự kiến (5%, 20%) hay cách thử nhỏ để thu hẹp nó, trừ ý 'xe bán thử' ở bài 06.",
+      "Chưa nối sang hành vi mua (ai quyết, ai dùng) để chọn tệp — chỉ nhắc thoáng ở 02 (nam da dầu mua theo)."
+    ],
+    "best_lesson": "B:kh02-06",
+    "weakest_lesson": "B:kh02-02"
+  }
+}

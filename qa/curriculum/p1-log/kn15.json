@@ -1,0 +1,80 @@
+{
+ "mod": "kn15",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:kn15-01",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "Đã có src YouTube Help 7628154 (Impressions & CTR FAQs), ngày kiểm và câu dự phòng.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này đã mở URL, xác nhận tiêu đề trang và câu impressions nhiều (vd trang chủ) thì CTR thấp là tự nhiên."
+  },
+  {
+   "id": "B:kn15-01",
+   "where": "Q6",
+   "status": "fixed",
+   "change": "Đã kiểm trang: có dải tham chiếu “nửa số kênh và video có CTR 2–10%”. Bài đã đưa dải này vào khái niệm và Q6 đã viết lại thành “không nêu mục tiêu cho kênh bạn, chỉ có dải tham chiếu rộng”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này xác nhận câu 2–10% trên trang chính thức; khoá giữ nguyên (b)."
+  },
+  {
+   "id": "B:kn15-02",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "Lượt trước thêm src 7628154. Lượt này mở trang thấy trang không so trực tiếp tìm kiếm với trang chủ, nên thêm vào câu “trang trợ giúp không so trực tiếp tìm kiếm với trang chủ, đây là mô hình thực hành thường gặp…” để không gán cho trang điều nó không nói.",
+   "key_changed": false,
+   "note": "src đã sửa ở lượt trước; lượt này sửa thêm cách dẫn nguồn"
+  },
+  {
+   "id": "B:kn15-02",
+   "where": "Q1/Q7",
+   "status": "fixed",
+   "change": "Nhiễu “luôn bị tính thấp hơn”, “Đổi tên kênh mỗi tháng”, “Tắt tính năng bình luận” đã thay bằng nhiễu có lý lẽ (Q1 “Ở trang chủ video bị xếp cạnh kênh nhiều người đăng ký hơn…”, Q7 “Nhồi thêm từ khoá… vì trang chủ cũng đọc từ khoá như tìm kiếm”).",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; khoá giữ nguyên"
+  },
+  {
+   "id": "B:kn15-03",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "Đã có src YouTube Help 1715160 (Measure key moments for audience retention), ngày kiểm và câu “Nếu màn hình của bạn khác mô tả, tin trang chính thức.”",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này xác nhận trang định nghĩa thời lượng xem trung bình và mức giữ chân điển hình so với 10 video gần nhất cùng độ dài."
+  },
+  {
+   "id": "B:kn15-04",
+   "where": "Tiêu đề/Khái niệm",
+   "status": "fixed",
+   "change": "Đã có src YouTube Help 9002587 (Get started with YouTube Analytics), ngày kiểm và câu “Tên tab và vị trí chỉ số có thể đổi; nếu màn hình của bạn khác mô tả, tin trang chính thức.”",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này xác nhận thẻ chỉ số tab Reach gồm impressions, CTR, lượt xem."
+  },
+  {
+   "id": "B:kn15-04",
+   "where": "Ví dụ",
+   "status": "fixed",
+   "change": "Ví dụ đã thêm bước loại giả thuyết (so cùng kỳ năm trước, xem tuổi ba video) và gọi việc làm video mới là “một giả thuyết để thử… so lại impressions sau bốn tuần”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước"
+  },
+  {
+   "id": "B:kn15-05",
+   "where": "Tình huống ↔ Ví dụ",
+   "status": "fixed",
+   "change": "Số ví dụ đã đổi video ngắn 400.000 → 90.000 lượt, đăng ký 120 → 27; tình huống thêm “tháng trước khoảng 60.000”; 150.000/60.000 khớp “tăng 150%”; calc Q3 dùng 27 ÷ 90.000 × 1.000 = 0,3.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này kiểm lại không còn chỗ nào nhắc 400.000/120."
+  },
+  {
+   "id": "B:kn15-05",
+   "where": "Ví dụ/Q3–Q4",
+   "status": "fixed",
+   "change": "Ví dụ đã thêm lưu ý cách đếm lượt xem khác giữa định dạng và đã đổi theo thời gian, tỉ lệ trên 1.000 chỉ để thấy thứ bậc; src YouTube Help 2991785 (How engagement metrics are counted).",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này xác nhận trang nói từ 24/8/2026 lượt xem được đếm khi video bắt đầu phát ở mọi định dạng, kể cả Shorts — câu hedge hiện tại vẫn đúng."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

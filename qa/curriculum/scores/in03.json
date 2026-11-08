@@ -1,0 +1,221 @@
+{
+  "mod": "in03", "scored_at": "2026-11-07", "scorer": "independent-agent", "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    { "id": "B:in03-01",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 12, "examples": 9, "pedagogy": 6, "assessment": 5, "data": 5, "clarity": 4 },
+      "total": 61,
+      "bloom_items": ["L2","L3","L3","L3","L2","L3","L2"], "bloom_max": "L3",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm · Q1", "quote": "Điều được biết rộng rãi về Wrapped: Spotify gói thói quen nghe cả năm của từng người thành vài thẻ đẹp", "issue": "Toàn bộ dữ kiện về Spotify (cơ chế thẻ story, nhãn tính cách, 'hàng triệu người tự đăng' ở Q1) nêu như sự thật, không có `src`, không ngày kiểm. 'Được biết rộng rãi' không thay được nguồn.", "fix": "Thêm 1–2 `src` (trang Spotify Newsroom về Wrapped, một bài phân tích có ngày) và ghi rõ năm Wrapped được nhắc tới." },
+        { "sev": "P1", "where": "Q5 · Q7", "quote": "Cứ cuối năm thì làm bản tổng kết · Dùng dữ liệu người dùng càng nhiều càng tốt", "issue": "Phương án sai dùng từ tuyệt đối ('Cứ', 'càng… càng'); phương án đúng là câu duy nhất có cấu trúc hai điều kiện, lặp nguyên văn MANG THEO. Đoán được bằng hình thức, không cần đọc bài.", "fix": "Viết lại phương án sai thành phát biểu có điều kiện nhưng sai vị trí điều kiện (ví dụ: 'Dữ liệu dày là đủ; nhãn bản sắc chỉ là trang trí')." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Người ta khoe dữ liệu khi nó kể hay về chính họ", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu điều kiện làm nguyên lý sai: dữ liệu đúng nhưng nhãn làm người dùng xấu hổ (ví dụ 'bạn nghe 300 giờ nhạc buồn'), hay rủi ro quyền riêng tư khi xuất dữ liệu cá nhân ra ảnh.", "fix": "Thêm phản ví dụ: cùng dữ liệu dày nhưng nhãn 'thức đêm đọc 2h sáng' làm người dùng ngại; thêm Đào sâu về cách chọn nhãn (chỉ nhãn tích cực, cho người dùng chọn thẻ nào đăng) và cách đo (tỉ lệ mở thẻ → tỉ lệ đăng → lượt xem về app)." },
+        { "sev": "P2", "where": "Q3", "quote": "15% trong số đó đăng lên mạng, mỗi bài đăng được trung bình 200 người xem", "issue": "Phép tính đúng nhưng 15% và 200 không có giả định nguồn; không nói kết quả 1,8 triệu lượt xem dùng để quyết định gì (so với chi phí làm thẻ? với lượt cài mới?).", "fix": "Nối tới một quyết định: 'nếu 1% người xem cài app, 18.000 cài mới — so với CAC hiện tại X đồng thì đáng làm không?'" }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 60.000 × 15% = 9.000; × 200 = 1.800.000 ✓. Sai định danh 12.000.000 = 60.000 × 200 (quên 15%) ✓; 9.000 = số người đăng ✓. Số tình huống 60.000 + 340.000 = 400.000 ✓." },
+      "claims": [
+        { "claim": "Spotify Wrapped ra mỗi tháng Mười Hai, gói thói quen nghe thành thẻ dọc vừa khung story kèm nhãn tính cách", "status": "unverified", "note": "Không có src; nêu như 'được biết rộng rãi'." },
+        { "claim": "Hàng triệu người tự đăng Spotify Wrapped lên mạng (Q1)", "status": "unverified", "note": "Kết quả quy cho thương hiệu thật, không nguồn." },
+        { "claim": "Wrapped không được biết đến như một chương trình trả thưởng (Q1 b)", "status": "unverified", "note": "" },
+        { "claim": "App đọc truyện 400.000 MAU, 60.000 đọc đều; 15% đăng; 200 lượt xem/bài", "status": "illustrative-labelled", "note": "Tình huống mở bằng 'Giả sử'; Q3 mở bằng 'Giả sử'." }
+      ],
+      "strengths": "Rút đúng hai điều kiện cốt lõi (dữ liệu dày + niềm tự hào) và áp ngay vào quyết định 'chỉ làm cho 60.000 người đọc đều'; Q4 (ví điện tử) và Q6 (gym) là hai tình huống mới kiểm tra điều kiện tự hào theo hai chiều.",
+      "upgrade": "Thêm src cho case Spotify; thêm Phản ví dụ (nhãn gây xấu hổ / quyền riêng tư) và Đào sâu (chọn nhãn, phễu đo thẻ→đăng→cài); viết lại Q5/Q7 để phương án sai không dùng từ tuyệt đối; nối Q3 tới quyết định có chi phí (CAC); thêm bài thực hành có đầu ra: thiết kế 5 nhãn cho app đọc truyện kèm tiêu chí loại nhãn." },
+
+    { "id": "B:in03-02",
+      "scores": { "accuracy": 11, "depth": 8, "practical": 12, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 61,
+      "bloom_items": ["L2","L3","L3","L3","L2","L3","L4"], "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "Điều ai cũng biết về Dove Real Beauty: thương hiệu chọn đứng về một quan điểm", "issue": "Case thật không có `src`. Quan trọng hơn: bài dùng Dove làm mẫu của 'thương hiệu phải sống được với quan điểm' mà không nhắc phê phán nổi tiếng rằng tập đoàn mẹ của Dove đồng thời bán sản phẩm làm trắng da — chính mâu thuẫn bài đang cảnh báo. Người học Việt (thị trường 'trắng da') cần biết điều này để không coi Dove là chuẩn tuyệt đối.", "fix": "Thêm src; thêm một đoạn Phản ví dụ: 'Ngay Dove cũng bị soi khi cùng tập đoàn bán dòng làm trắng; bài học: khách soi cả danh mục, không chỉ một thương hiệu' (ghi nhãn cần kiểm chứng/nguồn)." },
+        { "sev": "P1", "where": "Q5", "quote": "Cứ nói về vẻ đẹp là phụ nữ sẽ đồng cảm, bất kể thương hiệu bán gì", "issue": "Phương án sai dùng 'Cứ… bất kể'; phương án đúng (a) là câu dài nhất, có cấu trúc 'và'. Đoán được bằng hình thức.", "fix": "Cân độ dài; viết phương án sai có điều kiện nhưng sai (ví dụ: 'Căng thẳng thật là đủ; sản phẩm có nói ngược cũng không sao nếu quảng cáo đủ xúc động')." },
+        { "sev": "P2", "where": "Ví dụ · Q7", "quote": "Tỉ lệ 210/300 = 70% cho thấy căng thẳng có thật", "issue": "Khảo sát 300 người 'nhỏ' nhưng không nói mẫu chọn thế nào (khách hiện tại? người qua đường?), câu hỏi dẫn dắt hay không; kết luận 'căng thẳng có thật' rút từ một câu hỏi duy nhất. Q7 đọc 90 người còn lại hợp lý nhưng không nhắc sai số mẫu.", "fix": "Ghi giả định mẫu (ví dụ: 300 khách nữ 20–35 mua sữa tắm trong 3 tháng) và thêm một dòng: với n=300, 70% có sai số khoảng ±5 điểm." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Insight về nỗi đau chỉ thành thương hiệu khi sản phẩm và hành động không nói ngược nó.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu; không nói cách đo một chiến dịch quan điểm (độ nhớ gắn với quan điểm, tỉ lệ cân nhắc) khác với đo khuyến mãi.", "fix": "Thêm Đào sâu: chỉ số đo chiến dịch quan điểm theo quý (nhớ thương hiệu gắn với quan điểm, cân nhắc), và đánh đổi doanh số ngắn hạn của dòng làm trắng khi giảm nhấn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 210 ÷ 300 = 70% ✓; sai định danh 142,9 = 300/210 (đảo mẫu số) ✓; 30 = 90/300 (tỉ lệ nhóm còn lại) ✓. Q7: 210 + 90 = 300 khớp tình huống ✓." },
+      "claims": [
+        { "claim": "Dove Real Beauty dùng phụ nữ bình thường thay người mẫu chuẩn, đứng về quan điểm 'vẻ đẹp không chỉ có một khuôn'", "status": "unverified", "note": "Không có src." },
+        { "claim": "Dove không dùng người nổi tiếng quốc tế trong Real Beauty (Q1 c)", "status": "unverified", "note": "" },
+        { "claim": "Khảo sát 300 phụ nữ, 210 thấy quảng cáo 'không giống mình'", "status": "illustrative-labelled", "note": "Tình huống mở bằng 'Giả sử khảo sát nhỏ'." }
+      ],
+      "strengths": "Chọn đúng điểm nghẽn Việt Nam (dòng 'trắng da tức thì' nói ngược 'vẻ đẹp thật') và đưa ra lối thoát cụ thể ('da khoẻ hơn da trắng' + dòng dưỡng ẩm); Q7 dạy đọc nhóm thiểu số không đồng ý mà không hoảng.",
+      "upgrade": "Thêm src và phản ví dụ về chính Dove/tập đoàn mẹ; thêm giả định mẫu khảo sát và sai số; thêm Đào sâu về chỉ số đo chiến dịch quan điểm và đánh đổi doanh số dòng làm trắng; viết lại Q5 để không đoán được; thêm câu L5: cho ba câu quan điểm, hỏi câu nào sản phẩm hiện tại 'chống lưng' được." },
+
+    { "id": "B:in03-03",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L2","L3","L3","L3","L3","L2","L4"], "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm · Tiêu đề", "quote": "vì sao một câu ba chữ sống được hàng chục năm?", "issue": "Kết quả quy cho Nike ('sống được hàng chục năm', 'dùng được qua rất nhiều chiến dịch') nêu như sự thật, không có src, không năm ra mắt.", "fix": "Thêm src (trang Nike hoặc bài báo có ngày) và ghi năm bắt đầu để người học tự tính tuổi khẩu hiệu." },
+        { "sev": "P1", "where": "Q6", "quote": "Khẩu hiệu càng ngắn càng tốt, dưới ba chữ mới là lý tưởng · Khẩu hiệu phải dùng tiếng Anh · Khẩu hiệu phải nhắc tên sản phẩm", "issue": "Ba phương án sai đều dùng 'càng/phải'; phương án đúng (d) là câu ba vế dài nhất. Đoán được bằng hình thức.", "fix": "Viết phương án sai thành câu có điều kiện: 'Khẩu hiệu bền khi nói đúng lợi ích sản phẩm nổi nhất và đổi khi lợi ích đổi'." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[8,\"SAI_TINH_TOAN\"],[32,\"SAI_TINH_TOAN\"],[12,\"SAI_TINH_TOAN\"]]", "issue": "Ba đáp án sai đều gắn chung nhãn 'SAI_TINH_TOAN', không nói lỗi nào: 32 là quên trừ mức của hướng đổi; 8 là lấy mức một năm; 12 không rõ nguồn gốc. Mô hình 'cộng dồn 8 điểm % mỗi năm' bỏ qua suy giảm nhận biết — đã gắn nhãn minh hoạ nhưng không nói đó là đơn giản hoá.", "fix": "Đặt tên lỗi riêng (QUEN_TRU_HUONG_DOI, NHAM_MOT_NAM), bỏ 12 hoặc giải thích; thêm câu 'thực tế nhận biết có suy giảm nên chênh nhỏ hơn 24'." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "Trước khi chốt, hỏi 10 hội viên: câu này gợi bạn nhớ tới lúc nào?", "issue": "Phép thử 10 người tốt nhưng không có Phản ví dụ (khẩu hiệu cảm hứng khi thương hiệu vô danh — chỉ xuất hiện trong Q5) và không có Đào sâu về cách đo nhận biết khẩu hiệu.", "fix": "Chuyển nội dung Q5 thành Phản ví dụ trong bài; thêm Đào sâu: cách đo 'nhớ khẩu hiệu gắn đúng thương hiệu' bằng khảo sát 50 người/quý." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3 (số minh hoạ, đã gắn nhãn): 4 × 8 = 32; 32 − 8 = 24 ✓. Nhãn lỗi của ba đáp án sai không phân biệt." },
+      "claims": [
+        { "claim": "'Just Do It' không nhắc giày hay công nghệ, dùng qua rất nhiều chiến dịch, sống hàng chục năm", "status": "unverified", "note": "Không có src, không năm." },
+        { "claim": "Nhái câu Nike 'kèm rủi ro pháp lý / về nhãn hiệu' (Q2 c, Q4 c)", "status": "unverified", "note": "Khẳng định pháp lý chung, không dẫn luật." },
+        { "claim": "Giữ khẩu hiệu: +8 điểm % nhận biết mỗi năm, cộng dồn", "status": "illustrative-labelled", "note": "Ghi 'số minh hoạ' trong đề." }
+      ],
+      "strengths": "Nêu được điều kiện thường bị bỏ quên — câu chỉ thành tài sản khi giữ nguyên và lặp lại nhiều năm — và biến nó thành Q7 (chống đổi khẩu hiệu mỗi quý); phép thử 10 hội viên 'câu này gợi lúc nào' là tiêu chí chọn dùng được ngay.",
+      "upgrade": "Thêm src và năm ra mắt; đặt tên lỗi riêng cho Q3 và nói rõ mô hình đơn giản hoá; chuyển Q5 thành Phản ví dụ trong bài, thêm Đào sâu về đo nhận biết khẩu hiệu; cân độ dài phương án Q6; thêm bài thực hành: chấm 12 phương án khẩu hiệu theo 3 tiêu chí (khoảnh khắc / độ ngắn / không cũ theo sản phẩm)." },
+
+    { "id": "B:in03-04",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 12, "examples": 8, "pedagogy": 6, "assessment": 5, "data": 4, "clarity": 4 },
+      "total": 59,
+      "bloom_items": ["L2","L3","L3","L3","L2","L2","L4"], "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm · Q1", "quote": "Điều được biết rộng rãi: \"Think Different\" không nói về cấu hình máy. Nó ca ngợi những người khác thường", "issue": "Case Apple không có src, không năm; Q1 b 'Apple nổi tiếng với giá cao' và Q6 b 'Apple vẫn nói thông số ở nhiều chỗ khác' là khẳng định về thương hiệu thật không nguồn.", "fix": "Thêm src (ví dụ bản lưu quảng cáo và bài phân tích có ngày); ghi năm chiến dịch." },
+        { "sev": "P1", "where": "Q5 · Q6", "quote": "Nên tránh nói về thông số hay giá trong quảng cáo thương hiệu · Thương hiệu cao cấp nên giữ giá cao nhất trong ngành hàng", "issue": "Phương án sai là câu tuyệt đối một vế; phương án đúng (c) là câu hai vế 'có khác biệt thật chống lưng' lặp MANG THEO. Q5 d cũng vậy. Đoán được bằng hình thức.", "fix": "Viết phương án sai dạng hai vế nhưng sai thứ tự ưu tiên (ví dụ: 'Định vị bản ngã trước, rồi tìm khác biệt sản phẩm sau')." },
+        { "sev": "P2", "where": "Q3", "quote": "Giả sử máy cùng cấu hình của đối thủ giá 15.000.000 đồng, máy nội địa rẻ hơn 20%. Sinh viên tiết kiệm được bao nhiêu đồng?", "issue": "Phép nhân một bước (L3 thấp) không nối với quyết định định vị nào; bài về định vị bản ngã nhưng không có số nào đo bản ngã (tỉ lệ khách mua vì thể hiện vs vì giá).", "fix": "Thay bằng câu đọc dữ liệu: cho khảo sát 200 sinh viên về lý do mua (giá 62%, cấu hình 25%, 'thể hiện' 8%), hỏi điều kiện 'khách mua một phần vì thể hiện' có đạt không." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Bán bản ngã chỉ được khi sản phẩm có gì thật sự khác để chống lưng lời hứa đó.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu; không nói 'rẻ hơn 20%' có bền không (đối thủ hạ giá là mất chỗ dựa của bản ngã 'tự lập').", "fix": "Thêm Phản ví dụ: đối thủ giảm giá 15% sau 3 tháng → lời hứa 'tự lập' còn gì chống lưng? Thêm Đào sâu về khác biệt bền vs khác biệt giá." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 15.000.000 × 20% = 3.000.000 ✓; 12.000.000 = giá máy nội địa ✓; 2.500.000 = 15.000.000 − 15.000.000/1,2 (hiểu nhầm '20%' là đối thủ đắt hơn 20%) — nhãn SAI_MAU_SO hợp lý." },
+      "claims": [
+        { "claim": "'Think Different' ca ngợi những người khác thường, không nói cấu hình máy", "status": "unverified", "note": "Không có src, không năm." },
+        { "claim": "Apple nổi tiếng với giá cao (Q1 b); Apple vẫn nói thông số ở nhiều chỗ khác (Q6 b)", "status": "unverified", "note": "" },
+        { "claim": "Laptop nội địa rẻ hơn 20%, khách chủ yếu là sinh viên; đối thủ 15.000.000đ", "status": "illustrative-labelled", "note": "Tình huống mở bằng 'Giả sử'." }
+      ],
+      "strengths": "Hai điều kiện (khác biệt thật + nhu cầu thể hiện) được dùng nhất quán để ra quyết định 'bản ngã tự lập neo vào giá'; Q7 đọc tín hiệu 'được nhắc nhiều nhưng hỏi độ bền' và chọn đúng việc tiếp theo.",
+      "upgrade": "Thêm src/năm cho Apple; thay Q3 bằng câu đọc dữ liệu lý do mua; thêm Phản ví dụ (đối thủ hạ giá) và Đào sâu về khác biệt bền; viết lại phương án sai Q5/Q6 cho không đoán được; thêm bài thực hành: viết câu định vị 'bản ngã + bằng chứng' cho 3 sản phẩm và chấm bằng hai điều kiện." },
+
+    { "id": "B:in03-05",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 12, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 62,
+      "bloom_items": ["L2","L4","L3","L3","L2","L3","L4"], "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm · Q1", "quote": "Chiến dịch được nhớ nhiều nhờ lan truyền trực tuyến và video trả lời bình luận", "issue": "Nhiều dữ kiện về chiến dịch Old Spice (nói với phụ nữ, trả lời bình luận bằng video, lan truyền trực tuyến) và kết quả 'được nhớ nhiều' nêu như sự thật, không src, không năm, không tên chiến dịch đầy đủ ngoài một câu.", "fix": "Thêm src (bản lưu chiến dịch, bài phân tích có ngày) và năm; đổi 'được nhớ nhiều' thành dữ kiện có nguồn hoặc bỏ." },
+        { "sev": "P1", "where": "Q5", "quote": "Cứ làm video phi lý là sẽ lan truyền, bất kể thương hiệu là gì · Hài hước hợp hàng giá rẻ; hàng cao cấp nên nghiêm túc", "issue": "Phương án sai dùng 'Cứ… bất kể', 'nên'; phương án đúng (c) lặp cấu trúc ba vế của bài. Đoán được bằng hình thức.", "fix": "Viết phương án sai thành phát biểu có điều kiện nhưng thiếu vế 'đúng người mua'." },
+        { "sev": "P2", "where": "Q3", "quote": "Chi phí cho mỗi 1.000 lượt xem là bao nhiêu nghìn đồng?", "issue": "Ra 100 nghìn đồng/1.000 lượt xem nhưng bài không cho mốc so sánh (CPM video thường gặp, hay chi phí một lượt xem có ý nghĩa) nên người học không biết số này tốt hay tệ; đáp án sai 16,7 gắn nhãn SAI_MAU_SO nhưng thực ra là sai tử số (chỉ lấy chi phí 1 video).", "fix": "Thêm mốc so sánh gắn nhãn minh hoạ ('nếu quảng cáo video trả tiền của hãng đang ở 60 nghìn/1.000 lượt xem…') và hỏi 'có đáng tiếp không'; sửa nhãn lỗi 16,7 thành NHAM_CHI_PHI_MOT_VIDEO." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "Hài kiểu nhân vật lố, tự trêu thường được đón nhận, nhưng cần thử.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu; 'cần thử' không nói thử thế nào (bao nhiêu người, đo gì). Rủi ro khách trung thành chỉ xuất hiện ở Q4, không ở bài.", "fix": "Thêm Phản ví dụ (khách trung thành thấy bị cười, như Q4) vào bài; thêm Đào sâu: thử 2 kịch bản hài với 30 người mua thật, đo 'nhớ đúng hãng' và 'muốn tag ai'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 6 × 50 triệu = 300 triệu = 300.000 nghìn; 3.000.000 ÷ 1.000 = 3.000; 300.000 ÷ 3.000 = 100 nghìn ✓. 16,7 = 50.000 ÷ 3.000 (chỉ một video) — nhãn SAI_MAU_SO chưa đúng bản chất; 0,1 = lỗi đơn vị ✓." },
+      "claims": [
+        { "claim": "Old Spice 'The Man Your Man Could Smell Like': nói với phụ nữ, chuyển cảnh phi lý, sau đó trả lời bình luận bằng video ngắn", "status": "unverified", "note": "Không src, không năm." },
+        { "claim": "Chiến dịch được nhớ nhiều nhờ lan truyền trực tuyến (Q1 b); không đi kèm giảm giá (Q1 c)", "status": "unverified", "note": "Kết quả quy cho thương hiệu, không nguồn." },
+        { "claim": "Nhiều thương hiệu thực phẩm / cao cấp dùng hài hiệu quả (Q4 b, Q5 d)", "status": "unverified", "note": "Khái quát không ví dụ." },
+        { "claim": "Ngân sách 1 video lớn hoặc 6 video nhỏ; 50 triệu/video; 3.000.000 lượt xem", "status": "illustrative-labelled", "note": "Mở bằng 'Giả sử'." }
+      ],
+      "strengths": "Chỉ ra lớp chiến lược dưới lớp hài ('ai thật sự mua' — phụ nữ mua hộ) và chuyển thành quyết định 6 video nhỏ để thử và giữ nhịp phản hồi; Q7 đọc tín hiệu 'phụ nữ tag chồng' đúng nguyên lý.",
+      "upgrade": "Thêm src/năm; đưa rủi ro khách trung thành (Q4) và cách thử 30 người vào bài làm Phản ví dụ / Đào sâu; cho Q3 một mốc so sánh để thành quyết định; sửa nhãn lỗi; viết lại Q5 không dùng từ tuyệt đối." },
+
+    { "id": "B:in03-06",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 13, "examples": 10, "pedagogy": 6, "assessment": 6, "data": 6, "clarity": 5 },
+      "total": 67,
+      "bloom_items": ["L2","L3","L3","L4","L3","L3","L2"], "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "Airbnb giải bằng các cơ chế niềm tin: hồ sơ chủ nhà có ảnh và giới thiệu, đánh giá hai chiều sau mỗi chuyến, ảnh chụp chỗ ở chất lượng. Về thương hiệu, họ nói về cảm giác \"thuộc về\"", "issue": "Dữ kiện về sản phẩm và định vị Airbnb nêu như sự thật, không src, không năm; thứ tự 'cơ chế trước, cảm xúc sau' được gán cho lịch sử Airbnb mà không có nguồn.", "fix": "Thêm src (trang Trust & Safety của Airbnb, bài về chiến dịch 'Belong Anywhere' có ngày) và ghi năm." },
+        { "sev": "P1", "where": "Q4", "quote": "Tăng 4 điểm phần trăm là quá nhỏ để có ý nghĩa — vì: Từ 5% lên 9% là gần gấp đôi số đặt trên cùng lượng người xem.", "issue": "Lời giải bác lo ngại về ý nghĩa thống kê bằng 'gần gấp đôi' mà đề không cho cỡ mẫu kỳ sau; với 20 lượt đặt ban đầu, nhiễu lớn. Người học bị dạy rằng gấp đôi là đủ, bất kể mẫu.", "fix": "Thêm vào đề: 'trên cùng 400 người xem chi tiết/tuần, trong 4 tuần' và sửa lời giải: 'với 1.600 lượt xem mỗi kỳ, 5%→9% vượt nhiễu mẫu; nếu chỉ 1 tuần thì chưa chắc'." },
+        { "sev": "P1", "where": "Q7", "quote": "Xây cảm xúc thương hiệu quan trọng hơn sửa tính năng sản phẩm · Có nhiều đánh giá tốt là đủ · Ảnh đẹp là yếu tố quyết định", "issue": "Ba phương án sai là câu tuyệt đối một vế ('đủ', 'quyết định', 'quan trọng hơn'); phương án đúng (d) nêu thứ tự hai vế. Đoán được bằng hình thức.", "fix": "Viết phương án sai có hai vế nhưng đảo thứ tự: 'Kể chuyện cảm xúc trước để kéo khách, cơ chế tin bổ sung sau khi có khối lượng'." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "Khi tỉ lệ đặt tăng, lúc đó thông điệp cảm xúc mới có chỗ đứng.", "issue": "Không nói 'tăng tới mức nào' thì chuyển sang cảm xúc; không có Phản ví dụ (khi phễu rò ở bước xem chi tiết chứ không ở bước đặt thì chẩn đoán đổi).", "fix": "Thêm ngưỡng (ví dụ tỉ lệ đặt/xem chi tiết ≥ 8% ổn định 4 tuần) và Phản ví dụ: 1.000 vào trang, chỉ 100 xem chi tiết, 20 đặt → vấn đề là hấp dẫn trang/giá, không phải niềm tin." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20 ÷ 400 = 5% ✓; 2% = 20/1.000 (sai mẫu số) ✓; 95 = tỉ lệ rời ✓. Ví dụ: 400/1.000 = 40%, 20/400 = 5% ✓; Q4: 9/5 = 1,8 'gần gấp đôi' ✓." },
+      "claims": [
+        { "claim": "Airbnb: rào cản ban đầu là ở nhà người lạ; giải bằng hồ sơ chủ nhà, đánh giá hai chiều, ảnh chất lượng; thương hiệu nói về 'thuộc về'", "status": "unverified", "note": "Không src." },
+        { "claim": "Nhiều chỗ ở trên Airbnb không đắt hơn khách sạn (Q1 a)", "status": "unverified", "note": "" },
+        { "claim": "Phễu homestay Đà Lạt 1.000 → 400 → 20; sau đánh giá lên 9%", "status": "illustrative-labelled", "note": "Mở bằng 'Giả sử'." }
+      ],
+      "strengths": "Phễu 1.000→400→20 cho một chẩn đoán rõ (kẹt ở niềm tin, không phải ở quan tâm) và một thứ tự hành động cụ thể; Q3 dạy đúng mẫu số; Q5 chuyển sang gia sư tại nhà kiểm tra được chuyển giao nguyên lý.",
+      "upgrade": "Thêm src/năm; thêm ngưỡng chuyển sang cảm xúc và Phản ví dụ phễu rò ở bước khác; sửa Q4 bằng cỡ mẫu và câu về nhiễu; viết lại Q7; thêm bài thực hành: từ bảng phễu 3 tuần, chỉ ra bước rò và chọn 2 cơ chế niềm tin kèm chỉ số đo." },
+
+    { "id": "B:in03-07",
+      "scores": { "accuracy": 11, "depth": 8, "practical": 12, "examples": 8, "pedagogy": 6, "assessment": 5, "data": 4, "clarity": 4 },
+      "total": 58,
+      "bloom_items": ["L2","L3","L3","L3","L2","L2","L4"], "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm · Q1", "quote": "Duolingo dùng linh vật cú xanh trên TikTok với giọng lầy, bắt trend, tự trêu chuyện \"cú đòi nợ bài học\"", "issue": "Case về hành vi thương hiệu trên nền tảng thay đổi nhanh (TikTok) nêu như sự thật hiện tại, không src, không ngày kiểm; Q1 a còn khẳng định về thuật toán ('Thuật toán không ưu tiên linh vật') không nguồn. Theo RUBRIC, lớp 'fast' bắt buộc có src và câu 'nếu màn hình khác, tin trang chính thức'.", "fix": "Thêm src (kênh TikTok chính thức, bài phỏng vấn đội social Duolingo có ngày), ghi 'tính đến tháng/năm'; bỏ hoặc gắn nhãn khẳng định về thuật toán." },
+        { "sev": "P1", "where": "Q5", "quote": "Thương hiệu nào cũng nên có linh vật · Đăng càng nhiều video mỗi ngày càng dễ thành công · Bắt trend thật nhanh là cách để thương hiệu được nhớ lâu", "issue": "Phương án sai là câu tuyệt đối ('nào cũng', 'càng… càng'); phương án đúng (b) là câu hai vế lặp MANG THEO. Đoán được bằng hình thức.", "fix": "Viết phương án sai dạng hai vế nhưng thiếu 'gốc thật': 'Nhân vật hợp giọng nền tảng và bắt trend đều mỗi tuần'." },
+        { "sev": "P2", "where": "Q3", "quote": "Tổng lượt xem của 50 video là bao nhiêu?", "issue": "Phép cộng nhân đơn giản, không dẫn tới quyết định; không so 2.000 → 5.000 lượt xem/video là do nhân vật hay do thuật toán/mùa (nhân quả vs tương quan), đúng chỗ bài về TikTok cần cảnh báo.", "fix": "Thay bằng câu đọc dữ liệu: cho lượt xem 10 video có nhân vật và 10 video không có, đăng xen kẽ cùng tuần; hỏi có đủ cơ sở kết luận nhân vật tạo khác biệt không." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "Nếu người mua chủ yếu là phụ huynh mà học viên không tự chọn app, cần cân nhắc kỹ trước khi đi hướng lầy.", "issue": "'Cân nhắc kỹ' là kết luận mơ hồ ở đúng điểm quyết định quan trọng nhất (người mua ≠ người dùng); không có Vì sao / Phản ví dụ / Đào sâu.", "fix": "Thêm tiêu chí: nếu >70% quyết định mua do phụ huynh (khảo sát 100 người đăng ký), giữ TikTok ở vai 'quen mặt' và đo tỉ lệ học viên nhắc app với phụ huynh; thêm Phản ví dụ ngân hàng (Q4) vào bài." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30 × 2.000 = 60.000; 20 × 5.000 = 100.000; tổng 160.000 ✓; 250.000 = 50 × 5.000 ✓; 100.000 = chỉ phần sau ✓. Ví dụ 30 × 2.000 = 60.000 khớp ✓." },
+      "claims": [
+        { "claim": "Duolingo dùng linh vật cú xanh trên TikTok, giọng lầy, bắt trend; tính cách bắt nguồn từ thông báo nhắc học mà người dùng hay đùa", "status": "unverified", "note": "Không src, không ngày kiểm; lớp fast." },
+        { "claim": "Thuật toán TikTok không ưu tiên tài khoản thương hiệu có linh vật (Q1 a)", "status": "unverified", "note": "Khẳng định về thuật toán, không nguồn." },
+        { "claim": "Duolingo nổi với video quay rất đơn giản (Q6 c); học ngôn ngữ có nhiều đối thủ (Q1 d)", "status": "unverified", "note": "" },
+        { "claim": "Kênh 30 video × 2.000 lượt xem; sau nhân vật 20 video × 5.000", "status": "illustrative-labelled", "note": "Mở bằng 'Giả sử'." }
+      ],
+      "strengths": "Nêu đúng điểm then chốt: nhân vật phải bắt nguồn từ điều người dùng đã đùa về sản phẩm; tách vai kênh theo người mua (phụ huynh) và người dùng (học viên); Q7 dạy đặt ranh giới nhân vật.",
+      "upgrade": "Thêm src với ngày kiểm và câu 'nếu khác, tin trang chính thức'; thay Q3 bằng câu so nhóm có/không nhân vật; cho tiêu chí định lượng khi người mua là phụ huynh; thêm Phản ví dụ/Đào sâu; viết lại Q5." },
+
+    { "id": "B:in03-08",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 11, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 5 },
+      "total": 74,
+      "bloom_items": ["L2","L3","L3","L4","L3","L2","L4"], "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "các nhà nghiên cứu hành vi dùng tên \"hiệu ứng IKEA\" để chỉ hiện tượng người ta định giá cao hơn thứ mình góp công làm ra", "issue": "Dẫn nghiên cứu hành vi nhưng không nêu tác giả/năm/nguồn; lớp periodic yêu cầu nguồn và ngày kiểm. Điều kiện 'chỉ khi hoàn thành được' là kết quả nghiên cứu nhưng người học không biết dựa vào đâu.", "fix": "Thêm src bài nghiên cứu gốc về IKEA effect (tác giả, năm) và ghi rõ điều kiện hoàn thành lấy từ đó." },
+        { "sev": "P1", "where": "Q6", "quote": "Để khách làm càng nhiều việc càng tốt · Chỉ ngành nội thất mới áp dụng được", "issue": "Phương án sai dùng 'càng… càng', 'Chỉ… mới'; phương án đúng (a) lặp nguyên văn MANG THEO 'miễn là họ làm thành công'. Đoán được bằng hình thức.", "fix": "Viết phương án sai có điều kiện nhưng sai: 'Công sức làm khách gắn bó hơn, miễn là bộ tự làm rẻ hơn bản làm sẵn'." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[-30000,\"NHAM_GIA_VON\"],[40000,\"NHAM_GIA_VON\"]]", "issue": "−30.000 là chênh giá bán (220.000 − 250.000), không phải nhầm giá vốn; nhãn lỗi sai. Phép tính lãi gộp cũng chưa nối với kết luận của bài (lãi hơn 10.000đ nhưng phải chi hướng dẫn/video/hỗ trợ — Đào sâu có nói nhưng Q3 không bắt tính).", "fix": "Đổi nhãn −30.000 thành NHAM_CHENH_GIA_BAN; thêm bước: 'nếu chi hướng dẫn và hỗ trợ 15.000đ/bộ thì bộ tự làm còn lãi hơn không?'" }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 220.000 − 90.000 = 130.000; 250.000 − 130.000 = 120.000; chênh 10.000 ✓. 40.000 = 130.000 − 90.000 (chênh giá vốn) ✓; −30.000 = chênh giá bán, nhãn 'NHAM_GIA_VON' không đúng bản chất." },
+      "claims": [
+        { "claim": "Hiệu ứng IKEA: người ta định giá cao hơn thứ mình góp công làm, chỉ khi việc hoàn thành được (nghiên cứu hành vi)", "status": "unverified", "note": "Không nêu tác giả/năm/src." },
+        { "claim": "IKEA giữ giá thấp nhờ khách tự vận chuyển và lắp ráp", "status": "unverified", "note": "" },
+        { "claim": "Nến làm sẵn 250.000đ (vốn 130.000), bộ tự làm 220.000đ (vốn 90.000)", "status": "illustrative-labelled", "note": "Mở bằng 'Giả sử'." }
+      ],
+      "strengths": "Bài đầy đủ nhất module: có Vì sao (3 cơ chế), Phản ví dụ thật sự đổi kết luận (mua làm quà → công sức thành áp lực, có dấu hiệu nhận biết), Đào sâu nêu đánh đổi, tín hiệu đo (tỉ lệ làm xong + đăng ảnh) và phép thử 5 người trong tuần.",
+      "upgrade": "Thêm src nghiên cứu; sửa nhãn lỗi Q3 và nối sang chi phí hỗ trợ; viết lại Q6; thêm một câu L5: cho số liệu thử 5 người (3 làm xong, 2 bỏ ở bước đổ sáp) và hỏi nên sửa hướng dẫn hay đổi nguyên liệu, kèm lý do." },
+
+    { "id": "B:in03-09",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 12, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 62,
+      "bloom_items": ["L2","L3","L3","L3","L2","L2","L4"], "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm · Q1", "quote": "Coca-Cola thay logo trên nhãn bằng các tên phổ biến và, ở một số thị trường, cả những cách gọi thân mật", "issue": "Dữ kiện và kết quả về Share a Coke ('được nhiều người tham gia', 'phủ rộng, không phải phiên bản giới hạn', 'giá không đổi') nêu như sự thật, không src, không năm/thị trường.", "fix": "Thêm src (trang Coca-Cola hoặc bài phân tích có ngày) và ghi thị trường/năm khởi đầu." },
+        { "sev": "P1", "where": "Q5", "quote": "Cá nhân hoá càng chính xác càng tốt · Cứ in tên người lên bao bì là doanh số sẽ tăng · Chỉ thương hiệu nước ngọt mới dùng được", "issue": "Ba phương án sai là câu tuyệt đối; phương án đúng (d) là câu hai điều kiện lặp bài. Đoán được bằng hình thức.", "fix": "Viết phương án sai dạng hai vế sai: 'Cá nhân hoá tạo cớ xã hội, và càng nhiều tên càng tốt kể cả khi bỏ logo'." },
+        { "sev": "P2", "where": "Q7", "quote": "Hãng trà thấy nhãn \"Crush\" bán hết nhanh nhất, nhãn tên riêng bán chậm hơn.", "issue": "Kết luận 'khách dùng nhãn làm cớ tặng' rút từ 'bán hết nhanh nhất' mà không biết số lượng in mỗi nhãn (Crush có thể in ít hơn) và không có số; phương án c nêu đúng một nhiễu nhưng bị bác bằng 'giải thích hợp lý nhất'.", "fix": "Cho số vào đề: 'mỗi nhãn in 5.000 chai; Crush hết sau 3 ngày, tên riêng còn 60% sau 2 tuần' để loại nhiễu số lượng in." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "150 tên có thể bao được một phần lớn người mua — nhưng vẫn có người bị sót", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu; không nói cách ước độ bao phủ 150 tên (dữ liệu tên khách hàng, danh sách tên phổ biến) hay chi phí in nhiều SKU nhãn cho nhà máy.", "fix": "Thêm Đào sâu: ước độ phủ bằng 1.000 tên khách trong CRM; đánh đổi số nhãn vs chi phí đổi khuôn in; Phản ví dụ: sản phẩm dùng riêng (Q6) đưa vào bài." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 100% − 60% = 40%; 50.000 × 40% = 20.000 ✓; 30.000 = số có tên ✓; 49.850 = 50.000 − 150 ✓." },
+      "claims": [
+        { "claim": "Share a Coke: thay logo bằng tên phổ biến, một số thị trường thêm cách gọi thân mật; khuyến khích tìm chai có tên bạn bè để tặng, chụp ảnh", "status": "unverified", "note": "Không src, không năm." },
+        { "claim": "Chiến dịch phủ rộng, không phải phiên bản giới hạn; giá chai có tên không khác (Q1 b, d)", "status": "unverified", "note": "Kết quả/dữ kiện quy cho thương hiệu, không nguồn." },
+        { "claim": "150 tên bao được 60% người mua; 50.000 người mua", "status": "illustrative-labelled", "note": "Mở bằng 'Giả sử'." }
+      ],
+      "strengths": "Chuyển đúng sang bối cảnh tên người Việt (tên gọi trùng nhiều, tên đệm) và đề xuất cách gọi thân mật ('Mẹ', 'Sếp', 'Crush') vừa lấp khoảng trống vừa tạo cớ tặng; Q4 (bánh mì mới 3 tháng) kiểm tra điều kiện nhận diện.",
+      "upgrade": "Thêm src/năm; đưa Q6 thành Phản ví dụ trong bài; thêm Đào sâu về ước độ phủ tên từ CRM và chi phí SKU nhãn; khoá dữ kiện Q7 bằng số lượng in; viết lại Q5." },
+
+    { "id": "B:in03-10",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 11, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 5 },
+      "total": 74,
+      "bloom_items": ["L2","L3","L3","L4","L2","L3","L5"], "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "McDonald's cũng được biết là có món riêng theo từng thị trường, chỉ giữ chặt phần làm nên thương hiệu", "issue": "Dữ kiện về McDonald's (quy trình chuẩn hoá, món riêng theo thị trường) nêu như sự thật, không src.", "fix": "Thêm src (trang McDonald's về thực đơn theo quốc gia hoặc bài phân tích vận hành có ngày)." },
+        { "sev": "P1", "where": "Q5", "quote": "Chuỗi phải giống nhau từng chi tiết ở các điểm bán · Đồ ăn nhanh mới cần nhất quán, món truyền thống cần tự do", "issue": "Phương án sai là câu tuyệt đối; phương án đúng (c) là câu hai vế 'cốt lõi… linh hoạt' lặp MANG THEO. Đoán được bằng hình thức.", "fix": "Viết phương án sai hai vế nhưng đảo: 'Linh hoạt phần cốt lõi theo tay bếp trưởng; chuẩn hoá phần phục vụ'." },
+        { "sev": "P2", "where": "Q3", "quote": "Sau khi chuẩn hoá, khảo sát lại 200 người chỉ còn 30 người lo.", "issue": "Phép tính điểm phần trăm đúng nhưng không nói 200 người sau có phải cùng nhóm khách quen, cùng cách hỏi không (so trước–sau không nhóm đối chứng); bài cũng chưa nêu mức giảm nào thì coi là chuẩn hoá 'đạt'.", "fix": "Ghi 'cùng bộ câu hỏi, cùng nhóm khách quen, cách 3 tháng' vào đề và thêm bước: 'đặt mục tiêu trước: dưới 20% là đạt'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 80/200 = 40%; 30/200 = 15%; giảm 25 điểm % ✓; 62,5 = (80−30)/80 giảm tương đối ✓; 50 = 80 − 30 số tuyệt đối ✓. Ví dụ 80/200 = 40% ✓." },
+      "claims": [
+        { "claim": "McDonald's: khách biết trước mình nhận gì nhờ quy trình chuẩn hoá chặt; có món riêng theo từng thị trường", "status": "unverified", "note": "Không src." },
+        { "claim": "Ở nhiều nơi McDonald's không rẻ hơn quán địa phương (Q1 b)", "status": "unverified", "note": "" },
+        { "claim": "Chuỗi bún bò 12 quán; 80/200 khách quen lo 'mỗi quán một vị'; sau chuẩn hoá 30/200", "status": "illustrative-labelled", "note": "Mở bằng 'Giả sử'." }
+      ],
+      "strengths": "Có Vì sao (3 cơ chế, gồm 'phần cốt lõi nên ít và rõ'), Phản ví dụ đổi kết luận (quán nổi nhờ nước dùng riêng, có dấu hiệu nhận biết), Đào sâu với tín hiệu theo dõi và phép thử 5 người ăn ở 2 quán; Q7 là câu quản trị con người (bếp trưởng phản đối) ở mức L5.",
+      "upgrade": "Thêm src; khoá điều kiện so trước–sau và mục tiêu trước trong Q3; viết lại Q5; thêm bài thực hành: lập bảng 'giữ chặt / được khác' cho 8 khâu của một bát bún bò kèm cách đo từng khâu." }
+  ],
+  "module_notes": {
+    "progression": "Mười case độc lập, không nối bài trước–sau (không có `rel`), mỗi bài một nguyên lý riêng; trình tự Spotify → Dove → Nike → Apple → Old Spice → Airbnb → Duolingo → IKEA → Share a Coke → McDonald's không theo logic nào (không theo phễu, không theo kỹ năng, không tăng độ khó). Có thể sắp lại theo câu hỏi: 'khách khoe/tặng gì' (Spotify, Share a Coke, IKEA) → 'thương hiệu đứng về đâu' (Dove, Nike, Apple) → 'giọng và nhân vật' (Old Spice, Duolingo) → 'niềm tin và nhất quán' (Airbnb, McDonald's). Hai bài 08 và 10 có cấu trúc đầy đủ (Vì sao / Phản ví dụ / Đào sâu); tám bài còn lại thiếu, nên module lệch chất lượng rõ.",
+    "overlap": [
+      "in03-03 (Nike) và in03-04 (Apple) cùng dạy 'nói về khách, không nói về sản phẩm' với cùng điều kiện 'phải có cái thật chống lưng'; phần quyết định của hai bài gần trùng.",
+      "in03-01 (Spotify) và in03-09 (Share a Coke) cùng nguyên lý 'nội dung lan truyền khi nó nói về/tặng cho người khác'; có thể gộp phần Vì sao.",
+      "Khuôn câu hỏi lặp 10/10 bài: Q5/Q6 'Nguyên lý rút ra… phát biểu đúng nhất' và 'Khi nào thương hiệu Việt KHÔNG nên bắt chước' — phương án đúng luôn là câu hai vế có điều kiện, phương án sai luôn tuyệt đối."
+    ],
+    "gaps": [
+      "Không bài nào có `src`, dù toàn bộ module là case thật (10 thương hiệu) — vi phạm yêu cầu lớp periodic/fast của RUBRIC; không bài nào nêu năm, thị trường, agency, hay kết quả có nguồn, nên người học không phân biệt được dữ kiện với diễn giải của tác giả.",
+      "Thiếu một case thất bại hoặc phản tác dụng (chiến dịch quan điểm bị phản ứng, nhân vật lầy đi quá ranh giới) để cân với 10 case 'thành công'; thiếu bài tổng kết dạy quy trình 'đọc một case thật: tách dữ kiện công khai / cơ chế / điều kiện chuyển giao'.",
+      "Không có bài thực hành có đầu ra ở bất kỳ bài nào; phần ÁP DỤNG đều là 'nói trong 60 giây', không có sản phẩm để chấm.",
+      "Chiều dữ liệu yếu đồng loạt: 10 câu calc đều một–hai bước, không câu nào buộc đọc bảng, so nhóm có/không, hay nói về nhiễu mẫu (Q4 in03-06 còn bác lo ngại mẫu nhỏ)."
+    ],
+    "best_lesson": "B:in03-08",
+    "weakest_lesson": "B:in03-07"
+  }
+}

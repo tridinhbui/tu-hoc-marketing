@@ -1,0 +1,182 @@
+{
+  "mod": "tp02", "scored_at": "2026-11-07", "scorer": "independent-agent", "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    { "id": "B:tp02-01",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 5 },
+      "total": 78,
+      "bloom_items": ["L4","L5","L2","L4","L5","L3","L4"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "Khi vài cuộc phỏng vấn liên tiếp không thêm cửa vào mới, danh sách tạm đủ, nhưng mới chỉ là giả thuyết định tính.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Khái niệm đã nêu đúng giới hạn (định tính, cần khảo sát vài trăm người) nhưng không nói thiên lệch của mẫu 20 người đã mua (bỏ sót cửa vào của người chưa mua — chính điểm bài 08 dạy) và không có ví dụ cửa vào nghe hợp lý mà hoá ra hiếm.", "fix": "Thêm phản ví dụ: cửa vào \"con sốt bác sĩ dặn bù nước\" nghe mạnh nhưng khảo sát 300 người chỉ 4% gặp mỗi tháng; thêm Đào sâu về hỏi thêm người mua ngành hàng nhưng chưa mua hãng." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "khái niệm của Jenni Romaniuk, Viện Ehrenberg-Bass", "issue": "Gắn tên tác giả thật nhưng không có src.", "fix": "Thêm src: Romaniuk, Building Distinctive Brand Assets / Better Brand Health, kèm ngày kiểm." },
+        { "sev": "P2", "where": "Q3", "quote": "câu \"với ai\" giúp phát hiện điều gì?", "issue": "Câu L2 nhận lại định nghĩa; đáp án là phương án duy nhất nói về người quyết định.", "fix": "Thay bằng câu dữ liệu: cho 6 câu trả lời phỏng vấn, hỏi câu nào là cùng một cửa vào." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q6: (6 + 4) ÷ 20 = 50% ✓; lỗi 65 = 13/20, 76,9 = 10/13 đúng nghĩa. Ví dụ: 4 tình huống đầu 13/20, hai đầu 10 → hai còn lại 3, nhất quán." },
+      "claims": [
+        { "claim": "Cửa vào ngành hàng (category entry points) — Jenni Romaniuk, Ehrenberg-Bass", "status": "unverified", "note": "Gắn tên đúng tác giả, trình bày đúng tinh thần, không có src." },
+        { "claim": "20 người, 11 tình huống, 13/20 ở bốn tình huống đầu", "status": "illustrative-labelled", "note": "Bài ghi rõ là \"giả thuyết định tính\", là nhãn đủ." }
+      ],
+      "strengths": "Khái niệm tự nêu giới hạn phương pháp (bão hoà định tính → khảo sát định lượng); Q5 (khi nào dừng phỏng vấn) và Q6 (mẫu số 20 không phải 13) là câu quy trình và câu đọc số tốt.",
+      "upgrade": "Thêm Vì sao / Phản ví dụ (cửa vào hiếm) / Đào sâu (thiên lệch mẫu người đã mua); thêm src Romaniuk; thay Q3 bằng câu gộp câu trả lời thành cửa vào; nêu chi phí/thời gian của bước khảo sát vài trăm người để quyết định có làm không." },
+
+    { "id": "B:tp02-02",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 6, "clarity": 5 },
+      "total": 75,
+      "bloom_items": ["L2","L5","L3","L4","L4","L3","L5"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ", "quote": "Chấm thang 1–5: \"sau gym\" lớn 2, phù hợp 5, trống 1 (hai hãng đã chiếm) → tích 10.", "issue": "Điểm 1–5 là thang thứ bậc do nhóm tự chấm, nhưng bài không nói ai chấm, chấm từ dữ liệu nào (độ lớn nên lấy từ khảo sát của bài 01, độ trống từ câu hỏi gợi tình huống của bài 06); chỉ Q7 mới nhắc \"sai số của việc chấm bằng cảm nhận\". Nhân ba điểm thứ bậc là heuristic, kết quả 64 vs 36 đổi hẳn nếu một người chấm lệch 1 điểm.", "fix": "Ghi nguồn cho từng điểm (độ lớn = % người gặp hằng tháng từ khảo sát; độ trống = % nhắc đối thủ trong câu hỏi tình huống) và yêu cầu 3 người chấm độc lập rồi lấy trung vị; đưa ghi chú sai số lên khái niệm thay vì để ở Q7." },
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Chọn cửa vào theo độ lớn, độ phù hợp và độ trống — không theo độ đẹp của cảnh quay.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu; thiếu trường hợp mô hình nhân sai (cửa vào lớn 5, phù hợp 3, trống 2 = 30 vẫn có thể đáng hơn 36 nếu sản phẩm cải tiến được).", "fix": "Thêm phản ví dụ về cửa vào lớn mà độ phù hợp sửa được bằng sản phẩm; Đào sâu về trọng số (có nên nhân đôi độ lớn)." },
+        { "sev": "P2", "where": "Q3", "quote": "Tích điểm là bao nhiêu? → đáp án: 36 điểm", "issue": "Phép nhân một bước đã có sẵn trong ví dụ (36), là câu L3 rất nhẹ.", "fix": "Đổi thành: cho bảng 4 cửa vào với 3 điểm mỗi cái, hỏi xếp hạng và cửa nào đổi hạng nếu độ trống của cửa dẫn đầu giảm 1." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3 × 4 × 3 = 36 ✓. Ví dụ: 2 × 5 × 1 = 10; 4 × 4 × 4 = 64 ✓." },
+      "claims": [
+        { "claim": "theo quan điểm này hiếm hãng nào độc quyền một cửa vào — nhiều hãng cùng gắn với một tình huống", "status": "unverified", "note": "Tóm tắt đúng tinh thần Romaniuk/Sharp, không có src; bài phân biệt đúng với Ries & Trout." },
+        { "claim": "điểm 1–5 cho ba cửa vào", "status": "illustrative-unlabelled", "note": "Số tự đặt, không nói nguồn chấm." }
+      ],
+      "strengths": "Nêu rõ hai trường phái (Ehrenberg-Bass: cửa vào được chia sẻ; Ries & Trout: chiếm chỗ riêng) và định nghĩa lại \"trống\" cho khớp; Q4 (vì sao nhân thay cộng) và Q7 (điểm sát nhau thì xét gì) là hai câu lập luận thật.",
+      "upgrade": "Gắn mỗi điểm với một nguồn dữ liệu và quy tắc chấm độc lập; thêm Vì sao / Phản ví dụ / Đào sâu về trọng số; thay Q3 bằng bảng xếp hạng có phân tích độ nhạy; thêm src cho Romaniuk." },
+
+    { "id": "B:tp02-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 5 },
+      "total": 79,
+      "bloom_items": ["L2","L5","L3","L4","L4","L2","L2"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "Thương hiệu nhỏ thường nên thắng một cửa vào nhỏ trước, rồi dùng nó làm bàn đạp", "issue": "Nêu như quy tắc chung trong khi bài 02 vừa dẫn Ehrenberg-Bass cho rằng tăng trưởng đến từ nhiều cửa vào và độ phủ; không nói điều kiện (ngân sách < ~10% dẫn đầu, cửa vào nhỏ phải đủ người mua — Đào sâu có nhắc nhưng không có ngưỡng). Hai bài liền nhau kéo hai hướng mà không nối.", "fix": "Thêm điều kiện áp dụng rõ: chỉ khi tiếng nói ở cửa vào lớn < ~10% và cửa vào nhỏ có ≥ X người mua/tháng; dẫn lại bài 02 để người học thấy đây là một lựa chọn, không phải luật." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Ước tính chi tiêu nói về \"bữa khuya\" của cả ngành khoảng 40 tỉ", "issue": "Con số nền của toàn bài là ước tính không gắn nhãn, không nói cách ước (Đào sâu mới gợi \"từ quảng cáo bạn thấy\"); tiếng nói đo bằng tiền chi, không phải lượt tiếp cận thực — hai hãng cùng 3 tỉ có thể mua lượng hiển thị khác xa.", "fix": "Ghi \"(số minh hoạ)\"; thêm một câu: nếu lấy được, dùng lượt hiển thị/impression share thay tiền chi." },
+        { "sev": "P2", "where": "Q6, Q7", "quote": "Vì sao cửa vào nhỏ được chọn nên \"kề\" với một cửa vào lớn hơn?", "issue": "Hai câu L2 nhận lại ý Vì sao (3) và Mang theo.", "fix": "Thay Q7 bằng câu đọc số: ba cửa vào với chi tiêu ngành 40/8/1 tỉ, ngân sách 3 tỉ chia thế nào để tiếng nói ở ít nhất một cửa ≥ 50%." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3 ÷ (40 + 3) = 6,98% → 7,0% ✓; lỗi 7,5 = 3/40 đúng nghĩa SAI_MAU_SO." },
+      "claims": [
+        { "claim": "chi tiêu ngành về \"bữa khuya\" ≈ 40 tỉ; ngân sách 3 tỉ bằng 1/10 hãng dẫn đầu", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "bệnh viện hạn chế bán hàng ở khu trực", "status": "unverified", "note": "Nêu dè dặt trong phản ví dụ (\"hoặc\"), chấp nhận được." }
+      ],
+      "strengths": "Khung tiếng nói = ngân sách ÷ tổng chi của cửa vào biến lựa chọn thành phép chia; phản ví dụ (phòng vắng vì ít người cần) và Đào sâu (\"đếm người, không chỉ đếm tiền\") nêu đúng điều kiện làm bài sai.",
+      "upgrade": "Thêm điều kiện áp dụng có số cho quy tắc \"thắng phòng nhỏ trước\" và nối với bài 02; gắn nhãn 40 tỉ và nói cách ước; thay Q6/Q7 bằng câu phân bổ ngân sách ba cửa vào; thêm ngưỡng người mua tối thiểu cho cửa vào nhỏ." },
+
+    { "id": "B:tp02-04",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 9, "pedagogy": 9, "assessment": 6, "data": 4, "clarity": 5 },
+      "total": 73,
+      "bloom_items": ["L2","L4","L3","L2","L4","L3","L2"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Cuối phim, câu chốt: \"Giữa trưa nắng, có [tên].\"", "issue": "Bài không có con số nào: không có kết quả thử bản nháp (Đào sâu gợi \"cho 5 người xem, tắt tiếng\" nhưng không có ngưỡng đạt), không có tần suất lặp cần thiết, không có chi phí. Người học biết nguyên tắc nhưng không có mốc để duyệt/không duyệt kịch bản.", "fix": "Thêm ngưỡng: ≥ 4/5 người tắt tiếng vẫn nói đúng \"giữa trưa\" và đúng tên; thêm số minh hoạ về số lần tiếp xúc trong 3 tháng và một calc (bao nhiêu lượt hiển thị cho 3 lần/người với tệp 2 triệu)." },
+        { "sev": "P2", "where": "Q4, Q7", "quote": "Vì sao phải lặp lại cùng một cặp tình huống – thương hiệu qua nhiều đợt?", "issue": "Hai câu L2; đáp án Q4 là phương án duy nhất nói về trí nhớ, ba phương án sai viện lý do tiết kiệm, quy định, sở thích.", "fix": "Thay Q4 bằng câu dữ liệu: kết quả test 5 người (nói đúng lúc nào / đúng tên) cho hai bản nháp, hỏi bản nào đạt và sửa gì." },
+        { "sev": "P2", "where": "Q1", "quote": "Ở giữa phim, khi cảm xúc của khán giả lên cao nhất và tập trung nhất", "issue": "Phương án d dài hơn hẳn và chứa tính từ tuyệt đối (\"cao nhất\", \"tập trung nhất\") — đoán được bằng hình thức.", "fix": "Rút ngắn d thành \"Ở giữa phim, khi khán giả tập trung nhất\"." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Trí nhớ gắn hai thứ cùng xuất hiện trong một khung; mỗi lần lặp củng cố đường nối", "status": "verified", "note": "Cơ chế học liên kết, nêu đúng mức, không viện tên nghiên cứu." }
+      ],
+      "strengths": "Phản ví dụ (thợ mái tôn rõ nhưng khách là dân văn phòng) và dấu hiệu nhận ra (nhớ cảnh, nhớ tên, nhưng không gắn lúc nắng) cho thấy đúng cơ chế hỏng; phép kiểm tắt tiếng 5 người là test rẻ dùng được ngay.",
+      "upgrade": "Thêm ngưỡng đạt cho test 5 người và số minh hoạ về tần suất lặp kèm một calc; thay hai câu L2 bằng câu đọc kết quả test; cân lại độ dài phương án Q1; nối sang bài 06 bằng chỉ số đo sau 6 tháng." },
+
+    { "id": "B:tp02-05",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 82,
+      "bloom_items": ["L2","L5","L3","L5","L3","L2","L4"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "Cả hai đều lỗ, mùa thi lỗ ít hơn; chi phí năm hai giảm là giả định cần đo", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu dù ví dụ đặt ra câu hỏi lớn chưa trả lời: nếu cả hai mùa đều lỗ trên lãi gộp tháng 6, lý do duy nhất để chi là lợi ích ngoài tháng (khách mới mua lại quanh năm) — bài nhắc \"lợi ích ngoài tháng 6 đo được\" trong Q3 nhưng không dạy đo nó thế nào.", "fix": "Thêm Đào sâu: theo dõi tỉ lệ mua lại của khách tháng 6 trong 6 tháng sau và quy ra lãi gộp; phản ví dụ khi phụ huynh mua một lần rồi thôi." },
+        { "sev": "P2", "where": "Q3", "quote": "doanh thu tháng 6 vẫn cao hơn mức nền tháng 6 khi chưa chạy chiến dịch là 0,9 tỉ", "issue": "Câu dài, có thể đọc nhầm \"mức nền ... là 0,9 tỉ\" (nền là 0,9) thay vì \"cao hơn nền 0,9 tỉ\"; ví dụ nói nền là 2 tỉ.", "fix": "Viết lại: \"doanh thu tháng 6 cao hơn mức nền 2 tỉ đúng 0,9 tỉ\"." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Tháng 6 không chạy gì, nền là 2 tỉ; năm nay lên 2,9 tỉ, tăng 0,9 tỉ.", "issue": "Gán toàn bộ 0,9 tỉ cho chiến dịch dù khái niệm vừa dặn \"so với cùng kỳ năm trước\"; Q7 dạy đúng nhưng ví dụ chưa làm mẫu (không nói 2 tỉ là nền năm trước hay trung bình năm).", "fix": "Ghi \"nền = tháng 6 năm trước, 2 tỉ, các tháng khác không đổi\" để ví dụ tự tuân thủ quy tắc so cùng kỳ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 0,9 × 40% = 0,36; 0,36 − 0,8 = −0,44 ✓. Ví dụ: 0,36 − 1,2 = −0,84 ✓; Tết 0,5 × 40% = 0,2; 0,2 − 1,2 = −1,0 ✓. Lỗi 0,1 = 0,9 − 0,8 (tính trên doanh thu) ✓, 0,36 quên trừ chi phí ✓." },
+      "claims": [
+        { "claim": "Mùa thi tháng 6 ít hãng nhắc tới", "status": "illustrative-labelled", "note": "Tình huống ghi rõ \"theo quan sát của đội bạn (cần kiểm chứng)\"." },
+        { "claim": "Tết +0,5 tỉ doanh thu với cùng 1,2 tỉ", "status": "illustrative-labelled", "note": "Ghi \"Giả định minh hoạ cho Tết\"." }
+      ],
+      "strengths": "Hiếm bài dám để cả hai phương án đều lỗ trên lãi gộp và yêu cầu ngưỡng dừng trước khi chi tiếp; Q7 (tăng 40% so tháng 7 không chứng minh gì — so cùng kỳ hoặc vùng đối chứng) là câu L4 về nhân quả đúng chuẩn; nhãn giả định rõ ở cả tình huống và ví dụ.",
+      "upgrade": "Thêm Vì sao / Phản ví dụ / Đào sâu dạy đo lợi ích ngoài tháng (mua lại 6 tháng sau) để quyết định chi tiếp có căn cứ; viết lại đề Q3; làm ví dụ tự tuân thủ quy tắc so cùng kỳ." },
+
+    { "id": "B:tp02-06",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 8, "clarity": 5 },
+      "total": 82,
+      "bloom_items": ["L3","L6","L3","L4","L2","L3","L5"], "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Ở \"sau buổi tập gym\" — không đầu tư — từ 6% lên 7%.", "issue": "Với n=500, chênh 1 điểm nằm trong nhiễu (±2 điểm), và 8% → 20% rõ ràng vượt nhiễu — bài không nói ngưỡng nào là \"tăng rõ hơn\", nên người học không có quy tắc đọc khi gặp 8% → 11%.", "fix": "Thêm một câu: với 500 người, chênh dưới ~3–4 điểm chưa đọc được; nêu ngưỡng tối thiểu trước khi khảo sát." },
+        { "sev": "P2", "where": "Q4", "quote": "cùng một mẫu thì chênh 12 so với 1 khó giải thích bằng mẫu", "issue": "Lời giải nói \"cùng một mẫu\" trong khi khái niệm nói \"cùng kiểu mẫu người trả lời\" (hai nhóm khác người, cùng cấu trúc) — hai điều khác nhau về thiết kế.", "fix": "Sửa thành \"cùng kiểu mẫu\"." },
+        { "sev": "P2", "where": "Q3", "quote": "Mức tăng tính theo điểm phần trăm là bao nhiêu?", "issue": "Phép trừ một bước (20 − 8), L3 rất nhẹ; bài đã có đủ số để hỏi câu khó hơn.", "fix": "Đổi thành: cửa vào đầu tư 8 → 20, đối chứng 6 → 7 — phần tăng \"vượt đối chứng\" là bao nhiêu điểm (12 − 1 = 11)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20 − 8 = 12 điểm ✓; tăng tương đối 150% ✓. Kiểm thêm: n=500, SE 95% quanh 7% ≈ ±2,2 điểm → 6 → 7 là nhiễu, 8 → 20 vượt nhiễu rõ." },
+      "claims": [
+        { "claim": "Khảo sát 500 người, 8% → 20% và 6% → 7%", "status": "illustrative-unlabelled", "note": "Nội bộ nhất quán, số hợp lý." },
+        { "claim": "nhận biết có gợi ý so với không gợi ý", "status": "verified", "note": "Khái niệm chuẩn (aided/unaided awareness)." }
+      ],
+      "strengths": "Dùng cửa vào không đầu tư làm nhóm đối chứng là thiết kế đo lường đúng và hiếm trong giáo trình tiếng Việt; phản ví dụ (đợt sau rơi vào nắng đỉnh điểm) nêu đúng yếu tố nhiễu thời điểm và cách khắc phục; Q2 là câu thiết kế khảo sát (L6).",
+      "upgrade": "Thêm ngưỡng nhiễu cho n=500 và quy tắc \"tăng rõ hơn\" có số; sửa \"cùng một mẫu\"; nâng Q3 lên phép tính vượt đối chứng; thêm chi phí khảo sát 500 người × 2 đợt để người học quyết định có làm không." },
+
+    { "id": "B:tp02-07",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 5 },
+      "total": 79,
+      "bloom_items": ["L2","L4","L3","L2","L4","L4","L3"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Tình huống / Khái niệm", "quote": "Doanh số đi ngang hai năm vì gần như mọi nhà có con nhỏ đã mua.", "issue": "Tiền đề \"đã bão hoà độ phủ\" được nêu như sự thật rồi làm nền cho cả bài; Ehrenberg-Bass (được bài viện dẫn) lại cho rằng độ phủ hiếm khi bão hoà và tăng trưởng chủ yếu đến từ thêm người mua nhẹ. Bài không cho người học cách kiểm tiền đề (độ phủ hiện tại bao nhiêu % hộ có con nhỏ) trước khi loại phương án tăng độ phủ.", "fix": "Thêm số: 1 triệu hộ mua / 1,3 triệu hộ có con nhỏ trong vùng phân phối = 77% → mới đủ cơ sở nói bão hoà; thêm điều kiện \"nếu độ phủ < 50%, ưu tiên tăng độ phủ trước cửa vào mới\"." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Nếu 30% trong số 1 triệu hộ đang mua thêm 2 chai mỗi tuần", "issue": "30% hộ mua thêm là giả định quyết định kết quả 20% nhưng không gắn nhãn và không có căn cứ (khảo sát ý định? dữ liệu thử nghiệm vùng?).", "fix": "Ghi \"(giả định minh hoạ; kiểm bằng thử nghiệm 2 thành phố trong 8 tuần)\"." },
+        { "sev": "P2", "where": "Q4", "quote": "Vì sao cửa vào mới nên \"kế cận\" cửa vào cũ?", "issue": "Câu L2 lặp ý Vì sao (2); bài 03 Q6 đã hỏi gần y hệt.", "fix": "Thay bằng câu đánh đổi: cửa vào \"bữa xế\" có thể ăn vào \"bữa sáng\" (mẹ chỉ mua cùng số chai, đổi giờ uống) — cho số hộ và chai, hỏi tăng ròng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30% × 1.000.000 = 300.000 hộ; × 2 = 600.000 chai; ÷ 3.000.000 = 20% ✓, khớp ví dụ." },
+      "claims": [
+        { "claim": "tư duy \"mental availability\" của Ehrenberg-Bass", "status": "unverified", "note": "Gắn tên đúng, không có src." },
+        { "claim": "1 triệu hộ, 3 triệu chai/tuần, 30% hộ mua thêm 2 chai", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ví dụ đưa mục tiêu 20% về con số đếm được (300.000 hộ × 2 chai) để kiểm sớm; Đào sâu nêu đúng rủi ro dịp mới ăn vào dịp cũ; phản ví dụ về trường hạn chế đồ uống lạnh là điều kiện thực tế.",
+      "upgrade": "Kiểm tiền đề bão hoà bằng số độ phủ và nêu điều kiện chọn giữa tăng độ phủ vs thêm cửa vào; gắn nhãn 30%; thay Q4 bằng câu tính tăng ròng khi có ăn mòn dịp cũ; thêm src Ehrenberg-Bass." },
+
+    { "id": "B:tp02-08",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 7, "assessment": 9, "data": 8, "clarity": 5 },
+      "total": 83,
+      "bloom_items": ["L4","L5","L3","L2","L3","L4","L4"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Khách doanh nghiệp không mua phần mềm vì một ngày đẹp trời — họ mua khi một sự kiện buộc họ phải làm.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu dù nội dung đã dày. Thiếu điều kiện: 20 khách bỏ đi là mẫu rất nhỏ (12/20 = 60% ± 21 điểm), và nhóm \"bỏ đi\" có thể bỏ vì giá chứ không vì sự kiện — bài kết luận \"chỗ đang mất khách\" từ 12 người mà không nói độ chắc.", "fix": "Thêm Đào sâu: với 20 người, 60% có thể là 40–80%; coi hoá đơn điện tử là giả thuyết mạnh cần kiểm bằng trang đích thử 4 tuần trước khi dồn ngân sách." },
+        { "sev": "P2", "where": "Ví dụ và Q3", "quote": "sự kiện gần như vắng trong 80 cuộc gọi", "issue": "Ví dụ nói \"gần như vắng\", Q3 nói \"chỉ 3 cuộc nhắc\" — không mâu thuẫn nhưng số 3 nên xuất hiện trong ví dụ để người học thấy nguồn.", "fix": "Sửa ví dụ thành \"chỉ 3/80 cuộc nhắc\"." },
+        { "sev": "P2", "where": "Q4", "quote": "Vì sao ở B2B cần liệt kê cửa vào theo từng vai trò?", "issue": "Câu L2 nhận lại khái niệm.", "fix": "Thay bằng câu phân vai: cho 5 sự kiện, hỏi sự kiện nào thuộc kế toán trưởng vs chủ doanh nghiệp và thông điệp nào cần \"chuẩn bị\" vs \"giải ngay\"." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 12/20 = 60%; 3/80 = 3,75%; 60 ÷ 3,75 = 16 lần ✓. Lỗi 4 = 12/3 (so số tuyệt đối) ✓. Ví dụ: 28 + 22 + 12 = 62, còn lại 18 \"rải rác\" chứa 3 cuộc hoá đơn — nhất quán." },
+      "claims": [
+        { "claim": "80 cuộc gọi: 28 kế toán nghỉ, 22 trước quyết toán, 12 mở chi nhánh; 12/20 khách bỏ đi nhắc hoá đơn điện tử", "status": "illustrative-unlabelled", "note": "Nội bộ nhất quán." },
+        { "claim": "bị đối tác đòi hoá đơn điện tử", "status": "unverified", "note": "Bối cảnh hoá đơn điện tử ở VN là thật, không nêu quy định cụ thể nên không cần src." }
+      ],
+      "strengths": "Bài hay nhất module: dạy thiên lệch người sống sót (cuộc gọi chỉ có khách đã chọn bạn) và sửa bằng hỏi khách bỏ đi; phân biệt sự kiện báo trước vs ập đến dẫn tới hai kiểu thông điệp; Q2 và Q6 buộc so hai nguồn dữ liệu có cỡ khác nhau.",
+      "upgrade": "Thêm Vì sao / Phản ví dụ / Đào sâu về độ chắc của mẫu 20 và cách kiểm giả thuyết rẻ (trang đích thử 4 tuần); đưa số 3/80 vào ví dụ; thay Q4 bằng câu phân vai–thông điệp; nêu chi phí mỗi trang đích để quyết định 2 hay 3 trang." },
+
+    { "id": "B:tp02-09",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 5 },
+      "total": 82,
+      "bloom_items": ["L2","L4","L3","L4","L4","L4","L5"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Thử trên 300 người: mẫu có tình huống được nhớ lại tên thương hiệu 26%, mẫu chỉ lợi ích 14%.", "issue": "Số thử nghiệm không gắn nhãn minh hoạ, không nói đo nhớ tên sau bao lâu (ngay sau xem hay 1 ngày sau — kết quả khác hẳn) và không nói chênh 12 điểm với n=300 mỗi nhóm là có ý nghĩa (±3,3 điểm SE).", "fix": "Ghi \"(số minh hoạ)\", nêu thời điểm đo (24 giờ sau) và một câu về ngưỡng nhiễu." },
+        { "sev": "P2", "where": "Q3", "quote": "Mỗi mẫu chạy với 15,6 triệu đồng cho 300 người", "issue": "Đề gộp chi phí chạy quảng cáo với mẫu khảo sát 300 người (hai việc khác nhau); 15,6 triệu cho 300 người xem là CPM phi thực tế (52.000đ/người) — người học tinh sẽ thắc mắc.", "fix": "Đổi thành \"15,6 triệu cho mỗi mẫu tới 30.000 lượt xem; khảo sát 300 người xem\" rồi tính trên tỉ lệ (26% × 30.000 vs 14% × 30.000)." },
+        { "sev": "P2", "where": "Q1, Q2", "quote": "Đoán trước: điều gì thiếu ở câu \"Tiết kiệm điện, an toàn, điều khiển bằng điện thoại\"?", "issue": "Hai câu đầu cùng đáp án \"thiếu tình huống\"; Q1 đoán được vì tiêu đề bài đã nói.", "fix": "Giữ Q2, đổi Q1 thành câu dự đoán có số: hai mẫu, bạn đoán tỉ lệ nhớ tên chênh bao nhiêu." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 15.600 ÷ 78 = 200; 15.600 ÷ 42 = 371,4; chênh 171,4 nghìn ✓. 78/300 = 26%, 42/300 = 14% khớp ví dụ ✓." },
+      "claims": [
+        { "claim": "300 người, nhớ tên 26% vs 14%", "status": "illustrative-unlabelled", "note": "Nội bộ nhất quán." },
+        { "claim": "Trí nhớ cần một tín hiệu bên ngoài để gọi ra", "status": "verified", "note": "Cơ chế cue-based retrieval, nêu đúng mức." }
+      ],
+      "strengths": "Q4 (bốn câu đều có khoảnh khắc, chỉ một câu khoảnh khắc được sản phẩm giải quyết) và Q7 (nhớ tên khác nhau nhưng tỉ lệ nhấp bằng nhau → đo lúc có nhu cầu) là hai câu phân tích thật; phản ví dụ về khách thuê trọ không ủi đồ nối sang ghép mẫu–nhóm.",
+      "upgrade": "Gắn nhãn và nêu thời điểm đo nhớ tên, ngưỡng nhiễu n=300; sửa đề Q3 cho tách chi phí chạy và mẫu khảo sát; đổi Q1 thành dự đoán có số; thêm chi phí sản xuất 3 mẫu vs 1 mẫu để đánh đổi ở Đào sâu có số." }
+  ],
+  "module_notes": {
+    "progression": "Mạch rõ và đúng thứ tự làm việc: liệt kê cửa vào (01) → chấm chọn (02) → lớn-đông vs nhỏ-trống (03) → viết quảng cáo gắn cửa vào (04) → cửa vào theo mùa (05) → đo độ gắn (06) → tăng trưởng bằng cửa vào kề (07) → B2B (08) → lợi ích vs tình huống (09). Bài 09 thuộc về khâu sáng tạo nên đứng cạnh 04 sẽ liền hơn; 05 (mùa vụ) có thể đứng sau 03 vì cùng logic tiếng nói. Ba bài (01, 02, 08) thiếu Vì sao / Phản ví dụ / Đào sâu; sáu bài còn lại đủ cấu trúc — module đồng đều hơn gt06 và tp01.",
+    "overlap": [
+      "04 và 09 cùng dạy \"đặt tình huống vào quảng cáo, thương hiệu trong tình huống\" với hai ví dụ (nước điện giải, ổ cắm); 09 nên được giới thiệu là bài áp dụng 04 sang quảng cáo lợi ích.",
+      "02 (độ trống) và 03 (tiếng nói) đo cùng một thứ — mức đối thủ đã chiếm cửa vào — bằng hai thước (trí nhớ khách vs tiền chi) mà không nói thước nào ưu tiên.",
+      "03 Q6 và 07 Q4 hỏi gần y hệt \"vì sao cửa vào mới nên kề cửa vào cũ\"."
+    ],
+    "gaps": [
+      "Tài sản nhận diện riêng (distinctive brand assets: màu, hình, âm) — cặp song hành của cửa vào trong khung Ehrenberg-Bass; 04 chỉ nói \"logo rõ\", chưa dạy xây và đo tài sản.",
+      "Độ nhiễu khảo sát: 06 và 09 dùng n=500/300 nhưng không bài nào cho quy tắc đọc chênh lệch tối thiểu; 02 nhân điểm cảm nhận mà không bàn độ tin cậy người chấm.",
+      "Kế hoạch tần suất và ngân sách để \"lặp lại\" (04 nói lặp nhiều đợt nhưng không có số lần tiếp xúc, chi phí, thời gian).",
+      "Dung hoà cửa vào với phân khúc (tp01-05) và khung tham chiếu (tp01-02): module nhắc Ehrenberg-Bass ở 02/07 nhưng không nói khi nào chọn cách tiếp cận này thay cho định vị cổ điển.",
+      "Nguồn cho Romaniuk / Ehrenberg-Bass (nhắc ở 01, 02, 07) — chưa bài nào có src."
+    ],
+    "best_lesson": "B:tp02-08",
+    "weakest_lesson": "B:tp02-04"
+  }
+}

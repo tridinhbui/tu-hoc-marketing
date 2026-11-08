@@ -1,0 +1,18 @@
+{
+ "mod": "tn03",
+ "lessons": [
+  {
+   "id": "B:tn03-03",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "example",
+     "quote": "CTR 2,4% và 2,5%, chênh 0,1 điểm, nhỏ hơn dao động, nên chưa thấy tiêu đề tạo khác biệt",
+     "issue": "Khái niệm nói việc của tiêu đề là quyết định có hiện ra khi tìm (lượt hiển thị), nhưng ví dụ thử tiêu đề bằng CTR và kết luận tiêu đề không tạo khác biệt — đo sai chỉ số, kết luận gây hiểu lầm.",
+     "fix": "So lượt hiển thị (và CTR) giữa hai tiêu đề; kết luận dựa trên cả hai."
+    }
+   ]
+  }
+ ]
+}

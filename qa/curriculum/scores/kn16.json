@@ -1,0 +1,129 @@
+{
+  "mod": "kn16",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn16-01",
+      "scores": { "accuracy": 10, "depth": 10, "practical": 13, "examples": 11, "pedagogy": 7, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L6"],
+      "bloom_max": "L6",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "TikTok mô tả bảng đề xuất “Dành cho bạn” dựa trên ba nhóm yếu tố. Tương tác của người dùng: video họ thích hay chia sẻ, tài khoản họ theo dõi, bình luận họ đăng, nội dung họ tạo. Thông tin video: chú thích, âm thanh, hashtag. Thiết lập thiết bị và tài khoản", "issue": "Mô tả thuật toán TikTok (theo hiểu biết của người chấm là từ bài đăng trên trang tin của TikTok năm 2020) nêu như hiện hành, không có `src`, không năm công bố, không ngày kiểm; đến 11/2026 đã ~6 năm. Có hedge 'có thể đã đổi' nhưng không đủ cho lớp fast.", "fix": "Thêm src (URL, năm công bố, ngày kiểm), ghi 'mô tả năm 20xx' ngay trong câu, và kiểm xem TikTok có mô tả mới hơn." },
+        { "sev": "P1", "where": "Q5", "quote": "Nguồn chính thức không nêu giờ đăng là yếu tố; đây là suy đoán chưa được kiểm.", "issue": "Lời giải lấy 'nguồn chính thức không nêu' làm bằng chứng phủ định — nguồn không nêu không có nghĩa yếu tố không tồn tại; cách lập luận này dạy sai về đọc nguồn.", "fix": "Sửa lời giải: 'giờ đăng không nằm trong ba nhóm được mô tả; muốn biết có tác dụng với kênh bạn thì phải thử, không kết luận từ việc nguồn không nhắc'." },
+        { "sev": "P2", "where": "Q6", "quote": "Điều nào mô tả đúng giá trị của việc đọc mô tả chính thức của TikTok về đề xuất?", "issue": "Q4, Q6 là câu nhận lại ý bài (L2) với nhiễu dễ loại ('công thức khá chắc', 'thay thế hoàn toàn'); Q6 lặp khung kn13-01 Q6/kn14-02 Q6/kn15-05 Q6.", "fix": "Thay Q6 bằng câu đọc bảng 12 video (chú thích rõ/không, xem hết, chủ đề) và hỏi kết luận nào được phép rút." },
+        { "sev": "P2", "where": "Tình huống", "quote": "Họ đăng 12 video trong tháng, đa số dưới 1.000 lượt xem.", "issue": "Tình huống nói 'đa số dưới 1.000' nhưng ví dụ cho 5 video trung bình 1.800 và 7 video 600 — 5/12 video trên 1.000 là 'thiểu số' nên vẫn khớp, nhưng trung bình chung 1.100 làm người học dễ hiểu nhầm là 'đa số trên 1.000'.", "fix": "Ghi 'đa số dưới 1.000, vài video quanh 2.000' để khớp với 1.800." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (5 × 1.800 + 7 × 600) ÷ 12 = 13.200 ÷ 12 = 1.100 ✓ (sai 1.200 = trung bình cộng đơn giản (1.800 + 600) ÷ 2 ✓; 13.200 = tổng ✓)." },
+      "claims": [
+        { "claim": "TikTok: ba nhóm yếu tố (tương tác người dùng, thông tin video, thiết lập thiết bị/tài khoản với trọng số thấp hơn)", "status": "unverified", "note": "Khớp hiểu biết chung về bài đăng 2020; không src, không năm." },
+        { "claim": "5 video đạt danh sách kiểm trung bình 1.800 lượt, 7 video 600", "status": "illustrative-labelled", "note": "Có '(số minh hoạ)'." }
+      ],
+      "strengths": "Tách 'phần bạn kiểm soát trực tiếp / gián tiếp / không kiểm soát' là khung hữu ích; ví dụ nói rõ chênh 1.800/600 chỉ là giả thuyết vì chủ đề, giờ, độ dài khác, và Q7 yêu cầu thiết kế 6 cặp đổi một biến (L6), có nhắc n=1.",
+      "upgrade": "Để ≥85: (1) src + năm + ngày kiểm, kiểm mô tả mới hơn; (2) sửa lập luận 'nguồn không nêu' ở Q5; (3) thêm phản ví dụ: video đủ danh sách kiểm nhưng 300 lượt xem vì chủ đề quá hẹp — danh sách kiểm không thay được lời hứa; (4) thêm chỉ số đọc được trong TikTok Analytics (nguồn: Dành cho bạn / Đang theo dõi / Tìm kiếm) với src, để 'đo kênh' có chỗ mở; (5) thay Q4/Q6 bằng câu dữ liệu."
+    },
+    {
+      "id": "B:kn16-02",
+      "scores": { "accuracy": 10, "depth": 8, "practical": 12, "examples": 9, "pedagogy": 6, "assessment": 4, "data": 7, "clarity": 4 },
+      "total": 60,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L1", "L2", "L3"],
+      "bloom_max": "L3",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "TikTok mô tả rằng các tín hiệu được tính theo mức độ chúng thể hiện sự quan tâm, và nêu ví dụ: xem hết một video dài là tín hiệu mạnh, có trọng số lớn hơn một tín hiệu yếu như người xem và người đăng cùng một quốc gia.", "issue": "Mô tả thuật toán không có `src`, năm công bố, ngày kiểm; không có câu 'mô tả này có thể đã đổi' như kn16-01.", "fix": "Thêm src + năm + ngày kiểm + câu dự phòng." },
+        { "sev": "P1", "where": "Q1 / Q5 / Q6", "quote": "Video ngắn luôn tốt hơn video dài ở các chủ đề", "issue": "Nhiễu dùng 'luôn' (Q1 d), 'Đúng hoàn toàn' / 'Sai hoàn toàn' (Q5 a, c), 'dài nhất có thể' (Q6 b); đáp án Q5 là câu ngắn nhất và trung dung — đoán được bằng hình thức. Q5 là L1 nhắc lại nguyên văn tiêu đề.", "fix": "Viết nhiễu có lý lẽ ('video dài hơn cho nhiều tổng giây xem hơn dù % xem hết thấp hơn — nên giữ 2 phút 10') để buộc cân nhắc % xem hết với tổng giây xem." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Bản mới có 40% xem hết.", "issue": "Bản cắt là video đăng lại, đến nhóm người xem khác, thời điểm khác; ví dụ quy toàn bộ 15% → 40% cho việc cắt mà không nhắc nhiễu — mâu thuẫn với tinh thần 'đổi một biến' của kn16-01/kn16-04. Số cũng không gắn nhãn minh hoạ.", "fix": "Thêm 'so ở cùng điều kiện đăng (Q7); chênh một phần có thể do người xem khác' và gắn nhãn minh hoạ." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Điều này không có nghĩa “video càng dài càng tốt”.", "issue": "Không có đánh đổi ngược: có lời hứa cần 2 phút (hướng dẫn nhiều bước) — rút còn 45 giây làm mất lời hứa; bài chỉ nói chiều 'ngắn lại'.", "fix": "Thêm phản ví dụ video hướng dẫn 8 bước mà bản 45 giây có xem hết 60% nhưng bình luận 'nhanh quá không theo được'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 5.200 ÷ 10.000 = 52% ✓. Ví dụ: 1.500 ÷ 10.000 = 15%; 52 ÷ 15 = 3,5 → 'gấp hơn ba lần' ✓. Q4: 40 − 15 = 25 điểm; 40 ÷ 15 = 2,67 → tăng 167% ✓." },
+      "claims": [
+        { "claim": "TikTok: xem hết một video dài là tín hiệu mạnh, hơn tín hiệu yếu như cùng quốc gia", "status": "unverified", "note": "Khớp hiểu biết chung về bài đăng 2020; không src." },
+        { "claim": "Số liệu 10.000/5.200 và 10.000/1.500 → 40%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Chỉnh đúng một hiểu lầm phổ biến ('tín hiệu mạnh khi xem hết video dài' ≠ 'làm video dài') và cho nguyên tắc 'độ dài đi theo lời hứa'.",
+      "upgrade": "Để ≥85: (1) src + năm + ngày kiểm; (2) gắn nhãn minh hoạ, nêu nhiễu khi so bản cắt; (3) thêm đánh đổi ngược (lời hứa cần dài) và chỉ số thứ hai (tổng giây xem, hoặc tỉ lệ xem lại) để quyết độ dài; (4) viết lại quiz: bỏ từ tuyệt đối, thay Q5 (L1) bằng câu đọc bảng 4 video khác độ dài với % xem hết và tổng giây xem, một câu L5 chọn độ dài cho một lời hứa cho sẵn; (5) nối sang kn13-02 (đường giữ chân cho biết cắt ở đâu)."
+    },
+    {
+      "id": "B:kn16-03",
+      "scores": { "accuracy": 10, "depth": 8, "practical": 11, "examples": 8, "pedagogy": 5, "assessment": 4, "data": 4, "clarity": 4 },
+      "total": 54,
+      "bloom_items": ["L1", "L3", "L3", "L2", "L3", "L2", "L2"],
+      "bloom_max": "L3",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "TikTok nêu rõ rằng số người theo dõi và các video từng hiệu quả không phải là yếu tố trực tiếp cho đề xuất.", "issue": "Khẳng định cơ chế nền tảng không có `src`, năm, ngày kiểm; không câu dự phòng. Cả Q1 và Q6 chấm điểm theo nội dung này.", "fix": "Thêm src + năm + ngày kiểm + câu dự phòng." },
+        { "sev": "P1", "where": "Ví dụ", "quote": "một video về “cách chọn bát ăn cơm không bị bỏng tay” có tỉ lệ xem hết cao gần gấp ba các video còn lại và được gửi nhiều", "issue": "Ví dụ không có con số nào (không lượt xem, không % xem hết, không số gửi); Q3 lại dùng số 3.000/1.350 không liên quan tới cửa hàng gốm. Bài về 'đo từng video' mà không có phép đo nào.", "fix": "Cho số minh hoạ: '18 video, trung vị 900 lượt xem, xem hết 22%; video bát ăn cơm 7.400 lượt, xem hết 61%, 210 lượt gửi' và dùng chính số đó cho Q3." },
+        { "sev": "P1", "where": "Q1 / Q6", "quote": "Điều đó chứng minh số người theo dõi là yếu tố trực tiếp và duy nhất của đề xuất", "issue": "Q1 và Q6 hỏi cùng một điều (follower không phải yếu tố trực tiếp nhưng tài khoản lớn vẫn có thể nhiều view); nhiễu dùng 'duy nhất', 'bất kỳ lợi thế nào', 'quan trọng nhất' — đoán được. Q7 c lặp lại nguyên văn tình huống.", "fix": "Gộp Q1/Q6; thêm câu L4: cho 6 video của tài khoản 120 follower với lượt xem/xem hết/gửi, hỏi lời hứa nào nên lặp và vì sao không phải video nhiều view nhất." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Chờ đợi là lựa chọn chắc chắn nhất để không có tín hiệu nào.", "issue": "Bài không nói cơ chế vì sao tài khoản mới vẫn được phân phối (video được thử với nhóm nhỏ trước) hay kỳ vọng hợp lý về quy mô — người học không biết 'bao nhiêu lượt xem là bình thường' cho tài khoản 120 follower.", "fix": "Thêm đoạn 'vì sao': mỗi video được đưa tới một nhóm thử rồi mở rộng theo phản ứng (ghi rõ đây là mô tả của nền tảng có src hay suy luận), và mốc kỳ vọng từ chính kênh sau 6 tuần." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.350 ÷ 3.000 = 45% ✓ (sai 222,2 = đảo ✓; 4,5 = nhầm thập phân ✓). Số không gắn với tình huống." },
+      "claims": [
+        { "claim": "TikTok: số người theo dõi và video từng hiệu quả không phải yếu tố trực tiếp; tài khoản nổi tiếng vẫn có thể nhận nhiều lượt xem", "status": "unverified", "note": "Khớp hiểu biết chung về bài đăng 2020; không src." },
+        { "claim": "video bát ăn cơm xem hết cao gần gấp ba", "status": "illustrative-unlabelled", "note": "Không có số tuyệt đối nào." }
+      ],
+      "strengths": "Phân biệt đúng 'không phải yếu tố trực tiếp' với 'không bao giờ có ích' (ghi ở Lỗi hay gặp); hướng hành động 'mỗi tuần 3 video theo một lời hứa rõ, đo 3 số' đơn giản, làm được.",
+      "upgrade": "Để ≥85: (1) src + năm + ngày kiểm; (2) viết lại ví dụ với bảng số 6 tuần và dùng số đó cho calc; (3) thêm cơ chế phân phối thử và mốc kỳ vọng; (4) thêm phản ví dụ: tài khoản nhỏ có video 50.000 lượt nhưng 0 đơn vì không có bước kế tiếp — nối kn14-05 (trang cá nhân/đường dẫn); (5) gộp Q1/Q6, thêm câu L4 đọc bảng và câu L5 chọn lời hứa để lặp; (6) nêu ràng buộc sản xuất: 3 video/tuần tốn bao nhiêu giờ cho một cửa hàng 2 người."
+    },
+    {
+      "id": "B:kn16-04",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 13, "examples": 11, "pedagogy": 7, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L1", "L3", "L3", "L2", "L3", "L3", "L2"],
+      "bloom_max": "L3",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "TikTok mô tả rằng bảng “Dành cho bạn” thường tránh cho người xem thấy hai video liền nhau cùng âm thanh hoặc cùng người đăng, loại nội dung trùng lặp và nội dung đã xem, và cố ý đưa vào một số video ngoài sở thích để tạo đa dạng.", "issue": "Mô tả thuật toán không có `src`, năm, ngày kiểm. Q1 chấm điểm theo trí nhớ về mô tả này.", "fix": "Thêm src + năm + ngày kiểm + câu dự phòng." },
+        { "sev": "P2", "where": "Q1", "quote": "Đoán trước: theo mô tả chính thức, bảng đề xuất thường tránh điều gì khi xếp hai video liền nhau?", "issue": "Câu 'đoán trước' lại là câu nhớ nguyên văn (L1) một tài liệu người học chưa đọc; Q4 và Q7 là L2 với nhiễu vô lý ('chỉ xảy ra khi đăng quá nhiều video vào ban đêm').", "fix": "Đổi Q1 thành câu dự đoán từ dữ liệu tình huống (3.000 → 600–800 sau 5 video giống nhau: ba cách giải thích nào); thay Q4 bằng câu phân biệt 'suy luận' và 'xác nhận'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Lượt xem trung bình mỗi video từ 700 lên 2.100 (số minh hoạ).", "issue": "Tình huống cho hai ngày đầu 3.000/video rồi 600–800; mốc 700 chỉ là ba ngày cuối, không phải trung bình tuần (~1.620). Chọn mốc thấp nhất làm nền so khiến mức tăng trông lớn hơn.", "fix": "Ghi 'so với ba ngày cuối tuần trước (700)' hoặc so với trung bình cả tuần." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (22 + 19 + 30 + 28) ÷ 4 = 24,75; 41 − 24,75 = 16,25 điểm ✓ (tol 0,1). Sai 13 = 41 − 28 (trung bình cả 5 gồm chính nó) ✓; 65,7 = 16,25 ÷ 24,75 ✓. Trung bình tuần tình huống: (2 × 3.000 + 3 × 700) ÷ 5 = 1.620." },
+      "claims": [
+        { "claim": "TikTok tránh hai video liền nhau cùng âm thanh/người đăng, loại nội dung trùng lặp và đã xem, chèn video ngoài sở thích để đa dạng", "status": "unverified", "note": "Khớp hiểu biết chung về bài đăng 2020; không src." },
+        { "claim": "Lượt xem 700 → 2.100", "status": "illustrative-labelled", "note": "Có '(số minh hoạ)'." }
+      ],
+      "strengths": "Bài phân biệt rõ 'suy luận từ mô tả' với 'hình phạt được xác nhận', đưa ba giả thuyết cạnh tranh (tránh lặp / âm thanh nguội / người xem mệt) và một hành động xử lý cả ba rồi mới tách biến — cách lập luận đúng. Q3 buộc loại chính video khỏi nhóm đối chiếu.",
+      "upgrade": "Để ≥85: (1) src + năm + ngày kiểm; (2) sửa mốc so 700 và nói rõ nền so; (3) thêm phản ví dụ: kênh đăng 5 video khác lời hứa nhưng vẫn 600 lượt vì chủ đề hẹp — đa dạng không thay được lời hứa đúng người; (4) thêm cách kiểm 'âm thanh nguội' bằng số (lượt dùng âm thanh theo ngày trong ứng dụng, với ghi chú kiểm màn hình); (5) thay Q1/Q4/Q7 bằng câu đọc dữ liệu 5 video tuần sau (xem hết, gửi, âm thanh) và câu L5 chọn biến đổi ở vòng kế."
+    },
+    {
+      "id": "B:kn16-05",
+      "scores": { "accuracy": 11, "depth": 9, "practical": 13, "examples": 10, "pedagogy": 6, "assessment": 5, "data": 7, "clarity": 4 },
+      "total": 65,
+      "bloom_items": ["L3", "L3", "L3", "L3", "L1", "L1", "L3"],
+      "bloom_max": "L3",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "Theo trang trợ giúp của TikTok, Spark Ads là định dạng quảng cáo cho phép quảng bá một bài đăng tự nhiên có sẵn, và tương tác từ quảng cáo được tính cho bài đăng gốc. Nếu bài đăng là của creator, họ cấp cho nhà quảng cáo một mã uỷ quyền với thời hạn do họ chọn.", "issue": "Mô tả tính năng và thủ tục của sản phẩm quảng cáo (lớp fast: giao diện/chính sách) không có `src`, ngày kiểm; Q5 và Q6 là câu nhớ nguyên văn mô tả này. Có hedge 'Kiểm lại điều kiện hiện hành trong Ads Manager' nhưng không có nguồn.", "fix": "Thêm src trang trợ giúp Spark Ads (URL, ngày kiểm) và câu 'nếu Ads Manager khác, tin màn hình hiện hành'." },
+        { "sev": "P1", "where": "Ví dụ", "quote": "CPA: Spark Ads 10.000.000 ÷ 36 ≈ 277.800đ; video studio 10.000.000 ÷ 25 = 400.000đ. Thấp hơn khoảng 30%.", "issue": "So CPA của hai quảng cáo khác creative mà không nêu cùng mục tiêu tối ưu, cùng đối tượng, cùng thời gian (Q2 có nói nhưng ví dụ không); với 36 vs 25 đơn, chênh 30% nằm trong vùng nhiễu của mẫu nhỏ — bài không nhắc. Số cũng không gắn nhãn minh hoạ.", "fix": "Ghi điều kiện chạy (cùng mục tiêu, đối tượng, 14 ngày), gắn nhãn minh hoạ và thêm 'với vài chục đơn, chênh 30% chưa chắc; chạy thêm hoặc lặp'." },
+        { "sev": "P2", "where": "Q3 / Q4", "quote": "[[3600000,\"NHAM_CTR_CVR\"],[360000,\"SAI_TINH_TOAN\"]]", "issue": "Mã lỗi 'NHAM_CTR_CVR' không liên quan tới phép chia CPA; giá trị 3.600.000 và 250.000 (Q4) không tương ứng với lỗi nào nêu được tên. Q3 và Q4 là cùng một phép tính hai lần.", "fix": "Dùng sai hay gặp có nghĩa: 36 ÷ 10.000.000 (đảo tử mẫu) và 10.000.000 ÷ 20.000 (chia cho lượt xem thay cho đơn); gộp Q3–Q4 thành câu 'CPA thấp hơn bao nhiêu %'." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Cách dùng hợp lý là chọn bài đã giữ được người xem (xem hết, chia sẻ, bình luận tốt), rồi dùng ngân sách quảng cáo để đưa nó tới người đúng nhóm.", "issue": "Không có đánh đổi: khi đẩy bài tự nhiên, bình luận (kể cả tiêu cực) hiện cùng quảng cáo; chú thích/âm thanh không sửa được; bài của creator phụ thuộc thời hạn uỷ quyền; không nối với kn12 (công bố nội dung được tài trợ với KOC).", "fix": "Thêm đoạn đánh đổi và liên kết kn12-05." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 10.000.000 ÷ 36 = 277.778 ≈ 278.000 ✓ (tol 1.000). Q4: 10.000.000 ÷ 25 = 400.000 ✓. Ví dụ: 1 − 277.800 ÷ 400.000 = 30,6% ✓. Mã lỗi của 'sai hay gặp' không khớp giá trị (xem defect)." },
+      "claims": [
+        { "claim": "Spark Ads quảng bá bài tự nhiên có sẵn; tương tác tính cho bài gốc; creator cấp mã uỷ quyền với thời hạn do họ chọn", "status": "unverified", "note": "Khớp hiểu biết chung về trang trợ giúp TikTok; không src, không ngày kiểm." },
+        { "claim": "Số liệu 40.000/48%, 20.000/14%/25 đơn, 36 đơn, 120.000 lượt xem của creator", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Nguyên tắc 'đẩy bài đã chứng minh giữ được người, so CPA chứ không so lượt xem' đúng và nối được với biên lợi nhuận (Q7); Q2 nêu đúng điều kiện so (cùng ngân sách, mục tiêu, thời gian).",
+      "upgrade": "Để ≥85: (1) src + ngày kiểm cho Spark Ads và mã uỷ quyền; (2) gắn nhãn minh hoạ, nêu điều kiện chạy và nhiễu mẫu nhỏ; (3) thêm đánh đổi (bình luận hiện cùng quảng cáo, không sửa chú thích, thời hạn uỷ quyền) và liên kết kn12-05 về công bố tài trợ; (4) thêm bước quyết định với biên: 'biên mỗi đơn 350.000đ → CPA 400.000 lỗ, 278.000 lãi 72.000' để Q7 có số; (5) sửa mã lỗi calc, gộp Q3–Q4, thay Q5/Q6 (L1) bằng câu L4 đọc bảng ba quảng cáo (chi, đơn, biên) và câu L5 chọn video creator hay video của mình khi ngân sách còn 5 triệu."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự: cơ chế đề xuất (01) → độ dài theo lời hứa (02) → tài khoản nhỏ (03) → đa dạng (04) → Spark Ads (05). Hợp lý về chủ đề, nhưng 02 và 03 mỏng (một ý mỗi bài, có thể gộp vào 01/04); 05 là bài duy nhất chạm tiền và nên có ràng buộc biên lợi nhuận. Cả 01–04 dựa trên cùng một mô tả của TikTok (theo người chấm là bài đăng năm 2020) mà không bài nào ghi năm, src hay ngày kiểm — với lớp fast đây là lỗi cấp module.",
+    "overlap": [
+      "kn16-03 Q1 ≈ Q6 (cùng bài), và cùng ý với kn16-01 Q6 về giá trị của mô tả chính thức.",
+      "kn16-02 Q4 lặp câu điểm phần trăm/tỉ số của kn14-03 Q4 và kn14-05 Q6.",
+      "kn16-01 Q7, kn16-04 Q6 và kn14-02 Q2 cùng dạy 'đổi một biến, so tỉ lệ xem hết'.",
+      "kn16-02 (độ dài theo lời hứa) trùng ý kn14-02 (Reels) và kn13-02 (giữ chân)."
+    ],
+    "gaps": [
+      "Không có bài đọc TikTok Analytics (nguồn lưu lượng: Dành cho bạn / Đang theo dõi / Tìm kiếm / Trang cá nhân; thời gian xem trung bình) — 01–04 đều nói 'đo kênh' mà không chỉ chỗ đo.",
+      "Thiếu bài về tìm kiếm trên TikTok (từ khoá trong chú thích/voice, Creator Search Insights) dù 'tìm kiếm' là một cửa ở kn13-01.",
+      "Thiếu bài về TikTok Shop / liên kết affiliate — đường ra đơn chính ở Việt Nam cho ngành đồ ăn vặt, mỹ phẩm, nhà bếp mà các tình huống trong module dùng.",
+      "Thiếu liên kết sang kn12 cho Spark Ads với creator (công bố nội dung tài trợ, trách nhiệm phát ngôn)."
+    ],
+    "best_lesson": "B:kn16-04",
+    "weakest_lesson": "B:kn16-03"
+  }
+}

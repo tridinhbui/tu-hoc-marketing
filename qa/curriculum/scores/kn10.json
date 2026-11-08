@@ -1,0 +1,234 @@
+{
+  "mod": "kn10",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn10-01",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 12, "examples": 9, "pedagogy": 7, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 65,
+      "bloom_items": ["L2", "L3", "L2", "L3", "L4", "L3", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q4", "quote": "Cách kể nào trên TikTok vẫn giữ đúng ý?", "issue": "Đề chỉ hỏi 'giữ đúng ý'; phương án d (đăng lại nguyên TVC) cũng giữ đúng ý, chính lời giải thừa nhận 'Đúng ý nhưng sai định dạng'. Theo nghĩa đen của đề có hai phương án thoả.", "fix": "Sửa đề thành 'Cách kể nào vừa giữ đúng ý vừa hợp định dạng TikTok?'" },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Cùng 1,2 tỷ, nhưng năm kênh cùng đẩy một ý nên mỗi lần khách gặp lại là một lần nhớ thêm", "issue": "Ví dụ không có số đo kết quả (mức nhớ trước/sau, tần suất), nên kết luận 'nhớ thêm' là khẳng định không kiểm được; không có nhãn minh hoạ.", "fix": "Thêm số minh hoạ: mức nhớ có gợi ý trước 8% → sau 21% (số minh hoạ), tần suất trung bình 3,2 lần/người, để nối với Q7." },
+        { "sev": "P2", "where": "Q7 wrong", "quote": "[1200000,\"SAI_MAU_SO\"]", "issue": "1.200.000 là quên chia cho tần suất 3 (bỏ bước), không phải sai mẫu số.", "fix": "Đổi nhãn thành QUEN_TAN_SUAT hoặc BO_BUOC." },
+        { "sev": "P2", "where": "Q3", "quote": "Phép thử nhanh nhất để biết các điểm chạm có thuộc cùng một ý tưởng hay không là gì?", "issue": "Nhận lại nguyên văn 'phép thử che logo' trong phần khái niệm (L2).", "fix": "Cho hai điểm chạm cụ thể (mô tả banner và video) rồi hỏi người học phán đoán chúng có cùng ý tưởng không và vì sao." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q7: 6.000.000 ÷ 5 = 1.200.000; ÷ 3 = 400.000 ✓. 6.000.000 ÷ 3 = 2.000.000 ✓ (một ý)." },
+      "claims": [
+        { "claim": "Một người cần thấy cùng một ý khoảng 3 lần mới bắt đầu nhớ (Q7)", "status": "illustrative-labelled", "note": "Đề ghi 'số minh hoạ' cho 6 triệu lượt; ngưỡng 3 lần là giả định mô phỏng 'tần suất hiệu quả', không phải quy luật." },
+        { "claim": "Đồ uống vẫn bán tốt trên TikTok (Q1 lời giải c)", "status": "unverified", "note": "Khẳng định chung về nền tảng, không nguồn." }
+      ],
+      "strengths": "Tình huống năm kênh năm chuyện rất dễ nhận ra ngoài đời; Q5 bắt người học áp hai tiêu chí rộng/hẹp lên bốn ứng viên thật, Q7 nối ngân sách với tần suất.",
+      "upgrade": "Để đạt ≥85: (1) sửa đề Q4; (2) thêm phần PHẢN VÍ DỤ (khi nào một ý xuyên kênh là thừa: đợt xả hàng ngắn, thương hiệu đã rất nổi) và ĐÀO SÂU (đánh đổi reach vs frequency, cách đo 'nhớ' bằng khảo sát có gợi ý/không gợi ý); (3) gắn số minh hoạ cho ví dụ (mức nhớ trước/sau, tần suất) và nhãn 'số minh hoạ'; (4) thay Q3 bằng câu chẩn đoán từ hai ấn phẩm mô tả cụ thể; (5) thêm một câu L5 chọn giữa hai ứng viên ý tưởng với lý do đánh đổi."
+    },
+    {
+      "id": "B:kn10-02",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L3", "L4", "L3", "L3", "L4", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4", "quote": "Ngân sách 800 triệu, YouTube nhận 300 triệu. YouTube chiếm bao nhiêu phần trăm ngân sách?", "issue": "Câu tính một phép chia không dạy gì về phân vai kênh; chỗ này đáng có phép tính cầu nối (ví dụ 300 triệu / 2 triệu người biết = 150đ mỗi người biết, so với CPA sàn).", "fix": "Đổi thành: 'YouTube 300 triệu cho 2 triệu người biết; Shopee 200 triệu ra 4.000 đơn. Chi phí mỗi người biết và chi phí mỗi đơn là bao nhiêu? Vì sao không so hai số này với nhau?'" },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "YouTube 300 triệu — cho 2 triệu người biết dòng mới", "issue": "Số 2 triệu người và các mức chi không gắn nhãn minh hoạ; không nêu CPM/CPV giả định.", "fix": "Thêm '(số minh hoạ, CPM giả định 150.000đ/1.000 người)' và nêu chỉ số đo cho từng kênh thành bảng 4 dòng." },
+        { "sev": "P2", "where": "Q7", "quote": "Câu nào mô tả đúng nhất việc phân vai kênh trong một kế hoạch tích hợp?", "issue": "Nhận lại ý chính (L2); phương án đúng dài và 'đúng kiểu giáo trình' hơn ba phương án sai.", "fix": "Thay bằng câu đọc bảng: cho 4 kênh với chỉ số đang dùng, hỏi kênh nào đang bị đo sai vai." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 300 ÷ 800 = 37,5% ✓; 800 ÷ 300 = 266,7% ✓ nhãn sai mẫu số hợp lý." },
+      "claims": [
+        { "claim": "Khách trên sàn thuộc về sàn nhiều hơn; hãng khó chủ động nhắn lại (Q3 lời giải c)", "status": "unverified", "note": "Khẳng định về cách Shopee giới hạn dữ liệu khách cho người bán; đúng theo thực hành chung nhưng không nguồn." },
+        { "claim": "Người theo dõi của KOL là tài sản của KOL, không phải của hãng (Q2 lời giải c)", "status": "unverified", "note": "Nhận định nghề, hợp lý, không cần nguồn." }
+      ],
+      "strengths": "Có đủ VÌ SAO – PHẢN VÍ DỤ – ĐÀO SÂU; phản ví dụ (phễu trên đã đầy, lỗi ở trang sản phẩm) đổi hẳn kết luận; Q6 bắt đúng lỗi so CPA giữa kênh biết và kênh chốt.",
+      "upgrade": "Để đạt ≥85: (1) thay Q4 bằng phép tính cầu nối chi phí mỗi người biết vs chi phí mỗi đơn; (2) đưa ví dụ thành bảng kênh – vai – ngân sách – chỉ số – mục tiêu số, gắn nhãn minh hoạ; (3) thêm một câu L5: phễu trên đã đầy (nhận biết 70%, tìm tên ổn định) thì cắt 300 triệu YouTube đi đâu, biện hộ; (4) nêu cách kiểm đóng góp chéo (so lượt tìm tên thương hiệu tuần chạy/không chạy) với số minh hoạ."
+    },
+    {
+      "id": "B:kn10-03",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 14, "examples": 11, "pedagogy": 7, "assessment": 6, "data": 8, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Dồn hết vào cao điểm thì tiền đắt nhất (giá quảng cáo mùa cao điểm tăng)", "issue": "Khẳng định giá quảng cáo tăng mùa cao điểm là đúng theo kinh nghiệm nhưng không có số hay nguồn; bài không nói tăng bao nhiêu để người học ước.", "fix": "Thêm một dòng số minh hoạ: 'CPM tuần sát Tết thường cao hơn tháng thường, ví dụ 1,5–2 lần (số minh hoạ; kiểm tài khoản của bạn)'." },
+        { "sev": "P2", "where": "Q4, Q6", "quote": "Trong pha trước, kênh nào đóng vai trò chính?", "issue": "Q4 và Q6 là nhận lại ý bài (L2), có thể thay bằng câu đọc dữ liệu.", "fix": "Q4: cho CPM 3 tuần trước Tết và 6 tuần trước Tết (số minh hoạ), hỏi dời 600 triệu sang pha trước mua được thêm bao nhiêu lượt xem hết." },
+        { "sev": "P2", "where": "Q1 phương án d", "quote": "Khách mệt vì quảng cáo dày trong thời gian ngắn nên bỏ qua cả chiến dịch", "issue": "Phương án d là hệ quả có thật (tần suất quá cao gây mệt), lời giải phải biện hộ 'nguyên nhân chính'; nhiễu hơi gần đáp án.", "fix": "Đổi d thành nhiễu rõ sai hơn, hoặc đổi đề thành 'hệ quả lớn nhất về chi phí'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 400.000 ÷ 20% = 2.000.000 ✓. Ví dụ: 400.000 × 1.500 = 600 triệu + 150 = 750 triệu ✓; 120.000 × 3.750 = 450 triệu ✓; 3.000 − 750 − 450 = 1.800 ✓; 25% và 15% ✓." },
+      "claims": [
+        { "claim": "1.500 đồng một lượt xem hết; 3.750 đồng tin nhắn Zalo và mã mua lại", "status": "illustrative-labelled", "note": "Bài ghi '(số minh hoạ)'." },
+        { "claim": "Giá quảng cáo mùa cao điểm tăng", "status": "unverified", "note": "Khẳng định chung về đấu giá quảng cáo, không số, không nguồn." },
+        { "claim": "Quà biếu doanh nghiệp phải duyệt và đặt sớm nhiều tuần", "status": "unverified", "note": "Nhận định hành vi B2B hợp lý, không nguồn." }
+      ],
+      "strengths": "Ví dụ dựng ngân sách từ việc cần làm (400.000 lượt xem hết × giá) rồi mới ra tỉ lệ và nói rõ 'tỉ lệ là kết quả, không phải công thức'; Q2 là câu đánh đổi thật khi chỉ được thêm một pha.",
+      "upgrade": "Để đạt ≥85: (1) thêm PHẢN VÍ DỤ (sản phẩm mua bốc đồng giá rẻ, hoặc thương hiệu đã rất nổi: pha trước có thể rút ngắn) và ĐÀO SÂU (chu kỳ mua theo tệp B2B/B2C, cách đo pha sau bằng tỉ lệ mua lại 60 ngày); (2) đưa số minh hoạ CPM theo tuần để Q4 thành câu tính; (3) thêm câu L4 đọc bảng CPM/CTR theo tuần để chọn ngày bắt đầu pha trước; (4) nêu chỉ số kiểm pha trước (tỉ lệ xem hết, kích cỡ tệp nhắm lại) với ngưỡng minh hoạ."
+    },
+    {
+      "id": "B:kn10-04",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L3", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ ↔ Q3/Q4", "quote": "5% đặt thử là 1.000 người, 60% đến thật là 600, 25% mua gói 3 tháng là 150", "issue": "Ví dụ dùng chuỗi 5% → 60% → 25% nhưng Q3 và Q4 dùng 10% → 70% → 25% cho cùng phòng gym; không sai nhưng người học dễ nhầm hai bộ số.", "fix": "Dùng một bộ tỉ lệ cho cả ví dụ và câu hỏi, hoặc ghi rõ Q3 là 'đợt khác'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Chuỗi cho gấp 2,5 lần người, nhưng gói 3 tháng rẻ hơn, nên so doanh thu phải nhân với giá từng gói", "issue": "Bỏ dở phép so doanh thu: 60 gói 12 tháng × 9 triệu = 540 triệu, còn 150 gói 3 tháng không có giá nên không kết luận được chuỗi có lợi hơn hay không.", "fix": "Cho giá gói 3 tháng (ví dụ 2,7 triệu, số minh hoạ): 150 × 2,7 = 405 triệu < 540 triệu, rồi nói chuỗi thắng chỉ khi tỉ lệ nâng lên 12 tháng ở bước 5 đủ cao — và biến điều đó thành câu hỏi." },
+        { "sev": "P2", "where": "Q7", "quote": "Câu nào mô tả đúng nhất cách viết lời mời theo chuỗi điểm chạm?", "issue": "Nhận lại ý 'mang theo' (L2).", "fix": "Thay bằng câu L5 dùng số ở ví dụ: 60 gói 12 tháng (9 triệu) vs 150 gói 3 tháng (giá X) + tỉ lệ nâng cấp Y — chọn chuỗi nào và biện hộ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 8.000 × 10% × 70% × 25% = 140 ✓; bỏ bước đến thật = 200 ✓; 560 = quên bước cuối ✓. Ví dụ: 20.000 × 0,3% = 60; 20.000 × 5% × 60% × 25% = 150; 150/60 = 2,5 ✓." },
+      "claims": [
+        { "claim": "Tỉ lệ đăng ký dưới 0,3%; chuỗi 5%/60%/25%", "status": "illustrative-labelled", "note": "Bài ghi '(số minh hoạ)'." },
+        { "claim": "Tháng 1 thường là lúc nhiều người muốn bắt đầu tập (Q1 lời giải d)", "status": "unverified", "note": "Nhận định mùa vụ ngành gym, không nguồn." },
+        { "claim": "Zalo OA chỉ nhắn được người đã kết nối (Q5 lời giải a)", "status": "unverified", "note": "Khẳng định về cơ chế nền tảng Zalo OA, không nguồn." }
+      ],
+      "strengths": "Q4 là câu chẩn đoán thật từ bảng hai tháng (sửa bước tụt, không sửa bước thấp nhất) — đúng tư duy nghề; ví dụ có chuỗi số tự khớp và được gắn nhãn minh hoạ.",
+      "upgrade": "Để đạt ≥85: (1) hoàn tất phép so doanh thu bằng giá gói 3 tháng và tỉ lệ nâng cấp, biến thành câu L5; (2) thống nhất bộ tỉ lệ giữa ví dụ và câu hỏi; (3) thêm PHẢN VÍ DỤ (món rẻ, mua theo thói quen: chuỗi 1–2 bước, xin thử miễn phí là thừa) và ĐÀO SÂU (chi phí mỗi bước, điểm rơi do ma sát vận hành như nhắc lịch); (4) nêu cỡ mẫu: 10% của 8.000 là 800 người — đủ để tin tỉ lệ tụt từ 70% xuống 45%, nhưng nếu chỉ 80 người thì chưa."
+    },
+    {
+      "id": "B:kn10-05",
+      "scores": { "accuracy": 10, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L4", "L3", "L2", "L4", "L2", "L3"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM, Q3", "quote": "Meta thường cần khoảng 50 sự kiện tối ưu mỗi 7 ngày cho mỗi nhóm quảng cáo thì hệ thống mới học xong", "issue": "Ngưỡng của nền tảng (giai đoạn học của Meta) nêu như sự thật, là kiến thức 'fast' nhưng bài không có trường src, không ngày kiểm, không câu 'nếu màn hình khác, tin trang chính thức'. Đề Q3 lặp lại ngưỡng này như dữ kiện.", "fix": "Thêm src tới trang Meta Business Help về giai đoạn học (learning phase) với ngày kiểm; sửa đề Q3 thành 'Giả định nền tảng cần khoảng 50 sự kiện/tuần (kiểm trang chính thức)'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tối ưu theo đơn cần 50 đơn × 150.000đ = 7,5 triệu mỗi tuần", "issue": "Con số 150.000đ (chi phí mỗi đơn) xuất hiện không giải thích; chỉ suy ra được từ 3.000đ ÷ 2% ở Q3, nhưng ví dụ không nói.", "fix": "Viết rõ: 'với 3.000đ mỗi nhấp và 2% nhấp ra đơn, mỗi đơn tốn 150.000đ (giả định)'." },
+        { "sev": "P2", "where": "Q4, Q6", "quote": "Vì sao hãng 5 tỷ vẫn dành 200 triệu cho kênh sở hữu dù đã có TVC lớn?", "issue": "Hai câu nhận lại ý bài (L2); phương án c của Q4 ('quy định bắt buộc của nền tảng') là nhiễu vô lý, đoán được.", "fix": "Thay Q4 bằng câu tính: với 20 triệu cho quán cà phê (như phần Áp dụng), 1.500đ/nhấp, 3% nhắn tin ra đơn — kênh Facebook tối ưu theo đơn có đủ ngưỡng không, nên tối ưu theo gì?" }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50 ÷ 2% = 2.500 nhấp × 3.000đ = 7,5 triệu ✓; 50 × 3.000 = 150.000đ = 0,15 triệu ✓; 0,003 triệu = 50 × 2% × 3.000 ✓. Ví dụ: 50 × 150.000 = 7,5 triệu ✓; 50 triệu ÷ 13 tuần ≈ 3,85 triệu ✓." },
+      "claims": [
+        { "claim": "Meta cần khoảng 50 sự kiện tối ưu mỗi 7 ngày cho mỗi nhóm quảng cáo để học xong", "status": "unverified", "note": "Khớp hướng dẫn công khai của Meta về giai đoạn học theo hiểu biết chung, nhưng bài không có src; nội dung fast, cần ngày kiểm." },
+        { "claim": "Nhóm quảng cáo báo 'học hạn chế' (Q5)", "status": "unverified", "note": "Thuật ngữ trạng thái của Meta Ads Manager (learning limited); không nguồn." },
+        { "claim": "62% ở hoặc đi ngang trong 2 km, 25% thấy trên Google Maps, 13% bạn giới thiệu", "status": "illustrative-labelled", "note": "Bài ghi '(minh hoạ)'." },
+        { "claim": "Hãng 5 tỷ đủ ngưỡng cho TVC 2 tỷ, KOL 1 tỷ, siêu thị 1,2 tỷ, sàn 600 triệu, kênh sở hữu 200 triệu", "status": "illustrative-unlabelled", "note": "Phân bổ không gắn nhãn minh hoạ, không nói vì sao từng mức là 'đủ ngưỡng'." }
+      ],
+      "strengths": "Phép tính ngược 'tiền tối thiểu = kết quả cần ÷ tỉ lệ chuyển đổi × giá mỗi nhấp' cho người học một quyết định cụ thể (đổi sự kiện tối ưu hoặc bỏ kênh); Q5 là tình huống thật với đánh đổi được nêu trong lời giải.",
+      "upgrade": "Để đạt ≥85: (1) thêm src Meta (learning phase) kèm ngày kiểm và câu 'nếu màn hình khác, tin trang chính thức'; (2) giải thích 150.000đ; (3) thêm PHẢN VÍ DỤ (sản phẩm giá cao, ít đơn: tối ưu theo sự kiện nhẹ dễ kéo khách không mua — nêu cách kiểm bằng số đơn thật sau 2 tuần) và ĐÀO SÂU (đánh đổi khi đổi sự kiện tối ưu: nhiều sự kiện nhưng chất lượng tệp giảm); (4) gắn nhãn minh hoạ cho phân bổ 5 tỷ và nêu ngưỡng tối thiểu của TVC (chi phí sản xuất + phát sóng) là số minh hoạ; (5) thay Q4/Q6 bằng câu tính và câu đọc dữ liệu."
+    },
+    {
+      "id": "B:kn10-06",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 13, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L2", "L3", "L2", "L3", "L2", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "TikTok cần video dọc, móc câu trong 2 giây đầu", "issue": "Ngưỡng '2 giây', 'tỉ lệ xem qua 3 giây' nêu như chuẩn nghề nhưng không nguồn, không nhãn; là kiến thức theo nền tảng.", "fix": "Ghi '(ngưỡng thực hành phổ biến, kiểm báo cáo của tài khoản bạn)' hoặc thêm src TikTok for Business." },
+        { "sev": "P2", "where": "Q7", "quote": "Tiêu đề email nào vừa đúng định dạng email vừa đúng ý \"Bụng nhẹ cả ngày\"?", "issue": "Phương án a cũng đúng ý và là tiêu đề email hợp lệ; chọn b là sở thích biên tập, không có số (tỉ lệ mở) để phân định. Hai phương án bênh được ở mức độ khác nhau.", "fix": "Đổi thành câu đọc kết quả A/B: cho tỉ lệ mở và tỉ lệ bấm của hai tiêu đề (số minh hoạ), hỏi chọn tiêu đề nào và cần kiểm gì thêm." },
+        { "sev": "P2", "where": "Q3, Q5", "quote": "Điều gì phải GIỐNG NHAU giữa các định dạng của cùng một chiến dịch?", "issue": "Hai câu nhận lại ý bài (L2); phương án đúng Q3 dài nhất và liệt kê đủ ba lớp.", "fix": "Thay Q3 bằng câu chẩn đoán: cho mô tả banner và video có cùng màu nhưng khác thông điệp, hỏi lớp nào bị đổi sai." },
+        { "sev": "P2", "where": "Q4", "quote": "Ngân sách sản xuất 60 triệu, mỗi ấn phẩm 2,5 triệu", "issue": "Phép tính đúng nhưng tách rời bài: không nói định dạng 'thắng' được chọn bằng chỉ số nào; không có số đo định dạng trong cả bài.", "fix": "Thêm bước: 'định dạng thắng là định dạng có tỉ lệ xem qua 3 giây cao hơn, ví dụ 38% vs 24% (số minh hoạ)'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 4 × 2 × 2,5 = 20 triệu; (60 − 20) ÷ 2,5 = 16 ✓; 60 ÷ 2,5 = 24 ✓." },
+      "claims": [
+        { "claim": "TikTok cần móc câu trong 2 giây đầu; chỉ số kiểm là tỉ lệ xem qua 3 giây", "status": "unverified", "note": "Thực hành phổ biến, không nguồn, không nhãn." },
+        { "claim": "Poster kệ cần đọc từ xa 2 mét", "status": "unverified", "note": "Quy ước trưng bày, không nguồn; chấp nhận được như kinh nghiệm nghề nếu gắn nhãn." },
+        { "claim": "Nền tảng không chặn quảng cáo của hãng lớn (Q1 lời giải a)", "status": "unverified", "note": "Khẳng định về chính sách TikTok, không nguồn." }
+      ],
+      "strengths": "Tách ba lớp ý tưởng – giọng – hình dạng rõ ràng; phản ví dụ (quảng cáo giữa hiệp trên màn hình lớn) đổi hẳn kết luận và nêu dấu hiệu nhận ra.",
+      "upgrade": "Để đạt ≥85: (1) đưa số đo cho từng định dạng vào ví dụ (tỉ lệ xem qua 3 giây, CTR banner, tỉ lệ mở) với nhãn minh hoạ, rồi dùng chúng ở Q4 và Q7; (2) gắn nhãn hoặc src cho ngưỡng 2 giây/3 giây; (3) thay Q3/Q5 bằng câu chẩn đoán từ mô tả ấn phẩm; (4) thêm câu L5: ngân sách sản xuất chỉ đủ 2 trong 4 định dạng riêng — chọn định dạng nào theo tiền chạy của từng kênh và biện hộ."
+    },
+    {
+      "id": "B:kn10-07",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 14, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L5", "L2", "L3", "L2", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4 wrong", "quote": "[16,\"NHAM_DIEM_PHAN_TRAM\"]", "issue": "16 là chi phí duyệt tính bằng triệu đồng (dừng ở bước giữa), không phải nhầm điểm phần trăm với phần trăm.", "fix": "Đổi nhãn thành DUNG_O_BUOC_GIUA hoặc SAI_DON_VI." },
+        { "sev": "P2", "where": "Q3, Q5", "quote": "Vì sao cần điểm duyệt chéo ở bước kịch bản chứ không đợi bản dựng hoàn chỉnh?", "issue": "Hai câu nhận lại ý bài (L2); nhiễu Q3 (bảng giá, danh bạ, lịch sử 5 năm) vô lý, đoán được.", "fix": "Thay Q5 bằng câu tính kỳ vọng chi phí: duyệt tốn 16 triệu, quay lại 80 triệu, xác suất lệch ước 10% hay 35% — khi nào duyệt chéo không đáng?" },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tốn thêm 4 buổi họp, nhưng tránh được chi phí quay lại.", "issue": "Ví dụ không có số; con số 16 triệu và 80 triệu chỉ xuất hiện ở Q4 và không gắn nhãn minh hoạ trong ví dụ.", "fix": "Đưa 16 triệu/80 triệu (số minh hoạ) vào ví dụ và nối với ĐÀO SÂU 'chi phí điều phối cân với rủi ro'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 4 × 5 × 2 = 40 giờ × 400.000 = 16 triệu; 16 ÷ 80 = 20% ✓; 80 ÷ 16 = 500% ✓. Lời giải nêu đúng điều kiện kỳ vọng (xác suất lệch > 20%)." },
+      "claims": [
+        { "claim": "Media thường được tính theo mức chi, sáng tạo theo ý tưởng", "status": "unverified", "note": "Mô tả mô hình thù lao agency phổ biến; không nguồn nhưng là nhận định nghề hợp lý." },
+        { "claim": "Giá công trung bình 400.000 đồng một giờ; quay lại tốn 80 triệu", "status": "illustrative-labelled", "note": "Đề Q4 ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Q7 là câu đánh đổi thật (ai quyết đổi tỉ lệ ngân sách khi CPA thấp của kênh chốt nhờ KOL làm nóng) với lời giải nêu đúng xung đột lợi ích của agency media; phản ví dụ (xả hàng ngắn ngày, brief một trang) có dấu hiệu nhận ra rõ.",
+      "upgrade": "Để đạt ≥85: (1) đưa chi phí duyệt/quay lại vào ví dụ với nhãn minh hoạ và nối với kỳ vọng chi phí; (2) sửa nhãn wrong Q4; (3) thay Q3/Q5 bằng câu tính kỳ vọng và câu chẩn đoán (đọc hai bản tóm tắt brief của hai agency, chỉ ra chỗ lệch); (4) thêm mẫu brief gốc 2 trang dạng danh mục 6 mục để người học dùng ngay."
+    },
+    {
+      "id": "B:kn10-08",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L4", "L5", "L3", "L4", "L3", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1", "quote": "Nhiều đơn bị hoàn nên số xuất kho giảm so với số đặt ban đầu", "issue": "Phương án b là nguyên nhân có thật và lời giải phải thừa nhận 'có thể góp một phần'; đề hỏi 'vì sao' chứ không hỏi 'nguyên nhân khả dĩ nhất', nên b bênh được một phần.", "fix": "Sửa đề thành 'Nguyên nhân khả dĩ nhất của phần chênh 2.500 đơn là gì?' hoặc thêm dữ kiện 'tỉ lệ hoàn kỳ này 3% như mọi kỳ'." },
+        { "sev": "P2", "where": "KHÁI NIỆM/VÍ DỤ", "quote": "kỳ liền trước không chạy quảng cáo mà vẫn xuất khoảng 5.000 đơn nền (số minh hoạ)", "issue": "Đơn nền lấy từ một kỳ duy nhất; bài chưa nói độ nhiễu của đơn nền (kỳ trước có thể cao/thấp bất thường) nên 'đơn tăng thêm = 2.000' được nêu với độ chắc chắn quá cao.", "fix": "Thêm một câu: 'đơn nền dao động, ví dụ 4.600–5.400 trong 3 kỳ gần nhất, nên đơn tăng thêm nằm khoảng 1.600–2.400 và chi phí mỗi đơn tăng thêm 0,8–1,25 triệu (số minh hoạ)'." },
+        { "sev": "P2", "where": "Q6", "quote": "Chỉ số kênh vẫn cần dù đã có chỉ số chung. Vì sao?", "issue": "Nhận lại ý bài (L2); nhiễu c 'nền tảng yêu cầu' vô lý.", "fix": "Thay bằng câu đọc bảng: cho báo cáo kênh tuần 1–2 (độ phủ YouTube giảm, ROAS Shopee ổn), hỏi kênh nào cần chỉnh ngay." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 7.000 − 5.000 = 2.000; 2 tỷ ÷ 2.000 = 1.000 nghìn ✓; 2 tỷ ÷ 7.000 ≈ 286 nghìn ✓; ÷ 5.000 = 400 ✓. Ví dụ: 300.000 × 40% = 120.000 ✓. Q7: 27 − 18 = 9 điểm; 9 ÷ 18 = 50% ✓." },
+      "claims": [
+        { "claim": "TikTok 40 triệu lượt xem, KOL 2.000 đơn, Shopee 6.000 đơn, Google 1.500 đơn; kho xuất 7.000; đơn nền 5.000", "status": "illustrative-labelled", "note": "Bài ghi '(số minh hoạ)' cho đơn nền; các số báo cáo kênh nằm trong tình huống giả định." },
+        { "claim": "Mỗi nền tảng tự nhận công cho cùng một đơn", "status": "unverified", "note": "Mô tả đúng cơ chế attribution theo nền tảng theo hiểu biết chung; không nguồn." }
+      ],
+      "strengths": "Bài hiếm hoi dạy đúng đơn tăng thêm so với đơn nền và so chi phí với lãi gộp thay vì doanh thu; Q2 là câu quyết định báo cáo với lời giải chỉ ra hai lỗi chồng nhau; Q7 phân biệt điểm phần trăm với phần trăm.",
+      "upgrade": "Để đạt ≥85: (1) nêu độ nhiễu của đơn nền và cho khoảng chi phí mỗi đơn tăng thêm; (2) sửa đề Q1; (3) thêm PHẢN VÍ DỤ (ngành mùa vụ mạnh: kỳ nền phải lấy cùng mùa năm trước và chỉnh tăng trưởng nền) và ĐÀO SÂU (thử nghiệm địa lý/tắt-mở kênh như cách ước đơn tăng thêm chắc hơn); (4) thay Q6 bằng câu đọc báo cáo kênh."
+    },
+    {
+      "id": "B:kn10-09",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L4", "L5", "L2", "L3", "L3", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ ↔ Q2", "quote": "Bốn lỗi sửa trong 6 giờ (số minh hoạ), còn dư thời gian thử tải. Chờ đến tối trước ngày chạy thì bốn lỗi chiếm hết 8 tiếng", "issue": "Ví dụ nói 4 lỗi sửa trong 6 giờ, câu sau nói 4 lỗi chiếm hết 8 tiếng, còn Q2 nói mỗi lỗi 3 tiếng (4 lỗi = 12 tiếng). Ba mốc thời gian cho cùng việc không khớp nhau.", "fix": "Thống nhất: mỗi lỗi ~3 tiếng khi phải chờ bên khác ban đêm, ~1,5 tiếng khi làm giờ hành chính 48 giờ trước; nêu rõ vì sao khác." },
+        { "sev": "P2", "where": "Q3, Q6", "quote": "Vì sao nên rà soát xong khoảng 48 giờ trước giờ chạy?", "issue": "Hai câu nhận lại ý bài (L2); nhiễu Q3 b, c yếu.", "fix": "Thay Q6 bằng câu tính: lỗi cần bên sàn tạo mã, thời gian phản hồi 24–36 giờ (số minh hoạ) — rà soát muộn nhất lúc nào." },
+        { "sev": "P2", "where": "Q7", "quote": "Dòng nào NÊN có trong danh sách rà soát nhưng hay bị quên, vì không ai nhận phần của mình?", "issue": "Đáp án dựa trên nhận định 'hay bị quên' không có dữ liệu; phương án đúng dài nhất và chứa hai ý.", "fix": "Đổi đề thành 'Dòng nào nằm giữa hai nhóm, không thuộc kênh nào?' để tiêu chí khách quan." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 9.000 ÷ 60 = 150/phút; (150 − 100) ÷ 100 = 50% ✓; 50 ÷ 150 = 33,3% ✓. Q1 (mcq có số): 8.000 × 4% × 70% = 224; 1.500 × 30% = 450; 2.000 × 5% = 100 ✓; trần 320 ✓." },
+      "claims": [
+        { "claim": "link bio 8.000 lượt, 4% ra đơn, 70% không tìm lại; mã KOL 1.500 khách, 30%; 2.000 khách phân vân, 5% bỏ", "status": "illustrative-labelled", "note": "Đề Q1 ghi 'theo số minh hoạ'." },
+        { "claim": "Thời gian duyệt quảng cáo của nền tảng khác nhau; 48 giờ không phải quy định (Q6 lời giải a)", "status": "unverified", "note": "Khẳng định về quy trình duyệt nền tảng, không nguồn, nhưng được nêu như không phải quy định — thận trọng." }
+      ],
+      "strengths": "Q1–Q2 tạo thành chuỗi ước lượng → quyết định dưới ràng buộc thời gian (8 tiếng, 2 lỗi) với số minh hoạ rõ; ba mức lỗi (chặn mua, sai niềm tin, mất đo lường) là khung dùng được ngay.",
+      "upgrade": "Để đạt ≥85: (1) thống nhất thời gian sửa lỗi giữa ví dụ và Q2; (2) thêm PHẢN VÍ DỤ (chiến dịch nhỏ một kênh: danh sách 20 dòng là thừa, cần 5 dòng) và ĐÀO SÂU (vì sao 'mất đo lường' đáng xếp cao dù không mất đơn ngay — mất khả năng tối ưu tuần sau); (3) đưa mẫu danh sách 20 dòng rút gọn (5 nhóm × 4 dòng) vào bài; (4) thay Q3/Q6 bằng câu tính và câu chẩn đoán."
+    },
+    {
+      "id": "B:kn10-10",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 13, "examples": 10, "pedagogy": 7, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L2", "L3", "L2"],
+      "bloom_max": "L3",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Đi bước như vậy, 14 ngày TikTok mới nhận khoảng 126 triệu.", "issue": "126 triệu chỉ tái lập được nếu tăng 30% ngay ngày 1 và tính cả 4 triệu/ngày vốn đã chạy (tổng chi 126,2 triệu; phần tăng thêm thực sự nhận từ 400 triệu chỉ ~70 triệu; nếu tăng từ ngày 4 thì tổng là ~97 triệu). Bài không nêu giả định nào.", "fix": "Ghi rõ: 'tăng lần đầu ngay ngày 1, tổng chi TikTok 14 ngày ≈ 126 triệu, trong đó ≈ 70 triệu là phần chuyển từ Facebook'." },
+        { "sev": "P2", "where": "Q2 lời giải d", "quote": "Tài khoản mới dùng lại trang, thẻ và thiết bị cũ dễ bị coi là lách chính sách và kéo thêm tài khoản liên quan bị khoá.", "issue": "Khẳng định về cách Meta xử lý tài khoản liên quan, nêu như sự thật, không nguồn.", "fix": "Thêm src Meta Advertising Standards (circumventing systems) với ngày kiểm, hoặc viết 'theo chính sách của nền tảng, kiểm trang chính thức'." },
+        { "sev": "P2", "where": "Q4, Q5, Q7", "quote": "Khi chuyển tiền sang kênh dự phòng, điều gì KHÔNG nên đổi?", "issue": "Ba câu nhận lại ý bài (L2); Q5 có nhiễu 'nền tảng giảm giá cho tài khoản chi tiêu trước' vô lý.", "fix": "Thay Q7 bằng câu đọc dữ liệu: ngày 1–3 sau khi tăng 30%, CPA TikTok từ 180.000 lên 260.000đ (số minh hoạ) — tiếp tục tăng, giữ, hay lùi? Thay Q4 bằng câu viết dấu hiệu kích hoạt bằng số." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Không dồn hết tiền sang một kênh chưa thử: nó cần thời gian học", "issue": "Không nói gì về tiền chưa tiêu được (400 triệu − ~70 triệu) sẽ đi đâu ngoài 'giữ lại chờ', tức quyết định tài chính chính bị bỏ ngỏ.", "fix": "Thêm bảng phân bổ 400 triệu: TikTok ~70, tìm kiếm thương hiệu X, Zalo OA Y, giữ lại Z (số minh hoạ) với lý do từng dòng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 4 × 1,3 = 5,2; × 1,3 = 6,76 ✓; 4 × 1,6 = 6,4 ✓. Ví dụ 126 triệu: tái lập được = 126,2 triệu chỉ với giả định tăng ngay ngày 1 và tính cả mức nền 4 triệu/ngày (xem defect)." },
+      "claims": [
+        { "claim": "Quy tắc tăng không quá 30% mỗi 3 ngày", "status": "illustrative-labelled", "note": "Bài ghi '(ngưỡng minh hoạ, mỗi nền tảng một khác)'." },
+        { "claim": "Mở tài khoản mới trên cùng trang dễ bị coi là lách chính sách và kéo tài khoản liên quan bị khoá", "status": "unverified", "note": "Khẳng định về chính sách Meta, không nguồn." },
+        { "claim": "Nền tảng không giảm giá theo mức chi tiêu trước đó; giá do đấu giá (Q5 lời giải a)", "status": "unverified", "note": "Đúng theo cơ chế đấu giá phổ biến, không nguồn." },
+        { "claim": "Bơm ngân sách đột ngột vào kênh mới thường làm chi phí tăng (Q1)", "status": "unverified", "note": "Kinh nghiệm nghề hợp lý về giai đoạn học; không nguồn." }
+      ],
+      "strengths": "Cấu trúc phương án dự phòng (dấu hiệu kích hoạt – kênh thay – phần tiền – người quyết) rõ và dùng được; nhắc đúng rủi ro mất tệp nhắm lại và dữ liệu đo khi mất tài khoản.",
+      "upgrade": "Để đạt ≥85: (1) nêu giả định cho con số 126 triệu và lập bảng phân bổ 400 triệu còn lại; (2) gắn src hoặc nhãn cho khẳng định chính sách Meta; (3) thêm PHẢN VÍ DỤ (kênh phụ 10% ngân sách bị khoá: không kích hoạt dự phòng, chỉ phân bổ lại) và ĐÀO SÂU (chi phí duy trì kênh dự phòng 4 triệu/ngày × 3 tuần = 84 triệu như 'phí bảo hiểm', khi nào không đáng); (4) thay ba câu L2 bằng câu đọc CPA theo ngày và câu viết dấu hiệu kích hoạt bằng số."
+    }
+  ],
+  "module_notes": {
+    "progression": "Tiến trình hợp lý: ý tưởng xuyên kênh (01) → vai kênh (02) → lịch ba pha (03) → chuỗi điểm chạm (04) → số kênh theo ngân sách (05) → định dạng theo kênh (06) → điều phối agency (07) → đo chung/đo kênh (08) → rà soát trước chạy (09) → dự phòng (10). Bài 04 (hành trình) nên đứng trước bài 02 (vai kênh theo hành trình) vì bài 02 đã dùng khái niệm hành trình chưa dạy. Các bài 01, 03, 04, 05, 08, 09, 10 thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU trong khi 02, 06, 07 có đủ — độ sâu không đồng đều trong module.",
+    "overlap": [
+      "Ý 'giữ ý tưởng, đổi hình dạng/đường đi' lặp ở 01 Q6, 05 Q6, 06 toàn bài, 07 Q2 và 10 Q7 — năm lần hỏi cùng một nhận lại.",
+      "Vai 'giữ khách' của Zalo OA/kênh sở hữu được hỏi ở 02 Q3, 04 Q5, 05 Q4 với cùng đáp án.",
+      "Ví dụ ngưỡng học của nền tảng xuất hiện ở 05 và 10 nhưng chỉ 10 gắn nhãn minh hoạ."
+    ],
+    "gaps": [
+      "Chưa có bài về reach, tần suất và cách đọc báo cáo độ phủ/tần suất (được nhắc ở 01 Q7 và 02 ĐÀO SÂU nhưng không dạy).",
+      "Chưa có bài về mô hình ghi công/đóng góp chéo (attribution) dù 08 nói nền tảng cùng nhận công — người học không biết đọc báo cáo đa chạm.",
+      "Chưa có bài về viết brief gốc (mẫu, mục bắt buộc) dù 07 coi brief là trụ cột.",
+      "Thiếu bài về kiểm tra tăng thêm bằng thử nghiệm (tắt/mở kênh theo vùng) để kết luận ở 08 chắc hơn một kỳ nền."
+    ],
+    "best_lesson": "B:kn10-08",
+    "weakest_lesson": "B:kn10-01"
+  }
+}

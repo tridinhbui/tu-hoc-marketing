@@ -1,0 +1,24 @@
+{
+ "mod": "kn12",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:kn12-01",
+   "where": "concept (nguồn)",
+   "status": "fixed",
+   "change": "Thêm src ba mục, st:'chua': Luật Quảng cáo 16/2012/QH13, Luật 75/2025/QH15 sửa đổi Luật Quảng cáo, Nghị định 342/2025/NĐ-CP — mỗi mục là trang tra cứu thuvienphapluat.vn theo số hiệu.",
+   "key_changed": false,
+   "note": "Số hiệu và ngày hiệu lực giữ nguyên như ghi chú đầu module; người học tự bấm kiểm văn bản gốc. Chưa mở toàn văn để xác nhận ngày hiệu lực."
+  },
+  {
+   "id": "B:kn12-01",
+   "where": "Q7 lời giải d + khái niệm vùng (2)",
+   "status": "fixed",
+   "change": "Bỏ câu ghi chú biên tập “theo các bản tóm tắt luật, chưa phải văn bản gốc”. Lời giải d mới: “Không phải mọi bài mỹ phẩm đều cần duyệt. Bài này chỉ mô tả thành phần, giá, cách dùng nên đi luồng thường; chỉ khi bài mỹ phẩm hứa công dụng mới hỏi pháp chế xem có cần thủ tục riêng.” Khái niệm vùng (2) thêm một câu cùng ý về bài mỹ phẩm.",
+   "key_changed": false,
+   "note": "Thủ tục quảng cáo mỹ phẩm (phiếu công bố, có cần xác nhận nội dung hay không) chưa đối chiếu được văn bản gốc, nên bài chọn lời dặn “hỏi pháp chế” cho bài mỹ phẩm có nêu công dụng, không khẳng định mỹ phẩm có hay không thuộc nhóm duyệt trước. Đáp án c giữ nguyên."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

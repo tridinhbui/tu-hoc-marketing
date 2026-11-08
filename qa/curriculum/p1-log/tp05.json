@@ -1,0 +1,3 @@
+{ "mod":"tp05", "fixed_at":"2026-11-07", "items":[
+  { "id":"B:tp05-02", "where":"example", "status":"fixed", "change":"Thêm 'so với cùng kỳ năm trước (số minh hoạ)' vào câu 35% → 48%, và thêm một câu caveat: phần tăng có thể chỉ do bớt phát mã, chưa chắc do thương hiệu mạnh hơn — cần đọc kèm chỉ số tìm tên hoặc nhắc tên để tách hai nguyên nhân.", "key_changed":false, "note":"Số 35% → 48% và 13.000 hoá đơn giữ nguyên nên Q3 không đổi; nhất quán với Q2 (đo bằng tỉ lệ mua giá gốc + lượt tìm tên) và Q7." }
+ ], "validator":"0 lỗi", "tests":"pass" }

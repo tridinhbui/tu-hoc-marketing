@@ -1,0 +1,72 @@
+{
+ "mod": "qc05",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:qc05-01",
+   "where": "Toàn bài",
+   "status": "fixed",
+   "change": "Thêm src Keyword Planner (search support.google.com/google-ads, st:chua) và Google Ads Transparency Center (adstransparency.google.com, st:chua); Đào sâu thêm câu “theo tài liệu Google tại ngày kiểm; nếu màn hình khác, tin trang chính thức”.",
+   "key_changed": false,
+   "note": ""
+  },
+  {
+   "id": "B:qc05-02",
+   "where": "Khái niệm và Q3",
+   "status": "fixed",
+   "change": "Mức MoMo 170.000đ ghi “theo trang phương thức thanh toán tại ngày kiểm, mức này có thể đổi”; Đào sâu thêm câu kiểm hoá đơn lần nạp đầu để biết VAT cộng ngoài hay trừ vào số nạp, số trong bài chỉ là giả định.",
+   "key_changed": false,
+   "note": "Đề Q3 vốn đã có “Giả định VAT 8% tính thêm trên tiền quảng cáo” từ bản gốc nên không sửa đề; ví dụ cũng đã có “đối chiếu cách tính trên hoá đơn thật”."
+  },
+  {
+   "id": "B:qc05-03",
+   "where": "Toàn bài",
+   "status": "fixed",
+   "change": "Thêm 4 src (st:chua): tạo hành động chuyển đổi bằng Google tag, cài đặt mạng chiến dịch Search, RSA (answer/7684791), Maximize conversions; Đào sâu thêm câu “Tên các mục cài đặt… theo tài liệu Google tại ngày kiểm; nếu màn hình khác, tin trang chính thức”.",
+   "key_changed": false,
+   "note": ""
+  },
+  {
+   "id": "B:qc05-04",
+   "where": "Tình huống, Đào sâu, Q5",
+   "status": "fixed",
+   "change": "Đào sâu viết lại: blog trong nguồn nói về quảng cáo tìm kiếm động (mốc 2/2027 theo trích đoạn); mốc 9/2026 cho khớp rộng cấp chiến dịch “mới thấy qua trích đoạn, chưa đọc trọn: coi là mốc cần kiểm trong thông báo của tài khoản”; đề Q5 thành “Giả sử chiến dịch khớp rộng của bạn được tự nâng cấp…”.",
+   "key_changed": false,
+   "note": "Tình huống vốn đã gán cho “Chủ cửa hàng còn đọc tin”, giữ nguyên. Nên có người đọc trọn blog để nâng src lên st:doc."
+  },
+  {
+   "id": "B:qc05-06",
+   "where": "Khái niệm và Q5",
+   "status": "needs-human",
+   "change": "Khái niệm: “Theo thông báo bài ghi nhận (chưa có trang trợ giúp bao được, cần kiểm), từ 6/2026…” + “Nếu màn hình khác, tin trang chính thức”; đề Q5 thành “Theo thông báo bài nêu (mốc 6/2026, cần kiểm trong tài khoản)…”; thêm src tra cứu tên chiến lược Target CPA/Target ROAS (search, st:chua).",
+   "key_changed": false,
+   "note": "Câu hỏi cho người thật: Google có thông báo chính thức đổi nhãn “Maximize conversions with a target CPA” thành “Target CPA” (và tương tự Target ROAS) từ 6/2026 không? Nếu không, thay Q5 bằng câu khác (ví dụ khi nào chuyển sang Target CPA)."
+  },
+  {
+   "id": "B:qc05-06",
+   "where": "Đào sâu",
+   "status": "fixed",
+   "change": "“nay bản cho web và cho lead là một công tắc” → “theo trang trợ giúp Enhanced conversions tại ngày kiểm, bản cho web và cho lead nay bật chung một công tắc (kiểm lại trong phần Cài đặt chuyển đổi)”.",
+   "key_changed": false,
+   "note": ""
+  },
+  {
+   "id": "B:qc05-07",
+   "where": "Toàn bài",
+   "status": "fixed",
+   "change": "Thêm src tỉ lệ hiển thị và trạng thái bị giới hạn ngân sách (search, st:chua); Đào sâu thêm câu “Tên chỉ số và trạng thái… theo tài liệu Google tại ngày kiểm; nếu màn hình khác, tin trang chính thức”.",
+   "key_changed": false,
+   "note": ""
+  },
+  {
+   "id": "B:qc05-08",
+   "where": "Đào sâu",
+   "status": "fixed",
+   "change": "“Từ 9/2026 chiến dịch khớp rộng cấp chiến dịch được tự nâng cấp lên AI Max” → “Theo thông báo của Google (blog trong nguồn, mới thấy qua trích đoạn; kiểm thông báo trong tài khoản), chiến dịch khớp rộng cấp chiến dịch có thể được tự nâng cấp lên AI Max từ 9/2026”.",
+   "key_changed": false,
+   "note": ""
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

@@ -1,0 +1,27 @@
+{
+ "mod": "ob07",
+ "lessons": [
+  {
+   "id": "B:ob07-03",
+   "title": "Cửa hàng treo nhiều poster bán chạy hơn — có nên in thêm poster?",
+   "total": 67,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "situation ↔ Q4",
+     "quote": "Trưởng nhóm đề xuất in 5.000 poster phát cho mọi tiệm, chi phí 150 triệu đồng. … Với 5.000 tiệm, lãi gộp tăng thêm là bao nhiêu",
+     "issue": "Tình huống nói 5.000 poster (dữ liệu từ 200 tiệm, tổng số tiệm không nêu); ví dụ và Q4 biến thành 5.000 tiệm. Số poster và số tiệm bị đánh đồng, nên phép nhân 30 × 5.000 đứng trên một dữ kiện không có trong đề.",
+     "fix": "Ghi rõ trong tình huống: 'khu vực có 5.000 tiệm, mỗi tiệm nhận một poster' hoặc đổi Q4 về đúng số tiệm."
+    },
+    {
+     "sev": "P1",
+     "where": "example",
+     "quote": "chênh 3%, không phải 40% … Mỗi nhóm chỉ 50 tiệm nên nên chạy thêm một vòng thử rộng hơn trước khi in hết.",
+     "issue": "Toàn bộ phép tính 3.000 triệu lãi dựa trên chênh 3% với 50 tiệm mỗi nhóm, nhưng bài không nói chênh này có thể hoàn toàn là nhiễu (doanh số tiệm dao động vài phần trăm là thường). Thiếu giả định này thì kết luận 'poster vẫn có tác dụng' có thể sai dấu.",
+     "fix": "Thêm: 'Với 50 tiệm/nhóm và doanh số từng tiệm dao động ±10%, chênh 3% chưa phân biệt được với nhiễu; cần nhóm lớn hơn (ước vài trăm tiệm) hoặc đo trước–sau trên cùng tiệm.' Và nêu đây là lý do thật của câu 'chạy thêm một vòng'."
+    }
+   ],
+   "upgrade": "Sửa nhất quán 5.000 poster/5.000 tiệm; đổi số thùng về cỡ thật; thêm một đoạn về nhiễu và cỡ mẫu (vì sao 50 tiệm/nhóm chưa đủ cho chênh 3%, đề xuất đo trước–sau trên cùng tiệm để giảm phương sai); viết phản ví dụ (khi tương quan đủ dùng) và đào sâu (chi phí của thử nghiệm so với chi phí quyết định sai); thêm bảng 2×2 nhóm × trước/sau."
+  }
+ ]
+}

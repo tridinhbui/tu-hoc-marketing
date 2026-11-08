@@ -1,0 +1,20 @@
+{
+ "mod": "kh11",
+ "lessons": [
+  {
+   "id": "B:kh11-02",
+   "title": "Phòng gym chia hội viên theo tuổi hay theo cách họ tập?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q2 lời giải / Ví dụ",
+     "quote": "Nhóm này rời đi vì không giữ được thói quen; việc cần làm là giúp họ quay lại phòng tập.",
+     "issue": "Chênh 40 điểm % giữa hai nhóm là tương quan (người tập đều gia hạn nhiều), bài nói thẳng thành nhân quả và kê giải pháp; không nêu khả năng ngược (người đã định gia hạn nên mới tập đều) hay biến ẩn (nhà gần).",
+     "fix": "Thêm một câu trong Ví dụ: \"đây là tương quan; thử nhắc tin cho 100 người thất thường, so gia hạn với 100 người không nhắc\" — giống cách B:gt01-04 Q4 đã làm."
+    }
+   ],
+   "upgrade": "Thêm câu cảnh báo tương quan/nhân quả và một phép thử nhỏ có đối chứng; thêm phản ví dụ nhân khẩu học là cơ sở chính; thêm src Kotler & Keller; đổi Q5 (L2) thành câu đọc bảng: cho 4 nhóm với tỉ lệ gia hạn và quy mô, hỏi nhóm nào đáng chăm trước tính theo số người cứu được."
+  }
+ ]
+}

@@ -1,0 +1,170 @@
+{
+  "mod": "kh07",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kh07-01",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 13, "examples": 7, "pedagogy": 7, "assessment": 8, "data": 5, "clarity": 5 },
+      "total": 69,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L4", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Tình huống", "quote": "sau hai tuần mẫu B có tỉ lệ để lại số điện thoại cao hơn rõ rệt", "issue": "Bài về đóng khung dựa trên một kết quả A/B nhưng không cho con số nào (tỉ lệ A, tỉ lệ B, số lượt hiển thị); người học không thể đánh giá 'rõ rệt' là bao nhiêu hay có nhiễu không. Chiều 'đọc số' gần như trống: phép tính duy nhất là suy ra 300.000đ.", "fix": "Thêm số minh hoạ: 'A: 2,1% trên 20.000 lượt; B: 3,0% trên 20.000 lượt' và một câu về việc chênh 0,9 điểm trên 20.000 lượt có đủ chắc không." },
+        { "sev": "P2", "where": "Q7", "quote": "\"Gói cũ đang chậm hơn hàng xóm 3 lần\"", "issue": "Tiêu đề được chọn là 'dễ thắng hơn' nhưng tự nó là khẳng định không kiểm chứng được (hàng xóm nào, đo ở đâu) — trái với 'Lỗi hay gặp: thổi phồng con số mất để doạ'. Lời giải không nhắc rủi ro này.", "fix": "Đổi tiêu đề (2) thành khẳng định kiểm được: 'Gói cũ của bạn: 100Mbps — đang trả cùng giá với gói 300Mbps' hoặc thêm vào lời giải c: 'với điều kiện con số so sánh có thật'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Hoá đơn điện trung bình của khách mục tiêu 1.000.000đ/tháng, máy lạnh chiếm khoảng 60%, inverter giảm khoảng 50% phần đó", "issue": "Ba giả định (hoá đơn, tỉ trọng máy lạnh, mức tiết kiệm inverter) không gắn nhãn minh hoạ và không nguồn; 'inverter giảm 50%' là con số kỹ thuật dễ bị người học dùng lại như sự thật.", "fix": "Gắn nhãn 'giả định minh hoạ; mức tiết kiệm thật tuỳ máy và cách dùng' hoặc thêm src." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.200.000 × 60% = 720.000; × 40% = 288.000/tháng; × 12 = 3.456.000 ✓ (tol 1.000). Sai 5.760.000 = bỏ bước 60% ✓ (nhãn SAI_MAU_SO chưa khớp, là bỏ bước); 288.000 là chưa nhân 12 ✓. Ví dụ: 1.000.000 × 60% × 50% = 300.000 ✓; × 12 = 3.600.000 ✓." },
+      "claims": [
+        { "claim": "Nỗi đau khi mất nặng gần gấp đôi niềm vui khi được (Kahneman – Tversky)", "status": "unverified", "note": "Không src; bài có hedge rằng mức này đang bị tranh luận." },
+        { "claim": "Gal – Rucker (2018) thấy hiệu ứng nhỏ hoặc không có ở khoản tiền nhỏ", "status": "unverified", "note": "Tên và năm khớp với tài liệu tôi biết (Gal & Rucker 2018, J. Consumer Psychology) nhưng bài không có src." },
+        { "claim": "Inverter giảm khoảng 50% điện máy lạnh; máy lạnh chiếm 60% hoá đơn", "status": "illustrative-unlabelled", "note": "Con số kỹ thuật nêu không nguồn." }
+      ],
+      "strengths": "Nêu điều kiện áp dụng (khung mất khi khách đang bám trạng thái quen; khung được khi sản phẩm mới) và tự hedge về mức 'gấp đôi' đang bị tranh luận — đúng chuẩn chiều 1; Q4 (khung mất không thao túng) và Q5 (tiền đã trong ví) là câu phân biệt tinh.",
+      "upgrade": "(1) Thêm con số A/B và câu về độ chắc. (2) Gắn nhãn/nguồn cho ba giả định kỹ thuật và thêm src cho Kahneman–Tversky, Gal–Rucker (freshness periodic). (3) Sửa Q7 tiêu đề (2). (4) Thêm phản ví dụ bằng số: khung mất với khách chưa có máy — tỉ lệ để lại số thấp hơn khung được. (5) Thêm đào sâu: mối liên hệ với dark pattern (kh07-07) — ranh giới giữa khung mất có thật và doạ."
+    },
+    {
+      "id": "B:kh07-02",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 13, "examples": 9, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 5 },
+      "total": 73,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L4", "L5", "L2"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Tình huống ↔ Ví dụ", "quote": "số khách chọn gói 12 tháng tăng gần gấp đôi", "issue": "Ví dụ cho 30 → 45 trên 100 khách, tức tăng 50% (1,5 lần), không phải 'gần gấp đôi'. Số trong bài không khớp nhau; người học dùng con số nào cũng được dạy sai một trong hai.", "fix": "Đổi tình huống thành 'tăng khoảng một nửa' hoặc đổi ví dụ thành 30 → 55 (và tính lại doanh thu trung bình)." },
+        { "sev": "P2", "where": "Q7", "quote": "Một gói thật, bán thật với giá niêm yết không vi phạm luật; vấn đề là thiết kế", "issue": "Khẳng định pháp lý nêu như sự thật, không nguồn; Luật Bảo vệ quyền lợi người tiêu dùng 2023 có quy định về hành vi lừa dối/gây nhầm lẫn — mồi nhử công khai giá thật thì có lẽ không vi phạm, nhưng cần hedge.", "fix": "Viết 'theo hiểu biết chung, gói thật giá thật không bị cấm; luật cấm thông tin gây nhầm lẫn — kiểm với pháp chế'." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "hiệu ứng mồi nhử rõ trong phòng thí nghiệm nhưng khi lặp lại với sản phẩm thật thường yếu hơn nhiều (Frederick và cộng sự, 2014)", "issue": "Trích nghiên cứu không src; freshness periodic yêu cầu nguồn và ngày kiểm.", "fix": "Thêm src: Frederick, Lee & Baskin (2014) 'The Limits of Attraction', Journal of Marketing Research." },
+        { "sev": "P2", "where": "Q3 wrong", "quote": "[22.7,\"NHAM_DIEM_PHAN_TRAM\"]", "issue": "22,7% là mức tăng tương đối (525.000/2.310.000) — đúng con số nhưng nhãn 'nhầm điểm phần trăm' không mô tả lỗi (ở đây là trả lời tỉ lệ thay cho số tiền).", "fix": "Đổi nhãn thành NHAM_DON_VI." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: trước (70×1,5tr + 30×4,2tr)/100 = 2.310.000; sau (50×1,5tr + 5×3,9tr + 45×4,2tr)/100 = 2.835.000; chênh 525.000 ✓ (tol 1.000). Ví dụ: 3,9tr/6 = 650.000/tháng, 4,2tr/12 = 350.000/tháng ✓. Mâu thuẫn: 30 → 45 = ×1,5, không 'gần gấp đôi'." },
+      "claims": [
+        { "claim": "Frederick và cộng sự (2014): hiệu ứng mồi nhử yếu với sản phẩm thật", "status": "unverified", "note": "Khớp tài liệu tôi biết; không src." },
+        { "claim": "Gym Đà Nẵng 1,5tr/4,2tr; thêm gói 3,9tr; 70/30 → 50/5/45", "status": "illustrative-unlabelled", "note": "Có caveat so trước–sau 100 khách." },
+        { "claim": "Gói thật bán thật với giá niêm yết không vi phạm luật", "status": "unverified", "note": "Khẳng định pháp lý không nguồn." }
+      ],
+      "strengths": "Phân biệt mồi nhử với mỏ neo rõ (Q2, Q4 kiểm đúng điểm này); Q6 (khách gói năm huỷ ở tháng 4) buộc nhìn hệ quả giữ chân thay vì chỉ tỉ lệ chọn — đúng tư duy nghề; caveat 'tín hiệu để thử tiếp chứ chưa phải bằng chứng'.",
+      "upgrade": "(1) Sửa mâu thuẫn 'gần gấp đôi' vs 30 → 45. (2) Thêm src cho Frederick 2014 và hedge khẳng định pháp lý. (3) Gắn nhãn minh hoạ. (4) Thêm phản ví dụ: bảng giá có mồi nhử nhưng khách chọn gói rẻ nhiều hơn (mồi nhử làm bảng rối) — dấu hiệu nhận ra. (5) Thêm đào sâu: đo mồi nhử bằng doanh thu ròng sau huỷ và tỉ lệ dùng hết gói, không chỉ tỉ lệ chọn (nối Q6)."
+    },
+    {
+      "id": "B:kh07-03",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 11, "pedagogy": 7, "assessment": 9, "data": 7, "clarity": 5 },
+      "total": 79,
+      "bloom_items": ["L2", "L4", "L3", "L2", "L3", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "một phân tích tổng hợp năm 2010 thấy tác động trung bình gần bằng không", "issue": "Dẫn nghiên cứu không tên, không src (khớp Scheibehenne, Greifeneder & Todd 2010). Freshness periodic cần nguồn.", "fix": "Thêm src với tên tác giả, tạp chí (Journal of Consumer Research 2010), ngày kiểm." },
+        { "sev": "P2", "where": "Q3", "quote": "Giờ cao điểm, quầy trà sữa gọi món liên tục trong 60 phút… Mỗi giờ quầy phục vụ thêm được bao nhiêu khách?", "issue": "Giả định quầy gọi món là nút thắt duy nhất (pha chế không giới hạn) không được nêu trong bài; 32 khách/giờ thêm chỉ đúng nếu có đủ khách xếp hàng và pha chế kịp.", "fix": "Thêm vào đề: 'giả sử luôn có khách chờ và pha chế không là nút thắt'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Ba món gợi ý chiếm 40% số ly bán — dễ chuẩn bị nguyên liệu hơn", "issue": "Không có số doanh thu mỗi khách trước/sau trong ví dụ, trong khi Q7 xoay quanh doanh thu mỗi khách giảm 8% — câu hỏi hay nhất của bài dựa trên chỉ số ví dụ chưa đo.", "fix": "Thêm vào ví dụ: 'doanh thu mỗi khách 52.000đ → 54.000đ (minh hoạ)' để Q7 có mốc so." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3.600/90 = 40; 3.600/50 = 72; 72 − 40 = 32 ✓ (tol 0,5); 40 là quên trừ ✓; 0,8 = 40/50 đảo ✓." },
+      "claims": [
+        { "claim": "Phân tích tổng hợp 2010: tác động trung bình của quá tải lựa chọn gần bằng không; rõ nhất khi món khó phân biệt", "status": "unverified", "note": "Khớp Scheibehenne et al. 2010; không src." },
+        { "claim": "Menu 48 → 16 món: thời gian gọi 90 → 50 giây, bỏ đi 12% → 7%", "status": "illustrative-labelled", "note": "Bài ghi 'Số liệu minh hoạ' và nêu confound." }
+      ],
+      "strengths": "Hedge nghiên cứu đúng mức và nêu điều kiện hiệu ứng mạnh/yếu (món khó phân biệt, khách rành); ví dụ gắn nhãn minh hoạ và tự nêu confound; Q2 (bộ lọc thay vì cắt) và Q7 (doanh thu giảm 8% — đọc thế nào, đo gì) là hai câu L4–L5 chất lượng.",
+      "upgrade": "(1) Thêm src cho meta-analysis 2010. (2) Nêu giả định nút thắt trong Q3. (3) Thêm doanh thu mỗi khách vào ví dụ để Q7 có mốc. (4) Thêm phản ví dụ đúng cấu trúc (quán chuyên khách rành — cắt món làm mất khách) và đào sâu về cách chọn 16 món giữ lại (theo doanh thu, biên và khách riêng), vì bài nói 'cắt' nhưng chưa nói cắt món nào."
+    },
+    {
+      "id": "B:kh07-04",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 13, "examples": 10, "pedagogy": 7, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L3", "L2"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "riêng khỏi lương và dễ tiêu cho món mình thích . Mức độ", "issue": "Lỗi chính tả (dấu cách trước dấu chấm); câu đầu đoạn khái niệm dài 50 từ liệt kê 6 loại tiền.", "fix": "Sửa dấu câu; tách thành hai câu." },
+        { "sev": "P2", "where": "Q6", "quote": "Tiền lì xì của con mỗi Tết — \"để lì xì lớn lên cùng con\"", "issue": "Đáp án hợp cơ chế nhưng thiếu ràng buộc thực tế: lì xì của trẻ thường 1–3 triệu/năm, không đủ phí gói học vấn (thường chục triệu/năm); phương án b (trích lương) bị bác dù là cách phần lớn sản phẩm này được bán. Hai phương án bênh được ở hai tiêu chí khác nhau (ngăn tiền vs khả thi).", "fix": "Đổi stem thành 'thông điệp mở đầu nào…' và nói rõ chỉ xét ngăn tiền; hoặc đổi a thành 'tiền thưởng Tết của bố mẹ'." },
+        { "sev": "P2", "where": "Câu hỏi", "quote": "Q7: Một bạn nói: \"Kế toán tâm lý nghĩa là khách hàng phi lý, cứ nói gì họ cũng tin\"", "issue": "Cả 7 câu không vượt L3; Q7 là L2 với nhiễu rõ sai ('chỉ áp dụng cho khách thu nhập thấp'). Không câu nào kiểm điều kiện hụt (khách đã dành thưởng trả nợ) mà khái niệm nêu.", "fix": "Thay Q7 bằng câu: khảo sát 50 khách, 30 nói thưởng dùng trả nợ — thông điệp 'thưởng mình' còn hợp không, đo gì." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 800 × 25% = 200 chiếc; 200 × 12.000.000 = 2,4 tỷ ✓ (tol 0,01); 9,6 tỷ là doanh thu năm ngoái ✓; 12 là giá máy (triệu) ✓. Đề nêu rõ giả định 'toàn bộ mức tăng nhờ thông điệp' — tốt." },
+      "claims": [
+        { "claim": "Doanh số TV mùa thưởng tăng 25% so với năm trước", "status": "illustrative-labelled", "note": "Ghi '(số minh hoạ)' và caveat chưa tách thu nhập/giá/đối thủ." },
+        { "claim": "Kế toán tâm lý: tiền thưởng xếp vào ngăn 'tiền thêm', dễ tiêu hơn", "status": "unverified", "note": "Khớp Thaler (mental accounting); không nêu tên/nguồn." }
+      ],
+      "strengths": "Nêu điều kiện hụt (thưởng đã dành trả nợ) và mức độ tuỳ kỳ vọng; ví dụ gắn nhãn minh hoạ và đề xuất chạy hai thông điệp ở hai nhóm cửa hàng; Q3 nói thẳng giả định trước khi tính.",
+      "upgrade": "(1) Sửa lỗi chính tả và câu dài. (2) Sửa Q6 để chỉ một phương án bênh được. (3) Nâng 2 câu lên L4–L5 (điều kiện hụt; đọc kết quả hai nhóm cửa hàng). (4) Thêm phản ví dụ đúng cấu trúc và đào sâu (nêu tên Thaler, nối với kh07-01 khung mất: 'tiền thêm' bị mất ít đau hơn). (5) Thêm bảng 'ngăn tiền · thời điểm · câu thông điệp' cho 3 ngành."
+    },
+    {
+      "id": "B:kh07-05",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 12, "pedagogy": 7, "assessment": 9, "data": 8, "clarity": 5 },
+      "total": 81,
+      "bloom_items": ["L2", "L4", "L3", "L4", "L5", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q7", "quote": "Luật cấm cho dùng thử quá 30 ngày với sản phẩm số → Không có quy định như vậy", "issue": "Khẳng định pháp lý phủ định nêu như sự thật, không nguồn; cách an toàn hơn là nói 'không có quy định phổ biến nào như vậy ở Việt Nam theo hiểu biết của bài'.", "fix": "Thêm hedge hoặc bỏ phương án d thay bằng nhiễu không liên quan luật." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Thử quá dài thì khách quen giá 0đ, và phần tăng có thể do khách học được giá trị chứ không do sở hữu", "issue": "Nêu đúng confound nhưng không nói độ dài thử hợp lý được chọn thế nào (theo thời gian tới 'khoảnh khắc giá trị' đầu tiên); người học không biết chọn 7 hay 14 ngày.", "fix": "Thêm: 'chọn độ dài đủ để phần lớn người dùng đạt kết quả đầu (ở đây: xong 3 bài), rồi thử 7 so với 14 ngày'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Cho khách cầm thử và đầu tư công sức vào", "issue": "Thiếu phản ví dụ và đào sâu dù nội dung có sẵn (dark pattern tự trừ tiền được nêu ở Lỗi hay gặp và Q5).", "fix": "Thêm phản ví dụ: sản phẩm không có gì để 'đầu tư' (ebook) — dùng thử không tạo sở hữu; và đào sâu về minh bạch khi hết hạn (nhắc trước, không tự trừ)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 10.000 × 70% = 7.000; × 8% = 560 ✓ (tol 0,5); 800 = bỏ bước 70% ✓; 7.000 = dừng giữa chừng ✓. Ví dụ: 200/10.000 = 2%; 560/10.000 = 5,6% — bài tự cảnh báo hai mẫu số ✓." },
+      "claims": [
+        { "claim": "Hiệu ứng sở hữu: định giá cao hơn thứ đã là của mình, kể cả mới vài ngày", "status": "unverified", "note": "Khớp Thaler/Kahneman–Knetsch–Thaler; không nguồn." },
+        { "claim": "200 → 560 khách trả tiền/tháng; 70% dùng ≥3 ngày, 8% trả", "status": "illustrative-labelled", "note": "Ghi '(số minh hoạ)'; nêu ba thứ đổi cùng lúc." },
+        { "claim": "Cửa hàng nệm 'ngủ thử 100 đêm', tỉ lệ trả vài phần trăm", "status": "unverified", "note": "Mô phỏng mô hình Casper/Ru9; không tên thương hiệu, không số nguồn." }
+      ],
+      "strengths": "Đoạn cảnh báo mẫu số (2% trên người xem vs 5,6% trên người kích hoạt) là bài học đo lường đáng giá; phân biệt với sunk cost; Q5 (thông báo ngày 7 minh bạch vs dark pattern) là câu L5 với 4 phương án đều có lý do bị loại rõ; Q4 hedge 'có thể góp phần'.",
+      "upgrade": "(1) Thêm phản ví dụ và đào sâu. (2) Nêu cách chọn độ dài thử. (3) Hedge khẳng định pháp lý Q7. (4) Gắn nhãn minh hoạ cho ví dụ nệm. (5) Thêm câu L6: thiết kế thử nghiệm tách ba yếu tố (sở hữu / kích hoạt / cá nhân hoá) với 3 nhóm."
+    },
+    {
+      "id": "B:kh07-06",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 10, "pedagogy": 9, "assessment": 8, "data": 7, "clarity": 5 },
+      "total": 81,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "Đây là công cụ hợp pháp nhưng dễ lạm dụng", "issue": "Bài nhắc 'pháp chế' và 'hợp pháp' nhưng không nêu quy định cụ thể về quảng cáo tín dụng tiêu dùng/trả góp tại Việt Nam (yêu cầu minh bạch lãi, phí); freshness periodic cần nguồn và ngày kiểm.", "fix": "Thêm src: Luật Bảo vệ quyền lợi NTD 2023 (thông tin đầy đủ, chính xác) và quy định của NHNN về cho vay tiêu dùng — ghi 'kiểm với pháp chế'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Máy 16.000.000đ trả góp 0% trong 24 tháng: 16.000.000 ÷ 24 ≈ 666.667đ/tháng, khoảng 22.000đ/ngày", "issue": "'0% lãi' thực tế thường do nhà bán trợ lãi và giá máy trả góp có thể cao hơn giá trả thẳng; bài chỉ nêu phí chuyển đổi 2%, không nhắc chênh giá — khoản khách hay bỏ sót nhất.", "fix": "Thêm một câu: 'kiểm cả giá máy khi trả góp có bằng giá trả thẳng không'." },
+        { "sev": "P2", "where": "Q5", "quote": "Vì khách Việt Nam thích cà phê hơn các đồ uống khác", "issue": "Câu L2 nhận lại ý bài, nhiễu yếu; bài đã có đủ dữ liệu (lượt bấm × tỉ lệ duyệt) để ra câu L4 nhưng chỉ dùng ở Q7.", "fix": "Thay bằng câu đọc bảng: banner A 1.000 bấm → 300 hồ sơ → 240 duyệt; banner B 2.000 → 700 → 350 — banner nào ra nhiều đơn hoàn tất, chi phí mỗi đơn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 16.000.000 × 2% = 320.000; tổng 16.320.000 ✓ (tol 1.000); 16.000.000 là quên phí ✓; 23.680.000 = tính 2%/tháng × 24 ✓. Ví dụ: 16tr/24 = 666.667; /30 ≈ 22.222 ≈ 22.000đ/ngày ✓." },
+      "claims": [
+        { "claim": "Thiên kiến hiện tại: coi trọng bây giờ hơn tương lai quá mức", "status": "unverified", "note": "Khớp Laibson/O'Donoghue–Rabin; không nguồn; bài tự nói 'không phải lời giải thích duy nhất'." },
+        { "claim": "Banner B tỉ lệ bấm gấp đôi; phí chuyển đổi 2%", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Trả góp 0% là công cụ hợp pháp", "status": "unverified", "note": "Khẳng định pháp lý chung, không nguồn." }
+      ],
+      "strengths": "Cấu trúc đầy đủ (points, phản ví dụ sinh viên thu nhập bấp bênh, đào sâu với tín hiệu duyệt hồ sơ/trả đúng hạn); quy tắc thực hành 'giá gốc và tổng phải trả với cỡ chữ không nhỏ hơn con số theo ngày' là việc làm đo được; Q7 đọc lượt bấm cùng tỉ lệ duyệt đúng tư duy nghề.",
+      "upgrade": "(1) Thêm src pháp lý và ngày kiểm. (2) Nhắc chênh giá trả góp vs trả thẳng. (3) Thay Q5 bằng câu đọc phễu hai banner và tính chi phí mỗi đơn. (4) Gắn nhãn minh hoạ. (5) Thêm con số cho phản ví dụ (tỉ lệ duyệt 35% vs 80%) để người học thấy dấu hiệu bằng số."
+    },
+    {
+      "id": "B:kh07-07",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 9, "data": 8, "clarity": 5 },
+      "total": 84,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "sẽ trả lại bằng hoàn tiền, đánh giá xấu, rủi ro pháp lý", "issue": "'Rủi ro pháp lý' nêu chung; không dẫn quy định Việt Nam về tick sẵn/thu phí không được đồng ý (Luật Bảo vệ quyền lợi NTD 2023; Nghị định 55/2024) — freshness periodic cần nguồn.", "fix": "Thêm src với tên văn bản, điều khoản liên quan, ngày kiểm; ghi 'kiểm với pháp chế'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Khi đổi sang ô trống, hỏi rõ \"Thêm bảo hiểm 15.000đ?\", 25% chọn mua, gần như không ai đòi hoàn. Doanh thu ít hơn nhưng đánh giá 1 sao giảm hẳn", "issue": "Không gắn nhãn minh hoạ; 'giảm hẳn' không có số dù tình huống cho 'tăng gấp ba'; chưa tính chi phí khách bỏ app — Q7 phải tự nhận 'chưa trừ'. Phép so 690 vs 375 triệu không tính hoàn tiền ở phương án ô trống (bài nói 'gần như không ai').", "fix": "Thêm số minh hoạ: đánh giá 1 sao 300 → 110/tháng; ước 2% khách bỏ app × giá trị vòng đời để phép so Q7 khép được." },
+        { "sev": "P2", "where": "Câu hỏi", "quote": "Q4 đồng hồ giả · Q5 huỷ khó · Q6 không phải dark pattern", "issue": "Ba câu phân loại L3 liên tiếp cùng dạng (nhận ra dark pattern); không câu nào dùng phản ví dụ (ô trống nhưng mô tả quyền lợi khó hiểu).", "fix": "Thay Q5 bằng câu chẩn đoán: ô trống rồi mà tỉ lệ hỏi tổng đài vẫn cao — nguyên nhân và việc làm." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 100.000 × 60% = 60.000 vé; × 15.000 = 900 triệu; hoàn 6.000 × 15.000 = 90 triệu; xử lý 6.000 × 20.000 = 120 triệu; ròng 690 triệu ✓ (tol 0,5); 900 quên cả hai ✓; 810 quên xử lý ✓. Q7: 25% × 100.000 × 15.000 = 375 triệu; 690 − 375 = 315 ✓." },
+      "claims": [
+        { "claim": "Dark pattern dẫn tới rủi ro pháp lý", "status": "unverified", "note": "Không dẫn văn bản." },
+        { "claim": "100.000 vé, 60% tick sẵn, 10% đòi hoàn, 20.000đ xử lý; ô trống 25% mua", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phép thử 'khách thấy rõ cơ chế có còn đồng ý không' là tiêu chí dùng được ngay; Q7 trung thực với số (thừa nhận ngắn hạn tick sẵn vẫn lời hơn, lập luận là phần lời thật nhỏ và bị ăn dần) — hiếm bài dám nói vậy; phản ví dụ (ô trống nhưng mô tả khó hiểu) và đào sâu (mặc định có lợi cho khách) đầy đủ.",
+      "upgrade": "(1) Thêm src pháp lý. (2) Gắn nhãn minh hoạ và bổ số cho 'giảm hẳn' và chi phí khách bỏ app để khép phép so Q7. (3) Thay một câu phân loại bằng câu chẩn đoán từ phản ví dụ. (4) Thêm 'đào sâu' nối ngược về kh07-01/05: cùng cơ chế sợ mất, ranh giới nằm ở tính thật của khoản mất và việc khách biết tổng."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự theo cơ chế tâm lý: khung mất (01) → mồi nhử (02) → quá tải lựa chọn (03) → kế toán tâm lý (04) → sở hữu (05) → thiên kiến hiện tại (06) → dark pattern (07). Kết bằng dark pattern là lựa chọn đúng: biến 6 công cụ trước thành câu hỏi đạo đức. Thiếu bài 'mỏ neo' và 'mặc định' dù tên module ('mỏ neo, mặc định, sợ mất') và kh07-02/07 nhiều lần tham chiếu mỏ neo như khái niệm đã biết. Mức hedge nghiên cứu (Gal–Rucker, Frederick 2014, meta-analysis 2010) là điểm mạnh nhất quán của module nhưng không bài nào có `src` dù freshness là periodic.",
+    "overlap": [
+      "kh07-01 Q5 (tiền đã trong ví → không nhận là mất) và kh07-05 (sở hữu → trả tiền để giữ) là cùng một cơ chế được dạy hai lần không nối nhau.",
+      "kh07-05 Q5, kh07-06 Q2/Q6 và kh07-07 Q2 đều là 'phiên bản minh bạch của cùng cú hích' — tốt để lặp nhưng nên có một bài tham chiếu các bài khác thay vì mỗi bài tự dạy lại.",
+      "kh07-02 Q7 và kh07-05 Q7 cùng dạng 'một bạn đề xuất cực đoan, điểm sai là gì' với phương án nhiễu về luật."
+    ],
+    "gaps": [
+      "Thiếu bài về mỏ neo (anchoring) và mặc định (default) — hai khái niệm trong tên module, được tham chiếu nhưng không được dạy.",
+      "Thiếu bài về bằng chứng xã hội và khan hiếm thật/giả — kh07-01 Q4 và kh07-05 Q5 nhắc như 'cơ chế khác' nhưng không có bài.",
+      "Không bài nào có `src` dù 4/7 bài trích nghiên cứu cụ thể hoặc khẳng định pháp lý (freshness periodic yêu cầu nguồn và ngày kiểm).",
+      "Thiếu bài về cách thiết kế A/B để kiểm một cú hích (cỡ mẫu, chỉ số thứ cấp như huỷ/hoàn) — mọi bài kết bằng 'nên thử A/B' nhưng không bài nào dạy thử thế nào; có thể tham chiếu kh05-08 và kh06-10.",
+      "Khẳng định pháp lý (kh07-02 Q7, kh07-05 Q7, kh07-06, kh07-07) cần kiểm với văn bản Việt Nam (Luật Bảo vệ quyền lợi NTD 2023, Luật Quảng cáo) trước khi lên app."
+    ],
+    "best_lesson": "B:kh07-07",
+    "weakest_lesson": "B:kh07-01"
+  }
+}

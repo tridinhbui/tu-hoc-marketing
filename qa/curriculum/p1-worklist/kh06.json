@@ -1,0 +1,35 @@
+{
+ "mod": "kh06",
+ "lessons": [
+  {
+   "id": "B:kh06-05",
+   "title": "Mua xong rồi, sao vẫn cần lo lần mở hộp và lần dùng đầu?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Chi phí in thẻ khoảng 1.500 đồng một hộp",
+     "issue": "Có chi phí (1.500 × 800 = 1,2 triệu/tháng) nhưng không có chi phí một lần trả hàng, nên không tính được lợi ích (52 đơn trả ít hơn × ? đồng). Người học không ra được quyết định có số như rubric chiều 3 yêu cầu; bài về 'rẻ hơn nhiều so với xử lý trả hàng' mà không chứng minh bằng số.",
+     "fix": "Thêm: 'mỗi đơn trả tốn ~60.000đ ship hai chiều và kiểm hàng → 52 × 60.000 = 3,1 triệu tiết kiệm so với 1,2 triệu in thẻ' (gắn nhãn minh hoạ)."
+    }
+   ],
+   "upgrade": "(1) Thêm chi phí trả hàng để tính lợi ích ròng. (2) Cho số nhóm lý do tháng sau để chứng minh theo đúng caveat. (3) Thêm phản ví dụ: trả hàng do kỳ vọng bị thổi phồng lúc bán (nối kh06-06 đào sâu) — thẻ hướng dẫn không sửa được. (4) Nâng ít nhất 2 câu lên L4/L5 (đọc bảng lý do; đánh đổi tăng thời gian đổi trả vs chi phí). (5) Gắn nhãn minh hoạ."
+  },
+  {
+   "id": "B:kh06-07",
+   "title": "Làm sao để lần mua thứ hai tự xảy ra?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1",
+     "quote": "Gọi 100 người không mua lại: 60 nói hết hàng lúc nào không để ý",
+     "issue": "Tình huống và ví dụ nói gọi 10 người (6/2/1/1), Q1 nói gọi 100 người (60/15/13/12) — cùng câu chuyện nhưng con số đổi; người học vừa đọc '10 người' sẽ tưởng đề nhầm. Ví dụ với 10 người cũng không nói độ nhiễu (6/10).",
+     "fix": "Thống nhất: ví dụ gọi 10 người là 'đợt thăm dò', Q1 nêu rõ 'sau đó gọi tiếp 100 người'; hoặc đổi Q1 về 10 người và hỏi độ chắc chắn."
+    }
+   ],
+   "upgrade": "(1) Thống nhất 10 vs 100 người giữa ví dụ và Q1. (2) Thêm cách ước nhịp dùng từng khách và điều kiện khi nhịp khác nhau nhiều. (3) Thêm phản ví dụ: sản phẩm không có nhịp hết (áo quần) — thói quen gắn vào gì. (4) Thêm đào sâu: nhóm đối chứng giữ lịch cũ để tách phần tăng (bài nhắc nhưng chưa dạy cách chia). (5) Thay Q5."
+  }
+ ]
+}

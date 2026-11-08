@@ -1,0 +1,18 @@
+{
+ "mod": "in02",
+ "lessons": [
+  {
+   "id": "B:in02-02",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ + Q3",
+     "quote": "so lượt tìm tên hãng trước và sau chiến dịch",
+     "issue": "Case là chiến dịch Tết, mà nhu cầu tìm/mua giày tăng mạnh trước Tết bất kể quảng cáo. Q3 coi toàn bộ chênh 20.000 → 50.000 là \"lượt tìm tăng thêm\" do chiến dịch, không nêu mùa vụ — giả định làm đổi kết quả (chi phí mỗi lượt tăng thêm có thể gấp đôi).",
+     "fix": "So với cùng kỳ năm trước hoặc với lượt tìm của hãng giày đối chứng; ghi giả định \"không có mùa vụ\" ngay trong đề Q3."
+    }
+   ]
+  }
+ ]
+}

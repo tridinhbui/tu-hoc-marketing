@@ -1,0 +1,193 @@
+{
+  "mod": "tp03",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:tp03-01",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 12, "examples": 7, "pedagogy": 6, "assessment": 5, "data": 4, "clarity": 4 },
+      "total": 58,
+      "bloom_items": ["L2", "L3", "L2", "L2", "L3", "L3", "L2"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "concept", "quote": "Tên tự đặt (như Kodak, một từ do người sáng lập tự tạo", "issue": "Thương hiệu thật nêu như sự thật, không có src. Đúng theo hiểu biết chung nhưng bài không dẫn nguồn.", "fix": "Thêm src (trang lịch sử Kodak/Eastman) hoặc đổi sang ví dụ tự đặt rõ ràng là minh hoạ." },
+        { "sev": "P2", "where": "example", "quote": "với ngân sách gần bằng không, đó là cái giá quá đắt", "issue": "Toàn bài không có một con số nào về 'ngân sách giải thích' dù khái niệm cốt lõi là đánh đổi theo ngân sách; người học không biết 'gần bằng không' là bao nhiêu so với 400 triệu vốn.", "fix": "Đưa một phép tính minh hoạ: ví dụ biển phụ 3 triệu + 6 tháng khách đi ngang phải đọc hai lần, so với chi phí quảng cáo tối thiểu để 'dạy' một tên vô nghĩa (gắn nhãn số minh hoạ)." },
+        { "sev": "P2", "where": "concept", "quote": "Tên tự đặt ... dễ sở hữu riêng", "issue": "Thiếu một điều kiện quan trọng của phổ tên: tên mô tả thuần tuý thường khó hoặc không đăng ký được nhãn hiệu vì mang tính mô tả; bài chỉ nói 'khó phân biệt', chưa nối tới bài tp03-02 về tra cứu nhãn hiệu.", "fix": "Thêm một câu: tên càng mô tả càng khó bảo hộ riêng, cần tra cứu (xem bài tiếp)." },
+        { "sev": "P2", "where": "Q1-Q7", "quote": "Vì sao tên mô tả thuần tuý (ví dụ \"Cà Phê Muối Ngon\") thường khó được nhớ riêng?", "issue": "7 câu đều trắc nghiệm nhận lại ý bài (L2), chỉ Q5/Q6 là áp dụng một bước; không có câu đọc dữ liệu hay đánh đổi có biện hộ.", "fix": "Thay Q3 bằng câu tình huống có số: 'quán có 2 triệu/tháng cho marketing, 60% khách đi ngang' → chọn loại tên và giải thích chi phí giải thích." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Kodak là từ do người sáng lập tự tạo", "status": "unverified", "note": "Không có src; đúng theo hiểu biết chung (George Eastman)." }
+      ],
+      "strengths": "Khung ba loại tên gắn thẳng với một biến quyết định duy nhất (ngân sách giải thích) nên dễ áp dụng; phần 'lỗi hay gặp' nêu đúng hai sai lầm trái chiều.",
+      "upgrade": "Để đạt ≥85: (1) thêm một bảng nhỏ ba loại tên × ba cột (chi phí giải thích, độ phân biệt, khả năng bảo hộ) với số minh hoạ gắn nhãn; (2) thêm phản ví dụ: quán có ngân sách 50 triệu quảng cáo địa phương thì 'Bunza' có thể hợp lý; (3) thêm phần đào sâu nối tới tra cứu nhãn hiệu và mở rộng dòng (tp03-02, tp03-08); (4) đổi 2 câu quiz thành câu L4 đọc tình huống có số và một câu L5 biện hộ."
+    },
+    {
+      "id": "B:tp03-02",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 15, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q1", "quote": "Đoán trước: phép thử nào thường bị bỏ qua nhất khi chủ shop tự đặt tên?", "issue": "Đáp án đoán được bằng hình thức: trong 4 phương án chỉ d) là một trong 'năm phép thử' của bài; a) b) c) không phải phép thử nào cả (hỏi bạn bè, chọn phông, in áo). Người học không cần hiểu bài vẫn chọn đúng.", "fix": "Đưa 3 nhiễu là các phép thử khác trong bài (tên miền, gõ không dấu, nghĩa lóng) để câu hỏi buộc phân biệt phép nào hay bị bỏ qua nhất và vì sao." },
+        { "sev": "P2", "where": "example", "quote": "cứ ba khách nghe bạn bè giới thiệu thì hai người tìm sai tên", "issue": "Suy từ mẫu 40 người sang tỉ lệ dân số ('cứ ba khách') mà không nói mẫu nhỏ, chọn ai để thử, và sai số; đây là bài dạy kiểm tra nên cần làm mẫu.", "fix": "Thêm một câu: 'mẫu 40 người có sai số lớn (±15 điểm); đủ để loại tên rõ ràng trượt, không đủ để so hai tên gần nhau'." },
+        { "sev": "P2", "where": "concept", "quote": "Tra cứu nhãn hiệu: đã có ai đăng ký tên giống hoặc gần giống trong cùng nhóm hàng chưa — việc này cần tra ở cơ sở dữ liệu chính thức", "issue": "Không nêu tên cơ sở dữ liệu nào (ví dụ hệ thống tra cứu của Cục Sở hữu trí tuệ / WIPO) nên 'tra ở nơi chính thức' vẫn chung chung với người mới.", "fix": "Thêm src dẫn tới công cụ tra cứu chính thức với ngày kiểm, kèm câu 'nếu giao diện khác, tin trang chính thức'." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[65,\"SAI_TINH_TOAN\"]", "issue": "65 là tỉ lệ gõ sai (phần bù), mã lỗi 'SAI_TINH_TOAN' đúng nhưng chưa nêu tên lỗi thật là 'nhầm phần bù'.", "fix": "Đổi mã/lời giải cho 65 thành 'lấy tỉ lệ gõ sai thay cho gõ đúng'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 14 ÷ 40 = 35% ✓ (tol 0.1). Sai 65 = 26/40 (phần bù) ✓; 285.7 = 40/14 (đảo mẫu số) ✓." },
+      "claims": [
+        { "claim": "Khách tìm trên mạng thường gõ không dấu", "status": "unverified", "note": "Hành vi phổ biến ở Việt Nam, nêu như sự thật, không nguồn; chấp nhận được ở mức khái niệm." }
+      ],
+      "strengths": "Năm phép thử có thứ tự chi phí rõ (rẻ trước, tra cứu sau) và Q7 kiểm đúng logic đó; bài thận trọng đúng mức về pháp lý ('không đoán quy định').",
+      "upgrade": "Để đạt ≥85: (1) thêm phản ví dụ: tên qua cả năm phép thử nhưng khách không nhớ vì quá 'an toàn' → phép thử chỉ loại, không chọn; (2) thêm đào sâu về cỡ mẫu phép nghe–viết và ngưỡng chấp nhận (ví dụ ≥80% gõ đúng); (3) thêm src công cụ tra cứu nhãn hiệu chính thức; (4) sửa Q1 cho nhiễu là các phép thử khác; (5) thêm một câu L4 đọc bảng kết quả 3 tên × 5 phép thử rồi chọn tên."
+    },
+    {
+      "id": "B:tp03-03",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 12, "examples": 8, "pedagogy": 8, "assessment": 6, "data": 3, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "concept", "quote": "Tên tiếng Anh gợi hiện đại, quốc tế — hợp khi khách chờ đợi điều đó", "issue": "Nêu liên tưởng ngôn ngữ → nguồn gốc như quy luật chung, không nói đây là liên tưởng tuỳ nhóm khách và thay đổi theo thời gian (nhiều thương hiệu Việt tên Anh đã 'Việt hoá' trong mắt khách).", "fix": "Thêm điều kiện: liên tưởng này cần kiểm ở đúng nhóm khách mục tiêu, không mặc định." },
+        { "sev": "P2", "where": "example", "quote": "\"Golden Moon Bakery\" có thể là tên của bất kỳ tiệm bánh nào ở bất kỳ nước nào", "issue": "Toàn bài không có số: không có kết quả hỏi khách nào về 'mua vì điều gì', trong khi bài khuyên 'hỏi khách mua vì điều gì'.", "fix": "Thêm một khảo sát minh hoạ gắn nhãn: hỏi 50 khách mua hộp quà, bao nhiêu % nêu 'đặc sản Sóc Trăng/gia đình' là lý do mua." },
+        { "sev": "P2", "where": "deeper", "quote": "Phép kiểm tra trong tuần: nói tên cho 5 người chưa biết hãng, nhờ họ viết lại", "issue": "Trùng phép thử nghe–viết của bài tp03-02, không phải phép kiểm riêng cho câu hỏi ngôn ngữ của tên.", "fix": "Đổi thành phép kiểm 'nghe tên, bạn nghĩ hàng này từ đâu tới?' với 5 người, đếm bao nhiêu người nói đúng nguồn gốc." },
+        { "sev": "P2", "where": "Q4", "quote": "Quán sẽ bị hiểu là nhà hàng Âu và bị đánh giá thấp trên các ứng dụng", "issue": "Nhiễu a) có một nửa hợp lý (bị hiểu là nhà hàng Âu là rủi ro thật về lời hứa nguồn gốc, đúng ý bài); phần 'đánh giá thấp' mới sai. Người học đọc nhanh có thể bênh a).", "fix": "Bỏ vế 'bị hiểu là nhà hàng Âu' khỏi a) hoặc viết lời giải nói rõ vì sao b) trực tiếp hơn." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [],
+      "strengths": "Cấu trúc đầy đủ nhất trong nhóm bài đặt tên: có phản ví dụ (dòng sô-cô-la châu Âu) làm đổi kết luận và đào sâu nêu đánh đổi (tên gốc gác mạnh thì khó mở dòng); Q2 và Q5 tách 'lời hứa nguồn gốc' khỏi 'cảm giác sang' rất rõ.",
+      "upgrade": "Để đạt ≥85: (1) thêm số: khảo sát minh hoạ lý do mua và tỉ lệ đọc đúng tên tiếng Anh; (2) thêm điều kiện áp dụng cho liên tưởng ngôn ngữ; (3) đổi phép kiểm trong tuần cho đúng câu hỏi của bài; (4) thêm một câu L4 đọc dữ liệu khảo sát và một câu L6 thiết kế cách kiểm tên trước khi in hộp."
+    },
+    {
+      "id": "B:tp03-04",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 13, "examples": 7, "pedagogy": 6, "assessment": 6, "data": 3, "clarity": 4 },
+      "total": 61,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L3", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "example", "quote": "Khách sửa xe sợ nhất là bị \"vẽ bệnh\", sửa xong mới báo giá cao", "issue": "'Nỗi lo của khách' là trục quyết định của bài nhưng được khẳng định, không có dữ liệu (hỏi bao nhiêu khách, bao nhiêu % nêu nỗi lo này); toàn bài không có số.", "fix": "Thêm số minh hoạ gắn nhãn: hỏi 30 khách ở 5 tiệm, 21 người nêu 'sợ bị vẽ bệnh/giá phát sinh' → 70%." },
+        { "sev": "P2", "where": "concept", "quote": "Lời hứa có thể kiểm tra — khách tự thấy bạn giữ hay không — tạo lý do quay lại.", "issue": "Không có phản ví dụ: lời hứa kiểm tra được nhưng vận hành giữ không nổi thì hại hơn câu vui; chỉ Q7 chạm tới, phần đọc không có.", "fix": "Thêm phản ví dụ: tiệm hứa 'không phát sinh' nhưng 30% ca phát sinh thật do xe cũ → cần quy trình xác nhận trước khi sửa, hoặc hứa hẹp hơn (nối tp03-06)." },
+        { "sev": "P2", "where": "Q3", "quote": "\"Hơn 20 năm trong nghề\" cho một tiệm sửa điện thoại", "issue": "Nhiễu này thật ra là điều khách có thể kiểm chứng (tuổi tiệm), chỉ không phải lời hứa cho lần tới; lời giải xử lý đúng nhưng câu hỏi ghi 'lời hứa khách tự kiểm tra được' nên ranh giới hơi mờ.", "fix": "Đổi stem thành 'câu nào là lời hứa về lần mua tới mà khách kiểm tra được'." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [],
+      "strengths": "Ba nấc (câu vui – lời hứa cụ thể nhưng khách không quan tâm – lời hứa chạm nỗi lo) được kiểm bằng Q4 (tiệm A vs B) là câu phân tích tốt; Q7 nối lời hứa với vận hành ở cả năm tiệm.",
+      "upgrade": "Để đạt ≥85: (1) thêm số về nỗi lo của khách và tỉ lệ giữ lời hiện tại (nối tp03-06); (2) thêm phản ví dụ lời hứa cụ thể mà vận hành không giữ nổi; (3) thêm đào sâu về cách viết lời hứa có nhịp (3 kỹ thuật gọt câu) và khi nào slogan cảm xúc vẫn hợp (thương hiệu đã lớn, lời hứa đã được biết); (4) thêm câu L6: thiết kế cách đo lời hứa 'không phát sinh' trong 1 tháng."
+    },
+    {
+      "id": "B:tp03-05",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 8, "pedagogy": 8, "assessment": 7, "data": 3, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L3", "L5", "L3", "L2", "L4", "L5", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "example", "quote": "\"Gạo mới xay trong 7 ngày, in ngày xay trên túi\" thì đối thủ chỉ dán vào được nếu họ thật sự làm như vậy", "issue": "Toàn bài không có con số nào ngoài '7 ngày'; không có dữ liệu khách có quan tâm độ mới không, dù phản ví dụ nói đây là điều phải kiểm.", "fix": "Thêm số minh hoạ gắn nhãn: hỏi 60 người mua gạo túi ở siêu thị, bao nhiêu % nhắc 'mới/thơm' là lý do chọn, so với 'giá'." },
+        { "sev": "P2", "where": "deeper", "quote": "nếu một lô gạo không kịp ngày thì lời hứa quay lại hại mình", "issue": "Nêu rủi ro vận hành nhưng không nối rõ sang bài tp03-06 (đo tỉ lệ giữ lời trước khi in), dù hai bài liền nhau.", "fix": "Thêm một câu nối: 'trước khi in ngày xay lên túi, đo bao nhiêu % lô hàng hiện tại tới kệ trong 7 ngày (bài sau)'." },
+        { "sev": "P2", "where": "Q6", "quote": "Có, vì ai nói trước, nói rõ và in bằng chứng lên túi thì chiếm được câu đó", "issue": "Phương án đúng dài hơn và chứa nhiều điều kiện hơn các phương án khác; dễ đoán bằng độ dài. Nội dung đúng và là câu tốt nhất bài.", "fix": "Cân độ dài 4 phương án; thêm một nhiễu dài có lý nửa chừng (ví dụ 'Có, nhưng phải đăng ký độc quyền câu đó trước')." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [],
+      "strengths": "Phép thử được nêu rõ là bước loại chứ không phải bước chọn, có phản ví dụ (khách quán ăn chỉ quan tâm giá) và Q6 xử lý đúng điểm tinh tế 'đối thủ cũng làm nhưng chưa nói' — nhiều bài về slogan bỏ qua điểm này.",
+      "upgrade": "Để đạt ≥85: (1) thêm số minh hoạ về điều khách quan tâm và về tỉ lệ lô hàng đạt '7 ngày'; (2) thêm bảng 3 slogan × 3 kiểm (dán tên đối thủ / khách quan tâm / vận hành giữ được) để người học điền; (3) nối rõ sang tp03-06; (4) cân độ dài phương án Q6 và thêm một câu L6 thiết kế cách kiểm 'khách có trích lại câu không' sau 3 tháng."
+    },
+    {
+      "id": "B:tp03-06",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 16, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "concept", "quote": "Mỗi lần thất hứa làm mất niềm tin nhiều hơn một lần giữ lời tạo ra, vì khách nhớ lần thất vọng rõ hơn.", "issue": "Nêu một hiệu ứng tâm lý (thiên lệch tiêu cực) như luật phổ quát, không có nguồn và không nêu điều kiện (mức kỳ vọng, có bù đắp hay không).", "fix": "Hạ giọng thành 'thường' và thêm nhãn 'quan sát phổ biến trong nghiên cứu hành vi', hoặc thêm src." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[17,\"SAI_TINH_TOAN\"],[85,\"SAI_MAU_SO\"]]", "issue": "Giá trị sai 85 không tương ứng với một lỗi mẫu số tự nhiên nào từ số trong đề (85% = 1.700/2.000; không có cách chia nào ra 85 từ 340 và 2.000). 17 là lỗi 'nhầm tỉ lệ trễ với tỉ lệ giữ lời' chứ không phải 'sai tính toán'.", "fix": "Đổi 17 → mã 'NHAM_TI_LE_ROI' (lấy tỉ lệ trễ); thay 85 bằng lỗi thật, ví dụ 83,0 làm tròn lệch hoặc 1.660 ÷ 1.960 = 84,7 nếu trừ nhầm." },
+        { "sev": "P2", "where": "example", "quote": "cứ sáu khách thì một người nhận hộp ghi \"30 phút\" trong khi đã chờ lâu hơn", "issue": "Số đúng (17% ≈ 1/6) nhưng ví dụ chưa tách tỉ lệ trễ theo khung giờ dù tình huống nói trễ dồn vào giờ trưa; lỗi hay gặp thứ hai của bài nói về chuyện này mà ví dụ không làm mẫu.", "fix": "Thêm hai dòng: giờ trưa 600 đơn, 240 trễ (40%); ngoài giờ trưa 1.400 đơn, 100 trễ (7%) → quyết định thu hẹp lời hứa theo khung giờ có số đỡ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (2.000 − 340) ÷ 2.000 = 83% ✓. Ví dụ 340/2.000 = 17% ≈ 1/6 ✓. Sai 17 = tỉ lệ trễ ✓; sai 85 không tái tạo được từ số trong đề (xem defect)." },
+      "claims": [
+        { "claim": "Một lần thất hứa làm mất niềm tin nhiều hơn một lần giữ lời tạo ra", "status": "unverified", "note": "Hiệu ứng tâm lý nêu như quy luật, không nguồn." }
+      ],
+      "strengths": "Bài hiếm trong module có quyết định thật với số (đo tỉ lệ giữ lời → sửa vận hành hay thu hẹp lời hứa → chưa in lên bao bì); Q5 (spa) là biến thể tốt buộc chuyển lời hứa về điều kiện giữ được.",
+      "upgrade": "Để đạt ≥85: (1) thêm bảng tỉ lệ trễ theo khung giờ/thời tiết để làm mẫu cho 'lỗi hay gặp' thứ hai; (2) thêm phản ví dụ: tỉ lệ giữ lời 96% nhưng 4% trễ rơi toàn vào khách mới → vẫn chưa nên in; (3) thêm đào sâu về ngưỡng chấp nhận (ví dụ ≥95% và không khung giờ nào dưới 90%) và chi phí 'tặng nước' nhân theo số đơn trễ; (4) sửa mã lỗi Q3; (5) thêm câu L6 thiết kế thử nghiệm thêm shipper ca trưa trong 1 tháng (đo gì, so với gì)."
+    },
+    {
+      "id": "B:tp03-07",
+      "scores": { "accuracy": 11, "depth": 10, "practical": 13, "examples": 7, "pedagogy": 6, "assessment": 7, "data": 4, "clarity": 4 },
+      "total": 62,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "example", "quote": "McDonald's giữ \"I'm lovin' it\" suốt hơn hai thập kỷ kể từ lúc ra mắt và chỉ làm mới cách kể quanh nó.", "issue": "Thương hiệu thật gắn với con số thời gian, nêu như sự thật, không có src và không gắn nhãn; là bằng chứng chính của lập luận 'giữ câu, đổi cách kể'. Đúng theo hiểu biết chung (ra mắt 2003) nhưng bài cần nguồn và ngày kiểm.", "fix": "Thêm src (trang/tư liệu chính thức về chiến dịch 2003) với ngày kiểm, hoặc viết 'ra mắt năm 2003' kèm nguồn." },
+        { "sev": "P2", "where": "situation", "quote": "Khảo sát nhỏ cho thấy nhiều khách vẫn nhắc đúng câu này", "issue": "'Nhiều khách' không có số trong tình huống và ví dụ; chỉ Q5 mới đưa con số 12% (và nhãn 'minh hoạ'), tức dữ liệu quyết định nằm trong câu hỏi chứ không trong phần đọc.", "fix": "Đưa số vào tình huống: hỏi 150 khách mua nước giặt, 54 người nhắc đúng câu (36%), 30 người nhắc đúng ý sai chữ; so với đối thủ chi gấp ba." },
+        { "sev": "P2", "where": "concept", "quote": "Muốn biết câu còn đáng giữ, hỏi cả hai: khách nhớ ở mức nào, và nếu thấp thì do câu yếu hay do chưa đủ tiếp xúc.", "issue": "Nêu đúng hai nguyên nhân nhưng không cho cách tách chúng (so tỉ lệ nhớ giữa nhóm tiếp xúc nhiều/ít, hoặc nhớ ý vs nhớ chữ).", "fix": "Thêm một câu: tách bằng cách so tỉ lệ nhớ ở nhóm mua ≥3 lần/năm với nhóm mua lần đầu; nếu nhóm mua nhiều cũng không nhớ thì lỗi ở câu." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính. Q5 có số 12% nhưng không yêu cầu tính." },
+      "claims": [
+        { "claim": "McDonald's giữ 'I'm lovin' it' hơn hai thập kỷ kể từ lúc ra mắt", "status": "unverified", "note": "Không src. Theo hiểu biết chung chiến dịch ra mắt 2003, tới 2026 là 23 năm — khớp 'hơn hai thập kỷ', nhưng cần nguồn và ngày kiểm." }
+      ],
+      "strengths": "Ba điều kiện đổi slogan (lời hứa hết đúng / hết quan trọng / đổi hướng chiến lược) rõ và được kiểm bằng Q3, Q6; Q5 là câu L4 tốt vì buộc tách 'câu yếu' với 'thiếu tiếp xúc' thay vì phản xạ đổi.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho McDonald's hoặc thay bằng ví dụ có nguồn; (2) đưa số nhớ slogan vào tình huống và làm mẫu cách tách hai nguyên nhân bằng hai nhóm khách; (3) thêm phản ví dụ: câu được nhớ nhưng sản phẩm mới không còn 'thơm cả tuần' → phải đổi dù đang được nhớ, kèm cách chuyển dần (Q7) với mốc thời gian; (4) thêm đào sâu về chi phí chuyển đổi slogan (ước lượng số lần tiếp xúc cần để câu mới đạt mức nhớ cũ)."
+    },
+    {
+      "id": "B:tp03-08",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 14, "examples": 8, "pedagogy": 6, "assessment": 7, "data": 3, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L2", "L5", "L2", "L3", "L5", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "concept", "quote": "Một nhà: mọi sản phẩm mang tên mẹ (như Vinamilk với nhiều dòng sữa)", "issue": "Thương hiệu thật nêu như ví dụ kiến trúc, không src; Vinamilk thực tế cũng có nhiều tên con (kiến trúc lai), nên xếp vào 'một nhà' là đơn giản hoá.", "fix": "Ghi 'phần lớn dòng sữa tươi mang tên mẹ' hoặc gắn nhãn 'đơn giản hoá', thêm src." },
+        { "sev": "P2", "where": "concept", "quote": "Nhiều nhà: mỗi sản phẩm có tên riêng (Omo, Dove của Unilever; Toyota đặt Lexus riêng cho dòng hạng sang)", "issue": "Hai thương hiệu thật, không src; đúng theo hiểu biết chung nhưng không có ngày kiểm.", "fix": "Thêm src hoặc nhãn 'ví dụ quen thuộc, tự kiểm'." },
+        { "sev": "P2", "where": "Q2", "quote": "Kem chống nắng mang tên mẹ; xịt côn trùng dùng tên riêng có bảo chứng hoặc tách hẳn", "issue": "Phương án đúng là phương án duy nhất 'mỗi món một cách', dài nhất và nhiều điều kiện nhất; đoán được bằng hình thức.", "fix": "Thêm nhiễu dạng tách khác, ví dụ 'Kem chống nắng tên riêng có bảo chứng; xịt côn trùng mang tên mẹ vì bán cho cùng gia đình'." },
+        { "sev": "P2", "where": "example", "quote": "Mang tên mẹ là hợp lý và tiết kiệm.", "issue": "'Tiết kiệm' không có số: không ước lượng chi phí xây một tên mới so với dùng tên mẹ, dù đó là đánh đổi cốt lõi của 'nhiều nhà'.", "fix": "Thêm số minh hoạ gắn nhãn: xây tên mới tới mức nhận biết 20% ở nhóm mục tiêu tốn ~X trong 2 năm, so với 0 khi dùng tên mẹ; rủi ro vạ lây ước lượng bằng % doanh thu dòng gốc." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Vinamilk là ví dụ kiến trúc 'một nhà'", "status": "unverified", "note": "Đơn giản hoá; không src." },
+        { "claim": "Omo, Dove của Unilever là 'nhiều nhà'", "status": "unverified", "note": "Đúng theo hiểu biết chung; không src." },
+        { "claim": "Toyota đặt Lexus riêng cho dòng hạng sang", "status": "unverified", "note": "Đúng theo hiểu biết chung; không src." }
+      ],
+      "strengths": "Ba câu hỏi chọn kiến trúc (gần lời hứa gốc? cùng khách & giá? chịu vạ lây?) ngắn và dùng được ngay; Q5 (serum giá gấp đôi, muốn rút êm) là câu đánh đổi có biện hộ tốt.",
+      "upgrade": "Để đạt ≥85: (1) thêm src hoặc nhãn cho ba thương hiệu thật; (2) thêm số minh hoạ cho chi phí xây tên mới vs rủi ro vạ lây; (3) thêm phản ví dụ: tên mẹ rất mạnh nhưng món mới cùng nhóm khách lại rẻ hơn hẳn → bảo chứng kéo tên mẹ xuống; (4) thêm đào sâu nối tới tp05-03 (mở rộng thương hiệu) để tránh trùng; (5) cân độ dài phương án Q2."
+    },
+    {
+      "id": "B:tp03-09",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L5", "L2", "L3", "L3", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "example", "quote": "Ba phần tư trí nhớ mà 300 triệu mua được đã không gắn vào thương hiệu.", "issue": "300 triệu là ngân sách năm nay; khảo sát 200 khách là của đợt năm ngoái, ngân sách năm ngoái không được nêu. Phép quy 'ba phần tư của 300 triệu' ngầm giả định hai năm chi như nhau.", "fix": "Ghi rõ 'giả sử năm ngoái chi tương tự' hoặc đưa ngân sách năm ngoái vào tình huống." },
+        { "sev": "P2", "where": "example", "quote": "120 trên 200 người nhớ có chương trình, nhưng chỉ 30 người nối đúng về chuỗi", "issue": "Số tự khớp nhưng không gắn nhãn minh hoạ và không nói mẫu 200 có sai số; không nói khảo sát 'nhắc có gợi ý' hay 'không gợi ý' dù đào sâu nhắc 'mức nhắc không gợi ý'.", "fix": "Thêm 'khảo sát không gợi ý, mẫu 200, sai số ±6 điểm' vào tình huống." },
+        { "sev": "P2", "where": "Q3", "quote": "Vì sao nên giữ cùng một tên chiến dịch qua nhiều năm thay vì mỗi năm một tên mới?", "issue": "Ba nhiễu (phí tra cứu, phí agency, đối thủ nghĩ gì) đều yếu rõ, đáp án b) đoán được không cần đọc bài.", "fix": "Thay một nhiễu bằng lý lẽ nửa đúng: 'vì khách đã quen nên không cần quảng cáo nhiều nữa'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 30 ÷ 120 = 25% ✓ (mẫu số đúng là 120). Sai 15 = 30/200 (sai mẫu số) ✓; 60 = 120/200 (tỉ lệ nhớ chương trình, nhầm chỉ số) ✓. Ví dụ và đào sâu dùng cùng 25% ✓." },
+      "claims": [],
+      "strengths": "Tách rõ hai việc của tên chiến dịch (được nhắc / được nối) và đo bằng một tỉ lệ có mẫu số đúng (30/120); có phản ví dụ (dấu hiệu mượn không còn riêng) và phép kiểm trong tuần có mốc so sánh (25%).",
+      "upgrade": "Để đạt ≥85: (1) gắn nhãn số khảo sát và nêu cách hỏi (không gợi ý) + sai số; (2) nêu ngân sách năm ngoái để phép quy 'ba phần tư của 300 triệu' đứng được; (3) thêm đào sâu về chi phí của việc lặp tên qua năm (cảm giác cũ) và cách làm mới bên trong tên cố định; (4) thêm một câu L6: thiết kế khảo sát sau chiến dịch (hỏi ai, câu gì, mẫu bao nhiêu) để đo tỉ lệ nối đúng, và một câu L5 so hai tên đề xuất với dữ liệu nhận diện của chuỗi (nối tp04-02)."
+    }
+  ],
+  "module_notes": {
+    "progression": "Tiến trình hợp lý: chọn loại tên (01) → kiểm tên trước khi in (02) → ngôn ngữ của tên (03) → slogan là lời hứa (04) → phép thử dán tên đối thủ (05) → lời hứa phải qua vận hành (06) → khi nào đổi slogan (07) → kiến trúc tên mẹ/con (08) → tên chiến dịch (09). Bài 06 nên được tham chiếu từ 04 và 05 vì cả ba cùng xoay quanh 'lời hứa kiểm tra được'. Bài 08 đứng hơi lạc giữa nhóm slogan (04–07) và tên chiến dịch (09); hợp hơn nếu đặt ngay sau 03.",
+    "overlap": [
+      "tp03-04 và tp03-05 cùng dạy 'slogan phải cụ thể, kiểm tra được, chạm điều khách quan tâm' — Q3 của hai bài gần như cùng dạng (chọn câu cụ thể giữa ba câu chung chung).",
+      "tp03-03 'phép kiểm tra trong tuần' (đọc tên cho 5 người, nhờ viết lại) trùng phép nghe–viết của tp03-02.",
+      "tp03-08 (kiến trúc thương hiệu) trùng đáng kể với tp05-03 (mở rộng thương hiệu): cùng câu hỏi 'món mới có khớp lời hứa gốc không', cùng kết luận 'xa thì tách tên'."
+    ],
+    "gaps": [
+      "Không có bài nào nêu cách tra cứu nhãn hiệu cụ thể ở Việt Nam (cơ sở dữ liệu nào, tra nhóm hàng Nice thế nào) dù tp03-02 và tp04-07 đều dựa vào việc này.",
+      "Không bài nào đưa số về chi phí 'dạy' một cái tên hay slogan (bao nhiêu lần tiếp xúc / bao nhiêu tiền để đạt mức nhớ X) — khái niệm 'ngân sách giải thích' của tp03-01 vì thế vẫn định tính.",
+      "Thiếu bài về tagline/slogan cho thương hiệu B2B hoặc dịch vụ không có 'lời hứa kiểm tra bằng mắt' (toàn module dùng ví dụ F&B/bán lẻ).",
+      "Thiếu phần kiểm tên theo tiêu chí kỹ thuật số: tên miền .vn/.com còn trống, handle mạng xã hội, trùng từ khoá tìm kiếm — tp03-02 chỉ nhắc một dòng."
+    ],
+    "best_lesson": "B:tp03-09",
+    "weakest_lesson": "B:tp03-01"
+  }
+}

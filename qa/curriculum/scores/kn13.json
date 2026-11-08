@@ -1,0 +1,162 @@
+{
+  "mod": "kn13",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn13-01",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 12, "examples": 8, "pedagogy": 6, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 63,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ", "quote": "Facebook: 80% lượt xem từ người đã theo dõi. TikTok: 70% từ mục đề xuất, tức người lạ. YouTube: 40% từ tìm kiếm.", "issue": "Ba tỉ lệ nguồn là số tự đặt nhưng phần ví dụ không gắn nhãn minh hoạ (chỉ Q7 mới ghi 'số minh hoạ'); người học dễ nhớ thành 'FB 80% follower, TikTok 70% đề xuất' như benchmark nền tảng.", "fix": "Thêm '(số minh hoạ)' ngay trong ví dụ và một câu: 'tỉ lệ của kênh bạn có thể khác hẳn, chỉ báo cáo của chính kênh mới có giá trị'." },
+        { "sev": "P1", "where": "Q6", "quote": "Coi như tin đồn, rồi bỏ qua mọi thông tin về thuật toán của nền tảng đó từ nay về sau, kể cả tài liệu chính thức", "issue": "Phương án dài bất thường và cực đoan ('mọi', 'kể cả tài liệu chính thức'), cùng Q1 b 'luôn' và d 'chỉ': đáp án đoán được bằng hình thức, không cần đọc bài.", "fix": "Viết nhiễu cùng độ dài, bỏ từ tuyệt đối; thay Q6 bằng câu dữ liệu: cho bảng nguồn người xem 2 tuần và hỏi cửa nào đổi." },
+        { "sev": "P2", "where": "Tình huống / Khái niệm", "quote": "Facebook 1.200 lượt xem, TikTok 14.000 lượt, YouTube 600 lượt", "issue": "Bài so lượt xem ba nền tảng mà không nhắc rằng định nghĩa 'một lượt xem' (ngưỡng giây tính view) khác nhau giữa các nền tảng; đây là lý do thứ hai khiến phép so trực tiếp sai, bên cạnh 'cửa' khác nhau.", "fix": "Thêm một câu trong Khái niệm: 'Mỗi nền tảng đếm lượt xem theo ngưỡng khác nhau — kiểm định nghĩa trong trang trợ giúp trước khi so'." },
+        { "sev": "P2", "where": "Q3", "quote": "[[960,\"SAI_TINH_TOAN\"],[20,\"NHAM_DIEM_PHAN_TRAM\"]]", "issue": "960 là lấy đúng nhóm sai (nhóm đã theo dõi), không phải lỗi tính toán; mã lỗi gắn sai nên phản hồi cho người học sẽ lệch.", "fix": "Đổi mã thành NHAM_NHOM hoặc tương đương ('lấy nhóm đã theo dõi thay vì nhóm chưa theo dõi')." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.200 × (1 − 0,8) = 240 ✓ (tol 1). Sai 960 = 1.200 × 0,8 ✓ đúng là nhóm đã theo dõi; 20 là nhầm điểm phần trăm ✓." },
+      "claims": [
+        { "claim": "Mỗi nền tảng pha ba cửa theo tỉ lệ khác nhau vì giao diện chính của nó khác: nơi mở bằng danh sách người đã theo dõi, nơi bằng khung đề xuất, nơi bằng ô tìm kiếm", "status": "unverified", "note": "Mô tả giao diện nền tảng, không có src; được hedge bằng 'Đừng đoán cơ chế'." },
+        { "claim": "Facebook 80% từ người theo dõi, TikTok 70% đề xuất, YouTube 40% tìm kiếm", "status": "illustrative-unlabelled", "note": "Chỉ Q7 ghi 'số minh hoạ'; phần ví dụ thì không." },
+        { "claim": "Cửa đề xuất mang người nhanh nhưng chỉ bền khi họ xem tiếp", "status": "unverified", "note": "Khẳng định về cơ chế phân phối, hợp lý nhưng không nguồn." }
+      ],
+      "strengths": "Ý 'mỗi kênh một việc, không phải ba bản sao' rõ và đúng; bài tự dặn 'đừng đoán cơ chế, mở báo cáo nguồn của chính kênh' — đúng tinh thần kiểm chứng. Q7 là câu chẩn đoán từ dữ liệu (70% đề xuất nhưng 12% xem hết).",
+      "upgrade": "Để ≥85: (1) gắn nhãn minh hoạ cho ba tỉ lệ nguồn và thêm ghi chú định nghĩa lượt xem khác nhau theo nền tảng; (2) thêm phản ví dụ: kênh có 70% đề xuất nhưng xem hết 60% và 3% vào trang — khi đó quyết định đổi; (3) thay Q1/Q6 bằng câu đọc bảng nguồn người xem 2 tuần (nguồn nào tăng/giảm, viết cho cửa nào); (4) phần Áp dụng ra một quyết định có số: 'gán việc cho từng kênh và một chỉ số mục tiêu cho mỗi việc'; (5) thêm src tới trang trợ giúp 'nguồn lưu lượng' của từng nền tảng với ngày kiểm."
+    },
+    {
+      "id": "B:kn13-02",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 9, "pedagogy": 7, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L2", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ", "quote": "họ cho bản cũ và bản mới chạy song song cho hai nhóm người xem chia ngẫu nhiên từ cùng nguồn", "issue": "Với bài đăng tự nhiên, hầu hết nền tảng không cho chia ngẫu nhiên người xem giữa hai bản video (chỉ có với quảng cáo hoặc công cụ thử của nền tảng nếu có). Ví dụ nêu một phép thử như thể ai cũng làm được, không nói cần điều kiện gì.", "fix": "Ghi rõ: 'bằng hai nhóm quảng cáo cùng đối tượng, hoặc nếu không có công cụ thì đăng hai bản cách nhau, so cùng nguồn và chấp nhận nhiễu'." },
+        { "sev": "P1", "where": "Ví dụ", "quote": "Bản mới còn 78% ở giây 3, bản cũ vẫn 55%", "issue": "Toàn bộ số trong ví dụ (20.000 lượt, 55%, 40%, 38%, 78%) không gắn nhãn minh hoạ.", "fix": "Thêm '(số minh hoạ)' vào ví dụ như các bài kn14-04, kn14-05 đã làm." },
+        { "sev": "P2", "where": "Q6", "quote": "Nó chỉ có ý nghĩa với video dài hơn năm phút", "issue": "Q5, Q6 là câu nhận lại ý bài (L2) với nhiễu dễ loại ('chỉ', 'chắc chắn'); bài đã có dữ liệu đủ để ra câu L4.", "fix": "Thay Q6 bằng câu cho hai video cùng thời gian xem trung bình 11 giây nhưng hai hình dạng đường khác nhau, hỏi sửa gì ở từng video." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20.000 × 0,45 = 9.000 ✓. Q4 kiểm lời giải: mở đầu mất 100−70 = 30 điểm, vách giá mất 66−30 = 36 điểm ✓." },
+      "claims": [
+        { "claim": "Gờ nhô lên: đoạn đáng xem lại, nên học theo", "status": "unverified", "note": "Cách đọc biểu đồ giữ chân phổ biến (gờ = tua lại), hợp lý nhưng không có nguồn." },
+        { "claim": "Số liệu video cà phê 20.000 lượt / 55% / 40% / 38% / 78%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Dạy đọc hình dạng (dốc đầu, dốc đều, vách, gờ, phẳng) rồi nối mỗi hình với một việc sửa — đây là kỹ năng chẩn đoán thật. Q4 (so 30 điểm với 36 điểm) và Q7 (tách theo nguồn) là câu L4 đúng nghĩa.",
+      "upgrade": "Để ≥85: (1) sửa ví dụ A/B cho đúng điều kiện thực (quảng cáo hoặc chấp nhận so trước–sau có nhiễu) và gắn nhãn minh hoạ; (2) thêm phản ví dụ: đường rơi dốc ở 3 giây đầu nhưng do nguồn người xem đổi (đề xuất tăng), không do mở đầu — tức khi nào cách đọc hình dạng sai; (3) thêm ngưỡng nhiễu: với video dưới 1.000 lượt xem, chênh vài điểm là ngẫu nhiên; (4) đổi Q5/Q6 thành câu đọc hai đường cong; (5) nối sang kn15-03 (quy về % độ dài) ở phần Đào sâu."
+    },
+    {
+      "id": "B:kn13-03",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 12, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 66,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L3", "L3"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ", "quote": "Bản A: 50.000 × 8% = 4.000 lượt bấm, mỗi lượt xem 20% video, tức 800 đơn vị.", "issue": "Số không gắn nhãn minh hoạ; đồng thời 'mỗi bản có 50.000 lượt hiển thị' giả định một phép thử ảnh bìa chia đều hiển thị mà bài không nói công cụ nào cho phép (tính năng thử ảnh bìa của nền tảng là thứ thay đổi nhanh, cần src).", "fix": "Gắn nhãn minh hoạ; nói rõ 'nếu nền tảng có công cụ thử ảnh bìa thì dùng, nếu không thì đổi ảnh bìa theo thời gian và so cùng nguồn, chấp nhận nhiễu'." },
+        { "sev": "P1", "where": "Q7", "quote": "Đồng ý, vì CTR là chỉ số chính để đo ảnh bìa trong mọi trường hợp", "issue": "Nhiễu dùng từ tuyệt đối ('mọi trường hợp', Q7 c 'chắc chắn', Q1 a 'luôn', Q1 b 'luôn'); đáp án đúng luôn là câu cân bằng nhất — đoán được bằng hình thức.", "fix": "Viết nhiễu có lý lẽ thật (ví dụ: 'CTR cao vẫn đáng giữ nếu mục tiêu tuần này là reach, không phải xem hết') để buộc cân nhắc mục tiêu." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Một lời hứa quá tay có thể thắng CTR nhưng thua cả trận", "issue": "Không có trường hợp ngược: khi mục tiêu là nhận biết rộng và video ngắn, ảnh bìa CTR cao có thể là lựa chọn đúng; bài thiếu điều kiện áp dụng của 'khối lượng xem'.", "fix": "Thêm một câu phản ví dụ về mục tiêu nhận biết, và nhắc rằng 'đơn vị video' chỉ so được giữa hai bản của cùng một video." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50.000 × 4,5% = 2.250 ✓. Ví dụ: 4.000 × 20% = 800 ✓; 2.250 × 55% = 1.237,5 (bài ghi 1.237, làm tròn xuống) ✓; 1.237,5 ÷ 800 = 1,55 → 'nhiều hơn 50%' ✓; CTR 4,5/8 = 56% → 'thấp hơn gần một nửa' chấp nhận được." },
+      "claims": [
+        { "claim": "Số liệu A/B ảnh bìa: 50.000 hiển thị, CTR 8%/4,5%, xem 20%/55%", "status": "illustrative-unlabelled", "note": "Không có 'số minh hoạ'." },
+        { "claim": "CTR chỉ cho biết lời hứa có kéo được người ta bấm hay không", "status": "verified", "note": "Định nghĩa CTR, kiến thức nền." }
+      ],
+      "strengths": "Phép nhân 'hiển thị × CTR × tỉ lệ xem' cho một thước đo gộp dễ nhớ, và ví dụ cho thấy bản CTR thấp hơn vẫn thắng — đúng loại kết luận ngược trực giác mà người học cần.",
+      "upgrade": "Để ≥85: (1) gắn nhãn minh hoạ, nêu công cụ/điều kiện thử ảnh bìa; (2) thêm phản ví dụ mục tiêu nhận biết (CTR cao hợp lý) và giới hạn 'chỉ so hai bản cùng video'; (3) đưa thêm chiều thứ ba: lượt xem × % xem ra tổng phút xem, nối với kn15-03; (4) đổi ít nhất hai câu quiz sang L4/L5: cho bảng 3 ảnh bìa với CTR, % xem, lượt đăng ký và hỏi chọn bản nào cho mục tiêu nào; (5) phần Áp dụng yêu cầu tính 'đơn vị xem' cho hai ảnh bìa gần nhất của chính kênh."
+    },
+    {
+      "id": "B:kn13-04",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 17, "examples": 12, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L4", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ / Q4", "quote": "nên trụ cột này cần 300 ÷ 25 = 12 bài, nhiều hơn 9 bài nếu chia đều", "issue": "Chia đều 30 bài cho 3 trụ cột là 10 bài, không phải 9; Q4 lại ghi '9 bài của cách chia đều 30%' — 30% không phải chia đều. Hai chỗ nói hai cách khác nhau cho cùng số 9.", "fix": "Thống nhất: 'nhiều hơn 10 bài nếu chia đều ba trụ cột' và sửa lời giải Q4 tương ứng." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "số tin nhắn ÷ số tin mỗi bài kéo về = số bài cho trụ cột gần đơn nhất", "issue": "Thiếu đánh đổi: 12/30 bài là bài bán hàng trực tiếp — bài không nói nguy cơ bão hoà (tin mỗi bài giảm dần khi tăng tần suất) nên phép tính tuyến tính có thể quá lạc quan.", "fix": "Thêm một câu: 'tin mỗi bài thường giảm khi bài bán hàng dày lên; nếu bài 7–12 kéo ít hơn bài 1–6 thì sửa lời mời trước khi thêm bài'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 30 ÷ 0,1 = 300 ✓ (sai 3 = đi xuôi ✓, 3.000 = nhầm điểm % ✓). Q4: 300 ÷ 25 = 12 ✓ (sai 7.500 = nhân ✓; 9 = 30 × 30%, không phải 'chia đều'). Q5: (300 − 90) ÷ 15 = 14 ✓. Ví dụ: 12 + 10 + 8 = 30 ✓; 30 ÷ 6 = 5 buổi ✓." },
+      "claims": [
+        { "claim": "cứ 10 tin nhắn hỏi bánh thì chốt 1 đơn; một bài 'Đặt bánh' kéo 25 tin nhắn", "status": "illustrative-labelled", "note": "Ghi rõ 'số minh hoạ từ tháng trước'." }
+      ],
+      "strengths": "Phép tính ngược mục tiêu → tin nhắn → bài → buổi quay có đủ giả định, công thức và ràng buộc sản xuất; Q5 buộc tính lại giữa tháng với số thật và chọn giữa 'thêm bài' và 'sửa lời mời' — đúng kiểu quyết định thực chiến.",
+      "upgrade": "Để ≥85: (1) sửa '9 bài' thành '10 bài' cho khớp; (2) thêm đánh đổi bão hoà và ràng buộc khác (ngân sách quảng cáo, người trả lời tin nhắn 300 tin/tháng ≈ 10 tin/ngày); (3) thêm phản ví dụ: tháng mục tiêu là nhận biết — phép tính ngược đổi thế nào; (4) thêm một câu L6: thiết kế lịch 2 tuần cho mục tiêu khác với dữ liệu cho sẵn; (5) bảng lịch mẫu 1 tuần (ngày · trụ cột · định dạng · người) để trực quan."
+    },
+    {
+      "id": "B:kn13-05",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 11, "pedagogy": 7, "assessment": 6, "data": 8, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L4", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ / Q4", "quote": "Chia theo ngày, mỗi ngày tuần trước ~7.100, tuần này ~6.000, tức giảm khoảng 16% chứ không phải 40%.", "issue": "Reach là số tài khoản duy nhất, không cộng dồn theo ngày: reach 7 ngày ÷ 7 không phải 'reach mỗi ngày', và reach 5 ngày không bằng 5/7 reach 7 ngày. Phép chuẩn hoá này chỉ gần đúng theo hướng; bài trình bày như phép đúng và Q4 chấm 'so reach trung bình mỗi ngày' là đúng.", "fix": "Ưu tiên 'so cùng 5 ngày (thứ Hai–thứ Sáu) của hai tuần'; nếu chia theo ngày thì ghi rõ đây là ước lượng vì reach không cộng dồn." },
+        { "sev": "P1", "where": "Q7", "quote": "Ngay khi thấy một con số giảm, vì đó luôn là nguyên nhân phổ biến nhất và là nghi phạm cần loại trừ đầu tiên", "issue": "Nhiễu dài hơn hẳn và chứa 'luôn'; Q7 c 'không bao giờ', Q5 a 'tắt mọi quảng cáo từ nay về sau' — đáp án đoán được bằng hình thức.", "fix": "Cân độ dài, bỏ từ tuyệt đối; biến Q7 thành câu dữ liệu: cho reach theo nguồn (follower / không follower / hashtag) hai tuần, hỏi nghi phạm nào còn lại." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Tuần trước có đợt khuyến mãi lớn kèm quảng cáo trả tiền kéo reach.", "issue": "Bài không chỉ cách tách reach trả tiền và tự nhiên trong báo cáo (hai số thường được nền tảng tách riêng) nên bước 2 chưa có 'một số cụ thể' như bài yêu cầu; số liệu ví dụ cũng không gắn nhãn minh hoạ.", "fix": "Thêm số: 'reach tự nhiên tuần trước 32.000, trả tiền 18.000' và gắn nhãn minh hoạ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (50.000 − 30.000) ÷ 50.000 = 40% ✓. Ví dụ: 50.000 ÷ 7 ≈ 7.143; 30.000 ÷ 5 = 6.000; giảm 16% ✓ về số học (nhưng xem defect về reach không cộng dồn)." },
+      "claims": [
+        { "claim": "Reach 50.000 → 30.000; Reels 5 → 2 bài", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Số bài và định dạng thường ảnh hưởng reach", "status": "unverified", "note": "Khẳng định tổng quát, hợp lý, không nguồn." }
+      ],
+      "strengths": "Thứ tự nghi phạm từ rẻ đến đắt (đo sai → mùa vụ → mình đổi → nguồn → thông báo nền tảng → cơ chế) là khung chẩn đoán dùng được ngay; Q6 phân biệt tương quan và nguyên nhân đúng chỗ.",
+      "upgrade": "Để ≥85: (1) sửa phép chuẩn hoá reach (so cùng cửa sổ ngày, ghi rõ reach không cộng dồn); (2) tách reach trả tiền/tự nhiên bằng số; (3) thêm phản ví dụ nơi sau khi loại 5 nghi phạm vẫn còn giảm 25% và tìm thấy thông báo chính thức — để người học thấy bước cuối có thật; (4) thêm ngưỡng 'bao nhiêu % là nhiễu tuần' từ độ lệch chuẩn 8 tuần của chính kênh; (5) viết lại Q7 thành câu dữ liệu, Q1 thành câu chọn thứ tự với lý do."
+    },
+    {
+      "id": "B:kn13-06",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 65,
+      "bloom_items": ["L2", "L3", "L3", "L5", "L3", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "phàn nàn và câu hỏi mua trong 2–4 giờ làm việc, khen trong 24 giờ", "issue": "Hạn trả lời nêu như chuẩn mà không nói đây là mức gợi ý/giả định và không có nguồn hay cách tự đặt mức (từ thời điểm khách thường chốt, hay từ hạn của đối thủ).", "fix": "Ghi 'mức gợi ý để bắt đầu; đo thời gian từ hỏi đến chốt của chính bạn rồi đặt hạn ngắn hơn khoảng đó'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Trong 300 bình luận: 60% khen và tương tác, 25% câu hỏi, 10% phàn nàn, 5% rác.", "issue": "Tỉ lệ phân loại không gắn nhãn minh hoạ; bài không có chỉ số đo quy trình (tỉ lệ trả lời trong hạn) bằng số dù Q7 hỏi về nó.", "fix": "Gắn nhãn minh hoạ và thêm một số đo: 'tuần đầu 61/105 bình luận ưu tiên trả lời trong hạn (58%), mục tiêu 90%'." },
+        { "sev": "P2", "where": "Q6", "quote": "Một bình luận nói sản phẩm gây dị ứng, kèm ảnh.", "issue": "Bài về mỹ phẩm ở Việt Nam nhưng không nhắc rằng phản ứng có hại là việc có nghĩa vụ ghi nhận/báo cáo theo quy định quản lý mỹ phẩm — chỉ nói 'chuyển chăm sóc khách hàng'; thiếu liên kết sang kn12.", "fix": "Thêm một câu: 'với mỹ phẩm/thực phẩm, sự cố sức khoẻ còn là việc pháp chế phải biết — xem kn12', không nêu chi tiết luật nếu không có src." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 300 × (25% + 10%) = 105 ✓. Ví dụ: 30 phàn nàn + 75 câu hỏi = 105 ✓." },
+      "claims": [
+        { "claim": "Hạn trả lời 2–4 giờ làm việc cho phàn nàn và câu hỏi mua, 24 giờ cho khen", "status": "unverified", "note": "Benchmark không nguồn, không gắn nhãn." },
+        { "claim": "Tỉ lệ 60/25/10/5 và 14 lần hỏi 'da nhạy cảm'", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Quy trình bốn bước (phân loại → hạn → leo thang → mẫu lặp thành nội dung) và nguyên tắc 'chỉ ẩn khi vi phạm quy định đã công bố' rõ, đúng; Q4 (lời doạ tố cáo) là câu đánh đổi thật, lời giải phương án sai nêu đúng hiểu lầm.",
+      "upgrade": "Để ≥85: (1) nhãn minh hoạ cho tỉ lệ và nguồn/giả định cho hạn trả lời; (2) thêm chỉ số đo quy trình bằng số và cách đếm; (3) thêm phản ví dụ: khi nào không trả lời (tài khoản troll lặp lại) và khi nào phải khoá bình luận một bài (khủng hoảng); (4) thêm ràng buộc nhân lực: 105 bình luận ưu tiên/tuần với 2 người = bao nhiêu phút/bình luận; (5) nối kn12 cho sự cố sức khoẻ."
+    },
+    {
+      "id": "B:kn13-07",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L4", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Ba số: đơn 41, tỉ lệ nhắn tin 1,2% (480 tin nhắn trên 40.000 reach), CPA 62.000đ.", "issue": "CPA 62.000đ xuất hiện không có chi phí gốc (41 × 62.000 ≈ 2,54 triệu chưa được nêu) và cả ví dụ không gắn nhãn minh hoạ; người học không kiểm lại được số này — trái với chính yêu cầu của bài 'mỗi số cần cách đo để quản lý kiểm lại được'.", "fix": "Thêm 'chi 2,54 triệu quảng cáo ÷ 41 đơn = 62.000đ (số minh hoạ)'." },
+        { "sev": "P2", "where": "Q7", "quote": "tuần sau em thử có và không có video để so", "issue": "Phép thử 'tuần có / tuần không' lẫn mùa vụ và nội dung khác; lời giải khen là 'phép thử có đối chứng' nhưng không nói giới hạn đó.", "fix": "Lời giải thêm: 'so hai tuần vẫn có nhiễu; tốt hơn là chia hai nhóm người xem cùng lúc nếu chạy quảng cáo'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 480 ÷ 40.000 = 1,2% ✓ (sai 83,3 = đảo mẫu ✓; 0,012 = nhầm điểm % ✓). 41/50 = 82% ✓." },
+      "claims": [
+        { "claim": "41/50 đơn, 480 tin nhắn / 40.000 reach, CPA 62.000đ, 18/41 đơn từ video", "status": "illustrative-unlabelled", "note": "CPA không có chi phí gốc." }
+      ],
+      "strengths": "Cấu trúc 'kết luận → ba số gắn mục tiêu → một phát hiện → một đề nghị có người, có hạn' áp dụng được ngay; Q7 buộc phân biệt 'đơn có ghi nhận nguồn' với nhân quả và đề xuất phép thử — câu L5 hiếm gặp trong module.",
+      "upgrade": "Để ≥85: (1) bổ sung chi phí gốc cho CPA và gắn nhãn minh hoạ; (2) thêm phản ví dụ: tuần mục tiêu là nhận biết thì ba số nào (reach người mới, tỉ lệ xem hết, lượt lưu) — tránh người học nghĩ 'luôn là đơn'; (3) thêm mẫu một trang (bảng 3 dòng: số · so với tuần trước · cách đo); (4) thêm câu L6: cho 8 chỉ số, chọn ba số và viết câu mở đầu cho một mục tiêu cho sẵn; (5) nối ngược kn13-05 (phát hiện phải qua chẩn đoán trước khi viết)."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý: được thấy (01) → giữ chân (02) → lời hứa ảnh bìa (03) → lịch nội dung (04) → chẩn đoán giảm (05) → vận hành bình luận (06) → báo cáo (07). Bài 04 và 07 là xương sống thực chiến; 01–03 là nền để đọc số cho 05. Thiếu một bài nối: 'đặt mục tiêu và chỉ số cho từng kênh' đứng giữa 01 và 04.",
+    "overlap": [
+      "Câu 'đồng nghiệp nói chắc chắn thuật toán…' (kn13-01 Q6) lặp lại gần nguyên dạng ở kn14-02 Q6, kn15-05 Q6, kn16-01 Q6 — một khung câu dùng cho bốn module.",
+      "kn13-02 (đường giữ chân) và kn15-03 (quy % độ dài) trùng phần 'mở biểu đồ giữ chân tìm chỗ rơi'.",
+      "kn13-07 Q7 (nguồn đơn chưa là nhân quả) trùng ý kn14-01 Q4 (hỏi khách biết tiệm từ đâu)."
+    ],
+    "gaps": [
+      "Định nghĩa 'lượt xem' và 'reach' khác nhau giữa nền tảng và việc tách reach trả tiền/tự nhiên — cần cho 01 và 05.",
+      "Không bài nào có `src`; mọi mô tả giao diện/cơ chế nền tảng đều chưa có nguồn và ngày kiểm.",
+      "Thiếu bài về nội dung do người dùng tạo (UGC) và cộng đồng/nhóm; thiếu bài xử lý khủng hoảng trên mạng xã hội (06 chỉ dừng ở bình luận lẻ).",
+      "Nhãn 'số minh hoạ' chỉ có ở 04; các bài còn lại dùng số tự đặt không gắn nhãn."
+    ],
+    "best_lesson": "B:kn13-04",
+    "weakest_lesson": "B:kn13-01"
+  }
+}

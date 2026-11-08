@@ -1,0 +1,3 @@
+{ "mod":"qc04", "fixed_at":"2026-11-08", "items":[
+  { "id":"B:qc04-01", "where":"Ví dụ (Lan)", "status":"fixed", "change":"Tình huống thêm ngân sách của Lan: “có 7 triệu/tuần cho quảng cáo”. Ví dụ thêm phép tính câu (4): 7 triệu/tuần ÷ 120.000đ ≈ 58 đơn/tuần, trên mốc 50, rồi mới kết luận “qua cả bốn câu”.", "key_changed":false, "note":"Đã tự kiểm: ví dụ kết luận Lan qua câu 4 mà không có ngân sách — lỗi thật. Q1 (Lan là shop hợp Meta nhất) vẫn đúng và nay có số chống đỡ." } ],
+  "validator":"0 lỗi", "tests":"pass" }

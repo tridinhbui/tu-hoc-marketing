@@ -1,0 +1,171 @@
+{
+  "mod": "tp06",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:tp06-01",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 12, "examples": 9, "pedagogy": 7, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 66,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L3", "L4", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "mental availability (độ sẵn có trong tâm trí, theo Byron Sharp và Jenni Romaniuk, Viện Ehrenberg-Bass)", "issue": "Có ghi tên tác giả nhưng bài không có trường src (sách/bài, năm, ngày kiểm). Thuật ngữ được nêu như định nghĩa chuẩn mà người học không bấm được tới nguồn.", "fix": "Thêm src: Romaniuk & Sharp, How Brands Grow Part 2 (2016), chương về mental availability; ghi ngày kiểm." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[18,\"SAI_MAU_SO\"],[52,\"NHAM_DIEM_PHAN_TRAM\"]]", "issue": "Giá trị sai 52 chỉ ra được nếu người học lấy 70% − 18% = 52 điểm; đây là lỗi hiếm và nhãn NHAM_DIEM_PHAN_TRAM không mô tả đúng việc đó. Phản hồi tự động sẽ gọi sai tên lỗi.", "fix": "Thay bằng lỗi thật hay gặp: 175 ÷ 250 = 70 (nhầm chỉ số, lấy tỉ lệ nhận ra logo) hoặc 45 ÷ 200." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Khoảng cách 55 điểm phần trăm nghĩa là cứ 10 người biết tên thì chỉ khoảng 2 người tự nhớ ra", "issue": "Số 200 người là mẫu nhỏ nhưng bài không nói độ nhiễu của 15% và 70% (±5 và ±6 điểm ở mức 95%); bài tp06-07 cùng module lại dạy điều này, nên hai bài không nhất quán về chuẩn đọc số.", "fix": "Thêm một câu: với 200 người, 15% có thể dao động 10–20%; khoảng cách 55 điểm vẫn chắc chắn vì lớn hơn nhiều so với nhiễu." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Nhận ra khi được nhắc khác tự nhớ ra khi cần", "issue": "Bài không có phản ví dụ và đào sâu như tp06-04/05; không nói khi nào nhận biết có nhắc mới là chỉ số quyết định (hàng mua ở kệ, bao bì làm việc nhắc), dù Q7 đã chạm tới ý này.", "fix": "Thêm phản ví dụ: hãng dầu gội bán 90% ở siêu thị, không nhắc 8% nhưng thị phần cao vì bao bì nhận ra ngay trên kệ; khi đó chỉ số theo dõi là nhận ra bao bì, không phải tự nhớ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 45/175 = 25,71% ✓ (tol 0,2 đủ); 45/250 = 18% ✓. Ví dụ: 140/200 = 70%, 30/200 = 15%, 30/140 = 21,4% ✓. Q4: 30/12 = 2,5 lần ✓." },
+      "claims": [
+        { "claim": "mental availability theo Byron Sharp và Jenni Romaniuk, Viện Ehrenberg-Bass", "status": "unverified", "note": "Gán đúng tác giả theo hiểu biết chung, nhưng không có src trong bài." },
+        { "claim": "Khảo sát 200 bà nội trợ ở Cần Thơ: 140 có nhắc, 30 không nhắc", "status": "illustrative-unlabelled", "note": "Tình huống dựng, số tự khớp, không ghi là minh hoạ." }
+      ],
+      "strengths": "Phân biệt rõ hai thước đo và nối thẳng vào nơi quyết định xảy ra (kệ hàng vs trong đầu); Q6 và Q7 buộc đọc dữ liệu lệch nhau và chọn chỉ số theo kênh bán.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho Ehrenberg-Bass; (2) thêm phản ví dụ hàng mua ở kệ nơi nhận biết có nhắc mới quan trọng; (3) thêm một câu về nhiễu mẫu 200 người; (4) thay Q1 (L2) bằng câu đọc bảng 3 hãng × 2 chỉ số và chọn hãng cần đầu tư vào 'tự nhớ'; (5) thêm bài thực hành có đầu ra: viết báo cáo 5 dòng cho sếp từ hai con số 70%/15%."
+    },
+    {
+      "id": "B:tp06-02",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 13, "examples": 10, "pedagogy": 7, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L4", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1", "quote": "a) Fan trung thành mua đều đặn mỗi tuần và theo dõi trang của hãng · b) Khách trung thành, mua đều đặn mỗi tuần", "issue": "Hai phương án sai gần trùng nhau, câu hỏi thực tế chỉ còn 3 lựa chọn và đáp án d là phương án duy nhất không nói 'trung thành/đánh giá'.", "fix": "Đổi b thành phương án sai khác bản chất, ví dụ 'Người mua số lượng lớn cho cửa hàng tạp hoá bán lại'." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Theo dữ liệu Byron Sharp và Viện Ehrenberg-Bass tổng hợp (How Brands Grow), trong hầu hết ngành hàng, phần đông khách của một thương hiệu là người mua nhẹ", "issue": "Có gán tác giả và có nêu quan điểm đối lập (tốt), nhưng không có src với ngày kiểm; người học không kiểm được 'hầu hết ngành hàng' là bao nhiêu.", "fix": "Thêm src How Brands Grow (Sharp, 2010) chương 4 và ghi rõ dữ liệu gốc chủ yếu là FMCG; ngành thuê bao/B2B có thể khác." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Phương án 1: 20.000 người × 15 = 300.000 lượt, nhưng không thêm ai mới. Phương án 2: 150.000 × 2 = 300.000 lượt", "issue": "Ví dụ giả định hai phương án cùng 60 triệu mua được cùng 300.000 lượt, nghĩa là CPM nhắm lại = CPM tiếp cận rộng. Thực tế hai CPM thường khác; giả định này không được nêu nên người học không biết cần kiểm CPM từng tệp.", "fix": "Thêm câu: 'giả định hai tệp cùng CPM 200.000đ/1.000 lượt; nếu CPM tệp rộng rẻ hơn, phương án 2 còn lợi hơn, và ngược lại' và cho người học tính lại với CPM khác." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì sao người mua nhẹ quan trọng với việc được nhớ tới, dù mỗi người mua ít?", "issue": "Câu L2 nhắc lại ý chính; đáp án b lặp gần nguyên văn 'Mang theo'.", "fix": "Thay bằng câu đọc dữ liệu: bảng phân bố khách theo số lần mua/năm (1 lần: 60%, 2–3 lần: 30%, ≥4 lần: 10%) và hỏi nhóm nào đóng góp bao nhiêu % doanh số, rồi nhóm nào là nơi còn chỗ tăng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 480.000/3 = 160.000 ✓. Ví dụ: 150.000 − 20.000 = 130.000; 4% × 130.000 = 5.200 ✓ (giả sử tập fan nằm trọn trong 150.000)." },
+      "claims": [
+        { "claim": "How Brands Grow (Sharp, Ehrenberg-Bass): phần đông khách của một thương hiệu là người mua nhẹ", "status": "unverified", "note": "Có gán tác giả, có nêu quan điểm đối lập (80/20, giữ chân); thiếu src." },
+        { "claim": "Nếu chỉ 4% trong số đó lần sau nghĩ tới hãng", "status": "illustrative-labelled", "note": "Mở đầu ví dụ bằng 'Giả sử'." }
+      ],
+      "strengths": "Nêu rõ đây là một quan điểm và quan điểm đối lập có điều kiện (hãng nhỏ, thuê bao); phần Áp dụng chỉ đúng hai cột trong báo cáo quảng cáo cần nhìn (tần suất, số người tiếp cận).",
+      "upgrade": "Để đạt ≥85: (1) nêu giả định CPM và cho tính lại khi CPM khác; (2) thêm phản ví dụ nơi nhắm lại là đúng (giỏ hàng bỏ dở, ngành thuê bao) với số; (3) thêm đào sâu: cách đọc đường cong tần suất trong trình quản lý quảng cáo và ngưỡng tần suất nên đặt (kèm 'nếu màn hình khác, tin trang chính thức'); (4) sửa Q1 và Q6 như trên; (5) thêm src."
+    },
+    {
+      "id": "B:tp06-03",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L5", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "100 triệu đầu tiên trong tháng thêm 9 điểm nhớ, mỗi 100 triệu tiếp theo chỉ thêm 3 điểm", "issue": "Quy tắc chỉ định nghĩa cho các bậc 100 triệu; phương án B chi 60 triệu/tháng, bài ngầm dùng 0,6 × 9 = 5,4 điểm (tính lại thì khớp: tháng 8 ≈ 17,0%, trung bình 18,3%) nhưng không nói. Người học tự tính sẽ không ra được 17% và 18,3%.", "fix": "Thêm một câu: 'dưới 100 triệu tính tỉ lệ thuận: 60 triệu thêm 5,4 điểm' hoặc đổi B thành 100 triệu/tháng + 100 triệu Tết để chỉ dùng các bậc đã nêu." },
+        { "sev": "P2", "where": "Tình huống", "quote": "số người tự nhớ ra tên hãng giảm khoảng một phần ba sau mỗi tháng", "issue": "Tốc độ hao mòn là dữ kiện nội bộ của hãng (tốt), nhưng bài không nói con số này nhạy thế nào: nếu chỉ mòn 10%/tháng thì lợi thế của B co lại nhiều. Thiếu phân tích độ nhạy cho giả định quyết định kết luận.", "fix": "Thêm một dòng: 'nếu hao mòn chỉ 10%/tháng, trung bình A ≈ 27%, B ≈ 24% — kết luận đảo; vì vậy đo hao mòn trên khách của bạn trước khi chọn lịch'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "Hãy đo trên chính nhóm khách của bạn.", "issue": "Khuyên đo nhưng không nói đo thế nào (bài tp06-07 mới dạy); không có liên kết rel tới bài 07.", "fix": "Thêm rel: B:tp06-07 và một câu 'cách đo rẻ ở bài 7'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 36 × 0,75² = 20,25% ✓; tuyến tính 36 − 18 = 18 ✓. Mô hình ví dụ chạy lại: A = 24, 40, 26,7 … tháng 8 = 3,51%, TB 11,88% ✓; B (5,4/tháng, 15 tháng Tết) = 15, 25, … tháng 8 = 16,97%, TB 18,28% ✓. Q2c: (2/3)³ = 29,6% ✓. Q6d: (2/3)^10 = 1,73% ✓." },
+      "claims": [
+        { "claim": "mỗi tháng trí nhớ mòn một phần ba; 100 triệu đầu tiên thêm 9 điểm", "status": "illustrative-labelled", "note": "Mở đầu bằng 'Minh hoạ, giả định tự đặt'." },
+        { "claim": "Bằng chứng về lịch chạy tối ưu còn tranh luận", "status": "unverified", "note": "Nói đúng mức, không bịa nghiên cứu; nên dẫn một nguồn (ví dụ tranh luận continuity vs burst của Ephron/Jones) nếu muốn." }
+      ],
+      "strengths": "Ví dụ có mô hình số tự khớp, gắn nhãn giả định, và có tình huống thứ hai (bánh Trung thu) làm đổi kết luận; Q6 là câu đánh giá có biện hộ, Q2 lời giải phương án sai có phép tính (2/3)³.",
+      "upgrade": "Để đạt ≥85: (1) nêu quy tắc cho mức chi dưới 100 triệu; (2) thêm phân tích độ nhạy với tốc độ hao mòn 10%/tháng; (3) thêm đào sâu: cách ước lượng hao mòn từ hai lần đo và cách đặt lớp nền (bao nhiêu % ngân sách); (4) thêm bài thực hành: lập lịch 12 tháng cho một sản phẩm tự chọn với bảng tính đơn giản; (5) nối rel tới tp06-07."
+    },
+    {
+      "id": "B:tp06-04",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L3", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[12,\"SAI_MAU_SO\"],[40,\"SAI_MAU_SO\"]]", "issue": "40 = 160/400 là tỉ lệ 'được nhắc', tức nhầm chỉ số (lấy sai tử số lẫn mẫu số), không phải chỉ sai mẫu số; nhãn phản hồi không đúng lỗi.", "fix": "Đổi nhãn thành NHAM_CHI_SO hoặc thay giá trị bằng 48/400 = 12 và 112/160 = 70 (lấy phần không nhắc đầu tiên)." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì sao đứng thứ ba trong tập cân nhắc thường bất lợi hơn con số \"được nhắc\" cho thấy?", "issue": "Câu L2 nhắc lại khái niệm; đáp án a là câu 'Mang theo' viết lại.", "fix": "Thay bằng câu đọc dữ liệu từ phản ví dụ: cho bảng 'nhắc thứ 2–3 nhưng vẫn đặt đều' và hỏi thứ tự nghĩ tới còn quyết định không." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Ứng dụng của bạn: được nhắc 120/300 = 40%, nhắc đầu tiên 30/300 = 10%", "issue": "Khảo sát 300 người không nói nhiễu mẫu; bài tp06-07 cùng module đặt chuẩn này.", "fix": "Thêm một câu về khoảng dao động của 10% (±3,4 điểm) để người học biết 10% vs 12% là chưa khác." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 48/160 = 30% ✓; 48/400 = 12% ✓. Ví dụ: 30/120 = 25% ✓; 150/210 = 71,4% ✓." },
+      "claims": [
+        { "claim": "hành vi mà Herbert Simon gọi là satisficing", "status": "unverified", "note": "Gán đúng tác giả theo hiểu biết chung (Simon, 1956); không có src." },
+        { "claim": "Khảo sát 300 người đi làm ở Hà Nội", "status": "illustrative-unlabelled", "note": "Tình huống dựng, số tự khớp." }
+      ],
+      "strengths": "Có đủ phản ví dụ (khách cài cả ba app và so khuyến mãi) với dấu hiệu nhận ra, và đào sâu nêu đánh đổi khi dồn vào một khoảnh khắc; quyết định cụ thể ('trưa văn phòng, đặt trước 11 giờ').",
+      "upgrade": "Để đạt ≥85: (1) sửa nhãn Q3 và thay Q6 bằng câu L4 từ phản ví dụ; (2) thêm nhiễu mẫu; (3) thêm src Simon; (4) đào sâu thêm cách đo top of mind theo khoảnh khắc (bảng hỏi 3 tình huống × tên đầu tiên) và cách chọn khoảnh khắc đáng thắng (quy mô × khoảng cách với đối thủ); (5) bài thực hành: từ bảng 3 khoảnh khắc chọn một để đầu tư và biện hộ."
+    },
+    {
+      "id": "B:tp06-05",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 14, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L4", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Q4", "quote": "hướng dẫn của TikTok khuyên đưa nội dung chính vào 3 giây đầu", "issue": "Khẳng định về hướng dẫn của nền tảng nêu như sự thật, không có src, không ngày kiểm, không câu 'nếu tài liệu khác, tin trang chính thức'. Thuộc lớp fast theo rubric, bắt buộc có nguồn.", "fix": "Thêm src tới trang TikTok for Business về creative best practices với ngày kiểm, hoặc bỏ tên nền tảng và viết 'trên video dạng lướt, phần lớn người xem quyết định ở vài giây đầu'." },
+        { "sev": "P2", "where": "Q5", "quote": "Nền tảng thường không chặn vì giống phong cách.", "issue": "Khẳng định về chính sách nền tảng không nguồn; dù là lời giải phương án sai vẫn là một câu người học sẽ tin.", "fix": "Viết lại: 'Giống phong cách không phải lý do thường gặp để bị từ chối; rủi ro chính nằm ở trí nhớ của khách.'" },
+        { "sev": "P2", "where": "Q6", "quote": "Cách nào giúp tên được gắn vào quảng cáo mà không làm câu chuyện gượng ép?", "issue": "Câu L2 nhắc lại 'Vì sao hiệu quả (2)'.", "fix": "Thay bằng câu đọc dữ liệu từ phản ví dụ: tỉ lệ xem hết giảm từ 40% xuống 18% trong khi nối tên tăng từ 30% lên 55% — nên làm gì." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Nghĩa là 70% công sức xây trí nhớ bị rơi mất", "issue": "Chuyển 70% người không nối tên thành '70% công sức' là cách nói quá: người nhớ chuyện mà không nhớ tên có thể nhận ra hãng khi gặp bao bì sau đó; không có bằng chứng rơi hết.", "fix": "Viết: 'khoảng 70% người nhớ quảng cáo không nối được với hãng; phần này không chắc mất hết nhưng không làm việc cho tên bạn'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 105/300 = 35% ✓; 105/500 = 21% ✓; 300/500 = 60% (nhầm chỉ số). Ví dụ: 84/280 = 30%, 84/400 = 21% ✓." },
+      "claims": [
+        { "claim": "hướng dẫn của TikTok khuyên đưa nội dung chính vào 3 giây đầu", "status": "unverified", "note": "Lớp fast, không src." },
+        { "claim": "Khảo sát 400 người đã xem: 280 nhớ, 84 nói đúng hãng", "status": "illustrative-unlabelled", "note": "Tình huống dựng." }
+      ],
+      "strengths": "Có phản ví dụ thật sự làm đổi quyết định (logo to làm giảm tỉ lệ xem hết) và chỉ ra chỉ số cần theo dõi (nối đúng tên trong số người nhớ, 30%); sửa chữa cụ thể tới từng giây.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho khẳng định TikTok hoặc bỏ tên nền tảng; (2) thay Q6 bằng câu L4/L5 cân giữa xem hết và nối tên; (3) sửa câu '70% công sức'; (4) đào sâu nối tới tài sản nhận diện (distinctive assets) với cách đo nhanh (cho xem màu/âm thanh che logo, hỏi hãng nào); (5) bài thực hành: kịch bản 30 giây đánh dấu giây xuất hiện của sản phẩm, tên, màu."
+    },
+    {
+      "id": "B:tp06-06",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 12, "examples": 9, "pedagogy": 7, "assessment": 5, "data": 5, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L1", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q4", "quote": "Một hãng nước mắm có điểm yêu thích cao nhất ngành nhưng thị phần chỉ đứng thứ tư. Giả thuyết nào nên kiểm tra trước?", "issue": "Hai phương án bênh được: c) 'Giá của hãng cao hơn đối thủ quá nhiều' là giả thuyết kinh điển cho hãng được yêu thích nhưng thị phần thấp (hãng cao cấp), lời giải cũng thừa nhận 'Giá là một khả năng'. Đáp án d chỉ đúng khi đã chấp nhận khung của bài; đề không cho dữ kiện loại trừ giá (ví dụ giá ngang đối thủ).", "fix": "Thêm dữ kiện vào đề: 'giá bán ngang ba hãng dẫn đầu' để loại c, hoặc đổi c thành giả thuyết rõ ràng yếu hơn." },
+        { "sev": "P2", "where": "Q5", "quote": "Câu nào mô tả đúng khác biệt giữa nổi bật và yêu thích?", "issue": "Câu định nghĩa L1; đáp án a đoán được vì là phương án duy nhất có cấu trúc 'X là…; Y là…' song song với khái niệm.", "fix": "Thay bằng câu chẩn đoán dữ liệu: bảng 3 hãng với yêu thích/nổi bật/mua tháng qua, hỏi hãng nào đang 'thắng nhờ nổi bật' và hãng nào 'thua dù được thích'." },
+        { "sev": "P2", "where": "Q7", "quote": "Vì sao dồn tiền để \"được yêu thích hơn\" có thể là sai ưu tiên", "issue": "Câu L2 lặp lại Q2 và ví dụ; phương án a và b khác nhau rất mỏng.", "fix": "Thay bằng câu đánh đổi: khi nào quan điểm Aaker/Keller (yêu thích để giữ giá cao) thắng — cho tình huống hãng muốn tăng giá 15% và hỏi chỉ số nào cần theo dõi." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Quan điểm khác (David Aaker, Kevin Keller — tài sản thương hiệu dựa trên khách hàng)", "issue": "Nêu hai trường phái nhưng không nói điều kiện nào thì trường phái nào áp dụng tốt hơn (giá cao, ngành ít mua lặp, dịch vụ); không có src.", "fix": "Thêm hai dòng điều kiện áp dụng và src (Keller 1993 CBBE; Romaniuk & Sharp 2016)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Mua sáng nay: 60/200 = 30% — gấp 3 lần.", "issue": "Mẫu 200 người 'đi ngang' các điểm bán của chuỗi là mẫu lệch về phía chuỗi (hỏi ngay nơi chuỗi có mặt); bài không nhận ra lệch mẫu dù tp06-07 dạy điều đó.", "fix": "Thêm một câu: mẫu hỏi gần điểm bán của chuỗi nên 30% có thể cao hơn thực; cần hỏi ở nơi trung lập." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 75/25 = 3 ✓; 25/75 = 0,33; 75 − 25 = 50 ✓. Ví dụ: 20/200 = 10%, 60/200 = 30%, 70/200 = 35% ✓." },
+      "claims": [
+        { "claim": "Romaniuk và Sharp (Ehrenberg-Bass): salience là khả năng tên bạn bật ra trong đầu lúc mua", "status": "unverified", "note": "Gán đúng theo hiểu biết chung; không src." },
+        { "claim": "David Aaker, Kevin Keller — tài sản thương hiệu dựa trên khách hàng", "status": "unverified", "note": "CBBE là của Keller (1993); Aaker có mô hình riêng (1991). Ghép hai tên vào một nhãn là hơi gộp." }
+      ],
+      "strengths": "Đặt hai trường phái cạnh nhau một cách trung thực thay vì tuyên bố một chân lý; tình huống chuỗi cà phê với 12 điểm bán nối đúng nổi bật tâm trí với độ sẵn có vật lý.",
+      "upgrade": "Để đạt ≥85: (1) sửa Q4 cho một đáp án; (2) thay Q5, Q7 bằng câu chẩn đoán bảng và câu đánh đổi giữa hai trường phái; (3) thêm phản ví dụ nơi yêu thích mới là động lực (hãng muốn giữ giá cao, mua ít lần); (4) nêu lệch mẫu của khảo sát 'đi ngang'; (5) thêm src và liên kết tới bài về độ sẵn có vật lý (phân phối) nếu có."
+    },
+    {
+      "id": "B:tp06-07",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L4", "L3", "L3", "L2", "L4", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "với 200 người mỗi lần, chênh lệch dưới khoảng 7 điểm có thể chỉ là nhiễu", "issue": "Con số 7 điểm đúng (1,96 × √(2 × 0,16 × 0,84 / 200) ≈ 7,2) nhưng bài không nêu cách ra, nên người học không tự tính được cho cỡ mẫu khác (150 người ở Q7, 250 người ở Q3).", "fix": "Thêm công thức rút gọn hoặc bảng tra: n = 100 → ~10 điểm; 200 → ~7; 400 → ~5; 1.000 → ~3 (ở mức tỉ lệ 10–20%)." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "hỏi người mua ngành hàng, không chỉ fan của mình", "issue": "Người đến hội chợ chay là người mua nặng của ngành, không đại diện người mua nhẹ (ý chính của tp06-02). Bài chữa lệch mẫu 'fan' nhưng không nhận ra lệch mẫu 'người mua nặng' ngay trong ví dụ của mình.", "fix": "Thêm một câu: 'hội chợ chay nghiêng về người mua nặng; con số tuyệt đối sẽ cao hơn thị trường, nhưng so trước–sau vẫn hợp lệ nếu giữ cùng nơi hỏi'." },
+        { "sev": "P2", "where": "Q4", "quote": "Trong bảng hỏi, câu nào nên đặt ĐẦU TIÊN?", "issue": "Trùng gần nguyên dạng với Q2 của tp06-01 (thứ tự câu không nhắc trước); câu L2.", "fix": "Thay bằng câu L4: cho 3 câu đã đặt sai thứ tự và kết quả không nhắc 38%, hỏi vì sao con số đáng ngờ và sẽ lệch về hướng nào." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "Cỡ mẫu vài trăm người đủ để thấy thay đổi lớn, không đủ để đọc chênh lệch 1–2 điểm.", "issue": "Không có phản ví dụ và đào sâu; không nói khi nào tự đo không đủ (cần hãng nghiên cứu: nhiều vùng, cần so với đối thủ theo quý).", "fix": "Thêm phản ví dụ: hãng bán 5 tỉnh, mẫu 200 chia 5 vùng còn 40/vùng — không đọc được gì; khi đó gộp vùng hoặc mua tracker." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30/250 = 12%, 50/250 = 20%, chênh 8 điểm ✓; 8/12 = 66,7% tương đối ✓; 50 − 30 = 20 ✓. Ví dụ: 24/200 = 12%, 40/200 = 20%, +8 điểm, +67% ✓; ngưỡng nhiễu ≈ 7,2 điểm ✓. Q6: 5 → 11 = +6 điểm, +120% ✓." },
+      "claims": [
+        { "claim": "với 200 người mỗi lần, chênh lệch dưới khoảng 7 điểm có thể chỉ là nhiễu", "status": "verified", "note": "Tự tính lại: 1,96·√(2·0,16·0,84/200) ≈ 0,072." },
+        { "claim": "Tháng 1 hỏi 200 người ở hội chợ: 24 người tự nêu tên hãng", "status": "illustrative-unlabelled", "note": "Tình huống dựng." }
+      ],
+      "strengths": "Bài hiếm hoi trong module nói về nhiễu mẫu với con số đúng; Q1 và Q6 buộc người học phân biệt điểm phần trăm, tăng tương đối và dao động ngẫu nhiên; ba nguyên tắc đo ngắn và làm được ngay.",
+      "upgrade": "Để đạt ≥85: (1) đưa cách tính ngưỡng nhiễu (bảng tra theo n); (2) nêu lệch mẫu người mua nặng ở hội chợ; (3) thay Q4 trùng với tp06-01; (4) thêm phản ví dụ khi tự đo không đủ; (5) bài thực hành có đầu ra: bảng hỏi 3 câu + kế hoạch lấy mẫu + ngưỡng đọc kết quả cho một quán ăn."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý: 01 đo nhận biết → 02 ai cần nhắc (người mua nhẹ) → 03 nhắc khi nào (đều vs dồn) → 04 nhắc để đứng đầu trong khoảnh khắc → 05 quảng cáo phải gắn tên → 06 nổi bật khác yêu thích → 07 tự đo. Nhưng 07 (nhiễu mẫu, cách hỏi) đặt cuối trong khi 01, 04, 06 đều dùng khảo sát 200–300 người mà không nói nhiễu; nên đưa ý 'ngưỡng nhiễu' vào 01 hoặc chuyển 07 lên sau 01. 03 bảo 'đo trên khách của bạn' nhưng không nối tới 07.",
+    "overlap": [
+      "tp06-01 Q2 và tp06-07 Q4 cùng hỏi thứ tự câu không nhắc trước.",
+      "tp06-04 Q5 (đo top of mind) lặp lại ý đo không nhắc của tp06-01.",
+      "tp06-05 trùng chủ đề và cấu trúc với tp08-05 (nhớ quảng cáo mà không nhớ hãng, cùng tỉ lệ nối tên, cùng 'hãng dẫn đầu')."
+    ],
+    "gaps": [
+      "Tài sản nhận diện riêng (distinctive brand assets): được nhắc trong đào sâu của 05 nhưng không có bài dạy cách chọn và đo (fame/uniqueness).",
+      "Điểm vào ngành hàng (category entry points) — bước làm cụ thể để 'gắn tên với khoảnh khắc' ở bài 04 chưa được dạy.",
+      "Độ sẵn có vật lý (phân phối, vị trí trên kệ) chỉ xuất hiện như dữ kiện ở 06; không có bài về quan hệ giữa độ phủ bán và thị phần.",
+      "Cách tính CPM/chi phí tiếp cận để quyết định tần suất vs độ phủ (bài 02 giả định cùng CPM).",
+      "Không bài nào có src; mọi tên tác giả (Sharp, Romaniuk, Simon, Aaker, Keller) đều unverified."
+    ],
+    "best_lesson": "B:tp06-03",
+    "weakest_lesson": "B:tp06-06"
+  }
+}

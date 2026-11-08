@@ -1,0 +1,20 @@
+{
+ "mod": "tp05",
+ "lessons": [
+  {
+   "id": "B:tp05-02",
+   "title": "Chia ngân sách cho xây thương hiệu và chạy khuyến mãi thế nào?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "example",
+     "quote": "Sang quý ba, số khách mua giá gốc tăng từ 35% lên 48% tổng hoá đơn, nghĩa là mỗi đồng khuyến mãi phải gánh ít hơn.",
+     "issue": "Ví dụ gán kết quả 35→48% cho việc chuyển sang 50/50 mà không có nhóm đối chứng, không loại mùa vụ, và không gắn nhãn số minh hoạ — trái với chính các bài tp04-03/04/06 vốn luôn ghi 'so trước–sau, chưa chứng minh nhân quả'. Tỉ lệ mua giá gốc cũng tự tăng khi bớt phát voucher (ít mã hơn → ít hoá đơn dùng mã) nên chưa nói được gì về thương hiệu.",
+     "fix": "Gắn nhãn '(số minh hoạ)', thêm 'so cùng kỳ năm trước; phần tăng có thể do bớt mã chứ chưa chắc do thương hiệu mạnh hơn — cần kèm chỉ số tìm tên/nhắc tên'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) gắn nhãn và thêm caveat nhân quả cho ví dụ 35→48%; (2) thêm src Binet & Field; (3) thêm phản ví dụ: hãng mới toanh hay hàng mua theo mùa có tỉ lệ khác, hoặc chuỗi đang lỗ dòng tiền phải nghiêng về kích; (4) thêm đào sâu về cách đo tiền xây bằng hai–ba chỉ số (nhắc tên, tìm tên, mua giá gốc) và chu kỳ đọc (quý, không tháng); (5) thêm câu L4 đọc bảng 4 quý có cả khuyến mãi và tìm tên để tách hai hiệu ứng."
+  }
+ ]
+}

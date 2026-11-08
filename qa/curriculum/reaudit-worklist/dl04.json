@@ -1,0 +1,18 @@
+{
+ "mod": "dl04",
+ "lessons": [
+  {
+   "id": "B:dl04-01",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "situation ↔ example",
+     "quote": "mỗi hàng là nhóm khách tải app trong một tháng (tháng 1 đến tháng 6)",
+     "issue": "Cohort được định nghĩa theo tháng tải app, nhưng ví dụ nói tỉ lệ nhảy lên ở tháng 3 \"đúng lúc tiệm đổi thẻ tích điểm sang app\" — nếu app chỉ có từ tháng 3 thì không thể có nhóm tải app tháng 1–2. Khái niệm lại định nghĩa cohort theo lần mua đầu. Ba định nghĩa nhóm khác nhau trong một bài.",
+     "fix": "Thống nhất một mốc cohort (lần mua đầu), và đổi sự kiện tháng 3 thành thứ không mâu thuẫn (vd. ra chương trình tích điểm mới trên app)."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,3 @@
+{ "mod":"tp05", "fixed_at":"2026-11-08", "items":[
+  { "id":"B:tp05-02", "where":"concept", "status":"fixed", "change":"Thêm src Binet & Field (2013), The Long and the Short of It, IPA (URL ipa.co.uk, d 2026-11-07, st chua — cùng mục nguồn đã dùng ở dl10, gt06). Khái niệm: nói rõ 60/40 là mức trung bình trên các chiến dịch dự giải hiệu quả ở Anh; các báo cáo sau của chính hai tác giả cho thấy tỉ lệ khác nhau theo ngành hàng và giai đoạn thương hiệu, nên coi 60/40 là điểm xuất phát.", "key_changed":false, "note":"Đã tự kiểm: benchmark có tên nghiên cứu nhưng không có src — lỗi thật. Nguồn để st 'chua' (chưa mở trang kiểm)." } ],
+  "validator":"0 lỗi", "tests":"pass" }

@@ -1,0 +1,217 @@
+{
+  "mod": "dl05",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:dl05-01",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 14, "examples": 9, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L4", "L5", "L3", "L4", "L4", "L2", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Hãng dẫn đầu cùng ngành chuyển biết → cân nhắc khoảng 65%", "issue": "Mốc so với đối thủ là số tự đặt, không gắn nhãn minh hoạ; Q5 cũng dùng 'ngành khoảng 75%' như sự thật. Người học có thể mang 65%/75% đi làm chuẩn.", "fix": "Ghi '(số minh hoạ)' và nói mốc ngành lấy từ cùng một khảo sát đo đối thủ bằng cùng câu hỏi." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "ưa thích → mua = 18 ÷ 20 = 90%", "issue": "Tỉ lệ chuyển chỉ có nghĩa khi các tầng lồng nhau (người mua ⊂ người ưa thích ⊂ người cân nhắc ⊂ người biết). 'Từng mua trong ba tháng' và 'ưa thích (chọn đầu tiên)' không tự lồng nhau: nhiều người mua vì khuyến mãi mà không ưa thích. Bài không nêu điều kiện lồng nhau khi dựng bảng hỏi.", "fix": "Thêm: 'Chỉ chia tầng dưới cho tầng trên khi tầng dưới được tính trong nhóm tầng trên (lọc lồng nhau khi xử lý số liệu); nếu không, tỉ lệ có thể vượt 100%.'" },
+        { "sev": "P2", "where": "Q4 phương án c", "quote": "B nên học A và dồn tiền vào nhận biết thật nhanh", "issue": "Lời giải thừa nhận 'có phần đúng hướng'; đây là một đề xuất hợp lý từ chính dữ liệu (B tắc ở nhận biết), nên người học có lý khi chọn. Stem 'nhận định có căn cứ nhất' chưa đủ loại c.", "fix": "Đổi c thành phương án rõ sai (vd 'B nên giảm giá vì mua thấp hơn A') hoặc đổi stem thành 'Nhận định nào mô tả đúng dữ liệu (chưa phải đề xuất)?'." },
+        { "sev": "P2", "where": "Q6, Q7", "quote": "Mỗi ngành có nhịp chuyển tự nhiên khác nhau", "issue": "Hai câu L2 với nhiễu dễ loại ('chuẩn quốc tế', 'cho đẹp báo cáo'); thay được bằng câu đọc bảng phễu hai hãng.", "fix": "Thay Q6 bằng câu cho bảng 4 tầng của 3 hãng và hỏi hãng nào tắc ở điểm bán, hãng nào tắc ở thông điệp." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Ví dụ: 24 ÷ 60 = 40% ✓; 20 ÷ 24 = 83,3% ✓; 18 ÷ 20 = 90% ✓. Q3: 90 ÷ 120 = 75% ✓; 18 = 90 ÷ 500 ✓; 30 = 90 ÷ 300 ✓. Q4: 16 ÷ 40 = 40%, 20 ÷ 80 = 25% ✓." },
+      "claims": [
+        { "claim": "Hãng dẫn đầu ngành nước mắm chuyển biết → cân nhắc ~65%; ngành cà phê ưa thích → mua ~75%", "status": "illustrative-unlabelled", "note": "Mốc ngành tự đặt, nêu như dữ kiện." },
+        { "claim": "Khảo sát 400 người nội trợ TP.HCM: 60/24/20/18", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Đổi quyết định ngân sách bằng cách tách tầng (không tăng nhận biết, sửa lý do cân nhắc); Q2 là câu quyết định có biện hộ; Q7 dạy viết câu hỏi đo đúng tầng.",
+      "upgrade": "Nêu điều kiện lồng nhau của phễu và cách lọc; gắn nhãn mốc ngành; thêm phản ví dụ (ngành mua theo thói quen: cân nhắc thấp nhưng mua cao — phễu không tuyến tính); thêm ĐÀO SÂU về sai số của tỉ lệ chuyển ở tầng sâu (24% của 400 = 96 người → ±10 điểm cho tỉ lệ 83%); thay Q6/Q7 bằng câu đọc bảng 3 hãng." },
+    {
+      "id": "B:dl05-02",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 9, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L2", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Cần bao nhiêu người trả lời ở Hà Nội?", "issue": "500 × 40% = 200 là phép nhân một bước (L3 yếu); không kiểm được gì về mẫu đại diện.", "fix": "Thay bằng câu gia trọng: mẫu có 70% sinh viên, tổng thể 20%; nhận biết sinh viên 50%, người đi làm 20% — tính nhận biết gia trọng (= 0,2×50 + 0,8×20 = 26%) so với số thô 41%." },
+        { "sev": "P2", "where": "ĐÀO SÂU", "quote": "Cần ghi rõ cách chọn mẫu và sai số trong hồ sơ", "issue": "Bài nói 'sai số' nhưng không cho con số nào cho mẫu 400 (±4–5 điểm), dù đây là bài nền của module đo lường; chỉ số 22% và 4% nêu không kèm khoảng.", "fix": "Thêm '22% ± 4 điểm với n = 400' và nối sang dl05-08." },
+        { "sev": "P2", "where": "Q1, Q5", "quote": "Thấp hơn nhiều, vì fan là người đã biết sẵn", "issue": "Hai câu L2 nhận lại ý chính; nhiễu Q5 ('trả lời lung tung và cố tình làm sai', 'quy định pháp lý') vô lý.", "fix": "Thay Q5 bằng câu L4: panel cho 22% nhưng tỉ lệ người 'có dùng dưỡng da' trong panel là 95% so với 60% ngoài thị trường — con số 22% nói về ai?" }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 500 × 40% = 200 ✓; 300 = 500 × 60% ✓; 250 = chia đôi ✓." },
+      "claims": [
+        { "claim": "Fanpage 120.000 người theo dõi, 300 phản hồi: 85% biết, 60% ưa thích nhất", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Panel 400 người: nhận biết có nhắc 22%, ưa thích nhất 4%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Có đủ phản ví dụ (fan là mẫu đúng khi hỏi về trải nghiệm) và đào sâu (đánh đổi tiền/thời gian, hai câu hỏi cần hai mẫu); Q7 bắt đúng lỗi đổi nguồn mẫu giữa hai đợt; Q4 dạy gia trọng.",
+      "upgrade": "Đưa sai số vào ví dụ (±4 điểm); thay Q3 bằng câu gia trọng có số; thêm bước làm cụ thể (viết câu lọc, đặt quota, giá tham chiếu panel/người trả lời) để Q2 có ràng buộc tiền; gắn nhãn minh hoạ." },
+    {
+      "id": "B:dl05-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L4", "L6", "L3", "L2", "L4", "L4", "L2"],
+      "bloom_max": "L6",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Phần tăng do chiến dịch = mức tăng của nhóm tiếp xúc trừ mức tăng của nhóm đối chứng", "issue": "Diff-in-diff theo vùng giả định hai vùng có xu hướng song song và không lan toả (quảng cáo Hà Nội không lọt sang Hải Phòng qua mạng xã hội). Hai điều kiện này không được nêu trong khái niệm; Q5 chạm 'nhiễm' nhưng chỉ do KOL.", "fix": "Thêm hai điều kiện: 'xu hướng song song trước chiến dịch (xem 2–3 kỳ trước)' và 'không lan toả — với video online, vùng đối chứng địa lý thường bị nhiễm; khi đó dùng nhóm giữ lại trên nền tảng'." },
+        { "sev": "P2", "where": "Q4", "quote": "Nền tảng quảng cáo cung cấp \"brand lift study\"", "issue": "Khẳng định về tính năng nền tảng không nêu tên nền tảng, ngưỡng ngân sách tối thiểu, hay ngày kiểm; đây là kiến thức 'fast' nhưng không có src.", "fix": "Ghi 'Meta/Google/TikTok đều có, thường yêu cầu ngân sách tối thiểu — kiểm trang trợ giúp chính thức, ngày kiểm' và đặt src." },
+        { "sev": "P2", "where": "Q4, Q7", "quote": "Hai nhóm giống nhau nhờ chia ngẫu nhiên, trừ việc xem quảng cáo", "issue": "Hai câu L2 với nhiễu dễ loại; bài đã có số sai số ±9 điểm nhưng không có câu nào buộc dùng nó.", "fix": "Thay Q7 bằng câu L4: với n = 400 mỗi đợt, lift đo được 3 điểm — kết luận gì và cần n bao nhiêu để ±3 điểm (≈ 3.600)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (29 − 20) − (25 − 21) = 5 ✓. Ví dụ: 8 − 5 = 3 ✓; sai số hiệu của 4 tỉ lệ độc lập n = 400, p ≈ 0,3: 1,96 × √(4 × 0,21 ÷ 400) = ±9,0 điểm ✓ khớp '±9'." },
+      "claims": [
+        { "claim": "Nền tảng quảng cáo cung cấp brand lift study chia ngẫu nhiên nhóm xem/giữ lại", "status": "unverified", "note": "Đúng về nguyên tắc với Meta/Google/TikTok nhưng không nêu tên, điều kiện, ngày kiểm." },
+        { "claim": "Hà Nội 30 → 38%, Hải Phòng 28 → 33%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ví dụ kết thúc bằng câu nói thật về độ chắc chắn ('3 điểm chưa phân biệt được với 0', cần vài nghìn người) — hiếm có; Q5 (đối chứng bị nhiễm làm ước thấp) và Q6 (nhớ quảng cáo +12, cân nhắc +1) là câu L4 tốt; Q2 là câu thiết kế (L6).",
+      "upgrade": "Nêu hai điều kiện DiD (song song, không lan toả) và phản ví dụ vùng bị nhiễm qua mạng xã hội; đặt src cho brand lift study của nền tảng; thay Q7 bằng câu dùng sai số để quyết định cỡ mẫu; gắn nhãn minh hoạ." },
+    {
+      "id": "B:dl05-04",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 13, "examples": 9, "pedagogy": 7, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L3", "L5", "L3", "L2", "L4", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Trừ đi, còn 5.500 lượt tìm với ý định thật (menu, địa chỉ, giờ mở)", "issue": "Giả định mọi lượt không kèm 'ngộ độc' là ý định thật, trong khi tin xấu còn kéo lượt tìm tên trần (không kèm cụm). Số 3.500/5.500/3.800 không gắn nhãn; không nói công cụ nào cho lượt tuyệt đối (Google Trends chỉ cho chỉ số tương đối 0–100).", "fix": "Ghi 'số minh hoạ; Google Trends cho chỉ số tương đối, lượt tuyệt đối cần Keyword Planner/Search Console' và thêm 'một phần lượt tìm tên trần cũng do tin xấu — so với lượt ghé quán để ước'." },
+        { "sev": "P2", "where": "Q7", "quote": "Người đã biết tìm nhiều hơn; số người biết chưa đổi", "issue": "Giải thích hợp lý nhưng bỏ qua giải thích đơn giản hơn: tăng 30% lượt tìm nằm trong nhiễu hoặc khảo sát quý có sai số ±5 điểm nên 'không đổi' chưa chắc; stem không cho cỡ mẫu.", "fix": "Thêm vào lời giải c: 'trước hết kiểm cả hai số có vượt nhiễu không (dl05-08)'." },
+        { "sev": "P2", "where": "Q4, Q6", "quote": "Vì công cụ tìm kiếm chỉ lưu dữ liệu theo năm", "issue": "Nhiễu vô lý làm câu thành L2; Q4 đoán được bằng loại trừ.", "fix": "Đổi nhiễu Q4 thành lý do nghe hợp lý nhưng sai ('vì tháng trước có khuyến mãi' — không phải lý do chung); Q6 thành câu tình huống đo tên 'Mộc' với dữ liệu hai cụm." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 8.000 − 1.200 − 800 = 6.000; (6.000 − 5.000) ÷ 5.000 = 20% ✓; 60 = (8.000 − 5.000) ÷ 5.000 ✓; 37,5 = 3.000 ÷ 8.000 ✓. Ví dụ: 9.000 − 3.500 = 5.500; 5.500 ÷ 3.800 − 1 = 44,7% ✓; 9.000 ÷ 4.000 − 1 = 125% ✓." },
+      "claims": [
+        { "claim": "Lượt tìm tên trên Google và TikTok: 4.000 → 9.000", "status": "illustrative-unlabelled", "note": "Nền tảng thật, số tự đặt; không nói công cụ nào cho lượt tuyệt đối." },
+        { "claim": "Người ta chỉ gõ tên một thương hiệu khi tên đó đã có trong đầu", "status": "unverified", "note": "Cơ chế hợp lý, nêu như hiển nhiên." }
+      ],
+      "strengths": "Dạy lọc cụm đi kèm và đối chiếu nguồn độc lập (lượt ghé quán) — việc làm ngay được; Q5 (săn mã) và Q7 (tìm nhiều hơn ≠ biết nhiều hơn) phân biệt hai khái niệm.",
+      "upgrade": "Nêu công cụ và đơn vị (chỉ số tương đối vs lượt tuyệt đối); gắn nhãn số; thêm phản ví dụ (thương hiệu B2B/ngành ít ai gõ tên — tín hiệu quá mỏng); thêm cách đặt cảnh báo (ngưỡng % lượt tiêu cực); sửa nhiễu Q4/Q6; nối Q7 với sai số." },
+    {
+      "id": "B:dl05-05",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 13, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L4", "L3", "L1"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "ô tô, năng lượng, điện thoại theo nghiên cứu của Les Binet, IPA 2020", "issue": "Nêu nghiên cứu thật (tác giả, tổ chức, năm) như bằng chứng nhưng bài không có trường src với liên kết và ngày kiểm; kiến thức loại periodic bắt buộc có nguồn. Cũng không nói độ trễ cụ thể Binet báo (6–12 tháng tuỳ ngành) nên 'đi trước' không dùng được để lập kế hoạch.", "fix": "Thêm src: Les Binet, 'Share of Search as a Predictor of Market Share', IPA/EffWorks 2020 (link, ngày kiểm) và ghi độ trễ ước lượng theo ngành; ghi rõ nghiên cứu dùng Google Trends, không phải lượt tuyệt đối." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "nếu share of search giữ trên 16% thêm hai quý (ngưỡng minh hoạ…)", "issue": "Quyết định mở rộng phân phối treo vào một ngưỡng không có tiền hay rủi ro đi kèm; chưa nói nếu sai thì mất gì.", "fix": "Thêm chi phí mở rộng phân phối và điều kiện rút lại." },
+        { "sev": "P2", "where": "Q7", "quote": "Dữ liệu gần như miễn phí, cập nhật hàng tuần", "issue": "Câu L1 với nhiễu 'pháp luật không cho' vô lý.", "fix": "Thay bằng câu L4: cho rổ 5 hãng với lượt tìm 2 quý, một hãng đổi tên — tính lại share đúng." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Ví dụ: 70 ÷ 480 = 14,6%; 90 ÷ 500 = 18%; chênh 3,4 điểm ✓; 18 − 12 = 6 ✓. Q3: 60 ÷ 400 = 15%; 20 − 15 = 5 ✓. Q4: 70 ÷ 500 = 14%; 84 ÷ 600 = 14%; 0 điểm ✓; 20 = tăng lượt tuyệt đối ✓." },
+      "claims": [
+        { "claim": "Share of search đi trước thị phần ở ô tô, năng lượng, điện thoại — Les Binet, IPA 2020", "status": "unverified", "note": "Nghiên cứu thật, khớp hiểu biết chung, nhưng không có src/ngày kiểm trong bài." },
+        { "claim": "Với FMCG như bột giặt, lượt tìm nhỏ và dễ nhiễu nên chỉ coi là tín hiệu phụ", "status": "unverified", "note": "Điều kiện áp dụng tốt, nêu như nhận định." },
+        { "claim": "Bột giặt: 90.000/500.000 lượt; thị phần 12%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Nêu rõ điều kiện ngành (FMCG ít gõ tên) và điều kiện kỹ thuật (cùng rổ, lọc trùng tên, chỉ báo xu hướng); Q4 (lượt tăng 20% nhưng share đứng yên) và Q5 (độ bền sau chiến dịch) là câu L4 đúng chỗ.",
+      "upgrade": "Đặt src cho Binet/IPA với độ trễ theo ngành và công cụ (Trends); thêm phản ví dụ thương hiệu nhỏ có share of search cao vì tên trùng từ thông dụng; thêm số tiền cho quyết định mở rộng phân phối; thay Q7 bằng câu tính lại rổ." },
+    {
+      "id": "B:dl05-06",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 9, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L2", "L1"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Hỏi lại ở tháng thứ ba với cả người đã huỷ: NPS còn 12", "issue": "Tỉ lệ trả lời của người đã huỷ thường rất thấp và lệch (người bực mới trả lời), nên NPS 12 có thiên lệch ngược chiều; bài không nêu. Số không gắn nhãn minh hoạ.", "fix": "Thêm 'ghi tỉ lệ trả lời của hai nhóm; nếu người huỷ trả lời 15% còn người ở lại 40%, đọc riêng hai nhóm' và nhãn minh hoạ." },
+        { "sev": "P2", "where": "Q4 lời giải a", "quote": "Mẫu 20 người, một người đổi ý là NPS nhảy 5 điểm", "issue": "Đúng nhưng chưa đủ: NPS là hiệu hai tỉ lệ nên sai số còn lớn hơn một tỉ lệ; với n = 20, ±25–30 điểm. Bài không cho cách ước sai số NPS.", "fix": "Thêm quy tắc nhẩm: sai số NPS ≈ 2 × sai số một tỉ lệ ≈ ±2 × 1,96 × √(0,25/n) × 100 (n = 20 → ±44 lý thuyết cực đại; ±25–30 thực tế); nối dl05-08." },
+        { "sev": "P2", "where": "Q7", "quote": "Phần nào của khảo sát NPS thường có giá trị nhất để cải thiện dịch vụ?", "issue": "L1, nhiễu dễ loại ('tỉ lệ mở tin nhắn').", "fix": "Thay bằng câu L4: bảng NPS 4 chi nhánh với n khác nhau và tỉ lệ gia hạn — chi nhánh nào đáng xem." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Tình huống: 55 − 10 = 45 ✓. Q3: 480 ÷ 1.200 = 40%; 300 ÷ 1.200 = 25%; 40 − 25 = 15 ✓; 180 = 480 − 300 ✓; 40 = chỉ lấy % ủng hộ ✓. Q4: 1 ÷ 20 = 5 điểm ✓." },
+      "claims": [
+        { "claim": "NPS = % 9–10 − % 0–6", "status": "verified", "note": "Định nghĩa chuẩn, không cần nguồn." },
+        { "claim": "Chuỗi gym: NPS 45 sau buổi đầu, 12 ở tháng ba", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Đề xuất rõ và đúng (thưởng theo gia hạn, NPS làm chỉ báo, đo ở tháng ba); Q5 bắt lỗi đổi đối tượng hỏi; Q6 nêu hậu quả thật của xin điểm (mất tác dụng báo hiệu).",
+      "upgrade": "Thêm sai số NPS theo n và dùng trong Q4; nêu thiên lệch trả lời của người đã huỷ; thêm phản ví dụ (ngành mà NPS gần như vô nghĩa: độc quyền, mua một lần); thêm ĐÀO SÂU nối NPS với hành vi (so NPS với tỉ lệ gia hạn thực theo nhóm điểm); thay Q7." },
+    {
+      "id": "B:dl05-07",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 10, "pedagogy": 7, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L5", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Đọc tay 200 bài ngẫu nhiên trong nhóm \"trung tính\": khoảng 25% thực ra tiêu cực", "issue": "Chỉ hiệu chỉnh nhóm trung tính; không kiểm nhóm 'tích cực' (mỉa mai thường bị máy chấm tích cực, chính Q4 nói vậy) nên 20% tích cực vẫn là số máy. Hiệu chỉnh nửa chừng.", "fix": "Đọc tay cả ba nhóm (vd 100 bài/nhóm), nêu ma trận nhầm và tính lại cả ba tỉ lệ." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "tỉ lệ ròng = (tích cực − tiêu cực) ÷ (tích cực + tiêu cực)", "issue": "Không nêu lượt nhắc bị seeding/bot và lượt nhắc của chính thương hiệu/đại lý, vốn thường chiếm phần lớn 'tích cực' trong mùa quà tặng; cũng không nói mẫu 200 bài cho sai số ±6 điểm.", "fix": "Thêm bước lọc tài khoản thương hiệu/đại lý và ghi sai số của tỉ lệ đọc tay." },
+        { "sev": "P2", "where": "Q6", "quote": "Tích cực có thể tăng chỉ vì tổng lượt nhắc tăng", "issue": "Câu L2; nhiễu c, d dễ loại.", "fix": "Thay bằng câu L4: hai tháng có 600/200 và 1.500/600 tích cực/tiêu cực — tỉ lệ ròng đổi thế nào và kết luận." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Ví dụ: 10 + 70 × 25% = 27,5% ✓; (20 − 27,5) ÷ 47,5 = −15,8% ✓; (20 − 10) ÷ 30 = +33% ✓. Q3: 400 ÷ 800 = 50% ✓; 20 = 400 ÷ 2.000 ✓." },
+      "claims": [
+        { "claim": "Máy chấm cảm xúc tiếng Việt hay sai với tiếng lóng, mỉa mai, viết tắt", "status": "unverified", "note": "Khớp kinh nghiệm phổ biến, nêu như sự thật, không nguồn." },
+        { "claim": "Bánh trung thu 3.000 → 9.000 lượt nhắc, 70/20/10", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ví dụ đảo dấu kết luận (+33% → −16%) bằng một bước kiểm tay có số; Q5 chuyển chủ đề tiêu cực cho vận hành — đúng mục đích lắng nghe; Q7 nêu giới hạn công cụ theo ngành.",
+      "upgrade": "Hiệu chỉnh cả ba nhóm với ma trận nhầm; thêm lọc seeding/tài khoản thương hiệu; nêu sai số của mẫu đọc tay; thêm phản ví dụ (phốt nhỏ nhưng lan nhanh — khi nào tỉ lệ ròng lừa); thay Q6 bằng câu so hai tháng." },
+    {
+      "id": "B:dl05-08",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 7, "assessment": 9, "data": 10, "clarity": 4 },
+      "total": 84,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L5", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "sai số ≈ 1,96 × căn bậc hai của p × (1 − p) ÷ n", "issue": "Công thức giả định mẫu ngẫu nhiên đơn; với panel có quota/gia trọng, sai số thực lớn hơn (hiệu ứng thiết kế 1,2–1,5). Không nêu nên người học áp vào khảo sát fanpage (dl05-02) ra sai số đẹp giả.", "fix": "Thêm một câu: 'Chỉ đúng với mẫu ngẫu nhiên; mẫu có quota/gia trọng nhân thêm ~1,2–1,5; mẫu lệch (fan) thì sai số không có nghĩa.'" },
+        { "sev": "P2", "where": "Q7 lời giải a", "quote": "chênh lệch quý đầu với quý cuối (9 điểm) vượt sai số của chênh lệch (khoảng ±8 điểm) thì khó là ngẫu nhiên", "issue": "So quý đầu với quý cuối là chọn cặp xa nhất trong 4 điểm (so sánh nhiều lần), làm tăng khả năng vượt ngưỡng do ngẫu nhiên; lập luận đúng hơn là 'ba lần giảm liên tiếp cùng chiều có xác suất ngẫu nhiên ~1/8 và xu hướng hồi quy'.", "fix": "Đổi lời giải: nhấn 'xu hướng đơn chiều qua 4 điểm' và gợi gộp hai quý đầu so hai quý cuối (n = 500 mỗi bên, ±5,8 điểm, chênh 6)." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "khảo sát nhận biết mỗi quý với 250 người", "issue": "Số không gắn nhãn minh hoạ (nhỏ vì bài đã nêu công thức và tính lại được)." , "fix": "Thêm nhãn." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Khái niệm: 1,96 × √(0,3 × 0,7 ÷ 250) = ±5,68 ✓; ví dụ p = 0,32: ±5,78 ✓; hiệu: 1,96 × √(0,34×0,66/250 + 0,30×0,70/250) = ±8,17 ✓; n = 1.000: ±2,89 ✓, hiệu ±4,09 ✓. Q3: 1,96 × √(0,25 ÷ 400) = 0,049 ✓. Q4: 300 × 4 = 1.200 ✓ (±5,6 với p = 0,5, n = 300 ✓). Q5: n = 150, p = 0,3 → ±7,3 ✓. Q6: n = 80 → ±10,0 ✓." },
+      "claims": [
+        { "claim": "Công thức sai số 1,96 × √(p(1−p)/n) và nhân √2 cho hiệu hai tỉ lệ độc lập", "status": "verified", "note": "Toán chuẩn; kiểm lại đúng." },
+        { "claim": "Dầu gội: 34% → 30% với n = 250", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Bài tốt nhất module: công thức đầy đủ, tính lại được từng con số (±5,7 / ±8,2 / ±2,9), quyết định có số (không xin tiền, nâng mẫu lên 1.000), sai hay gặp nêu đúng hiểu lầm (gấp đôi mẫu ≠ nửa sai số); Q5 (trung bình trượt), Q6 (nhóm con), Q7 (xu hướng nhiều kỳ) phủ ba tình huống thật.",
+      "upgrade": "Nêu điều kiện mẫu ngẫu nhiên và hiệu ứng thiết kế; sửa lập luận Q7 (so sánh nhiều lần); thêm phản ví dụ (chênh vượt sai số nhưng do đổi câu hỏi — nối dl05-09); thêm bảng tra nhanh n → sai số để người học mang đi; gắn nhãn minh hoạ." },
+    {
+      "id": "B:dl05-09",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L6", "L3", "L5", "L2", "L4", "L2"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Chi phí khoảng 45 triệu mỗi đợt, tổng 180 triệu", "issue": "Giá 45 triệu/600 người (75.000đ/người) nêu như dữ kiện, không gắn nhãn minh hoạ, không nói đã gồm phí thiết kế/phân tích; Q3 dùng lại 75.000đ như giá chuẩn.", "fix": "Ghi '(giá minh hoạ, tuỳ panel và độ dài bảng hỏi)'." },
+        { "sev": "P2", "where": "Q1, Q5, Q7", "quote": "Mỗi đợt đo một cách nên không so được với nhau", "issue": "Ba câu L2 nhận lại ý MANG THEO với nhiễu dễ loại ('công ty khảo sát đều làm sai', 'quy định bắt buộc', 'chi phí in').", "fix": "Thay Q5 bằng câu L4: cho chuỗi 4 quý có một quý đổi nhà cung cấp và nhảy 6 điểm — đọc thế nào; thay Q7 bằng câu đọc nhận biết có nhắc khi rổ gợi ý thêm một tên." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "nhận biết không nhắc và có nhắc", "issue": "Lần đầu hai khái niệm này xuất hiện trong module nhưng không định nghĩa (TOM, unaided, aided) và không nói thứ tự hỏi bắt buộc (không nhắc trước có nhắc).", "fix": "Thêm một câu định nghĩa và quy tắc thứ tự hỏi; nối Q7 với hiệu ứng rổ gợi ý." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 240 − 30 = 210; 210 ÷ 4 = 52,5 triệu; 52.500.000 ÷ 75.000 = 700 ✓; 800 = 60 ÷ 0,075 (quên trừ 30) ✓; 2.800 = 210 ÷ 0,075 ✓. Ví dụ: 45 × 4 = 180; 180 + 20 = 200 ✓." },
+      "claims": [
+        { "claim": "Nhịp quý hợp với phần lớn ngành tiêu dùng", "status": "unverified", "note": "Khái quát hợp lý, nêu như nhận định." },
+        { "claim": "600 người/đợt ≈ 45 triệu (75.000đ/người)", "status": "illustrative-unlabelled", "note": "Giá panel nêu như dữ kiện." }
+      ],
+      "strengths": "Có đủ phản ví dụ (đổi bao bì/vị mới làm bộ câu hỏi lạc hậu) và đào sâu (lõi cố định + phần mở, đánh đổi độ dài bảng hỏi); Q4 (chạy song song hai câu một kỳ) là kỹ thuật nghề thật; Q6 nêu báo động giả khi theo dõi 40 chỉ số.",
+      "upgrade": "Định nghĩa không nhắc/có nhắc và thứ tự hỏi; gắn nhãn giá; thêm bảng mẫu 12 câu hỏi (hoặc 6) để ÁP DỤNG có khung; thay 2 câu L2 bằng câu đọc chuỗi có gãy và câu hiệu ứng rổ gợi ý; thêm số sai số cho 600 người (±4 điểm) vào ví dụ." },
+    {
+      "id": "B:dl05-10",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L5", "L3", "L5", "L3", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "share of search 21% (thị phần 19%)", "issue": "Chỉ số duy nhất trong bảng không có cột 'thay đổi so kỳ trước' và 'sai số', trái với chính quy tắc bài đặt ra (mỗi chỉ số có giá trị, thay đổi, so đối thủ, đánh dấu sai số).", "fix": "Thêm '+1,5 điểm so quý trước; rổ 5 hãng không đổi'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Đề xuất: nhóm sản phẩm thử dòng ít đường trong quý tới", "issue": "Nhảy từ 'cân nhắc giảm 7 điểm' + 'chủ đề tiêu cực: nhiều đường' sang quyết định sản phẩm mà không nêu dữ kiện nối (tỉ lệ nhắc 'nhiều đường' trong lý do không cân nhắc, so với đối thủ); tương quan hai nguồn được đọc như nhân quả.", "fix": "Thêm một dòng bằng chứng: 'trong câu hỏi mở về lý do không chọn, 38% nhắc đường (quý trước 22%)' và ghi đề xuất là thử nghiệm có đo." },
+        { "sev": "P2", "where": "Q1, Q5", "quote": "Thiếu câu kết luận ngay đầu trang", "issue": "Hai câu L2–L3 nhận lại ý bài với nhiễu dễ loại ('biểu đồ đẹp', 'ghi giảm để an toàn').", "fix": "Thay Q5 bằng câu L4: cho bảng 4 chỉ số với thay đổi và sai số, hỏi câu kết luận một dòng nào đúng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 38 − 31 = 7; sai số một kỳ n = 700, p ≈ 0,35: ±3,53 ✓; hiệu ×√2 = ±5,0 ≈ 4,9 ✓; 7 − 4,9 = 2,1 ✓; 18,4 = 7 ÷ 38 ✓." },
+      "claims": [
+        { "claim": "Sữa chua: nhận biết 72%, cân nhắc 31% (−7), ưa thích 14%, share of search 21%/thị phần 19%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Khung 'Ổn không? Vì sao? Làm gì?' với yêu cầu đánh dấu sai số trên từng chỉ số — tổng hợp đúng module; Q4 (đề xuất có phạm vi, thời hạn, chủ sở hữu) và Q6 (kết luận 'ổn định' cũng là kết luận) là câu đánh giá tốt; Q7 nối chỉ số thương hiệu với doanh số qua phễu.",
+      "upgrade": "Hoàn thiện bảng ví dụ theo đúng quy tắc của bài (mọi chỉ số có thay đổi + sai số); thêm bằng chứng nối 'nhiều đường' → cân nhắc giảm và ghi đề xuất là thử nghiệm; thêm phản ví dụ (một trang che mất tín hiệu ở nhóm con — khi nào phải xuống phụ lục); thay Q5 bằng câu đọc bảng; gắn nhãn minh hoạ; cho mẫu một trang thật (bố cục) để ÁP DỤNG có khung." }
+  ],
+  "module_notes": {
+    "progression": "Trình tự chặt: phễu thương hiệu (01) → mẫu đại diện (02) → brand lift/đối chứng (03) → tìm kiếm tên (04) → share of search (05) → NPS (06) → lắng nghe (07) → sai số (08) → tracking định kỳ (09) → báo cáo một trang (10). Điểm hay: 03 trích trước sai số của 08; 10 tổng hợp 01/05/07/08. Điểm yếu: 08 (sai số) đến quá muộn — 01, 02, 04, 06, 07 đều đọc chênh lệch mà chưa có công cụ sai số; nên đưa 08 lên sau 02. Chỉ 02 và 09 có phản ví dụ + đào sâu; không bài nào gắn nhãn số minh hoạ (trừ ngưỡng 16% ở 05).",
+    "overlap": [
+      "dl05-04 và dl05-05 cùng dạy lọc nhiễu lượt tìm (tên trùng, tin xấu) — Q6 của 05 lặp ý Q1/Q2 của 04.",
+      "dl05-03 (brand lift vùng đối chứng) trùng cơ chế DiD với dl06-07 (incrementality vùng) — nên liên kết chéo rõ hai bài.",
+      "dl05-02 Q7 và dl05-09 Q1/Q4 cùng dạy 'đổi cách đo thì không so được'."
+    ],
+    "gaps": [
+      "Định nghĩa nhận biết không nhắc / có nhắc / top-of-mind và thứ tự hỏi (chỉ nhắc tên ở dl05-09, không định nghĩa).",
+      "Đo liên tưởng/hình ảnh thương hiệu (image attributes, điểm khác biệt) — nêu trong bộ tracking (09) nhưng không có bài đọc bảng liên tưởng.",
+      "Điều kiện lồng nhau của phễu và thiết kế bảng hỏi (thứ tự câu, hiệu ứng rổ gợi ý, câu lọc) — chỉ chạm rời rạc.",
+      "Gia trọng (weighting) chỉ xuất hiện trong một phương án đáp án (dl05-02 Q4), không có phép tính.",
+      "Hiệu ứng thiết kế mẫu (panel/quota) lên sai số; sai số của NPS (hiệu hai tỉ lệ) chưa có công thức.",
+      "Nối chỉ số thương hiệu với kinh doanh (penetration, mức mua lại) chỉ ở dl05-10 Q7, chưa có bài."
+    ],
+    "best_lesson": "B:dl05-08",
+    "weakest_lesson": "B:dl05-04"
+  }
+}

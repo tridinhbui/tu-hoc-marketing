@@ -1,0 +1,3 @@
+{ "mod":"ob08", "fixed_at":"2026-11-07", "items":[
+  { "id":"B:ob08-07", "where":"Q2", "status":"fixed", "change":"Thêm dữ kiện vào đề Q2: “Tháng vừa rồi, thử bán không mã ở 5 căng tin văn phòng gần đó: 400 chai bán được ở giá gốc 60.000đ.” Lời giải a đổi từ “một lựa chọn có lý” thành: chỉ có lý nếu khách không chịu mua ở giá gốc, mà 400 chai bán đúng giá cho thấy khách văn phòng vẫn mua ở 60.000đ; đổi sang “trà giá rẻ” là bỏ nhóm khách khớp định vị. Lời giải c nối với dữ kiện mới (bắt đầu từ kênh căng tin đã bán được đúng giá).", "key_changed":false, "note":"Đã tự kiểm: trước sửa, dữ kiện 80% qua mã khiến a và c cùng bênh được; lỗi thật. Giữ khoá c." } ],
+  "validator":"0 lỗi", "tests":"pass" }

@@ -1,0 +1,72 @@
+{
+ "mod": "tn06",
+ "lessons": [
+  {
+   "id": "B:tn06-01",
+   "title": "Nên bỏ bao nhiêu tiền để thử một kênh mới?",
+   "total": 66,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM / VÍ DỤ",
+     "quote": "Shop muốn có khoảng 40 đơn để đọc được kết quả",
+     "issue": "Con số 40 (và \"thường vài chục đơn\") không có cơ sở nêu ra: không nói với 40 đơn thì chi phí mỗi đơn dao động ±bao nhiêu, nên người học không biết khi nào cần 20 hay 100 đơn.",
+     "fix": "Thêm: với n đơn, sai số tương đối của chi phí/đơn ≈ 1/√n; 40 đơn → ±16%; muốn phân biệt kênh mới đắt hơn 20% thì cần ~100 đơn; chọn số đơn theo mức chênh muốn thấy."
+    }
+   ],
+   "upgrade": "Thêm cơ sở thống kê sơ cấp cho số đơn cần; gộp hai câu tính thành một câu L4; thêm phản ví dụ chu kỳ mua dài; nối với tn06-02 và tn06-06; gắn nhãn minh hoạ."
+  },
+  {
+   "id": "B:tn06-03",
+   "title": "Kênh mới chạy 3 ngày đã đắt — tắt ngay hay chờ?",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q4 stem / KHÁI NIỆM",
+     "quote": "Nền tảng khuyến nghị khoảng 50 chuyển đổi mỗi tuần để thoát giai đoạn học",
+     "issue": "Con số 50/tuần là hướng dẫn của Meta cho learning phase, nêu như của \"nền tảng\" chung, không src, không ngày kiểm; bài thuộc nhóm fast nhưng không có câu \"nếu màn hình khác, tin trang chính thức\".",
+     "fix": "Ghi rõ nguồn (Meta Business Help: learning phase, ~50 optimization events/7 ngày, kiểm ngày …) và câu nhắc kiểm tra trang chính thức."
+    },
+    {
+     "sev": "P1",
+     "where": "Q5 đáp án d và lời giải",
+     "quote": "Sửa một lỗi chính tả trong phần mô tả của quảng cáo … Sửa nhỏ không đổi bản chất quảng cáo",
+     "issue": "Trên Meta, mọi chỉnh sửa creative (kể cả text) được xem là \"significant edit\" và có thể đưa ad set học lại; lời giải nêu như quy luật chung là gây hiểu lầm. Đáp án vẫn \"ít khả năng nhất\" trong 4 phương án nên không P0.",
+     "fix": "Sửa lời giải: \"ít khả năng nhất trong bốn, nhưng một số nền tảng vẫn coi sửa text là sửa creative — kiểm tra quy định của nền tảng, và gom các sửa nhỏ vào một lần\"."
+    }
+   ],
+   "upgrade": "Thêm src và ngày kiểm cho mọi khẳng định về learning phase; sửa lời giải Q5; thêm số đơn/ngày vào ví dụ và dạy đọc trung bình trượt tại đó; thêm câu L4 đọc bảng 7 ngày CPO + số đơn để phân biệt xu hướng và nhiễu."
+  },
+  {
+   "id": "B:tn06-04",
+   "title": "So kênh mới với kênh cũ thế nào cho công bằng?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q4 stem",
+     "quote": "Facebook đếm một đơn nếu khách xem quảng cáo trong 1 ngày rồi mua; Google chỉ đếm khi khách nhấp rồi mua",
+     "issue": "Mô tả cửa sổ quy công (attribution window) của hai nền tảng thật được nêu như sự thật đơn giản hoá: Meta mặc định 7 ngày nhấp + 1 ngày xem; Google Ads cũng có view-through cho video/display. Không src, không ngày kiểm.",
+     "fix": "Đổi stem thành \"Giả sử kênh A đếm cả lượt xem 1 ngày, kênh B chỉ đếm lượt nhấp\" hoặc thêm src và ghi \"cài đặt mặc định tại ngày kiểm\"."
+    }
+   ],
+   "upgrade": "Trung hoà Q4 hoặc thêm src/ngày kiểm; gắn nhãn minh hoạ; làm nốt phép so cùng giai đoạn bằng số; thêm câu L4 đọc bảng 2 kênh × (khách mới/cũ) × (nền tảng báo/đơn web)."
+  },
+  {
+   "id": "B:tn06-06",
+   "title": "Khi nào phải dừng thử một kênh?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q4",
+     "quote": "chi phí mỗi đơn 125.000đ, ngưỡng 120.000đ … 5 ngày cuối xu hướng đang giảm đều. Làm gì?",
+     "issue": "Hai phương án bênh được: a) dừng đúng mốc rồi \"thử lại sau với một biến đổi và mốc mới\" thực chất là chi thêm tiền sau một khoảng nghỉ; b) gia hạn 2 tuần có mốc mới cũng là quyết định hợp lý khi xu hướng giảm và chênh 4%. Lời giải b) viện \"thương lượng với mốc\" nhưng a) cũng mở lại thử. Ranh giới giữa a và b không rõ với người học.",
+     "fix": "Làm a) khác hẳn b): \"Dừng, phân tích vì sao 5 ngày cuối giảm (creative? tệp?), rồi nếu có giả thuyết mới thì mở thử mới với mốc mới\"; hoặc đổi dữ kiện (xu hướng đi ngang) để b) sai rõ."
+    }
+   ],
+   "upgrade": "Sửa Q4 để chỉ một phương án đúng; nói ngưỡng nên có biên an toàn dưới lãi gộp; thay Q6 bằng câu đọc log; thêm bảng mẫu tiêu chí dừng; gắn nhãn minh hoạ."
+  }
+ ]
+}

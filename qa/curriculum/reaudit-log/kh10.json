@@ -1,0 +1,3 @@
+{ "mod":"kh10", "fixed_at":"2026-11-08", "items":[
+  { "id":"B:kh10-01", "where":"Q1 why (a)", "status":"fixed", "change":"Phương án a “Trend kéo được người thử, nhưng món chưa có lý do để mua lại” → “Trend kéo được lượt thử; số này chưa cho biết có ai mua lại”; why(a) bỏ “hỏng việc sau”, nêu 90 ly tuần ba có thể toàn người thử mới, phải đếm người mua lần hai. Why(d) bỏ ý khẳng định “khách không quay lại”.", "key_changed":false, "note":"Đã tự kiểm: lời giải cũ khẳng định món trend không giữ được khách, ngược với ví dụ (tỉ số doanh số không phải tỉ lệ quay lại) — lỗi thật." } ],
+  "validator":"0 lỗi", "tests":"pass" }

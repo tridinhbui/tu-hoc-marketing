@@ -1,0 +1,34 @@
+{
+ "mod": "qc10",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:qc10-01",
+   "where": "Khái niệm + Ví dụ",
+   "status": "fixed",
+   "change": "Khái niệm: \"mức hoà vốn\" → \"mức hoà vốn trên chi phí quảng cáo, chưa trừ chi phí sales\"; Ví dụ thêm một câu: giả định sales tốn ~25 triệu/hợp đồng → trần CPL thực (160 − 25) × 2% = 2,7 triệu, lead 1,5 triệu vẫn dưới trần khi chốt giữ 2%, ở 1% trần chỉ ~1,35 triệu. Giữ nguyên tình huống, quyết định và mọi câu hỏi.",
+   "key_changed": false,
+   "note": "Đã kiểm lại: lỗi có thật (lượt trước chưa sửa). Q3 hỏi lãi gộp kỳ vọng, Q4 hỏi chi phí quảng cáo mỗi hợp đồng nên vẫn đúng 3.200 / 75."
+  },
+  {
+   "id": "B:qc10-04",
+   "where": "Ví dụ ↔ Lỗi hay gặp",
+   "status": "fixed",
+   "change": "Thêm vào Ví dụ ngay sau bước sửa tháng 1: \"Đổi bốn thứ cùng lúc nên về sau không tách được tác dụng của từng thứ; lần sau đổi từng việc một (xem Lỗi hay gặp).\" Không đổi số tháng 2–3.",
+   "key_changed": false,
+   "note": "Đã kiểm lại: lỗi có thật (lượt trước chưa sửa). Kèm sửa kinh tế ghi ở mục extra."
+  }
+ ],
+ "extra": [
+  {
+   "id": "B:qc10-04",
+   "where": "Ví dụ",
+   "status": "fixed",
+   "change": "Theo yêu cầu điều phối (kinh tế B2B): \"chi phí mỗi hợp đồng ~$1.000 so với gói 120 triệu/năm (~$4.700)\" → so chi phí quảng cáo mỗi hợp đồng với lãi gộp năm đầu ~84 triệu (~$3.300, giả định 70% như Đào sâu), chưa trừ chi phí sales.",
+   "key_changed": false,
+   "note": ""
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

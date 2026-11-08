@@ -1,0 +1,35 @@
+{
+ "mod": "tp07",
+ "lessons": [
+  {
+   "id": "B:tp07-01",
+   "title": "Tiêu đề này có khiến ai đọc dòng thứ hai không?",
+   "total": 67,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Nghiên cứu theo dõi mắt của Nielsen Norman Group cho thấy khi lướt tiêu đề và danh sách, người ta thường chỉ thấy khoảng hai chữ đầu của mỗi mục",
+     "issue": "Nêu nghiên cứu như sự thật, không src, không năm, không ngày kiểm. Nghiên cứu gốc (NN/g, 'First 2 Words', 2009) đo người lướt danh sách liên kết trên web, không phải dòng đầu quảng cáo Facebook; bài suy rộng sang ngữ cảnh khác mà không nói đó là suy rộng.",
+     "fix": "Thêm src (nngroup.com/articles/first-2-words-a-signal-for-scanning, ngày kiểm) và viết 'nghiên cứu đo danh sách liên kết; áp sang dòng đầu quảng cáo là suy luận của bài'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) gắn src và nói rõ phạm vi nghiên cứu NN/g; (2) nêu điều kiện so sánh A/B trong tình huống; (3) thêm phản ví dụ tiêu đề có số nhưng về mình; (4) thay Q4 bằng câu đọc bảng CTR; (5) thêm đào sâu về khớp tiêu đề–trang đích với một số (tỉ lệ thoát)."
+  },
+  {
+   "id": "B:tp07-05",
+   "title": "Ba dòng đầu caption: khách có bấm \"xem thêm\" không?",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Trên bảng tin Facebook và phần mô tả TikTok, người xem chỉ thấy khoảng 2–3 dòng đầu trước khi chữ bị cắt.",
+     "issue": "Khẳng định về giao diện nền tảng (lớp fast) nêu như sự thật, không src, không ngày kiểm, không câu 'nếu màn hình khác, tin trang chính thức'. Số dòng cắt thay đổi theo ứng dụng, thiết bị và phiên bản.",
+     "fix": "Thêm src hoặc đổi thành 'phần lớn ứng dụng cắt caption sau vài dòng; mở điện thoại của bạn và đếm trước khi viết' kèm ngày kiểm."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) gắn src hoặc đổi cách nói về số dòng cắt; (2) chỉ chỗ lấy chỉ số trong báo cáo; (3) thay Q5 bằng câu L4; (4) đưa giả định 20 g/ly vào ví dụ; (5) thêm số minh hoạ cho thí nghiệm tuần (hai bản caption, tin nhắn hỏi mua) để phần đào sâu có kết quả đọc được."
+  }
+ ]
+}

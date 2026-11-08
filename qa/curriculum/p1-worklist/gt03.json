@@ -1,0 +1,110 @@
+{
+ "mod": "gt03",
+ "lessons": [
+  {
+   "id": "B:gt03-01",
+   "title": "\"Làm video TikTok sẽ tăng doanh số\" đã là giả thuyết chưa?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q7",
+     "quote": "Nếu đăng 3 video/tuần trong 4 tuần thì ít nhất 60 đơn dùng mã riêng của video và tổng đơn không dưới 240",
+     "issue": "Đáp án đúng là phương án dài nhất và là phương án b cộng thêm một điều kiện; người học đoán được bằng độ dài mà không cần hiểu vì sao cần 'tổng đơn không dưới 240'.",
+     "fix": "Cân độ dài 4 phương án; đưa điều kiện 'tổng đơn không giảm' thành một phương án sai riêng (ví dụ: chỉ đo tổng đơn ≥ 300 mà không có mã riêng) để buộc phân biệt hai lớp gán nguồn."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm Vì sao hiệu quả / Phản ví dụ / Đào sâu như bài 03-02; (2) sửa ví dụ cho chỉ số và cách đo khớp nhau; (3) ghi số công quay dựng và lãi/đơn để suy ngưỡng 2,5%; (4) cân độ dài phương án Q7; (5) thay Q4 (L2 nhắc ý bài) bằng câu dữ liệu: cho bảng 4 tuần đơn mã riêng vs tổng đơn, hỏi kết luận."
+  },
+  {
+   "id": "B:gt03-02",
+   "title": "Giả thuyết không thể sai thì có đáng kiểm không?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "Nếu gửi mã giảm 15% cho khách 90 ngày chưa mua lại thì ít nhất 8% quay lại trong 2 tuần",
+     "issue": "Phương án đúng là phương án duy nhất có con số; ba phương án sai đều dùng từ mềm ('gần gũi hơn', 'yêu thích hơn', 'giai đoạn phù hợp'). Đoán được bằng hình thức.",
+     "fix": "Thêm một phương án sai cũng có số nhưng không sai được, ví dụ 'thì doanh số tăng 10% hoặc nhận biết tăng, tuỳ cái nào đến trước' (lối thoát kép)."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) sửa Q5 để các phương án sai cũng có số; (2) thêm cách ước dao động từ chuỗi dài hơn 3 tháng; (3) nối vạch thắng 80 với biên lãi (vì sao 80 'đáng làm tiếp'); (4) thêm một câu L6: thiết kế bảng theo dõi tuần gồm chỉ số dẫn trước (người hỏi giá) để phát hiện 'độ trễ' trong phản ví dụ."
+  },
+  {
+   "id": "B:gt03-04",
+   "title": "Vấn đề nằm ở khách, ở kênh hay ở thông điệp?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Kết quả mẫu mới đạt 1,8% — tăng 50% tương đối",
+     "issue": "Không có số lượt hiển thị, thời gian chạy hay ngân sách của hai mẫu; không nói 1,8% so với 1,2% có vượt nhiễu không. Bài về 'tách một biến' mà không nêu cỡ mẫu khiến người học tin mọi chênh lệch CTR đều là tín hiệu.",
+     "fix": "Thêm: mỗi mẫu 20.000 lượt hiển thị trong 5 ngày, cùng tệp cùng giờ; sd CTR ≈ 0,08 điểm → chênh 0,6 điểm là tín hiệu rõ; nếu chỉ 2.000 lượt thì chưa."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm cỡ mẫu và thời gian cho hai mẫu quảng cáo, nói rõ ngưỡng nhiễu; (2) thay 2 câu phân loại bằng 1 câu đọc bảng CTR theo nhóm tuổi (L4) và 1 câu quyết định có ràng buộc ngân sách (L5); (3) giới hạn phạm vi khuôn ba loại ở khâu tiếp cận; (4) gắn nhãn 'minh hoạ' cho 1,8%."
+  },
+  {
+   "id": "B:gt03-06",
+   "title": "Chỉ đọc bình luận khen thì có kiểm được giả thuyết không?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Bao bì tác động tới lựa chọn mà khách ít tự nhận; khi lệch nhau, hành vi đáng tin hơn lời khai",
+     "issue": "Đáp án đúng dài nhất và là phương án duy nhất có mệnh đề cân bằng ('vẫn nên kiểm thêm' nằm trong lời giải); ba phương án sai đều tuyệt đối ('mới đúng', 'đúng nhất', 'không nguồn nào dùng được').",
+     "fix": "Rút gọn a; viết một phương án sai cũng cân bằng nhưng sai hướng, ví dụ 'Khảo sát và quầy thử cùng đúng vì đo hai nhóm khác nhau, nên không cần kiểm thêm'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) cân độ dài và sắc thái phương án Q6; (2) ghi n cho quầy thử; (3) thêm Đào sâu về khi nào tự khai đáng tin hơn hành vi; (4) thay Q7 (L2 nhắc ý 03-02) bằng câu thiết kế câu hỏi khảo sát mở vs gợi ý (L6); (5) gắn nhãn minh hoạ cho toàn bộ số."
+  },
+  {
+   "id": "B:gt03-07",
+   "title": "Có ba giả thuyết mà tiền chỉ đủ kiểm một — chọn cái nào?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Chắc chắn 2% khách thật sẽ mua đều đặn khi mở dịch vụ giao tối",
+     "issue": "Câu hỏi 'KHÔNG nên kết luận' có đáp án mang từ tuyệt đối 'Chắc chắn' trong khi ba phương án kia đều ôn hoà; đoán được bằng hình thức.",
+     "fix": "Bỏ 'Chắc chắn'; viết 'Khi mở dịch vụ, khoảng 2% khách vào trang sẽ đặt giao tối mỗi tuần' — vẫn sai (ý định ≠ hành vi) nhưng không lộ."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) sửa Q6 bỏ từ tuyệt đối; (2) đổi Q4 thành bảng 3 giả thuyết để chọn; (3) thêm cái giá của nút giả và cách giảm hại; (4) ghi độ bất định của 2%/30 người; (5) gắn nhãn minh hoạ."
+  },
+  {
+   "id": "B:gt03-08",
+   "title": "Giả thuyết sai rồi — tiền đã mất hay đã mua được bài học?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Giá trị đơn chỉ lên 165.000 đồng… Bài học, trong phạm vi đã thử… quà không kéo đơn to lên",
+     "issue": "Không có số đơn trong 2 tuần hay độ lệch của giá trị đơn, nên không biết +5.000 là 'không tác dụng' hay chỉ là nhiễu; kết luận 'giả thuyết sai' được rút mà không có vạch dừng ghi trước (trái với bài 03-02).",
+     "fix": "Thêm: 2 tuần có ~900 đơn, giá trị đơn dao động ±8.000 theo tuần, vạch dừng ghi trước là < 175.000; 165.000 dưới vạch nên kết luận sai được."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm số đơn, độ lệch và vạch dừng ghi trước để kết luận 'sai' có cơ sở; (2) thêm Phản ví dụ/Đào sâu (độ trễ, ngưỡng quá xa); (3) đổi Q3 thành câu nhiễu/sai số chuẩn; (4) gắn nhãn minh hoạ."
+  },
+  {
+   "id": "B:gt03-10",
+   "title": "Trong một case thi, giả thuyết nên xuất hiện ở đâu?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q7",
+     "quote": "Nếu nhắc qua Zalo sau 7 ngày thì mua lại tăng từ 10% lên 15%, vì khách quên đặt lại",
+     "issue": "Đáp án là phương án duy nhất có con số và khuôn Nếu–thì–vì; ba phương án sai đều mơ hồ. Lặp đúng dạng câu Q2 bài 03-01 và Q5 bài 03-02.",
+     "fix": "Thêm phương án sai có số nhưng không truy được về đề (ví dụ 'mua lại tăng từ 10% lên 40% vì khách yêu thương hiệu') để kiểm kỹ năng 'số tự đặt phải truy về đề'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) sửa phép tính ví dụ cho khớp giá trị đơn gói; (2) thêm phương án sai có số ở Q7; (3) thay 2 câu L2 bằng case mini bắt tính ngược (L4) và một câu chọn giữa 1 hay 2 giả thuyết với biện hộ (L5); (4) đổi nhãn đáp án sai 375."
+  }
+ ]
+}

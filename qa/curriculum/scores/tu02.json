@@ -1,0 +1,235 @@
+{
+  "mod": "tu02",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:tu02-01",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 13, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Nền tảng quảng cáo luôn tiêu tiền vào những người dễ mua nhất trước.", "issue": "Nêu cơ chế thuật toán như luật phổ quát ('luôn'). Đúng với chiến dịch tối ưu chuyển đổi đã đủ dữ liệu; không đúng với chiến dịch tối ưu tiếp cận/CPM hay giai đoạn học. Thiếu điều kiện áp dụng.", "fix": "Sửa: 'Chiến dịch tối ưu theo chuyển đổi ưu tiên người có khả năng mua cao nhất trước; vì vậy…' và thêm một câu về khi nào quy luật này mờ (mục tiêu tiếp cận, tệp còn rất rộng — Q7)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Ở mức 2 triệu: 32 đơn, trung bình 62.500đ, nhìn vẫn ổn so với lãi gộp 120.000đ.", "issue": "Bộ số (20 → 32 → 39 đơn) là số tự đặt nhưng bài không gắn nhãn minh hoạ, khác với phần lớn module tu01.", "fix": "Thêm '(số minh hoạ)' ở TÌNH HUỐNG hoặc VÍ DỤ." },
+        { "sev": "P2", "where": "Q1", "quote": "Đơn giảm vì chiến dịch bị đưa về giai đoạn học lại từ đầu mãi mãi", "issue": "Phương án sai vô lý ('mãi mãi'); d) 'nền tảng ưu tiên tài khoản chi nhiều' cũng dễ loại. Phương án đúng là mệnh đề cân bằng duy nhất.", "fix": "Đổi c) thành phương án hợp lý nhưng sai: 'Đơn tăng gấp đôi trong 2–3 ngày đầu rồi tụt về mức cũ vì tệp dễ mua đã hết' — buộc phân biệt lợi suất giảm dần với bão hoà hoàn toàn." },
+        { "sev": "P2", "where": "ĐÀO SÂU", "quote": "Dừng tăng chi đúng chỗ chi phí biên chạm lãi gộp tối đa hóa lãi trực tiếp", "issue": "Điều kiện dừng đúng nhưng không nói nhiễu: với 12 đơn thêm/ngày, chi phí biên 83.000đ dao động mạnh ngày này qua ngày khác; bài không nói cần gộp bao nhiêu ngày để tin con số biên.", "fix": "Thêm: 'gộp ít nhất 7 ngày mỗi mức chi trước khi tính biên; 12 đơn/ngày dao động ±~7 đơn' và nối sang tu02-07 (nhiễu)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (2.000−1.000)/(32−20) = 83,3 nghìn ✓; sai 62,5 = 2.000/32 ✓, 50 = 1.000/20 ✓. Q4: 12×120 − 1.000 = 440 nghìn ✓; sai 1.440 ✓. VÍ DỤ: +7 đơn → 840 − 1.000 = −160 ✓. Q2 c: 7×120 = 840 < 1.000 ✓. Q5: 150 − 110 = lỗ 40 nghìn/đơn biên ✓." },
+      "claims": [
+        { "claim": "Nền tảng quảng cáo luôn tiêu tiền vào những người dễ mua nhất trước", "status": "unverified", "note": "Cơ chế tối ưu chuyển đổi, nêu tuyệt đối, không điều kiện." },
+        { "claim": "Shop đồ bộ của Hạnh: 1 triệu → 20 đơn, 2 triệu → 32 đơn, lãi gộp 120.000đ/đơn", "status": "illustrative-unlabelled", "note": "Không có nhãn minh hoạ." }
+      ],
+      "strengths": "Tách rõ chi phí trung bình với chi phí biên và cho thấy trung bình 'vẫn đẹp' che phần biên đang lỗ (Q5); PHẢN VÍ DỤ (đợt nhu cầu đổi trùng tuần tăng chi làm biên tính lệch) và ĐÀO SÂU (chấp nhận biên mỏng có chủ ý để lấy khách mới) là điều kiện và đánh đổi thật; Q7 ngăn người học áp quy luật máy móc.",
+      "upgrade": "Thêm điều kiện áp dụng cho câu 'luôn tiêu tiền vào người dễ mua nhất'; gắn nhãn minh hoạ; thay phương án vô lý Q1 c; thêm quy tắc gộp ngày và dao động vào ĐÀO SÂU; thêm một câu L4 đọc bảng 4 mức chi (1/1,5/2/3 triệu) với số đơn và hỏi nấc nào biên vượt lãi gộp."
+    },
+    {
+      "id": "B:tu02-02",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 6, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "MANG THEO: Tiền đi theo lãi của đồng cuối cùng, không đi theo nhóm có chi phí trung bình đẹp nhất.", "issue": "Bài không có VÌ SAO HIỆU QUẢ / PHẢN VÍ DỤ / ĐÀO SÂU như các bài 01, 03–06, 09, 10. Điều kiện làm kết luận đổi (hai nhóm trùng tệp — rút nhóm này làm nhóm kia tăng; nhóm 'Mẹ bỉm' là tệp mua lại) không có trong bài đọc.", "fix": "Thêm PHẢN VÍ DỤ: hai nhóm trùng 40% người nên 'đơn giảm 8' khi rút 'Mẹ bỉm' một phần chạy sang 'Văn phòng' — phép thử rút từng nhóm riêng tuần khác nhau. Thêm ĐÀO SÂU về giá trị khách mua lại của từng nhóm." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "1 triệu cuối ở \"Mẹ bỉm\" chỉ mang thêm 8 đơn (lãi gộp 720.000đ, lỗ 280.000đ)", "issue": "Bộ số tự đặt không gắn nhãn minh hoạ; cũng không nói phép thử 'rút 1 triệu một tuần' có đủ đơn để tin (8 đơn chênh trên nền 60 đơn/tuần nằm trong dao động ngẫu nhiên ±~8).", "fix": "Thêm nhãn minh hoạ và một câu: 'chênh 8 đơn/tuần sát mức nhiễu của 60 đơn — lặp phép thử 2 tuần trước khi dời'." },
+        { "sev": "P2", "where": "Q7", "quote": "Vì nền tảng cấm thay đổi ngân sách quá 20% mỗi lần điều chỉnh", "issue": "Phương án sai và lời giải ('không có lệnh cấm… thói quen thận trọng') hợp lý, nhưng phương án đúng nhận lại VÍ DỤ. Q1 và Q7 đều L2.", "fix": "Thay Q7 bằng câu L4: sau khi dời 1 triệu, 'Văn phòng' lên 4 triệu được 48 đơn — tính lãi biên của triệu thứ tư (8 đơn → −280 nghìn) và hỏi bước tiếp theo." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (60−52)×90 − 1.000 = −280 nghìn ✓; sai 720 ✓, 4.400 = 60×90 − 1.000 (dùng tổng đơn thay đơn biên) ✓. Q4: (40−25)×90 − 1.000 = 350 nghìn ✓; sai 1.350 ✓, −750 = 25×90 − 3.000 (dùng đơn còn lại và tổng chi) ✓. Trung bình: 3 triệu/60 = 50.000 ✓; 3 triệu/40 = 75.000 ✓. BÀI THỰC HÀNH: A (80−72)×70 − 1.000 = −440; B (50−32)×70 − 1.000 = +260; C (40−35)×70 − 1.000 = −650 → dời từ C/A sang B, đúng rubric." },
+      "claims": [
+        { "claim": "Tiệm bánh của Quân: hai nhóm 3 triệu/tuần, 60 và 40 đơn; rút 1 triệu còn 52 và 25", "status": "illustrative-unlabelled", "note": "Không có nhãn minh hoạ." }
+      ],
+      "strengths": "Ví dụ đảo ngược trực giác (nhóm trung bình rẻ hơn lại đang lỗ ở đồng cuối) và — hiếm thấy — ghi rõ giới hạn của phép đo biên ('15 đơn là của 1 triệu cuối từ 2 lên 3; triệu thứ tư sẽ mua ít hơn, nên +350.000đ là mức trần'); BÀI THỰC HÀNH có dữ liệu ba nhóm, đầu ra bảng và rubric 5 tiêu chí — đây là ÁP DỤNG tốt nhất trong ba module; Q6 (Quận 1 kín lịch) đưa sức phục vụ vào lãi biên.",
+      "upgrade": "Bổ sung VÌ SAO / PHẢN VÍ DỤ (nhóm trùng tệp) / ĐÀO SÂU (giá trị mua lại theo nhóm, nhiễu của phép thử rút 1 triệu); gắn nhãn minh hoạ; thay Q7 bằng câu tính lãi biên của nấc tiếp theo."
+    },
+    {
+      "id": "B:tu02-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 13, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1", "quote": "Giá đêm thường còn rẻ hơn; vấn đề là không ra đơn, không phải giá.", "issue": "Lời giải đưa benchmark về giá đấu thầu theo giờ không nguồn, không nhãn.", "fix": "Bỏ mệnh đề về giá đêm hoặc đổi thành 'dù giá có rẻ hơn hay không, khung này không ra đơn'." },
+        { "sev": "P2", "where": "Q4 ↔ VÍ DỤ", "quote": "Dời 180.000đ/ngày sang khung 17h–21h, nơi chi phí biên khoảng 60.000đ/đơn.", "issue": "Con số biên 60.000đ chỉ xuất hiện ở Q4; bài đọc chỉ cho trung bình 45.000đ và nói 'với lợi suất giảm nhẹ… khoảng 3 đơn/ngày' mà không nêu 60.000đ. Người học đọc bài không tái lập được '3 đơn' (180/45 = 4).", "fix": "Thêm vào VÍ DỤ: 'chi phí biên ở khung tối ước 60.000đ (cao hơn trung bình 45.000đ), nên 180.000đ mua thêm ~3 đơn chứ không phải 4'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "khung 0h–6h tiêu trung bình 180.000đ/ngày và ra 1 đơn mỗi bốn ngày", "issue": "Bộ số tự đặt không gắn nhãn minh hoạ.", "fix": "Thêm '(số minh hoạ)'." },
+        { "sev": "P2", "where": "Q3", "quote": "Khung 0h–6h tiêu 180.000đ/ngày. Tắt khung này trong 30 ngày thì dời được bao nhiêu triệu đồng", "issue": "Phép nhân một bước (180.000 × 30) không kiểm tra hiểu biết nào của bài; chỗ cho một calc có ý nghĩa (so lãi hai khung) bị dùng cho phép nhân đơn vị.", "fix": "Thay bằng: 'khung đêm 180.000đ ra 0,25 đơn/ngày, lãi gộp 70.000đ/đơn — lãi sau quảng cáo của khung đêm mỗi ngày là bao nhiêu?' (−162.500đ)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 180.000×30 = 5,4 triệu ✓. Q4: 180.000/60.000 = 3 ✓; sai 4 = 180/45 ✓, 0,33 ✓. Q1: 180.000/1.200.000 = 15% ✓. VÍ DỤ: 'một phần tư đơn' = 1 đơn/4 ngày ✓." },
+      "claims": [
+        { "claim": "Giá đêm thường còn rẻ hơn", "status": "unverified", "note": "Lời giải Q1 a." },
+        { "claim": "Cửa hàng đồ ăn vặt Hà Nội: 1,2 triệu/ngày, khung 0h–6h tiêu 180.000đ, 1 đơn/4 ngày", "status": "illustrative-unlabelled", "note": "Không có nhãn minh hoạ." }
+      ],
+      "strengths": "Ba điều kiện để quảng cáo sinh đơn (khách lướt, khách đặt được, bạn giao được) là khung chẩn đoán gọn; PHẢN VÍ DỤ (xem khuya, đặt trưa) và ĐÀO SÂU (hạ giá thầu thay vì tắt để giữ dữ liệu; tách giờ đặt với giờ thấy) là đánh đổi thật; Q7 nối lại lợi suất giảm dần ở khung nhận tiền.",
+      "upgrade": "Đưa chi phí biên 60.000đ vào bài đọc; thay Q3 bằng calc lãi khung đêm; gắn nhãn minh hoạ; bỏ mệnh đề giá đêm; thêm một câu L4 đọc bảng 7 ngày × 4 khung giờ (chi, đơn) và hỏi khung nào hạ, khung nào cần thêm dữ liệu."
+    },
+    {
+      "id": "B:tu02-04",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 13, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L3", "L4", "L3", "L3", "L3", "L2", "L2"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Khi đặt từ khoá rộng, nền tảng sẽ hiển thị cho nhiều cụm tìm kiếm liên quan, kể cả cụm không có ý định mua.", "issue": "Toàn bài mô tả cách nền tảng tìm kiếm vận hành (khớp rộng, báo cáo cụm từ tìm kiếm, giới hạn từ phủ định ở Q6 a) — nội dung lớp 'fast' theo thang độ tươi, bắt buộc có `src` với ngày kiểm và câu 'nếu màn hình khác, tin trang chính thức'. Bài không có `src` và không nêu nền tảng nào.", "fix": "Thêm `src` trỏ tới trang trợ giúp chính thức về từ khoá phủ định và báo cáo cụm từ tìm kiếm của nền tảng được nói tới, ngày kiểm, và câu quy ước về màn hình thay đổi." },
+        { "sev": "P2", "where": "Q4", "quote": "Mỗi tuần 1.600 lượt nhấp.", "issue": "Con số 1.600 nhấp chỉ xuất hiện ở Q4 (hàm ý 2.500đ/nhấp), không có trong tình huống hay ví dụ; ví dụ nói đơn 32 → 45 nhưng không nói trên bao nhiêu nhấp. Cũng giả định số nhấp không đổi khi 1,2 triệu chuyển sang cụm khác (CPC cụm mua thường khác).", "fix": "Thêm '1.600 nhấp/tuần (≈2.500đ/nhấp)' vào TÌNH HUỐNG và một câu 'giả định CPC không đổi; thực tế cụm có ý định mua thường đắt hơn nên số nhấp có thể giảm'." },
+        { "sev": "P2", "where": "Q3", "quote": "Bao nhiêu phần trăm ngân sách bị rò?", "issue": "Phép chia một bước (1,2/4) không kiểm tra điều gì ngoài mẫu số; chỗ calc nên dùng cho câu có ý nghĩa.", "fix": "Thay bằng: 'cụm rò tốn 1,2 triệu/tuần với 0 đơn; nếu dời sang cụm mua có chi phí biên 90.000đ/đơn và lãi gộp 150.000đ — lãi thêm mỗi tuần?' (13,3 đơn → ~800.000đ)." },
+        { "sev": "P2", "where": "Q6, Q7", "quote": "Hằng tuần, và kỹ hơn sau khi đổi từ khoá hoặc vào mùa mới", "issue": "Hai câu L2 nhận lại KHÁI NIỆM; Q7 phương án sai 'mỗi giờ' / 'mỗi năm' là cực đoan hai đầu, đáp án là mức giữa.", "fix": "Thay Q7 bằng câu L4: cho 5 cụm với chi/nhấp/đơn 4 tuần, hỏi cụm nào phủ định ngay, cụm nào chờ thêm dữ liệu (cụm 2 nhấp 0 đơn chưa đủ kết luận)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 1,2/4 = 30% ✓; sai 42,9 = 1,2/2,8 ✓, 3,33 = 4/1,2 ✓. Q4: 1.600×2% = 32; ×2,8% = 44,8; +12,8 ✓; sai 0,8 ✓. Kiểm nhất quán: nếu 30% nhấp là rò (0 đơn), 1.120 nhấp tốt cho 32 đơn = 2,86%; dồn hết 1.600 nhấp vào cụm tốt → ~45,7 đơn, bài nói 2,8% → 44,8 ≈ 45 — khớp xấp xỉ." },
+      "claims": [
+        { "claim": "Từ khoá rộng khớp theo nghĩa gần đúng; báo cáo cụm từ tìm kiếm cho biết khách gõ gì thật", "status": "unverified", "note": "Cơ chế nền tảng tìm kiếm, không nêu tên nền tảng, không `src`." },
+        { "claim": "Có giới hạn số lượng (từ phủ định) nhưng rất rộng", "status": "unverified", "note": "Lời giải Q6 a." },
+        { "claim": "Đối thủ không xem được danh sách phủ định của bạn", "status": "unverified", "note": "Lời giải Q6 d; hợp lý nhưng là khẳng định về nền tảng." },
+        { "claim": "Shop giày của Tùng: 4 triệu/tuần, 1,2 triệu rò, chuyển đổi 2% → 2,8%, đơn 32 → 45", "status": "illustrative-labelled", "note": "Có nhãn minh hoạ." }
+      ],
+      "strengths": "Quy tắc 'đọc cột chi tiêu trước cột đơn' và 'ghi lý do cho mỗi từ phủ định' là thao tác nghề thật; Q2 (phủ định 'sỉ' chứ không 'giá') là câu phân biệt tốt; PHẢN VÍ DỤ (shop bán thêm dịch vụ vệ sinh giày) cho thấy ý định phụ thuộc vào thứ bạn bán.",
+      "upgrade": "Thêm `src` và câu quy ước độ tươi; đưa 1.600 nhấp và giả định CPC vào bài đọc; thay Q3 và Q7 bằng calc/đọc bảng có ý nghĩa; thêm ĐÀO SÂU về ngưỡng dữ liệu tối thiểu trước khi phủ định một cụm (số nhấp, số tuần)."
+    },
+    {
+      "id": "B:tu02-05",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 12, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tệp bán kính 3 km có khoảng 45.000 người. Tuần thứ tư có 400.000 lượt hiển thị", "issue": "Bộ số tự đặt không gắn nhãn minh hoạ; cũng không nói 'tần suất 8,9' là theo tuần hay theo 28 ngày — hai cách đọc cho kết luận rất khác (8,9/tuần mệt rõ; 8,9/4 tuần thì bình thường). TÌNH HUỐNG nói 'tuần thứ tư tần suất lên 8,9' nên là theo tuần, nhưng KHÁI NIỆM chỉ nói 'trong kỳ'.", "fix": "Ghi rõ 'tần suất theo kỳ 7 ngày' ở KHÁI NIỆM và VÍ DỤ, thêm nhãn minh hoạ." },
+        { "sev": "P2", "where": "Q5", "quote": "Mức khá hợp lý; theo dõi tỉ lệ nhấp và bình luận xem có mệt không", "issue": "Phương án đúng là mức giữa 'khá hợp lý' giữa hai cực 'cắt xuống 1' và 'đẩy lên 10' — đoán được theo giọng; đồng thời ngầm xác nhận một benchmark (3/tuần cho nhận biết) không nguồn.", "fix": "Đổi đề thành câu đọc dữ liệu: tần suất 3 nhưng tỉ lệ nhấp tuần 3 giảm 40% so với tuần 1 và chi phí mỗi kết quả tăng — đọc thế nào? (mệt sớm dù tần suất 'thấp')." },
+        { "sev": "P2", "where": "Q3, Q4", "quote": "Tần suất = lượt hiển thị ÷ người tiếp cận. | 400.000 ÷ 45.000 ≈ 8,9.", "issue": "Hai calc đều là một phép chia với cùng công thức; chỉ kiểm tra không chia ngược.", "fix": "Thay Q4 bằng: 'muốn tần suất về 3 với 45.000 người, ngân sách tuần phải giảm còn bao nhiêu % so với hiện tại?' (3/8,9 ≈ 34%) — nối thẳng với Q7 (giảm ngân sách cho vừa tệp)." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "đặt giới hạn tần suất", "issue": "Giới hạn tần suất không có ở mọi mục tiêu chiến dịch của mọi nền tảng; nêu như lựa chọn luôn sẵn có. Không `src`.", "fix": "Thêm 'nếu nền tảng và mục tiêu chiến dịch cho phép — kiểm trang trợ giúp'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 400.000/45.000 = 8,89 → 8,9 ✓; sai 0,11 = 45/400 ✓. Q4: 400.000/110.000 = 3,64 → 3,6 ✓; sai 0,28 ✓." },
+      "claims": [
+        { "claim": "Phòng gym Đà Nẵng: tệp 3 km ≈ 45.000 người, 5 km ≈ 110.000 người, tần suất 2,1 → 8,9", "status": "illustrative-unlabelled", "note": "Không có nhãn minh hoạ." },
+        { "claim": "Tần suất 3/tuần cho quảng cáo nhận biết là 'mức khá hợp lý'", "status": "unverified", "note": "Benchmark ngầm ở đáp án Q5; lời giải có hedging 'không có con số chuẩn tuyệt đối'." }
+      ],
+      "strengths": "Đọc tần suất như phép chia (ngân sách ÷ tệp) để phân biệt lỗi ở tử hay mẫu; PHẢN VÍ DỤ (quyết định trả tiền theo tháng cần nhắc nhiều lần, ba dấu hiệu để phân biệt mệt với cần nhắc) và Q7 (tiệm nail không mở được tệp → giảm ngân sách cho vừa tệp) là hai tình huống thật làm kết luận đổi.",
+      "upgrade": "Ghi rõ kỳ tính tần suất và gắn nhãn minh hoạ; thay Q4 bằng calc ngược (ngân sách cho tần suất mục tiêu); đổi Q5 thành câu đọc dữ liệu mệt sớm; thêm điều kiện cho 'giới hạn tần suất'; thêm ĐÀO SÂU về tần suất theo người thật vs theo thiết bị/cookie (đếm trùng)."
+    },
+    {
+      "id": "B:tu02-06",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 13, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Nền tảng quảng cáo mặc định tối ưu theo số chuyển đổi, nên dễ khiến mọi người nhìn số đơn.", "issue": "Khẳng định về cách nền tảng vận hành (mặc định, tối ưu theo giá trị) không nêu nền tảng, không `src`; nội dung này thuộc lớp 'fast'.", "fix": "Thêm `src` trang trợ giúp về tối ưu theo giá trị chuyển đổi của nền tảng được nhắc tới, hoặc viết chung hơn ('nếu bạn chỉ gửi sự kiện đặt hàng, hệ thống không biết đơn nào đáng giá hơn')." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "\"Son\": 250 × (150.000 − 100.000) = 12,5 triệu lãi gộp, trừ 10 triệu quảng cáo, còn 2,5 triệu.", "issue": "Bộ số tự đặt không gắn nhãn minh hoạ.", "fix": "Thêm '(số minh hoạ)'." },
+        { "sev": "P2", "where": "Q2", "quote": "Giữ nguyên hoặc dời theo chiều ngược lại, sau khi đo lãi biên của \"Serum\"", "issue": "Phương án đúng là phương án 'hoặc… sau khi đo' mềm nhất; d) 'tắt Son hẳn' cực đoan, b) 'cân bằng số đơn' vô nghĩa. Đoán được theo giọng.", "fix": "Thay b) bằng phương án mềm nhưng sai thước: 'Dời 2,5 triệu sang Son vì CPA 40.000đ còn cách xa lãi gộp 50.000đ, vẫn còn dư địa' — buộc so biên lãi 10.000đ/đơn của Son với 130.000đ/đơn của Serum." },
+        { "sev": "P2", "where": "Q5", "quote": "Vì ROAS tính trên doanh thu, không phản ánh giá vốn khác nhau của hai sản phẩm", "issue": "L2 nhận lại LỖI HAY GẶP; ba phương án sai vô lý ('ROAS chỉ dùng cho tìm kiếm', 'bị làm tròn').", "fix": "Thay bằng câu L4: cho ROAS Son 3,75 và Serum 4,5 cùng biên 33% và 51% — tính ROAS hoà vốn mỗi bên (3,0 và 1,96) và hỏi bên nào còn xa hoà vốn hơn (nối dl10-05)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 250×50.000 − 10 triệu = 2,5 triệu ✓; sai 12,5 ✓, 27,5 = 250×150.000 − 10 ✓. Q4: 100×230.000 − 10 = 13 triệu ✓; sai 23 ✓, 35 = 45 − 10 ✓. Q5: ROAS Son 37,5/10 = 3,75 ✓; Serum 45/10 = 4,5 ✓. Q2 a: CPA 10/250 = 40.000; 10/100 = 100.000 ✓. 'lãi gấp hơn năm lần': 13/2,5 = 5,2 ✓." },
+      "claims": [
+        { "claim": "Nền tảng quảng cáo mặc định tối ưu theo số chuyển đổi; có thể gửi giá trị đơn để tối ưu theo giá trị", "status": "unverified", "note": "Cơ chế nền tảng, không `src`." },
+        { "claim": "Shop mỹ phẩm: Son 250 đơn (biên 50.000đ), Serum 100 đơn (biên 230.000đ), cùng chi 10 triệu", "status": "illustrative-labelled", "note": "Số tự đặt, không nhãn." }
+      ],
+      "strengths": "Cho thấy chiến dịch ít đơn hơn lãi gấp 5 lần bằng phép tính đủ (số đơn × lãi gộp − chi); PHẢN VÍ DỤ (lãi trung bình của Serum không đại diện cho lãi biên khi dồn thêm tiền) và ĐÀO SÂU (son là cửa vào, khách mua son rồi mua serum) là hai điều kiện làm 'dồn về Serum' sai; Q7 nối với mua lại.",
+      "upgrade": "Thêm `src` hoặc viết chung hơn về cơ chế nền tảng; gắn nhãn minh hoạ; thay phương án Q2 b và câu Q5 bằng phương án/câu buộc tính biên lãi mỗi đơn và ROAS hoà vốn theo sản phẩm; thêm một calc: nếu 30% khách mua son quay lại mua serum trong 3 tháng, lãi thật của chiến dịch Son là bao nhiêu."
+    },
+    {
+      "id": "B:tu02-07",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 12, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 9, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L5", "L5", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "MANG THEO: Phần ngân sách thử hôm nay là chiến dịch chính của quý sau.", "issue": "Bài không có VÌ SAO HIỆU QUẢ / PHẢN VÍ DỤ / ĐÀO SÂU; không có tình huống phần thử là sai (ví dụ công ty 3 tháng nữa đóng cửa mùa, hoặc tài khoản quá nhỏ — Q6 chạm tới nhưng bài đọc không).", "fix": "Thêm PHẢN VÍ DỤ: chiến dịch mùa vụ 6 tuần — 15% thử không kịp ra kết luận trước khi mùa hết, nên thử trước mùa; thêm ĐÀO SÂU về chỉ số trung gian cho tài khoản nhỏ." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "với cỡ đó, chi phí mỗi đơn tự dao động khoảng ±35% chỉ vì ngẫu nhiên, nên 18% mới là tín hiệu, chưa phải kết luận", "issue": "Con số ±35% (n≈30) và ±11% (n≈300) đúng theo xấp xỉ 2/√n, nhưng bài không nói cách ra con số nên người học không tự tính được cho trường hợp của mình.", "fix": "Thêm quy tắc tay trong ngoặc: 'dao động ≈ ±2 ÷ √(số đơn): 30 đơn → ±36%, 300 đơn → ±12%'." },
+        { "sev": "P2", "where": "Q3", "quote": "Ngân sách 100 triệu/tháng, dành 15% cho thử, chia đều cho 3 phép thử. Mỗi phép thử được bao nhiêu triệu?", "issue": "Phép tính hai bước tầm thường (100×15%÷3) không kiểm tra hiểu biết; bài có sẵn ý tưởng calc hay hơn (cần bao nhiêu đơn để phân biệt chênh 18%).", "fix": "Thay bằng: 'phép thử rẻ hơn 18%; với quy tắc ±2/√n, cần ít nhất bao nhiêu đơn để dao động nhỏ hơn 18%?' (≈124 đơn)." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "Nhìn ngân sách quảng cáo tháng này của bạn. Nói trong 60 giây: bao nhiêu phần trăm đang dành cho thử", "issue": "Không có đầu ra đo được; thiếu bước thiết kế phép thử (giả thuyết, chỉ số, số đơn cần, thời gian).", "fix": "Yêu cầu bảng một phép thử: giả thuyết / chỉ số / ngân sách / số đơn hoặc sự kiện cần / mốc đọc kết quả." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 100×15%/3 = 5 ✓. VÍ DỤ: 1,96/√30 = 35,8% ✓ (±35%); 1,96/√300 = 11,3% ✓ (±11%); 5 triệu/30 đơn ≈ 167.000đ/đơn, rẻ hơn 18% → chiến dịch chính ≈ 203.000đ. Q5: 400 đơn → ±9,8% < 18% ✓ 'đủ để vượt dao động'." },
+      "claims": [
+        { "claim": "quy tắc kinh nghiệm phổ biến khoảng 10–20% (không có chuẩn cố định, tuỳ quy mô và mức rủi ro)", "status": "illustrative-labelled", "note": "Benchmark được gắn nhãn 'quy tắc kinh nghiệm', có hedging — đúng cách." },
+        { "claim": "Với ~30 đơn, chi phí mỗi đơn dao động ±35%; với vài trăm đơn ±11%", "status": "verified", "note": "Khớp xấp xỉ 1,96/√n (Poisson); kiểm bằng tính lại." },
+        { "claim": "Công ty máy lọc nước của Vy: 100 triệu/tháng, CPA tăng 25%, phép thử rẻ hơn 18%", "status": "illustrative-unlabelled", "note": "Không có nhãn minh hoạ." }
+      ],
+      "strengths": "Bài duy nhất trong ba module định lượng nhiễu thống kê (±35% với 30 đơn, ±11% với vài trăm đơn) và dùng nó để phân biệt 'tín hiệu' với 'kết luận'; Q4 và Q6 (ngân sách nhỏ → ít phép thử, chạy dài, chỉ số trung gian) là đánh đổi có biện hộ; benchmark 10–20% được gắn nhãn đúng.",
+      "upgrade": "Bổ sung VÌ SAO / PHẢN VÍ DỤ (mùa vụ ngắn) / ĐÀO SÂU; nêu quy tắc ±2/√n để người học tự tính; thay Q3 bằng calc số đơn cần; đổi ÁP DỤNG thành bảng thiết kế một phép thử; gắn nhãn minh hoạ."
+    },
+    {
+      "id": "B:tu02-08",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 13, "examples": 12, "pedagogy": 6, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "MANG THEO: Mùa cao điểm đắt hơn, nhưng câu hỏi là chi phí mỗi đơn so với lãi gộp, không phải giá mỗi 1.000 lượt.", "issue": "Bài không có VÌ SAO HIỆU QUẢ / PHẢN VÍ DỤ / ĐÀO SÂU; ý 'xây tệp trước mùa khi còn rẻ' chỉ một câu trong KHÁI NIỆM và Q5, không có số (CPM trước mùa, tỉ lệ nhắm lại).", "fix": "Thêm ĐÀO SÂU với một phép tính: 2 tuần trước mùa CPM 60.000đ xây tệp 50.000 người xem; vào mùa nhắm lại tệp đó với tỉ lệ ra đơn 0,6% so với 0,3% tệp lạnh — CPA 20.000đ so với 40.000đ." },
+        { "sev": "P2", "where": "Q7", "quote": "Tệp khách tiềm năng đã bị đốt hết trong mùa sale, không còn người để bán", "issue": "Phương án b) và c) cùng hướng (nhu cầu đã mua trước / tệp đã cạn), c) chỉ là bản cực đoan của b). Người học phân biệt bằng mức độ chứ không bằng cơ chế.", "fix": "Đổi c) thành giả thuyết khác cơ chế: 'khách so giá sau sale thấy giá thường cao hơn nên chờ đợt sau' (kỳ vọng giá) — hai giả thuyết đều hợp lý, hỏi dữ liệu nào phân xử (tỉ lệ khách cũ vs mới trong đơn sau mùa)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "thêm 1 triệu mà ra thêm 9 đơn thì phần thêm tốn 111.000đ/đơn, dù trung bình chung mới 47.600đ", "issue": "Phép so biên/trung bình tốt nhưng dồn vào một câu dài; không có bảng dù có bốn con số (3 triệu → 75 đơn; 4 triệu → 84 đơn; CPA trung bình; CPA biên).", "fix": "Tách thành bảng hai dòng (3 triệu / 4 triệu) với cột đơn, CPA trung bình, CPA biên, lãi biên (9×80.000 − 1.000.000 = −280.000đ)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 3.000.000/120.000×1.000 = 25.000 lượt; ×0,3% = 75 đơn; ×80.000 = 6 triệu; −3 = 3 triệu ✓; sai 6 ✓, 9 = 75×120.000? (chấp nhận nhãn SAI_TINH_TOAN). Q4: 60/1,5 = 40 nghìn ✓; sai 90 = 60×1,5 ✓. VÍ DỤ: ngày thường 50.000 lượt × 0,15% = 75 đơn, CPA 40.000 ✓; 4 triệu/84 = 47.619 ✓; 1 triệu/9 = 111.111 ✓. Q6: 40×2,5/1,2 = 83,3 nghìn ✓ 'gần 83.000đ, vượt 80.000đ'." },
+      "claims": [
+        { "claim": "Shop túi xách của Linh: CPM 60.000đ → 120.000đ trước 11/11, tỉ lệ ra đơn 0,15% → 0,3%", "status": "illustrative-labelled", "note": "VÍ DỤ mở đầu bằng 'Số minh hoạ.'" },
+        { "claim": "Nhiều thương hiệu dồn tiền từ trước mùa để xây tệp khi còn rẻ", "status": "unverified", "note": "Khẳng định thực hành ngành, không nguồn; chấp nhận được vì không có số." }
+      ],
+      "strengths": "Chuyển đúng câu hỏi từ CPM sang CPA so với lãi gộp và cho thấy CPM gấp đôi với tỉ lệ ra đơn gấp đôi là 'cùng một kết quả'; đưa CPA biên (111.000đ) đối lập CPA trung bình (47.600đ) — nối chặt với bài 01; Q6 là câu đọc hai tỉ số (2,5× và 1,2×) ra kết luận có số; Q3 là calc ba bước có ý nghĩa.",
+      "upgrade": "Bổ sung VÌ SAO / PHẢN VÍ DỤ (mùa sale nhưng sản phẩm không giảm giá — tỉ lệ ra đơn không tăng, CPM vẫn gấp đôi) / ĐÀO SÂU có phép tính xây tệp trước mùa; tách phép so biên/trung bình thành bảng; đổi Q7 c thành giả thuyết khác cơ chế và hỏi dữ liệu phân xử."
+    },
+    {
+      "id": "B:tu02-09",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 13, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Ba nhóm: A lãi biên +300.000đ mỗi triệu cuối, B +50.000đ, C −200.000đ. Cần cắt 18 triệu. Phong cắt C 10 triệu (phần đang lỗ), rồi B 8 triệu (phần lãi mỏng), giữ nguyên A.", "issue": "Ví dụ coi 'lãi biên mỗi triệu cuối' là hằng số trên suốt 10 triệu của C và 8 triệu của B — trái với chính bài 01/02 (lãi biên đổi theo mức chi). Không nêu giả định, và không giải thích vì sao dừng cắt C ở 10 triệu (nếu C vẫn −200.000đ/triệu thì nên cắt tiếp C thay vì cắt B đang +50.000đ). Phép tính thiếu giả định làm kết quả đổi: cắt đúng phải dừng khi lãi biên của C sau cắt ≈ lãi biên của B. Q4 có ghi 'giả sử lãi biên không đổi trong khoảng này' nhưng bài đọc thì không.", "fix": "Thêm vào VÍ DỤ hai dòng: 'lãi biên của C tăng dần khi C nhỏ lại (ước: triệu thứ 10 của C hoà vốn), nên cắt C tới chỗ biên C ≈ biên B rồi mới cắt B' và nêu rõ giả định tuyến tính là để tính nhanh." },
+        { "sev": "P2", "where": "Q3", "quote": "Ngân sách 60 triệu bị cắt còn 42 triệu. Tỉ lệ cắt là bao nhiêu phần trăm?", "issue": "Phép chia một bước đã cho sẵn đáp án trong TIÊU ĐỀ ('Bị cắt 30%'); không kiểm tra gì.", "fix": "Thay bằng: 'cắt đều 6 triệu mỗi nhóm thì tổng lãi đổi bao nhiêu so với cắt C 10 / B 8?' (đều: −1,8 + (−0,3) + 1,2 = −0,9 triệu; chọn lọc: +2 − 0,4 = +1,6 triệu; chênh 2,5 triệu) — làm người học thấy cái giá của 'công bằng'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "A lãi biên +300.000đ mỗi triệu cuối", "issue": "Bộ số tự đặt không gắn nhãn minh hoạ; không nói lãi biên đo bằng cách nào (bài 02 có phép thử rút 1 triệu, không được nối `rel`).", "fix": "Thêm '(số minh hoạ; đo lãi biên bằng phép rút 1 triệu như bài tu02-02)'." },
+        { "sev": "P2", "where": "Q7", "quote": "Sau khi cắt có chọn lọc 30% ngân sách, tổng đơn giảm 12%. Đọc thế nào?", "issue": "Câu tốt nhưng phương án đúng ('Bình thường và tốt') là mức giữa; không hỏi điều quan trọng hơn: lãi đổi thế nào (đơn giảm 12% nhưng lãi có thể tăng).", "fix": "Thêm số: 'đơn giảm 12%, lãi sau quảng cáo tăng 4%' và hỏi cách giải thích; hoặc đổi thành calc." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (60−42)/60 = 30% ✓; sai 42,9 = 18/42 ✓, 70 ✓. Q4: 10×0,2 = 2 triệu ✓ (có nêu giả định). VÍ DỤ: 10 + 8 = 18 ✓. Kiểm thêm: cắt đều 6/6/6 với biên tuyến tính: A −1,8, B −0,3, C +1,2 → tổng −0,9 triệu so với chọn lọc +1,6 triệu." },
+      "claims": [
+        { "claim": "Công ty khoá học của Phong: 3 nhóm × 20 triệu, lãi biên +300k / +50k / −200k mỗi triệu cuối", "status": "illustrative-unlabelled", "note": "Không có nhãn minh hoạ; coi lãi biên là hằng số trên nhiều triệu." }
+      ],
+      "strengths": "Chỉ ra 'cắt đều cho công bằng' là tiêu chí nội bộ, không phải tiêu chí lợi nhuận; PHẢN VÍ DỤ (C lỗ biên nhưng là đầu phễu) và Q5 (tệp đang cân nhắc có độ trễ) đưa vai trò trong hành trình vào quyết định cắt — đây là phần sâu nhất của bài; Q6 tổng hợp được bài 03, 04.",
+      "upgrade": "Nêu giả định tuyến tính và điều kiện dừng cắt (biên C ≈ biên B) trong VÍ DỤ; thay Q3 bằng calc so tổng lãi hai cách cắt; gắn nhãn minh hoạ và `rel` sang tu02-02; thêm số cho Q7; thêm ĐÀO SÂU về cách đo đóng góp gián tiếp của C (lượt tìm tên, đơn nhóm khác) trước khi cắt."
+    },
+    {
+      "id": "B:tu02-10",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 13, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÌ SAO HIỆU QUẢ", "quote": "Nền tảng cần vài ngày để học lại sau mỗi thay đổi lớn.", "issue": "Khẳng định về thuật toán nền tảng (giai đoạn học) nêu chung, không nền tảng, không `src`; thuộc lớp 'fast'.", "fix": "Thêm `src` trang trợ giúp về giai đoạn học của nền tảng được nhắc, hoặc viết 'theo tài liệu của các nền tảng lớn, thường vài ngày — kiểm trang chính thức'." },
+        { "sev": "P2", "where": "Q3, Q4", "quote": "1,5 × 4 = 6 triệu đồng.", "issue": "Hai calc đều là phép nhân/chia một bước (1,5×4; 6/50) không kiểm tra điều gì của bài về nhịp rà soát; đây là bài tổng hợp module nhưng không có câu tính nào nối năm bước.", "fix": "Thay Q4 bằng calc tổng hợp: tuần đầu bịt rò 1,5 triệu (lãi ≈ 1,5 triệu vì tiền rò lãi 0), dời 3 triệu từ nhóm biên −100k sang nhóm biên +200k (lãi +0,9 triệu) — tổng lãi thêm bao nhiêu? Buộc dùng bài 02, 04, 09." },
+        { "sev": "P2", "where": "Q5", "quote": "Ngày, thay đổi gì, vì sao, và kỳ vọng kết quả sẽ ra sao", "issue": "L2 nhận lại VÌ SAO (3); phương án sai vô lý ('ảnh chụp tài khoản thay ghi chép').", "fix": "Thay bằng câu L4: cho một sổ thay đổi 3 dòng trong một tuần cùng sửa một chiến dịch — dòng nào đọc được kết quả, dòng nào không, vì sao." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "thêm 12 từ phủ định (bớt khoảng 1,5 triệu rò), dời 3 triệu từ nhóm bão hoà sang nhóm còn dư địa, chuyển một phép thử thành chiến dịch chính", "issue": "Ví dụ liệt kê ba việc nhưng không có số kết quả tuần sau để minh hoạ cách 'so kết quả với từng dòng' — chính là kỹ năng bài muốn dạy.", "fix": "Thêm ba dòng sổ thay đổi với cột 'kỳ vọng' và 'thực tế tuần sau' (ví dụ: rò giảm 1,5 → thực 1,3; nhóm nhận tiền +12 đơn kỳ vọng → thực +7)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 1,5×4 = 6 ✓. Q4: 6/50 = 12% ✓; sai 8,33 = 50/6? (≈8,33 ✓), 13,6 = 6/44 ✓." },
+      "claims": [
+        { "claim": "Nền tảng cần vài ngày để học lại sau mỗi thay đổi lớn", "status": "unverified", "note": "Giai đoạn học — cơ chế nền tảng, không `src`." },
+        { "claim": "Shop thời trang trẻ em của Mai: 50 triệu/tháng, bịt rò 1,5 triệu/tuần, dời 3 triệu", "status": "illustrative-labelled", "note": "Bài ghi 'khoảng một giờ là đề xuất minh hoạ của bài'; số tiền rò không có nhãn riêng." }
+      ],
+      "strengths": "Năm bước theo thứ tự rủi ro (bịt rò trước, dời tiền sau, thử nghiệm cuối) tổng hợp đúng bài 02, 03, 04, 05, 06, 07, 09; PHẢN VÍ DỤ (nhóm ít đơn cần gộp 2–3 tuần) và Q7 (khi nào phá nhịp) đặt điều kiện cho nhịp tuần; sổ thay đổi với cột kỳ vọng là thói quen nghề đúng.",
+      "upgrade": "Thêm `src` cho giai đoạn học; thay Q4 bằng calc tổng hợp năm bước; thêm bảng sổ thay đổi với kỳ vọng/thực tế vào VÍ DỤ; thay Q5 bằng câu đọc sổ; thêm `rel` tới 7 bài được tổng hợp."
+    }
+  ],
+  "module_notes": {
+    "progression": "Mạch 10 bài đi từ nguyên lý (lợi suất giảm dần, chi phí biên — 01) → phân bổ theo lãi biên (02) → ba cách bịt rò (giờ 03, từ khoá 04, tần suất 05) → tối ưu theo lãi không theo đơn (06) → quỹ thử nghiệm và nhiễu (07) → mùa cao điểm (08) → cắt ngân sách (09) → nhịp rà soát tổng hợp (10). Thứ tự hợp lý và bài 10 tổng hợp được bài 02–07, 09. Lập luận chi phí biên / lãi biên nhất quán xuyên module và đúng; mọi phép tính tái lập được; tu02-07 là bài duy nhất trong đợt định lượng nhiễu (±2/√n). Điểm yếu: 3/10 bài (02, 07, 08) không có VÌ SAO / PHẢN VÍ DỤ / ĐÀO SÂU; 7/10 ví dụ không gắn nhãn minh hoạ (khác tu01); khoảng một nửa calc là phép nhân/chia một bước (03 Q3, 04 Q3, 05 Q3–Q4, 07 Q3, 09 Q3, 10 Q3–Q4) chiếm chỗ của calc có ý nghĩa; khẳng định về cơ chế nền tảng (tối ưu chuyển đổi, giai đoạn học, khớp rộng, giới hạn tần suất) không có `src` dù thuộc lớp fast; ví dụ bài 09 coi lãi biên là hằng số trên nhiều triệu — mâu thuẫn với bài 01/02.",
+    "overlap": [
+      "'Dời/tăng từng nấc rồi đo lại' là kết luận của 01, 02, 06, 07, 08, 09 — xoáy ốc hợp lý nhưng lời giải Q2 của sáu bài gần giống nhau, phương án đúng đoán được theo giọng.",
+      "Phương án sai kiểu 'nền tảng phạt / ưu tiên / cấm / thu phí' lặp ở 01 Q1 d, 01 Q6 a/d, 02 Q7 a, 03 Q5 b, 03 Q7 c/d, 05 Q1 b, 07 Q1 a, 08 Q1 c, 08 Q7 a, 09 Q5 a, 10 Q1 d — hơn 10 lần, trở thành mẹo loại trừ.",
+      "Lợi suất giảm dần được dạy lại ở 03 Q7, 05 ĐÀO SÂU, 06 PHẢN VÍ DỤ, 08 VÍ DỤ — nhất quán, nhưng thiếu `rel` về 01.",
+      "Bài 08 (CPA biên vs trung bình) lặp cơ chế của bài 01 với bối cảnh mùa; có thể gộp phần biên và dành chỗ cho xây tệp trước mùa."
+    ],
+    "gaps": [
+      "Không bài nào nói cách đo 'đơn tăng thêm' khi đổi ngân sách tách khỏi nhiễu và biến động nhu cầu (nhóm giữ lại / holdout, lặp phép thử) — bài 01 PHẢN VÍ DỤ nêu vấn đề nhưng không có bài giải.",
+      "Nhiễu thống kê chỉ xuất hiện ở bài 07; các bài 02, 03, 09 ra quyết định dời tiền trên chênh 8–15 đơn/tuần mà không bàn độ tin.",
+      "Không có bài về cách đặt giá thầu/giới hạn chi phí (cost cap, bid cap) như phương án thay thế cho việc tăng giảm ngân sách — người học chỉ có một nút để vặn.",
+      "Không có `src` cho bất kỳ khẳng định nền tảng nào (khớp rộng, báo cáo cụm từ, giai đoạn học, tối ưu theo giá trị, giới hạn tần suất) dù thang độ tươi 'fast' bắt buộc.",
+      "Giá trị mua lại/LTV theo nhóm chỉ được nhắc (01 ĐÀO SÂU, 06 Q7) chứ không được đưa vào phép tính lãi biên; thiếu `rel` sang dl10-04."
+    ],
+    "best_lesson": "B:tu02-02",
+    "weakest_lesson": "B:tu02-10"
+  }
+}

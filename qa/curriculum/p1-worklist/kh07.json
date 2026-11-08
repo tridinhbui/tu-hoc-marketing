@@ -1,0 +1,20 @@
+{
+ "mod": "kh07",
+ "lessons": [
+  {
+   "id": "B:kh07-01",
+   "title": "Nói “tiết kiệm 300.000đ” hay “đang mất 300.000đ mỗi tháng”?",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Tình huống",
+     "quote": "sau hai tuần mẫu B có tỉ lệ để lại số điện thoại cao hơn rõ rệt",
+     "issue": "Bài về đóng khung dựa trên một kết quả A/B nhưng không cho con số nào (tỉ lệ A, tỉ lệ B, số lượt hiển thị); người học không thể đánh giá 'rõ rệt' là bao nhiêu hay có nhiễu không. Chiều 'đọc số' gần như trống: phép tính duy nhất là suy ra 300.000đ.",
+     "fix": "Thêm số minh hoạ: 'A: 2,1% trên 20.000 lượt; B: 3,0% trên 20.000 lượt' và một câu về việc chênh 0,9 điểm trên 20.000 lượt có đủ chắc không."
+    }
+   ],
+   "upgrade": "(1) Thêm con số A/B và câu về độ chắc. (2) Gắn nhãn/nguồn cho ba giả định kỹ thuật và thêm src cho Kahneman–Tversky, Gal–Rucker (freshness periodic). (3) Sửa Q7 tiêu đề (2). (4) Thêm phản ví dụ bằng số: khung mất với khách chưa có máy — tỉ lệ để lại số thấp hơn khung được. (5) Thêm đào sâu: mối liên hệ với dark pattern (kh07-07) — ranh giới giữa khung mất có thật và doạ."
+  }
+ ]
+}

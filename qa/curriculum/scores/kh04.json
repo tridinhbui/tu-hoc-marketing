@@ -1,0 +1,205 @@
+{
+  "mod": "kh04",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kh04-01",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 12, "examples": 9, "pedagogy": 8, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L2", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Dữ kiện là con số đo được: giờ mua, số túi. Quan sát là hành vi bạn thấy lặp lại: mua hai túi, ăn một túi ngay trên xe.", "issue": "'Số túi' được xếp vào dữ kiện nhưng 'mua hai túi' lại là quan sát — ranh giới hai bậc mờ ngay trong định nghĩa; Q1 (b vs c) dựa đúng vào ranh giới này.", "fix": "Định nghĩa lại: dữ kiện = số tổng hợp từ hệ thống (giờ cao điểm, số túi trung bình); quan sát = hành vi cụ thể của khách nhìn/nghe thấy (mua hai túi rồi ăn một túi trên xe); bỏ 'số túi' khỏi ví dụ dữ kiện." },
+        { "sev": "P2", "where": "Q5", "quote": "a) Vì điều khách đã tự nói ra thì đối thủ cũng đã nghe và đã dùng", "issue": "Lời giải nói quá: lý do cốt lõi của 'chưa nói thành lời' là sự nhận ra (recognition) tạo cảm giác được hiểu; 'đối thủ đã dùng' chỉ là hệ quả thường gặp, không phải 'đã'. Khẳng định tuyệt đối.", "fix": "Sửa lời giải: 'điều ai cũng nói ra thường đã có trong quảng cáo đối thủ và không tạo cảm giác được hiểu; điều chưa nói mới làm khách thấy mình trong đó'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Hỏi thêm vài khách, bạn nghe: \"Đói lả sau giờ làm, nhưng về nhà mà ăn vặt trước mặt con thì kỳ.\"", "issue": "Insight rút từ 'vài khách' không nói bao nhiêu, bao nhiêu người nói giống nhau; phần vì sao hiệu quả nói 'quan sát đáng tin khi lặp lại ở nhiều khách' nhưng ví dụ không cho số.", "fix": "Ghi: hỏi 12 khách mua hai túi, 7 người nói ý tương tự về con/nhà; 3 người mua cho đồng nghiệp — nêu luôn giới hạn." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính. Bài về insight định tính; không có số cần kiểm." },
+      "claims": [
+        { "claim": "Chuỗi bánh mì que Hải Phòng, giờ cao điểm 17–19h, khách mua hai túi", "status": "illustrative-labelled", "note": "Tình huống hư cấu, dùng như ví dụ." }
+      ],
+      "strengths": "Cấu trúc đầy đủ với phản ví dụ hữu ích (khi dữ kiện là đủ cho vận hành, không cần leo bậc thang) và đào sâu về insight nằm ở mâu thuẫn. Q4 và Q6 buộc xếp bậc và chọn bước tiếp theo trong tình huống mới.",
+      "upgrade": "Làm sắc ranh giới dữ kiện/quan sát trong định nghĩa; cho số người được hỏi và số người nói giống nhau để dạy ngưỡng 'lặp lại'; sửa lời giải Q5 bớt tuyệt đối; thêm một câu L5 cân đánh đổi 'brief từ dữ kiện kịp thứ Sáu' vs 'hỏi 10 khách thêm 3 ngày'; thêm ví dụ thứ hai (ngành B2B) để thấy bậc thang vẫn áp dụng."
+    },
+    {
+      "id": "B:kh04-02",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 12, "examples": 9, "pedagogy": 7, "assessment": 7, "data": 4, "clarity": 4 },
+      "total": 66,
+      "bloom_items": ["L2", "L3", "L4", "L3", "L2", "L3", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Nghe mẹ nói chuyện trong nhóm Facebook, bạn thấy một vướng mắc: \"Tôi muốn con ăn đủ chất, nhưng mỗi bữa là một cuộc chiến…\"", "issue": "Insight rút từ một lời kể duy nhất và được dùng ngay để đổi hướng thương hiệu; bài 09 của chính module đòi ≥ 3 lời kể, bài này không nói cần kiểm (nối sang bài 03).", "fix": "Thêm: đếm số bài/bình luận cùng ý trong 3 nhóm (ví dụ 40/300 bài về bữa ăn), và nói rõ bước tiếp là thử 'đúng quá' (bài 03)." },
+        { "sev": "P2", "where": "Q2", "quote": "d) Viết lại brief: tìm chỗ \"muốn… nhưng…\" mà mẹ đang vướng", "issue": "Phương án đúng lặp lại tiêu đề/khái niệm của bài ('muốn… nhưng…'); ba phương án sai đều là chỉnh hình thức — đoán được không cần đọc.", "fix": "Cho 4 bản brief ngắn (một bản có căng thẳng thật, một bản 'nhưng giá', một bản xu hướng, một bản mong muốn trơn) và hỏi gửi bản nào." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "MANG THEO: Insight là một mâu thuẫn riêng của một nhóm người mà thương hiệu gỡ được", "issue": "Không có phản ví dụ (khi khuôn 'muốn… nhưng…' bị gò ép: ngành không có vướng mắc cảm xúc, hoặc vướng mắc là thứ thương hiệu không gỡ được — bài 04 mới nói) và không có đào sâu.", "fix": "Thêm phản ví dụ: hàng công nghiệp mua theo tiêu chuẩn kỹ thuật — căng thẳng nằm ở người mua (sợ chọn sai bị trách), không ở sản phẩm; dấu hiệu: ba câu 'nhưng' viết ra đều về giá hoặc thời gian giao." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Hãng sữa bột mới vào thị trường; ba concept 'phát triển toàn diện' giống hãng dẫn đầu", "status": "illustrative-labelled", "note": "Tình huống hư cấu." },
+        { "claim": "Marketer vẫn quyết định giá trong 4P (Q5d)", "status": "verified", "note": "Khái niệm nền (4P), không cần nguồn." }
+      ],
+      "strengths": "Chuẩn kiểm ba câu hỏi (riêng một nhóm? chạm cảm xúc? thương hiệu gỡ được?) rõ và Q3 buộc phân biệt căng thẳng thật với 'nhưng giá' (L4). Lời giải Q5 nêu được ngoại lệ (giá kèm nỗi sợ bị coi keo kiệt).",
+      "upgrade": "Thêm bước kiểm số lượng (đếm lời kể cùng ý) và nối rõ sang bài 03/09; thêm phản ví dụ và đào sâu (khi 'nhưng' là thứ thương hiệu không gỡ được); thay Q2 và Q7 (L2) bằng câu chấm 4 bản brief; thêm ví dụ thứ hai ở ngành dịch vụ/B2B; thêm một câu L5 cân hai insight cùng đúng (chọn cái nào theo vai trò thương hiệu)."
+    },
+    {
+      "id": "B:kh04-03",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L4", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Tỉ lệ \"đúng quá\" là 30% so với 70%. Câu 2 thắng rõ", "issue": "Với mẫu 20 người, bài không nói chênh lệch bao nhiêu thì đủ tin; 6/20 vs 14/20 là chênh lớn nhưng người học sẽ áp cùng cách đọc cho 9/20 vs 11/20 (hoàn toàn trong nhiễu). Rubric đòi nêu nhiễu khi mẫu nhỏ.", "fix": "Thêm một câu: với 20 người, chỉ tin khi chênh ≥ 5–6 người; chênh 2–3 người là nhiễu, phải thử thêm 20 người nữa." },
+        { "sev": "P2", "where": "Q3 sai định danh", "quote": "[[9,\"NHAM_SO_TUYET_DOI\"],[27.8,\"SAI_MAU_SO\"]]", "issue": "27,8 không suy ra được từ số trong đề (9/25 = 36; 9/34 = 26,5; 9/16 = 56,3); sai định danh không phải lỗi 'có tên'.", "fix": "Thay 27,8 bằng 56,3 (9/16, chia cho số người không gật) hoặc 64 (16/25, lấy nhầm nhóm)." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "ghi lại phản ứng trong ba giây đầu. Cái bạn đo là tỉ lệ người nhận ra chính mình.", "issue": "Người đọc câu cũng là người chấm 'đúng quá' hay 'hợp lý' — thiên lệch người chấm không được nêu (bài 06 có hai người gán nhãn độc lập, bài này không).", "fix": "Thêm: ghi âm hoặc để người thứ hai không biết câu nào là 'của mình' chấm phản ứng; thống nhất trước ba nhãn." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "hãy coi nó là tín hiệu để kiểm tra, không phải bằng chứng tuyệt đối", "issue": "Không có phản ví dụ (khi 'đúng quá' cao nhưng không mua: nhận ra mình ≠ thương hiệu gỡ được) và không có đào sâu.", "fix": "Thêm phản ví dụ: câu về 'ngại hỏi con' được 70% đúng quá nhưng khách không tin ví nào làm được — cần kiểm thêm vế thương hiệu gỡ." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 9/25 = 36% ✓ (tol 0,5); sai 9 (số tuyệt đối) ✓; 27,8 không suy ra từ đề. Q4: 6/20 = 30%, 14/20 = 70%, chênh 40 điểm % ✓ (tol 0,5); sai 133,3 = 40/30 ✓, 8 = 14 − 6 ✓. Ví dụ 30%/70% khớp Q4." },
+      "claims": [
+        { "claim": "Phép thử 'đúng quá' là quy tắc thực hành của người làm nghiên cứu, không phải kết quả nghiên cứu học thuật", "status": "illustrative-labelled", "note": "Bài tự gắn nhãn rõ." },
+        { "claim": "20 người trên 45 tuổi ở chợ Biên Hoà: 6/20 vs 14/20", "status": "illustrative-labelled", "note": "Tình huống hư cấu, số dùng để minh hoạ phép tính." }
+      ],
+      "strengths": "Tự gắn nhãn là quy tắc thực hành, không phải nghiên cứu; đưa quy trình cụ thể (đọc nguyên văn, không giải thích, ba giây đầu, người trong tệp). Q6 (thử trên nhân viên) và Q7 (nửa 'hợp lý') là câu chẩn đoán tốt; Q4 dạy đúng điểm phần trăm.",
+      "upgrade": "Thêm ngưỡng chênh lệch tối thiểu cho mẫu 20 và quy tắc 'chênh nhỏ thì thử thêm'; thêm người chấm độc lập để giảm thiên lệch; thay sai định danh 27,8; thêm phản ví dụ ('đúng quá' cao mà không mua) và đào sâu về chọn đúng người trong tệp; thêm một câu L5 đánh đổi 'thử 20 người ở một chợ' vs '40 người ở hai tỉnh'."
+    },
+    {
+      "id": "B:kh04-04",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 14, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 4, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "CÂU HỎI", "quote": "Q6: Vì sao không nên chọn ý tưởng chỉ vì nó \"đẹp\"?", "issue": "Q1, Q6 nhận lại ý bài (L2); Q3 và Q5 cùng dạng phân loại vai trò; thiếu câu đánh đổi giữa ba vai trò có số (chi phí, khả năng đo) dù phần đào sâu nêu đánh đổi.", "fix": "Thay Q6 bằng câu L5: hãng có 300 triệu, ba ý tưởng (gỡ: loạt công thức 120 triệu đo được bằng mã giảm giá; đứng về phía: phim 250 triệu khó đo) — chọn và biện hộ." },
+        { "sev": "P2", "where": "Q1", "quote": "c) Nói về xuất xứ là sai luật quảng cáo thực phẩm hiện hành — vì: Nói xuất xứ thật không vi phạm luật.", "issue": "Lời giải khẳng định về luật quảng cáo thực phẩm không nguồn; dù khả năng đúng, đây là khẳng định pháp lý nêu như sự thật.", "fix": "Sửa thành 'Nói đúng xuất xứ không phải là lỗi của ý tưởng này; vấn đề là nó không nối về insight' — tránh phán về luật, hoặc thêm `src`." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "nhóm chọn \"gỡ\" vì hợp với một thương hiệu mới cần lý do dùng thử", "issue": "Quyết định đúng nhưng không có tiêu chí đo thành công cho ý tưởng 'gỡ' (bao nhiêu người lưu công thức/dùng mã?), nên áp dụng chưa thành quyết định có số.", "fix": "Thêm: đo bằng số người làm theo công thức (mã giảm giá trong video) với ngưỡng 3% người xem." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính; bài sáng tạo định tính." },
+      "claims": [
+        { "claim": "Nói xuất xứ thật không vi phạm luật quảng cáo thực phẩm (Q1c)", "status": "unverified", "note": "Khẳng định pháp lý trong lời giải, không `src`." },
+        { "claim": "Hãng nước mắm Phú Quốc mới; insight đã thử", "status": "illustrative-labelled", "note": "Tình huống hư cấu." }
+      ],
+      "strengths": "Cây cầu ba vai trò (gỡ / đổi góc nhìn / đứng về phía khách) là công cụ hành nghề rõ, có ví dụ ba dòng cho cùng insight, phản ví dụ về vướng mắc thương hiệu không gỡ được và đào sâu về đánh đổi đo được vs gắn bó. Q7 là câu chẩn đoán tốt (gốc chắc, ngọn hỏng → nghi cây cầu).",
+      "upgrade": "Thêm tiêu chí đo cho ý tưởng được chọn và một câu L5 cân ba vai trò với ngân sách/khả năng đo; sửa lời giải pháp lý ở Q1; thay Q6 (L2) bằng câu đánh đổi; thêm ví dụ thứ hai với thương hiệu đã lớn chọn 'đổi góc nhìn' để thấy giai đoạn đổi thì vai trò đổi."
+    },
+    {
+      "id": "B:kh04-05",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 13, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 4, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L3", "L3", "L3", "L4", "L2", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "a) Ngại từ chối người quen vì sợ mất lòng, mất quan hệ — vì: … kiểu hợp đồng này dễ bị huỷ về sau.", "issue": "Lời giải thêm khẳng định 'dễ bị huỷ về sau' như sự thật ngành không nguồn.", "fix": "Sửa thành 'thường được giả định là dễ huỷ hơn — kiểm bằng tỉ lệ duy trì năm 2 theo kênh bán'." },
+        { "sev": "P2", "where": "Q5", "quote": "b) Vì luật cấm quảng cáo bảo hiểm nhắc tới cái chết — vì: Không có lệnh cấm như vậy.", "issue": "Phủ định một khẳng định pháp lý mà không `src`; cần nhãn độ tươi periodic.", "fix": "Thêm `src` Luật Quảng cáo / quy định quảng cáo bảo hiểm với ngày kiểm, hoặc viết 'theo hiểu biết hiện tại'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Hỏi sâu vài khách đã hẹn rồi im, bạn nghe: \"Mua bảo hiểm là như nghĩ tới chuyện mình mất…\"", "issue": "Không có số: bao nhiêu khách được hỏi, bao nhiêu nói ý 'gở', bao nhiêu nói phí thật; giả thuyết văn hoá đã được gắn nhãn 'cần kiểm' nhưng bài không cho thấy kiểm bằng gì ngoài 'hỏi thêm nhiều khách'.", "fix": "Thêm: 15 khách hẹn-rồi-im: 9 nói ý 'gở/xui', 4 nói phí thật, 2 không rõ; so với 10 khách đã ký bằng kênh người quen." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "Đây là giả thuyết văn hoá cần kiểm, không phải quy luật: khác nhau theo vùng và thế hệ.", "issue": "Nói đúng nhưng không có phản ví dụ cụ thể (nhóm trẻ thành thị nói thẳng về rủi ro; khách nói 'phí cao' và thật sự là phí cao) và không có đào sâu.", "fix": "Thêm phản ví dụ: khách 25–30 tuổi tự so phí trên mạng, lý do 'phí cao' là thật — dấu hiệu: họ nêu được con số phí đối thủ." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Khách Việt giữ thể diện, ngại từ chối thẳng, sợ 'trù ẻo' khi nói về rủi ro", "status": "illustrative-labelled", "note": "Bài gắn nhãn 'giả thuyết văn hoá cần kiểm, không phải quy luật'." },
+        { "claim": "Hợp đồng bảo hiểm mua vì nể người quen dễ bị huỷ về sau (Q3a)", "status": "unverified", "note": "" },
+        { "claim": "Không có luật cấm quảng cáo bảo hiểm nhắc tới cái chết (Q5b)", "status": "unverified", "note": "Khẳng định pháp lý không `src`." },
+        { "claim": "Bán bảo hiểm nhân thọ như khoản tiết kiệm/quỹ học mà giấu quyền lợi bảo vệ và rủi ro là bán sai", "status": "verified", "note": "Nguyên tắc nghề và đạo đức bán hàng; bài nêu đúng và nhấn mạnh ở lỗi hay gặp." }
+      ],
+      "strengths": "Gắn nhãn giả thuyết văn hoá và đặt rào đạo đức rõ (đổi khung 'quỹ học' nhưng vẫn phải nói đúng quyền lợi, phí, rủi ro). Q2 dạy kỹ thuật hỏi theo tình huống thật thay cho 'vì sao'; Q7 nêu dấu hiệu nhận ra lý do che (hành vi lệch lời khai).",
+      "upgrade": "Thêm số cho bước kiểm giả thuyết (bao nhiêu khách, bao nhiêu nói ý gì, so với nhóm đã ký); thêm phản ví dụ (khi 'phí cao' là thật) và đào sâu về khác biệt vùng/thế hệ; bỏ hoặc có `src` cho hai khẳng định ở lời giải Q3a và Q5b; thêm một câu L5 cân đánh đổi thông điệp 'quỹ học' (dễ nói) vs rủi ro bán sai sản phẩm."
+    },
+    {
+      "id": "B:kh04-06",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L4", "L5", "L3"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Lọc được 400 bình luận dài, bạn đọc 200. Một nhãn lặp lại 24 lần: \"mua cho bố mẹ…\". Chiếm 12% mẫu đã đọc", "issue": "12% là tỉ lệ trong bình luận dài (người chịu viết dài), không phải trong người mua; bài không nói lệch mẫu này nên người học có thể báo '12% khách mua tặng bố mẹ'.", "fix": "Thêm một câu: 12% của bình luận dài, chưa phải 12% người mua — người viết dài thường là người mua tặng/dùng lâu; kiểm lại bằng câu hỏi ở trang thanh toán." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "ưu tiên người mua đã xác minh, có ảnh hoặc video, dùng lâu; bỏ bình luận viết theo mẫu hoặc để lấy xu", "issue": "Dựa trên tính năng của Shopee/TikTok Shop (nhãn đã mua, thưởng xu khi đánh giá) mà không gắn nhãn độ tươi hay `src`; giao diện sàn đổi nhanh.", "fix": "Thêm câu 'nếu màn hình khác, tin trang chính thức' và ngày kiểm; mô tả tính năng chung thay vì tên cụ thể." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "Biểu đồ \"80% tích cực\" không bao giờ cho ra được điều này.", "issue": "Không có phản ví dụ (khi đếm từ khoá lại đủ: theo dõi lỗi sản phẩm hàng loạt, so sánh theo thời gian) và không có đào sâu.", "fix": "Thêm phản ví dụ: từ khoá 'kêu to', 'bong sơn' tăng từ 2% lên 9% trong một tháng là tín hiệu chất lượng cần đếm, không cần đọc chuyện." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30/250 = 12% ✓ (tol 0,2); sai 1,5 = 30/2.000 ✓, 30 = số tuyệt đối ✓. Ví dụ: 24/200 = 12% ✓." },
+      "claims": [
+        { "claim": "Shopee/TikTok có nhãn người mua đã xác minh và bình luận viết theo mẫu để lấy xu", "status": "unverified", "note": "Tính năng nền tảng, không `src`, độ tươi fast." },
+        { "claim": "2.000 bình luận: 80/15/5%; 400 dài, đọc 200, nhãn lặp 24 lần", "status": "illustrative-unlabelled", "note": "Tình huống hư cấu; số minh hoạ không ghi nhãn." }
+      ],
+      "strengths": "Quy trình đọc bình luận rất cụ thể (lọc dài, ưu tiên đã mua/có ảnh, gắn nhãn theo tình huống–nỗi lo, hai người gán nhãn độc lập, kiểm ngưỡng 20 chữ bằng mẫu ngẫu nhiên). Q6 là câu đánh giá đúng mức (12% là manh mối, chưa phải định vị) và Q3 dạy đúng mẫu số.",
+      "upgrade": "Nêu lệch mẫu của bình luận dài và cách kiểm lại trên người mua; gắn nhãn độ tươi cho tính năng sàn; thêm phản ví dụ (khi đếm từ khoá là đủ) và đào sâu về độ nhất quán giữa hai người gán nhãn (tỉ lệ khớp); thêm một câu L4 đọc bảng nhãn × tần suất và chọn nhãn đáng thử."
+    },
+    {
+      "id": "B:kh04-07",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 13, "examples": 10, "pedagogy": 9, "assessment": 7, "data": 4, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L4", "L3", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Hỏi các mẹ, bạn nghe: \"Tôi muốn con tự giác đánh răng, nhưng tối nào cũng phải canh…\"", "issue": "Không có số: bao nhiêu mẹ, bao nhiêu nói giống; không có kết quả nào sau khi đổi thông điệp (doanh số, mua lại) để thấy quyết định đúng.", "fix": "Thêm: hỏi 20 mẹ, 13 nói 'canh/to tiếng'; sau đổi trang bán hàng, tỉ lệ chuyển đổi từ 1,2% lên 2,1% (minh hoạ)." },
+        { "sev": "P2", "where": "CÂU HỎI", "quote": "Q4: Rủi ro nếu chỉ chạm insight người mua mà bỏ người dùng là gì?", "issue": "Q1, Q4 nhận lại ý bài (L2); không có câu đánh đổi ngân sách giữa ba vai (phần đào sâu nêu 'ngân sách nhỏ phải chọn vai quyết định trước') hay câu đọc dữ liệu mua lại.", "fix": "Thay Q4 bằng câu L5: với 150 triệu và ba vai (mẹ, bé, nha sĩ), chọn vai đầu tiên và biện hộ; hoặc câu L4 đọc bảng tỉ lệ mua lại theo nhóm có/không app cho bé." },
+        { "sev": "P2", "where": "Q5", "quote": "c) \"Tôi muốn mèo ăn ngon, nhưng sợ đổi hạt mèo bỏ ăn thì phí cả túi\"", "issue": "Phương án đúng là phương án duy nhất có khuôn 'muốn… nhưng…' — đoán được bằng hình thức sau bài 02.", "fix": "Viết phương án d cũng theo khuôn ('Tôi muốn bao bì đẹp, nhưng…') để buộc so căng thẳng nào tạo quyết định." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [
+        { "claim": "Bàn chải điện trẻ em: quảng cáo nhắm bé, doanh số không tăng", "status": "illustrative-labelled", "note": "Tình huống hư cấu." }
+      ],
+      "strengths": "Phân ba vai (người quyết, người trả tiền, người dùng) với phản ví dụ về người ảnh hưởng (nha sĩ, ông bà) và đào sâu về chỉ số đúng (mua lại, bé còn dùng sau vài tuần). Q3 chuyển sang B2B (phần mềm chấm công) và Q5 đọc căng thẳng người mua là hai câu áp dụng tốt.",
+      "upgrade": "Thêm số cho phần hỏi mẹ và một kết quả đo sau khi đổi thông điệp; thêm câu L5 cân ngân sách giữa ba vai và câu L4 đọc dữ liệu mua lại; viết lại Q5 để phương án sai cũng có khuôn 'muốn… nhưng…'; thêm ví dụ thứ hai nơi người dùng là người quyết (đồ chơi cho tuổi 10+) để thấy kết luận đổi."
+    },
+    {
+      "id": "B:kh04-08",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 13, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 6, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L3", "L4", "L4", "L2", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q2", "quote": "d) Giữ tinh thần gốc, kiểm lại phần \"nhưng\" với sinh viên hôm nay", "issue": "Phương án đúng gần như trùng câu 'mang theo' của bài; ba phương án sai đều hiển nhiên yếu (đổi diễn viên, bỏ hết, gấp đôi tiền).", "fix": "Cho 4 phương án cùng độ hợp lý: (1) kiểm lại 'nhưng' rồi làm phần hai; (2) chạy phim cũ ở tệp sinh viên năm nhất chưa xem; (3) làm phim mới hoàn toàn về tự lập; (4) chuyển ngân sách sang khuyến mãi — và hỏi phương án nào cần dữ liệu gì." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "lượt xem hết phim giảm một nửa và bình luận chỉ còn \"cũ rồi\"", "issue": "Dữ liệu suy giảm không tách được nguyên nhân (insight cũ vs kênh/thuật toán/định dạng đổi sau 5 năm) — Q5 nói đúng điều này nhưng ví dụ không làm bước tách đó trước khi phỏng vấn.", "fix": "Thêm một câu: so lượt xem hết của phim này với phim khác cùng kênh cùng kỳ; nếu phim khác không giảm thì mới nghi insight." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "Phần hai sẽ là công thức mì năm phút giống món mẹ nấu", "issue": "Không có phản ví dụ (insight bền hàng chục năm vì gắn với căng thẳng không đổi — ví dụ sợ mất mặt) và không có đào sâu.", "fix": "Thêm phản ví dụ: insight 'ngại mời bạn về nhà vì nhà chật' có thể bền hơn vì hoàn cảnh nhà ở ít đổi; dấu hiệu: 'đúng quá' không tụt qua hai lần kiểm." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính. Q3: 7 + 2 + 1 = 10 ✓; lời giải 'chín trong mười hiểu câu' ✓." },
+      "claims": [
+        { "claim": "Phỏng vấn lại vài chục sinh viên: gọi video với mẹ hằng ngày, đặt đồ ăn qua app", "status": "illustrative-labelled", "note": "Bài ghi '(tình huống minh hoạ)'." }
+      ],
+      "strengths": "Ba dấu hiệu hết hạn rõ, quy trình kiểm định kỳ cụ thể (6 tháng, 10 khách, so với lần trước) và Q3 đọc đúng dữ liệu nhỏ 7/2/1 với lời giải phân biệt 'tín hiệu sớm' và 'bằng chứng'. Q4 và Q7 là tình huống mới đòi suy căng thẳng mới.",
+      "upgrade": "Thêm bước tách nguyên nhân suy giảm (so với phim khác cùng kênh) trước phỏng vấn; thêm phản ví dụ về insight bền và đào sâu về giữ tinh thần gốc; viết lại Q2 với bốn phương án cân nhau; thay Q5/Q6 (L2) bằng câu đọc hai lần kiểm định kỳ (ví dụ 7/10 → 4/10 'đúng quá') và quyết định."
+    },
+    {
+      "id": "B:kh04-09",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 16, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 5, "clarity": 5 },
+      "total": 76,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L5", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "Một câu, một người, một mong muốn, một vướng mắc, bằng giọng của khách — không có tên sản phẩm.", "issue": "Không có phản ví dụ (khi một câu không đủ: sản phẩm có người mua ≠ người dùng cần hai câu — bài 07 đã dạy; B2B nhiều vai) và không có đào sâu.", "fix": "Thêm phản ví dụ: brief bàn chải trẻ em cần hai câu insight (mẹ và bé) — dấu hiệu: agency hỏi 'nói với ai?'; nối về bài 07." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "câu phải truy ngược được về ít nhất ba lời kể thật", "issue": "Ngưỡng 'ba lời kể' hữu ích nhưng không nói ba lời kể phải độc lập (ba người khác nhau, không cùng một buổi nhóm) và không nối với phép thử 'đúng quá' (bài 03) để kiểm độ phổ biến.", "fix": "Thêm: ba lời kể từ ba người ở hai nơi khác nhau; sau đó đọc câu cho 20 người trong tệp (bài 03) để có tỉ lệ nhận ra." },
+        { "sev": "P2", "where": "Q7", "quote": "d) Ở phần bối cảnh, làm bằng chứng đỡ cho câu insight", "issue": "Q4 và Q7 nhận lại ý bài (L2), phương án đúng ở Q7 trùng nguyên văn ví dụ ('chuyển xuống phần bối cảnh').", "fix": "Thay Q7 bằng câu L4: cho một brief hai đoạn và yêu cầu chỉ ra câu nào là insight, câu nào là bối cảnh, câu nào là lợi ích sản phẩm lẫn vào." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính. Số '72%' trong phương án sai là ví dụ về việc nhét số liệu vào câu insight, không phải khẳng định." },
+      "claims": [
+        { "claim": "Thợ xây trưa hè: 'uống nhiều thì bụng óc ách, leo giàn khó'", "status": "illustrative-labelled", "note": "Lời kể minh hoạ trong ví dụ." },
+        { "claim": "Bài thực hành: khảo sát 60 người, 70% từng phát hiện bố mẹ quên thuốc", "status": "illustrative-labelled", "note": "Dữ kiện giả định của bài tập." }
+      ],
+      "strengths": "Khuôn bốn phần với chuẩn kiểm 'truy ngược ≥ 3 lời kể' và bài thực hành có rubric chặt (dưới 45 chữ, không tên sản phẩm, không số liệu, giọng khách, ghi rõ phần chuyển xuống bối cảnh). Q2 và Q5 buộc chấm bốn bản theo bốn phần (L5) với lời giải chỉ đúng lỗi 'nhét số liệu vào miệng khách'.",
+      "upgrade": "Thêm phản ví dụ (khi cần hai câu insight cho hai vai) và đào sâu về tính độc lập của ba lời kể, nối sang bài 03 để kiểm độ phổ biến; thay Q4/Q7 (L2) bằng câu tách insight/bối cảnh/lợi ích trong một brief thật; thêm ví dụ thứ hai ở ngành dịch vụ để thấy 'giọng khách' thay đổi theo tệp."
+    }
+  ],
+  "module_notes": {
+    "progression": "Mạch rõ: bậc thang dữ kiện → insight (01) → insight là căng thẳng (02) → kiểm bằng 'đúng quá' (03) → từ insight ra ý tưởng (04) → insight văn hoá Việt (05) → đọc bình luận (06) → người mua vs người dùng (07) → hạn dùng của insight (08) → viết câu insight cho brief (09). Bài 06 (nguồn dữ liệu) nên đứng trước 02–03 vì phải có lời kể trước khi viết căng thẳng; bài 09 (viết câu) nên đứng ngay sau 02 để các bài sau dùng chung một khuôn. Các bài nối chéo tốt (04 dùng 'đúng quá' của 03; 08 dùng lại phép thử; 07 được 09 nên dẫn).",
+    "overlap": [
+      "Khuôn 'Tôi muốn A, nhưng B' được dạy ở 02 rồi lặp ở 05 (giả thuyết insight), 07 (hai căng thẳng) và 09 (bốn phần) — bốn bài cùng khuôn; 09 có thể gọn hơn và chỉ thêm 'ai' và 'giọng khách'.",
+      "Phép thử 'đúng quá' xuất hiện ở 03 (dạy), 06 (Q6), 08 (kiểm định kỳ) — hợp lý nhưng 08 nên chỉ dẫn về 03.",
+      "Lời giải 'không có luật cấm…' lặp ở 01 Q5d, 02 Q5b, 04 Q1c, 05 Q5b, 09 Q4d — năm phương án sai cùng kiểu 'viện luật', đoán được là sai."
+    ],
+    "gaps": [
+      "Không bài nào dạy phỏng vấn sâu để tìm insight (cách mở, cách theo đuôi, 'kể lần gần nhất…') ngoài hai câu hỏi ở bài 05; đây là kỹ năng lõi để có lời kể.",
+      "Thiếu bài về insight từ dữ liệu định lượng (hành vi mua, phân tích tệp) — mọi insight đều từ lời kể hoặc bình luận; không nối với dữ liệu bán hàng ngoài bài 01.",
+      "Thiếu hoàn toàn khái niệm độ chắc chắn: không bài nào nói mẫu 10–20 người cho khoảng tin cậy rộng thế nào, trừ câu 'tín hiệu sớm' ở 08.",
+      "Chưa nối insight với JTBD (module kh03): căng thẳng 'muốn… nhưng…' và việc cần làm là hai cách nhìn cùng một hiện tượng, người học có thể thấy mâu thuẫn."
+    ],
+    "best_lesson": "B:kh04-04",
+    "weakest_lesson": "B:kh04-02"
+  }
+}

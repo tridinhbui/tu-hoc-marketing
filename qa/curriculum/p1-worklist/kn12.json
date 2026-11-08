@@ -1,0 +1,65 @@
+{
+ "mod": "kn12",
+ "lessons": [
+  {
+   "id": "B:kn12-01",
+   "title": "Bài đăng nào phải dừng lại trước khi bấm \"Đăng\"?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q7 lời giải d",
+     "quote": "Mỹ phẩm thường không thuộc nhóm phải duyệt nội dung trước",
+     "issue": "Khẳng định pháp lý nêu như sự thật trong lời giải, trong khi bài kn12-03 cùng module viết 'Thuốc và thủ tục mỹ phẩm: chưa kiểm văn bản gốc, hỏi pháp chế'. Hai bài mâu thuẫn về cùng một điểm; đáp án Q7 (c) phụ thuộc vào khẳng định chưa kiểm này.",
+     "fix": "Pháp chế xác nhận hiện trạng thủ tục quảng cáo mỹ phẩm theo Nghị định 342/2025; nếu chưa chắc, sửa lời giải d thành 'bài này không nêu công dụng nên không chạm vùng tuyên bố; thủ tục riêng của mỹ phẩm (nếu có) hỏi pháp chế'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) pháp chế xác nhận hoặc sửa lời giải Q7 d cho khớp kn12-03; (2) thêm src văn bản luật; (3) thêm PHẢN VÍ DỤ (bài không chạm vùng nào nhưng vẫn gây rủi ro: dùng ảnh người khác không phép — vùng dữ liệu/ bản quyền) và ĐÀO SÂU (năm vùng nối với bài 02–07; mức phạt tham khảo theo văn bản khi pháp chế xác nhận); (4) thay Q3/Q5 bằng câu tính chi phí kiểm và câu xếp vùng đa lớp."
+  },
+  {
+   "id": "B:kn12-03",
+   "title": "Viên uống \"đẹp da\" lên sóng thứ Hai — đã có giấy xác nhận nội dung chưa?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Từ 1/7/2026, Nghị quyết 21/2026/NQ-CP chuyển thẩm quyền cấp xác nhận về Chủ tịch UBND cấp tỉnh",
+     "issue": "Chỉ dẫn vận hành cụ thể (nộp hồ sơ ở đâu, từ ngày nào) dựa trên một văn bản được nêu như sự thật, không src; hình thức 'Nghị quyết của Chính phủ' để chuyển thẩm quyền hành chính là chi tiết dễ sai và nếu sai sẽ làm người học nộp hồ sơ nhầm cơ quan.",
+     "fix": "Pháp chế xác nhận số hiệu, hình thức văn bản và ngày hiệu lực; thêm src; nếu chưa chắc, bỏ ngày và viết 'cơ quan tiếp nhận có thể đổi — hỏi pháp chế'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) pháp chế xác nhận bốn văn bản (342/2025, 100/2014, Nghị quyết 21/2026, Điều 31) và thêm src; (2) dùng thời hạn giải quyết theo văn bản cho lịch, kèm câu tính lịch thực; (3) thêm PHẢN VÍ DỤ (thực phẩm thường không phải TPBVSK: không cần xác nhận nhưng vẫn không được nói công dụng chữa bệnh) và ĐÀO SÂU (chi phí xin xác nhận, thời gian, ai nộp — thương nhân hay nhà cung cấp); (4) tách Q4 thành hai câu để mỗi khẳng định pháp lý có căn cứ riêng."
+  },
+  {
+   "id": "B:kn12-04",
+   "title": "Mua 1 tặng 1 hay phiếu cào trúng xe máy — cái nào cần thủ tục?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Theo tóm tắt của KPMG và Luật Việt Nam, Nghị định 239 bỏ các giới hạn cũ như mức giảm giá tối đa 50%, giá trị hàng tặng và tổng thời gian giảm giá",
+     "issue": "Nội dung pháp lý trọng yếu (bỏ trần giảm giá 50%, bỏ trần giá trị hàng tặng, ngưỡng thông báo 100 triệu) được lấy từ tóm tắt của bên thứ ba, không từ văn bản gốc, không src; Q1 b và Q2 d dựa vào tóm tắt này để chấm sai/đúng. Nếu tóm tắt sai, đáp án sai theo.",
+     "fix": "Pháp chế đối chiếu toàn văn Nghị định 239/2026/NĐ-CP (và 81/2018, 128/2024) cho từng điểm; thêm src văn bản gốc và link tóm tắt KPMG/Luật Việt Nam với ngày kiểm."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) pháp chế đối chiếu toàn văn Nghị định 239/2026 cho từng điểm đã tóm tắt, thêm src văn bản gốc; (2) ghi điều kiện thông báo cụ thể cho hình thức không may rủi; (3) thêm PHẢN VÍ DỤ (khuyến mại kéo dài làm giá tham chiếu bị hạ — khách chờ giảm giá; khi nào mua 1 tặng 1 không đáng dù hợp lệ) và ĐÀO SÂU (chi phí ẩn 50% giải không người nhận đưa vào dự toán; cách đo khách mới quay lại để biện hộ 6 triệu lãi gộp mất); (4) nâng Q5 thành câu tính."
+  },
+  {
+   "id": "B:kn12-06",
+   "title": "12.000 số điện thoại trong file Excel — được gửi tin cho ai?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Nghị định 356/2025/NĐ-CP hướng dẫn (theo tóm tắt của EY, thay Nghị định 13/2023; kiểm lại)",
+     "issue": "Khung pháp lý về dữ liệu cá nhân (luật mới hiệu lực 1/1/2026, nghị định hướng dẫn) dựa trên tóm tắt của bên thứ ba và chính bài ghi 'kiểm lại'; không src. Toàn bộ kết luận gửi/không gửi của bài tựa vào khung này.",
+     "fix": "Pháp chế đối chiếu Luật 91/2025/QH15 và nghị định hướng dẫn hiện hành (số hiệu, ngày hiệu lực, điều khoản về đồng ý, rút đồng ý, dữ liệu mua từ bên thứ ba); thêm src văn bản gốc."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) pháp chế xác nhận khung pháp lý (91/2025, nghị định hướng dẫn, phạm vi 91/2020 với Zalo) và thêm src; (2) thêm phép tính chi phí–lợi ích gửi tin và chi phí của danh sách mua ngoài; (3) thêm PHẢN VÍ DỤ (tin giao dịch — xác nhận lịch, nhắc hẹn — không phải quảng cáo, gửi được cho khách đã huỷ nhận khuyến mại) và ĐÀO SÂU (cách lưu bằng chứng đồng ý: thời điểm, câu chữ, kênh; thời hạn lưu); (4) thêm câu L5 chọn giữa gửi 6.600 số ngay vs xin đồng ý lại 4.800 số bằng chiến dịch opt-in."
+  }
+ ]
+}

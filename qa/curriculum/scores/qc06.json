@@ -1,0 +1,191 @@
+{
+  "mod": "qc06",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:qc06-01",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L4", "L5", "L3", "L1", "L2", "L1", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Lỗi hay gặp", "quote": "Bật bốn loại chiến dịch cùng lúc — nhận ra khi cộng chuyển đổi các chiến dịch lại thấy lớn hơn số đơn thật", "issue": "Trong cùng một tài khoản Google Ads, một chuyển đổi được chia công giữa các chiến dịch theo mô hình phân bổ (tổng = 1), không cộng trùng; tổng chuyển đổi các chiến dịch bằng tổng chuyển đổi tài khoản. Tổng tự báo vượt 'số đơn thật' khi có hai hành động chuyển đổi trùng (ví dụ Google tag + GA4 cùng là chính) hoặc do cửa sổ ghi nhận — không phải do 'nhiều chiến dịch'. Cơ chế nêu sai hướng người học đi tìm lỗi nhầm chỗ.", "fix": "Sửa thành: 'nhận ra khi tổng chuyển đổi tài khoản lớn hơn số đơn thật (kiểm hành động chuyển đổi trùng, cửa sổ ghi nhận) hoặc khi PMax báo nhiều mà tổng đơn web không tăng'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "5 triệu để dành cho tháng sau, khi đã nối Merchant Center", "issue": "Chia 30 triệu nhưng không có dự báo hay mốc cho Search 15 triệu và Demand Gen 10 triệu (các bài 06 có); 'thước đo cho tháng đầu' chỉ liệt kê, không có ngưỡng.", "fix": "Thêm mốc: với 40 đơn/tháng từ Search hiện tại (CPA?), đặt ngưỡng tổng đơn web và lượt tìm thương hiệu sau tháng đầu." },
+        { "sev": "P2", "where": "Q4, Q6", "quote": "Chiến dịch Video action trước đây giờ đã đi đâu?", "issue": "Hai câu L1 nhớ lộ trình sản phẩm (ngày tháng); kiến thức fast sẽ lỗi thời trong vài tháng và không kiểm năng lực chọn kênh.", "fix": "Thay bằng câu tình huống: shop có 400 mã sản phẩm, đo chuẩn, 300 đơn/tháng — chọn loại chiến dịch và thước đo; hoặc cho 3 doanh nghiệp, ghép loại chiến dịch." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 19 ÷ 40 = 47,5% ✓; sai 19 = số tuyệt đối ✓; sai 52,5 = phần còn lại ✓." },
+      "claims": [
+        { "claim": "Video action ngừng tạo mới từ 4/2025, nâng cấp tự động sang Demand Gen tới 4/2026", "status": "verified", "note": "src answer/15110871 (doc)" },
+        { "claim": "Display dời về Demand Gen, chuyển tự nguyện từ 6/2026, dự kiến xong 2027", "status": "verified", "note": "src blog Google (doc), kiểm 2026-10-24" },
+        { "claim": "Shopping cần Merchant Center; PMax chạy mọi kênh từ nhóm thành phần", "status": "verified", "note": "src chọn loại chiến dịch" },
+        { "claim": "Cộng chuyển đổi các chiến dịch lớn hơn số đơn thật vì nhiều chiến dịch", "status": "wrong", "note": "cơ chế không đúng trong cùng tài khoản; xem defect" },
+        { "claim": "40 đơn/tháng, 19 từ tên thương hiệu, chia 15/10/5 triệu", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Nguyên tắc 'bắt nhu cầu hay tạo nhu cầu' trước 'loại nào mạnh' và ba lý do hoãn PMax (đo mới, chưa video, 47,5% đơn thương hiệu) là lập luận của người có kinh nghiệm; tách Search thương hiệu làm thước đo cho PMax về sau là ý hay.",
+      "upgrade": "Để đạt ≥85: (1) sửa cơ chế 'cộng chuyển đổi lớn hơn số đơn' cho đúng; (2) thêm mốc số cho tháng đầu (tổng đơn web, lượt tìm thương hiệu) và một phép tính CPA hiện tại của Search; (3) thêm bảng 4 cột mẫu (việc / loại / thước đo / điều kiện) đã điền cho balo laptop để Áp dụng có mẫu; (4) thay Q4/Q6 (L1 lộ trình) bằng câu ghép doanh nghiệp–loại chiến dịch; (5) thêm câu 'nếu màn hình khác, tin trang chính thức'."
+    },
+    {
+      "id": "B:qc06-02",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 14, "examples": 12, "pedagogy": 9, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L4", "L5", "L3", "L1", "L4", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "Chiến dịch Video có các kiểu: Video reach (phủ nhiều người với chi phí thấp), Get views (lấy lượt xem), Ad sequence … Kiểu \"Drive conversions\" vẫn có tên trong danh sách", "issue": "Danh sách kiểu con chiến dịch Video (bao gồm cả Video reach gồm nhiều định dạng bumper/skippable/non-skippable, và 'Drive conversions' còn hay không sau khi Video action lên Demand Gen) là kiến thức fast; hai src chỉ là trang chọn loại chiến dịch và trang nâng cấp VAC — không có src riêng cho kiểu con Video. 'Drive conversions vẫn có tên' có thể lạc hậu (possibly outdated).", "fix": "Thêm src trợ giúp 'Về chiến dịch Video' (danh sách kiểu con) với ngày kiểm; viết 'kiểm danh sách kiểu con trong tài khoản' thay cho khẳng định." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "lượt tìm tên sản phẩm tăng 40% ở hai thành phố có chạy, trong khi Đà Nẵng … gần như đứng yên", "issue": "Thiết kế vùng đối chứng tốt nhưng không nói đo lượt tìm bằng công cụ nào (Google Trends theo vùng / Search Console / lượt hiển thị từ khoá thương hiệu trong Google Ads) và không nói mức nền (bao nhiêu lượt) để biết 40% có ý nghĩa.", "fix": "Thêm: 'đo bằng lượt hiển thị từ khoá thương hiệu theo vị trí trong Google Ads (hoặc Google Trends theo tỉnh); nền 2.000 lượt/tuần → 2.800'." },
+        { "sev": "P2", "where": "Q4", "quote": "Ad sequence dùng để làm gì?", "issue": "Câu L1 định nghĩa; phương án sai (tự cắt video thành Shorts) dễ loại.", "fix": "Thay bằng câu đọc số: reach 667.000 nhưng tần suất 1,2 — hỏi tiền có đủ 'nhớ' không và chỉnh gì (ngân sách / nhắm hẹp hơn / giới hạn tần suất)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 60.000.000 ÷ 30.000 × 1.000 = 2.000.000 lượt; ÷ 3 ≈ 666,7 nghìn người ✓; sai 2.000 = quên chia, 6.000 = nhân ✓. Q6: 1.500.000 ÷ 500.000 = 3 ✓; sai 0,33 = chia ngược ✓. Ví dụ 667.000 ≈ 2 triệu ÷ 3 ✓." },
+      "claims": [
+        { "claim": "Kiểu con Video: Video reach, Get views, Ad sequence, Drive conversions", "status": "unverified", "note": "không src riêng; 'Drive conversions' có thể đã bỏ" },
+        { "claim": "Video action đã chuyển sang Demand Gen", "status": "verified", "note": "src" },
+        { "claim": "Giới hạn tần suất 'nếu tài khoản cho đặt'", "status": "unverified", "note": "bài tự dè dặt, hợp lệ" },
+        { "claim": "60 triệu, CPM 30.000, tần suất 3, tăng 40%", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Đổi thước đo từ 'đơn từ click cuối' sang reach / tần suất / tìm kiếm thương hiệu với vùng đối chứng (Đà Nẵng) là cách đo đúng cho video phủ thương hiệu; phản ví dụ nêu rõ tìm thương hiệu tăng vì lý do khác nên cần đối chứng; Q5 kiểm đúng tư duy đối chứng.",
+      "upgrade": "Để đạt ≥85: (1) thêm src kiểu con Video và dè dặt về 'Drive conversions'; (2) nói công cụ đo lượt tìm thương hiệu và mức nền; (3) thêm bảng kế hoạch đo 4 tuần (reach mục tiêu, tần suất, lượt tìm vùng chạy / không chạy, ngưỡng 'đạt') làm mẫu cho Áp dụng; (4) thêm ví dụ thứ hai làm đổi kết luận: tần suất 7 với CTR giảm → giảm tiền hoặc giới hạn tần suất; (5) thay Q4 bằng câu đọc số L4."
+    },
+    {
+      "id": "B:qc06-03",
+      "scores": { "accuracy": 9, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L4", "L5", "L3", "L1", "L3", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm, Ví dụ, Q2, Q3", "quote": "Với Target CPA, Google khuyến nghị ngân sách ít nhất 10 lần CPA mục tiêu. Trang trợ giúp không nói rõ đó là ngân sách ngày", "issue": "Khuyến nghị bội số ngân sách của Google cho Demand Gen theo trí nhớ người chấm từng được nêu khác (10× cho Discovery trước đây; bản Demand Gen có lúc nêu 15× CPA cho ngân sách ngày) và trang trợ giúp thường nói rõ 'ngân sách ngày'. Bài vừa nêu con số như khuyến nghị chính thức, vừa thừa nhận không rõ ngày/tổng → chưa đủ xác minh để làm nền cho 3 bài (03, 06, 07) và nhiều câu hỏi. Possibly outdated.", "fix": "Đọc trọn trang 'Về chiến dịch Demand Gen' / 'Thiết lập ngân sách Demand Gen', chép đúng bội số và đơn vị (ngày), ghi ngày kiểm; nếu Google không còn nêu bội số, đổi sang quy tắc tự lập 'ngân sách ngày đủ cho ít nhất 5–10 chuyển đổi/ngày' và gắn nhãn 'quy tắc của bài'." },
+        { "sev": "P1", "where": "Khái niệm và Q4", "quote": "Demand Gen đặt quảng cáo hình ảnh và video lên YouTube (cả Shorts), Discover, Gmail, Maps, mạng hiển thị Google và đối tác video", "issue": "'Maps' là bề mặt người chấm không xác nhận được cho Demand Gen (có thể nhầm với bề mặt của PMax); Q4 đáp án (a) chứa Maps nên nếu sai thì đáp án chứa chi tiết sai. Possibly invented.", "fix": "Kiểm danh sách bề mặt trong trang trợ giúp Demand Gen; bỏ Maps nếu không có." },
+        { "sev": "P2", "where": "Làm từng bước", "quote": "Chọn mục tiêu gắn với doanh số và chuyển đổi \"mua hàng\" … chỉ thu hẹp khi có lý do rõ và tài khoản cho phép chọn kênh", "issue": "Các bước mô tả màn hình (mục tiêu, giá thầu, bề mặt, đối tượng) không có src riêng ngoài trang tổng quan Demand Gen; không có câu 'nếu màn hình khác'.", "fix": "Thêm src cho thiết lập Demand Gen và câu về màn hình khác." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Shop chọn bỏ Target CPA, chạy Maximize conversions 300.000đ/ngày trong 4 tuần", "issue": "Không dự báo gì cho 4 tuần (số đơn kỳ vọng, CPA chấp nhận được so với Search 180.000đ) nên Q7 (260.000đ) không có mốc để so ngoài Search.", "fix": "Thêm: với 300.000đ/ngày × 28 = 8,4 triệu, nếu CPA 250.000đ → ~34 đơn; đặt mốc tổng đơn web và lượt tìm thương hiệu." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 10 × 180 = 1.800 nghìn ✓ (phép tính đúng theo giả thiết trong đề; bản thân bội số 10 cần xác minh). 300 ÷ 180 ≈ 1,67 ✓ ('chưa tới 2 đơn/ngày' ✓)." },
+      "claims": [
+        { "claim": "Google khuyến nghị ngân sách ≥ 10 lần Target CPA cho Demand Gen", "status": "unverified", "note": "src tổng quan; bội số và đơn vị cần kiểm; possibly outdated" },
+        { "claim": "Bề mặt Demand Gen gồm Maps", "status": "unverified", "note": "possibly invented" },
+        { "claim": "Demand Gen chạy trên YouTube, Shorts, Discover, Gmail, mạng hiển thị", "status": "verified", "note": "src Về chiến dịch Demand Gen (doc) bao được" },
+        { "claim": "Display dời về Demand Gen", "status": "verified", "note": "src blog" },
+        { "claim": "Luật 91/2025 yêu cầu đồng ý khi dùng danh sách khách", "status": "verified", "note": "nguồn ở qc04-04" },
+        { "claim": "180.000đ/đơn Search, 300.000đ/ngày, 4.000 khách cũ", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Tách khách cũ và khách mới thành nhóm riêng để biết Demand Gen có tìm được người mới thật (Q6) là điểm senior; quyết định 'không đủ bội số thì bỏ Target CPA, chạy Maximize conversions và phán xét theo tháng' là lựa chọn thực tế cho ngân sách nhỏ.",
+      "upgrade": "Để đạt ≥85: (1) xác minh bội số ngân sách và đơn vị, sửa cả ba bài dùng nó; (2) kiểm bề mặt Maps; (3) thêm src thiết lập và câu 'nếu màn hình khác'; (4) thêm dự báo 4 tuần với mốc so; (5) thay Q4 (L1 liệt kê bề mặt) bằng câu quyết định: 6 video dọc nhưng không có bản ngang — mất bề mặt nào, ưu tiên làm gì; (6) thêm cách đo phần tăng thêm (vùng chạy / không chạy) thành bước cụ thể thay vì một câu ở Đào sâu."
+    },
+    {
+      "id": "B:qc06-04",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 15, "examples": 13, "pedagogy": 9, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 82,
+      "bloom_items": ["L4", "L5", "L3", "L2", "L3", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Lỗi hay gặp", "quote": "Báo cáo sếp bằng ROAS PMax tự ghi — nhận ra khi cộng doanh thu các chiến dịch vượt tổng doanh thu web", "issue": "Như qc06-01: trong cùng tài khoản, doanh thu chuyển đổi được chia công giữa chiến dịch, không cộng trùng; dấu hiệu 'cộng vượt tổng' chỉ xảy ra khi hành động chuyển đổi trùng hoặc cửa sổ ghi nhận lệch. Dấu hiệu đúng của nhận công là 'doanh thu PMax tự báo lớn hơn phần tăng thêm của tổng doanh thu web' — chính điều Khái niệm và Q1 nói đúng.", "fix": "Sửa dấu hiệu thành 'nhận ra khi doanh thu PMax tự báo (72 triệu) lớn hơn nhiều phần tăng thêm của tổng doanh thu web (30 triệu)'." },
+        { "sev": "P2", "where": "Q3 sai hay gặp", "quote": "[7.19,\"SAI_MAU_SO\"]", "issue": "7,19 = 230 ÷ 32 là sai cả tử và mẫu (ROAS tổng), không riêng mẫu số; mã lỗi gắn chưa đúng.", "fix": "Đổi mã thành 'LAY_TONG_THAY_PHAN_TANG_THEM' hoặc SAI_TINH_TOAN với chú thích." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "loại tên thương hiệu khỏi PMax nếu tài khoản cho phép (kiểm trong cài đặt chiến dịch)", "issue": "Tính năng loại trừ thương hiệu (brand exclusions) của PMax đã có từ 2023 và quan trọng cho bài; không có src, bài để 'nếu tài khoản cho phép'.", "fix": "Thêm src trợ giúp về loại trừ thương hiệu trong PMax và cách bật; bỏ 'nếu' khi đã kiểm." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (230 − 200) ÷ (32 − 20) = 30 ÷ 12 = 2,5 ✓; sai 6 = 72 ÷ 12 ✓; sai 7,19 = 230 ÷ 32 ✓ (mã lỗi lệch). Q6: 1 ÷ 40% = 2,5 ✓; sai 0,4 = nhầm biên ✓; 1,4 = sai ✓. Tình huống: 72 ÷ 12 = 6 ✓." },
+      "claims": [
+        { "claim": "PMax gồm nhóm thành phần, tín hiệu đối tượng (gợi ý, không giới hạn), mục tiêu chuyển đổi", "status": "verified", "note": "src cấu trúc tài khoản / chọn loại chiến dịch bao được phần nhóm thành phần; tín hiệu đối tượng đúng theo hiểu biết" },
+        { "claim": "PMax có thể loại trừ tên thương hiệu", "status": "unverified", "note": "đúng theo hiểu biết (brand exclusions), không src" },
+        { "claim": "Cộng doanh thu các chiến dịch vượt tổng doanh thu web", "status": "wrong", "note": "cơ chế không đúng trong cùng tài khoản" },
+        { "claim": "20 → 32 triệu chi; 200 → 230 triệu doanh thu; PMax báo 72 triệu; lãi gộp 40%", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "ROAS phần tăng thêm (2,5) so với ROAS hoà vốn (2,5) biến 'PMax có tốt không' thành phép so hai số — đúng cách người làm nghề đọc PMax; phản ví dụ nêu mùa vụ và đề xuất vùng đối chứng / bật tắt theo đợt; Q7 kiểm đúng dấu hiệu nhận công.",
+      "upgrade": "Để đạt ≥85: (1) sửa dấu hiệu 'cộng doanh thu vượt tổng'; (2) thêm src loại trừ thương hiệu PMax và bỏ dè dặt; (3) sửa mã lỗi 7,19; (4) thêm bước thiết kế vùng đối chứng cụ thể (chọn tỉnh nào, bao lâu, so số gì) vì phản ví dụ nêu nhưng không hướng dẫn; (5) thêm cột 'khách mới' vào bảng trước/sau (bài nhắc ở Đào sâu) với một con số minh hoạ; (6) thêm câu 'nếu màn hình khác, tin trang chính thức'."
+    },
+    {
+      "id": "B:qc06-05",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L4", "L5", "L3", "L2", "L3", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Làm từng bước", "quote": "Tạo tài khoản, khai thông tin doanh nghiệp và website; kiểm mục quốc gia bán hàng là Việt Nam, tiền VND", "issue": "Bước 'xác minh và xác nhận quyền sở hữu website' (bắt buộc trong Merchant Center) không được nêu; Đào sâu nói 'đường dẫn phải trỏ về trang của chính bạn' nhưng không nói vì sao (quyền sở hữu). Bước tạo/đưa feed không có src riêng ngoài trang quốc gia hỗ trợ.", "fix": "Thêm bước 'xác nhận quyền sở hữu website' và src thông số dữ liệu sản phẩm (product data specification)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "chia hai nhóm thành phần: hàng biên cao (khuôn, dụng cụ) và hàng biên thấp (nguyên liệu), để tiền không đổ hết vào bột và bơ", "issue": "Chia nhóm thành phần không tự ngăn PMax dồn tiền vào hàng biên thấp nếu cùng một chiến dịch và cùng mục tiêu; muốn kiểm soát ngân sách theo biên thường phải tách chiến dịch hoặc dùng giá trị chuyển đổi theo lãi. Bài nói quá tác dụng của việc chia nhóm.", "fix": "Sửa: 'tách thành hai chiến dịch (hoặc hai nhóm thành phần kèm mục tiêu ROAS khác nhau nếu tài khoản cho phép) để đặt ngân sách riêng cho hàng biên cao'." },
+        { "sev": "P2", "where": "Ví dụ và câu hỏi", "quote": "Sau 2 tuần, 290 sản phẩm hoạt động", "issue": "Chiều số liệu mỏng: chỉ có phần trăm sản phẩm hiển thị; không có số về lượt hiển thị/click/đơn trước–sau khi sửa tên, không có CPA hay ROAS cho khuôn vs nguyên liệu để thấy vì sao phải chia theo biên.", "fix": "Thêm bảng 2 dòng (khuôn: AOV 350.000đ biên 45%; bột: AOV 90.000đ biên 15%) với ROAS hoà vốn mỗi dòng (2,2 vs 6,7) để Q6 có số." },
+        { "sev": "P2", "where": "Q4, Q7", "quote": "Shop ở Việt Nam muốn chạy quảng cáo Mua sắm. Điều nào đúng?", "issue": "Hai câu L2 nhận lại ý bài; phương án sai (chỉ shop >1.000 sản phẩm, bỏ qua feed) phi lý.", "fix": "Thay Q4 bằng câu đọc danh sách lỗi Merchant Center (giá lệch 45, ảnh 20, thiếu GTIN 30) — hỏi sửa nhóm nào trước và từ nguồn nào." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 300 − 45 − 15 = 240; ÷ 300 = 80% ✓; sai 85 = quên 15 ✓; sai 20 = phần không hiển thị ✓." },
+      "claims": [
+        { "claim": "Việt Nam là quốc gia được Merchant Center hỗ trợ (VND); tab Mua sắm có ở Việt Nam", "status": "verified", "note": "src Quốc gia và tiền tệ được hỗ trợ (doc)" },
+        { "claim": "Quảng cáo Mua sắm không có từ khoá; Google khớp theo feed", "status": "verified", "note": "src chọn loại chiến dịch; đúng theo hiểu biết" },
+        { "claim": "Chia nhóm thành phần theo biên ngăn tiền đổ vào hàng lãi mỏng", "status": "unverified", "note": "nói quá; xem defect" },
+        { "claim": "300 sản phẩm, 45 từ chối, 15 hết hàng, 290 sau sửa", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Luận điểm 'với quảng cáo Mua sắm, feed chính là quảng cáo' và khuôn đặt tên 'loại + đặc điểm + kích thước' (Q5) dạy được kỹ năng dùng ngay; nguyên tắc sửa từ nguồn, không vá tay từng dòng, đúng thực tế vận hành.",
+      "upgrade": "Để đạt ≥85: (1) thêm bước xác nhận quyền sở hữu website và src thông số feed; (2) sửa cơ chế kiểm soát ngân sách theo biên (tách chiến dịch / mục tiêu ROAS); (3) thêm bảng hai dòng sản phẩm với ROAS hoà vốn để chiều số liệu có phép tính thật; (4) thêm ví dụ thứ hai: shop nguyên liệu biên 15% — kết luận đổi (không chạy Mua sắm cho nhóm này); (5) thay Q4/Q7 bằng câu đọc danh sách lỗi Merchant Center; (6) câu 'nếu màn hình khác, tin trang chính thức'."
+    },
+    {
+      "id": "B:qc06-06",
+      "scores": { "accuracy": 9, "depth": 12, "practical": 16, "examples": 13, "pedagogy": 9, "assessment": 6, "data": 9, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L4", "L6"],
+      "bloom_max": "L6",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P0", "where": "Q1", "quote": "Lớn hơn, vì nhiều chiến dịch cùng ghi công cho một đơn", "issue": "Theo hiểu biết của người chấm, trong cùng một tài khoản Google Ads một chuyển đổi được chia công giữa các chiến dịch theo mô hình phân bổ (tổng công = 1); Google không ghi trùng một đơn cho nhiều chiến dịch, nên phương án b ('Google khử trùng đơn giữa các chiến dịch') mô tả đúng cơ chế hơn đáp án c. Với đo đúng, tổng doanh thu các chiến dịch tự báo ≤ doanh thu web (không phải đơn nào cũng qua quảng cáo), nên 'lớn hơn' không phải điều 'thường' xảy ra. Hiện tượng bài muốn dạy là 'tổng tự báo lớn hơn PHẦN TĂNG THÊM của doanh thu web' (đúng) — nhưng đề hỏi so với doanh thu web. Hai phương án bênh được và cơ chế nêu như sự thật về cách nền tảng vận hành là sai. Cần người có tài khoản thật đối chiếu trước khi sửa.", "fix": "Viết lại đề: 'Cộng doanh thu PMax và Demand Gen tự báo thường so với phần tăng thêm của tổng doanh thu web thế nào?' với đáp án 'Lớn hơn, vì nền tảng ghi công cả đơn vốn sẽ đến từ Search thương hiệu hay khách quay lại'; sửa phương án b thành mệnh đề sai rõ ràng." },
+        { "sev": "P1", "where": "Lỗi hay gặp", "quote": "Cộng doanh thu các chiến dịch tự báo để báo cáo — nhận ra khi tổng lớn hơn doanh thu web", "issue": "Cùng cơ chế sai như Q1; dấu hiệu đúng là 'doanh thu tự báo lớn hơn phần tăng thêm' hoặc 'tổng chuyển đổi tài khoản lớn hơn số đơn thật (hành động chuyển đổi trùng)'.", "fix": "Sửa dấu hiệu như ở qc06-04." },
+        { "sev": "P1", "where": "Chia tiền và Q2", "quote": "1,5 triệu/ngày trong 10 ngày theo khuyến nghị ngân sách gấp 10 lần CPA", "issue": "Dựa trên bội số 10× chưa xác minh (xem qc06-03); đáp án Q2 (d) và phương án sai (a: 500.000đ 'chỉ hơn 3 lần') đều lệ thuộc con số này. Nếu khuyến nghị thật khác (ví dụ 15×), lời giải cần đổi.", "fix": "Sau khi xác minh bội số ở bài 03, cập nhật đồng bộ." },
+        { "sev": "P1", "where": "Toàn bài", "quote": "Loại tên thương hiệu khỏi PMax nếu tài khoản cho phép", "issue": "Bài không có src nào dù dùng nhiều khẳng định nền tảng (bội số ngân sách, loại trừ thương hiệu PMax, Target CPA Demand Gen); không có câu 'nếu màn hình khác'.", "fix": "Thêm src Demand Gen, PMax brand exclusions; câu về màn hình khác." },
+        { "sev": "P2", "where": "Kết quả 4 tuần", "quote": "Demand Gen 60 đơn (250.000đ mỗi đơn)", "issue": "Target CPA đặt 150.000đ nhưng kết quả 250.000đ (vượt 67%) mà bài không bình luận; người học không biết đó là bình thường cho đợt 10 ngày hay dấu hiệu mục tiêu quá thấp.", "fix": "Thêm một câu: 'CPA vượt mục tiêu 67% trong đợt đầu là thường khi máy chưa đủ dữ liệu; đợt hai đặt mục tiêu gần mức đạt được (~230.000đ)'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 72 ÷ 40 = 1,8 ✓; sai 9,3 = 372 ÷ 40 ✓; 5,6 = 140 ÷ 25 ✓. Q4: 72 × 40% = 28,8; − 40 = −11,2 triệu ✓; sai 32 = 72 − 40 ✓; 28,8 = quên trừ ✓. Ví dụ: 1 ÷ 40% = 2,5 ✓; 40 × 2,5 = 100 → mốc 400 triệu ✓; 15 triệu ÷ 10 ngày = 1,5 triệu = 10 × 150.000 ✓; 15 triệu ÷ 60 = 250.000 ✓; Đào sâu 1,8 × 0,4 = 0,72 ✓." },
+      "claims": [
+        { "claim": "Nhiều chiến dịch cùng ghi công cho một đơn trong cùng tài khoản Google Ads", "status": "wrong", "note": "theo hiểu biết người chấm; cần đối chiếu tài khoản thật" },
+        { "claim": "Khuyến nghị ngân sách 10 lần CPA mục tiêu", "status": "unverified", "note": "xem qc06-03" },
+        { "claim": "PMax có thể loại tên thương hiệu", "status": "unverified", "note": "đúng theo hiểu biết, không src" },
+        { "claim": "Toàn bộ số kế hoạch (30/300 triệu nền, 40 triệu thêm, 372 triệu, 140 triệu PMax, 60 đơn DG, +12%, −30%)", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Viết thước đo trước (mốc doanh thu web 400 triệu) rồi so với kết quả 372 triệu và tính lỗ trực tiếp −11,2 triệu — đây là bài có chiều số liệu mạnh nhất module; Q7 (L6) buộc thiết kế đo phần tăng thêm bằng vùng đối chứng.",
+      "upgrade": "Để đạt ≥85: (1) sửa Q1 và Lỗi hay gặp về cơ chế ghi công; (2) xác minh bội số ngân sách; (3) thêm src và câu 'nếu màn hình khác'; (4) bình luận CPA Demand Gen 250.000đ so với mục tiêu 150.000đ; (5) thêm bảng trước/sau 6 dòng (chi, doanh thu web, PMax tự báo, DG đơn, lượt bấm Search thương hiệu, lượt tìm thương hiệu) để Áp dụng có mẫu; (6) thêm ước lượng giá trị đời khách tối thiểu để −11,2 triệu hoà vốn (bao nhiêu % khách mới phải mua lại) vì Đào sâu nêu ý nhưng không tính."
+    },
+    {
+      "id": "B:qc06-07",
+      "scores": { "accuracy": 10, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 9, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L5", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm, Ví dụ, Q3, Q5", "quote": "khuyến nghị là ít nhất 2,5 triệu", "issue": "Lệ thuộc bội số 10× chưa xác minh (xem qc06-03); Q3 tính 1,6 lần đúng theo đề, nhưng kết luận 'xa mức khuyến nghị 10 lần' và đáp án Q5 dựa trên con số này.", "fix": "Cập nhật đồng bộ sau khi xác minh ở bài 03." },
+        { "sev": "P1", "where": "Ví dụ – shop nến", "quote": "tổng doanh thu web 150 triệu, bằng tháng trước, lượt bấm Search tên thương hiệu giảm 40%. ROAS phần tăng thêm gần bằng 0", "issue": "So trước–sau một tháng với tổng đi ngang được kết luận thẳng là 'nhận công'; phản ví dụ của chính bài nói thị trường có thể đang giảm và PMax đang giữ doanh thu. Ví dụ không nêu dữ kiện loại trừ khả năng đó (ví dụ cùng kỳ năm trước, vùng không chạy), nên kết luận trong ví dụ chắc hơn dữ kiện cho phép.", "fix": "Thêm một dữ kiện vào ví dụ: 'cùng kỳ năm trước doanh thu tháng này cũng ≈ tháng trước; không có đợt sale' hoặc nói rõ 'kết luận tạm, kiểm bằng đợt tắt PMax 2 tuần'." },
+        { "sev": "P2", "where": "Q7", "quote": "Những con số nào nên có trong sổ chẩn đoán hằng tuần", "issue": "Câu L2 nhận lại phần Đào sâu; phương án sai (số lần đăng nhập, lượt thích kênh) dễ loại bằng hình thức.", "fix": "Thay bằng câu đọc sổ: cho 5 dòng số của một tuần (doanh thu web −5%, Search thương hiệu −35%, lượt tìm tên +0%, ngân sách/CPA 1,4, thay đổi lớn: bật PMax) — hỏi ca nào đang xảy ra và việc đầu tiên." },
+        { "sev": "P2", "where": "Ví dụ – nước tương", "quote": "video 30 giây, logo hiện ở giây 25; sửa: đưa sản phẩm và tên vào 5 giây đầu", "issue": "Kết luận hợp lý nhưng không có số nào về tỉ lệ xem tới giây 25 (báo cáo tứ phân vị video có trong Google Ads) để chứng minh 'phần lớn không ở lại tới giây 25'.", "fix": "Thêm: 'báo cáo xem 75% video chỉ 18% → 82% người xem chưa từng thấy tên'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 400 ÷ 250 = 1,6 ✓; 10 × 250.000 = 2,5 triệu ✓; sai 0,625 = chia ngược ✓. Q4: (150 − 150) ÷ 10 = 0 ✓; sai 8 = ROAS tự báo (80 ÷ 10) ✓; 15 = 150 ÷ 10 ✓." },
+      "claims": [
+        { "claim": "Khuyến nghị ngân sách ≥ 10 lần Target CPA cho Demand Gen", "status": "unverified", "note": "xem qc06-03" },
+        { "claim": "Consent Mode v2 chủ yếu bắt buộc ở châu Âu", "status": "verified", "note": "src Consent Mode" },
+        { "claim": "Luật 91/2025 điều kiện đồng ý khi dùng danh sách khách", "status": "verified", "note": "nguồn ở qc04-04" },
+        { "claim": "PMax có thể loại tên thương hiệu", "status": "unverified", "note": "" },
+        { "claim": "Ba ca: ROAS 8 / 80 triệu / 150 triệu; 1,2 triệu view; 400.000đ–250.000đ–600.000đ", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Ba ca quy về một gốc ('đo sai thứ hoặc cho máy quá ít để học') và sổ chẩn đoán 5 dòng là công cụ dùng được hằng tuần; Q4 (ROAS phần tăng thêm = 0) là câu tính làm lộ rõ khoảng cách giữa số tự báo và thực tế; phản ví dụ nêu khả năng thị trường giảm.",
+      "upgrade": "Để đạt ≥85: (1) xác minh bội số ngân sách; (2) thêm dữ kiện loại trừ giả thuyết thị trường giảm trong ca nến hoặc nêu kết luận tạm; (3) thêm số tứ phân vị xem video cho ca nước tương; (4) thêm src cho PMax brand exclusions, báo cáo tứ phân vị video; câu 'nếu màn hình khác'; (5) thay Q7 bằng câu đọc sổ chẩn đoán L4; (6) nối rõ về bài 02 (reach/tần suất) và 04 (ROAS phần tăng thêm) thay vì lặp lại định nghĩa."
+    }
+  ],
+  "module_notes": {
+    "progression": "Chọn loại chiến dịch (01) → Video và cách đo (02) → Demand Gen từng bước (03) → đọc PMax bằng phần tăng thêm (04) → Merchant Center/feed (05) → ví dụ xuyên suốt PMax + Demand Gen (06) → chẩn đoán ba ca (07). Thứ tự hợp lý, nhưng bài 05 (feed) nên đứng trước bài 04 (PMax) vì PMax có feed cần Merchant Center. Module lặp ý 'PMax nhận công' tới bốn lần (01, 04, 06, 07) và bội số ngân sách Demand Gen ba lần (03, 06, 07) — cả hai ý nền đều có vấn đề xác minh (cơ chế ghi công trong cùng tài khoản; bội số 10×), nên một lỗi sửa ở bài gốc phải lan ra cả module.",
+    "overlap": [
+      "PMax nhận công / ROAS phần tăng thêm: B:qc06-01 Q1, 04 (toàn bài), 06 Q5, 07 Q1 & Q4 — nên để 04 là bài chủ, các bài khác chỉ dẫn về và hỏi câu khác",
+      "Bội số ngân sách / Target CPA Demand Gen: B:qc06-03 Q1–Q3, 06 Q2, 07 Q3 & Q5",
+      "Video action → Demand Gen, Display → Demand Gen: B:qc06-01, 02, 03 cùng nhắc lại lộ trình",
+      "Vùng đối chứng để đo phần tăng thêm: 02, 04, 06, 07 cùng nêu nhưng không bài nào hướng dẫn thiết kế"
+    ],
+    "gaps": [
+      "Cơ chế phân bổ chuyển đổi giữa các chiến dịch trong Google Ads (chia công, không cộng trùng) và hành động chuyển đổi trùng — gốc của lỗi lặp ở 01, 04, 06",
+      "Thiết kế thử nghiệm vùng đối chứng / bật tắt theo đợt (geo holdout) từng bước — được viện tới bốn lần, chưa dạy",
+      "Loại trừ thương hiệu và mục tiêu khách mới (new customer acquisition) trong PMax — nhắc tên, không có bước và không có src",
+      "Chiến dịch Shopping chuẩn vs PMax có feed vs PMax chỉ feed — bài 05 gộp 'PMax (hoặc Shopping)'",
+      "Định dạng video YouTube (bumper 6s, skippable, in-feed, Shorts) và báo cáo tứ phân vị xem — bài 02, 07 cần để đọc video",
+      "Thiết lập Merchant Center: xác nhận quyền sở hữu website, thông số feed, chính sách trình bày sai (misrepresentation) hay gây tạm ngưng tài khoản",
+      "Lịch kiểm lại 3 tháng và câu 'nếu màn hình khác, tin trang chính thức' — không bài nào có"
+    ],
+    "best_lesson": "B:qc06-04",
+    "weakest_lesson": "B:qc06-03"
+  }
+}

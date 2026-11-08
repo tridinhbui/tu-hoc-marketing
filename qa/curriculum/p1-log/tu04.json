@@ -1,0 +1,72 @@
+{
+ "mod": "tu04",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:tu04-03",
+   "where": "Cấu trúc bài",
+   "status": "fixed",
+   "change": "Ví dụ thêm: trần còn sai khi khách giới thiệu mua ít đơn hơn (1,5 đơn → lãi 180.000đ < thưởng 200.000đ) và khi thưởng trả ngay còn lãi đơn 2–3 về sau nhiều tháng — cần ngân sách tiền mặt tối đa mỗi tháng.",
+   "key_changed": false,
+   "note": "Không thêm trường points/counter/deeper vì brief cấm thêm trường chuẩn v2; chỉ thêm một câu điều kiện thất bại vào trường sẵn có."
+  },
+  {
+   "id": "B:tu04-04",
+   "where": "Cấu trúc bài",
+   "status": "fixed",
+   "change": "Thêm một lỗi hay gặp: mời ngay lúc nhận hàng với sản phẩm cần thời gian mới thấy kết quả (kem trị mụn, khoá học) hoặc dịch vụ khách ngại kể (trị liệu, y tế) — dời sang khi khách thấy kết quả hoặc mua lần hai.",
+   "key_changed": false,
+   "note": "Không thêm trường points/counter/deeper vì brief cấm thêm trường chuẩn v2; chỉ thêm một câu điều kiện thất bại vào trường sẵn có."
+  },
+  {
+   "id": "B:tu04-05",
+   "where": "Khái niệm",
+   "status": "needs-human",
+   "change": "Bỏ cụm “(theo khung STEPPS…)” gắn sai vào danh sách; thêm câu: “Ý này lấy từ ba trong sáu yếu tố của khung STEPPS trong sách Contagious của Jonah Berger: social currency — kể để trông thú vị, public — dễ thấy, dễ chụp, và stories — một câu kể lại được.”",
+   "key_changed": false,
+   "note": "Đã sửa phần mô tả sai về STEPPS. Chưa gắn src vì không chắc URL trang chính thức của sách/tác giả. Cần người thật: thêm src (sách Contagious, năm xuất bản, trang tác giả hoặc nhà xuất bản)."
+  },
+  {
+   "id": "B:tu04-05",
+   "where": "Ví dụ · Q3",
+   "status": "fixed",
+   "change": "Ví dụ thêm “(số minh hoạ)”, câu “so trước – sau nên chỉ là tín hiệu, cần so với cùng kỳ hoặc một quán không đổi”, và chi phí: giả sử chả viên 3.000đ × 6.000 lượt khách/tháng = 18 triệu/tháng, chỉ đáng khi khách mới tăng thêm × lãi mỗi khách vượt con số này. Q3 giữ nguyên.",
+   "key_changed": false,
+   "note": "Không đưa ước “+90 khách/tháng” của người chấm vì 30/200 khách nói “bạn kể” không suy ra được số khách mới tăng thêm."
+  },
+  {
+   "id": "B:tu04-07",
+   "where": "Khái niệm",
+   "status": "needs-human",
+   "change": "“nghiên cứu của Spiegel… đạt đỉnh ở khoảng 4,2–4,5 sao” → “theo hiểu biết chung tại ngày kiểm 2026-11-07 về nghiên cứu của Spiegel Research Center (Northwestern) trên dữ liệu bán lẻ online ở Mỹ, khả năng mua thường đạt đỉnh ở mức trên 4 sao nhưng dưới 5 sao… — hãy kiểm trên danh mục của bạn”.",
+   "key_changed": false,
+   "note": "Bỏ dải số cụ thể vì không chắc khớp báo cáo gốc. Cần người thật: đối chiếu báo cáo Spiegel “How Online Reviews Influence Sales” (năm, dải sao chính xác) và thêm src."
+  },
+  {
+   "id": "B:tu04-07",
+   "where": "Cấu trúc bài",
+   "status": "fixed",
+   "change": "Thêm một lỗi hay gặp: tặng quà kèm điều kiện “nếu đánh giá 5 sao” có thể bị sàn coi là thao túng; chỉ xin đánh giá trung thực, chấp nhận điểm tụt nhẹ khi số đánh giá tăng, theo dõi tỉ lệ mua thay vì chỉ nhìn điểm.",
+   "key_changed": false,
+   "note": "Không thêm trường points/counter/deeper vì brief cấm thêm trường chuẩn v2; chỉ thêm một câu điều kiện thất bại vào trường sẵn có."
+  },
+  {
+   "id": "B:tu04-08",
+   "where": "Khái niệm (pháp lý)",
+   "status": "needs-human",
+   "change": "Hedge: “theo Luật Quảng cáo; theo hiểu biết chung tại ngày kiểm 2026-11-07, bản sửa đổi hiệu lực từ 01/01/2026 thêm trách nhiệm cho người chuyển tải quảng cáo — hỏi pháp chế, ghi nhãn ngay trong bài.”",
+   "key_changed": false,
+   "note": "Chưa gắn src. Cần người thật: xác nhận số hiệu luật sửa đổi Luật Quảng cáo (ngày thông qua, hiệu lực 01/01/2026) và quy định về người chuyển tải sản phẩm quảng cáo, thêm src."
+  },
+  {
+   "id": "B:tu04-08",
+   "where": "Cấu trúc bài",
+   "status": "fixed",
+   "change": "Thêm một lỗi hay gặp: bỏ qua rủi ro ngược (đại sứ bỏ ngang, nhóm chạy tan, đại sứ nói xấu khi sản phẩm lỗi) làm chi phí mỗi đơn tăng — theo dõi số đại sứ còn hoạt động mỗi tháng và tính cả chi phí quản lý cộng đồng.",
+   "key_changed": false,
+   "note": "Không thêm trường points/counter/deeper vì brief cấm thêm trường chuẩn v2; chỉ thêm một câu điều kiện thất bại vào trường sẵn có."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

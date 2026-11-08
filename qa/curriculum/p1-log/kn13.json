@@ -1,0 +1,64 @@
+{
+ "mod": "kn13",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:kn13-01",
+   "where": "Ví dụ",
+   "status": "fixed",
+   "change": "Ví dụ đã có “(số minh hoạ)” và câu “Tỉ lệ của kênh bạn có thể khác hẳn; chỉ báo cáo của chính kênh mới có giá trị…”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước"
+  },
+  {
+   "id": "B:kn13-01",
+   "where": "Q6",
+   "status": "fixed",
+   "change": "Nhiễu cực đoan “Coi như tin đồn, rồi bỏ qua mọi thông tin… kể cả tài liệu chính thức” đã thay bằng nhiễu có lý lẽ “Thử ngay một video dài hơn 1 phút… nếu lượt xem tăng thì coi là đã kiểm xong”; Q1 bỏ “luôn”. Không đổi Q6 thành câu bảng dữ liệu (ngoài phạm vi sửa nhỏ nhất).",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; khoá giữ nguyên"
+  },
+  {
+   "id": "B:kn13-02",
+   "where": "Ví dụ (phép thử)",
+   "status": "fixed",
+   "change": "Ví dụ đã nói rõ so bằng hai nhóm quảng cáo cùng đối tượng, cùng ngân sách; nếu không có công cụ thì đăng hai bản cách nhau, so cùng nguồn và chấp nhận nhiễu.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước"
+  },
+  {
+   "id": "B:kn13-02",
+   "where": "Ví dụ (nhãn số)",
+   "status": "fixed",
+   "change": "Ví dụ đã có “Con số minh hoạ.”",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước"
+  },
+  {
+   "id": "B:kn13-03",
+   "where": "Ví dụ",
+   "status": "fixed",
+   "change": "Ví dụ đã nói phép thử dùng công cụ thử ảnh bìa của nền tảng nếu có, nếu không thì đổi theo thời gian, so cùng nguồn, chấp nhận nhiễu; đã có “Con số minh hoạ.”",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước"
+  },
+  {
+   "id": "B:kn13-03",
+   "where": "Q7",
+   "status": "fixed",
+   "change": "Nhiễu Q7 đã viết lại có lý lẽ (“Đồng ý nếu mục tiêu tuần này là reach…”, “Từ chối, vì bản A gây sốc chỉ giữ được 20%…”); Q1 bỏ “luôn”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; khoá giữ nguyên"
+  },
+  {
+   "id": "B:kn13-06",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "Hạn 2–4 giờ/24 giờ đã gắn “mức gợi ý để bắt đầu, không phải chuẩn ngành; đo thời gian từ lúc khách hỏi đến lúc chốt của chính bạn rồi đặt hạn ngắn hơn khoảng đó”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước"
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

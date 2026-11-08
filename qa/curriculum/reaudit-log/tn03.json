@@ -1,0 +1,3 @@
+{ "mod":"tn03", "fixed_at":"2026-11-08", "items":[
+  { "id":"B:tn03-03", "where":"VÍ DỤ", "status":"fixed", "change":"Phép thử tiêu đề đo cả hai tầng: thêm lượt hiển thị 12.000 và 11.850 (chênh chưa tới 2%) bên cạnh CTR 2,4% và 2,5%; kết luận “chưa thấy tiêu đề tạo khác biệt, ở cả hiển thị lẫn bấm” vì cả hai chênh đều nhỏ hơn dao động giữa các tuần.", "key_changed":false, "note":"Validator cảnh báo (không phải lỗi) example 220 chữ > 170; ví dụ vốn đã dài trước khi sửa." } ],
+  "validator":"0 lỗi (1 cảnh báo độ dài example tn03-03)", "tests":"pass" }

@@ -1,0 +1,24 @@
+{
+ "mod": "tp02",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:tp02-02",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "Thay câu “Lưu ý … hiếm hãng nào độc quyền … Ries & Trout …” bằng: “Bài dùng khung cửa vào của Jenni Romaniuk (Ehrenberg-Bass): một tình huống thường gắn với nhiều hãng cùng lúc, nên “chưa bị ai giữ” nghĩa là chưa đối thủ nào gắn mạnh với nó trong trí nhớ khách (đo bằng câu hỏi gợi tình huống), không phải độc quyền; “chiếm” là gắn mạnh hơn đối thủ.” Ví dụ: “hai hãng đã chiếm” → “hai hãng đã gắn mạnh”.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: câu chèn cũ nói không ai độc quyền trong khi tiêu chí, ví dụ, Q6 và tiêu đề nói “chưa bị ai giữ / chiếm / giữ chặt”. Câu mới nói rõ bài theo khung Romaniuk và định nghĩa lại “giữ/chiếm” theo mức gắn trong trí nhớ, khớp Q4, Q6."
+  },
+  {
+   "id": "B:tp02-01",
+   "where": "Q5 đáp án d + lời giải a, d; Q6 bước giải",
+   "status": "fixed",
+   "change": "Q5 d: “Dừng phỏng vấn, đếm mức phổ biến, chọn vài cửa vào để viết thử” → “Dừng phỏng vấn, viết thử vài cửa vào, khảo sát để đếm mức phổ biến”; lời giải d: 20 người chỉ cho giả thuyết, mức phổ biến phải đếm bằng khảo sát vài trăm người trước khi dồn ngân sách; lời giải a: bỏ “thêm người chỉ tốn công”, nói phỏng vấn thêm vẫn không phải mẫu để đếm tần suất. Q6 thêm bước: “Đây chỉ là tín hiệu từ mẫu 20 người, chưa phải tỉ lệ của thị trường.”",
+   "key_changed": false,
+   "note": "Đã tự kiểm: khái niệm và phản ví dụ dạy 20 phỏng vấn chỉ là định tính, đáp án Q5 cũ lại bảo đếm mức phổ biến từ 20 người. Đáp án Q6 vẫn 50%."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

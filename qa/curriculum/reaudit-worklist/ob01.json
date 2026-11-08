@@ -1,0 +1,18 @@
+{
+ "mod": "ob01",
+ "lessons": [
+  {
+   "id": "B:ob01-01",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "example",
+     "quote": "tỉ lệ vẫn quanh 20% ở quán A và 5% ở quán B, nên khó đổ cho giờ hay vị trí ngẫu nhiên",
+     "issue": "Đếm lặp lại chỉ loại được may rủi theo buổi, không loại được vị trí (vị trí cố định) hay thâm niên/khách quen — chính giả thuyết chủ quán B nêu (\"mở lâu hơn\"). Bài quy nguyên nhân cho biển và bàn mà chưa kiểm.",
+     "fix": "Viết lại: đếm lặp loại may rủi; còn vị trí/thâm niên chỉ loại được bằng thay biển ở quán B rồi đếm lại (đúng như Q4)."
+    }
+   ]
+  }
+ ]
+}

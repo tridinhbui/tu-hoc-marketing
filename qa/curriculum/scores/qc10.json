@@ -1,0 +1,140 @@
+{
+  "mod": "qc10",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:qc10-01",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L3", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "Giá trị kỳ vọng mỗi lead = lãi gộp mỗi hợp đồng × tỉ lệ lead thành hợp đồng. Đây là mức hoà vốn; bạn chỉ nên chi một phần của nó cho quảng cáo.", "issue": "Mức hoà vốn chỉ tính chi phí quảng cáo, bỏ chi phí sales dù tình huống nêu rõ \"đội sales có 3 người\" và cần 50 lead cho một hợp đồng (Q4). Với B2B, chi phí sales xử lý 50 lead thường lớn hơn chi phí quảng cáo; \"một phần\" không định lượng nên người học vẫn lấy 3,2 triệu làm trần CPL.", "fix": "Ghi rõ \"hoà vốn trên chi phí quảng cáo, chưa tính sales\"; thêm một dòng: ước chi phí sales mỗi hợp đồng (ví dụ 50 lead × 1 giờ gọi + 4 buổi demo ≈ 25 triệu) rồi đặt trần CPL = (160 − 25) × 2% × 50% ≈ 1,35 triệu — lúc đó lead 1,5 triệu sát trần, kết luận \"giữ\" phải kèm điều kiện." },
+        { "sev": "P2", "where": "Q1", "quote": "Chưa biết, phải có tỉ lệ lead thành hợp đồng của từng kênh trước", "issue": "Đáp án đúng là phương án \"chưa biết/phải đo\" — kiểu đáp án an toàn người học đoán được mà không cần đọc bài (Q7 bài qc10-03 và Q5 bài qc10-05 cùng mẫu).", "fix": "Cho số: \"giả định LinkedIn chốt 2%, Facebook 0,1%\" và hỏi kênh nào rẻ hơn trên mỗi hợp đồng, bao nhiêu lần — buộc tính 75 so với 150 triệu." },
+        { "sev": "P2", "where": "Q6 phương án c", "quote": "Mua bán dữ liệu cá nhân bị Luật 91/2025 cấm.", "issue": "Khẳng định pháp lý nêu như sự thật, bài không có src và không ghi tên luật đầy đủ, ngày hiệu lực.", "fix": "Ghi \"Luật Bảo vệ dữ liệu cá nhân (91/2025/QH15, hiệu lực 1/1/2026) cấm mua bán dữ liệu cá nhân\" và thêm src với ngày kiểm." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "giả định chỉ 0,1% thành hợp đồng: chi phí mỗi hợp đồng = 150.000 ÷ 0,1% = 150 triệu", "issue": "Chỉ một kịch bản; bài ÁP DỤNG yêu cầu 1%/2%/5% nhưng ví dụ không cho thấy ở tỉ lệ nào kết luận đổi (LinkedIn hoà vốn với quảng cáo khi chốt 1,5 ÷ 160 ≈ 0,94%).", "fix": "Thêm bảng 3 dòng tỉ lệ chốt 1% · 2% · 5% với giá trị mỗi lead và chi phí mỗi hợp đồng; chỉ ra ngưỡng 0,94% là điểm LinkedIn hết đáng." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 400 × 40% × 2% = 3,2 triệu = 3.200 nghìn ✓; sai 8.000 = 400 × 2% (doanh thu) ✓. Q4: 1,5 ÷ 2% = 75 triệu ✓; sai 1,5 = quên chia, 3 = 1,5 × 2 ✓. Ví dụ Facebook: 0,15 ÷ 0,1% = 150 triệu ✓. Đào sâu: 20% × 10% = 2% ✓." },
+      "claims": [
+        { "claim": "Hợp đồng 400 triệu/năm, lãi gộp 40%, lead LinkedIn 1,5 triệu, lead Facebook 150.000đ, tỉ lệ chốt 2% / 0,1%", "status": "illustrative-labelled", "note": "Tình huống ghi \"(giả định)\", ví dụ gắn nhãn \"số liệu giả định\"." },
+        { "claim": "Mua bán dữ liệu cá nhân bị Luật 91/2025 cấm", "status": "unverified", "note": "Không có src; cần tên luật đầy đủ và ngày hiệu lực." },
+        { "claim": "Chi phí LinkedIn trả bằng USD", "status": "unverified", "note": "Bài này không có src; được xác minh ở qc10-02." }
+      ],
+      "strengths": "Quy lead về lãi gộp kỳ vọng và so kênh trên mỗi hợp đồng là khung đúng cho B2B; phản ví dụ \"50 nhà máy, sales đã có danh sách\" và Đào sâu dùng chỉ số dẫn đầu (lead→SQL × SQL→hợp đồng) nối sang qc10-03 hợp lý.",
+      "upgrade": "Để đạt ≥85: (1) sửa mức hoà vốn thành \"trước chi phí sales\" và thêm ước lượng chi phí sales mỗi hợp đồng để ra trần CPL thực; (2) thêm bảng độ nhạy 1%/2%/5% và nêu ngưỡng chốt 0,94% làm LinkedIn hết đáng; (3) thay Q1 bằng câu tính so hai kênh với tỉ lệ cho sẵn, thêm một câu L4 đọc bảng \"CPL · tỉ lệ chốt · chi phí/hợp đồng\" của 3 kênh; (4) gắn src cho Luật 91/2025 và câu USD của LinkedIn; (5) nói rõ 400 triệu/năm là năm đầu, gia hạn chưa tính (như qc10-04 đã làm)."
+    },
+    {
+      "id": "B:qc10-02",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 16, "examples": 11, "pedagogy": 7, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L1", "L5", "L3", "L3", "L1", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "Mục tiêu gồm: brand awareness, website visits, engagement, video views, lead generation, website conversions, job applicants.", "issue": "Danh sách mục tiêu nêu như đủ nhưng không có src che phủ (3 src chỉ về ngân sách và tiền tệ); giao diện đổi nhanh.", "fix": "Thêm src trang mục tiêu chiến dịch của LinkedIn Help với ngày kiểm, hoặc viết \"các mục tiêu hiện có gồm… (xem danh sách trong giao diện)\"." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Giả định $60 mỗi lead: tháng thử dự kiến khoảng 15 lead.", "issue": "15 lead × 2% chốt (qc10-01) = 0,3 hợp đồng: đợt thử này không thể đo tới hợp đồng, nhưng bài không nói trước người học phải đọc kết quả bằng chi phí mỗi SQL; chỉ Phản ví dụ nói \"vài chục lead\" mới đọc được, mâu thuẫn ngầm với 15 lead được coi là đủ.", "fix": "Thêm một câu sau 15 lead: \"với 15 lead, chấm đợt thử bằng tỉ lệ MQL và chi phí mỗi SQL (qc10-03), không chờ hợp đồng\"; nói rõ 15 lead là tối thiểu để đọc tỉ lệ MQL, không đủ đọc tỉ lệ chốt." },
+        { "sev": "P2", "where": "Q1 · Q5", "quote": "Theo trang trợ giúp của LinkedIn, mức ngân sách nào hợp lệ cho một chiến dịch?", "issue": "Q1 và Q5 cùng L1 nhớ hai con số đã ghi trong bài (USD; $10/$100); Q7 là phương án \"chưa xác minh\" đoán được bằng hình thức.", "fix": "Thay Q5 bằng câu đọc dữ liệu: \"tệp ước tính 40.000 người, $30/ngày, CPM giả định $45 — mỗi người thấy quảng cáo bao nhiêu lần/tuần, có nên nới tệp?\"; thay Q7 bằng câu quyết định về lịch gọi lead (24 giờ) với số lead/ngày." },
+        { "sev": "P2", "where": "Làm từng bước", "quote": "gắn đường dẫn chính sách quyền riêng tư của bạn và nói rõ bạn sẽ liên hệ thế nào (Luật 91/2025 về sự đồng ý)", "issue": "Dẫn luật không có src và không ghi điều khoản; người học không kiểm được.", "fix": "Thêm src và tên đầy đủ Luật Bảo vệ dữ liệu cá nhân 2025, ghi điều về sự đồng ý." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 30 × 30 = $900; 900 × 25,5 = 22.950 nghìn ✓; sai 765 = 30 × 25,5 (một ngày) ✓. Q4: 900 ÷ 60 = 15 ✓; sai 54.000 = 900 × 60 ✓. Ví dụ: 25.000.000 ÷ 25.500 = $980,4 ✓; $60 ≈ 1,53 triệu khớp lead 1,5 triệu ở qc10-01 ✓." },
+      "claims": [
+        { "claim": "VND không có trong danh sách tiền tệ tài khoản quảng cáo LinkedIn; thường dùng USD", "status": "verified", "note": "src LinkedIn Help · Tiền tệ được hỗ trợ cho tài khoản quảng cáo (2026-10-24)." },
+        { "claim": "Ngân sách tối thiểu $10/ngày, tổng tối thiểu $100", "status": "verified", "note": "src LinkedIn Help · Ngân sách và giá thầu trong Campaign Manager (2026-10-24)." },
+        { "claim": "Danh sách 7 mục tiêu chiến dịch (brand awareness … job applicants)", "status": "unverified", "note": "Không có src về mục tiêu; thuộc lớp fast." },
+        { "claim": "Lead Gen Form cho phép thêm câu hỏi lọc tuỳ chỉnh", "status": "unverified", "note": "Không có src." },
+        { "claim": "Cách xuất hoá đơn/thuế cho doanh nghiệp Việt Nam chưa xác minh", "status": "illustrative-labelled", "note": "Bài nói rõ chưa xác minh — cách xử lý đúng." },
+        { "claim": "Luật 91/2025 về sự đồng ý", "status": "unverified", "note": "Không có src." },
+        { "claim": "Tỉ giá 25.500đ/USD, $60/lead, 15 lead", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Nói thẳng điểm chưa xác minh (hoá đơn, thuế) thay vì bịa; bước làm có số cụ thể ($30/ngày × 30, đệm tỉ giá) và nối lead với sales ngay ngày đầu; Đào sâu về quy mô tệp làm đòn bẩy giá là cơ chế đúng.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho danh sách mục tiêu và Lead Gen Form, gắn ngày kiểm; (2) nối 15 lead với cách chấm đợt thử (tỉ lệ MQL, chi phí mỗi SQL) thay vì để người học chờ hợp đồng; (3) thêm quyết định về giá thầu (tự động theo mục tiêu vs. đặt tay) với điều kiện khi nào dùng; (4) thay Q5 và Q7 bằng câu L3–L4 đọc quy mô tệp, tần suất, CPL ước tính; (5) thêm ví dụ thứ hai đổi kết luận: ngân sách chỉ 8 triệu/tháng (~$310) → không chạy, dùng LinkedIn tự nhiên."
+    },
+    {
+      "id": "B:qc10-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L3", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Tình huống", "quote": "có 40 lead từ LinkedIn. Báo cáo Campaign Manager dừng ở \"40 lead, $30 mỗi lead\"", "issue": "Case xuyên suốt của anh Quân: qc10-01 nói lead 1,5 triệu (~$59), qc10-02 lập kế hoạch $60/lead, $900/tháng, 15 lead; bài này ra $30/lead, $1.200, 40 lead mà không có câu chuyển (\"thực tế rẻ hơn dự tính\"). Người học theo case thấy số nhảy.", "fix": "Thêm một câu: \"Thực tế CPL $30, thấp hơn giả định $60, và anh Quân đã nâng ngân sách lên $40/ngày\" — hoặc đồng bộ số về $900/15 lead." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "chấm theo cohort vào tháng 6, nó mang về 160 triệu lãi gộp", "issue": "160 triệu là lãi gộp trước quảng cáo; lãi sau quảng cáo là 129,4 triệu (chính Q5 tính). Câu kết của ví dụ dùng số chưa trừ chi phí.", "fix": "Sửa thành \"mang về 160 triệu lãi gộp, còn 129,4 triệu sau quảng cáo (chưa tính chi phí sales)\"." },
+        { "sev": "P2", "where": "Q1", "quote": "Chưa kết luận được; theo dõi cohort lead tháng 3 qua các tầng", "issue": "Đáp án kiểu \"chưa kết luận được\" đoán được bằng hình thức; Q6 là L2 nhận lại ý bài.", "fix": "Đổi Q1 thành câu đọc bảng cohort hai tháng với số (lead, SQL, hợp đồng) và hỏi tháng nào đang tốt hơn theo chi phí mỗi SQL; đổi Q6 thành câu điều kiện: khi nào đẩy trạng thái SQL về nền tảng gây hại (SQL quá ít, định nghĩa SQL lỏng)." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Đưa trạng thái từ CRM về nền tảng (chuyển đổi offline — nguyên lý chung; cách làm cụ thể trên LinkedIn xem trong Campaign Manager)", "issue": "Hedge đúng nhưng không có src; không nêu điều kiện tối thiểu (số sự kiện/tháng) để tín hiệu offline có tác dụng tối ưu.", "fix": "Thêm src trang chuyển đổi offline của LinkedIn Help, và một câu: với 9 SQL/tháng tín hiệu còn thưa, dùng để báo cáo trước, kỳ vọng tối ưu khi có vài chục sự kiện." }
+      ],
+      "calc_check": { "n": 3, "ok": 3, "notes": "Q3: 30.600 ÷ 9 = 3.400 nghìn ✓; sai 765 = ÷40, 1.390,9 = ÷22 ✓. Q4: 9 ÷ 22 = 40,9% ✓; sai 22,5% = 9 ÷ 40 ✓. Q5: 160 − 30,6 = 129,4 ✓; sai 369,4 = 400 − 30,6, 160 = quên trừ ✓. Tình huống: 40 × $30 = $1.200 ✓; 1.200 × 25.500 = 30,6 triệu ✓; 1/40 = 2,5% khớp giả định 2% ở qc10-01." },
+      "claims": [
+        { "claim": "Cohort tháng 3: $1.200, 40 lead → 22 MQL → 9 SQL → 4 cơ hội → 1 hợp đồng 400 triệu", "status": "illustrative-labelled", "note": "Gắn nhãn \"số liệu giả định\"." },
+        { "claim": "LinkedIn hỗ trợ chuyển đổi offline từ CRM", "status": "unverified", "note": "Bài hedge \"nguyên lý chung\", không có src." }
+      ],
+      "strengths": "Định nghĩa 5 tầng bằng lời sales đồng ý và chấm theo cohort tháng tạo lead là bài học cốt lõi của B2B, ví dụ cho thấy cùng một cohort \"lỗ 30,6 triệu\" tháng 3 và \"lãi\" tháng 6; phản ví dụ về số nhỏ (gộp 2–3 cohort, dùng chi phí mỗi SQL) và Q7 kiểm đúng ý đó.",
+      "upgrade": "Để đạt ≥85: (1) đồng bộ số case với qc10-02 hoặc thêm câu chuyển; (2) sửa câu kết ví dụ dùng lãi sau quảng cáo; (3) thêm bảng cohort 3 tháng có số thật (tháng 3/4/5) để Q1 và Q7 đọc từ bảng thay vì mô tả; (4) thêm src chuyển đổi offline LinkedIn và điều kiện số sự kiện tối thiểu; (5) nêu chi phí sales mỗi SQL (giờ gọi, demo) để chi phí mỗi hợp đồng không chỉ là tiền quảng cáo."
+    },
+    {
+      "id": "B:qc10-04",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L4", "L3", "L3", "L3", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ ↔ Lỗi hay gặp", "quote": "Sửa: thêm cỡ công ty 50+ nhân sự, ngành bán buôn/phân phối, câu hỏi \"Bạn quản lý bao nhiêu kho?\", ưu đãi đổi thành buổi đánh giá kho 30 phút.", "issue": "Ví dụ đổi 4 thứ cùng lúc trong tháng 2 (2 lớp nhắm, câu hỏi lọc, ưu đãi) rồi quy kết quả tháng 3 cho các thay đổi đó, trong khi Lỗi hay gặp viết \"Thêm năm câu hỏi lọc và siết ba lớp nhắm cùng lúc — … không biết thay đổi nào gây ra\" và Áp dụng yêu cầu \"một thay đổi duy nhất bạn sẽ thử trong 4 tuần\". Ví dụ mâu thuẫn với lời khuyên của chính bài.", "fix": "Tách ví dụ thành hai bước (tháng 2 đổi ưu đãi + câu hỏi lọc → đo tỉ lệ MQL; tháng 3 siết cỡ công ty → đo CPM/SQL), hoặc thừa nhận trong ví dụ: \"đổi nhiều thứ cùng lúc nên không tách được tác dụng từng thứ — lần sau đổi từng việc\"." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "chi phí mỗi hợp đồng khoảng $1.000, so với gói 120 triệu/năm (khoảng $4.700 ở tỉ giá 25.500đ)", "issue": "So chi phí quảng cáo mỗi hợp đồng với doanh thu, đúng lỗi mà qc10-01 cảnh báo (\"Dùng doanh thu hợp đồng thay cho lãi gộp … cao gấp hai, ba lần\"); Đào sâu mới sửa bằng lãi gộp 70% nhưng ví dụ chính vẫn để doanh thu.", "fix": "Sửa thành \"so với lãi gộp khoảng 84 triệu (~$3.300)\" ngay trong ví dụ." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Tháng 1: $1.500, 75 lead, 8 MQL, 2 SQL → chi phí mỗi SQL $750.", "issue": "Chi phí mỗi SQL từ n = 2 và n = 6 là số rất nhiễu (2 vs 6 SQL có thể là dao động); bài quyết định \"chạy tiếp\" trên một tháng mỗi bên dù Phản ví dụ nói cần 2–3 cohort.", "fix": "Thêm câu: \"$750 từ 2 SQL là ước lượng thô; coi $250 tháng 3 là tín hiệu tốt cần xác nhận thêm 1–2 cohort trước khi tăng ngân sách\"." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Tệp quá hẹp nên CPM rất cao: chồng quá nhiều lớp làm tệp nhỏ, hệ thống phải trả đắt để chạm lại cùng người, tiêu không hết ngân sách.", "issue": "Cơ chế nêu đúng hướng nhưng không có số ngưỡng (tệp bao nhiêu là quá nhỏ) và không có src về quy mô tệp khuyến nghị của LinkedIn.", "fix": "Thêm src trang hướng dẫn quy mô tệp của LinkedIn Help (ngày kiểm) hoặc ghi \"ngưỡng hệ thống gợi ý xem trong giao diện\"." }
+      ],
+      "calc_check": { "n": 3, "ok": 3, "notes": "Q3: 1.500 ÷ 2 = $750 ✓; sai 20 = ÷75, 187,5 = ÷8 ✓. Q4: 1.500 ÷ 6 = $250 ✓; sai 50 = ÷30, 100 = ÷15 ✓. Q5: 250 ÷ 25% = $1.000 ✓; sai 62,5 = × 25%, 250 = quên chia ✓. Đào sâu: 120 × 70% = 84 triệu; × 25% = 21 triệu; 21.000.000 ÷ 25.500 = $824 ≈ $820 ✓; 120 triệu ÷ 25.500 = $4.706 ✓." },
+      "claims": [
+        { "claim": "SaaS kho 120 triệu/năm; tháng 1 $1.500/75 lead/8 MQL/2 SQL; CPM $40 → $110 → $70; tháng 3 30 lead/15 MQL/6 SQL", "status": "illustrative-labelled", "note": "Gắn nhãn \"số liệu giả định\"." },
+        { "claim": "Tệp quá hẹp làm CPM tăng và chiến dịch tiêu không hết ngân sách trên LinkedIn", "status": "unverified", "note": "Cơ chế đấu giá hợp lý nhưng không có src." }
+      ],
+      "strengths": "Khung \"ba bệnh\" (lead rác · tháng đầu lỗ · tệp hẹp) với triệu chứng → số cần xem → một thay đổi là chẩn đoán dùng được ngay; Đào sâu tính mức chịu được cho mỗi SQL từ lãi gộp × tỉ lệ SQL→hợp đồng và Q7 (dừng kênh khi SQL không chốt vì giá) đưa vấn đề về sản phẩm đúng chỗ.",
+      "upgrade": "Để đạt ≥85: (1) tách ví dụ thành các thay đổi tuần tự hoặc thừa nhận không tách được, để khớp Lỗi hay gặp; (2) so chi phí mỗi hợp đồng với lãi gộp ngay trong ví dụ; (3) nêu độ nhiễu của n = 2/6 SQL và điều kiện xác nhận (2–3 cohort); (4) thêm câu L4 đọc bảng 3 tháng để chỉ ra tháng nào CPM, tháng nào tỉ lệ MQL là tầng hỏng; (5) thêm src về quy mô tệp."
+    },
+    {
+      "id": "B:qc10-05",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 5, "data": 6, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L1", "L5", "L3", "L3", "L2", "L2", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "Amazon Ads (Sponsored Products, trả theo click) chỉ có nghĩa khi bạn đã bán trên một sàn Amazon ở nước ngoài qua Global Selling — đây là suy luận, chưa thấy trang riêng cho Việt Nam.", "issue": "Toàn bộ nhánh Amazon (Sponsored Products, trả theo click, Global Selling) không có src dù bài gắn nhãn \"suy luận\"; không nhắc chỉ số ACoS mà người bán Amazon dùng để đọc đúng kết quả của mình.", "fix": "Thêm src Amazon Ads · Sponsored Products và Amazon Global Selling Việt Nam (ngày kiểm); thêm một dòng ACoS = chi quảng cáo ÷ doanh thu quảng cáo và ACoS hoà vốn = biên lãi trước quảng cáo." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Amazon (giả định): CPC $0,8, chuyển đổi 10%, mỗi đơn tốn $8 quảng cáo; lãi mỗi đơn trước quảng cáo $12 → còn $4.", "issue": "Chỉ một kịch bản, không có kịch bản đổi kết luận (ví dụ chuyển đổi 6% → $13,3/đơn > $12 → lỗ); tiêu chí dừng ở Đào sâu không nối với số này. Số lãi $12 cho gốm thủ công sang Mỹ không nói gồm/không gồm phí vận chuyển, phí sàn.", "fix": "Thêm dòng \"nếu chuyển đổi 6%: $13,3/đơn, lỗ $1,3 → dừng theo tiêu chí 4 tuần\"; ghi $12 là lãi sau phí sàn và vận chuyển." },
+        { "sev": "P2", "where": "Q5 · Q6 · Q7", "quote": "Với một kênh lạ, câu hỏi nào trong khung bốn câu nên trả lời đầu tiên?", "issue": "Q5, Q6, Q7 đều L2 nhận lại ý bài; Q5 đáp án \"chưa xác minh\" đoán được bằng hình thức; Q1 là L1 nhớ danh sách quốc gia của Pinterest.", "fix": "Thay Q6 bằng câu tính: lãi $12, CPC $0,8, chuyển đổi nào là hoà vốn (6,7%)? Thay Q7 bằng câu quyết định phân bổ 15 triệu giữa Amazon và Pinterest khi đối tác báo mức tối thiểu 10 triệu/tháng." },
+        { "sev": "P2", "where": "Tình huống", "quote": "Chị có 15 triệu để thử kênh mới trong quý", "issue": "15 triệu/quý (~$590) cho Amazon ở Mỹ với CPC $0,8 ≈ 735 click ≈ 73 đơn cả quý; bài không kiểm xem ngân sách thử này có đủ \"để học\" (câu hỏi bốn của chính khung) hay không.", "fix": "Thêm phép tính: 12 triệu ≈ $470 ÷ $0,8 ≈ 590 click ≈ 59 đơn/quý — đủ đọc chi phí mỗi đơn, chưa đủ so nhiều từ khoá; ghi điều kiện." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 0,8 ÷ 10% = $8 ✓; sai 0,8 = quên chia, 0,08 = × 10% ✓. Q4: 12 − 8 = $4 ✓; sai 11,2 = 12 − 0,8, 12 = quên trừ ✓." },
+      "claims": [
+        { "claim": "Pinterest nhắm tới Việt Nam được (quốc gia, vùng, mã bưu chính)", "status": "verified", "note": "src Pinterest Help · Location, language, device and gender targeting (2026-10-24)." },
+        { "claim": "Việt Nam không có trong danh sách mở tài khoản Pinterest trực tiếp; phải qua đối tác Mediadonuts by Aleph", "status": "verified", "note": "src Pinterest Help · Promoted Pins overview, ghi chú \"(quốc gia mở tài khoản)\" (2026-10-24)." },
+        { "claim": "Snapchat nhắm Việt Nam và X Ads tự phục vụ tại Việt Nam chưa xác minh", "status": "illustrative-labelled", "note": "Bài nói rõ chưa xác minh — xử lý đúng." },
+        { "claim": "Amazon Ads Sponsored Products trả theo click, chỉ dùng khi đã bán trên sàn Amazon", "status": "unverified", "note": "Bài gắn \"suy luận\" nhưng không có src." },
+        { "claim": "Amazon Global Selling cho người bán Việt Nam", "status": "unverified", "note": "Không có src." },
+        { "claim": "CPC $0,8, chuyển đổi 10%, lãi $12/đơn", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Khung bốn câu hỏi với thứ tự dừng rõ (mở tài khoản → khách ở đó → creative và đo → ngân sách riêng) và thái độ \"ghi rõ điểm chưa xác minh\" là mẫu tốt cho kênh lạ; tách ngân sách thử khỏi kênh đang lãi là ràng buộc thực tế đúng.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho Amazon Ads/Global Selling và dòng ACoS; (2) thêm kịch bản thứ hai đổi kết luận (chuyển đổi 6%) và kiểm câu hỏi bốn bằng số click/đơn mà 12 triệu mua được; (3) thay 3 câu L2 bằng câu tính hoà vốn, câu phân bổ ngân sách, câu đọc kết quả 4 tuần so với tiêu chí dừng; (4) thêm ví dụ về định dạng creative (Pinterest ảnh dọc, Snapchat video ngắn) để câu hỏi ba có nội dung; (5) ghi rõ $12 là lãi sau phí sàn và vận chuyển."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý: 01 kinh tế lead B2B (giá trị lead, chi phí mỗi hợp đồng) → 02 dựng chiến dịch (tiền tệ, tối thiểu, nhắm theo người) → 03 đo pipeline/cohort → 04 chẩn đoán ba bệnh → 05 kênh lạ. Case anh Quân xuyên 01–03 tốt nhưng số nhảy ($60/15 lead ở 02 → $30/40 lead ở 03) không có câu chuyển; 04 đổi sang case SaaS kho hợp lý vì cần CPM và nhiều tháng. Bài 05 lệch chủ đề (Pinterest/Snapchat/X/Amazon) nhưng đúng với tên module \"kênh cần cân nhắc\".",
+    "overlap": [
+      "Cohort và chi phí mỗi SQL lặp ở 01 (Đào sâu), 03 (toàn bài), 04 (khái niệm và phản ví dụ)",
+      "\"Số nhỏ dao động, gộp 2–3 cohort\" xuất hiện ở 03 Phản ví dụ, 03 Q7 và 04 Phản ví dụ",
+      "Tệp quá hẹp → giá cao lặp ở 02 Đào sâu, 02 Q6, 04 khái niệm và 04 Q2"
+    ],
+    "gaps": [
+      "CAC đầy đủ cho B2B: chi phí sales mỗi hợp đồng (giờ gọi, demo) chưa được cộng vào bất kỳ ví dụ nào; mọi \"chi phí mỗi hợp đồng\" chỉ là tiền quảng cáo",
+      "Định dạng quảng cáo LinkedIn (Sponsored Content, Conversation/Message ads, Document ads) và creative B2B: không bài nào nói quảng cáo nên nói gì",
+      "Matched Audiences / ABM: tải danh sách công ty, nhắm lại người ghé web — công cụ cốt lõi của LinkedIn cho thị trường hẹp (phản ví dụ 01 nói 50 nhà máy nhưng không gợi tải danh sách lên)",
+      "LTV và gia hạn cho hợp đồng năm (chỉ 04 nhắc một câu) và chiến lược giá thầu LinkedIn",
+      "Với bài 05: ACoS/TACoS cho Amazon Ads, và nguồn cho Amazon Global Selling"
+    ],
+    "best_lesson": "B:qc10-03",
+    "weakest_lesson": "B:qc10-05"
+  }
+}

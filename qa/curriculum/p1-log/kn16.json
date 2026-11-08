@@ -1,0 +1,88 @@
+{
+ "mod": "kn16",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:kn16-01",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "Đã có src TikTok Newsroom “How TikTok recommends videos #ForYou” (18/6/2020), ghi “năm 2020” trong câu, ngày kiểm và câu “Mô tả này đã hơn sáu năm và có thể đã đổi… tin trang chính thức”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này đã mở URL, xác nhận ba nhóm yếu tố và ngày đăng. Chưa tìm mô tả mới hơn của TikTok."
+  },
+  {
+   "id": "B:kn16-01",
+   "where": "Q5 lời giải",
+   "status": "fixed",
+   "change": "Lời giải phương án giờ đăng đã sửa: “Giờ đăng không nằm trong ba nhóm được mô tả, nhưng nguồn không nhắc không có nghĩa nó vô tác dụng; muốn biết với kênh bạn thì phải thử…”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; khoá giữ nguyên"
+  },
+  {
+   "id": "B:kn16-02",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "Đã có src (bài 2020 phần tín hiệu mạnh/yếu), năm, ngày kiểm và câu dự phòng.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này xác nhận ví dụ xem hết video dài (mạnh) với cùng quốc gia (yếu)."
+  },
+  {
+   "id": "B:kn16-02",
+   "where": "Q1/Q5/Q6",
+   "status": "fixed",
+   "change": "Nhiễu tuyệt đối đã thay bằng nhiễu có lý lẽ về tổng giây xem (Q1 d, Q5 a) và Q6 c “dài hơn mức trung bình… vì xem hết video dài được tính trọng số cao hơn”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; khoá giữ nguyên"
+  },
+  {
+   "id": "B:kn16-03",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "Đã có src (bài 2020), năm, ngày kiểm và câu dự phòng.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này xác nhận câu follower và video từng hiệu quả không phải yếu tố trực tiếp."
+  },
+  {
+   "id": "B:kn16-03",
+   "where": "Ví dụ",
+   "status": "fixed",
+   "change": "Ví dụ đã có số minh hoạ (18 video, trung vị 900 lượt, xem hết ~16%; video bát ăn cơm 3.000 lượt, 1.350 xem hết = 45%, 210 lượt gửi) và Q3 dùng chính 3.000/1.350.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước"
+  },
+  {
+   "id": "B:kn16-03",
+   "where": "Q1/Q6",
+   "status": "fixed",
+   "change": "Lượt trước đã viết lại nhiễu Q1/Q6 (bỏ “duy nhất”, “quan trọng nhất”) nhưng Q6 vẫn hỏi cùng điều với Q1. Lượt này thay Q6 bằng câu đọc dữ liệu 6 video của tài khoản 120 follower (lượt xem / xem hết / gửi), hỏi lặp kiểu lời hứa nào; đáp án đúng là kiểu “cách chọn…” của V2 và V4, không phải V1 nhiều view nhất. Q7 c (lặp nguyên tình huống “chờ 10.000 người”) đổi thành “Đăng mỗi tuần một video dài, dựng thật công phu…” kèm lời giải mới.",
+   "key_changed": false,
+   "note": "Không gộp câu (giữ 7 câu). Q6 là câu mới nên khoá thuộc câu mới, vị trí đáp án vẫn do PAT đặt; Q7 khoá giữ nguyên (b)."
+  },
+  {
+   "id": "B:kn16-04",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "Đã có src (bài 2020 phần đa dạng hoá), năm, ngày kiểm và câu dự phòng.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này xác nhận câu không xếp liền hai video cùng âm thanh/người đăng, nội dung trùng lặp và đã xem."
+  },
+  {
+   "id": "B:kn16-05",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "Đã có src TikTok Business Help Center “About Spark Ads” (ads.tiktok.com/help/article/spark-ads), ngày kiểm và câu “Nếu màn hình của bạn khác mô tả, tin trang chính thức.”",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này xác nhận trang nói Spark Ads dùng bài tự nhiên, tương tác tính cho bài gốc, có mã uỷ quyền tuỳ thời hạn (trang không nói rõ ai chọn thời hạn)."
+  },
+  {
+   "id": "B:kn16-05",
+   "where": "Ví dụ",
+   "status": "fixed",
+   "change": "Ví dụ đã ghi điều kiện chạy (cùng ngân sách, mục tiêu tối ưu, đối tượng, 14 ngày), “Con số minh hoạ.” và “với vài chục đơn mỗi bên, chênh 30% vẫn có thể là nhiễu; họ chạy thêm một vòng hoặc lặp lại”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước"
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

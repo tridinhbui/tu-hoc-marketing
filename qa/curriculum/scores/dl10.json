@@ -1,0 +1,185 @@
+{
+  "mod": "dl10",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:dl10-01",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L3", "L5", "L3", "L2", "L4", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "ROI 0% là hoà vốn; ROAS 1 thì chưa chắc", "issue": "Nói nhẹ quá: với biên lãi gộp dưới 100% thì ROAS 1 chắc chắn lỗ (lãi gộp < doanh thu = chi quảng cáo). Lời giải Q6 c lại nói 'vẫn lỗ' — hai chỗ không cùng giọng.", "fix": "Sửa thành 'ROAS 1 là lỗ khi biên lãi gộp dưới 100%; ROAS hoà vốn = 1 ÷ biên' để nối thẳng sang bài dl10-05." },
+        { "sev": "P1", "where": "Q5", "quote": "Y: lãi gộp 25 triệu, ROI 25%; X chỉ 18 triệu, ROI −10%", "issue": "Phương án đúng là phương án duy nhất có số tính sẵn và dài nhất; ba phương án sai đều là mệnh đề định tính. Đoán được bằng hình thức, không cần tính.", "fix": "Viết bốn phương án cùng dạng 'X/Y, ROI …%' với các số sai điển hình (X 50% vì lấy ROAS; bằng nhau 0%; Y 125% vì quên trừ chi), hoặc bỏ hết số và yêu cầu người học tính trước khi chọn." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "(Farris và cộng sự, Marketing Metrics, 2010)", "issue": "Trích dẫn sách thật nhưng bài không có trường `src` (link, ngày kiểm); người học không bấm được.", "fix": "Thêm `src` với tên sách, chương về Marketing ROI, năm xuất bản, ngày kiểm." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "MANG THEO: ROAS tính bằng lần trên doanh thu, lợi nhuận tính bằng đồng, ROI tính bằng % trên lãi", "issue": "Bài không có PHẢN VÍ DỤ và ĐÀO SÂU; không nói khi nào ROAS vẫn là thước hợp lý (so hai nhóm quảng cáo cùng sản phẩm, cùng biên) và khi nào ROI theo lãi gộp vẫn thiếu (chi phí cố định — bài 03). 'Mang theo' chỉ nhắc lại ý chính.", "fix": "Thêm PHẢN VÍ DỤ: hai nhóm quảng cáo cùng bán son, cùng biên 30% — ROAS so được và nhanh hơn ROI. Thêm ĐÀO SÂU nối sang bài 03 (chi phí ngoài media) và 04 (kỳ đo)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (80×40% − 20) ÷ 20 = 60% ✓; sai 300 = (80−20)/20 ✓, 160 = 32/20 ✓, 400 = ROAS 4 ✓. ÁP DỤNG: 54/15 = 3,6; 54×35% = 18,9; 18,9−15 = 3,9; 3,9/15 = 26% ✓. Q1: 60% ✓. Q5: X 60×30% = 18 → −10%; Y 50×50% = 25 → 25% ✓." },
+      "claims": [
+        { "claim": "Farris và cộng sự, Marketing Metrics, 2010: lợi ích trong ROI marketing là lãi gộp tăng thêm", "status": "unverified", "note": "Sách thật, cách trích hợp lý, nhưng không có `src`." },
+        { "claim": "Shop mỹ phẩm chi 20 triệu, doanh thu 80 triệu, giá vốn + phí + ship 60%", "status": "illustrative-labelled", "note": "Có ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Ba con số trả lời ba câu hỏi khác nhau được tách rõ bằng đơn vị (lần / đồng / %); Q5 buộc tính ROI của hai sản phẩm biên khác nhau và cho thấy ROAS cao hơn vẫn lỗ; Q7 nêu được hai lỗ hổng cùng lúc (kỳ đo và quy mô).",
+      "upgrade": "Sửa câu 'ROAS 1 thì chưa chắc' thành phát biểu đúng điều kiện; viết lại Q5 để bốn phương án cùng dạng số; thêm `src` cho Farris; thêm PHẢN VÍ DỤ (khi ROAS đủ dùng) và ĐÀO SÂU nối bài 03–04; thêm một câu L4 đọc bảng ba chiến dịch (ROAS, biên, chi) và hỏi chiến dịch nào ROI âm."
+    },
+    {
+      "id": "B:dl10-02",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L3", "L5", "L3", "L2", "L3", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q6", "quote": "Chỉ tính 120 triệu tăng thêm: lãi gộp 36 triệu, ROI khoảng −28%", "issue": "Phương án đúng là phương án duy nhất có phép tính đầy đủ; a) 'Giữ 20%', b) 'hệ số 0,8', c) 'bớt khách cũ khỏi chi phí' đều không có số dẫn xuất. Đoán được bằng hình thức.", "fix": "Cho cả bốn phương án một con số ROI: a) 20% (giữ nguyên), b) −4% (200×0,8×30% = 48 → (48−50)/50), c) 20% trên chi 30 triệu = 100% (bớt chi phí sai), d) −28%." },
+        { "sev": "P2", "where": "Q2", "quote": "Tính lại ROI 20% trên lãi gộp, rồi tăng từng nấc và đo phần thêm", "issue": "Phương án đúng là phương án 'thận trọng, hai bước' quen thuộc; a) và c) là 'tăng gấp đôi/gấp ba', b) là 'đổi agency'. Người học chọn được theo giọng mà không cần hiểu ROI.", "fix": "Thêm một phương án thận trọng nhưng sai: 'Giữ ngân sách 50 triệu và chỉ tối ưu ROAS lên 5 vì ROAS mới là chỉ số agency kiểm soát được' để buộc so hai phương án đều 'có vẻ hợp lý'." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "MANG THEO: ROI marketing lấy lãi gộp tăng thêm trừ chi phí", "issue": "Không có PHẢN VÍ DỤ / ĐÀO SÂU. Ý 'chỉ tính phần doanh thu chiến dịch tạo thêm' được nêu trong KHÁI NIỆM và Q6 nhưng không nói cách ước phần tăng thêm (đối chứng, trước/sau), nên người học không biết lấy số 120 triệu từ đâu ngoài đời.", "fix": "Thêm ĐÀO SÂU: ba cách ước doanh thu tăng thêm (nhóm địa lý không chạy, tắt/bật theo tuần, so với đường cơ sở khách cũ) và nối tới bài dl10-06/08." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 200×30% = 60; (60−50)/50 = 20% ✓; sai 300 ✓, 120 = 60/50 ✓, 400 = ROAS ✓. VÍ DỤ: ngân sách 100, ROAS 3 → 300×30% = 90 → −10% ✓. Q1 d: ROAS hoà vốn 1/0,3 = 3,33 ✓. Q4 d: 300/20 = 15 lần ✓. Q5: 200×20% = 40 → −20% ✓. Q6: 120×30% = 36 → −28% ✓. ÁP DỤNG: 135×28% = 37,8; (37,8−30)/30 = 26% ✓." },
+      "claims": [
+        { "claim": "Shop đồ gia dụng chi 50 triệu, doanh thu 200 triệu, biên 30%, agency báo 'ROI 300%'", "status": "illustrative-labelled", "note": "Có '(số minh hoạ)'." }
+      ],
+      "strengths": "Chỉ ra đúng bản chất lỗi: '(doanh thu − chi) ÷ chi' chính là 'ROAS − 1' viết thành %; ví dụ mô phỏng hậu quả quyết định (tăng gấp đôi ngân sách, ROAS tụt 4→3 là lỗ) chứ không chỉ sửa con số; Q6 đưa khái niệm incrementality vào bằng số cụ thể.",
+      "upgrade": "Viết lại Q6 để bốn phương án đều có số; thêm phương án 'thận trọng nhưng sai' vào Q2; thêm ĐÀO SÂU về cách ước doanh thu tăng thêm; thêm một câu L5 về đánh đổi: khi nào vẫn chấp nhận ROI 0–10% (khách mới mua lại) — nối sang bài 04."
+    },
+    {
+      "id": "B:dl10-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 12, "pedagogy": 7, "assessment": 9, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L4", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Phần lương là lựa chọn quy tắc: tính theo chi phí cơ hội, vì nếu không làm chiến dịch thì hai người ấy làm việc khác có giá trị", "issue": "Nêu nguyên tắc nhưng không nói cách ước 10 triệu (lương tháng × % thời gian?) nên người học không tái lập được con số; cũng không nói phương án thay thế (tính lương như chi phí chung, không tính vào ROI chiến dịch) bị loại vì lý do gì ngoài 'phải ghi rõ'.", "fix": "Thêm một dòng: 'ước = lương tháng × tỉ lệ thời gian dành cho chiến dịch (ví dụ 2 người × 10 triệu × 50%)' và một câu về khi nào bỏ lương khỏi ROI là chấp nhận được (so các chiến dịch cùng đội, cùng tốn người)." },
+        { "sev": "P2", "where": "Q2", "quote": "Báo ROI đầy đủ 20%, kèm dòng ROI media 100% và ghi rõ khác ở đâu", "issue": "Lại là phương án 'hai dòng, minh bạch' — mẫu phương án đúng lặp ở Q2 của hầu hết bài trong module, đoán được theo giọng.", "fix": "Đổi một phương án sai thành phương án cũng minh bạch nhưng sai thước: 'Báo ROI 33% (gồm quay dựng, thiết kế, chưa gồm lương) vì lương là chi phí chung' để buộc người học biện hộ cho việc tính lương." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "nếu video được dùng lại cho chiến dịch sau, có thể phân bổ, nhưng phải ghi rõ quy tắc", "issue": "Không có PHẢN VÍ DỤ / ĐÀO SÂU tách riêng; ý phân bổ chỉ một câu, không có số ví dụ về phân bổ (Q6 mới đưa 1/3).", "fix": "Thêm ĐÀO SÂU: bảng phân bổ 25 triệu cho 3 chiến dịch theo 1/3 và theo tỉ trọng media, cho thấy ROI từng chiến dịch đổi thế nào, và quy tắc 'chọn một, dùng nhất quán'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 60+25+5+10 = 100; (120−100)/100 = 20% ✓; sai 100 (chỉ media) ✓, 33,3 = (120−90)/90 ✓, 120 = 120/100 ✓. Q4: (240−160)/160 = 50% ✓. VÍ DỤ gộp hai tháng: (240−160)/160 = 50% ✓. ÁP DỤNG: tổng 70; ROI media (91−40)/40 = 127,5% ✓; ROI đầy đủ (91−70)/70 = 30% ✓." },
+      "claims": [
+        { "claim": "Chuỗi trà sữa 8 cửa hàng: media 60, quay dựng 25, thiết kế 5, lương 10, lãi gộp tăng thêm 120 triệu", "status": "illustrative-labelled", "note": "Có '(số minh hoạ)'." }
+      ],
+      "strengths": "Phân biệt chi phí cố định/biến đổi của chiến dịch rồi suy ra hệ quả về quy mô (ROI cải thiện khi media lớn lên) — Q4, Q5, Q7 nối thành chuỗi lập luận: tính → điều kiện giả định → cấu trúc chi phí nào có lợi khi mở rộng; Q6 về phân bổ tài sản dùng lại là câu L5 có biện hộ.",
+      "upgrade": "Thêm cách ước phần lương và phương án thay thế bị loại; đổi một phương án Q2 thành phương án minh bạch nhưng sai; thêm ĐÀO SÂU với bảng phân bổ 25 triệu cho 3 chiến dịch theo hai quy tắc; thêm một câu L4 đọc bảng 3 chiến dịch với tỉ trọng cố định khác nhau và hỏi chiến dịch nào ROI nhạy nhất với việc tăng media."
+    },
+    {
+      "id": "B:dl10-04",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 7, "assessment": 9, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "LTV phải lấy từ dữ liệu giữ chân thật, và tiền về càng muộn càng rủi ro", "issue": "Nêu rủi ro nhưng không cho cách xử lý định lượng nào (chiết khấu, hoặc chỉ tính 3–6 tháng đầu, hoặc dùng khoảng thấp–cao của thời gian ở lại). Q5 c nói 'cân nhắc tiền về muộn kém chắc hơn' nhưng cũng không nói cân nhắc thế nào.", "fix": "Thêm một quy tắc tay: 'tính ROI vòng đời ở hai mốc giữ chân (ví dụ 4 và 6 tháng) và báo khoảng; chỉ tin mốc dài khi nhóm đó đã đi qua ít nhất nửa mốc'." },
+        { "sev": "P2", "where": "Q2", "quote": "Trình ROI 6 tháng 100% và hoàn vốn 3 tháng, theo dõi giữ chân nhóm mới", "issue": "Phương án đúng duy nhất có số và có mệnh đề 'theo dõi'; c) cũng có số nhưng là lỗi doanh thu dễ nhận. Đoán được theo giọng 'thận trọng'.", "fix": "Thêm phương án có số và thận trọng nhưng sai kỳ: 'Trình ROI 12 tháng 300% vì LTV 12 tháng là chuẩn ngành app' để buộc người học kiểm tra kỳ đo so với dữ liệu giữ chân thật (6 tháng)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Hoàn vốn thô: 60 triệu ÷ 20 triệu mỗi tháng = 3 tháng, chưa trừ người rời sớm", "issue": "Nói 'chưa trừ người rời sớm' nhưng không cho thấy hệ quả: nếu khách rời đều (trung bình 6 tháng), lãi tháng 1 cao hơn tháng 3, thời gian hoàn vốn thật dài hơn 3 tháng. Người học không biết lệch bao nhiêu.", "fix": "Thêm một dòng minh hoạ đường giữ chân (ví dụ 200 → 170 → 145 → 125 người) và tính hoàn vốn thật ≈ 3,5–4 tháng." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "Dừng chiến dịch vì −67% giống như chấm một bộ phim sau 10 phút đầu", "issue": "Không có PHẢN VÍ DỤ riêng về sản phẩm mua một lần (ROI tháng đầu là ROI thật) — Q5 chạm tới nhưng trong bài đọc thì không.", "fix": "Thêm PHẢN VÍ DỤ: shop bán túi cà phê mua một lần, ROI tháng −20% là kết luận thật, không có 'phần sau' để chờ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 200×100.000×6 = 120 triệu; (120−60)/60 = 100% ✓; sai −66,7 ✓, 300 = (240−60)/60 ✓, 200 = 120/60 ✓. VÍ DỤ: tháng đầu (20−60)/60 = −66,7% ✓; hoàn vốn 60/20 = 3 ✓. Q4: 200×100.000×2 = 40 → −33% ✓. ÁP DỤNG: 150×60.000 = 9 triệu/tháng → −80%; 8 tháng 72 → 60%; hoàn vốn 45/9 = 5 ✓. Q7: (600−300)/300 = 100% ✓." },
+      "claims": [
+        { "claim": "App học tiếng Anh 200.000đ/tháng, 100.000đ lãi gộp/tháng/người, ở lại trung bình 6 tháng", "status": "illustrative-labelled", "note": "Có '(số minh hoạ)'." }
+      ],
+      "strengths": "Nối ROI với kỳ đo và LTV bằng ba con số (ROI tháng đầu, ROI vòng đời, hoàn vốn) và nhấn đúng giả định cần kiểm (giữ chân của nhóm mới); Q4 cho thấy ROI đổi dấu khi giữ chân rút từ 6 xuống 2 tháng; Q7 bắt được lỗi ngoại suy 'tăng gấp 5' từ ROI trung bình.",
+      "upgrade": "Thêm quy tắc định lượng cho rủi ro tiền về muộn (hai mốc giữ chân, báo khoảng); minh hoạ đường giữ chân để hoàn vốn thật khác 3 tháng; thêm PHẢN VÍ DỤ sản phẩm mua một lần; đổi một phương án Q2 thành phương án có số nhưng sai kỳ."
+    },
+    {
+      "id": "B:dl10-05",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L3", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "CAC tối đa = số tiền lớn nhất được chi để có một khách mới mà không lỗ, bằng lãi gộp khách đó mang về trong khoảng thời gian bạn chấp nhận chờ", "issue": "Định nghĩa đúng chỉ khi 'CAC' ở đây là tổng chi phí chiến dịch (gồm 10 triệu cố định) ÷ khách mới — VÍ DỤ nói điều đó ('tổng chi chia số khách mới') nhưng KHÁI NIỆM không, trong khi nhiều người quen hiểu CAC = chi quảng cáo ÷ khách. Thiếu điều kiện làm con số đổi (30/400 = 75.000đ so với 40/400 = 100.000đ).", "fix": "Ghi rõ trong KHÁI NIỆM: 'CAC ở bài này = tổng chi phí chiến dịch (cả cố định) ÷ khách mới' và cho cả hai con số 75.000đ / 100.000đ để thấy chênh lệch." },
+        { "sev": "P2", "where": "Q7", "quote": "Là vạch tối thiểu; mục tiêu phải cao hơn để có lời và chừa sai số", "issue": "Nhận lại nguyên văn MANG THEO ('đó là vạch tối thiểu, không phải mục tiêu'); ba phương án sai đều dễ loại. L2 thay được bằng L4.", "fix": "Thay bằng câu đọc dữ liệu: cho bảng 3 tuần (hộp bán, chi media tích luỹ) và hỏi tuần nào chiến dịch đi qua điểm hoà vốn, hoặc với tốc độ hiện tại có kịp hoà vốn trước khi hết ngân sách không." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "MANG THEO: Trước khi chạy, tính số đơn hoà vốn và ROAS hoà vốn có cả chi phí cố định", "issue": "Không có PHẢN VÍ DỤ / ĐÀO SÂU: không nói khi mã giảm giá hoặc phí sàn theo đơn thay đổi biên (lãi gộp/đơn không còn là hằng số), điểm hoà vốn phải tính lại; không nối sang chi phí biên tăng khi mở rộng tệp (tu02-01).", "fix": "Thêm PHẢN VÍ DỤ: chạy mã giảm 20% dịp Giáng sinh → lãi gộp/đơn còn 50.000đ → đơn hoà vốn 800, ROAS hoà vốn đổi; thêm ĐÀO SÂU nối sang lợi suất giảm dần." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (30+10) triệu ÷ 100.000 = 400 ✓; sai 300 = 30/0,1 ✓, 266,7 = 40/0,15 ✓, 160 = 40/0,25 ✓. Q4: 100/30 = 3,33 ✓; sai 2,5 = 1/40% ✓, 0,3 = 30/100 ✓. ÁP DỤNG: 28,8/0,072 = 400 ✓; 400×180.000 = 72 triệu; 72/21,6 = 3,33 ✓; biên 72/180 = 40% → 2,5 ✓. Q5: 1,5×100.000 = 150.000 ✓. Q6: 250×100.000 = 25; 22+10 = 32; thiếu 7 ✓." },
+      "claims": [
+        { "claim": "Shop nến thơm Đà Lạt giá 250.000đ, lãi gộp 100.000đ/hộp, quảng cáo 30 triệu, cố định 10 triệu", "status": "illustrative-labelled", "note": "Có '(số minh hoạ)'." }
+      ],
+      "strengths": "Chỉ ra lỗi phổ biến 'ROAS hoà vốn = 1 ÷ biên' bỏ qua chi phí cố định và cho cả hai con số (2,5 và 3,33); Q6 là câu chẩn đoán giữa chiến dịch với đủ dữ kiện, phương án sai d) tái hiện đúng lỗi quên cố định; Q5 nối CAC tối đa với kỳ chờ.",
+      "upgrade": "Ghi rõ định nghĩa CAC gồm cố định và cho hai con số; thay Q7 bằng câu đọc bảng tiến độ 3 tuần; thêm PHẢN VÍ DỤ mã giảm giá đổi lãi gộp/đơn; thêm ĐÀO SÂU nối sang chi phí biên tăng khi mở rộng."
+    },
+    {
+      "id": "B:dl10-06",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 13, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L2", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Binet và Field (IPA, 2013) phân tích dữ liệu các chiến dịch ở Anh và cho rằng hiệu ứng thương hiệu thường cần hơn 6 tháng mới rõ", "issue": "Khẳng định nghiên cứu/benchmark có tên thật và con số ('hơn 6 tháng') nhưng bài không có `src` (tên tài liệu, link, ngày kiểm). Có hedging ('một khung có ảnh hưởng; có quan điểm khác') nhưng chưa đủ theo chuẩn periodic.", "fix": "Thêm `src`: Binet & Field, *The Long and the Short of It* (IPA, 2013), ngày kiểm; ghi rõ con số 6 tháng là cách đọc của tác giả bài, không phải trích nguyên văn." },
+        { "sev": "P2", "where": "Q7", "quote": "60/40 là gợi ý trung bình từ dữ liệu IPA, không phải công thức cho mọi doanh nghiệp", "issue": "Lời giải đưa thêm một benchmark (60/40) chưa xuất hiện trong bài đọc và không có nguồn.", "fix": "Hoặc đưa 60/40 vào KHÁI NIỆM kèm `src`, hoặc bỏ khỏi lời giải và chỉ nói 'tỉ lệ cố định nào cũng không đảm bảo lãi'." },
+        { "sev": "P2", "where": "Q3", "quote": "[40,\"SO_ROI_KHAC_KY\"]", "issue": "40 = 60 ÷ 150 (doanh thu ÷ chi, tức ROAS 0,4 viết thành %); không phải lỗi 'so ROI khác kỳ'. Mã sai không nhắc được đúng hiểu lầm.", "fix": "Đổi mã thành NHAM_ROI_ROAS hoặc bỏ giá trị này." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "chạy biển quảng cáo ở 10 cửa hàng, giữ 5 cửa hàng tương tự không chạy, theo dõi 6–9 tháng", "issue": "Thiết kế đối chứng được nêu nhưng không có số: với 5 cửa hàng đối chứng, dao động doanh thu tự nhiên giữa cửa hàng cỡ bao nhiêu thì mới đọc được hiệu ứng? Không nói cách chọn cửa hàng 'tương tự' (doanh thu, khu vực). Bài về đo mà không cho thấy cách đọc kết quả đo.", "fix": "Thêm một bảng nhỏ: doanh thu 5 cửa hàng đối chứng dao động ±8% tháng/tháng → chỉ đọc được hiệu ứng khi nhóm chạy lệch quá mức đó; nêu tiêu chí ghép cặp cửa hàng." },
+        { "sev": "P2", "where": "Q5, Q6", "quote": "Đo được nhưng chậm và gián tiếp; cần kỳ dài, chỉ số trung gian, đối chứng", "issue": "Q5 và Q6 đều nhận lại ý chính bài (L2); phương án đúng là phương án dài nhất, có ba vế liệt kê đúng cấu trúc KHÁI NIỆM.", "fix": "Thay Q6 bằng câu đọc dữ liệu: bảng 6 tháng lượt tìm tên quán ở nhóm chạy và nhóm đối chứng cùng tăng 20% — hỏi kết luận gì (hiệu ứng mùa, chưa tách được)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 60×50% = 30; (30−150)/150 = −80% ✓; sai −60 = (60−150)/150 ✓, 20 = 30/150 ✓, 40 = 60/150 (nhãn sai). ÁP DỤNG: (48×50% − 120)/120 = −80% ✓." },
+      "claims": [
+        { "claim": "Binet và Field (IPA, 2013): hiệu ứng thương hiệu thường cần hơn 6 tháng mới rõ", "status": "unverified", "note": "Tên tác giả và năm khớp tài liệu thật (The Long and the Short of It), nhưng bài không có `src`; con số 6 tháng là diễn giải." },
+        { "claim": "60/40 là gợi ý trung bình từ dữ liệu IPA", "status": "unverified", "note": "Chỉ xuất hiện trong lời giải Q7, không nguồn." },
+        { "claim": "Chuỗi cà phê 15 cửa hàng chi 150 triệu, doanh thu tăng thêm 60 triệu, biên 50%", "status": "illustrative-labelled", "note": "Có '(số minh hoạ)'." }
+      ],
+      "strengths": "Giữ được hai vế cân bằng — không ép ROI tháng nhưng cũng không miễn đo — và nêu đúng vấn đề đối chứng của phép so 'cùng kỳ năm trước' (Q4); Q7 là câu đánh đổi tốc độ/độ bền có biện hộ.",
+      "upgrade": "Thêm `src` cho Binet & Field và 60/40; sửa mã sai Q3; thêm số cho thiết kế đối chứng (dao động tự nhiên, cách ghép cặp cửa hàng); thay Q6 bằng câu đọc dữ liệu đối chứng; thêm PHẢN VÍ DỤ: chiến dịch 'thương hiệu' nhưng thực chất là giảm giá đội lốt — khi đó ROI tháng là thước đúng."
+    },
+    {
+      "id": "B:dl10-07",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 12, "pedagogy": 7, "assessment": 9, "data": 8, "clarity": 4 },
+      "total": 81,
+      "bloom_items": ["L3", "L5", "L3", "L5", "L4", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "[150,\"SAI_TINH_TOAN\"]", "issue": "150 là ROI cả gói của phương án A, không phải lỗi tính toán ngẫu nhiên; mã không nhắc được hiểu lầm 'lấy ROI của phương án nhỏ'.", "fix": "Đổi mã thành NHAM_ROI_CA_GOI (hoặc SAI_MAU_SO giống giá trị 60) và ghi lời giải 'bạn đang lấy ROI của A, không phải của phần thêm'." },
+        { "sev": "P2", "where": "Q4", "quote": "Nghiêng về A + nhập hàng: 80 triệu ở đó lời 50%, hơn ROI biên 37,5%", "issue": "Phương án đúng là phương án duy nhất có phép so hai con số; a) chỉ có '60 triệu', b) và c) không có số. Đoán được bằng hình thức.", "fix": "Cho a) con số đầy đủ 'B lời 60 triệu so với A 30 triệu, nên vẫn chọn B' để người học phải thấy a) thiếu cộng 40 triệu lời nhập hàng." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "Nếu shop dùng được 80 triệu nhập hàng Tết với lời 50%, so sánh đổi chiều.", "issue": "Phản ví dụ nằm trong VÍ DỤ, không có ĐÀO SÂU: không nói rủi ro hai phương án khác nhau (dự kiến 160 triệu lãi gộp của B kém chắc hơn 50 triệu của A vì tệp mới) — đánh đổi lợi nhuận kỳ vọng với độ chắc chắn chưa được đặt tên.", "fix": "Thêm ĐÀO SÂU: nếu lãi gộp B dao động 130–190 triệu thì lợi nhuận B là 30–90 triệu, có kịch bản B không hơn A; nêu quy tắc 'so khoảng, không so điểm' nối sang bài 08." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: chi thêm 80, lãi gộp thêm 110, lợi nhuận thêm 30; 30/80 = 37,5% ✓; sai 60 = ROI B ✓, 137,5 = 110/80 ✓, 150 = ROI A (nhãn kém). VÍ DỤ: A 30 triệu/150%; B 60 triệu/60% ✓. Q4: 30 + 80×50% = 70 > 60 ✓. Q6: C 10/5 = 200%, D 25/50 = 50% ✓. ÁP DỤNG: P 18/120%; Q 27/45%; biên (27−18)/45 = 20% ✓." },
+      "claims": [
+        { "claim": "Shop đồ ăn vặt: A chi 20 → lãi gộp 50; B chi 100 → lãi gộp 160", "status": "illustrative-labelled", "note": "Có '(số minh hoạ)'." }
+      ],
+      "strengths": "Đưa ROI biên (lợi nhuận thêm ÷ chi thêm) làm thước quyết định mở rộng và cho thấy kết luận đổi chiều theo chi phí cơ hội của tiền (nằm yên / nhập hàng 50%); Q6 tách được 'thứ khan' (tiền hay người) làm tiêu chí; Q7 bắt hai lỗi cùng lúc trong một báo cáo thật.",
+      "upgrade": "Sửa mã sai Q3; cân bằng hình thức các phương án Q4; thêm ĐÀO SÂU về độ chắc chắn của hai dự kiến (so khoảng); thêm một câu L4 đọc bảng ba mức chi (20/60/100) với ROI biên từng nấc và hỏi dừng ở nấc nào nếu nhập hàng lời 30%."
+    },
+    {
+      "id": "B:dl10-08",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L3", "L5", "L3", "L2", "L4", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q2", "quote": "Một câu: lời 8–32 triệu sau toàn bộ chi phí, ROI 10–40% trong 3 tháng", "issue": "Phương án đúng dài nhất, duy nhất có khoảng số và kỳ đo — khớp y nguyên câu kết luận trong VÍ DỤ (L2 nhận lại).", "fix": "Thêm phương án có khoảng số nhưng sai thước: 'Doanh thu tăng 220–280 triệu trong 3 tháng, ROI 175–250%' để buộc phân biệt doanh thu/lãi dù cùng có khoảng." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "doanh thu tăng thêm ước từ 220 đến 280 triệu trong 3 tháng", "issue": "Khoảng 220–280 được cho sẵn; bài không nói khoảng này đến từ đâu (chênh giữa 2 cửa hàng đối chứng? ±1 độ lệch?) nên người học không tự dựng được khoảng cho chiến dịch của mình.", "fix": "Thêm hai dòng: 'cửa hàng đối chứng 1 tăng 4%, cửa hàng 2 tăng 10%; áp hai mức đó lên 6 cửa hàng chạy ra 280 và 220' — khoảng là hệ quả của hai mốc đối chứng." },
+        { "sev": "P2", "where": "Q6", "quote": "Đối chứng là cửa hàng nào, kỳ đo bao lâu, biên lấy từ đâu", "issue": "Nhận lại nguyên văn mục (4) của KHÁI NIỆM; ba phương án sai (tên thành viên, lượt thích, ROAS ngày) không có phương án nào 'gần đúng'.", "fix": "Thay bằng câu L4: cho một báo cáo thiếu một trong ba giả định và hỏi con số nào trong bảng không kiểm được vì thiếu giả định đó." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "ROI không đứng một mình: luôn đặt cạnh lợi nhuận tuyệt đối và kỳ đo", "issue": "Không có PHẢN VÍ DỤ / ĐÀO SÂU: không nói khi nào báo một con số là đủ (khoảng hẹp, dữ liệu đo trực tiếp như sàn) hay khi nào khoảng quá rộng đến mức không có kết luận (ví dụ ROI −10% đến +40%).", "fix": "Thêm ĐÀO SÂU: nếu mức thấp cho ROI âm thì câu kết luận phải đổi ('chưa chắc lời'), và đề xuất bước tiếp theo là thêm đối chứng, không phải nhân rộng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 220×40% = 88; (88−80)/80 = 10% ✓; sai 175 = (220−80)/80 ✓, 46,7 = (88−60)/60 ✓, 110 = 88/80 ✓. VÍ DỤ: giữa 100/20/25% ✓; cao 112/32/40% ✓; chỉ media (100−60)/60 = 66,7% ✓. Q1 a: 175%–250% ✓; c: 46,7%–86,7% ✓. Q5: (250−80)/80 = 212,5% ✓. ÁP DỤNG: 150/170/190 × 35% − 50 = 2,5/9,5/16,5; ROI 5%/19%/33% ✓." },
+      "claims": [
+        { "claim": "Chuỗi kem 6 cửa hàng, 2 cửa hàng đối chứng, doanh thu tăng thêm 220–280 triệu, biên 40%", "status": "illustrative-labelled", "note": "Có '(số minh hoạ)'." }
+      ],
+      "strengths": "Báo khoảng thấp–giữa–cao thay cho một điểm và ghi giả định là chuẩn báo cáo đúng; Q5 là câu chẩn đoán ngược rất tốt (từ con số 213% suy ra agency đã dùng công thức nào, loại trừ hai giả thuyết khác bằng tính toán); Q7 gộp hai lỗi (thiếu chi phí, khác kỳ) của cả module.",
+      "upgrade": "Cân bằng hình thức Q2; cho thấy khoảng 220–280 đến từ hai mốc đối chứng; thay Q6 bằng câu L4; thêm ĐÀO SÂU về khoảng chứa ROI âm; thêm một câu L6 nhỏ: thiết kế đối chứng cho mùa sau (bao nhiêu cửa hàng, tiêu chí chọn)."
+    }
+  ],
+  "module_notes": {
+    "progression": "Mạch 8 bài đi đúng thứ tự khó dần: tách ROAS/lợi nhuận/ROI (01) → lợi ích là lãi gộp, không phải doanh thu (02) → chi phí ngoài media (03) → kỳ đo và LTV (04) → điểm hoà vốn (05) → ROI thương hiệu và đối chứng (06) → ROI biên và lợi nhuận tuyệt đối (07) → viết báo cáo một trang (08). Bài 08 tổng hợp được 01–07. Mọi bài đều gắn nhãn '(số minh hoạ)', phép tính nhất quán tình huống ↔ ví dụ ↔ câu hỏi, ÁP DỤNG có tiêu chí 'Đạt khi' bằng số — đây là module tính toán chắc nhất trong đợt chấm. Điểm yếu chung: không bài nào có PHẢN VÍ DỤ / ĐÀO SÂU tách riêng, nên các điều kiện 'khi nào không dùng' chỉ xuất hiện rải rác trong câu hỏi; phương án đúng ở Q2 (quyết định) của hầu hết bài đều là phương án 'tính lại / hai dòng / từng nấc rồi đo' nên đoán được theo giọng; nhiều câu quiz có phương án đúng là phương án duy nhất mang số.",
+    "overlap": [
+      "Lỗi 'so ROI khác kỳ đo' được hỏi ở 01 Q7, 04 Q5, 07 Q7, 08 Q7 — bốn lần cùng một ý, nên gộp hoặc nâng cấp thành câu đọc dữ liệu khác nhau.",
+      "Lỗi 'lấy doanh thu làm lợi ích' xuất hiện ở 01 Q1, 02 (toàn bài), 04 Q2 c, 08 Q1/Q5 — hợp lý vì là lỗi gốc, nhưng lời giải lặp cùng câu chữ.",
+      "Ý 'tăng từng nấc và đo phần thêm' ở 02 Q2, 03 Q5, 04 Q7 trùng với nội dung module tu02 (lợi suất giảm dần) mà không có `rel` nối sang."
+    ],
+    "gaps": [
+      "Không có bài nào dạy cách ước 'doanh thu tăng thêm' (incrementality): đối chứng địa lý, tắt/bật, đường cơ sở khách cũ — mọi bài coi con số này là cho sẵn, chỉ 06 và 08 nhắc đối chứng mà không hướng dẫn.",
+      "Biên lãi gộp được dùng như hằng số; không nói đến đơn hoàn/huỷ, mã giảm giá, phí thanh toán làm biên đổi theo chiến dịch (contribution margin).",
+      "Không có cách xử lý định lượng cho tiền về muộn (chiết khấu hoặc hai mốc giữ chân) dù 04 nêu rủi ro.",
+      "Hai trích dẫn thật (Farris 2010; Binet & Field 2013) không có `src`; benchmark 60/40 xuất hiện trong lời giải mà không có trong bài đọc.",
+      "Thiếu `rel` nối sang tu02 (chi phí biên) và sang bài về CAC/LTV ở module khác."
+    ],
+    "best_lesson": "B:dl10-07",
+    "weakest_lesson": "B:dl10-06"
+  }
+}

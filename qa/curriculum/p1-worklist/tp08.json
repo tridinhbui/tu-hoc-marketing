@@ -1,0 +1,20 @@
+{
+ "mod": "tp08",
+ "lessons": [
+  {
+   "id": "B:tp08-06",
+   "title": "Có nên làm quảng cáo hài cho một sản phẩm chăm sóc sức khoẻ?",
+   "total": 61,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Tình huống / Ví dụ",
+     "quote": "Một hãng thuốc nhỏ mắt không kê đơn muốn \"trẻ hoá\" hình ảnh. … giữ phần thông tin sử dụng rõ ràng ở cuối.",
+     "issue": "Bài hướng dẫn làm quảng cáo cho thuốc mà không nhắc điều kiện áp dụng quan trọng nhất của ngành: quảng cáo thuốc tại Việt Nam cần nội dung được cơ quan y tế xác nhận và có câu cảnh báo bắt buộc (theo hiểu biết chung về Luật Quảng cáo và Luật Dược; cần kiểm chứng và dẫn nguồn). Người học áp cách làm 'hài, cú lật là lúc nhỏ thuốc' mà không qua bước này sẽ gặp rủi ro pháp lý thật.",
+     "fix": "Thêm một câu điều kiện: 'với thuốc, kịch bản phải qua xác nhận nội dung quảng cáo và giữ câu cảnh báo bắt buộc; kiểm quy định hiện hành' kèm src và ngày kiểm."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm điều kiện pháp lý quảng cáo thuốc với src; (2) thêm số minh hoạ đo kết quả; (3) thay Q5 bằng câu L4; (4) thêm phản ví dụ hài trong y tế để phá ngại ngùng; (5) đào sâu: cách kiểm trò đùa trước khi chạy (đưa cho 10 người thuộc nhóm có thể bị nhắm) với tiêu chí dừng."
+  }
+ ]
+}

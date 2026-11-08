@@ -1,0 +1,124 @@
+{
+ "mod": "tp01",
+ "lessons": [
+  {
+   "id": "B:tp01-01",
+   "title": "Câu định vị của bạn có đủ để đội thiết kế tự quyết mà không cần hỏi lại?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Thay tên mình bằng tên đối thủ: nếu câu định vị vẫn đúng, bạn chưa định vị gì.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nói khi nào phép thử thay tên đối thủ cho kết quả sai (đối thủ cũng có thể bắt chước ngày ủ, độ đạm; khác biệt trong ngắn hạn không có nghĩa là bền).",
+     "fix": "Thêm phản ví dụ: đối thủ cũng in độ đạm — vế \"khác gì\" phải chuyển sang thứ khó chép (nhà thùng cho khách xem); thêm Đào sâu về khác biệt bền vs khác biệt chép được."
+    }
+   ],
+   "upgrade": "Thêm Vì sao / Phản ví dụ (khác biệt chép được) / Đào sâu; khóa dữ kiện Q7; thay 1–2 câu L2 bằng câu chấm ba câu định vị; thêm một con số đo (ví dụ: tỉ lệ khách nhắc đúng vế khác gì sau khảo sát, nối sang bài 09)."
+  },
+  {
+   "id": "B:tp01-02",
+   "title": "Trà thảo mộc đóng chai của bạn đang cạnh tranh với trà xanh, nước ngọt hay nước lọc?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Khung tham chiếu là nơi khách đứng khi chọn, không phải ngăn bạn tự đặt cho mình.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu điều kiện: khung có thể khác theo dịp (cùng chai trà, ở tủ mát tiện lợi so với nước ngọt, ở quán ăn so với trà đá miễn phí) và theo nhóm khách — bài coi 40 người cho một khung duy nhất.",
+     "fix": "Thêm phản ví dụ: 40 khách thường xuyên trả lời khác 40 khách mua lần đầu; thêm Đào sâu về khung theo dịp dùng (nối sang tp02)."
+    }
+   ],
+   "upgrade": "Thêm Vì sao / Phản ví dụ (khung đổi theo dịp và nhóm khách) / Đào sâu; cho số phân bố 40 câu trả lời và dùng nó làm calc thứ hai (tỉ lệ nêu trà thảo mộc khác); gắn nhãn hai quy mô thị trường; thay Q5 (L2) bằng câu quyết định: chọn khung hẹp hay rộng khi ngân sách 500 triệu."
+  },
+  {
+   "id": "B:tp01-03",
+   "title": "Nên khoe điểm độc đáo, hay chứng minh mình không thua ở điểm cơ bản trước?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q4",
+     "quote": "\"Không lactose\", vì đó là chuẩn chung của các loại sữa hạt",
+     "issue": "Đề không khóa khung tham chiếu. Trong khung \"sữa hạt\" (mọi sữa hạt đều không lactose) thì \"không lactose\" đúng là điểm tương đồng của ngành — đúng như lời giải phương án a mô tả và đúng với Q5 của chính bài (\"khung quyết định danh sách\"). Đáp án b chỉ đúng khi khung là \"thay sữa bò\". Hai phương án bênh được tuỳ khung.",
+     "fix": "Thêm vào đề: \"hãng nhắm người đang uống sữa bò muốn đổi sang sữa hạt\" để khóa khung; hoặc đổi phương án a sang nội dung sai rõ."
+    }
+   ],
+   "upgrade": "Khóa khung ở Q4; đưa số vào ví dụ (tỉ lệ gỡ theo lý do, số ngân hàng) và thêm một calc; thay hai câu L2 bằng câu đọc bảng lý do gỡ app; nêu đánh đổi bằng tiền (bù 2 tính năng tốn bao nhiêu tháng dev so với ngân sách quảng cáo)."
+  },
+  {
+   "id": "B:tp01-04",
+   "title": "Bản đồ định vị cho thấy một ô trống — đó là cơ hội hay cái bẫy?",
+   "total": 67,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Ô trống trên bản đồ chỉ là cơ hội khi hai trục là thứ khách dùng để chọn.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nói cách chọn 2 trục khi khách nêu 5–6 tiêu chí (lấy hai tiêu chí phân biệt mạnh nhất, không phải hai tiêu chí quan trọng nhất — tiêu chí ai cũng đạt không tạo trục).",
+     "fix": "Thêm Đào sâu: tiêu chí quan trọng nhưng ai cũng đạt (sạch) là điểm tương đồng, không làm trục; chọn trục có độ phân tán giữa các hãng."
+    }
+   ],
+   "upgrade": "Thêm Vì sao / Phản ví dụ / Đào sâu về chọn trục có độ phân tán; đưa số phỏng vấn và toạ độ các hãng vào ví dụ, kèm một calc (tỉ lệ khách nêu tiêu chí); thay câu L2 lặp bằng câu đọc bản đồ."
+  },
+  {
+   "id": "B:tp01-05",
+   "title": "Muốn định vị rõ, bạn phải chấp nhận mất nhóm khách nào?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "Phòng khám kiểm tra xem thông điệp sắc hơn có đạt được mức đó trong một năm không, trước khi quyết.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Ví dụ nói \"kiểm tra\" nhưng không nói kiểm bằng gì trong một năm (chỉ số dẫn đầu nào: lượt đặt hẹn tư vấn niềng mỗi tuần, chi phí mỗi lượt); không nói biên lãi của hai nhóm — doanh thu 60% nhưng niềng răng có thể biên khác.",
+     "fix": "Thêm Đào sâu: so lãi gộp hai nhóm thay cho doanh thu; đặt mốc kiểm 3 tháng (lượt tư vấn niềng/tuần) và phản ví dụ khi nhóm cũ giảm quá 50%."
+    }
+   ],
+   "upgrade": "Thêm Vì sao / Phản ví dụ / Đào sâu với biên lãi hai nhóm và chỉ số dẫn đầu để kiểm trong 3 tháng; thêm src cho hai trường phái; thay Q7 bằng câu đọc bảng 3 nhóm khách."
+  },
+  {
+   "id": "B:tp01-07",
+   "title": "Thương hiệu nhỏ nên đứng ở đâu khi gã khổng lồ chiếm cả ngành?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Avis từng làm đúng vậy với Hertz năm 1962: \"Chúng tôi chỉ là số hai, nên chúng tôi cố hơn\" (\"We try harder\").",
+     "issue": "Thương hiệu thật, năm cụ thể, nêu như sự thật nhưng không có src; không nói kết quả (bài học thường bị kể quá: Avis có lãi sau nhiều năm lỗ, nhưng tỉ trọng do quảng cáo chưa ai đo).",
+     "fix": "Thêm src (DDB/Avis 1962, ngày kiểm) và một câu: \"kết quả kinh doanh sau đó có nhiều yếu tố; đây là ví dụ về cách đứng, không phải bằng chứng hiệu quả\"."
+    },
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "Nên chỉ hợp khi giao hàng đều, ít điểm, nhận hàng hoàn.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu dù ví dụ đã chạm đến cái giá (biên 30% → 18%). Không nói ngưỡng hao hụt tối đa để lối đứng còn lời (bao nhiêu hũ hết hạn/100 thì biên về 0).",
+     "fix": "Thêm Đào sâu: biên = 0 khi bán được 70/100 hũ (700k vốn); đặt ngưỡng cảnh báo hao hụt 10%; phản ví dụ khi cửa hàng không chịu kệ riêng."
+    }
+   ],
+   "upgrade": "Thêm src cho Avis; thêm Vì sao / Phản ví dụ / Đào sâu với ngưỡng hoà vốn hao hụt (70/100 hũ); sửa nhãn lỗi Q3; thay Q6 (L2) bằng câu tính: 300 triệu chia 50 điểm vs 200 điểm — số lần khách thấy mỗi điểm."
+  },
+  {
+   "id": "B:tp01-09",
+   "title": "Làm sao biết khách có hiểu định vị của bạn như bạn nghĩ?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Tỉ lệ nhắc đúng định vị là 23%, dù hài lòng tới 88%. [...] Hãng đặt mục tiêu 35% sau sáu tháng tới",
+     "issue": "Bài về đo lường bằng khảo sát 200 người nhưng không nói độ nhiễu: 23% ± 5,8 điểm (95%), nên mục tiêu 35% là chênh có ý nghĩa, còn chênh 23% → 27% thì chưa kết luận được. Cũng không nói mẫu là khách đã mua (chỉ đo người đã chọn bạn, không đo thị trường).",
+     "fix": "Thêm Đào sâu: khoảng tin cậy xấp xỉ ±6 điểm với n=200; chênh dưới ~8 điểm giữa hai đợt chưa đọc được; nêu giới hạn mẫu khách đã mua và gợi hỏi thêm người chưa mua."
+    },
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Đo định vị bằng điều khách tự nói ra, không phải bằng mức độ hài lòng.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nói cách mã hoá câu trả lời mở (ai đếm, quy tắc đếm \"đau cổ\" vs \"mỏi vai\"), là chỗ số 46 có thể đổi 10–20%.",
+     "fix": "Thêm quy tắc mã hoá hai người đếm độc lập và kiểm độ khớp; phản ví dụ khi tỉ lệ nhắc đúng cao nhưng khách gán điều đó cho cả gối đối thủ."
+    }
+   ],
+   "upgrade": "Thêm độ nhiễu của mẫu 200 và quy tắc mã hoá câu trả lời mở; thêm Vì sao / Phản ví dụ / Đào sâu; nêu giới hạn chỉ hỏi khách đã mua; thay Q7 (L2) bằng câu đọc hai đợt khảo sát (23% → 27%) và hỏi có kết luận được không."
+  }
+ ]
+}

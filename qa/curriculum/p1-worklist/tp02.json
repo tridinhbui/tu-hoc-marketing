@@ -1,0 +1,102 @@
+{
+ "mod": "tp02",
+ "lessons": [
+  {
+   "id": "B:tp02-01",
+   "title": "Khách nghĩ đến ngành hàng của bạn vào những lúc nào?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "Khi vài cuộc phỏng vấn liên tiếp không thêm cửa vào mới, danh sách tạm đủ, nhưng mới chỉ là giả thuyết định tính.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Khái niệm đã nêu đúng giới hạn (định tính, cần khảo sát vài trăm người) nhưng không nói thiên lệch của mẫu 20 người đã mua (bỏ sót cửa vào của người chưa mua — chính điểm bài 08 dạy) và không có ví dụ cửa vào nghe hợp lý mà hoá ra hiếm.",
+     "fix": "Thêm phản ví dụ: cửa vào \"con sốt bác sĩ dặn bù nước\" nghe mạnh nhưng khảo sát 300 người chỉ 4% gặp mỗi tháng; thêm Đào sâu về hỏi thêm người mua ngành hàng nhưng chưa mua hãng."
+    }
+   ],
+   "upgrade": "Thêm Vì sao / Phản ví dụ (cửa vào hiếm) / Đào sâu (thiên lệch mẫu người đã mua); thêm src Romaniuk; thay Q3 bằng câu gộp câu trả lời thành cửa vào; nêu chi phí/thời gian của bước khảo sát vài trăm người để quyết định có làm không."
+  },
+  {
+   "id": "B:tp02-02",
+   "title": "Có 14 cửa vào, nên chiếm cửa vào nào trước?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Chấm thang 1–5: \"sau gym\" lớn 2, phù hợp 5, trống 1 (hai hãng đã chiếm) → tích 10.",
+     "issue": "Điểm 1–5 là thang thứ bậc do nhóm tự chấm, nhưng bài không nói ai chấm, chấm từ dữ liệu nào (độ lớn nên lấy từ khảo sát của bài 01, độ trống từ câu hỏi gợi tình huống của bài 06); chỉ Q7 mới nhắc \"sai số của việc chấm bằng cảm nhận\". Nhân ba điểm thứ bậc là heuristic, kết quả 64 vs 36 đổi hẳn nếu một người chấm lệch 1 điểm.",
+     "fix": "Ghi nguồn cho từng điểm (độ lớn = % người gặp hằng tháng từ khảo sát; độ trống = % nhắc đối thủ trong câu hỏi tình huống) và yêu cầu 3 người chấm độc lập rồi lấy trung vị; đưa ghi chú sai số lên khái niệm thay vì để ở Q7."
+    },
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Chọn cửa vào theo độ lớn, độ phù hợp và độ trống — không theo độ đẹp của cảnh quay.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu; thiếu trường hợp mô hình nhân sai (cửa vào lớn 5, phù hợp 3, trống 2 = 30 vẫn có thể đáng hơn 36 nếu sản phẩm cải tiến được).",
+     "fix": "Thêm phản ví dụ về cửa vào lớn mà độ phù hợp sửa được bằng sản phẩm; Đào sâu về trọng số (có nên nhân đôi độ lớn)."
+    }
+   ],
+   "upgrade": "Gắn mỗi điểm với một nguồn dữ liệu và quy tắc chấm độc lập; thêm Vì sao / Phản ví dụ / Đào sâu về trọng số; thay Q3 bằng bảng xếp hạng có phân tích độ nhạy; thêm src cho Romaniuk."
+  },
+  {
+   "id": "B:tp02-03",
+   "title": "Cửa vào lớn nhưng đông đối thủ, hay cửa vào nhỏ còn bỏ trống?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Thương hiệu nhỏ thường nên thắng một cửa vào nhỏ trước, rồi dùng nó làm bàn đạp",
+     "issue": "Nêu như quy tắc chung trong khi bài 02 vừa dẫn Ehrenberg-Bass cho rằng tăng trưởng đến từ nhiều cửa vào và độ phủ; không nói điều kiện (ngân sách < ~10% dẫn đầu, cửa vào nhỏ phải đủ người mua — Đào sâu có nhắc nhưng không có ngưỡng). Hai bài liền nhau kéo hai hướng mà không nối.",
+     "fix": "Thêm điều kiện áp dụng rõ: chỉ khi tiếng nói ở cửa vào lớn < ~10% và cửa vào nhỏ có ≥ X người mua/tháng; dẫn lại bài 02 để người học thấy đây là một lựa chọn, không phải luật."
+    }
+   ],
+   "upgrade": "Thêm điều kiện áp dụng có số cho quy tắc \"thắng phòng nhỏ trước\" và nối với bài 02; gắn nhãn 40 tỉ và nói cách ước; thay Q6/Q7 bằng câu phân bổ ngân sách ba cửa vào; thêm ngưỡng người mua tối thiểu cho cửa vào nhỏ."
+  },
+  {
+   "id": "B:tp02-05",
+   "title": "Mùa Tết và mùa thi: có nên chạy theo cửa vào theo mùa?",
+   "total": 82,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "Cả hai đều lỗ, mùa thi lỗ ít hơn; chi phí năm hai giảm là giả định cần đo",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu dù ví dụ đặt ra câu hỏi lớn chưa trả lời: nếu cả hai mùa đều lỗ trên lãi gộp tháng 6, lý do duy nhất để chi là lợi ích ngoài tháng (khách mới mua lại quanh năm) — bài nhắc \"lợi ích ngoài tháng 6 đo được\" trong Q3 nhưng không dạy đo nó thế nào.",
+     "fix": "Thêm Đào sâu: theo dõi tỉ lệ mua lại của khách tháng 6 trong 6 tháng sau và quy ra lãi gộp; phản ví dụ khi phụ huynh mua một lần rồi thôi."
+    }
+   ],
+   "upgrade": "Thêm Vì sao / Phản ví dụ / Đào sâu dạy đo lợi ích ngoài tháng (mua lại 6 tháng sau) để quyết định chi tiếp có căn cứ; viết lại đề Q3; làm ví dụ tự tuân thủ quy tắc so cùng kỳ."
+  },
+  {
+   "id": "B:tp02-07",
+   "title": "Muốn tăng trưởng, nên mở thêm cửa vào nào?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Tình huống / Khái niệm",
+     "quote": "Doanh số đi ngang hai năm vì gần như mọi nhà có con nhỏ đã mua.",
+     "issue": "Tiền đề \"đã bão hoà độ phủ\" được nêu như sự thật rồi làm nền cho cả bài; Ehrenberg-Bass (được bài viện dẫn) lại cho rằng độ phủ hiếm khi bão hoà và tăng trưởng chủ yếu đến từ thêm người mua nhẹ. Bài không cho người học cách kiểm tiền đề (độ phủ hiện tại bao nhiêu % hộ có con nhỏ) trước khi loại phương án tăng độ phủ.",
+     "fix": "Thêm số: 1 triệu hộ mua / 1,3 triệu hộ có con nhỏ trong vùng phân phối = 77% → mới đủ cơ sở nói bão hoà; thêm điều kiện \"nếu độ phủ < 50%, ưu tiên tăng độ phủ trước cửa vào mới\"."
+    }
+   ],
+   "upgrade": "Kiểm tiền đề bão hoà bằng số độ phủ và nêu điều kiện chọn giữa tăng độ phủ vs thêm cửa vào; gắn nhãn 30%; thay Q4 bằng câu tính tăng ròng khi có ăn mòn dịp cũ; thêm src Ehrenberg-Bass."
+  },
+  {
+   "id": "B:tp02-08",
+   "title": "Thương hiệu B2B thì cửa vào ngành hàng trông ra sao?",
+   "total": 83,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Khách doanh nghiệp không mua phần mềm vì một ngày đẹp trời — họ mua khi một sự kiện buộc họ phải làm.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu dù nội dung đã dày. Thiếu điều kiện: 20 khách bỏ đi là mẫu rất nhỏ (12/20 = 60% ± 21 điểm), và nhóm \"bỏ đi\" có thể bỏ vì giá chứ không vì sự kiện — bài kết luận \"chỗ đang mất khách\" từ 12 người mà không nói độ chắc.",
+     "fix": "Thêm Đào sâu: với 20 người, 60% có thể là 40–80%; coi hoá đơn điện tử là giả thuyết mạnh cần kiểm bằng trang đích thử 4 tuần trước khi dồn ngân sách."
+    }
+   ],
+   "upgrade": "Thêm Vì sao / Phản ví dụ / Đào sâu về độ chắc của mẫu 20 và cách kiểm giả thuyết rẻ (trang đích thử 4 tuần); đưa số 3/80 vào ví dụ; thay Q4 bằng câu phân vai–thông điệp; nêu chi phí mỗi trang đích để quyết định 2 hay 3 trang."
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "mod": "kn12",
+ "lessons": [
+  {
+   "id": "B:kn12-01",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "concept",
+     "quote": "sửa đổi bởi Luật số 75/2025/QH15 (hiệu lực 1/1/2026); Nghị định 342/2025/NĐ-CP (hiệu lực 15/2/2026)",
+     "issue": "Số hiệu văn bản và ngày hiệu lực nêu như sự thật, ghi \"Kiểm lần cuối 10/2026\" nhưng bài không có mục NGUỒN nào để bấm kiểm.",
+     "fix": "Thêm src cho Luật 16/2012/QH13, luật sửa đổi và nghị định (link cổng văn bản chính phủ), ghi ngày kiểm."
+    },
+    {
+     "sev": "P1",
+     "where": "Q7 lời giải d",
+     "quote": "theo tóm tắt thứ cấp, chưa đối chiếu toàn văn",
+     "issue": "Ghi chú nội bộ của người biên soạn lọt vào lời giải; đọc như vá; người học thấy tác giả tự nhận chưa chắc, làm đáp án c kém tin. Shop chính là shop mỹ phẩm nên câu hỏi mỹ phẩm có thuộc \"ngành đặc biệt\" hay không là điểm mấu chốt bị bỏ ngỏ.",
+     "fix": "Đối chiếu quy định về quảng cáo mỹ phẩm (phiếu công bố), viết dứt khoát vào khái niệm vùng (2), rồi viết lại lời giải d."
+    }
+   ]
+  }
+ ]
+}

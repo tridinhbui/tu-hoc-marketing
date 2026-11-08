@@ -1,0 +1,228 @@
+{
+  "mod": "tu01",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:tu01-01",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 12, "examples": 9, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L2", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1", "quote": "phần lớn người đã rời trang thì không trở lại", "issue": "Khẳng định hành vi dạng benchmark nêu như sự thật trong lời giải, không nguồn, không nhãn minh hoạ.", "fix": "Đổi thành 'người rời trang hiếm khi được nhắc quay lại nếu không có lý do cụ thể' hoặc gắn nhãn 'theo kinh nghiệm'." },
+        { "sev": "P2", "where": "Q6", "quote": "Không thiếu gì, nên thêm càng nhiều nút càng tốt", "issue": "Ba phương án sai (lời chào, lịch sử công ty, 'càng nhiều nút càng tốt') đều vô lý rõ; phương án đúng là phương án duy nhất nêu một nhu cầu thật của khách. Loại trừ được không cần hiểu bài.", "fix": "Đổi một phương án sai thành thứ hợp lý nhưng chưa ưu tiên ở màn hình đầu: 'Thiếu bảo hành 30 ngày sau vệ sinh' — để người học so hai nhu cầu thật và chọn cái quyết định sớm hơn (khu vực phục vụ)." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "Nói trong 60 giây: trang có trả lời đủ ba câu không, thiếu câu nào.", "issue": "Đầu ra không đo được, không có ràng buộc thực tế (bao nhiêu thiết bị, tiêu chí đạt). Người học không ra một quyết định cụ thể với số.", "fix": "Yêu cầu: chụp màn hình đầu trên 2 cỡ điện thoại, ghi bảng 3 dòng (là gì / lợi gì / bấm đâu) với Có/Không và đề xuất một tiêu đề lợi ích ≤ 12 chữ thay thế." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Trên 5.000 lượt vào mỗi tuần, đó là 3.000 người lần đầu được mời mua.", "issue": "Ví dụ chỉ dẫn xuất 3.000 người 'được thấy nút'; không có con số hệ quả (tỉ lệ mua đổi thế nào) và không gắn nhãn minh hoạ như các bài khác trong module.", "fix": "Thêm một dòng giả định có nhãn: 'nếu 2% trong 3.000 người này mua, thêm 60 đơn/tuần (số minh hoạ, cần A/B test)'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 5.000 × 60% = 3.000 ✓; sai 2.000 = 40% ✓, 60 = nhầm % thành người ✓." },
+      "claims": [
+        { "claim": "60% người vào không cuộn", "status": "illustrative-unlabelled", "note": "Số đo trong tình huống, không có nhãn minh hoạ." },
+        { "claim": "phần lớn người đã rời trang thì không trở lại", "status": "unverified", "note": "Lời giải Q1 d." }
+      ],
+      "strengths": "Công thức ba câu (đây là gì / có gì cho tôi / bước tiếp theo) dễ dùng ngay; PHẢN VÍ DỤ về khách đến từ nội dung kể chuyện cho thấy khi nào ép giá lên đầu là sai, kèm dấu hiệu nhận ra; Q7 là câu dung hoà có biện hộ.",
+      "upgrade": "Gắn nhãn và thêm hệ quả có số cho ví dụ; đổi ÁP DỤNG thành bảng kiểm 3 dòng trên 2 thiết bị với một tiêu đề đề xuất; thay phương án vô lý ở Q6 bằng nhu cầu thật khác; thêm một câu L4: cho bảng tỉ lệ cuộn và tỉ lệ bấm nút theo nguồn truy cập (quảng cáo vs bài báo) và hỏi màn hình đầu nào cần đổi."
+    },
+    {
+      "id": "B:tu01-02",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 12, "examples": 11, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4", "quote": "Nền tảng quảng cáo không cho phép gắn đường dẫn trang chủ", "issue": "Phương án sai vô lý (c) và d) 'Trang chủ không đo được tỉ lệ chuyển đổi'); phương án đúng nhận lại 'LỖI HAY GẶP' thứ hai. L2.", "fix": "Thay bằng câu L4: cho hai trang đích cùng quảng cáo 'Học thử IELTS' — trang chủ (3% đăng ký nhưng 40% bấm sang mục khác) và trang riêng (2,5% đăng ký) — hỏi đọc số nào trước khi kết luận trang chủ tốt hơn." },
+        { "sev": "P2", "where": "Q7", "quote": "Lặp lại cùng một nút ở màn hình đầu, giữa trang và cuối trang", "issue": "Nhận lại nguyên văn KHÁI NIỆM ('giữ một nút chính lặp lại vài lần dọc trang'); d) 'Chỉ đặt nút trên thanh menu' lặp phương án sai của bài 01 Q7.", "fix": "Thay bằng câu đánh đổi: trang dài có 3 nút lặp nhưng 80% người bấm ở nút đầu — nên rút trang hay giữ? (buộc nối với tỉ lệ cuộn)." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "Đếm số chỗ bấm được trên một trang đích bạn biết. Nói trong 60 giây", "issue": "Không có đầu ra đo được và không có ràng buộc (cái nào bỏ trước, đo gì sau 2 tuần). ĐÀO SÂU đã nêu phép thử tốt hơn ('gỡ một chỗ, theo dõi tỉ lệ đăng ký trong hai tuần') nhưng ÁP DỤNG không dùng.", "fix": "Chuyển phép thử trong ĐÀO SÂU thành ÁP DỤNG: bảng liệt kê chỗ bấm được, số lượt bấm 7 ngày, quyết định bỏ/giữ, chỉ số theo dõi." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "tỉ lệ đăng ký từ 2% lên 3,5% nghĩa là từ 80 lên 140 người học thử", "issue": "Có nhãn minh hoạ và nhắc A/B test — tốt — nhưng không nói 60 người thêm trên 4.000 lượt có vượt nhiễu không; với 80 đăng ký/tháng dao động ngẫu nhiên cỡ ±18 người.", "fix": "Thêm một câu: 'chênh 60 lớn hơn dao động ngẫu nhiên (~±18 với 80 đăng ký) nên đáng tin hơn các mức tăng vài người'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 4.000 × (3,5% − 2%) = 60 ✓; sai 1,5 (điểm %) ✓, 140 (số sau) ✓." },
+      "claims": [
+        { "claim": "Trung tâm IELTS: 4.000 lượt/tháng, đăng ký 2% → 3,5%", "status": "illustrative-labelled", "note": "Có '(Số minh hoạ; ngoài đời cần A/B test…)'." }
+      ],
+      "strengths": "Nguyên tắc 'mỗi nút phụ là một cửa thoát' đi kèm giải pháp giữ giá trị của mục tiêu phụ (chuyển tài liệu thành quà sau đăng ký, mời fanpage ở trang cảm ơn — Q2); PHẢN VÍ DỤ phụ huynh cần thông tin trước khi tin nêu đúng đánh đổi tập trung/thông tin.",
+      "upgrade": "Thay Q4 và Q7 bằng câu đọc dữ liệu/đánh đổi; chuyển phép thử trong ĐÀO SÂU thành ÁP DỤNG có bảng; thêm câu về nhiễu cho mức tăng 60 người; thêm `rel` nối sang bài khớp thông điệp quảng cáo–trang đích."
+    },
+    {
+      "id": "B:tu01-03",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 13, "examples": 12, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L3", "L2", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1", "quote": "Tỉ lệ gửi tăng rõ, dù chất lượng từng người có thể giảm nhẹ", "issue": "Phương án đúng là phương án 'có nhưng' cân bằng duy nhất; a) b) d) đều cực đoan ('giảm', 'giữ nguyên', 'gấp chín lần'). Đoán được theo giọng.", "fix": "Đổi d) thành phương án cân bằng nhưng sai hướng: 'Tỉ lệ gửi tăng nhẹ, nhưng tỉ lệ chốt tăng mạnh vì khách thấy công ty tôn trọng thời gian' để buộc nghĩ về chiều của chất lượng." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "Chọn một form bạn từng điền. Với từng trường, nói trong 60 giây: bỏ, giữ hay chuyển sang bước sau", "issue": "Thiếu tiêu chí quyết định mà KHÁI NIỆM đã cho ('không có thông tin này thì bước tiếp theo có làm được không?') và thiếu chỉ số đo sau khi đổi (số hợp đồng, chi phí mỗi hợp đồng).", "fix": "Yêu cầu bảng: trường / cần cho bước nào / quyết định / lý do, kèm hai chỉ số sẽ theo dõi 4 tuần." },
+        { "sev": "P2", "where": "ĐÀO SÂU", "quote": "Tín hiệu cần theo dõi là chi phí mỗi hợp đồng và thời gian sales dành cho mỗi khách.", "issue": "Nêu chi phí mỗi hợp đồng nhưng không tính minh hoạ: 200 người gửi × thời gian gọi so với 80 trước đây — người học không thấy đánh đổi bằng số.", "fix": "Thêm: 'nếu mỗi cuộc gọi tốn 20 phút, đội sales mất thêm 40 giờ/tháng cho 6 hợp đồng thêm — đáng hay không tuỳ giá trị hợp đồng'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.000×8%×10% = 8; 1.000×20%×7% = 14; +6 ✓; sai 12 = 20−8 (quên nhân chốt) ✓, 120 = 200−80 ✓." },
+      "claims": [
+        { "claim": "Form nội thất: gửi 8% → 20%, chốt 10% → 7%, hợp đồng 8 → 14", "status": "illustrative-labelled", "note": "Có nhãn minh hoạ và nhắc A/B test." }
+      ],
+      "strengths": "Nêu đúng đánh đổi số lượng/chất lượng bằng con số ngược chiều (tỉ lệ chốt giảm nhưng hợp đồng tăng) và chốt tiêu chí đánh giá ở cuối phễu (Q4); PHẢN VÍ DỤ báo giá tự động cho thấy khi nào không được rút form; Q3 là calc hai bước đúng nghĩa.",
+      "upgrade": "Cân bằng giọng các phương án Q1; biến ÁP DỤNG thành bảng có tiêu chí 'cần cho bước nào'; thêm phép tính chi phí thời gian sales vào ĐÀO SÂU; thêm một câu L5: form 3 trường làm sales mất 40 giờ/tháng cho 6 hợp đồng thêm — giữ hay thêm một câu lọc?"
+    },
+    {
+      "id": "B:tu01-04",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L2", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Shop nén ảnh còn 200KB, bỏ hai đoạn mã không dùng; trang hiện trong khoảng 2,5 giây. Lượt xem lên 8.500 trên 10.000 lượt bấm: khoảng 20 điểm chênh biến mất là phần do tốc độ", "issue": "Bộ số kết quả (6 giây → 2,5 giây; 6.500 → 8.500 lượt xem; 15% còn lại là bấm rác/chặn mã) là số tự đặt nhưng bài KHÔNG gắn nhãn '(Số minh hoạ…)' như 8 bài khác trong module; phần quy '20 điểm cho tốc độ' nêu như kết quả đo thật. Người học sẽ coi 'tốc độ gây ~20 điểm chênh' là benchmark.", "fix": "Thêm nhãn minh hoạ và câu 'phần chênh do tốc độ chỉ tách được khi so trước/sau trên cùng chiến dịch, cùng tuần'." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "MANG THEO: So lượt bấm với lượt xem: phần chênh là tiền quảng cáo rơi trước cửa trang.", "issue": "Bài không có VÌ SAO HIỆU QUẢ / PHẢN VÍ DỤ / ĐÀO SÂU dù 8 bài còn lại có; không có tình huống làm kết luận đổi (ví dụ chênh bấm–xem 35% nhưng trang tải 1,5 giây → nguyên nhân là bot hoặc mã đo đặt sai).", "fix": "Thêm PHẢN VÍ DỤ: trang nhanh nhưng chênh vẫn 30% vì mã đo chỉ gắn trên trang chủ còn quảng cáo dẫn về trang con; dấu hiệu và cách kiểm." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Người đã rời trước khi trang tải xong thường không được ghi là lượt xem", "issue": "Cách mã đo vận hành (thời điểm bắn sự kiện) nêu như sự thật chung; đúng với nhiều cấu hình nhưng tuỳ công cụ và vị trí gắn mã. Không nguồn, không nhãn.", "fix": "Thêm 'tuỳ công cụ và vị trí gắn mã; kiểm bằng cách mở trang trên 4G và xem sự kiện xem trang bắn lúc nào'." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì tốc độ trang quyết định phần lớn doanh số", "issue": "Phương án a) và d) là mệnh đề cực đoan, c) có con số 'xuống một nửa' vô lý; phương án đúng nhận lại câu cuối KHÁI NIỆM. L2.", "fix": "Thay bằng câu L4: ba chiến dịch có chênh bấm–xem 35% / 12% / 34% — chiến dịch nào không giải thích được bằng tốc độ trang chung và cần xem gì." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 6.500×2% = 130; 8.500×2% = 170; +40 ✓. Q4: 30.000.000/130 = 230.769; /170 = 176.471; chênh 54.299 ✓ (tol 5). VÍ DỤ: 3.500/10.000 = 35% ✓; 1.500/10.000 = 15% ✓." },
+      "claims": [
+        { "claim": "Trang 6 giây → 2,5 giây; lượt xem 6.500 → 8.500; 15% chênh còn lại do bấm rác/chặn mã/khác cách đếm", "status": "illustrative-unlabelled", "note": "Không có nhãn '(Số minh hoạ)' dù các bài khác có." },
+        { "claim": "Mã đo chỉ chạy khi trang tải tới một mức nhất định", "status": "unverified", "note": "Cơ chế công cụ đo, nêu chung." },
+        { "claim": "Mỗi giây chờ là một nhóm khách bấm quay lại", "status": "illustrative-labelled", "note": "Định tính, không gắn con số % cụ thể — tốt, tránh được benchmark không nguồn." }
+      ],
+      "strengths": "Không đưa benchmark 'mỗi giây mất X%' mà dùng chênh lệch bấm–xem của chính tài khoản làm tín hiệu, và liệt kê đủ nguyên nhân khác của chênh (bot, từ chối cookie, khác cách đếm); Q4 tính chi phí mỗi đơn trước/sau là bước nối sang tiền; Q2 ưu tiên đúng (sửa cửa chung trước).",
+      "upgrade": "Gắn nhãn minh hoạ cho bộ số kết quả; bổ sung VÌ SAO / PHẢN VÍ DỤ (trang nhanh vẫn chênh vì mã đo sai chỗ) / ĐÀO SÂU (cách đo: công cụ kiểm tốc độ trên 4G mô phỏng, chỉ số 'hiện nội dung chính'); hedging cho câu về mã đo; thay Q6 bằng câu đọc bảng ba chiến dịch."
+    },
+    {
+      "id": "B:tu01-05",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 12, "examples": 11, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L4", "L3", "L3", "L2", "L2", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4, Q5", "quote": "Bàn phím chữ cái làm trang tải chậm hơn bàn phím số", "issue": "Hai câu liền nhau đều có ba phương án sai vô lý (bàn phím ảnh hưởng tốc độ tải; nút cố định giúp xếp hạng tìm kiếm); phương án đúng nhận lại KHÁI NIỆM. Hai câu L2 liên tiếp.", "fix": "Gộp Q4+Q5 thành một câu L4: cho bảng tỉ lệ rơi theo bước trên điện thoại (xem 100% → chọn mẫu 60% → điền số điện thoại 15% → gửi 12%) và hỏi bước nào sửa trước, sửa gì." },
+        { "sev": "P2", "where": "Q5", "quote": "Vị trí nút không phải yếu tố xếp hạng tìm kiếm đáng kể", "issue": "Khẳng định về thuật toán tìm kiếm trong lời giải, không nguồn.", "fix": "Bỏ mệnh đề về xếp hạng; chỉ nói 'không liên quan tới mục tiêu mua'." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "Mở trang đích của bạn trên điện thoại, dùng một tay. Nói trong 60 giây", "issue": "Không có đầu ra đo được; ĐÀO SÂU đã có phép thử tốt (3 người, đo thời gian tìm giá và nút) nhưng ÁP DỤNG không dùng.", "fix": "Chuyển phép thử 3 người thành ÁP DỤNG: bảng thời gian tìm giá / tìm nút / chỗ khựng, và một việc sửa đầu tiên." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tỉ lệ mua trên điện thoại từ 0,8% lên 1,8%", "issue": "Có nhãn minh hoạ, nhưng mức tăng 2,25 lần từ ba thay đổi làm cùng lúc (thẻ dọc, nút cố định, chữ 16) — không nói thay đổi nào góp phần, trái với tinh thần 'sửa đúng bước đó' ở VÌ SAO (3).", "fix": "Hoặc tách ba thay đổi theo thứ tự với số riêng, hoặc thêm câu 'ba thay đổi làm cùng lúc nên không biết cái nào có tác dụng — đó là cái giá của sửa gộp'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20.000×85% = 17.000; ×0,8% = 136; ×1,8% = 306; +170 ✓; sai 200 = 20.000×1% ✓, 306 ✓. Q1 d: 3/0,8 = 3,75 'gần bốn lần' ✓." },
+      "claims": [
+        { "claim": "Hãng balo: 85% lượt vào từ điện thoại, mua 3% máy tính vs 0,8% điện thoại → 1,8%", "status": "illustrative-labelled", "note": "Có nhãn minh hoạ." },
+        { "claim": "Vị trí nút không phải yếu tố xếp hạng tìm kiếm đáng kể", "status": "unverified", "note": "Lời giải Q5 b." }
+      ],
+      "strengths": "Dùng chênh lệch tỉ lệ mua giữa thiết bị làm tín hiệu chẩn đoán (Q1) và kết thúc bằng Q7 đảo ngược nguyên tắc theo dữ liệu (phần mềm kế toán 60% máy tính); PHẢN VÍ DỤ hành trình nhiều thiết bị (xem trên điện thoại, mua trên máy tính) là tình huống làm kết luận đổi thật.",
+      "upgrade": "Gộp Q4+Q5 thành câu đọc phễu theo bước; chuyển phép thử 3 người thành ÁP DỤNG có bảng; tách hoặc ghi chú ba thay đổi làm cùng lúc; bỏ mệnh đề về xếp hạng tìm kiếm; thêm `rel` sang tốc độ tải (bài 04)."
+    },
+    {
+      "id": "B:tu01-06",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 12, "examples": 11, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L2", "L3", "L3"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4, Q5", "quote": "Cạnh câu hứa \"lọc bụi mịn PM2.5\" mà nó chứng minh", "issue": "Q4 nhận lại nguyên văn VÍ DỤ; Q5 ('con số không kèm bằng chứng cụ thể thì khó tin') nhận lại KHÁI NIỆM. Không câu nào buộc đọc dữ liệu hay cân đánh đổi; Bloom cao nhất chỉ L3.", "fix": "Thay Q5 bằng câu L5: trang có 300 đánh giá, 4,8/5, nhưng 60% đánh giá là 'giao hàng nhanh' — có nên hiện điểm 4,8 cạnh nút không? (bằng chứng không chứng minh lời hứa chính)." },
+        { "sev": "P2", "where": "ĐÀO SÂU", "quote": "chọn một trích dẫn có tình huống rõ, đặt cạnh giá và so tỉ lệ bấm với mức 5% hiện có", "issue": "Phép thử nêu so với mức 5% nhưng không nói cần bao nhiêu lượt để mức tăng 5% → 6,5% không phải nhiễu; với 8.000 lượt/kỳ, 400 lượt bấm dao động ±~40.", "fix": "Thêm: 'với 8.000 lượt, chênh dưới ~40 lượt bấm (0,5 điểm %) chưa đáng tin; chạy đủ 2 kỳ'." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "Tìm trên một trang bán hàng chỗ khách dễ phân vân nhất. Nói trong 60 giây", "issue": "Không có cách tìm 'chỗ phân vân' (ghi hình phiên, tin nhắn hỏi) và không có đầu ra đo được.", "fix": "Yêu cầu: đọc 10 tin nhắn khách gần nhất, gạch ra lời hứa bị nghi nhiều nhất, viết một trích dẫn có bối cảnh (diện tích/tình trạng) đặt cạnh lời hứa đó." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 8.000×5% = 400; ×6,5% = 520; (520−400)/400 = 30% ✓; sai 1,5 (điểm %) ✓, 120 (số tuyệt đối) ✓." },
+      "claims": [
+        { "claim": "Trang máy lọc không khí: 8.000 lượt, bấm nút 5% → 6,5%", "status": "illustrative-labelled", "note": "Có nhãn minh hoạ." }
+      ],
+      "strengths": "Nguyên tắc 'bằng chứng cạnh đúng lời hứa nó chứng minh' được cụ thể hoá bằng ba vị trí (dưới nút, cạnh giá, cạnh lời hứa); PHẢN VÍ DỤ (khách không nghi chất lượng mà phân vân công suất) phân biệt được bằng chứng xã hội với thông tin quyết định; Q6 xử lý đánh giá 2 sao đúng.",
+      "upgrade": "Thay Q4/Q5 bằng câu L4–L5 về bằng chứng không khớp lời hứa; thêm ngưỡng nhiễu cho phép thử trong ĐÀO SÂU; đổi ÁP DỤNG thành quy trình đọc tin nhắn → chọn lời hứa → viết trích dẫn; thêm `rel` sang bài nỗi lo cuối cùng (07)."
+    },
+    {
+      "id": "B:tu01-07",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 12, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L4", "L2", "L3", "L3", "L5", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q2", "quote": "Đổi size miễn phí 7 ngày · Ship 25.000đ, miễn phí từ 500.000đ · Bảo hành keo đế 12 tháng", "issue": "Phương án đúng là nguyên văn KHÁI NIỆM, duy nhất có số và thời hạn; ba phương án sai thuộc ba loại khác hẳn (lý do thích, liên hệ, khuyến mãi). L2 trá hình quyết định.", "fix": "Cho bốn phương án đều là 'ba dòng gỡ lo' nhưng khác chất lượng: một bộ mơ hồ ('Đổi trả dễ dàng · Giao nhanh · Bảo hành'), một bộ hứa quá ('Đổi trả 1 năm'), một bộ đúng — buộc chọn theo tiêu chí cụ thể và làm được." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Số đơn đổi size tăng nhẹ, mỗi lần đổi tốn khoảng 50.000đ phí vận chuyển hai chiều, nhưng thấp hơn nhiều so với lợi nhuận từ đơn tăng thêm.", "issue": "Nói 'thấp hơn nhiều' nhưng không có số trong bài đọc; Q4 mới tính (360.000đ so với 21,6 triệu). Người chỉ đọc bài không thấy phép so.", "fix": "Đưa phép tính của Q4 vào VÍ DỤ hoặc ĐÀO SÂU: '72 đơn thêm × 300.000đ = 21,6 triệu; 7 lần đổi × 50.000đ = 0,36 triệu'." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "Nghĩ về lần gần nhất bạn bỏ giỏ hàng. Nói trong 60 giây", "issue": "Đầu ra không đo được; ĐÀO SÂU có phép thử tốt hơn (đếm tin nhắn hỏi đổi trả/ship/bảo hành) nhưng ÁP DỤNG không dùng.", "fix": "Chuyển phép đếm tin nhắn thành ÁP DỤNG: bảng 3 nỗi lo / số lần hỏi trong 30 tin nhắn / dòng trả lời ≤ 10 chữ." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 2.000×(26%−20%) = 120 ✓; sai 6 (điểm %) ✓, 520 ✓. Q4: 120×60% = 72 đơn; 72×300.000 = 21,6 triệu; 72×10%×50.000 = 360.000; 21,24 triệu ✓; sai 21,6 (quên đổi size) ✓, 36 triệu = 120×300.000 (quên 60%) ✓." },
+      "claims": [
+        { "claim": "Giày da nam: 2.000 người chọn size/tháng, thêm vào giỏ 20% → 26%, đổi size tốn ~50.000đ/lần", "status": "illustrative-labelled", "note": "Có nhãn minh hoạ." }
+      ],
+      "strengths": "Phân biệt rõ 'nỗi lo cuối cùng' (rủi ro của chính khách) với bằng chứng xã hội (người khác hài lòng) và nối hai bài; Q4 là calc nhiều bước có cả chi phí phát sinh của chính sách; Q5 là câu đánh đổi (lạm dụng đổi trả) có biện hộ bằng điều kiện và đo.",
+      "upgrade": "Viết lại Q2 để bốn phương án cùng dạng; đưa phép so lợi nhuận/chi phí đổi size vào bài đọc; đổi ÁP DỤNG thành bảng đếm tin nhắn; thêm một câu L4: tỉ lệ đổi size tăng từ 5% lên 15% sau khi ghi 'đổi miễn phí' — tính lại lợi nhuận thêm và hỏi còn đáng không."
+    },
+    {
+      "id": "B:tu01-08",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 12, "examples": 11, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L2", "L3", "L4", "L3", "L2", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q2", "quote": "Nhận lịch tư vấn miễn phí", "issue": "Phương án đúng nằm ngay trong tiêu đề bài; Q2 'quyết định' thực chất là L1.", "fix": "Thay bằng câu đánh đổi: 'Nhận lịch tư vấn miễn phí' có nguy cơ gì nếu cuộc gọi sau chào bán ngay (ĐÀO SÂU đã nêu) — chọn giữa chữ hứa mạnh và chữ trung thực hơn khi phòng khám thu phí tư vấn 200.000đ." },
+        { "sev": "P2", "where": "Q6", "quote": "Ba nút cùng màu làm trang trông thiếu sáng tạo, nhàm chán", "issue": "Phương án sai vô lý; phương án đúng nhận lại 'thứ bậc'. L2.", "fix": "Thay bằng câu L4: bản đồ nhiệt cho thấy 'Xem bảng giá' được bấm gấp 3 'Đặt lịch' — là lỗi thứ bậc hay tín hiệu khách cần giá trước (nối PHẢN VÍ DỤ)?" },
+        { "sev": "P2", "where": "Q7", "quote": "Nút đặt lịch trên điện thoại chỉ cao khoảng 24 pixel", "issue": "Nêu con số 24 pixel nhưng không cho mốc tham chiếu (cỡ tối thiểu thường dùng để bấm bằng ngón cái) nên người học không biết 24 là nhỏ bao nhiêu.", "fix": "Thêm mốc có nguồn hoặc nhãn kinh nghiệm (ví dụ ~44–48 điểm) hoặc đổi đề thành 'nhỏ hơn đầu ngón cái'." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "Tìm ba nút kêu gọi trên các trang bạn hay vào. Nói trong 60 giây", "issue": "Không có đầu ra đo được; phép thử 'nheo mắt' ở ĐÀO SÂU không được dùng.", "fix": "ÁP DỤNG: nheo mắt nhìn trang của bạn, ghi nút nào nổi nhất; viết lại chữ nút chính theo kết quả khách nhận; viết một dòng gỡ lo đúng nỗi lo thật (từ tin nhắn khách)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3.000×(6%−4%) = 60 lịch; ×25% = 15 ca ✓; sai 60 (quên 25%) ✓, 45 = 180×25% ✓." },
+      "claims": [
+        { "claim": "Phòng khám nha khoa: 3.000 người xem form, gửi 4% → 6%", "status": "illustrative-labelled", "note": "Có nhãn minh hoạ." },
+        { "claim": "bài nói nút đỏ luôn thắng", "status": "illustrative-labelled", "note": "Được nêu như một niềm tin sai và bác đúng (độ tương phản, thứ bậc)." }
+      ],
+      "strengths": "Bác đúng huyền thoại 'màu nút thần kỳ' bằng độ tương phản và thứ bậc (Q4); PHẢN VÍ DỤ (nút nổi đẩy khách vào form quá sớm khi chưa biết giá) và ĐÀO SÂU (rủi ro hứa 'miễn phí' rồi chào bán) là hai điều kiện làm kết luận đổi thật.",
+      "upgrade": "Thay Q2 và Q6 bằng câu đánh đổi/đọc bản đồ nhiệt; thêm mốc kích thước cho Q7; đổi ÁP DỤNG thành phép thử nheo mắt + viết lại chữ nút; thêm một calc hai bước về ba tầng (bấm → gửi → đến khám) để thấy chữ nút hứa mạnh có thể tăng gửi nhưng giảm đến khám."
+    },
+    {
+      "id": "B:tu01-09",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 12, "examples": 10, "pedagogy": 6, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 67,
+      "bloom_items": ["L4", "L5", "L3", "L4", "L3", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "quy định về dữ liệu cá nhân (Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15, hiệu lực 1/1/2026) có thể áp dụng", "issue": "Khẳng định về luật (số hiệu, ngày hiệu lực) nêu như sự thật nhưng bài không có `src` và ngày kiểm; theo thang độ tươi 'periodic' bắt buộc có nguồn. Có hedging tốt ('có thể áp dụng — hỏi pháp chế') nhưng chưa đủ.", "fix": "Thêm `src` trỏ tới văn bản luật trên cổng thông tin chính thức, ngày kiểm, và câu 'nếu văn bản đã sửa, tin trang chính thức'." },
+        { "sev": "P2", "where": "CẤU TRÚC", "quote": "MANG THEO: Số liệu nói bao nhiêu; bản đồ nhiệt và ghi hình phiên gợi ý vì sao.", "issue": "Bài không có VÌ SAO HIỆU QUẢ / PHẢN VÍ DỤ / ĐÀO SÂU; không có tình huống bản đồ nhiệt đánh lừa (ví dụ nhiều lượt bấm vào ảnh vì ảnh nằm đúng chỗ khách hay chạm khi cuộn trên điện thoại).", "fix": "Thêm PHẢN VÍ DỤ: bấm vào ảnh là 'bấm nhầm khi cuộn' trên điện thoại — dấu hiệu: tập trung ở mép, ngắn, không lặp lại trong cùng phiên; thêm ĐÀO SÂU về cỡ mẫu phiên." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Xem đủ nhiều phiên để thấy khuôn mẫu, đừng kết luận từ một hai người.", "issue": "Bài về đọc dữ liệu định tính nhưng không cho mốc 'đủ nhiều' (bao nhiêu phiên, lọc theo thiết bị/nguồn nào) — Q4 cũng chỉ nói 'cần xem thêm'.", "fix": "Thêm quy tắc tay: 'xem 20–30 phiên cùng một phân khúc (điện thoại, từ quảng cáo); nếu ≥ 1/3 lặp cùng hành vi mới coi là khuôn mẫu' và gắn nhãn kinh nghiệm." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "Xem mười phiên ghi hình của trang bạn phụ trách (hoặc tưởng tượng mười khách). Nói trong 60 giây", "issue": "'Tưởng tượng mười khách' làm bài tập mất tính dữ liệu; không có đầu ra đo được.", "fix": "Yêu cầu bảng kiểm 10 phiên: thiết bị / điểm khựng / hành vi bất thường, và một giả thuyết sửa kèm chỉ số đo lại." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 6.000×(70%−30%) = 2.400; ×5% = 120 ✓; sai 2.400 (quên 5%) ✓, 2 (điểm % × 5%) ✓. VÍ DỤ: 1.800 → 4.200 người thấy; 90 → 210 combo ✓." },
+      "claims": [
+        { "claim": "Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15, hiệu lực 1/1/2026", "status": "unverified", "note": "Không có `src` và ngày kiểm trong bài; cần nguồn chính thức." },
+        { "claim": "Shop trà sữa đóng chai: 6.000 lượt/tháng, thấy bảng combo 30% → 70%, 5% mua", "status": "illustrative-labelled", "note": "Có nhãn minh hoạ." }
+      ],
+      "strengths": "Ba tín hiệu đọc được (bấm vào thứ không bấm được, bấm liên tục, cuộn tụt) rõ và dùng được ngay; Q2 xếp ưu tiên sửa lỗi chặn mua trước (nối bài 10); có lưu ý quyền riêng tư và che ô nhập (Q7) — hiếm bài nào trong module nói tới.",
+      "upgrade": "Thêm `src` cho luật; bổ sung VÌ SAO / PHẢN VÍ DỤ (bấm nhầm khi cuộn) / ĐÀO SÂU (cỡ mẫu phiên, phân khúc); cho mốc 'đủ nhiều phiên'; đổi ÁP DỤNG thành bảng kiểm 10 phiên thật."
+    },
+    {
+      "id": "B:tu01-10",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 12, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L2", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q7", "quote": "Tính năng nửa vời không mang lại tác động.", "issue": "Lời giải bác phương án c) ('làm một nửa tính năng… xem phản hồi') quá dứt khoát; cắt phạm vi để ra bản dùng được sớm là cách làm chính đáng. Lý do đúng để loại c) là 'nửa tính năng đặt hàng qua Zalo không chạy được', không phải mọi cách làm từng phần đều vô ích.", "fix": "Sửa lời giải: 'Với tính năng đặt hàng, nửa đường là không đặt được; nếu có bản rút gọn dùng được (ví dụ chỉ nút mở chat Zalo) thì đó là một hạng mục khác, chấm riêng.'" },
+        { "sev": "P2", "where": "Q5, Q6", "quote": "Vì cùng công sức nhưng đánh giá tác động nhiều hơn tới quyết định mua", "issue": "Hai câu L2 nhận lại KHÁI NIỆM ('tác động chia công sức', 'điểm là ước lượng'); phương án sai dễ loại ('đổi font phải trả tiền bản quyền cao').", "fix": "Thay Q5 bằng câu L4: hai người chấm 'thêm đánh giá cạnh nút' 5 và 2 điểm — chênh lớn, hỏi dữ liệu nào (ghi hình phiên, tin nhắn hỏi) giúp phân xử." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Sửa nút lỗi iPhone: tác động 9, 1 ngày → điểm 9.", "issue": "Điểm tác động 1–10 là cảm tính; bài có sẵn số để quy tác động ra đơn (Q4: 40 đơn/tháng) nhưng VÍ DỤ không nối hai cách chấm, nên người học không thấy khi nào dùng điểm, khi nào dùng tiền.", "fix": "Thêm cột 'đơn thêm ước/tháng' cho 2–3 việc (nút iPhone ~40 đơn; nén ảnh ~? đơn theo bài 04) để thấy điểm 9/7 có khớp với tiền không." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 6/2 = 3; 8/20 = 0,4; 3/0,4 = 7,5 ✓; sai 0,75 = 6/8 ✓, 0,13 ≈ 0,4/3 ✓. Q4: 5.000×40% = 2.000; ×2% = 40 ✓; sai 100 = 5.000×2% ✓, 2.000 (quên 2%) ✓. VÍ DỤ: 9/7/3/5/0,4 ✓; bốn việc đầu 1+1+2+1 = 5 ngày ✓." },
+      "claims": [
+        { "claim": "Nhóm nồi chiên: 10 việc, 1 lập trình viên 10 ngày/tháng, điểm tác động 9/7/6/5/8", "status": "illustrative-labelled", "note": "Điểm là ước lượng do bài đặt; bài nói rõ 'điểm chấm là ước lượng'." }
+      ],
+      "strengths": "Khung tác động ÷ công sức có số, có ràng buộc thật (10 ngày công) và quy tắc 'lỗi chặn mua đứng đầu'; PHẢN VÍ DỤ (khung cũ chặn các việc nhỏ → chấm sai đơn vị) và ĐÀO SÂU (chừa quỹ cho việc nền, đo độ lệch ước lượng) là hai điều kiện làm khung sai; Q2 và Q7 là quyết định có biện hộ.",
+      "upgrade": "Sửa lời giải Q7 c; thay Q5 bằng câu phân xử chênh điểm bằng dữ liệu; nối điểm tác động với đơn/tiền trong VÍ DỤ; thêm một câu L6 nhỏ: lập kế hoạch 10 ngày cho tháng sau khi việc nền (20 ngày) buộc phải làm — chia quỹ thế nào."
+    }
+  ],
+  "module_notes": {
+    "progression": "Mạch 10 bài đi từ màn hình đầu (01) → một mục tiêu (02) → form (03) → tốc độ (04) → điện thoại trước (05) → bằng chứng cạnh điểm quyết định (06) → nỗi lo cuối cùng (07) → nút kêu gọi (08) → đọc bản đồ nhiệt/ghi hình (09) → xếp ưu tiên (10). Thứ tự hợp lý: hai bài cuối là công cụ chẩn đoán và quyết định tổng hợp cho tám bài kỹ thuật trước. 8/10 bài có VÌ SAO / PHẢN VÍ DỤ / ĐÀO SÂU với 'dấu hiệu nhận ra' và 'phép kiểm tra trong tuần' — đây là điểm mạnh sư phạm của module. Điểm yếu đồng loạt: ÁP DỤNG của mọi bài đều là 'nói trong 60 giây', không có đầu ra đo được, trong khi ĐÀO SÂU đã có phép thử cụ thể hơn; câu hỏi phần lớn L2–L3, mỗi bài chỉ 1–2 calc một bước, ít câu đọc dữ liệu/đánh đổi; nhiều phương án sai vô lý ('càng nhiều nút càng tốt', 'bàn phím làm trang chậm') làm đáp án loại trừ được. Số liệu nhất quán giữa tình huống ↔ ví dụ ↔ câu hỏi, không có lỗi tính.",
+    "overlap": [
+      "'Lặp nút chính dọc trang / không đặt nút trên menu' xuất hiện ở 01 Q7 b, 02 KHÁI NIỆM, 02 Q7 — ba lần cùng một ý.",
+      "'Video tự chạy làm trang chậm' ở 01 Q5, 04 KHÁI NIỆM, 04 Q2 d.",
+      "Ưu tiên 'lỗi chặn mua trước' được dạy ở 09 Q2 rồi dạy lại thành cả bài 10 — hợp lý nếu 09 nối `rel` sang 10, nhưng hiện không có.",
+      "Mọi VÍ DỤ đều kết bằng '(Số minh hoạ; ngoài đời cần A/B test hoặc nhóm đối chứng…)' nhưng không bài nào dạy A/B test."
+    ],
+    "gaps": [
+      "Không có bài về A/B test / đọc mức tăng có vượt nhiễu không (cỡ mẫu, thời gian chạy), dù 9 bài đều viện dẫn A/B test — đây là lỗ hổng lớn nhất của module CRO.",
+      "Khớp thông điệp quảng cáo ↔ trang đích (message match) được nhắc là 'khái niệm kề cận' ở 01 và ẩn trong 02 Q4/Q6 nhưng không có bài riêng.",
+      "Không có bài về nội dung/ưu đãi trên trang (offer, giá hiển thị, so sánh gói) — module chỉ bàn bố cục và ma sát.",
+      "Khẳng định luật (91/2025/QH15) ở bài 09 không có `src`; không bài nào có `src`.",
+      "Không có `rel` nối giữa các bài dù ĐÀO SÂU luôn nêu 'khái niệm kề cận'."
+    ],
+    "best_lesson": "B:tu01-03",
+    "weakest_lesson": "B:tu01-09"
+  }
+}

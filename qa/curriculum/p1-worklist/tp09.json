@@ -1,0 +1,50 @@
+{
+ "mod": "tp09",
+ "lessons": [
+  {
+   "id": "B:tp09-01",
+   "title": "Kịch bản 60 giây của bạn có phải là một câu chuyện không?",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1 lời giải b",
+     "quote": "Não người nhớ chuỗi \"muốn – bị cản – vượt qua\"",
+     "issue": "Nêu một cơ chế tâm lý như luật phổ quát, không có nguồn và không có điều kiện; bài học chỉ có bằng chứng là một test 40 người tự dựng.",
+     "fix": "Viết lại: \"Trong test 40 người của bài, bản có trở ngại được kể lại nhiều hơn; cơ chế thường được giải thích là người xem theo dõi vì tò mò 'rồi sao nữa'\"."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) gắn nhãn số minh hoạ và mô tả cách test kể lại (ai, bao nhiêu người, hỏi gì) thành một quy trình 5 bước có chi phí; (2) thay Q3, Q7 bằng câu chẩn đoán kịch bản và câu đánh đổi thời lượng (60s vs 15s) với số; (3) thêm ví dụ thứ hai ở ngành dịch vụ (B2B hoặc tài chính) để thấy khung đổi khi trở ngại là vô hình; (4) thêm một phép tính chi phí sản xuất trên mỗi người kể lại đúng để nối sang bài 10."
+  },
+  {
+   "id": "B:tp09-02",
+   "title": "Ai là nhân vật chính: khách hàng hay thương hiệu?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1",
+     "quote": "Vì sao tập \"chị bán xôi\" có lượt xem gấp 15 lần các tập \"hành trình 10 năm\"?",
+     "issue": "Hỏi nguyên nhân từ một tập duy nhất so với ba tập; phương án b (chủ đề ẩm thực đường phố hút view) là biến gây nhiễu thật mà dữ kiện không loại được; lời giải chỉ nói \"có thể góp phần\" rồi bỏ qua. Bài cũng không nói đến thuật toán, giờ đăng, phân phối.",
+     "fix": "Đổi câu thành \"giả thuyết khả dĩ nhất theo cơ chế của bài là gì\" và thêm vào Đào sâu: \"một tập chưa đủ kết luận; làm 2–3 tập cùng cấu trúc rồi so\"."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa Q1 thành câu giả thuyết và thêm cảnh báo n=1 trong Đào sâu; (2) gắn nhãn số, thêm bảng 4 tập (xem, tin nhắn, tỉ lệ) để người học tự tính; (3) thêm bước làm: cách phỏng vấn học viên lấy trở ngại thật (3 câu hỏi) và cách xin phép lên hình; (4) thay Q4/Q6 bằng câu đọc bảng và câu thiết kế kế hoạch 6 tập có tiêu chí dừng."
+  },
+  {
+   "id": "B:tp09-04",
+   "title": "Cảm xúc thật hay \"lấy nước mắt\"?",
+   "total": 58,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Tình huống",
+     "quote": "Khảo sát sau chiến dịch: chỉ 22% người xem nhớ đúng thương hiệu.",
+     "issue": "Toàn bộ chẩn đoán dựa vào việc 22% là \"thấp\" nhưng bài không cho mốc so (bản khác, chiến dịch trước, ngành); người học không biết 22% nhớ đúng là tốt hay tệ, và bài không có phép tính nào.",
+     "fix": "Thêm mốc so trong tình huống (ví dụ: \"clip Tết cùng hãng năm trước: 41% nhớ đúng, số minh hoạ\") và một câu calc tính khoảng cách điểm %."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) bổ sung ba phần thiếu (Vì sao, Phản ví dụ, Đào sâu) với phản ví dụ ngành bảo hiểm/y tế; (2) thêm mốc so cho 22% và một câu calc (điểm % chênh, hoặc tỉ lệ bình luận tiêu cực trên tổng); (3) thay Q5 sang ngành khác, sửa nhiễu Q6; (4) thêm bước làm: quy trình test kịch bản câm với 5 người lạ (hỏi gì, ghi gì, ngưỡng nào, chi phí)."
+  }
+ ]
+}

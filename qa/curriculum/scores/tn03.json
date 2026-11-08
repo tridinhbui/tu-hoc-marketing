@@ -1,0 +1,229 @@
+{
+  "mod": "tn03",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:tn03-01",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 16, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 81,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L2", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "mỗi bản chi 3 triệu quảng cáo Facebook cho cùng tệp khách nữ 28–45 tuổi, khoảng 40.000 hiển thị mỗi bản", "issue": "Ba quảng cáo chạy cùng tệp cùng lúc sẽ cạnh tranh phân phối; nền tảng thường dồn hiển thị cho bản có phản hồi sớm, nên 'khoảng 40.000 hiển thị mỗi bản' là giả định cần kiểm (phải tách nhóm quảng cáo/ngân sách riêng). Bài không nói.", "fix": "Thêm một câu: 'đặt mỗi bản trong nhóm quảng cáo riêng, ngân sách riêng, để hiển thị gần bằng nhau; nếu lệch, so CTR thay vì số bấm (tn02-03)'." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "LỖI HAY GẶP: Đọc kết quả concept test như dự báo doanh số chính xác", "issue": "Thiếu VÌ SAO HIỆU QUẢ / PHẢN VÍ DỤ / ĐÀO SÂU; hai giới hạn được nêu trong khái niệm nhưng không có tình huống đổi kết luận.", "fix": "Thêm phản ví dụ: 'vị biển thật' thua CTR nhưng mục tiêu Tết là xây cảm xúc/định vị → chọn theo tiêu chí khác (nối bài 07)." },
+        { "sev": "P2", "where": "Q1 why a", "quote": "Chạy ngắn ngày cho một tệp nhỏ, rủi ro hình ảnh thấp", "issue": "Khẳng định không có căn cứ; 40.000 hiển thị × 3 bản = 120.000 lần thấy video thô không hẳn là 'tệp nhỏ'.", "fix": "Viết 'rủi ro hình ảnh có thể kiểm soát bằng cách dựng thô nhưng sạch (không lỗi chữ, không hình xấu)'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2√(440+280) = 2√720 = 53,67 ✓; chênh 160 ≈ 3× ✓. Ví dụ: 2√(720+440) = 68,1 ✓; 280/68 = 4,1 ✓; CTR 720/40.000 = 1,8%, 440/40.000 = 1,1%, 280/40.000 = 0,7% ✓; 9/300 = 3% ✓. Q4: 410/40.000 = 1,03%, 360/40.000 = 0,9%, 2√770 = 55,5, chênh 50 < 55 ✓, 410/360 = +14% ✓." },
+      "claims": [
+        { "claim": "3 triệu quảng cáo Facebook → ~40.000 hiển thị (CPM ≈ 75.000đ)", "status": "illustrative-labelled", "note": "Bài ghi '(số minh hoạ)'; CPM phụ thuộc thời điểm — periodic." },
+        { "claim": "Chi phí concept test thường chỉ vài phần trăm chi phí sản xuất", "status": "unverified", "note": "Khẳng định chung, ví dụ cho 3%." }
+      ],
+      "strengths": "Mọi con số tự khớp và được kiểm bằng ±2√k ngay trong ví dụ; khái niệm nêu hai giới hạn (nhiễu, CTR không đo sức xây thương hiệu) và nối sang bài 07; Q4 là câu đọc dữ liệu thật (chênh 50 trong ±55 → chưa phân biệt).",
+      "upgrade": "Thêm điều kiện phân phối đều hiển thị; bổ sung ba phần cấu trúc với phản ví dụ chọn theo tiêu chí ngoài CTR; thêm câu L5 biện hộ 'quay bản thắng CTR hay bản khớp định vị' khi hai bản cách nhau trong nhiễu."
+    },
+    {
+      "id": "B:tn03-02",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 10, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L4", "L3", "L2"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tỉ lệ xem quá 3 giây: bản cũ 18%, (1) 31%, (2) 38%, (3) 24%", "issue": "Số không gắn nhãn minh hoạ; không nêu nhiễu (10.000 hiển thị → 1.800 vs 2.400, ±2√4.200 ≈ ±130 → chênh 600 vượt xa; đáng nói để củng cố quy tắc module).", "fix": "Thêm '(số minh hoạ)' và một câu kiểm nhiễu." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Thử hook thường cho khác biệt lớn với chi phí dựng rất nhỏ", "issue": "Khẳng định chung không nguồn; phản ví dụ của bài (tệp đã có ý định) cho thấy không phải luôn vậy nhưng khái niệm vẫn nêu như quy luật.", "fix": "Viết 'thường cho khác biệt lớn khi tệp còn lạnh; với tệp đã có ý định thì nhỏ (xem phản ví dụ)'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Mỗi bản 10.000 hiển thị", "issue": "Không cho ngân sách hay cách bảo đảm ba bản được phân phối đều cùng tệp, cùng khung giờ (điểm (2) nói cần nhưng không nói cách).", "fix": "Thêm 'mỗi bản một nhóm quảng cáo riêng, ngân sách bằng nhau, cùng tệp'." },
+        { "sev": "P2", "where": "Q7", "quote": "Vì sao mở đầu bằng logo xoay 3 giây thường làm tỉ lệ xem giảm", "issue": "L2, lặp ý; nhiễu a (nền tảng phạt) và d (khán giả trẻ ghét) dễ loại.", "fix": "Thay bằng câu L4: cho bảng 3 hook với tỉ lệ 3 giây, xem hết và CTR lệch chiều nhau, hỏi chọn hook nào cho mục tiêu bán." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3.800/10.000 = 38% ✓. Q4: 38 − 18 = 20 điểm; 38/18 = 2,11 → tăng 111% ✓. Tình huống: 1.800/10.000 = 18% ✓ khớp ví dụ." },
+      "claims": [
+        { "claim": "Trên mạng xã hội người xem quyết định lướt hay dừng trong vài giây đầu", "status": "unverified", "note": "Cách hiểu phổ biến trong nghề, không nguồn; chỉ số '3 giây' là định nghĩa nền tảng — fast." },
+        { "claim": "Kem chống nắng nội địa trên TikTok, 10.000 hiển thị, 18% → 38%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Thiết kế thử đúng (giữ 27 giây sau, chỉ đổi 3 giây đầu); ĐÀO SÂU nêu đánh đổi hook giật gân kéo sai người và tín hiệu theo dõi (xem hết, CTR); Q4 dạy điểm phần trăm vs phần trăm với ba nhiễu đúng lỗi thật; phản ví dụ (tệp đã có ý định) đổi đúng chỗ cần sửa.",
+      "upgrade": "Gắn nhãn và kiểm nhiễu cho số ví dụ; nêu điều kiện phân phối đều; thay Q7 bằng câu đọc bảng ba tầng; thêm câu 'nếu màn hình/định nghĩa chỉ số khác, tin trang chính thức' vì chỉ số 3 giây là của nền tảng."
+    },
+    {
+      "id": "B:tn03-03",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 14, "examples": 9, "pedagogy": 7, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L4", "L3", "L3", "L4", "L3", "L3", "L2"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Shop chạy cùng tuần trên hai mẫu giày gần như giống hệt nhau (hoặc dùng công cụ thử của sàn nếu có), giữ nguyên tiêu đề, chỉ khác ảnh chính", "issue": "Thiết kế thử trong ví dụ không cô lập được biến: hai sản phẩm khác nhau (giá, lịch sử bán, đánh giá, vị trí tìm kiếm) nên chênh CTR 1,5% vs 2,4% không quy được cho ảnh. Bài vừa dạy 'mỗi lần đổi một yếu tố' rồi tự vi phạm mà không gọi tên đó là điểm yếu.", "fix": "Hoặc đổi ví dụ sang chạy hai ảnh làm hai quảng cáo tìm kiếm/hiển thị cùng sản phẩm, cùng lúc; hoặc giữ nhưng ghi rõ 'đây là so sánh thô, cần đảo ảnh giữa hai mẫu tuần sau (A↔B) để trừ khác biệt sản phẩm'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "đủ lớn so với dao động thường gặp giữa các tuần của shop (khoảng ±0,2 điểm)", "issue": "Thước nhiễu '±0,2 điểm' không giải thích nguồn, và khác với quy tắc module (180 vs 288 lượt → ±2√468 ≈ ±43 lượt ≈ ±0,36 điểm) mà bài 01, 10 cùng module dùng.", "fix": "Dùng ±2√(kA+kB) cho nhất quán: chênh 108 lượt so với ±43 → đáng tin." },
+        { "sev": "P2", "where": "Q7", "quote": "Điện thoại chỉ hiện vài chục ký tự đầu", "issue": "Khẳng định giao diện Shopee không nguồn, không ngày kiểm; thuộc lớp 'fast'.", "fix": "Thêm src hoặc câu 'tự mở app kiểm số ký tự hiện trên thẻ; nếu khác, tin màn hình thật'." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "LỖI HAY GẶP: Chỉ tối ưu tiêu đề cho từ khoá mà quên ảnh chính", "issue": "Thiếu VÌ SAO / PHẢN VÍ DỤ / ĐÀO SÂU.", "fix": "Phản ví dụ: sản phẩm có ảnh đẹp nhưng không hiện khi tìm → tiêu đề/từ khoá là chỗ nghẽn (Q1 đã có ý này, nên đưa thành phần riêng)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 288/12.000 = 2,4% ✓; A 180/12.000 = 1,5% ✓. Tiêu đề: 2,4% vs 2,5% = 288 vs 300, ±2√588 ≈ 48, chênh 12 → trong nhiễu ✓ khớp kết luận." },
+      "claims": [
+        { "claim": "Mắt người mua dừng ở ảnh trước rồi mới lướt tiêu đề", "status": "illustrative-labelled", "note": "Bài ghi rõ 'cách hiểu phổ biến, chưa phải quy luật; hãy tự kiểm' — tốt." },
+        { "claim": "Tiêu đề quyết định có hiện ra khi khách gõ từ khoá (Shopee)", "status": "unverified", "note": "Cơ chế tìm kiếm sàn, không nguồn, fast." },
+        { "claim": "Điện thoại chỉ hiện vài chục ký tự đầu của tiêu đề", "status": "unverified", "note": "Giao diện sàn, fast." }
+      ],
+      "strengths": "Khái niệm phân biệt đúng hai chỗ nghẽn (hiển thị thấp → tiêu đề; bấm thấp → ảnh) và tự gắn nhãn 'cách hiểu phổ biến, chưa phải quy luật'; Q1 và Q4 là câu chẩn đoán theo tầng phễu tốt.",
+      "upgrade": "Sửa thiết kế ví dụ (cùng sản phẩm hoặc đảo ảnh); dùng ±2√k cho nhất quán; gắn src/ngày kiểm cho hai khẳng định về sàn; bổ sung ba phần cấu trúc; thêm một câu L5 'đổi ảnh có thể làm giảm tỉ lệ đặt sau bấm (ảnh hứa quá) — có chấp nhận không'."
+    },
+    {
+      "id": "B:tn03-04",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 81,
+      "bloom_items": ["L1", "L3", "L3", "L4", "L4", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tỉ lệ cài app: \"30 ngày + văn phòng\" 1,2%; \"30 ngày + sinh viên\" 0,8%; \"10 phút + văn phòng\" 1,6%; \"10 phút + sinh viên\" 1,0%", "issue": "Số không gắn nhãn minh hoạ; 'tỉ lệ cài' trên lượt hiển thị 1–1,6% là cao bất thường cho cài app (thường là tỉ lệ bấm cỡ đó), có thể làm người học hiệu chuẩn sai.", "fix": "Ghi '(số minh hoạ)' và đổi chỉ số thành 'tỉ lệ bấm' hoặc hạ xuống mức cài thực tế hơn (0,1–0,3%) với số hiển thị lớn hơn." },
+        { "sev": "P2", "where": "Q1, Q3", "quote": "2 × 2 = 4 ô", "issue": "Q1 là L1 (phép nhân), Q3 là trung bình cộng hai số; hai câu đầu không buộc đọc dữ liệu.", "fix": "Thay Q3 bằng tính mức tương tác của ô 'dự đoán theo hàng + cột − trung bình chung' (1,55) so với 1,6 — chính phép tính Q6 dựa vào." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Ma trận cho nhiều bài học hơn thử từng cặp riêng lẻ", "issue": "Không nối với tn02-01 ('mỗi lần test chỉ đổi một thứ') — người học có thể thấy hai bài mâu thuẫn; thiếu câu 'ma trận là cách đổi hai thứ mà vẫn tách được vì mọi ô đều được so'.", "fix": "Thêm liên kết và một câu giải thích vì sao không trái tn02-01." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (1,6 + 1,0)/2 = 1,3% ✓ (cùng hiển thị nên trung bình cộng hợp lệ). Cột: (1,2 + 1,6)/2 = 1,4; (0,8 + 1,0)/2 = 0,9 ✓; hàng 30 ngày: 1,0 ✓. Tương tác ô 10 phút + văn phòng: 1,3 + 1,4 − 1,15 = 1,55 vs 1,6 → +0,05 ✓ khớp Q6. Phản ví dụ: 2.000×1,2% = 24 cài ✓. Q2: 16×5.000 = 80.000; 9×9.000 ≈ 81.000; 4×20.000 = 80.000 ✓." },
+      "claims": [
+        { "claim": "App tiếng Anh, 4 ô × 20.000 hiển thị, tỉ lệ cài 0,8–1,6%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Dạy đọc hàng/cột/ô và tương tác đúng, có phản ví dụ định lượng (24 cài mỗi ô → may rủi) và tín hiệu 'ô cùng hàng chênh hơn hàng với hàng'; Q6 còn tự kiểm ví dụ (+0,05 chưa phải tương tác) — hiếm thấy.",
+      "upgrade": "Gắn nhãn và hiệu chỉnh chỉ số cài; thay Q1/Q3 bằng câu tính tương tác; nối tường minh với tn02-01 và tn02-09 (4 ô = nhiều phép so → ngưỡng chặt hơn); thêm câu L5 chọn giữa 2×2 và test tuần tự khi lượt xem chỉ đủ cho 2 bản."
+    },
+    {
+      "id": "B:tn03-05",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 9, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L5", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Q1 why b", "quote": "Thuật toán có ưu tiên video giữ chân", "issue": "Khẳng định về thuật toán nền tảng không nguồn, nằm trong lời giải nên người học nhận như sự thật.", "fix": "Viết 'dù nền tảng có ưu tiên video giữ chân hay không, điều đó không bảo đảm người xem mua'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Video A … CTR 0,6%. Video B … CTR 1,1%. Mục tiêu là bán hàng, nên B thắng.", "issue": "Không có số hiển thị đi kèm trong ví dụ (Q3 mới cho 50.000) nên 'B thắng' chưa kiểm nhiễu; cũng chưa nói CTR của B tính trên hiển thị hay trên người xem — mẫu số khác nhau đổi kết luận.", "fix": "Ghi 'cả hai tính trên 50.000 hiển thị: 300 vs 550 bấm, ±2√850 ≈ ±58 → B thắng rõ'." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Thumb-stop rate (tỉ lệ xem quá 3 giây trên lượt hiển thị)", "issue": "Định nghĩa chỉ số theo nền tảng, lớp 'fast', không có src/ngày kiểm hay câu 'nếu báo cáo định nghĩa khác, tin trang chính thức'.", "fix": "Thêm src hoặc câu dặn kiểm định nghĩa trong trình quản lý quảng cáo." },
+        { "sev": "P2", "where": "Q3", "quote": "11.000 ÷ 50.000 = 0,22 = 22%", "issue": "Phép chia một bước.", "fix": "Thay bằng câu tính số người tới từng tầng của A và B (dừng → xem hết → bấm) để thấy B đưa nhiều người tới cuối phễu hơn dù dừng ít hơn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 11.000/50.000 = 22% ✓ khớp tình huống." },
+      "claims": [
+        { "claim": "Định nghĩa thumb-stop, xem hết, CTR trên Facebook", "status": "unverified", "note": "Định nghĩa nền tảng, không nguồn — fast." },
+        { "claim": "Thuật toán ưu tiên video giữ chân", "status": "unverified", "note": "Trong lời giải Q1b." },
+        { "claim": "Đồ ăn vặt: A 35%/8%/0,6%, B 22%/20%/1,1%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Khung đọc theo tầng (hook → thân → CTA) cho quyết định sửa phần nào thay vì bỏ video; Q5 (xem hết của video 60s vs 15s không so thẳng) và Q6 (CTR tốt, đặt hàng thấp → trang đích) là câu chẩn đoán đúng nghề; phản ví dụ chỉ đúng khi creative không phải thủ phạm.",
+      "upgrade": "Bỏ/hedge khẳng định thuật toán; thêm số hiển thị và mẫu số cho ví dụ; gắn src hoặc câu kiểm định nghĩa chỉ số; thay Q3 bằng câu tính số người qua từng tầng."
+    },
+    {
+      "id": "B:tn03-06",
+      "scores": { "accuracy": 13, "depth": 13, "practical": 16, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L5", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "tần suất trung bình tăng từ 1,4 lên 4,2 lần mỗi người", "issue": "Không nói tần suất tính theo tuần hay cộng dồn cả chiến dịch; nếu cộng dồn thì tăng là tất yếu và 'điểm gãy ở 2,5' phải đọc khác.", "fix": "Ghi rõ 'tần suất cộng dồn từ đầu chiến dịch' và dặn so với tần suất tuần." },
+        { "sev": "P2", "where": "VÌ SAO HIỆU QUẢ", "quote": "Tần suất đo độ lặp này, nên thường báo trước khi CTR sụt", "issue": "Không nêu lời giải thích cạnh tranh: nền tảng đã 'vét' hết người dễ phản hồi trong tệp (bão hoà tệp) cũng cho tần suất tăng + CTR giảm nhưng thay creative không cứu được. Q7 kiểm điều này gián tiếp nhưng khái niệm không nói cách phân biệt trước khi thay.", "fix": "Thêm: 'dấu phân biệt: nếu creative mới cũng không hồi CTR ở cùng tệp thì là bão hoà tệp, cần mở tệp'." },
+        { "sev": "P2", "where": "Q3", "quote": "Tăng bao nhiêu phần trăm so với tuần đầu?", "issue": "Phép tăng % một bước.", "fix": "Thay bằng: với ngân sách 20 triệu/tuần, số đơn tuần 1 và tuần 5 là bao nhiêu, mất bao nhiêu đơn." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "tần suất 1,4 → 2,1 → 2,9 → 3,6 → 4,2; CTR 1,6% → 1,5% → 1,3% → 1,1% → 0,9%", "issue": "Số không gắn nhãn minh hoạ; 'điểm gãy rõ từ tuần ba' là đọc chủ quan trên 5 điểm.", "fix": "Thêm '(số minh hoạ)' và nêu cách xác định điểm gãy (tuần đầu CTR giảm hơn 10% so với tuần trước)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (310 − 180)/180 = 72,2% ✓; wrong 41.9 = 130/310 ✓." },
+      "claims": [
+        { "claim": "Creative mỏi: tần suất tăng, CTR giảm, chi phí mỗi kết quả tăng", "status": "unverified", "note": "Hiện tượng được ngành chấp nhận rộng, không nguồn; chỉ số 'tần suất' là của nền tảng — periodic." },
+        { "claim": "Nệm cao su, 5 tuần, điểm gãy ở tần suất 2,5", "status": "illustrative-unlabelled", "note": "Bài tự nói 'với tệp này' — tốt, nhưng không nhãn minh hoạ." }
+      ],
+      "strengths": "Phản ví dụ (CTR giảm vì mùa/đối thủ, tần suất vẫn thấp) tách đúng nguyên nhân; nhấn 'điểm gãy theo từng tệp, không dùng con số cố định' (Q5) và Q4 (tệp nhỏ + ngân sách lớn) là câu áp dụng cơ chế; Q7 đọc dữ liệu sau can thiệp.",
+      "upgrade": "Làm rõ định nghĩa tần suất; thêm cách phân biệt mỏi creative với bão hoà tệp; thay Q3 bằng câu tính đơn mất; gắn nhãn số; thêm câu L5: thay creative sớm hay mở tệp khi CPA vượt ngưỡng."
+    },
+    {
+      "id": "B:tn03-07",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L5", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "họ khảo sát nhanh 300 khách: người thấy chủ yếu bản khuyến mãi nhớ thương hiệu là \"hay giảm giá\"; người thấy bản kể chuyện nhớ \"thảo dược, dịu nhẹ\"", "issue": "Bằng chứng bị nhiễu bởi cách nhắm: bản khuyến mãi chỉ chạy cho 'người đã xem hoặc vào trang', bản kể chuyện cho tệp rộng — hai nhóm vốn khác nhau (đã quan tâm vs chưa), nên khác biệt trí nhớ không quy được cho creative. Đây đúng là lỗi chọn nhóm mà tn02-02 dạy; bài dùng nó làm bằng chứng kết luận.", "fix": "Đổi ví dụ thành đo kiểu brand lift: trong cùng tệp rộng, giữ một nhóm ngẫu nhiên không thấy bản khuyến mãi, so câu trả lời 'nghĩ đến gì đầu tiên' giữa hai nhóm; hoặc ghi rõ 'khảo sát này chỉ gợi ý, chưa tách được ảnh hưởng của tệp nhắm'." },
+        { "sev": "P2", "where": "VÍ DỤ, Q3", "quote": "Đội chia ngân sách: 70% cho chuỗi quảng cáo kể chuyện … 30% cho bản khuyến mãi", "issue": "Tỉ lệ 70/30 nêu không lý do; Q3 chỉ tính 30% × 200 triệu — L3 thấp, không mang quyết định.", "fix": "Thay Q3 bằng câu so chi phí mỗi đơn hai bản (khuyến mãi có giảm 50% ăn vào biên) để tỉ lệ chia có cơ sở." },
+        { "sev": "P2", "where": "Q1 why b", "quote": "CTR cao thường làm chi phí mỗi lượt bấm giảm, không tăng", "issue": "Khẳng định cơ chế đấu thầu nền tảng không nguồn trong lời giải.", "fix": "Viết 'thường' kèm 'tuỳ cơ chế đấu thầu của nền tảng'." },
+        { "sev": "P2", "where": "ĐÀO SÂU", "quote": "Tín hiệu cần theo dõi là khảo sát nhận diện, tỉ lệ khách nhớ đúng lời hứa, và mức mua khi không có khuyến mãi", "issue": "Nêu đúng tín hiệu nhưng không có con số nào trong bài cho bất kỳ tín hiệu nào; bài về thương hiệu không có một phép đo nào ngoài CTR.", "fix": "Cho số minh hoạ: 'nhóm thấy kể chuyện: 46% nhắc 'dịu nhẹ'; nhóm đối chứng không thấy: 31%' và chi phí khảo sát." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 200 × 30% = 60 triệu ✓." },
+      "claims": [
+        { "claim": "Khảo sát 300 khách cho kết quả trí nhớ khác nhau theo bản thấy", "status": "illustrative-unlabelled", "note": "Không số cụ thể, không nhãn, và thiết kế nhiễu (xem P1)." },
+        { "claim": "CTR cao → CPC giảm", "status": "unverified", "note": "Cơ chế nền tảng." },
+        { "claim": "Giảm giá tự nó không phải vấn đề pháp lý", "status": "unverified", "note": "Trong lời giải Q1d; hedge hợp lý nhưng chủ đề có quy định khuyến mại — nên gắn 'cần kiểm'." }
+      ],
+      "strengths": "Đặt đúng câu hỏi 'quảng cáo dạy khách nhớ gì' và phân vai hai loại creative theo tầng phễu; phản ví dụ (sản phẩm mới chưa có định vị để mất) đổi đúng kết luận; Q5 (xe điện 'an toàn' vs bản đua tốc độ) và Q7 là câu đánh đổi tốt.",
+      "upgrade": "Sửa ví dụ đo thương hiệu bằng nhóm đối chứng ngẫu nhiên và cho số; thay Q3 bằng câu kinh tế của bản giảm 50%; hedge khẳng định nền tảng; thêm câu 'cần kiểm quy định khuyến mại' có nhãn; nối rõ với tn02-02 (chia ngẫu nhiên) để tránh lỗi chính bài đang mắc."
+    },
+    {
+      "id": "B:tn03-08",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 9, "pedagogy": 9, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L4", "L3", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "Điểm treo B bán trung bình 460 que mỗi ngày, điểm treo A 400 que. … Chủ chuỗi in B cho toàn hệ thống", "issue": "Kết luận từ 3 điểm so với 3 điểm, không có mức bán trước khi treo của từng điểm và không có độ lệch giữa các điểm. Chênh 15% giữa hai nhóm 3 cửa hàng rất dễ nằm trong khác biệt sẵn có của cửa hàng (phản ví dụ chính bài thừa nhận). Thiếu giả định 'điểm tương đương đã kiểm bằng doanh số trước' làm kết luận có thể đổi; bài 02 của tn01 dạy đúng cách này nhưng ví dụ không áp dụng.", "fix": "Thêm số nền: '4 tuần trước, hai nhóm bán 410 và 405 que/ngày; sau treo: 460 vs 400' và/hoặc đảo poster giữa hai nhóm ở tuần 3–4 (crossover) rồi đọc chênh trung bình." },
+        { "sev": "P2", "where": "Q3", "quote": "B cao hơn A bao nhiêu phần trăm?", "issue": "Phép tăng % một bước, không đọc dữ liệu mới.", "fix": "Thay bằng câu đọc bảng 6 cửa hàng trước/sau để tính chênh trừ nền." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Nhìn từ xe máy cách 10 mét, bản A gần như không đọc được giá", "issue": "Số không gắn nhãn minh hoạ; cơ chế 'không đọc được giá' là giả thuyết hợp lý nhưng chưa đo (có thể kiểm bằng cách ĐÀO SÂU gợi ý).", "fix": "Thêm '(số minh hoạ)' và nói rõ đây là giả thuyết đã kiểm bằng ba người lạ đọc giá." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (460 − 400)/400 = 15% ✓; wrong 13 = 60/460 ✓." },
+      "claims": [
+        { "claim": "Chuỗi bánh mì que Hải Phòng, 460 vs 400 que/ngày", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Gọi khách đồng ý tham gia là việc phổ biến, không vi phạm riêng tư", "status": "unverified", "note": "Trong lời giải Q5d; hedge 'không nên khẳng định' là hợp lý." }
+      ],
+      "strengths": "Gán đúng vai cho ý kiến nội bộ (loại lỗi) thay vì bác bỏ; nhấn 'xem creative trong đúng bối cảnh khách thấy' với phép kiểm rẻ (đứng cách 10 m); Q5 chỉ ra hạn chế của hỏi trực tiếp và Q6 nêu 'cùng thiết kế, kênh khác, kết quả khác'.",
+      "upgrade": "Thêm mức bán nền và/hoặc đảo poster để kết luận đứng vững; thay Q3 bằng câu diff-in-diff; gắn nhãn số; thêm câu L5: in B toàn hệ thống hay thử thêm 6 điểm nữa khi chênh 15% trên 3 vs 3."
+    },
+    {
+      "id": "B:tn03-09",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 17, "examples": 11, "pedagogy": 7, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L2", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "TÌNH HUỐNG ↔ VÍ DỤ", "quote": "mỗi bản 500.000 đồng. Sau một tháng, mỗi bản chỉ có 3–8 tin nhắn", "issue": "Với chi phí mỗi tin nhắn ~50.000đ nêu ở ví dụ, 500.000đ kỳ vọng ~10 tin nhắn; 3–8 thấp hơn kỳ vọng mà không giải thích (ngân sách mỏng làm giá tệ hơn là lý do hợp lý nhưng không nói).", "fix": "Thêm 'chi phí mỗi tin nhắn ~50.000đ khi chạy đủ; chia mỏng còn đắt hơn' hoặc đổi thành 5–12 tin nhắn." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Chủ tiệm muốn mỗi bản có ít nhất khoảng 30 tin nhắn để so sánh đỡ nhiễu", "issue": "Mốc 30 có ghi là 'mức thô' nhưng không nói 30 kết quả cho dao động ±11 (±37%), tức chỉ phân biệt được bản gấp đôi bản kia — điều kiện này quyết định mốc.", "fix": "Thêm '30 tin → ±2√30 ≈ ±11; chỉ thấy được chênh rất lớn; đúng với mục tiêu tìm hướng, không đủ để tinh chỉnh'." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "LỖI HAY GẶP: Thử các bản chỉ khác nhau một chữ hay một màu nút khi chưa tìm được hướng lớn", "issue": "Thiếu VÌ SAO / PHẢN VÍ DỤ / ĐÀO SÂU.", "fix": "Phản ví dụ: ngân sách 5 triệu nhưng chi phí mỗi tin nhắn 200.000đ (dịch vụ giá cao) → không đủ cho 2 bản, phải đo chỉ số sớm hơn (bấm) như tn01-05 Q6." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 30×50.000 = 1,5tr; 4,5/1,5 = 3 bản ✓ (tol 0 hợp lý). Ví dụ: 2√(41+26) = 16,4 ≈ 16, chênh 15 < 16 ✓ bài nói đúng 'chưa xác nhận'; tổng 41+26+23 = 90 tin = 4,5tr/50.000 ✓ khớp. Q6d: 1tr/100.000 = 10 đơn ✓." },
+      "claims": [
+        { "claim": "Tiệm nail Đà Nẵng, 5 triệu/tháng Facebook, 50.000đ/tin nhắn", "status": "illustrative-unlabelled", "note": "Chi phí mỗi tin nhắn thay đổi theo thời điểm — periodic." }
+      ],
+      "strengths": "Công thức 'ngân sách ÷ (số kết quả cần × chi phí mỗi kết quả) = số bản' dùng ngay; ví dụ trung thực (41 vs 26 còn trong ±16 → cần vòng xác nhận) và nối đúng tn02-03, tn01-05; Q7 giữ kết luận trong phạm vi được thử.",
+      "upgrade": "Giải thích 3–8 vs kỳ vọng 10; nêu hệ quả của mốc 30; bổ sung ba phần cấu trúc; thêm câu L4 cho bảng 3 bản × 4 tuần để người học thấy dao động tuần."
+    },
+    {
+      "id": "B:tn03-10",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Toàn bài", "quote": "KHÁI NIỆM [Thư viện bài học creative]", "issue": "Trùng khái niệm và cả câu chuyện mở (nhân viên cũ nghỉ, thử lại ý đã thua) với tn01-09 (nhật ký thử nghiệm); hai bài không nhắc nhau.", "fix": "Liên kết hai bài; cho bài này tập trung vào phần riêng của creative (cột 'yếu tố được thử', 'độ tin cậy', và quy tắc 'lặp lại độc lập mới thành quy luật')." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "LỖI HAY GẶP: Rút \"quy luật\" từ vài lần thử chưa đủ chênh lệch", "issue": "Thiếu VÌ SAO / PHẢN VÍ DỤ / ĐÀO SÂU; không có trường hợp thư viện gây hại (bài học cũ áp cho tệp mới khác hẳn).", "fix": "Phản ví dụ: 'cảnh rót thắng' với nữ 25–35 đem áp cho nam 40+ rồi thua — cột tệp khách là lý do." },
+        { "sev": "P2", "where": "Q1, Q4, Q6", "quote": "Cột nào giúp lọc bài học theo loại qua nhiều lần thử?", "issue": "Ba câu L2 nhận lại khái niệm, nhiễu dễ loại (tên người làm, màu chủ đạo, phần mềm chuyên dụng).", "fix": "Thay một câu bằng L4: cho 6 dòng thư viện và hỏi dòng nào đủ điều kiện gọi là 'thắng đáng tin'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2√(380+240) = 2√620 = 49,8 ✓; chênh 140 ≈ 2,8× ✓; CTR 380/20.000 = 1,9%, 240/20.000 = 1,2% ✓." },
+      "claims": [
+        { "claim": "Cà phê hoà tan, 60 creative/năm, dòng mẫu 1,9% vs 1,2%", "status": "illustrative-labelled", "note": "Bài ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Cột 'độ tin cậy' và nguyên tắc 'câu vì sao chỉ là giả thuyết cho đến khi lặp lại độc lập' là tư duy nghiên cứu đúng; Q7 (4/5 thắng nhưng chỉ 2 vượt dao động → ghi giả thuyết có phạm vi) là câu L5 tốt nhất module.",
+      "upgrade": "Nối/phân vai với tn01-09; bổ sung ba phần cấu trúc với phản ví dụ áp bài học sai tệp; thay hai câu L2 bằng câu đọc bảng; thêm cách gộp bằng chứng qua nhiều lần thử (cộng số bấm các lần cùng điều kiện rồi dùng ±2√k)."
+    }
+  ],
+  "module_notes": {
+    "progression": "Mạch hợp lý: concept test (01) → hook (02) → yếu tố chính trên sàn (03) → ma trận (04) → đọc chỉ số theo tầng (05) → creative mỏi (06) → thương hiệu vs click (07) → nội bộ vs khách (08) → ngân sách và số biến thể (09) → thư viện (10). Module dùng lại tốt quy tắc ±2√k của tn02-03 (01, 09, 10 tính đúng), nhưng ba bài dùng bằng chứng nhiễu mà không gọi tên (03: hai sản phẩm khác nhau; 07: tệp nhắm khác nhau; 08: 3 vs 3 cửa hàng không nền). 5/10 bài (01, 03, 09, 10 và một phần 02) thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU.",
+    "overlap": [
+      "tn03-10 trùng tn01-09 (nhật ký thử nghiệm) cả khái niệm lẫn tình huống mở.",
+      "tn03-06 (creative mỏi) chạm tn02-10 (hiệu ứng mới lạ) — cần phân vai rõ.",
+      "tn03-04 (ma trận) và tn02-01 (một biến) không nhắc nhau; tn03-09 (số biến thể theo ngân sách) lặp một phần tn02-09 (chia mỏng lượt) và tn01-05 (ngân sách thử)."
+    ],
+    "gaps": [
+      "Thiếu điều kiện phân phối đều hiển thị khi chạy nhiều creative cùng tệp (01, 02, 04) — nền tảng tự tối ưu phân phối làm so sánh lệch; không bài nào nói cách tách nhóm quảng cáo/ngân sách.",
+      "Thiếu cách đo tác động thương hiệu đúng (nhóm đối chứng ngẫu nhiên không thấy quảng cáo) dù 07 là bài về thương hiệu.",
+      "Các khẳng định về nền tảng (định nghĩa 3 giây, thumb-stop, hiển thị tiêu đề trên Shopee, thuật toán ưu tiên) đều không có src/ngày kiểm và không có câu 'nếu màn hình khác, tin trang chính thức' dù thuộc lớp fast.",
+      "Số minh hoạ chỉ được gắn nhãn ở 01, 03, 10; các bài còn lại không nhãn."
+    ],
+    "best_lesson": "B:tn03-01",
+    "weakest_lesson": "B:tn03-03"
+  }
+}

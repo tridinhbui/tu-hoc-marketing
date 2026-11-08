@@ -1,0 +1,211 @@
+{
+  "mod": "kn11",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn11-01",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L1", "L5", "L3", "L2", "L4", "L1", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "(Google Search Central, kiểm 10/2026)", "issue": "Nguồn chỉ ghi tên và ngày trong lời văn; bài không có trường src bấm được (dump không in dòng NGUỒN). Với khẳng định về cách Google vận hành, người học không kiểm lại được.", "fix": "Thêm src: How Search Works, SEO Starter Guide (URL, ngày kiểm 10/2026)." },
+        { "sev": "P2", "where": "Q3", "quote": "Chi phí quảng cáo mỗi tháng là bao nhiêu triệu đồng?", "issue": "Phép nhân một bước (L3 thấp) lặp lại con số đã có trong ví dụ; bài không có phép tính nào khác về SEO.", "fix": "Đổi thành: 'Nếu trang mới sau 4 tháng mang 600 nhấp/tháng (số minh hoạ), tiệm tiết kiệm được bao nhiêu tiền quảng cáo mỗi tháng nếu bớt mua đúng số nhấp đó, và còn phải trả gì cho SEO?'" },
+        { "sev": "P2", "where": "Q1, Q6", "quote": "Trên trang kết quả Google, cách phân biệt kết quả tự nhiên với quảng cáo là gì?", "issue": "Hai câu L1 nhận lại định nghĩa; nhiễu Q1 c/d và Q6 d vô lý, đoán được.", "fix": "Thay Q6 bằng câu đọc ảnh mô tả trang kết quả có 3 quảng cáo trên cùng và hồ sơ doanh nghiệp, hỏi vị trí tự nhiên đầu tiên là dòng nào." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "trang mới có thể mất nhiều tuần đến vài tháng mới có nhấp đều", "issue": "Ví dụ không có số nào về kết quả SEO (hiển thị, nhấp theo tháng) nên không minh hoạ được 'tích luỹ'.", "fix": "Thêm chuỗi minh hoạ 6 tháng: hiển thị 0 → 400 → 1.500 → 3.000; nhấp 0 → 10 → 60 → 150 (số minh hoạ)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2.500 × 3.200 = 8.000.000đ = 8 triệu ✓." },
+      "claims": [
+        { "claim": "Google không nhận tiền để thu thập thường hơn hay xếp hạng cao hơn (How Search works)", "status": "unverified", "note": "Khớp tài liệu công khai của Google theo hiểu biết chung; bài nêu tên nguồn + ngày kiểm nhưng không có src bấm được." },
+        { "claim": "Theo SEO Starter Guide, thay đổi có thể có tác dụng sau vài giờ đến vài tháng", "status": "unverified", "note": "Khớp SEO Starter Guide theo hiểu biết chung; không có src." },
+        { "claim": "Quảng cáo gắn nhãn 'Được tài trợ' (Sponsored)", "status": "unverified", "note": "Giao diện nền tảng, có thể đổi; không có src." },
+        { "claim": "Mua liên kết là thứ Google xếp vào spam", "status": "unverified", "note": "Khớp Spam policies theo hiểu biết chung; không có src." },
+        { "claim": "Xác minh hồ sơ doanh nghiệp là miễn phí (Q1 lời giải c)", "status": "unverified", "note": "Khẳng định về Google Business Profile, không nguồn." },
+        { "claim": "2.500 nhấp/tháng, 3.200đ/nhấp, gói 15 triệu", "status": "illustrative-labelled", "note": "Tình huống ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Phân biệt SEO/SEM/organic rõ, ghi cả cách dùng từ khác nhau; Q2 và Q7 là câu quyết định với đánh đổi thật (hy sinh đơn tháng đầu, không hứa thứ hạng); phần Áp dụng có tiêu chí đạt rõ.",
+      "upgrade": "Để đạt ≥85: (1) thêm src bấm được cho ba tài liệu Google; (2) đưa chuỗi số minh hoạ 6 tháng vào ví dụ để minh hoạ 'tích luỹ' và dùng ở Q3; (3) thêm PHẢN VÍ DỤ (sản phẩm theo mùa ngắn hoặc chiến dịch 1 tháng: SEO không kịp, quảng cáo là đúng) và ĐÀO SÂU (chi phí duy trì SEO, rủi ro thuật toán đổi); (4) thay Q1/Q6 bằng câu đọc trang kết quả."
+    },
+    {
+      "id": "B:kn11-02",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L3", "L4", "L3", "L2", "L3", "L4", "L4"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Một cách chia phổ biến (Broder, 2002, sau được giới làm nghề thêm nhóm so sánh)", "issue": "Trích nghiên cứu không có src; không nêu tên bài ('A taxonomy of web search').", "fix": "Thêm src tới bài Broder 2002 (SIGIR Forum) và ghi rõ ba nhóm gốc." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "15 đơn trên 3.000 nhấp (0,5%) là hợp lý cho bước này", "issue": "Nói 0,5% là 'hợp lý' mà không nêu đó là nhận định nghề hay benchmark; không có số cho đóng góp gián tiếp của bài blog (bao nhiêu người đi tiếp sang trang so sánh).", "fix": "Thêm: 'sau khi thêm đoạn dẫn, 6% người đọc blog bấm sang trang so sánh (số minh hoạ) — đó mới là chỉ số của bài thông tin'." },
+        { "sev": "P2", "where": "Q4", "quote": "Cách nhanh nhất để đoán ý định của một truy vấn trước khi viết trang là gì?", "issue": "Nhận lại cách làm trong khái niệm (L2).", "fix": "Thay bằng câu chẩn đoán: mô tả trang 1 của 'máy lọc nước 10 lõi' (3 trang sản phẩm sàn, 1 bài so sánh, 1 video), hỏi ý định và loại trang nên làm." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 18 ÷ 1.200 = 1,5% ✓; 18 ÷ 3.000 = 0,6% ✓. Ví dụ: 15 ÷ 3.000 = 0,5% ✓." },
+      "claims": [
+        { "claim": "Broder (2002) chia ý định tìm kiếm thành thông tin, điều hướng, giao dịch; nhóm so sánh do giới nghề thêm", "status": "unverified", "note": "Khớp tài liệu học thuật theo hiểu biết chung; không src. Bài nói rõ 'không phải bảng Google công bố' — tốt." },
+        { "claim": "Cột 'Cạnh tranh' của Keyword Planner đo số nhà quảng cáo đấu giá (Q4 lời giải d)", "status": "unverified", "note": "Khớp Google Ads Help theo hiểu biết chung; src nằm ở bài 03, không ở bài này." },
+        { "claim": "Lặp từ khoá là nhồi từ khoá, Google coi là spam (Q6 lời giải c)", "status": "unverified", "note": "Khớp Spam policies; không src trong bài." },
+        { "claim": "3.000 nhấp/15 đơn; 1.200 nhấp/18 đơn", "status": "illustrative-labelled", "note": "Tình huống ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Tình huống 'xoá bài nhiều nhấp ít đơn' là lỗi thật rất hay gặp; Q7 bắt đúng lỗi so hai trang khác vai bằng cùng thước đo; phần Áp dụng có 6 truy vấn cụ thể và tiêu chí đạt.",
+      "upgrade": "Để đạt ≥85: (1) thêm chỉ số đo bài thông tin (tỉ lệ đi tiếp sang trang so sánh, đơn có hỗ trợ) với số minh hoạ và một câu tính dùng nó; (2) src cho Broder 2002; (3) thêm PHẢN VÍ DỤ (truy vấn ý định hỗn hợp, trang 1 lẫn hướng dẫn và sản phẩm: cần một trang ghép hay hai trang?) và ĐÀO SÂU (ý định đổi theo mùa/ theo thiết bị); (4) thay Q4 bằng câu chẩn đoán trang kết quả."
+    },
+    {
+      "id": "B:kn11-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 82,
+      "bloom_items": ["L4", "L4", "L3", "L1", "L2", "L4", "L4"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "(Google Ads Help, kiểm 10/2026)", "issue": "Nguồn ghi trong lời văn, không có trường src bấm được.", "fix": "Thêm src tới trang Google Ads Help về Keyword Planner (cột Competition) và Search Console Performance report." },
+        { "sev": "P2", "where": "Q4", "quote": "Cột \"Cạnh tranh\" (thấp/trung bình/cao) trong Keyword Planner cho biết điều gì?", "issue": "Câu L1 nhận lại định nghĩa đã nêu nguyên văn trong khái niệm.", "fix": "Thay bằng câu đọc bảng: cho 3 từ khoá với cột Cạnh tranh 'Cao/Thấp/Thấp' và mô tả trang 1 thật, hỏi từ nào khó lên top tự nhiên nhất." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "lên khoảng vị trí 3, CTR 10% → 90 nhấp", "issue": "Giả định 'lên vị trí 3' là bước nhảy lớn không nêu cơ sở (trang 1 có vài cửa hàng nhỏ ≠ chắc chắn vị trí 3); bài có nhãn minh hoạ nên không sai, nhưng chưa nói cách kiểm giả định này sau khi đăng.", "fix": "Thêm: 'kiểm sau 8–12 tuần bằng vị trí trung bình theo truy vấn trong Search Console; nếu dừng ở vị trí 8, tính lại với CTR 2–3%'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 300 × 15% = 45; 45 × 8% = 3,6 ✓; 300 × 8% = 24 ✓. Ví dụ: 12.000 × 1% × 0,5% = 0,6 ✓; 900 × 10% × 3% = 2,7 ✓." },
+      "claims": [
+        { "claim": "Cột 'Cạnh tranh' trong Keyword Planner đo số nhà quảng cáo hiển thị so với các từ khác, không phải độ khó SEO", "status": "unverified", "note": "Khớp Google Ads Help theo hiểu biết chung; bài nêu tên nguồn + ngày kiểm, không src bấm được." },
+        { "claim": "Google không công bố bảng CTR theo vị trí (Q6 lời giải b)", "status": "unverified", "note": "Đúng theo hiểu biết chung; không nguồn." },
+        { "claim": "Lượng tìm trong Keyword Planner là ước tính đã làm tròn", "status": "unverified", "note": "Khớp mô tả công cụ; không src." },
+        { "claim": "CTR 1% ở trang 2, 10% vị trí 3, 15% vị trí 1; tỉ lệ ra đơn 0,5%/3%/8%", "status": "illustrative-labelled", "note": "Bài ghi rõ 'số minh hoạ, không phải benchmark' — gắn nhãn tốt." }
+      ],
+      "strengths": "Bảng ba cột (lượng tìm – ý định – khả năng thắng) cùng chuỗi nhấp → đơn cho quyết định cụ thể với số; gắn nhãn giả định mẫu mực; Q6 và Q7 dạy đúng thái độ với giả định (chồng giả định, thay bằng số thật).",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho Google Ads Help và Search Console; (2) nêu cách kiểm giả định vị trí/CTR sau 8–12 tuần với ngưỡng cụ thể; (3) thêm PHẢN VÍ DỤ (từ khoá nhỏ nhưng trang 1 toàn hãng lớn, hoặc từ to nhưng có đoạn trích nổi bật dễ chiếm) và ĐÀO SÂU (một trang có thể lên cho nhiều truy vấn, nên đừng chấm từng từ cô lập); (4) thay Q4 bằng câu đọc bảng."
+    },
+    {
+      "id": "B:kn11-04",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L1", "L4", "L3", "L4", "L1", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Google viết rằng E-E-A-T tự nó không phải một yếu tố xếp hạng cụ thể. (Google Search Central, kiểm 10/2026)", "issue": "Bài xoay quanh tài liệu hướng dẫn và khung đánh giá chất lượng của Google — kiến thức 'fast' theo RUBRIC (bắt buộc src với ngày kiểm) — nhưng không có trường src bấm được; chỉ ghi tên nguồn trong lời văn.", "fix": "Thêm src tới 'Creating helpful, reliable, people-first content' và Search Quality Rater Guidelines (URL, ngày kiểm), cộng câu 'nếu tài liệu đã đổi, tin trang chính thức'." },
+        { "sev": "P2", "where": "Q1, Q5", "quote": "Trong bốn chữ của E-E-A-T, Google nói chữ nào quan trọng nhất?", "issue": "Hai câu L1 nhận lại định nghĩa; nhiễu Q1 d 'chứng nhận trả phí' và Q5 a 'vì được thêm sau cùng' vô lý.", "fix": "Thay Q5 bằng câu chẩn đoán: cho dàn ý hai bài về retinol (một có dược sĩ ký nhưng chép từ nhãn, một do khách hàng viết trải nghiệm 8 tuần có ảnh), hỏi bài nào thể hiện Experience và bài nào Trust yếu ở đâu." },
+        { "sev": "P2", "where": "Q3", "quote": "Bao nhiêu phần trăm số bài không mang về lượt nhấp nào?", "issue": "Phép chia một bước; bài không có phép tính nào nối với quyết định (chi phí 120 bài × 150.000đ = 18 triệu, chi phí mỗi bài có nhấp = 1 triệu).", "fix": "Đổi Q3 thành: 'Chi 18 triệu cho 120 bài, 18 bài có nhấp: chi phí thực cho mỗi bài có nhấp là bao nhiêu? Bài dược sĩ tốn 2 triệu (số minh hoạ) mang gần một nửa nhấp — so sánh.'" },
+        { "sev": "P2", "where": "Q2", "quote": "Viết 20 bài theo 20 từ khoá chưa phủ, nhờ dược sĩ đọc duyệt trước khi đăng", "issue": "Phương án b là cách làm hợp lý được nhiều đội dùng; đáp án d chỉ hơn ở mức độ; lời giải phải biện hộ bằng 'bài chạy được là bài trả lời câu hỏi thật' — ranh giới mỏng.", "fix": "Làm b rõ sai hơn (ví dụ: 'giữ 600 chữ, cùng người viết thuê, dược sĩ chỉ ký tên') để tách khỏi d." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (120 − 18) ÷ 120 = 85% ✓." },
+      "claims": [
+        { "claim": "Google: E-E-A-T tự nó không phải yếu tố xếp hạng cụ thể; là khung người đánh giá chất lượng dùng; người đánh giá không quyết thứ hạng", "status": "unverified", "note": "Khớp tài liệu Search Central theo hiểu biết chung; không có src bấm được; nội dung fast." },
+        { "claim": "Google viết 'trust is most important' trong E-E-A-T", "status": "unverified", "note": "Khớp Search Central theo hiểu biết chung; không src." },
+        { "claim": "Google nói không có độ dài chữ ưu tiên (Q7 lời giải a)", "status": "unverified", "note": "Khớp tài liệu helpful content (câu hỏi tự kiểm về 'word count'); không src." },
+        { "claim": "Google coi nội dung sao chép hàng loạt là dấu hiệu chất lượng thấp (Q2 lời giải c)", "status": "unverified", "note": "Khớp Spam policies (scraped content); không src." },
+        { "claim": "120 bài, 150.000đ/bài, 18 bài có nhấp, bài dược sĩ gần một nửa nhấp", "status": "illustrative-labelled", "note": "Tình huống ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Nói chính xác điều Google nói về E-E-A-T (không phải yếu tố xếp hạng trực tiếp) — tránh được hiểu lầm phổ biến; ví dụ gộp bài trùng với chuyển hướng 301 là bước làm thật; Q4 và Q6 là câu tình huống tốt.",
+      "upgrade": "Để đạt ≥85: (1) thêm src bắt buộc (nội dung fast) và câu 'tin trang chính thức'; (2) đưa chi phí vào ví dụ (18 triệu / 18 bài có nhấp = 1 triệu mỗi bài có nhấp) và biến Q3 thành câu so chi phí; (3) thêm PHẢN VÍ DỤ (chủ đề đời sống không cần bằng cấp: Experience quan trọng hơn Expertise) và ĐÀO SÂU (gộp bài: cách chọn bản đích, theo dõi hiển thị 8 tuần sau gộp); (4) thay Q1/Q5 bằng câu chẩn đoán dàn ý."
+    },
+    {
+      "id": "B:kn11-05",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L1", "L3", "L3", "L2", "L4", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "(Google Search Central, kiểm 10/2026)", "issue": "Nhiều khẳng định về cơ chế Google (lập chỉ mục bản điện thoại, không dùng meta keywords, mô tả đôi khi làm đoạn trích) chỉ ghi tên nguồn, không có src bấm được.", "fix": "Thêm src: SEO Starter Guide, Mobile-first indexing, 'Control your snippets' với ngày kiểm." },
+        { "sev": "P2", "where": "Q1, Q4", "quote": "Google Search có dùng thẻ meta keywords để xếp hạng không?", "issue": "Hai câu L1/L2 nhận lại; nhiễu Q1 d 'chỉ dùng cho tiếng Việt' vô lý.", "fix": "Thay Q1 bằng câu chẩn đoán: cho 4 dòng chẩn đoán của Kiểm tra URL (đã lập chỉ mục / bị noindex / robots chặn / chưa thu thập), hỏi việc làm tương ứng." },
+        { "sev": "P2", "where": "Q3", "quote": "Điện thoại chiếm bao nhiêu phần trăm số nhấp?", "issue": "Phép chia một bước; không có số nào về tốc độ (8 MB tải mất bao lâu ở 4G) để người học thấy mức nặng.", "fix": "Đổi Q3 thành ước thời gian tải ảnh 8 MB ở 10 Mbps (≈ 6,4 giây) so với ảnh 300 KB, hoặc tính số nhấp điện thoại mất nếu 40% người rời trang khi tải quá 3 giây (số minh hoạ)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "mô tả một câu nêu giá từ 189.000đ/người và giờ mở cửa", "issue": "Ví dụ nêu việc sửa nhưng không có kết quả đo trước/sau nào (CTR, vị trí), nên không biết việc nào đáng.", "fix": "Thêm số minh hoạ sau 8 tuần: CTR trang thực đơn 2,1% → 4,0%, hiển thị không đổi — và nhắc Q7 về mùa vụ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.120 ÷ 1.400 = 80% ✓; 1.400 ÷ 1.120 = 125% ✓." },
+      "claims": [
+        { "claim": "Google Search không dùng thẻ meta keywords (SEO Starter Guide)", "status": "unverified", "note": "Khớp tài liệu Google theo hiểu biết chung; không src bấm được." },
+        { "claim": "Google chủ yếu lập chỉ mục bằng bản điện thoại (mobile-first indexing)", "status": "unverified", "note": "Khớp tài liệu Google; không src." },
+        { "claim": "Meta description đôi khi được dùng làm đoạn trích; Google dùng thẻ title cùng các tiêu đề khác để tạo tiêu đề kết quả", "status": "unverified", "note": "Khớp tài liệu 'title links' và 'snippets'; không src." },
+        { "claim": "Sitemap tuỳ chọn, có ích khi site mới hoặc lớn", "status": "unverified", "note": "Khớp tài liệu Google; không src." },
+        { "claim": "1.400 nhấp, 1.120 từ điện thoại, ảnh 8 MB", "status": "illustrative-labelled", "note": "Tình huống ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Checklist có thứ tự (lập chỉ mục trước, rồi tiêu đề, mô tả, URL, tốc độ, điện thoại) và Q5 kiểm đúng thứ tự đó; Q7 dạy đúng bài so trước/sau không đối chứng với mùa lẩu.",
+      "upgrade": "Để đạt ≥85: (1) thêm src bấm được cho 4 tài liệu Google; (2) đưa số đo trước/sau (CTR, vị trí) vào ví dụ và thêm phép tính về tốc độ/ảnh nặng; (3) thêm PHẢN VÍ DỤ (site lớn: sửa tiêu đề từng trang không khả thi, cần mẫu tiêu đề) và ĐÀO SÂU (Core Web Vitals là gì, đo ở đâu — gắn src); (4) thay Q1 bằng câu đọc kết quả Kiểm tra URL."
+    },
+    {
+      "id": "B:kn11-06",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L1", "L3", "L3", "L1", "L3", "L2", "L3"],
+      "bloom_max": "L3",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM, VÍ DỤ", "quote": "chính sách nội dung của Google cấm cả hai", "issue": "Bài dựa trên chính sách của Google Business Profile (ba yếu tố xếp hạng địa phương, cấm đổi quà lấy đánh giá, cấm mời chọn lọc) — nội dung chính sách nền tảng thuộc loại 'fast' theo RUBRIC — nhưng không có trường src bấm được, chỉ ghi '(kiểm 10/2026)'.", "fix": "Thêm src: 'Improve your local ranking on Google' và 'Prohibited and restricted content' (Maps user contributed content policy) với ngày kiểm và câu 'nếu chính sách đổi, tin trang chính thức'." },
+        { "sev": "P2", "where": "Q1, Q4", "quote": "Ba yếu tố chính Google nêu cho thứ hạng địa phương là gì?", "issue": "Hai câu L1 nhận lại; nhiễu Q4 a (giá món, độ dài tên quán) vô lý.", "fix": "Thay Q4 bằng câu chẩn đoán: quán A 400 đánh giá 4,6 sao cách 3 km; quán B 50 đánh giá 4,2 sao cách 300 m — ai hiện với người tìm ở điểm X và yếu tố nào quyết?" },
+        { "sev": "P2", "where": "Q3", "quote": "Theo cách tính trung bình đơn giản, điểm mới là bao nhiêu?", "issue": "Bài tự nói 'trung bình đơn giản' nhưng không cảnh báo rằng Google không công bố công thức điểm hiển thị; người học có thể tin số 4,33 là điểm Google sẽ hiện.", "fix": "Thêm trong steps: 'Google có thể tính và làm tròn khác; đây chỉ là ước lượng để thấy 10 đánh giá mới dịch điểm được bao nhiêu'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Quán sửa giờ mở cửa, số điện thoại, chọn đúng danh mục", "issue": "Không có số đo kết quả (lượt xem hồ sơ, lượt gọi, chỉ đường trước/sau) dù GBP có báo cáo hiệu suất.", "fix": "Thêm số minh hoạ 8 tuần: lượt chỉ đường 120 → 210/tháng, lượt gọi 40 → 75; và nhắc so cùng kỳ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (50 × 4,2 + 10 × 5) ÷ 60 = 260 ÷ 60 = 4,33 ✓; (4,2 + 5) ÷ 2 = 4,6 ✓." },
+      "claims": [
+        { "claim": "Thứ hạng địa phương dựa chủ yếu vào liên quan, khoảng cách, mức độ nổi bật (Google Business Profile Help)", "status": "unverified", "note": "Khớp trang trợ giúp Google theo hiểu biết chung; không src bấm được; nội dung fast." },
+        { "claim": "Google nói không có cách yêu cầu hay trả tiền để có thứ hạng địa phương tốt hơn", "status": "unverified", "note": "Khớp trang trợ giúp; không src." },
+        { "claim": "Chính sách của Google cấm tặng quà đổi đánh giá và cấm chỉ mời chọn lọc đánh giá tốt", "status": "unverified", "note": "Khớp chính sách nội dung Maps theo hiểu biết chung; không src." },
+        { "claim": "Nhồi từ khoá vào tên doanh nghiệp trái hướng dẫn của Google (Q2 lời giải c)", "status": "unverified", "note": "Khớp Business Profile guidelines; không src." },
+        { "claim": "50 đánh giá 4,2 sao; quán đối diện 400 đánh giá", "status": "illustrative-labelled", "note": "Tình huống ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Nêu đúng điều quán nhỏ làm được (NAP thống nhất, danh mục, ảnh, trả lời đánh giá) và điều không làm được (khoảng cách); Q7 có câu trả lời mẫu tốt cho đánh giá 2 sao.",
+      "upgrade": "Để đạt ≥85: (1) thêm src bắt buộc cho chính sách và trang xếp hạng địa phương; (2) đưa số đo GBP trước/sau vào ví dụ và một câu đọc báo cáo hiệu suất hồ sơ; (3) thêm PHẢN VÍ DỤ (dịch vụ tới nhà khách, không có cửa hàng: cách khai vùng phục vụ khác) và ĐÀO SÂU (đánh giá giả của đối thủ, cách báo cáo); (4) thay Q1/Q4 bằng câu chẩn đoán hai quán; (5) thêm cảnh báo về công thức điểm ở Q3."
+    },
+    {
+      "id": "B:kn11-07",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L4", "L4", "L3", "L2", "L3", "L1", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Google lưu ý đây không phải thứ hạng của bạn cho một tìm kiếm cụ thể, và quảng cáo không chiếm vị trí. (Search Console Help, kiểm 10/2026)", "issue": "Khẳng định về cách Search Console tính vị trí (đặc biệt 'quảng cáo không chiếm vị trí') là chi tiết kỹ thuật dễ sai nếu tài liệu đổi; không có src bấm được.", "fix": "Thêm src tới Performance report (Search results) – mục Position, ngày kiểm." },
+        { "sev": "P2", "where": "Q6", "quote": "khi link của bạn hiện ở hai chỗ trên cùng một trang kết quả, Search Console ghi vị trí thế nào?", "issue": "Câu L1 nhận lại định nghĩa kỹ thuật hẹp; nhiễu d vô lý.", "fix": "Thay bằng câu đọc bảng truy vấn: 3 truy vấn với hiển thị/nhấp/vị trí tháng 8 và 9, hỏi truy vấn nào thực sự tụt." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Những lần hiện mới này kéo trung bình xuống, dù các từ khoá cũ có thể vẫn ở chỗ cũ — phải lọc theo từng truy vấn mới biết.", "issue": "Ví dụ nói 'phải lọc' nhưng không cho bảng đã lọc minh hoạ; người học không thấy hình dạng kết quả sau khi lọc (bảng ở phần Áp dụng mới có).", "fix": "Đưa bảng 2 dòng của phần Áp dụng vào ví dụ với CTR tính sẵn (6% và 2,4%)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 360 ÷ 12.000 = 3% ✓; tháng 8: 300 ÷ 5.000 = 6% ✓. Q7: 20.000 × 1% = 200; 2.000 × 8% = 160 ✓. Áp dụng: 120 ÷ 2.000 = 6%; 240 ÷ 10.000 = 2,4%." },
+      "claims": [
+        { "claim": "Vị trí trung bình trong Search Console = vị trí cao nhất của link trong mỗi lần hiện, lấy trung bình; không phải thứ hạng cho một tìm kiếm cụ thể", "status": "unverified", "note": "Khớp Search Console Help theo hiểu biết chung; không src bấm được." },
+        { "claim": "Quảng cáo không chiếm vị trí trong cách tính của Search Console", "status": "unverified", "note": "Chi tiết kỹ thuật cần đối chiếu nguyên văn tài liệu; không src." },
+        { "claim": "GA4 nhóm kênh mặc định tách Organic Search và Paid Search", "status": "unverified", "note": "Khớp tài liệu GA4 default channel group; không src." },
+        { "claim": "Nhấp (Search Console) và phiên (GA4) là hai thứ khác nhau; lệch do chặn đo, thoát sớm", "status": "unverified", "note": "Giải thích đúng theo hiểu biết chung; không src." },
+        { "claim": "12.000 hiển thị/360 nhấp/vị trí 15; 5.000/300/8; 330 phiên Organic, 900 Paid", "status": "illustrative-labelled", "note": "Tình huống ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Tình huống 'vị trí trung bình tụt vì hiện thêm truy vấn mới' là hiểu lầm thật rất hay gặp và được giải thích bằng số tự khớp; Q7 bắt so nhấp tuyệt đối và 'chỗ còn tăng' thay vì CTR; tách Paid khỏi Organic rõ.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho Search Console Help và GA4; (2) đưa bảng đã lọc theo truy vấn vào ví dụ; (3) thêm PHẢN VÍ DỤ (hiển thị tăng nhưng nhấp giảm: có thể là tụt thật hoặc đoạn trích nổi bật của đối thủ) và ĐÀO SÂU (so cùng kỳ năm trước, dùng chế độ so sánh trong Search Console); (4) thay Q6 bằng câu đọc bảng truy vấn; (5) nêu cỡ mẫu: 2.000 hiển thị đủ để tin CTR 6%, 50 hiển thị thì chưa."
+    },
+    {
+      "id": "B:kn11-08",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 12, "pedagogy": 8, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 81,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Google xếp mua bán liên kết để xếp hạng và nhồi từ khoá vào spam; site vi phạm có thể bị hạ hạng hoặc không xuất hiện. (Google Search Central, Spam policies, kiểm 10/2026)", "issue": "Chính sách spam của Google là nội dung 'fast' (chính sách nền tảng) và là căn cứ cho Q1, Q5, Q7; bài không có trường src bấm được, chỉ ghi tên tài liệu và ngày.", "fix": "Thêm src tới Spam policies for Google web search (mục Link spam, Keyword stuffing) với ngày kiểm và câu 'nếu chính sách đổi, tin trang chính thức'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Giá trị thay thế quảng cáo = 400 × 3.000đ = 1,2 triệu/tháng — trùng số ở đây là tình cờ.", "issue": "Hai con số 1,2 triệu trùng nhau trong cùng ví dụ dễ làm người học nhớ nhầm hai khái niệm là một dù bài đã cảnh báo.", "fix": "Đổi CPC thành 2.500đ để giá trị thay thế = 1 triệu, khác lãi gộp 1,2 triệu." },
+        { "sev": "P2", "where": "KHÁI NIỆM/VÍ DỤ", "quote": "Hoàn vốn = 12 ÷ 1,2 = 10 tháng sau khi trang có nhấp đều; nếu mất 4 tháng để lên, tổng khoảng 14 tháng.", "issue": "Chưa nêu độ nhạy: CTR 8% là giả định yếu nhất, nhưng bài không cho thấy hoàn vốn đổi thế nào khi CTR 4% (20 tháng + chờ) — phần Áp dụng mới hỏi điều này.", "fix": "Thêm một dòng độ nhạy: 'CTR 4% → 20 tháng; 12% → 6,7 tháng' để người học thấy khoảng, không phải một số." },
+        { "sev": "P2", "where": "Q5", "quote": "Shop muốn trang lên nhanh nên lặp \"dụng cụ làm bánh\" 40 lần trong một bài 800 chữ. Điều gì có thể xảy ra?", "issue": "Câu L2 nhận lại; nhiễu b và d vô lý.", "fix": "Thay bằng câu L4: đọc đoạn 60 chữ có từ khoá lặp 6 lần, hỏi đoạn nào là nhồi và viết lại." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 5.000 × 8% = 400; × 2% = 8 đơn; 8 × 500.000 × 30% = 1,2 triệu; 12 ÷ 1,2 = 10 tháng ✓; dùng doanh thu 4 triệu → 3 tháng ✓. Áp dụng: 3.000 × 6% × 3% = 5,4 đơn × 100.000đ = 540.000đ/tháng → 16,7 + 3 ≈ 19,7 tháng (không có đáp án trong bài, tự kiểm)." },
+      "claims": [
+        { "claim": "Google Spam policies: mua bán liên kết để xếp hạng và nhồi từ khoá là spam; site vi phạm có thể bị hạ hạng hoặc không xuất hiện", "status": "unverified", "note": "Khớp tài liệu Google theo hiểu biết chung; không src bấm được; nội dung fast." },
+        { "claim": "Google có hệ thống và đội ngũ riêng xử lý spam liên kết (Q1 lời giải b)", "status": "unverified", "note": "Khớp mô tả SpamBrain/webspam team theo hiểu biết chung; không src." },
+        { "claim": "Hiển thị trong Search Console thường nhích trước nhấp (Q7 lời giải d)", "status": "unverified", "note": "Nhận định nghề hợp lý, không nguồn." },
+        { "claim": "CTR 8%; 5.000 lượt tìm; CPC 3.000đ; đơn 500.000đ; lãi gộp 30%; ra đơn 2%", "status": "illustrative-labelled", "note": "Bài ghi 'minh hoạ, không phải số của Google'." }
+      ],
+      "strengths": "Chuỗi hoàn vốn dùng lãi gộp, cộng thời gian chờ, tách 'giá trị thay thế quảng cáo' khỏi lợi nhuận — đúng cách nghề; Q2 và Q6 là câu đánh đổi/biện hộ với giả định được nêu rõ.",
+      "upgrade": "Để đạt ≥85: (1) thêm src bắt buộc cho Spam policies; (2) thêm dòng độ nhạy CTR và đổi CPC để tránh trùng 1,2 triệu; (3) thêm PHẢN VÍ DỤ (ngách lãi gộp thấp 10%: hoàn vốn 30 tháng — khi nào SEO nội dung không đáng, quảng cáo thương hiệu rẻ hơn) và ĐÀO SÂU (giá trị tích luỹ sau hoàn vốn, chi phí cập nhật nội dung hằng năm); (4) thay Q5 bằng câu đọc đoạn văn."
+    }
+  ],
+  "module_notes": {
+    "progression": "Tiến trình tốt: SEO vs quảng cáo (01) → ý định (02) → chọn từ khoá (03) → nội dung hữu ích (04) → kỹ thuật cơ bản (05) → địa phương (06) → đo (07) → hoàn vốn và spam (08). Bài 08 nối ngược về 01 (hứa thứ hạng), 04 (bài mỏng) và 07 (đo) — có liên kết nội module rõ. Toàn module dùng chung bộ cửa hàng máy lọc nước/mỹ phẩm giúp người học theo mạch. Mọi bài đều thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU (định dạng ngắn), nên trần điểm độ sâu bị kẹt ~12/15. Không bài nào có trường src dù mọi bài trích tài liệu Google với ngày kiểm trong lời văn — đây là lỗi hệ thống của module.",
+    "overlap": [
+      "'Không ai bảo đảm thứ hạng / không mua được hạng' được hỏi ở 01 Q1, 01 Q2, 06 Q1, 08 Q2 với cùng lập luận.",
+      "Nhồi từ khoá là spam xuất hiện ở 02 Q6, 05 Q6, 08 Q5 — ba lần cùng ý.",
+      "Mua backlink là spam ở 01 (ví dụ), 08 Q1, 08 Q2, 08 Q7."
+    ],
+    "gaps": [
+      "Chưa có bài về liên kết nội bộ và cấu trúc site (điều hướng, nhóm chủ đề) dù 04 gộp bài và 02 dẫn link giữa các trang.",
+      "Chưa có bài về Core Web Vitals/tốc độ đo bằng công cụ gì (05 chỉ nói 'ảnh nặng').",
+      "Chưa có bài về đoạn trích nổi bật/AI Overviews và tác động lên CTR — ảnh hưởng trực tiếp đến giả định CTR ở 03, 07, 08.",
+      "Chưa có bài về cách đọc 'truy vấn thương hiệu vs không thương hiệu' trong Search Console để tách SEO thật khỏi người đã biết tên."
+    ],
+    "best_lesson": "B:kn11-03",
+    "weakest_lesson": "B:kn11-06"
+  }
+}

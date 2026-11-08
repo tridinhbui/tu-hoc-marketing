@@ -1,0 +1,152 @@
+{
+ "mod": "ob02",
+ "lessons": [
+  {
+   "id": "B:ob02-01",
+   "title": "Kệ hàng nói gì trước khi bạn đọc nhãn?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q7",
+     "quote": "Kệ sữa chua ở một cửa hàng: Vinamilk 20 facing, TH 8, nhãn riêng của chuỗi 6, các hãng khác 6.",
+     "issue": "Thương hiệu thật gắn với số facing tự đặt, không gắn nhãn minh hoạ; người học có thể nhớ 'Vinamilk chiếm nửa kệ sữa chua' như dữ kiện.",
+     "fix": "Thêm '(số minh hoạ)' vào đề hoặc đổi thành hãng X/Y."
+    },
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "siêu thị chia chỗ theo doanh số và theo hợp đồng trưng bày mà hãng trả tiền",
+     "issue": "Khẳng định về cách nhà bán lẻ vận hành, nêu như sự thật, không nguồn và không nêu ngoại lệ (planogram theo chiến lược ngành hàng, nhãn riêng được ưu tiên, hợp đồng độc quyền).",
+     "fix": "Thêm 'thường' và một nguồn mô tả planogram/trade terms, hoặc gắn nhãn 'theo thực hành phổ biến trong ngành'."
+    }
+   ],
+   "upgrade": "Gắn nhãn minh hoạ cho Q7 và ví dụ, thêm 'thường' + nguồn cho cơ chế chia kệ; nói rõ mẫu số (tầng hay cả kệ); thêm một quyết định có tiền: phí 1 facing/tháng × số facing thêm so với lãi gộp tăng thêm ước tính (nối sang 02); thêm câu L6 thiết kế lịch đếm 3 cửa hàng × 2 thời điểm."
+  },
+  {
+   "id": "B:ob02-02",
+   "title": "Vì sao hàng đặt ngang tầm mắt bán chạy hơn?",
+   "total": 81,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "TÌNH HUỐNG ↔ VÍ DỤ",
+     "quote": "Doanh số tại 20 cửa hàng này tăng 38% (số minh hoạ)",
+     "issue": "38% và 'mỗi cửa hàng bán thêm 300 lon' không nối với nhau: không có doanh số gốc nên người học không kiểm được 300 lon là bao nhiêu %; hai con số đứng rời.",
+     "fix": "Cho doanh số gốc ~790 lon/cửa hàng/tháng để 300 lon ≈ 38%, hoặc bỏ một trong hai."
+    },
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Tầng này thường được gọi là \"vùng vàng\" và bị tính phí trưng bày cao nhất.",
+     "issue": "Khẳng định về cách nhà bán lẻ tính phí, không nguồn; ở nhiều chuỗi phí theo ngành hàng/vị trí đầu kệ (end-cap) có thể cao hơn tầng mắt.",
+     "fix": "Sửa 'thường được tính phí cao hơn các tầng khác' và gắn nhãn thực hành, hoặc thêm nguồn."
+    }
+   ],
+   "upgrade": "Nối 38% với 300 lon bằng doanh số gốc; hedge/ nguồn cho khẳng định phí; thay Q1 bằng câu đọc bảng đối chứng (L4); thêm một dòng về độ phân tán giữa 20 cửa hàng (vài cửa hàng lời, vài cửa hàng lỗ) để dạy đọc trung bình; ÁP DỤNG kết thúc bằng quyết định 'trả phí hay không' với một bảng 3 dòng."
+  },
+  {
+   "id": "B:ob02-03",
+   "title": "Đọc menu: món nào quán thật sự muốn bán?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Quá nhiều lựa chọn: khách mệt, gọi món quen … tổng hợp nhiều nghiên cứu (Scheibehenne và cộng sự, 2010) thấy hiệu ứng trung bình gần bằng 0",
+     "issue": "Đề hỏi 'Vấn đề chính là gì?' và chốt đáp án là quá tải lựa chọn, nhưng chính lời giải thừa nhận hiệu ứng trung bình ≈ 0 — lời giải mâu thuẫn với độ chắc của đáp án. Phương án a (chữ nhỏ, rối) cũng không bị dữ kiện loại trừ. Hai nghiên cứu được nêu tên nhưng bài không có `src`.",
+     "fix": "Đổi đề thành 'Giả thuyết nào nên kiểm trước, và kiểm thế nào?' với đáp án 'rút gọn menu ở một ngày, đo thời gian gọi'; thêm src cho Scheibehenne 2010 (JCR) và Chernev 2015 (JCP)."
+    },
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "nhiều nhà thiết kế menu tin là góc trên bên phải … dù nghiên cứu theo dõi mắt cho thấy khách thường đọc từ trên xuống, trái sang phải",
+     "issue": "Nhắc 'nghiên cứu theo dõi mắt' không nguồn; bài lại dùng 'góc trên bên phải' làm dữ kiện ví dụ dù vừa nói nghiên cứu không ủng hộ.",
+     "fix": "Thêm src (vd Yang 2012, Cornell Hospitality Quarterly) và sửa ví dụ: 'được đóng khung, có hình' là tín hiệu chắc hơn vị trí."
+    },
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Quán giỏi đặt vào những chỗ đó món vừa có lãi gộp mỗi ly cao vừa đã có nhiều người gọi (lãi mỗi ly × độ phổ biến)",
+     "issue": "Tiêu chí cốt lõi là lãi × số ly, nhưng ví dụ không có số ly bán của từng món; kết luận 'món quán muốn đẩy là cà phê muối' chỉ dựa trên lãi mỗi ly và dấu hiệu thiết kế, chưa có độ phổ biến.",
+     "fix": "Thêm bảng 5 món × (giá, vốn, lãi, ly/ngày, lãi/ngày) để người học tự xếp ma trận menu engineering."
+    }
+   ],
+   "upgrade": "Thêm bảng lãi × ly/ngày để tiêu chí 'lãi × phổ biến' có số thật; thêm src cho ba khẳng định nghiên cứu và ghi ngày kiểm (periodic); viết lại Q6 thành câu giả thuyết–kiểm; thêm dữ kiện cho Q4; thay Q1 (L1) bằng câu xếp 5 món vào ma trận star/plowhorse/puzzle/dog (L4) và một câu đánh đổi 'đẩy món lãi cao hay giữ món kéo khách' (L5)."
+  },
+  {
+   "id": "B:ob02-04",
+   "title": "Giá theo gram: cách khách so hai gói hàng",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "giá 89.000 dưới mốc tròn 100.000 thường dễ khiến khách thấy \"chưa tới trăm nghìn\" hơn, nên là điểm mạnh (mốc này là cách nhìn thực hành, nên thử kiểm chứng với khách của bạn)",
+     "issue": "Hiệu ứng giá ngưỡng được dùng làm cơ sở cho Q2 (đáp án 'giá dưới mốc tròn 100.000đ') dù bài tự nhận chưa kiểm chứng; đáp án Q2 dựa vào một giả định bài đã gắn nhãn 'cần thử'.",
+     "fix": "Sửa phương án d của Q2 thành 'Gói nhỏ, rủi ro tiền thấp cho người thử' (bỏ phần mốc tròn) để đáp án không tựa vào giả định."
+    }
+   ],
+   "upgrade": "Gỡ giả định 'mốc tròn' ra khỏi đáp án Q2; thay một câu tính bằng câu đọc bảng quan sát hành vi tại kệ (L4) và một câu đánh đổi thêm cỡ gói với chi phí kho (L5); thêm ngưỡng/ phép kiểm cho 'chênh bao nhiêu % thì đổi được hành vi'; ÁP DỤNG kết thúc bằng đề xuất cỡ gói nên đẩy kèm số."
+  },
+  {
+   "id": "B:ob02-05",
+   "title": "Trang sản phẩm trên sàn: 3 giây đầu tiên",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Quy tắc kinh nghiệm: chỉ chốt khi mỗi ảnh có khoảng 30 đơn, vì vài đơn chênh nhau chỉ là ngẫu nhiên.",
+     "issue": "Benchmark không nguồn, nêu như quy tắc. Với 30 đơn mỗi nhánh, khoảng tin cậy rất rộng (chênh 30 vs 40 đơn chưa đủ phân biệt); quy tắc có thể dạy người học chốt sớm.",
+     "fix": "Sửa thành 'tối thiểu vài chục đơn mỗi ảnh và chênh lệch phải lớn (≥30–40%) mới tạm tin; dùng máy tính A/B để kiểm', và gắn nhãn kinh nghiệm."
+    },
+    {
+     "sev": "P1",
+     "where": "TÌNH HUỐNG / KHÁI NIỆM",
+     "quote": "logo \"Mall\", 4,9 sao · 12 nghìn đã bán … nhãn Mall là bằng chứng",
+     "issue": "Bài thuộc lớp fast (giao diện sàn Shopee: nhãn Mall, chỉ số 'đã bán' hiển thị ở trang tìm kiếm) nhưng không có `src`, ngày kiểm, hay câu 'nếu màn hình khác, tin trang chính thức'.",
+     "fix": "Thêm src trang Shopee Mall / trung tâm người bán, ngày kiểm, và câu dự phòng khi giao diện đổi."
+    },
+    {
+     "sev": "P1",
+     "where": "Q4 lời giải",
+     "quote": "Mỗi ảnh đã gần 100 đơn, đủ lớn để chênh 30 đơn không còn là ngẫu nhiên.",
+     "issue": "120 vs 90 đơn trên 100.000 hiển thị mỗi nhánh: z ≈ 2,07 (p ≈ 0,04) — mới sát ngưỡng, nói 'không còn là ngẫu nhiên' là quá chắc; bài không nêu độ chắc chắn.",
+     "fix": "Sửa thành 'đủ lớn để nghiêng về ảnh 1, nhưng vẫn nên chạy thêm một kỳ trước khi khoá'."
+    }
+   ],
+   "upgrade": "Thêm src + ngày kiểm cho giao diện sàn và câu dự phòng; sửa quy tắc 30 đơn thành hướng dẫn có độ chắc chắn (chênh lớn, kỳ lặp, máy tính A/B); hạ giọng lời giải Q4; bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU (khi nào logo đủ, đánh đổi giữa hứa mạnh và điểm đánh giá); thêm câu L6 thiết kế A/B ảnh chính với tiêu chí dừng."
+  },
+  {
+   "id": "B:ob02-07",
+   "title": "Quầy thu ngân: vì sao kẹo luôn nằm ở đó?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Tính trên mỗi mét kệ, đây thường được xem là một trong những chỗ sinh tiền hiệu quả nhất cửa hàng",
+     "issue": "Khẳng định benchmark 'hiệu quả nhất' không nguồn và không được tính: bài có 1,2 triệu/ngày trên 'khoảng nửa mét' nhưng không so với một kệ khác (vd kệ mì 3 m bán bao nhiêu/ngày) nên 'hiệu quả nhất' là nói, không phải tính.",
+     "fix": "Thêm một dòng so sánh: kệ quầy 1,2 triệu/0,5 m = 2,4 triệu/m/ngày so với kệ mì 3 m bán 4,5 triệu = 1,5 triệu/m/ngày (số minh hoạ)."
+    }
+   ],
+   "upgrade": "Tính doanh thu/m so với một kệ khác để biến khẳng định thành phép tính; gắn nhãn số; đưa lý do chống mất cắp vào phần đọc; thay hai câu L2–L3 bằng câu đánh đổi chọn món cho 0,5 m (L5) và câu thiết kế đếm hoá đơn trước/sau đổi món (L6); ÁP DỤNG nên yêu cầu đếm 30 hoá đơn thay vì chỉ liệt kê món."
+  },
+  {
+   "id": "B:ob02-08",
+   "title": "Nhãn riêng của siêu thị đang cạnh tranh với ai?",
+   "total": 81,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "hãng ở giữa thường mất nhiều nhất; hãng dẫn đầu chỉ mất nhiều khi khách thấy các hãng gần như nhau",
+     "issue": "Khẳng định về cấu trúc cạnh tranh nêu như quy luật, không nguồn, không gắn nhãn (có 'thường' nhưng Q7 dùng làm đáp án chắc).",
+     "fix": "Gắn nhãn 'quan sát phổ biến trong ngành FMCG' và thêm nguồn (vd nghiên cứu về private label share theo tier giá) hoặc hedge trong lời giải Q7."
+    }
+   ],
+   "upgrade": "Phân rã 15% theo hãng để kiểm luận điểm 'hãng giữa mất nhiều nhất' và gắn nguồn/hedge cho khẳng định đó; cụ thể hoá đáp án Q2 với ràng buộc giá; thêm câu L6: thiết kế phép đo 'khoảng cách giá tối đa khách còn chọn hãng' (hai cửa hàng, hai mức giá); nối sang 09 (quy khuyến mãi về giá thật khi so với nhãn riêng)."
+  }
+ ]
+}

@@ -1,0 +1,160 @@
+{
+ "mod": "tu03",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:tu03-01",
+   "where": "Ví dụ · Q3",
+   "status": "fixed",
+   "change": "Ví dụ thêm: “350 × 20.000đ = 7 triệu… giả định cả 350 đơn đều là đơn được kéo lên; nếu thêm 100 đơn vốn đã trên 400.000đ nhận 40.000đ thì 4 triệu là chi phí thuần, lãi ròng còn 3 triệu — theo dõi riêng tỉ lệ đơn vốn đã vượt ngưỡng”. Stem Q3 ghi rõ “(giả sử không có đơn nào vốn đã trên ngưỡng)”; đáp án 7 giữ nguyên.",
+   "key_changed": false,
+   "note": "Đã kiểm bản hiện tại: lỗi chưa được sửa ở lượt trước (diff so HEAD chỉ có assume:true), nên sửa mới."
+  },
+  {
+   "id": "B:tu03-01",
+   "where": "Q3 (nhãn đáp án sai)",
+   "status": "fixed",
+   "change": "wrong: [[28,QUEN_CHI_PHI_KHUYEN_MAI],[42,NHAM_GIA_VON],[-14,SAI_TINH_TOAN]] → [[28,HOAN_VON_TINH_DOANH_THU],[21,QUEN_CHI_PHI_KHUYEN_MAI],[42,SAI_TINH_TOAN],[-14,SAI_TINH_TOAN]]; errors cập nhật theo.",
+   "key_changed": false,
+   "note": "Đã kiểm: 28 = 350 × (120.000 − 40.000) là lấy doanh thu thay lãi gộp để bù tiền giảm; 21 = 350 × 60.000 mới là quên tiền giảm; 42 quên cả hai. Mã đề xuất NHAM_DOANH_THU_LA_LAI và QUEN_CA_BIEN_VA_TIEN_GIAM không có trong ERRORS nên dùng mã gần nhất có sẵn. Đáp án 7 không đổi."
+  },
+  {
+   "id": "B:tu03-02",
+   "where": "Cấu trúc bài",
+   "status": "fixed",
+   "change": "Thêm một lỗi hay gặp: tin đặc quyền phi tiền tệ là đủ khi khách quen rất nhạy giá và tiệm bên cạnh giảm 30% mọi lần — lúc đó phải so lãi mất do khách chuyển đi với khoản tiết kiệm.",
+   "key_changed": false,
+   "note": "Không thêm trường points/counter/deeper vì brief cấm thêm trường chuẩn v2; chỉ thêm một câu điều kiện thất bại vào trường sẵn có."
+  },
+  {
+   "id": "B:tu03-02",
+   "where": "Ví dụ · Q3",
+   "status": "fixed",
+   "change": "Ví dụ thêm vế lợi ích: giả sử biên lãi gộp 50%, mỗi khách quen mang 3 × 60.000 × 50% = 90.000đ lãi/tháng, thẻ 36 triệu chỉ hoà vốn nếu giữ thêm khoảng 400 khách (20% tệp); ghi chú 36 triệu tính theo giá bán vì lượt miễn phí thay một lượt khách vốn trả tiền. Q3 giữ nguyên (72 triệu).",
+   "key_changed": false,
+   "note": "Bác một phần nhận định: tính lượt miễn phí theo giá bán là đúng vì khách quen vốn giặt đều, lượt miễn phí thay một lượt có trả tiền (mất doanh thu chứ không chỉ chi phí biến đổi); đề xuất 18 triệu/200 khách của người chấm không dùng."
+  },
+  {
+   "id": "B:tu03-02",
+   "where": "Q6",
+   "status": "fixed",
+   "change": "Phương án c “Số lượt giặt của khách quen tụt sau khi ưu đãi ra mắt” → “Khách quen nhắn hỏi vì sao mình không được giảm 30% như người mới”; viết lại lời giải c (phản ứng công bằng, không cho thấy ai dùng ưu đãi sai cách). Giữ khoá a.",
+   "key_changed": false,
+   "note": "Đã kiểm: c cũ bênh được vì khách quen tụt lượt có thể chính là khách cũ đổi tài khoản."
+  },
+  {
+   "id": "B:tu03-03",
+   "where": "Đào sâu · Q3",
+   "status": "fixed",
+   "change": "Đào sâu thêm phép so lãi: biên 45%, sale giảm trung bình 25% → mỗi đồng doanh số sale lãi ~27%; năm nay lãi gộp ≈ 3,5 × 45% + 6,5 × 27% ≈ 3,3 tỷ; năm sau giá thường 55% → ~37%/đồng, tổng doanh số giảm tới khoảng 10% (9 tỷ) thì lãi vẫn ngang. Q3 giữ nguyên.",
+   "key_changed": false,
+   "note": "Không dùng công thức 6,5 × (45% − 25%) của người chấm vì sai (phải là (75% − 55%)/75% ≈ 26,7% trên doanh số sale). Kiểm: 9 × 36,75% = 3,31 ≈ 3,31 tỷ."
+  },
+  {
+   "id": "B:tu03-04",
+   "where": "Khái niệm (pháp lý)",
+   "status": "needs-human",
+   "change": "Hedge: “theo hiểu biết chung tại ngày kiểm 2026-11-07, trần là 50% giá ngay trước khuyến mại, có ngoại lệ — tức mức 50% đề xuất nằm sát trần. Cần pháp chế đối chiếu văn bản hiện hành; nếu trang chính thức khác, tin trang chính thức.”",
+   "key_changed": false,
+   "note": "Chưa gắn src vì không chắc URL văn bản. Cần người thật: xác nhận Điều 7 NĐ 81/2018 (mức giảm tối đa 50%, các ngoại lệ như khuyến mại tập trung) còn hiệu lực sau NĐ 128/2024, và thêm src tới vbpl.vn hoặc cổng văn bản Chính phủ."
+  },
+  {
+   "id": "B:tu03-04",
+   "where": "Ví dụ · Q3",
+   "status": "fixed",
+   "change": "Ví dụ thêm so bằng tiền: giảm 50% trang chủ (giả sử xả hết 3.000 áo) lãi 3.000 × 50.000 = 150 triệu; outlet 40% xả 2.400 áo lãi 264 triệu, còn 600 áo; chi phí mòn giá giả sử 2.000 áo mới phải giảm 10% (65.000đ) = 130 triệu. Gắn “(số minh hoạ)” cho 2.400 áo. Q3 giữ nguyên.",
+   "key_changed": false,
+   "note": ""
+  },
+  {
+   "id": "B:tu03-05",
+   "where": "Q3 · Đào sâu",
+   "status": "fixed",
+   "change": "Stem Q3 thêm “giả sử hai phương án kéo về cùng số đơn và chưa tính chi phí đóng gói, giao quà” (đáp án 24 giữ nguyên); Đào sâu thêm: 4.000đ/phin đóng gói – giao thì tiết kiệm còn 16 triệu, và nếu giảm giá kéo thêm đơn hơn quà thì phải cộng lãi số đơn chênh lệch.",
+   "key_changed": false,
+   "note": ""
+  },
+  {
+   "id": "B:tu03-05",
+   "where": "Q5 · Q7",
+   "status": "fixed",
+   "change": "Q5 viết lại cả bốn phương án trung tính, có số: mẫu thử 3 ml serum mới / túi canvas giá vốn 40.000đ / phiếu soi da 15 phút / bộ cọ 5 cây giá vốn 15.000đ cả bộ (đúng, cần suy ra ~3.000đ/cây); viết lại lời giải. Q7 c “Là món rẻ nhất tìm được, bất kể khách có dùng hay không” → “Có giá vốn thấp nhất trong các mẫu nhà cung cấp gửi”. Giữ khoá d (Q5) và c (Q7).",
+   "key_changed": false,
+   "note": ""
+  },
+  {
+   "id": "B:tu03-06",
+   "where": "Cấu trúc bài",
+   "status": "fixed",
+   "change": "Ví dụ thêm câu về nhồi kênh: đo bằng lượng bán ra tới người mua; nếu đại lý nhập dồn để lấy thưởng mà bán ra không tăng, hàng chỉ chuyển từ kho hãng sang kho đại lý.",
+   "key_changed": false,
+   "note": "Không thêm trường points/counter/deeper vì brief cấm thêm trường chuẩn v2; chỉ thêm một câu điều kiện thất bại vào trường sẵn có."
+  },
+  {
+   "id": "B:tu03-06",
+   "where": "Ví dụ · Tình huống",
+   "status": "fixed",
+   "change": "Ví dụ viết bằng số: chiết khấu thẳng 5% tốn khoảng 400 triệu/quý, gấp đôi ngân sách; thưởng 300.000đ/tạp hoá/quý, cả 500 đạt là 150 triệu; 50 triệu còn lại in tem cào; gắn “(số minh hoạ)”. Khớp Q3 (400 triệu).",
+   "key_changed": false,
+   "note": ""
+  },
+  {
+   "id": "B:tu03-06",
+   "where": "Ví dụ (pháp lý)",
+   "status": "needs-human",
+   "change": "Giữ điều kiện “không bán dưới giá đề xuất” nhưng thêm câu: “Điều kiện về giá bán lại có thể vướng quy định về thoả thuận hạn chế cạnh tranh (Luật Cạnh tranh 2018), cần pháp chế xem trước.”",
+   "key_changed": false,
+   "note": "Không đổi điều kiện vì Q2 (đáp án b “…giữ giá đề xuất”) dạy đúng điều kiện này; đổi sẽ lan sang câu hỏi. Cần người thật: xác nhận thưởng kèm điều kiện giữ giá bán lại có vi phạm Điều 11–12 Luật Cạnh tranh 2018 không; nếu có, sửa cả ví dụ và Q2 b, và thêm src."
+  },
+  {
+   "id": "B:tu03-06",
+   "where": "Khái niệm (pháp lý)",
+   "status": "needs-human",
+   "change": "Hedge: “(theo hiểu biết chung tại ngày kiểm 2026-11-07, đã được sửa đổi bởi Nghị định 128/2024/NĐ-CP, hiệu lực từ 01/12/2024; nếu có bản mới hơn, theo bản mới)”.",
+   "key_changed": false,
+   "note": "Chưa gắn src vì không chắc URL. Cần người thật: xác nhận số hiệu và ngày hiệu lực NĐ 128/2024 và quy định thông báo/đăng ký khuyến mại may rủi, thêm src."
+  },
+  {
+   "id": "B:tu03-07",
+   "where": "Ví dụ · Q3",
+   "status": "fixed",
+   "change": "Ví dụ thêm vế lợi ích (số minh hoạ): 40% suất là khách mới (7.200), 25% quay lại mua giá thường 2 bánh/tháng, lãi 8.000đ/bánh → 3 tháng ~86 triệu, chưa hoà vốn 216 triệu; cần tỉ lệ quay lại khoảng 63%. Q3 giữ nguyên.",
+   "key_changed": false,
+   "note": "Kiểm: 1.800 × 2 × 3 × 8.000 = 86,4 triệu; 216 ÷ (7.200 × 6 × 8.000) = 62,5%."
+  },
+  {
+   "id": "B:tu03-07",
+   "where": "Khái niệm (pháp lý)",
+   "status": "needs-human",
+   "change": "Hedge: “theo hiểu biết chung tại ngày kiểm 2026-11-07, giá trị hàng tặng bị giới hạn ở khoảng 50% giá hàng được khuyến mại (có ngoại lệ như khuyến mại tập trung), nên “mua 1 tặng 1” có thể vượt hạn mức — cần pháp chế kiểm trước khi chạy.”",
+   "key_changed": false,
+   "note": "Chưa gắn src. Cần người thật: xác nhận Điều 6 NĐ 81/2018 (hạn mức 50% giá trị hàng tặng, ngoại lệ) sau sửa đổi NĐ 128/2024 và thêm src."
+  },
+  {
+   "id": "B:tu03-08",
+   "where": "Cấu trúc bài",
+   "status": "fixed",
+   "change": "Thêm một lỗi hay gặp: không ghi rõ trong thoả thuận số suất tối đa, thời hạn và bên nào chịu chi phí quà — đối tác phục vụ kém thì bình luận xấu đổ về cả bên mình.",
+   "key_changed": false,
+   "note": "Không thêm trường points/counter/deeper vì brief cấm thêm trường chuẩn v2; chỉ thêm một câu điều kiện thất bại vào trường sẵn có."
+  },
+  {
+   "id": "B:tu03-08",
+   "where": "Ví dụ · Q5",
+   "status": "fixed",
+   "change": "Ví dụ: “gấp 6 lần” → “72 triệu doanh thu, gấp 6 lần chi phí — nhưng chưa phải lãi: biên đóng góp 70%, ở lại 8 tháng → 60 × 1,2 triệu × 8/12 × 70% = 33,6 triệu, khoảng 2,8 lần”. Q5 giữ đáp án 6 (stem vốn hỏi doanh thu), thêm vào steps câu “Đây là tỉ lệ doanh thu trên chi phí, chưa phải lãi”.",
+   "key_changed": false,
+   "note": "Chọn cách ít lan nhất: không đổi ans/wrong của Q5 vì stem đã nói rõ “doanh thu năm đầu”."
+  },
+  {
+   "id": "B:tu03-10",
+   "where": "Q2",
+   "status": "fixed",
+   "change": "Viết lại ba nhiễu thành phương án hợp lý, trung tính, dài tương đương: giảm dần 15% → 10% → 5% có báo trước / giữ thứ Tư giảm cho thành viên, đo thành viên mới / đổi ngày giảm mỗi tuần, báo trên fanpage; viết lại lời giải cả bốn. Giữ khoá b.",
+   "key_changed": false,
+   "note": ""
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

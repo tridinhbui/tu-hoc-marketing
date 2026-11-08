@@ -1,0 +1,16 @@
+{
+ "mod": "ob07",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:ob07-03",
+   "where": "Q2 đáp án b + lời giải b ↔ Ví dụ",
+   "status": "fixed",
+   "change": "Đáp án b: “Thử ngẫu nhiên trên 100 tiệm có nhóm đối chứng” → “Thử ngẫu nhiên có nhóm đối chứng, vài trăm tiệm mỗi nhóm”; lời giải b: bỏ “đo đúng phần poster tạo ra”, thay bằng “vòng 50/50 đầu chưa tách được chênh 3% khỏi nhiễu nên cần vài trăm tiệm mỗi nhóm”.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: ví dụ kết luận 50/50 tiệm chưa phân biệt được chênh 3% với nhiễu, lời giải cũ lại nói 100 tiệm đo đúng phần poster. Nay khớp phần đọc."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

@@ -1,0 +1,171 @@
+{
+  "mod": "ob01",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:ob01-01",
+      "scores": { "accuracy": 12, "depth": 8, "practical": 11, "examples": 8, "pedagogy": 6, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 62,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L3", "L2", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "120 người đi ngang, 24 người vào quán A, 6 người vào quán B", "issue": "Số đếm tự đặt nhưng bài không gắn nhãn minh hoạ; người học có thể coi 20%/5% là benchmark tỉ lệ vào quán.", "fix": "Thêm '(số minh hoạ)' sau câu đếm, hoặc chuyển thành nhiệm vụ 'bạn đếm được…'." },
+        { "sev": "P2", "where": "Q3", "quote": "[80,\"SAI_MAU_SO\"]", "issue": "80% là tỉ lệ người KHÔNG vào quán (96/120), tức nhầm tử số/phần bù, không phải sai mẫu số.", "fix": "Đổi nhãn lỗi thành NHAM_PHAN_BU hoặc thay giá trị sai bằng 5 (lấy số của quán B)." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Sản phẩm tốt là điều kiện cần; lý do được chọn là điều kiện đủ.", "issue": "Thiếu điều kiện làm khái niệm sai: khi sản phẩm không ngang nhau, hoặc khi vị trí/giờ mở khác nhau, 'lý do dễ thấy' không còn là biến chính. Bài không có phản ví dụ.", "fix": "Thêm một đoạn phản ví dụ: quán A đông vì nằm ngay trạm xe buýt; dấu hiệu nhận ra là khách vào theo đợt đúng giờ xe tới." },
+        { "sev": "P2", "where": "Q6, Q7", "quote": "Điều gì quyết định họ quay lại lần hai?", "issue": "Hai câu cùng kiểm 'ý chính' của bài (L2), đáp án suy được từ phần đọc mà không cần dữ liệu.", "fix": "Thay Q6 bằng câu đọc bảng: cho số khách lần đầu/lần hai của hai quán, hỏi quán nào có vấn đề 'lý do quay lại'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 24 ÷ 120 = 20% ✓; wrong 500 = 120/24 ✓ sai mẫu số; wrong 80 = 96/120 là phần bù, nhãn SAI_MAU_SO chưa đúng." },
+      "claims": [
+        { "claim": "Tỉ lệ 20% vào quán A, 5% vào quán B, lặp lại ba buổi", "status": "illustrative-unlabelled", "note": "Số tự đặt, bài không ghi minh hoạ." },
+        { "claim": "Giá 55.000đ/tô phở quận 3", "status": "illustrative-unlabelled", "note": "Chi tiết nền, không ảnh hưởng kết luận." }
+      ],
+      "strengths": "Ví dụ chủ động loại nhiễu (đếm thêm hai buổi cùng giờ) và Q4 buộc người học nghĩ về đối chứng trước khi kết luận; lời giải phương án sai nêu đúng hiểu lầm.",
+      "upgrade": "Gắn nhãn minh hoạ cho số đếm; thêm phản ví dụ (vị trí/giờ là nguyên nhân thật) và đoạn đào sâu về đánh đổi 'hứa trên biển ↔ công suất bếp 3 phút'; thay Q6/Q7 bằng một câu đọc bảng khách lần 1/lần 2 (L4) và một câu thiết kế thử nghiệm biển mới có đối chứng (L6); ÁP DỤNG nên kết thúc bằng một quyết định: viết câu biển cho quán B và nêu cách đo sau 1 tuần."
+    },
+    {
+      "id": "B:ob01-02",
+      "scores": { "accuracy": 11, "depth": 8, "practical": 10, "examples": 7, "pedagogy": 6, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 58,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L2", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ ↔ Q3", "quote": "Hai tuần sau, số ly mỗi ngày tăng từ 43 lên 80.", "issue": "Ví dụ chỉ nói số ly tăng, không nói giá bình quân rơi về 28.000đ (số này chỉ xuất hiện trong Q3). Tính đủ: 80 × 28.000 = 2.240.000đ, vẫn dưới mốc hoà vốn 2,5 triệu nêu ở tình huống, nhưng bài kết luận như đã sửa xong. Thiếu giả định làm kết quả đổi.", "fix": "Ghi giá bình quân mới ngay trong ví dụ và nói thẳng: doanh thu 2,24 triệu vẫn chưa hoà vốn, cần thêm ~10 ly/ngày hoặc xem lại biên của size M 22.000đ." },
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "thêm size M giá 22.000đ", "issue": "Giảm giá bình quân 35.000 → 28.000đ mà không nói giá vốn mỗi ly; số ly tăng 86% nhưng doanh thu chỉ tăng 49%, lãi gộp có thể tăng ít hơn nữa. Bài về Price mà không có biên.", "fix": "Thêm giá vốn (vd 9.000đ/ly) và tính lãi gộp trước/sau; cho người học thấy khi nào size rẻ hơn làm giảm lãi." },
+        { "sev": "P2", "where": "Q4, Q7", "quote": "thuộc P nào?", "issue": "Hai câu phân loại 4P thuần nhận lại (L2); có thể thay bằng câu chẩn đoán từ dữ liệu.", "fix": "Thay Q7 bằng bảng: giờ bán · số ly · giá bình quân của 7 ngày, hỏi P nào lệch." },
+        { "sev": "P2", "where": "Q1", "quote": "Quán đặt tên tiếng Việt nên kém hấp dẫn học sinh", "issue": "Nhiễu vô lý, loại ngay bằng cảm giác; đáp án đoán được.", "fix": "Thay bằng nhiễu có lý: 'Thiếu chỗ ngồi nên học sinh không ở lại' để buộc so với dữ kiện." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 43×35.000 = 1.505.000; 80×28.000 = 2.240.000; chênh 735.000 ✓. Wrong 1295 = 80×35.000 − 1.505.000 ✓ (quên giá đổi); 2240 = số tuyệt đối ✓. Lưu ý 2.240.000 < hoà vốn 2.500.000 — bài không nhắc." },
+      "claims": [
+        { "claim": "Học sinh quanh đó quen mức 20.000–25.000đ/ly", "status": "illustrative-unlabelled", "note": "Mức giá tham chiếu tự đặt, không gắn nhãn." },
+        { "claim": "Doanh thu 1,5 triệu/ngày; hoà vốn 2,5 triệu", "status": "illustrative-unlabelled", "note": "Khớp với 43 ly × 35.000đ = 1,505 triệu." },
+        { "claim": "ShopeeFood là kênh giao hàng (Q4)", "status": "unverified", "note": "Tên nền tảng thật, dùng làm ví dụ kênh; không có khẳng định số." }
+      ],
+      "strengths": "Khung 'quảng bá chỉ khuếch đại ba P còn lại' gắn vào dữ liệu sổ ghi cụ thể (giờ tan học, size); Q5 chuyển sang tình huống cơm tấm đòi chẩn đoán từ điểm rơi rụng (giá ship).",
+      "upgrade": "Đưa giá bình quân mới và giá vốn vào ví dụ, tính lãi gộp trước/sau và nói rõ còn thiếu bao nhiêu để hoà vốn; thêm phản ví dụ (quán ở khu không có trường, vấn đề thật là Promotion) và đoạn đào sâu về đánh đổi giữa size rẻ và biên; thay hai câu phân loại 4P bằng một câu đọc bảng 7 ngày (L4) và một câu quyết định có biện hộ 'tăng ly hay giữ giá' (L5); gắn nhãn số minh hoạ."
+    },
+    {
+      "id": "B:ob01-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 13, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "8 người mua máy, 14 người lấy bộ móc dán, 12 người đặt thợ", "issue": "Số tự đặt không gắn nhãn minh hoạ; ví dụ chỉ nêu số lượt mua, không nêu lãi gộp của ba lựa chọn dù ĐÀO SÂU nói 'tỉ lệ tăng mà lãi rớt thì chưa chắc đáng mừng'. Q7 phải tự tính doanh thu (18,0 → 17,88 triệu) mà phần đọc không có.", "fix": "Thêm bảng 3 dòng: lựa chọn · giá · lãi gộp ước tính · số lượt, rồi tính lãi gộp mỗi lượt hỏi trước/sau, gắn nhãn 'số minh hoạ'." },
+        { "sev": "P2", "where": "Q4", "quote": "Muốn tỉnh táo trong buổi họp lúc hai giờ chiều", "issue": "Câu định nghĩa L2; ba nhiễu đều là tên sản phẩm cụ thể nên đáp án đoán được bằng hình thức (phương án duy nhất không có tên hàng).", "fix": "Thay bằng câu phân loại ba lời khách nói trong cửa hàng, có ít nhất một câu mơ hồ ('tôi cần cái gì đó treo được kệ 20 kg')." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "để ý người bán hỏi bạn về mục đích sử dụng hay chỉ hỏi bạn muốn loại nào", "issue": "Nhiệm vụ quan sát thụ động, không ra quyết định; trong khi ĐÀO SÂU đã có phép kiểm tốt hơn (hỏi 'định dùng làm gì', xếp nhóm).", "fix": "Đổi ÁP DỤNG thành: viết 3 câu hỏi mục đích cho một mặt hàng bạn bán/biết, và một bảng 3 nhóm nhu cầu → 3 giải pháp." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 10/50 = 20%, 34/50 = 68%, chênh 48 điểm % ✓; wrong 240 = tăng tương đối ✓, 24 = số tuyệt đối ✓. Q7 (giải thích): 10×1,8 = 18,0; 8×1,8 + 14×0,12 + 12×0,15 = 17,88 ✓." },
+      "claims": [
+        { "claim": "50 khách hỏi/tháng; 10 → 34 người mua; móc dán 120.000đ, thợ 150.000đ", "status": "illustrative-unlabelled", "note": "Số tự khớp nhưng không ghi minh hoạ." },
+        { "claim": "Giày chạy Nike, iPhone (Q4)", "status": "unverified", "note": "Tên thương hiệu thật chỉ dùng làm ví dụ 'mong muốn', không gắn số." }
+      ],
+      "strengths": "Có đủ cơ chế · phản ví dụ (thợ chuyên nghiệp cần máy đắt) · đánh đổi (tỉ lệ mua tăng nhưng lãi có thể rớt) · khái niệm kề cận (JTBD); Q7 là câu đánh đổi thật với phép tính doanh thu trong lời giải.",
+      "upgrade": "Đưa bảng lãi gộp ba lựa chọn vào ví dụ và tính lãi gộp mỗi lượt hỏi trước/sau (để Q7 có dữ liệu trong phần đọc); gắn nhãn minh hoạ; thay Q4 bằng câu phân loại lời khách thật; đổi ÁP DỤNG thành thiết kế 3 câu hỏi + bảng nhu cầu→giải pháp; thêm một câu L6: thiết kế cách đo 'khách về tay không' trong 2 tuần."
+    },
+    {
+      "id": "B:ob01-04",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 13, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L4", "L1"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "MANG THEO", "quote": "Giá bán do giá trị khách cảm nhận quyết định, không do chi phí", "issue": "Nói quá: chi phí là sàn của giá (bài chính nói 'chỉ có lợi khi phần chi phí thêm nhỏ hơn phần giá tăng'). Câu mang theo mâu thuẫn nhẹ với VÌ SAO HIỆU QUẢ (3).", "fix": "Sửa: 'Giá trị cảm nhận đặt trần giá; chi phí đặt sàn. Hãy làm cho giá trị nhìn thấy được rồi mới đụng vào giá.'" },
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "tiệm B đạt 3.600.000đ", "issue": "Số bán 150 và 220 ổ/ngày là giả định không gắn nhãn; bài không nói gì về rủi ro mất lượng khi xe A tăng giá (Q2 đề xuất thêm chi tiết 'rồi mới có cơ sở điều chỉnh giá' nhưng không có phép thử nào về độ nhạy lượng bán).", "fix": "Gắn nhãn minh hoạ; thêm một dòng: nếu xe A lên 30.000đ và mất 20% lượng (176 ổ), lãi gộp = 176 × 14.000 = 2.464.000đ, thấp hơn hiện tại → phải đo lượng mất trước khi tăng." },
+        { "sev": "P2", "where": "Q3", "quote": "[-1600,\"SAI_TINH_TOAN\"]", "issue": "Không tìm được phép tính tự nhiên nào cho ra −1.600; giá trị sai này không bắt được lỗi cụ thể.", "fix": "Thay bằng −700 (lấy 150×24.000 − 220×... nhầm hướng) hoặc 2.640 (chỉ tính xe A)." },
+        { "sev": "P2", "where": "Q7", "quote": "Câu nào mô tả đúng cách định giá theo giá trị cảm nhận?", "issue": "Câu định nghĩa L1, đáp án là phương án duy nhất nhắc 'khách'.", "fix": "Thay bằng câu đọc dữ liệu: cho tỉ lệ khách hỏi so giá theo tuần sau mỗi lần tăng giá, hỏi lần tăng nào đã quá ngưỡng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 150×(40.000−16.000) = 3.600.000; 220×(25.000−13.000) = 2.640.000; chênh 960.000 ✓. Wrong 500 = chênh doanh thu (6.000.000 − 5.500.000) ✓ hợp nhãn quên giá vốn; −1600 không tái tạo được." },
+      "claims": [
+        { "claim": "Tiệm B 150 ổ/ngày, giá vốn 16.000đ; xe A 220 ổ, 13.000đ", "status": "illustrative-unlabelled", "note": "Tự khớp, chưa gắn nhãn." },
+        { "claim": "Tiệm sửa điện thoại ở Huế giá cao hơn 20% (Q5)", "status": "illustrative-unlabelled", "note": "Tình huống mới trong quiz." }
+      ],
+      "strengths": "Phản ví dụ (dời sang chợ công nhân) đổi kết luận với dấu hiệu nhận ra cụ thể; VÌ SAO (3) nêu điều kiện định lượng 'chi phí thêm < giá tăng thêm' và Q6 tập đọc tín hiệu từ khách.",
+      "upgrade": "Sửa câu mang theo để không nói quá về chi phí; gắn nhãn số; thêm phép thử độ nhạy lượng bán khi tăng giá (bảng 3 mức giá × lượng mất) để ÁP DỤNG kết thúc bằng một quyết định giá có số; thay Q7 bằng câu đọc dữ liệu hỏi-so-giá theo tuần (L4) và sửa giá trị sai −1600."
+    },
+    {
+      "id": "B:ob01-05",
+      "scores": { "accuracy": 11, "depth": 8, "practical": 11, "examples": 8, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 59,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L2", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q3 ↔ TÌNH HUỐNG", "quote": "Mỗi tháng có 500 khách. Tỉ lệ mua lại trong ba tháng tăng từ 10% lên 22%. Mỗi tháng có thêm bao nhiêu khách quay lại mua?", "issue": "Tình huống nói '500 đơn', Q3 đổi thành '500 khách' (một khách có thể nhiều đơn). 'Tỉ lệ mua lại trong ba tháng' là chỉ số theo cohort, nhưng câu hỏi quy thành 'mỗi tháng có thêm' — trộn kỳ đo. Kết quả 60 đúng về số học nhưng mẫu số mập mờ.", "fix": "Viết lại: 'Mỗi tháng có 500 khách mua lần đầu. Trong 3 tháng sau đó, tỉ lệ mua lại tăng từ 10% lên 22%. Mỗi cohort tháng có thêm bao nhiêu khách quay lại?'" },
+        { "sev": "P1", "where": "Q6 đáp án a", "quote": "Mỗi đơn hoàn là mất phí ship hai chiều và mất một khách", "issue": "Khẳng định tuyệt đối 'mất một khách'; lời giải tự hạ xuống 'gần như không quay lại'. Không có dữ kiện về khách hoàn có quay lại hay không.", "fix": "Sửa phương án: 'mất phí ship hai chiều và phần lớn khách hoàn không quay lại'." },
+        { "sev": "P2", "where": "Q1 c, Q6 b, Q6 c", "quote": "Shopee cố tình giấu shop khỏi khách đã mua trước đó", "issue": "Nhiễu vô lý về cơ chế nền tảng, loại ngay; làm câu dễ hơn mức cần.", "fix": "Thay bằng nhiễu có lý: 'Khách cũ không nhận được thông báo mẫu mới' — buộc so với dữ kiện đánh giá." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "tỉ lệ mua lại tăng từ 10% lên 22% và tỉ lệ hoàn hàng giảm từ 8% xuống 3%", "issue": "Số không gắn nhãn minh hoạ; không tính ra tiền (8% → 3% của 500 đơn = 25 đơn hoàn/tháng ít đi; chi phí ship hai chiều chưa nêu).", "fix": "Gắn nhãn và tính: 25 đơn × ship hai chiều ~50.000đ = 1,25 triệu/tháng tiết kiệm, cộng 60 khách quay lại × giá trị đơn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 500×10% = 50; 500×22% = 110; thêm 60 ✓. Wrong 110 = số tuyệt đối ✓; 12 = điểm % ✓. Lưu ý mẫu số 'khách' ≠ 'đơn' ở tình huống." },
+      "claims": [
+        { "claim": "35/60 đánh giá thấp nói form nhỏ, 12 nói màu khác ảnh", "status": "illustrative-unlabelled", "note": "Tự khớp (47/60 dùng lại ở Q2)." },
+        { "claim": "Shopee, Facebook là kênh bán (tình huống)", "status": "unverified", "note": "Tên nền tảng thật, không có khẳng định cơ chế." },
+        { "claim": "Gym ở Đà Nẵng 70% hội viên bỏ tập sau 2 tháng (Q5)", "status": "illustrative-unlabelled", "note": "Tình huống mới." }
+      ],
+      "strengths": "ÁP DỤNG là việc làm được ngay và có đầu ra (đọc 20 đánh giá thấp, ghi vấn đề lặp lại); ví dụ tự nêu giới hạn bằng chứng (ba tháng đủ lâu để mùa vụ góp phần).",
+      "upgrade": "Thống nhất đơn/khách và kỳ đo cohort trong Q3; thêm phản ví dụ (ngành mua một lần — tỉ lệ mua lại thấp là bình thường) và đoạn đào sâu về chi phí có khách mới so với giữ khách cũ (CAC vs giữ chân) có số; quy đổi hoàn hàng và mua lại ra tiền; thay hai câu L2 bằng câu đọc bảng cohort 3 tháng (L4) và câu quyết định phân bổ ngân sách giữa quảng cáo và sửa size (L5); gắn nhãn minh hoạ."
+    },
+    {
+      "id": "B:ob01-06",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 12, "examples": 11, "pedagogy": 7, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L3", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q3 ↔ VÍ DỤ", "quote": "Trong 1.000 lượt vào trang, tỉ lệ đặt hàng đi từ 1% lên 3%", "issue": "10 → 30 đơn trên 1.000 lượt là mẫu rất nhỏ; bài nói 'chưa có nhóm đối chứng' nhưng không nói độ nhiễu của 10 đơn (±6 đơn đã là bình thường). Q3 quy ngay thành +9 triệu/tháng như số chắc.", "fix": "Thêm câu: 'với 10 đơn, dao động vài đơn giữa các tháng là bình thường; cần 2–3 tháng trước khi coi 3% là mức mới', và ghi chú trong lời giải Q3." },
+        { "sev": "P2", "where": "Q4 đáp án a", "quote": "Tỉ lệ khách vào trang chứng nhận an toàn rồi đặt hàng trong cùng phiên", "issue": "Chỉ số khá nhân tạo; chỉ số bám vai người mua tự nhiên hơn là tỉ lệ đặt hàng của lượt vào trang sản phẩm so với trước, hoặc câu hỏi về an toàn trong inbox giảm.", "fix": "Đổi đáp án thành 'tỉ lệ đặt hàng trên lượt vào trang và số câu hỏi về an toàn trong inbox', giữ các nhiễu." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Mỗi vai cần nghe điều khác, ở nơi khác", "issue": "Không có phản ví dụ khi các vai trùng nhau (người lớn tự mua cho mình) hoặc khi người ảnh hưởng và người mua mâu thuẫn; không có đánh đổi chi phí làm nội dung cho 3 vai.", "fix": "Thêm đoạn phản ví dụ + đánh đổi: 4 video chia 1/3 chỉ hợp khi vai trẻ đã 'đủ'; nếu lượt xem tụt thì đổi tỉ lệ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.000×1%×450.000 = 4.500.000; 1.000×3%×450.000 = 13.500.000; chênh 9.000.000 = 9.000 nghìn ✓. Wrong 13500 = số tuyệt đối ✓; 900 = 20×45 (quên ×10) chấp nhận được." },
+      "claims": [
+        { "claim": "Tỉ lệ đặt hàng 1% → 3% trên 1.000 lượt", "status": "illustrative-labelled", "note": "Bài ghi rõ 'số minh hoạ; chưa có nhóm đối chứng, mùa lễ cũng có thể góp phần'." },
+        { "claim": "Gửi mẫu 20 trường, 6 trường đưa vào lớp", "status": "illustrative-unlabelled", "note": "Nằm sau câu gắn nhãn nhưng là câu riêng." },
+        { "claim": "Chứng nhận sơn không độc", "status": "unverified", "note": "Không nêu tên chứng nhận cụ thể; chấp nhận được." }
+      ],
+      "strengths": "Ví dụ gắn nhãn minh hoạ và nêu nhiễu (không đối chứng, mùa lễ); Q2 là câu phân bổ nguồn lực có biện hộ, Q5 chuyển sang B2B (CFO vs nhân sự) kiểm được khả năng chuyển giao.",
+      "upgrade": "Thêm phản ví dụ (vai trùng nhau) và đánh đổi chi phí nội dung theo vai; nói độ nhiễu của 10 đơn và cách xác nhận (2–3 tháng hoặc so với trang không đổi); sửa chỉ số Q4 cho tự nhiên; thêm câu L6: thiết kế phép thử 'video an toàn 3 giây đầu' có đối chứng; ÁP DỤNG nên yêu cầu thêm 'ở kênh nào' cho mỗi vai."
+    },
+    {
+      "id": "B:ob01-07",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L4", "L1"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "bạn mới giảm 20.000đ, người giới thiệu được gội miễn phí lần sau", "issue": "Bài về dịch vụ nhỏ có ngân sách 1 triệu nhưng không tính chi phí thẻ giới thiệu: 27 khách mới × 20.000đ + 27 lượt gội miễn phí (giá vốn ~10–15.000đ) ≈ 0,9–1 triệu/tháng trên giá cắt 80.000đ; chi phí có một khách qua thẻ chưa được so với khách quay lại.", "fix": "Thêm phép tính chi phí mỗi khách mới qua thẻ (~35.000đ) và điều kiện có lợi: khách quay lại ≥ 1 lần nữa." },
+        { "sev": "P2", "where": "Q3", "quote": "[55,\"SAI_MAU_SO\"]", "issue": "55% = 33/60 là tỉ lệ khách KHÔNG qua thẻ (phần bù), không phải sai mẫu số.", "fix": "Đổi nhãn thành NHAM_PHAN_BU hoặc thay bằng 27/14 ngày." },
+        { "sev": "P2", "where": "Q7", "quote": "Điểm khác biệt lớn nhất khi làm marketing cho dịch vụ so với hàng hoá đóng gói là gì?", "issue": "Câu L1 nhắc lại khái niệm; ba nhiễu đều chứa từ tuyệt đối ('không cần', 'chỉ nên', 'khó... nên') nên đoán được bằng hình thức.", "fix": "Thay bằng câu đọc sổ nguồn khách 4 tuần (thẻ · đi ngang · mạng) và hỏi kênh nào đang kém, cần làm gì." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Sau hai tháng, khách mỗi ngày tăng từ 8 lên 14", "issue": "Số không gắn nhãn minh hoạ; ba việc làm cùng lúc (ảnh, bảng giá, thẻ) nên không tách được phần của từng việc — bài không nói.", "fix": "Gắn nhãn và thêm một câu: 'ba việc làm cùng lúc nên chỉ tách được phần thẻ (27/60) nhờ hỏi nguồn; hai việc còn lại chưa tách được'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 27 ÷ 60 = 45% ✓; wrong 222,2 = 60/27 ✓ sai mẫu số; 55 = 33/60 là phần bù, nhãn chưa đúng." },
+      "claims": [
+        { "claim": "Khách 8 → 14/ngày; 27/60 khách mới qua thẻ", "status": "illustrative-unlabelled", "note": "Tự khớp, chưa gắn nhãn." },
+        { "claim": "Với dịch vụ nhỏ, lời giới thiệu thường là kênh mạnh nhất và rẻ nhất", "status": "unverified", "note": "Khẳng định kinh nghiệm hợp lý, không nguồn, có chữ 'thường'." }
+      ],
+      "strengths": "Phản ví dụ chuyển điểm nghẽn từ niềm tin sang công suất với dấu hiệu nhận ra cụ thể; ĐÀO SÂU đưa phép đo đơn giản (hỏi nguồn, ghi sổ, đếm cuối tuần) và Q6 kiểm đúng chỗ đó.",
+      "upgrade": "Tính chi phí thẻ giới thiệu trên mỗi khách mới và điều kiện hoà vốn (khách quay lại bao nhiêu lần); gắn nhãn số và nói rõ ba việc làm cùng lúc chỉ tách được phần thẻ; thay Q7 bằng câu đọc sổ nguồn khách (L4) và thêm một câu đánh đổi 'tăng giá lên 100.000đ hay thêm ghế' khi quá tải (L5); sửa nhãn giá trị sai 55."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý cho người mới: lý do được chọn (01) → 4P (02) → nhu cầu/mong muốn (03) → giá trị cảm nhận (04) → marketing vs bán hàng (05) → vai mua (06) → dịch vụ (07). Tuy nhiên 02 (4P) đứng trước 03 (nhu cầu) và 04 (giá trị cảm nhận) nên khi học 4P chưa có nền để hiểu Price theo giá trị; đổi 03 → 04 → 02 sẽ chặt hơn. Bốn bài 01, 02, 05, 06 thiếu hẳn ba phần VÌ SAO HIỆU QUẢ · PHẢN VÍ DỤ · ĐÀO SÂU mà 03, 04, 07 có, nên chất lượng chênh rõ (58–69 so với 73–75).",
+    "overlap": [
+      "01 (lý do để thử lần đầu / quay lại) và 05 (bán hàng cho lần này / marketing cho lần sau) cùng dạy 'lần đầu vs lần sau'; nên nối tường minh hoặc gộp ý.",
+      "04 (giá trị nhìn thấy được) và 07 (bằng chứng hữu hình cho dịch vụ) cùng cơ chế 'làm cho giá trị nhìn thấy được'; 07 nên dẫn lại 04 thay vì dạy lại.",
+      "Mô-típ 'giảm giá dạy khách chọn vì rẻ' xuất hiện trong lời giải của 01, 04, 05, 07 — lặp."
+    ],
+    "gaps": [
+      "Chưa có bài về phân khúc/chọn khách (STP) dù 04 và 06 đều nhắc 'đối tượng quyết định mức chấp nhận' và 'định vị'.",
+      "Chưa có bài về lãi gộp/biên và hoà vốn ở mức nhập môn, trong khi 02, 03, 04 đều cần biên để kết luận đúng (02 còn để quán dưới hoà vốn mà không nói).",
+      "Không bài nào gắn nhãn nguồn/độ tươi; toàn module là số minh hoạ không ghi nhãn (trừ 06)."
+    ],
+    "best_lesson": "B:ob01-03",
+    "weakest_lesson": "B:ob01-02"
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "mod": "tp03",
+ "lessons": [
+  {
+   "id": "B:tp03-02",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1",
+     "quote": "Đọc tên qua điện thoại xem người nghe có viết lại đúng không",
+     "issue": "Câu \"phép thử bị bỏ qua nhất\" không có dữ liệu; phương án c (hỏi người vùng miền khác về nghĩa lóng) cũng bênh được, và lời giải của c tự thừa nhận \"chưa chắc bắt được ở vùng khác\".",
+     "fix": "Đổi câu hỏi sang dữ kiện của bài (phép nào tên \"Quýnh\" trượt nặng nhất) hoặc ghi rõ đây là câu đoán không chấm."
+    }
+   ]
+  }
+ ]
+}

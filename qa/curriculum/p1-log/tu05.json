@@ -1,0 +1,72 @@
+{
+ "mod": "tu05",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:tu05-01",
+   "where": "Cấu trúc bài",
+   "status": "fixed",
+   "change": "Thêm một lỗi hay gặp: kéo cần đã sát trần (gói 500 gram/tháng → tần suất khó vượt ~12 lần/năm; combo lớn làm mua thưa; tệp cũ đang rời đi) — ba cần kéo nhau, phải đo cùng lúc.",
+   "key_changed": false,
+   "note": "Không thêm trường points/counter/deeper vì brief cấm thêm trường chuẩn v2; chỉ thêm một câu điều kiện thất bại vào trường sẵn có."
+  },
+  {
+   "id": "B:tu05-02",
+   "where": "Cấu trúc bài",
+   "status": "fixed",
+   "change": "Thêm một lỗi hay gặp: bảo hành mở rộng cho đồ điện tử có thể hợp ở bước thanh toán; quá nhiều gợi ý nhỏ trên điện thoại vẫn gây bỏ giỏ — lấy doanh thu trên mỗi giỏ làm chỉ số tổng.",
+   "key_changed": false,
+   "note": "Không thêm trường points/counter/deeper vì brief cấm thêm trường chuẩn v2; chỉ thêm một câu điều kiện thất bại vào trường sẵn có."
+  },
+  {
+   "id": "B:tu05-05",
+   "where": "Cấu trúc bài",
+   "status": "fixed",
+   "change": "Ví dụ thêm rủi ro của phương án thắng: nếu lòng nồi trôi nổi kéo tỉ lệ mua xuống 3%, lòng nồi còn 600 × 140.000 − 40 triệu = 44 triệu, thua ấm siêu tốc (80 triệu nếu cùng chi phí nhắc) — khi đó bán lòng nồi kèm bảo hành nồi.",
+   "key_changed": false,
+   "note": "Không thêm trường points/counter/deeper vì brief cấm thêm trường chuẩn v2; chỉ thêm một câu điều kiện thất bại vào trường sẵn có."
+  },
+  {
+   "id": "B:tu05-06",
+   "where": "Cấu trúc bài",
+   "status": "fixed",
+   "change": "Ví dụ thêm trường hợp đổi kết luận: phí giao 20.000 đồng/đơn → 4 đơn tốn 80.000, 3,2 đơn tốn 64.000, lãi mỗi khách tăng 16.000 đồng/quý dù doanh thu y nguyên — combo là tốt hơn; đồ ăn vặt có sẵn thì khách dễ ăn nhiều hơn.",
+   "key_changed": false,
+   "note": "Không thêm trường points/counter/deeper vì brief cấm thêm trường chuẩn v2; chỉ thêm một câu điều kiện thất bại vào trường sẵn có."
+  },
+  {
+   "id": "B:tu05-07",
+   "where": "Q1",
+   "status": "fixed",
+   "change": "Phương án d “Không đoán được, mỗi ngành phân bổ khác nhau” → “Gần như toàn bộ, vì khách còn lại hầu hết chỉ mua một lần”; lời giải d: 4.500 khách còn lại vẫn mang về 55%. Giữ khoá b.",
+   "key_changed": false,
+   "note": "Đã kiểm: d cũ bênh được bằng chính câu “mức tập trung khác nhau theo ngành” trong khái niệm."
+  },
+  {
+   "id": "B:tu05-07",
+   "where": "Cấu trúc bài",
+   "status": "fixed",
+   "change": "Thêm một lỗi hay gặp: chọn VIP chỉ theo doanh thu cả năm mà bỏ qua lần mua gần nhất (R trong RFM), hoặc gạt hẳn giảm giá cho mọi VIP (người mua đi bán lại, khách bị đối thủ chào giá có thể cần chiết khấu thật).",
+   "key_changed": false,
+   "note": "Không thêm trường points/counter/deeper vì brief cấm thêm trường chuẩn v2; chỉ thêm một câu điều kiện thất bại vào trường sẵn có."
+  },
+  {
+   "id": "B:tu05-08",
+   "where": "Cấu trúc bài",
+   "status": "fixed",
+   "change": "Ví dụ thêm: phép tính 24 triệu giả định mọi khách đồng ý; nếu chỉ 55% đồng ý → 440 máy, 88 bộ, lãi thêm 26,4 triệu, chi phí 13,2 triệu, còn 13,2 triệu; đo tỉ lệ đồng ý ngay lúc giao máy.",
+   "key_changed": false,
+   "note": "Không thêm trường points/counter/deeper vì brief cấm thêm trường chuẩn v2; chỉ thêm một câu điều kiện thất bại vào trường sẵn có. Không thêm kịch bản “giá lõi chênh 2 lần, tỉ lệ mua 32%” vì không có số gốc."
+  },
+  {
+   "id": "B:tu05-10",
+   "where": "Ví dụ · Khái niệm",
+   "status": "fixed",
+   "change": "Câu kết ví dụ “A giữ nguyên biên lãi nên được thử trước” → thêm dòng lãi gộp biên 40% (giá vốn 48.000 đồng/đơn): A +128 triệu, C +48 triệu (trước chi phí triển khai), B 60.000 × 24.000 = 1,44 tỉ so với gốc 1,6 tỉ — mất 160 triệu dù doanh thu thêm 320 triệu; “B bị loại ngay; A được thử trước”.",
+   "key_changed": false,
+   "note": "Biên 40% lấy từ Q4 của bài; A +128 triệu khớp bước giải Q4."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

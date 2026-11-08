@@ -1,0 +1,232 @@
+{
+  "mod": "dl03",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:dl03-01",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 13, "examples": 9, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L3", "L2", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4", "quote": "Nước hoa thường có biên lãi cao; ROAS 3 có thể đang lãi tốt", "issue": "Lời giải dựa vào một nhận định ngành không nguồn; đáp án d vẫn đúng nhưng lời giải cho b nên lập luận bằng 'chưa có biên' thay vì khẳng định biên nước hoa.", "fix": "Sửa lời giải b: 'không có biên của B trong đề nên không kết luận được lỗ'." },
+        { "sev": "P2", "where": "CÂU HỎI", "quote": "Q1 … Q6 … Q7", "issue": "4/7 câu (Q1, Q2, Q6, Q7) là nhận lại ý chính 'ROAS là doanh thu, không phải lãi'; chỉ Q4–Q5 buộc suy luận/tính.", "fix": "Thay Q6 hoặc Q7 bằng câu L4: cho hai chiến dịch cùng sản phẩm, ROAS 4 với 12% đơn hoàn và ROAS 3,5 với 2% hoàn — chiến dịch nào thực sự tốt hơn." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Shop có 40 triệu doanh thu. Giá vốn chiếm 50% (20 triệu), phí sàn và vận chuyển 15% (6 triệu)", "issue": "Số tự khớp, có phân tích độ nhạy (giá vốn 60% → hoà vốn) nhưng không gắn nhãn minh hoạ.", "fix": "Thêm 'Minh hoạ:' hoặc đặt cờ assume." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 32 ÷ 8 = 4 ✓; sai 3 = (32 − 8)/8 ✓, 0,25 ✓. Ví dụ: 40 − 20 − 6 − 10 = 4 triệu = 10% doanh thu ✓; giá vốn 60%: 40 − 24 − 6 − 10 = 0 ✓ (Q5 ✓). Q1 c: biên < 25% thì ROAS 4 lỗ ✓ (1/0,25 = 4)." },
+      "claims": [
+        { "claim": "Shop mỹ phẩm Shopee: 10 triệu quảng cáo, 40 triệu doanh thu, giá vốn 50%, phí 15%", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Nước hoa thường có biên lãi cao; tai nghe có thể biên mỏng", "status": "unverified", "note": "Nhận định ngành trong lời giải, không nguồn." }
+      ],
+      "strengths": "Có đủ VÌ SAO/PHẢN VÍ DỤ (đơn hoàn)/ĐÀO SÂU (đơn đầu hay vòng đời, trần của nhóm hẹp); ví dụ có độ nhạy 50% → 60% làm đổi kết luận.",
+      "upgrade": "Nâng ít nhất hai câu quiz lên L4 (đơn hoàn, so hai chiến dịch); gắn nhãn minh hoạ; sửa lời giải Q4 b; đổi ÁP DỤNG thành đầu ra số: tính lãi sau quảng cáo của chiến dịch đó với biên thật."
+    },
+    {
+      "id": "B:dl03-02",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 16, "examples": 9, "pedagogy": 6, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L2", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Hoà vốn khi tiền quảng cáo đúng bằng lãi gộp", "issue": "Đây là hoà vốn ở tầng đóng góp (chưa trả chi phí cố định); phần đọc không nói, chỉ lời giải Q5 nhắc. Người học có thể coi 'đạt ROAS hoà vốn' là shop không lỗ.", "fix": "Thêm một câu: 'hoà vốn này chỉ nói đồng quảng cáo không lỗ; tiền thuê kho, lương vẫn chưa được trả — xem bài kinh tế đơn vị'." },
+        { "sev": "P2", "where": "Q2", "quote": "Đặt lại mục tiêu ROAS tối thiểu 2,5 và cắt nhóm quảng cáo dưới mức đó", "issue": "Vế 'cắt nhóm quảng cáo dưới mức đó' hơi tuyệt đối: nhóm khách mới có thể chấp nhận dưới hoà vốn nếu có mua lại (bài 03 ĐÀO SÂU và bài 05 nói vậy). Vẫn là phương án tốt nhất trong bốn, nhưng lời giải nên nêu ngoại lệ.", "fix": "Sửa thành 'cắt hoặc sửa nhóm dưới mức đó, trừ nhóm khách mới có số liệu mua lại'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Tính ROAS hoà vốn bằng 1 ÷ biên lãi gộp trước khi đặt bất kỳ mục tiêu ROAS nào", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; không có tình huống nào mà công thức 1 ÷ biên không đủ (ví dụ đơn hoàn, khách mua lại).", "fix": "Thêm PHẢN VÍ DỤ: ROAS trên hoà vốn nhưng 20% đơn hoàn → doanh thu thực nhận thấp hơn." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (250.000 − 150.000)/250.000 = 40%; 1/0,4 = 2,5 ✓; sai 1,67 = 250/150 ✓, 0,4 ✓. Q4: 1/0,25 = 4 ✓; sai 1,33 = 1/0,75 ✓. Ví dụ: 2,2 triệu × 40% = 880k, hụt 120k ✓. Q6: 1/0,2 = 5, 1/0,6 = 1,67 ✓. Q7: biên 30% → 3,33 ✓. Task: biên (200k − 82k − 28k − 5k − 15k)/200k = 35% ✓; 1/0,35 = 2,86 ✓; ROAS 3,2 × 12 triệu = 38,4 triệu, lãi gộp 13,44 − 12 = +1,44 triệu; 1/(0,35 − 0,10) = 4 ✓; quên phí: 1/0,59 ≈ 1,69." },
+      "claims": [
+        { "claim": "Shop bình giữ nhiệt TikTok Shop: giá 250.000đ, chi phí 150.000đ, ROAS 2,2", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Khoá học nói 'ROAS trên 2 là được'", "status": "illustrative-labelled", "note": "Được bài phê phán, không nêu như sự thật." },
+        { "claim": "Kế toán gọi 'biên lãi gộp' là phần chỉ trừ giá vốn; phần trừ thêm phí là biên đóng góp", "status": "verified", "note": "Định nghĩa kế toán quản trị chuẩn." }
+      ],
+      "strengths": "Công thức ROAS hoà vốn = 1 ÷ biên được dẫn ra (chi = doanh thu × biên) chứ không áp đặt; ghi chú thuật ngữ biên gộp/biên đóng góp đúng; BÀI THỰC HÀNH 4 con số gồm ROAS mục tiêu 1 ÷ (biên − lãi mong muốn).",
+      "upgrade": "Bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU (đơn hoàn, chi phí cố định chưa trả, khách mua lại); gắn nhãn minh hoạ; thay Q5 (L2 phân loại chi phí) bằng câu L4 cho bảng ba sản phẩm với ROAS hiện tại và hỏi sản phẩm nào đang lỗ."
+    },
+    {
+      "id": "B:dl03-03",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L3", "L5", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4", "quote": "sai hay gặp: [[3.33,\"QUEN_TRU_CHI_PHI_QC\"],…]", "issue": "3,33 là ROAS hoà vốn — lỗi là 'quên cộng lãi mục tiêu 2 triệu', nhưng mã hiện 'Quên trừ chi phí quảng cáo' khiến lời nhắc ôn sai hướng.", "fix": "Dùng mã riêng hoặc ghi lời giải 'bạn mới tính hoà vốn, chưa cộng 2 triệu lãi mục tiêu'." },
+        { "sev": "P2", "where": "Q7", "quote": "CPM rẻ hơn có thể đổi ROAS, nhưng đó vẫn là thay đổi ROAS, không phải điều kiện đề ra", "issue": "Lời giải loại phương án a bằng kỹ thuật đọc đề ('không cần ROAS cao hơn') hơn là bằng lập luận kinh tế; người học có thể thấy a vẫn hợp lý trong đời thật.", "fix": "Thêm: 'đổi nền tảng là đánh cược ROAS mới, chưa chắc; tăng biên tác động chắc chắn lên vạch hoà vốn'." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "nói trong 60 giây cần biên lãi gộp tối thiểu bao nhiêu để nó thật sự lãi", "issue": "Đầu ra lời nói; bài có đủ dữ liệu để yêu cầu bảng vạch hoà vốn cho 3 sản phẩm.", "fix": "Yêu cầu lập bảng 3 sản phẩm: biên, vạch hoà vốn, ROAS hiện tại, lãi/lỗ mỗi 1 triệu quảng cáo." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 30 × 30% − 10 = −1 triệu ✓; sai 20 = 30 − 10 ✓, 9 ✓. Q4: (10 + 2)/0,3 = 40; 40/10 = 4 ✓; sai 1,2 = 12/10 ✓. Ví dụ: 1/0,3 = 3,33; 33,3 triệu ✓. Q5: 1/0,1 = 10, 1/0,7 = 1,43, 1/0,6 = 1,67 ✓. VÌ SAO (2): (3 × 0,3 − 1) × 10 = −1 ✓." },
+      "claims": [
+        { "claim": "Đồ điện, điện thoại, hàng thương hiệu lớn bán lại thường có biên lãi gộp mỏng; bài lấy 30% làm ví dụ minh hoạ", "status": "illustrative-labelled", "note": "Gắn nhãn rõ 'biên thật khác nhau theo ngành hàng và nguồn nhập'." },
+        { "claim": "Nồi chiên trên Lazada: 10 triệu quảng cáo, 30 triệu doanh thu, biên 30%", "status": "illustrative-labelled", "note": "Bao trùm bởi nhãn minh hoạ ở KHÁI NIỆM." },
+        { "claim": "Q5: điện thoại chính hãng bán lại biên ~10%, nước hoa chiết ~70%, trà sữa ~60%", "status": "illustrative-unlabelled", "note": "Biên cho sẵn trong phương án để tính; không nêu như số liệu ngành." }
+      ],
+      "strengths": "Gắn nhãn minh hoạ cho biên 30% và cách nhìn 'đối soát hai tầng doanh thu/lãi là bước kiểm tra, không phải tranh cãi'; công thức lãi = (ROAS × biên − 1) × chi được dẫn ra; Q6 (3 → 3,2 là tiến bộ nhưng vẫn dưới vạch) và Q7 là câu đánh đổi.",
+      "upgrade": "Sửa mã lỗi Q4; đổi ÁP DỤNG thành bảng vạch hoà vốn 3 sản phẩm; thêm một câu L4 đọc bảng 'ROAS thực so với vạch' theo tháng khi giá vốn đổi; thêm sơ đồ ba cột (doanh thu → lãi gộp → sau quảng cáo)."
+    },
+    {
+      "id": "B:dl03-04",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 9, "pedagogy": 6, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q3", "quote": "sai hay gặp: [[40,\"QUEN_TRU_CHI_PHI_QC\"],[30,\"QUEN_CHI_PHI_BIEN_DOI\"],[3,\"QUEN_CHI_PHI_CO_DINH\"]]", "issue": "Giá trị 3 triệu là kết quả của việc TRỪ THÊM 12 triệu chi phí cố định (lãi ròng), nhưng mã QUEN_CHI_PHI_CO_DINH hiện lời nhắc 'Quên chi phí cố định khi tính CAC' — ngược hướng với lỗi thật và nhắc sai chỉ số (CAC). Lời nhắc ôn sau 1/3/7 ngày sẽ dạy ngược.", "fix": "Tạo mã mới (ví dụ TRU_CHI_PHI_CO_DINH_VAO_DONG_GOP: 'Trừ chi phí cố định vào lợi nhuận đóng góp') hoặc ghi lời giải riêng cho 3 triệu." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Theo dõi lợi nhuận đóng góp sau quảng cáo", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; không có tình huống chi phí 'cố định' thực ra nhảy bậc theo quy mô (thuê thêm người đóng gói khi đơn tăng).", "fix": "Thêm PHẢN VÍ DỤ: tăng quảng cáo lên 35 triệu buộc thuê thêm nhân viên 6 triệu — chi phí bậc thang phải tính vào quyết định." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "nếu doanh thu chỉ lên 120 triệu, lãi gộp thành 48 triệu, trừ 35 còn 13 triệu", "issue": "Dự báo doanh thu 120 triệu là giả định trung tâm nhưng không nói dựa trên gì và không gắn nhãn minh hoạ cho toàn bộ số.", "fix": "Ghi 'giả định minh hoạ; dự báo nên lấy từ ROAS biên đo được ở lần tăng trước'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 100 − 45 − 15 − 25 = 15 ✓; sai 40 ✓, 30 = 100 − 45 − 25 ✓, 3 = 15 − 12 (trừ cố định) — mã sai nghĩa. Q4: 120 × 40% − 35 = 13 ✓; sai 85 = 120 − 35 ✓, 48 ✓. Q2 b: ROAS phần thêm 20/10 = 2 < 2,5 ✓; lãi gộp thêm 8 < 10 ✓." },
+      "claims": [
+        { "claim": "Thương hiệu cà phê: doanh thu 100 triệu, giá vốn 45, phí 15, quảng cáo 25, cố định 12", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "'Lãi gộp' theo kế toán chỉ là doanh thu − giá vốn; trừ thêm chi phí biến đổi mới ra lãi đóng góp", "status": "verified", "note": "Định nghĩa chuẩn." }
+      ],
+      "strengths": "Tách rõ ba tầng (lãi gộp sau biến đổi → đóng góp sau quảng cáo → lãi ròng) và lý do không trừ cố định khi đánh giá quảng cáo; Q2 so hai mức chi bằng đóng góp tuyệt đối; Q5 (trừ kho vào rồi tắt quảng cáo làm lỗ nặng hơn) là chẩn đoán đúng.",
+      "upgrade": "Sửa mã lỗi Q3 (ưu tiên); bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU gồm chi phí bậc thang; gắn nhãn minh hoạ; thay Q6 (L2 phân loại) bằng câu L4 so ba mức chi 25/35/45 với doanh thu 100/120/135 và hỏi mức nào tối đa đóng góp."
+    },
+    {
+      "id": "B:dl03-05",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 14, "examples": 9, "pedagogy": 6, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L2", "L6", "L4"],
+      "bloom_max": "L6",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Nền tảng vẫn gán đơn đó cho quảng cáo nếu họ lướt qua nó", "issue": "Khẳng định về cách nền tảng gán đơn (view-through) nêu như sự thật chung, không nền tảng cụ thể, không cửa sổ, không src; gán theo lượt xem phụ thuộc cài đặt và không phải nền tảng nào cũng bật mặc định.", "fix": "Viết 'với cài đặt gán mặc định của nhiều nền tảng (ví dụ 1 ngày sau khi xem), đơn của người chỉ lướt qua quảng cáo cũng được tính' và thêm src trang trợ giúp với ngày kiểm." },
+        { "sev": "P2", "where": "Q4", "quote": "Nửa có quảng cáo mua 52 triệu, nửa không có mua 48 triệu … Quảng cáo khách cũ tạo ra khoảng 4 triệu doanh thu tăng thêm", "issue": "Kết luận 4 triệu từ một lần thử 4 tuần không kèm cảnh báo nhiễu/cỡ mẫu (chênh 8% giữa hai nửa có thể là dao động) — ngược với tinh thần dl01 (mẫu nhỏ chênh ít chưa phải kết luận).", "fix": "Thêm vào lời giải: 'ước lượng điểm là 4 triệu; cần biết số đơn mỗi nửa và lặp lại để biết chênh này vượt nhiễu không'." },
+        { "sev": "P2", "where": "Q5", "quote": "Không có quy định khoá tài khoản vì lý do này", "issue": "Khẳng định về chính sách nền tảng không nguồn (dù hợp lý).", "fix": "Sửa thành 'chạy lặp lại cho cùng nhóm không vi phạm chính sách thường gặp; vấn đề là tần suất và mệt mỏi quảng cáo'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: ROAS khách cũ phần lớn là doanh thu có sẵn", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; không có tình huống quảng cáo khách cũ thật sự tạo tăng thêm lớn (ví dụ khách ngủ đông 6 tháng).", "fix": "Thêm PHẢN VÍ DỤ: nhắm khách không mua 6 tháng, phần tăng thêm cao hơn nhiều so với khách mua hằng tháng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (60 − 40) ÷ 10 = 2 ✓; sai 6 ✓, 4 = 40/10 ✓. Q4: 52 − 48 = 4 ✓." },
+      "claims": [
+        { "claim": "Nền tảng gán đơn cho quảng cáo nếu khách lướt qua nó (view-through)", "status": "unverified", "note": "Phụ thuộc cài đặt gán; không nguồn." },
+        { "claim": "Không có quy định khoá tài khoản vì chạy lặp lại cho cùng nhóm", "status": "unverified", "note": "Chính sách nền tảng, không nguồn." },
+        { "claim": "Thời trang nữ: chi 10 triệu, 60 triệu gắn quảng cáo, 40 triệu là khách mua lại theo nhịp", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Nhấn đúng rằng ROAS tăng thêm 2 của khách cũ không so thẳng được với ROAS gán 2 của khách lạ — tránh một bẫy hay gặp; đề xuất tắt nửa danh sách để đo (holdout) và Q6 đặt mục tiêu nhóm khách mới theo người mua lần đầu.",
+      "upgrade": "Gắn nhãn/nguồn cho cơ chế gán; thêm cảnh báo nhiễu và số đơn vào Q4; bổ sung VÌ SAO/PHẢN VÍ DỤ (khách ngủ đông)/ĐÀO SÂU (thiết kế holdout: chia ngẫu nhiên, thời lượng, chỉ số đo); thêm một câu calc thứ hai: lãi gộp tăng thêm so với chi (4 triệu × biên − chi nửa danh sách)."
+    },
+    {
+      "id": "B:dl03-06",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 15, "examples": 9, "pedagogy": 6, "assessment": 9, "data": 8, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L4", "L6"],
+      "bloom_max": "L6",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM / Q6", "quote": "Họ cũng đếm lúc đặt hàng, chưa trừ đơn huỷ, hoàn hay không nhận khi giao COD · Bạn đổi cửa sổ gán của Facebook từ 1 ngày sang 7 ngày sau khi bấm", "issue": "Bài thuộc lớp 'fast' (cách nền tảng gán đơn, cửa sổ gán, tên nền tảng thật) nhưng không có src với ngày kiểm và không có câu 'nếu màn hình khác, tin trang chính thức' như RUBRIC yêu cầu; cách đếm đơn của từng nền tảng và các cửa sổ gán khả dụng thay đổi theo thời gian.", "fix": "Thêm src trang trợ giúp về cài đặt gán của Meta/TikTok/Google với ngày kiểm; viết 'tại thời điểm kiểm (tháng/năm) các cửa sổ gán khả dụng là…; nếu giao diện khác, tin trang chính thức'." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[3.125,\"SAI_TINH_TOAN\"],[2.1,\"ROAS_LA_LOI_NHUAN\"]]", "issue": "3,125 = 50/16 là 'quên trừ đơn huỷ/hoàn' — chính là lỗi bài muốn chữa — nhưng gắn mã chưa phân loại; 2,1 ≈ (50 − 16)/16 = 2,125 làm tròn lạ.", "fix": "Ghi lời giải riêng cho 3,125: 'bạn chưa trừ 20% huỷ/hoàn'; đổi 2,1 thành 2,13." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Nền tảng nào cũng nhận công", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; ba cách kiểm (hỏi khách, UTM, tắt vùng) chỉ liệt kê, không nói giới hạn của từng cách.", "fix": "Thêm ĐÀO SÂU: UTM chỉ đo bấm không đo xem; hỏi khách lệch về kênh dễ nhớ; tắt vùng cần vùng tương đồng và đủ tuần." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50 × 80% = 40; 40 ÷ 16 = 2,5 ✓; sai 3,125 = 50/16 ✓. Ví dụ: 120/30 = 4; 90 × 80% = 72; 72/30 = 2,4 < 2,5 (biên 40%) ✓. Q4: 3 × 85% = 2,55 ✓." },
+      "claims": [
+        { "claim": "Facebook cho đổi cửa sổ gán từ 1 ngày sang 7 ngày sau khi bấm", "status": "unverified", "note": "Tính năng thật (cài đặt gán của Meta) nhưng không src/ngày kiểm; lớp fast." },
+        { "claim": "Nền tảng đếm lúc đặt hàng, chưa trừ đơn huỷ/hoàn/không nhận COD", "status": "unverified", "note": "Đúng với cách hoạt động phổ biến; không nguồn." },
+        { "claim": "Mỗi nền tảng tự gán đơn theo cửa sổ và luật riêng, nên cộng lại vượt doanh thu thật", "status": "unverified", "note": "Cơ chế đếm trùng đa chạm; được chấp nhận rộng, không nguồn." },
+        { "claim": "Shop giày: Facebook 50, TikTok 40, Google 30 triệu báo; hệ thống 90 triệu; huỷ/hoàn 20%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ví dụ dùng cận trên ('ngay cả khi coi mọi đơn là nhờ quảng cáo, ROAS tối đa 2,4') là lập luận chặt; Q7 (tắt TikTok ở vài tỉnh có nhóm đối chứng, nêu cả sai số) là câu thiết kế thí nghiệm hiếm có.",
+      "upgrade": "Thêm src và ngày kiểm cho mọi khẳng định về nền tảng (bắt buộc ở lớp fast); bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU về giới hạn ba cách kiểm; sửa mã lỗi Q3; thêm bảng đối soát 3 nền tảng + hệ thống + thực nhận."
+    },
+    {
+      "id": "B:dl03-07",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 9, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q6", "quote": "Lương bán hàng cửa hàng thuộc chi phí bán hàng, thường tách khỏi ngân sách marketing", "issue": "Quy ước kế toán quản trị tuỳ doanh nghiệp; một số khung tính cả lương đội bán vào chi phí thu hút khách. Phương án d bị loại bằng quy ước chưa nêu trong phần đọc.", "fix": "Thêm vào KHÁI NIỆM: 'chọn một quy ước mẫu số (có hay không lương đội bán) và giữ cố định giữa các tháng' rồi ghi quy ước đó vào đề Q6." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Nếu tháng sau chi lên 200 triệu mà doanh thu chỉ lên 680 triệu", "issue": "Ví dụ hai tháng tốt nhưng không gắn nhãn minh hoạ; con số 680 là giả định không giải thích.", "fix": "Ghi 'minh hoạ' và nói 680 là kịch bản để so." },
+        { "sev": "P2", "where": "ĐÀO SÂU", "quote": "với biên này, MER dưới 2 là marketing đã ăn hết lãi gộp", "issue": "Đúng, nhưng MER hoà vốn tính trên toàn bộ doanh thu (kể cả đơn tự nhiên) nên 'dưới 2' là ngưỡng rất tệ, không phải ngưỡng cần đạt; bài không nói MER lành mạnh phải cao hơn hoà vốn bao nhiêu để trả chi phí cố định.", "fix": "Thêm: 'MER mục tiêu = 1 ÷ (biên − phần doanh thu dành cho chi phí cố định và lãi)'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 600 ÷ (120 + 20 + 10) = 4 ✓; sai 5 = 600/120 ✓. Q4: 680 × 50% − 200 = 140 ✓; sai 480 = 680 − 200 ✓, 340 ✓. Ví dụ: 300 − 150 = 150 ✓; 680/200 = 3,4 ✓." },
+      "claims": [
+        { "claim": "Thương hiệu chăm sóc da: 120 triệu quảng cáo, 20 triệu KOC, 10 triệu hàng mẫu, doanh thu 600 triệu, biên 50%", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "MER không bị đếm trùng vì dùng doanh thu thật và chi thật", "status": "verified", "note": "Suy ra từ định nghĩa." }
+      ],
+      "strengths": "Nêu rõ MER trả lời câu gì và không trả lời câu gì ('chiếc cân tổng thể'); PHẢN VÍ DỤ (MER tăng vì cắt chi hoặc khuyến mãi) và Q5 (cắt quảng cáo thương hiệu làm MER đẹp) dạy đọc tỉ lệ cùng số tuyệt đối.",
+      "upgrade": "Nêu quy ước mẫu số trước Q6; thêm MER mục tiêu có chi phí cố định; gắn nhãn minh hoạ; thêm một câu L4 đọc bảng MER 4 tháng với một tháng khuyến mãi lớn để hỏi tháng nào MER tăng không phải nhờ marketing."
+    },
+    {
+      "id": "B:dl03-08",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 16, "examples": 10, "pedagogy": 8, "assessment": 9, "data": 9, "clarity": 4 },
+      "total": 83,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L4", "L5", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Doanh thu gấp đôi chỉ làm khoản lỗ lớn gấp đôi", "issue": "Ngầm giả định chi quảng cáo cũng tăng gấp đôi (ROAS giữ 3,2); nếu doanh thu gấp đôi nhờ đơn tự nhiên dịp 11.11 thì không lỗ gấp đôi. Giả định không nêu.", "fix": "Thêm 'với cùng ROAS 3,2, chi quảng cáo cũng gấp đôi nên…'." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "giá 200.000đ, chi phí mỗi đơn (giá vốn, phí sàn, ship) 120.000đ", "issue": "Phí sàn thường tính theo % giá bán nên giảm theo giá; bài gộp vào 'chi phí không giảm theo' — đơn giản hoá làm biên sau giảm giá hơi bi quan (bài dl02-06 Q5 đã xử lý đúng chi tiết này).", "fix": "Thêm ghi chú: 'phí sàn theo % sẽ giảm nhẹ theo giá; ở đây coi chi phí cố định theo đơn để đơn giản'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Ngày thường: lãi 80.000đ trên 200.000đ, biên 40%", "issue": "Bộ số không gắn nhãn minh hoạ.", "fix": "Thêm 'Minh hoạ:'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 160.000 − 120.000 = 40.000; 40/160 = 25%; 1/0,25 = 4 ✓; sai 2,5 ✓, 5 = 1/0,2 ✓, 3,125 = 1/(0,4 × 0,8) ✓. Q4: 3.200 × 25% − 1.000 = −200 nghìn ✓; sai 2.200 ✓, 800 ✓, 280 = 3.200 × 40% − 1.000 ✓. Q5: giá 80, chi phí 30 → biên 62,5%, hoà vốn 1,6 ✓ (từ 1/0,7 = 1,43)." },
+      "claims": [
+        { "claim": "Shop đồ ngủ lụa: giá 200.000đ, chi phí 120.000đ, giảm 20% dịp 11.11, ROAS 3,2", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Giảm 20% giá có thể cắt 50% lãi mỗi đơn", "status": "illustrative-labelled", "note": "Dẫn ra từ số ví dụ." }
+      ],
+      "strengths": "Cơ chế 'giảm giá cắt lãi nhiều hơn tỉ lệ giảm' được tính minh bạch qua hai bước; PHẢN VÍ DỤ (xả tồn, lấy khách) nêu khi nào hoà vốn 4 không phải điều kiện duy nhất; ĐÀO SÂU có phương án thay thế (quà kèm, combo); Q5 so hai biên khác nhau bằng số.",
+      "upgrade": "Nêu giả định chi quảng cáo theo ROAS cố định; ghi chú phí sàn theo %; gắn nhãn minh hoạ; thêm một câu L6: thiết kế đợt sale có ngân sách lỗ chấp nhận 5 triệu — tính số đơn tối đa và ROAS mục tiêu."
+    },
+    {
+      "id": "B:dl03-09",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 16, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 82,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L4", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4", "quote": "sai hay gặp: [[3.33,\"QUEN_TRU_CHI_PHI_QC\"],[10,\"SAI_TINH_TOAN\"]]", "issue": "3,33 là hoà vốn (quên trừ 10% lãi mục tiêu) nhưng mã hiện 'Quên trừ chi phí quảng cáo'; lời nhắc ôn lệch hướng.", "fix": "Ghi lời giải riêng: 'bạn tính hoà vốn, chưa dành 10% doanh thu làm lãi'." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "tai nghe chính hãng (biên lãi gộp 12,5%) và ốp lưng tự thiết kế (biên 60%)", "issue": "Biên hai sản phẩm là số dựng không nhãn; 12,5% nghe như số liệu ngành.", "fix": "Thêm 'biên minh hoạ'." },
+        { "sev": "P2", "where": "Q7", "quote": "Câu trả lời ngắn gọn đúng nhất là gì?", "issue": "Ba nhiễu đều bị loại bằng 'không có dữ kiện' — câu dễ vì chỉ một phương án dùng dữ kiện trong đề.", "fix": "Thay một nhiễu bằng lập luận dùng dữ kiện nhưng sai hướng: 'Vì ốp lưng ROAS 3 kéo tổng xuống nên cắt là đúng, lãi giảm do mùa'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 1/0,125 = 8 ✓; sai 1,14 = 1/0,875 ✓. Q4: 1/(0,30 − 0,10) = 5 ✓; sai 3,33 ✓, 10 = 1/0,1 ✓. Ví dụ: ROAS 6 × 12,5% = 0,75 triệu/1 triệu ✓; ốp lưng 3 × 60% = 1,8 triệu, lãi 0,8 ✓; 'trên khoảng 2' ↔ 1/(0,6 − 0,1) = 2 ✓. Q5: 1/0,2 = 5, 1/0,55 = 1,82 ✓." },
+      "claims": [
+        { "claim": "Tai nghe chính hãng biên 12,5%, ốp lưng tự thiết kế biên 60%", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "ROAS mục tiêu = 1 ÷ (biên − X) khi muốn giữ X% doanh thu làm lãi", "status": "verified", "note": "Suy ra đại số từ định nghĩa." }
+      ],
+      "strengths": "Công thức mục tiêu 1 ÷ (biên − X) được dẫn ra và dùng nhất quán; chỉ ra mục tiêu chung sai 'theo hai hướng cùng lúc'; PHẢN VÍ DỤ (thị trường nhỏ chạm trần) và ĐÀO SÂU (sản phẩm mồi) nêu giới hạn của chính khung bài.",
+      "upgrade": "Sửa mã lỗi Q4; gắn nhãn minh hoạ; thêm bảng 2 sản phẩm × (biên, hoà vốn, mục tiêu, ROAS hiện tại, lãi/1 triệu); thêm một câu L6: phân bổ lại 20 triệu giữa hai nhóm khi tai nghe kéo 30% khách mua thêm ốp lưng."
+    },
+    {
+      "id": "B:dl03-10",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 9, "pedagogy": 6, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L3", "L6", "L3", "L3", "L2", "L5", "L4"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Dòng đầu báo cáo là tiền còn lại sau quảng cáo", "issue": "Thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU; không có tình huống đóng góp tăng nhưng vẫn là tin xấu (ví dụ ROAS biên đã dưới hoà vốn ở nửa cuối tháng, hay đóng góp tăng nhờ đơn tự nhiên).", "fix": "Thêm PHẢN VÍ DỤ: tháng 2 đóng góp tăng 10 triệu nhưng 60 triệu doanh thu tăng là đơn tự nhiên dịp Tết — ROAS biên thật 1,3 < 2,5." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tháng 1 chi 20 triệu quảng cáo, doanh thu 100 triệu, ROAS 5. Tháng 2 chi 50 triệu, doanh thu 200 triệu", "issue": "Bộ số không gắn nhãn minh hoạ (dù giả định mùa vụ được nêu rõ — tốt).", "fix": "Thêm 'Minh hoạ:'." },
+        { "sev": "P2", "where": "Q5", "quote": "Vì sao ROAS thường giảm khi tăng ngân sách quảng cáo?", "issue": "Lặp nội dung dl02-07 Q4 gần nguyên văn (cùng ba nhiễu: nền tảng cố tình tính giá cao, mẫu kém, đội kém); câu L2.", "fix": "Thay bằng câu L4: cho ROAS tháng 3 nếu chi 80 triệu ra 280 triệu — ROAS biên 2,67 còn trên hoà vốn không, nên dừng ở đâu." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 200 × 40% − 50 = 30 ✓; sai 150 ✓, 80 ✓. Q4: (200 − 100)/(50 − 20) = 3,33 ✓ (tol 0,02); sai 4 ✓, 2,33 = 70/30 ✓. Ví dụ: tháng 1: 40 − 20 = 20 ✓; +10 triệu = +50% ✓; hoà vốn 1/0,4 = 2,5 ✓." },
+      "claims": [
+        { "claim": "Nước ép đóng chai: biên 40%; T1 20 triệu → 100 triệu; T2 50 triệu → 200 triệu", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Khi tăng ngân sách, ROAS gần như luôn giảm vì đồng chi thêm đi tới người khó mua hơn", "status": "unverified", "note": "Lý thuyết lợi suất giảm dần; đúng mức với 'gần như luôn'." }
+      ],
+      "strengths": "Ví dụ nêu rõ giả định của ROAS biên ('coi toàn bộ 100 triệu tăng là nhờ 30 triệu chi thêm') và cách kiểm (cùng kỳ năm trước, vùng không tăng chi) — đúng chuẩn phân biệt dữ kiện/giả định; Q2 là câu thiết kế câu báo cáo; Q7 buộc ghi rõ đã trừ gì.",
+      "upgrade": "Bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU (đóng góp tăng nhờ mùa vụ; cấu trúc báo cáo 5 dòng); thay Q5 lặp bằng câu L4 về nấc chi tiếp theo; gắn nhãn minh hoạ; cho mẫu báo cáo 5 dòng để người học điền."
+    }
+  ],
+  "module_notes": {
+    "progression": "Hợp lý và chặt: ROAS là doanh thu (01) → ROAS hoà vốn = 1 ÷ biên (02) → ROAS cao vẫn lỗ (03) → lợi nhuận đóng góp sau quảng cáo (04) → khách mới/cũ và phần tăng thêm (05) → đếm trùng giữa nền tảng (06) → MER (07) → giảm giá đổi vạch hoà vốn (08) → mục tiêu theo biên từng sản phẩm (09) → cách báo cáo (10). Bài 03 gần như là bài 02 kể lại với bộ số khác; bài 05–06 (đo lường/gán) có thể tách thành cụm riêng vì chuyển từ 'tính lãi' sang 'tin số nào'.",
+    "overlap": [
+      "dl03-02 và dl03-03 cùng dạy 1 ÷ biên với ví dụ 40% → 2,5 và 30% → 3,33; Q1 của 03 gần trùng Q1 của 02.",
+      "dl03-10 Q5 lặp dl02-07 Q4 (vì sao ROAS/CAC xấu đi khi tăng chi) với cùng bộ nhiễu.",
+      "dl03-04 Q2 và dl03-10 Q4/Q6 cùng dạy ROAS biên của phần chi thêm; dl03-09 Q4 và task của dl03-02 cùng công thức 1 ÷ (biên − X).",
+      "dl03-01 Q6, dl03-06 Q5 cùng ý 'ROAS nền tảng chỉ để so chiến dịch trong cùng kênh'."
+    ],
+    "gaps": [
+      "Không có bài về ROI (%) so với ROAS (lần) dù mã lỗi NHAM_ROI_ROAS tồn tại trong hệ thống.",
+      "Không có bài về độ trễ chuyển đổi và cửa sổ gán ảnh hưởng ROAS theo ngày/tuần (chỉ một câu ở 06).",
+      "Chưa nối ROAS với CAC/LTV của dl02: ROAS khách mới ↔ CAC, ROAS vòng đời ↔ LTV chỉ được nhắc ở ĐÀO SÂU của 01.",
+      "Lớp fast (06) và periodic (05) không có src/ngày kiểm; không bài nào có nguồn ngoài.",
+      "9/10 bài dùng số dựng không nhãn (chỉ 03 gắn nhãn); 5/10 bài thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU (02, 04, 05, 06, 10)."
+    ],
+    "best_lesson": "B:dl03-08",
+    "weakest_lesson": "B:dl03-05"
+  }
+}

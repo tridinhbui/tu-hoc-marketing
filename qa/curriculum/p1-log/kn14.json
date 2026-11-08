@@ -1,0 +1,64 @@
+{
+ "mod": "kn14",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:kn14-01",
+   "where": "Khái niệm (nguồn)",
+   "status": "fixed",
+   "change": "Đã có src “Instagram Ranking Explained” (31/5/2023, about.instagram.com), năm và ngày kiểm trong câu, và câu “nếu trang chính thức nói khác bài này, tin trang chính thức”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này đã mở URL và xác nhận trang nói mỗi phần của ứng dụng có thuật toán riêng."
+  },
+  {
+   "id": "B:kn14-01",
+   "where": "Khái niệm (Stories/Explore)",
+   "status": "fixed",
+   "change": "Câu mô tả bề mặt đã gắn “Cũng theo mô tả của Instagram trong bài đó”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước"
+  },
+  {
+   "id": "B:kn14-01",
+   "where": "Q1/Q5/Q7",
+   "status": "fixed",
+   "change": "Nhiễu tuyệt đối (“không bao giờ”, “luôn”, “bất kỳ”) đã thay bằng nhiễu có lý lẽ (vd Q1 “Số liệu Stories bị tính trùng…”, Q7 “Giữ nguyên Feed, vì bài giải thích… nói mỗi bề mặt xếp hạng riêng…”).",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; khoá giữ nguyên"
+  },
+  {
+   "id": "B:kn14-02",
+   "where": "Khái niệm (2021)",
+   "status": "fixed",
+   "change": "Đã có src “Shedding More Light on How Instagram Works” (8/6/2021) và src bài 2023 phần Reels, ngày kiểm trong câu.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này đã mở URL, xác nhận bốn dự đoán Reels và mục chia sẻ lại trong bài 2023."
+  },
+  {
+   "id": "B:kn14-02",
+   "where": "Khái niệm (phát biểu 2025)",
+   "status": "needs-human",
+   "change": "Lượt trước đã hedge (“nói trên tài khoản cá nhân, không phải trang trợ giúp; tại ngày kiểm chưa tìm lại được bản gốc, cần kiểm lại”) và thêm src st:'chua' trỏ blog chính thức about.instagram.com/blog; lượt này không đổi thêm.",
+   "key_changed": false,
+   "note": "Cần người tìm bản gốc phát biểu đầu 2025 của Adam Mosseri (video/bài trên Instagram/Threads, ngày) về ba tín hiệu thời gian xem – thích – gửi; nếu tìm được thì thay src chua bằng URL gốc, nếu không thì cân nhắc bỏ câu."
+  },
+  {
+   "id": "B:kn14-03",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "Đã có src “Instagram Ranking Explained” phần Feed, năm, ngày kiểm và câu dự phòng.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này xác nhận trang có câu về thích, chia sẻ, lưu, bình luận."
+  },
+  {
+   "id": "B:kn14-04",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "Đã có src phần Stories, năm 5/2023, ngày kiểm và câu “nếu trang chính thức nói khác, tin trang chính thức”.",
+   "key_changed": false,
+   "note": "đã sửa ở lượt trước; lượt này xác nhận ba dự đoán chạm vào, trả lời, lướt sang."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

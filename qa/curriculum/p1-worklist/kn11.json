@@ -1,0 +1,50 @@
+{
+ "mod": "kn11",
+ "lessons": [
+  {
+   "id": "B:kn11-04",
+   "title": "Viết 120 bài na ná nhau hay 10 bài thật sự giúp người đọc?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Google viết rằng E-E-A-T tự nó không phải một yếu tố xếp hạng cụ thể. (Google Search Central, kiểm 10/2026)",
+     "issue": "Bài xoay quanh tài liệu hướng dẫn và khung đánh giá chất lượng của Google — kiến thức 'fast' theo RUBRIC (bắt buộc src với ngày kiểm) — nhưng không có trường src bấm được; chỉ ghi tên nguồn trong lời văn.",
+     "fix": "Thêm src tới 'Creating helpful, reliable, people-first content' và Search Quality Rater Guidelines (URL, ngày kiểm), cộng câu 'nếu tài liệu đã đổi, tin trang chính thức'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src bắt buộc (nội dung fast) và câu 'tin trang chính thức'; (2) đưa chi phí vào ví dụ (18 triệu / 18 bài có nhấp = 1 triệu mỗi bài có nhấp) và biến Q3 thành câu so chi phí; (3) thêm PHẢN VÍ DỤ (chủ đề đời sống không cần bằng cấp: Experience quan trọng hơn Expertise) và ĐÀO SÂU (gộp bài: cách chọn bản đích, theo dõi hiển thị 8 tuần sau gộp); (4) thay Q1/Q5 bằng câu chẩn đoán dàn ý."
+  },
+  {
+   "id": "B:kn11-06",
+   "title": "Khách tìm \"phở gần đây\": vì sao quán bên kia đường hiện, quán mình thì không?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM, VÍ DỤ",
+     "quote": "chính sách nội dung của Google cấm cả hai",
+     "issue": "Bài dựa trên chính sách của Google Business Profile (ba yếu tố xếp hạng địa phương, cấm đổi quà lấy đánh giá, cấm mời chọn lọc) — nội dung chính sách nền tảng thuộc loại 'fast' theo RUBRIC — nhưng không có trường src bấm được, chỉ ghi '(kiểm 10/2026)'.",
+     "fix": "Thêm src: 'Improve your local ranking on Google' và 'Prohibited and restricted content' (Maps user contributed content policy) với ngày kiểm và câu 'nếu chính sách đổi, tin trang chính thức'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src bắt buộc cho chính sách và trang xếp hạng địa phương; (2) đưa số đo GBP trước/sau vào ví dụ và một câu đọc báo cáo hiệu suất hồ sơ; (3) thêm PHẢN VÍ DỤ (dịch vụ tới nhà khách, không có cửa hàng: cách khai vùng phục vụ khác) và ĐÀO SÂU (đánh giá giả của đối thủ, cách báo cáo); (4) thay Q1/Q4 bằng câu chẩn đoán hai quán; (5) thêm cảnh báo về công thức điểm ở Q3."
+  },
+  {
+   "id": "B:kn11-08",
+   "title": "Bỏ 12 triệu làm nội dung SEO — bao lâu hoàn vốn, và cách nào đốt tiền?",
+   "total": 81,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Google xếp mua bán liên kết để xếp hạng và nhồi từ khoá vào spam; site vi phạm có thể bị hạ hạng hoặc không xuất hiện. (Google Search Central, Spam policies, kiểm 10/2026)",
+     "issue": "Chính sách spam của Google là nội dung 'fast' (chính sách nền tảng) và là căn cứ cho Q1, Q5, Q7; bài không có trường src bấm được, chỉ ghi tên tài liệu và ngày.",
+     "fix": "Thêm src tới Spam policies for Google web search (mục Link spam, Keyword stuffing) với ngày kiểm và câu 'nếu chính sách đổi, tin trang chính thức'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src bắt buộc cho Spam policies; (2) thêm dòng độ nhạy CTR và đổi CPC để tránh trùng 1,2 triệu; (3) thêm PHẢN VÍ DỤ (ngách lãi gộp thấp 10%: hoàn vốn 30 tháng — khi nào SEO nội dung không đáng, quảng cáo thương hiệu rẻ hơn) và ĐÀO SÂU (giá trị tích luỹ sau hoàn vốn, chi phí cập nhật nội dung hằng năm); (4) thay Q5 bằng câu đọc đoạn văn."
+  }
+ ]
+}

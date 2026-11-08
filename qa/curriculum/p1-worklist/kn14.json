@@ -1,0 +1,86 @@
+{
+ "mod": "kn14",
+ "lessons": [
+  {
+   "id": "B:kn14-01",
+   "title": "Ảnh cùng bó hoa trên Feed, Stories và Reels: ba bề mặt, ba việc khác nhau?",
+   "total": 63,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Theo bài giải thích chính thức của Instagram, Feed, Stories, Explore, Reels và Tìm kiếm mỗi nơi có mô hình xếp hạng riêng",
+     "issue": "Khẳng định cơ chế nền tảng viện dẫn 'bài giải thích chính thức' nhưng bài không có `src` (tên bài, đường dẫn, ngày kiểm). Kiến thức loại fast bắt buộc có nguồn và ngày kiểm.",
+     "fix": "Thêm src: tên bài đăng trên trang chính thức của Instagram về cách xếp hạng, URL, ngày kiểm, và câu 'nếu trang chính thức nói khác, tin trang chính thức'."
+    },
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Stories thường để xem những người gần mình; Explore và Reels để khám phá và giải trí.",
+     "issue": "Mô tả hành vi người dùng theo bề mặt nêu như sự thật, không nguồn, không gắn nhãn 'theo mô tả của nền tảng tại thời điểm X'.",
+     "fix": "Gắn vào src ở trên hoặc viết 'theo mô tả của Instagram (kiểm ngày …)'."
+    },
+    {
+     "sev": "P1",
+     "where": "Q1 / Q5 / Q7",
+     "quote": "Số liệu Stories sai vì lượt xem Stories không bao giờ đáng tin cậy",
+     "issue": "Nhiễu dùng 'không bao giờ' (Q1 b, Q7 b), 'luôn' (Q5 b), 'bất kỳ' (Q1 a): đáp án đoán được bằng từ tuyệt đối.",
+     "fix": "Viết nhiễu có lý lẽ thật: 'Stories đến người đã theo dõi nên tin nhắn cao là chuyện bình thường, không cần làm gì thêm' — buộc người học phân biệt 'bình thường' với 'không cần hành động'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm src với ngày kiểm cho mọi mô tả bề mặt Instagram; (2) gắn nhãn minh hoạ và bổ sung số cho chỉ số của Reels/Feed để 'gán việc' có số kiểm; (3) thêm phản ví dụ: tiệm hoa khác có Stories 350 người xem nhưng 0 tin nhắn vì không có lời mời — khi đó vấn đề không phải bề mặt mà là thiết kế (nối kn14-04); (4) thay Q1/Q5 bằng câu đọc bảng Insights ba bề mặt với reach follower/non-follower; (5) phần Áp dụng ra bảng 3 dòng: bề mặt · việc · chỉ số · mục tiêu tuần."
+  },
+  {
+   "id": "B:kn14-02",
+   "title": "Reels: xem hết, chia sẻ lại, thích, vào trang âm thanh — thiết kế cho điều nào?",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Năm 2021 Instagram mô tả rằng với Reels, các dự đoán quan trọng nhất là: bạn có xem hết không, có thích không, có thấy vui hay giải trí không (qua khảo sát) và có vào trang âm thanh không.",
+     "issue": "Mô tả thuật toán có mốc năm nhưng không có `src` (đường dẫn, ngày kiểm). Kiến thức fast nêu như sự thật mà không nguồn.",
+     "fix": "Thêm src tới bài đăng chính thức năm 2021 của Instagram và ghi ngày kiểm."
+    },
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Đầu 2025, người đứng đầu Instagram nói ba tín hiệu quan trọng nhất là thời gian xem, lượt thích và lượt gửi (chia sẻ lại); gửi quan trọng hơn khi tiếp cận người chưa theo dõi.",
+     "issue": "Dẫn lời cá nhân lãnh đạo nền tảng (phát biểu trên video/mạng xã hội) như dữ kiện, không nguồn, không ngày; đến 11/2026 đã gần hai năm — quá hạn 3 tháng của lớp fast.",
+     "fix": "Thêm src (nơi phát biểu, ngày), ghi ngày kiểm lại, và câu 'nếu trang chính thức nói khác, tin trang chính thức'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm src + ngày kiểm cho cả hai mô tả thuật toán, nêu rõ cái nào còn hiệu lực; (2) gắn nhãn minh hoạ, thêm ghi chú nhiễu mẫu nhỏ cho lượt gửi; (3) thêm phản ví dụ: Reels menu (ít gửi) vẫn đúng việc nếu mục tiêu là người quen ghé quán — không phải video nào cũng phải 'được gửi'; (4) thay Q5/Q6 bằng câu L4 đọc bảng 4 Reels (xem hết, gửi/1.000, vào trang) và chọn video làm mẫu; (5) nối sang kn13-02 (đường giữ chân) trong Q7."
+  },
+  {
+   "id": "B:kn14-03",
+   "title": "Bài để lưu lại: đo lượt lưu trên reach, không đo trái tim",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Instagram nêu rằng hoạt động của bạn như thích, chia sẻ, lưu và bình luận giúp họ hiểu bạn quan tâm gì.",
+     "issue": "Dẫn mô tả nền tảng không có `src`/ngày kiểm.",
+     "fix": "Thêm src tới bài giải thích xếp hạng của Instagram, ngày kiểm."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm src cho mô tả Instagram; (2) nói rõ cách gán 9 tin nhắn cho bài B; (3) thêm phản ví dụ: bài hướng dẫn lưu 6% nhưng 0 tin nhắn vì thiếu lời mời — lưu không tự thành hành động; (4) thêm ràng buộc sản xuất: một chuỗi 6 ảnh tốn bao nhiêu giờ so với ảnh đơn và tỉ lệ lưu cần bao nhiêu để đáng; (5) thay Q4 (lặp) bằng câu đọc bảng 4 bài cùng định dạng."
+  },
+  {
+   "id": "B:kn14-04",
+   "title": "Stories: người xem chạm vào, trả lời hay lướt sang — bạn thiết kế cho điều nào?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Instagram mô tả rằng khi xếp hạng Stories, họ dự đoán bạn có chạm vào story không, có trả lời không và có lướt sang story tiếp theo không.",
+     "issue": "Mô tả thuật toán Stories không có `src`/ngày kiểm; bài không nói mô tả này từ năm nào.",
+     "fix": "Thêm src, năm công bố và ngày kiểm; thêm câu 'nếu trang chính thức nói khác, tin trang chính thức'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm src + năm cho mô tả Stories; (2) thêm ghi chú nhiễu mẫu nhỏ; (3) thêm phản ví dụ: tài khoản B2B có 58 trả lời nhưng toàn trả lời sticker vui, 0 tin nhắn mua — trả lời không phải mục tiêu cuối; (4) thêm chỉ số 'tỉ lệ thoát' (lướt ra khỏi chuỗi) nếu Insights có, với ghi chú kiểm màn hình; (5) thay Q4/Q7 bằng câu đọc bảng khung."
+  }
+ ]
+}

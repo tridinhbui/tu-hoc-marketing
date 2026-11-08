@@ -1,0 +1,222 @@
+{
+  "mod": "gt04",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:gt04-01",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L3", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ", "quote": "mỗi tháng khoảng 300 lượt bấm chỉ đường, thêm ảnh tăng 10% thì được chừng 30 khách mới", "issue": "Đồng nhất 'lượt bấm chỉ đường tăng thêm' với 'khách mới ghé' (bỏ qua tỉ lệ đến quán thật và khách cũ bấm lại); phép nhân thô được chính bài khuyên nhưng giả định không được nêu, kết quả 5 khách/giờ ở Q6 dựa trên số này.", "fix": "Ghi: 30 lượt bấm thêm × ~60% đến quán × ~70% là khách mới ≈ 13 khách; nói rõ đây là ước lượng ba tầng, mỗi tầng là giả định." },
+        { "sev": "P1", "where": "Q4", "quote": "Thuê ê-kíp quay phim thương hiệu 5 phút, đăng fanpage toàn khách quen theo dõi", "issue": "Đáp án dài nhất và tự chứa cả hai manh mối ('thuê ê-kíp' = công sức cao, 'toàn khách quen' = tác động thấp); ba phương án sai đều ngắn và rõ ràng là việc tốt. Đoán được không cần hiểu ma trận.", "fix": "Viết 4 việc có độ dài tương đương, mỗi việc chỉ lộ một trục; ví dụ thêm 'Làm thẻ thành viên 40 giờ' (tác động thấp với mục tiêu này nhưng không lộ chữ 'khách quen')." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Chấm mỗi việc trên hai trục theo một mục tiêu duy nhất", "issue": "Thiếu Vì sao – Phản ví dụ – Đào sâu; không nói giới hạn của ma trận 2×2 (việc phụ thuộc nhau, việc bắt buộc theo luật/pháp lý không chấm bằng tác động).", "fix": "Thêm phản ví dụ: việc 'sửa giờ mở cửa sai trên Maps' là bắt buộc dù tác động nhỏ; việc A chỉ có tác động khi B xong." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 6 + 30 = 36; 60 − 36 = 24; 24/60 = 40% ✓; sai 60 (lấy % đã dùng) ✓; 24 (số tuyệt đối) ✓. Q6: 30/6 = 5; 40/30 = 1,33 ✓." },
+      "claims": [
+        { "claim": "Chuỗi 6 quán cà phê Đà Nẵng, 300 lượt bấm chỉ đường/tháng, +10% nếu thêm ảnh", "status": "illustrative-labelled", "note": "Ghi '(số minh hoạ)'; nhưng +10% là giả định về hiệu quả ảnh trên Google Maps không có nguồn." }
+      ],
+      "strengths": "Khái niệm nói rõ 'tác động phải đo theo đúng một mục tiêu' và cho phép ước bằng phép nhân thô có gắn nhãn. Q6 buộc chia tác động cho giờ (5 vs 1,3 khách/giờ) và tính độ chắc chắn — câu L4 tốt. Q7 dạy công sức ẩn (chờ duyệt).",
+      "upgrade": "Để ≥85: (1) tách phép ước thành ba tầng có giả định; (2) viết lại Q4 cân độ dài; (3) thêm Phản ví dụ/Đào sâu (việc bắt buộc, việc phụ thuộc); (4) thêm câu L5: TikTok ước 40 khách nhưng độ chắc 30% so với Maps 13 khách chắc 80% — chọn gì với 60 giờ và biện hộ."
+    },
+    {
+      "id": "B:gt04-02",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Video thử giày: chạm 8.000 người xem trang, tác động 2, chắc chắn 80%… công sức 2 tuần-người", "issue": "Thang Impact (2, 3, 1) không được định nghĩa trong khi ICE được nói là 1–10; người học không biết 3 là tối đa hay không, và Q5 lại dạy 'phải định nghĩa mức trước khi chấm'.", "fix": "Ghi thang Impact dùng trong RICE (ví dụ 0,25 / 0,5 / 1 / 2 / 3 = rất lớn) và mô tả mỗi mốc bằng một câu." },
+        { "sev": "P2", "where": "Q1", "quote": "Ý tưởng mới lạ, đang hot, người đề xuất có chức vụ cao", "issue": "Câu 'đoán trước' có đáp án hợp với tình huống ('chủ shop thích livestream vì đang hot') nên là nhận lại; ba phương án sai đều mô tả ý tưởng có bằng chứng.", "fix": "Chấp nhận là câu khởi động; hoặc hỏi 'thành phần nào của RICE hay bị thổi phồng nhất và vì sao' (Confidence)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Livestream: chạm 1.500 người, tác động 3, chắc chắn 50%, công sức 4 → 562,5", "issue": "Reach của livestream được đặt bằng người xem một phiên trong khi video thử giày lấy người xem trang/tháng — hai cách đếm Reach khác nhau, phản ví dụ có nhắc nhưng ví dụ chính không ghi đơn vị kỳ.", "fix": "Ghi rõ 'Reach = người chạm trong 1 tháng' cho cả ba, và nêu livestream 4 phiên × 375 người." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 5.000 × 2 × 0,6 ÷ 3 = 2.000 ✓; sai 18.000 (nhân Effort) ✓, 3.333 (quên Confidence) ✓. Ví dụ: 6.400 / 562,5 / 2.400 ✓. Q6: 8×3×9 = 216, 6×7×5 = 210 ✓." },
+      "claims": [
+        { "claim": "Công thức RICE = Reach × Impact × Confidence ÷ Effort; ICE = Impact × Confidence × Ease", "status": "unverified", "note": "Đúng với cách dùng phổ biến (Intercom/Sean Ellis) nhưng bài không dẫn nguồn, không ghi thang Impact gốc." },
+        { "claim": "Shop giày Shopee, 8.000 người xem trang, đã thử video trên 5 mẫu", "status": "illustrative-unlabelled", "note": "Số tự khớp; không ghi 'minh hoạ'." }
+      ],
+      "strengths": "Confidence được gắn với bằng chứng ghi lại ('đã thử video trên 5 mẫu tháng trước') — đúng tinh thần công cụ. Q6 (216 vs 210: điểm sát, Confidence 3 là chỗ cần mua bằng chứng) và Q7 (chấm lại khi có thông tin mới) dạy dùng điểm để thảo luận, không để phán quyết.",
+      "upgrade": "Để ≥85: (1) định nghĩa thang Impact của RICE và đơn vị Reach theo kỳ; (2) dẫn nguồn gốc ICE/RICE; (3) thêm câu L6: thiết kế bảng chấm chung cho hai người (định nghĩa mức 3/6/9) — nối Q5; (4) gắn nhãn minh hoạ."
+    },
+    {
+      "id": "B:gt04-03",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L3", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "tài trợ 120 triệu mang về khoảng 150 triệu lợi nhuận gộp… đưa sản phẩm vào 40 cửa hàng đặc sản ở TP.HCM, tốn 120 triệu phí lên kệ và trưng bày, ước lợi nhuận gộp 190 triệu", "issue": "Hai ước lượng 150 và 190 không nói suy từ đâu (số đơn, biên, thời gian hoàn vốn); không gắn nhãn minh hoạ; đồng thời điểm (2) 'cùng khoảng thời gian' được nêu nhưng ví dụ chỉ ghi 'trong năm' cho tài trợ, không ghi cho lên kệ.", "fix": "Ghi cả hai theo cùng kỳ 12 tháng và dẫn phép nhân: 40 cửa hàng × 20 chai/tháng × 12 × lãi 20.000 = 192 triệu; gắn nhãn minh hoạ." },
+        { "sev": "P2", "where": "CÂU HỎI", "quote": "Q5 Phép so sánh nào dễ làm một khoản chi trông hấp dẫn hơn thực tế? … Q7 Vì sao nói \"có lãi\" chưa đủ", "issue": "Bốn câu (Q1, Q5, Q6, Q7) nhận lại định nghĩa; chỉ Q2 là quyết định; không câu nào cho hai phương án có kỳ thu hồi khác nhau để buộc quy về cùng kỳ.", "fix": "Thay Q7 bằng: tài trợ cho lãi 30 triệu trong 3 tháng, lên kệ cho 70 triệu nhưng sau 12 tháng và cần 2 ngày công/tuần — so thế nào (L5)." },
+        { "sev": "P2", "where": "Q3", "quote": "Chọn A thì thiệt bao nhiêu triệu so với B?", "issue": "Phép trừ một bước (70 − 30) không thêm kỹ năng; sai số 70 lại là chính 'chi phí cơ hội' theo định nghĩa, gây lẫn cho người đọc kỹ.", "fix": "Hỏi riêng hai số: chi phí cơ hội của A (70) và chênh lệch ròng (40), yêu cầu nêu cả hai." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 70 − 30 = 40 ✓; sai 70 (lấy lãi B) ✓; 100 (cộng) ✓." },
+      "claims": [
+        { "claim": "Nước mắm Phú Quốc, 200 triệu/quý, tài trợ lễ hội 120 triệu, 40 cửa hàng đặc sản", "status": "illustrative-unlabelled", "note": "Không ghi 'minh hoạ'; các số lãi là ước lượng không có phép suy." }
+      ],
+      "strengths": "Phản ví dụ (phương án bị bỏ chưa khả thi trong quý) và Đào sâu (chi phí cơ hội bị lạm dụng thành cớ không chi gì) là hai điểm mà tài liệu phổ thông hay bỏ. Điểm (3) nhắc giờ người cũng có chi phí cơ hội và Q4 kiểm đúng ý đó.",
+      "upgrade": "Để ≥85: (1) dẫn phép suy cho hai con số lãi, cùng kỳ, gắn nhãn; (2) thay 2 câu L2 bằng câu so phương án khác kỳ thu hồi và khác giờ người (L5); (3) thêm bảng hai cột như Đào sâu đề xuất ngay trong ví dụ; (4) nối với 04-08 (giữ/tìm) bằng một câu chi phí cơ hội của 10 triệu giữ khách."
+    },
+    {
+      "id": "B:gt04-04",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 7, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q4", "quote": "Kế hoạch giảm rủi ro tập trung: giữ quan hệ sâu và phát triển thêm khách lớn khác", "issue": "Đáp án dài nhất và duy nhất có cấu trúc 'kế hoạch: … và …'; ba phương án sai đều cực đoan (giảm giá thật sâu / không cần làm gì / chuyển sang tự phục vụ). Đoán được bằng hình thức.", "fix": "Thêm phương án sai hợp lý nhưng lệch: 'Ký hợp đồng dài hạn kèm chiết khấu thêm 5% để khoá khách' (giữ được nhưng ăn vào biên) và rút gọn a." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Xếp hạng trước khi chia sức", "issue": "Thiếu Vì sao – Phản ví dụ – Đào sâu dù ví dụ đã có 'lát cắt thứ hai' theo lãi; chưa nói chi phí phục vụ nhóm nhỏ (400 cuộc gọi/tháng) khi tính lãi 0,25 tỉ, và không nói khi nào xếp theo tiềm năng (khách mới) thay vì theo quá khứ.", "fix": "Thêm Đào sâu: cách ước chi phí phục vụ theo giờ sale cho từng nhóm; phản ví dụ: ngành có khách nhỏ lớn nhanh (startup) thì xếp theo tốc độ tăng." },
+        { "sev": "P2", "where": "Q3", "quote": "Doanh thu trung bình mỗi khách trong 400 khách còn lại là bao nhiêu triệu?", "issue": "Phép tính hai bước đơn giản, trong khi ví dụ đã có phép tính hay hơn (tập trung lãi 67% vs doanh thu 80%).", "fix": "Hỏi: tỉ lệ lãi của nhóm lớn trên tổng lãi (0,5/0,75 = 66,7%) và so với 80% doanh thu — L4." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (4.000 − 3.200)/400 = 2 triệu ✓; sai 8 (3.200/400) ✓, 1,6 (800/500) ✓. Ví dụ: 3,2/4 = 80%; 0,5/(0,5+0,25) = 66,7% ✓; 5 triệu vs 0,625 triệu → 8 lần ✓; biên 15,6% vs 31,25% khớp Q5 '16%' và '31%'." },
+      "claims": [
+        { "claim": "Quy tắc 80/20 (Pareto) — 'không nhất thiết đúng 80/20; có khi 70/30, 90/10'", "status": "unverified", "note": "Trình bày đúng là quy luật kinh nghiệm, có hedge; không dẫn nguồn, chấp nhận được với khái niệm nền." },
+        { "claim": "Nhà phân phối văn phòng phẩm Hà Nội, 500 khách, 3,2 tỉ/4 tỉ; chiết khấu 15%, lãi 0,5 tỉ / 0,25 tỉ", "status": "illustrative-labelled", "note": "Phần lãi ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Ví dụ có lát cắt thứ hai (xếp theo lãi) làm đổi mức tập trung từ 80% xuống 67% nhưng không đổi quyết định — đúng chuẩn 'tình huống thứ hai'. Q5 buộc đọc biên lãi vs lãi tuyệt đối; Q7 nhắc 80/20 là ảnh chụp, khách nhỏ đang lớn là tín hiệu.",
+      "upgrade": "Để ≥85: (1) cân phương án Q4; (2) thêm Đào sâu về chi phí phục vụ theo giờ và Phản ví dụ về xếp theo tiềm năng; (3) đổi Q3 sang tính tỉ lệ lãi tập trung; (4) thêm câu L6: thiết kế quy tắc nâng/hạ hạng khách theo quý (ngưỡng tăng đơn, số lần)."
+    },
+    {
+      "id": "B:gt04-05",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L4", "L3", "L3", "L3", "L5", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q1, Q5, Q6", "quote": "Bộ hướng dẫn rất cần; nhận thêm thì ra mắt chậm 2 ngày. Chị dùng tạm 8 ảnh có sẵn, mình làm bộ mới sau ra mắt", "issue": "Ở cả ba câu Q1, Q5, Q6 đáp án đúng là phương án dài nhất (vì phải chứa đủ 'ghi nhận – cái giá – lựa chọn'); người học học được mẹo 'chọn câu đủ ba mảnh = dài nhất' thay vì phán đoán.", "fix": "Viết phương án sai cũng đủ dài và đủ ba mảnh nhưng sai cái giá hoặc sai mốc (ví dụ hẹn 'khi nào rảnh', hoặc cái giá nói bằng giờ của đội thay vì bằng ngày trễ của người nghe)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "nhận thêm thì ra mắt trễ khoảng 2 tuần", "issue": "Bộ ảnh Tết cho 5 đại lý → trễ 2 tuần không có phép suy (số ngày công, ai làm, đường tới hạn); bài dạy 'nói cái giá bằng số' nhưng số không truy được.", "fix": "Ghi: bộ ảnh ≈ 10 ngày công của người duy nhất biết chụp, người này đang nằm trên đường tới hạn ra mắt → trễ ≈ 2 tuần." },
+        { "sev": "P2", "where": "Q3", "quote": "80% giờ đang dành cho đợt ra mắt", "issue": "Dữ kiện 80% chỉ xuất hiện trong câu hỏi, không có trong tình huống/ví dụ; phép tính tách rời bài.", "fix": "Đưa 80%/96 giờ vào ví dụ như phép tính minh hoạ cho câu 'Podcast cần khoảng 10 giờ mỗi tuần. Anh muốn đổi lấy việc gì'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3 × 40 = 120; 80% = 96; 120 − 96 = 24; 24 − 10 = 14 giờ ✓; sai 24 (quên podcast) ✓, 30 (3×10) ✓." },
+      "claims": [
+        { "claim": "Thương hiệu đồ gia dụng, đội 3 người, ra mắt nồi chiên trong 6 tuần", "status": "illustrative-unlabelled", "note": "Tình huống dựng, số ít." }
+      ],
+      "strengths": "Cấu trúc ba mảnh (ghi nhận – cái giá – lựa chọn) và phần xử lý 'đây là lệnh' (nhận lệnh, đưa hai phương án kèm hệ quả bằng văn bản) là kỹ năng nghề thật; Phản ví dụ (khi việc người khác chặn việc mình) đúng chỗ. Q1 thiết kế mỗi phương án sai thiếu đúng một mảnh.",
+      "upgrade": "Để ≥85: (1) viết phương án sai dài ngang đáp án ở Q1/Q5/Q6; (2) dẫn phép suy cho 'trễ 2 tuần' và đưa 80%/96 giờ vào ví dụ; (3) thêm một câu L6: soạn email 5 dòng ghi lại hai phương án kèm hệ quả cho sếp tổng; (4) thêm 'danh sách yêu cầu đã dời' làm bài thực hành có đầu ra."
+    },
+    {
+      "id": "B:gt04-06",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 16, "examples": 11, "pedagogy": 7, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L2", "L3"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q5", "quote": "Bốn kênh mỏng nghĩa là không kênh nào đủ đánh giá, đủ đơn để thuật toán đẩy", "issue": "Lời giải nêu cơ chế thuật toán sàn ('đủ đơn để thuật toán đẩy') như sự thật, không nguồn, không gắn nhãn; đây là khẳng định về nền tảng thuộc loại fast.", "fix": "Sửa thành 'không kênh nào đủ đơn và đánh giá để tự chạy; cách sàn xếp hạng thay đổi, tra trang chính thức' hoặc bỏ mệnh đề thuật toán." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Đừng cãi \"không kịp\"; hãy cho sếp thấy phép tính", "issue": "Thiếu Vì sao – Phản ví dụ – Đào sâu; không nói khi nào kịch bản không giải được (sếp từ chối chọn, hoặc ước giờ của đội bị nghi là thổi phồng) và không nói cách bảo vệ ước lượng ±20%.", "fix": "Thêm phản ví dụ: sếp nói 'ước giờ cao quá' → đưa dữ liệu giờ thật của 2 dự án gần nhất; đào sâu về đệm 100 giờ (10%) có đủ với sai số ±20% không (không đủ: 860 × 1,2 = 1.032 > 960)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Kịch bản C: làm hết, thuê agency khoảng 540 giờ, ước 180 triệu", "issue": "Đơn giá 333.000 đ/giờ không nêu; và thuê ngoài 540 giờ vẫn tốn giờ quản lý của đội (Q4 lời giải tự nói) nhưng kịch bản C không trừ phần này.", "fix": "Ghi đơn giá minh hoạ và cộng ~10% giờ quản lý vào kịch bản C." },
+        { "sev": "P2", "where": "CÂU HỎI", "quote": "Q6 Việc quan trọng nhất cần làm ngay sau cuộc họp là gì?", "issue": "Q1, Q4, Q6 là nhận lại ý bài; không câu nào bắt dựng kịch bản từ bảng giờ cho sẵn.", "fix": "Cho bảng 5 hạng mục × giờ và năng lực 700 giờ, yêu cầu chọn kịch bản 'tập trung doanh thu' và tính giờ dư (L4/L6)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 4 × 20 × 12 = 960; 1.500 − 960 = 540 ✓; sai 1.420 (trừ 80) và 1.260 (trừ 240) ✓. Ví dụ: A = 250+250+270+90 = 860, dư 100 ✓; B = 300+500+90 = 890 ✓; Q2: 540/240 = 2,25 người ✓." },
+      "claims": [
+        { "claim": "Mỹ phẩm thuần chay, 5 hạng mục 1.500 giờ, đội 960 giờ/quý, sai số ±20%", "status": "illustrative-labelled", "note": "Ghi '(số minh hoạ, sai số ±20%)'." },
+        { "claim": "Sàn TMĐT cần 'đủ đơn để thuật toán đẩy'", "status": "unverified", "note": "Cơ chế nền tảng không nguồn trong lời giải Q5." }
+      ],
+      "strengths": "Phép tính công khai (1.500 cần / 960 có / thiếu 540) và ba kịch bản ghi rõ làm gì – bỏ gì – rủi ro của việc hoãn ('trang cũ vẫn chuyển đổi 1,8%') là mẫu trình bày dùng được ngay. Q2 quy 540 giờ thành '2,25 người cả quý' là cách nói sếp hiểu.",
+      "upgrade": "Để ≥85: (1) sửa lời giải Q5 bỏ khẳng định thuật toán; (2) thêm Vì sao/Phản ví dụ/Đào sâu, trong đó chỉ ra đệm 100 giờ không đủ cho ±20%; (3) thêm câu dựng kịch bản từ bảng (L6); (4) nêu đơn giá và giờ quản lý cho kịch bản C."
+    },
+    {
+      "id": "B:gt04-07",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q3", "quote": "có thêm 20% quay lại so với khi không nhắc. Sau 6 tháng chạy, tổng cộng có bao nhiêu lịch hẹn quay lại?", "issue": "'Thêm 20% so với khi không nhắc' đọc được hai cách: +20 điểm % trên 200 người được nhắc (40 lịch, đáp án) hoặc +20% tương đối trên số tự quay lại (không tính được vì thiếu nền). Đề không chốt; người hiểu đúng khái niệm 'tương đối vs điểm %' (bài 03-01, 03-04) lại dễ trượt.", "fix": "Viết: 'trong 200 người được nhắc, có thêm 40 người (20 điểm %) quay lại so với nhóm không nhắc'." },
+        { "sev": "P1", "where": "Q6", "quote": "Lãi gộp giảm cỡ 35%: mỗi suất còn lãi 20 thay vì 40, bán nhiều hơn 30% vẫn không bù", "issue": "Đáp án dài nhất và tự chứa lời giải; ba phương án kia ngắn. Dù nội dung câu rất tốt (L4), hình thức cho đoán.", "fix": "Rút a thành 'Lãi gộp giảm khoảng 35% so với không giảm giá' và chuyển phép tính vào lời giải; viết c/b dài tương đương." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "mỗi tháng nhắc 200 người và có thêm 20% quay lại so với khi không nhắc (đã trừ phần vẫn tự quay lại)", "issue": "Mức tăng 20 điểm % không nêu nguồn/giả định; chi phí xây hệ thống 6 tuần và chi phí nhắc không được trừ khỏi 60 triệu, trong khi ưu đãi được tính lãi ròng — so không cùng chuẩn.", "fix": "Thêm chi phí xây (ví dụ 120 giờ × đơn giá) và chi phí tin nhắn vào cột hệ thống nhắc; gắn nhãn 20 điểm % là giả định cần đo bằng nhóm không nhắc." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Dùng quick win để mua niềm tin", "issue": "Thiếu Vì sao – Phản ví dụ – Đào sâu; không nói khi nào quick win là đúng chiến lược (dòng tiền đang âm) hay khi nào ưu đãi 99.000 làm hại giá tham chiếu.", "fix": "Thêm phản ví dụ: phòng khám mới mở cần dòng tiền → quick win chiếm 70% là đúng; đào sâu về giá tham chiếu." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 200 × 20% = 40; × 6 = 240 ✓ (với cách đọc 'điểm %'). Ví dụ: 60 × 20.000 = 1,2 triệu ✓; 40 × 250.000 = 10 triệu ✓; 6 tháng 60 triệu vs ưu đãi 2 lần 2,4 triệu ✓. Q6: giá 100 vốn 60 lãi 40 → giá 80 lãi 20 → 20 × 1,3 = 26; 26/40 = 0,65 → giảm 35% ✓; hoà lãi cần +100% suất ✓." },
+      "claims": [
+        { "claim": "Nha khoa Cần Thơ: 60 lịch/2 tuần ưu đãi, lãi 20.000/lịch; 1.200 bệnh nhân cũ; lãi 250.000/lịch", "status": "illustrative-labelled", "note": "Ghi '(số minh hoạ)' ở hai chỗ." }
+      ],
+      "strengths": "Ví dụ so hai thước (đếm lịch vs đếm lãi) cho kết luận ngược nhau — đúng kiểu 'tình huống thứ hai làm đổi kết luận'. Q6 (giảm 20% giá, lãi 40%, +30% suất vẫn lỗ 35%) là câu tính lãi gộp thiết thực mà nhiều người làm thật tính sai.",
+      "upgrade": "Để ≥85: (1) chốt cách đọc 20 điểm % ở Q3 và ví dụ; (2) cân độ dài Q6; (3) cộng chi phí xây/nhắc vào cột hệ thống; (4) thêm Vì sao/Phản ví dụ/Đào sâu (dòng tiền, giá tham chiếu); (5) thay Q7 (L2) bằng câu L6: đặt mốc 2 tuần nào cho hệ thống nhắc để báo được số sớm."
+    },
+    {
+      "id": "B:gt04-08",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L2", "L6"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM ↔ VÍ DỤ", "quote": "Tìm khách mới: chi phí có khách ÷ số đơn họ mua… Tìm khách mới tốn 250.000 cho một đơn đầu", "issue": "Khái niệm bảo chia chi phí có khách cho số đơn họ mua, nhưng ví dụ và Q2 so 125.000/đơn thêm với 250.000 'cho một đơn đầu' — không áp công thức của chính bài (với 25% mua lại ít nhất một lần, ≈ 200.000/đơn). Kết luận không đổi nhưng chênh lệch thật là 125 vs ~200, không phải 'bằng nửa'.", "fix": "Tính đúng theo khái niệm: 250.000 ÷ 1,25 ≈ 200.000/đơn (giả định mua lại 1 lần), rồi so với 125.000; sửa Q2 phương án a 'chỉ bằng nửa' cho khớp." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "kèm mã giảm 10%, tốn khoảng 10 triệu/tháng cho 800 khách cũ", "issue": "Không nói 10 triệu đã gồm tiền giảm giá cho 280 đơn mua lại (cả 200 đơn vốn tự mua) hay chưa; nếu chưa, chi phí mỗi đơn thêm cao hơn 125.000 đáng kể.", "fix": "Ghi rõ: 10 triệu = tin nhắn/email + tổng giảm giá trên 280 đơn; hoặc tách hai dòng." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Thử 2 tháng: tỉ lệ mua lại từ 25% lên 35%", "issue": "So trước–sau không có nhóm đối chứng, trong khi Q7 và Đào sâu nói đối chứng mới đáng tin; ví dụ không tự thực hành điều bài dạy.", "fix": "Viết ví dụ theo thiết kế có nhóm chừa: 600 nhận nhắc mua lại 35%, 200 không nhắc 26% → đơn thêm = 600 × 9% = 54." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 800 × (35% − 25%) = 80 đơn; 10.000.000 ÷ 80 = 125.000 ✓; sai 35,7 = 10tr/280 ✓; 12,5 = 10tr/800 ✓. Q4: 280 đơn = 800 × 35%; 200 tự mua = 800 × 25%; 250/35,7 ≈ 7 lần ✓; 125/36 ≈ 3,5 ('gấp ba') ✓." },
+      "claims": [
+        { "claim": "Cà phê hạt rang online, 50 triệu/tháng, CAC 250.000, mua lại 25% → 35%", "status": "illustrative-unlabelled", "note": "Không ghi 'minh hoạ'." },
+        { "claim": "'Giữ rẻ hơn tìm' là khẩu hiệu (Q5 lời giải)", "status": "unverified", "note": "Bài bác đúng một benchmark phổ biến không nguồn — điểm cộng về độ chính xác." }
+      ],
+      "strengths": "Dạy đúng 'đơn tăng thêm' làm mẫu số (Q3, Q4) và bác khẩu hiệu 'giữ rẻ hơn tìm' bằng tình huống gym 80% gia hạn (Q5). Q7 là câu thiết kế đo lường (nhóm chừa) — L6 hiếm có trong module.",
+      "upgrade": "Để ≥85: (1) áp công thức của khái niệm cho khách mới (≈200.000/đơn) và sửa Q2; (2) nói rõ 10 triệu gồm gì; (3) viết lại ví dụ theo thiết kế nhóm chừa; (4) gắn nhãn minh hoạ; (5) thêm câu L5: chuyển 10 hay 20 triệu khi 800 khách cũ có trần — biện hộ bằng đơn thêm giảm dần."
+    },
+    {
+      "id": "B:gt04-09",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L3", "L3", "L3", "L2", "L3", "L3", "L3"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tuần 6–10 là thu hoạch — 80% ngân sách quảng cáo", "issue": "Tỉ lệ 80% ngân sách cho 5 tuần không có cơ sở (năm trước phân bổ thế nào, đơn đặt sớm chiếm bao nhiêu); Phản ví dụ chính bài nói có thể quá muộn, nhưng ví dụ không nêu cách quyết tỉ lệ.", "fix": "Dẫn từ dữ liệu năm trước: 30% đơn (doanh nghiệp) chốt trước tuần 6 → đưa 25–30% ngân sách lên pha chuẩn bị; gắn nhãn minh hoạ." },
+        { "sev": "P2", "where": "CÂU HỎI", "quote": "Q4 Vì sao chăm khách doanh nghiệp nên nằm ở pha chuẩn bị", "issue": "Bảy câu đều L2–L3 phân pha; không câu nào đọc số đơn theo tuần (tín hiệu Đào sâu nêu) hay quyết định kéo ngân sách lên sớm.", "fix": "Cho bảng đơn đặt sớm theo tuần năm nay vs năm trước (tuần 3: 40 vs 15), hỏi có kéo ngân sách lên không và bao nhiêu (L4/L5)." },
+        { "sev": "P2", "where": "VÌ SAO HIỆU QUẢ", "quote": "Khách doanh nghiệp thường quyết định sớm hơn khách lẻ", "issue": "Nhận định chung không nguồn, không điều kiện (quà Tết doanh nghiệp thường chốt sớm vì duyệt ngân sách, nhưng doanh nghiệp nhỏ mua sát ngày).", "fix": "Thêm điều kiện 'doanh nghiệp có quy trình duyệt' và dẫn dữ liệu năm trước của chính thương hiệu." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2.000 × 70% = 1.400; ÷ 5 = 280 triệu ✓; sai 1.400 (quên chia) ✓; 38,5 = 2.000/52 ✓ (sai mẫu số)." },
+      "claims": [
+        { "claim": "Bánh trung thu handmade TP.HCM, 70% doanh thu trong 5 tuần, năm trước 2 tỉ", "status": "illustrative-unlabelled", "note": "Số tự khớp; không ghi 'minh hoạ'." },
+        { "claim": "Khách doanh nghiệp quyết định sớm hơn khách lẻ", "status": "unverified", "note": "Có 'thường'; không nguồn." }
+      ],
+      "strengths": "Khung ba pha (chuẩn bị – thu hoạch – sau mùa) kèm nguyên tắc 'trong mùa chỉ sửa chỗ cản đơn' (Q2) là thực hành đúng; Phản ví dụ (pha chuẩn bị chính là pha bán với khách doanh nghiệp) và Đào sâu (giữ 1–2 việc nền trong pha chuẩn bị) cân được đánh đổi.",
+      "upgrade": "Để ≥85: (1) suy tỉ lệ ngân sách theo pha từ dữ liệu năm trước; (2) thêm câu đọc bảng đơn theo tuần và quyết định kéo ngân sách (L4–L5); (3) thêm điều kiện cho nhận định về khách doanh nghiệp; (4) gắn nhãn minh hoạ; (5) thêm bài thực hành: lịch 10 tuần có đánh pha cho 6 việc."
+    },
+    {
+      "id": "B:gt04-10",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "TÌNH HUỐNG ↔ Q3", "quote": "1.500 người bấm đăng ký, chỉ 360 điền xong… Trước khi rút form, 12% hoàn tất", "issue": "Hai mẫu số dùng xen nhau: 12% là trên 3.000 lượt vào, 76% bỏ là trên 1.500 người bắt đầu form (360/1.500 = 24% hoàn tất). Không sai nhưng dễ làm người học lẫn 'hoàn tất' đo trên ai.", "fix": "Ghi rõ ở Q3 'hoàn tất trên tổng lượt vào trang' và ở ví dụ '76% người bắt đầu form'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "nếu hoàn tất lên 18%, số người tới bước đánh giá tăng từ 360 lên 540", "issue": "Mức 18% là giả định không nêu cơ sở (vì sao không phải 14% hay 24%); ngưỡng thắng của phép thử A không được ghi trước như bài 03-02 dạy.", "fix": "Ghi 'ngưỡng thắng ghi trước: ≥ 15% hoàn tất; 18% là kịch bản minh hoạ'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Khi hoà điểm, thử cái cho đáp án sớm hơn", "issue": "Thiếu Vì sao – Phản ví dụ – Đào sâu; không nói khi nào tiêu chí 'sớm hơn' sai (A sớm nhưng kết quả không chuyển được sang quyết định lớn) hay chi phí của việc đổi một biến mỗi lần khi lượt vào chỉ 3.000/2 tuần.", "fix": "Thêm phản ví dụ: A cho đáp án sớm nhưng B là giả định mà kế hoạch KOL 200 triệu dựa vào → tiêu chí 'sai thì hại hơn' thắng; đào sâu về cỡ mẫu 2×2 (đã hé ở Q6)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3.000 × 18% − 3.000 × 12% = 540 − 360 = 180 ✓; sai 540 (lấy tổng sau) ✓, 6 (điểm %) ✓. ICE: 5×6×7 = 210, 8×5×5 = 200 ✓; 1.140/1.500 = 76% ✓; Q6: 3.000/4 = 750 ✓." },
+      "claims": [
+        { "claim": "App tiếng Anh trẻ em: 3.000 lượt/2 tuần, 1.500 bấm, 360 điền xong", "status": "illustrative-labelled", "note": "Ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Ba tiêu chí phá hoà (đáp án sớm hơn – sai thì hại hơn – mở khoá cái kia) cộng 'đảo ngược được' và cảnh báo 'đừng cộng điểm lần hai' là nội dung ít thấy. Ví dụ tính được thời gian có đáp án (2,5 vs 5 tuần) và hiệu ứng mở khoá (360 → 540 mẫu cho B); Q6 nhắc cỡ mẫu 2×2.",
+      "upgrade": "Để ≥85: (1) thống nhất mẫu số hoàn tất; (2) ghi ngưỡng thắng trước cho phép thử A; (3) thêm Vì sao/Phản ví dụ/Đào sâu như gợi ý; (4) thay Q4 (L2) bằng tình huống: B là giả định của kế hoạch KOL lớn → tiêu chí nào thắng (L5)."
+    }
+  ],
+  "module_notes": {
+    "progression": "Chuỗi đi từ công cụ xếp việc (01 ma trận, 02 ICE/RICE) → khái niệm chi phí cơ hội (03) → xếp khách 80/20 (04) → giao tiếp ưu tiên với người xin việc (05) và với sếp (06) → chọn quick win vs nền tảng (07) → phân bổ giữ/tìm (08) → thời điểm theo mùa (09) → phá hoà hai giả thuyết (10). Hợp lý; 10 nối ngược về 02 (ICE) và về module gt03. Độ sâu lệch: 02, 03, 05, 08, 09 có đủ Vì sao – Phản ví dụ – Đào sâu; 01, 04, 06, 07, 10 chỉ có khái niệm + ví dụ.",
+    "overlap": [
+      "04-05 và 04-06 cùng dạy 'nêu cái giá và đưa lựa chọn thay cho từ chối' — 06 là bản mở rộng cấp sếp của 05; có thể gộp hoặc để 06 tập trung vào ước lượng giờ và sai số.",
+      "04-02 và 04-10 cùng dùng ICE; 04-10 Q1 lặp cảnh báo 'đếm trùng' đã ngầm có ở 04-02.",
+      "Ý 'thử nhỏ để mua Confidence' lặp ở 04-02 (phản ví dụ, Q2, Q6) và 04-10, và trùng gt03-07.",
+      "Ba phương án 'chờ tuyển đủ người' (04-06 Q5, 04-07 Q2) là cùng một mồi sai."
+    ],
+    "gaps": [
+      "Giá trị vòng đời khách (LTV) chưa được dạy nhưng 04-08 cần nó để so giữ/tìm cho đúng (khái niệm nhắc 'chia cho số đơn họ mua' rồi không dùng).",
+      "Chi phí chìm (sunk cost) đối lập với chi phí cơ hội — 04-07 Q5 ('bốn tháng đã đầu tư; bỏ ngang là mất tất cả') đang lập luận gần với ngụy biện chi phí chìm mà không có bài giải thích.",
+      "Ước lượng công sức: cách ước giờ (so với dự án cũ, chia nhỏ, đệm theo sai số) chỉ được nhắc một dòng ở 04-06.",
+      "Tiêu chí dừng/hoãn dự án nền tảng giữa chừng (kill criteria) không có, dù 04-07 Q5 đặt đúng tình huống."
+    ],
+    "best_lesson": "B:gt04-08",
+    "weakest_lesson": "B:gt04-01"
+  }
+}

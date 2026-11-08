@@ -1,0 +1,50 @@
+{
+ "mod": "tn03",
+ "lessons": [
+  {
+   "id": "B:tn03-03",
+   "title": "Đổi tiêu đề hay đổi ảnh chính trước?",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Shop chạy cùng tuần trên hai mẫu giày gần như giống hệt nhau (hoặc dùng công cụ thử của sàn nếu có), giữ nguyên tiêu đề, chỉ khác ảnh chính",
+     "issue": "Thiết kế thử trong ví dụ không cô lập được biến: hai sản phẩm khác nhau (giá, lịch sử bán, đánh giá, vị trí tìm kiếm) nên chênh CTR 1,5% vs 2,4% không quy được cho ảnh. Bài vừa dạy 'mỗi lần đổi một yếu tố' rồi tự vi phạm mà không gọi tên đó là điểm yếu.",
+     "fix": "Hoặc đổi ví dụ sang chạy hai ảnh làm hai quảng cáo tìm kiếm/hiển thị cùng sản phẩm, cùng lúc; hoặc giữ nhưng ghi rõ 'đây là so sánh thô, cần đảo ảnh giữa hai mẫu tuần sau (A↔B) để trừ khác biệt sản phẩm'."
+    }
+   ],
+   "upgrade": "Sửa thiết kế ví dụ (cùng sản phẩm hoặc đảo ảnh); dùng ±2√k cho nhất quán; gắn src/ngày kiểm cho hai khẳng định về sàn; bổ sung ba phần cấu trúc; thêm một câu L5 'đổi ảnh có thể làm giảm tỉ lệ đặt sau bấm (ảnh hứa quá) — có chấp nhận không'."
+  },
+  {
+   "id": "B:tn03-07",
+   "title": "Quảng cáo thắng về click có đang làm hại thương hiệu?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "họ khảo sát nhanh 300 khách: người thấy chủ yếu bản khuyến mãi nhớ thương hiệu là \"hay giảm giá\"; người thấy bản kể chuyện nhớ \"thảo dược, dịu nhẹ\"",
+     "issue": "Bằng chứng bị nhiễu bởi cách nhắm: bản khuyến mãi chỉ chạy cho 'người đã xem hoặc vào trang', bản kể chuyện cho tệp rộng — hai nhóm vốn khác nhau (đã quan tâm vs chưa), nên khác biệt trí nhớ không quy được cho creative. Đây đúng là lỗi chọn nhóm mà tn02-02 dạy; bài dùng nó làm bằng chứng kết luận.",
+     "fix": "Đổi ví dụ thành đo kiểu brand lift: trong cùng tệp rộng, giữ một nhóm ngẫu nhiên không thấy bản khuyến mãi, so câu trả lời 'nghĩ đến gì đầu tiên' giữa hai nhóm; hoặc ghi rõ 'khảo sát này chỉ gợi ý, chưa tách được ảnh hưởng của tệp nhắm'."
+    }
+   ],
+   "upgrade": "Sửa ví dụ đo thương hiệu bằng nhóm đối chứng ngẫu nhiên và cho số; thay Q3 bằng câu kinh tế của bản giảm 50%; hedge khẳng định nền tảng; thêm câu 'cần kiểm quy định khuyến mại' có nhãn; nối rõ với tn02-02 (chia ngẫu nhiên) để tránh lỗi chính bài đang mắc."
+  },
+  {
+   "id": "B:tn03-08",
+   "title": "Cả phòng thích bản A, khách lại chọn bản B?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Điểm treo B bán trung bình 460 que mỗi ngày, điểm treo A 400 que. … Chủ chuỗi in B cho toàn hệ thống",
+     "issue": "Kết luận từ 3 điểm so với 3 điểm, không có mức bán trước khi treo của từng điểm và không có độ lệch giữa các điểm. Chênh 15% giữa hai nhóm 3 cửa hàng rất dễ nằm trong khác biệt sẵn có của cửa hàng (phản ví dụ chính bài thừa nhận). Thiếu giả định 'điểm tương đương đã kiểm bằng doanh số trước' làm kết luận có thể đổi; bài 02 của tn01 dạy đúng cách này nhưng ví dụ không áp dụng.",
+     "fix": "Thêm số nền: '4 tuần trước, hai nhóm bán 410 và 405 que/ngày; sau treo: 460 vs 400' và/hoặc đảo poster giữa hai nhóm ở tuần 3–4 (crossover) rồi đọc chênh trung bình."
+    }
+   ],
+   "upgrade": "Thêm mức bán nền và/hoặc đảo poster để kết luận đứng vững; thay Q3 bằng câu diff-in-diff; gắn nhãn số; thêm câu L5: in B toàn hệ thống hay thử thêm 6 điểm nữa khi chênh 15% trên 3 vs 3."
+  }
+ ]
+}

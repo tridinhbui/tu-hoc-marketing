@@ -1,0 +1,80 @@
+{
+ "mod": "kn07",
+ "lessons": [
+  {
+   "id": "B:kn07-01",
+   "title": "Ngân sách năm sau nên là 5% doanh thu hay con số khác?",
+   "total": 63,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "9 triệu lượt hiển thị có chất lượng, cộng sampling tại cửa hàng mới, tổng khoảng 3 tỉ",
+     "issue": "Con số then chốt (CPM 250.000đ cho Hà Nội, 1,5 triệu người, 6 lần) không được gắn nhãn minh hoạ và không nói CPM này là kênh gì; 250.000đ/CPM cao hơn hẳn mức số thường gặp nên người học có thể tưởng là chuẩn thị trường.",
+     "fix": "Thêm 'số minh hoạ' và một dòng: '1,5 triệu người × 6 lần = 9 triệu lượt; với CPM giả định 250.000đ (kênh video/OOH) → 2,25 tỉ; sampling ~0,75 tỉ'. Nhắc rằng CPM phụ thuộc kênh, xin báo giá hiện hành."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm 'Vì sao hiệu quả', 'Phản ví dụ' (ví dụ: ngành phân phối bão hoà, % doanh thu lại là mốc hợp lý vì nhiệm vụ không đổi) và 'Đào sâu' (ngân sách theo mục tiêu cần giả định CPM, tần suất hiệu dụng — nêu cách lấy); (2) gắn nhãn minh hoạ mọi số và tách bảng nhiệm vụ–chi phí 3 dòng; (3) thay Q4, Q7 (L2) bằng câu đọc bảng ngân sách 2 kịch bản và chọn kịch bản với lý do; (4) nối rõ sang kn07-03 (reach × tần suất) và kn07-02 (so với SOV đối thủ ở Hà Nội)."
+  },
+  {
+   "id": "B:kn07-02",
+   "title": "Chi nhiều hơn thị phần bao nhiêu thì đủ để lớn?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Quy tắc kinh nghiệm hay được nhắc (Binet và Field, IPA): mỗi +10 điểm ESOV tương ứng khoảng +0,5 điểm thị phần mỗi năm",
+     "issue": "Benchmark nghiên cứu nêu tên tác giả nhưng không có `src` (link, năm, ngày kiểm). Theo thang, kiến thức periodic bắt buộc có nguồn và ngày kiểm.",
+     "fix": "Thêm src: Binet & Field, 'Marketing in the Era of Accountability' / IPA Databank (2007) hoặc Jones (1990) 'Ad spending: growing market share', kèm ngày kiểm và câu 'hệ số dao động theo ngành, thương hiệu lớn thường cần ít ESOV hơn'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src cho quy tắc IPA kèm ngày kiểm; (2) thêm 'Phản ví dụ' (thương hiệu dẫn đầu ESOV âm nhẹ vẫn giữ thị phần nhờ phân phối — khi nào ESOV không giải thích) và 'Đào sâu' (ESOV theo nhóm khách/kênh, chất lượng sáng tạo nhân hệ số); (3) ví dụ bổ sung dòng chi phí: 30 tỉ thay 16 tỉ đổi lấy ~0,3 điểm thị phần ≈ bao nhiêu doanh thu, để người học ra quyết định đáng/không đáng; (4) thêm một câu L6: thiết kế cách theo dõi SOV quý (nguồn số, tần suất, ngưỡng cảnh báo)."
+  },
+  {
+   "id": "B:kn07-05",
+   "title": "Chạy đều 12 tháng hay dồn vào vài đợt?",
+   "total": 66,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Tức 85% tiền cho mùa có 70% doanh số: lệch có chủ ý, vì đó là lúc khách quyết định mua và giá mua đắt lên",
+     "issue": "Lý do 'giá mua đắt lên' đi ngược chiều: nếu CPM mùa nắng tăng 25% thì 1,7 tỉ chỉ mua được 1,36 tỉ giá thường, tức phần hiển thị thực mùa nắng chỉ ≈ 8,16/(8,16+1,8) = 82%, không phải 85%; bài dùng giá đắt làm lý do dồn tiền nhưng chính giá đắt làm phần hiển thị thật thấp hơn tỉ lệ tiền. Người học sẽ không phân biệt được 'tỉ lệ tiền' và 'tỉ lệ hiển thị'.",
+     "fix": "Tách hai con số: 85% tiền ≈ 82% lượt hiển thị quy đổi; nói rõ lý do dồn là nhịp mua, còn giá cao là chi phí phải chịu (và là lý do cân nhắc 'nền' ngoài mùa rẻ hơn)."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa đoạn 85% vs 82% như trên; (2) thêm 'Vì sao hiệu quả', 'Phản ví dụ' (ngân sách nhỏ → dồn đợt), 'Đào sâu' (phân bố 12 cột theo doanh số tháng, điều kiện bão hoà đo bằng gì); (3) thêm bảng 12 tháng × (doanh số %, tiền %, CPM hệ số) để người học tự chia; (4) đổi Q1/Q6 (L2) thành câu đọc bảng doanh số 3 năm và quyết định tháng nào đẩy (L4)."
+  },
+  {
+   "id": "B:kn07-06",
+   "title": "Hãng nhỏ 2 tỉ đối đầu hãng lớn 50 tỉ thì chi vào đâu?",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÌ SAO HIỆU QUẢ (1)",
+     "quote": "Tiếng nói chỉ có tác dụng khi vượt một ngưỡng để người ta nhận ra. Dưới ngưỡng đó, tiền chi vẫn nằm trong báo cáo nhưng không để lại gì trong trí nhớ khách",
+     "issue": "Hiệu ứng ngưỡng nêu như luật phổ quát, không có nguồn, không có điều kiện; mâu thuẫn một phần với kn07-03 (reach có giá trị ở tần suất thấp) và với quan điểm 'không có ngưỡng, hiệu ứng cận biên giảm dần'.",
+     "fix": "Viết mềm: 'Dưới một mức hiện diện nhất định, hiệu quả trên mỗi đồng thường thấp vì không đủ tần suất để nhớ và bị át bởi hãng lớn' và nối sang kn07-03."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) mềm hoá 'ngưỡng' và nối với kn07-03; (2) thêm bảng 3 chiến trường ứng viên (chi đối thủ ước, SOV nếu dồn, quy mô khách) để thực hiện ngay 'phép kiểm tra trong tuần'; (3) nêu cách ước chi đối thủ theo vùng; (4) thay Q4/Q7 bằng câu so hai chiến trường và câu L6 'đo gì sau 6 tháng ở Cần Thơ để xin mở rộng' (nhận biết, thị phần cửa hàng, doanh số/điểm bán)."
+  },
+  {
+   "id": "B:kn07-08",
+   "title": "Sếp muốn cắt 30% ngân sách quảng cáo — bạn nói gì?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q7 c (lời giải)",
+     "quote": "Hai chỉ số này thường báo trước khi thị phần kịp tụt",
+     "issue": "Khẳng định share of search là chỉ báo dẫn trước thị phần là kết quả nghiên cứu (Binet, IPA 2020) nêu như sự thật, không nguồn, không điều kiện (chỉ đúng với ngành có hành vi tìm kiếm thương hiệu).",
+     "fix": "Thêm src (Les Binet, 'Share of Search as a predictor of market share', IPA/EffWorks 2020) với ngày kiểm, và câu 'áp dụng khi khách có tìm tên thương hiệu; bột giặt mua ở siêu thị thì tín hiệu yếu hơn, nên kèm nhận biết'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) đưa 110 tỉ và bảng 3 phương án vào phần đọc; (2) thêm src cho share of search và điều kiện áp dụng; (3) thay Q6 bằng câu đọc bảng 4 kênh và chọn kênh cắt (L4); (4) thêm câu về đối thủ cũng cắt (ngành 110 → 95): SOV mới là bao nhiêu, kết luận đổi không — dạy giả định về đối thủ mà Đào sâu đã nêu."
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "mod": "kn06",
+ "lessons": [
+  {
+   "id": "B:kn06-01",
+   "title": "Vì sao cùng một quảng cáo mà tuần này đắt gấp rưỡi tuần trước?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Meta, Google, TikTok không bán chỗ theo bảng giá cố định … nền tảng còn cộng điểm cho quảng cáo có khả năng được bấm, được xem, được đánh giá tốt",
+     "issue": "Cơ chế đấu giá của ba nền tảng nêu như sự thật hiện hành, không có src, không ngày kiểm, không câu 'nếu tài liệu chính thức khác, tin tài liệu'. Loại fast bắt buộc nguồn.",
+     "fix": "Thêm src: Meta 'About ad auctions' (Business Help Center), Google Ads 'How the ad auction works', TikTok 'Ad auction' với ngày kiểm; ghi rõ công thức tổng giá trị chỉ là mô tả nguyên lý."
+    },
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "Shop A thắng đấu giá nhiều hơn và thường trả CPM thấp hơn",
+     "issue": "Khẳng định định lượng về kết quả đấu giá ('thường trả CPM thấp hơn') nêu như quy luật, không nguồn; thực tế CPM còn phụ thuộc tệp và vị trí, quảng cáo CTR cao có thể được phân phối vào phiên đắt hơn (chính bài 06 nói điều này ở video B). Hai bài trong module nói hai chiều mà không nối.",
+     "fix": "Sửa thành 'cần giá thầu thấp hơn để thắng cùng một phiên' và thêm điều kiện 'cùng tệp, cùng vị trí'; nối sang kn06-06 ví dụ video B."
+    }
+   ],
+   "upgrade": "Thêm src với ngày kiểm cho cơ chế đấu giá ba nền tảng. Sửa Q5 thành khẳng định có điều kiện. Thêm Phản ví dụ (mùa sale CPM tăng mà CTR/CVR không tăng) và Đào sâu (chuỗi chỉ hợp lệ khi so cùng mục tiêu tối ưu; nhiễu khi CVR tính trên vài chục đơn). Gắn nhãn số. Thêm câu L5: CPA tuần sale 133k nhưng biên mỏng hơn vì giảm giá 20% — có nên tăng ngân sách."
+  },
+  {
+   "id": "B:kn06-02",
+   "title": "Khách đang tìm “sửa máy lạnh quận 7” — nên chạy Google hay TikTok?",
+   "total": 67,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Mỗi tháng khoảng 3.000 lượt tìm “sửa máy lạnh quận 7” và từ gần nghĩa. Nếu quảng cáo của tiệm xuất hiện ở 60% lượt tìm, CTR 8%",
+     "issue": "Chỉ CPC được gắn nhãn 'Giả sử (minh hoạ)'; 3.000 lượt tìm, 60% tỉ lệ hiển thị và CTR 8% là các số giống benchmark nhưng không gắn nhãn, không nguồn (không nói lấy từ Keyword Planner). Người học có thể coi CTR 8% là mức bình thường của quảng cáo tìm kiếm.",
+     "fix": "Gắn nhãn minh hoạ cho toàn bộ dãy số và ghi 'lượt tìm lấy từ công cụ lập kế hoạch từ khoá của Google (kiểm ngày…)'."
+    },
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Ranh giới không tuyệt đối: YouTube hay Demand Gen của Google cũng tạo chú ý",
+     "issue": "Tên sản phẩm quảng cáo hiện hành (Demand Gen) nêu như sự thật, không src/ngày kiểm; loại fast.",
+     "fix": "Thêm src Google Ads Help về loại chiến dịch, hoặc viết 'các định dạng hiển thị/video của Google' và chú thích tên gọi có thể đổi."
+    }
+   ],
+   "upgrade": "Gắn nhãn cả dãy số và nêu nguồn công cụ. Thêm src cho tên sản phẩm. Thêm Phản ví dụ (CPC tìm kiếm quá đắt) và Đào sâu (Maps/đánh giá, ngân sách dư). Nâng Q2 thành câu phân bổ có số. Thêm câu calc thứ hai: CPC tăng lên 25k vì đối thủ — CPA mới và còn đáng chạy không khi mỗi cuộc sửa lãi 350k."
+  },
+  {
+   "id": "B:kn06-03",
+   "title": "Muốn có đơn hàng, vì sao đừng chọn mục tiêu “Lưu lượng truy cập”?",
+   "total": 65,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Meta hiện gộp còn sáu mục tiêu: Nhận diện, Lưu lượng truy cập, Tương tác, Khách hàng tiềm năng, Quảng bá ứng dụng, Doanh số (kiểm theo tài liệu Meta Marketing API, 10/2026)",
+     "issue": "Khẳng định giao diện/tính năng hiện hành có tên tài liệu và ngày nhưng bài không có trường src với link bấm được; thiếu câu 'nếu màn hình khác, tin trang chính thức' theo yêu cầu loại fast.",
+     "fix": "Thêm src (URL developers.facebook.com/docs/marketing-api/... hoặc Business Help Center 'About campaign objectives') với ngày kiểm và câu dự phòng."
+    },
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Chọn Lưu lượng truy cập, nó tìm người hay bấm link — thường là người bấm nhiều nhưng ít mua",
+     "issue": "Cơ chế tối ưu nêu như sự thật, không nguồn; khái quát 'người bấm nhiều ít mua' là quan sát nghề, không phải tài liệu nền tảng.",
+     "fix": "Ghi 'theo kinh nghiệm phổ biến của người chạy quảng cáo' và dẫn tài liệu Meta về tối ưu hoá phân phối (optimization goal)."
+    }
+   ],
+   "upgrade": "Thêm src cho danh sách mục tiêu và câu dự phòng khi giao diện đổi. Đổi ví dụ thành so sánh cùng shop, gắn nhãn. Thêm Phản ví dụ (Traffic hợp lý cho nội dung/blog) và Đào sâu (bậc thang sự kiện tối ưu, số sự kiện tối thiểu — nối kn06-08). Thay Q7 bằng câu đọc bảng ba chiến dịch; thêm câu L5: Sales CPA 120k nhưng chỉ chi được 2 triệu/tuần vì ít người mua; Traffic CPA 300k nhưng chi được 10 triệu — mục tiêu doanh thu tuần 15 triệu chọn gì."
+  },
+  {
+   "id": "B:kn06-04",
+   "title": "Nhắm “nữ 25–30, thích yoga, sống ở Quận 1” có phải là nhắm giỏi?",
+   "total": 66,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "“sở thích yoga” là nhãn nền tảng suy ra từ hành vi quá khứ (trang đã thích, nội dung từng tương tác), không phải điều người dùng tự khai",
+     "issue": "Mô tả cách nền tảng xây dựng nhãn sở thích nêu như sự thật hiện hành, không src, không ngày kiểm; loại fast.",
+     "fix": "Thêm src Meta 'About detailed targeting' / 'Why am I seeing this ad' với ngày kiểm, hoặc viết 'theo mô tả của Meta về nhắm chọn chi tiết (kiểm…)'."
+    },
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "tệp nhỏ thì nhiều nhà quảng cáo cùng tranh một nhóm người, CPM lên cao",
+     "issue": "Quan hệ 'tệp hẹp → CPM cao' nêu như quy luật; thực tế CPM phụ thuộc mức cạnh tranh của chính nhóm người đó (tệp hẹp ít bị tranh có thể rẻ). Ví dụ 'CPM gấp ba' và Q1 'thường tăng' củng cố thành luật; thiếu điều kiện áp dụng.",
+     "fix": "Sửa thành 'tệp hẹp gồm nhóm người có giá trị cao bị nhiều bên tranh → CPM cao; và ngân sách lớn so với tệp → tần suất cao'; tách hai cơ chế."
+    }
+   ],
+   "upgrade": "Thêm src cho cơ chế nhãn sở thích và khuyến nghị nhắm rộng. Tách hai cơ chế (cạnh tranh vs tần suất) với điều kiện. Thêm Phản ví dụ (khi hẹp đúng) và Đào sâu (định hướng ban đầu khi chưa có dữ liệu; tệp tương tự). Gắn nhãn số. Thêm câu L5: tệp rộng CPA rẻ hơn 40% nhưng 30% khách đến từ ngoài bán kính 5 km không đến tập — tính lại CPA theo khách thật."
+  },
+  {
+   "id": "B:kn06-06",
+   "title": "Khi thuật toán tự tìm khách, thứ gì quyết định ai thấy quảng cáo?",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Thuật toán nhìn ai dừng lại, ai xem hết, ai bấm với từng quảng cáo, rồi đi tìm thêm người giống vậy",
+     "issue": "Cơ chế phân phối của Meta/TikTok khi nhắm rộng nêu như sự thật hiện hành, không src/ngày kiểm; loại fast (Advantage+ audience, Smart Performance).",
+     "fix": "Thêm src Meta 'About Advantage+ audience' và TikTok 'Smart Targeting' với ngày kiểm; ghi 'mô tả nguyên lý theo tài liệu nền tảng'."
+    }
+   ],
+   "upgrade": "Thêm src cho cơ chế phân phối nhắm rộng. Thêm Phản ví dụ (hook câu view kéo sai người) và Đào sâu (số creative, mệt creative, ngân sách tối thiểu để thuật toán học). Thêm số đơn và cảnh báo nhiễu cho chênh CVR nhỏ. Nâng Q2 với phương án nhiễu hợp lý; thêm câu L6: thiết kế thử 3 hook cho 3 nhóm khách với 6 triệu/tuần — chia ngân sách và tiêu chí dừng."
+  },
+  {
+   "id": "B:kn06-07",
+   "title": "Trình quản lý quảng cáo báo 80 đơn, sổ bán hàng chỉ có 60 — tin số nào?",
+   "total": 64,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Meta khuyến nghị gửi thêm sự kiện từ máy chủ qua Conversions API song song với pixel, có khử trùng lặp (kiểm theo tài liệu Meta for Developers và Apple Developer, 10/2026). Việc xin đồng ý của khách: xem Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 (hiệu lực từ 1/1/2026)",
+     "issue": "Ba khẳng định fast/periodic (Conversions API, App Tracking Transparency, Luật BVDLCN số 91/2025/QH15) nêu tên tài liệu và ngày nhưng bài không có trường src với link bấm được; không có câu 'nếu tài liệu khác, tin bản chính thức'.",
+     "fix": "Thêm src cho ba mục với URL và ngày kiểm; chuyển đoạn này xuống Đào sâu để ví dụ chỉ còn phép tính."
+    },
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Meta không còn mục tiêu riêng tên \"Tin nhắn\": bạn chọn mục tiêu Tương tác, Khách hàng tiềm năng hoặc Doanh số rồi đặt nơi chuyển đổi là ứng dụng nhắn tin (kiểm theo tài liệu Meta Marketing API, 10/2026)",
+     "issue": "Khẳng định giao diện hiện hành trong lời giải, không src link; người học không thấy nếu không mở lời giải; và câu hỏi về đo đơn qua Messenger lại được trả lời bằng cấu hình mục tiêu — lệch trọng tâm (cách ghi lại đơn từ tin nhắn chỉ một mệnh đề 'ghi lại cuộc trò chuyện nào thành đơn').",
+     "fix": "Chuyển khẳng định về mục tiêu lên thân bài kn06-03 với src; ở đây dạy cụ thể cách ghi đơn từ tin nhắn (gắn nhãn hội thoại, bảng đơn theo ngày, so với chi) và nêu khả năng gửi sự kiện ngoại tuyến nếu nền tảng hỗ trợ (có src)."
+    }
+   ],
+   "upgrade": "Thêm src cho bốn khẳng định kỹ thuật/pháp lý; tách ví dụ khỏi phần kỹ thuật và chuyển sang Đào sâu với giải thích thuật ngữ. Thêm Phản ví dụ (khi pixel đếm thiếu, không thừa — CPA báo cáo đắt hơn thật) để người học không mặc định 'pixel luôn phồng'. Sửa Q6 thành câu về cách ghi đơn qua tin nhắn. Thêm calc: ba nền tảng chi tổng 30 triệu, sổ 90 đơn → CPA gộp và so với CPA từng nền tảng tự báo."
+  },
+  {
+   "id": "B:kn06-08",
+   "title": "Vì sao chia 5 triệu ra 5 nhóm quảng cáo lại làm mọi nhóm đều kém?",
+   "total": 64,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Meta từng công bố mốc khoảng 50 sự kiện trong 7 ngày cho mỗi nhóm (mốc này có thể đổi — kiểm tra trung tâm trợ giúp của nền tảng khi làm thật). Mỗi lần sửa lớn (đổi giá thầu mạnh, đổi creative, đổi tệp) có thể đưa nhóm quay lại học từ đầu",
+     "issue": "Mốc 50/7 ngày có hedge tốt nhưng không có src link và ngày kiểm; trạng thái 'Đang học'/'Học hạn chế' và danh sách 'sửa lớn' (kể cả Q4 'tăng ngân sách gấp bốn') nêu như cơ chế hiện hành không nguồn. Loại fast bắt buộc src.",
+     "fix": "Thêm src Meta Business Help Center 'About the learning phase' và 'Significant edits' với ngày kiểm; ghi rõ danh sách sửa lớn lấy từ đó."
+    },
+    {
+     "sev": "P1",
+     "where": "ÁP DỤNG",
+     "quote": "Lấy CPA hiện tại của một chiến dịch, nhân với 50: đó là ngân sách tuần một nhóm cần",
+     "issue": "Quy tắc nhân 50 áp cho mọi nền tảng và mọi sự kiện tối ưu như công thức phổ quát; không nêu điều kiện (chỉ Meta; TikTok/Google có mốc khác; có thể tối ưu sự kiện gần hơn để hạ ngân sách cần — Q5 có nhắc nhưng Áp dụng không).",
+     "fix": "Sửa: 'với Meta và sự kiện mua; nếu không đủ, tối ưu sự kiện gần hơn (thêm giỏ) hoặc gộp nhóm'."
+    }
+   ],
+   "upgrade": "Thêm src cho mốc 50, trạng thái và danh sách sửa lớn; nêu điều kiện nền tảng/sự kiện cho quy tắc nhân 50. Gắn nhãn số; thêm Phản ví dụ (khi nên tách nhóm) và Đào sâu (học hạn chế vẫn dùng được nếu CPA đạt; cách tăng ngân sách từng bậc 20%/ngày — có src). Thay Q7 bằng câu đọc nhật ký chỉnh sửa; thêm câu L5: 5 triệu/tuần, CPA 100k, nhưng cần so 2 tệp — chấp nhận học hạn chế 2 tuần hay chạy tuần tự."
+  },
+  {
+   "id": "B:kn06-09",
+   "title": "Báo cáo quảng cáo đầu tiên: đọc từ dòng nào?",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "các báo cáo benchmark của bên thứ ba thường cho CTR quảng cáo TikTok quanh 1%, tuỳ ngành và định dạng",
+     "issue": "Benchmark nêu không tên nguồn, không năm; dù có câu 'so với số của chính bạn', Q2 vẫn dùng 'CTR 1,5% tạm ổn' làm căn cứ loại phương án a. Periodic bắt buộc nguồn và ngày kiểm.",
+     "fix": "Dẫn một báo cáo cụ thể (tên, năm) trong src hoặc bỏ mốc 1%, chỉ dùng mức nền của chính tài khoản."
+    },
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Tỉ lệ xem trang ÷ lượt bấm cho biết trang có tải được không — mất nhiều ở đây thường do trang chậm hoặc lượt bấm nhầm",
+     "issue": "Chỉ số 'xem trang/lượt bấm link' và cách TikTok/Meta đo 'xem trang' (landing page view, cần pixel) nêu như sẵn có mà không nói điều kiện đo (pixel phải bắn sự kiện PageView/ViewContent); người học không có pixel sẽ không thấy số này.",
+     "fix": "Thêm một câu: 'lượt xem trang chỉ có khi pixel đã gắn (bài kn06-07); thiếu nó, dùng số phiên từ Google Analytics'."
+    }
+   ],
+   "upgrade": "Dẫn nguồn benchmark hoặc bỏ. Nêu điều kiện có 'xem trang' (pixel) và nối kn06-07. Gắn nhãn số, nêu giả định CVR không đổi, thêm Đào sâu về nhiễu với 6 đơn (khoảng tin cậy rộng) và Phản ví dụ (bước rơi nhiều nhất nhưng sửa đắt — chọn bước rẻ hơn trước). Sửa đáp án sai Q3. Thêm câu L5: sửa trang mất 8 triệu một lần vs tăng ngân sách 4 triệu/tuần — hoà vốn sau mấy tuần với đơn lãi 60k."
+  }
+ ]
+}

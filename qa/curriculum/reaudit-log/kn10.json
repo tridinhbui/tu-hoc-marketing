@@ -1,0 +1,4 @@
+{ "mod":"kn10", "fixed_at":"2026-11-08", "items":[
+  { "id":"B:kn10-01", "where":"Q7 steps", "status":"fixed", "change":"Bước 3 viết lại: một ý → 2.000.000 người nhớ cùng một điều; năm ý → tổng vẫn 2 triệu lượt nhớ nhưng rải thành năm mẩu 400.000 người; khi tệp trùng (cùng 2 triệu người, mỗi người 3 lượt) thì một ý cho mỗi người đủ 3 lần, năm ý chỉ 0,6 lần mỗi ý, gần như không ai đủ 3 lần. Bỏ câu “một ý trong năm chứ không phải năm lần thắng”.", "key_changed":false, "note":"Đáp án 400.000 giữ nguyên; đề thêm “nhiều nhất” vì 400.000 là mức trần khi lượt dồn đủ cho từng người." },
+  { "id":"B:kn10-01", "where":"Q7 stem", "status":"fixed", "change":"Thêm “Giả sử” và “(giả định minh hoạ, ngưỡng thật tuỳ ngành và định dạng)” sau mốc 3 lần.", "key_changed":false, "note":"" } ],
+  "validator":"0 lỗi, 0 cảnh báo", "tests":"pass" }

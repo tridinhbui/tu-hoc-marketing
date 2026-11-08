@@ -1,0 +1,682 @@
+{
+  "mod": "kn01",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn01-01",
+      "scores": {
+        "accuracy": 12,
+        "depth": 9,
+        "practical": 14,
+        "examples": 10,
+        "pedagogy": 7,
+        "assessment": 4,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 67,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L2",
+        "L4",
+        "L5",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P0",
+          "where": "Q1",
+          "quote": "Tấm menu dán trong quầy mà khách đọc khi đứng chờ lấy bánh",
+          "issue": "Theo đúng ba tiêu chí của bài, phương án c bênh được ngang hoặc hơn a: lượt thấy = 9.000/tháng (bằng túi giấy vì mỗi khách một lần), đường dẫn tới hành động ngắn hơn (khách đứng yên một phút, có nhân viên — chính Q2 gọi tình huống này là \"đường dẫn tới hành động ngắn nhất\"), chi phí sửa ≈ 0 so với 2,7 triệu/tháng của túi. Lời giải loại c (\"số lượt không vượt số khách\") cũng đúng y như vậy với túi giấy. Hai phương án cùng bênh được.",
+          "fix": "Đổi c thành điểm chạm rõ ràng yếu hơn (vd. \"tờ rơi phát ở chợ cách tiệm 2 km\") hoặc đổi stem thành \"điểm chạm nào đi theo khách về nhà và còn được nhìn lại sau khi rời tiệm\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "Điểm đáng sửa trước thường không phải điểm có lượt thấy lớn nhất",
+          "issue": "Không nêu điều kiện ngược: khi nào biển hiệu lại thắng (Q7 trả lời \"sửa nội dung biển trước\" nhưng phần đọc không có phản ví dụ). Bài thiếu hẳn mục phản ví dụ và đào sâu.",
+          "fix": "Thêm phản ví dụ: quán ở ngã tư đông xe, chưa có khách mua → không có túi để in; lúc đó biển hiệu là điểm duy nhất có lượt thấy, sửa nội dung biển trước."
+        },
+        {
+          "sev": "P2",
+          "where": "Q3",
+          "quote": "[2700,\"SAI_MAU_SO\"]",
+          "issue": "Giá trị 2.700 (nghìn) là tổng chi phí in chưa chia cho 180 người; nhãn \"sai mẫu số\" chưa gọi đúng lỗi \"quên chia cho số người quét\".",
+          "fix": "Đổi nhãn thành QUEN_CHIA_SO_NGUOI hoặc tương đương."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 9.000×300 = 2.700.000đ; 9.000×2% = 180; 2.700.000/180 = 15.000đ ✓. Số tình huống (300 ổ/ngày) ↔ ví dụ (9.000 túi/tháng, 60.000 lượt biển) ↔ Q2/Q3 khớp."
+      },
+      "claims": [
+        {
+          "claim": "Số liệu minh hoạ: 2.000 lượt đi qua/ngày, 2% quét QR, 300đ/túi, 150 người/bài fanpage",
+          "status": "illustrative-labelled",
+          "note": "Ví dụ mở đầu bằng \"Số liệu minh hoạ\"."
+        },
+        {
+          "claim": "fanpage, nhóm Zalo nằm trên nền tảng của người khác nên luật chơi có thể bị đổi",
+          "status": "unverified",
+          "note": "Khẳng định chung, hợp lý, không cần nguồn số."
+        }
+      ],
+      "strengths": "Khung ba tiêu chí (lượt thấy · dẫn tới hành động · chi phí sửa) cụ thể và áp dụng được ngay; Q6 (đối chứng túi trơn) là câu đo lường tốt hiếm có ở bài mở đầu.",
+      "upgrade": "Sửa Q1 (P0). Gắn số cho \"mức dẫn tới hành động\" (vd. ước % dừng lại/quét cho từng điểm chạm) để bảng chấm thành bảng số. Thêm phản ví dụ biển hiệu thắng, thêm mục đào sâu về đo lường (mã QR riêng từng điểm chạm để tách nguồn). Nêu độ chắc của giả định 2% (khoảng 0,5–3%) và hậu quả lên chi phí/liên hệ."
+    },
+    {
+      "id": "B:kn01-02",
+      "scores": {
+        "accuracy": 12,
+        "depth": 9,
+        "practical": 13,
+        "examples": 10,
+        "pedagogy": 7,
+        "assessment": 7,
+        "data": 5,
+        "clarity": 4
+      },
+      "total": 67,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L2",
+        "L3",
+        "L4",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q2",
+          "quote": "báo cáo sai bị từ chối và cho thấy quán không chịu nhận lỗi",
+          "issue": "Khẳng định về cách nền tảng xử lý báo cáo đánh giá nêu như chắc chắn; thực tế tuỳ nền tảng và tuỳ nội dung đánh giá.",
+          "fix": "Viết \"thường bị từ chối vì đánh giá phản ánh việc có thật\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "bạn chỉ đáp lại được chứ không gỡ được",
+          "issue": "Nói quá: đánh giá vi phạm chính sách (spam, xúc phạm) vẫn gỡ được theo quy trình nền tảng; bài nên phân biệt đánh giá đúng sự thật và đánh giá vi phạm.",
+          "fix": "Thêm một câu phân biệt hai loại."
+        },
+        {
+          "sev": "P2",
+          "where": "Toàn bài",
+          "quote": "Clip 400.000 lượt xem đưa quán từ 200 lên 400 suất/ngày",
+          "issue": "Bài chỉ có một phép tính (% tăng còn giữ lại). Không có cách đo earned ngoài đếm suất; không nói số 30% giữ lại là một mẫu đơn lẻ, chưa tách mùa vụ (Q6 nêu nhưng phần đọc không).",
+          "fix": "Thêm bảng theo tuần: suất/ngày, số đánh giá mới, % khách mới nói \"thấy clip\" để học sinh thấy earned được đo thế nào."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: (260−200)/200 = 30% ✓; sai 23,1% = chia cho 260 đúng nhãn SAI_MAU_SO."
+      },
+      "claims": [
+        {
+          "claim": "TikTok clip 400.000 lượt xem; quán 200→400→260 suất/ngày",
+          "status": "illustrative-labelled",
+          "note": "\"Số liệu minh hoạ\"."
+        },
+        {
+          "claim": "Nền tảng ưu tiên nội dung không trả tiền nên phân phối rộng hơn (phương án sai Q4)",
+          "status": "unverified",
+          "note": "Bị bác đúng là \"không có căn cứ chung\"."
+        }
+      ],
+      "strengths": "Khái niệm rõ về giới hạn kiểm soát của earned; có mặt xấu (5 đánh giá 1 sao) ngay trong ví dụ; Q7 ép học viên đặt mục tiêu đo được nằm trong tầm tay.",
+      "upgrade": "Thêm phản ví dụ: clip viral nhưng không gắn tên quán → không chuyển thành khách (dấu hiệu: bình luận hỏi \"ở đâu\"). Thêm đào sâu về đo earned: số lượt nhắc, cảm xúc, tỉ lệ khách mới nói nguồn. Thay Q4 (L2) bằng câu đọc dữ liệu: cho bảng 4 tuần suất/ngày và số đánh giá, hỏi phần tăng nào gán được cho clip."
+    },
+    {
+      "id": "B:kn01-03",
+      "scores": {
+        "accuracy": 11,
+        "depth": 10,
+        "practical": 15,
+        "examples": 10,
+        "pedagogy": 7,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 72,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L2",
+        "L4",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Ví dụ",
+          "quote": "Đạt ngưỡng đó mới nâng lên 10 triệu: 5.000 lượt nhấp, 200 đơn",
+          "issue": "Giả định giá nhấp 2.000đ và tỉ lệ đặt 4% giữ nguyên khi tăng ngân sách gấp 5. Biên còn lại rất mỏng (2 triệu trên 10 triệu): chỉ cần giá nhấp lên 2.400đ (+20%) là lãi về 0. Chính Q7 của bài nói giá nhấp tăng lên 3.600đ khi đẩy 3 tuần, và kn01-10 dạy chi phí mỗi đơn tăng theo ngân sách. Phép tính thiếu giả định làm kết luận đổi.",
+          "fix": "Ghi rõ \"giả định giá nhấp và tỉ lệ đặt không đổi — thực tế thường tăng\", và nâng theo bậc 2 → 4 → 7 → 10 triệu, đo lại mỗi bậc."
+        },
+        {
+          "sev": "P2",
+          "where": "Q2",
+          "quote": "Thử 2 triệu cho bài ủ chượp, CPA dưới 60.000 đ mới nâng thêm",
+          "issue": "Thuật ngữ \"CPA\" chưa xuất hiện ở phần đọc (bài dùng \"chi phí mỗi đơn\").",
+          "fix": "Viết \"chi phí mỗi đơn (CPA)\" ở khái niệm hoặc đổi chữ trong Q2."
+        },
+        {
+          "sev": "P2",
+          "where": "Q5",
+          "quote": "có rủi ro pháp lý",
+          "issue": "Khẳng định pháp lý (dùng hình ảnh/lời của cá nhân vào quảng cáo) không nêu căn cứ.",
+          "fix": "Ghi \"quyền về hình ảnh và dữ liệu cá nhân theo Bộ luật Dân sự / Nghị định 13/2023\" kèm src, hoặc hạ thành \"có thể\"."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 10.000.000/2.000 = 5.000 ✓. Q4: 5.000×4% = 200; 200×60.000 = 12.000.000; −10.000.000 = 2.000.000 ✓; sai 290.000.000 = quên 4% đúng nhãn. Q7 lời giải: 3.600/4% = 90.000 ✓. Khớp tình huống (40 tin nhắn, 10 triệu) ↔ ví dụ ↔ Q2–Q7."
+      },
+      "claims": [
+        {
+          "claim": "2.000đ mỗi lượt nhấp, tỉ lệ đặt 4%, lãi gộp 60.000đ",
+          "status": "illustrative-labelled",
+          "note": "\"(minh hoạ)\" trong ví dụ."
+        },
+        {
+          "claim": "Khi tần suất tăng, phản hồi giảm (nội dung mòn)",
+          "status": "unverified",
+          "note": "Cơ chế được chấp nhận rộng, nêu dạng \"nên nghi... trước\", chấp nhận được."
+        }
+      ],
+      "strengths": "Phân biệt tín hiệu gần mua với lượt thích rất rõ; quy tắc thử nhỏ → ngưỡng chi phí/đơn < lãi gộp → mới nâng là quyết định có số; Q6–Q7 chẩn đoán từ dữ liệu thật (1%, 3.600đ).",
+      "upgrade": "Thêm giả định rõ về giá nhấp/tỉ lệ đặt khi tăng ngân sách và dạy nâng theo bậc (nối kn01-10). Thêm phản ví dụ: bài nhiều tin nhắn hỏi mua nhưng là người ngoài vùng giao hàng → tín hiệu giả. Thêm mục đào sâu về xin phép dùng UGC (mẫu câu xin phép, ghi nguồn). Thay Q5 (L2) bằng câu đọc bảng 3 bài đăng với like/comment/tin nhắn/đơn để chọn bài đáng đẩy."
+    },
+    {
+      "id": "B:kn01-04",
+      "scores": {
+        "accuracy": 11,
+        "depth": 12,
+        "practical": 15,
+        "examples": 10,
+        "pedagogy": 8,
+        "assessment": 7,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 74,
+      "bloom_items": [
+        "L1",
+        "L5",
+        "L3",
+        "L3",
+        "L2",
+        "L3",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Vì sao hiệu quả (2)",
+          "quote": "Mức quy đổi nên theo giá thị trường của việc đó, như giá thuê người làm nội dung, không phải thu nhập làm gốm của anh",
+          "issue": "Mâu thuẫn với khái niệm trong cùng bài: phần khái niệm định nghĩa chi phí cơ hội là \"giờ bỏ vào fanpage là giờ không làm sản phẩm\", Q5 chấm đúng \"Giá trị của việc khác anh có thể làm bằng 48 giờ đó\", và đào sâu hỏi \"48 giờ của anh đem làm gốm có đáng hơn không\". Bài trộn hai cách định giá (chi phí thay thế vs chi phí cơ hội) mà không nói khi nào dùng cái nào.",
+          "fix": "Viết rõ: giá thuê ngoài là *trần* (nếu thuê rẻ hơn thì thuê); giá trị giờ làm gốm là chi phí cơ hội *khi* giờ đó thật sự đổi được sang làm gốm (phản ví dụ đã chạm ý này) — lấy số lớn hơn trong hai số có thật."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "mức khoảng 60.000 đ/giờ",
+          "issue": "Số không gắn nhãn minh hoạ; không nói nguồn ước (giá thuê freelancer nội dung).",
+          "fix": "Thêm \"(minh hoạ; tham khảo giá thuê người làm nội dung bán thời gian tại địa phương)\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1",
+          "quote": "Phí duy trì trang mà nền tảng thu hằng tháng",
+          "issue": "Q1 và các phương án a, d ở mức L1 (ai cũng biết fanpage không mất phí tên miền), câu đoán trước không tạo được bất ngờ.",
+          "fix": "Đổi thành câu ước lượng: \"48 giờ/tháng đáng bao nhiêu tiền?\" với 4 mức để học viên tự chọn trước khi đọc."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 48×60.000 = 2.880.000; +300.000 = 3.180.000 ✓ (12 giờ/tuần × 4 = 48 là làm tròn tháng 4 tuần). Q4: 3.180.000/50 = 63.600 ✓; sai 57.600 = quên phần mềm đúng nhãn. Q7 dùng 63.600 vs 90.000 nhất quán."
+      },
+      "claims": [
+        {
+          "claim": "60.000đ/giờ công nội dung; 300.000đ phần mềm; 50 đơn/tháng; quảng cáo 90.000đ/đơn",
+          "status": "illustrative-unlabelled",
+          "note": "Không có chữ minh hoạ/giả định trong ví dụ."
+        }
+      ],
+      "strengths": "Có đủ phản ví dụ (giờ buổi tối không đổi được sang việc sinh lời) và đào sâu (tài sản dài hạn của owned, tín hiệu theo dõi); Q7 là câu đánh đổi thật (rẻ hơn mỗi đơn nhưng không mở rộng được).",
+      "upgrade": "Hoà giải hai cách định giá giờ công (P1) bằng một bảng 2 cột: \"nếu có thể thuê\" / \"nếu không thể thuê\". Gắn nhãn số. Thêm phép tính biên: thêm 1 giờ fanpage ra thêm bao nhiêu đơn so với 60.000đ quảng cáo thêm. Thay Q1/Q5 (L1–L2) bằng câu đọc bảng giờ-công thật của một tuần và tính chi phí/đơn theo từng việc (chụp, viết, trả lời)."
+    },
+    {
+      "id": "B:kn01-05",
+      "scores": {
+        "accuracy": 12,
+        "depth": 10,
+        "practical": 15,
+        "examples": 11,
+        "pedagogy": 7,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 74,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L4",
+        "L2",
+        "L4",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q4",
+          "quote": "Owned đang rẻ khoảng 15.000đ/chai còn paid 40.000đ",
+          "issue": "Ở tuần 3 chưa biết owned đã chi bao nhiêu trong 6 triệu; 15.000đ là số kế hoạch 6 tuần. Nếu 6 triệu tem/mẫu thử đã chi hết thì owned đang là 6.000.000/250 = 24.000đ/chai. Lời giải trộn số kế hoạch với số thực.",
+          "fix": "Cho dữ kiện owned đã chi bao nhiêu đến tuần 3, hoặc viết \"theo kế hoạch 15.000đ/chai\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Earned: mời người thử chụp ảnh, xin phép đưa bài lên fanpage, kỳ vọng 300 chai, gần như không tốn thêm",
+          "issue": "20% mục tiêu 6 tuần ra mắt gán cho earned mà không nêu cơ sở ước; earned thường tích luỹ muộn (chính Q4 nói vậy) nên số 300 trong 6 tuần đầu là giả định mạnh.",
+          "fix": "Ghi \"kỳ vọng thấp và chậm: 300 chai là mức trần, có thể chỉ 100–150 trong 6 tuần đầu\" và nêu cách đo (mã riêng / câu hỏi nguồn)."
+        },
+        {
+          "sev": "P2",
+          "where": "Toàn bài",
+          "quote": "Thiếu owned thì paid đẩy người tới chỗ trống",
+          "issue": "Không có phản ví dụ/đào sâu: khi nào paid nên đi trước owned (vd. sản phẩm mùa vụ, cửa sổ bán 2 tuần, khách cũ quá ít).",
+          "fix": "Thêm phản ví dụ và nối sang kn01-06 (phân bổ theo nguồn doanh thu)."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 800×40.000 = 32 triệu; −24 = 8 triệu ✓; sai 44 = 68−24 (doanh thu) đúng nhãn ROAS_LA_LOI_NHUAN. Ví dụ: 6tr/400 = 15.000; 24tr/800 = 30.000; 30tr/1.500 = 20.000 ✓. Q4: 12tr/300 = 40.000 = lãi gộp ✓."
+      },
+      "claims": [
+        {
+          "claim": "Mục tiêu 1.500 chai, giá 85.000đ, lãi gộp 40.000đ, paid 30.000đ/chai",
+          "status": "illustrative-labelled",
+          "note": "\"Số liệu minh hoạ\"."
+        },
+        {
+          "claim": "Duyệt quảng cáo không phụ thuộc vào số đánh giá; không có yêu cầu tài khoản phải có đơn từ khách cũ",
+          "status": "unverified",
+          "note": "Khẳng định về chính sách nền tảng dùng để bác phương án sai; hợp lý nhưng không nguồn."
+        }
+      ],
+      "strengths": "Mỗi vai một thước đo và một con số kỳ vọng — hiếm bài dạy phân vai cụ thể đến mức này; Q4 là câu chẩn đoán giữa chiến dịch có số thật và so với kế hoạch.",
+      "upgrade": "Thêm bảng kế hoạch 3 dòng (vai · chi · chai · đ/chai · cách đo) và bảng tuần 3 thực tế để Q4 đọc từ bảng. Thêm phản ví dụ paid đi trước. Nêu cách tách nguồn đơn tại quầy chợ đêm (mã, câu hỏi) ngay trong phần đọc thay vì chỉ ở Q7. Gắn độ chắc cho kỳ vọng earned."
+    },
+    {
+      "id": "B:kn01-06",
+      "scores": {
+        "accuracy": 11,
+        "depth": 10,
+        "practical": 17,
+        "examples": 11,
+        "pedagogy": 7,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 75,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L5",
+        "L3",
+        "L5",
+        "L3"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Ví dụ",
+          "quote": "Khách quay lại mua 3 lần/năm × 280.000đ, lãi gộp khoảng 60%, tức LTV khoảng 500.000đ. CAC 200.000đ thấp hơn LTV nên đáng chạy",
+          "issue": "LTV lấy hành vi của *khách quay lại* (3 lần/năm) gán cho *mọi khách mới* từ quảng cáo. Chỉ một phần khách mới trở thành khách quay lại; nếu 50% quay lại thì LTV kỳ vọng ≈ 168.000 + 0,5×336.000 = 336.000đ. Kết luận ở đây vẫn đứng (200.000 < 336.000) nhưng phương pháp dạy sẽ cho kết luận sai khi tỉ lệ quay lại thấp (vd. 20% → LTV ≈ 235.000đ, biên rất mỏng).",
+          "fix": "Thêm bước \"tỉ lệ khách mới mua lần 2\" vào công thức LTV và nêu rõ con số 504.000 là LTV của nhóm quay lại, không phải của khách mới trung bình."
+        },
+        {
+          "sev": "P2",
+          "where": "Q3",
+          "quote": "[168,\"SAI_TINH_TOAN\"]",
+          "issue": "168 là lãi gộp một đơn (quên nhân 3 lần/năm); nhãn chung chung.",
+          "fix": "Đổi nhãn thành QUEN_SO_LAN_MUA."
+        },
+        {
+          "sev": "P2",
+          "where": "Toàn bài",
+          "quote": "Không có tỉ lệ owned – paid \"chuẩn\"",
+          "issue": "Không có phản ví dụ/đào sâu riêng (Q5 làm thay vai phản ví dụ: shop mới chưa có khách cũ).",
+          "fix": "Đưa tình huống shop mới vào phần đọc như phản ví dụ, và đào sâu về giờ công của kênh giới thiệu (14 giờ chưa quy ra tiền)."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 3×280×60% = 504 nghìn ✓. Q7: 280×60% = 168 nghìn ✓. Ví dụ: 60%×40tr = 24tr; 4tr/20 = 200.000; 1tr/18 ≈ 55.600 ✓. Bài thực hành: 6tr/60 = 100.000đ/khách ✓."
+      },
+      "claims": [
+        {
+          "claim": "Doanh thu 40 triệu, 60% khách quay lại, CAC 200.000đ, LTV ~500.000đ",
+          "status": "illustrative-labelled",
+          "note": "\"Số liệu minh hoạ\"."
+        },
+        {
+          "claim": "TikTok Ads (tên nền tảng trong lời khuyên của bạn Linh)",
+          "status": "illustrative-labelled",
+          "note": "Không gắn số."
+        }
+      ],
+      "strengths": "Khung ba câu hỏi (doanh thu từ đâu · nút thắt · CAC so LTV) biến phân bổ thành quyết định có số; có bài thực hành có đầu ra với rubric rõ (tổng 7 triệu / 25 giờ, không áp tỉ lệ chuẩn).",
+      "upgrade": "Sửa công thức LTV (P1) và thêm cột \"tỉ lệ mua lần 2\". Quy 14 giờ công kênh giới thiệu ra tiền để so CAC thật của hai nguồn (nối kn01-04). Thêm phản ví dụ và đào sâu. Nêu nhiễu: 20 vs 18 khách trong một tháng là mẫu nhỏ, chênh lệch chưa chắc lặp lại."
+    },
+    {
+      "id": "B:kn01-07",
+      "scores": {
+        "accuracy": 13,
+        "depth": 12,
+        "practical": 15,
+        "examples": 10,
+        "pedagogy": 8,
+        "assessment": 6,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 75,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L2",
+        "L3",
+        "L2",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q6",
+          "quote": "Người theo dõi không có giá trị gì với doanh thu",
+          "issue": "Ba phương án sai đều ngắn và cực đoan (\"không có giá trị gì\", \"chỉ có giá trị nếu shop trả tiền mua\", \"phải trên 100.000 mới gọi là tài sản\"), đáp án đúng dài nhất và ôn hoà nhất → đoán được bằng hình thức; Q4 và Q6 đều chỉ nhận lại khái niệm đất thuê/đất nhà (L2).",
+          "fix": "Viết phương án sai ôn hoà hơn (vd. \"Đúng, miễn là shop đăng đều để giữ reach\") và thay một trong hai câu bằng câu đọc dữ liệu: cho bảng tỉ trọng đơn theo kênh của 3 shop, hỏi shop nào rủi ro nhất và vì sao."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Sau 3 tháng, tỉ trọng đơn qua fanpage còn 55%, danh sách có 6.500 số điện thoại",
+          "issue": "Số kết quả không gắn nhãn minh hoạ; 6.500 số trong 3 tháng từ ~60 đơn/ngày (~5.400 đơn) hàm ý >100% khách để lại số — tự mâu thuẫn nhẹ (chỉ khớp nếu tính cả khách qua QR hộp và nhóm Zalo).",
+          "fix": "Gắn nhãn và hạ về số khớp: vd. 70% khách chốt đơn cho số → ~3.800 số."
+        },
+        {
+          "sev": "P2",
+          "where": "Q3",
+          "quote": "mất bao nhiêu triệu đồng doanh thu",
+          "issue": "Bài tính mất doanh thu, không tính mất lãi; học viên dễ coi 189 triệu là thiệt hại thật.",
+          "fix": "Thêm bước: mất lãi gộp = 189 × biên gộp."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 60×90% = 54; ×10 = 540; ×350.000 = 189 triệu ✓; sai 210 = quên 90% đúng nhãn. Q5: 90−55 = 35 điểm % ✓; 38,9% tương đối đúng nhãn."
+      },
+      "claims": [
+        {
+          "claim": "Shop 45.000 người theo dõi, 90% đơn qua tin nhắn fanpage, bị hạn chế 10 ngày vì báo cáo nhầm",
+          "status": "illustrative-unlabelled",
+          "note": "Tình huống kể như chuyện thật, không gắn nhãn."
+        },
+        {
+          "claim": "Tạo thêm hai fanpage dự phòng... có thể bị coi là vi phạm",
+          "status": "unverified",
+          "note": "Khẳng định về chính sách nền tảng, không nguồn."
+        }
+      ],
+      "strengths": "Phản ví dụ sắc (đơn vốn đến từ Zalo cá nhân → dựng kênh thay thế là lệch chỗ) và phép kiểm tra trong tuần (10 đơn gần nhất, liên hệ được bao nhiêu) rất thực dụng; phân biệt điểm % và % tương đối (Q5).",
+      "upgrade": "Viết lại Q4/Q6 (P1) thành câu đọc dữ liệu/đánh đổi. Gắn nhãn và làm khớp số 6.500. Thêm tính mất lãi và chi phí dựng đường lui (giờ công xin số, chi phí QR) để so với 189 triệu. Đào sâu: ngưỡng tỉ trọng kênh lớn nhất nên dưới bao nhiêu và vì sao (gắn với số ngày sống được khi kênh đóng)."
+    },
+    {
+      "id": "B:kn01-08",
+      "scores": {
+        "accuracy": 13,
+        "depth": 12,
+        "practical": 15,
+        "examples": 10,
+        "pedagogy": 8,
+        "assessment": 7,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 76,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L4",
+        "L2",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "được khoảng 40.000 lượt thấy trên hai kênh. 5% bấm vào trang đăng ký, tức 2.000 người; 50% trong số đó để lại số điện thoại",
+          "issue": "Số không gắn nhãn minh hoạ; 5% bấm và 50% điền là mức lạc quan, không nói độ chắc hay khoảng thường gặp.",
+          "fix": "Gắn nhãn, nêu khoảng (vd. bấm 1–5%, điền 20–50%) và cho thấy kết quả đổi thế nào ở mức thấp (40.000×1%×20% = 80 liên hệ)."
+        },
+        {
+          "sev": "P2",
+          "where": "Q7",
+          "quote": "Mua danh sách của người khác vừa sai đạo đức vừa có rủi ro pháp lý",
+          "issue": "Khẳng định pháp lý đúng hướng (bảo vệ dữ liệu cá nhân) nhưng không nêu căn cứ/ngày kiểm; bài thuộc lớp periodic về luật.",
+          "fix": "Thêm src Nghị định 13/2023/NĐ-CP (bảo vệ dữ liệu cá nhân) với ngày kiểm."
+        },
+        {
+          "sev": "P2",
+          "where": "Q6",
+          "quote": "Vì QR in bao bì được nền tảng ưu tiên hiển thị hơn bài đăng",
+          "issue": "Phương án sai vô lý (QR giấy không liên quan thuật toán) làm câu thành L2 dễ.",
+          "fix": "Thay bằng câu đọc phễu: cho số thấy/bấm/để lại của 2 lời mời, hỏi sửa bước nào."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 40.000×5%×50% = 1.000 ✓. Q4: 1.500/(5%×50%) = 60.000 ✓; sai 30.000 = 1.500/5% đúng nhãn."
+      },
+      "claims": [
+        {
+          "claim": "30.000 người theo dõi Instagram, 12.000 TikTok; 40.000 lượt thấy/tháng; 5% bấm; 50% để lại số",
+          "status": "illustrative-unlabelled",
+          "note": "Nền tảng thật, số không gắn nhãn."
+        },
+        {
+          "claim": "Tắt quyền rời nhóm... có thể vi phạm quy định nền tảng",
+          "status": "unverified",
+          "note": "Không nguồn."
+        }
+      ],
+      "strengths": "Phễu ba bước có chẩn đoán theo chỗ hỏng (ít bấm → sửa lời mời; bấm nhiều ít để lại → sửa form/quà); đánh đổi quà đại trà vs quà sát sản phẩm trong đào sâu là ý nghề thật; Q7 về sự đồng ý đúng mực.",
+      "upgrade": "Gắn nhãn và cho khoảng của tỉ lệ phễu; thêm bảng 2 lời mời để Q6 thành câu đọc dữ liệu. Thêm src luật dữ liệu cá nhân. Nối kn01-07 rõ hơn (nhóm Zalo vẫn là đất thuê → mục tiêu cuối là số điện thoại đồng ý). Thêm chi phí: quà/mẫu thử × 1.000 liên hệ = bao nhiêu, chi phí/liên hệ so với kn01-01 (15.000đ)."
+    },
+    {
+      "id": "B:kn01-09",
+      "scores": {
+        "accuracy": 13,
+        "depth": 12,
+        "practical": 14,
+        "examples": 10,
+        "pedagogy": 8,
+        "assessment": 6,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 75,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Hỏi 200 khách mua tại quầy: 38% nói thấy quảng cáo, 22% đi ngang cửa hàng, 16% qua bài review, 24% do người quen giới thiệu",
+          "issue": "Khảo sát chỉ hỏi *người đã mua* nên đo \"nguồn khách mua\", không đo reach/nhận biết như câu hỏi của sếp; không nêu sai số mẫu (n=200 → ±7 điểm %) nên 22% vs 16% chưa chắc khác nhau. Số cũng không gắn nhãn minh hoạ.",
+          "fix": "Ghi rõ hai thước khác nhau (reach vs nguồn mua), gắn nhãn, và thêm câu \"với 200 người, chênh dưới 7 điểm % chưa kết luận được\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q7",
+          "quote": "Mặt tiền là một kênh owned đang làm việc thật, đáng đầu tư",
+          "issue": "\"Đáng đầu tư\" nhảy từ 22% sang quyết định mà không có chi phí; các phương án sai quá yếu (chuyển vào hẻm, cắt quảng cáo) nên câu dễ.",
+          "fix": "Đổi thành câu đánh đổi: tủ kính mới 15 triệu vs thêm 15 triệu quảng cáo, với số 22%/38% và chi phí hiện tại."
+        },
+        {
+          "sev": "P2",
+          "where": "Q4",
+          "quote": "Hỏi 200 khách tại quầy, 38% nói biết qua quảng cáo. Đó là bao nhiêu khách?",
+          "issue": "Phép tính 200×38% quá đơn giản cho câu quiz thứ 4.",
+          "fix": "Thay bằng: reach 30.000 nhưng chỉ 76 khách mua nói thấy quảng cáo → tỉ lệ ~0,25%, hỏi con số này nói gì về nhắm đối tượng."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 150.000/5 = 30.000 ✓; sai 750.000 = nhân đúng nhãn NGUOC_TAN_SUAT. Q4: 200×38% = 76 ✓. Ví dụ: 30k+20k+9k+18k = 77.000 ✓; 38+22+16+24 = 100% ✓."
+      },
+      "claims": [
+        {
+          "claim": "reach ≈ hiển thị ÷ tần suất",
+          "status": "verified",
+          "note": "Định nghĩa chuẩn ngành, không cần nguồn ngoài."
+        },
+        {
+          "claim": "150.000 hiển thị, tần suất 5, fanpage 20.000 tiếp cận, 9.000 lượt khách, 18.000 lượt xem review",
+          "status": "illustrative-unlabelled",
+          "note": "Không gắn nhãn."
+        }
+      ],
+      "strengths": "Phân biệt lần/người và cảnh báo cộng thẳng reach trùng nhau là đúng và dễ áp dụng; phản ví dụ khai trương cửa hàng thứ ba (nguồn chính không để dấu trên kênh số) rất thật; đào sâu nêu đánh đổi nhanh-thô vs chậm-sát.",
+      "upgrade": "Gắn nhãn số; tách rõ hai thước (reach vs nguồn mua) và thêm sai số mẫu. Thêm cách ước phần trùng (hỏi \"bạn thấy mấy nguồn?\" hoặc dùng reach nền tảng với tần suất chéo). Thay Q4/Q7 bằng câu đọc bảng và câu đánh đổi có chi phí. Đào sâu thêm: tần suất tăng mà reach đứng → mòn, nối kn01-10."
+    },
+    {
+      "id": "B:kn01-10",
+      "scores": {
+        "accuracy": 13,
+        "depth": 13,
+        "practical": 16,
+        "examples": 10,
+        "pedagogy": 8,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 79,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L4",
+        "L4",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Nếu nhân đôi lên 12 triệu mà chỉ được 230 đơn, chi phí khoảng 52.000 đ/đơn, tổng lãi còn 6,4 triệu",
+          "issue": "Ba mức ngân sách, mỗi mức một tháng, không gắn nhãn minh hoạ và không nói nhiễu: 230 vs 200 đơn trong một tháng có thể do mùa vụ/đối thủ (phản ví dụ nêu mùa cao điểm nhưng không bàn mẫu nhỏ), nên \"điểm tối ưu giữa 9 và 12\" là kết luận trên 3 điểm dữ liệu.",
+          "fix": "Gắn nhãn; thêm câu \"mỗi bậc nên chạy ≥2 tuần và so với tuần cùng kỳ\"; nêu khoảng dao động đơn thường gặp."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "tăng theo bậc, ví dụ 20–50% mỗi lần (bậc càng nhỏ càng an toàn; bài tn06-05 dùng 25%)",
+          "issue": "Heuristic nghề, không nguồn; đã gắn nhãn là ví dụ nên chấp nhận được, nhưng không nói lý do kỹ thuật (giai đoạn học lại của hệ phân phối khi đổi ngân sách lớn) — cần src nếu nêu cơ chế nền tảng.",
+          "fix": "Ghi \"quy ước thực hành, không phải quy tắc nền tảng\" hoặc thêm src trang trợ giúp nền tảng với ngày kiểm."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 200×80.000 = 16 triệu; −9 = 7 ✓; sai 1,78 = 16/9 đúng nhãn ROAS. Q4: 230×80.000 = 18,4; −12 = 6,4 ✓. Ví dụ: 6tr/150 = 40.000; 9tr/200 = 45.000; 12tr/230 ≈ 52.200 ✓; mức 6 triệu lãi 150×40.000 = 6 triệu ✓ (Q7 b)."
+      },
+      "claims": [
+        {
+          "claim": "Khi tăng ngân sách, chi phí mỗi đơn thường tăng theo, vì nền tảng phải tìm tới người kém quan tâm hơn",
+          "status": "unverified",
+          "note": "Cơ chế lợi suất giảm dần được chấp nhận rộng; nêu với \"thường\", chấp nhận được."
+        },
+        {
+          "claim": "6 triệu → 150 đơn; 9 → 200; 12 → 230; lãi gộp 80.000đ",
+          "status": "illustrative-unlabelled",
+          "note": "Không có chữ minh hoạ."
+        }
+      ],
+      "strengths": "Bài tốt nhất module: ba điều kiện tăng paid rõ, có phân tích lãi biên (+1 triệu rồi −0,6 triệu) trong đào sâu, phản ví dụ mùa cao điểm, và Q7 là câu đánh đổi có biện hộ (nêu cả lý do có thể chọn 12 triệu nếu khách mua lại tốt).",
+      "upgrade": "Gắn nhãn số và thêm nhiễu/thời gian mỗi bậc. Thêm bảng 3 dòng (ngân sách · đơn · đ/đơn · lãi · lãi biên) để học viên đọc thay vì tính nhẩm. Nối kn01-06: dùng LTV thay lãi gộp đơn đầu khi owned đã sẵn (ý (3) đã nêu, cần số). Thêm src cho heuristic bậc tăng."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý: định nghĩa ba loại media (01 owned → 02 earned → 03 paid) → chi phí thật của owned (04) → phân vai trong chiến dịch (05) → phân bổ theo CAC/LTV (06) → rủi ro nền tảng và dựng danh sách (07, 08) → đo reach (09) → tăng paid (10). Hai bài 09–10 là bài \"đo\" nên đặt sau các bài quyết định là đúng. Điểm gãy: 03 dạy nâng thẳng từ 2 lên 10 triệu, 10 mới dạy nâng theo bậc — 03 nên trỏ sang 10.",
+    "overlap": [
+      "07 và 08 cùng ý \"đất thuê/đất nhà\" và cùng dùng QR trên bao bì để kéo vào nhóm Zalo (01 cũng dùng QR túi giấy) — ba bài lặp một chiến thuật",
+      "03 và 10 cùng quy tắc \"nâng ngân sách khi chi phí/đơn < lãi gộp\"",
+      "06 và 10 cùng nói CAC/LTV và owned sẵn trước khi tăng paid"
+    ],
+    "gaps": [
+      "Chưa có bài về đo tăng trưởng thật (incrementality/đối chứng) — chỉ xuất hiện ở Q6 kn01-01 và Q6 kn01-02",
+      "Chưa dạy tần suất và mòn nội dung như một phép đo (chỉ nhắc trong Q7 kn01-03 và đào sâu kn01-09/10)",
+      "Thiếu nhánh \"shared/social\" và sự đồng ý theo luật dữ liệu cá nhân có nguồn (Nghị định 13/2023) dù 07–08 xoay quanh danh sách liên hệ",
+      "Không có bài nào có src dù 08 (luật) và 10 (hành vi nền tảng) thuộc lớp periodic"
+    ],
+    "best_lesson": "B:kn01-10",
+    "weakest_lesson": "B:kn01-01"
+  }
+}

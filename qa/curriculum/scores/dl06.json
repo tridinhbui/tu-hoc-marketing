@@ -1,0 +1,228 @@
+{
+  "mod": "dl06",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:dl06-01",
+      "scores": { "accuracy": 13, "depth": 13, "practical": 14, "examples": 10, "pedagogy": 9, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L1", "L5", "L3", "L2", "L4", "L2", "L2"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Q1, Q4, Q6, Q7", "quote": "Không được công nào, toàn bộ về Google", "issue": "Bốn câu L1–L2 kiểm định nghĩa last-click/first-click; Q7 (một chạm → mọi mô hình giống nhau) là câu thủ thuật. Bài có dữ liệu khảo sát 20/30 nhưng không câu nào buộc đọc nó sâu hơn Q3.", "fix": "Thay Q6/Q7 bằng câu L4: cho bảng last-click 3 kênh + câu trả lời 'biết lần đầu qua đâu' của 100 khách, hỏi kênh nào bị ghi thiếu nhiều nhất và thử gì trước." },
+        { "sev": "P2", "where": "Q3", "quote": "Doanh thu có TikTok tham gia (dù last-click ghi 0) là bao nhiêu triệu đồng?", "issue": "Chỉ là 20 × 600.000; đồng thời 20/30 là tự khai của người đã mua (dl06-06 nói trí nhớ lệch về chạm đầu) — số 12 triệu không nêu là ước lượng thô, dễ bị đọc như 'doanh thu TikTok tạo ra'.", "fix": "Ghi trong lời giải: 'đây là doanh thu có chạm theo tự khai, chưa phải tăng thêm; muốn biết TikTok tạo ra bao nhiêu phải thử tắt (dl06-07)'." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Báo cáo nguồn lưu lượng theo phiên của Google Analytics (nguồn của phiên là chạm cuối trước khi mua)", "issue": "Đúng cho ví dụ nhưng chưa nêu điều kiện: GA ghi nguồn của PHIÊN mua, không phải chạm cuối tuyệt đối; khách tìm Google rồi đóng, hôm sau gõ URL trực tiếp sẽ thành 'direct'. Không nêu ngày kiểm cho hành vi công cụ.", "fix": "Thêm 'nếu khách quay lại bằng gõ thẳng, nguồn là direct — nên 'Google' trong ví dụ là nguồn của phiên có đơn' và ngày kiểm." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Google được ghi 30 đơn theo last-click, TikTok 2 đơn… 20 người nói lần đầu thấy shop trên TikTok", "issue": "Số không gắn nhãn minh hoạ; nền tảng thật đi với số tự đặt.", "fix": "Thêm nhãn 'số minh hoạ'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20 × 600.000 = 12 triệu ✓; 18 = 30 × 600.000 ✓." },
+      "claims": [
+        { "claim": "GA ghi nguồn phiên là chạm cuối trước khi mua", "status": "unverified", "note": "Đúng theo nghĩa 'nguồn của phiên có đơn'; không có src/ngày kiểm." },
+        { "claim": "Shop túi vải: Google 30 đơn, TikTok 2 đơn, 20/30 biết qua TikTok", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phân biệt đúng 'kênh chốt' với 'kênh tạo khách' và nêu cơ chế (tìm tên là hệ quả của chạm trước); có phản ví dụ (nhu cầu sẵn có, một phiên) với dấu hiệu nhận ra; đào sâu nối sang tự khai và thử tắt kênh.",
+      "upgrade": "Gắn nhãn minh hoạ; ghi rõ 12 triệu là 'có chạm theo tự khai'; nêu điều kiện nguồn phiên GA với ngày kiểm; thay 2 câu định nghĩa bằng câu đọc bảng đối chiếu last-click ↔ tự khai; thêm số tiền cho quyết định 'giữ TikTok' (chi TikTok vs lãi của 20 đơn)." },
+    {
+      "id": "B:dl06-02",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L4", "L6", "L3", "L3", "L5", "L4", "L2"],
+      "bloom_max": "L6",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "GA4 và Google Ads đã gỡ first-click, tuyến tính, suy giảm theo thời gian và theo vị trí từ cuối 2023… (theo Google Analytics Help và Google Ads Help, 10/2026)", "issue": "Khẳng định về nền tảng (loại fast) có nêu nguồn và ngày trong văn bản nhưng bài không có trường src bấm được, không có câu 'nếu màn hình khác, tin trang chính thức'. Không kiểm web ở bước này → unverified.", "fix": "Chuyển thành src với URL hai trang trợ giúp + ngày kiểm, thêm câu phòng hờ theo quy ước fast." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "cô tắt thử Email ở một nhóm khách, so số đơn với nhóm còn lại rồi mới đổi ngân sách", "issue": "Quyết định đúng hướng nhưng không nêu cỡ nhóm, thời gian và ngưỡng (Email có 0–5 triệu trong 50 → tín hiệu nhỏ, cần nhiều tuần); người học không biết thử bao lâu.", "fix": "Thêm: 'chia ngẫu nhiên 50/50 danh sách email, 6 tuần, đọc số đơn của nhóm có email so nhóm không' và nối dl06-07." },
+        { "sev": "P2", "where": "Q7", "quote": "Đổi từ last-click sang first-click, tổng doanh thu cả shop trong báo cáo thay đổi thế nào?", "issue": "Câu L2, nhiễu d 'tăng gấp đôi' vô lý; ý đã có trong khái niệm ('chia lại cùng một tổng').", "fix": "Thay bằng câu L4: cho bảng 4 mô hình × 4 kênh, hỏi kênh nào các mô hình đồng thuận nhất (ít cần thử) và kênh nào bất đồng nhất." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tổng 50 triệu. Last-click: Google 50. First-click: TikTok 20, Facebook 15, Google 15", "issue": "Bảng kết quả 4 mô hình × 4 kênh được viết thành chuỗi chữ; với 16 con số cần bảng. Số không gắn nhãn minh hoạ.", "fix": "Dựng bảng và nhãn minh hoạ." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "100 đơn × 500k = 50 triệu. Tuyến tính: 40 đơn 4 chạm → mỗi kênh 10 đơn; FB = 10 + 15 = 25 đơn = 12,5 ✓; Email 10 đơn = 5 ✓ (Q4); Google 10 + 15 + 30 = 55 đơn = 27,5 ✓; TikTok 5 ✓. Theo vị trí 40-20-40: TikTok 16 đơn = 8 ✓; FB 4 + 15 = 19 đơn = 9,5 ✓ (Q3); Email 4 đơn = 2 ✓; Google 16 + 15 + 30 = 61 đơn = 30,5 ✓. First-click 20/15/15 ✓. Q1: first-click 15 < tuyến tính 27,5 < vị trí 30,5 < last 50 ✓." },
+      "claims": [
+        { "claim": "GA4/Google Ads đã gỡ các mô hình quy tắc từ cuối 2023, còn data-driven và last-click", "status": "unverified", "note": "Có nêu nguồn và ngày trong văn bản (10/2026) nhưng không có trường src; loại fast." },
+        { "claim": "Mô hình theo vị trí 40-20-40 là quy ước, không phải quy luật", "status": "verified", "note": "Đúng, bài tự gắn nhãn." },
+        { "claim": "Cửa hàng mỹ phẩm Linh: 40/30/30 đơn theo ba hành trình", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Nói đúng và rõ điều cốt lõi: bốn mô hình chỉ chia lại cùng một tổng, không mô hình nào trả lời 'đơn có phát sinh nhờ kênh đó không' — đó là việc của thử nghiệm; cách dùng (tìm kênh bất đồng nhất rồi thử) là quy trình nghề; Q1 buộc tính nhẩm cả bốn mô hình; Q2 là câu thiết kế.",
+      "upgrade": "Đưa khẳng định GA4 vào src + câu phòng hờ; dựng bảng 4×4 có nhãn minh hoạ; nêu cỡ/thời gian/ngưỡng cho thử tắt Email; thêm phản ví dụ (khi bốn mô hình đồng thuận thì không cần thử — tiết kiệm học phí); thay Q7." },
+    {
+      "id": "B:dl06-03",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 82,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Q7", "quote": "Một nền tảng đã đổi cách tính để thổi phồng số", "issue": "Hệ số tự nhận tăng 1,8 → 2,4 với doanh thu thật không đổi có hai giải thích đều hợp lý: chồng lấn tăng (c) hoặc một nền tảng đổi cài đặt ghi nhận (vd cửa sổ mặc định, bật ghi nhận theo lượt xem — chính dl06-04/Q5 bài này dạy điều đó). Phương án d bị loại chỉ vì gắn chữ 'thổi phồng'; stem không cho dữ kiện loại trừ.", "fix": "Thêm vào stem 'cài đặt cửa sổ và cách ghi nhận của cả ba không đổi' hoặc sửa d thành 'sổ đơn đếm thiếu' để rõ sai." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "hệ số tự nhận = 1,8 lần", "issue": "Hệ số này gộp hai thứ: chồng lấn giữa nền tảng và phần nền tảng nhận đơn vốn tự nhiên (khách cũ). Bài không tách, nên 'trung bình mỗi đơn bị đếm gần hai lần' (VÌ SAO (3)) không hoàn toàn đúng — một phần là đếm đơn không nhờ quảng cáo, không phải đếm trùng.", "fix": "Sửa (3): 'hệ số 1,8 gồm cả đếm trùng lẫn đếm đơn tự nhiên; tách phần nào là việc của thử nghiệm tăng thêm (dl06-07)'." },
+        { "sev": "P2", "where": "Q6", "quote": "So các nhóm quảng cáo trong cùng nền tảng", "issue": "Câu L2 nhận lại ĐÀO SÂU; nhiễu dễ loại.", "fix": "Thay bằng câu L4 dùng dữ liệu bài thực hành: ROAS nền tảng 4,5 vs ROAS chạm cuối 1,1 vs iROAS 1,4 (0,9–1,9) — kết luận nào được phép rút." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Facebook nói mang về 80 triệu, TikTok 55 triệu, Google 45 triệu", "issue": "Bài học không gắn nhãn minh hoạ (bài thực hành thì có '(minh hoạ)').", "fix": "Thêm nhãn." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 80 + 55 + 45 = 180; 180 ÷ 100 = 1,8 ✓; 0,56 = 100 ÷ 180 ✓. Q4: 100 ÷ 25 = 4 ✓; 7,2 = 180 ÷ 25 ✓; stem phân biệt đúng MER với ROAS gán. Bài thực hành: ROAS nền tảng 105 ÷ 30 = 3,5 ✓, 90 ÷ 20 = 4,5 ✓; tổng 195 vs 130 (vượt 65) ✓; chạm cuối 38 ÷ 30 = 1,27 ✓, 22 ÷ 20 = 1,10 ✓; iROAS 28 ÷ 20 = 1,4 (0,9–1,9) ✓; hoà vốn 1 ÷ 0,5 = 2,0 ✓; giảm 8 triệu → mất 11,2 doanh thu, 5,6 biên, ròng +2,4 (+0,4…+4,4) ✓; điều kiện sai 8 ÷ 0,5 = 16 triệu ✓; bài mẫu có ghi 'giả định tuyến tính theo mức chi' ✓." },
+      "claims": [
+        { "claim": "Mỗi nền tảng ghi nhận đơn nếu khách từng xem hoặc bấm quảng cáo trong cửa sổ ghi nhận; không thấy nhau", "status": "unverified", "note": "Đúng về nguyên tắc cho Meta/TikTok/Google; không src." },
+        { "claim": "Đồ gia dụng: 80/55/45 so với 100 triệu thật", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Bài thực hành: biên 50%, ROAS 3,5/4,5, thử tắt 3 tỉnh 2 tuần", "status": "illustrative-labelled", "note": "Có chữ '(minh hoạ)'." }
+      ],
+      "strengths": "Bài mạnh nhất module: cấu trúc đầy đủ (phản ví dụ phân biệt đếm trùng với dấu hiệu bất thường, đào sâu nối MER/UTM), Q4 phân biệt MER với ROAS gán ngay trong đề, và bài thực hành có đầu ra buộc xếp cạnh ba loại ROAS, tính hoà vốn theo biên, ghi mức chắc chắn và điều kiện sai bằng số — đúng chuẩn 'quyết định có số'.",
+      "upgrade": "Tách hệ số 1,8 thành đếm trùng + đơn tự nhiên; sửa Q7 cho một đáp án; thay Q6 bằng câu đọc ba loại ROAS; gắn nhãn minh hoạ cho bài học; thêm một dòng về đơn hoàn/huỷ trong sổ đơn (gốc sự thật cũng cần quy ước)." },
+    {
+      "id": "B:dl06-04",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L3", "L5", "L3", "L4", "L4", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Minh chuyển sang 7 ngày sau bấm làm chuẩn, xem thêm 28 ngày để tham khảo, và không cắt quảng cáo", "issue": "Quyết định 'không cắt' dựa trên số đơn có chạm trong cửa sổ (38/40), chưa có bước kiểm tăng thêm; khái niệm đã nói 'cửa sổ dài gom cả đơn đằng nào cũng xảy ra' nhưng ví dụ không áp dụng điều đó. Chưa tới mức đồng nhất doanh thu gán với tăng thêm, nhưng thiếu cầu nối.", "fix": "Thêm: 'Cửa sổ đúng chỉ sửa cách ĐẾM; quảng cáo có đáng tiền không còn phải so ROAS 7 ngày với hoà vốn và thử tắt ở một khu (dl06-07).'" },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Các lựa chọn cửa sổ của Meta đã đổi nhiều lần, nên hãy xem tuỳ chọn hiện có trong Ads Manager", "issue": "Có câu phòng hờ (tốt) nhưng kiến thức fast không có src/ngày kiểm; tình huống dùng '1 ngày sau khi bấm' như tuỳ chọn hiện hành mà không ghi ngày.", "fix": "Đặt src trang trợ giúp Meta về attribution settings + ngày kiểm." },
+        { "sev": "P2", "where": "Q6", "quote": "Lượt xem được nền tảng nhân ba khi quy đổi thành đơn hàng", "issue": "Nhiễu vô lý làm Q6 thành L2 đoán được; ý đã có ở dl06-03 Q5.", "fix": "Thay bằng câu L4: cho phân bố 40 đơn theo ngày (6/28/38) và đơn 'không chạm' 60 — tính tỉ lệ đơn có chạm theo từng cửa sổ và hỏi ngưỡng 7 vs 28 đổi ROAS bao nhiêu." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "trong 40 đơn có chạm quảng cáo, chỉ 6 đơn mua trong 1 ngày sau khi bấm, 28 đơn trong 7 ngày, 38 đơn trong 28 ngày", "issue": "Số không gắn nhãn minh hoạ; không nói tổng đơn của shop (bao nhiêu đơn không có chạm) nên không tính được ROAS theo cửa sổ.", "fix": "Thêm tổng đơn và chi quảng cáo; nhãn minh hoạ." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (40 − 6) ÷ 40 = 85% ✓; 15 = 6 ÷ 40 ✓. Q7: (38 − 28) ÷ 28 = 35,7% ✓; 25 = 10 ÷ 40 ✓. Ví dụ: 6 ÷ 40 = 15% ✓." },
+      "claims": [
+        { "claim": "Meta có cửa sổ '1 ngày sau khi bấm' và các lựa chọn đã đổi nhiều lần", "status": "unverified", "note": "Có câu phòng hờ nhưng không src/ngày kiểm; loại fast." },
+        { "claim": "Sofa 12 triệu cân nhắc 2–4 tuần; 6/28/38 trên 40 đơn", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Cấu trúc đầy đủ; phản ví dụ (sofa + gối ôm cùng cửa hàng) đổi kết luận 'một cửa sổ chung'; đào sâu nói đúng 'cửa sổ là lựa chọn của người đo, không phải sự thật của khách' và đánh đổi trễ/đầy đủ; Q5 bắt lỗi đổi cửa sổ giữa hai tháng.",
+      "upgrade": "Nối cửa sổ với tăng thêm (đếm đúng ≠ đáng tiền); đặt src Meta; cho tổng đơn + chi phí để tính ROAS theo cửa sổ và thay Q6; gắn nhãn minh hoạ; thêm bước làm: cách xuất phân bố ngày chạm → mua từ sổ đơn/GA." },
+    {
+      "id": "B:dl06-05",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 10, "pedagogy": 9, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L2", "L3", "L1", "L3", "L2", "L1", "L4"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Q1, Q3, Q5, Q6", "quote": "Ba nguồn riêng, số Facebook bị chia nhỏ", "issue": "Bốn câu L1–L2 kiểm quy ước (chữ hoa/thường, campaign để tách đợt, UTM nội bộ ghi đè) đã nêu nguyên văn trong bài; chỉ Q7 (direct còn 18%) là câu đọc hiểu thật. Quiz đo nhớ, không đo làm.", "fix": "Thay Q3/Q6 bằng câu L4: cho báo cáo có 6 dòng source/medium lộn xộn (Facebook/fb/facebook, kol/social) với lượt và đơn — gộp lại và tính CR đúng; câu L5: chọn giữa đặt KOL ở source hay campaign khi muốn so KOL với nhau và so KOL với Facebook." },
+        { "sev": "P2", "where": "Q4", "quote": "Tỉ lệ chuyển đổi của đợt KOL là bao nhiêu phần trăm?", "issue": "36 ÷ 1.200 là phép chia một bước không liên quan đến UTM; không có phép tính nào trong bài về chính chủ đề (phần direct giảm, phần gộp lại).", "fix": "Thay bằng câu: trước chuẩn hoá Facebook 400 + fb 250 + FB 150 lượt, 24 đơn — CR gộp; hoặc tính phần direct 'không thể gắn' từ số liệu hai tháng." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "tên tự chế như \"message\" hay \"kol\" thường rơi vào nhóm Unassigned", "issue": "Khẳng định về hành vi GA4 (nhóm kênh mặc định) không có src/ngày kiểm; kiến thức periodic–fast.", "fix": "Đặt src trang 'Default channel group' của GA4 Help + ngày kiểm, và liệt kê 4–5 giá trị medium được nhận." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 36 ÷ 1.200 = 3% ✓; 33,3 = 1.200 ÷ 36 ✓; 0,3 = quên ×100 ✓. Ví dụ: 45% → 18% có ghi '(số minh hoạ)' ✓." },
+      "claims": [
+        { "claim": "GA4 chỉ nhận một số giá trị utm_medium vào nhóm kênh mặc định; giá trị tự chế rơi vào Unassigned", "status": "unverified", "note": "Khớp hiểu biết chung, không src/ngày kiểm." },
+        { "claim": "Link từ Zalo/ứng dụng nhắn tin không gửi referrer nên thành direct", "status": "unverified", "note": "Cơ chế đúng về nguyên tắc; không nguồn." },
+        { "claim": "direct/khác giảm từ 45% còn 18%", "status": "illustrative-labelled", "note": "Có '(số minh hoạ)'." }
+      ],
+      "strengths": "Đủ phản ví dụ (UTM trên link nội bộ ghi đè nguồn) và đào sâu (direct 18% không hẳn là lỗi, 'dark social'); Q7 dạy chấp nhận phần không đo được thay vì săn về 0%; có nhãn minh hoạ cho con số 45 → 18.",
+      "upgrade": "Thay 3 câu L1–L2 bằng câu gộp báo cáo lộn xộn và câu chọn chiều (source vs campaign) có biện hộ; đặt src GA4 cho medium/Unassigned; thêm bảng quy ước mẫu 6 dòng để ÁP DỤNG có khung; thêm một phép tính về chính chủ đề (phần direct giảm bao nhiêu điểm, bao nhiêu lượt được 'đòi lại')." },
+    {
+      "id": "B:dl06-06",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 9, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L6", "L2", "L2"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Doanh thu từ nhóm được giới thiệu là bao nhiêu triệu đồng?", "issue": "76 × 450.000 là phép nhân thuần, không kiểm gì về tự khai; gọi là 'doanh thu từ nhóm được giới thiệu' dù bài vừa dạy tự khai chỉ là giả thuyết.", "fix": "Thay bằng câu đối chiếu hai nguồn: công cụ ghi Google 60% đơn web, tự khai nói Google 10% — tính khoảng cách và nêu hai cách đọc; hoặc câu sai số: 38% trên 200 đơn ± 6,7 điểm." },
+        { "sev": "P2", "where": "Q6, Q7, Q1", "quote": "Ở bước đặt hàng hoặc ngay trang cảm ơn", "issue": "Ba câu L2 nhận lại ý bài; nhiễu Q6 ('bị cấm ở nhiều ngành hàng') vô lý; không câu nào buộc dùng bảng 76/48/36/20/12/8.", "fix": "Thay Q6 bằng câu L4: so bảng tự khai với bảng last-click (cho số) và hỏi kênh nào 'tạo' mà không 'chốt', kênh nào ngược lại." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Chị làm chương trình \"giới thiệu bạn, tặng nến\" thay vì tăng ngân sách Google", "issue": "Quyết định không có số (chi phí nến, số đơn kỳ vọng, cách đo) dù ĐÀO SÂU nói phải đếm đơn từ mã giới thiệu; số 200 đơn/76 không gắn nhãn minh hoạ.", "fix": "Thêm một dòng ngân sách và chỉ số thành công (vd 50 nến × 60.000đ, kỳ vọng ≥ 20 đơn có mã trong 2 tháng) và nhãn minh hoạ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Ví dụ: 76 + 48 + 36 + 20 + 12 + 8 = 200 ✓; 76 ÷ 200 = 38% ✓. Q3: 76 × 450.000 = 34,2 triệu ✓; 90 = 200 × 450.000 ✓." },
+      "claims": [
+        { "claim": "Khách nhớ chạm đầu hoặc chạm có cảm xúc; chọn lựa chọn đầu danh sách", "status": "unverified", "note": "Khớp hiểu biết về thiên lệch trí nhớ/thứ tự; nêu như sự thật, không nguồn." },
+        { "claim": "Tiệm bánh kem: 200 đơn, 38% bạn bè", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ sắc (gắn quà vào đáp án làm số tự khai bị thổi) với dấu hiệu nhận ra; đào sâu coi tự khai là giả thuyết cần kiểm bằng mã giới thiệu; Q5 (podcast) là câu thiết kế đo cho kênh không bấm được.",
+      "upgrade": "Đưa bảng đối chiếu tự khai ↔ last-click vào ví dụ và dựng 2 câu L4 từ đó; thêm sai số của 38% trên 200; cho số tiền/chỉ số thành công của chương trình giới thiệu; gắn nhãn minh hoạ; thêm điều kiện 'câu hỏi bắt buộc làm rớt bao nhiêu % đơn — đo trước khi bật'." },
+    {
+      "id": "B:dl06-07",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L6", "L3", "L3", "L2", "L6", "L5"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tăng thêm do quảng cáo ≈ 15 triệu, tức khoảng 14% doanh thu dự kiến", "issue": "Một cặp vùng, một tháng: không nêu dao động tháng thường của Đà Nẵng (nếu ±8% là bình thường thì −10% so +5% có thể là nhiễu). Kết luận 15 triệu không kèm khoảng, dù bài thực hành dl06-03 có ghi 18–38. Thiếu điều kiện làm con số đổi.", "fix": "Thêm: 'Nhìn 8 tuần trước: hai vùng lệch nhau trong ±4%; chênh 15% lần này vượt mức đó' và ghi 15 triệu là ước lượng điểm, khoảng ~8–22." },
+        { "sev": "P2", "where": "Q6", "quote": "Tắt vài tuần xen kẽ, so với các tuần bật cùng thời kỳ", "issue": "Đúng hướng nhưng lời giải không nêu hiệu ứng kéo dài (tuần tắt vẫn hưởng quảng cáo tuần trước) và cần chu kỳ bật/tắt dài hơn độ trễ mua; dễ ước thấp tác động.", "fix": "Thêm 'mỗi pha ≥ 2–3 tuần, bỏ tuần chuyển tiếp khỏi phép so'." },
+        { "sev": "P2", "where": "Q1, Q5", "quote": "Thường giảm ít hơn nhiều, vì khách quen vẫn mua", "issue": "Hai câu L2 nhận lại ý bài; Q5 nhiễu b ('tháng 10 ít ngày hơn') vô lý.", "fix": "Thay Q5 bằng câu L4: cho doanh thu 8 tuần hai vùng với xu hướng lệch từ tuần 5 — có nên ghép cặp." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Hà Nội 200 triệu, Đà Nẵng 100 triệu", "issue": "Số không gắn nhãn minh hoạ; không cho chi quảng cáo trong bài học (chỉ ở Q4) nên ví dụ không khép được 'so lãi của 15 triệu với tiền quảng cáo'.", "fix": "Đưa chi 6 triệu và biên vào ví dụ: 15 × biên 40% = 6 triệu ≈ hoà vốn → quyết định rõ hơn." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 210 ÷ 200 − 1 = 5%; 100 × 1,05 = 105; 105 − 90 = 15 ✓; 10 = 100 − 90 ✓. Q4: 15 ÷ 6 = 2,5 ✓; 0,4 = 6 ÷ 15 ✓. Ví dụ: 15 ÷ 105 = 14,3% ✓." },
+      "claims": [
+        { "claim": "Chuỗi trà Ngọc: Facebook báo 40% doanh thu; thử tắt cho 14%", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Phần doanh thu tự nhận thường lớn hơn phần thật sự tăng thêm", "status": "unverified", "note": "Khớp kinh nghiệm ngành, nêu như quy luật." }
+      ],
+      "strengths": "Định nghĩa tăng thêm đúng ('phần sẽ mất nếu không chạy') và phân biệt rõ với doanh thu tự nhận; VÌ SAO (2) yêu cầu kiểm song song trước thử; phản ví dụ (lễ hội Đà Nẵng) với dấu hiệu nhận ra; Q7 từ chối kết luận cắt/giữ vội và đề xuất thử tiếp theo nhóm — đúng tư duy nghề; ví dụ tự nêu giới hạn (chưa tách khách quen/mới).",
+      "upgrade": "Thêm dao động nền và khoảng cho 15 triệu; đưa chi và biên vào ví dụ để quyết định khép kín; nêu hiệu ứng kéo dài cho bật/tắt theo thời gian; thay Q1/Q5 bằng câu đọc 8 tuần hai vùng; gắn nhãn minh hoạ; nối rõ sang dl05-03 (cùng cơ chế DiD)." },
+    {
+      "id": "B:dl06-08",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 13, "examples": 10, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L4", "L6", "L3", "L3", "L1", "L5", "L2"],
+      "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Điều kiện: đủ dữ liệu, và chi tiêu các kênh phải có lúc lên lúc xuống khác nhau", "issue": "Thiếu hai điều kiện/giả định làm con số đổi: hiệu ứng kéo dài (adstock — TV tuần này còn tác dụng tuần sau) và lợi ích giảm dần (saturation); bỏ qua thì ROAS 1,5 ở Q4 là ROAS trung bình, không nói gì về đồng tiếp theo.", "fix": "Thêm 2 câu ở mức trực giác: 'mô hình thường cho TV kéo dài vài tuần và cho đường cong bão hoà; ROAS trung bình 1,5 không có nghĩa thêm 10 triệu nữa cũng ra 1,5'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Mô hình ước: nền 650 triệu, Tết và mùa vụ 120 triệu, khuyến mãi 80 triệu, TV 90 triệu, TikTok 40 triệu, Facebook 20 triệu", "issue": "Phân rã không kèm khoảng sai số dù VÌ SAO (3) nói 'kết quả là ước lượng kèm sai số'; số không gắn nhãn minh hoạ.", "fix": "Ghi ví dụ khoảng: 'TV 90 (50–130) — rộng vì trùng Tết' và nhãn minh hoạ." },
+        { "sev": "P2", "where": "Q5, Q7", "quote": "Đo được cả TV và đơn offline, không cần theo dấu", "issue": "Q5 là L1, Q7 là L2 với nhiễu dễ loại; không câu nào buộc đọc một bảng chi tiêu theo tuần để nhận ra đồng pha.", "fix": "Thay Q5 bằng câu L4: cho bảng 8 tuần chi TV/TikTok/khuyến mãi — kênh nào mô hình không tách được và vì sao." },
+        { "sev": "P2", "where": "ÁP DỤNG", "quote": "Tháng nào có thể là \"nền\", tháng nào do mùa vụ", "issue": "Việc áp dụng không dẫn tới quyết định; không có bước làm (cần bao nhiêu tuần, kênh nào so le trước, chi phí thuê/tự làm MMM).", "fix": "Thêm bước: 'năm sau dời 30% ngân sách TV sang 6 tuần ngoài Tết; sau 52 tuần mới dựng mô hình; trước đó dùng thử tắt vùng'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Phân rã: 650 + 120 + 80 + 90 + 40 + 20 = 1.000 ✓. Q3: (90 + 40 + 20) ÷ 1.000 = 15% ✓; 35 = cộng cả mùa vụ + khuyến mãi ✓; 23 = 150 ÷ 650 ✓. Q4: 90 ÷ 60 = 1,5 ✓; 0,67 = 60 ÷ 90 ✓." },
+      "claims": [
+        { "claim": "Hai năm số liệu tuần là điểm khởi đầu hợp lý cho MMM", "status": "unverified", "note": "Khớp thực hành chung (≥ 2 năm tuần), không nguồn." },
+        { "claim": "Nước mắm anh Phúc: 1 tỉ/tuần, phân rã 650/120/80/90/40/20", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Đặt MMM đúng chỗ: câu hỏi ngân sách quý/năm, cần biến động lệch pha, kiểm lại bằng thử nghiệm; phản ví dụ (4 tháng, một kênh, chi đều → số trông chắc nhưng ngẫu nhiên) với dấu hiệu nhận ra; Q2 là câu thiết kế lịch chi để mô hình học được — ý đúng và hiếm.",
+      "upgrade": "Thêm adstock/saturation ở mức trực giác và nói ROAS mô hình là trung bình; cho khoảng sai số trong phân rã; thêm bước làm có số cho năm sau; thay Q5/Q7 bằng câu đọc bảng chi theo tuần; gắn nhãn minh hoạ." },
+    {
+      "id": "B:dl06-09",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 14, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L3", "L5", "L3", "L4", "L4", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Hỏi nhanh 25 khách nói đã xem quảng cáo: 15 người nhớ dùng mã (60%), nên số khách có chạm cỡ 150 ÷ 0,6 = 250", "issue": "60% từ n = 25 có sai số ±19 điểm → 250 thực ra nằm trong khoảng ~190–370; bài không nêu, dù Q5 nói 50 người 'đủ cho ước lượng thô nếu ghi rõ khoảng sai lệch' mà lời giải không ghi.", "fix": "Thêm 'với 25 người, 60% ± 19 điểm → 190–370 đơn; hỏi thêm vài cửa hàng để thu hẹp'." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Có SĐT khách đồng ý thì còn đối chiếu được với danh sách người đã tương tác quảng cáo", "issue": "Đối chiếu SĐT với dữ liệu tương tác quảng cáo chạm vấn đề pháp lý (Nghị định 13/2023 về dữ liệu cá nhân) và điều kiện nền tảng (chỉ qua Conversions API/offline conversions với hash); nêu như việc đơn giản.", "fix": "Thêm 'cần đồng ý rõ ràng và chỉ qua cơ chế nền tảng cho phép (hash SĐT); đọc quy định về dữ liệu cá nhân' và đặt src/ngày kiểm." },
+        { "sev": "P2", "where": "Q3, Q6, Q7", "quote": "ROAS gộp cả web và cửa hàng là bao nhiêu?", "issue": "Ba câu calc đều là một phép tính một bước theo đúng số của ví dụ (L3 nhận lại); không có câu nào buộc so ROAS gộp 10,2 với hoà vốn theo biên hay với số tăng thêm.", "fix": "Gộp Q6/Q7 thành một; thêm câu L5: biên lãi gộp kính 55%, chi 20 triệu — ROAS có chạm cần bao nhiêu để hoà vốn nếu chỉ 30% đơn có mã là tăng thêm." }
+      ],
+      "calc_check": { "n": 3, "ok": 3, "notes": "Q3: 150 × 1,2 = 180; 24 + 180 = 204; 204 ÷ 20 = 10,2 ✓; 9 = 180 ÷ 20 ✓. Q6: 15 ÷ 25 = 60% ✓; 30 = 15 ÷ 50 ✓. Q7: 150 ÷ 0,6 = 250 ✓; 90 = 150 × 0,6 ✓; 240 = 150 × 1,6 ✓." },
+      "claims": [
+        { "claim": "Nền tảng chỉ thấy hành vi có gắn pixel trên web/app; mua ở quầy không gửi dữ liệu về", "status": "unverified", "note": "Đúng về mặc định; bỏ qua khả năng tải chuyển đổi offline — không nguồn." },
+        { "claim": "Chuỗi kính: ROAS web 1,2; 150 mã FBKINH; 25 khách hỏi nhanh", "status": "illustrative-labelled", "note": "Có '(Số minh hoạ.)'." }
+      ],
+      "strengths": "Ví dụ tự gắn nhãn minh hoạ và tự nêu đúng giới hạn ('số có chạm, chưa phải tăng thêm; chưa trừ giá vốn'); Q4 ngăn đồng nhất ROAS gộp với tác động thật; Q5 bắt lỗi chọn mẫu khảo sát một cửa hàng một khung giờ; cách hiệu chỉnh tỉ lệ dùng mã là kỹ thuật nghề thật.",
+      "upgrade": "Thêm sai số cho tỉ lệ dùng mã và khoảng cho 250; nêu điều kiện pháp lý/kỹ thuật khi đối chiếu SĐT với src; thêm phản ví dụ (mã bị lan truyền trên nhóm săn deal — khách không xem quảng cáo vẫn dùng mã); thay 1–2 câu calc lặp bằng câu hoà vốn theo biên và tỉ lệ tăng thêm; thêm cấu trúc phản ví dụ/đào sâu còn thiếu." },
+    {
+      "id": "B:dl06-10",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L3", "L5", "L3", "L5", "L3", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Q5", "quote": "Doanh thu tăng thêm = 150 × (2,0 − 1,2) = 120 triệu", "issue": "Phép tính giả định iROAS biên bằng iROAS trung bình ở cả hai kênh khi chuyển 5% ngân sách (150 triệu) — không nêu trong đề hay lời giải. Với lợi ích giảm dần (chính dl06-07 Q6 nhắc 'lợi ích giảm dần'), kênh nhận thêm 150 triệu có iROAS biên thấp hơn 2,0 và kênh bị cắt mất ít hơn 1,2 → lợi ích thật nhỏ hơn 120 rõ rệt, có thể âm sau 20 triệu phí đo. Thiếu giả định làm kết quả đổi.", "fix": "Thêm vào đề: 'giả định iROAS biên không đổi ở mức chuyển 5%' và vào lời giải: 'thực tế lợi ích giảm dần nên 16 triệu là cận lạc quan; chuyển từng bước 2–3% và đo lại'." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "(GA4/Google Ads đã gỡ các mô hình quy tắc như theo vị trí từ cuối 2023; … kiểm theo Google Analytics Help, 10/2026)", "issue": "Lặp lại khẳng định fast của dl06-02 với ngày kiểm trong văn bản nhưng không có trường src; không có câu phòng hờ 'nếu màn hình khác'.", "fix": "Dùng chung src với dl06-02 và câu phòng hờ." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Quy tắc nhẩm (minh hoạ): chỉ cân nhắc nâng cấp khi chi quảng cáo trên khoảng 100 triệu/tháng và có hơn 3 kênh", "issue": "Có nhãn minh hoạ (tốt) nhưng quy tắc 'phân bổ sai 10%' là tham số tự đặt không giải thích; Q6 dùng lại 10% như chuẩn.", "fix": "Ghi 'tỉ lệ phân bổ sai 10% là giả định; với kênh mới hoặc last-click thuần, con số có thể 20–30%'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "mỗi quý tắt một kênh 4 tuần rồi so với 4 tuần trước", "issue": "So trước–sau một vùng không có đối chứng — chính dl06-07 (LỖI HAY GẶP) gọi đây là lỗi; bài có nói 'chỉ tin khi đơn tụt hơn mức dao động' nhưng không nêu mức đó.", "fix": "Đổi thành 'tắt xen kẽ 2 tuần bật/2 tuần tắt trong 8 tuần' và cho ngưỡng dao động từ dữ liệu 6 tháng trước." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 5 × 20% = 1; 1 − 3 = −2 ✓. Q5: 3.000 × 5% = 150; 150 × 0,8 = 120; × 30% = 36; − 20 = 16 ✓ về số học, nhưng giả định iROAS biên không đổi không nêu (xem P1). Q1: 3 ÷ 5 = 60%, 3 ÷ 30 = 10% ✓. Q6: 10% × 120 = 12; 10% × 30 = 3 ✓." },
+      "claims": [
+        { "claim": "GA4/Google Ads đã gỡ mô hình quy tắc từ cuối 2023 (kiểm 10/2026)", "status": "unverified", "note": "Lặp từ dl06-02; không trường src." },
+        { "claim": "Quy tắc nhẩm nâng cấp khi chi > 100 triệu/tháng và > 3 kênh", "status": "illustrative-labelled", "note": "Có '(minh hoạ)'." },
+        { "claim": "Gói ghi công đa chạm 3 triệu/tháng", "status": "illustrative-unlabelled", "note": "Giá tự đặt." }
+      ],
+      "strengths": "Nguyên tắc 'đo phải rẻ hơn quyết định nó sửa' được biến thành phép thử có số ở ba quy mô; Q6 buộc so thiệt hại tránh được với phí; Q7 tóm đúng tinh thần module (nhiều nguồn rẻ đối chiếu, thử khi cần); quy tắc nhẩm có gắn nhãn.",
+      "upgrade": "Nêu giả định iROAS biên trong Q5 và ghi 16 triệu là cận lạc quan; sửa cách thử tắt của Khoa cho có đối chứng theo thời gian; dùng src chung với dl06-02; thêm phản ví dụ (shop nhỏ nhưng 80% ngân sách ở một kênh — sai 10% cũng đáng đo bằng cách rẻ); thêm bảng 'quy mô → bộ đo → chi phí' để ÁP DỤNG có khung." }
+  ],
+  "module_notes": {
+    "progression": "Trình tự đúng tư duy nghề: last-click (01) → bốn mô hình chia công (02) → nền tảng tự nhận/MER (03) → cửa sổ (04) → UTM (05) → tự khai (06) → tăng thêm bằng vùng (07) → MMM (08) → offline (09) → chọn theo quy mô (10). Module phân biệt đúng ba câu hỏi: 'ai chốt/ai chia công' (01–02, 04–06), 'kênh tạo thêm bao nhiêu' (07, 09 Q4), 'ngân sách tổng chia thế nào' (08); dl06-02 nói thẳng 'không mô hình nào cho biết đơn có phát sinh nhờ kênh đó hay không', dl06-03 phân biệt doanh thu có chạm/tạo ra/MER, dl06-09 tự gắn nhãn 'số có chạm, chưa phải tăng thêm'. Không bài nào đồng nhất doanh thu gán với tăng thêm. 8/10 bài có đủ phản ví dụ + đào sâu (hơn hẳn dl04/dl05); điểm yếu chung là quiz nhiều câu L1–L2 (dl06-05, 06) và các khẳng định về GA4/Meta chưa có trường src.",
+    "overlap": [
+      "dl06-03 và dl06-09 cùng dạy 'số nền tảng là có chạm, không phải tạo ra' — nên để 09 chỉ tập trung vào kỹ thuật bắt đơn offline và hiệu chỉnh tỉ lệ dùng mã.",
+      "dl06-01 và dl06-06 cùng dạy 'hỏi khách biết qua đâu' bổ sung last-click (01 ĐÀO SÂU gần trùng 06 KHÁI NIỆM).",
+      "dl06-07 trùng cơ chế DiD với dl05-03; dl06-02 và dl06-10 lặp khẳng định GA4 gỡ mô hình quy tắc.",
+      "dl06-03 Q5, dl06-04 Q6 cùng dạy ghi nhận theo lượt xem làm số phồng."
+    ],
+    "gaps": [
+      "Bảng tổng kết ba câu hỏi (ghi công · tăng thêm · MMM) với 'trả lời gì / không trả lời gì / dữ liệu cần / chi phí' — module dạy đúng nhưng chưa có một chỗ gom lại.",
+      "Thiết kế thử nghiệm tăng thêm: cỡ vùng, thời gian, ngưỡng nhiễu, hiệu ứng kéo dài — dl06-07 nói định tính, không cho cách tính nào.",
+      "Thử nghiệm giữ lại trên nền tảng (conversion lift/holdout) — chỉ nhắc ở dl05-03 cho brand lift, chưa có cho doanh thu.",
+      "Adstock và bão hoà trong MMM; ROAS biên vs trung bình — thiếu, và dl06-10 Q5 bị lỗi đúng chỗ này.",
+      "Mất tín hiệu đo (chặn cookie/ATT, consent) làm số nền tảng và GA lệch theo thời gian — kiến thức fast chưa có bài, chỉ có src trống.",
+      "Data-driven attribution: nêu tên ở dl06-02/10 nhưng không giải thích nó trả lời câu hỏi nào và thiên lệch gì."
+    ],
+    "best_lesson": "B:dl06-03",
+    "weakest_lesson": "B:dl06-05"
+  }
+}

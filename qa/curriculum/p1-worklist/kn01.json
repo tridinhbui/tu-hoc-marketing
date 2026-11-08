@@ -1,0 +1,80 @@
+{
+ "mod": "kn01",
+ "lessons": [
+  {
+   "id": "B:kn01-01",
+   "title": "Tiệm bánh của bạn đang sở hữu những kênh nào mà chưa từng đếm?",
+   "total": 67,
+   "defects": [
+    {
+     "sev": "P0",
+     "where": "Q1",
+     "quote": "Tấm menu dán trong quầy mà khách đọc khi đứng chờ lấy bánh",
+     "issue": "Theo đúng ba tiêu chí của bài, phương án c bênh được ngang hoặc hơn a: lượt thấy = 9.000/tháng (bằng túi giấy vì mỗi khách một lần), đường dẫn tới hành động ngắn hơn (khách đứng yên một phút, có nhân viên — chính Q2 gọi tình huống này là \"đường dẫn tới hành động ngắn nhất\"), chi phí sửa ≈ 0 so với 2,7 triệu/tháng của túi. Lời giải loại c (\"số lượt không vượt số khách\") cũng đúng y như vậy với túi giấy. Hai phương án cùng bênh được.",
+     "fix": "Đổi c thành điểm chạm rõ ràng yếu hơn (vd. \"tờ rơi phát ở chợ cách tiệm 2 km\") hoặc đổi stem thành \"điểm chạm nào đi theo khách về nhà và còn được nhìn lại sau khi rời tiệm\"."
+    }
+   ],
+   "upgrade": "Sửa Q1 (P0). Gắn số cho \"mức dẫn tới hành động\" (vd. ước % dừng lại/quét cho từng điểm chạm) để bảng chấm thành bảng số. Thêm phản ví dụ biển hiệu thắng, thêm mục đào sâu về đo lường (mã QR riêng từng điểm chạm để tách nguồn). Nêu độ chắc của giả định 2% (khoảng 0,5–3%) và hậu quả lên chi phí/liên hệ."
+  },
+  {
+   "id": "B:kn01-03",
+   "title": "Nên trả tiền để mua người xem mới, hay để đẩy cái đã chạy tốt?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Đạt ngưỡng đó mới nâng lên 10 triệu: 5.000 lượt nhấp, 200 đơn",
+     "issue": "Giả định giá nhấp 2.000đ và tỉ lệ đặt 4% giữ nguyên khi tăng ngân sách gấp 5. Biên còn lại rất mỏng (2 triệu trên 10 triệu): chỉ cần giá nhấp lên 2.400đ (+20%) là lãi về 0. Chính Q7 của bài nói giá nhấp tăng lên 3.600đ khi đẩy 3 tuần, và kn01-10 dạy chi phí mỗi đơn tăng theo ngân sách. Phép tính thiếu giả định làm kết luận đổi.",
+     "fix": "Ghi rõ \"giả định giá nhấp và tỉ lệ đặt không đổi — thực tế thường tăng\", và nâng theo bậc 2 → 4 → 7 → 10 triệu, đo lại mỗi bậc."
+    }
+   ],
+   "upgrade": "Thêm giả định rõ về giá nhấp/tỉ lệ đặt khi tăng ngân sách và dạy nâng theo bậc (nối kn01-10). Thêm phản ví dụ: bài nhiều tin nhắn hỏi mua nhưng là người ngoài vùng giao hàng → tín hiệu giả. Thêm mục đào sâu về xin phép dùng UGC (mẫu câu xin phép, ghi nguồn). Thay Q5 (L2) bằng câu đọc bảng 3 bài đăng với like/comment/tin nhắn/đơn để chọn bài đáng đẩy."
+  },
+  {
+   "id": "B:kn01-04",
+   "title": "Fanpage \"miễn phí\" thật ra tốn bao nhiêu?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Vì sao hiệu quả (2)",
+     "quote": "Mức quy đổi nên theo giá thị trường của việc đó, như giá thuê người làm nội dung, không phải thu nhập làm gốm của anh",
+     "issue": "Mâu thuẫn với khái niệm trong cùng bài: phần khái niệm định nghĩa chi phí cơ hội là \"giờ bỏ vào fanpage là giờ không làm sản phẩm\", Q5 chấm đúng \"Giá trị của việc khác anh có thể làm bằng 48 giờ đó\", và đào sâu hỏi \"48 giờ của anh đem làm gốm có đáng hơn không\". Bài trộn hai cách định giá (chi phí thay thế vs chi phí cơ hội) mà không nói khi nào dùng cái nào.",
+     "fix": "Viết rõ: giá thuê ngoài là *trần* (nếu thuê rẻ hơn thì thuê); giá trị giờ làm gốm là chi phí cơ hội *khi* giờ đó thật sự đổi được sang làm gốm (phản ví dụ đã chạm ý này) — lấy số lớn hơn trong hai số có thật."
+    }
+   ],
+   "upgrade": "Hoà giải hai cách định giá giờ công (P1) bằng một bảng 2 cột: \"nếu có thể thuê\" / \"nếu không thể thuê\". Gắn nhãn số. Thêm phép tính biên: thêm 1 giờ fanpage ra thêm bao nhiêu đơn so với 60.000đ quảng cáo thêm. Thay Q1/Q5 (L1–L2) bằng câu đọc bảng giờ-công thật của một tuần và tính chi phí/đơn theo từng việc (chụp, viết, trả lời)."
+  },
+  {
+   "id": "B:kn01-06",
+   "title": "Shop nhỏ 5 triệu mỗi tháng nên chia tiền và giờ thế nào?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Khách quay lại mua 3 lần/năm × 280.000đ, lãi gộp khoảng 60%, tức LTV khoảng 500.000đ. CAC 200.000đ thấp hơn LTV nên đáng chạy",
+     "issue": "LTV lấy hành vi của *khách quay lại* (3 lần/năm) gán cho *mọi khách mới* từ quảng cáo. Chỉ một phần khách mới trở thành khách quay lại; nếu 50% quay lại thì LTV kỳ vọng ≈ 168.000 + 0,5×336.000 = 336.000đ. Kết luận ở đây vẫn đứng (200.000 < 336.000) nhưng phương pháp dạy sẽ cho kết luận sai khi tỉ lệ quay lại thấp (vd. 20% → LTV ≈ 235.000đ, biên rất mỏng).",
+     "fix": "Thêm bước \"tỉ lệ khách mới mua lần 2\" vào công thức LTV và nêu rõ con số 504.000 là LTV của nhóm quay lại, không phải của khách mới trung bình."
+    }
+   ],
+   "upgrade": "Sửa công thức LTV (P1) và thêm cột \"tỉ lệ mua lần 2\". Quy 14 giờ công kênh giới thiệu ra tiền để so CAC thật của hai nguồn (nối kn01-04). Thêm phản ví dụ và đào sâu. Nêu nhiễu: 20 vs 18 khách trong một tháng là mẫu nhỏ, chênh lệch chưa chắc lặp lại."
+  },
+  {
+   "id": "B:kn01-07",
+   "title": "Fanpage bị khoá sáng mai — bạn còn lại gì?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Người theo dõi không có giá trị gì với doanh thu",
+     "issue": "Ba phương án sai đều ngắn và cực đoan (\"không có giá trị gì\", \"chỉ có giá trị nếu shop trả tiền mua\", \"phải trên 100.000 mới gọi là tài sản\"), đáp án đúng dài nhất và ôn hoà nhất → đoán được bằng hình thức; Q4 và Q6 đều chỉ nhận lại khái niệm đất thuê/đất nhà (L2).",
+     "fix": "Viết phương án sai ôn hoà hơn (vd. \"Đúng, miễn là shop đăng đều để giữ reach\") và thay một trong hai câu bằng câu đọc dữ liệu: cho bảng tỉ trọng đơn theo kênh của 3 shop, hỏi shop nào rủi ro nhất và vì sao."
+    }
+   ],
+   "upgrade": "Viết lại Q4/Q6 (P1) thành câu đọc dữ liệu/đánh đổi. Gắn nhãn và làm khớp số 6.500. Thêm tính mất lãi và chi phí dựng đường lui (giờ công xin số, chi phí QR) để so với 189 triệu. Đào sâu: ngưỡng tỉ trọng kênh lớn nhất nên dưới bao nhiêu và vì sao (gắn với số ngày sống được khi kênh đóng)."
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "mod": "tn02",
+ "lessons": [
+  {
+   "id": "B:tn02-01",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1 (đáp án b ↔ why)",
+     "quote": "Cả gói thay đổi tốt hơn bản cũ, chưa rõ nhờ yếu tố nào",
+     "issue": "Phương án được chấm đúng khẳng định \"gói tốt hơn\", nhưng lời giải của chính nó viết \"chênh 30 ≈ ±30, nên gói mới cũng chưa chắc hơn\". Đáp án mâu thuẫn với lời giải; câu caveat đọc như vá thêm.",
+     "fix": "Đổi b thành \"Chỉ có thể kết luận ở mức gói, và với ~100 so với ~130 đơn thì gói mới còn chưa chắc hơn\"."
+    },
+    {
+     "sev": "P1",
+     "where": "Ví dụ (kế hoạch)",
+     "quote": "tuần 1 chỉ test giá, giữ nguyên trang",
+     "issue": "Chính bài vừa tính một tuần ~10.000 lượt chỉ vừa đủ thấy chênh 30% của cả gói; một yếu tố đơn lẻ có hiệu ứng nhỏ hơn sẽ không phát hiện được trong một tuần. Kế hoạch tuần 1/2/3 không khả thi theo phép tính của bài; thử giá \"theo khu vực, kênh\" còn phá ngẫu nhiên hoá mà không nói.",
+     "fix": "Tính cỡ mẫu cần cho từng test (hoặc nêu thiết kế giai thừa 2×2), kéo dài mỗi test tới đủ đơn, và cảnh báo nhiễu khi chia theo khu vực."
+    }
+   ]
+  }
+ ]
+}

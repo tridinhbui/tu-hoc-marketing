@@ -1,0 +1,86 @@
+{
+ "mod": "qc08",
+ "lessons": [
+  {
+   "id": "B:qc08-01",
+   "title": "Doanh nghiệp của bạn có nên chạy Zalo Ads, hay chưa nên bật?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "khi bạn cần nhắm theo tỉnh/huyện hoặc bán kính quanh cửa hàng",
+     "issue": "Bài không có src nào; tính năng nhắm theo huyện/bán kính của Zalo Ads nêu như sự thật, không gắn nhãn, không ngày kiểm (kiến thức fast).",
+     "fix": "Thêm src trang hướng dẫn nhắm chọn của Zalo Ads (như qc08-04 dùng) hoặc viết \"theo trang hướng dẫn tại thời điểm kiểm\"."
+    },
+    {
+     "sev": "P1",
+     "where": "Q6 / Q7",
+     "quote": "Zalo Ads có danh sách sản phẩm cần giấy phép (ví dụ ngân hàng, cho vay) / vi phạm Luật Bảo vệ dữ liệu cá nhân 91/2025",
+     "issue": "Hai lời giải dựa vào danh sách sản phẩm cần giấy phép và Luật 91/2025 — chưa được dạy trong bài này và bài không có src (src nằm ở 02 và 04). Câu hỏi kiểm thứ chưa học.",
+     "fix": "Thêm hai src tương ứng vào bài 01 hoặc chuyển Q6/Q7 sang bài 02/04 và thay bằng câu về trần ngân sách theo người trực (Đào sâu) có tính."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src cho nhắm chọn, sản phẩm cần giấy phép và Luật 91/2025; (2) gắn nhãn hai tỉ lệ hẹn là giả định và đưa cách đo vào Áp dụng; (3) thêm câu calc về trần ngân sách theo người trực (15 cuộc/ngày → tối đa bao nhiêu triệu); (4) thêm bảng 4 doanh nghiệp × 3 câu kiểm; (5) nối sang qc08-04 (tầng sau cú bấm) trong Liên kết."
+  },
+  {
+   "id": "B:qc08-02",
+   "title": "OA xác thực hay Hồ sơ quảng cáo: chuẩn bị gì trước khi nạp tiền Zalo Ads?",
+   "total": 64,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Đào sâu",
+     "quote": "ngân sách tổng tối thiểu 200.000đ/ngày, quảng cáo OA tối thiểu 500.000đ/ngày",
+     "issue": "Hai mức tối thiểu không có src tương ứng trong danh sách nguồn (6 src không có trang ngân sách tối thiểu); bài nói \"theo trang hướng dẫn\" nhưng không dẫn trang. Possibly outdated.",
+     "fix": "Thêm src trang quy định ngân sách tối thiểu của Zalo Ads với ngày kiểm, hoặc bỏ số và chỉ nói \"có mức tối thiểu theo hình thức, kiểm trong tài khoản\"."
+    },
+    {
+     "sev": "P1",
+     "where": "Đào sâu",
+     "quote": "tin gửi ngoài khung 48 giờ tính 55đ/tin khi vượt hạn mức miễn phí của gói",
+     "issue": "Giá 55đ/tin tư vấn nêu như sự thật, không rõ src nào bao phủ (trang giá gói OA có thể có, nhưng tiêu đề không nói về tin tư vấn); trong khi qc08-04 nói giá ZNS chưa xác minh — người học dễ lẫn hai loại tin.",
+     "fix": "Dẫn đúng mục trong trang giá, phân biệt rõ \"tin tư vấn OA\" với \"ZNS\", ghi ngày kiểm."
+    },
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "hồ sơ đã xác thực được ưu tiên vị trí tốt hơn",
+     "issue": "Khẳng định về cơ chế phân phối (ưu tiên vị trí) không gắn nhãn; nếu trang OA/Hồ sơ của Zalo không nói rõ thì đây là suy diễn.",
+     "fix": "Trích nguyên văn trang Zalo hoặc bỏ."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) dẫn nguồn hoặc bỏ ba khẳng định chưa xác minh (ngân sách tối thiểu, 55đ/tin, ưu tiên vị trí); (2) thay hai calc số học bằng calc dòng tiền nạp/ngày chạy; (3) thêm ví dụ thứ hai làm đổi quyết định (hộ kinh doanh chưa có giấy phép: chạy Form bằng Hồ sơ trong lúc chờ, lộ trình 30 ngày); (4) thêm bảng \"hình thức → danh tính cần → cách tính phí\" (nối 03); (5) nêu hệ quả kế toán của hoá đơn theo số nạp."
+  },
+  {
+   "id": "B:qc08-03",
+   "title": "Chọn hình thức nào trên Zalo Ads, và dựng chiến dịch Form từng bước ra sao?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q7",
+     "quote": "Luật 91/2025 (hiệu lực 1/1/2026) yêu cầu sự đồng ý, cách từ chối và dừng khi khách yêu cầu",
+     "issue": "Lời giải viện dẫn luật với chi tiết (hiệu lực, yêu cầu) nhưng bài này không có src về Luật 91/2025 (src nằm ở 04); phần đọc chỉ nói \"ghi rõ bạn dùng số điện thoại\" không nêu luật.",
+     "fix": "Thêm src Bộ Công an về Luật 91/2025 vào bài này hoặc chuyển Q7 sang bài 04."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src Luật 91/2025 và Pixel vào bài; (2) sửa lời giải giá trị sai 80; (3) thay Q5 bằng câu đánh đổi Form vs Website có số; (4) thêm kịch bản tỉ lệ điền thấp để thấy độ nhạy; (5) thêm bảng hình thức × điểm đến × cách tính phí × điều kiện (bài liệt kê 9 hình thức trong một đoạn văn dài)."
+  },
+  {
+   "id": "B:qc08-04",
+   "title": "Sau cú bấm quảng cáo Zalo, điều gì quyết định chi phí mỗi khách thật?",
+   "total": 80,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "tỉnh/huyện hoặc bán kính quanh một điểm, khoảng tuổi hệ thống cho phép, danh sách số điện thoại tải lên để bao gồm hoặc loại trừ",
+     "issue": "Các tuỳ chọn nhắm chọn (bán kính, tải danh sách số) nêu như sự thật; 5 src của bài là Pixel, ZNS, ZBS, luật, phạt — không có trang nhắm chọn. Possibly outdated (tính năng tải danh sách số có thể bị hạn chế sau Luật 91/2025).",
+     "fix": "Thêm src trang hướng dẫn nhắm chọn/đối tượng tuỳ chỉnh của Zalo Ads với ngày kiểm; nếu không tìm được, ghi \"kiểm trong tài khoản\"."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src nhắm chọn; (2) thay Q5 bằng câu áp dụng; (3) gắn nhãn và nêu cách kiểm cho hai tỉ lệ cải thiện; (4) thêm bảng lead 4 cột mẫu (10 dòng) để người học tính tỉ lệ hẹn/đến trước khi làm Áp dụng; (5) nối với qc08-01 (trần theo người trực) — hiện chỉ liên kết kn12-07."
+  }
+ ]
+}

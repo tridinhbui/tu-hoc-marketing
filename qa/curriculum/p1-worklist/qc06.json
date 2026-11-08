@@ -1,0 +1,130 @@
+{
+ "mod": "qc06",
+ "lessons": [
+  {
+   "id": "B:qc06-01",
+   "title": "Có 30 triệu cho Google: mở Search, Demand Gen, Video hay Performance Max trước?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Lỗi hay gặp",
+     "quote": "Bật bốn loại chiến dịch cùng lúc — nhận ra khi cộng chuyển đổi các chiến dịch lại thấy lớn hơn số đơn thật",
+     "issue": "Trong cùng một tài khoản Google Ads, một chuyển đổi được chia công giữa các chiến dịch theo mô hình phân bổ (tổng = 1), không cộng trùng; tổng chuyển đổi các chiến dịch bằng tổng chuyển đổi tài khoản. Tổng tự báo vượt 'số đơn thật' khi có hai hành động chuyển đổi trùng (ví dụ Google tag + GA4 cùng là chính) hoặc do cửa sổ ghi nhận — không phải do 'nhiều chiến dịch'. Cơ chế nêu sai hướng người học đi tìm lỗi nhầm chỗ.",
+     "fix": "Sửa thành: 'nhận ra khi tổng chuyển đổi tài khoản lớn hơn số đơn thật (kiểm hành động chuyển đổi trùng, cửa sổ ghi nhận) hoặc khi PMax báo nhiều mà tổng đơn web không tăng'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa cơ chế 'cộng chuyển đổi lớn hơn số đơn' cho đúng; (2) thêm mốc số cho tháng đầu (tổng đơn web, lượt tìm thương hiệu) và một phép tính CPA hiện tại của Search; (3) thêm bảng 4 cột mẫu (việc / loại / thước đo / điều kiện) đã điền cho balo laptop để Áp dụng có mẫu; (4) thay Q4/Q6 (L1 lộ trình) bằng câu ghép doanh nghiệp–loại chiến dịch; (5) thêm câu 'nếu màn hình khác, tin trang chính thức'."
+  },
+  {
+   "id": "B:qc06-02",
+   "title": "Video YouTube 2 triệu lượt hiển thị mà ít đơn: chiến dịch hỏng hay đo sai thước?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Chiến dịch Video có các kiểu: Video reach (phủ nhiều người với chi phí thấp), Get views (lấy lượt xem), Ad sequence … Kiểu \"Drive conversions\" vẫn có tên trong danh sách",
+     "issue": "Danh sách kiểu con chiến dịch Video (bao gồm cả Video reach gồm nhiều định dạng bumper/skippable/non-skippable, và 'Drive conversions' còn hay không sau khi Video action lên Demand Gen) là kiến thức fast; hai src chỉ là trang chọn loại chiến dịch và trang nâng cấp VAC — không có src riêng cho kiểu con Video. 'Drive conversions vẫn có tên' có thể lạc hậu (possibly outdated).",
+     "fix": "Thêm src trợ giúp 'Về chiến dịch Video' (danh sách kiểu con) với ngày kiểm; viết 'kiểm danh sách kiểu con trong tài khoản' thay cho khẳng định."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src kiểu con Video và dè dặt về 'Drive conversions'; (2) nói công cụ đo lượt tìm thương hiệu và mức nền; (3) thêm bảng kế hoạch đo 4 tuần (reach mục tiêu, tần suất, lượt tìm vùng chạy / không chạy, ngưỡng 'đạt') làm mẫu cho Áp dụng; (4) thêm ví dụ thứ hai làm đổi kết luận: tần suất 7 với CTR giảm → giảm tiền hoặc giới hạn tần suất; (5) thay Q4 bằng câu đọc số L4."
+  },
+  {
+   "id": "B:qc06-03",
+   "title": "Dựng Demand Gen từng bước: ngân sách bao nhiêu thì máy mới đủ dữ liệu để học?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm, Ví dụ, Q2, Q3",
+     "quote": "Với Target CPA, Google khuyến nghị ngân sách ít nhất 10 lần CPA mục tiêu. Trang trợ giúp không nói rõ đó là ngân sách ngày",
+     "issue": "Khuyến nghị bội số ngân sách của Google cho Demand Gen theo trí nhớ người chấm từng được nêu khác (10× cho Discovery trước đây; bản Demand Gen có lúc nêu 15× CPA cho ngân sách ngày) và trang trợ giúp thường nói rõ 'ngân sách ngày'. Bài vừa nêu con số như khuyến nghị chính thức, vừa thừa nhận không rõ ngày/tổng → chưa đủ xác minh để làm nền cho 3 bài (03, 06, 07) và nhiều câu hỏi. Possibly outdated.",
+     "fix": "Đọc trọn trang 'Về chiến dịch Demand Gen' / 'Thiết lập ngân sách Demand Gen', chép đúng bội số và đơn vị (ngày), ghi ngày kiểm; nếu Google không còn nêu bội số, đổi sang quy tắc tự lập 'ngân sách ngày đủ cho ít nhất 5–10 chuyển đổi/ngày' và gắn nhãn 'quy tắc của bài'."
+    },
+    {
+     "sev": "P1",
+     "where": "Khái niệm và Q4",
+     "quote": "Demand Gen đặt quảng cáo hình ảnh và video lên YouTube (cả Shorts), Discover, Gmail, Maps, mạng hiển thị Google và đối tác video",
+     "issue": "'Maps' là bề mặt người chấm không xác nhận được cho Demand Gen (có thể nhầm với bề mặt của PMax); Q4 đáp án (a) chứa Maps nên nếu sai thì đáp án chứa chi tiết sai. Possibly invented.",
+     "fix": "Kiểm danh sách bề mặt trong trang trợ giúp Demand Gen; bỏ Maps nếu không có."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) xác minh bội số ngân sách và đơn vị, sửa cả ba bài dùng nó; (2) kiểm bề mặt Maps; (3) thêm src thiết lập và câu 'nếu màn hình khác'; (4) thêm dự báo 4 tuần với mốc so; (5) thay Q4 (L1 liệt kê bề mặt) bằng câu quyết định: 6 video dọc nhưng không có bản ngang — mất bề mặt nào, ưu tiên làm gì; (6) thêm cách đo phần tăng thêm (vùng chạy / không chạy) thành bước cụ thể thay vì một câu ở Đào sâu."
+  },
+  {
+   "id": "B:qc06-04",
+   "title": "Performance Max báo ROAS đẹp: làm sao biết nó tạo đơn mới hay chỉ nhận công?",
+   "total": 82,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Lỗi hay gặp",
+     "quote": "Báo cáo sếp bằng ROAS PMax tự ghi — nhận ra khi cộng doanh thu các chiến dịch vượt tổng doanh thu web",
+     "issue": "Như qc06-01: trong cùng tài khoản, doanh thu chuyển đổi được chia công giữa chiến dịch, không cộng trùng; dấu hiệu 'cộng vượt tổng' chỉ xảy ra khi hành động chuyển đổi trùng hoặc cửa sổ ghi nhận lệch. Dấu hiệu đúng của nhận công là 'doanh thu PMax tự báo lớn hơn phần tăng thêm của tổng doanh thu web' — chính điều Khái niệm và Q1 nói đúng.",
+     "fix": "Sửa dấu hiệu thành 'nhận ra khi doanh thu PMax tự báo (72 triệu) lớn hơn nhiều phần tăng thêm của tổng doanh thu web (30 triệu)'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa dấu hiệu 'cộng doanh thu vượt tổng'; (2) thêm src loại trừ thương hiệu PMax và bỏ dè dặt; (3) sửa mã lỗi 7,19; (4) thêm bước thiết kế vùng đối chứng cụ thể (chọn tỉnh nào, bao lâu, so số gì) vì phản ví dụ nêu nhưng không hướng dẫn; (5) thêm cột 'khách mới' vào bảng trước/sau (bài nhắc ở Đào sâu) với một con số minh hoạ; (6) thêm câu 'nếu màn hình khác, tin trang chính thức'."
+  },
+  {
+   "id": "B:qc06-06",
+   "title": "Shop đồ bếp thêm 40 triệu cho PMax và Demand Gen: chia, dự báo, đọc kết quả thế nào?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P0",
+     "where": "Q1",
+     "quote": "Lớn hơn, vì nhiều chiến dịch cùng ghi công cho một đơn",
+     "issue": "Theo hiểu biết của người chấm, trong cùng một tài khoản Google Ads một chuyển đổi được chia công giữa các chiến dịch theo mô hình phân bổ (tổng công = 1); Google không ghi trùng một đơn cho nhiều chiến dịch, nên phương án b ('Google khử trùng đơn giữa các chiến dịch') mô tả đúng cơ chế hơn đáp án c. Với đo đúng, tổng doanh thu các chiến dịch tự báo ≤ doanh thu web (không phải đơn nào cũng qua quảng cáo), nên 'lớn hơn' không phải điều 'thường' xảy ra. Hiện tượng bài muốn dạy là 'tổng tự báo lớn hơn PHẦN TĂNG THÊM của doanh thu web' (đúng) — nhưng đề hỏi so với doanh thu web. Hai phương án bênh được và cơ chế nêu như sự thật về cách nền tảng vận hành là sai. Cần người có tài khoản thật đối chiếu trước khi sửa.",
+     "fix": "Viết lại đề: 'Cộng doanh thu PMax và Demand Gen tự báo thường so với phần tăng thêm của tổng doanh thu web thế nào?' với đáp án 'Lớn hơn, vì nền tảng ghi công cả đơn vốn sẽ đến từ Search thương hiệu hay khách quay lại'; sửa phương án b thành mệnh đề sai rõ ràng."
+    },
+    {
+     "sev": "P1",
+     "where": "Lỗi hay gặp",
+     "quote": "Cộng doanh thu các chiến dịch tự báo để báo cáo — nhận ra khi tổng lớn hơn doanh thu web",
+     "issue": "Cùng cơ chế sai như Q1; dấu hiệu đúng là 'doanh thu tự báo lớn hơn phần tăng thêm' hoặc 'tổng chuyển đổi tài khoản lớn hơn số đơn thật (hành động chuyển đổi trùng)'.",
+     "fix": "Sửa dấu hiệu như ở qc06-04."
+    },
+    {
+     "sev": "P1",
+     "where": "Chia tiền và Q2",
+     "quote": "1,5 triệu/ngày trong 10 ngày theo khuyến nghị ngân sách gấp 10 lần CPA",
+     "issue": "Dựa trên bội số 10× chưa xác minh (xem qc06-03); đáp án Q2 (d) và phương án sai (a: 500.000đ 'chỉ hơn 3 lần') đều lệ thuộc con số này. Nếu khuyến nghị thật khác (ví dụ 15×), lời giải cần đổi.",
+     "fix": "Sau khi xác minh bội số ở bài 03, cập nhật đồng bộ."
+    },
+    {
+     "sev": "P1",
+     "where": "Toàn bài",
+     "quote": "Loại tên thương hiệu khỏi PMax nếu tài khoản cho phép",
+     "issue": "Bài không có src nào dù dùng nhiều khẳng định nền tảng (bội số ngân sách, loại trừ thương hiệu PMax, Target CPA Demand Gen); không có câu 'nếu màn hình khác'.",
+     "fix": "Thêm src Demand Gen, PMax brand exclusions; câu về màn hình khác."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa Q1 và Lỗi hay gặp về cơ chế ghi công; (2) xác minh bội số ngân sách; (3) thêm src và câu 'nếu màn hình khác'; (4) bình luận CPA Demand Gen 250.000đ so với mục tiêu 150.000đ; (5) thêm bảng trước/sau 6 dòng (chi, doanh thu web, PMax tự báo, DG đơn, lượt bấm Search thương hiệu, lượt tìm thương hiệu) để Áp dụng có mẫu; (6) thêm ước lượng giá trị đời khách tối thiểu để −11,2 triệu hoà vốn (bao nhiêu % khách mới phải mua lại) vì Đào sâu nêu ý nhưng không tính."
+  },
+  {
+   "id": "B:qc06-07",
+   "title": "PMax báo ROAS 8, video nhiều view, Demand Gen tuần đầu đắt: chẩn đoán từng ca thế nào?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm, Ví dụ, Q3, Q5",
+     "quote": "khuyến nghị là ít nhất 2,5 triệu",
+     "issue": "Lệ thuộc bội số 10× chưa xác minh (xem qc06-03); Q3 tính 1,6 lần đúng theo đề, nhưng kết luận 'xa mức khuyến nghị 10 lần' và đáp án Q5 dựa trên con số này.",
+     "fix": "Cập nhật đồng bộ sau khi xác minh ở bài 03."
+    },
+    {
+     "sev": "P1",
+     "where": "Ví dụ – shop nến",
+     "quote": "tổng doanh thu web 150 triệu, bằng tháng trước, lượt bấm Search tên thương hiệu giảm 40%. ROAS phần tăng thêm gần bằng 0",
+     "issue": "So trước–sau một tháng với tổng đi ngang được kết luận thẳng là 'nhận công'; phản ví dụ của chính bài nói thị trường có thể đang giảm và PMax đang giữ doanh thu. Ví dụ không nêu dữ kiện loại trừ khả năng đó (ví dụ cùng kỳ năm trước, vùng không chạy), nên kết luận trong ví dụ chắc hơn dữ kiện cho phép.",
+     "fix": "Thêm một dữ kiện vào ví dụ: 'cùng kỳ năm trước doanh thu tháng này cũng ≈ tháng trước; không có đợt sale' hoặc nói rõ 'kết luận tạm, kiểm bằng đợt tắt PMax 2 tuần'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) xác minh bội số ngân sách; (2) thêm dữ kiện loại trừ giả thuyết thị trường giảm trong ca nến hoặc nêu kết luận tạm; (3) thêm số tứ phân vị xem video cho ca nước tương; (4) thêm src cho PMax brand exclusions, báo cáo tứ phân vị video; câu 'nếu màn hình khác'; (5) thay Q7 bằng câu đọc sổ chẩn đoán L4; (6) nối rõ về bài 02 (reach/tần suất) và 04 (ROAS phần tăng thêm) thay vì lặp lại định nghĩa."
+  }
+ ]
+}

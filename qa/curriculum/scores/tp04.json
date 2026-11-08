@@ -1,0 +1,152 @@
+{
+  "mod": "tp04",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:tp04-01",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 13, "examples": 7, "pedagogy": 8, "assessment": 4, "data": 3, "clarity": 4 },
+      "total": 63,
+      "bloom_items": ["L1", "L3", "L1", "L2", "L3", "L1", "L3"],
+      "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1", "quote": "Khi hỏi \"thương hiệu mình có tài sản nhận diện gì\", phần lớn đội ngũ sẽ trả lời gì đầu tiên?", "issue": "Câu L1 hỏi về một chi tiết đã nêu nguyên văn trong tình huống ('Cả phòng chỉ nghĩ tới logo'); không kiểm được hiểu biết nào.", "fix": "Đổi thành câu đoán trước có đánh đổi: 'nếu bỏ qua bước kiểm kê, thứ gì dễ bị vứt nhầm nhất và vì sao'." },
+        { "sev": "P2", "where": "Q3, Q6", "quote": "Trong 9 ứng viên của chuỗi trà sữa, thứ nào thuộc nhóm \"hình dạng\"?", "issue": "Q3 và Q6 là câu phân loại L1 (xếp cốc vào nhóm hình dạng; giá không phải tài sản); cùng với Q1, ba trong bảy câu là nhớ/định nghĩa.", "fix": "Thay Q3 bằng câu L4: cho bảng 5 ứng viên × (khách gọi tên theo dấu hiệu? đối thủ cũng dùng?) và hỏi ứng viên nào đáng đo tiếp." },
+        { "sev": "P2", "where": "example", "quote": "Nhóm marketing liệt kê được 9 ứng viên", "issue": "Ví dụ chỉ là danh sách, không có số nào về khách (bài sau mới có); người học không thấy 'khách đã nhớ mà không ai chủ ý xây' được chứng minh thế nào.", "fix": "Thêm một dòng số minh hoạ: trong 20 đánh giá gần nhất trên ứng dụng giao đồ ăn, 7 nhắc 'cốc nắp vòm', 0 nhắc logo." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính." },
+      "claims": [],
+      "strengths": "Phản ví dụ (cốc nắp vòm là tài sản chung của ngành) và đào sâu (phân biệt 'khách nhớ' với 'khách gắn đúng vào thương hiệu') mở đúng đường sang bài 02; danh sách sáu nhóm tài sản đủ và có 'phép kiểm trong tuần' làm được với 5 khách.",
+      "upgrade": "Để đạt ≥85: (1) thay ba câu L1 (Q1, Q3, Q6) bằng câu L3–L4 đọc dữ liệu đánh giá/khảo sát; (2) thêm số minh hoạ vào ví dụ (đếm dấu hiệu khách tự nhắc trong đánh giá); (3) thêm ràng buộc thực tế cho bước kiểm kê (ai làm, bao lâu, hỏi bao nhiêu khách, chi phí) thay cho lời khuyên chung 'liệt kê hết'; (4) thêm một câu L6 thiết kế bản kiểm kê cho một thương hiệu khác ngành (dịch vụ, không có bao bì)."
+    },
+    {
+      "id": "B:tp04-02",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 16, "examples": 11, "pedagogy": 6, "assessment": 9, "data": 9, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L3", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "concept", "quote": "Lưới độ nổi tiếng × độ riêng", "issue": "Khung này là Distinctive Asset Grid (Fame × Uniqueness) của Jenni Romaniuk / Ehrenberg-Bass nhưng bài không ghi nguồn; người học không có chỗ đọc tiếp và không biết đây là phương pháp đã chuẩn hoá.", "fix": "Thêm src: Romaniuk, Building Distinctive Brand Assets (2018), kèm ghi 'bài dùng bản rút gọn'." },
+        { "sev": "P2", "where": "example", "quote": "Giả sử 150 người gắn cốc với một thương hiệu nào đó, 120 nói đúng chuỗi: độ riêng 80%.", "issue": "Giả định được gắn nhãn tốt ('Giả sử'), nhưng tình huống chỉ cho 120 người nhận ra là của chuỗi, không cho số người gắn cốc với hãng bất kỳ; dữ kiện thiếu được bù trong ví dụ thay vì trong tình huống.", "fix": "Đưa '150 người gắn cốc với một thương hiệu nào đó' vào tình huống để ví dụ chỉ tính, không bịa thêm." },
+        { "sev": "P2", "where": "concept", "quote": "Cả hai thấp: bỏ hoặc chờ.", "issue": "Không nêu ngưỡng nào là 'thấp' hay 'cao', cũng không nói mẫu 200 cho sai số bao nhiêu (±7 điểm), nên hai tài sản chênh 10 điểm có thể không khác nhau thật.", "fix": "Thêm một câu về sai số mẫu 200 và cảnh báo không xếp ô khi hai số nằm trong sai số của nhau." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 42 ÷ 140 = 30% ✓; sai 21 = 42/200 (nhầm sang độ nổi tiếng) ✓; 70 = 140/200 ✓. Q5: 135 ÷ 250 = 54% ✓; sai 75 = 135/180 (độ riêng) ✓; 72 = 180/250 ✓. Q7: nổi tiếng 30% ÷ riêng 40% = 75% gắn với hãng bất kỳ ✓. Ví dụ: 120/200 = 60%, 42/200 = 21%, 42/140 = 30% ✓." },
+      "claims": [
+        { "claim": "Lưới độ nổi tiếng × độ riêng (Distinctive Asset Grid)", "status": "unverified", "note": "Phương pháp thật của Romaniuk/Ehrenberg-Bass, bài không ghi nguồn." }
+      ],
+      "strengths": "Bài tốt nhất module: hai chỉ số có công thức, mẫu số rõ, hai câu tính kiểm đúng chỗ hay nhầm, Q6 là câu đánh đổi thật (A 35/45 vs B 12/85) và Q7 buộc đọc ngược số; phần áp dụng cảnh báo đúng rằng 10 người quen chưa phải số đo.",
+      "upgrade": "Để đạt ≥85: (1) ghi nguồn khung Romaniuk; (2) chuyển giả định 150 vào tình huống; (3) thêm phản ví dụ về sai số mẫu (hai tài sản 60% và 55% với n=200 không khác nhau) và đào sâu về cách chọn người hỏi (người mua nhóm hàng, không phải khách của chuỗi); (4) thêm câu L6: thiết kế khảo sát che tên (bao nhiêu người, hỏi ở đâu, thứ tự dấu hiệu, cách tránh gợi ý)."
+    },
+    {
+      "id": "B:tp04-03",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 13, "examples": 11, "pedagogy": 6, "assessment": 6, "data": 8, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L3", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "situation", "quote": "78% người thấy lon đỏ \"quen quen\", nhưng chỉ 19% gọi đúng tên hãng", "issue": "Số khớp với bài 02 (độ nổi tiếng 19%, độ riêng 19/78 ≈ 24%) nhưng bài không tính độ riêng và không nối rõ về lưới của bài trước dù đây là ô 'cẩn thận' điển hình.", "fix": "Thêm một dòng: 'theo lưới bài trước: nổi tiếng 19%, riêng 19/78 ≈ 24% → ô cẩn thận'." },
+        { "sev": "P2", "where": "Q6", "quote": "Pháp luật bắt buộc các hãng cùng ngành dùng màu giống nhau", "issue": "Nhiễu vô lý, không ai chọn; làm Q6 thành câu 3 phương án thực tế.", "fix": "Thay bằng nhiễu có lý nửa chừng: 'vì màu mới chưa được khách thử nên cần ít nhất một năm mới đo được'." },
+        { "sev": "P2", "where": "example", "quote": "Sau 18 tháng, khảo sát lại: lon đỏ có dải sóng được 41% người gọi đúng tên", "issue": "Số kết quả không gắn nhãn minh hoạ dù là số tự đặt; phần caveat về thiếu nhóm đối chứng rất tốt, nhưng cũng cần nói khảo sát sau có cùng câu hỏi/mẫu với khảo sát trước không.", "fix": "Thêm '(số minh hoạ)' và 'cùng câu hỏi, cùng cỡ mẫu 200'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 41 − 19 = 22 điểm % ✓; sai 115,8 = 22/19 (tăng tương đối) ✓; 53,7 = 22/41 (chia mẫu số sau) ✓. Ví dụ 'gấp hơn hai lần 19%' = 41/19 ≈ 2,16 ✓." },
+      "claims": [
+        { "claim": "đỏ cho đồ uống, xanh lá cho đồ tự nhiên, vàng cho đồ ăn nhanh", "status": "unverified", "note": "Liên tưởng màu–ngành nêu như quan sát chung; chấp nhận được ở mức khái niệm, không có số." }
+      ],
+      "strengths": "Kết luận 'giữ màu ngành, ghép dấu hiệu riêng thành tổ hợp' cân bằng đúng hai rủi ro trái chiều (Q2, Q6); ví dụ ghi rõ so trước–sau không có đối chứng nên 'chưa chứng minh nhân quả' — mẫu tốt về đọc số.",
+      "upgrade": "Để đạt ≥85: (1) tính độ riêng và nối rõ về lưới bài 02; (2) gắn nhãn số minh hoạ và nói rõ hai khảo sát cùng phương pháp; (3) thêm phản ví dụ: hãng mới toanh, chưa ai quen, thì bỏ màu ngành có thể hợp lý hơn; (4) thêm đào sâu về cách chọn dấu hiệu ghép (hình dạng > hoạ tiết > sắc độ) và chi phí đổi bao bì toàn hệ; (5) thay Q6 nhiễu vô lý và thêm câu L5 chọn giữa 'ghép dải sóng' và 'đổi sang tím' với số ước lượng mất khách."
+    },
+    {
+      "id": "B:tp04-04",
+      "scores": { "accuracy": 10, "depth": 10, "practical": 14, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "concept", "quote": "riêng TikTok từng công bố rằng phần lớn người dùng xem với âm thanh bật", "issue": "Khẳng định về nền tảng, nêu như sự thật, không có src, không ngày kiểm. Đây là kiến thức lớp 'fast' (hành vi/tính năng nền tảng) nên bắt buộc có nguồn và câu 'nếu khác, tin trang chính thức'.", "fix": "Thêm src tới tài liệu TikTok for Business về âm thanh (ngày kiểm) hoặc bỏ tên nền tảng, viết 'nhiều nền tảng video ngắn báo cáo phần lớn người xem bật âm thanh'." },
+        { "sev": "P2", "where": "Q4", "quote": "Vì phần lớn người xem nghe được phần đầu, rất ít người ở lại tới cuối", "issue": "Khẳng định về hành vi xem (tỉ lệ rơi theo giây) nêu như sự thật mà bài không có số nào về tỉ lệ xem hết video của chính hãng snack.", "fix": "Đưa vào tình huống: 'tỉ lệ xem tới giây cuối trung bình 18%' (số minh hoạ) để Q4 có dữ kiện." },
+        { "sev": "P2", "where": "example", "quote": "hỏi lại 100 người đã xem ít nhất 3 video: 47 người nhớ đúng tên hãng", "issue": "Không gắn nhãn minh hoạ; caveat về hai nhóm 100 người khác nhau rất tốt nhưng chưa nói sai số mẫu 100 (±10 điểm) — vẫn đủ để 23→47 là tín hiệu, cần nói ra.", "fix": "Thêm '(số minh hoạ; mẫu 100 có sai số khoảng ±10 điểm, mức tăng 24 điểm vượt sai số)'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (47 − 23) ÷ 23 = 104,35% ≈ 104,3 ✓ (tol 0.2). Sai 24 = điểm phần trăm ✓; 51,1 = 24/47 (chia mẫu số sau) ✓." },
+      "claims": [
+        { "claim": "TikTok từng công bố phần lớn người dùng xem với âm thanh bật", "status": "unverified", "note": "Không src, lớp fast; TikTok for Business có công bố dạng này nhưng bài cần dẫn và ghi ngày kiểm." },
+        { "claim": "Phần lớn người xem nghe được phần đầu, rất ít người ở lại tới cuối", "status": "unverified", "note": "Hành vi xem nêu như sự thật, không số." }
+      ],
+      "strengths": "Giải pháp 'âm thanh riêng vài giây đầu + nền theo xu hướng' tránh đánh đổi giả giữa lượt xem và trí nhớ; Q6 đọc đúng 'lượt xem không đổi nhưng nhớ tăng' ở mức tín hiệu, không nhân quả.",
+      "upgrade": "Để đạt ≥85: (1) thêm src cho khẳng định TikTok và câu 'nếu khác, tin trang chính thức' (lớp fast, xem lại 3 tháng); (2) đưa tỉ lệ xem hết video vào tình huống; (3) gắn nhãn số minh hoạ, nêu sai số; (4) thêm phản ví dụ: âm thanh riêng đặt ở giây 1 làm tỉ lệ lướt tăng (bị coi là quảng cáo) → cần đo cả tỉ lệ giữ chân, không chỉ nhớ tên; (5) thêm đào sâu về bản quyền nhạc thịnh hành dùng cho tài khoản doanh nghiệp; (6) thêm câu L6 thiết kế A/B 60 video có/không âm thanh riêng."
+    },
+    {
+      "id": "B:tp04-05",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L5", "L2", "L3", "L3", "L5", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q5", "quote": "sai hay gặp: [[1,\"QUEN_CHI_PHI_CO_DINH\"],[4.67,\"SAI_TINH_TOAN\"]]", "issue": "Giá trị sai 1 được gắn mã 'quên chi phí cố định' nhưng quên chi phí cố định (30 triệu) cho ra 40 ÷ 30 = 1,33 đồng, không phải 1. Giá trị 1 đồng = 30 ÷ 30, tức là QUÊN CHI PHÍ VẬN HÀNH (chỉ tính 30 triệu thiết kế). Người học mắc đúng lỗi 'quên cố định' (1,33) không được phản hồi; người ra 1 được giải thích sai lỗi.", "fix": "Đổi thành [[1.33,\"QUEN_CHI_PHI_CO_DINH\"],[1,\"QUEN_CHI_PHI_VAN_HANH\"],[4.67,\"SAI_TINH_TOAN\"]] hoặc sửa nhãn của 1." },
+        { "sev": "P2", "where": "example", "quote": "ba năm hết 90 triệu, và một lần thấy chưa chắc là một lần nhớ", "issue": "Số gắn nhãn minh hoạ tốt, nhưng 'chi phí mỗi lần thấy' 2,33 đồng không được so với một mốc nào (ví dụ CPM quảng cáo hiển thị) nên người học không biết rẻ hay đắt.", "fix": "Thêm so sánh gắn nhãn: 'so với ~20–40 đồng mỗi lần hiển thị quảng cáo (số minh hoạ)', hoặc so với chi phí để mua cùng số lần thấy." },
+        { "sev": "P2", "where": "concept", "quote": "ngành cần vẻ nghiêm túc như ngân hàng hay luật", "issue": "Nêu như quy luật dù nhiều ngân hàng có linh vật thành công; điều kiện thật là 'khách có gặp nhân vật thường xuyên không' (bài nói đúng ở Q6) chứ không phải ngành.", "fix": "Đổi thành 'ngành mà khách kỳ vọng sự nghiêm túc và ít điểm chạm hằng ngày', nối với tiêu chí lượt gặp." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q5: (30 + 20×2) = 70 triệu; 300 × 50.000 × 2 = 30.000.000 lần; 70e6 ÷ 30e6 = 2,33 đồng ✓ (tol 0.02). Sai 4,67 = 70e6 ÷ 15e6 (chỉ 1 năm lượt thấy) ✓. Sai 1 KHÔNG khớp nhãn: quên cố định → 40/30 = 1,33; 1 = chỉ tính 30 triệu thiết kế. Ví dụ 'ba năm hết 90 triệu' = 30 + 20×3 ✓." },
+      "claims": [],
+      "strengths": "Ba điều kiện đáng làm (nuôi nổi nhiều năm, hầu hết điểm chạm, khách đủ đông) được kiểm bằng hai câu tình huống mới tốt: Q6 (kế toán B2B 80 khách → hoãn) và Q7 (cả ngành cú pastel → khác hẳn); ví dụ gắn nhãn 'số minh hoạ' và tách 'lần thấy' với 'lần nhớ'.",
+      "upgrade": "Để đạt ≥85: (1) sửa giá trị/nhãn sai của Q5; (2) thêm mốc so sánh cho 2,33 đồng/lần thấy; (3) thêm phản ví dụ trong phần đọc (linh vật dùng đều 3 năm nhưng khách không gọi tên nó → chưa thành tài sản, đo bằng lưới bài 02); (4) thêm đào sâu về hướng dẫn nhân vật (brand character guide: dáng, biểu cảm, giọng) và chi phí bản quyền hình ảnh; (5) điều chỉnh khẳng định về ngành ngân hàng/luật."
+    },
+    {
+      "id": "B:tp04-06",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 17, "examples": 11, "pedagogy": 6, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L2", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q2", "quote": "Tổng 1,8 triệu, phủ 470.000 trong 495.000 lượt gặp", "issue": "Số 495.000 không tái tạo được từ đề: bốn điểm chạm nêu trong Q2 cộng lại là 300.000 + 150.000 + 20.000 + 5.000 = 475.000; sáu điểm của ví dụ là 515.000. 470.000 (KOL + Shopee + túi) đúng. Lời giải sai số, dù không đổi kết luận.", "fix": "Sửa thành 'phủ 470.000 trong 475.000 lượt của bốn điểm nêu trong đề' (hoặc 490.000/515.000 nếu tính cả hộp và tin nhắn như Q3)." },
+        { "sev": "P2", "where": "example", "quote": "Thương hiệu liệt kê 6 điểm chạm online, kèm lượt gặp mỗi tháng và chi phí đưa hoạ tiết vào (số minh hoạ): hộp 20.000 lượt (đã có)", "issue": "'6 điểm chạm online' nhưng danh sách gồm hộp sản phẩm và túi giao — là điểm chạm vật lý của đơn online, không phải điểm chạm online. Dễ gây lẫn khi người học tự xếp điểm chạm.", "fix": "Đổi thành '6 điểm chạm của khách mua online'." },
+        { "sev": "P2", "where": "example", "quote": "video KOL 300.000, thêm 2 giây đầu gần như miễn phí", "issue": "Giả định KOL chấp nhận chèn 2 giây hoạ tiết miễn phí; thực tế thường phải thương lượng hoặc trả thêm — Q4 có nhắc KOL phàn nàn nhưng chi phí thương lượng không được tính.", "fix": "Ghi 'nếu đã có điều khoản trong hợp đồng; nếu chưa, tính thêm chi phí thương lượng/phụ phí'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: tổng 515.000; có hoạ tiết 490.000; 490/515 = 95,1% ✓ (tol 0.2). Sai 66,7 = 4/6 điểm chạm ✓; 3,9 = 20.000/515.000 (chỉ hộp) ✓. Q2 lời giải: 0 + 0,3 + 1,5 = 1,8 triệu ✓; nhiễu a) 2,3 triệu & 25.000 lượt ✓; nhiễu b) 2,6 triệu ✓; nhưng '495.000' SAI (bốn điểm = 475.000)." },
+      "claims": [],
+      "strengths": "Bài áp dụng được nhất module: bảng lượt gặp × chi phí dẫn thẳng tới quyết định có ngân sách (Q2), Q3 cho thấy đếm theo điểm chạm đánh giá thấp mức phủ, Q1 cẩn trọng đúng về so hai nhóm khác nhau; ví dụ gắn nhãn minh hoạ và caveat không đối chứng.",
+      "upgrade": "Để đạt ≥85: (1) sửa số 495.000 trong Q2; (2) sửa 'điểm chạm online'; (3) thêm phản ví dụ: điểm chạm lượt cao nhưng khách lướt 0,5 giây (banner sàn) nên 'lượt gặp' phải cân theo thời gian chú ý; (4) thêm đào sâu về bộ quy tắc tối thiểu (cỡ, vị trí, thời lượng) và cách kiểm tuân thủ với KOL/xưởng in; (5) thêm câu L6 thiết kế đo lại nhóm online sau 6 tháng với nhóm đối chứng (khu vực chưa đổi túi)."
+    },
+    {
+      "id": "B:tp04-07",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 6, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "concept", "quote": "thứ khó chép là thứ được đăng ký bảo hộ (nhãn hiệu, kiểu dáng)", "issue": "Đúng ở mức nguyên tắc nhưng không nêu loại bảo hộ nào cho cái gì (nhãn hiệu cho hình nón lá; kiểu dáng công nghiệp cho hình túi; màu đơn lẻ rất khó bảo hộ), không src, không ngày kiểm — nội dung pháp lý thuộc lớp periodic cần nguồn.", "fix": "Thêm một câu phân loại ngắn và src tới trang Cục Sở hữu trí tuệ về nhãn hiệu/kiểu dáng với ngày kiểm, kèm 'hỏi người có chuyên môn'." },
+        { "sev": "P2", "where": "Q3", "quote": "Độ riêng của túi giảm từ 82% xuống 61%, rồi phục hồi lên 76%. So với mức ban đầu, độ riêng còn thấp hơn bao nhiêu điểm phần trăm?", "issue": "Câu tính một bước trừ (82 − 76), quá dễ so với các bài khác trong module; không buộc đọc gì thêm.", "fix": "Đổi thành câu hai bước: cho n=200 mỗi đợt, hỏi 76% có khác 82% ngoài sai số không (hoặc tính phần hồi phục 15/21 = 71% khoảng mất)." },
+        { "sev": "P2", "where": "example", "quote": "Sau 9 tháng, độ riêng quay lại 76% (số minh hoạ; không tách được phần nào do việc nào)", "issue": "Gắn nhãn tốt, nhưng bài không nói chi phí của gói biện pháp (vẽ lại, đăng ký, luật sư) nên không đánh giá được đáng hay không so với đổi sang tím.", "fix": "Thêm chi phí minh hoạ từng biện pháp và chi phí ước lượng của việc đổi màu (in lại + mất khách quen)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 82 − 76 = 6 điểm % ✓; sai 15 = 76 − 61 (phần hồi phục) ✓; 7,3 = 6/82 (tương đối) ✓." },
+      "claims": [
+        { "claim": "Thứ khó chép là thứ được đăng ký bảo hộ (nhãn hiệu, kiểu dáng); chưa đăng ký thì đường pháp lý hẹp hơn", "status": "unverified", "note": "Nguyên tắc pháp lý chung, nêu thận trọng, không src/ngày kiểm." }
+      ],
+      "strengths": "Thang leo nấc (đo → dùng đậm → cảnh báo → kiện) và việc phân biệt 'nét thẩm mỹ chỉnh theo được' với 'thứ đã đăng ký/đã gắn qua năm' là nội dung đúng và hiếm trong tài liệu phổ thông; Q2 và Q5 xử lý đúng phản xạ sai 'kiện ngay' và 'đổi màu'.",
+      "upgrade": "Để đạt ≥85: (1) thêm src pháp lý và phân loại bảo hộ (nhãn hiệu / kiểu dáng / màu); (2) thêm chi phí minh hoạ cho gói biện pháp vs đổi màu; (3) thêm phản ví dụ: đối thủ là hãng lớn hơn, dùng đậm hơn mình → độ riêng không hồi, phải cân nhắc ghép thêm dấu hiệu mới thay vì chỉ 'đậm hơn'; (4) thêm đào sâu về theo dõi độ riêng theo quý (nối tp04-02, tp05-07); (5) nâng Q3 lên hai bước và thêm câu L5 chọn nấc leo thang dựa trên dữ liệu nhầm lẫn của khách."
+    }
+  ],
+  "module_notes": {
+    "progression": "Tiến trình chặt: kiểm kê tài sản (01) → đo bằng lưới nổi tiếng × riêng (02) → xử lý dấu hiệu mạnh-nhưng-không-riêng (03) → mở rộng sang âm thanh (04) và nhân vật (05) → xếp điểm chạm để triển khai (06) → bảo vệ khi bị bắt chước (07). Bài 03 và 07 đều là ứng dụng của lưới bài 02 nhưng chỉ 07 dùng lại thuật ngữ 'độ riêng'; 03 nên tính độ riêng tường minh. Bài 04 và 05 là hai loại tài sản, có thể nối bằng cùng một khung đánh giá (lượt gặp × chi phí nuôi) để chuẩn bị cho 06.",
+    "overlap": [
+      "tp04-03 (màu ngành ghép dấu hiệu riêng) và tp04-07 (giữ tài sản, làm đậm khi bị chép) cùng dạy 'đừng bỏ dấu hiệu, hãy ghép/đậm hơn' — Q2 hai bài gần như cùng dạng (đổi màu tím/khác màu vs giữ và ghép).",
+      "tp04-04 Q6 và tp04-03 ví dụ cùng mẫu lập luận 'so trước–sau, không đối chứng' với số gần giống (19→41, 23→47); tốt về nhất quán nhưng không bài nào đi tiếp tới cách có đối chứng.",
+      "tp04-05 Q4 (thay bò bằng gấu sau 8 năm) trùng ý tp03-07 (đổi slogan sau 8 năm vì nội bộ thấy cũ)."
+    ],
+    "gaps": [
+      "Không bài nào dạy cách thiết kế khảo sát che tên đúng (chọn mẫu là người mua nhóm hàng, thứ tự dấu hiệu, tránh gợi ý, cỡ mẫu và sai số) dù 6/7 bài dựa vào kết quả khảo sát kiểu này.",
+      "Không có bài về bộ quy tắc nhận diện (brand guideline tối thiểu: cỡ, khoảng cách, phiên bản màu, cách dùng trên nền tối) — tp04-06 chỉ nhắc 'viết bộ quy tắc ngắn'.",
+      "Thiếu phần về tài sản nhận diện cho thương hiệu dịch vụ/B2B không có bao bì (chỉ Q6 tp04-05 chạm tới).",
+      "Không bài nào nối tài sản nhận diện với kết quả kinh doanh (độ riêng cao thì bán được gì hơn) — người học không biết vì sao nên chi tiền cho việc này so với khuyến mãi; tp05-02 mới trả lời một phần."
+    ],
+    "best_lesson": "B:tp04-02",
+    "weakest_lesson": "B:tp04-01"
+  }
+}

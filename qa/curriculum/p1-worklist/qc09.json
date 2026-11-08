@@ -1,0 +1,57 @@
+{
+ "mod": "qc09",
+ "lessons": [
+  {
+   "id": "B:qc09-01",
+   "title": "Gian hàng của bạn đã sẵn sàng trả tiền quảng cáo trong sàn chưa?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm / Q3",
+     "quote": "lấy giá bán chia cho số đó ra ROAS hoà vốn",
+     "issue": "ROAS hoà vốn tính trên giá niêm yết 250.000đ, nhưng lãi 50.000đ đã trừ voucher và theo qc09-04 \"Doanh số\" trên báo cáo Shopee từ 16/1/2026 không tính trợ giá người bán. Nếu voucher 20.000đ, Doanh số/đơn là 230.000đ và ROAS hoà vốn so với báo cáo là 4,6 chứ không phải 5. So vạch 5 với ROAS báo cáo sẽ lệch có hệ thống.",
+     "fix": "Định nghĩa ROAS hoà vốn = Doanh số ghi nhận mỗi đơn ÷ lãi mỗi đơn, ghi rõ Doanh số là số sàn báo (đã trừ trợ giá), hoặc dùng tỉ lệ lãi đóng góp trên Doanh số như qc09-04 để nhất quán cả module."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa cơ sở tính ROAS hoà vốn cho khớp định nghĩa Doanh số của sàn; (2) thêm src; (3) thêm bảng 10 kết quả đầu mẫu (giá, đánh giá) để người học thực hành đặt sản phẩm vào giữa; (4) thêm câu calc cho kịch bản ra mắt: trần 2 triệu, CVR 1%, mục tiêu 30 đánh giá với 40% người mua đánh giá — đủ hay không (L4)."
+  },
+  {
+   "id": "B:qc09-02",
+   "title": "Shopee bán chỗ hiển thị ở đâu, và Lazada khác gì?",
+   "total": 63,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm / Q4",
+     "quote": "mục \"Ghé Shop nhận Nước\"",
+     "issue": "Tên vị trí hiển thị gắn với trò chơi trong app Shopee — loại tính năng đổi theo mùa; possibly outdated so với trang FAQ ngày kiểm 2026-10-24. Là một nửa đáp án Q4 (L1).",
+     "fix": "Kiểm lại FAQ 399/1648 và ghi \"tại thời điểm kiểm\"; bỏ tên mục khỏi đáp án Q4, chỉ giữ \"đầu kết quả tìm kiếm, trả theo click\"."
+    },
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Lazada có Sponsored Solutions; tên từng sản phẩm quảng cáo và điều kiện cụ thể chưa xác minh được",
+     "issue": "Bài đã trung thực nhưng kết quả là một bài về \"Shopee và Lazada\" không dạy được gì về Lazada ngoài \"đọc Seller Center\"; tiêu đề hứa \"Lazada khác gì\" mà không trả lời.",
+     "fix": "Hoặc bỏ Lazada khỏi tiêu đề/phạm vi bài, hoặc dẫn Lazada University (public) cho ít nhất tên công cụ (Sponsored Discovery/Affiliate) với ngày kiểm."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) kiểm lại tên \"Ghé Shop nhận Nước\" và bỏ khỏi đáp án; (2) quyết định phạm vi Lazada: hoặc có nguồn, hoặc đổi tiêu đề; (3) thêm bảng 7 chỗ × tư thế khách × cách tính phí × điều kiện; (4) thêm ví dụ số so Tìm kiếm/Khám phá/Shop bằng chi phí mỗi đơn; (5) thay Q4/Q5 L1 bằng câu đọc bảng."
+  },
+  {
+   "id": "B:qc09-03",
+   "title": "Dựng quảng cáo Tìm kiếm sản phẩm trên Shopee từng bước, và khi nào giao cho Tối Đa Doanh Thu?",
+   "total": 82,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "ROAS hoà vốn = 180.000 ÷ 45.000 = 4",
+     "issue": "Cùng lỗi cơ sở với qc09-01: lãi 45.000đ đã trừ voucher nhưng tử số dùng giá niêm yết 180.000đ; \"Doanh số\" sàn báo (từ 16/1/2026) không tính trợ giá người bán nên ROAS mục tiêu 5 đặt trong Tối Đa Doanh Thu so với vạch 4 trên giá niêm yết là so hai cơ sở khác nhau.",
+     "fix": "Tính vạch trên Doanh số ghi nhận mỗi đơn (giá sau voucher người bán) hoặc dùng tỉ lệ lãi đóng góp trên Doanh số; nhắc người học kiểm cách sàn tính Doanh số trước khi đặt ROAS mục tiêu."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa cơ sở ROAS hoà vốn theo Doanh số sàn; (2) thay Q5 bằng câu đánh đổi; (3) giải thích mốc 40 đơn; (4) thêm bảng 12 từ khoá mẫu (click, đơn, chi phí/đơn) và một câu L4 đọc bảng để quyết định tắt/tăng; (5) nêu nhiễu: từ có 30 click 0 đơn chưa kết luận được ở CVR 3% (kỳ vọng 0,9 đơn)."
+  }
+ ]
+}

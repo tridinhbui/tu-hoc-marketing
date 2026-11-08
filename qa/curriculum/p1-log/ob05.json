@@ -1,0 +1,4 @@
+{ "mod":"ob05", "fixed_at":"2026-11-07", "items":[
+  { "id":"B:ob05-07", "where":"Q2 ↔ TÌNH HUỐNG", "status":"fixed", "change":"Bỏ hai số CPA tiền mặt không khớp (28.000đ / 60.000đ, tỉ lệ 2,1 lần) khỏi stem Q2; thay bằng tỉ lệ ngân sách/đơn suy từ tình huống: khung trưa (1,5 giờ) nhận khoảng 11% ngân sách nhưng mang về 70% đơn, khung tối (3 giờ) nhận 21% nhưng chỉ 5% đơn, nên CPA tối cao hơn trưa nhiều lần. Lời giải b đổi “CPA chia chi phí” → “CPA ở đây chia ngân sách cho cả đơn tự đến”. Phương án và khoá (c) giữ nguyên.", "key_changed":false, "note":"Đã tự kiểm: với ngân sách chia đều 14 giờ, (3/14 ÷ 210) ÷ (1,5/14 ÷ 2.940) = 28 lần, không phải 2,1 lần — lỗi đúng. Chọn cách bỏ số tiền tuyệt đối vì sửa số cho khớp (CPA tối ≈ 784.000đ) sẽ phi thực tế với cơm văn phòng." }
+ ],
+ "validator":"0 lỗi", "tests":"pass" }

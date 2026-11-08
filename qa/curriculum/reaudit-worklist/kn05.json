@@ -1,0 +1,18 @@
+{
+ "mod": "kn05",
+ "lessons": [
+  {
+   "id": "B:kn05-02",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm ↔ Q7",
+     "quote": "Lượt xem trung bình của 10 video gần nhất",
+     "issue": "Khái niệm và ÁP DỤNG dạy dùng trung bình, còn Q7 dạy trung bình bị một video lan truyền kéo lệch và phải dùng trung vị (2 triệu + 9×30 nghìn → trung bình 227 nghìn). Hai chỉ dẫn mâu thuẫn.",
+     "fix": "Đổi khái niệm và ÁP DỤNG sang \"trung vị 10 video gần nhất (loại video lan truyền)\"."
+    }
+   ]
+  }
+ ]
+}

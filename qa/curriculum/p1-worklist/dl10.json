@@ -1,0 +1,50 @@
+{
+ "mod": "dl10",
+ "lessons": [
+  {
+   "id": "B:dl10-01",
+   "title": "ROAS 4, lãi 12 triệu, ROI 60%: ba con số trả lời ba câu hỏi nào?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "Y: lãi gộp 25 triệu, ROI 25%; X chỉ 18 triệu, ROI −10%",
+     "issue": "Phương án đúng là phương án duy nhất có số tính sẵn và dài nhất; ba phương án sai đều là mệnh đề định tính. Đoán được bằng hình thức, không cần tính.",
+     "fix": "Viết bốn phương án cùng dạng 'X/Y, ROI …%' với các số sai điển hình (X 50% vì lấy ROAS; bằng nhau 0%; Y 125% vì quên trừ chi), hoặc bỏ hết số và yêu cầu người học tính trước khi chọn."
+    }
+   ],
+   "upgrade": "Sửa câu 'ROAS 1 thì chưa chắc' thành phát biểu đúng điều kiện; viết lại Q5 để bốn phương án cùng dạng số; thêm `src` cho Farris; thêm PHẢN VÍ DỤ (khi ROAS đủ dùng) và ĐÀO SÂU nối bài 03–04; thêm một câu L4 đọc bảng ba chiến dịch (ROAS, biên, chi) và hỏi chiến dịch nào ROI âm."
+  },
+  {
+   "id": "B:dl10-02",
+   "title": "Agency báo \"ROI 300%\" vì doanh thu gấp 4 lần chi: sai ở đâu?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Chỉ tính 120 triệu tăng thêm: lãi gộp 36 triệu, ROI khoảng −28%",
+     "issue": "Phương án đúng là phương án duy nhất có phép tính đầy đủ; a) 'Giữ 20%', b) 'hệ số 0,8', c) 'bớt khách cũ khỏi chi phí' đều không có số dẫn xuất. Đoán được bằng hình thức.",
+     "fix": "Cho cả bốn phương án một con số ROI: a) 20% (giữ nguyên), b) −4% (200×0,8×30% = 48 → (48−50)/50), c) 20% trên chi 30 triệu = 100% (bớt chi phí sai), d) −28%."
+    }
+   ],
+   "upgrade": "Viết lại Q6 để bốn phương án đều có số; thêm phương án 'thận trọng nhưng sai' vào Q2; thêm ĐÀO SÂU về cách ước doanh thu tăng thêm; thêm một câu L5 về đánh đổi: khi nào vẫn chấp nhận ROI 0–10% (khách mới mua lại) — nối sang bài 04."
+  },
+  {
+   "id": "B:dl10-06",
+   "title": "Chiến dịch thương hiệu ROI −80% sau một tháng: cắt hay đo lại?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Binet và Field (IPA, 2013) phân tích dữ liệu các chiến dịch ở Anh và cho rằng hiệu ứng thương hiệu thường cần hơn 6 tháng mới rõ",
+     "issue": "Khẳng định nghiên cứu/benchmark có tên thật và con số ('hơn 6 tháng') nhưng bài không có `src` (tên tài liệu, link, ngày kiểm). Có hedging ('một khung có ảnh hưởng; có quan điểm khác') nhưng chưa đủ theo chuẩn periodic.",
+     "fix": "Thêm `src`: Binet & Field, *The Long and the Short of It* (IPA, 2013), ngày kiểm; ghi rõ con số 6 tháng là cách đọc của tác giả bài, không phải trích nguyên văn."
+    }
+   ],
+   "upgrade": "Thêm `src` cho Binet & Field và 60/40; sửa mã sai Q3; thêm số cho thiết kế đối chứng (dao động tự nhiên, cách ghép cặp cửa hàng); thay Q6 bằng câu đọc dữ liệu đối chứng; thêm PHẢN VÍ DỤ: chiến dịch 'thương hiệu' nhưng thực chất là giảm giá đội lốt — khi đó ROI tháng là thước đúng."
+  }
+ ]
+}

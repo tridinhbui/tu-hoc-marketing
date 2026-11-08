@@ -1,0 +1,18 @@
+{
+ "mod": "tu05",
+ "lessons": [
+  {
+   "id": "B:tu05-02",
+   "total": 80,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q6 (đáp án c)",
+     "quote": "Lỗ ròng: mất 30 đơn chính, món kèm bù không nổi",
+     "issue": "Kết luận chắc chắn từ bỏ giỏ 60%→63% trên 1.000 giỏ (z≈1,4, nằm trong nhiễu) mà không nêu độ bất định; \"lỗ\" ở đây là doanh thu, không phải lãi.",
+     "fix": "Tăng mẫu (≥10.000 giỏ) hoặc thêm \"nếu chênh lệch vượt nhiễu\"; đổi \"lỗ ròng\" thành \"doanh thu ròng giảm\"."
+    }
+   ]
+  }
+ ]
+}

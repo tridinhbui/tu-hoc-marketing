@@ -1,0 +1,6 @@
+{ "mod":"dl10", "fixed_at":"2026-11-07", "items":[
+  { "id":"B:dl10-01", "where":"Q5", "status":"fixed", "change":"Bốn phương án cùng dạng có số: a) X 300%/Y 250% (lấy ROAS làm ROI), b) Y 25%/X −10% (đúng), c) bằng nhau 0%, d) X 200%/Y 150% (ROAS − 1); lời giải từng phương án nêu phép tính sai.", "key_changed":false, "note":"đã sửa ở lượt trước; đã kiểm lại số: Y 50×50%=25, (25−20)/20=25%; X 60×30%=18, (18−20)/20=−10%." },
+  { "id":"B:dl10-02", "where":"Q6", "status":"fixed", "change":"Bốn phương án đều có ROI: a) giữ 20%, b) hệ số 0,8 → lãi gộp 48 triệu, ROI −4%, c) bớt 40% chi → chi 30 triệu, ROI 100%, d) 120 triệu tăng thêm → ROI −28% (đúng).", "key_changed":false, "note":"đã sửa ở lượt trước; đã kiểm lại: 200×0,8×30%=48, (48−50)/50=−4%; (60−30)/30=100%; 120×30%=36, (36−50)/50=−28%." },
+  { "id":"B:dl10-06", "where":"KHÁI NIỆM", "status":"fixed", "change":"Thêm src Binet & Field (2013), The Long and the Short of It, IPA, ngày kiểm 2026-11-07, st:'chua'; khái niệm ghi rõ mốc “hơn 6 tháng” là cách đọc của tác giả bài, không phải trích nguyên văn.", "key_changed":false, "note":"đã sửa ở lượt trước; domain ipa.co.uk đúng nhưng đường dẫn sâu tới trang ấn phẩm cần người bấm kiểm (src đang st:'chua')." }
+ ],
+ "validator":"0 lỗi", "tests":"pass" }

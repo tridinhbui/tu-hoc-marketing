@@ -1,0 +1,35 @@
+{
+ "mod": "dl04",
+ "lessons": [
+  {
+   "id": "B:dl04-01",
+   "title": "Bảng cohort: đọc theo hàng ngang hay theo cột dọc?",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Ô ghi phần trăm khách của nhóm đó còn mua.",
+     "issue": "Không định nghĩa 'còn mua' là mua trong đúng tháng tuổi đó (classic/N-day) hay đã mua ít nhất một lần kể từ tháng đó (unbounded). Hai cách cho hai bảng khác hẳn: bảng unbounded không bao giờ đi lên, bảng classic có thể đi lên (chính dl04-04 Q3 dùng hiện tượng này). Người học không biết đang đọc bảng nào.",
+     "fix": "Thêm một câu: 'Trong bài này, ô tháng thứ k = % khách của nhóm có mua trong tháng tuổi k (có thể lên xuống). Nếu bảng của bạn đo \"đã mua ít nhất một lần kể từ\", đường chỉ đi xuống.' và ghi điều kiện này vào Q5."
+    }
+   ],
+   "upgrade": "Định nghĩa rõ 'còn mua' (classic vs unbounded) và nêu hệ quả; chèn bảng cohort 6×4 có nhãn minh hoạ với một ô chéo bất thường; sửa lời giải Q1b và từ 'luôn' ở Q5; thêm quy tắc nhiễu (nhóm dưới ~100 người thì ±10 điểm là bình thường) vào khái niệm và dùng trong Q7; thêm một câu L5: hai cách đọc cùng bảng cho hai kết luận trái nhau, chọn và biện hộ."
+  },
+  {
+   "id": "B:dl04-06",
+   "title": "Kênh nào mang về khách ở lại, không chỉ khách rẻ?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1 lời giải",
+     "quote": "A: 500.000đ/khách giữ; B: khoảng 285.700đ/khách giữ",
+     "issue": "285.714 = 40 triệu ÷ 140 là chi phí GỘP, trong khi khái niệm và ví dụ định nghĩa chi phí RÒNG (trừ lãi đơn đầu) = 200.000đ; chính Q3 liệt kê 285.714 là đáp án sai 'quên trừ lãi đơn đầu'. Lời giải mâu thuẫn với phần đọc và với Q3; kết luận không đổi nhưng người học thấy hai con số cho cùng một thước đo.",
+     "fix": "Sửa lời giải Q1 thành 'B: 200.000đ/khách giữ (285.700đ nếu chưa trừ lãi đơn đầu)'."
+    }
+   ],
+   "upgrade": "Sửa 285.700 trong Q1; nói rõ hướng lệch của thước đo; thêm phản ví dụ (kênh deal dùng để thanh lý hàng tồn — mục tiêu khác, thước đo khác); thay Q6 bằng câu tính lãi tích luỹ hai kênh; gắn nhãn minh hoạ; thêm bước làm: cách gắn nhãn kênh khi khách mua qua sàn (mã voucher riêng, landing riêng)."
+  }
+ ]
+}

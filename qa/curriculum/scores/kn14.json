@@ -1,0 +1,128 @@
+{
+  "mod": "kn14",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn14-01",
+      "scores": { "accuracy": 10, "depth": 9, "practical": 12, "examples": 10, "pedagogy": 6, "assessment": 6, "data": 6, "clarity": 4 },
+      "total": 63,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L2", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "Theo bài giải thích chính thức của Instagram, Feed, Stories, Explore, Reels và Tìm kiếm mỗi nơi có mô hình xếp hạng riêng", "issue": "Khẳng định cơ chế nền tảng viện dẫn 'bài giải thích chính thức' nhưng bài không có `src` (tên bài, đường dẫn, ngày kiểm). Kiến thức loại fast bắt buộc có nguồn và ngày kiểm.", "fix": "Thêm src: tên bài đăng trên trang chính thức của Instagram về cách xếp hạng, URL, ngày kiểm, và câu 'nếu trang chính thức nói khác, tin trang chính thức'." },
+        { "sev": "P1", "where": "Khái niệm", "quote": "Stories thường để xem những người gần mình; Explore và Reels để khám phá và giải trí.", "issue": "Mô tả hành vi người dùng theo bề mặt nêu như sự thật, không nguồn, không gắn nhãn 'theo mô tả của nền tảng tại thời điểm X'.", "fix": "Gắn vào src ở trên hoặc viết 'theo mô tả của Instagram (kiểm ngày …)'." },
+        { "sev": "P1", "where": "Q1 / Q5 / Q7", "quote": "Số liệu Stories sai vì lượt xem Stories không bao giờ đáng tin cậy", "issue": "Nhiễu dùng 'không bao giờ' (Q1 b, Q7 b), 'luôn' (Q5 b), 'bất kỳ' (Q1 a): đáp án đoán được bằng từ tuyệt đối.", "fix": "Viết nhiễu có lý lẽ thật: 'Stories đến người đã theo dõi nên tin nhắn cao là chuyện bình thường, không cần làm gì thêm' — buộc người học phân biệt 'bình thường' với 'không cần hành động'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Reels dùng để gặp người ở Hà Nội chưa biết tiệm, đo bằng số người xem hết và số người vào trang cá nhân.", "issue": "Số 900 / 350 / 6.200 / 14 không gắn nhãn minh hoạ; ví dụ không đưa số cho chỉ số mới (bao nhiêu người vào trang từ Reels) nên quyết định 'gán việc' chưa có số kiểm.", "fix": "Thêm '(số minh hoạ)' và một dòng: 'Reels: 6.200 lượt phát, 310 vào trang cá nhân (5%), 9 người theo dõi mới'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 14 ÷ 350 = 4% ✓ (sai 25 = 350 ÷ 14 ✓; 0,04 = nhầm điểm % ✓)." },
+      "claims": [
+        { "claim": "Instagram: Feed, Stories, Explore, Reels, Tìm kiếm mỗi nơi có mô hình xếp hạng riêng", "status": "unverified", "note": "Khớp với hiểu biết chung về bài 'ranking explained' của Instagram, nhưng bài không có src/ngày kiểm." },
+        { "claim": "Stories để xem người gần mình; Explore/Reels để khám phá, giải trí", "status": "unverified", "note": "" },
+        { "claim": "Reels 6.200 lượt phát; một người có thể xem lặp lại nên số tài khoản thấp hơn", "status": "illustrative-unlabelled", "note": "Phần giải thích 'lượt phát ≠ tài khoản' đúng về định nghĩa." }
+      ],
+      "strengths": "Chỉ ra đúng lỗi so 'lượt phát' với 'tài khoản' (khác đơn vị) và đề xuất cách rẻ nhất để kiểm đóng góp của Reels (hỏi khách 'biết tiệm từ đâu') — Q4 là câu L4 tốt.",
+      "upgrade": "Để ≥85: (1) thêm src với ngày kiểm cho mọi mô tả bề mặt Instagram; (2) gắn nhãn minh hoạ và bổ sung số cho chỉ số của Reels/Feed để 'gán việc' có số kiểm; (3) thêm phản ví dụ: tiệm hoa khác có Stories 350 người xem nhưng 0 tin nhắn vì không có lời mời — khi đó vấn đề không phải bề mặt mà là thiết kế (nối kn14-04); (4) thay Q1/Q5 bằng câu đọc bảng Insights ba bề mặt với reach follower/non-follower; (5) phần Áp dụng ra bảng 3 dòng: bề mặt · việc · chỉ số · mục tiêu tuần."
+    },
+    {
+      "id": "B:kn14-02",
+      "scores": { "accuracy": 10, "depth": 10, "practical": 13, "examples": 11, "pedagogy": 7, "assessment": 6, "data": 8, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "Năm 2021 Instagram mô tả rằng với Reels, các dự đoán quan trọng nhất là: bạn có xem hết không, có thích không, có thấy vui hay giải trí không (qua khảo sát) và có vào trang âm thanh không.", "issue": "Mô tả thuật toán có mốc năm nhưng không có `src` (đường dẫn, ngày kiểm). Kiến thức fast nêu như sự thật mà không nguồn.", "fix": "Thêm src tới bài đăng chính thức năm 2021 của Instagram và ghi ngày kiểm." },
+        { "sev": "P1", "where": "Khái niệm", "quote": "Đầu 2025, người đứng đầu Instagram nói ba tín hiệu quan trọng nhất là thời gian xem, lượt thích và lượt gửi (chia sẻ lại); gửi quan trọng hơn khi tiếp cận người chưa theo dõi.", "issue": "Dẫn lời cá nhân lãnh đạo nền tảng (phát biểu trên video/mạng xã hội) như dữ kiện, không nguồn, không ngày; đến 11/2026 đã gần hai năm — quá hạn 3 tháng của lớp fast.", "fix": "Thêm src (nơi phát biểu, ngày), ghi ngày kiểm lại, và câu 'nếu trang chính thức nói khác, tin trang chính thức'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Chia sẻ lại: 1,5 so với 28 trên 1.000 lượt xem.", "issue": "12 lượt chia sẻ là mẫu rất nhỏ; bài so tỉ số 18,7 lần mà không nhắc độ nhiễu của số tuyệt đối nhỏ (thêm/bớt vài lượt gửi đổi tỉ số mạnh). Số cũng không gắn nhãn minh hoạ.", "fix": "Thêm 'với dưới ~30 lượt gửi, tỉ số dao động mạnh; so khuynh hướng qua nhiều video' và gắn nhãn minh hoạ." },
+        { "sev": "P2", "where": "Q6", "quote": "Một nhân viên nói “Instagram chắc chắn thưởng cho video đăng nhiều nhất mỗi ngày”.", "issue": "Lặp khung câu 'đồng nghiệp nói chắc chắn…' của kn13-01 Q6; đáp án 'kiểm nguồn chính thức' đoán được, nhiễu c dùng 'không bao giờ … bất kỳ'.", "fix": "Thay bằng câu dữ liệu: cho hai Reels cùng chủ đề 18s/40s với xem hết và gửi, hỏi kết luận nào được phép rút." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 2.800 ÷ 5.000 = 56% ✓. Q4: 12 ÷ 8.000 × 1.000 = 1,5; 140 ÷ 5.000 × 1.000 = 28; 28 ÷ 1,5 = 18,67 ≈ 18,7 ✓ (tol 0,2); sai 11,7 = 140 ÷ 12 ✓. Ví dụ 1.200 ÷ 8.000 = 15% ✓." },
+      "claims": [
+        { "claim": "2021: Instagram nêu dự đoán cho Reels là xem hết, thích, thấy vui/giải trí (khảo sát), vào trang âm thanh", "status": "unverified", "note": "Khớp hiểu biết chung về bài đăng 2021; không có src." },
+        { "claim": "Đầu 2025: ba tín hiệu là thời gian xem, thích, gửi; gửi quan trọng hơn với người chưa theo dõi", "status": "unverified", "note": "Dẫn lời cá nhân, không nguồn, không ngày kiểm." },
+        { "claim": "Số liệu hai Reels (8.000/1.200/12 và 5.000/2.800/140)", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Bài nói rõ chênh lệch 'mới là gợi ý để thử, chưa phải kết luận' vì hai video khác độ dài, chủ đề, mục đích, rồi thiết kế phép thử giữ chủ đề chỉ đổi độ dài — Q2 là câu đánh giá thiết kế thử (L5). Chuẩn hoá 'chia sẻ trên 1.000 lượt xem' đúng.",
+      "upgrade": "Để ≥85: (1) thêm src + ngày kiểm cho cả hai mô tả thuật toán, nêu rõ cái nào còn hiệu lực; (2) gắn nhãn minh hoạ, thêm ghi chú nhiễu mẫu nhỏ cho lượt gửi; (3) thêm phản ví dụ: Reels menu (ít gửi) vẫn đúng việc nếu mục tiêu là người quen ghé quán — không phải video nào cũng phải 'được gửi'; (4) thay Q5/Q6 bằng câu L4 đọc bảng 4 Reels (xem hết, gửi/1.000, vào trang) và chọn video làm mẫu; (5) nối sang kn13-02 (đường giữ chân) trong Q7."
+    },
+    {
+      "id": "B:kn14-03",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 13, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L4", "L3", "L3", "L3", "L3", "L6", "L5"],
+      "bloom_max": "L6",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "Instagram nêu rằng hoạt động của bạn như thích, chia sẻ, lưu và bình luận giúp họ hiểu bạn quan tâm gì.", "issue": "Dẫn mô tả nền tảng không có `src`/ngày kiểm.", "fix": "Thêm src tới bài giải thích xếp hạng của Instagram, ngày kiểm." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "180 lưu, 9 người nhắn tin, tức 5% lượt lưu.", "issue": "Bài không nói cách biết 9 người nhắn tin là 'từ lượt lưu' (lưu không có đường dẫn theo dõi); đây là gán nguồn theo thời gian, không phải đo trực tiếp.", "fix": "Ghi 'nhắn tin trong 7 ngày sau bài, có nhắc tới bài — là gán gần đúng, không phải đo trực tiếp'." },
+        { "sev": "P2", "where": "Q4", "quote": "Bài B hơn bài A 4,3 điểm phần trăm, tức gấp khoảng 22,5 lần", "issue": "Câu điểm phần trăm vs tỉ số lặp lại ở kn14-05 Q6 và kn16-02 Q4 với cùng cấu trúc bốn nhiễu; ba lần trong hai module là dư.", "fix": "Giữ một câu ở kn14-03, thay hai câu kia bằng câu đọc dữ liệu khác." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 180 ÷ 4.000 = 4,5% ✓. Q5: 9 ÷ 180 = 5% ✓ (sai 20 = đảo ✓). Q4 kiểm: 12 ÷ 6.000 = 0,2%; 4,5 ÷ 0,2 = 22,5 ✓; 180 ÷ 12 = 15 ✓." },
+      "claims": [
+        { "claim": "Instagram: thích, chia sẻ, lưu, bình luận giúp họ hiểu bạn quan tâm gì", "status": "unverified", "note": "" },
+        { "claim": "Số liệu bài A/B (6.000/420/12 và 4.000/160/180), 9 tin nhắn", "status": "illustrative-labelled", "note": "Có 'Con số minh hoạ'." },
+        { "claim": "chuỗi nhiều ảnh dễ lưu hơn ảnh đơn", "status": "unverified", "note": "Nhận định hợp lý, không nguồn; bài dùng nó như điều kiện gây nhiễu — đúng vai." }
+      ],
+      "strengths": "Bài nêu rõ hai giới hạn của 'lưu' (chỉ gợi ý giá trị thực dụng; phụ thuộc định dạng) và Q6 buộc thiết kế phép thử cùng định dạng — câu L6 thật. Q1 hỏi 'điều gì rút ra được chắc nhất' thay vì 'bài nào tốt' là cách hỏi đúng.",
+      "upgrade": "Để ≥85: (1) thêm src cho mô tả Instagram; (2) nói rõ cách gán 9 tin nhắn cho bài B; (3) thêm phản ví dụ: bài hướng dẫn lưu 6% nhưng 0 tin nhắn vì thiếu lời mời — lưu không tự thành hành động; (4) thêm ràng buộc sản xuất: một chuỗi 6 ảnh tốn bao nhiêu giờ so với ảnh đơn và tỉ lệ lưu cần bao nhiêu để đáng; (5) thay Q4 (lặp) bằng câu đọc bảng 4 bài cùng định dạng."
+    },
+    {
+      "id": "B:kn14-04",
+      "scores": { "accuracy": 11, "depth": 10, "practical": 13, "examples": 12, "pedagogy": 7, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L4", "L3", "L3", "L2", "L3", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "Instagram mô tả rằng khi xếp hạng Stories, họ dự đoán bạn có chạm vào story không, có trả lời không và có lướt sang story tiếp theo không.", "issue": "Mô tả thuật toán Stories không có `src`/ngày kiểm; bài không nói mô tả này từ năm nào.", "fix": "Thêm src, năm công bố và ngày kiểm; thêm câu 'nếu trang chính thức nói khác, tin trang chính thức'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "người trả lời chỉ từ 6 lên 7", "issue": "Chênh 6→7 là nhiễu thuần; bài dùng nó như bằng chứng 'rút ngắn không tạo trả lời' mà không nói mẫu nhỏ (Q6 c chỉ nhắc như phương án sai).", "fix": "Thêm 'với số trả lời dưới vài chục, chênh một vài người chưa nói gì; 7→58 mới là tín hiệu'." },
+        { "sev": "P2", "where": "Q4 / Q7", "quote": "Nhạc nền sôi động chạy suốt chuỗi cho đẹp mắt", "issue": "Q4 và Q7 là câu nhận lại ý bài với nhiễu vô lý (nhạc nền, logo lớn, 'quy định bắt buộc'); không buộc đọc dữ liệu.", "fix": "Thay Q4 bằng câu cho bảng người còn lại ở khung 1–5 của hai tuần, hỏi khung nào rơi mạnh nhất và sửa gì." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 58 ÷ 7 = 8,29 ≈ 8,3 ✓ (tol 0,1). Ví dụ: 520 ÷ 1.000 = 52%, 180 ÷ 1.000 = 18% ✓." },
+      "claims": [
+        { "claim": "Instagram xếp hạng Stories bằng dự đoán chạm vào, trả lời, lướt sang", "status": "unverified", "note": "Khớp hiểu biết chung về bài 2021; không src." },
+        { "claim": "Số liệu 1.000/520/180, 6→7→58 trả lời", "status": "illustrative-labelled", "note": "Có 'Con số minh hoạ'." }
+      ],
+      "strengths": "Nguyên tắc 'so cùng vị trí khung vì người xem rơi dần theo vị trí' (Q6) là kỹ năng đọc số ít bài dạy; ví dụ hai tuần đổi một biến mỗi lần cho thấy rút ngắn giữ người nhưng chính lời mời mới tạo trả lời.",
+      "upgrade": "Để ≥85: (1) thêm src + năm cho mô tả Stories; (2) thêm ghi chú nhiễu mẫu nhỏ; (3) thêm phản ví dụ: tài khoản B2B có 58 trả lời nhưng toàn trả lời sticker vui, 0 tin nhắn mua — trả lời không phải mục tiêu cuối; (4) thêm chỉ số 'tỉ lệ thoát' (lướt ra khỏi chuỗi) nếu Insights có, với ghi chú kiểm màn hình; (5) thay Q4/Q7 bằng câu đọc bảng khung."
+    },
+    {
+      "id": "B:kn14-05",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 12, "pedagogy": 7, "assessment": 6, "data": 8, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Hai tuần sau tỉ lệ bấm lên 9%, tức 216 người", "issue": "216 = 9% × 2.400 ngầm giả định số lượt ghé trang hai tuần sau vẫn đúng 2.400; giả định không được nêu.", "fix": "Viết 'trên cùng khoảng 2.400 lượt ghé (số minh hoạ)'." },
+        { "sev": "P2", "where": "Q6", "quote": "Tăng 5 điểm phần trăm, tức gấp khoảng 2,25 lần mức cũ", "issue": "Lặp cấu trúc câu điểm phần trăm/tỉ số của kn14-03 Q4 (và kn16-02 Q4); Q4 (đường dẫn tới đâu) là L2 với nhiễu vô lý ('trang đăng nhập').", "fix": "Thay Q6 bằng câu L4: cho bảng 3 phiên bản tiểu sử với lượt ghé, bấm, đặt hàng, hỏi bản nào tốt hơn và vì sao không phải bản có CTR cao nhất." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Chỉ nhìn lượt bấm dễ tối ưu ra những cú bấm rỗng.", "issue": "Bài không nói ràng buộc kỹ thuật của 'đo tiếp một bước sau': cần tham số UTM hoặc trang đích riêng để biết 30 đơn đến từ link tiểu sử; không có thì 14% là ước lượng.", "fix": "Thêm một câu về UTM/trang đích riêng cho link tiểu sử." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 96 ÷ 2.400 = 4% ✓. Q5: 30 ÷ 216 = 13,9% ✓ (sai 7,2 = 216 ÷ 30 ✓; 1,25 = 30 ÷ 2.400 ✓). Q6: 9 − 4 = 5 điểm; 9 ÷ 4 = 2,25 ✓. Ví dụ 0,09 × 2.400 = 216 ✓." },
+      "claims": [
+        { "claim": "Số liệu 40.000 / 2.400 / 96 → 216 / 30", "status": "illustrative-labelled", "note": "Có 'Con số minh hoạ'." }
+      ],
+      "strengths": "Không có khẳng định cơ chế nền tảng nào cần nguồn; bốn phần trang cá nhân + hai bước đo (bấm, rồi đặt hàng) cụ thể; bài tự chỉ ra lỗi 'sửa cả gói nên không biết việc nào' và Q7 kiểm đúng điểm đó.",
+      "upgrade": "Để ≥85: (1) nêu giả định 2.400 lượt ghé và cách đo bước sau (UTM/trang đích riêng); (2) thêm phản ví dụ: tỉ lệ bấm tăng lên 12% nhưng đặt hàng giảm vì link dẫn tới ưu đãi không khớp Reels — tối ưu bấm rỗng; (3) thêm ràng buộc: thương hiệu có 300 sản phẩm thì chọn 6 mẫu theo tiêu chí nào (bán chạy, biên, liên quan Reels); (4) thay Q4/Q6 bằng câu đọc bảng; (5) thêm câu L6: lập kế hoạch đổi từng việc trong 4 tuần và chỉ số cho mỗi tuần."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý: bề mặt (01) → Reels (02) → lưu (03) → Stories (04) → trang cá nhân (05); 05 là điểm hạ cánh cho người đến từ 02. Cả bốn bài 01–04 dựa vào mô tả xếp hạng của Instagram (2021, có chỗ 'đầu 2025') nhưng không bài nào có `src`/ngày kiểm — với lớp kiến thức fast, đây là lỗ hổng cấp module, không phải cấp bài.",
+    "overlap": [
+      "Câu 'điểm phần trăm vs gấp mấy lần' xuất hiện ở kn14-03 Q4 và kn14-05 Q6 (và kn16-02 Q4) với cùng bốn nhiễu.",
+      "Khung câu 'đồng nghiệp/nhân viên nói Instagram chắc chắn…' ở kn14-01 Q7 và kn14-02 Q6, lặp kn13-01 Q6.",
+      "Ý 'đo đúng việc của từng bề mặt' được nhắc lại trong cả 5 bài; 01 và 05 có phần gần trùng về 'vào trang cá nhân là bước kế tiếp'."
+    ],
+    "gaps": [
+      "Không có bài đọc màn hình Insights (reach follower vs non-follower, accounts engaged, nguồn reach theo bề mặt) — thứ 4 bài kia giả định người học biết mở.",
+      "Thiếu bài về tìm kiếm trên Instagram (từ khoá trong chú thích, tên tài khoản, alt text) dù khái niệm 'Tìm kiếm' được nêu ở 01.",
+      "Thiếu bài về hợp tác (collab post, tag sản phẩm, creator) và về tin nhắn/DM như kênh chốt — 01 và 04 đều dẫn tới tin nhắn nhưng không bài nào dạy xử lý.",
+      "Không có bài nào nêu định nghĩa chỉ số của Instagram (lượt phát vs tài khoản, 'xem hết' Reels là gì) với src."
+    ],
+    "best_lesson": "B:kn14-05",
+    "weakest_lesson": "B:kn14-01"
+  }
+}

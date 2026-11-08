@@ -1,0 +1,185 @@
+{
+  "mod": "kh05",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kh05-01",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 13, "examples": 8, "pedagogy": 7, "assessment": 7, "data": 6, "clarity": 5 },
+      "total": 67,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L4", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ", "quote": "Tỉ lệ từng có hành vi là 3/20 = 15%, sát với 2 đơn thật hơn nhiều so với 16/20 = 80%", "issue": "So 3/20 với 2/20 trên mẫu 20 người như bằng chứng rằng câu hỏi quá khứ 'dự báo tốt hơn' mà không nói độ nhiễu: ở n=20, 2 và 3 người cách nhau một người; sai số của tỉ lệ 15% là ±16 điểm. Người học sẽ tin rằng tỉ lệ hành vi quá khứ là con số dự báo.", "fix": "Thêm một câu: 'Với 20 người, 2 hay 3 chỉ là tín hiệu về hướng, không phải con số dự báo; điều chắc chắn là 80% nói có đã sai hẳn.'" },
+        { "sev": "P2", "where": "Q3 wrong", "quote": "[80,\"NHAM_SO_TUYET_DOI\"]", "issue": "80 là tỉ lệ 16/20 (nhầm tử số: lấy người nói 'có' thay cho người có hành vi), không phải 'nhầm số tuyệt đối'. 6,67 là 20/3 (đảo ngược tử/mẫu), gắn nhãn SAI_MAU_SO cũng chưa khớp.", "fix": "Đổi nhãn: 80 → NHAM_TU_SO (lấy số người nói sẽ mua); 6,67 → NGUOC_TU_MAU." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Nếu người đó chưa từng tìm cách giải quyết vấn đề, lời hứa mua trong tương lai gần như không có trọng lượng", "issue": "Nêu như luật phổ quát; không nói trường hợp câu hỏi ý định vẫn có ích (sản phẩm hoàn toàn mới chưa có hành vi tương tự; đo độ nhạy giá bằng thang Van Westendorp có hiệu chỉnh).", "fix": "Thêm điều kiện: 'Câu hỏi ý định chỉ còn chỗ đứng khi chưa có hành vi nào để hỏi, và khi đó phải trừ hao mạnh hoặc kiểm bằng đặt cọc/đặt trước.'" }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3 ÷ 20 = 0,15 = 15% ✓ (tol 0,1). Khớp ví dụ. Q5 lời giải '80% so với 10%': 2/20 = 10% ✓." },
+      "claims": [
+        { "claim": "Ra mắt thử trên Shopee một tháng, 16/20 nói có nhưng chỉ 2 người mua", "status": "illustrative-unlabelled", "note": "Số dựng, không ghi nhãn minh hoạ trong bài (chỉ ghi ở comment mã nguồn)." },
+        { "claim": "Nói 'có' với tình huống giả định không tốn gì — ý định khai báo lệch so với hành vi", "status": "unverified", "note": "Đúng với tài liệu nghề (Mom Test, intention–behaviour gap) nhưng bài không dẫn nguồn." }
+      ],
+      "strengths": "Bài mở bằng một thất bại cụ thể (80% nói có, 10% mua) và đưa ra việc làm thay thế rõ: đổi câu hỏi tương lai thành câu hỏi về lần gần nhất (ngày, nơi, số tiền). Q2 và Q4 buộc người học viết lại câu hỏi thay vì nhận lại ý bài.",
+      "upgrade": "(1) Gắn nhãn 'số minh hoạ' cho tình huống và ví dụ. (2) Thêm phản ví dụ: sản phẩm chưa có hành vi tương tự (ví dụ app mới), khi đó dùng đặt cọc/đặt trước thay cho câu hỏi ý định. (3) Thay Q3 (3/20) bằng câu đọc bảng: cho 20 dòng trả lời (ăn gì, mua đâu, bao nhiêu tiền) và hỏi nhóm nào đáng phỏng vấn sâu. (4) Thêm câu nói độ nhiễu của 2–3 người trên 20. (5) Thêm 'đào sâu': kỹ thuật kiểm bằng cam kết (đặt cọc, giới thiệu bạn, dành thời gian) để nối sang kh05-03."
+    },
+    {
+      "id": "B:kh05-02",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 9, "pedagogy": 7, "assessment": 8, "data": 6, "clarity": 5 },
+      "total": 72,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L4", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ", "quote": "Tuần sau, bạn hỏi lại 120 khách khác bằng phiếu tự điền bỏ hòm, câu trung tính", "issue": "Lần hỏi lại đổi cùng lúc ba thứ: câu hỏi (trung tính), cách hỏi (tự điền thay vì hỏi tại quầy), và mẫu (120 khách khác, tuần khác). Bài quy toàn bộ khoảng cách 85% → 35% cho 'câu hỏi dẫn dắt', không tách phần do áp lực xã hội tại quầy hay do mẫu khác.", "fix": "Thêm một câu: 'Lần hai đổi cả câu hỏi và cách hỏi, nên 50 điểm chênh là tổng của hai nguồn lệch; muốn tách, dùng phiếu tự điền cho cả hai câu.'" },
+        { "sev": "P2", "where": "Q3 wrong", "quote": "[85,\"NHAM_SO_TUYET_DOI\"]", "issue": "85 là kết quả của bảng hỏi dẫn dắt (102/120), tức lấy nhầm bộ dữ liệu, không phải 'nhầm số tuyệt đối'.", "fix": "Đổi nhãn thành NHAM_BO_DU_LIEU hoặc bỏ phương án này." },
+        { "sev": "P2", "where": "Q6", "quote": "Dùng số 35% từ lần hỏi trung tính và nói rõ cách hỏi", "issue": "Phương án đúng dài nhất và duy nhất có nội dung 'nói rõ cách hỏi' trùng với bài; đáp án đoán được bằng hình thức (mẹo độ dài/từ khoá).", "fix": "Cân độ dài 4 phương án; đổi phương án b thành đề xuất nghe hợp lý hơn (ví dụ đăng 'khách khen nhiều gấp 2,6 lần khách chê')." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 42 ÷ 120 = 35% ✓; 42 ÷ 96 = 43,75% ✓ đúng là lỗi bỏ mẫu số 'không để ý'. Ví dụ: 42+38+16+24 = 120 ✓; 102/120 = 85% ✓; 42/16 = 2,6 ✓." },
+      "claims": [
+        { "claim": "102/120 khách nói 'có' với câu hỏi dẫn dắt tại quầy; 42/120 với câu trung tính", "status": "illustrative-unlabelled", "note": "Số dựng, chưa ghi nhãn trong bài." },
+        { "claim": "Ba dấu hiệu câu hỏi dẫn dắt (tính từ đánh giá, có/không lệch, bối cảnh ngại nói ngược)", "status": "unverified", "note": "Khớp với khái niệm acquiescence bias / social desirability nhưng bài không nêu tên hay nguồn." }
+      ],
+      "strengths": "Ba dấu hiệu nhận diện câu dẫn dắt rất dễ dùng ngay; Q4 (chọn thang cân đối) và Q7 (đọc 24 người 'không để ý') đưa người học vượt khỏi việc nhận lại ý bài, sang thiết kế thang và diễn giải dữ liệu.",
+      "upgrade": "(1) Tách hai nguồn lệch (câu hỏi vs bối cảnh) trong ví dụ hoặc đổi ví dụ thành thử nghiệm A/B hai câu cùng cách hỏi. (2) Gắn nhãn số minh hoạ. (3) Thêm phản ví dụ: câu hỏi có/không hợp lệ khi hỏi về hành vi (\"Lần này bạn có gọi size lớn không?\"). (4) Nêu tên khái niệm acquiescence bias và social desirability để người học tra tiếp. (5) Thêm câu L5: sếp vẫn đăng 85%, tính rủi ro truyền thông khi bị kiểm chứng."
+    },
+    {
+      "id": "B:kh05-03",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L4", "L5", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Tình huống", "quote": "khảo sát ở Mỹ cho khoảng 4–5 tuần; bạn cần tự kiểm với khách Việt", "issue": "Benchmark nêu như sự thật, không tên khảo sát, không năm, không `src`. Có hedge 'tự kiểm' nhưng vẫn là con số không truy được.", "fix": "Hoặc thêm `src` (tên khảo sát, năm, link, ngày kiểm) hoặc viết lại thành 'giả định minh hoạ: nam giới nói chung cắt tóc thưa hơn nhóm đồng nghiệp'." },
+        { "sev": "P2", "where": "Q3", "quote": "cần tối thiểu bao nhiêu người trả lời sàng lọc? → đáp án: 54 người (tol 0.5)", "issue": "Kết quả thô là 53,33; người học nhập 53 hoặc 53,3 bị chấm sai vì tol 0,5 trong khi đề không nói 'làm tròn lên'.", "fix": "Thêm 'làm tròn lên số nguyên' vào đề, hoặc đặt tol 1." },
+        { "sev": "P2", "where": "Q3 wrong", "quote": "[16,\"SAI_MAU_SO\"]", "issue": "16 là số người đạt cần có (dừng giữa chừng), không phải lỗi mẫu số.", "fix": "Đổi nhãn thành DUNG_GIUA_CHUNG hoặc thay bằng 27 (quên tỉ lệ nhận lời) và 160 (nhầm 50% thành 5%)." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Người dễ hẹn nhất hiếm khi là người cần nghe. Đồng nghiệp và bạn bè giống bạn (cùng tuổi, thu nhập, thói quen) và muốn làm bạn vui. App bán cho chủ tiệm có hai nhóm khác nhau…", "issue": "Đoạn khái niệm dài 9 câu gộp ba ý (vì sao người quen lệch, hai nhóm khách, cách tuyển); thiếu bảng 2 cột 'chủ tiệm / khách' cho bộ sàng lọc.", "fix": "Tách thành bảng: Nhóm · Câu sàng lọc hành vi · Nơi tuyển · Thời lượng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 8 ÷ 0,5 = 16 người đạt; 16 ÷ 0,3 = 53,33 → 54 ✓. Sai 27 = 8 ÷ 0,3 = 26,67 → 27 ✓ đúng lỗi quên tỉ lệ nhận lời. Ví dụ: 18/60 = 30% ✓, 8 × 50.000 = 400.000 ✓." },
+      "claims": [
+        { "claim": "Khảo sát ở Mỹ: nam giới cắt tóc cách nhau 4–5 tuần", "status": "unverified", "note": "Không có src, không tên khảo sát." },
+        { "claim": "60 người trả lời sàng lọc, 18 đạt, hẹn 8, quà 50 nghìn", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phân biệt rõ hai nhóm (chủ tiệm trả tiền, khách dùng cuối) và viết bộ sàng lọc bằng hành vi cho từng nhóm; Q6 (quà có làm lệch không) là câu đánh đổi thật với lời giải phương án sai nêu đúng hiểu lầm.",
+      "upgrade": "(1) Bỏ hoặc gắn nguồn cho benchmark cắt tóc Mỹ. (2) Chuyển bộ sàng lọc thành bảng 2 nhóm. (3) Thêm phản ví dụ: khi người quen LÀ đúng tệp (chủ tiệm bạn thân) thì xử lý thế nào — hỏi họ giới thiệu 3 chủ tiệm khác thay vì phỏng vấn họ. (4) Thêm câu L6: thiết kế bộ 3 câu sàng lọc cho khách đến cắt, kèm tiêu chí loại. (5) Sửa tol/đề Q3."
+    },
+    {
+      "id": "B:kh05-04",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 5 },
+      "total": 74,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L5", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "Với một nhóm khách khá đồng nhất, thường khoảng 6–12 cuộc là đủ", "issue": "Benchmark cỡ mẫu định tính nêu không nguồn (gốc là Guest, Bunce & Johnson 2006 với ~12 cuộc; Nielsen 5 người cho usability). Không nói điều kiện: phụ thuộc độ rộng câu hỏi và cách mã hoá.", "fix": "Thêm src (Guest et al. 2006) với ngày kiểm, hoặc viết 'kinh nghiệm nghề, không phải ngưỡng khoa học' như bài kh05-06 đã làm với mốc nửa giờ." },
+        { "sev": "P2", "where": "Q3 wrong", "quote": "[6,\"QUEN_CHI_PHI_BIEN_DOI\"]", "issue": "6 giờ là quên phần ghi chép (bỏ một thành phần chi phí), không liên quan 'chi phí biến đổi'.", "fix": "Đổi nhãn thành QUEN_THANH_PHAN hoặc BO_SOT_BUOC." },
+        { "sev": "P2", "where": "Q3", "quote": "Làm 8 cuộc tốn tổng cộng bao nhiêu giờ?", "issue": "Phép tính 8 × 1,5 không rèn kỹ năng của bài (bão hoà); câu L3 thay được bằng câu đọc bảng 'số ý mới theo cuộc' và quyết định dừng ở cuộc nào.", "fix": "Thay bằng: cho dãy 4,3,2,2,0,1,0,0 ý mới; hỏi dừng sau cuộc nào theo luật 'hai cuộc liền không thêm' và vì sao cuộc 6 không phá luật." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (45+45) phút = 1,5 giờ × 8 = 12 giờ ✓. Ví dụ: 3+2+2+1+1+1 = 10 lý do ✓; 7/10 sau 3 cuộc ✓; 100 × 1,5 = 150 giờ ≈ 19 ngày 8 giờ ✓ 'gần một tháng'. Q5: 5/8 = 62,5% ✓." },
+      "claims": [
+        { "claim": "Nhóm khách đồng nhất thường bão hoà sau 6–12 cuộc", "status": "unverified", "note": "Có hedge 'thường' nhưng không nguồn." },
+        { "claim": "Dãy lý do mới 3,2,2,1,1,1,0,0 trên 8 cuộc", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phân công rõ 'phỏng vấn tìm lý do, khảo sát đếm tỉ lệ' và nối thẳng sang kh05-08; Q5 (câu nào được phép viết trong báo cáo) dạy kỷ luật diễn đạt số liệu định tính — hiếm bài làm được.",
+      "upgrade": "(1) Gắn nguồn hoặc hạ cấp '6–12' thành kinh nghiệm nghề. (2) Thay Q3 bằng câu đọc dãy ý mới và ra quyết định dừng. (3) Thêm phản ví dụ: bão hoà giả do hỏi cùng một kịch bản quá hẹp (không thêm ý mới vì câu hỏi không mở). (4) Thêm 'đào sâu': cách mã hoá ý mới (codebook) để hai người đếm ra cùng con số. (5) Gắn nhãn số minh hoạ."
+    },
+    {
+      "id": "B:kh05-05",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 13, "examples": 8, "pedagogy": 7, "assessment": 7, "data": 5, "clarity": 5 },
+      "total": 67,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Chị vò cổ áo 15 phút mỗi tối. Trong một tháng 30 ngày, tổng thời gian là bao nhiêu giờ?", "issue": "Phép nhân đơn vị không liên quan kỹ năng của bài (đào sâu bằng im lặng); câu calc gượng ép để đủ cấu trúc.", "fix": "Thay bằng câu đọc đoạn hội thoại 4 lượt và chọn chỗ nên im lặng / chỗ nên hỏi 'rồi sao nữa'." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "im lặng 3–5 giây sau khi người ta nói xong", "issue": "Không nêu giới hạn: phỏng vấn qua điện thoại/Zalo call khoảng lặng dễ bị hiểu là rớt mạng; với người ít nói, im lặng kéo dài gây khó chịu. Không có phương án thay thế bị loại (laddering 'vì sao' lặp).", "fix": "Thêm hai câu: điều kiện kênh (trực tiếp vs gọi) và khi nào chuyển sang câu đào sâu cụ thể thay cho im lặng." },
+        { "sev": "P2", "where": "Q6", "quote": "Cắt ngang lúc người kia đang nghĩ thêm, thường bằng gợi ý", "issue": "Câu L2 nhận lại ý bài; ba phương án sai đều rõ ràng yếu (tốn tiền quà, gỡ băng khó).", "fix": "Thay bằng câu phân biệt hai khoảng lặng: người kia đang nghĩ vs đã nói xong và chờ câu tiếp — dấu hiệu nào để biết." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 15 × 30 = 450 phút = 7,5 giờ ✓ (tol 0,05); 450 là quên đổi đơn vị ✓; 0,5 = 15/30 đảo tần suất ✓. Khớp ví dụ." },
+      "claims": [
+        { "claim": "Im lặng 3–5 giây khiến người trả lời tự nói thêm", "status": "unverified", "note": "Kinh nghiệm nghề phổ biến, không nguồn; chấp nhận được ở mức kỹ thuật." },
+        { "claim": "Chị nội trợ vò cổ áo 15 phút mỗi tối, 7,5 giờ/tháng", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Minh hoạ 'cũng được' che một nỗi phiền cụ thể rất thuyết phục; Q2 là câu đánh đổi thật (bỏ 10 câu để đào một câu) và Q5 đặt người học vào tình huống dễ trượt sang tư vấn.",
+      "upgrade": "(1) Thay Q3 bằng câu đọc hội thoại. (2) Thêm phản ví dụ: người được hỏi rất nói nhiều — khi đó việc cần làm là kéo về một lần cụ thể, không phải im lặng. (3) Thêm điều kiện kênh (gọi điện) và kỹ thuật thay thế (lặp lại từ cuối câu của họ). (4) Gắn nhãn số minh hoạ. (5) Thêm câu L5: 25 phút còn lại, 10 câu chưa hỏi — chọn 3 câu nào giữ, vì sao."
+    },
+    {
+      "id": "B:kh05-06",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 9, "pedagogy": 7, "assessment": 8, "data": 6, "clarity": 5 },
+      "total": 73,
+      "bloom_items": ["L3", "L3", "L3", "L3", "L2", "L4", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ", "quote": "Kết luận đổi hướng: thông điệp nên là \"nộp hồ sơ một lần qua app\", chứ không phải \"cam kết bồi thường\"", "issue": "Đổi hướng thông điệp dựa trên MỘT lời kể (chị Lan) trong 6 cuộc; bài vừa dạy 'kết luận phải truy về lời khách' nhưng không dạy 'bao nhiêu người cùng kể'. Mâu thuẫn với kh05-07 (đếm số người nhắc).", "fix": "Viết lại: 'Giả thuyết thông điệp đổi hướng; kiểm xem mấy người trong 6 cuộc kể chuyện giấy tờ, rồi thử hai thông điệp.' Q7 cũng đổi chữ 'thông điệp nên đổi' thành 'giả thuyết thông điệp nên đổi'." },
+        { "sev": "P2", "where": "Q5", "quote": "Vì sao nên ghi chép ngay sau mỗi cuộc, càng sớm càng tốt?", "issue": "Câu L2, ba phương án sai phi lý (khách đổi ý, khách ký, file xuống cấp); đoán được ngay.", "fix": "Thay bằng câu tình huống: hai cuộc cách nhau 30 phút, chưa kịp ghi — chọn làm gì (hoãn cuộc sau 15 phút để ghi, hay ghi gộp)." },
+        { "sev": "P2", "where": "Q3 wrong", "quote": "[71.4,\"SAI_MAU_SO\"]", "issue": "71,4 = 5/7 — đúng là nhầm mẫu số, nhãn khớp; nhưng 58,3 gắn NHAM_TI_LE_ROI trong khi bài không có khái niệm 'tỉ lệ rơi'.", "fix": "Đổi nhãn 58,3 thành NHAM_PHAN_BU (lấy phần truy được thay cho phần suy diễn)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (12 − 7) ÷ 12 = 41,67% ✓ (tol 0,2); 58,3 = 7/12 ✓; 71,4 = 5/7 ✓. Khớp ví dụ 'khoảng 42%'." },
+      "claims": [
+        { "claim": "Ghi chép trong khoảng nửa giờ sau cuộc — 'mốc thực hành dễ nhớ, không phải ngưỡng khoa học'", "status": "illustrative-labelled", "note": "Gắn nhãn tốt." },
+        { "claim": "6 cuộc, 12 dòng kết luận, 7 truy được", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Kỹ thuật hai cột lời nói / diễn giải và nguyên tắc truy vết rất thực dụng; Q1 và Q4 buộc người học tự phân loại và tự viết dòng diễn giải có chữ 'có thể' — đúng kỹ năng, không nhận lại ý bài.",
+      "upgrade": "(1) Sửa kết luận đổi hướng thành giả thuyết, nối sang kh05-07 đếm người. (2) Thay Q5 bằng câu tình huống. (3) Thêm phản ví dụ: hành vi quan sát được cũng có thể bị diễn giải sai (bấm 3 lần vì mạng chậm, không vì app khó). (4) Thêm mẫu bảng hai cột với 3 dòng ví dụ thật trong bài. (5) Gắn nhãn số minh hoạ."
+    },
+    {
+      "id": "B:kh05-07",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 17, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 5 },
+      "total": 79,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L5", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Nhóm \"không biết trước các khoản phí phát sinh\" có 14 thẻ từ 7/8 người, 2 người đã chuyển nhà vì chuyện này", "issue": "Bài thực hành gắn nhãn 'số minh hoạ' nhưng ví dụ trong bài không; 8 người cùng một khu (quận 7) chưa nói độ tin cậy trong phần đọc, chỉ nói trong rubric bài tập.", "fix": "Thêm một câu cuối ví dụ: '7/8 là tín hiệu mạnh trong mẫu 8 người cùng khu, chưa phải tỉ lệ thị trường' và gắn nhãn minh hoạ." },
+        { "sev": "P2", "where": "Q5", "quote": "Lời than thường là nói quá, còn hành vi thì thật", "issue": "Phương án d và b gần nhau về ý; lời giải d 'lời than không hẳn là nói quá' phân biệt được nhưng mỏng; người học có thể bênh d.", "fix": "Đổi d thành phương án rõ sai hơn, ví dụ 'Vì hành vi dễ đếm hơn lời than nên báo cáo gọn hơn'." },
+        { "sev": "P2", "where": "Q7", "quote": "Mỗi chủ đề: một câu, số người nhắc, một trích dẫn, một hành vi", "issue": "Phương án đúng là phương án duy nhất có cấu trúc liệt kê 4 thành phần trùng bài; đoán được bằng hình thức.", "fix": "Thêm phương án nhiễu cùng dạng liệt kê nhưng sai (ví dụ 'một câu, số thẻ, một biểu đồ, một đề xuất')." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 7 ÷ 8 = 87,5% ✓; 14/96 = 14,6% ✓ đúng lỗi đếm thẻ; 14/8 = 175% ✓. Ví dụ: 22 thẻ/3 người, 14 thẻ/7 người, 6/8 người — nhất quán." },
+      "claims": [
+        { "claim": "96 thẻ, 11 nhóm, 22 thẻ 'sửa chữa chậm' với 15 từ một người", "status": "illustrative-unlabelled", "note": "Bài tập kèm theo có ghi 'số minh hoạ'; phần đọc thì không." }
+      ],
+      "strengths": "Quy tắc 'đếm người, không đếm thẻ' và 'tên nhóm là một câu mô tả vấn đề' chuyển thẳng thành việc làm; bài thực hành có rubric 7 tiêu chí (insight dạng căng thẳng, giả thuyết có điều kiện sai, mức tin cậy) là mẫu tốt cho cả module.",
+      "upgrade": "(1) Gắn nhãn minh hoạ và thêm câu về độ tin cậy mẫu 8. (2) Thêm phản ví dụ: chủ đề nhiều người nhắc nhưng không ai hành động (than wifi) vs chủ đề ít người nhưng đã chuyển nhà — cách xếp. (3) Thêm 'đào sâu': mã hoá hai người độc lập và so độ khớp để chống thiên lệch người phỏng vấn (nối Q6). (4) Sửa hình thức Q7 và nhiễu Q5. (5) Thêm câu L4 đọc bảng 11 nhóm × số người × hành vi và chọn top 3."
+    },
+    {
+      "id": "B:kh05-08",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 17, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 84,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L3", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "sai số tối đa ở mức tin cậy 95% xấp xỉ 1 ÷ căn bậc hai của số phiếu", "issue": "Đúng (1,96 × √0,25/n ≈ 0,98/√n) nhưng không nói 'tối đa' nghĩa là tại p = 50%; với tỉ lệ 10% sai số nhỏ hơn. Không nhắc hiệu chỉnh tổng thể hữu hạn (N = 5.000, n = 400 → nhân 0,96), nhỏ nhưng người học sẽ gặp khi khảo sát toàn bộ danh sách.", "fix": "Thêm nửa câu: 'tối đa vì tính ở tỉ lệ 50%; tỉ lệ càng xa 50% sai số càng nhỏ'." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Với một tỉ lệ, sai số tối đa… Thang điểm: chọn một thang, nhãn chữ rõ cho từng mức… Một ý mỗi câu. Bảng hỏi ngắn (dưới 5 phút) giữ được người trả lời.", "issue": "Đoạn khái niệm gộp ba chủ đề (cỡ mẫu, lệch phản hồi, thiết kế thang) trong 11 câu; nên có bảng n → sai số.", "fix": "Tách thành bảng nhỏ: n = 100/200/400/1.000 → ±10/±7/±5/±3 điểm; đưa phần thang điểm thành đoạn riêng." },
+        { "sev": "P2", "where": "Q6", "quote": "Mỗi người hiểu số 6 hay 7 khác nhau, khó so sánh và hành động", "issue": "Câu L2; ba phương án sai yếu rõ (thang 1–100, hội viên không thích khảo sát).", "fix": "Thay bằng câu đọc hai phân phối điểm (thang 1–10 không nhãn vs 5 mức có nhãn) và nói kết quả nào hành động được." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 400 ÷ 0,08 = 5.000 ✓; 400 × 8% = 32 ✓ ngược chiều. Q4: 1/√100 = 10 điểm ✓. Ví dụ: 200 phiếu → 1/√200 = 7,07 ≈ ±7 ✓; Q1: 50 phiếu → 14,1 ≈ ±14 ✓. Bài tập: 3.000 × 12% × 50% = 180 (±7,45) ✓; × 90% = 324 (±5,56) ✓; 400 ÷ 0,108 = 3.704 ✓." },
+      "claims": [
+        { "claim": "Sai số tối đa 95% ≈ 1/√n", "status": "verified", "note": "Kiểm lại bằng công thức 1,96 × √(0,25/n): n = 400 → 4,9 điểm. Không cần nguồn ngoài." },
+        { "claim": "Tỉ lệ phản hồi email khảo sát 8%; 41% chọn 'phí ship hiện ra quá muộn'", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Khi tỉ lệ phản hồi thấp, người trả lời thường là người đang giận hoặc rảnh", "status": "unverified", "note": "Mô tả non-response bias đúng hướng, có hedge 'thường'." }
+      ],
+      "strengths": "Công thức kèm điều kiện (mẫu ngẫu nhiên, tính riêng từng nhóm) và cảnh báo lệch phản hồi 'nằm ngoài ±5' là điểm hiếm; Q2 (300/400 phiếu từ người khiếu nại) buộc người học phân biệt sai số lấy mẫu với lệch chọn mẫu; bài tập có số kiểm được.",
+      "upgrade": "(1) Bảng n → sai số và tách đoạn thang điểm để tăng rõ ràng. (2) Thêm nửa câu về 'tối đa tại p = 50%'. (3) Thay Q6 bằng câu đọc dữ liệu. (4) Thêm phản ví dụ: 400 phiếu nhưng 90% là khách đơn lớn — cách trọng số hoá lại theo cơ cấu danh sách. (5) Gắn nhãn minh hoạ."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý và gần với quy trình nghề: đặt câu hỏi đúng (01, 02) → tuyển đúng người (03) → bao nhiêu người (04) → kỹ thuật trong cuộc (05) → ghi chép (06) → tổng hợp (07) → đo tần suất bằng khảo sát (08). Bài 04 và 08 nối nhau rõ (phỏng vấn tìm lý do, khảo sát đếm). Thiếu một cầu nối: 06 kết luận từ một lời kể, 07 mới dạy đếm người — nên 06 phải nói 'đây là giả thuyết'.",
+    "overlap": [
+      "kh05-01 Q2/Q4/Q6 và kh05-05 Q4/Q5 cùng rèn 'kéo về lần gần nhất' — ý tốt nhưng lặp dạng câu hỏi; có thể hợp nhất một câu và thay bằng câu L5.",
+      "kh05-01 và kh05-02 đều có Q 'tình huống mới' về câu hỏi dẫn dắt/tương lai; ba câu calc 3/20, 42/120, 7/8 là cùng một phép chia tỉ lệ."
+    ],
+    "gaps": [
+      "Chưa có bài về đạo đức và thủ tục: xin phép ghi âm, ẩn danh, lưu dữ liệu cá nhân (liên quan Nghị định 13/2023 về bảo vệ dữ liệu cá nhân — cần kiểm nguồn).",
+      "Chưa có bài về viết kịch bản phỏng vấn (discussion guide) 30–45 phút: mở, hành vi gần nhất, đào sâu, kết — chỉ rải rác qua các bài.",
+      "Chưa có bài về mã hoá (codebook) và kiểm chéo hai người đếm — kh05-07 Q6 chạm tới nhưng không dạy.",
+      "Chưa có bài về quan sát/đi cùng khách (shadowing, diary) như phương pháp thay cho phỏng vấn khi hành vi khó nhớ lại.",
+      "Mọi ví dụ đều là số dựng nhưng chỉ comment mã nguồn ghi 'MINH HOẠ'; người học không thấy nhãn — cần cờ `assume` hoặc một dòng nhãn trong mỗi ví dụ."
+    ],
+    "best_lesson": "B:kh05-08",
+    "weakest_lesson": "B:kh05-01"
+  }
+}

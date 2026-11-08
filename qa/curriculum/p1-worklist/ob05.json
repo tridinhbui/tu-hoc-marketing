@@ -1,0 +1,20 @@
+{
+ "mod": "ob05",
+ "lessons": [
+  {
+   "id": "B:ob05-07",
+   "title": "Giờ nào khách thật sự mua, và bạn đang quảng cáo giờ nào?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q2 ↔ TÌNH HUỐNG",
+     "quote": "CPA trưa 28.000đ, CPA tối 60.000đ",
+     "issue": "Tình huống nói ngân sách chia đều 14 giờ: khung 10h–11h30 (1,5 giờ) nhận 1,5/14 ngân sách cho 2.940 đơn, khung 19h–22h (3 giờ) nhận 3/14 cho 210 đơn → CPA tối phải gấp CPA trưa 28 lần, không phải 2,1 lần như stem. Nếu CPA trưa thật là 28.000đ trên toàn bộ đơn trưa thì tổng ngân sách ≈ 768 triệu/tháng và CPA tối ≈ 784.000đ. Số trong câu hỏi không khớp số trong bài; kết luận chọn c vẫn đúng nhưng người học tính lại sẽ thấy mâu thuẫn.",
+     "fix": "Đổi stem Q2 thành CPA tính trên đơn do quảng cáo mang về theo khung giờ (ghi rõ), hoặc sửa số: ví dụ 'CPA trưa 6.000đ, CPA tối 170.000đ' cho khớp chia đều; hoặc bỏ CPA và dùng tỉ lệ ngân sách/đơn (10,7% ngân sách → 70% đơn; 21,4% → 5%)."
+    }
+   ],
+   "upgrade": "Sửa số CPA trong Q2 cho khớp tình huống; thêm PHẢN VÍ DỤ bão hoà và ĐÀO SÂU (so CPA biên vs CPA trung bình, cách đo đơn tăng thêm bằng tắt/mở theo ngày); thêm bảng đơn × ngân sách theo 6 khung giờ và câu đọc bảng tính CPA từng khung (L3→L4)."
+  }
+ ]
+}

@@ -1,0 +1,1311 @@
+{
+  "mod": "sweep-after-G1",
+  "scored_at": "2026-11-08",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:dl01-02",
+      "scores": {
+        "accuracy": 13,
+        "depth": 10,
+        "practical": 16,
+        "examples": 11,
+        "pedagogy": 7,
+        "assessment": 7,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 75,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L4",
+        "L4",
+        "L4",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q2 (vì của b)",
+          "quote": "tốn gấp khoảng mười lần thời gian",
+          "issue": "Ví dụ quy về 15 ngày công so với 2 ngày công = 7,5 lần; \"mười lần\" chỉ đúng nếu đếm 21 ngày lịch. Hai đơn vị công sức lẫn nhau.",
+          "fix": "Sửa thành \"tốn gấp khoảng 7–8 lần công sức (15 so với 2 ngày công)\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ / cấu trúc",
+          "quote": "Giả sử mỗi bước cải thiện được 5 điểm phần trăm",
+          "issue": "Giả định 5 điểm % khả thi như nhau ở bước 20% và bước 25% không được bàn (tương đối là +25% so với +20%); bài không có PHẢN VÍ DỤ/ĐÀO SÂU: khi nào bước đầu thắng dù tốn công (ví dụ sửa trang cũng nâng các bước sau).",
+          "fix": "Thêm phản ví dụ: trang làm lại nâng cả tỉ lệ điền form; thêm một dòng về nhiễu khi 600 người đến học dao động theo tuần."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 4.000×30%=1.200; (1.200−1.000)×60%=120 ✓. Ví dụ: 5.000×25%×60%=750 (+150) ✓; 150÷15=10, 120÷2=60, hoà vốn 150÷60=2,5 ngày công ✓."
+      },
+      "claims": [
+        {
+          "claim": "Phễu trung tâm tiếng Anh Đà Nẵng 20.000→4.000→1.000→600",
+          "status": "illustrative-labelled",
+          "note": ""
+        },
+        {
+          "claim": "Bước đầu gần như luôn mất nhiều người nhất",
+          "status": "illustrative-labelled",
+          "note": "Tính chất số học của phễu, đúng."
+        }
+      ],
+      "strengths": "Quy quyết định về \"khách thêm ở đáy trên mỗi ngày công\" có phép tính hoà vốn 2,5 ngày công; Q7 bắt được hiệu ứng đẩy rò xuống bước sau.",
+      "upgrade": "Thêm PHẢN VÍ DỤ (khi làm lại trang thắng) và ĐÀO SÂU về độ khả thi khác nhau của 5 điểm %; sửa \"mười lần\"; thêm một câu calc so hai bước theo người/ngày công."
+    },
+    {
+      "id": "B:dl07-01",
+      "scores": {
+        "accuracy": 12,
+        "depth": 9,
+        "practical": 14,
+        "examples": 10,
+        "pedagogy": 7,
+        "assessment": 7,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 70,
+      "bloom_items": [
+        "L3",
+        "L2",
+        "L3",
+        "L4",
+        "L4",
+        "L4",
+        "L2"
+      ],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q7 (vì của a và b)",
+          "quote": "chỉ khi khách đăng nhập và web gửi mã người dùng thì mới gộp được",
+          "issue": "GA4 còn gộp thiết bị qua Google signals/định danh hỗn hợp (blended); \"chỉ khi\" là khẳng định nền tảng sai mức độ, không có nguồn đã kiểm.",
+          "fix": "Đổi thành \"mặc định thường tách; GA4 có thể gộp khi có User-ID hoặc Google signals tuỳ cài đặt danh tính báo cáo — xem trang chính thức\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "Luôn có: lượt xem ≥ phiên ≥ người dùng",
+          "issue": "Không luôn đúng trong GA4 (phiên không có page_view, người dùng hoạt động so với tổng người dùng, ước lượng HLL).",
+          "fix": "Đổi \"Luôn có\" thành \"Thường có\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q2",
+          "quote": "Số người dùng mới trong tuần",
+          "issue": "Phương án đúng là phương án duy nhất không kèm lý do \"vì…\", đoán được bằng hình thức.",
+          "fix": "Thêm lý do ngắn cho b hoặc bỏ lý do khỏi các phương án sai."
+        },
+        {
+          "sev": "P2",
+          "where": "Cấu trúc",
+          "quote": "Hỏi “bao nhiêu người” thì trả lời bằng người dùng",
+          "issue": "Không có PHẢN VÍ DỤ/ĐÀO SÂU; không nói người dùng là số ước lượng theo trình duyệt (cookie bị xoá, chặn theo dõi) nên cũng lệch.",
+          "fix": "Thêm phản ví dụ: chiến dịch có người dùng tăng do khách xoá cookie/đổi trình duyệt."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 3.000÷2.000=1,5 ✓. Ví dụ: 4.000÷2.500=1,6; 12.000÷4.000=3; 12.000÷2.500=4,8 (\"gần gấp năm\") ✓. Q4: 1,6÷1,2=1,33 ✓. Q5: 7×500=3.500 ✓."
+      },
+      "claims": [
+        {
+          "claim": "GA4 mặc định báo người dùng hoạt động (phiên tương tác / first_visit / engagement_time_msec)",
+          "status": "unverified",
+          "note": "Có src st:chua tới Google Analytics Help; câu đã gắn \"tại ngày kiểm\" và \"tin trang chính thức\" — chấp nhận được."
+        },
+        {
+          "claim": "Đổi thiết bị chỉ gộp được khi đăng nhập",
+          "status": "wrong",
+          "note": "Bỏ sót Google signals."
+        }
+      ],
+      "strengths": "Ba khái niệm người dùng/phiên/lượt xem tách rõ, hai tỉ số phái sinh có ý nghĩa; Q5 bắt lỗi cộng người dùng theo ngày.",
+      "upgrade": "Sửa Q7 và chữ \"Luôn có\"; thêm PHẢN VÍ DỤ và ĐÀO SÂU (định danh báo cáo, người dùng mới vs quay lại); thay Q2 bằng câu chẩn đoán từ bảng hai tuần."
+    },
+    {
+      "id": "B:gt03-01",
+      "scores": {
+        "accuracy": 12,
+        "depth": 11,
+        "practical": 15,
+        "examples": 11,
+        "pedagogy": 7,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 75,
+      "bloom_items": [
+        "L2",
+        "L4",
+        "L3",
+        "L2",
+        "L4",
+        "L4",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q7 (vì của a)",
+          "quote": "thêm điều kiện tổng đơn không giảm để loại trường hợp khách cũ chỉ đổi sang dùng mã",
+          "issue": "Chính đề nêu khuyến mãi toàn sàn cùng 4 tuần, vốn đẩy tổng đơn lên trên 240; khi đó \"tổng đơn không dưới 240\" không loại được việc khách cũ chỉ chuyển sang dùng mã. Lời giải nói quá khả năng của điều kiện.",
+          "fix": "Đổi điều kiện thành so với nhóm/quán đối chứng cùng kỳ khuyến mãi, hoặc lời giải nói rõ đây là chặn dưới yếu."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Cách đo: mã giảm giá riêng cho người xem video",
+          "issue": "Giả thuyết đo \"tỉ lệ chuyển đổi trang quán\" nhưng cách đo là đơn dùng mã; mã giảm giá tự nó cũng nâng chuyển đổi (nhiễu).",
+          "fix": "Nói rõ hai số: chuyển đổi tổng (kết quả) và đơn dùng mã (gán nguồn), và mã có thể tự kéo chuyển đổi."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "60 đơn thêm bù được công quay dựng",
+          "issue": "Ngưỡng \"có lý do\" nhưng không có số chi phí quay dựng hay biên mỗi đơn.",
+          "fix": "Thêm: 12 video × X đồng; biên Y đồng/đơn → cần ≥ 60 đơn."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 2%×1,25=2,5% ✓. Ví dụ: 12.000×2%=240, ×2,5%=300, chênh 60; 1.200 lượt → chênh 6 ✓."
+      },
+      "claims": [
+        {
+          "claim": "Tiệm trà sữa Đà Nẵng trên GrabFood, chuyển đổi 2%",
+          "status": "illustrative-labelled",
+          "note": ""
+        },
+        {
+          "claim": "Chênh 60 đơn trên 12.000 lượt đủ phân biệt với dao động",
+          "status": "illustrative-labelled",
+          "note": "Kiểm z≈2,6 với hai mẫu 12.000 — hợp lý nhưng bài không nêu phép kiểm."
+        }
+      ],
+      "strengths": "Khuôn Nếu–thì–vì rõ, có tính cỡ mẫu 12.000 vs 1.200 lượt để thấy khi nào chênh lệch nhìn được; Q6 tách \"thì đạt\" với \"vì sai\".",
+      "upgrade": "Sửa lời giải Q7 (khuyến mãi toàn sàn), nối cách đo với chỉ số giả thuyết, thêm số chi phí cho ngưỡng 2,5%, thêm PHẢN VÍ DỤ/ĐÀO SÂU (giả thuyết không bác bỏ được)."
+    },
+    {
+      "id": "B:gt06-02",
+      "scores": {
+        "accuracy": 13,
+        "depth": 13,
+        "practical": 16,
+        "examples": 12,
+        "pedagogy": 9,
+        "assessment": 7,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 81,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L2",
+        "L4",
+        "L2",
+        "L3"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q6 (vì của c)",
+          "quote": "đều giúp gán doanh thu cho kênh",
+          "issue": "Phương án c (\"doanh thu khó tách riêng cho từng kênh\") là một lý do có thật; chính bài nói mã riêng chỉ là \"cận dưới\". Lời giải nói quá và mâu thuẫn với phần đọc, làm c bênh được một phần.",
+          "fix": "Viết lại c thành lý do sai rõ hơn, hoặc lời giải thừa nhận gán kênh khó nhưng làm được ở mức cận dưới."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "là thêm 14 triệu đồng mỗi tháng",
+          "issue": "Là doanh thu, chưa trừ giá vốn và chi phí mã giảm giá; khách mua lần đầu còn có giá trị vòng đời.",
+          "fix": "Thêm biên đóng góp và trừ giá trị mã."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 40×350.000=14 triệu/tháng ×3=42 triệu ✓."
+      },
+      "claims": [
+        {
+          "claim": "Thương hiệu mỹ phẩm thuần chay TP.HCM 10.000→13.000 follower",
+          "status": "illustrative-labelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Phép thử \"đạt được thì sao?\" ba lần cụ thể; có phản ví dụ khi follower là mắt xích cần thiết và caveat cận dưới của mã giảm giá.",
+      "upgrade": "Sửa Q6; thay Q4/Q6 (L2) bằng câu chẩn đoán từ dữ liệu follower ↔ khách mua; quy 14 triệu ra lãi."
+    },
+    {
+      "id": "B:in03-03",
+      "scores": {
+        "accuracy": 11,
+        "depth": 10,
+        "practical": 13,
+        "examples": 9,
+        "pedagogy": 7,
+        "assessment": 7,
+        "data": 5,
+        "clarity": 4
+      },
+      "total": 66,
+      "bloom_items": [
+        "L2",
+        "L3",
+        "L3",
+        "L3",
+        "L5",
+        "L2",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q3",
+          "quote": "Đổi khẩu hiệu mỗi năm: năm nào cũng bắt đầu lại, chỉ đạt 8 điểm %",
+          "issue": "Mô hình coi mức nhận biết thương hiệu về 0 mỗi lần đổi khẩu hiệu — lẫn nhận biết thương hiệu với ghi nhớ khẩu hiệu; phép tính dạy một cơ chế sai dù gắn nhãn minh hoạ.",
+          "fix": "Đổi biến thành \"tỉ lệ khách nhớ đúng khẩu hiệu\" hoặc cho đổi câu làm mất một phần (ví dụ 50%) tích luỹ."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "Theo hiểu biết chung (khẩu hiệu thường được ghi nhận ra mắt năm 1988 — cần kiểm trên nguồn)",
+          "issue": "Câu rào chèn vào đầu đoạn đọc như vá; src st:chua chỉ trỏ trang chủ about.nike.com.",
+          "fix": "Kiểm nguồn rồi viết gọn \"Ra mắt năm 1988 (nguồn…)\" hoặc bỏ năm."
+        },
+        {
+          "sev": "P2",
+          "where": "Q6",
+          "quote": "Khẩu hiệu chạm khoảnh khắc chung của khách và đủ ngắn để lặp nhiều năm",
+          "issue": "Ba phương án sai cùng mở \"Khẩu hiệu bền khi…\", đáp án mở khác — đoán được bằng hình thức.",
+          "fix": "Đồng nhất cách mở bốn phương án."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Trước khi chốt, hỏi 10 hội viên",
+          "issue": "Ví dụ không có số đo kết quả; 10 người là mẫu rất nhỏ, không nói ngưỡng \"đa số\". Không có phản ví dụ thương hiệu đổi khẩu hiệu mà vẫn tốt.",
+          "fix": "Thêm ngưỡng (≥7/10) và một phản ví dụ."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 4×8=32; 32−8=24 ✓ (số học đúng, mô hình có vấn đề)."
+      },
+      "claims": [
+        {
+          "claim": "\"Just Do It\" ra mắt năm 1988",
+          "status": "unverified",
+          "note": "Có src st:chua (about.nike.com), câu đã rào \"cần kiểm trên nguồn\"."
+        },
+        {
+          "claim": "Nike đăng ký bảo hộ khẩu hiệu",
+          "status": "unverified",
+          "note": "Chỉ ở phương án nhiễu Q1."
+        }
+      ],
+      "strengths": "Nguyên lý \"nói về khoảnh khắc của khách\" áp sang phòng tập 6 giờ chiều rất cụ thể; Q5 nêu điều kiện không dùng (thương hiệu mới cần nói rõ bán gì).",
+      "upgrade": "Sửa mô hình Q3, kiểm và viết lại câu 1988, thêm phép thử có ngưỡng, thêm PHẢN VÍ DỤ/ĐÀO SÂU (khẩu hiệu vs định vị vs tài sản nhận diện), thêm một câu đọc số nhận biết thật."
+    },
+    {
+      "id": "B:kh03-05",
+      "scores": {
+        "accuracy": 13,
+        "depth": 12,
+        "practical": 16,
+        "examples": 12,
+        "pedagogy": 9,
+        "assessment": 7,
+        "data": 6,
+        "clarity": 4
+      },
+      "total": 79,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L4",
+        "L2",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q7 (vì của b)",
+          "quote": "Họ từng tải ứng dụng — họ có việc",
+          "issue": "Mâu thuẫn với PHẢN VÍ DỤ của chính bài: \"phần lớn tải vì tò mò và chưa từng có nhu cầu theo dõi chi tiêu\".",
+          "fix": "Viết lại: \"Chưa đủ căn cứ loại; trước hết kiểm họ từng nhập dữ liệu chưa\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q3 (đề và bước 3)",
+          "quote": "chưa chắc đã bỏ hẳn; muốn biết rời bỏ thật phải đếm người không mở lần nào trong tháng",
+          "issue": "Cùng một lời rào lặp ở đề và ở bước giải; đọc như vá thêm.",
+          "fix": "Giữ ở một chỗ (bước giải)."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Nhóm gọi 30 người đã bỏ",
+          "issue": "Không nói chọn 30 người thế nào trong 17.000, và 18/30 có sai số lớn (±~18 điểm).",
+          "fix": "Thêm cách chọn mẫu và một câu về độ chắc chắn."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: (20.000−3.000)÷20.000=85% ✓. Ví dụ 18+7+5=30 ✓."
+      },
+      "claims": [
+        {
+          "claim": "Ứng dụng chi tiêu 20.000 tải, 3.000 dùng hằng tuần",
+          "status": "illustrative-labelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Phỏng vấn \"sa thải\" có ba câu hỏi cụ thể, phản ví dụ người tải vì tò mò và đánh đổi quyền truy cập nhạy cảm.",
+      "upgrade": "Sửa Q7, gỡ rào lặp ở Q3, thêm cách chọn mẫu và sai số; đổi Q6 (L2) thành câu đọc dữ liệu thời điểm bỏ."
+    },
+    {
+      "id": "B:kh08-01",
+      "scores": {
+        "accuracy": 13,
+        "depth": 10,
+        "practical": 16,
+        "examples": 12,
+        "pedagogy": 7,
+        "assessment": 8,
+        "data": 6,
+        "clarity": 4
+      },
+      "total": 76,
+      "bloom_items": [
+        "L3",
+        "L3",
+        "L3",
+        "L3",
+        "L4",
+        "L3",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q5 (vì của d)",
+          "quote": "bản tại ngày kiểm 07/11/2026",
+          "issue": "Viết như đã kiểm văn bản nhưng src cùng ngày ghi st:chua; Luật Quảng cáo đã có luật sửa đổi năm 2025 — cần đối chiếu điều khoản hiện hành.",
+          "fix": "Kiểm trên vanban.chinhphu.vn, nêu số luật sửa đổi nếu có, đổi st sang đã kiểm."
+        },
+        {
+          "sev": "P2",
+          "where": "Cấu trúc",
+          "quote": "Chọn nguồn theo nỗi lo lớn nhất của khách",
+          "issue": "Không có PHẢN VÍ DỤ/ĐÀO SÂU (khi số đông thắng: sản phẩm rẻ, quen; khi chuyên gia gây nghi ngờ); kết quả A/B trong Q3 không nêu độ tin cậy.",
+          "fix": "Thêm phản ví dụ và một dòng về ý nghĩa thống kê của 176 vs 264 đơn."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 176÷8.000=2,2%; 264÷8.000=3,3%; chênh 1,1 điểm (+50% tương đối) ✓; z≈4,3."
+      },
+      "claims": [
+        {
+          "claim": "Luật Quảng cáo 2012 Điều 7 và NĐ 100/2014 cấm quảng cáo sữa thay thế sữa mẹ <24 tháng, thức ăn bổ sung <6 tháng",
+          "status": "unverified",
+          "note": "Có src st:chua; câu đã rào \"nếu có bản mới hơn, tin bản mới\". Nội dung khớp hiểu biết chung về luật 2012."
+        },
+        {
+          "claim": "120.000 tuýp, 40 video, 12 bạn da dầu",
+          "status": "illustrative-labelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Ba nguồn bằng chứng gắn với ba loại nỗi lo, có tình huống mới (máy lọc RO, phần mềm kế toán, bún bò) buộc áp dụng.",
+      "upgrade": "Kiểm nguồn luật; thêm PHẢN VÍ DỤ/ĐÀO SÂU; thêm câu chẩn đoán khi A/B chênh nhỏ trên mẫu nhỏ."
+    },
+    {
+      "id": "B:kn02-01",
+      "scores": {
+        "accuracy": 12,
+        "depth": 10,
+        "practical": 15,
+        "examples": 11,
+        "pedagogy": 7,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 74,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L4",
+        "L2",
+        "L4",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Ví dụ / Q3",
+          "quote": "120 điểm có hàng của bạn bán tổng 60.000 lon nước tăng lực các loại",
+          "issue": "Tình huống định nghĩa vũ trụ là \"400 điểm bán có bán nước giải khát\", tổng 100.000 lon \"cả ngành hàng\" không rõ là nước giải khát hay nước tăng lực, trong khi tử số là nước tăng lực. Độ phủ theo doanh số chỉ đúng khi tử và mẫu cùng một ngành hàng.",
+          "fix": "Ghi rõ: 100.000 lon nước tăng lực mọi hãng tại 400 điểm; 60.000 là nước tăng lực mọi hãng tại 120 điểm."
+        },
+        {
+          "sev": "P2",
+          "where": "Cấu trúc",
+          "quote": "Việc đáng làm trước là tăng bán ở 120 điểm mạnh",
+          "issue": "Không có PHẢN VÍ DỤ/ĐÀO SÂU: chưa nối tới tốc độ bán (rate of sale), hàng hết trên kệ, hay chi phí phục vụ điểm nhỏ.",
+          "fix": "Thêm phản ví dụ (ngành hàng mua bốc đồng cần độ phủ số) và chỉ số tốc độ bán."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 60.000÷100.000=60%; 120÷400=30% ✓."
+      },
+      "claims": [
+        {
+          "claim": "Nước tăng lực Đồng Nai 120/400 điểm",
+          "status": "illustrative-labelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Hai định nghĩa độ phủ rõ, Q4/Q6/Q7 là tình huống mới buộc đọc cặp số.",
+      "upgrade": "Sửa định nghĩa mẫu số ngành hàng; thêm PHẢN VÍ DỤ/ĐÀO SÂU; thêm một calc tính doanh số trung bình mỗi điểm hai nhóm (500 vs 143 lon)."
+    },
+    {
+      "id": "B:kn05-02",
+      "scores": {
+        "accuracy": 12,
+        "depth": 10,
+        "practical": 15,
+        "examples": 12,
+        "pedagogy": 7,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 75,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L4",
+        "L4",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Khái niệm ↔ Q7",
+          "quote": "Lượt xem trung bình của 10 video gần nhất",
+          "issue": "Khái niệm và ÁP DỤNG dạy dùng trung bình, còn Q7 dạy trung bình bị một video lan truyền kéo lệch và phải dùng trung vị (2 triệu + 9×30 nghìn → trung bình 227 nghìn). Hai chỉ dẫn mâu thuẫn.",
+          "fix": "Đổi khái niệm và ÁP DỤNG sang \"trung vị 10 video gần nhất (loại video lan truyền)\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Trên TikTok, Reels, lượt xem phần lớn đến từ đề xuất",
+          "issue": "Nguồn (TikTok Newsroom 6/2020) chỉ nói về TikTok; mở rộng sang Reels không có nguồn. Câu rào chèn giữa ví dụ làm tỉ lệ views/follower vừa được tính đã bị nói \"chưa chứng minh được gì\".",
+          "fix": "Tách thành ghi chú riêng, thêm nguồn Instagram hoặc bỏ \"Reels\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm / Q1",
+          "quote": "xin KOL ảnh chụp thống kê khán giả",
+          "issue": "Ảnh chụp do KOL gửi sửa được; Q1 d lại nói thống kê \"khó chỉnh hơn nhiều\".",
+          "fix": "Đề nghị chia sẻ màn hình trực tiếp hoặc dữ liệu qua nền tảng kết nối nhà sáng tạo."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 45.000÷300.000=15% ✓. Q4: 80.000×35%=28.000 ✓. Ví dụ: 4%, 50%, 60.000÷20.000=3 lần ✓."
+      },
+      "claims": [
+        {
+          "claim": "Số người theo dõi không phải yếu tố trực tiếp để video được đề xuất",
+          "status": "unverified",
+          "note": "Có src st:chua (TikTok Newsroom 6/2020) và rào \"cách vận hành có thể đã thay đổi\". Mở rộng sang Reels không có nguồn."
+        }
+      ],
+      "strengths": "Ba lớp đọc KOL (xem thật, tương tác thật, đúng tệp) và hai calc quy về người đúng tệp; Q6 suy chặn trên 40% đúng.",
+      "upgrade": "Thống nhất trung vị; gỡ đoạn rào chèn; thêm PHẢN VÍ DỤ (KOL nhỏ tệp hẹp vẫn kém), ĐÀO SÂU về giá trên mỗi nghìn người đúng tệp."
+    },
+    {
+      "id": "B:kn09-01",
+      "scores": {
+        "accuracy": 13,
+        "depth": 9,
+        "practical": 14,
+        "examples": 11,
+        "pedagogy": 7,
+        "assessment": 8,
+        "data": 5,
+        "clarity": 4
+      },
+      "total": 71,
+      "bloom_items": [
+        "L2",
+        "L3",
+        "L3",
+        "L4",
+        "L3",
+        "L2",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Có 6 bài đăng, tỉ lệ 20%",
+          "issue": "Gửi lại cùng 30 phóng viên, một lần, nên khó gán chênh 0→6 cho góc mới; bài không có PHẢN VÍ DỤ (góc có tin nhưng sai báo) hay ĐÀO SÂU (đạo đức, bài trả tiền gắn nhãn).",
+          "fix": "Thêm phản ví dụ và một câu về hạn chế của một lần gửi."
+        },
+        {
+          "sev": "P2",
+          "where": "Q3",
+          "quote": "Tỉ lệ đăng = số bài đăng ÷ số phóng viên nhận",
+          "issue": "Calc L3 quá đơn giản; không có câu đọc số nào khác.",
+          "fix": "Thay bằng calc so chi phí/bài giữa bài tin và bài trả tiền."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 6÷30=20% ✓."
+      },
+      "claims": [
+        {
+          "claim": "Mộc An, 120 hộ Lào Cai, giá cao hơn 15%",
+          "status": "illustrative-labelled",
+          "note": "Bài nói rõ hư cấu."
+        }
+      ],
+      "strengths": "Danh sách yếu tố giá trị tin tức áp dụng tốt; Q4 có bốn góc cùng có số buộc phân biệt \"gần\" với \"kiểm chứng được\".",
+      "upgrade": "Thêm PHẢN VÍ DỤ/ĐÀO SÂU, thêm calc thật hơn, thay Q6 (L2) bằng câu chọn góc cho hai loại báo khác nhau."
+    },
+    {
+      "id": "B:kn14-01",
+      "scores": {
+        "accuracy": 14,
+        "depth": 11,
+        "practical": 15,
+        "examples": 12,
+        "pedagogy": 7,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 78,
+      "bloom_items": [
+        "L4",
+        "L5",
+        "L3",
+        "L5",
+        "L4",
+        "L3",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q1",
+          "quote": "Reels có 6.200 lượt xem",
+          "issue": "Tình huống và ví dụ nhấn mạnh 6.200 là \"lượt phát\", khác đơn vị với tài khoản; Q1 lại gọi là \"lượt xem\".",
+          "fix": "Đổi thành \"6.200 lượt phát\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q7",
+          "quote": "Xem người mới vào trang từ Reels có dừng ở Feed rồi mới nhắn tin hay không",
+          "issue": "Insights không cho thấy đường đi này; bài không nói cách đo (hỏi nguồn, nhãn trong tin nhắn).",
+          "fix": "Nêu cách đo cụ thể."
+        },
+        {
+          "sev": "P2",
+          "where": "Cấu trúc",
+          "quote": "Chọn bề mặt theo việc cần làm",
+          "issue": "Không có PHẢN VÍ DỤ/ĐÀO SÂU (khi Reels ra đơn trực tiếp; khi Stories quá nhỏ để đo).",
+          "fix": "Thêm phản ví dụ."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 14÷350=4% ✓. Q5: 350÷4.000=8,75%≈9% ✓."
+      },
+      "claims": [
+        {
+          "claim": "Instagram Ranking Explained (Mosseri, 31/5/2023): mỗi bề mặt có mô hình xếp hạng riêng",
+          "status": "verified",
+          "note": "src st:doc 2026-11-07."
+        }
+      ],
+      "strengths": "Gắn mỗi bề mặt với việc và chỉ số; tách đơn vị lượt phát/tài khoản; Q4 kiểm kết luận bằng câu hỏi nguồn rẻ.",
+      "upgrade": "Sửa thuật ngữ Q1, thêm cách đo cho Q7, thêm PHẢN VÍ DỤ/ĐÀO SÂU."
+    },
+    {
+      "id": "B:ob02-01",
+      "scores": {
+        "accuracy": 13,
+        "depth": 13,
+        "practical": 15,
+        "examples": 13,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 82,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L4",
+        "L4",
+        "L4",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q3 ↔ Ví dụ",
+          "quote": "Tầng giữa của kệ có tổng cộng 50 facing",
+          "issue": "Ví dụ đã đếm \"tầng giữa: 40 facing\"; Q3 đổi thành 50 cho cùng tầng giữa mà không nói là kệ khác.",
+          "fix": "Ghi \"ở một siêu thị khác\" hoặc dùng 40 facing."
+        },
+        {
+          "sev": "P2",
+          "where": "Q5 (vì của a)",
+          "quote": "khoảng trống giữ nguyên nhãn giá là dấu hiệu hết hàng",
+          "issue": "Lời giải dựa vào dữ kiện (nhãn giá) không có trong đề.",
+          "fix": "Thêm \"nhãn giá vẫn còn\" vào đề."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 15÷50=30% ✓. Ví dụ 12÷40=30%, 2÷40=5% ✓. Q7: 20+8+6+6=40, 20÷40=50% ✓."
+      },
+      "claims": [
+        {
+          "claim": "Siêu thị chia chỗ theo doanh số, hợp đồng trưng bày, planogram",
+          "status": "unverified",
+          "note": "Đã rào \"theo thực hành phổ biến… chi tiết khác nhau giữa các chuỗi\"."
+        },
+        {
+          "claim": "Vinamilk 20, TH 8 facing",
+          "status": "illustrative-labelled",
+          "note": "Đã ghi \"số đếm minh hoạ\"."
+        }
+      ],
+      "strengths": "Đếm facing + tầng + độ liền khối, so thị phần kệ với thị phần doanh số, có phản ví dụ hãng nhỏ bán chạy.",
+      "upgrade": "Sửa số Q3, bổ sung dữ kiện Q5; thêm calc doanh số trên mỗi facing (45%÷30%=1,5 lần)."
+    },
+    {
+      "id": "B:ob05-07",
+      "scores": {
+        "accuracy": 13,
+        "depth": 12,
+        "practical": 16,
+        "examples": 12,
+        "pedagogy": 7,
+        "assessment": 7,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 79,
+      "bloom_items": [
+        "L3",
+        "L5",
+        "L3",
+        "L4",
+        "L3",
+        "L2",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Buổi tối 3 giờ chỉ 210 đơn = 5%, nhưng nhận khoảng 3/14 ≈ 21% ngân sách",
+          "issue": "So giờ chạy quảng cáo với giờ đặt đơn; quảng cáo 9h hay 21h có thể ra đơn ở giờ khác (đặt trưa mai). Bài chỉ chạm nhẹ ý này.",
+          "fix": "Thêm một câu: gán đơn theo giờ thấy quảng cáo, không theo giờ đặt."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1 (vì của d)",
+          "quote": "nên đặt từ tối trước không thể chiếm tới 10%",
+          "issue": "Lập luận sai: phương án d nói về khung trưa chiếm 10%, và đơn đặt trước có thể đặt sau 22h.",
+          "fix": "Viết lại lời giải theo số 70%."
+        },
+        {
+          "sev": "P2",
+          "where": "Cấu trúc",
+          "quote": "Đặt quảng cáo theo nhịp khách tự có nhu cầu",
+          "issue": "Không có PHẢN VÍ DỤ/ĐÀO SÂU (giá đấu giờ cao điểm đắt hơn; bão hoà).",
+          "fix": "Thêm phản ví dụ về CPM giờ cao điểm."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 3÷14=21,4% ✓. Ví dụ 2.940÷4.200=70%; 210÷4.200=5%; 1,5÷14≈11% ✓."
+      },
+      "claims": [
+        {
+          "claim": "Ngày lương 25 và ngày đôi là nhịp mua trên sàn",
+          "status": "unverified",
+          "note": "Hiểu biết chung, không nguồn."
+        }
+      ],
+      "strengths": "Có cảnh báo tăng thêm (80% đơn trưa tự đến) và đề xuất thử tăng 30% có kiểm soát thay vì dồn hết.",
+      "upgrade": "Thêm độ trễ quảng cáo→đơn, sửa Q1, thêm PHẢN VÍ DỤ/ĐÀO SÂU, thêm calc CPA tăng thêm theo khung."
+    },
+    {
+      "id": "B:qc02-04",
+      "scores": {
+        "accuracy": 14,
+        "depth": 14,
+        "practical": 18,
+        "examples": 13,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 9,
+        "clarity": 4
+      },
+      "total": 89,
+      "bloom_items": [
+        "L4",
+        "L5",
+        "L3",
+        "L3",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q1",
+          "quote": "Lãi trên giấy; phải đối soát doanh thu thật mới biết lãi thật",
+          "issue": "Ba phương án sai đều chứa từ tuyệt đối (\"chắc chắn\", \"luôn\", \"mọi\"); đáp án là phương án duy nhất có rào — đoán được bằng mẹo.",
+          "fix": "Bỏ từ tuyệt đối khỏi ít nhất hai phương án sai."
+        },
+        {
+          "sev": "P2",
+          "where": "Q3 (bước)",
+          "quote": "2,22 là chia cho tỉ lệ giá vốn 45% thay vì biên đóng góp",
+          "issue": "Bài không cho giá vốn 45%; nhãn lỗi đến từ dữ kiện không có.",
+          "fix": "Thêm giá vốn vào tình huống hoặc đổi nhãn lỗi."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "khoảng 9,6 triệu là đơn bị hoàn hoặc huỷ",
+          "issue": "Đơn hoàn chỉ bị trừ doanh thu, không tính phí ship hai chiều — lãi thật còn thấp hơn −1,3 triệu.",
+          "fix": "Thêm một câu về chi phí đơn hoàn."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 1÷0,425=2,353 ✓. Q4: 44×0,425−20=−1,3 ✓. Ví dụ: 64−9,6−10,4=44; 44÷20=2,2; 44÷64=0,69≈0,7; 2,35÷0,7=3,36≈3,4 ✓. Q6: 340.000÷110.000=3,09 ✓."
+      },
+      "claims": [
+        {
+          "claim": "Product GMV Max ghi nhận mọi đơn kể cả tự nhiên và affiliate",
+          "status": "verified",
+          "note": "src st:doc 2026-10-24."
+        }
+      ],
+      "strengths": "Chuỗi ROAS hoà vốn → đối soát → hệ số dịch ngược mục tiêu có số khớp từ đầu đến cuối; phản ví dụ hệ số không ổn định và tuần sale.",
+      "upgrade": "Gỡ mẹo Q1, sửa nhãn lỗi Q3, thêm chi phí đơn hoàn; thay Q5 (L2) bằng câu tính hệ số đối soát từ bảng."
+    },
+    {
+      "id": "B:qc06-01",
+      "scores": {
+        "accuracy": 13,
+        "depth": 13,
+        "practical": 17,
+        "examples": 12,
+        "pedagogy": 9,
+        "assessment": 6,
+        "data": 6,
+        "clarity": 4
+      },
+      "total": 80,
+      "bloom_items": [
+        "L4",
+        "L5",
+        "L3",
+        "L1",
+        "L1",
+        "L1",
+        "L2"
+      ],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Q4–Q6",
+          "quote": "Chiến dịch Video action trước đây giờ đã đi đâu?",
+          "issue": "Ba câu nhớ dữ kiện nền tảng (L1), dễ cũ sau 3 tháng, chiếm chỗ câu áp dụng.",
+          "fix": "Gộp thành một câu; thêm câu chia 30 triệu cho tình huống mới có ràng buộc."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "rất dễ bị PMax nhận công",
+          "issue": "Không nhắc loại trừ thương hiệu (brand exclusions) trong phần đọc, chỉ xuất hiện ở bước giải Q3.",
+          "fix": "Thêm một câu về loại trừ thương hiệu và giới hạn của nó."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 19÷40=47,5% ✓."
+      },
+      "claims": [
+        {
+          "claim": "Video action đã thành Demand Gen (ngừng tạo mới 4/2025, nâng cấp tự động tới 4/2026)",
+          "status": "verified",
+          "note": "src st:doc 2026-10-24; chưa tự kiểm lại."
+        },
+        {
+          "claim": "Display dời về Demand Gen, tự nguyện từ 6/2026, xong 2027",
+          "status": "verified",
+          "note": "src st:doc 2026-10-24; chưa tự kiểm lại."
+        }
+      ],
+      "strengths": "Chia 30 triệu cụ thể với lý do không mở PMax; phản ví dụ hai chiều (shop lớn, dịch vụ địa phương).",
+      "upgrade": "Thay hai câu L1 bằng câu quyết định/chẩn đoán; thêm loại trừ thương hiệu; thêm calc ngưỡng chuyển đổi tối thiểu trước khi mở PMax."
+    },
+    {
+      "id": "B:qc11-02",
+      "scores": {
+        "accuracy": 12,
+        "depth": 14,
+        "practical": 17,
+        "examples": 13,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 9,
+        "clarity": 4
+      },
+      "total": 86,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L2",
+        "L4",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Khái niệm / Ví dụ / Q4",
+          "quote": "MER hoà vốn (1 ÷ tỉ lệ lãi gộp)",
+          "issue": "Hoà vốn tính trên lãi gộp, bỏ qua chi phí biến đổi (ship, phí cổng, hoàn) — khác bài qc02-04 dùng biên đóng góp. Kết luận \"có lãi 31,5 triệu\" và \"khách mới lãi 1,1 triệu\" có thể đổi dấu.",
+          "fix": "Đổi sang biên đóng góp % (sau phí biến đổi) và liên kết với qc02-04."
+        },
+        {
+          "sev": "P2",
+          "where": "Tình huống ↔ Ví dụ",
+          "quote": "ROAS trung bình 4,5",
+          "issue": "Ví dụ gọi là \"ROAS gộp 4,5\"; trung bình ba ROAS khác ROAS gộp.",
+          "fix": "Thống nhất \"ROAS gộp\"."
+        },
+        {
+          "sev": "P2",
+          "where": "ĐÀO SÂU",
+          "quote": "GMV Max của TikTok Shop được ghi nhận mọi đơn của sản phẩm được quảng bá",
+          "issue": "Lặp gần nguyên văn đoạn của qc02-04.",
+          "fix": "Thay bằng liên kết tới qc02-04."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 600×450.000=270 triệu ÷90=3 ✓. Q4: 1÷0,45=2,22 ✓. Ví dụ: 270×45%−90=31,5; 450×450.000=202,5; 202,5÷90=2,25; 202,5×45%−90=1,125 ✓; 900÷600=1,5 ✓."
+      },
+      "claims": [
+        {
+          "claim": "GMV Max ghi nhận cả đơn tự nhiên và affiliate",
+          "status": "verified",
+          "note": "src st:doc 2026-10-24."
+        }
+      ],
+      "strengths": "Dashboard hai tầng có MER, tỉ lệ nền tảng÷sổ làm chuông báo, tách MER khách mới và giới hạn của MER.",
+      "upgrade": "Đổi hoà vốn sang biên đóng góp; thống nhất thuật ngữ ROAS; thay Q5 (L2) bằng câu đọc bảng ba nền tảng."
+    },
+    {
+      "id": "B:tn05-01",
+      "scores": {
+        "accuracy": 14,
+        "depth": 11,
+        "practical": 15,
+        "examples": 12,
+        "pedagogy": 8,
+        "assessment": 8,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 80,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L4",
+        "L3",
+        "L3",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "nhận diện khách qua số điện thoại tích điểm ở quầy",
+          "issue": "Chỉ đếm khách có tích điểm — nhóm trung thành hơn, nên tỉ lệ mua lại có thể cao hơn khách thật.",
+          "fix": "Thêm một câu về lệch mẫu này."
+        },
+        {
+          "sev": "P2",
+          "where": "Q2",
+          "quote": "Giữ bán thử nhưng rút ngắn, đặt ngưỡng mua lại trước và chuẩn bị sẵn hàng để mở rộng",
+          "issue": "Đáp án dài nhất; \"rút ngắn\" xung đột với cửa sổ mua lại 4 tuần của ví dụ.",
+          "fix": "Nói rõ rút ngắn tới mức nào (vd 2 tuần mua đầu + 3 tuần cửa sổ)."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 480÷2.400=20% ✓ (sai 16,7=480÷2.880)."
+      },
+      "claims": [
+        {
+          "claim": "Các app giao đồ ăn lớn đều có mặt ở Đà Nẵng",
+          "status": "unverified",
+          "note": "Chỉ trong lời giải Q5."
+        }
+      ],
+      "strengths": "Ngưỡng đặt trước có căn cứ (dòng trà hiện có, cùng cửa sổ), vòng sửa vị và đo lại cùng cách; Q4 bắt mẫu lệch quanh nhà máy.",
+      "upgrade": "Thêm lệch mẫu tích điểm và độ chắc của 34% vòng hai; thêm PHẢN VÍ DỤ/ĐÀO SÂU (khi không nên soft launch, cái giá bị bắt chước có số)."
+    },
+    {
+      "id": "B:tp02-02",
+      "scores": {
+        "accuracy": 12,
+        "depth": 14,
+        "practical": 16,
+        "examples": 13,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 83,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L2",
+        "L4",
+        "L3",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Khái niệm",
+          "quote": "theo quan điểm này hiếm hãng nào độc quyền một cửa vào",
+          "issue": "Câu \"Lưu ý\" chèn vào mâu thuẫn với khung xung quanh: tiêu chí \"chưa bị ai giữ\", ví dụ \"trống 1 (hai hãng đã chiếm)\", Q6 \"giữ chặt\", và tiêu đề \"chiếm cửa vào\"; nêu Ries & Trout mà không nói bài theo quan điểm nào.",
+          "fix": "Viết lại độ trống thành \"mức đối thủ đã gắn trong trí nhớ khách (đo bằng câu hỏi gợi tình huống)\", bỏ chữ \"chiếm/giữ chặt\", hoặc nói rõ bài dùng khung Romaniuk."
+        },
+        {
+          "sev": "P2",
+          "where": "VÌ SAO (2) ↔ Lưu ý",
+          "quote": "Phép nhân phạt điểm yếu chí mạng",
+          "issue": "Vừa khen phép nhân vừa nói thang thứ bậc chỉ \"xếp thô\" — hai đoạn kéo hai hướng.",
+          "fix": "Gộp lại thành một nhận định có điều kiện."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 3×4×3=36 ✓. Ví dụ 2×5×1=10, 4×4×4=64; phản ví dụ 5×3×2=30, 5×5×2=50 ✓."
+      },
+      "claims": [
+        {
+          "claim": "Cửa vào (category entry points) là khái niệm của Jenni Romaniuk (Ehrenberg-Bass)",
+          "status": "unverified",
+          "note": "Đúng theo hiểu biết chung, không có src."
+        }
+      ],
+      "strengths": "Bảng chấm ba tiêu chí có nguồn từng điểm, trung vị ba người chấm, phép thử độ nhạy ±1 và phản ví dụ \"sửa sản phẩm rồi chấm lại\".",
+      "upgrade": "Viết lại đoạn Lưu ý cho khớp khung; thêm src Romaniuk; thêm calc độ nhạy (64 → 48 khi giảm 1 điểm)."
+    },
+    {
+      "id": "B:tp07-01",
+      "scores": {
+        "accuracy": 13,
+        "depth": 10,
+        "practical": 16,
+        "examples": 11,
+        "pedagogy": 7,
+        "assessment": 7,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 75,
+      "bloom_items": [
+        "L2",
+        "L3",
+        "L3",
+        "L2",
+        "L3",
+        "L4",
+        "L3"
+      ],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q1 (vì của d) / Ví dụ",
+          "quote": "Thử A/B cùng ngân sách, cùng tệp chính là cách đo được khác biệt do tiêu đề",
+          "issue": "Hai quảng cáo chạy song song trên Meta không được chia ngẫu nhiên người xem (hệ thống phân phối tối ưu khác nhau); chỉ công cụ A/B test mới chia ngẫu nhiên. Ví dụ còn khẳng định \"Khác biệt duy nhất là dòng đầu\".",
+          "fix": "Nói rõ dùng công cụ thử nghiệm A/B của Meta; lời giải d thừa nhận phân phối khác nhau là rủi ro thật."
+        },
+        {
+          "sev": "P2",
+          "where": "Tình huống / thuật ngữ",
+          "quote": "Bài A mở bằng",
+          "issue": "Lẫn \"tiêu đề\" (trường headline dưới ảnh) với dòng đầu của nội dung chính trên Facebook.",
+          "fix": "Định nghĩa \"dòng đầu (primary text)\" một lần."
+        },
+        {
+          "sev": "P2",
+          "where": "Cấu trúc",
+          "quote": "Tiêu đề không kể hết",
+          "issue": "Không có PHẢN VÍ DỤ/ĐÀO SÂU (khi con số gây nghi ngờ, khi lời hứa giờ giấc không giữ được, chính sách quảng cáo).",
+          "fix": "Thêm phản ví dụ."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 160÷20.000=0,8% ✓. Ví dụ 520÷20.000=2,6% (3,25 lần) ✓. Bài thực hành: 126÷18.000=0,7%; đích 252 ✓."
+      },
+      "claims": [
+        {
+          "claim": "NN/g \"First 2 Words\" (2009): người lướt thường chỉ thấy khoảng hai chữ đầu",
+          "status": "unverified",
+          "note": "Có src st:chua; bài đã nói rõ áp sang Facebook là suy luận."
+        }
+      ],
+      "strengths": "Công thức \"việc của khách + con số kiểm được\" rõ, có bài thực hành với rubric và Q6 nối sang trang đích.",
+      "upgrade": "Sửa cơ chế A/B, định nghĩa dòng đầu, thêm PHẢN VÍ DỤ/ĐÀO SÂU, thay Q4 (L2) bằng câu chẩn đoán CTR tăng mà CVR giảm."
+    },
+    {
+      "id": "B:tu02-04",
+      "scores": {
+        "accuracy": 13,
+        "depth": 13,
+        "practical": 18,
+        "examples": 13,
+        "pedagogy": 9,
+        "assessment": 8,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 86,
+      "bloom_items": [
+        "L3",
+        "L5",
+        "L3",
+        "L3",
+        "L3",
+        "L2",
+        "L2"
+      ],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "Từ khoá phủ định là danh sách chữ bạn không muốn quảng cáo xuất hiện",
+          "issue": "Không nói phủ định không tự khớp biến thể gần (số nhiều, sai chính tả, đồng nghĩa) — người học sẽ tưởng \"cũ\" chặn được \"đồ second-hand\".",
+          "fix": "Thêm một câu về kiểu khớp phủ định."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Tuần sau vẫn chi 4 triệu",
+          "issue": "Giả định 1.600 nhấp giữ nguyên dù tiền dời sang cụm ý định cao (thường CPC cao hơn).",
+          "fix": "Nêu giả định CPC không đổi."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 1,2÷4=30% ✓. Q4: 1.600×2,8%−1.600×2%=12,8 ✓. Kiểm chéo: 32 đơn từ 70% ngân sách → dời 30% ở cùng CVR ≈45,7 đơn, khớp \"45\"."
+      },
+      "claims": [
+        {
+          "claim": "Hành vi khớp rộng và báo cáo cụm từ tìm kiếm của Google Ads",
+          "status": "unverified",
+          "note": "Có src st:chua, câu rào \"tin trang chính thức\"."
+        }
+      ],
+      "strengths": "Rất thực hành: đọc cột chi tiêu trước cột đơn, ghi lý do cho mỗi phủ định, phản ví dụ khi \"cách giặt\" là khách thật; số trong ví dụ tự khớp.",
+      "upgrade": "Thêm kiểu khớp phủ định và giả định CPC; thay Q6/Q7 (L2) bằng câu đọc bảng cụm từ tìm kiếm."
+    },
+    {
+      "id": "B:tu05-02",
+      "scores": {
+        "accuracy": 12,
+        "depth": 12,
+        "practical": 16,
+        "examples": 13,
+        "pedagogy": 8,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 80,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L2",
+        "L2",
+        "L4",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q6 (đáp án c)",
+          "quote": "Lỗ ròng: mất 30 đơn chính, món kèm bù không nổi",
+          "issue": "Kết luận chắc chắn từ bỏ giỏ 60%→63% trên 1.000 giỏ (z≈1,4, nằm trong nhiễu) mà không nêu độ bất định; \"lỗ\" ở đây là doanh thu, không phải lãi.",
+          "fix": "Tăng mẫu (≥10.000 giỏ) hoặc thêm \"nếu chênh lệch vượt nhiễu\"; đổi \"lỗ ròng\" thành \"doanh thu ròng giảm\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q6 ↔ Ví dụ",
+          "quote": "Sau khi đổi vị trí gợi ý",
+          "issue": "Ví dụ vừa nói đổi vị trí đưa bỏ giỏ về 60%; Q6 dùng cùng cụm từ cho một thay đổi khác làm bỏ giỏ tăng.",
+          "fix": "Nói rõ đây là lần đổi thứ hai/khác."
+        },
+        {
+          "sev": "P2",
+          "where": "LỖI HAY GẶP (ý 3)",
+          "quote": "bảo hành mở rộng cho đồ điện tử có thể hợp ở bước thanh toán",
+          "issue": "Ý dài, chèn ngoại lệ vào danh sách lỗi; đọc như vá thêm, nên chuyển thành PHẢN VÍ DỤ.",
+          "fix": "Tạo mục PHẢN VÍ DỤ riêng."
+        },
+        {
+          "sev": "P2",
+          "where": "Tình huống",
+          "quote": "Một shop giày thể thao trên sàn gắn gợi ý ở trang giỏ hàng",
+          "issue": "Người bán trên sàn thường không tự đặt gợi ý nâng cấp ở trang giỏ; chỉ có công cụ mua kèm của sàn.",
+          "fix": "Đổi bối cảnh sang website riêng hoặc dùng công cụ mua kèm của sàn."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: (400−340)×0,9−25×0,3=46,5 ✓. Q6: 30×0,9=27 triệu; (370×14%−400×8%)×59.000≈1,17 triệu ✓."
+      },
+      "claims": [
+        {
+          "claim": "Bỏ giỏ 60%→66% khi gắn hai gợi ý",
+          "status": "illustrative-labelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Tách bán thêm/bán kèm theo thời điểm, ví dụ có phép tính ròng và nhắc A/B; Q7 dùng thời điểm sau mua dựa trên hành vi.",
+      "upgrade": "Thêm nhiễu cho Q6, sửa từ \"lỗ\", gỡ ngoại lệ khỏi LỖI HAY GẶP thành PHẢN VÍ DỤ; thay Q4/Q5 (L2) bằng câu đọc doanh thu trên mỗi giỏ."
+    }
+  ],
+  "module_notes": {
+    "progression": "Mẫu quét 21 bài từ 12 module: không có đáp án sai hay hai đáp án cùng đúng; mọi calc khớp. Các bài nhóm quảng cáo/đo lường (qc02-04, qc11-02, tu02-04) đã gần chuẩn; các bài thiếu PHẢN VÍ DỤ/ĐÀO SÂU (dl01-02, dl07-01, gt03-01, in03-03, kh08-01, kn02-01, kn05-02, kn09-01, kn14-01, ob05-07, tp07-01) bị chặn ở 70–78.",
+    "overlap": [
+      "Đoạn GMV Max lặp gần nguyên văn giữa B:qc02-04 (PHẢN VÍ DỤ) và B:qc11-02 (ĐÀO SÂU).",
+      "B:gt03-01 và B:gt06-02 cùng dùng mã giảm giá riêng kênh làm cách gán; một bài nói rõ là cận dưới, bài kia không.",
+      "B:qc11-02 dùng hoà vốn theo lãi gộp, B:qc02-04 theo biên đóng góp — cùng khái niệm, hai mẫu số."
+    ],
+    "gaps": [
+      "Nhiễu/độ chắc chắn khi mẫu nhỏ gần như không được nêu (kh03-05 n=30, tu05-02 Q6, kn09-01 một lần gửi).",
+      "Một số câu rào nguồn chèn giữa đoạn đọc như vá (in03-03, kn05-02, tp02-02, kh03-05 Q3).",
+      "Câu L1/L2 nhớ dữ kiện nền tảng còn nhiều ở qc06-01."
+    ],
+    "best_lesson": "B:qc02-04",
+    "weakest_lesson": "B:in03-03"
+  }
+}

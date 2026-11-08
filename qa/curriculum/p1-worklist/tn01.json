@@ -1,0 +1,57 @@
+{
+ "mod": "tn01",
+ "lessons": [
+  {
+   "id": "B:tn01-03",
+   "title": "Chưa có sản phẩm, làm sao biết có ai muốn mua?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Tỉ lệ 5% với giá đã hiện rõ là tín hiệu đáng kể",
+     "issue": "Benchmark không nguồn, không gắn nhãn và không nối với kinh tế: 40.000đ/đăng ký × quy đổi 20% (Q5) = 200.000đ mỗi khách thật, so với 450.000đ/tuần doanh thu — bài không cho người học cách tự quyết 5% là đủ hay chưa.",
+     "fix": "Thay bằng: 'đáng kể hay không tuỳ vào chi phí mỗi khách thật: 40.000đ/đăng ký ÷ quy đổi ước 20% = 200.000đ/khách, dưới 1 tuần doanh thu → đáng đi tiếp'. Gắn nhãn số minh hoạ."
+    },
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Hai trang giống nhau chỉ khác giá, chia đều quảng cáo, so tỉ lệ",
+     "issue": "Mâu thuẫn với tn02-01: 'đừng hiện ngẫu nhiên 179.000đ và 199.000đ cho hai khách cùng lúc trên cùng trang (khách thấy bị đối xử không công bằng, xem bài tn04-10)'. Bài này dạy đúng cách đó mà không có điều kiện.",
+     "fix": "Giữ đáp án nhưng thêm điều kiện trong lời giải và khái niệm: 'chấp nhận được khi chưa bán thật và không ai bị tính giá khác nhau; khi đã bán, thử giá theo khu vực/kênh hoặc mã ưu đãi (tn02-01)'."
+    }
+   ],
+   "upgrade": "Nối 5% với chi phí mỗi khách thật; thêm điều kiện công bằng giá cho Q6 và nối tn02-01; sửa lời giải Q2c; thay hai câu calc một bước bằng một câu kinh tế đơn vị; thêm ĐÀO SÂU về nhiễu của 150 đăng ký (±2√150 ≈ ±24) khi so hai mức giá."
+  },
+  {
+   "id": "B:tn01-05",
+   "title": "Ngân sách thử bao nhiêu là đủ?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Muốn có ít nhất 50 đơn để đọc kết quả",
+     "issue": "Toàn bộ ngân sách tính ngược từ con số 50 nhưng bài không nói 50 đến từ đâu. 50 đơn dao động ±2√50 ≈ ±14 (±28%); nếu quyết định là 'kênh mới có CPA thấp hơn kênh cũ 20% không' thì 50 đơn chưa đủ. Thiếu giả định này làm kết quả của công thức đổi.",
+     "fix": "Thêm một câu: 'số đơn cần = tuỳ chênh lệch muốn thấy; với quy tắc ±2√k, 50 đơn chỉ phân biệt được chênh CPA cỡ 30%; muốn thấy 15% cần khoảng 200 đơn (xem tn02-03, tn02-04)'."
+    }
+   ],
+   "upgrade": "Giải thích nguồn của '50 đơn' bằng chênh lệch cần thấy và quy tắc ±2√k; thêm bảng chi phí/đơn theo ngày cho một câu L4; nối rõ sang tn02-03/04 để người học biết đây là phiên bản thô của tính cỡ mẫu."
+  },
+  {
+   "id": "B:tn01-08",
+   "title": "Hỏi khách cho nhanh hay đo hành vi cho chắc?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ, Q3",
+     "quote": "Cùng đơn vị là người thử, nên chỉ khoảng 18 ÷ 68 ≈ 26% lời nói thành hành động",
+     "issue": "Suy luận sai: 68% là người trả lời khảo sát online (1.000 người), 18% là người mua nước giặt ở 20 siêu thị — hai tập người khác nhau, và người mua refill không nhất thiết nằm trong nhóm nói 'sẽ thử'. Tỉ số 18/68 không phải 'tỉ lệ quy đổi lời nói → hành động'; cách đo đúng là theo dõi cùng một người (như chính ĐÀO SÂU gợi ý). Lời giải Q3 khẳng định 'cùng đơn vị nên chia được' củng cố cách hiểu sai.",
+     "fix": "Đổi ví dụ: mời 200 người đã trả lời 'sẽ thử' mua thật, 52 người mua → quy đổi 26%; hoặc giữ 18/68 nhưng gọi đúng tên là 'tỉ số giữa hai tỉ lệ ở hai nhóm, chỉ gợi ý mức chênh, không phải quy đổi'. Sửa Q3 theo."
+    }
+   ],
+   "upgrade": "Sửa suy luận 18/68 thành theo dõi cùng người; nói rõ tập người khảo sát; thay Q3 bằng câu tính chi phí mỗi người mua refill từ dữ liệu kệ (20 siêu thị, số người mua) để quyết định dây chuyền 2 tỉ; thêm nhiễu kệ (18% trên bao nhiêu người mua?)."
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "mod": "gt02",
+ "lessons": [
+  {
+   "id": "B:gt02-02",
+   "title": "Khách mới hay khách cũ đang biến mất?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Tình huống",
+     "quote": "Sàn không phải lúc nào cũng cho người bán nhận diện một khách qua nhiều đơn",
+     "issue": "Khẳng định về cách Shopee cấp dữ liệu người mua cho người bán — thuộc loại thay đổi nhanh — không có src, không ngày kiểm, không câu \"nếu khác, tin trang chính thức\" như RUBRIC yêu cầu cho lớp fast.",
+     "fix": "Thêm src trang Shopee Seller Centre về dữ liệu người mua, ngày kiểm, và câu nhắc kiểm lại; hoặc viết chung \"nhiều sàn\" không nêu tên."
+    }
+   ],
+   "upgrade": "Thêm src và ngày kiểm cho khẳng định về sàn; dạy cách tính cửa sổ từ dữ liệu; thêm phản ví dụ cohort và đào sâu; gắn nhãn số; đổi Áp dụng thành bảng khách mới/cũ hai quý có tiêu chí cộng khớp 150 triệu."
+  },
+  {
+   "id": "B:gt02-04",
+   "title": "Cây này có nhánh nào trùng hay sót không?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q4",
+     "quote": "Cách chia nào dưới đây đạt MECE cho khách của một quán cà phê? ... d) Khách ngồi lại tại quán và khách mua mang đi ... vì: Đúng. Mỗi đơn chỉ thuộc một trong hai, và hai nhóm cộng đủ.",
+     "issue": "Đề hỏi chia KHÁCH, lời giải chuyển sang ĐƠN: cùng một khách có thể vừa ngồi lại vừa mang đi ở hai lần khác nhau nên không loại trừ ở cấp khách; và quán cà phê thường có đơn giao qua app — hai nhóm chưa \"cộng đủ\". Lời giải mâu thuẫn với chính phản ví dụ của bài (quy tắc gán mập mờ) và dạy sai đơn vị MECE.",
+     "fix": "Sửa đề thành \"chia ĐƠN của một quán cà phê\" và phương án d thành \"đơn tại quán, đơn mang đi, đơn giao qua app\"; lời giải nói rõ đơn vị gán là đơn."
+    }
+   ],
+   "upgrade": "Sửa Q4 về đơn vị gán; gắn nhãn số; thêm bước làm: viết định nghĩa một câu cho mỗi nhánh + cột nhãn trong bảng tính + đếm đơn hai nhãn/không nhãn; đổi Áp dụng thành bài gán 10 đơn cho sẵn vào cây và đếm trùng/sót."
+  }
+ ]
+}

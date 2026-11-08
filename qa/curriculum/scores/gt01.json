@@ -1,0 +1,216 @@
+{
+  "mod": "gt01",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:gt01-01",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 13, "examples": 9, "pedagogy": 9, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L3", "L5", "L2", "L4", "L3", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "lượt khách giảm 3%, giá trị trung bình mỗi hoá đơn giảm 12%", "issue": "Số 12 cửa hàng, 15%, 3%, 12%, 20.000 hoá đơn không gắn nhãn minh hoạ dù tự khớp (0,97×0,88 = 0,854).", "fix": "Thêm \"(số minh hoạ)\" ở Tình huống." },
+        { "sev": "P2", "where": "Q6 phương án d", "quote": "Vì phải xin phép cơ quan quản lý mới được giảm giá quá 20%", "issue": "Nhiễu chứa khẳng định về luật khuyến mại; lời giải chỉ nói \"không phải lý do cốt lõi\", không nói đúng hay sai, người học có thể tin là có quy định như vậy.", "fix": "Đổi nhiễu sang lý do không liên quan luật, hoặc ghi rõ trong lời giải rằng mức trần khuyến mại hiện hành khác và dẫn nguồn." },
+        { "sev": "P2", "where": "Áp dụng", "quote": "Nói trong 60 giây: đó là triệu chứng của ít nhất hai vấn đề khác nhau nào", "issue": "Bài nói 60 giây không có tiêu chí đạt bằng số; người học không ra được quyết định cụ thể.", "fix": "Thêm bảng 2 cột (thành phần – đổi bao nhiêu %) và tiêu chí: hai thành phần phải nhân ra đúng mức giảm tổng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q5: 20.000×50.000 = 1.000 triệu; 19.400×44.000 = 853,6 triệu; giảm 14,64% ✓ (khớp \"15%\" trong tình huống; 0,97×0,88 = 0,8536). Sai 15 (lấy tròn), 12 (lấy riêng hoá đơn) hợp lý." },
+      "claims": [
+        { "claim": "Chuỗi trà sữa 12 cửa hàng Hà Nội giảm 15%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Có cơ chế – phản ví dụ (giảm đều, không sự kiện nội bộ) – đào sâu (nhất quán nhiều cửa hàng, cảnh báo tương quan trùng thời điểm); Q4 là tình huống mới đọc dữ liệu, Q2 quyết định có thử nhỏ.",
+      "upgrade": "Gắn nhãn số; đổi Áp dụng thành bảng có tiêu chí; thay Q3/Q6 (L2) bằng câu đọc bảng 12 cửa hàng (cửa hàng nào lệch nhất); sửa nhiễu luật ở Q6; nêu cách kiểm số topping/ly trước–sau thành phép tính cụ thể."
+    },
+    {
+      "id": "B:gt01-02",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 8, "assessment": 9, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm ↔ Q5", "quote": "Mức cần đạt không lấy cho tròn số: nó nên tính từ điểm hoà vốn", "issue": "Q5 chấm câu \"cần về lại 80% trước 31/12\" là \"dùng được\" dù mục tiêu 80% không tính từ hoà vốn; phần đọc nói \"nên\" như quy tắc nhưng không nêu ngoại lệ (về lại mức cũ cũng là căn cứ hợp lệ).", "fix": "Thêm vào Khái niệm: căn cứ có thể là hoà vốn hoặc mức đã từng đạt; sửa lời giải Q5 nói rõ căn cứ là mức cũ 82%." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "người mua lại thêm trung bình 2 đơn", "issue": "Giả định 2 đơn là then chốt cho ngưỡng 25% nhưng không nói khoảng tin cậy; nếu 1,5 đơn thì ngưỡng là 33%.", "fix": "Thêm một dòng thử độ nhạy." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "", "issue": "Bài không có phản ví dụ / đào sâu (khi nào không cần ngưỡng hoà vốn, ví dụ chỉ số uy tín).", "fix": "Thêm phản ví dụ ngắn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.000×25% − 1.000×18% = 250 − 180 = 70 ✓. Kiểm chéo ví dụ: chi 60 triệu − lãi đơn đầu 40 triệu = thiếu 20 triệu; 20 triệu/80.000 = 250 = 25% ✓; 18% → 180×80.000 = 14,4 triệu ✓; Q2b 200×80.000 = 16 triệu ✓; Q7 (22−18)/(25−18) = 4/7 ✓. Bài thực hành: 96/240 = 40%, 25% = 60 người, bớt 36 ✓." },
+      "claims": [
+        { "claim": "Phí thu hút 60.000đ, lãi gộp 40.000đ/đơn, +2 đơn", "status": "illustrative-labelled", "note": "Có \"Số minh hoạ\"." }
+      ],
+      "strengths": "Mục tiêu 25% được suy từ hoà vốn chứ không chọn tròn; Q2 buộc biện hộ mức cần đạt bằng số (L5); Q6 phân biệt đo theo nhóm khách và theo tỉ trọng đơn — hiểu lầm thật trong nghề; có bài thực hành với rubric số.",
+      "upgrade": "Thêm thử độ nhạy cho giả định 2 đơn; thêm phản ví dụ chỉ số không có hoà vốn; sửa nhất quán Q5 với Khái niệm; đổi Q1 (L2) thành câu đọc câu vấn đề thiếu phần nào; thêm bước làm 5 dòng (ai–chỉ số–hiện tại–cần–hạn) dạng bảng."
+    },
+    {
+      "id": "B:gt01-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 13, "examples": 9, "pedagogy": 9, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L3", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Vì 60% số người không nghe máy khi được gọi. Vì sao không nghe? Vì lễ tân gọi lại sau trung bình 26 giờ.", "issue": "Bước \"vì sao không nghe → vì gọi chậm\" là suy đoán được coi như dữ kiện: không có số chứng minh tỉ lệ nghe máy theo độ trễ (đào sâu có gợi kiểm nhưng ví dụ không làm); 26 giờ, 60% không gắn nhãn minh hoạ.", "fix": "Thêm bảng nhỏ: gọi trong 1 giờ nghe 75%, sau 24 giờ nghe 35% (số minh hoạ) để mắt xích có bằng chứng như chính bài yêu cầu." },
+        { "sev": "P2", "where": "Q3", "quote": "tỉ lệ đến khám tăng từ 10% lên 18% trên 300 số mỗi tháng", "issue": "Phép tính 24 người trên mẫu 300 không nói độ chắc chắn; chênh 8 điểm % trên 300 có thể một phần là dao động tháng.", "fix": "Thêm câu: so với dao động các tháng trước (ví dụ 8–12%) rồi mới kết luận." },
+        { "sev": "P2", "where": "Q4, Q5, Q6", "quote": "Vì sao mỗi câu trả lời \"vì sao\" cần một dữ kiện đi kèm?", "issue": "Ba câu nhận lại ý bài (L2–L3), không có câu đọc dữ liệu mới.", "fix": "Thay Q6 bằng chuỗi \"vì sao\" cho sẵn có một mắt xích thiếu bằng chứng, hỏi mắt nào." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 300×18% − 300×10% = 54 − 30 = 24 ✓; sai 8 (điểm %), 54 (số tuyệt đối) ✓." },
+      "claims": [
+        { "claim": "300 số/tháng, 30 đến khám, 60% không nghe máy, gọi lại sau 26 giờ", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Thường cần ba đến năm lần mới chạm tới chỗ có thể sửa được", "status": "unverified", "note": "Kinh nghiệm nghề (5 Whys), không nguồn; nêu như quy tắc mềm, chấp nhận được." }
+      ],
+      "strengths": "Tiêu chí dừng rõ (có bằng chứng + ra việc làm được) và cách đọc ngược chuỗi để kiểm; phản ví dụ rẽ sang trách nhiệm của agency và Q7 xử lý phản biện của trưởng nhóm một cách cân bằng.",
+      "upgrade": "Cho mỗi mắt xích một dữ kiện số thật trong ví dụ; gắn nhãn số; thêm nhánh thứ hai (chất lượng số) với cách tách (tỉ lệ nghe máy theo nguồn quảng cáo) để chuỗi không thẳng một đường; nâng Q4–Q6 lên L4; nêu dao động nền trước khi kết luận 24 người."
+    },
+    {
+      "id": "B:gt01-04",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 12, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 6, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L4", "L5", "L3", "L4", "L2", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ / Q2", "quote": "Giải pháp: giá treo gọn cộng thưởng 20.000đ mỗi tháng", "issue": "Giải pháp được chốt là đúng (Q2a) mà không tính chi phí: mục tiêu 1.000 tạp hoá treo × 20.000đ = 20 triệu/tháng cộng giá treo, trong khi bài không cho doanh số hay lãi mỗi tạp hoá để so; với biên lãi tạp hoá 8%, không rõ 20.000đ có đủ bù chỗ kệ nhường cho hàng lãi hơn không. Quyết định thiếu ràng buộc tiền.", "fix": "Thêm số: doanh số bánh trung bình/tạp hoá/tháng và lãi hãng thu thêm khi treo (ví dụ +300.000đ doanh số, hãng lãi 90.000đ) để chứng minh thưởng 20.000đ có lời; hoặc đặt Q3 thành câu tính hoà vốn của thưởng." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Bạn phỏng vấn 10 chủ tạp hoá: 8 người nói biên lãi bánh chỉ 8%", "issue": "Suy rộng từ 10 phỏng vấn và 20 lần ghé ra 2.000 tạp hoá (\"chỉ khoảng 1/4 trưng bày\") mà không nói cỡ mẫu nhỏ hay cách chọn mẫu.", "fix": "Thêm câu: 20 tạp hoá là mẫu thăm dò; kiểm lại trên 100 điểm ngẫu nhiên trước khi chốt con số 1/4." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "", "issue": "Không có mục Vì sao hiệu quả / Phản ví dụ / Đào sâu như các bài 01, 03, 05, 06 trong cùng module; không nêu khi nào chủ thể thật nằm ở đầu chuỗi (sản phẩm lỗi) ngoài một mệnh đề.", "fix": "Thêm phản ví dụ: treo rồi vẫn chậm, dữ kiện nào cho biết phải quay lên đại lý/sản phẩm." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2.000×50% = 1.000; 1.000 − 500 = 500 ✓ (khớp \"1/4\" = 500/2.000 trong ví dụ); sai 1.000, 25 hợp lý." },
+      "claims": [
+        { "claim": "2.000 tạp hoá miền Tây, biên 8%, 8/10 phỏng vấn", "status": "illustrative-labelled", "note": "Có \"(số minh hoạ)\"." }
+      ],
+      "strengths": "Ba câu hỏi chủ thể (hành vi của ai, hành vi gì, rào cản gì) dùng được ngay; Q4 nêu đúng rằng 70%/15% chỉ là tương quan và phải thử; Q7 trả lời giám đốc có số, không phủ nhận quảng cáo.",
+      "upgrade": "Thêm số để chứng minh giải pháp thưởng có lời (hoà vốn của 20.000đ/tháng); nêu cỡ mẫu và cách kiểm lại; thêm phản ví dụ và đào sâu như các bài khác; thay Q5 (L2) bằng câu tính chi phí chương trình treo so với lãi tăng thêm; thêm bước làm \"đi dọc chuỗi\" (ghé bao nhiêu điểm, hỏi gì)."
+    },
+    {
+      "id": "B:gt01-05",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 13, "examples": 9, "pedagogy": 9, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L2", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q5 phương án b", "quote": "Vì TikTok cũng có người dùng ở độ tuổi 30–45, không chỉ giới trẻ", "issue": "Lời giải nói \"Có thể đúng\" — khẳng định về nhân khẩu nền tảng không nguồn; không ảnh hưởng đáp án nhưng để lửng.", "fix": "Ghi \"tuỳ số liệu nền tảng từng năm, kiểm trang chính thức\" hoặc đổi nhiễu." },
+        { "sev": "P2", "where": "Ví dụ ↔ Q6", "quote": "Kéo tỉ trọng đơn khách mới từ 25% lên 35% sau 6 tuần thử kênh", "issue": "Ví dụ nêu mức cũ 40%, Q6 chốt mục tiêu 35% mà không nói vì sao 35 chứ không 40 — trái tinh thần gt01-02 (mức cần đạt có căn cứ).", "fix": "Thêm một câu: 35% là nửa đường về 40% trong 6 tuần, hoặc tính từ hoà vốn kênh." },
+        { "sev": "P2", "where": "Tình huống", "quote": "doanh thu 800 triệu/tháng, khách phần lớn 30–45 tuổi", "issue": "Số không gắn nhãn minh hoạ.", "fix": "Thêm \"(số minh hoạ)\"." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: khách cũ 800×75% = 600; 600/60% = 1.000 triệu ✓; sai 920 = 800×1,15 (cộng 15 điểm trên nền cũ) ✓, 320 = 800×40% ✓." },
+      "claims": [
+        { "claim": "Giày da nam 800 triệu/tháng, khách mới 25% so với 40%", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "TikTok có người dùng 30–45 tuổi", "status": "unverified", "note": "Trong nhiễu Q5, lời giải để \"có thể đúng\"." }
+      ],
+      "strengths": "Phản ví dụ nêu đúng lúc không nên hỏi ngược (quyết định thương hiệu, hợp đồng đã ký) và đào sâu nói cái giá của việc hỏi; Q3 là phép tính tỉ trọng dễ sai (bẫy 920) được giải thích tốt.",
+      "upgrade": "Gắn nhãn số; biện hộ mục tiêu 35%; đổi Áp dụng thành viết ba câu hỏi + một dòng chỉ số cho một yêu cầu cụ thể cho sẵn (có tiêu chí đạt); thay Q5 (L2) bằng câu tính chi phí thử TikTok 6 tuần so với lãi khách mới cần có."
+    },
+    {
+      "id": "B:gt01-06",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 13, "examples": 9, "pedagogy": 9, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L2", "L2", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Đọc 200 bình luận gần nhất, 120 bình luận nói cơm nguội hoặc giao trễ.", "issue": "Người viết bình luận trên app thiên về người bất mãn; 200 bình luận gần nhất không đại diện 4.000 đơn/tháng — bài không nêu độ lệch mẫu này, trong khi kết luận \"80% lời chê\" được dùng để quyết định.", "fix": "Thêm câu: 200 bình luận là 5% đơn và lệch về người bất mãn; đối chiếu với tỉ lệ đơn giao trễ thật trên hệ thống trước khi gặp vận hành." },
+        { "sev": "P2", "where": "Q5, Q6, Q7", "quote": "Khi đẩy vấn đề sang phòng vận hành, marketing nên mang theo gì?", "issue": "Ba câu cuối nhận lại ý bài (L2–L3); không có câu buộc đọc dữ liệu mới.", "fix": "Thay Q6 bằng bảng phân loại 200 bình luận của một quán khác (chê rải đều) và hỏi kết luận." },
+        { "sev": "P2", "where": "Tình huống", "quote": "4.000 đơn/tháng ... tụt từ 4,6 xuống 4,1 sao", "issue": "Số không gắn nhãn minh hoạ.", "fix": "Thêm \"(số minh hoạ)\"." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: chê = 120 + 30 = 150; 120/150 = 80% ✓; sai 60 = 120/200 ✓; sai 40 = 80/200 (lấy phần không chê giao) chấp nhận được." },
+      "claims": [
+        { "claim": "Chuỗi cơm văn phòng 4.000 đơn, 200 bình luận, 120/30/50", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phân biệt mẫu số 60% (trên tổng) và 80% (trên lời chê); đào sâu nói đánh đổi chính trị thật (nói gốc không ở marketing có thể mất lòng sếp) và cách xử lý bằng dữ kiện + mốc đo; Q2 quyết định có thử nhỏ 2 chi nhánh.",
+      "upgrade": "Nêu độ lệch mẫu của bình luận và cách đối chiếu với số giao trễ hệ thống; gắn nhãn số; nâng Q5–Q7 lên L4 bằng dữ liệu mới; thêm bước làm phân loại (bảng 3 cột marketing/sản phẩm/vận hành với ví dụ gán); thêm ràng buộc cho đề xuất (hộp giữ nhiệt tốn bao nhiêu, bù bằng gì)."
+    },
+    {
+      "id": "B:gt01-07",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 13, "examples": 10, "pedagogy": 7, "assessment": 9, "data": 9, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L3", "L5", "L3", "L4", "L3", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc", "quote": "", "issue": "Không có Vì sao hiệu quả / Phản ví dụ / Đào sâu; không nêu trường hợp mức giảm dàn đều (nguyên nhân nằm ngang) — điều B:gt02-03 có.", "fix": "Thêm phản ví dụ giảm đều ba kênh và cách xử lý (xem dòng thời gian)." },
+        { "sev": "P2", "where": "Khái niệm ↔ Ví dụ", "quote": "tổng còn có thể đổi chỉ vì tỉ trọng dịch giữa các nhóm", "issue": "Ý quan trọng (hiệu ứng cơ cấu) chỉ nêu một câu trong Khái niệm, không có trong Ví dụ; người học gặp lần đầu ở Q6 với số 29,5%/28,6% chưa được dẫn.", "fix": "Thêm vào Ví dụ bảng biên theo kênh và phép tính trung bình có trọng số." },
+        { "sev": "P2", "where": "Tình huống", "quote": "từ 5 tỉ xuống 4,5 tỉ", "issue": "Số không gắn nhãn minh hoạ.", "fix": "Thêm \"(số minh hoạ)\"." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: online 1.000 − 600 = 400; 400/500 = 80% ✓; sai 40 (400/1.000), 8 (400/5.000) ✓. Kiểm chéo Q6: biên chung cũ (400+450+625)/5.000 = 29,5%; mới (240+420+625)/4.500 = 28,56% ✓; online 20% → 13,3% ✓. Q4: 50%×2% = 1% < 5%×60% = 3% ✓." },
+      "claims": [
+        { "claim": "Sữa hạt 5 tỉ → 4,5 tỉ; online 1 tỉ → 0,6 tỉ", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Q6 là câu L4 hiếm: biên chung tụt dù biên từng kênh không đổi (trung bình có trọng số), số kiểm lại khớp; Q4 buộc nhân tỉ lệ giảm với tỉ trọng thay vì nhìn phần trăm.",
+      "upgrade": "Đưa bảng biên theo kênh và phép tính trọng số vào Ví dụ; thêm phản ví dụ giảm đều; thêm đào sâu về so mức giảm với tỉ trọng doanh thu của nhánh (online 20% doanh thu gánh 80% mức giảm); gắn nhãn số; đổi Áp dụng thành bảng tách theo 3 chiều có tiêu chí cộng khớp tổng."
+    },
+    {
+      "id": "B:gt01-08",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 13, "examples": 9, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L3", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Toàn bài ↔ B:gt01-01", "quote": "Doanh số online có thể viết thành lượt vào × tỉ lệ mua × giá trị đơn.", "issue": "Bài 01 đã tách doanh số thành lượt khách × hoá đơn và bài 08 lặp cùng thao tác với ba thành phần; B:gt02-01 lặp lần thứ ba. Tiến trình module không nói bài 08 thêm gì so với 01 (ngoài công thức online).", "fix": "Định vị lại bài 08 là \"công thức theo kênh + đòn bẩy của từng thành phần\" và chỉ dẫn sang 01 cho phần tách; hoặc gộp." },
+        { "sev": "P2", "where": "Tình huống", "quote": "12.000 lượt vào, tỉ lệ mua 2%, giá trị đơn 1,5 triệu", "issue": "Số không gắn nhãn minh hoạ.", "fix": "Thêm \"(số minh hoạ)\"." },
+        { "sev": "P2", "where": "Q7", "quote": "Tỉ lệ mua giảm từ 2% còn 1,6% sau khi thu phí ship 30.000đ cho đơn dưới 2 triệu", "issue": "Đáp án đúng nhưng câu vấn đề thiếu phần mức cần đạt và thời hạn theo chính chuẩn 5 phần của B:gt01-02.", "fix": "Thêm \"cần về 2% trước cuối tháng sau\" vào phương án c hoặc ghi chú trong lời giải." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 12.500×2% = 250 đơn; ×1,5 = 375 triệu ✓. Q4: 360/1,5 = 240 đơn; 240/1,6% = 15.000 lượt ✓ (thêm 2.500). Kiểm chéo: 12.000×2%×1,5 = 360; 12.500×1,6%×1,5 = 300 ✓." },
+      "claims": [
+        { "claim": "Shop mỹ phẩm 360 → 300 triệu, 12.000/12.500 lượt", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ nêu đúng bẫy trộn nguồn khách (tỉ lệ mua trung bình tụt dù từng nguồn giữ); Q4 tính ngược số lượt cần để \"bù bằng tiền\" làm rõ chi phí của việc sửa sai thành phần.",
+      "upgrade": "Tách vai trò với bài 01 và gt02-01; gắn nhãn số; thêm bảng 3 cột hai kỳ vào Ví dụ như Vì sao hiệu quả gợi ý; thêm ràng buộc tiền cho Q4 (2.500 lượt tốn bao nhiêu ở CPC hiện tại) để so với sửa trang; hoàn thiện câu vấn đề Q7 đủ 5 phần."
+    },
+    {
+      "id": "B:gt01-09",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 13, "examples": 9, "pedagogy": 9, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L3", "L3", "L3", "L3", "L2", "L4", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1 lời giải ↔ Phản ví dụ", "quote": "40 người đã đủ cho thấy hướng; chờ thêm chỉ trì hoãn.", "issue": "Phản ví dụ nói mẫu 40 người có thể lệch (toàn người đến giờ đông) và nên \"phỏng vấn thêm một nhóm rồi mới đổi câu vấn đề\"; lời giải Q1c lại coi 40 là đủ — hai thông điệp kéo hai hướng, không nêu điều kiện phân biệt.", "fix": "Sửa lời giải Q1c: 40 đủ để tạm đổi hướng và thử nhỏ, nhưng kiểm thành phần mẫu trước khi bỏ hẳn giả thuyết giá." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "6/40 người nhắc giá, tức 15%; 22/40 nhắc phòng đông giờ cao điểm, tức 55%", "issue": "Không nói độ bất định của tỉ lệ trên mẫu 40 (khoảng ±15 điểm); với 6 người, 15% có thể từ 5% đến 30%.", "fix": "Thêm câu ước khoảng tin cậy thô, nối với bài về mẫu nhỏ." },
+        { "sev": "P2", "where": "Q3, Q5", "quote": "Tỉ lệ đó là bao nhiêu phần trăm?", "issue": "Q3 là phép chia một bước quá đơn giản cho bài 7 phút; Q5 nhận lại ý bài.", "fix": "Thay Q3 bằng tính chi phí giảm giá toàn bộ so với gói giờ thấp điểm; thay Q5 bằng câu đọc dữ liệu mẫu lệch." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 22/40 = 55% ✓; 6/40 = 15% ✓." },
+      "claims": [
+        { "claim": "Gym TP.HCM: 40 phỏng vấn, 6 nhắc giá, 22 nhắc đông", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Nguyên tắc \"giữ bản cũ cạnh bản mới\" và trang một tờ (câu cũ – dữ kiện – câu mới – phép thử) là việc làm được ngay; Q7 trả lời theo tỉ trọng thay vì trắng đen; phản ví dụ về mẫu lệch đúng chỗ.",
+      "upgrade": "Nêu độ bất định mẫu 40 và điều kiện khi nào đủ để đổi; nhất quán Q1 với phản ví dụ; nâng Q3/Q5; thêm số cho đề xuất (gói giờ thấp điểm giá bao nhiêu, bao nhiêu người thử để kiểm) để quyết định có ràng buộc tiền; gắn nhãn số."
+    },
+    {
+      "id": "B:gt01-10",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 8, "assessment": 9, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L4", "L3", "L4", "L4", "L5", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "trừ giá vốn 7.000đ và chiết khấu kênh 2.000đ, còn 3.000đ lãi gộp", "issue": "Gọi số còn lại sau chiết khấu kênh là \"lãi gộp\" trong khi B:gt02-06 dạy chiết khấu/phí kênh là chi phí biến đổi và số này là biên đóng góp; thuật ngữ không nhất quán giữa hai module.", "fix": "Đổi thành \"biên đóng góp mỗi lon\" hoặc ghi chú." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Đầu tư năm đầu cho dây chuyền, thiết kế và ra mắt là 6 tỉ.", "issue": "Ngưỡng 2 triệu lon giả định hoà vốn trong một năm nhưng không nói đó là lựa chọn (dây chuyền dùng nhiều năm, có thể tính 3 năm → ngưỡng 670.000 lon/năm); kết luận Q6 \"chưa nên ra\" phụ thuộc kỳ hoàn vốn.", "fix": "Thêm một câu nêu kỳ hoàn vốn là giả định và cho con số 3 năm để so." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "", "issue": "Không có Phản ví dụ / Đào sâu (khi câu hỏi then chốt không có ngưỡng tính được, ví dụ quyết định thương hiệu).", "fix": "Thêm phản ví dụ ngắn." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 2/40 = 5% ✓. Q5: 100.000×1,1% = 1.100 đơn; lãi/đơn 120.000đ; tổng 132 triệu; sau ship 110.000đ/đơn; 132 triệu/110.000 = 1.200 đơn = 1,2% ✓; sai 1,13 = 1,1/(1−10.000/400.000) ✓. Kiểm chéo Q2: 6 tỉ/3.000 = 2 triệu; 6 tỉ/12.000 = 500.000; 6 tỉ/5.000 = 1,2 triệu; 6 tỉ/2.000 = 3 triệu ✓." },
+      "claims": [
+        { "claim": "Cà phê hoà tan 8% thị phần, đầu tư 6 tỉ, lon 12.000đ, kênh tiện lợi 40 triệu lon/năm", "status": "illustrative-labelled", "note": "Có \"Số minh hoạ\"." }
+      ],
+      "strengths": "Ngưỡng được tính từ chi phí cố định và biên mỗi đơn vị với bốn nhiễu Q2 đều là lỗi tính định danh; Q6 dùng cận trên để kết luận dứt khoát và chỉ hai vế có thể đổi; Q5 chuyển sang ngưỡng tỉ lệ mua khi giảm ship — áp dụng thật.",
+      "upgrade": "Sửa thuật ngữ lãi gộp/biên đóng góp; nêu kỳ hoàn vốn là giả định và thử 1 năm so 3 năm; thêm phản ví dụ câu hỏi không có ngưỡng; đổi Q1 (L2) thành câu phân biệt chủ đề và câu hỏi then chốt trên 4 câu cho sẵn; thêm ràng buộc 60 triệu/4 tuần vào kế hoạch ba việc cần đo."
+    }
+  ],
+  "module_notes": {
+    "progression": "Chuỗi 01 triệu chứng → 02 câu đo được → 03 vì sao → 04 chủ thể → 05 lùi từ giải pháp → 06 đúng phòng ban → 07 khoanh phạm vi → 08 phân rã → 09 viết lại → 10 câu hỏi then chốt là hợp lý và bài 10 tự nói nó đứng cuối chuỗi. Tuy nhiên thứ tự 07–08 ngược logic thao tác (phân rã công thức thường làm trước khoanh theo kênh) và bài 08 lặp bài 01. Bốn bài (02, 04, 07, 10) thiếu mục Vì sao / Phản ví dụ / Đào sâu nên độ sâu không đều; phần Áp dụng hầu hết là \"nói trong 60 giây\" không có tiêu chí đạt, trừ 02 và 10.",
+    "overlap": [
+      "gt01-01 (lượt khách × hoá đơn) và gt01-08 (lượt vào × tỉ lệ mua × giá trị đơn) cùng dạy phân rã doanh số; gt02-01 lặp lần ba với cùng tình huống chuỗi trà sữa 12 cửa hàng.",
+      "gt01-07 (khoanh phạm vi theo kênh, online gánh 80%) trùng thao tác với gt02-03 (chọn chiều cắt, siêu thị gánh 83%).",
+      "gt01-02 và gt01-09 cùng về câu vấn đề; gt01-05 Q6 lặp chuẩn 5 phần của 02."
+    ],
+    "gaps": [
+      "Thiếu bài phân biệt tín hiệu và nhiễu trước khi gọi là vấn đề: mức giảm bao nhiêu trên nền dao động tháng/mùa mới đáng mở hồ sơ (gt01-01 phản ví dụ nhắc nhưng không dạy).",
+      "Thiếu bài ưu tiên khi có nhiều vấn đề cùng lúc (tác động × khả năng sửa × chi phí kiểm).",
+      "Thiếu cách viết câu vấn đề cho cơ hội tăng trưởng (không chỉ con số xấu).",
+      "Thiếu hướng dẫn cỡ mẫu tối thiểu cho phỏng vấn/bình luận dùng để đổi câu vấn đề (gt01-06, gt01-09 đều dùng mẫu nhỏ không nêu độ bất định)."
+    ],
+    "best_lesson": "B:gt01-02",
+    "weakest_lesson": "B:gt01-04"
+  }
+}

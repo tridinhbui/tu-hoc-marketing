@@ -1,0 +1,35 @@
+{
+ "mod": "tp11",
+ "lessons": [
+  {
+   "id": "B:tp11-02",
+   "title": "Nên ghi 199.000đ hay 200.000đ cho chiếc váy của bạn?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "hiệu ứng chữ số đầu, Thomas và Morwitz, 2005 … theo thí nghiệm của Wadhwa và Zhang (2015)",
+     "issue": "Hai nghiên cứu được dẫn tên–năm nhưng không có `src` bấm được, không ngày kiểm; lớp periodic yêu cầu nguồn. Bài cũng không nói hai thí nghiệm làm với người tiêu dùng Mỹ, nên \"khách Việt Nam cần thử giá thật\" là đúng nhưng chưa nêu lý do.",
+     "fix": "Thêm src (Thomas & Morwitz, JCR 2005 \"Penny Wise and Pound Foolish\"; Wadhwa & Zhang, JCR 2015 \"This Number Just Feels Right\") kèm ngày kiểm và câu \"mẫu là người tiêu dùng Mỹ\"."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src cho hai nghiên cứu và nói về mẫu; (2) đồng bộ giọng Q5 với Q1; (3) thêm Vì sao/Phản ví dụ/Đào sâu với đánh đổi tiền mặt và đo doanh thu; (4) thêm bước làm: quy trình thử giá 2×2 (hai mức, hai nhóm, hai tuần) với cỡ mẫu tối thiểu và cách đọc kết quả khi chênh nhỏ."
+  },
+  {
+   "id": "B:tp11-06",
+   "title": "Phí ship 25.000đ khiến khách bỏ giỏ: có nên \"freeship\" không?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "hiệu ứng giá 0, Shampanier, Mazar &amp; Ariely, 2007; vẫn nên A/B trên shop bạn",
+     "issue": "Nghiên cứu dẫn tên–năm nhưng không có `src` bấm được và ngày kiểm (lớp periodic); đồng thời chuỗi \"&amp;\" lọt vào văn bản, cần kiểm cách render trên app (có thể hiện nguyên \"&amp;\").",
+     "fix": "Thêm src (Shampanier, Mazar & Ariely, Marketing Science 2007 \"Zero as a Special Price\") kèm ngày kiểm; sửa ký tự & trong dữ liệu."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src cho nghiên cứu và sửa \"&amp;\"; (2) thêm ngưỡng hoà vốn của tỉ lệ bỏ giỏ và bảng phân bố giá trị đơn minh hoạ; (3) thêm Phản ví dụ (hàng nặng/cồng kềnh nơi phí ship 25.000đ không đủ, hoặc hàng giá rất thấp) và Đào sâu về lạm dụng ngưỡng (khách thêm món rồi trả lại); (4) thay Q6 (L3) bằng câu đọc phân bố đơn để chọn ngưỡng."
+  }
+ ]
+}

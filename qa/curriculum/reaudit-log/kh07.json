@@ -1,0 +1,16 @@
+{
+ "mod": "kh07",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:kh07-01",
+   "where": "Q1 phương án a (lời giải)",
+   "status": "fixed",
+   "change": "Lời giải a: bỏ ý “không phải phân phối”; nay nói hai mẫu cùng 20.000 lượt hiển thị nên không phải phân phối rộng hơn, nhưng nền tảng có thể đưa mỗi mẫu tới người khác nhau, muốn tách tác động của khung cần A/B test chia tệp. Ví dụ thêm một câu: chênh 0,9 điểm chưa hẳn chỉ do khung. Thêm src Meta Business Help Center (A/B test, st:'chua').",
+   "key_changed": false,
+   "note": "Đã tự kiểm: phân phối lệch giữa hai mẫu (divergent delivery) là có thật trên nền tảng; lời giải cũ dạy sai. Câu rào đặt ở ví dụ (không ở tình huống vì vượt 120 chữ), không chạm phương án đúng. URL là trang tìm kiếm Help Center, cần người kiểm bài cụ thể."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

@@ -1,0 +1,16 @@
+{
+ "mod": "kn01",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:kn01-01",
+   "where": "Q6 đáp án b + lời giải b",
+   "status": "fixed",
+   "change": "Đáp án b: “Giữ vài ngày phát túi trơn làm đối chứng, rồi so đơn với ngày phát túi QR” → “In mã giảm riêng chỉ có trên túi QR, đếm lượt mã được dùng khi khách quay lại”; lời giải b nói QR tác động lên lần mua sau, không lên đơn ngày phát túi, nên đếm mã riêng thay vì đoán từ doanh số cả tháng.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: tác dụng của QR rơi vào lần quay lại về sau, rải mọi ngày, nên so đơn ngày túi trơn với ngày túi QR không đo được. Đáp án mới ngắn hơn phương án c để không lộ bằng độ dài. Cảnh báo còn lại của validator (B:kn01-06 ví dụ 183 chữ) có từ trước, không thuộc lỗi này."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

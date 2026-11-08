@@ -1,0 +1,18 @@
+{
+ "mod": "gt03",
+ "lessons": [
+  {
+   "id": "B:gt03-01",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q7 (vì của a)",
+     "quote": "thêm điều kiện tổng đơn không giảm để loại trường hợp khách cũ chỉ đổi sang dùng mã",
+     "issue": "Chính đề nêu khuyến mãi toàn sàn cùng 4 tuần, vốn đẩy tổng đơn lên trên 240; khi đó \"tổng đơn không dưới 240\" không loại được việc khách cũ chỉ chuyển sang dùng mã. Lời giải nói quá khả năng của điều kiện.",
+     "fix": "Đổi điều kiện thành so với nhóm/quán đối chứng cùng kỳ khuyến mãi, hoặc lời giải nói rõ đây là chặn dưới yếu."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "mod": "kn13",
+ "lessons": [
+  {
+   "id": "B:kn13-01",
+   "title": "Cùng một video đăng ba nền tảng: người xem đến từ cửa nào?",
+   "total": 63,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Facebook: 80% lượt xem từ người đã theo dõi. TikTok: 70% từ mục đề xuất, tức người lạ. YouTube: 40% từ tìm kiếm.",
+     "issue": "Ba tỉ lệ nguồn là số tự đặt nhưng phần ví dụ không gắn nhãn minh hoạ (chỉ Q7 mới ghi 'số minh hoạ'); người học dễ nhớ thành 'FB 80% follower, TikTok 70% đề xuất' như benchmark nền tảng.",
+     "fix": "Thêm '(số minh hoạ)' ngay trong ví dụ và một câu: 'tỉ lệ của kênh bạn có thể khác hẳn, chỉ báo cáo của chính kênh mới có giá trị'."
+    },
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Coi như tin đồn, rồi bỏ qua mọi thông tin về thuật toán của nền tảng đó từ nay về sau, kể cả tài liệu chính thức",
+     "issue": "Phương án dài bất thường và cực đoan ('mọi', 'kể cả tài liệu chính thức'), cùng Q1 b 'luôn' và d 'chỉ': đáp án đoán được bằng hình thức, không cần đọc bài.",
+     "fix": "Viết nhiễu cùng độ dài, bỏ từ tuyệt đối; thay Q6 bằng câu dữ liệu: cho bảng nguồn người xem 2 tuần và hỏi cửa nào đổi."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) gắn nhãn minh hoạ cho ba tỉ lệ nguồn và thêm ghi chú định nghĩa lượt xem khác nhau theo nền tảng; (2) thêm phản ví dụ: kênh có 70% đề xuất nhưng xem hết 60% và 3% vào trang — khi đó quyết định đổi; (3) thay Q1/Q6 bằng câu đọc bảng nguồn người xem 2 tuần (nguồn nào tăng/giảm, viết cho cửa nào); (4) phần Áp dụng ra một quyết định có số: 'gán việc cho từng kênh và một chỉ số mục tiêu cho mỗi việc'; (5) thêm src tới trang trợ giúp 'nguồn lưu lượng' của từng nền tảng với ngày kiểm."
+  },
+  {
+   "id": "B:kn13-02",
+   "title": "Đường cong giữ chân: người xem rơi ở giây nào?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "họ cho bản cũ và bản mới chạy song song cho hai nhóm người xem chia ngẫu nhiên từ cùng nguồn",
+     "issue": "Với bài đăng tự nhiên, hầu hết nền tảng không cho chia ngẫu nhiên người xem giữa hai bản video (chỉ có với quảng cáo hoặc công cụ thử của nền tảng nếu có). Ví dụ nêu một phép thử như thể ai cũng làm được, không nói cần điều kiện gì.",
+     "fix": "Ghi rõ: 'bằng hai nhóm quảng cáo cùng đối tượng, hoặc nếu không có công cụ thì đăng hai bản cách nhau, so cùng nguồn và chấp nhận nhiễu'."
+    },
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Bản mới còn 78% ở giây 3, bản cũ vẫn 55%",
+     "issue": "Toàn bộ số trong ví dụ (20.000 lượt, 55%, 40%, 38%, 78%) không gắn nhãn minh hoạ.",
+     "fix": "Thêm '(số minh hoạ)' vào ví dụ như các bài kn14-04, kn14-05 đã làm."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) sửa ví dụ A/B cho đúng điều kiện thực (quảng cáo hoặc chấp nhận so trước–sau có nhiễu) và gắn nhãn minh hoạ; (2) thêm phản ví dụ: đường rơi dốc ở 3 giây đầu nhưng do nguồn người xem đổi (đề xuất tăng), không do mở đầu — tức khi nào cách đọc hình dạng sai; (3) thêm ngưỡng nhiễu: với video dưới 1.000 lượt xem, chênh vài điểm là ngẫu nhiên; (4) đổi Q5/Q6 thành câu đọc hai đường cong; (5) nối sang kn15-03 (quy về % độ dài) ở phần Đào sâu."
+  },
+  {
+   "id": "B:kn13-03",
+   "title": "Ảnh bìa hứa gì, video giữ được gì?",
+   "total": 66,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Bản A: 50.000 × 8% = 4.000 lượt bấm, mỗi lượt xem 20% video, tức 800 đơn vị.",
+     "issue": "Số không gắn nhãn minh hoạ; đồng thời 'mỗi bản có 50.000 lượt hiển thị' giả định một phép thử ảnh bìa chia đều hiển thị mà bài không nói công cụ nào cho phép (tính năng thử ảnh bìa của nền tảng là thứ thay đổi nhanh, cần src).",
+     "fix": "Gắn nhãn minh hoạ; nói rõ 'nếu nền tảng có công cụ thử ảnh bìa thì dùng, nếu không thì đổi ảnh bìa theo thời gian và so cùng nguồn, chấp nhận nhiễu'."
+    },
+    {
+     "sev": "P1",
+     "where": "Q7",
+     "quote": "Đồng ý, vì CTR là chỉ số chính để đo ảnh bìa trong mọi trường hợp",
+     "issue": "Nhiễu dùng từ tuyệt đối ('mọi trường hợp', Q7 c 'chắc chắn', Q1 a 'luôn', Q1 b 'luôn'); đáp án đúng luôn là câu cân bằng nhất — đoán được bằng hình thức.",
+     "fix": "Viết nhiễu có lý lẽ thật (ví dụ: 'CTR cao vẫn đáng giữ nếu mục tiêu tuần này là reach, không phải xem hết') để buộc cân nhắc mục tiêu."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) gắn nhãn minh hoạ, nêu công cụ/điều kiện thử ảnh bìa; (2) thêm phản ví dụ mục tiêu nhận biết (CTR cao hợp lý) và giới hạn 'chỉ so hai bản cùng video'; (3) đưa thêm chiều thứ ba: lượt xem × % xem ra tổng phút xem, nối với kn15-03; (4) đổi ít nhất hai câu quiz sang L4/L5: cho bảng 3 ảnh bìa với CTR, % xem, lượt đăng ký và hỏi chọn bản nào cho mục tiêu nào; (5) phần Áp dụng yêu cầu tính 'đơn vị xem' cho hai ảnh bìa gần nhất của chính kênh."
+  },
+  {
+   "id": "B:kn13-06",
+   "title": "300 bình luận một tuần: trả lời ai trước?",
+   "total": 65,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "phàn nàn và câu hỏi mua trong 2–4 giờ làm việc, khen trong 24 giờ",
+     "issue": "Hạn trả lời nêu như chuẩn mà không nói đây là mức gợi ý/giả định và không có nguồn hay cách tự đặt mức (từ thời điểm khách thường chốt, hay từ hạn của đối thủ).",
+     "fix": "Ghi 'mức gợi ý để bắt đầu; đo thời gian từ hỏi đến chốt của chính bạn rồi đặt hạn ngắn hơn khoảng đó'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) nhãn minh hoạ cho tỉ lệ và nguồn/giả định cho hạn trả lời; (2) thêm chỉ số đo quy trình bằng số và cách đếm; (3) thêm phản ví dụ: khi nào không trả lời (tài khoản troll lặp lại) và khi nào phải khoá bình luận một bài (khủng hoảng); (4) thêm ràng buộc nhân lực: 105 bình luận ưu tiên/tuần với 2 người = bao nhiêu phút/bình luận; (5) nối kn12 cho sự cố sức khoẻ."
+  }
+ ]
+}

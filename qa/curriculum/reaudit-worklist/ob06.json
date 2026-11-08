@@ -1,0 +1,25 @@
+{
+ "mod": "ob06",
+ "lessons": [
+  {
+   "id": "B:ob06-01",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "concept",
+     "quote": "các ước tính được báo chí dẫn lại thường ở mức trên 2/3 doanh số",
+     "issue": "Số liệu thị trường nêu như sự thật, không nguồn, không ngày; câu rào đón dài trong ngoặc đọc như đoạn vá.",
+     "fix": "Dẫn một báo cáo cụ thể (NielsenIQ/Kantar) có năm, hoặc bỏ con số và chỉ giữ nhận định định tính."
+    },
+    {
+     "sev": "P1",
+     "where": "concept/takeaway",
+     "quote": "Ngân sách phải đi theo nơi khách thật sự mua",
+     "issue": "Quy tắc chia ngân sách theo tỉ trọng sản lượng hiện tại bỏ qua lợi suất biên: kênh nhỏ còn dư địa có thể cho lãi tăng thêm cao hơn. Thiếu điều kiện làm khái niệm định lượng sai.",
+     "fix": "Thêm: so lãi tăng thêm trên mỗi đồng trưng bày ở từng kênh; tỉ trọng chỉ là điểm xuất phát."
+    }
+   ]
+  }
+ ]
+}

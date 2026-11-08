@@ -1,0 +1,50 @@
+{
+ "mod": "dl03",
+ "lessons": [
+  {
+   "id": "B:dl03-04",
+   "title": "Sau khi trả tiền quảng cáo, mỗi tháng thật sự còn lại bao nhiêu?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q3",
+     "quote": "sai hay gặp: [[40,\"QUEN_TRU_CHI_PHI_QC\"],[30,\"QUEN_CHI_PHI_BIEN_DOI\"],[3,\"QUEN_CHI_PHI_CO_DINH\"]]",
+     "issue": "Giá trị 3 triệu là kết quả của việc TRỪ THÊM 12 triệu chi phí cố định (lãi ròng), nhưng mã QUEN_CHI_PHI_CO_DINH hiện lời nhắc 'Quên chi phí cố định khi tính CAC' — ngược hướng với lỗi thật và nhắc sai chỉ số (CAC). Lời nhắc ôn sau 1/3/7 ngày sẽ dạy ngược.",
+     "fix": "Tạo mã mới (ví dụ TRU_CHI_PHI_CO_DINH_VAO_DONG_GOP: 'Trừ chi phí cố định vào lợi nhuận đóng góp') hoặc ghi lời giải riêng cho 3 triệu."
+    }
+   ],
+   "upgrade": "Sửa mã lỗi Q3 (ưu tiên); bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU gồm chi phí bậc thang; gắn nhãn minh hoạ; thay Q6 (L2 phân loại) bằng câu L4 so ba mức chi 25/35/45 với doanh thu 100/120/135 và hỏi mức nào tối đa đóng góp."
+  },
+  {
+   "id": "B:dl03-05",
+   "title": "ROAS 6 nhờ khách cũ — có nên khoe không?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Nền tảng vẫn gán đơn đó cho quảng cáo nếu họ lướt qua nó",
+     "issue": "Khẳng định về cách nền tảng gán đơn (view-through) nêu như sự thật chung, không nền tảng cụ thể, không cửa sổ, không src; gán theo lượt xem phụ thuộc cài đặt và không phải nền tảng nào cũng bật mặc định.",
+     "fix": "Viết 'với cài đặt gán mặc định của nhiều nền tảng (ví dụ 1 ngày sau khi xem), đơn của người chỉ lướt qua quảng cáo cũng được tính' và thêm src trang trợ giúp với ngày kiểm."
+    }
+   ],
+   "upgrade": "Gắn nhãn/nguồn cho cơ chế gán; thêm cảnh báo nhiễu và số đơn vào Q4; bổ sung VÌ SAO/PHẢN VÍ DỤ (khách ngủ đông)/ĐÀO SÂU (thiết kế holdout: chia ngẫu nhiên, thời lượng, chỉ số đo); thêm một câu calc thứ hai: lãi gộp tăng thêm so với chi (4 triệu × biên − chi nửa danh sách)."
+  },
+  {
+   "id": "B:dl03-06",
+   "title": "Ba nền tảng cùng nhận công — doanh thu thật ở đâu?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM / Q6",
+     "quote": "Họ cũng đếm lúc đặt hàng, chưa trừ đơn huỷ, hoàn hay không nhận khi giao COD · Bạn đổi cửa sổ gán của Facebook từ 1 ngày sang 7 ngày sau khi bấm",
+     "issue": "Bài thuộc lớp 'fast' (cách nền tảng gán đơn, cửa sổ gán, tên nền tảng thật) nhưng không có src với ngày kiểm và không có câu 'nếu màn hình khác, tin trang chính thức' như RUBRIC yêu cầu; cách đếm đơn của từng nền tảng và các cửa sổ gán khả dụng thay đổi theo thời gian.",
+     "fix": "Thêm src trang trợ giúp về cài đặt gán của Meta/TikTok/Google với ngày kiểm; viết 'tại thời điểm kiểm (tháng/năm) các cửa sổ gán khả dụng là…; nếu giao diện khác, tin trang chính thức'."
+    }
+   ],
+   "upgrade": "Thêm src và ngày kiểm cho mọi khẳng định về nền tảng (bắt buộc ở lớp fast); bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU về giới hạn ba cách kiểm; sửa mã lỗi Q3; thêm bảng đối soát 3 nền tảng + hệ thống + thực nhận."
+  }
+ ]
+}

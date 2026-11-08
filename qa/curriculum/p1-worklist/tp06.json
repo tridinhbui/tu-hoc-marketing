@@ -1,0 +1,35 @@
+{
+ "mod": "tp06",
+ "lessons": [
+  {
+   "id": "B:tp06-05",
+   "title": "Quảng cáo được nhớ, nhưng người xem có nhớ là của ai?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q4",
+     "quote": "hướng dẫn của TikTok khuyên đưa nội dung chính vào 3 giây đầu",
+     "issue": "Khẳng định về hướng dẫn của nền tảng nêu như sự thật, không có src, không ngày kiểm, không câu 'nếu tài liệu khác, tin trang chính thức'. Thuộc lớp fast theo rubric, bắt buộc có nguồn.",
+     "fix": "Thêm src tới trang TikTok for Business về creative best practices với ngày kiểm, hoặc bỏ tên nền tảng và viết 'trên video dạng lướt, phần lớn người xem quyết định ở vài giây đầu'."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) thêm src cho khẳng định TikTok hoặc bỏ tên nền tảng; (2) thay Q6 bằng câu L4/L5 cân giữa xem hết và nối tên; (3) sửa câu '70% công sức'; (4) đào sâu nối tới tài sản nhận diện (distinctive assets) với cách đo nhanh (cho xem màu/âm thanh che logo, hỏi hãng nào); (5) bài thực hành: kịch bản 30 giây đánh dấu giây xuất hiện của sản phẩm, tên, màu."
+  },
+  {
+   "id": "B:tp06-06",
+   "title": "Khách thích hãng đối thủ hơn — vậy vì sao họ vẫn mua của bạn?",
+   "total": 64,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q4",
+     "quote": "Một hãng nước mắm có điểm yêu thích cao nhất ngành nhưng thị phần chỉ đứng thứ tư. Giả thuyết nào nên kiểm tra trước?",
+     "issue": "Hai phương án bênh được: c) 'Giá của hãng cao hơn đối thủ quá nhiều' là giả thuyết kinh điển cho hãng được yêu thích nhưng thị phần thấp (hãng cao cấp), lời giải cũng thừa nhận 'Giá là một khả năng'. Đáp án d chỉ đúng khi đã chấp nhận khung của bài; đề không cho dữ kiện loại trừ giá (ví dụ giá ngang đối thủ).",
+     "fix": "Thêm dữ kiện vào đề: 'giá bán ngang ba hãng dẫn đầu' để loại c, hoặc đổi c thành giả thuyết rõ ràng yếu hơn."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa Q4 cho một đáp án; (2) thay Q5, Q7 bằng câu chẩn đoán bảng và câu đánh đổi giữa hai trường phái; (3) thêm phản ví dụ nơi yêu thích mới là động lực (hãng muốn giữ giá cao, mua ít lần); (4) nêu lệch mẫu của khảo sát 'đi ngang'; (5) thêm src và liên kết tới bài về độ sẵn có vật lý (phân phối) nếu có."
+  }
+ ]
+}

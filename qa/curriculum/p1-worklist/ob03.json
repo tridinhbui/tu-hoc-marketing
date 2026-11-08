@@ -1,0 +1,139 @@
+{
+ "mod": "ob03",
+ "lessons": [
+  {
+   "id": "B:ob03-02",
+   "title": "Ngành to hay ngành đang lớn — nên vào đâu?",
+   "total": 80,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "nghiên cứu hành vi mua (quy luật Double Jeopardy, Ehrenberg – Sharp) nhắc rằng hãng nhỏ luôn ít khách và ít được mua lại",
+     "issue": "Nêu tên nghiên cứu/quy luật như sự thật nhưng không có `src`; chữ 'luôn' tuyệt đối hoá một quy luật thống kê (có ngoại lệ niche brands). Người học không có đường kiểm.",
+     "fix": "Thêm src (Sharp, How Brands Grow, 2010; Ehrenberg et al. 1990) và sửa 'luôn' thành 'hầu như luôn, trừ hãng ngách'."
+    },
+    {
+     "sev": "P1",
+     "where": "Q1",
+     "quote": "Ngành B, vì tiền mới không kém xa A và khách chưa gắn hãng",
+     "issue": "Lời giải tự thêm điều kiện 'với điều kiện giành được phần tăng ngang A', trong khi ví dụ cho thấy chỉ cần giành 1% ở B là B thua A — bài dạy 'phải tìm bằng chứng cho giả định trước khi chọn' nhưng Q1 lại chốt một đáp án. Đáp án đoán được: phương án duy nhất chọn B.",
+     "fix": "Đổi đề thành 'Với dữ kiện này, kết luận nào là đúng mức?' và đáp án 'Chưa chọn được; cần ước phần giành được ở mỗi ngành — ngưỡng hoà là 1,33% ở B so với 1% ở A'."
+    }
+   ],
+   "upgrade": "Thêm src cho Double Jeopardy và bỏ 'luôn'; viết lại Q1 thành câu 'kết luận đúng mức' thay vì chốt ngành B; thay Q7 bằng câu đọc chuỗi tăng trưởng 3 năm; thêm phản ví dụ ngắn (ngành nhỏ tăng nhanh nhưng 80% tiền mới do một hãng ngoại nắm kênh) và đánh đổi thời gian hoàn vốn; ÁP DỤNG nên yêu cầu ghi nguồn và năm của hai con số tìm được."
+  },
+  {
+   "id": "B:ob03-03",
+   "title": "Khách mua bao lâu một lần, mỗi lần bao nhiêu?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "họ hay mua luân phiên vài hãng",
+     "issue": "Khẳng định hành vi (repertoire buying) nêu như sự thật, không nguồn, không gắn nhãn; là nền cho Q4 nhưng người học không có đường kiểm.",
+     "fix": "Thêm 'theo các nghiên cứu panel mua hàng (Ehrenberg)' kèm src, hoặc gắn nhãn 'quan sát phổ biến ở FMCG'."
+    }
+   ],
+   "upgrade": "Gắn nguồn/nhãn cho 'mua luân phiên'; thêm số vào ví dụ (cửa sổ mua, chi phí vắng kệ 1 tháng) và gắn nhãn minh hoạ; thay Q4 bằng câu đọc bảng mua lặp (L4); thêm phản ví dụ và đánh đổi (nhắc mua lại quá dày làm khách khó chịu); ÁP DỤNG kết bằng quyết định: với một sản phẩm, chọn đánh vào tần suất hay giá trị đơn và nêu một chỉ số đo."
+  },
+  {
+   "id": "B:ob03-04",
+   "title": "Khách mua theo thói quen hay mua sau khi cân nhắc?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Lưới FCB (Richard Vaughn, 1980) xếp sản phẩm theo mức dấn thân và theo việc khách mua bằng lý trí hay cảm xúc.",
+     "issue": "Nêu tên mô hình và tác giả nhưng không có `src`; trục cảm xúc/lý trí được nhắc rồi bỏ, không dùng trong ví dụ hay câu hỏi.",
+     "fix": "Thêm src (Vaughn, Journal of Advertising Research, 1980) và một câu ví dụ trục thứ hai (kem chống nắng: dấn thân vừa, cảm xúc + lý trí)."
+    },
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Chung một kịch bản cho cả hai là phí một nửa ngân sách.",
+     "issue": "Khẳng định định lượng ('một nửa') không có phép tính nào đỡ; ví dụ hoàn toàn định tính, không có số về tỉ lệ xem hết video, thời gian quyết định, hay ngân sách.",
+     "fix": "Thay bằng 'phí phần ngân sách rót vào bên không khớp' hoặc cho số: video 3 phút nước mắm xem hết 4% vs 38% với xe điện (số minh hoạ)."
+    }
+   ],
+   "upgrade": "Thêm src FCB và dùng trục cảm xúc/lý trí ít nhất một lần; đưa 3 chỉ báo đo mức dấn thân vào phần đọc và một bảng số minh hoạ (thời gian quyết, % đọc đánh giá) để ví dụ có số; bỏ 'phí một nửa'; thay Q3/Q6 bằng câu xếp sản phẩm theo bảng chỉ báo (L4) và câu thiết kế phép đo mức dấn thân cho sản phẩm của mình (L6)."
+  },
+  {
+   "id": "B:ob03-05",
+   "title": "Ai dẫn đầu ngành, và họ dẫn đầu nhờ đâu?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "TÌNH HUỐNG / VÍ DỤ",
+     "quote": "19 nơi có Vinamilk, 12 nơi có TH true MILK, 5 nơi có hãng khác … Vinamilk có mặt 19/20 tạp hoá = 95%; TH 12/20 = 60%",
+     "issue": "Hai thương hiệu thật gắn với số độ phủ tự đặt, không gắn nhãn minh hoạ (khác với 01, 02, 08 cùng khoá đã gắn). Người học có thể dẫn lại '95% / 60%' như số liệu thật. 'Vinamilk dẫn đầu' sữa tươi cũng là khẳng định thị trường không nguồn và sẽ cũ (periodic).",
+     "fix": "Thêm '(số đếm minh hoạ, không phải khảo sát thật)' và src cho vị trí dẫn đầu (vd báo cáo ngành có ngày), hoặc đổi thành hãng V/T."
+    }
+   ],
+   "upgrade": "Gắn nhãn minh hoạ cho số đếm và thêm nguồn có ngày cho vị trí dẫn đầu (hoặc ẩn tên hãng); thêm số cho đề xuất phủ dày (số tạp hoá/quận, chi phí/điểm, mốc thời gian); thêm phản ví dụ (ngành mà quảng cáo thật sự là nguồn chính, vd nước tăng lực) và đánh đổi của 'đánh vào kênh hãng lớn yếu' (kênh nhỏ, phí cao); thay Q1 bằng nhiễu khó hơn."
+  },
+  {
+   "id": "B:ob03-06",
+   "title": "Ngành này để lại bao nhiêu lãi trên mỗi đồng bán ra?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Mỹ phẩm, đồ uống có thương hiệu thường có biên gộp cao … Gạo, xăng, điện tử phổ thông có biên gộp thấp",
+     "issue": "Benchmark biên gộp theo ngành nêu không số, không nguồn, không ngày; ví dụ 70% vs 12% không gắn nhãn minh hoạ nên dễ bị nhớ như 'biên điển hình'.",
+     "fix": "Gắn nhãn '(số minh hoạ)' cho 70%/12% và thêm src một bảng biên gộp theo ngành (vd dữ liệu Damodaran hoặc báo cáo tài chính công khai của một hãng VN) với ngày kiểm."
+    }
+   ],
+   "upgrade": "Gắn nhãn minh hoạ và thêm nguồn có ngày cho biên theo ngành; viết lại Q6 với lời giải riêng từng nhiễu; thay Q1 bằng câu đọc báo cáo rút gọn (L4); thêm phản ví dụ (ngành biên thấp nhưng vẫn cần thương hiệu: gạo đóng túi cao cấp) và đánh đổi 'tăng biên bằng thương hiệu vs tăng khối lượng' có số; ÁP DỤNG nên yêu cầu tính trần ngân sách cho một doanh nghiệp giả định."
+  },
+  {
+   "id": "B:ob03-07",
+   "title": "Ngành của bạn bán mạnh vào tháng nào?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "TÌNH HUỐNG",
+     "quote": "tháng trước Tết âm lịch chiếm 35% doanh số cả năm, dịp Trung thu chiếm thêm 15%",
+     "issue": "Tỉ trọng mùa vụ bánh kẹo nêu như số liệu năm ngoái, không gắn nhãn minh hoạ (Q7 có ghi minh hoạ cho 40% nhưng 35%/15% thì không); khái niệm yêu cầu 'tính từ ít nhất ba năm' nhưng ví dụ chỉ dùng một năm.",
+     "fix": "Ghi '(số minh hoạ)' và cho bảng 3 năm (vd 33%, 36%, 35%) để minh hoạ chính yêu cầu của bài."
+    }
+   ],
+   "upgrade": "Gắn nhãn số và cho bảng 3 năm để tính chỉ số mùa vụ thật; thêm cách tự đo tuần khởi phát; thêm phản ví dụ (ngành có mùa vụ giả do chính khuyến mãi của hãng tạo ra) và đánh đổi dòng tiền khi dồn 4,2 tỉ vào 6 tuần; thay Q4 bằng câu đọc bảng CPM theo tuần (L4); ÁP DỤNG kết bằng bảng phân bổ 12 tháng cho một ngành tự chọn."
+  },
+  {
+   "id": "B:ob03-08",
+   "title": "Khách của ngành này mua ở đâu nhiều nhất?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Nếu giành 2% kênh tạp hoá, bạn có 120 tỉ, nhưng cần đội bán hàng và nhà phân phối. … Quyết định đúng: xây kênh tạp hoá từng vùng",
+     "issue": "So 100 tỉ (online) với 120 tỉ (tạp hoá) rồi kết luận 'đúng' mà không trừ chi phí kênh: chiết khấu nhà phân phối, đội bán hàng, công nợ (bài 09 cùng khoá nói chiết khấu 25–30%). Thiếu giả định làm kết quả có thể đổi.",
+     "fix": "Thêm một dòng: 'trừ chiết khấu 20% và chi phí đội bán 15 tỉ, tạp hoá còn ~81 tỉ; online trừ phí sàn 15% còn 85 tỉ — gần nhau, nên quyết định phải dựa vào khả năng giành 2% thật sự và kênh nào bền hơn'."
+    }
+   ],
+   "upgrade": "Trừ chi phí kênh trong ví dụ để quyết định có cơ sở (và nối sang 09); thêm src có ngày cho tỉ trọng kênh; thay Q6 bằng câu tự ước lượng từ facing (L4); thêm phản ví dụ (ngành kênh chính đang dịch: hoá mỹ phẩm sang livestream) và đánh đổi 'kênh lớn nhưng chậm/ công nợ vs kênh nhỏ nhưng tiền về nhanh'; ÁP DỤNG kết bằng bảng kênh × tỉ trọng × chi phí kênh."
+  },
+  {
+   "id": "B:ob03-09",
+   "title": "Vì sao ngành trông dễ làm nhưng người mới hay thua?",
+   "total": 80,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Porter (1979, Harvard Business Review) xếp mối đe doạ từ người mới vào làm một trong năm lực cạnh tranh của ngành.",
+     "issue": "Trích nguồn đúng nhưng không có `src` bấm được; 'các hãng lớn chi hàng trăm tỉ mỗi năm cho quảng cáo và khuyến mãi' là khẳng định số về thị trường thật không nguồn.",
+     "fix": "Thêm src HBR 1979 (hoặc bản 2008) và sửa 'hàng trăm tỉ' thành 'ngân sách lớn hơn vốn của bạn nhiều lần (kiểm báo cáo tài chính công khai)'."
+    }
+   ],
+   "upgrade": "Thêm src Porter và sửa khẳng định 'hàng trăm tỉ'; tính chi phí có khách online để kết luận 'cửa vào' có số; thay Q7 bằng câu tính vốn lưu động kẹt trong công nợ (L4); thêm phản ví dụ (ngành rào cản thấp nhưng vẫn có lãi nhờ địa phương/ngách) và đánh đổi của cửa vào online (chậm, phụ thuộc nền tảng)."
+  }
+ ]
+}

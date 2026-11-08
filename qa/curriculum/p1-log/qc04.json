@@ -1,0 +1,64 @@
+{
+ "mod": "qc04",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:qc04-01",
+   "where": "Khái niệm (3) và Q6",
+   "status": "needs-human",
+   "change": "Hedge câu (3) “theo tài liệu chính sách của Meta tại ngày kiểm; quy định nào áp cho quảng cáo nhắm Việt Nam thì kiểm trên trang chính thức”; đề Q6 thành “Theo tài liệu Meta về danh mục quảng cáo đặc biệt (tại ngày kiểm)…”; lời giải d thêm “Quốc gia nào bắt buộc khai thì kiểm trên trang chính thức”; thêm src Meta Business Help: Special Ad Categories (search, st:chua).",
+   "key_changed": false,
+   "note": "Không tự xác minh được phạm vi quốc gia. Câu hỏi cho người thật: Meta có bắt buộc khai danh mục quảng cáo đặc biệt “Việc làm” cho quảng cáo tuyển dụng nhắm Việt Nam không (hay chỉ Mỹ/Canada/EU…)? Nếu không, thay Q6 (khoá d) bằng câu về chính sách sức khoẻ có nguồn."
+  },
+  {
+   "id": "B:qc04-01",
+   "where": "Q2 lời giải b",
+   "status": "fixed",
+   "change": "Thêm src Meta Marketing API: Custom Audience (giới hạn sức khoẻ/tài chính từ 2/9/2025) vào bài 01; lời giải b thành “Theo tài liệu Marketing API của Meta (xem nguồn; chi tiết ở bài nhắm đối tượng), tệp gợi ý tình trạng sức khoẻ bị gắn cờ và chặn dùng từ 2/9/2025”.",
+   "key_changed": false,
+   "note": ""
+  },
+  {
+   "id": "B:qc04-02",
+   "where": "Khái niệm và Q1",
+   "status": "fixed",
+   "change": "Khái niệm: danh sách phương thức thanh toán ghi “theo trích đoạn trang trợ giúp thanh toán của Meta tại ngày kiểm” + câu “Nếu màn hình Thanh toán của bạn khác, tin trang chính thức”; lời giải Q1c dựa trước tiên vào lý do chắc hơn (tiền tệ không đổi dễ dàng sau khi tạo) rồi mới tới MoMo/VNPay “theo trang trợ giúp tại ngày kiểm; kiểm lại trong phần Thanh toán”.",
+   "key_changed": false,
+   "note": "Giữ khoá c. Nên có người dùng tài khoản VND chụp phần Thanh toán để nâng src lên st:doc."
+  },
+  {
+   "id": "B:qc04-04",
+   "where": "Khái niệm và Q6",
+   "status": "needs-human",
+   "change": "Khái niệm thêm “(quốc gia bắt buộc khai: kiểm trang chính thức)”; đề Q6 thêm “Theo tài liệu Meta nêu trong bài”; lời giải c ghi “theo tài liệu Meta về danh mục đặc biệt tại ngày kiểm… Quốc gia nào bắt buộc khai thì kiểm trên trang chính thức”; thêm src Special Ad Categories (search, st:chua) và câu “nếu màn hình khác, tin trang chính thức” ở Đào sâu.",
+   "key_changed": false,
+   "note": "Cùng câu hỏi như B:qc04-01: danh mục đặc biệt “Việc làm” có bắt buộc với quảng cáo tuyển dụng nhắm Việt Nam không? Nếu không, khoá c của Q6 sai và cần viết lại câu (có thể dựa vào chính sách chống phân biệt đối xử của Meta nếu có nguồn)."
+  },
+  {
+   "id": "B:qc04-04",
+   "where": "Khái niệm (1)",
+   "status": "fixed",
+   "change": "“Meta gọi phần tự mở rộng là Advantage+ audience (tên hiển thị kiểm trong tài khoản)” → “phần tự mở rộng đối tượng có tên trên màn hình là Advantage+ audience (theo tài liệu Meta tại ngày kiểm)”; thêm src Meta Business Help: Advantage+ audience (search, st:chua).",
+   "key_changed": false,
+   "note": ""
+  },
+  {
+   "id": "B:qc04-05",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "Thêm câu kiểu giá thầu theo giá trị cho chiến dịch Sales (nhiều giá trị nhất, mục tiêu ROAS); Đào sâu thêm “Tên vị trí, ngân sách cấp chiến dịch và kiểu giá thầu trong bài theo tài liệu Meta tại ngày kiểm; nếu màn hình khác, tin trang chính thức”; thêm 3 src (search, st:chua): bid strategies, Advantage campaign budget, Advantage+ placements.",
+   "key_changed": false,
+   "note": ""
+  },
+  {
+   "id": "B:qc04-07",
+   "where": "Toàn bài",
+   "status": "fixed",
+   "change": "Thêm src giai đoạn học (chỉnh sửa lớn, gồm thêm quảng cáo mới, st:chua) và Advantage+ sales campaigns (search, st:chua); Đào sâu thêm câu “theo tài liệu Meta tại ngày kiểm; nếu màn hình khác, tin trang chính thức”; lời giải Q6a dẫn “Theo trang giai đoạn học của Meta, thêm quảng cáo mới vào nhóm là chỉnh sửa lớn”.",
+   "key_changed": false,
+   "note": ""
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

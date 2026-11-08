@@ -1,0 +1,18 @@
+{
+ "mod": "dl07",
+ "lessons": [
+  {
+   "id": "B:dl07-01",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q7 (vì của a và b)",
+     "quote": "chỉ khi khách đăng nhập và web gửi mã người dùng thì mới gộp được",
+     "issue": "GA4 còn gộp thiết bị qua Google signals/định danh hỗn hợp (blended); \"chỉ khi\" là khẳng định nền tảng sai mức độ, không có nguồn đã kiểm.",
+     "fix": "Đổi thành \"mặc định thường tách; GA4 có thể gộp khi có User-ID hoặc Google signals tuỳ cài đặt danh tính báo cáo — xem trang chính thức\"."
+    }
+   ]
+  }
+ ]
+}

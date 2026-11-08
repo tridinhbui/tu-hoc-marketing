@@ -1,0 +1,72 @@
+{
+ "mod": "dl08",
+ "lessons": [
+  {
+   "id": "B:dl08-01",
+   "title": "Fanpage tăng 20.000 follower, sao đơn hàng vẫn đứng yên?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "A đổi người theo dõi thành người mua tốt hơn B rất nhiều",
+     "issue": "Đề chỉ cho tổng đơn của shop (400 và 350), không nói đơn đến từ fanpage; đáp án ngầm coi mọi đơn là từ follower — mâu thuẫn với chính luận điểm của bài rằng follower và người mua là hai tập khác nhau. Phương án d ('chưa thể rút ra nhận định') bênh được một phần.",
+     "fix": "Sửa đề: 'Tháng này A có 400 đơn đến từ fanpage, B có 350 đơn từ fanpage' và sửa d thành phương án rõ sai."
+    }
+   ],
+   "upgrade": "Sửa đề Q6 để đơn gắn với fanpage; sửa lời giải Q1 và nhiễu Q5. Gắn nhãn số minh hoạ và nói độ bất định của 12 đơn. Thêm vào VÍ DỤ phép tính 'đơn từ fanpage trên 100 follower' cho tệp cũ (60 đơn/tuần ÷ 5.000) để có hai tỉ lệ so trực tiếp. Thêm câu L4 đọc bảng follower theo tỉnh và tin nhắn theo tỉnh."
+  },
+  {
+   "id": "B:dl08-02",
+   "title": "Video 1 triệu view, nhưng bao nhiêu người xem tới đoạn nói về sản phẩm?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1",
+     "quote": "TikTok, Reels và YouTube đều có biểu đồ giữ chân theo từng giây",
+     "issue": "Khẳng định tính năng nền tảng (fast) nêu như sự thật, không `src`, không câu 'nếu màn hình khác, tin trang chính thức'; tính năng và độ chi tiết khác nhau giữa nền tảng và thay đổi theo thời gian.",
+     "fix": "Thêm src trang trợ giúp từng nền tảng với ngày kiểm; viết 'tại thời điểm kiểm, ba nền tảng đều có biểu đồ giữ chân'."
+    },
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "một lượt xem được đếm rất sớm, có khi chỉ vài giây. Người lướt qua cũng tính là một view",
+     "issue": "Quy tắc đếm view là chính sách nền tảng (TikTok đếm khi bắt đầu phát, nền tảng khác khác nhau) — nêu chung không nguồn. Đây là khẳng định nền tảng không gắn nhãn.",
+     "fix": "Ghi 'mỗi nền tảng định nghĩa view khác nhau, thường tính từ 0–3 giây đầu (xem src)'; thêm src."
+    }
+   ],
+   "upgrade": "Thêm src cho hai khẳng định nền tảng và câu 'nếu màn hình khác…'. Tính chi phí mỗi người thấy sản phẩm trong ví dụ để Q7 có nền. Gắn nhãn số. Thêm câu L4 đọc đường giữ chân 4 điểm (giây 0/3/15/30) của hai video và chỉ chỗ sụt."
+  },
+  {
+   "id": "B:dl08-05",
+   "title": "Doanh thu Tết tăng 40%, sao cuối quý lại lỗ?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "TÌNH HUỐNG ↔ VÍ DỤ",
+     "quote": "tháng đó shop lỗ gần 20 triệu",
+     "issue": "Ví dụ chỉ tính tới lãi 40.000 đ/hộp (vẫn dương) và không có dòng chi quảng cáo hay freeship riêng, nên người học không thể dựng lại con số lỗ 20 triệu từ bài; tình huống và ví dụ kể hai câu chuyện khác nhau (lãi mỏng vs lỗ).",
+     "fix": "Thêm số hộp và chi quảng cáo: ví dụ 1.400 hộp × 40.000 = 56 triệu lãi biến đổi − 76 triệu quảng cáo + freeship = −20 triệu."
+    }
+   ],
+   "upgrade": "Thêm dòng số hộp, chi quảng cáo, freeship để dựng lại khoản lỗ 20 triệu — nối tình huống với ví dụ. Gắn nhãn giả định phí sàn. Thống nhất thuật ngữ 'lãi sau chi phí biến đổi và marketing' với 'lợi nhuận đóng góp' ở dl07-10. Thêm câu L4 đọc bảng 3 mức giảm (10/15/25%) với số hộp cần và số hộp thực tế."
+  },
+  {
+   "id": "B:dl08-06",
+   "title": "Email có tỉ lệ mở 45%, sao không ai đặt hàng?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ / Q2",
+     "quote": "Tỉ lệ mở tăng hơn gấp đôi, nhưng mỗi email đem về ít tiền hơn 60%. Chuỗi quay lại tiêu đề nói rõ ưu đãi",
+     "issue": "So hai tháng khác nhau (nội dung, ưu đãi, thời điểm đều có thể đổi) rồi quy toàn bộ mức giảm cho tiêu đề; chính KHÁI NIỆM nói doanh thu/email 'gộp cả tiêu đề, nội dung, ưu đãi và trang đích'. Thiếu giả định 'các yếu tố khác không đổi' nên kết luận có thể sai; Q2 đáp án 'so … trên cùng tệp' chưa đủ — cần chia tệp A/B cùng lúc.",
+     "fix": "Ghi rõ giả định; sửa Q2 đáp án thành 'chia đôi tệp cùng lần gửi, chỉ đổi tiêu đề, so doanh thu mỗi email'."
+    }
+   ],
+   "upgrade": "Sửa ví dụ và Q2 theo hướng A/B chia tệp cùng lần gửi; nêu giả định khi so hai tháng. Thêm src cho mở tự động. Gắn nhãn số. Thay Q4 bằng câu chẩn đoán từ bảng. Thêm vào ĐÀO SÂU một phép tính tần suất: 4 → 6 email/tháng, doanh thu/email giảm từ 187 → 140 — tổng có tăng không?"
+  }
+ ]
+}

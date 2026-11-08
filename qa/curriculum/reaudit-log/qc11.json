@@ -1,0 +1,16 @@
+{
+ "mod": "qc11",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:qc11-02",
+   "where": "Khái niệm / Ví dụ / Q4 / Q7",
+   "status": "fixed",
+   "change": "Đổi mẫu số hoà vốn từ lãi gộp sang biên đóng góp: khái niệm “MER hoà vốn (1 ÷ tỉ lệ lãi gộp)” → “1 ÷ biên đóng góp % (sau giá vốn, ship, phí cổng và hàng hoàn, như ROAS hoà vốn ở bài B:qc02-04)”. Ví dụ: lãi gộp 45%, trừ ship + phí cổng + hàng hoàn giả định 5% doanh thu → biên đóng góp 40%; MER hoà vốn 2,2 → 2,5; lãi tổng 31,5 → 18 triệu; khách mới: MER 2,25 “sát hoà vốn, lãi 1,1 triệu” → “dưới hoà vốn 2,5, lỗ 202,5 × 40% − 90 = −9 triệu (chưa tính mua lại)”, quyết định “giữ chi” → “chưa tăng chi, kiểm khách mới theo kênh trước”. Q4: đề nêu lãi gộp 45% và biên đóng góp 40%; ans 2,2 → 2,5; wrong [[0,5]] → [[2,2,QUEN_CHI_PHI_BIEN_DOI],[0,4,SAI_TINH_TOAN]]; bước giải nói rõ vì sao dùng biên đóng góp. Q7 đề: “hoà vốn 2,2” → “2,5”. Thêm B:qc02-04 vào rel. Bỏ “(ROAS gộp 4,5)” trong ví dụ và rút gọn vài câu để ví dụ dưới 170 chữ.",
+   "key_changed": true,
+   "note": "Đáp án calc Q4 đổi 2,2 → 2,5 vì đổi sang biên đóng góp (đáp án cũ dựa trên lãi gộp, bỏ qua chi phí biến đổi, khác qc02-04). Dấu kết luận khách mới đổi từ lãi 1,1 triệu sang lỗ 9 triệu; kết luận tổng thể vẫn có lãi (MER 3 > 2,5), Q7 đáp án b không đổi. Kiểm “ROAS 4,5” trong tình huống: không lộ đáp án Q3 (đáp án 3); 4,5 là bẫy có chủ ý trùng giá trị sai hay gặp của Q3 và được lời giải Q3 giải thích, nên giữ tình huống; bỏ cụm “ROAS gộp 4,5” ở ví dụ để chữ “gộp” không lẫn với lãi gộp."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

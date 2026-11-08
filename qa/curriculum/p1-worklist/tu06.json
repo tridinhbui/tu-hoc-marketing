@@ -1,0 +1,50 @@
+{
+ "mod": "tu06",
+ "lessons": [
+  {
+   "id": "B:tu06-02",
+   "title": "Chi phí mỗi đơn tăng: do quảng cáo mỏi hay thị trường đã đổi?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q6 lời giải",
+     "quote": "Trên nhiều nền tảng (như Meta, khi tắt quá 7 ngày) hệ thống phải học lại",
+     "issue": "Khẳng định cách nền tảng vận hành với con số cụ thể (7 ngày) nhưng bài không có src, không có ngày kiểm, không có câu \"nếu màn hình khác, tin trang chính thức\". Nội dung thuộc lớp fast nhưng không được đánh dấu.",
+     "fix": "Thêm src tới trang trợ giúp Meta về giai đoạn học (learning phase) kèm ngày kiểm, hoặc bỏ số 7 ngày và viết \"tuỳ nền tảng, tắt lâu có thể buộc học lại — kiểm tài liệu chính thức\"."
+    }
+   ],
+   "upgrade": "Thêm src cho khẳng định học lại của Meta hoặc bỏ số 7 ngày; gắn nhãn minh hoạ và quy mô mẫu cho ví dụ; thay Q6/Q7 bằng một câu đọc bảng 4 creative × 3 chỉ số và hỏi creative nào mỏi, creative nào gặp thị trường đổi (L4), và một câu đánh đổi chi phí làm video mới vs lỗ thêm trong lúc chờ."
+  },
+  {
+   "id": "B:tu06-04",
+   "title": "Tắt một phát hay giảm dần ngân sách?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "mỗi nấc cắt khoảng 20–30% để hệ thống ổn định lại rồi đo",
+     "issue": "Benchmark vận hành nêu như quy tắc, không nguồn, không gắn nhãn kinh nghiệm; Q2 chấm đúng/sai dựa trên khoảng này (\"12 xuống 9 triệu là −25%, trong khoảng 20–30%\").",
+     "fix": "Ghi \"(mốc kinh nghiệm của người viết; nền tảng thường khuyến nghị thay đổi ngân sách vừa phải — kiểm tài liệu chính thức)\" và nêu lý do cơ chế: cắt nhỏ để tách tác động của nấc cắt khỏi nhiễu ngày."
+    }
+   ],
+   "upgrade": "Gắn nhãn kinh nghiệm cho 20–30%; thêm Vì sao / Phản ví dụ (nhiễu tuần) / Đào sâu (thử ngân sách song song); thay Q5 bằng câu đọc bảng 3 mức ngân sách; nói rõ cách đọc số sau mỗi nấc (so lãi gộp trên mỗi 1 triệu, không so tổng đơn)."
+  },
+  {
+   "id": "B:tu06-07",
+   "title": "Muốn dừng chiến dịch nhưng đã ký hợp đồng với KOL?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q4 các bước",
+     "quote": "Chi phí kỳ vọng = 25% × 34 = 8,5 triệu, so với tiết kiệm 12 triệu: chênh lợi nhỏ (3,5 triệu)",
+     "issue": "Hai vế so khác mốc. Tiết kiệm 12 triệu tính so với trả đủ 80 triệu theo đợt; nhưng nếu dừng giữa chừng theo đợt thì không phải trả 40 triệu nửa sau, nên phần mất quyền dừng so với phương án trả theo đợt là 25% × 40 = 10 triệu, chênh lợi thật là 2 triệu (kỳ vọng trả trước 68 vs trả theo đợt 0,75 × 80 + 0,25 × 40 = 70). Đáp án 8,5 vẫn đúng theo định nghĩa trong đề (\"phần trả trước chưa làm\"), nhưng lời giải so sánh thiếu giả định làm con số kết luận đổi.",
+     "fix": "Viết lại bước cuối: \"So với trả theo đợt: kỳ vọng trả trước 68 triệu, trả theo đợt 0,75 × 80 + 0,25 × 40 = 70 triệu — trả trước lợi 2 triệu, đổi lấy mất quyền điều chỉnh.\""
+    }
+   ],
+   "upgrade": "Sửa lời giải Q4 về cùng mốc so sánh; tách công thức khái niệm thành ba dòng; thêm Phản ví dụ (bê bối) và Đào sâu (cách ước giá trị gián tiếp); gắn mã lỗi riêng cho bốn giá trị sai; thêm một câu L5 cân hai phương án khi giá trị gián tiếp ước trong khoảng 10–25 triệu."
+  }
+ ]
+}

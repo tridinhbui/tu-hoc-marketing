@@ -1,0 +1,94 @@
+{
+ "mod": "gt04",
+ "lessons": [
+  {
+   "id": "B:gt04-01",
+   "title": "Mười việc trên bảng, đội chỉ đủ sức làm ba: chọn thế nào?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "mỗi tháng khoảng 300 lượt bấm chỉ đường, thêm ảnh tăng 10% thì được chừng 30 khách mới",
+     "issue": "Đồng nhất 'lượt bấm chỉ đường tăng thêm' với 'khách mới ghé' (bỏ qua tỉ lệ đến quán thật và khách cũ bấm lại); phép nhân thô được chính bài khuyên nhưng giả định không được nêu, kết quả 5 khách/giờ ở Q6 dựa trên số này.",
+     "fix": "Ghi: 30 lượt bấm thêm × ~60% đến quán × ~70% là khách mới ≈ 13 khách; nói rõ đây là ước lượng ba tầng, mỗi tầng là giả định."
+    },
+    {
+     "sev": "P1",
+     "where": "Q4",
+     "quote": "Thuê ê-kíp quay phim thương hiệu 5 phút, đăng fanpage toàn khách quen theo dõi",
+     "issue": "Đáp án dài nhất và tự chứa cả hai manh mối ('thuê ê-kíp' = công sức cao, 'toàn khách quen' = tác động thấp); ba phương án sai đều ngắn và rõ ràng là việc tốt. Đoán được không cần hiểu ma trận.",
+     "fix": "Viết 4 việc có độ dài tương đương, mỗi việc chỉ lộ một trục; ví dụ thêm 'Làm thẻ thành viên 40 giờ' (tác động thấp với mục tiêu này nhưng không lộ chữ 'khách quen')."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) tách phép ước thành ba tầng có giả định; (2) viết lại Q4 cân độ dài; (3) thêm Phản ví dụ/Đào sâu (việc bắt buộc, việc phụ thuộc); (4) thêm câu L5: TikTok ước 40 khách nhưng độ chắc 30% so với Maps 13 khách chắc 80% — chọn gì với 60 giờ và biện hộ."
+  },
+  {
+   "id": "B:gt04-04",
+   "title": "Một nhóm nhỏ khách mang về phần lớn doanh thu: dồn sức vào đâu?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q4",
+     "quote": "Kế hoạch giảm rủi ro tập trung: giữ quan hệ sâu và phát triển thêm khách lớn khác",
+     "issue": "Đáp án dài nhất và duy nhất có cấu trúc 'kế hoạch: … và …'; ba phương án sai đều cực đoan (giảm giá thật sâu / không cần làm gì / chuyển sang tự phục vụ). Đoán được bằng hình thức.",
+     "fix": "Thêm phương án sai hợp lý nhưng lệch: 'Ký hợp đồng dài hạn kèm chiết khấu thêm 5% để khoá khách' (giữ được nhưng ăn vào biên) và rút gọn a."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) cân phương án Q4; (2) thêm Đào sâu về chi phí phục vụ theo giờ và Phản ví dụ về xếp theo tiềm năng; (3) đổi Q3 sang tính tỉ lệ lãi tập trung; (4) thêm câu L6: thiết kế quy tắc nâng/hạ hạng khách theo quý (ngưỡng tăng đơn, số lần)."
+  },
+  {
+   "id": "B:gt04-05",
+   "title": "Việc tốt nhưng không quan trọng: nói \"không\" sao cho người ta vẫn nghe?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1, Q5, Q6",
+     "quote": "Bộ hướng dẫn rất cần; nhận thêm thì ra mắt chậm 2 ngày. Chị dùng tạm 8 ảnh có sẵn, mình làm bộ mới sau ra mắt",
+     "issue": "Ở cả ba câu Q1, Q5, Q6 đáp án đúng là phương án dài nhất (vì phải chứa đủ 'ghi nhận – cái giá – lựa chọn'); người học học được mẹo 'chọn câu đủ ba mảnh = dài nhất' thay vì phán đoán.",
+     "fix": "Viết phương án sai cũng đủ dài và đủ ba mảnh nhưng sai cái giá hoặc sai mốc (ví dụ hẹn 'khi nào rảnh', hoặc cái giá nói bằng giờ của đội thay vì bằng ngày trễ của người nghe)."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) viết phương án sai dài ngang đáp án ở Q1/Q5/Q6; (2) dẫn phép suy cho 'trễ 2 tuần' và đưa 80%/96 giờ vào ví dụ; (3) thêm một câu L6: soạn email 5 dòng ghi lại hai phương án kèm hệ quả cho sếp tổng; (4) thêm 'danh sách yêu cầu đã dời' làm bài thực hành có đầu ra."
+  },
+  {
+   "id": "B:gt04-06",
+   "title": "Sếp muốn làm tất cả trong một quý: bạn trình bày thế nào?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "Bốn kênh mỏng nghĩa là không kênh nào đủ đánh giá, đủ đơn để thuật toán đẩy",
+     "issue": "Lời giải nêu cơ chế thuật toán sàn ('đủ đơn để thuật toán đẩy') như sự thật, không nguồn, không gắn nhãn; đây là khẳng định về nền tảng thuộc loại fast.",
+     "fix": "Sửa thành 'không kênh nào đủ đơn và đánh giá để tự chạy; cách sàn xếp hạng thay đổi, tra trang chính thức' hoặc bỏ mệnh đề thuật toán."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) sửa lời giải Q5 bỏ khẳng định thuật toán; (2) thêm Vì sao/Phản ví dụ/Đào sâu, trong đó chỉ ra đệm 100 giờ không đủ cho ±20%; (3) thêm câu dựng kịch bản từ bảng (L6); (4) nêu đơn giá và giờ quản lý cho kịch bản C."
+  },
+  {
+   "id": "B:gt04-07",
+   "title": "Việc nhanh thắng hay việc nền tảng: đội nhỏ nên làm cái nào trước?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q3",
+     "quote": "có thêm 20% quay lại so với khi không nhắc. Sau 6 tháng chạy, tổng cộng có bao nhiêu lịch hẹn quay lại?",
+     "issue": "'Thêm 20% so với khi không nhắc' đọc được hai cách: +20 điểm % trên 200 người được nhắc (40 lịch, đáp án) hoặc +20% tương đối trên số tự quay lại (không tính được vì thiếu nền). Đề không chốt; người hiểu đúng khái niệm 'tương đối vs điểm %' (bài 03-01, 03-04) lại dễ trượt.",
+     "fix": "Viết: 'trong 200 người được nhắc, có thêm 40 người (20 điểm %) quay lại so với nhóm không nhắc'."
+    },
+    {
+     "sev": "P1",
+     "where": "Q6",
+     "quote": "Lãi gộp giảm cỡ 35%: mỗi suất còn lãi 20 thay vì 40, bán nhiều hơn 30% vẫn không bù",
+     "issue": "Đáp án dài nhất và tự chứa lời giải; ba phương án kia ngắn. Dù nội dung câu rất tốt (L4), hình thức cho đoán.",
+     "fix": "Rút a thành 'Lãi gộp giảm khoảng 35% so với không giảm giá' và chuyển phép tính vào lời giải; viết c/b dài tương đương."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) chốt cách đọc 20 điểm % ở Q3 và ví dụ; (2) cân độ dài Q6; (3) cộng chi phí xây/nhắc vào cột hệ thống; (4) thêm Vì sao/Phản ví dụ/Đào sâu (dòng tiền, giá tham chiếu); (5) thay Q7 (L2) bằng câu L6: đặt mốc 2 tuần nào cho hệ thống nhắc để báo được số sớm."
+  }
+ ]
+}

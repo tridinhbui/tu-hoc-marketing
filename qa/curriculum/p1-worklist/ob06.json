@@ -1,0 +1,50 @@
+{
+ "mod": "ob06",
+ "lessons": [
+  {
+   "id": "B:ob06-01",
+   "title": "Hàng của bạn bán ở tạp hoá hay siêu thị — và vì sao điều đó đổi cả cách làm?",
+   "total": 59,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "các ước tính của NielsenIQ được báo chí dẫn lại ở mức khoảng 80–85% doanh số, cao hơn nữa ở nông thôn",
+     "issue": "Benchmark gắn tên công ty nghiên cứu thật, nêu như sự thật, không có `src`, không có năm/ngành hàng đo. Tỉ trọng kênh truyền thống thay đổi theo năm và theo ngành (FMCG tổng vs nước giải khát), nên con số cần nguồn bấm được và ngày kiểm theo đúng lớp 'periodic'.",
+     "fix": "Thêm src (bài báo/dẫn NielsenIQ cụ thể, năm, ngành hàng) với ngày kiểm; hoặc hạ thành 'phần lớn (ước tính thường được dẫn trên 2/3)' và ghi 'cần tra số mới nhất'."
+    }
+   ],
+   "upgrade": "Thêm src cho benchmark NielsenIQ hoặc hạ giọng; thêm bảng phân bổ ngân sách có số và chỉ số đo; thêm PHẢN VÍ DỤ (hàng mới cần hình ảnh ở siêu thị trước khi tạp hoá chịu nhập — khi nào dồn cho kênh hiện đại là đúng) và ĐÀO SÂU (vai trò nhà phân phối, chiết khấu tầng); nâng Q3/Q4 thành câu tính và chẩn đoán."
+  },
+  {
+   "id": "B:ob06-05",
+   "title": "Hộp quà Tết bán cho người ăn hay cho người nhận?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "khảo sát NIQ về Tết 2025: khoảng 76% người mua có mục đích tặng quà cho gia đình",
+     "issue": "Số nghiên cứu gắn tên công ty thật, nêu như sự thật, không có `src`, không có ngày kiểm, không nói mẫu/kênh khảo sát. Lớp 'periodic' bắt buộc nguồn bấm được.",
+     "fix": "Thêm src (báo cáo/bài báo dẫn NIQ Tết 2025, ngày kiểm) hoặc bỏ số và viết 'nhiều khảo sát mùa Tết cho thấy phần lớn người mua có mục đích biếu tặng'."
+    }
+   ],
+   "upgrade": "Thêm src cho số NIQ hoặc bỏ số; nêu giả định không thay thế túi lẻ và đưa rủi ro tồn vào phép tính; thay 2 câu L2 bằng câu quyết định số lượng sản xuất có rủi ro (L5) và câu đọc dữ liệu tỉ lệ hộp/túi theo tuần; gắn nhãn minh hoạ."
+  },
+  {
+   "id": "B:ob06-08",
+   "title": "Ngày đôi 9.9, 11.11, 12.12 trên sàn: chạy theo hay đứng ngoài?",
+   "total": 81,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "ĐÀO SÂU, lời giải Q1a, Q5b, Q7b",
+     "quote": "Sàn thường ưu tiên hiển thị cho shop tham gia, nên bỏ ngày đôi có thể mất cả lượng khách ngày thường",
+     "issue": "Bốn khẳng định về cách sàn vận hành (ưu tiên hiển thị cho shop tham gia; 'Sàn không chặn hiển thị'; 'Phí sàn ngày đôi thường không thấp hơn'; 'Không có quy định chung' cấm giảm quá 20%) nêu như sự thật, lớp 'fast', không `src`, không ngày kiểm, không câu 'nếu chính sách khác, tin trang chính thức'. Chính sách phí/hiển thị chiến dịch của Shopee, Lazada, TikTok Shop thay đổi từng quý.",
+     "fix": "Thêm src (trang chính sách chiến dịch của từng sàn, ngày kiểm) và hạ giọng 'theo chính sách tại thời điểm kiểm'; sửa lời giải Q1a/Q5b/Q7b thành 'không có dữ kiện trong bài về điều này'."
+    }
+   ],
+   "upgrade": "Thêm src và hạ giọng mọi khẳng định về chính sách sàn; gắn nhãn giả định phản thực và thêm phí sàn vào bảng lãi; thay Q5 bằng câu tính giá trị khách mới; thêm bảng cửa sổ 11 ngày đầy đủ (đơn, giá, lãi) để người học tự điền. Sau sửa đạt ~88."
+  }
+ ]
+}

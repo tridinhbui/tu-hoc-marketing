@@ -1,0 +1,124 @@
+{
+ "mod": "gt06",
+ "lessons": [
+  {
+   "id": "B:gt06-01",
+   "title": "Sếp giao 600 triệu doanh thu quý — cần bao nhiêu khách?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Doanh thu là đích của kinh doanh; số khách và số lượt tiếp cận suy ngược ra mới là việc của marketing.",
+     "issue": "Bài không có phần Vì sao hiệu quả / Phản ví dụ / Đào sâu như các bài 02, 04, 06, 09, 10 cùng module. Không nói khi nào phép chia ngược sai: giá trị đơn và tần suất là trung bình lệch (khách cũ kéo 1,5 lên), nên 1.000 khách có thể cần nhiều hơn nếu phần lớn là khách mới chỉ mua 1 đơn.",
+     "fix": "Thêm phản ví dụ: tách khách mới (1 đơn) và khách cũ (2,5 đơn) với tỉ trọng 70/30 → cùng 600 triệu cần bao nhiêu khách mới; thêm đoạn Đào sâu về sai số của trung bình."
+    }
+   ],
+   "upgrade": "Thêm 3 phần còn thiếu (Vì sao / Phản ví dụ về trung bình lệch khách mới–cũ / Đào sâu); gắn nhãn minh hoạ cho 20% và 15.000đ; sửa hai nhãn lỗi ở Q3, Q4; thay Q1 (L2) bằng câu đọc bảng: cho bảng khách mới/cũ với tần suất khác nhau, hỏi cần bao nhiêu khách mới."
+  },
+  {
+   "id": "B:gt06-02",
+   "title": "\"Tăng 30% follower trong 3 tháng\" — SMART rồi, sao vẫn vô nghĩa?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ / Vì sao (3)",
+     "quote": "đo bằng mã giảm giá riêng kênh, không tốn thêm hệ thống mới mà vẫn thấy phần đóng góp",
+     "issue": "Mã giảm giá riêng kênh chỉ đếm người dùng mã; khách thấy bài Instagram rồi mua không nhập mã bị bỏ sót, nên 80 → 120 là cận dưới, không phải \"phần đóng góp\". Bài không nêu giới hạn này.",
+     "fix": "Thêm một câu: \"mã riêng đo cận dưới; cộng thêm câu hỏi 'biết shop qua đâu' ở bước thanh toán để ước phần không dùng mã\"."
+    }
+   ],
+   "upgrade": "Nêu giới hạn của mã giảm giá riêng kênh và cách bù; đổi Q4/Q6 thành câu đọc bảng dữ liệu nhiều quý; gắn nhãn minh hoạ cho 80/120/350.000; định danh lại hai lỗi ở Q3."
+  },
+  {
+   "id": "B:gt06-03",
+   "title": "Mục tiêu thương hiệu hay mục tiêu bán hàng — quý này chọn cái nào?",
+   "total": 70,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "ngược với mức trung bình khoảng 60% thương hiệu/40% kích hoạt mà Binet & Field (IPA) tìm thấy",
+     "issue": "Benchmark có tên nghiên cứu thật nhưng bài không có `src` (không link, không ngày kiểm); tỉ lệ 60/40 của Binet & Field là trung bình dài hạn qua nhiều ngành, biến thiên mạnh theo ngành và giai đoạn — bài không nói.",
+     "fix": "Thêm src (IPA, \"The Long and the Short of It\", 2013; ngày kiểm) và một câu: \"tỉ lệ dao động theo ngành; với hàng FMCG mới và ít tiền, phần kích hoạt thường cao hơn\"."
+    },
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Bán hàng và thương hiệu cần ngân sách riêng, mục tiêu riêng",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu điều kiện: khi nào KHÔNG nên chia (ví dụ hàng sắp hết hạn, dòng tiền âm) và cách đọc kết quả khảo sát nhớ tên nếu không đổi (tiếp tục hay dừng).",
+     "fix": "Thêm phản ví dụ về hãng không đủ dòng tiền 1 quý, và Đào sâu về nhớ tên không gợi ý vs có gợi ý, chi phí khảo sát 300 người × 2 đợt."
+    }
+   ],
+   "upgrade": "Thêm src cho Binet & Field; thêm Vì sao / Phản ví dụ (dòng tiền) / Đào sâu (nhớ tên không gợi ý, chi phí khảo sát); thay Q5 bằng câu đọc dữ liệu khảo sát có nhiễu; gắn nhãn minh hoạ cho 3.000 đơn và 12% → 18%."
+  },
+  {
+   "id": "B:gt06-05",
+   "title": "Team 4 người, 12 chỉ số — nên nhìn con số nào trước?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Một chỉ số chính cho cả team: đếm giá trị khách nhận được, không đếm hoạt động của team.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Khái niệm nhắc chỉ số đối trọng và cây đầu vào nhưng không nêu khi nào north star sai (ví dụ app hai bên: lịch hoàn thành tăng nhờ ép thợ cắt tóc giảm giá, thợ rời app).",
+     "fix": "Thêm phản ví dụ phía cung (thợ cắt tóc) và Đào sâu về chọn 1 đối trọng cho mỗi cách \"gian\" chỉ số chính."
+    }
+   ],
+   "upgrade": "Thêm Vì sao / Phản ví dụ phía cung / Đào sâu; thêm chi phí hai phương án trong ví dụ để thành quyết định có đánh đổi; gắn nhãn minh hoạ; thay Q7 (L2) bằng câu thiết kế: viết cây đầu vào 3 tầng cho tiệm giặt."
+  },
+  {
+   "id": "B:gt06-07",
+   "title": "Mở shop mới, chưa có số năm trước — mục tiêu đặt từ đâu?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Chưa có số thì ước một khoảng thấp–cơ sở–cao từ ngân sách và năng lực",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu điều kiện quan trọng: với 50–150 đơn, tỉ lệ mua đo được có sai số lớn (50 đơn trên 5.000 lượt: 1% ± 0,3 điểm), nên \"tháng đo\" cần nói đo được chính xác tới đâu.",
+     "fix": "Thêm Đào sâu về độ nhiễu của tỉ lệ mua ở mẫu nhỏ và phản ví dụ khi CPC thực tế gấp đôi ước tính."
+    }
+   ],
+   "upgrade": "Thêm Vì sao / Phản ví dụ (CPC lệch gấp đôi) / Đào sâu về nhiễu tỉ lệ mua ở mẫu nhỏ; gắn nhãn CPC và 2%; thay Q6 bằng câu đọc dữ liệu tháng đầu; nêu trần lỗ tháng đầu bằng con số (ví dụ không quá 6 triệu)."
+  },
+  {
+   "id": "B:gt06-08",
+   "title": "Team 3 người có nên dùng OKR không?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "tham vọng (đặt cao có chủ ý, đạt khoảng 70% đã là tốt nếu cả team hiểu trước quy ước)",
+     "issue": "Mốc 70% là quy ước của Google/Doerr, nêu như chuẩn chung mà không có nguồn hay nhãn; Q5b còn khẳng định \"Mốc 70% chỉ áp cho KR tham vọng\" như luật.",
+     "fix": "Ghi \"theo quy ước Google phổ biến qua sách Measure What Matters (Doerr, 2018)\" kèm src, hoặc đổi thành \"mốc do team tự chốt trước, ví dụ 70%\"."
+    },
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Team nhỏ: một mục tiêu, hai ba kết quả then chốt",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu; không nói OKR sai ở đâu khi KR bị \"gian\" (đơn online Hà Nội tăng nhờ giảm giá sâu làm KR2 mua lại giảm) — chính ví dụ của bài có cặp KR có thể kéo ngược nhau mà không bàn.",
+     "fix": "Thêm phản ví dụ KR1 đạt nhờ giảm giá làm KR2 tụt, nối sang bài 06 (một đích một giới hạn)."
+    }
+   ],
+   "upgrade": "Thêm src/nhãn cho mốc 70%; thêm Vì sao / Phản ví dụ KR kéo ngược / Đào sâu về chấm điểm cuối quý; đồng bộ số Q4 với KR2; thêm một calc thứ hai về KR tỉ lệ (12% → 20%, đạt 17%: tiến độ bao nhiêu)."
+  },
+  {
+   "id": "B:gt06-10",
+   "title": "Hụt mục tiêu quý — báo cáo sao cho trung thực mà vẫn có ích?",
+   "total": 80,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ và Q4",
+     "quote": "Lượt vào trang đạt đủ kế hoạch; quảng cáo đã làm đủ phần.",
+     "issue": "Kết luận quảng cáo \"đã làm đủ phần\" chỉ vì đủ lượt vào trang là sai lệch: tỉ lệ mua tụt từ 3% xuống 2,1% có thể do quảng cáo kéo sai tệp (lưu lượng rẻ, kém ý định) — tức lỗi vẫn ở quảng cáo. Phản ví dụ chỉ nhắc \"phí ship chỉ là một trong vài nghi ngờ\" nhưng không nêu giả thuyết lưu lượng.",
+     "fix": "Thêm bước kiểm: so tỉ lệ mua theo nguồn/nhóm quảng cáo; nếu nhóm mới có tỉ lệ 1% kéo trung bình xuống thì hụt ở quảng cáo. Sửa lời giải Q4a thành \"chưa loại trừ được\"."
+    }
+   ],
+   "upgrade": "Thêm giả thuyết chất lượng lưu lượng vào tách phễu và sửa lời giải Q4; thay Q6 bằng câu sửa báo cáo; nêu cách kiểm rẻ nhất cho từng giả thuyết (phí ship vs tệp quảng cáo) với chi phí/thời gian."
+  }
+ ]
+}

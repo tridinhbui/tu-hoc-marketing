@@ -1,0 +1,20 @@
+{
+ "mod": "dl06",
+ "lessons": [
+  {
+   "id": "B:dl06-10",
+   "title": "Shop 30 triệu/tháng có cần công cụ ghi công đắt tiền?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q5",
+     "quote": "Doanh thu tăng thêm = 150 × (2,0 − 1,2) = 120 triệu",
+     "issue": "Phép tính giả định iROAS biên bằng iROAS trung bình ở cả hai kênh khi chuyển 5% ngân sách (150 triệu) — không nêu trong đề hay lời giải. Với lợi ích giảm dần (chính dl06-07 Q6 nhắc 'lợi ích giảm dần'), kênh nhận thêm 150 triệu có iROAS biên thấp hơn 2,0 và kênh bị cắt mất ít hơn 1,2 → lợi ích thật nhỏ hơn 120 rõ rệt, có thể âm sau 20 triệu phí đo. Thiếu giả định làm kết quả đổi.",
+     "fix": "Thêm vào đề: 'giả định iROAS biên không đổi ở mức chuyển 5%' và vào lời giải: 'thực tế lợi ích giảm dần nên 16 triệu là cận lạc quan; chuyển từng bước 2–3% và đo lại'."
+    }
+   ],
+   "upgrade": "Nêu giả định iROAS biên trong Q5 và ghi 16 triệu là cận lạc quan; sửa cách thử tắt của Khoa cho có đối chứng theo thời gian; dùng src chung với dl06-02; thêm phản ví dụ (shop nhỏ nhưng 80% ngân sách ở một kênh — sai 10% cũng đáng đo bằng cách rẻ); thêm bảng 'quy mô → bộ đo → chi phí' để ÁP DỤNG có khung."
+  }
+ ]
+}

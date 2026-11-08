@@ -1,0 +1,5 @@
+{ "mod":"kn09", "fixed_at":"2026-11-07", "items":[
+  { "id":"B:kn09-01", "where":"Q4", "status":"fixed", "change":"Rút c về 'có hợp đồng đối chiếu' (bỏ 'hộ dân đồng ý trả lời'); cho nhiễu a, b, d cũng có yếu tố kiểm chứng (báo cáo đã kiểm toán / kiểm nghiệm độc lập / khảo sát 200 người độc lập) để người học phải cân 'gần với độc giả'; cập nhật lời giải a, b, d. Đáp án c giữ, không còn dài nhất.", "key_changed":false, "note":"" },
+  { "id":"B:kn09-05", "where":"KHÁI NIỆM", "status":"fixed", "change":"Thêm '— xem nguồn' sau (Coombs, 2007, lý thuyết SCCT) và src Coombs (2007), Corporate Reputation Review 10(3), DOI 10.1057/palgrave.crr.1550049, d:2026-11-07, st:'chua'.", "key_changed":false, "note":"DOI cần bấm kiểm (st:'chua')." }
+ ],
+ "validator":"0 lỗi", "tests":"pass" }

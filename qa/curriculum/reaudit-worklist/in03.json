@@ -1,0 +1,44 @@
+{
+ "mod": "in03",
+ "lessons": [
+  {
+   "id": "B:in03-03",
+   "total": 66,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q3",
+     "quote": "Đổi khẩu hiệu mỗi năm: năm nào cũng bắt đầu lại, chỉ đạt 8 điểm %",
+     "issue": "Mô hình coi mức nhận biết thương hiệu về 0 mỗi lần đổi khẩu hiệu — lẫn nhận biết thương hiệu với ghi nhớ khẩu hiệu; phép tính dạy một cơ chế sai dù gắn nhãn minh hoạ.",
+     "fix": "Đổi biến thành \"tỉ lệ khách nhớ đúng khẩu hiệu\" hoặc cho đổi câu làm mất một phần (ví dụ 50%) tích luỹ."
+    }
+   ]
+  },
+  {
+   "id": "B:in03-01",
+   "total": 63,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "concept",
+     "quote": "Người ta chia sẻ không phải vì yêu Spotify, mà vì tấm thẻ nói hộ \"tôi là ai\"",
+     "issue": "Khẳng định động cơ chia sẻ nêu như sự thật, không nguồn (src duy nhất là trang tìm kiếm Newsroom, st:chua, không nói về động cơ người dùng); \"nguyên lý\" tiếp theo phát biểu như luật phổ quát.",
+     "fix": "Gắn nhãn \"cách diễn giải phổ biến\" hoặc dẫn một nghiên cứu về social currency (vd. Berger) với nguồn; thêm điều kiện khi nguyên lý không đúng."
+    }
+   ]
+  },
+  {
+   "id": "B:in03-02",
+   "total": 67,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q2 + VÍ DỤ",
+     "quote": "Chọn quan điểm \"da khoẻ hơn da trắng\" có sản phẩm chống lưng",
+     "issue": "Đáp án cho thương hiệu nói 'da khoẻ hơn da trắng' trong khi vẫn bán mạnh dòng 'trắng da tức thì'. Đó chính là kiểu mâu thuẫn danh mục mà bài vừa dùng Dove/Unilever để cảnh báo ('khách soi cả danh mục'). Lời giải mâu thuẫn với phần đọc.",
+     "fix": "Nêu điều kiện cụ thể: lộ trình đổi tên hoặc bỏ lời hứa 'tức thì' trong X tháng trước khi chạy quan điểm. Hoặc cho phương án đúng là 'chưa chạy quan điểm, sửa danh mục trước'."
+    }
+   ]
+  }
+ ]
+}

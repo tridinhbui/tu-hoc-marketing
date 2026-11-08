@@ -1,0 +1,109 @@
+{
+ "mod": "ob01",
+ "lessons": [
+  {
+   "id": "B:ob01-01",
+   "title": "Hai quán phở cùng dãy phố, vì sao khách đứng xếp hàng ở một quán?",
+   "total": 62,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "120 người đi ngang, 24 người vào quán A, 6 người vào quán B",
+     "issue": "Số đếm tự đặt nhưng bài không gắn nhãn minh hoạ; người học có thể coi 20%/5% là benchmark tỉ lệ vào quán.",
+     "fix": "Thêm '(số minh hoạ)' sau câu đếm, hoặc chuyển thành nhiệm vụ 'bạn đếm được…'."
+    }
+   ],
+   "upgrade": "Gắn nhãn minh hoạ cho số đếm; thêm phản ví dụ (vị trí/giờ là nguyên nhân thật) và đoạn đào sâu về đánh đổi 'hứa trên biển ↔ công suất bếp 3 phút'; thay Q6/Q7 bằng một câu đọc bảng khách lần 1/lần 2 (L4) và một câu thiết kế thử nghiệm biển mới có đối chứng (L6); ÁP DỤNG nên kết thúc bằng một quyết định: viết câu biển cho quán B và nêu cách đo sau 1 tuần."
+  },
+  {
+   "id": "B:ob01-03",
+   "title": "Khách vào hỏi mua máy khoan, thật ra họ cần gì?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "8 người mua máy, 14 người lấy bộ móc dán, 12 người đặt thợ",
+     "issue": "Số tự đặt không gắn nhãn minh hoạ; ví dụ chỉ nêu số lượt mua, không nêu lãi gộp của ba lựa chọn dù ĐÀO SÂU nói 'tỉ lệ tăng mà lãi rớt thì chưa chắc đáng mừng'. Q7 phải tự tính doanh thu (18,0 → 17,88 triệu) mà phần đọc không có.",
+     "fix": "Thêm bảng 3 dòng: lựa chọn · giá · lãi gộp ước tính · số lượt, rồi tính lãi gộp mỗi lượt hỏi trước/sau, gắn nhãn 'số minh hoạ'."
+    }
+   ],
+   "upgrade": "Đưa bảng lãi gộp ba lựa chọn vào ví dụ và tính lãi gộp mỗi lượt hỏi trước/sau (để Q7 có dữ liệu trong phần đọc); gắn nhãn minh hoạ; thay Q4 bằng câu phân loại lời khách thật; đổi ÁP DỤNG thành thiết kế 3 câu hỏi + bảng nhu cầu→giải pháp; thêm một câu L6: thiết kế cách đo 'khách về tay không' trong 2 tuần."
+  },
+  {
+   "id": "B:ob01-04",
+   "title": "Cùng một ổ bánh mì, vì sao chỗ này bán 25.000đ, chỗ kia bán 40.000đ vẫn đông?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "MANG THEO",
+     "quote": "Giá bán do giá trị khách cảm nhận quyết định, không do chi phí",
+     "issue": "Nói quá: chi phí là sàn của giá (bài chính nói 'chỉ có lợi khi phần chi phí thêm nhỏ hơn phần giá tăng'). Câu mang theo mâu thuẫn nhẹ với VÌ SAO HIỆU QUẢ (3).",
+     "fix": "Sửa: 'Giá trị cảm nhận đặt trần giá; chi phí đặt sàn. Hãy làm cho giá trị nhìn thấy được rồi mới đụng vào giá.'"
+    },
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "tiệm B đạt 3.600.000đ",
+     "issue": "Số bán 150 và 220 ổ/ngày là giả định không gắn nhãn; bài không nói gì về rủi ro mất lượng khi xe A tăng giá (Q2 đề xuất thêm chi tiết 'rồi mới có cơ sở điều chỉnh giá' nhưng không có phép thử nào về độ nhạy lượng bán).",
+     "fix": "Gắn nhãn minh hoạ; thêm một dòng: nếu xe A lên 30.000đ và mất 20% lượng (176 ổ), lãi gộp = 176 × 14.000 = 2.464.000đ, thấp hơn hiện tại → phải đo lượng mất trước khi tăng."
+    }
+   ],
+   "upgrade": "Sửa câu mang theo để không nói quá về chi phí; gắn nhãn số; thêm phép thử độ nhạy lượng bán khi tăng giá (bảng 3 mức giá × lượng mất) để ÁP DỤNG kết thúc bằng một quyết định giá có số; thay Q7 bằng câu đọc dữ liệu hỏi-so-giá theo tuần (L4) và sửa giá trị sai −1600."
+  },
+  {
+   "id": "B:ob01-05",
+   "title": "Shop thời trang chốt đơn giỏi nhưng khách không quay lại: marketing hay bán hàng hỏng?",
+   "total": 59,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q3 ↔ TÌNH HUỐNG",
+     "quote": "Mỗi tháng có 500 khách. Tỉ lệ mua lại trong ba tháng tăng từ 10% lên 22%. Mỗi tháng có thêm bao nhiêu khách quay lại mua?",
+     "issue": "Tình huống nói '500 đơn', Q3 đổi thành '500 khách' (một khách có thể nhiều đơn). 'Tỉ lệ mua lại trong ba tháng' là chỉ số theo cohort, nhưng câu hỏi quy thành 'mỗi tháng có thêm' — trộn kỳ đo. Kết quả 60 đúng về số học nhưng mẫu số mập mờ.",
+     "fix": "Viết lại: 'Mỗi tháng có 500 khách mua lần đầu. Trong 3 tháng sau đó, tỉ lệ mua lại tăng từ 10% lên 22%. Mỗi cohort tháng có thêm bao nhiêu khách quay lại?'"
+    },
+    {
+     "sev": "P1",
+     "where": "Q6 đáp án a",
+     "quote": "Mỗi đơn hoàn là mất phí ship hai chiều và mất một khách",
+     "issue": "Khẳng định tuyệt đối 'mất một khách'; lời giải tự hạ xuống 'gần như không quay lại'. Không có dữ kiện về khách hoàn có quay lại hay không.",
+     "fix": "Sửa phương án: 'mất phí ship hai chiều và phần lớn khách hoàn không quay lại'."
+    }
+   ],
+   "upgrade": "Thống nhất đơn/khách và kỳ đo cohort trong Q3; thêm phản ví dụ (ngành mua một lần — tỉ lệ mua lại thấp là bình thường) và đoạn đào sâu về chi phí có khách mới so với giữ khách cũ (CAC vs giữ chân) có số; quy đổi hoàn hàng và mua lại ra tiền; thay hai câu L2 bằng câu đọc bảng cohort 3 tháng (L4) và câu quyết định phân bổ ngân sách giữa quảng cáo và sửa size (L5); gắn nhãn minh hoạ."
+  },
+  {
+   "id": "B:ob01-06",
+   "title": "Bán đồ chơi giáo dục: nói chuyện với đứa trẻ hay với bố mẹ?",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q3 ↔ VÍ DỤ",
+     "quote": "Trong 1.000 lượt vào trang, tỉ lệ đặt hàng đi từ 1% lên 3%",
+     "issue": "10 → 30 đơn trên 1.000 lượt là mẫu rất nhỏ; bài nói 'chưa có nhóm đối chứng' nhưng không nói độ nhiễu của 10 đơn (±6 đơn đã là bình thường). Q3 quy ngay thành +9 triệu/tháng như số chắc.",
+     "fix": "Thêm câu: 'với 10 đơn, dao động vài đơn giữa các tháng là bình thường; cần 2–3 tháng trước khi coi 3% là mức mới', và ghi chú trong lời giải Q3."
+    }
+   ],
+   "upgrade": "Thêm phản ví dụ (vai trùng nhau) và đánh đổi chi phí nội dung theo vai; nói độ nhiễu của 10 đơn và cách xác nhận (2–3 tháng hoặc so với trang không đổi); sửa chỉ số Q4 cho tự nhiên; thêm câu L6: thiết kế phép thử 'video an toàn 3 giây đầu' có đối chứng; ÁP DỤNG nên yêu cầu thêm 'ở kênh nào' cho mỗi vai."
+  },
+  {
+   "id": "B:ob01-07",
+   "title": "Tiệm tóc không có gì để trưng lên kệ: làm sao để khách tin trước khi ngồi ghế?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "bạn mới giảm 20.000đ, người giới thiệu được gội miễn phí lần sau",
+     "issue": "Bài về dịch vụ nhỏ có ngân sách 1 triệu nhưng không tính chi phí thẻ giới thiệu: 27 khách mới × 20.000đ + 27 lượt gội miễn phí (giá vốn ~10–15.000đ) ≈ 0,9–1 triệu/tháng trên giá cắt 80.000đ; chi phí có một khách qua thẻ chưa được so với khách quay lại.",
+     "fix": "Thêm phép tính chi phí mỗi khách mới qua thẻ (~35.000đ) và điều kiện có lợi: khách quay lại ≥ 1 lần nữa."
+    }
+   ],
+   "upgrade": "Tính chi phí thẻ giới thiệu trên mỗi khách mới và điều kiện hoà vốn (khách quay lại bao nhiêu lần); gắn nhãn số và nói rõ ba việc làm cùng lúc chỉ tách được phần thẻ; thay Q7 bằng câu đọc sổ nguồn khách (L4) và thêm một câu đánh đổi 'tăng giá lên 100.000đ hay thêm ghế' khi quá tải (L5); sửa nhãn giá trị sai 55."
+  }
+ ]
+}

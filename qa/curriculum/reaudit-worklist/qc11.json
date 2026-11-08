@@ -1,0 +1,18 @@
+{
+ "mod": "qc11",
+ "lessons": [
+  {
+   "id": "B:qc11-02",
+   "total": 86,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm / Ví dụ / Q4",
+     "quote": "MER hoà vốn (1 ÷ tỉ lệ lãi gộp)",
+     "issue": "Hoà vốn tính trên lãi gộp, bỏ qua chi phí biến đổi (ship, phí cổng, hoàn) — khác bài qc02-04 dùng biên đóng góp. Kết luận \"có lãi 31,5 triệu\" và \"khách mới lãi 1,1 triệu\" có thể đổi dấu.",
+     "fix": "Đổi sang biên đóng góp % (sau phí biến đổi) và liên kết với qc02-04."
+    }
+   ]
+  }
+ ]
+}

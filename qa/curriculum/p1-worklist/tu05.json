@@ -1,0 +1,117 @@
+{
+ "mod": "tu05",
+ "lessons": [
+  {
+   "id": "B:tu05-01",
+   "title": "Muốn doanh thu năm tăng 20%, nên kéo cần nào: số khách, tần suất hay giá trị đơn?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Tách doanh thu thành khách × tần suất × giá trị đơn; hai cần nhỏ nhân với nhau thường rẻ hơn một cần lớn.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nêu khi nào hai cần 'rẻ' lại không kéo được: tần suất đã sát chu kỳ dùng (cà phê 500g/tháng → trần ~12 lần), giá trị đơn tăng bằng combo làm tần suất giảm (chính là bài 06), hoặc tệp khách cũ đang rời đi nên 'làm trên khách đã tin' không còn ai.",
+     "fix": "Thêm Phản ví dụ: tiệm có tần suất 11 lần/năm với gói 500g — cần tần suất đã kín, phải sang khách mới hoặc giá trị đơn; Đào sâu: ba cần kéo nhau (nối sang bài 06) và hạn mức mỗi cần."
+    }
+   ],
+   "upgrade": "Bổ sung Vì sao / Phản ví dụ (cần tần suất đã kín) / Đào sâu (ba cần kéo nhau); bỏ số khỏi phương án Q2 để buộc tính; thay Q6 bằng câu đọc bảng 3 năm."
+  },
+  {
+   "id": "B:tu05-02",
+   "title": "Gợi ý bán thêm lúc nào: trước khi thanh toán hay sau khi đã mua?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Bán thêm khi khách còn chọn hoặc khi hành vi dùng cho thấy nhu cầu; bán kèm món nhỏ khi đã chốt; luôn đo cả đơn bị mất.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nêu khi nào gợi ý đắt ở giỏ vẫn đúng (khách B2B mua theo ngân sách, sản phẩm có bản 'bảo hành mở rộng' bán tốt nhất tại checkout) hay khi nào bán kèm nhỏ cũng gây bỏ giỏ (quá nhiều gợi ý, giao diện mobile).",
+     "fix": "Thêm Phản ví dụ: bảo hành mở rộng 10% giá ở trang thanh toán cho đồ điện tử — bỏ giỏ không tăng vì nó trả lời nỗi lo lúc trả tiền; Đào sâu: số gợi ý tối đa và đo 'doanh thu trên mỗi giỏ' làm chỉ số tổng."
+    }
+   ],
+   "upgrade": "Bổ sung Vì sao / Phản ví dụ (bảo hành mở rộng tại checkout) / Đào sâu (số gợi ý tối đa, chỉ số doanh thu/giỏ); thêm dòng tính theo lãi gộp; thay Q4 bằng câu đặt gợi ý vào vị trí."
+  },
+  {
+   "id": "B:tu05-05",
+   "title": "Nên bán gì tiếp cho người đã mua sản phẩm chủ lực?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Món kế tiếp nên nằm trong lý do khách tin bạn và mua lại nhanh hơn món chính.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nêu rủi ro của chính phương án thắng: lòng nồi chính hãng cạnh tranh với hàng trôi nổi rẻ hơn (ví dụ nhắc nhưng không thành phản ví dụ), chi phí phát triển/tồn kho của món mới, và việc món phụ kiện kéo khách nhận ra giá nồi.",
+     "fix": "Thêm Phản ví dụ: thử trên 500 khách chỉ 3% mua vì lòng nồi trôi nổi giá 120.000đ — tính lại 20.000 × 3% × 140.000 − 40 triệu = 44 triệu; dấu hiệu và cách đổi (bán lòng nồi kèm bảo hành nồi). Thêm Đào sâu về chi phí phát triển và vòng đời phụ kiện."
+    }
+   ],
+   "upgrade": "Bổ sung Vì sao / Phản ví dụ (hàng trôi nổi làm tỉ lệ mua rơi) / Đào sâu (chi phí phát triển, vòng đời); lập bảng 3 món cùng cơ sở; thay Q6 bằng câu tính lãi nhiều năm."
+  },
+  {
+   "id": "B:tu05-06",
+   "title": "Giá trị đơn tăng 25% mà doanh thu gần như đứng yên: chuyện gì xảy ra?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Không báo cáo giá trị đơn một mình; luôn nhân với tần suất trên cùng nhóm khách.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu riêng (ví dụ có nêu lãi hai chiều nhưng không có tình huống đổi kết luận). Thiếu trường hợp combo lớn LÀ đúng: khách tiêu thụ nhiều hơn khi có sẵn (đồ ăn vặt là ví dụ điển hình), chi phí giao giảm làm lãi/khách tăng dù doanh thu đứng yên.",
+     "fix": "Thêm Phản ví dụ bằng số: phí giao 20.000đ/đơn → 4 đơn tốn 80.000đ, 3,2 đơn tốn 64.000đ: lãi/khách tăng 16.000đ dù doanh thu y nguyên — kết luận đổi từ 'đứng yên' sang 'tốt hơn'. Thêm Đào sâu: đo lãi/khách, không chỉ doanh thu/khách."
+    }
+   ],
+   "upgrade": "Bổ sung Vì sao / Phản ví dụ bằng số (phí giao giảm làm lãi/khách tăng) / Đào sâu (đo lãi/khách); tăng độ khó Q1."
+  },
+  {
+   "id": "B:tu05-07",
+   "title": "Nhóm khách VIP chiếm bao nhiêu doanh thu, và nên đối xử khác thế nào?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1",
+     "quote": "Không đoán được, mỗi ngành phân bổ khác nhau — vì: Có khác nhau giữa các ngành, nhưng xu hướng tập trung rất phổ biến.",
+     "issue": "Phương án d bênh được: chính khái niệm của bài viết 'mức tập trung khác nhau theo ngành, nên đo trên dữ liệu của chính bạn'. Người học đọc kỹ bài sẽ chọn d; lời giải bác d bằng chính lý lẽ ủng hộ b. Chưa P0 vì chữ 'thường' trong đề nghiêng về b, nhưng hai phương án cùng hợp lý một phần.",
+     "fix": "Sửa d thành phương án sai rõ (vd 'Khoảng 10%, vì shop đã gửi cùng khuyến mãi cho mọi người') hoặc đổi đề: 'Theo xu hướng phổ biến, 10% khách...'."
+    },
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Khách VIP cần được ưu tiên và công nhận, không cần được giảm giá cho những lần họ vốn sẽ mua.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu trường hợp VIP cần giảm giá thật (VIP mua sỉ, VIP nhạy giá đang bị đối thủ chào), và thiếu cảnh báo chọn VIP theo doanh thu lịch sử bỏ qua 'gần đây' (R trong RFM) — bài nhắc RFM một dòng nhưng không dùng.",
+     "fix": "Thêm Phản ví dụ: 20% VIP là người mua đi bán lại, giảm 30% với họ là chiết khấu sỉ hợp lý; Đào sâu: bảng RFM 3 cột cho 5 khách và chọn ai là VIP."
+    }
+   ],
+   "upgrade": "Sửa Q1 để d không bênh được; bổ sung Vì sao / Phản ví dụ (VIP mua sỉ) / Đào sâu (bảng RFM); thêm chi phí phương án đặc quyền; thay Q6 bằng câu đọc dữ liệu VIP ngủ."
+  },
+  {
+   "id": "B:tu05-08",
+   "title": "Làm gì sau khi giao hàng để khách mua lần sau?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Hậu mãi tốt là lý do liên lạc lại; mỗi lần giúp khách dùng tốt là đặt sẵn lần mua sau.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nêu khi nào ba điểm chạm thất bại: khách không đồng ý nhận liên hệ (bài nói chỉ gửi cho người đồng ý nhưng không hỏi tỉ lệ đồng ý là bao nhiêu — nếu 50% thì 160 bộ lõi không còn), lõi chính hãng đắt gấp đôi lõi ngoài, kỹ thuật viên dùng cuộc gọi để chào bán.",
+     "fix": "Thêm Phản ví dụ: chỉ 55% khách đồng ý nhận tin → tối đa 800 × 55% × 20 điểm % = 88 bộ, lãi thêm 26,4 triệu − chi phí 13,2 triệu; và trường hợp giá lõi chênh 2 lần làm tỉ lệ mua chỉ lên 32%. Đào sâu: đo tỉ lệ đồng ý nhận liên hệ ở bước giao máy."
+    }
+   ],
+   "upgrade": "Bổ sung Vì sao / Phản ví dụ (tỉ lệ đồng ý nhận liên hệ, giá lõi chênh) / Đào sâu; nêu giả định doanh số máy đều; thay 1–2 câu L2 bằng câu đọc phễu ba điểm chạm."
+  },
+  {
+   "id": "B:tu05-10",
+   "title": "Chọn đòn bẩy nào khi mỗi cái đều hứa tăng doanh thu năm?",
+   "total": 80,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ · Khái niệm",
+     "quote": "(B) 10.000 × 6 × 72.000 = 4,32 tỉ, cũng thêm 320 triệu, nhưng giảm giá mỗi đơn cắt lãi.",
+     "issue": "Tiêu đề khái niệm là 'quy về doanh thu năm VÀ lãi năm' nhưng ví dụ chỉ quy lãi cho A (ở Q4). Với biên 40% của Q4, B cho lãi gộp 60.000 × (72.000 − 48.000) = 1,44 tỉ so với gốc 50.000 × 32.000 = 1,6 tỉ — B làm GIẢM lãi gộp 160 triệu dù doanh thu tăng 320 triệu. Bài chỉ nói 'cắt lãi', người học không thấy B thực chất lỗ; kết luận không đổi nhưng độ lớn bị giấu.",
+     "fix": "Thêm dòng lãi cho cả ba: A +128 triệu (trước chi phí), B −160 triệu, C +48 triệu; đổi câu kết 'A được thử trước' thành 'B loại ngay ở mức biên 40%'."
+    }
+   ],
+   "upgrade": "Tính lãi cho cả ba đề xuất (B lỗ 160 triệu ở biên 40%); nêu hiệu ứng nhiều năm của giữ chân; sửa nhãn Q3; thay Q6 bằng câu tính lãi B."
+  }
+ ]
+}

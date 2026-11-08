@@ -1,0 +1,228 @@
+{
+  "mod": "kn09",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn09-01",
+      "scores": { "accuracy": 13, "depth": 8, "practical": 13, "examples": 11, "pedagogy": 6, "assessment": 6, "data": 4, "clarity": 4 },
+      "total": 65,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L3", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q4", "quote": "120 hộ ở Lào Cai bán óc chó cao hơn thương lái 15%, có hợp đồng và hộ dân đồng ý trả lời", "issue": "Đáp án đúng là phương án dài nhất, duy nhất có thêm hai bổ ngữ xác minh ('có hợp đồng', 'hộ dân đồng ý trả lời') và lặp lại đúng góc đã khen ở ví dụ; đoán được bằng độ dài và lặp từ.", "fix": "Rút c về cùng độ dài; cho các nhiễu cũng có yếu tố kiểm chứng (ví dụ a: 'doanh thu quý tăng 12%, theo báo cáo đã kiểm toán') để người học phải cân 'gần với độc giả' thay vì 'có kiểm chứng'." },
+        { "sev": "P2", "where": "Q3", "quote": "Tỉ lệ đăng bài là bao nhiêu phần trăm?", "issue": "Phép chia 6/30 không dạy gì về PR; không có câu nào buộc đọc dữ liệu (ví dụ bảng 4 góc × 5 yếu tố tin tức).", "fix": "Thay bằng câu đọc bảng chấm 4 góc theo 5 yếu tố (mới/gần/con người/thay đổi/con số) và chọn góc cho từng loại báo (L4)." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Nhà báo đăng thứ độc giả muốn đọc", "issue": "Thiếu 'Vì sao hiệu quả', 'Phản ví dụ' (khi câu chuyện vận hành có tin nhưng rủi ro: giá mua cao hơn 15% có bền không, nông dân có bị ép hợp đồng?) và 'Đào sâu' (góc khác cho báo kinh tế vs báo địa phương vs báo tiêu dùng).", "fix": "Thêm ba phần theo khuôn module; phản ví dụ về góc có tin nhưng mở cửa cho câu hỏi khó." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 6/30 = 20% ✓ (500 = 30/6 × 100 ✓; 5 = 30/6 ✓)." },
+      "claims": [
+        { "claim": "Mộc An (hư cấu), 120 hộ Lào Cai, giá cao hơn 15%, 6/30 bài đăng", "status": "illustrative-labelled", "note": "Thương hiệu ghi 'hư cấu'; tỉ lệ 20% ghi 'số minh hoạ… không phải mức chuẩn'." },
+        { "claim": "Yếu tố giá trị tin tức: mới, gần, con người, xung đột/thay đổi, con số", "status": "unverified", "note": "Tương ứng news values trong báo chí học (Galtung & Ruge), không nguồn; evergreen, chấp nhận được." }
+      ],
+      "strengths": "Nhãn minh hoạ rõ, tình huống có tương phản mạnh (0/30 vs 6/30 cùng doanh nghiệp); Q7 là câu đánh đổi thật về vai trò bài tin vs kênh của mình.",
+      "upgrade": "Để đạt ≥85: (1) thêm ba phần cấu trúc còn thiếu; (2) thêm bảng chấm góc × yếu tố tin làm công cụ và câu L4 đọc bảng; (3) cân lại độ dài Q4; (4) thêm ràng buộc thực tế: cần gì để góc 'đứng được' (hợp đồng, hộ dân đồng ý, ảnh, số kiểm được) và thời gian chuẩn bị; (5) nối sang kn09-02 (viết góc thành thông cáo) và kn09-03 (gửi đúng phóng viên)."
+    },
+    {
+      "id": "B:kn09-02",
+      "scores": { "accuracy": 13, "depth": 8, "practical": 14, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 67,
+      "bloom_items": ["L2", "L3", "L3", "L3", "L5", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1 a (lời giải)", "quote": "Bốn trang là dài, không phải ngắn", "issue": "Lời giải không trả lời phương án a ('chưa đủ số liệu tài chính'); nói về độ dài trong khi a nói về thiếu số — lời giải lệch nội dung phương án.", "fix": "Viết: 'Số liệu đã có (200.000 tiểu thương, +18%) nhưng bị chôn ở trang 3; vấn đề là vị trí, không phải thiếu số'." },
+        { "sev": "P2", "where": "Q5, Q7", "quote": "Email riêng cho chị Hà, tóm trong một đoạn, kèm số liệu nền và đề nghị phỏng vấn tiểu thương", "issue": "Ở cả Q5 và Q7, đáp án đúng là phương án dài nhất và duy nhất có cấu trúc 'hành động + lý do + bước tiếp'; nhận ra bằng hình thức.", "fix": "Rút gọn đáp án đúng; kéo dài một nhiễu có vẻ chuyên nghiệp (ví dụ Q5 b: 'đưa vào thông cáo chung nhưng gửi chị Hà sớm hơn 2 giờ')." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Gửi 40 phóng viên, 10 người hồi âm hỏi thêm — so với 1 người ở bản cũ", "issue": "Số không gắn nhãn minh hoạ (khác kn09-01); hai bản gửi cho cùng 40 người hay hai nhóm khác không nói — nếu cùng người thì bản thứ hai đến sau cũng có lợi thế 'đã quen tên'.", "fix": "Gắn nhãn minh hoạ và nói 'gửi cho cùng danh sách, cách nhau hai tuần' hoặc tách thành hai nhóm." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Tin nằm ở tít và đoạn đầu", "issue": "Thiếu 'Phản ví dụ' (khi kim tự tháp ngược không hợp: bài kể chuyện cho tạp chí, nội dung embargo) và 'Đào sâu' (embargo, hạn chót theo loại báo, ảnh có bản quyền).", "fix": "Thêm hai phần." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 10/40 = 25% ✓; bản cũ 1/40 = 2,5% ✓ (400 = 40/10 × 100 ✓; 22,5 = 25 − 2,5 ✓)." },
+      "claims": [
+        { "claim": "PayNhanh (hư cấu), 200.000 tiểu thương, doanh thu +18%, 12 tỉnh, 9 tháng", "status": "illustrative-labelled", "note": "Thương hiệu ghi hư cấu; số không ghi minh hoạ nhưng gắn với thương hiệu hư cấu." },
+        { "claim": "Nhà báo nhận hàng chục thông cáo mỗi ngày và quyết định trong vài giây", "status": "unverified", "note": "Nhận định nghề, không nguồn." }
+      ],
+      "strengths": "Cấu trúc kim tự tháp ngược được dạy bằng việc viết lại cụ thể (tít, đoạn đầu, trích dẫn bà bán rau); Q7 dạy đọc phễu PR (hồi âm ≠ bài đăng) đúng kiểu chẩn đoán.",
+      "upgrade": "Để đạt ≥85: (1) thêm 'Phản ví dụ' và 'Đào sâu' (embargo, hạn chót, ảnh); (2) đưa mẫu thông cáo một trang có chú thích từng khối (tít / đoạn 1 / trích / số nền / liên hệ) làm công cụ; (3) sửa lời giải Q1 a và cân độ dài Q5, Q7; (4) thêm câu L4: cho một thông cáo 6 câu bị xáo thứ tự, yêu cầu sắp lại theo kim tự tháp ngược; (5) gắn nhãn minh hoạ và nêu điều kiện so sánh hai bản gửi."
+    },
+    {
+      "id": "B:kn09-03",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 14, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 3, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L5", "L5", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Tỉ lệ của đồng nghiệp cao hơn chị Lan bao nhiêu điểm phần trăm", "issue": "So hai tỉ lệ đo hai việc khác nhau (chị Lan gọi đi — ai nghe máy; đồng nghiệp — ai gọi đến hỏi) trên mẫu 8 và 6 người; phép tính đúng số nhưng vô nghĩa về đo lường và dạy thói quen so tỉ lệ trên mẫu vài người.", "fix": "Bỏ câu calc này; thay bằng câu đọc 'sổ nguồn tin' (bảng 5 phóng viên × mảng × lần liên hệ gần nhất) và chọn ai nhận thông tin gì (L4)." },
+        { "sev": "P2", "where": "Q4", "quote": "Hẹn gửi số liệu trong chiều rồi để sang hôm sau vì chờ sếp duyệt, sau hạn chót bài", "issue": "Đáp án đúng dài nhất và là phương án duy nhất mô tả hành vi tiêu cực giữa ba phương án tích cực rõ; đoán được không cần đọc bài.", "fix": "Thêm một nhiễu tiêu cực bênh được (ví dụ 'gửi số liệu đúng hẹn nhưng kèm yêu cầu trích nguyên văn') để người học phải cân mức độ." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Hãy làm nguồn tin đáng tin trong lúc yên ổn", "issue": "Thiếu 'Vì sao', 'Phản ví dụ' (khi không nên trả lời: câu hỏi về tranh chấp pháp lý đang xử, số liệu chưa công bố theo quy định công ty niêm yết) và 'Đào sâu' (off the record / on background, ranh giới với quảng cáo trả phí).", "fix": "Thêm ba phần; phản ví dụ về giới hạn phát ngôn." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1/8 = 12,5%; 5/6 = 83,3%; 83,3 − 12,5 = 70,8 ✓ (95,8 = 83,3 + 12,5 ✓; 6,7 = tỉ số ✓). Phép tính đúng nhưng ý nghĩa đo lường yếu (xem defects)." },
+      "claims": [
+        { "claim": "An Khang Plus (hư cấu), 8 phóng viên/1 nghe máy; 5/6 gọi lại", "status": "illustrative-labelled", "note": "Thương hiệu hư cấu; số minh hoạ ngầm." },
+        { "claim": "Quà hay phong bì không tạo quan hệ nguồn tin, chỉ tạo rủi ro", "status": "unverified", "note": "Chuẩn mực nghề/đạo đức; không nguồn; nên nối với quy tắc đạo đức báo chí và chính sách công ty." }
+      ],
+      "strengths": "Khái niệm nêu đủ hành vi cụ thể (sổ nguồn tin, trả lời cả khi bất lợi, không đòi xem bài, tách quảng cáo khỏi bài tin); Q6 là tình huống phát ngôn thật với đáp án 'xác nhận đúng phần có thật + hướng xử lý'.",
+      "upgrade": "Để đạt ≥85: (1) thêm ba phần cấu trúc còn thiếu, đặc biệt giới hạn phát ngôn; (2) đưa mẫu 'sổ nguồn tin' 5 cột và câu L4 đọc nó; (3) bỏ Q3, thay bằng phép đo có nghĩa (thời gian phản hồi trung bình, số câu hỏi đã trả lời/quý); (4) thêm ranh giới on/off the record và cách nói 'chưa có số, hẹn giờ' thành mẫu câu; (5) nối sang kn09-06 (giờ vàng: quan hệ đã xây là lý do phóng viên gọi bạn trước)."
+    },
+    {
+      "id": "B:kn09-04",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 14, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L4", "L3", "L3", "L2", "L2", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "một người phải mua lại khoảng 17 chai mới hoà vốn. Con số chỉ đáng khi có số mua lại thật", "issue": "Hoà vốn tính trên 100% người dùng thử, trong khi chỉ một phần sẽ mua lại; không nêu kịch bản tỉ lệ mua lại (ví dụ 20% mua lại thì mỗi người đó phải mua 85 chai) — con số 17 làm khoản chi trông dễ hoà vốn hơn thật.", "fix": "Thêm: 'nếu 20% người dùng thử thành khách mua lại, mỗi người phải mua ~85 chai (≈ 2 năm) — nên phần còn lại phải đến từ dữ liệu khách và câu chuyện'." },
+        { "sev": "P2", "where": "Q5, Q6", "quote": "Vì phí tài trợ chỉ mua quyền có mặt; biến nó thành trải nghiệm cần thêm tiền", "issue": "Hai câu L2 nhận lại ý bài với nhiễu dễ ('được giảm thuế', 'phí bị hoàn lại', 'đếm logo'); không câu nào buộc đọc dữ liệu kết quả sau giải (2.500 số, tỉ lệ mua lại) để đánh giá.", "fix": "Thay Q6 bằng: '2.500 số, sau 60 ngày 400 người mua lại trung bình 3 chai: lãi thu về bao nhiêu so với 800 triệu, kết luận gì?' (L4)." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Logo mua sự hiện diện; kích hoạt mới mua trải nghiệm", "issue": "Thiếu 'Phản ví dụ' (tài trợ thuần hiện diện vẫn hợp lý khi mục tiêu là uy tín với nhà phân phối/chính quyền địa phương) và 'Đào sâu' (độc quyền ngành, ambush marketing, quyền dữ liệu đăng ký và đồng ý).", "fix": "Thêm hai phần." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (500 + 300) triệu / 8.000 = 100.000đ ✓ (62,5 = 500/8 ✓; 80 = 800/10 ✓). Ví dụ: 15.000 × 40% = 6.000; 100.000/6.000 = 16,7 ≈ 17 chai ✓." },
+      "claims": [
+        { "claim": "Sóng Xanh (hư cấu), 500 triệu tài trợ + 300 triệu kích hoạt, 8.000 người uống thử, chai 15.000đ biên 40%", "status": "illustrative-labelled", "note": "Bài ghi 'Giả định minh hoạ'." }
+      ],
+      "strengths": "Ba câu đánh giá tài trợ (dùng thử? câu chuyện? chi phí/người tiếp cận thật?) là công cụ gọn; phép hoà vốn 17 chai gắn với biên; Q2 nối tài trợ sang CRM (2.500 số có đồng ý) đúng tinh thần kn08.",
+      "upgrade": "Để đạt ≥85: (1) thêm kịch bản tỉ lệ mua lại vào hoà vốn và bảng 3 kịch bản; (2) thêm 'Phản ví dụ' và 'Đào sâu' (độc quyền ngành, dữ liệu đăng ký và đồng ý, ambush); (3) thay Q5/Q6 (L2) bằng câu đọc kết quả sau giải; (4) thêm danh mục đàm phán trước khi ký (độc quyền, trạm, dữ liệu, hình ảnh) thành checklist có thể dùng; (5) thêm cách đo 'câu chuyện' (số bài earned, lượt nhắc thương hiệu) để câu hỏi thứ hai có số."
+    },
+    {
+      "id": "B:kn09-05",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 14, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 4, "clarity": 4 },
+      "total": 67,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Giới học thuật (Coombs, 2007, lý thuyết SCCT) xếp theo mức trách nhiệm khách gán cho công ty", "issue": "Trích dẫn nghiên cứu có tên và năm nhưng không có `src`; theo thang, khẳng định nghiên cứu cần nguồn bấm được.", "fix": "Thêm src: Coombs, W.T. (2007), 'Protecting Organization Reputations During a Crisis: The Development and Application of Situational Crisis Communication Theory', Corporate Reputation Review 10(3), kèm ngày kiểm." },
+        { "sev": "P2", "where": "Q4", "quote": "Nếu 70% khách dùng mã, chi phí bồi hoàn thực tế là bao nhiêu triệu đồng?", "issue": "Phép nhân một bước, tách rời quyết định của bài (phân loại khủng hoảng); không có phép đo nào cho việc 'bồi hoàn đủ chưa' hay 'chi phí thu hồi lô bánh'.", "fix": "Thay bằng câu so chi phí hai mức bồi hoàn (30.000 vs 50.000, tỉ lệ dùng 70% vs 85%) với tỉ lệ khách đặt lại — chọn mức (L5)." },
+        { "sev": "P2", "where": "Q5", "quote": "Giám đốc vận hành — người nói được nguyên nhân và cách sửa", "issue": "Người phát ngôn tuỳ mức nghiêm trọng và quy mô (nhiều hãng để CEO nói với khủng hoảng hàng trăm khách); bài quy ước nhưng không nêu điều kiện, nên đáp án đúng chỉ vì bài nói vậy.", "fix": "Thêm điều kiện ở khái niệm: 'người phát ngôn = người chịu trách nhiệm phần bị đụng; nâng lên CEO khi đụng an toàn hoặc lan toàn quốc' và viết lời giải theo điều kiện đó." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Phân loại trước khi phản hồi", "issue": "Thiếu 'Phản ví dụ' (khủng hoảng lai: dị vật do nhà cung cấp + phát ngôn sai của quản lý) và 'Đào sâu' (nhóm dữ liệu/pháp lý đã nhắc nhưng không triển khai).", "fix": "Thêm hai phần." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 1.200 × 70% = 840; 840 × 30.000 = 25,2 triệu ✓ (36 = 1.200 × 30.000 ✓; 10,8 = 1.200 × 30% × 30.000 ✓)." },
+      "claims": [
+        { "claim": "Coombs (2007), SCCT", "status": "unverified", "note": "Tham chiếu học thuật đúng theo hiểu biết; bài không có src." },
+        { "claim": "Hạt Vàng, FitGo, ShipSớm (hư cấu)", "status": "illustrative-labelled", "note": "Ba thương hiệu ghi hư cấu." }
+      ],
+      "strengths": "Ba loại × (thứ bị đụng, phản ứng, người nói) rõ và dễ áp; Q6 chuyển sang tình huống chất cấm với đáp án 'ngừng bán, thu hồi, báo khách' đúng ưu tiên; Q7 dạy câu chữ 'rất tiếc nếu' trước khi vào kn09-07.",
+      "upgrade": "Để đạt ≥85: (1) thêm src SCCT và một dòng về mức trách nhiệm (victim/accidental/preventable) nối với ba loại; (2) thêm 'Phản ví dụ' khủng hoảng lai và 'Đào sâu' về nhóm dữ liệu/pháp lý; (3) đưa bảng phân loại 3 × 4 (loại / đụng gì / hành động đầu / ai nói / sai lầm hay gặp) làm công cụ; (4) nêu điều kiện người phát ngôn; (5) thay Q4 bằng câu đánh đổi mức bồi hoàn."
+    },
+    {
+      "id": "B:kn09-06",
+      "scores": { "accuracy": 13, "depth": 8, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 6, "data": 4, "clarity": 4 },
+      "total": 67,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L2", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Trung bình mỗi giờ trong khoảng từ giờ thứ 1 đến giờ thứ 3 có thêm bao nhiêu lượt chia sẻ?", "issue": "Phép tính tốc độ trung bình không gắn với quyết định nào trong bài (đăng hay không, lúc nào); dữ kiện 3.000 → 18.000 (gấp 6 trong 2 giờ) đáng để dạy 'đang tăng tốc' nhưng câu hỏi lại san phẳng thành trung bình.", "fix": "Hỏi: 'tốc độ lan giờ 1→3 so với giờ 0→1 tăng bao nhiêu lần, và điều đó nói gì về việc chờ tới thứ Hai?' (7.500 vs 3.000 — gấp 2,5)." },
+        { "sev": "P2", "where": "Q4, Q5", "quote": "Vì theo quy định công ty không được nói nguyên nhân trước 48 giờ", "issue": "Nhiễu bịa quy định/'khách không quan tâm' quá dễ loại; Q4 và Q5 là L2 nhận lại ý. Q6 cũng gần L2.", "fix": "Thay Q5 bằng bài đọc ba phát ngôn mâu thuẫn (trích 3 câu) và chỉ ra mâu thuẫn nào thành câu chuyện mới (L4)." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Nói sớm điều bạn biết và điều đang làm", "issue": "Thiếu 'Phản ví dụ' (khi chưa nên đăng công khai: tin chưa lan, chỉ một tài khoản nhỏ — chính ngưỡng của kn09-08; hoặc khi hành động 'tạm đóng quán' không khả thi) và 'Đào sâu' (chuẩn bị sẵn mẫu, phân quyền đăng đêm, phối hợp pháp chế).", "fix": "Thêm hai phần và nối rõ sang kn09-08, kn09-10." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (18.000 − 3.000)/(3 − 1) = 7.500 ✓ (6.000 = 18.000/3 ✓; 9.000 = 18.000/2 ✓)." },
+      "claims": [
+        { "claim": "Nồi Đỏ (hư cấu), 3.000 → 18.000 lượt chia sẻ; kết quả sáng hôm sau", "status": "illustrative-labelled", "note": "Bài ghi 'kết quả minh hoạ cho cách làm, không phải số đo thật'." },
+        { "claim": "Nội dung gây sốc thường lan mạnh hơn vào cuối tuần (Q1 a lời giải)", "status": "unverified", "note": "Khẳng định hành vi mạng xã hội không nguồn." }
+      ],
+      "strengths": "Thông điệp giữ chỗ ba ý (biết / đang làm / hẹn giờ) kèm mẫu văn bản thật đăng lúc 22h30 và người ký; Q7 chuyển sang tin đồn chưa rõ thật giả vẫn áp được mẫu.",
+      "upgrade": "Để đạt ≥85: (1) thêm 'Phản ví dụ' và 'Đào sâu' (quyền đăng đêm, danh sách trực, pháp chế rà 15 phút); (2) đổi Q3 thành đọc gia tốc lan truyền; (3) thay Q4/Q5 (L2) bằng câu đọc ba phát ngôn mâu thuẫn; (4) thêm checklist 'trong 60 phút đầu' có thời gian từng bước (xác nhận video thật 10', quyết định đóng quán 20', soạn & duyệt 20', đăng 10'); (5) sửa lời giải Q1 a bỏ khẳng định hành vi cuối tuần hoặc thêm nguồn."
+    },
+    {
+      "id": "B:kn09-07",
+      "scores": { "accuracy": 14, "depth": 9, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 3, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4", "quote": "Lụa Mây trả gấp đôi cho 6 ảnh. Tổng số tiền là bao nhiêu triệu đồng?", "issue": "Phép nhân 3 × 2 × 6 không có giá trị học; bài về lời xin lỗi không có phép đo nào (bình luận giận dữ trước/sau, tỉ lệ bình luận tiêu cực) dù tình huống cho 4.000 bình luận.", "fix": "Thay bằng câu đọc dữ liệu: bản 1 — 4.000 bình luận, 75% tiêu cực; bản 2 sau 24h — 1.200 bình luận, 20% tiêu cực: số bình luận tiêu cực giảm bao nhiêu % (3.000 → 240, −92%) và điều đó chưa chứng minh gì (L4)." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì nói chung chung làm lỗi mờ đi, người bị hại cảm thấy bị lờ", "issue": "L2 nhận lại ý; nhiễu 'theo quy định phải ghi họ tên' bịa quy định — mẹo quen của module (xem kn09-06 Q4 b, kn09-10 Q1 d) khiến người học học được 'phương án nhắc quy định là sai'.", "fix": "Bỏ dạng nhiễu 'theo quy định' lặp lại; thay bằng nhiễu bênh được: 'nói với quý khách để mọi người cùng thấy công ty có trách nhiệm'." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Xin lỗi thật: gọi đúng tên lỗi, nói với đúng người, sửa hậu quả, và thay đổi", "issue": "Thiếu 'Phản ví dụ' (khi chưa thể nhận lỗi cụ thể vì sự việc chưa xác minh — nối với thông điệp giữ chỗ; khi xin lỗi công khai làm hại người bị hại muốn riêng tư) và 'Đào sâu' (phối hợp pháp chế đã nhắc một câu nhưng không triển khai).", "fix": "Thêm hai phần." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 3 × 2 = 6 triệu/ảnh; × 6 = 36 triệu ✓ (18 = 3 × 6 ✓; 6 ✓)." },
+      "claims": [
+        { "claim": "Lụa Mây, Trà Gió (hư cấu); trả gấp đôi phí đề nghị", "status": "illustrative-labelled", "note": "Bài ghi 'mức Lụa Mây tự chọn, không phải chuẩn bồi thường'." },
+        { "claim": "Nhận lỗi cụ thể không bắt buộc nhận mọi trách nhiệm pháp lý", "status": "unverified", "note": "Nhận định pháp lý khái quát, có hedging 'nhờ pháp chế rà từng câu'." }
+      ],
+      "strengths": "Bốn phần của lời xin lỗi được kiểm bằng hai bản văn thật và Q2 bắt chọn giữa bốn bản xin lỗi có lỗi khác nhau (nếu / đổ lỗi vận chuyển / chung chung / đúng) — câu đánh giá tốt nhất module. Có cảnh báo pháp lý đúng mức.",
+      "upgrade": "Để đạt ≥85: (1) thêm 'Phản ví dụ' và 'Đào sâu'; (2) thêm checklist 4 phần có ô tick và ví dụ câu chữ đạt/không đạt cho từng phần; (3) thay Q4 bằng câu đọc dữ liệu bình luận trước/sau với cảnh báo 'giảm bình luận ≠ tha thứ'; (4) bỏ nhiễu 'theo quy định' lặp; (5) nối sang kn09-06 (giữ chỗ trước, xin lỗi đủ bốn phần sau khi xác minh) bằng dòng thời gian."
+    },
+    {
+      "id": "B:kn09-08",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L3", "L5", "L2", "L3", "L3", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4", "quote": "Tỉ lệ tương tác trên người theo dõi là bao nhiêu phần trăm?", "issue": "6% là tỉ lệ tương tác cao, nhưng quyết định của bài dựa trên quy mô tuyệt đối và độ lan (12 lượt, 200 người), không trên tỉ lệ; câu calc đo một chỉ số không liên quan và có thể gieo hiểu lầm 'tỉ lệ cao = đáng lo'.", "fix": "Thay bằng câu đọc độ lan: 'bài có 12 lượt thích, 0 chia sẻ, sau 48 giờ vẫn 12 → tốc độ lan là bao nhiêu/ngày và ngưỡng nào thì đổi quyết định?' hoặc hỏi về chuyện 2: 40.000 lượt xem/12 giờ = bao nhiêu/giờ." },
+        { "sev": "P2", "where": "Q5", "quote": "Trả lời ngắn, lịch sự dưới bài và nhắn riêng để bù đắp", "issue": "Hơi lệch với quy tắc bài: ba câu ngưỡng đều 'không' (không bằng chứng, không an toàn, 30 lượt thích trong nhóm 500.000) → 'theo dõi và trả lời riêng', nhưng đáp án đúng lại trả lời công khai. Lời giải không nói vì sao chuyện này khác chuyện 1 (bài nằm sẵn ở nơi khách mục tiêu đọc).", "fix": "Thêm vào lời giải: 'khác chuyện 1 vì bài nằm trong nhóm review mà khách mục tiêu đọc — tương tự phản ví dụ; trả lời công khai ngắn, tương xứng'." },
+        { "sev": "P2", "where": "Q3, Q6", "quote": "Câu nào KHÔNG thuộc ba câu hỏi ngưỡng phản hồi?", "issue": "Hai câu L2 nhận lại danh sách ba câu hỏi; Q6 có nhiễu 'nền tảng sẽ khoá fanpage' bịa cơ chế nền tảng.", "fix": "Thay Q3 bằng bảng 4 lời chê × 3 câu ngưỡng và hỏi lời chê nào cần phản hồi công khai (L4)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 12/200 = 6% ✓ (1.666,7 = 200/12 × 100 ✓; 0,06 chưa nhân 100 ✓). Phép tính đúng nhưng chỉ số không phục vụ quyết định (xem defects)." },
+      "claims": [
+        { "claim": "Tươi Mỗi Ngày (hư cấu); 12 lượt thích/200 người theo dõi; 40.000 lượt xem/nửa ngày", "status": "illustrative-labelled", "note": "Thương hiệu hư cấu; số minh hoạ ngầm." },
+        { "claim": "Phản hồi công khai làm thêm người biết (hiệu ứng khuếch đại)", "status": "unverified", "note": "Lập luận nghề về Streisand effect, không nguồn; hợp lý." }
+      ],
+      "strengths": "Đủ khuôn (vì sao, phản ví dụ, đào sâu); ba câu ngưỡng là công cụ dùng ngay; phản ví dụ đổi kết luận đúng chỗ (lượt thích nhỏ nhưng đúng khu dân cư) và Q7 dạy ngưỡng là quyết định xét lại khi tình hình đổi.",
+      "upgrade": "Để đạt ≥85: (1) thay Q4 bằng phép đo độ lan (lượt xem/giờ, số tài khoản lớn đăng lại) và đưa ngưỡng số minh hoạ vào Đào sâu (ví dụ > 1.000 chia sẻ/giờ hoặc 1 trang > 100k đăng lại → công khai); (2) sửa lời giải Q5 để nhất quán với quy tắc; (3) thay Q3/Q6 (L2) bằng bảng 4 lời chê; (4) thêm mẫu trả lời riêng và mẫu đăng giấy kiểm nghiệm công khai (ngắn) để người học có văn bản."
+    },
+    {
+      "id": "B:kn09-09",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 15, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L3", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Q7", "quote": "Tín hiệu tốt, nhưng chưa đủ kết luận nguyên nhân; cần xem tỉ lệ hỏi lại và giữ lời hoàn 48 giờ", "issue": "Đáp án đúng dài nhất, dạng 'có nhưng chưa đủ' quen thuộc của module; đoán được bằng hình thức dù nội dung tốt.", "fix": "Rút gọn và kéo dài nhiễu d ('đợi thêm một tuần, vì bình luận giảm sau đỉnh là tự nhiên') để hai phương án thận trọng phải được cân bằng dữ kiện." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Sau 12 giờ, bình luận mới mỗi giờ giảm từ 500 xuống còn 80", "issue": "Số không gắn nhãn minh hoạ và chính Q7 thừa nhận giảm sau đỉnh là tự nhiên — ví dụ nên nêu luôn hai chỉ số bài gọi là 'theo dõi thêm' bằng số (thời gian trả lời đầu tiên, tỉ lệ hỏi lại).", "fix": "Thêm: 'thời gian trả lời đầu tiên trung vị 25 phút; tỉ lệ hỏi lại cùng câu 12% (số minh hoạ)'." },
+        { "sev": "P2", "where": "cấu trúc", "quote": "MANG THEO: Trên mạng xã hội, mỗi câu trả lời đều bị chụp lại", "issue": "Thiếu 'Vì sao', 'Phản ví dụ' (khi bình luận chứa dữ liệu cá nhân của khách khác — phải ẩn; khi khủng hoảng là pháp lý — câu trả lời phải qua pháp chế) và 'Đào sâu' (phân ca trực, kịch bản trả lời theo nhóm, giới hạn quyền ẩn). Tính năng ghim/ẩn bình luận là kiến thức nền tảng (periodic) không có src.", "fix": "Thêm ba phần; thêm src trợ giúp Meta về ẩn bình luận/ghim với ngày kiểm." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 5.000 × 350.000 = 1.750 triệu; 5.000 × 60% × 50.000 = 150 triệu; tổng 1.900 ✓ (2.000 = quên 60% ✓; 1.750 = quên mã ✓)." },
+      "claims": [
+        { "claim": "XeVề (hư cấu), 5.000 vé, 3.000 bình luận/6 giờ, 500 → 80 bình luận/giờ", "status": "illustrative-labelled", "note": "Thương hiệu hư cấu; số minh hoạ ngầm, không ghi." },
+        { "claim": "Chỉ ẩn spam, link lừa đảo, thông tin cá nhân theo tiêu chí viết sẵn (tính năng ẩn/ghim bình luận)", "status": "unverified", "note": "Cơ chế nền tảng không có src; kiến thức periodic." }
+      ],
+      "strengths": "Ba nguyên tắc (bài ghim / trả lời theo nhóm có thông tin / chuyển riêng kèm cách làm) kèm câu trả lời mẫu thật (Q4 c); Q6 phân biệt 'ẩn spam theo tiêu chí' với 'xoá lời chê' là đánh đổi tinh tế đúng.",
+      "upgrade": "Để đạt ≥85: (1) thêm ba phần cấu trúc còn thiếu và src nền tảng; (2) đưa bảng 3 nhóm vấn đề × (câu trả lời mẫu, kênh, thời hạn) làm công cụ; (3) thêm hai chỉ số theo dõi bằng số vào ví dụ; (4) cân độ dài Q7; (5) thêm câu L4 đọc 6 bình luận mẫu và phân vào nhóm trả lời công khai / chuyển riêng / ẩn."
+    },
+    {
+      "id": "B:kn09-10",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L2", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1 d, Q5 c", "quote": "Vì theo quy định, doanh nghiệp phải nộp báo cáo khủng hoảng", "issue": "Nhiễu bịa quy định/bảo hiểm lặp lại kiểu của kn09-06 Q4, kn09-07 Q6 — người học học mẹo 'phương án viện quy định là sai'; Q4, Q5 là L2 nhận lại ý.", "fix": "Thay nhiễu bằng phương án bênh được (ví dụ Q5 c: 'để đo thời gian truy lô trong điều kiện thật' — đúng một phần nhưng là hệ quả, không phải lý do chính)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Sáu tháng sau diễn tập: thông báo giả ra sau 1 giờ 40 phút, truy lô mất 10 giờ", "issue": "Số minh hoạ không gắn nhãn; không nói diễn tập có báo trước hay bất ngờ (kết quả khác xa nhau), và không nêu chi phí/thời gian của nhóm trực 5 người để người học cân ràng buộc.", "fix": "Thêm 'diễn tập không báo trước, tối thứ Bảy (số minh hoạ)' và một dòng chi phí (giờ công, công cụ tra lô)." },
+        { "sev": "P2", "where": "Q3", "quote": "Thời gian đã giảm bao nhiêu phần trăm", "issue": "Phép tính % giảm một bước; không đo điều bài gọi là khó đo (an toàn để nói thật, tốc độ học).", "fix": "Thêm hoặc thay bằng câu đọc bảng ba mốc × (trước, mục tiêu, diễn tập) và chỉ ra mốc nào chưa đạt (truy lô 10h vs mục tiêu < 12h đạt; thông báo 1h40 vs < 2h đạt — hỏi mốc nào còn xa chuẩn ngành) (L4)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 540 − 100 = 440; 440/540 = 81,48 ≈ 81,5% ✓ (18,5 = 100/540 ✓; 440 phút ✓). Ví dụ: 9 giờ → 1h40 (< 2h ✓), 48 giờ → 10 giờ (< 12h ✓), 3 → 1 người ✓." },
+      "claims": [
+        { "claim": "Hạt Vàng (hư cấu); 9 giờ / 48 giờ / 3 người → 1h40 / 10 giờ / 1 người", "status": "illustrative-labelled", "note": "Thương hiệu hư cấu; số minh hoạ ngầm." },
+        { "claim": "nếu không, lần sau mọi người sẽ giấu thông tin (văn hoá đổ lỗi làm thông tin xấu tới chậm)", "status": "unverified", "note": "Nguyên lý blameless post-mortem (an toàn tâm lý), không nguồn; evergreen." }
+      ],
+      "strengths": "Đủ khuôn; phản ví dụ phân biệt lỗi hệ thống với vi phạm cố ý và cách tách kỷ luật khỏi buổi rút kinh nghiệm; ba mốc đo (thời gian thông báo, truy lô, số người nói) là chỉ số công ty kiểm soát được — Q7 chọn đúng.",
+      "upgrade": "Để đạt ≥85: (1) đưa mẫu dòng thời gian (giờ / sự kiện / ai biết / ai quyết / dựa trên gì) và mẫu bảng hành động (việc / người / hạn) làm công cụ; (2) gắn nhãn minh hoạ, nêu điều kiện diễn tập và chi phí nhóm trực; (3) thay Q4/Q5 (L2) bằng câu đọc bảng ba mốc hoặc câu L6 thiết kế diễn tập (kịch bản, thời điểm, ai quan sát, đo gì); (4) bỏ dạng nhiễu 'theo quy định'; (5) nối ngược về kn09-05, 06 (mốc 2 giờ chính là giờ vàng)."
+    }
+  ],
+  "module_notes": {
+    "progression": "Nửa đầu là quan hệ báo chí (01 góc tin → 02 thông cáo → 03 quan hệ nguồn tin), chen 04 tài trợ, rồi nửa sau là khủng hoảng theo dòng thời gian (05 phân loại → 06 giờ vàng → 07 xin lỗi → 08 ngưỡng phản hồi → 09 trả lời mạng xã hội → 10 rút kinh nghiệm). Trình tự khủng hoảng hợp lý và mốc '2 giờ' ở bài 10 khép lại với giờ vàng ở 06. Bài 04 (tài trợ) lạc khỏi trục PR–khủng hoảng và nên chuyển sang module kênh/sự kiện hoặc đổi thành 'đo PR'. Tám trong mười bài thiếu 'Vì sao/Phản ví dụ/Đào sâu' (chỉ 08 và 10 đủ khuôn), và các câu calc trong module phần lớn là phép chia một bước không gắn với quyết định, nên chiều 'đọc số' là điểm yếu chung. Ưu điểm chung: mọi thương hiệu ghi 'hư cấu' và nhiều số được gắn nhãn minh hoạ.",
+    "overlap": [
+      "'Hành động trước lời nói' với khủng hoảng sản phẩm xuất hiện ở 05 (Q2, Q6), 06 (tạm đóng quán) và 08 (niêm phong lô thịt) — ba lần cùng kết luận.",
+      "Câu chữ 'rất tiếc nếu' được dạy ở 05 Q7 c rồi là toàn bộ bài 07 (Q1, Q3).",
+      "Nhiễu dạng 'theo quy định/luật/bảo hiểm' lặp ở 06 Q4 b, 07 Q6 d, 10 Q1 d, 10 Q5 c, 04 Q5 c — người học sẽ học mẹo loại phương án thay vì học nội dung.",
+      "08 Q6 và 06 Q1 cùng hỏi 'im lặng thì sao' với cùng đáp án 'người khác kể câu chuyện/ im lặng là thừa nhận'."
+    ],
+    "gaps": [
+      "Đo PR: không bài nào dạy đo earned media (số bài, tầng báo, message pull-through, share of voice báo chí, lượt tìm tên) hay cảnh báo AVE; 02 Q7 dừng ở 'hồi âm ≠ bài đăng'.",
+      "Theo dõi và cảnh báo (social listening) với ngưỡng số — 08 nêu ba câu hỏi định tính nhưng không có cách đo tốc độ lan hay công cụ.",
+      "Giao tiếp nội bộ trong khủng hoảng (nhân viên quán, tài xế biết gì, nói gì với khách) — 06 Q2 c chạm vào nhưng không có bài.",
+      "Phối hợp pháp chế và thu hồi sản phẩm theo quy định (thông báo cơ quan quản lý) — 05 và 07 nhắc 'hỏi pháp chế' nhưng không có khung.",
+      "Huấn luyện phát ngôn/phỏng vấn (media training): 03 và 06 chọn người phát ngôn nhưng không dạy họ nói thế nào trước camera.",
+      "KOL/influencer và nội dung trả phí trong quan hệ công chúng — chỉ xuất hiện như nhiễu ('bài trả tiền') ở 01 và 03."
+    ],
+    "best_lesson": "B:kn09-10",
+    "weakest_lesson": "B:kn09-03"
+  }
+}

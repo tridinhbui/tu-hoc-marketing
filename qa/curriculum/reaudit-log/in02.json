@@ -1,0 +1,3 @@
+{ "mod":"in02", "fixed_at":"2026-11-08", "items":[
+  { "id":"B:in02-02", "where":"Ví dụ + Q3", "status":"fixed", "change":"Ví dụ: “so lượt tìm tên hãng trước và sau chiến dịch” → so với cùng kỳ Tết năm trước hoặc một hãng giày đối chứng, nêu lý do mùa vụ. Q3: mức nền 20.000 lượt/tháng đổi thành cùng 3 tháng trước Tết năm ngoái (không có chiến dịch), thêm giả định nhu cầu mùa Tết hai năm tương đương; bước giải thêm lý do so cùng kỳ. Đáp án 22,2 và wrong giữ nguyên.", "key_changed":false, "note":"Đã tự kiểm: so trước–sau ngay trong mùa Tết gộp nhu cầu mùa vụ vào công chiến dịch — lỗi thật." } ],
+  "validator":"0 lỗi", "tests":"pass" }

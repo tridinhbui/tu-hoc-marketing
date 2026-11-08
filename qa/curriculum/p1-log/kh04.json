@@ -1,0 +1,3 @@
+{ "mod":"kh04", "fixed_at":"2026-11-07", "items":[
+  { "id":"B:kh04-03", "where":"VÍ DỤ", "status":"fixed", "change":"Thêm một câu ngưỡng nhiễu cho mẫu 20: chênh dưới khoảng 6 người (như 9 so với 11) nằm trong nhiễu, phải đọc thêm cho 20 người nữa; chênh 8 người như 6 so với 14 mới đủ tin. Số 30%/70% và Q3 giữ nguyên.", "key_changed":false, "note":"Ngưỡng ~6 lấy theo kiểm định hai tỉ lệ thô ở n=20 mỗi nhóm; nêu là quy tắc thô, không phải chuẩn thống kê." } ],
+  "validator":"0 lỗi", "tests":"pass" }

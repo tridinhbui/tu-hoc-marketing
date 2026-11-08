@@ -1,0 +1,65 @@
+{
+ "mod": "kh03",
+ "lessons": [
+  {
+   "id": "B:kh03-05",
+   "title": "Khách \"sa thải\" ứng dụng của bạn thì họ đang thuê gì thay thế?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q3",
+     "quote": "Tháng 3 có 20.000 người tải; cuối tháng 4 còn 3.000 người dùng hằng tuần. Tỉ lệ người đã rời bỏ là bao nhiêu phần trăm?",
+     "issue": "Gọi toàn bộ 17.000 người không mở hằng tuần là 'đã rời bỏ' — trộn 'không dùng hằng tuần' với 'rời bỏ'; người dùng hằng tháng vẫn bị tính là bỏ. Dạy một định nghĩa chỉ số sai lệch.",
+     "fix": "Đổi đề thành 'tỉ lệ không còn dùng hằng tuần' hoặc cho thêm số người mở ít nhất một lần trong tháng 4 và hỏi tỉ lệ rời bỏ thật."
+    }
+   ],
+   "upgrade": "Sửa định nghĩa chỉ số ở Q3 (phân biệt không dùng hằng tuần vs rời bỏ) và thêm số người dùng hằng tháng; nêu cách chọn 30 người và gắn nhãn minh hoạ; thêm bảng thời điểm bỏ (ngày 1–3 / 4–14 / sau 14) để minh hoạ phần đào sâu và một câu L4 đọc bảng đó; thêm phép thử xin quyền có ngưỡng để phần đánh đổi thành quyết định có số."
+  },
+  {
+   "id": "B:kh03-07",
+   "title": "Đặt tên và viết thông điệp theo việc của khách thế nào?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "hãng thử hai bao bì, mỗi bản ở 20 cửa hàng. Sau 4 tuần, bản \"ProBio Max 150\" bán 1.600 chai, bản \"Nhẹ bụng sau bữa\" bán 2.400 chai. Doanh số bản theo việc cao hơn 50%.",
+     "issue": "Đọc kết quả thử ở kệ mà không nói cách chia cửa hàng (ghép đôi theo doanh số nền? ngẫu nhiên?) và không nói độ nhiễu: 1.600 chai/20 cửa hàng/28 ngày ≈ 2,9 chai/cửa hàng/ngày — chênh lệch giữa hai nhóm cửa hàng có thể lớn hơn chênh do tên. Kết luận '+50%' có thể là nhiễu vị trí kệ.",
+     "fix": "Thêm: chia 40 cửa hàng theo cặp doanh số nền tương đương, đổi bản sau 2 tuần (chéo), và nêu điều kiện tin kết quả (chênh lệch lặp lại ở ≥ 14/20 cặp)."
+    }
+   ],
+   "upgrade": "Thêm thiết kế thử có cặp cửa hàng và đổi chéo, nêu điều kiện tin kết quả khi mỗi cửa hàng chỉ bán vài chai/ngày; thêm phản ví dụ (tên hẹp cản mở rộng) và đào sâu về pháp lý tên/công dụng với `src`; thay Q3 bằng câu đọc bảng kết quả theo cặp cửa hàng (L4); sửa mồi ở Q2."
+  },
+  {
+   "id": "B:kh03-08",
+   "title": "Người ta đăng ký phòng gym để làm việc gì — và vì sao tháng thứ ba bỏ?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Phòng thử gói mới cho 100 hội viên … Sau 3 tháng, 55 người trong nhóm thử còn đều đặn, so với 30% ở nhóm cũ.",
+     "issue": "So nhóm thử với nhóm cũ mà không nói 100 người được chọn thế nào (tự nguyện? → người có động lực sẵn) và không cùng kỳ (nhóm cũ đo tháng 1→4, nhóm thử đo 3 tháng khác). Chênh 25 điểm có thể phần lớn do chọn mẫu; bài không nêu.",
+     "fix": "Thêm: chia ngẫu nhiên 200 hội viên mới cùng tháng thành hai nhóm 100, một nhóm nhận gói mới; so cùng mốc 12 tuần."
+    }
+   ],
+   "upgrade": "Thiết kế lại phép so nhóm thử với nhóm đối chứng ngẫu nhiên cùng kỳ và nêu giới hạn; gắn nhãn minh hoạ cho các số; thay Q4 bằng câu đọc bảng số buổi theo tuần (L4); thêm phép tính chi phí gói mới (đo cơ thể, ghép cặp) so với giá trị hội viên giữ thêm để quyết định có số; nối sang bài 05 (phỏng vấn người bỏ)."
+  },
+  {
+   "id": "B:kh03-09",
+   "title": "Chọn việc nào để tập trung khi khách thuê bạn cho nhiều việc khác nhau?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q3",
+     "quote": "Giả định minh hoạ: mỗi triệu quảng cáo mang về lãi gộp 1,5 triệu ở bữa sáng, 1,0 triệu ở ăn vặt, 0,8 triệu ở quà.",
+     "issue": "Giả định hiệu suất tuyến tính không đổi theo mức chi: với giả định này, dồn cả 600 triệu vào bữa sáng cho 900 triệu, cao hơn phương án B (759). Phép tính 'B hơn A 99 triệu' đúng nhưng chính giả định của đề phủ nhận cách chia 350/170/80 mà bài đề xuất; thiếu điều kiện hiệu suất giảm dần.",
+     "fix": "Thêm vào đề: 'hiệu suất giảm khi vượt 400 triệu ở một việc' hoặc đổi câu hỏi thành so A với 'dồn hết vào bữa sáng' và giải thích vì sao vẫn không dồn hết (rủi ro, hiệu suất giảm dần, cần bằng chứng cho việc kế)."
+    }
+   ],
+   "upgrade": "Sửa Q3 để giả định không tự mâu thuẫn với cách chia (thêm hiệu suất giảm dần hoặc so với phương án dồn hết); thay điểm 1–10 bằng % chưa thoả mãn từ khảo sát; thêm phản ví dụ cửa ngách và tiêu chí thành công cho khoản thử 80 triệu; thêm đào sâu về cách đo 'mức chưa thoả mãn' (khoảng cách giữa tầm quan trọng và mức hài lòng); thay Q6 (L2) bằng câu đọc bảng hai việc và xếp hạng."
+  }
+ ]
+}

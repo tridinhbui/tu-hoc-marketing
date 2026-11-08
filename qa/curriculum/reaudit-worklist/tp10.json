@@ -1,0 +1,18 @@
+{
+ "mod": "tp10",
+ "lessons": [
+  {
+   "id": "B:tp10-02",
+   "total": 81,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ + Q3",
+     "quote": "Với 1.000 lượt vào trang như cũ, số đơn lên 40.",
+     "issue": "Kết quả trước–sau 25 → 40 đơn được trình bày như hiệu quả của việc viết lại, không nêu nhiễu: dao động ±2√65 ≈ ±16 đơn, chênh 15 nằm trong nhiễu; cũng không có đối chứng thời gian. Mâu thuẫn với chuẩn chính chương trình dạy ở tn02-01.",
+     "fix": "Thêm câu \"chênh 15 đơn còn ngang dao động ±16; chạy thêm 2–3 tuần hoặc A/B\" và để Q3 hỏi kèm đánh giá độ chắc."
+    }
+   ]
+  }
+ ]
+}

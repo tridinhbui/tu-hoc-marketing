@@ -1,0 +1,65 @@
+{
+ "mod": "kh05",
+ "lessons": [
+  {
+   "id": "B:kh05-01",
+   "title": "\"Chị có mua không?\" — vì sao câu trả lời \"có\" gần như vô giá trị?",
+   "total": 67,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Tỉ lệ từng có hành vi là 3/20 = 15%, sát với 2 đơn thật hơn nhiều so với 16/20 = 80%",
+     "issue": "So 3/20 với 2/20 trên mẫu 20 người như bằng chứng rằng câu hỏi quá khứ 'dự báo tốt hơn' mà không nói độ nhiễu: ở n=20, 2 và 3 người cách nhau một người; sai số của tỉ lệ 15% là ±16 điểm. Người học sẽ tin rằng tỉ lệ hành vi quá khứ là con số dự báo.",
+     "fix": "Thêm một câu: 'Với 20 người, 2 hay 3 chỉ là tín hiệu về hướng, không phải con số dự báo; điều chắc chắn là 80% nói có đã sai hẳn.'"
+    }
+   ],
+   "upgrade": "(1) Gắn nhãn 'số minh hoạ' cho tình huống và ví dụ. (2) Thêm phản ví dụ: sản phẩm chưa có hành vi tương tự (ví dụ app mới), khi đó dùng đặt cọc/đặt trước thay cho câu hỏi ý định. (3) Thay Q3 (3/20) bằng câu đọc bảng: cho 20 dòng trả lời (ăn gì, mua đâu, bao nhiêu tiền) và hỏi nhóm nào đáng phỏng vấn sâu. (4) Thêm câu nói độ nhiễu của 2–3 người trên 20. (5) Thêm 'đào sâu': kỹ thuật kiểm bằng cam kết (đặt cọc, giới thiệu bạn, dành thời gian) để nối sang kh05-03."
+  },
+  {
+   "id": "B:kh05-02",
+   "title": "Câu hỏi của bạn đã chứa sẵn câu trả lời chưa?",
+   "total": 72,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ",
+     "quote": "Tuần sau, bạn hỏi lại 120 khách khác bằng phiếu tự điền bỏ hòm, câu trung tính",
+     "issue": "Lần hỏi lại đổi cùng lúc ba thứ: câu hỏi (trung tính), cách hỏi (tự điền thay vì hỏi tại quầy), và mẫu (120 khách khác, tuần khác). Bài quy toàn bộ khoảng cách 85% → 35% cho 'câu hỏi dẫn dắt', không tách phần do áp lực xã hội tại quầy hay do mẫu khác.",
+     "fix": "Thêm một câu: 'Lần hai đổi cả câu hỏi và cách hỏi, nên 50 điểm chênh là tổng của hai nguồn lệch; muốn tách, dùng phiếu tự điền cho cả hai câu.'"
+    }
+   ],
+   "upgrade": "(1) Tách hai nguồn lệch (câu hỏi vs bối cảnh) trong ví dụ hoặc đổi ví dụ thành thử nghiệm A/B hai câu cùng cách hỏi. (2) Gắn nhãn số minh hoạ. (3) Thêm phản ví dụ: câu hỏi có/không hợp lệ khi hỏi về hành vi (\"Lần này bạn có gọi size lớn không?\"). (4) Nêu tên khái niệm acquiescence bias và social desirability để người học tra tiếp. (5) Thêm câu L5: sếp vẫn đăng 85%, tính rủi ro truyền thông khi bị kiểm chứng."
+  },
+  {
+   "id": "B:kh05-03",
+   "title": "Phỏng vấn đồng nghiệp và bạn bè có tính không?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Tình huống",
+     "quote": "khảo sát ở Mỹ cho khoảng 4–5 tuần; bạn cần tự kiểm với khách Việt",
+     "issue": "Benchmark nêu như sự thật, không tên khảo sát, không năm, không `src`. Có hedge 'tự kiểm' nhưng vẫn là con số không truy được.",
+     "fix": "Hoặc thêm `src` (tên khảo sát, năm, link, ngày kiểm) hoặc viết lại thành 'giả định minh hoạ: nam giới nói chung cắt tóc thưa hơn nhóm đồng nghiệp'."
+    }
+   ],
+   "upgrade": "(1) Bỏ hoặc gắn nguồn cho benchmark cắt tóc Mỹ. (2) Chuyển bộ sàng lọc thành bảng 2 nhóm. (3) Thêm phản ví dụ: khi người quen LÀ đúng tệp (chủ tiệm bạn thân) thì xử lý thế nào — hỏi họ giới thiệu 3 chủ tiệm khác thay vì phỏng vấn họ. (4) Thêm câu L6: thiết kế bộ 3 câu sàng lọc cho khách đến cắt, kèm tiêu chí loại. (5) Sửa tol/đề Q3."
+  },
+  {
+   "id": "B:kh05-04",
+   "title": "Phỏng vấn bao nhiêu người là đủ?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Với một nhóm khách khá đồng nhất, thường khoảng 6–12 cuộc là đủ",
+     "issue": "Benchmark cỡ mẫu định tính nêu không nguồn (gốc là Guest, Bunce & Johnson 2006 với ~12 cuộc; Nielsen 5 người cho usability). Không nói điều kiện: phụ thuộc độ rộng câu hỏi và cách mã hoá.",
+     "fix": "Thêm src (Guest et al. 2006) với ngày kiểm, hoặc viết 'kinh nghiệm nghề, không phải ngưỡng khoa học' như bài kh05-06 đã làm với mốc nửa giờ."
+    }
+   ],
+   "upgrade": "(1) Gắn nguồn hoặc hạ cấp '6–12' thành kinh nghiệm nghề. (2) Thay Q3 bằng câu đọc dãy ý mới và ra quyết định dừng. (3) Thêm phản ví dụ: bão hoà giả do hỏi cùng một kịch bản quá hẹp (không thêm ý mới vì câu hỏi không mở). (4) Thêm 'đào sâu': cách mã hoá ý mới (codebook) để hai người đếm ra cùng con số. (5) Gắn nhãn số minh hoạ."
+  }
+ ]
+}

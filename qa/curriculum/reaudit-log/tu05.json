@@ -1,0 +1,3 @@
+{ "mod":"tu05", "fixed_at":"2026-11-08", "items":[
+  { "id":"B:tu05-02", "where":"Q6", "status":"fixed", "change":"Tăng mẫu 1.000 → 10.000 giỏ (z≈4,4 thay vì ≈1,4); tính lại: mất 300 đơn × 900.000 = 270 triệu, món kèm thêm khoảng 200 đơn × 59.000 ≈ 11,8 triệu (cũ: 30 đơn/27 triệu, 20 đơn/1,2 triệu); phương án c “Lỗ ròng: mất 30 đơn chính…” → “Doanh thu giảm: mất 300 đơn chính, món kèm không bù nổi”; lời giải a sửa 1.000 → 10.000 giỏ; lời giải d thêm câu nhiễu (với 10.000 giỏ, chênh 3 điểm vượt xa dao động ngẫu nhiên); phương án d viết cụ thể hơn để c không dài nhất.", "key_changed":false, "note":"Q3 và ví dụ dùng 1.000 giỏ cho tình huống khác (60%→66%), không phụ thuộc Q6; giữ nguyên." } ],
+  "validator":"0 lỗi, 0 cảnh báo", "tests":"pass" }

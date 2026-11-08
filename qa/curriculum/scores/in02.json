@@ -1,0 +1,229 @@
+{
+  "mod": "in02", "scored_at": "2026-11-07", "scorer": "independent-agent", "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    { "id": "B:in02-01",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 13, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 6, "clarity": 5 },
+      "total": 69,
+      "bloom_items": ["L2","L3","L3","L3","L4","L3","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Hỏi khách \"thuê\" sản phẩm để làm việc gì — câu trả lời thường nằm ngoài menu.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu điều kiện làm mô hình \"bán chỗ ngồi\" sai: mặt bằng đắt mà lượt ngồi/ghế thấp, khách ngồi 4 giờ với một ly 50.000đ; không nói chi phí ghế (tiền thuê/ghế/ngày) nên quyết định \"giữ ghế\" không có vế chi phí.", "fix": "Thêm Phản ví dụ: quán 60 ghế thuê 90 triệu/tháng → 50.000đ/ghế/ngày; nếu mỗi ghế chỉ 1,5 lượt × 50.000đ thì chỗ ngồi không nuôi được mặt bằng — dấu hiệu là doanh thu/ghế/ngày dưới chi phí/ghế/ngày." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Khách không chỉ mua một ly đồ uống; họ \"thuê\" quán để làm một việc", "issue": "Khung \"việc cần làm\" (jobs-to-be-done) dùng đúng nhưng không nêu tên khái niệm chuẩn hay nối sang bài về nhu cầu/insight, nên người học không tra tiếp được.", "fix": "Ghi \"(khung jobs-to-be-done, Christensen)\" và thêm LIÊN KẾT tới bài insight nhu cầu." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[3,\"SAI_TINH_TOAN\"],[0.18,\"SAI_TINH_TOAN\"]]", "issue": "3 = quên nhân 3 lượt; 0,18 = quên nhân 50 ghế — hai hiểu lầm gọi tên được nhưng dùng mã chung; phép tính ba số nhân là L1–L2.", "fix": "Gắn mã QUEN_LUOT, QUEN_GHE; hoặc thay bằng câu tính doanh thu/ghế/ngày so với chi phí/ghế/ngày." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50 × 3 × 60.000 = 9 triệu ✓. Q4: 3,5 ÷ 3 = 1,167 → +17% ✓. Ví dụ: 60 × 4 × 50.000 = 12 triệu ✓." },
+      "claims": [
+        { "claim": "Highlands Coffee: quán rộng, nhiều bàn, có ổ cắm, máy lạnh, khách họp và làm việc", "status": "unverified", "note": "Mô tả quan sát trong tình huống, nêu như dữ kiện; không nguồn, không ngày quan sát." },
+        { "claim": "Highlands có mặt bằng rộng ở vị trí dễ thấy, trong trung tâm thương mại và toà nhà văn phòng, bàn ghế cho nhóm — phục vụ \"chỗ ngồi\"", "status": "illustrative-labelled", "note": "Bài tự gắn nhãn \"theo cách đọc của bài\" — diễn giải của tác giả, không nêu như sự thật." },
+        { "claim": "Quán 60 ghế × 4 lượt × 50.000đ = 12 triệu/ngày", "status": "illustrative-labelled", "note": "Mở bằng \"Giả sử\"." }
+      ],
+      "strengths": "Gắn nhãn rõ phần diễn giải (\"theo cách đọc của bài\"); Q5 (chuỗi mang đi mở cạnh) buộc kiểm nhóm khách bị đụng trước khi phản ứng; Q7 dạy loại bỏ lập luận không kiểm chứng (\"cà phê ngon\") — tuyến phương pháp đọc case tốt.",
+      "upgrade": "Thêm Vì sao / Phản ví dụ (chi phí/ghế/ngày) / Đào sâu (lượt ngồi theo giờ, cách đếm tại quán trong 1 tuần); nêu tên khung JTBD; thay Q3 bằng phép tính có vế chi phí; thêm một câu L5 cân hai cách tăng doanh thu giờ vắng (combo vs cho thuê phòng họp) với số." },
+
+    { "id": "B:in02-02",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 13, "examples": 10, "pedagogy": 6, "assessment": 8, "data": 6, "clarity": 5 },
+      "total": 70,
+      "bloom_items": ["L2","L3","L3","L4","L3","L5","L4"], "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Tiêu đề", "quote": "Vì sao \"Đi để trở về\" giúp Biti's Hunter trẻ lại?", "issue": "Tiêu đề khẳng định kết quả (thương hiệu đã trẻ lại nhờ chiến dịch) như sự thật, trong khi chính ví dụ thừa nhận không có số nội bộ và Q7 dạy chỉ dựa trên dấu hiệu công khai. Kết quả được gán cho thương hiệu thật mà không nguồn.", "fix": "Đổi tiêu đề thành câu hỏi mở: \"\"Đi để trở về\": một thương hiệu lâu năm có thể trẻ lại bằng câu chuyện nào?\" và ghi trong Tình huống \"bài đọc case từ dấu hiệu công khai, không có số bán hàng\"." },
+        { "sev": "P1", "where": "Khái niệm", "quote": "Chuỗi \"Đi để trở về\" do Soobin Hoàng Sơn thể hiện bắt đầu từ Tết 2017 rồi được kể tiếp qua nhiều phần.", "issue": "Tên người thật và mốc thời gian nêu như sự thật, không có src và ngày kiểm.", "fix": "Thêm src (trang/kênh chính thức của chiến dịch hoặc bài báo lớn) kèm ngày kiểm, hoặc bỏ mốc năm." },
+        { "sev": "P2", "where": "Tình huống", "quote": "Dòng Biti's Hunter được giới thiệu cùng các MV âm nhạc hợp tác với ca sĩ trẻ", "issue": "Khẳng định về chiến thuật của thương hiệu thật không nguồn; đồng thời \"giày của bố mẹ\" là diễn giải nhưng không gắn nhãn.", "fix": "Ghi \"(theo quan sát công khai; cảm nhận 'giày của bố mẹ' là cách đọc của bài)\"." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "Phản ví dụ: một MV 12 triệu lượt xem mà bình luận chỉ khen giọng ca sĩ", "issue": "Phản ví dụ bị nhét vào Ví dụ; không có Vì sao / Đào sâu riêng; thiếu đánh đổi chi phí sản xuất–phân phối MV so với cách khác (hợp tác trường học, chuỗi nội dung ngắn).", "fix": "Tách Phản ví dụ thành mục riêng; thêm Đào sâu về cách đo \"trẻ lại\" bằng khảo sát độ tuổi người nhớ tên trước/sau." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 800 + 1.200 = 2.000 triệu; (50.000 − 20.000) × 3 = 90.000 lượt; 2.000.000.000 ÷ 90.000 = 22,2 nghìn ✓; 13,3 = chia 150.000 (tính cả lượt vốn có) ✓; 66,7 = chia 30.000 (quên 3 tháng) ✓." },
+      "claims": [
+        { "claim": "Biti's là thương hiệu giày dép quen thuộc với nhiều thế hệ người Việt", "status": "unverified", "note": "Nhận định phổ biến, nêu như sự thật, không nguồn." },
+        { "claim": "Với người trẻ, Biti's có lúc gắn với \"giày của bố mẹ\"", "status": "illustrative-unlabelled", "note": "Diễn giải của tác giả, không gắn nhãn." },
+        { "claim": "Biti's Hunter được giới thiệu cùng các MV âm nhạc hợp tác với ca sĩ trẻ", "status": "unverified", "note": "Chiến thuật của thương hiệu thật, không nguồn." },
+        { "claim": "Chủ đề \"Đi để trở về\" kể về người trẻ xa nhà và chuyến về quê dịp Tết", "status": "unverified", "note": "Mô tả nội dung MV, không nguồn." },
+        { "claim": "Chuỗi \"Đi để trở về\" do Soobin Hoàng Sơn thể hiện, bắt đầu từ Tết 2017, kể tiếp qua nhiều phần", "status": "unverified", "note": "Tên người và mốc năm nêu như sự thật, không src." },
+        { "claim": "\"Đi để trở về\" giúp Biti's Hunter trẻ lại", "status": "unverified", "note": "Kết quả gán cho thương hiệu thật, không nguồn (tiêu đề)." },
+        { "claim": "MV tốn 800 triệu sản xuất + 1,2 tỉ phân phối; tìm tên 20.000 → 50.000/tháng", "status": "illustrative-labelled", "note": "Q3 ghi \"Giả sử (số minh hoạ)\"." },
+        { "claim": "MV 12 triệu lượt xem mà tìm tên không đổi", "status": "illustrative-labelled", "note": "Nêu trong phản ví dụ giả định." }
+      ],
+      "strengths": "Q6 là câu đánh giá đúng nghĩa (MV 12 triệu view vs MV 3 triệu view, chọn theo mục tiêu \"trẻ lại\" bằng hai dấu hiệu công khai); ví dụ dạy cách đọc case không có số nội bộ (bình luận nói về gì, lượt tìm tên trước/sau) — phương pháp hơn là kết luận.",
+      "upgrade": "Đổi tiêu đề thành câu hỏi mở và gắn nhãn mọi diễn giải; thêm src cho tên ca sĩ/mốc năm hoặc bỏ; tách Phản ví dụ, thêm Vì sao / Đào sâu (cách đo trẻ lại); thêm một câu L4 đọc hai dòng lượt tìm tên theo tháng (trước/trong/sau) và hỏi tác động có kéo dài không." },
+
+    { "id": "B:in02-03",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 8, "data": 7, "clarity": 5 },
+      "total": 77,
+      "bloom_items": ["L2","L3","L3","L3","L5","L3","L4"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "hai khái niệm này được Byron Sharp trình bày trong sách How Brands Grow (2010)", "issue": "Trích dẫn tác giả/sách/năm nhưng không có src bấm được và ngày kiểm; theo rubric là chưa `verified`.", "fix": "Thêm src (trang sách/nhà xuất bản Oxford University Press) vào trường src kèm ngày kiểm." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Người mua không đi tìm bạn; hãy có mặt ở nơi họ vốn đã mua và trong đầu họ khi cần.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu riêng (điều kiện chi phí phủ kệ đã nằm trong Khái niệm). Thiếu trường hợp phủ kệ KHÔNG đủ: hàng có ở 90% điểm bán nhưng nằm kệ dưới, không ai nhớ tên → sẵn có trên kệ mà không sẵn có trong tâm trí.", "fix": "Thêm Phản ví dụ: sữa hạt vào 300 tạp hoá nhưng không có kệ mát, không biển; doanh số/điểm 2 hộp/tuần; dấu hiệu là độ phủ tăng mà doanh số/điểm không tăng." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[500,\"QUEN_TI_LE_CHUYEN_DOI\"],[200,\"SAI_TINH_TOAN\"]]", "issue": "500 = quên độ phủ (không phải quên tỉ lệ chuyển đổi) — mã gọi sai hiểu lầm; 200 = dừng ở số người gặp.", "fix": "Đổi mã thành QUEN_DO_PHU và DUNG_O_SO_NGUOI_GAP." },
+        { "sev": "P2", "where": "Q7 lời giải d", "quote": "Đưa con số cụ thể không có nguồn là bịa dữ liệu — cần tránh.", "issue": "Đúng tinh thần, nhưng con số dùng làm ví dụ \"bịa\" (250.000 điểm bán) gần với số Vinamilk thường tự công bố, có thể gây lẫn cho người đã đọc báo cáo của hãng.", "fix": "Dùng con số rõ ràng hư cấu hơn (ví dụ 999.999 điểm bán) hoặc đổi thành \"lợi nhuận mỗi điểm 3 triệu\" là phần bịa chính." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2.000 × 10% = 200 × 25% = 50 ✓. Ví dụ: 1.000 × 0,8 × 0,05 × 0,3 = 12 ✓; với 90%: 216 ✓; 216/12 = 18 lần ✓. Q4: 10% → 30% gấp ba ✓." },
+      "claims": [
+        { "claim": "Sẵn có trong tâm trí và sẵn có trên kệ do Byron Sharp trình bày trong How Brands Grow (2010)", "status": "unverified", "note": "Đúng theo hiểu biết của người chấm (mental/physical availability) nhưng bài không có src." },
+        { "claim": "Vinamilk có mặt ở siêu thị lớn, tạp hoá, căng tin trường học ở thị trấn miền Trung", "status": "unverified", "note": "Quan sát trong tình huống, nêu như dữ kiện, không nguồn." },
+        { "claim": "Vinamilk: tên tuổi lâu năm và độ phủ rộng từ thành phố tới nông thôn", "status": "unverified", "note": "Nhận định về thương hiệu thật, không nguồn." },
+        { "claim": "1.000 người, 80% mua ở tạp hoá, phủ 90% vs 5%, 30% thích thử", "status": "illustrative-labelled", "note": "Mở bằng \"Giả sử\"." }
+      ],
+      "strengths": "Ví dụ nhân bốn tỉ lệ cho ra 12 vs 216 người (gấp 18 lần) và nêu ngay chi phí của phủ kệ (chiết khấu, tồn kho) → quyết định \"phủ kín một quận\"; Q5 là câu đánh đổi thật (mỏng cả tỉnh vs dày hai quận) với lý do đọc được số liệu; Áp dụng yêu cầu đếm độ phủ 4 tuần — đo được.",
+      "upgrade": "Thêm src cho Byron Sharp; thêm Phản ví dụ (phủ kệ mà không hiện diện) và Đào sâu (chi phí/điểm bán, ngưỡng doanh số/điểm để nhà phân phối giữ hàng); sửa mã lỗi Q3; đổi ví dụ số bịa trong Q7." },
+
+    { "id": "B:in02-04",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 5 },
+      "total": 74,
+      "bloom_items": ["L2","L3","L3","L3","L4","L3","L3"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Tình huống", "quote": "Thế Giới Di Động là chuỗi quen thuộc với cửa hàng ở khắp tỉnh thành, nhân viên đông, có khu trải nghiệm máy và chính sách đổi trả, bảo hành được công bố rõ.", "issue": "Mô tả thương hiệu thật nêu như dữ kiện, không nguồn, không ngày quan sát; \"khắp tỉnh thành\" là khẳng định độ phủ không có số.", "fix": "Ghi \"(quan sát công khai, kiểm tại trang chính sách của chuỗi, ngày …)\" và thêm src tới trang chính sách đổi trả/bảo hành." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Khi sản phẩm không khác, hãy bán sự yên tâm quanh sản phẩm — và biết nhóm khách nào trả tiền cho nó.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu trường hợp dịch vụ không còn là khác biệt khi sàn online cũng cam kết đổi trả/bảo hành tương đương — khi đó yên tâm bị hàng hoá hoá.", "fix": "Thêm Phản ví dụ: sàn tung \"đổi trả 15 ngày, bảo hành tại nhà\" — dịch vụ chuẩn hoá, khác biệt còn lại là người thật tại quầy; dấu hiệu là tỉ lệ khách trả thêm 5% giảm theo năm." },
+        { "sev": "P2", "where": "Q5", "quote": "Một nửa số đơn đến từ khách lớn tuổi chỉ mua vì có cài đặt tận nơi.", "issue": "Dữ kiện \"một nửa\" được dùng trong lời giải c (100 máy → 50 máy) nhưng đề không cho số máy nền; lời giải tự thêm 100 máy.", "fix": "Thêm vào đề \"shop bán 100 máy/tháng\"." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (8 − 7,6) ÷ 7,6 = 5,26% ✓; chia 8 ra 5% ✓; 400 = chênh tuyệt đối (nghìn) ✓. Ví dụ: 0,3 ÷ 7,7 = 3,9% ✓. Q5: 320.000 − 200.000 = 120.000 ✓; c: 50 × 220.000 = 11 triệu < 100 × 120.000 = 12 triệu ✓; d: 20% × 8 triệu = 1,6 triệu ✓." },
+      "claims": [
+        { "claim": "Thế Giới Di Động có cửa hàng ở khắp tỉnh thành, nhân viên đông, khu trải nghiệm máy, chính sách đổi trả/bảo hành công bố rõ", "status": "unverified", "note": "Mô tả quan sát, không nguồn." },
+        { "claim": "Chuỗi lớn còn cạnh tranh bằng giá nhập theo quy mô và trả góp", "status": "unverified", "note": "Nhận định chung về mô hình bán lẻ, không gắn số; chấp nhận được nhưng chưa nguồn." },
+        { "claim": "Máy 8 triệu vs 7,7 triệu; lãi gộp 320.000, cài đặt tận nơi 200.000", "status": "illustrative-labelled", "note": "Mở bằng \"Giả sử\"." }
+      ],
+      "strengths": "Nêu điều kiện định lượng cho dịch vụ (\"chỉ bền khi biên đủ trả cho nó\") và Q5 kiểm đúng điều kiện đó với số (320.000 − 200.000 = 120.000 → giới hạn nhóm khách); ví dụ tách hai nhóm khách với hai lý do — đủ làm \"tình huống thứ hai\".",
+      "upgrade": "Gắn nhãn/nguồn cho mô tả chuỗi; thêm Vì sao / Phản ví dụ (dịch vụ bị chuẩn hoá) / Đào sâu (giá sẵn lòng trả thêm theo nhóm tuổi — khảo sát 50 khách tại quầy); bổ số nền cho Q5; thêm một câu L5 chọn giữa thu phí cài đặt 100.000 và giữ miễn phí cho nhóm trên 55 tuổi." },
+
+    { "id": "B:in02-05",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 14, "examples": 10, "pedagogy": 6, "assessment": 8, "data": 7, "clarity": 5 },
+      "total": 74,
+      "bloom_items": ["L2","L3","L3","L2","L3","L4","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Mở rộng kênh thì đổi hình thức được, nhưng đừng đổi thứ khiến khách chọn bạn.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu trường hợp lõi KHÔNG thể giữ ở kênh mới (trà pha tươi vs trà đóng gói khác hẳn về vị) và cách xử lý (đặt kỳ vọng khác, tên dòng khác).", "fix": "Thêm Phản ví dụ: gói trà siêu thị không thể tái tạo vị pha tươi; giữ lõi bằng cách khác (nguyên liệu, mức đậm) và ghi rõ \"dùng tại nhà\" để không hứa trải nghiệm quán." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Giả sử một quầy nhỏ có menu 15 món thay vì 40 món như cửa hàng lớn.", "issue": "Ví dụ không có con số nào ngoài 15/40 (không có lượt gọi, biên lãi, thời gian pha); số chỉ xuất hiện ở Q3/Q7 nên phần đọc không dạy cách tính trước khi hỏi.", "fix": "Đưa bảng 5 món (ly/ngày × lãi/ly × giây pha) của Q7 vào ví dụ, rồi chỉ cách chọn: khoá món lõi, tối ưu phần còn lại." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[140,\"SAI_TINH_TOAN\"],[120,\"SAI_TINH_TOAN\"]]", "issue": "140 = áp 70% lên cả 200 ly; 120 = quên nhân 70% — hai hiểu lầm gọi tên được, dùng mã chung.", "fix": "Gắn mã AP_TI_LE_LEN_TONG và QUEN_TI_LE_MAT." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 200 × 60% = 120 × 70% = 84 ✓. Q7: A 600.000, B 270.000, C 600.000, D 400.000, E 375.000; A + C + D = 1,6 triệu ✓; B+C 1,47 ✓; E+C 1,575 ✓ — hai đáp án sai đúng là chọn theo số ly và theo lãi/ly." },
+      "claims": [
+        { "claim": "Phúc Long nổi tiếng với trà và các món đồ uống từ trà", "status": "unverified", "note": "Nhận định về thương hiệu thật, không nguồn." },
+        { "claim": "Lõi thương hiệu Phúc Long là vị trà đậm", "status": "illustrative-labelled", "note": "Bài ghi rõ \"giả định để phân tích, không phải số liệu công bố\" — cách gắn nhãn tốt." },
+        { "claim": "Phúc Long xuất hiện dưới dạng quầy nhỏ trong chuỗi cửa hàng bán lẻ", "status": "unverified", "note": "Quan sát công khai, không nguồn/ngày." },
+        { "claim": "Phúc Long có sản phẩm trà đóng gói", "status": "unverified", "note": "Quan sát trên kệ, không nguồn." },
+        { "claim": "Quầy 200 ly/ngày, 60% món đặc trưng; bảng 5 món A–E", "status": "illustrative-labelled", "note": "Mở bằng \"Giả sử\"." }
+      ],
+      "strengths": "Gắn nhãn giả định ngay trong Tình huống; Q6 buộc phân biệt dữ kiện quan sát được với suy diễn về chính case này; Q7 là bài tối ưu nhỏ có ràng buộc (khoá món lõi, chọn 2 món còn lại theo ly × lãi) — câu tính hiếm có ở mức L4.",
+      "upgrade": "Đưa bảng số vào ví dụ; thêm Vì sao / Phản ví dụ (lõi không tái tạo được ở kênh đóng gói) / Đào sâu (cách tìm lõi bằng dữ liệu lượt gọi + lý do quay lại, cỡ mẫu); gắn mã lỗi riêng; thêm một câu L5 cân thời gian pha (món lõi 90 giây vs 30 giây) với hàng chờ ở quầy." },
+
+    { "id": "B:in02-06",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 5 },
+      "total": 66,
+      "bloom_items": ["L2","L3","L3","L2","L3","L4","L4"], "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "nền móng là nhượng quyền gắn với cung ứng nội bộ: hệ thống tự cung cấp nguyên liệu cho chủ cửa hàng ở quy mô lớn", "issue": "Khẳng định về mô hình kinh doanh của một công ty thật, nêu như sự thật, không src và không gắn nhãn \"theo thông tin công khai\". Đây là mảnh ghép \"nền móng\" của cả bài nên nếu sai thì kết luận đổi.", "fix": "Thêm src (bài báo lớn hoặc tài liệu nhượng quyền công khai của chuỗi) kèm ngày kiểm, hoặc viết \"theo các bài báo trong nước (xem nguồn)\"." },
+        { "sev": "P1", "where": "Khái niệm", "quote": "báo chí trong nước đã đưa tin chuỗi đóng bớt cửa hàng kém hiệu quả", "issue": "Dẫn \"báo chí\" như nguồn nhưng không có link, không ngày, không con số; là một kết quả gán cho thương hiệu thật.", "fix": "Thêm src cụ thể (tên báo, ngày) hoặc bỏ câu này và thay bằng giới hạn chung: \"mở nhanh thường kèm đóng bớt điểm kém\"." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Giả sử một người đi học qua 3 cửa hàng cùng biển đỏ mỗi ngày, mỗi tuần 5 ngày → 15 lần nhìn thấy/tuần.", "issue": "Ví dụ chỉ đếm số lần nhìn thấy, không nối tới bất kỳ kết quả nào (nhớ tên, ghé thử, doanh thu), không có vế chi phí (tiền thuê 3 mặt bằng); Q3 lặp đúng phép đếm này ở mức L1.", "fix": "Thêm vế chuyển đổi minh hoạ: 15 lần/tuần → sau 4 tuần 1/5 người ghé thử ở giá 25.000đ; so với 1 cửa hàng + quảng cáo 20 triệu/tháng để đạt cùng số lần tiếp xúc." },
+        { "sev": "P2", "where": "Q3", "quote": "Giả sử một người đi qua 4 cửa hàng cùng thương hiệu mỗi ngày, 6 ngày/tuần. Trong 4 tuần, người đó thấy thương hiệu bao nhiêu lần?", "issue": "Nhân ba số, L1; không kiểm kỹ năng \"mảnh ghép cùng chiều\".", "fix": "Thay bằng câu tính giá vốn: ly 25.000đ, nguyên liệu mua lẻ 11.000đ vs qua cung ứng chung 7.500đ, mặt bằng + nhân công 12.000đ/ly — mô hình nào còn lãi." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 4 × 6 × 4 = 96 ✓; 24 = một tuần ✓; 16 = 4 × 4 (quên 6 ngày). Ví dụ 3 × 5 = 15 ✓." },
+      "claims": [
+        { "claim": "Cửa hàng Mixue với biển đỏ và hình người tuyết đội vương miện xuất hiện dày đặc trong thời gian ngắn", "status": "unverified", "note": "Quan sát công khai, không nguồn/ngày; \"dày đặc\", \"thời gian ngắn\" không có số." },
+        { "claim": "Kem và trà sữa Mixue giá thấp", "status": "unverified", "note": "Không có mức giá hay mốc so sánh." },
+        { "claim": "Đoạn nhạc ngắn về \"yêu bạn\" được phát lặp lại, người trẻ quay video nhảy theo", "status": "unverified", "note": "Quan sát công khai, không nguồn." },
+        { "claim": "Mixue nhượng quyền gắn với cung ứng nội bộ, tự cung cấp nguyên liệu cho chủ cửa hàng", "status": "unverified", "note": "Mô hình kinh doanh của công ty thật, không src (P1)." },
+        { "claim": "Báo chí trong nước đã đưa tin Mixue đóng bớt cửa hàng kém hiệu quả", "status": "unverified", "note": "Kết quả gán cho công ty thật, dẫn nguồn mơ hồ (P1)." },
+        { "claim": "3 cửa hàng × 5 ngày = 15 lần thấy/tuần; quán độc lập giá gấp đôi", "status": "illustrative-labelled", "note": "Mở bằng \"Giả sử\"." }
+      ],
+      "strengths": "Khung bốn mảnh ghép cùng chiều chống kiểu tóm case một lý do (\"rẻ nên đông\"); Q6 (20 cửa hàng nhượng quyền, mỗi quán tự mua nguyên liệu) kiểm đúng mảnh ghép nền móng; Q7 nêu đúng điều kiện của giá thấp (quy mô + chi phí).",
+      "upgrade": "Thêm src cho hai khẳng định về mô hình cung ứng và việc đóng cửa hàng; thêm vế chi phí/chuyển đổi vào ví dụ; thay Q3 bằng câu tính giá vốn theo hai mô hình cung ứng; thêm Vì sao / Phản ví dụ (chuỗi phủ dày nhưng vị không đồng đều → nhận diện phản tác dụng) / Đào sâu (cách đếm độ phủ và tần suất tiếp xúc thật trong một quận)." },
+
+    { "id": "B:in02-07",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 5 },
+      "total": 76,
+      "bloom_items": ["L2","L3","L3","L4","L3","L3","L2"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ ↔ Q4", "quote": "mỗi đơn đồ ăn sau trợ giá chỉ lãi 1.000đ", "issue": "Ví dụ cho mỗi đơn đồ ăn lãi +1.000đ (tổng tuần 15.000đ, +25%), Q4 lại cho −1.000đ (tổng 9.000đ, giảm). Cùng một khách minh hoạ nhưng hai bộ số trái dấu, không giải thích là hai kịch bản.", "fix": "Ghi rõ trong Q4 \"kịch bản trợ giá sâu hơn ví dụ\" hoặc đồng bộ số (ví dụ dùng 4.000 − 5.000 như Q4)." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Mở rộng khôn ngoan là phục vụ nhu cầu kề của khách sẵn có, dựa trên tài sản đã có.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu riêng; mặt trái biên mỏng đã có trong Khái niệm nhưng thiếu điều kiện khi dịch vụ kề làm hỏng dịch vụ gốc (tài xế bận giao đồ → chờ xe lâu hơn).", "fix": "Thêm Phản ví dụ: giờ trưa tài xế dồn sang đồ ăn, thời gian chờ xe tăng từ 4 lên 9 phút, khách gọi xe giảm — tài sản dùng chung cũng cạnh tranh nhau." },
+        { "sev": "P2", "where": "Tình huống", "quote": "Grab và Be bắt đầu được biết đến với dịch vụ gọi xe. Dần dần, trên cùng một ứng dụng có thêm đặt đồ ăn, giao hàng, đi chợ, thanh toán", "issue": "Mô tả hai công ty thật nêu như dữ kiện, không nguồn/ngày; không gắn nhãn \"theo quan sát trên ứng dụng\".", "fix": "Ghi \"(theo danh mục dịch vụ hiển thị trên ứng dụng, kiểm ngày …)\"." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (2 + 4 − 2) ÷ 2 = 200% ✓; 300 = 6/2 (nhầm gấp 3 với tăng 300%) ✓; 66,7 = 4/6 ✓. Q4: 2 × 6.000 + 3 × (4.000 − 5.000) = 9.000 ✓; 24.000 = quên trợ giá ✓; 12.000 = chỉ xe ✓. Ví dụ: 2 → 5 lần = ×2,5, +150% ✓; 12.000 → 15.000 = +25% ✓ (nhưng dấu lãi đồ ăn khác Q4)." },
+      "claims": [
+        { "claim": "Grab và Be bắt đầu được biết đến với dịch vụ gọi xe", "status": "unverified", "note": "Mô tả lịch sử hai công ty thật, không nguồn." },
+        { "claim": "Grab/Be có thêm đặt đồ ăn, giao hàng, đi chợ, thanh toán trên cùng ứng dụng", "status": "unverified", "note": "Quan sát trên ứng dụng, không ngày kiểm." },
+        { "claim": "Người ta gọi đó là \"siêu ứng dụng\"", "status": "unverified", "note": "Thuật ngữ phổ biến, không nguồn; chấp nhận được." },
+        { "claim": "Gọi xe 2 lần/tuần, đồ ăn 3 bữa/tuần, lãi 6.000đ/chuyến, 1.000đ/đơn đồ ăn", "status": "illustrative-labelled", "note": "Ghi \"Giả sử (số minh hoạ)\"." }
+      ],
+      "strengths": "Đưa ngay mặt trái (tần suất cao đi với biên mỏng) và ví dụ cho thấy số lần mở +150% nhưng lãi chỉ +25%; Q4 đẩy tới trường hợp lãi giảm — người học tính được hai chiều của cùng một quyết định; Q6 chọn đúng chỉ số kết quả (tỉ lệ dùng ≥2 dịch vụ, số lần mở) thay vì đầu vào.",
+      "upgrade": "Đồng bộ dấu lãi đồ ăn giữa ví dụ và Q4; gắn nhãn/nguồn cho mô tả hai ứng dụng; thêm Vì sao / Phản ví dụ (tài sản dùng chung cạnh tranh nhau) / Đào sâu (giá trị vòng đời theo số dịch vụ dùng); thay Q7 (L2) bằng câu L5 quyết định có trợ giá 5.000đ/đơn hay không khi biết tỉ lệ khách dùng 2 dịch vụ ở lại lâu gấp đôi." },
+
+    { "id": "B:in02-08",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 6, "clarity": 5 },
+      "total": 72,
+      "bloom_items": ["L2","L3","L3","L3","L4","L2","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Tình huống", "quote": "Phần lớn hộp được mua để biếu đối tác, người thân, thầy cô.", "issue": "Khẳng định định lượng (\"phần lớn\") về hành vi thị trường nêu như sự thật, không nguồn, không gắn nhãn; chính Q7 của bài chấm phương án \"hầu như ai cũng chỉ để biếu\" là khái quát quá mức — phần đọc tự mâu thuẫn với tiêu chí của quiz.", "fix": "Viết \"một phần đáng kể hộp bánh được mua để biếu (quan sát tại quầy; không có số thị phần công khai)\" hoặc dẫn khảo sát có nguồn." },
+        { "sev": "P2", "where": "Tình huống", "quote": "các quầy bánh của Kido và nhiều hãng khác mọc lên dọc phố", "issue": "Mô tả hoạt động của công ty thật, không nguồn/ngày; không nói Kido bán dưới tên dòng nào.", "fix": "Ghi \"(quan sát mùa Trung thu, năm …)\" hoặc thêm src trang sản phẩm của hãng." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Với quà biếu, hãy nói với người mua điều họ lo, không chỉ nói với người ăn điều họ thích.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu trường hợp ngược: kênh mua lẻ để ăn (gia đình) nơi vị bánh lại là tiêu chí chính — bài nên nói cách chia thông điệp theo kênh.", "fix": "Thêm Phản ví dụ: quầy siêu thị tuần cuối mùa, người mua là người ăn, hộp giảm giá — lúc này \"nhân thơm ngon\" đúng người; dấu hiệu là tỉ lệ mua lẻ 1–2 hộp." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[1,\"SAI_TINH_TOAN\"],[0.3,\"SAI_TINH_TOAN\"]]", "issue": "Lời giải đã nói rõ 1,0 = bỏ phí giao, 0,3 = quên chiết khấu nhưng mã lỗi vẫn chung.", "fix": "Gắn mã QUEN_PHI_GIAO và QUEN_CHIET_KHAU." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: A = 40 × 550.000 × 0,9 = 19,8 triệu; B = 40 × 520.000 + 1,5 = 22,3 triệu; chênh 2,5 ✓; 20,8 − 19,8 = 1,0 ✓; 22,3 − 22,0 = 0,3 ✓. Ví dụ: 40 × 550.000 = 22 triệu ✓." },
+      "claims": [
+        { "claim": "Mỗi mùa Trung thu, các quầy bánh của Kido và nhiều hãng khác mọc lên dọc phố", "status": "unverified", "note": "Mô tả hoạt động của công ty thật, không nguồn." },
+        { "claim": "Phần lớn hộp bánh trung thu được mua để biếu", "status": "unverified", "note": "Khẳng định định lượng về thị trường, không nguồn (P1)." },
+        { "claim": "Người mua cầm hộp, xem bao bì, hỏi giá — ít khi nếm thử", "status": "illustrative-unlabelled", "note": "Quan sát hành vi, nêu như dữ kiện." },
+        { "claim": "40 hộp × 550.000đ = 22 triệu; báo giá A/B", "status": "illustrative-labelled", "note": "Ghi \"Giả sử (minh hoạ)\"." }
+      ],
+      "strengths": "Tách ba vai (mua – duyệt – ăn) và viết ba thông điệp tương ứng là việc làm được ngay; Q5 (đơn bị trưởng phòng từ chối) là chẩn đoán đúng vai trước khi sửa; Q3 so hai báo giá có chiết khấu và phí giao — đúng kiểu phép tính người mua doanh nghiệp làm.",
+      "upgrade": "Sửa \"phần lớn\" thành câu có nhãn hoặc có nguồn; thêm Vì sao / Phản ví dụ (kênh mua lẻ để ăn) / Đào sâu (cách ước tỉ lệ mua biếu bằng quan sát 100 giao dịch tại quầy: số hộp/đơn, có hoá đơn hay không); gắn mã lỗi riêng; thêm một câu L5 chọn giữa đầu tư hộp (+40.000đ/hộp) và giảm giá 5% cho khách doanh nghiệp." },
+
+    { "id": "B:in02-09",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 5 },
+      "total": 74,
+      "bloom_items": ["L2","L3","L4","L3","L3","L3","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Tình huống", "quote": "Trung Nguyên là thương hiệu cà phê Việt lâu năm, gắn với khẩu hiệu về khơi nguồn sáng tạo", "issue": "Mô tả khẩu hiệu và định vị của thương hiệu thật, không src/ngày; \"lâu năm\" không có mốc.", "fix": "Thêm src trang chính thức (khẩu hiệu) kèm ngày kiểm." },
+        { "sev": "P2", "where": "Tình huống", "quote": "Cùng tập đoàn còn có G7 — dòng cà phê hoà tan dễ pha, có mặt rộng ở siêu thị.", "issue": "Quan hệ sở hữu và độ phủ của dòng sản phẩm thật nêu như sự thật, không nguồn.", "fix": "Thêm src trang sản phẩm G7 của tập đoàn; \"có mặt rộng\" ghi là quan sát." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Ý nghĩa giúp khách gắn bó; danh mục theo dịp giúp thương hiệu có mặt ở nhiều khoảnh khắc hơn.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu riêng; giới hạn đã có trong Khái niệm nhưng thiếu dấu hiệu đo khi ý nghĩa KHÔNG được khách tiếp nhận (khảo sát liên tưởng tự do) và thiếu tác động lẫn nhau: dòng hoà tan có làm loãng ý nghĩa của dòng phin không.", "fix": "Thêm Phản ví dụ: khảo sát 200 người, chỉ 8% nhắc \"sáng tạo\" khi nghe tên — ý nghĩa chưa vào đầu khách; thêm Đào sâu về ăn khách của chính mình (Q3 đã tính 1 ly phin chuyển sang hoà tan) và ngưỡng chấp nhận." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: trước 4 × 8.000 = 32.000; sau 3 × 8.000 + 6 × 3.000 = 42.000; +10.000 ✓; 15.000 = 5 × 3.000 (quên ly phin chuyển) ✓; 18.000 = quên lãi phin ✓; 42.000 = chưa trừ mức cũ ✓. Ví dụ 3 + 7 = 10 ly ✓." },
+      "claims": [
+        { "claim": "Trung Nguyên là thương hiệu cà phê Việt lâu năm", "status": "unverified", "note": "Không mốc năm, không nguồn." },
+        { "claim": "Trung Nguyên gắn với khẩu hiệu về khơi nguồn sáng tạo và hình ảnh cà phê như năng lượng cho người làm việc, sáng tạo", "status": "unverified", "note": "Khẩu hiệu/định vị công khai, không src." },
+        { "claim": "G7 là dòng cà phê hoà tan cùng tập đoàn với Trung Nguyên, có mặt rộng ở siêu thị", "status": "unverified", "note": "Quan hệ sở hữu và độ phủ, không nguồn." },
+        { "claim": "10 ly/tuần: 3 phin, 7 hoà tan; 12 ly: 4 phin, 8 hoà tan; lãi 8.000/3.000", "status": "illustrative-labelled", "note": "Ghi \"Giả sử (số minh hoạ)\"." }
+      ],
+      "strengths": "Tách hai ý (ý nghĩa thương hiệu vs danh mục theo dịp) và nêu giới hạn \"ý nghĩa không thay được phân phối và giá\"; Q3 tính lãi tăng thêm có trừ phần ăn khách của chính mình (1 ly phin → hoà tan) — đúng phép tính cannibalization; Q7 giữ tuyến phương pháp \"không bịa số\".",
+      "upgrade": "Thêm src cho khẩu hiệu và quan hệ G7; thêm Vì sao / Phản ví dụ (ý nghĩa không vào đầu khách — đo bằng liên tưởng tự do) / Đào sâu (ngưỡng ăn khách chấp nhận được); thay Q6 (L3) bằng câu L5: hoà tan lấy 2 ly phin thay vì 1 — còn đáng ra dòng không." },
+
+    { "id": "B:in02-10",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 5 },
+      "total": 81,
+      "bloom_items": ["L2","L3","L3","L4","L3","L4","L2"], "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Tình huống", "quote": "Các ngày 9.9, 10.10, 11.11, 12.12 đã trở thành những \"ngày hội mua sắm\" quen thuộc trên Shopee và các sàn khác.", "issue": "Mô tả chương trình của sàn thật nêu như sự thật, không src/ngày kiểm; chương trình khuyến mãi của sàn đổi theo năm nên cần ngày.", "fix": "Thêm src trang sự kiện của sàn kèm ngày kiểm, hoặc ghi \"(quan sát trên ứng dụng, 2026)\"." },
+        { "sev": "P2", "where": "Ví dụ ↔ Q3", "quote": "Ngày đôi, shop giảm thêm 20.000đ/đơn và bán được 150 đơn.", "issue": "Phép tính lãi ngày đôi không trừ phí tham gia chương trình/phí sàn tăng và không trừ phần đơn dời ngày — bài để Q4 nói sau, nhưng ví dụ kết luận \"Có lời hơn\" trước khi tính phần dời; phí sàn hoàn toàn không được nhắc.", "fix": "Thêm vào ví dụ: \"chưa trừ phí tham gia chương trình của sàn (nếu có) và 60 đơn dời ngày: 60 × 20.000 = 1,2 triệu — lãi tăng thật gần 0\"." },
+        { "sev": "P2", "where": "Q7", "quote": "Nguyên lý lớn nhất rút ra từ case ngày đôi của Shopee là gì?", "issue": "Đáp án a lặp Mang theo gần nguyên văn; ba nhiễu có từ tuyệt đối (\"càng sâu càng thắng\", \"chỉ sàn lớn\", \"hiệu quả nhất\") — đoán được bằng hình thức.", "fix": "Thay bằng câu đọc dữ liệu: cho đơn 4 tuần (tuần trước 280, tuần ngày đôi 520, hai tuần sau 190 và 270) và hỏi phần tăng ròng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50 × 40.000 = 2,0 triệu; 160 × (40.000 − 25.000) = 2,4 triệu; +0,4 ✓; 6,4 = 160 × 40.000 (quên giảm giá) ✓; 4,4 = 6,4 − 2,0 ✓. Ví dụ: 40 × 30.000 = 1,2; 150 × 10.000 = 1,5 ✓." },
+      "claims": [
+        { "claim": "9.9, 10.10, 11.11, 12.12 là \"ngày hội mua sắm\" quen thuộc trên Shopee và các sàn khác", "status": "unverified", "note": "Quan sát công khai, không src/ngày; chương trình đổi theo năm." },
+        { "claim": "Trước ngày đó, ứng dụng nhắc liên tục, có đếm ngược, mã giảm giá, chương trình giải trí; nhiều người để dành đồ trong giỏ", "status": "unverified", "note": "Mô tả giao diện/hành vi, không nguồn." },
+        { "claim": "Shop 40 đơn/ngày lãi 30.000đ; ngày đôi giảm 20.000đ bán 150 đơn", "status": "illustrative-labelled", "note": "Mở bằng \"Giả sử\"." }
+      ],
+      "strengths": "Bài duy nhất trong module có đủ Vì sao / Phản ví dụ / Đào sâu; Đào sâu gọi đúng tên cơ chế (\"khoản vay từ tương lai\") và cho phép kiểm trong tuần (so hai tuần quanh ngày đôi với hai tuần thường); Q4 và Q6 buộc đọc phần đơn dời ngày và khung thời gian rộng — đúng ý in01-05.",
+      "upgrade": "Thêm src/ngày cho mô tả sàn; đưa phí sàn và phần đơn dời ngày vào ví dụ; thay Q7 bằng câu đọc chuỗi 4 tuần; thêm một câu L5 chọn mức giảm (15.000 vs 25.000) khi biết độ co giãn minh hoạ." }
+  ],
+  "module_notes": {
+    "progression": "Mười case xếp theo nguyên lý: việc khách cần làm (01) → sự thật văn hoá (02) → sẵn có trên kệ/trong tâm trí (03) → dịch vụ khi hàng hoá giống nhau (04) → giữ lõi khi mở kênh (05) → nhiều mảnh ghép cùng chiều (06) → mở rộng theo nhu cầu kề (07) → người mua ≠ người ăn (08) → ý nghĩa và danh mục theo dịp (09) → tạo dịp mua (10). Trình tự hợp lý theo cặp (03↔06 độ phủ, 05↔09 danh mục, 08↔10 dịp mua) nhưng không có bài mở đầu dạy phương pháp đọc case (dữ kiện quan sát / diễn giải / số bịa) — tuyến này chỉ xuất hiện rải trong các Q7. Ba bài kỹ năng brand (04, 05, 06, 09) và sáu bài insight xen kẽ không theo mạch kỹ năng.",
+    "overlap": [
+      "in02-03 và in02-06 cùng dạy độ phủ dày tạo tiếp xúc lặp lại; 06 nên dẫn về 03.",
+      "in02-05 và in02-09 cùng nói giữ lõi/phân vai dòng sản phẩm theo dịp; Q3 của 09 và Q7 của 05 cùng kiểu tính danh mục.",
+      "in02-01 và in02-04 cùng hỏi \"khách trả tiền cho gì ngoài sản phẩm\" (chỗ ngồi / sự yên tâm).",
+      "in02-10 trùng cơ chế dời doanh số với in01-05 (mượn doanh số từ tương lai) — nên nối chéo thay vì giảng lại."
+    ],
+    "gaps": [
+      "Không bài nào có trường src; mọi khẳng định về thương hiệu thật (Biti's/Soobin/2017, Mixue cung ứng nội bộ và đóng cửa hàng, TGDĐ khắp tỉnh thành, Trung Nguyên/G7, Shopee ngày đôi) đều `unverified`.",
+      "Thiếu bài phương pháp: cách đọc một case Việt từ nguồn công khai (báo cáo thường niên, trang chính sách, quan sát tại điểm bán) và cách ghi mức tin cậy — các Q7 đã dạy \"không bịa số\" nhưng không bài nào dạy \"lấy số ở đâu\".",
+      "Toàn bộ 10 case đều là case thành công; thiếu ít nhất một case Việt thất bại hoặc rút lui để chống thiên kiến sống sót (nối in01-07).",
+      "9/10 bài (trừ 10) không có cả ba phần Vì sao / Phản ví dụ / Đào sâu; phần lớn ví dụ chỉ có một kịch bản, không có tình huống thứ hai làm đổi kết luận."
+    ],
+    "best_lesson": "B:in02-10",
+    "weakest_lesson": "B:in02-06"
+  }
+}

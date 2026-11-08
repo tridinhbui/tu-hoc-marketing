@@ -1,0 +1,18 @@
+{
+ "mod": "tp06",
+ "lessons": [
+  {
+   "id": "B:tp06-05",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "ĐÀO SÂU",
+     "quote": "cho 5 người xem bản sửa, hỏi ngay sau đó “quảng cáo của hãng nào”, rồi so với mức 30%",
+     "issue": "Với 5 người, mỗi người là 20 điểm %, nên không so được với 30%. Người được mời xem hết video cũng không phản ánh việc lướt đi sau 3 giây, tức đúng rủi ro mà bài nói. Bài không nêu nhiễu hay giới hạn.",
+     "fix": "Ghi rõ 5 người chỉ để tìm lỗi định tính. Muốn so với 30% cần vài trăm người, xem trong điều kiện lướt."
+    }
+   ]
+  }
+ ]
+}

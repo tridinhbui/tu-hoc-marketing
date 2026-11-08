@@ -1,0 +1,50 @@
+{
+ "mod": "qc02",
+ "lessons": [
+  {
+   "id": "B:qc02-04",
+   "title": "Meta báo ROAS 3,2 — Bếp Gọn đang lãi hay lỗ?",
+   "total": 81,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "khoảng 10,4 triệu là đơn khách vào web qua Google sau khi chỉ xem quảng cáo Meta (Google cũng nhận đơn này). Doanh thu gán được cho Meta còn khoảng 44 triệu, ROAS thật 2,2",
+     "issue": "Trừ toàn bộ 10,4 triệu khỏi Meta là một quy ước gán công (cho Meta 0 công với đơn sau lượt xem, cho Google 100%), không phải 'sự thật'; gọi kết quả là 'ROAS thật' mâu thuẫn với qc02-07 ('Không số nào là sự thật duy nhất') và qc02-08 (chỉ nhóm đối chứng mới nói quảng cáo thêm bao nhiêu). Người học sẽ coi số đối soát lượt cuối là lãi thật và cắt kênh tạo nhu cầu.",
+     "fix": "Đổi 'ROAS thật' → 'ROAS đã đối soát (quy ước lượt nhấp cuối, ước lượng thận trọng)'; thêm câu 'muốn biết Meta thật sự thêm bao nhiêu, xem bài đo phần tăng thêm'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) bỏ chữ 'thật' cho số đối soát lượt cuối và nối sang qc02-08; (2) thêm src đúng chỗ cho GMV Max; (3) làm hệ số đối soát nhất quán với điều kiện 'ổn định vài tháng'; (4) thêm tình huống thứ hai: ROAS báo 2,8 nhưng hệ số 0,9 (shop ít kênh) → lãi dương, để người học thấy số màn hình thấp hơn vẫn có thể tốt hơn."
+  },
+  {
+   "id": "B:qc02-05",
+   "title": "Ba kênh tự khen, doanh thu tổng không nhúc nhích: nhìn MER thế nào?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ, Q2, Q3",
+     "quote": "tháng 10 là 240 triệu, nên MER khách mới = 2,4, dưới ngưỡng hoà vốn trên khách mới 2,5",
+     "issue": "MER khách mới chia doanh thu khách mới cho TOÀN BỘ 100 triệu chi quảng cáo, gồm cả tiền bám đuổi và nhắc khách cũ (bài qc01-04 nói Bếp Gọn chi 15–90% cho tầng nóng). Giả định 'mọi đồng quảng cáo đều mua khách mới' không nêu; nếu 30% chi nhắm khách cũ thì MER khách mới = 240/70 = 3,4 > 2,5 và đề xuất 'giữ 100 triệu' đổi thành 'được tăng'. Phép tính thiếu giả định làm kết quả đổi.",
+     "fix": "Nêu giả định hoặc tách chi theo tầng (chi cho tầng lạnh+ấm làm mẫu số); sửa Q3 cho rõ 'toàn bộ chi quảng cáo, giả định đều nhắm khách mới'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) nêu giả định mẫu số của MER khách mới hoặc tách chi theo tầng; (2) nối ngưỡng 2,5 với lãi vòng đời ở qc02-06; (3) thêm phép tính thứ hai đổi kết luận (30% chi cho khách cũ → MER khách mới 3,4 → được tăng từng nấc); (4) thay Q5 bằng câu chẩn đoán dữ liệu."
+  },
+  {
+   "id": "B:qc02-07",
+   "title": "Meta 300 đơn, Google 220, TikTok 90 — sổ bán hàng chỉ có 420: tin ai?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM, ĐÀO SÂU",
+     "quote": "trong cửa sổ ghi nhận (một số ngày sau lượt nhấp, sau lượt xem, theo cài đặt của tài khoản)",
+     "issue": "Cả bài mô tả cơ chế ghi nhận của Meta, Google, TikTok (cửa sổ nhấp/xem, cài đặt tài khoản, đổi cửa sổ làm số đổi) — loại fast — nhưng không có trường `src` nào và không có câu 'tin trang chính thức'. Rubric: khẳng định nền tảng không nguồn là P1.",
+     "fix": "Thêm src Meta 'About attribution settings', Google Ads 'About attribution models / conversion windows', TikTok 'Attribution window' với ngày kiểm."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm src cho cơ chế ghi nhận của ba nền tảng và câu tin trang chính thức; (2) thống nhất số tháng 10 của Meta với qc02-04; (3) thay Q1 L1 bằng câu đoán trước có số; (4) thêm tình huống thứ hai về Search tên thương hiệu để lượng hoá thiên vị lượt cuối."
+  }
+ ]
+}

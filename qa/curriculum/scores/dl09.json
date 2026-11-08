@@ -1,0 +1,226 @@
+{
+  "mod": "dl09",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:dl09-01",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L2", "L5", "L4", "L5", "L3", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tháng 9 đạt 110% mục tiêu đơn online, nhờ chiến dịch combo 2 ly.", "issue": "Câu mở mẫu gán nguyên nhân ('nhờ') mà bằng chứng theo sau chỉ có tổng đơn và chi phí/đơn, không có số riêng của combo; bài về báo cáo trung thực nhưng câu mẫu khẳng định quy công chưa có số.", "fix": "Thêm một số: 'combo chiếm 520/1.320 đơn' hoặc đổi 'nhờ' thành 'phần tăng chủ yếu từ combo (520 đơn)'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "1.320 đơn so với mục tiêu 1.200, chi phí mỗi đơn 91 nghìn", "issue": "Số minh hoạ không gắn nhãn.", "fix": "Đặt cờ assume." },
+        { "sev": "P2", "where": "Q1", "quote": "Đạt 110% mục tiêu đơn; em cần anh duyệt thêm ngân sách tháng tới", "issue": "Nhận lại ví dụ gần nguyên văn (L2); ba nhiễu là ba lỗi đã liệt kê trong bài.", "fix": "Đổi thành bốn câu mở cho một tình huống mới (hụt 15% vì đối tác giao hàng) để người học phải tự dựng kết luận." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q5: 1.200 × 1,08 = 1.296 đơn × 112 nghìn = 145,152 triệu; (145,152 − 120)/120 = 20,96% ≈ 21% ✓; sai 20 (cộng 8 + 12) ✓, 12 (chỉ lấy chi phí/đơn) ✓. Ví dụ: 1.320/1.200 = 110% ✓; 120 triệu/1.320 = 90,9 nghìn ≈ 91 ✓." },
+      "claims": [
+        { "claim": "Chuỗi trà sữa Hà Nội: 120 triệu, 2,4 triệu hiển thị, CTR 1,8%, 1.320/1.200 đơn, 91 nghìn/đơn", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Khái niệm kề cận là báo cáo theo cấu trúc kim tự tháp", "status": "unverified", "note": "Nhắc tên phương pháp, không gán số." }
+      ],
+      "strengths": "Phản ví dụ (sếp đang bực vì lỗi đối tác: nói sự việc một câu trước kết luận) và ngoại lệ 'khi sếp xin diễn biến' được kiểm trực tiếp ở Q3 — bài dạy quy tắc kèm điều kiện phá quy tắc; Q4 (CPC tăng 30%) và Q7 (kết quả lẫn lộn) là câu sắp thứ tự có biện hộ; Q5 dạy nhân hai mức tăng thay vì cộng.",
+      "upgrade": "Gắn nhãn số; thêm số đơn của combo để câu mở mẫu có bằng chứng cho chữ 'nhờ'. Đổi Q1 sang tình huống mới. Thêm vào ĐÀO SÂU một khung 3 câu (kết luận – bằng chứng – việc cần quyết) với giới hạn 30 từ và một ví dụ tin xấu. Dẫn sang dl09-08 (vậy thì sao) và dl09-09 (báo cáo 5 dòng) để ba bài thành một chuỗi."
+    },
+    {
+      "id": "B:dl09-02",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L4", "L3", "L2", "L3", "L4", "L2"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1, Q4, Q7", "quote": "Đọc liền các tiêu đề slide xem có thành câu chuyện đủ nghĩa", "issue": "Ba câu nhận lại ý bài (L2); không câu nào cho một bộ 3–4 tiêu đề thật để người học kiểm 'có thành chuyện không'.", "fix": "Đổi Q4 thành bốn tiêu đề cho sẵn, hỏi tiêu đề nào phá mạch và vì sao." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Chi phí quảng cáo tăng nhanh hơn doanh thu, cần xem lại", "issue": "Tiêu đề slide B dừng ở 'cần xem lại' — chưa phải kết luận có hành động theo chuẩn của chính bài; số minh hoạ không gắn nhãn.", "fix": "Viết 'Chi phí quảng cáo +35% vs doanh thu +18%: đề xuất cắt kênh X 20%'; đặt cờ assume." },
+        { "sev": "P2", "where": "VÌ SAO HIỆU QUẢ", "quote": "Trí nhớ làm việc của người nghe có hạn, nên 12 con số cạnh tranh nhau", "issue": "Khẳng định tâm lý nêu chung, không nguồn; chấp nhận được vì không gán số, nhưng nên gắn nhãn 'quan sát'.", "fix": "Thêm 'theo kinh nghiệm trình bày' hoặc src tổng quan về trí nhớ làm việc." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (270 − 200)/200 = 35% ✓; sai 70 (số tuyệt đối) ✓, 25,9 = 70/270 (chia quý 3) ✓." },
+      "claims": [
+        { "claim": "Trí nhớ làm việc của người nghe có hạn", "status": "unverified", "note": "Khẳng định tâm lý chung, không gán số." },
+        { "claim": "Nước mắm trên sàn: doanh thu +18%, chi phí +35%, sao 4,8", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phép kiểm 'đọc liền tiêu đề thành chuyện' là việc làm ngay đo được; phản ví dụ (tài liệu đọc một mình cần nhiều bằng chứng hơn) phân biệt slide trình bày với tài liệu đọc.",
+      "upgrade": "Đưa một bộ 4 tiêu đề mẫu vào ví dụ và Q4. Sửa tiêu đề slide B thành câu có hành động. Gắn nhãn số. Thay Q7 (L2) bằng câu chọn biểu đồ/bằng chứng duy nhất cho một tiêu đề cho sẵn (L4). Dẫn chéo dl07-07 (chọn biểu đồ) để hai bài không lặp ý 'tiêu đề là kết luận'."
+    },
+    {
+      "id": "B:dl09-03",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Toàn bài", "quote": "Ba mốc hay dùng: kế hoạch (có làm đúng cam kết không), cùng kỳ năm trước (loại bỏ yếu tố mùa vụ), kỳ trước", "issue": "Trùng phần lớn với dl07-08 (so cùng kỳ, Tết/sale làm méo kỳ trước); hai bài không dẫn chéo và cùng dùng câu hỏi 'cửa hàng mới chưa có cùng kỳ' (dl07-08 Q5 ↔ dl09-03 Q5).", "fix": "Dẫn chéo; dl07-08 giữ cơ chế mùa vụ/Tết, dl09-03 giữ 'chọn mốc trước khi nhìn số' và mốc thị trường." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "850 triệu so với kế hoạch 800: đạt 106%", "issue": "Số minh hoạ không gắn nhãn.", "fix": "Đặt cờ assume." },
+        { "sev": "P2", "where": "Q4", "quote": "Vì cùng mùa vụ, loại được ảnh hưởng của lễ, Tết, sale", "issue": "Nhận lại ý bài (L2); nhiễu phi lý ('sếp chỉ nhớ số năm trước').", "fix": "Đổi thành bảng 3 mốc cho hai cửa hàng, hỏi cửa hàng nào đáng lo hơn dù cùng vượt kế hoạch." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (850 − 900)/900 = −5,56% ≈ −5,6 ✓; sai −5,9 = −50/850 ✓, −50 (số tuyệt đối) ✓. Ví dụ: 850/800 = 106,25% ✓; 850/700 − 1 = 21,4% ✓." },
+      "claims": [
+        { "claim": "Cửa hàng online: 850 / 800 / 900 / 700 triệu; đối thủ +20%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ý 'khi các mốc trái chiều, đó là thông tin chứ không phải rắc rối' và 'chọn mốc trước khi nhìn số' là nguyên tắc nghề; phản ví dụ về đối thủ đổi mô hình làm mốc thị trường méo; Q2 và Q7 là câu đánh đổi có biện hộ.",
+      "upgrade": "Dẫn chéo và phân vai với dl07-08. Gắn nhãn số. Nâng Q4 lên L4 đọc bảng hai cửa hàng. Thêm vào ĐÀO SÂU một phép tính thị phần tương đối (mình −6% vs thị trường +20% → mất khoảng 22% thị phần tương đối) để câu 'mất thị phần' ở Q2 có số."
+    },
+    {
+      "id": "B:dl09-04",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 14, "examples": 9, "pedagogy": 6, "assessment": 9, "data": 7, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Khi nói, người nghe chỉ giữ được 2–3 chữ số có nghĩa.", "issue": "Khẳng định tâm lý có số, không nguồn, không gắn nhãn.", "fix": "Viết 'theo kinh nghiệm trình bày, …' hoặc thêm src." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Nói số tròn đủ để quyết định; số chính xác để trong file, đưa ra khi được hỏi.", "issue": "Thiếu VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU; các ngoại lệ (chênh nhỏ là thông tin; sát ngưỡng) chỉ nằm trong một câu của KHÁI NIỆM dù Q2/Q6/Q7 xoay quanh chúng.", "fix": "Tách ngoại lệ thành PHẢN VÍ DỤ có số (49,6% vs 50,4%; 187 nghìn vs ngưỡng 190); ĐÀO SÂU về làm tròn nhất quán và sai số cộng dồn." },
+        { "sev": "P2", "where": "Q6", "quote": "\"63,47% hội viên gia hạn\", vì quyết định thì cần giữ các chữ số thập phân", "issue": "Phương án d không sai về nội dung (vẫn cho thấy vượt ngưỡng 63%), chỉ kém gọn; lời giải gọi là 'thừa' — người học cẩn thận có thể bênh d.", "fix": "Sửa d thành phương án rõ sai hơn, ví dụ '\"Khoảng 65%\", làm tròn lên cho đẹp' (thổi kết quả)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "doanh thu mỗi hội viên gấp khoảng 15 lần chi phí có hội viên đó", "issue": "Số minh hoạ không gắn nhãn (có lưu ý tốt rằng đây là doanh thu, chưa phải lãi).", "fix": "Đặt cờ assume." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2.800/190 = 14,74 ≈ 14,7 ✓; sai 1,5 (lệch đơn vị) ✓, 0,07 = 190/2.800 ✓. Q4: 2.800 × 40% = 1.120 ✓. Q7: 200/187,432 − 1 = 6,7% ≈ 'khoảng 7%' ✓." },
+      "claims": [
+        { "claim": "Người nghe chỉ giữ được 2–3 chữ số có nghĩa", "status": "unverified", "note": "Khẳng định tâm lý có số, không nguồn." },
+        { "claim": "Chuỗi phòng tập: 187.432 đ, 63,47%, 2.841.560 đ", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Bộ câu hỏi là mạnh nhất module về đánh đổi: Q2 (giữ số lẻ khi chênh nhỏ là thông tin), Q6 (sát ngưỡng 63%), Q7 (làm tròn 187 → 200 đảo quyết định, lệch 7%) đều buộc nghĩ về ngưỡng quyết định; lưu ý 'đó là doanh thu, chưa phải lãi' ngăn hiểu sai 15 lần.",
+      "upgrade": "Bổ sung VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU từ các ngoại lệ đã có trong câu hỏi. Gắn nhãn hoặc bỏ số '2–3 chữ số'. Sửa phương án d của Q6. Gắn nhãn số. Thêm bước tính lãi mỗi hội viên sau chi phí phục vụ (giả định) để câu 'có đáng không' có đáp án."
+    },
+    {
+      "id": "B:dl09-05",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L4", "L5", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Toàn bài", "quote": "Tương tự, tỉ lệ chuyển đổi từ 2% lên 3% là tăng 1 điểm phần trăm, hay tăng 50%", "issue": "Trùng gần nguyên văn với dl08-08 (cùng ví dụ 2% → 3%, cùng 'lỗi hay gặp' về 1%/1 điểm); Q3 và Q4 kiểm cùng kỹ năng với dl08-08 Q4.", "fix": "Bỏ phần điểm phần trăm ở một bài, dẫn chéo; dl09-05 tập trung 'nền nhỏ phóng đại' và cách viết câu có cả hai con số." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Shopee thêm 120 đơn (tăng 10%), vẫn là nguồn tăng chính. Zalo thêm 30 đơn (gấp 3 lần tuần trước)", "issue": "Số minh hoạ không gắn nhãn; ĐÀO SÂU nói 'mức tăng có giữ được qua vài tuần' nhưng không có bảng 3–4 tuần để thấy nền nhỏ dao động.", "fix": "Đặt cờ assume; thêm bảng 4 tuần của Zalo (12, 15, 45, 22) để người học thấy 'nhảy vọt một tuần'." },
+        { "sev": "P2", "where": "Q7", "quote": "Vì 10% nghe nhỏ, dù thêm 120 đơn, gấp 4 lần Zalo", "issue": "Nhận lại ý bài (L2).", "fix": "Đổi thành câu viết lại một dòng báo cáo cho sẵn ('kênh C tăng 150%') với dữ kiện gốc, chọn câu viết đúng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (3 − 2)/2 = 50% ✓; sai 1 (điểm phần trăm) ✓, 33,3 = 1/3 ✓. Q4: 0,5/1,5 = 33,3% ✓. Ví dụ: 45/15 = 3 lần (= +200%) ✓; 1.320 − 1.200 = 120 = 4 × 30 ✓." },
+      "claims": [
+        { "claim": "Mỹ phẩm thuần chay: Zalo 15 → 45; Shopee 1.200 → 1.320", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ (đơn Zalo là khách mua cho nhóm, số đơn thực cũng che tiềm năng) ngăn áp quy tắc một chiều; Q6 (khi nào số tuyệt đối quan trọng hơn: quyết định về tiền, người, hàng tồn) là câu đánh đổi có biện hộ; câu viết lại mẫu 'tăng 200%, tức thêm 30 đơn' là việc làm ngay.",
+      "upgrade": "Phân vai với dl08-08 và dẫn chéo. Thêm bảng 4 tuần cho kênh nhỏ để nối với ĐÀO SÂU. Gắn nhãn số. Nâng Q7 lên L4 (viết lại dòng báo cáo). Thêm vào ĐÀO SÂU quy tắc nhẩm: với 15 đơn/tuần, dao động ngẫu nhiên ±8 đơn là bình thường — nối dl09-07."
+    },
+    {
+      "id": "B:dl09-06",
+      "scores": { "accuracy": 14, "depth": 9, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L3", "L5", "L3", "L5", "L4", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Biểu đồ cột phải bắt đầu từ 0; kiểm tra trục trước khi tin độ cao.", "issue": "Thiếu VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU; ngoại lệ biểu đồ đường chỉ có một câu trong KHÁI NIỆM dù Q4 kiểm nó.", "fix": "Thêm PHẢN VÍ DỤ: biểu đồ đường giá cổ phiếu/CTR theo ngày — cắt trục hợp lệ khi ghi mốc; ĐÀO SÂU: tỉ lệ khung hình, small multiples thay trục kép." },
+        { "sev": "P2", "where": "Toàn bài", "quote": "Các bẫy khác: trục hai bên với hai thang đo khác nhau, chọn khung thời gian ngắn để giấu xu hướng dài.", "issue": "Trùng với dl07-07 Q4 (trục cắt 90) và Q7 (trục kép); không dẫn chéo.", "fix": "Dẫn chéo: dl07-07 chọn dạng biểu đồ, dl09-06 phát hiện bẫy khi đọc biểu đồ của người khác." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "cột trước là 44%, cột sau là 52%", "issue": "Số minh hoạ không gắn nhãn; 'tỉ lệ nhớ thương hiệu' từ khảo sát không nói cỡ mẫu — 8 điểm có thể nằm trong sai số (nối dl09-07) nhưng bài bỏ qua.", "fix": "Đặt cờ assume; thêm 'khảo sát 300 người mỗi đợt, sai số ≈ ±6 điểm, nên 8 điểm là tín hiệu, chưa chắc'." },
+        { "sev": "P2", "where": "Q6", "quote": "Trục từ 0 và ghi con số ngay trên đầu mỗi cột", "issue": "Nhận lại ý bài (L2); nhiễu 3D/bỏ trục dễ loại.", "fix": "Đổi thành một mô tả biểu đồ có 2 lỗi (cắt trục + trục kép) và hỏi sửa gì trước." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (52 − 44)/44 = 18,18% ≈ 18,2 ✓; sai 8 (điểm phần trăm) ✓, 15,4 = 8/52 ✓. Ví dụ: (44 − 40) = 4, (52 − 40) = 12 → trông gấp 3 ✓; 90 triệu/1,2 tỉ = 7,5% ✓. Q4: 95–105 quanh 100 → ±5% ✓." },
+      "claims": [
+        { "claim": "Luật: biểu đồ cột phải bắt đầu từ 0", "status": "illustrative-labelled", "note": "Quy ước trình bày chuẩn, nêu như quy tắc thực hành." },
+        { "claim": "Hãng bánh: nhớ thương hiệu 44% → 52%", "status": "illustrative-unlabelled", "note": "Không có cỡ mẫu." }
+      ],
+      "strengths": "Q2 (sửa hiểu lầm ngay trong họp bằng số thật, giọng trung tính) là câu kỹ năng giao tiếp thật; Q4 (biểu đồ đường cổ phiếu được cắt trục nếu ghi mốc) kiểm đúng ngoại lệ; Q7 (3 tháng tăng có phải hồi phục sau 9 tháng giảm) dạy hỏi khung thời gian.",
+      "upgrade": "Bổ sung ba phần còn thiếu từ các ngoại lệ đã có trong câu hỏi. Dẫn chéo dl07-07. Thêm cỡ mẫu khảo sát để nối với dl09-07 và cho thấy 8 điểm còn trong sai số. Gắn nhãn số. Nâng Q6 lên L4."
+    },
+    {
+      "id": "B:dl09-07",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 14, "examples": 9, "pedagogy": 6, "assessment": 9, "data": 9, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L4", "L5", "L3", "L4", "L5", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "với mẫu ngẫu nhiên, sai số ở mức tin cậy 95% xấp xỉ 1/√n", "issue": "Đúng là mức sai số tối đa (khi tỉ lệ gần 50%); với tỉ lệ nhỏ (3%) sai số thật nhỏ hơn nhiều — Q5 lời giải dùng ±2 điểm cho 3%/400 lượt là đúng nhưng người học không biết vì sao khác 1/√400 = 5 điểm.", "fix": "Thêm một câu: '1/√n là mức tối đa (tỉ lệ ~50%); với tỉ lệ nhỏ dùng 2√(p(1−p)/n)' hoặc ghi 'quy tắc nhẩm thiên về an toàn'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Con số đi kèm mức chắc chắn: chắc, tín hiệu, hay chưa rõ — và quyết định tương xứng.", "issue": "Thiếu VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU; không có tình huống 'mẫu lớn nhưng vẫn sai' (khảo sát 5.000 người toàn khách quen) để tách sai số lấy mẫu với lệch chọn mẫu.", "fix": "Thêm PHẢN VÍ DỤ: 5.000 phiếu từ nhóm Zalo khách thân thiết → sai số nhỏ nhưng lệch lớn." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Khoảng 55% trong 80 khách ở cửa hàng Láng Hạ thích mẫu mới", "issue": "Số minh hoạ không gắn nhãn (độ bất định đã được nêu đúng).", "fix": "Đặt cờ assume." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì khi kết quả lệch, sếp biết bạn đã cảnh báo, không bị bất ngờ", "issue": "Nhận lại ĐÀO SÂU của dl09-01 (L2).", "fix": "Đổi thành câu phân loại 4 con số vào chắc/tín hiệu/chưa rõ với lý do (L4)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1/√320 = 0,0559 ≈ 5,6 điểm ✓ (= 11/2) ✓; sai 2,75 (chia 4) ✓, 11 (không đổi) ✓. KHÁI NIỆM: 1/√80 = 0,112 ≈ ±11 ✓; 55 ± 11 = 44–66 ✓. Q5: sai số với p = 3%, n = 400: 1,96 × √(0,03 × 0,97/400) ≈ 1,7 điểm ≈ '±2 điểm' ✓, lớn hơn chênh 0,3 ✓." },
+      "claims": [
+        { "claim": "Sai số 95% xấp xỉ 1/√n; mẫu 80 cho ±11 điểm", "status": "illustrative-labelled", "note": "Đúng về thống kê như mức tối đa; bài ghi rõ là quy tắc nhẩm." },
+        { "claim": "Chuỗi cà phê: 80 khách, 55%, in 200.000 ly", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Bài duy nhất trong ba module định lượng độ bất định với công thức, cỡ mẫu và phân biệt sai số lấy mẫu với lệch chọn mẫu ('±11 là mức tối thiểu'); Q3 dạy sai số giảm theo √n, Q5 (A/B 400 lượt, chênh 0,3 điểm) và Q7 (toàn bộ hoá đơn không có sai số lấy mẫu) là câu phân tích tốt.",
+      "upgrade": "Nêu rõ 1/√n là mức tối đa và cho công thức đầy đủ một dòng. Bổ sung VÌ SAO/PHẢN VÍ DỤ (mẫu lớn vẫn lệch)/ĐÀO SÂU (cỡ mẫu cần cho A/B: để thấy chênh 0,3 điểm quanh 3% cần ~hàng chục nghìn lượt mỗi bản). Gắn nhãn số. Thay Q6 bằng câu phân loại L4. Dẫn chéo dl07-10 Q4 (6 chuyển đổi) và dl09-05 (nền nhỏ)."
+    },
+    {
+      "id": "B:dl09-08",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 15, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q7", "quote": "CTR giảm 30%, chi phí mỗi đơn tăng 8 triệu/tháng; em thay mẫu", "issue": "Đơn vị lệch: 'chi phí mỗi đơn' không thể 'tăng 8 triệu/tháng'; phải là tổng chi phí tăng 8 triệu/tháng hoặc chi phí mỗi đơn tăng X nghìn. Đáp án đúng chứa lỗi diễn đạt về số.", "fix": "Sửa thành 'tổng chi quảng cáo tăng 8 triệu/tháng cho cùng số đơn' hoặc 'chi phí mỗi đơn tăng 20 nghìn'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Mỗi con số phải trả lời được “vậy thì sao?” bằng tiền và bằng một việc cần làm.", "issue": "Thiếu VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU; không có tình huống quy ra tiền sai (mức trần 112 triệu bị sếp nhớ như tiền mất thật) dù ví dụ đã cảnh báo.", "fix": "Thêm PHẢN VÍ DỤ: sếp duyệt chi 50 triệu/tháng miễn ship vì nghĩ mất 112 triệu, trong khi lãi mất thật ~8 triệu." },
+        { "sev": "P2", "where": "Q4, Q5", "quote": "Bằng tiền: doanh thu, lợi nhuận hoặc chi phí", "issue": "Nhận lại ý bài (L2); nhiễu dễ loại.", "fix": "Đổi Q4 thành so hai cách quy tiền (112 triệu mức trần vs 8,4 triệu lãi mất) và hỏi con số nào đặt làm trần chi cho giải pháp." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 4.000 × 7% = 280 giỏ × 400 nghìn = 112 triệu ✓; sai 1.152 = 4.000 × 72% × 400 nghìn (lấy toàn bộ giỏ bỏ) ✓, 11,2 (lệch 10 lần) ✓. Ví dụ: 280 × 25% × 400.000 × 30% = 8,4 triệu ✓; 'khoảng 110 triệu' trong Q2 ≈ 112 ✓." },
+      "claims": [
+        { "claim": "Website: 4.000 giỏ/tháng, 400 nghìn, bỏ giỏ 65% → 72%; 1/4 giỏ lẽ ra thành đơn, biên 30%", "status": "illustrative-labelled", "note": "Bài ghi 'Giả định minh hoạ' cho phần lãi; 4.000 giỏ và 400 nghìn chưa gắn nhãn." }
+      ],
+      "strengths": "Ví dụ phân biệt rõ mức trần (112 triệu giá trị giỏ) với lãi mất thật (8,4 triệu) và gọi phí ship là 'nghi phạm chính' chứ không kết luận — đúng chuẩn trung thực của module; đề xuất có ngưỡng, thời hạn và chỉ số đo lại (Q6).",
+      "upgrade": "Sửa đơn vị trong Q7. Bổ sung ba phần còn thiếu, đặc biệt PHẢN VÍ DỤ về quy tiền quá tay. Gắn nhãn 4.000 giỏ/400 nghìn. Nâng Q4 lên L5 (chọn trần chi). Thêm vào ĐÀO SÂU cách tính chi phí thử nghiệm miễn ship 2 tuần (số đơn > 300 nghìn × phí ship) để so với 8,4 triệu."
+    },
+    {
+      "id": "B:dl09-09",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 17, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L2", "L3", "L5", "L3", "L4", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Doanh thu tuần 312 triệu, đạt 104% mục tiêu 300 triệu", "issue": "Số minh hoạ không gắn nhãn (bài thực hành cung cấp bộ số thứ hai nên mức phạt nhẹ).", "fix": "Đặt cờ assume." },
+        { "sev": "P2", "where": "Q1", "quote": "Báo cáo dài, không có vị trí cố định cho rủi ro", "issue": "Nhận lại ý bài (L2); nhiễu dễ loại.", "fix": "Đổi thành đoạn báo cáo 8 dòng cho sẵn, hỏi dòng nào đang chôn rủi ro." },
+        { "sev": "P2", "where": "Q6", "quote": "Trong 7 ngày đó mất bao nhiêu chai doanh số vì hết hàng?", "issue": "Phép tính bỏ qua giả định 'nhu cầu không chuyển sang mã khác / không chờ hàng' — lời giải nên nói đây là mức trần.", "fix": "Thêm vào lời giải: 'mức trần, nếu khách không đổi sang mã khác'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q6: 7 × 80 = 560; 560 − 400 = 160 chai ✓; sai 560 (quên tồn), 400 (lấy tồn) ✓. Ví dụ: 312/300 = 104% ✓; 400 chai/80 = 5 ngày khớp 'còn hàng khoảng 5 ngày' ✓. Bài thực hành: 171/180 = 95% ✓; 120 bộ/40 = 3 ngày < 5 ngày đặt trước ✓; 90 đơn hoàn × 80.000 = 7,2 triệu vs 1.000 × 3.000 = 3 triệu thùng mới (so được) ✓." },
+      "claims": [
+        { "claim": "Shop Trung thu: 312/300 triệu, 640 bộ, 400 chai, 80 chai/ngày, 1.500 chai", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Khung 5 dòng với giới hạn 25 chữ và quy tắc 'dòng 3 chỉ 1–2 rủi ro, chọn theo tác động và còn kịp xử lý' là việc làm ngay; Q3 (chọn rủi ro nào lên dòng 3 trong 4 sự việc) là câu L5 hay nhất module; bài thực hành có bộ số đủ phức tạp (đơn hoàn 9%, chi phí hoàn vs thùng mới, tồn kho 3 ngày) và rubric kiểm số học.",
+      "upgrade": "Gắn nhãn số. Nâng Q1 lên L4 (tìm rủi ro bị chôn trong đoạn báo cáo). Ghi 'mức trần' ở Q6. Thêm vào ĐÀO SÂU một dòng về nhịp: khi nào dòng 3 cần gửi ngay trong tuần thay vì chờ thứ Sáu (nối dl07-09 cảnh báo)."
+    },
+    {
+      "id": "B:dl09-10",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q5", "quote": "Cùng kỳ năm ngoái tăng 25% nhờ mùa lễ; năm nay 40%, nên phần mình thêm khoảng 15 điểm", "issue": "Phép trừ hai mức tăng ngầm giả định mức nâng mùa lễ năm nay bằng năm ngoái và không có thay đổi nào khác (giá, đối thủ, nền tháng 11); lời giải gọi là 'tách phần mùa vụ' như thể chắc chắn, dù bài về nói đúng mức chắc chắn.", "fix": "Thêm vào đáp án/lời giải: 'ước thô, giả định mùa lễ năm nay như năm ngoái; muốn chắc cần đối chứng'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "2.500 đơn, giá bán 250 nghìn, lãi gộp 40% = 100 nghìn/đơn, trừ quảng cáo 80 nghìn/đơn, còn 20 nghìn/đơn", "issue": "Số minh hoạ không gắn nhãn; 'lãi' ở đây chưa trừ vận chuyển/phí sàn — khác định nghĩa dl08-05, cùng mập mờ như dl07-10.", "fix": "Đặt cờ assume; ghi 'lãi sau quảng cáo, chưa trừ chi phí biến đổi khác'." },
+        { "sev": "P2", "where": "Q4, Q6", "quote": "Viết trước 5 câu khó nhất theo các nhóm quen thuộc và trả lời sẵn", "issue": "Hai câu nhận lại ý bài (L2).", "fix": "Đổi Q4 thành: cho một báo cáo tóm tắt 3 dòng, chọn 5 câu sếp sẽ hỏi (L4)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 250 × 40% = 100; 100 − 80 = 20 nghìn × 2.500 = 50 triệu ✓; sai 250 (quên trừ quảng cáo) ✓, 425 = (250 − 80) × 2.500 (coi doanh thu − quảng cáo là lãi) ✓. Q5: 40 − 25 = 15 điểm là ước thô." },
+      "claims": [
+        { "claim": "Sữa hạt: 2.500 đơn, 80 nghìn/đơn, giá 250 nghìn, lãi gộp 40%", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Cùng kỳ năm ngoái tăng 25% nhờ mùa lễ → phần chiến dịch ≈ 15 điểm", "status": "illustrative-unlabelled", "note": "Ước lượng có giả định ngầm." }
+      ],
+      "strengths": "Năm nhóm câu hỏi khó (so với gì, nhờ mình hay yếu tố khác, lãi thật, có bền không, làm lại thì sao) là bản đồ dùng được nhiều lần; đề xuất nhóm đối chứng 'tắt quảng cáo ở 2 tỉnh trong 2 tuần, báo ngày 15' đưa tư duy gia tăng vào module giao tiếp; phản ví dụ (khách ngoài công ty) có điều kiện rõ.",
+      "upgrade": "Thêm giả định vào Q5 và nối với 'nói đúng mức chắc chắn' của dl09-07. Thống nhất thuật ngữ lãi với dl07-10/dl08-05. Gắn nhãn số. Nâng Q4/Q6 lên L4. Thêm vào ĐÀO SÂU cách đọc kết quả đối chứng (2 tỉnh tắt: đơn giảm 70% → ~70% đơn nhờ quảng cáo; kèm sai số)."
+    }
+  ],
+  "module_notes": {
+    "progression": "Module giao tiếp số liệu đi từ câu mở (01) → slide (02) → mốc so sánh (03) → làm tròn (04) → phần trăm/tuyệt đối (05) → bẫy biểu đồ (06) → độ chắc chắn (07) → 'vậy thì sao' (08) → báo cáo 5 dòng (09) → hỏi đáp (10). Trình tự hợp lý: 01/08/09 tạo khung, 03–07 là các kỹ năng trung thực với số, 10 khép lại. Mức trung bình cao hơn dl07/dl08 nhờ câu hỏi L4–L5 nhiều và hai bài có bài thực hành (09) hoặc độ bất định định lượng (07). Ba bài 04, 06, 07, 08 thiếu VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU dù câu hỏi của chúng đã chứa các ngoại lệ — chỉ cần chuyển lên phần đọc.",
+    "overlap": [
+      "dl09-05 trùng gần toàn bộ dl08-08 (điểm phần trăm vs phần trăm, ví dụ 2% → 3%).",
+      "dl09-03 trùng phần lớn dl07-08 (so cùng kỳ; câu hỏi cửa hàng mới chưa có cùng kỳ xuất hiện ở cả hai).",
+      "dl09-06 trùng dl07-07 Q4/Q7 (trục cắt, trục kép).",
+      "dl09-02 Q1 (tiêu đề là kết luận) trùng dl07-07 Q6.",
+      "dl09-01 ĐÀO SÂU và dl09-07 Q6 cùng ý 'báo tin xấu sớm/nói giới hạn giúp tăng uy tín'."
+    ],
+    "gaps": [
+      "Thống nhất định nghĩa 'lãi' giữa các bài (dl07-10: lãi gộp − quảng cáo; dl08-05: trừ cả phí sàn/vận chuyển; dl09-10: lãi gộp − quảng cáo) — người học báo cáo 'lãi' sẽ bị sếp hỏi lại chính câu dl09-10 dạy.",
+      "Trình bày độ bất định trên biểu đồ/slide (khoảng sai số, 'tín hiệu' vs 'chắc') — bài 07 dạy nói, chưa dạy vẽ.",
+      "Báo tin xấu và hậu kiểm (post-mortem) có cấu trúc — phản ví dụ bài 01 chạm đến nhưng không bài nào dạy.",
+      "Bảng định nghĩa chỉ số dùng chung (nguồn, công thức, kỳ tính) để tránh 'hai dashboard cãi nhau' — có ở dl07-10 nhưng module giao tiếp không dẫn lại.",
+      "Viết báo cáo cho người đọc không phải sếp (khách hàng, đối tác, tài chính) — phản ví dụ bài 10 nêu nhưng không bài nào xử lý."
+    ],
+    "best_lesson": "B:dl09-09",
+    "weakest_lesson": "B:dl09-06"
+  }
+}

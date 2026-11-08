@@ -1,0 +1,101 @@
+{
+ "mod": "tu04",
+ "lessons": [
+  {
+   "id": "B:tu04-03",
+   "title": "Thưởng giới thiệu bao nhiêu thì vẫn còn lãi?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Thưởng giới thiệu so với biên đóng góp kỳ vọng trong đời của khách mới, và trả theo hành vi mua thật.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Khái niệm nêu nhiều điều kiện nhưng không có tình huống làm trần thưởng sai: khách giới thiệu có số đơn trong đời khác khách thường (Q7 chạm nhưng phần đọc không), chiết khấu thời gian (lãi 3 đơn trải 12 tháng vs thưởng trả ngay), tiền thưởng người được mời thực chất là giảm giá đơn đầu nên đã nằm trong lãi đơn đầu.",
+     "fix": "Thêm Phản ví dụ: khách giới thiệu mua 1,5 đơn → trần âm; Đào sâu: dòng tiền (trả 200.000đ hôm nay, nhận 240.000đ còn lại sau 6–9 tháng) và ngân sách tối đa theo tháng."
+    }
+   ],
+   "upgrade": "Bổ sung Vì sao / Phản ví dụ / Đào sâu (dòng tiền, khách giới thiệu khác khách thường); tách khái niệm thành danh sách bước; cho số vào Q5 để thành câu tính LTV hai kênh."
+  },
+  {
+   "id": "B:tu04-04",
+   "title": "Nên xin khách giới thiệu vào lúc nào?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Xin giới thiệu khi khách vừa hài lòng, không phải khi lịch gửi tin của bạn tới hạn.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Khi nào 'khoảnh khắc hài lòng' sai: sản phẩm cần thời gian thấy kết quả (khoá học, mỹ phẩm) — hài lòng lúc nhận hàng chưa phải hài lòng về kết quả; dịch vụ nhạy cảm (spa trị liệu, y tế) khách không muốn kể. Chỉ Q5/Q7 chạm một phần.",
+     "fix": "Thêm Phản ví dụ: kem trị mụn — khách khen bao bì ngày 1 nhưng chưa biết hiệu quả; mời ngày 1 cho lời giới thiệu rỗng và tỉ lệ bạn mua thấp; dời sang khi khách mua lần 2. Thêm Đào sâu về tần suất tối đa xin giới thiệu mỗi khách."
+    }
+   ],
+   "upgrade": "Bổ sung Vì sao / Phản ví dụ (sản phẩm cần thời gian thấy kết quả) / Đào sâu (tần suất mời tối đa); nêu cơ sở của 0,5 khách/mã; thay Q6 bằng câu so hai vị trí bằng số."
+  },
+  {
+   "id": "B:tu04-05",
+   "title": "Làm sao để khách tự kể về bạn mà không cần thưởng?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "theo khung STEPPS của Jonah Berger trong sách Contagious",
+     "issue": "Dẫn tên tác giả, sách và khung thật nhưng không có src; bài liệt kê 'khác thường, gây bất ngờ, dễ chụp, giúp người kể trông thú vị' — không khớp đúng sáu chữ của STEPPS (Social currency, Triggers, Emotion, Public, Practical value, Stories), người học sẽ tưởng đó là STEPPS.",
+     "fix": "Thêm src (sách, năm xuất bản) và viết đúng: 'STEPPS gồm 6 yếu tố; bài này dùng ba trong đó: Social currency (kể để trông thú vị), Public (dễ thấy/dễ chụp), Stories (một câu kể lại được)'."
+    },
+    {
+     "sev": "P1",
+     "where": "Ví dụ · Q3",
+     "quote": "trong 200 khách mới được hỏi, số người nói \"bạn kể\" tăng từ 20 lên 50",
+     "issue": "So trước–sau 2 tháng không có nhóm đối chứng, không gắn nhãn minh hoạ, không nói mẫu 200 có đủ không; đồng thời không có lãi/chi phí: chả viên mời trước tốn bao nhiêu mỗi khách và 30 khách mới thêm đem lại gì. Bài về 'rẻ hơn thưởng giới thiệu' nhưng không tính.",
+     "fix": "Thêm: 'chả viên tốn 3.000đ × 6.000 khách/tháng = 18 triệu; 30 khách mới/200 → ước +15% khách mới = 90 khách/tháng × 45.000đ × 3 lần' và ghi '(số minh hoạ; cần so với tháng cùng kỳ)'."
+    }
+   ],
+   "upgrade": "Gắn src và viết đúng STEPPS; thêm chi phí chi tiết và giá trị khách mới để chứng minh 'rẻ hơn thưởng'; gắn nhãn số; thay Q6 bằng câu chấm câu kể nguyên văn."
+  },
+  {
+   "id": "B:tu04-07",
+   "title": "Review và video của khách có đáng đầu tư như giới thiệu?",
+   "total": 68,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "nghiên cứu của Spiegel Research Center (Northwestern) cho thấy khả năng mua đạt đỉnh ở khoảng 4,2–4,5 sao, không phải 5 sao, và tăng theo số đánh giá",
+     "issue": "Dẫn nghiên cứu thật với số cụ thể, không có src, không ngày kiểm, không nêu phạm vi (dữ liệu bán lẻ Mỹ, một nhà bán). Kiến thức 'periodic' bắt buộc nguồn. Dải 4,2–4,5 có thể lệch với số gốc của nghiên cứu.",
+     "fix": "Thêm src tới báo cáo Spiegel (năm), ghi đúng dải số trong báo cáo và câu 'kết quả trên dữ liệu bán lẻ Mỹ; kiểm trên danh mục của bạn'."
+    },
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Đánh giá và video của khách là truyền miệng tới người lạ; số lượng thật quan trọng như điểm số.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nêu khi nào xin đánh giá phản tác dụng (xin đại trà kéo cả đánh giá xấu; thưởng cho đánh giá vi phạm chính sách sàn), không có đánh đổi giữa số lượng và điểm.",
+     "fix": "Thêm Phản ví dụ: thẻ cảm ơn kèm quà 'nếu đánh giá 5 sao' bị sàn coi là thao túng — phải xin đánh giá trung thực; Đào sâu: điểm tụt từ 4,8 xuống 4,5 khi số đánh giá tăng là bình thường, theo dõi tỉ lệ mua chứ không theo dõi điểm."
+    }
+   ],
+   "upgrade": "Gắn src và viết đúng phạm vi nghiên cứu Spiegel; bổ sung Vì sao / Phản ví dụ / Đào sâu; chỉnh giả định tỉ lệ để lại đánh giá; thay Q5/Q6 bằng câu đọc bảng; bỏ khẳng định về thuật toán khỏi nhiễu."
+  },
+  {
+   "id": "B:tu04-08",
+   "title": "Nên thuê KOL hay nuôi cộng đồng đại sứ từ chính khách hàng?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm (pháp lý)",
+     "quote": "theo Luật Quảng cáo (bản sửa đổi có hiệu lực từ 01/01/2026 bổ sung trách nhiệm của người chuyển tải quảng cáo như KOL)",
+     "issue": "Khẳng định về văn bản luật thật với ngày hiệu lực cụ thể, không có src và ngày kiểm; loại 'periodic' bắt buộc nguồn. Có câu 'hỏi pháp chế' nhưng chưa đủ.",
+     "fix": "Thêm src tới văn bản luật sửa đổi (số hiệu, ngày thông qua), ngày kiểm, và câu 'nếu văn bản mới hơn, tin trang chính thức'."
+    },
+    {
+     "sev": "P1",
+     "where": "Cấu trúc bài",
+     "quote": "MANG THEO: Đại sứ từ khách thật chạm ít người hơn KOL, nhưng thường được tin hơn và nói lâu hơn; hãy kiểm bằng mã riêng.",
+     "issue": "Không có Vì sao / Phản ví dụ / Đào sâu riêng (ví dụ có nêu ba điều chưa tính nhưng không thành phần phản ví dụ). Không nêu khi nào đại sứ hỏng: đại sứ bỏ chạy, nhóm chạy tan, đại sứ nói xấu khi sản phẩm lỗi — rủi ro ngược.",
+     "fix": "Thêm Phản ví dụ: 5/25 đại sứ bỏ chạy sau 2 tháng, nhóm chạy 60 người chỉ còn 20; chi phí mỗi đơn tăng lên 250.000đ; dấu hiệu và cách chọn lại. Thêm Đào sâu về chi phí quản lý cộng đồng (Q3 có nhưng phần đọc không)."
+    }
+   ],
+   "upgrade": "Gắn src pháp lý; thêm Vì sao / Phản ví dụ (đại sứ bỏ, rủi ro ngược) / Đào sâu (chi phí quản lý); tách khái niệm thành danh sách; thêm câu tính lãi (không chỉ chi phí mỗi đơn) với biên gộp của đồ chạy bộ."
+  }
+ ]
+}

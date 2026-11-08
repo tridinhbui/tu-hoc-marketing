@@ -1,0 +1,65 @@
+{
+ "mod": "gt05",
+ "lessons": [
+  {
+   "id": "B:gt05-02",
+   "title": "Viết mục tiêu trong brief thành một câu đo được thế nào?",
+   "total": 80,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q2, Q7",
+     "quote": "Nâng người đặt lịch hằng tháng từ 6.000 lên 8.000 trước 31/12 … Tăng tỉ lệ hội viên gia hạn từ 45% lên 55% trong quý 3",
+     "issue": "Ở cả hai câu, đáp án là phương án duy nhất có số; ba phương án sai đều không có số. Đoán được bằng hình thức, và dạng này lặp ở 05-01 Q2/Q6.",
+     "fix": "Thêm phương án sai có số nhưng sai khuôn: 'Tăng lượt mở app từ 20.000 lên 30.000 trước 31/12' (hành vi không làm ra tiền) hoặc 'Tăng đặt lịch 33% trong 3 tháng' (thiếu điểm xuất phát)."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm phương án sai có số ở Q2/Q7; (2) thay một câu L2 bằng câu đọc bảng huỷ lịch (L4); (3) nêu cơ sở của đích 8.000; (4) gắn nhãn minh hoạ; (5) thêm một câu L5: chọn 'đặt lịch' hay 'lịch hoàn thành' làm hành vi khi dữ liệu hoàn thành chỉ có sau 2 tuần."
+  },
+  {
+   "id": "B:gt05-04",
+   "title": "Ô “insight” trong brief đang chứa dữ kiện hay chứa sự thật về con người?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q2, Q5",
+     "quote": "Tôi cần tỉnh để chạy tiếp, nhưng dừng nghỉ thì mất cuốc … Tôi biết nên mua, nhưng trả tiền cho chuyện chưa xảy ra thấy phí",
+     "issue": "Ở cả hai câu, đáp án là phương án duy nhất viết ở ngôi 'Tôi' với 'nhưng'; ba phương án sai đều ở ngôi thứ ba. Đoán được bằng hình thức, không cần hiểu 'căng thẳng'.",
+     "fix": "Thêm phương án sai cũng ở ngôi 'Tôi… nhưng…' mà không có căng thẳng thật hoặc là giọng thương hiệu trá hình: 'Tôi muốn một thức uống ngon, nhưng ít hãng làm được' ."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm phương án sai ở ngôi 'Tôi' cho Q2/Q5; (2) thay hai câu L2 bằng câu đọc kết quả phỏng vấn (L4) và câu chọn giữa insight sắc cho 30% tài xế hay insight rộng cho 80% (L5); (3) ghi giới hạn của giả định 120.000; (4) thêm bài thực hành: viết insight từ 3 trích dẫn phỏng vấn cho sẵn."
+  },
+  {
+   "id": "B:gt05-06",
+   "title": "Thông điệp đã có — lý do để tin nào làm khách chịu tin?",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q2, Q5",
+     "quote": "Vi hạt tinh dầu tan dần và 38/50 người thử thấy thơm lúc 14 giờ … Cân thực tế 210g, so với các mẫu cùng tầm giá đang bán",
+     "issue": "Ở cả hai câu, đáp án là phương án duy nhất có con số; các phương án sai đều là tính từ/khen chung. Đoán được bằng hình thức.",
+     "fix": "Thêm phương án sai có số nhưng lệch thước đo: 'Hơi thở thơm ngay sau đánh răng ở 50/50 người thử' (đo sai thời điểm) và 'Đế giày dày 32 mm, êm nhất tầm giá' (đo sai đại lượng)."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm phương án sai có số ở Q2/Q5; (2) nêu khoảng tin cậy và nhu cầu nhóm so sánh cho 38/50; (3) thay Q7 bằng câu đọc bình luận nghi ngờ; (4) gắn nhãn minh hoạ; (5) thêm Đào sâu về quy định quảng cáo cần `src` và ngày kiểm (freshness periodic cho phần pháp chế)."
+  },
+  {
+   "id": "B:gt05-08",
+   "title": "Cùng một chiến dịch, brief cho agency và brief cho KOL khác nhau thế nào?",
+   "total": 71,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "gắn nhãn quảng cáo theo quy định nền tảng",
+     "issue": "Nêu nghĩa vụ gắn nhãn như quy định nền tảng mà không nêu nền tảng nào, không `src`, không nhắc quy định pháp luật Việt Nam về quảng cáo của người có ảnh hưởng; đây là nội dung đổi nhanh cần nguồn và ngày kiểm.",
+     "fix": "Thêm `src` tới trang chính sách nội dung thương mại của nền tảng dùng (TikTok/Facebook) và văn bản pháp luật liên quan, ghi ngày kiểm và câu 'nếu màn hình khác, tin trang chính thức'."
+    }
+   ],
+   "upgrade": "Để ≥85: (1) thêm `src` và ngày kiểm cho nghĩa vụ gắn nhãn, ghi lớp freshness; (2) nêu giới hạn của đo bằng mã; (3) thêm câu chấm brief KOL (L4) và trộn vị trí đáp án; (4) thêm Phản ví dụ/Đào sâu; (5) gắn nhãn minh hoạ."
+  }
+ ]
+}

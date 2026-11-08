@@ -1,0 +1,35 @@
+{
+ "mod": "tu02",
+ "lessons": [
+  {
+   "id": "B:tu02-04",
+   "title": "Vì sao người tìm \"giày chạy bộ miễn phí\" lại ăn tiền của bạn?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Khi đặt từ khoá rộng, nền tảng sẽ hiển thị cho nhiều cụm tìm kiếm liên quan, kể cả cụm không có ý định mua.",
+     "issue": "Toàn bài mô tả cách nền tảng tìm kiếm vận hành (khớp rộng, báo cáo cụm từ tìm kiếm, giới hạn từ phủ định ở Q6 a) — nội dung lớp 'fast' theo thang độ tươi, bắt buộc có `src` với ngày kiểm và câu 'nếu màn hình khác, tin trang chính thức'. Bài không có `src` và không nêu nền tảng nào.",
+     "fix": "Thêm `src` trỏ tới trang trợ giúp chính thức về từ khoá phủ định và báo cáo cụm từ tìm kiếm của nền tảng được nói tới, ngày kiểm, và câu quy ước về màn hình thay đổi."
+    }
+   ],
+   "upgrade": "Thêm `src` và câu quy ước độ tươi; đưa 1.600 nhấp và giả định CPC vào bài đọc; thay Q3 và Q7 bằng calc/đọc bảng có ý nghĩa; thêm ĐÀO SÂU về ngưỡng dữ liệu tối thiểu trước khi phủ định một cụm (số nhấp, số tuần)."
+  },
+  {
+   "id": "B:tu02-09",
+   "title": "Bị cắt 30% ngân sách thì cắt ở đâu?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Ba nhóm: A lãi biên +300.000đ mỗi triệu cuối, B +50.000đ, C −200.000đ. Cần cắt 18 triệu. Phong cắt C 10 triệu (phần đang lỗ), rồi B 8 triệu (phần lãi mỏng), giữ nguyên A.",
+     "issue": "Ví dụ coi 'lãi biên mỗi triệu cuối' là hằng số trên suốt 10 triệu của C và 8 triệu của B — trái với chính bài 01/02 (lãi biên đổi theo mức chi). Không nêu giả định, và không giải thích vì sao dừng cắt C ở 10 triệu (nếu C vẫn −200.000đ/triệu thì nên cắt tiếp C thay vì cắt B đang +50.000đ). Phép tính thiếu giả định làm kết quả đổi: cắt đúng phải dừng khi lãi biên của C sau cắt ≈ lãi biên của B. Q4 có ghi 'giả sử lãi biên không đổi trong khoảng này' nhưng bài đọc thì không.",
+     "fix": "Thêm vào VÍ DỤ hai dòng: 'lãi biên của C tăng dần khi C nhỏ lại (ước: triệu thứ 10 của C hoà vốn), nên cắt C tới chỗ biên C ≈ biên B rồi mới cắt B' và nêu rõ giả định tuyến tính là để tính nhanh."
+    }
+   ],
+   "upgrade": "Nêu giả định tuyến tính và điều kiện dừng cắt (biên C ≈ biên B) trong VÍ DỤ; thay Q3 bằng calc so tổng lãi hai cách cắt; gắn nhãn minh hoạ và `rel` sang tu02-02; thêm số cho Q7; thêm ĐÀO SÂU về cách đo đóng góp gián tiếp của C (lượt tìm tên, đơn nhóm khác) trước khi cắt."
+  }
+ ]
+}

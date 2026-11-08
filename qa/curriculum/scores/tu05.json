@@ -1,0 +1,188 @@
+{
+  "mod": "tu05", "scored_at": "2026-11-07", "scorer": "independent-agent", "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    { "id": "B:tu05-01",
+      "scores": { "accuracy": 14, "depth": 9, "practical": 16, "examples": 11, "pedagogy": 6, "assessment": 8, "data": 9, "clarity": 5 },
+      "total": 78,
+      "bloom_items": ["L3","L5","L3","L3","L4","L2","L4"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Tách doanh thu thành khách × tần suất × giá trị đơn; hai cần nhỏ nhân với nhau thường rẻ hơn một cần lớn.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nêu khi nào hai cần 'rẻ' lại không kéo được: tần suất đã sát chu kỳ dùng (cà phê 500g/tháng → trần ~12 lần), giá trị đơn tăng bằng combo làm tần suất giảm (chính là bài 06), hoặc tệp khách cũ đang rời đi nên 'làm trên khách đã tin' không còn ai.", "fix": "Thêm Phản ví dụ: tiệm có tần suất 11 lần/năm với gói 500g — cần tần suất đã kín, phải sang khách mới hoặc giá trị đơn; Đào sâu: ba cần kéo nhau (nối sang bài 06) và hạn mức mỗi cần." },
+        { "sev": "P2", "where": "Q2", "quote": "Cách B, vì lãi sau chi phí khoảng 54,5 triệu, hơn cách A khoảng 23 triệu", "issue": "Phương án đúng chứa toàn bộ kết quả tính; người học không cần tự tính. Đồng thời 'tốn 40 triệu CRM và quà' cho sẵn mà không nói đây là ước lượng rủi ro cao hơn 63 triệu CAC đo được.", "fix": "Bỏ số khỏi phương án (chỉ 'Cách B, lãi cao hơn' / 'Cách A, lãi cao hơn' / 'ngang nhau' / 'thiếu dữ kiện') để buộc tính; thêm dòng 'B dựa trên giả định +10% chưa kiểm'." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì sao tách doanh thu thành ba cần gạt giúp ra quyết định tốt hơn nhìn một con số tổng?", "issue": "Câu L2 nhận lại ý bài, nhiễu b/d vô lý.", "fix": "Thay bằng câu đọc bảng 3 năm (khách, tần suất, giá trị đơn) và hỏi cần nào đang rơi." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 2.000 × 3,3 × 275.000 = 1.815 triệu ✓. Q4: 20% × 1.500 = 300 triệu; 300/0,75 = 400 khách ✓. Ví dụ: 2.000 × 3 × 250.000 = 1,5 tỉ ✓; 315/0,75 = 420 ✓; 1,1 × 1,1 = 1,21 ✓. Q2 lời giải: 315 × 30% = 94,5; 94,5 − 63 = 31,5; 94,5 − 40 = 54,5 ✓. Q7: 1,15/1,25 = 0,92 ✓." },
+      "claims": [
+        { "claim": "Tiệm cà phê hạt: 2.000 khách × 3 lần × 250.000đ; lãi gộp 30%", "status": "illustrative-labelled", "note": "Q2 ghi '(số minh hoạ)'; tình huống không gắn nhãn nhưng tự khớp." }
+      ],
+      "strengths": "Phương trình doanh thu = khách × tần suất × giá trị đơn được dùng xuyên suốt và đúng số; Q2 là câu đánh đổi có số thật (so lãi sau chi phí hai cách, không so doanh thu); Q7 buộc chẩn đoán ngược từ hai tỉ lệ tăng — đúng chất L4.",
+      "upgrade": "Bổ sung Vì sao / Phản ví dụ (cần tần suất đã kín) / Đào sâu (ba cần kéo nhau); bỏ số khỏi phương án Q2 để buộc tính; thay Q6 bằng câu đọc bảng 3 năm." },
+
+    { "id": "B:tu05-02",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 14, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 5 },
+      "total": 73,
+      "bloom_items": ["L2","L3","L3","L2","L2","L4","L3"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Bán thêm khi khách còn chọn hoặc khi hành vi dùng cho thấy nhu cầu; bán kèm món nhỏ khi đã chốt; luôn đo cả đơn bị mất.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nêu khi nào gợi ý đắt ở giỏ vẫn đúng (khách B2B mua theo ngân sách, sản phẩm có bản 'bảo hành mở rộng' bán tốt nhất tại checkout) hay khi nào bán kèm nhỏ cũng gây bỏ giỏ (quá nhiều gợi ý, giao diện mobile).", "fix": "Thêm Phản ví dụ: bảo hành mở rộng 10% giá ở trang thanh toán cho đồ điện tử — bỏ giỏ không tăng vì nó trả lời nỗi lo lúc trả tiền; Đào sâu: số gợi ý tối đa và đo 'doanh thu trên mỗi giỏ' làm chỉ số tổng." },
+        { "sev": "P2", "where": "Ví dụ · Q3", "quote": "Nếu lúc đó có 25 khách nâng cấp ở giỏ, mỗi người trả thêm 300.000 đồng, họ chỉ đem 7,5 triệu (số minh hoạ), nên ròng vẫn hơn 46 triệu", "issue": "Giả định 25 lượt nâng cấp mất hết khi chuyển lên trang sản phẩm (thực tế một phần được giữ) và bỏ qua doanh thu tất; không nói so bằng doanh thu thay vì lãi (giày nâng cấp 300.000đ có biên khác tất 59.000đ).", "fix": "Ghi 'giả định xấu nhất: mất toàn bộ 25 nâng cấp' và thêm một dòng tính theo lãi gộp với biên 35%." },
+        { "sev": "P2", "where": "Q4 · Q5", "quote": "gợi ý nào là bán thêm đúng nghĩa?", "issue": "Q4 phân loại định nghĩa (L2); Q5 giải thích cơ chế đã nêu.", "fix": "Thay Q4 bằng câu đặt 4 gợi ý vào 3 vị trí (trang sản phẩm / giỏ / sau mua) và hỏi cách đặt nào hợp lý — L3/L4." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.000 × (1 − 0,66) = 340; 1.000 × (1 − 0,60) = 400; 60 × 900.000 = 54 triệu; 25 × 300.000 = 7,5 triệu; 54 − 7,5 = 46,5 ✓. Q6 lời giải: 30 × 900.000 = 27 triệu ✓; món kèm 370 × 14% − 400 × 8% ≈ 19,8 ≈ 20 đơn × 59.000 ≈ 1,2 triệu ✓." },
+      "claims": [
+        { "claim": "Shop giày: bỏ giỏ 60% → 66% khi gắn hai gợi ý; 25 nâng cấp; đơn 900.000đ", "status": "illustrative-labelled", "note": "Ví dụ ghi '(số minh hoạ)' và nêu rõ là so trước–sau, cần A/B." }
+      ],
+      "strengths": "Ví dụ tự nhận là so trước–sau và đề xuất A/B theo 'doanh thu trên mỗi giỏ'; Q6 là câu L4 tốt — tỉ lệ món kèm tăng gần gấp đôi nhưng tính trên 1.000 giỏ vẫn lỗ; Q7 đưa thời điểm thứ ba (sau mua, theo dữ liệu dùng).",
+      "upgrade": "Bổ sung Vì sao / Phản ví dụ (bảo hành mở rộng tại checkout) / Đào sâu (số gợi ý tối đa, chỉ số doanh thu/giỏ); thêm dòng tính theo lãi gộp; thay Q4 bằng câu đặt gợi ý vào vị trí." },
+
+    { "id": "B:tu05-03",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 5 },
+      "total": 81,
+      "bloom_items": ["L2","L3","L3","L4","L3","L4","L2"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Tình huống · Ví dụ", "quote": "thấy tỉ lệ mua lại chỉ 12%... Sau khi đổi sang ngày 25, shop đo lại tỉ lệ mua lại trên cùng số khách.", "issue": "Bài không có kết quả sau đổi, không có lãi: 12% mua lại trên bao nhiêu khách, túi 1,5 kg lãi bao nhiêu, mỗi điểm % mua lại đáng bao nhiêu tiền. Q3 chỉ là phép trừ ngày.", "fix": "Thêm: '2.000 khách/tháng, túi 1,5 kg lãi gộp 60.000đ; mỗi điểm % mua lại = 20 khách × 60.000 = 1,2 triệu/tháng' và một câu tính giá trị của việc nâng mua lại từ 12% lên 30%." },
+        { "sev": "P2", "where": "Q4", "quote": "khoảng cách trung vị giữa hai đơn là 36 ngày, không phải 30. Bạn nên hiểu thế nào?", "issue": "Đáp án c 'lượng dùng thật thấp hơn giả định' là một cách đọc; cách khác cũng hợp: khách còn dư từ túi trước / quy mô mẫu — lời giải không bàn. Không P0 vì đề đã loại 'mua nơi khác' và c vẫn là diễn giải tốt nhất.", "fix": "Thêm vào lời giải c: 'hoặc khách có tồn từ đơn trước — cả hai đều dẫn tới cùng hành động: chỉnh ngày nhắc theo số thật'." },
+        { "sev": "P2", "where": "Q1 · Q7", "quote": "Tin nhắc mua lại nên chứa gì để khách đặt nhanh nhất?", "issue": "Hai câu L2 với nhiễu vô lý ('bài viết dài', 'danh sách sản phẩm mới').", "fix": "Thay Q7 bằng câu đọc đường cong mua lại theo ngày gửi (ngày 20: 9%, 25: 22%, 30: 18%, 35: 11%) và hỏi ngày nhắc tối ưu, vì sao ngày 30 thấp hơn 25." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2.000/50 = 40; 40 − 3 − 2 = 35 ✓. Ví dụ: 1.500/50 = 30; nhắc ~25 ✓. Q6: 31 − 3 = 28 ✓. Q5: 500/50 = 10; 3.000/50 = 60 ✓. Q4: 1.500/36 ≈ 42 g/ngày — nhất quán với 'lượng dùng thấp hơn 50 g'." },
+      "claims": [
+        { "claim": "Mèo ăn khoảng 50 gram/ngày", "status": "illustrative-unlabelled", "note": "Dữ kiện tình huống hợp lý; không gắn nhãn." },
+        { "claim": "Nhắc theo trung vị thì một nửa khách đã mua trước đó; nhìn phân vị 25", "status": "verified", "note": "Suy luận thống kê đúng." }
+      ],
+      "strengths": "Khái niệm phân vị thay trung vị (Q6) là đúng chuẩn và được giải thích đánh đổi (nhóm mua sớm nhất vẫn lỡ); phản ví dụ hai con mèo chỉ ra giới hạn của công thức và cách sửa (hỏi số mèo, nhắc theo lịch sử từng khách); phép kiểm tuần là A/B thật (ngày 25 vs 45).",
+      "upgrade": "Thêm vế tiền (lãi mỗi túi, giá trị mỗi điểm % mua lại) và kết quả sau đổi có nhãn; thay Q7 bằng câu đọc đường cong mua lại theo ngày; bổ sung lời giải Q4." },
+
+    { "id": "B:tu05-04",
+      "scores": { "accuracy": 15, "depth": 13, "practical": 16, "examples": 11, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 5 },
+      "total": 85,
+      "bloom_items": ["L3","L4","L3","L3","L3","L4","L2"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Nếu khách thật sự nhận trung bình 9 lần (vì một phần huỷ), lãi 810.000 đồng/năm, vẫn hơn mua lẻ 150.000.", "issue": "So sánh ngầm giả định người đăng ký vốn là khách 6 lần/năm; phản ví dụ có nói nhóm vốn 12 lần nhưng không tính: với họ lãi rơi từ 1,32 triệu xuống 1,08 triệu/năm. Chưa cộng phần lợi 'bớt chi phí nhắc mua' đã nêu ở Vì sao (2).", "fix": "Thêm dòng tính cho nhóm vốn 12 lần (−240.000đ/khách) và ước chi phí nhắc tiết kiệm (vd 6 tin × 2.000đ) để bài toán đủ hai vế." },
+        { "sev": "P2", "where": "Q7", "quote": "Vì sao nên tính hoà vốn trên lãi gộp chứ không trên doanh thu?", "issue": "Câu L2 lặp Q1 và Vì sao (1); nhiễu d ('kế toán yêu cầu') vô lý.", "fix": "Thay bằng câu nối Q4 với Q3: 'trung bình 7,2 lần (Q4) so với hoà vốn 7,3 — chương trình đang lỗ bao nhiêu trên 100 khách và cần giảm mức giảm xuống bao nhiêu % để hoà vốn ở 7,2 lần?' (đáp: giảm ≈ 9,2%)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (200.000 − 90.000) × 6 = 660.000; 180.000 − 90.000 = 90.000; 660.000/90.000 = 7,33 ✓; đáp án sai 6,7 = 6/0,9 ✓ (tính trên giá), 5,4 = 6 × 0,9 ✓. Q4: (40 × 12 + 60 × 4)/100 = 7,2 ✓; đáp án sai 12 ✓, 8 = (12 + 4)/2 ✓. Q1: 20.000/110.000 = 18,2% ✓. Q2: 7 × 90.000 = 630.000 < 660.000 ✓. Ví dụ: 9 × 90.000 = 810.000; − 660.000 = 150.000 ✓." },
+      "claims": [
+        { "claim": "Cà phê phin 500g giá 200.000đ, giá vốn 90.000đ, khách quen 6 lần/năm", "status": "illustrative-unlabelled", "note": "Tự khớp; không gắn nhãn nhưng 'Nếu khách thật sự nhận trung bình 9 lần' nêu rõ là giả định." },
+        { "claim": "Khách thường rời sau lần giao đầu hoặc khi tồn kho trong nhà đã đầy", "status": "unverified", "note": "Mô hình hành vi hợp lý, nêu như quan sát nghề; chấp nhận được." }
+      ],
+      "strengths": "Bài toán hoà vốn tính trên lãi gộp, có điểm hoà vốn 7,3 lần, có trung bình gia quyền khi khách huỷ (Q4 = 7,2 — vừa dưới hoà vốn, nối ý rất khéo), có phản ví dụ chuyển kết luận (khách vốn 12 lần → lỗ), và phép kiểm tuần cụ thể; Q5 cho giải pháp không giảm giá (hoãn kỳ). Đây là bài gần chuẩn đào tạo thực chiến nhất trong ba module.",
+      "upgrade": "Tính thêm cho nhóm vốn 12 lần và cộng phần tiết kiệm chi phí nhắc; thay Q7 bằng câu nối Q3–Q4 (mức giảm cần để hoà vốn ở 7,2 lần); gắn nhãn 'số minh hoạ' cho tình huống." },
+
+    { "id": "B:tu05-05",
+      "scores": { "accuracy": 14, "depth": 9, "practical": 15, "examples": 12, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 5 },
+      "total": 76,
+      "bloom_items": ["L2","L3","L3","L3","L4","L2","L5"], "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Món kế tiếp nên nằm trong lý do khách tin bạn và mua lại nhanh hơn món chính.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nêu rủi ro của chính phương án thắng: lòng nồi chính hãng cạnh tranh với hàng trôi nổi rẻ hơn (ví dụ nhắc nhưng không thành phản ví dụ), chi phí phát triển/tồn kho của món mới, và việc món phụ kiện kéo khách nhận ra giá nồi.", "fix": "Thêm Phản ví dụ: thử trên 500 khách chỉ 3% mua vì lòng nồi trôi nổi giá 120.000đ — tính lại 20.000 × 3% × 140.000 − 40 triệu = 44 triệu; dấu hiệu và cách đổi (bán lòng nồi kèm bảo hành nồi). Thêm Đào sâu về chi phí phát triển và vòng đời phụ kiện." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Trừ chi phí nhắc khoảng 40 triệu, lòng nồi còn 240 triệu.", "issue": "Chỉ trừ chi phí nhắc cho lòng nồi; ấm (120 triệu) và tai nghe (20 triệu) không trừ cùng khoản nên bảng so chưa cùng cơ sở; tai nghe sau trừ 40 triệu là âm 20 triệu — kết luận mạnh hơn mà bài bỏ qua.", "fix": "Lập bảng 3 món × (tỉ lệ mua, lãi/món, lãi gộp, chi phí nhắc, lãi ròng) — tai nghe ra −20 triệu." },
+        { "sev": "P2", "where": "Q1 · Q6", "quote": "Vì sao món \"dùng hết nhanh hơn món chính\" lại quan trọng khi mở rộng danh mục?", "issue": "Hai câu L2; Q1 trả lời được từ tiêu đề.", "fix": "Thay Q6 bằng câu đánh đổi: 'ấm siêu tốc 5% mua không lặp vs lòng nồi 10% mua nhưng lặp 2 năm/lần — tính lãi 4 năm'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20.000 × 10% = 2.000; 350.000 × 40% = 140.000; 2.000 × 140.000 = 280 triệu; − 20.000 × 2.000 = 40 triệu → 240 ✓; đáp án sai 700 = 2.000 × 350.000 ✓ (doanh thu). Ví dụ: ấm 1.000 × 120.000 = 120 triệu ✓ (600.000 × 20% = 120.000); tai nghe 100 × 200.000 = 20 triệu ✓. Q5: 12% × 30% = 3,6% vs 1% × 60% = 0,6% → 6 lần ✓." },
+      "claims": [
+        { "claim": "Lòng nồi chống dính mòn sau khoảng 2 năm; nồi dùng 5–7 năm", "status": "illustrative-unlabelled", "note": "Dữ kiện sản phẩm hợp lý, không nguồn." },
+        { "claim": "Lòng nồi 350.000đ lãi 40%, 10% mua; ấm 600.000đ lãi 20%, 5% mua; tai nghe lãi 200.000đ, 0,5% mua", "status": "illustrative-labelled", "note": "Bài ghi 'Giả định minh hoạ' và 'Các tỉ lệ cần thử trên nhóm nhỏ trước'." }
+      ],
+      "strengths": "Ba câu hỏi chấm ý tưởng (khách có tin / mua lại nhanh hơn / tỉ lệ mua × lãi trên cả tệp) là khung quyết định dùng ngay; ví dụ so ba món bằng số có nhãn và trừ chi phí nhắc; Q7 thiết kế kiểm chứng rẻ (nhóm nhỏ, đúng tệp có nồi > 2 năm) là câu L5 tốt.",
+      "upgrade": "Bổ sung Vì sao / Phản ví dụ (hàng trôi nổi làm tỉ lệ mua rơi) / Đào sâu (chi phí phát triển, vòng đời); lập bảng 3 món cùng cơ sở; thay Q6 bằng câu tính lãi nhiều năm." },
+
+    { "id": "B:tu05-06",
+      "scores": { "accuracy": 14, "depth": 9, "practical": 14, "examples": 11, "pedagogy": 6, "assessment": 8, "data": 8, "clarity": 5 },
+      "total": 75,
+      "bloom_items": ["L3","L4","L3","L3","L3","L4","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Không báo cáo giá trị đơn một mình; luôn nhân với tần suất trên cùng nhóm khách.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu riêng (ví dụ có nêu lãi hai chiều nhưng không có tình huống đổi kết luận). Thiếu trường hợp combo lớn LÀ đúng: khách tiêu thụ nhiều hơn khi có sẵn (đồ ăn vặt là ví dụ điển hình), chi phí giao giảm làm lãi/khách tăng dù doanh thu đứng yên.", "fix": "Thêm Phản ví dụ bằng số: phí giao 20.000đ/đơn → 4 đơn tốn 80.000đ, 3,2 đơn tốn 64.000đ: lãi/khách tăng 16.000đ dù doanh thu y nguyên — kết luận đổi từ 'đứng yên' sang 'tốt hơn'. Thêm Đào sâu: đo lãi/khách, không chỉ doanh thu/khách." },
+        { "sev": "P2", "where": "Q1", "quote": "Khách mua thưa đi, số đơn giảm bù hết phần tăng", "issue": "Đáp án suy ra trực tiếp từ tiêu đề và tình huống (số khách không đổi, doanh thu không đổi → tần suất giảm); câu L3 dễ.", "fix": "Cho thêm nhiễu hợp lý: 'số khách giảm 10%, giá trị đơn +25%' và hỏi tần suất đã đổi bao nhiêu." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 120.000 × 4 = 480.000; 480.000/150.000 = 3,2 ✓; đáp án sai 5 = 4 × 1,25 ✓, 3 = 4 × 0,75 ✓. Q4: 1,25 × 0,7 = 0,875 → −12,5% ✓; đáp án sai −5 = 25 − 30 ✓. Ví dụ 150.000 × 3,2 = 480.000 ✓ khớp tình huống 'doanh thu đứng yên, 5.000 khách không đổi'." },
+      "claims": [
+        { "claim": "Shop đồ ăn vặt: giá trị đơn 120.000 → 150.000, 5.000 khách/quý, tần suất 4 → 3,2", "status": "illustrative-labelled", "note": "Ví dụ mở đầu 'Số minh hoạ'." }
+      ],
+      "strengths": "Bài phản biện trực tiếp 'ăn mừng giá trị đơn' với số tự khớp; Q4 (1,25 × 0,7) và Q7 (phân tầng khách quý trước theo số đơn quý này: 0 / 1–2) là hai câu L4 đúng nghề; Q6 nêu điều kiện gói lớn ít hại.",
+      "upgrade": "Bổ sung Vì sao / Phản ví dụ bằng số (phí giao giảm làm lãi/khách tăng) / Đào sâu (đo lãi/khách); tăng độ khó Q1." },
+
+    { "id": "B:tu05-07",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 14, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 5 },
+      "total": 75,
+      "bloom_items": ["L2","L6","L3","L3","L4","L2","L3"], "bloom_max": "L6",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q1", "quote": "Không đoán được, mỗi ngành phân bổ khác nhau — vì: Có khác nhau giữa các ngành, nhưng xu hướng tập trung rất phổ biến.", "issue": "Phương án d bênh được: chính khái niệm của bài viết 'mức tập trung khác nhau theo ngành, nên đo trên dữ liệu của chính bạn'. Người học đọc kỹ bài sẽ chọn d; lời giải bác d bằng chính lý lẽ ủng hộ b. Chưa P0 vì chữ 'thường' trong đề nghiêng về b, nhưng hai phương án cùng hợp lý một phần.", "fix": "Sửa d thành phương án sai rõ (vd 'Khoảng 10%, vì shop đã gửi cùng khuyến mãi cho mọi người') hoặc đổi đề: 'Theo xu hướng phổ biến, 10% khách...'." },
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Khách VIP cần được ưu tiên và công nhận, không cần được giảm giá cho những lần họ vốn sẽ mua.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu trường hợp VIP cần giảm giá thật (VIP mua sỉ, VIP nhạy giá đang bị đối thủ chào), và thiếu cảnh báo chọn VIP theo doanh thu lịch sử bỏ qua 'gần đây' (R trong RFM) — bài nhắc RFM một dòng nhưng không dùng.", "fix": "Thêm Phản ví dụ: 20% VIP là người mua đi bán lại, giảm 30% với họ là chiết khấu sỉ hợp lý; Đào sâu: bảng RFM 3 cột cho 5 khách và chọn ai là VIP." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Giảm 30% cho nhóm VIP là cho đi khoảng 540 triệu nếu họ vẫn mua như cũ.", "issue": "Chỉ tính chi phí giảm giá, chưa tính chi phí của phương án thay thế (quyền đặt trước, tư vấn riêng, giao nhanh) nên so sánh một vế.", "fix": "Thêm ước chi phí đặc quyền (vd giao nhanh + tư vấn 150.000đ/VIP/năm = 75 triệu) để đặt cạnh 540 triệu." },
+        { "sev": "P2", "where": "Q6", "quote": "Pháp luật hạn chế việc đối xử khác nhau giữa các khách", "issue": "Nhiễu vô lý; câu L2.", "fix": "Thay bằng câu đọc dữ liệu: doanh thu VIP 1,8 tỉ nhưng 30% VIP không mua 6 tháng gần đây — rủi ro là bao nhiêu tiền và hành động gì." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1,8 tỉ/500 = 3,6 triệu; 2,2 tỉ/4.500 = 0,489 triệu; 3,6/0,489 = 7,36 ≈ 7,4 ✓; đáp án sai 4,5 = 45%/10% ✓, 4,1 = 3,6/(4 tỉ/4.500) ✓. Khái niệm 'khoảng 7' khớp. 1,8 tỉ × 30% = 540 triệu ✓. Q5: 8 × 25% = 2; 5 × 50% = 2,5 ✓." },
+      "claims": [
+        { "claim": "Xu hướng kiểu Pareto 80/20; mức tập trung khác nhau theo ngành", "status": "illustrative-labelled", "note": "Bài gắn điều kiện 'đo trên dữ liệu của chính bạn' — tốt." },
+        { "claim": "RFM: mua gần đây, mua đều, mua nhiều", "status": "verified", "note": "Khung chuẩn; nêu đúng." },
+        { "claim": "Shop mỹ phẩm 5.000 khách, 4 tỉ, 500 VIP đóng 1,8 tỉ", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Q2 là câu thiết kế thử nghiệm (chia ngẫu nhiên 500 VIP, so tần suất và lãi) — L6 hiếm trong bộ bài; Q5 buộc chọn VIP theo lãi gộp thay doanh thu với số cụ thể; ví dụ tự đề xuất thử nghiệm 250/250.",
+      "upgrade": "Sửa Q1 để d không bênh được; bổ sung Vì sao / Phản ví dụ (VIP mua sỉ) / Đào sâu (bảng RFM); thêm chi phí phương án đặc quyền; thay Q6 bằng câu đọc dữ liệu VIP ngủ." },
+
+    { "id": "B:tu05-08",
+      "scores": { "accuracy": 14, "depth": 9, "practical": 14, "examples": 12, "pedagogy": 6, "assessment": 6, "data": 8, "clarity": 5 },
+      "total": 74,
+      "bloom_items": ["L4","L3","L3","L2","L2","L2","L3"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Cấu trúc bài", "quote": "MANG THEO: Hậu mãi tốt là lý do liên lạc lại; mỗi lần giúp khách dùng tốt là đặt sẵn lần mua sau.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Không nêu khi nào ba điểm chạm thất bại: khách không đồng ý nhận liên hệ (bài nói chỉ gửi cho người đồng ý nhưng không hỏi tỉ lệ đồng ý là bao nhiêu — nếu 50% thì 160 bộ lõi không còn), lõi chính hãng đắt gấp đôi lõi ngoài, kỹ thuật viên dùng cuộc gọi để chào bán.", "fix": "Thêm Phản ví dụ: chỉ 55% khách đồng ý nhận tin → tối đa 800 × 55% × 20 điểm % = 88 bộ, lãi thêm 26,4 triệu − chi phí 13,2 triệu; và trường hợp giá lõi chênh 2 lần làm tỉ lệ mua chỉ lên 32%. Đào sâu: đo tỉ lệ đồng ý nhận liên hệ ở bước giao máy." },
+        { "sev": "P2", "where": "Q4 · Q5 · Q6", "quote": "Cuộc gọi hỏi thăm sau 7 ngày nên tập trung vào điều gì?", "issue": "Ba câu L2 liên tiếp, đáp án đúng đều là phương án 'giúp khách' trong khi ba nhiễu đều 'bán/xin' — đoán được bằng mẫu.", "fix": "Thay Q5 bằng câu đọc phễu ba điểm chạm (gọi 7 ngày: 70% nghe; tin tháng 3: 40% mở; nhắc tháng 5,5: 25% đặt lịch) và hỏi điểm nào đáng sửa trước." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "mỗi quý thêm 160 bộ lõi, tức 96 triệu đồng", "issue": "Lõi thay sau 6 tháng nên nhóm mua lõi quý này là máy bán hai quý trước; bài ngầm giả định doanh số máy ổn định 800/quý để con số 160/quý đúng — không nói.", "fix": "Thêm 'giả sử doanh số máy đều 800/quý nên mỗi quý có đúng 800 máy đến hạn thay lõi'." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 800 × (45% − 25%) = 160; 160 × 600.000 = 96 triệu ✓; đáp án sai 216 = 800 × 45% × 600.000 ✓. Q7: 160 × 600.000 × 50% = 48 triệu; 800 × 3 × 10.000 = 24 triệu; 48 − 24 = 24 ✓; đáp án sai 72 = 96 − 24 ✓ (doanh thu trừ chi phí)." },
+      "claims": [
+        { "claim": "Máy lọc nước 800 máy/quý, lõi 6 tháng, 25% → 45% mua lõi chính hãng", "status": "illustrative-labelled", "note": "Ví dụ ghi '(Số minh hoạ; ngoài đời cần A/B test...)'." },
+        { "claim": "Ba điểm chạm chỉ gửi cho khách đã đồng ý nhận liên hệ", "status": "verified", "note": "Nguyên tắc đúng về dữ liệu cá nhân; không nêu văn bản." }
+      ],
+      "strengths": "Ví dụ tính đủ hai vế (lãi gộp thêm 48 triệu − chi phí liên lạc 24 triệu) và gắn nhãn; Q1 đặt câu hỏi dưới dạng 'giả thuyết cần kiểm trước' kèm cách kiểm; Q7 bắt lỗi lấy doanh thu trừ chi phí.",
+      "upgrade": "Bổ sung Vì sao / Phản ví dụ (tỉ lệ đồng ý nhận liên hệ, giá lõi chênh) / Đào sâu; nêu giả định doanh số máy đều; thay 1–2 câu L2 bằng câu đọc phễu ba điểm chạm." },
+
+    { "id": "B:tu05-09",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 12, "pedagogy": 9, "assessment": 7, "data": 9, "clarity": 4 },
+      "total": 83,
+      "bloom_items": ["L2","L3","L3","L4","L3","L2","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm · Ví dụ", "quote": "lãi gộp mỗi lít giảm bao nhiêu phần trăm, thì phải giữ lại ít nhất chừng đó phần trăm số khách vốn sẽ bỏ đi", "issue": "Câu đúng về toán (18,75% = 7.500/40.000) nhưng diễn đạt khó: 'giữ lại chừng đó phần trăm số khách vốn sẽ bỏ đi' dễ đọc nhầm thành tỉ lệ giữ chân trong nhóm bỏ đi, trong khi mô hình giả định giữ 100% nhóm đó và x là tỉ lệ nhóm đó trong tệp. Ví dụ không có bảng dù có 6 con số.", "fix": "Viết lại: 'tỉ lệ khách quen vốn sẽ bỏ đi phải ít nhất bằng % lãi/lít bị giảm (ở đây 18,75%), nếu túi lớn giữ được hết nhóm đó' và thêm bảng 2 cột (không túi / có túi) × (khách còn, lãi/lít, lãi tổng)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Giả sử mỗi khách dùng 4 lít một chu kỳ và cả 100 khách quen chuyển sang túi.", "issue": "Mô hình bỏ qua hai lợi ích đã nêu ở khái niệm: nhận tiền trước (dòng tiền) và khách mua túi có thể tăng lượng dùng; chỉ tính một chu kỳ. Không đổi kết luận nhưng làm điểm hoà vốn 18,75% nghiêm ngặt hơn thực tế.", "fix": "Ghi 'mô hình một chu kỳ, bỏ qua lợi dòng tiền và tăng lượng dùng — hai yếu tố làm hoà vốn thấp hơn 18,75%'." },
+        { "sev": "P2", "where": "Q1 · Q6", "quote": "Vì sao cỡ gói lớn giúp giữ khách khỏi đối thủ?", "issue": "Hai câu L2 với nhiễu vô lý ('ký hợp đồng', 'bao bì to').", "fix": "Thay Q6 bằng câu đọc dữ liệu 6 tháng: khoảng cách mua lại của nhóm túi 4 lít 55 ngày vs nhóm chai 28 ngày, tỉ lệ còn mua 92% vs 80% — túi có giữ chân thật không, và quy ra lãi." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 150.000/2 = 75.000; 270.000/4 = 67.500; (75.000 − 67.500)/75.000 = 10% ✓; đáp án sai 11,1 = 7.500/67.500 ✓. Q7: 32.500 = (1 − x) × 40.000 → x = 18,75% ✓ = 7.500/40.000 ✓; đáp án sai 23,1 = 7.500/32.500 ✓. Ví dụ: 100 × 4 × 32.500 = 13,0 triệu; 85 × 4 × 40.000 = 13,6 triệu ✓; lãi/lít 75.000 − 35.000 = 40.000, 67.500 − 35.000 = 32.500 ✓." },
+      "claims": [
+        { "claim": "Nước giặt 2 lít 150.000đ, túi 4 lít 270.000đ, giá vốn 35.000đ/lít, 15% khách vốn sẽ bỏ", "status": "illustrative-labelled", "note": "Ví dụ ghi '(số minh hoạ)'." },
+        { "claim": "Khách chỉ mua lượng lớn khi đã tin chất lượng", "status": "unverified", "note": "Khẳng định hành vi nêu như quy luật; hợp lý nhưng không điều kiện." }
+      ],
+      "strengths": "Bài duy nhất trong module dựng được mô hình hoà vốn của 'ăn bớt' (cannibalization) với biến x = tỉ lệ khách vốn sẽ đi, giải đúng và có hai cách kiểm (18,75% = 7.500/40.000); Q4 đọc dấu hiệu 90% người mua túi là khách chai đều → ăn bớt; phản ví dụ (túi lớn cho khách mới) và Đào sâu (chỉ mời nhóm có khoảng cách mua đang dài ra) thực tế.",
+      "upgrade": "Viết lại câu khái niệm về hoà vốn cho dễ hiểu và thêm bảng 2 cột; nêu giới hạn mô hình một chu kỳ; thay Q6 bằng câu đọc dữ liệu 6 tháng của hai nhóm." },
+
+    { "id": "B:tu05-10",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 5 },
+      "total": 80,
+      "bloom_items": ["L3","L4","L3","L3","L2","L2","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ · Khái niệm", "quote": "(B) 10.000 × 6 × 72.000 = 4,32 tỉ, cũng thêm 320 triệu, nhưng giảm giá mỗi đơn cắt lãi.", "issue": "Tiêu đề khái niệm là 'quy về doanh thu năm VÀ lãi năm' nhưng ví dụ chỉ quy lãi cho A (ở Q4). Với biên 40% của Q4, B cho lãi gộp 60.000 × (72.000 − 48.000) = 1,44 tỉ so với gốc 50.000 × 32.000 = 1,6 tỉ — B làm GIẢM lãi gộp 160 triệu dù doanh thu tăng 320 triệu. Bài chỉ nói 'cắt lãi', người học không thấy B thực chất lỗ; kết luận không đổi nhưng độ lớn bị giấu.", "fix": "Thêm dòng lãi cho cả ba: A +128 triệu (trước chi phí), B −160 triệu, C +48 triệu; đổi câu kết 'A được thử trước' thành 'B loại ngay ở mức biên 40%'." },
+        { "sev": "P2", "where": "Q3 (nhãn đáp án sai)", "quote": "[[24,\"NHAM_SO_TUYET_DOI\"]]", "issue": "24 = 300 × 80.000 là quên nhân tần suất 5, không phải nhầm số tuyệt đối.", "fix": "Đổi nhãn thành QUEN_TAN_SUAT." },
+        { "sev": "P2", "where": "Ví dụ (C)", "quote": "(C) 10.300 × 5 × 80.000 = 4,12 tỉ, thêm 120 triệu.", "issue": "'Giữ thêm 3% khách' được mô hình hoá như +3% khách trong một năm; giữ chân cộng dồn qua các năm (khách giữ năm nay còn mua năm sau) nên giá trị thật của C cao hơn 120 triệu — phản ví dụ chỉ nói VIP chi cao hơn, không nói hiệu ứng nhiều năm.", "fix": "Thêm vào Đào sâu: 'C đo trong 1 năm thấp hơn giá trị thật vì khách giữ được còn mua các năm sau; tính 3 năm nếu so với A/B'." },
+        { "sev": "P2", "where": "Q5 · Q6", "quote": "Vì sao phải thử nhỏ đề xuất đứng đầu trước khi làm cho toàn bộ khách?", "issue": "Hai câu L2 với nhiễu vô lý ('sếp thích xem báo cáo').", "fix": "Thay Q6 bằng câu tính lãi cho B với biên 40% (đáp −160 triệu) để người học tự phát hiện B lỗ." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 10.000 × 3% = 300; 300 × 5 × 80.000 = 120 triệu ✓. Q4: 4.000 × 8% = 320; × 40% = 128; − 50 = 78 ✓; đáp án sai 128 ✓, 270 = 320 − 50 ✓. Ví dụ: A 10.000 × 5 × 86.400 = 4,32 tỉ ✓; B 10.000 × 6 × 72.000 = 4,32 tỉ ✓; C 10.300 × 5 × 80.000 = 4,12 tỉ ✓. Q1: 1,2 × 0,9 = 1,08 ✓. Kiểm thêm: lãi gộp B ở biên 40% = −160 triệu so với gốc (bài không tính)." },
+      "claims": [
+        { "claim": "Chuỗi bánh mì online 10.000 khách × 5 đơn × 80.000đ; A +8%, B +20%/−10%, C +3%", "status": "illustrative-unlabelled", "note": "Dữ kiện tình huống, tự khớp; các mức tăng được gọi đúng là 'dự kiến' của người đề xuất." }
+      ],
+      "strengths": "Quy ba đề xuất khác đơn vị về cùng phương trình là bài tổng kết đúng chỗ; phản ví dụ (VIP chi cao hơn trung bình) đổi thứ hạng A/C; Vì sao (3) và Q7 nhấn giả định ≠ số đo và buộc tính lại khi thử ra 3% thay 8%.",
+      "upgrade": "Tính lãi cho cả ba đề xuất (B lỗ 160 triệu ở biên 40%); nêu hiệu ứng nhiều năm của giữ chân; sửa nhãn Q3; thay Q6 bằng câu tính lãi B." }
+  ],
+  "module_notes": {
+    "progression": "Mạch 01 (phương trình khách × tần suất × giá trị đơn) → 02 (bán thêm/kèm = giá trị đơn) → 03 (nhắc theo chu kỳ = tần suất) → 04 (gói đăng ký = tần suất đổi biên) → 05 (món kế tiếp = tần suất khi món chính thưa) → 06 (đánh đổi giá trị đơn – tần suất) → 07 (VIP) → 08 (hậu mãi) → 09 (cỡ lớn = ăn bớt) → 10 (quy mọi đòn bẩy về lãi) là mạch chặt nhất trong ba module: bài đầu đặt phương trình, bài cuối dùng lại để xếp hạng. Phân rã doanh thu = khách × tần suất × AOV được tính đúng ở 01, 06, 10 và dùng nhất quán. Bài 06 nên đặt ngay sau 02 vì nó là phản ví dụ của việc kéo giá trị đơn.",
+    "overlap": ["04 (hoà vốn gói đăng ký trên lãi gộp) và 09 (hoà vốn cỡ lớn) cùng cấu trúc 'đổi biên lấy tần suất/giữ chân' — nên liên kết chéo và dùng chung ký hiệu.", "03 Đào sâu, 04 Vì sao (2) và 08 cùng nói 'nhắc đúng chu kỳ'; 08 là trường hợp riêng của 03 cho hàng bền.", "02 Q7 (mời nâng cấp khi dữ liệu dùng cho thấy nhu cầu) trùng ý 08 (hậu mãi là lý do liên lạc)."],
+    "gaps": ["Giá trị vòng đời (LTV/CLV) được nhắc là 'khái niệm kề cận' ở 03, 04, 09, 10 nhưng không bài nào định nghĩa hay tính; module về mua lặp lại cần một bài LTV = lãi/đơn × tần suất × số năm giữ chân.", "Tỉ lệ giữ chân / churn theo cohort: 07 và 10 nói 'giữ thêm 3% khách' mà không có bảng cohort; chưa có bài đọc bảng giữ chân theo tháng.", "Chi phí phục vụ (cost-to-serve) và lãi/khách: 06 và 08 chạm, chưa có bài riêng để so khách VIP theo lãi ròng.", "Sáu bài (01, 02, 05, 06, 07, 08) thiếu Vì sao / Phản ví dụ / Đào sâu — mức thiếu cấu trúc cao nhất trong ba module dù toán tốt."],
+    "best_lesson": "B:tu05-04",
+    "weakest_lesson": "B:tu05-02"
+  }
+}

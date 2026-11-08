@@ -1,0 +1,216 @@
+{
+  "mod": "qc04",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:qc04-01",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 15, "examples": 12, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L4", "L5", "L3", "L2", "L4", "L1", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm (3) và Q6", "quote": "Việc làm thuộc danh mục đặc biệt (cùng nhà ở, tài chính, vấn đề xã hội/chính trị)", "issue": "Danh mục quảng cáo đặc biệt về nhà ở / việc làm / tín dụng của Meta theo hiểu biết của người chấm chỉ bắt buộc với quảng cáo nhắm một số thị trường (Mỹ, Canada…); chưa chắc áp cho quảng cáo tuyển dụng nhắm Việt Nam. Nguồn liệt kê là tài liệu Marketing API, không nói phạm vi quốc gia. Nếu không áp cho Việt Nam thì đáp án Q6 (d) sai và câu trở thành P0.", "fix": "Kiểm trang 'About Special Ad Categories' của Meta, ghi rõ phạm vi quốc gia áp dụng; nếu không áp cho Việt Nam, đổi Q6 thành câu về chính sách sức khoẻ (có nguồn) hoặc viết lại đáp án theo đúng phạm vi." },
+        { "sev": "P1", "where": "Q2 lời giải b", "quote": "Tệp gợi ý tình trạng sức khoẻ bị Meta gắn cờ và chặn dùng từ 2/9/2025", "issue": "Khẳng định có ngày cụ thể nhưng bài này không liệt kê nguồn Custom Audience (nguồn đó chỉ có ở B:qc04-04); người học đọc bài 01 không kiểm được.", "fix": "Thêm nguồn Marketing API Custom Audience vào src của bài 01 hoặc bỏ ngày khỏi lời giải, dẫn sang bài 04." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "thực phẩm bảo vệ sức khoẻ phải đăng ký nội dung trước", "issue": "Khẳng định pháp lý Việt Nam nêu như sự thật, không nguồn, không ghi ngày kiểm; Luật Quảng cáo sửa đổi 2025 (hiệu lực 1/1/2026) có thay đổi thủ tục xác nhận nội dung quảng cáo, cần kiểm lại.", "fix": "Thêm nguồn (Luật Quảng cáo sửa đổi / Nghị định hướng dẫn) với ngày kiểm, hoặc viết 'theo quy định hiện hành, hỏi pháp chế'." },
+        { "sev": "P2", "where": "Khái niệm (4)", "quote": "nhóm quảng cáo cần khoảng 50 sự kiện tối ưu trong một tuần mới ổn định", "issue": "Đúng theo trợ giúp Meta nhưng thiếu điều kiện 'kể từ lần chỉnh sửa lớn gần nhất'; mốc 50 là hướng dẫn, không phải ngưỡng cứng — bài 08 nói đúng hơn.", "fix": "Thêm 'kể từ lần chỉnh sửa lớn gần nhất' và chữ 'khoảng' nhất quán với bài 08." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3.000.000 ÷ 150.000 = 20 đơn/tháng; ÷ 4 = 5/tuần ✓; sai 20 = quên chia tuần ✓. Ví dụ: CPA 120.000 < lãi gộp 180.000 ✓; Hà 3 triệu ÷ 150.000 = 20 ✓." },
+      "claims": [
+        { "claim": "Meta có 6 mục tiêu chiến dịch (Awareness, Traffic, Engagement, Leads, App promotion, Sales)", "status": "verified", "note": "src 'chọn mục tiêu quảng cáo (6 mục tiêu)', kiểm 2026-10-24" },
+        { "claim": "Giai đoạn học cần khoảng 50 sự kiện tối ưu trong 7 ngày", "status": "verified", "note": "src Learning limited" },
+        { "claim": "Quảng cáo sức khoẻ có tiêu chuẩn riêng, một số sản phẩm phải nhắm 18+", "status": "verified", "note": "src health-wellness ad standards" },
+        { "claim": "Việc làm/nhà ở/tài chính/vấn đề xã hội là danh mục quảng cáo đặc biệt áp cho Việt Nam", "status": "unverified", "note": "src API không nêu phạm vi quốc gia; có thể chỉ áp cho Mỹ/Canada" },
+        { "claim": "Thực phẩm bảo vệ sức khoẻ phải đăng ký nội dung quảng cáo trước", "status": "unverified", "note": "pháp lý VN, không nguồn" },
+        { "claim": "CPA 120.000đ / 150.000đ, 3 triệu/tháng", "status": "illustrative-labelled", "note": "bài ghi 'giả định'" }
+      ],
+      "strengths": "Ba tình huống tương phản (Lan/Minh/Hà) buộc người học áp bốn câu kiểm thay vì học thuộc; phản ví dụ (nha khoa có giấy phép vẫn chạy được; dịch vụ khẩn cấp dùng Meta để nhớ tên) chống hiểu quá tay; Q7 dạy đọc mẫu nhỏ.",
+      "upgrade": "Để đạt ≥85: (1) kiểm và ghi phạm vi quốc gia của danh mục quảng cáo đặc biệt, sửa Q6 nếu cần; (2) thêm nguồn cho khẳng định pháp lý về thực phẩm bảo vệ sức khoẻ và cho mốc 2/9/2025; (3) thêm bảng 3 dòng tính 'ngân sách tuần ÷ CPA chịu được = số sự kiện/tuần' cho cả ba shop (hiện chỉ tính cho Hà) để câu (4) có số ở mọi trường hợp; (4) thay Q6 (L1 nhận lại danh mục) bằng câu chẩn đoán từ dữ liệu, ví dụ đọc một báo cáo 5 ngày có 2 đơn và chọn việc kiểm đầu tiên; (5) thêm câu 'nếu màn hình khác, tin trang chính thức' vì đây là kiến thức fast."
+    },
+    {
+      "id": "B:qc04-02",
+      "scores": { "accuracy": 9, "depth": 9, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 67,
+      "bloom_items": ["L3", "L5", "L2", "L4", "L3", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm và Q1", "quote": "MoMo và VNPay (trả trước, thủ công) chỉ có khi tài khoản đặt quốc gia Việt Nam, tiền VND ngay lúc tạo", "issue": "Khẳng định về phương thức thanh toán nêu như sự thật, trong khi chính bài thừa nhận 'trang không tải được khi kiểm' và 'chỉ thấy qua trích đoạn'. Đáp án Q1 (c) dựa trên khẳng định này. Kiến thức fast không có nguồn kiểm được.", "fix": "Kiểm lại trang trợ giúp thanh toán tại Việt Nam (hoặc chụp màn hình phần Thanh toán của một tài khoản VND), ghi ngày kiểm; nếu không kiểm được thì viết Q1 theo logic chắc hơn: 'tiền tệ không đổi được sau khi tạo' và liệt kê phương thức dưới dạng 'kiểm trong tài khoản'." },
+        { "sev": "P2", "where": "Ví dụ và Q7", "quote": "Mức VAT Meta tính chưa tìm được trên trang chính thức", "issue": "Bài để trống một con số kế toán rất cần, trong khi Meta có công bố việc thu thuế GTGT cho nhà quảng cáo Việt Nam (theo trí nhớ người chấm là 5% từ 6/2022, cần kiểm). Q7 vì vậy chỉ kiểm 'biết đi hỏi hoá đơn', không kiểm kiến thức.", "fix": "Kiểm trang 'Về thuế GTGT tại Việt Nam' trong trợ giúp Meta Business, ghi mức và ngày kiểm; giữ lời khuyên 'đọc dòng thuế trên hoá đơn' làm bước xác nhận." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "kế hoạch chi khoảng 650.000đ/ngày (giả định)", "issue": "Ví dụ chỉ có một phép chia; không nối với bất kỳ quyết định nào ngoài 'đặt lịch nạp'. Chiều số liệu của bài mỏng.", "fix": "Thêm bảng: ngân sách tháng, ngưỡng cảnh báo số dư (ví dụ còn 3 ngày chi), ai được thông báo, và hệ quả nếu tài khoản trả trước hết tiền giữa đợt (nhóm quảng cáo dừng, học lại)." },
+        { "sev": "P2", "where": "Q3", "quote": "Để báo cáo theo ngày khớp với sổ bán hàng và lịch chạy của shop", "issue": "Câu hỏi L2 nhận lại ý bài; ba phương án sai đều là 'niềm tin ngây thơ' dễ loại bằng hình thức.", "fix": "Đổi sang câu đọc dữ liệu: cho báo cáo tài khoản múi giờ Mỹ ghi 'hôm nay 12 đơn' và sổ shop ghi 15 đơn, hỏi vì sao lệch và kiểm gì." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q5: 20.000.000 ÷ 650.000 = 30,77 → 30 ngày trọn ✓; ngày 31 còn 20.000.000 − 30 × 650.000 = 500.000đ ✓; sai 31 = làm tròn lên ✓." },
+      "claims": [
+        { "claim": "Business portfolio chứa Trang, Instagram, tài khoản quảng cáo; quyền theo vai trò", "status": "verified", "note": "src Business portfolio" },
+        { "claim": "Quốc gia, tiền tệ, múi giờ không đổi dễ dàng sau khi tạo tài khoản quảng cáo", "status": "unverified", "note": "đúng theo hiểu biết chung nhưng không có src riêng" },
+        { "claim": "Việt Nam có MoMo, VNPay trả trước; cần VN + VND lúc tạo", "status": "unverified", "note": "bài ghi trang không tải được" },
+        { "claim": "Portfolio mới có thể bị giới hạn tính năng quảng cáo lúc đầu", "status": "verified", "note": "bài dẫn trang trợ giúp Meta" },
+        { "claim": "Mức VAT Meta tại Việt Nam", "status": "unverified", "note": "bài tự nhận chưa xác minh" },
+        { "claim": "Google Ads VAT 8%", "status": "unverified", "note": "nêu trong Q7 d, nguồn nằm ở module qc05" }
+      ],
+      "strengths": "Phân biệt rõ 'cấp quyền' và 'đưa mật khẩu', tài sản ở lại công ty khi người nghỉ; trung thực ghi chỗ chưa xác minh được thay vì bịa.",
+      "upgrade": "Để đạt ≥85: (1) xác minh phương thức thanh toán và mức thuế GTGT của Meta tại Việt Nam, ghi ngày kiểm; (2) thêm sơ đồ tài sản mẫu (portfolio → Trang/IG/tài khoản QC → ai là admin) dưới dạng bảng để phần Áp dụng có mẫu; (3) thêm quyết định có số: chọn trả trước hay trả sau, ngưỡng nạp, ngưỡng chi tiêu tài khoản (spending limit) và cách đặt; (4) thay Q3 và Q6 (L2) bằng câu chẩn đoán từ báo cáo lệch múi giờ và câu quyết định khi portfolio mới bị giới hạn ngay trước đợt sale; (5) nối rõ bài trước (01) và bài sau (03) trong phần Đào sâu."
+    },
+    {
+      "id": "B:qc04-03",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 16, "examples": 12, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L4", "L5", "L3", "L2", "L2", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Q5 lời giải c", "quote": "Đổi sự kiện, đối tượng, creative hay tạm dừng được tính là chỉnh sửa lớn", "issue": "Theo trợ giúp Meta, tạm dừng chỉ tính là chỉnh sửa lớn khi kéo dài khoảng 7 ngày trở lên; lời giải nói quá.", "fix": "Sửa thành 'tạm dừng dài ngày (khoảng 7 ngày trở lên)'." },
+        { "sev": "P2", "where": "Làm từng bước – Chọn sự kiện tối ưu", "quote": "Chọn tập dữ liệu Pixel của website và sự kiện mua hàng", "issue": "Thuật ngữ 'tập dữ liệu' (dataset) xuất hiện không giải thích, trong khi tình huống chỉ nói 'Pixel'; người mới không biết hai tên là một thứ.", "fix": "Thêm một câu: 'Meta gọi Pixel và các nguồn sự kiện gộp lại là tập dữ liệu (dataset); trong màn hình chọn sự kiện bạn chọn tập dữ liệu đó'." },
+        { "sev": "P2", "where": "Câu hỏi Q4, Q5", "quote": "Đã chọn Sales, nhưng thuật toán đi tìm người \"thêm vào giỏ\" hay người \"mua\" là do ô nào quyết định?", "issue": "Hai câu L2 nhận lại ý bài; phương án sai (tên chiến dịch, màu ảnh đại diện) quá dễ loại.", "fix": "Thay một câu bằng tình huống: báo cáo tuần đầu 300 lượt xem trang, 4 thêm giỏ, 0 mua — hỏi bước kiểm nào trong 8 bước có khả năng bị bỏ qua (link về trang chủ)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50 × 100.000 = 5 triệu/tuần; ÷ 7 ≈ 714,3 nghìn/ngày ✓ (ví dụ ghi 'khoảng 715.000đ' ✓); sai 5.000 = quên chia 7 ✓. Ví dụ: 12 đơn/ngày × 7 = 84/tuần ✓; 500.000 ÷ 100.000 = 5 đơn/ngày = 35/tuần ✓." },
+      "claims": [
+        { "claim": "6 mục tiêu chiến dịch", "status": "verified", "note": "src" },
+        { "claim": "Advantage+ sales campaign là tên mới của Advantage+ shopping campaign; Sales/App/Leads gộp thành luồng mặc định bật Advantage+", "status": "verified", "note": "src Advantage+ sales campaigns, kiểm 2026-10-24" },
+        { "claim": "Giai đoạn học và chỉnh sửa lớn", "status": "verified", "note": "src giai đoạn học; riêng 'tạm dừng' nói quá" },
+        { "claim": "CPA 100.000đ, 12 đơn/ngày, 500.000đ/ngày", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Khung 'bốn câu hỏi thay vì vị trí nút' là cách dạy đúng cho giao diện đổi nhanh; bước Kiểm trước khi Đăng nêu lỗi rẻ-mà-đắt (ngân sách ngày/tổng, link trang chủ) rất thực tế; phản ví dụ (chưa có lượt mua nào) đúng.",
+      "upgrade": "Để đạt ≥85: (1) sửa lời giải Q5 về tạm dừng; (2) giải thích 'tập dữ liệu' một câu; (3) thêm bảng 8 bước có cột 'chọn gì / vì sao / dấu hiệu sai' để phần Áp dụng có mẫu; (4) thêm phép tính thứ hai: nếu chọn sự kiện 'thêm vào giỏ' với tỉ lệ giỏ→mua giả định 30%, cần bao nhiêu lượt thêm giỏ/tuần và ngân sách tương ứng — nối với lựa chọn 'sự kiện nông hơn'; (5) thay Q4/Q5 bằng câu chẩn đoán từ số liệu tuần đầu."
+    },
+    {
+      "id": "B:qc04-04",
+      "scores": { "accuracy": 11, "depth": 12, "practical": 15, "examples": 11, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L4", "L5", "L3", "L1", "L1", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm và Q6", "quote": "nhà ở, việc làm, tài chính, vấn đề xã hội/chính trị phải khai danh mục quảng cáo đặc biệt", "issue": "Như bài 01: phạm vi quốc gia của danh mục đặc biệt về việc làm chưa được kiểm; nếu không áp cho quảng cáo nhắm Việt Nam, Q6 đáp án (c) sai và phương án (a) đúng → P0. Nguồn API không nêu phạm vi.", "fix": "Kiểm trang trợ giúp 'About Special Ad Categories', ghi rõ quốc gia áp dụng và ngày kiểm; sửa Q6 theo kết quả." },
+        { "sev": "P1", "where": "Khái niệm (1)", "quote": "Meta gọi phần tự mở rộng là Advantage+ audience (tên hiển thị kiểm trong tài khoản)", "issue": "Tên tính năng nền tảng nêu không có src; luồng Advantage+ 2025–2026 đổi tên và cách hiển thị nhiều lần. Có thể lệch (possibly outdated).", "fix": "Thêm nguồn trợ giúp Meta về Advantage+ audience hoặc viết 'phần tự mở rộng đối tượng (tên trên màn hình có thể là Advantage+ audience)'." },
+        { "sev": "P2", "where": "Đào sâu", "quote": "Điều 28 yêu cầu dịch vụ quảng cáo có sự đồng ý của khách", "issue": "Số điều luật nêu cụ thể nhưng src là bài tin của Bộ Công an về ngày hiệu lực, không phải văn bản luật; chưa kiểm được số điều.", "fix": "Dẫn thẳng văn bản Luật 91/2025/QH15 trên thuvienphapluat hoặc cổng Quốc hội, ghi số điều đã đối chiếu." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Giả định CPM 45.000đ khi để rộng, 90.000đ khi tự khoanh 3 sở thích", "issue": "Chênh gấp đôi là giả định minh hoạ hợp lệ nhưng không nói độ chắc chắn và không có tình huống đảo ngược (tệp hẹp nhưng CVR cao hơn làm CPA tốt hơn) — Q1 vì vậy dạy 'tệp hẹp đắt hơn' như luật.", "fix": "Thêm một dòng: 'CPM cao hơn chỉ xấu nếu CVR không bù; so CPA, không so CPM' và một con số CVR minh hoạ cho hai cách." },
+        { "sev": "P2", "where": "Q4, Q5", "quote": "Từ 2/9/2025, loại tệp nào trên Meta bị gắn cờ và chặn dùng?", "issue": "Hai câu L1 nhớ ngày/tính năng; không kiểm được năng lực áp dụng.", "fix": "Gộp thành một câu tình huống: phòng khám định tải 3 tệp (khách cũ đã đồng ý, người xem video, người quan tâm 'bệnh tiểu đường') — hỏi tệp nào dùng được và vì sao." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 9.000.000 ÷ 45.000 = 200 nhóm × 1.000 = 200.000 lượt hiển thị ✓; sai 200 = quên nhân 1.000 ✓. Ví dụ CPM 90.000 → 100.000 lượt ✓; 1.200/4.000 đồng ý = 30%." },
+      "claims": [
+        { "claim": "Từ 2/9/2025 tệp tuỳ chỉnh/chuyển đổi tuỳ chỉnh gợi ý sức khoẻ, tài chính bị gắn cờ", "status": "verified", "note": "src Marketing API Custom Audience" },
+        { "claim": "Loại trừ nhắm chọn chi tiết không tạo mới được (Marketing API v22, từ 21/4/2025)", "status": "verified", "note": "src changelog v22" },
+        { "claim": "Danh mục đặc biệt áp cho việc làm nhắm Việt Nam", "status": "unverified", "note": "phạm vi quốc gia chưa kiểm" },
+        { "claim": "Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 hiệu lực 1/1/2026", "status": "verified", "note": "src Bộ Công an" },
+        { "claim": "Nghị định 330/2026 phạt 30–50 triệu đồng cho xử lý dữ liệu không có đồng ý", "status": "verified", "note": "src Báo Chính phủ, kiểm 2026-10-24" },
+        { "claim": "Advantage+ audience là tên phần tự mở rộng đối tượng", "status": "unverified", "note": "" },
+        { "claim": "CPM 45.000 / 90.000; 1.200/4.000 khách đồng ý", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Gắn pháp luật Việt Nam (Luật 91/2025, Nghị định 330/2026) với hành vi cụ thể 'tải danh sách lên Meta là một lần xử lý dữ liệu' — hiếm bài làm được; bảng Áp dụng 3 cột (nguồn / bằng chứng đồng ý / gợi ý sức khoẻ) ra quyết định được ngay.",
+      "upgrade": "Để đạt ≥85: (1) kiểm phạm vi quốc gia danh mục đặc biệt và sửa Q6; (2) thêm src cho Advantage+ audience; (3) dẫn văn bản luật thay bài tin để xác nhận Điều 28; (4) thêm ví dụ thứ hai làm đổi kết luận: sản phẩm ngách (dụng cụ thợ làm bánh) với CPM cao nhưng CVR cao, tính CPA hai cách để người học thấy phải so CPA; (5) gộp Q4/Q5 thành câu tình huống L4; (6) ghi câu 'nếu màn hình khác, tin trang chính thức'."
+    },
+    {
+      "id": "B:qc04-05",
+      "scores": { "accuracy": 10, "depth": 12, "practical": 15, "examples": 12, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 78,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L4", "L5", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm", "quote": "Giá thầu, theo nguyên lý có ba kiểu: để hệ thống chi hết ngân sách lấy nhiều kết quả nhất; đặt mục tiêu chi phí mỗi kết quả; đặt trần giá thầu", "issue": "Toàn bộ phần vị trí (Advantage+ placements), ngân sách cấp chiến dịch (Advantage campaign budget) và ba kiểu giá thầu (Highest volume / Cost per result goal / Bid cap) là mô tả giao diện và cơ chế nền tảng nhưng bài chỉ có một nguồn (Learning limited). Thiếu kiểu 'ROAS goal' và 'Highest value' cho chiến dịch Sales có giá trị đơn. Không nguồn cho 3 trong 4 nhóm khẳng định.", "fix": "Thêm src trợ giúp Meta về chiến lược giá thầu, về Advantage campaign budget và về vị trí tự động; bổ sung một câu về kiểu giá thầu theo giá trị (ROAS goal) để không thiếu kiểu." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "104.000đ/khách: đắt hơn mức 71.000đ tuần trước nhưng nhiều khách gấp hơn 1,6 lần", "issue": "So sánh hai tuần với 70 và 115 khách tiềm năng nhưng không nói độ nhiễu, và chưa tính tới việc tuần trước chỉ tiêu 5/12 triệu (CPL rẻ vì trần thầu lọc phiên đấu giá rẻ) — bài có nêu ở Q1 nhưng không trong ví dụ.", "fix": "Thêm một câu trong ví dụ: 'CPL 71.000đ là CPL của phần rẻ nhất thị trường mà trần thầu còn cho mua; không phải CPL bạn có thể giữ khi tiêu đủ 12 triệu'." },
+        { "sev": "P2", "where": "Q7", "quote": "Vì sao kiểu giá thầu \"chi hết ngân sách lấy nhiều kết quả nhất\" hợp với chiến dịch mới?", "issue": "Câu L2 nhận lại ý bài; phương án b ('vị trí rẻ nhất là Stories') vô lý dễ loại.", "fix": "Đổi thành câu quyết định: cho CPL hoà vốn 600.000đ (từ Đào sâu), CPL hiện 104.000đ, hỏi có nên đặt mục tiêu chi phí và đặt ở mức nào." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 50 × 110.000 = 5,5 triệu/tuần ✓; sai 0,79 = 5,5 ÷ 7 ✓. Ví dụ: 12 triệu ÷ 110.000 ≈ 109 ✓; 4 triệu ÷ 110.000 ≈ 36 ✓; 12 triệu ÷ 115 ≈ 104.300đ ✓; 5 triệu ÷ 70 ≈ 71.400đ ✓; 115 ÷ 70 = 1,64 ✓. Đào sâu: 20% × 3 triệu = 600.000đ ✓." },
+      "claims": [
+        { "claim": "Learning limited ~50 sự kiện/tuần", "status": "verified", "note": "src" },
+        { "claim": "Ba kiểu giá thầu (volume / cost per result goal / bid cap); hai kiểu sau có thể không tiêu hết tiền", "status": "unverified", "note": "đúng theo hiểu biết người chấm nhưng không có src; thiếu kiểu theo giá trị" },
+        { "claim": "Ngân sách cấp chiến dịch tự dồn tiền sang nhóm tốt", "status": "unverified", "note": "" },
+        { "claim": "Vị trí tự động giúp tìm lượt hiển thị rẻ hơn", "status": "unverified", "note": "lập luận đấu giá hợp lý, không src" },
+        { "claim": "12 triệu/tuần, 70 → 115 khách tiềm năng, CPL 71.000 → 104.000", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Nguyên tắc 'mỗi cần gạt siết là một chỗ thuật toán mất quyền tìm rẻ, chỉ siết khi có lý do bằng số' và Q6 kiểm đúng điều đó; Đào sâu nối CPL với tỉ lệ chốt của sale (600.000đ) — đúng chỗ người mới hay sai.",
+      "upgrade": "Để đạt ≥85: (1) thêm nguồn cho giá thầu, ngân sách chiến dịch, vị trí; bổ sung kiểu giá thầu theo giá trị; (2) thêm bảng so hai tuần (chi, khách, CPL, số sự kiện/nhóm) kèm một dòng về nhiễu; (3) viết ví dụ về cách đặt mục tiêu chi phí từ CPL hoà vốn 600.000đ (ví dụ đặt 450.000đ để chừa biên) — hiện Đào sâu nêu con số nhưng không ra quyết định; (4) thay Q7 bằng câu quyết định có số; (5) ghi câu 'nếu màn hình khác, tin trang chính thức'."
+    },
+    {
+      "id": "B:qc04-06",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 14, "examples": 12, "pedagogy": 9, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L4", "L5", "L3", "L3", "L3", "L2", "L2"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Nếu quên event_id, cùng tuần đó báo cáo có thể lên gần 69 vì đếm hai lần", "issue": "69 = 38 + 31 (số Pixel tuần trước) là cách dựng số hợp lý nhưng bài không nói 31 ở đâu ra trong tuần sau; người học khó tự tái lập.", "fix": "Ghi rõ: 'giả định Pixel vẫn bắt được 31 trong 38 đơn; không khử trùng thì 38 (máy chủ) + 31 (Pixel) = 69'." },
+        { "sev": "P2", "where": "Khái niệm – Đích đến", "quote": "form khách hàng tiềm năng trên Meta khi cần nhiều liên hệ và có người gọi lại nhanh; tin nhắn (Messenger/WhatsApp) khi khách hay hỏi trước khi mua", "issue": "Ở Việt Nam, Zalo là kênh nhắn tin phổ biến hơn WhatsApp nhưng không nằm trong đích đến Meta; bài không nói điều này nên người học có thể kỳ vọng nhầm.", "fix": "Thêm một câu: 'Meta chỉ dẫn về Messenger, Instagram Direct, WhatsApp; muốn khách qua Zalo thì đích đến là website có nút Zalo'." },
+        { "sev": "P2", "where": "Q6, Q7", "quote": "Shop không có lập trình viên nhưng muốn gửi sự kiện từ máy chủ. Hướng nào khớp với tài liệu Meta?", "issue": "Hai câu L2 với ba phương án sai phi lý (chụp màn hình gửi Trang, gõ tay số đơn, Meta cấm ảnh tĩnh); đoán được bằng hình thức.", "fix": "Thay bằng câu đọc số: báo cáo 69 lượt mua, sổ đơn 40, UTM 40 — hỏi chẩn đoán gì (khử trùng hỏng) và kiểm trường nào." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3.800 ÷ 38 = 100 nghìn ✓; sai 55,1 = 3.800 ÷ 69 ✓. Ví dụ: 38 + 31 = 69 ✓ (số Pixel tuần trước)." },
+      "claims": [
+        { "claim": "Khử trùng Pixel–CAPI dựa trên event_name + event_id trong 48 giờ", "status": "verified", "note": "src developers.facebook.com deduplicate" },
+        { "claim": "Conversions API Gateway là cách không cần code", "status": "verified", "note": "src" },
+        { "claim": "Meta gọi chạy cả hai là thiết lập dự phòng (redundant setup)", "status": "unverified", "note": "đúng theo hiểu biết, không src riêng" },
+        { "claim": "Pixel 31 / đơn 40 / khử trùng 38 / không khử trùng 69; chi 3,8 triệu", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Nối ba quyết định (creative, đích đến, đo) vào một tình huống; dạy event_id = mã đơn và đối soát hằng tuần bằng UTM — đây là kỹ năng đo thật; phản ví dụ về form cho dịch vụ tư vấn đúng.",
+      "upgrade": "Để đạt ≥85: (1) làm rõ cách ra con số 69; (2) thêm Zalo/giới hạn kênh nhắn tin ở Việt Nam; (3) thêm bảng đối soát mẫu 4 cột (tuần, báo cáo Meta, đơn có UTM, % lệch) với ngưỡng hành động (lệch > 20% kiểm khử trùng); (4) thêm ví dụ thứ hai về form vs website có số: CPL 40.000đ nhưng chỉ 1/10 nhớ đã điền → chi phí mỗi khách chốt so với website; (5) thay Q6/Q7 bằng câu chẩn đoán L4."
+    },
+    {
+      "id": "B:qc04-07",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 16, "examples": 13, "pedagogy": 9, "assessment": 8, "data": 9, "clarity": 4 },
+      "total": 83,
+      "bloom_items": ["L4", "L4", "L3", "L3", "L2", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Toàn bài", "quote": "24 triệu cho Sales Advantage+ tìm khách mới, 6 triệu cho chiến dịch thử 3 ý creative", "issue": "Bài không có src nào dù là kiến thức fast (Advantage+, giai đoạn học, cách tách chiến dịch thử creative); rubric yêu cầu bài fast bắt buộc có src và câu 'nếu màn hình khác, tin trang chính thức'. Riêng khẳng định 'thêm creative vào nhóm chính là chỉnh sửa lớn' (Q6) cần nguồn.", "fix": "Thêm src giai đoạn học (có mục 'thêm quảng cáo mới là chỉnh sửa lớn') và src Advantage+ sales; thêm câu về màn hình khác." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "6 triệu/tuần: CPM 60.000đ ra 100.000 lượt hiển thị", "issue": "24 triệu/tháng cho phần chính ≈ 5,5–6 triệu/tuần tuỳ coi tháng 4 hay 4,3 tuần; bài dùng 6 triệu/tuần mà không nói quy ước, lệch nhẹ với 24 triệu/4,3 tuần = 5,6 triệu.", "fix": "Ghi 'coi tháng là 4 tuần: 24 triệu → 6 triệu/tuần'." },
+        { "sev": "P2", "where": "Q5, Q6", "quote": "\"CPA hoà vốn\" của shop nghĩa là gì?", "issue": "Hai câu L2 nhận lại định nghĩa; Q6 có hai phương án sai phi lý (mỗi creative một tài khoản, quy định bắt buộc của Meta).", "fix": "Thay Q5 bằng câu tính: tỉ lệ đổi trả 10% làm lãi gộp thực còn bao nhiêu và CPA hoà vốn mới là bao nhiêu (nối với Đào sâu)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 6.000.000 ÷ 60.000 × 1.000 = 100.000; × 1,2% = 1.200; × 3% = 36 ✓; CPA = 6 triệu ÷ 36 ≈ 166.700đ ✓ ('khoảng 167.000đ'). Q4: 58.000 ÷ (1.000 × 1,4% × 1,8%) = 58.000 ÷ 0,252 ≈ 230,2 nghìn ✓; CPC ≈ 4.143đ ✓; lỗ 230 − 180 ≈ 50.000đ/đơn ✓. Q7: 33/36 lệch 8,3% ✓. Lãi gộp 450.000 × 40% = 180.000 ✓." },
+      "claims": [
+        { "claim": "Thêm creative vào nhóm chính là chỉnh sửa lớn", "status": "unverified", "note": "đúng theo trợ giúp Meta nhưng bài không có src" },
+        { "claim": "CPM 60.000, CTR 1,2%, CVR 3% dự báo; thực tế 58.000 / 1,4% / 1,8%", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Chuỗi CPM → CTR → CVR với CPA hoà vốn làm mốc, rồi đọc 'tầng nào lệch' và chỉ sửa tầng đó — đúng cách một senior làm; phản ví dụ nêu giả định độc lập giữa các tầng và nhiễu mẫu nhỏ; Đào sâu đưa mua lại và đổi trả vào mốc hoà vốn.",
+      "upgrade": "Để đạt ≥85: (1) thêm src (giai đoạn học, Advantage+) và câu 'nếu màn hình khác'; (2) ghi quy ước tháng = 4 tuần; (3) thêm bảng dự báo vs thực tế 5 dòng (CPM, CTR, CVR, đơn, CPA) với cột % lệch để phần Áp dụng có mẫu; (4) thay Q5 bằng câu tính CPA hoà vốn sau đổi trả; (5) thêm khoảng tin cậy thô: với 36 đơn, dao động ±6 đơn là bình thường (√36) để Q7 có cơ sở số thay vì 'lệch nhỏ'."
+    },
+    {
+      "id": "B:qc04-08",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 15, "examples": 12, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 80,
+      "bloom_items": ["L3", "L5", "L3", "L2", "L4", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "câu \"Bạn bị mụn à?\" nói thẳng vào tình trạng của người xem", "issue": "Lý do từ chối dựa trên chính sách 'thuộc tính cá nhân' (personal attributes) của Meta nhưng bài chỉ dẫn nguồn tiêu chuẩn sức khoẻ; chính sách thuộc tính cá nhân là nguồn đúng hơn và không được liệt kê.", "fix": "Thêm src 'Meta Advertising Standards – Personal attributes' và ghi tên chính sách trong ví dụ." },
+        { "sev": "P2", "where": "Ví dụ – Nhóm A", "quote": "Nhóm A: chỉ 20 lượt mua/tuần; gom vào nhóm khác", "issue": "Gom nhóm là chỉnh sửa lớn làm cả nhóm nhận học lại; bài không nêu đánh đổi này dù chính bài dạy 'không sửa nhiều thứ cùng ngày'.", "fix": "Thêm một câu: 'gom nhóm làm nhóm nhận học lại khoảng một tuần; làm vào lúc không trùng đợt sale'." },
+        { "sev": "P2", "where": "Q4, Q6", "quote": "\"Learning limited\" trên một nhóm quảng cáo cho bạn biết điều gì?", "issue": "Hai câu L2 nhận lại định nghĩa/quy trình; Q6 phương án b ('đăng lại y nguyên vài lần') và c dễ loại.", "fix": "Thay Q4 bằng câu đọc bảng: cho 3 nhóm với số sự kiện/tuần 20, 48, 110 và ngân sách — hỏi nhóm nào gom, nhóm nào thêm tiền, bao nhiêu." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 1.000 × 1,6% × 2,5% = 0,4 đơn/1.000 lượt; 75.000 ÷ 0,4 = 187,5 nghìn ✓ (trước 50.000 ÷ 0,4 = 125 ✓); sai 4,7 = 75.000 ÷ 16 = 4.687đ CPC ✓. Ví dụ nhóm C: CTR 0,8% → 50.000 ÷ 0,2 = 250.000đ ✓ gấp đôi." },
+      "claims": [
+        { "claim": "CPA = CPM ÷ (1.000 × CTR × CVR)", "status": "verified", "note": "định nghĩa đại số, đúng" },
+        { "claim": "Learning limited: khó đạt ~50 sự kiện tối ưu trong 7 ngày sau chỉnh sửa lớn", "status": "verified", "note": "src" },
+        { "claim": "Tiêu chuẩn quảng cáo sức khoẻ có quy định riêng", "status": "verified", "note": "src" },
+        { "claim": "Câu 'Bạn bị mụn à?' là lý do từ chối (thuộc tính cá nhân)", "status": "unverified", "note": "bài tự ghi 'giả định'; chính sách personal attributes không trong src" },
+        { "claim": "Mở tài khoản khác để chạy lại nội dung bị từ chối có thể bị coi là lách quy định", "status": "unverified", "note": "hợp lý theo chính sách Meta về né tránh hệ thống, không src" },
+        { "claim": "CPM 50.000 → 75.000; CTR 1,6% → 0,8%; CVR 2,5%; tần suất 4,5", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Cây chẩn đoán đi từ đo lường trước rồi mới tới CPM/CTR/CVR là thứ tự đúng; Q1 và Q3 buộc người học tính chứ không cảm; phản ví dụ nêu mẫu nhỏ (8 đơn/tuần) và nguyên nhân ngoài quảng cáo.",
+      "upgrade": "Để đạt ≥85: (1) thêm src chính sách thuộc tính cá nhân; (2) nêu đánh đổi khi gom nhóm A; (3) thêm bảng 4 nhóm × (CPM, CTR, CVR, CPA, % đổi) làm mẫu cho phần Áp dụng; (4) thêm một dòng về cửa sổ ghi nhận (7 ngày bấm / 1 ngày xem) vì bài nhắc 'đổi cửa sổ ghi nhận' ở bước (1) mà không giải thích; (5) thay Q4 bằng câu đọc bảng L4."
+    }
+  ],
+  "module_notes": {
+    "progression": "Tiến trình hợp lý và hiếm có: nên chạy không (01) → tài khoản (02) → dựng chiến dịch (03) → đối tượng (04) → vị trí/ngân sách/giá thầu (05) → creative/đích đến/đo (06) → ví dụ xuyên suốt dự báo (07) → chẩn đoán (08). Bài 07 và 08 là hai bài mạnh nhất vì buộc tính; bài 02 yếu nhất vì nhiều khẳng định thanh toán/thuế chưa kiểm được. Mốc 'khoảng 50 sự kiện/tuần' lặp ở 01, 03, 05, 08 — hợp lý để củng cố nhưng nên có một bài 'chủ' và các bài khác dẫn về.",
+    "overlap": [
+      "Giai đoạn học / 50 sự kiện: B:qc04-01, 03, 05, 08 cùng định nghĩa lại thay vì dẫn về một bài",
+      "Chuỗi CPM → CTR → CVR: B:qc04-07 (dự báo) và B:qc04-08 (chẩn đoán) dùng cùng công thức, Q1/Q3 của 08 gần trùng Q3/Q4 của 07",
+      "Danh mục quảng cáo đặc biệt: B:qc04-01 Q6 và B:qc04-04 Q6 hỏi cùng một điều (và cùng mang rủi ro phạm vi quốc gia)",
+      "Đọc lệch nhỏ với mẫu nhỏ: B:qc04-01 Q7, B:qc04-07 Q7, B:qc04-08 phản ví dụ"
+    ],
+    "gaps": [
+      "Cửa sổ ghi nhận (attribution setting 7 ngày bấm / 1 ngày xem) và cách nó làm số Meta lệch với sổ đơn — được nhắc ở 08 nhưng không bài nào dạy",
+      "Thuế GTGT Meta tại Việt Nam và hạn mức chi tiêu tài khoản (spending limit) — bài 02 để trống",
+      "Phạm vi quốc gia của danh mục quảng cáo đặc biệt — cần kiểm và nói rõ cho Việt Nam",
+      "Loại trừ người đã mua / nhắm lại khách cũ sau các giới hạn 2025 (bài 04 chỉ nói loại trừ sở thích)",
+      "Đọc báo cáo trong Trình quản lý quảng cáo: cột, phân tách (breakdown) theo vị trí/độ tuổi — bài 05 Q6 giả định người học biết đọc CPA theo vị trí",
+      "Quảng cáo danh mục sản phẩm (catalog / Advantage+ catalog ads) cho shop nhiều mã — module Meta cho shop đồ bếp mà không nhắc",
+      "Thử nghiệm A/B chính thức (công cụ Experiments) thay cho 'chiến dịch thử creative' tự chia"
+    ],
+    "best_lesson": "B:qc04-07",
+    "weakest_lesson": "B:qc04-02"
+  }
+}

@@ -1,0 +1,24 @@
+{
+ "mod": "tn01",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:tn01-03",
+   "where": "example (so với doanh thu)",
+   "status": "fixed",
+   "change": "“thấp hơn doanh thu một tuần 450.000đ → đáng đi tiếp” → so với lãi gộp: biên 30% thì mỗi tuần khách để lại khoảng 135.000đ, khách cần mua khoảng 2 tuần (3 tuần nếu chỉ 10% đặt thật) mới bù chi phí → đáng thử tiếp, kèm đo tỉ lệ mua lại.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: 200.000 ÷ 135.000 ≈ 1,5 tuần → 2 tuần; 400.000 ÷ 135.000 ≈ 3 tuần. Câu hỏi trong bài không dùng con số 450.000 cho kết luận này nên không cần sửa câu khác. Biên 30% là số minh hoạ."
+  },
+  {
+   "id": "B:tn01-03",
+   "where": "example (tỉ lệ quy đổi)",
+   "status": "fixed",
+   "change": "“÷ quy đổi ước 20% (như Q5 bên dưới)” → “Giả định 10–30% người đăng ký sẽ đặt thật (chưa đo được trước khi mở bếp): 40.000đ ÷ 20% ≈ 200.000đ mỗi khách, trong khoảng 133.000–400.000đ”. Bỏ tham chiếu tới Q5.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: tỉ lệ 20% chỉ biết sau khi mở bếp (Q5) nên không dùng được để quyết trước. Lỗi thật; Q5 vẫn khớp (20% là số đo sau)."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

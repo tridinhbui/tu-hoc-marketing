@@ -1,0 +1,16 @@
+{
+ "mod": "gt06",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:gt06-02",
+   "where": "Q6 (vì của c)",
+   "status": "fixed",
+   "change": "Phương án c: “Vì doanh thu khó tách riêng cho từng kênh MXH” → “Vì doanh thu MXH không có cách nào tách theo kênh” (sai rõ). Lời giải c: thừa nhận tách được ở mức cận dưới (mã riêng, link theo dõi, câu hỏi “biết shop qua đâu”) và nói gán kênh khó không giải thích việc chọn follower.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: lời giải cũ “đều giúp gán doanh thu” nói quá so với ý “cận dưới” trong phần đọc. Lỗi thật; khoá vẫn là d."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

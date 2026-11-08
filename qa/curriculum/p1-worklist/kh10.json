@@ -1,0 +1,35 @@
+{
+ "mod": "kh10",
+ "lessons": [
+  {
+   "id": "B:kh10-01",
+   "title": "Gen Z chỉ thích bắt trend — hay bạn đang nhìn nhầm lý do?",
+   "total": 73,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ / Q3",
+     "quote": "Ly trend: 600 ly tuần đầu, 90 ly tuần ba — giữ lại 15%.",
+     "issue": "Gọi tỉ số doanh số tuần 3/tuần 1 là 'giữ lại' (retention) là lẫn hai thước đo mà chính bài đang dạy tách: 90 ly tuần ba có thể toàn người thử mới, không phải khách quay lại. Bước giải Q3 lặp lại 'Tỉ lệ giữ lại = tuần ba ÷ tuần đầu' — người học sẽ dùng sai công thức retention.",
+     "fix": "Đổi chữ thành 'doanh số còn 15% so với tuần đầu' và thêm câu: 'tỉ lệ giữ chân thật phải đếm người mua lần hai — cần hỏi tại quầy hoặc dùng thẻ thành viên'. Sửa bước giải Q3 tương ứng."
+    }
+   ],
+   "upgrade": "Sửa tên gọi 'giữ lại' và dạy cách đếm khách quay lại (mã thành viên/hỏi tại quầy). Gắn nhãn số, cho khảo sát cỡ mẫu. Thêm bảng cohort đơn giản: tuần ra mắt × số người thử × số người mua lần 2. Thêm chỉ số và ngưỡng cho hành động 'ly tặng'. Thay Q3 bằng câu tính tỉ lệ mua lần 2 từ bảng cohort (L3 có ý nghĩa)."
+  },
+  {
+   "id": "B:kh10-04",
+   "title": "Khách trẻ tìm quán ăn trên TikTok — Google của bạn còn đủ không?",
+   "total": 66,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÌ SAO HIỆU QUẢ",
+     "quote": "Kết quả tìm kiếm trên TikTok dựa vào chữ trong mô tả, tên địa điểm và nội dung video.",
+     "issue": "Khẳng định về cơ chế tìm kiếm của nền tảng nêu như sự thật, không `src`, không ngày kiểm — lớp fast bắt buộc có nguồn và câu 'nếu màn hình khác, tin trang chính thức'. Tương tự 'Nhiều người trẻ gõ ... ngay trên TikTok thay vì Google' là nhận định hành vi không nguồn.",
+     "fix": "Dẫn trang TikTok for Business / Creator về cách tìm kiếm và từ khoá, kèm ngày kiểm; với nhận định hành vi, dẫn một khảo sát có tên hoặc ghi 'quan sát trong ngành, chưa có số Việt Nam'."
+    }
+   ],
+   "upgrade": "Thêm `src` và ngày kiểm cho cơ chế tìm kiếm TikTok và nhận định hành vi; thêm câu 'nếu màn hình khác, tin trang chính thức'. Làm rõ 2 triệu trả cho gì. Nêu giới hạn mẫu tại quầy và cho kết quả sau 4 tuần. Thay Q6 bằng câu đọc bảng theo nhóm tuổi. Thêm checklist mô tả video (món · khu · giá · tên quán · giờ) và bảng 'bước hành trình · kênh · chỉ số'."
+  }
+ ]
+}

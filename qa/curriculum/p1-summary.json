@@ -1,0 +1,1120 @@
+{
+ "mods": {
+  "dl01": {
+   "worklist": 3,
+   "logged": 3,
+   "fixed": 3,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "dl02": {
+   "worklist": 3,
+   "logged": 3,
+   "fixed": 3,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "dl03": {
+   "worklist": 3,
+   "logged": 3,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "dl04": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "dl05": {
+   "worklist": 1,
+   "logged": 1,
+   "fixed": 0,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "dl06": {
+   "worklist": 1,
+   "logged": 1,
+   "fixed": 1,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "dl07": {
+   "worklist": 4,
+   "logged": 4,
+   "fixed": 4,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi (2 cảnh báo độ dài concept dl07-03, dl07-05)",
+   "tests": "pass"
+  },
+  "dl08": {
+   "worklist": 5,
+   "logged": 5,
+   "fixed": 5,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "dl10": {
+   "worklist": 3,
+   "logged": 3,
+   "fixed": 3,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "gt01": {
+   "worklist": 1,
+   "logged": 1,
+   "fixed": 1,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "gt02": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "gt03": {
+   "worklist": 7,
+   "logged": 7,
+   "fixed": 7,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "gt04": {
+   "worklist": 7,
+   "logged": 7,
+   "fixed": 7,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "gt05": {
+   "worklist": 4,
+   "logged": 4,
+   "fixed": 4,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "gt06": {
+   "worklist": 9,
+   "logged": 9,
+   "fixed": 9,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "in01": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "in02": {
+   "worklist": 5,
+   "logged": 5,
+   "fixed": 4,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "in03": {
+   "worklist": 21,
+   "logged": 21,
+   "fixed": 19,
+   "rejected": 0,
+   "needs-human": 2,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "in05": {
+   "worklist": 1,
+   "logged": 1,
+   "fixed": 1,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kh01": {
+   "worklist": 1,
+   "logged": 1,
+   "fixed": 1,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kh02": {
+   "worklist": 11,
+   "logged": 11,
+   "fixed": 11,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kh03": {
+   "worklist": 4,
+   "logged": 4,
+   "fixed": 4,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kh04": {
+   "worklist": 1,
+   "logged": 1,
+   "fixed": 1,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kh05": {
+   "worklist": 4,
+   "logged": 4,
+   "fixed": 4,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kh06": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kh07": {
+   "worklist": 1,
+   "logged": 1,
+   "fixed": 1,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kh08": {
+   "worklist": 5,
+   "logged": 5,
+   "fixed": 5,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kh09": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kh10": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kh11": {
+   "worklist": 1,
+   "logged": 1,
+   "fixed": 1,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn01": {
+   "worklist": 5,
+   "logged": 5,
+   "fixed": 5,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn02": {
+   "worklist": 5,
+   "logged": 5,
+   "fixed": 5,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn03": {
+   "worklist": 4,
+   "logged": 4,
+   "fixed": 4,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn04": {
+   "worklist": 10,
+   "logged": 10,
+   "fixed": 10,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 1,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn05": {
+   "worklist": 9,
+   "logged": 9,
+   "fixed": 9,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 1,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn06": {
+   "worklist": 15,
+   "logged": 15,
+   "fixed": 15,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi (4 cảnh báo độ dài concept/example ở kn06-02, 03, 04, 07 do thêm câu hedge)",
+   "tests": "pass"
+  },
+  "kn07": {
+   "worklist": 5,
+   "logged": 5,
+   "fixed": 5,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn08": {
+   "worklist": 5,
+   "logged": 5,
+   "fixed": 3,
+   "rejected": 0,
+   "needs-human": 2,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn09": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn10": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn11": {
+   "worklist": 3,
+   "logged": 3,
+   "fixed": 3,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn12": {
+   "worklist": 4,
+   "logged": 4,
+   "fixed": 1,
+   "rejected": 0,
+   "needs-human": 3,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn13": {
+   "worklist": 7,
+   "logged": 7,
+   "fixed": 7,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn14": {
+   "worklist": 7,
+   "logged": 7,
+   "fixed": 6,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn15": {
+   "worklist": 9,
+   "logged": 9,
+   "fixed": 9,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "kn16": {
+   "worklist": 10,
+   "logged": 10,
+   "fixed": 10,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "ob01": {
+   "worklist": 8,
+   "logged": 8,
+   "fixed": 8,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "ob02": {
+   "worklist": 13,
+   "logged": 13,
+   "fixed": 13,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "ob03": {
+   "worklist": 10,
+   "logged": 10,
+   "fixed": 9,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 1,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "ob04": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "ob05": {
+   "worklist": 1,
+   "logged": 1,
+   "fixed": 1,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "ob06": {
+   "worklist": 3,
+   "logged": 3,
+   "fixed": 3,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "ob07": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "ob08": {
+   "worklist": 1,
+   "logged": 1,
+   "fixed": 1,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "qc01": {
+   "worklist": 5,
+   "logged": 5,
+   "fixed": 5,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "qc02": {
+   "worklist": 3,
+   "logged": 3,
+   "fixed": 3,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "qc03": {
+   "worklist": 5,
+   "logged": 5,
+   "fixed": 4,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "qc04": {
+   "worklist": 7,
+   "logged": 7,
+   "fixed": 5,
+   "rejected": 0,
+   "needs-human": 2,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "qc05": {
+   "worklist": 8,
+   "logged": 8,
+   "fixed": 7,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "qc06": {
+   "worklist": 11,
+   "logged": 11,
+   "fixed": 7,
+   "rejected": 0,
+   "needs-human": 4,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "qc07": {
+   "worklist": 7,
+   "logged": 7,
+   "fixed": 6,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "qc08": {
+   "worklist": 7,
+   "logged": 7,
+   "fixed": 7,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "qc09": {
+   "worklist": 4,
+   "logged": 4,
+   "fixed": 3,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "qc10": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "qc11": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tn01": {
+   "worklist": 4,
+   "logged": 4,
+   "fixed": 4,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tn02": {
+   "worklist": 5,
+   "logged": 5,
+   "fixed": 5,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tn03": {
+   "worklist": 3,
+   "logged": 3,
+   "fixed": 3,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tn04": {
+   "worklist": 6,
+   "logged": 6,
+   "fixed": 5,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tn05": {
+   "worklist": 8,
+   "logged": 8,
+   "fixed": 8,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi (1 cảnh báo độ dài ví dụ tn05-08, không phải lỗi)",
+   "tests": "pass"
+  },
+  "tn06": {
+   "worklist": 5,
+   "logged": 5,
+   "fixed": 5,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tp01": {
+   "worklist": 9,
+   "logged": 9,
+   "fixed": 8,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tp02": {
+   "worklist": 7,
+   "logged": 7,
+   "fixed": 7,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tp03": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 1,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tp04": {
+   "worklist": 3,
+   "logged": 3,
+   "fixed": 3,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tp05": {
+   "worklist": 1,
+   "logged": 1,
+   "fixed": 1,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tp06": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tp07": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tp08": {
+   "worklist": 1,
+   "logged": 1,
+   "fixed": 0,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tp09": {
+   "worklist": 3,
+   "logged": 3,
+   "fixed": 3,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tp10": {
+   "worklist": 5,
+   "logged": 5,
+   "fixed": 4,
+   "rejected": 0,
+   "needs-human": 1,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tp11": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tu01": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tu02": {
+   "worklist": 2,
+   "logged": 2,
+   "fixed": 2,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tu03": {
+   "worklist": 19,
+   "logged": 19,
+   "fixed": 15,
+   "rejected": 0,
+   "needs-human": 4,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tu04": {
+   "worklist": 8,
+   "logged": 8,
+   "fixed": 5,
+   "rejected": 0,
+   "needs-human": 3,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tu05": {
+   "worklist": 8,
+   "logged": 8,
+   "fixed": 8,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  },
+  "tu06": {
+   "worklist": 3,
+   "logged": 3,
+   "fixed": 3,
+   "rejected": 0,
+   "needs-human": 0,
+   "key_changed": 0,
+   "validator": "0 lỗi",
+   "tests": "pass"
+  }
+ },
+ "totals": {
+  "worklist": 431,
+  "logged": 431,
+  "fixed": 397,
+  "rejected": 0,
+  "needs-human": 34,
+  "key_changed": 3,
+  "missing_log": 0
+ },
+ "key_changes": [
+  {
+   "mod": "kn04",
+   "id": "B:kn04-08",
+   "where": "Q3",
+   "change": "Thay calc tuyến tính (84 lượt đồng tình) bằng calc đo xử lý bình luận: 40 bình luận chê, 28 trả lời trong 2 giờ, 9 người sửa lời chê → tỉ lệ sửa trên số được trả lời đúng hạn 9 ÷ 28 ≈ 32,1%; nhiễu 22,5 (SAI_MAU_SO, chia 40) và 70 (tỉ lệ phản hồi đúng hạn, SAI_TINH_TOAN)."
+  },
+  {
+   "mod": "kn05",
+   "id": "B:kn05-03",
+   "where": "Q3–Q5",
+   "change": "Q4: 150 đơn → 120 đơn, ans 200 → 250, nhiễu 5 → 4; Q5: tỉ lệ đặt 0,1% → 0,2%, số đơn 90 → 180, ans 200 → 100, nhiễu 2 → 1 (0,2 giữ nguyên); sửa steps tương ứng."
+  },
+  {
+   "mod": "ob03",
+   "id": "B:ob03-02",
+   "where": "Q1",
+   "change": "Đề Q1 thêm “chưa biết sẽ giành được bao nhiêu phần tăng thêm ở mỗi ngành… kết luận nào là đúng mức?”; đáp án d đổi từ “Ngành B, vì tiền mới không kém xa A…” thành “Chưa chọn được: phải ước phần giành ở mỗi ngành (hoà ở 1,33% B so với 1% A)”; nhiễu a, b, c viết lại (b thành “Chọn B, vì ngành tăng 30% thì người mới sẽ giành được phần lớn hơn”), lời giải viết lại theo."
+  }
+ ],
+ "needs_human": [
+  {
+   "mod": "dl03",
+   "id": "B:dl03-06",
+   "where": "KHÁI NIỆM / Q6",
+   "note": "Phần 'tại thời điểm kiểm các cửa sổ gán khả dụng là…' trong gợi ý sửa KHÔNG viết được vì chưa kiểm được danh sách hiện hành của từng nền tảng. Cần người thật: (1) xác nhận tại ngày kiểm Meta còn các cửa sổ 1 ngày bấm / 7 ngày bấm / 1 ngày xem (Q6 dùng 1 và 7 ngày bấm); (2) TikTok và Google Ads hiện có những cửa sổ nào, có nên liệt kê vào bài; (3) thay hai URL hub TikTok/Google bằng URL bài trợ giúp cụ thể nếu tìm được."
+  },
+  {
+   "mod": "dl05",
+   "id": "B:dl05-05",
+   "where": "KHÁI NIỆM (nguồn Les Binet, IPA 2020)",
+   "note": "Đã tự kiểm: bài nêu nghiên cứu thật mà không có src — lỗi thật. Đã hedge và thêm src ở mức domain. Cần người kiểm: (1) đường dẫn chính xác tới bài/slide của Binet trên ipa.co.uk (hoặc effworks); (2) con số độ trễ theo từng ngành (ô tô, năng lượng, điện thoại) trong tài liệu gốc để ghi vào khái niệm thay cho câu “tra trong nguồn”. Không bịa số nên chưa đưa độ trễ cụ thể vào phần đọc."
+  },
+  {
+   "mod": "in02",
+   "id": "B:in02-06",
+   "where": "Khái niệm — mô hình cung ứng",
+   "note": "Cần người tìm nguồn thật cho việc Mixue tự cung ứng nguyên liệu cho chủ nhượng quyền (vd. bản cáo bạch niêm yết của tập đoàn Mixue hoặc bài báo lớn trong nước), rồi thêm src và bỏ câu “bài chưa gắn nguồn”."
+  },
+  {
+   "mod": "in03",
+   "id": "B:in03-04",
+   "where": "Khái niệm · Q1",
+   "note": "Cần người tìm một bản lưu quảng cáo 'Think Different' (1997) và một bài phân tích có ngày để gắn src; không chắc apple.com còn trang lưu chiến dịch nên không tự đặt URL."
+  },
+  {
+   "mod": "in03",
+   "id": "B:in03-05",
+   "where": "Khái niệm · Q1",
+   "note": "Cần người tìm bản lưu chiến dịch (P&G/Old Spice hoặc agency) và một bài phân tích có ngày về loạt video trả lời bình luận; không chắc URL chính thức nên không tự đặt."
+  },
+  {
+   "mod": "kn08",
+   "id": "B:kn08-08",
+   "where": "KHÁI NIỆM",
+   "note": "Cần người: lấy link chính sách bảo vệ dữ liệu người mua (che số điện thoại) hiện hành của Shopee và TikTok Shop để thêm src kèm ngày kiểm."
+  },
+  {
+   "mod": "kn08",
+   "id": "B:kn08-09",
+   "where": "KHÁI NIỆM",
+   "note": "Cần người (pháp chế) xác nhận: (1) số hiệu Luật 91/2025/QH15 và hiệu lực 1/1/2026; (2) nghị định nào thay Nghị định 13/2023/NĐ-CP và từ ngày nào; (3) thay link tra cứu bằng link văn bản cụ thể."
+  },
+  {
+   "mod": "kn12",
+   "id": "B:kn12-03",
+   "where": "VÍ DỤ",
+   "note": "Câu hỏi cho pháp chế: (1) số hiệu, hình thức văn bản (Nghị quyết của Chính phủ có đúng là văn bản chuyển thẩm quyền hành chính này không) và ngày hiệu lực 1/7/2026; (2) cơ quan tiếp nhận hồ sơ xác nhận nội dung quảng cáo TPBVSK hiện tại; (3) cung cấp URL văn bản gốc để thêm src. Chưa thêm src vì không tự kiểm được toàn văn."
+  },
+  {
+   "mod": "kn12",
+   "id": "B:kn12-04",
+   "where": "KHÁI NIỆM",
+   "note": "Q1 b, Q2 d, Q5 đã tự dẫn 'theo tóm tắt' nên giữ. Câu hỏi cho pháp chế: đối chiếu toàn văn Nghị định 239/2026/NĐ-CP (và 81/2018, 128/2024) từng điểm: bỏ trần giảm giá 50%, bỏ trần giá trị hàng tặng, bỏ trần tổng thời gian giảm giá, yêu cầu khách chứng kiến với may rủi, trích 50% giải không người nhận, ngưỡng thông báo 100 triệu; cung cấp URL văn bản gốc và link tóm tắt KPMG/Luật Việt Nam để thêm src. Nếu điểm nào sai, khoá Q1/Q2/Q5 cần xem lại."
+  },
+  {
+   "mod": "kn12",
+   "id": "B:kn12-06",
+   "where": "KHÁI NIỆM",
+   "note": "Câu hỏi cho pháp chế: xác nhận số hiệu và ngày hiệu lực Luật 91/2025/QH15, nghị định hướng dẫn hiện hành (356/2025 có đúng thay 13/2023 không), điều khoản về đồng ý, rút đồng ý, dữ liệu mua từ bên thứ ba; phạm vi Nghị định 91/2020 với tin Zalo; cung cấp URL văn bản gốc để thêm src. Kết luận gửi/không gửi của bài (6.600 số, dừng 4.800 số mua ngoài) chưa đổi."
+  },
+  {
+   "mod": "kn14",
+   "id": "B:kn14-02",
+   "where": "Khái niệm (phát biểu 2025)",
+   "note": "Cần người tìm bản gốc phát biểu đầu 2025 của Adam Mosseri (video/bài trên Instagram/Threads, ngày) về ba tín hiệu thời gian xem – thích – gửi; nếu tìm được thì thay src chua bằng URL gốc, nếu không thì cân nhắc bỏ câu."
+  },
+  {
+   "mod": "ob03",
+   "id": "B:ob03-05",
+   "where": "TÌNH HUỐNG / VÍ DỤ",
+   "note": "Phần nhãn minh hoạ đã sửa. Còn lại cần người: “Vinamilk dẫn đầu sữa tươi” có cần một nguồn có ngày (báo cáo thị phần sữa nước Việt Nam, vd của hãng nghiên cứu thị trường hoặc báo cáo thường niên Vinamilk) không, hay đổi tên hai hãng thành hãng V/T? Tôi không chắc URL nguồn nên chưa thêm src. Đã kiểm: lượt trước (bị ngắt) chưa áp sửa nào vào bài này trong file; sửa mới ở lượt này."
+  },
+  {
+   "mod": "qc03",
+   "id": "B:qc03-05",
+   "where": "VÍ DỤ",
+   "note": "Cần pháp chế: trích đúng điều, khoản của Nghị định 330/2026 cho (1) xử lý dữ liệu không có sự đồng ý và (2) mua bán dữ liệu cá nhân (theo Luật 91/2025), xác nhận mức 30–50 triệu và mức của hành vi mua bán. Không câu hỏi nào dùng con số này. Trường assume:true ở bài này do lượt trước thêm, giữ nguyên."
+  },
+  {
+   "mod": "qc04",
+   "id": "B:qc04-01",
+   "where": "Khái niệm (3) và Q6",
+   "note": "Không tự xác minh được phạm vi quốc gia. Câu hỏi cho người thật: Meta có bắt buộc khai danh mục quảng cáo đặc biệt “Việc làm” cho quảng cáo tuyển dụng nhắm Việt Nam không (hay chỉ Mỹ/Canada/EU…)? Nếu không, thay Q6 (khoá d) bằng câu về chính sách sức khoẻ có nguồn."
+  },
+  {
+   "mod": "qc04",
+   "id": "B:qc04-04",
+   "where": "Khái niệm và Q6",
+   "note": "Cùng câu hỏi như B:qc04-01: danh mục đặc biệt “Việc làm” có bắt buộc với quảng cáo tuyển dụng nhắm Việt Nam không? Nếu không, khoá c của Q6 sai và cần viết lại câu (có thể dựa vào chính sách chống phân biệt đối xử của Meta nếu có nguồn)."
+  },
+  {
+   "mod": "qc05",
+   "id": "B:qc05-06",
+   "where": "Khái niệm và Q5",
+   "note": "Câu hỏi cho người thật: Google có thông báo chính thức đổi nhãn “Maximize conversions with a target CPA” thành “Target CPA” (và tương tự Target ROAS) từ 6/2026 không? Nếu không, thay Q5 bằng câu khác (ví dụ khi nào chuyển sang Target CPA)."
+  },
+  {
+   "mod": "qc06",
+   "id": "B:qc06-03",
+   "where": "Khái niệm, Ví dụ, Q2, Q3",
+   "note": "Câu hỏi cho người thật: trang “Về chiến dịch Demand Gen” (answer/13695777) hiện khuyến nghị ngân sách ít nhất bao nhiêu lần Target CPA (10× hay 15×), và có nói rõ là ngân sách ngày không? Nếu khác 10×, cập nhật đồng bộ bài 03 (ví dụ, Q2, Q3), 06 (Q2, chia tiền) và 07 (Q3, Q5, ví dụ)."
+  },
+  {
+   "mod": "qc06",
+   "id": "B:qc06-03",
+   "where": "Khái niệm và Q4",
+   "note": "Giữ khoá a; phương án đúng không còn dựa vào chi tiết chưa xác nhận. Câu hỏi cho người thật: Demand Gen có hiển thị trên Google Maps không? Nếu có (có nguồn), có thể thêm lại."
+  },
+  {
+   "mod": "qc06",
+   "id": "B:qc06-06",
+   "where": "Chia tiền và Q2",
+   "note": "Phụ thuộc câu hỏi bội số ở B:qc06-03; nếu Google nêu 15×, đổi lịch 1,5 triệu/ngày × 10 ngày và lời giải Q2 a/d."
+  },
+  {
+   "mod": "qc06",
+   "id": "B:qc06-07",
+   "where": "Khái niệm, Ví dụ, Q3, Q5",
+   "note": "Phụ thuộc câu hỏi bội số ở B:qc06-03; nếu khác 10×, đổi “2,5 triệu/ngày” ở ví dụ và bước giải Q3."
+  },
+  {
+   "mod": "qc07",
+   "id": "B:qc07-02",
+   "where": "Khái niệm / Q6",
+   "note": "Khoá Q6 (d: vượt ngưỡng chi tiêu) vẫn dựa vào quy tắc chưa xác minh. Cần người mở Help Center TikTok kiểm: ở Việt Nam xác minh doanh nghiệp bắt buộc theo ngưỡng chi tiêu hay ngay khi tạo tài khoản? Nếu khác, đổi Q6 thành câu áp dụng “nên chuẩn bị giấy tờ lúc nào”."
+  },
+  {
+   "mod": "qc09",
+   "id": "B:qc09-02",
+   "where": "Khái niệm (Lazada)",
+   "note": "Tiêu đề “…Lazada khác gì?” cũng nằm trong bai-index.js (ngoài phạm vi được sửa), còn URL Lazada University công khai chưa chắc. Cần người quyết: (1) đổi tiêu đề ở cả bai/qc09.js và bai-index.js cho khớp phạm vi (“…và với Lazada cần kiểm gì?”), hoặc (2) cung cấp trang Lazada University công khai có tên công cụ (Sponsored Discovery/Affiliate) và ngày kiểm."
+  },
+  {
+   "mod": "tn04",
+   "id": "B:tn04-10",
+   "where": "KHÁI NIỆM (quy định niêm yết giá)",
+   "note": "Cần người thật xác nhận: (1) văn bản áp dụng cho niêm yết giá bán lẻ online hiện là Luật Giá 16/2023/QH15 + nghị định hướng dẫn nào (số hiệu, điều khoản về niêm yết giá); (2) URL trực tiếp của văn bản trên trang chính thức để thay URL tra cứu; sau đó đổi st sang 'doc'."
+  },
+  {
+   "mod": "tp01",
+   "id": "B:tp01-07",
+   "where": "Khái niệm",
+   "note": "Chưa thêm src vì không chắc URL trang chính thức (Avis hoặc DDB) về chiến dịch 1962. Cần người thật: xác nhận năm 1962 và agency DDB, bổ sung src {t,u,d,st} tới tư liệu chính thức tương đương."
+  },
+  {
+   "mod": "tp03",
+   "id": "B:tp03-07",
+   "where": "example",
+   "note": "Chưa thêm src vì không chắc URL trang chính thức của McDonald's về chiến dịch 2003. Cần người thật: xác nhận năm ra mắt 2003 và bổ sung src {t,u,d,st} tới trang corporate.mcdonalds.com hoặc tư liệu chính thức tương đương."
+  },
+  {
+   "mod": "tp08",
+   "id": "B:tp08-06",
+   "where": "Tình huống / Ví dụ",
+   "note": "Đã tự kiểm: bài hướng dẫn kịch bản quảng cáo thuốc không kê đơn mà không nhắc điều kiện pháp lý — lỗi thật. Phần hedge đã thêm, nhưng nội dung luật cần người thật kiểm: (1) văn bản hiện hành nào quy định xác nhận nội dung quảng cáo thuốc (Luật Dược 2016 Điều 79 và nghị định hướng dẫn còn hiệu lực sau Luật Quảng cáo sửa đổi 2025 không?); (2) câu cảnh báo bắt buộc đúng nguyên văn hiện nay (“Đọc kỹ hướng dẫn sử dụng trước khi dùng” hay đã đổi?); (3) có nên thay URL vbpl.vn bằng link văn bản cụ thể."
+  },
+  {
+   "mod": "tp10",
+   "id": "B:tp10-10",
+   "where": "Khái niệm",
+   "note": "Cần người: gắn URL trang xuất bản cụ thể của IPA cho hai tài liệu (không chắc đường dẫn nên chỉ để domain), và xác nhận câu “thương hiệu mới nghiêng về xây thương hiệu hơn” có đúng theo Media in Focus/Effectiveness in Context không."
+  },
+  {
+   "mod": "tu03",
+   "id": "B:tu03-04",
+   "where": "Khái niệm (pháp lý)",
+   "note": "Chưa gắn src vì không chắc URL văn bản. Cần người thật: xác nhận Điều 7 NĐ 81/2018 (mức giảm tối đa 50%, các ngoại lệ như khuyến mại tập trung) còn hiệu lực sau NĐ 128/2024, và thêm src tới vbpl.vn hoặc cổng văn bản Chính phủ."
+  },
+  {
+   "mod": "tu03",
+   "id": "B:tu03-06",
+   "where": "Ví dụ (pháp lý)",
+   "note": "Không đổi điều kiện vì Q2 (đáp án b “…giữ giá đề xuất”) dạy đúng điều kiện này; đổi sẽ lan sang câu hỏi. Cần người thật: xác nhận thưởng kèm điều kiện giữ giá bán lại có vi phạm Điều 11–12 Luật Cạnh tranh 2018 không; nếu có, sửa cả ví dụ và Q2 b, và thêm src."
+  },
+  {
+   "mod": "tu03",
+   "id": "B:tu03-06",
+   "where": "Khái niệm (pháp lý)",
+   "note": "Chưa gắn src vì không chắc URL. Cần người thật: xác nhận số hiệu và ngày hiệu lực NĐ 128/2024 và quy định thông báo/đăng ký khuyến mại may rủi, thêm src."
+  },
+  {
+   "mod": "tu03",
+   "id": "B:tu03-07",
+   "where": "Khái niệm (pháp lý)",
+   "note": "Chưa gắn src. Cần người thật: xác nhận Điều 6 NĐ 81/2018 (hạn mức 50% giá trị hàng tặng, ngoại lệ) sau sửa đổi NĐ 128/2024 và thêm src."
+  },
+  {
+   "mod": "tu04",
+   "id": "B:tu04-05",
+   "where": "Khái niệm",
+   "note": "Đã sửa phần mô tả sai về STEPPS. Chưa gắn src vì không chắc URL trang chính thức của sách/tác giả. Cần người thật: thêm src (sách Contagious, năm xuất bản, trang tác giả hoặc nhà xuất bản)."
+  },
+  {
+   "mod": "tu04",
+   "id": "B:tu04-07",
+   "where": "Khái niệm",
+   "note": "Bỏ dải số cụ thể vì không chắc khớp báo cáo gốc. Cần người thật: đối chiếu báo cáo Spiegel “How Online Reviews Influence Sales” (năm, dải sao chính xác) và thêm src."
+  },
+  {
+   "mod": "tu04",
+   "id": "B:tu04-08",
+   "where": "Khái niệm (pháp lý)",
+   "note": "Chưa gắn src. Cần người thật: xác nhận số hiệu luật sửa đổi Luật Quảng cáo (ngày thông qua, hiệu lực 01/01/2026) và quy định về người chuyển tải sản phẩm quảng cáo, thêm src."
+  }
+ ],
+ "missing": []
+}

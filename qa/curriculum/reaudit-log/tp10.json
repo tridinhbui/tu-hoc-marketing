@@ -1,0 +1,16 @@
+{
+ "mod": "tp10",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:tp10-02",
+   "where": "Ví dụ + Q3",
+   "status": "fixed",
+   "change": "Ví dụ thêm: “Chênh 15 đơn còn ngang dao động ngẫu nhiên (cỡ ±2√65 ≈ ±16 đơn) và chưa có đối chứng cùng thời gian, nên mới là tín hiệu; chạy thêm 2–3 tuần hoặc A/B rồi hãy tin.” Q3 (calc) thêm bước “Độ chắc: … 1,5 điểm mới là tín hiệu; cần thêm vài tuần hoặc A/B.”",
+   "key_changed": false,
+   "note": "Đã tự kiểm: 2√65 ≈ 16,1 > 15. Lỗi thật. Q3 là calc nên không đổi loại câu; đánh giá độ chắc đưa vào các bước. Đáp án 1,5 điểm % không đổi."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

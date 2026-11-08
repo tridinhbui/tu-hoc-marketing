@@ -1,0 +1,237 @@
+{
+  "mod": "ob06",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:ob06-01",
+      "scores": { "accuracy": 11, "depth": 9, "practical": 11, "examples": 8, "pedagogy": 6, "assessment": 6, "data": 4, "clarity": 4 },
+      "total": 59,
+      "bloom_items": ["L2", "L4", "L3", "L2", "L4", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "các ước tính của NielsenIQ được báo chí dẫn lại ở mức khoảng 80–85% doanh số, cao hơn nữa ở nông thôn", "issue": "Benchmark gắn tên công ty nghiên cứu thật, nêu như sự thật, không có `src`, không có năm/ngành hàng đo. Tỉ trọng kênh truyền thống thay đổi theo năm và theo ngành (FMCG tổng vs nước giải khát), nên con số cần nguồn bấm được và ngày kiểm theo đúng lớp 'periodic'.", "fix": "Thêm src (bài báo/dẫn NielsenIQ cụ thể, năm, ngành hàng) với ngày kiểm; hoặc hạ thành 'phần lớn (ước tính thường được dẫn trên 2/3)' và ghi 'cần tra số mới nhất'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "giữ phần lớn ngân sách cho chương trình trưng bày tủ mát và chiết khấu cho tạp hoá, dành phần nhỏ cho siêu thị", "issue": "Quyết định không có số: 'phần lớn' là bao nhiêu, chi phí tủ mát/tiệm, chiết khấu bao nhiêu %, kỳ vọng tăng sản lượng ra sao. Bài về phân bổ ngân sách mà không có một phép tính phân bổ.", "fix": "Thêm bảng: ngân sách 300 triệu; tạp hoá 65% (tủ mát 2 triệu/tiệm × 80 tiệm + dây treo), siêu thị 25%, online 10%; kèm chỉ số theo dõi sản lượng/tiệm trước–sau." },
+        { "sev": "P2", "where": "Q3", "quote": "700 ÷ 1.000 = 0,7 = 70%", "issue": "Câu tính một bước lặp số đã cho; giá trị sai '7' không rõ là lỗi gì.", "fix": "Thay bằng: 'ngân sách 300 triệu chia theo sản lượng 70/20/10 → mỗi kênh bao nhiêu; nếu sếp dồn 60% cho siêu thị thì kênh tạp hoá nhận bao nhiêu trên mỗi thùng bán ra' (L3→L4)." },
+        { "sev": "P2", "where": "Q5", "quote": "Hàng giá cao, mua dịp đặc biệt thường chảy qua kênh hiện đại và online ở đô thị", "issue": "Khái quát hợp lý nhưng không nguồn; đáp án đúng vẫn rõ.", "fix": "Hạ giọng thành 'thường, trong ví dụ này'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 700/1.000 = 70% ✓; sai 233,3 = 700/300 ✓; 7 không khớp lỗi định danh rõ (700/100?)." },
+      "claims": [
+        { "claim": "NielsenIQ: kênh truyền thống ~80–85% doanh số FMCG Việt Nam, cao hơn ở nông thôn", "status": "unverified", "note": "Tên thật + số, không src/năm." },
+        { "claim": "Online là tỉ trọng nhỏ với hàng giá thấp", "status": "unverified", "note": "Khái quát không nguồn." },
+        { "claim": "1.000 thùng: 700/200/100", "status": "illustrative-labelled", "note": "Tình huống ghi '(minh hoạ)'." }
+      ],
+      "strengths": "Khái niệm 'người gác cổng' khác nhau ở mỗi kênh (chủ tạp hoá – chỗ kệ – lượt hiển thị) là góc nhìn đúng nghề; Q7 (rủi ro ra quyết định từ kênh có dữ liệu rõ) là câu phân tích tốt.",
+      "upgrade": "Thêm src cho benchmark NielsenIQ hoặc hạ giọng; thêm bảng phân bổ ngân sách có số và chỉ số đo; thêm PHẢN VÍ DỤ (hàng mới cần hình ảnh ở siêu thị trước khi tạp hoá chịu nhập — khi nào dồn cho kênh hiện đại là đúng) và ĐÀO SÂU (vai trò nhà phân phối, chiết khấu tầng); nâng Q3/Q4 thành câu tính và chẩn đoán."
+    },
+    {
+      "id": "B:ob06-02",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 11, "pedagogy": 8, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 79,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "nếu sản lượng ở đó tăng rõ so với 50 tiệm đối chứng, mới đáng tách công thức", "issue": "'Tăng rõ' không có ngưỡng; không nói chi phí tách công thức là bao nhiêu để so với lợi ích. Người học biết phải thử nhưng không biết thử bao lâu và mức nào thì đáng.", "fix": "Thêm: 'thử 6 tuần; đáng tách nếu sản lượng/tiệm nhóm thử cao hơn đối chứng ≥ 25% và phần tăng đó × lãi gộp ≥ chi phí thêm mã hàng (minh hoạ 150 triệu/năm)'." },
+        { "sev": "P2", "where": "Q3 wrong", "quote": "[35.7,\"SAI_MAU_SO\"]", "issue": "35,7% = 2.500/7.000, nhưng 7.000 không tương ứng tổng nào trong đề (6.000+1.500 = 7.500 → 33,3%). Giá trị sai không phải lỗi định danh được.", "fix": "Đổi thành 33,3 (chia cho hai miền còn lại) hoặc 41,7 giữ, bỏ 35,7." },
+        { "sev": "P2", "where": "Q5 option c (lời giải)", "quote": "Gói ớt kèm vẫn là thay đổi sản phẩm cần tuân thủ quy định", "issue": "Khẳng định về thủ tục công bố sản phẩm không nguồn; không ảnh hưởng đáp án a.", "fix": "Đổi thành 'có thể vẫn cần cập nhật hồ sơ; không phải lợi ích chính'." },
+        { "sev": "P2", "where": "Q4, Q5", "quote": "Câu 'người miền Trung ăn cay' nên được dùng thế nào", "issue": "Hai câu L2 nhận lại thái độ của bài.", "fix": "Thay Q5 bằng câu đọc bảng kết quả thử 50/50 tiệm (sản lượng/tiệm, số tiệm có hàng) và hỏi có đáng tách công thức không (L5)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2.500/10.000 = 25% ✓; sai 41,7 = 2.500/6.000 ✓, 35,7 = 2.500/7.000 không khớp lỗi rõ. Q7: 2.500/500 = 5, 6.000/1.500 = 4 ✓." },
+      "claims": [
+        { "claim": "Miền Nam chuộng ngọt đậm, miền Bắc thanh ít đường, miền Trung cay mặn", "status": "illustrative-labelled", "note": "Khái quát văn hoá, bài ghi rõ 'xu hướng chung, không phải luật'." },
+        { "claim": "6.000/2.500/1.500 gói/tháng", "status": "illustrative-labelled", "note": "Tình huống ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Xử lý khuôn mẫu vùng miền đúng cách (giả thuyết để thử, không phải luật); xếp phương án rẻ trước (cách nói, cỡ gói, gói ớt) trước khi tách công thức; Q7 buộc chuẩn hoá theo tiệm (5 vs 4 gói/tiệm) đảo kết luận — câu L4 mẫu mực; thử có nhóm đối chứng được nêu trong phần đọc.",
+      "upgrade": "Đặt ngưỡng và thời gian cho thử nghiệm, kèm chi phí tách công thức để so; sửa giá trị sai 35,7; thay Q5 bằng câu đọc bảng kết quả thử; đưa số 'sản lượng/tiệm' vào VÍ DỤ ngay (hiện chỉ có ở Q7 và ĐÀO SÂU). Sau sửa đạt ~86."
+    },
+    {
+      "id": "B:ob06-03",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 5, "data": 6, "clarity": 4 },
+      "total": 65,
+      "bloom_items": ["L2", "L4", "L3", "L3", "L2", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Chai 650ml giá 150.000đ, giảm 20%. Giá sau giảm là bao nhiêu nghìn đồng?", "issue": "Câu tính tầm thường (150 × 0,8) và không chạm vào ý chính (giá mỗi ml, hay số tiền mỗi lần mua). Bài có phép tính hay hơn trong ví dụ (267 vs 231đ/ml) nhưng không hỏi.", "fix": "Thay bằng: 'gói 6ml 1.600đ và chai 650ml 150.000đ: giá mỗi ml chênh bao nhiêu %?' (≈15,6%) hoặc 'với 5.000đ/lần, khách mua được bao nhiêu gói và đủ dùng mấy ngày'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Đưa dây gói vào 300 tạp hoá xã có thể mở rộng người dùng nhanh hơn giảm giá chai", "issue": "Không có kinh tế của phương án: lãi mỗi gói 6ml, chi phí dây treo, doanh thu kỳ vọng/tiệm; so 'nhanh hơn' không có số. Số liệu không gắn nhãn minh hoạ.", "fix": "Thêm: lãi gộp gói 400đ, dây 12 gói; nếu mỗi tiệm bán 10 dây/tuần → 300 tiệm × 10 × 12 × 400đ ≈ 14,4 triệu lãi/tuần; so với chai giảm giá bán thêm X chai." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Nhiều gia đình có thu nhập theo mùa vụ, chi tiêu theo ngày", "issue": "Khái quát về hành vi nông thôn không nguồn (dù hedged 'nhiều'); không nêu điều kiện làm nó sai (vùng nông thôn công nghiệp hoá, có lương tháng).", "fix": "Thêm PHẢN VÍ DỤ: xã gần khu công nghiệp, công nhân lương tháng mua chai lớn ở tiệm tiện lợi — dấu hiệu nhận ra." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Ở nông thôn, hỏi 'mỗi lần mua khách trả được bao nhiêu'", "issue": "Thiếu PHẢN VÍ DỤ và ĐÀO SÂU (chi phí bao bì/rác của gói nhỏ, biên thấp hơn, khả năng lên cỡ gói theo thời gian).", "fix": "Thêm hai mục; ĐÀO SÂU nói về nấc thang cỡ gói (6ml → 170ml → 650ml) và cách đo chuyển cỡ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 150 × 0,8 = 120 nghìn ✓; sai 30 = tiền giảm ✓, 130 = sai tính ✓. Ví dụ: 1.600/6 = 266,7đ/ml; 150.000/650 = 230,8đ/ml; chênh 15,6% ✓ 'khoảng 15%'." },
+      "claims": [
+        { "claim": "Khách nông thôn mua gói nhỏ < 5.000đ/lần, thu nhập theo mùa vụ", "status": "unverified", "note": "Khái quát hành vi, hedged; không nguồn." },
+        { "claim": "Gói 6ml 1.600đ, chai 650ml 150.000đ", "status": "illustrative-unlabelled", "note": "Tự khớp." }
+      ],
+      "strengths": "Chuyển câu hỏi từ 'giảm bao nhiêu' sang 'mỗi lần mua khách trả được bao nhiêu' và chỉ ra khách tối ưu tiền mặt hôm nay, không tối ưu giá/ml — đúng cơ chế; Q7 (dầu ăn ở tạp hoá, nồi cơm qua livestream) nối sang chọn kênh theo loại hàng.",
+      "upgrade": "Thêm kinh tế của phương án dây gói (lãi/gói, dây/tiệm/tuần) so với giảm giá chai; thêm PHẢN VÍ DỤ/ĐÀO SÂU; thay Q3 bằng phép tính giá/ml hoặc ngân sách mỗi lần mua; thay Q5 (L2) bằng câu đọc dữ liệu bán theo cỡ gói ở 3 huyện; gắn nhãn minh hoạ."
+    },
+    {
+      "id": "B:ob06-04",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 14, "examples": 10, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 67,
+      "bloom_items": ["L2", "L4", "L3", "L2", "L2", "L3", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q5", "quote": "Một công ty đặt 500 hộp quà Tết cho nhân viên. Họ thường chốt đơn vào khoảng nào?", "issue": "Đáp án a 'một đến hai tháng trước Tết' là khái quát không nguồn, lặp lại câu trong khái niệm; câu L2 kiểm trí nhớ. Thực tế mốc tuỳ quy mô công ty và ngân sách.", "fix": "Thay bằng câu dữ liệu: bảng số đơn B2B theo tuần của năm trước (lùi từ Tết) → hỏi tuần nào phải có mẫu quà và báo giá sẵn (L4)." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "sản xuất xong từ khoảng tháng Mười âm lịch", "issue": "Lịch ngược chỉ có một mốc; không có bảng lùi ngược (sản xuất – về kho NPP – tạp hoá nhập – khách mua) với số tuần cho từng bước, và không có số lượng (bao nhiêu hộp cho đợt 50%).", "fix": "Thêm bảng 4 dòng: khách mua (T-3 tuần → T-0), tạp hoá nhập đợt lớn (T-8 → T-6), hàng tại NPP (T-9), xuất xưởng (T-11), kèm ngày dương cho năm Tết giữa tháng 2." },
+        { "sev": "P2", "where": "Q3", "quote": "200 × 15% = 30 hộp", "issue": "Phép tính một bước trên số giả định đã cho sẵn.", "fix": "Hỏi: 'Tết 14/2 dương; đợt gom lớn kết thúc rằm tháng Mười Một (≈1/1 dương); sản xuất cần 5 tuần, vận chuyển về NPP 1 tuần — ngày dương nào phải bắt đầu sản xuất?' (≈ 20/11)." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Lịch Tết tính ngược từ ngày tạp hoá gom hàng", "issue": "Thiếu PHẢN VÍ DỤ (ngành hàng tươi/hoa, kênh siêu thị với lịch đặt hàng riêng, hoặc hàng mới chưa có chỗ đứng nên tạp hoá chỉ nhập sát Tết) và ĐÀO SÂU (rủi ro tồn sau Tết khi vào sớm, chính sách đổi trả cho NPP).", "fix": "Thêm hai mục; ĐÀO SÂU nối sang ob06-05/06 (tồn hộp quà, mùa trũng)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 100 − 50 − 35 = 15%; 200 × 15% = 30 ✓; sai 70 = 35%, 100 = 50% ✓. Kiểm lời giải Q2b: Tết giữa tháng 2 → rằm tháng Mười Một âm ≈ 45 ngày trước ≈ đầu tháng 1 dương ✓." },
+      "claims": [
+        { "claim": "Tạp hoá gom hàng Tết từ rằm tháng Mười Một; NPP nhập 1–2 tháng trước Tết", "status": "illustrative-labelled", "note": "Bài ghi rõ 'theo kinh nghiệm riêng của ông, mốc có thể lệch theo ngành hàng và vùng' và 'theo kinh nghiệm của nhiều nhà phân phối'." },
+        { "claim": "50% / 35% / 15% ba đợt nhập", "status": "illustrative-labelled", "note": "Ghi 'Giả sử'." },
+        { "claim": "Doanh nghiệp đặt quà biếu 1–2 tháng trước Tết", "status": "unverified", "note": "Khái quát không nguồn (Q5a)." }
+      ],
+      "strengths": "Gắn nhãn kinh nghiệm/giả định rất tốt; ba nhịp (đặt – gom – mua) và nguyên tắc tính ngược theo âm lịch là quyết định vận hành cụ thể; Q2 (đổi âm–dương) và Q7 (lệch cùng kỳ do Tết sớm) là câu áp dụng/phân tích thật.",
+      "upgrade": "Thêm bảng lịch ngược với số tuần và ngày dương cho năm cụ thể; thêm PHẢN VÍ DỤ/ĐÀO SÂU về rủi ro tồn kho khi vào sớm; thay Q3/Q5 bằng câu tính ngày sản xuất và câu đọc bảng đơn B2B theo tuần; thêm một câu L5 đánh đổi 'vào sớm, chịu chiết khấu/đổi trả' vs 'vào muộn, tranh 15% cuối'."
+    },
+    {
+      "id": "B:ob06-05",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 13, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L3", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "khảo sát NIQ về Tết 2025: khoảng 76% người mua có mục đích tặng quà cho gia đình", "issue": "Số nghiên cứu gắn tên công ty thật, nêu như sự thật, không có `src`, không có ngày kiểm, không nói mẫu/kênh khảo sát. Lớp 'periodic' bắt buộc nguồn bấm được.", "fix": "Thêm src (báo cáo/bài báo dẫn NIQ Tết 2025, ngày kiểm) hoặc bỏ số và viết 'nhiều khảo sát mùa Tết cho thấy phần lớn người mua có mục đích biếu tặng'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "hãng lời thêm khoảng 50.000đ mỗi hộp so với bán túi", "issue": "Phép tính giả định 2 túi trong hộp đều là doanh số thêm so với bán lẻ (không ăn vào túi lẻ) và bỏ qua chi phí tồn hộp sau Tết (ĐÀO SÂU có nhắc nhưng không có số). Nếu 30% hộp là khách vốn mua túi lẻ thì lời thêm thấp hơn.", "fix": "Thêm câu 'giả định hộp không thay thế túi lẻ; nếu thay thế 30%, lời thêm còn ~35.000đ/hộp' và một dòng tồn kho: 'nếu tồn 10% hộp phải tháo ra bán lẻ, mất 40.000đ hộp × số tồn'." },
+        { "sev": "P2", "where": "Q4, Q5, Q6", "quote": "Bạn nên đặt hộp quà Tết ở đâu trong siêu thị để đúng người mua biếu?", "issue": "Ba câu liền nhận lại ý bài với nhiễu dễ loại ('kho sau, chỉ lấy khi khách hỏi', 'được siêu thị miễn phí trưng bày').", "fix": "Thay Q6 bằng câu tính số hộp nên sản xuất với dự báo và rủi ro tồn (ví dụ: dự báo 20.000 hộp ± 25%; mỗi hộp tồn mất 40.000đ, mỗi hộp thiếu mất 50.000đ lãi → sản xuất bao nhiêu) — L5." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 450 − 2 × 180 = 90; 90 − 40 = 50 nghìn ✓; sai 90 = quên chi phí hộp ✓, 270 = 450 − 180 ✓." },
+      "claims": [
+        { "claim": "NIQ Tết 2025: ~76% người mua có mục đích tặng quà cho gia đình", "status": "unverified", "note": "Tên thật + số, không src." },
+        { "claim": "Chi phí hộp 40.000đ", "status": "illustrative-labelled", "note": "Ghi 'giả sử'." },
+        { "claim": "Túi 500g 180.000đ, hộp 2 túi 450.000đ", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phân biệt người mua – người dùng và mốc so sánh (hộp quà cùng tầm giá, không phải túi lẻ) là insight đúng cho mùa Tết; PHẢN VÍ DỤ (khách tự ăn, doanh nghiệp ngân sách chặt) và ĐÀO SÂU (tồn hộp in Tết) nêu đúng điều kiện và rủi ro.",
+      "upgrade": "Thêm src cho số NIQ hoặc bỏ số; nêu giả định không thay thế túi lẻ và đưa rủi ro tồn vào phép tính; thay 2 câu L2 bằng câu quyết định số lượng sản xuất có rủi ro (L5) và câu đọc dữ liệu tỉ lệ hộp/túi theo tuần; gắn nhãn minh hoạ."
+    },
+    {
+      "id": "B:ob06-06",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 5 },
+      "total": 78,
+      "bloom_items": ["L2", "L4", "L3", "L4", "L3", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "tháng Giêng năm ngoái là 6.800 thùng — so cùng kỳ, năm nay tăng khoảng 5,9%", "issue": "So một năm cùng kỳ; ĐÀO SÂU khuyên so hai năm nhưng ví dụ không đưa số năm thứ hai, cũng không kiểm 'tháng Giêng' hai năm có cùng số ngày sau Tết không (chính bài nêu điểm này ở VÌ SAO (2)). Tăng 5,9% chưa tách được tăng giá/tăng điểm bán.", "fix": "Thêm hàng năm trước nữa (ví dụ 6.500) và ghi 'cả ba tháng Giêng đều căn theo 30 ngày sau mùng Một'; thêm câu 'tăng 5,9% trong khi số điểm bán tăng 8% → sản lượng/điểm thực giảm'." },
+        { "sev": "P2", "where": "Q5", "quote": "Trong mùa trũng sau Tết, việc nào có ích nhất cho hãng nước ngọt?", "issue": "Câu nhận lại ý bài (L2/L3), nhiễu yếu ('chạy chương trình quà Tết thứ hai').", "fix": "Thay bằng câu đọc bảng cùng kỳ theo kênh (tổng +5,9% nhưng tạp hoá −8%, siêu thị +30%) và hỏi nên lo kênh nào — khớp PHẢN VÍ DỤ (L4)." },
+        { "sev": "P2", "where": "ĐÀO SÂU", "quote": "Khái niệm kề cận là ngày đôi trên sàn, nơi đơn bị dời sang một ngày", "issue": "Liên kết hợp lý nhưng bài không tham chiếu bài ob06-08 bằng id; người học không biết tìm ở đâu.", "fix": "Thêm `rel` tới B:ob06-08 và B:ob06-04." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (7.200 − 6.800)/6.800 = 5,88% ✓; sai 5,6 = 400/7.200 ✓, 400 = số tuyệt đối ✓. Q7: (18.000 − 7.200)/18.000 = 60% ✓; 150% = 10.800/7.200 ✓; 40% là tỉ lệ còn lại ✓." },
+      "claims": [
+        { "claim": "18.000 thùng tháng Chạp, 7.200 tháng Giêng, 6.800 năm trước", "status": "illustrative-labelled", "note": "Tình huống ghi 'Số liệu minh hoạ'." },
+        { "claim": "Sau Tết nhà còn hàng tồn, tạp hoá còn hàng cũ → mùa trũng", "status": "illustrative-labelled", "note": "Cơ chế chung, không gắn số." }
+      ],
+      "strengths": "Quy tắc so cùng kỳ căn theo mốc Tết (không theo tháng dương) được giải thích bằng cơ chế và kiểm ở Q4; Q7 chẩn đoán ba cách đọc sai phần trăm (150%, 40%, bằng 60%) rất hữu ích; PHẢN VÍ DỤ (tổng đẹp nhưng tạp hoá giảm) đúng điều kiện làm kết luận sai.",
+      "upgrade": "Thêm năm thứ hai và chuẩn hoá theo số ngày sau Tết trong ví dụ; thêm bảng cùng kỳ theo kênh và đổi Q5 thành câu đọc bảng; tách tăng trưởng theo sản lượng/điểm bán; thêm `rel` sang ob06-04 và ob06-08. Sau sửa đạt ~86."
+    },
+    {
+      "id": "B:ob06-07",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 15, "examples": 10, "pedagogy": 6, "assessment": 6, "data": 7, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L2", "L4", "L3", "L4", "L3", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "ngân sách tháng = tổng ngân sách × chỉ số tháng ÷ tổng 12 chỉ số", "issue": "Công thức chia ngân sách theo tỉ lệ doanh số giả định hiệu quả quảng cáo tỉ lệ thuận với nhu cầu và bỏ qua hai điểm bài khác đã dạy: (a) tiền phải đi trước đỉnh (bài tự nói 'dồn trước mùa' nhưng công thức lại gán theo tháng bán); (b) đơn tự đến vs đơn do quảng cáo (ob05-07). Không nêu đây là quy tắc khởi điểm cần chỉnh.", "fix": "Ghi rõ: 'đây là phân bổ khởi điểm; sau đó dịch tiền sớm 2–4 tuần so với đỉnh và điều chỉnh theo đơn tăng thêm đo được (xem B:ob05-07)'. Ví dụ: chỉ số tháng 8 là 1,5 → tiền đặt vào nửa cuối tháng 7 và đầu tháng 8." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Với trung bình năm giả sử 20.000 thùng/tháng", "issue": "Chỉ cho 3 trong 12 chỉ số; không có bảng 12 tháng để người học thấy tổng chỉ số = 12 và tự chia ngân sách; Q7 dùng 'tổng 12 chỉ số bằng 12' như dữ kiện cho sẵn thay vì tính ra.", "fix": "Thêm bảng 12 tháng sản lượng minh hoạ (tổng 240.000) với chỉ số từng tháng và ngân sách tương ứng cho 240 triệu." },
+        { "sev": "P2", "where": "Q2 option a", "quote": "Dồn tiền trước các đỉnh như tựu trường, mùa nóng; giữ mức duy trì tháng thấp", "issue": "Phương án đúng dài và chi tiết nhất, chứa cả hai vế của bài; nhiễu ngắn và cực đoan ('cắt hết').", "fix": "Rút gọn a thành 'Dồn trước các đỉnh, giữ mức duy trì tháng thấp' và làm nhiễu b/d ôn hoà hơn." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "miền Trung mưa bão cuối năm, miền Nam mưa từ khoảng tháng 5 đến tháng 11", "issue": "Dữ kiện khí hậu nêu như sự thật, không nguồn (dù phù hợp hiểu biết chung).", "fix": "Thêm src (Tổng cục Khí tượng thuỷ văn) hoặc ghi 'theo khí hậu thông thường'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Vẽ lịch nhu cầu của ngành trước", "issue": "Không có PHẢN VÍ DỤ (năm dịch/thiên tai làm lịch lệch; ngành không có mùa rõ) và ĐÀO SÂU dù bài đã nhắc 'theo dõi chỉ số nhiều năm'.", "fix": "Thêm PHẢN VÍ DỤ: năm học bắt đầu sớm/muộn, chỉ số tháng 8 rơi về 1,1 — dấu hiệu và cách dùng trung bình 3 năm." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: (30.000 − 14.000)/14.000 = 114,3% ✓; sai 53,3 = 16.000/30.000 ✓. Q7: 240 × 1,5 ÷ 12 = 30 triệu ✓ (chia đều 20) ✓. Ví dụ: 30.000/20.000 = 1,5; 14.000/20.000 = 0,7; 1,5/0,7 = 2,14 ✓ 'khoảng 2,1 lần'." },
+      "claims": [
+        { "claim": "Mùa mưa miền Nam ~tháng 5–11, miền Trung mưa bão cuối năm", "status": "unverified", "note": "Khí hậu học phổ thông; không src." },
+        { "claim": "Sữa hộp nhỏ đỉnh tháng 8–9, trũng hè", "status": "illustrative-labelled", "note": "Tình huống ghi 'Số liệu minh hoạ'." }
+      ],
+      "strengths": "Cho công thức chỉ số mùa và phân bổ ngân sách rõ ràng, hai câu tính kiểm đúng công thức; nguyên tắc 'không bỏ trống tháng thấp' và 'mùa lệch theo vùng' (Q4 áo mưa) là ràng buộc thực tế đúng.",
+      "upgrade": "Thêm bảng 12 tháng đầy đủ; nêu rõ công thức là khởi điểm và tiền phải đi trước đỉnh, nối sang ob05-07 (đơn tăng thêm); thêm PHẢN VÍ DỤ/ĐÀO SÂU; thêm src khí hậu; rút gọn Q2a; thay Q5 (L3) bằng câu đọc bảng chỉ số 3 năm và hỏi năm nào bất thường."
+    },
+    {
+      "id": "B:ob06-08",
+      "scores": { "accuracy": 12, "depth": 13, "practical": 16, "examples": 12, "pedagogy": 8, "assessment": 7, "data": 9, "clarity": 4 },
+      "total": 81,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L2", "L4", "L4"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "ĐÀO SÂU, lời giải Q1a, Q5b, Q7b", "quote": "Sàn thường ưu tiên hiển thị cho shop tham gia, nên bỏ ngày đôi có thể mất cả lượng khách ngày thường", "issue": "Bốn khẳng định về cách sàn vận hành (ưu tiên hiển thị cho shop tham gia; 'Sàn không chặn hiển thị'; 'Phí sàn ngày đôi thường không thấp hơn'; 'Không có quy định chung' cấm giảm quá 20%) nêu như sự thật, lớp 'fast', không `src`, không ngày kiểm, không câu 'nếu chính sách khác, tin trang chính thức'. Chính sách phí/hiển thị chiến dịch của Shopee, Lazada, TikTok Shop thay đổi từng quý.", "fix": "Thêm src (trang chính sách chiến dịch của từng sàn, ngày kiểm) và hạ giọng 'theo chính sách tại thời điểm kiểm'; sửa lời giải Q1a/Q5b/Q7b thành 'không có dữ kiện trong bài về điều này'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Nếu không tham gia mà vẫn bán đều 200 đơn/ngày, năm ngoái ngày đôi làm mất khoảng 30 triệu lãi", "issue": "Giả định 'không tham gia vẫn 200 đơn/ngày' là phản thực tế chưa kiểm; ĐÀO SÂU nêu nhưng ví dụ không gắn nhãn 'giả định'. Cũng chưa trừ phí sàn tăng thêm dù khái niệm nói 'trừ phần giảm giá, phí sàn tăng thêm'.", "fix": "Ghi 'giả định phản thực' và thêm dòng phí sàn chiến dịch (minh hoạ +3% giá bán) vào bảng lãi." },
+        { "sev": "P2", "where": "Q5", "quote": "Một lợi ích của ngày đôi mà bài tính lãi trong một ngày chưa thấy là gì?", "issue": "Câu L2 nhận lại PHẢN VÍ DỤ; nhiễu dễ loại ('Đối thủ sẽ không tham gia').", "fix": "Thay bằng câu tính giá trị khách mới: 400 khách mới ngày đôi, 30% mua lại 2 lần/năm với lãi 60.000đ → đủ bù 30 triệu không? (L5)." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 600 + 1.600 + 700 = 2.900; 11 × 200 = 2.200; 2.900 − 2.200 = 700 ✓; sai 1.400 = 1.600 − 200 ✓. Q4: 60.000 − 45.000 = 15.000; 1.600 × 15.000 = 24 triệu ✓; cửa sổ 1.300 × 60.000 + 24 triệu = 102 triệu vs 2.200 × 60.000 = 132 triệu, chênh 30 triệu ✓." },
+      "claims": [
+        { "claim": "Sàn ưu tiên hiển thị cho shop tham gia ngày đôi; phí sàn ngày đôi không thấp hơn; không có quy định chung cấm giảm quá 20%", "status": "unverified", "note": "Lớp fast, cần src và ngày kiểm." },
+        { "claim": "200 đơn/ngày; 120/1.600/140; lãi 60.000đ, giảm ăn 45.000đ", "status": "illustrative-labelled", "note": "Tình huống ghi '(minh hoạ)'." }
+      ],
+      "strengths": "Khung cửa sổ trước – trong – sau với phép so cùng số ngày là cách đo chuẩn cho sự kiện khuyến mãi; ví dụ và Q4 tính tới lãi trên toàn bộ đơn bị giảm, không chỉ đơn tăng thêm; PHẢN VÍ DỤ (khách mới) và ĐÀO SÂU (cohort ngày đôi) đưa đúng biến còn thiếu.",
+      "upgrade": "Thêm src và hạ giọng mọi khẳng định về chính sách sàn; gắn nhãn giả định phản thực và thêm phí sàn vào bảng lãi; thay Q5 bằng câu tính giá trị khách mới; thêm bảng cửa sổ 11 ngày đầy đủ (đơn, giá, lãi) để người học tự điền. Sau sửa đạt ~88."
+    },
+    {
+      "id": "B:ob06-09",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L4", "L5", "L3", "L4", "L3", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Q7 ↔ VÍ DỤ", "quote": "Tỉ lệ hoàn tất từ 8% lên 14%", "issue": "Ví dụ vừa tính kỹ rằng kết quả kỳ vọng là 12–13,5% và 'chưa chắc là 14%', rồi Q7 lại dùng 14% như dữ kiện. Không sai toán nhưng lệch nhịp với phần đọc.", "fix": "Đổi Q7 thành 8% → 13% (5 điểm, +62,5%) hoặc nói rõ 'giả sử sau hai tháng đạt 14%'." },
+        { "sev": "P2", "where": "Q2 option a", "quote": "Thêm COD kèm bước xác nhận đơn, hai tuần sau thêm chat Zalo", "issue": "Phương án đúng là phương án duy nhất có hai bước và chi tiết vận hành; nhiễu đều một chiều và cực đoan ('chỉ nhận ví điện tử cho gọn').", "fix": "Thêm nhiễu hợp lý hơn: 'Thêm COD và chat Zalo cùng lúc để tăng đơn nhanh nhất' (sai vì không tách được tác động — nối với Q1)." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "với nhiều nhóm tuổi ở Việt Nam thường là Zalo, ít khi là email", "issue": "Khẳng định về thói quen nền tảng, hedged nhưng không nguồn; thị phần ứng dụng nhắn tin đổi theo năm.", "fix": "Thêm src (báo cáo người dùng ứng dụng nhắn tin, năm) hoặc ghi 'kiểm với khách của bạn'." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Gặp khách ở cách họ quen trả tiền và quen nhắn tin, rồi quản rủi ro sau", "issue": "Thiếu PHẢN VÍ DỤ (ngành B2B hoặc khách doanh nghiệp quen email/hoá đơn; hàng giá trị rất cao không nên COD) và ĐÀO SÂU; trùng chủ đề với ob05-08 nhưng không tham chiếu phép tính kỳ vọng đã có.", "fix": "Thêm `rel` tới B:ob05-08 và B:ob05-03; thêm PHẢN VÍ DỤ B2B." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 920 × 60% = 552; 552 × 5% = 27,6 ✓; sai 30 = 50 × 60% ✓, 552 = quên tỉ lệ đặt ✓. Q4: Zalo 90 × 50.000 − 1.000 × 400 = 4,1 triệu; email 60 × 50.000 − 1.000 × 20 = 2,98 triệu; chênh 1,12 triệu ✓; sai 1.500 = quên trừ chi phí tin ✓. Ví dụ: 28–44 + 11 = 39–55 đơn → (80+39)/1.000 = 11,9%, (80+55)/1.000 = 13,5% ✓ 'khoảng 12–13,5%'. Q7: 14 − 8 = 6 điểm; 6/8 = 75% ✓." },
+      "claims": [
+        { "claim": "Zalo là kênh nhắn quen của nhiều nhóm tuổi ở Việt Nam, ít khi là email", "status": "unverified", "note": "Hedged, không src." },
+        { "claim": "Zalo 400đ/tin, email 20đ/tin; 5–8% người muốn COD sẽ đặt", "status": "illustrative-labelled", "note": "Ghi '(minh hoạ)' / 'Giả sử'." }
+      ],
+      "strengths": "Ví dụ nói rõ mẫu nhỏ, hai nhóm có thể trùng, chỉ là hướng, rồi quy đổi ra số đơn với khoảng (28–44) và lịch bật từng thay đổi để đo riêng — đúng chuẩn làm việc có dữ liệu; Q1 (hai thay đổi cùng lúc không tách được) và Q4 (lãi ròng sau phí tin) là câu phân tích tốt.",
+      "upgrade": "Đồng bộ số Q7 với ví dụ; thêm nhiễu hợp lý cho Q2; thêm src cho khẳng định về Zalo; thêm PHẢN VÍ DỤ B2B và `rel` sang ob05-08/ob05-03; thêm một câu L5 đánh đổi rủi ro boom (xác nhận đơn tốn 2.000đ/đơn vs hoàn 40.000đ × tỉ lệ) để nối hai bài COD."
+    },
+    {
+      "id": "B:ob06-10",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 10, "pedagogy": 6, "assessment": 6, "data": 5, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L1", "L4", "L3", "L3", "L5", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "trong 40 đơn có trả lời, 31 đơn là mẹ hoặc bà chọn, dù 24 đơn do con cháu bấm đặt", "issue": "40 đơn có trả lời trong bao nhiêu đơn được hỏi? Người trả lời câu hỏi tuỳ chọn có thể lệch (người có thời gian); bài không nêu tỉ lệ trả lời và lệch mẫu dù vừa dặn 'đừng đoán vai theo khuôn mẫu'.", "fix": "Thêm 'trong 200 đơn được hỏi, 40 trả lời (20%) — lệch về khách rảnh; kiểm bằng gọi thêm 15 đơn không trả lời'." },
+        { "sev": "P2", "where": "Q1", "quote": "ngành nào dưới đây chịu ảnh hưởng rõ nhất bởi ngày mùng 1 và rằm âm lịch?", "issue": "Câu L1, đáp án hiển nhiên với mọi người Việt.", "fix": "Thay bằng câu đọc dữ liệu: bảng đơn 30 ngày với đỉnh ở ngày 14–15 và 29–30 âm (hiện trên lịch dương lệch) → hỏi nhịp nào đang điều khiển (L4)." },
+        { "sev": "P2", "where": "Q5 option a", "quote": "Nhang dự trữ trước theo dự báo, hoa tươi nhập sát ngày theo đơn đặt trước", "issue": "Phương án đúng dài nhất và duy nhất phân biệt hai loại hàng theo đúng chiều; nhiễu d là bản đảo ngược rõ ràng. Câu vẫn là L5 tốt nhưng hình thức giúp đoán.", "fix": "Rút gọn a; thêm nhiễu 'cả hai nhập theo đơn đặt trước' hợp lý hơn." },
+        { "sev": "P2", "where": "Q3", "quote": "Chu kỳ 3 ngày này nhiều hơn 3 ngày thường bao nhiêu đơn?", "issue": "Phép tính một bước, chưa dùng cho quyết định (ví dụ: bao nhiêu % đơn tháng rơi vào 6 ngày quanh mùng 1 và rằm → phân bổ nhân sự/kho).", "fix": "Hỏi: 'trong tháng 30 ngày với hai chu kỳ (6 ngày) như trên và 24 ngày thường, bao nhiêu % đơn tháng rơi vào 6 ngày đó?' (880/2.080 ≈ 42%)." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Canh lịch âm và hỏi ai trong nhà quyết định", "issue": "Thiếu PHẢN VÍ DỤ (khách thành thị trẻ không cúng rằm; hoặc đơn doanh nghiệp cúng khai trương theo ngày tốt riêng) và ĐÀO SÂU (bốn vai thay đổi theo giá trị đơn; cách viết hai thông điệp cho hai vai trên một trang).", "fix": "Thêm hai mục." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2 × 120 + 200 = 440; 3 × 50 = 150; 440 − 150 = 290 ✓; sai 440 = quên trừ nền ✓, 150 = nền ✓." },
+      "claims": [
+        { "claim": "Nhiều gia đình Việt sống theo lịch âm: cúng mùng 1, rằm, giỗ, Rằm tháng Bảy, Tết Đoan Ngọ, Trung thu", "status": "illustrative-labelled", "note": "Kiến thức văn hoá phổ thông, hedged 'nhiều'." },
+        { "claim": "50/120/200 đơn; 31/40 đơn mẹ hoặc bà chọn", "status": "illustrative-labelled", "note": "Ghi 'Số liệu minh hoạ' / 'Giả sử (số minh hoạ)'." }
+      ],
+      "strengths": "Nối hai ý hiếm khi đi cùng: lịch âm điều khiển nhịp đơn và bốn vai trong một đơn gia đình; dặn 'đừng đoán vai theo khuôn mẫu giới, hỏi ở vài chục đơn thật' là chuẩn đạo đức dữ liệu tốt; Q5 (tồn kho nhang vs hoa) và Q7 (cách đo ai quyết) là câu đánh giá.",
+      "upgrade": "Nêu tỉ lệ trả lời và lệch mẫu của câu hỏi tuỳ chọn; thêm PHẢN VÍ DỤ/ĐÀO SÂU; thay Q1 bằng câu đọc bảng đơn 30 ngày; nâng Q3 thành tỉ trọng đơn trong 6 ngày đỉnh để ra quyết định nhân sự/kho; rút gọn Q5a."
+    }
+  ],
+  "module_notes": {
+    "progression": "Module đi từ cấu trúc kênh (01) → vùng miền (02) → nông thôn (03) → ba bài mùa Tết (04 lịch gom hàng, 05 quà biếu, 06 mùa trũng) → lịch mùa vụ chung (07) → ngày đôi (08) → thanh toán/nhắn tin (09) → lịch âm và gia đình (10). Khối Tết 04–06 liền mạch và tốt; 07 (lịch mùa vụ chung) nên đứng trước 04 làm khung, rồi Tết là trường hợp đặc biệt; 10 (lịch âm) nên đứng ngay sau 06 thay vì cuối. 09 lạc chủ đề 'bối cảnh Việt Nam về kênh/mùa' và trùng ob05-08.",
+    "overlap": [
+      "ob06-09 (COD/Zalo) trùng nội dung với ob05-08 (COD và bom hàng) — cả hai tính số đơn mất khi bỏ COD; 09 nên tham chiếu và đi sâu vào kênh nhắn tin thay vì lặp.",
+      "ob06-04 Q7 và ob06-06 (so cùng kỳ lệch Tết) cùng dạy một ý; nên để 04 chỉ dẫn sang 06.",
+      "ob06-07 (chỉ số mùa) và ob05-04 (đỉnh mùa tìm kiếm) dùng cùng kỹ thuật phân biệt mùa/xu hướng nhưng không tham chiếu nhau.",
+      "ob06-01 Q7 và ob06-02 Q6 cùng dạy 'kiểm độ phủ/dữ liệu kênh trước khi kết luận về khách'."
+    ],
+    "gaps": [
+      "Chưa có bài về nhà phân phối và chiết khấu nhiều tầng (giá xuất xưởng → NPP → tạp hoá → người mua), dù 01 và 04 đều dựa vào NPP/chủ tạp hoá.",
+      "Chưa có bài về quy định quảng cáo/khuyến mãi tại Việt Nam (đăng ký chương trình khuyến mãi, mức giảm tối đa, nhãn hàng hoá) — ob06-08 Q7b và ob06-02 Q5c chạm vào mà không nguồn.",
+      "Mọi khẳng định về nền tảng (ob06-08) và benchmark (ob06-01 NielsenIQ, ob06-05 NIQ) đều không có `src`; module về bối cảnh Việt Nam cần ít nhất 3 nguồn có ngày kiểm.",
+      "Chưa có bài về đo lường chéo kênh (khách xem online, mua tạp hoá) dù ob06-03 Q7 và ob05-09 Q5 gợi ra."
+    ],
+    "best_lesson": "B:ob06-08",
+    "weakest_lesson": "B:ob06-01"
+  }
+}

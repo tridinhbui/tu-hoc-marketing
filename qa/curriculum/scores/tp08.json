@@ -1,0 +1,208 @@
+{
+  "mod": "tp08",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:tp08-01",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 12, "examples": 8, "pedagogy": 7, "assessment": 6, "data": 2, "clarity": 4 },
+      "total": 60,
+      "bloom_items": ["L2", "L3", "L2", "L4", "L5", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cả bài", "quote": "Phép thử: đưa cho năm người, nếu mỗi người tự nghĩ ra một nội dung mới cùng tinh thần thì đó là ý tưởng", "issue": "Bài không có một con số nào ngoài 'năm người' và không có cách đo big idea có làm việc không (liên tưởng, nhớ đúng hãng theo thời gian); người học không biết khi nào ý tưởng 'sinh được nội dung' nhưng vẫn không bán được.", "fix": "Thêm chỉ số theo dõi: % khách gắn hãng với 'vị của mẹ' trước/sau 6 tháng (số minh hoạ) và nối tới tp06-07 cách đo." },
+        { "sev": "P2", "where": "Q3", "quote": "Vì sao câu này được coi là ý tưởng hơn là khẩu hiệu?", "issue": "Câu L2 nhắc lại ví dụ; đáp án d liệt kê đúng bốn nội dung đã nêu trong ví dụ nên đoán được bằng cách nhớ.", "fix": "Thay bằng câu L4: cho một ý tưởng mới (ngành khác) và 4 nội dung đề xuất, hỏi nội dung nào không cùng tinh thần." },
+        { "sev": "P2", "where": "Q6", "quote": "Big idea và khẩu hiệu nên liên hệ với nhau thế nào trong một chiến dịch?", "issue": "Câu L2 nhắc lại 'Mang theo' ('Tìm ý tưởng trước, viết câu sau').", "fix": "Thay bằng câu L5: hãng đã có khẩu hiệu nổi tiếng 10 năm nhưng chưa có ý tưởng — giữ câu và dựng ý tưởng ngược từ câu, hay bỏ câu; biện hộ." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "Khẩu hiệu gói gọn big idea, không thay được nó.", "issue": "Không có phản ví dụ: khi nào một khẩu hiệu/tài sản ngắn là đủ (hãng nhỏ, ngân sách chỉ đủ một kênh, hàng mua theo thói quen chỉ cần nhắc tên); không có đào sâu nối big idea với chiến lược/định vị (bài 04 mới nói 'đúng chiến lược').", "fix": "Thêm phản ví dụ tiệm bánh một cửa hàng: câu 'Bánh ra lò 6 giờ sáng' là đủ, không cần big idea cả năm; và một câu nối tới định vị." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính. Bài không có số nào để đối chiếu." },
+      "claims": [
+        { "claim": "Sự thật có sức căng: người con lớn lên với vị mẹ nấu, tự pha lại thì không ra vị ấy", "status": "illustrative-unlabelled", "note": "Insight dựng, không ghi là minh hoạ hay lấy từ khách thật." }
+      ],
+      "strengths": "Phép thử 'đưa cho năm người, họ sinh được nội dung mới hay chỉ in lại' là tiêu chí rõ và làm được ngay; Q5 là câu đánh giá bốn câu nền với lời giải nêu đúng vì sao từng câu không sinh được nội dung.",
+      "upgrade": "Để đạt ≥85: (1) thêm cách đo big idea (liên tưởng theo thời gian) với số minh hoạ; (2) thay Q3 và Q6 bằng câu L4/L5 trên tình huống mới; (3) thêm phản ví dụ khi khẩu hiệu là đủ; (4) đào sâu nối với định vị và với tp08-03 (đường băng), tp08-04 (ba câu chấm); (5) bài thực hành có đầu ra: viết ý tưởng + 4 nội dung ở 4 kênh cho một sản phẩm tự chọn, rubric 'đưa 2 người đọc, mỗi người nghĩ thêm được một nội dung'."
+    },
+    {
+      "id": "B:tp08-02",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 13, "examples": 8, "pedagogy": 7, "assessment": 7, "data": 2, "clarity": 4 },
+      "total": 63,
+      "bloom_items": ["L2", "L3", "L4", "L4", "L4", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Team quay lại hỏi khách. Insight: \"Mẹ bỉm ngại cho con mặc đồ trắng đi học vì mỗi vết bẩn là một buổi tối vò tay.\"", "issue": "Không nói hỏi bao nhiêu người, bằng cách nào, và bao nhiêu người nói điều này; insight được trình như kết quả nghiên cứu nhưng không có dấu vết dữ liệu. tp07-03 dạy 'chép 3 câu khách thật' — bài này không áp dụng.", "fix": "Thêm: 'nói chuyện với 12 bà mẹ ở cổng trường, 9 người nhắc tới vò áo trắng buổi tối' (ghi minh hoạ)." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Ý tưởng tốt hiếm khi đến từ việc nghĩ ra hình thức lạ.", "issue": "Không có phản ví dụ: khi nào hình thức đi trước là hợp lý (hãng đã có ý tưởng gốc nhiều năm, chỉ cần chương mới — tp08-03; hoặc bắt trend — tp08-07). Khẳng định 'hiếm khi' không có điều kiện.", "fix": "Thêm một câu: 'khi ý tưởng gốc đã có, brainstorm hình thức là đúng việc; bài này nói về lúc chưa có gốc' và rel tới tp08-03." },
+        { "sev": "P2", "where": "Q7", "quote": "\"Cơn buồn ngủ ba giờ chiều, để quán lên lầu thay bạn\"", "issue": "Đáp án đúng là câu khó hiểu khi đọc lần đầu ('lên lầu thay bạn' nghĩa là quán mang lên tận tầng); câu quảng cáo mẫu vi phạm nguyên tắc rõ ràng của tp07.", "fix": "Sửa thành 'Ba giờ chiều buồn ngủ? Cà phê lên tận tầng trong 15 phút.'" },
+        { "sev": "P2", "where": "Cả bài", "quote": "Brief chỉ ghi: \"Tăng nhận biết, trẻ trung hơn\".", "issue": "Bài không có số nào và không có cách đo insight có đúng không trước khi chi tiền (ví dụ test 2 câu nối với 20 khách).", "fix": "Thêm bước kiểm rẻ: đưa hai câu nối cho 20 bà mẹ, đếm số người nói 'đúng là tôi'." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính; bài không có số." },
+      "claims": [
+        { "claim": "bột giặt có enzyme xử lý vết thức ăn và bùn đất khi giặt máy", "status": "illustrative-unlabelled", "note": "Sự thật sản phẩm dựng cho ví dụ; hợp lý về kỹ thuật." }
+      ],
+      "strengths": "Quy trình ba câu (insight – sự thật sản phẩm – câu nối) cụ thể và dùng được như bộ lọc cho danh sách ý cũ (Q5); Q3 và Q6 buộc phân biệt insight thật với nhận xét hiển nhiên và sự thật sản phẩm cụ thể với lời khen.",
+      "upgrade": "Để đạt ≥85: (1) ghi nguồn và cỡ của insight (bao nhiêu khách, ở đâu); (2) thêm bước kiểm insight rẻ với số; (3) thêm phản ví dụ khi brainstorm hình thức là đúng; (4) sửa câu đáp án Q7 cho rõ; (5) bài thực hành có đầu ra: 3 câu insight từ 3 câu inbox thật + 1 sự thật sản phẩm + 2 câu nối để chọn."
+    },
+    {
+      "id": "B:tp08-03",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 12, "examples": 9, "pedagogy": 7, "assessment": 7, "data": 4, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L4", "L3", "L3", "L2", "L4", "L4", "L4"],
+      "bloom_max": "L4",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "Biti's Hunter với tinh thần \"Đi để trở về\" là ví dụ công khai: nhiều năm, mỗi năm một câu chuyện, cùng một gốc.", "issue": "Thương hiệu thật nêu như dẫn chứng, không src, không năm bắt đầu/kết thúc, không ngày kiểm; nếu chiến dịch đã dừng hoặc đổi, bài sai mà không ai biết.", "fix": "Thêm src (bài báo/kênh chính thức của Biti's, các mùa 2017–20xx) và ngày kiểm; ghi 'theo tư liệu công khai'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Giữ một ý tưởng trong ba năm tiết kiệm 2 lần làm lại nhận diện, tức khoảng 800 triệu đồng, dồn vào phát sóng.", "issue": "Phép tính chỉ đếm chi phí làm nhận diện; bỏ qua chi phí cơ hội nếu ý tưởng cũ đã mòn (doanh số), và không nói dấu hiệu nào cho biết ý tưởng nên dừng. Bài một chiều: luôn giữ.", "fix": "Thêm phản ví dụ: ý tưởng 'Sống chậm' chạy 3 năm, liên tưởng không tăng từ năm 2, thị trường đổi (khách trẻ) — khi đó đổi là đúng; nêu 2 dấu hiệu dừng." },
+        { "sev": "P2", "where": "Q4", "quote": "Phép thử \"chiều kênh\" cho một ý tưởng nghĩa là gì?", "issue": "Câu L1/L2 định nghĩa, đáp án d gần nguyên văn khái niệm.", "fix": "Thay bằng câu L4: cho ý tưởng và 4 kênh, hỏi kênh nào ý tưởng không sống được và vì sao." },
+        { "sev": "P2", "where": "Q3", "quote": "Cách mới tiết kiệm bao nhiêu triệu đồng?", "issue": "Phép tính 3×400 − 400 là số học L2; không dạy đọc số gì mới.", "fix": "Thay bằng calc có ý: tổng ngân sách 3 năm 6 tỉ, phần nhận diện 1,2 tỉ vs 0,4 tỉ — tỉ lệ ngân sách thật sự ra tới khách tăng từ 80% lên bao nhiêu." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3 × 400 − 1 × 400 = 800 ✓. Ví dụ 'khoảng 800 triệu' ✓." },
+      "claims": [
+        { "claim": "Biti's Hunter với tinh thần \"Đi để trở về\": nhiều năm, mỗi năm một câu chuyện, cùng một gốc", "status": "unverified", "note": "Thương hiệu thật, khớp hiểu biết chung về chuỗi chiến dịch Tết nhiều mùa; không src, không ngày kiểm." },
+        { "claim": "Mỗi lần đổi lại tốn khoảng 400 triệu đồng làm bộ nhận diện mới", "status": "illustrative-unlabelled", "note": "Số tình huống." }
+      ],
+      "strengths": "Câu hỏi duyệt 'năm thứ ba kể chương gì, ở kênh nào' là công cụ gọn và dùng được; Q5 và Q6 phân biệt 'team chán' với 'khách chán' và nêu đúng hai dấu hiệu đường băng còn (chương mới, liên tưởng tăng).",
+      "upgrade": "Để đạt ≥85: (1) src và ngày kiểm cho Biti's; (2) thêm phản ví dụ khi nên đổi ý tưởng với dấu hiệu đo được; (3) thay Q3, Q4 bằng câu có ý; (4) thêm đào sâu: cách đo liên tưởng theo năm (nối tp06-07) và đánh đổi giữa nhất quán và mệt mỏi sáng tạo; (5) bài thực hành: bảng 3 năm × 4 kênh cho một ý tưởng."
+    },
+    {
+      "id": "B:tp08-04",
+      "scores": { "accuracy": 11, "depth": 9, "practical": 13, "examples": 9, "pedagogy": 7, "assessment": 6, "data": 4, "clarity": 4 },
+      "total": 63,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L4", "L2", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Khái niệm / Q7", "quote": "Chấm mỗi câu thang 1–5, rồi mới bàn tới cảm xúc. … Tổng 5/15. … Tổng 14/15.", "issue": "Phần đọc dạy chấm và cộng tổng để chọn; Q7 lại nói 'Cộng điểm che mất một câu trượt nặng' và bắt không duyệt ý 5-5-1 (tổng 11/15). Quy tắc 'một câu ≤2 là loại' chỉ xuất hiện trong lời giải quiz, không có trong khái niệm — lời giải mâu thuẫn với cách làm đã dạy.", "fix": "Thêm vào khái niệm: 'mỗi câu là điều kiện cần: câu nào ≤2 thì loại, không cộng bù'; đổi ví dụ từ 'tổng' sang 'điểm thấp nhất' hoặc nêu cả hai." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[45,\"SAI_MAU_SO\"],[180,\"SAI_MAU_SO\"]]", "issue": "Giá trị 45 (= 9/20) không tương ứng lỗi mẫu số nào tự nhiên với 3 tiêu chí × 5 điểm; phản hồi tự động sẽ không khớp lỗi thật.", "fix": "Thay 45 bằng 60/3 = 20 (nhầm chia cho số tiêu chí) hoặc 9 (quên đổi sang %)." },
+        { "sev": "P2", "where": "Q4 / Q6", "quote": "\"Phép thử đổi logo\" dùng để kiểm tra điều gì? · Vì sao \"chú gà vàng\" trên bao bì được chấm 5 điểm gắn thương hiệu?", "issue": "Hai câu L2 nhắc lại khái niệm và ví dụ; Q4 trùng với phép thử thay tên đối thủ ở tp07-09.", "fix": "Thay Q4 bằng câu L4: cho một kịch bản 30 giây, đổi logo sang đối thủ, hỏi cảnh nào còn 'dùng được' và cảnh nào không; thay Q6 bằng câu chấm điểm một ý tưởng mới." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Chấm X: gắn thương hiệu 2 (hãng mì nào cũng đặt vào được), đúng chiến lược 1 (không nói gì về sợi mì), khác biệt 2.", "issue": "Điểm chấm là của một người, không nói ai chấm, mấy người, có khớp nhau không; thang 1–5 không có mô tả mốc (2 là gì, 4 là gì) nên hai người chấm sẽ lệch.", "fix": "Thêm mô tả mốc cho từng tiêu chí (1 = đổi logo vẫn dùng được; 5 = bỏ sản phẩm thì chuyện không kết thúc được) và quy ước 3 người chấm độc lập rồi so." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 3 + 4 + 2 = 9; 9/15 = 60% ✓; 9/5 = 180% ✓; 45 không khớp lỗi tự nhiên (9/20). Ví dụ: 2+1+2 = 5, 5+5+4 = 14 ✓." },
+      "claims": [
+        { "claim": "Khảo sát sau chiến dịch: 60% khách nhớ phim, nhưng chỉ một phần ba trong số đó nói đúng tên ngân hàng", "status": "illustrative-unlabelled", "note": "Q5, số dựng." }
+      ],
+      "strengths": "Ba câu hỏi ngắn, có thứ tự 'chấm trước, cảm xúc sau'; Q5 đọc dữ liệu (60% nhớ, 1/3 đúng tên) để định vị câu yếu, Q7 là câu đánh giá có biện hộ về điều kiện cần.",
+      "upgrade": "Để đạt ≥85: (1) đưa quy tắc điều kiện cần vào khái niệm cho khớp Q7; (2) thêm mô tả mốc thang 1–5 và cách chấm nhiều người; (3) thay Q4, Q6 bằng câu L4; (4) sửa giá trị sai Q3; (5) thêm phản ví dụ: ý tưởng 5-5-5 nhưng không làm được trong ngân sách — nối tp08-08; (6) nối rel tới tp06-05/tp08-05 vì cùng dùng 'gắn thương hiệu'."
+    },
+    {
+      "id": "B:tp08-05",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 12, "examples": 9, "pedagogy": 6, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 64,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L3", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cả bài", "quote": "Đo bằng tỉ lệ gọi đúng tên: trong số người nhớ quảng cáo, bao nhiêu người nói đúng hãng.", "issue": "Bài lặp gần trọn tp06-05 (cùng cơ chế logo ở giây cuối, cùng chỉ số nối tên, cùng 'khách gán cho hãng dẫn đầu', cùng cách sửa đưa tài sản vào đầu). Người học đi theo lộ trình gặp cùng bài hai lần với số khác; không có rel nối hai bài.", "fix": "Hợp nhất với tp06-05 hoặc đổi trọng tâm bài này sang tài sản nhận diện riêng (chọn, đo fame/uniqueness, lặp lại qua chiến dịch) — phần tp06-05 chỉ nhắc." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Khảo sát sau hai tuần trên 500 người trong tệp: 200 người nhớ đã xem video, nhưng chỉ 50 người nói đúng tên hãng", "issue": "Không nói nhiễu mẫu (50/200: ±6 điểm) và không nói 'nói đúng tên' đo có nhắc hay không nhắc (cho danh sách hãng hay để tự nói) — hai cách cho con số rất khác.", "fix": "Thêm cách hỏi ('quảng cáo đó của hãng nào?' không gợi ý) và khoảng dao động." },
+        { "sev": "P2", "where": "Q4", "quote": "Vì sao nhiều người đoán video là của hãng dẫn đầu ngành?", "issue": "Câu L2 nhắc lại khái niệm; đáp án d lặp 'khách tự gán cho hãng lớn'.", "fix": "Thay bằng câu L4: bảng gán nhầm theo hãng (dẫn đầu 60%, hãng B 15%, đúng 25%) — đọc ra điều gì về tài sản nhận diện của hãng mình và của hãng dẫn đầu." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Cách chữa: đưa tài sản nhận diện riêng — màu, nhân vật, âm thanh, hình dạng chai — vào giữa câu chuyện", "issue": "Không có phản ví dụ: hãng mới chưa có tài sản riêng nào được nhận ra thì 'đưa vào' không giúp (chai màu cam chưa ai biết); cần thời gian lặp lại — không nói.", "fix": "Thêm phản ví dụ hãng mới: tiếng bật nắp chưa ai biết, lần đầu chỉ nói tên rõ và lặp; tài sản riêng cần nhiều chiến dịch mới làm việc." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 112/320 = 35% ✓; 112/800 = 14% ✓; 320/800 = 40% (nhầm chỉ số). Ví dụ: 50/200 = 25% ✓." },
+      "claims": [
+        { "claim": "Video đạt 3 triệu lượt xem … 200 người nhớ đã xem video, nhưng chỉ 50 người nói đúng tên hãng", "status": "illustrative-unlabelled", "note": "Tình huống dựng." }
+      ],
+      "strengths": "Q6 là câu đánh giá đúng kiểu người làm nghề: từ chối kết luận khi chưa có số đo kết quả (200 nghìn vs 2 triệu lượt xem); Q7 định nghĩa 'nằm trong câu chuyện' bằng phép thử bỏ sản phẩm.",
+      "upgrade": "Để đạt ≥85: (1) đổi trọng tâm để không trùng tp06-05 (tài sản nhận diện riêng: chọn, đo, lặp); (2) nêu cách hỏi và nhiễu mẫu; (3) thêm phản ví dụ hãng mới chưa có tài sản; (4) thay Q4 bằng câu đọc bảng gán nhầm; (5) bài thực hành: liệt kê 3 tài sản của một hãng, đoán % người nhận ra khi che tên, kế hoạch kiểm với 10 người."
+    },
+    {
+      "id": "B:tp08-06",
+      "scores": { "accuracy": 11, "depth": 10, "practical": 12, "examples": 8, "pedagogy": 7, "assessment": 7, "data": 2, "clarity": 4 },
+      "total": 61,
+      "bloom_items": ["L4", "L3", "L4", "L4", "L2", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Tình huống / Ví dụ", "quote": "Một hãng thuốc nhỏ mắt không kê đơn muốn \"trẻ hoá\" hình ảnh. … giữ phần thông tin sử dụng rõ ràng ở cuối.", "issue": "Bài hướng dẫn làm quảng cáo cho thuốc mà không nhắc điều kiện áp dụng quan trọng nhất của ngành: quảng cáo thuốc tại Việt Nam cần nội dung được cơ quan y tế xác nhận và có câu cảnh báo bắt buộc (theo hiểu biết chung về Luật Quảng cáo và Luật Dược; cần kiểm chứng và dẫn nguồn). Người học áp cách làm 'hài, cú lật là lúc nhỏ thuốc' mà không qua bước này sẽ gặp rủi ro pháp lý thật.", "fix": "Thêm một câu điều kiện: 'với thuốc, kịch bản phải qua xác nhận nội dung quảng cáo và giữ câu cảnh báo bắt buộc; kiểm quy định hiện hành' kèm src và ngày kiểm." },
+        { "sev": "P2", "where": "Cả bài", "quote": "Hài hước giúp quảng cáo được chú ý và dễ chia sẻ, nhưng chỉ khi đúng ba điều.", "issue": "Không có số nào: không có tỉ lệ nhớ đúng hãng, không có kết quả của hãng bị phàn nàn; Q7 nói 'đo nhớ đúng hãng và liên tưởng' nhưng bài không cho ví dụ số.", "fix": "Thêm số minh hoạ trước/sau: nhớ video 48%, nói đúng hãng 30%, liên tưởng 'mỏi mắt màn hình' 22% (gắn nhãn minh hoạ), nối tp06-05/tp08-05." },
+        { "sev": "P2", "where": "Q5", "quote": "\"Cười vào tình huống, không cười vào người\" nghĩa là gì trong thực tế?", "issue": "Câu L2 nhắc lại khái niệm; đáp án a là phương án duy nhất có cấu trúc đối lập 'đùa về … không về …' giống câu gốc.", "fix": "Thay bằng câu L4: cho 3 kịch bản ngắn, hỏi kịch bản nào cười vào người (có nhóm khách thấy bị nhắm) và vì sao." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "chuyện khách sợ thật sự, như bệnh nặng, thì hài dễ bị đọc là coi nhẹ", "issue": "Không có phản ví dụ chiều ngược: có chiến dịch sức khoẻ dùng hài thành công khi mục tiêu là phá ngại ngùng (tầm soát, sức khoẻ sinh sản); 'nỗi sợ thật thì không hài' là quy tắc quá rộng.", "fix": "Thêm phản ví dụ và điều kiện: hài hợp khi rào cản là ngại nói, không hợp khi rào cản là sợ mất mát." }
+      ],
+      "calc_check": { "n": 0, "ok": 0, "notes": "Không có câu tính; bài không có số." },
+      "claims": [
+        { "claim": "một hãng khác trong ngành vừa bị phàn nàn vì chế giễu người đeo kính dày", "status": "illustrative-unlabelled", "note": "Tình huống dựng, không tên." }
+      ],
+      "strengths": "Ba điều kiện (cười vào tình huống, trò đùa dẫn tới sản phẩm, hợp mức lo của ngành) đủ cụ thể để chấm một kịch bản; Q1, Q3, Q4, Q6 đều là câu áp điều kiện lên tình huống mới, không nhắc lại bài.",
+      "upgrade": "Để đạt ≥85: (1) thêm điều kiện pháp lý quảng cáo thuốc với src; (2) thêm số minh hoạ đo kết quả; (3) thay Q5 bằng câu L4; (4) thêm phản ví dụ hài trong y tế để phá ngại ngùng; (5) đào sâu: cách kiểm trò đùa trước khi chạy (đưa cho 10 người thuộc nhóm có thể bị nhắm) với tiêu chí dừng."
+    },
+    {
+      "id": "B:tp08-07",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 14, "examples": 9, "pedagogy": 7, "assessment": 7, "data": 3, "clarity": 4 },
+      "total": 66,
+      "bloom_items": ["L2", "L3", "L3", "L4", "L5", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P2", "where": "Khái niệm", "quote": "dùng hình ảnh, âm nhạc có chủ sở hữu", "issue": "Nêu rủi ro bản quyền đúng hướng nhưng không nói cơ sở (quyền tác giả, dùng cho mục đích thương mại) và không phân biệt với nhạc có sẵn trong thư viện thương mại của nền tảng — người học không biết ranh giới.", "fix": "Thêm một câu: 'nhạc trong thư viện thương mại của nền tảng dùng được theo điều khoản; nhạc/clip ngoài thư viện cần giấy phép' với src Luật Sở hữu trí tuệ và ngày kiểm." },
+        { "sev": "P2", "where": "Q3", "quote": "Giả sử một trend sống khoảng 72 giờ … Khi bài lên, trend còn bao nhiêu giờ?", "issue": "Phép trừ L2 (72 − 20); đã gắn nhãn giả định (tốt) nhưng không dạy đọc số gì: 52 giờ còn lại là nhiều hay ít không được diễn giải.", "fix": "Đổi thành calc có ý: với lượng tương tác giảm một nửa mỗi 24 giờ, bài lên ở giờ 20 bắt được bao nhiêu % tổng chú ý so với lên ở giờ 4." },
+        { "sev": "P2", "where": "Q6", "quote": "Vì sao cần danh sách \"chủ đề không đụng tới\" viết sẵn từ trước?", "issue": "Câu L2 nhắc lại khái niệm; ba phương án sai đều mang giọng tiêu cực ('đổ lỗi', 'gây áp lực', 'không cần suy nghĩ') nên đáp án d đoán được bằng giọng.", "fix": "Thay bằng câu L6: viết 5 mục cho danh sách của một chuỗi pizza và một người duyệt — chọn mục nào, vì sao." },
+        { "sev": "P2", "where": "Cấu trúc", "quote": "Trend cho độ chú ý rẻ, nhưng chỉ đáng làm khi qua được ba câu hỏi.", "issue": "Không có phản ví dụ khi đứng ngoài trend lại là lợi thế (hãng cao cấp, hãng B2B) và không có số về 'độ chú ý rẻ' (tương tác/chi phí so với bài thường).", "fix": "Thêm phản ví dụ hãng đồng hồ cao cấp không bắt trend và số minh hoạ tương tác bài trend vs bài thường." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 10 + 4 + 6 = 20; 72 − 20 = 52 ✓; 72 − 10 = 62, 72 − 14 = 58 ✓." },
+      "claims": [
+        { "claim": "đoạn phim có chủ sở hữu, nên chỉ dùng câu chữ tự viết lại, không dùng cảnh phim", "status": "unverified", "note": "Nguyên tắc quyền tác giả đúng hướng theo hiểu biết chung; không src." },
+        { "claim": "một trend sống khoảng 72 giờ (con số giả định cho bài toán; mỗi trend một khác)", "status": "illustrative-labelled", "note": "" }
+      ],
+      "strengths": "Giải pháp tổ chức cụ thể (làn duyệt nhanh 4 giờ, danh sách kiểm tra, một người có quyền) thay cho lời khuyên 'nhanh hơn'; Q5 là câu đánh giá đạo đức có biện hộ, Q7 nối trend về ý tưởng gốc (liên kết với tp08-01/03).",
+      "upgrade": "Để đạt ≥85: (1) làm rõ ranh giới bản quyền với src; (2) thay Q3 bằng calc về chú ý giảm theo giờ và Q6 bằng câu thiết kế danh sách; (3) thêm phản ví dụ đứng ngoài trend; (4) thêm số minh hoạ tương tác/chi phí; (5) bài thực hành có đầu ra: danh sách kiểm tra 6 mục + quy trình làn nhanh (ai, mấy giờ) cho một hãng tự chọn."
+    },
+    {
+      "id": "B:tp08-08",
+      "scores": { "accuracy": 12, "depth": 9, "practical": 14, "examples": 10, "pedagogy": 7, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L4", "L3", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ / Q7", "quote": "A: … — tổng 8. B: … — tổng 19. C: … — tổng 10. Chọn B", "issue": "Ví dụ chọn theo tổng; Q7 nói 'đúng brief là điều kiện cần; trượt câu này thì tổng cao cũng không cứu'. Trong ví dụ B thắng mọi tiêu chí nên không lộ mâu thuẫn, nhưng quy tắc điều kiện cần không nằm trong khái niệm (giống lỗi tp08-04).", "fix": "Thêm vào khái niệm: 'đúng brief và ngân sách là điều kiện cần (≤2 thì loại); hai tiêu chí còn lại mới cộng'." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "ngân sách 1 (một phim đã ngốn khoảng 1,5 tỷ)", "issue": "1,5 tỷ cho phim hành động là số tình huống không gắn nhãn; người học sẽ coi đó là mức giá tham chiếu.", "fix": "Ghi 'báo giá minh hoạ' hoặc 'theo báo giá agency trong tình huống'." },
+        { "sev": "P2", "where": "Q4", "quote": "Vì sao phải viết tiêu chí trước khi xem ý tưởng, không phải sau?", "issue": "Câu L2 nhắc lại 'Lỗi hay gặp' thứ hai gần nguyên văn.", "fix": "Thay bằng câu L4: hai người chấm cùng ba ý tưởng lệch nhau 6 điểm ở 'gắn hãng' — nguyên nhân có thể và cách sửa thang." },
+        { "sev": "P2", "where": "Cả bài", "quote": "B: đúng brief 5, gắn hãng 4, kéo dài 5 (mỗi tuần một tình huống mới), ngân sách 5", "issue": "Trùng phương pháp với tp08-04 (chấm thang 1–5, cộng tổng) chỉ đổi tiêu chí; không có số về kết quả brief (bao nhiêu nam 22–30 thử mùi mới) để biết B có 'làm được việc' không.", "fix": "Thêm chỉ số đích từ brief (ví dụ 50.000 người thử trong 6 tháng, số minh hoạ) và ước tính B đạt được nhờ cơ chế gì; nối rel tới tp08-04 và nói rõ bài này thêm hai tiêu chí ngân sách và đường băng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 2 − 1,5 = 0,5; 0,5/2 = 25% ✓; 0,5/1,5 = 33,3% ✓; 75% ✓. Ví dụ: 2+3+2+1 = 8, 5+4+5+5 = 19, 3+2+3+2 = 10 ✓." },
+      "claims": [
+        { "claim": "một phim đã ngốn khoảng 1,5 tỷ", "status": "illustrative-unlabelled", "note": "Số tình huống, không ghi là minh hoạ." }
+      ],
+      "strengths": "Bước 'xin 15 phút chấm theo tiêu chí viết từ brief' (Q2) là cách làm thực tế trong phòng họp; nguyên tắc mượn điểm mạnh của ý thua (Q6) tránh được tư duy thắng–thua.",
+      "upgrade": "Để đạt ≥85: (1) đưa điều kiện cần vào khái niệm; (2) gắn nhãn số 1,5 tỷ; (3) thêm chỉ số đích từ brief và ước tính; (4) thay Q4 bằng câu về độ tin cậy giữa người chấm; (5) phân công rõ với tp08-04 (bài 04: ba câu sáng tạo; bài 08: thêm ngân sách, đường băng, quy trình họp) và thêm phản ví dụ khi brief sai và cần sửa brief trước khi chấm."
+    },
+    {
+      "id": "B:tp08-09",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 14, "examples": 9, "pedagogy": 7, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L2", "L3", "L3", "L2", "L4", "L5", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Bạn đưa kết quả nói chuyện nhanh với 8 bà mẹ: phần lớn nhớ cảnh con lấm lem, ít ai nhớ cảnh so sánh áo.", "issue": "Dùng 8 người làm 'bằng chứng' trước sếp; Q3 có ghi 'tín hiệu định hướng, chưa phải kết luận thống kê' nhưng ví dụ chính không nói, và không nói cách thu (cho xem bản phác nào trước — thứ tự ảnh hưởng nhớ).", "fix": "Thêm vào ví dụ: 'chỉ 8 người, đủ để nói hướng, không đủ để nói chắc; đề xuất kiểm với 30 người trước khi quay' và nêu thứ tự cho xem luân phiên." },
+        { "sev": "P2", "where": "Q4", "quote": "Vì sao nên \"đưa về brief\" khi bảo vệ ý tưởng?", "issue": "Câu L2 nhắc lại bước 2 của khái niệm.", "fix": "Thay bằng câu L4: brief ghi 'trẻ trung, khác đối thủ' nhưng sếp nói 'khách mới tin' — nỗi lo này có nằm trong brief không, và nếu không thì xử lý thế nào." },
+        { "sev": "P2", "where": "Khái niệm", "quote": "Đề xuất cách giải nỗi lo mà giữ gốc: tích hợp điều sếp cần vào ý tưởng, thay vì đổi ý tưởng.", "issue": "Không có phản ví dụ khi sếp đúng và ý tưởng phải bỏ (Q6 chạm tới nhưng khái niệm một chiều 'giữ gốc'); không nói giới hạn thời gian/quyền quyết định.", "fix": "Thêm phản ví dụ: kiểm với khách nông thôn cho thấy 'đồ trắng' không chạm — đổi gốc là đúng; nêu tiêu chí khi nào buông." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "mục tiêu là trẻ trung hơn và khác đối thủ, mà cảnh áo trước – sau thì hãng nào cũng có", "issue": "Lý lẽ dựa trên 'hãng nào cũng có' nhưng không có bằng chứng (bao nhiêu quảng cáo bột giặt gần đây có cảnh trước–sau); bài dạy bảo vệ bằng bằng chứng mà chính lý lẽ này chưa có.", "fix": "Thêm: 'xem 10 quảng cáo bột giặt gần nhất, 8 có cảnh trước–sau' (ghi minh hoạ)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 6/8 = 75% ✓; 6/2 = 300% ✓; 25% ✓. Lời giải nêu đúng giới hạn mẫu 8." },
+      "claims": [
+        { "claim": "kết quả nói chuyện nhanh với 8 bà mẹ: phần lớn nhớ cảnh con lấm lem", "status": "illustrative-unlabelled", "note": "Tình huống dựng; Q3 có cảnh báo mẫu nhỏ, ví dụ chính không." }
+      ],
+      "strengths": "Ba bước (hỏi nỗi lo, đưa về brief và bằng chứng, giải nỗi lo mà giữ gốc) dùng được ngay trong 5 phút; Q6 là câu đánh giá hiếm: dạy nhận dữ kiện mới từ sếp thay vì cố thủ.",
+      "upgrade": "Để đạt ≥85: (1) đưa giới hạn mẫu 8 và cách thu vào ví dụ; (2) thêm bằng chứng cho 'hãng nào cũng có'; (3) thêm phản ví dụ khi phải bỏ ý tưởng với tiêu chí; (4) thay Q4 bằng câu L4; (5) bài thực hành có đầu ra: bảng 3 nỗi lo dự đoán × bằng chứng nhỏ mang theo cho một ý tưởng tự chọn; nối rel tới tp08-02 (cùng tình huống bột giặt) để người học thấy chuỗi."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý về mạch: 01 big idea là gì → 02 tìm từ insight → 03 kéo dài → 04 chấm ba câu → 05 gắn tên → 06 hài → 07 trend → 08 chọn giữa nhiều ý → 09 bảo vệ. Chuỗi bột giặt (02 → 09) là sợi nối tốt nhưng không có rel. Điểm yếu cấu trúc: cả 9 bài đều không có phần phản ví dụ và đào sâu (khác tp06/tp07 có 4–5 bài đủ), nên độ sâu đồng loạt ở mức 'có cơ chế, không có điều kiện làm nó sai'. Ba bài (01, 02, 06) không có một con số nào; module về sáng tạo nhưng không dạy đo sáng tạo có làm việc không ngoài 'tỉ lệ gọi đúng tên' ở 05.",
+    "overlap": [
+      "tp08-05 lặp gần trọn tp06-05 (nhớ quảng cáo nhưng không nhớ hãng, cùng chỉ số, cùng cách sửa).",
+      "tp08-04 và tp08-08 cùng phương pháp chấm thang 1–5 cộng tổng; tp08-04 Q4 (đổi logo) trùng tp07-09 (thay tên đối thủ).",
+      "tp08-01 và tp08-03 cùng ý 'ý tưởng sinh nhiều nội dung theo năm/kênh'; tp08-07 Q7 lặp lại ý này lần thứ ba.",
+      "tp08-04 Q5 (ngân hàng: nhớ phim nhưng không nhớ tên) là tình huống của tp08-05 và tp06-05."
+    ],
+    "gaps": [
+      "Không có bài về brief sáng tạo (viết brief cho agency/team: mục tiêu, khách, điều cần nhớ, bằng chứng, ràng buộc) dù 02, 08, 09 đều nói 'brief' và đổ lỗi cho brief kém.",
+      "Không có bài đo hiệu quả sáng tạo trước khi chạy (pre-test: cho xem, hỏi nhớ gì, của hãng nào, muốn làm gì) ngoài vài câu rải rác; không nối tới tp06-07.",
+      "Thiếu điều kiện pháp lý và đạo đức cho ngành có quy định (thuốc ở 06, bản quyền ở 07 chỉ nhắc) với nguồn.",
+      "Không bài nào có src; thương hiệu thật duy nhất (Biti's ở 03) chưa nguồn; không có case công khai có số nào trong cả module.",
+      "Thiếu đánh đổi giữa nhất quán (03) và mới mẻ (07): khi nào đường băng dài thành mòn, dấu hiệu đo được."
+    ],
+    "best_lesson": "B:tp08-09",
+    "weakest_lesson": "B:tp08-01"
+  }
+}

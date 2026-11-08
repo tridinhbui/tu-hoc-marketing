@@ -1,0 +1,728 @@
+{
+  "mod": "kn03",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:kn03-01",
+      "scores": {
+        "accuracy": 11,
+        "depth": 9,
+        "practical": 13,
+        "examples": 7,
+        "pedagogy": 7,
+        "assessment": 6,
+        "data": 5,
+        "clarity": 4
+      },
+      "total": 62,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L4",
+        "L2",
+        "L3"
+      ],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Q1/Q6",
+          "quote": "khó vượt ngưỡng đơn đều để thuật toán chú ý",
+          "issue": "Khẳng định về cách thuật toán sàn vận hành (\"ngưỡng đơn đều\", \"năng lực của mình được thuật toán thưởng\") nêu như sự thật, không nguồn, không gắn nhãn. Bài thuộc lớp fast (so sánh Shopee/Lazada/TikTok Shop) nhưng không có src, ngày kiểm hay câu \"nếu màn hình khác, tin trang chính thức\".",
+          "fix": "Hạ thành \"theo quan sát của người bán\" hoặc thêm src trung tâm người bán của sàn với ngày kiểm."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "mục tiêu 5 đơn/ngày trong 60 ngày",
+          "issue": "Con số mục tiêu không có cơ sở (vì sao 5, không phải 3 hay 10?); ví dụ gần như không có số tự khớp ngoài 30/3 = 10 triệu; không ước chi phí để đạt 5 đơn/ngày với 30 triệu (Q3 tính 15.000 lượt xem nhưng không nối với giá mỗi lượt).",
+          "fix": "Nối Q3 với chi phí: 15.000 lượt xem × giá click giả định → có vừa 30 triệu không; đặt mục tiêu từ đó."
+        },
+        {
+          "sev": "P2",
+          "where": "Q5",
+          "quote": "Tăng gấp đôi ngân sách ở sàn cũ trước, sàn mới để sang năm",
+          "issue": "Phương án a bênh được một phần theo kn01-10 (nâng theo bậc cái đang chạy); lời giải tự nhận \"Có thể tăng dần\". Chữ \"gấp đôi\" và \"để sang năm\" là thứ làm a sai, không phải logic.",
+          "fix": "Viết a thành \"Tăng 30% ngân sách ở sàn cũ, đo lại rồi tính\" và đổi đáp án/stem cho rõ mục tiêu là mở kênh thứ hai."
+        },
+        {
+          "sev": "P2",
+          "where": "Toàn bài",
+          "quote": "Sàn thiên về tìm kiếm... Sàn thiên về khám phá",
+          "issue": "Không có phản ví dụ/đào sâu; không nói sàn thật đều lai hai kiểu (sàn tìm kiếm có live/video, sàn khám phá có ô tìm kiếm) nên khung hai cực là đơn giản hoá.",
+          "fix": "Thêm câu \"mỗi sàn lai cả hai, khác ở trọng số\" và phản ví dụ shop có video nhưng sản phẩm khách mua theo giá (sàn tìm kiếm vẫn thắng)."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 5×60 = 300 đơn; 300/2% = 15.000 ✓. Sai 250 = 5/2% (quên nhân 60 ngày) nhưng nhãn ghi QUEN_TI_LE_CHUYEN_DOI — nhãn sai (P2 nhỏ)."
+      },
+      "claims": [
+        {
+          "claim": "Shopee, Lazada, TikTok Shop (tên sàn thật)",
+          "status": "illustrative-labelled",
+          "note": "Chỉ nêu tên trong lời khuyên của bạn bè, không gắn số."
+        },
+        {
+          "claim": "Ngưỡng đơn đều để thuật toán chú ý; hỗ trợ shop mới thường ngắn và nhỏ",
+          "status": "unverified",
+          "note": "Khẳng định về cơ chế sàn, không nguồn."
+        },
+        {
+          "claim": "Khách thường mua trong một sàn, ít đi kiểm tra shop ở sàn khác",
+          "status": "unverified",
+          "note": "Hành vi nêu như sự thật."
+        }
+      ],
+      "strengths": "Nguyên tắc \"sàn đầu tiên là sàn khớp năng lực đang có\" rõ và chống được lỗi chia mỏng; Q2/Q4/Q7 đều là tình huống quyết định.",
+      "upgrade": "Thêm src và ngày kiểm cho mọi khẳng định về sàn (fast). Đưa số vào ví dụ: chi phí mỗi lượt xem từ khoá giả định, ngân sách 60 ngày, số đơn hoà vốn với lãi/đơn của xà phòng. Thêm phản ví dụ và đào sâu (sàn lai, chi phí vận hành mỗi sàn: người trả lời, đóng gói, đối soát). Thay Q6 (L2) bằng câu đọc bảng năng lực × sàn."
+    },
+    {
+      "id": "B:kn03-02",
+      "scores": {
+        "accuracy": 13,
+        "depth": 9,
+        "practical": 16,
+        "examples": 12,
+        "pedagogy": 7,
+        "assessment": 6,
+        "data": 9,
+        "clarity": 4
+      },
+      "total": 76,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L3",
+        "L4",
+        "L2"
+      ],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Khái niệm",
+          "quote": "từ 1/7/2025 sàn có chức năng thanh toán còn khấu trừ thuế trên doanh thu trước khi chuyển tiền (Nghị định 117/2025/NĐ-CP)",
+          "issue": "Khẳng định luật cụ thể (số hiệu, ngày hiệu lực) thuộc lớp fast nhưng bài không có `src` với ngày kiểm. Nội dung khớp hiểu biết của người chấm nhưng chưa xác minh trong bước này; bài đã khuyên \"hỏi kế toán hoặc pháp chế\" là tốt.",
+          "fix": "Thêm src (văn bản gốc trên cổng pháp luật) với ngày kiểm và câu \"nếu quy định đổi, tin văn bản mới nhất\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Q7",
+          "quote": "Vì sao nên tính phí phần trăm trên tiền khách trả sau voucher, không trên giá niêm yết (theo giả định của bài)?",
+          "issue": "Câu hỏi tự trả lời bằng chính giả định của bài (L2); không kiểm được gì ngoài việc đọc lại.",
+          "fix": "Thay bằng câu đọc bảng đối soát: cho 3 đơn với voucher sàn tài trợ / voucher shop / không voucher, hỏi đơn nào phí tính trên số nào."
+        },
+        {
+          "sev": "P2",
+          "where": "Q3",
+          "quote": "[79800,\"GIAM_GIA_QUEN_BIEN\"]",
+          "issue": "79.800 = quên trừ voucher nhưng vẫn tính phí trên 180.000 — tổ hợp lỗi không nhất quán; nhãn khó hiểu.",
+          "fix": "Đổi thành 77.000 (quên voucher, phí trên 200.000) với nhãn QUEN_VOUCHER."
+        },
+        {
+          "sev": "P2",
+          "where": "Toàn bài",
+          "quote": "Tỉ lệ phí trong bài này là minh hoạ",
+          "issue": "Không có phản ví dụ/đào sâu: thiếu trường hợp voucher do sàn tài trợ (không trừ vào shop), phí trần/tối đa mỗi đơn, hoàn tiền khi đơn hoàn.",
+          "fix": "Thêm 3 biến thể ngắn và nối sang kn03-07 (đơn hoàn)."
+        }
+      ],
+      "calc_check": {
+        "n": 3,
+        "ok": 3,
+        "notes": "Q3: 180.000 − 25.200 − 90.000 − 5.000 = 59.800 ✓ (= 54% của 110.000 ✓; 600×59.800 = 35,88 triệu ✓). Q4: 160.000 − 22.400 − 95.000 = 42.600 ✓. Q5: 35.880.000/42.600 = 842,3 → 843 ✓ (+40,5%)."
+      },
+      "claims": [
+        {
+          "claim": "Phí sàn 10% + phí thanh toán 4% tính trên tiền khách trả",
+          "status": "illustrative-labelled",
+          "note": "\"Giả định\" và có câu lấy biểu phí từ trang sàn."
+        },
+        {
+          "claim": "Nghị định 117/2025/NĐ-CP, sàn khấu trừ thuế từ 1/7/2025",
+          "status": "unverified",
+          "note": "Không tra web theo quy trình; cần src."
+        }
+      ],
+      "strengths": "Dòng tính một mạch (giá − voucher − phí − giá vốn − đóng gói) và câu Q5 \"cần bao nhiêu đơn để hoà khi tăng voucher\" là bài toán thật của người bán sàn; bài gắn nhãn giả định và chỉ dẫn lấy biểu phí thật.",
+      "upgrade": "Thêm src cho nghị định (P1). Thêm phản ví dụ (voucher sàn tài trợ) và đào sâu (phí trần, hoàn tiền phí khi đơn hoàn, thuế). Thay Q7 bằng câu đọc bảng đối soát thật. Thêm bảng 3 kịch bản voucher (0 / 20k / 40k) với lãi/đơn và số đơn hoà để nhìn thấy độ nhạy."
+    },
+    {
+      "id": "B:kn03-03",
+      "scores": {
+        "accuracy": 14,
+        "depth": 13,
+        "practical": 16,
+        "examples": 12,
+        "pedagogy": 8,
+        "assessment": 7,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 82,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L2",
+        "L4",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Giả sử click trong sàn 1.500đ, tỉ lệ chuyển đổi 3% → 50.000đ/đơn. Click Facebook 800đ, tỉ lệ chuyển đổi 0,8% → 100.000đ/đơn",
+          "issue": "Kết luận phụ thuộc hoàn toàn vào tỉ số chuyển đổi 3,75 lần được giả định; không có độ nhạy (ở 1,5% Facebook ra 53.000đ/đơn, gần ngang sàn).",
+          "fix": "Thêm một dòng: \"Facebook hoà với sàn khi tỉ lệ chuyển đổi ≥ 1,6%\" và cách đo tỉ lệ thật (UTM/mã)."
+        },
+        {
+          "sev": "P2",
+          "where": "Q5",
+          "quote": "ROAS 5 là 5 đồng doanh thu, chưa trừ giá vốn, phí và voucher",
+          "issue": "Câu nhận lại định nghĩa (L2); Q1 cũng L2.",
+          "fix": "Đổi Q5 thành tính: ROAS 5, biên đóng góp trước quảng cáo 40% → lãi còn bao nhiêu trên 1 đồng quảng cáo (5×0,4 − 1 = 1)."
+        },
+        {
+          "sev": "P2",
+          "where": "Tình huống",
+          "quote": "\"Facebook rẻ, 800đ một click\"",
+          "issue": "Giá click của nền tảng thật đặt trong lời nhân viên, không gắn nhãn minh hoạ ở tình huống (ví dụ mới ghi \"Giả sử\").",
+          "fix": "Thêm \"(số minh hoạ)\" ngay tình huống."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 1.500/3% = 50.000 ✓. Q4: 800/0,8% = 100.000; 120.000 − 100.000 = 20.000 ✓. Q7: 2.400/3% = 80.000; 120.000 − 80.000 = 40.000 ✓."
+      },
+      "claims": [
+        {
+          "claim": "Facebook 800đ/click, tìm kiếm trong sàn 1.500đ/click, chuyển đổi 3% vs 0,8%",
+          "status": "illustrative-labelled",
+          "note": "\"Giả sử\" trong ví dụ; tình huống chưa gắn nhãn."
+        },
+        {
+          "claim": "ROAS = doanh thu ÷ chi quảng cáo",
+          "status": "verified",
+          "note": "Định nghĩa chuẩn."
+        }
+      ],
+      "strengths": "Cơ chế tử số/mẫu số (giá click vs tỉ lệ chuyển đổi) và việc đặt chi phí/đơn cạnh lãi đóng góp được dạy rõ; phản ví dụ mẫu mới chưa ai tìm cùng thước đo thay thế (lượt tìm tên mẫu) là tư duy gieo–gặt đúng nghề; Q6–Q7 chẩn đoán từ số.",
+      "upgrade": "Thêm độ nhạy và ngưỡng hoà của tỉ lệ chuyển đổi. Gắn nhãn ở tình huống. Thay Q1/Q5 (L2) bằng câu tính ROAS → lãi và câu đọc bảng 2 kênh × 4 tuần (click, đơn, lượt tìm tên mẫu). Thêm src cho cách đo lượt tìm tên trong công cụ của sàn (fast) hoặc nói \"tên màn hình có thể khác\"."
+    },
+    {
+      "id": "B:kn03-04",
+      "scores": {
+        "accuracy": 13,
+        "depth": 10,
+        "practical": 15,
+        "examples": 10,
+        "pedagogy": 7,
+        "assessment": 8,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 74,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L4",
+        "L4",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P1",
+          "where": "Khái niệm",
+          "quote": "Mỗi sàn có thuật toán riêng và không công bố chi tiết, nhưng logic chung dễ đoán",
+          "issue": "Bài về thuật toán xếp hạng (lớp fast) không có src/ngày kiểm hay câu \"nếu màn hình khác, tin trang chính thức\" dù đã hedging tốt; các tín hiệu liệt kê (tỉ lệ bấm, giao đúng hạn, đánh giá) nêu như sự thật chung.",
+          "fix": "Thêm src trang hướng dẫn người bán của một sàn về tiêu chí hiển thị, ngày kiểm, và câu nhắc kiểm lại."
+        },
+        {
+          "sev": "P1",
+          "where": "Q7",
+          "quote": "Chi phí mua đơn ảo luôn đắt hơn chạy quảng cáo tìm kiếm nên chắc chắn lỗ",
+          "issue": "Phương án sai a và c đều dùng từ tuyệt đối (\"luôn\", \"chắc chắn\"), đáp án đúng d dài nhất và ôn hoà → đoán được bằng hình thức.",
+          "fix": "Viết a/c ôn hoà hơn (vd. \"Đơn ảo thường đắt hơn quảng cáo từ khoá nên khó có lãi\") và rút gọn d."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Tỉ lệ chuyển đổi 4 ÷ 400 = 1%, trong khi đối thủ 18 ÷ 600 = 3%",
+          "issue": "Lượt xem của Lan \"đa số từ link Lan tự chia sẻ\", của đối thủ từ tìm kiếm — hai nguồn traffic khác nhau nên 1% vs 3% không so được trực tiếp; bài nêu dữ kiện nhưng không rút nhận xét này.",
+          "fix": "Thêm câu: \"so theo nguồn: tỉ lệ chuyển đổi từ tìm kiếm của Lan là bao nhiêu?\" và nêu cách xem theo nguồn trong công cụ sàn."
+        },
+        {
+          "sev": "P2",
+          "where": "Toàn bài",
+          "quote": "Giá rẻ chỉ giúp khi nó làm tăng các tín hiệu hiệu quả đó",
+          "issue": "Không có phản ví dụ/đào sâu (vd. từ khoá khớp tốt nhưng sản phẩm không có nhu cầu; đổi tiêu đề làm mất hạng cũ tạm thời).",
+          "fix": "Thêm phản ví dụ và nối kn03-03 (quảng cáo từ khoá mua tín hiệu hiệu quả ban đầu)."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 4/400 = 1% ✓. Q4: (8−4)×30 = 120 ✓. Ví dụ: 18/600 = 3% ✓."
+      },
+      "claims": [
+        {
+          "claim": "Sàn xếp hạng theo liên quan (tiêu đề, danh mục) và hiệu quả (tỉ lệ bấm, chuyển đổi, đơn gần đây, đánh giá, giao đúng hạn)",
+          "status": "unverified",
+          "note": "Hedging \"không công bố chi tiết\", nhưng không src."
+        },
+        {
+          "claim": "Sàn thường có chế tài với gian lận đơn hàng",
+          "status": "unverified",
+          "note": "Hợp lý, không nguồn."
+        }
+      ],
+      "strengths": "Hai nhóm tín hiệu (liên quan · hiệu quả) cho một việc làm ngay (viết lại tiêu đề theo công thức, thêm ảnh chứng minh, nhắm 2%); Q5–Q7 là tình huống mới và câu đánh giá rủi ro có biện hộ.",
+      "upgrade": "Thêm src và ngày kiểm (fast). Sửa hình thức phương án Q7. Tách tỉ lệ chuyển đổi theo nguồn traffic trong ví dụ. Thêm phản ví dụ/đào sâu. Thêm bảng 2 sản phẩm × (lượt xem theo nguồn · đơn · CVR · đánh giá · giao đúng hạn) để có câu đọc bảng L4."
+    },
+    {
+      "id": "B:kn03-05",
+      "scores": {
+        "accuracy": 13,
+        "depth": 10,
+        "practical": 15,
+        "examples": 10,
+        "pedagogy": 7,
+        "assessment": 7,
+        "data": 6,
+        "clarity": 4
+      },
+      "total": 72,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L3",
+        "L2",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Giả sử (số minh hoạ) 150 lượt vào lũy kế vẫn vậy, nhưng lúc nào cũng có khoảng 25 người xem cùng lúc, và 8% lượt vào mua: 12 đơn, gấp 4 lần buổi thử",
+          "issue": "So 3 đơn với 12 đơn trên 150 lượt vào là mẫu rất nhỏ; không nói độ chắc, và 8% là giả định không có khoảng tham chiếu.",
+          "fix": "Thêm câu \"với 150 lượt vào, chênh vài đơn có thể là ngẫu nhiên; cần 3–4 phiên để tin xu hướng\"."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "Đo bằng ba số: người xem đồng thời, thời gian xem trung bình, tỉ lệ mua trên lượt vào",
+          "issue": "Không nói lấy ba số này ở đâu (bảng thống kê sau phiên của sàn) hay mức nào là tốt/xấu cho shop nhỏ; bài không có đào sâu/phản ví dụ (vd. sản phẩm giá cao cần vòng dài hơn, hoặc live không hợp sản phẩm cần tư vấn kỹ).",
+          "fix": "Thêm đào sâu về nguồn số và phản ví dụ sản phẩm không hợp vòng ngắn."
+        },
+        {
+          "sev": "P2",
+          "where": "Q6",
+          "quote": "Vì sàn tính phí thấp hơn cho đơn phát sinh trong phiên live",
+          "issue": "Phương án sai bác bằng \"không có căn cứ trong bài\" — nhưng một số sàn có từng ưu đãi phí cho live; nói chung chung có thể sai theo thời kỳ. Câu L2.",
+          "fix": "Đổi phương án sai sang ý khác không phụ thuộc chính sách sàn."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 1.200.000/120.000 = 10 đơn; 10/4% = 250 lượt ✓. Ví dụ: 150×8% = 12 ✓; 12/3 = 4 lần ✓."
+      },
+      "claims": [
+        {
+          "claim": "Vòng kịch bản 10–15 phút",
+          "status": "illustrative-labelled",
+          "note": "\"(gợi ý thực hành, tuỳ sản phẩm)\"."
+        },
+        {
+          "claim": "150 lượt vào, 8–10 người ở lại, 3 đơn → 25 đồng thời, 8%, 12 đơn",
+          "status": "illustrative-labelled",
+          "note": "\"(số minh hoạ)\"."
+        }
+      ],
+      "strengths": "Cơ chế \"người vào ra liên tục → vòng ngắn lặp lại\" giải thích đúng vì sao 150 lượt vào chỉ còn 8–10 người; Q7 là câu chẩn đoán từ dữ liệu ba phiên (khán giả lặp lại) rất tốt; áp dụng là viết kịch bản 12 phút — đầu ra cụ thể.",
+      "upgrade": "Thêm nguồn số và ngưỡng tham chiếu cho ba chỉ số; nêu mẫu nhỏ. Thêm phản ví dụ/đào sâu. Thêm phép tính kho và lãi: 12 đơn × combo 99.000đ − giá vốn − phí = lãi phiên, so với 2 giờ × 2 người. Thay Q6 bằng câu đọc bảng 3 phiên (lượt vào, đồng thời, thời gian xem, đơn) hỏi phiên nào hỏng ở khâu giữ chân vs khâu chốt."
+    },
+    {
+      "id": "B:kn03-06",
+      "scores": {
+        "accuracy": 14,
+        "depth": 13,
+        "practical": 16,
+        "examples": 12,
+        "pedagogy": 8,
+        "assessment": 8,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 83,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L4",
+        "L4",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Để giữ nguyên, cần 120.000.000 ÷ 108.000 ≈ 1.112 đơn, tăng khoảng 11%",
+          "issue": "Điểm hoà chỉ tính phí tăng; chi phí vận hành chặt hơn (đóng gói chuẩn, phạt giao trễ) mà \"vì sao (3)\" nêu không đưa vào số → điểm hoà thật cao hơn 11%.",
+          "fix": "Thêm dòng chi phí vận hành thêm (vd. 3 triệu/tháng → cần 1.140 đơn) để học viên thấy điểm hoà dịch."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "Mức phí trong bài là minh hoạ; khi tính thật, lấy biểu phí hiện hành của sàn",
+          "issue": "Lớp fast (chương trình gian hàng chính hãng của sàn) không có src/ngày kiểm; đã có câu nhắc lấy biểu phí nên chỉ P2.",
+          "fix": "Thêm src biểu phí của một sàn với ngày kiểm."
+        },
+        {
+          "sev": "P2",
+          "where": "Q2",
+          "quote": "Ký ngay, vì thương hiệu nào lớn cũng có gian hàng chính hãng cả",
+          "issue": "Phương án sai dùng khái quát tuyệt đối; đáp án b có số (~11%) nổi bật về hình thức.",
+          "fix": "Thêm số vào một phương án sai (vd. \"Ký vì đơn chỉ cần tăng 4% là bù phí\") để đáp án không đoán được bằng hình thức — đồng thời kiểm lỗi điểm %."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 4%×300.000 = 12.000 ✓. Q4: 120.000.000/108.000 = 1.111,1 → 1.112 ✓ (≈ +11,1%). Q5: 25% > 11% nhất quán."
+      },
+      "claims": [
+        {
+          "claim": "Gian hàng chính hãng (Mall): nhãn, chương trình riêng, phí trên đơn cao hơn; +4 điểm % (minh hoạ)",
+          "status": "illustrative-labelled",
+          "note": "\"Theo giả định minh hoạ\"."
+        },
+        {
+          "claim": "Khách sợ hàng giả ở mỹ phẩm, thực phẩm chức năng, đồ điện tử",
+          "status": "unverified",
+          "note": "Hợp lý, không nguồn."
+        }
+      ],
+      "strengths": "Đổi câu hỏi mơ hồ \"có tốt không\" thành điểm hoà có số, kèm điều kiện ngành và phản ví dụ (khách quen mua theo tên) rất sát; Q7 chọn đúng bằng chứng dự báo (tin hỏi \"hàng thật không\"); đào sâu nêu phí tăng ngay còn lợi ích chậm.",
+      "upgrade": "Đưa chi phí vận hành thêm vào điểm hoà và thêm độ nhạy (+20% vs +11%). Thêm src biểu phí và ngày kiểm. Cân hình thức phương án Q2. Thêm bảng \"trước/sau 2 tháng\" (đơn, CVR, hoàn, tin hỏi hàng thật) để một câu đọc bảng thay Q3."
+    },
+    {
+      "id": "B:kn03-07",
+      "scores": {
+        "accuracy": 14,
+        "depth": 13,
+        "practical": 16,
+        "examples": 12,
+        "pedagogy": 8,
+        "assessment": 7,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 82,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L2",
+        "L4",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "hoàn giảm còn 4% thì tiết kiệm 1,4 triệu và có thêm 40 đơn thành công",
+          "issue": "Giả định toàn bộ đơn không còn hoàn đều trở thành đơn thành công, trong khi phản ví dụ của chính bài nói gọi xác nhận làm một phần chuyển sang huỷ; Q4 lặp giả định này.",
+          "fix": "Viết \"tối đa thêm 40 đơn; thực tế một phần sẽ thành huỷ\" và cho Q4 thêm dữ kiện huỷ tăng 12% → 13%."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1",
+          "quote": "Đơn huỷ, vì khách huỷ nghĩa là shop mất khách hàng đó mãi mãi",
+          "issue": "Phương án sai dùng \"mãi mãi\"; Q5 là L2 (chỉ số vận hành giảm).",
+          "fix": "Viết ôn hoà và thay Q5 bằng câu đọc bảng hoàn theo nhóm (sản phẩm/khu vực/COD) để chọn nhóm sửa trước — đúng ý đào sâu."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "từ chối nhận",
+          "issue": "Bài gộp \"giao thất bại bị hoàn về\" (không gặp khách, địa chỉ sai) và \"từ chối nhận\" vào một nhóm 8%; hai lý do có cách sửa khác nhau (xác nhận đơn vs sửa địa chỉ/đơn vị vận chuyển).",
+          "fix": "Tách 8% thành hai dòng lý do trong ví dụ."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 1.000−120−80 = 800; ×40.000 = 32 triệu; 80×35.000 = 2,8 triệu; 29,2 triệu ✓. Q4: (8%−4%)×1.000 = 40 ✓; tiết kiệm 40×35.000 = 1,4 triệu ✓."
+      },
+      "claims": [
+        {
+          "claim": "Mỗi đơn hoàn tốn 35.000đ (ship hai chiều, bao bì, hao hụt)",
+          "status": "illustrative-labelled",
+          "note": "\"số minh hoạ\"."
+        },
+        {
+          "claim": "Tỉ lệ giao thành công là tín hiệu vận hành sàn thường theo dõi",
+          "status": "unverified",
+          "note": "Hedging \"thường\", không nguồn."
+        }
+      ],
+      "strengths": "Phân biệt huỷ/hoàn theo chi phí và báo cáo theo đơn thành công là thói quen nghề quan trọng; phản ví dụ (gọi xác nhận làm tăng huỷ) cho thấy đánh đổi thật; Q6 sửa đúng gốc (ảnh có vật so sánh), Q7 đúng tinh thần báo cáo.",
+      "upgrade": "Tách lý do hoàn và nêu phần chuyển sang huỷ trong ví dụ/Q4. Thêm bảng hoàn theo nhóm (sản phẩm · khu vực · COD/trả trước) cho câu L4. Thêm chi phí của biện pháp (giờ gọi xác nhận × đơn >200.000đ) để so với 1,4 triệu tiết kiệm. Thêm src nếu nêu chỉ số vận hành của sàn cụ thể."
+    },
+    {
+      "id": "B:kn03-08",
+      "scores": {
+        "accuracy": 14,
+        "depth": 12,
+        "practical": 14,
+        "examples": 10,
+        "pedagogy": 8,
+        "assessment": 7,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 76,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L4",
+        "L5",
+        "L2",
+        "L4"
+      ],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Nếu mua lại lên 18%, Phong có thêm 400 đơn/năm mà không trả tiền từ khoá",
+          "issue": "Mức 18% không có cơ sở và không gắn nhãn minh hoạ; không tính chi phí voucher 15.000đ × số người theo dõi để so với 400 đơn (nên ra chi phí/đơn giữ chân so với giá từ khoá).",
+          "fix": "Thêm: 2.000 người theo dõi × 15.000đ = 30 triệu voucher → 75.000đ/đơn thêm; so với chi phí/đơn từ khoá."
+        },
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "Mỗi sàn có quy định riêng về việc dẫn khách ra ngoài — phải đọc kỹ và làm đúng",
+          "issue": "Lớp fast (quy định sàn) không có src/ngày kiểm; hedging tốt nên chỉ P2.",
+          "fix": "Thêm src chính sách người bán của một sàn về liên hệ ngoài sàn, ngày kiểm."
+        },
+        {
+          "sev": "P2",
+          "where": "Q1/Q6",
+          "quote": "Lần sau khách tìm tên ngành và thấy shop khác trước",
+          "issue": "Q1 nhận lại đúng câu trong tình huống; Q6 lặp ý kn01-07 (phụ thuộc nền tảng) — bài này trùng khá nhiều với kn01-07/08 (đất thuê/đất nhà).",
+          "fix": "Thay Q6 bằng câu đọc dữ liệu: bảng mua lại theo lô khách (quà tặng vs dùng lặp lại) để chọn nhóm đầu tư giữ chân — đúng ý đào sâu."
+        }
+      ],
+      "calc_check": {
+        "n": 1,
+        "ok": 1,
+        "notes": "Q3: 5.000×(18%−10%) = 400 ✓; 900 = 5.000×18% đúng nhãn NHAM_SO_TUYET_DOI. Ví dụ: 5.000×10% = 500 ✓."
+      },
+      "claims": [
+        {
+          "claim": "Zalo OA (tên công cụ thật)",
+          "status": "illustrative-labelled",
+          "note": "Nêu làm ví dụ kênh sở hữu, không gắn số."
+        },
+        {
+          "claim": "Sàn giữ dữ liệu khách; quy định về dẫn khách ra ngoài",
+          "status": "unverified",
+          "note": "Hợp lý, không nguồn."
+        }
+      ],
+      "strengths": "Khung \"khách thuê vs khách sở hữu\" và mục tiêu đo được \"khách gõ tên thương hiệu thay vì tên ngành\" là tư duy đúng; phản ví dụ (khách mua làm quà → 10% là tự nhiên) và đào sâu (chia khách theo lý do mua) có chất; Q5 xử lý rủi ro vi phạm đúng mực.",
+      "upgrade": "Gắn nhãn và tính chi phí giữ chân/đơn so với từ khoá. Thêm src quy định sàn. Giảm trùng với kn01-07/08 bằng cách tập trung vào công cụ giữ chân trong sàn (theo dõi, voucher, gói định kỳ) với số. Thêm bảng mua lại theo lô khách cho câu L4."
+    },
+    {
+      "id": "B:kn03-09",
+      "scores": {
+        "accuracy": 14,
+        "depth": 10,
+        "practical": 15,
+        "examples": 10,
+        "pedagogy": 7,
+        "assessment": 7,
+        "data": 7,
+        "clarity": 4
+      },
+      "total": 74,
+      "bloom_items": [
+        "L2",
+        "L5",
+        "L3",
+        "L3",
+        "L4",
+        "L2",
+        "L5"
+      ],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Khái niệm",
+          "quote": "ép giá đại lý bằng thoả thuận có thể vướng luật cạnh tranh, nên hỏi pháp chế",
+          "issue": "Cảnh báo đúng hướng nhưng không dẫn văn bản (Luật Cạnh tranh 2018) và không có src; bài kn02-07 cùng chủ đề lại thiếu hẳn cảnh báo này.",
+          "fix": "Thêm src điều khoản liên quan với ngày kiểm; dẫn chéo kn02-07."
+        },
+        {
+          "sev": "P2",
+          "where": "Toàn bài",
+          "quote": "Khác biệt giữa các kênh bằng quy cách và lý do",
+          "issue": "Không có mục vì sao/phản ví dụ/đào sâu; trùng gần hết với kn02-07 (xung đột giá online–đại lý, mã riêng). Thiếu điều kiện khi combo vẫn gây xung đột (đại lý cũng bán theo thùng rẻ hơn) và chi phí ship làm giá cuối trên sàn khác giá kệ.",
+          "fix": "Thêm phản ví dụ và đào sâu về \"giá khách thực thấy\" (ship, voucher sàn) và nối rõ kn02-07."
+        },
+        {
+          "sev": "P2",
+          "where": "Q3",
+          "quote": "[26,\"SAI_TINH_TOAN\"]",
+          "issue": "Giá trị sai 26 không tương ứng với một lỗi nhận diện được (không phải 229/85 hay chênh tuyệt đối).",
+          "fix": "Đổi thành 8,7 (chênh tuyệt đối 8.667đ đọc nhầm thành %) hoặc 11,4 đã có."
+        },
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Quân chuyển sang bán combo 3 chai giá 229.000đ chỉ trên sàn",
+          "issue": "Số không gắn nhãn minh hoạ; không nói lãi/chai của hãng ở combo (76.333đ) so với giá bán cho đại lý — có thể combo online còn lãi hơn kênh đại lý, điều này quyết định hãng có nên đẩy combo mạnh không.",
+          "fix": "Thêm giá bán cho đại lý và lãi/chai ở hai kênh."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 229.000/3 = 76.333; (85.000−76.333)/85.000 = 10,2% ✓ (11,4% = chia 76.333 đúng nhãn). Q4: 17.000/85.000 = 20% ✓; 25% = chia 68.000 đúng nhãn."
+      },
+      "claims": [
+        {
+          "claim": "Thoả thuận ấn định giá bán lại có thể vướng luật cạnh tranh",
+          "status": "unverified",
+          "note": "Khớp Luật Cạnh tranh 2018 theo hiểu biết người chấm; bài không dẫn."
+        },
+        {
+          "claim": "Giá khuyến nghị 85.000đ, sàn 68.000đ, combo 229.000đ",
+          "status": "illustrative-unlabelled",
+          "note": ""
+        }
+      ],
+      "strengths": "Giải pháp khác biệt bằng quy cách (combo chỉ bán online) có lý do khách chấp nhận và không đụng giá tham chiếu; có cảnh báo pháp lý; Q7 (ngày đôi) là câu đánh đổi thực tế hay.",
+      "upgrade": "Thêm src luật và dẫn chéo kn02-07, cắt trùng. Thêm vì sao/phản ví dụ/đào sâu (giá khách thực thấy gồm ship và voucher sàn). Gắn nhãn số, thêm lãi/chai hai kênh. Thay Q6 (L2) bằng câu đọc bảng giá 3 kênh × 3 quy cách, hỏi chênh nào khách nhìn ra."
+    },
+    {
+      "id": "B:kn03-10",
+      "scores": {
+        "accuracy": 14,
+        "depth": 13,
+        "practical": 16,
+        "examples": 12,
+        "pedagogy": 8,
+        "assessment": 8,
+        "data": 8,
+        "clarity": 4
+      },
+      "total": 83,
+      "bloom_items": [
+        "L4",
+        "L5",
+        "L3",
+        "L3",
+        "L4",
+        "L4",
+        "L2"
+      ],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        {
+          "sev": "P2",
+          "where": "Ví dụ",
+          "quote": "Giả sử 20% là khách mua lại và chuyển được: 300 đơn",
+          "issue": "Kết luận \"60 tháng — quá lâu\" phụ thuộc hoàn toàn vào 20%; ở 40% (600 đơn) tiết kiệm 18 triệu − 8 = 10 triệu/tháng → 6 tháng hoàn vốn. Bài không làm độ nhạy nên học viên không thấy biến số quyết định.",
+          "fix": "Thêm bảng 3 kịch bản (20/30/40% chuyển) với tháng hoàn vốn."
+        },
+        {
+          "sev": "P2",
+          "where": "Toàn bài",
+          "quote": "Ngọc giữ sàn làm kênh tìm khách mới, chỉ làm website nhỏ",
+          "issue": "Không nêu đánh đổi: chuyển 300 đơn/tháng khỏi sàn làm giảm tốc độ bán → có thể tụt hạng tìm kiếm trên sàn (kn03-04), tức mất thêm khách mới.",
+          "fix": "Thêm câu nối kn03-04 và cách giảm rủi ro (chỉ đưa khách quen và đơn quà tặng sang)."
+        },
+        {
+          "sev": "P2",
+          "where": "Q7",
+          "quote": "Website giúp thương hiệu tự động lên đầu trang tìm kiếm Google",
+          "issue": "Q7 là L2 với phương án sai dễ; \"Google\" nêu tên nền tảng thật, không cần nguồn vì bác bỏ.",
+          "fix": "Thay bằng câu đánh đổi: website 8 triệu/tháng vận hành + 300 đơn vs. dùng Zalo OA chi phí thấp cho cùng nhóm khách — hỏi khi nào website vẫn đáng."
+        }
+      ],
+      "calc_check": {
+        "n": 2,
+        "ok": 2,
+        "notes": "Q3: 1.500×250.000 = 375 triệu; ×15% = 56,25 triệu ✓. Q4: 300×30.000 = 9 triệu; −8 = 1 triệu; 60/1 = 60 tháng ✓; sai 19 ≈ 60/(300×37.500−8tr) = 18,5 → 19 đúng nhãn; sai 7 ≈ 60/9 đúng nhãn."
+      },
+      "claims": [
+        {
+          "claim": "Tổng phí sàn và thanh toán khoảng 15% (minh hoạ); cổng thanh toán website 3% (giả định)",
+          "status": "illustrative-labelled",
+          "note": ""
+        },
+        {
+          "claim": "Agency báo giá website 60 triệu, vận hành 8 triệu/tháng",
+          "status": "illustrative-unlabelled",
+          "note": "Số tình huống, không nhãn."
+        }
+      ],
+      "strengths": "Bài tổng kết module tốt: tách hai bài toán (thay sàn vs mở dòng khách mới), phép tính hoàn vốn chỉ trên đơn chuyển được, phản ví dụ đơn quà doanh nghiệp; Q1 buộc tìm lỗi logic, Q5/Q6 là tình huống mới và chẩn đoán đúng thứ tự.",
+      "upgrade": "Thêm độ nhạy theo % khách chuyển được. Nêu đánh đổi tụt hạng trên sàn. Thêm chi phí kéo khách quen về website (tin Zalo, quà) vào phép tính. Thay Q7 bằng câu đánh đổi có số. Thêm src cho mức phí cổng thanh toán tham chiếu (periodic)."
+    }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý cho bán hàng trên sàn: chọn sàn (01) → lãi mỗi đơn (02) → quảng cáo trong/ngoài sàn (03) → xếp hạng tìm kiếm (04) → livestream (05) → Mall (06) → đơn thành công (07) → giữ chân (08) → kỷ luật giá với đại lý (09) → website riêng (10). 02 là nền số cho 03, 06, 07, 10 — đúng chỗ. 09 lạc nhịp (chủ đề kênh truyền thống) và nên đứng cạnh kn02-07 hoặc thay bằng bài về phí/vận chuyển sàn.",
+    "overlap": [
+      "09 trùng gần hết với kn02-07 (xung đột giá online–đại lý, mã/combo riêng)",
+      "08 lặp \"đất thuê/đất nhà\" của kn01-07 và kn01-08; Q6 của 08 gần như Q1 của kn01-07",
+      "02, 03, 06, 10 cùng dùng \"lãi đóng góp mỗi đơn\" — tốt về nhất quán nhưng 03 và 06 nên dẫn ngược về 02 thay vì định nghĩa lại"
+    ],
+    "gaps": [
+      "Chưa có bài về kinh tế của chương trình sàn (ngày đôi, voucher sàn tài trợ, freeship extra) — chỉ xuất hiện ở Q7 kn03-09",
+      "Chưa có bài về phí vận chuyển và gói hỗ trợ ship, dù đây là khoản lớn trong lãi mỗi đơn (02 chỉ có phí sàn + thanh toán)",
+      "Chưa có bài về quản lý đánh giá/khiếu nại trên sàn (04 và 06 chỉ nhắc đánh giá là tín hiệu)",
+      "Chưa có affiliate/creator commission trên sàn khám phá (05 chỉ nói kịch bản live)",
+      "Lớp fast (01, 02, 04, 06, 08) không bài nào có src với ngày kiểm; 02 nêu nghị định cụ thể mà không dẫn"
+    ],
+    "best_lesson": "B:kn03-10",
+    "weakest_lesson": "B:kn03-01"
+  }
+}

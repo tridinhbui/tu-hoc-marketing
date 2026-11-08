@@ -1,0 +1,180 @@
+{
+  "mod": "dl04",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:dl04-01",
+      "scores": { "accuracy": 12, "depth": 10, "practical": 13, "examples": 9, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 70,
+      "bloom_items": ["L2", "L4", "L3", "L3", "L4", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "Ô ghi phần trăm khách của nhóm đó còn mua.", "issue": "Không định nghĩa 'còn mua' là mua trong đúng tháng tuổi đó (classic/N-day) hay đã mua ít nhất một lần kể từ tháng đó (unbounded). Hai cách cho hai bảng khác hẳn: bảng unbounded không bao giờ đi lên, bảng classic có thể đi lên (chính dl04-04 Q3 dùng hiện tượng này). Người học không biết đang đọc bảng nào.", "fix": "Thêm một câu: 'Trong bài này, ô tháng thứ k = % khách của nhóm có mua trong tháng tuổi k (có thể lên xuống). Nếu bảng của bạn đo \"đã mua ít nhất một lần kể từ\", đường chỉ đi xuống.' và ghi điều kiện này vào Q5." },
+        { "sev": "P2", "where": "Q1 phương án b", "quote": "Ô góc dưới bên phải, vì đó là số mới nhất của bảng", "issue": "Lời giải nói về 'Ô cuối của hàng trên cùng', không khớp với phương án (góc dưới bên phải). Ở bảng cohort chuẩn, ô góc dưới phải thường trống vì nhóm mới nhất chưa đủ tuổi.", "fix": "Sửa lời giải: 'Góc dưới phải là nhóm mới nhất ở tháng tuổi thấp nhất (hoặc còn trống); một ô đơn lẻ không so được với nhóm nào.'" },
+        { "sev": "P2", "where": "Q5 phương án c", "quote": "tháng thứ 1 luôn cao hơn tháng thứ 3", "issue": "Từ tuyệt đối 'luôn' chỉ đúng với bảng unbounded; với bảng 'mua trong tháng' đường có thể nhích lên (dl04-04 Q3). Mâu thuẫn nội bộ module.", "fix": "Đổi thành 'tháng thứ 1 gần như luôn cao hơn tháng thứ 3 vì chưa ai kịp rời' hoặc 'không cùng tháng tuổi nên không so được'." },
+        { "sev": "P2", "where": "Q7 ↔ VÍ DỤ", "quote": "Nhóm tháng 1 có 800 khách, tháng thứ 1 là 22%", "issue": "Ví dụ gán 800 khách cho nhóm tháng 3 ('tháng 3 là 30% (800 khách, 240 người còn mua)'), Q7 lại cho nhóm tháng 1 cũng 800 khách. Không đổi kết luận nhưng số không nhất quán giữa phần đọc và câu hỏi.", "fix": "Ghi quy mô từng nhóm trong ví dụ (vd nhóm tháng 1: 800, tháng 3: 800) hoặc đổi Q7 sang nhóm tháng 3." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "nhóm tháng 1 là 22%, tháng 2 là 24%, tháng 3 là 30%", "issue": "Bộ số minh hoạ không gắn nhãn; chỉ có 4 giá trị cột và 4 giá trị hàng, không có bảng đầy đủ để người học tự đọc dọc/ngang/chéo như ÁP DỤNG yêu cầu.", "fix": "Chèn bảng 6×4 minh hoạ (gắn nhãn 'số minh hoạ') và đánh dấu một ô đường chéo bất thường để Q2 có dữ liệu thật." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 240 ÷ 800 = 30% ✓; sai 12 = 240 ÷ 2.000 (SAI_MAU_SO ✓); 70 = 100 − 30 (NHAM_TI_LE_ROI ✓). Q7: 22% × 800 = 176 ✓; 15 ÷ 40 = 37,5% ✓. Q4: 100 → 20 là 80 điểm ✓." },
+      "claims": [
+        { "claim": "Cột tháng thứ 1: 22% / 24% / 30% / 31%; hàng nhóm tháng 1: 100 → 22 → 15 → 13", "status": "illustrative-unlabelled", "note": "Số tự khớp nhưng bài không nói là minh hoạ." },
+        { "claim": "Nhóm 40 người: lệch 3–4 người đổi tỉ lệ cả chục điểm", "status": "illustrative-labelled", "note": "Đúng về số học (1 người = 2,5 điểm)." }
+      ],
+      "strengths": "Ba hướng đọc (hàng, cột, chéo) gắn với ba câu hỏi khác nhau; Q7 buộc cân mẫu nhỏ trước khi mừng; Q2 dạy đọc đường chéo như dấu vân tay sự kiện.",
+      "upgrade": "Định nghĩa rõ 'còn mua' (classic vs unbounded) và nêu hệ quả; chèn bảng cohort 6×4 có nhãn minh hoạ với một ô chéo bất thường; sửa lời giải Q1b và từ 'luôn' ở Q5; thêm quy tắc nhiễu (nhóm dưới ~100 người thì ±10 điểm là bình thường) vào khái niệm và dùng trong Q7; thêm một câu L5: hai cách đọc cùng bảng cho hai kết luận trái nhau, chọn và biện hộ." },
+    {
+      "id": "B:dl04-02",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 4 },
+      "total": 69,
+      "bloom_items": ["L3", "L2", "L3", "L3", "L2", "L2", "L4"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1, Q2, Q4, Q6", "quote": "Rời bỏ = số rời đi trong nhóm đầu kỳ ÷ số hội viên đầu kỳ", "issue": "Bốn trong bảy câu kiểm cùng một ý (mẫu số đầu kỳ, không lẫn khách mới) đã nói ở MANG THEO; đoán được bằng cách nhận lại ý bài (L2).", "fix": "Thay Q4 hoặc Q6 bằng câu L4: cho bảng 3 tháng với số đầu kỳ, mới, rời (cả rời sớm của người mới) và hỏi tháng nào giữ chân thật sự xấu đi." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "Người vào rồi rời ngay trong cùng kỳ không nằm trong tỉ lệ này", "issue": "Đúng, nhưng không nói với gói theo tháng thì chỉ hội viên có kỳ gia hạn rơi trong tháng mới 'có cơ hội rời' — mẫu số đúng hơn là số đến hạn, không phải toàn bộ đầu kỳ. Thiếu điều kiện áp dụng cho gói dài hạn (gói năm).", "fix": "Thêm một câu phản ví dụ: 'Nếu 40% hội viên đang dùng gói năm chưa đến hạn, mẫu số 1.200 làm churn trông thấp; hãy tính trên số đến hạn gia hạn trong tháng.'" },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[15,\"SAI_TINH_TOAN\"]", "issue": "15% = 120 ÷ 800 là lỗi 'lẫn 24 người mới rời sớm vào tử số', không phải lỗi tính toán chung.", "fix": "Gắn mã riêng kiểu NHAM_TU_SO và viết lời giải 'bạn đã đếm cả 24 người mới vào tử số'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Tình huống: 1.200 − 180 + 300 = 1.320 ✓; 180 ÷ 1.320 = 13,6% ✓; 180 ÷ 1.200 = 15% ✓. Q3: (120 − 24) ÷ 800 = 12% ✓; 11,4 = 120 ÷ 1.050 ✓. Q7: doanh thu đầu kỳ 90×0,2 + 10×1 = 28 triệu; mất 9×0,2 + 3×1 = 4,8; 4,8 ÷ 28 = 17,1% ✓; 12 ÷ 100 = 12% ✓." },
+      "claims": [
+        { "claim": "Phòng gym quận 7: 1.200 hội viên, rời 180, thêm 300", "status": "illustrative-unlabelled", "note": "Số tự khớp, không gắn nhãn." }
+      ],
+      "strengths": "Chỉ ra cơ chế 'tuyển càng mạnh, churn sai càng đẹp' — đúng lúc dễ bị lừa nhất; Q7 nối churn theo người với churn theo doanh thu bằng phép tính kiểm được.",
+      "upgrade": "Thêm phản ví dụ gói dài hạn (mẫu số = số đến hạn); thêm ĐÀO SÂU nối sang churn theo doanh thu (GRR/NRR) và churn theo nhóm khách mới vs cũ; thay hai câu L2 bằng một câu đọc bảng 3 tháng (L4) và một câu quyết định định nghĩa khi có gói năm (L5); gắn nhãn minh hoạ cho bộ số." },
+    {
+      "id": "B:dl04-03",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 13, "examples": 10, "pedagogy": 7, "assessment": 6, "data": 8, "clarity": 4 },
+      "total": 72,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L4", "L3", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q1, Q4, Q6, Q7", "quote": "Sai; sau 20 tháng còn khoảng 36% vì 0,95^20 ≈ 0,36", "issue": "Bốn câu cùng kiểm một ý 'nhân dồn, không trừ tuyến tính' với cùng dạng nhiễu 'trừ tuyến tính'. Người học làm đúng Q1 thì làm đúng cả ba câu còn lại.", "fix": "Giữ Q1 và Q5; thay Q4/Q6/Q7 bằng: (a) đọc bảng churn giảm dần theo thâm niên (12%, 8%, 5%, 4%…) và hỏi vì sao 0,92^12 ước thấp số còn lại; (b) câu quyết định giữa hạ churn 1 điểm và tăng khách mới 10% với số; (c) tính LTV khi churn tháng đầu khác các tháng sau." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "tuổi thọ trung bình của một khách xấp xỉ 1 ÷ tỉ lệ rời bỏ (8% → khoảng 12,5 tháng)", "issue": "Không nói đây là trung bình của phân bố rất lệch (một nửa khách rời trước tháng 8–9, đuôi dài kéo trung bình lên) và không chiết khấu; dùng để tính LTV ở Q3 mà không nêu hai giả định này.", "fix": "Thêm: 'Trung vị tuổi thọ ≈ 0,69 ÷ 0,08 ≈ 8,7 tháng; 12,5 là trung bình bị đuôi kéo. LTV ở đây chưa chiết khấu và chưa trừ chi phí phục vụ.'" },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Nếu giảm rời bỏ xuống 5%/tháng, 0,95^12 ≈ 0,54 — còn 540 khách", "issue": "Không nói giảm từ 8% xuống 5% tốn gì (tiền, việc) — quyết định 'hạ vài điểm' chưa có ràng buộc thực tế.", "fix": "Thêm một dòng chi phí: 'Giữ thêm 172 khách × 1,5 triệu LTV ≈ 258 triệu; chương trình giữ chân đáng làm nếu tốn dưới mức đó.'" }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "0,92^12 = 0,3677 ✓; 0,95^12 = 0,5404 ✓ (chênh 172 khách ✓ 'gần 170'); Q3: 120.000 × 12,5 = 1.500.000 ✓; 2.500.000 = 200.000 × 12,5 ✓; 1.440.000 = 120.000 × 12 ✓. Q4: 0,9² = 0,81 ✓. Q5: 0,96^12 = 0,613, 0,94^12 = 0,476, chênh 13,7 điểm ✓. Q7: 0,95^20 = 0,358 ✓." },
+      "claims": [
+        { "claim": "Dịch vụ rau sạch Hà Nội 1.000 khách, churn 8%/tháng", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "thực tế rời bỏ thường giảm dần theo thâm niên", "status": "unverified", "note": "Đúng theo kinh nghiệm ngành, nêu như nhận định chung, có nối sang bài sau." }
+      ],
+      "strengths": "Sửa đúng một lỗi rất phổ biến ở cấp quản lý với con số đối chứng rõ (368 vs 40); Q5 là câu L4 tốt — phóng đại tuyến tính theo chiều 'giữ thêm'; có cầu nối sang LTV.",
+      "upgrade": "Bớt 3 câu lặp ý, thay bằng câu đọc bảng churn theo thâm niên và câu đánh đổi hạ churn vs mua khách mới; nêu trung vị vs trung bình tuổi thọ và giả định không chiết khấu; thêm ràng buộc chi phí cho quyết định 'hạ xuống 5%'; gắn nhãn minh hoạ." },
+    {
+      "id": "B:dl04-04",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 13, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L4", "L5", "L4", "L3", "L4", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q6", "quote": "Mức phẳng gấp ba nghĩa là doanh thu dài hạn trên mỗi khách mới gấp khoảng ba", "issue": "Giá trị một khách mới gồm đơn đầu, đoạn dốc và đoạn phẳng; nếu đơn đầu và đoạn dốc giống nhau, tỉ số giá trị thấp hơn 3 rõ rệt (vd 1 + 0,45+0,33+0,28 + đuôi). 'Khoảng ba' chỉ đúng cho phần đuôi.", "fix": "Sửa thành 'phần giá trị dài hạn (đuôi) gấp ba; tính cả đơn đầu thì tỉ số nhỏ hơn' hoặc cho số cụ thể 24 tháng để người học tính." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Từ 2.000 khách, khoảng 500 người thành khách đều đặn", "issue": "25% mỗi tháng không nhất thiết là cùng 500 người; với định nghĩa 'có mua trong tháng', có thể là 800 người luân phiên. Suy ra 'nhóm 500 người này giống nhau ở điểm nào' cần định nghĩa 'khách đều đặn' (vd mua ≥4/6 tháng).", "fix": "Thêm một câu định nghĩa khách đều đặn và ghi 'khoảng 500 nếu đo trên cùng tập người'." },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "tháng thứ 1 là 45%, thứ 2 là 33%, thứ 3 là 28%, thứ 4 là 26%, thứ 5 và thứ 6 đều 25%", "issue": "Bộ số không gắn nhãn minh hoạ; không nói đây là một cohort hay trung bình nhiều cohort quý 1 (nếu trung bình thì cohort tháng 3 chưa đủ 6 tháng tuổi).", "fix": "Ghi 'số minh hoạ, cohort tháng 1' hoặc nêu rõ cách gộp." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 5.000 × (30% − 25%) = 250 ✓; 1.500 = 5.000 × 30% ✓; 5 = nhầm điểm % thành khách ✓. Tình huống: 2.000 × 25% = 500 ✓; 45 → 28 = 17 điểm ✓ (Q5)." },
+      "claims": [
+        { "claim": "Mọi sản phẩm đều rơi mạnh lúc đầu vì nhiều người chỉ thử", "status": "unverified", "note": "Khái quát hợp lý, nêu như luật phổ quát." },
+        { "claim": "Đường cong cà phê 45/33/28/26/25/25", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Chuyển câu hỏi từ 'mất bao nhiêu' sang 'đường có phẳng không và phẳng ở đâu' — đúng tư duy PMF; Q3 (đường nụ cười) và Q7 (gói tháng mà về 3%) là hai tình huống mới buộc đọc hình dạng.",
+      "upgrade": "Sửa 'gấp ba' ở Q6 bằng phép tính giá trị 24 tháng cho hai kênh; định nghĩa 'khách đều đặn'; gắn nhãn số; thêm ĐÀO SÂU: khi nào mức phẳng 25% là đủ (so với CAC và biên — nối dl04-06), và phản ví dụ sản phẩm chu kỳ dài mà đường trông như về 0." },
+    {
+      "id": "B:dl04-05",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 10, "pedagogy": 7, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 74,
+      "bloom_items": ["L3", "L3", "L3", "L4", "L4", "L5", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "lấy khoảng cách trung vị giữa hai đơn liên tiếp của cùng một khách rồi nhân đôi", "issue": "Quy tắc 'nhân đôi trung vị' nêu như chuẩn mà không gắn nhãn là quy tắc nhẩm; không nêu phương án thay thế (lấy phân vị 80–90 của khoảng cách) và vì sao chọn ×2 thay vì ×1,5 hay ×3. Q3 kiểm quy tắc này như sự thật.", "fix": "Ghi 'quy tắc nhẩm minh hoạ' và thêm: 'cách chặt hơn: chọn cửa sổ phủ 80–90% khoảng cách mua lại của khách còn hoạt động; nếu phân bố lệch mạnh, ×2 trung vị có thể quá ngắn.'" },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[12,\"SAI_TINH_TOAN\"],[6,\"SAI_TINH_TOAN\"]]", "issue": "Câu chỉ là phép nhân 2 (L1–L3 yếu); mã lỗi không mô tả hiểu lầm nào (12 = quên nhân đôi; 6 = chia đôi).", "fix": "Thay bằng câu đọc phân bố: cho 5 phân vị khoảng cách mua lại và hỏi cửa sổ nào phủ 85% khách; hoặc ít nhất gắn mã QUEN_NHAN_DOI." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "750 triệu ÷ 2.500 = 300.000 đồng/quý — không hề thấp", "issue": "'Không hề thấp' không có mốc so (giá sách trung bình, đơn/quý); số 2.500 không gắn nhãn minh hoạ.", "fix": "Thêm mốc: 'tương đương ~2 đơn/quý ở giá sách trung bình 150.000đ' và nhãn minh hoạ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q1: 750 ÷ 2.500 = 300.000 ✓; 75.000 ✓; 100.000 = 750 ÷ 7.500 ✓; 187.500 trung bình ✓. Q3: 12 × 2 = 24 ✓." },
+      "claims": [
+        { "claim": "Cửa sổ nhà sách 90 ngày, app đồ ăn 30 ngày, nội thất 12 tháng", "status": "illustrative-unlabelled", "note": "Hợp lý, nêu như ví dụ." },
+        { "claim": "Quy tắc nhân đôi trung vị khoảng cách mua", "status": "illustrative-unlabelled", "note": "Quy tắc nhẩm, nêu như phương pháp chuẩn." }
+      ],
+      "strengths": "Đổi mẫu số làm đổi hẳn quyết định (voucher cho 10.000 → tách 2.500/7.500); Q6 đưa đối chứng vào chương trình đánh thức — tư duy thử nghiệm đúng; Q7 phân biệt hành vi có giá trị với hành vi bấm nút.",
+      "upgrade": "Gắn nhãn quy tắc ×2 là nhẩm và nêu cách phân vị; thay Q3 bằng câu đọc phân bố khoảng cách mua; thêm phản ví dụ (định nghĩa quá rộng làm MAU đẹp giả, định nghĩa quá hẹp làm đội vận hành 'đánh thức' nhầm khách còn sống); thêm số chi phí cho hai chương trình voucher để Q6 có ràng buộc tiền." },
+    {
+      "id": "B:dl04-06",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 15, "examples": 11, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L3", "L5", "L3", "L4", "L5", "L2", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Q1 lời giải", "quote": "A: 500.000đ/khách giữ; B: khoảng 285.700đ/khách giữ", "issue": "285.714 = 40 triệu ÷ 140 là chi phí GỘP, trong khi khái niệm và ví dụ định nghĩa chi phí RÒNG (trừ lãi đơn đầu) = 200.000đ; chính Q3 liệt kê 285.714 là đáp án sai 'quên trừ lãi đơn đầu'. Lời giải mâu thuẫn với phần đọc và với Q3; kết luận không đổi nhưng người học thấy hai con số cho cùng một thước đo.", "fix": "Sửa lời giải Q1 thành 'B: 200.000đ/khách giữ (285.700đ nếu chưa trừ lãi đơn đầu)'." },
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "(chi phí − lãi gộp từ đơn đầu) ÷ số khách còn giữ", "issue": "Thước đo tự chế không nêu đã giả định khách còn giữ của hai kênh có giá trị tương lai bằng nhau; nếu khách săn deal mua lại ít hơn mỗi tháng, chênh lệch còn lớn hơn — bài có nói 'chưa phải LTV đầy đủ' nhưng không chỉ hướng lệch.", "fix": "Thêm: 'Thước đo này còn bỏ qua tần suất mua lại; thường lệch có lợi cho kênh giảm sâu, nên nếu B đã thắng ở đây thì gần như chắc thắng ở LTV.'" },
+        { "sev": "P2", "where": "Q6", "quote": "Gắn nhãn kênh nguồn cho từng khách (mã, link, mã giảm giá riêng)", "issue": "Câu L2, ba nhiễu không ai chọn; thay được bằng câu L3+.", "fix": "Thay bằng câu: 'Sau 3 tháng A giữ 18%, B giữ 30%, nhưng đơn lặp trung bình A 120.000đ, B 90.000đ — tính lại lãi tích luỹ trên khách mới của mỗi kênh.'" },
+        { "sev": "P2", "where": "TÌNH HUỐNG", "quote": "Đơn đầu của A lãi gộp gần 0 vì giảm 50%", "issue": "Bộ số (50 triệu/1.000 khách, 10%/35% còn giữ) không gắn nhãn minh hoạ.", "fix": "Thêm nhãn 'số minh hoạ'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Tình huống: 50 triệu ÷ 1.000 = 50.000 ✓; 40 ÷ 400 = 100.000 ✓. Ví dụ: A (50 − 0) ÷ 100 = 500.000 ✓; B (40 − 12) ÷ 140 = 200.000 ✓. Q3: 285.714 = 40 ÷ 140 (quên trừ) ✓; 70.000 = 28 ÷ 400 ✓. Q1 lời giải dùng 285.700 — không khớp định nghĩa (xem defect P1)." },
+      "claims": [
+        { "claim": "KOC TikTok 40 triệu → 400 khách; deal sàn 50 triệu → 1.000 khách", "status": "illustrative-unlabelled", "note": "Nêu nền tảng thật với số không nguồn, không gắn nhãn." },
+        { "claim": "Kênh giảm sâu thường không lãi ở đơn đầu nên đắt hơn vẻ ngoài", "status": "unverified", "note": "Khái quát hợp lý." }
+      ],
+      "strengths": "Xếp hạng kênh đảo ngược khi đổi thước đo — ví dụ có số, có quyết định phân bổ; Q5 nêu tự chọn lọc (self-selection) ở kênh giới thiệu và cách thử nhỏ — tư duy nhân quả đúng; Q4 nhắc mốc đọc phải qua chu kỳ mua.",
+      "upgrade": "Sửa 285.700 trong Q1; nói rõ hướng lệch của thước đo; thêm phản ví dụ (kênh deal dùng để thanh lý hàng tồn — mục tiêu khác, thước đo khác); thay Q6 bằng câu tính lãi tích luỹ hai kênh; gắn nhãn minh hoạ; thêm bước làm: cách gắn nhãn kênh khi khách mua qua sàn (mã voucher riêng, landing riêng)." },
+    {
+      "id": "B:dl04-07",
+      "scores": { "accuracy": 13, "depth": 9, "practical": 13, "examples": 9, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 4 },
+      "total": 68,
+      "bloom_items": ["L2", "L3", "L4", "L3", "L3", "L4", "L3"],
+      "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Toàn bài ↔ dl04-02, dl04-05", "quote": "Khách mới được hai tuần chưa có đủ thời gian để mua lại; đưa họ vào mẫu số sẽ kéo tỉ lệ xuống oan", "issue": "Ý 'mẫu số lẫn người chưa có cơ hội' là ý của dl04-02 (đảo chiều), 'chọn cửa sổ theo nhịp mua' là ý của dl04-05. Bài này chỉ thêm 'độ chín cohort'; ba trong bảy câu (Q2, Q5, Q7) kiểm lại ý của bài khác.", "fix": "Tập trung bài vào độ chín: thêm bảng tam giác cohort tháng 4–6 ở ngày 30/60/90 và dạy đọc sớm theo đường chéo; chuyển Q5/Q7 (chọn cửa sổ) về dl04-05." },
+        { "sev": "P2", "where": "Q3", "quote": "Tín hiệu sớm: tháng 6 nhỉnh hơn tháng 4 cùng ngày tuổi", "issue": "9% so với 8% ở ngày 30 với cohort vài trăm người là chênh 1 điểm — nằm trong nhiễu (±2–3 điểm với n≈450); gọi là 'tín hiệu sớm' mà không nói độ chắc chắn, trái với tinh thần dl04-01 Q7.", "fix": "Đổi số thành 12% vs 8% hoặc thêm 'chênh 1 điểm chưa vượt nhiễu; chỉ ghi nhận hướng'." },
+        { "sev": "P2", "where": "Q6", "quote": "Tăng từ 18% lên 22% đáng chú ý", "issue": "Không cho cỡ cohort tháng 3 nên không biết 4 điểm có vượt nhiễu; lời giải phương án c tính '20% tương đối' nhưng không nói sai số.", "fix": "Cho cỡ cohort (vd 550 và 600) và thêm vào lời giải 'với ~600 người, ±3,3 điểm; 4 điểm mới chớm vượt'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "lấy 180 lượt mua lại chia 1.500, ra 12%", "issue": "Con số 180 (= 132 + 48) chỉ xuất hiện ở Q4; trong ví dụ người đọc không biết 48 từ đâu.", "fix": "Ghi '132 + 48 người mua lại sớm của cohort tháng 5–6 = 180' trong ví dụ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q4: 132 ÷ 600 = 22% ✓; (132 + 48) ÷ 1.500 = 12% ✓; 8,8 = 132 ÷ 1.500 ✓. Q3: 22 ÷ 8 = 2,75 ✓. Q6: 22 ÷ 18 = 1,22 ✓." },
+      "claims": [
+        { "claim": "Đồ ăn vặt, mỹ phẩm, thực phẩm hợp cửa sổ 90 ngày; điện thoại thì không", "status": "unverified", "note": "Hợp lý, nêu như quy ước." },
+        { "claim": "Shop Shopee: 600 khách tháng 4, 132 mua lại", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Chỉ đúng cơ chế 'tăng trưởng càng nhanh, tỉ lệ mua lại càng tệ giả'; Q3 dạy đọc sớm cùng ngày tuổi thay vì bỏ qua hoặc ngoại suy ×3.",
+      "upgrade": "Tái định vị bài quanh tam giác cohort chưa chín (bảng 3 cohort × 3 mốc ngày) với một câu L4 đọc đường chéo; đưa chọn cửa sổ về dl04-05; thêm nhiễu vào Q3/Q6; thêm phản ví dụ (sản phẩm có khuyến mãi tháng 5 làm cohort tháng 4 mua lại sớm bất thường); gắn nhãn minh hoạ." },
+    {
+      "id": "B:dl04-08",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 15, "examples": 10, "pedagogy": 9, "assessment": 8, "data": 8, "clarity": 4 },
+      "total": 81,
+      "bloom_items": ["L3", "L5", "L3", "L3", "L4", "L3", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "KHÁI NIỆM", "quote": "chi phí kéo khách mới thường đắt dần", "issue": "Khẳng định CAC tăng theo quy mô nêu như quy luật, không nguồn, không điều kiện (đúng khi kênh bão hoà; sai khi kênh mới mở hoặc có giới thiệu).", "fix": "Thêm 'thường, khi cùng một kênh phải với tới nhóm khách ít hợp hơn' và nối sang bài CAC biên." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tháng 1: 5.000 khách, mất 10% = 500 người. Trong 800 khách mới, 500 chỉ để bù rò", "issue": "Mô hình trạng thái dừng giả định khách mới chịu cùng churn 10% từ tháng đầu; ĐÀO SÂU có nói khách mới rời nhanh hơn nhưng không nói điều này làm trần thực tế thấp hơn 8.000. Bộ số không gắn nhãn minh hoạ.", "fix": "Thêm một dòng: 'Nếu khách mới rời 25% tháng đầu thì trần thấp hơn 8.000 rõ rệt; 8.000 là trần lạc quan' và nhãn minh hoạ." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[4500,\"NHAM_TI_LE_ROI\"]", "issue": "4.500 là số còn lại (5.000 − 500); mã NHAM_TI_LE_ROI không mô tả đúng hiểu lầm (nhầm 'cần bao nhiêu' với 'còn bao nhiêu').", "fix": "Gắn mã NHAM_SO_CON_LAI và lời giải tương ứng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q1: 800 − 5.000 × 10% = 300 ✓. Q3: 500 ✓. Q4: 800 ÷ 0,10 = 8.000 ✓. Q6: 800 ÷ 0,07 = 11.429 ✓; 11.429 ÷ 8.000 = 1,43 → 'gần 43%' ✓; 8.240 = 8.000 × 1,03 ✓." },
+      "claims": [
+        { "claim": "Salon TP.HCM 5.000 khách, 800 mới/tháng, rời 10%", "status": "illustrative-unlabelled", "note": "" },
+        { "claim": "Chi phí kéo khách mới thường đắt dần theo quy mô", "status": "unverified", "note": "Nêu như quy luật, không điều kiện." }
+      ],
+      "strengths": "Bài hoàn chỉnh nhất module: có cơ chế (trần = mới ÷ churn), có phản ví dụ (mùa vụ bị tính nhầm là rời), có đào sâu (tách khách mới/cũ, đánh đổi), có việc kiểm trong tuần; Q6 buộc phân biệt điểm phần trăm với phần trăm thay đổi; Q7 dạy tách doanh thu khách cũ/mới.",
+      "upgrade": "Gắn nhãn minh hoạ; nêu trần 8.000 là lạc quan khi khách mới rời nhanh hơn; thêm một câu L5 so hai phương án với số (giảm churn 10 → 8% tốn X vs tăng khách mới 800 → 1.000 tốn Y); thêm điều kiện cho 'CAC đắt dần'; đổi mã lỗi Q3." }
+  ],
+  "module_notes": {
+    "progression": "Trình tự hợp lý: đọc bảng cohort (01) → định nghĩa churn/mẫu số (02) → nhân dồn (03) → hình dạng đường (04) → định nghĩa khách hoạt động (05) → cohort theo kênh (06) → độ chín cohort (07) → trạng thái dừng/xô thủng (08). Bài 08 tổng hợp tốt nhưng chỉ bài 08 có đủ phản ví dụ + đào sâu; 7 bài còn lại dừng ở tình huống → khái niệm → ví dụ → quiz, không bài nào gắn nhãn số minh hoạ.",
+    "overlap": [
+      "dl04-02 và dl04-07 cùng dạy 'không nhét khách chưa có cơ hội vào mẫu số' (một bên làm churn đẹp giả, một bên làm mua lại xấu giả) — nên nối rõ hai mặt hoặc gộp.",
+      "dl04-05 và dl04-07 cùng dạy chọn cửa sổ theo nhịp mua (Q4/Q7 của hai bài gần trùng).",
+      "dl04-03 và dl04-08 cùng dùng mô hình churn hằng; dl04-03 Q1/Q4/Q6/Q7 lặp một ý."
+    ],
+    "gaps": [
+      "Thiên lệch người sống sót (survivorship) chưa được nêu tên: mọi bài đọc 'khách còn lại' mà không cảnh báo khảo sát/NPS/hành vi của nhóm còn lại không đại diện cho cohort ban đầu (chỉ dl04-06 Q5 chạm tự chọn lọc).",
+      "Định nghĩa giữ chân classic (mua trong tháng k) vs unbounded (đã mua ít nhất một lần kể từ) vs rolling — chưa có, dẫn tới mâu thuẫn dl04-01 Q5 'luôn' với dl04-04 Q3 'đường nụ cười'.",
+      "Giữ chân theo doanh thu (GRR/NRR, mở rộng/thu hẹp) chỉ xuất hiện ở dl04-02 Q7; chưa có bài.",
+      "Quy tắc nhiễu cho cohort nhỏ (±1/√n) chỉ nói định tính ở dl04-01; không bài nào cho công thức dù dl05-08 có.",
+      "Thời gian hoàn vốn CAC theo cohort (payback) — cầu nối tự nhiên từ dl04-06/08 sang LTV, chưa có."
+    ],
+    "best_lesson": "B:dl04-08",
+    "weakest_lesson": "B:dl04-07"
+  }
+}

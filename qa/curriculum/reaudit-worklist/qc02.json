@@ -1,0 +1,18 @@
+{
+ "mod": "qc02",
+ "lessons": [
+  {
+   "id": "B:qc02-04",
+   "total": 89,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1",
+     "quote": "Lãi trên giấy; phải đối soát doanh thu thật mới biết lãi thật",
+     "issue": "Ba phương án sai đều chứa từ tuyệt đối (\"chắc chắn\", \"luôn\", \"mọi\"); đáp án là phương án duy nhất có rào — đoán được bằng mẹo.",
+     "fix": "Bỏ từ tuyệt đối khỏi ít nhất hai phương án sai."
+    }
+   ]
+  }
+ ]
+}

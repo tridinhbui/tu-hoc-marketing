@@ -1,0 +1,16 @@
+{
+ "mod": "gt03",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:gt03-01",
+   "where": "Q7 (a + vì của a)",
+   "status": "fixed",
+   "change": "Phương án a: “ít nhất 60 đơn dùng mã riêng của video và tổng đơn không dưới 240” → “ít nhất 60 đơn đầu tiên của khách mới dùng mã riêng của video”; lời giải a: chỉ đếm đơn đầu tiên của khách mới nên khách cũ đổi sang dùng mã không làm phồng kết quả.",
+   "key_changed": false,
+   "note": "Đã tự kiểm: khuyến mãi toàn sàn cùng kỳ đẩy tổng đơn lên, nên điều kiện “tổng đơn ≥ 240” không loại được việc khách cũ chuyển sang dùng mã. Lỗi thật. Chọn giới hạn mã cho khách mới thay cho nhóm đối chứng vì đề chỉ có một quán; b và c vẫn sai rõ."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

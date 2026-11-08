@@ -1,0 +1,80 @@
+{
+ "mod": "tn02",
+ "lessons": [
+  {
+   "id": "B:tn02-01",
+   "title": "Trang mới bán tốt hơn 30% — nhưng nhờ cái gì?",
+   "total": 69,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "TÌNH HUỐNG, Q1",
+     "quote": "Cả gói thay đổi tốt hơn bản cũ, chưa rõ nhờ yếu tố nào",
+     "issue": "Với 10.000 lượt/tuần chia đôi, 2,0% và 2,6% là ~100 so với ~130 đơn; dao động ±2√230 ≈ ±30 bằng đúng chênh lệch 30 đơn. Theo quy tắc của chính module (tn02-03), 'gói tốt hơn' chưa đứng vững, nhưng bài và đáp án Q1 coi là đã thắng.",
+     "fix": "Thêm vào lời giải Q1 và ví dụ: 'và chỉ khi chênh lệch vượt dao động may rủi — ở đây ~100 vs ~130 đơn, chênh 30 ≈ ±30, nên gói mới cũng chưa chắc hơn (bài 03)'. Hoặc tăng lượt xem trong tình huống lên 50.000/tuần."
+    }
+   ],
+   "upgrade": "Thêm kiểm nhiễu cho 2,0% vs 2,6%; nhắc thiết kế ma trận là phương án thay thế; bổ sung ba phần cấu trúc; thêm phép tính lãi mỗi đơn khi hạ giá để Q2 'giá đi trước' có số."
+  },
+  {
+   "id": "B:tn02-03",
+   "title": "40 đơn so với 30 đơn — B thắng hay chỉ gặp may?",
+   "total": 79,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Khi so hai bản, cả hai cùng dao động nên chênh lệch dao động khoảng ±2×√(kA + kB)",
+     "issue": "Quy tắc so số đơn tuyệt đối chỉ đúng khi hai bản có cùng số lượt xem (ví dụ bài luôn cho 1.000/1.000, 5.000/5.000). Bài không nêu điều kiện này; người học áp cho hai bản lệch lượt (thường gặp khi chia 60/40 hoặc một bản tắt sớm) sẽ ra kết luận sai. Cũng chưa nói quy tắc là xấp xỉ cho tỉ lệ nhỏ (dưới ~10%).",
+     "fix": "Thêm hai câu điều kiện: 'chỉ dùng khi hai bản có lượt xem gần bằng nhau; nếu lệch, so tỉ lệ thay cho số đơn (hoặc quy về cùng 1.000 lượt). Quy tắc là xấp xỉ, đủ tốt khi tỉ lệ dưới khoảng 10%'."
+    }
+   ],
+   "upgrade": "Nêu điều kiện cùng lượt xem và giới hạn tỉ lệ nhỏ; bổ sung ba phần cấu trúc với phản ví dụ hai bản lệch lượt; thêm một câu L5: 'chênh 10 đơn trong ±17 — chạy thêm tốn 3 ngày hay chuyển sang B rẻ hơn, biện hộ'."
+  },
+  {
+   "id": "B:tn02-05",
+   "title": "Ngày thứ ba B đang dẫn 25% — dừng luôn được không?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "Cách đúng: chốt cỡ mẫu trước, xem để kiểm tra lỗi kỹ thuật, nhưng chỉ ra quyết định khi đủ mẫu.",
+     "issue": "Nêu kiểm định cỡ mẫu cố định là 'cách đúng' duy nhất; mọi lần đọc giữa chừng bị gọi là nhìn trộm. Thực tế có thiết kế đọc nhiều lần hợp lệ (kiểm định tuần tự / chia ngưỡng theo lần đọc) mà nhiều công cụ A/B dùng. Oversimplification nêu như sự thật; người học sẽ bác kết quả của công cụ có 'always valid' một cách sai.",
+     "fix": "Thêm một câu: 'nếu muốn đọc nhiều lần, phải dùng phương pháp thiết kế cho việc đó (kiểm định tuần tự; mỗi lần đọc đòi ngưỡng chặt hơn) — đọc nhiều lần với ngưỡng 5% thường mới là nhìn trộm'."
+    }
+   ],
+   "upgrade": "Nêu kiểm định tuần tự là phương án hợp lệ để không tuyệt đối hoá; ghi cách ra số 20–30%; bổ sung ba phần cấu trúc; thêm một câu L4: cho bảng chênh theo ngày của một test (25%, 12%, −3%, 6%…) và hỏi ngày nào được đọc."
+  },
+  {
+   "id": "B:tn02-06",
+   "title": "Test chạy thứ Hai đến thứ Năm — kết quả có dùng cho cả tuần?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "ĐÀO SÂU",
+     "quote": "xem kết quả theo ngày thường và cuối tuần ngay trong lúc chạy, dừng sớm với bản thua rõ ở nhóm lớn",
+     "issue": "Mâu thuẫn trực tiếp với bài 05 vừa dạy (chỉ dừng sớm khi có lỗi kỹ thuật; nhìn giữa chừng rồi dừng là nhìn trộm). 'Thua rõ' giữa chừng chính là điều bài 05 nói là chưa chắc.",
+     "fix": "Viết lại: 'xem theo nhóm ngày để chuẩn bị giả thuyết, nhưng không dừng theo con số giữa chừng (bài 05); chỉ dừng khi bản mới gây lỗi hoặc thiệt hại rõ ràng, có ghi là chưa kết luận'."
+    }
+   ],
+   "upgrade": "Sửa ĐÀO SÂU để khớp bài 05; nêu rủi ro so nhiều nhóm ở Q5; thêm câu L4 đọc bảng lượt/đơn theo thứ trong tuần để tự quyết định độ dài test."
+  },
+  {
+   "id": "B:tn02-07",
+   "title": "Chuyển đổi tăng, giá trị đơn giảm — bản nào thắng?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "A dẫn 3,2%, và thắng nếu mức chênh này vượt dao động may rủi của số lượt đã chạy",
+     "issue": "Doanh thu mỗi lượt xem là chỉ số liên tục (phụ thuộc phương sai giá trị đơn), quy tắc ±2√k đếm đơn của bài 03 không áp dụng được; bài không cho cách ước nhiễu nào khác và không nói chỉ số 'gần tiền' cần mẫu lớn hơn nhiều so với chuyển đổi. Thiếu điều kiện này, lời khuyên 'chọn chỉ số càng gần tiền càng tốt' có thể làm test không bao giờ đọc được.",
+     "fix": "Thêm: 'doanh thu mỗi lượt xem dao động mạnh hơn tỉ lệ đơn (vài đơn lớn kéo lệch), nên cần mẫu lớn hơn nhiều; cách thô: cắt bỏ đơn ngoại lệ hoặc dùng tỉ lệ đơn làm chỉ số chính và giá trị đơn làm rào chắn khi lượt xem ít'."
+    }
+   ],
+   "upgrade": "Nêu phương sai của chỉ số tiền và cách xử lý; bổ sung ba phần cấu trúc; thay Q7; thêm số lượt xem cho ví dụ để người học tự kiểm 'A dẫn 3,2%' có vượt nhiễu không."
+  }
+ ]
+}

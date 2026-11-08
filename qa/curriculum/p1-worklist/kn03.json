@@ -1,0 +1,57 @@
+{
+ "mod": "kn03",
+ "lessons": [
+  {
+   "id": "B:kn03-01",
+   "title": "Mới bán online với 30 triệu: lên sàn nào trước?",
+   "total": 62,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Q1/Q6",
+     "quote": "khó vượt ngưỡng đơn đều để thuật toán chú ý",
+     "issue": "Khẳng định về cách thuật toán sàn vận hành (\"ngưỡng đơn đều\", \"năng lực của mình được thuật toán thưởng\") nêu như sự thật, không nguồn, không gắn nhãn. Bài thuộc lớp fast (so sánh Shopee/Lazada/TikTok Shop) nhưng không có src, ngày kiểm hay câu \"nếu màn hình khác, tin trang chính thức\".",
+     "fix": "Hạ thành \"theo quan sát của người bán\" hoặc thêm src trung tâm người bán của sàn với ngày kiểm."
+    }
+   ],
+   "upgrade": "Thêm src và ngày kiểm cho mọi khẳng định về sàn (fast). Đưa số vào ví dụ: chi phí mỗi lượt xem từ khoá giả định, ngân sách 60 ngày, số đơn hoà vốn với lãi/đơn của xà phòng. Thêm phản ví dụ và đào sâu (sàn lai, chi phí vận hành mỗi sàn: người trả lời, đóng gói, đối soát). Thay Q6 (L2) bằng câu đọc bảng năng lực × sàn."
+  },
+  {
+   "id": "B:kn03-02",
+   "title": "Đơn 200.000đ trên sàn, bạn thật sự lãi bao nhiêu?",
+   "total": 76,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "từ 1/7/2025 sàn có chức năng thanh toán còn khấu trừ thuế trên doanh thu trước khi chuyển tiền (Nghị định 117/2025/NĐ-CP)",
+     "issue": "Khẳng định luật cụ thể (số hiệu, ngày hiệu lực) thuộc lớp fast nhưng bài không có `src` với ngày kiểm. Nội dung khớp hiểu biết của người chấm nhưng chưa xác minh trong bước này; bài đã khuyên \"hỏi kế toán hoặc pháp chế\" là tốt.",
+     "fix": "Thêm src (văn bản gốc trên cổng pháp luật) với ngày kiểm và câu \"nếu quy định đổi, tin văn bản mới nhất\"."
+    }
+   ],
+   "upgrade": "Thêm src cho nghị định (P1). Thêm phản ví dụ (voucher sàn tài trợ) và đào sâu (phí trần, hoàn tiền phí khi đơn hoàn, thuế). Thay Q7 bằng câu đọc bảng đối soát thật. Thêm bảng 3 kịch bản voucher (0 / 20k / 40k) với lãi/đơn và số đơn hoà để nhìn thấy độ nhạy."
+  },
+  {
+   "id": "B:kn03-04",
+   "title": "Vì sao sản phẩm của bạn nằm trang 5 khi khách tìm kiếm?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Mỗi sàn có thuật toán riêng và không công bố chi tiết, nhưng logic chung dễ đoán",
+     "issue": "Bài về thuật toán xếp hạng (lớp fast) không có src/ngày kiểm hay câu \"nếu màn hình khác, tin trang chính thức\" dù đã hedging tốt; các tín hiệu liệt kê (tỉ lệ bấm, giao đúng hạn, đánh giá) nêu như sự thật chung.",
+     "fix": "Thêm src trang hướng dẫn người bán của một sàn về tiêu chí hiển thị, ngày kiểm, và câu nhắc kiểm lại."
+    },
+    {
+     "sev": "P1",
+     "where": "Q7",
+     "quote": "Chi phí mua đơn ảo luôn đắt hơn chạy quảng cáo tìm kiếm nên chắc chắn lỗ",
+     "issue": "Phương án sai a và c đều dùng từ tuyệt đối (\"luôn\", \"chắc chắn\"), đáp án đúng d dài nhất và ôn hoà → đoán được bằng hình thức.",
+     "fix": "Viết a/c ôn hoà hơn (vd. \"Đơn ảo thường đắt hơn quảng cáo từ khoá nên khó có lãi\") và rút gọn d."
+    }
+   ],
+   "upgrade": "Thêm src và ngày kiểm (fast). Sửa hình thức phương án Q7. Tách tỉ lệ chuyển đổi theo nguồn traffic trong ví dụ. Thêm phản ví dụ/đào sâu. Thêm bảng 2 sản phẩm × (lượt xem theo nguồn · đơn · CVR · đánh giá · giao đúng hạn) để có câu đọc bảng L4."
+  }
+ ]
+}

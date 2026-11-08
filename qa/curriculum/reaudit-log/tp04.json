@@ -1,0 +1,16 @@
+{
+ "mod": "tp04",
+ "fixed_at": "2026-11-08",
+ "items": [
+  {
+   "id": "B:tp04-04",
+   "where": "Khái niệm",
+   "status": "fixed",
+   "change": "“nhiều nền tảng video ngắn từng công bố rằng phần lớn người dùng xem với âm thanh bật (…tra lại…)” → “Bài này giả định phần lớn người xem để âm thanh bật; tỉ lệ thật khác nhau theo nền tảng và thời điểm, nên muốn dẫn một con số, hãy kiểm trang chính thức của nền tảng.” Thêm src TikTok Ads Help Center (tìm “sound on”, st:'chua').",
+   "key_changed": false,
+   "note": "Đã tự kiểm: khẳng định dữ liệu nền tảng không có nguồn. Đã viết thành giả định. Người kiểm nên thay URL trang chủ Help Center bằng trang/bài chính thức cụ thể về xem có âm thanh nếu tìm được."
+  }
+ ],
+ "validator": "0 lỗi",
+ "tests": "pass"
+}

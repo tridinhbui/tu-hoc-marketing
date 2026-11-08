@@ -1,0 +1,20 @@
+{
+ "mod": "dl05",
+ "lessons": [
+  {
+   "id": "B:dl05-05",
+   "title": "Share of search 18% nói gì về thị phần năm sau?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "KHÁI NIỆM",
+     "quote": "ô tô, năng lượng, điện thoại theo nghiên cứu của Les Binet, IPA 2020",
+     "issue": "Nêu nghiên cứu thật (tác giả, tổ chức, năm) như bằng chứng nhưng bài không có trường src với liên kết và ngày kiểm; kiến thức loại periodic bắt buộc có nguồn. Cũng không nói độ trễ cụ thể Binet báo (6–12 tháng tuỳ ngành) nên 'đi trước' không dùng được để lập kế hoạch.",
+     "fix": "Thêm src: Les Binet, 'Share of Search as a Predictor of Market Share', IPA/EffWorks 2020 (link, ngày kiểm) và ghi độ trễ ước lượng theo ngành; ghi rõ nghiên cứu dùng Google Trends, không phải lượt tuyệt đối."
+    }
+   ],
+   "upgrade": "Đặt src cho Binet/IPA với độ trễ theo ngành và công cụ (Trends); thêm phản ví dụ thương hiệu nhỏ có share of search cao vì tên trùng từ thông dụng; thêm số tiền cho quyết định mở rộng phân phối; thay Q7 bằng câu tính lại rổ."
+  }
+ ]
+}

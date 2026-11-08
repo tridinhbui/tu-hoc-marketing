@@ -1,0 +1,4 @@
+{ "mod":"kh07", "fixed_at":"2026-11-07", "items":[
+  { "id":"B:kh07-01", "where":"Tình huống", "status":"fixed", "change":"'mẫu B có tỉ lệ để lại số điện thoại cao hơn rõ rệt' → '(số minh hoạ) mẫu A 2,1% trên 20.000 lượt hiển thị, mẫu B 3,0% trên 20.000 lượt — chênh 0,9 điểm %, tức 180 số điện thoại; với 20.000 lượt mỗi mẫu, chênh này đủ lớn để không phải nhiễu ngẫu nhiên, nhưng vẫn là một đợt trên một tệp khách'.", "key_changed":false, "note":"Đã tự kiểm: bài không có con số A/B nào. Số chọn sao cho chênh thật sự có ý nghĩa (420 vs 600 số trên 20.000 lượt, z ≈ 5,8) để không mâu thuẫn với Q1 đáp án c. Không đụng Q3 (1.200.000 × 60% × 40% × 12)." }
+ ],
+ "validator":"0 lỗi", "tests":"pass" }

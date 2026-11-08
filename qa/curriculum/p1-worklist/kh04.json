@@ -1,0 +1,20 @@
+{
+ "mod": "kh04",
+ "lessons": [
+  {
+   "id": "B:kh04-03",
+   "title": "Làm sao biết insight của bạn đúng trước khi làm quảng cáo?",
+   "total": 74,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "VÍ DỤ",
+     "quote": "Tỉ lệ \"đúng quá\" là 30% so với 70%. Câu 2 thắng rõ",
+     "issue": "Với mẫu 20 người, bài không nói chênh lệch bao nhiêu thì đủ tin; 6/20 vs 14/20 là chênh lớn nhưng người học sẽ áp cùng cách đọc cho 9/20 vs 11/20 (hoàn toàn trong nhiễu). Rubric đòi nêu nhiễu khi mẫu nhỏ.",
+     "fix": "Thêm một câu: với 20 người, chỉ tin khi chênh ≥ 5–6 người; chênh 2–3 người là nhiễu, phải thử thêm 20 người nữa."
+    }
+   ],
+   "upgrade": "Thêm ngưỡng chênh lệch tối thiểu cho mẫu 20 và quy tắc 'chênh nhỏ thì thử thêm'; thêm người chấm độc lập để giảm thiên lệch; thay sai định danh 27,8; thêm phản ví dụ ('đúng quá' cao mà không mua) và đào sâu về chọn đúng người trong tệp; thêm một câu L5 đánh đổi 'thử 20 người ở một chợ' vs '40 người ở hai tỉnh'."
+  }
+ ]
+}

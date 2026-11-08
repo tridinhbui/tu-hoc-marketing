@@ -1,0 +1,200 @@
+{
+  "mod": "in01", "scored_at": "2026-11-07", "scorer": "independent-agent", "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    { "id": "B:in01-01",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 6, "clarity": 5 },
+      "total": 76,
+      "bloom_items": ["L2","L3","L3","L2","L3","L3","L2"], "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "Mục tiêu khách mới +15%, thực tế +6% → đạt 40% mục tiêu.", "issue": "Chia hai mức tăng (6/15) để ra \"% đạt\" là một quy ước; bài không nói mẫu số (khách mới cùng kỳ là bao nhiêu người) nên người học không kiểm được +6% là trên nền nào, cũng không biết 2 triệu lượt xem so với bao nhiêu lượt xem bình thường.", "fix": "Thêm nền: \"cùng kỳ 4.000 khách mới → mục tiêu 4.600, thực tế 4.240\"; ghi % đạt theo số tuyệt đối (240/600 = 40%)." },
+        { "sev": "P2", "where": "Q1, Q4, Q7", "quote": "Vì sao phải mở đúng bản brief cũ thay vì nhớ lại mục tiêu trong buổi họp?", "issue": "Ba câu L2 nhận lại ý bài; không câu nào cho một bảng mục tiêu–kết quả mới để người học tự lập và đọc.", "fix": "Thay Q4 bằng bảng 4 mục tiêu với kết quả lẫn lộn (2 đạt, 1 hụt nặng, 1 không có mục tiêu) và hỏi dòng nào phải xuống mục chỉ số phụ, dòng nào cần tìm nguyên nhân trước." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[138.9,\"SAI_MAU_SO\"],[28,\"NHAM_DIEM_PHAN_TRAM\"]]", "issue": "28 là phần hụt (100 − 72), không phải nhầm điểm phần trăm; mã lỗi gọi sai hiểu lầm.", "fix": "Đổi mã thành NHAM_PHAN_HUT_VOI_PHAN_DAT." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 18.000 ÷ 25.000 = 72% ✓; 25.000 ÷ 18.000 = 138,9% (sai mẫu số) ✓; 28 = phần hụt. Q5: 6 ÷ 15 = 40% ✓, \"hụt 9 điểm phần trăm\" ✓." },
+      "claims": [
+        { "claim": "Post-mortem bắt đầu bằng so kết quả với mục tiêu viết trước khi chạy", "status": "verified", "note": "Nguyên tắc thực hành chuẩn; không gắn nguồn cụ thể, không cần." },
+        { "claim": "18.000 ly / 25.000 ly; 2 triệu lượt xem; +6% / +15% khách mới", "status": "illustrative-unlabelled", "note": "Số của tình huống, tự khớp qua Q3/Q5." }
+      ],
+      "strengths": "Phản ví dụ (mục tiêu đặt sai từ đầu → 72% nói về kế hoạch, không về chiến dịch) tách hai câu hỏi mà người làm nghề hay trộn; Q5 phân biệt điểm phần trăm và phần trăm trong chính ngữ cảnh báo cáo.",
+      "upgrade": "Thêm nền số tuyệt đối cho khách mới và lượt xem; thay 1–2 câu L2 bằng câu lập bảng 4 mục tiêu; sửa mã lỗi 28; thêm vào Đào sâu một phép thử cho phản ví dụ: so tỉ lệ đạt của 5 chiến dịch gần nhất — nếu đều quanh 70%, vấn đề ở cách đặt mục tiêu." },
+
+    { "id": "B:in01-02",
+      "scores": { "accuracy": 12, "depth": 13, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 7, "data": 8, "clarity": 5 },
+      "total": 78,
+      "bloom_items": ["L2","L3","L3","L3","L4","L2","L3"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Tình huống ↔ Ví dụ", "quote": "Mốc “không làm gì” của vùng chiến dịch là 100.000 × 1,2 = 120.000 thùng.", "issue": "Tình huống chỉ nói 100.000 là MỤC TIÊU; ví dụ lại dùng 100.000 làm doanh số cùng kỳ năm trước mà không nói. Nếu cùng kỳ năm trước là 90.000 thì mốc là 108.000 và phần chiến dịch là 22.000, không phải 10.000 — giả định thiếu làm kết quả đổi. Q3 đã sửa bằng cách ghi rõ \"cùng kỳ năm trước bán 100.000\", nhưng phần đọc thì không.", "fix": "Thêm vào Tình huống: \"cùng kỳ năm trước vùng này bán 100.000 thùng, mục tiêu năm nay cũng đặt bằng mức đó\"." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Ở các tỉnh không chạy chiến dịch, doanh số cũng tăng 20% so với cùng kỳ", "issue": "Số đối chứng không gắn nhãn minh hoạ, không nói vùng đối chứng lớn bao nhiêu (nhiễu ở vùng nhỏ) dù Đào sâu nói nên nêu thành khoảng.", "fix": "Ghi \"(số minh hoạ; 4 tỉnh đối chứng, tăng 15–24%, lấy 20% làm mốc giữa)\" và cho kết quả thành khoảng 4.000–15.000 thùng." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[30000,\"NHAM_SO_TUYET_DOI\"],[26000,\"SAI_TINH_TOAN\"]]", "issue": "26.000 = 130.000 × 20% (áp mức tăng đối chứng lên số năm nay) là một hiểu lầm cụ thể, mã chung không gọi tên.", "fix": "Đổi mã thành AP_TI_LE_LEN_SO_NAM_NAY." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 100.000 × 1,2 = 120.000; 130.000 − 120.000 = 10.000 ✓; 30.000 = so với mục tiêu ✓; 26.000 = 130.000 × 0,2. Ví dụ khớp Q3 khi chấp nhận giả định mục tiêu = cùng kỳ năm trước." },
+      "claims": [
+        { "claim": "Tách phần ngoại cảnh bằng vùng đối chứng (vùng không chạy, cùng thời tiết)", "status": "verified", "note": "Khung difference-in-differences đơn giản, trình bày đúng kèm điều kiện vùng phải giống." },
+        { "claim": "Vùng không chạy tăng 20%; 130.000 / 100.000 thùng", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ nói đúng điều kiện làm phép trừ đối chứng sai (vùng không giống) và đưa dấu hiệu nhận ra; Đào sâu yêu cầu nói kết quả thành khoảng; Q5 đảo chiều (hụt do kinh tế?) kiểm cùng nguyên lý ở kết quả xấu.",
+      "upgrade": "Khai báo cùng kỳ năm trước trong Tình huống; gắn nhãn và cho khoảng cho vùng đối chứng; thêm một câu L5: hai mốc cho hai kết quả khác nhau (đối chứng +20% vs ngành +12%) — chọn mốc nào, vì sao, và báo ngân sách năm sau theo khoảng nào." },
+
+    { "id": "B:in01-03",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 16, "examples": 10, "pedagogy": 6, "assessment": 8, "data": 5, "clarity": 5 },
+      "total": 75,
+      "bloom_items": ["L2","L3","L3","L4","L3","L4","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Hỏi “quy trình nào cho phép lỗi này”, không hỏi “ai làm sai” — người sợ bị trách sẽ giấu sự thật.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu riêng; hai giới hạn được nhét trong Khái niệm. Thiếu trường hợp \"không đổ lỗi\" bị lạm dụng (lỗi lặp lại ở cùng một người dù quy trình đã có) và cách xử lý.", "fix": "Thêm Phản ví dụ: checklist đã có mục dự báo nhưng cùng một người bỏ qua 3 lần — lúc này vấn đề là tuân thủ, cần người nhận trách nhiệm cụ thể, không phải thêm quy trình." },
+        { "sev": "P2", "where": "Q3", "quote": "Giờ cao điểm trang ghi nhận trung bình 7,5 đơn mỗi phút. Giá trị trung bình mỗi đơn 600.000 đ.", "issue": "Phép tính nhân hai bước không gắn với kỹ năng của bài (nguyên nhân gốc); số 7,5 đơn/phút không có trong phần đọc, chỉ \"mất ước khoảng 300 đơn\". Câu tính chiếm chỗ của một câu L4.", "fix": "Thay bằng câu tính chi phí phòng ngừa vs thiệt hại: thử tải tốn 8 triệu/đợt × 4 đợt/năm so với 180 triệu mất một lần — gấp bao nhiêu lần." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Truy cập gấp 5 lần dự kiến.", "issue": "Số minh hoạ không gắn nhãn; không nói dự kiến là bao nhiêu để người học thấy mức lệch.", "fix": "Ghi \"(minh hoạ: dự kiến 2.000 người đồng thời, thực tế ~10.000)\"." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 40 × 7,5 = 300 đơn (khớp tình huống \"mất ước khoảng 300 đơn\") × 600.000 = 180 triệu ✓; lỗi 300 = số đơn ✓; 4,5 = 7,5 × 0,6 (doanh thu mỗi phút, triệu)." },
+      "claims": [
+        { "claim": "Post-mortem không đổ lỗi (blameless) và hỏi \"vì sao\" ~5 lần tới điều sửa được bằng quy trình", "status": "verified", "note": "Hai thực hành chuẩn (blameless post-mortem, 5 Whys) không gắn tên nguồn; bài nêu đúng giới hạn (một nhánh, dừng sớm; vẫn cần người nhận việc)." }
+      ],
+      "strengths": "Ví dụ chạy trọn hai chuỗi vì sao tới hai hành động có người nhận và hạn — mẫu người học chép được ngay; Q4 và Q7 là câu đánh giá bốn kết luận/hành động thật, phân biệt \"cẩn thận hơn\" với \"thêm bước checklist có hạn\".",
+      "upgrade": "Thêm Phản ví dụ về tuân thủ và Đào sâu về cách chọn nhánh sửa trước (rẻ, chặn lỗi lặp); thay Q3 bằng câu so chi phí phòng ngừa/thiệt hại; gắn nhãn số trong ví dụ; thêm bảng mẫu hành động (việc – người – hạn – cách kiểm) vào Áp dụng." },
+
+    { "id": "B:in01-04",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 17, "examples": 12, "pedagogy": 7, "assessment": 8, "data": 8, "clarity": 5 },
+      "total": 81,
+      "bloom_items": ["L2","L4","L3","L3","L4","L4","L2"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P1", "where": "Ví dụ", "quote": "voucher email chi 20 triệu, tạo 180 triệu doanh thu tăng thêm", "issue": "Toàn bộ bảng Giữ–Bỏ dựa trên \"doanh thu tăng thêm\" theo từng hoạt động nhưng bài không nói cách gán (mã riêng? last-click? so tuần?). Email thường gửi cho khách cũ sắp mua nên 180 triệu có thể phần lớn không phải tăng thêm; thiếu giả định này làm cột Giữ/Bỏ có thể đổi. in01-08 cùng module dạy đúng điều này nhưng bài không nối.", "fix": "Thêm một câu: \"doanh thu tăng thêm đo bằng mã riêng từng hoạt động và so nhóm không nhận email (minh hoạ)\" và một dòng cảnh báo email dễ được gán quá tay; nối tới B:in01-08." },
+        { "sev": "P2", "where": "Tình huống ↔ Ví dụ", "quote": "Tổng chi 200 triệu, doanh thu tăng thêm 600 triệu.", "issue": "Cộng bốn hoạt động đo được là 180 + 240 + 140 + 30 = 590 triệu; 10 triệu còn lại không được nói là của tờ rơi hay làm tròn.", "fix": "Ghi \"tờ rơi: không gán được ~10 triệu còn lại\" hoặc đổi tổng thành 590." },
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Tổng đẹp che hoạt động lỗ: tổng kết từng dòng vào ba cột Giữ – Bỏ – Thử lại.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu trường hợp hoạt động lỗ nhưng nên Giữ vì nó nuôi hoạt động khác (KOL tạo tìm kiếm cho quảng cáo tìm kiếm) — chính là giới hạn của bảng theo dòng.", "fix": "Thêm Phản ví dụ: cắt KOL thì lượt tìm thương hiệu giảm và quảng cáo tìm kiếm đắt lên — bảng theo dòng bỏ sót tương tác giữa dòng; dấu hiệu là chi phí tìm kiếm tăng sau khi cắt." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Ví dụ: 180 × 40% − 20 = 52 ✓; 240 × 40% − 60 = 36 ✓; 140 × 40% − 70 = −14 ✓; 30 × 40% − 30 = −18 ✓; hoà vốn 30 ÷ 0,4 = 75 ✓; tổng chi 20 + 60 + 70 + 30 + 20 = 200 ✓. Q3: 9 ÷ 4 = 2,25 ✓; 0,75 = 180/240; 0,44 = 4/9 ✓. Bài thực hành: 600 × 35% − 200 = +10 ✓; chi 60 + 40 + 20 + 50 + 30 = 200 ✓." },
+      "claims": [
+        { "claim": "Lãi tăng thêm = doanh thu tăng thêm × biên đóng góp − chi phí", "status": "verified", "note": "Công thức đúng; bài nói rõ không chấm bằng doanh thu/chi." },
+        { "claim": "Biên đóng góp 40%; doanh thu theo hoạt động 180/240/140/30", "status": "illustrative-unlabelled", "note": "Bài thực hành gắn nhãn \"(minh hoạ)\" nhưng phần ví dụ thì không." }
+      ],
+      "strengths": "Bài duy nhất trong module có bài thực hành đầu ra với rubric đo được (tách 2 KOL/6 KOL, tháng đầu/2 tuần cuối, không bắt buộc tiêu hết 200 triệu); ví dụ cho mỗi ô một con số và một điều kiện thử lại (hoà vốn 75 triệu); Q6 kiểm thái độ \"cẩn trọng\" bằng điều kiện dừng.",
+      "upgrade": "Khai báo cách gán doanh thu tăng thêm và nối tới in01-08; cân lại tổng 600/590; thêm Phản ví dụ về tương tác giữa dòng; gắn nhãn minh hoạ cho ví dụ; thêm một câu L5 cân KOL (−14, không đo được) giữa Bỏ và Thử lại với ngân sách giới hạn." },
+
+    { "id": "B:in01-05",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 7, "data": 8, "clarity": 5 },
+      "total": 76,
+      "bloom_items": ["L2","L3","L3","L3","L3","L4","L3"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Đo cả những tháng sau khuyến mãi: doanh số mượn từ tương lai không phải doanh số mới.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu điều kiện khi phần hụt tháng 4–5 KHÔNG do tích trữ (mùa, đối thủ, đứt hàng) — chỉ Q1 lời giải d nhắc \"đối chiếu cùng kỳ năm trước\".", "fix": "Thêm Phản ví dụ: tháng 4–5 năm trước cũng chỉ 30.000 chai (mùa thấp) → phần hụt do mùa, tăng ròng thật gần 26.000; dấu hiệu là so với cùng kỳ và với vùng không chạy." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "70.000 chai tặng tốn 2,1 tỷ giá vốn. Chiến dịch lỗ khoảng 1,92 tỷ.", "issue": "Phép tính \"so với không chạy\" bỏ qua việc 70.000 chai tặng được dùng thay cho mua sau — bài đã tính phần hụt 24.000 nhưng không nói 46.000 chai tặng còn lại đi đâu (dùng nhiều hơn? tích trữ quá cửa sổ 2 tháng?). Không đổi dấu kết luận nhưng để hở giả định.", "fix": "Thêm một câu: \"phần chai tặng vượt mức hụt (46.000) là tiêu dùng tăng thêm hoặc còn trong kho khách; nếu còn trong kho, hụt có thể kéo sang tháng 6–7 và lỗ còn lớn hơn\"." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[30000,\"NHAM_SO_TUYET_DOI\"],[18000,\"SAI_TINH_TOAN\"]]", "issue": "18.000 = 30.000 − 12.000 (chỉ trừ một tháng hụt) là hiểu lầm gọi tên được.", "fix": "Đổi mã thành QUEN_MOT_THANG_HUT." }
+      ],
+      "calc_check": { "n": 2, "ok": 2, "notes": "Q3: 70.000 − 40.000 = 30.000; 2 × (40.000 − 28.000) = 24.000; ròng 6.000 ✓. Q6: 6.000 × 30.000 = 180 triệu; 70.000 × 30.000 = 2.100 triệu; −1.920 ✓; lỗi 180 = quên giá vốn chai tặng ✓; 1.200 = 40.000 × 30.000. Ví dụ khớp Q3/Q6." },
+      "claims": [
+        { "claim": "Khuyến mãi mua 1 tặng 1 gây tích trữ, mượn doanh số từ tương lai", "status": "verified", "note": "Hiệu ứng stockpiling/pantry loading chuẩn trong nghiên cứu khuyến mãi; bài nêu đúng điều kiện (hụt kéo dài tuỳ tốc độ dùng hết)." },
+        { "claim": "Giá bán 60.000, giá vốn 30.000; 40.000/70.000/28.000 chai", "status": "illustrative-labelled", "note": "Ví dụ ghi \"(số minh hoạ)\" cho phần lãi; số chai là dữ kiện tình huống." }
+      ],
+      "strengths": "Phép tính tăng ròng rồi tới lãi sau hàng tặng cho một kết luận gây sốc nhưng đúng (lỗ 1,92 tỷ dù tháng 3 \"rất đẹp\"); Q4 gắn cửa sổ đo với vòng dùng hết sản phẩm (6 tuần) — điều kiện định lượng rõ.",
+      "upgrade": "Thêm Phản ví dụ về hụt do mùa và cách so cùng kỳ/vùng đối chứng (nối in01-02); vá giả định về 46.000 chai tặng dư; gắn mã lỗi riêng; thêm một câu L5: thiết kế lại ưu đãi (tặng cỡ nhỏ, chỉ cho khách mới) và tính ngưỡng khách mới mua lại cần đạt để hoà vốn." },
+
+    { "id": "B:in01-06",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 5, "data": 4, "clarity": 5 },
+      "total": 70,
+      "bloom_items": ["L2","L3","L3","L2","L3","L3","L2"], "bloom_max": "L3",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Trong 400 cuộc gọi tới tổng đài trong chiến dịch, 140 cuộc hỏi “mua ở đâu”. Tỉ lệ cuộc gọi hỏi điểm bán là bao nhiêu phần trăm?", "issue": "Phép chia một bước (L1–L2) không kiểm kỹ năng nào của bài; chiếm chỗ của một câu tình huống.", "fix": "Thay bằng câu đánh giá: cho danh sách 9 người được mời cho một chiến dịch sàn TMĐT (thiếu vận hành kho và CSKH, có 3 người marketing) và hỏi khâu nào bị kể thay." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "Nhờ có chăm sóc khách hàng, nhóm biết 35% cuộc gọi hỏi “mua ở đâu”", "issue": "Số không gắn nhãn minh hoạ, không nói trên bao nhiêu cuộc gọi trong phần đọc (chỉ Q3 cho 400), và nhảy thẳng tới \"vấn đề là phân phối\" mà không loại trừ giả thuyết khác (quảng cáo không ghi điểm bán).", "fix": "Ghi \"(minh hoạ, 140/400 cuộc)\" và thêm: \"kiểm chéo: quảng cáo có ghi nơi mua không; nếu có mà vẫn hỏi → phân phối\"." },
+        { "sev": "P2", "where": "Q1, Q4, Q7", "quote": "Vì sao cần một người ghi chép riêng, không để người điều phối kiêm luôn?", "issue": "Ba câu L2 với nhiễu dễ loại (\"cấp thấp nhất phải viết\", \"hai chữ ký\"); bộ câu không có câu nào L4+.", "fix": "Thêm câu chẩn đoán từ biên bản: cho 4 lượt phát biểu theo thứ tự (sếp nói trước) và hỏi dấu hiệu nào cho thấy ý kiến sau bị neo." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 140 ÷ 400 = 35% ✓; 285,7 = 400/140 ✓; 65 = phần còn lại ✓." },
+      "claims": [
+        { "claim": "Sếp nói trước thì người sau tự điều chỉnh theo (neo ý kiến)", "status": "verified", "note": "Hiệu ứng neo/tuân theo cấp trên trong họp nhóm — nêu đúng dưới dạng nguyên tắc điều phối, không gắn số." },
+        { "claim": "35% cuộc gọi hỏi \"mua ở đâu\"", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ (quan hệ căng → thu ý kiến riêng bằng phiếu ẩn danh trước họp) là điều kiện thật làm nguyên tắc \"mời đủ\" phản tác dụng; ví dụ 7 người có vai rõ và lý do cho từng vai.",
+      "upgrade": "Thay Q3 và một câu L2 bằng câu đánh giá danh sách mời và câu đọc biên bản; gắn nhãn 35% và loại trừ giả thuyết khác; thêm vào Đào sâu một thước đo cho buổi họp (số khâu có mặt / số khâu chạm khách; số hành động có người và hạn) để chiều dữ liệu không trống." },
+
+    { "id": "B:in01-07",
+      "scores": { "accuracy": 14, "depth": 13, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 6, "data": 5, "clarity": 5 },
+      "total": 75,
+      "bloom_items": ["L2","L3","L3","L2","L3","L4","L3"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Ví dụ", "quote": "thử nghiệm ý tưởng với 200 khách cho điểm thiết kế đen – vàng 7,8/10, cao hơn mẫu đỏ 7,1", "issue": "Không gắn nhãn minh hoạ; chênh 0,7 điểm trên n=200 không được nói có vượt nhiễu không, trong khi bài đang dạy đánh giá \"quyết định có cơ sở\" — cơ sở đó cần được kiểm.", "fix": "Ghi \"(minh hoạ; chênh 0,7 điểm, sai số ±0,3 nên đủ tin)\"." },
+        { "sev": "P2", "where": "Q3", "quote": "Năm trước hãng bán 40.000 hộp. Năm nay bán kém hơn 25%. Năm nay hãng bán được bao nhiêu hộp?", "issue": "Phép nhân một bước, không liên quan kỹ năng chống thiên kiến nhìn lại.", "fix": "Thay bằng câu tính lát cắt: siêu thị 28.000 hộp giảm 10%, quà doanh nghiệp 12.000 hộp giảm 60% — tổng giảm bao nhiêu % và kênh nào đóng góp bao nhiêu điểm vào mức giảm." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "kênh siêu thị giảm 10%, nhưng kênh quà biếu doanh nghiệp giảm 60%", "issue": "Hai mức giảm chỉ khớp tổng −25% khi quà doanh nghiệp chiếm ~30% sản lượng năm trước; bài không nêu cơ cấu nên người học không kiểm được.", "fix": "Thêm \"năm trước: siêu thị 28.000, quà doanh nghiệp 12.000\" (0,7 × 10% + 0,3 × 60% = 25%)." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 40.000 × 0,75 = 30.000 ✓; 10.000 = phần giảm ✓; 32.000 = 40.000 ÷ 1,25 (sai mẫu số) ✓. Ví dụ: −10%/−60% khớp −25% nếu cơ cấu 70/30 (không nêu)." },
+      "claims": [
+        { "claim": "Thiên kiến nhìn lại (hindsight bias): biết kết quả rồi thấy nó hiển nhiên, nhớ nhầm đã lường trước", "status": "verified", "note": "Khái niệm tâm lý học chuẩn (Fischhoff), mô tả đúng, không nói quá." },
+        { "claim": "200 khách chấm 7,8 vs 7,1; siêu thị −10%, quà doanh nghiệp −60%", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Bốn ô quyết định × kết quả trong Đào sâu và câu hỏi \"với thông tin lúc đó, lựa chọn có hợp lý không\" cho người học công cụ đánh giá cụ thể; ví dụ chuyển bài học từ \"màu đen\" sang \"tập trung quá ít khách\" bằng lát cắt kênh — minh hoạ đúng cơ chế.",
+      "upgrade": "Gắn nhãn và nêu nhiễu cho thử nghiệm 200 khách; nêu cơ cấu kênh; thay Q3 bằng câu tính đóng góp theo kênh; thêm một câu L5 xử lý ô \"quyết định dở – kết quả tốt\" (có thưởng không?)." },
+
+    { "id": "B:in01-08",
+      "scores": { "accuracy": 14, "depth": 11, "practical": 15, "examples": 10, "pedagogy": 6, "assessment": 7, "data": 7, "clarity": 5 },
+      "total": 75,
+      "bloom_items": ["L2","L3","L3","L3","L3","L4","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Thắng mà không biết vì sao thắng thì đợt sau dễ nhân rộng nhầm chỗ.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu điều kiện khi nên nhân rộng nhanh dù chưa hiểu hết (cửa sổ mùa vụ ngắn, đối thủ sắp vào) — đánh đổi tốc độ vs hiểu.", "fix": "Thêm Phản ví dụ: nước uống thể thao bán mùa hè, chờ 1 tháng tổng kết là mất 1/3 mùa — khi đó chạy đợt hai ở quy mô 1,5× với mốc kiểm tuần, không phải 2× hay 1×." },
+        { "sev": "P2", "where": "Q3", "quote": "Chi phí mỗi đơn qua quảng cáo tăng từ 40.000 đ lên 65.000 đ. Chi phí mỗi đơn tăng bao nhiêu phần trăm?", "issue": "Phép tính một bước; bỏ qua cơ hội tính điều bài dạy (phần KOL thật sự tạo ra sau khi loại 1/3 đơn của người đã theo dõi).", "fix": "Thay bằng: 60% đơn dùng mã KOL, 1/3 trong đó là khách vốn đã theo dõi — phần KOL thật sự tạo ra là bao nhiêu % tổng đơn (40%)." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "60% đơn dùng mã của một KOL gym duy nhất, 25% từ quảng cáo, 15% tự nhiên", "issue": "Chỉ phần \"1 trong 3\" gắn nhãn minh hoạ; phân bổ 60/25/15 và CPA 40.000 → 65.000 thì không.", "fix": "Đưa \"(số minh hoạ)\" lên đầu ví dụ để phủ toàn bộ." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (65.000 − 40.000) ÷ 40.000 = 62,5% ✓; 38,5 = 25/65 ✓; 25 = chênh tuyệt đối (nghìn) ✓. Ví dụ: 60 + 25 + 15 = 100 ✓." },
+      "claims": [
+        { "claim": "Mã giảm giá / last-click chỉ cho biết đơn đi qua kênh nào, không cho biết kênh đó tạo ra đơn", "status": "verified", "note": "Giới hạn attribution nêu đúng và đúng chỗ." },
+        { "claim": "60% / 25% / 15% nguồn đơn; 1/3 đơn dùng mã là khách đã theo dõi; CPA 40.000 → 65.000", "status": "illustrative-labelled", "note": "Chỉ phần 1/3 được gắn nhãn; phần còn lại chưa." }
+      ],
+      "strengths": "Đưa kiểm attribution vào ngay trong post-mortem khi thắng (Q7) và gọi tên \"suýt hỏng\" (kho ngày 20) là bài học rẻ nhất; Q6 cân một nguồn 60% vừa là cơ hội vừa là rủi ro tập trung.",
+      "upgrade": "Thêm Vì sao / Phản ví dụ (cửa sổ mùa) / Đào sâu (cách kiểm attribution rẻ: tắt mã một tuần ở một tỉnh); thay Q3 bằng câu tính phần KOL thật; gắn nhãn toàn ví dụ; nối tới in01-02 (tách may rủi) và in01-04 (Giữ–Bỏ)." },
+
+    { "id": "B:in01-09",
+      "scores": { "accuracy": 14, "depth": 12, "practical": 16, "examples": 11, "pedagogy": 8, "assessment": 8, "data": 6, "clarity": 5 },
+      "total": 80,
+      "bloom_items": ["L2","L4","L3","L2","L2","L4","L4"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q4, Q5", "quote": "Vì sao nên kèm bằng chứng (con số, sự việc) vào mỗi quy tắc?", "issue": "Hai câu L2 nhận lại ý bài; Q5 đáp án d lộ bằng con số \"3–5\" trùng Khái niệm.", "fix": "Thay Q5 bằng câu viết lại: cho bài học \"Nội dung phải sáng tạo\" cùng dữ kiện (video có người thật đạt 2× lượt xem hết so với video đồ hoạ, 6 video) và hỏi quy tắc nào viết đúng mẫu kèm mức tin cậy." },
+        { "sev": "P2", "where": "Ví dụ", "quote": "vì năm 2025 vị mè đen bị trả 18% hàng sau khi đã in 20.000 hộp", "issue": "Bằng chứng trong quy tắc mẫu là một sự việc đơn lẻ — chính điều Phản ví dụ cảnh báo — nhưng quy tắc mẫu không ghi \"giả thuyết, 1 lần\" như Khái niệm yêu cầu.", "fix": "Thêm vào quy tắc mẫu: \"(bằng chứng: 1 lần, 2025 — giả thuyết, kiểm lại ở vị kế tiếp)\"." },
+        { "sev": "P2", "where": "Q3", "quote": "Giả sử thử vị với 50 khách trước khi in tốn 40.000 đ mỗi khách (số minh hoạ).", "issue": "Tỉ số 27 lần chỉ đúng nếu thử 50 khách chắc chắn phát hiện lỗi vị; không nói xác suất phát hiện nên so sánh lạc quan.", "fix": "Thêm \"giả sử thử phát hiện được lỗi ở 8/10 lần\" và cho tỉ số kỳ vọng 0,8 × 54 ÷ 2 ≈ 22 lần." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 20.000 × 18% = 3.600 × 15.000 = 54 triệu; 50 × 40.000 = 2 triệu; 27 lần ✓; 54 = tổn thất tuyệt đối ✓; 0,04 = 2/54 ✓." },
+      "claims": [
+        { "claim": "Mẫu quy tắc: Khi [tình huống], làm [hành động], vì [bằng chứng], trừ khi [ngoại lệ]", "status": "verified", "note": "Mẫu của người viết, hợp lý; không gắn nguồn, không cần." },
+        { "claim": "Mỗi chiến dịch chỉ nên rút 3–5 quy tắc", "status": "illustrative-labelled", "note": "Nêu như gợi ý có lý do (ít mà dùng được), không như benchmark." },
+        { "claim": "Vị mè đen 2025 bị trả 18% sau khi in 20.000 hộp", "status": "illustrative-labelled", "note": "Dữ kiện của hãng giả định trong tình huống; Q3 ghi \"(số minh hoạ)\"." }
+      ],
+      "strengths": "Mẫu bốn vế và ba câu đánh giá quy tắc (Q2, Q6, Q7) phân biệt được hành động mơ hồ, bằng chứng là kỳ vọng, bằng chứng là bắt chước — người học chấm được quy tắc của chính mình; Phản ví dụ (lỗi do bao bì chứ không do vị) nêu đúng rủi ro đóng khung sớm.",
+      "upgrade": "Thêm mức tin cậy vào quy tắc mẫu; thay Q4/Q5 bằng câu viết lại quy tắc từ dữ kiện; thêm xác suất phát hiện vào Q3; thêm vào Đào sâu cách đánh \"hạn xem lại\" cho quy tắc theo tốc độ đổi của kênh (nối in01-10 Q7)." },
+
+    { "id": "B:in01-10",
+      "scores": { "accuracy": 14, "depth": 10, "practical": 15, "examples": 11, "pedagogy": 6, "assessment": 6, "data": 7, "clarity": 5 },
+      "total": 74,
+      "bloom_items": ["L2","L4","L3","L2","L3","L2","L3"], "bloom_max": "L4",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc bài", "quote": "MANG THEO: Bài học phải tìm được, đọc được, và được trích vào brief mới — nếu không thì coi như chưa học.", "issue": "Không có Vì sao / Phản ví dụ / Đào sâu. Thiếu mặt trái của ô bắt buộc \"Quy tắc cũ áp dụng\": trích cho có (bài đã nhắc \"trích nhiều chưa chắc dùng đúng\" nhưng không nói dấu hiệu và cách xử lý).", "fix": "Thêm Phản ví dụ: 18/20 brief trích quy tắc nhưng 12 brief trích cùng một quy tắc chung nhất — dấu hiệu trích hình thức; xử lý bằng yêu cầu trích kèm việc cụ thể sẽ làm khác." },
+        { "sev": "P2", "where": "Q4, Q6", "quote": "Thẻ nào hữu ích nhất để người mới tìm bản tổng kết liên quan tới việc của họ?", "issue": "Hai câu L2 với nhiễu dễ loại; không câu nào buộc đọc số 18/20 hay 4/10 → 1/10 ngoài Q3.", "fix": "Thay Q6 bằng câu đọc dữ liệu: 18/20 brief trích quy tắc nhưng lỗi KOL vẫn 3/10 — kết luận gì (trích hình thức hay quy tắc sai)?" },
+        { "sev": "P2", "where": "Ví dụ", "quote": "lỗi chọn KOL lặp lại còn 1 trên 10 brief có KOL, so với 4 trên 10 trước đó", "issue": "Bài đã ghi \"mẫu nhỏ nên cần theo dõi thêm\" (tốt) nhưng chưa nói mức nhiễu: với 10 brief mỗi kỳ, 4→1 có thể là ngẫu nhiên một phần.", "fix": "Thêm \"với 10 brief, chênh 3 lỗi mới ở mức gợi ý; cần 2–3 kỳ nữa mới kết luận\"." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 4/10 = 40%, 1/10 = 10%, giảm 30 điểm % ✓; 75 = giảm tương đối ✓; 3 = chênh tuyệt đối ✓. Ví dụ 18/20, 26 bản, 5 bản tuần đầu nhất quán." },
+      "claims": [
+        { "claim": "18/20 brief trích quy tắc; lỗi KOL 4/10 → 1/10", "status": "illustrative-labelled", "note": "Ghi \"(số minh hoạ, mẫu nhỏ nên cần theo dõi thêm)\" — cách gắn nhãn tốt nhất trong module." }
+      ],
+      "strengths": "Đo cả tỉ lệ trích lẫn tỉ lệ lỗi lặp lại (không chỉ đầu vào) và gắn nhãn mẫu nhỏ; Q2 là câu trình tự triển khai thật (mẫu 1 trang + 2–3 bản đầu trước khi chuyển hết) với lời giải nêu lý do loại từng phương án.",
+      "upgrade": "Thêm Vì sao / Phản ví dụ (trích hình thức) / Đào sâu (chi phí bảo trì thư viện, hạn xem lại); thay Q4/Q6 bằng câu đọc dữ liệu trích vs lỗi; nối tới tu06-10 (hồ sơ đóng) để tránh dạy hai lần cùng ý nơi lưu." }
+  ],
+  "module_notes": {
+    "progression": "Mạch post-mortem đi đúng thứ tự làm việc: so mục tiêu (01) → tách may rủi (02) → nguyên nhân gốc (03) → giữ/bỏ từng hoạt động (04) → nhìn cửa sổ dài (05) → ai họp, ai nói trước (06) → chống thiên kiến nhìn lại (07) → tổng kết cả khi thắng (08) → viết quy tắc (09) → thư viện và thói quen (10). Bài 06 (tổ chức họp) nên lên trước 03 vì cả 03 và 07 đều diễn ra trong buổi họp đó. Bài 08 lặp lại ý của 02 và 04 ở bối cảnh \"thắng\" và có thể gộp vào 02.",
+    "overlap": [
+      "in01-02 và in01-07 cùng dạy tách phần ngoại cảnh/kết quả khỏi quyết định; hai bài tự nhận nhau là khái niệm kề cận nhưng không chia ranh rõ.",
+      "in01-08 lặp ý nhân rộng phần lặp lại được (in01-02) và tách theo nguồn (in01-04).",
+      "in01-09, in01-10 và tu06-10 cùng nói nơi lưu, 3–5 điều làm khác, người sau tìm được.",
+      "in01-04 và in01-08 cùng đụng attribution theo kênh nhưng chỉ 08 cảnh báo, 04 thì dùng số như đã đo chắc."
+    ],
+    "gaps": [
+      "Không bài nào dạy cách đo \"tăng thêm\" (holdout, vùng đối chứng, tắt mã một tuần) đủ để nuôi 04, 05, 08 — in01-02 chỉ dùng vùng đối chứng có sẵn.",
+      "Không bài nào nói nhiễu/cỡ mẫu khi so hai con số (7,8 vs 7,1 trên 200 người; 4/10 vs 1/10) dù mọi bài đều so hai con số.",
+      "Chỉ in01-04 có bài thực hành đầu ra; module về viết tổng kết mà không có bài yêu cầu viết trọn một trang post-mortem theo mẫu chung.",
+      "5/10 bài (03, 04, 05, 08, 10) không có cả ba phần Vì sao / Phản ví dụ / Đào sâu."
+    ],
+    "best_lesson": "B:in01-04",
+    "weakest_lesson": "B:in01-06"
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "mod": "dl08",
+  "scored_at": "2026-11-07",
+  "scorer": "independent-agent",
+  "rubric": "RUBRIC-100 v1",
+  "lessons": [
+    {
+      "id": "B:dl08-01",
+      "scores": { "accuracy": 12, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 7, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L2", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "Q6", "quote": "A đổi người theo dõi thành người mua tốt hơn B rất nhiều", "issue": "Đề chỉ cho tổng đơn của shop (400 và 350), không nói đơn đến từ fanpage; đáp án ngầm coi mọi đơn là từ follower — mâu thuẫn với chính luận điểm của bài rằng follower và người mua là hai tập khác nhau. Phương án d ('chưa thể rút ra nhận định') bênh được một phần.", "fix": "Sửa đề: 'Tháng này A có 400 đơn đến từ fanpage, B có 350 đơn từ fanpage' và sửa d thành phương án rõ sai." },
+        { "sev": "P2", "where": "Q1", "quote": "Không có cơ chế nào làm đơn giảm chỉ vì follower tăng", "issue": "Lời giải tuyệt đối hoá: follower kém tương tác kéo tỉ lệ tương tác trang xuống và có thể giảm phân phối tự nhiên; cơ chế có tồn tại dù hiệu ứng lên đơn nhỏ.", "fix": "Sửa thành 'cơ chế đó yếu và không giải thích được chuyện đơn đứng yên; vấn đề chính là follower mới không mua'." },
+        { "sev": "P2", "where": "Q5", "quote": "Khi fanpage vượt mốc 10.000 và được Facebook cấp tích xanh", "issue": "Nhiễu dựa trên cơ chế nền tảng đã đổi (Meta Verified nay là gói trả phí), không nguồn; người học có thể ghi nhớ sai.", "fix": "Đổi nhiễu thành 'khi fanpage có nhiều follower hơn đối thủ cùng ngành'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "trong 20.000 follower mới, chỉ 30 người từng nhắn tin hỏi giá và 12 người đặt bánh", "issue": "Số minh hoạ không gắn nhãn; 12 đơn là mẫu rất nhỏ nhưng bài không nói 0,06% có độ bất định lớn.", "fix": "Đặt cờ assume; thêm một câu: 'với 12 người, tỉ lệ thật có thể từ 0,03% đến 0,1% — vẫn rất thấp so với tệp cũ'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 12 ÷ 20.000 = 0,06% ✓; sai 0,24 = 12/5.000 ✓, 0,048 = 12/25.000 ✓ — hai mẫu số sai được định danh đúng. Q6: 400/8.000 = 5% vs 350/80.000 = 0,44% ✓ (nếu chấp nhận giả định đơn từ follower)." },
+      "claims": [
+        { "claim": "Facebook cấp tích xanh khi vượt mốc 10.000", "status": "unverified", "note": "Nhiễu trong Q5; không khớp cơ chế hiện tại (Meta Verified trả phí)." },
+        { "claim": "Tiệm bánh Đà Nẵng: 5.000 → 25.000 follower; 12 đơn / 20.000", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ (vừa mở giao toàn thành phố, tin nhắn hỏi giá tăng trước đơn) và ĐÀO SÂU (follower có thể là tín hiệu nếu đúng khu vực) tránh được kết luận một chiều; Q7 (phản hồi KPI 100.000 follower) là câu đánh đổi có biện hộ.",
+      "upgrade": "Sửa đề Q6 để đơn gắn với fanpage; sửa lời giải Q1 và nhiễu Q5. Gắn nhãn số minh hoạ và nói độ bất định của 12 đơn. Thêm vào VÍ DỤ phép tính 'đơn từ fanpage trên 100 follower' cho tệp cũ (60 đơn/tuần ÷ 5.000) để có hai tỉ lệ so trực tiếp. Thêm câu L4 đọc bảng follower theo tỉnh và tin nhắn theo tỉnh."
+    },
+    {
+      "id": "B:dl08-02",
+      "scores": { "accuracy": 11, "depth": 11, "practical": 14, "examples": 9, "pedagogy": 8, "assessment": 8, "data": 6, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L5", "L5"],
+      "bloom_max": "L5",
+      "freshness": "fast",
+      "defects": [
+        { "sev": "P1", "where": "Q1", "quote": "TikTok, Reels và YouTube đều có biểu đồ giữ chân theo từng giây", "issue": "Khẳng định tính năng nền tảng (fast) nêu như sự thật, không `src`, không câu 'nếu màn hình khác, tin trang chính thức'; tính năng và độ chi tiết khác nhau giữa nền tảng và thay đổi theo thời gian.", "fix": "Thêm src trang trợ giúp từng nền tảng với ngày kiểm; viết 'tại thời điểm kiểm, ba nền tảng đều có biểu đồ giữ chân'." },
+        { "sev": "P1", "where": "KHÁI NIỆM", "quote": "một lượt xem được đếm rất sớm, có khi chỉ vài giây. Người lướt qua cũng tính là một view", "issue": "Quy tắc đếm view là chính sách nền tảng (TikTok đếm khi bắt đầu phát, nền tảng khác khác nhau) — nêu chung không nguồn. Đây là khẳng định nền tảng không gắn nhãn.", "fix": "Ghi 'mỗi nền tảng định nghĩa view khác nhau, thường tính từ 0–3 giây đầu (xem src)'; thêm src." },
+        { "sev": "P2", "where": "Q7 ↔ VÍ DỤ", "quote": "Chi phí cho mỗi người xem tới đoạn sản phẩm là bao nhiêu", "issue": "Q7 hỏi chỉ số mà bài chưa tính lần nào; ví dụ có đủ dữ liệu để tính (30 đ/view ÷ 8% = 375 đ mỗi người thấy sản phẩm).", "fix": "Thêm vào ví dụ: 'với 30 đ/view và 8% tới giây 30, giá thật là 375 đ mỗi người thấy sản phẩm; video B: 30 ÷ 60% = 50 đ'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "1.000.000 view × 8% = 80.000 người", "issue": "Số minh hoạ không gắn nhãn; '8% tới giây 30' có thể bị đọc như benchmark.", "fix": "Đặt cờ assume; ghi 'tỉ lệ tuỳ video, đọc từ biểu đồ của chính bạn'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 300.000 × 60% = 180.000 ✓; sai 300.000 (quên tỉ lệ) ✓, 5.000 = 300.000/60 ✓. Ví dụ: 1.000.000 × 8% = 80.000 ✓; 180.000/80.000 = 2,25 ≈ 'gấp hơn hai lần' ✓." },
+      "claims": [
+        { "claim": "TikTok, Reels, YouTube đều có biểu đồ giữ chân theo giây", "status": "unverified", "note": "Tính năng nền tảng, không src." },
+        { "claim": "Một lượt xem được đếm rất sớm, có khi chỉ vài giây", "status": "unverified", "note": "Chính sách đếm view khác nhau giữa nền tảng; không src." },
+        { "claim": "Video nước mắm: 1 triệu view, 8% tới giây 30; video B 300.000 view, 60% ở giây 3", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ (video xây cảm xúc đo bằng tìm kiếm thương hiệu) và ĐÀO SÂU (đánh đổi sản phẩm sớm vs kể chuyện giữ chân) là lập luận có điều kiện; Q6 và Q7 buộc chọn chỉ số và chất vấn agency (L5).",
+      "upgrade": "Thêm src cho hai khẳng định nền tảng và câu 'nếu màn hình khác…'. Tính chi phí mỗi người thấy sản phẩm trong ví dụ để Q7 có nền. Gắn nhãn số. Thêm câu L4 đọc đường giữ chân 4 điểm (giây 0/3/15/30) của hai video và chỉ chỗ sụt."
+    },
+    {
+      "id": "B:dl08-03",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "ĐÀO SÂU", "quote": "ai chưa đặt lịch trong vài ngày đầu thường không quay lại", "issue": "Khẳng định hành vi mang tính benchmark, không nguồn, không gắn nhãn 'quan sát thường gặp'.", "fix": "Viết 'ở nhiều app, …; kiểm trên dữ liệu của bạn bằng cách…'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "4.000 người đặt lịch trong tháng thứ hai. Tỉ lệ người tải còn hoạt động sau 30 ngày: 4.000 ÷ 100.000 = 4%", "issue": "Trộn hai cách đo: 'đặt lịch trong tháng thứ hai' (theo lịch) vs 'còn hoạt động sau 30 ngày' (theo cohort từ ngày cài). Người tải ngày 30 của tháng chưa đủ 30 ngày. Kết quả gần đúng nhưng định nghĩa không sạch trong bài dạy định nghĩa.", "fix": "Viết 'xấp xỉ: đếm người cài trong tháng 1 có lịch hẹn trong ngày 31–60 kể từ cài'." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "100.000 lượt tải, 40.000 người mở app lần thứ hai, 9.000 người từng đặt ít nhất một lịch", "issue": "Số minh hoạ không gắn nhãn.", "fix": "Đặt cờ assume." },
+        { "sev": "P2", "where": "Q1, Q4", "quote": "Tỉ lệ người tải còn làm hành động cốt lõi sau 30 và 90 ngày", "issue": "Hai câu nhận lại ý bài; Q1 đáp án 'chỉ vài nghìn' suy được từ tình huống (1.500 lịch/tuần).", "fix": "Đổi Q4 thành bảng giữ chân D7/D30/D90 của hai cohort (quà cài vs quà sau lịch) và hỏi cohort nào đáng mở rộng." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 5.000.000.000 ÷ 4.000 = 1.250.000 = 1,25 triệu ✓; sai 0,05 = 5 tỉ/100.000 (chia lượt tải) ✓, 0,125 (lệch thập phân) ✓. Ví dụ: 50.000 × 100.000 = 5 tỉ ✓; 4.000/100.000 = 4% ✓. Q5: 150.000 × 2x = 300.000x vs 200.000x → +50% ✓." },
+      "claims": [
+        { "claim": "Ai chưa đặt lịch trong vài ngày đầu thường không quay lại", "status": "unverified", "note": "Quan sát hành vi, không nguồn." },
+        { "claim": "App cắt tóc: 100.000 tải / 40.000 / 9.000 / 4.000; 5 tỉ quà", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ về cửa sổ đo ngắn hơn chu kỳ dùng (cắt tóc vài tuần một lần) là điểm nhiều bài giữ chân bỏ quên; Q6 (định nghĩa người dùng hoạt động = lịch hẹn hoàn thành) và Q5 (MAU × đơn/người) buộc suy luận.",
+      "upgrade": "Làm sạch định nghĩa giữ chân theo cohort trong ví dụ và vẽ bảng D7/D30/D90. Gắn nhãn số; gắn nhãn 'quan sát' cho câu về vài ngày đầu. Thêm phép tính so hai cách chi 5 tỉ (quà cài vs quà sau lịch) với giả định minh hoạ để Q2 có số. Nâng Q4 lên L4 đọc bảng cohort."
+    },
+    {
+      "id": "B:dl08-04",
+      "scores": { "accuracy": 13, "depth": 10, "practical": 15, "examples": 10, "pedagogy": 6, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 73,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L3", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Cấu trúc", "quote": "MANG THEO: Lead là số người để lại số điện thoại; lead đủ điều kiện là số người có thể mua.", "issue": "Bài không có VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ, ĐÀO SÂU trong khi 9 bài còn lại của module đều có; không có tình huống siết tiêu chí quá tay làm mất lead tốt (tiêu chí 'từ 16 tuổi' loại phụ huynh trả tiền cho con 15 tuổi).", "fix": "Thêm PHẢN VÍ DỤ: phụ huynh điền form cho con 15 tuổi bị loại vì tiêu chí tuổi; dạy kiểm tiêu chí bằng số học viên bị lọt." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Cùng 40 triệu, đủ điều kiện lên 90 (số minh hoạ)", "issue": "Chỉ con số cuối được gắn nhãn; chuỗi 400/60/16 → 800/64/16 → 300/62/16 không gắn nhãn; chưa tính chi phí mỗi học viên sau bước hai (học viên từ 90 lead đủ điều kiện là bao nhiêu?).", "fix": "Gắn nhãn toàn ví dụ; thêm 'nếu tỉ lệ chốt giữ 16/62 ≈ 26% thì 90 lead đủ điều kiện ≈ 23 học viên, chi phí ≈ 1,7 triệu/học viên'." },
+        { "sev": "P2", "where": "Q7", "quote": "nguồn giới thiệu chốt 50%, form tài liệu chốt 10%", "issue": "Đáp án a thêm việc 'siết tiêu chí' không suy từ dữ kiện; đề không cho chi phí theo nguồn nên 'so chi phí mỗi học viên theo nguồn' là việc cần làm nhưng người học không tính được gì.", "fix": "Cho chi phí mỗi lead theo nguồn (giới thiệu 0 đ nhưng 20 lead/tháng; form 25.000 đ) để câu thành L4 có số." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 40 ÷ 16 = 2,5 triệu ✓; sai 0,05 = 40/800 (chia lead) ✓, 1,25 = 20/16 (tháng trước) ✓. Ví dụ: 20/16 = 1,25 ✓, 40/16 = 2,5 ✓." },
+      "claims": [
+        { "claim": "Trung tâm tiếng Anh: 400/60/16 → 800/64/16 → 300/62/16; 20 → 40 triệu", "status": "illustrative-unlabelled", "note": "Chỉ con số 90 ở cuối được ghi '(số minh hoạ)'." }
+      ],
+      "strengths": "Phân biệt 'bộ lọc chỉ chọn lại, không tạo thêm người mua' và 'thoả thuận hai chiều với sales (gọi trong 24 giờ, ghi lý do loại)' là hai ý đúng nghề; Q4 (điều gì phải đúng để lên 90) là câu phân tích tốt.",
+      "upgrade": "Bổ sung VÌ SAO HIỆU QUẢ, PHẢN VÍ DỤ (siết quá tay), ĐÀO SÂU (SLA marketing–sales, lead scoring đơn giản). Gắn nhãn toàn ví dụ và tính chi phí mỗi học viên sau bước hai. Cho số chi phí theo nguồn vào Q7. Nối sang dl08-07 (KPI lead bị 'chơi')."
+    },
+    {
+      "id": "B:dl08-05",
+      "scores": { "accuracy": 12, "depth": 12, "practical": 15, "examples": 9, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 75,
+      "bloom_items": ["L3", "L5", "L3", "L4", "L4", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "TÌNH HUỐNG ↔ VÍ DỤ", "quote": "tháng đó shop lỗ gần 20 triệu", "issue": "Ví dụ chỉ tính tới lãi 40.000 đ/hộp (vẫn dương) và không có dòng chi quảng cáo hay freeship riêng, nên người học không thể dựng lại con số lỗ 20 triệu từ bài; tình huống và ví dụ kể hai câu chuyện khác nhau (lãi mỏng vs lỗ).", "fix": "Thêm số hộp và chi quảng cáo: ví dụ 1.400 hộp × 40.000 = 56 triệu lãi biến đổi − 76 triệu quảng cáo + freeship = −20 triệu." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "phí sàn và vận chuyển 60.000đ", "issue": "Mức phí sàn 15% giá bán là giả định không gắn nhãn, dễ bị đọc như phí Shopee thật (phí thay đổi theo thời gian và ngành hàng).", "fix": "Ghi '(giả định; phí sàn thật xem biểu phí hiện hành của sàn)'." },
+        { "sev": "P2", "where": "Q1", "quote": "giảm giá 25% cho một sản phẩm có lãi 35% trên giá bán", "issue": "Câu tính nhẩm tốt nhưng lời giải không nêu công thức tổng quát (số đơn cần = lãi cũ ÷ lãi mới) dù bài có ở VÌ SAO (3).", "fix": "Thêm vào lời giải: '35% − 25% = 10%; 35 ÷ 10 = 3,5 lần'." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 400 × 75% = 300; 300 − 200 − 60 = 40 nghìn ✓; sai 100 (quên phí) ✓, 105 = 140 × 75% (giảm vào lãi) ✓. Ví dụ: 140/40 = 3,5 ✓; doanh thu +40% ở giá 300 → số hộp × 1,4 × 400/300 = 1,867 → +87% ✓. Q1: (35 − 25)/35 → cần 3,5 lần ✓. Lỗ 20 triệu trong tình huống không dựng được từ ví dụ." },
+      "claims": [
+        { "claim": "Phí sàn và vận chuyển 60.000 đ trên hộp 400.000 đ (15%)", "status": "illustrative-unlabelled", "note": "Giả định về phí Shopee, không nguồn." },
+        { "claim": "Shop hạt dinh dưỡng: doanh thu +40%, lỗ gần 20 triệu", "status": "illustrative-unlabelled", "note": "Không khớp được với ví dụ." }
+      ],
+      "strengths": "Phép hoà vốn khuyến mãi (3,5 lần số hộp) và quy đổi 'doanh thu +40% = số hộp +87%' là lập luận định lượng đúng; phản ví dụ hàng sắp hết hạn (so lỗ nếu bán với lỗ nếu giữ) là đánh đổi thật.",
+      "upgrade": "Thêm dòng số hộp, chi quảng cáo, freeship để dựng lại khoản lỗ 20 triệu — nối tình huống với ví dụ. Gắn nhãn giả định phí sàn. Thống nhất thuật ngữ 'lãi sau chi phí biến đổi và marketing' với 'lợi nhuận đóng góp' ở dl07-10. Thêm câu L4 đọc bảng 3 mức giảm (10/15/25%) với số hộp cần và số hộp thực tế."
+    },
+    {
+      "id": "B:dl08-06",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L5", "L3", "L2", "L4", "L4", "L5"],
+      "bloom_max": "L5",
+      "freshness": "periodic",
+      "defects": [
+        { "sev": "P1", "where": "VÍ DỤ / Q2", "quote": "Tỉ lệ mở tăng hơn gấp đôi, nhưng mỗi email đem về ít tiền hơn 60%. Chuỗi quay lại tiêu đề nói rõ ưu đãi", "issue": "So hai tháng khác nhau (nội dung, ưu đãi, thời điểm đều có thể đổi) rồi quy toàn bộ mức giảm cho tiêu đề; chính KHÁI NIỆM nói doanh thu/email 'gộp cả tiêu đề, nội dung, ưu đãi và trang đích'. Thiếu giả định 'các yếu tố khác không đổi' nên kết luận có thể sai; Q2 đáp án 'so … trên cùng tệp' chưa đủ — cần chia tệp A/B cùng lúc.", "fix": "Ghi rõ giả định; sửa Q2 đáp án thành 'chia đôi tệp cùng lần gửi, chỉ đổi tiêu đề, so doanh thu mỗi email'." },
+        { "sev": "P2", "where": "KHÁI NIỆM / Q4", "quote": "một số ứng dụng email tự tải nội dung trước, khiến số “mở” bị thổi phồng", "issue": "Đúng (tính năng bảo vệ riêng tư của một số ứng dụng thư từ 2021) nhưng không nguồn; kiến thức periodic.", "fix": "Thêm src trang trợ giúp của nhà cung cấp email marketing về mở tự động, ngày kiểm." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "40.000 email × 4 lần = 160.000 email, doanh thu 30 triệu, tức 187,5đ mỗi email", "issue": "Số minh hoạ không gắn nhãn.", "fix": "Đặt cờ assume." },
+        { "sev": "P2", "where": "Q4", "quote": "Vì sao tỉ lệ mở ngày càng kém tin cậy", "issue": "Nhận lại ý bài; nhiễu b/c/d dễ loại.", "fix": "Đổi thành câu đọc bảng: tỉ lệ mở tăng đều ở mọi email sau một ngày nhất định, tỉ lệ bấm không đổi — hỏi cách đọc." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 12.000.000 ÷ 160.000 = 75 đ ✓; sai 166,7 = 12 triệu/(160.000 × 45%) (chia số mở) ✓, 300 = 12 triệu/40.000 ✓. Ví dụ: 30 triệu/160.000 = 187,5 ✓; 75/187,5 = 40% → giảm 60% ✓. Q5: 25/10 = 2,5 ✓." },
+      "claims": [
+        { "claim": "Một số ứng dụng email tự tải nội dung, thổi phồng tỉ lệ mở", "status": "unverified", "note": "Đúng theo hiểu biết người chấm; không src." },
+        { "claim": "Chuỗi mỹ phẩm: 40.000 khách, 4 email/tháng, 30 → 12 triệu", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Chọn 'doanh thu trên mỗi email gửi' (mẫu số cố định) và giải thích vì sao không chia cho số mở là lập luận sạch; phản ví dụ email chăm sóc và Q7 (so nhóm nhận/không nhận sau 60 ngày) đưa tư duy đối chứng vào.",
+      "upgrade": "Sửa ví dụ và Q2 theo hướng A/B chia tệp cùng lần gửi; nêu giả định khi so hai tháng. Thêm src cho mở tự động. Gắn nhãn số. Thay Q4 bằng câu chẩn đoán từ bảng. Thêm vào ĐÀO SÂU một phép tính tần suất: 4 → 6 email/tháng, doanh thu/email giảm từ 187 → 140 — tổng có tăng không?"
+    },
+    {
+      "id": "B:dl08-07",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 6, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L4", "L4", "L2"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Kiểm tra 200 hồ sơ thành viên mới: 80 số không liên lạc được, 50 số trùng người đã có", "issue": "Mẫu 200 trên 60.000 hồ sơ mới cho 65% có vấn đề — bài không nói 200 chọn thế nào (ngẫu nhiên?) và sai số (±7 điểm), dù ĐÀO SÂU khuyên kiểm 30 bản ghi. Số minh hoạ không gắn nhãn.", "fix": "Ghi 'chọn ngẫu nhiên 200; sai số ≈ ±7 điểm, vẫn đủ kết luận' và đặt cờ assume." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "số thành viên mua lần hai tăng từ 1.800 lên 2.400", "issue": "Kết luận đổi KPI tốt lên dựa trên một kỳ; không nói chi phí thưởng hai cơ chế để so hiệu quả trên đồng thưởng.", "fix": "Thêm chi phí thưởng mỗi thành viên mua lần hai trước/sau." },
+        { "sev": "P2", "where": "Q7", "quote": "Lấy mẫu ngẫu nhiên dữ liệu gốc để kiểm tra định kỳ", "issue": "Nhận lại ý bài (L2); nhiễu phi lý.", "fix": "Đổi thành bảng 4 KPI với dấu hiệu kề (thành viên ↑, mua lại →; bài đăng ↑, hỏi mua ↓…) và hỏi KPI nào đang bị chơi." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (80 + 50)/200 = 65% ✓; sai 40 = 80/200, 25 = 50/200 ✓. Tình huống: (90.000 − 30.000)/3 = 20.000/tháng ✓ khớp ví dụ." },
+      "claims": [
+        { "claim": "Nhà kinh tế Charles Goodhart nêu một ý thường được tóm lại thế này: khi một chỉ số trở thành mục tiêu, nó không còn là chỉ số tốt", "status": "unverified", "note": "Diễn đạt cẩn thận (bản tóm phổ biến là của Strathern); không src nhưng không bịa." },
+        { "claim": "Chuỗi nhà thuốc: 30.000 → 90.000; 200 hồ sơ, 80 + 50; 1.800 → 2.400", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Phản ví dụ chỉ ra chính chỉ số đối trọng cũng bị chơi (chỉ mời khách quen) — mức lập luận hiếm; Q4 (chơi KPI CPC) và Q5 (đối trọng cho số bài đăng) chuyển khái niệm sang bối cảnh mới.",
+      "upgrade": "Gắn nhãn số, nêu cách lấy mẫu và sai số của 200 hồ sơ, thêm chi phí thưởng trước/sau để so hiệu quả. Đổi Q7 thành câu đọc bảng. Thêm ĐÀO SÂU một dòng về 'bộ chỉ số cân bằng' với 3 ví dụ ghép cặp (lead ↔ chi phí/học viên; view ↔ người tới đoạn sản phẩm) nối sang dl08-02/04."
+    },
+    {
+      "id": "B:dl08-08",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 14, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 76,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L4", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Toàn bài", "quote": "Nói \"tăng 1%\" khi thực ra là tăng 1 điểm phần trăm.", "issue": "Trùng gần toàn bộ với dl09-05 (phần trăm và số tuyệt đối): cùng ví dụ 2% → 3% = 1 điểm/50%, cùng câu 'lỗi hay gặp'. Hai bài không nối với nhau.", "fix": "Phân vai: dl08-08 giữ 'mẫu số co lại' (chọn tệp hẹp), dl09-05 giữ 'nền nhỏ phóng đại'; bỏ phần điểm phần trăm ở một bài và dẫn chéo." },
+        { "sev": "P2", "where": "PHẢN VÍ DỤ", "quote": "Cần đo phần đơn thêm do quảng cáo, không chỉ tỉ lệ trong nhóm.", "issue": "Nêu đúng vấn đề gia tăng (incrementality) nhưng không có cách đo (nhóm đối chứng/geo holdout) dù dl09-10 có.", "fix": "Thêm một câu 'cách đo: tắt quảng cáo nhóm hẹp ở 20% khu vực trong 2 tuần, so đơn' và dẫn sang dl09-10." },
+        { "sev": "P2", "where": "Q3", "quote": "sai hay gặp: [[-6,\"NHAM_TI_LE_ROI\"],[0.2,\"NHAM_SO_TUYET_DOI\"]]", "issue": "Hai giá trị sai không có cơ chế rõ (−6 triệu? 0,2 triệu?), mã lỗi không tự giải thích.", "fix": "Thay bằng 15 (= 100 × 150.000, quên trừ) và 12 (= 80 × 150.000) với mã QUEN_TRU_KY_TRUOC / NHAM_TONG_LAI." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Tháng trước: 10.000 × 1% = 100 đơn. Tháng này: 4.000 × 2% = 80 đơn.", "issue": "Số minh hoạ không gắn nhãn.", "fix": "Đặt cờ assume." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: 100 − 80 = 20 đơn × 150.000 = 3 triệu ✓. Q4: 3 − 2 = 1 điểm, 1/2 = 50% ✓. Q5: 35% × 2.000 = 700 vs 60 ✓." },
+      "claims": [
+        { "claim": "Shop giày: 10.000 × 1% → 4.000 × 2%; lãi 150.000 đ/đơn", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ý 'thu hẹp đối tượng chỉ đáng khi phần bị bỏ cho ít lãi hơn chi phí của nó' và phản ví dụ về ăn vào đơn sẵn có là tư duy gia tăng đúng; Q6 (khi nào tỉ lệ là chỉ số tốt hơn: mẫu số bằng nhau) và Q7 (tỉ lệ khiếu nại giảm, hỏi số tuyệt đối) là câu đánh đổi tốt.",
+      "upgrade": "Phân vai với dl09-05 và dẫn chéo. Thêm cách đo gia tăng đơn giản trong PHẢN VÍ DỤ. Sửa hai giá trị sai của Q3. Gắn nhãn số. Thêm câu L4 đọc bảng 3 nhóm đối tượng (rộng/trung/hẹp) với lượt vào, tỉ lệ, chi phí, lãi — chọn cấu hình tối đa lãi."
+    },
+    {
+      "id": "B:dl08-09",
+      "scores": { "accuracy": 13, "depth": 12, "practical": 15, "examples": 10, "pedagogy": 8, "assessment": 8, "data": 7, "clarity": 4 },
+      "total": 77,
+      "bloom_items": ["L2", "L5", "L3", "L4", "L1", "L5", "L4"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Trung vị toàn bộ là 240.000đ", "issue": "Con số cho sẵn, không dựng được từ dữ kiện (chỉ có tổng và trung bình); người học không thấy cách tìm trung vị dù ÁP DỤNG yêu cầu tìm trung vị.", "fix": "Thêm bảng 9 đơn mẫu xếp thứ tự và chỉ vị trí giữa, rồi nói 'với 200 đơn làm tương tự, trung vị 240.000'." },
+        { "sev": "P2", "where": "Q5", "quote": "Trung vị, tức giá trị nằm giữa khi xếp các đơn theo thứ tự", "issue": "Câu định nghĩa thuần (L1), đáp án chứa luôn định nghĩa.", "fix": "Đổi thành dãy 7 giá trị đơn, hỏi trung bình và trung vị, rồi hỏi ngưỡng freeship hợp lý." },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "Shop có 200 đơn, tổng 100 triệu: trung bình 500.000đ. Bỏ 5 đơn sỉ (60 triệu)", "issue": "Số minh hoạ không gắn nhãn.", "fix": "Đặt cờ assume." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (100 − 60) triệu ÷ (200 − 5) = 40.000/195 ≈ 205 nghìn ✓; sai 500 = 100 triệu/200 ✓, 200 = 40 triệu/200 (quên bớt 5 đơn) ✓. 5 × 12 triệu = 60 triệu ✓ khớp tình huống." },
+      "claims": [
+        { "claim": "Shop gia dụng: 200 đơn, 100 triệu, 5 đơn sỉ 12 triệu, trung vị 240.000", "status": "illustrative-unlabelled", "note": "Trung vị cho sẵn, không dựng được." },
+        { "claim": "Gần với quy tắc 80/20", "status": "unverified", "note": "Nhắc tên quy tắc Pareto, không gán số." }
+      ],
+      "strengths": "Phản ví dụ đúng trọng tâm (5 đơn sỉ là nguồn lãi chính — trung vị không phải lúc nào cũng là câu trả lời) và ĐÀO SÂU phân vai trung bình (tổng tiền) vs trung vị (khách điển hình). Q4 (thời gian đọc 4 phút bị tab mở kéo) và Q6 (spa hai nhóm) chuyển khái niệm sang bối cảnh khác.",
+      "upgrade": "Thêm bảng đơn mẫu để dựng trung vị. Gắn nhãn số. Thay Q5 bằng câu tính trung bình/trung vị trên dãy số (L3→L4). Thêm vào ĐÀO SÂU tỉ trọng 5% đơn lớn nhất với số (5 đơn = 2,5% số đơn chiếm 60% doanh thu) và nối sang dl07-10 (dashboard theo nhóm khách)."
+    },
+    {
+      "id": "B:dl08-10",
+      "scores": { "accuracy": 13, "depth": 11, "practical": 15, "examples": 8, "pedagogy": 8, "assessment": 7, "data": 5, "clarity": 4 },
+      "total": 71,
+      "bloom_items": ["L2", "L5", "L3", "L3", "L2", "L4", "L3"],
+      "bloom_max": "L5",
+      "freshness": "evergreen",
+      "defects": [
+        { "sev": "P2", "where": "Q3", "quote": "Mỗi tháng (4 tuần) nhóm tiết kiệm được bao nhiêu giờ-người?", "issue": "Câu tính duy nhất của bài đo thời gian họp, không liên quan kỹ năng đo lường marketing; bài về chỉ số ra quyết định mà không có phép tính nào về chỉ số.", "fix": "Thay bằng: 400 khách mua tháng trước, 88 mua lại trong 30 ngày — tỉ lệ mua lại? chạm ngưỡng 25% chưa?" },
+        { "sev": "P2", "where": "VÍ DỤ", "quote": "tỉ lệ mua lại dưới 25% thì đổi thực đơn tuần", "issue": "Ngưỡng 25% không có lý giải (mức thường là bao nhiêu, dao động tuần bao nhiêu); bài dạy đặt ngưỡng mà không dạy đặt thế nào.", "fix": "Thêm 'mức thường 30–34% trong 8 tuần, nên 25% là dưới đáy dao động' — nối với dl07-09." },
+        { "sev": "P2", "where": "Toàn bài", "quote": "nếu con số này tăng gấp đôi hoặc giảm một nửa, tôi sẽ làm gì khác?", "issue": "Trùng ý với dl07-06 Q5/'Mang theo' ('nếu nó xấu đi, ai làm gì') và với dl07-02 ('tăng gấp đôi mà không vui hơn'); ba bài không dẫn chéo.", "fix": "Dẫn chéo rõ: dl07-02 áp cho chọn chuyển đổi, dl07-06 cho ô dashboard, dl08-10 tổng quát hoá + ngưỡng + người phụ trách." },
+        { "sev": "P2", "where": "Q5", "quote": "Chỉ số chạm ngưỡng nhưng không ai hành động vì nghĩ người khác lo", "issue": "Nhận lại ý bài (L2).", "fix": "Đổi thành bảng 5 chỉ số với cột ngưỡng/người phụ trách, một dòng thiếu — hỏi dòng nào sẽ 'chết' và vì sao." }
+      ],
+      "calc_check": { "n": 1, "ok": 1, "notes": "Q3: (60 − 20) × 6 × 4 = 960 phút = 16 giờ ✓; sai 2,67 (quên nhân 6 người) ✓, 4 (dùng 60 phút, quên người) ✓. Phép tính không thuộc kỹ năng đo lường." },
+      "claims": [
+        { "claim": "Startup đồ ăn healthy: 25 chỉ số → 5; ngưỡng mua lại 25%; họp 60 → 20 phút", "status": "illustrative-unlabelled", "note": "" }
+      ],
+      "strengths": "Ba đặc điểm của chỉ số ra quyết định (hành động, người chịu trách nhiệm, ngưỡng định trước) là khung kiểm được; phản ví dụ (tìm kiếm thương hiệu trước chiến dịch lớn) ngăn áp phép thử máy móc; Q6 xử lý chỉ số thương hiệu có biện hộ.",
+      "upgrade": "Thay Q3 bằng phép tính về chỉ số (tỉ lệ mua lại so ngưỡng). Giải thích cách đặt ngưỡng 25% từ mức thường và dao động. Dẫn chéo với dl07-02/dl07-06. Gắn nhãn số. Thêm câu L4 đọc bảng 5 chỉ số với ngưỡng/người phụ trách."
+    }
+  ],
+  "module_notes": {
+    "progression": "Module là chuỗi 'chỉ số hư danh → chỉ số ra quyết định' theo kênh: follower (01), view (02), lượt tải (03), lead (04), doanh thu (05), tỉ lệ mở (06); rồi ba bài nguyên lý: Goodhart (07), tỉ lệ vs tuyệt đối (08), trung bình vs trung vị (09); kết bằng phép thử ra quyết định (10). Trình tự hợp lý và kết đúng chỗ. Chín trong mười bài có đủ VÌ SAO/PHẢN VÍ DỤ/ĐÀO SÂU (trừ 04), nên điểm sư phạm đồng đều hơn dl07. Điểm yếu chung: 6 bài đầu dùng cùng khuôn (chỉ số X tăng, đơn không tăng → đổi chỉ số), đến bài 04–06 người học đã đoán được đáp án Q1/Q2; không bài nào có bài thực hành có đầu ra.",
+    "overlap": [
+      "dl08-08 và dl09-05 trùng gần toàn bộ (cùng ví dụ 2% → 3% = 1 điểm/50%, cùng 'lỗi hay gặp').",
+      "dl08-10 trùng ý với dl07-06 Q5 và dl07-02 (phép thử 'tăng gấp đôi thì sao').",
+      "dl08-01/02/03/04/06 dùng cùng khuôn tình huống và cùng dạng Q1 'đoán trước' với đáp án 'gần như không đổi/giảm'.",
+      "dl08-09 Q4 (thời gian đọc 4 phút bị tab mở kéo) trùng dl07-04 Q6."
+    ],
+    "gaps": [
+      "Đo gia tăng (nhóm đối chứng, geo holdout) — được nhắc ở phản ví dụ 08 nhưng không bài nào dạy cách làm; chỉ dl09-10 chạm đến.",
+      "ROAS vs lãi sau chi phí: bài 05 có nhưng không chuẩn hoá công thức dùng chung với dl07-10 ('lợi nhuận đóng góp' hai nghĩa).",
+      "Giá trị vòng đời khách (LTV) để biện hộ cho khuyến mãi lỗ nhẹ — ĐÀO SÂU bài 05 nêu tên, không có cách tính.",
+      "Chỉ số thương hiệu đo thế nào (tìm kiếm tên, khảo sát nhớ) — xuất hiện ở phản ví dụ 02 và 10 như ngoại lệ nhưng không bài nào dạy.",
+      "Độ bất định của tỉ lệ trên mẫu nhỏ (12 đơn, 6 chuyển đổi, 200 hồ sơ) — chỉ nhắc chữ 'mẫu nhỏ', không có quy tắc nhẩm; để lại cho dl09-07."
+    ],
+    "best_lesson": "B:dl08-09",
+    "weakest_lesson": "B:dl08-01"
+  }
+}

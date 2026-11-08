@@ -1,0 +1,25 @@
+{
+ "mod": "tn01",
+ "lessons": [
+  {
+   "id": "B:tn01-03",
+   "total": 75,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "example",
+     "quote": "≈ 200.000đ mỗi khách đặt thật, thấp hơn doanh thu một tuần 450.000đ → đáng đi tiếp",
+     "issue": "So chi phí có khách với doanh thu, không với lãi gộp (đúng lỗi mà bài LTV/CAC cảnh báo). Với biên cơm hộp thông thường, lãi tuần đầu có thể thấp hơn 200.000đ; kết luận \"đáng đi tiếp\" có thể đổi.",
+     "fix": "So với lãi gộp nhiều tuần (ví dụ biên 30% → 135.000đ/tuần, cần ≥2 tuần mua lại)."
+    },
+    {
+     "sev": "P1",
+     "where": "example",
+     "quote": "quy đổi ước 20% (như Q5 bên dưới)",
+     "issue": "Tỉ lệ 20% chỉ biết được sau khi bếp mở (Q5), nhưng được dùng để quyết định trước khi mở — vòng lặp; câu tham chiếu \"Q5 bên dưới\" trong phần đọc là dấu vá.",
+     "fix": "Dùng tỉ lệ quy đổi giả định có gắn nhãn và nêu khoảng (10–30%), bỏ tham chiếu tới câu hỏi."
+    }
+   ]
+  }
+ ]
+}

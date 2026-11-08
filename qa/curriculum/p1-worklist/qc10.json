@@ -1,0 +1,35 @@
+{
+ "mod": "qc10",
+ "lessons": [
+  {
+   "id": "B:qc10-01",
+   "title": "Lead LinkedIn giá 1,5 triệu: đắt hay rẻ với công ty B2B của bạn?",
+   "total": 78,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Khái niệm",
+     "quote": "Giá trị kỳ vọng mỗi lead = lãi gộp mỗi hợp đồng × tỉ lệ lead thành hợp đồng. Đây là mức hoà vốn; bạn chỉ nên chi một phần của nó cho quảng cáo.",
+     "issue": "Mức hoà vốn chỉ tính chi phí quảng cáo, bỏ chi phí sales dù tình huống nêu rõ \"đội sales có 3 người\" và cần 50 lead cho một hợp đồng (Q4). Với B2B, chi phí sales xử lý 50 lead thường lớn hơn chi phí quảng cáo; \"một phần\" không định lượng nên người học vẫn lấy 3,2 triệu làm trần CPL.",
+     "fix": "Ghi rõ \"hoà vốn trên chi phí quảng cáo, chưa tính sales\"; thêm một dòng: ước chi phí sales mỗi hợp đồng (ví dụ 50 lead × 1 giờ gọi + 4 buổi demo ≈ 25 triệu) rồi đặt trần CPL = (160 − 25) × 2% × 50% ≈ 1,35 triệu — lúc đó lead 1,5 triệu sát trần, kết luận \"giữ\" phải kèm điều kiện."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) sửa mức hoà vốn thành \"trước chi phí sales\" và thêm ước lượng chi phí sales mỗi hợp đồng để ra trần CPL thực; (2) thêm bảng độ nhạy 1%/2%/5% và nêu ngưỡng chốt 0,94% làm LinkedIn hết đáng; (3) thay Q1 bằng câu tính so hai kênh với tỉ lệ cho sẵn, thêm một câu L4 đọc bảng \"CPL · tỉ lệ chốt · chi phí/hợp đồng\" của 3 kênh; (4) gắn src cho Luật 91/2025 và câu USD của LinkedIn; (5) nói rõ 400 triệu/năm là năm đầu, gia hạn chưa tính (như qc10-04 đã làm)."
+  },
+  {
+   "id": "B:qc10-04",
+   "title": "Lead LinkedIn nhiều mà sales chê, tháng đầu \"lỗ\": sửa hay dừng?",
+   "total": 77,
+   "defects": [
+    {
+     "sev": "P1",
+     "where": "Ví dụ ↔ Lỗi hay gặp",
+     "quote": "Sửa: thêm cỡ công ty 50+ nhân sự, ngành bán buôn/phân phối, câu hỏi \"Bạn quản lý bao nhiêu kho?\", ưu đãi đổi thành buổi đánh giá kho 30 phút.",
+     "issue": "Ví dụ đổi 4 thứ cùng lúc trong tháng 2 (2 lớp nhắm, câu hỏi lọc, ưu đãi) rồi quy kết quả tháng 3 cho các thay đổi đó, trong khi Lỗi hay gặp viết \"Thêm năm câu hỏi lọc và siết ba lớp nhắm cùng lúc — … không biết thay đổi nào gây ra\" và Áp dụng yêu cầu \"một thay đổi duy nhất bạn sẽ thử trong 4 tuần\". Ví dụ mâu thuẫn với lời khuyên của chính bài.",
+     "fix": "Tách ví dụ thành hai bước (tháng 2 đổi ưu đãi + câu hỏi lọc → đo tỉ lệ MQL; tháng 3 siết cỡ công ty → đo CPM/SQL), hoặc thừa nhận trong ví dụ: \"đổi nhiều thứ cùng lúc nên không tách được tác dụng từng thứ — lần sau đổi từng việc\"."
+    }
+   ],
+   "upgrade": "Để đạt ≥85: (1) tách ví dụ thành các thay đổi tuần tự hoặc thừa nhận không tách được, để khớp Lỗi hay gặp; (2) so chi phí mỗi hợp đồng với lãi gộp ngay trong ví dụ; (3) nêu độ nhiễu của n = 2/6 SQL và điều kiện xác nhận (2–3 cohort); (4) thêm câu L4 đọc bảng 3 tháng để chỉ ra tháng nào CPM, tháng nào tỉ lệ MQL là tầng hỏng; (5) thêm src về quy mô tệp."
+  }
+ ]
+}
