@@ -4,6 +4,7 @@
    Luật lấy từ KE-HOACH-700-BAI.md mục 2 và 4. Có lỗi thì thoát mã 1. */
 import fs from 'fs';
 import vm from 'vm';
+import { bloomOf, BLOOM_RANK } from './qa/curriculum/bloom.mjs';
 
 const ctx = vm.createContext({ console });
 const load = (f) => vm.runInContext(fs.readFileSync(f, 'utf8'), ctx, { filename: f });
@@ -20,7 +21,29 @@ vm.runInContext('const __orig = BAI_ADD; BAI_ADD = (p) => { __cap(p); __orig(p);
 const words = (h) => String(h || '').replace(/<[^>]+>/g, ' ').trim().split(/\s+/).filter(Boolean).length;
 const plain = (h) => String(h || '').replace(/<[^>]+>/g, '').trim().toLowerCase();
 
-let errs = 0, warns = 0, lessonsN = 0, itemsN = 0;
+let errs = 0, warns = 0, lessonsN = 0, itemsN = 0, stdN = 0;
+/* Chuẩn bài v2 (qa/curriculum/CONTENT-EXCELLENCE-GUIDELINES.md). Chỉ bắt buộc với bài khai `std: 2`;
+   bài cũ không khai thì giữ luật cũ. Trường mới: goals[], fresh, checked, assume, src[], prereq[]. */
+const FRESH_SET = ['evergreen', 'periodic', 'fast'];
+const GOAL_VERB = /^(tính|chẩn đoán|đánh giá|so sánh|chọn|thiết kế|lập|viết|đọc|phân biệt|ước lượng|nhận ra|giải thích|đề xuất|quyết định|kiểm tra|xác định|dựng|phân tích|tách|đo|xếp|dự báo|đặt)/i;
+function checkStd2(b, L, idx) {
+  stdN++;
+  const goals = L.goals || [];
+  if (goals.length < 2 || goals.length > 4) bad(b.id, `std2: cần 2–4 mục tiêu học (goals), có ${goals.length}`);
+  goals.forEach((gl, i) => { if (!GOAL_VERB.test(plain(gl))) bad(b.id, `std2: goals[${i}] phải mở đầu bằng động từ đo được (tính/chẩn đoán/đánh giá/thiết kế…): "${plain(gl).slice(0, 40)}"`); });
+  if (!FRESH_SET.includes(L.fresh)) bad(b.id, `std2: thiếu fresh ∈ ${FRESH_SET.join('|')}`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(L.checked || '')) bad(b.id, 'std2: thiếu checked dạng YYYY-MM-DD');
+  if (L.fresh && L.fresh !== 'evergreen' && !(L.src || []).length) bad(b.id, `std2: fresh=${L.fresh} bắt buộc có src (nguồn + ngày kiểm)`);
+  (L.src || []).forEach((x, i) => { if (!x.t || !x.u || !/^\d{4}-\d{2}-\d{2}$/.test(x.d || '') || !['doc', 'tim', 'chua'].includes(x.st)) bad(b.id, `std2: src[${i}] cần {t,u,d:YYYY-MM-DD,st:doc|tim|chua}`); });
+  const hasNum = /\d{2,}/.test(plain(L.example) + plain(L.situation));
+  if (hasNum && !L.assume && !(L.src || []).length) bad(b.id, 'std2: ví dụ có số phải gắn nhãn assume:true (minh hoạ) hoặc có src');
+  (L.prereq || []).forEach(k => { if (!INDEX.some(x => x.id === k) && !g(`typeof LESSONS!=='undefined' && LESSONS.some(x=>'L:'+x.day===${JSON.stringify(k)})`) && !g(`typeof PRINCIPLES!=='undefined' && PRINCIPLES.some(x=>'P:'+x.id===${JSON.stringify(k)})`)) bad(b.id, `std2: prereq trỏ tới bài không có: ${k}`); });
+  const bl = (L.q || []).map(bloomOf), top = Math.max(...bl.map(x => BLOOM_RANK[x]));
+  if (top < 4) bad(b.id, `std2: chưa có câu mức L4+ (phân tích/đánh đổi); heuristic thấy ${JSON.stringify(bl)}`);
+  if (bl.filter(x => BLOOM_RANK[x] <= 2).length > 3) warn(b.id, `std2: ${bl.filter(x => BLOOM_RANK[x] <= 2).length}/7 câu ở mức nhớ/hiểu (L1–L2) — mục tiêu ≤ 3`);
+  if (!L.counter || !L.deeper) bad(b.id, 'std2: cần counter (khi nào khái niệm sai) và deeper (đánh đổi, khái niệm kề cận)');
+}
+
 const bad = (id, m) => { errs++; console.log(`  ✗ ${id}: ${m}`); };
 const warn = (id, m) => { warns++; console.log(`  ! ${id}: ${m}`); };
 const stems = new Map();
@@ -50,6 +73,7 @@ for (const mod of mods) {
     if (!L.concept || !L.concept.name || !L.concept.body) bad(b.id, 'thiếu concept.name/body');
     W('situation', 40, 120); W('concept', 50, 170); W('example', 50, 170); W('takeaway', 6, 28);
     if (!(L.mistakes || []).length) warn(b.id, 'chưa có lỗi hay gặp');
+    if (L.std >= 2) checkStd2(b, L, idx);
     const q = L.q || [];
     if (q.length !== 7) bad(b.id, `có ${q.length} câu, cần đúng 7`);
     if (q[1] && !/bạn (làm|chọn|sửa|đặt|ưu tiên|phản ứng|đề xuất)|nên (làm|chọn|sửa|xem|đặt)|chọn (đâu|cách|kiểu|theo)|(sửa|làm|chọn) gì/i.test(plain(q[1].stem)))
@@ -100,5 +124,5 @@ for (const mod of mods) {
   if (share > 0.35) bad(mod, `đáp án đúng dài nhất ở ${Math.round(share * 100)}% câu trắc nghiệm (trần 35%) — người học đoán được theo độ dài`);
   if (mcqN - m0 >= 10 && share < 0.15) bad(mod, `đáp án đúng dài nhất chỉ ở ${Math.round(share * 100)}% câu (sàn 15%) — người học đoán ngược được: loại phương án dài nhất`);
 }
-console.log(`\n${lessonsN} bài · ${itemsN} câu · ${errs} lỗi · ${warns} cảnh báo`);
+console.log(`\n${lessonsN} bài · ${itemsN} câu · ${errs} lỗi · ${warns} cảnh báo · ${stdN} bài theo chuẩn v2`);
 process.exit(errs ? 1 : 0);

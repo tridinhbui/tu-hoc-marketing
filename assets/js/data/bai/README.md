@@ -25,3 +25,7 @@ Mỗi module một file `<mã>.js`, gọi `BAI_ADD({ mod, lessons:[...] })`. K�
 Câu trắc nghiệm: `{ type:'mcq', stem, options:[{k,t}×4], answer, why:{a,b,c,d} }`.
 Câu tính: `{ type:'calc', stem, unit, ans, tol, steps:[...], wrong:[[giá_trị,'MÃ_LỖI']], errors:['MÃ_LỖI'] }` — mã lỗi lấy từ `ERRORS` trong `drills.js`.
 `id`, `source`, `stage`, `mod`, `teaches` được `BAI_ADD` tự gán.
+
+## Chuẩn v2 (11/2026) — trường tuỳ chọn, bắt buộc khi `std: 2`
+
+`goals` (2–4 mục tiêu đo được, mở đầu bằng động từ) · `prereq` (mã bài nên học trước) · `fresh` (`evergreen|periodic|fast`) · `checked` (YYYY-MM-DD) · `assume: true` (số minh hoạ) · `src` ([{t,u,d,st}], bắt buộc khi `fresh ≠ evergreen`). Chuẩn đầy đủ: `qa/curriculum/CONTENT-EXCELLENCE-GUIDELINES.md`. Validator kiểm luật v2 cho bài có `std: 2`.

@@ -134,6 +134,8 @@ button{font-family:inherit}
 .lp-fig text.tt{font-weight:700;font-size:14.5px;fill:var(--lp-ink)}
 .lp-fig text.end{text-anchor:end}.lp-fig text.it{font-style:italic}
 .lp-assume{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--lp-gold,#9a6a12);color:var(--lp-gold,#9a6a12);border-radius:99px;padding:3px 10px;margin:0 0 10px}
+.lp-goals{margin:0;padding-left:1.2em}.lp-goals li{margin:.3em 0}
+.lp-fresh{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0 0}
 .lp-src{font-size:.86em;color:var(--lp-ink2)}
 .lp-src li{margin-bottom:.35em}
 .lp-src .st{font-size:11px;font-weight:700;color:var(--lp-ink3)}
@@ -279,7 +281,8 @@ const minutes=()=>Math.max(1,parseInt(String(M.read||'6'),10)||6);
 /* Dữ liệu ba loại bài (B mới, L bài cũ, P nguyên lý) gom về một dạng để dựng chung một bố cục. */
 const LD=(()=>{ const s=(M&&M.src)||{}, k=M&&M.kind;
   if(k==='B') return {sit:s.situation,cName:(s.concept||{}).name,cBody:(s.concept||{}).body,ex:s.example,counter:s.counter||'',points:s.points||[],mistakes:s.mistakes||[],closer:s.deeper||'',take:s.takeaway,apply:s.apply,
-    how:s.how||[],fig:s.fig||'',assume:!!s.assume,src:s.src||[],rel:s.rel||[]};
+    how:s.how||[],fig:s.fig||'',assume:!!s.assume,src:s.src||[],rel:s.rel||[],
+    goals:s.goals||[],fresh:s.fresh||'',checked:s.checked||'',prereq:s.prereq||[]};
   if(k==='L') return {sit:s.real,cName:'Ý chính cốt lõi',cBody:`<b>${s.idea}</b>`,ex:'',points:s.why||[],mistakes:[],counter:'',closer:s.closer,take:s.idea,apply:s.try};
   return {sit:(s.brand?s.brand+' ':'')+(s.ex||''),cName:'Đúc kết một dòng',cBody:`<b>${s.one}</b>`,ex:'',points:[],mistakes:s.mistake?[s.mistake]:[],counter:s.counter,closer:'',take:s.one,apply:s.drill}; })();
 
@@ -513,6 +516,9 @@ const ICON={
   group:'<svg class="ic" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.5" cy="9" r="2.4"/><path d="M17 14.2c2.4.2 4 2 4 4.8"/></svg>',
 };
 const ulist=a=>`<ul>${a.map(x=>`<li>${x}</li>`).join('')}</ul>`;
+/* Độ tươi của kiến thức (chuẩn bài v2): nền · xem lại định kỳ · thay đổi nhanh. Chỉ hiện khi bài khai báo. */
+const FRESH={evergreen:['Kiến thức nền','ít thay đổi; xem lại mỗi 24 tháng'],periodic:['Xem lại định kỳ','benchmark, công cụ, luật — xem lại mỗi 6–12 tháng'],fast:['Thay đổi nhanh','giao diện, tính năng, thuật toán — xem lại mỗi 3 tháng; nếu màn hình của bạn khác mô tả, tin trang chính thức']};
+function freshTag(){ const f=FRESH[LD.fresh]; if(!f) return ''; return `<p class="lp-fresh"><span class="lp-tag${LD.fresh==='fast'?' lp-tag--acc':''}">${f[0]}</span><span class="small muted">${f[1]}${LD.checked?` · kiểm ${escH(LD.checked)}`:''}</span></p>`; }
 
 function bodyHTML(s){
   const gateLocked=PLAN.cp&&!cpDone(s);
@@ -540,6 +546,7 @@ function bodyHTML(s){
     <section class="lp-sec" id="intro" style="margin-top:22px">
       <div class="lp-note" style="border-left-color:var(--lp-gold);background:var(--lp-gold-soft)"><b class="t" style="color:var(--lp-gold)">Tình huống</b><span class="lp-lead">${LD.sit||''}</span></div>
     </section>
+    ${LD.goals.length?sec('goals','Sau bài này bạn làm được',`<ul class="lp-goals">${LD.goals.map(g=>`<li>${g}</li>`).join('')}</ul>${LD.prereq.length?`<p class="small muted" style="margin:8px 0 0">Nên học trước: ${LD.prereq.map(k=>{const mm=lessonMeta(k);return mm?`<a href="bai.html?id=${encodeURIComponent(k)}">${escH(mm.t)}</a>`:'';}).filter(Boolean).join(' · ')}</p>`:''}${freshTag()}`):''}
     ${sec('concept',LD.cName||'Khái niệm',`<p>${LD.cBody||''}</p>`)}
     ${PLAN.cp?`<div class="gate"><span class="lp-tag lp-tag--acc">Dừng &amp; Kiểm tra · Điểm giữa bài</span>${qHTML(PLAN.cp,'cp')}</div>`:''}
     <div id="read2" class="${gateLocked?'locked':''}">${after}</div>

@@ -27,6 +27,11 @@ const ERRORS = {
   NHAM_ROI_ROAS:          'Nhầm ROI (%) với ROAS (lần)',
   SO_ROI_KHAC_KY:         'Tính hoặc so ROI theo kỳ ngắn khi lợi ích đến ở kỳ dài',
   HOAN_VON_TINH_DOANH_THU:'Tính hoàn vốn bằng doanh thu thay vì lãi gộp',
+  NHAM_DON_VI:             'Trả lời bằng tỉ lệ (hoặc tiền) khi đề hỏi đơn vị khác',
+  THIEU_TU_SO:             'Cộng sót một phần của tử số',
+  TINH_CA_DON_TU_NHIEN:    'Tính cả đơn đằng nào cũng có vào kết quả của quảng cáo',
+  SO_KHAC_CUA_SO:          'So hai khoảng thời gian khác độ dài hoặc khác cửa sổ đo',
+  QUEN_DOI_CHUNG:          'So trước–sau mà quên trừ thay đổi của nhóm đối chứng',
   SAI_TINH_TOAN:           'Sai tính toán chưa phân loại',
 };
 
