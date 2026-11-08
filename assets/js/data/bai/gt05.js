@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'gt05', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:gt05-01', skill:'comm', read:'6 phút', t:'Brief ghi “tăng nhận biết thương hiệu” — vấn đề kinh doanh thật nằm ở đâu?',
+{ id:'B:gt05-01', skill:'comm', read:'6 phút', assume:true, t:'Brief ghi “tăng nhận biết thương hiệu” — vấn đề kinh doanh thật nằm ở đâu?',
   situation:'Chuỗi bánh mì Nắng Sớm có 24 cửa hàng ở TP.HCM. Brief gửi agency mở đầu bằng dòng: “Vấn đề: cần tăng nhận biết thương hiệu”. Nhưng số liệu nội bộ cho thấy lượng khách buổi sáng vẫn ổn, còn doanh thu buổi chiều giảm từ 30% xuống 18% tổng doanh thu trong sáu tháng, sau khi hai chuỗi trà sữa mở cạnh 10 cửa hàng.',
   concept:{ name:'Vấn đề kinh doanh (business problem)',
     body:'Phần đầu của brief phải trả lời: <b>doanh nghiệp đang mất hay chưa có được điều gì, đo bằng con số nào</b>. “Tăng nhận biết” là một cách chữa, không phải bệnh. Một vấn đề kinh doanh tốt có ba mảnh: con số đang lệch (doanh thu buổi chiều), mức lệch (30% xuống 18%), và nghi vấn về nguyên nhân (khách chiều chuyển sang đồ uống bên cạnh). Viết đúng phần này thì agency biết mình đang giải bài gì; viết sai thì họ giải một bài khác rất đẹp.' },
@@ -60,7 +60,7 @@ BAI_ADD({ mod:'gt05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:gt05-02', skill:'measure', read:'7 phút', t:'Viết mục tiêu trong brief thành một câu đo được thế nào?',
+{ id:'B:gt05-02', skill:'measure', read:'7 phút', assume:true, t:'Viết mục tiêu trong brief thành một câu đo được thế nào?',
   situation:'Ứng dụng đặt lịch cắt tóc Tóc Gọn có 40.000 người dùng đã tải app ở Hà Nội, nhưng mỗi tháng chỉ 6.000 người đặt ít nhất một lịch. Brief ghi mục tiêu: “Tăng mức độ gắn bó của người dùng với ứng dụng”. Agency hỏi lại: gắn bó là mở app, đặt lịch hay để lại đánh giá? Và bao nhiêu thì coi là đạt?',
   concept:{ name:'Mục tiêu một câu: ai – làm gì – từ bao nhiêu lên bao nhiêu – khi nào',
     body:'Mục tiêu trong brief phải để hai người đọc độc lập mà vẫn đồng ý chiến dịch đạt hay trượt. Khuôn đơn giản: <b>ai</b> (nhóm người cụ thể), <b>làm hành vi gì</b> (một hành vi quan sát được), <b>từ mức nào lên mức nào</b> (có điểm xuất phát), <b>trước ngày nào</b>. Thiếu điểm xuất phát thì không biết tăng bao nhiêu là giỏi; thiếu hạn thì chiến dịch không bao giờ trượt. Chỉ một câu, vì hai mục tiêu ngang nhau sẽ kéo sáng tạo về hai phía.' },
@@ -80,10 +80,10 @@ BAI_ADD({ mod:'gt05', lessons:[
       c:'Kênh là cách làm; mục tiêu phải đứng được dù chọn kênh nào.',
       d:'Chính agency đã hỏi lại ba nghĩa khác nhau; từ này không đủ rõ.'} },
   { type:'mcq', stem:'Bạn phải chọn một câu mục tiêu cho brief của Tóc Gọn. Bạn chọn câu nào?',
-    options:[{k:'a',t:'Tăng tải app lên 60.000 và tăng đánh giá 5 sao trong năm nay'},{k:'b',t:'Trở thành ứng dụng cắt tóc được yêu thích nhất Hà Nội'},
+    options:[{k:'a',t:'Tăng tải app lên 60.000 và tăng đánh giá 5 sao trong năm nay'},{k:'b',t:'Tăng lượt mở app hằng tháng từ 20.000 lên 30.000 trước 31/12'},
              {k:'c',t:'Nâng người đặt lịch hằng tháng từ 6.000 lên 8.000 trước 31/12'},{k:'d',t:'Tăng nhận biết và cải thiện hình ảnh thương hiệu trong nhóm nam giới trẻ'}],
     answer:'c', why:{a:'Hai mục tiêu ngang nhau, và tải app không chữa được việc người đã có app không đặt lịch.',
-      b:'“Được yêu thích nhất” không có cách đo và không có điểm xuất phát.',
+      b:'Đủ khuôn và có số, nhưng mở app không phải hành vi đang lệch: người mở app mà không đặt lịch thì doanh thu vẫn đứng yên.',
       c:'Đúng. Có hành vi, có điểm xuất phát, đích và hạn; nhắm đúng chỗ đang lệch.',
       d:'Nhận biết không phải vấn đề — 40.000 người đã tải app; lại thiếu con số.'} },
   { type:'calc', stem:'Tóc Gọn có 40.000 người đã tải app. Mục tiêu nâng người đặt lịch hằng tháng từ 6.000 lên 8.000. Tỉ lệ đặt lịch tăng bao nhiêu điểm phần trăm?',
@@ -112,15 +112,15 @@ BAI_ADD({ mod:'gt05', lessons:[
       d:'Khen đẹp không phải thước đo của mục tiêu này.'} },
   { type:'mcq', stem:'Tình huống mới: chuỗi gym viết mục tiêu “Giữ chân hội viên tốt hơn trong quý 3”. Bản sửa nào tốt nhất?',
     options:[{k:'a',t:'Tăng hài lòng của hội viên, đo bằng số bình luận khen trên fanpage'},{k:'b',t:'Làm hội viên yêu phòng tập hơn trong quý 3 bằng nhiều sự kiện'},
-             {k:'c',t:'Tăng tỉ lệ hội viên gia hạn từ 45% lên 55% trong quý 3'},{k:'d',t:'Tăng hội viên mới lên gấp đôi để bù cho số người bỏ tập'}],
+             {k:'c',t:'Tăng tỉ lệ hội viên gia hạn từ 45% lên 55% trong quý 3'},{k:'d',t:'Tăng hội viên đăng ký mới từ 300 lên 600 mỗi tháng trong quý 3'}],
     answer:'c', why:{a:'Bình luận khen là tín hiệu lệch, không phải hành vi giữ chân.',
       b:'Vẫn không đo được, và gắn luôn giải pháp vào mục tiêu.',
       c:'Đúng. Có hành vi, điểm xuất phát, đích và hạn.',
-      d:'Đổi sang bài toán khác (khách mới) thay vì giữ khách cũ.'} }
+      d:'Có số, điểm xuất phát và hạn, nhưng đổi sang bài toán khác (khách mới) thay vì giữ chân hội viên cũ.'} }
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:gt05-03', skill:'insight', read:'6 phút', t:'“Nữ 18–35, thu nhập trung bình” — chân dung khách trong brief nên viết thế nào?',
+{ id:'B:gt05-03', skill:'insight', read:'6 phút', assume:true, t:'“Nữ 18–35, thu nhập trung bình” — chân dung khách trong brief nên viết thế nào?',
   situation:'Thương hiệu kem chống nắng Mây Trắng gửi brief với đối tượng: “Nữ 18–35 tuổi, thu nhập trung bình, sống ở thành phố”. Ba agency trả về ba ý tưởng: một cho sinh viên đi biển, một cho mẹ bỉm đưa con đi học, một cho dân văn phòng ngồi máy lạnh. Cả ba đều khớp với brief, và cả ba đều không giống nhau.',
   concept:{ name:'Chân dung một người cụ thể',
     body:'Dải nhân khẩu học cho biết mua quảng cáo nhắm ai, nhưng không giúp người viết ý tưởng. Brief nên vẽ <b>một người cụ thể</b>: một ngày của họ, lúc nào họ gặp vấn đề, họ đang dùng gì thay thế và vì sao chưa hài lòng. Chọn người đại diện cho nhóm khách mang lại phần lớn doanh thu hoặc tăng trưởng. Đây là cách của trường phái phân khúc – nhắm chọn (Kotler); quan điểm khác (Byron Sharp, Viện Ehrenberg-Bass) cho rằng tăng trưởng chủ yếu đến từ rất nhiều người mua thưa, nên chân dung giúp viết thông điệp sắc, nhưng không nên thu hẹp phạm vi tiếp cận theo nó. Viết một người không có nghĩa bỏ những người khác; nó giúp thông điệp nói trúng một người thay vì nói nhạt với tất cả.' },
@@ -177,7 +177,7 @@ BAI_ADD({ mod:'gt05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:gt05-04', skill:'insight', read:'7 phút', t:'Ô “insight” trong brief đang chứa dữ kiện hay chứa sự thật về con người?',
+{ id:'B:gt05-04', skill:'insight', read:'7 phút', assume:true, t:'Ô “insight” trong brief đang chứa dữ kiện hay chứa sự thật về con người?',
   situation:'Giả sử brief của nhãn nước tăng lực Sấm (thương hiệu và số liệu minh hoạ) ghi ô insight: “70% tài xế công nghệ làm việc trên 10 tiếng mỗi ngày”. Đội sáng tạo đọc xong bảo: “Con số này đúng, nhưng tụi em không biết viết gì từ nó.” Trong phỏng vấn, một tài xế nói: “Buồn ngủ thì dừng uống ly cà phê, nhưng dừng 15 phút là mất một cuốc.”',
   concept:{ name:'Insight = sự thật + căng thẳng',
     body:'Dữ kiện nói điều gì đang xảy ra; insight nói <b>vì sao người ta kẹt</b>. Insight tốt thường có hai vế đối nhau: điều người đó muốn và điều ngăn họ. Người đọc thấy mình trong đó và gật đầu: “đúng là vậy”. Trong brief, insight là cầu nối từ chân dung sang thông điệp: nó chỉ chỗ thương hiệu có thể chen vào gỡ nút. Một câu insight nên viết bằng giọng của khách, không phải giọng báo cáo.' },
@@ -197,9 +197,9 @@ BAI_ADD({ mod:'gt05', lessons:[
       c:'Đúng. Dữ kiện thiếu vế căng thẳng — không có nút để thương hiệu gỡ.',
       d:'Vấn đề không phải độ tin; là thiếu vế “vì sao kẹt”.'} },
   { type:'mcq', stem:'Bạn chọn câu nào cho ô insight của Sấm?',
-    options:[{k:'a',t:'Tài xế công nghệ cần một thức uống tăng lực chất lượng cao'},{k:'b',t:'Tôi cần tỉnh để chạy tiếp, nhưng dừng nghỉ thì mất cuốc'},
+    options:[{k:'a',t:'Tôi muốn một lon tăng lực thật ngon, nhưng ít hãng làm vừa miệng'},{k:'b',t:'Tôi cần tỉnh để chạy tiếp, nhưng dừng nghỉ thì mất cuốc'},
              {k:'c',t:'Thị trường nước tăng lực đang tăng trưởng mạnh trong nhóm tài xế'},{k:'d',t:'Tài xế là nhóm lao động vất vả, đáng được xã hội ghi nhận và tôn vinh nhiều hơn'}],
-    answer:'b', why:{a:'Giọng thương hiệu, không có căng thẳng, không ai gật đầu “đúng là tôi”.',
+    answer:'b', why:{a:'Có ngôi “Tôi” và chữ “nhưng” mà vẫn là giọng thương hiệu trá hình: vướng mắc nằm ở sản phẩm của các hãng, không ở chuyện tài xế muốn tỉnh mà không dám dừng.',
       b:'Đúng. Giọng khách, hai vế đối nhau, chỉ ra chỗ Sấm chen vào.',
       c:'Đây là dữ kiện thị trường, thuộc phần bối cảnh.',
       d:'Nghe cảm động nhưng không nói tài xế kẹt ở đâu với việc giữ tỉnh táo.'} },
@@ -215,10 +215,10 @@ BAI_ADD({ mod:'gt05', lessons:[
       d:'Nếu khách bất ngờ vì chưa từng thấy, có thể nó không đúng với họ.'} },
   { type:'mcq', stem:'Tình huống mới: hãng bảo hiểm sức khoẻ có dữ kiện “65% người 30–40 tuổi chưa có bảo hiểm tự mua”. Câu nào là insight?',
     options:[{k:'a',t:'Người 30–40 tuổi chưa hiểu hết lợi ích lâu dài của bảo hiểm sức khoẻ'},{k:'b',t:'Thị trường bảo hiểm nhóm tuổi 30–40 còn nhiều dư địa tăng trưởng'},
-             {k:'c',t:'Người 30–40 tuổi lo cho sức khoẻ khi bắt đầu có con nhỏ'},{k:'d',t:'Tôi biết nên mua, nhưng trả tiền cho chuyện chưa xảy ra thấy phí'}],
+             {k:'c',t:'Tôi đã ngoài 30 tuổi, nhưng đến giờ vẫn chưa tự mua bảo hiểm nào'},{k:'d',t:'Tôi biết nên mua, nhưng trả tiền cho chuyện chưa xảy ra thấy phí'}],
     answer:'d', why:{a:'Giả định khách thiếu hiểu biết, giọng người bán, không có căng thẳng.',
       b:'Đây là cơ hội kinh doanh, không phải sự thật về con người.',
-      c:'Một nhận xét chung về nhóm tuổi; không có vướng mắc nào giải thích vì sao họ chưa mua.',
+      c:'Chỉ là dữ kiện 65% viết lại ở ngôi “Tôi”: hai vế không đối nhau, không có vướng mắc nào giải thích vì sao họ chưa mua.',
       d:'Đúng. Hai vế đối nhau: biết là nên, nhưng thấy như mất tiền.'} },
   { type:'mcq', stem:'Trong brief, con số “70% tài xế làm trên 10 tiếng” nên nằm ở đâu?',
     options:[{k:'a',t:'Xoá đi, vì dữ kiện làm brief nặng và khô'},{k:'b',t:'Giữ ở phần bối cảnh, làm nền cho insight'},
@@ -237,7 +237,7 @@ BAI_ADD({ mod:'gt05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:gt05-05', skill:'brand', read:'6 phút', t:'Brief muốn nói năm điều — chọn một thông điệp duy nhất thế nào?',
+{ id:'B:gt05-05', skill:'brand', read:'6 phút', assume:true, t:'Brief muốn nói năm điều — chọn một thông điệp duy nhất thế nào?',
   situation:'Nồi chiên không dầu Bếp Xanh có năm điểm mạnh: ít dầu, dung tích 6 lít, bảo hành 3 năm, rửa nhanh, giá rẻ hơn đối thủ 15%. Brief ghi ô thông điệp: cả năm ý. Bản thử quảng cáo 15 giây đọc lên như tờ thông số. Khảo sát nhanh sau khi xem, hầu hết người xem không nhớ được ý nào.',
   concept:{ name:'Thông điệp duy nhất (single-minded proposition)',
     body:'Ô thông điệp trong brief chỉ nên có <b>một câu, một ý</b>: điều duy nhất bạn muốn người đó nhớ và tin. Phép thử: nếu khách chỉ nhớ đúng một câu sau khi xem, câu đó là gì? Chọn ý nối thẳng với insight của chân dung khách, và là ý đối thủ chưa chiếm. Các ý còn lại không bị vứt: chúng xuống phần lý do để tin, hoặc để dành cho trang sản phẩm, nơi khách đọc chậm.' },
@@ -297,7 +297,7 @@ BAI_ADD({ mod:'gt05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:gt05-06', skill:'brand', read:'6 phút', t:'Thông điệp đã có — lý do để tin nào làm khách chịu tin?',
+{ id:'B:gt05-06', skill:'brand', read:'6 phút', assume:true, t:'Thông điệp đã có — lý do để tin nào làm khách chịu tin?',
   situation:'Kem đánh răng thảo dược Răng Mộc chọn thông điệp: “Hơi thở thơm đến tận chiều”. Ô lý do để tin trong brief ghi: “Sản phẩm chất lượng cao, được nhiều người yêu thích, thương hiệu uy tín 10 năm”. Đội sáng tạo hỏi: “Cái nào trong đây chứng minh được hơi thở thơm đến chiều?”',
   concept:{ name:'Lý do để tin (reason to believe)',
     body:'Lý do để tin là <b>bằng chứng cho đúng thông điệp</b>, không phải lời khen chung cho thương hiệu. Có ba loại hay dùng: thành phần hoặc cơ chế (vì sao nó làm được), kết quả kiểm chứng (thử nghiệm, số đo có nguồn), và người thật dùng thật. Mỗi lý do phải trả lời câu hỏi của người hoài nghi: “Sao tôi phải tin?”. Hai đến ba lý do sắc tốt hơn mười lý do chung chung. Nếu không tìm được lý do nào, có thể thông điệp đang hứa quá.' },
@@ -317,10 +317,10 @@ BAI_ADD({ mod:'gt05', lessons:[
       c:'Giọng khách là yêu cầu của insight, không phải của lý do để tin.',
       d:'Vấn đề không phải số năm; là uy tín không chứng minh lời hứa này.'} },
   { type:'mcq', stem:'Bạn viết lại ô lý do để tin. Bạn chọn giữ lại cặp nào?',
-    options:[{k:'a',t:'Uy tín 10 năm và được nhiều người trên mạng yêu thích'},{k:'b',t:'Đạt chuẩn chất lượng, bao bì mới thân thiện môi trường'},
+    options:[{k:'a',t:'Uy tín 10 năm và được nhiều người trên mạng yêu thích'},{k:'b',t:'Vi hạt tinh dầu và 50/50 người thử thấy thơm ngay sau khi đánh răng'},
              {k:'c',t:'Vi hạt tinh dầu tan dần và 38/50 người thử thấy thơm lúc 14 giờ'},{k:'d',t:'Thành phần thảo dược thiên nhiên, an toàn cho cả gia đình'}],
     answer:'c', why:{a:'Khen chung; không nói gì về buổi chiều.',
-      b:'Đều có thể đúng nhưng không liên quan tới hơi thở.',
+      b:'Có số nhưng đo sai thời điểm: lời hứa là thơm đến chiều, còn ngay sau khi đánh răng thì kem nào cũng thơm.',
       c:'Đúng. Một cơ chế và một kết quả kiểm chứng, cả hai nhắm thẳng vào lời hứa.',
       d:'“Thiên nhiên, an toàn” là một lời hứa khác, không chứng minh độ lâu.'} },
   { type:'calc', stem:'Thử nghiệm nội bộ trên 50 người, 38 người vẫn thấy hơi thở thơm lúc 14 giờ. Tỉ lệ này là bao nhiêu phần trăm?',
@@ -334,10 +334,10 @@ BAI_ADD({ mod:'gt05', lessons:[
       c:'Bài không khẳng định con số luật định nào; lý do là minh bạch về bằng chứng.',
       d:'Người thử nghiệm không tự động đồng ý làm quảng cáo.'} },
   { type:'mcq', stem:'Tình huống mới: hãng giày chạy bộ hứa “Nhẹ nhất trong tầm giá 1 triệu”. Lý do để tin nào mạnh nhất?',
-    options:[{k:'a',t:'Được vận động viên phong trào khắp cả nước tin dùng và giới thiệu'},{k:'b',t:'Thiết kế hiện đại, nhiều màu sắc trẻ trung'},
+    options:[{k:'a',t:'Được vận động viên phong trào khắp cả nước tin dùng và giới thiệu'},{k:'b',t:'Đế giày dày 32 mm, êm hơn các mẫu cùng tầm giá'},
              {k:'c',t:'Thương hiệu có mặt tại Việt Nam từ nhiều năm'},{k:'d',t:'Cân thực tế 210g, so với các mẫu cùng tầm giá đang bán'}],
     answer:'d', why:{a:'Nghe có sức nặng nhưng không chứng minh “nhẹ nhất”.',
-      b:'Không liên quan tới cân nặng.',
+      b:'Có số và có phép so, nhưng đo độ dày đế chứ không đo cân nặng; đế dày hơn còn có thể nặng hơn.',
       c:'Thâm niên không chứng minh lời hứa về trọng lượng.',
       d:'Đúng. Số đo trực tiếp, có phép so sánh, nhắm thẳng lời hứa.'} },
   { type:'mcq', stem:'Không tìm được lý do để tin nào cho thông điệp. Nên đọc điều này thế nào?',
@@ -357,7 +357,7 @@ BAI_ADD({ mod:'gt05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:gt05-07', skill:'channel', read:'7 phút', t:'Ngân sách, thời hạn, điều bắt buộc — ghi ràng buộc vào brief ra sao để agency khỏi làm lại?',
+{ id:'B:gt05-07', skill:'channel', read:'7 phút', assume:true, t:'Ngân sách, thời hạn, điều bắt buộc — ghi ràng buộc vào brief ra sao để agency khỏi làm lại?',
   situation:'Thương hiệu nước mắm Cá Cơm Vàng brief agency làm chiến dịch Tết với dòng ràng buộc: “Ngân sách linh hoạt, cần gấp”. Ba tuần sau agency trình ý tưởng quay phim ở Phú Quốc với ca sĩ nổi tiếng. Lúc đó hãng mới nói: tổng ngân sách 800 triệu, lên sóng trước 15/12, và logo phải xuất hiện trong 3 giây đầu. Cả ý tưởng phải làm lại.',
   concept:{ name:'Ràng buộc: ba con số và một danh sách',
     body:'Ràng buộc không làm hẹp sáng tạo; nó cho sáng tạo <b>một khung để làm đúng</b>. Brief cần ghi rõ: <b>tổng ngân sách</b> và phần dành cho sản xuất so với mua quảng cáo; <b>ngày lên sóng</b> và các mốc duyệt; <b>điều bắt buộc</b> (logo, câu định vị, lưu ý pháp lý của ngành) và <b>điều cấm</b>. “Linh hoạt” và “gấp” không phải con số. Phân loại thêm: ràng buộc <b>cứng</b> (tổng tiền, ngày lên sóng, quy định pháp lý) không đổi được; ràng buộc <b>mềm</b> (địa điểm quay, người thể hiện) đổi được khi hai điều xung đột. Đừng quên ghi phí agency và quyền dùng hình ảnh người nổi tiếng (bao lâu, kênh nào). Ràng buộc càng rõ từ đầu, vòng làm lại càng ít.' },
@@ -414,12 +414,13 @@ BAI_ADD({ mod:'gt05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:gt05-08', skill:'comm', read:'7 phút', t:'Cùng một chiến dịch, brief cho agency và brief cho KOL khác nhau thế nào?',
+{ id:'B:gt05-08', skill:'comm', read:'7 phút', assume:true, t:'Cùng một chiến dịch, brief cho agency và brief cho KOL khác nhau thế nào?',
   situation:'Hãng sữa chua uống Men Việt dùng nguyên brief 4 trang của agency gửi cho 12 KOL ẩm thực. Kết quả: 5 người không đọc hết và đăng bài quên nhắc ưu đãi; 4 người đọc thuộc lời thoại mẫu nên video nghe như quảng cáo; chỉ 3 video có tương tác tốt. Ngân sách KOL là 120 triệu đồng.',
   concept:{ name:'Brief theo người nhận',
-    body:'Brief cho agency là <b>đề bài chiến lược</b>: vấn đề, mục tiêu, chân dung, insight, thông điệp, ràng buộc — để họ nghĩ ra ý tưởng. Brief cho KOL là <b>đề bài một nội dung</b>, thường vừa một màn hình điện thoại: một thông điệp, vài điều bắt buộc (nhắc ưu đãi, gắn nhãn quảng cáo theo quy định nền tảng), vài điều cấm, hạn đăng và cách đo. Phần còn lại để KOL nói theo giọng của mình — khán giả theo họ vì giọng đó. Đừng gửi kịch bản để đọc thuộc.' },
+    body:'Brief cho agency là <b>đề bài chiến lược</b>: vấn đề, mục tiêu, chân dung, insight, thông điệp, ràng buộc — để họ nghĩ ra ý tưởng. Brief cho KOL là <b>đề bài một nội dung</b>, thường vừa một màn hình điện thoại: một thông điệp, vài điều bắt buộc (nhắc ưu đãi, gắn nhãn quảng cáo hoặc hợp tác theo chính sách nội dung thương mại của nền tảng đang dùng và quy định pháp luật Việt Nam về quảng cáo — cả hai thay đổi theo thời gian, nên kiểm trang chính thức tại ngày làm brief; nếu màn hình khác mô tả, tin trang chính thức), vài điều cấm, hạn đăng và cách đo. Phần còn lại để KOL nói theo giọng của mình — khán giả theo họ vì giọng đó. Đừng gửi kịch bản để đọc thuộc.' },
   example:'Brief KOL mới của Men Việt, một màn hình: “Ý chính: uống sau bữa trưa, bụng nhẹ cả chiều. Bắt buộc: nhắc mã giảm 20% MENVIET20, gắn nhãn hợp tác, quay cảnh uống thật sau bữa ăn. Cấm: nói chữa bệnh, so sánh tên hãng khác. Đăng trước 10/11. Đo: lượt dùng mã.” Không có lời thoại mẫu. Với 120 triệu và 12 KOL, chi phí trung bình 10 triệu mỗi người; nếu tổng mã được dùng là 1.500 lượt, chi phí mỗi lượt dùng mã là 80.000 đồng — con số để so với các kênh khác.',
   takeaway:'Agency cần đề bài để nghĩ; KOL cần một màn hình để làm đúng mà vẫn là chính mình.',
+  src:[{t:'TikTok · Branded Content Policy (chính sách nội dung thương mại, kiểm mục gắn nhãn)', u:'https://www.tiktok.com/legal/page/global/bc-policy/en', d:'2026-11-07', st:'chua'},{t:'Meta Transparency Center · Branded content policies (Facebook/Instagram)', u:'https://transparency.meta.com/policies/other-policies/branded-content-policies/', d:'2026-11-07', st:'chua'},{t:'Cơ sở dữ liệu quốc gia về văn bản pháp luật (tra Luật Quảng cáo và văn bản sửa đổi, bản hiện hành)', u:'https://vbpl.vn/', d:'2026-11-07', st:'chua'}],
   apply:'Viết một brief KOL vừa một màn hình cho một sản phẩm bạn thích: một ý chính, ba điều bắt buộc, hai điều cấm, hạn đăng, cách đo. Làm trong 60 giây.',
   mistakes:['Gửi nguyên brief agency cho KOL rồi trách KOL không đọc.','Viết kịch bản chi tiết khiến KOL mất giọng và nội dung lộ rõ là quảng cáo.'],
   q:[
@@ -471,7 +472,7 @@ BAI_ADD({ mod:'gt05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:gt05-09', skill:'comm', read:'7 phút', t:'Cầm một brief tệ trong tay — sửa phần nào trước?',
+{ id:'B:gt05-09', skill:'comm', read:'7 phút', assume:true, t:'Cầm một brief tệ trong tay — sửa phần nào trước?',
   situation:'Bạn nhận brief của thương hiệu giày học sinh Bước Nhỏ cho mùa tựu trường: “Vấn đề: cần chiến dịch viral. Mục tiêu: tăng doanh số và nhận biết. Đối tượng: phụ huynh và học sinh. Thông điệp: bền, êm, rẻ, đẹp, chống trơn. Ngân sách: tuỳ ý tưởng. Hạn: càng sớm càng tốt.” Còn 6 tuần là khai giảng. Bạn có một buổi họp 30 phút với hãng.',
   concept:{ name:'Sửa brief theo thứ tự phụ thuộc',
     body:'Các phần của brief phụ thuộc nhau theo chuỗi: <b>vấn đề → mục tiêu → chân dung → insight → thông điệp → lý do để tin</b>, còn ràng buộc là khung bao quanh. Sửa phần sau khi phần trước còn sai là phí công: chọn thông điệp khi chưa biết nói với ai thì phải chọn lại. Với thời gian ít, hãy hỏi đúng những câu mở khoá phần đầu chuỗi và ràng buộc: con số nào đang lệch, người mua là ai, bao nhiêu tiền, ngày nào lên sóng.' },

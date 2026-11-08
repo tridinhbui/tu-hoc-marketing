@@ -3,10 +3,11 @@
 BAI_ADD({ mod:'dl07', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:dl07-01', skill:'measure', read:'6 phút', t:'Báo cáo ghi 12.000 lượt xem — vậy có bao nhiêu người đã vào web?',
+{ id:'B:dl07-01', skill:'measure', read:'6 phút', assume:true, t:'Báo cáo ghi 12.000 lượt xem — vậy có bao nhiêu người đã vào web?',
+  src:[{ t:'Google Analytics Help – [GA4] Active users; Users, sessions, views', u:'https://support.google.com/analytics/search?q=active+users', d:'2026-11-07', st:'chua' }],
   situation:'Shop gốm Bát Tràng online của Hằng chạy một tuần quảng cáo. Sếp hỏi: “Tuần này bao nhiêu người vào web?”. Báo cáo cho ba con số: 12.000 lượt xem trang, 4.000 phiên, 2.500 người dùng. Bạn đồng nghiệp định trả lời “12.000 người” vì đó là số to nhất và nghe đẹp nhất.',
   concept:{ name:'Người dùng – phiên – lượt xem',
-    body:'Ba con số đo ba thứ khác nhau. <b>Người dùng</b> là số người (thực ra là số trình duyệt/thiết bị được nhận diện) đã ghé. <b>Phiên</b> là số lần ghé: một người vào sáng và tối là hai phiên. <b>Lượt xem</b> là số trang được mở trong các phiên đó. Luôn có: lượt xem ≥ phiên ≥ người dùng. Chia chúng cho nhau ra hai chỉ số hữu ích: số phiên trên mỗi người (khách có quay lại không) và số trang mỗi phiên (khách có đi sâu không). Lưu ý: GA4 mặc định báo “người dùng hoạt động” (có phiên tương tác), và một người dùng cả điện thoại lẫn laptop có thể bị đếm thành hai.' },
+    body:'Ba con số đo ba thứ khác nhau. <b>Người dùng</b> là số người (thực ra là số trình duyệt/thiết bị được nhận diện) đã ghé. <b>Phiên</b> là số lần ghé: một người vào sáng và tối là hai phiên. <b>Lượt xem</b> là số trang được mở trong các phiên đó. Luôn có: lượt xem ≥ phiên ≥ người dùng. Chia chúng cho nhau ra hai chỉ số hữu ích: số phiên trên mỗi người (khách có quay lại không) và số trang mỗi phiên (khách có đi sâu không). Lưu ý: theo tài liệu GA4 tại ngày kiểm (11/2026), GA4 mặc định báo “người dùng hoạt động” — người có phiên tương tác, hoặc người mà GA4 thu được sự kiện first_visit / tham số engagement_time_msec; nếu màn hình của bạn khác, tin trang chính thức. Ngoài ra, một người dùng cả điện thoại lẫn laptop thường bị đếm thành hai; GA4 có thể gộp lại khi web gửi mã người dùng (khách đăng nhập) hoặc khi cài đặt danh tính báo cáo dùng thêm tín hiệu khác — cách gộp tuỳ cài đặt, kiểm trang chính thức của GA4.' },
   example:'Với shop của Hằng: 4.000 phiên ÷ 2.500 người = 1,6 phiên mỗi người — khách có quay lại, hợp với hàng gốm cần cân nhắc lâu. 12.000 lượt xem ÷ 4.000 phiên = 3 trang mỗi phiên. Câu trả lời đúng cho sếp là “khoảng 2.500 người, ghé 4.000 lần, xem 12.000 trang”. Nói “12.000 người” là phóng đại gần gấp năm lần, và tuần sau khi số người thật tăng mà lượt xem giảm, cả nhóm sẽ đọc sai xu hướng.',
   takeaway:'Hỏi “bao nhiêu người” thì trả lời bằng người dùng; lượt xem là số trang, không phải số người.',
   apply:'Mở báo cáo web của một dự án bất kỳ, lấy ba con số người dùng, phiên, lượt xem. Nói trong 60 giây: mỗi người ghé mấy lần và mỗi lần xem mấy trang.',
@@ -53,17 +54,18 @@ BAI_ADD({ mod:'dl07', lessons:[
   { type:'mcq', stem:'Một khách xem hàng trên điện thoại buổi trưa rồi đặt mua trên laptop buổi tối. Báo cáo nhiều khả năng ghi nhận thế nào?',
     options:[{k:'a',t:'Hai người dùng khác nhau, vì mỗi trình duyệt là một định danh riêng'},{k:'b',t:'Một người dùng, vì khách đặt hàng nên hệ thống tự nối hai thiết bị'},
              {k:'c',t:'Một phiên kéo dài từ buổi trưa đến buổi tối'},{k:'d',t:'Không ghi nhận gì vì khách đổi thiết bị giữa chừng'}],
-    answer:'a', why:{a:'Đúng. Mặc định mỗi trình duyệt là một định danh; chỉ khi khách đăng nhập và web gửi mã người dùng thì mới gộp được.',
-      b:'Đặt hàng không tự nối hai thiết bị; chỉ khi web nhận ra cùng một người (ví dụ đăng nhập) mới gộp được.',
+    answer:'a', why:{a:'Đúng. Mặc định mỗi trình duyệt là một định danh; muốn gộp, web thường phải nhận ra khách, ví dụ qua đăng nhập.',
+      b:'Đặt hàng không tự nối hai thiết bị; cần một tín hiệu nhận ra cùng một người, ví dụ đăng nhập.',
       c:'Phiên kết thúc khi khách rời đi một thời gian; hai thiết bị càng không thể chung phiên.',
       d:'Cả hai lần ghé vẫn được ghi, chỉ là bị tách thành hai người.'} }
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:dl07-02', skill:'measure', read:'7 phút', t:'Web có hàng trăm sự kiện — nên đánh dấu cái nào là chuyển đổi?',
+{ id:'B:dl07-02', skill:'measure', read:'7 phút', assume:true, t:'Web có hàng trăm sự kiện — nên đánh dấu cái nào là chuyển đổi?',
+  src:[{ t:'Google Analytics Help – [GA4] Key events; nhập key event làm conversion cho Google Ads', u:'https://support.google.com/analytics/search?q=key+events+import+conversions+Google+Ads', d:'2026-11-07', st:'chua' }],
   situation:'Web đặt bàn của chuỗi lẩu nấm ở Hà Nội ghi lại đủ thứ: cuộn trang, bấm ảnh món, bấm nút gọi, gửi form đặt bàn, bấm chỉ đường. Bạn thực tập đánh dấu tất cả là chuyển đổi (key event). Cuối tháng báo cáo ghi 6.000 chuyển đổi, trong khi nhà hàng chỉ nhận được 300 lượt đặt bàn.',
   concept:{ name:'Sự kiện và chuyển đổi (key event)',
-    body:'Trong cách đo hiện đại, mọi hành động là một <b>sự kiện</b>: xem trang, cuộn, bấm, gửi form. Chỉ một vài sự kiện gắn trực tiếp với tiền hoặc với mục tiêu kinh doanh mới nên được đánh dấu là <b>chuyển đổi</b> (key event). Quy tắc chọn: nếu con số này tăng gấp đôi mà doanh nghiệp không vui hơn, nó không phải chuyển đổi. Thường chỉ 1–3 sự kiện: mua hàng, gửi form, bấm gọi. Các sự kiện còn lại vẫn giữ để chẩn đoán, không bị xoá. Đánh dấu tràn lan làm tỉ lệ chuyển đổi đẹp giả và khiến nền tảng quảng cáo tối ưu sai hướng.' },
+    body:'Trong cách đo hiện đại, mọi hành động là một <b>sự kiện</b>: xem trang, cuộn, bấm, gửi form. Chỉ một vài sự kiện gắn trực tiếp với tiền hoặc với mục tiêu kinh doanh mới nên được đánh dấu là <b>chuyển đổi</b> (key event). Quy tắc chọn: nếu con số này tăng gấp đôi mà doanh nghiệp không vui hơn, nó không phải chuyển đổi. Thường chỉ 1–3 sự kiện: mua hàng, gửi form, bấm gọi. Các sự kiện còn lại vẫn giữ để chẩn đoán, không bị xoá. Đánh dấu tràn lan làm tỉ lệ chuyển đổi đẹp giả; và khi các key event này được nhập làm mục tiêu chuyển đổi cho Google Ads (hay tải lên nền tảng quảng cáo khác), nền tảng sẽ tối ưu sai hướng — tự thân việc đánh dấu trong GA4 chỉ đổi báo cáo (theo tài liệu GA4 tại ngày kiểm 11/2026).' },
   example:'Chuỗi lẩu chỉ giữ hai chuyển đổi: gửi form đặt bàn và bấm gọi. Tháng sau báo cáo ghi 300 form và 150 lượt bấm gọi trên 15.000 phiên; kiểm tra thấy không phiên nào vừa gửi form vừa bấm gọi, nên có 450 phiên có chuyển đổi và tỉ lệ phiên có chuyển đổi là 450 ÷ 15.000 = 3%. Lưu ý: GA4 gọi chỉ số này là <b>session key event rate</b> = số phiên có ít nhất một key event ÷ tổng phiên; nếu một phiên vừa gửi form vừa bấm gọi thì chỉ tính một phiên, nên lấy tổng số lượt key event chia phiên có thể ra số cao hơn thật (kiểm theo Google Analytics Help, 10/2026). Con số nhỏ hơn nhiều so với 6.000 trước đây nhưng khớp với sổ đặt bàn của quán. Quan trọng hơn, khi nền tảng quảng cáo được báo “chuyển đổi = đặt bàn”, nó tìm người muốn đặt bàn chứ không tìm người thích cuộn xem ảnh.',
   takeaway:'Chuyển đổi là thứ doanh nghiệp vui khi nó tăng gấp đôi; còn lại chỉ là sự kiện.',
   apply:'Liệt kê năm hành động khách làm trên một web bạn biết. Chọn đúng một hoặc hai cái làm chuyển đổi và giải thích trong 60 giây vì sao.',
@@ -107,20 +109,21 @@ BAI_ADD({ mod:'dl07', lessons:[
       b:'Đúng. Đổi định nghĩa là cắt chuỗi số liệu; cần ghi chú và lấy mốc mới.',
       c:'Chọn thước đo vì nó đẹp là tự lừa mình.',
       d:'Tỉ lệ từ giỏ sang mua không cố định; quy đổi như vậy là bịa số.'} },
-  { type:'mcq', stem:'Vì sao đánh dấu quá nhiều chuyển đổi làm hại cả quảng cáo, không chỉ báo cáo?',
+  { type:'mcq', stem:'Vì sao đánh dấu quá nhiều chuyển đổi, rồi nhập chúng làm mục tiêu cho nền tảng quảng cáo, làm hại cả quảng cáo chứ không chỉ báo cáo?',
     options:[{k:'a',t:'Vì nền tảng sẽ tối ưu để tìm người làm các hành động rẻ, dễ'},{k:'b',t:'Vì mỗi chuyển đổi được đánh dấu đều bị tính thêm phí sử dụng hàng tháng'},
              {k:'c',t:'Vì web tải chậm hẳn đi khi có quá nhiều chuyển đổi được cài đặt cùng lúc'},{k:'d',t:'Vì báo cáo không cho phép đánh dấu quá ba chuyển đổi cùng lúc trên một web'}],
-    answer:'a', why:{a:'Đúng. Hệ thống tối ưu theo tín hiệu; tín hiệu dễ đạt kéo quảng cáo về phía người không mua.',
+    answer:'a', why:{a:'Đúng. Hệ thống tối ưu theo tín hiệu được nhập làm mục tiêu; tín hiệu dễ đạt kéo quảng cáo về phía người không mua.',
       b:'Việc đánh dấu chuyển đổi không phát sinh phí theo số lượng như vậy.',
       c:'Đánh dấu là cấu hình báo cáo, không làm web nặng hơn đáng kể.',
       d:'Không nên dựa vào giới hạn giao diện; lý do thật là chất lượng tín hiệu.'} }
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:dl07-03', skill:'measure', read:'7 phút', t:'Vì sao một nửa lưu lượng hiện là “direct” dù bạn chạy quảng cáo khắp nơi?',
+{ id:'B:dl07-03', skill:'measure', read:'7 phút', assume:true, t:'Vì sao một nửa lưu lượng hiện là “direct” dù bạn chạy quảng cáo khắp nơi?',
+  src:[{ t:'Google Analytics Help – [GA4] Analytics sessions; Traffic-source dimensions và phạm vi (session vs event)', u:'https://support.google.com/analytics/search?q=session+traffic+source+dimensions+scope', d:'2026-11-07', st:'chua' }],
   situation:'Thương hiệu cà phê rang xay ở Đà Lạt chạy cùng lúc bài Facebook, tin nhắn Zalo OA và email cho khách cũ. Cuối tháng báo cáo nguồn/phương tiện cho thấy 48% phiên là “(direct) / (none)”. Sếp hỏi kênh nào đang mang khách, không ai trả lời được.',
   concept:{ name:'Nguồn/phương tiện và UTM',
-    body:'Mỗi phiên được gắn <b>nguồn</b> (ai gửi khách tới: facebook, zalo, newsletter) và <b>phương tiện</b> (loại kênh: cpc, social, email). Khi đường link không mang thông tin, ví dụ bấm từ ứng dụng chat hay email, hệ thống không biết khách từ đâu và xếp vào direct. <b>UTM</b> là các tham số gắn vào cuối link (utm_source, utm_medium, utm_campaign) để tự khai nguồn. Quy tắc: mọi link bạn chủ động gửi ra đều gắn UTM, viết thường, theo một bảng quy ước chung. Không gắn UTM cho link nội bộ giữa các trang của chính web, vì nó làm nhiễu dữ liệu nguồn: chuyển đổi có thể bị ghi công cho chính banner nội bộ thay vì kênh thật đã đưa khách tới. (GA4 không mở phiên mới khi gặp UTM giữa phiên như bản Universal Analytics cũ — kiểm theo Google Analytics Help, 10/2026.)' },
+    body:'Mỗi phiên được gắn <b>nguồn</b> (ai gửi khách tới: facebook, zalo, newsletter) và <b>phương tiện</b> (loại kênh: cpc, social, email). Khi đường link không mang thông tin, ví dụ bấm từ ứng dụng chat hay email, hệ thống không biết khách từ đâu và xếp vào direct. <b>UTM</b> là các tham số gắn vào cuối link (utm_source, utm_medium, utm_campaign) để tự khai nguồn. Quy tắc: mọi link bạn chủ động gửi ra đều gắn UTM, viết thường, theo một bảng quy ước chung. Không gắn UTM cho link nội bộ giữa các trang của chính web, vì nó làm nhiễu dữ liệu nguồn: chuyển đổi có thể bị ghi công cho chính banner nội bộ thay vì kênh thật đã đưa khách tới. Theo tài liệu GA4 tại ngày kiểm (11/2026): GA4 không mở phiên mới khi gặp UTM giữa phiên như bản Universal Analytics cũ, nên nguồn của phiên vẫn là kênh đã đưa khách tới; nhưng nguồn gắn với sự kiện — thứ dùng để ghi công chuyển đổi — có thể lấy UTM mới nhất, tức UTM của banner nội bộ. Nếu màn hình khác, tin trang chính thức.' },
   example:'Nhóm cà phê lập bảng quy ước: utm_source = zalo / facebook / newsletter; utm_medium = social / email / paid_social; utm_campaign = tên-đợt-tháng. Tháng sau, direct giảm từ 48% xuống 15%. Hoá ra Zalo OA mang 2.400 trong 12.000 phiên, tức 20% — kênh trước đây bị giấu trong direct. Email cho khách cũ tuy chỉ 1.200 phiên nhưng có tỉ lệ mua cao nhất.',
   takeaway:'Link nào bạn chủ động gửi ra đều phải tự khai nguồn bằng UTM, theo một quy ước chung.',
   apply:'Viết một link UTM cho bài đăng Zalo tuần này: nguồn, phương tiện, tên chiến dịch. Đọc to và giải thích từng phần trong 60 giây.',
@@ -174,7 +177,7 @@ BAI_ADD({ mod:'dl07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:dl07-04', skill:'measure', read:'6 phút', t:'Tỉ lệ thoát 70% — trang đích tệ thật hay bạn đang đọc sai số?',
+{ id:'B:dl07-04', skill:'measure', read:'6 phút', assume:true, t:'Tỉ lệ thoát 70% — trang đích tệ thật hay bạn đang đọc sai số?',
   situation:'Trang đích bài blog “Cách pha cold brew tại nhà” có tỉ lệ thoát 70%. Sếp muốn viết lại cả trang. Nhưng khi xem kỹ, nhiều khách ở lại đọc 3–4 phút rồi mới đóng tab, và công thức nằm trọn trên một trang.',
   concept:{ name:'Tỉ lệ tương tác và tỉ lệ thoát',
     body:'Cách đo hiện đại coi một phiên là <b>có tương tác</b> khi khách ở lại đủ lâu (thường khoảng 10 giây), hoặc xem từ hai trang, hoặc làm một chuyển đổi. <b>Tỉ lệ tương tác</b> = phiên có tương tác ÷ tổng phiên. <b>Tỉ lệ thoát</b> là phần còn lại: phiên không có tương tác. Vì vậy khách đọc hết một bài dài rồi đi vẫn tính là có tương tác. Tỉ lệ thoát cao chỉ đáng lo khi trang cần khách đi tiếp (trang sản phẩm, trang đích quảng cáo) hoặc khi khách rời đi gần như ngay lập tức.' },
@@ -234,10 +237,11 @@ BAI_ADD({ mod:'dl07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:dl07-05', skill:'measure', read:'6 phút', t:'Lưu lượng tăng vọt đêm qua — khách thật hay chính nhân viên và bot?',
+{ id:'B:dl07-05', skill:'measure', read:'6 phút', assume:true, t:'Lưu lượng tăng vọt đêm qua — khách thật hay chính nhân viên và bot?',
+  src:[{ t:'Google Analytics Help – [GA4] Filter out internal traffic; Data filters', u:'https://support.google.com/analytics/search?q=filter+out+internal+traffic', d:'2026-11-07', st:'chua' }],
   situation:'Web của một công ty nội thất ở Bình Dương bỗng tăng 40% phiên trong tuần ra mắt bộ sưu tập mới. Nhưng đơn hàng không tăng. Nhóm nhận ra 20 nhân viên mở web cả ngày để kiểm tra trang, và có một lượng phiên lạ từ một thành phố nước ngoài, mỗi phiên dưới 1 giây.',
   concept:{ name:'Lọc lưu lượng nội bộ và bot',
-    body:'Dữ liệu web lẫn hai loại “khách giả”. <b>Lưu lượng nội bộ</b>: nhân viên, đối tác, nhóm kiểm thử. Lọc theo IP văn phòng chỉ hợp khi mọi người ngồi một chỗ; người làm tại nhà đổi IP liên tục nên cần gắn cờ trên thiết bị hoặc đi qua VPN có IP cố định. <b>Bot và spam</b>: phần lớn bot đã biết được lọc sẵn, nhưng vẫn lọt nhiều loại. Dấu hiệu bot: phiên cực ngắn, tương tác gần 0, dồn từ một thành phố hay một giờ lạ. Về kỹ thuật: bộ lọc GA4 chỉ áp cho dữ liệu từ lúc bật và đã bật thì không hoàn tác được, nên để ở trạng thái thử nghiệm, kiểm vài ngày rồi mới kích hoạt. Ghi chú ngày bắt đầu lọc; không sửa tay số cũ; giữ một bản dữ liệu thô để đối chiếu.' },
+    body:'Dữ liệu web lẫn hai loại “khách giả”. <b>Lưu lượng nội bộ</b>: nhân viên, đối tác, nhóm kiểm thử. Lọc theo IP văn phòng chỉ hợp khi mọi người ngồi một chỗ; người làm tại nhà đổi IP liên tục nên cần gắn cờ trên thiết bị hoặc đi qua VPN có IP cố định. Theo tài liệu GA4 tại ngày kiểm (11/2026), bộ lọc nội bộ của GA4 nhận diện theo IP; “gắn cờ trên thiết bị” nghĩa là tự đặt tham số traffic_type=internal qua Google Tag Manager cho thiết bị đã đánh dấu — việc kỹ thuật, cần người cài tag, không phải nút bấm sẵn. <b>Bot và spam</b>: phần lớn bot đã biết được lọc sẵn, nhưng vẫn lọt nhiều loại. Dấu hiệu bot: phiên cực ngắn, tương tác gần 0, dồn từ một thành phố hay một giờ lạ. Về kỹ thuật: bộ lọc GA4 chỉ áp cho dữ liệu từ lúc bật và đã bật thì không hoàn tác được, nên để ở trạng thái thử nghiệm, kiểm vài ngày rồi mới kích hoạt. Ghi chú ngày bắt đầu lọc; không sửa tay số cũ; giữ một bản dữ liệu thô để đối chiếu.' },
   example:'Nhóm nội thất tách số: tuần ra mắt 14.000 phiên, trong đó 2.800 từ IP văn phòng và 1.400 phiên dưới 1 giây từ một nguồn lạ. Khách thật còn 14.000 − 2.800 − 1.400 = 9.800 phiên. Tuần trước là 10.000 phiên (khi đó nội bộ ít). Vậy khách thật gần như đứng yên — khớp với chuyện đơn không tăng. Bài học: bộ sưu tập mới chưa kéo thêm khách, cần xem lại kênh phân phối nội dung ra mắt.',
   takeaway:'Trước khi ăn mừng lưu lượng tăng, trừ nhân viên và bot rồi mới đọc.',
   apply:'Nghĩ về web công ty bạn: ai trong nội bộ vào web thường xuyên? Nói trong 60 giây cách bạn sẽ tách họ ra khỏi số liệu.',
@@ -265,7 +269,7 @@ BAI_ADD({ mod:'dl07', lessons:[
              {k:'c',t:'Gắn cờ nội bộ lên thiết bị của họ, hoặc cho vào web qua VPN'},{k:'d',t:'Lọc các phiên ở lại lâu và xem nhiều trang, vì đó là nhân viên'}],
     answer:'c', why:{a:'IP nhà thay đổi liên tục, nên danh sách này lỗi thời sau vài ngày và còn kéo theo chuyện thu thập IP cá nhân.',
       b:'Trong ví dụ này nhóm nội bộ chiếm đến 20% phiên; bỏ qua là để số liệu lệch đáng kể.',
-      c:'Đúng. Gắn cờ theo thiết bị, hoặc ép qua VPN có IP cố định, vẫn nhận ra họ dù IP thay đổi.',
+      c:'Đúng. Gắn cờ theo thiết bị (đặt traffic_type=internal qua Tag Manager, cần người kỹ thuật), hoặc ép qua VPN có IP cố định, vẫn nhận ra họ dù IP thay đổi.',
       d:'Khách thật quan tâm cũng ở lại lâu và xem nhiều trang; lọc theo hành vi sẽ xoá nhầm đúng nhóm bạn cần đo.'} },
   { type:'mcq', stem:'Công ty thuê agency làm web, đội agency vào web hằng ngày từ văn phòng của họ. Nên xử lý thế nào?',
     options:[{k:'a',t:'Không cần lọc vì agency không phải là nhân viên công ty'},{k:'b',t:'Yêu cầu agency ngừng vào web để số liệu được sạch'},
@@ -291,7 +295,7 @@ BAI_ADD({ mod:'dl07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:dl07-06', skill:'measure', read:'7 phút', t:'Dashboard 30 chỉ số, sếp vẫn hỏi “tuần này ổn không” — thiếu gì?',
+{ id:'B:dl07-06', skill:'measure', read:'7 phút', assume:true, t:'Dashboard 30 chỉ số, sếp vẫn hỏi “tuần này ổn không” — thiếu gì?',
   situation:'Chị Mai quản lý marketing cho chuỗi trà sữa 15 cửa hàng ở TP.HCM. Dashboard hiện có 30 ô số: phiên, lượt xem, cuộn trang, thời gian, thiết bị, trình duyệt… Mỗi sáng thứ Hai, giám đốc mở ra, cuộn hai lần rồi nhắn hỏi: “Tuần này ổn không em?”. Dashboard này chỉ theo dõi kênh đặt online; doanh thu tại cửa hàng nằm ở báo cáo POS riêng.',
   concept:{ name:'Dashboard một màn hình: 5–7 chỉ số',
     body:'Một dashboard tốt trả lời được một câu hỏi trong 10 giây. Cách chọn: bắt đầu từ mục tiêu kinh doanh, đi ngược thành một chuỗi ngắn. Thường gồm: <b>một chỉ số kết quả</b> (doanh thu hoặc đơn), <b>2–3 chỉ số dẫn dắt</b> (phiên, tỉ lệ chuyển đổi, giá trị đơn), <b>1–2 chỉ số sức khoẻ</b> (chi phí mỗi đơn, tỉ lệ khách quay lại). Mỗi chỉ số cần mốc so (kỳ trước, mục tiêu) và ngưỡng “ổn”: ví dụ xanh khi đạt mục tiêu, vàng khi thấp hơn mục tiêu tới 25%, đỏ khi thấp hơn nữa (ngưỡng tuỳ nghiệp vụ, thống nhất trước). Chỉ số không ai hành động theo thì chuyển xuống trang chi tiết.' },
@@ -348,7 +352,7 @@ BAI_ADD({ mod:'dl07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:dl07-07', skill:'measure', read:'6 phút', t:'Biểu đồ tròn 12 lát cho doanh thu theo tháng — chọn sai biểu đồ ở đâu?',
+{ id:'B:dl07-07', skill:'measure', read:'6 phút', assume:true, t:'Biểu đồ tròn 12 lát cho doanh thu theo tháng — chọn sai biểu đồ ở đâu?',
   situation:'Bạn Tùng làm báo cáo quý cho shop giày thể thao. Doanh thu 12 tháng được vẽ thành biểu đồ tròn 12 lát; tỉ trọng kênh bán được vẽ thành đường; so sánh 5 cửa hàng dùng biểu đồ vùng xếp chồng. Người xem nhìn mãi không ra tháng nào tăng, kênh nào lớn.',
   concept:{ name:'Chọn biểu đồ theo câu hỏi',
     body:'Mỗi câu hỏi có một dạng biểu đồ hợp nhất. <b>Xu hướng theo thời gian</b>: biểu đồ đường, trục ngang là thời gian. <b>So sánh giữa các nhóm</b>: cột hoặc thanh ngang, xếp từ lớn đến nhỏ, trục bắt đầu từ 0. <b>Tỉ trọng</b> của một tổng: thanh xếp chồng 100% hoặc tròn, nhưng chỉ khi có ít phần (tối đa khoảng 3–5). <b>Một con số quan trọng</b>: ô số lớn kèm mũi tên thay đổi. Tránh 3D và trục kép: hai thang đo trên một hình tạo giao điểm không có nghĩa. Cột phải bắt đầu từ 0; đường được cắt trục nếu ghi rõ. Quy tắc chung: một biểu đồ, một câu hỏi, và tiêu đề nói luôn kết luận, ví dụ “Doanh thu tăng đều từ tháng 6”.' },
@@ -405,7 +409,7 @@ BAI_ADD({ mod:'dl07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:dl07-08', skill:'measure', read:'6 phút', t:'Doanh thu tháng 2 giảm 30% so với tháng 1 — đáng lo hay chỉ là Tết?',
+{ id:'B:dl07-08', skill:'measure', read:'6 phút', assume:true, t:'Doanh thu tháng 2 giảm 30% so với tháng 1 — đáng lo hay chỉ là Tết?',
   situation:'Shop đồ ăn vặt online ở Hà Nội thấy dashboard đỏ rực: doanh thu tháng 2 giảm 30% so với tháng 1. Nhân viên mới đề xuất tăng ngân sách quảng cáo gấp đôi. Nhưng tháng 1 năm nay là tháng mua sắm trước Tết, tháng 2 là tháng sau Tết.',
   concept:{ name:'So sánh cùng kỳ trên dashboard',
     body:'So với <b>kỳ liền trước</b> (tuần trước, tháng trước) cho thấy chuyển động ngắn hạn, nhưng bị mùa vụ làm méo. So với <b>cùng kỳ năm trước</b> loại được mùa vụ: tháng 2 năm nay so với tháng 2 năm ngoái. Ở Việt Nam, Tết âm lịch rơi vào các ngày dương lịch khác nhau mỗi năm, nên cần so theo tuần tương ứng với Tết chứ không chỉ theo tháng dương lịch. Dashboard tốt hiển thị cả hai mốc cạnh nhau, kèm ghi chú sự kiện (Tết, ngày đôi, khuyến mãi lớn).' },
@@ -465,7 +469,7 @@ BAI_ADD({ mod:'dl07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:dl07-09', skill:'measure', read:'7 phút', t:'Đơn hàng về 0 suốt 6 tiếng mà không ai biết — cần cảnh báo thế nào?',
+{ id:'B:dl07-09', skill:'measure', read:'7 phút', assume:true, t:'Đơn hàng về 0 suốt 6 tiếng mà không ai biết — cần cảnh báo thế nào?',
   situation:'Thứ Bảy, web bán mỹ phẩm của một thương hiệu Việt bị lỗi nút thanh toán sau một lần cập nhật. Quảng cáo vẫn chạy, khách vẫn vào, nhưng đơn về 0 từ 10 giờ sáng đến 4 giờ chiều. Sáng thứ Hai mới có người phát hiện khi xem dashboard.',
   concept:{ name:'Cảnh báo khi số bất thường',
     body:'Dashboard chỉ có ích khi có người nhìn; <b>cảnh báo</b> thì tự tìm đến người cần biết. Cách đặt: chọn vài chỉ số sống còn (đơn hàng, doanh thu, tỉ lệ chuyển đổi, chi phí quảng cáo). Đặt ngưỡng dựa trên mức bình thường: ví dụ đơn theo giờ thấp hơn 50% mức trung bình cùng khung giờ các tuần trước. Giờ ít đơn (3 giờ sáng trung bình 1–2 đơn) thì 0 đơn là chuyện thường, nên gộp khung 3 giờ hoặc đặt sàn tối thiểu. Lấy tín hiệu từ hệ thống đơn hàng, vì báo cáo GA4 có thể trễ nhiều giờ. Mỗi cảnh báo có <b>người nhận cụ thể</b> và <b>việc cần làm đầu tiên</b>. Quá nhiều cảnh báo nhạy thì mọi người bỏ qua cả cảnh báo thật.' },
@@ -518,7 +522,7 @@ BAI_ADD({ mod:'dl07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:dl07-10', skill:'measure', read:'7 phút', t:'Một dashboard cho cả giám đốc lẫn người chạy ads — vì sao không ai hài lòng?',
+{ id:'B:dl07-10', skill:'measure', read:'7 phút', assume:true, t:'Một dashboard cho cả giám đốc lẫn người chạy ads — vì sao không ai hài lòng?',
   situation:'Công ty đồ gia dụng thông minh ở Đà Nẵng dùng chung một dashboard. Giám đốc phàn nàn: “Nhiều số kỹ thuật quá, tôi chỉ cần biết có lãi không”. Người chạy quảng cáo than: “Số theo tuần, tôi cần theo ngày và theo từng nhóm quảng cáo để chỉnh”. Cả hai đều đúng.',
   concept:{ name:'Dashboard theo người đọc',
     body:'Dashboard được thiết kế cho <b>một quyết định của một người</b>. Giám đốc quyết định phân bổ tiền và ưu tiên: cần ít số, nhịp tuần hoặc tháng, nhìn kết quả (doanh thu, lợi nhuận đóng góp = lãi gộp trừ chi quảng cáo, chi phí mỗi khách mới) và so với mục tiêu. Người chạy ads quyết định bật, tắt, chỉnh giá thầu: cần nhịp ngày, chi tiết theo chiến dịch và nhóm quảng cáo, các chỉ số dẫn dắt (tỉ lệ bấm, chi phí mỗi bấm, tỉ lệ chuyển đổi). Hai dashboard dùng chung một nguồn số và một bảng định nghĩa, mỗi chỉ số một dòng: nguồn, công thức, kỳ tính. Nhờ vậy hai bên không cãi nhau về con số.' },

@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'kn01', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kn01-01', skill:'channel', read:'6 phút', t:'Tiệm bánh của bạn đang sở hữu những kênh nào mà chưa từng đếm?',
+{ id:'B:kn01-01', skill:'channel', read:'6 phút', assume:true, t:'Tiệm bánh của bạn đang sở hữu những kênh nào mà chưa từng đếm?',
   situation:'Chị Hạnh mở một tiệm bánh mì que ở Hải Phòng, bán khoảng 300 ổ mỗi ngày. Khi được hỏi "tiệm có kênh truyền thông nào", chị trả lời: "Có mỗi fanpage 2.000 người theo dõi, mà đăng bài thì chẳng ai xem." Chị định bỏ 5 triệu đồng mỗi tháng chạy quảng cáo Facebook vì nghĩ mình "không có kênh".',
   concept:{ name:'Kiểm kê media sở hữu (owned media) và chấm điểm chạm',
     body:'<b>Owned media</b> là mọi điểm chạm bạn tự kiểm soát nội dung mà không trả tiền cho từng lần hiển thị: bao bì, túi giấy, biển hiệu, quầy, hoá đơn, website, fanpage, nhóm Zalo và cả nhân viên đứng quầy (fanpage, nhóm Zalo nằm trên nền tảng của người khác nên luật chơi có thể bị đổi). Người mới thường chỉ đếm kênh số. Kiểm kê đúng gồm hai bước: liệt kê từng điểm chạm, rồi chấm theo ba tiêu chí là <b>lượt thấy</b>, <b>mức dẫn tới hành động</b> (đọc, quét, ghé) và <b>chi phí sửa</b>. Lượt thấy không phải lượt hành động: hàng nghìn người đi qua biển hiệu, rất ít người dừng lại. Điểm đáng sửa trước thường không phải điểm có lượt thấy lớn nhất, mà là điểm có đường dẫn tới hành động với chi phí sửa thấp.' },
@@ -12,12 +12,12 @@ BAI_ADD({ mod:'kn01', lessons:[
   apply:'Liệt kê 8 điểm chạm bạn sở hữu. Chấm mỗi điểm theo lượt thấy, mức dẫn tới hành động và chi phí sửa. Nói trong 60 giây: điểm nào đáng sửa trước.',
   mistakes:['Chỉ coi fanpage, website là kênh, quên bao bì, biển hiệu, nhân viên.','Kết luận "mình không có kênh" rồi dồn hết tiền vào quảng cáo.','Đếm lượt thấy mà không hỏi điểm chạm đó có đưa người ta tới hành động nào không.'],
   q:[
-  { type:'mcq', stem:'Đoán trước: tiệm bán 300 ổ/ngày. Chấm điểm chạm theo lượt thấy, khả năng dẫn tới hành động và chi phí sửa, điểm nào nhiều khả năng đáng sửa trước?',
+  { type:'mcq', stem:'Đoán trước: tiệm bán 300 ổ/ngày và chị Hạnh muốn có cách nhắc khách quay lại mà không mất tiền mỗi lần. Chấm điểm chạm theo lượt thấy, khả năng dẫn tới hành động và chi phí sửa, điểm nào nhiều khả năng đáng sửa trước?',
     options:[{k:'a',t:'Túi giấy đựng bánh đi theo từng ổ ra khỏi tiệm'},{k:'b',t:'Fanpage 2.000 người theo dõi, đăng đều mỗi ngày một bài'},
              {k:'c',t:'Tấm menu dán trong quầy mà khách đọc khi đứng chờ lấy bánh'},{k:'d',t:'Website giới thiệu tiệm mới làm năm ngoái'}],
     answer:'a', why:{a:'Đúng. Giả sử mỗi ổ một túi, 300 túi/ngày là khoảng 9.000 lần thấy/tháng, đi theo người đã mua, và thêm QR chỉ tốn vài trăm đồng mỗi túi.',
       b:'Mỗi bài chỉ tới khoảng 150 người; sửa thì rẻ nhưng lượt thấy thấp, nên phần thưởng nhỏ.',
-      c:'Menu chỉ được đọc bởi người đã đứng trong tiệm, số lượt không vượt số khách và ít được nhớ.',
+      c:'Menu dẫn tới hành động tại chỗ rất tốt, nhưng nó ở lại tiệm: không đi theo khách về nhà để nhắc quay lại hay mang mã QR vào nhóm Zalo như túi giấy; với mục tiêu quay lại, túi thắng.',
       d:'Website tiệm nhỏ ít người tìm đến nếu không có ai dẫn vào, nên lượt thấy rất thấp.'} },
   { type:'mcq', stem:'Chị Hạnh chọn giữa hai điểm chạm: biển hiệu có 60.000 lượt thấy/tháng nhưng người đi xe máy chỉ lướt qua; quầy gói bánh có 9.000 lượt/tháng, khách đứng chờ khoảng một phút trước mặt nhân viên. Bạn chọn làm gì trước?',
     options:[{k:'a',t:'Sơn lại biển hiệu 3 triệu đồng vì lượt thấy gấp hơn sáu lần quầy'},{k:'b',t:'Cho nhân viên mời khách chờ quét QR nhận mã giảm cho lần mua sau'},
@@ -44,10 +44,10 @@ BAI_ADD({ mod:'kn01', lessons:[
       c:'Đúng. Lượt thấy không đổi nên khoảng cách nằm ở bước hành động: lý do quét (tặng gì), kích thước và chỗ đặt QR. Thử đổi từng yếu tố một.',
       d:'Không có dữ kiện cho thấy khách chán túi; đổi màu không chạm vào bước quét mã.'} },
   { type:'mcq', stem:'Tháng in QR, doanh số tiệm tăng 10% và chị Hạnh kết luận "QR có hiệu quả". Bước kiểm tra nào làm kết luận đó đáng tin hơn?',
-    options:[{k:'a',t:'Đếm thêm số lượt khách đi qua biển hiệu để xem lượt thấy có tăng không'},{k:'b',t:'Giữ vài ngày phát túi trơn làm đối chứng, rồi so đơn với ngày phát túi QR'},
+    options:[{k:'a',t:'Đếm thêm số lượt khách đi qua biển hiệu để xem lượt thấy có tăng không'},{k:'b',t:'In mã giảm riêng chỉ có trên túi QR, đếm lượt mã được dùng khi khách quay lại'},
              {k:'c',t:'Hỏi vài khách quen xem họ có thích mẫu túi mới in hơn mẫu cũ hay không'},{k:'d',t:'Chờ thêm một tháng, nếu doanh số tiếp tục tăng thì kết luận chắc hơn'}],
     answer:'b', why:{a:'Lượt đi qua biển hiệu không liên quan tới việc QR có kéo thêm đơn hay không.',
-      b:'Đúng. Cần đối chứng cùng thời điểm: các ngày túi trơn chịu cùng mùa vụ, khuyến mãi nên chênh lệch mới gán được cho QR. So với người vào nhóm Zalo thì sai, vì họ vốn gắn bó hơn.',
+      b:'Đúng. QR tác động lên lần mua sau, không lên đơn ngay ngày phát túi; mã riêng chỉ in trên túi QR cho biết bao nhiêu lượt quay lại đi qua QR, thay vì đoán từ doanh số cả tháng vốn lẫn mùa vụ, khuyến mãi.',
       c:'Sở thích mẫu túi là ý kiến, không phải bằng chứng QR đã kéo thêm đơn.',
       d:'Thêm một tháng vẫn không tách được mùa vụ hay khuyến mãi khỏi tác động của QR.'} },
   { type:'mcq', stem:'Một quán phở có biển hiệu cũ chỉ ghi "Phở bò". Quán nằm ở ngã tư đông xe. Nhận định nào hợp lý nhất?',
@@ -60,7 +60,7 @@ BAI_ADD({ mod:'kn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kn01-02', skill:'channel', read:'6 phút', t:'Khách tự khen bạn trên mạng — kiểm soát được đến đâu?',
+{ id:'B:kn01-02', skill:'channel', read:'6 phút', assume:true, t:'Khách tự khen bạn trên mạng — kiểm soát được đến đâu?',
   situation:'Một quán bún chả ở Hà Nội bỗng có clip TikTok của khách đạt 400.000 lượt xem. Tuần sau quán đông gấp đôi. Chủ quán muốn "làm thêm vài clip như thế nữa" và hỏi bạn cách để khách quay đúng món, đúng góc, đúng câu khen mỗi tuần.',
   concept:{ name:'Earned media: được nhắc, không được ra lệnh',
     body:'<b>Earned media</b> là khi người khác nói về bạn mà bạn không trả tiền: review, clip của khách, bài báo, lời truyền miệng. Nó đáng tin vì không phải bạn tự khen. Cái giá là bạn không kiểm soát nội dung, thời điểm hay tần suất. Khách chỉ nhắc khi có một <b>khoảnh khắc đáng quay</b> (nhìn được), <b>dễ kể</b> bằng một câu và <b>dễ gắn tên</b> quán. Việc bạn làm được là tạo những điều kiện đó và <b>chuẩn bị đón</b> khi làn sóng tới (đủ hàng, đủ người, phản hồi nhanh). Earned có cả mặt xấu: chờ lâu, phục vụ kém cũng được nhắc, và bạn chỉ đáp lại được chứ không gỡ được. Còn nếu trả tiền để người ta nói theo kịch bản, nó đã thành paid.' },
@@ -117,11 +117,11 @@ BAI_ADD({ mod:'kn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kn01-03', skill:'channel', read:'7 phút', t:'Nên trả tiền để mua người xem mới, hay để đẩy cái đã chạy tốt?',
+{ id:'B:kn01-03', skill:'channel', read:'7 phút', assume:true, t:'Nên trả tiền để mua người xem mới, hay để đẩy cái đã chạy tốt?',
   situation:'Một thương hiệu nước mắm nhỏ ở Phú Quốc có một bài fanpage về quy trình ủ chượp 18 tháng, tự nhiên đạt 3.000 lượt tương tác trong khi bài thường chỉ 80, kèm 40 tin nhắn hỏi mua trong hai ngày (bài thường: 1). Họ có 10 triệu đồng quảng cáo tháng này và đang định dùng để chạy một mẫu quảng cáo mới làm từ đầu.',
   concept:{ name:'Paid khuếch đại owned và earned',
     body:'<b>Paid media</b> là lượt hiển thị bạn mua: quảng cáo, bài đăng trả phí, KOL nhận phí. Vai trò mạnh nhất của nó thường không phải thay thế hai loại kia mà <b>khuếch đại</b> chúng: đẩy nội dung owned đã có sức hút, hoặc đưa lời khen earned (với sự đồng ý của người viết) tới nhiều người hơn. Nhưng lượt thích chưa phải ý định mua. Hãy tìm <b>tín hiệu gần mua</b> (nhắn hỏi giá, lưu bài, nhấp vào trang đặt hàng), thử một khoản nhỏ, và chỉ nâng ngân sách khi chi phí mỗi đơn còn dưới lãi gộp mỗi đơn.' },
-  example:'Bài ủ chượp có 40 tin nhắn hỏi mua trong 2 ngày, bài thường 1: đó là tín hiệu gần mua, không chỉ lượt thích. Thử trước 2 triệu, giả sử 2.000 đ mỗi lượt nhấp (minh hoạ): 1.000 lượt nhấp, tỉ lệ đặt 4% là 40 đơn, tức 50.000 đ mỗi đơn, thấp hơn lãi gộp 60.000 đ. Đạt ngưỡng đó mới nâng lên 10 triệu: 5.000 lượt nhấp, 200 đơn, lãi gộp 12 triệu trừ 10 triệu còn 2 triệu. Mẫu mới chưa thử thì chưa biết có qua ngưỡng hay không; nó vẫn nên được thử, nhưng với khoản nhỏ.',
+  example:'Bài ủ chượp có 40 tin nhắn hỏi mua trong 2 ngày, bài thường 1: đó là tín hiệu gần mua, không chỉ lượt thích. Thử trước 2 triệu, giả sử 2.000 đ mỗi lượt nhấp (minh hoạ): 1.000 lượt nhấp, tỉ lệ đặt 4% là 40 đơn, tức 50.000 đ mỗi đơn, thấp hơn lãi gộp 60.000 đ. Đạt ngưỡng đó mới nâng lên 10 triệu: 5.000 lượt nhấp, 200 đơn, lãi gộp 12 triệu trừ 10 triệu còn 2 triệu — giả định giá nhấp và tỉ lệ đặt không đổi khi tăng ngân sách gấp 5, điều thực tế ít khi xảy ra: giá nhấp chỉ cần lên 2.400 đ là lãi về 0. Vì vậy nâng theo bậc 2 → 4 → 7 → 10 triệu, đo lại chi phí mỗi đơn ở từng bậc. Mẫu mới chưa thử thì chưa biết có qua ngưỡng hay không; nó vẫn nên được thử, nhưng với khoản nhỏ.',
   takeaway:'Đẩy tiền vào thứ đã có tín hiệu gần mua, thử nhỏ trước và chỉ nâng khi chi phí mỗi đơn còn dưới lãi gộp.',
   apply:'Tìm bài đăng tốt nhất của bạn trong 3 tháng qua. Nói trong 60 giây: nó có tín hiệu gần mua nào, và nếu có 5 triệu đồng bạn thử bao nhiêu trước.',
   mistakes:['Luôn làm mẫu quảng cáo mới từ đầu, bỏ qua nội dung đã có tín hiệu tự nhiên.','Lấy lượt thích làm bằng chứng muốn mua rồi dồn cả ngân sách.','Lấy review của khách để chạy quảng cáo mà không hỏi ý người viết.'],
@@ -170,13 +170,13 @@ BAI_ADD({ mod:'kn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kn01-04', skill:'channel', read:'7 phút', t:'Fanpage "miễn phí" thật ra tốn bao nhiêu?',
+{ id:'B:kn01-04', skill:'channel', read:'7 phút', assume:true, t:'Fanpage "miễn phí" thật ra tốn bao nhiêu?',
   situation:'Anh Toàn bán đồ gốm online và tự làm fanpage vì "không tốn đồng nào". Mỗi tuần anh chụp ảnh, viết bài, trả lời tin nhắn mất khoảng 12 giờ. Doanh thu từ fanpage khoảng 15 triệu đồng/tháng. Anh đang cân nhắc có nên thuê người chạy quảng cáo 4 triệu/tháng hay không.',
   concept:{ name:'Chi phí thật của owned media',
     body:'Owned media không tốn tiền cho từng lượt hiển thị, nhưng không miễn phí. Nó tốn <b>thời gian của người</b> (chụp ảnh, viết, trả lời), <b>công cụ</b> (phần mềm, điện thoại, đèn), và <b>chi phí cơ hội</b>: giờ bỏ vào fanpage là giờ không làm sản phẩm hay chăm khách sỉ. Cách tính đơn giản: quy giờ công ra tiền bằng mức bạn sẵn sàng trả người khác làm việc đó, cộng công cụ, rồi mới so với paid. Nhiều khi kênh "miễn phí" đắt hơn kênh trả tiền.' },
   example:'Anh Toàn làm 12 giờ/tuần, khoảng 48 giờ/tháng. Nếu thuê người làm nội dung, mức khoảng 60.000 đ/giờ, thì công đó đáng 2,88 triệu. Cộng 300.000 đ phần mềm chỉnh ảnh và lên lịch, fanpage tốn khoảng 3,18 triệu/tháng. So với 4 triệu thuê chạy quảng cáo, hai lựa chọn gần ngang giá; câu hỏi thật là cái nào mang về nhiều đơn hơn cho mỗi đồng, và 48 giờ của anh đem làm gốm có đáng hơn không.',
   takeaway:'Owned không miễn phí: tính giờ công và công cụ ra tiền trước khi so với paid.',
-  points:["Giờ công là nguồn lực khan hiếm nhất của chủ shop nhỏ. Tính giờ ra tiền không phải để trả lương cho mình mà để thấy giá thật của kênh so với lựa chọn khác.","Mức quy đổi nên theo giá thị trường của việc đó, như giá thuê người làm nội dung, không phải thu nhập làm gốm của anh. Hai mức này có thể lệch nhau đáng kể.","So hai kênh phải dùng cùng mẫu số, như chi phí cho mỗi đơn. Cùng một khoản tiền, kênh nào cho nhiều đơn hơn thì rẻ hơn, dù kênh kia trông như miễn phí."],
+  points:["Giờ công là nguồn lực khan hiếm nhất của chủ shop nhỏ. Tính giờ ra tiền không phải để trả lương cho mình mà để thấy giá thật của kênh so với lựa chọn khác.","Có hai mức quy đổi và cần nói rõ dùng mức nào. Giá thuê người làm nội dung (60.000 đ/giờ trong ví dụ) là mức trần: nếu giờ của anh đáng hơn thế, thuê ngoài rẻ hơn tự làm. Chi phí cơ hội là giá trị giờ làm gốm hay chăm khách sỉ, chỉ tính khi giờ đó thật sự đổi được sang việc ấy (xem phản ví dụ). Ví dụ dùng giá thuê vì dễ tra; nếu giờ làm gốm của anh đáng hơn 60.000 đ, chi phí thật của fanpage tự làm còn cao hơn 3,18 triệu.","So hai kênh phải dùng cùng mẫu số, như chi phí cho mỗi đơn. Cùng một khoản tiền, kênh nào cho nhiều đơn hơn thì rẻ hơn, dù kênh kia trông như miễn phí."],
   counter:"Biến thể: anh Toàn làm fanpage vào buổi tối, lúc không có việc gì khác và còn thấy vui khi chụp đồ gốm. Quy 12 giờ mỗi tuần ra tiền khi đó làm fanpage trông đắt hơn thực tế, vì những giờ ấy không đổi được sang việc sinh lời khác. Dấu hiệu nhận ra: anh sẽ không làm việc có thu nhập nào vào đúng những giờ đó. Hãy xem lại khi anh thiếu giờ làm sản phẩm.",
   deeper:"Người làm nghề dùng phép tính giờ công như cây đèn pin, không phải bản án. Đánh đổi nằm ở chỗ fanpage còn tạo tài sản dài hạn như ảnh, người theo dõi, lịch sử khách mà quảng cáo trả tiền không để lại. Tín hiệu theo dõi gồm số đơn từ fanpage mỗi tháng, giờ thực tế bỏ ra và tỉ lệ khách quay lại từ kênh này. Khái niệm kề cận là chi phí trên mỗi đơn của kênh trả tiền; hai con số chỉ đặt cạnh nhau được khi tính cùng cách. Trong tuần này, hãy bấm giờ thật từng việc cho fanpage, rồi ghi số đơn tháng trước mà bạn xác nhận đến từ kênh đó.",
   apply:'Ghi lại số giờ bạn dành cho kênh sở hữu trong một tuần. Quy ra tiền và nói trong 60 giây: kênh đó có còn "miễn phí" không.',
@@ -226,7 +226,7 @@ BAI_ADD({ mod:'kn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kn01-05', skill:'channel', read:'7 phút', t:'Trong một chiến dịch, mỗi loại media làm việc gì?',
+{ id:'B:kn01-05', skill:'channel', read:'7 phút', assume:true, t:'Trong một chiến dịch, mỗi loại media làm việc gì?',
   situation:'Một thương hiệu cà phê rang xay ở Buôn Ma Thuột ra dòng cold brew đóng chai. Bạn có 30 triệu đồng cho 6 tuần ra mắt, có fanpage 8.000 người theo dõi, 2 quầy bán tại chợ đêm và danh sách Zalo 1.200 khách cũ. Sếp hỏi: "Tiền nên chi vào đâu, và mỗi kênh để làm gì, làm được bao nhiêu chai?"',
   concept:{ name:'Phân vai owned – paid – earned, mỗi vai một con số',
     body:'Mỗi loại media làm một việc khác và đo bằng một thước khác. <b>Paid</b> mua độ phủ nhanh tới người chưa biết bạn; đo bằng chi phí mỗi đơn. <b>Owned</b> giữ và thuyết phục người đã biết (chi tiết, lý do mua, nơi mua); đo bằng tỉ lệ người đến mua. <b>Earned</b> tạo niềm tin vì người khác nói hộ; đo bằng số người nói họ mua vì nghe kể. Chúng xếp thành chuỗi: owned đi trước để có nơi đón, paid đẩy người lạ tới, earned tích luỹ khi người thử hài lòng. Thiếu owned thì paid đẩy người tới chỗ trống. Tỉ trọng ngân sách theo việc cần mua: nếu khách cũ và người theo dõi nhỏ so với mục tiêu, paid phải gánh phần lớn.' },
@@ -283,11 +283,11 @@ BAI_ADD({ mod:'kn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kn01-06', skill:'channel', read:'6 phút', t:'Shop nhỏ 5 triệu mỗi tháng nên chia tiền và giờ thế nào?',
+{ id:'B:kn01-06', skill:'channel', read:'6 phút', assume:true, t:'Shop nhỏ 5 triệu mỗi tháng nên chia tiền và giờ thế nào?',
   situation:'Linh bán nến thơm handmade ở Đà Lạt, doanh thu khoảng 40 triệu/tháng, 60% từ khách quay lại. Cô có 5 triệu đồng và khoảng 20 giờ/tháng cho marketing. Một người bạn khuyên "dồn hết vào TikTok Ads", người khác bảo "đừng chi đồng nào, cứ đăng đều".',
   concept:{ name:'Phân bổ theo nguồn doanh thu, nút thắt và CAC so với LTV',
     body:'Không có tỉ lệ owned – paid "chuẩn". Hỏi ba câu: <b>doanh thu đang đến từ đâu</b>, <b>nút thắt ở đâu</b>, và <b>một khách mới đáng giá bao nhiêu</b>. Nếu phần lớn doanh thu từ khách quay lại, owned (danh sách khách, bao bì, chăm sóc sau mua) đang gánh việc chính và cần được giữ trước. Owned tốn giờ, paid tốn tiền, nhưng đó chỉ là hệ quả; điều quyết định mức chi là <b>CAC</b> (chi phí có một khách mới) so với <b>LTV</b> (lãi gộp khách mang lại trong 12 tháng, tính bằng lãi gộp chứ không phải doanh thu). CAC dưới LTV là chấp nhận được; muốn hoàn vốn ngay thì CAC không vượt lãi gộp của đơn đầu. Đặt một khoản thử nhỏ, đo CAC thật rồi mới tăng.' },
-  example:'Số liệu minh hoạ. 60% của 40 triệu là 24 triệu đến từ khách quay lại. Linh dành 14 trong 20 giờ cho owned: nhắn chăm khách cũ, thẻ cảm ơn kèm mã giới thiệu, đăng ảnh sản phẩm. Tiền: 4 triệu cho quảng cáo tìm khách mới dịp lễ, 1 triệu in thẻ và hộp. Một tháng sau, quảng cáo mang 20 khách mới, tức CAC 200.000đ; mã giới thiệu mang 18 khách, tức khoảng 56.000đ tiền in mỗi khách, chưa tính giờ công. Khách quay lại mua 3 lần/năm × 280.000đ, lãi gộp khoảng 60%, tức LTV khoảng 500.000đ. CAC 200.000đ thấp hơn LTV nên đáng chạy, nhưng vượt lãi gộp đơn đầu (168.000đ), nên hoàn vốn ở đơn thứ hai.',
+  example:'Số liệu minh hoạ. 60% của 40 triệu là 24 triệu đến từ khách quay lại. Linh dành 14 trong 20 giờ cho owned: nhắn chăm khách cũ, thẻ cảm ơn kèm mã giới thiệu, đăng ảnh sản phẩm. Tiền: 4 triệu cho quảng cáo tìm khách mới dịp lễ, 1 triệu in thẻ và hộp. Một tháng sau, quảng cáo mang 20 khách mới, tức CAC 200.000đ; mã giới thiệu mang 18 khách, tức khoảng 56.000đ tiền in mỗi khách, chưa tính giờ công. Khách quay lại mua 3 lần/năm × 280.000đ, lãi gộp khoảng 60%, tức LTV khoảng 500.000đ — nhưng đó là LTV của nhóm đã quay lại. Với khách mới, chỉ đơn đầu (168.000đ) là chắc; phần mua thêm (336.000đ) phải nhân với tỉ lệ mua lần 2: 50% quay lại cho LTV kỳ vọng ≈ 168.000 + 50% × 336.000 = 336.000đ, 20% chỉ còn ≈ 235.000đ. CAC 200.000đ thấp hơn LTV ở cả hai mức nên đáng chạy (ở mức 20% biên rất mỏng), nhưng vượt lãi gộp đơn đầu, nên hoàn vốn ở đơn thứ hai.',
   takeaway:'Chia theo nơi doanh thu đến và nút thắt nằm; chi cho paid chừng nào CAC còn thấp hơn lãi gộp khách mang lại.',
   apply:'Viết ra: bao nhiêu phần trăm doanh thu từ khách quay lại, và lãi gộp một khách mang lại trong năm. Nói trong 60 giây mức tối đa bạn dám trả để có một khách mới.',
   mistakes:['Áp một tỉ lệ chung cho mọi shop mà không xem doanh thu đến từ đâu.','Chỉ chia tiền mà quên chia giờ, trong khi owned tốn giờ nhiều nhất.','Coi kênh giới thiệu là miễn phí, quên in ấn, quà tặng và giờ công.'],
@@ -328,7 +328,7 @@ BAI_ADD({ mod:'kn01', lessons:[
              {k:'c',t:'Giữ cả hai: đẩy giới thiệu vì rẻ hơn, giữ quảng cáo vì 200.000đ vẫn dưới LTV'},{k:'d',t:'Giữ nguyên ngân sách đến hết năm rồi mới đánh giá vì một tháng quá ngắn'}],
     answer:'c', why:{a:'Giới thiệu phụ thuộc số khách hiện có, khó nhân rộng nhanh bằng paid; cắt quảng cáo là mất nguồn khách mới chủ động.',
       b:'Hơn 2 khách nhưng chi phí mỗi khách khoảng 200.000đ so với khoảng 56.000đ tiền in, cao gấp 3 lần trở lên; cần so với LTV trước khi nhân đôi.',
-      c:'Đúng. Hai nguồn bổ trợ: tăng cái rẻ, giữ cái mở rộng được vì CAC 200.000đ vẫn thấp hơn LTV khoảng 500.000đ.',
+      c:'Đúng. Hai nguồn bổ trợ: tăng cái rẻ, giữ cái mở rộng được vì CAC 200.000đ vẫn thấp hơn LTV kỳ vọng của khách mới (khoảng 336.000đ nếu nửa số khách quay lại).',
       d:'Một tháng đủ để chỉnh; chờ một năm là quá chậm.'} },
   { type:'calc', stem:'Mỗi đơn của Linh là 280.000đ, lãi gộp 60%. Muốn quảng cáo hoàn vốn ngay ở đơn đầu tiên, chi phí mỗi khách mới tối đa là bao nhiêu nghìn đồng?',
     unit:'nghìn đ', ans:168, tol:0.5, wrong:[[280,'HOAN_VON_TINH_DOANH_THU'],[504,'SAI_TINH_TOAN']], errors:['HOAN_VON_TINH_DOANH_THU'],
@@ -336,7 +336,7 @@ BAI_ADD({ mod:'kn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kn01-07', skill:'channel', read:'6 phút', t:'Fanpage bị khoá sáng mai — bạn còn lại gì?',
+{ id:'B:kn01-07', skill:'channel', read:'6 phút', assume:true, t:'Fanpage bị khoá sáng mai — bạn còn lại gì?',
   situation:'Một shop mẹ và bé ở TP.HCM có fanpage 45.000 người theo dõi, 90% đơn đến qua tin nhắn fanpage. Một sáng, trang bị hạn chế vì báo cáo nhầm, không đăng và không nhắn được trong 10 ngày. Doanh thu những ngày đó gần như bằng 0 vì shop không có cách nào khác liên lạc với khách.',
   concept:{ name:'Phụ thuộc nền tảng: "đất thuê" và "đất nhà"',
     body:'Fanpage, kênh TikTok, gian hàng trên sàn giống <b>đất thuê</b>: bạn xây trên đó, nhưng nền tảng đặt luật, có thể đổi thuật toán, giảm lượt tiếp cận hoặc khoá tài khoản. <b>Đất nhà</b> là những gì bạn thực sự nắm: số điện thoại, email, danh sách khách, website, cửa hàng. Người theo dõi trên nền tảng là của nền tảng cho mượn. Quy tắc an toàn: không để một nền tảng chiếm gần hết doanh thu, và luôn có đường liên lạc trực tiếp với khách.' },
@@ -376,12 +376,12 @@ BAI_ADD({ mod:'kn01', lessons:[
     unit:'điểm %', ans:35, tol:0.1, wrong:[[38.9,'NHAM_DIEM_PHAN_TRAM']], errors:['NHAM_DIEM_PHAN_TRAM'],
     steps:['Điểm phần trăm = hiệu hai tỉ lệ.','90 − 55 = <b>35 điểm %</b> (khác với mức giảm tương đối 38,9%).'] },
   { type:'mcq', stem:'Một chủ shop nói: "Tôi có 45.000 người theo dõi, đó là tài sản lớn nhất." Phản biện nào đúng nhất?',
-    options:[{k:'a',t:'Họ thuộc về nền tảng cho mượn; tài sản là phần bạn liên lạc trực tiếp được'},{k:'b',t:'45.000 là ít; phải trên 100.000 mới gọi là tài sản thật sự của shop'},
-             {k:'c',t:'Người theo dõi không có giá trị gì với doanh thu'},{k:'d',t:'Người theo dõi chỉ có giá trị nếu shop trả tiền mua'}],
+    options:[{k:'a',t:'Họ thuộc về nền tảng cho mượn; tài sản là phần bạn liên lạc trực tiếp được'},{k:'b',t:'Đúng, miễn là shop đăng đều mỗi ngày để giữ lượt tiếp cận không rơi'},
+             {k:'c',t:'Họ là tài sản thật, vì shop đã bỏ tiền và công suốt nhiều năm mới gom được họ'},{k:'d',t:'Đúng, vì khi trang bị khoá, 45.000 người ấy sẽ tự tìm shop ở kênh khác'}],
     answer:'a', why:{a:'Đúng. Bạn chỉ chạm được họ theo luật và thuật toán của nền tảng.',
-      b:'Con số lớn hơn không đổi bản chất sở hữu.',
-      c:'Họ có giá trị, chỉ không chắc chắn.',
-      d:'Mua người theo dõi không làm họ thành của bạn, và thường là người ảo.'} },
+      b:'Đăng đều giữ được lượt tiếp cận, nhưng không giữ được quyền tiếp cận: trang bị hạn chế thì đăng đều cũng không tới ai.',
+      c:'Tiền và công đã bỏ ra là chi phí chìm; điều quyết định là ai nắm quyền chạm tới họ, và đó là nền tảng.',
+      d:'Vài khách quen có thể tìm, nhưng shop không có cách báo cho 45.000 người biết mình ở đâu khi trang im lặng.'} },
   { type:'mcq', stem:'Một quán cơm văn phòng nhận 70% đơn qua một ứng dụng giao đồ ăn. Cách giảm phụ thuộc nào hợp lý nhất?',
     options:[{k:'a',t:'Rút khỏi ứng dụng ngay để không phải trả phí hoa hồng cao'},{k:'b',t:'Dán mã QR nhóm đặt cơm của quán vào túi, mời khách quen đặt trực tiếp'},
              {k:'c',t:'Đăng ký thêm ba ứng dụng giao đồ ăn khác để chia đều rủi ro, rồi thôi'},{k:'d',t:'Tăng giá trên ứng dụng lên gấp đôi để khách tự chuyển kênh'}],
@@ -392,7 +392,7 @@ BAI_ADD({ mod:'kn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kn01-08', skill:'channel', read:'7 phút', t:'Làm sao biến người theo dõi thành danh sách của riêng bạn?',
+{ id:'B:kn01-08', skill:'channel', read:'7 phút', assume:true, t:'Làm sao biến người theo dõi thành danh sách của riêng bạn?',
   situation:'Một thương hiệu trà thảo mộc có 30.000 người theo dõi Instagram và 12.000 trên TikTok nhưng không có số điện thoại hay email nào. Bạn được giao mục tiêu: trong 3 tháng, có 3.000 liên hệ trực tiếp mà khách tự nguyện để lại.',
   concept:{ name:'Trao đổi giá trị để lấy liên hệ',
     body:'Người ta chỉ để lại số điện thoại hay email khi nhận được thứ <b>đáng hơn phiền phức</b>: một cẩm nang pha trà, mẫu thử, ưu đãi đơn đầu, nhóm được hỏi đáp trực tiếp. Chuyển đổi đi theo phễu: <b>thấy lời mời → bấm vào → để lại liên hệ</b>. Mỗi bước rơi rụng, nên cần đo từng bước. Luôn nói rõ bạn sẽ gửi gì và bao lâu một lần, xin sự đồng ý, và giữ lời. Danh sách mà bị gửi tin rác thì người ta rời đi.' },
@@ -448,7 +448,7 @@ BAI_ADD({ mod:'kn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:kn01-09', skill:'measure', read:'7 phút', t:'Mỗi loại media thật ra chạm tới bao nhiêu người?',
+{ id:'B:kn01-09', skill:'measure', read:'7 phút', assume:true, t:'Mỗi loại media thật ra chạm tới bao nhiêu người?',
   situation:'Cuối tháng, bạn báo cáo cho chủ một chuỗi 3 cửa hàng giày: "Quảng cáo 150.000 lượt hiển thị, fanpage 20.000 lượt tiếp cận, cửa hàng 9.000 lượt khách, có 2 bài review." Chủ hỏi: "Vậy rốt cuộc bao nhiêu người đã biết đến mình tháng này, và kênh nào quan trọng nhất?"',
   concept:{ name:'Đo reach theo từng loại media',
     body:'<b>Lượt hiển thị</b> đếm số lần; <b>reach</b> đếm số người. Một người thấy quảng cáo 5 lần là 5 lượt hiển thị nhưng 1 người reach. Đổi hiển thị sang reach bằng <b>tần suất</b>: reach ≈ hiển thị ÷ tần suất. Mỗi loại media đo khác nhau: paid có số nền tảng báo, owned số cần tự ước (khách qua cửa, túi mang ra), earned khó đo nhất (lượt xem bài review, số khách nói "thấy trên mạng"). Các nhóm còn trùng nhau, nên không cộng thẳng. Hỏi khách "biết đến qua đâu" là cách rẻ để kiểm chứng.' },
@@ -504,7 +504,7 @@ BAI_ADD({ mod:'kn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:kn01-10', skill:'channel', read:'7 phút', t:'Khi nào thì đáng tăng tiền quảng cáo?',
+{ id:'B:kn01-10', skill:'channel', read:'7 phút', assume:true, t:'Khi nào thì đáng tăng tiền quảng cáo?',
   situation:'Shop phụ kiện điện thoại của Minh chi 6 triệu/tháng quảng cáo, mỗi đơn lãi gộp 80.000 đ. Owned đã được làm kỹ: bao bì có QR, nhóm Zalo 2.000 khách, fanpage đăng đều. Tháng này quảng cáo mang về 150 đơn. Minh hỏi: "Có nên tăng lên 12 triệu không?"',
   concept:{ name:'Tăng paid khi còn biên và owned đã sẵn',
     body:'Đáng tăng paid khi đủ ba điều: <b>mỗi đơn từ quảng cáo còn lãi</b> sau khi trừ chi phí quảng cáo; <b>owned đã sẵn sàng</b> để đón và giữ khách (trang rõ ràng, chăm sóc sau mua); và <b>còn dư địa</b>, tức chưa chạm trần người có nhu cầu. Khi tăng ngân sách, chi phí mỗi đơn thường tăng theo, vì nền tảng phải tìm tới người kém quan tâm hơn. Vì thế tăng theo bậc, ví dụ 20–50% mỗi lần (bậc càng nhỏ càng an toàn; bài tn06-05 dùng 25%), rồi đo lại, thay vì nhân đôi một lần.' },

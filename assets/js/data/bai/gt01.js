@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'gt01', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:gt01-01', skill:'insight', read:'6 phút', t:'"Doanh số giảm" là vấn đề hay chỉ là triệu chứng?',
+{ id:'B:gt01-01', skill:'insight', read:'6 phút', assume:true, t:'"Doanh số giảm" là vấn đề hay chỉ là triệu chứng?',
   situation:'Chuỗi trà sữa 12 cửa hàng ở Hà Nội báo doanh số tháng 9 giảm 15% so với tháng 8. Trong cuộc họp, ba người đưa ba giải pháp: chạy thêm quảng cáo, ra món mới, giảm giá 20%. Không ai nói rõ doanh số giảm vì đâu. Bạn được giao viết đề xuất trong hai ngày.',
   concept:{ name:'Triệu chứng và vấn đề',
     body:'<b>Triệu chứng</b> là con số xấu mà ai cũng nhìn thấy: doanh số giảm, lượt theo dõi chững, đơn hàng ít đi. <b>Vấn đề</b> là cơ chế gây ra con số đó, đủ cụ thể để biết phải can thiệp vào đâu: ít khách mới hơn, khách cũ quay lại thưa hơn, hay mỗi hoá đơn nhỏ đi. Cùng một triệu chứng có thể do nhiều vấn đề khác nhau, và mỗi vấn đề cần một giải pháp khác nhau. Đưa giải pháp khi mới thấy triệu chứng là đoán mò có trang trí.' },
@@ -63,7 +63,7 @@ BAI_ADD({ mod:'gt01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:gt01-02', skill:'measure', read:'7 phút', t:'Câu vấn đề thiếu số và thiếu thời hạn thì hỏng ở đâu?',
+{ id:'B:gt01-02', skill:'measure', read:'7 phút', assume:true, t:'Câu vấn đề thiếu số và thiếu thời hạn thì hỏng ở đâu?',
   situation:'Một thương hiệu nước mắm đóng chai bán trên Shopee viết trong kế hoạch quý: "Vấn đề: khách mua lại ít". Ba tháng sau, không ai biết đã cải thiện hay chưa. Người thì bảo tốt hơn, người bảo vẫn thế. Số liệu thật: 1.000 khách mua lần đầu trong tháng 4, 180 người mua lại trong 90 ngày.',
   concept:{ name:'Câu vấn đề đo được',
     body:'Một câu vấn đề dùng được có năm phần: <b>ai</b> (nhóm khách nào), <b>chỉ số gì</b>, <b>đang ở mức nào</b>, <b>mức cần đạt</b>, và <b>trong thời hạn nào</b>. Thiếu số thì không biết vấn đề lớn cỡ nào, có đáng ưu tiên không. Thiếu thời hạn thì không biết khi nào nên kiểm lại. Mức cần đạt không lấy cho tròn số: nó nên tính từ điểm hoà vốn, tức là mức mà lãi từ khách quay lại bù đủ chi phí đã bỏ ra để có họ. "Ai" cũng phải chốt theo một nhóm cố định (khách mua lần đầu trong một tháng), nếu không hai người đo sẽ ra hai con số. Giải pháp tốt là giải pháp kéo được đúng con số trong câu vấn đề.' },
@@ -120,7 +120,7 @@ BAI_ADD({ mod:'gt01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:gt01-03', skill:'insight', read:'6 phút', t:'Hỏi "vì sao" mấy lần thì chạm tới vấn đề thật?',
+{ id:'B:gt01-03', skill:'insight', read:'6 phút', assume:true, t:'Hỏi "vì sao" mấy lần thì chạm tới vấn đề thật?',
   situation:'Một phòng khám nha khoa ở Đà Nẵng chạy quảng cáo Facebook, mỗi tháng có 300 người để lại số điện thoại nhưng chỉ 30 người đến khám. Trưởng nhóm muốn đổi agency quảng cáo. Bạn được hỏi: "Có nên đổi agency không?"',
   concept:{ name:'Hỏi "vì sao" nhiều lần',
     body:'Mỗi lần hỏi "vì sao" là lùi một bước từ triệu chứng về nguyên nhân. Thường cần ba đến năm lần mới chạm tới chỗ có thể sửa được. Dừng quá sớm thì sửa ngọn; hỏi quá xa thì lạc sang những thứ ngoài tầm tay ("vì kinh tế khó"). Mỗi câu trả lời phải dựa trên dữ kiện, không phải cảm giác. Dừng khi câu trả lời vừa có bằng chứng vừa chỉ ra một việc cụ thể mà bạn làm được.' },
@@ -180,11 +180,11 @@ BAI_ADD({ mod:'gt01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:gt01-04', skill:'insight', read:'6 phút', t:'Vấn đề này là vấn đề của ai?',
+{ id:'B:gt01-04', skill:'insight', read:'6 phút', assume:true, t:'Vấn đề này là vấn đề của ai?',
   situation:'Một hãng bánh kẹo bán qua 2.000 tạp hoá ở miền Tây. Chủ tạp hoá than bánh chậm bán. Đội bán hàng than đại lý nhập ít. Giám đốc than thị phần giảm. Ba câu than cùng lúc đổ về phòng marketing, kèm yêu cầu "làm chương trình gì đó".',
   concept:{ name:'Chủ thể của vấn đề',
     body:'Cùng một tình hình, mỗi người gặp một vấn đề khác nhau, và giải pháp cho người này có thể vô ích với người kia. Thay vì hỏi "ai đang than", hỏi ba câu: <b>hành vi của ai</b> cần đổi để con số đổi? Hành vi đó cụ thể là gì? <b>Rào cản</b> của họ là gì: biên lãi, chỗ, thói quen hay thiếu thông tin? Chủ thể có thể ở cuối chuỗi (chủ tạp hoá không treo bánh) hoặc ở đầu chuỗi (sản phẩm lỗi, đại lý không giao hàng). Lời than ở trên thường chỉ là hệ quả, nhưng phải kiểm bằng dữ kiện, không đoán theo vị trí trong chuỗi.' },
-  example:'Ghé 20 tạp hoá: bánh nằm trong thùng dưới quầy, khách không thấy nên không hỏi. Chưa vội kết luận, vì bánh có thể bị giấu chính vì bán chậm. Bạn phỏng vấn 10 chủ tạp hoá: 8 người nói biên lãi bánh chỉ 8% và quầy chật nên nhường chỗ cho hàng lãi hơn (số minh hoạ). Hành vi cần đổi: chủ tạp hoá treo bánh ở chỗ khách thấy; rào cản: biên thấp, thiếu chỗ. Giải pháp: giá treo gọn cộng thưởng 20.000đ mỗi tháng. Câu vấn đề: "Ở 2.000 tạp hoá, chỉ khoảng 1/4 trưng bày bánh ở chỗ khách thấy; cần lên 1/2 trong 3 tháng". Nếu treo rồi mà vẫn chậm, mới quay lên sản phẩm và đại lý.',
+  example:'Ghé 20 tạp hoá: bánh nằm trong thùng dưới quầy, khách không thấy nên không hỏi. Chưa vội kết luận, vì bánh có thể bị giấu chính vì bán chậm. Bạn phỏng vấn 10 chủ tạp hoá: 8 người nói biên lãi bánh chỉ 8% và quầy chật nên nhường chỗ cho hàng lãi hơn (số minh hoạ). Hành vi cần đổi: chủ tạp hoá treo bánh ở chỗ khách thấy; rào cản: biên thấp, thiếu chỗ. Giải pháp: giá treo gọn cộng thưởng 20.000đ mỗi tháng. Kiểm tiền trước khi chốt (số minh hoạ): nếu treo giúp mỗi tạp hoá bán thêm 300.000đ/tháng và hãng lãi 30% phần tăng thêm (90.000đ), thưởng 20.000đ cộng giá treo vẫn có lời; bán thêm dưới 70.000đ thì thưởng lỗ, phải tính lại. Câu vấn đề: "Ở 2.000 tạp hoá, chỉ khoảng 1/4 trưng bày bánh ở chỗ khách thấy; cần lên 1/2 trong 3 tháng". Nếu treo rồi mà vẫn chậm, mới quay lên sản phẩm và đại lý.',
   takeaway:'Hỏi hành vi của ai phải đổi để con số đổi và rào cản của họ là gì; lời than ở trên thường chỉ là hệ quả.',
   apply:'Với một vấn đề bạn đang xử lý, kể ra mọi bên liên quan. Nói trong 60 giây: hành vi của ai phải thay đổi để con số đổi, và rào cản của họ là gì.',
   mistakes:['Viết vấn đề theo góc nhìn của người đang than to nhất.','Gộp vấn đề của nhiều bên vào một câu, nên giải pháp không nhắm vào ai.'],
@@ -199,7 +199,7 @@ BAI_ADD({ mod:'gt01', lessons:[
   { type:'mcq', stem:'Phỏng vấn 10 chủ tạp hoá: 8 người nói biên lãi bánh chỉ 8% nên không muốn nhường chỗ đẹp, và quầy đã chật. Bạn chọn giải pháp nào?',
     options:[{k:'a',t:'Giá treo gọn kèm thưởng 20.000đ mỗi tháng cho tạp hoá treo đúng chỗ'},{k:'b',t:'Quảng cáo TV để khách vào tạp hoá hỏi mua đúng loại bánh này'},
              {k:'c',t:'Chiết khấu thêm cho đại lý để họ đẩy nhiều hàng xuống tạp hoá'},{k:'d',t:'Đổi bao bì mới bắt mắt hơn để nổi bật khi đặt trên kệ tạp hoá'}],
-    answer:'a', why:{a:'Đúng. Gỡ cả hai rào cản: thưởng bù biên thấp, giá treo gọn giải quyết chỗ chật; và đo được tỉ lệ bánh được treo.',
+    answer:'a', why:{a:'Đúng. Gỡ cả hai rào cản: thưởng bù biên thấp, giá treo gọn giải quyết chỗ chật; đo được tỉ lệ bánh được treo. Nhưng chỉ chốt khi lãi tăng thêm mỗi tạp hoá (ước ~90.000đ/tháng, số minh hoạ) bù được thưởng 20.000đ và giá treo.',
       b:'Không gỡ rào cản của chủ tạp hoá; khách tới hỏi mà bánh vẫn nằm dưới quầy thì doanh số vẫn kẹt ở điểm bán.',
       c:'Đẩy hàng vào đại lý khi tạp hoá vẫn không muốn bày chỉ làm tồn kho dồn xuống.',
       d:'Bao bì đẹp mà vẫn nằm trong thùng thì khách vẫn không thấy; cũng không đụng tới biên lãi hay chỗ chật.'} },
@@ -237,7 +237,7 @@ BAI_ADD({ mod:'gt01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:gt01-05', skill:'comm', read:'6 phút', t:'Sếp bảo "làm TikTok đi" thì hỏi lại gì?',
+{ id:'B:gt01-05', skill:'comm', read:'6 phút', assume:true, t:'Sếp bảo "làm TikTok đi" thì hỏi lại gì?',
   situation:'Chủ một thương hiệu giày da nam ở TP.HCM nhắn: "Thấy đối thủ làm TikTok nổ lắm, em làm TikTok cho mình đi, tháng sau lên luôn." Shop đang bán chủ yếu qua website và cửa hàng, doanh thu 800 triệu/tháng, khách phần lớn 30–45 tuổi.',
   concept:{ name:'Lùi từ giải pháp về vấn đề',
     body:'Khi được giao một giải pháp, việc đầu tiên không phải là làm hay từ chối, mà là <b>lùi về vấn đề</b> mà giải pháp đó được kỳ vọng sẽ giải. Hỏi: "Nếu TikTok thành công, con số nào sẽ thay đổi?", "Hiện con số đó đang ở đâu?", "Vì sao anh nghĩ nó đang thiếu?". Mục đích không phải để cãi sếp, mà để hai người cùng thống nhất đích đến. Khi đích rõ, TikTok có thể vẫn là giải pháp đúng, hoặc chỉ là một trong vài lựa chọn.' },
@@ -297,7 +297,7 @@ BAI_ADD({ mod:'gt01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:gt01-06', skill:'insight', read:'7 phút', t:'Đây là vấn đề marketing hay vấn đề sản phẩm, vận hành?',
+{ id:'B:gt01-06', skill:'insight', read:'7 phút', assume:true, t:'Đây là vấn đề marketing hay vấn đề sản phẩm, vận hành?',
   situation:'Một chuỗi cơm văn phòng giao hàng ở Hà Nội có 4.000 đơn/tháng. Đánh giá trên app giao đồ ăn tụt từ 4,6 xuống 4,1 sao trong hai tháng. Sếp giao marketing "làm chiến dịch cải thiện hình ảnh". Đọc 200 bình luận gần nhất, 120 bình luận nói cơm nguội hoặc giao trễ.',
   concept:{ name:'Đặt vấn đề đúng phòng ban',
     body:'Marketing hay được giao mọi con số xấu có dính tới khách. Nhưng nếu gốc nằm ở <b>sản phẩm</b> (món dở, chất lượng không đều) hay <b>vận hành</b> (giao trễ, hết hàng, đóng gói kém), chiến dịch truyền thông chỉ đưa thêm người tới trải nghiệm tệ và làm đánh giá tụt nhanh hơn. Trước khi nhận việc, phân loại xem gốc ở đâu. Việc của marketing lúc đó có thể là mang dữ kiện khách hàng tới đúng người sửa, và đo xem sửa xong khách có quay lại không.' },
@@ -357,7 +357,7 @@ BAI_ADD({ mod:'gt01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:gt01-07', skill:'measure', read:'7 phút', t:'Vấn đề nằm ở khắp nơi hay chỉ ở một góc?',
+{ id:'B:gt01-07', skill:'measure', read:'7 phút', assume:true, t:'Vấn đề nằm ở khắp nơi hay chỉ ở một góc?',
   situation:'Một hãng sữa hạt bán qua ba kênh: siêu thị, cửa hàng tiện lợi và sàn online. Tổng doanh số quý 3 giảm 10%, từ 5 tỉ xuống 4,5 tỉ. Cả nhóm đang bàn một chiến dịch toàn quốc cho mọi kênh. Chưa ai tách số theo kênh.',
   concept:{ name:'Khoanh phạm vi vấn đề',
     body:'Một con số tổng giảm hiếm khi giảm đều ở mọi nơi. Thường có một góc — một kênh, một vùng, một nhóm khách, một sản phẩm — chịu phần lớn mức giảm. Tách con số theo từng chiều và tìm góc đóng góp nhiều nhất vào mức giảm. Khoanh phạm vi giúp giải pháp nhỏ hơn, rẻ hơn và dễ đo hơn. Câu vấn đề tốt nói rõ <b>trong phạm vi</b> nào và <b>ngoài phạm vi</b> nào. Chọn chiều tách theo thứ bạn có thể hành động riêng (kênh, vùng, sản phẩm), không theo thứ không ai điều chỉnh được. Với chỉ số trung bình như biên lãi hay giá trị đơn, tổng còn có thể đổi chỉ vì tỉ trọng dịch giữa các nhóm, dù từng nhóm không đổi.' },
@@ -414,7 +414,7 @@ BAI_ADD({ mod:'gt01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:gt01-08', skill:'measure', read:'7 phút', t:'Đằng sau "doanh số giảm" là thành phần nào?',
+{ id:'B:gt01-08', skill:'measure', read:'7 phút', assume:true, t:'Đằng sau "doanh số giảm" là thành phần nào?',
   situation:'Một cửa hàng mỹ phẩm online có doanh số tháng này 300 triệu, tháng trước 360 triệu. Chủ shop muốn "đẩy mạnh quảng cáo". Bạn có số liệu: tháng trước 12.000 lượt vào, tỉ lệ mua 2%, giá trị đơn 1,5 triệu; tháng này 12.500 lượt vào, tỉ lệ mua 1,6%, giá trị đơn 1,5 triệu.',
   concept:{ name:'Phân rã doanh số',
     body:'Doanh số online có thể viết thành <b>lượt vào × tỉ lệ mua × giá trị đơn</b>. Với cửa hàng có khách quen, có thể viết thành số khách × số lần mua × giá trị đơn. Mỗi thành phần có đòn bẩy riêng: lượt vào do quảng cáo và tìm kiếm; tỉ lệ mua do trang sản phẩm, giá, đánh giá, phí ship; giá trị đơn do combo, gợi ý mua kèm. So từng thành phần giữa hai kỳ để biết thành phần nào kéo doanh số xuống.' },
@@ -470,7 +470,7 @@ BAI_ADD({ mod:'gt01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:gt01-09', skill:'comm', read:'6 phút', t:'Có dữ kiện mới rồi, có dám viết lại câu vấn đề?',
+{ id:'B:gt01-09', skill:'comm', read:'6 phút', assume:true, t:'Có dữ kiện mới rồi, có dám viết lại câu vấn đề?',
   situation:'Một chuỗi phòng gym ở TP.HCM viết từ đầu quý: "Khách mới đăng ký ít vì giá cao hơn đối thủ." Sau 3 tuần phỏng vấn 40 người đến thử rồi không đăng ký, chỉ 6 người nhắc tới giá; 22 người nói phòng quá đông giờ 18–20h. Kế hoạch giảm giá đã được sếp duyệt.',
   concept:{ name:'Câu vấn đề là bản nháp',
     body:'Câu vấn đề đầu tiên thường là một phỏng đoán. Nó giúp biết đi tìm dữ kiện gì, nhưng không phải kết luận. Khi dữ kiện nói khác, việc đúng là <b>viết lại câu vấn đề</b>, ghi rõ đã thay đổi vì dữ kiện nào, và báo cho người đã duyệt. Giữ câu cũ vì đã duyệt, hay vì ngại thừa nhận đoán sai, là cách chắc chắn nhất để giải sai vấn đề. Mỗi lần viết lại nên giữ bản cũ bên cạnh để mọi người thấy vì sao đổi.' },
@@ -530,7 +530,7 @@ BAI_ADD({ mod:'gt01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:gt01-10', skill:'comm', read:'7 phút', t:'Câu hỏi then chốt của dự án này là gì?',
+{ id:'B:gt01-10', skill:'comm', read:'7 phút', assume:true, t:'Câu hỏi then chốt của dự án này là gì?',
   situation:'Một thương hiệu cà phê hoà tan đang có 8% thị phần, muốn ra dòng cà phê lon uống liền. Sếp giao: "Nghiên cứu thị trường cà phê lon." Bạn có 4 tuần và 60 triệu. Nếu nghiên cứu mọi thứ, bạn sẽ có một báo cáo dày mà không trả lời được sếp có nên ra sản phẩm hay không.',
   concept:{ name:'Câu hỏi then chốt (key question)',
     body:'Câu hỏi then chốt là <b>một câu hỏi</b> mà câu trả lời quyết định hành động. Nó đứng cuối chuỗi: con số xấu, tách thành phần, khoanh góc, hỏi vì sao. Dạng hay gặp: "Có nên… không, nếu…?". Phần "nếu" là ngưỡng, và ngưỡng được tính chứ không đoán: <b>ngưỡng = chi phí cố định cần thu hồi ÷ lãi gộp mỗi đơn vị</b>. Có ngưỡng thì nghiên cứu biết cần đo gì và dừng khi nào. Chủ đề ("thị trường cà phê lon") không phải câu hỏi; câu hỏi còn phải đủ hẹp để trả lời bằng nguồn lực đang có.' },

@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'tp06', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tp06-01', skill:'measure', read:'6 phút', t:'Khách "biết" thương hiệu của bạn — nhưng biết kiểu nào?',
+{ id:'B:tp06-01', skill:'measure', read:'6 phút', assume:true, t:'Khách "biết" thương hiệu của bạn — nhưng biết kiểu nào?',
   situation:'Một hãng nước mắm vừa khảo sát 200 bà nội trợ ở Cần Thơ. Khi đưa danh sách tên và hỏi "chị đã nghe tên nào?", 140 người chọn hãng mình. Khi chỉ hỏi "nhắc tới nước mắm chị nghĩ tới những hãng nào?", chỉ 30 người tự nói ra tên hãng. Sếp muốn báo cáo con số 70%.',
   concept:{ name:'Nhận biết có nhắc và không nhắc',
     body:'<b>Nhận biết có nhắc</b> (prompted): cho xem tên hoặc logo rồi hỏi có biết không — đo khả năng <b>nhận ra</b>. <b>Nhận biết không nhắc</b> (unprompted): chỉ nêu ngành hàng rồi để người ta tự kể — đo khả năng <b>tự nhớ ra</b>. Ở kệ hàng, nhận ra là đủ vì bao bì đã nằm trước mặt. Nhưng khi quyết định xảy ra trong đầu — gọi món, dặn người nhà mua, gõ ô tìm kiếm — chỉ tên nào tự bật ra mới có cơ hội. Khoảng cách giữa hai con số là phần "biết nhưng không nghĩ tới". Hai thuật ngữ của module này: <b>mental availability</b> (độ sẵn có trong tâm trí, theo Byron Sharp và Jenni Romaniuk, Viện Ehrenberg-Bass) là khả năng thương hiệu được nghĩ tới trong nhiều tình huống mua; <b>salience</b> (độ nổi bật trong trí nhớ) là mức tên bạn tự bật ra so với các hãng khác. Nhận biết không nhắc là một cách đo thô cả hai.' },
@@ -60,7 +60,7 @@ BAI_ADD({ mod:'tp06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tp06-02', skill:'channel', read:'7 phút', t:'Nói thật sâu với fan hay nói vừa đủ với rất nhiều người?',
+{ id:'B:tp06-02', skill:'channel', read:'7 phút', assume:true, t:'Nói thật sâu với fan hay nói vừa đủ với rất nhiều người?',
   situation:'Một hãng bánh tráng trộn đóng gói có ngân sách 60 triệu/tháng. Phương án 1: chạy quảng cáo nhắm lại 20.000 người đã theo dõi trang, mỗi người thấy khoảng 15 lần. Phương án 2: tiếp cận 150.000 người mua đồ ăn vặt trong khu vực, mỗi người thấy khoảng 2 lần. Trưởng nhóm thích phương án 1 vì tỉ lệ tương tác cao.',
   concept:{ name:'Tiếp cận người mua nhẹ',
     body:'Theo dữ liệu Byron Sharp và Viện Ehrenberg-Bass tổng hợp (How Brands Grow), trong hầu hết ngành hàng, phần đông khách của một thương hiệu là <b>người mua nhẹ</b>: mua thỉnh thoảng, dùng nhiều hãng, không theo dõi trang nào. Fan mua nhiều nhưng ít người, và vốn đã nhớ tới bạn. Muốn tăng thêm số người nghĩ tới mình, thông điệp phải chạm được tới đám đông người mua nhẹ — nhắc vừa đủ để tên còn đọng lại — thay vì nói lần thứ mười lăm với người đã thuộc lòng. Đây là một quan điểm; quan điểm khác ở chỗ coi trọng nhóm mua nhiều (quy tắc 80/20, marketing giữ chân và cộng đồng fan), nhất là với hãng nhỏ, ngân sách mỏng hoặc ngành mua theo gói thuê bao.' },
@@ -117,7 +117,7 @@ BAI_ADD({ mod:'tp06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tp06-03', skill:'channel', read:'7 phút', t:'Chạy một đợt thật lớn rồi nghỉ, hay nhắc đều suốt năm?',
+{ id:'B:tp06-03', skill:'channel', read:'7 phút', assume:true, t:'Chạy một đợt thật lớn rồi nghỉ, hay nhắc đều suốt năm?',
   situation:'Một hãng dầu ăn có 1,2 tỉ đồng cho cả năm. Giám đốc muốn dồn hết vào 2 tháng trước Tết cho "nổ". Số liệu khảo sát cũ cho thấy sau khi ngừng quảng cáo, số người tự nhớ ra tên hãng giảm khoảng một phần ba sau mỗi tháng. Bạn phải trình phương án lịch chạy.',
   concept:{ name:'Tần suất tối thiểu và hao mòn trí nhớ',
     body:'Trí nhớ về một thương hiệu không đứng yên: không được nhắc thì nó <b>mòn dần</b>, vì mỗi ngày người ta gặp hàng trăm tên khác. Những lần gặp đầu mang lại phần lớn tác dụng, thêm nhiều hơn thì lợi ích giảm dần. Bằng chứng về lịch chạy tối ưu còn tranh luận, nên điều kiện quyết định: nếu khách <b>mua quanh năm</b> (dầu ăn, bánh sinh nhật), im lặng dài là bỏ trống đúng lúc họ mua, nên giữ hiện diện đều ở mức vừa đủ. Nếu nhu cầu <b>dồn vào một mùa</b> (bánh Trung thu), dồn tiền quanh mùa là hợp lý, kèm một lớp nền mỏng để tên không mờ hẳn giữa hai mùa. Hãy đo trên chính nhóm khách của bạn.' },
@@ -174,7 +174,7 @@ BAI_ADD({ mod:'tp06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tp06-04', skill:'brand', read:'6 phút', t:'Có mặt trong danh sách thôi đã đủ, hay phải là cái tên đầu tiên?',
+{ id:'B:tp06-04', skill:'brand', read:'6 phút', assume:true, t:'Có mặt trong danh sách thôi đã đủ, hay phải là cái tên đầu tiên?',
   situation:'Khảo sát 300 người đi làm ở Hà Nội: "Muốn đặt đồ ăn trưa, anh chị nghĩ tới ứng dụng nào?". Mỗi người kể trung bình 2–3 tên. Ứng dụng của bạn được nhắc bởi 120 người, nhưng chỉ 30 người nhắc nó đầu tiên. Đối thủ lớn được 210 người nhắc, 150 người nhắc đầu tiên.',
   concept:{ name:'Tên nghĩ tới đầu tiên trong tập cân nhắc',
     body:'Khi có nhu cầu, người ta không xét cả ngành mà chỉ vài cái tên tự bật ra — đó là <b>tập cân nhắc</b>. Trong tập đó, tên bật ra <b>đầu tiên</b> có lợi thế lớn: người mua bận rộn thường dừng ở cái đầu tiên đủ tốt thay vì tìm cái tốt nhất — hành vi mà Herbert Simon gọi là <i>satisficing</i>. Vì vậy ngoài tỉ lệ "được nhắc", hãy tách riêng tỉ lệ "được nhắc đầu tiên" (top of mind). Có mặt mà luôn đứng thứ ba nghĩa là thường chỉ được chọn khi hai tên trước gặp trục trặc.' },
@@ -234,7 +234,7 @@ BAI_ADD({ mod:'tp06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tp06-05', skill:'creative', read:'7 phút', t:'Quảng cáo được nhớ, nhưng người xem có nhớ là của ai?',
+{ id:'B:tp06-05', skill:'creative', read:'7 phút', assume:true, t:'Quảng cáo được nhớ, nhưng người xem có nhớ là của ai?',
   situation:'Một hãng bột giặt tung video 30 giây kể chuyện cảm động về mẹ và con. Tên và gói bột giặt chỉ xuất hiện ở 3 giây cuối. Khảo sát 400 người đã xem: 280 người nhớ nội dung câu chuyện, nhưng chỉ 84 người nói đúng đó là quảng cáo của hãng nào.',
   concept:{ name:'Gắn chặt tên thương hiệu vào quảng cáo',
     body:'Một quảng cáo chỉ xây được trí nhớ cho thương hiệu nếu người xem <b>gắn nó với đúng tên</b>. Nhiều quảng cáo hay nhưng người ta nhớ câu chuyện mà quên — hoặc nhớ nhầm sang — hãng khác, nhất là hãng dẫn đầu ngành. Cách phòng: cho thương hiệu xuất hiện <b>sớm</b> (trước khi người xem lướt đi), <b>nhiều lần</b>, và <b>đan vào câu chuyện</b> — sản phẩm là một phần diễn biến, tên được nói ra, màu và dấu hiệu quen thuộc xuất hiện suốt, chứ không chỉ một logo ở cuối.' },
@@ -242,7 +242,7 @@ BAI_ADD({ mod:'tp06', lessons:[
   takeaway:'Quảng cáo hay mà không gắn tên là quảng cáo miễn phí cho ngành hàng.',
   points:["Trí nhớ về câu chuyện và về tên là hai ngăn khác nhau. Câu chuyện cảm động lấp đầy ngăn đầu, còn tên chỉ vào được ngăn sau nếu xuất hiện lúc còn chú ý.","Khi sản phẩm là một phần diễn biến, như gói bột giặt trong tay người mẹ, người xem nhớ tên cùng với hành động chứ không phải một logo bị dán lên sau.","Màu và dấu hiệu quen thuộc làm việc âm thầm suốt video. Chúng giúp trí nhớ nối về đúng hãng ngay cả khi người xem không nghe rõ tên được nói ra."],
   counter:"Biến thể: bản sửa đưa gói bột giặt vào giây thứ 2 và nói tên ở giây 10, nhưng cảnh nào cũng có logo to che nửa khung hình. Người xem thấy bị quảng cáo nên bỏ xem sớm. Dấu hiệu nhận ra: tỉ lệ xem hết giảm mạnh dù nhóm xem hết nối tên cao. Phải cân giữa gắn tên và giữ người xem, đan thương hiệu vào hành động chứ không chèn lên hình.",
-  deeper:"Người làm nghề thấy rằng gắn tên là bài toán thứ tự: giữ người xem đủ lâu để nhận tên, nhưng không để tên làm hỏng câu chuyện. Đánh đổi nằm ở chỗ bất ngờ ở cuối tạo cảm xúc nhưng làm rơi tên. Tín hiệu cần theo dõi là <b>tỉ lệ nối đúng tên</b> trong số người nhớ nội dung, hiện là 30%, và việc người xem nhớ nhầm sang hãng nào. Khái niệm kề cận là tài sản nhận diện và độ nổi bật. Phép kiểm tra trong tuần: cho 5 người xem bản sửa, hỏi ngay sau đó “quảng cáo của hãng nào”, rồi so với mức 30%.",
+  deeper:"Người làm nghề thấy rằng gắn tên là bài toán thứ tự: giữ người xem đủ lâu để nhận tên, nhưng không để tên làm hỏng câu chuyện. Đánh đổi nằm ở chỗ bất ngờ ở cuối tạo cảm xúc nhưng làm rơi tên. Tín hiệu cần theo dõi là <b>tỉ lệ nối đúng tên</b> trong số người nhớ nội dung, hiện là 30%, và việc người xem nhớ nhầm sang hãng nào. Khái niệm kề cận là tài sản nhận diện và độ nổi bật. Phép kiểm tra trong tuần: cho 5 người lướt bản sửa như lướt bảng tin, hỏi ngay sau đó “quảng cáo của hãng nào” để tìm chỗ tên bị rơi. 5 người chỉ cho lỗi định tính: mỗi người đã là 20 điểm %, nên chưa so được với mức 30%. Muốn so với 30%, cần vài trăm người xem trong điều kiện lướt được phép bỏ đi, không phải được mời xem hết video.",
   apply:'Xem lại một quảng cáo bạn nhớ gần đây. Ghi lại giây đầu tiên thương hiệu xuất hiện và số lần xuất hiện. Nói trong 60 giây: người xem lướt đi sau 3 giây có biết đó là của ai không.',
   mistakes:['Giấu tên tới cuối để tạo bất ngờ.','Đo "nhớ quảng cáo" mà không hỏi "quảng cáo của hãng nào".'],
   q:[
@@ -263,7 +263,7 @@ BAI_ADD({ mod:'tp06', lessons:[
   { type:'calc', stem:'500 người đã xem quảng cáo: 300 người nhớ nội dung, 105 người nói đúng tên hãng. Trong số người nhớ nội dung, bao nhiêu phần trăm gắn đúng tên?',
     unit:'%', ans:35, tol:0.1, wrong:[[21,'SAI_MAU_SO'],[60,'SAI_MAU_SO']], errors:['SAI_MAU_SO'],
     steps:['Mẫu số là người nhớ nội dung: 300.','105 ÷ 300 = 0,35 = <b>35%</b>.','105 ÷ 500 = 21% là tỉ lệ trên toàn bộ người xem.'] },
-  { type:'mcq', stem:'Trên TikTok, người xem quyết định xem tiếp hay lướt đi rất nhanh; hướng dẫn của TikTok khuyên đưa nội dung chính vào 3 giây đầu. Điều đó có nghĩa gì với việc gắn tên?',
+  { type:'mcq', stem:'Trên video dạng lướt (TikTok, Reels), phần lớn người xem quyết định xem tiếp hay lướt đi chỉ trong vài giây đầu. Điều đó có nghĩa gì với việc gắn tên?',
     options:[{k:'a',t:'Thương hiệu phải xuất hiện trong vài giây đầu'},{k:'b',t:'Nên đặt logo thật to ở cuối để người xem tới cuối thấy thật rõ'},
              {k:'c',t:'Nên bỏ hẳn tên để nội dung trông tự nhiên và giống người dùng'},{k:'d',t:'Đặt tên ở phần mô tả dưới video cho khách đọc'}],
     answer:'a', why:{a:'Đúng. Người lướt đi sớm chỉ mang theo những gì thấy ở vài giây đầu.',
@@ -294,7 +294,7 @@ BAI_ADD({ mod:'tp06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tp06-06', skill:'brand', read:'6 phút', t:'Khách thích hãng đối thủ hơn — vậy vì sao họ vẫn mua của bạn?',
+{ id:'B:tp06-06', skill:'brand', read:'6 phút', assume:true, t:'Khách thích hãng đối thủ hơn — vậy vì sao họ vẫn mua của bạn?',
   situation:'Một chuỗi cà phê nhỏ ở Đà Nẵng hỏi 200 khách đi ngang: "Anh chị thích chuỗi nào nhất?". Chỉ 20 người chọn chuỗi này, thua xa một quán độc lập nổi tiếng (70 người). Nhưng khi hỏi "sáng nay anh chị mua ở đâu?", 60 người trả lời chuỗi này, vì có 12 điểm bán ngay đường đi làm. Chủ chuỗi muốn dồn tiền để "được yêu thích hơn".',
   concept:{ name:'Nổi bật khác yêu thích',
     body:'<b>Được yêu thích</b> là người ta đánh giá cao bạn khi được hỏi. <b>Nổi bật</b> là tên bạn tự bật ra và dễ tìm thấy vào lúc họ cần. Hai thứ liên quan nhưng không trùng nhau: nhiều người mua một hãng mà không coi nó là yêu thích nhất, chỉ vì nó nghĩ tới trước và có mặt đúng chỗ. Muốn tăng trưởng, thường việc đầu tiên là làm cho tên dễ nghĩ tới và dễ mua hơn, chứ không phải thuyết phục người ta yêu mình hơn. Đây là quan điểm của Romaniuk và Sharp (Ehrenberg-Bass): <b>salience</b> là khả năng tên bạn bật ra trong đầu lúc mua. Quan điểm khác (David Aaker, Kevin Keller — tài sản thương hiệu dựa trên khách hàng) khác ở chỗ coi sự yêu thích, gắn bó là tầng tạo giá trị lâu dài, nhất là khi muốn giữ giá cao.' },
@@ -320,12 +320,12 @@ BAI_ADD({ mod:'tp06', lessons:[
   { type:'calc', stem:'Khảo sát 250 người: 25 người chọn hãng D là yêu thích nhất, 75 người mua D trong tháng qua. Số người mua D gấp bao nhiêu lần số người yêu thích D?',
     unit:'lần', ans:3, tol:0.01, wrong:[[0.33,'SAI_TINH_TOAN'],[50,'NHAM_SO_TUYET_DOI']], errors:['SAI_TINH_TOAN','NHAM_SO_TUYET_DOI'],
     steps:['Số lần = người mua ÷ người yêu thích.','75 ÷ 25 = <b>3 lần</b>.','Lấy 75 − 25 = 50 là chênh lệch tuyệt đối, không phải số lần.'] },
-  { type:'mcq', stem:'Một hãng nước mắm có điểm yêu thích cao nhất ngành nhưng thị phần chỉ đứng thứ tư. Giả thuyết nào nên kiểm tra trước?',
+  { type:'mcq', stem:'Một hãng nước mắm có điểm yêu thích cao nhất ngành, giá bán ngang ba hãng đứng trên, nhưng thị phần chỉ đứng thứ tư. Giả thuyết nào nên kiểm tra trước?',
     options:[{k:'a',t:'Sản phẩm đang có vấn đề chất lượng mà khảo sát chưa phát hiện'},{k:'b',t:'Người trả lời khảo sát nói dối về hãng mà mình yêu thích'},
              {k:'c',t:'Giá của hãng cao hơn đối thủ quá nhiều nên khách không mua'},{k:'d',t:'Tên ít tự bật ra hoặc khó tìm ở nơi khách mua'}],
     answer:'d', why:{a:'Nếu chất lượng có vấn đề thì điểm yêu thích khó mà cao nhất.',
       b:'Không có căn cứ để cho rằng người trả lời nói dối.',
-      c:'Giá là một khả năng, nhưng khoảng cách giữa thích và mua thường do nổi bật và độ phủ.',
+      c:'Đề đã cho giá ngang ba hãng đứng trên, nên giá không giải thích được khoảng cách; thích mà ít mua thường do nổi bật và độ phủ.',
       d:'Đúng. Được thích mà ít được mua thường là dấu hiệu tên không bật ra hoặc hàng không có mặt đúng chỗ.'} },
   { type:'mcq', stem:'Câu nào mô tả đúng khác biệt giữa nổi bật và yêu thích?',
     options:[{k:'a',t:'Nổi bật là tên dễ bật ra lúc cần; yêu thích là đánh giá tốt'},{k:'b',t:'Nổi bật là quảng cáo có màu sắc bắt mắt nhất trong ngành hàng'},
@@ -351,7 +351,7 @@ BAI_ADD({ mod:'tp06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tp06-07', skill:'measure', read:'7 phút', t:'Không có tiền thuê hãng nghiên cứu — đo độ được nhớ thế nào?',
+{ id:'B:tp06-07', skill:'measure', read:'7 phút', assume:true, t:'Không có tiền thuê hãng nghiên cứu — đo độ được nhớ thế nào?',
   situation:'Bạn làm marketing cho một hãng mì chay nhỏ, ngân sách nghiên cứu gần như bằng 0. Sếp hỏi: "Ba tháng quảng cáo vừa rồi có làm nhiều người nghĩ tới mình hơn không?". Bạn có một danh sách 2.000 người mua đồ chay trong cộng đồng Facebook và vài buổi ở hội chợ chay cuối tuần.',
   concept:{ name:'Khảo sát độ được nhớ tối giản',
     body:'Không cần hãng nghiên cứu, vẫn đo được nếu giữ ba nguyên tắc. Một: hỏi <b>người mua ngành hàng</b>, không chỉ fan của mình. Hai: câu <b>không nhắc</b> đi đầu ("nhắc tới mì chay, bạn nghĩ tới hãng nào?"), ghi tên đầu tiên và mọi tên khác; sau đó mới hỏi có nhắc. Ba: <b>giữ nguyên</b> câu hỏi, cách chọn người và cỡ mẫu giữa các lần đo, để so sánh trước – sau là so cùng một thước. Cỡ mẫu vài trăm người đủ để thấy thay đổi lớn, không đủ để đọc chênh lệch 1–2 điểm.' },

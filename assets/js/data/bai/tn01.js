@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'tn01', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tn01-01', skill:'measure', read:'6 phút', t:'Chiến dịch 800 triệu hay bản thử 30 triệu trước?',
+{ id:'B:tn01-01', skill:'measure', read:'6 phút', assume:true, t:'Chiến dịch 800 triệu hay bản thử 30 triệu trước?',
   situation:'Một chuỗi trà sữa ở Hà Nội định tung dòng trà trái cây ít đường với chiến dịch 800 triệu đồng: KOL, billboard, bao bì mới. Sếp hỏi bạn: "Chắc chưa?". Bằng chứng duy nhất là 70% người trong nhóm khảo sát nói "thích đồ ít đường".',
   concept:{ name:'Bản thử tối thiểu cho marketing (marketing MVP)',
     body:'Bản thử tối thiểu là phiên bản <b>rẻ nhất, nhanh nhất</b> vẫn trả lời được câu hỏi rủi ro lớn nhất. Câu hỏi ở đây không phải "khách có thích ít đường không" mà "khách có <b>trả tiền</b> cho món này thường xuyên không". Bản thử không cần đẹp, không cần đủ; nó chỉ cần đo được đúng một điều trước khi bạn dồn tiền vào mọi thứ còn lại.' },
@@ -63,7 +63,7 @@ BAI_ADD({ mod:'tn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tn01-02', skill:'channel', read:'7 phút', t:'Tung toàn quốc hay thử ở một tỉnh trước?',
+{ id:'B:tn01-02', skill:'channel', read:'7 phút', assume:true, t:'Tung toàn quốc hay thử ở một tỉnh trước?',
   situation:'Một hãng nước mắm đóng chai muốn đổi sang chai 500ml có vòi rót, giá tăng 4.000 đồng. Kế hoạch là thay toàn bộ 2.000 điểm bán cùng lúc. Bạn đề xuất thử ở Đà Nẵng trước, nơi có 120 điểm bán.',
   concept:{ name:'Thử theo khu vực (test market)',
     body:'Thay đổi ở <b>một khu vực</b> trong khi giữ nguyên ở khu vực tương tự khác để làm mốc so sánh. Khu vực thử nên giống thị trường chung về thu nhập, kênh bán và thói quen, và đủ tách biệt để khách ở đó không mua chéo. Điều bạn đo là <b>chênh lệch</b> giữa vùng thử và vùng đối chứng, không phải con số tuyệt đối của vùng thử.' },
@@ -119,15 +119,15 @@ BAI_ADD({ mod:'tn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tn01-03', skill:'measure', read:'7 phút', t:'Chưa có sản phẩm, làm sao biết có ai muốn mua?',
+{ id:'B:tn01-03', skill:'measure', read:'7 phút', assume:true, t:'Chưa có sản phẩm, làm sao biết có ai muốn mua?',
   situation:'Hai bạn trẻ ở TP.HCM muốn mở dịch vụ giao cơm văn phòng ăn kiêng theo tuần, giá 450.000 đồng/tuần. Làm bếp, thuê shipper, thiết kế hộp sẽ tốn khoảng 200 triệu. Họ chưa biết có đủ người mua không.',
   concept:{ name:'Thử bằng trang đích (landing page test)',
     body:'Dựng một <b>trang giới thiệu</b> như thể dịch vụ đã có: lời hứa, giá, nút "Đăng ký". Chạy một ít quảng cáo đúng nhóm khách. Người bấm đăng ký thấy lời báo "Chúng tôi sắp mở, để lại số để được ưu tiên". Bạn đo được hai điều: bao nhiêu người quan tâm (tỉ lệ bấm) và <b>ở mức giá nào</b>. Luôn nói thật với người đăng ký; đừng thu tiền cho thứ chưa có.' },
-  example:'Họ làm trang bằng công cụ miễn phí, chạy 6 triệu quảng cáo Facebook nhắm dân văn phòng quận 1, 3, Bình Thạnh. Có 3.000 lượt vào trang, 150 người bấm "Đăng ký tuần đầu" và để lại số. Tỉ lệ 5% với giá đã hiện rõ là tín hiệu đáng kể. Tổng chi phí khoảng 8 triệu, thay vì 200 triệu để biết cùng một điều.',
+  example:'Họ làm trang bằng công cụ miễn phí, chạy 6 triệu quảng cáo Facebook nhắm dân văn phòng quận 1, 3, Bình Thạnh. Có 3.000 lượt vào trang, 150 người bấm "Đăng ký tuần đầu" và để lại số. Tỉ lệ 5% với giá đã hiện rõ đáng kể hay không tuỳ chi phí mỗi khách thật. Giả định 10–30% người đăng ký sẽ đặt thật (chưa đo được trước khi mở bếp): 40.000đ ÷ 20% ≈ 200.000đ mỗi khách, trong khoảng 133.000–400.000đ. So với lãi gộp, không với doanh thu: biên 30% thì mỗi tuần khách để lại khoảng 135.000đ, nên khách cần mua khoảng 2 tuần (3 tuần nếu chỉ 10% đặt thật) mới bù chi phí → đáng thử tiếp, kèm đo tỉ lệ mua lại (số minh hoạ). Tổng chi phí khoảng 8 triệu, thay vì 200 triệu để biết cùng một điều.',
   takeaway:'Trước khi làm sản phẩm, bán thử lời hứa và đếm người bấm mua.',
   points:["Bấm “Đăng ký” khi giá đã hiện là lựa chọn có chi phí nhỏ nhưng thật, khác với lượt xem hay lượt thích. Người bấm đã chấp nhận cả lời hứa lẫn mức 450.000 đồng.","Quảng cáo nhắm đúng dân văn phòng quận 1, 3, Bình Thạnh bảo đảm tín hiệu đến từ nhóm sẽ mua. Nhắm sai nhóm thì tỉ lệ đẹp cũng không dùng được.","Lời nhắn “sắp mở” giữ sự trung thực và cho bạn danh sách người sẵn sàng. Danh sách này vừa là phép đo, vừa là nhóm khách đầu tiên để gọi hỏi ý kiến."],
   counter:"Biến thể: 5% đăng ký là con số đẹp, nhưng khách văn phòng đăng ký vì tò mò, hoặc nằm ngoài vùng bếp giao kịp trước giờ trưa. Trang đích không đo được chất lượng món hay thời gian giao thật. Dấu hiệu nhận ra: tỉ lệ từ người đăng ký sang người đặt thật thấp, hoặc nhiều người đăng ký ở ngoài vùng giao. Khi đó cần thử giao thật ở quy mô nhỏ, không dừng ở trang.",
-  deeper:"Giá hiện trên trang ảnh hưởng tỉ lệ bấm, nên thử nhiều mức giá nghĩa là chia lưu lượng và cần nhiều tiền quảng cáo hơn. Đánh đổi là thử ít mức giá cho rẻ hay thử nhiều mức cho rõ hơn. Tín hiệu cần theo dõi là chi phí mỗi người đăng ký và tỉ lệ người đăng ký thành người đặt thật khi bếp mở. Khái niệm kề cận là đặt trước bằng cọc, bước kế tiếp mạnh hơn lời đăng ký. Tuần này, gọi vài người đăng ký và hỏi họ hiện đang ăn trưa thế nào, để biết dịch vụ thay thế thứ gì của họ.",
+  deeper:"Giá hiện trên trang ảnh hưởng tỉ lệ bấm, nên thử nhiều mức giá nghĩa là chia lưu lượng và cần nhiều tiền quảng cáo hơn. Đánh đổi là thử ít mức giá cho rẻ hay thử nhiều mức cho rõ hơn. Hai trang khác giá chỉ nên dùng khi chưa bán thật; khi đã có khách trả tiền, đừng để hai người cùng lúc thấy hai giá trên cùng trang mà không có lý do (xem bài tn02-01). Tín hiệu cần theo dõi là chi phí mỗi người đăng ký và tỉ lệ người đăng ký thành người đặt thật khi bếp mở. Khái niệm kề cận là đặt trước bằng cọc, bước kế tiếp mạnh hơn lời đăng ký. Tuần này, gọi vài người đăng ký và hỏi họ hiện đang ăn trưa thế nào, để biết dịch vụ thay thế thứ gì của họ.",
   apply:'Nghĩ một dịch vụ bạn muốn mở. Nói trong 60 giây: trang đích của bạn ghi lời hứa gì, giá bao nhiêu, và nút bấm nói gì.',
   mistakes:['Giấu giá trên trang, nên đo được tò mò chứ không đo được ý định mua.','Hứa hẹn quá mức hoặc thu tiền cho sản phẩm chưa có — mất lòng tin.'],
   q:[
@@ -163,7 +163,7 @@ BAI_ADD({ mod:'tn01', lessons:[
              {k:'c',t:'Hai trang giống nhau chỉ khác giá, chia đều quảng cáo, so tỉ lệ'},{k:'d',t:'Chạy trang giá thấp trước một tháng, tháng sau mới chạy trang giá cao'}],
     answer:'c', why:{a:'Hai mức trên cùng trang tạo hiệu ứng mỏ neo, không đo được riêng từng mức.',
       b:'Học viên cũ đã mua rồi; họ không đại diện cho khách mới.',
-      c:'Đúng. Giữ mọi thứ như nhau trừ giá thì chênh lệch mới do giá.',
+      c:'Đúng. Giữ mọi thứ như nhau trừ giá thì chênh lệch mới do giá — chấp nhận được khi chưa bán thật và chưa ai bị tính giá khác nhau; khi đã bán, thử giá theo khu vực, kênh hoặc mã ưu đãi (bài tn02-01).',
       d:'Hai tháng khác nhau có mùa vụ khác nhau; nên chạy song song.'} },
   { type:'mcq', stem:'Điều nào là giới hạn thật của thử bằng trang đích?',
     options:[{k:'a',t:'Đo được ý định lúc bấm, chưa đo được trải nghiệm và việc mua lại'},{k:'b',t:'Không thể biết được người vào trang đến từ kênh quảng cáo nào'},
@@ -175,7 +175,7 @@ BAI_ADD({ mod:'tn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tn01-04', skill:'measure', read:'7 phút', t:'Khách nói "sẽ mua" hay khách đặt cọc?',
+{ id:'B:tn01-04', skill:'measure', read:'7 phút', assume:true, t:'Khách nói "sẽ mua" hay khách đặt cọc?',
   situation:'Một xưởng gốm Bát Tràng định sản xuất bộ ấm chén vẽ tay giá 1,2 triệu đồng. Đơn hàng tối thiểu với lò là 500 bộ. Bài đăng giới thiệu mẫu có 2.000 lượt thích và 300 bình luận "đẹp quá, sẽ mua".',
   concept:{ name:'Đặt trước (pre-order) để đo nhu cầu thật',
     body:'Mở cho khách <b>đặt cọc</b> một phần tiền trước khi sản xuất, ghi rõ ngày giao dự kiến và cam kết hoàn tiền nếu không đủ số lượng để làm. Tiền cọc là tín hiệu mạnh nhất: khách chấp nhận rủi ro và chờ đợi. Số đặt trước cũng quyết định có đủ để đạt đơn tối thiểu của nhà máy hay không. Điều kiện: minh bạch về thời gian, hoàn tiền rõ ràng.' },
@@ -231,11 +231,11 @@ BAI_ADD({ mod:'tn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tn01-05', skill:'measure', read:'7 phút', t:'Ngân sách thử bao nhiêu là đủ?',
+{ id:'B:tn01-05', skill:'measure', read:'7 phút', assume:true, t:'Ngân sách thử bao nhiêu là đủ?',
   situation:'Bạn muốn thử kênh quảng cáo mới cho một shop giày. Tỉ lệ chuyển đổi hiện tại khoảng 2%, chi phí mỗi lượt vào trang khoảng 2.000 đồng. Sếp cho 2 triệu để "thử cho biết" trong một tuần, và hẹn cuối tuần báo lại xem kênh mới có nên được giao ngân sách hằng tháng hay không.',
   concept:{ name:'Ngân sách thử = số kết quả cần × chi phí mỗi kết quả',
     body:'Bản thử phải có đủ <b>số sự kiện</b> (đơn hàng, đăng ký) để đọc được, thường ít nhất vài chục. Tính ngược: cần bao nhiêu đơn → cần bao nhiêu lượt vào (chia cho tỉ lệ chuyển đổi) → tốn bao nhiêu tiền (nhân chi phí mỗi lượt). Ngân sách quá nhỏ cho ra vài đơn lẻ, kết quả may rủi; ngân sách vừa đủ mới cho kết luận. Đừng chi quá mức cần: đó là chiến dịch, không còn là bản thử.' },
-  example:'Muốn có ít nhất 50 đơn để đọc kết quả. Với chuyển đổi 2%, cần 50 ÷ 0,02 = 2.500 lượt vào. Với 2.000 đồng/lượt, ngân sách là 5 triệu. Với 2 triệu, bạn chỉ có 1.000 lượt vào, khoảng 20 đơn — lệch vài đơn là kết luận đảo chiều. Bạn xin thêm 3 triệu hoặc thu hẹp câu hỏi.',
+  example:'Muốn có ít nhất 50 đơn để đọc kết quả. Con số 50 không phải chuẩn chung mà tuỳ chênh lệch bạn cần thấy: theo quy tắc ±2√k (bài tn02-03), 50 đơn tự dao động ±14 đơn (±28%), nên chỉ đủ nhận ra chênh chi phí mỗi đơn cỡ 30% so với kênh cũ đã biết rõ; muốn thấy chênh 15% cần khoảng 200 đơn (xem tn02-04). Với chuyển đổi 2%, cần 50 ÷ 0,02 = 2.500 lượt vào. Với 2.000 đồng/lượt, ngân sách là 5 triệu. Với 2 triệu, bạn chỉ có 1.000 lượt vào, khoảng 20 đơn — lệch vài đơn là kết luận đảo chiều. Bạn xin thêm 3 triệu hoặc thu hẹp câu hỏi.',
   takeaway:'Tính ngược từ số kết quả cần đọc được ra số tiền, đừng lấy con số tròn cho vui.',
   points:["Ngân sách là phép nhân ngược: số kết quả cần đọc chia cho tỉ lệ chuyển đổi, rồi nhân chi phí mỗi lượt. Có công thức thì sếp thấy 5 triệu có lý do.","Cỡ mẫu nhỏ làm kết quả lệch ngẫu nhiên: thêm hay bớt một hai đơn đủ làm tỉ lệ đổi dấu. Cần đủ số đơn để một đơn lẻ không còn quyết định kết luận.","Ngân sách thử là tiền mua thông tin, nên so với quyết định phía sau: vài triệu để biết rõ rẻ hơn nhiều so với giao tiền tháng rồi mới thấy kênh không hợp."],
   counter:"Biến thể: giày giá cao, khách xem đi xem lại nhiều ngày rồi mới mua, nên đơn đến chậm sau lượt vào trang. Tính 50 đơn trong 5 triệu và một tuần sẽ bỏ sót các đơn đến muộn. Dấu hiệu: khách quay lại trang nhiều lần trước khi mua, đơn vẫn về sau khi tắt quảng cáo. Khi đó cần cửa sổ đo dài hơn hoặc đo bước trung gian như thêm vào giỏ.",
@@ -287,7 +287,7 @@ BAI_ADD({ mod:'tn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tn01-06', skill:'measure', read:'6 phút', t:'Khi nào dừng, khi nào đi tiếp — quyết trước hay sau?',
+{ id:'B:tn01-06', skill:'measure', read:'6 phút', assume:true, t:'Khi nào dừng, khi nào đi tiếp — quyết trước hay sau?',
   situation:'Bản thử gói combo sáng ở 5 cửa hàng bánh mì đã chạy 4 tuần. Combo chiếm 12% đơn buổi sáng. Người thì bảo "tốt rồi, mở rộng", người bảo "chưa đủ". Không ai nhớ lúc đầu mong đợi bao nhiêu.',
   concept:{ name:'Tiêu chí dừng / đi tiếp đặt trước',
     body:'Trước khi thử, viết ra ba vùng: <b>đi tiếp</b> nếu chỉ số đạt từ X trở lên, <b>dừng</b> nếu dưới Y, <b>thử thêm hoặc chỉnh</b> nếu nằm giữa. Kèm theo thời hạn và cỡ mẫu. Viết trước để khi có số, không ai kéo mốc về phía mình muốn. Không có tiêu chí trước, mọi kết quả đều được diễn giải theo mong muốn của người nói to nhất.' },
@@ -347,7 +347,7 @@ BAI_ADD({ mod:'tn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tn01-07', skill:'measure', read:'7 phút', t:'Thử nhỏ thắng — nhân lên có thắng như vậy không?',
+{ id:'B:tn01-07', skill:'measure', read:'7 phút', assume:true, t:'Thử nhỏ thắng — nhân lên có thắng như vậy không?',
   situation:'Chương trình "tặng ly khi mua 2 chai" ở 10 siêu thị tại Hà Nội tăng doanh số 30%. Sếp muốn áp dụng cho 400 siêu thị toàn quốc và kỳ vọng tăng 30% ở mọi nơi. Ngân sách quà tặng cho đợt mở rộng đã được tính theo con số đó.',
   concept:{ name:'Khả năng nhân rộng (scalability)',
     body:'Kết quả thử nhỏ thường <b>tốt hơn</b> khi nhân rộng vì: điểm thử được chăm kỹ (nhân viên nhiệt tình, quản lý theo dõi sát), điểm thử thường là nơi thuận lợi, quà tặng đủ hàng, và hiệu ứng mới lạ. Khi nhân lên, chất lượng thực thi giảm, chi phí có thể tăng (mua quà số lượng lớn, vận chuyển xa). Hãy dự báo <b>thận trọng</b> và hỏi: điều gì ở điểm thử không có ở mọi nơi?' },
@@ -403,11 +403,11 @@ BAI_ADD({ mod:'tn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tn01-08', skill:'insight', read:'6 phút', t:'Hỏi khách cho nhanh hay đo hành vi cho chắc?',
+{ id:'B:tn01-08', skill:'insight', read:'6 phút', assume:true, t:'Hỏi khách cho nhanh hay đo hành vi cho chắc?',
   situation:'Một thương hiệu nước giặt muốn biết khách có chuộng túi refill (rẻ hơn 15%) không. Có hai lựa chọn: khảo sát online 1.000 người trong 3 ngày, hoặc đặt túi refill lên kệ 20 siêu thị trong 4 tuần.',
   concept:{ name:'Thử bằng lời nói vs thử bằng hành vi',
     body:'<b>Khảo sát</b> nhanh, rẻ, hỏi được "vì sao", nhưng đo lời nói; người ta hay trả lời điều nghe có vẻ tốt (ủng hộ môi trường, thích tiết kiệm). <b>Thử hành vi</b> (bán thật, bấm thật, đặt cọc) chậm và tốn hơn nhưng đo điều khách làm. Cách dùng hợp lý: khảo sát để <b>loại bớt</b> ý tưởng và hiểu lý do; hành vi để <b>quyết định</b> chi tiền. Muốn khảo sát bớt lệch: hỏi về lần mua gần nhất thay vì ý định, và bắt chọn giữa các phương án có giá.' },
-  example:'Khảo sát: 68% nói "sẽ thử refill". Kệ thử 4 tuần (số minh hoạ): 18% người mua nước giặt đã mua túi refill ít nhất một lần. Cùng đơn vị là người thử, nên chỉ khoảng 18 ÷ 68 ≈ 26% lời nói thành hành động. Không phải khảo sát sai hoàn toàn — nó cho biết thiện cảm cao nhưng thói quen mua chai khó đổi. Quyết định sản xuất dựa trên con số 18%; lý do "ngại đổ ra bị đổ tràn" lấy từ khảo sát để cải tiến vòi túi.',
+  example:'Khảo sát: 68% nói "sẽ thử refill". Kệ thử 4 tuần (số minh hoạ): 18% người mua nước giặt đã mua túi refill ít nhất một lần. Hai con số đến từ hai nhóm khác nhau (người trả lời khảo sát và người mua ở kệ), nên 18 ÷ 68 ≈ 26% chỉ là tỉ số thô giữa hành vi và lời nói, gợi ý mức chênh nói–làm, không phải tỉ lệ quy đổi của từng người; muốn đo quy đổi thật phải theo dõi cùng một người (xem ĐÀO SÂU). Không phải khảo sát sai hoàn toàn — nó cho biết thiện cảm cao nhưng thói quen mua chai khó đổi. Quyết định sản xuất dựa trên con số 18%; lý do "ngại đổ ra bị đổ tràn" lấy từ khảo sát để cải tiến vòi túi.',
   takeaway:'Hỏi để hiểu vì sao; đo hành vi để quyết định chi tiền.',
   points:["Khảo sát hỏi một giả định trừu tượng, còn kệ hàng đặt khách trước lựa chọn thật với giá và thói quen cũ. Ở khoảng cách đó, lời nói và hành động tách nhau.","Mạnh nhất của khảo sát là hỏi lý do: khách nêu được nỗi ngại cụ thể như sợ đổ tràn, điều khó đoán từ số bán. Hai phương pháp bổ sung cho nhau.","Hỏi về lần mua gần nhất và buộc chọn giữa phương án có giá đưa câu trả lời gần hành vi hơn, vì khách phải nhớ việc đã làm hoặc chấp nhận đánh đổi."],
   counter:"Biến thể: túi refill đặt ở góc khuất của kệ, hoặc hết hàng vài tuần ở nhiều siêu thị. Kết quả hành vi thấp lúc này do thực thi, không phải do khách không muốn. Dấu hiệu: tỉ lệ mua đổi mạnh theo vị trí kệ hoặc tồn kho, và khách nói không thấy sản phẩm. Khi đó cần hỏi khách để tách hai nguyên nhân trước khi kết luận.",
@@ -429,9 +429,9 @@ BAI_ADD({ mod:'tn01', lessons:[
       b:'Ý kiến có giá trị, nhưng không thay được số bán thật.',
       c:'Đúng. Đầu tư lớn cần bằng chứng hành vi; khảo sát giúp hiểu và cải tiến.',
       d:'Xu hướng nước ngoài không chắc áp dụng được cho khách Việt.'} },
-  { type:'calc', stem:'Khảo sát: 68% người nói sẽ thử refill. Trên kệ, 18% người mua nước giặt đã mua refill ít nhất một lần. Trong số người nói sẽ thử, khoảng bao nhiêu phần trăm thật sự làm theo (tỉ lệ quy đổi)?',
+  { type:'calc', stem:'Khảo sát: 68% người nói sẽ thử refill. Trên kệ, 18% người mua nước giặt đã mua refill ít nhất một lần. Tỉ số thô hành vi ÷ lời nói (18 ÷ 68) là khoảng bao nhiêu phần trăm? (Tỉ số này chỉ gợi ý mức chênh nói–làm giữa hai nhóm, không phải quy đổi của từng người.)',
     unit:'%', ans:26.5, tol:0.6, wrong:[[50,'NHAM_DIEM_PHAN_TRAM'],[378,'SAI_MAU_SO']], errors:['SAI_MAU_SO'],
-    steps:['Cả hai tỉ lệ cùng đơn vị (người mua) nên chia được: tỉ lệ quy đổi = hành vi ÷ lời nói.','18 ÷ 68 ≈ 0,265 = <b>khoảng 26,5%</b>. Hiệu 68 − 18 = 50 điểm % chỉ cho biết chênh, không cho biết bao nhiêu lời nói thành việc làm.'] },
+    steps:['Hai tỉ lệ đến từ hai nhóm khác nhau, nên đây là tỉ số thô gợi ý mức chênh, không phải quy đổi của từng người: tỉ số = hành vi ÷ lời nói.','18 ÷ 68 ≈ 0,265 = <b>khoảng 26,5%</b>. Hiệu 68 − 18 = 50 điểm % chỉ cho biết chênh, không cho biết bao nhiêu lời nói thành việc làm.'] },
   { type:'mcq', stem:'Khảo sát làm tốt nhất việc nào trong quá trình thử?',
     options:[{k:'a',t:'Dự báo chính xác số lượng sản phẩm sẽ bán ra trong năm đầu'},{k:'b',t:'Hiểu lý do và loại bớt ý tưởng yếu trước khi thử tốn kém'},
              {k:'c',t:'Chứng minh với sếp rằng ý tưởng sẽ bán chạy ngoài kệ'},{k:'d',t:'Thay cho bán thử ở cửa hàng để đỡ tốn chi phí'}],
@@ -463,7 +463,7 @@ BAI_ADD({ mod:'tn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tn01-09', skill:'comm', read:'6 phút', t:'Thử xong rồi — ghi lại thế nào để không ai thử lại đúng thứ đó?',
+{ id:'B:tn01-09', skill:'comm', read:'6 phút', assume:true, t:'Thử xong rồi — ghi lại thế nào để không ai thử lại đúng thứ đó?',
   situation:'Một công ty bánh kẹo phát hiện: năm nay phòng marketing thử "tặng thẻ cào khi mua 3 gói" — y hệt một bản thử hai năm trước đã thất bại. Người cũ đã nghỉ, kết quả nằm trong email ai đó. Mất thêm 60 triệu.',
   concept:{ name:'Nhật ký thử nghiệm (test log)',
     body:'Mỗi bản thử ghi một dòng theo mẫu cố định: <b>giả thuyết, bối cảnh (tệp, mùa, giá), cách thử, thời gian, ngân sách, tiêu chí đặt trước, kết quả, quyết định</b>. Lưu một chỗ ai cũng tìm được, gắn nhãn theo sản phẩm và kênh; ghi cả bản thất bại lẫn bản dừng giữa chừng. Thêm một mục <b>điều kiện thử lại</b>: bản đã thất bại chỉ được thử lại khi bối cảnh đã đổi (giá, tệp, đối thủ, kênh) và người đề xuất ghi rõ điều gì đã khác. Nhật ký không cấm thử lại, nó buộc mọi lần thử lại phải có lý do.' },
@@ -520,7 +520,7 @@ BAI_ADD({ mod:'tn01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:tn01-10', skill:'comm', read:'6 phút', t:'Làm sao để đội dám thử — và dám dừng?',
+{ id:'B:tn01-10', skill:'comm', read:'6 phút', assume:true, t:'Làm sao để đội dám thử — và dám dừng?',
   situation:'Trong một năm, phòng marketing của một chuỗi siêu thị mini chạy 12 bản thử và báo cáo cả 12 đều "thành công". Nhân viên kể: người đề xuất bản thử thất bại năm ngoái bị nhắc nhở trong cuộc họp. Từ đó ai cũng chỉ đề xuất điều chắc thắng.',
   concept:{ name:'Văn hoá dám thử, dám dừng',
     body:'Nếu thất bại bị phạt, người ta chỉ thử điều an toàn và <b>không học được gì mới</b>. Hãy chấm bản thử theo <b>chất lượng quy trình</b>, không theo thắng/thua, bằng 5 mục, mỗi mục 1 điểm: (1) câu hỏi viết được trong một câu; (2) ngưỡng thắng/dừng đặt trước; (3) chi phí tối đa đặt trước; (4) ghi chép đủ; (5) quyết định đúng ngưỡng đã đặt. Bản thắng mà thiếu ngưỡng chỉ là "thắng chưa kiểm chứng"; bản thua đủ 5 mục là thành công về học hỏi. Người quản lý nên kể công khai thất bại của chính mình để làm mẫu.' },

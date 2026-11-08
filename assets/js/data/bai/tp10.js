@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'tp10', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tp10-01', skill:'comm', read:'6 phút', t:'Người chưa biết mình có vấn đề thì cần nghe gì?',
+{ id:'B:tp10-01', skill:'comm', read:'6 phút', assume:true, t:'Người chưa biết mình có vấn đề thì cần nghe gì?',
   situation:'Một hãng máy lọc không khí nhỏ ở Hà Nội chạy video 15 giây: "Màng lọc HEPA H13, lọc 99,95% bụi mịn, giá 3,9 triệu". Sau 200.000 lượt xem, chỉ vài chục người bấm vào. Khảo sát nhanh 50 người xem cho thấy 38 người nghĩ nhà mình "không bụi lắm" và chưa từng nghĩ tới chuyện lọc không khí trong phòng ngủ.',
   concept:{ name:'Đầu phễu: gọi tên vấn đề trước khi bán giải pháp',
     body:'Người ở đầu phễu chưa thấy mình có vấn đề, nên thông số sản phẩm với họ là tiếng ồn. Việc của thông điệp đầu phễu là làm họ <b>nhận ra một điều đang xảy ra với chính mình</b>: một dấu hiệu họ đã thấy nhưng chưa gọi tên. Khi vấn đề được gọi tên, họ tự bước sang câu hỏi "có cách nào không" — lúc đó mới là chỗ của thông số và giá. Nói giá quá sớm với người chưa có nhu cầu giống như chào hàng cho người không hỏi. Module này dùng phễu (biết → cân nhắc → mua) như một cách đơn giản hoá. Đây là một quan điểm; quan điểm khác (McKinsey với hành trình quyết định của khách, Byron Sharp với Ehrenberg-Bass) khác ở chỗ cho rằng khách nhảy bước, quay vòng, và một quảng cáo có thể tác động cùng lúc nhiều bước.' },
@@ -60,11 +60,12 @@ BAI_ADD({ mod:'tp10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tp10-02', skill:'comm', read:'7 phút', t:'Người đang so sánh ba lựa chọn cần nghe gì?',
+{ id:'B:tp10-02', skill:'comm', read:'7 phút', assume:true, t:'Người đang so sánh ba lựa chọn cần nghe gì?',
+  src:[{ t:'Luật Quảng cáo 2012 (16/2012/QH13), Điều 8 khoản 10 — cấm so sánh trực tiếp giá, chất lượng, hiệu quả với sản phẩm cùng loại của tổ chức khác; tra cứu bản hợp nhất mới nhất trước khi đăng bảng so sánh', u:'https://thuvienphapluat.vn/page/tim-van-ban.aspx?keyword=Lu%E1%BA%ADt%20Qu%E1%BA%A3ng%20c%C3%A1o%202012', d:'2026-11-07', st:'chua' }],
   situation:'Một thương hiệu nồi chiên không dầu nội địa bán trên Shopee ở mức 1,6 triệu, đứng cạnh hai hãng quen giá 1,9 và 2,3 triệu. Trang sản phẩm viết "Nồi chiên thế hệ mới, nấu ngon, tiện lợi". Trong 1.000 lượt vào trang, 25 người mua. Phần hỏi đáp đầy câu: "Lòng nồi có tráng gì không?", "Nướng được gà nguyên con không?".',
   concept:{ name:'Giữa phễu: trả lời tiêu chí so sánh',
     body:'Người đã biết mình cần và đang so sánh có sẵn một danh sách tiêu chí trong đầu. Thông điệp chung chung như "nấu ngon, tiện lợi" không giúp họ, vì hãng nào cũng nói vậy. Việc của thông điệp giữa phễu là <b>trả lời thẳng tiêu chí họ đang dùng để loại</b>, bằng dữ kiện kiểm được, và chỉ ra chỗ mình khác. Câu hỏi của khách trong phần hỏi đáp, bình luận và tin nhắn chính là danh sách tiêu chí đó.' },
-  example:'Nhóm đọc 120 câu hỏi và thấy ba tiêu chí lặp nhiều nhất: dung tích (đủ gà nguyên con không), lớp chống dính, và dễ rửa. Trang được viết lại: ảnh một con gà 1,5 kg nằm vừa lòng nồi 6 lít, ghi rõ loại lớp chống dính, video 20 giây rửa rổ dưới vòi. Thêm một bảng so với hai hãng kia theo đúng ba tiêu chí này. Với 1.000 lượt vào trang như cũ, số đơn lên 40.',
+  example:'Nhóm đọc 120 câu hỏi và thấy ba tiêu chí lặp nhiều nhất: dung tích (đủ gà nguyên con không), lớp chống dính, và dễ rửa. Trang được viết lại: ảnh một con gà 1,5 kg nằm vừa lòng nồi 6 lít, ghi rõ loại lớp chống dính, video 20 giây rửa rổ dưới vòi. Thêm một bảng ba tiêu chí này của chính mình, đặt cạnh mức thường thấy trên thị trường, không nêu tên hai hãng kia: Luật Quảng cáo 2012 (Điều 8 khoản 10) cấm so sánh trực tiếp giá, chất lượng, hiệu quả với sản phẩm cùng loại của tổ chức khác, cần kiểm bản hợp nhất mới nhất trước khi đăng. Với 1.000 lượt vào trang như cũ, số đơn lên 40. Chênh 15 đơn còn ngang dao động ngẫu nhiên (cỡ ±2√65 ≈ ±16 đơn) và chưa có đối chứng cùng thời gian, nên mới là tín hiệu; chạy thêm 2–3 tuần hoặc A/B rồi hãy tin.',
   takeaway:'Người đang so sánh không cần tính từ đẹp; họ cần câu trả lời cho tiêu chí đang dùng để loại.',
   points:["Người so sánh đang loại dần chứ chưa chọn. Họ tìm lý do để bỏ bớt hai trong ba lựa chọn, nên thông tin nào giúp họ loại hoặc giữ thì mới được đọc kỹ.","Câu hỏi thật của khách là dữ liệu miễn phí và đúng nhất về tiêu chí, vì đến từ người đã cân nhắc bằng tiền thật. Đoán tiêu chí trong phòng họp thì thường lệch.","Dữ kiện kiểm được như ảnh con gà 1,5 kg vừa lòng nồi 6 lít thay được cả đoạn mô tả, vì khách tự nhìn thấy chứ không phải tin lời quảng cáo."],
   counter:"Cùng chiếc nồi chiên giá 1,6 triệu, nhưng người mở trang chưa từng dùng nồi chiên không dầu. Họ chưa có tiêu chí nào, chỉ muốn biết nó là gì và có đáng thử không, nên bảng so sánh ba tiêu chí sẽ làm họ ngợp. Dấu hiệu nhận ra: phần hỏi đáp toàn câu cơ bản như nó hoạt động ra sao, có khác lò nướng không. Khi đó cần giải thích dễ hiểu trước, rồi mới so sánh.",
@@ -88,8 +89,8 @@ BAI_ADD({ mod:'tp10', lessons:[
       d:'Đã rẻ hơn 300.000đ mà vẫn thua; vấn đề là thiếu câu trả lời, không phải giá.'} },
   { type:'calc', stem:'Trước khi viết lại: 1.000 lượt vào trang, 25 đơn. Sau khi viết lại: 1.000 lượt vào trang, 40 đơn. Tỉ lệ chuyển đổi tăng bao nhiêu điểm phần trăm?',
     unit:'điểm %', ans:1.5, tol:0.05, wrong:[[60,'NHAM_DIEM_PHAN_TRAM'],[15,'SAI_TINH_TOAN']], errors:['NHAM_DIEM_PHAN_TRAM','SAI_TINH_TOAN'],
-    steps:['Trước: 25 ÷ 1.000 = 2,5%. Sau: 40 ÷ 1.000 = 4%.','Chênh lệch = 4% − 2,5% = <b>1,5 điểm phần trăm</b> (tăng tương đối 60%, là con số khác).'] },
-  { type:'mcq', stem:'Bảng so sánh với đối thủ nên dựa trên tiêu chí nào?',
+    steps:['Trước: 25 ÷ 1.000 = 2,5%. Sau: 40 ÷ 1.000 = 4%.','Chênh lệch = 4% − 2,5% = <b>1,5 điểm phần trăm</b> (tăng tương đối 60%, là con số khác).','Độ chắc: chênh 15 đơn còn trong dao động ngẫu nhiên (≈ ±16 đơn), nên 1,5 điểm mới là tín hiệu; cần thêm vài tuần hoặc A/B.'] },
+  { type:'mcq', stem:'Bảng so sánh (với mức thường thấy trên thị trường, không nêu tên hãng) nên dựa trên tiêu chí nào?',
     options:[{k:'a',t:'Những tiêu chí mình thắng đậm nhất, dù khách ít khi hỏi tới'},{k:'b',t:'Tiêu chí khách đang dùng để loại, kể cả chỗ mình chỉ ngang bằng'},
              {k:'c',t:'Càng nhiều tiêu chí càng tốt để bảng trông đầy đủ và chuyên nghiệp'},{k:'d',t:'Chỉ so giá, vì giá là thứ khách nào cũng nhìn đầu tiên'}],
     answer:'b', why:{a:'Thắng ở tiêu chí khách không quan tâm không đổi được quyết định.',
@@ -120,7 +121,7 @@ BAI_ADD({ mod:'tp10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tp10-03', skill:'comm', read:'6 phút', t:'Người sắp mua còn chần chừ vì nỗi lo gì?',
+{ id:'B:tp10-03', skill:'comm', read:'6 phút', assume:true, t:'Người sắp mua còn chần chừ vì nỗi lo gì?',
   situation:'Một thương hiệu nệm cao su bán online giá 8 triệu. Trang có đủ thông số, đánh giá tốt, và 300 người đã bấm "thêm vào giỏ" trong tháng. Nhưng chỉ 45 người thanh toán. Tin nhắn hỏi trước khi mua xoay quanh: "Nằm không hợp thì sao?", "Giao tận nhà có mang lên tầng không?", "Nệm cuộn có phồng đủ không?".',
   concept:{ name:'Cuối phễu: gỡ rủi ro cảm nhận',
     body:'Người sắp mua đã chọn xong sản phẩm. Thứ còn giữ họ lại là <b>rủi ro cảm nhận</b>: sợ mất tiền, sợ không hợp, sợ phiền. Thông điệp cuối phễu không cần kể thêm ưu điểm; nó cần gỡ đúng nỗi lo cụ thể bằng một cam kết rõ ràng — đổi trả, dùng thử, giao lắp, thanh toán khi nhận. Nỗi lo càng đắt (hàng giá trị cao, khó trả lại) thì cam kết càng phải nằm sát nút mua.' },
@@ -180,7 +181,7 @@ BAI_ADD({ mod:'tp10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tp10-04', skill:'comm', read:'6 phút', t:'Khách đã mua một lần cần nghe gì để quay lại?',
+{ id:'B:tp10-04', skill:'comm', read:'6 phút', assume:true, t:'Khách đã mua một lần cần nghe gì để quay lại?',
   situation:'Một thương hiệu cà phê hạt rang xay bán qua website có 2.000 khách đã mua lần đầu trong quý. Sau đó họ chỉ nhận đúng một kiểu tin: quảng cáo "Giảm 15% cho khách mới" giống hệt người lạ. Chỉ 360 người mua lại trong 60 ngày. Một gói 500 g thường uống hết trong khoảng 3 tuần.',
   concept:{ name:'Sau mua: giúp dùng tốt, nhắc đúng lúc',
     body:'Khách đã mua không cần được thuyết phục lại từ đầu. Họ cần hai thứ: <b>dùng sản phẩm cho thành công</b> (pha đúng, bảo quản đúng, thấy được giá trị) và <b>được nhắc đúng lúc sắp hết</b>. Thông điệp sau mua nói như người đã quen: hỏi dùng thế nào, gợi cách dùng hay hơn, nhắc khi đến chu kỳ. Đối xử với khách cũ như người lạ vừa phí tiền vừa làm họ thấy mình không được nhớ.' },
@@ -240,7 +241,7 @@ BAI_ADD({ mod:'tp10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tp10-05', skill:'comm', read:'6 phút', t:'Quảng cáo nhắc lại cho người đã xem thì nên nói gì?',
+{ id:'B:tp10-05', skill:'comm', read:'6 phút', assume:true, t:'Quảng cáo nhắc lại cho người đã xem thì nên nói gì?',
   situation:'Một thương hiệu giày chạy bộ chạy retargeting cho 40.000 người đã xem trang sản phẩm. Họ dùng lại đúng video giới thiệu ban đầu. Sau hai tuần, mỗi người thấy trung bình 9 lần. Tỉ lệ bấm giảm từ 1,2% còn 0,3%, và bình luận xuất hiện câu "thấy hoài, phiền quá".',
   concept:{ name:'Retargeting: bước tiếp theo, không phải lặp lại',
     body:'Người đã xem trang đã nghe lời giới thiệu. Nói lại y hệt không cho họ thông tin mới, chỉ tăng cảm giác bị đeo bám. Retargeting hiệu quả khi <b>trả lời câu họ còn thắc mắc sau lần xem đầu</b>: đánh giá của người chạy thật, bảng size, chính sách đổi size, hoặc nhắc món họ đã xem kèm lý do mua ngay. Mỗi lần nhắc nên mang một ý mới, và cần giới hạn tần suất để không phản tác dụng.' },
@@ -300,7 +301,7 @@ BAI_ADD({ mod:'tp10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tp10-06', skill:'comm', read:'6 phút', t:'Quảng cáo hứa một đằng, trang đích nói một nẻo thì sao?',
+{ id:'B:tp10-06', skill:'comm', read:'6 phút', assume:true, t:'Quảng cáo hứa một đằng, trang đích nói một nẻo thì sao?',
   situation:'Một chuỗi phòng tập ở TP.HCM chạy quảng cáo "Tập thử 7 ngày miễn phí". Người bấm vào được đưa về trang chủ với bảng giá gói 12 tháng, ảnh huấn luyện viên và lịch lớp, còn ô đăng ký tập thử nằm cuối trang. Trong 5.000 lượt bấm, chỉ 100 người đăng ký. Nhiều người thoát chỉ sau vài giây.',
   concept:{ name:'Khớp thông điệp quảng cáo và trang đích',
     body:'Người bấm quảng cáo mang theo một lời hứa trong đầu. Nếu trang đích không <b>nói lại đúng lời hứa đó ngay màn hình đầu</b>, họ nghĩ mình vào nhầm và thoát. Trang đích tốt lặp lại tiêu đề quảng cáo, cùng hình ảnh, và đặt đúng hành động đã hứa ở chỗ dễ thấy nhất. Mỗi quảng cáo với lời hứa khác nhau nên dẫn về phiên bản trang tương ứng, không đổ chung về trang chủ.' },
@@ -360,7 +361,7 @@ BAI_ADD({ mod:'tp10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tp10-07', skill:'comm', read:'7 phút', t:'Vì sao một câu cho mọi bước phễu lại nói không trúng ai?',
+{ id:'B:tp10-07', skill:'comm', read:'7 phút', assume:true, t:'Vì sao một câu cho mọi bước phễu lại nói không trúng ai?',
   situation:'Một thương hiệu sữa hạt dùng đúng một câu cho mọi kênh: "Sữa hạt nguyên chất, tốt cho sức khoẻ, mua ngay giảm 20%". Câu này xuất hiện ở video TikTok, quảng cáo nhắc lại, trang sàn và tin nhắn cho khách cũ. Sau ba tháng, ngân sách 300 triệu nhưng doanh số gần như đứng yên, còn khách cũ phàn nàn "tháng nào cũng giảm".',
   concept:{ name:'Bản đồ thông điệp theo bước phễu',
     body:'Mỗi bước phễu có một câu hỏi khác trong đầu khách: <b>đầu phễu</b> — "chuyện này có liên quan tới tôi không?"; <b>giữa phễu</b> — "cái này có hơn cái khác không?"; <b>cuối phễu</b> — "mua bây giờ có rủi ro gì?"; <b>sau mua</b> — "dùng thế nào, khi nào mua lại?". Một câu cố trả lời cả bốn thì nói nửa vời ở từng bước. Bản đồ thông điệp là bảng bốn dòng: bước, câu hỏi của khách, thông điệp, kênh.' },
@@ -391,11 +392,11 @@ BAI_ADD({ mod:'tp10', lessons:[
     steps:['Phần tăng = 250 × 18% = 45 triệu.','Doanh số mới = 250 + 45 = <b>295 triệu đồng</b>.'] },
   { type:'mcq', stem:'Trong bản đồ, giảm giá 20% nên đặt ở bước nào?',
     options:[{k:'a',t:'Cuối phễu, cho người đã chọn xong và chỉ còn chần chừ'},{k:'b',t:'Đầu phễu, để thu hút sự chú ý của người chưa biết thương hiệu'},
-             {k:'c',t:'Sau mua, gửi mỗi tháng cho khách cũ để giữ chân họ lâu dài'},{k:'d',t:'Ở đầu phễu, để kéo thật nhiều người mới biết đến'}],
+             {k:'c',t:'Sau mua, gửi mỗi tháng cho khách cũ để giữ chân họ lâu dài'},{k:'d',t:'Giữa phễu, để thắng khi khách đang so với hãng khác'}],
     answer:'a', why:{a:'Đúng. Ưu đãi là cú đẩy cho người đã sẵn sàng; ở chỗ khác nó phí và làm mòn giá.',
       b:'Người chưa thấy vấn đề không bị kéo bởi giảm giá cho thứ họ chưa cần.',
       c:'Giảm hằng tháng dạy khách chờ giá — chính là lời phàn nàn hiện tại.',
-      d:'Đầu phễu cần lý do để chú ý, chưa cần ưu đãi; giảm giá hợp với người đã chọn xong.'} },
+      d:'Người đang so cần dữ kiện để loại lựa chọn khác; giảm giá lúc này dạy họ so bằng giá và làm mòn giá trị cảm nhận.'} },
   { type:'mcq', stem:'Tình huống mới: một hãng máy lọc nước dùng câu "Nước sạch chuẩn RO, trả góp 0%" cho mọi kênh. Câu nào hợp cho bước sau mua?',
     options:[{k:'a',t:'"Trả góp 0%, sở hữu ngay máy lọc nước chuẩn RO"'},{k:'b',t:'"Đã 6 tháng — đến hạn thay lõi lọc, đặt lịch kỹ thuật viên"'},
              {k:'c',t:'"Nước máy nhà bạn có mùi clo vào buổi sáng? Kiểm tra ngay trong 30 giây"'},{k:'d',t:'"So sánh 5 dòng máy lọc nước bán chạy nhất năm nay"'}],
@@ -420,10 +421,11 @@ BAI_ADD({ mod:'tp10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tp10-08', skill:'comm', read:'6 phút', t:'Email chào mừng đầu tiên nên nói điều gì?',
+{ id:'B:tp10-08', skill:'comm', read:'6 phút', assume:true, t:'Email chào mừng đầu tiên nên nói điều gì?',
+  src:[{ t:'Apple Newsroom (6/2021) — iOS 15: Mail Privacy Protection ẩn IP và tải sẵn nội dung thư, làm méo tỉ lệ mở', u:'https://www.apple.com/newsroom/2021/06/apple-advances-its-privacy-leadership-with-ios-15-ipados-15-macos-monterey-and-watchos-8/', d:'2026-11-07', st:'chua' }],
   situation:'Một thương hiệu mỹ phẩm thuần chay nhận khoảng 3.000 người đăng ký nhận tin mỗi tháng nhờ mã giảm 10%. Email chào mừng hiện tại dài, kể lịch sử công ty, giới thiệu 40 sản phẩm và đặt mã giảm ở cuối. Tỉ lệ mở 45%, nhưng chỉ 90 người mua trong 7 ngày đầu.',
   concept:{ name:'Email chào mừng: giữ lời hứa, chỉ một bước tiếp',
-    body:'Người vừa đăng ký đang chú ý nhất, nhưng đừng đo bằng tỉ lệ mở: từ 2021, Apple Mail Privacy Protection tải sẵn email nên số mở bị thổi phồng; hãy xem lượt bấm và mua. Họ đăng ký vì một lời hứa (mã giảm, bài hướng dẫn…), nên email đầu phải <b>trao đúng thứ đã hứa ngay đầu thư</b>, rồi dẫn tới <b>một bước tiếp theo duy nhất</b> hợp với họ. Kể lịch sử hãng hay trưng 40 sản phẩm là đổ việc chọn cho người chưa biết mình cần gì. Ai không bấm gì thì email ngày thứ 3 nhắc mã sắp hết hạn kèm một món bán chạy, thay vì gửi lại thư đầu.' },
+    body:'Người vừa đăng ký đang chú ý nhất, nhưng đừng đo bằng tỉ lệ mở: từ 2021 (iOS 15), Apple Mail Privacy Protection tải sẵn email nên số mở bị thổi phồng (theo thông báo của Apple, kiểm ngày 07/11/2026; nếu khác, tin trang chính thức); tỉ lệ mở còn bị méo bởi các bộ lọc và máy quét thư khác, nên hãy xem lượt bấm và mua. Họ đăng ký vì một lời hứa (mã giảm, bài hướng dẫn…), nên email đầu phải <b>trao đúng thứ đã hứa ngay đầu thư</b>, rồi dẫn tới <b>một bước tiếp theo duy nhất</b> hợp với họ. Kể lịch sử hãng hay trưng 40 sản phẩm là đổ việc chọn cho người chưa biết mình cần gì. Ai không bấm gì thì email ngày thứ 3 nhắc mã sắp hết hạn kèm một món bán chạy, thay vì gửi lại thư đầu.' },
   example:'Email mới: dòng tiêu đề "Mã 10% của bạn đây", mã nằm ngay đầu thư. Tiếp theo một câu hỏi "Da bạn đang lo điều gì nhất?" với ba nút: dầu mụn, khô, xỉn màu. Mỗi nút dẫn tới bộ ba sản phẩm hợp loại da. Lịch sử hãng dời sang email ngày thứ 4. Tỉ lệ mở gần như cũ, nhưng số mua trong 7 ngày lên 210.',
   takeaway:'Email chào mừng trao ngay thứ đã hứa, rồi chỉ một bước tiếp theo hợp với người vừa tới.',
   points:["Người vừa đăng ký còn ký ức mới và kỳ vọng rõ về thứ được hứa. Đưa mã ngay đầu thư xác nhận họ đã đúng khi đăng ký, tạo thiện cảm.","Một câu hỏi kèm ba nút biến email thành tín hiệu: khách tự khai loại da, và hãng biết nên gửi gì tiếp thay vì đoán.","Chia nội dung theo ngày giữ mỗi email một việc. Lịch sử hãng đặt ở ngày thứ 4 sẽ được người đã hứng thú đọc, không cản người đang tìm mã."],
@@ -480,11 +482,12 @@ BAI_ADD({ mod:'tp10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tp10-09', skill:'comm', read:'6 phút', t:'Khách bỏ giỏ hàng thì nên nhắn gì?',
+{ id:'B:tp10-09', skill:'comm', read:'6 phút', assume:true, t:'Khách bỏ giỏ hàng thì nên nhắn gì?',
+  src:[{ t:'Nghị định 91/2020/NĐ-CP về chống tin nhắn rác, thư điện tử rác, cuộc gọi rác — điều kiện gửi thư quảng cáo, tên định danh, Danh sách không quảng cáo; tra cứu toàn văn và bản sửa đổi', u:'https://thuvienphapluat.vn/page/tim-van-ban.aspx?keyword=91%2F2020%2FN%C4%90-CP', d:'2026-11-07', st:'chua' }],
   situation:'Một shop thời trang nữ trên website có 1.200 giỏ hàng bị bỏ mỗi tháng. Họ gửi một email duy nhất sau 3 ngày: "Bạn quên gì đó! Giảm 20% nếu hoàn tất đơn". Có 60 người quay lại mua, nhưng nhiều khách quen bắt đầu cố tình bỏ giỏ để chờ mã. Lý do bỏ giỏ họ hỏi được: phí ship hiện ra ở bước cuối, lo không vừa size, và đơn giản là bị gián đoạn.',
   concept:{ name:'Nhắc bỏ giỏ theo lý do bỏ',
     body:'Bỏ giỏ không phải một lý do mà là vài lý do: <b>bị gián đoạn</b> (cần nhắc sớm, chỉ cần đưa lại giỏ), <b>bất ngờ về chi phí</b> (cần nói rõ phí ship hoặc ngưỡng miễn phí), <b>lo rủi ro</b> (cần cam kết đổi size, đổi trả). Chuỗi nhắc tốt đi từ nhẹ tới mạnh: tin đầu vài giờ sau chỉ đưa lại giỏ, tin sau gỡ nỗi lo, và ưu đãi chỉ dùng cuối cùng nếu cần. Giảm giá ngay từ tin đầu dạy khách bỏ giỏ để được giảm.' },
-  example:'Chuỗi mới: sau 2 giờ — "Giỏ của bạn vẫn đây" kèm ảnh món đồ; sau 24 giờ — bảng size theo số đo và "đổi size miễn phí 15 ngày", nhắc đơn từ 500.000đ miễn ship; sau 72 giờ — mã giảm 10% chỉ cho người chưa quay lại và chưa từng nhận mã bỏ giỏ trong 3 tháng. Số người quay lại mua lên 150, trong đó chỉ 40 người dùng mã. Lưu ý: đây là so trước – sau, chưa có nhóm đối chứng; một phần khách vẫn tự quay lại dù không được nhắc. Muốn biết chuỗi nhắc mang thêm bao nhiêu đơn, giữ khoảng 10% giỏ không nhận tin làm nhóm đối chứng. Chỉ nhắc khách đã để lại email và đồng ý nhận tin, kèm nút từ chối (Nghị định 91/2020/NĐ-CP).',
+  example:'Chuỗi mới: sau 2 giờ — "Giỏ của bạn vẫn đây" kèm ảnh món đồ; sau 24 giờ — bảng size theo số đo và "đổi size miễn phí 15 ngày", nhắc đơn từ 500.000đ miễn ship; sau 72 giờ — mã giảm 10% chỉ cho người chưa quay lại và chưa từng nhận mã bỏ giỏ trong 3 tháng. Số người quay lại mua lên 150, trong đó chỉ 40 người dùng mã. Lưu ý: đây là so trước – sau, chưa có nhóm đối chứng; một phần khách vẫn tự quay lại dù không được nhắc. Muốn biết chuỗi nhắc mang thêm bao nhiêu đơn, giữ khoảng 10% giỏ không nhận tin làm nhóm đối chứng. Chỉ nhắc khách đã để lại email và đồng ý nhận tin, kèm nút từ chối (Nghị định 91/2020/NĐ-CP, kiểm 07/11/2026). Qua SMS cần tên định danh đã đăng ký và tránh số trong Danh sách không quảng cáo; Zalo theo quy định của nền tảng.',
   takeaway:'Nhắc bỏ giỏ theo lý do bỏ: đưa lại giỏ trước, gỡ lo sau, giảm giá là lá bài cuối.',
   apply:'Liệt kê ba lý do khách bỏ giỏ ở một cửa hàng bạn biết, rồi viết một câu nhắc cho mỗi lý do.',
   mistakes:['Tặng mã giảm giá ngay ở tin nhắc đầu tiên.','Chờ vài ngày mới nhắc, khi khách đã mua chỗ khác.'],
@@ -537,10 +540,11 @@ BAI_ADD({ mod:'tp10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:tp10-10', skill:'comm', read:'7 phút', t:'Chia ngân sách thông điệp đầu phễu và cuối phễu thế nào?',
+{ id:'B:tp10-10', skill:'comm', read:'7 phút', assume:true, t:'Chia ngân sách thông điệp đầu phễu và cuối phễu thế nào?',
+  src:[{ t:'IPA — Les Binet & Peter Field, The Long and the Short of It (2013) và Media in Focus (2017): nguồn của tỉ lệ 60/40; cần gắn link trang xuất bản cụ thể', u:'https://ipa.co.uk/', d:'2026-11-07', st:'chua' }],
   situation:'Một thương hiệu trà thảo mộc đóng chai dồn 90% ngân sách 200 triệu/tháng vào quảng cáo cuối phễu: retargeting, từ khoá tìm kiếm tên hãng, mã giảm giá. ROAS báo cáo rất đẹp. Nhưng sau sáu tháng, tệp retargeting co từ 80.000 xuống 30.000 người, chi phí mỗi đơn tăng dần, và lượt tìm kiếm tên hãng đi ngang.',
   concept:{ name:'Cân đối đầu phễu và cuối phễu',
-    body:'Thông điệp cuối phễu chốt đơn từ những người đã quan tâm — nó trông hiệu quả vì hái quả chín. Nhưng nó <b>không tạo thêm người quan tâm</b>. Thông điệp đầu phễu tạo ra những người đó, chậm hơn và khó đo hơn. Dồn hết vào cuối phễu thì tệp người quan tâm cạn dần, chi phí mỗi đơn tăng. Cách làm thường gặp là chia một phần đáng kể cho đầu phễu, rồi theo dõi quy mô tệp quan tâm và lượt tìm tên hãng như tín hiệu sớm. Nghiên cứu của Les Binet & Peter Field (IPA) gợi ý mức trung bình khoảng 60% xây thương hiệu, 40% kích hoạt; đó là trung bình nhiều ngành, không phải công thức.' },
+    body:'Thông điệp cuối phễu chốt đơn từ những người đã quan tâm — nó trông hiệu quả vì hái quả chín. Nhưng nó <b>không tạo thêm người quan tâm</b>. Thông điệp đầu phễu tạo ra những người đó, chậm hơn và khó đo hơn. Dồn hết vào cuối phễu thì tệp người quan tâm cạn dần, chi phí mỗi đơn tăng. Cách làm thường gặp là chia một phần đáng kể cho đầu phễu, rồi theo dõi quy mô tệp quan tâm và lượt tìm tên hãng như tín hiệu sớm. Nghiên cứu của Les Binet & Peter Field cho IPA (The Long and the Short of It, 2013; Media in Focus, 2017) gợi ý mức trung bình khoảng 60% xây thương hiệu, 40% kích hoạt trên ngân sách truyền thông tổng; đó là trung bình nhiều ngành, không phải công thức: tỉ lệ dao động theo ngành và giai đoạn, thương hiệu mới thường nghiêng về xây thương hiệu hơn (kiểm 07/11/2026, đối chiếu tài liệu gốc).' },
   example:'Hãng chuyển từ 90% cuối phễu sang 60% cuối phễu, 40% đầu phễu: 80 triệu cho video đầu phễu gọi tên vấn đề "chiều nào cũng thèm nước ngọt", 120 triệu cho cuối phễu. Tháng đầu doanh số gần như không đổi, ROAS báo cáo giảm nhẹ. Đến tháng thứ ba, tệp retargeting tăng lại lên 60.000, lượt tìm tên hãng tăng 35%, chi phí mỗi đơn giảm từ 90.000đ xuống 70.000đ.',
   takeaway:'Cuối phễu hái quả, đầu phễu trồng cây; chỉ hái mà không trồng thì vườn cạn dần.',
   apply:'Xem ngân sách một chiến dịch bạn biết, tách phần nói với người chưa biết hãng và phần nói với người đã quan tâm, rồi ghi tỉ lệ.',

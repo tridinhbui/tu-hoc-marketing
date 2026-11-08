@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'tp09', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tp09-01', skill:'creative', read:'6 phút', t:'Kịch bản 60 giây của bạn có phải là một câu chuyện không?',
+{ id:'B:tp09-01', skill:'creative', read:'6 phút', assume:true, t:'Kịch bản 60 giây của bạn có phải là một câu chuyện không?',
   situation:'Một thương hiệu bột giặt ở Bình Dương nhận kịch bản TVC 60 giây từ agency: mở bằng cảnh gia đình cười, rồi cận cảnh bọt giặt, rồi chữ "Sạch thơm, cả nhà vui", kết bằng logo. Sếp đọc xong hỏi: "Chuyện ở đâu?" Agency khẳng định đây là "brand storytelling". Test nhanh với 40 người xem, chỉ 6 người kể lại được clip nói về điều gì.',
   concept:{ name:'Nhân vật – trở ngại – thay đổi',
     body:'Một chuỗi hình đẹp chưa phải câu chuyện. Câu chuyện cần ba thứ: một <b>nhân vật</b> người xem nhận ra, một <b>trở ngại</b> nhân vật thật sự muốn vượt qua, và một <b>sự thay đổi</b> — cuối chuyện có gì đó khác đầu chuyện. Thiếu trở ngại thì không có lý do để xem tiếp; thiếu thay đổi thì không có gì để nhớ. Sản phẩm, nếu xuất hiện, nên là thứ giúp tạo ra sự thay đổi, không phải là nhân vật đứng giữa khung hình.' },
@@ -19,7 +19,7 @@ BAI_ADD({ mod:'tp09', lessons:[
     options:[{k:'a',t:'Clip thiếu một người nổi tiếng đủ sức giữ chân người xem'},{k:'b',t:'Không có trở ngại và thay đổi, nên không có mạch nào để nhớ'},
              {k:'c',t:'Clip 60 giây quá dài với người xem thời nay, nên cắt còn 15 giây sẽ nhớ hơn'},{k:'d',t:'Slogan chưa đủ vần để đọng lại trong đầu người xem'}],
     answer:'b', why:{a:'Người nổi tiếng tăng chú ý nhưng không tự tạo ra mạch chuyện để kể lại.',
-      b:'Đúng. Não người nhớ chuỗi "muốn – bị cản – vượt qua"; thiếu nó thì chỉ còn các cảnh rời rạc.',
+      b:'Đúng. Trong test 40 người của bài, bản có trở ngại được kể lại nhiều hơn hẳn bản chỉ có cảnh đẹp; cách giải thích thường gặp là người xem theo dõi vì tò mò “rồi sao nữa”, thiếu mạch ấy thì chỉ còn các cảnh rời rạc.',
       c:'Cắt ngắn một chuỗi cảnh rời rạc vẫn là chuỗi cảnh rời rạc; độ dài không phải gốc vấn đề.',
       d:'Slogan có vần giúp nhớ câu chữ, nhưng người xem vẫn không biết clip kể chuyện gì.'} },
   { type:'mcq', stem:'Bạn chỉ được sửa một điểm trong kịch bản bột giặt trước khi quay. Bạn sửa gì?',
@@ -63,7 +63,7 @@ BAI_ADD({ mod:'tp09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tp09-02', skill:'creative', read:'6 phút', t:'Ai là nhân vật chính: khách hàng hay thương hiệu?',
+{ id:'B:tp09-02', skill:'creative', read:'6 phút', assume:true, t:'Ai là nhân vật chính: khách hàng hay thương hiệu?',
   situation:'Một chuỗi trung tâm tiếng Anh ở Hà Nội làm series video "Hành trình 10 năm của chúng tôi": phòng học mới, giáo viên bản ngữ, giải thưởng. Ba tập đầu đạt trung bình 1.200 lượt xem mỗi tập. Một tập thử nghiệm kể về chị bán xôi 42 tuổi học giao tiếp để bán cho khách du lịch phố cổ đạt 18.000 lượt xem, và 140 tin nhắn hỏi khoá học.',
   concept:{ name:'Khách là người hùng, thương hiệu là người dẫn đường',
     body:'Trong phần lớn câu chuyện hay, người xem đứng về phía <b>người hùng</b> — người đang gặp trở ngại. Nếu thương hiệu tự nhận vai người hùng, khách chỉ còn vai khán giả vỗ tay. Vai hợp hơn cho thương hiệu là <b>người dẫn đường</b>: hiểu nỗi khó của người hùng, đưa ra một kế hoạch hoặc công cụ, rồi lùi lại để người hùng tự chiến thắng. Người xem thấy mình trong người hùng, và thấy thương hiệu là người có thể giúp mình.' },
@@ -71,15 +71,15 @@ BAI_ADD({ mod:'tp09', lessons:[
   takeaway:'Để khách làm người hùng; thương hiệu là người đưa tấm bản đồ, không phải người nhận huy chương.',
   points:["Người xem so mình với nhân vật trước khi so với sản phẩm. Khi nhân vật cùng cảnh ngộ, sự quan tâm được kéo sang thương hiệu mà không cần tuyên bố nào.","Vai người dẫn đường buộc thương hiệu nói bằng hành động cụ thể như lớp buổi tối hay 20 câu dùng ngay. Tự khen thì dễ, còn kế hoạch rõ thì cần sản phẩm thật.","Người hùng thắng bằng sức mình mới tạo được cảm giác tôi cũng làm được. Nếu thương hiệu làm hộ, khán giả thấy hay nhưng không thấy chỗ nào cho bản thân."],
   counter:"Cùng trung tâm tiếng Anh này, nhưng đang cần tuyển giáo viên hoặc cần phụ huynh tin đội ngũ trước khi gửi con, thì kể về chính giáo viên lại đúng chỗ. Dấu hiệu nhận ra: câu hỏi xoay quanh ai dạy và dạy thế nào, không phải tôi sẽ làm được gì. Khi đó thương hiệu được đứng trước khung hình, miễn là kể bằng việc làm cụ thể và gắn với kết quả của học viên.",
-  deeper:"Người làm nghề thấy rõ đánh đổi: tập về khách thu hút người lạ, còn tập về thương hiệu giúp người đã quan tâm kiểm chứng. Bỏ hẳn loại sau thì khách dễ nghi, giữ toàn loại sau như ba tập đầu thì ít ai xem. Tín hiệu cần theo dõi là tỉ lệ tin nhắn trên lượt xem, như 140 trên 18.000 trong bài, chứ không chỉ lượt xem. Khái niệm kề cận là chuyện người sáng lập, nơi thương hiệu cũng phải trả lời nỗi lo của khách. Trong tuần này, viết lại một tập cũ bằng câu mở có chủ ngữ là khách, rồi nhờ ba người thật cho biết họ có thấy mình trong đó không.",
+  deeper:"Người làm nghề thấy rõ đánh đổi: tập về khách thu hút người lạ, còn tập về thương hiệu giúp người đã quan tâm kiểm chứng. Bỏ hẳn loại sau thì khách dễ nghi, giữ toàn loại sau như ba tập đầu thì ít ai xem. Tín hiệu cần theo dõi là tỉ lệ tin nhắn trên lượt xem, như 140 trên 18.000 trong bài, chứ không chỉ lượt xem. Một tập chưa đủ để kết luận: chủ đề, giờ đăng, cách phân phối đều có thể góp phần, nên hãy làm 2–3 tập cùng cấu trúc với học viên khác rồi so. Khái niệm kề cận là chuyện người sáng lập, nơi thương hiệu cũng phải trả lời nỗi lo của khách. Trong tuần này, viết lại một tập cũ bằng câu mở có chủ ngữ là khách, rồi nhờ ba người thật cho biết họ có thấy mình trong đó không.",
   apply:'Viết lại câu mở đầu trang "Về chúng tôi" của một thương hiệu bạn biết sao cho chủ ngữ là khách hàng, không phải công ty.',
   mistakes:['Kể thành tích công ty rồi gọi đó là câu chuyện thương hiệu.','Để thương hiệu "giải cứu" quá nhiều, người hùng thành bị động.'],
   q:[
-  { type:'mcq', stem:'Vì sao tập "chị bán xôi" có lượt xem gấp 15 lần các tập "hành trình 10 năm"?',
+  { type:'mcq', stem:'Tập "chị bán xôi" có lượt xem gấp 15 lần các tập "hành trình 10 năm". Theo cơ chế của bài, giả thuyết khả dĩ nhất là gì?',
     options:[{k:'a',t:'Người xem thấy mình trong một người hùng đang gặp trở ngại thật'},{k:'b',t:'Chủ đề ẩm thực đường phố hút view hơn chủ đề giáo dục trên mạng'},
              {k:'c',t:'Tập đó được chạy quảng cáo nhiều tiền hơn'},{k:'d',t:'Người xem thích thấy người lớn tuổi đi học'}],
     answer:'a', why:{a:'Đúng. Người xem đứng về phía người có trở ngại; thành tích của công ty không cho họ ai để đứng cùng.',
-      b:'Chủ đề có thể góp phần, nhưng lượng tin nhắn hỏi khoá học cho thấy người xem gắn với nhu cầu học, không chỉ với xôi.',
+      b:'Chủ đề có thể góp phần và một tập chưa loại được yếu tố này; nhưng theo cơ chế của bài, lượng tin nhắn hỏi khoá học cho thấy người xem gắn với nhu cầu học, không chỉ với xôi.',
       c:'Tình huống không nói có ngân sách khác nhau; và tiền quảng cáo không giải thích được 140 tin nhắn.',
       d:'Tuổi là chi tiết, không phải lý do; điều hút người xem là trở ngại và sự thay đổi.'} },
   { type:'mcq', stem:'Series tiếp theo còn ngân sách 6 tập. Bạn làm gì?',
@@ -123,7 +123,7 @@ BAI_ADD({ mod:'tp09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tp09-03', skill:'brand', read:'7 phút', t:'Chuyện người sáng lập: khi nào nên kể, khi nào nên cất?',
+{ id:'B:tp09-03', skill:'brand', read:'7 phút', assume:true, t:'Chuyện người sáng lập: khi nào nên kể, khi nào nên cất?',
   situation:'Một thương hiệu nước mắm ở Phú Quốc do một kỹ sư 34 tuổi bỏ việc ở TP.HCM về làm lại nghề của ông nội. Một thương hiệu khác bán ốp lưng điện thoại do hai bạn trẻ lập ra "vì đam mê công nghệ". Cả hai đều định làm clip "Câu chuyện người sáng lập" với ngân sách như nhau, 80 triệu đồng.',
   concept:{ name:'Chuyện người sáng lập phải trả lời câu hỏi của khách',
     body:'Chuyện người sáng lập có ích khi nó là <b>bằng chứng</b> cho điều khách đang nghi ngờ. Với nước mắm, khách lo "có pha hoá chất không, có đúng truyền thống không" — chuyện người cháu về làm lại nghề ông nội trả lời thẳng nỗi lo đó. Với ốp lưng, khách lo "có bền, có vừa máy, giá có hời" — chuyện "đam mê công nghệ" không trả lời được gì. Kiểm tra bằng một câu: <b>chuyện này giúp khách tin điều gì mà trước đó họ chưa tin?</b> Không trả lời được thì cất đi.' },
@@ -183,8 +183,8 @@ BAI_ADD({ mod:'tp09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tp09-04', skill:'creative', read:'7 phút', t:'Cảm xúc thật hay "lấy nước mắt"?',
-  situation:'Một thương hiệu sữa làm clip Vu Lan: nhạc buồn, mẹ già ngồi một mình, con đi xa không về, chữ hiện lên "Đừng để quá muộn". Clip đạt 2 triệu lượt xem trong ba ngày nhưng bình luận chia hai: một nửa khen "khóc thật", một nửa chê "lại bán sữa bằng nước mắt". Khảo sát sau chiến dịch: chỉ 22% người xem nhớ đúng thương hiệu.',
+{ id:'B:tp09-04', skill:'creative', read:'7 phút', assume:true, t:'Cảm xúc thật hay "lấy nước mắt"?',
+  situation:'Một thương hiệu sữa làm clip Vu Lan: nhạc buồn, mẹ già ngồi một mình, con đi xa không về, chữ hiện lên "Đừng để quá muộn". Clip đạt 2 triệu lượt xem trong ba ngày nhưng bình luận chia hai: một nửa khen "khóc thật", một nửa chê "lại bán sữa bằng nước mắt". Khảo sát sau chiến dịch: chỉ 22% người xem nhớ đúng thương hiệu, trong khi clip Tết năm trước của cùng hãng, kể một bữa cơm gia đình có sữa trên bàn, đạt 41% (số minh hoạ).',
   concept:{ name:'Cảm xúc sinh ra từ sự thật, không từ kỹ xảo',
     body:'Người xem cảm thấy bị "lấy nước mắt" khi cảm xúc được <b>ép</b> bằng nhạc, bằng cảnh bi thảm, bằng câu chữ đạo lý — mà không có một sự thật nhỏ nào họ nhận ra từ đời mình. Cảm xúc thật đến từ một <b>quan sát đúng</b>: một hành động nhỏ, một câu nói quen, một khoảnh khắc ai cũng từng trải. Dấu hiệu nhận biết: bỏ nhạc đi, cảnh đó còn chạm không? Nếu không, cảm xúc đang nằm ở nhạc chứ không nằm ở câu chuyện. Đo bằng cách đưa kịch bản câm, không nhạc, cho 5 người lạ: nếu dưới 3 người nói "giống mẹ mình" ở cùng một cảnh, viết lại. Sản phẩm nên là việc nhân vật làm trong khoảnh khắc đó, không phải vật đặt vào khung hình.' },
   example:'Viết lại: mẹ gọi video cho con, cứ hỏi "ăn cơm chưa" ba lần trong một cuộc gọi, rồi lén chỉnh camera để con không thấy tóc mẹ bạc thêm. Không nhạc buồn, không lời thoại đạo lý. Sữa xuất hiện khi con gửi về thùng sữa kèm mẩu giấy "Mẹ uống cho khoẻ, Tết con về". Người xem nhận ra mẹ mình trong câu hỏi lặp lại — đó là cảm xúc thật.',
@@ -196,7 +196,7 @@ BAI_ADD({ mod:'tp09', lessons:[
     options:[{k:'a',t:'Clip quá ngắn, không đủ thời gian để người xem kịp ghi nhớ tên thương hiệu'},{k:'b',t:'Cảm xúc nằm ở nhạc và bi kịch, không gắn với sản phẩm'},
              {k:'c',t:'Người xem không thích chủ đề Vu Lan'},{k:'d',t:'Logo đặt sai vị trí ở góc màn hình'}],
     answer:'b', why:{a:'Tình huống không cho thấy độ dài là vấn đề.',
-      b:'Đúng. Người xem khóc vì nhạc và cảnh mẹ già, không vì điều gì liên quan đến sữa — nên nhớ cảm xúc, quên thương hiệu.',
+      b:'Đúng. Người xem khóc vì nhạc và cảnh mẹ già, không vì điều gì liên quan đến sữa — nên nhớ cảm xúc, quên thương hiệu; 22% so với 41% của clip Tết năm trước là hụt 19 điểm phần trăm.',
       c:'2 triệu lượt xem cho thấy chủ đề vẫn hút.',
       d:'Vị trí logo có thể ảnh hưởng chút ít, nhưng gốc là cảm xúc không gắn với thương hiệu.'} },
   { type:'mcq', stem:'Sếp muốn làm clip Vu Lan năm sau "khóc hơn nữa". Bạn đề xuất gì?',
@@ -244,7 +244,7 @@ BAI_ADD({ mod:'tp09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tp09-05', skill:'creative', read:'6 phút', t:'Chi tiết nào làm câu chuyện đáng tin?',
+{ id:'B:tp09-05', skill:'creative', read:'6 phút', assume:true, t:'Chi tiết nào làm câu chuyện đáng tin?',
   situation:'Một hãng giày chạy bộ nội địa đăng hai bài kể chuyện khách hàng. Bài A: "Anh Minh đã vượt qua giới hạn bản thân nhờ đôi giày đồng hành." Bài B: "Anh Minh, 38 tuổi, kế toán ở Đà Nẵng, bắt đầu chạy lúc 5 giờ sáng quanh cầu Rồng vì cân nặng 86 kg; sau 7 tháng và khoảng 650 km, anh về đích 21 km đầu tiên." Bài A có 320 lượt tương tác, bài B có 2.400.',
   concept:{ name:'Chi tiết cụ thể là bằng chứng ngầm',
     body:'Tính từ ("vượt qua giới hạn", "đồng hành", "tuyệt vời") thì ai cũng viết được, nên người đọc không tin. <b>Chi tiết cụ thể</b> — tên, tuổi, nghề, giờ, nơi chốn, con số, một đồ vật — là thứ khó bịa, nên chúng làm câu chuyện đáng tin. Chi tiết còn giúp người đọc <b>nhìn thấy</b> cảnh. Nguyên tắc: thay mỗi tính từ bằng một điều có thể chụp ảnh hoặc đếm được. Đừng nhồi: 3–5 chi tiết phục vụ ý chính tốt hơn 15 chi tiết vụn. Cách lấy chi tiết: hỏi khách ba câu — sáng hôm đó bạn làm gì đầu tiên, ai thấy bạn thay đổi, ngày nào bạn nhận ra? Với tên, tuổi, cân nặng của khách, xin phép bằng văn bản và ẩn danh khi cần.' },
@@ -301,7 +301,7 @@ BAI_ADD({ mod:'tp09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tp09-06', skill:'channel', read:'6 phút', t:'Kể một câu chuyện trong 15 giây được không?',
+{ id:'B:tp09-06', skill:'channel', read:'6 phút', assume:true, t:'Kể một câu chuyện trong 15 giây được không?',
   situation:'Một thương hiệu trà sữa có TVC 60 giây kể chuyện hai bạn thân giận nhau rồi làm lành bên ly trà. Kế hoạch mới chạy chủ yếu trên TikTok và YouTube Shorts, với định dạng 15 giây. Bản cắt thô đầu tiên — lấy 15 giây đẹp nhất của TVC — cho tỉ lệ xem hết 12%, trong khi các clip 15 giây khác của chính thương hiệu đạt khoảng 25% (số liệu minh hoạ của bài, không phải chuẩn ngành).',
   concept:{ name:'Nén chuyện: vào thẳng trở ngại, thay đổi bằng một hình',
     body:'15 giây vẫn đủ cho câu chuyện nếu bỏ phần dạo đầu. Cấu trúc nén: <b>giây 0–3</b> vào thẳng trở ngại (người xem phải hiểu ngay có chuyện gì), <b>giây 3–11</b> một hành động dẫn tới thay đổi, <b>giây 11–15</b> một hình ảnh cho thấy thay đổi cùng thương hiệu. Không cắt ngắn clip dài; hãy viết lại cho 15 giây. Cắt thô thường mất đúng phần trở ngại — thứ giữ người xem ở lại. Thương hiệu không nên chờ tới giây cuối: gắn dấu hiệu quen thuộc (màu bao bì, âm thanh) vào cảnh ngay từ giây 0–3, đừng dùng logo nổi chiếm chỗ của trở ngại.' },
@@ -358,7 +358,7 @@ BAI_ADD({ mod:'tp09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tp09-07', skill:'comm', read:'7 phút', t:'Câu chuyện khách hàng thật (UGC) dùng thế nào cho đúng?',
+{ id:'B:tp09-07', skill:'comm', read:'7 phút', assume:true, t:'Câu chuyện khách hàng thật (UGC) dùng thế nào cho đúng?',
   situation:'Một thương hiệu nồi chiên không dầu nhận được khoảng 300 video khách tự quay mỗi tháng. Team muốn dùng lại làm quảng cáo. Hai hướng: (A) thuê biên tập dựng thành một clip "chuyên nghiệp" có nhạc, chữ động, lồng tiếng; (B) chọn 5 video gốc, chỉ thêm phụ đề và logo nhỏ ở cuối. Thử nghiệm hai tuần, cùng ngân sách: A có chi phí mỗi đơn 145.000đ, B là 92.000đ.',
   concept:{ name:'UGC mạnh nhờ nó không trông như quảng cáo',
     body:'Nội dung do khách tự làm (<b>UGC</b>) có sức nặng vì nó là bằng chứng từ người ngoài: góc quay vụng, ánh sáng bếp nhà, giọng nói thật. Khi thương hiệu "làm đẹp" quá mức, UGC mất đúng thứ làm nên giá trị của nó. Cách dùng đúng: <b>chọn</b> video có câu chuyện rõ (trở ngại + thay đổi), <b>xin phép</b> người quay rõ ràng trước khi dùng cho quảng cáo, <b>giữ nguyên</b> giọng và khung hình, chỉ thêm phụ đề cho dễ xem không cần tiếng. Quyền dùng cần có chữ viết (tin nhắn đồng ý), kiểm tra nhạc nền và người, nhất là trẻ em, trong hình; nếu tặng quà thì gắn nhãn quan hệ hợp tác.' },
@@ -415,7 +415,7 @@ BAI_ADD({ mod:'tp09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tp09-08', skill:'creative', read:'7 phút', t:'Quảng cáo Tết kể chuyện gia đình mà không sáo, làm sao?',
+{ id:'B:tp09-08', skill:'creative', read:'7 phút', assume:true, t:'Quảng cáo Tết kể chuyện gia đình mà không sáo, làm sao?',
   situation:'Tháng 11, một hãng bánh kẹo họp brief quảng cáo Tết. Ba ý tưởng đầu tiên team đưa ra: con xa quê về nhà ăn Tết, cả nhà quây quần gói bánh chưng, bố mẹ già chờ con ở cổng. Một bạn trong team nhận xét: "Năm ngoái em xem lại 20 quảng cáo Tết, 7 cái có đúng cảnh bố mẹ chờ ở cổng."',
   concept:{ name:'Tìm sự thật mới bên trong chủ đề cũ',
     body:'Tết đoàn viên là chủ đề không đổi — và không cần đổi. Cái sáo không nằm ở chủ đề mà ở <b>khoảnh khắc</b> được chọn: ai cũng quay cảnh chờ ở cổng, cảnh gói bánh chưng. Cách thoát: tìm một <b>sự thật nhỏ, mới, có thật</b> của Tết hôm nay mà chưa ai quay — những căng thẳng, thói quen, mâu thuẫn dễ thương mà người xem nhận ra ngay. Tìm bằng cách hỏi 10 người: "Tết năm ngoái điều gì làm bạn bực mà vẫn buồn cười?", rồi đếm chi tiết lặp lại. Kiểm tra: nếu thay logo bằng logo đối thủ mà quảng cáo vẫn đúng, ý tưởng chưa đủ riêng.' },
@@ -472,7 +472,7 @@ BAI_ADD({ mod:'tp09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tp09-09', skill:'brand', read:'6 phút', t:'Câu chuyện hay nhưng không ai nhớ sản phẩm: sửa ở đâu?',
+{ id:'B:tp09-09', skill:'brand', read:'6 phút', assume:true, t:'Câu chuyện hay nhưng không ai nhớ sản phẩm: sửa ở đâu?',
   situation:'Một thương hiệu dầu gội làm phim ngắn 3 phút về cô gái trẻ đi phỏng vấn xin việc lần thứ năm, cuối cùng đậu. Phim được khen nhiều, 1,5 triệu lượt xem. Nhưng khảo sát 500 người đã xem: 410 người kể lại được cốt truyện, chỉ 95 người nhớ đó là quảng cáo dầu gội, và chỉ 40 người nêu đúng tên thương hiệu.',
   concept:{ name:'Thương hiệu phải là mắt xích của câu chuyện',
     body:'Một câu chuyện có thể hay mà vẫn là quảng cáo tồi nếu <b>thương hiệu không nằm trong mạch chuyện</b>. Phép thử: rút sản phẩm ra khỏi câu chuyện — chuyện có đổi gì không? Nếu không, sản phẩm chỉ đang được "dán" vào. Cách sửa: gắn sản phẩm vào <b>điểm ngoặt</b>, nơi trở ngại chuyển thành thay đổi; và để các dấu hiệu nhận diện (màu, âm thanh, câu cửa miệng) xuất hiện sớm, lặp lại, không đợi đến giây cuối.' },
@@ -532,7 +532,7 @@ BAI_ADD({ mod:'tp09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:tp09-10', skill:'measure', read:'7 phút', t:'Làm sao biết câu chuyện thương hiệu đang hiệu quả?',
+{ id:'B:tp09-10', skill:'measure', read:'7 phút', assume:true, t:'Làm sao biết câu chuyện thương hiệu đang hiệu quả?',
   situation:'Một chuỗi cà phê chạy series 6 tập "Người ngồi bàn góc" kể chuyện khách quen. Báo cáo của agency: 3,2 triệu lượt xem, 45.000 bình luận, "cảm xúc tích cực 92%". Giám đốc hỏi: "Vậy khách có đến quán nhiều hơn không?" Không ai trả lời được. Ngân sách series tiếp theo là 600 triệu và cần được duyệt trong tháng.',
   concept:{ name:'Đo câu chuyện theo ba tầng',
     body:'Lượt xem và bình luận chỉ cho biết câu chuyện được <b>chú ý</b>. Để biết nó có hiệu quả, đo thêm hai tầng. Tầng <b>ghi nhớ</b>: người xem có nhớ đúng thương hiệu, có kể lại được thông điệp không (khảo sát nhớ lại). Tầng <b>hành vi</b>: có thay đổi gì ở tìm kiếm tên thương hiệu, lượt ghé quán, đơn hàng — tốt nhất là so khu vực/nhóm có xem với nhóm không xem. Đặt mục tiêu cho cả ba tầng <b>trước</b> khi phát sóng, không phải sau.' },

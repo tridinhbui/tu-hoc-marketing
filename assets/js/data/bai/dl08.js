@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'dl08', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:dl08-01', skill:'measure', read:'6 phút', t:'Fanpage tăng 20.000 follower, sao đơn hàng vẫn đứng yên?',
+{ id:'B:dl08-01', skill:'measure', read:'6 phút', assume:true, t:'Fanpage tăng 20.000 follower, sao đơn hàng vẫn đứng yên?',
   situation:'Một tiệm bánh ngọt ở Đà Nẵng chạy minigame "like, share, tag 3 bạn" trong hai tuần. Fanpage từ 5.000 lên 25.000 follower, chủ tiệm rất vui. Nhưng số đơn đặt bánh qua inbox mỗi tuần vẫn quanh 60 đơn, như trước minigame. Chủ tiệm hỏi bạn: có nên chạy thêm một đợt minigame nữa không?',
   concept:{ name:'Follower và người mua là hai tập người khác nhau',
     body:'Follower chỉ cho biết bao nhiêu người từng bấm theo dõi. Người mua mới là người trả tiền. Hai tập này chỉ chồng lên nhau một phần, và cách bạn kéo follower quyết định phần chồng lên to hay nhỏ. Minigame tặng quà kéo người thích quà, không nhất thiết là người ở gần và muốn mua bánh. Chỉ số ra quyết định ở đây là <b>số người mua mới đến từ fanpage</b> hoặc <b>tỉ lệ follower mới trở thành người mua</b>. Nếu con số này không nhúc nhích, thêm follower không làm tiệm khá lên.' },
@@ -46,13 +46,13 @@ BAI_ADD({ mod:'dl08', lessons:[
       b:'Đúng. Khi đã biết follower đổi ra đơn theo tỉ lệ nào, follower mới thành chỉ báo sớm cho doanh thu.',
       c:'Đua số follower với đối thủ là đua trên thước đo không gắn với tiền.',
       d:'Ngân sách dư không biến một chỉ số phù phiếm thành chỉ số ra quyết định.'} },
-  { type:'mcq', stem:'Shop quần áo A có 8.000 follower, shop B có 80.000. Tháng này A bán 400 đơn, B bán 350 đơn. Nhận định nào đúng?',
+  { type:'mcq', stem:'Shop quần áo A có 8.000 follower, shop B có 80.000. Tháng này A có 400 đơn đến từ fanpage, B có 350 đơn đến từ fanpage. Nhận định nào đúng?',
     options:[{k:'a',t:'B mạnh hơn vì có tệp khách tiềm năng lớn gấp mười lần shop A'},{k:'b',t:'A chỉ ăn may trong tháng này, lâu dài B sẽ vượt nhờ số follower đông'},
-             {k:'c',t:'A đổi người theo dõi thành người mua tốt hơn B rất nhiều'},{k:'d',t:'Hai shop gần như ngang nhau nên chưa thể rút ra nhận định nào'}],
+             {k:'c',t:'A đổi người theo dõi thành người mua tốt hơn B rất nhiều'},{k:'d',t:'Hai shop bán ngang nhau, nên follower nhiều hay ít không liên quan gì tới đơn'}],
     answer:'c', why:{a:'Follower không phải tệp khách tiềm năng nếu họ không mua; kết quả cho thấy điều đó.',
       b:'Không có cơ sở cho "ăn may"; follower đông mà ít đơn là dấu hiệu tệp kém chất lượng.',
-      c:'Đúng. 400 đơn trên 8.000 follower so với 350 trên 80.000 là khác biệt rất lớn về chất lượng tệp.',
-      d:'Đơn gần bằng nhau nhưng follower chênh mười lần, đó chính là thông tin cần đọc.'} },
+      c:'Đúng. 400 đơn từ fanpage trên 8.000 follower so với 350 trên 80.000 là khác biệt rất lớn về chất lượng tệp.',
+      d:'Đơn từ fanpage gần bằng nhau nhưng follower chênh mười lần: cùng số đơn, A cần ít follower hơn hẳn — đó chính là thông tin cần đọc.'} },
   { type:'mcq', stem:'Sếp đặt KPI quý cho bạn là "fanpage đạt 100.000 follower". Bạn nên phản hồi thế nào?',
     options:[{k:'a',t:'Nhận KPI và chạy quảng cáo lượt thích trang giá rẻ cho nhanh đạt'},{k:'b',t:'Từ chối KPI vì mạng xã hội không đo được hiệu quả kinh doanh'},
              {k:'c',t:'Nhận KPI nhưng lén đo thêm doanh thu, không cần báo sếp chuyện này'},{k:'d',t:'Đề xuất thêm KPI số đơn từ fanpage, follower chỉ là số tham khảo'}],
@@ -63,10 +63,13 @@ BAI_ADD({ mod:'dl08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:dl08-02', skill:'measure', read:'6 phút', t:'Video 1 triệu view, nhưng bao nhiêu người xem tới đoạn nói về sản phẩm?',
+{ id:'B:dl08-02', skill:'measure', read:'6 phút', assume:true, t:'Video 1 triệu view, nhưng bao nhiêu người xem tới đoạn nói về sản phẩm?',
+  src:[{ t:'TikTok Help Center – Analytics (cách đếm lượt xem, biểu đồ giữ chân)', u:'https://support.tiktok.com/', d:'2026-11-07', st:'chua' },
+       { t:'Instagram Help Center – Reels insights', u:'https://help.instagram.com/', d:'2026-11-07', st:'chua' },
+       { t:'YouTube Help – Audience retention, cách đếm lượt xem', u:'https://support.google.com/youtube/', d:'2026-11-07', st:'chua' }],
   situation:'Một thương hiệu nước mắm đặt KOC làm video TikTok 45 giây. Video đạt 1 triệu lượt xem, cả nhóm ăn mừng. Sản phẩm chỉ xuất hiện ở giây thứ 30, khi KOC nêm nước mắm vào món kho. Báo cáo của TikTok cho thấy chỉ 8% người xem tới giây 30. Tuần sau nhóm phải quyết định có đặt thêm 5 video cùng kiểu không.',
   concept:{ name:'Lượt xem khác lượt xem tới đoạn quan trọng',
-    body:'Trên TikTok hay Reels, một lượt xem được đếm rất sớm, có khi chỉ vài giây. Người lướt qua cũng tính là một view. Điều bạn cần biết là bao nhiêu người <b>xem tới đoạn có thông điệp</b>: đoạn sản phẩm xuất hiện, đoạn nói giá, đoạn kêu gọi hành động. Hãy đọc biểu đồ giữ chân khán giả (retention) và lấy số người còn lại tại đúng giây đó. Con số này mới quyết định bạn có nên làm thêm video kiểu đó, hay phải đưa sản phẩm lên sớm hơn.' },
+    body:'Mỗi nền tảng định nghĩa lượt xem khác nhau, nhưng đều đếm rất sớm — thường từ lúc video bắt đầu phát tới vài giây đầu (theo trang trợ giúp của TikTok, Instagram, YouTube tại ngày kiểm 11/2026; nếu màn hình khác, tin trang chính thức). Người lướt qua cũng có thể tính là một view. Điều bạn cần biết là bao nhiêu người <b>xem tới đoạn có thông điệp</b>: đoạn sản phẩm xuất hiện, đoạn nói giá, đoạn kêu gọi hành động. Hãy đọc biểu đồ giữ chân khán giả (retention) và lấy số người còn lại tại đúng giây đó. Con số này mới quyết định bạn có nên làm thêm video kiểu đó, hay phải đưa sản phẩm lên sớm hơn.' },
   example:'1.000.000 view × 8% = 80.000 người thấy nước mắm được nêm vào món. Một video khác chỉ 300.000 view nhưng sản phẩm xuất hiện ngay giây thứ 3, khi 60% người xem còn ở lại: 300.000 × 60% = 180.000 người thấy sản phẩm. Video ít view hơn lại đưa thông điệp tới gấp hơn hai lần số người. Nhóm quyết định đặt thêm video, nhưng yêu cầu sản phẩm xuất hiện trong 5 giây đầu.',
   takeaway:'Đừng đếm người đi ngang; đếm người còn ở lại khi sản phẩm xuất hiện.',
   points:["Đường giữ chân thường dốc xuống nhanh nhất ở vài giây đầu. Vì vậy vị trí xuất hiện của sản phẩm quyết định nó được bao nhiêu người thấy, nhiều hơn cả tổng view.","Thông điệp cần một nhịp để người xem hiểu: hình ảnh, tên và lý do quan tâm. Nên đưa ra sớm rồi nhắc lại, thay vì dồn ở cuối khi khán giả đã đi.","Đọc giữ chân theo từng đoạn giúp bạn thấy chỗ khán giả bỏ đi. Chỗ sụt mạnh thường là đoạn mở dài dòng, từ đó biết sửa đúng khúc nào của video."],
@@ -81,7 +84,7 @@ BAI_ADD({ mod:'dl08', lessons:[
     answer:'a', why:{a:'Đúng. Video ngắn mất người rất nhanh; tới giây 30 thường chỉ còn một phần nhỏ.',
       b:'Lượt xem được đếm từ vài giây đầu; người lướt qua cũng là một view.',
       c:'Không có quy luật "ở lại một nửa"; phải đọc số thật trên biểu đồ.',
-      d:'TikTok, Reels và YouTube đều có biểu đồ giữ chân theo từng giây.'} },
+      d:'Tại ngày kiểm (11/2026), TikTok, Reels và YouTube đều có biểu đồ giữ chân người xem theo thời gian; nếu màn hình khác, tin trang trợ giúp chính thức.'} },
   { type:'mcq', stem:'Nhóm sắp đặt thêm 5 video cùng kiểu. Bạn sửa gì trong brief trước khi đặt?',
     options:[{k:'a',t:'Yêu cầu KOC cam kết mỗi video đạt tối thiểu 1 triệu lượt xem'},{k:'b',t:'Kéo dài video lên 90 giây để có thêm thời gian kể về sản phẩm'},
              {k:'c',t:'Đưa sản phẩm vào 5 giây đầu và đo người còn xem tại đoạn đó'},{k:'d',t:'Giữ nguyên kịch bản cũ vì kiểu video này đã chứng minh được là viral'}],
@@ -123,7 +126,7 @@ BAI_ADD({ mod:'dl08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:dl08-03', skill:'measure', read:'7 phút', t:'App đạt 100.000 lượt tải, vậy có bao nhiêu người thật sự dùng?',
+{ id:'B:dl08-03', skill:'measure', read:'7 phút', assume:true, t:'App đạt 100.000 lượt tải, vậy có bao nhiêu người thật sự dùng?',
   situation:'Một ứng dụng đặt lịch cắt tóc ở TP.HCM chạy chiến dịch tặng 50.000đ cho người tải app. Sau một tháng, app đạt 100.000 lượt tải và nhóm định báo cáo với nhà đầu tư. Nhưng số lịch hẹn đặt qua app mỗi tuần chỉ khoảng 1.500. Nhà đầu tư hỏi: "Bao nhiêu người còn dùng app sau 30 ngày?"',
   concept:{ name:'Lượt tải và người dùng hoạt động',
     body:'Lượt tải chỉ đếm lần cài đặt. Rất nhiều người cài xong, nhận quà rồi xoá, hoặc không bao giờ mở lại. Chỉ số ra quyết định là <b>người dùng hoạt động</b>: số người thực hiện hành động cốt lõi (ở đây là đặt lịch) trong một khoảng thời gian, thường tính theo tuần (WAU) hoặc tháng (MAU). Đi kèm là <b>tỉ lệ giữ chân</b>: trong 100 người tải tháng này, bao nhiêu người còn đặt lịch sau 30 ngày. Nếu tỉ lệ này thấp, mua thêm lượt tải chỉ là đổ nước vào thùng thủng.' },
@@ -183,7 +186,7 @@ BAI_ADD({ mod:'dl08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:dl08-04', skill:'measure', read:'7 phút', t:'Team marketing mang về 800 lead, sao sales vẫn kêu thiếu khách?',
+{ id:'B:dl08-04', skill:'measure', read:'7 phút', assume:true, t:'Team marketing mang về 800 lead, sao sales vẫn kêu thiếu khách?',
   situation:'Một trung tâm tiếng Anh ở Hà Nội chạy form đăng ký "nhận tài liệu IELTS miễn phí". Tháng này marketing mang về 800 lead, gấp đôi tháng trước. Đội tư vấn gọi hết danh sách và phàn nàn: nhiều số không nghe máy, nhiều người là học sinh lớp 6 chỉ muốn tài liệu. Số học viên đăng ký khoá học vẫn là 16, như tháng trước.',
   concept:{ name:'Lead và lead đủ điều kiện',
     body:'Lead là người để lại thông tin. <b>Lead đủ điều kiện</b> là lead khớp với một bộ tiêu chí đã thống nhất giữa marketing và sales: đúng độ tuổi, đúng nhu cầu, có khả năng chi trả, sẵn sàng nói chuyện trong thời gian gần. Khi marketing được chấm bằng số lead, họ sẽ chọn mồi dễ nhất (tài liệu miễn phí) và kéo cả những người không bao giờ mua. Chỉ số ra quyết định là <b>số lead đủ điều kiện</b> và <b>chi phí mỗi học viên đăng ký</b>. Hai điều dễ bị bỏ qua: bộ lọc chỉ chọn lại chứ không tạo thêm người mua, nên lead đủ điều kiện chỉ tăng khi quảng cáo kéo đúng người; và tiêu chí chỉ sống được khi có thỏa thuận hai chiều (marketing giao lead, sales gọi trong 24 giờ và ghi lý do loại) để marketing biết mình kéo sai ở đâu.' },
@@ -240,11 +243,11 @@ BAI_ADD({ mod:'dl08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:dl08-05', skill:'measure', read:'7 phút', t:'Doanh thu Tết tăng 40%, sao cuối quý lại lỗ?',
+{ id:'B:dl08-05', skill:'measure', read:'7 phút', assume:true, t:'Doanh thu Tết tăng 40%, sao cuối quý lại lỗ?',
   situation:'Một shop hạt dinh dưỡng bán trên Shopee chạy khuyến mãi Tết giảm 25% cho mọi hộp quà, kèm freeship. Doanh thu tháng Chạp tăng 40% so với tháng trước, chủ shop khoe trong nhóm bạn kinh doanh. Nhưng khi kế toán tính xong phí sàn, phí vận chuyển và tiền quảng cáo, tháng đó shop lỗ gần 20 triệu.',
   concept:{ name:'Doanh thu và lãi gộp sau chi phí marketing',
     body:'Doanh thu là tổng tiền khách trả. Nó tăng khi bạn giảm giá mạnh, dù mỗi đơn đem về ít tiền hơn hoặc lỗ. Chỉ số ra quyết định là <b>lãi sau chi phí biến đổi và chi phí marketing</b>: doanh thu trừ giá vốn, phí sàn, vận chuyển, quà tặng, quảng cáo. Nhìn doanh thu, bạn sẽ muốn giảm giá thêm. Nhìn lãi, bạn sẽ hỏi: đợt giảm giá này có kéo thêm đủ đơn để bù phần lãi mất đi trên mỗi đơn không?' },
-  example:'Hộp quà giá 400.000đ, giá vốn 200.000đ, phí sàn và vận chuyển 60.000đ. Bình thường lãi 140.000đ/hộp. Giảm 25% còn 300.000đ, lãi còn 40.000đ/hộp. Muốn giữ tổng lãi như cũ, shop cần bán gấp 3,5 lần số hộp. Doanh thu tăng 40% nghĩa là số hộp chỉ tăng khoảng 87%. Tết sau, shop giảm 10% và tặng thiệp viết tay, đo bằng lãi mỗi tuần.',
+  example:'Hộp quà giá 400.000đ, giá vốn 200.000đ, phí sàn và vận chuyển (gồm freeship) 60.000đ. Bình thường lãi 140.000đ/hộp. Giảm 25% còn 300.000đ, lãi còn 40.000đ/hộp. Muốn giữ tổng lãi như cũ, shop cần bán gấp 3,5 lần số hộp. Thực tế tháng Chạp bán 1.400 hộp (tháng trước 750 hộp): doanh thu 420 triệu, tăng 40% so với 300 triệu, nhưng số hộp chỉ tăng khoảng 87%. Lãi sau chi phí biến đổi 1.400 × 40.000 = 56 triệu, trừ 76 triệu quảng cáo Tết → lỗ 20 triệu, đúng con số kế toán báo. Tết sau, shop giảm 10% và tặng thiệp viết tay, đo bằng lãi mỗi tuần.',
   takeaway:'Doanh thu cho biết bạn bận đến đâu; lãi cho biết bạn có nên bận như vậy không.',
   points:["Giảm giá cắt thẳng vào phần lãi trên mỗi đơn, nên số đơn cần thêm tăng nhanh hơn mức giảm trông có vẻ. Giá giảm một phần tư nhưng lãi mỗi hộp mất quá nửa.","Phí sàn, vận chuyển và quảng cáo phần lớn tính theo đơn, nên bán nhiều hơn không làm chúng nhẹ đi. Các chi phí này tăng cùng doanh thu và nuốt phần chênh.","Lãi mỗi đơn cho phép tính điểm hoà vốn của khuyến mãi: lấy tổng lãi cũ chia lãi mới trên mỗi đơn là ra số đơn cần bán trước khi chạy."],
   counter:"Giả sử shop còn tồn nhiều hộp quà mà hạn dùng sắp hết sau Tết. Giá vốn đã chi, giữ hàng còn tốn thêm tiền kho và có nguy cơ phải bỏ. Giảm sâu để thu hồi tiền có thể đáng làm dù lãi mỗi đơn mỏng. Dấu hiệu nhận ra: hàng sắp hết hạn hoặc vốn bị kẹt. Khi đó so sánh phải là lỗ nếu bán với lỗ nếu giữ, không phải lãi bình thường.",
@@ -300,11 +303,11 @@ BAI_ADD({ mod:'dl08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:dl08-06', skill:'measure', read:'6 phút', t:'Email có tỉ lệ mở 45%, sao không ai đặt hàng?',
+{ id:'B:dl08-06', skill:'measure', read:'6 phút', assume:true, t:'Email có tỉ lệ mở 45%, sao không ai đặt hàng?',
   situation:'Một chuỗi mỹ phẩm gửi email mỗi tuần cho 40.000 khách. Người phụ trách email được khen vì tỉ lệ mở tăng từ 20% lên 45% sau khi đổi tiêu đề sang kiểu "Bạn có một món quà đang chờ 🎁". Nhưng doanh thu từ email tháng này chỉ 12 triệu, thấp hơn tháng trước (30 triệu). Sếp hỏi: tiêu đề mới tốt hay xấu?',
   concept:{ name:'Tỉ lệ mở và doanh thu từ email',
     body:'Tỉ lệ mở đo tiêu đề có khiến người ta bấm vào không. Nó dễ bị đẩy lên bằng tiêu đề gây tò mò hoặc hứa hẹn quá lời. Ngoài ra, một số ứng dụng email tự tải nội dung trước, khiến số "mở" bị thổi phồng. Chỉ số ra quyết định là <b>doanh thu trên mỗi email gửi đi</b>: doanh thu từ email chia cho số email gửi. Nó gộp cả tiêu đề, nội dung, ưu đãi và trang đích vào một con số gắn với tiền. Tiêu đề hứa quà mà bên trong không có quà thì mở nhiều, mua ít, và còn làm khách mất tin.' },
-  example:'Tháng trước: 40.000 email × 4 lần = 160.000 email, doanh thu 30 triệu, tức 187,5đ mỗi email. Tháng này: cùng 160.000 email, doanh thu 12 triệu, tức 75đ mỗi email. Tỉ lệ mở tăng hơn gấp đôi, nhưng mỗi email đem về ít tiền hơn 60%. Chuỗi quay lại tiêu đề nói rõ ưu đãi và theo dõi doanh thu mỗi email hằng tuần.',
+  example:'Tháng trước: 40.000 email × 4 lần = 160.000 email, doanh thu 30 triệu, tức 187,5đ mỗi email. Tháng này: cùng 160.000 email, doanh thu 12 triệu, tức 75đ mỗi email. Tỉ lệ mở tăng hơn gấp đôi, nhưng mỗi email đem về ít tiền hơn 60%. Giả định minh hoạ: nội dung, ưu đãi và trang đích hai tháng giữ nguyên, chỉ tiêu đề đổi — nếu không, mức giảm này là của cả lá thư, chưa quy được cho tiêu đề. Để chắc, chuỗi chia đôi tệp trong cùng một lần gửi, chỉ đổi tiêu đề, so doanh thu mỗi email; tiêu đề nói rõ ưu đãi thắng, nên chuỗi quay lại kiểu đó và theo dõi doanh thu mỗi email hằng tuần.',
   takeaway:'Tỉ lệ mở đo tiêu đề; doanh thu mỗi email đo cả lá thư.',
   points:["Phần tiêu đề chỉ chịu trách nhiệm bước đầu của phễu. Sau lượt mở còn nội dung, ưu đãi, nút bấm và trang đích; gãy ở bước nào thì doanh thu mất ở bước đó.","Lời hứa quá lời tạo khoảng cách giữa kỳ vọng và nội dung. Khoảng cách ấy làm khách thất vọng, lần sau họ bớt mở hoặc bấm huỷ đăng ký.","Chia doanh thu cho số email gửi, không phải số đã mở, sẽ loại ảnh hưởng của việc mở tự động. Mẫu số cố định nên so các lần gửi với nhau mới công bằng."],
   counter:"Giả sử đó là email chăm sóc kể cách dùng sản phẩm, không có nút mua. Doanh thu trên mỗi email sẽ gần bằng không dù thư làm khách yên tâm và sau đó mua lại. Dùng khung này ở đây là kết luận sai. Dấu hiệu nhận ra: mục đích của email không phải bán ngay. Khi đó theo dõi đơn mua lại sau vài tuần, hoặc số khách còn đăng ký, thay vì doanh thu của lá thư.",
@@ -320,10 +323,10 @@ BAI_ADD({ mod:'dl08', lessons:[
       c:'Khách quen với tiêu đề hứa suông thì càng ít tin, không phải mua nhiều hơn.',
       d:'Đúng. Hứa quà mà không có quà làm giảm lòng tin và giảm mua.'} },
   { type:'mcq', stem:'Sếp hỏi nên giữ tiêu đề mới hay quay lại. Bạn chọn cách đánh giá nào?',
-    options:[{k:'a',t:'Giữ tiêu đề mới vì tỉ lệ mở cao cho thấy khách thích thư hơn'},{k:'b',t:'So doanh thu trên mỗi email gửi giữa hai kiểu tiêu đề trên cùng tệp'},
+    options:[{k:'a',t:'Giữ tiêu đề mới vì tỉ lệ mở cao cho thấy khách thích thư hơn'},{k:'b',t:'Chia đôi tệp trong cùng lần gửi, chỉ đổi tiêu đề, so doanh thu mỗi email'},
              {k:'c',t:'Hỏi ý kiến đội thiết kế xem tiêu đề nào trông hấp dẫn hơn'},{k:'d',t:'Dùng tiêu đề nào có tỉ lệ nhấp vào đường link cao hơn trong thư, vì nhấp gần với mua hơn'}],
     answer:'b', why:{a:'Mở nhiều không có nghĩa là thích thư hay mua.',
-      b:'Đúng. Doanh thu mỗi email gửi đi là thước đo gắn với tiền và so được giữa hai kiểu.',
+      b:'Đúng. Cùng lần gửi, cùng tệp, chỉ khác tiêu đề thì chênh doanh thu mỗi email mới quy được cho tiêu đề.',
       c:'Cảm nhận của đội thiết kế không thay được dữ liệu mua hàng.',
       d:'Nhấp gần hơn mở, nhưng vẫn chưa phải mua; tiêu đề giật gân cũng kéo nhấp tò mò.'} },
   { type:'calc', stem:'Tháng này gửi 160.000 email, doanh thu từ email là 12 triệu đồng. Doanh thu trên mỗi email gửi đi là bao nhiêu đồng?',
@@ -360,7 +363,7 @@ BAI_ADD({ mod:'dl08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:dl08-07', skill:'measure', read:'7 phút', t:'Khi chỉ số thành mục tiêu, người ta sẽ "chơi" nó thế nào?',
+{ id:'B:dl08-07', skill:'measure', read:'7 phút', assume:true, t:'Khi chỉ số thành mục tiêu, người ta sẽ "chơi" nó thế nào?',
   situation:'Một chuỗi nhà thuốc đặt KPI cho nhân viên: mỗi người phải mời được 80 khách đăng ký thành viên mỗi tháng, ai đạt được thưởng. Ba tháng sau, số thành viên tăng từ 30.000 lên 90.000. Nhưng khi gửi tin nhắn ưu đãi, 40% số điện thoại không liên lạc được, và nhiều thành viên chưa từng mua lần hai.',
   concept:{ name:'Định luật Goodhart',
     body:'Nhà kinh tế Charles Goodhart nêu một ý thường được tóm lại thế này: <b>khi một chỉ số trở thành mục tiêu, nó không còn là chỉ số tốt</b>. Lý do: người bị đo sẽ tìm cách đẩy con số lên bằng đường dễ nhất, và đường dễ nhất thường không phải đường tạo ra giá trị. Để hạn chế, hãy <b>ghép chỉ số với một chỉ số đối trọng</b> khó chơi hơn (số thành viên đi kèm tỉ lệ thành viên mua lại), kiểm tra ngẫu nhiên dữ liệu, và đổi thước đo khi thấy con số tăng mà kết quả kinh doanh không đổi.' },
@@ -420,7 +423,7 @@ BAI_ADD({ mod:'dl08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:dl08-08', skill:'measure', read:'7 phút', t:'Tỉ lệ chuyển đổi tăng gấp đôi, sao số đơn lại giảm?',
+{ id:'B:dl08-08', skill:'measure', read:'7 phút', assume:true, t:'Tỉ lệ chuyển đổi tăng gấp đôi, sao số đơn lại giảm?',
   situation:'Một shop giày thể thao chạy quảng cáo Facebook. Tháng trước: 10.000 lượt vào trang, tỉ lệ chuyển đổi 1%, được 100 đơn. Tháng này shop thu hẹp đối tượng, tỉ lệ chuyển đổi lên 2%, người phụ trách báo cáo "hiệu quả tăng gấp đôi". Nhưng lượt vào trang chỉ còn 4.000, và số đơn là 80.',
   concept:{ name:'Chỉ số tỉ lệ và số tuyệt đối',
     body:'Tỉ lệ (chuyển đổi, nhấp, mở) cho biết <b>hiệu suất</b>. Số tuyệt đối (số đơn, số tiền lãi) cho biết <b>kết quả</b>. Tỉ lệ có thể tăng vì mẫu số co lại: bạn bỏ đi những người khó chốt, còn lại toàn người dễ chốt, nhưng tổng đơn ít đi. Khi báo cáo, luôn đặt tỉ lệ cạnh số tuyệt đối. Và khi so hai tỉ lệ, hãy nói rõ là thay đổi <b>điểm phần trăm</b> (từ 1% lên 2% là tăng 1 điểm) hay <b>phần trăm tương đối</b> (tăng 100%).' },
@@ -480,7 +483,7 @@ BAI_ADD({ mod:'dl08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:dl08-09', skill:'measure', read:'7 phút', t:'Giá trị đơn trung bình 500.000đ, nhưng có bao nhiêu đơn thật sự ở mức đó?',
+{ id:'B:dl08-09', skill:'measure', read:'7 phút', assume:true, t:'Giá trị đơn trung bình 500.000đ, nhưng có bao nhiêu đơn thật sự ở mức đó?',
   situation:'Một shop đồ gia dụng báo cáo giá trị đơn trung bình tháng này là 500.000đ, tăng từ 380.000đ, và định dựa vào đó nâng ngưỡng freeship lên 500.000đ. Khi xem danh sách đơn, bạn thấy có 5 đơn của một khách sỉ, mỗi đơn 12 triệu, còn phần lớn đơn khác chỉ 200.000–300.000đ.',
   concept:{ name:'Trung bình che phân phối lệch',
     body:'Số trung bình cộng bị kéo mạnh bởi vài giá trị rất lớn. Khi dữ liệu lệch (vài đơn khổng lồ, vài khách chi rất nhiều), trung bình không mô tả "khách điển hình". Hãy nhìn thêm <b>trung vị</b> (giá trị ở giữa khi xếp thứ tự), và <b>chia nhóm</b>: khách lẻ và khách sỉ, khách mới và khách cũ. Quyết định nào áp lên khách điển hình (ngưỡng freeship, combo, mức giá) phải dựa trên trung vị hoặc từng nhóm, không dựa trên trung bình chung.' },
@@ -540,7 +543,7 @@ BAI_ADD({ mod:'dl08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:dl08-10', skill:'measure', read:'6 phút', t:'Chỉ số này tăng hay giảm thì bạn có làm khác đi không?',
+{ id:'B:dl08-10', skill:'measure', read:'6 phút', assume:true, t:'Chỉ số này tăng hay giảm thì bạn có làm khác đi không?',
   situation:'Một startup đồ ăn healthy ở Hà Nội có dashboard 25 chỉ số: follower, lượt thích, lượt xem trang, thời gian trên trang, số bài đăng, tỉ lệ mở email, số lượt tìm kiếm tên thương hiệu... Mỗi sáng thứ Hai cả nhóm ngồi đọc một tiếng. Người sáng lập hỏi bạn: "Tuần nào mình cũng đọc, nhưng hình như chưa bao giờ đổi quyết định vì nó?"',
   concept:{ name:'Phép thử ra quyết định',
     body:'Với mỗi chỉ số, hỏi: <b>nếu con số này tăng gấp đôi hoặc giảm một nửa, tôi sẽ làm gì khác?</b> Nếu câu trả lời là "không làm gì khác", đó là chỉ số để xem cho biết, không nên nằm trên dashboard chính. Chỉ số ra quyết định có ba đặc điểm: gắn với một hành động cụ thể, có người chịu trách nhiệm, và có ngưỡng báo động đã định trước. Một dashboard tốt thường chỉ cần vài chỉ số như vậy, còn lại để ở trang phụ khi cần tra.' },

@@ -4,11 +4,12 @@
 BAI_ADD({ mod:'tp07', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tp07-01', skill:'creative', read:'6 phút', t:'Tiêu đề này có khiến ai đọc dòng thứ hai không?',
-  situation:'Một tiệm giặt sấy ở Thủ Đức chạy hai bài quảng cáo Facebook cùng ảnh, cùng ngân sách. Bài A mở bằng "Dịch vụ giặt sấy uy tín, chất lượng". Bài B mở bằng "Gửi 5 kg đồ lúc 8 giờ sáng, 5 giờ chiều nhận lại đã gấp". Mỗi bài có 20.000 lượt hiển thị. Bài A được 160 lượt bấm, bài B được 520.',
+{ id:'B:tp07-01', skill:'creative', read:'6 phút', assume:true, t:'Tiêu đề này có khiến ai đọc dòng thứ hai không?',
+  src:[{ t:'Nielsen Norman Group, “First 2 Words: A Signal for the Scanning Eye” (2009) — nghiên cứu theo dõi mắt trên danh sách liên kết web', u:'https://www.nngroup.com/articles/first-2-words-a-signal-for-scanning/', d:'2026-11-07', st:'chua' }],
+  situation:'Một tiệm giặt sấy ở Thủ Đức chạy hai bài quảng cáo Facebook trong công cụ thử nghiệm A/B của Meta, cùng ảnh, cùng ngân sách. Bài A mở bằng "Dịch vụ giặt sấy uy tín, chất lượng". Bài B mở bằng "Gửi 5 kg đồ lúc 8 giờ sáng, 5 giờ chiều nhận lại đã gấp". Mỗi bài có 20.000 lượt hiển thị. Bài A được 160 lượt bấm, bài B được 520.',
   concept:{ name:'Tiêu đề là cửa chặn',
-    body:'Nghiên cứu theo dõi mắt của Nielsen Norman Group cho thấy khi lướt tiêu đề và danh sách, người ta thường chỉ thấy khoảng hai chữ đầu của mỗi mục, nên người lướt thường quyết định dừng hay đi tiếp ngay ở dòng đầu. Vì vậy tiêu đề không có nhiệm vụ kể hết; nhiệm vụ của nó là <b>khiến đúng người đọc dòng thứ hai</b>. Tiêu đề mạnh thường chứa một dữ kiện người đọc tự kiểm được (giờ, số, giá, kết quả) và nói về việc của họ, không phải về mình. Tiêu đề yếu là tiêu đề có thể dán cho bất kỳ tiệm nào.' },
-  example:'Bài A: 160 ÷ 20.000 = 0,8% bấm. Bài B: 520 ÷ 20.000 = 2,6%. Khác biệt duy nhất là dòng đầu. "Uy tín, chất lượng" là lời tự khen, ai cũng nói được. "8 giờ gửi, 5 giờ nhận" là một lời hứa đo được và chạm đúng nỗi lo của người đi làm: tối về có quần áo sạch không. Tiệm giữ ảnh, chỉ viết lại tiêu đề cho mọi bài sau theo công thức: việc của khách + con số kiểm được.',
+    body:'Nghiên cứu theo dõi mắt của Nielsen Norman Group (“First 2 Words”, 2009, đo người lướt danh sách liên kết trên web) cho thấy người ta thường chỉ thấy khoảng hai chữ đầu của mỗi mục; áp sang dòng đầu quảng cáo Facebook là suy luận của bài, dựa trên cùng cơ chế: người lướt quyết định dừng hay đi tiếp ngay ở dòng đầu. Vì vậy tiêu đề không có nhiệm vụ kể hết; nhiệm vụ của nó là <b>khiến đúng người đọc dòng thứ hai</b>. Tiêu đề mạnh thường chứa một dữ kiện người đọc tự kiểm được (giờ, số, giá, kết quả) và nói về việc của họ, không phải về mình. Tiêu đề yếu là tiêu đề có thể dán cho bất kỳ tiệm nào.' },
+  example:'Bài A: 160 ÷ 20.000 = 0,8% bấm. Bài B: 520 ÷ 20.000 = 2,6%. Công cụ thử nghiệm A/B chia người xem thành hai nhóm ngẫu nhiên, nên khác biệt chủ ý duy nhất là dòng đầu. "Uy tín, chất lượng" là lời tự khen, ai cũng nói được. "8 giờ gửi, 5 giờ nhận" là một lời hứa đo được và chạm đúng nỗi lo của người đi làm: tối về có quần áo sạch không. Tiệm giữ ảnh, chỉ viết lại tiêu đề cho mọi bài sau theo công thức: việc của khách + con số kiểm được.',
   takeaway:'Tiêu đề không kể hết; nó chỉ cần một dữ kiện đủ cụ thể để đúng người dừng lại.',
   apply:'Lấy tiêu đề quảng cáo gần nhất của bạn. Viết lại trong 60 giây sao cho có một con số người đọc tự kiểm được.',
   mistakes:['Dồn tên thương hiệu và mọi ưu điểm vào dòng đầu.','Viết tiêu đề chung chung đến mức đối thủ dùng lại được nguyên văn.'],
@@ -19,7 +20,7 @@ BAI_ADD({ mod:'tp07', lessons:[
     answer:'b', why:{a:'Ảnh kéo mắt dừng, nhưng chữ đầu tiên quyết định người ta có thấy việc của mình trong đó không.',
       b:'Đúng. Trong tình huống, cùng ảnh nhưng bài B có lượt bấm hơn gấp ba bài A.',
       c:'Chênh lệch từ dòng đầu thường lớn hơn nhiều so với vài phần trăm, vì nó là cửa đầu tiên.',
-      d:'Thử A/B cùng ngân sách, cùng tệp chính là cách đo được khác biệt do tiêu đề.'} },
+      d:'Rủi ro này có thật nếu chỉ chạy hai bài song song; công cụ thử nghiệm A/B của Meta chia ngẫu nhiên người xem nên đo được khác biệt do tiêu đề.'} },
   { type:'mcq', stem:'Bạn viết quảng cáo cho một tiệm sửa điện thoại. Bạn chọn dòng đầu nào?',
     options:[{k:'a',t:'Sửa điện thoại uy tín số 1 khu vực, thợ tay nghề cao lâu năm'},{k:'b',t:'Chào mừng bạn đến với tiệm sửa điện thoại của chúng tôi!'},
              {k:'c',t:'Thay pin iPhone 30 phút, ngồi chờ lấy luôn'},{k:'d',t:'Bạn có biết điện thoại cũng cần được chăm sóc như sức khoẻ?'}],
@@ -61,7 +62,7 @@ BAI_ADD({ mod:'tp07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tp07-02', skill:'creative', read:'7 phút', t:'Khách mua pin 10.000 mAh hay mua "điện thoại sống qua một ngày đi công tác"?',
+{ id:'B:tp07-02', skill:'creative', read:'7 phút', assume:true, t:'Khách mua pin 10.000 mAh hay mua "điện thoại sống qua một ngày đi công tác"?',
   situation:'Một shop phụ kiện bán sạc dự phòng 10.000 mAh, giá 290.000 đồng. Mô tả hiện tại liệt kê: "10.000 mAh, sạc nhanh 20W, cổng USB-C, nặng 210 g". Người bán thấy nhiều khách hỏi đi hỏi lại "vậy sạc được mấy lần?" rồi không mua.',
   concept:{ name:'Tính năng → lợi ích → bằng chứng',
     body:'<b>Tính năng</b> là thứ sản phẩm có. <b>Lợi ích</b> là điều khách có được nhờ tính năng đó, nói bằng ngôn ngữ đời sống của họ. Khách không tự dịch "10.000 mAh" ra "sạc đầy điện thoại mấy lần"; nếu bạn không dịch giùm, họ phải hỏi, hoặc bỏ đi. Cách viết: lấy từng tính năng, hỏi "thì sao?" cho đến khi ra một cảnh cụ thể, rồi giữ lại con số làm bằng chứng. Lợi ích không thay tính năng; lợi ích đứng trước, tính năng đứng sau làm chứng.' },
@@ -121,7 +122,7 @@ BAI_ADD({ mod:'tp07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tp07-03', skill:'creative', read:'6 phút', t:'Viết cho "quý khách hàng" hay viết cho chị Lan?',
+{ id:'B:tp07-03', skill:'creative', read:'6 phút', assume:true, t:'Viết cho "quý khách hàng" hay viết cho chị Lan?',
   situation:'Một trung tâm tiếng Anh ở Đà Nẵng viết quảng cáo lớp giao tiếp: "Chúng tôi mang đến cho quý học viên mọi lứa tuổi môi trường học tập hiện đại". Tệp mục tiêu thật ra là nhân viên văn phòng 25–32 tuổi cần nói tiếng Anh khi họp với khách nước ngoài. Bài chạy hai tuần, 40 lượt nhắn, phần lớn là phụ huynh hỏi lớp cho con.',
   concept:{ name:'Viết cho một người',
     body:'Khi viết cho "mọi người", câu chữ tự động chung chung vì phải hợp với tất cả. Cách chữa: dựng <b>một người đọc cụ thể</b> — việc, một khoảnh khắc khó — nhưng lấy chất liệu từ khách thật, không bịa: chép lại 3 câu khách vừa mua hoặc vừa nhắn hỏi đã nói trong inbox, bình luận, cuộc gọi. Rồi viết như nhắn tin cho đúng người đó, dùng chính chữ của họ, xưng "bạn" thay "quý khách". Nhân vật tưởng tượng dễ thành định kiến; nhân vật dựng từ lời khách thật thì kiểm chứng được. Viết cho một người làm đúng người nhận ra mình, và làm sai người tự lọc ra.' },
@@ -178,7 +179,7 @@ BAI_ADD({ mod:'tp07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tp07-04', skill:'creative', read:'6 phút', t:'"Liên hệ ngay" hay "Nhắn chữ SIZE để được tư vấn trong 5 phút"?',
+{ id:'B:tp07-04', skill:'creative', read:'6 phút', assume:true, t:'"Liên hệ ngay" hay "Nhắn chữ SIZE để được tư vấn trong 5 phút"?',
   situation:'Một shop giày nữ trên Facebook kết thúc mọi bài bằng "Liên hệ ngay để được tư vấn!". Mỗi bài có khoảng 2.000 lượt đọc hết, 30 tin nhắn. Nhân viên phải hỏi lại từng người "chị đi size mấy, muốn mẫu nào". Shop thử kết bài bằng "Nhắn chữ SIZE + số chân, shop gửi ảnh mẫu còn hàng trong 5 phút".',
   concept:{ name:'Câu kêu gọi hành động (CTA) rõ',
     body:'CTA tốt trả lời ba câu người đọc đang tự hỏi: <b>làm gì</b> (một hành động duy nhất, dễ nhất có thể), <b>được gì ngay</b> (điều xảy ra sau khi làm), và <b>vì sao bây giờ</b> (nếu có hạn thật). "Liên hệ ngay" bắt người đọc tự nghĩ nên viết gì — mỗi lần phải nghĩ là một lần có người bỏ đi. CTA càng ít bước suy nghĩ thì càng nhiều người làm theo. Một hành động chính, nổi nhất; kênh phụ (gọi, ghé cửa hàng) để bên dưới cho nhóm khách cần. Chỉ hứa "trong 5 phút" nếu đội trả lời kịp thật.' },
@@ -238,10 +239,10 @@ BAI_ADD({ mod:'tp07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tp07-05', skill:'channel', read:'7 phút', t:'Ba dòng đầu caption: khách có bấm "xem thêm" không?',
+{ id:'B:tp07-05', skill:'channel', read:'7 phút', assume:true, t:'Ba dòng đầu caption: khách có bấm "xem thêm" không?',
   situation:'Một thương hiệu cà phê rang xay ở Buôn Ma Thuột đăng bài Facebook bán combo 500 g. Caption mở bằng: "Xin chào cả nhà! Hôm nay mình rất vui được chia sẻ với mọi người một câu chuyện về hành trình...". Thông tin quan trọng — giá 145.000 đồng, rang mộc, giao 2 ngày — nằm ở dòng thứ tám, sau nút "Xem thêm".',
   concept:{ name:'Vùng hiển thị trước "xem thêm"',
-    body:'Trên bảng tin Facebook và phần mô tả TikTok, người xem chỉ thấy <b>khoảng 2–3 dòng đầu</b> trước khi chữ bị cắt. Đây là toàn bộ quảng cáo đối với phần lớn người lướt. Ba dòng đầu phải tự đứng được: ai nên đọc, họ được gì, và một chi tiết cụ thể. Lời chào, câu chuyện dẫn, hashtag đều để sau. Với video TikTok, câu nói trong 2 giây đầu và chữ trên màn hình đóng vai trò tương tự.' },
+    body:'Trên bảng tin Facebook và phần mô tả TikTok, chữ bị cắt sau vài dòng đầu — theo quan sát thường gặp tại ngày kiểm 2026-11-07 là <b>khoảng 2–3 dòng</b>, nhưng số dòng thay đổi theo ứng dụng, thiết bị và phiên bản, nên hãy mở điện thoại của bạn và đếm trước khi viết. Phần hiện ra đó là toàn bộ quảng cáo đối với phần lớn người lướt. Ba dòng đầu phải tự đứng được: ai nên đọc, họ được gì, và một chi tiết cụ thể. Lời chào, câu chuyện dẫn, hashtag đều để sau. Với video TikTok, câu nói trong 2 giây đầu và chữ trên màn hình đóng vai trò tương tự.' },
   example:'Viết lại ba dòng đầu: "Cà phê rang mộc, không tẩm bơ, không hương liệu. 500 g pha được khoảng 25 ly phin, 145.000 đồng. Rang thứ Hai, giao tới Sài Gòn thứ Tư." Người chỉ đọc ba dòng vẫn biết sản phẩm là gì, giá mỗi ly khoảng 5.800 đồng, và độ tươi. Câu chuyện hành trình của vườn cà phê chuyển xuống dưới cho người muốn đọc thêm.',
   takeaway:'Coi ba dòng đầu là cả quảng cáo; phần dưới "xem thêm" chỉ dành cho người đã quan tâm.',
   points:["Người lướt bảng tin quyết định rất nhanh, nên dòng đầu phải cạnh tranh với ảnh và bài kế tiếp. Dòng nào chưa nêu được ai nên đọc, được gì thì bị bỏ qua.","Một chi tiết cụ thể như số ly pha được hay ngày rang cho khách thứ để tin, bởi tính từ chung chung ai cũng viết được còn con số thì phải có thật.","Phần dưới nút xem thêm vẫn có việc của nó: giữ câu chuyện vườn cà phê cho người đã quan tâm. Dời xuống chỉ đổi thứ tự đọc, không làm mất câu chuyện."],
@@ -298,7 +299,7 @@ BAI_ADD({ mod:'tp07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tp07-06', skill:'creative', read:'6 phút', t:'Banner 300×250 có chỗ cho bao nhiêu chữ?',
+{ id:'B:tp07-06', skill:'creative', read:'6 phút', assume:true, t:'Banner 300×250 có chỗ cho bao nhiêu chữ?',
   situation:'Một chuỗi nhà thuốc chạy banner hiển thị kích thước 300×250 trên các trang tin. Bản thiết kế đầu có 42 chữ: tên chuỗi, khẩu hiệu, bốn dòng ưu đãi, địa chỉ website, số hotline và nút "Xem ngay". Trên điện thoại, chữ nhỏ tới mức phải phóng to mới đọc được.',
   concept:{ name:'Một banner, một ý',
     body:'Banner nhỏ thường chỉ được liếc rất nhanh, bằng khoé mắt, khi người ta đang đọc thứ khác (không có con số thời gian chuẩn, nhưng đó là một cái liếc chứ không phải một lần đọc). Vì vậy nó chỉ mang được <b>một ý</b>: một lời hứa ngắn (mốc thực hành của bài này: khoảng 5–7 chữ, không phải quy chuẩn), một dấu hiệu nhận ra thương hiệu (logo, màu), và một nút. Những gì còn lại — điều kiện, địa chỉ, danh sách ưu đãi — để ở trang đích; nếu lời hứa có điều kiện thì kèm dấu * để khách biết còn điều kiện. Nhiều ưu đãi thì làm nhiều banner, mỗi cái một ưu đãi. Trước khi chạy, xem banner ở kích thước thật trên điện thoại: phải nheo mắt là chữ quá nhỏ hoặc nền rối.' },
@@ -355,7 +356,7 @@ BAI_ADD({ mod:'tp07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tp07-07', skill:'creative', read:'6 phút', t:'Câu 42 chữ này còn lại bao nhiêu nếu bỏ chữ thừa?',
+{ id:'B:tp07-07', skill:'creative', read:'6 phút', assume:true, t:'Câu 42 chữ này còn lại bao nhiêu nếu bỏ chữ thừa?',
   situation:'Một công ty dạy lái xe ô tô ở Hà Nội có đoạn quảng cáo: "Với mong muốn mang đến cho các bạn học viên một trải nghiệm học lái xe thật sự tốt nhất, chúng tôi xin trân trọng giới thiệu khoá học lái xe hạng B với lịch học vô cùng linh hoạt phù hợp." Câu dài 42 chữ, nhưng người đọc xong vẫn chưa biết lịch học thế nào.',
   concept:{ name:'Cắt chữ thừa',
     body:'Chữ thừa là chữ bỏ đi mà câu không mất nghĩa. Ba loại hay gặp: <b>đệm mở đầu</b> ("với mong muốn mang đến", "chúng tôi xin trân trọng"), <b>trạng từ phóng đại</b> ("thật sự", "vô cùng", "tuyệt đối"), và <b>tính từ trống</b> ("linh hoạt", "phù hợp" khi không nói linh hoạt thế nào). Cắt xong, chỗ trống thường lộ ra điều câu văn đang tránh nói — và đó là chỗ cần điền dữ kiện. Ngoại lệ: văn bản chính thức (thông báo ngân hàng, điều khoản) có thể giữ một cụm đệm ngắn để báo giọng; vẫn bỏ đệm chồng đệm.' },
@@ -415,7 +416,7 @@ BAI_ADD({ mod:'tp07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tp07-08', skill:'channel', read:'7 phút', t:'Mô tả sản phẩm trên sàn: khách đọc gì trước khi thêm vào giỏ?',
+{ id:'B:tp07-08', skill:'channel', read:'7 phút', assume:true, t:'Mô tả sản phẩm trên sàn: khách đọc gì trước khi thêm vào giỏ?',
   situation:'Một shop trên Shopee bán nồi chiên không dầu 5 lít, giá 1.290.000 đồng. Tiêu đề: "Nồi chiên không dầu cao cấp chính hãng giá tốt siêu sale". Mô tả mở bằng đoạn văn về "phong cách sống lành mạnh". Khung hỏi đáp có hàng chục câu giống nhau: "nướng được gà nguyên con không?", "lòng nồi có tháo rửa được không?".',
   concept:{ name:'Mô tả trả lời câu hỏi trước khi khách hỏi',
     body:'Trên sàn, khách so nhiều shop và lướt rất nhanh; ảnh đầu, giá và đánh giá thường quyết định họ có bấm vào hay không. Mô tả là chỗ giữ người đã quan tâm và trả lời nốt điều họ còn ngại. <b>Tiêu đề</b> cần từ khoá người ta gõ thật — xem gợi ý hiện ra khi gõ vào thanh tìm kiếm của sàn — không cần tính từ. <b>Mô tả</b> mở bằng 3–5 gạch đầu dòng, mỗi dòng một dữ kiện, trả lời đúng câu khách hay hỏi. Nguồn tốt nhất là khung hỏi đáp và đánh giá của chính shop và của đối thủ: câu hỏi lặp lại là thông tin mô tả đang thiếu.' },
@@ -472,7 +473,7 @@ BAI_ADD({ mod:'tp07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tp07-09', skill:'creative', read:'7 phút', t:'Trước khi bấm chạy: thay tên đối thủ vào, quảng cáo còn đúng không?',
+{ id:'B:tp07-09', skill:'creative', read:'7 phút', assume:true, t:'Trước khi bấm chạy: thay tên đối thủ vào, quảng cáo còn đúng không?',
   situation:'Một thương hiệu nước mắm ở Phú Quốc sắp chạy quảng cáo: "Nước mắm truyền thống thơm ngon đậm đà, chất lượng hàng đầu, được hàng triệu gia đình tin dùng." Ngân sách đợt này 30 triệu đồng. Trước khi duyệt, trưởng nhóm yêu cầu kiểm tra bản viết bằng ba phép thử.',
   concept:{ name:'Ba phép thử trước khi chạy',
     body:'<b>1. Thay tên đối thủ:</b> thay tên mình bằng tên một đối thủ; nếu câu vẫn đúng, câu chưa nói gì riêng. <b>2. Đọc to:</b> đọc thành tiếng như nói với một người bạn; chỗ nào vấp hoặc nghe như văn thông báo là chỗ cần viết lại. <b>3. Hỏi "chứng minh bằng gì?":</b> với mỗi lời khen, hỏi bằng chứng; không có thì bỏ hoặc thay bằng dữ kiện. Ba phép thử mất khoảng mười phút, rẻ hơn nhiều so với tiền chạy một bản viết rỗng. Giới hạn: phép thử 1 chỉ loại câu rỗng; câu đúng nhưng đối thủ cũng nói được y như vậy vẫn lọt, nên phải tìm điều chỉ mình có.' },

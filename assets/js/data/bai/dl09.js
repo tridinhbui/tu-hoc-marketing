@@ -4,7 +4,7 @@
 BAI_ADD({ mod:'dl09', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:dl09-01', skill:'comm', read:'6 phút', t:'Sếp chỉ có 2 phút: bạn nói câu nào đầu tiên?',
+{ id:'B:dl09-01', skill:'comm', read:'6 phút', assume:true, t:'Sếp chỉ có 2 phút: bạn nói câu nào đầu tiên?',
   situation:'Linh phụ trách marketing online cho một chuỗi trà sữa ở Hà Nội. Họp sáng thứ Hai, giám đốc hỏi: "Tháng 9 thế nào?". Linh mở đầu: "Dạ tháng này bên em chạy 3 chiến dịch, tổng chi 120 triệu, lượt hiển thị 2,4 triệu, CTR 1,8%…". Tới phút thứ hai, giám đốc ngắt lời: "Tóm lại tốt hay không tốt, em cần anh quyết gì?".',
   concept:{ name:'Kết luận trước, số sau',
     body:'Người nghe nhớ rõ nhất câu đầu tiên. Vì vậy câu mở là <b>kết luận</b> (tốt hay xấu so với mục tiêu) và <b>việc cần sếp quyết</b>, tức việc mà thiếu câu trả lời của sếp thì bạn không đi tiếp được. Sau đó mới đến hai, ba con số làm bằng chứng; chi tiết quy trình để dành khi được hỏi. Ngoại lệ: khi sếp chủ động xin diễn biến ("kể anh nghe"), hãy nói kết quả một câu rồi kể theo thời gian, vì người nghe đã tự chọn cách nghe.' },
@@ -64,7 +64,7 @@ BAI_ADD({ mod:'dl09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:dl09-02', skill:'comm', read:'6 phút', t:'Slide có 4 biểu đồ và 12 con số: sếp nhớ được gì?',
+{ id:'B:dl09-02', skill:'comm', read:'6 phút', assume:true, t:'Slide có 4 biểu đồ và 12 con số: sếp nhớ được gì?',
   situation:'Tuấn làm báo cáo quý cho một thương hiệu nước mắm bán trên sàn. Slide số 3 của anh có 4 biểu đồ (doanh thu, đơn, chi phí quảng cáo, đánh giá sao) và 12 con số in đậm. Tiêu đề slide là "Tổng quan quý 3". Sau buổi họp, sếp hỏi lại: "Quý này mình tăng hay giảm nhỉ?".',
   concept:{ name:'Một slide, một ý',
     body:'Mỗi slide chỉ nên chứng minh một ý, và ý đó viết thành <b>tiêu đề dạng câu</b> (có động từ, có kết luận), không phải nhãn chủ đề. Biểu đồ và con số bên dưới chỉ ở lại nếu chúng chứng minh câu tiêu đề. Nhiều ý thì tách thành nhiều slide. Mẹo kiểm tra: đọc liền các tiêu đề slide từ đầu đến cuối, nếu thành một câu chuyện đủ nghĩa thì bộ slide ổn.' },
@@ -124,7 +124,7 @@ BAI_ADD({ mod:'dl09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:dl09-03', skill:'measure', read:'7 phút', t:'"Doanh thu 850 triệu" — cao hay thấp?',
+{ id:'B:dl09-03', skill:'measure', read:'7 phút', assume:true, t:'"Doanh thu 850 triệu" — cao hay thấp?',
   situation:'Hương báo cáo: "Tháng 10 cửa hàng online bán được 850 triệu." Sếp hỏi: "Thế là tốt hay không?". Hương lúng túng. Số liệu cô có: kế hoạch tháng 10 là 800 triệu, tháng 10 năm ngoái đạt 900 triệu, tháng 9 vừa rồi đạt 700 triệu. Một đối thủ cùng phân khúc báo tăng trưởng 20% so với cùng kỳ.',
   concept:{ name:'Một con số đứng một mình không nói gì',
     body:'Con số chỉ có nghĩa khi đặt cạnh một <b>mốc so sánh</b>. Ba mốc hay dùng: <b>kế hoạch</b> (có làm đúng cam kết không), <b>cùng kỳ năm trước</b> (loại bỏ yếu tố mùa vụ), <b>kỳ trước</b> (xu hướng ngắn hạn, nhưng dễ lẫn mùa vụ). Thêm mốc thứ tư khi có: <b>thị trường hoặc đối thủ</b>. Chọn mốc phù hợp với câu hỏi, và nói rõ đang so với mốc nào; đừng chỉ chọn mốc làm mình đẹp.' },
@@ -184,7 +184,7 @@ BAI_ADD({ mod:'dl09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:dl09-04', skill:'comm', read:'6 phút', t:'"CAC 187.432 đồng" hay "khoảng 190 nghìn"?',
+{ id:'B:dl09-04', skill:'comm', read:'6 phút', assume:true, t:'"CAC 187.432 đồng" hay "khoảng 190 nghìn"?',
   situation:'Minh báo cáo cho ban giám đốc một chuỗi phòng tập: "Chi phí có một hội viên mới quý này là 187.432 đồng, tỉ lệ gia hạn 63,47%, doanh thu trung bình mỗi hội viên 2.841.560 đồng." Cuối buổi, không ai nhắc lại được con số nào. Một giám đốc hỏi: "Chi phí có khách mới là bao nhiêu nhỉ, hai trăm hay ba trăm nghìn?".',
   concept:{ name:'Làm tròn để người nghe nhớ',
     body:'Khi nói, người nghe chỉ giữ được 2–3 chữ số có nghĩa. Làm tròn tới mức vẫn đủ để quyết định: 187.432 đồng thành <b>khoảng 190 nghìn</b>, 63,47% thành <b>khoảng 63%</b>, 2.841.560 thành <b>2,8 triệu</b>. Số chính xác vẫn để trong file đính kèm. Hai điều cần giữ: làm tròn nhất quán (cùng đơn vị, cùng mức), và không làm tròn khi chênh lệch nhỏ chính là điều cần nói (ví dụ 49,6% và 50,4%) hoặc khi số thật nằm sát ngưỡng quyết định.' },
@@ -241,7 +241,7 @@ BAI_ADD({ mod:'dl09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:dl09-05', skill:'measure', read:'7 phút', t:'"Tăng 200%" hay "tăng 30 đơn"?',
+{ id:'B:dl09-05', skill:'measure', read:'7 phút', assume:true, t:'"Tăng 200%" hay "tăng 30 đơn"?',
   situation:'Một thương hiệu mỹ phẩm thuần chay chạy thử kênh Zalo. Báo cáo tuần ghi: "Đơn từ Zalo tăng 200%!". Sếp hào hứng định dồn thêm ngân sách. Nhìn kỹ: tuần trước Zalo có 15 đơn, tuần này 45 đơn. Cùng tuần, kênh Shopee tăng từ 1.200 lên 1.320 đơn, tức tăng 10%, và không ai nhắc tới.',
   concept:{ name:'Phần trăm và số tuyệt đối đi cùng nhau',
     body:'Phần trăm cho biết <b>tốc độ</b>, số tuyệt đối cho biết <b>quy mô</b>. Trên nền nhỏ, phần trăm phóng đại: từ 15 lên 45 là tăng 200% nhưng chỉ thêm 30 đơn. Trên nền lớn, phần trăm nhỏ lại che mất khối lượng: 10% của 1.200 là 120 đơn, gấp 4 lần Zalo. Khi báo cáo, nói cả hai: "tăng 200%, tức thêm 30 đơn". Với tỉ lệ (CTR, tỉ lệ chuyển đổi), còn phải phân biệt <b>điểm phần trăm</b> với <b>phần trăm</b>.' },
@@ -301,7 +301,7 @@ BAI_ADD({ mod:'dl09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:dl09-06', skill:'measure', read:'7 phút', t:'Cột này cao gấp ba cột kia — thật vậy không?',
+{ id:'B:dl09-06', skill:'measure', read:'7 phút', assume:true, t:'Cột này cao gấp ba cột kia — thật vậy không?',
   situation:'Trong buổi họp, đội agency chiếu biểu đồ cột so sánh tỉ lệ nhớ thương hiệu trước và sau chiến dịch của một hãng bánh. Cột "sau" cao gần gấp ba cột "trước". Sếp khen: "Chiến dịch hiệu quả quá!". Bạn nhìn kỹ: trục dọc bắt đầu từ 40%, cột trước là 44%, cột sau là 52%.',
   concept:{ name:'Biểu đồ gây hiểu lầm vì trục không bắt đầu từ 0',
     body:'Với <b>biểu đồ cột</b>, mắt người so chiều cao cột. Nếu trục dọc cắt ở 40% thay vì 0, phần thấy được chỉ là phần trên 40%, nên chênh lệch nhỏ bị phóng to nhiều lần. Luật: biểu đồ cột phải bắt đầu từ 0. Biểu đồ đường thì có thể cắt trục để thấy xu hướng, nhưng phải ghi rõ mốc trục. Các bẫy khác: trục hai bên với hai thang đo khác nhau, chọn khung thời gian ngắn để giấu xu hướng dài.' },
@@ -358,7 +358,7 @@ BAI_ADD({ mod:'dl09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:dl09-07', skill:'measure', read:'7 phút', t:'Con số này chắc tới đâu — và bạn có nói ra không?',
+{ id:'B:dl09-07', skill:'measure', read:'7 phút', assume:true, t:'Con số này chắc tới đâu — và bạn có nói ra không?',
   situation:'Quân khảo sát 80 khách hàng của một chuỗi cà phê về mẫu ly mới: 55% thích mẫu mới. Anh báo sếp: "Khách thích mẫu mới." Sếp duyệt in 200.000 ly. Sau khi ra mắt, phản hồi chia đôi. Sếp hỏi: "Sao em nói khách thích?". Nhìn lại, 80 người là mẫu nhỏ và phần lớn là khách ở một cửa hàng.',
   concept:{ name:'Nói kèm độ chắc chắn',
     body:'Mỗi con số có một độ chắc chắn, phụ thuộc <b>cỡ mẫu</b>, <b>ai được hỏi</b> và <b>cách đo</b>. Quy tắc nhẩm: với mẫu ngẫu nhiên, sai số ở mức tin cậy 95% xấp xỉ 1/√n. Mẫu 80 người cho ±11 điểm, nên 55% có thể nằm từ 44% đến 66%; muốn giảm một nửa sai số phải tăng mẫu gấp bốn. Nhưng ±11 là mức tối thiểu: mẫu không ngẫu nhiên (cùng một cửa hàng) còn lệch hơn nữa và công thức không đo được phần lệch đó. Khi báo cáo, nói rõ ba mức: <b>chắc</b> (đủ để quyết), <b>tín hiệu</b> (đáng thử tiếp), <b>chưa rõ</b> (cần thêm dữ liệu).' },
@@ -415,7 +415,7 @@ BAI_ADD({ mod:'dl09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:dl09-08', skill:'comm', read:'7 phút', t:'Số đã đúng, sếp vẫn hỏi "Vậy thì sao?"',
+{ id:'B:dl09-08', skill:'comm', read:'7 phút', assume:true, t:'Số đã đúng, sếp vẫn hỏi "Vậy thì sao?"',
   situation:'Nga báo cáo: "Tỉ lệ khách bỏ giỏ hàng trên website tháng này là 72%, tăng từ 65% tháng trước." Sếp gật đầu, rồi hỏi: "Vậy thì sao? Mình mất bao nhiêu tiền, và em định làm gì?". Nga không trả lời được, vì cô chưa nghĩ tới bước đó.',
   concept:{ name:'Thang "vậy thì sao": số → ý nghĩa → hành động',
     body:'Một con số chỉ xong khi đi đủ ba bậc. <b>Số:</b> điều gì đã xảy ra. <b>Ý nghĩa:</b> nó ảnh hưởng tới tiền, khách, hay mục tiêu thế nào, tốt nhất quy ra tiền. <b>Hành động:</b> bạn đề xuất làm gì, cần gì từ người nghe. Trước khi đưa một con số vào báo cáo, tự hỏi "vậy thì sao?" cho tới khi câu trả lời là một việc cụ thể. Nếu không có câu trả lời nào, con số đó có lẽ không cần nằm trong báo cáo.' },
@@ -472,7 +472,7 @@ BAI_ADD({ mod:'dl09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:dl09-09', skill:'comm', read:'6 phút', t:'Báo cáo tuần dài 3 trang — ai đọc?',
+{ id:'B:dl09-09', skill:'comm', read:'6 phút', assume:true, t:'Báo cáo tuần dài 3 trang — ai đọc?',
   situation:'Mỗi thứ Sáu, Phúc gửi sếp báo cáo tuần 3 trang: bảng số từng kênh, ảnh chụp dashboard, danh sách việc đã làm. Sếp thừa nhận chỉ đọc lướt dòng đầu. Tuần trước, một vấn đề quan trọng, kho sắp hết mã sản phẩm bán chạy, nằm ở trang 3 và không ai thấy cho tới khi hết hàng thật.',
   concept:{ name:'Báo cáo tuần 5 dòng',
     body:'Một báo cáo tuần sếp đọc được trong 1 phút có 5 dòng cố định: <b>1. Kết quả chính</b> so với mục tiêu tuần. <b>2. Điều tốt</b> và vì sao. <b>3. Điều xấu hoặc rủi ro</b>. <b>4. Việc tuần tới</b>. <b>5. Cần sếp hỗ trợ/quyết gì</b>. Dòng 3 chỉ chứa 1–2 rủi ro: chọn việc có tác động lớn nhất tới tiền hoặc khách và còn kịp xử lý, không phải việc dễ thấy nhất trên dashboard. Bảng số chi tiết gắn kèm cho ai muốn đào sâu.' },
@@ -532,7 +532,7 @@ BAI_ADD({ mod:'dl09', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:dl09-10', skill:'comm', read:'7 phút', t:'Sếp hỏi câu bạn chưa chuẩn bị: trả lời sao?',
+{ id:'B:dl09-10', skill:'comm', read:'7 phút', assume:true, t:'Sếp hỏi câu bạn chưa chuẩn bị: trả lời sao?',
   situation:'Trang trình bày kết quả chiến dịch ra mắt sữa hạt: 2.500 đơn, chi phí mỗi đơn 80 nghìn, đạt mục tiêu. Sếp hỏi liền ba câu: "Bao nhiêu phần trăm là khách mới? Nếu không chạy quảng cáo thì có bán được không? Lãi thật là bao nhiêu?". Trang chỉ trả lời được câu đầu, hai câu sau cô ấp úng và đoán bừa một con số.',
   concept:{ name:'Chuẩn bị trước câu hỏi khó',
     body:'Câu hỏi khó của sếp thường rơi vào vài nhóm quen thuộc: <b>so với cái gì</b>, <b>nhờ mình hay nhờ yếu tố khác</b> (mùa vụ, khuyến mãi, tự nhiên), <b>lãi thật sau mọi chi phí</b>, <b>có bền không</b>, và <b>nếu làm lại thì sao</b>. Trước buổi họp, viết ra 5 câu khó nhất và trả lời sẵn. Gặp câu chưa chuẩn bị: nói điều mình biết, nói rõ điều chưa biết, hẹn thời gian trả lời. Không đoán một con số cho qua chuyện.' },

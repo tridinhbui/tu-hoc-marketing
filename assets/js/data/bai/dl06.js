@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'dl06', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:dl06-01', skill:'measure', read:'6 phút', t:'Khách xem TikTok, rồi tìm Google, rồi mới mua: ai được công?',
+{ id:'B:dl06-01', skill:'measure', read:'6 phút', assume:true, t:'Khách xem TikTok, rồi tìm Google, rồi mới mua: ai được công?',
   situation:'Shop túi vải của Hà chạy ba kênh. Một khách tiêu biểu: thấy video TikTok hôm thứ Hai, thứ Tư bấm quảng cáo Facebook xem lại, thứ Sáu gõ tên shop trên Google rồi mua đơn 600.000đ. Báo cáo nguồn lưu lượng theo phiên của Google Analytics (nguồn của phiên là chạm cuối trước khi mua) ghi toàn bộ 600.000đ cho Google. Hà định cắt TikTok vì "không ra đơn".',
   concept:{ name:'Last-click: ghi công cho chạm cuối',
     body:'Một đơn hàng thường đi qua nhiều <b>điểm chạm</b>. Mô hình <b>last-click</b> dồn 100% công cho điểm chạm cuối cùng trước khi mua. Nó đơn giản và dễ đo, nhưng thiên vị các kênh "đứng ở cửa" như tìm kiếm tên thương hiệu, và bỏ qua các kênh làm khách biết đến lần đầu. Dùng last-click để cắt kênh là dễ cắt nhầm chính kênh đang nuôi phễu.' },
@@ -63,7 +63,7 @@ BAI_ADD({ mod:'dl06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:dl06-02', skill:'measure', read:'7 phút', t:'Cùng một tháng, bốn mô hình cho bốn kết quả: tin cái nào?',
+{ id:'B:dl06-02', skill:'measure', read:'7 phút', assume:true, t:'Cùng một tháng, bốn mô hình cho bốn kết quả: tin cái nào?',
   situation:'Cửa hàng mỹ phẩm online của Linh có 100 đơn tháng này, mỗi đơn 500.000đ. Hành trình không giống nhau: 40 đơn đi TikTok → Facebook → Email → Google, 30 đơn đi Facebook → Google, 30 đơn chỉ có một chạm Google. Linh xuất dữ liệu ra bảng tính, chia công theo bốn mô hình và thấy doanh thu mỗi kênh nhảy lung tung. Cô cần quyết định chia ngân sách quý sau.',
   concept:{ name:'Bốn mô hình ghi công đa chạm',
     body:'<b>First-click</b>: 100% cho chạm đầu. <b>Last-click</b>: 100% cho chạm cuối. <b>Tuyến tính</b>: chia đều cho mọi chạm. <b>Theo vị trí</b>: thường 40% chạm đầu, 40% chạm cuối, 20% chia cho các chạm giữa; con số 40-20-40 là quy ước, không phải quy luật. Cả bốn chỉ chia lại cùng một tổng theo một giả định về chạm nào quan trọng; không mô hình nào cho biết đơn có phát sinh nhờ kênh đó hay không. Điều đó chỉ kiểm được bằng thử nghiệm tăng thêm (tắt hoặc giảm kênh ở một vùng rồi so sánh). Vì vậy đặt các mô hình cạnh nhau, tìm kênh bị đổi thứ hạng nhiều nhất, rồi thử đúng kênh đó. <b>Thực trạng công cụ</b>: GA4 và Google Ads đã gỡ first-click, tuyến tính, suy giảm theo thời gian và theo vị trí từ cuối 2023; còn <b>data-driven</b> (máy tự chia công) và các biến thể <b>last-click</b> (theo Google Analytics Help và Google Ads Help, 10/2026).' },
@@ -116,7 +116,7 @@ BAI_ADD({ mod:'dl06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:dl06-03', skill:'measure', read:'6 phút', t:'Ba nền tảng cộng lại 180 triệu, két chỉ có 100 triệu?',
+{ id:'B:dl06-03', skill:'measure', read:'6 phút', assume:true, t:'Ba nền tảng cộng lại 180 triệu, két chỉ có 100 triệu?',
   situation:'Anh Tuấn bán đồ gia dụng online. Cuối tháng anh cộng báo cáo: Facebook nói mang về 80 triệu, TikTok 55 triệu, Google 45 triệu, tổng 180 triệu. Nhưng sổ đơn thực tế chỉ có 100 triệu. Anh nghi có nền tảng gian lận và định cắt nền tảng "khai khống" nhiều nhất.',
   concept:{ name:'Mỗi nền tảng tự nhận công',
     body:'Mỗi nền tảng chỉ thấy các chạm trên sân của mình, và ghi nhận đơn nếu khách từng xem hoặc bấm quảng cáo của nó trong cửa sổ ghi nhận. Một khách chạm cả ba nền tảng sẽ được <b>cả ba cùng nhận</b>. Đây không phải gian lận mà là cách đo. Vì vậy không bao giờ cộng báo cáo các nền tảng; tổng thật phải lấy từ sổ đơn hoặc công cụ đo chung.' },
@@ -172,7 +172,7 @@ BAI_ADD({ mod:'dl06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:dl06-04', skill:'measure', read:'6 phút', t:'Khách xem quảng cáo 20 ngày trước mới mua: có tính không?',
+{ id:'B:dl06-04', skill:'measure', read:'6 phút', assume:true, t:'Khách xem quảng cáo 20 ngày trước mới mua: có tính không?',
   situation:'Shop nội thất của Minh bán sofa giá 12 triệu. Khách thường cân nhắc 2–4 tuần. Báo cáo Facebook đang để cửa sổ "1 ngày sau khi bấm" và cho ra rất ít đơn; Minh định cắt quảng cáo. Bạn của Minh bán son môi thì dùng đúng cài đặt đó và thấy ổn.',
   concept:{ name:'Cửa sổ ghi nhận (attribution window)',
     body:'<b>Cửa sổ ghi nhận</b> là khoảng thời gian sau lượt bấm (hoặc lượt xem) mà đơn hàng vẫn được tính cho quảng cáo. Cửa sổ ngắn bỏ sót đơn của sản phẩm cân nhắc lâu; cửa sổ dài gom cả đơn đằng nào cũng xảy ra. Chọn cửa sổ theo <b>thời gian cân nhắc thật</b> của khách, và giữ cố định khi so sánh giữa các tháng. Các lựa chọn cửa sổ của Meta đã đổi nhiều lần, nên hãy xem tuỳ chọn hiện có trong Ads Manager.' },
@@ -228,7 +228,7 @@ BAI_ADD({ mod:'dl06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:dl06-05', skill:'measure', read:'6 phút', t:'Link giống nhau, báo cáo gộp hết vào "khác": sửa thế nào?',
+{ id:'B:dl06-05', skill:'measure', read:'6 phút', assume:true, t:'Link giống nhau, báo cáo gộp hết vào "khác": sửa thế nào?',
   situation:'Shop giày của Nam gắn link website vào bio Instagram, tin nhắn Zalo, bài KOL và email. Google Analytics ghi 45% lượt truy cập là "direct" hoặc "khác". Nam không biết đợt KOL tuần trước kéo được bao nhiêu khách, và mỗi người trong team đặt tên nguồn một kiểu.',
   concept:{ name:'UTM chuẩn và quy ước đặt tên',
     body:'<b>UTM</b> là các tham số gắn sau link để công cụ đo biết khách đến từ đâu: <b>utm_source</b> (nơi gửi: facebook, zalo), <b>utm_medium</b> (loại kênh: social, email, cpc), <b>utm_campaign</b> (đợt: sale-9-9). Giá trị viết thường, không dấu, dùng gạch ngang, theo một bảng quy ước chung: "Facebook", "fb" và "FB" bị đếm thành ba nguồn. Riêng medium nên dùng giá trị GA4 nhận diện; tên tự chế như "message" hay "kol" thường rơi vào nhóm Unassigned.' },
@@ -288,7 +288,7 @@ BAI_ADD({ mod:'dl06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:dl06-06', skill:'measure', read:'6 phút', t:'Hỏi thẳng khách "biết shop qua đâu" có đáng tin không?',
+{ id:'B:dl06-06', skill:'measure', read:'6 phút', assume:true, t:'Hỏi thẳng khách "biết shop qua đâu" có đáng tin không?',
   situation:'Tiệm bánh kem của chị Thu nhận đơn qua website, Zalo và điện thoại. Google Analytics chỉ thấy đơn web. Chị thêm một câu bắt buộc ở bước đặt hàng: "Bạn biết tiệm qua đâu?" với 6 lựa chọn. Sau 200 đơn, 38% chọn "bạn bè giới thiệu", một kênh chị chưa từng đo.',
   concept:{ name:'Ghi nhận tự khai (self-reported attribution)',
     body:'Hỏi khách trực tiếp bắt được những thứ công cụ không thấy: truyền miệng, podcast, video xem trên điện thoại người khác, biển hiệu. Nó thường chỉ ra <b>chạm đầu</b> mà khách nhớ, không phải chạm cuối. Điểm yếu: trí nhớ sai, khách chọn lựa chọn đầu danh sách. Cách dùng tốt là đặt cạnh dữ liệu công cụ để so, xáo thứ tự lựa chọn và có ô "khác".' },
@@ -348,7 +348,7 @@ BAI_ADD({ mod:'dl06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:dl06-07', skill:'measure', read:'7 phút', t:'Tắt quảng cáo ở Đà Nẵng một tháng để biết nó đáng bao nhiêu?',
+{ id:'B:dl06-07', skill:'measure', read:'7 phút', assume:true, t:'Tắt quảng cáo ở Đà Nẵng một tháng để biết nó đáng bao nhiêu?',
   situation:'Chuỗi trà Ngọc bán ở Hà Nội và Đà Nẵng, quy mô và mùa vụ khá giống nhau. Facebook báo quảng cáo mang về 40% doanh thu. Ngọc nghi ngờ vì nhiều khách là khách quen. Cô đề xuất: tháng 10 tắt quảng cáo Facebook ở Đà Nẵng, giữ nguyên ở Hà Nội, rồi so.',
   concept:{ name:'Đo tăng thêm (incrementality) bằng vùng đối chứng',
     body:'<b>Doanh thu tăng thêm</b> là phần sẽ mất nếu không chạy kênh đó, khác với doanh thu kênh tự nhận. Cách đơn giản: chọn hai vùng giống nhau, tắt kênh ở một vùng (<b>vùng thử</b>), giữ ở vùng kia (<b>vùng đối chứng</b>), so mức thay đổi của hai bên so với trước. Phần chênh là tác động thật. Cần đủ thời gian và hai vùng đủ giống.' },
@@ -404,7 +404,7 @@ BAI_ADD({ mod:'dl06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:dl06-08', skill:'measure', read:'7 phút', t:'TV, TikTok, sale, mùa lễ cùng lúc: cái nào đẩy doanh số?',
+{ id:'B:dl06-08', skill:'measure', read:'7 phút', assume:true, t:'TV, TikTok, sale, mùa lễ cùng lúc: cái nào đẩy doanh số?',
   situation:'Thương hiệu nước mắm của anh Phúc có 2 năm số liệu tuần: doanh thu, chi TV, chi TikTok, chi Facebook, tuần khuyến mãi, Tết. Doanh thu tăng mạnh mỗi dịp Tết, cũng là lúc anh chi nhiều nhất cho mọi kênh. Anh không biết phần tăng là do quảng cáo hay do Tết.',
   concept:{ name:'Marketing mix modeling ở mức trực giác',
     body:'<b>Marketing mix modeling</b> (MMM) nhìn nhiều tuần số liệu tổng hợp để ước lượng mỗi yếu tố đóng góp bao nhiêu vào doanh thu: một phần <b>nền</b> (bán dù không quảng cáo), phần do mùa vụ, giá, khuyến mãi, và phần của từng kênh. Nó không cần theo dấu từng khách nên đo được TV, biển quảng cáo, đơn offline. Điều kiện: đủ dữ liệu, và chi tiêu các kênh phải có lúc lên lúc xuống khác nhau.' },
@@ -460,7 +460,7 @@ BAI_ADD({ mod:'dl06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:dl06-09', skill:'measure', read:'6 phút', t:'Khách xem Facebook rồi ra cửa hàng mua: ai ghi công?',
+{ id:'B:dl06-09', skill:'measure', read:'6 phút', assume:true, t:'Khách xem Facebook rồi ra cửa hàng mua: ai ghi công?',
   situation:'Chuỗi kính mắt của chị Mai có 5 cửa hàng và một website. 70% doanh thu ở cửa hàng. Facebook báo ROAS 1,2 vì chỉ thấy đơn web; nhóm vận hành đề xuất cắt quảng cáo. Nhân viên cửa hàng lại kể nhiều khách đưa điện thoại ra hỏi "mẫu trong quảng cáo này".',
   concept:{ name:'Đơn offline sau khi xem online và kênh thương hiệu',
     body:'Khi phần lớn khách mua tại cửa hàng, số đo online chỉ thấy <b>phần nổi</b>. Có ba cách bắt thêm: mã ưu đãi riêng cho quảng cáo, hỏi khách tại quầy, so doanh thu khu có chạy với khu không chạy. Mã chỉ bắt người nhớ dùng nó, nên cần một khảo sát nhỏ để ước tỉ lệ dùng mã rồi mới suy ra số khách có chạm. Có SĐT khách đồng ý thì còn đối chiếu được với danh sách người đã tương tác quảng cáo.' },
@@ -509,11 +509,11 @@ BAI_ADD({ mod:'dl06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:dl06-10', skill:'measure', read:'6 phút', t:'Shop 30 triệu/tháng có cần công cụ ghi công đắt tiền?',
+{ id:'B:dl06-10', skill:'measure', read:'6 phút', assume:true, t:'Shop 30 triệu/tháng có cần công cụ ghi công đắt tiền?',
   situation:'Bạn Khoa bán đồ handmade, doanh thu 30 triệu/tháng, chi quảng cáo 5 triệu trên TikTok và Facebook. Một đơn vị chào gói phần mềm ghi công đa chạm 3 triệu/tháng, hứa "biết chính xác kênh nào ra tiền". Khoa đang phân vân.',
   concept:{ name:'Chọn cách ghi công theo quy mô',
-    body:'Cách đo phải rẻ hơn nhiều so với giá trị của quyết định nó giúp đưa ra. <b>Shop nhỏ</b>: sổ đơn làm gốc, UTM chuẩn, câu hỏi "biết qua đâu", mã riêng từng kênh, thỉnh thoảng tắt thử một kênh. <b>Shop vừa</b>: đối chiếu data-driven với last-click trong GA4 miễn phí (GA4/Google Ads đã gỡ các mô hình quy tắc như theo vị trí từ cuối 2023; muốn dùng thì tự tính trên bảng tính — kiểm theo Google Analytics Help, 10/2026), thử nghiệm vùng định kỳ. <b>Doanh nghiệp lớn</b>, nhiều kênh offline: MMM kết hợp thử nghiệm tăng thêm. Phép thử chung: ngân sách × tỉ lệ có thể đang phân bổ sai phải lớn hơn rõ rệt phí công cụ.' },
-  example:'Gói 3 triệu bằng 60% ngân sách quảng cáo và 10% doanh thu. Dù phần mềm giúp tiết kiệm 20% chi quảng cáo lãng phí, Khoa chỉ đỡ 1 triệu, lỗ 2 triệu mỗi tháng. Khoa chọn: UTM chuẩn, hỏi khách khi chốt đơn, mã giảm riêng cho TikTok và Facebook, mỗi quý tắt một kênh 4 tuần rồi so với 4 tuần trước. Shop chỉ vài chục đơn mỗi tháng nên Khoa chỉ tin khi đơn tụt hơn mức dao động bình thường; chênh nhỏ thì coi là chưa rõ. Quy tắc nhẩm (minh hoạ): chỉ cân nhắc nâng cấp khi chi quảng cáo trên khoảng 100 triệu/tháng và có hơn 3 kênh, vì lúc đó phân bổ sai 10% đã tốn gấp ba phí công cụ.',
+    body:'Cách đo phải rẻ hơn nhiều so với giá trị của quyết định nó giúp đưa ra. <b>Shop nhỏ</b>: sổ đơn làm gốc, UTM chuẩn, câu hỏi "biết qua đâu", mã riêng từng kênh, thỉnh thoảng tắt thử một kênh. <b>Shop vừa</b>: đối chiếu data-driven với last-click trong GA4 miễn phí (GA4/Google Ads đã gỡ các mô hình quy tắc như theo vị trí từ cuối 2023; muốn dùng thì tự tính trên bảng tính — kiểm theo Google Analytics Help, 10/2026), thử nghiệm vùng định kỳ. <b>Doanh nghiệp lớn</b>, nhiều kênh offline: MMM kết hợp thử nghiệm tăng thêm. Phép thử chung: ngân sách × tỉ lệ đặt sai kênh × chênh iROAS × lãi gộp (tiền đặt sai vẫn ra doanh thu, chỉ mất phần chênh; có biên đóng góp thì dùng biên đó) phải lớn hơn rõ rệt phí công cụ. Đây là cận trên, vì công cụ không sửa hết phần sai.' },
+  example:'Gói 3 triệu bằng 60% ngân sách quảng cáo và 10% doanh thu. Dù phần mềm giúp tiết kiệm 20% chi quảng cáo lãng phí, Khoa chỉ đỡ 1 triệu, lỗ 2 triệu mỗi tháng. Khoa chọn: UTM chuẩn, hỏi khách khi chốt đơn, mã giảm riêng cho TikTok và Facebook, mỗi quý tắt một kênh 4 tuần rồi so với 4 tuần trước. Shop chỉ vài chục đơn mỗi tháng nên Khoa chỉ tin khi đơn tụt hơn mức dao động bình thường; chênh nhỏ thì coi là chưa rõ. Quy tắc nhẩm (minh hoạ): chỉ cân nhắc nâng cấp khi chi quảng cáo trên khoảng 400 triệu/tháng và có hơn 3 kênh: với 10% ngân sách đặt sai, chênh iROAS 0,8 và lãi gộp 30%, lãi mất khoảng 400 × 10% × 0,8 × 30% ≈ 9,6 triệu, gấp ba phí công cụ. Ở 100 triệu/tháng con số này chỉ khoảng 2,4 triệu, chưa bằng phí.',
   takeaway:'Công cụ đo đáng tiền khi quyết định nó sửa lớn hơn giá của nó.',
   apply:'Nói trong 60 giây: với quy mô shop bạn, ba cách đo nào đủ dùng, và khi nào bạn mới nâng cấp.',
   mistakes:['Mua công cụ ghi công đắt khi ngân sách quảng cáo còn nhỏ.','Doanh nghiệp lớn vẫn chỉ dựa vào last-click mặc định.'],
@@ -542,15 +542,15 @@ BAI_ADD({ mod:'dl06', lessons:[
       b:'Last-click không thấy TV, biển quảng cáo và đơn cửa hàng.',
       c:'Hỏi khách là nguồn phụ tốt nhưng không đủ để chia 3 tỉ.',
       d:'Cộng báo cáo nền tảng cho tổng phồng và bỏ qua offline.'} },
-  { type:'calc', stem:'Chuỗi bán lẻ chi 3 tỉ/tháng. Đo tốt hơn giúp chuyển 5% ngân sách từ kênh có iROAS 1,2 sang kênh có iROAS 2,0 (iROAS: doanh thu tăng thêm trên mỗi đồng chi). Lãi gộp 30%, chi phí đo (MMM và thử nghiệm) 20 triệu/tháng. Mỗi tháng lợi nhuận tăng thêm ròng là bao nhiêu triệu đồng?',
+  { type:'calc', stem:'Chuỗi bán lẻ chi 3 tỉ/tháng. Đo tốt hơn giúp chuyển 5% ngân sách từ kênh có iROAS 1,2 sang kênh có iROAS 2,0 (iROAS: doanh thu tăng thêm trên mỗi đồng chi). Lãi gộp 30%, chi phí đo (MMM và thử nghiệm) 20 triệu/tháng. Giả định iROAS biên không đổi ở mức chuyển 5%. Mỗi tháng lợi nhuận tăng thêm ròng là bao nhiêu triệu đồng?',
     unit:'triệu đồng', ans:16, tol:0.1, wrong:[[36,'QUEN_CHI_PHI_CO_DINH'],[100,'HOAN_VON_TINH_DOANH_THU']], errors:['QUEN_CHI_PHI_CO_DINH','HOAN_VON_TINH_DOANH_THU'],
-    steps:['Tiền chuyển = 3.000 × 5% = 150 triệu.','Doanh thu tăng thêm = 150 × (2,0 − 1,2) = 120 triệu; lãi gộp tăng = 120 × 30% = 36 triệu.','Trừ chi phí đo: 36 − 20 = <b>16 triệu</b>.'] },
-  { type:'mcq', stem:'Shop A chi quảng cáo 30 triệu/tháng trên 2 kênh; shop B chi 120 triệu/tháng trên 5 kênh. Phí công cụ ghi công 3 triệu/tháng. Ai nên nâng cấp?',
+    steps:['Tiền chuyển = 3.000 × 5% = 150 triệu.','Doanh thu tăng thêm = 150 × (2,0 − 1,2) = 120 triệu; lãi gộp tăng = 120 × 30% = 36 triệu.','Trừ chi phí đo: 36 − 20 = <b>16 triệu</b>. Thực tế lợi ích giảm dần (kênh nhận thêm tiền có iROAS biên thấp hơn 2,0, kênh bị cắt mất ít hơn 1,2), nên 16 triệu là cận lạc quan; chuyển từng bước 2–3% rồi đo lại.'] },
+  { type:'mcq', stem:'Shop A chi quảng cáo 30 triệu/tháng trên 2 kênh; shop B chi 500 triệu/tháng trên 5 kênh. Phí công cụ ghi công 3 triệu/tháng. Giả định ở cả hai shop: 10% ngân sách đang đặt sai kênh, chênh iROAS giữa kênh kém và kênh tốt là 0,8, lãi gộp 30%. Ai nên nâng cấp?',
     options:[{k:'a',t:'Shop A, vì ít kênh nên công cụ chạy đơn giản và ít sai hơn'},{k:'b',t:'Cả hai, vì công cụ nào cũng rẻ hơn thiệt hại do đo sai gây ra'},
-             {k:'c',t:'Shop B, vì phân bổ sai 10% đã tốn 12 triệu, gấp bốn phí công cụ'},{k:'d',t:'Không shop nào, vì công cụ chỉ cần cho doanh nghiệp rất lớn'}],
-    answer:'c', why:{a:'Ít kênh nghĩa là ít chỗ phân bổ sai: sai 10% của 30 triệu chỉ 3 triệu, bằng đúng phí công cụ nên chưa lời.',
+             {k:'c',t:'Shop B, vì phân bổ sai làm mất khoảng 12 triệu lãi gộp, gấp bốn phí'},{k:'d',t:'Không shop nào, vì công cụ chỉ cần cho doanh nghiệp rất lớn'}],
+    answer:'c', why:{a:'Ít kênh, ngân sách nhỏ: 30 × 10% × 0,8 × 30% ≈ 0,7 triệu lãi gộp, chưa tới một phần tư phí công cụ.',
       b:'Phải so thiệt hại có thể tránh với phí; shop A không đạt, vì vậy "công cụ nào cũng rẻ hơn" là sai.',
-      c:'Đúng. Thiệt hại có thể tránh (12 triệu) vượt rõ phí 3 triệu; shop A thì chỉ ngang phí.',
+      c:'Đúng. 500 × 10% × 0,8 × 30% = 12 triệu, gấp bốn phí; công cụ chỉ sửa được một nửa vẫn lời. Shop A chỉ khoảng 0,7 triệu.',
       d:'Quy mô không cần quá lớn: shop B đã vượt ngưỡng hoà vốn mà vẫn chưa là doanh nghiệp rất lớn.'} },
   { type:'mcq', stem:'Câu nào tóm đúng nhất cách nghĩ về ghi công ở mọi quy mô?',
     options:[{k:'a',t:'Chọn mô hình hợp nhất rồi dựa vào nó để chia tiền'},{k:'b',t:'Kết hợp vài nguồn rẻ, đối chiếu nhau, thử nghiệm khi cần'},

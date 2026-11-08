@@ -3,7 +3,8 @@
 BAI_ADD({ mod:'kh08', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kh08-01', skill:'insight', read:'7 phút', t:'Khách này tin số đông, chuyên gia hay người giống mình?',
+{ id:'B:kh08-01', skill:'insight', read:'7 phút', assume:true, t:'Khách này tin số đông, chuyên gia hay người giống mình?',
+  src:[{ t:'Luật Quảng cáo 2012 (16/2012/QH13), Điều 7 và Nghị định 100/2014/NĐ-CP về kinh doanh, sử dụng sản phẩm dinh dưỡng dùng cho trẻ nhỏ — tra cứu tại Cổng TTĐT Chính phủ', u:'https://vanban.chinhphu.vn', d:'2026-11-07', st:'chua' }],
   situation:'Một thương hiệu kem chống nắng nội địa có ba thứ để đưa lên trang bán: "120.000 tuýp đã bán", lời nhận xét của một bác sĩ da liễu, và 40 video ngắn của sinh viên quay cảnh dùng hằng ngày. Khách mục tiêu là nữ sinh viên 19–22 tuổi, da dầu mụn, mua trên TikTok Shop. Trang chỉ có chỗ cho một bằng chứng nổi bật ở màn hình đầu.',
   concept:{ name:'Ba nguồn bằng chứng và độ khớp với khách',
     body:'Bằng chứng xã hội có ba nguồn chính. <b>Số đông</b> ("nhiều người đã mua") giảm rủi ro chung chung, hợp khi sản phẩm rẻ và quen. <b>Chuyên gia</b> trả lời câu "có an toàn, có đúng không", hợp khi rủi ro là sức khoẻ, tiền lớn, kỹ thuật. <b>Người giống mình</b> trả lời câu "có hợp với người như tôi không", hợp khi kết quả tuỳ vào cơ địa, hoàn cảnh. Chọn nguồn theo nỗi lo lớn nhất của khách, không theo con số to nhất bạn đang có.' },
@@ -42,7 +43,7 @@ BAI_ADD({ mod:'kh08', lessons:[
     answer:'d', why:{a:'Lượt xem là chuyện phụ so với việc quảng cáo có được phép hay không.',
       b:'Chuyên gia vẫn có sức nặng với sản phẩm sức khoẻ; vấn đề ở đây là khung pháp lý.',
       c:'Chi phí là cân nhắc thật, nhưng không phải rủi ro phải kiểm tra trước tiên.',
-      d:'Đúng. Sản phẩm dinh dưỡng cho trẻ nhỏ có quy định quảng cáo riêng; dùng hình ảnh chuyên gia phải kiểm tra pháp lý trước.'} },
+      d:'Đúng. Theo Luật Quảng cáo 2012 (Điều 7) và Nghị định 100/2014/NĐ-CP, bản tại ngày kiểm 07/11/2026: sản phẩm thay thế sữa mẹ cho trẻ dưới 24 tháng và thức ăn bổ sung cho trẻ dưới 6 tháng bị cấm quảng cáo; nhóm còn lại có điều kiện riêng về nội dung và hình ảnh. Trước khi dùng lời bác sĩ phải tra văn bản hiện hành; nếu có bản mới hơn, tin bản mới.'} },
   { type:'mcq', stem:'Một quán bún bò mới mở ở quận 3 muốn khách văn phòng quanh đó ghé thử. Bằng chứng nào hợp nhất cho tờ rơi và trang Google Maps?',
     options:[{k:'a',t:'Lời khen của một đầu bếp nổi tiếng từng ăn thử ở buổi khai trương'},{k:'b',t:'Dòng "Đã bán 10.000 tô" dù quán mới mở được hai tuần'},
              {k:'c',t:'Đánh giá của dân văn phòng tòa nhà bên cạnh, có ảnh'},{k:'d',t:'Giấy chứng nhận an toàn thực phẩm phóng to treo ở cửa'}],
@@ -60,10 +61,11 @@ BAI_ADD({ mod:'kh08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kh08-02', skill:'insight', read:'6 phút', t:'Vì sao 4,9 sao với toàn lời khen lại bán kém hơn 4,6 sao?',
+{ id:'B:kh08-02', skill:'insight', read:'6 phút', assume:true, t:'Vì sao 4,9 sao với toàn lời khen lại bán kém hơn 4,6 sao?',
+  src:[{ t:'Spiegel Research Center (Northwestern University), “How Online Reviews Influence Sales” (2017)', u:'https://spiegel.medill.northwestern.edu/online-reviews/', d:'2026-11-07', st:'chua' }],
   situation:'Hai shop bán cùng một mẫu nồi chiên không dầu trên Shopee, giá gần như nhau. Shop A: 4,9 sao, 300 đánh giá, gần như toàn câu "sản phẩm tốt, giao nhanh". Shop B: 4,6 sao, 520 đánh giá, có cả lời chê "hơi ồn", "lòng nồi nhỏ, nấu cho 2 người thôi" và phản hồi của shop dưới từng lời chê. Shop B bán gấp đôi shop A.',
   concept:{ name:'Đánh giá đáng tin nằm ở độ chi tiết, không ở điểm tuyệt đối',
-    body:'Khách đã quen với đánh giá được "làm đẹp". Điểm quá sát 5 sao cùng lời khen chung chung khiến họ nghi. Một nghiên cứu của Spiegel Research Center (Đại học Northwestern) thấy khả năng mua cao nhất ở khoảng <b>4,2–4,5 sao</b> và giảm khi điểm tiến sát 5,0. Lời chê có chi tiết, nói rõ điểm yếu không quan trọng với mình, lại giúp khách tự quyết. Phản hồi tử tế của shop dưới lời chê cho thấy có người thật đứng sau. Việc của marketer không phải xoá lời chê, mà là làm đánh giá chi tiết hơn và trả lời chúng.' },
+    body:'Khách đã quen với đánh giá được "làm đẹp". Điểm quá sát 5 sao cùng lời khen chung chung khiến họ nghi. Báo cáo “How Online Reviews Influence Sales” của Spiegel Research Center (Đại học Northwestern, 2017; bản tại ngày kiểm 07/11/2026) thấy khả năng mua cao nhất ở khoảng <b>4,0–4,7 sao</b> và bắt đầu giảm khi điểm tiến sát 5,0 — nghiên cứu trên dữ liệu bán lẻ Mỹ, chưa được kiểm lại trên sàn Việt Nam. Lời chê có chi tiết, nói rõ điểm yếu không quan trọng với mình, lại giúp khách tự quyết. Phản hồi tử tế của shop dưới lời chê cho thấy có người thật đứng sau. Việc của marketer không phải xoá lời chê, mà là làm đánh giá chi tiết hơn và trả lời chúng.' },
   example:'Khách đọc "lòng nồi nhỏ, nấu cho 2 người" và tự nghĩ: "nhà mình 2 người, vậy vừa". Lời chê "hơi ồn" kèm phản hồi "máy có tiếng quạt khoảng 50dB, tương đương máy lạnh" giúp khách hình dung. Ở shop A, 300 câu "tốt, giao nhanh" không cho khách thông tin nào. Shop A sau đó đổi cách xin đánh giá: nhắn khách "nồi nhà bạn nấu món gì đầu tiên?". Trong 2 tháng, 38% đánh giá mới có ảnh và mô tả món, điểm xuống 4,7 nhưng tỉ lệ chuyển đổi tăng. Đây là so trước – sau, chưa có đối chứng; mùa mua sắm hay giá cũng có thể góp phần.',
   takeaway:'Đánh giá có chi tiết và cả lời chê được trả lời tử tế đáng tin hơn một điểm 5 sao trơn.',
   apply:'Mở một sản phẩm bạn định mua trên sàn. Đọc 10 đánh giá, đếm bao nhiêu cái có chi tiết dùng được, và nói trong 60 giây: bạn tin shop này đến mức nào.',
@@ -117,11 +119,12 @@ BAI_ADD({ mod:'kh08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kh08-03', skill:'measure', read:'6 phút', t:'"Đã bán 12" có nên hiện lên trang không?',
+{ id:'B:kh08-03', skill:'measure', read:'6 phút', assume:true, t:'"Đã bán 12" có nên hiện lên trang không?',
+  src:[{ t:'Shopee Việt Nam — Trung tâm trợ giúp Người bán: phân loại hàng và cách đếm “Đã bán” theo từng sản phẩm', u:'https://help.shopee.vn', d:'2026-11-07', st:'chua' }],
   situation:'Một thương hiệu túi vải thủ công mới lên Shopee. Sau 3 tuần, sản phẩm chủ lực hiện "Đã bán 12". Đối thủ bên cạnh cùng tầm giá hiện "Đã bán 2,3k". Bạn đang chạy quảng cáo kéo khách vào trang, nhưng tỉ lệ chuyển đổi chỉ 0,6%, thấp hơn nhiều so với 2% ở trang web riêng không hiện con số đã bán.',
   concept:{ name:'Bằng chứng yếu còn tệ hơn không có bằng chứng',
     body:'Con số "đã bán" hoạt động như bằng chứng số đông chỉ khi nó đủ lớn so với đối thủ khách đang so. Khi nhỏ, nó có thể gửi tín hiệu ngược (theo cách hiểu phổ biến trong ngành, chưa phải quy luật chắc chắn): "ít ai mua, chắc có lý do". Đây là <b>bằng chứng xã hội ngược</b>. Cách xử lý: nếu không ẩn được con số, đừng dẫn khách so trực diện; dời bằng chứng sang thứ bạn mạnh (câu chuyện người làm, đánh giá chi tiết, số khách quay lại), hoặc gom lượt bán vào ít mã hàng hơn để con số lớn lên.' },
-  example:'Shop có 6 mẫu túi, mỗi mẫu 4 màu tách thành 24 trang riêng, mỗi trang vài lượt bán. Gộp lại thành 6 trang, mỗi trang có lựa chọn màu, mẫu chủ lực lên "Đã bán 58". Ảnh đầu đổi sang cảnh cô thợ khâu tay, kèm 9 đánh giá có ảnh. Quảng cáo chuyển từ tìm kiếm "túi vải" (nơi khách so với 2,3k) sang video giới thiệu nghề thủ công. Tỉ lệ chuyển đổi lên 1,5%.',
+  example:'Shop có 6 mẫu túi, mỗi mẫu 4 màu tách thành 24 trang riêng, mỗi trang vài lượt bán. Với mỗi mẫu, shop giữ trang có nhiều lượt bán nhất, thêm 3 màu còn lại vào đó làm phân loại hàng và tắt 3 trang lẻ — lượt bán cũ của trang bị tắt không chuyển sang trang gộp (theo cách sàn đếm “Đã bán” tại ngày kiểm; nếu màn hình khác, tin trang chính thức). Từ đó đơn mới dồn về một trang; sau 6 tuần, mẫu chủ lực lên "Đã bán 58". Ảnh đầu đổi sang cảnh cô thợ khâu tay, kèm 9 đánh giá có ảnh. Quảng cáo chuyển từ tìm kiếm "túi vải" (nơi khách so với 2,3k) sang video giới thiệu nghề thủ công. Tỉ lệ chuyển đổi lên 1,5%.',
   takeaway:'Con số đã bán nhỏ là tín hiệu ngược: đừng đặt nó cạnh đối thủ lớn, hãy dựng bằng chứng ở chỗ bạn mạnh.',
   apply:'Tìm một shop nhỏ trên sàn có số đã bán thấp. Nói trong 60 giây: bạn sẽ gộp, dời hay thay bằng chứng nào để trang đó đáng tin hơn.',
   mistakes:['Hiện mọi con số vì nghĩ minh bạch luôn tốt, kể cả khi con số tự làm hại mình.','Mua lượt bán ảo để con số to lên — vi phạm quy định và dễ lộ.'],
@@ -146,7 +149,7 @@ BAI_ADD({ mod:'kh08', lessons:[
   { type:'mcq', stem:'Vì sao gộp 24 trang theo màu thành 6 trang giúp tăng niềm tin?',
     options:[{k:'a',t:'Lượt bán dồn vào một chỗ nên con số lớn đủ làm bằng chứng'},{k:'b',t:'Sàn ưu tiên hiển thị shop có ít sản phẩm hơn trong kết quả'},
              {k:'c',t:'Khách ít lựa chọn hơn nên quyết định nhanh hơn và bớt phân vân'},{k:'d',t:'Trang gộp có nhiều ảnh hơn nên trông chuyên nghiệp hơn'}],
-    answer:'a', why:{a:'Đúng. Cùng số lượt bán, gom vào ít trang thì mỗi con số lớn lên và thoát khỏi vùng "tín hiệu ngược".',
+    answer:'a', why:{a:'Đúng. Đơn mới dồn về một trang thay vì rải ra 4 trang màu, nên con số lớn lên nhanh hơn và thoát khỏi vùng "tín hiệu ngược".',
       b:'Thuật toán sàn không ưu tiên đơn giản theo số lượng mã hàng ít.',
       c:'Khách vẫn chọn đủ 4 màu trong một trang; số lựa chọn không đổi.',
       d:'Ảnh có thể nhiều hơn, nhưng lý do chính là con số đã bán được dồn lại.'} },
@@ -174,7 +177,7 @@ BAI_ADD({ mod:'kh08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kh08-04', skill:'creative', read:'7 phút', t:'Testimonial nào khiến người đọc tin, testimonial nào bị lướt qua?',
+{ id:'B:kh08-04', skill:'creative', read:'7 phút', assume:true, t:'Testimonial nào khiến người đọc tin, testimonial nào bị lướt qua?',
   situation:'Một trung tâm luyện thi IELTS ở Hà Nội có hai testimonial trên trang đăng ký. Mẫu 1: "Trung tâm rất tốt, thầy cô nhiệt tình, em rất hài lòng! — Học viên N." Mẫu 2: "Em vào 5.0, đi làm không có thời gian, học 3 buổi tối mỗi tuần. Sau 14 tuần thi được 6.5, phần Writing lên từ 5.0 lên 6.0 nhờ chữa bài 1–1. — Minh Anh, 26 tuổi, nhân viên ngân hàng." Trung tâm chỉ muốn giữ một mẫu ở đầu trang.',
   concept:{ name:'Testimonial đáng tin: trước – sau – vì sao – ai',
     body:'Một testimonial thuyết phục có bốn phần. <b>Trước</b>: người đó bắt đầu ở đâu, vướng gì. <b>Sau</b>: kết quả cụ thể, đo được. <b>Vì sao</b>: điều gì trong sản phẩm tạo ra thay đổi. <b>Ai</b>: tên, tuổi, nghề — đủ để người đọc thấy "người này giống mình". Lời khen cảm tính ("rất tốt, rất hài lòng") không có phần nào trong bốn phần đó nên bị lướt qua. Một chi tiết nhỏ không hoàn hảo (ví dụ "Reading vẫn chỉ 6.0") còn làm câu chuyện đáng tin hơn.' },
@@ -222,16 +225,16 @@ BAI_ADD({ mod:'kh08', lessons:[
       c:'Đúng. Khách tìm "người giống mình"; chia theo hoàn cảnh giúp họ tìm được nhanh.',
       d:'Điểm 8.0 ấn tượng nhưng xa với người đang ở 5.0; khách thấy không giống mình.'} },
   { type:'mcq', stem:'Testimonial dạng video hay dạng chữ? Với khách đang cân nhắc khoá học 6 triệu, chọn thế nào?',
-    options:[{k:'a',t:'Chỉ dùng chữ vì khách đọc nhanh hơn xem video'},{k:'b',t:'Video ngắn kèm phụ đề và dòng chữ tóm tắt trước – sau'},
-             {k:'c',t:'Chỉ dùng video vì video thường chuyển đổi cao hơn chữ'},{k:'d',t:'Dùng video dài 10 phút để kể đầy đủ hành trình học'}],
-    answer:'b', why:{a:'Chữ dễ đọc nhưng mất đi mặt, giọng — thứ chứng minh là người thật.',
+    options:[{k:'a',t:'Video có phụ đề nhưng ẩn điểm trước – sau để khách tò mò gọi tư vấn'},{k:'b',t:'Video ngắn kèm phụ đề và dòng chữ tóm tắt trước – sau'},
+             {k:'c',t:'Chữ kèm ảnh chân dung nhưng ẩn tên và nghề để giữ kín học viên'},{k:'d',t:'Dùng video dài 10 phút để kể đầy đủ hành trình học'}],
+    answer:'b', why:{a:'Ẩn con số là bỏ phần "trước – sau"; người lướt không có gì để tin, và cũng không gọi.',
       b:'Đúng. Video cho thấy người thật; phụ đề và tóm tắt giúp người lướt vẫn nắm được con số.',
-      c:'Video không phụ đề bị lướt khi khách tắt tiếng; không có định dạng nào tự thắng.',
+      c:'Ẩn tên, nghề là bỏ phần "ai"; ảnh không tên dễ bị nghi là ảnh mẫu, người đọc không thấy "người giống mình".',
       d:'Video 10 phút quá dài cho người đang lướt trang đăng ký.'} }
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kh08-05', skill:'comm', read:'6 phút', t:'Đồng hồ đếm ngược chạy lại mỗi lần tải trang thì sao?',
+{ id:'B:kh08-05', skill:'comm', read:'6 phút', assume:true, t:'Đồng hồ đếm ngược chạy lại mỗi lần tải trang thì sao?',
   situation:'Một landing page bán khoá học online giá 1,5 triệu có đồng hồ "Ưu đãi kết thúc sau 02:59:59". Một khách tải lại trang vào hôm sau, đồng hồ lại bắt đầu từ 03:00:00. Khách chụp màn hình đăng lên một nhóm Facebook 80.000 thành viên với câu "khan hiếm kiểu này ai tin?". Bài đăng có 600 bình luận.',
   concept:{ name:'Khan hiếm thật và khan hiếm dựng',
     body:'Khan hiếm chỉ có tác dụng khi khách tin nó thật. <b>Khan hiếm thật</b> có lý do kiểm chứng được: lớp chỉ 30 chỗ vì giảng viên chữa bài từng người, đợt hàng giới hạn vì nguyên liệu theo mùa, giá ưu đãi kết thúc vào một ngày cụ thể và thực sự kết thúc. <b>Khan hiếm dựng</b> là đồng hồ chạy lại, "chỉ hôm nay" mà hôm nào cũng thế. Nó có thể kéo đơn ngắn hạn, nhưng khi bị lộ, khách dễ mất niềm tin với mọi lời hứa khác của thương hiệu, kể cả lời hứa thật.' },
@@ -288,7 +291,7 @@ BAI_ADD({ mod:'kh08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kh08-06', skill:'channel', read:'7 phút', t:'Flash sale mỗi tuần kéo doanh số hay đang dạy khách chờ giảm giá?',
+{ id:'B:kh08-06', skill:'channel', read:'7 phút', assume:true, t:'Flash sale mỗi tuần kéo doanh số hay đang dạy khách chờ giảm giá?',
   situation:'Một thương hiệu giày thể thao nội địa chạy flash sale giảm 40% vào 12h trưa thứ Sáu hằng tuần, liên tục 5 tháng. Doanh số ngày thứ Sáu gấp 6 lần ngày thường. Nhưng doanh số các ngày còn lại giảm dần, và 60% đơn trong tháng giờ rơi vào khung flash sale. Biên lãi gộp của cả tháng từ 45% xuống 28%.',
   concept:{ name:'Khan hiếm lặp lại thành lịch hẹn giảm giá',
     body:'Flash sale dùng khan hiếm thời gian: giá tốt chỉ trong vài giờ. Nó hiệu quả khi <b>hiếm và khó đoán</b>. Khi lặp đúng giờ mỗi tuần, khách không còn thấy khan hiếm; họ thấy một lịch hẹn. Giá thật trong đầu khách chuyển thành giá flash sale, và mua giá gốc trở thành "mua hớ". Kết quả: doanh số chuyển dịch sang ngày giảm chứ không tăng, và lãi mỏng đi. Dấu hiệu cần theo dõi: tỉ lệ đơn trong khung giảm giá so với tổng tháng.' },
@@ -345,7 +348,7 @@ BAI_ADD({ mod:'kh08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kh08-07', skill:'channel', read:'6 phút', t:'"Chỉ còn 3 sản phẩm" trên sàn: khi nào giúp, khi nào hại?',
+{ id:'B:kh08-07', skill:'channel', read:'6 phút', assume:true, t:'"Chỉ còn 3 sản phẩm" trên sàn: khi nào giúp, khi nào hại?',
   situation:'Một shop mỹ phẩm trên Lazada cài dòng "Chỉ còn 3 sản phẩm" trên trang son dưỡng, trong khi kho có 400 thỏi. Tuần đầu tỉ lệ chuyển đổi tăng. Tuần thứ ba (giả định minh hoạ: sàn không chặn đặt vượt số hiển thị), một khách đặt 5 thỏi và mua thành công, rồi để lại đánh giá 1 sao: "ghi còn 3 mà mua được 5, shop gian". Đánh giá này nằm trên cùng.',
   concept:{ name:'Tồn kho hiển thị là một lời cam kết',
     body:'Con số tồn kho trên sàn là thông tin khách kiểm chứng được: họ có thể thử đặt nhiều hơn (nếu sàn không chặn), hoặc quay lại sau vài ngày thấy vẫn "còn 3". Khi đúng, nó giúp khách quyết nhanh và tránh thất vọng hết hàng. Khi sai, nó là <b>thông tin gây hiểu lầm</b> — vừa có rủi ro bị sàn xử lý, vừa có rủi ro theo luật bảo vệ người tiêu dùng. Cách dùng đúng: hiện tồn kho thật khi nó thật sự thấp (cuối lô, hàng theo mùa), và dùng thông tin thật khác khi tồn kho còn nhiều.' },
@@ -402,10 +405,11 @@ BAI_ADD({ mod:'kh08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kh08-08', skill:'brand', read:'7 phút', t:'Mua review, bịa "khách nói gì": ranh giới pháp lý và đạo đức ở đâu?',
+{ id:'B:kh08-08', skill:'brand', read:'7 phút', assume:true, t:'Mua review, bịa "khách nói gì": ranh giới pháp lý và đạo đức ở đâu?',
+  src:[{ t:'Luật Quảng cáo 2012 (16/2012/QH13) và Luật sửa đổi, bổ sung Luật Quảng cáo 2025 — tra cứu tại Cổng TTĐT Chính phủ', u:'https://vanban.chinhphu.vn', d:'2026-11-07', st:'chua' },{ t:'Nghị định 15/2018/NĐ-CP hướng dẫn Luật An toàn thực phẩm (đăng ký nội dung quảng cáo thực phẩm) — tra cứu tại Cổng TTĐT Chính phủ', u:'https://vanban.chinhphu.vn', d:'2026-11-07', st:'chua' }],
   situation:'Một thương hiệu thực phẩm chức năng mới được một agency chào gói "300 review 5 sao trên sàn + 50 bình luận khách hàng trên fanpage" giá 15 triệu. Agency nói: "ai cũng làm, sàn không phát hiện được". Cùng lúc, một KOC muốn nhận quảng cáo nhưng không muốn ghi là được trả tiền vì "ghi vậy người xem mất hứng".',
   concept:{ name:'Ba ranh giới: thật, công khai, không gây hiểu lầm',
-    body:'Bằng chứng xã hội hợp lệ phải qua ba ranh giới. <b>Thật</b>: người nói phải là người dùng thật, nói điều họ thật sự trải nghiệm. <b>Công khai</b>: nếu có trả tiền, tặng hàng hay quan hệ lợi ích, phải nói rõ (ví dụ ghi "hợp tác", "được tài trợ"). <b>Không gây hiểu lầm</b>: không chọn lọc hay cắt ghép để tạo ấn tượng sai. Điều 8 Luật Quảng cáo 2012 cấm quảng cáo sai hoặc gây nhầm lẫn về chất lượng, công dụng; thực phẩm chức năng còn phải có giấy xác nhận nội dung quảng cáo trước khi phát hành (Nghị định 15/2018/NĐ-CP). Ca xám: tặng hàng vẫn là quan hệ lợi ích nên phải ghi rõ; chỉ mời đánh giá, không gắn điều kiện số sao thì ổn; tặng quà cho người chấm 5 sao hay xoá đánh giá chê là mua đánh giá.' },
+    body:'Bằng chứng xã hội hợp lệ phải qua ba ranh giới. <b>Thật</b>: người nói phải là người dùng thật, nói điều họ thật sự trải nghiệm. <b>Công khai</b>: nếu có trả tiền, tặng hàng hay quan hệ lợi ích, phải nói rõ (ví dụ ghi "hợp tác", "được tài trợ"). <b>Không gây hiểu lầm</b>: không chọn lọc hay cắt ghép để tạo ấn tượng sai. Pháp lý (nguồn cuối bài): Điều 8 Luật Quảng cáo 2012 cấm quảng cáo sai, gây nhầm lẫn chất lượng, công dụng; thực phẩm chức năng phải xác nhận nội dung quảng cáo trước khi đăng (NĐ 15/2018); Luật sửa đổi 2025 (từ 2026) buộc người có ảnh hưởng công khai, kiểm chứng; bản mới hơn thì tin bản mới. Ca xám: tặng hàng vẫn là quan hệ lợi ích nên phải ghi rõ; chỉ mời đánh giá, không gắn điều kiện số sao thì ổn; tặng quà cho người chấm 5 sao hay xoá đánh giá chê là mua đánh giá.' },
   example:'Thương hiệu từ chối gói 15 triệu. Thay vào đó, họ gửi 200 hộp dùng thử cho người mua đầu tiên, nhắn sau 3 tuần chỉ mời đánh giá thật, không yêu cầu số sao và đề nghị người viết ghi rõ "đã nhận hộp dùng thử". Thu được 64 đánh giá, điểm trung bình 4,5 (số minh hoạ). KOC được yêu cầu ghi "hợp tác" và nói cả điều chưa thích. Nhãn "hợp tác" có làm giảm hiệu quả hay không là điều phải đo bằng thử nghiệm, không nên giả định.',
   takeaway:'Bằng chứng xã hội phải thật, công khai quan hệ lợi ích, và không gây hiểu lầm — nếu không, nó là rủi ro.',
   apply:'Tìm một video review trên TikTok. Nói trong 60 giây: có dấu hiệu hợp tác nào không, có được ghi rõ không, và bạn tin nó đến mức nào.',

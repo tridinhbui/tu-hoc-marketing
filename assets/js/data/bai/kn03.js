@@ -3,28 +3,29 @@
 BAI_ADD({ mod:'kn03', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kn03-01', skill:'channel', read:'6 phút', t:'Mới bán online với 30 triệu: lên sàn nào trước?',
+{ id:'B:kn03-01', skill:'channel', read:'6 phút', assume:true, t:'Mới bán online với 30 triệu: lên sàn nào trước?',
   situation:'Chị Hà làm xà phòng thủ công ở Đà Lạt, bán qua Facebook được khoảng 150 đơn mỗi tháng. Chị có 30 triệu và thời gian của hai người để lên sàn. Bạn bè khuyên mở cùng lúc Shopee, Lazada và TikTok Shop "cho phủ". Chị không có ai quay video, nhưng có sẵn 40 bài đánh giá tốt từ khách cũ và bộ ảnh sản phẩm đẹp.',
   concept:{ name:'Sàn tìm kiếm và sàn khám phá',
     body:'Sàn thiên về <b>tìm kiếm</b> phục vụ người đã biết mình cần gì: họ gõ "xà phòng handmade", so giá, đọc đánh giá rồi mua. Sàn thiên về <b>khám phá</b> đẩy video và livestream đến người chưa định mua; nhu cầu được tạo ngay trên màn hình. Mỗi kiểu đòi một năng lực khác: sàn tìm kiếm cần trang sản phẩm, đánh giá và giá rõ; sàn khám phá cần nội dung đều đặn. Nguồn lực mỏng thì chọn một sàn khớp với năng lực mình đang có, làm cho ra đơn đều, rồi mới mở sàn thứ hai.' },
-  example:'Chị Hà có ảnh đẹp và đánh giá sẵn, không có người làm video. Mở cả ba sàn, 30 triệu chia ba còn 10 triệu mỗi nơi, hai người phải trả lời tin nhắn, đóng gói và làm nội dung cho ba chỗ. Chọn một sàn thiên tìm kiếm trước, dồn 30 triệu vào quảng cáo từ khoá và vài đợt đánh giá đầu, mục tiêu 5 đơn/ngày trong 60 ngày. Khi đạt, chị thuê một bạn quay video và thử sàn khám phá.',
+  example:'Chị Hà có ảnh đẹp và 40 đánh giá trên Facebook, không có người làm video. Đánh giá Facebook không chuyển sang sàn: gian hàng mới bắt đầu từ 0 đánh giá, còn feedback cũ chỉ dùng làm ảnh trong mô tả (khi khách đồng ý). Mở cả ba sàn, 30 triệu chia ba còn 10 triệu mỗi nơi, hai người phải trả lời tin nhắn, đóng gói và làm nội dung cho ba chỗ. Chọn một sàn thiên tìm kiếm trước, dồn 30 triệu vào quảng cáo từ khoá, nhắc khách thật đánh giá sau khi nhận hàng để có những đánh giá đầu trên sàn (không mua hay tự tạo đánh giá — trái chính sách sàn), mục tiêu 5 đơn/ngày trong 60 ngày. Khi đạt, chị thuê một bạn quay video và thử sàn khám phá.',
   takeaway:'Sàn đầu tiên là sàn khớp với năng lực bạn đang có, không phải sàn đang được bàn nhiều nhất.',
   apply:'Liệt kê ba thứ bạn đang giỏi (ảnh, video, giá, dịch vụ). Nói trong 60 giây: sàn nào dùng được nhiều nhất trong ba thứ đó và vì sao.',
+  src:[{ t:'Shopee Việt Nam · Kênh Người Bán / Học viện Shopee (kiểm cách sàn ưu tiên hiển thị gian hàng có đơn, đánh giá đều)', u:'https://banhang.shopee.vn/', d:'2026-11-07', st:'chua' }],
   mistakes:['Mở cùng lúc nhiều sàn khi chưa có đơn đều ở sàn nào.','Chọn sàn theo độ nóng thay vì theo năng lực nội dung của mình.'],
   q:[
   { type:'mcq', stem:'Đoán trước: với 30 triệu và hai người, mở cùng lúc ba sàn thường dẫn đến điều gì?',
     options:[{k:'a',t:'Phủ rộng nên tổng đơn sẽ gấp ba so với lúc chỉ bán ở một sàn'},{k:'b',t:'Nguồn lực bị chia mỏng, không sàn nào đủ đơn để được đẩy lên'},
              {k:'c',t:'Sàn nào cũng tự đẩy shop mới nên chưa cần tiền quảng cáo'},{k:'d',t:'Khách thấy shop ở nhiều sàn sẽ tin hơn và mua nhiều hơn'}],
     answer:'b', why:{a:'Đơn không cộng tuyến tính theo số sàn; mỗi sàn cần ngân sách và công sức riêng để có đơn đầu tiên.',
-      b:'Đúng. Mỗi sàn chỉ còn 10 triệu và một phần ba công sức, khó vượt ngưỡng đơn đều để thuật toán chú ý.',
+      b:'Đúng. Mỗi sàn chỉ còn 10 triệu và một phần ba công sức, khó có nhịp đơn đều — theo quan sát chung của người bán, sàn ưu tiên hiển thị gian hàng có đơn và đánh giá đều; cách xếp hạng cụ thể hãy kiểm ở trung tâm người bán của từng sàn.',
       c:'Hỗ trợ shop mới nếu có thường ngắn và nhỏ; không thay được ngân sách kéo đơn đầu.',
       d:'Khách thường mua trong một sàn, ít đi kiểm tra shop có mặt ở sàn khác.'} },
-  { type:'mcq', stem:'Chị Hà có ảnh đẹp, 40 đánh giá, không có người quay video. Bạn chọn gì cho 60 ngày đầu?',
+  { type:'mcq', stem:'Chị Hà có ảnh đẹp, 40 đánh giá trên Facebook (không chuyển sang sàn được), không có người quay video. Bạn chọn gì cho 60 ngày đầu?',
     options:[{k:'a',t:'Mở TikTok Shop trước vì đang tăng nhanh, rồi tự học quay video dần'},{k:'b',t:'Mở đủ ba sàn nhưng chỉ đăng 5 sản phẩm mỗi sàn cho nhẹ việc'},
              {k:'c',t:'Một sàn thiên tìm kiếm, dồn tiền vào từ khoá, đích 5 đơn/ngày'},{k:'d',t:'Chưa lên sàn, dồn 30 triệu chạy quảng cáo Facebook cho quen tay'}],
     answer:'c', why:{a:'Sàn khám phá sống bằng video đều đặn; tự học trong lúc đốt tiền là đặt cược vào năng lực chưa có.',
       b:'Giảm số sản phẩm không giảm việc vận hành ba nơi; tiền vẫn bị chia ba.',
-      c:'Đúng. Dùng đúng thứ đang có (ảnh, đánh giá), đo được bằng một mục tiêu rõ.',
+      c:'Đúng. Dùng đúng thứ đang có (ảnh, feedback cũ trong mô tả), xây đánh giá sàn từ đơn đầu, đo bằng một mục tiêu rõ.',
       d:'Facebook đã chạy được; câu hỏi là mở kênh mới nào, không phải bỏ việc mở kênh.'} },
   { type:'calc', stem:'Mục tiêu 5 đơn/ngày trong 60 ngày. Tỉ lệ chuyển đổi trang sản phẩm là 2%. Cần tổng cộng bao nhiêu lượt xem trang sản phẩm?',
     unit:'lượt', ans:15000, tol:1, wrong:[[6,'QUEN_TI_LE_CHUYEN_DOI'],[250,'QUEN_TI_LE_CHUYEN_DOI']], errors:['QUEN_TI_LE_CHUYEN_DOI'],
@@ -44,7 +45,7 @@ BAI_ADD({ mod:'kn03', lessons:[
       c:'Lặp lại đúng lỗi chia mỏng, chỉ là ở quy mô lớn hơn.',
       d:'Đúng. Bổ sung năng lực còn thiếu trước, rồi thử kênh mới ở quy mô nhỏ để đo.'} },
   { type:'mcq', stem:'Vì sao "sàn nào đông người dùng nhất" chưa phải lý do đủ để chọn sàn đầu tiên?',
-    options:[{k:'a',t:'Vì con số người dùng do sàn tự công bố nên thường bị thổi phồng'},{k:'b',t:'Vì bạn chỉ thắng ở nơi năng lực của mình được thuật toán thưởng'},
+    options:[{k:'a',t:'Vì con số người dùng do sàn tự công bố nên thường bị thổi phồng'},{k:'b',t:'Vì bạn chỉ thắng ở nơi năng lực của mình khớp cách sàn phân phối'},
              {k:'c',t:'Vì sàn đông người thì phí cao hơn hẳn các sàn còn lại'},{k:'d',t:'Vì người dùng đông nhất thường là khách mua giá rẻ, ít lãi'}],
     answer:'b', why:{a:'Có thể có chênh lệch, nhưng kể cả số đúng thì vẫn thiếu phần năng lực của bạn.',
       b:'Đúng. Đông người mà nội dung/giá của bạn không khớp cách sàn phân phối thì vẫn không ra đơn.',
@@ -60,13 +61,14 @@ BAI_ADD({ mod:'kn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kn03-02', skill:'measure', read:'7 phút', t:'Đơn 200.000đ trên sàn, bạn thật sự lãi bao nhiêu?',
+{ id:'B:kn03-02', skill:'measure', read:'7 phút', assume:true, t:'Đơn 200.000đ trên sàn, bạn thật sự lãi bao nhiêu?',
   situation:'Shop túi vải của Minh bán một mẫu giá 200.000đ, giá vốn 90.000đ. Minh nghĩ mỗi đơn lãi 110.000đ. Cuối tháng, 600 đơn nhưng tiền về tài khoản ít hơn nhiều so với 66 triệu anh tính. Đơn nào cũng dùng voucher shop 20.000đ, và sàn trừ phí trước khi chuyển tiền.',
   concept:{ name:'Lãi đóng góp mỗi đơn trên sàn',
-    body:'Giá niêm yết không phải tiền bạn nhận. Từ giá đó phải trừ: <b>voucher do shop chịu</b>, <b>phí sàn</b> (phí cố định/hoa hồng, tính theo phần trăm), <b>phí thanh toán</b>, rồi <b>giá vốn</b> và <b>đóng gói</b>. Phần còn lại là lãi đóng góp mỗi đơn — tiền để trả quảng cáo, lương và mặt bằng. Tỉ lệ phí trong bài này là minh hoạ; mỗi sàn và mỗi ngành có biểu phí riêng, thay đổi theo thời kỳ, nên luôn lấy từ trang quy định của sàn khi tính thật. Với hộ, cá nhân kinh doanh, từ 1/7/2025 sàn có chức năng thanh toán còn khấu trừ thuế trên doanh thu trước khi chuyển tiền (Nghị định 117/2025/NĐ-CP) — tỉ lệ và cách áp dụng cho trường hợp của bạn hãy hỏi kế toán hoặc pháp chế.' },
+    body:'Giá niêm yết không phải tiền bạn nhận. Từ giá đó phải trừ: <b>voucher do shop chịu</b>, <b>phí sàn</b> (phí cố định/hoa hồng, tính theo phần trăm), <b>phí thanh toán</b>, rồi <b>giá vốn</b> và <b>đóng gói</b>. Phần còn lại là lãi đóng góp mỗi đơn — tiền để trả quảng cáo, lương và mặt bằng. Tỉ lệ phí trong bài này là minh hoạ; mỗi sàn và mỗi ngành có biểu phí riêng, thay đổi theo thời kỳ, nên luôn lấy từ trang quy định của sàn khi tính thật. Với hộ, cá nhân kinh doanh, từ 1/7/2025 sàn có chức năng thanh toán còn khấu trừ thuế trên doanh thu trước khi chuyển tiền (Nghị định 117/2025/NĐ-CP, theo văn bản tra tại ngày kiểm; nếu quy định đổi, tin văn bản mới nhất) — tỉ lệ và cách áp dụng cho trường hợp của bạn hãy hỏi kế toán hoặc pháp chế.' },
   example:'Giả định phí sàn 10% và phí thanh toán 4%, cùng tính trên số tiền khách trả. Khách trả 200.000 − 20.000 = 180.000đ. Phí: 14% × 180.000 = 25.200đ. Giá vốn 90.000đ, đóng gói 5.000đ. Lãi đóng góp = 180.000 − 25.200 − 90.000 − 5.000 = 59.800đ, chỉ bằng khoảng 54% con số 110.000đ Minh tưởng. 600 đơn cho 35,9 triệu, chưa trừ quảng cáo.',
   takeaway:'Lãi trên sàn tính từ tiền khách thật trả, sau voucher và mọi loại phí — không tính từ giá niêm yết.',
   apply:'Lấy một sản phẩm bạn bán. Viết một dòng: giá − voucher − phí sàn − phí thanh toán − giá vốn − đóng gói = ? rồi đọc to con số.',
+  src:[{ t:'Nghị định 117/2025/NĐ-CP về quản lý thuế với hộ, cá nhân kinh doanh trên nền tảng TMĐT — tra văn bản gốc trên Cổng TTĐT Chính phủ', u:'https://vanban.chinhphu.vn/', d:'2026-11-07', st:'chua' }],
   mistakes:['Tính phí trên giá niêm yết trong khi khách trả sau voucher.','Coi lãi đóng góp là lãi ròng, quên còn phải trả quảng cáo.'],
   q:[
   { type:'mcq', stem:'Đoán trước: vì sao tiền về tài khoản của Minh thấp hơn nhiều so với 110.000đ × 600 đơn?',
@@ -109,7 +111,7 @@ BAI_ADD({ mod:'kn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kn03-03', skill:'channel', read:'7 phút', t:'Quảng cáo tìm kiếm trong sàn hay kéo khách từ Facebook vào sàn?',
+{ id:'B:kn03-03', skill:'channel', read:'7 phút', assume:true, t:'Quảng cáo tìm kiếm trong sàn hay kéo khách từ Facebook vào sàn?',
   situation:'Shop giày chạy bộ của Tuấn có 20 triệu/tháng cho quảng cáo. Nhân viên đề xuất chạy quảng cáo Facebook dẫn link về gian hàng trên sàn vì "Facebook rẻ, 800đ một click". Quảng cáo tìm kiếm trong sàn cho từ khoá "giày chạy bộ nam" tốn khoảng 1.500đ một click. Tuấn không biết nên dồn tiền vào đâu.',
   concept:{ name:'Chi phí mỗi đơn, không phải chi phí mỗi click',
     body:'Click rẻ chưa chắc đơn rẻ. Người bấm từ khoá trong sàn đang ở tư thế mua: họ đã mở ứng dụng, gõ tên sản phẩm. Người bấm quảng cáo Facebook đang lướt, phải chuyển ứng dụng, đăng nhập, rồi mới xem. Vì vậy tỉ lệ chuyển đổi thường khác nhau nhiều. So hai kênh bằng <b>chi phí mỗi đơn = giá click ÷ tỉ lệ chuyển đổi</b>, rồi so với lãi đóng góp mỗi đơn. Quảng cáo ngoài sàn có vai trò riêng: tạo nhu cầu với người chưa tìm — nhưng phải được đo bằng thước đo phù hợp.' },
@@ -165,13 +167,14 @@ BAI_ADD({ mod:'kn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kn03-04', skill:'channel', read:'7 phút', t:'Vì sao sản phẩm của bạn nằm trang 5 khi khách tìm kiếm?',
+{ id:'B:kn03-04', skill:'channel', read:'7 phút', assume:true, t:'Vì sao sản phẩm của bạn nằm trang 5 khi khách tìm kiếm?',
   situation:'Shop bình giữ nhiệt của Lan có giá rẻ hơn đối thủ 10%, nhưng khi gõ "bình giữ nhiệt 500ml" thì sản phẩm nằm ở trang 5. Trang sản phẩm đặt tên "BÌNH HOT SALE SIÊU RẺ ĐẸP". Mỗi ngày có 400 lượt xem (đa số từ link Lan tự chia sẻ, rất ít từ tìm kiếm), 4 đơn. Đối thủ trang 1 có 600 lượt xem và 18 đơn mỗi ngày.',
   concept:{ name:'Liên quan và hiệu quả bán',
-    body:'Mỗi sàn có thuật toán riêng và không công bố chi tiết, nhưng logic chung dễ đoán: sàn muốn hiển thị thứ khách <b>có khả năng mua nhất</b>, vì sàn thu phí trên đơn. Vì vậy thứ hạng thường dựa trên hai nhóm tín hiệu. <b>Liên quan</b>: tiêu đề, danh mục, thuộc tính khớp đúng từ khoá khách gõ. <b>Hiệu quả</b>: tỉ lệ bấm, tỉ lệ chuyển đổi, số đơn gần đây, đánh giá, giao đúng hạn. Giá rẻ chỉ giúp khi nó làm tăng các tín hiệu hiệu quả đó.' },
+    body:'Mỗi sàn có thuật toán riêng và không công bố chi tiết; các tín hiệu dưới đây là logic chung theo tài liệu hướng dẫn người bán của các sàn tại ngày kiểm — nếu trang chính thức của sàn nói khác, tin trang chính thức. Sàn muốn hiển thị thứ khách <b>có khả năng mua nhất</b>, vì sàn thu phí trên đơn. Vì vậy thứ hạng thường dựa trên hai nhóm tín hiệu. <b>Liên quan</b>: tiêu đề, danh mục, thuộc tính khớp đúng từ khoá khách gõ. <b>Hiệu quả</b>: tỉ lệ bấm, tỉ lệ chuyển đổi, số đơn gần đây, đánh giá, giao đúng hạn. Giá rẻ chỉ giúp khi nó làm tăng các tín hiệu hiệu quả đó.' },
   example:'Tiêu đề của Lan không có chữ "500ml" hay "giữ nhiệt inox", nên khó khớp từ khoá. Tỉ lệ chuyển đổi 4 ÷ 400 = 1%, trong khi đối thủ 18 ÷ 600 = 3%. Sàn thấy đặt sản phẩm của Lan lên đầu sẽ bán ít hơn, nên đẩy đối thủ. Lan viết lại theo công thức [loại sản phẩm] + [chất liệu, dung tích] + [công dụng chính]: "Bình giữ nhiệt inox 304 500ml giữ lạnh 12 giờ". Cô gõ từ khoá, đọc 10 kết quả đầu xem họ dùng chữ nào, thêm ảnh đo nhiệt độ, và nhắm chuyển đổi 2% trước.',
   takeaway:'Sàn xếp hạng thứ nó tin là bán được; hãy khớp từ khoá và chứng minh bằng tỉ lệ chuyển đổi.',
   apply:'Mở trang sản phẩm chính của bạn. Nói trong 60 giây: tiêu đề có chứa đúng ba từ khoá khách hay gõ không, tỉ lệ chuyển đổi đang là bao nhiêu.',
+  src:[{ t:'Shopee Việt Nam · Kênh Người Bán / Học viện Shopee (kiểm tiêu chí hiển thị sản phẩm trong tìm kiếm)', u:'https://banhang.shopee.vn/', d:'2026-11-07', st:'chua' }],
   mistakes:['Nhồi chữ "hot, rẻ, sale" vào tiêu đề thay vì từ khoá mô tả.','Nghĩ cứ giảm giá là tự lên hạng.'],
   q:[
   { type:'mcq', stem:'Đoán trước: sàn có động cơ gì khi quyết định sản phẩm nào đứng đầu kết quả tìm kiếm?',
@@ -209,16 +212,16 @@ BAI_ADD({ mod:'kn03', lessons:[
       c:'Tương tác tiêu cực không làm sàn tin sản phẩm bán tốt hơn.',
       d:'Sai vì biến đánh giá thành thứ chỉ có tác dụng khi chứa từ khoá; ở đây 5 đánh giá 1 sao và giao trễ đã đủ kéo tín hiệu hiệu quả xuống.'} },
   { type:'mcq', stem:'Lan định "mua đơn ảo" để tăng lượt bán cho nhanh lên hạng. Điều nào mô tả đúng nhất rủi ro của cách này?',
-    options:[{k:'a',t:'Chi phí mua đơn ảo luôn đắt hơn chạy quảng cáo tìm kiếm nên chắc chắn lỗ'},{k:'b',t:'Khách thật nhìn số bán cao sẽ nghi ngờ rồi bỏ đi mua shop khác'},
-             {k:'c',t:'Đơn ảo không có đánh giá nên chắc chắn không giúp gì cho thứ hạng'},{k:'d',t:'Có thể bị sàn phát hiện và phạt, và không sửa được lý do khách thật chưa mua'}],
-    answer:'d', why:{a:'Chi phí tuỳ cách mua; "luôn đắt hơn" là khẳng định tuyệt đối không có căn cứ.',
+    options:[{k:'a',t:'Tốn tiền hơn chạy quảng cáo từ khoá cùng ngân sách, nên khó có lãi'},{k:'b',t:'Khách thật nhìn số bán cao sẽ nghi ngờ rồi bỏ đi mua shop khác'},
+             {k:'c',t:'Đơn ảo không kèm đánh giá thật nên ít tác dụng với thứ hạng'},{k:'d',t:'Có thể bị sàn phạt, và không sửa được lý do khách thật chưa mua'}],
+    answer:'d', why:{a:'Chi phí tuỳ cách mua và không phải rủi ro chính; rủi ro nằm ở chế tài của sàn và ở việc số đẹp không sửa được trang bán.',
       b:'Không có căn cứ cho rằng khách hay nghi ngờ; nhiều khách còn xem số bán cao là tín hiệu tin cậy.',
-      c:'Đơn ảo thường đi kèm đánh giá ảo; vấn đề không phải thiếu đánh giá.',
+      c:'Đơn ảo thường đi kèm đánh giá ảo; vấn đề không phải thiếu đánh giá mà là gian lận bị sàn chế tài.',
       d:'Đúng. Đây là rủi ro quan sát được: sàn thường có chế tài với gian lận đơn hàng, và dù không bị phát hiện, đơn ảo chỉ làm số liệu đẹp lên chứ không sửa tiêu đề hay trang bán.'} }
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kn03-05', skill:'creative', read:'7 phút', t:'Livestream bán hàng lần đầu: chuẩn bị gì để không nói chuyện một mình?',
+{ id:'B:kn03-05', skill:'creative', read:'7 phút', assume:true, t:'Livestream bán hàng lần đầu: chuẩn bị gì để không nói chuyện một mình?',
   situation:'Shop đồ ăn vặt của Vy quyết định livestream tối thứ Sáu. Kế hoạch là "lên sóng 2 tiếng, giới thiệu hết 40 món, ai hỏi gì trả lời nấy". Buổi thử trước đó có 150 người vào nhưng lúc nào cũng chỉ 8–10 người ở lại, được 3 đơn. Vy nghĩ vấn đề là chưa đủ nổi tiếng.',
   concept:{ name:'Kịch bản phiên live',
     body:'Người xem vào ra liên tục; mỗi phút lại có người chưa nghe gì. Phiên live cần <b>kịch bản lặp theo vòng</b> khoảng 10–15 phút (gợi ý thực hành, tuỳ sản phẩm): móc câu (ưu đãi chỉ có trong live), trình diễn một món chủ lực, chứng minh (ăn thử, so sánh), kêu gọi mua có hạn giờ, rồi lặp. Vòng ngắn hơn thời gian người xem thường ở lại, nên ai vào lúc nào cũng gặp trọn một lời mời mua. Chọn 3–5 món, không 40. Đo bằng ba số: người xem đồng thời, thời gian xem trung bình, tỉ lệ mua trên lượt vào. Chuẩn bị trước: giá và mã đã cài, người trả lời bình luận, kho đủ cho số đơn dự kiến.' },
@@ -275,7 +278,7 @@ BAI_ADD({ mod:'kn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kn03-06', skill:'channel', read:'7 phút', t:'Có đáng trả thêm phí để vào gian hàng chính hãng (Mall)?',
+{ id:'B:kn03-06', skill:'channel', read:'7 phút', assume:true, t:'Có đáng trả thêm phí để vào gian hàng chính hãng (Mall)?',
   situation:'Thương hiệu serum nội địa của Khoa có giấy tờ đầy đủ và đang bán gian hàng thường, 1.000 đơn/tháng, giá 300.000đ. Nhân viên sàn mời vào gian hàng chính hãng: có nhãn chính hãng, được vào các chương trình riêng, nhưng phí trên đơn cao hơn. Theo giả định minh hoạ, phí tăng thêm 4 điểm phần trăm.',
   concept:{ name:'Tính điểm hoà khi đổi loại gian hàng',
     body:'Gian hàng chính hãng bán <b>niềm tin</b>: khách sợ hàng giả, nhất là mỹ phẩm, thực phẩm chức năng, đồ điện tử, sẽ mua dễ hơn khi thấy nhãn chính hãng. Bạn trả cho niềm tin đó bằng phí cao hơn và yêu cầu vận hành chặt hơn. Câu hỏi không phải "có tốt không", mà là "số đơn hoặc tỉ lệ chuyển đổi phải tăng bao nhiêu để bù phần phí tăng". Ngành càng nhạy với hàng giả, khả năng bù càng cao. Mức phí trong bài là minh hoạ; khi tính thật, lấy biểu phí hiện hành của sàn.' },
@@ -331,7 +334,7 @@ BAI_ADD({ mod:'kn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kn03-07', skill:'measure', read:'7 phút', t:'100 đơn đặt, bao nhiêu đơn thật sự thành tiền?',
+{ id:'B:kn03-07', skill:'measure', read:'7 phút', assume:true, t:'100 đơn đặt, bao nhiêu đơn thật sự thành tiền?',
   situation:'Shop phụ kiện tóc của Thảo nhận 1.000 đơn/tháng, 70% thanh toán khi nhận hàng. Cuối tháng Thảo thấy 12% đơn bị khách huỷ trước khi gửi, 8% đơn giao thất bại bị hoàn về. Mỗi đơn hoàn tốn phí vận chuyển hai chiều và đôi khi hàng móp phải bán rẻ. Thảo vẫn báo cáo "1.000 đơn".',
   concept:{ name:'Đơn thành công và chi phí đơn hỏng',
     body:'Đơn đặt không phải đơn thành tiền. Có hai kiểu rơi: <b>huỷ</b> trước khi gửi (mất công xử lý, gần như không mất tiền vận chuyển) và <b>hoàn</b> sau khi gửi (mất phí ship đi, ship về, đóng gói, có khi hỏng hàng). Hoàn tốn hơn huỷ nhiều. Hãy báo cáo theo đơn thành công, và tính lãi trên đơn thành công sau khi trừ chi phí đơn hoàn. Nguyên nhân hay gặp: khách đặt bốc đồng khi thanh toán lúc nhận, mô tả sai kỳ vọng, giao quá lâu.' },
@@ -387,7 +390,7 @@ BAI_ADD({ mod:'kn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kn03-08', skill:'channel', read:'6 phút', t:'5.000 khách đã mua trên sàn: họ là khách của bạn hay của sàn?',
+{ id:'B:kn03-08', skill:'channel', read:'6 phút', assume:true, t:'5.000 khách đã mua trên sàn: họ là khách của bạn hay của sàn?',
   situation:'Shop trà thảo mộc của Phong có 5.000 khách mua trên sàn trong năm qua. Phong muốn gửi tin chào mẫu mới cho họ nhưng nhận ra mình không có số điện thoại hay email ai cả. Tỉ lệ mua lại trên sàn chỉ 10%: phần lớn khách lần sau gõ "trà thảo mộc" và mua shop khác đang đứng đầu.',
   concept:{ name:'Khách thuê và khách sở hữu',
     body:'Trên sàn, bạn <b>thuê</b> quyền tiếp cận khách: sàn giữ dữ liệu, quyết định ai thấy bạn, và lần mua sau khách lại đi qua ô tìm kiếm nơi đối thủ đang chờ. Kênh bạn <b>sở hữu</b> (Zalo OA, danh sách khách qua thẻ bảo hành, cộng đồng thương hiệu) cho phép nói chuyện trực tiếp. Mỗi sàn có quy định riêng về việc dẫn khách ra ngoài — phải đọc kỹ và làm đúng. Trong phạm vi được phép, dùng công cụ giữ chân của chính sàn (theo dõi shop, voucher cho người theo dõi) và làm thương hiệu đủ mạnh để khách gõ tên bạn thay vì tên ngành.' },
@@ -447,7 +450,7 @@ BAI_ADD({ mod:'kn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:kn03-09', skill:'channel', read:'7 phút', t:'Giá trên sàn rẻ hơn đại lý: bạn đang tự đánh nhau với ai?',
+{ id:'B:kn03-09', skill:'channel', read:'7 phút', assume:true, t:'Giá trên sàn rẻ hơn đại lý: bạn đang tự đánh nhau với ai?',
   situation:'Hãng nước mắm của Quân bán qua 60 đại lý tạp hoá với giá lẻ khuyến nghị 85.000đ/chai. Trên sàn, để đua hạng, shop chính hãng chạy voucher cho giá cuối còn 68.000đ. Hai tháng sau, 15 đại lý gọi phàn nàn khách chê đắt, "trên mạng có 68 nghìn", và bắt đầu nhập ít đi.',
   concept:{ name:'Kỷ luật giá giữa các kênh',
     body:'Khi một sản phẩm bán ở nhiều kênh, khách so giá chỉ trong vài giây. Nếu kênh của chính hãng rẻ hơn hẳn kênh đối tác, bạn đang <b>ăn thịt kênh của mình</b>: đại lý mất khách, nhập ít đi, hàng biến mất khỏi kệ. Chênh lệch nhỏ giải thích được (phí ship, mua số lượng) thì chấp nhận được; chênh lớn thì không. Cách giữ kỷ luật: đưa ra giá lẻ khuyến nghị, khác biệt hoá bằng <b>quy cách</b> (combo 3 chai, dung tích lớn chỉ bán online) thay vì bằng giá cùng một chai. Chỉ là khuyến nghị: ép giá đại lý bằng thoả thuận có thể vướng luật cạnh tranh, nên hỏi pháp chế. Voucher do chính sàn tài trợ cũng kéo giá cuối xuống, nên theo dõi giá khách thực sự thấy.' },
@@ -500,7 +503,7 @@ BAI_ADD({ mod:'kn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:kn03-10', skill:'measure', read:'7 phút', t:'Khi nào nên làm website bán hàng riêng?',
+{ id:'B:kn03-10', skill:'measure', read:'7 phút', assume:true, t:'Khi nào nên làm website bán hàng riêng?',
   situation:'Thương hiệu nến thơm của Ngọc bán 1.500 đơn/tháng trên sàn, giá trung bình 250.000đ, tổng phí sàn và thanh toán khoảng 15% (minh hoạ). Một agency báo giá website 60 triệu, vận hành 8 triệu/tháng. Ngọc tính "15% phí sàn là 56 triệu/tháng, website rẻ hơn nhiều" và định chuyển hẳn.',
   concept:{ name:'Website là kênh sở hữu, không phải kênh miễn phí',
     body:'Website riêng bỏ được phí sàn, giữ được dữ liệu khách và toàn quyền kể câu chuyện thương hiệu. Nhưng nó <b>không có dòng khách sẵn</b>: mỗi lượt truy cập phải tự kéo bằng quảng cáo, nội dung hoặc khách cũ. Website đáng làm khi có ít nhất một trong ba: <b>khách mua lại nhiều</b> (có thể đưa về), <b>thương hiệu được tìm theo tên</b>, hoặc <b>sản phẩm cần kể nhiều</b> mà trang sàn không đủ chỗ. Đừng tính tiết kiệm trên toàn bộ doanh thu sàn; chỉ tính trên phần đơn thật sự chuyển được sang.' },

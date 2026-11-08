@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'tu02', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tu02-01', skill:'measure', read:'7 phút', t:'Nhân đôi ngân sách thì có được gấp đôi đơn không?',
+{ id:'B:tu02-01', skill:'measure', read:'7 phút', assume:true, t:'Nhân đôi ngân sách thì có được gấp đôi đơn không?',
   situation:'Shop đồ bộ mặc nhà của Hạnh chạy quảng cáo Facebook 1 triệu/ngày, được 20 đơn, mỗi đơn lãi gộp 120.000đ trước quảng cáo. Thấy hiệu quả, sếp bảo tăng lên 2 triệu/ngày "cho gấp đôi đơn". Tuần sau shop chỉ được 32 đơn/ngày, và sếp hỏi tiền đi đâu.',
   concept:{ name:'Lợi suất giảm dần',
     body:'Nền tảng quảng cáo luôn tiêu tiền vào những người dễ mua nhất trước. Khi tăng chi, nó phải với tới những người ít quan tâm hơn, nên mỗi đồng thêm vào mang về ít đơn hơn đồng trước. Vì vậy phải nhìn <b>chi phí biên</b>: phần tiền tăng thêm mua được bao nhiêu đơn tăng thêm, chứ không nhìn chi phí trung bình của cả ngân sách. Trung bình có thể vẫn đẹp trong khi phần tăng thêm đang lỗ.' },
@@ -59,7 +59,7 @@ BAI_ADD({ mod:'tu02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tu02-02', skill:'measure', read:'7 phút', t:'Nhóm quảng cáo nào nên nhận thêm tiền, nhóm nào nên bị rút bớt?',
+{ id:'B:tu02-02', skill:'measure', read:'7 phút', assume:true, t:'Nhóm quảng cáo nào nên nhận thêm tiền, nhóm nào nên bị rút bớt?',
   situation:'Tiệm bánh online của Quân chạy hai nhóm quảng cáo, mỗi nhóm 3 triệu/tuần. Nhóm "Mẹ bỉm" cho 60 đơn, nhóm "Dân văn phòng" cho 40 đơn. Tuần trước Quân thử rút mỗi nhóm 1 triệu: "Mẹ bỉm" còn 52 đơn, "Văn phòng" còn 25 đơn. Mỗi đơn lãi gộp 90.000đ trước quảng cáo.',
   concept:{ name:'Dời tiền theo lãi biên',
     body:'Muốn chia lại ngân sách giữa các nhóm, đừng so chi phí trung bình mỗi đơn của từng nhóm. Hãy so <b>lãi biên</b>: 1 triệu cuối cùng ở mỗi nhóm mang về bao nhiêu lãi. Tiền nên chảy từ nhóm có lãi biên thấp sang nhóm có lãi biên cao, và dừng khi hai nhóm có lãi biên xấp xỉ nhau. Nhóm có trung bình đẹp nhất đôi khi đã bão hoà, còn nhóm trung bình kém lại đang có phần biên tốt.' },
@@ -112,7 +112,7 @@ BAI_ADD({ mod:'tu02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tu02-03', skill:'channel', read:'6 phút', t:'Có nên tắt quảng cáo lúc 1 giờ sáng?',
+{ id:'B:tu02-03', skill:'channel', read:'6 phút', assume:true, t:'Có nên tắt quảng cáo lúc 1 giờ sáng?',
   situation:'Một cửa hàng giao đồ ăn vặt ở Hà Nội chạy quảng cáo cả ngày, 1,2 triệu/ngày. Bảng theo giờ cho thấy khung 0h–6h tiêu 180.000đ nhưng gần như không có đơn, vì bếp đóng cửa lúc 23h và đơn đặt đêm phải chờ tới trưa. Khung 17h–21h chiếm phần lớn đơn.',
   concept:{ name:'Lịch phân phối theo giờ/ngày',
     body:'Không phải giờ nào khách cũng mua được. Có giờ khách lướt nhưng không đặt, có giờ bạn không phục vụ kịp. Dữ liệu theo giờ và theo thứ cho thấy khung nào tiền đi mà đơn không về. Có thể <b>hạ giá thầu hoặc tắt</b> những khung đó và dồn tiền vào khung tốt. Nhưng cần đủ dữ liệu vài tuần, và nhớ rằng có người thấy quảng cáo lúc tối rồi mới mua sáng hôm sau.' },
@@ -168,10 +168,12 @@ BAI_ADD({ mod:'tu02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tu02-04', skill:'channel', read:'6 phút', t:'Vì sao người tìm "giày chạy bộ miễn phí" lại ăn tiền của bạn?',
+{ id:'B:tu02-04', skill:'channel', read:'6 phút', assume:true, t:'Vì sao người tìm "giày chạy bộ miễn phí" lại ăn tiền của bạn?',
+  src:[{ t:'Google Ads Help: About negative keywords (từ khoá phủ định, kiểu khớp và giới hạn số lượng)', u:'https://support.google.com/google-ads/answer/2453972', d:'2026-11-07', st:'chua' },
+       { t:'Google Ads Help: About the search terms report (báo cáo cụm từ tìm kiếm)', u:'https://support.google.com/google-ads/answer/2472708', d:'2026-11-07', st:'chua' }],
   situation:'Shop giày chạy bộ của Tùng chạy quảng cáo tìm kiếm với từ khoá rộng "giày chạy bộ". Tuần trước tốn 4 triệu. Mở báo cáo cụm từ tìm kiếm thật, Tùng thấy 1,2 triệu đi vào các cụm như "giày chạy bộ cũ", "cách giặt giày chạy bộ", "giày chạy bộ miễn phí", không cụm nào ra đơn.',
   concept:{ name:'Từ khoá phủ định',
-    body:'Khi đặt từ khoá rộng, nền tảng sẽ hiển thị cho nhiều cụm tìm kiếm liên quan, kể cả cụm không có ý định mua. <b>Từ khoá phủ định</b> là danh sách chữ bạn không muốn quảng cáo xuất hiện, như "cũ", "miễn phí", "cách giặt", "tuyển dụng". Việc rà báo cáo cụm từ tìm kiếm mỗi tuần và thêm phủ định là một trong những cách rẻ nhất để bịt chỗ rò tiền, vì bạn không cần tăng ngân sách.' },
+    body:'Khi đặt từ khoá rộng, nền tảng tìm kiếm (bài lấy Google Ads làm ví dụ, theo trang trợ giúp chính thức tại ngày kiểm 7/11/2026) sẽ hiển thị cho nhiều cụm tìm kiếm liên quan, kể cả cụm không có ý định mua. <b>Từ khoá phủ định</b> là danh sách chữ bạn không muốn quảng cáo xuất hiện, như "cũ", "miễn phí", "cách giặt", "tuyển dụng". Việc rà báo cáo cụm từ tìm kiếm mỗi tuần và thêm phủ định là một trong những cách rẻ nhất để bịt chỗ rò tiền, vì bạn không cần tăng ngân sách. Tên báo cáo, vị trí nút và giới hạn số từ phủ định đổi theo thời gian; nếu màn hình của bạn khác bài, tin trang chính thức.' },
   example:'Tùng thêm 15 từ phủ định. Tuần sau vẫn chi 4 triệu, nhưng 1,2 triệu từng đi vào cụm vô ích giờ đi vào cụm có ý định mua. Tỉ lệ chuyển đổi từ nhấp sang đơn tăng từ 2% lên 2,8%, số đơn tăng từ 32 lên 45 mà không tốn thêm đồng nào. (Số minh hoạ; ngoài đời cần A/B test hoặc nhóm đối chứng để biết phần tăng có thật do thay đổi này.)',
   takeaway:'Bịt chỗ rò bằng từ phủ định thường rẻ hơn tìm thêm khách bằng tiền mới.',
   points:["Từ khoá rộng được khớp theo nghĩa gần đúng, nên “giày chạy bộ” kéo theo cả một vùng chủ đề. Chữ phủ định vẽ ranh giới, loại cụm mang chữ báo hiệu không mua.","Báo cáo cụm từ tìm kiếm cho biết khách gõ gì thật. Đọc cột chi tiêu trước cột đơn, vì cụm tốn tiền mà không ra đơn là ứng viên phủ định rõ nhất.","Mỗi từ phủ định nên ghi lý do ngắn, như ý định tìm việc hay đồ cũ. Thêm theo lý do thay vì cảm giác giúp tránh chặn nhầm cụm gần ý định mua."],
@@ -224,7 +226,7 @@ BAI_ADD({ mod:'tu02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tu02-05', skill:'channel', read:'6 phút', t:'Một người thấy quảng cáo 9 lần/tuần thì có sao?',
+{ id:'B:tu02-05', skill:'channel', read:'6 phút', assume:true, t:'Một người thấy quảng cáo 9 lần/tuần thì có sao?',
   situation:'Một phòng gym ở Đà Nẵng chạy quảng cáo nhắm người sống trong bán kính 3 km, 700.000đ/ngày. Tuần đầu tần suất 2,1, được 40 đăng ký tập thử. Tuần thứ tư tần suất lên 8,9, chi phí mỗi đăng ký tăng gấp đôi, bình luận bắt đầu có câu "thấy hoài rồi".',
   concept:{ name:'Tần suất và mệt quảng cáo',
     body:'<b>Tần suất</b> là số lần trung bình một người thấy quảng cáo trong kỳ, bằng lượt hiển thị chia cho số người tiếp cận. Khi tệp nhỏ mà ngân sách giữ nguyên, nền tảng phải chiếu lại cho cùng người. Vài lần đầu giúp nhớ; quá mức thì người xem lướt qua, thậm chí khó chịu, và tiền trả thêm gần như không mua được gì. Cách xử lý: mở rộng tệp, thay mẫu mới, đặt giới hạn tần suất, hoặc giảm ngân sách cho vừa tệp.' },
@@ -280,7 +282,7 @@ BAI_ADD({ mod:'tu02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tu02-06', skill:'measure', read:'7 phút', t:'Nhóm nhiều đơn nhất có phải nhóm lãi nhất?',
+{ id:'B:tu02-06', skill:'measure', read:'7 phút', assume:true, t:'Nhóm nhiều đơn nhất có phải nhóm lãi nhất?',
   situation:'Một shop mỹ phẩm chạy hai chiến dịch, mỗi chiến dịch 10 triệu/tháng. Chiến dịch "Son" được 250 đơn, chiến dịch "Serum" được 100 đơn. Nhân viên đề xuất dồn tiền sang "Son". Nhưng son giá 150.000đ, giá vốn và phí giao 100.000đ; serum giá 450.000đ, giá vốn và phí giao 220.000đ.',
   concept:{ name:'Tối ưu theo lãi, không theo đơn',
     body:'Nền tảng quảng cáo mặc định tối ưu theo số chuyển đổi, nên dễ khiến mọi người nhìn số đơn. Nhưng mỗi đơn mang lại lãi khác nhau. Hãy tính <b>lãi sau quảng cáo</b> cho từng chiến dịch: số đơn × lãi gộp mỗi đơn − chi quảng cáo. Nếu có thể, gửi giá trị đơn cho nền tảng để nó tối ưu theo giá trị thay vì theo số lượng. Nhiều đơn rẻ có thể lãi ít hơn ít đơn đắt.' },
@@ -336,7 +338,7 @@ BAI_ADD({ mod:'tu02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tu02-07', skill:'measure', read:'6 phút', t:'Có nên để dành một phần ngân sách chỉ để thử?',
+{ id:'B:tu02-07', skill:'measure', read:'6 phút', assume:true, t:'Có nên để dành một phần ngân sách chỉ để thử?',
   situation:'Công ty bán máy lọc nước của Vy chi 100 triệu/tháng cho quảng cáo, dồn hết vào ba chiến dịch đang tốt. Sáu tháng liền không thử gì mới. Tháng này chi phí mỗi đơn tăng 25% ở cả ba chiến dịch, và Vy nhận ra không có phương án dự phòng nào đã được kiểm chứng.',
   concept:{ name:'Tỉ lệ khai thác – thử nghiệm',
     body:'Tối ưu hằng tuần dễ biến thành chỉ dồn tiền vào thứ đang tốt. Nhưng thứ đang tốt sẽ mòn: mẫu cũ, tệp bão hoà, đối thủ chen vào. Giữ một phần ngân sách, theo quy tắc kinh nghiệm phổ biến khoảng <b>10–20%</b> (không có chuẩn cố định, tuỳ quy mô và mức rủi ro), để thử mẫu mới, tệp mới, cách chào hàng mới. Phần này không cần lãi ngay; mục tiêu là tìm phương án thay thế trước khi cần tới. Ngân sách nhỏ thì thử ít phép hơn nhưng chạy lâu hơn, đo bằng chỉ số trung gian. Phần còn lại vẫn chạy thứ đã chứng minh.' },
@@ -393,7 +395,7 @@ BAI_ADD({ mod:'tu02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tu02-08', skill:'channel', read:'6 phút', t:'Mùa sale lớn, CPM tăng gấp đôi thì làm gì với ngân sách?',
+{ id:'B:tu02-08', skill:'channel', read:'6 phút', assume:true, t:'Mùa sale lớn, CPM tăng gấp đôi thì làm gì với ngân sách?',
   situation:'Shop túi xách của Linh thường chạy 3 triệu/ngày với CPM khoảng 60.000đ. Tuần trước ngày 11/11, CPM tăng lên 120.000đ vì mọi nhãn hàng cùng đổ tiền. Linh phân vân: tăng ngân sách để giữ độ phủ, giữ nguyên, hay tạm dừng chờ qua mùa.',
   concept:{ name:'Giá chú ý theo mùa',
     body:'<b>CPM</b> là giá cho 1.000 lượt hiển thị. Mùa cao điểm nhiều nhãn hàng cùng đấu giá nên CPM tăng, nhưng khách sẵn sàng mua hơn nên tỉ lệ ra đơn cũng có thể tăng theo. Số cần nhìn không phải CPM mà là <b>chi phí mỗi đơn (CPA) so với lãi gộp mỗi đơn</b>. Còn CPA thấp hơn lãi gộp và còn tệp chưa chạm tới thì thêm tiền vẫn có lãi; thêm quá nhanh sẽ chạm tệp kém quan tâm, CPA leo dần. Nhiều thương hiệu dồn tiền từ trước mùa để xây tệp khi còn rẻ.' },
@@ -446,11 +448,11 @@ BAI_ADD({ mod:'tu02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tu02-09', skill:'measure', read:'7 phút', t:'Bị cắt 30% ngân sách thì cắt ở đâu?',
+{ id:'B:tu02-09', skill:'measure', read:'7 phút', assume:true, t:'Bị cắt 30% ngân sách thì cắt ở đâu?',
   situation:'Công ty bán khoá học kỹ năng của Phong có 60 triệu/tháng cho quảng cáo, chia ba nhóm 20 triệu. Sếp báo tháng sau chỉ còn 42 triệu. Phản xạ đầu tiên của nhóm là cắt đều mỗi nhóm 30%, mỗi nhóm còn 14 triệu. Phong muốn xem lại số liệu trước.',
   concept:{ name:'Cắt từ đồng lãi thấp nhất',
     body:'Khi bị giảm ngân sách, cắt đều nghe công bằng nhưng thường sai. Phần tiền nên cắt đầu tiên là phần có <b>lãi biên thấp nhất</b>: đồng cuối của nhóm đã bão hoà, khung giờ không ra đơn, cụm từ khoá rò, tệp tần suất quá cao. Cắt đúng chỗ, tổng lãi có khi giảm rất ít. Cũng nên giữ phần tiền cho tệp khách đang cân nhắc, vì cắt ở đó sẽ làm hụt đơn trong vài tuần tới.' },
-  example:'Ba nhóm: A lãi biên +300.000đ mỗi triệu cuối, B +50.000đ, C −200.000đ. Cần cắt 18 triệu. Phong cắt C 10 triệu (phần đang lỗ), rồi B 8 triệu (phần lãi mỏng), giữ nguyên A. Nếu cắt đều 6 triệu mỗi nhóm, A mất 6 triệu tiền đang lãi tốt, trong khi C vẫn giữ 4 triệu tiền lỗ.',
+  example:'Ba nhóm: A lãi biên +300.000đ mỗi triệu cuối, B +50.000đ, C −200.000đ. Cần cắt 18 triệu. Phong cắt C 10 triệu (phần đang lỗ), rồi B 8 triệu (phần lãi mỏng), giữ nguyên A. Nếu cắt đều 6 triệu mỗi nhóm, A mất 6 triệu tiền đang lãi tốt, trong khi C vẫn giữ 4 triệu tiền lỗ. Để tính nhanh, ví dụ coi lãi biên không đổi trong khoảng cắt (giả định tuyến tính). Thực tế, như bài 01–02, lãi biên của C tăng dần khi C nhỏ lại (ước: tới triệu thứ 10 của C thì hoà vốn), nên quy tắc dừng là cắt C tới chỗ lãi biên của C xấp xỉ lãi biên của B, rồi mới cắt B.',
   takeaway:'Bị cắt ngân sách thì cắt từ đồng lỗ nhất trước, không chia đều cho công bằng.',
   points:["Tiền không sinh lãi đều nhau. Đồng cuối của nhóm bão hòa mang về rất ít, đồng đầu của nhóm còn dư địa mang về nhiều, nên cắt chỗ mỏng giữ gần nguyên tổng lãi.","Cắt đều bỏ qua khác biệt này và cắt cả phần đang sinh lãi tốt. Công bằng giữa các nhóm là tiêu chí nội bộ, không phải tiêu chí của khách hàng hay lợi nhuận.","Trước khi cắt, kiểm tra từng khoản có vai trò gì trong hành trình khách. Khoản nuôi tệp cân nhắc có độ trễ, nên cắt nó giống như vay trước đơn của vài tuần tới."],
   counter:"Giả sử nhóm C có lãi biên âm nhưng là chiến dịch nhận biết cho người mới, đầu phễu của cả khóa học. Lãi biên tính theo đơn trực tiếp không thấy phần đóng góp gián tiếp, nên cắt 10 triệu ở C có thể làm A và B hụt đơn sau vài tuần. Dấu hiệu: lượng người tìm tên thương hiệu và đơn nhóm khác giảm khi C thu nhỏ. Cách đổi: cắt từng nấc và theo dõi.",
@@ -502,7 +504,7 @@ BAI_ADD({ mod:'tu02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:tu02-10', skill:'measure', read:'6 phút', t:'Mỗi tuần rà soát ngân sách quảng cáo theo thứ tự nào?',
+{ id:'B:tu02-10', skill:'measure', read:'6 phút', assume:true, t:'Mỗi tuần rà soát ngân sách quảng cáo theo thứ tự nào?',
   situation:'Mai quản lý quảng cáo cho một shop thời trang trẻ em, 50 triệu/tháng trên hai nền tảng. Mỗi ngày Mai mở tài khoản vài lần, tăng giảm tiền theo cảm giác. Có tuần chiến dịch vừa sửa hôm thứ Hai đã bị sửa tiếp hôm thứ Tư, và Mai không biết thay đổi nào tạo ra kết quả nào.',
   concept:{ name:'Lịch rà soát hằng tuần',
     body:'Tối ưu ngân sách hiệu quả khi có nhịp cố định, không theo cảm giác. Một vòng rà mỗi tuần (khoảng một giờ là đề xuất minh hoạ của bài, hãy chỉnh theo quy mô tài khoản) theo thứ tự: <b>(1)</b> bịt rò: từ khoá phủ định, khung giờ, tần suất; <b>(2)</b> dời tiền theo lãi biên giữa các nhóm; <b>(3)</b> xem lãi theo sản phẩm, không chỉ số đơn; <b>(4)</b> chấm phần thử nghiệm; <b>(5)</b> ghi lại mỗi thay đổi và lý do. Mỗi thay đổi cần vài ngày để thấy kết quả, nên đừng sửa cùng một chỗ nhiều lần trong tuần.' },

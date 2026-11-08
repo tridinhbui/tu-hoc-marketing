@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'gt03', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:gt03-01', skill:'measure', read:'6 phút', t:'"Làm video TikTok sẽ tăng doanh số" đã là giả thuyết chưa?',
+{ id:'B:gt03-01', skill:'measure', read:'6 phút', assume:true, t:'"Làm video TikTok sẽ tăng doanh số" đã là giả thuyết chưa?',
   situation:'Một tiệm trà sữa ở Đà Nẵng bán online qua GrabFood, tỉ lệ chuyển đổi trang quán khoảng 2%. Trong cuộc họp, chủ quán nói: "Làm video TikTok sẽ tăng doanh số." Mọi người gật đầu. Ba tuần sau, quán đăng 12 video, doanh số lúc lên lúc xuống, và không ai nói được ý tưởng ban đầu đúng hay sai.',
   concept:{ name:'Khuôn "Nếu… thì… vì…"',
     body:'Một câu dự đoán chỉ thành giả thuyết khi đủ ba phần. <b>Nếu</b>: ta làm gì, cụ thể, với ai. <b>Thì</b>: con số nào thay đổi, bao nhiêu, trong bao lâu. <b>Vì</b>: cơ chế nào khiến điều đó xảy ra — đây là phần hay bị bỏ nhất, nhưng lại là phần cho biết nên làm gì tiếp khi kết quả ra. Thiếu "thì", bạn không biết mình thắng hay thua. Thiếu "vì", có thắng cũng không biết lặp lại thế nào.' },
@@ -53,18 +53,18 @@ BAI_ADD({ mod:'gt03', lessons:[
       c:'Con số vẫn đạt ngưỡng; dừng lại là bỏ phí một điều đang có tác dụng.',
       d:'Mâu thuẫn chính là thông tin: nó chỉ ra lý do ban đầu sai, không làm kết quả vô dụng.'} },
   { type:'mcq', stem:'Trong 4 tuần thử, GrabFood cũng chạy khuyến mãi toàn sàn; bình thường quán có 240 đơn mỗi 4 tuần. Câu nào là giả thuyết đủ ba phần mà kết quả gán được cho video?',
-    options:[{k:'a',t:'Nếu đăng 3 video/tuần trong 4 tuần thì ít nhất 60 đơn dùng mã riêng của video và tổng đơn không dưới 240, vì khách ngại món lạ cần thấy ly trà trước'},
+    options:[{k:'a',t:'Nếu đăng 3 video/tuần trong 4 tuần thì ít nhất 60 đơn đầu tiên của khách mới dùng mã riêng của video, vì khách ngại món lạ'},
              {k:'b',t:'Nếu đăng 3 video/tuần trong 4 tuần thì ít nhất 60 đơn dùng mã riêng của video, vì khách ngại món lạ cần thấy ly trà trước khi đặt'},
-             {k:'c',t:'Nếu đăng 3 video/tuần trong 4 tuần thì chuyển đổi cả trang quán tăng từ 2% lên 2,5%, vì khách ngại món lạ cần thấy ly trà trước khi đặt'},
-             {k:'d',t:'Nếu đăng 3 video/tuần trong 4 tuần thì tổng lượt xem đạt 30.000, vì khách ngại món lạ cần thấy ly trà trước khi đặt'}],
-    answer:'a', why:{a:'Đúng. Mã riêng gán được đơn cho video; thêm điều kiện tổng đơn không giảm để loại trường hợp khách cũ chỉ đổi sang dùng mã.',
+             {k:'c',t:'Nếu đăng 3 video/tuần trong 4 tuần thì tổng đơn của quán đạt ít nhất 300 thay vì 240 như mọi khi, vì khách ngại món lạ cần thấy ly trà trước'},
+             {k:'d',t:'Nếu đăng 3 video/tuần trong 4 tuần thì tổng lượt xem đạt 30.000 và mỗi video có ít nhất 50 bình luận, vì khách ngại món lạ cần thấy ly trà trước'}],
+    answer:'a', why:{a:'Đúng. Mã riêng gán được đơn cho video; chỉ đếm đơn đầu tiên của khách mới nên khách cũ đổi sang dùng mã không làm phồng kết quả.',
       b:'Gán được đơn cho video nhưng chưa cho biết có đơn mới hay không: khách vốn đã mua có thể chỉ chuyển sang dùng mã, tổng đơn vẫn đứng yên.',
-      c:'Chuyển đổi cả trang chịu ảnh hưởng của khuyến mãi GrabFood cùng 4 tuần, nên tăng lên cũng không chứng minh được do video.',
-      d:'Lượt xem không phải điều quán cần; xem nhiều mà không đặt thì giả thuyết vẫn trượt.'} }
+      c:'Có ngưỡng rõ, nhưng tổng đơn gộp cả tác động của khuyến mãi toàn sàn cùng 4 tuần; không có mã riêng thì phần tăng không gán được cho video.',
+      d:'Lượt xem và bình luận không phải điều quán cần; xem nhiều mà không đặt thì giả thuyết vẫn trượt.'} }
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:gt03-02', skill:'measure', read:'6 phút', t:'Giả thuyết không thể sai thì có đáng kiểm không?',
+{ id:'B:gt03-02', skill:'measure', read:'6 phút', assume:true, t:'Giả thuyết không thể sai thì có đáng kiểm không?',
   situation:'Một thương hiệu nước mắm ở Phú Quốc chạy chiến dịch "kể chuyện nhà thùng". Trước chiến dịch, trưởng nhóm viết: "Chiến dịch sẽ có tác động tích cực tới thương hiệu." Sau hai tháng, đơn online đứng yên ở khoảng 60 đơn mỗi tháng, nhưng nhóm vẫn báo cáo "thành công" vì bình luận khen nhiều hơn.',
   concept:{ name:'Giả thuyết phải sai được',
     body:'Một giả thuyết tốt phải chỉ ra trước <b>kết quả nào sẽ chứng minh nó sai</b>. "Tác động tích cực tới thương hiệu" không sai được: đơn tăng là tích cực, đơn giảm thì "vẫn tăng nhận biết", bình luận khen cũng tính. Câu nào luôn đúng thì không dạy được gì. Cách thử: hỏi "Con số nào xuất hiện thì tôi sẽ dừng?" Vạch dừng phải nằm ngoài mức dao động thường ngày, nếu không bạn đang đọc nhiễu thành kết luận. Không trả lời được, câu đó chưa phải giả thuyết.' },
@@ -101,10 +101,10 @@ BAI_ADD({ mod:'gt03', lessons:[
       c:'Đúng. Ngưỡng 80 không đạt; điều học được là nội dung tạo cảm tình nhưng chưa chạm tới quyết định mua.',
       d:'Nếu bình luận quan trọng hơn thì phải ghi như vậy từ trước, không đổi sau khi có số.'} },
   { type:'mcq', stem:'Câu nào sau đây sai được?',
-    options:[{k:'a',t:'Nếu gửi mã giảm 15% cho khách 90 ngày chưa mua lại thì ít nhất 8% quay lại trong 2 tuần'},{k:'b',t:'Nếu livestream đều đặn mỗi tuần thì thương hiệu sẽ gần gũi hơn với khách hàng trẻ tuổi'},
+    options:[{k:'a',t:'Nếu gửi mã giảm 15% cho khách 90 ngày chưa mua lại thì ít nhất 8% quay lại trong 2 tuần'},{k:'b',t:'Nếu livestream mỗi tuần thì doanh số tăng 10% hoặc nhận biết thương hiệu tăng, tuỳ cái nào đến trước'},
              {k:'c',t:'Nếu đổi sang bao bì mới thì khách sẽ yêu thích sản phẩm hơn so với bao bì cũ trong thời gian tới'},{k:'d',t:'Nếu thuê KOL đăng bài thì doanh số của thương hiệu sẽ tăng ở những giai đoạn bán hàng phù hợp'}],
     answer:'a', why:{a:'Đúng. Có con số và thời hạn; dưới 8% là sai rõ ràng.',
-      b:'"Gần gũi hơn" không có thước đo nên kết quả nào cũng khớp.',
+      b:'Có số nhưng là lối thoát kép: doanh số không tăng thì nói nhận biết tăng; "tuỳ cái nào đến trước" làm câu không bao giờ sai được.',
       c:'"Yêu thích hơn" và "thời gian tới" không có số đo hay mốc, nên khách phản ứng thế nào cũng khớp.',
       d:'"Giai đoạn phù hợp" là lối thoát: tăng ở lúc nào cũng khớp, không tăng thì bảo chưa phải giai đoạn.'} },
   { type:'mcq', stem:'Một đồng nghiệp nói: "Viết ngưỡng rõ quá thì dễ bị sếp đánh giá là thất bại." Cách phản hồi tốt nhất?',
@@ -124,7 +124,7 @@ BAI_ADD({ mod:'gt03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:gt03-03', skill:'measure', read:'7 phút', t:'Số nào sẽ chứng minh bạn đúng — và bao nhiêu thì đủ?',
+{ id:'B:gt03-03', skill:'measure', read:'7 phút', assume:true, t:'Số nào sẽ chứng minh bạn đúng — và bao nhiêu thì đủ?',
   situation:'Một chuỗi phòng gym ở Hà Nội đang có chi phí để có một hội viên mới (CAC) khoảng 150.000 đồng qua quảng cáo Facebook. Nhóm marketing muốn thử kênh Zalo OA với giả thuyết "Zalo rẻ hơn". Sau 3 tuần tiêu 6 triệu đồng và có 45 hội viên mới, nhóm cãi nhau: có người nói rẻ hơn, có người nói không.',
   concept:{ name:'Chỉ số quyết định và ngưỡng hành động',
     body:'Trước khi chạy, chọn <b>một chỉ số quyết định</b> gắn trực tiếp với điều bạn cần biết, và <b>một ngưỡng hành động</b>: vượt ngưỡng thì làm gì, dưới ngưỡng thì làm gì. Ngưỡng không lấy ngẫu nhiên mà suy từ kinh doanh: cộng cả công sức vận hành thêm vào, kênh mới phải rẻ hơn kênh cũ bao nhiêu thì mới đáng chuyển tiền? Có thể thêm chỉ số phụ để hiểu vì sao, nhưng chỉ số phụ không được dùng để lật kết quả.' },
@@ -177,11 +177,11 @@ BAI_ADD({ mod:'gt03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:gt03-04', skill:'insight', read:'6 phút', t:'Vấn đề nằm ở khách, ở kênh hay ở thông điệp?',
+{ id:'B:gt03-04', skill:'insight', read:'6 phút', assume:true, t:'Vấn đề nằm ở khách, ở kênh hay ở thông điệp?',
   situation:'Một thương hiệu sữa hạt ở TP.HCM chạy quảng cáo với câu "Ít đường, tốt cho tim mạch" nhắm dân văn phòng 25–35 tuổi. Tỉ lệ nhấp quảng cáo (CTR) chỉ 1,2%, thấp hơn các chiến dịch cũ. Nhóm đưa ra ba ý: đổi tệp khách, đổi sang TikTok, hay đổi câu quảng cáo — và muốn làm cả ba cùng lúc.',
   concept:{ name:'Ba loại giả thuyết: khách – kênh – thông điệp',
     body:'Khi kết quả kém, nguyên nhân thường thuộc một trong ba nhóm. <b>Khách</b>: nói với sai người, họ không có nhu cầu. <b>Kênh</b>: đúng người nhưng gặp họ sai chỗ, sai lúc. <b>Thông điệp</b>: đúng người, đúng chỗ nhưng nói điều họ không quan tâm. Mỗi loại cần kiểm cách khác nhau và giữ hai yếu tố kia cố định. Đổi cả ba cùng lúc thì kết quả tốt hay xấu cũng không biết do đâu.' },
-  example:'Nhóm hỏi: điều gì rẻ và nhanh nhất để tách ra? Họ giữ nguyên tệp và kênh, chỉ đổi thông điệp: "Ít đường, tốt cho tim mạch" với "Uống sáng no tới trưa, không buồn ngủ". Giả thuyết: "Nếu nói về cảm giác trong ngày thay vì sức khoẻ dài hạn, thì CTR tăng từ 1,2% lên ít nhất 1,6%, vì dân văn phòng 25–35 chưa lo tim mạch." Kết quả mẫu mới đạt 1,8% — tăng 50% tương đối.',
+  example:'Nhóm hỏi: điều gì rẻ và nhanh nhất để tách ra? Họ giữ nguyên tệp và kênh, chỉ đổi thông điệp: "Ít đường, tốt cho tim mạch" với "Uống sáng no tới trưa, không buồn ngủ". Giả thuyết: "Nếu nói về cảm giác trong ngày thay vì sức khoẻ dài hạn, thì CTR tăng từ 1,2% lên ít nhất 1,6%, vì dân văn phòng 25–35 chưa lo tim mạch." Mỗi mẫu chạy 20.000 lượt hiển thị trong 5 ngày, cùng tệp, cùng khung giờ. Kết quả mẫu mới đạt 1,8% — tăng 50% tương đối. Với cỡ mẫu này, CTR quanh 1,2% thường chỉ dao động chừng 0,1 điểm phần trăm, nên chênh 0,6 điểm là tín hiệu rõ; nếu mỗi mẫu chỉ có 2.000 lượt hiển thị, dao động lên tới cỡ 0,25 điểm và chênh lệch này chưa chắc là thật.',
   takeaway:'Đổi một thứ mỗi lần: khách, kênh hoặc thông điệp — để biết cái gì tạo ra kết quả.',
   points:["CTR là điểm vào của chuỗi: nó phản ánh người xem có bị câu chữ và hình ảnh kéo lại hay không, nên nhạy với thông điệp hơn các khâu phía sau.","Giữ hai yếu tố cố định nghĩa là chỉ cho một biến thay đổi. Khi đó phần chênh lệch kết quả quy được về biến ấy, không lẫn các thay đổi khác.","Đổi thông điệp thường rẻ và nhanh nhất: viết lại câu chữ không cần tìm tệp mới hay mở kênh mới. Vì thế nó hay là phép thử đầu tiên."],
   counter:"Giả sử câu \"Uống sáng no tới trưa\" tăng CTR ở người dưới 30 tuổi nhưng giảm ở người gần 35 tuổi, vì nhóm này quan tâm sức khoẻ lâu dài hơn. Khi đó khách và thông điệp dính nhau, và việc giữ khách cố định che mất khác biệt. Dấu hiệu nhận ra: CTR tổng nhích ít trong khi từng nhóm tuổi đi ngược chiều nhau. Lúc đó tách kết quả theo nhóm khách.",
@@ -237,7 +237,7 @@ BAI_ADD({ mod:'gt03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:gt03-05', skill:'insight', read:'7 phút', t:'Doanh thu giảm 20% — nên tin giả thuyết đầu tiên nghĩ ra không?',
+{ id:'B:gt03-05', skill:'insight', read:'7 phút', assume:true, t:'Doanh thu giảm 20% — nên tin giả thuyết đầu tiên nghĩ ra không?',
   situation:'Một shop giày trên Shopee thấy doanh thu tháng này giảm khoảng 20%. Chủ shop lập tức kết luận: "Đối thủ mới giảm giá, khách bỏ sang bên đó." Anh định giảm giá 10% cho toàn bộ sản phẩm ngay tuần sau. Nhân viên phân tích có dữ liệu lượt vào shop, tỉ lệ chuyển đổi và giá trị đơn trung bình nhưng chưa ai nhìn.',
   concept:{ name:'Nhiều giả thuyết cạnh tranh',
     body:'Với một hiện tượng, hãy viết ra <b>ít nhất ba giả thuyết khác nhau</b> trước khi tin cái nào. Sau đó hỏi: nếu giả thuyết này đúng, dữ liệu sẽ trông thế nào — và dữ liệu nào sẽ phân biệt nó với các giả thuyết khác? Đối thủ giảm giá, thuật toán sàn giảm hiển thị, hay mẫu mới kém hấp dẫn đều làm doanh thu giảm, nhưng để lại dấu vết khác nhau. Giả thuyết đầu tiên thường là cái dễ nghĩ nhất, chưa chắc là cái đúng.' },
@@ -294,7 +294,7 @@ BAI_ADD({ mod:'gt03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:gt03-06', skill:'insight', read:'6 phút', t:'Chỉ đọc bình luận khen thì có kiểm được giả thuyết không?',
+{ id:'B:gt03-06', skill:'insight', read:'6 phút', assume:true, t:'Chỉ đọc bình luận khen thì có kiểm được giả thuyết không?',
   situation:'Một thương hiệu bánh tráng trộn đóng gói đổi sang bao bì giấy kraft, giả thuyết là "khách mua vì bao bì thân thiện môi trường". Trưởng nhóm lưu lại 15 bình luận khen bao bì và coi đó là bằng chứng. Khảo sát 240 người mua lại cho thấy chỉ 18 người nhắc tới bao bì khi được hỏi lý do mua.',
   concept:{ name:'Mẫu tự chọn và thiên kiến xác nhận',
     body:'Khi đã tin một điều, ta có xu hướng <b>tìm, nhớ và tin</b> dữ liệu ủng hộ nó, và gạt dữ liệu ngược lại. Có hai nguồn lệch khác nhau. Một là <b>mẫu tự chọn</b>: bình luận khen tự đến với bạn, vì người không quan tâm bao bì thì không bình luận. Hai là <b>cách đọc</b>: ta nhặt bằng chứng hợp ý. Cách chống: trước khi nhìn dữ liệu, viết ra "nếu tôi sai, tôi sẽ thấy gì", rồi đi tìm đúng thứ đó, ở cả khách không lên tiếng, và bằng hành vi mua chứ không chỉ lời nói.' },
@@ -335,12 +335,12 @@ BAI_ADD({ mod:'gt03', lessons:[
       c:'Hành động theo niềm tin khi dữ liệu không ủng hộ.',
       d:'Tác động vào kết quả để nó khớp niềm tin là tự lừa.'} },
   { type:'mcq', stem:'Ba nguồn về bao bì kraft: bình luận toàn khen; khảo sát tự khai chỉ 7,5% nhắc bao bì; ở 20 quầy thử, gói kraft bày cạnh gói cũ, cùng giá, đổi vị trí luân phiên, kraft chiếm 58% lượt mua (số minh hoạ). Nên diễn giải thế nào?',
-    options:[{k:'a',t:'Bao bì tác động tới lựa chọn mà khách ít tự nhận; khi lệch nhau, hành vi đáng tin hơn lời khai'},{k:'b',t:'Khảo sát mới đúng, vì khách tự nói lý do của mình thì thật lòng hơn là bị quan sát'},
-             {k:'c',t:'Bình luận đúng nhất, vì nó cùng chiều với kết quả ở các quầy thử và có nhiều người khen'},{k:'d',t:'Ba nguồn mâu thuẫn nên không nguồn nào dùng được, phải làm lại từ đầu'}],
+    options:[{k:'a',t:'Bao bì tác động tới lựa chọn mà khách ít tự nhận; khi lệch nhau, hành vi đáng tin hơn lời khai'},{k:'b',t:'Khảo sát mới đúng, vì khách tự nói ra lý do của mình thì thật lòng hơn là bị quan sát ở quầy thử'},
+             {k:'c',t:'Bình luận đúng nhất, vì nó cùng chiều với kết quả ở các quầy thử và có nhiều người khen cùng lúc'},{k:'d',t:'Khảo sát và quầy thử cùng đúng vì đo hai nhóm khách khác nhau, nên không cần kiểm thêm ngoài 20 quầy'}],
     answer:'a', why:{a:'Đúng. Lời khai chỉ ghi điều khách nhận ra; quầy thử đo lựa chọn thật khi đã khống chế giá và vị trí. Vẫn nên kiểm thêm ngoài 20 quầy.',
       b:'Tự khai không bảo đảm đúng: khách thường không biết điều gì thực sự chi phối lựa chọn của mình.',
       c:'Bình luận cùng chiều là trùng hợp; nó vẫn là mẫu tự chọn và không được nâng thành bằng chứng chỉ vì khớp.',
-      d:'Ba nguồn đo ba thứ khác nhau; lệch nhau là thông tin cần giải thích, không phải lý do bỏ hết.'} },
+      d:'Nghe cân bằng nhưng sai hướng: lệch nhau là điều cần giải thích, không phải lý do dừng; 20 quầy còn ít và khảo sát mới hỏi người mua lại, nên vẫn phải kiểm thêm.'} },
   { type:'mcq', stem:'Vì sao ngưỡng đặt trước giúp chống thiên kiến xác nhận?',
     options:[{k:'a',t:'Vì ngưỡng buộc cả nhóm đồng ý với giả thuyết ngay từ đầu nên sau đó không còn tranh cãi'},{k:'b',t:'Vì có ngưỡng thì không cần xem dữ liệu chi tiết nữa'},
              {k:'c',t:'Vì sếp sẽ kiểm tra ngưỡng thay cho nhóm thực hiện'},{k:'d',t:'Vì quyết định sai hay đúng được chốt trước khi thấy số, khó bẻ theo ý mình'}],
@@ -351,7 +351,7 @@ BAI_ADD({ mod:'gt03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:gt03-07', skill:'channel', read:'6 phút', t:'Có ba giả thuyết mà tiền chỉ đủ kiểm một — chọn cái nào?',
+{ id:'B:gt03-07', skill:'channel', read:'6 phút', assume:true, t:'Có ba giả thuyết mà tiền chỉ đủ kiểm một — chọn cái nào?',
   situation:'Một startup giao rau sạch ở Hà Nội có 3 giả thuyết để tăng đăng ký: gói theo tuần, giao buổi tối, và rau hữu cơ có chứng nhận. Mở dịch vụ giao tối thật tốn khoảng 30 triệu đồng thuê thêm người. Nhóm có 5 triệu đồng và 2 tuần để thử trước khi họp nhà đầu tư.',
   concept:{ name:'Kiểm rẻ nhất trước (thử nghiệm tối thiểu)',
     body:'Mỗi giả thuyết có thể kiểm bằng cách <b>rẻ hơn nhiều</b> so với làm thật. Thay vì mở dịch vụ, làm một trang đăng ký có nút "Giao buổi tối" và đếm bao nhiêu người bấm; thay vì nhập rau hữu cơ, hỏi đặt trước có cọc. Thứ tự nên chọn: giả thuyết nào vừa quan trọng nếu đúng, vừa không chắc, và rẻ nhất để có tín hiệu. Mục đích không phải chứng minh chắc chắn, mà là loại bớt ý tưởng trước khi tiêu tiền lớn.' },
@@ -395,10 +395,10 @@ BAI_ADD({ mod:'gt03', lessons:[
       c:'Đúng. Rẻ, nhanh và đo hành vi mua thật tại đúng khu vực.',
       d:'"Thích" trên mạng không phải mua; người trả lời cũng là mẫu tự chọn.'} },
   { type:'mcq', stem:'Kiểm rẻ cho ra 2% đăng ký giao tối. Điều gì KHÔNG nên kết luận ngay?',
-    options:[{k:'a',t:'Có một nhóm khách quan tâm tới giao buổi tối đủ để xem xét tiếp'},{k:'b',t:'Chắc chắn 2% khách thật sẽ mua đều đặn khi mở dịch vụ giao tối'},
+    options:[{k:'a',t:'Có một nhóm khách quan tâm tới giao buổi tối đủ để xem xét tiếp'},{k:'b',t:'Khi mở dịch vụ, khoảng 2% khách vào trang sẽ đặt giao tối mỗi tuần'},
              {k:'c',t:'Giao tối đáng được đưa vào danh sách giả thuyết để kiểm bước sâu hơn'},{k:'d',t:'Tín hiệu này đủ để so sánh với hai giả thuyết còn lại ở cùng cách đo'}],
     answer:'b', why:{a:'Kết luận hợp lý từ tín hiệu có được.',
-      b:'Đúng. Để lại số khác với mua đều đặn; kiểm rẻ cho tín hiệu, không cho chắc chắn.',
+      b:'Đúng. Để lại số điện thoại khác với đặt hàng đều mỗi tuần; kiểm rẻ cho tín hiệu về ý định, chưa cho biết hành vi mua.',
       c:'Đây chính là cách dùng kết quả kiểm rẻ.',
       d:'Cùng cách đo thì so được với nhau.'} },
   { type:'mcq', stem:'Vì sao chi phí kiểm 3 triệu so với chi phí làm thật 30 triệu là một lựa chọn tốt?',
@@ -411,11 +411,11 @@ BAI_ADD({ mod:'gt03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:gt03-08', skill:'measure', read:'6 phút', t:'Giả thuyết sai rồi — tiền đã mất hay đã mua được bài học?',
+{ id:'B:gt03-08', skill:'measure', read:'6 phút', assume:true, t:'Giả thuyết sai rồi — tiền đã mất hay đã mua được bài học?',
   situation:'Một thương hiệu cà phê hoà tan thử tặng kèm ly sứ cho đơn từ 200.000 đồng trên gian hàng thương mại điện tử của mình, giả thuyết: "Tặng ly sẽ tăng giá trị đơn trung bình từ 160.000 lên 200.000 đồng vì khách muốn đủ điều kiện nhận quà." Chạy thử 2 tuần tốn 5 triệu đồng. Giá trị đơn chỉ lên 165.000 đồng. Sếp hỏi: "Có nên bỏ 80 triệu làm chương trình quà cả quý không?"',
   concept:{ name:'Học từ giả thuyết sai',
     body:'Một giả thuyết sai không phải thất bại nếu nó <b>chặn được một quyết định tốn kém</b> và <b>chỉ ra khâu nào lý luận bị hỏng</b>. Khi kết quả không đạt, hỏi ba câu: phần "thì" sai hay phần "vì" sai? Ta đã thực hiện đúng như kế hoạch chưa (lỗi làm, không phải lỗi ý)? Và điều này loại bỏ những hướng nào? Câu trả lời là giả thuyết mới, tốt hơn cái cũ.' },
-  example:'Giá trị đơn chỉ tăng 5.000 đồng. Kiểm thực hiện: banner quà hiện đúng, khách thấy được. Kiểm phần "vì": khảo sát nhanh cho thấy khách mua cà phê hoà tan theo gói quen, ít muốn mua thêm để lấy quà. Bài học, trong phạm vi đã thử: với món quà này, ngưỡng 200.000 đồng và 2 tuần chạy, quà không kéo đơn to lên — nhiều khả năng vì khách mua theo thói quen. Chưa đủ để nói quà không bao giờ hiệu quả với cà phê. Thử nghiệm 5 triệu chặn được khoản 80 triệu — chỉ bằng 6,25% chi phí làm thật. Giả thuyết mới: quà có thể giúp kéo khách mới thử lần đầu.',
+  example:'Giá trị đơn chỉ tăng 5.000 đồng. Trong 2 tuần có khoảng 900 đơn; các tuần trước, giá trị đơn dao động 155.000–165.000 đồng; vạch dừng ghi trước là dưới 175.000 đồng. 165.000 dưới vạch dừng và trong dao động thường, nên kết luận "sai" đứng được. Kiểm thực hiện: banner quà hiện đúng, khách thấy được. Kiểm phần "vì": khảo sát nhanh cho thấy khách mua cà phê hoà tan theo gói quen, ít muốn mua thêm để lấy quà. Bài học, trong phạm vi đã thử: với món quà này, ngưỡng 200.000 đồng và 2 tuần chạy, quà không kéo đơn to lên — nhiều khả năng vì khách mua theo thói quen. Chưa đủ để nói quà không bao giờ hiệu quả với cà phê. Thử nghiệm 5 triệu chặn được khoản 80 triệu — chỉ bằng 6,25% chi phí làm thật. Giả thuyết mới: quà có thể giúp kéo khách mới thử lần đầu.',
   takeaway:'Giả thuyết sai mà rẻ và rõ là tiền mua bài học, không phải tiền mất.',
   apply:'Nhớ một lần bạn làm sai điều gì đó. Trong 60 giây, nói: phần kết quả sai hay phần lý do sai, và bài học tiếp theo là gì.',
   mistakes:['Vội bỏ cả hướng đi mà không hỏi lỗi nằm ở cách làm hay ở ý tưởng.','Giấu kết quả sai nên cả nhóm lặp lại cùng một thử nghiệm.'],
@@ -468,7 +468,7 @@ BAI_ADD({ mod:'gt03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:gt03-09', skill:'measure', read:'6 phút', t:'Vì sao nhóm cứ thử lại những ý đã thử năm ngoái?',
+{ id:'B:gt03-09', skill:'measure', read:'6 phút', assume:true, t:'Vì sao nhóm cứ thử lại những ý đã thử năm ngoái?',
   situation:'Một chuỗi mỹ phẩm ở TP.HCM có nhóm marketing mới. Họ đề xuất "tặng mẫu thử kèm đơn online để tăng mua lại". Một nhân viên cũ nhớ mang máng năm ngoái đã thử, nhưng không ai tìm được kết quả. Trong năm, nhóm đã thử 12 ý tưởng, nhưng chỉ nhớ rõ 3 cái thắng.',
   concept:{ name:'Nhật ký giả thuyết',
     body:'Nhật ký giả thuyết là một bảng đơn giản, mỗi dòng một thử nghiệm: <b>ngày, giả thuyết Nếu–thì–vì, chỉ số và ngưỡng, kết quả, kết luận, bài học, bước tiếp</b>. Điền phần đầu trước khi chạy, phần sau khi có số. Nó giúp ba việc: không lặp lại thử nghiệm cũ, thấy được tỉ lệ thắng thật của nhóm, và biết mình hay sai ở loại giả thuyết nào. Cần một người giữ bảng và một quy tắc: ý mới phải tra bảng trước khi được duyệt. Ghi "không kết luận" tách khỏi "thua" để không lẫn lỗi làm với lỗi ý.' },
@@ -525,7 +525,7 @@ BAI_ADD({ mod:'gt03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:gt03-10', skill:'comm', read:'7 phút', t:'Trong một case thi, giả thuyết nên xuất hiện ở đâu?',
+{ id:'B:gt03-10', skill:'comm', read:'7 phút', assume:true, t:'Trong một case thi, giả thuyết nên xuất hiện ở đâu?',
   situation:'Một đội sinh viên thi case marketing cho một thương hiệu nước ép đóng chai. Đề cho: trang bán hàng có 50.000 lượt vào mỗi tháng, chuyển đổi 3%, giá trị đơn 150.000 đồng. Bài của đội có 25 slide ý tưởng sáng tạo nhưng không có một câu giả thuyết nào. Giám khảo hỏi: "Vì sao các bạn tin ý tưởng này sẽ hiệu quả?" — cả đội im lặng.',
   concept:{ name:'Giả thuyết là xương sống của bài case',
     body:'Trong bài case, giả thuyết nối <b>phân tích</b> với <b>giải pháp</b>. Sau phần chẩn đoán, nêu 1–2 giả thuyết chính theo khuôn Nếu–thì–vì, có số từ đề bài. Sau đó mỗi ý tưởng phải trỏ về một giả thuyết, và phần đo lường nói rõ chỉ số, ngưỡng và cách kiểm rẻ trước khi làm lớn. Giám khảo không cần bạn đúng chắc chắn; họ cần thấy bạn biết mình đang cược vào điều gì và sẽ biết sai bằng cách nào.' },
@@ -576,10 +576,10 @@ BAI_ADD({ mod:'gt03', lessons:[
       c:'Dự báo đẹp không nói gì về cách biết mình sai.',
       d:'Công cụ không thay được việc chọn chỉ số và ngưỡng.'} },
   { type:'mcq', stem:'Đề case cho biết khách mua lại thấp. Giả thuyết nào hợp nhất để đưa vào bài?',
-    options:[{k:'a',t:'Nếu làm chương trình khách hàng thân thiết thì thương hiệu sẽ lớn mạnh hơn'},{k:'b',t:'Khách hàng hiện nay rất khó tính nên cần chăm sóc tốt hơn nữa'},
+    options:[{k:'a',t:'Nếu làm chương trình khách hàng thân thiết thì thương hiệu sẽ lớn mạnh hơn'},{k:'b',t:'Nếu tặng điểm thưởng thì mua lại tăng từ 10% lên 40% trong 1 tháng, vì khách yêu thương hiệu'},
              {k:'c',t:'Nếu làm nhiều nội dung hay trên mạng xã hội thì khách sẽ yêu thương hiệu'},{k:'d',t:'Nếu nhắc qua Zalo sau 7 ngày thì mua lại tăng từ 10% lên 15%, vì khách quên đặt lại'}],
     answer:'d', why:{a:'"Lớn mạnh hơn" không đo được và không gắn với vấn đề mua lại.',
-      b:'Đây là nhận định chung, không có hành động, số hay ngưỡng.',
+      b:'Đủ khuôn và có số, nhưng 40% là số tự đặt không truy được về đề, và "yêu thương hiệu" không giải thích vì sao khách không mua lại.',
       c:'"Yêu thương hiệu" không đo được và không gắn trực tiếp với mua lại.',
       d:'Đúng. Gắn đúng vấn đề đề bài, có hành động, số, ngưỡng và cơ chế.'} }
   ] }

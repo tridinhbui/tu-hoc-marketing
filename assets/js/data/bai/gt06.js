@@ -3,12 +3,15 @@
 BAI_ADD({ mod:'gt06', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:gt06-01', skill:'measure', read:'7 phút', t:'Sếp giao 600 triệu doanh thu quý — cần bao nhiêu khách?',
+{ id:'B:gt06-01', skill:'measure', read:'7 phút', assume:true, t:'Sếp giao 600 triệu doanh thu quý — cần bao nhiêu khách?',
   situation:'Bạn phụ trách marketing cho một tiệm bánh kem online ở Đà Nẵng. Chủ tiệm chốt mục tiêu quý tới: doanh thu 600 triệu đồng. Giá trị đơn trung bình là 400.000 đồng, mỗi khách mua trung bình 1,5 đơn trong quý. Chủ tiệm hỏi: "Vậy marketing phải làm gì?" Bạn chưa có câu trả lời bằng con số.',
   concept:{ name:'Suy ngược từ doanh thu ra số khách',
     body:'Mục tiêu doanh thu là của kinh doanh; marketing cần dịch nó ra con số mình tác động được. Công thức gốc: <b>doanh thu = số khách × số đơn mỗi khách × giá trị đơn</b>. Chia ngược sẽ ra số khách cần có. Con số 1,5 đơn là trung bình: khách mới thường mua một đơn, khách cũ mua nhiều hơn, nên tách hai nhóm mới thấy đòn bẩy “khách cũ quay lại”. Đi tiếp xuống phễu: số khách ÷ tỉ lệ chuyển đổi = số người cần tiếp cận hoặc ghé trang. Mỗi tầng là một đòn bẩy riêng — tăng khách mới, tăng tần suất mua, hay tăng giá trị đơn — và mỗi đòn bẩy cần một kế hoạch khác nhau.' },
   example:'600 triệu ÷ 400.000 đồng = 1.500 đơn. 1.500 đơn ÷ 1,5 đơn mỗi khách = 1.000 khách trong quý. Nếu tỉ lệ chuyển đổi từ người nhắn tin sang người mua là 20%, bạn cần khoảng 5.000 lượt nhắn tin. Giờ câu hỏi "marketing làm gì" đã thành: làm sao có 5.000 cuộc trò chuyện, hoặc nâng chuyển đổi để cần ít hơn.',
   takeaway:'Doanh thu là đích của kinh doanh; số khách và số lượt tiếp cận suy ngược ra mới là việc của marketing.',
+  points:['Phép chia ngược biến một con số của kinh doanh thành ba con số marketing tác động được: số khách, số đơn mỗi khách, số lượt nhắn tin. Mỗi con số có người chịu trách nhiệm và cách đo riêng.','Tách theo tầng cho thấy đòn bẩy rẻ nhất: tăng tần suất từ 1,5 lên 1,8 đơn có thể lấp một phần hụt mà không cần mua thêm lượt nhắn tin.','Có con số cụ thể thì biết sớm kế hoạch có khả thi không: cần 5.000 lượt nhắn tin mà ngân sách chỉ đủ 3.000 là thấy hụt ngay từ đầu quý.'],
+  counter:'Phép chia ngược sai khi 1,5 đơn là trung bình của hai nhóm rất khác nhau. Giả sử (số minh hoạ) khách mới mua 1 đơn, khách cũ mua 2,5 đơn, và quý trước khách cũ chiếm một phần ba nên trung bình đúng là 1,5. Nếu quý này chỉ 200 khách cũ quay lại (500 đơn), 1.000 đơn còn lại phải đến từ khách mới mua 1 đơn: cần 1.000 khách mới, tổng 1.200 khách chứ không phải 1.000. Dấu hiệu nhận ra: tỉ trọng khách cũ quý này khác quý trước.',
+  deeper:'Người làm nghề không chia cho một trung bình chung mà lập bảng hai dòng: khách cũ dự kiến quay lại (danh sách quý trước × tỉ lệ quay lại) và khách mới (số đơn còn thiếu ÷ số đơn của một khách mới). Giá trị đơn cũng là trung bình có thể lệch, vì khách cũ hay đặt bánh lớn hơn. Đánh đổi là bảng hai dòng cần dữ liệu khách theo số điện thoại hoặc tài khoản; chưa có thì dùng trung bình nhưng ghi rõ đó là giả định và cộng một khoảng dự phòng. Khái niệm kề cận là phễu chuyển đổi và giá trị vòng đời khách.',
   apply:'Lấy mục tiêu doanh thu tháng của một cửa hàng bạn biết, ước giá trị đơn và số đơn mỗi khách, rồi nói trong 60 giây cần bao nhiêu khách.',
   mistakes:['Nhận mục tiêu doanh thu rồi lập kế hoạch nội dung mà không tính ra số khách cần có.','Quên số đơn mỗi khách, tính như thể mỗi khách chỉ mua một lần.'],
   q:[
@@ -56,13 +59,13 @@ BAI_ADD({ mod:'gt06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:gt06-02', skill:'measure', read:'6 phút', t:'"Tăng 30% follower trong 3 tháng" — SMART rồi, sao vẫn vô nghĩa?',
+{ id:'B:gt06-02', skill:'measure', read:'6 phút', assume:true, t:'"Tăng 30% follower trong 3 tháng" — SMART rồi, sao vẫn vô nghĩa?',
   situation:'Một thương hiệu mỹ phẩm thuần chay nhỏ ở TP.HCM viết mục tiêu quý: "Tăng follower Instagram từ 10.000 lên 13.000 trong 3 tháng." Cụ thể, đo được, có hạn. Nhưng doanh thu hai quý gần nhất đứng yên dù follower đã tăng đều. Chủ thương hiệu hỏi: mục tiêu này đúng chuẩn SMART, vậy sao không giúp bán hàng?',
   concept:{ name:'SMART nhưng có ý nghĩa',
     body:'SMART (cụ thể, đo được, khả thi, liên quan, có thời hạn) là khung kiểm tra cách viết, không kiểm tra con số có đáng theo đuổi. Chữ <b>R — liên quan</b> hay bị bỏ qua nhất: mục tiêu phải nối được về mục tiêu kinh doanh bằng một chuỗi lý lẽ. Cách thử nhanh: hỏi "đạt được thì sao?" ba lần. Nếu câu trả lời không dẫn tới khách, đơn hay lãi thì mục tiêu đó chỉ đẹp trên giấy.' },
   example:'Hỏi "đạt 13.000 follower thì sao?" — "thì nhiều người thấy bài hơn". "Thì sao?" — "thì… có thể có người mua". Chuỗi đứt ở đó. Viết lại: "Tăng số khách mua lần đầu từ Instagram từ 80 lên 120 mỗi tháng trong quý 3, đo bằng mã giảm giá riêng kênh." Vẫn SMART, nhưng giờ nối thẳng vào doanh thu: thêm 40 khách mỗi tháng, đơn 350.000 đồng, là thêm 14 triệu đồng mỗi tháng.',
   takeaway:'SMART kiểm cách viết; hỏi "đạt được thì sao?" ba lần mới kiểm được ý nghĩa.',
-  points:["Mục tiêu chỉ có ý nghĩa khi là một mắt xích trong chuỗi dẫn tới tiền. Follower là mắt xích đầu, giữa nó và doanh thu còn nhiều bước để người ta rơi ra.","Câu hỏi “đạt được thì sao” buộc người viết nói ra giả định ngầm. Đến lần thứ ba, giả định như “có thể có người mua” lộ ra là điều chưa ai kiểm chứng.","Chỉ số nối thẳng vào khách mua lần đầu đo được bằng công cụ sẵn có như mã giảm giá riêng kênh, không tốn thêm hệ thống mới mà vẫn thấy phần đóng góp."],
+  points:["Mục tiêu chỉ có ý nghĩa khi là một mắt xích trong chuỗi dẫn tới tiền. Follower là mắt xích đầu, giữa nó và doanh thu còn nhiều bước để người ta rơi ra.","Câu hỏi “đạt được thì sao” buộc người viết nói ra giả định ngầm. Đến lần thứ ba, giả định như “có thể có người mua” lộ ra là điều chưa ai kiểm chứng.","Chỉ số nối thẳng vào khách mua lần đầu đo được bằng công cụ sẵn có như mã giảm giá riêng kênh, không tốn thêm hệ thống mới. Nhưng mã riêng chỉ đếm người nhập mã, nên 80 → 120 là cận dưới của phần đóng góp; thêm câu hỏi “biết shop qua đâu” ở bước thanh toán để ước phần khách mua mà không dùng mã."],
   counter:"Hỏi ba lần có thể làm bạn bỏ quên giá trị dài hạn. Giả sử thương hiệu này còn ít người biết, và follower là cách chính để khách tìm thấy trang. Khi đó mục tiêu follower có thể hợp lý nếu kèm một bước nối sang mua hàng. Dấu hiệu là chuỗi lý lẽ đứt nhưng bạn giải thích được vì sao cần mắt xích đó. Lúc ấy nên giữ mục tiêu và thêm chỉ số đi sau nó.",
   deeper:"Người làm nghề không bỏ follower, chỉ đặt nó đúng chỗ: là chỉ số dẫn đầu cho sự chú ý, không phải đích. Đánh đổi là mục tiêu nối thẳng về doanh thu thường dao động mạnh hơn và khó đạt hơn, nên phải chấp nhận báo cáo ít đẹp hơn. Tín hiệu nên theo dõi là tỉ lệ người mua trên số người vào từ Instagram, vì nó cho biết follower có biến thành khách hay không. Khái niệm kề cận là phễu từ chú ý đến đơn hàng. Phép kiểm tra trong tuần: lấy số khách mua lần đầu theo mã giảm giá riêng của tháng gần nhất, đặt cạnh mức tăng follower cùng kỳ.",
   apply:'Chọn một mục tiêu marketing bạn từng thấy, hỏi "đạt được thì sao?" ba lần, rồi nói nó dẫn tới doanh thu hay đứt giữa chừng.',
@@ -101,10 +104,10 @@ BAI_ADD({ mod:'gt06', lessons:[
       d:'Thêm truy cập mà 70% vẫn bỏ giỏ thì tốn tiền kéo người vào rồi để rơi.'} },
   { type:'mcq', stem:'Vì sao follower hay được chọn làm mục tiêu dù không nối chắc về doanh thu?',
     options:[{k:'a',t:'Vì follower là thứ báo trước doanh thu sát nhất'},{k:'b',t:'Vì nền tảng buộc báo follower mỗi chiến dịch'},
-             {k:'c',t:'Vì doanh thu khó tách riêng cho từng kênh MXH'},{k:'d',t:'Vì nó dễ đo, tăng đều và nhìn đẹp trong báo cáo'}],
+             {k:'c',t:'Vì doanh thu MXH không có cách nào tách theo kênh'},{k:'d',t:'Vì nó dễ đo, tăng đều và nhìn đẹp trong báo cáo'}],
     answer:'d', why:{a:'Follower có thể tăng mà doanh thu đứng yên, như chính tình huống của bài.',
       b:'Không có quy định như vậy; đó là thói quen báo cáo.',
-      c:'Mã giảm giá riêng, link theo dõi, câu hỏi "biết shop qua đâu" đều giúp gán doanh thu cho kênh.',
+      c:'Tách được, dù chỉ ở mức cận dưới: mã giảm giá riêng, link theo dõi, câu hỏi "biết shop qua đâu". Gán kênh khó không giải thích vì sao lại chọn follower, chỉ số còn xa đơn hơn.',
       d:'Đúng. Dễ đo và dễ tăng là cái bẫy: mục tiêu được chọn vì tiện, không vì ý nghĩa.'} },
   { type:'mcq', stem:'Mục tiêu nào dưới đây vừa SMART vừa nối được về kinh doanh cho một phòng gym khu dân cư?',
     options:[{k:'a',t:'Tăng nhận biết thương hiệu phòng gym trong khu vực lên mức cao'},{k:'b',t:'Đạt 50.000 lượt xem video tập luyện trên TikTok trong tháng 10'},
@@ -116,12 +119,16 @@ BAI_ADD({ mod:'gt06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:gt06-03', skill:'brand', read:'7 phút', t:'Mục tiêu thương hiệu hay mục tiêu bán hàng — quý này chọn cái nào?',
+{ id:'B:gt06-03', skill:'brand', read:'7 phút', assume:true, t:'Mục tiêu thương hiệu hay mục tiêu bán hàng — quý này chọn cái nào?',
   situation:'Một hãng nước mắm đóng chai ở Phú Quốc có ngân sách quý 300 triệu đồng. Giám đốc bán hàng muốn dồn hết vào khuyến mãi "mua 2 tặng 1" trên sàn để đẩy số. Giám đốc thương hiệu muốn một nửa cho video kể chuyện làng nghề để người mua nhớ tên. Cả hai nhờ bạn chia ngân sách và đặt mục tiêu.',
   concept:{ name:'Mục tiêu thương hiệu và mục tiêu bán hàng',
     body:'<b>Mục tiêu bán hàng</b> đo kết quả gần: đơn, doanh thu, khách mới trong kỳ. <b>Mục tiêu thương hiệu</b> đo thứ tích luỹ: bao nhiêu người trong nhóm khách mục tiêu nhớ ra tên bạn khi cần mua, liên tưởng gì tới bạn. Bán hàng cho kết quả nhanh nhưng dừng tiền là dừng đơn; thương hiệu chậm nhưng làm cho mọi đồng khuyến mãi sau này hiệu quả hơn. Không cần chọn một bỏ một: chia ngân sách theo tỉ lệ, và mỗi phần có mục tiêu riêng, đo riêng.' },
-  example:'Bạn đề xuất chia 60/40: 180 triệu cho khuyến mãi trên sàn với mục tiêu 3.000 đơn trong quý; 120 triệu cho video làng nghề với mục tiêu tăng tỉ lệ người nhớ ra tên hãng khi được hỏi "kể tên nước mắm Phú Quốc" từ 12% lên 18% trong nhóm khảo sát 300 người. Hai phần có hai thước đo, không phần nào bị đánh giá bằng thước của phần kia. Lưu ý: với 300 người mỗi lần đo, chênh dưới khoảng 6 điểm có thể chỉ là nhiễu, nên 12% → 18% là mức nhỏ nhất đọc được. Tỉ lệ 60/40 ở đây nghiêng về bán hàng, ngược với mức trung bình khoảng 60% thương hiệu/40% kích hoạt mà Binet & Field (IPA) tìm thấy; đây là lựa chọn cho một quý cần số, không phải chuẩn.',
+  example:'Bạn đề xuất chia 60/40: 180 triệu cho khuyến mãi trên sàn với mục tiêu 3.000 đơn trong quý; 120 triệu cho video làng nghề với mục tiêu tăng tỉ lệ người nhớ ra tên hãng khi được hỏi "kể tên nước mắm Phú Quốc" từ 12% lên 18% trong nhóm khảo sát 300 người. Hai phần có hai thước đo, không phần nào bị đánh giá bằng thước của phần kia. Lưu ý: với 300 người mỗi lần đo, chênh dưới khoảng 6 điểm có thể chỉ là nhiễu, nên 12% → 18% là mức nhỏ nhất đọc được. Tỉ lệ 60/40 ở đây nghiêng về bán hàng, ngược với mức trung bình khoảng 60% thương hiệu/40% kích hoạt mà Binet & Field tìm thấy (IPA, 2013, xem nguồn). Đó là trung bình dài hạn qua nhiều ngành, không phải chuẩn; quý này cần số nên chọn ngược lại.',
+  src:[{ t:'Binet & Field (2013), “The Long and the Short of It: Balancing Short and Long-Term Marketing Strategies”, IPA', u:'https://ipa.co.uk/knowledge/publications-reports/the-long-and-the-short-of-it-balancing-short-and-long-term-marketing-strategies', d:'2026-11-07', st:'chua' }],
   takeaway:'Bán hàng và thương hiệu cần ngân sách riêng, mục tiêu riêng — đừng đo video kể chuyện bằng số đơn tuần này.',
+  points:['Mỗi phần ngân sách có thước đo đúng với cơ chế của nó: khuyến mãi tạo đơn trong kỳ, video tạo trí nhớ tích luỹ. Đo chung một thước thì phần chậm luôn bị kết luận oan.','Chia tỉ lệ thay vì chọn một bỏ một giữ được dòng tiền quý này mà không bỏ quên những quý sau.','Mục tiêu nhớ tên chốt từ đầu quý (12% → 18%) chặn được cuộc cãi “video không ra đơn” ngay tuần đầu.'],
+  counter:'Chia ngân sách là sai khi hãng không sống nổi qua quý này. Giả sử (số minh hoạ) tiền mặt chỉ đủ trả nhà cung cấp nếu bán hết lô hàng trong quý, hoặc lô nước mắm sắp hết hạn: khi đó 120 triệu cho video là tiền hãng không có, và dồn gần hết vào bán hàng là đúng. Dấu hiệu nhận ra: câu hỏi của chủ hãng là “tháng sau có trả nổi lương không”, không phải “năm sau khách có nhớ tên không”. Khi dòng tiền ổn lại mới mở phần thương hiệu.',
+  deeper:'Tỉ lệ 60/40 của Binet & Field dao động theo ngành và giai đoạn của thương hiệu (cần kiểm trong nguồn), nên đừng chép nó làm chuẩn cho mọi quý. Người làm nghề phân biệt nhớ tên không gợi ý (“kể tên nước mắm Phú Quốc bạn biết”) với nhận ra khi có gợi ý (đưa danh sách tên để chọn). Câu không gợi ý khó tăng hơn nhưng gần với lúc khách đứng trước kệ; câu có gợi ý tăng nhanh nhưng dễ làm yên lòng sai. Khảo sát 300 người × 2 đợt là 600 lượt trả lời và có chi phí thật (ví dụ minh hoạ 20.000 đồng một người là khoảng 12 triệu), nên tính vào phần 120 triệu. Nếu cuối quý tỉ lệ đứng yên, chưa vội cắt: một quý có thể quá ngắn để trí nhớ tích luỹ, nên chốt trước một mốc đọc thứ hai sau hai quý; nếu khi đó vẫn chênh dưới khoảng 6 điểm thì xem lại nội dung video và kênh phát, không chỉ cắt tiền.',
   apply:'Nghĩ về một thương hiệu bạn biết đang chạy khuyến mãi liên tục. Nói trong 60 giây: nếu họ dừng khuyến mãi, điều gì còn lại giữ khách?',
   mistakes:['Đánh giá chiến dịch thương hiệu bằng số đơn ngay trong tuần phát sóng.','Dồn hết ngân sách vào khuyến mãi vì số liệu đẹp nhanh, rồi phụ thuộc vào giảm giá.'],
   q:[
@@ -173,7 +180,7 @@ BAI_ADD({ mod:'gt06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:gt06-04', skill:'measure', read:'7 phút', t:'Doanh thu chỉ biết cuối tháng — theo dõi gì mỗi tuần?',
+{ id:'B:gt06-04', skill:'measure', read:'7 phút', assume:true, t:'Doanh thu chỉ biết cuối tháng — theo dõi gì mỗi tuần?',
   situation:'Bạn làm marketing cho một trung tâm tiếng Anh thiếu nhi ở Hà Nội. Mục tiêu tháng: 40 học viên đăng ký mới. Nhưng số đăng ký chỉ rõ vào tuần cuối, khi phụ huynh đóng học phí. Tháng trước, đến ngày 25 mới biết hụt, không kịp xoay. Giám đốc hỏi: có cách nào biết sớm hơn không?',
   concept:{ name:'Chỉ số dẫn đầu và chỉ số kết quả',
     body:'<b>Chỉ số kết quả (lagging)</b> cho biết đã đạt hay chưa — doanh thu, số đăng ký — nhưng đến muộn, lúc biết thì đã hết cách sửa. <b>Chỉ số dẫn đầu (leading)</b> đến sớm hơn và có quan hệ ổn định với kết quả — số phụ huynh để lại số điện thoại, số buổi học thử được đặt. Theo dõi chỉ số dẫn đầu hằng tuần giống nhìn đồng hồ xăng khi đang chạy, thay vì chỉ biết hết xăng khi xe dừng.' },
@@ -233,12 +240,15 @@ BAI_ADD({ mod:'gt06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:gt06-05', skill:'measure', read:'6 phút', t:'Team 4 người, 12 chỉ số — nên nhìn con số nào trước?',
+{ id:'B:gt06-05', skill:'measure', read:'6 phút', assume:true, t:'Team 4 người, 12 chỉ số — nên nhìn con số nào trước?',
   situation:'Team marketing 4 người của một app đặt lịch cắt tóc ở TP.HCM báo cáo hằng tuần 12 chỉ số: lượt tải, người dùng đăng ký, follower, lượt xem video, CTR quảng cáo… Mỗi người tối ưu chỉ số của mình. Lượt tải tăng 40% trong quý nhưng số lịch cắt tóc thật gần như không đổi. Sếp hỏi: rốt cuộc team đang cùng đẩy về đâu?',
   concept:{ name:'Chỉ số chính (north star metric)',
     body:'Chỉ số chính là <b>một con số</b> thể hiện giá trị khách thật sự nhận được, và nếu nó tăng bền thì thường dự báo tốt doanh thu. Nó cần một <b>chỉ số đối trọng</b> (như tỉ lệ huỷ lịch) vì có thể bị đẩy lên bằng cách làm hỏng thứ khác, và một cây đầu vào: lịch hoàn thành = lượt tải × % đặt lịch × % hoàn thành. Mọi chỉ số khác trở thành chỉ số phụ, được xem xét ở mức nó giúp chỉ số chính ra sao. Chỉ số chính tốt thường đếm hành vi có giá trị lặp lại — lịch đặt được hoàn thành, đơn giao thành công — chứ không đếm lượt tải hay lượt xem, vì những thứ đó tăng được mà khách chẳng nhận gì.' },
   example:'Team chọn chỉ số chính: số lịch cắt tóc hoàn thành mỗi tuần, hiện 1.200. Lượt tải chỉ còn giá trị khi người tải đặt lịch. Soi lại, người tải mới chỉ 10% đặt lịch trong 30 ngày. Nâng tỉ lệ đó lên 15% với 8.000 lượt tải mỗi tháng là thêm 400 người đặt lịch — so với 320 người nếu kéo thêm 40% lượt tải, mà không phải mua thêm lượt tải.',
   takeaway:'Một chỉ số chính cho cả team: đếm giá trị khách nhận được, không đếm hoạt động của team.',
+  points:['Một con số chung làm mọi người cùng kéo một hướng: lượt tải, CTR, follower chỉ còn đáng xem khi giúp tăng lịch hoàn thành.','Đếm lịch hoàn thành là đếm lúc khách thật sự nhận giá trị, nên con số này khó tăng giả bằng hoạt động bề mặt như mua thêm lượt tải.','Cây đầu vào chỉ ra tầng yếu nhất: chỉ 10% người tải đặt lịch, nên nâng tỉ lệ đó là đòn bẩy rẻ hơn mua thêm 40% lượt tải.'],
+  counter:'Chỉ số chính sai khi app có hai bên mà team chỉ nhìn phía khách. Giả sử team đẩy lịch hoàn thành bằng cách ép thợ cắt tóc giảm giá sâu để chạy khuyến mãi: lịch tăng vài tuần, rồi thợ giỏi rời app, khách mở app không còn giờ trống và lịch lại tụt. Dấu hiệu nhận ra: lịch hoàn thành tăng trong khi số thợ hoạt động hoặc thu nhập mỗi thợ giảm. Khi đó cần thêm một đối trọng phía cung, như số thợ có ít nhất 10 lịch mỗi tuần.',
+  deeper:'Người làm nghề liệt kê trước các cách có thể “gian” chỉ số chính, rồi gắn mỗi cách một đối trọng: đẩy lịch bằng giảm giá thì theo dõi doanh thu mỗi lịch; đẩy bằng ép thợ thì theo dõi số thợ hoạt động; đẩy bằng đặt rồi huỷ thì theo dõi tỉ lệ huỷ lịch. Đánh đổi là mỗi đối trọng thêm một con số phải báo cáo, nên giữ ít: một đối trọng cho mỗi cách gian thật sự có khả năng xảy ra, không phải cho mọi rủi ro tưởng tượng. Khái niệm kề cận là cây đầu vào và chỉ số dẫn đầu (bài 04).',
   apply:'Chọn một app hoặc cửa hàng bạn dùng thường xuyên. Nói trong 60 giây: một con số nào thể hiện rõ nhất việc khách nhận được giá trị ở đó.',
   mistakes:['Chọn lượt tải hoặc người đăng ký làm chỉ số chính vì nó tăng nhanh.','Mỗi người trong team tự chọn một chỉ số riêng và tối ưu tách rời nhau.'],
   q:[
@@ -290,7 +300,7 @@ BAI_ADD({ mod:'gt06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:gt06-06', skill:'measure', read:'7 phút', t:'Tăng khách hay tăng lãi — khi hai mục tiêu giành nhau?',
+{ id:'B:gt06-06', skill:'measure', read:'7 phút', assume:true, t:'Tăng khách hay tăng lãi — khi hai mục tiêu giành nhau?',
   situation:'Một chuỗi 5 tiệm bánh mì ở Cần Thơ đặt cùng lúc hai mục tiêu cho quý: tăng 30% số khách và tăng biên lãi gộp từ 40% lên 45%. Team marketing định chạy "giảm 20% cho khách lần đầu" để kéo khách. Kế toán phản đối: giảm giá thì biên lãi đi xuống, sao đạt 45%?',
   concept:{ name:'Mục tiêu mâu thuẫn và thứ tự ưu tiên',
     body:'Hai mục tiêu có thể kéo ngược nhau: kéo khách thường cần giá hấp dẫn, tăng lãi thường cần giá cao hoặc chi ít. Đặt cả hai ngang nhau thì team sẽ chọn cái dễ đo nhất. Cách xử lý: chọn <b>một mục tiêu chính</b> và biến cái kia thành <b>giới hạn</b> — ví dụ "tăng khách 30%, với điều kiện biên lãi không xuống dưới 38%". Giới hạn cho team biết được hy sinh bao nhiêu, không hơn.' },
@@ -350,12 +360,15 @@ BAI_ADD({ mod:'gt06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:gt06-07', skill:'measure', read:'7 phút', t:'Mở shop mới, chưa có số năm trước — mục tiêu đặt từ đâu?',
+{ id:'B:gt06-07', skill:'measure', read:'7 phút', assume:true, t:'Mở shop mới, chưa có số năm trước — mục tiêu đặt từ đâu?',
   situation:'Bạn cùng người bạn mở một shop bán hạt dinh dưỡng online, bắt đầu từ tháng sau. Nhà đầu tư nhỏ góp vốn hỏi: "Tháng đầu mục tiêu bao nhiêu đơn?" Không có số liệu năm trước, không biết tỉ lệ chuyển đổi của mình. Bạn định nói đại "500 đơn" cho có khí thế.',
   concept:{ name:'Đặt mục tiêu khi chưa có dữ liệu',
     body:'Không có dữ liệu cũ thì mượn <b>dữ liệu tương tự</b> và <b>năng lực thực tế</b>. Ước từ hai phía: phía cầu (ngân sách ÷ chi phí mỗi lượt nhấp × tỉ lệ chuyển đổi tham khảo) và phía cung (mỗi ngày đóng gói được bao nhiêu đơn). Lấy con số nhỏ hơn làm trần. Đặt ba kịch bản (tỉ lệ mua thấp, cơ sở, cao): cam kết mốc thấp, mốc cao là tham vọng. Kiểm thêm chi phí mỗi đơn so với lãi gộp mỗi đơn để biết tháng đầu lỗ bao nhiêu. Rồi gọi đó là <b>mục tiêu học</b>: tháng đầu mục đích chính là đo được các tỉ lệ thật, để tháng sau đặt mục tiêu có căn cứ.' },
   example:'Ngân sách 15 triệu, ước chi phí mỗi lượt nhấp 3.000 đồng → 5.000 lượt vào trang. Tỉ lệ mua tham khảo từ một shop tương tự khoảng 2%, nên đặt ba kịch bản: 1% → 50 đơn, 2% → 100 đơn, 3% → 150 đơn. Phía cung, hai người đóng tối đa 300 đơn mỗi tháng nên chưa bị chặn. Giả sử (số minh hoạ) đơn trung bình 250.000 đồng, lãi gộp 40% tức 100.000 đồng mỗi đơn. Ở mức 100 đơn, chi phí mỗi đơn là 150.000 đồng, cao hơn lãi gộp: tháng đầu lỗ khoảng 5 triệu trước chi phí khác. Cam kết 50 đơn, kỳ vọng 100, và coi phần lỗ là học phí để đo tỉ lệ mua thật.',
   takeaway:'Chưa có số thì ước một khoảng thấp–cơ sở–cao từ ngân sách và năng lực, cam kết mốc thấp, và coi tháng đầu là tháng đo.',
+  points:['Ước từ hai phía chặn được cả hai lỗi: hứa nhiều đơn hơn số ngân sách mua được, hoặc nhiều hơn sức đóng gói.','Ba kịch bản cho nhà đầu tư thấy khoảng chắc chắn thật thay vì một con số giả vờ chính xác; cam kết mốc thấp giữ được lời hứa.','Gọi tháng đầu là tháng đo biến phần lỗ thành học phí có mục đích: cuối tháng có tỉ lệ mua và chi phí mỗi lượt nhấp thật để đặt mục tiêu tháng sau.'],
+  counter:'Ba kịch bản vẫn sai khi chi phí mỗi lượt nhấp lệch xa ước tính. Giả sử thực tế là 6.000 đồng, gấp đôi: 15 triệu chỉ mua được 2.500 lượt, tỉ lệ mua 2% ra 50 đơn, lãi gộp 5 triệu, lỗ khoảng 10 triệu thay vì 5 triệu. Dấu hiệu nhận ra: sau 3–4 ngày chạy, chi phí mỗi lượt nhấp đã vượt xa mức ước. Khi đó dừng lại sửa quảng cáo hoặc hạ chi tiêu, thay vì tiêu hết ngân sách rồi mới đọc số.',
+  deeper:'Người làm nghề nói rõ tháng đo chính xác tới đâu. Với khoảng 5.000 lượt vào trang, tỉ lệ mua đo được 2% (100 đơn) có khoảng tin cậy 95% xấp xỉ ± 0,4 điểm, tức thật ra có thể ở đâu đó từ 1,6% đến 2,4%; đo được 1% (50 đơn) thì khoảng ± 0,3 điểm. Như vậy một tháng đủ để phân biệt 1% với 2%, nhưng chưa đủ để phân biệt 2% với 2,3%. Đánh đổi là muốn khoảng này hẹp hơn thì cần nhiều lượt hơn, tức thêm tiền hoặc thêm thời gian. Khái niệm kề cận là cỡ mẫu và khoảng tin cậy.',
   apply:'Giả sử bạn mở một shop nhỏ với 10 triệu tiền quảng cáo. Nói trong 60 giây cách bạn ước số đơn tháng đầu, dùng chi phí mỗi lượt nhấp và tỉ lệ mua bạn giả định.',
   mistakes:['Đặt một con số cho có khí thế, không từ phép tính nào.','Quên kiểm năng lực phục vụ, ra đơn nhiều hơn khả năng đóng gói và giao.'],
   q:[
@@ -407,12 +420,16 @@ BAI_ADD({ mod:'gt06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:gt06-08', skill:'measure', read:'7 phút', t:'Team 3 người có nên dùng OKR không?',
+{ id:'B:gt06-08', skill:'measure', read:'7 phút', assume:true, t:'Team 3 người có nên dùng OKR không?',
   situation:'Một thương hiệu gốm thủ công ở Bát Tràng có team marketing 3 người. Chủ thương hiệu đọc về OKR và muốn áp dụng. Bản nháp đầu tiên có 5 mục tiêu, mỗi mục tiêu 4 kết quả then chốt — tổng 20 con số cho một quý. Team nhìn vào và thấy choáng.',
   concept:{ name:'OKR gọn cho team nhỏ',
-    body:'OKR gồm <b>Objective</b> — một câu mô tả điều muốn đạt, dễ nhớ và có ý nghĩa — và <b>Key Results</b> — 2 đến 3 con số chứng minh đã đạt. Với team nhỏ, một mục tiêu mỗi quý thường là đủ. Kết quả then chốt phải là kết quả, không phải việc làm: "ra mắt website" là việc, "40 đơn mỗi tháng từ website" là kết quả. Gắn nhãn từng KR: <b>cam kết</b> (phải đạt gần đủ, như giao hàng đúng hạn) hay <b>tham vọng</b> (đặt cao có chủ ý, đạt khoảng 70% đã là tốt nếu cả team hiểu trước quy ước). Team 2–3 người chưa cần OKR nếu một mục tiêu và vài con số trên một trang đã đủ; OKR đáng chi phí khi cần xếp ưu tiên giữa các việc tranh nhau sức người.' },
+    body:'OKR gồm <b>Objective</b> — một câu mô tả điều muốn đạt, dễ nhớ và có ý nghĩa — và <b>Key Results</b> — 2 đến 3 con số chứng minh đã đạt. Với team nhỏ, một mục tiêu mỗi quý thường là đủ. Kết quả then chốt phải là kết quả, không phải việc làm: "ra mắt website" là việc, "40 đơn mỗi tháng từ website" là kết quả. Gắn nhãn từng KR: <b>cam kết</b> (phải đạt gần đủ, như giao hàng đúng hạn) hay <b>tham vọng</b> (đặt cao có chủ ý; mốc coi là “đạt” do team tự chốt trước, ví dụ khoảng 70% — theo quy ước của Google được phổ biến qua sách Measure What Matters của John Doerr, 2018, xem nguồn). Team 2–3 người chưa cần OKR nếu một mục tiêu và vài con số trên một trang đã đủ; OKR đáng chi phí khi cần xếp ưu tiên giữa các việc tranh nhau sức người.' },
+  src:[{ t:'John Doerr (2018), “Measure What Matters” — trang chính thức của sách; quy ước chấm KR tham vọng khoảng 0,7 (cần kiểm trang cụ thể)', u:'https://www.whatmatters.com/', d:'2026-11-07', st:'chua' }],
   example:'Rút 20 con số còn một bộ: Objective — "Khách ở Hà Nội mua gốm Bát Tràng online từ chúng ta thay vì phải về làng". KR1: đơn online từ Hà Nội tăng từ 50 lên 90 mỗi tháng. KR2: khách mua lại trong 90 ngày từ 12% lên 20%. KR3: điểm đánh giá đóng gói từ 4,2 lên 4,7 trên 5. Cuối quý đạt 77 đơn mỗi tháng: tăng 27 trên mức cần tăng 40, tức khoảng 68% tiến độ.',
   takeaway:'Team nhỏ: một mục tiêu, hai ba kết quả then chốt, và mỗi kết quả là con số chứ không phải việc làm.',
+  points:['Một mục tiêu cho ba người nghĩa là mỗi tuần ai cũng biết việc nào ưu tiên khi hai việc tranh nhau giờ làm.','KR là kết quả chứ không phải việc làm, nên team được tự chọn cách làm và được chấm bằng điều khách thật sự làm.','Nhãn cam kết hay tham vọng chốt trước cách đọc điểm cuối quý, nên con số 68% không còn là chuyện tranh cãi cảm tính.'],
+  counter:'OKR gọn vẫn sai khi các KR kéo ngược nhau mà không ai canh. Giả sử team đẩy KR1 bằng giảm giá sâu cho khách Hà Nội: đơn lên 90 mỗi tháng, nhưng phần lớn là người săn giá, nên KR2 mua lại trong 90 ngày tụt từ 12% xuống 9%. Bảng điểm vẫn ghi KR1 đạt 100%. Dấu hiệu nhận ra: một KR tăng vọt đúng lúc KR kia đi xuống. Khi đó coi KR2 là giới hạn của KR1, như cặp một đích một giới hạn ở bài 06.',
+  deeper:'Người làm nghề chấm điểm cuối quý theo nhãn: KR cam kết đọc như đạt hoặc không đạt, KR tham vọng đọc theo tiến độ và theo điều team học được. Nhiều hướng dẫn OKR khuyên không nối thẳng điểm vào thưởng, vì khi đó team sẽ đặt KR an toàn và mục đích đặt cao có chủ ý mất đi. Đánh đổi của OKR là chi phí họp đặt và chấm; với ba người, một buổi đầu quý và một buổi cuối quý thường đủ, giữa quý cập nhật bằng một dòng mỗi tuần. Khái niệm kề cận là chỉ số chính (bài 05) và cặp đích–giới hạn (bài 06).',
   apply:'Viết một Objective cho một shop bạn biết, kèm hai kết quả then chốt có con số. Đọc to trong 60 giây và tự kiểm: có câu nào là việc làm không?',
   mistakes:['Viết quá nhiều mục tiêu và kết quả then chốt cho team vài người.','Ghi việc làm như "ra mắt website" vào chỗ kết quả then chốt.'],
   q:[
@@ -444,7 +461,7 @@ BAI_ADD({ mod:'gt06', lessons:[
     options:[{k:'a',t:'KR tham vọng ổn nếu đã nói trước; KR cam kết hụt hơn 30% cần tìm nguyên nhân'},{k:'b',t:'Cả hai đều ổn vì đạt trên 60% là mốc tốt chung của mọi KR trong OKR'},
              {k:'c',t:'Cả hai đều thất bại vì chưa đạt đủ 100% con số đã đặt ra từ đầu quý'},{k:'d',t:'Chỉ cần xem KR tham vọng, còn KR cam kết không cần chấm điểm lại'}],
     answer:'a', why:{a:'Đúng. 68% có nghĩa khác nhau theo nhãn: tham vọng cố ý đặt cao, cam kết thì hụt là một vấn đề cần xử lý.',
-      b:'Mốc 70% chỉ áp cho KR tham vọng; áp cho KR cam kết là tha thứ việc giao hàng trễ.',
+      b:'Không có mốc tốt chung cho mọi KR: mốc kiểu 70% là quy ước team chốt trước cho KR tham vọng; áp cho KR cam kết là tha thứ việc giao hàng trễ.',
       c:'Coi KR tham vọng là cam kết 100% khiến team chỉ dám đặt mục tiêu an toàn.',
       d:'KR cam kết là chỗ cần kiểm kỹ nhất vì khách đã được hứa; bỏ chấm là bỏ đúng chỗ rủi ro.'} },
   { type:'mcq', stem:'Một Objective tốt cho team nhỏ nên thế nào?',
@@ -464,7 +481,7 @@ BAI_ADD({ mod:'gt06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:gt06-09', skill:'channel', read:'6 phút', t:'Chiến dịch một tháng — đặt mục tiêu sao cho biết ngày nào đang tụt?',
+{ id:'B:gt06-09', skill:'channel', read:'6 phút', assume:true, t:'Chiến dịch một tháng — đặt mục tiêu sao cho biết ngày nào đang tụt?',
   situation:'Một thương hiệu balo học sinh ở TP.HCM chạy chiến dịch "Tựu trường" trong 4 tuần tháng 8, ngân sách 80 triệu đồng. Mục tiêu: 1.600 đơn. Tuần đầu bán 250 đơn. Trưởng nhóm bảo "vẫn ổn, còn ba tuần". Bạn thấy lo nhưng chưa biết lấy gì để nói.',
   concept:{ name:'Mục tiêu chiến dịch chia theo nhịp',
     body:'Mục tiêu một tháng cần được <b>chia ra theo tuần</b>, và không nhất thiết chia đều. Nhiều mùa có nhịp riêng: tựu trường dồn về hai tuần cuối trước ngày khai giảng; Tết dồn về giữa tháng Chạp. Đặt mục tiêu tuần theo nhịp dự kiến, kèm <b>chi phí mỗi đơn tối đa</b> để biết đang mua đơn quá đắt. So thực tế với mốc tuần là cách biết sớm chiến dịch đang tụt hay đang đúng nhịp.' },
@@ -524,13 +541,13 @@ BAI_ADD({ mod:'gt06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:gt06-10', skill:'comm', read:'6 phút', t:'Hụt mục tiêu quý — báo cáo sao cho trung thực mà vẫn có ích?',
+{ id:'B:gt06-10', skill:'comm', read:'6 phút', assume:true, t:'Hụt mục tiêu quý — báo cáo sao cho trung thực mà vẫn có ích?',
   situation:'Mục tiêu quý của một thương hiệu cà phê rang xay online ở Đắk Lắk là 900 khách mới. Kết quả: 630 khách. Cuộc họp tổng kết là sáng thứ Hai. Đồng nghiệp gợi ý đổi sang báo "lượt tiếp cận tăng 150%" cho đẹp, hoặc gộp khách cũ vào để con số gần 900 hơn.',
   concept:{ name:'Báo cáo trung thực khi không đạt',
     body:'Báo cáo tốt khi hụt có ba phần: <b>con số thật so với mục tiêu</b>, nói ngay ở câu đầu; <b>nguyên nhân</b> tách được theo phễu — hụt ở tầng nào, vì sao; và <b>bước tiếp theo</b> cụ thể. Đổi thước đo hoặc gộp số để trông đẹp có thể qua được một cuộc họp, nhưng làm hỏng thứ quý nhất của người làm marketing: lời nói có người tin. Sếp cần biết sớm để điều tiền, không cần một báo cáo dễ nghe.' },
-  example:'Câu mở: "Quý này đạt 630/900 khách mới, bằng 70%." Tách phễu: lượt vào trang đạt đúng kế hoạch 30.000 lượt, nhưng tỉ lệ mua chỉ 2,1% so với 3% dự kiến — hụt nằm ở trang sản phẩm, không ở quảng cáo. Nguyên nhân khả nghi: phí ship lộ ra ở bước cuối. Bước tiếp: thử miễn phí ship cho đơn từ 300.000 đồng trong 4 tuần, mục tiêu đưa tỉ lệ mua lên 2,7%.',
+  example:'Câu mở: "Quý này đạt 630/900 khách mới, bằng 70%." Tách phễu: lượt vào trang đạt đúng kế hoạch 30.000 lượt, nhưng tỉ lệ mua chỉ 2,1% so với 3% dự kiến — hụt nằm ở bước từ vào trang đến mua. Có hai nghi ngờ: phí ship lộ ra ở bước cuối, hoặc quảng cáo kéo sai tệp (lượt rẻ, ít ý định mua). Kiểm rẻ trước: so tỉ lệ mua theo nguồn và nhóm quảng cáo; nếu một nhóm mới chỉ 1% kéo trung bình xuống thì hụt vẫn ở quảng cáo. Nếu mọi nguồn cùng tụt, bước tiếp: thử miễn phí ship cho đơn từ 300.000 đồng trong 4 tuần, mục tiêu đưa tỉ lệ mua lên 2,7%.',
   takeaway:'Hụt thì nói số thật ở câu đầu, chỉ đúng tầng hụt, và kèm một bước tiếp có con số.',
-  points:["Con số thật ở câu đầu giữ quyền kiểm soát câu chuyện. Người nghe không phải đoán bạn giấu gì, nên phần phân tích sau đó nghe như giải thích chứ không như bào chữa.","Tách theo phễu biến thất bại chung thành một vị trí cụ thể. Lượt vào trang đạt kế hoạch thì quảng cáo đã làm đúng việc, phần cần sửa nằm ở trang sản phẩm.","Bước tiếp có con số biến báo cáo thành quyết định. Thử miễn phí ship trong 4 tuần để đưa tỉ lệ mua lên 2,7% cho sếp thứ để đồng ý hoặc từ chối."],
+  points:["Con số thật ở câu đầu giữ quyền kiểm soát câu chuyện. Người nghe không phải đoán bạn giấu gì, nên phần phân tích sau đó nghe như giải thích chứ không như bào chữa.","Tách theo phễu biến thất bại chung thành một vị trí cụ thể. Lượt vào trang đạt kế hoạch thì quảng cáo đã kéo đủ người; tỉ lệ mua theo từng nguồn mới cho biết phần cần sửa nằm ở trang sản phẩm hay ở tệp người được kéo vào.","Bước tiếp có con số biến báo cáo thành quyết định. Thử miễn phí ship trong 4 tuần để đưa tỉ lệ mua lên 2,7% cho sếp thứ để đồng ý hoặc từ chối."],
   counter:"Cách báo cáo này có thể gây hiểu lầm khi nguyên nhân chưa rõ mà bạn viết như đã chắc. Giả sử phí ship chỉ là một trong vài nghi ngờ, trang sản phẩm chưa được thử. Nếu ghi như kết luận, sếp sẽ duyệt một thử nghiệm sai chỗ. Dấu hiệu là bạn chưa có dữ liệu loại trừ nguyên nhân khác. Khi đó hãy ghi là giả thuyết và nêu cách kiểm tra rẻ nhất.",
   deeper:"Người làm nghề nghĩ về uy tín như một tài khoản: mỗi lần báo số thật là gửi vào, mỗi lần đổi thước đo là rút ra. Đánh đổi là cuộc họp hôm đó khó chịu hơn, nhưng lần sau sếp tin cả những con số tốt của bạn. Tín hiệu nên theo dõi là các chỉ số phụ như lượt tiếp cận có bị đem ra thay cho mục tiêu chính hay không. Khái niệm kề cận là phân tích phễu, công cụ giúp chỉ đúng tầng hụt. Phép kiểm tra trong tuần: viết câu đầu của báo cáo quý gần nhất và xem nó có chứa con số cam kết ban đầu kèm kết quả thật không.",
   apply:'Nhớ lại một lần bạn hoặc team không đạt mục tiêu. Nói lại trong 60 giây theo ba phần: số thật, tầng hụt, bước tiếp theo.',
@@ -556,10 +573,10 @@ BAI_ADD({ mod:'gt06', lessons:[
   { type:'mcq', stem:'Lượt vào trang đạt đúng kế hoạch nhưng tỉ lệ mua chỉ 2,1% so với 3%. Hụt nằm ở đâu?',
     options:[{k:'a',t:'Ở quảng cáo, vì quảng cáo không kéo đủ người vào trang bán'},{k:'b',t:'Ở sản phẩm cà phê, vì chất lượng hạt rang không đủ tốt'},
              {k:'c',t:'Ở mục tiêu, vì 900 khách mới là con số đặt quá cao'},{k:'d',t:'Ở bước từ trang sản phẩm đến lúc mua'}],
-    answer:'d', why:{a:'Lượt vào trang đạt đủ kế hoạch; quảng cáo đã làm đủ phần.',
+    answer:'d', why:{a:'Lượt vào trang đạt đủ kế hoạch, nên quảng cáo không hụt ở số người kéo vào. Nhưng chưa loại trừ được chuyện quảng cáo kéo sai tệp; cần so tỉ lệ mua theo nguồn.',
       b:'Khách chưa mua thì chưa nếm; chất lượng hạt không giải thích được tỉ lệ mua lần đầu.',
       c:'Có thể, nhưng dữ liệu chỉ ra một tầng cụ thể đang yếu.',
-      d:'Đúng. Người đã vào nhưng không mua — tầng trang và thanh toán.'} },
+      d:'Đúng. Người đã vào nhưng không mua — hụt ở tầng này; nguyên nhân có thể ở trang, thanh toán hoặc chất lượng lượt vào.'} },
   { type:'mcq', stem:'Sếp hỏi: "Vậy quý sau làm gì?" Câu trả lời nào có ích nhất?',
     options:[{k:'a',t:'Team sẽ cố gắng nhiều hơn nữa và rút kinh nghiệm sâu sắc cho quý sau'},{k:'b',t:'Thử miễn phí ship từ 300.000 đồng trong 4 tuần, mục tiêu tỉ lệ mua 2,7%'},
              {k:'c',t:'Tăng ngân sách quảng cáo thêm 50% để kéo thêm thật nhiều người vào trang'},{k:'d',t:'Đổi mục tiêu quý sau sang lượt tiếp cận vì đó là chỉ số team đang làm tốt'}],

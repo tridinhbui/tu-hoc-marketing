@@ -4,7 +4,7 @@
 BAI_ADD({ mod:'kh11', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kh11-01', skill:'insight', read:'6 phút', t:'Viết slogan trước rồi mới tìm khách — vì sao chuỗi này hay gãy?',
+{ id:'B:kh11-01', skill:'insight', read:'6 phút', assume:true, t:'Viết slogan trước rồi mới tìm khách — vì sao chuỗi này hay gãy?',
   situation:'Một thương hiệu bánh mì que đóng gói từ Hải Phòng vào TP.HCM. Đội đã có slogan "giòn tan cho cả nhà", đã chụp bộ ảnh gia đình, in 20.000 tờ rơi hết 10 triệu đồng phát ở khu dân cư. Tháng đầu bán chậm. Đọc ghi chú đơn mới thấy: phần lớn đơn là dân văn phòng mua hộp 10 cái để ăn sáng — nhóm chưa từng được nhắc trong thông điệp.',
   concept:{ name:'STP: phân khúc → chọn tệp → định vị',
     body:'STP gồm ba bước theo đúng thứ tự. <b>Segmentation</b> (phân khúc): chia thị trường thành các nhóm có nhu cầu khác nhau. <b>Targeting</b> (chọn thị trường mục tiêu): chọn nhóm mình sẽ phục vụ. <b>Positioning</b> (định vị): quyết định mình đứng ở đâu trong đầu nhóm đó, so với lựa chọn họ đang dùng. Ý tưởng phân khúc được Wendell Smith nêu năm 1956; Kotler & Keller (Marketing Management) đặt ba bước thành khung chuẩn của chiến lược marketing. Thứ tự quan trọng vì bước sau lấy đầu vào từ bước trước: chưa chia thì không có gì để chọn; chưa chọn ai thì không biết định vị trong đầu ai. Module này không dạy lại từng phần (kh01, kh02, tp01) mà nối chúng thành một chuỗi.' },
@@ -61,11 +61,11 @@ BAI_ADD({ mod:'kh11', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kh11-02', skill:'insight', read:'6 phút', t:'Phòng gym chia hội viên theo tuổi hay theo cách họ tập?',
+{ id:'B:kh11-02', skill:'insight', read:'6 phút', assume:true, t:'Phòng gym chia hội viên theo tuổi hay theo cách họ tập?',
   situation:'Một chuỗi phòng gym ở Đà Nẵng có 800 hội viên, đang chia theo tuổi: 18–24, 25–34, 35 trở lên. Tỉ lệ gia hạn ba nhóm gần như nhau, khoảng 44–48%. Một quản lý thử chia lại theo cách tập: 300 người tập đều từ 3 buổi/tuần gia hạn 70%; 500 người tập thất thường chỉ gia hạn 30% (số minh hoạ). Chủ chuỗi hỏi: nên chăm nhóm nào, bằng cách nào?',
   concept:{ name:'Bốn cơ sở phân khúc',
     body:'Kotler & Keller nêu bốn cơ sở chia thị trường tiêu dùng. <b>Địa lý</b>: tỉnh, quận, thành thị hay nông thôn, khí hậu. <b>Nhân khẩu học</b>: tuổi, giới, thu nhập, nghề, giai đoạn gia đình. <b>Tâm lý</b>: lối sống, giá trị, tính cách. <b>Hành vi</b>: dịp mua, lợi ích tìm kiếm, mức dùng, mức trung thành. Ba cơ sở đầu mô tả <i>người đó là ai</i>; hành vi và nhu cầu mô tả <i>họ mua, dùng thế nào và vì sao</i> — nên thường chia ra các nhóm cần cách làm khác nhau. Địa lý và nhân khẩu học vẫn có ích ở bước tìm người: nhắm quảng cáo, đặt điểm bán. Phân khúc không đồng nghĩa với nhóm tuổi; nhóm tuổi chỉ là phân khúc khi chính tuổi tạo ra nhu cầu khác (xem lại B:kh01-01 và B:kh01-03).' },
-  example:'Theo tuổi, tỉ lệ gia hạn chênh nhau chưa tới 4 điểm phần trăm — không gợi ra việc gì khác nhau cho ba nhóm. Theo hành vi, chênh 40 điểm: 70% nhóm thất thường không gia hạn, so với 30% ở nhóm tập đều. Việc cần làm lộ ra ngay. Nhóm thất thường: nhắn tin khi vắng 10 ngày, gợi ý lịch 2 buổi cố định mỗi tuần. Nhóm tập đều: ưu đãi gia hạn sớm gói 12 tháng. Tuổi lúc này chỉ còn dùng để chọn giờ mở lớp và kênh nhắn tin.',
+  example:'Theo tuổi, tỉ lệ gia hạn chênh nhau chưa tới 4 điểm phần trăm — không gợi ra việc gì khác nhau cho ba nhóm. Theo hành vi, chênh 40 điểm: 70% nhóm thất thường không gia hạn, so với 30% ở nhóm tập đều. Việc cần thử lộ ra ngay. Nhóm thất thường: nhắn tin khi vắng 10 ngày, gợi ý lịch 2 buổi cố định mỗi tuần. Nhóm tập đều: ưu đãi gia hạn sớm gói 12 tháng. Lưu ý chênh 40 điểm này là tương quan, chưa phải nhân quả: có thể người đã định gia hạn nên mới tập đều, hoặc nhà gần phòng tập là biến ẩn khiến cả hai cùng cao. Nên thử nhỏ có đối chứng trước: nhắn tin cho 100 người thất thường, so tỉ lệ gia hạn với 100 người thất thường không nhắn; chênh rõ mới làm cho cả 500. Tuổi lúc này chỉ còn dùng để chọn giờ mở lớp và kênh nhắn tin.',
   takeaway:'Chia theo cách khách mua và dùng trước; dùng tuổi, nơi ở để tìm họ sau.',
   apply:'Cho bảng của một shop sữa hạt (số minh hoạ): theo tuổi, tỉ lệ mua lại nhóm 18–30 là 38%, nhóm 31–45 là 41%; theo lý do mua, nhóm "thay sữa bò vì không dung nạp" là 72%, nhóm "uống thử vì tò mò" là 12%. Viết ba câu: cách chia nào dùng được, chênh bao nhiêu điểm phần trăm, mỗi nhóm cần một việc gì khác. Đạt khi: (1) chọn chia theo lý do mua và nêu đúng 60 điểm %; (2) hai việc làm khác nhau thật; (3) tuổi chỉ xuất hiện ở vai trò tìm khách.',
   mistakes:['Dừng ở nhóm tuổi vì dễ lọc trong báo cáo, dù các nhóm cư xử y như nhau.','Chia theo tâm lý bằng tính từ đẹp ("năng động", "hiện đại") không gắn với hành vi nào đo được.'],
@@ -80,7 +80,7 @@ BAI_ADD({ mod:'kh11', lessons:[
   { type:'mcq', stem:'Ngân sách giữ chân có hạn. Bạn ưu tiên làm gì cho nhóm 500 người tập thất thường?',
     options:[{k:'a',t:'Nhắn tin khi họ vắng 10 ngày và gợi ý lịch hai buổi cố định mỗi tuần'},{k:'b',t:'Giảm 20% phí gia hạn cho cả 800 hội viên để giữ chân tất cả cùng lúc'},
              {k:'c',t:'Chạy quảng cáo nhắm người 25–34 tuổi để thay chỗ người sắp rời đi'},{k:'d',t:'Mở thêm lớp yoga buổi tối vì nhóm trên 35 tuổi thích lớp nhẹ nhàng'}],
-    answer:'a', why:{a:'Đúng. Nhóm này rời đi vì không giữ được thói quen; việc cần làm là giúp họ quay lại phòng tập.',
+    answer:'a', why:{a:'Đúng. Gia hạn thấp đi cùng tập thưa là tín hiệu (tương quan) cho giả thuyết “mất thói quen nên rời”; nhắn tin và lịch cố định là phép thử rẻ, nên chạy trên một phần nhóm có đối chứng trước rồi mới mở rộng.',
       b:'Giảm cho cả nhóm tập đều — vốn đã gia hạn 70% — là tặng tiền cho người đằng nào cũng ở lại.',
       c:'Kéo người mới mà không sửa lý do rời đi thì người mới cũng rời theo cùng một cách.',
       d:'Tuổi không phải biến giải thích chuyện gia hạn trong dữ liệu này.'} },
@@ -118,7 +118,7 @@ BAI_ADD({ mod:'kh11', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kh11-03', skill:'measure', read:'7 phút', t:'Ba phân khúc trên giấy — cái nào thật sự dùng được?',
+{ id:'B:kh11-03', skill:'measure', read:'7 phút', assume:true, t:'Ba phân khúc trên giấy — cái nào thật sự dùng được?',
   situation:'Một xưởng gốm Bát Tràng bán online cân nhắc ba phân khúc (số minh hoạ). A: quán cà phê mới mở cần bộ cốc đồng bộ, khoảng 1.500 quán/năm ở Hà Nội và TP.HCM, lãi gộp 4 triệu đồng mỗi quán. B: "người yêu nét đẹp truyền thống", chưa ai biết bao nhiêu. C: người sưu tầm men lam, khoảng 200 người, lãi gộp 1 triệu/người/năm. Làm một dòng riêng cho mỗi phân khúc tốn khoảng 300 triệu đồng/năm.',
   concept:{ name:'Năm tiêu chí của một phân khúc dùng được',
     body:'Kotler & Keller nêu năm tiêu chí. <b>Đo lường được</b>: ước được quy mô và sức mua. <b>Đủ lớn</b>: đủ lãi để bù chi phí làm riêng. <b>Tiếp cận được</b>: có kênh để với tới. <b>Khác biệt</b>: phản ứng khác nhóm khác với cùng một chương trình. <b>Hành động được</b>: doanh nghiệp đủ người, tiền và năng lực để làm một chương trình riêng cho nhóm đó. B:kh01-05 đã dạy bốn phép thử đầu; tiêu chí thứ năm quay sang hỏi chính mình — nhóm có thật mà mình không đủ sức phục vụ thì cũng chưa dùng được. Năm tiêu chí là cửa lọc ở cuối bước S: trượt một tiêu chí thì chưa cần mang sang bước T để chấm độ hấp dẫn.' },
@@ -175,7 +175,7 @@ BAI_ADD({ mod:'kh11', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kh11-04', skill:'brand', read:'7 phút', t:'Nhắm một nhóm, vài nhóm hay cả thị trường — và có ai nói nên nhắm rộng?',
+{ id:'B:kh11-04', skill:'brand', read:'7 phút', assume:true, t:'Nhắm một nhóm, vài nhóm hay cả thị trường — và có ai nói nên nhắm rộng?',
   situation:'Một thương hiệu nước mắm nhỏ ở Phú Quốc có lãi gộp 520 triệu/năm khi chỉ bán cho nhà hàng hải sản. Đội bán hàng muốn làm thêm hai dòng cho "bếp gia đình" và "quà du lịch", ước tổng lãi gộp ba dòng là 800 triệu. Mỗi dòng cần 130 triệu/năm chi phí riêng cho bao bì, kênh và nhân sự (số minh hoạ). Cùng lúc, một cố vấn nói: "đừng chia nhỏ, hãy với tới thật nhiều người mua nước mắm".',
   concept:{ name:'Bốn cách chọn thị trường mục tiêu',
     body:'Theo Kotler & Armstrong (Principles of Marketing) có bốn mức. <b>Đại trà</b>: một chương trình cho cả thị trường, bỏ qua khác biệt. <b>Phân hoá</b>: nhiều phân khúc, mỗi phân khúc một chương trình. <b>Tập trung</b>: dồn sức vào một hay vài ngách. <b>Vi mô</b>: làm theo từng khu vực hay từng người. Càng hẹp càng sắc nhưng càng phụ thuộc một nhóm; càng rộng càng nhiều doanh thu tiềm năng nhưng tốn chi phí hơn và dễ nhạt. Có một quan điểm khác: Byron Sharp (How Brands Grow, 2010, Viện Ehrenberg-Bass) cho rằng thương hiệu lớn lên chủ yếu nhờ với tới thật nhiều người mua của cả ngành hàng, nên nên nhắm rộng hơn và bớt chia nhỏ. Đây là một tranh luận còn mở giữa hai trường phái, không phải luật.' },
@@ -232,7 +232,7 @@ BAI_ADD({ mod:'kh11', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kh11-05', skill:'measure', read:'7 phút', t:'Phân khúc to nhất có phải phân khúc đáng chọn nhất?',
+{ id:'B:kh11-05', skill:'measure', read:'7 phút', assume:true, t:'Phân khúc to nhất có phải phân khúc đáng chọn nhất?',
   situation:'Một app đặt lịch spa ở TP.HCM cân nhắc ba phân khúc (số minh hoạ). A: dân văn phòng muốn gội đầu dưỡng sinh buổi trưa — 50.000 người, ước giành 4%, lãi gộp 300.000đ/khách/năm. B: mẹ sau sinh cần massage tại nhà — 12.000 người, ước giành 15% vì chưa ai làm kỹ, lãi gộp 450.000đ. C: khách du lịch — 80.000 người, chỉ giành 1% vì phải cạnh tranh với khách sạn, lãi gộp 500.000đ. Cả đội nghiêng về C vì "to nhất".',
   concept:{ name:'Hấp dẫn = quy mô × khả năng thắng × biên lãi',
     body:'Kotler & Keller đánh giá phân khúc theo ba nhóm: quy mô và tăng trưởng; độ hấp dẫn về cấu trúc (đối thủ, sức ép giá); và mục tiêu, nguồn lực của doanh nghiệp. Một cách gom thành một con số: <b>lãi kỳ vọng = số khách trong phân khúc × tỉ lệ mình có thể giành × lãi gộp mỗi khách</b>. Khác bảng chấm điểm cộng ở B:kh02-01, phép nhân phạt nặng điểm yếu: một thừa số gần 0 kéo cả tích về gần 0, dù hai thừa số kia rất to. Tỉ lệ giành được là giả định yếu nhất — nó gói cả sức đối thủ lẫn lý do khách chọn mình — nên cần ghi nguồn và thử thay số.' },
@@ -289,7 +289,7 @@ BAI_ADD({ mod:'kh11', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kh11-06', skill:'brand', read:'7 phút', t:'Đã chọn tệp — viết câu định vị thế nào để không trôi khỏi tệp đó?',
+{ id:'B:kh11-06', skill:'brand', read:'7 phút', assume:true, t:'Đã chọn tệp — viết câu định vị thế nào để không trôi khỏi tệp đó?',
   situation:'Một tiệm cơm văn phòng ở Hà Nội đã đi qua hai bước: chia theo dịp, rồi chọn tệp "nhân viên văn phòng đặt cơm trưa qua app, chỉ có 45 phút nghỉ". Đối thủ quanh đó đều hứa "ngon, rẻ". Tiệm muốn khác bằng "giao trong 30 phút". Tháng trước có 1.200 đơn, 1.020 đơn giao đúng hạn (số minh hoạ). Trưởng nhóm muốn in "luôn đúng 30 phút" lên túi đựng.',
   concept:{ name:'Câu định vị và ba tiêu chí của điểm khác biệt',
     body:'Câu định vị (xem lại B:tp01-01) có bốn vế: <b>cho ai</b> — lấy nguyên tệp đã chọn ở bước T; <b>thuộc ngành nào</b> — khung tham chiếu khách dùng để so; <b>khác gì</b> — điểm khác biệt; <b>vì sao tin</b> — bằng chứng. Kotler & Keller (dựa trên Keller) nêu ba nhóm tiêu chí để một điểm khác biệt đứng được: <b>khách thấy đáng muốn</b> (liên quan tới điều tệp đó cần, nghe khác và tin được); <b>mình làm được</b> (vận hành đủ sức giữ lời, nói ra được, giữ được lâu); và <b>khác đối thủ</b> (đối thủ chưa có hoặc khó bắt chước nhanh). Câu định vị là mắt xích nối T với P: đổi vế "cho ai" là đổi cả chuỗi.' },
@@ -346,7 +346,7 @@ BAI_ADD({ mod:'kh11', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kh11-07', skill:'channel', read:'7 phút', t:'Định vị xong rồi — sản phẩm, giá, kênh và lời nói phải đổi gì theo?',
+{ id:'B:kh11-07', skill:'channel', read:'7 phút', assume:true, t:'Định vị xong rồi — sản phẩm, giá, kênh và lời nói phải đổi gì theo?',
   situation:'Tiệm cơm văn phòng ở bài trước đã có định vị "cơm trưa giao trong 30 phút cho dân văn phòng chỉ có 45 phút nghỉ". Nhưng thực đơn vẫn có 40 món nấu theo yêu cầu, hộp cơm giá 50.000đ bán qua app tính hoa hồng 25%, và fanpage đăng ảnh mâm cơm gia đình cuối tuần. Giá vốn món ăn 18.000đ/hộp (số minh hoạ). Chủ tiệm hỏi: định vị đã đúng, sao khách chưa thấy gì khác?',
   concept:{ name:'Từ STP xuống 4P',
     body:'Định vị chỉ là lời hứa; khách cảm nhận nó qua bốn biến số marketing — 4P của McCarthy (1960): <b>sản phẩm</b>, <b>giá</b>, <b>phân phối</b> (kênh) và <b>truyền thông</b> (thông điệp). Mỗi P phải là hệ quả của STP. Sản phẩm làm được lời hứa cho tệp đã chọn. Giá hợp với cách tệp đó so sánh và vẫn để lại lãi sau chi phí kênh. Kênh đặt ở nơi tệp đó mua. Thông điệp nói đúng điểm khác biệt với đúng người. Cách kiểm nhanh: với mỗi P, hỏi "quyết định này phục vụ tệp nào, giữ lời hứa nào?". P nào trả lời bằng một nhóm khác là chỗ chuỗi đang rò.' },
@@ -403,7 +403,7 @@ BAI_ADD({ mod:'kh11', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kh11-08', skill:'comm', read:'7 phút', t:'Chọn tệp một đằng, quảng cáo nói một nẻo — tìm điểm đứt trong chuỗi STP thế nào?',
+{ id:'B:kh11-08', skill:'comm', read:'7 phút', assume:true, t:'Chọn tệp một đằng, quảng cáo nói một nẻo — tìm điểm đứt trong chuỗi STP thế nào?',
   situation:'Một thương hiệu yến mạch ăn liền ở TP.HCM chọn tệp "người đi làm cần bữa sáng nhanh, ít đường". Nhưng agency lại chạy video TikTok "ăn vặt healthy" cho sinh viên 18–22. Sau một tháng tốn 60 triệu, có 300 khách mới; khảo sát lúc giao hàng cho thấy chỉ 90 người là dân đi làm mua để ăn sáng (số minh hoạ). Báo cáo ghi: "chi phí mỗi khách 200.000đ — rất tốt".',
   concept:{ name:'Kiểm tra chuỗi STP: các mắt xích phải nói về cùng một nhóm',
     body:'Chuỗi STP đứt khi hai bước liền nhau nói về hai nhóm khác nhau. Có bốn chỗ hay đứt. (1) <b>S → T</b>: chọn một nhóm không có trong bảng phân khúc, như "người trẻ năng động". (2) <b>T → P</b>: vế "cho ai" của câu định vị khác tệp đã chọn. (3) <b>P → 4P</b>: sản phẩm, giá, kênh không giữ lời hứa (xem lại B:tp01-08). (4) <b>P → quảng cáo</b>: brief cho agency đổi tệp mà không ai để ý. Cách kiểm: viết tệp đã chọn lên đầu trang, đặt dưới nó vế "cho ai", mô tả tệp trong brief quảng cáo, và nhóm khách mới thực tế. Bốn dòng phải nói về cùng một nhóm; dòng nào khác là chỗ đứt.' },

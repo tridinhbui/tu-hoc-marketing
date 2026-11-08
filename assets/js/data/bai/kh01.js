@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'kh01', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kh01-01', skill:'insight', read:'6 phút', t:'Hai khách cùng 28 tuổi, cùng lương — sao mua hai kiểu khác hẳn nhau?',
+{ id:'B:kh01-01', skill:'insight', read:'6 phút', assume:true, t:'Hai khách cùng 28 tuổi, cùng lương — sao mua hai kiểu khác hẳn nhau?',
   situation:'Một chuỗi cà phê ở TP.HCM chia khách thành "nữ 22–30 tuổi, văn phòng". Trong tệp này có Linh, ghé lúc 7h30, mua mang đi trong 3 phút, chỉ cần đậm và nhanh; và Trang, ngồi 2 tiếng chiều thứ Bảy với laptop, cần ổ cắm và wifi. Cùng tuổi, cùng nghề, cùng thu nhập — nhưng nếu quán chiều theo một người thì làm hỏng trải nghiệm của người kia.',
   concept:{ name:'Phân khúc theo nhu cầu, không theo nhân khẩu học',
     body:'Tuổi, giới tính, thu nhập dễ đo nên hay được dùng để chia khách. Nhưng chúng chỉ là <b>mô tả</b>, không phải <b>lý do mua</b>. Hai người cùng nhân khẩu học có thể cần những thứ trái ngược; hai người khác tuổi lại có thể cần y hệt nhau. Phân khúc có ích khi mỗi nhóm cần một cách phục vụ khác: sản phẩm khác, giá khác, kênh khác, thông điệp khác. Nhân khẩu học chỉ nên dùng ở bước sau: để tìm và tiếp cận nhóm nhu cầu đã chọn.' },
@@ -63,7 +63,7 @@ BAI_ADD({ mod:'kh01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kh01-02', skill:'insight', read:'7 phút', t:'Bán bánh trung thu: chia khách theo tuổi hay theo dịp mua?',
+{ id:'B:kh01-02', skill:'insight', read:'7 phút', assume:true, t:'Bán bánh trung thu: chia khách theo tuổi hay theo dịp mua?',
   situation:'Một tiệm bánh ở Hà Nội chuẩn bị mùa Trung thu với 3.000 hộp. Năm ngoái họ chạy quảng cáo cho "nữ 30–50 tuổi" và bán đều, nhưng cuối mùa còn tồn gần 600 hộp loại 4 bánh giá 450.000đ, trong khi hộp 2 bánh 180.000đ hết từ tuần thứ hai. Chủ tiệm hỏi: năm nay nên làm gì khác?',
   concept:{ name:'Phân khúc theo dịp dùng (occasion)',
     body:'Cùng một người có thể mua bánh trung thu cho ba dịp khác nhau: <b>biếu sếp, đối tác</b> (cần hộp sang, giao tận nơi, hoá đơn), <b>mang về quê</b> (cần hộp vừa, bền khi đi xa), <b>ăn trong nhà</b> (cần bánh lẻ, giá mềm). Mỗi dịp có tiêu chí chọn khác, nên chia theo dịp giúp quyết định mẫu hộp, giá, kênh bán và thời điểm. Dịp dùng đặc biệt hữu ích với ngành hàng theo mùa, quà tặng, đồ uống, ăn uống — nơi "khi nào, cho ai, để làm gì" quyết định lựa chọn hơn là "tôi bao nhiêu tuổi".' },
@@ -123,7 +123,7 @@ BAI_ADD({ mod:'kh01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kh01-03', skill:'measure', read:'7 phút', t:'Khách mua thường xuyên và khách mua một lần: chia thế nào để tiêu tiền đúng?',
+{ id:'B:kh01-03', skill:'measure', read:'7 phút', assume:true, t:'Khách mua thường xuyên và khách mua một lần: chia thế nào để tiêu tiền đúng?',
   situation:'Một shop mỹ phẩm online có 10.000 khách trong năm. Chủ shop định gửi mã giảm 20% cho tất cả. Bạn xem dữ liệu: 1.500 khách mua từ 4 lần trở lên, chiếm 55% doanh thu; 6.000 khách chỉ mua một lần; số còn lại mua 2–3 lần. Gửi chung một mã cho cả ba nhóm có phải là cách dùng tiền tốt?',
   concept:{ name:'Phân khúc theo hành vi',
     body:'Phân khúc theo hành vi chia khách theo <b>những gì họ đã làm</b>: mua bao lâu một lần, mua bao nhiêu, mua gần nhất khi nào, dùng kênh nào, phản ứng với khuyến mãi ra sao. Ưu điểm lớn: dữ liệu có sẵn trong hệ thống bán hàng và nói thật hơn lời khai. Mỗi nhóm hành vi cần một việc khác: nhóm mua đều cần được giữ và cảm ơn, nhóm mua một lần cần lý do để quay lại, nhóm lâu không mua cần được đánh thức. Một mã giảm chung thường tặng tiền cho người đằng nào cũng mua.' },
@@ -180,7 +180,7 @@ BAI_ADD({ mod:'kh01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kh01-04', skill:'insight', read:'6 phút', t:'Khách mua xe máy: người cần "bền, tiết kiệm" và người cần "đẹp, được khen" có chung một quảng cáo?',
+{ id:'B:kh01-04', skill:'insight', read:'6 phút', assume:true, t:'Khách mua xe máy: người cần "bền, tiết kiệm" và người cần "đẹp, được khen" có chung một quảng cáo?',
   situation:'Một đại lý xe máy ở Cần Thơ bán hai dòng xe tay ga cùng tầm giá 35–45 triệu. Nhân viên kể có hai kiểu khách: một kiểu hỏi ngay "đổ đầy bình đi được bao xa, thay nhớt bao lâu", kiểu kia đứng soi màu, hỏi "đi ra đường có ai đụng hàng không". Đại lý đang dùng một tờ rơi liệt kê mọi thông số cho cả hai kiểu.',
   concept:{ name:'Phân khúc theo giá trị tìm kiếm (benefit)',
     body:'Phân khúc theo giá trị chia khách theo <b>lợi ích họ đặt lên hàng đầu</b> khi chọn: tiết kiệm, bền, an toàn, đẹp, thể hiện bản thân, tiện lợi. Cùng một sản phẩm, người này mua vì lý do lý trí, người kia vì cảm xúc. Chia theo giá trị giúp chọn điều gì nói trước tiên, hình ảnh nào, lời chứng thực từ ai. Nó khác bài phân khúc theo dịp: dịp là <b>khi nào</b> mua, còn giá trị là <b>vì điều gì</b> mà chọn cái này thay vì cái kia. Cách chia này do Russell Haley đề xuất năm 1968 với tên "benefit segmentation".' },
@@ -237,7 +237,7 @@ BAI_ADD({ mod:'kh01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kh01-05', skill:'measure', read:'7 phút', t:'Phân khúc nghe hay nhưng có dùng được không?',
+{ id:'B:kh01-05', skill:'measure', read:'7 phút', assume:true, t:'Phân khúc nghe hay nhưng có dùng được không?',
   situation:'Nhóm bạn đề xuất một phân khúc cho thương hiệu trà túi lọc: "người trẻ thành thị yêu thiên nhiên, sống chậm, thích thiền buổi sáng". Cả phòng thích vì nghe đẹp. Trưởng nhóm hỏi ba câu: nhóm này có bao nhiêu người, họ có mua khác người khác không, và mình tìm họ ở đâu? Không ai trả lời được.',
   concept:{ name:'Bốn phép thử một phân khúc dùng được',
     body:'Một phân khúc chỉ đáng theo đuổi khi qua bốn phép thử. <b>Đủ lớn</b>: đủ người để bù chi phí làm riêng. <b>Khác biệt</b>: nhóm này phản ứng khác nhóm khác với sản phẩm, giá hay thông điệp. <b>Tiếp cận được</b>: có kênh, điểm bán hay nền tảng để nói với họ mà không tốn phí cho người ngoài nhóm. <b>Đo được</b>: có cách đếm hay ước lượng quy mô và theo dõi kết quả. Đo "khác biệt" bằng thí nghiệm nhỏ: gửi hai thông điệp cho hai nhóm rồi so tỉ lệ nhấp hay đặt mua. Trượt một phép thử thì chỉ là câu chuyện hay trong buổi họp; sửa cách định nghĩa nhóm trước khi bỏ. Bốn phép thử này là bản rút gọn, dễ nhớ của các tiêu chí kinh điển trong sách giáo khoa (như Kotler: đo được, đủ lớn, tiếp cận được, khác biệt, hành động được).' },
@@ -271,12 +271,12 @@ BAI_ADD({ mod:'kh01', lessons:[
     unit:'nghìn người', ans:150, tol:1, wrong:[[300,'QUEN_TI_LE_CHUYEN_DOI'],[600,'SAI_TINH_TOAN']], errors:['QUEN_TI_LE_CHUYEN_DOI','SAI_TINH_TOAN'],
     steps:['1.200 nghìn × 25% = 300 nghìn người uống trà buổi chiều.','300 × 50% = <b>150 nghìn người</b> dùng trà túi lọc.'] },
   { type:'mcq', stem:'Tình huống mới: một phòng khám nha khoa định nhắm "người sợ đau khi chữa răng", chưa có số liệu gì về nhóm này. Hành động nào kiểm phép thử "khác biệt" rẻ và nhanh nhất?',
-    options:[{k:'a',t:'Đếm lượng tìm kiếm của từ khoá "nhổ răng có đau không" để ước lượng quy mô nhóm'},{k:'b',t:'Thuê đơn vị khảo sát phỏng vấn 2.000 người dân về nỗi sợ khi đi gặp nha sĩ'},
-             {k:'c',t:'Hỏi bệnh nhân cũ có sợ đau không rồi suy ra nhóm này chiếm bao nhiêu phần trăm'},{k:'d',t:'Chạy hai mẫu quảng cáo, một nhấn gây tê, một nhấn giá, rồi so tỉ lệ đặt lịch của hai bên'}],
+    options:[{k:'a',t:'Đếm lượng tìm kiếm hằng tháng của từ khoá "nhổ răng có đau không" trên công cụ tìm kiếm để ước lượng quy mô nhóm'},{k:'b',t:'Thuê đơn vị khảo sát phỏng vấn 2.000 người dân trong thành phố về mức độ sợ đau khi phải đi gặp nha sĩ'},
+             {k:'c',t:'Hỏi bệnh nhân cũ của phòng khám có sợ đau không, rồi suy ra nhóm này chiếm bao nhiêu phần trăm dân số'},{k:'d',t:'Chạy cùng hai mẫu quảng cáo (nhấn gây tê, nhấn giá) cho tệp tìm “sợ đau” và tệp chung, so chênh đặt lịch giữa hai tệp'}],
     answer:'d', why:{a:'Lượng tìm kiếm cho biết quy mô và chỗ tiếp cận, chưa cho biết nhóm này phản ứng khác với thông điệp nào. Đó là phép thử khác.',
       b:'Khảo sát xác nhận nỗi sợ có thật, nhưng sợ chưa chắc mua khác; lại tốn kém hơn nhiều so với thử hai thông điệp.',
       c:'Bệnh nhân cũ là người đã vượt qua nỗi sợ nên đến phòng khám; mẫu lệch, không đại diện cho người né nha sĩ.',
-      d:'Đúng. Khác biệt chỉ lộ khi hai nhóm phản ứng khác nhau với cùng một lời mời. Nếu thông điệp gây tê kéo đặt lịch cao hơn rõ rệt thì nhóm này khác thật.'} },
+      d:'Đúng. Khác biệt chỉ lộ khi hai tệp phản ứng khác nhau với cùng hai lời mời: nếu tệp “sợ đau” đặt lịch cao hơn hẳn với mẫu gây tê còn tệp chung thì không, nhóm này khác thật. Chỉ chạy hai mẫu trên một tệp chung thì mới biết thông điệp nào hay hơn, chưa biết nhóm có khác.'} },
   { type:'mcq', stem:'Một phân khúc qua cả bốn phép thử nhưng đối thủ lớn đã phục vụ rất tốt. Kết luận hợp lý?',
     options:[{k:'a',t:'Phân khúc vẫn dùng được; chọn có vào đó hay không là quyết định khác'},{k:'b',t:'Phân khúc sai, phải chia lại từ đầu vì đã có đối thủ'},
              {k:'c',t:'Phải vào ngay vì đã chứng minh được đó là thị trường thật'},{k:'d',t:'Bỏ hẳn toàn ngành hàng vì không thể cạnh tranh với doanh nghiệp đã lớn'}],
@@ -294,7 +294,7 @@ BAI_ADD({ mod:'kh01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kh01-06', skill:'measure', read:'7 phút', t:'Phân khúc có bao nhiêu tiền? Ước lượng nhanh trước khi đầu tư',
+{ id:'B:kh01-06', skill:'measure', read:'7 phút', assume:true, t:'Phân khúc có bao nhiêu tiền? Ước lượng nhanh trước khi đầu tư',
   situation:'Một startup muốn ra dòng cơm hộp ăn kiêng giao tận văn phòng ở Hà Nội, giá 60.000đ/hộp. Nhà đầu tư hỏi: "phân khúc này đáng bao nhiêu tiền một năm?". Không có báo cáo ngành nào có sẵn con số. Bạn có một buổi chiều để đưa ra ước lượng có căn cứ.',
   concept:{ name:'Ước lượng quy mô từ dưới lên',
     body:'Khi không có số liệu sẵn, hãy dựng quy mô <b>từ dưới lên</b>: bắt đầu từ tổng số người có thể liên quan, nhân dần với các tỉ lệ lọc (có nhu cầu, có khả năng chi, có dịp mua), rồi nhân tần suất mua và giá. Mỗi tỉ lệ phải có nguồn: số liệu công khai, khảo sát nhỏ, hay đếm thử. Kết quả không cần chính xác đến đồng; cần <b>đúng bậc độ lớn</b> và cho thấy tỉ lệ nào mình chắc, tỉ lệ nào đang đoán. Ghi rõ giả định để người khác thử thay số.' },
@@ -354,7 +354,7 @@ BAI_ADD({ mod:'kh01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kh01-07', skill:'brand', read:'7 phút', t:'Một sản phẩm, ba phân khúc: làm riêng hay làm chung?',
+{ id:'B:kh01-07', skill:'brand', read:'7 phút', assume:true, t:'Một sản phẩm, ba phân khúc: làm riêng hay làm chung?',
   situation:'Một thương hiệu bánh mì sandwich đóng gói bán ở cửa hàng tiện lợi. Dữ liệu cho thấy ba nhóm: học sinh mua ăn sáng vội (bánh 10.000đ), nhân viên mua ăn trưa nhẹ (cần no, ăn gọn một tay) và người đi phượt mua mang theo (cần để được lâu). Ngân sách chỉ đủ một chiến dịch lớn trong năm. Làm ba bản riêng hay một bản chung?',
   concept:{ name:'Phục vụ nhiều phân khúc bằng một sản phẩm',
     body:'Không phải mỗi phân khúc đều cần một sản phẩm riêng. Có ba cách: <b>chung lõi, khác bề mặt</b> — một sản phẩm, đổi quy cách, kênh và thông điệp theo nhóm; <b>chung thông điệp gốc</b> — tìm lợi ích mà mọi nhóm đều cần rồi nói điều đó; <b>tách dòng</b> — làm biến thể riêng khi nhu cầu khác đến mức một sản phẩm không vừa. Xa hơn nữa là <b>tách thương hiệu</b>, chỉ khi giá trị hai nhóm mâu thuẫn. Chọn bằng ba câu hỏi: nhu cầu khác ở lõi hay ở bề mặt; nhóm đủ lớn để bù chi phí cố định không; mỗi gói thêm lãi bao nhiêu. Đổi bề mặt rẻ nhất, nên thử trước.' },
@@ -411,7 +411,7 @@ BAI_ADD({ mod:'kh01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kh01-08', skill:'comm', read:'6 phút', t:'Persona "Chị Hoa 32 tuổi thích đọc sách": giúp được gì hay chỉ để trang trí slide?',
+{ id:'B:kh01-08', skill:'comm', read:'6 phút', assume:true, t:'Persona "Chị Hoa 32 tuổi thích đọc sách": giúp được gì hay chỉ để trang trí slide?',
   situation:'Agency gửi bộ persona cho thương hiệu máy lọc nước: "Chị Hoa, 32 tuổi, nhân viên ngân hàng, thích đọc sách, du lịch, uống cà phê, có hai con". Kèm ảnh stock một phụ nữ đang cười. Đội sản phẩm đọc xong vẫn không biết nên ưu tiên tính năng nào, đội nội dung không biết nên viết gì. Bộ persona sai ở đâu?',
   concept:{ name:'Persona có ích và persona vô dụng',
     body:'Persona là một nhân vật đại diện cho một phân khúc. Nó <b>vô dụng</b> khi chỉ gồm tuổi, nghề, sở thích chung chung — thông tin đúng với hàng triệu người và không gợi ra quyết định nào. Nó <b>có ích</b> khi trả lời: người này đang cố làm gì, điều gì làm họ lo, họ đang dùng giải pháp gì thay thế, điều gì khiến họ đổi, và họ tìm thông tin ở đâu. Mỗi dòng trong persona nên dẫn tới một quyết định; dòng nào không dẫn tới đâu thì bỏ.' },
@@ -471,7 +471,7 @@ BAI_ADD({ mod:'kh01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:kh01-09', skill:'insight', read:'7 phút', t:'Dữ liệu nói "khách chủ yếu nữ 25–34" — có nên chỉ nhắm nhóm đó?',
+{ id:'B:kh01-09', skill:'insight', read:'7 phút', assume:true, t:'Dữ liệu nói "khách chủ yếu nữ 25–34" — có nên chỉ nhắm nhóm đó?',
   situation:'Một thương hiệu nến thơm bán online xem báo cáo: 70% người mua là nữ 25–34. Chủ thương hiệu định dồn toàn bộ quảng cáo vào nhóm này. Bạn đọc kỹ đơn hàng và thấy 30% đơn có ghi chú "gói quà", nhiều đơn giao đến địa chỉ khác người đặt, và có một nhóm nam đặt vào tuần trước 14/2 và 20/10.',
   concept:{ name:'Nhân khẩu học đánh lừa như thế nào',
     body:'Báo cáo nhân khẩu học mô tả <b>người đang mua</b>, không phải <b>người có thể mua</b> hay <b>lý do mua</b>. Nó đánh lừa theo ba cách. Thứ nhất, nó phản ánh chính nơi bạn đã quảng cáo — nhắm nữ thì khách ra nữ. Thứ hai, nó giấu các dịp mua khác nhau trong cùng một nhóm. Thứ ba, nó bỏ sót nhóm nhỏ nhưng có giá trị, như người mua quà. Đọc nhân khẩu học cùng với ghi chú đơn, dịp mua và địa chỉ nhận để thấy phân khúc thật.' },

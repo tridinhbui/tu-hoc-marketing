@@ -3,11 +3,11 @@
 BAI_ADD({ mod:'tn06', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tn06-01', skill:'channel', read:'6 phút', t:'Nên bỏ bao nhiêu tiền để thử một kênh mới?',
+{ id:'B:tn06-01', skill:'channel', read:'6 phút', assume:true, t:'Nên bỏ bao nhiêu tiền để thử một kênh mới?',
   situation:'Một shop mỹ phẩm thuần chay ở TP.HCM chi 200 triệu/tháng cho quảng cáo, gần hết trên Facebook và Shopee. Sếp muốn thử Zalo Ads và hỏi bạn: "Cho bao nhiêu thì đủ biết mà không đau?" Một bạn trong nhóm đề xuất dồn 100 triệu tháng đầu "cho ra kết quả nhanh", bạn khác đề xuất 3 triệu "cho an toàn".',
   concept:{ name:'Ngân sách thử kênh (test budget)',
     body:'Tiền thử kênh phải trả lời hai câu: <b>đủ lớn</b> để có đủ dữ liệu ra quyết định, và <b>đủ nhỏ</b> để nếu thất bại thì doanh nghiệp không lung lay. Cách làm thực tế: tính ngược từ số chuyển đổi cần có (thường vài chục đơn) nhân với chi phí mỗi đơn dự kiến; rồi so với một trần phần trăm tổng ngân sách, một quy tắc kinh nghiệm hay được nêu là khoảng 10–15% (không phải chuẩn chung, tuỳ rủi ro và quy mô doanh nghiệp). Quá ít thì kênh chưa kịp chạy đã bị phán; quá nhiều thì một thử nghiệm biến thành canh bạc.' },
-  example:'Shop muốn có khoảng 40 đơn để đọc được kết quả. Chi phí mỗi đơn trên Facebook đang 250.000đ, đoán kênh mới đắt hơn khoảng 1,5 lần là 375.000đ. Cần 40 × 375.000 = 15 triệu. Trần 10% của 200 triệu là 20 triệu. 15 triệu nằm dưới trần, vậy chọn 15–20 triệu. 3 triệu chỉ mua được khoảng 8 đơn — quá ít để kết luận; 100 triệu là một nửa ngân sách đặt vào kênh chưa ai biết.',
+  example:'Shop muốn có khoảng 40 đơn để đọc được kết quả. Vì sao 40? Ước lượng thô: với n đơn, chi phí mỗi đơn dao động cỡ ±1/√n; 40 đơn → ±16%, 8 đơn → ±35% (chênh nào cũng chìm trong nhiễu); muốn thấy chắc kênh mới đắt hơn 20% thì cần cỡ 100 đơn. Chọn số đơn theo mức chênh muốn nhận ra. Chi phí mỗi đơn trên Facebook đang 250.000đ, đoán kênh mới đắt hơn khoảng 1,5 lần là 375.000đ. Cần 40 × 375.000 = 15 triệu. Trần 10% của 200 triệu là 20 triệu. 15 triệu nằm dưới trần, vậy chọn 15–20 triệu. 3 triệu chỉ mua được khoảng 8 đơn — quá ít để kết luận; 100 triệu là một nửa ngân sách đặt vào kênh chưa ai biết.',
   takeaway:'Tính tiền thử từ số đơn cần để kết luận, rồi đặt một trần phần trăm để thất bại không làm đau.',
   apply:'Chọn một kênh bạn muốn thử. Nói trong 60 giây: cần bao nhiêu đơn để kết luận, chi phí mỗi đơn đoán là bao nhiêu, và con số đó chiếm mấy phần trăm tổng ngân sách.',
   mistakes:['Chọn con số "cho an toàn" quá nhỏ, rồi kết luận kênh không hiệu quả vì không có đơn.','Đổ ngân sách lớn ngay tháng đầu vì muốn thấy kết quả nhanh.'],
@@ -56,7 +56,7 @@ BAI_ADD({ mod:'tn06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tn06-02', skill:'measure', read:'7 phút', t:'Mới chạy 5 ngày, chưa có mấy đơn — nhìn vào đâu để quyết?',
+{ id:'B:tn06-02', skill:'measure', read:'7 phút', assume:true, t:'Mới chạy 5 ngày, chưa có mấy đơn — nhìn vào đâu để quyết?',
   situation:'Một thương hiệu giày thể thao nội địa thử quảng cáo trên TikTok. Sau 5 ngày, chi 6 triệu, có 3 đơn. Sếp muốn tắt. Bạn mở số liệu: tỉ lệ xem hết video 9s là 32%, tỉ lệ nhấp 1,8%, và 120 lượt thêm vào giỏ — trên Facebook cùng số tiền thường chỉ có 70 lượt thêm vào giỏ.',
   concept:{ name:'Chỉ số dẫn đầu (leading indicator)',
     body:'Đơn hàng là <b>chỉ số trễ</b>: đến chậm, số lượng ít, dễ nhiễu khi mới chạy. Chỉ số dẫn đầu là những bước xảy ra trước đơn và có nhiều hơn: tỉ lệ xem, tỉ lệ nhấp, chi phí mỗi lượt thêm vào giỏ, số người để lại số điện thoại. Chúng không thay thế đơn, nhưng cho phép quyết định sớm: tiếp tục, sửa, hay dừng. Điều kiện là bạn đã biết chỉ số dẫn đầu đó liên quan thế nào tới đơn trên kênh cũ.' },
@@ -109,10 +109,11 @@ BAI_ADD({ mod:'tn06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tn06-03', skill:'channel', read:'6 phút', t:'Kênh mới chạy 3 ngày đã đắt — tắt ngay hay chờ?',
+{ id:'B:tn06-03', skill:'channel', read:'6 phút', assume:true, t:'Kênh mới chạy 3 ngày đã đắt — tắt ngay hay chờ?',
   situation:'Một chuỗi trà sữa ở Hà Nội thử quảng cáo trên một nền tảng mới. Ngày 1 chi phí mỗi đơn 120.000đ, ngày 2 là 95.000đ, ngày 3 là 88.000đ. Kênh cũ đang 45.000đ. Trong 3 ngày, bạn đã sửa nhắm chọn hai lần và đổi mẫu quảng cáo một lần vì "thấy đắt quá".',
   concept:{ name:'Giai đoạn học của kênh (learning phase)',
-    body:'Hầu hết nền tảng quảng cáo cần một khoảng thời gian và một số chuyển đổi nhất định để hệ thống "học" nên hiển thị cho ai. Trong giai đoạn này chi phí thường cao và dao động. Mỗi lần bạn sửa lớn (đổi nhắm chọn, đổi mẫu, đổi ngân sách mạnh), hệ thống có thể phải học lại từ đầu. Cách làm: đặt trước một khoảng chờ tối thiểu (ví dụ 7 ngày hoặc khi đủ số chuyển đổi mà nền tảng khuyến nghị), không sửa lớn trong khoảng đó, và chỉ đọc xu hướng.' },
+    body:'Hầu hết nền tảng quảng cáo cần một khoảng thời gian và một số chuyển đổi nhất định để hệ thống "học" nên hiển thị cho ai. Trong giai đoạn này chi phí thường cao và dao động. Mỗi lần bạn sửa lớn (đổi nhắm chọn, đổi mẫu, đổi ngân sách mạnh), hệ thống có thể phải học lại từ đầu. Cách làm: đặt trước một khoảng chờ tối thiểu (ví dụ 7 ngày hoặc khi đủ số chuyển đổi mà nền tảng khuyến nghị — Meta nêu khoảng 50 sự kiện tối ưu trong 7 ngày theo trang trợ giúp tại ngày kiểm; nền tảng khác và con số có thể đổi, nếu màn hình khác thì tin trang chính thức), không sửa lớn trong khoảng đó, và chỉ đọc xu hướng.' },
+  src:[{ t:'Meta Business Help Center: giai đoạn học (learning phase) — tìm “About the learning phase”, ~50 sự kiện tối ưu/7 ngày', u:'https://www.facebook.com/business/help/search?q=learning%20phase', d:'2026-11-07', st:'chua' }],
   example:'Chi phí mỗi đơn đang giảm: 120 → 95 → 88 nghìn. Xu hướng tốt dù vẫn đắt gần gấp đôi kênh cũ. Nhưng ba lần sửa trong 3 ngày khiến hệ thống liên tục học lại, nên chưa biết kênh thật sự đắt hay do mình làm nhiễu. Quyết định hợp lý: khoá cài đặt, chạy đủ 7 ngày, rồi mới so sánh.',
   takeaway:'Trong giai đoạn học, sửa ít và chờ đủ lâu — đọc xu hướng, đừng đọc từng ngày.',
   points:["Hệ thống chưa biết ai hay mua nên phải thử rộng, nên những lần đầu tốn tiền. Khi dữ liệu tích dần, nó thu hẹp về nhóm dễ mua và chi phí giảm.","Mỗi lần sửa lớn là xoá bớt những gì hệ thống vừa học. Ba lần sửa trong ba ngày nghĩa là kênh chưa có ngày nào chạy ổn định để đo.","Khoảng chờ đặt trước chặn quyết định theo cảm xúc từng ngày. Nó còn cho một mốc rõ ràng: bao nhiêu ngày hoặc bao nhiêu chuyển đổi thì mở lại việc so với kênh cũ."],
@@ -138,7 +139,7 @@ BAI_ADD({ mod:'tn06', lessons:[
   { type:'calc', stem:'Chi phí mỗi đơn giảm từ 120.000đ (ngày 1) xuống 88.000đ (ngày 3). Giảm bao nhiêu phần trăm? (làm tròn 1 chữ số)',
     unit:'%', ans:26.7, tol:0.15, wrong:[[36.4,'SAI_MAU_SO'],[32,'NHAM_SO_TUYET_DOI']], errors:['SAI_MAU_SO'],
     steps:['Mức giảm = 120.000 − 88.000 = 32.000đ.','Chia cho mốc ban đầu: 32.000 ÷ 120.000 ≈ <b>26,7%</b>.'] },
-  { type:'mcq', stem:'Nền tảng khuyến nghị khoảng 50 chuyển đổi mỗi tuần để thoát giai đoạn học. Shop của bạn bán đồ nội thất, mỗi tuần chỉ có khoảng 5 đơn. Nên làm gì?',
+  { type:'mcq', stem:'Nền tảng bạn chạy (ví dụ Meta, theo trang trợ giúp tại ngày kiểm) khuyến nghị khoảng 50 chuyển đổi trong 7 ngày để thoát giai đoạn học. Shop của bạn bán đồ nội thất, mỗi tuần chỉ có khoảng 5 đơn. Nên làm gì?',
     options:[{k:'a',t:'Tối ưu cho bước sớm hơn có nhiều số liệu, như gửi form hỏi giá'},{k:'b',t:'Chờ đến khi đủ 50 đơn một tuần rồi mới đánh giá'},
              {k:'c',t:'Hạ giá thật mạnh để đủ đơn cho hệ thống học nhanh'},{k:'d',t:'Bỏ kênh vì sản phẩm giá cao không hợp quảng cáo trực tuyến'}],
     answer:'a', why:{a:'Đúng. Khi đơn quá ít, chọn một chuyển đổi gần đơn mà xảy ra đủ nhiều để hệ thống có dữ liệu học.',
@@ -151,7 +152,7 @@ BAI_ADD({ mod:'tn06', lessons:[
     answer:'d', why:{a:'Ý tưởng mới là thay đổi lớn; hệ thống phải học lại ai hợp với mẫu mới.',
       b:'Đổi mục tiêu là thay đổi lớn nhất có thể.',
       c:'Đổi tệp khách mạnh như vậy buộc hệ thống tìm lại người phù hợp.',
-      d:'Đúng. Sửa nhỏ không đổi bản chất quảng cáo; các thay đổi về mục tiêu, tệp khách, mẫu mới là thay đổi lớn.'} },
+      d:'Đúng — ít khả năng nhất trong bốn, vì không đổi mục tiêu, tệp khách hay ý tưởng. Nhưng một số nền tảng (Meta chẳng hạn) vẫn coi sửa chữ là sửa mẫu quảng cáo và có thể cho học lại: kiểm tra quy định của nền tảng, và gom các sửa nhỏ vào một lần.'} },
   { type:'mcq', stem:'Sau 7 ngày không sửa, chi phí mỗi đơn đứng yên ở 85.000đ suốt 4 ngày cuối, kênh cũ 45.000đ, biên lãi chỉ chịu được tối đa 60.000đ. Kết luận nào hợp lý?',
     options:[{k:'a',t:'Chờ thêm một tháng vì kênh mới nào cũng cần thời gian dài để rẻ đi'},{k:'b',t:'Kênh đã ổn định mà vẫn vượt ngưỡng chịu được; dừng'},
              {k:'c',t:'Tăng ngân sách để giá mỗi đơn giảm theo quy mô'},{k:'d',t:'Tiếp tục vì dù sao kênh cũng mang về đơn'}],
@@ -169,7 +170,7 @@ BAI_ADD({ mod:'tn06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tn06-04', skill:'measure', read:'7 phút', t:'So kênh mới với kênh cũ thế nào cho công bằng?',
+{ id:'B:tn06-04', skill:'measure', read:'7 phút', assume:true, t:'So kênh mới với kênh cũ thế nào cho công bằng?',
   situation:'Một thương hiệu cà phê rang xay bán online so hai kênh trong tháng 9. Facebook: chi phí mỗi đơn 60.000đ. Google Search thử mới: 110.000đ. Sếp kết luận Google đắt gấp gần đôi. Bạn phát hiện: 45% đơn Facebook đến từ quảng cáo nhắm lại người đã mua hoặc đã vào web; Google chạy hoàn toàn cho người chưa biết thương hiệu.',
   concept:{ name:'So sánh cùng điều kiện (like-for-like)',
     body:'Muốn so hai kênh phải cùng ba thứ: <b>cùng chỉ số</b> (cùng định nghĩa đơn, cùng cách ghi nhận), <b>cùng giai đoạn</b> (kênh mới đang học thì so với kênh cũ lúc mới chạy, hoặc chờ cả hai ổn định), và <b>cùng loại khách</b> (khách mới với khách mới). Khách quen và người đã vào web mua dễ hơn nhiều; trộn họ vào làm kênh cũ trông rẻ một cách giả tạo.' },
@@ -198,8 +199,8 @@ BAI_ADD({ mod:'tn06', lessons:[
   { type:'calc', stem:'Phần khách mới trên Facebook: 165 đơn, chi 14,85 triệu. Chi phí mỗi đơn khách mới là bao nhiêu nghìn đồng?',
     unit:'nghìn đồng', ans:90, tol:0.5, wrong:[[60,'CAC_TINH_CA_KHACH_CU'],[49.5,'SAI_MAU_SO']], errors:['CAC_TINH_CA_KHACH_CU'],
     steps:['Chi phí mỗi đơn = chi phí ÷ số đơn của cùng nhóm khách.','14.850.000 ÷ 165 = <b>90.000đ</b>.'] },
-  { type:'mcq', stem:'Facebook đếm một đơn nếu khách xem quảng cáo trong 1 ngày rồi mua; Google chỉ đếm khi khách nhấp rồi mua. So số đơn hai nền tảng tự báo có vấn đề gì?',
-    options:[{k:'a',t:'Không vấn đề, vì nền tảng nào cũng đo chính xác phần của mình'},{k:'b',t:'Google sẽ đếm dư vì nhấp là hành động mạnh hơn xem'},
+  { type:'mcq', stem:'Giả sử kênh A được cài đếm một đơn nếu khách xem quảng cáo trong 1 ngày rồi mua; kênh B chỉ đếm khi khách nhấp rồi mua. So số đơn hai nền tảng tự báo có vấn đề gì?',
+    options:[{k:'a',t:'Không vấn đề, vì nền tảng nào cũng đo chính xác phần của mình'},{k:'b',t:'Kênh B sẽ đếm dư vì nhấp là hành động mạnh hơn xem'},
              {k:'c',t:'Hai kênh dùng định nghĩa đơn khác nhau nên không so được'},{k:'d',t:'Chỉ có vấn đề khi hai kênh chạy cùng một sản phẩm'}],
     answer:'c', why:{a:'Mỗi nền tảng đo theo cách riêng, thường có lợi cho mình.',
       b:'Ngược lại, cách tính theo lượt xem mới dễ đếm dư.',
@@ -229,7 +230,7 @@ BAI_ADD({ mod:'tn06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tn06-05', skill:'channel', read:'7 phút', t:'Kênh mới chạy tốt — tăng tiền bao nhiêu là vừa?',
+{ id:'B:tn06-05', skill:'channel', read:'7 phút', assume:true, t:'Kênh mới chạy tốt — tăng tiền bao nhiêu là vừa?',
   situation:'Một thương hiệu nước mắm cao cấp thử quảng cáo YouTube. Hai tuần đầu chi 500.000đ/ngày, chi phí mỗi đơn 70.000đ, ngưỡng lãi là 100.000đ. Trưởng nhóm hào hứng muốn tăng ngay lên 5 triệu/ngày. Bạn nhớ lần trước tăng gấp 10 ở Facebook, chi phí mỗi đơn nhảy lên 160.000đ sau ba ngày.',
   concept:{ name:'Tăng ngân sách từng bậc (scaling in steps)',
     body:'Kênh chạy tốt ở mức nhỏ vì hệ thống đang tìm được những người dễ mua nhất. Khi tăng tiền, nó phải với tới những người kém sẵn sàng hơn, nên chi phí mỗi đơn gần như luôn tăng theo. Cách an toàn: tăng từng bậc (quy tắc kinh nghiệm hay được nêu là khoảng 20–30% mỗi lần, không phải chuẩn chung), giữ vài ngày để đọc, chỉ tăng tiếp nếu chi phí mỗi đơn vẫn dưới ngưỡng. Mỗi lần đổi ngân sách, nhiều nền tảng cần vài ngày để học lại nên số ngày đầu hay nhiễu. Mục tiêu là tìm điểm mà tăng thêm tiền bắt đầu không còn lãi — nên đọc cả <b>chi phí của phần tiền tăng thêm</b> (chi phí biên), không chỉ chi phí trung bình.' },
@@ -282,7 +283,7 @@ BAI_ADD({ mod:'tn06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tn06-06', skill:'measure', read:'6 phút', t:'Khi nào phải dừng thử một kênh?',
+{ id:'B:tn06-06', skill:'measure', read:'6 phút', assume:true, t:'Khi nào phải dừng thử một kênh?',
   situation:'Một cửa hàng đồ chơi gỗ thử quảng cáo trên một nền tảng mạng xã hội mới được 4 tuần, đã chi 24 triệu. Chi phí mỗi đơn 180.000đ, lãi gộp mỗi đơn 120.000đ. Mỗi tuần nhóm lại nói "tuần sau chắc khá hơn". Không ai nhớ lúc bắt đầu đã hẹn sẽ dừng khi nào.',
   concept:{ name:'Tiêu chí dừng đặt trước (kill criteria)',
     body:'Thử kênh cần ba mốc được viết ra <b>trước khi</b> chạy: ngân sách tối đa, thời gian tối đa, và ngưỡng chỉ số để tiếp tục (ví dụ chi phí mỗi đơn dưới lãi gộp). Hết tiền hoặc hết thời gian mà chưa đạt ngưỡng thì dừng, bất kể cảm giác. Lý do: tiền đã tiêu làm người ta tiếc và muốn gỡ, nên nếu không hẹn trước thì cuộc thử kéo dài mãi. Dừng không phải thất bại; đó là kết quả của thử nghiệm.' },
@@ -312,10 +313,10 @@ BAI_ADD({ mod:'tn06', lessons:[
     unit:'nghìn đồng', ans:-60, tol:0.1, wrong:[[120,'QUEN_TRU_CHI_PHI_QC'],[60,'SAI_TINH_TOAN']], errors:['QUEN_TRU_CHI_PHI_QC'],
     steps:['Lãi mỗi đơn = lãi gộp − chi phí quảng cáo mỗi đơn.','120.000 − 180.000 = <b>−60.000đ</b>.'] },
   { type:'mcq', stem:'Đến mốc 3 tuần, chi phí mỗi đơn 125.000đ, ngưỡng 120.000đ, lãi gộp mỗi đơn 120.000đ, 5 ngày cuối xu hướng đang giảm đều. Làm gì?',
-    options:[{k:'a',t:'Dừng đúng mốc, ghi lại xu hướng, thử lại sau với một biến đổi và mốc mới'},{k:'b',t:'Gia hạn thêm hai tuần vì xu hướng đang giảm đều và đã sát ngưỡng'},
-             {k:'c',t:'Hạ ngưỡng xuống 130.000đ để coi như kênh đã đạt yêu cầu đề ra'},{k:'d',t:'Dừng hẳn và gạch kênh khỏi kế hoạch vì kênh đã không đạt ngưỡng'}],
-    answer:'a', why:{a:'Đúng. Mốc hết thì dừng, vì mỗi đơn vẫn lỗ 5.000đ. Dữ liệu sát ngưỡng đáng một lần thử mới, nhưng là cuộc thử khác: đổi một biến, viết mốc mới trước khi chạy.',
-      b:'Gia hạn tại chỗ chính là thương lượng với mốc; xu hướng giảm chưa phải đã đạt, và mỗi đơn vẫn đang lỗ.',
+    options:[{k:'a',t:'Dừng đúng mốc, tìm vì sao 5 ngày cuối giảm; có giả thuyết mới thì mở cuộc thử khác với mốc mới'},{k:'b',t:'Gia hạn thêm hai tuần, giữ nguyên cài đặt, vì xu hướng đang giảm đều và đã sát ngưỡng 120.000đ'},
+             {k:'c',t:'Hạ ngưỡng xuống 130.000đ cho khớp kết quả hiện tại, để coi như kênh đã đạt yêu cầu đề ra từ đầu'},{k:'d',t:'Dừng hẳn, gạch kênh khỏi kế hoạch năm và không quay lại, vì kênh đã không đạt ngưỡng đúng mốc'}],
+    answer:'a', why:{a:'Đúng. Mốc hết thì dừng, vì mỗi đơn vẫn lỗ 5.000đ. Khác với gia hạn: không chi thêm cho cuộc thử cũ, mà phân tích trước (mẫu? tệp?), và chỉ khi có giả thuyết mới mới mở cuộc thử khác, viết mốc mới trước khi chạy.',
+      b:'Gia hạn tại chỗ là tiếp tục cuộc thử cũ với tiền thêm mà không có giả thuyết mới — chính là thương lượng với mốc; xu hướng giảm chưa phải đã đạt, và mỗi đơn vẫn đang lỗ.',
       c:'Sửa ngưỡng cho khớp kết quả là tự lừa mình, và 130.000đ còn vượt lãi gộp 120.000đ.',
       d:'Quá tay: kênh sát ngưỡng và đang cải thiện, bỏ hẳn là vứt bài học mà tiền đã mua.'} },
   { type:'calc', stem:'Hẹn dừng ở 15 triệu nhưng đã chạy tới 24 triệu; chi phí mỗi đơn 180.000đ, lãi gộp mỗi đơn 120.000đ. Phần chi vượt mốc làm lỗ ròng thêm bao nhiêu triệu?',
@@ -338,7 +339,7 @@ BAI_ADD({ mod:'tn06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tn06-07', skill:'measure', read:'7 phút', t:'Kênh mới mang khách mới, hay chỉ lấy khách của kênh cũ?',
+{ id:'B:tn06-07', skill:'measure', read:'7 phút', assume:true, t:'Kênh mới mang khách mới, hay chỉ lấy khách của kênh cũ?',
   situation:'Một thương hiệu mỹ phẩm bán trên web chạy thêm Google Search cho chính tên thương hiệu. Sau một tháng, Google báo 400 đơn. Sếp vui. Nhưng tổng đơn của web chỉ tăng từ 2.000 lên 2.100, và đơn từ Facebook giảm từ 1.200 xuống 950. Bạn nghi nhiều khách vốn đã định mua, chỉ là giờ đi qua Google.',
   concept:{ name:'Phần tăng thêm thật (incrementality)',
     body:'Số đơn một kênh báo không phải số đơn nó <b>tạo ra</b>. Câu hỏi đúng: nếu không có kênh này, những đơn đó có xảy ra không? Hình dung như chiếc bánh: kênh mới có thể làm bánh to hơn (khách mới thật), hoặc chỉ cắt một miếng từ phần của kênh cũ (khách đằng nào cũng mua). Cách đọc nhanh: nhìn <b>tổng đơn</b> trước và sau, không cộng số từng kênh. Đây chỉ là ước lượng thô, vì mùa vụ hay khuyến mãi cũng làm tổng đơn nhích lên. Cách chắc hơn: tắt kênh ở vài tỉnh trong 2 tuần rồi so với tỉnh còn chạy có số đơn trước đó tương đương. Và đừng vội cắt: quảng cáo tên thương hiệu có thể vẫn đáng giữ ở mức rất thấp để chặn đối thủ mua đúng từ khoá đó.' },
@@ -391,7 +392,7 @@ BAI_ADD({ mod:'tn06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tn06-08', skill:'measure', read:'6 phút', t:'Thử sự kiện, tờ rơi — làm sao biết có hiệu quả?',
+{ id:'B:tn06-08', skill:'measure', read:'6 phút', assume:true, t:'Thử sự kiện, tờ rơi — làm sao biết có hiệu quả?',
   situation:'Một phòng gym mới ở Biên Hoà định thử hai cách offline: phát 5.000 tờ rơi quanh khu dân cư (chi 6 triệu) và đặt bàn tư vấn ở sảnh một chung cư hai cuối tuần (chi 10 triệu). Chủ phòng gym nói: "Offline thì đo sao được, cứ làm rồi xem khách đông lên không."',
   concept:{ name:'Gắn dấu vết cho kênh offline',
     body:'Offline đo được nếu mỗi kênh để lại một <b>dấu vết riêng</b>: mã ưu đãi khác nhau cho từng kênh, mã QR dẫn tới trang có mã nguồn riêng, số Zalo hoặc số hotline riêng, hoặc một câu hỏi "bạn biết chúng tôi qua đâu" khi đăng ký. Không cần chính xác tuyệt đối, chỉ cần đủ để so các kênh với nhau và với chi phí. Nếu làm được, có thể chọn vài khu phát và vài khu không phát để so.' },
@@ -447,7 +448,7 @@ BAI_ADD({ mod:'tn06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tn06-09', skill:'channel', read:'7 phút', t:'Đang bán mạnh trên Shopee — có nên thử TikTok Shop?',
+{ id:'B:tn06-09', skill:'channel', read:'7 phút', assume:true, t:'Đang bán mạnh trên Shopee — có nên thử TikTok Shop?',
   situation:'Một shop áo thun basic bán 3.000 đơn/tháng trên Shopee, giá 159.000đ. Đối thủ bắt đầu livestream trên TikTok Shop và có vẻ đông khách. Chủ shop muốn "chuyển hẳn sang TikTok vì đó là xu hướng". Đội có 5 người, chưa ai từng làm video ngắn hay livestream.',
   concept:{ name:'Thử kênh bán hàng song song',
     body:'Sàn thương mại và nền tảng video bán hàng vận hành khác nhau: một bên khách <b>tìm</b> sản phẩm (gõ từ khoá, so giá), bên kia khách <b>được gợi ý</b> khi đang xem nội dung. Kỹ năng cần cũng khác: một bên là tối ưu trang sản phẩm và giá, bên kia là làm video và livestream. Vì vậy không nên chuyển hẳn. Hãy thử song song: một nhóm sản phẩm nhỏ, một người phụ trách, một khoảng thời gian cố định, và theo dõi xem đơn Shopee có bị giảm không.' },
@@ -507,7 +508,7 @@ BAI_ADD({ mod:'tn06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:tn06-10', skill:'comm', read:'6 phút', t:'Báo cáo kết quả thử kênh cho sếp thế nào?',
+{ id:'B:tn06-10', skill:'comm', read:'6 phút', assume:true, t:'Báo cáo kết quả thử kênh cho sếp thế nào?',
   situation:'Bạn vừa thử Zalo Ads 4 tuần cho một chuỗi nha khoa ở Cần Thơ, chi 20 triệu. Có 80 người để lại số điện thoại, 16 người đến khám, 10 người làm dịch vụ với doanh thu trung bình 6 triệu. Bạn có 25 trang biểu đồ. Sếp chỉ có 5 phút giữa hai cuộc họp và hỏi: "Tóm lại có nên làm tiếp không?"',
   concept:{ name:'Báo cáo thử nghiệm dạng một trang',
     body:'Sếp cần quyết định, không cần toàn bộ dữ liệu. Một báo cáo thử kênh tốt đi theo thứ tự: <b>đề xuất</b> (tiếp, tăng, sửa hay dừng) → <b>con số chính</b> so với mốc đã đặt → <b>điều chưa chắc</b> (mẫu nhỏ, chưa đo được gì) → <b>bước tiếp</b> với ngân sách và mốc mới. Biểu đồ chi tiết để ở phụ lục cho ai muốn xem thêm. Nói rõ điều chưa chắc làm báo cáo đáng tin hơn, không yếu hơn.' },

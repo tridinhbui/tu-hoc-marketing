@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'ob05', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:ob05-01', skill:'insight', read:'6 phút', t:'Khách nói thích ít đường, sao đơn vẫn toàn full đường?',
+{ id:'B:ob05-01', skill:'insight', read:'6 phút', assume:true, t:'Khách nói thích ít đường, sao đơn vẫn toàn full đường?',
   situation:'Một chuỗi trà sữa ở Hà Nội khảo sát 500 khách: 62% trả lời "muốn đồ uống ít đường, lành mạnh hơn". Chuỗi ra dòng trà trái cây 30% đường. Sau hai tháng, dữ liệu máy POS cho thấy chỉ 9% ly bán ra chọn mức đường thấp; phần còn lại vẫn là 70–100% đường như cũ.',
   concept:{ name:'Khoảng cách nói – làm (say–do gap)',
     body:'Khi được hỏi, khách trả lời theo hình ảnh họ <b>muốn có</b> về bản thân: lành mạnh, tiết kiệm, có trách nhiệm. Khi móc ví, họ chọn theo thói quen, khẩu vị và cảm xúc lúc đó. Khảo sát đo được mong muốn; dữ liệu mua đo được hành vi. Hai thứ đều có ích, nhưng khi phải dự báo doanh số, <b>hành vi thắng lời nói</b>. Việc của marketer là tìm chỗ lệch và hỏi vì sao lệch.' },
@@ -60,7 +60,7 @@ BAI_ADD({ mod:'ob05', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:ob05-02', skill:'insight', read:'7 phút', t:'Khách cầm lên rồi đặt xuống: kệ đang nói gì?',
+{ id:'B:ob05-02', skill:'insight', read:'7 phút', assume:true, t:'Khách cầm lên rồi đặt xuống: kệ đang nói gì?',
   situation:'Bạn đứng quan sát kệ dầu gội ở một cửa hàng Guardian trong 2 giờ cuối tuần. Có 120 người đi qua lối, 48 người dừng lại trước kệ, 30 người cầm một chai lên xem, nhưng chỉ 9 người bỏ vào giỏ. Phần lớn người đặt chai xuống đều lật ra mặt sau đọc rồi mới đặt lại.',
   concept:{ name:'Phễu tại điểm bán: đi qua – dừng – cầm – mua',
     body:'Tại kệ, mỗi khách để lại một chuỗi hành vi có thể đếm: <b>đi qua</b>, <b>dừng lại</b> (kệ thu hút được mắt), <b>cầm lên</b> (sản phẩm gợi tò mò), <b>bỏ giỏ</b> (sản phẩm thuyết phục được). Rơi nhiều ở bước nào cho biết vấn đề nằm ở đâu: ít người dừng là vấn đề trưng bày; dừng nhiều mà ít cầm là mặt trước bao bì; cầm nhiều mà đặt xuống là thông tin mặt sau, giá hoặc dung tích. Cách khách đặt xuống — lật mặt sau, nhìn giá, so với chai bên cạnh — là manh mối rẻ nhất bạn có.' },
@@ -117,7 +117,7 @@ BAI_ADD({ mod:'ob05', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:ob05-03', skill:'measure', read:'7 phút', t:'Giỏ hàng bỏ dở: khách đổi ý hay bị chặn?',
+{ id:'B:ob05-03', skill:'measure', read:'7 phút', assume:true, t:'Giỏ hàng bỏ dở: khách đổi ý hay bị chặn?',
   situation:'Một shop mỹ phẩm trên website riêng có 2.000 lượt thêm vào giỏ trong tháng, nhưng chỉ 600 đơn hoàn tất. Dữ liệu từng bước cho thấy: 2.000 người vào giỏ, 1.500 người bấm "Thanh toán", 1.400 người điền xong địa chỉ, rồi rơi mạnh xuống 600 ở bước hiện phí ship 35.000đ.',
   concept:{ name:'Giỏ hàng bỏ dở là tín hiệu, không phải rác',
     body:'Người thêm vào giỏ đã cho thấy ý định mua. Khi họ bỏ đi, câu hỏi đúng là <b>họ bỏ ở bước nào</b>. Rơi đều ở mọi bước thường là khách lướt, xem cho vui. Rơi dồn vào một bước cụ thể là dấu hiệu có <b>vật cản</b>: phí phát sinh bất ngờ, bắt tạo tài khoản, thiếu phương thức thanh toán quen. Vật cản sửa được bằng quy trình, rẻ hơn nhiều so với kéo thêm người mới vào đầu phễu.' },
@@ -177,7 +177,7 @@ BAI_ADD({ mod:'ob05', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:ob05-04', skill:'insight', read:'6 phút', t:'Lượt tìm kiếm tăng vọt: nhu cầu thật hay cơn sốt?',
+{ id:'B:ob05-04', skill:'insight', read:'6 phút', assume:true, t:'Lượt tìm kiếm tăng vọt: nhu cầu thật hay cơn sốt?',
   situation:'Bạn làm cho một hãng đồ gia dụng. Trong Google Trends và thanh tìm kiếm TikTok, cụm "máy lọc không khí" ở Hà Nội tăng mạnh: chỉ số tháng 9 là 25, tháng 11 lên 100 khi mù không khí dày đặc. Cùng lúc, cụm "máy lọc không khí cho phòng ngủ nhỏ" tăng đều 20% mỗi năm trong ba năm liền.',
   concept:{ name:'Tìm kiếm là nhu cầu tự khai',
     body:'Khi gõ vào ô tìm kiếm, khách không trả lời ai cả — họ đang <b>tự giải quyết một vấn đề</b>. Vì vậy dữ liệu tìm kiếm gần với hành vi hơn khảo sát. Cần tách hai loại tín hiệu: <b>đỉnh theo mùa/sự kiện</b> (tăng vọt rồi rơi, lặp lại theo năm) và <b>xu hướng nền</b> (tăng đều qua nhiều năm). Cụm từ dài, cụ thể ("cho phòng ngủ nhỏ", "cho người dị ứng") còn cho biết khách đang ở gần quyết định mua và đang lo điều gì.' },
@@ -237,7 +237,7 @@ BAI_ADD({ mod:'ob05', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:ob05-05', skill:'channel', read:'6 phút', t:'Bình luận livestream toàn hỏi giá: khách đang bảo bạn gì?',
+{ id:'B:ob05-05', skill:'channel', read:'6 phút', assume:true, t:'Bình luận livestream toàn hỏi giá: khách đang bảo bạn gì?',
   situation:'Một shop đồ bộ mặc nhà livestream trên TikTok Shop mỗi tối. Bạn xuất 400 bình luận của phiên gần nhất và phân loại: 160 câu hỏi về size ("cao 1m55 nặng 50kg mặc size gì"), 90 câu hỏi giá, 60 câu hỏi chất vải có nóng không, 90 bình luận chào hỏi, thả tim. Đơn chốt trong phiên: 120.',
   concept:{ name:'Câu hỏi của khách là bản đồ rào cản',
     body:'Trong livestream, khách không điền phiếu — họ hỏi đúng điều đang <b>ngăn họ bấm mua</b>. Đếm và gom nhóm câu hỏi cho biết rào cản nào lớn nhất. Câu hỏi lặp đi lặp lại là dấu hiệu thông tin đó đang thiếu ở trang sản phẩm và trong kịch bản live. Mỗi rào cản được trả lời sẵn là một lý do bớt đi để khách rời phiên mà không mua.' },
@@ -297,7 +297,7 @@ BAI_ADD({ mod:'ob05', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:ob05-06', skill:'measure', read:'7 phút', t:'Khách khen ngon mà không quay lại: tin lời khen hay tin lịch sử đơn?',
+{ id:'B:ob05-06', skill:'measure', read:'7 phút', assume:true, t:'Khách khen ngon mà không quay lại: tin lời khen hay tin lịch sử đơn?',
   situation:'Một tiệm bánh mì ở Đà Nẵng mở đơn trên app giao đồ ăn. Điểm đánh giá 4,8 sao, bình luận toàn khen "ngon, sẽ ủng hộ tiếp". Nhưng trong 1.000 khách đặt lần đầu tháng 3, chỉ 150 người đặt lại trong tháng 4, và 90 người còn đặt tiếp trong tháng 5. Tiệm bên cạnh 4,5 sao có tỉ lệ đặt lại tháng sau là 35%.',
   concept:{ name:'Tỉ lệ quay lại theo nhóm (cohort retention)',
     body:'Lời khen là điều khách nói lúc vừa ăn xong. <b>Quay lại mua</b> là điều khách làm khi có lựa chọn khác. Cách đo sạch nhất là theo dõi một nhóm khách có cùng tháng mua đầu (cohort) và xem bao nhiêu phần trăm còn mua ở các tháng sau. Tỉ lệ quay lại thấp dù điểm cao thường có nghĩa: món ngon nhưng không đủ lý do để chọn lại — giá, phí ship, thời gian giao, hoặc không nằm trong thói quen hằng ngày.' },
@@ -357,7 +357,7 @@ BAI_ADD({ mod:'ob05', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:ob05-07', skill:'channel', read:'6 phút', t:'Giờ nào khách thật sự mua, và bạn đang quảng cáo giờ nào?',
+{ id:'B:ob05-07', skill:'channel', read:'6 phút', assume:true, t:'Giờ nào khách thật sự mua, và bạn đang quảng cáo giờ nào?',
   situation:'Một thương hiệu cơm văn phòng giao tận nơi ở TP.HCM chạy quảng cáo đều từ 8h đến 22h, ngân sách chia đều 14 giờ. Dữ liệu đơn một tháng: 4.200 đơn, trong đó 2.940 đơn đặt trong khung 10h–11h30. Buổi tối 19h–22h chiếm ngân sách lớn nhưng chỉ có 210 đơn.',
   concept:{ name:'Nhịp thói quen: giờ cao điểm là khi nhu cầu tự xuất hiện',
     body:'Khách không mua đều cả ngày. Nhu cầu nổi lên theo <b>nhịp sinh hoạt</b>: đói lúc gần trưa, lướt mua sắm sau giờ làm, chốt đơn ngày lương. Dữ liệu đơn theo giờ, theo thứ trong tuần cho biết nhịp đó. Quảng cáo đặt trùng nhịp thì gặp người đang có nhu cầu; đặt lệch nhịp thì phải trả tiền để thuyết phục người chưa cần. Nhịp khác nhau theo ngành hàng: cơm trưa khác mỹ phẩm, khác đồ gia dụng. Lưu ý: đơn dồn vào một khung chưa chứng minh quảng cáo tạo ra đơn ở đó, vì nhiều đơn là khách tự đến. Phải so chi phí trên mỗi đơn theo khung giờ và thử tăng, giảm ngân sách để thấy đơn tăng thêm.' },
@@ -373,11 +373,11 @@ BAI_ADD({ mod:'ob05', lessons:[
       b:'Nhu cầu ăn trưa không rải đều; dữ liệu cho thấy tập trung mạnh.',
       c:'Dữ liệu đơn cho thấy khung gần trưa chiếm phần lớn hơn nhiều, khoảng 70%.',
       d:'Cả khung tối 19h–22h chỉ có 210 đơn (5% tổng), nên đặt từ tối trước không thể chiếm tới 10%.'} },
-  { type:'mcq', stem:'CPA trưa 28.000đ, CPA tối 60.000đ, nhưng ước tính 80% đơn trưa là khách tự đến. Ngân sách không đổi. Bạn làm gì?',
+  { type:'mcq', stem:'Khung trưa (1,5 giờ) nhận khoảng 11% ngân sách nhưng mang về 70% đơn; khung tối (3 giờ) nhận 21% nhưng chỉ 5% đơn, nên chi phí mỗi đơn (CPA) tối cao hơn trưa nhiều lần. Tuy vậy ước tính 80% đơn trưa là khách tự đến. Ngân sách không đổi. Bạn làm gì?',
     options:[{k:'a',t:'Giữ chia đều 14 giờ để không bỏ sót khách nào'},{k:'b',t:'Dồn toàn bộ vào buổi trưa vì CPA trưa thấp nhất'},
              {k:'c',t:'Tăng trưa 30% trong hai tuần, đo đơn tăng thêm rồi quyết'},{k:'d',t:'Chuyển hết sang buổi tối vì ít khách tự đến nhất'}],
     answer:'c', why:{a:'Chia đều là trả 21% ngân sách cho khung chỉ mang 5% đơn.',
-      b:'CPA chia chi phí cho cả đơn tự đến; CPA thấp chưa chứng minh tiền thêm tạo thêm đơn, và khung trưa có thể đã bão hoà.',
+      b:'CPA ở đây chia ngân sách cho cả đơn tự đến; CPA thấp chưa chứng minh tiền thêm tạo thêm đơn, và khung trưa có thể đã bão hoà.',
       c:'Đúng. Thử tăng có kiểm soát cho thấy mỗi đồng thêm tạo bao nhiêu đơn tăng thêm, thay vì suy từ CPA trung bình.',
       d:'Cược vào giả thuyết chưa đo; khách tối ít vì nhu cầu cơm trưa thấp, tiền không tự tạo ra nhu cầu đó.'} },
   { type:'calc', stem:'Quảng cáo chia đều 14 giờ (8h–22h). Khung 19h–22h (3 giờ) nhận bao nhiêu phần trăm ngân sách? (làm tròn 1 chữ số thập phân)',
@@ -414,7 +414,7 @@ BAI_ADD({ mod:'ob05', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:ob05-08', skill:'insight', read:'7 phút', t:'Khách chọn COD rồi bom hàng: đó là tín hiệu gì?',
+{ id:'B:ob05-08', skill:'insight', read:'7 phút', assume:true, t:'Khách chọn COD rồi bom hàng: đó là tín hiệu gì?',
   situation:'Một shop thời trang trên Facebook và website nhận 1.000 đơn một tháng, 80% chọn thanh toán khi nhận (COD). Tỉ lệ hoàn đơn COD là 25%, còn đơn chuyển khoản trước chỉ hoàn 3%. Mỗi đơn hoàn làm shop mất 40.000đ phí giao đi – về. Chủ shop muốn bắt buộc chuyển khoản trước cho mọi đơn.',
   concept:{ name:'Phương thức thanh toán là tín hiệu niềm tin',
     body:'Khách chọn COD thường không chỉ vì quen tiền mặt, mà còn vì <b>chưa đủ tin</b> (cả hai đều có, nhưng niềm tin là phần shop sửa được): sợ hàng không giống ảnh, sợ shop biến mất. Trả sau, trả góp, ví điện tử cũng là tín hiệu — về dòng tiền và về mức rủi ro khách chấp nhận. Đọc phương thức thanh toán theo nhóm khách, nhóm sản phẩm cho biết chỗ nào niềm tin còn yếu. Ép bỏ COD thường làm mất nhiều đơn thật hơn số đơn hoàn tránh được; tốt hơn là xây niềm tin để khách tự chọn trả trước. Lưu ý: hoàn 25% so với 3% phần nhiều do khách tự chọn lọc (người trả trước vốn đã tin shop), nên ép đổi phương thức chưa chắc đưa tỉ lệ hoàn của họ về 3%.' },
@@ -471,7 +471,7 @@ BAI_ADD({ mod:'ob05', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:ob05-09', skill:'insight', read:'6 phút', t:'Khách mở ba sàn so giá: bạn nên đua giá hay đua thứ khác?',
+{ id:'B:ob05-09', skill:'insight', read:'6 phút', assume:true, t:'Khách mở ba sàn so giá: bạn nên đua giá hay đua thứ khác?',
   situation:'Một thương hiệu sữa rửa mặt bán trên Shopee, Lazada và TikTok Shop với cùng giá niêm yết 189.000đ. Giả sử qua theo dõi (số minh hoạ cho bài này), 60% khách xem sản phẩm trên từ hai sàn trở lên trước khi mua. Khi một sàn có mã giảm 20.000đ, đơn chuyển hẳn sang sàn đó; nhưng khi giá ngang nhau, 70% khách chọn sàn giao nhanh nhất.',
   concept:{ name:'So giá đa sàn: khách so tổng giá trị, không chỉ con số',
     body:'Hành vi mở nhiều tab so giá cho biết khách <b>coi sản phẩm là giống nhau ở mọi nơi</b>, họ chỉ chọn nơi mua. Điều họ so thật sự là <b>tổng chi phí và rủi ro</b>: giá sau mã, phí ship, thời gian giao, hàng chính hãng, đổi trả. Khi giá ngang nhau, yếu tố khác quyết định. Nhưng không phải đòn nào cũng nằm trong tay bạn: giá, mã giảm, giờ chuẩn bị hàng và dịch vụ giao chọn dùng thì có; phí ship và hạ tầng giao của sàn thì không. Để biết đòn nào đáng tiền, đổi từng yếu tố một trong một hai tuần, so số đơn kéo thêm trên mỗi 1% giảm giá với mỗi giờ giao nhanh hơn, rồi mới quyết định đua giá hay không.' },
@@ -528,7 +528,7 @@ BAI_ADD({ mod:'ob05', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:ob05-10', skill:'measure', read:'7 phút', t:'Dữ liệu đơn cũ biết khách sắp mua lại khi nào?',
+{ id:'B:ob05-10', skill:'measure', read:'7 phút', assume:true, t:'Dữ liệu đơn cũ biết khách sắp mua lại khi nào?',
   situation:'Một shop bán thức ăn cho mèo trên website có 2.000 khách đã mua ít nhất hai lần. Họ đang gửi tin nhắn khuyến mãi cho tất cả vào mỗi thứ Sáu. Xem lại lịch sử đơn, bạn thấy khoảng cách giữa hai lần mua của phần lớn khách mua túi 2kg là 28–32 ngày, còn túi 5kg là 70–75 ngày.',
   concept:{ name:'Chu kỳ mua lại: dấu vết thói quen trong dữ liệu đơn',
     body:'Với hàng dùng hết rồi mua lại (thức ăn thú cưng, sữa, tã, mỹ phẩm), mỗi khách để lại một <b>nhịp mua</b> trong lịch sử đơn. Khoảng cách giữa hai đơn cho biết khi nào khách sắp hết hàng. Nhắn đúng trước thời điểm đó thì trúng nhu cầu; nhắn đều đặn cho mọi người thì phần lớn tin đến khi khách chưa cần, dễ bị coi là làm phiền. Khách trễ nhịp quá lâu là tín hiệu sắp rời bỏ — cần hỏi thăm hơn là giảm giá.' },

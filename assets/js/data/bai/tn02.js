@@ -3,20 +3,20 @@
 BAI_ADD({ mod:'tn02', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tn02-01', skill:'measure', read:'6 phút', t:'Trang mới bán tốt hơn 30% — nhưng nhờ cái gì?',
+{ id:'B:tn02-01', skill:'measure', read:'6 phút', assume:true, t:'Trang mới bán tốt hơn 30% — nhưng nhờ cái gì?',
   situation:'Một shop mỹ phẩm online có trang sản phẩm chuyển đổi 2,0% trên khoảng 10.000 lượt xem mỗi tuần. Đội thiết kế làm bản mới: đổi tiêu đề, đổi ảnh người mẫu, hạ giá từ 199.000đ xuống 179.000đ và đổi nút mua sang màu cam. Chạy song song một tuần, bản mới đạt 2,6%. Sếp hỏi: vậy lần sau làm trang khác thì giữ yếu tố nào?',
   concept:{ name:'Mỗi lần test chỉ đổi một thứ',
-    body:'A/B test là so hai phiên bản giống hệt nhau trừ <b>một</b> điểm khác biệt, để mọi chênh lệch có một nguyên nhân duy nhất. Đổi bốn thứ cùng lúc thì bạn biết "gói thay đổi" tốt hơn, nhưng không biết thành phần nào kéo kết quả lên, thành phần nào kéo xuống. Tệ hơn, giá thấp hơn có thể tạo gần hết mức tăng, còn tiêu đề mới thực ra làm giảm — bạn sẽ mang cả hai sang trang khác. Khi cần thay nhiều thứ, hãy tách thành các lượt test nối tiếp, ưu tiên thứ có tác động lớn và khó đoán nhất.' },
-  example:'Mức tăng tương đối là (2,6 − 2,0) ÷ 2,0 = 30%. Nhưng 30% này là của cả gói. Nếu tách ra, rất có thể giá giảm 10% đóng góp phần lớn — và giá giảm thì lãi mỗi đơn cũng giảm. Cách làm đúng: tuần 1 chỉ test giá, giữ nguyên trang — nhưng đừng hiện ngẫu nhiên 179.000đ và 199.000đ cho hai khách cùng lúc trên cùng trang (khách thấy bị đối xử không công bằng, xem bài tn04-10); thử theo cách khách thấy được lý do, như mã ưu đãi 20.000đ cho một nhóm, hoặc theo khu vực, kênh; tuần 2 giữ giá thắng, test tiêu đề; tuần 3 test ảnh. Chậm hơn, nhưng mỗi kết luận dùng lại được cho trang khác.',
+    body:'A/B test là so hai phiên bản giống hệt nhau trừ <b>một</b> điểm khác biệt, để mọi chênh lệch có một nguyên nhân duy nhất. Đổi bốn thứ cùng lúc thì cùng lắm bạn biết "gói thay đổi" có tốt hơn không, nhưng không biết thành phần nào kéo kết quả lên, thành phần nào kéo xuống. Tệ hơn, giá thấp hơn có thể tạo gần hết mức tăng, còn tiêu đề mới thực ra làm giảm — bạn sẽ mang cả hai sang trang khác. Khi cần thay nhiều thứ, hãy tách thành các lượt test nối tiếp, ưu tiên thứ có tác động lớn và khó đoán nhất.' },
+  example:'Mức tăng tương đối (2,6 − 2,0) ÷ 2,0 = 30% là của cả gói. Với 5.000 lượt mỗi bản, đó là khoảng 100 so với 130 đơn: chênh 30 chỉ ngang dao động may rủi ±2√230 ≈ ±30 (bài 03), nên ngay cả "gói tốt hơn" cũng chưa chắc. Rất có thể giá giảm 10% góp phần lớn, mà giảm giá thì lãi mỗi đơn cũng giảm. Cách làm đúng: test giá trước, giữ nguyên trang, bằng mã ưu đãi 20.000đ hiện cho một nửa khách chọn ngẫu nhiên; đừng hiện hai giá khác nhau không lý do (xem bài tn04-10), và đừng chia theo khu vực hay kênh vì hai nhóm vốn khác nhau. Một yếu tố lẻ thường tăng ít hơn cả gói: nếu giá chỉ đưa 2,0% lên 2,3%, mỗi bản cần khoảng 20.000 lượt (≈ 400 so với 460 đơn, chênh 60 vừa vượt ±2√860 ≈ ±59), tức khoảng 4 tuần. Sau đó mới tới tiêu đề, rồi ảnh, mỗi test chạy đủ đơn.',
   takeaway:'Đổi nhiều thứ cùng lúc chỉ trả lời được "gói nào tốt hơn", không trả lời được "vì sao".',
   apply:'Nhìn trang bán hàng của bạn, liệt kê 3 thứ muốn đổi. Nói trong 60 giây: thứ nào test trước và vì sao.',
   mistakes:['Gộp giá, ảnh, tiêu đề vào một bản rồi kết luận "tiêu đề mới hay hơn".','Mang cả gói thay đổi sang trang khác mà không biết phần nào thật sự có tác dụng.'],
   q:[
   { type:'mcq', stem:'Bản mới đổi tiêu đề, ảnh, giá và màu nút cùng lúc, chuyển đổi tăng từ 2,0% lên 2,6%. Bạn đoán kết luận nào đứng vững nhất?',
-    options:[{k:'a',t:'Tiêu đề mới là lý do chính, vì đó là thứ khách đọc đầu tiên'},{k:'b',t:'Cả gói thay đổi tốt hơn bản cũ, chưa rõ nhờ yếu tố nào'},
+    options:[{k:'a',t:'Tiêu đề mới là lý do chính, vì đó là thứ khách đọc đầu tiên'},{k:'b',t:'Gói mới có dấu hiệu tốt hơn nhưng chưa chắc, chưa rõ nhờ yếu tố nào'},
              {k:'c',t:'Cả bốn yếu tố đều có đóng góp, mỗi thứ khoảng một phần tư mức tăng'},{k:'d',t:'Màu cam kích thích mua hàng nên dùng cho nút trên web'}],
     answer:'b', why:{a:'Đọc trước không có nghĩa là tạo ra mức tăng; test này không tách được tiêu đề.',
-      b:'Đúng. Test chỉ so hai gói, nên kết luận chỉ ở mức gói.',
+      b:'Đúng. Test chỉ so hai gói nên kết luận chỉ ở mức gói; ~100 so với ~130 đơn, chênh 30 ngang dao động may rủi ±30 (bài 03), nên mới là dấu hiệu.',
       c:'Không có căn cứ chia đều; có yếu tố có thể còn làm giảm chuyển đổi.',
       d:'Màu nút bị lẫn với ba thay đổi khác, không thể rút ra quy tắc về màu.'} },
   { type:'mcq', stem:'Sếp muốn biết lần sau làm trang sản phẩm khác thì giữ yếu tố nào. Bạn đề xuất làm gì tiếp?',
@@ -24,8 +24,8 @@ BAI_ADD({ mod:'tn02', lessons:[
              {k:'c',t:'Chạy lại đúng test cũ thêm một tuần nữa cho chắc ăn rồi mới ra quyết định'},{k:'d',t:'Giữ nguyên cả gói mới cho các trang khác, vì nó đã thắng rõ ràng'}],
     answer:'a', why:{a:'Đúng. Mỗi lượt đổi một thứ thì mỗi kết luận có một nguyên nhân; giá đi trước vì tác động lớn và liên quan trực tiếp đến lãi — miễn là không để hai khách cùng lúc thấy hai giá mà không có lý do.',
       b:'Khách nói thích không đo được hành vi mua; và vẫn không tách được tác động của giá.',
-      c:'Chạy lâu hơn chỉ xác nhận gói thắng, không trả lời câu hỏi yếu tố nào.',
-      d:'Gói thắng ở trang này, nhưng mang sang trang khác là mang theo cả phần có thể đang kéo xuống.'} },
+      c:'Chạy thêm chỉ cho biết gói có thắng thật không, không trả lời câu hỏi yếu tố nào.',
+      d:'Gói mới còn chưa chắc thắng, và mang sang trang khác là mang theo cả phần có thể đang kéo xuống.'} },
   { type:'calc', stem:'Chuyển đổi tăng từ 2,0% lên 2,6%. Mức tăng tương đối là bao nhiêu phần trăm?',
     unit:'%', ans:30, tol:0.5, wrong:[[0.6,'NHAM_DIEM_PHAN_TRAM'],[23.1,'SAI_MAU_SO']], errors:['NHAM_DIEM_PHAN_TRAM'],
     steps:['Chênh lệch tuyệt đối: 2,6 − 2,0 = 0,6 điểm phần trăm.','Tương đối = 0,6 ÷ 2,0 = 0,3 = <b>30%</b>.'] },
@@ -60,7 +60,7 @@ BAI_ADD({ mod:'tn02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tn02-02', skill:'measure', read:'6 phút', t:'Nhóm nhận voucher mua lại gấp ba — voucher giỏi thật không?',
+{ id:'B:tn02-02', skill:'measure', read:'6 phút', assume:true, t:'Nhóm nhận voucher mua lại gấp ba — voucher giỏi thật không?',
   situation:'Một chuỗi trà sữa gửi voucher 15% qua app. Đội CRM chọn gửi cho khách đã mua trong 30 ngày qua (nhóm A), và không gửi cho khách lâu không quay lại (nhóm B). Sau hai tuần, nhóm A mua lại 18%, nhóm B chỉ 6%. Báo cáo ghi: "Voucher làm tỉ lệ mua lại tăng gấp ba."',
   concept:{ name:'Chia nhóm ngẫu nhiên',
     body:'Hai nhóm chỉ so được với nhau khi chúng giống nhau ở mọi mặt, trừ thứ bạn đang thử. Cách duy nhất đảm bảo điều đó là để <b>may rủi</b> chia người vào nhóm: theo số cuối mã khách chẵn/lẻ, theo công cụ chia của nền tảng, không theo ý người làm. Khi người làm tự chọn ai vào nhóm nào, sự khác biệt sẵn có giữa hai nhóm (khách thân vs khách nguội) sẽ lẫn vào kết quả và thường còn lớn hơn tác động thật.' },
@@ -120,10 +120,10 @@ BAI_ADD({ mod:'tn02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tn02-03', skill:'measure', read:'7 phút', t:'40 đơn so với 30 đơn — B thắng hay chỉ gặp may?',
+{ id:'B:tn02-03', skill:'measure', read:'7 phút', assume:true, t:'40 đơn so với 30 đơn — B thắng hay chỉ gặp may?',
   situation:'Một shop giày test hai ảnh bìa trên trang sản phẩm. Sau ba ngày, mỗi bản có 1.000 lượt xem: bản A ra 30 đơn, bản B ra 40 đơn. Bạn đồng nghiệp hào hứng: "B hơn A 33%, chuyển sang B luôn đi." Bạn thì nhớ lần trước, một bản "thắng" ngày đầu rồi thua ở tuần sau.',
   concept:{ name:'Dao động may rủi khi mẫu nhỏ',
-    body:'Kể cả khi hai bản giống hệt nhau, số đơn mỗi bên vẫn lên xuống vì may rủi — như tung đồng xu 100 lần hiếm khi ra đúng 50 ngửa. Một quy tắc ước lượng đơn giản: nếu một bên đếm được <b>k</b> đơn, con số đó tự dao động khoảng <b>±2×√k</b> (hệ số 2 tương ứng mức tin cậy khoảng 95%). Khi so hai bản, cả hai cùng dao động nên chênh lệch dao động khoảng <b>±2×√(kA + kB)</b>. Chênh lệch còn nằm trong khoảng này thì bạn chưa phân biệt được "tốt hơn thật" với "gặp may". Muốn kết luận chắc hơn, phải có nhiều đơn hơn: vì căn bậc hai, gấp 4 lần số đơn thì dao động tuyệt đối chỉ tăng gấp đôi, tức dao động tương đối (±% so với số đơn) giảm một nửa.' },
+    body:'Kể cả khi hai bản giống hệt nhau, số đơn mỗi bên vẫn lên xuống vì may rủi — như tung đồng xu 100 lần hiếm khi ra đúng 50 ngửa. Một quy tắc ước lượng đơn giản: nếu một bên đếm được <b>k</b> đơn, con số đó tự dao động khoảng <b>±2×√k</b> (hệ số 2 tương ứng mức tin cậy khoảng 95%). Khi so hai bản, cả hai cùng dao động nên chênh lệch dao động khoảng <b>±2×√(kA + kB)</b>. Chênh lệch còn nằm trong khoảng này thì bạn chưa phân biệt được "tốt hơn thật" với "gặp may". Quy tắc này chỉ dùng khi hai bản có lượt xem gần bằng nhau (nếu lệch, so tỉ lệ thay cho số đơn), và là xấp xỉ, đủ tốt khi tỉ lệ chuyển đổi dưới khoảng 10%. Muốn kết luận chắc hơn, phải có nhiều đơn hơn: vì căn bậc hai, gấp 4 lần số đơn thì dao động tuyệt đối chỉ tăng gấp đôi, tức dao động tương đối (±% so với số đơn) giảm một nửa.' },
   example:'Bản A có 30 đơn, bản B có 40 đơn: chênh 10. Dao động của chênh lệch khoảng 2×√(30 + 40) = 2×√70 ≈ 17. Chênh 10 nằm trong ±17 nên chưa đủ nói gì. Nếu chạy tiếp đến 10.000 lượt mỗi bên và tỉ lệ giữ nguyên (300 vs 400 đơn), dao động là 2×√(300 + 400) ≈ 53, còn chênh lệch là 100 đơn — gần gấp đôi khoảng dao động, lúc đó B thắng mới đáng tin.',
   takeaway:'Chênh lệch nhỏ hơn dao động may rủi thì chưa phải kết quả — chỉ là tiếng ồn.',
   apply:'Test có A = 60 đơn, B = 80 đơn (mỗi bản 2.000 lượt). Tính 2×√(60 + 80) rồi viết hai câu: chênh lệch có vượt khoảng đó không, và bạn khuyên chạy tiếp hay chuyển sang B. Đạt khi: (1) có con số khoảng dao động, (2) kết luận bám vào so sánh chênh lệch với khoảng đó.',
@@ -177,7 +177,7 @@ BAI_ADD({ mod:'tn02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tn02-04', skill:'measure', read:'7 phút', t:'Test này cần bao nhiêu khách mới đáng đọc?',
+{ id:'B:tn02-04', skill:'measure', read:'7 phút', assume:true, t:'Test này cần bao nhiêu khách mới đáng đọc?',
   situation:'Một thương hiệu nước mắm bán online muốn test dòng chữ "Giao 2 giờ nội thành" trên trang sản phẩm. Chuyển đổi hiện là 4%. Đội muốn biết bản mới có đẩy lên 5% không. Trang có khoảng 1.500 lượt xem mỗi ngày. Trưởng nhóm hỏi: "Chạy bao lâu là đủ?" — và không ai trả lời được.',
   concept:{ name:'Tính cỡ mẫu trước khi chạy',
     body:'Cỡ mẫu phải quyết định <b>trước</b>, từ hai con số: chuyển đổi hiện tại (p) và mức chênh nhỏ nhất bạn muốn phát hiện (d). Một quy tắc ước lượng phổ biến: mỗi nhóm cần khoảng <b>16 × p × (1 − p) ÷ d²</b> người (ứng với kiểm định hai phía, ngưỡng may rủi 5%, khả năng phát hiện chênh thật khoảng 80%). Quy tắc này nói rõ một điều: muốn thấy chênh nhỏ thì cần mẫu rất lớn — chênh lệch nhỏ đi một nửa, mẫu phải gấp bốn. Nếu lượt xem không đủ, hãy test thay đổi táo bạo hơn, hoặc chọn chỉ số xảy ra nhiều hơn (như bấm "thêm vào giỏ").' },
@@ -234,10 +234,10 @@ BAI_ADD({ mod:'tn02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tn02-05', skill:'measure', read:'6 phút', t:'Ngày thứ ba B đang dẫn 25% — dừng luôn được không?',
+{ id:'B:tn02-05', skill:'measure', read:'6 phút', assume:true, t:'Ngày thứ ba B đang dẫn 25% — dừng luôn được không?',
   situation:'Một app giao đồ ăn test nút "Đặt lại món cũ" ở trang chủ. Đội đã tính cần 6.000 lượt mỗi nhóm, trang có 800 lượt/ngày nên phải chạy 15 ngày. Đến ngày thứ ba, bản B dẫn trước 25%. Quản lý sản phẩm nhắn: "Rõ rồi, dừng test, bật B cho tất cả người dùng đi."',
   concept:{ name:'Nhìn trộm và dừng sớm (peeking)',
-    body:'Trong những ngày đầu, mẫu nhỏ nên kết quả lên xuống mạnh — hôm nay B dẫn 25%, vài hôm sau có thể còn 3% hoặc thua. Nếu ngày nào cũng mở ra xem và <b>dừng ngay khi thấy B dẫn</b>, khả năng bắt được một lúc may rủi nghiêng về B tăng lên nhiều, kể cả khi B không tốt hơn: mô phỏng hai bản giống hệt nhau, xem 15 lần và dừng ở lần đầu thấy "có ý nghĩa" thì khoảng 20–30% số test báo thắng giả, thay vì 5% nếu chỉ đọc một lần cuối. Mỗi lần nhìn là một lần cho may rủi cơ hội "thắng". Cách đúng: chốt cỡ mẫu trước, xem để kiểm tra lỗi kỹ thuật, nhưng chỉ ra quyết định khi đủ mẫu.' },
+    body:'Trong những ngày đầu, mẫu nhỏ nên kết quả lên xuống mạnh — hôm nay B dẫn 25%, vài hôm sau có thể còn 3% hoặc thua. Nếu ngày nào cũng mở ra xem và <b>dừng ngay khi thấy B dẫn</b>, khả năng bắt được một lúc may rủi nghiêng về B tăng lên nhiều, kể cả khi B không tốt hơn: mô phỏng hai bản giống hệt nhau, xem 15 lần và dừng ở lần đầu thấy "có ý nghĩa" thì khoảng 20–30% số test báo thắng giả, thay vì 5% nếu chỉ đọc một lần cuối. Mỗi lần nhìn là một lần cho may rủi cơ hội "thắng". Cách đúng với thiết kế cỡ mẫu cố định: chốt cỡ mẫu trước, xem để kiểm tra lỗi kỹ thuật, nhưng chỉ ra quyết định khi đủ mẫu. Muốn đọc nhiều lần và dừng theo kết quả thì phải dùng thiết kế riêng cho việc đó (kiểm định tuần tự: luật đọc chốt trước, mỗi lần đọc ngưỡng chặt hơn); đọc nhiều lần với ngưỡng 5% thông thường mới là nhìn trộm.' },
   example:'Cần 6.000 lượt mỗi nhóm, tức 12.000 lượt; 800 lượt/ngày thì cần 15 ngày. Ngày thứ ba mới có 2.400 lượt, mỗi nhóm 1.200 — chỉ 20% mẫu cần có. Với chuyển đổi khoảng 5%, mỗi bên mới có 60–75 đơn, dao động ±15–17 đơn, lớn hơn chênh lệch đang thấy. Được phép dừng sớm chỉ khi có lỗi nghiêm trọng (B làm hỏng thanh toán), không phải khi B đang dẫn.',
   takeaway:'Xem để bắt lỗi, không xem để chọn lúc dừng — điểm dừng đã chốt từ trước.',
   apply:'Viết một dòng "luật dừng" cho test sắp tới của bạn: đủ bao nhiêu lượt thì đọc kết quả, và lỗi nào thì được dừng sớm. Đọc lại trong 60 giây.',
@@ -291,7 +291,7 @@ BAI_ADD({ mod:'tn02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tn02-06', skill:'measure', read:'6 phút', t:'Test chạy thứ Hai đến thứ Năm — kết quả có dùng cho cả tuần?',
+{ id:'B:tn02-06', skill:'measure', read:'6 phút', assume:true, t:'Test chạy thứ Hai đến thứ Năm — kết quả có dùng cho cả tuần?',
   situation:'Một chuỗi cơm văn phòng bán qua website test hai kiểu banner combo. Test chạy từ thứ Hai đến thứ Năm, đủ cỡ mẫu, bản B thắng. Nhưng số liệu cũ cho thấy thứ Bảy, Chủ nhật lượt xem gấp đôi ngày thường, và khách cuối tuần chủ yếu đặt cho gia đình, không phải cho văn phòng.',
   concept:{ name:'Chạy trọn chu kỳ tuần',
     body:'Khách ngày thường và khách cuối tuần thường là hai kiểu người khác nhau, mua vì lý do khác nhau. Test chỉ chạy vài ngày trong tuần là test trên một phần khách, rồi đem kết luận áp cho tất cả. Quy tắc: chạy test <b>trọn tuần</b> (7, 14 hoặc 21 ngày), kể cả khi đủ cỡ mẫu sớm hơn. Khi có ngày lương, ngày đôi của sàn hay lễ, cân nhắc chu kỳ dài hơn hoặc tránh các ngày đặc biệt.' },
@@ -299,7 +299,7 @@ BAI_ADD({ mod:'tn02', lessons:[
   takeaway:'Đủ cỡ mẫu chưa đủ — mẫu phải có đủ các ngày trong tuần.',
   points:["Cuối tuần đóng góp phần lớn đơn, nên bỏ nó khỏi test là bỏ nhóm khách có tiếng nói lớn nhất. Cỡ mẫu đủ chỉ nói sai số nhỏ, chưa nói mẫu có đại diện.","Chu kỳ tuần lặp lại, nên chạy trọn các ngày để mỗi kiểu khách xuất hiện với tỉ trọng như khi áp dụng thật. Ngày nào thiếu thì tỉ trọng bị sai.","Nên đọc kết quả theo ngày thường và cuối tuần riêng trước khi gộp: một bản thắng gộp nhưng thua ở nhóm lớn nhất chưa chắc là bản thắng cho doanh nghiệp."],
   counter:"Biến thể: chuỗi cơm văn phòng chỉ bán ngày thường, bếp đóng cuối tuần và gần như không có đơn hai ngày ấy. Chạy test trọn bảy ngày lúc này chỉ pha loãng số liệu bằng hai ngày trống chứ không thêm thông tin. Dấu hiệu nhận ra: có ngày trong tuần không có khách hoặc không mở bán. Khi đó nên chạy trọn các ngày có bán, và vẫn cần đủ ít nhất một vòng của các ngày ấy.",
-  deeper:"Chạy lâu hơn là quyết định chậm hơn, nên đánh đổi là độ tin cậy so với tốc độ. Cách giảm đánh đổi là xem kết quả theo ngày thường và cuối tuần ngay trong lúc chạy, dừng sớm với bản thua rõ ở nhóm lớn. Tín hiệu cần theo dõi là chênh lệch giữa hai nhóm ngày và ảnh hưởng của ngày đặc biệt như ngày lương hay ngày đôi. Khái niệm kề cận là khả năng nhân rộng: một test chỉ đúng với nhóm khách đã vào test. Tuần này, lấy số liệu cũ của kênh và tính tỉ trọng đơn của từng ngày trong tuần, xem ngày nào chiếm lớn nhất.",
+  deeper:"Chạy lâu hơn là quyết định chậm hơn, nên đánh đổi là độ tin cậy so với tốc độ. Cách giảm đánh đổi là xem kết quả theo nhóm ngày thường và cuối tuần ngay trong lúc chạy để chuẩn bị giả thuyết, nhưng không dừng theo con số giữa chừng (bài 05); chỉ dừng khi bản mới gây lỗi hoặc thiệt hại rõ ràng, và ghi là chưa kết luận. Tín hiệu cần theo dõi là chênh lệch giữa hai nhóm ngày và ảnh hưởng của ngày đặc biệt như ngày lương hay ngày đôi. Khái niệm kề cận là khả năng nhân rộng: một test chỉ đúng với nhóm khách đã vào test. Tuần này, lấy số liệu cũ của kênh và tính tỉ trọng đơn của từng ngày trong tuần, xem ngày nào chiếm lớn nhất.",
   apply:'Mở số liệu lượt xem theo ngày của trang bạn. Nói trong 60 giây: ngày nào khác hẳn phần còn lại, và test tới nên kéo dài bao nhiêu tuần.',
   mistakes:['Dừng test giữa tuần vì đã đủ cỡ mẫu.','Chạy test từ trước ngày lương đến sau ngày lương rồi so với tuần bình thường.'],
   q:[
@@ -351,11 +351,11 @@ BAI_ADD({ mod:'tn02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tn02-07', skill:'measure', read:'7 phút', t:'Chuyển đổi tăng, giá trị đơn giảm — bản nào thắng?',
+{ id:'B:tn02-07', skill:'measure', read:'7 phút', assume:true, t:'Chuyển đổi tăng, giá trị đơn giảm — bản nào thắng?',
   situation:'Một shop đồ gia dụng test banner "Freeship cho đơn từ 150.000đ" (bản B) so với ngưỡng cũ 300.000đ (bản A). Kết quả sau 14 ngày: chuyển đổi A 3,0%, B 3,3%. Nhưng giá trị đơn trung bình A 250.000đ, B chỉ 220.000đ. Đội bán hàng mừng vì nhiều đơn hơn, đội tài chính lo vì đơn nhỏ đi. Test chưa ghi trước chỉ số nào quyết định.',
   concept:{ name:'Chỉ số chính chọn trước và chỉ số rào chắn',
     body:'Trước khi chạy, ghi rõ <b>một chỉ số chính</b> — thứ quyết định thắng thua — và vài <b>chỉ số rào chắn</b> không được xấu đi (tỉ lệ hoàn đơn, giá trị đơn). Chỉ số chính nên càng gần tiền càng tốt, ví dụ doanh thu hoặc lãi trên mỗi lượt xem, vì nó gộp cả số đơn lẫn cỡ đơn. Nếu xem 20 chỉ số rồi mới chọn cái đang đẹp, với ngưỡng may rủi thông thường 5%, trung bình sẽ có 1 chỉ số "thắng" chỉ nhờ may.' },
-  example:'Doanh thu mỗi lượt xem: A = 3,0% × 250.000 = 7.500đ; B = 3,3% × 220.000 = 7.260đ. B có nhiều đơn hơn nhưng mỗi lượt xem mang về ít tiền hơn 240đ, lại tốn thêm phí ship cho đơn nhỏ. Nếu đã chọn trước "doanh thu mỗi lượt xem" làm chỉ số chính, cuộc tranh luận không cần xảy ra: A dẫn 3,2%, và thắng nếu mức chênh này vượt dao động may rủi của số lượt đã chạy; nếu chưa vượt, kết luận đúng là chạy tiếp. Lần sau, ghi chỉ số chính và rào chắn trước ngày chạy.',
+  example:'Doanh thu mỗi lượt xem: A = 3,0% × 250.000 = 7.500đ; B = 3,3% × 220.000 = 7.260đ. B có nhiều đơn hơn nhưng mỗi lượt xem mang về ít tiền hơn 240đ, lại tốn thêm phí ship cho đơn nhỏ. Nếu đã chọn trước "doanh thu mỗi lượt xem" làm chỉ số chính, cuộc tranh luận không cần xảy ra: A dẫn 3,2%, và thắng nếu mức chênh này vượt dao động may rủi của số lượt đã chạy; nếu chưa vượt, kết luận đúng là chạy tiếp. Lưu ý: doanh thu mỗi lượt xem dao động mạnh hơn tỉ lệ đơn (vài đơn lớn kéo lệch cả trung bình), nên quy tắc ±2√k đếm đơn của bài 03 không áp thẳng được và cần mẫu lớn hơn nhiều; cách thô khi lượt xem ít: cắt bỏ đơn ngoại lệ, hoặc dùng tỉ lệ đơn làm chỉ số chính và giá trị đơn làm rào chắn. Lần sau, ghi chỉ số chính và rào chắn trước ngày chạy.',
   takeaway:'Chọn thước đo trước khi thấy kết quả; chọn sau thì luôn tìm được một thước đo cho bản mình thích.',
   apply:'Với test sắp chạy, viết ra một chỉ số chính và hai chỉ số rào chắn. Nói trong 60 giây vì sao chỉ số chính đó gần tiền nhất.',
   mistakes:['Chọn chuyển đổi làm chỉ số chính khi thay đổi còn ảnh hưởng tới cỡ đơn.','Xem hàng chục chỉ số rồi báo cáo cái đang thắng.'],
@@ -408,7 +408,7 @@ BAI_ADD({ mod:'tn02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tn02-08', skill:'measure', read:'6 phút', t:'B thắng thật — nhưng có đáng bỏ công triển khai?',
+{ id:'B:tn02-08', skill:'measure', read:'6 phút', assume:true, t:'B thắng thật — nhưng có đáng bỏ công triển khai?',
   situation:'Một shop nội thất online test bộ lọc sản phẩm mới. Sau 21 ngày, bản B nhỉnh hơn: chuyển đổi 2,00% lên 2,05%. Thật ra với lưu lượng này, test chưa thể khẳng định chênh 0,05 điểm (theo quy tắc ở bài 04 cần khoảng 1,25 triệu lượt mỗi nhóm), nhưng bài này giả sử mức tăng là thật để hỏi câu tiếp theo. Trang có 50.000 lượt xem mỗi tháng, đơn trung bình 3 triệu đồng, lãi gộp 30%. Để đưa bộ lọc vào vận hành chính thức, đội kỹ thuật báo cần 40 triệu đồng và thêm 5 triệu mỗi tháng bảo trì.',
   concept:{ name:'Thắng có ý nghĩa thống kê chưa chắc có ý nghĩa kinh doanh',
     body:'Một kết quả "thắng thật" chỉ nói chênh lệch không phải do may. Nó không nói chênh lệch đủ lớn để đáng làm. Trước khi triển khai, quy mức tăng ra <b>lãi tăng thêm mỗi tháng</b> rồi so với chi phí triển khai và duy trì. Tốt nhất, đặt ngưỡng "đáng làm" từ trước khi test — ví dụ phải tăng ít nhất X triệu lãi mỗi tháng — để không bị hào hứng vì chữ "thắng".' },
@@ -465,7 +465,7 @@ BAI_ADD({ mod:'tn02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tn02-09', skill:'creative', read:'6 phút', t:'Test 6 mẫu banner cùng lúc — nhanh hơn hay chậm hơn?',
+{ id:'B:tn02-09', skill:'creative', read:'6 phút', assume:true, t:'Test 6 mẫu banner cùng lúc — nhanh hơn hay chậm hơn?',
   situation:'Một thương hiệu bánh trung thu có 5 mẫu banner mới và muốn so với banner cũ trong mùa bán ngắn. Trang có 3.000 lượt xem mỗi ngày. Đội tính mỗi nhóm cần khoảng 5.000 lượt để đọc được kết quả. Trưởng nhóm muốn chia đều cho cả 6 bản "cho nhanh, một lần biết hết".',
   concept:{ name:'Nhiều biến thể: chia mỏng lượt và tăng kết quả giả',
     body:'Mỗi biến thể thêm vào lấy đi một phần lượt xem, nên mỗi nhóm đủ mẫu chậm hơn. Đồng thời, mỗi phép so B-với-A, C-với-A… là một lần cho may rủi cơ hội tạo ra "người thắng". Với ngưỡng may rủi 5% mỗi lần, so 5 bản với bản gốc thì khả năng có ít nhất một bản thắng giả tăng lên gần 23%. Cách chữa đơn giản (Bonferroni): chia ngưỡng cho số phép so, tức dùng 1% thay vì 5% mỗi lần, và đòi chênh lớn hơn mới tin; mốc 5.000 lượt mỗi nhóm cũng phải tăng theo. Khi lượt xem có hạn, hãy lọc bớt bằng suy luận, chỉ giữ 2–3 bản khác nhau rõ rệt, hoặc chia thành vòng loại rồi vòng chung kết.' },
@@ -522,7 +522,7 @@ BAI_ADD({ mod:'tn02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:tn02-10', skill:'measure', read:'6 phút', t:'Giao diện mới tuần đầu tăng 40%, tuần ba còn 5% — tin tuần nào?',
+{ id:'B:tn02-10', skill:'measure', read:'6 phút', assume:true, t:'Giao diện mới tuần đầu tăng 40%, tuần ba còn 5% — tin tuần nào?',
   situation:'Một app đặt đồ ăn đổi nút "Đặt món" sang dạng nổi, có hiệu ứng rung nhẹ. Người dùng được chia ngẫu nhiên. Tỉ lệ bấm nút của bản mới so với bản cũ: tuần 1 cao hơn 40%, tuần 2 cao hơn 15%, tuần 3 cao hơn 5%. Đội thiết kế muốn báo cáo con số 40%.',
   concept:{ name:'Hiệu ứng mới lạ (novelty effect)',
     body:'Người dùng quen với giao diện cũ sẽ tò mò bấm vào thứ gì mới, nhất là thứ nổi bật. Sự tò mò đó phai dần sau vài ngày, nên mức tăng lúc đầu thường cao hơn mức tăng lâu dài. Chiều ngược lại cũng có: thay đổi lớn đôi khi làm người dùng cũ bỡ ngỡ, tuần đầu giảm rồi hồi lại. Cách đọc: chạy đủ lâu để đường chênh lệch <b>đi ngang</b>, và so riêng nhóm người dùng mới — những người chưa từng thấy bản cũ.' },

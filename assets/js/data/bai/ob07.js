@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'ob07', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:ob07-01', skill:'measure', read:'6 phút', t:'Giá trị đơn trung bình 680 nghìn — khách của bạn có thật chi chừng đó?',
+{ id:'B:ob07-01', skill:'measure', read:'6 phút', assume:true, t:'Giá trị đơn trung bình 680 nghìn — khách của bạn có thật chi chừng đó?',
   situation:'Bạn phụ trách một shop mỹ phẩm trên Shopee. Báo cáo tuần ghi giá trị đơn trung bình 680.000đ, và sếp muốn thiết kế combo quanh mức 700.000đ vì "đó là mức khách quen chi". Bạn mở danh sách đơn ra xem và thấy phần lớn đơn chỉ quanh 200.000đ, có vài đơn rất lớn của một đại lý mua sỉ.',
   concept:{ name:'Trung bình và trung vị',
     body:'<b>Trung bình</b> là tổng chia số lượng, nên chỉ một giá trị rất lớn cũng kéo nó lên. <b>Trung vị</b> là giá trị đứng giữa khi xếp từ nhỏ tới lớn: một nửa nhỏ hơn, một nửa lớn hơn. Khi dữ liệu lệch — giá trị đơn, thu nhập, số lượt xem video — trung vị mô tả "khách điển hình" tốt hơn. Cách đọc nhanh: nếu trung bình cao hơn trung vị nhiều, có vài giá trị cực lớn đang kéo số lên, và bạn cần xem riêng nhóm đó.' },
@@ -59,7 +59,7 @@ BAI_ADD({ mod:'ob07', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:ob07-02', skill:'insight', read:'6 phút', t:'24 trên 30 người bạn nói sẽ mua — đã đủ để ra mắt?',
+{ id:'B:ob07-02', skill:'insight', read:'6 phút', assume:true, t:'24 trên 30 người bạn nói sẽ mua — đã đủ để ra mắt?',
   situation:'Bạn định bán trà sữa đóng chai giá 35.000đ qua kênh online. Bạn gửi khảo sát Google Form trong nhóm lớp đại học và nhóm bạn thân: 30 người trả lời, 24 người chọn "chắc chắn sẽ mua". Bạn hào hứng tính ra 80% và định nhập ngay 2.000 chai cho tháng đầu.',
   concept:{ name:'Mẫu nhỏ và mẫu lệch',
     body:'Một khảo sát chỉ đáng tin khi <b>mẫu</b> (người được hỏi) giống <b>tổng thể</b> (người bạn sẽ bán). Bạn bè thường cùng tuổi, cùng thành phố, và muốn ủng hộ bạn — đó là mẫu lệch. Mẫu 30 người lại quá nhỏ: chỉ vài người đổi ý là tỉ lệ nhảy cả chục điểm. Thêm một lớp nữa: "sẽ mua" khi được hỏi khác xa việc móc ví trả tiền. Cách sửa là hỏi đúng nhóm khách, đủ đông, và tốt nhất là đo hành vi thật như đặt trước có cọc.' },
@@ -115,11 +115,11 @@ BAI_ADD({ mod:'ob07', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:ob07-03', skill:'measure', read:'7 phút', t:'Cửa hàng treo nhiều poster bán chạy hơn — có nên in thêm poster?',
-  situation:'Bạn làm trade marketing cho một hãng nước giải khát. Dữ liệu 200 cửa hàng tạp hoá cho thấy tiệm treo từ 3 poster trở lên bán nhiều hơn 40% so với tiệm treo ít. Trưởng nhóm đề xuất in 5.000 poster phát cho mọi tiệm, chi phí 150 triệu đồng.',
+{ id:'B:ob07-03', skill:'measure', read:'7 phút', assume:true, t:'Cửa hàng treo nhiều poster bán chạy hơn — có nên in thêm poster?',
+  situation:'Bạn làm trade marketing cho một hãng nước giải khát. Dữ liệu 200 cửa hàng tạp hoá cho thấy tiệm treo từ 3 poster trở lên bán nhiều hơn 40% so với tiệm treo ít. Khu vực bạn phụ trách có 5.000 tiệm; trưởng nhóm đề xuất in 5.000 poster phát cho mọi tiệm (mỗi tiệm một poster), chi phí 150 triệu đồng.',
   concept:{ name:'Tương quan không phải nhân quả',
     body:'Hai thứ đi cùng nhau (<b>tương quan</b>) chưa chắc cái này gây ra cái kia (<b>nhân quả</b>). Thường có một <b>biến thứ ba</b> gây ra cả hai: tiệm lớn, mặt tiền rộng, đông khách thì vừa có chỗ dán nhiều poster vừa bán nhiều hàng. Cũng có thể chiều ngược lại: tiệm bán chạy được nhân viên bán hàng ưu tiên phát thêm poster. Cách tách nhân quả là thử có đối chứng: chọn ngẫu nhiên hai nhóm tiệm giống nhau, chỉ một nhóm nhận poster, rồi so.' },
-  example:'Bạn chọn ngẫu nhiên 100 tiệm tương tự nhau, chia đôi: 50 tiệm dán thêm poster, 50 tiệm giữ nguyên. Sau 4 tuần, nhóm có poster bán trung bình 1.030 thùng, nhóm giữ nguyên 1.000 thùng: chênh 3%, không phải 40%. Phần lớn khoảng chênh 40% ban đầu đến từ cỡ tiệm. Poster vẫn có tác dụng, nhưng nhỏ hơn nhiều so với con số 40% ban đầu. Nhỏ chưa có nghĩa là không đáng: 30 thùng × 5.000 tiệm × 20.000đ lãi gộp = 3.000 triệu, gấp 20 lần chi phí 150 triệu — nếu kết quả lặp lại. Mỗi nhóm chỉ 50 tiệm nên nên chạy thêm một vòng thử rộng hơn trước khi in hết.',
+  example:'Bạn chọn ngẫu nhiên 100 tiệm tương tự nhau, chia đôi: 50 tiệm dán thêm poster, 50 tiệm giữ nguyên. Sau 4 tuần, nhóm có poster bán trung bình 1.030 thùng, nhóm giữ nguyên 1.000 thùng: chênh 3%, không phải 40%. Phần lớn khoảng chênh 40% ban đầu đến từ cỡ tiệm. Poster có thể vẫn có tác dụng, nhưng nhỏ hơn nhiều so với con số 40% ban đầu. Nhỏ chưa có nghĩa là không đáng: 30 thùng × 5.000 tiệm × 20.000đ lãi gộp = 3.000 triệu, gấp 20 lần chi phí 150 triệu — nếu kết quả lặp lại. Nhưng với chỉ 50 tiệm mỗi nhóm, trong khi doanh số từng tiệm thường tự dao động vài phần trăm, chênh 3% chưa phân biệt được với nhiễu. Đó là lý do phải chạy thêm một vòng thử rộng hơn (vài trăm tiệm mỗi nhóm, hoặc đo trước–sau trên cùng tiệm để bớt dao động) trước khi in hết.',
   takeaway:'Thấy hai thứ đi cùng nhau, tìm biến thứ ba trước khi kết luận cái này gây ra cái kia.',
   apply:'Tìm một câu "A đi cùng B" trong báo cáo gần đây của bạn. Viết ra ít nhất hai biến thứ ba có thể gây ra cả A và B.',
   mistakes:['So tiệm có và không có hoạt động mà không xét cỡ tiệm.','Quên chiều ngược lại: kết quả tốt kéo theo hoạt động.'],
@@ -132,10 +132,10 @@ BAI_ADD({ mod:'ob07', lessons:[
       c:'Đúng. Cỡ tiệm là biến thứ ba hiển nhiên gây ra cả hai.',
       d:'Đây vẫn là giả định poster gây ra doanh số, chưa kiểm.'} },
   { type:'mcq', stem:'Trưởng nhóm muốn duyệt ngay 150 triệu in poster cho mọi tiệm. Bạn đề xuất gì?',
-    options:[{k:'a',t:'Duyệt ngay vì dữ liệu 200 tiệm đã đủ lớn'},{k:'b',t:'Thử ngẫu nhiên trên 100 tiệm có nhóm đối chứng'},
+    options:[{k:'a',t:'Duyệt ngay vì dữ liệu 200 tiệm đã đủ lớn'},{k:'b',t:'Thử ngẫu nhiên có nhóm đối chứng, vài trăm tiệm mỗi nhóm'},
              {k:'c',t:'Duyệt một nửa ngân sách, in cho 100 tiệm bán chạy nhất trước'},{k:'d',t:'Hỏi chủ tiệm xem họ có thích poster không'}],
     answer:'b', why:{a:'Mẫu lớn không sửa được việc so hai nhóm tiệm vốn đã khác nhau.',
-      b:'Đúng. Chia ngẫu nhiên loại được cỡ tiệm và các khác biệt khác, đo đúng phần poster tạo ra.',
+      b:'Đúng. Chia ngẫu nhiên loại được cỡ tiệm và các khác biệt khác; vòng 50/50 đầu chưa tách được chênh 3% khỏi nhiễu nên cần vài trăm tiệm mỗi nhóm.',
       c:'Chọn tiệm bán chạy nhất để in lại lặp đúng lỗi cũ: không có đối chứng, không tách được cỡ tiệm.',
       d:'Chủ tiệm thích hay không không đo được doanh số tăng thêm.'} },
   { type:'calc', stem:'Nhóm có poster bán trung bình 1.030 thùng/tiệm, nhóm đối chứng 1.000 thùng/tiệm. Poster làm tăng bao nhiêu phần trăm?',
@@ -168,7 +168,7 @@ BAI_ADD({ mod:'ob07', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:ob07-04', skill:'measure', read:'6 phút', t:'"Tỉ lệ chuyển đổi 20%" — 20% của cái gì?',
+{ id:'B:ob07-04', skill:'measure', read:'6 phút', assume:true, t:'"Tỉ lệ chuyển đổi 20%" — 20% của cái gì?',
   situation:'Một agency báo cáo chiến dịch landing page khoá học online: "tỉ lệ chuyển đổi 20%, gấp mười lần trung bình ngành 2%". Bạn nhìn kỹ bảng số: 10.000 lượt vào trang, 500 người điền form nhận ưu đãi, 100 người thanh toán. Không ai ghi rõ 20% được tính trên con số nào.',
   concept:{ name:'Mẫu số của phần trăm',
     body:'Mọi phần trăm đều là một phép chia, và <b>mẫu số</b> quyết định ý nghĩa. Cùng 100 người mua, chia cho 10.000 lượt vào trang là 1%, chia cho 500 người điền form là 20%. Cả hai đều đúng toán, nhưng trả lời hai câu hỏi khác nhau. Khi so với "trung bình ngành", hai con số phải cùng mẫu số. Thói quen tốt: mỗi khi thấy một phần trăm, viết ra "X trên Y" thay vì chỉ ghi X%.' },
@@ -224,7 +224,7 @@ BAI_ADD({ mod:'ob07', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:ob07-05', skill:'insight', read:'6 phút', t:'Đối thủ tăng trưởng 300% — có nên hoảng không?',
+{ id:'B:ob07-05', skill:'insight', read:'6 phút', assume:true, t:'Đối thủ tăng trưởng 300% — có nên hoảng không?',
   situation:'Trong buổi họp quý, một bạn trong nhóm chiếu slide: "Thương hiệu cà phê hoà tan mới X tăng trưởng 300% trên sàn, còn chúng ta chỉ tăng 10%". Cả phòng im lặng. Sếp hỏi có nên dồn ngân sách để phản công ngay không. Bạn là người phải trả lời bằng số liệu.',
   concept:{ name:'Tăng trưởng từ nền thấp',
     body:'Phần trăm tăng trưởng phụ thuộc vào <b>nền</b> (con số ban đầu). Từ 50 đơn lên 200 đơn là tăng 300%, nhưng chỉ thêm 150 đơn. Từ 10.000 lên 11.000 đơn là tăng 10%, nhưng thêm 1.000 đơn. Thương hiệu mới gần như luôn có phần trăm tăng trưởng cao vì nền nhỏ. Để đánh giá mối đe doạ, đặt cạnh nhau: <b>số tuyệt đối tăng thêm</b>, quy mô hiện tại, và xu hướng qua nhiều kỳ. Rồi nhìn quỹ đạo: nếu nhịp này giữ, bao lâu đối thủ chạm quy mô bạn? Ngưỡng hành động không đặt tuỳ ý: chọn mốc X bắt đầu ăn vào khách của bạn, ví dụ 10% quy mô của bạn.' },
@@ -277,7 +277,7 @@ BAI_ADD({ mod:'ob07', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:ob07-06', skill:'measure', read:'7 phút', t:'Doanh số tháng Tết tăng 60% — chiến dịch có thật sự hiệu quả?',
+{ id:'B:ob07-06', skill:'measure', read:'7 phút', assume:true, t:'Doanh số tháng Tết tăng 60% — chiến dịch có thật sự hiệu quả?',
   situation:'Bạn phụ trách một thương hiệu bánh kẹo. Chiến dịch Tết chạy trong tháng 1. Báo cáo cuối tháng: doanh số tháng 1 đạt 1,38 tỷ đồng, tăng 60% so với tháng 12 (0,86 tỷ). Nhóm agency muốn ghi thành tích "chiến dịch tăng doanh số 60%". Năm ngoái, tháng 1 không chạy chiến dịch nào, doanh số là 1,2 tỷ.',
   concept:{ name:'So cùng kỳ và mùa vụ',
     body:'Nhiều ngành có <b>mùa vụ</b>: bánh kẹo tăng dịp Tết, kem tăng mùa hè, bánh trung thu dồn vào tháng 8–9 âm lịch. So tháng này với tháng liền trước sẽ trộn tác động của mùa vụ vào tác động của chiến dịch. <b>So cùng kỳ</b> (tháng 1 năm nay với tháng 1 năm ngoái) giữ mùa vụ như nhau, nên phần chênh còn lại gần với tác động thật hơn. Cũng cần lưu ý Tết âm lịch rơi vào tháng khác nhau mỗi năm, nên đôi khi phải so theo số ngày trước Tết.' },
@@ -330,7 +330,7 @@ BAI_ADD({ mod:'ob07', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:ob07-07', skill:'measure', read:'6 phút', t:'Tỉ lệ mua lại từ 20% lên 25%: tăng 5% hay tăng 25%?',
+{ id:'B:ob07-07', skill:'measure', read:'6 phút', assume:true, t:'Tỉ lệ mua lại từ 20% lên 25%: tăng 5% hay tăng 25%?',
   situation:'Bạn làm CRM cho một chuỗi cửa hàng mẹ và bé. Sau ba tháng chạy chương trình tích điểm, tỉ lệ khách quay lại mua trong 60 ngày tăng từ 20% lên 25%. Slide của bạn ghi "tăng 5%", còn slide của nhóm agency ghi "tăng 25%". Sếp hỏi: "Vậy rốt cuộc là bao nhiêu?"',
   concept:{ name:'Điểm phần trăm và phần trăm',
     body:'Khi một tỉ lệ thay đổi, có hai cách nói. <b>Điểm phần trăm</b> là hiệu số: 25% − 20% = 5 điểm phần trăm. <b>Phần trăm tương đối</b> là thay đổi so với mức ban đầu: 5 ÷ 20 = tăng 25%. Cả hai đều đúng, nhưng viết "tăng 5%" thì mơ hồ và dễ bị hiểu sai. Quy ước an toàn: nói "tăng 5 điểm phần trăm, tức tăng 25% so với trước", và luôn ghi cả mức trước lẫn mức sau.' },

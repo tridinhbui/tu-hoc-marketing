@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'tp04', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tp04-01', skill:'brand', read:'6 phút', t:'Thương hiệu của bạn đang có những tài sản nhận diện nào?',
+{ id:'B:tp04-01', skill:'brand', read:'6 phút', assume:true, t:'Thương hiệu của bạn đang có những tài sản nhận diện nào?',
   situation:'Một chuỗi trà sữa 18 cửa hàng ở Đà Nẵng chuẩn bị làm lại bộ nhận diện. Giám đốc hỏi: "Mình có gì đáng giữ?". Cả phòng chỉ nghĩ tới logo. Không ai nhắc tới chiếc cốc xanh lá có nắp vòm, con mèo vẽ tay trên túi giấy, hay câu "Uống đi rồi tính" mà nhân viên nói khi đưa nước suốt 4 năm.',
   concept:{ name:'Bản kiểm kê tài sản nhận diện',
     body:'Tài sản nhận diện là bất cứ dấu hiệu nào khiến người ta nghĩ tới thương hiệu mà không cần đọc tên. Có sáu nhóm hay gặp: <b>màu</b>, <b>hình dạng</b> (bao bì, cốc, chai), <b>nhân vật hoặc linh vật</b>, <b>âm thanh</b> (nhạc hiệu, tiếng động), <b>câu nói</b> và <b>kiểu chữ hoặc hoạ tiết</b>. Bước đầu không phải là sáng tạo cái mới mà là liệt kê mọi thứ đã có, kể cả những thứ tình cờ mà thành, rồi mới chọn giữ cái gì.' },
@@ -67,7 +67,7 @@ BAI_ADD({ mod:'tp04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tp04-02', skill:'measure', read:'7 phút', t:'Làm sao biết tài sản nào đáng đầu tư?',
+{ id:'B:tp04-02', skill:'measure', read:'7 phút', assume:true, t:'Làm sao biết tài sản nào đáng đầu tư?',
   situation:'Chuỗi trà sữa khảo sát 200 người từng mua trà sữa trong thành phố. Mỗi người được xem từng dấu hiệu đã che tên và hỏi: "Bạn nghĩ tới thương hiệu nào?". Cốc nắp vòm: 120 người nhận ra là của chuỗi. Màu xanh lá: 140 người nghĩ tới một thương hiệu nào đó, nhưng chỉ 42 người gọi đúng tên chuỗi. Ngân sách chỉ đủ đẩy mạnh một thứ.',
   concept:{ name:'Lưới độ nổi tiếng × độ riêng',
     body:'Mỗi tài sản đo bằng hai con số. <b>Độ nổi tiếng</b>: bao nhiêu phần trăm người được hỏi gắn dấu hiệu đó với đúng thương hiệu của bạn. <b>Độ riêng</b>: trong số những người gắn dấu hiệu với một thương hiệu nào đó, bao nhiêu phần trăm nói đúng bạn chứ không phải đối thủ. Nổi tiếng cao, riêng cao: dùng và bảo vệ. Riêng cao, nổi tiếng thấp: đầu tư để nhiều người biết. Nổi tiếng nhưng không riêng: cẩn thận, bạn đang quảng cáo giùm người khác. Cả hai thấp: bỏ hoặc chờ.' },
@@ -120,7 +120,7 @@ BAI_ADD({ mod:'tp04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tp04-03', skill:'brand', read:'6 phút', t:'Màu đỏ ai cũng dùng thì có còn là tài sản của bạn?',
+{ id:'B:tp04-03', skill:'brand', read:'6 phút', assume:true, t:'Màu đỏ ai cũng dùng thì có còn là tài sản của bạn?',
   situation:'Một hãng nước ngọt nội địa dùng màu đỏ làm chủ đạo suốt 10 năm. Khảo sát che tên cho thấy 78% người thấy lon đỏ "quen quen", nhưng chỉ 19% gọi đúng tên hãng; số còn lại nói tên hai hãng nước ngọt và một hãng bia cũng dùng đỏ. Trên kệ Tết, gần như cả dãy đồ uống đều đỏ.',
   concept:{ name:'Mạnh nhưng không riêng',
     body:'Có những dấu hiệu gợi nhớ rất mạnh cho cả một ngành: đỏ cho đồ uống, xanh lá cho đồ tự nhiên, vàng cho đồ ăn nhanh. Chúng làm khách nhận ra <b>loại sản phẩm</b>, không làm khách nhận ra <b>bạn</b>. Cách xử lý không nhất thiết là bỏ màu, mà là ghép nó với một dấu hiệu chỉ bạn có — một sắc đỏ cụ thể kèm hình dạng, hoạ tiết hay nhân vật riêng — để tổ hợp đó trở thành riêng.' },
@@ -177,14 +177,15 @@ BAI_ADD({ mod:'tp04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tp04-04', skill:'creative', read:'6 phút', t:'Video ngắn của bạn có một âm thanh riêng chưa?',
+{ id:'B:tp04-04', skill:'creative', read:'6 phút', assume:true, t:'Video ngắn của bạn có một âm thanh riêng chưa?',
   situation:'Một hãng snack đăng 60 video TikTok trong 3 tháng. Mỗi video dùng một bài nhạc đang thịnh hành khác nhau. Lượt xem khá, nhưng khi hỏi 100 người đã xem ít nhất 3 video, chỉ 23 người nhớ đúng tên hãng. Nhiều người xem lướt với âm thanh bật, và logo chỉ hiện ở giây cuối.',
   concept:{ name:'Âm thanh thương hiệu',
-    body:'Trên video ngắn, người xem thường nghe trước khi kịp nhìn logo; riêng TikTok từng công bố rằng phần lớn người dùng xem với âm thanh bật. Một <b>âm thanh cố định</b> — vài nốt nhạc, một tiếng động đặc trưng như tiếng mở gói, một câu nói ngắn — lặp lại ở cùng vị trí trong mọi video sẽ dần gắn với thương hiệu. Nhạc thịnh hành kéo lượt xem, nhưng nó thuộc về cả nền tảng. Cách làm hợp lý là giữ một âm thanh riêng thật ngắn trong vài giây đầu, còn phần nền vẫn có thể theo xu hướng.' },
+    body:'Trên video ngắn, người xem thường nghe trước khi kịp nhìn logo. Bài này <b>giả định</b> phần lớn người xem để âm thanh bật; tỉ lệ thật khác nhau theo nền tảng và thời điểm, nên muốn dẫn một con số, hãy kiểm trang chính thức của nền tảng. Một <b>âm thanh cố định</b> — vài nốt nhạc, một tiếng động đặc trưng như tiếng mở gói, một câu nói ngắn — lặp lại ở cùng vị trí trong mọi video sẽ dần gắn với thương hiệu. Nhạc thịnh hành kéo lượt xem, nhưng nó thuộc về cả nền tảng. Cách làm hợp lý là giữ một âm thanh riêng thật ngắn trong vài giây đầu, còn phần nền vẫn có thể theo xu hướng.' },
   example:'Hãng snack chọn tiếng "rắc" khi bẻ miếng bánh, ghi âm một lần và đặt ở giây thứ 1 của mọi video, kèm nền nhạc thịnh hành như cũ. Sau 3 tháng tiếp theo với 60 video, hỏi lại 100 người đã xem ít nhất 3 video: 47 người nhớ đúng tên hãng, so với 23 người trước đó. Lượt xem trung bình gần như không đổi, nên phần tăng không đến từ độ phủ. Đây vẫn là so trước – sau với hai nhóm 100 người khác nhau, chưa có nhóm đối chứng — tín hiệu mạnh, chưa phải bằng chứng nhân quả.',
   takeaway:'Nhạc thịnh hành mượn được lượt xem; chỉ âm thanh riêng lặp đi lặp lại mới để lại tên bạn.',
   apply:'Mở 5 video gần nhất của một thương hiệu. Tắt màn hình, chỉ nghe: nói trong 60 giây có âm thanh nào lặp lại giúp bạn biết đó là họ không.',
   mistakes:['Đổi âm thanh mỗi video theo xu hướng, không có gì lặp lại.','Để dấu hiệu thương hiệu ở giây cuối, khi nhiều người đã lướt qua.'],
+  src:[{ t:'TikTok Ads Help Center: tìm “sound on” (tài liệu cho nhà quảng cáo về xem video có âm thanh)', u:'https://ads.tiktok.com/help/', d:'2026-11-07', st:'chua' }],
   q:[
   { type:'mcq', stem:'Hãng snack dùng 60 bài nhạc thịnh hành khác nhau. Đoán xem vì sao người xem ít nhớ tên hãng?',
     options:[{k:'a',t:'Không có dấu hiệu nào lặp lại đủ để gắn với hãng'},{k:'b',t:'Video quá ngắn để thương hiệu kịp được nhớ'},
@@ -234,7 +235,7 @@ BAI_ADD({ mod:'tp04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tp04-05', skill:'creative', read:'7 phút', t:'Có nên tạo linh vật cho thương hiệu?',
+{ id:'B:tp04-05', skill:'creative', read:'7 phút', assume:true, t:'Có nên tạo linh vật cho thương hiệu?',
   situation:'Một ứng dụng học tiếng Anh mới ra mắt có 120 triệu đồng cho sáng tạo năm đầu. Đội muốn tạo một linh vật chú cú. Giám đốc tài chính phản đối: "Làm nhân vật tốn kém, ai sẽ nhớ một con cú?". Đối thủ lớn nhất không có linh vật, chỉ có logo chữ.',
   concept:{ name:'Nhân vật như một tài sản',
     body:'Nhân vật là tài sản linh hoạt nhất: nó nói, biểu cảm, xuất hiện được ở bao bì, video, thông báo, sự kiện — và không ai có đúng nhân vật của bạn. Nhưng nó chỉ thành tài sản khi <b>dùng đủ lâu và đủ đều</b>: cùng hình dáng, cùng tính cách, ở hầu hết điểm chạm. Nó cũng không rẻ: ngoài tiền thiết kế còn phải nuôi hằng năm (hoạt hình, giọng, bản quyền, cập nhật). Vì thế linh vật không hợp mọi thương hiệu: ngành cần vẻ nghiêm túc như ngân hàng hay luật, nhóm khách rất ít, hoặc ngân sách không nuôi nổi vài năm thì tiền thường nên đi vào thứ khác.' },
@@ -272,7 +273,7 @@ BAI_ADD({ mod:'tp04', lessons:[
       c:'Hai nhân vật song song làm loãng cả hai.',
       d:'Đúng. Làm mới trong khi giữ lõi nhận diện; khách vẫn nhận ra đó là con bò quen.'} },
   { type:'calc', stem:'Linh vật tốn 30 triệu thiết kế một lần, cộng 20 triệu mỗi năm để vận hành. Mỗi năm, 50.000 người dùng thấy linh vật trung bình 300 lần. Tính trong 2 năm, tổng chi phí trên mỗi lần thấy là bao nhiêu đồng? (làm tròn 2 chữ số thập phân)',
-    unit:'đồng', ans:2.33, tol:0.02, wrong:[[1,'QUEN_CHI_PHI_CO_DINH'],[4.67,'SAI_TINH_TOAN']], errors:['QUEN_CHI_PHI_CO_DINH','SAI_TINH_TOAN'],
+    unit:'đồng', ans:2.33, tol:0.02, wrong:[[1.33,'QUEN_CHI_PHI_CO_DINH'],[1,'THIEU_TU_SO'],[4.67,'SAI_TINH_TOAN']], errors:['QUEN_CHI_PHI_CO_DINH','THIEU_TU_SO','SAI_TINH_TOAN'],
     steps:['Tổng chi phí 2 năm = 30 + 20 × 2 = 70 triệu đồng.','Tổng lần thấy = 300 × 50.000 × 2 = 30.000.000 lần.','70.000.000 ÷ 30.000.000 ≈ <b>2,33 đồng</b> mỗi lần thấy. Đây là chi phí mỗi lần thấy, chưa phải mỗi lần nhớ; nếu người dùng bỏ app giữa chừng thì số lần thấy thật thấp hơn và chi phí cao hơn 2,33.'] },
   { type:'mcq', stem:'Một công ty kế toán B2B có khoảng 80 khách doanh nghiệp, ngân sách thương hiệu 60 triệu mỗi năm, khách chủ yếu đến qua giới thiệu và hợp đồng dài hạn. Giám đốc muốn tạo linh vật. Bạn khuyên gì?',
     options:[{k:'a',t:'Làm linh vật, vì nhân vật giúp thương hiệu dễ nhớ và nổi bật giữa nhiều công ty kế toán'},{k:'b',t:'Hoãn linh vật, dồn tiền vào bằng chứng uy tín mà người ký hợp đồng cần thấy'},
@@ -291,7 +292,7 @@ BAI_ADD({ mod:'tp04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tp04-06', skill:'channel', read:'6 phút', t:'Nên đưa tài sản vào điểm chạm nào trước?',
+{ id:'B:tp04-06', skill:'channel', read:'6 phút', assume:true, t:'Nên đưa tài sản vào điểm chạm nào trước?',
   situation:'Một thương hiệu mỹ phẩm Việt có màu hồng san hô và hoạ tiết lá dừa rất riêng trên bao bì. Nhưng trang Shopee dùng nền trắng chữ đen, video TikTok do từng KOL tự làm theo phong cách của họ, túi giao hàng màu nâu trơn. Khảo sát: 62% người mua ở cửa hàng nhận ra hoạ tiết lá dừa, nhưng chỉ 18% người chỉ mua online nhận ra.',
   concept:{ name:'Xếp điểm chạm theo lượt gặp và chi phí',
     body:'Tài sản chỉ lớn lên khi khách gặp nó <b>ở nơi họ gặp thương hiệu nhiều nhất</b>: bao bì, gian hàng sàn, video, túi giao, tin nhắn. Không cần phủ 100% điểm chạm; cần phủ phần lớn lượt gặp. Cách xếp thứ tự: lượt gặp thật mỗi tháng, khả năng đưa tài sản vào (tin nhắn chỉ có chữ thì khó), và chi phí; làm trước điểm lượt cao, chi phí thấp. Sau đó viết bộ quy tắc ngắn — tài sản nào bắt buộc ở đâu, cỡ tối thiểu — và đưa cho mọi người làm nội dung, kể cả KOL và xưởng in túi.' },
@@ -312,7 +313,7 @@ BAI_ADD({ mod:'tp04', lessons:[
              {k:'c',t:'Video KOL, ảnh bìa Shopee, túi giao: ba điểm đông nhất, vừa ngân sách'},{k:'d',t:'Chỉ video KOL, rồi để dành phần ngân sách còn lại cho tháng sau'}],
     answer:'c', why:{a:'Tốn 2,3 triệu, vượt ngân sách, mà chỉ phủ 25.000 lượt trong khi hai điểm còn lại có 450.000 lượt gần như miễn phí.',
       b:'Tổng 2,6 triệu, vượt ngân sách; bốn điểm có lượt rất khác nhau nên làm đồng loạt là lãng phí.',
-      c:'Đúng. Tổng 1,8 triệu, phủ 470.000 trong 495.000 lượt gặp; thẻ cảm ơn chỉ 5.000 lượt mà tốn 0,8 triệu nên để sau.',
+      c:'Đúng. Tổng 1,8 triệu, phủ 470.000 trong 475.000 lượt gặp của bốn điểm nêu trong đề; thẻ cảm ơn chỉ 5.000 lượt mà tốn 0,8 triệu nên để sau.',
       d:'Ảnh bìa Shopee có 150.000 lượt mà chỉ tốn 0,3 triệu; bỏ qua là bỏ một nơi rẻ và đông khách.'} },
   { type:'calc', stem:'Lượt gặp mỗi tháng của 6 điểm chạm online: hộp 20.000 (đã có hoạ tiết), video KOL 300.000, ảnh bìa Shopee 150.000, túi giao 20.000, tin nhắn xác nhận 20.000, thẻ cảm ơn 5.000. Sau khi đưa hoạ tiết vào video KOL, ảnh bìa Shopee và túi giao, bao nhiêu phần trăm lượt gặp có hoạ tiết? (làm tròn 1 chữ số thập phân)',
     unit:'%', ans:95.1, tol:0.2, wrong:[[66.7,'SAI_TINH_TOAN'],[3.9,'SAI_TINH_TOAN']], errors:['SAI_TINH_TOAN'],
@@ -348,7 +349,7 @@ BAI_ADD({ mod:'tp04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tp04-07', skill:'brand', read:'7 phút', t:'Đối thủ bắt chước tài sản của bạn, làm gì bây giờ?',
+{ id:'B:tp04-07', skill:'brand', read:'7 phút', assume:true, t:'Đối thủ bắt chước tài sản của bạn, làm gì bây giờ?',
   situation:'Một hãng bánh tráng trộn đóng gói nổi tiếng với túi zip vàng chanh có hình chiếc nón lá. Sáu tháng qua, ba hãng nhỏ ra túi vàng chanh gần giống, một hãng còn vẽ nón lá. Khảo sát che tên cho thấy độ riêng của túi vàng chanh giảm từ 82% xuống 61% (số minh hoạ). Đội muốn đổi hẳn sang túi màu tím để "thoát khỏi đám đông".',
   concept:{ name:'Bảo vệ tài sản khi bị bắt chước',
     body:'Bị bắt chước là dấu hiệu tài sản đang có giá trị. Phản ứng tệ nhất là bỏ chạy: đổi dấu hiệu thì trí nhớ nhiều năm bị bỏ lại cho đối thủ nhặt. Hợp lý hơn là <b>giữ, làm đậm, rồi leo thang theo nấc</b>: theo dõi và đo độ riêng → dùng tài sản đậm và đều hơn → thư cảnh báo → kiện. "Khó sao chép" phải hiểu cho đúng: nét thẩm mỹ thì ai cũng chỉnh theo được; thứ khó chép là thứ được đăng ký bảo hộ (nhãn hiệu, kiểu dáng) hoặc đã gắn với bạn qua nhiều năm lặp lại. Chưa đăng ký thì đường pháp lý hẹp hơn, nên đăng ký là việc cần làm sớm.' },

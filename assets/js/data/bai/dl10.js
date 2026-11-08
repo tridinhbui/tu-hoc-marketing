@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'dl10', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:dl10-01', skill:'measure', read:'6 phút', t:'ROAS 4, lãi 12 triệu, ROI 60%: ba con số trả lời ba câu hỏi nào?',
+{ id:'B:dl10-01', skill:'measure', read:'6 phút', assume:true, t:'ROAS 4, lãi 12 triệu, ROI 60%: ba con số trả lời ba câu hỏi nào?',
   situation:'Một shop mỹ phẩm online chạy chiến dịch tháng 9: chi 20 triệu quảng cáo, doanh thu từ chiến dịch 80 triệu. Giá vốn, phí sàn và ship chiếm 60% doanh thu. Trong buổi họp, người chạy quảng cáo nói "ROAS 4", kế toán nói "lãi 12 triệu", giám đốc hỏi "vậy ROI bao nhiêu?". Ba người tưởng đang nói khác nhau về cùng một chuyện (số minh hoạ).',
   concept:{ name:'ROI, ROAS và lợi nhuận',
     body:'<b>ROAS</b> (return on ad spend) = doanh thu ÷ chi quảng cáo, đơn vị "lần": mỗi đồng quảng cáo đi kèm bao nhiêu đồng doanh thu. <b>Lợi nhuận sau chiến dịch</b> = lãi gộp tăng thêm − chi phí chiến dịch, đơn vị "đồng": chiến dịch để lại bao nhiêu tiền. <b>ROI</b> (return on investment, tỉ suất lợi nhuận trên đầu tư) = (lợi ích − chi phí) ÷ chi phí, đơn vị "%": mỗi đồng bỏ ra sinh lời bao nhiêu. Trong marketing, lợi ích là lãi gộp tăng thêm nhờ chiến dịch, không phải doanh thu (Farris và cộng sự, Marketing Metrics, 2010). ROI 0% là hoà vốn; ROAS 1 thì chưa chắc.' },
@@ -37,12 +37,12 @@ BAI_ADD({ mod:'dl10', lessons:[
       c:'ROI dùng được cho marketing, miễn là lợi ích tính bằng lãi gộp tăng thêm.',
       d:'Đúng. ROAS 4 lần, ROI 60%; đổi chỗ là đổi luôn câu hỏi mỗi số trả lời.'} },
   { type:'mcq', stem:'Chiến dịch X có ROAS 3, chiến dịch Y có ROAS 2,5, cùng chi 20 triệu. X bán son biên lãi gộp 30%, Y bán serum biên 50%. Chiến dịch nào có ROI cao hơn?',
-    options:[{k:'a',t:'X, vì ROAS cao hơn thì ROI cũng cao hơn khi cùng mức chi'},{k:'b',t:'Y: lãi gộp 25 triệu, ROI 25%; X chỉ 18 triệu, ROI −10%'},
-             {k:'c',t:'Bằng nhau, vì cùng chi 20 triệu nên ROI chỉ phụ thuộc chi phí'},{k:'d',t:'Không so được, vì hai sản phẩm khác nhau thì ROI không so sánh'}],
-    answer:'b', why:{a:'ROAS chưa tính biên. X: 60 triệu × 30% = 18 triệu lãi gộp, không đủ trả 20 triệu chi.',
+    options:[{k:'a',t:'X: ROI 300%, Y: ROI 250% — ROAS cao hơn thì ROI cao hơn khi cùng chi'},{k:'b',t:'Y: lãi gộp 25 triệu, ROI 25%; X chỉ 18 triệu, ROI −10%'},
+             {k:'c',t:'Bằng nhau, ROI 0%: cùng chi 20 triệu nên hai bên hoà vốn như nhau'},{k:'d',t:'Không so được: X 200%, Y 150% là hai thước khác vì biên hai sản phẩm khác nhau'}],
+    answer:'b', why:{a:'ROAS viết thành % không phải ROI: 300% và 250% chưa trừ giá vốn lẫn chi. X: 60 × 30% = 18 triệu lãi gộp, không đủ trả 20 triệu chi.',
       b:'Đúng. Y: 50 × 50% = 25 triệu, (25 − 20) ÷ 20 = 25%. X: (18 − 20) ÷ 20 = −10%.',
-      c:'Cùng chi phí nhưng lãi gộp khác nhau thì ROI khác nhau.',
-      d:'So được, và chính ROI mới cho phép so hai sản phẩm có biên khác nhau.'} },
+      c:'Cùng chi phí nhưng lãi gộp khác nhau (25 so với 18 triệu) thì ROI khác nhau; ROI 0% chỉ xảy ra khi lãi gộp đúng bằng 20 triệu chi.',
+      d:'200% và 150% là (doanh thu − chi) ÷ chi, tức ROAS − 1, không phải ROI; và chính ROI trên lãi gộp mới cho phép so hai sản phẩm có biên khác nhau.'} },
   { type:'mcq', stem:'Câu nào mô tả đúng một chiến dịch có ROI 0%?',
     options:[{k:'a',t:'Lãi gộp tăng thêm vừa đủ bù chi phí chiến dịch, chưa sinh lời'},{k:'b',t:'Chiến dịch không bán được đơn nào trong suốt thời gian chạy quảng cáo'},
              {k:'c',t:'Tương đương ROAS 1, tức doanh thu bằng đúng chi quảng cáo'},{k:'d',t:'Chiến dịch lỗ đúng bằng số tiền đã chi cho quảng cáo kỳ này'}],
@@ -60,7 +60,7 @@ BAI_ADD({ mod:'dl10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:dl10-02', skill:'measure', read:'6 phút', t:'Agency báo "ROI 300%" vì doanh thu gấp 4 lần chi: sai ở đâu?',
+{ id:'B:dl10-02', skill:'measure', read:'6 phút', assume:true, t:'Agency báo "ROI 300%" vì doanh thu gấp 4 lần chi: sai ở đâu?',
   situation:'Một agency gửi báo cáo cho shop đồ gia dụng: "Chiến dịch tháng 10 chi 50 triệu, doanh thu 200 triệu, ROI 300%." Chủ shop mừng, định tăng ngân sách gấp đôi. Kế toán nhắc: biên lãi gộp của nhóm nồi, chảo này chỉ 30% sau giá vốn, phí sàn và ship (số minh hoạ).',
   concept:{ name:'ROI marketing tính trên lãi gộp',
     body:'Công thức ROI nói "lợi ích trừ chi phí". Doanh thu không phải lợi ích của shop: phần lớn doanh thu là tiền trả lại cho nhà cung cấp, sàn, đơn vị giao hàng. Lợi ích thật là <b>lãi gộp tăng thêm</b> = doanh thu tăng thêm × biên lãi gộp (biên đã trừ giá vốn và chi phí theo đơn). Lấy (doanh thu − chi) ÷ chi thực chất là "ROAS − 1" viết thành phần trăm, không phải ROI. Thêm một lưu ý: chỉ tính phần doanh thu chiến dịch tạo thêm; đơn của khách đằng nào cũng mua không phải lợi ích của chiến dịch.' },
@@ -101,11 +101,11 @@ BAI_ADD({ mod:'dl10', lessons:[
       c:'ROI không giảm theo tỉ lệ với biên, vì chi phí bị trừ nguyên đủ: 20% xuống −20%.',
       d:'300% vốn đã là con số sai; nó không đổi chính vì nó bỏ qua biên.'} },
   { type:'mcq', stem:'Trong 200 triệu, 80 triệu là đơn của khách cũ, những người vẫn mua đều đặn kể cả khi không có quảng cáo. ROI theo phần tăng thêm nên tính thế nào?',
-    options:[{k:'a',t:'Giữ 20%, vì khách cũ đã bấm quảng cáo thì vẫn là khách của chiến dịch'},{k:'b',t:'Tính trên 200 triệu nhưng nhân thêm hệ số an toàn 0,8 cho chắc'},
-             {k:'c',t:'Bớt khách cũ khỏi chi phí, giữ nguyên doanh thu 200 triệu'},{k:'d',t:'Chỉ tính 120 triệu tăng thêm: lãi gộp 36 triệu, ROI khoảng −28%'}],
-    answer:'d', why:{a:'Bấm quảng cáo không có nghĩa quảng cáo tạo ra đơn; nhóm này đằng nào cũng mua.',
-      b:'Hệ số 0,8 là đoán; dữ kiện đã cho biết rõ phần nào không tăng thêm.',
-      c:'Chi phí đã tiêu không bớt được; phần cần bớt là doanh thu không do chiến dịch tạo ra.',
+    options:[{k:'a',t:'Giữ ROI 20% trên cả 200 triệu: khách cũ đã bấm quảng cáo thì vẫn là đơn của chiến dịch'},{k:'b',t:'Nhân 200 triệu với hệ số an toàn 0,8: lãi gộp 48 triệu, ROI −4%'},
+             {k:'c',t:'Bớt 40% chi phí ứng với khách cũ: chi còn 30 triệu, lãi gộp 60 triệu, ROI 100%'},{k:'d',t:'Chỉ tính 120 triệu tăng thêm: lãi gộp 36 triệu, ROI khoảng −28%'}],
+    answer:'d', why:{a:'Bấm quảng cáo không có nghĩa quảng cáo tạo ra đơn; nhóm này đằng nào cũng mua, nên 20% trên cả 200 triệu là phồng lợi ích.',
+      b:'Hệ số 0,8 là đoán: 200 × 0,8 × 30% = 48 triệu, (48 − 50) ÷ 50 = −4%, trong khi dữ kiện đã cho biết rõ phần nào không tăng thêm.',
+      c:'Chi phí đã tiêu không bớt được, và lãi gộp 60 triệu vẫn gồm phần khách cũ; phần cần bớt là doanh thu không do chiến dịch tạo ra.',
       d:'Đúng. 120 × 30% = 36 triệu; (36 − 50) ÷ 50 = −28%.'} },
   { type:'mcq', stem:'Cách ghi ROI nào minh bạch nhất trong báo cáo gửi chủ shop?',
     options:[{k:'a',t:'Ghi ROI thật to ở đầu trang, phần cách tính để ở phụ lục cuối file'},{k:'b',t:'Ghi rõ lợi ích là lãi gộp tăng thêm, biên bao nhiêu, kỳ đo nào'},
@@ -117,7 +117,7 @@ BAI_ADD({ mod:'dl10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:dl10-03', skill:'measure', read:'6 phút', t:'ROI 100% chỉ tính tiền media — còn quay dựng và lương thì sao?',
+{ id:'B:dl10-03', skill:'measure', read:'6 phút', assume:true, t:'ROI 100% chỉ tính tiền media — còn quay dựng và lương thì sao?',
   situation:'Một chuỗi trà sữa 8 cửa hàng làm chiến dịch ra món mới mùa thu. Bảng quảng cáo ghi: chi media 60 triệu, lãi gộp tăng thêm 120 triệu, "ROI 100%". Nhưng chiến dịch còn tốn 25 triệu quay dựng video, 5 triệu thiết kế ấn phẩm, và hai nhân viên marketing dành trọn tháng cho nó, phần lương khoảng 10 triệu (số minh hoạ).',
   concept:{ name:'Chi phí cố định và biến đổi trong ROI',
     body:'Chi phí <b>biến đổi</b> tăng giảm theo quy mô chạy: tiền media, hoa hồng KOC theo đơn, mã giảm giá. Chi phí <b>cố định</b> của chiến dịch phải trả dù chạy nhiều hay ít: quay dựng, thiết kế, và thời gian của đội làm chiến dịch. Phần lương là lựa chọn quy tắc: tính theo chi phí cơ hội, vì nếu không làm chiến dịch thì hai người ấy làm việc khác có giá trị; công ty nào không tính thì phải ghi rõ. ROI chiến dịch phải tính trên tổng chi phí chiến dịch gây ra, nếu không mọi chiến dịch nặng sản xuất đều trông rất lời. Hai lưu ý: chi phí cố định làm ROI thấp ở quy mô nhỏ và cải thiện khi chi media lớn lên; nếu video được dùng lại cho chiến dịch sau, có thể phân bổ, nhưng phải ghi rõ quy tắc.' },
@@ -174,7 +174,7 @@ BAI_ADD({ mod:'dl10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:dl10-04', skill:'measure', read:'7 phút', t:'ROI tháng đầu −67%: dừng chiến dịch hay chờ khách ở lại?',
+{ id:'B:dl10-04', skill:'measure', read:'7 phút', assume:true, t:'ROI tháng đầu −67%: dừng chiến dịch hay chờ khách ở lại?',
   situation:'Một app học tiếng Anh thu 200.000đ mỗi tháng. Chiến dịch tháng 3 chi 60 triệu, có 200 người đăng ký mới. Sau chi phí máy chủ, cổng thanh toán và chấm bài, mỗi người để lại 100.000đ lãi gộp mỗi tháng. Dữ liệu các đợt trước: người đăng ký ở lại trung bình 6 tháng. Cuối tháng 3, báo cáo ghi "ROI −67%", sếp muốn dừng (số minh hoạ).',
   concept:{ name:'ROI theo kỳ và giá trị vòng đời',
     body:'ROI luôn gắn với một khoảng thời gian. Với sản phẩm khách mua nhiều lần, ROI trong kỳ đầu chỉ thấy lãi của lần mua đầu, nên có thể âm dù khách mang về nhiều lãi về sau. Cách nhìn đủ hơn: lợi ích = <b>lãi gộp vòng đời (LTV)</b> của nhóm khách có được, đi kèm <b>thời gian hoàn vốn</b> (payback): bao lâu thì lãi tích luỹ bù được chi phí. LTV phải lấy từ dữ liệu giữ chân thật, và tiền về càng muộn càng rủi ro. Vì vậy chỉ so ROI của hai chiến dịch khi chúng dùng cùng kỳ đo.' },
@@ -231,7 +231,7 @@ BAI_ADD({ mod:'dl10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:dl10-05', skill:'measure', read:'7 phút', t:'Phải bán bao nhiêu hộp thì chiến dịch không lỗ?',
+{ id:'B:dl10-05', skill:'measure', read:'7 phút', assume:true, t:'Phải bán bao nhiêu hộp thì chiến dịch không lỗ?',
   situation:'Một shop nến thơm làm tay bán qua website, giá 250.000đ một hộp. Sau giá vốn, ship shop chịu và phí thanh toán, mỗi đơn còn 100.000đ lãi gộp. Chiến dịch Giáng sinh dự kiến: 30 triệu quảng cáo, 10 triệu chụp ảnh và thuê KOC trọn gói. Chủ shop hỏi: "Phải bán bao nhiêu hộp thì không lỗ? ROAS bao nhiêu là đủ?" (số minh hoạ)',
   concept:{ name:'Điểm hoà vốn của chiến dịch (ROI = 0)',
     body:'Hoà vốn là khi lãi gộp tăng thêm vừa bằng tổng chi phí chiến dịch, tức ROI = 0. Từ đó có ba mốc. <b>Số đơn hoà vốn</b> = tổng chi phí chiến dịch ÷ lãi gộp mỗi đơn. <b>ROAS hoà vốn</b> = doanh thu hoà vốn ÷ chi quảng cáo; nó chỉ bằng 1 ÷ biên lãi gộp khi chiến dịch không có chi phí cố định. <b>CAC tối đa</b> = số tiền lớn nhất được chi để có một khách mới mà không lỗ, bằng lãi gộp khách đó mang về trong khoảng thời gian bạn chấp nhận chờ. Chi phí cố định đẩy cả ba mốc lên.' },
@@ -284,10 +284,11 @@ BAI_ADD({ mod:'dl10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:dl10-06', skill:'measure', read:'7 phút', t:'Chiến dịch thương hiệu ROI −80% sau một tháng: cắt hay đo lại?',
+{ id:'B:dl10-06', skill:'measure', read:'7 phút', assume:true, t:'Chiến dịch thương hiệu ROI −80% sau một tháng: cắt hay đo lại?',
+  src:[{ t:'Binet & Field (2013), “The Long and the Short of It: Balancing Short and Long-Term Marketing Strategies”, IPA', u:'https://ipa.co.uk/knowledge/publications-reports/the-long-and-the-short-of-it-balancing-short-and-long-term-marketing-strategies', d:'2026-11-07', st:'chua' }],
   situation:'Một chuỗi cà phê 15 cửa hàng chi 150 triệu cho chiến dịch thương hiệu quý 1: video kể chuyện vùng trồng và biển quảng cáo gần cửa hàng. Cuối tháng đầu, doanh thu tăng thêm ước 60 triệu so với cùng kỳ năm trước, biên lãi gộp 50%. Giám đốc tài chính tính ROI tháng đầu −80% và đề nghị cắt toàn bộ ngân sách thương hiệu (số minh hoạ).',
   concept:{ name:'ROI của xây thương hiệu',
-    body:'Quảng cáo kích hoạt bán hàng (giảm giá, quảng cáo chuyển đổi) cho kết quả nhanh rồi tắt. Xây thương hiệu làm nhiều người nhớ và nghĩ tới bạn hơn; hiệu ứng tích luỹ chậm qua nhiều tháng. Binet và Field (IPA, 2013) phân tích dữ liệu các chiến dịch ở Anh và cho rằng hiệu ứng thương hiệu thường cần hơn 6 tháng mới rõ, nên đo trong tháng sẽ đánh giá thấp nó. Đây là một khung có ảnh hưởng; có quan điểm khác về cách chia ngân sách. Đọc đúng: kỳ đo dài hơn, chỉ số gián tiếp (tìm kiếm tên thương hiệu, nhận biết, giá bán giữ được), và đối chứng giữa nơi có và không chạy.' },
+    body:'Quảng cáo kích hoạt bán hàng (giảm giá, quảng cáo chuyển đổi) cho kết quả nhanh rồi tắt. Xây thương hiệu làm nhiều người nhớ và nghĩ tới bạn hơn; hiệu ứng tích luỹ chậm qua nhiều tháng. Binet và Field (IPA, 2013; xem nguồn, ngày kiểm 7/11/2026) phân tích dữ liệu các chiến dịch ở Anh và cho rằng hiệu ứng thương hiệu tích luỹ chậm, phải đo theo kỳ dài — mốc “hơn 6 tháng” là cách đọc của tác giả bài, không phải trích nguyên văn; đo trong tháng sẽ đánh giá thấp nó. Đây là một khung có ảnh hưởng; có quan điểm khác về cách chia ngân sách. Đọc đúng: kỳ đo dài hơn, chỉ số gián tiếp (tìm kiếm tên thương hiệu, nhận biết, giá bán giữ được), và đối chứng giữa nơi có và không chạy.' },
   example:'ROI tháng đầu = (60 × 50% − 150) ÷ 150 = (30 − 150) ÷ 150 = −80%. Phép tính đúng, nhưng trả lời sai câu hỏi. Thêm nữa, 60 triệu là so với cùng kỳ, không có đối chứng: có thể do thời tiết hay món mới. Cách đọc tốt hơn: chạy biển quảng cáo ở 10 cửa hàng, giữ 5 cửa hàng tương tự không chạy, theo dõi 6–9 tháng: lượt tìm tên quán, tỉ lệ khách quay lại, mức giảm giá phải dùng. Không ép ROI dương trong tháng — nhưng cũng không miễn đo.',
   takeaway:'Đừng ép ROI tháng cho chiến dịch thương hiệu; đo bằng kỳ dài hơn, chỉ số gián tiếp và nhóm đối chứng — nhưng vẫn phải đo.',
   apply:'Cho: chiến dịch thương hiệu 120 triệu, doanh thu tăng thêm tháng đầu 48 triệu, biên lãi gộp 50%. Viết một đoạn 4–5 câu trả lời giám đốc tài chính. Đạt khi: (1) có ROI tháng đầu −80% và nói rõ đây là ROI ngắn hạn; (2) đề xuất một đối chứng cụ thể (khu vực hoặc nhóm cửa hàng không chạy); (3) nêu hai chỉ số gián tiếp và mốc thời gian đọc lại.',
@@ -341,7 +342,7 @@ BAI_ADD({ mod:'dl10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:dl10-07', skill:'measure', read:'6 phút', t:'ROI 150% hay ROI 60%: phương án nào để lại nhiều tiền hơn?',
+{ id:'B:dl10-07', skill:'measure', read:'6 phút', assume:true, t:'ROI 150% hay ROI 60%: phương án nào để lại nhiều tiền hơn?',
   situation:'Một shop đồ ăn vặt có tối đa 100 triệu cho quảng cáo tháng 11. Phương án A: chỉ nhắm lại người đã xem web; tệp nhỏ nên tiêu tối đa 20 triệu, dự kiến 50 triệu lãi gộp. Phương án B: chạy A cộng thêm mở rộng tệp mới, tiêu đủ 100 triệu, dự kiến 160 triệu lãi gộp. Tiền không chi cho quảng cáo sẽ nằm yên trong tài khoản (số minh hoạ).',
   concept:{ name:'ROI cao chưa chắc là phương án tốt hơn',
     body:'ROI là tỉ lệ, nên nó ưu ái chiến dịch nhỏ và tinh: chi ít, lời nhiều trên mỗi đồng. Nhưng thứ doanh nghiệp giữ lại là <b>lợi nhuận tuyệt đối</b> (đồng). Khi tiền không dùng sẽ nằm yên, chọn phương án cho nhiều lợi nhuận tuyệt đối hơn, miễn phần tiền thêm vẫn có lời. Khi tiền khan và có nơi dùng tốt hơn, phải so lời của phần tiền thêm với nơi đó. Cách so gọn: <b>ROI biên</b> = lợi nhuận tăng thêm ÷ chi phí tăng thêm khi đi từ phương án nhỏ lên phương án lớn.' },
@@ -398,7 +399,7 @@ BAI_ADD({ mod:'dl10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:dl10-08', skill:'measure', read:'6 phút', t:'Báo ROI cho sếp trên một trang: viết gì, bỏ gì?',
+{ id:'B:dl10-08', skill:'measure', read:'6 phút', assume:true, t:'Báo ROI cho sếp trên một trang: viết gì, bỏ gì?',
   situation:'Sau chiến dịch hè, trưởng nhóm marketing của một chuỗi kem 6 cửa hàng phải báo ROI cho giám đốc. Tổng chi 80 triệu: 60 triệu quảng cáo, 20 triệu sản xuất. So với 2 cửa hàng đối chứng không chạy, doanh thu tăng thêm ước từ 220 đến 280 triệu trong 3 tháng. Biên lãi gộp 40%. Giám đốc dặn: "Một trang thôi, và cho tôi biết con số chắc tới đâu." (số minh hoạ)',
   concept:{ name:'Báo cáo ROI một trang',
     body:'Một báo cáo ROI đáng tin có năm phần. (1) <b>Kết luận</b> một câu bằng tiền. (2) <b>Bảng số</b>: tổng chi (tách media và cố định), doanh thu tăng thêm, biên, lãi gộp, lợi nhuận tuyệt đối, ROI. (3) <b>Khoảng</b> thấp – giữa – cao thay vì một con số chính xác giả. (4) <b>Giả định</b>: đối chứng là gì, kỳ đo bao lâu, biên lấy từ đâu. (5) <b>Đề xuất</b> bước tiếp theo. ROI không đứng một mình: luôn đặt cạnh lợi nhuận tuyệt đối và kỳ đo, để người đọc biết nó to hay nhỏ, nhanh hay chậm.' },

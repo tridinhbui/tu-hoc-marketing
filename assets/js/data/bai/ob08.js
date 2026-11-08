@@ -5,7 +5,7 @@
 BAI_ADD({ mod:'ob08', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:ob08-01', skill:'insight', read:'6 phút', t:'Quán bún bò bán chậm: lỗi ở món, ở giá, ở chỗ bán hay ở lời rao?',
+{ id:'B:ob08-01', skill:'insight', read:'6 phút', assume:true, t:'Quán bún bò bán chậm: lỗi ở món, ở giá, ở chỗ bán hay ở lời rao?',
   situation:'Một quán bún bò ở Thủ Đức mở được 3 tháng, bán trung bình 80 tô/ngày, chủ quán muốn lên 150. Chủ quán định chi 5 triệu chạy quảng cáo Facebook vì nghĩ "chưa ai biết quán". Hỏi nhanh 120 khách lúc ra về: 54 người chê giá 55.000đ cao hơn quán bên cạnh (40.000đ), 30 người than khó gửi xe, 21 người khen nước dùng, 15 người biết quán qua bạn bè. (số minh hoạ)',
   concept:{ name:'Marketing mix 4P: bảng kiểm bốn nhóm quyết định',
     body:'<b>Marketing mix</b> (hỗn hợp marketing) là tập các quyết định doanh nghiệp tự kiểm soát được để tác động tới việc khách chọn mua. Cụm từ do Neil Borden phổ biến; E. Jerome McCarthy (1960, sách <i>Basic Marketing</i>) gom thành bốn nhóm: <b>Product</b> (sản phẩm), <b>Price</b> (giá), <b>Place</b> (phân phối: khách mua ở đâu, có sẵn hàng không), <b>Promotion</b> (truyền thông). Philip Kotler đưa khung này vào giáo trình phổ biến nhất ngành. 4P là một <b>bảng kiểm</b>: nó nhắc bạn đừng bỏ sót nhóm quyết định nào. Nó không nói P nào quan trọng nhất hay phải làm gì; câu trả lời đến từ khách và số liệu.' },
@@ -62,7 +62,7 @@ BAI_ADD({ mod:'ob08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:ob08-02', skill:'brand', read:'6 phút', t:'Cùng một hũ sữa chua, khách thật ra đang mua gì?',
+{ id:'B:ob08-02', skill:'brand', read:'6 phút', assume:true, t:'Cùng một hũ sữa chua, khách thật ra đang mua gì?',
   situation:'Một cơ sở sữa chua nếp cẩm ở Hà Nội bán 30.000đ/hũ, mỗi tháng khoảng 3.000 hũ, trong đó 1.800 hũ đi qua app giao đồ ăn (trung bình 2 hũ một đơn). Chủ cơ sở muốn tăng giá lên 35.000đ và định "nâng cấp sản phẩm" bằng hũ thuỷ tinh đắt hơn 4.000đ/hũ. Trên app, đánh giá 1 sao nhiều nhất vì "giao tới bị chảy, ấm"; đánh giá 5 sao vì "ít ngọt, ăn no nhẹ".',
   concept:{ name:'Ba tầng sản phẩm (Kotler)',
     body:'Theo Kotler & Armstrong (<i>Principles of Marketing</i>), một sản phẩm có ba tầng. <b>Lợi ích cốt lõi</b> (core customer value): vấn đề khách thật sự muốn giải quyết. <b>Sản phẩm thực</b> (actual product): thứ cầm được — chất lượng, tính năng, kiểu dáng, bao bì, tên thương hiệu. <b>Sản phẩm mở rộng</b> (augmented product): dịch vụ và lợi ích đi kèm — giao hàng, bảo hành, đổi trả, hỗ trợ sau mua. Product trong 4P là cả ba tầng, không chỉ cái hũ. Đầu tư vào sai tầng thì tốn tiền mà khách không thấy khác.' },
@@ -119,7 +119,7 @@ BAI_ADD({ mod:'ob08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:ob08-03', skill:'measure', read:'6 phút', t:'Giảm giá 10% thì phải bán thêm bao nhiêu để giữ nguyên lãi?',
+{ id:'B:ob08-03', skill:'measure', read:'6 phút', assume:true, t:'Giảm giá 10% thì phải bán thêm bao nhiêu để giữ nguyên lãi?',
   situation:'Một shop nến thơm online ở Đà Nẵng bán hũ 200g giá 180.000đ, chi phí biến đổi (nguyên liệu, hũ, đóng gói) 108.000đ/hũ, mỗi tháng bán 400 hũ. Một đối thủ mới bán loại tương tự 150.000đ. Chủ shop định giảm 10% còn 162.000đ "để giữ khách", và nghĩ chỉ cần bán thêm khoảng 10% là bù lại phần giảm. (số minh hoạ)',
   concept:{ name:'Price trong mix và biên lãi gộp',
     body:'Price là P duy nhất mang tiền về; ba P còn lại tốn tiền. Giá vừa là con số trên nhãn, vừa là tín hiệu định vị. Hai phép tính cần nhớ: <b>lãi gộp mỗi sản phẩm = giá bán − chi phí biến đổi</b>; <b>biên lãi gộp = lãi gộp ÷ giá bán</b>. Giảm giá lấy tiền thẳng từ lãi gộp, nên vài phần trăm giảm trên giá thành phần trăm giảm lớn hơn nhiều trên lãi. Muốn giữ tổng lãi, sản lượng phải nhân với <b>lãi cũ ÷ lãi mới</b>. Kotler & Armstrong mô tả ba cách định giá: theo giá trị khách cảm nhận, theo chi phí, theo đối thủ. Chi phí là sàn, giá trị khách cảm nhận là trần.' },
@@ -176,7 +176,7 @@ BAI_ADD({ mod:'ob08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:ob08-04', skill:'channel', read:'6 phút', t:'Quảng cáo chạy tốt, nhưng khách tìm mà không thấy hàng ở đâu',
+{ id:'B:ob08-04', skill:'channel', read:'6 phút', assume:true, t:'Quảng cáo chạy tốt, nhưng khách tìm mà không thấy hàng ở đâu',
   situation:'Một hãng tương ớt nhỏ ở Bình Định bán chai 20.000đ (giá lẻ). Hàng có mặt ở 300 trong khoảng 2.000 tạp hoá của khu vực nhắm tới, cộng một gian hàng trên sàn. Tháng trước một video đạt 500.000 lượt xem, nhiều bình luận hỏi "mua ở đâu?", nhưng doanh số tạp hoá gần như đứng yên. Tạp hoá hưởng 20% giá lẻ; nhà phân phối hưởng 10% trên giá nhập của tạp hoá. (số minh hoạ)',
   concept:{ name:'Place: kênh phân phối và mức sẵn có',
     body:'Place trả lời hai câu: khách mua ở đâu, và hàng có sẵn đúng lúc họ cần không. <b>Kênh phân phối</b> là chuỗi trung gian đưa hàng tới khách: bán thẳng (kênh cấp 0), qua nhà bán lẻ (cấp 1), qua nhà phân phối rồi nhà bán lẻ (cấp 2). Mỗi trung gian giữ một phần giá để đổi lấy độ phủ và công việc: kho, giao, thu tiền. Kotler mô tả ba mức phủ: <b>rộng khắp</b> (càng nhiều điểm càng tốt, hợp hàng tiêu dùng nhanh), <b>chọn lọc</b> và <b>độc quyền</b>. Với hàng mua ngay, không có sẵn thường là mất đơn: khách lấy chai khác trên kệ.' },
@@ -233,7 +233,7 @@ BAI_ADD({ mod:'ob08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:ob08-05', skill:'comm', read:'6 phút', t:'Marketing có phải là chạy quảng cáo không?',
+{ id:'B:ob08-05', skill:'comm', read:'6 phút', assume:true, t:'Marketing có phải là chạy quảng cáo không?',
   situation:'Một studio chụp ảnh gia đình ở Hải Phòng tháng trước chi 10 triệu quảng cáo Facebook, được 4.000 lượt click vào trang và 40 lượt đặt lịch. Cùng tháng, fanpage của studio (đăng 3 bài/tuần) mang về 25 lượt đặt; 15 lượt đặt khác đến từ khách cũ giới thiệu và một bài review trong nhóm các mẹ. Chủ studio nói: "Marketing của mình là cái 10 triệu kia." (số minh hoạ)',
   concept:{ name:'Promotion: kênh trả tiền, kênh sở hữu, kênh được nhắc',
     body:'Promotion (truyền thông marketing) là cách doanh nghiệp nói với khách. Kotler liệt kê các công cụ: quảng cáo, khuyến mãi, bán hàng trực tiếp, quan hệ công chúng (PR), marketing trực tiếp và số. Một cách chia phổ biến trong truyền thông số, theo ai sở hữu kênh: <b>paid</b> (trả tiền: quảng cáo), <b>owned</b> (sở hữu: fanpage, website, Zalo OA), <b>earned</b> (được nhắc: review, truyền miệng, báo chí). Quảng cáo chỉ là một phần của Promotion, và Promotion chỉ là một trong 4P. Định nghĩa của AMA (Hiệp hội Marketing Hoa Kỳ, 2017) gồm cả tạo ra, truyền thông, đưa tới và trao đổi những thứ có giá trị cho khách.' },
@@ -290,7 +290,7 @@ BAI_ADD({ mod:'ob08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:ob08-06', skill:'insight', read:'6 phút', t:'Bán dịch vụ: vì sao 4P chưa đủ?',
+{ id:'B:ob08-06', skill:'insight', read:'6 phút', assume:true, t:'Bán dịch vụ: vì sao 4P chưa đủ?',
   situation:'Một trung tâm tiếng Anh thiếu nhi ở Vũng Tàu thu 6 triệu/khoá, rẻ hơn trung tâm cạnh đó 500.000đ. Tháng trước có 120 phụ huynh cho con học thử, 30 người đăng ký (25%). Ghi chú của tư vấn viên: phụ huynh chờ khoảng 30 phút mới được gặp tư vấn; mỗi buổi học thử một giáo viên khác; phòng chờ không có chỗ cho trẻ ngồi. Trung tâm cạnh đó đắt hơn nhưng nghe nói tỉ lệ đăng ký sau học thử cao hơn. (số minh hoạ)',
   concept:{ name:'7P cho dịch vụ (Booms & Bitner, 1981)',
     body:'Dịch vụ khác hàng hoá: khách không cầm được trước khi mua, việc tạo ra và dùng diễn ra cùng lúc, chất lượng phụ thuộc người phục vụ. Bernard Booms và Mary Jo Bitner (1981) đề xuất thêm ba P cho dịch vụ: <b>People</b> (con người — nhân viên, và cả những khách khác có mặt), <b>Process</b> (quy trình — các bước khách đi qua, thời gian chờ), <b>Physical evidence</b> (bằng chứng hữu hình — không gian, đồng phục, giấy tờ, chứng chỉ: những thứ khách nhìn thấy để đoán chất lượng của thứ chưa thấy). Với quán cà phê, phòng khám hay trung tâm tiếng Anh, ba P này thường quyết định khách có mua và quay lại.' },
@@ -347,7 +347,7 @@ BAI_ADD({ mod:'ob08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:ob08-07', skill:'brand', read:'6 phút', t:'Trà "cao cấp" mà lúc nào cũng giảm 30%: các P có khớp nhau không?',
+{ id:'B:ob08-07', skill:'brand', read:'6 phút', assume:true, t:'Trà "cao cấp" mà lúc nào cũng giảm 30%: các P có khớp nhau không?',
   situation:'Một thương hiệu trà ô long đóng chai ở TP.HCM định vị "trà cao cấp cho dân văn phòng": chai 60.000đ, chi phí biến đổi 24.000đ, chai thuỷ tinh đẹp, quảng cáo hình ảnh sang. Nhưng gian hàng trên sàn gần như lúc nào cũng có mã giảm 30%, và ngoài đời hàng chủ yếu nằm ở thùng xả hàng của các tạp hoá cạnh chợ. Tháng qua bán 5.000 chai, 80% qua mã giảm. (số minh hoạ)',
   concept:{ name:'Bảng kiểm nhất quán giữa các P',
     body:'Các P không hoạt động riêng lẻ: khách nhìn chúng cùng lúc và ghép thành một ấn tượng. Kotler & Armstrong nhấn mạnh marketing mix phải là một <b>chương trình tích hợp</b> phục vụ cùng một định vị. Bảng kiểm nhất quán: (1) viết một câu định vị — dành cho ai, hứa điều gì; (2) với mỗi P, hỏi "quyết định này nói cùng câu đó hay nói ngược lại?"; (3) đánh dấu P đứt gãy — thường là chỗ hai P kể hai câu chuyện khác nhau; (4) tính cái giá của chỗ đứt gãy bằng số. Một P mạnh không bù được một P đi ngược; nó còn làm khách bối rối.' },
@@ -363,12 +363,12 @@ BAI_ADD({ mod:'ob08', lessons:[
       b:'Hai P này đang khớp định vị; chúng chỉ trông "quá sang" vì hai P kia kéo xuống.',
       c:'Chai thuỷ tinh hợp định vị; lý do giảm giá không đến từ bao bì.',
       d:'Promotion đúng đối tượng; chỗ lệch là Place, không phải cặp này.'} },
-  { type:'mcq', stem:'Bạn được giao sửa trong 3 tháng. Bạn chọn hướng nào?',
+  { type:'mcq', stem:'Bạn được giao sửa trong 3 tháng. Tháng vừa rồi, thử bán không mã ở 5 căng tin văn phòng gần đó: 400 chai bán được ở giá gốc 60.000đ. Bạn chọn hướng nào?',
     options:[{k:'a',t:'Đổi định vị sang "trà giá rẻ" cho khớp với giá và kênh đang có'},{k:'b',t:'Tăng quảng cáo hình ảnh sang để át cảm giác hàng giảm giá'},
              {k:'c',t:'Thưa mã giảm dần, đưa hàng về căng tin, cửa hàng gần văn phòng'},{k:'d',t:'Đổi sang chai nhựa cho rẻ rồi giữ nguyên mã giảm 30% như cũ'}],
-    answer:'c', why:{a:'Một lựa chọn có lý nếu dữ liệu cho thấy khách chỉ mua khi giảm; nhưng khi đó phải đổi cả chai và quảng cáo, và lãi 18.000đ/chai rất mỏng.',
+    answer:'c', why:{a:'Chỉ có lý nếu khách không chịu mua ở giá gốc; nhưng 400 chai bán đúng giá ở căng tin cho thấy khách văn phòng vẫn mua ở 60.000đ. Đổi sang “trà giá rẻ” là bỏ nhóm khách đang khớp định vị, phải đổi cả chai và quảng cáo, và lãi 18.000đ/chai rất mỏng.',
       b:'Thêm tiền cho P đang khớp không sửa được P đang gãy; khách vẫn thấy mã giảm mỗi ngày.',
-      c:'Đúng. Kéo Price và Place về cùng câu định vị; làm dần để đo xem mất bao nhiêu sản lượng.',
+      c:'Đúng. Kéo Price và Place về cùng câu định vị, bắt đầu từ kênh căng tin đã bán được đúng giá; làm dần để đo xem mất bao nhiêu sản lượng.',
       d:'Giảm chi phí nhưng làm Product cũng đứt gãy theo; giờ ba P nói ngược định vị.'} },
   { type:'calc', stem:'Chai trà 60.000đ, chi phí biến đổi 24.000đ. Khi bán với mã giảm 30%, lãi gộp mỗi chai giảm bao nhiêu %?',
     unit:'%', ans:50, tol:0.5, wrong:[[30,'GIAM_GIA_QUEN_BIEN']], errors:['GIAM_GIA_QUEN_BIEN'],
@@ -404,7 +404,7 @@ BAI_ADD({ mod:'ob08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:ob08-08', skill:'insight', read:'6 phút', t:'4P nhìn từ quầy người bán — khách nhìn thấy gì khác?',
+{ id:'B:ob08-08', skill:'insight', read:'6 phút', assume:true, t:'4P nhìn từ quầy người bán — khách nhìn thấy gì khác?',
   situation:'Một trung tâm tiếng Anh cho người đi làm ở quận 7, TP.HCM làm 4P khá đủ: khoá 30 buổi giá 4 triệu, giáo trình tốt, phòng học đẹp, quảng cáo đều đặn. Nhưng 40% học viên bỏ ngang giữa khoá. Hỏi những người bỏ học: phần lớn ở cách 8–10 km, mỗi buổi tốn khoảng 20.000đ xăng, gửi xe và gần 1 tiếng đi về sau giờ làm. (số minh hoạ)',
   concept:{ name:'4C của Lauterborn và giới hạn của 4P',
     body:'4P nhìn từ phía người bán: tôi bán gì, giá bao nhiêu, ở đâu, nói gì. Robert Lauterborn (1990) đề xuất đọc lại từ phía khách thành <b>4C</b>: <b>Consumer wants and needs</b> (nhu cầu khách, thay cho sản phẩm), <b>Cost</b> (tổng chi phí khách bỏ ra — tiền, thời gian, công sức — thay cho giá), <b>Convenience</b> (sự thuận tiện khi mua, thay cho địa điểm), <b>Communication</b> (đối thoại hai chiều, thay cho truyền thông một chiều). Các phê phán khác: 4P ra đời trong bối cảnh hàng tiêu dùng ở Mỹ thập niên 1960, thiếu phần dịch vụ (nên mới có 7P) và ít nói về quan hệ lâu dài với khách. 4P là một công cụ, không phải chân lý; có những khung khác, dùng khung nào tuỳ câu hỏi.' },

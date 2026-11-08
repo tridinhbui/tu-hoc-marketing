@@ -4,7 +4,7 @@
 BAI_ADD({ mod:'in04', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:in04-01', skill:'comm', read:'6 phút', t:'Đề xuất của bạn nói được trong một câu không?',
+{ id:'B:in04-01', skill:'comm', read:'6 phút', assume:true, t:'Đề xuất của bạn nói được trong một câu không?',
   situation:'Linh làm marketing cho một chuỗi 30 cửa hàng trà sữa ở Hà Nội. Sau hai tuần phân tích, cô gửi sếp một email dài 900 chữ: số liệu khung giờ, bình luận khách, so sánh đối thủ. Câu cuối email viết: "Em nghĩ mình nên cân nhắc tối ưu khung giờ chiều." Sếp trả lời một dòng: "Vậy em muốn làm gì, bao nhiêu tiền?"',
   concept:{ name:'Câu đề xuất một dòng (What)',
     body:'Một đề xuất bắt đầu bằng câu <b>What</b>: ai làm gì, ở đâu, trong bao lâu, để đạt con số nào. Công thức gọn: <b>Động từ hành động + phạm vi + thời gian + mục tiêu đo được</b>. "Cân nhắc tối ưu" không phải đề xuất vì không ai biết phải duyệt cái gì. Câu What đứng đầu tiên, trước mọi phân tích, để người đọc biết mình được xin gì rồi mới đọc lý do. Viết xong, thử đóng vai người từ chối: câu này sẽ bị bác vì thiếu ngân sách, vì không có lãi, hay vì không đo được? Nếu bạn không viết nổi câu này, bạn chưa ra quyết định — phân tích thêm không cứu được.' },
@@ -61,7 +61,7 @@ BAI_ADD({ mod:'in04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:in04-02', skill:'comm', read:'7 phút', t:'Lý do nào đủ nặng để sếp gật đầu?',
+{ id:'B:in04-02', skill:'comm', read:'7 phút', assume:true, t:'Lý do nào đủ nặng để sếp gật đầu?',
   situation:'Minh đề xuất chuyển 30% ngân sách quảng cáo của một hãng nước mắm sang Zalo OA để chăm khách cũ. Phần lý do anh viết: "Zalo đang là xu hướng, đối thủ cũng đã làm, và em tin khách cũ rất tiềm năng." Giám đốc hỏi: "Có số nào cho thấy khách cũ của mình đáng tiền hơn khách mới không?"',
   concept:{ name:'Chuỗi lý do: Dữ kiện → Insight → Vì vậy (Why)',
     body:'Phần <b>Why</b> thuyết phục khi đi theo ba mắt xích. <b>Dữ kiện</b>: con số hoặc quan sát kiểm chứng được. <b>Insight</b>: điều dữ kiện cho thấy mà người khác chưa để ý — thường là một độ lệch hoặc một nguyên nhân. <b>Vì vậy</b>: nối insight với câu What. "Xu hướng", "đối thủ cũng làm", "em tin" là ý kiến, không phải dữ kiện. Hai đến ba chuỗi chặt tốt hơn mười lý do lỏng, vì người duyệt chỉ cần một mắt xích yếu là nghi cả đề xuất.' },
@@ -118,7 +118,7 @@ BAI_ADD({ mod:'in04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:in04-03', skill:'comm', read:'7 phút', t:'"Sẽ triển khai trong quý 3" — ai làm, bắt đầu khi nào?',
+{ id:'B:in04-03', skill:'comm', read:'7 phút', assume:true, t:'"Sẽ triển khai trong quý 3" — ai làm, bắt đầu khi nào?',
   situation:'Hà đề xuất chạy chương trình "Đổi vỏ chai lấy điểm" cho một hãng mỹ phẩm thuần chay tại 12 cửa hàng. Phần How cô viết: "Sẽ triển khai trong quý 3, phối hợp các phòng ban liên quan." Trưởng phòng bán hàng hỏi: "Nhân viên cửa hàng của tôi làm gì, học lúc nào, ai in thẻ điểm?"',
   concept:{ name:'Kế hoạch thực hiện: Việc – Người – Mốc (How)',
     body:'Phần <b>How</b> trả lời ba câu: <b>việc gì</b> phải xong, <b>ai</b> chịu trách nhiệm (một cái tên hoặc một vai trò, không phải "các phòng ban"), và <b>mốc nào</b> thì xong. Viết theo tuần, bắt đầu từ ngày ra mắt đếm ngược. Chỉ ra việc nào phải xong trước việc nào — đó là đường găng, trễ một việc là trễ cả kế hoạch. Người duyệt nhìn phần How để trả lời: "Việc này có làm được thật không, và nó lấy người của ai?"' },
@@ -178,7 +178,7 @@ BAI_ADD({ mod:'in04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:in04-04', skill:'comm', read:'7 phút', t:'Xin 200 triệu thì phải hứa lại con số nào?',
+{ id:'B:in04-04', skill:'comm', read:'7 phút', assume:true, t:'Xin 200 triệu thì phải hứa lại con số nào?',
   situation:'Tuấn đề xuất chi 200 triệu đồng cho chương trình khách hàng thân thiết của một chuỗi cơm văn phòng 15 điểm bán ở TP.HCM. Anh viết kết quả kỳ vọng: "Tăng lòng trung thành và doanh thu đáng kể." Giám đốc tài chính gạch dòng đó và ghi: "Bao nhiêu? Bao giờ hoà vốn?"',
   concept:{ name:'Ngân sách đi kèm kết quả kỳ vọng có con số',
     body:'Mỗi khoản tiền xin phải đi kèm một con số hứa lại, đo được và có thời hạn. Viết theo chuỗi: <b>ngân sách → chỉ số trung gian → kết quả kinh doanh</b>. Tính ngược mức hoà vốn: cần thêm bao nhiêu lợi nhuận gộp để bù chi phí. Lợi nhuận gộp chứ không phải doanh thu, vì doanh thu còn phải trừ giá vốn. Đưa ba mức — thận trọng, cơ sở, lạc quan — để người duyệt thấy bạn biết con số có thể sai. Một con số trung thực mà hơi thấp đáng tin hơn một lời hứa to không kèm phép tính.' },
@@ -227,7 +227,7 @@ BAI_ADD({ mod:'in04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:in04-05', skill:'comm', read:'6 phút', t:'Điều gì có thể hỏng, và bạn đã chuẩn bị gì?',
+{ id:'B:in04-05', skill:'comm', read:'6 phút', assume:true, t:'Điều gì có thể hỏng, và bạn đã chuẩn bị gì?',
   situation:'Ngọc đề xuất một hãng bánh trung thu mở bán sớm trên TikTok Shop với 3.000 hộp, 6 tuần trước Tết Trung thu. Phó giám đốc hỏi: "Nếu hàng giao bị vỡ thì sao? Nếu đối thủ giảm giá sâu thì sao?" Ngọc chưa nghĩ tới, và cuộc họp dừng ở đó.',
   concept:{ name:'Bảng rủi ro: Rủi ro – Khả năng – Tác động – Cách giảm',
     body:'Một đề xuất đáng tin tự nêu những gì có thể hỏng trước khi người duyệt hỏi. Chọn <b>ba đến bốn rủi ro</b> lớn nhất, mỗi rủi ro ghi: khả năng xảy ra (thấp/vừa/cao), tác động (bao nhiêu tiền hoặc đơn), và <b>cách giảm</b> cụ thể — làm gì trước để nó ít xảy ra, và làm gì khi nó xảy ra. Thêm một <b>ngưỡng dừng</b>: con số nào thì dừng hoặc đổi hướng. Mỗi rủi ro có bốn hướng xử lý: <b>giảm</b> (làm nó ít xảy ra hoặc nhẹ hơn), <b>chuyển</b> (bảo hiểm, điều khoản bồi thường), <b>né</b> (bỏ hẳn phần gây rủi ro), <b>chấp nhận</b> (có sẵn khoản dự phòng). Người duyệt không cần đề xuất không rủi ro; họ cần biết bạn đã nhìn thấy nó.' },
@@ -284,7 +284,7 @@ BAI_ADD({ mod:'in04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:in04-06', skill:'comm', read:'7 phút', t:'"Sao không làm cách khác?" — bạn đã so chưa?',
+{ id:'B:in04-06', skill:'comm', read:'7 phút', assume:true, t:'"Sao không làm cách khác?" — bạn đã so chưa?',
   situation:'Phong đề xuất một chuỗi nhà thuốc mở ứng dụng riêng để tăng mua lại, chi phí 600 triệu đồng. Giám đốc hỏi: "Sao không dùng Zalo OA, rẻ hơn nhiều? Hay đơn giản là gọi điện nhắc khách mua thuốc định kỳ?" Phong trả lời: "Em nghĩ app thì chuyên nghiệp hơn." Đề xuất bị treo.',
   concept:{ name:'Phương án thay thế đã cân nhắc',
     body:'Người duyệt luôn tự hỏi "còn cách nào khác không". Hãy trả lời trước bằng một bảng nhỏ: <b>hai đến ba phương án</b> (kể cả "không làm gì"), so theo cùng <b>ba đến bốn tiêu chí</b> — chi phí, thời gian ra kết quả, hiệu quả kỳ vọng, rủi ro. Chọn tiêu chí trước khi chấm, không phải sau. Nói rõ vì sao phương án bạn chọn thắng, và khi nào bạn sẽ đổi ý. Phương án "không làm gì" quan trọng vì nó cho biết cái giá của việc chờ đợi.' },
@@ -340,7 +340,7 @@ BAI_ADD({ mod:'in04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:in04-07', skill:'comm', read:'6 phút', t:'Sếp chỉ đọc 30 giây — trang đầu viết gì?',
+{ id:'B:in04-07', skill:'comm', read:'6 phút', assume:true, t:'Sếp chỉ đọc 30 giây — trang đầu viết gì?',
   situation:'Trang gửi đề xuất 8 trang cho giám đốc một chuỗi siêu thị mini. Trang 1 là "Bối cảnh thị trường bán lẻ", trang 2 là "Phân tích đối thủ", câu đề xuất nằm ở trang 6. Giám đốc đọc trên điện thoại giữa hai cuộc họp, đọc hết trang 1 rồi nhắn: "Em tóm tắt lại giúp anh 3 dòng."',
   concept:{ name:'Tóm tắt đầu trang (executive summary)',
     body:'Người bận đọc trang đầu, rồi quyết định có đọc tiếp không. Trang đầu vì vậy phải tự đứng được: đọc xong mà không lật trang vẫn duyệt được. Cấu trúc năm dòng: <b>Đề xuất</b> (câu What), <b>Vì sao</b> (một insight kèm con số), <b>Làm thế nào</b> (một câu, mốc chính), <b>Cần gì</b> (ngân sách, người, quyết định cụ thể), <b>Kết quả</b> (con số hứa lại, thời hạn). Đây là nguyên tắc "đáp án trước" của Barbara Minto (<i>The Pyramid Principle</i>): kết luận ở đỉnh, lập luận bên dưới. Giới hạn: kết luận đặt đầu chỉ đáng tin khi phân tích đã xong, nên viết tóm tắt sau cùng.' },
@@ -397,7 +397,7 @@ BAI_ADD({ mod:'in04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:in04-08', skill:'comm', read:'7 phút', t:'Tám phút trước ban giám khảo: nói gì ở phút đầu?',
+{ id:'B:in04-08', skill:'comm', read:'7 phút', assume:true, t:'Tám phút trước ban giám khảo: nói gì ở phút đầu?',
   situation:'Đội của Khoa thi vòng chung kết một cuộc thi case marketing sinh viên, đề bài: giúp một hãng sữa chua uống tăng doanh số ở học sinh cấp 3. Đội có 8 phút trình bày. Bản nháp dành 4 phút cho phân tích thị trường, 3 phút cho ý tưởng, và phút cuối vội vàng đọc ngân sách. Buổi tập thử, giám khảo mời cắt ngang ở phút thứ 5: "Vậy đề xuất của các bạn là gì?"',
   concept:{ name:'Phân bổ thời gian cho đề xuất trong case thi',
     body:'Giám khảo chấm đề xuất, không chấm độ dài phân tích. Mở đầu bằng câu What trong <b>30 giây đầu</b>. Một khung 8 phút gọn: phút 0–1 đề xuất và kết quả kỳ vọng; phút 1–3 insight và bằng chứng (chỉ hai đến ba dữ kiện dẫn tới insight); phút 3–6 kế hoạch thực hiện và ý tưởng sáng tạo; phút 6–7 ngân sách, chỉ số đo, rủi ro; phút 7–8 nhắc lại đề xuất. Mỗi slide một thông điệp. Tập với đồng hồ, cắt từ phần phân tích trước. Mốc phút chỉ là gợi ý; điều không đổi là thứ tự: đề xuất trước, bằng chứng sau. Khi hỏi đáp, trả lời kết luận trước rồi mới đến lý do, trong khoảng 20 giây.' },
@@ -454,7 +454,7 @@ BAI_ADD({ mod:'in04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:in04-09', skill:'comm', read:'7 phút', t:'Bị hỏi vặn "nếu không hiệu quả thì sao?" — trả lời thế nào?',
+{ id:'B:in04-09', skill:'comm', read:'7 phút', assume:true, t:'Bị hỏi vặn "nếu không hiệu quả thì sao?" — trả lời thế nào?',
   situation:'Vy trình bày đề xuất chi 150 triệu đồng cho mẫu dùng thử kem chống nắng tại 40 phòng gym. Giám đốc tài chính hỏi: "Năm ngoái mình phát mẫu ở trường đại học, tốn 100 triệu mà không thấy doanh số tăng. Sao lần này khác?" Vy lúng túng, nói "lần này mình làm kỹ hơn", và phòng họp im lặng.',
   concept:{ name:'Trả lời phản biện: Ghi nhận – Trả lời bằng dữ kiện – Quay về đề xuất',
     body:'Phản biện là người duyệt đang tìm lý do để tin, không phải tấn công. Trả lời theo ba bước. <b>Ghi nhận</b>: nhắc lại đúng điểm lo, không phòng thủ. <b>Trả lời bằng dữ kiện</b>: điều gì khác lần này, có số hoặc cơ chế. Nếu không biết, nói rõ và đề xuất cách tìm ra — thường là thử nhỏ. <b>Quay về đề xuất</b>: một câu nối lại yêu cầu, có thể kèm điều chỉnh. Chuẩn bị trước năm câu hỏi khó nhất; phần lớn phản biện đoán được.' },
@@ -507,7 +507,7 @@ BAI_ADD({ mod:'in04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:in04-10', skill:'comm', read:'7 phút', t:'Đề xuất này yếu ở đâu, và sửa thế nào cho mạnh?',
+{ id:'B:in04-10', skill:'comm', read:'7 phút', assume:true, t:'Đề xuất này yếu ở đâu, và sửa thế nào cho mạnh?',
   situation:'Bạn nhận bản đề xuất của một đồng nghiệp cho hãng giày nội địa, gửi trưởng phòng ngày mai: "Hiện nay giới trẻ rất quan tâm đến thời trang bền vững. Chúng ta nên làm một chiến dịch về tái chế để nâng cao hình ảnh thương hiệu. Dự kiến triển khai đa kênh, ngân sách khoảng 300–500 triệu. Kỳ vọng tăng nhận diện và doanh số." Bạn có 30 phút để sửa.',
   concept:{ name:'Kiểm tra đề xuất bằng năm câu hỏi',
     body:'Đọc một đề xuất bằng năm câu: <b>1. What</b> — có một câu hành động, phạm vi, thời gian, con số không? <b>2. Why</b> — lý do là dữ kiện của chính doanh nghiệp hay nhận định chung? <b>3. How</b> — có việc, người, mốc không? <b>4. Tiền và kết quả</b> — ngân sách là một con số, có mức hoà vốn không? <b>5. Rủi ro và lựa chọn</b> — đã nêu điều có thể hỏng và cách khác chưa? Sửa theo thứ tự ưu tiên: What trước, vì mọi phần khác xoay quanh nó.' },

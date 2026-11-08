@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'kn08', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kn08-01', skill:'channel', read:'6 phút', t:'Danh sách 20.000 số điện thoại, bao nhiêu số thật sự dùng được?',
+{ id:'B:kn08-01', skill:'channel', read:'6 phút', assume:true, t:'Danh sách 20.000 số điện thoại, bao nhiêu số thật sự dùng được?',
   situation:'Một chuỗi trà sữa ở Đà Nẵng tự hào có 20.000 số điện thoại khách trong file Excel sau ba năm. Khi gửi thử một đợt tin nhắn, chỉ 11.000 tin đến được máy, và vài chục người gọi lại hỏi vì sao cửa hàng có số của họ. Chủ chuỗi bắt đầu nghi ngờ con số 20.000.',
   concept:{ name:'Danh sách hợp lệ và có đồng ý',
     body:'Một liên hệ chỉ có giá trị khi hội đủ ba điều: <b>đúng</b> (số/email còn hoạt động, gõ không sai), <b>của đúng người</b> (không phải số của nhân viên nhập hộ), và <b>có đồng ý</b> nhận tin từ bạn cho mục đích đó. Danh sách lớn mà thiếu ba điều này vừa tốn tiền gửi vừa làm khách khó chịu. Thu thập đúng cách là hỏi ngay tại điểm chạm, nói rõ sẽ gửi gì, bao lâu một lần, và cho khách lựa chọn từ chối.' },
@@ -63,15 +63,15 @@ BAI_ADD({ mod:'kn08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kn08-02', skill:'insight', read:'7 phút', t:'Nên nhắn ai trước khi chỉ có ngân sách cho 1.000 tin?',
+{ id:'B:kn08-02', skill:'insight', read:'7 phút', assume:true, t:'Nên nhắn ai trước khi chỉ có ngân sách cho 1.000 tin?',
   situation:'Một cửa hàng giày ở TP.HCM có 6.000 khách cũ trong phần mềm bán hàng và ngân sách chỉ đủ gửi 1.000 tin Zalo cho đợt hàng mới. Nhân viên đề xuất gửi ngẫu nhiên. Chủ cửa hàng muốn biết có cách chọn thông minh hơn không.',
   concept:{ name:'Phân nhóm RFM',
     body:'RFM chấm mỗi khách theo ba trục, mỗi trục từ 1 đến 5: <b>R</b> (Recency) — lần mua gần nhất cách đây bao lâu; <b>F</b> (Frequency) — mua bao nhiêu lần; <b>M</b> (Monetary) — tổng chi bao nhiêu. R5F5M5 là khách vừa mua, mua đều, chi nhiều: dễ phản hồi nhất. R1F4M5 là khách từng chi nhiều nhưng lâu vắng: cần đánh thức. Một bảng tính ba cột là đủ làm. Lưu ý: RFM chọn người <b>dễ phản hồi</b>, chưa chứng minh tin tạo thêm đơn; muốn biết phải chừa một nhóm nhỏ không nhắn để so.' },
-  example:'Số liệu minh hoạ. Cửa hàng chấm mỗi trục 1–5. Nhóm R4–5 và F4–5 có 800 khách; nhóm R1–2 nhưng M5 có 400 khách. Hai nhóm này chỉ chiếm 20% trong 6.000 khách. Họ nhắn 700 khách nhóm đầu về mẫu mới, giữ lại 100 khách không nhắn để đối chứng, và 300 tin còn lại mời nhóm ngủ quên thử. Kết quả: 700 khách được nhắn ra 84 đơn (12%); 100 khách bị giữ lại tự mua 9 đơn (9%). Chọn đúng người ra nhiều đơn, nhưng đơn tăng thêm nhờ tin chỉ khoảng 21.',
+  example:'Số liệu minh hoạ. Cửa hàng chấm mỗi trục 1–5. Nhóm R4–5 và F4–5 có 800 khách; nhóm R1–2 nhưng M5 có 400 khách. Hai nhóm này chỉ chiếm 20% trong 6.000 khách. Họ nhắn 700 khách nhóm đầu về mẫu mới, giữ lại 100 khách không nhắn để đối chứng, và 300 tin còn lại mời nhóm ngủ quên thử. Kết quả: 700 khách được nhắn ra 84 đơn (12%); 100 khách bị giữ lại tự mua 9 đơn (9%). Chọn đúng người ra nhiều đơn, nhưng đơn tăng thêm nhờ tin chỉ khoảng 21. Lưu ý độ chắc: với nhóm đối chứng chỉ 100 người, chênh 12% − 9% = 3 điểm vẫn nằm trong khoảng nhiễu (cỡ ±3 điểm), nên 21 là ước lượng điểm, thực tế có thể từ gần 0 tới khoảng 40; muốn tin, hãy lặp qua 2–3 đợt hoặc chừa đối chứng lớn hơn (≥ 20% nhóm).',
   takeaway:'Khi ngân sách tin có hạn, chọn người nhận bằng R, F, M và chừa nhóm đối chứng để đo đơn tăng thêm.',
   points:["Hành vi quá khứ là tín hiệu rẻ nhất về hành vi sắp tới. Người vừa mua, mua đều và chi nhiều đã tỏ ra sẵn lòng, nên tin đến họ đỡ tốn công.","Ba trục trả lời ba câu khác nhau: còn nhớ bạn không, có phải khách quen không, giá trị bao nhiêu. Gộp lại thành mã giúp chọn thông điệp hợp từng nhóm.","Nhóm đối chiếu biến điểm số thành bằng chứng. Thiếu nhóm không nhắn, đơn của người trung thành rất dễ bị tính nhầm là công của tin."],
   counter:"Biến thể: cửa hàng giày bán thêm một mẫu dành cho khách đi bộ đường dài, trong khi khách quen chủ yếu mua giày công sở. Chọn R và F cao lúc này hướng tin sai người, vì lịch sử mua chưa nói gì về nhu cầu mới. Dấu hiệu cần đổi cách: sản phẩm khác hẳn lịch sử mua, hoặc khách điểm RFM thấp nhưng từng hỏi loại giày này. Khi đó chọn theo loại đã quan tâm.",
-  deeper:"RFM mạnh vì đơn giản, nhưng nó mô tả quá khứ và dễ dồn cả tin vào một nhóm khách, làm nhóm còn lại nguội dần. Người làm nghề cân bằng bằng cách chừa một phần nhỏ tin cho nhóm ngủ quên, như cửa hàng đã dành 300 tin. Tín hiệu cần theo dõi không phải tỉ lệ mua mà là đơn tăng thêm so với nhóm đối chiếu, vì khách trung thành vốn hay mua. Khái niệm kề cận là chiến dịch đánh thức khách ngủ quên. Phép kiểm tra trong tuần: chấm RFM cho 200 khách bất kỳ, chừa 20 người không nhắn rồi so tỉ lệ mua hai nhóm.",
+  deeper:"RFM mạnh vì đơn giản, nhưng nó mô tả quá khứ và dễ dồn cả tin vào một nhóm khách, làm nhóm còn lại nguội dần. Người làm nghề cân bằng bằng cách chừa một phần nhỏ tin cho nhóm ngủ quên, như cửa hàng đã dành 300 tin. Tín hiệu cần theo dõi không phải tỉ lệ mua mà là đơn tăng thêm so với nhóm đối chiếu, vì khách trung thành vốn hay mua. Khái niệm kề cận là chiến dịch đánh thức khách ngủ quên. Phép kiểm tra trong tuần: chấm RFM cho 200 khách bất kỳ để tập cách chấm; phép so có đối chứng để dành cho đợt gửi thật, ví dụ chọn 1.250 khách điểm cao, nhắn 1.000, chừa 250 (20%) không nhắn rồi so tỉ lệ mua hai nhóm.",
   apply:'Lấy 30 khách gần nhất trong sổ bán hàng. Nói trong 60 giây: năm khách nào bạn sẽ nhắn đầu tiên và vì sao, dựa trên R, F, M.',
   mistakes:['Chỉ nhìn tổng chi tiêu mà quên khách đã bỏ đi từ lâu.','Gửi cùng một thông điệp cho mọi nhóm RFM.'],
   q:[
@@ -91,7 +91,7 @@ BAI_ADD({ mod:'kn08', lessons:[
       d:'Khách mới nhất có R cao nhưng có thể chỉ mua một lần giá thấp; chỉ dùng R là thiếu.'} },
   { type:'calc', stem:'Gửi 700 tin cho nhóm khách trung thành, ra 84 đơn. Cùng nhóm đó, 100 khách bị giữ lại không nhắn tự mua 9 đơn. Có bao nhiêu đơn thật sự do tin tạo thêm?',
     unit:'đơn', ans:21, tol:0.5, wrong:[[75,'NHAM_SO_TUYET_DOI'],[3,'NHAM_DIEM_PHAN_TRAM']], errors:['NHAM_SO_TUYET_DOI','NHAM_DIEM_PHAN_TRAM'],
-    steps:['Tỉ lệ nhóm nhắn = 84 ÷ 700 = 12%. Tỉ lệ nhóm giữ lại = 9 ÷ 100 = 9%.','Nếu không nhắn, 700 khách vẫn tự mua khoảng 700 × 9% = 63 đơn. Đơn tăng thêm = 84 − 63 = <b>21 đơn</b> (không phải 84 − 9).'] },
+    steps:['Tỉ lệ nhóm nhắn = 84 ÷ 700 = 12%. Tỉ lệ nhóm giữ lại = 9 ÷ 100 = 9%.','Nếu không nhắn, 700 khách vẫn tự mua khoảng 700 × 9% = 63 đơn. Đơn tăng thêm = 84 − 63 = <b>21 đơn</b> (không phải 84 − 9).','Độ chắc: đối chứng chỉ 100 người nên chênh 3 điểm ≈ 1 sai số chuẩn; 21 là ước lượng điểm, cần lặp đợt hoặc đối chứng lớn hơn trước khi tin.'] },
   { type:'mcq', stem:'Khách A mua 8 lần, tổng 12 triệu, lần cuối cách đây 14 tháng. Nên xếp A vào nhóm nào?',
     options:[{k:'a',t:'Khách giá trị cao đang ngủ quên — cần một lời mời riêng để quay lại'},{k:'b',t:'Khách trung thành nhất, cứ gửi tin mẫu mới như các khách thân thiết'},
              {k:'c',t:'Khách đã mất hẳn, nên xoá khỏi danh sách để tiết kiệm chi phí gửi tin'},{k:'d',t:'Khách mới, vì hệ thống chỉ ghi nhận lần mua gần nhất của khách mà thôi'}],
@@ -123,22 +123,23 @@ BAI_ADD({ mod:'kn08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kn08-03', skill:'channel', read:'7 phút', t:'Zalo OA, SMS hay email: kênh nào rẻ hơn cho mỗi đơn?',
+{ id:'B:kn08-03', skill:'channel', read:'7 phút', assume:true, t:'Zalo OA, SMS hay email: kênh nào rẻ hơn cho mỗi đơn?',
+  src:[{ t:'Apple Support — iPhone User Guide: “Use Mail Privacy Protection” (tỉ lệ mở email bị phóng đại)', u:'https://support.apple.com/guide/iphone/use-mail-privacy-protection-iphf084865c7/ios', d:'2026-11-07', st:'chua' }],
   situation:'Một thương hiệu nến thơm bán online có 10.000 khách đồng ý nhận tin. Giả sử báo giá như sau (giá thực tế khác nhau theo nhà cung cấp, loại tin và sản lượng, hãy xin báo giá hiện hành): SMS thương hiệu khoảng 800 đồng/tin, tin Zalo OA khoảng 300 đồng/tin, email gần như 0 đồng/tin ngoài phí công cụ 1,5 triệu/tháng. Chủ shop định chọn email vì “rẻ nhất”.',
   concept:{ name:'Chi phí trên mỗi đơn, không phải trên mỗi tin',
     body:'Mỗi kênh có giá gửi và tỉ lệ đọc khác nhau. SMS gần như ai cũng thấy nhưng đắt và ngắn chữ. Zalo OA rẻ hơn, có hình và nút bấm, nhưng khách phải quan tâm OA hoặc đủ điều kiện nhận. Email rẻ nhất mỗi tin nhưng nhiều người ít mở hộp thư. Cách so đúng là tính <b>chi phí trên mỗi đơn</b> = tổng chi phí gửi ÷ số đơn tạo ra, trên cùng một thông điệp.' },
-  example:'Gửi thử 2.000 khách mỗi kênh. Email: mở 15%, 10 đơn. Nếu gán cả phí công cụ tháng 1,5 triệu vào đợt thử → 150.000 đồng/đơn; nhưng phí đó dùng chung cho cả 10.000 khách, chia theo phần 2.000 người (một quy ước, hãy chọn một cách chia và giữ nhất quán) thì khoảng 300.000 → 30.000 đồng/đơn. Tỉ lệ mở email còn bị phóng đại khi người nhận dùng Apple Mail bật Mail Privacy Protection, nên so bằng lượt bấm và đơn (kiểm theo tài liệu Apple Support, 10/2026). Zalo OA: mở 60%, 36 đơn, chi phí 600.000 → khoảng 16.700 đồng/đơn. SMS: 20 đơn, chi phí 1,6 triệu → 80.000 đồng/đơn. Kênh đắt mỗi tin chưa chắc đắt mỗi đơn; kênh rẻ mỗi tin chưa chắc rẻ mỗi đơn.',
+  example:'Gửi thử 2.000 khách mỗi kênh. Email: mở 15% theo báo cáo công cụ (có thể cao hơn thật, xem dưới), 10 đơn. Nếu gán cả phí công cụ tháng 1,5 triệu vào đợt thử → 150.000 đồng/đơn; nhưng phí đó dùng chung cho cả 10.000 khách, chia theo phần 2.000 người (một quy ước, hãy chọn một cách chia và giữ nhất quán) thì khoảng 300.000 → 30.000 đồng/đơn. Tỉ lệ mở email còn bị phóng đại khi người nhận dùng Apple Mail bật Mail Privacy Protection (theo tài liệu Apple Support tại ngày kiểm, xem nguồn; nếu màn hình khác, tin trang chính thức), nên so email với kênh khác bằng lượt bấm và đơn, không bằng tỉ lệ mở. Zalo OA: mở 60%, 36 đơn, chi phí 600.000 → khoảng 16.700 đồng/đơn. SMS: 20 đơn, chi phí 1,6 triệu → 80.000 đồng/đơn. Kênh đắt mỗi tin chưa chắc đắt mỗi đơn; kênh rẻ mỗi tin chưa chắc rẻ mỗi đơn.',
   takeaway:'So kênh bằng chi phí trên mỗi đơn cùng một thông điệp, không bằng giá mỗi tin.',
   apply:'Chọn hai kênh bạn đang dùng. Nói trong 60 giây: mỗi kênh tốn bao nhiêu một tháng và mang về bao nhiêu đơn đo được.',
   mistakes:['Chọn kênh chỉ vì giá mỗi tin thấp nhất.','So kênh bằng hai thông điệp khác nhau rồi kết luận kênh nào tốt.'],
   q:[
   { type:'mcq', stem:'Đoán trước: kênh có giá mỗi tin rẻ nhất thường cũng là kênh có chi phí mỗi đơn rẻ nhất?',
-    options:[{k:'a',t:'Chắc chắn, vì chi phí mỗi đơn tỉ lệ thuận với giá mỗi tin gửi đi'},{k:'b',t:'Chưa chắc, vì cùng 2.000 tin, kênh rẻ mà ít đơn vẫn có thể đắt mỗi đơn'},
-             {k:'c',t:'Chắc chắn, trừ khi thông điệp gửi đi có kèm mã giảm giá riêng'},{k:'d',t:'Chưa chắc, nhưng vì kênh đắt nhất mỗi tin luôn hiệu quả nhất mỗi đơn'}],
-    answer:'b', why:{a:'Chi phí mỗi đơn còn phụ thuộc số người đọc và mua, không chỉ giá gửi.',
+    options:[{k:'a',t:'Chưa chắc, vì kênh rẻ thường giới hạn độ dài nên tin phải viết ngắn hơn'},{k:'b',t:'Chưa chắc, vì cùng 2.000 tin, kênh rẻ mà ít đơn vẫn có thể đắt mỗi đơn'},
+             {k:'c',t:'Chưa chắc, vì giá mỗi tin còn đổi theo sản lượng và chiết khấu của nhà cung cấp'},{k:'d',t:'Chưa chắc, vì giờ gửi tin trong ngày mới quyết định phần lớn số đơn thu về'}],
+    answer:'b', why:{a:'Độ dài tin ảnh hưởng cách viết, không phải mấu chốt; chi phí mỗi đơn phụ thuộc bao nhiêu tin biến thành đơn.',
       b:'Đúng. Giá mỗi tin chỉ là một nửa phép tính; nửa còn lại là bao nhiêu tin biến thành đơn.',
-      c:'Mã giảm giá thay đổi tỉ lệ mua ở mọi kênh, không làm quy tắc trên đúng hơn.',
-      d:'Đắt nhất cũng không tự động hiệu quả nhất; phải đo.'} },
+      c:'Chiết khấu chỉ đổi giá mỗi tin — vẫn là nửa phép tính về giá; thiếu số đơn thì chưa so được.',
+      d:'Giờ gửi có ảnh hưởng nhưng không quyết định phần lớn; chi phí mỗi đơn = tổng chi ÷ số đơn.'} },
   { type:'mcq', stem:'Bạn phải chọn kênh chính cho tin ra mắt mùi nến mới. Bạn làm gì?',
     options:[{k:'a',t:'Gửi thử cùng thông điệp cho 2.000 khách mỗi kênh, so chi phí trên đơn'},{k:'b',t:'Chọn email ngay vì phí gửi gần như bằng không, tiết kiệm được nhiều nhất'},
              {k:'c',t:'Chọn SMS vì gần như ai cũng đọc tin nhắn điện thoại của mình'},{k:'d',t:'Gửi cả ba kênh cùng lúc cho đủ 10.000 khách để phủ tối đa'}],
@@ -180,7 +181,7 @@ BAI_ADD({ mod:'kn08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kn08-04', skill:'channel', read:'6 phút', t:'Nhắn mỗi ngày thì bán thêm hay bị chặn thêm?',
+{ id:'B:kn08-04', skill:'channel', read:'6 phút', assume:true, t:'Nhắn mỗi ngày thì bán thêm hay bị chặn thêm?',
   situation:'Một shop quần áo trẻ em tăng từ 2 lên 7 tin Zalo OA mỗi tuần vì “tin nào cũng ra vài đơn”. Sau một tháng, số người bỏ quan tâm OA tăng vọt, và tổng đơn từ Zalo không tăng mà còn giảm nhẹ.',
   concept:{ name:'Tần suất và tỉ lệ huỷ theo dõi',
     body:'Mỗi tin thêm có thể mang về vài đơn, nhưng cũng làm một số người bỏ quan tâm hoặc chặn. Người đã chặn thì không bao giờ nhận được tin nữa — đó là mất vĩnh viễn một phần danh sách. Vì vậy cần theo dõi cùng lúc <b>đơn mỗi tin</b> và <b>tỉ lệ huỷ theo dõi mỗi tin</b>. Tần suất hợp lý là mức mà tổng đơn trong tháng còn tăng trong khi danh sách không co lại nhanh. Gửi thứ khách cần, không gửi vì lịch đăng.' },
@@ -240,7 +241,7 @@ BAI_ADD({ mod:'kn08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kn08-05', skill:'comm', read:'6 phút', t:'Gọi tên khách trong tin là đủ cá nhân hoá chưa?',
+{ id:'B:kn08-05', skill:'comm', read:'6 phút', assume:true, t:'Gọi tên khách trong tin là đủ cá nhân hoá chưa?',
   situation:'Một thương hiệu mỹ phẩm gửi Zalo “Chào chị Lan, ưu đãi dành riêng cho chị!” kèm mã giảm son cho toàn bộ 15.000 khách, kể cả khách chỉ mua kem chống nắng cho chồng. Một đợt khác, họ nhắc chính xác “chị vừa xem kem nền màu 02 lúc 23 giờ hôm qua” và bị khách phàn nàn là đáng sợ.',
   concept:{ name:'Cá nhân hoá đúng mức',
     body:'Cá nhân hoá có ích khi nó làm tin <b>liên quan hơn</b>: gợi ý đúng thứ khách dùng, đúng lúc họ cần. Chỉ chèn tên vào tin chung thì không đổi được gì. Ngược lại, nhắc quá chi tiết điều khách không nghĩ bạn biết — giờ họ xem, món họ tìm — khiến khách thấy bị theo dõi. Nguyên tắc: dùng dữ liệu khách <b>biết mình đã cho</b> (món đã mua, loại da đã khai) và nói ở mức tự nhiên như một người bán hàng tử tế. Phép thử: nếu nhân viên đứng trước khách mà nói đúng câu đó, khách thấy ấm hay thấy rợn?' },
@@ -300,7 +301,7 @@ BAI_ADD({ mod:'kn08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kn08-06', skill:'measure', read:'7 phút', t:'Chương trình tích điểm đang giữ khách hay chỉ đang tặng tiền?',
+{ id:'B:kn08-06', skill:'measure', read:'7 phút', assume:true, t:'Chương trình tích điểm đang giữ khách hay chỉ đang tặng tiền?',
   situation:'Một chuỗi bánh mì ở Hà Nội ra thẻ tích điểm: mỗi 10.000 đồng được 1 điểm, 50 điểm đổi một ổ bánh 25.000 đồng. Sau sáu tháng có 12.000 thành viên. Kế toán hỏi: chương trình tốn bao nhiêu, và khách có mua nhiều hơn thật không, hay chỉ là khách vốn trung thành nay được tặng thêm?',
   concept:{ name:'Chương trình thành viên có mục tiêu',
     body:'Tích điểm là một kênh dữ liệu và một lời hứa với khách. Nó đáng làm khi <b>thay đổi hành vi</b>: khách quay lại nhanh hơn, mua thêm, hoặc chọn bạn thay vì quán bên cạnh. Cần tính <b>tỉ lệ thưởng</b> = giá trị quà ÷ số tiền phải chi để nhận quà, và so hành vi của thành viên với nhóm tương đương chưa tham gia. Ngoài ra, chương trình cho bạn số điện thoại có đồng ý — thường là giá trị lớn nhất.' },
@@ -360,7 +361,7 @@ BAI_ADD({ mod:'kn08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kn08-07', skill:'channel', read:'6 phút', t:'Khách 6 tháng không quay lại: gọi dậy hay để yên?',
+{ id:'B:kn08-07', skill:'channel', read:'6 phút', assume:true, t:'Khách 6 tháng không quay lại: gọi dậy hay để yên?',
   situation:'Một spa ở Cần Thơ có 3.000 khách từng dùng dịch vụ nhưng đã hơn 6 tháng không đặt lịch. Chủ spa định gửi mã giảm 50% cho tất cả. Quản lý lo rằng làm vậy vừa lỗ vừa dạy khách chỉ quay lại khi có giảm sâu.',
   concept:{ name:'Chiến dịch đánh thức khách ngủ quên',
     body:'Khách ngủ quên là khách lâu không mua so với nhịp bình thường của ngành. Đánh thức nên đi theo <b>bậc thang</b>: tin đầu nhắc nhẹ và có lý do mới (dịch vụ mới, lịch trống), tin sau mới có ưu đãi vừa phải, tin cuối hỏi khách có muốn tiếp tục nhận tin không. Ai không phản hồi sau chuỗi này thì giảm tần suất hoặc ngừng gửi, để danh sách sạch và không bị chặn. Luôn tính lãi sau khi trừ ưu đãi, không chỉ đếm khách quay lại.' },
@@ -420,10 +421,10 @@ BAI_ADD({ mod:'kn08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kn08-08', skill:'measure', read:'7 phút', t:'Một khách, bốn hồ sơ: dữ liệu nằm rải rác thì làm sao?',
+{ id:'B:kn08-08', skill:'measure', read:'7 phút', assume:true, t:'Một khách, bốn hồ sơ: dữ liệu nằm rải rác thì làm sao?',
   situation:'Một thương hiệu đồ gia dụng bán ở cửa hàng, Shopee, website và nhận đơn qua Zalo. Chị Hạnh mua ở cả bốn nơi, nên hệ thống có bốn hồ sơ khác nhau với tên viết khác nhau. Mỗi kênh đều coi chị là khách mua một lần, và chị nhận cùng một ưu đãi “khách mới” tới ba lần.',
   concept:{ name:'Gộp hồ sơ khách về một mối',
-    body:'Khi dữ liệu nằm ở nhiều nơi, mỗi nơi chỉ thấy một mảnh của khách. Hậu quả: đếm dư số khách, đánh giá sai giá trị khách, và gửi tin mâu thuẫn. Cách bắt đầu không cần hệ thống lớn: chọn <b>một khoá chung</b> (thường là số điện thoại), đưa dữ liệu các kênh về một bảng, gộp các dòng trùng khoá, và quy định từ nay mọi kênh ghi số điện thoại theo cùng một định dạng. Trước khi gộp, soi vài dòng trùng: số dùng chung trong gia đình sẽ gộp nhầm hai người thành một. Đặt bảng ở một nơi có phân quyền, giao một người cập nhật hằng tuần. Đơn sàn thương mại điện tử thường che số người mua, nên giữ riêng đến khi khách tự cho số.' },
+    body:'Khi dữ liệu nằm ở nhiều nơi, mỗi nơi chỉ thấy một mảnh của khách. Hậu quả: đếm dư số khách, đánh giá sai giá trị khách, và gửi tin mâu thuẫn. Cách bắt đầu không cần hệ thống lớn: chọn <b>một khoá chung</b> (thường là số điện thoại), đưa dữ liệu các kênh về một bảng, gộp các dòng trùng khoá, và quy định từ nay mọi kênh ghi số điện thoại theo cùng một định dạng. Trước khi gộp, soi vài dòng trùng: số dùng chung trong gia đình sẽ gộp nhầm hai người thành một. Đặt bảng ở một nơi có phân quyền, giao một người cập nhật hằng tuần. Đơn sàn thương mại điện tử thường che hoặc mã hoá số điện thoại người mua (tuỳ sàn và thời điểm — kiểm chính sách hiện hành của sàn bạn đang bán), nên giữ riêng đến khi khách tự cho số.' },
   example:'Đơn Shopee không có số điện thoại nên giữ riêng. Ba nguồn còn lại (cửa hàng, website, Zalo) gộp theo số chuẩn hoá (bỏ dấu cách, đổi +84 thành 0): 20.000 hồ sơ còn 14.000 khách thật. Chị Hạnh hoá ra đã mua 6 lần, tổng 9 triệu — thuộc nhóm giá trị cao chứ không phải ba khách lẻ. Từ đó chị nhận tin cảm ơn khách thân thiết thay vì mã “khách mới”.',
   takeaway:'Chọn một khoá chung, gộp hồ sơ, rồi mới đếm khách và chia nhóm.',
   apply:'Liệt kê mọi nơi bạn đang lưu thông tin khách. Nói trong 60 giây: khoá chung bạn sẽ dùng là gì và nơi nào khó gộp nhất.',
@@ -477,10 +478,11 @@ BAI_ADD({ mod:'kn08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:kn08-09', skill:'comm', read:'6 phút', t:'File khách hàng gửi qua Zalo cho cả nhóm: có vấn đề gì?',
+{ id:'B:kn08-09', skill:'comm', read:'6 phút', assume:true, t:'File khách hàng gửi qua Zalo cho cả nhóm: có vấn đề gì?',
+  src:[{ t:'Cổng TTĐT Chính phủ — Cơ sở dữ liệu văn bản QPPL: tra “Luật Bảo vệ dữ liệu cá nhân, số 91/2025/QH15” và nghị định hướng dẫn hiện hành', u:'https://vanban.chinhphu.vn', d:'2026-11-07', st:'chua' }],
   situation:'Ở một chuỗi cửa hàng điện thoại, quản lý gửi file Excel 30.000 khách — tên, số điện thoại, địa chỉ, món đã mua — vào nhóm Zalo 40 nhân viên để “ai cần thì gọi chăm sóc”. Vài tháng sau, khách phản ánh nhận cuộc gọi chào bán từ một cửa hàng khác, biết cả món họ vừa mua.',
   concept:{ name:'Bảo vệ dữ liệu khách như tài sản',
-    body:'Dữ liệu khách chỉ nên dùng cho <b>mục đích khách đã đồng ý</b>, và chỉ người cần mới được xem. Ba nghĩa vụ cốt lõi của người làm marketing: nói rõ thu gì để làm gì và xin đồng ý; cho khách đường rút lại đồng ý hoặc xin xoá thông tin; khi dữ liệu bị lộ, báo ngay nội bộ để công ty còn thông báo cho khách và cơ quan có thẩm quyền. Ở Việt Nam là Luật Bảo vệ dữ liệu cá nhân 2025 (Luật số 91/2025/QH15, hiệu lực từ 1/1/2026, thay cho Nghị định 13/2023/NĐ-CP); thời hạn và mức phạt cụ thể hỏi pháp chế. Thu vừa đủ, phân quyền theo vai trò, không gửi file qua chat. Dù luật thế nào, lộ dữ liệu là mất lòng tin của khách.' },
+    body:'Dữ liệu khách chỉ nên dùng cho <b>mục đích khách đã đồng ý</b>, và chỉ người cần mới được xem. Ba nghĩa vụ cốt lõi của người làm marketing: nói rõ thu gì để làm gì và xin đồng ý; cho khách đường rút lại đồng ý hoặc xin xoá thông tin; khi dữ liệu bị lộ, báo ngay nội bộ để công ty còn thông báo cho khách và cơ quan có thẩm quyền. Ở Việt Nam, theo văn bản tại ngày kiểm (xem nguồn), là Luật Bảo vệ dữ liệu cá nhân 2025 (Luật số 91/2025/QH15, hiệu lực từ 1/1/2026); Nghị định 13/2023/NĐ-CP được thay bằng nghị định hướng dẫn mới — kiểm văn bản hiện hành, thời hạn thông báo và mức phạt cụ thể với pháp chế. Thu vừa đủ, phân quyền theo vai trò, không gửi file qua chat. Dù luật thế nào, lộ dữ liệu là mất lòng tin của khách.' },
   example:'Chuỗi thu hồi file, chuyển dữ liệu vào phần mềm bán hàng có tài khoản riêng cho từng nhân viên. Nhân viên cửa hàng chỉ thấy khách của cửa hàng mình, không tải được toàn bộ danh sách. Mọi lần xuất file phải được quản lý duyệt và có ghi lại. Khi nhân viên nghỉ việc, tài khoản bị khoá ngay trong ngày. Khi phát hiện lộ: khoá file, thống kê ai đã tải, báo cáo nội bộ trong 24 giờ (quy trình nội bộ của chuỗi) để pháp chế kiểm nghĩa vụ thông báo.',
   takeaway:'Ai cần mới được xem, dùng đúng mục đích khách đã đồng ý, không gửi file qua chat.',
   apply:'Nói trong 60 giây: hiện tại bao nhiêu người trong đội bạn có thể tải toàn bộ danh sách khách, và bạn sẽ thu hẹp lại thế nào.',
@@ -534,7 +536,7 @@ BAI_ADD({ mod:'kn08', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:kn08-10', skill:'measure', read:'7 phút', t:'CRM mang về bao nhiêu tiền thật, hay chỉ ghi công cho đơn tự đến?',
+{ id:'B:kn08-10', skill:'measure', read:'7 phút', assume:true, t:'CRM mang về bao nhiêu tiền thật, hay chỉ ghi công cho đơn tự đến?',
   situation:'Báo cáo tháng của một shop thời trang ghi “Zalo OA và email mang về 180 triệu doanh thu” vì đó là tổng giá trị đơn của khách đã nhận tin trong 7 ngày. Giám đốc hỏi: những khách này vốn mua đều mỗi tháng, nếu không gửi tin thì bao nhiêu người vẫn mua?',
   concept:{ name:'Doanh thu tăng thêm nhờ nhóm đối chứng',
     body:'Khách cũ vốn đã có khả năng quay lại. Nếu ghi mọi đơn của người nhận tin cho kênh CRM, bạn đang ghi công cả những đơn đằng nào cũng có. Cách đo sạch là giữ một <b>nhóm đối chứng</b> ngẫu nhiên (ví dụ 10%) không nhận tin, rồi so doanh thu mỗi khách giữa hai nhóm. Phần chênh nhân với số người nhận mới là <b>doanh thu tăng thêm</b>. Doanh thu chưa phải lãi: nhân với biên gộp, rồi mới trừ chi phí gửi và ưu đãi. Chi tiêu khách lệch phải, vài đơn lớn kéo trung bình, nên chênh nhỏ có thể chỉ là ngẫu nhiên: đo vài tuần để bắt cả đơn mua trễ, và chỉ tin khi chênh lặp lại qua các đợt.' },

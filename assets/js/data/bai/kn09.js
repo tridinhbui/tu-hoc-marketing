@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'kn09', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kn09-01', skill:'comm', read:'6 phút', t:'Câu chuyện của bạn có đáng thành tin không?',
+{ id:'B:kn09-01', skill:'comm', read:'6 phút', assume:true, t:'Câu chuyện của bạn có đáng thành tin không?',
   situation:'Hãng sữa hạt hư cấu Mộc An sắp ra dòng sữa óc chó mới. Phòng marketing muốn "lên báo" nên soạn bản tin: "Mộc An ra mắt sản phẩm mới chất lượng cao, thơm ngon, bổ dưỡng." Gửi 30 phóng viên, không ai đăng. Cùng lúc, một bạn trong nhóm R&D kể rằng Mộc An vừa ký thu mua óc chó với 120 hộ dân ở Lào Cai, giá cao hơn thương lái 15%.',
   concept:{ name:'Giá trị tin tức (news value)',
     body:'Nhà báo không đăng vì bạn muốn được đăng; họ đăng vì độc giả của họ muốn đọc. Một câu chuyện có giá trị tin tức khi có ít nhất một trong các yếu tố: <b>mới</b> (lần đầu, khác thường), <b>gần</b> (liên quan tới người đọc), <b>con người</b> (có nhân vật, có số phận), <b>xung đột hoặc thay đổi</b>, và <b>con số cụ thể</b> kiểm chứng được. "Sản phẩm mới chất lượng cao" không có yếu tố nào — đó là quảng cáo. Việc của người làm PR là đào: hỏi thu mua, R&D, nhân sự "tháng này có gì lần đầu, có ai, có con số nào?" Nếu chưa có số thật thì đi đo trước, không tự bịa. Mỗi tờ báo cần một góc khác nhau theo độc giả của nó.' },
@@ -30,12 +30,12 @@ BAI_ADD({ mod:'kn09', lessons:[
     unit:'%', ans:20, tol:0.1, wrong:[[500,'SAI_MAU_SO'],[5,'SAI_MAU_SO']], errors:['SAI_MAU_SO'],
     steps:['Tỉ lệ đăng = số bài đăng ÷ số phóng viên nhận.','6 ÷ 30 = 0,2 = <b>20%</b>.'] },
   { type:'mcq', stem:'Mộc An có bốn góc, đều kèm con số. Bạn gửi báo địa phương Lào Cai góc nào?',
-    options:[{k:'a',t:'Doanh thu quý tăng 12% so với cùng kỳ năm trước, theo báo cáo nội bộ'},{k:'b',t:'Mỗi hộp chứa 30 hạt óc chó, nhiều hơn các sản phẩm cùng loại'},
-             {k:'c',t:'120 hộ ở Lào Cai bán óc chó cao hơn thương lái 15%, có hợp đồng và hộ dân đồng ý trả lời'},{k:'d',t:'Chín trên mười người uống thử nói thích, theo khảo sát 10 người do hãng tự làm'}],
-    answer:'c', why:{a:'Có số, nhưng là số tự công bố, không kiểm chứng được và không gần với độc giả Lào Cai.',
-      b:'Là so sánh tự khen về tính năng; nhà báo không có cách kiểm chứng "mọi sản phẩm".',
+    options:[{k:'a',t:'Doanh thu quý tăng 12% so với cùng kỳ, theo báo cáo đã kiểm toán, có số liệu đối chiếu'},{k:'b',t:'Mỗi hộp chứa 30 hạt óc chó, theo kết quả kiểm nghiệm độc lập đã công bố'},
+             {k:'c',t:'120 hộ ở Lào Cai bán óc chó cao hơn thương lái 15%, có hợp đồng đối chiếu'},{k:'d',t:'Chín trên mười người uống thử nói thích, theo khảo sát 200 người do công ty độc lập làm'}],
+    answer:'c', why:{a:'Có số và kiểm chứng được, nhưng là chuyện kinh doanh của hãng, không gần với độc giả Lào Cai.',
+      b:'Có kiểm nghiệm nhưng vẫn là tính năng sản phẩm — hợp với quảng cáo, không phải tin cho độc giả địa phương.',
       c:'Đúng. Gần với độc giả địa phương, có nhân vật để phỏng vấn và số có hợp đồng đối chiếu được.',
-      d:'Mẫu 10 người do hãng tự làm quá nhỏ; con số đẹp nhưng nhà báo sẽ không dám dùng.'} },
+      d:'Khảo sát độc lập là có kiểm chứng, nhưng cảm nhận người uống thử vẫn là chuyện sản phẩm, không gần với độc giả Lào Cai.'} },
   { type:'mcq', stem:'Một chuỗi cà phê hư cấu mở quán thứ 50. Góc nào dễ thành tin nhất với báo địa phương Đà Nẵng?',
     options:[{k:'a',t:'Chuỗi đạt cột mốc 50 quán trên toàn quốc, gửi lời cảm ơn tới khách hàng cả nước'},{k:'b',t:'Quán thứ 50 ở Đà Nẵng tuyển 12 người khiếm thính làm pha chế'},
              {k:'c',t:'Menu quán mới có thêm ba món đồ uống theo mùa hè'},{k:'d',t:'Chuỗi giảm giá 50% trong ngày khai trương để tri ân'}],
@@ -60,7 +60,7 @@ BAI_ADD({ mod:'kn09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kn09-02', skill:'comm', read:'7 phút', t:'Thông cáo báo chí nào được nhà báo đọc hết?',
+{ id:'B:kn09-02', skill:'comm', read:'7 phút', assume:true, t:'Thông cáo báo chí nào được nhà báo đọc hết?',
   situation:'Công ty ví điện tử hư cấu PayNhanh gửi thông cáo dài 4 trang. Ba đoạn đầu kể lịch sử công ty và cảm ơn đối tác; thông tin chính — 200.000 tiểu thương chợ truyền thống đã nhận thanh toán QR, doanh thu trung bình tăng 18% — nằm ở trang 3. Một phóng viên trả lời: "Tôi đọc ba dòng rồi xoá, vì không thấy tin."',
   concept:{ name:'Kim tự tháp ngược',
     body:'Nhà báo nhận hàng chục thông cáo mỗi ngày và quyết định trong vài giây. Thông cáo tốt viết theo <b>kim tự tháp ngược</b>: tít nêu tin; đoạn đầu trả lời ai, làm gì, khi nào, ở đâu, vì sao, con số chính; đoạn sau là chi tiết, trích dẫn; cuối cùng mới là giới thiệu công ty. Kèm theo: một trích dẫn người thật nói như người thật, ảnh dùng được, đầu mối liên hệ trả lời nhanh. Độ dài tốt thường gói trong một trang. Nhà báo cắt từ dưới lên — phần quan trọng phải nằm trên cùng. Thông cáo hợp với tin đưa cho nhiều tòa soạn; tin độc quyền cho một phóng viên nên đi bằng email riêng vài dòng.' },
@@ -117,7 +117,7 @@ BAI_ADD({ mod:'kn09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kn09-03', skill:'comm', read:'6 phút', t:'Chỉ gọi nhà báo khi cần đăng bài thì sao?',
+{ id:'B:kn09-03', skill:'comm', read:'6 phút', assume:true, t:'Chỉ gọi nhà báo khi cần đăng bài thì sao?',
   situation:'Chị Lan, PR của chuỗi nhà thuốc hư cấu An Khang Plus, chỉ liên lạc với phóng viên khi có sự kiện ra mắt — khoảng 2 lần mỗi năm. Khi chuỗi bị một bài báo phản ánh sai giá thuốc, chị gọi 8 phóng viên quen để đính chính, chỉ 1 người nghe máy. Đồng nghiệp ở công ty khác thì gặp phóng viên mỗi tháng dù không có gì cần đăng.',
   concept:{ name:'Quan hệ báo chí là quan hệ nguồn tin',
     body:'Nhà báo cần <b>nguồn tin đáng tin</b>: người trả lời nhanh, số liệu đúng, giải thích ngành giúp họ viết tốt hơn — kể cả khi bài không nhắc tới công ty bạn. Quan hệ được xây lúc bình yên và dùng lúc khó khăn. Cách làm: giữ một <b>sổ nguồn tin</b> ghi mỗi phóng viên theo mảng gì, bài gần nhất, bạn đã cho họ thông tin gì; gửi đúng thứ họ cần, không gửi hàng loạt; nhận phỏng vấn cả khi chủ đề bất lợi, miễn nói đúng và nói sớm; không nói sai, không đòi xem bài trước khi đăng. Nếu bị gợi ý "có quảng cáo thì có bài", hãy tách hai việc: quảng cáo là hợp đồng trả phí, còn bài tin dựa vào giá trị tin. Quà hay phong bì không tạo quan hệ nguồn tin, chỉ tạo rủi ro.' },
@@ -174,7 +174,7 @@ BAI_ADD({ mod:'kn09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kn09-04', skill:'channel', read:'7 phút', t:'Tài trợ giải chạy 500 triệu đổi lấy gì?',
+{ id:'B:kn09-04', skill:'channel', read:'7 phút', assume:true, t:'Tài trợ giải chạy 500 triệu đổi lấy gì?',
   situation:'Hãng nước điện giải hư cấu Sóng Xanh được mời tài trợ chính giải chạy bộ 10.000 người ở Quy Nhơn, giá 500 triệu. Gói gồm logo trên áo, băng rôn, gian hàng. Nhóm marketing chia hai phe: một phe muốn logo to nhất có thể; phe kia muốn dùng tiền để phát nước tại các trạm tiếp nước và làm câu chuyện với người chạy.',
   concept:{ name:'Tài trợ phải được "kích hoạt"',
     body:'Logo trên băng rôn chỉ mua được <b>sự hiện diện</b>. Một tài trợ có ích khi thương hiệu đóng vai trò có thật trong sự kiện, liên quan tới lợi ích sản phẩm — gọi là <b>kích hoạt</b> tài trợ. Nên dành ngân sách kích hoạt riêng, và trước khi ký đàm phán quyền kích hoạt: độc quyền ngành nước uống, quyền đặt trạm và gian hàng, quyền dùng hình ảnh và dữ liệu đăng ký. Đánh giá tài trợ bằng ba câu: người tham dự có dùng thử sản phẩm không; có câu chuyện nào để báo chí và mạng xã hội kể lại không; và chi phí trên mỗi người tiếp cận thật là bao nhiêu.' },
@@ -231,10 +231,11 @@ BAI_ADD({ mod:'kn09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kn09-05', skill:'comm', read:'6 phút', t:'Đây là khủng hoảng loại gì?',
+{ id:'B:kn09-05', skill:'comm', read:'6 phút', assume:true, t:'Đây là khủng hoảng loại gì?',
+  src:[{ t:'Coombs, W.T. (2007), “Protecting Organization Reputations During a Crisis: The Development and Application of Situational Crisis Communication Theory”, Corporate Reputation Review 10(3)', u:'https://doi.org/10.1057/palgrave.crr.1550049', d:'2026-11-07', st:'chua' }],
   situation:'Trong cùng một tuần, ba thương hiệu hư cấu gặp chuyện. Hãng bánh Hạt Vàng có lô bánh bị khách phát hiện dị vật. Chuỗi gym FitGo có quản lý chi nhánh đăng bài chê người béo trên trang cá nhân. Hãng giao đồ ăn ShipSớm bị hàng trăm khách phàn nàn đơn trễ 2 tiếng trong đợt mưa lớn. Cả ba đều muốn "ra thông cáo xin lỗi" giống nhau.',
   concept:{ name:'Ba loại khủng hoảng thường gặp',
-    body:'Đây là cách phân loại thực hành để chọn phản ứng. Giới học thuật (Coombs, 2007, lý thuyết SCCT) xếp theo mức trách nhiệm khách gán cho công ty: càng bị coi là lẽ ra phòng được, càng phải nhận trách nhiệm và sửa. <b>Khủng hoảng sản phẩm</b> (an toàn, chất lượng) đụng tới sức khoẻ: hành động trước lời nói — ngừng bán, thu hồi, kiểm tra. <b>Khủng hoảng phát ngôn</b> (một người nói sai) đụng tới giá trị: nói rõ công ty đứng ở đâu và xử lý người nói ra sao. <b>Khủng hoảng dịch vụ</b> (trễ, lỗi hàng loạt) đụng tới lời hứa: giải thích nguyên nhân, bồi hoàn, cách không lặp lại. Thêm một trục là mức nghiêm trọng: đụng an toàn con người thì giám đốc điều hành quyết định ngay, không chờ họp. Dữ liệu bị lộ hay vi phạm pháp lý là nhóm khác, cần phản ứng riêng.' },
+    body:'Đây là cách phân loại thực hành để chọn phản ứng. Giới học thuật (Coombs, 2007, lý thuyết SCCT — xem nguồn) xếp theo mức trách nhiệm khách gán cho công ty: càng bị coi là lẽ ra phòng được, càng phải nhận trách nhiệm và sửa. <b>Khủng hoảng sản phẩm</b> (an toàn, chất lượng) đụng tới sức khoẻ: hành động trước lời nói — ngừng bán, thu hồi, kiểm tra. <b>Khủng hoảng phát ngôn</b> (một người nói sai) đụng tới giá trị: nói rõ công ty đứng ở đâu và xử lý người nói ra sao. <b>Khủng hoảng dịch vụ</b> (trễ, lỗi hàng loạt) đụng tới lời hứa: giải thích nguyên nhân, bồi hoàn, cách không lặp lại. Thêm một trục là mức nghiêm trọng: đụng an toàn con người thì giám đốc điều hành quyết định ngay, không chờ họp. Dữ liệu bị lộ hay vi phạm pháp lý là nhóm khác, cần phản ứng riêng.' },
   example:'Hạt Vàng: tạm ngừng bán lô bánh, công bố mã lô, mời khách đổi trả — do giám đốc chất lượng nói. FitGo: tạm đình chỉ quản lý trong lúc xác minh, nói rõ quan điểm tôn trọng mọi vóc dáng — do giám đốc điều hành nói. ShipSớm: xin lỗi, tặng mã 30.000đ cho đơn trễ trên 60 phút, công bố phương án tăng tài xế ngày mưa — do giám đốc vận hành nói. Ba câu chuyện, ba cách làm.',
   takeaway:'Phân loại trước khi phản hồi: sản phẩm cần hành động, phát ngôn cần lập trường, dịch vụ cần bồi hoàn.',
   apply:'Nhớ một khủng hoảng bạn từng thấy trên mạng. Trong 60 giây, phân loại nó và nói hành động đầu tiên đúng là gì.',
@@ -288,7 +289,7 @@ BAI_ADD({ mod:'kn09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kn09-06', skill:'comm', read:'7 phút', t:'Giờ vàng đầu tiên: ai nói, nói gì?',
+{ id:'B:kn09-06', skill:'comm', read:'7 phút', assume:true, t:'Giờ vàng đầu tiên: ai nói, nói gì?',
   situation:'21 giờ tối thứ Sáu, một video quay cảnh chuột chạy trong bếp một quán của chuỗi lẩu hư cấu Nồi Đỏ được chia sẻ nhanh. Sau 1 giờ có 3.000 lượt chia sẻ, sau 3 giờ có 18.000. Giám đốc muốn đợi sáng thứ Hai họp đủ ban lãnh đạo rồi mới ra thông báo. Trưởng phòng truyền thông lo rằng tới lúc đó câu chuyện đã được người khác kể thay.',
   concept:{ name:'Giờ vàng và thông điệp giữ chỗ',
     body:'Trong khủng hoảng, khoảng trống thông tin sẽ bị tin đồn lấp. Người làm nghề hay nói về <b>giờ vàng</b>: sớm nhất có thể, thường trong vài giờ đầu, công ty phải nói điều gì đó dù chưa biết hết. Đó là <b>thông điệp giữ chỗ</b> gồm ba ý: chúng tôi đã biết; đây là việc đang làm ngay (ví dụ tạm đóng quán để kiểm tra); khi nào sẽ có thông tin tiếp. Không đoán nguyên nhân, không đổ lỗi. Người phát ngôn là người có thẩm quyền quyết định hành động, và cả công ty chỉ nói một giọng.' },
@@ -345,7 +346,7 @@ BAI_ADD({ mod:'kn09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kn09-07', skill:'comm', read:'6 phút', t:'Lời xin lỗi này có thật lòng không?',
+{ id:'B:kn09-07', skill:'comm', read:'6 phút', assume:true, t:'Lời xin lỗi này có thật lòng không?',
   situation:'Hãng thời trang hư cấu Lụa Mây bị phát hiện dùng ảnh của một nhà thiết kế trẻ mà không xin phép. Bản xin lỗi đầu tiên viết: "Chúng tôi rất tiếc nếu sự việc gây hiểu lầm cho một số khách hàng." Trong 24 giờ, bài xin lỗi nhận 4.000 bình luận, phần lớn là giận dữ hơn trước. Nhóm truyền thông không hiểu vì sao "xin lỗi rồi mà vẫn bị chửi".',
   concept:{ name:'Bốn phần của một lời xin lỗi thật',
     body:'Lời xin lỗi làm dịu khủng hoảng khi có đủ bốn phần: <b>nhận đúng lỗi</b> bằng tên gọi cụ thể ("chúng tôi đã dùng ảnh của bạn X mà không xin phép"); <b>nói lời xin lỗi với đúng người</b> bị hại, không phải với "một số khách hàng"; <b>sửa hậu quả</b> (gỡ ảnh, trả phí, ghi công); và <b>thay đổi để không lặp lại</b>. Các cụm như "rất tiếc nếu", "gây hiểu lầm", "một số người cảm thấy" chuyển lỗi sang cảm xúc người nghe — đó là lời xin lỗi giả, và người đọc nhận ra ngay. Nhận lỗi cụ thể không bắt buộc nhận mọi trách nhiệm pháp lý: chỉ nói điều đã xác minh, hẹn cập nhật điều chưa rõ, nhờ pháp chế rà từng câu thay vì đổi bằng câu mơ hồ.' },
@@ -402,7 +403,7 @@ BAI_ADD({ mod:'kn09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kn09-08', skill:'comm', read:'6 phút', t:'Khi nào im lặng là sai?',
+{ id:'B:kn09-08', skill:'comm', read:'6 phút', assume:true, t:'Khi nào im lặng là sai?',
   situation:'Chuỗi siêu thị mini hư cấu Tươi Mỗi Ngày gặp hai chuyện trong một tháng. Chuyện 1: một tài khoản 200 người theo dõi viết rằng "nghe nói" rau ở đây phun thuốc, bài có 12 lượt thích. Chuyện 2: một video của khách quay nhân viên thay nhãn hạn dùng trên hộp thịt, 40.000 lượt xem trong nửa ngày. Giám đốc muốn phản hồi mạnh cả hai.',
   concept:{ name:'Ngưỡng phản hồi',
     body:'Không phải lời chê nào cũng cần phản hồi công khai; phản hồi to một chuyện nhỏ có thể khiến nhiều người biết hơn. Hãy xét ba câu: <b>có bằng chứng cụ thể không</b> (video, ảnh, hoá đơn); <b>có đụng tới an toàn hay pháp lý không</b>; và <b>có đang lan ra ngoài nhóm nhỏ không</b>. Nếu cả ba đều "không", theo dõi và trả lời riêng. Nếu có bằng chứng về an toàn, hoặc đang lan nhanh, im lặng là sai — vì im lặng lúc đó bị đọc là thừa nhận hoặc coi thường.' },
@@ -462,7 +463,7 @@ BAI_ADD({ mod:'kn09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:kn09-09', skill:'channel', read:'7 phút', t:'Trả lời 3.000 bình luận giận dữ thế nào?',
+{ id:'B:kn09-09', skill:'channel', read:'7 phút', assume:true, t:'Trả lời 3.000 bình luận giận dữ thế nào?',
   situation:'Ứng dụng đặt vé xe hư cấu XeVề bị lỗi hệ thống đêm 27 Tết, 5.000 vé bị hủy. Bài thông báo trên fanpage có 3.000 bình luận trong 6 giờ. Admin đang dán cùng một câu "Rất tiếc về trải nghiệm của bạn, vui lòng inbox" dưới mọi bình luận. Khách chụp màn hình hàng chục câu giống hệt nhau và đăng lên các nhóm với tít "XeVề trả lời bằng máy".',
   concept:{ name:'Phản hồi mạng xã hội trong khủng hoảng',
     body:'Trên mạng xã hội, mỗi câu trả lời là công khai và bị chụp lại. Ba nguyên tắc: <b>một bài chính được ghim</b> cập nhật liên tục, để mọi người biết tìm thông tin ở đâu; <b>trả lời theo nhóm vấn đề</b> (hoàn tiền, đổi chuyến, thời gian xử lý) bằng câu có thông tin thật, thay vì một câu mẫu vô nghĩa; và <b>chuyển trường hợp riêng sang kênh riêng</b> nhưng kèm cách làm cụ thể. Câu hỏi chung thì trả lời công khai để người khác cùng đọc; cần mã vé hay số điện thoại thì chuyển riêng. Chỉ ẩn spam, link lừa đảo, thông tin cá nhân theo tiêu chí viết sẵn; không xoá bình luận chê, không tranh cãi, không đùa. Tốc độ phải đi cùng thông tin: chưa có thì nói rõ "chưa có, giờ nào cập nhật", đừng im lặng hay dán câu rỗng.' },
@@ -519,7 +520,7 @@ BAI_ADD({ mod:'kn09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:kn09-10', skill:'measure', read:'6 phút', t:'Khủng hoảng qua rồi, bạn học được gì?',
+{ id:'B:kn09-10', skill:'measure', read:'6 phút', assume:true, t:'Khủng hoảng qua rồi, bạn học được gì?',
   situation:'Ba tháng sau vụ bánh có dị vật, hãng bánh hư cấu Hạt Vàng đã bán lại bình thường. Giám đốc muốn "quên đi cho nhanh". Trưởng phòng truyền thông đề nghị một buổi rút kinh nghiệm hai giờ, với dữ liệu: mất 9 giờ mới ra thông báo đầu tiên, 3 người phát ngôn nói 3 kiểu, và nhà máy mất 2 ngày mới truy được mã lô.',
   concept:{ name:'Rút kinh nghiệm không đổ lỗi',
     body:'Buổi rút kinh nghiệm (post-mortem) nhìn lại dòng thời gian: <b>chuyện gì xảy ra, lúc nào, ai quyết gì, dựa trên thông tin gì</b>. Mục tiêu là sửa hệ thống, không tìm người để phạt — nếu không, lần sau mọi người sẽ giấu thông tin. Đầu ra là vài thay đổi cụ thể có người chịu trách nhiệm và hạn chót: danh sách người phát ngôn, mẫu thông điệp giữ chỗ, quy trình truy lô, số điện thoại trực đêm. Cuối cùng là một buổi diễn tập để kiểm tra các thay đổi có chạy thật không.' },

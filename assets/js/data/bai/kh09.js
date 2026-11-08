@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'kh09', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kh09-01', skill:'insight', read:'6 phút', t:'Ai thật sự "mua" phần mềm kế toán trong một công ty 200 người?',
+{ id:'B:kh09-01', skill:'insight', read:'6 phút', assume:true, t:'Ai thật sự "mua" phần mềm kế toán trong một công ty 200 người?',
   situation:'Bạn làm marketing cho một phần mềm kế toán đám mây. Một công ty may mặc ở Bình Dương, 200 nhân viên, đã dùng thử 14 ngày. Kế toán trưởng rất thích, nhưng hợp đồng vẫn nằm im ba tuần. Sales kể: giám đốc tài chính hỏi về giá, trưởng phòng IT hỏi về bảo mật dữ liệu, còn tổng giám đốc chưa ai gặp.',
   concept:{ name:'Nhóm mua (buying center)',
     body:'Trong B2B, "khách hàng" là một nhóm người với vai trò khác nhau. <b>Người dùng</b> làm việc với sản phẩm hằng ngày. <b>Người ảnh hưởng</b> góp ý chuyên môn, như IT hay pháp chế. <b>Người duyệt ngân sách</b> ký chi tiền. <b>Người chặn</b> có thể nói "không" dù không ký, như IT từ chối vì lo bảo mật. Mỗi vai lo một nỗi khác nhau, nên một thông điệp chung chung không thuyết phục được ai. Việc đầu tiên là vẽ bản đồ nhóm mua: ai, lo gì, cần bằng chứng gì.' },
@@ -63,7 +63,7 @@ BAI_ADD({ mod:'kh09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kh09-02', skill:'insight', read:'7 phút', t:'Vì sao khách chọn hãng lớn đắt hơn dù sản phẩm của bạn tốt hơn?',
+{ id:'B:kh09-02', skill:'insight', read:'7 phút', assume:true, t:'Vì sao khách chọn hãng lớn đắt hơn dù sản phẩm của bạn tốt hơn?',
   situation:'Công ty bạn bán phần mềm quản lý kho, tính năng ngang và giá rẻ hơn 30% so với một hãng quốc tế lớn. Một chuỗi bán lẻ ở Hà Nội vẫn chọn hãng lớn. Trưởng phòng vận hành nói nhỏ với sales: "Nếu hệ thống lỗi, tôi phải giải thích với sếp vì sao chọn công ty ít người biết."',
   concept:{ name:'Rủi ro cá nhân của người mua B2B',
     body:'Người mua B2B không chỉ tiêu tiền công ty, họ đặt cược cả uy tín và công việc của mình. Câu nói cũ "không ai bị đuổi việc vì chọn hãng lớn" mô tả đúng điều đó: chọn hãng lớn mà hỏng thì "do xui", chọn hãng nhỏ mà hỏng thì "do anh chọn sai". Vì vậy thứ người mua cần không chỉ là sản phẩm tốt, mà là <b>lý do an toàn</b> để bảo vệ quyết định: khách hàng tương tự đã dùng, cam kết dịch vụ bằng văn bản, lộ trình rút lui nếu không ổn.' },
@@ -123,7 +123,7 @@ BAI_ADD({ mod:'kh09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kh09-03', skill:'channel', read:'7 phút', t:'Khách mất 6 tháng mới ký, marketing làm gì trong 6 tháng đó?',
+{ id:'B:kh09-03', skill:'channel', read:'7 phút', assume:true, t:'Khách mất 6 tháng mới ký, marketing làm gì trong 6 tháng đó?',
   situation:'Bạn phụ trách marketing cho một công ty bán hệ thống điện mặt trời áp mái cho nhà xưởng. Từ lần đầu khách tải tài liệu đến khi ký trung bình mất 6 tháng. Hiện đội bạn chỉ làm một việc: chạy quảng cáo lấy form, rồi chuyển cho sales. 60% khách đã để lại form nhưng không bao giờ trả lời điện thoại lần hai.',
   concept:{ name:'Nội dung theo giai đoạn của chu kỳ mua',
     body:'Chu kỳ mua B2B dài thường đi qua ba chặng. <b>Nhận ra vấn đề</b>: khách thấy hoá đơn điện tăng, chưa nghĩ đến giải pháp. <b>Tìm hiểu giải pháp</b>: so sánh các cách (điện mặt trời hay giữ nguyên), cần hướng dẫn, bảng tính hoàn vốn. <b>Chọn nhà cung cấp</b>: so sánh các bên bán, cần báo giá, case study, khảo sát kỹ thuật. Marketing phải có nội dung cho từng chặng và nuôi dưỡng khách đi qua từng chặng, thay vì dồn tất cả vào khoảnh khắc lấy form. Chỉ giao cho sales khi có tín hiệu hành vi, ví dụ: xem trang giá từ hai lần hoặc yêu cầu báo giá.' },
@@ -180,7 +180,7 @@ BAI_ADD({ mod:'kh09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kh09-04', skill:'comm', read:'6 phút', t:'Case study nào khiến giám đốc nhà máy tin bạn?',
+{ id:'B:kh09-04', skill:'comm', read:'6 phút', assume:true, t:'Case study nào khiến giám đốc nhà máy tin bạn?',
   situation:'Công ty bạn bán dịch vụ bảo trì máy nén khí. Trang web có mục "Khách hàng" với 30 logo doanh nghiệp và dòng chữ "Được tin dùng bởi hàng trăm nhà máy". Một giám đốc nhà máy nhựa ở Đồng Nai xem xong vẫn hỏi sales: "Cụ thể anh đã làm được gì cho nhà máy giống tôi?"',
   concept:{ name:'Bằng chứng B2B cụ thể',
     body:'Logo và lời khen chung chung chỉ nói "có người đã mua". Người mua B2B cần bằng chứng trả lời được ba câu: <b>khách đó giống tôi không</b> (ngành, quy mô), <b>vấn đề trước đó là gì</b>, và <b>kết quả đo được là bao nhiêu</b> sau bao lâu. Một case study tốt có tên người thật đứng ra nói, con số trước và sau, và cả khó khăn trong lúc triển khai. Bằng chứng càng giống hoàn cảnh người đọc, càng giảm được rủi ro họ cảm thấy.' },
@@ -240,7 +240,7 @@ BAI_ADD({ mod:'kh09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kh09-05', skill:'measure', read:'7 phút', t:'Báo giá B2B: giảm giá hay đổi cách chào giá?',
+{ id:'B:kh09-05', skill:'measure', read:'7 phút', assume:true, t:'Báo giá B2B: giảm giá hay đổi cách chào giá?',
   situation:'Công ty bạn cung cấp suất ăn công nghiệp. Một khu công nghiệp ở Bắc Ninh mời thầu cho 1.500 suất/ngày. Đối thủ chào 28.000 đồng/suất, bạn chào 30.000. Sếp muốn hạ xuống 27.500 cho chắc thắng. Biên lợi nhuận hiện tại của bạn là 3.000 đồng/suất.',
   concept:{ name:'Giá B2B và tổng chi phí sở hữu',
     body:'Trong B2B, giá không chỉ là con số trên đơn vị. Người mua (đặc biệt phòng mua hàng) so theo tiêu chí trong hồ sơ thầu, nhưng người dùng và người duyệt còn quan tâm <b>tổng chi phí</b>: chi phí phát sinh, rủi ro gián đoạn, chi phí quản lý nhà cung cấp. Trước khi giảm giá, hãy tính giảm giá ăn mất bao nhiêu lợi nhuận, rồi xem có cách nào chào <b>giá trị</b> khác mà đối thủ không có: cam kết an toàn thực phẩm, phạt khi giao trễ, thực đơn cho ca đêm. Hạ giá chỉ đáng khi nó nâng xác suất thắng đủ bù phần lãi mất: lãi giảm bao nhiêu lần thì xác suất thắng phải tăng chừng đó lần. Và giá trị chỉ có chỗ đứng khi hồ sơ chấm theo điểm tổng hợp; nếu chấm giá thấp nhất, cam kết thêm không cứu được.' },
@@ -297,7 +297,7 @@ BAI_ADD({ mod:'kh09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kh09-06', skill:'channel', read:'6 phút', t:'Demo cho cả phòng ban hay dùng thử có hướng dẫn?',
+{ id:'B:kh09-06', skill:'channel', read:'6 phút', assume:true, t:'Demo cho cả phòng ban hay dùng thử có hướng dẫn?',
   situation:'Công ty bạn bán phần mềm quản lý bán hàng cho các nhà phân phối. Chương trình dùng thử 14 ngày có 200 công ty đăng ký mỗi tháng, nhưng chỉ 10 công ty trả tiền. Dữ liệu cho thấy 70% công ty dùng thử không nhập nổi danh sách khách hàng của họ trong ba ngày đầu.',
   concept:{ name:'Khoảnh khắc thấy giá trị trong dùng thử',
     body:'Dùng thử B2B chỉ có tác dụng khi khách chạm tới <b>khoảnh khắc thấy giá trị</b>: lần đầu nhìn thấy dữ liệu của chính mình chạy trong sản phẩm. Phần mềm B2B thường phải cài đặt, nhập dữ liệu, mời đồng nghiệp — khách tự làm dễ bỏ giữa chừng. Vì vậy dùng thử có hướng dẫn, với một người hỗ trợ giúp nhập dữ liệu thật và một mục tiêu rõ trong 14 ngày, theo kinh nghiệm phổ biến trong ngành thường chuyển đổi tốt hơn dùng thử tự do (mức chênh còn tuỳ sản phẩm và nhóm khách, nên cần tự thử). Demo thì hợp khi nhóm mua cần thấy tổng thể trước khi bỏ công dùng thử.' },
@@ -354,7 +354,7 @@ BAI_ADD({ mod:'kh09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kh09-07', skill:'brand', read:'6 phút', t:'Khi sales nghỉ việc, khách có đi theo không?',
+{ id:'B:kh09-07', skill:'brand', read:'6 phút', assume:true, t:'Khi sales nghỉ việc, khách có đi theo không?',
   situation:'Công ty bạn phân phối thiết bị y tế cho bệnh viện tư. Anh Hùng, trưởng nhóm sales, giữ quan hệ với 15 bệnh viện, chiếm 40% doanh thu. Anh vừa nộp đơn nghỉ để sang đối thủ. Giám đốc lo: "Khách mua vì anh Hùng hay vì công ty mình?"',
   concept:{ name:'Uy tín người đại diện và uy tín công ty',
     body:'Trong B2B, niềm tin thường bám vào một con người: người trả lời điện thoại lúc 10 giờ tối khi máy hỏng. Đó là tài sản, nhưng cũng là rủi ro. Công ty cần biến <b>quan hệ cá nhân</b> thành <b>quan hệ tổ chức</b>: mỗi khách có ít nhất hai đầu mối, có quy trình hỗ trợ không phụ thuộc một người, lịch sử làm việc được ghi lại, và thương hiệu công ty xuất hiện trong mọi lần phục vụ, không chỉ tên cá nhân. Phần việc của marketing: báo cáo quý mang logo công ty, nội dung và sự kiện mời cả đầu mối cũ lẫn mới. Đo giữ chân theo doanh thu, không chỉ theo số khách.' },
@@ -411,7 +411,7 @@ BAI_ADD({ mod:'kh09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kh09-08', skill:'measure', read:'7 phút', t:'500 lead rẻ hay 80 lead đúng người?',
+{ id:'B:kh09-08', skill:'measure', read:'7 phút', assume:true, t:'500 lead rẻ hay 80 lead đúng người?',
   situation:'Bạn chạy quảng cáo cho phần mềm quản lý nhân sự. Chiến dịch A trên Facebook tạo 500 lead, chi phí 50 triệu. Chiến dịch B trên LinkedIn tạo 80 lead, chi phí 40 triệu. Sếp khen chiến dịch A vì "lead rẻ hơn gấp 5 lần". Sales thì phàn nàn lead A toàn sinh viên và chủ shop một người.',
   concept:{ name:'Chi phí trên hợp đồng, không phải trên lead',
     body:'Trong B2B, lead chỉ có giá trị khi dẫn tới hợp đồng. Cần đo tới cuối: <b>lead đủ điều kiện</b> (đúng quy mô, đúng vai trò, có nhu cầu), rồi <b>hợp đồng</b>. Chi phí trên mỗi hợp đồng = chi phí quảng cáo ÷ số hợp đồng. Lead rẻ mà sai người còn tốn thêm thời gian sales gọi, làm chi phí thật cao hơn. Marketing và sales cần thống nhất trước định nghĩa lead đủ điều kiện, ví dụ: công ty từ 50 nhân viên, người liên hệ là nhân sự hoặc giám đốc.' },
@@ -434,7 +434,7 @@ BAI_ADD({ mod:'kh09', lessons:[
     options:[{k:'a',t:'Tăng ngân sách A vì lead rẻ, số lượng lead lớn'},{k:'b',t:'Chuyển phần lớn ngân sách sang B, đo theo chi phí trên hợp đồng'},
              {k:'c',t:'Chia đều ngân sách cho A và B để cân bằng số lượng và chất lượng'},{k:'d',t:'Dừng cả hai, chỉ làm SEO vì SEO miễn phí'}],
     answer:'b', why:{a:'Thêm tiền vào A là thêm việc gọi điện cho lead sai người.',
-      b:'Đúng. Đo theo hợp đồng, B hiệu quả gấp đôi; tiền nên theo hiệu quả thật.',
+      b:'Đúng. Cả chi phí/hợp đồng (A 10 triệu, B 5 triệu) và tỉ lệ lead đủ điều kiện (A 5%, B 40%) cùng chỉ về B; nhưng 13 hợp đồng còn ít, nên chuyển dần và theo tiếp 1–2 quý thay vì cắt hẳn A.',
       c:'Chia đều nghe cân bằng nhưng bỏ qua việc A đắt gấp đôi trên mỗi hợp đồng.',
       d:'SEO không miễn phí (tốn người, thời gian) và cần lâu mới có kết quả.'} },
   { type:'calc', stem:'Chiến dịch A chi 50 triệu, được 5 hợp đồng. Chiến dịch B chi 40 triệu, được 8 hợp đồng. Chi phí trên hợp đồng của A cao hơn B bao nhiêu triệu đồng?',
@@ -471,7 +471,7 @@ BAI_ADD({ mod:'kh09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:kh09-09', skill:'insight', read:'7 phút', t:'Hợp đồng còn 90 ngày hết hạn, bắt đầu giữ khách từ đâu?',
+{ id:'B:kh09-09', skill:'insight', read:'7 phút', assume:true, t:'Hợp đồng còn 90 ngày hết hạn, bắt đầu giữ khách từ đâu?',
   situation:'Công ty bạn cho thuê phần mềm quản lý nhà hàng theo năm, có 200 khách doanh nghiệp. Năm ngoái 50 khách không gia hạn. Đội chăm sóc khách chỉ liên hệ khi còn 7 ngày trước hạn, gửi báo giá gia hạn. Phỏng vấn khách đã rời, câu trả lời phổ biến nhất: "Chúng tôi dùng có 3 chức năng, thấy không đáng tiền."',
   concept:{ name:'Gia hạn được quyết định từ lúc dùng',
     body:'Trong B2B, quyết định gia hạn không xảy ra vào tuần cuối, mà được tích luỹ suốt cả năm. Khách chỉ gia hạn khi họ <b>thấy được giá trị</b> đã nhận. Cần theo dõi <b>tín hiệu sức khoẻ</b>: số người dùng thật, số chức năng dùng, số lần gọi hỗ trợ. Và cần một buổi <b>tổng kết giá trị</b> trước hạn khoảng 90 ngày: nhìn lại khách đã tiết kiệm được gì, đề xuất cách dùng thêm, gặp cả người duyệt ngân sách chứ không chỉ người dùng.' },
@@ -531,10 +531,10 @@ BAI_ADD({ mod:'kh09', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:kh09-10', skill:'comm', read:'6 phút', t:'Chạy quảng cáo B2B như bán trà sữa có được không?',
+{ id:'B:kh09-10', skill:'comm', read:'6 phút', assume:true, t:'Chạy quảng cáo B2B như bán trà sữa có được không?',
   situation:'Bạn chuyển từ làm marketing cho một chuỗi trà sữa sang một công ty bán phần mềm hoá đơn điện tử. Theo thói quen, bạn làm video TikTok vui nhộn, chạy khuyến mãi "mua 1 năm tặng 1 tháng, chỉ hôm nay". Sau 2 tháng: 300.000 lượt xem, 1.200 lượt thích, nhưng chỉ 3 hợp đồng.',
   concept:{ name:'Khác biệt B2B và B2C',
-    body:'B2C thường là một người, quyết nhanh, theo cảm xúc, giá trị mỗi đơn nhỏ. B2B là <b>nhóm mua</b>, chu kỳ dài, rủi ro cá nhân lớn, giá trị mỗi hợp đồng cao và gắn bó nhiều năm. Vì vậy công cụ B2C như khuyến mãi "chỉ hôm nay" ít tác dụng: không ai ký hợp đồng doanh nghiệp trong một ngày. B2B cần nội dung giáo dục, bằng chứng, và thông điệp riêng cho từng vai. Cảm xúc vẫn có, nhưng là cảm giác an tâm, được bảo vệ và được coi là chuyên nghiệp. Ví dụ: ly trà sữa 50 nghìn, một người quyết trong vài phút; hợp đồng 12 triệu/năm, nhiều người duyệt trong vài tuần. Đổi lại, B2B tốn ngân sách nội dung và chậm thấy hợp đồng.' },
+    body:'B2C thường là một người, quyết nhanh, theo cảm xúc, giá trị mỗi đơn nhỏ. B2B là <b>nhóm mua</b>, chu kỳ dài, rủi ro cá nhân lớn, giá trị mỗi hợp đồng cao và gắn bó nhiều năm. Vì vậy khuyến mãi "chỉ hôm nay" ít tác dụng với hợp đồng cần nhiều người duyệt — loại này hiếm khi ký trong một ngày; doanh nghiệp nhỏ một người tự quyết thì công cụ B2C vẫn có chỗ. Tiêu chí phân biệt: giá trị hợp đồng × số người duyệt, càng lớn càng xa B2C. B2B cần nội dung giáo dục, bằng chứng, và thông điệp riêng cho từng vai. Cảm xúc vẫn có, nhưng là cảm giác an tâm, được bảo vệ và được coi là chuyên nghiệp. Ví dụ: ly trà sữa 50 nghìn, một người quyết trong vài phút; hợp đồng 12 triệu/năm, nhiều người duyệt trong vài tuần. Đổi lại, B2B tốn ngân sách nội dung và chậm thấy hợp đồng.' },
   example:'Bạn làm lại: thay video vui nhộn bằng loạt bài "5 lỗi hoá đơn khiến doanh nghiệp bị phạt", một bảng kiểm tuân thủ cho kế toán, và case study một công ty phân phối 80 nhân viên. Quảng cáo nhắm kế toán trưởng và giám đốc tài chính. Số minh hoạ sau một quý, vì phần mềm này cần 2–3 tháng để ký: 15.000 lượt xem, 240 lead, 18 hợp đồng, chi phí 90 triệu. Chiến dịch TikTok cũ tốn 60 triệu cho 3 hợp đồng.',
   takeaway:'B2B mua bằng nhóm, bằng bằng chứng và theo thời gian dài: đừng dùng công cụ B2C theo phản xạ.',
   apply:'Chọn một chiến thuật B2C bạn quen. Nói trong 60 giây: nó cần sửa thế nào để hợp với một khách B2B?',

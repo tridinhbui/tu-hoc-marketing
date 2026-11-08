@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'tp05', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tp05-01', skill:'brand', read:'6 phút', t:'Thương hiệu của bạn cho phép bán đắt hơn bao nhiêu?',
+{ id:'B:tp05-01', skill:'brand', read:'6 phút', assume:true, t:'Thương hiệu của bạn cho phép bán đắt hơn bao nhiêu?',
   situation:'Bạn làm cho một hãng nước mắm ở Phú Quốc. Chai 500 ml bán 65.000đ, trong khi chai nhãn riêng của siêu thị cùng độ đạm bán 50.000đ. Sếp hỏi: “Thương hiệu của mình đáng bao nhiêu tiền?” Bạn chỉ có số liệu bán hàng hai năm và bảng giá của đối thủ.',
   concept:{ name:'Phần giá cao hơn nhờ thương hiệu (price premium)',
     body:'Cách đo đơn giản nhất: so giá của bạn với một sản phẩm <b>tương đương về chất lượng</b> nhưng không có thương hiệu mạnh, rồi xem khách vẫn mua ở mức chênh đó hay không. Phần chênh mà khách vẫn chấp nhận trả là tiền thương hiệu làm ra trên từng đơn vị. Điều kiện quan trọng: sản lượng phải giữ được. Giá cao mà bán chậm dần thì đó không phải premium, mà là đang tự thu hẹp thị trường. Price premium là một thước đo tài sản thương hiệu trong mô hình của David Aaker; Kevin Keller đo thêm nhận biết và liên tưởng, còn Ehrenberg-Bass nhấn mạnh độ phủ và mức dễ được nhớ tới (mental availability) hơn là giá cao. Đây là một thước đo, không phải thước đo duy nhất.' },
@@ -60,14 +60,15 @@ BAI_ADD({ mod:'tp05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tp05-02', skill:'measure', read:'7 phút', t:'Chia ngân sách cho xây thương hiệu và chạy khuyến mãi thế nào?',
+{ id:'B:tp05-02', skill:'measure', read:'7 phút', assume:true, t:'Chia ngân sách cho xây thương hiệu và chạy khuyến mãi thế nào?',
   situation:'Một chuỗi trà sữa 18 cửa hàng ở Hà Nội có 1,2 tỉ đồng ngân sách marketing năm nay. Năm ngoái 90% dồn vào voucher, flash sale và quảng cáo chuyển đổi. Doanh số tháng nào có khuyến mãi thì tăng vọt, tháng nào không có thì tụt, và khách ngày càng chỉ mua khi có mã giảm giá.',
   concept:{ name:'Hai loại tiền: xây lâu dài và kích ngắn hạn',
-    body:'Tiền <b>kích cầu ngắn hạn</b> (khuyến mãi, quảng cáo chuyển đổi) cho kết quả nhanh nhưng tắt là hết. Tiền <b>xây thương hiệu</b> (nội dung, hình ảnh nhất quán, quảng cáo nhắm rộng) chậm hơn nhưng để lại dư âm: nhiều người nghĩ tới bạn hơn, chịu trả giá cao hơn. Nhiều người làm nghề dùng quy tắc tham khảo khoảng 60/40 nghiêng về xây (từ nghiên cứu của Les Binet & Peter Field cho IPA, là mức trung bình nhiều ngành), nhưng tỉ lệ đúng tuỳ ngành và giai đoạn. Điều quan trọng là đừng để một bên về gần 0.' },
-  example:'Chuỗi trà sữa quyết định chuyển sang 50/50: 600 triệu cho xây thương hiệu, 600 triệu cho kích cầu. Quý đầu doanh số khuyến mãi thấp hơn năm ngoái một chút. Sang quý ba, số khách mua giá gốc tăng từ 35% lên 48% tổng hoá đơn, nghĩa là mỗi đồng khuyến mãi phải gánh ít hơn. Nếu tháng ấy có 100.000 hoá đơn, đó là thêm 13.000 hoá đơn không phải trợ giá.',
+    body:'Tiền <b>kích cầu ngắn hạn</b> (khuyến mãi, quảng cáo chuyển đổi) cho kết quả nhanh nhưng tắt là hết. Tiền <b>xây thương hiệu</b> (nội dung, hình ảnh nhất quán, quảng cáo nhắm rộng) chậm hơn nhưng để lại dư âm: nhiều người nghĩ tới bạn hơn, chịu trả giá cao hơn. Nhiều người làm nghề dùng quy tắc tham khảo khoảng 60/40 nghiêng về xây (từ nghiên cứu của Les Binet & Peter Field cho IPA trên các chiến dịch dự giải hiệu quả ở Anh, xem nguồn). Đó là mức trung bình; các báo cáo sau của chính hai tác giả cho thấy tỉ lệ khác nhau theo ngành hàng và giai đoạn thương hiệu, nên coi 60/40 là điểm xuất phát rồi chỉnh theo ngành mình. Điều quan trọng là đừng để một bên về gần 0.' },
+  example:'Chuỗi trà sữa quyết định chuyển sang 50/50: 600 triệu cho xây thương hiệu, 600 triệu cho kích cầu. Quý đầu doanh số khuyến mãi thấp hơn năm ngoái một chút. Sang quý ba, số khách mua giá gốc tăng từ 35% lên 48% tổng hoá đơn so với cùng kỳ năm trước (số minh hoạ), nghĩa là mỗi đồng khuyến mãi phải gánh ít hơn. Phần tăng này có thể chỉ do bớt phát mã (ít mã hơn thì ít hoá đơn dùng mã hơn), chưa chắc do thương hiệu mạnh hơn — cần đọc kèm chỉ số tìm tên hoặc nhắc tên để tách hai nguyên nhân. Nếu tháng ấy có 100.000 hoá đơn, đó là thêm 13.000 hoá đơn không phải trợ giá.',
   takeaway:'Kích cầu hái quả hôm nay; xây thương hiệu trồng cây cho năm sau. Tắt hẳn bên nào cũng trả giá.',
   apply:'Liệt kê các khoản chi marketing tháng trước của bạn (hoặc một thương hiệu bạn theo dõi), xếp vào hai cột “xây” và “kích”, tính tỉ lệ và nói trong 60 giây nó có nghiêng quá không.',
   mistakes:['Cắt hết ngân sách xây thương hiệu vì “không đo được doanh số ngay”.','Đánh giá tiền xây thương hiệu sau đúng một tháng rồi kết luận là vô ích.'],
+  src:[{ t:'Binet & Field (2013), “The Long and the Short of It: Balancing Short and Long-Term Marketing Strategies”, IPA', u:'https://ipa.co.uk/knowledge/publications-reports/the-long-and-the-short-of-it-balancing-short-and-long-term-marketing-strategies', d:'2026-11-07', st:'chua' }],
   q:[
   { type:'mcq', stem:'Đoán trước: khi một thương hiệu dồn gần hết tiền vào khuyến mãi trong nhiều năm, hệ quả dễ gặp nhất là gì?',
     options:[{k:'a',t:'Khách quen dần với giá giảm và ngại mua khi không có mã'},{k:'b',t:'Thương hiệu được nhớ tới nhiều hơn nhờ xuất hiện liên tục trên sàn'},
@@ -117,7 +118,7 @@ BAI_ADD({ mod:'tp05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tp05-03', skill:'brand', read:'7 phút', t:'Hãng sữa nổi tiếng có nên mở thêm dòng cà phê?',
+{ id:'B:tp05-03', skill:'brand', read:'7 phút', assume:true, t:'Hãng sữa nổi tiếng có nên mở thêm dòng cà phê?',
   situation:'Một hãng sữa chua nổi tiếng ở miền Nam, được nhớ tới với hình ảnh “tươi, mát, tốt cho bụng”, muốn ra thêm cà phê lon và nước tăng lực mang cùng tên. Ban giám đốc lập luận: tên đã có sẵn, khách tin, đỡ tốn tiền xây thương hiệu mới. Bạn được hỏi ý kiến trong cuộc họp tuần sau.',
   concept:{ name:'Mở rộng thương hiệu (brand extension)',
     body:'Dùng tên đã có cho một ngành hàng mới giúp tiết kiệm chi phí làm quen tên. Nhưng nó chỉ có lợi khi ngành mới <b>khớp</b> với điều khách đang nhớ về tên đó. Khớp thì hai bên nâng nhau. Lệch thì hai tác hại: sản phẩm mới khó bán vì khách thấy lạ, và nghĩa của tên gốc có thể bị pha loãng (nghiên cứu của Loken và John năm 1993 cho thấy nguy cơ này tăng khi sản phẩm mới càng lệch với tên gốc). Câu hỏi kiểm tra: khách nghe tên này đi với ngành mới có thấy hợp lý không, và nếu sản phẩm mới thất bại thì tên gốc có bị kéo theo không?' },
@@ -174,7 +175,7 @@ BAI_ADD({ mod:'tp05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tp05-04', skill:'brand', read:'6 phút', t:'Hợp tác với thương hiệu khác: cộng hưởng hay tự làm mờ mình?',
+{ id:'B:tp05-04', skill:'brand', read:'6 phút', assume:true, t:'Hợp tác với thương hiệu khác: cộng hưởng hay tự làm mờ mình?',
   situation:'Một hãng bánh trung thu truyền thống ở Sài Gòn được một chuỗi cà phê trẻ mời làm hộp bánh chung dịp Trung thu. Chuỗi cà phê có 300.000 người theo dõi, phần lớn 18–25 tuổi; khách của hãng bánh chủ yếu trên 35. Hai bên chia đôi chi phí và doanh thu. Bạn phải quyết định có nhận lời không.',
   concept:{ name:'Hợp tác thương hiệu (co-branding)',
     body:'Hai thương hiệu cùng đứng tên một sản phẩm hoặc chiến dịch. Lợi ích chính là <b>mượn khách và mượn nghĩa</b> của nhau: mỗi bên chạm tới người mà bên kia đã có. Hợp tác tốt khi hai bên có một điểm chung đủ rõ và mỗi bên mang tới một thứ bên kia thiếu. Rủi ro: đối tác gặp chuyện xấu thì bạn bị liên luỵ; tên đối tác lấn át thì khách nhớ họ chứ không nhớ bạn. Hai việc cần chốt trước: đo bằng doanh thu <b>tăng thêm</b> (phần khách quen vốn vẫn mua thì không tính), và điều khoản hợp đồng về cỡ logo, quyền duyệt nội dung, quyền rút khi đối tác gặp khủng hoảng.' },
@@ -231,7 +232,7 @@ BAI_ADD({ mod:'tp05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tp05-05', skill:'comm', read:'7 phút', t:'Khủng hoảng làm tài sản thương hiệu mất nhanh đến đâu, và gỡ lại ra sao?',
+{ id:'B:tp05-05', skill:'comm', read:'7 phút', assume:true, t:'Khủng hoảng làm tài sản thương hiệu mất nhanh đến đâu, và gỡ lại ra sao?',
   situation:'Một chuỗi bánh mì 25 cửa hàng bị khách đăng clip một cửa hàng để nguyên liệu dưới sàn. Clip có 2 triệu lượt xem trong hai ngày. Doanh số tuần đó giảm 40%. Ban giám đốc chia hai phe: một phe muốn im lặng chờ qua, một phe muốn xin lỗi ngay và đóng cửa hàng đó để kiểm tra.',
   concept:{ name:'Khủng hoảng ăn mòn tài sản',
     body:'Tài sản thương hiệu tích luỹ chậm qua nhiều năm nhưng có thể mất nhanh trong vài ngày, vì khủng hoảng chạm thẳng vào <b>lời hứa cốt lõi</b>. Bánh mì hứa sạch và ngon; clip mất vệ sinh đánh vào đúng chữ “sạch”. Mức thiệt hại phụ thuộc: vấn đề có chạm lời hứa cốt lõi không, bạn phản ứng nhanh và thật đến đâu, và có sửa gốc rễ không. Trước khi xin lỗi, dành vài giờ <b>xác minh sự thật và phân vai</b>: clip thật hay cũ, lỗi một cửa hàng hay cả quy trình. Mức nhận lỗi phải khớp với mức trách nhiệm thật; xin lỗi cho điều chưa xảy ra cũng sai như phủ nhận điều đã xảy ra.' },
@@ -288,7 +289,7 @@ BAI_ADD({ mod:'tp05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tp05-06', skill:'brand', read:'6 phút', t:'Vì sao thương hiệu nhà tuyển dụng cũng là tài sản?',
+{ id:'B:tp05-06', skill:'brand', read:'6 phút', assume:true, t:'Vì sao thương hiệu nhà tuyển dụng cũng là tài sản?',
   situation:'Một công ty mỹ phẩm nội địa đang tăng trưởng cần tuyển 30 người trong năm, trong đó có 10 vị trí marketing. Tin tuyển dụng đăng ba tuần chỉ có 40 hồ sơ, phần lớn không phù hợp. Trong khi đó, sản phẩm của công ty được khách yêu thích và có nhiều đánh giá tốt trên sàn.',
   concept:{ name:'Thương hiệu nhà tuyển dụng (employer brand)',
     body:'Người đi làm cũng có cảm nhận về công ty, giống khách có cảm nhận về sản phẩm. Họ hỏi: làm ở đây có học được gì, sếp thế nào, có ổn định không. Thương hiệu nhà tuyển dụng mạnh thường giúp <b>tuyển nhanh hơn, rẻ hơn, giữ người lâu hơn</b> (các khảo sát của nền tảng tuyển dụng cho thấy mối liên hệ này, dù con số mỗi nơi một khác). Nó được xây từ trải nghiệm thật của nhân viên — những gì họ kể với bạn bè, viết trên mạng — chứ không phải từ khẩu hiệu tuyển dụng. Gói nó thành ba lý do người giỏi chọn và ở lại (đề xuất giá trị với nhân viên, EVP), lấy từ lời nhân viên thật. Đo bằng hồ sơ đạt chuẩn, thời gian tuyển và chi phí mỗi người tuyển được, không chỉ tổng số hồ sơ.' },
@@ -345,7 +346,7 @@ BAI_ADD({ mod:'tp05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tp05-07', skill:'measure', read:'7 phút', t:'Làm sao biết thương hiệu đang khoẻ lên hay yếu đi?',
+{ id:'B:tp05-07', skill:'measure', read:'7 phút', assume:true, t:'Làm sao biết thương hiệu đang khoẻ lên hay yếu đi?',
   situation:'Bạn phụ trách marketing một hãng gạo đóng túi ở miền Tây, bán qua siêu thị và sàn online. Không có tiền thuê công ty nghiên cứu. Sếp muốn mỗi quý có một con số cho biết thương hiệu đang khoẻ lên hay yếu đi, chứ không chỉ doanh số.',
   concept:{ name:'Bảng sức khoẻ thương hiệu tối giản',
     body:'Không cần nghiên cứu đắt tiền, bạn có thể theo dõi ba chỉ số theo quý: <b>(1) được nghĩ tới</b> — hỏi khách “kể tên hãng gạo túi bạn biết”, đếm tỉ lệ nhắc tên mình; <b>(2) được chọn lại</b> — tỉ lệ khách mua lại trong 90 ngày; <b>(3) chịu trả giá</b> — phần chênh giá so với hàng tương đương. Ba chỉ số đi cùng chiều thì thương hiệu khoẻ thật. Nếu lệch nhau, chỗ lệch cho biết nên sửa ở đâu.' },
@@ -405,7 +406,7 @@ BAI_ADD({ mod:'tp05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tp05-08', skill:'brand', read:'7 phút', t:'Nhà sáng lập nổi tiếng: tài sản hay rủi ro của thương hiệu?',
+{ id:'B:tp05-08', skill:'brand', read:'7 phút', assume:true, t:'Nhà sáng lập nổi tiếng: tài sản hay rủi ro của thương hiệu?',
   situation:'Một thương hiệu đồ ăn vặt online lớn nhờ nhà sáng lập livestream mỗi tối với 500.000 người theo dõi. Khoảng 70% đơn hàng đến từ các buổi live của chị. Nhà đầu tư hỏi: “Nếu chị nghỉ một tháng, hoặc nói sai một câu trên sóng, công ty còn lại gì?”',
   concept:{ name:'Thương hiệu cá nhân nhà sáng lập',
     body:'Người sáng lập có tiếng giúp thương hiệu mới được tin nhanh: khách tin một con người dễ hơn tin một cái logo. Nhưng khi thương hiệu <b>chỉ</b> sống bằng người đó, mọi rủi ro của cá nhân trở thành rủi ro công ty: ốm, nghỉ, phát ngôn sai, chuyện đời tư. Cách làm thận trọng là dùng uy tín cá nhân để khởi động, rồi dần chuyển niềm tin sang những thứ công ty sở hữu: chất lượng sản phẩm, dấu hiệu nhận diện, đội ngũ và kênh bán không phụ thuộc một người.' },

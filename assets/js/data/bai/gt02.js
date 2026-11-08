@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'gt02', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:gt02-01', skill:'measure', read:'6 phút', t:'Doanh thu giảm 20%: bắt đầu tách từ đâu?',
+{ id:'B:gt02-01', skill:'measure', read:'6 phút', assume:true, t:'Doanh thu giảm 20%: bắt đầu tách từ đâu?',
   situation:'Một chuỗi trà sữa 12 cửa hàng ở Cần Thơ báo doanh thu tháng 9 giảm 20% so với tháng 8. Cuộc họp mở đầu bằng năm ý kiến: giá sữa tăng, đối thủ mới mở, mưa nhiều, nhân viên thái độ kém, TikTok ít view. Ai cũng có lý, không ai có số, và cuộc họp kéo dài hai tiếng mà chưa chốt được sẽ kiểm tra gì trước.',
   concept:{ name:'Công thức gốc của doanh thu',
     body:'Thay vì đoán nguyên nhân, hãy tách con số thành các thừa số: <b>doanh thu = số khách × số lần mua mỗi khách × giá trị mỗi đơn</b>. Doanh thu giảm thì ít nhất một trong ba thừa số phải giảm. Mỗi ý kiến trong phòng họp chỉ là một lời giải thích cho một thừa số: mưa làm giảm số khách, đối thủ mới có thể làm giảm cả số khách lẫn tần suất, thái độ nhân viên làm giảm tần suất quay lại, bớt topping làm giảm giá trị đơn. Trước khi tách, đặt tháng đó cạnh cùng kỳ năm trước: nếu tháng 9 năm ngoái cũng tụt so với tháng 8 thì một phần mức giảm là mùa mưa, chưa phải lỗi vận hành. Phép nhân còn cho thấy mức giảm cộng dồn: hai thừa số cùng giảm 10% làm doanh thu giảm 19%, không phải 20%. Tách trước, đoán sau.' },
@@ -56,13 +56,14 @@ BAI_ADD({ mod:'gt02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:gt02-02', skill:'measure', read:'7 phút', t:'Khách mới hay khách cũ đang biến mất?',
-  situation:'Một shop mỹ phẩm online trên Shopee có doanh thu quý 3 giảm 150 triệu so với quý 2. Chủ shop định tăng gấp đôi ngân sách quảng cáo để "kéo khách về". Sàn không phải lúc nào cũng cho người bán nhận diện một khách qua nhiều đơn, nên bạn ghép đơn hàng với danh sách khách của shop (CRM, Zalo, số điện thoại khách đã đồng ý để lại) và biết được đơn nào đến từ người mua lần đầu, đơn nào từ người đã mua trước đó.',
+{ id:'B:gt02-02', skill:'measure', read:'7 phút', assume:true, t:'Khách mới hay khách cũ đang biến mất?',
+  situation:'Một shop mỹ phẩm online trên Shopee có doanh thu quý 3 giảm 150 triệu so với quý 2. Chủ shop định tăng gấp đôi ngân sách quảng cáo để "kéo khách về". Theo hiểu biết chung tại ngày kiểm 07/11/2026 (nếu sàn đã đổi, tin trang chính thức), người bán thường chỉ thấy thông tin người mua theo từng đơn, có che một phần, nên khó nhận diện một khách qua nhiều đơn; vì vậy bạn ghép đơn hàng với danh sách khách của shop (CRM, Zalo, số điện thoại khách đã đồng ý để lại) và biết được đơn nào đến từ người mua lần đầu, đơn nào từ người đã mua trước đó.',
   concept:{ name:'Tách khách mới – khách cũ',
     body:'Nhánh "số khách" nên tách tiếp thành <b>khách mới</b> (lần đầu mua trong kỳ) và <b>khách cũ</b> (đã mua trước đó và quay lại), nên doanh thu = khách mới × giá trị mỗi khách + khách cũ × số lần mua × giá trị mỗi đơn. "Khách cũ đang hoạt động" cần một cửa sổ thời gian theo chu kỳ mua: mỹ phẩm ví dụ 90 ngày, đồ ăn vặt ví dụ 14 ngày; im lặng quá cửa sổ thì coi là đã rời. Hai nhóm này hỏng vì những lý do rất khác nhau: khách mới giảm thường do quảng cáo, hiển thị, giá so với đối thủ; khách cũ giảm thường do trải nghiệm, chất lượng, chăm sóc sau mua. Chữa sai nhánh thì tốn tiền mà doanh thu không về.' },
   example:'Quý 2: khách mới mang về 300 triệu, khách cũ 500 triệu. Quý 3: khách mới 290 triệu, khách cũ 360 triệu. Tổng giảm 150 triệu, trong đó khách cũ giảm 140 triệu, chiếm hơn 93% mức giảm. Tăng quảng cáo gấp đôi chỉ đánh vào nhánh khách mới vốn gần như không đổi. Việc cần làm trước là gọi hỏi những khách cũ đã không quay lại.',
   takeaway:'Tách khách mới và khách cũ trước khi tiêu thêm tiền quảng cáo.',
   apply:'Nói trong 60 giây: với một shop bạn biết, dấu hiệu nào cho thấy khách cũ đang rời đi dù doanh thu tổng chưa giảm?',
+  src:[{t:'Shopee Việt Nam · Kênh Người Bán (kiểm mục thông tin người mua trên đơn hàng)', u:'https://banhang.shopee.vn/', d:'2026-11-07', st:'chua'}],
   mistakes:['Thấy doanh thu giảm là tăng quảng cáo, trong khi khách cũ mới là nhánh giảm.','Đếm khách đã mua từ lâu nhưng không còn mua vào nhóm khách cũ đang hoạt động.'],
   q:[
   { type:'mcq', stem:'Đoán trước: quý 2 shop thu 300 triệu từ khách mới và 500 triệu từ khách cũ. Giả sử quý 3 cả hai nhóm cùng giảm 20%. Nhánh nào gây phần lớn mức giảm doanh thu?',
@@ -113,7 +114,7 @@ BAI_ADD({ mod:'gt02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:gt02-03', skill:'measure', read:'6 phút', t:'Tách theo kênh, vùng hay sản phẩm trước?',
+{ id:'B:gt02-03', skill:'measure', read:'6 phút', assume:true, t:'Tách theo kênh, vùng hay sản phẩm trước?',
   situation:'Một hãng nước mắm bán qua ba kênh: tạp hoá, siêu thị và sàn thương mại điện tử, ở ba miền. Doanh thu quý giảm 300 triệu. Trưởng phòng hỏi: "Nên cắt theo kênh, theo miền hay theo sản phẩm?" Dữ liệu có đủ cả ba chiều, nhưng mỗi cách cắt cho một bức tranh khác nhau và cả nhóm chỉ có hai ngày.',
   concept:{ name:'Chọn chiều cắt có độ tập trung cao nhất',
     body:'Sau công thức gốc, có nhiều chiều để cắt tiếp: kênh, vùng, sản phẩm, cửa hàng. Chiều tốt là chiều mà mức giảm <b>dồn vào một hai nhánh</b>, vì khi đó nguyên nhân có địa chỉ rõ. Chiều kém là chiều mà nhánh nào cũng giảm một chút — nó không nói thêm gì. Cách làm nhanh: cắt thử cả ba chiều ở cấp một, xem chiều nào có một nhánh gánh phần lớn mức giảm, rồi đào sâu theo chiều đó.' },
@@ -169,7 +170,7 @@ BAI_ADD({ mod:'gt02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:gt02-04', skill:'measure', read:'7 phút', t:'Cây này có nhánh nào trùng hay sót không?',
+{ id:'B:gt02-04', skill:'measure', read:'7 phút', assume:true, t:'Cây này có nhánh nào trùng hay sót không?',
   situation:'Một bạn junior vẽ cây cho doanh thu giảm của một thương hiệu giày: ba nhánh "khách online", "khách trẻ" và "khách mua khuyến mãi". Cộng ba nhánh lại ra 1,3 tỉ trong khi tổng doanh thu chỉ 1 tỉ. Trưởng nhóm nhìn một giây rồi nói: "Cây này không dùng được." Bạn junior không hiểu vì sao.',
   concept:{ name:'MECE: không trùng, không sót',
     body:'Một cây tốt có các nhánh cùng cấp <b>không chồng lên nhau</b> (một đơn hàng chỉ thuộc một nhánh) và <b>không bỏ sót</b> (cộng các nhánh ra đúng tổng). "Online" và "khách trẻ" chồng lên nhau vì một khách trẻ mua online nằm ở cả hai; và cây sót khách lớn tuổi mua ở cửa hàng. Cộng các nhánh bằng tổng mới là điều kiện cần: trùng 150 và sót 150 vẫn bù nhau ra đúng tổng, nên còn phải lấy vài đơn bất kỳ và hỏi mỗi đơn thuộc đúng một nhánh nào. Chọn mỗi cấp một tiêu chí cắt, và chọn tiêu chí theo quyết định cần ra: chia ngân sách thì cắt theo kênh, chọn hàng thì cắt theo sản phẩm.' },
@@ -198,13 +199,13 @@ BAI_ADD({ mod:'gt02', lessons:[
   { type:'calc', stem:'Cây mới: online 400 triệu, cửa hàng 600 triệu. Tháng sau online 380, cửa hàng 480 triệu. Nhánh cửa hàng chiếm bao nhiêu phần trăm tổng mức giảm?',
     unit:'%', ans:85.7, tol:0.3, wrong:[[20,'SAI_MAU_SO'],[120,'NHAM_SO_TUYET_DOI']], errors:['SAI_MAU_SO'],
     steps:['Tổng giảm = 1.000 − 860 = 140 triệu. Cửa hàng giảm = 600 − 480 = 120 triệu.','120 ÷ 140 = <b>85,7%</b>.'] },
-  { type:'mcq', stem:'Cách chia nào dưới đây đạt MECE cho khách của một quán cà phê?',
-    options:[{k:'a',t:'Dân văn phòng, sinh viên, khách đi xe máy'},{k:'b',t:'Khách mua mang đi và khách hay dùng thẻ thành viên'},
-             {k:'c',t:'Khách thích cà phê đậm và khách hay đi cùng bạn bè'},{k:'d',t:'Khách ngồi lại tại quán và khách mua mang đi'}],
-    answer:'d', why:{a:'Dân văn phòng có thể đi xe máy: trùng; và sót người không thuộc nhóm nào.',
-      b:'Hai tiêu chí khác nhau: một khách mang đi vẫn có thể dùng thẻ.',
-      c:'Sở thích và thói quen đi cùng không loại trừ nhau.',
-      d:'Đúng. Mỗi đơn chỉ thuộc một trong hai, và hai nhóm cộng đủ.'} },
+  { type:'mcq', stem:'Cách chia nào dưới đây đạt MECE cho các đơn của một quán cà phê (đơn vị gán là từng đơn, không phải từng khách)?',
+    options:[{k:'a',t:'Đơn của dân văn phòng, của sinh viên, của khách đi xe máy'},{k:'b',t:'Đơn mang đi và đơn có dùng thẻ thành viên để tích điểm'},
+             {k:'c',t:'Đơn gọi cà phê đậm và đơn của khách đi cùng bạn bè'},{k:'d',t:'Đơn uống tại quán, đơn mang đi và đơn giao qua app'}],
+    answer:'d', why:{a:'Một dân văn phòng có thể đi xe máy nên đơn của họ rơi vào hai nhánh: trùng; đơn của người không thuộc nhóm nào thì sót.',
+      b:'Hai tiêu chí khác nhau: một đơn mang đi vẫn có thể dùng thẻ, nên trùng.',
+      c:'Vị cà phê và việc đi cùng ai không loại trừ nhau; một đơn có thể thuộc cả hai.',
+      d:'Đúng. Gán theo đơn thì mỗi đơn chỉ thuộc đúng một trong ba cách nhận hàng, và ba nhánh cộng đủ mọi đơn của quán. Chia theo khách thì không được: cùng một khách hôm nay ngồi lại, mai mang đi.'} },
   { type:'mcq', stem:'Một cây doanh thu có nhánh "Hà Nội", "TP.HCM", "Đà Nẵng". Tổng các nhánh là 850 triệu, doanh thu thật là 1 tỉ. Nên sửa thế nào?',
     options:[{k:'a',t:'Thêm nhánh "tỉnh thành khác" để cây không sót 150 triệu'},{k:'b',t:'Bỏ qua phần chênh lệch vì ba thành phố lớn đã là phần chính'},
              {k:'c',t:'Chia đều 150 triệu cho ba thành phố để cộng lại cho khớp'},{k:'d',t:'Đổi hẳn sang cắt theo sản phẩm vì theo vùng đã bị lỗi'}],
@@ -229,7 +230,7 @@ BAI_ADD({ mod:'gt02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:gt02-05', skill:'measure', read:'7 phút', t:'Nhánh nào kéo doanh thu xuống nhiều nhất?',
+{ id:'B:gt02-05', skill:'measure', read:'7 phút', assume:true, t:'Nhánh nào kéo doanh thu xuống nhiều nhất?',
   situation:'Một chuỗi cơm văn phòng ở Hà Nội có doanh thu tháng giảm từ 600 triệu xuống 510 triệu. Cả số khách lẫn giá trị đơn đều đổi: khách từ 12.000 xuống 10.800 lượt, giá trị đơn từ 50.000đ xuống khoảng 47.200đ. Cả hai cùng giảm, và nhóm muốn biết nên ưu tiên nhánh nào.',
   concept:{ name:'Quy mức giảm về từng nhánh',
     body:'Khi hai thừa số cùng đổi, hãy đổi <b>lần lượt từng thừa số</b> và xem mỗi lần làm doanh thu mất bao nhiêu. Bước một: giữ giá trị đơn cũ, chỉ đổi số khách. Bước hai: dùng số khách mới, đổi giá trị đơn. Hai phần cộng lại đúng bằng tổng mức giảm. Nhánh nào chiếm phần lớn thì ưu tiên nhánh đó — đừng ưu tiên theo phần trăm thay đổi của từng thừa số. Lưu ý: cách này phụ thuộc thứ tự đổi; đổi giá trị đơn trước thì phần của từng nhánh xê dịch một chút. Nếu hai thứ tự cho thứ hạng khác nhau, tính cả hai rồi lấy trung bình.' },
@@ -285,7 +286,7 @@ BAI_ADD({ mod:'gt02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:gt02-06', skill:'measure', read:'7 phút', t:'Doanh thu tăng mà lãi giảm: vẽ cây gì?',
+{ id:'B:gt02-06', skill:'measure', read:'7 phút', assume:true, t:'Doanh thu tăng mà lãi giảm: vẽ cây gì?',
   situation:'Một thương hiệu đồ ăn vặt bán trên TikTok Shop có doanh thu tháng 10 tăng 20%, nhưng lợi nhuận lại giảm. Ban giám đốc ngạc nhiên vì "bán được nhiều hơn thì phải lời hơn chứ". Cây doanh thu không giúp được gì vì doanh thu đang tăng; cần một cây khác.',
   concept:{ name:'Cây lợi nhuận',
     body:'Lợi nhuận = <b>doanh thu thuần − chi phí</b>. Doanh thu thuần = giá niêm yết − giảm giá: mã giảm giá làm mỏng doanh thu, không phải một khoản chi phí. Chi phí tách thành <b>biến đổi</b> (giá vốn, phí sàn, hoa hồng KOC, phí ship — tăng theo mỗi đơn) và <b>cố định</b> (thuê kho, lương, phần mềm — không đổi theo số đơn). Lấy doanh thu thuần một đơn trừ chi phí biến đổi của đơn đó ra <b>biên đóng góp</b>: số tiền mỗi đơn góp vào chi phí cố định. Doanh thu tăng mà lãi giảm khi biên mỗi đơn mỏng đi nhanh hơn số đơn tăng lên.' },
@@ -334,7 +335,7 @@ BAI_ADD({ mod:'gt02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:gt02-07', skill:'measure', read:'7 phút', t:'Lượt tải app tăng mà doanh thu không tăng?',
+{ id:'B:gt02-07', skill:'measure', read:'7 phút', assume:true, t:'Lượt tải app tăng mà doanh thu không tăng?',
   situation:'Một app đặt đồ ăn địa phương ở Đà Nẵng chạy chiến dịch tặng 30.000đ cho người tải app và đăng ký tài khoản mới. Lượt tải tháng tăng từ 20.000 lên 50.000, cả nhóm ăn mừng. Nhưng doanh thu từ người dùng mới gần như không đổi. Giám đốc hỏi: "Tiền đi đâu?"',
   concept:{ name:'Cây phễu từ lượt tải đến doanh thu',
     body:'Lượt tải chưa phải doanh thu. Doanh thu từ người dùng mới = <b>lượt tải × tỉ lệ đăng ký × tỉ lệ đặt đơn đầu × số đơn mỗi người × giá trị đơn</b>. Khi đầu phễu phình ra mà cuối phễu đứng yên, một hoặc vài tỉ lệ ở giữa đã tụt. Ưu đãi cho người tải thường kéo về nhiều người chỉ tải để nhận quà, rồi không đặt đơn nào.' },
@@ -390,7 +391,7 @@ BAI_ADD({ mod:'gt02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:gt02-08', skill:'measure', read:'6 phút', t:'Thiếu dữ liệu một nhánh thì làm sao?',
+{ id:'B:gt02-08', skill:'measure', read:'6 phút', assume:true, t:'Thiếu dữ liệu một nhánh thì làm sao?',
   situation:'Một hãng bánh kẹo bán qua siêu thị, online và đại lý. Doanh thu hãng quý này giảm 200 triệu. Báo cáo kênh siêu thị (giảm 30 triệu) và online (tăng 10 triệu) có sẵn, nhưng kế toán chưa tách riêng kênh đại lý, và hãng cũng không biết đại lý bán ra bao nhiêu cho tạp hoá. Cả nhóm định bỏ nhánh đại lý ra khỏi cây vì "không có số".',
   concept:{ name:'Giữ nhánh, ghi rõ chỗ trống',
     body:'Thiếu dữ liệu không phải lý do xoá nhánh; xoá đi là cây bị sót và mức giảm có thể nằm đúng ở đó. Hãy <b>giữ nhánh và ghi rõ đang thiếu gì</b>. Rồi tìm số thay thế: lấy tổng trừ các nhánh đã biết, hoặc dùng số gần đúng (tồn kho đại lý, khảo sát 10 điểm bán). Nhưng phần dư gồm cả nhánh thiếu, sai số đo và nhánh bị sót, nên cần kiểm chứng độc lập. Và phân biệt hai con số: hãng thấy đại lý <b>nhập</b> (sell-in); sức mua thật là đại lý <b>bán ra</b> (sell-out). Nhập giảm có thể chỉ là tồn kho dồn.' },
@@ -447,7 +448,7 @@ BAI_ADD({ mod:'gt02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:gt02-09', skill:'measure', read:'6 phút', t:'Cây sâu bao nhiêu tầng là đủ?',
+{ id:'B:gt02-09', skill:'measure', read:'6 phút', assume:true, t:'Cây sâu bao nhiêu tầng là đủ?',
   situation:'Một nhóm phân tích doanh thu giảm của chuỗi siêu thị mini đã vẽ cây 7 tầng: kênh, vùng, quận, cửa hàng, ngành hàng, nhãn hàng, mã sản phẩm. Cây có hơn 2.000 ô, mất ba tuần, và mỗi ô chỉ vài chục triệu. Cuộc họp trình bày kết thúc mà không ai biết nên làm gì.',
   concept:{ name:'Dừng khi đã hành động được',
     body:'Mỗi tầng chỉ đáng thêm nếu nó giúp <b>thu hẹp chỗ cần nhìn</b>. Dừng đào khi một trong hai điều xảy ra: nhánh đã đủ cụ thể để đặt một giả thuyết kiểm chứng được và có người chịu trách nhiệm hành động; hoặc tầng tiếp theo chia mức giảm ra đều, không còn nhánh nổi bật. Thường 3–4 tầng là đủ. Chỉ đào sâu ở nhánh có vấn đề, các nhánh khác dừng ở tầng một.' },
@@ -503,7 +504,7 @@ BAI_ADD({ mod:'gt02', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:gt02-10', skill:'measure', read:'7 phút', t:'Từ nhánh gãy đến giả thuyết: viết thế nào?',
+{ id:'B:gt02-10', skill:'measure', read:'7 phút', assume:true, t:'Từ nhánh gãy đến giả thuyết: viết thế nào?',
   situation:'Một hãng sữa hạt đã tách xong cây: doanh thu giảm 240 triệu, trong đó khách cũ trên kênh online gánh 180 triệu, do tần suất mua giảm từ 3 xuống 2 lần/quý. Trưởng nhóm bảo "vậy chạy thêm khuyến mãi cho khách cũ". Bạn thấy cây mới chỉ ra chỗ gãy, chưa cho biết vì sao gãy.',
   concept:{ name:'Cây chỉ chỗ, giả thuyết giải thích vì sao',
     body:'Cây trả lời câu <b>ở đâu</b>; giả thuyết trả lời câu <b>vì sao</b>. Từ nhánh gãy, viết 2–3 giả thuyết cạnh tranh, mỗi cái theo mẫu: "Chúng tôi tin [nhánh] giảm vì [nguyên nhân]; nếu đúng, ta sẽ thấy [dấu hiệu đo được]." Dấu hiệu phải khác nhau giữa các giả thuyết, để một lần kiểm tra loại được ít nhất một cái. Chỉ khi giả thuyết đứng vững mới chọn giải pháp.' },

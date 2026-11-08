@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'dl05', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:dl05-01', skill:'measure', read:'7 phút', t:'Thương hiệu được biết nhiều mà bán ít: tắc ở tầng nào?',
+{ id:'B:dl05-01', skill:'measure', read:'7 phút', assume:true, t:'Thương hiệu được biết nhiều mà bán ít: tắc ở tầng nào?',
   situation:'Một hãng nước mắm đóng chai ở Phan Thiết khảo sát 400 người nội trợ tại TP.HCM. Kết quả: 60% biết tên hãng, nhưng chỉ 18% từng mua trong ba tháng qua. Giám đốc muốn tăng gấp đôi ngân sách quảng cáo "cho nhiều người biết hơn nữa". Bạn được giao đọc lại số liệu trước khi duyệt tiền.',
   concept:{ name:'Phễu thương hiệu và tỉ lệ chuyển giữa các tầng',
     body:'Phễu thương hiệu chia hành trình trong đầu khách thành các tầng: <b>biết</b> → <b>cân nhắc</b> (sẵn lòng đưa vào danh sách chọn) → <b>ưa thích</b> (chọn đầu tiên) → <b>mua</b>. Mỗi tầng đọc bằng hai con số: tỉ lệ trên toàn mẫu và <b>tỉ lệ chuyển</b> từ tầng ngay trên. Tầng có tỉ lệ chuyển thấp bất thường so với đối thủ cùng ngành là chỗ tắc. Chỉ nhìn con số cuối (mua) thì không biết nên sửa nhận biết, sửa lý do để cân nhắc hay sửa độ phủ điểm bán.' },
@@ -59,7 +59,7 @@ BAI_ADD({ mod:'dl05', lessons:[
       d:'Đúng. Cân nhắc là được đưa vào danh sách chọn cho lần mua tới.'} } ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:dl05-02', skill:'measure', read:'7 phút', t:'Khảo sát 300 người trong nhóm fan: số nhận biết có tin được không?',
+{ id:'B:dl05-02', skill:'measure', read:'7 phút', assume:true, t:'Khảo sát 300 người trong nhóm fan: số nhận biết có tin được không?',
   situation:'Một thương hiệu mỹ phẩm thuần chay gửi link khảo sát lên fanpage 120.000 người theo dõi và nhóm Zalo khách hàng. Sau ba ngày có 300 phản hồi, 85% nói "biết thương hiệu", 60% "ưa thích nhất". Nhóm muốn đưa hai con số này vào hồ sơ gọi vốn như sức khoẻ thương hiệu trên thị trường.',
   concept:{ name:'Mẫu đại diện',
     body:'Con số khảo sát chỉ nói về <b>nhóm người được hỏi</b>. Muốn nói về thị trường, mẫu phải giống thị trường mục tiêu ở những đặc điểm quan trọng: khu vực, tuổi, thu nhập, có dùng ngành hàng hay không. Hỏi người theo dõi fanpage là hỏi người đã biết và đã thích — kết quả gần như chắc chắn cao. Cách sửa: định nghĩa rõ tổng thể (ví dụ nữ 20–40 tuổi ở thành phố lớn có dùng mỹ phẩm dưỡng da), lấy mẫu qua kênh không gắn với thương hiệu, đặt <b>chỉ tiêu</b> theo vùng và tuổi, và lọc người không dùng ngành hàng.' },
@@ -118,7 +118,7 @@ BAI_ADD({ mod:'dl05', lessons:[
       d:'Đợt panel mới là đợt đại diện; cảm nhận của nhóm không phải thước đo.'} } ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:dl05-03', skill:'measure', read:'7 phút', t:'Nhận biết tăng 8 điểm sau chiến dịch: có phải nhờ quảng cáo?',
+{ id:'B:dl05-03', skill:'measure', read:'7 phút', assume:true, t:'Nhận biết tăng 8 điểm sau chiến dịch: có phải nhờ quảng cáo?',
   situation:'Một hãng sữa hạt chạy chiến dịch video tám tuần ở Hà Nội. Khảo sát trước chiến dịch: nhận biết có nhắc 30%. Sau chiến dịch: 38%. Agency báo cáo "chiến dịch tăng nhận biết 8 điểm". Nhưng cùng thời gian, hãng cũng lên kệ thêm 200 cửa hàng tiện lợi và đối thủ lớn vừa rút quảng cáo.',
   concept:{ name:'Brand lift với nhóm đối chứng',
     body:'So trước – sau chỉ cho biết con số đã đổi, không cho biết <b>vì sao</b>. Mùa vụ, điểm bán mới, đối thủ, tin tức đều có thể đẩy con số. <b>Brand lift</b> đo phần tăng do chiến dịch bằng cách so hai nhóm giống nhau: nhóm <b>tiếp xúc</b> quảng cáo và nhóm <b>đối chứng</b> không tiếp xúc (khu vực không chạy, hoặc nhóm bị giữ lại không cho xem). Phần tăng do chiến dịch = mức tăng của nhóm tiếp xúc trừ mức tăng của nhóm đối chứng.' },
@@ -174,7 +174,7 @@ BAI_ADD({ mod:'dl05', lessons:[
       d:'Khi không chia ngẫu nhiên (như chọn vùng), đo trước là cách duy nhất biết hai nhóm có khởi điểm giống nhau.'} } ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:dl05-04', skill:'measure', read:'6 phút', t:'Lượng tìm kiếm tên thương hiệu tăng: tín hiệu thật hay nhiễu?',
+{ id:'B:dl05-04', skill:'measure', read:'6 phút', assume:true, t:'Lượng tìm kiếm tên thương hiệu tăng: tín hiệu thật hay nhiễu?',
   situation:'Một chuỗi trà sữa mới ở Đà Nẵng không có tiền khảo sát định kỳ. Người sáng lập theo dõi lượng người tìm tên thương hiệu trên Google và TikTok. Tháng 5 khoảng 4.000 lượt, tháng 6 lên 9.000 lượt. Cùng tháng 6 có một bài báo nói về một vụ ngộ độc ở một quán trà sữa khác có tên gần giống.',
   concept:{ name:'Tìm kiếm tên thương hiệu như tín hiệu',
     body:'Người ta chỉ gõ tên một thương hiệu khi tên đó đã có trong đầu. Vì vậy lượng tìm kiếm tên thương hiệu (branded search) là một chỉ báo rẻ, cập nhật hàng tuần về <b>mức được nghĩ tới</b>. Nhưng nó có nhiễu: tên trùng hoặc gần giống, tin tức tiêu cực, khuyến mãi lớn làm người ta tìm mã giảm giá. Cách đọc: tách từ khoá theo biến thể tên, xem các cụm từ đi kèm (địa chỉ, menu, review, "ngộ độc"), so với cùng kỳ và với đối thủ, và luôn đối chiếu với một nguồn khác như lượt ghé quán.' },
@@ -230,14 +230,15 @@ BAI_ADD({ mod:'dl05', lessons:[
       d:'Hai nguồn bổ sung cho nhau; bỏ một là mất góc nhìn.'} } ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:dl05-05', skill:'measure', read:'7 phút', t:'Share of search 18% nói gì về thị phần năm sau?',
+{ id:'B:dl05-05', skill:'measure', read:'7 phút', assume:true, t:'Share of search 18% nói gì về thị phần năm sau?',
   situation:'Một hãng bột giặt nội địa muốn biết mình đang lên hay xuống so với các hãng lớn mà không đợi báo cáo thị phần sáu tháng một lần. Trong quý, lượt tìm tên năm hãng chính cộng lại là 500.000; hãng mình chiếm 90.000. Quý trước là 70.000 trên tổng 480.000. Thị phần doanh số hiện khoảng 12%.',
   concept:{ name:'Share of search',
-    body:'<b>Share of search</b> = lượt tìm tên thương hiệu ÷ tổng lượt tìm tên của các thương hiệu trong cùng ngành hàng. Vì tìm kiếm phản ánh mức được nghĩ tới, share of search ở nhiều ngành cân nhắc cao (ô tô, năng lượng, điện thoại theo nghiên cứu của Les Binet, IPA 2020) đi trước thị phần doanh số, với độ trễ khác nhau theo ngành; với hàng tiêu dùng nhanh như bột giặt, ít ai gõ tên hãng khi mua, lượt tìm nhỏ và dễ nhiễu, nên chỉ coi là tín hiệu phụ và đối chiếu với số bán hoặc khảo sát cân nhắc. Khi nó cao hơn thị phần hiện tại, thương hiệu có đà tăng; khi thấp hơn, có nguy cơ mất thị phần. Điều kiện để đọc đúng: cùng một rổ thương hiệu mỗi kỳ, lọc nhiễu tên trùng, và dùng như một <b>chỉ báo xu hướng</b> chứ không phải dự báo chính xác.' },
+    body:'<b>Share of search</b> = lượt tìm tên thương hiệu ÷ tổng lượt tìm tên của các thương hiệu trong cùng ngành hàng. Vì tìm kiếm phản ánh mức được nghĩ tới, share of search ở nhiều ngành cân nhắc cao (ô tô, năng lượng, điện thoại — theo Les Binet, IPA EffWorks 2020, trên dữ liệu Google Trends; cần kiểm, xem nguồn) đi trước thị phần doanh số, với độ trễ khác nhau theo ngành (tra trong nguồn); với hàng tiêu dùng nhanh như bột giặt, ít ai gõ tên hãng khi mua, lượt tìm nhỏ và dễ nhiễu, nên chỉ coi là tín hiệu phụ và đối chiếu với số bán hoặc khảo sát cân nhắc. Khi nó cao hơn thị phần hiện tại, thương hiệu có đà tăng; khi thấp hơn, có nguy cơ mất thị phần. Điều kiện để đọc đúng: cùng một rổ thương hiệu mỗi kỳ, lọc nhiễu tên trùng, và dùng như một <b>chỉ báo xu hướng</b> chứ không phải dự báo chính xác.' },
   example:'Quý trước: 70.000 ÷ 480.000 ≈ 14,6%. Quý này: 90.000 ÷ 500.000 = 18%. Share of search tăng khoảng 3,4 điểm và đang cao hơn thị phần doanh số 12% khoảng 6 điểm. Đây là tín hiệu đà tăng. Hãng không hứa "thị phần sẽ lên 18%" mà đặt kế hoạch theo dõi: nếu share of search giữ trên 16% thêm hai quý (ngưỡng minh hoạ: cao hơn mức 14,6% quý trước để loại một lần tăng do nhiễu) và số bán lẻ cũng nhích lên, mở rộng phân phối.',
   takeaway:'Share of search cao hơn thị phần là tín hiệu đà tăng; thấp hơn là lời cảnh báo sớm.',
   apply:'Chọn một ngành hàng và năm thương hiệu chính. Ước lượng share of search của từng hãng và nói hãng nào đang có khoảng cách lớn nhất với thị phần.',
   mistakes:['Nhầm share of search với thị phần doanh số.','Thay đổi rổ thương hiệu giữa các kỳ khiến con số nhảy giả.'],
+  src:[{ t:'Les Binet, “Share of Search as a Predictor of Market Share”, IPA EffWorks Global 2020 (tra trong mục EffWorks/Knowledge của IPA; theo hiểu biết chung Binet báo độ trễ cỡ vài tháng đến khoảng một năm tuỳ ngành — đường dẫn chính xác và con số độ trễ cần người kiểm)', u:'https://ipa.co.uk/', d:'2026-11-07', st:'chua' }],
   q:[
   { type:'mcq', stem:'Share of search 18%, thị phần 12%. Bạn đoán điều gì có khả năng xảy ra?',
     options:[{k:'a',t:'Thị phần sẽ tăng đúng lên 18% ngay trong quý tới'},{k:'b',t:'Thị phần sẽ giảm vì tìm kiếm cao do khách phàn nàn nhiều hơn'},
@@ -282,7 +283,7 @@ BAI_ADD({ mod:'dl05', lessons:[
       d:'Không có quy định chung như vậy; lý do là chi phí.'} } ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:dl05-06', skill:'measure', read:'7 phút', t:'NPS 45: nên treo lên tường hay nên đọc kỹ hơn?',
+{ id:'B:dl05-06', skill:'measure', read:'7 phút', assume:true, t:'NPS 45: nên treo lên tường hay nên đọc kỹ hơn?',
   situation:'Một chuỗi phòng tập ở Hà Nội gửi câu hỏi "Bạn có sẵn lòng giới thiệu chúng tôi cho bạn bè không, 0–10?" qua tin nhắn sau buổi tập đầu tiên. 1.000 người trả lời: 55% chấm 9–10, 35% chấm 7–8, 10% chấm 0–6. NPS 45. Ban giám đốc muốn thưởng cho quản lý chi nhánh theo NPS từ quý sau.',
   concept:{ name:'NPS: cách dùng và cách lạm dụng',
     body:'<b>NPS</b> = % người ủng hộ (9–10) − % người phản đối (0–6). Nó dễ hiểu và so được theo thời gian. Nhưng nó dễ bị lạm dụng: hỏi ở thời điểm vui nhất (vừa xong buổi đầu), chỉ hỏi người còn ở lại, gắn thưởng khiến nhân viên xin điểm, và đọc một con số mà không đọc lý do. Dùng đúng: hỏi cùng thời điểm trong hành trình, gồm cả người đã rời đi, luôn kèm câu hỏi mở "vì sao", và theo dõi <b>xu hướng</b> cùng với hành vi thật như tỉ lệ gia hạn.' },
@@ -338,7 +339,7 @@ BAI_ADD({ mod:'dl05', lessons:[
       d:'Tỉ lệ mở đo kênh gửi, không đo trải nghiệm.'} } ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:dl05-07', skill:'measure', read:'6 phút', t:'Lượt nhắc trên mạng xã hội tăng gấp ba: mừng hay lo?',
+{ id:'B:dl05-07', skill:'measure', read:'6 phút', assume:true, t:'Lượt nhắc trên mạng xã hội tăng gấp ba: mừng hay lo?',
   situation:'Một hãng bánh trung thu dùng công cụ lắng nghe mạng xã hội. Tháng 8 có 3.000 lượt nhắc tên thương hiệu, tháng 9 lên 9.000. Báo cáo tự động chấm 70% "trung tính", 20% "tích cực", 10% "tiêu cực". Trưởng nhóm muốn báo cáo "thảo luận tăng 200%, đa phần tích cực".',
   concept:{ name:'Lắng nghe mạng xã hội và tỉ lệ cảm xúc',
     body:'Lắng nghe mạng xã hội đếm lượt nhắc và phân loại cảm xúc. Hai điều cần nhớ. Một, <b>lượng</b> không nói lên chất: lượt nhắc tăng có thể do quà tặng, do mùa vụ, hoặc do một phốt. Hai, <b>máy chấm cảm xúc</b> tiếng Việt hay sai với tiếng lóng, mỉa mai, viết tắt; nhóm "trung tính" thường là rổ chứa mọi thứ máy không hiểu. Cách đọc: tính <b>tỉ lệ ròng</b> = (tích cực − tiêu cực) ÷ (tích cực + tiêu cực), đọc tay một mẫu ngẫu nhiên để kiểm tra máy, và theo dõi chủ đề của nhóm tiêu cực.' },
@@ -394,7 +395,7 @@ BAI_ADD({ mod:'dl05', lessons:[
       d:'Tạo bình luận giả làm hỏng dữ liệu và gây rủi ro uy tín.'} } ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:dl05-08', skill:'measure', read:'7 phút', t:'Nhận biết giảm từ 34% xuống 30%: báo động hay dao động?',
+{ id:'B:dl05-08', skill:'measure', read:'7 phút', assume:true, t:'Nhận biết giảm từ 34% xuống 30%: báo động hay dao động?',
   situation:'Một hãng dầu gội nội địa khảo sát nhận biết mỗi quý với 250 người. Quý 2: 34%. Quý 3: 30%. Trưởng phòng marketing chuẩn bị xin thêm ngân sách để "cứu nhận biết đang giảm 4 điểm". Bạn được hỏi: con số này có đủ tin để hành động không?',
   concept:{ name:'Sai số khảo sát khi mẫu nhỏ',
     body:'Một tỉ lệ đo từ mẫu luôn có <b>sai số</b>. Ước lượng nhanh với độ tin cậy 95%: sai số ≈ 1,96 × căn bậc hai của p × (1 − p) ÷ n, với p là tỉ lệ, n là cỡ mẫu. Với p khoảng 30% và n = 250, sai số của <b>một</b> đợt khoảng ±5,7 điểm. Khi so <b>hai</b> đợt độc lập, cả hai cùng dao động nên sai số của chênh lệch lớn hơn khoảng √2 ≈ 1,4 lần: hai mẫu 250 người cho khoảng ±8 điểm. Chênh lệch phải vượt mức đó mới đáng tin. Muốn giảm sai số một nửa, cỡ mẫu phải tăng <b>gấp bốn</b>. Vì vậy mẫu nhỏ chỉ nên dùng để phát hiện thay đổi lớn, hoặc gộp nhiều kỳ lại để đọc xu hướng.' },
@@ -446,7 +447,7 @@ BAI_ADD({ mod:'dl05', lessons:[
       d:'Không cần làm lại; dữ liệu nhiều kỳ đã cho tín hiệu.'} } ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:dl05-09', skill:'measure', read:'7 phút', t:'Đo thương hiệu mỗi quý: theo dõi những gì cho đủ mà không rối?',
+{ id:'B:dl05-09', skill:'measure', read:'7 phút', assume:true, t:'Đo thương hiệu mỗi quý: theo dõi những gì cho đủ mà không rối?',
   situation:'Một hãng cà phê hoà tan có ngân sách đo lường 200 triệu đồng một năm. Năm nay nhóm đã làm ba khảo sát khác nhau với ba công ty, mỗi lần một bộ câu hỏi, một cách chọn mẫu. Cuối năm, không ai trả lời được câu "thương hiệu mạnh lên hay yếu đi".',
   concept:{ name:'Theo dõi thương hiệu định kỳ (brand tracking)',
     body:'Theo dõi định kỳ chỉ có giá trị khi <b>giữ nguyên</b> ba thứ qua các kỳ: định nghĩa tổng thể và cách chọn mẫu, câu chữ và thứ tự câu hỏi, và rổ đối thủ. Một bộ theo dõi gọn thường gồm: nhận biết không nhắc và có nhắc, cân nhắc, ưa thích, mua gần đây, vài liên tưởng chính; cộng với chỉ báo rẻ hàng tháng như share of search và cảm xúc ròng. Nhịp quý hợp với phần lớn ngành tiêu dùng: đủ dài để thay đổi hiện ra, đủ ngắn để điều chỉnh kế hoạch.' },
@@ -505,7 +506,7 @@ BAI_ADD({ mod:'dl05', lessons:[
       d:'Chi phí in không phải lý do; khảo sát phần lớn đã online.'} } ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:dl05-10', skill:'measure', read:'7 phút', t:'Sếp chỉ có hai phút: báo cáo sức khoẻ thương hiệu một trang trông thế nào?',
+{ id:'B:dl05-10', skill:'measure', read:'7 phút', assume:true, t:'Sếp chỉ có hai phút: báo cáo sức khoẻ thương hiệu một trang trông thế nào?',
   situation:'Bạn phụ trách thương hiệu một hãng sữa chua nội địa. Bộ theo dõi quý có 12 chỉ số, cộng tìm kiếm và lắng nghe mạng xã hội hàng tháng. Báo cáo quý trước dài 38 trang, tổng giám đốc lật hai trang đầu rồi hỏi "vậy mình ổn không?". Quý này bạn được yêu cầu gói lại trong một trang.',
   concept:{ name:'Báo cáo sức khoẻ thương hiệu một trang',
     body:'Một trang tốt trả lời ba câu theo thứ tự: <b>Mình ổn không?</b> (một câu kết luận), <b>Vì sao?</b> (3–5 chỉ số chính, mỗi chỉ số có giá trị, thay đổi so với kỳ trước, so với đối thủ, và đánh dấu thay đổi nào vượt sai số), <b>Làm gì?</b> (1–2 đề xuất có chủ sở hữu). Chỉ số chọn theo phễu: nhận biết, cân nhắc, ưa thích, cộng một chỉ báo sớm như share of search. Phần chi tiết để ở phụ lục cho người muốn đào sâu.' },

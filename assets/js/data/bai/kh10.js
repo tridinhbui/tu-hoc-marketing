@@ -3,11 +3,11 @@
 BAI_ADD({ mod:'kh10', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kh10-01', skill:'insight', read:'6 phút', t:'Gen Z chỉ thích bắt trend — hay bạn đang nhìn nhầm lý do?',
+{ id:'B:kh10-01', skill:'insight', read:'6 phút', assume:true, t:'Gen Z chỉ thích bắt trend — hay bạn đang nhìn nhầm lý do?',
   situation:'Một hãng trà sữa ở Hà Nội ra ly "trend" theo một meme đang hot, giá 45.000đ. Tuần đầu bán 600 ly, tuần thứ ba còn 90 ly. Cùng lúc, một món cũ có trân châu làm tươi mỗi ngày vẫn đều 400 ly mỗi tuần, chủ yếu khách 18–24 tuổi. Sếp kết luận: "Gen Z cả thèm chóng chán, phải ra trend liên tục."',
   concept:{ name:'Thử vì tò mò, ở lại vì lý do thật',
     body:'Trend tạo ra <b>lần thử đầu tiên</b>: người trẻ muốn biết món đó thế nào, muốn chụp ảnh, muốn có chuyện để nói với bạn. Nhưng lần mua lặp lại cần một lý do bền: ngon hơn, đáng tiền hơn, hợp thói quen hơn. Gọi Gen Z là "chỉ thích trend" là trộn hai hành vi khác nhau thành một. Cách đọc đúng: tách khách <b>thử</b> khỏi khách <b>quay lại</b>, rồi hỏi mỗi nhóm đang mua vì điều gì.' },
-  example:'Ly trend: 600 ly tuần đầu, 90 ly tuần ba — giữ lại 15%. Món trân châu tươi: 400 ly đều đặn, khảo sát tại quầy cho thấy phần lớn là khách quen mua 2–3 lần mỗi tuần. Kết luận đúng không phải "ra trend liên tục" mà là: dùng trend để kéo người mới vào quán, rồi mời họ thử món có lý do ở lại. Tuần sau, quầy tặng một ly nhỏ trân châu tươi cho ai mua ly trend.',
+  example:'Ly trend: 600 ly tuần đầu, 90 ly tuần ba — doanh số còn 15% so với tuần đầu. Đây là tỉ số doanh số, không phải tỉ lệ khách quay lại: 90 ly tuần ba có thể toàn người thử mới; tỉ lệ giữ chân thật phải đếm người mua lần hai — hỏi tại quầy hoặc dùng thẻ thành viên. Món trân châu tươi: 400 ly đều đặn, khảo sát tại quầy cho thấy phần lớn là khách quen mua 2–3 lần mỗi tuần. Kết luận đúng không phải "ra trend liên tục" mà là: dùng trend để kéo người mới vào quán, rồi mời họ thử món có lý do ở lại. Tuần sau, quầy tặng một ly nhỏ trân châu tươi cho ai mua ly trend.',
   takeaway:'Trend mở cửa, chất lượng giữ chân: đừng lấy lượt thử làm bằng chứng cho tính cách cả một thế hệ.',
   points:["Lượt thử đo sự tò mò, lượt mua lại đo giá trị. Hai thước này trả lời hai câu hỏi khác nhau nên không thể lấy doanh số tuần đầu để suy ra thói quen.","Tách khách thử khỏi khách quay lại cho biết món nào kéo người mới và món nào giữ người cũ. Mỗi nhóm cần một cách chăm khác nhau, chi phí cũng khác.","Muốn kiểm nhận định về cả thế hệ, hãy nhìn hành vi lặp lại như tần suất quay lại, không phải ý kiến lúc ghé qua. Mẫu càng đúng ngữ cảnh càng đáng tin."],
   counter:"Biến thể: ly trend lần này giữ được phần lớn khách sang tuần ba vì hương vị hợp khẩu vị, trong khi món trân châu tươi lại tụt vì giá tăng. Khi đó câu “trend thì chóng chán” sai theo chiều ngược lại. Dấu hiệu nhận ra: số khách quay lại của món trend không rơi theo đường dốc quen thuộc, và bình luận nhắc tới vị chứ không phải kiểu dáng. Lúc ấy hãy coi nó là món chính.",
@@ -16,12 +16,12 @@ BAI_ADD({ mod:'kh10', lessons:[
   mistakes:['Lấy doanh số tuần đầu của món trend làm thước đo sở thích của Gen Z.','Kết luận "cả thèm chóng chán" mà không nhìn nhóm khách quay lại.'],
   q:[
   { type:'mcq', stem:'Ly trend bán 600 ly tuần đầu rồi tụt còn 90 ly. Đoán trước: điều này nói gì nhiều nhất?',
-    options:[{k:'a',t:'Trend kéo được người thử, nhưng món chưa có lý do để mua lại'},{k:'b',t:'Gen Z chán nhanh hơn các nhóm tuổi khác, nên khó giữ chân'},
+    options:[{k:'a',t:'Trend kéo được lượt thử; số này chưa cho biết có ai mua lại'},{k:'b',t:'Gen Z chán nhanh hơn các nhóm tuổi khác, nên khó giữ chân'},
              {k:'c',t:'Giá 45.000đ quá cao so với túi tiền người trẻ nên họ bỏ đi'},{k:'d',t:'Meme hết hot, cần đổi sang meme khác thì doanh số sẽ quay lại'}],
-    answer:'a', why:{a:'Đúng. Hai con số đo hai hành vi khác nhau: thử và mua lại. Món trend làm tốt việc đầu, hỏng việc sau.',
+    answer:'a', why:{a:'Đúng. 600 ly tuần đầu là lượt thử; 90 ly tuần ba có thể toàn người thử mới, nên chưa nói được tỉ lệ mua lại. Muốn biết phải đếm người mua lần hai.',
       b:'Món trân châu tươi vẫn giữ 400 ly/tuần với cùng nhóm khách — vậy vấn đề không nằm ở việc họ chán nhanh.',
       c:'Nếu giá là vấn đề, tuần đầu đã không bán được 600 ly ở cùng mức giá.',
-      d:'Đổi meme chỉ lặp lại vòng thử – bỏ, không giải quyết chuyện khách không quay lại.'} },
+      d:'Đổi meme chỉ tạo thêm một vòng lượt thử, không cho khách lý do quay lại.'} },
   { type:'mcq', stem:'Sếp muốn mỗi tháng ra 2 món trend mới. Bạn đề xuất gì?',
     options:[{k:'a',t:'Làm theo sếp, vì người trẻ chỉ phản ứng với cái mới, không cần bàn thêm'},{k:'b',t:'Bỏ hẳn món trend, dồn ngân sách quảng cáo vào món trân châu tươi'},
              {k:'c',t:'Hạ giá món trend xuống 30.000đ để kéo doanh số tuần ba lên lại'},{k:'d',t:'Giữ trend để kéo khách mới, gắn với ưu đãi thử món có khách quen'}],
@@ -31,7 +31,7 @@ BAI_ADD({ mod:'kh10', lessons:[
       d:'Đúng. Dùng trend làm cửa vào, rồi dẫn khách sang món có lý do mua lại.'} },
   { type:'calc', stem:'Ly trend bán 600 ly tuần đầu và 90 ly tuần thứ ba. Doanh số tuần ba bằng bao nhiêu phần trăm tuần đầu?',
     unit:'%', ans:15, tol:0.1, wrong:[[85,'NHAM_TI_LE_ROI'],[666.7,'SAI_MAU_SO']], errors:['NHAM_TI_LE_ROI','SAI_MAU_SO'],
-    steps:['Tỉ lệ giữ lại = tuần ba ÷ tuần đầu.','90 ÷ 600 = 0,15 = <b>15%</b> (tức là mất 85%).'] },
+    steps:['Tỉ số doanh số = tuần ba ÷ tuần đầu (đây không phải tỉ lệ khách quay lại; muốn có nó phải đếm người mua lần hai).','90 ÷ 600 = 0,15 = <b>15%</b> (tức là mất 85%).'] },
   { type:'mcq', stem:'Một quán cà phê thấy khách 20 tuổi đến đông khi có góc chụp ảnh mới, nhưng số khách quen không tăng. Nên đọc thế nào?',
     options:[{k:'a',t:'Góc chụp ảnh vô ích, nên dỡ bỏ để tiết kiệm mặt bằng'},{k:'b',t:'Góc ảnh kéo lượt thử; cần tìm vì sao họ không quay lại'},
              {k:'c',t:'Khách trẻ đến để chụp ảnh, hiếm khi thành khách quen'},{k:'d',t:'Cần làm góc chụp ảnh mới mỗi tuần để giữ lượng khách đông như vậy'}],
@@ -63,7 +63,7 @@ BAI_ADD({ mod:'kh10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kh10-02', skill:'insight', read:'7 phút', t:'Sinh viên ít tiền thì chỉ mua đồ rẻ nhất?',
+{ id:'B:kh10-02', skill:'insight', read:'7 phút', assume:true, t:'Sinh viên ít tiền thì chỉ mua đồ rẻ nhất?',
   situation:'Một nhãn tai nghe nội địa định giá 290.000đ để "vừa túi sinh viên" và bán chậm. Khảo sát 50 sinh viên (số liệu minh hoạ): 19 bạn dùng tai nghe từ 1.000.000đ trở lên, 22 bạn dùng loại 200–400.000đ, 9 bạn chưa có. Nhóm 19 bạn kia để dành 3 tháng mới mua, nhưng ăn trưa 25.000đ mỗi ngày và đi xe buýt. Nhóm marketing bối rối: sinh viên nghèo hay không nghèo?',
   concept:{ name:'Chi tiêu có chọn lọc (tiết kiệm chỗ này, xài sang chỗ kia)',
     body:'Người có ít tiền không chia đều sự tiết kiệm cho mọi thứ. Họ <b>cắt mạnh</b> ở hạng mục không quan trọng với mình (bữa trưa, đi lại) để <b>chi mạnh</b> cho vài thứ gắn với bản thân: điện thoại, tai nghe, đồ chơi sở thích, một chuyến đi. Câu hỏi đúng không phải "họ có bao nhiêu tiền" mà là "hạng mục của mình nằm ở phía họ cắt hay phía họ để dành để mua". Và đây là một <b>phân khúc</b>, không phải cả sinh viên: ở khảo sát trên, 22 bạn vẫn hài lòng với loại rẻ.' },
@@ -120,7 +120,7 @@ BAI_ADD({ mod:'kh10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kh10-03', skill:'creative', read:'6 phút', t:'Vì sao video "chuyên nghiệp" lại thua video quay bằng điện thoại?',
+{ id:'B:kh10-03', skill:'creative', read:'6 phút', assume:true, t:'Vì sao video "chuyên nghiệp" lại thua video quay bằng điện thoại?',
   situation:'Một hãng giày thể thao làm hai video cho khách 18–25 tuổi. Video A quay studio, người mẫu, nhạc sôi động, tốn 80 triệu. Video B là một bạn nhân viên quay bằng điện thoại, chạy thử giày trên đường Nguyễn Huệ, nói thật "đế hơi cứng hai ngày đầu". Sau 7 ngày, video B có tỉ lệ xem hết 32%, video A 9%.',
   concept:{ name:'Dị ứng với "làm màu" (tín hiệu thật)',
     body:'Hãy đọc cặp video này như một giả thuyết, không phải kết luận: B khác A ở người nói, bối cảnh, nhạc, độ dài và cả lời nói thật, nên chưa biết yếu tố nào tạo ra chênh lệch. Giả thuyết khả dĩ nhất là người trẻ quen nhận ra cái <b>được dàn dựng để bán</b> và rời đi sớm. Tín hiệu thật gồm: người giống họ, bối cảnh quen, nói cả điểm chưa hoàn hảo, không hứa quá. Cách kiểm: cùng sản phẩm, cùng người, chỉ đổi kịch bản. "Thật" không có nghĩa là cẩu thả: âm thanh vẫn phải rõ, thông tin vẫn phải đúng.' },
@@ -180,13 +180,14 @@ BAI_ADD({ mod:'kh10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kh10-04', skill:'channel', read:'7 phút', t:'Khách trẻ tìm quán ăn trên TikTok — Google của bạn còn đủ không?',
+{ id:'B:kh10-04', skill:'channel', read:'7 phút', assume:true, t:'Khách trẻ tìm quán ăn trên TikTok — Google của bạn còn đủ không?',
+  src:[{ t:'TikTok Help Center — cách nội dung được tìm thấy và đề xuất trên TikTok', u:'https://support.tiktok.com', d:'2026-11-07', st:'chua' }],
   situation:'Một quán bún chả ở Đà Nẵng đầu tư 2 triệu mỗi tháng để lên top Google Maps, điểm 4,6 sao. Hỏi 40 khách dưới 25 tuổi "bạn biết quán qua đâu", 26 người nói "thấy trên TikTok", 8 người qua Google Maps, 6 người do bạn rủ. Quán chưa có video nào; các video nhắc tới quán đều do khách tự quay.',
   concept:{ name:'Tìm kiếm bằng video',
-    body:'Nhiều người trẻ gõ "quán bún chả Đà Nẵng" ngay trên TikTok thay vì Google, vì video cho họ thấy <b>món thật, không khí thật, người thật đang ăn</b>. Với họ, TikTok vừa là mạng xã hội vừa là công cụ tìm kiếm. Việc của quán là đảm bảo khi ai đó tìm, họ thấy nội dung đúng: tên quán rõ, địa chỉ, món nổi bật, giá. Google Maps vẫn cần cho bước cuối — chỉ đường, giờ mở cửa.' },
+    body:'Theo quan sát trong ngành (chưa có số liệu Việt Nam được kiểm), một phần người trẻ gõ "quán bún chả Đà Nẵng" ngay trên TikTok thay vì Google, vì video cho họ thấy <b>món thật, không khí thật, người thật đang ăn</b>. Với họ, TikTok vừa là mạng xã hội vừa là công cụ tìm kiếm. Việc của quán là đảm bảo khi ai đó tìm, họ thấy nội dung đúng: tên quán rõ, địa chỉ, món nổi bật, giá. Google Maps vẫn cần cho bước cuối — chỉ đường, giờ mở cửa.' },
   example:'26 trên 40 người (65%) đến từ TikTok, nhưng quán không kiểm soát nội dung nào ở đó. Quán quay 3 video ngắn: cận cảnh chả nướng than, bảng giá 35.000đ, đường vào hẻm. Mô tả video ghi đủ "bún chả + tên quán + quận". Đồng thời trả lời bình luận dưới video của khách. Google Maps giữ nguyên để khách tra đường sau khi đã quyết định đi.',
   takeaway:'Người trẻ tìm bằng mắt: hãy có mặt trong kết quả tìm kiếm video, không chỉ trên bản đồ.',
-  points:["Video cho người tìm thấy món, không khí và giá trong vài giây, thay cho một dòng chữ khó hình dung. Với quyết định đi ăn nhanh, nhìn thấy nhanh hơn đọc nhiều.","Kết quả tìm kiếm trên TikTok dựa vào chữ trong mô tả, tên địa điểm và nội dung video. Mô tả đủ tên quán, món, quận giúp video xuất hiện khi khách gõ từ khoá.","Hai kênh phục vụ hai bước khác nhau: video giúp chọn quán, bản đồ giúp tới được quán. Bỏ một kênh là làm đứt một bước của hành trình đi ăn."],
+  points:["Video cho người tìm thấy món, không khí và giá trong vài giây, thay cho một dòng chữ khó hình dung. Với quyết định đi ăn nhanh, nhìn thấy nhanh hơn đọc nhiều.","Theo tài liệu hỗ trợ của TikTok tại ngày kiểm 07/11/2026, kết quả tìm kiếm dựa một phần vào chữ trong mô tả, chữ và âm thanh trong video, địa điểm được gắn; nếu màn hình khác, tin trang chính thức. Mô tả đủ tên quán, món, quận giúp video có cơ hội xuất hiện khi khách gõ từ khoá.","Hai kênh phục vụ hai bước khác nhau: video giúp chọn quán, bản đồ giúp tới được quán. Bỏ một kênh là làm đứt một bước của hành trình đi ăn."],
   counter:"Biến thể: quán bún chả nằm trong khu văn phòng, khách chủ yếu là người đi làm trên 30 tuổi và đặt qua ứng dụng giao đồ ăn. Làm video TikTok ở đây ít kéo thêm người, vì họ tìm quán theo ứng dụng và lời giới thiệu đồng nghiệp. Dấu hiệu nhận ra: hỏi khách biết quán qua đâu, câu trả lời dồn về ứng dụng hoặc bạn bè. Hãy dồn công vào kênh khách đang dùng.",
   deeper:"Người làm nghề không chọn kênh theo xu hướng mà theo câu trả lời của khách khi được hỏi biết quán qua đâu. Đánh đổi là video tốn giờ quay, dựng, trả lời bình luận, nên cần giới hạn số video và đo hiệu quả. Tín hiệu theo dõi gồm số người nói thấy quán trên TikTok, lượt hỏi đường tới quán, và số video khách tự quay nhắc tên quán. Khái niệm kề cận là owned media: kênh chủ động cũng tốn giờ công thật. Trong tuần này, hãy hỏi các khách mới nhất biết quán qua đâu, ghi lại từng câu trả lời, rồi so với kênh bạn đang đầu tư tiền.",
   apply:'Mở TikTok, gõ tên một loại món + quận bạn ở. Nói trong 60 giây: quán nào hiện lên, và vì sao video đó làm bạn muốn đi.',
@@ -240,7 +241,7 @@ BAI_ADD({ mod:'kh10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kh10-05', skill:'insight', read:'7 phút', t:'Phụ huynh mua sữa cho con vì dinh dưỡng — hay vì sợ điều gì?',
+{ id:'B:kh10-05', skill:'insight', read:'7 phút', assume:true, t:'Phụ huynh mua sữa cho con vì dinh dưỡng — hay vì sợ điều gì?',
   situation:'Một hãng sữa bột trẻ em chạy quảng cáo liệt kê 12 dưỡng chất. Tỉ lệ nhấp thấp. Nhóm nghiên cứu ngồi nghe 15 bà mẹ có con 2–4 tuổi nói chuyện. Câu lặp lại nhiều nhất: "Con mình thấp hơn bạn cùng lớp", "Sợ con biếng ăn", "Lỡ mình chọn sai thì sao". Không ai nhắc tới tên dưỡng chất nào.',
   concept:{ name:'Nỗi lo làm động lực mua',
     body:'Với phụ huynh, nhiều quyết định mua cho con không bắt đầu từ <b>lợi ích</b> mà từ <b>nỗi lo</b>: con chậm lớn, con ốm, con thua bạn, mình là cha mẹ chưa đủ tốt. Danh sách thành phần là bằng chứng họ tìm sau, khi đã có nỗi lo. Hiểu đúng giúp thông điệp bắt đầu từ chỗ họ đang lo, rồi mới đưa bằng chứng. Nhưng cần tránh <b>thổi phồng nỗi sợ</b>: doạ nạt làm mất niềm tin và dễ vi phạm quy định quảng cáo sản phẩm cho trẻ.' },
@@ -300,7 +301,7 @@ BAI_ADD({ mod:'kh10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kh10-06', skill:'channel', read:'7 phút', t:'Một bà mẹ trong nhóm Facebook có sức nặng hơn quảng cáo của bạn?',
+{ id:'B:kh10-06', skill:'channel', read:'7 phút', assume:true, t:'Một bà mẹ trong nhóm Facebook có sức nặng hơn quảng cáo của bạn?',
   situation:'Một hãng bỉm mới chạy quảng cáo Facebook 3 tháng, chi 60 triệu, có 120 đơn. Cùng lúc, một thành viên trong nhóm "Mẹ bỉm sữa Hà Đông" (khoảng 40.000 thành viên) đăng bài so sánh 4 loại bỉm, có ảnh bé mặc, nhắc hãng này là "thấm tốt, hơi nóng mùa hè". Tuần đó hãng nhận 45 đơn ghi "thấy trong nhóm".',
   concept:{ name:'Tin người đi trước',
     body:'Phụ huynh, nhất là lần đầu làm cha mẹ, không có kinh nghiệm để tự đánh giá. Họ tìm tới <b>người đã đi trước</b>: mẹ có con lớn hơn vài tháng, người cùng khu, cùng hoàn cảnh. Nhóm Facebook mẹ bỉm, nhóm Zalo lớp là nơi những lời khuyên đó được hỏi – đáp mỗi ngày. Lời khuyên ở đây có sức nặng vì người nói không bán hàng và dám nói cả điểm chưa tốt. Thương hiệu không thể mua niềm tin đó; chỉ có thể <b>xứng đáng</b> để được nhắc tới.' },
@@ -360,7 +361,7 @@ BAI_ADD({ mod:'kh10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kh10-07', skill:'comm', read:'6 phút', t:'Người dùng là đứa trẻ, người trả tiền là bố mẹ — bạn nói với ai?',
+{ id:'B:kh10-07', skill:'comm', read:'6 phút', assume:true, t:'Người dùng là đứa trẻ, người trả tiền là bố mẹ — bạn nói với ai?',
   situation:'Một ứng dụng học tiếng Anh cho trẻ 6–10 tuổi có gói 1.200.000đ/năm. Bản dùng thử 7 ngày: trẻ rất thích, trung bình mở 5 lần mỗi ngày. Nhưng chỉ 4% gia đình mua gói. Phỏng vấn phụ huynh: "Con chơi thì vui, nhưng không biết có học được gì không", "Sợ con dán mắt vào màn hình".',
   concept:{ name:'Người dùng ≠ người mua',
     body:'Trong nhiều sản phẩm cho trẻ, có ít nhất hai vai: <b>người dùng</b> (đứa trẻ) quyết định có thích, có dùng tiếp không; <b>người trả tiền</b> (bố mẹ) quyết định có mua không. Hai người cần hai lý do khác nhau. Trẻ cần vui. Bố mẹ cần thấy <b>tiến bộ</b> và cảm thấy mình kiểm soát được. Làm tốt một vai mà quên vai kia thì sản phẩm hoặc bị bỏ, hoặc không được mua.' },
@@ -420,7 +421,7 @@ BAI_ADD({ mod:'kh10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kh10-08', skill:'channel', read:'7 phút', t:'Người tỉnh mua ở đâu và tin ai — có giống người thành phố?',
+{ id:'B:kh10-08', skill:'channel', read:'7 phút', assume:true, t:'Người tỉnh mua ở đâu và tin ai — có giống người thành phố?',
   situation:'Một hãng máy lọc nước bán tốt ở TP.HCM qua website và sàn thương mại điện tử. Mở rộng về Long An và Tiền Giang, hãng chạy cùng loại quảng cáo, được nhiều lượt xem nhưng rất ít đơn. Khảo sát 30 hộ ở thị trấn cho thấy: 21 hộ mua đồ điện ở cửa hàng điện máy quen trong thị trấn, "vì hư thì chạy ra đó là có người sửa".',
   concept:{ name:'Niềm tin gắn với người bán tại chỗ',
     body:'Ở nhiều thị trấn, huyện, việc mua món giá trị không chỉ là mua hàng mà là mua <b>người chịu trách nhiệm</b>: ai lắp, ai sửa, ai đổi khi hỏng. Chủ cửa hàng quen là người có mặt, có tên, có địa chỉ; họ đứng ra bảo đảm. Vì vậy kênh hiệu quả không nhất thiết là kênh rẻ nhất hay hiện đại nhất, mà là kênh gắn với <b>người được tin</b>. Quảng cáo online vẫn có vai trò tạo biết đến, nhưng quyết định thường chốt tại quầy.' },
@@ -480,7 +481,7 @@ BAI_ADD({ mod:'kh10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:kh10-09', skill:'brand', read:'7 phút', t:'Người ngoại thành chọn thương hiệu quen vì bảo thủ — hay vì sợ mất tiền?',
+{ id:'B:kh10-09', skill:'brand', read:'7 phút', assume:true, t:'Người ngoại thành chọn thương hiệu quen vì bảo thủ — hay vì sợ mất tiền?',
   situation:'Một hãng nước giặt mới rẻ hơn hãng dẫn đầu 15%, chất lượng thử nghiệm tương đương. Ở các tiệm tạp hoá ngoại thành Bình Dương, hàng nằm im. Chủ tiệm kể: "Khách công nhân lương 7–8 triệu, mua sai một can 90.000đ là tiếc mấy bữa ăn. Họ lấy hãng quen cho chắc."',
   concept:{ name:'Thương hiệu quen là bảo hiểm rủi ro',
     body:'Khi mỗi đồng tiền đều có việc, <b>chi phí của một lần mua sai</b> rất lớn so với khoản tiết kiệm được. Rẻ hơn 15% nhưng nếu hỏng thì mất trọn 100% — người mua cân như vậy. Thương hiệu quen giống bảo hiểm: biết chắc kết quả. Đây không phải bảo thủ mà là <b>tính toán hợp lý</b>. Muốn được thử, hãng mới phải hạ rủi ro của lần thử: gói nhỏ, dùng thử miễn phí, đổi trả tại tiệm, hoặc lời bảo đảm của người họ tin.' },
@@ -540,7 +541,7 @@ BAI_ADD({ mod:'kh10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:kh10-10', skill:'insight', read:'7 phút', t:'Chân dung khách của bạn là người thật — hay là một khuôn mẫu?',
+{ id:'B:kh10-10', skill:'insight', read:'7 phút', assume:true, t:'Chân dung khách của bạn là người thật — hay là một khuôn mẫu?',
   situation:'Nhóm bạn viết chân dung khách cho một chuỗi bánh mì: "Minh, 22 tuổi, Gen Z, thích trend, sống ảo, không trung thành". Sau 2 tuần phỏng vấn 20 khách trẻ tại quầy, 14 người nói mua vì "gần chỗ học, 20 phút là có, giá ổn", chỉ 3 người nhắc tới mạng xã hội. Chân dung cũ không dự đoán được hành vi nào trong số đó.',
   concept:{ name:'Chân dung dựa trên hành vi, không dựa trên nhãn',
     body:'Khuôn mẫu (stereotype) là câu mô tả cả một nhóm bằng vài tính từ quen tai: "Gen Z thích trend", "mẹ bỉm cả tin", "người tỉnh bảo thủ". Nó dễ viết, dễ gật đầu, nhưng <b>không giúp ra quyết định</b> và thường sai. Chân dung tốt trả lời: họ đang cố làm việc gì, trong hoàn cảnh nào, cản trở là gì, họ tin ai, bằng chứng từ đâu. Mỗi dòng nên kèm <b>nguồn</b>: phỏng vấn, số liệu, quan sát. Dòng nào không có nguồn là giả thuyết cần kiểm.' },

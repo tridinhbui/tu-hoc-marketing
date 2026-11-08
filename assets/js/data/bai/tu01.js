@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'tu01', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tu01-01', skill:'creative', read:'6 phút', t:'Khách thấy gì trong 5 giây đầu khi mở trang?',
+{ id:'B:tu01-01', skill:'creative', read:'6 phút', assume:true, t:'Khách thấy gì trong 5 giây đầu khi mở trang?',
   situation:'Một thương hiệu nến thơm ở Đà Lạt chạy quảng cáo về website. Mở trang trên điện thoại, màn hình đầu tiên là ảnh bìa rừng thông thật to, logo và dòng chữ "Chào mừng bạn đến với thế giới của chúng tôi". Sản phẩm, giá và nút mua nằm phía dưới, phải cuộn hai lần mới thấy. Công cụ đo cho biết 60% người vào không cuộn chút nào.',
   concept:{ name:'Phần nhìn thấy đầu tiên (above the fold)',
     body:'Là phần trang hiện ra trước khi khách cuộn. Với nhiều người, đó là <b>toàn bộ</b> trang, vì họ quyết định ở lại hay thoát chỉ trong vài giây. Phần này phải trả lời ba câu: đây là gì, có gì cho tôi, bước tiếp theo là gì. Công thức gọn: một dòng tiêu đề nói lợi ích, một ảnh sản phẩm thật, một nút hành động. Lời chào, ảnh không khí và câu chuyện thương hiệu để xuống dưới cho người đã quan tâm.' },
@@ -63,7 +63,7 @@ BAI_ADD({ mod:'tu01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tu01-02', skill:'creative', read:'6 phút', t:'Trang đích nên có một mục tiêu hay năm lựa chọn?',
+{ id:'B:tu01-02', skill:'creative', read:'6 phút', assume:true, t:'Trang đích nên có một mục tiêu hay năm lựa chọn?',
   situation:'Một trung tâm tiếng Anh chạy quảng cáo "Học thử IELTS miễn phí". Trang đích có: nút đăng ký học thử, nút tải tài liệu, nút xem lịch khai giảng, nút theo dõi fanpage, menu đầy đủ tám mục và một ô chat. Tỉ lệ đăng ký học thử chỉ 2%.',
   concept:{ name:'Một trang, một mục tiêu',
     body:'Trang đích khác trang chủ: nó sinh ra cho <b>một</b> hành động, khớp với lời hứa đã đưa khách tới. Mỗi đường thoát khác — menu, liên kết mạng xã hội, nút phụ — đều chia sự chú ý. Khách không làm được gì thì sẽ chọn làm cái dễ nhất, thường là bấm đi chỗ khác. Quy tắc: bỏ menu, giữ một nút chính lặp lại vài lần dọc trang; các lựa chọn phụ nếu cần thì để nhỏ ở cuối trang.' },
@@ -123,7 +123,7 @@ BAI_ADD({ mod:'tu01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tu01-03', skill:'measure', read:'7 phút', t:'Form đăng ký có 9 trường — bỏ bớt cái nào?',
+{ id:'B:tu01-03', skill:'measure', read:'7 phút', assume:true, t:'Form đăng ký có 9 trường — bỏ bớt cái nào?',
   situation:'Một công ty nội thất chạy quảng cáo "Nhận báo giá thiết kế miễn phí". Form hỏi: họ tên, số điện thoại, email, ngày sinh, địa chỉ đầy đủ, diện tích căn hộ, ngân sách, phong cách yêu thích, biết đến qua đâu. 1.000 người mở form, chỉ 80 người gửi.',
   concept:{ name:'Mỗi trường là một cái giá',
     body:'Mỗi ô phải điền là thêm một lần khách cân nhắc "có đáng không". Với mỗi trường, hỏi: <b>không có thông tin này thì bước tiếp theo có làm được không?</b> Nếu vẫn làm được, bỏ hoặc hỏi sau (trong cuộc gọi, ở bước hai). Các trường nhạy cảm như ngày sinh, thu nhập, địa chỉ chi tiết làm người ta ngần ngại nhất. Form ngắn có thể kéo thêm vài người ít nghiêm túc, nên đo cả tỉ lệ gửi form lẫn tỉ lệ khách chốt được.' },
@@ -183,11 +183,11 @@ BAI_ADD({ mod:'tu01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tu01-04', skill:'measure', read:'7 phút', t:'Trang tải 6 giây thì mất bao nhiêu khách?',
+{ id:'B:tu01-04', skill:'measure', read:'7 phút', assume:true, t:'Trang tải 6 giây thì mất bao nhiêu khách?',
   situation:'Một shop mỹ phẩm chạy quảng cáo về website. Trang sản phẩm có sáu ảnh chụp chưa nén, mỗi ảnh 4MB, cùng nhiều đoạn mã theo dõi. Trên 4G, trang mất khoảng 6 giây mới hiện nội dung. Báo cáo quảng cáo ghi 10.000 lượt bấm, nhưng công cụ phân tích web chỉ ghi 6.500 lượt xem trang.',
   concept:{ name:'Tốc độ tải và tỉ lệ rời',
     body:'Mỗi giây chờ là một nhóm khách bấm quay lại. Người đã rời trước khi trang tải xong thường <b>không được ghi</b> là lượt xem, nên khoảng chênh giữa lượt bấm quảng cáo và lượt xem trang thường là tín hiệu tốc độ — nhưng không phải toàn bộ: chênh lệch còn do bấm không hợp lệ hoặc bot, người từ chối cookie hay dùng trình chặn quảng cáo khiến mã đo không chạy, và hai công cụ đếm theo cách khác nhau. So chênh lệch trước và sau khi sửa tốc độ để tách phần do tốc độ. Thủ phạm hay gặp: ảnh không nén, font và mã theo dõi quá nhiều, video tự chạy. Sửa tốc độ là loại tối ưu hiếm hoi giúp mọi chiến dịch cùng lúc, vì mọi khách đều phải đi qua cửa đó.' },
-  example:'10.000 lượt bấm nhưng chỉ 6.500 lượt xem: chênh 35%. Shop nén ảnh còn 200KB, bỏ hai đoạn mã không dùng; trang hiện trong khoảng 2,5 giây. Lượt xem lên 8.500 trên 10.000 lượt bấm: khoảng 20 điểm chênh biến mất là phần do tốc độ; 15% còn lại đến từ bấm không hợp lệ, mã đo bị chặn hoặc bị từ chối, và khác biệt cách đếm. Tỉ lệ mua trên người xem vẫn 2%, nhưng số đơn từ 130 lên 170 với cùng ngân sách quảng cáo.',
+  example:'10.000 lượt bấm nhưng chỉ 6.500 lượt xem: chênh 35%. Shop nén ảnh còn 200KB, bỏ hai đoạn mã không dùng; trang hiện trong khoảng 2,5 giây. Lượt xem lên 8.500 trên 10.000 lượt bấm: khoảng 20 điểm chênh biến mất được quy cho tốc độ — chỉ tách được như vậy khi so trước/sau trên cùng chiến dịch, cùng tuần, không đổi gì khác; 15% còn lại đến từ bấm không hợp lệ, mã đo bị chặn hoặc bị từ chối, và khác biệt cách đếm. Tỉ lệ mua trên người xem vẫn 2%, nhưng số đơn từ 130 lên 170 với cùng ngân sách quảng cáo. (Số minh hoạ; 20 điểm không phải benchmark, trang của bạn có thể chênh khác hẳn.)',
   takeaway:'So lượt bấm với lượt xem: phần chênh là tiền quảng cáo rơi trước cửa trang.',
   apply:'Mở trang đích của bạn trên điện thoại bằng 4G, bấm giờ tới khi thấy nội dung. Nói trong 60 giây: trang nặng vì đâu.',
   mistakes:['Thử tốc độ bằng máy tính ở văn phòng có wifi mạnh.','Nghĩ chênh lệch bấm và xem là "lỗi đo" rồi bỏ qua.'],
@@ -236,7 +236,7 @@ BAI_ADD({ mod:'tu01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tu01-05', skill:'channel', read:'6 phút', t:'Vì sao thiết kế trên máy tính rồi mới "co lại" cho điện thoại là sai?',
+{ id:'B:tu01-05', skill:'channel', read:'6 phút', assume:true, t:'Vì sao thiết kế trên máy tính rồi mới "co lại" cho điện thoại là sai?',
   situation:'Một hãng balo làm trang đích trên màn hình máy tính: bảng so sánh ba mẫu nằm ngang, nút mua nhỏ ở góc phải, chữ mô tả cỡ 12. Báo cáo cho thấy 85% lượt vào là từ điện thoại. Tỉ lệ mua trên máy tính 3%, trên điện thoại chỉ 0,8%.',
   concept:{ name:'Thiết kế cho điện thoại trước (mobile first)',
     body:'Khi đa số khách tới từ điện thoại, bản điện thoại <b>là</b> trang chính, bản máy tính mới là bản phụ. Làm từ điện thoại lên buộc bạn chọn điều quan trọng nhất vì màn hình hẹp. Kiểm tra nhanh: chữ đọc được không cần phóng to; nút đủ lớn để bấm bằng ngón cái; bảng ngang được đổi thành thẻ xếp dọc; form dùng đúng bàn phím (số điện thoại bật bàn phím số). Chênh lệch tỉ lệ mua giữa hai thiết bị là chỉ báo trang điện thoại đang có vấn đề.' },
@@ -296,7 +296,7 @@ BAI_ADD({ mod:'tu01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tu01-06', skill:'brand', read:'6 phút', t:'Đánh giá của khách nên đặt ở đâu trên trang?',
+{ id:'B:tu01-06', skill:'brand', read:'6 phút', assume:true, t:'Đánh giá của khách nên đặt ở đâu trên trang?',
   situation:'Một trang bán máy lọc không khí có 300 đánh giá 5 sao, ảnh khách dùng tại nhà và chứng nhận kiểm định. Tất cả nằm trong một mục "Khách hàng nói gì" ở cuối trang, sau phần thông số kỹ thuật dài. Nút "Mua ngay" nằm ở giữa trang, xung quanh chỉ có giá.',
   concept:{ name:'Bằng chứng đặt cạnh điểm quyết định',
     body:'Bằng chứng xã hội có tác dụng nhất <b>đúng lúc khách đang phân vân</b> — tức là ngay cạnh nút mua và cạnh giá. Để dồn hết ở cuối trang thì người quyết định sớm không thấy, người thấy thì đã đọc quá nhiều. Cách làm: một dòng ngắn ngay dưới nút (số sao, số đánh giá), một hai trích dẫn cụ thể gần giá, chứng nhận cạnh lời hứa mà nó chứng minh. Bằng chứng cụ thể (phòng 25m², con bị dị ứng) mạnh hơn lời khen chung.' },
@@ -356,7 +356,7 @@ BAI_ADD({ mod:'tu01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tu01-07', skill:'insight', read:'7 phút', t:'Khách đã thích sản phẩm, sao vẫn không bấm mua?',
+{ id:'B:tu01-07', skill:'insight', read:'7 phút', assume:true, t:'Khách đã thích sản phẩm, sao vẫn không bấm mua?',
   situation:'Một thương hiệu giày da nam bán trên website. Ghi hình phiên cho thấy nhiều khách xem kỹ ảnh, chọn size, rồi cuộn tìm gì đó, mở trang "Chính sách" trong tab khác và thoát. Chính sách đổi size, phí ship và bảo hành chỉ có trong một trang riêng dài 2.000 chữ.',
   concept:{ name:'Nỗi lo cuối cùng',
     body:'Sát lúc trả tiền, khách không còn hỏi "có đẹp không" mà hỏi "<b>lỡ không vừa thì sao, ship bao nhiêu, hỏng thì ai lo</b>". Đó là nỗi lo cuối cùng. Nếu câu trả lời không nằm ngay cạnh nút mua, khách phải đi tìm — và nhiều người không quay lại. Cách làm: ba dòng ngắn dưới nút, mỗi dòng trả lời một nỗi lo, như "Đổi size miễn phí 7 ngày", "Ship 25.000đ, miễn phí từ 500.000đ", "Bảo hành keo đế 12 tháng". Chỉ hứa điều thật sự làm được.' },
@@ -412,7 +412,7 @@ BAI_ADD({ mod:'tu01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tu01-08', skill:'creative', read:'6 phút', t:'Nút "Gửi" và nút "Nhận lịch tư vấn miễn phí" khác nhau thế nào?',
+{ id:'B:tu01-08', skill:'creative', read:'6 phút', assume:true, t:'Nút "Gửi" và nút "Nhận lịch tư vấn miễn phí" khác nhau thế nào?',
   situation:'Một phòng khám nha khoa có trang đích quảng cáo niềng răng. Cuối form là nút xám chữ "Gửi", cùng màu với nền. Phía trên còn có nút "Xem thêm" màu cam nổi bật dẫn sang trang bảng giá. Nhiều khách bấm "Xem thêm" và không quay lại form.',
   concept:{ name:'Nút kêu gọi hành động rõ',
     body:'Nút tốt trả lời hai câu: <b>bấm thì tôi được gì</b>, và nó có nổi bật nhất trang không. Chữ trên nút nên nói kết quả cho khách ("Nhận lịch tư vấn miễn phí") thay vì thao tác của máy ("Gửi"). Màu nút chính phải tương phản với nền và là màu mạnh nhất trang; các nút phụ nhạt hơn. Một câu nhỏ dưới nút gỡ lo ("Không mất phí, gọi lại trong 30 phút") thường giúp thêm. Màu cụ thể không có phép màu; cái quyết định là độ tương phản và thứ bậc.' },
@@ -472,10 +472,11 @@ BAI_ADD({ mod:'tu01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tu01-09', skill:'measure', read:'7 phút', t:'Bản đồ nhiệt và ghi hình phiên cho biết điều gì?',
+{ id:'B:tu01-09', skill:'measure', read:'7 phút', assume:true, t:'Bản đồ nhiệt và ghi hình phiên cho biết điều gì?',
+  src:[{ t:'Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 (tra cứu toàn văn trên Cổng thông tin điện tử Chính phủ, mục Hệ thống văn bản)', u:'https://vanban.chinhphu.vn/', d:'2026-11-07', st:'chua' }],
   situation:'Một shop trà sữa đóng chai bán online gắn công cụ bản đồ nhiệt và ghi hình phiên. Bản đồ nhiệt cho thấy nhiều lượt bấm vào ảnh sản phẩm dù ảnh không bấm được. Bản đồ cuộn cho thấy chỉ 30% người cuộn tới phần bảng giá combo. Ghi hình phiên cho thấy nhiều người bấm liên tục vào ô chọn vị.',
   concept:{ name:'Đọc bản đồ nhiệt và ghi hình phiên',
-    body:'Số liệu cho biết <b>bao nhiêu</b> người rời đi; bản đồ nhiệt và ghi hình phiên gợi ý <b>vì sao</b>. Ba tín hiệu hay gặp: bấm vào thứ không bấm được (khách mong nó làm gì đó, như phóng to ảnh); bấm liên tục ở một chỗ (có lỗi hoặc phản hồi chậm); bản đồ cuộn tụt mạnh ở một đoạn (nội dung quan trọng nằm quá sâu). Xem đủ nhiều phiên để thấy khuôn mẫu, đừng kết luận từ một hai người. Đây là nguồn ý tưởng để thử, không phải bằng chứng cuối cùng. Lưu ý quyền riêng tư: ghi hình phiên phải che (mask) các ô nhập như tên, số điện thoại, địa chỉ, thanh toán và được nêu trong chính sách quyền riêng tư; quy định về dữ liệu cá nhân (Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15, hiệu lực 1/1/2026) có thể áp dụng — hỏi pháp chế trước khi bật.' },
+    body:'Số liệu cho biết <b>bao nhiêu</b> người rời đi; bản đồ nhiệt và ghi hình phiên gợi ý <b>vì sao</b>. Ba tín hiệu hay gặp: bấm vào thứ không bấm được (khách mong nó làm gì đó, như phóng to ảnh); bấm liên tục ở một chỗ (có lỗi hoặc phản hồi chậm); bản đồ cuộn tụt mạnh ở một đoạn (nội dung quan trọng nằm quá sâu). Xem đủ nhiều phiên để thấy khuôn mẫu, đừng kết luận từ một hai người. Đây là nguồn ý tưởng để thử, không phải bằng chứng cuối cùng. Lưu ý quyền riêng tư: ghi hình phiên phải che (mask) các ô nhập như tên, số điện thoại, địa chỉ, thanh toán và được nêu trong chính sách quyền riêng tư; quy định về dữ liệu cá nhân có thể áp dụng (theo hiểu biết chung tại ngày kiểm 7/11/2026: Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15, hiệu lực 1/1/2026 — xem nguồn; nếu văn bản đã sửa đổi hoặc có nghị định hướng dẫn mới, tin trang chính thức) — hỏi pháp chế trước khi bật.' },
   example:'Shop cho ảnh bấm phóng to được, sửa ô chọn vị bị lỗi trên một số điện thoại, đưa bảng combo lên trên phần câu chuyện thương hiệu. Tỷ lệ người thấy bảng combo từ 30% lên 70%. Trong 6.000 lượt vào mỗi tháng, số người thấy bảng combo tăng từ 1.800 lên 4.200; với 5% trong số người thấy chọn mua combo, số combo bán từ 90 lên 210. (Số minh hoạ; ngoài đời cần A/B test hoặc nhóm đối chứng để biết phần tăng có thật do thay đổi này.)',
   takeaway:'Số liệu nói bao nhiêu; bản đồ nhiệt và ghi hình phiên gợi ý vì sao.',
   apply:'Xem mười phiên ghi hình của trang bạn phụ trách (hoặc tưởng tượng mười khách). Nói trong 60 giây: khuôn mẫu nào lặp lại, bạn muốn thử sửa gì.',
@@ -529,7 +530,7 @@ BAI_ADD({ mod:'tu01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:tu01-10', skill:'measure', read:'7 phút', t:'Mười việc cần sửa trên trang — làm cái nào trước?',
+{ id:'B:tu01-10', skill:'measure', read:'7 phút', assume:true, t:'Mười việc cần sửa trên trang — làm cái nào trước?',
   situation:'Sau một tuần soi trang đích bán nồi chiên không dầu, nhóm có danh sách mười việc: nén ảnh, sửa nút đặt hàng lỗi trên iPhone, viết lại toàn bộ mô tả, thêm video, đổi font, rút form từ 7 xuống 3 trường, thêm đánh giá cạnh nút, làm lại cả giao diện… Chỉ có một người lập trình, làm 10 ngày mỗi tháng.',
   concept:{ name:'Ưu tiên theo tác động × công sức',
     body:'Chấm mỗi việc hai điểm: <b>tác động</b> (bao nhiêu khách bị ảnh hưởng, ảnh hưởng nặng tới đâu) và <b>công sức</b> (mấy ngày làm). Lấy tác động chia công sức để xếp hạng. Làm trước nhóm tác động cao – công sức thấp; nhóm tác động cao – công sức cao lên kế hoạch; nhóm tác động thấp thì để sau. Lỗi chặn mua luôn đứng đầu vì tác động là toàn bộ đơn bị mất. Điểm chấm là ước lượng, nên ghi lý do và đo lại sau khi làm.' },

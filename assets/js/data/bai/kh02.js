@@ -3,20 +3,20 @@
 BAI_ADD({ mod:'kh02', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kh02-01', skill:'insight', read:'7 phút', t:'Ba tệp khách đều hứa hẹn — chấm điểm thế nào để chọn một?',
+{ id:'B:kh02-01', skill:'insight', read:'7 phút', assume:true, t:'Ba tệp khách đều hứa hẹn — chấm điểm thế nào để chọn một?',
   situation:'Một thương hiệu granola ở TP.HCM có 150 triệu cho quý tới và ba tệp đang cân nhắc: dân văn phòng ăn sáng vội, người tập gym, và mẹ bỉm mua đồ ăn vặt lành mạnh cho con. Cả nhóm cãi nhau vì mỗi người thích một tệp, và ai cũng có một lý do nghe rất hợp lý.',
   concept:{ name:'Bốn tiêu chí chọn tệp',
     body:'Thay vì chọn theo cảm tình, hãy chấm từng tệp theo bốn câu hỏi. <b>Quy mô</b>: đủ người mua để nuôi doanh nghiệp không? <b>Lợi nhuận</b>: mỗi khách để lại bao nhiêu lãi gộp, mua lại bao lâu một lần? <b>Khả năng thắng</b>: sản phẩm của mình có lý do gì để họ bỏ lựa chọn hiện tại? <b>Chi phí tiếp cận</b>: tốn bao nhiêu để chạm tới và thuyết phục họ? Một tệp to nhưng không có lý do thắng, hoặc thắng được nhưng không với tới nổi, đều là bẫy. Chấm thô từ 1 đến 5 cũng đủ để cuộc tranh luận chuyển từ “tôi thích” sang “con số nói gì”.' },
-  example:'Tệp gym: khoảng 20.000 người trong bán kính giao hàng, dự kiến 5% mua, lãi gộp mỗi khách trong quý 200.000đ, tiếp cận qua phòng tập và KOL tốn 60 triệu → lãi sau tiếp cận 140 triệu. Tệp văn phòng to gấp năm nhưng granola phải đấu bánh mì 20.000đ ngay cổng công ty — khả năng thắng thấp. Tệp mẹ bỉm lãi cao nhưng cần xây niềm tin về an toàn cho trẻ, chi phí tiếp cận lớn. Tệp gym thắng nhờ cân bằng cả bốn.',
+  example:'Số minh hoạ, kèm cách ước. Tệp gym: khoảng 20.000 người trong bán kính giao hàng (đếm phòng tập × hội viên trung bình), dự kiến 5% mua (giả định, cần kiểm bằng bán thử), lãi gộp mỗi khách trong quý 200.000đ, tiếp cận qua phòng tập và KOL tốn 60 triệu → lãi sau tiếp cận 140 triệu. Tệp văn phòng to gấp năm (100.000 người) nhưng granola phải đấu bánh mì 20.000đ ngay cổng công ty — khả năng thắng thấp, dự kiến chỉ 1% mua, lãi gộp 120.000đ mỗi khách, tiếp cận tốn 100 triệu → 1.000 × 120.000đ − 100 triệu = 20 triệu. Tệp mẹ bỉm (5.000 người) lãi cao, 300.000đ mỗi khách, nhưng cần xây niềm tin về an toàn cho trẻ: dự kiến 6% mua, tiếp cận tốn 80 triệu → 300 × 300.000đ − 80 triệu = 10 triệu. Tệp gym thắng (140 so với 20 và 10 triệu) nhờ cân bằng cả bốn.',
   takeaway:'Chọn tệp không phải chọn tệp to nhất, mà là tệp cân bằng nhất giữa quy mô, lãi, khả năng thắng và chi phí với tới.',
   apply:'Lấy một sản phẩm bạn biết, liệt kê hai tệp khách và chấm mỗi tệp 1–5 theo bốn tiêu chí. Nói trong 60 giây vì sao tệp thắng lại thắng.',
   mistakes:['Chỉ nhìn quy mô tệp mà bỏ qua việc mình có lý do gì để thắng ở đó.','Quên tính chi phí tiếp cận, nên tệp “hấp dẫn” hoá ra lỗ.'],
   q:[
   { type:'mcq', stem:'Trước khi đọc: theo bạn, thương hiệu granola nên dựa vào điều gì nhất để chọn tệp đầu tiên?',
-    options:[{k:'a',t:'Tệp có nhiều người nhất trong khu vực giao hàng hiện tại'},{k:'b',t:'Tệp mà chính người sáng lập hiểu rõ và thích phục vụ nhất'},
-             {k:'c',t:'Cân nhắc cả quy mô, lãi, khả năng thắng và chi phí tiếp cận'},{k:'d',t:'Tệp đang được đối thủ lớn nhất tập trung quảng cáo nhiều nhất'}],
-    answer:'c', why:{a:'Quy mô chỉ là một tiêu chí; tệp văn phòng to nhưng granola khó thắng bánh mì ở cổng công ty.',
-      b:'Hiểu khách là lợi thế thật, nhưng thích phục vụ không thay được phép tính lãi và chi phí.',
+    options:[{k:'a',t:'Quy mô và lãi gộp mỗi khách, vì hai số này quyết định doanh thu tiềm năng'},{k:'b',t:'Tệp mà người sáng lập hiểu rõ nhất và có lý do thắng rõ nhất'},
+             {k:'c',t:'Cân nhắc cả quy mô, lãi, khả năng thắng và chi phí tiếp cận'},{k:'d',t:'Tệp đối thủ lớn nhất đang dồn quảng cáo, vì đó là nơi nhu cầu đã được chứng minh'}],
+    answer:'c', why:{a:'Hai số này mới cho doanh thu trên giấy; tệp văn phòng to và lãi ổn nhưng granola khó thắng bánh mì ở cổng công ty.',
+      b:'Hiểu khách và có lý do thắng là lợi thế thật, nhưng chưa trả lời tệp có đủ lớn và với tới có rẻ không.',
       c:'Đúng. Một tệp chỉ đáng chọn khi cả bốn tiêu chí không có điểm nào quá yếu.',
       d:'Đối thủ lớn dồn tiền vào đâu thì chi phí tiếp cận ở đó cao nhất — thường là nơi hãng nhỏ khó thắng.'} },
   { type:'mcq', stem:'Nhóm vẫn nghiêng về tệp văn phòng vì “đông gấp năm lần”. Bạn làm gì trong buổi họp?',
@@ -60,11 +60,11 @@ BAI_ADD({ mod:'kh02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kh02-02', skill:'comm', read:'6 phút', t:'Sản phẩm “dành cho mọi người” — vì sao lại chẳng ai thấy mình trong đó?',
+{ id:'B:kh02-02', skill:'comm', read:'6 phút', assume:true, t:'Sản phẩm “dành cho mọi người” — vì sao lại chẳng ai thấy mình trong đó?',
   situation:'Một thương hiệu kem chống nắng nội địa viết brief: “Khách hàng mục tiêu: nam nữ 18–45, mọi loại da.” Ngân sách 90 triệu phủ quảng cáo cho 300.000 người, mỗi người thấy khoảng một lần. Sau một tháng, lượt nhớ quảng cáo gần như bằng không và đơn hàng lác đác.',
   concept:{ name:'Nói với mọi người là nói với không ai',
     body:'Khi tệp là “mọi người”, thông điệp buộc phải chung chung để không làm ai phật lòng — và vì chung chung, không ai thấy nó nói về mình. Ngân sách cũng bị rải mỏng: mỗi người chỉ thấy một lần, chưa đủ để nhớ. Chọn tệp là chấp nhận bỏ qua một số người để nói thật trúng với một nhóm: dùng đúng nỗi đau của họ, xuất hiện đủ dày ở nơi họ có mặt. Điều thú vị là sản phẩm vẫn bán được cho người ngoài tệp; tệp chỉ quyết định bạn nói với ai trước, không phải bạn cấm ai mua. Đây là cách nhìn của STP truyền thống; Byron Sharp (How Brands Grow) cho rằng thương hiệu lớn lên chủ yếu nhờ phủ rộng cả người mua thỉnh thoảng, nên nhiều hãng kết hợp: thông điệp sắc cho một bối cảnh, độ phủ vẫn rộng.' },
-  example:'Nhóm sửa brief: “Nữ văn phòng 22–30 ở TP.HCM, da dầu, ghét cảm giác bết khi đi xe máy buổi trưa.” Cùng 90 triệu, họ nhắm 100.000 người đúng tệp, mỗi người thấy 3 lần. Thông điệp đổi từ “bảo vệ làn da bạn” thành “chống nắng không bết dưới mũ bảo hiểm”. Lượt nhớ quảng cáo tăng rõ, và cả nam giới da dầu cũng bắt đầu mua theo.',
+  example:'Nhóm sửa brief: “Nữ văn phòng 22–30 ở TP.HCM, da dầu, ghét cảm giác bết khi đi xe máy buổi trưa.” Cùng 90 triệu, họ nhắm 100.000 người đúng tệp, mỗi người thấy 3 lần (giả định giá mỗi nghìn lượt hiển thị bằng phương án cũ để dễ so; nếu tệp hẹp đắt hơn 30% thì còn khoảng 230.000 lượt, tần suất 2,3 — vẫn hơn hẳn một lần). Thông điệp đổi từ “bảo vệ làn da bạn” thành “chống nắng không bết dưới mũ bảo hiểm”. Kịch bản minh hoạ: lượt nhớ quảng cáo có gợi nhắc tăng từ gần 0 lên khoảng 12% trên khảo sát 200 người, và cả nam giới da dầu cũng bắt đầu mua theo.',
   takeaway:'Tệp hẹp không đuổi ai đi; nó giúp đúng người nhận ra sản phẩm là dành cho mình.',
   apply:'Viết lại một câu mô tả khách hàng “cho mọi người” bạn từng thấy thành một câu có độ tuổi, bối cảnh và một nỗi đau cụ thể.',
   mistakes:['Sợ tệp hẹp làm mất doanh số của người ngoài tệp.','Mô tả tệp bằng nhân khẩu học rộng mà không có bối cảnh hay nỗi đau.'],
@@ -117,7 +117,7 @@ BAI_ADD({ mod:'kh02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kh02-03', skill:'insight', read:'7 phút', t:'Sản phẩm mới toanh: nên chiếm “bãi đổ bộ” nào trước?',
+{ id:'B:kh02-03', skill:'insight', read:'7 phút', assume:true, t:'Sản phẩm mới toanh: nên chiếm “bãi đổ bộ” nào trước?',
   situation:'Một startup làm app quản lý bán hàng trên điện thoại, phí 250.000đ/tháng. App phù hợp cho mọi cửa hàng nhỏ: tạp hoá, shop quần áo, quán ăn, tiệm trà sữa. Đội có 5 người bán hàng và 6 tháng tiền chạy. Nhà đầu tư hỏi: “Tháng này các bạn đi gõ cửa ai?”',
   concept:{ name:'Tệp đầu tiên (beachhead)',
     body:'Sản phẩm mới không đủ tiền và người để đánh cả thị trường cùng lúc. Tệp đầu tiên, hay “bãi đổ bộ”, là một nhóm nhỏ mà bạn có thể thắng áp đảo: họ có cùng nỗi đau gắt, nói chuyện với nhau (nên truyền miệng nhanh), và với tới được bằng nguồn lực đang có. Thắng một tệp nhỏ cho bạn khách tham chiếu, câu chuyện thành công và dòng tiền để sang tệp kế tiếp. Tiêu chí quan trọng nhất không phải tệp to, mà là tệp đủ nhỏ để chiếm được phần lớn trong thời gian bạn còn sống sót. Đây là quan điểm "bãi đổ bộ" (Geoffrey Moore), hợp với sản phẩm B2B, công nghệ mới; với hàng tiêu dùng đại trà có quan điểm khác (Byron Sharp) ưu tiên phủ rộng sớm.' },
@@ -158,11 +158,11 @@ BAI_ADD({ mod:'kh02', lessons:[
       c:'Nhóm nhỏ nhưng nhu cầu là tò mò thử một lần, không lặp lại.',
       d:'Học sinh không tự mua, và gạo lứt khó thắng bánh mì, xôi ở cổng trường.'} },
   { type:'mcq', stem:'Làm sao biết đã “thắng” tệp đầu tiên đủ để sang tệp kế?',
-    options:[{k:'a',t:'Khi doanh thu tháng này cao hơn tháng trước liên tiếp trong hai tháng'},{k:'b',t:'Khi đội đã hết ý tưởng nội dung mới cho tệp khách hàng hiện tại'},
-             {k:'c',t:'Khi nhà đầu tư yêu cầu mở rộng để tăng trưởng nhanh hơn đối thủ'},{k:'d',t:'Có thị phần đáng kể, khách tự giới thiệu, chi phí có khách ổn định'}],
-    answer:'d', why:{a:'Tăng hai tháng có thể do mùa vụ, chưa chứng minh đã chiếm tệp.',
-      b:'Hết ý tưởng là vấn đề của đội, không phải dấu hiệu tệp đã bão hoà.',
-      c:'Áp lực bên ngoài không thay được bằng chứng từ chính tệp khách.',
+    options:[{k:'a',t:'Doanh thu tăng hai tháng liên tiếp, dù chưa đo thâm nhập hay chi phí có khách'},{k:'b',t:'Đã có 120 tiệm (3%), chi phí có một tiệm vẫn giảm từng tháng'},
+             {k:'c',t:'Mỗi tuần thêm 10 tiệm nhờ quảng cáo, nhưng chưa tiệm nào giới thiệu tiệm khác'},{k:'d',t:'Có thị phần đáng kể, khách tự giới thiệu, chi phí có khách ổn định'}],
+    answer:'d', why:{a:'Tăng hai tháng có thể do mùa vụ; không có thâm nhập và chi phí có khách thì chưa chứng minh đã chiếm tệp.',
+      b:'3% là mới chạm phần dễ, chi phí còn giảm nghĩa là tệp đầu còn nhiều dư địa rẻ — mở rộng lúc này là quá sớm.',
+      c:'Tăng nhờ mua quảng cáo mà chưa có truyền miệng thì tệp chưa thành bàn đạp; dừng chi là dừng tăng.',
       d:'Đúng. Thị phần, truyền miệng và chi phí ổn định cho thấy tệp đầu đã thành bàn đạp.'} },
   { type:'mcq', stem:'Nhà đầu tư chê: “400 tiệm trà sữa là thị trường quá nhỏ.” Câu trả lời tốt nhất là gì?',
     options:[{k:'a',t:'Đúng là nhỏ, nên chúng tôi sẽ mở rộng ra cả cửa hàng nhỏ ngay từ đầu'},{k:'b',t:'Tệp nhỏ là cố ý: thắng nó cho khách tham chiếu để sang quán ăn, quán cà phê'},
@@ -174,8 +174,8 @@ BAI_ADD({ mod:'kh02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kh02-04', skill:'insight', read:'7 phút', t:'Tệp nhỏ lãi dày hay tệp lớn cạnh tranh gắt?',
-  situation:'Một xưởng giày da ở Hà Nội đứng trước hai lựa chọn cho năm tới (số liệu minh hoạ). Tệp lớn: giày công sở phổ thông bán 350.000đ trên sàn, dự kiến 20.000 đôi, lãi gộp 60.000đ mỗi đôi, nhưng phải đốt 700 triệu quảng cáo để đấu hàng chục shop. Tệp nhỏ: giày đo chân cho người chân bè bán 1.100.000đ, dự kiến 2.000 đôi, lãi gộp 400.000đ, chi phí tiếp cận 150 triệu; mỗi đôi cần đo chân và giao sau ba tuần.',
+{ id:'B:kh02-04', skill:'insight', read:'7 phút', assume:true, t:'Tệp nhỏ lãi dày hay tệp lớn cạnh tranh gắt?',
+  situation:'Một xưởng giày da ở Hà Nội đứng trước hai lựa chọn cho năm tới (số liệu minh hoạ). Tệp lớn: giày công sở phổ thông bán 350.000đ trên sàn, dự kiến 20.000 đôi, lãi gộp 60.000đ mỗi đôi, nhưng phải đốt 700 triệu quảng cáo để đấu hàng chục shop. Tệp nhỏ: giày đo chân cho người chân bè bán 1.100.000đ, dự kiến 2.000 đôi, lãi gộp 400.000đ (đã trừ công đo chân, chỉnh sửa và giao từng đơn), chi phí tiếp cận 150 triệu; mỗi đôi cần đo chân và giao sau ba tuần.',
   concept:{ name:'Lãi sau cạnh tranh, không phải doanh số',
     body:'Tệp lớn thường kéo theo nhiều đối thủ, và đối thủ đông thì giá bị ép, chi phí quảng cáo bị đẩy lên. Tệp nhỏ có nhu cầu đặc thù thường ít người phục vụ, khách sẵn trả cao hơn và ít so giá. So hai tệp phải so <b>lãi còn lại sau chi phí giành khách</b>, không phải so doanh số hay số đơn. Tệp nhỏ cũng có rủi ro: trần tăng trưởng thấp và phụ thuộc vào một nhóm hẹp. Vì vậy câu hỏi đúng là: tệp nào cho lãi tốt hơn trong khả năng của mình, và trần của nó có đủ cho mục tiêu mấy năm tới không.' },
   example:'Tệp lớn: 20.000 × 60.000đ = 1,2 tỷ lãi gộp, trừ 700 triệu quảng cáo còn 500 triệu. Tệp nhỏ: 2.000 × 400.000đ = 800 triệu, trừ 150 triệu còn 650 triệu. Tệp nhỏ bán ít hơn mười lần nhưng lãi hơn 150 triệu, lại ít phải đua giá. Kết luận này nhạy với chi phí giành khách: nếu quảng cáo tệp lớn chỉ còn 400 triệu thì lãi 800 triệu, vượt tệp nhỏ. Xưởng chọn tệp chân bè, đặt trước một ngưỡng (ví dụ quá 1.800 đôi một năm thì bắt đầu tìm tệp lân cận) và kiểm lại chi phí mỗi quý.',
@@ -231,7 +231,7 @@ BAI_ADD({ mod:'kh02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kh02-05', skill:'measure', read:'7 phút', t:'Khách mua nhiều hay khách mua thỉnh thoảng — ai đáng để nói chuyện?',
+{ id:'B:kh02-05', skill:'measure', read:'7 phút', assume:true, t:'Khách mua nhiều hay khách mua thỉnh thoảng — ai đáng để nói chuyện?',
   situation:'Một thương hiệu cà phê rang xay có 1.000 khách trong năm. Dữ liệu cho thấy 200 khách mua 12 lần mỗi năm, 800 khách còn lại chỉ mua 2 lần. Trưởng nhóm muốn dồn toàn bộ ngân sách chăm sóc 200 “khách ruột” vì họ tạo phần lớn doanh số.',
   concept:{ name:'Khách nặng và khách nhẹ',
     body:'Khách nặng (heavy buyer) mua thường xuyên và tạo phần lớn doanh số. Khách nhẹ mua thỉnh thoảng nhưng đông hơn nhiều. Phản xạ tự nhiên là chỉ chăm khách nặng. Byron Sharp và nhóm Ehrenberg-Bass (How Brands Grow, 2010) lập luận rằng thương hiệu lớn lên chủ yếu nhờ có thêm người mua, và phần đông người mua là khách nhẹ. Nhiều người làm quan hệ khách hàng phản biện rằng giữ khách nặng rẻ và lãi hơn, nên đây vẫn là tranh luận. Đừng chọn phe: hãy so <b>chi phí để có thêm một lượt mua</b> ở từng nhóm. Khách nặng đã mua đều nên dư địa nhỏ; khách nhẹ còn dư địa nhưng cần nhắc, và việc nhắc có chi phí thật.' },
@@ -241,10 +241,10 @@ BAI_ADD({ mod:'kh02', lessons:[
   mistakes:['Dồn hết ngân sách cho khách ruột vì họ tạo phần lớn doanh số.','Coi khách nhẹ là khách kém giá trị, hoặc nhắc họ mà không tính chi phí và tỉ lệ phản hồi tối thiểu.'],
   q:[
   { type:'mcq', stem:'Trước khi đọc: thương hiệu cà phê nên dồn ngân sách vào đâu?',
-    options:[{k:'a',t:'Dồn vào 200 khách ruột vì họ tạo phần lớn doanh số năm'},{k:'b',t:'Dồn vào khách mới chưa từng mua, vì khách cũ đã có sẵn'},
+    options:[{k:'a',t:'Dồn vào 200 khách ruột vì họ tạo 60% lượt mua và giữ họ rẻ hơn kéo người khác'},{k:'b',t:'Dồn vào khách mới chưa từng mua, vì 1.000 khách cũ đã ở mức mua tối đa'},
              {k:'c',t:'Giữ khách nặng và nhắc khách nhẹ nhớ để mua thêm một chút'},{k:'d',t:'Chia ngân sách theo tỉ lệ lượt mua: 60% cho khách nặng, 40% khách nhẹ'}],
-    answer:'c', why:{a:'Khách nặng đã mua gần hết khả năng; thêm tiền cho họ tạo ít doanh số mới.',
-      b:'Khách mới quan trọng, nhưng bỏ quên 800 khách nhẹ là bỏ phần tăng trưởng rẻ nhất.',
+    answer:'c', why:{a:'60% là doanh số đã có, không phải nơi nó tăng; khách nặng đã mua gần hết khả năng nên thêm tiền tạo ít lượt mới.',
+      b:'Chỉ khách nặng mới gần mức tối đa; 800 khách nhẹ mua 2 lần/năm còn nhiều dư địa và rẻ hơn khách mới.',
       c:'Đúng. Không bỏ ai: giữ người đang mua đều và nhắc người mua thỉnh thoảng.',
       d:'Chia theo lượt mua quá khứ là nhìn vào nơi doanh số đã có, không phải nơi nó có thể tăng.'} },
   { type:'mcq', stem:'Trưởng nhóm muốn tặng quà cao cấp cho 200 khách ruột với toàn bộ 50 triệu. Bạn sửa gì?',
@@ -284,7 +284,7 @@ BAI_ADD({ mod:'kh02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kh02-06', skill:'measure', read:'7 phút', t:'Tệp này đáng bao nhiêu tiền mỗi tháng?',
+{ id:'B:kh02-06', skill:'measure', read:'7 phút', assume:true, t:'Tệp này đáng bao nhiêu tiền mỗi tháng?',
   situation:'Một chuỗi cà phê mang đi muốn mở điểm ở Quận 1 cho dân văn phòng. Sếp hỏi: “Tệp này đáng bao nhiêu mà phải thuê mặt bằng 80 triệu/tháng?” Bạn có vài số: khoảng 50.000 người làm văn phòng quanh đó, ước 20% có thể chọn mình, mỗi người mua 8 ly/tháng, lãi gộp 15.000đ mỗi ly (đã trừ nguyên liệu, ly mang đi và phí ứng dụng giao đồ), giá bán 40.000đ. Lương và điện nước ước 100 triệu/tháng.',
   concept:{ name:'Ước tính giá trị tệp từ dưới lên',
     body:'Thay vì dùng một con số “thị trường cà phê Việt Nam” khổng lồ, hãy tính từ dưới lên: <b>số người trong tệp × tỉ lệ có thể mua của mình × tần suất × lãi mỗi lần mua</b>. Mỗi con số là một giả định, và nên ghi rõ nguồn: đếm tòa nhà, khảo sát nhanh, dữ liệu chuỗi khác. Dùng lãi gộp thay vì doanh thu để so được với chi phí. Ước lượng không cần chính xác tuyệt đối; nó cần đủ tốt để trả lời một câu: tệp này có nuôi nổi khoản đầu tư không, và giả định nào nếu sai sẽ làm kết luận đổi chiều.' },
@@ -341,8 +341,8 @@ BAI_ADD({ mod:'kh02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kh02-07', skill:'channel', read:'6 phút', t:'Tệp nhiều tiền nhưng khó với tới, hay tệp vừa túi nhưng gặp dễ?',
-  situation:'Một thương hiệu bỉm vải cân nhắc hai tệp. Tệp chung “bố mẹ có con nhỏ” tiếp cận qua quảng cáo đại trà, chi phí có một khách khoảng 250.000đ. Tệp “mẹ theo lối sống xanh” gom trong vài nhóm Facebook, qua cộng tác với quản trị nhóm chỉ tốn khoảng 80.000đ mỗi khách. Đơn đầu tiên cho lãi gộp 150.000đ.',
+{ id:'B:kh02-07', skill:'channel', read:'6 phút', assume:true, t:'Tệp nhiều tiền nhưng khó với tới, hay tệp vừa túi nhưng gặp dễ?',
+  situation:'Một thương hiệu bỉm vải cân nhắc hai tệp. Tệp chung “bố mẹ có con nhỏ” tiếp cận qua quảng cáo đại trà, chi phí có một khách khoảng 250.000đ. Tệp “mẹ theo lối sống xanh” gom trong vài nhóm Facebook, qua cộng tác với quản trị nhóm chỉ tốn khoảng 80.000đ mỗi khách. Đơn đầu tiên cho lãi gộp 150.000đ. Ba số này là số minh hoạ: 250.000đ ước từ một đợt chạy thử hai tuần, 80.000đ là phí hợp tác với quản trị nhóm chia cho số khách dự kiến, 150.000đ từ giá bán trừ giá vốn bộ bỉm đầu tiên.',
   concept:{ name:'Chi phí tiếp cận là một tiêu chí chọn tệp',
     body:'Một tệp có thể rất hợp sản phẩm nhưng rải rác, không tụ ở đâu, nên phải trả rất nhiều để chạm tới từng người. Tệp khác tụ trong vài cộng đồng, cửa hàng hay sự kiện, nên chi phí có khách thấp hơn hẳn. Khi chọn tệp, hãy hỏi: <b>họ tụ ở đâu, và mình có đường vào nơi đó không?</b> So chi phí có một khách với lãi mà khách đó mang lại. Nếu chi phí vượt lãi của đơn đầu, doanh nghiệp chỉ sống được khi khách mua lại đủ nhiều — một giả định cần bằng chứng trước khi dồn tiền.' },
   example:'Tệp chung: lãi đơn đầu 150.000đ − chi phí có khách 250.000đ = lỗ 100.000đ mỗi khách, phải chờ khách mua lại mới hoà. Tệp lối sống xanh: 150.000 − 80.000 = lãi 70.000đ ngay đơn đầu, và các thành viên còn giới thiệu nhau. Thương hiệu bắt đầu với tệp lối sống xanh, dùng tiền lãi để thử dần tệp rộng hơn.',
@@ -388,7 +388,7 @@ BAI_ADD({ mod:'kh02', lessons:[
     options:[{k:'a',t:'Người trong cộng đồng thường có thu nhập cao hơn trung bình'},{k:'b',t:'Nền tảng Facebook không thu phí quảng cáo trong các nhóm kín'},
              {k:'c',t:'Một điểm chạm tới nhiều người, và họ giới thiệu nhau'},{k:'d',t:'Thành viên cộng đồng dễ mua đồ được giới thiệu'}],
     answer:'c', why:{a:'Thu nhập không phải lý do chi phí thấp.',
-      b:'Nhóm kín không có quảng cáo trả tiền; chi phí thấp là nhờ cách tiếp cận.',
+      b:'Không có chuyện miễn phí: theo hiểu biết chung tại ngày kiểm, không mua được quảng cáo nhắm riêng một nhóm, còn quảng cáo thường vẫn hiện trong bảng tin (nếu nền tảng đổi, tin trang trợ giúp chính thức). Chi phí thấp là nhờ đi qua quản trị viên và truyền miệng.',
       c:'Đúng. Tụ lại giúp một lần tiếp cận chạm nhiều người, truyền miệng nhân thêm.',
       d:'Họ không dễ dãi; cộng đồng còn khắt khe hơn với hàng kém.'} },
   { type:'mcq', stem:'Sau sáu tháng, chi phí có khách ở nhóm lối sống xanh tăng từ 80.000đ lên 140.000đ. Điều này gợi ý gì?',
@@ -401,11 +401,11 @@ BAI_ADD({ mod:'kh02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kh02-08', skill:'insight', read:'6 phút', t:'Khi nào nên mở rộng sang tệp tiếp theo?',
+{ id:'B:kh02-08', skill:'insight', read:'6 phút', assume:true, t:'Khi nào nên mở rộng sang tệp tiếp theo?',
   situation:'App quản lý bán hàng cho tiệm trà sữa (bài 3 của module này) sau 18 tháng đã có 1.400 trong khoảng 4.000 tiệm trà sữa ở TP.HCM (con số giả định minh hoạ). Chi phí có một tiệm mới tăng từ 300.000đ lên 900.000đ trong nửa năm, trong khi 60% tiệm mới đến từ lời giới thiệu. Đội đang tranh luận: đào sâu thêm trà sữa hay mở sang quán cà phê.',
   concept:{ name:'Tín hiệu mở rộng tệp',
     body:'Mở rộng quá sớm làm lực bị chia mỏng; quá muộn thì tốn ngày càng nhiều tiền để giành vài khách cuối cùng. Ba tín hiệu cho thấy đã đến lúc: <b>độ thâm nhập cao</b> (đã có phần lớn khách dễ thắng), <b>chi phí có khách tăng đều</b> dù cách làm không đổi, và <b>có tệp lân cận</b> chung nỗi đau để dùng lại sản phẩm, câu chuyện và khách tham chiếu. Tệp kế tiếp tốt là tệp gần — giống tệp cũ đủ để tận dụng, khác đủ để mở thêm dư địa — chứ không phải tệp to nhất nhìn thấy.' },
-  example:'1.400 ÷ 4.000 = 35% thâm nhập — mức rất cao cho một sản phẩm phần mềm. Chi phí mỗi tiệm tăng gấp ba. Quán cà phê nhỏ có cùng nỗi đau đơn từ nhiều app giao hàng, và chủ quán hay chơi chung hội nhóm với chủ tiệm trà sữa. Đội mở sang cà phê, dùng 20 tiệm trà sữa làm khách tham chiếu, giữ một người chăm tệp cũ.',
+  example:'1.400 ÷ 4.000 = 35% thâm nhập, và chi phí mỗi tiệm tăng gấp ba trong nửa năm — hai tín hiệu cùng chiều cho thấy phần khách dễ thắng đã lấy gần hết. Quán cà phê nhỏ có cùng nỗi đau đơn từ nhiều app giao hàng, và chủ quán hay chơi chung hội nhóm với chủ tiệm trà sữa. Đội mở sang cà phê, dùng 20 tiệm trà sữa làm khách tham chiếu, giữ một người chăm tệp cũ.',
   takeaway:'Mở tệp mới khi tệp cũ đã thâm nhập sâu, chi phí có khách tăng đều, và có tệp lân cận chung nỗi đau.',
   apply:'Với một thương hiệu bạn biết, nói tệp họ đang thắng và tệp lân cận mà họ nên mở tiếp, kèm một lý do.',
   mistakes:['Mở rộng vì chán tệp cũ hoặc vì áp lực tăng trưởng, không có tín hiệu.','Chọn tệp kế tiếp là tệp to nhất thay vì tệp gần nhất.'],
@@ -458,7 +458,7 @@ BAI_ADD({ mod:'kh02', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:kh02-09', skill:'measure', read:'7 phút', t:'Có nên bỏ bớt một tệp khách đang mang doanh thu?',
+{ id:'B:kh02-09', skill:'measure', read:'7 phút', assume:true, t:'Có nên bỏ bớt một tệp khách đang mang doanh thu?',
   situation:'Một hãng nước chấm đóng chai bán cho ba tệp: siêu thị ở thành phố, quán ăn, và đại lý ở các tỉnh xa. Tệp đại lý tỉnh mang 500 triệu doanh thu mỗi năm, lãi gộp 20%. Nhưng chi phí vận chuyển, chiết khấu thêm và nhân viên đi tuyến cho riêng tệp này tốn 130 triệu. Ai cũng ngại cắt vì “mất doanh thu”.',
   concept:{ name:'Lãi sau chi phí phục vụ của từng tệp',
     body:'Mỗi tệp không chỉ mang doanh thu mà còn kéo theo chi phí riêng để phục vụ: giao hàng, chiết khấu, nhân sự, hỗ trợ. Một tệp có doanh thu đẹp vẫn có thể lỗ khi trừ hết các chi phí này. Bỏ bớt tệp là quyết định khó vì doanh thu giảm thấy ngay, còn lợi ích — tiền và người được giải phóng — cần thời gian mới hiện ra. Trước khi bỏ, hãy thử sửa: đổi cách phục vụ, tăng đơn tối thiểu. Nếu vẫn lỗ, bỏ đi để dồn lực vào tệp đang thắng thường là quyết định đúng.' },

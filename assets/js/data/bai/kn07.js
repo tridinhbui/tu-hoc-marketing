@@ -3,11 +3,11 @@
 BAI_ADD({ mod:'kn07', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kn07-01', skill:'channel', read:'7 phút', t:'Ngân sách năm sau nên là 5% doanh thu hay con số khác?',
+{ id:'B:kn07-01', skill:'channel', read:'7 phút', assume:true, t:'Ngân sách năm sau nên là 5% doanh thu hay con số khác?',
   situation:'Một chuỗi trà sữa 40 cửa hàng ở TP.HCM, doanh thu năm nay 120 tỉ đồng. Giám đốc tài chính đề xuất ngân sách marketing năm sau "như mọi năm: 5% doanh thu", tức 6 tỉ. Trong khi đó, kế hoạch mở thêm 15 cửa hàng ở Hà Nội — nơi chưa ai biết thương hiệu — cần được thông báo đủ mạnh trong sáu tháng đầu.',
   concept:{ name:'Theo % doanh thu và theo mục tiêu – nhiệm vụ',
     body:'Cách <b>theo % doanh thu</b> dễ duyệt nhưng đi ngược logic: doanh thu là kết quả của marketing, không phải nguồn quyết định marketing cần bao nhiêu. Năm khó khăn, doanh thu giảm thì ngân sách giảm đúng lúc cần giữ trí nhớ khách. Cách <b>theo mục tiêu – nhiệm vụ</b> đi từ việc phải làm: cần bao nhiêu người biết đến, ở đâu, bao nhiêu lần, rồi cộng chi phí từng việc. Thực tế hay dùng cả hai: % doanh thu làm mốc kiểm tra, mục tiêu làm con số chính.' },
-  example:'Tính theo nhiệm vụ: duy trì TP.HCM như năm nay cần 4,5 tỉ. Ra mắt Hà Nội cần tiếp cận 1,5 triệu người trẻ, mỗi người khoảng 6 lần trong sáu tháng: 9 triệu lượt hiển thị có chất lượng, cộng sampling tại cửa hàng mới, tổng khoảng 3 tỉ. Cộng lại 7,5 tỉ, bằng 6,25% doanh thu. Con số 5% không sai vì "cao hay thấp" — nó sai vì không trả lời được câu hỏi Hà Nội cần gì.',
+  example:'Tính theo nhiệm vụ: duy trì TP.HCM như năm nay cần 4,5 tỉ. Ra mắt Hà Nội cần tiếp cận 1,5 triệu người trẻ, mỗi người khoảng 6 lần trong sáu tháng: 1,5 triệu × 6 = 9 triệu lượt hiển thị có chất lượng. Với CPM giả định 250.000đ (số minh hoạ cho kênh video/OOH; CPM thật tuỳ kênh và thời điểm, hãy xin báo giá hiện hành) thì 9.000 nghìn lượt × 250.000đ ≈ 2,25 tỉ, cộng sampling tại cửa hàng mới khoảng 0,75 tỉ, tổng khoảng 3 tỉ. Cộng lại 7,5 tỉ, bằng 6,25% doanh thu. Con số 5% không sai vì "cao hay thấp" — nó sai vì không trả lời được câu hỏi Hà Nội cần gì.',
   takeaway:'Tính ngân sách từ việc cần làm, rồi dùng % doanh thu để soát xem con số có vô lý không.',
   apply:'Lấy ngân sách marketing năm nay của một sản phẩm bạn biết. Viết 3 nhiệm vụ nó phải hoàn thành và ước chi phí từng nhiệm vụ trong 60 giây.',
   mistakes:['Lấy % doanh thu năm trước làm ngân sách mà không hỏi năm sau có nhiệm vụ gì mới.','Cắt ngân sách theo doanh thu đúng năm thị trường khó, để đối thủ chiếm chỗ trong trí nhớ khách.'],
@@ -56,10 +56,12 @@ BAI_ADD({ mod:'kn07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kn07-02', skill:'channel', read:'7 phút', t:'Chi nhiều hơn thị phần bao nhiêu thì đủ để lớn?',
+{ id:'B:kn07-02', skill:'channel', read:'7 phút', assume:true, t:'Chi nhiều hơn thị phần bao nhiêu thì đủ để lớn?',
+  src:[{ t:'Binet, L. & Field, P. (2007), “Marketing in the Era of Accountability”, IPA/WARC — quy tắc ESOV ↔ tăng thị phần', u:'https://ipa.co.uk/knowledge/publications-reports/marketing-in-the-era-of-accountability', d:'2026-11-07', st:'chua' },
+       { t:'Jones, J.P. (1990), “Ad Spending: Growing Market Share”, Harvard Business Review — gốc của quan hệ SOV vượt thị phần', u:'https://hbr.org/1990/01/ad-spending-growing-market-share', d:'2026-11-07', st:'chua' }],
   situation:'Một hãng nước mắm cao cấp chiếm 8% thị phần ngành. Năm nay hãng chiếm 8% tổng tiếng nói quảng cáo của ngành. Sếp hỏi: "Muốn tăng thị phần thì phải chi bao nhiêu?" Bạn có số liệu tổng chi quảng cáo của ngành năm ngoái là 200 tỉ đồng.',
   concept:{ name:'ESOV — tiếng nói vượt thị phần',
-    body:'<b>Share of voice</b> (SOV) là phần chi quảng cáo của bạn trong tổng chi cả ngành; <b>share of market</b> (SOM) là thị phần. <b>ESOV</b> = SOV trừ SOM. Khi hãng nói to hơn phần mình đang chiếm, thị phần có xu hướng dịch lên; nói nhỏ hơn thì có xu hướng tụt. Các nghiên cứu tổng hợp trên nhiều thương hiệu cho thấy mối quan hệ này ở mức trung bình, tính theo năm, nhiều yếu tố khác xen vào như giá, phân phối, chất lượng sáng tạo. Quy tắc kinh nghiệm hay được nhắc (Binet và Field, IPA): mỗi +10 điểm ESOV tương ứng khoảng +0,5 điểm thị phần mỗi năm, tuỳ ngành. Vì vậy ESOV là la bàn để đặt mức chi, không phải công thức hứa hẹn số điểm tăng chắc chắn.' },
+    body:'<b>Share of voice</b> (SOV) là phần chi quảng cáo của bạn trong tổng chi cả ngành; <b>share of market</b> (SOM) là thị phần. <b>ESOV</b> = SOV trừ SOM. Khi hãng nói to hơn phần mình đang chiếm, thị phần có xu hướng dịch lên; nói nhỏ hơn thì có xu hướng tụt. Các nghiên cứu tổng hợp trên nhiều thương hiệu cho thấy mối quan hệ này ở mức trung bình, tính theo năm, nhiều yếu tố khác xen vào như giá, phân phối, chất lượng sáng tạo. Quy tắc kinh nghiệm hay được nhắc (Binet và Field, phân tích IPA Databank, 2007 — theo tài liệu tại ngày kiểm, xem nguồn): mỗi +10 điểm ESOV tương ứng khoảng +0,5 điểm thị phần mỗi năm; hệ số dao động theo ngành, và thương hiệu lớn thường cần ít ESOV hơn thương hiệu nhỏ để được cùng mức tăng. Vì vậy ESOV là la bàn để đặt mức chi, không phải công thức hứa hẹn số điểm tăng chắc chắn.' },
   example:'Hãng nước mắm muốn ESOV +6 điểm: share of voice 14% trong khi thị phần 8%. Nếu ngành vẫn chi khoảng 200 tỉ và hãng chi X, ta có X ÷ (200 − 16 + X) = 14%, vì 16 tỉ là phần hãng chi năm ngoái nằm trong 200 tỉ. Giải ra X ≈ 30 tỉ, gần gấp đôi năm ngoái. Theo quy tắc trên, ESOV +6 chỉ đáng kỳ vọng khoảng +0,3 điểm thị phần mỗi năm (8% lên khoảng 8,3%), một con số trung bình có thể lệch. Đó là cái giá thật của việc "muốn lớn".',
   takeaway:'Muốn lớn, hãy nói to hơn phần mình đang chiếm — và tính rõ cái giá của phần vượt đó.',
   apply:'Chọn một thương hiệu bạn theo dõi. Ước thị phần và độ phủ quảng cáo của nó, rồi nói trong 60 giây: nó đang có ESOV dương hay âm?',
@@ -109,7 +111,7 @@ BAI_ADD({ mod:'kn07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kn07-03', skill:'channel', read:'7 phút', t:'Kế hoạch có 20 triệu lượt hiển thị — vậy bao nhiêu người thực sự thấy?',
+{ id:'B:kn07-03', skill:'channel', read:'7 phút', assume:true, t:'Kế hoạch có 20 triệu lượt hiển thị — vậy bao nhiêu người thực sự thấy?',
   situation:'Agency gửi kế hoạch media cho một hãng sữa hạt: "20 triệu lượt hiển thị trong 4 tuần, nhắm nữ 25–40 ở các thành phố lớn." Nhóm mục tiêu ước khoảng 4 triệu người. Sếp hỏi bạn: "Vậy có bao nhiêu người thấy, mỗi người thấy mấy lần?" Bảng của agency chỉ có số lượt.',
   concept:{ name:'Reach, tần suất và GRP',
     body:'<b>Reach</b> là số người khác nhau thấy ít nhất một lần. <b>Tần suất trung bình</b> là số lần mỗi người đó thấy. Lượt hiển thị = reach × tần suất. <b>GRP</b> = reach (tính theo % nhóm mục tiêu) × tần suất — một cách gói hai số thành một. Cùng 20 triệu lượt có thể là 4 triệu người × 5 lần, hoặc 1 triệu người × 20 lần. Hai kế hoạch này làm hai việc rất khác nhau, nên luôn phải hỏi tách hai con số.' },
@@ -165,7 +167,7 @@ BAI_ADD({ mod:'kn07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kn07-04', skill:'channel', read:'7 phút', t:'CPM rẻ nhất có phải kênh rẻ nhất không?',
+{ id:'B:kn07-04', skill:'channel', read:'7 phút', assume:true, t:'CPM rẻ nhất có phải kênh rẻ nhất không?',
   situation:'Bạn so ba kênh cho một chiến dịch bánh quy: quảng cáo video ngắn trên mạng xã hội CPM 30.000 đồng, video trên nền tảng xem phim trực tuyến CPM 120.000 đồng, màn hình thang máy văn phòng CPM 80.000 đồng. Sếp nói: "Dồn hết vào kênh 30.000, rẻ gấp bốn."',
   concept:{ name:'CPM hiệu dụng — tính trên người thật sự xem',
     body:'<b>CPM</b> là chi phí cho một nghìn lượt hiển thị. Nhưng một lượt hiển thị trên bảng tin có thể bị lướt qua trong nửa giây, còn một lượt trên thang máy thì người ta đứng xem hết. So kênh cần <b>CPM hiệu dụng</b> = CPM ÷ tỉ lệ lượt thật sự được xem đủ để nhận ra thương hiệu. Thêm vào đó là tỉ lệ đúng nhóm mục tiêu. Kênh rẻ trên giấy có thể đắt khi tính trên người thật sự thấy.' },
@@ -221,11 +223,11 @@ BAI_ADD({ mod:'kn07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kn07-05', skill:'channel', read:'7 phút', t:'Chạy đều 12 tháng hay dồn vào vài đợt?',
+{ id:'B:kn07-05', skill:'channel', read:'7 phút', assume:true, t:'Chạy đều 12 tháng hay dồn vào vài đợt?',
   situation:'Một hãng kem chống nắng có 12 tỉ đồng media cho cả năm. Doanh số mùa nắng từ tháng 3 đến tháng 8 chiếm khoảng 70% cả năm. Một phương án chia đều 1 tỉ mỗi tháng; phương án khác dồn cả 12 tỉ vào tháng 3–8, 2 tỉ mỗi tháng, và để trống các tháng còn lại.',
   concept:{ name:'Liên tục, dồn đợt và nhịp (pulsing)',
     body:'<b>Liên tục</b>: chi đều quanh năm, giữ thương hiệu luôn có mặt nhưng mỗi tháng mỏng. <b>Dồn đợt</b> (flighting): chi đậm vào vài giai đoạn, bỏ trống phần còn lại — mạnh khi cần, nhưng khoảng trống dài để đối thủ chiếm chỗ. <b>Nhịp</b> (pulsing): giữ một nền thấp liên tục và đẩy mạnh vào mùa. Hai điều chỉnh khi chia: quảng cáo còn tác dụng sau khi tắt nhưng <b>phai dần</b>, nên nền mỏng giữ ký ức rẻ hơn dựng lại; mùa cao điểm nhiều hãng cùng mua nên <b>giá tăng</b>, và tháng nào thêm tiền không thêm đơn (bão hoà) thì tiền nên chuyển đi. Cách chia nên theo nhịp mua của khách, không theo lịch kế toán.' },
-  example:'Phương án nhịp: giữ nền 300 triệu mỗi tháng cho 6 tháng ngoài mùa (1,8 tỉ), phần còn lại 10,2 tỉ chia cho 6 tháng mùa nắng, khoảng 1,7 tỉ mỗi tháng. Tức 85% tiền cho mùa có 70% doanh số: lệch có chủ ý, vì đó là lúc khách quyết định mua và giá mua đắt lên. Giả sử CPM mùa nắng tăng 25% (số minh hoạ), 1,7 tỉ chỉ mua được lượng hiển thị bằng 1,36 tỉ giá thường. Nếu đo thấy tháng 5 đã bão hoà, hạ về chia 70/30. So với dồn đợt, thương hiệu không biến mất sáu tháng.',
+  example:'Phương án nhịp: giữ nền 300 triệu mỗi tháng cho 6 tháng ngoài mùa (1,8 tỉ), phần còn lại 10,2 tỉ chia cho 6 tháng mùa nắng, khoảng 1,7 tỉ mỗi tháng. Tức 85% tiền cho mùa có 70% doanh số: lệch có chủ ý, vì đó là lúc khách quyết định mua. Giá mùa cao không phải lý do dồn tiền mà là chi phí phải chịu: giả sử CPM mùa nắng tăng 25% (số minh hoạ), 1,7 tỉ chỉ mua được lượng hiển thị bằng 1,36 tỉ giá thường, nên 85% tiền chỉ tương đương khoảng 82% lượt hiển thị quy đổi (8,16 ÷ (8,16 + 1,8)). Phân biệt tỉ lệ tiền với tỉ lệ hiển thị khi báo cáo; nền ngoài mùa rẻ hơn cũng là một lý do giữ nền. Nếu đo thấy tháng 5 đã bão hoà, hạ về chia 70/30. So với dồn đợt, thương hiệu không biến mất sáu tháng.',
   takeaway:'Chia tiền theo nhịp mua của khách: giữ một nền mỏng, đẩy mạnh đúng mùa.',
   apply:'Chọn một sản phẩm có mùa vụ. Vẽ nhanh 12 cột tháng, đánh dấu tháng khách mua nhiều và nói cách bạn chia ngân sách trong 60 giây.',
   mistakes:['Chia đều 12 tháng chỉ vì dễ lập bảng và dễ duyệt.','Tắt hẳn quảng cáo ngoài mùa, để khoảng trống dài cho đối thủ.'],
@@ -274,13 +276,13 @@ BAI_ADD({ mod:'kn07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kn07-06', skill:'channel', read:'7 phút', t:'Hãng nhỏ 2 tỉ đối đầu hãng lớn 50 tỉ thì chi vào đâu?',
+{ id:'B:kn07-06', skill:'channel', read:'7 phút', assume:true, t:'Hãng nhỏ 2 tỉ đối đầu hãng lớn 50 tỉ thì chi vào đâu?',
   situation:'Một thương hiệu nước tăng lực mới có 2 tỉ đồng cho năm đầu. Hãng dẫn đầu chi khoảng 50 tỉ, phủ truyền hình và mạng xã hội toàn quốc. Nhóm marketing muốn "có mặt ở mọi kênh như hãng lớn, mỗi kênh một ít".',
   concept:{ name:'Thắng ở chiến trường hẹp',
     body:'Share of voice tính trên toàn quốc thì hãng nhỏ gần như vô hình. Nhưng SOV có thể tính trên <b>một thành phố, một nhóm khách, một kênh, một mùa</b>. Hãng nhỏ nên chọn một chiến trường đủ hẹp để tiếng nói của mình chiếm phần đáng kể, thắng ở đó, rồi mở rộng. Rải mỏng mọi kênh thì ở đâu cũng dưới ngưỡng được nhận ra.' },
   example:'Hãng lớn chi cho Cần Thơ khoảng 1,5 tỉ mỗi năm. Nếu hãng nhỏ dồn 1,5 tỉ vào Cần Thơ, SOV tại đó khoảng 1,5 ÷ (1,5 + 1,5) = 50%, cộng 0,5 tỉ cho điểm bán. Tính toàn quốc, SOV của hãng chỉ 2 ÷ 52 ≈ 3,8%. Cùng một số tiền, một cách là tiếng nói ngang hàng, cách kia là tiếng thì thầm.',
   takeaway:'Tiền ít thì thu hẹp chiến trường cho tới khi tiếng nói của mình đủ to ở đó.',
-  points:["Tiếng nói chỉ có tác dụng khi vượt một ngưỡng để người ta nhận ra. Dưới ngưỡng đó, tiền chi vẫn nằm trong báo cáo nhưng không để lại gì trong trí nhớ khách.","Chiến trường hẹp đổi tỉ lệ 2 trên 52 thành tỉ lệ ngang hàng. Cùng số tiền chia cho mẫu số nhỏ hơn thì phần của bạn trong cuộc trò chuyện lớn hơn nhiều.","Thắng ở một nơi cho bạn thứ rải mỏng không cho: bằng chứng bán hàng, quan hệ với điểm bán và câu chuyện. Đó là vốn để mở rộng sang nơi kế tiếp."],
+  points:["Dưới một mức hiện diện nhất định, hiệu quả trên mỗi đồng thường thấp: không đủ tần suất để được nhớ và dễ bị hãng lớn át tiếng (xem reach và tần suất ở bài kn07-03). Khi đó tiền chi vẫn nằm trong báo cáo nhưng để lại rất ít trong trí nhớ khách.","Chiến trường hẹp đổi tỉ lệ 2 trên 52 thành tỉ lệ ngang hàng. Cùng số tiền chia cho mẫu số nhỏ hơn thì phần của bạn trong cuộc trò chuyện lớn hơn nhiều.","Thắng ở một nơi cho bạn thứ rải mỏng không cho: bằng chứng bán hàng, quan hệ với điểm bán và câu chuyện. Đó là vốn để mở rộng sang nơi kế tiếp."],
   counter:"Biến thể: nước tăng lực này bán chủ yếu qua một kênh trực tuyến, nơi người mua không phân biệt theo thành phố, và hãng lớn gần như không bán qua kênh đó. Chọn Cần Thơ làm chiến trường lúc này là chọn theo địa lý trong khi hành vi mua không theo địa lý. Dấu hiệu cần đổi: đơn đến đều từ nhiều tỉnh. Khi đó chiến trường hẹp nên là một nhóm khách hay một kênh.",
   deeper:"Đánh đổi lớn nhất: thu hẹp nghĩa là từ chối cơ hội ở nơi khác, và đội thường khó chịu khi thấy đối thủ có mặt ở những chỗ mình bỏ qua. Tín hiệu cần theo dõi là tỉ lệ nhận biết và thị phần ngay trong chiến trường, cùng tốc độ tăng so với nơi chưa chạy. Khái niệm kề cận là ESOV, tức chênh lệch giữa tiếng nói và thị phần: hãng nhỏ cần ESOV dương ở nơi mình chọn. Phép kiểm tra trong tuần: liệt kê ba chiến trường ứng viên, ước chi tiêu của hãng lớn ở mỗi nơi, rồi tính SOV nếu bạn dồn ngân sách vào đó.",
   apply:'Chọn một thương hiệu nhỏ bạn biết. Nói trong 60 giây: nó nên chọn thành phố, nhóm khách hay kênh nào để chiếm tiếng nói đáng kể?',
@@ -330,7 +332,7 @@ BAI_ADD({ mod:'kn07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kn07-07', skill:'channel', read:'7 phút', t:'Tiền media đang rò rỉ ở đâu?',
+{ id:'B:kn07-07', skill:'channel', read:'7 phút', assume:true, t:'Tiền media đang rò rỉ ở đâu?',
   situation:'Một hãng mỹ phẩm chi 5 tỉ media quý này. Báo cáo cho thấy: 18% lượt hiển thị rơi vào người ngoài nhóm mục tiêu, 25% lượt trong nhóm không được xem đủ, và một nhóm nhỏ khách thấy quảng cáo trên 20 lần. Sếp hỏi: "Bao nhiêu tiền thực sự làm việc?"',
   concept:{ name:'Chuỗi rò rỉ ngân sách',
     body:'Tiền media rò rỉ theo từng tầng: <b>sai người</b> (ngoài nhóm mục tiêu), <b>không được xem</b> (lượt hiển thị không ai nhìn), <b>thừa tần suất</b> (người đã thấy quá nhiều), và <b>mẫu yếu</b> (xem nhưng không nhớ là của hãng nào). Mỗi tầng nhân với tầng trước, nên rò rỉ cộng dồn nhanh hơn ta nghĩ. Tìm tầng rò lớn nhất rồi vá trước, thay vì cắt đều mọi thứ.' },
@@ -386,7 +388,8 @@ BAI_ADD({ mod:'kn07', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kn07-08', skill:'comm', read:'7 phút', t:'Sếp muốn cắt 30% ngân sách quảng cáo — bạn nói gì?',
+{ id:'B:kn07-08', skill:'comm', read:'7 phút', assume:true, t:'Sếp muốn cắt 30% ngân sách quảng cáo — bạn nói gì?',
+  src:[{ t:'Binet, L. (2020), “Share of Search as a Predictor of Market Share”, IPA EffWorks Global', u:'https://ipa.co.uk/knowledge/publications-reports/share-of-search-as-a-predictor-of-market-share', d:'2026-11-07', st:'chua' }],
   situation:'Giữa năm, doanh số một hãng bột giặt chậm lại. Giám đốc muốn cắt 30% ngân sách quảng cáo nửa cuối năm, từ 20 tỉ xuống 14 tỉ, để giữ lợi nhuận quý. Bạn có một tuần để chuẩn bị ý kiến trước cuộc họp.',
   concept:{ name:'Bảo vệ ngân sách bằng kịch bản, không bằng cảm xúc',
     body:'Sếp cắt vì nhìn thấy khoản tiết kiệm chắc chắn còn cái mất thì mơ hồ. Bạn cần làm <b>cái mất thành con số</b>: SOV sẽ tụt bao nhiêu, ESOV thành âm bao nhiêu, và rủi ro thị phần năm sau. Rồi đưa ra <b>các phương án</b> thay vì chỉ nói không: cắt đúng tầng rò, giữ tiền ở mùa cao điểm, hoặc cắt ít hơn. Nhắc rằng thị phần thường xói dần qua nhiều quý chứ không rụng ngay, nên cái mất chỉ lộ ra khi đã muộn và lấy lại thường đắt hơn giữ (tuỳ ngành và quy mô thương hiệu).' },
@@ -437,7 +440,7 @@ BAI_ADD({ mod:'kn07', lessons:[
              {k:'c',t:'Share of search và nhận biết so với đối thủ theo tháng'},{k:'d',t:'Chi phí mỗi nghìn lượt hiển thị trên từng nền tảng'}],
     answer:'c', why:{a:'Lượt thích phản ánh hoạt động trang, không phải vị trí trong trí nhớ khách.',
       b:'Số mẫu là đầu vào, không phải tín hiệu thương hiệu.',
-      c:'Đúng. Hai chỉ số này thường báo trước khi thị phần kịp tụt.',
+      c:'Đúng. Theo nghiên cứu của Les Binet cho IPA (2020, xem nguồn, cần kiểm), share of search thường đi trước thị phần vài tháng — nhưng chỉ khi khách có thói quen tìm tên thương hiệu; bột giặt mua ở siêu thị thì tín hiệu này yếu hơn, nên kèm đo nhận biết.',
       d:'CPM là giá mua, không cho biết khách còn nhớ hãng không.'} }
   ] }
 

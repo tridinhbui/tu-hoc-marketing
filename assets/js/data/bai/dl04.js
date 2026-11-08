@@ -3,11 +3,11 @@
 BAI_ADD({ mod:'dl04', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:dl04-01', skill:'measure', read:'7 phút', t:'Bảng cohort: đọc theo hàng ngang hay theo cột dọc?',
-  situation:'Chị Hà quản lý một tiệm trà sữa có app tích điểm ở Đà Nẵng. Bạn kỹ thuật gửi một bảng cohort: mỗi hàng là nhóm khách tải app trong một tháng (tháng 1 đến tháng 6), mỗi cột là tháng thứ 1, 2, 3… sau lần mua đầu. Ô ghi phần trăm khách của nhóm đó còn mua. Chị nhìn một lúc rồi hỏi: “Rốt cuộc tụi mình giữ khách tốt lên hay tệ đi?”',
+{ id:'B:dl04-01', skill:'measure', read:'7 phút', assume:true, t:'Bảng cohort: đọc theo hàng ngang hay theo cột dọc?',
+  situation:'Chị Hà quản lý một tiệm trà sữa có app tích điểm ở Đà Nẵng. Bạn kỹ thuật gửi một bảng cohort: mỗi hàng là nhóm khách mua lần đầu trong một tháng (tháng 1 đến tháng 6), mỗi cột là tháng thứ 1, 2, 3… sau lần mua đầu. Ô ghi phần trăm khách của nhóm đó còn mua. Chị nhìn một lúc rồi hỏi: “Rốt cuộc tụi mình giữ khách tốt lên hay tệ đi?”',
   concept:{ name:'Bảng cohort (nhóm khách cùng thời điểm bắt đầu)',
-    body:'Cohort là nhóm khách bắt đầu cùng một thời điểm, ví dụ cùng mua lần đầu trong tháng 3. Bảng cohort theo dõi từng nhóm qua thời gian. Đọc <b>hàng ngang</b> để thấy một nhóm rơi rụng ra sao theo tháng tuổi. Đọc <b>cột dọc</b> để so các nhóm ở cùng tháng tuổi: nếu cột tháng thứ 1 tăng dần từ nhóm cũ xuống nhóm mới, việc giữ khách đang tốt lên. Nhóm càng ít người thì ô càng nhiễu: vài người mua thêm đã nhảy cả chục điểm phần trăm. Đọc <b>đường chéo</b> để thấy một sự kiện theo lịch (một đợt lỗi app, một chương trình) ảnh hưởng mọi nhóm cùng lúc. Bảng cohort tách được “khách mới nhiều” khỏi “khách ở lại lâu”, điều mà tổng doanh thu không làm được.' },
-  example:'Cột tháng thứ 1 của bảng (100% là lúc mua đầu): nhóm tháng 1 là 22%, tháng 2 là 24%, tháng 3 là 30% (800 khách, 240 người còn mua), tháng 4 là 31%. Đọc dọc, từ tháng 3 tỉ lệ nhảy lên — đúng lúc tiệm đổi thẻ tích điểm sang app. Hàng ngang của nhóm tháng 1 thì 100% → 22% → 15% → 13% (tháng thứ 1, 2, 3), rơi mạnh nhất ở tháng đầu. Câu trả lời cho chị Hà: tốt lên, và bước sau lần mua đầu là chỗ rò lớn nhất.',
+    body:'Cohort là nhóm khách bắt đầu cùng một thời điểm, ví dụ cùng mua lần đầu trong tháng 3. Bảng cohort theo dõi từng nhóm qua thời gian. Ở đây ô tháng thứ k là % khách của nhóm có mua trong đúng tháng tuổi k (ô có thể lên xuống); bảng đo “đã mua ít nhất một lần kể từ” chỉ đi xuống. Đọc <b>hàng ngang</b> để thấy một nhóm rơi rụng ra sao theo tháng tuổi. Đọc <b>cột dọc</b> để so các nhóm ở cùng tháng tuổi: nếu cột tháng thứ 1 tăng dần từ nhóm cũ xuống nhóm mới, việc giữ khách đang tốt lên. Nhóm càng ít người thì ô càng nhiễu: vài người mua thêm đã nhảy cả chục điểm phần trăm. Đọc <b>đường chéo</b> để thấy một sự kiện theo lịch (một đợt lỗi app, một chương trình) ảnh hưởng mọi nhóm cùng lúc. Bảng cohort tách được “khách mới nhiều” khỏi “khách ở lại lâu”, điều mà tổng doanh thu không làm được.' },
+  example:'Cột tháng thứ 1 của bảng (100% là lúc mua đầu): nhóm tháng 1 là 22%, tháng 2 là 24%, tháng 3 là 30% (800 khách, 240 người còn mua), tháng 4 là 31%. Đọc dọc, từ tháng 3 tỉ lệ nhảy lên — trùng lúc tiệm ra chương trình tích điểm mới trên app (một tín hiệu, chưa phải bằng chứng nguyên nhân). Hàng ngang của nhóm tháng 1 thì 100% → 22% → 15% → 13% (tháng thứ 1, 2, 3), rơi mạnh nhất ở tháng đầu. Câu trả lời cho chị Hà: tốt lên, và bước sau lần mua đầu là chỗ rò lớn nhất.',
   takeaway:'Hàng ngang cho thấy một nhóm rơi rụng thế nào; cột dọc cho thấy bạn giữ khách giỏi lên hay kém đi.',
   apply:'Vẽ tay một bảng cohort 4×4 với số tự đặt. Trong 60 giây, chỉ vào một hàng, một cột và một đường chéo, nói mỗi hướng đọc trả lời câu hỏi gì.',
   mistakes:['Cộng dồn tất cả các ô thành một con số trung bình rồi mất hết thông tin theo thời gian.','So nhóm mới (mới 1 tháng tuổi) với nhóm cũ ở tháng tuổi khác nhau.'],
@@ -37,11 +37,11 @@ BAI_ADD({ mod:'dl04', lessons:[
       c:'Đổ thêm nước vào xô không vá được lỗ; tỉ lệ rơi vẫn y nguyên.',
       d:'Đúng. 80 điểm phần trăm rơi ở tháng đầu, lớn gấp nhiều lần mọi đoạn sau.'} },
   { type:'mcq', stem:'Nhóm tháng 6 mới có dữ liệu tháng thứ 1. Có người so tỉ lệ tháng thứ 1 của nhóm này (40%) với tỉ lệ tháng thứ 3 của nhóm tháng 1 (13%) và mừng. Sai ở đâu?',
-    options:[{k:'a',t:'Nhóm tháng 6 ít người hơn nên phần trăm không có ý nghĩa thống kê'},{k:'b',t:'Phải so bằng số người còn mua chứ không so bằng phần trăm'},
-             {k:'c',t:'So hai tháng tuổi khác nhau; tháng thứ 1 luôn cao hơn tháng thứ 3'},{k:'d',t:'Phải lấy trung bình cả bảng rồi so với 40% mới đúng'}],
+    options:[{k:'a',t:'Nhóm tháng 6 ít người hơn nhóm tháng 1 nên phần trăm không có ý nghĩa thống kê'},{k:'b',t:'Phải so bằng số người còn mua chứ không so bằng phần trăm'},
+             {k:'c',t:'So hai tháng tuổi khác nhau; tháng thứ 1 thường cao hơn hẳn tháng thứ 3'},{k:'d',t:'Phải lấy trung bình cả bảng rồi so với 40% mới đúng'}],
     answer:'c', why:{a:'Cỡ nhóm có thể nhỏ, nhưng lỗi chính là so khác tháng tuổi.',
       b:'Số người còn mua bị lệch theo quy mô nhóm; phần trăm cùng tháng tuổi mới so được.',
-      c:'Đúng. Muốn so phải đặt cùng cột: tháng thứ 1 của nhóm 6 (40%) với tháng thứ 1 của nhóm 1 (22%).',
+      c:'Đúng. Muốn so phải đặt cùng cột: tháng thứ 1 của nhóm 6 (40%) với tháng thứ 1 của nhóm 1 (22%). Với cách đo trong bài (mua trong đúng tháng tuổi), ô còn có thể lên xuống, nên so chéo cột càng vô nghĩa.',
       d:'Trung bình cả bảng trộn đủ tháng tuổi, còn tệ hơn.'} },
   { type:'mcq', stem:'Một shop mỹ phẩm online chỉ có báo cáo “khách quay lại tháng này: 1.200 người”. Vì sao con số này chưa trả lời được câu hỏi giữ chân?',
     options:[{k:'a',t:'Không biết 1.200 người thuộc nhóm nào, nhóm đó ban đầu bao nhiêu người'},{k:'b',t:'1.200 là con số quá nhỏ đối với một shop online'},
@@ -60,7 +60,7 @@ BAI_ADD({ mod:'dl04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:dl04-02', skill:'measure', read:'6 phút', t:'Tỉ lệ rời bỏ 15% tính trên ai?',
+{ id:'B:dl04-02', skill:'measure', read:'6 phút', assume:true, t:'Tỉ lệ rời bỏ 15% tính trên ai?',
   situation:'Một phòng gym ở quận 7 có 1.200 hội viên đang tập đầu tháng 9. Trong tháng, 180 người không gia hạn, đồng thời 300 người mới đăng ký. Cuối tháng còn 1.320 hội viên. Quản lý báo cáo: “Tháng này rời bỏ chỉ 13,6%, lại tăng hội viên, rất tốt.” Bạn thấy con số hơi lạ.',
   concept:{ name:'Tỉ lệ giữ chân và tỉ lệ rời bỏ',
     body:'<b>Tỉ lệ rời bỏ</b> (churn) = số khách đầu kỳ đã rời đi ÷ số khách đầu kỳ. <b>Tỉ lệ giữ chân</b> = số khách đầu kỳ còn ở lại ÷ số khách đầu kỳ. Hai tỉ lệ cộng lại bằng 100%. Khách mới trong kỳ không được đưa vào mẫu số, vì họ chưa từng có cơ hội rời đi. Nếu nhét khách mới vào, mẫu số phình ra và tỉ lệ rời bỏ trông nhỏ hơn thực tế — đúng lúc doanh nghiệp đang tuyển mạnh nhất, con số lại đẹp nhất. Người vào rồi rời ngay trong cùng kỳ không nằm trong tỉ lệ này; theo dõi riêng như rời sớm của khách mới. Tính theo doanh thu thì mẫu số là doanh thu đầu kỳ, nên khách giá cao rời đi nặng hơn.' },
@@ -117,7 +117,7 @@ BAI_ADD({ mod:'dl04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:dl04-03', skill:'measure', read:'7 phút', t:'Mất 8% khách mỗi tháng thì sau một năm còn bao nhiêu?',
+{ id:'B:dl04-03', skill:'measure', read:'7 phút', assume:true, t:'Mất 8% khách mỗi tháng thì sau một năm còn bao nhiêu?',
   situation:'Một dịch vụ giao rau sạch theo gói tuần ở Hà Nội có 1.000 khách đăng ký tháng 1. Mỗi tháng khoảng 8% khách đang dùng huỷ gói. Giám đốc tính nhẩm: “8% nhân 12 tháng là 96%, sang năm gần như mất sạch khách, phải đổi mô hình.” Bạn được nhờ kiểm tra lại phép tính trước cuộc họp.',
   concept:{ name:'Rời bỏ nhân dồn, không trừ tuyến tính',
     body:'Tỉ lệ rời bỏ áp lên <b>số khách còn lại</b>, không áp lên số ban đầu. Tháng 1 mất 8% của 1.000, tháng 2 mất 8% của 920, tháng 3 mất 8% của 846… Vì vậy số còn lại sau n tháng = ban đầu × (1 − tỉ lệ rời bỏ)^n. Trừ tuyến tính (8% × 12) phóng đại mức mất khách và dẫn đến kết luận hoảng loạn. Đây là mô hình đơn giản giả định tỉ lệ không đổi; thực tế rời bỏ thường giảm dần theo thâm niên (bài sau), nên coi kết quả là mốc ước lượng. Khi tỉ lệ không đổi, tuổi thọ trung bình của một khách xấp xỉ 1 ÷ tỉ lệ rời bỏ (8% → khoảng 12,5 tháng), cầu nối sang giá trị vòng đời.' },
@@ -174,7 +174,7 @@ BAI_ADD({ mod:'dl04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:dl04-04', skill:'measure', read:'6 phút', t:'Đường cong giữ chân cắm xuống hay nằm ngang thì tốt?',
+{ id:'B:dl04-04', skill:'measure', read:'6 phút', assume:true, t:'Đường cong giữ chân cắm xuống hay nằm ngang thì tốt?',
   situation:'Một thương hiệu cà phê hạt rang bán qua website có 2.000 khách mua lần đầu trong quý 1. Tỉ lệ còn mua theo tháng: tháng thứ 1 là 45%, thứ 2 là 33%, thứ 3 là 28%, thứ 4 là 26%, thứ 5 và thứ 6 đều 25%. Đội marketing lo vì “mất 75% khách”. Chủ thương hiệu muốn biết có đáng lo không.',
   concept:{ name:'Đường cong giữ chân phẳng dần',
     body:'Vẽ tỉ lệ còn lại theo tháng tuổi, ta có đường cong giữ chân. Mọi sản phẩm đều rơi mạnh lúc đầu vì nhiều người chỉ thử. Câu hỏi quan trọng là đường có <b>nằm ngang</b> ở một mức nào đó không. Đường phẳng nghĩa là có một nhóm khách tìm được giá trị thật và ở lại — đó là nền để xây doanh nghiệp. Với sản phẩm kỳ vọng dùng lặp lại, đường cứ dốc về 0 nghĩa là chưa ai thật sự cần nó; khi đó đổ thêm tiền kéo khách chỉ là đổ nước vào xô không đáy. Hàng mua một lần (đám cưới, nội thất) tự nhiên về 0 và phải đo bằng thứ khác, như giới thiệu. Mức phẳng cao hay thấp quyết định giá trị mỗi khách mới đáng bao nhiêu tiền.' },
@@ -231,7 +231,7 @@ BAI_ADD({ mod:'dl04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:dl04-05', skill:'measure', read:'7 phút', t:'10.000 tài khoản, nhưng bao nhiêu khách đang “sống”?',
+{ id:'B:dl04-05', skill:'measure', read:'7 phút', assume:true, t:'10.000 tài khoản, nhưng bao nhiêu khách đang “sống”?',
   situation:'Một chuỗi nhà sách có chương trình thành viên với 10.000 tài khoản đã đăng ký từ ba năm nay. Quý vừa rồi, doanh thu từ thành viên là 750 triệu đồng. Trưởng phòng báo cáo: “Mỗi thành viên mang về 75.000 đồng một quý, thấp quá, cần tặng thêm voucher cho tất cả.” Bạn nghi con số này.',
   concept:{ name:'Định nghĩa khách hoạt động',
     body:'<b>Khách hoạt động</b> là khách đã làm một hành vi có giá trị trong một cửa sổ thời gian hợp với nhịp mua của ngành. Với nhà sách, có thể là “có ít nhất một hoá đơn trong 90 ngày”. Với app giao đồ ăn có thể là 30 ngày; với nội thất có thể là 12 tháng. Cửa sổ nên suy từ dữ liệu: lấy khoảng cách trung vị giữa hai đơn liên tiếp của cùng một khách rồi nhân đôi. Mở app hay nhận email không nên tính. Tài khoản đăng ký mà lâu không mua là khách không hoạt động; đưa họ vào mẫu số sẽ kéo tụt mọi chỉ số trên đầu khách và làm bạn chi tiền dàn trải cho người đã đi.' },
@@ -288,7 +288,7 @@ BAI_ADD({ mod:'dl04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:dl04-06', skill:'channel', read:'7 phút', t:'Kênh nào mang về khách ở lại, không chỉ khách rẻ?',
+{ id:'B:dl04-06', skill:'channel', read:'7 phút', assume:true, t:'Kênh nào mang về khách ở lại, không chỉ khách rẻ?',
   situation:'Một thương hiệu nước giặt hữu cơ chạy hai kênh trong tháng 3. Kênh A là deal giảm 50% trên sàn thương mại điện tử: chi 50 triệu, được 1.000 khách mới. Kênh B là hợp tác với các KOC làm video dùng thử trên TikTok: chi 40 triệu, được 400 khách mới. Đơn đầu của A lãi gộp gần 0 vì giảm 50%; đơn đầu của B lãi gộp 30.000đ. Báo cáo tháng khen kênh A: chi phí 50.000đ/khách so với 100.000đ/khách của B.',
   concept:{ name:'Cohort theo kênh',
     body:'Tách cohort không chỉ theo tháng mà theo <b>kênh mang khách về</b>. Mỗi kênh kéo một kiểu người: deal giảm sâu kéo người săn giá, nội dung dùng thử kéo người đã hiểu sản phẩm. Chi phí trên một khách mới chỉ nói ai rẻ ở cửa vào. Muốn biết kênh nào đáng tiền, hãy nhìn <b>chi phí ròng trên một khách còn ở lại</b> sau một mốc hợp với nhịp mua, ví dụ 6 tháng: (chi phí − lãi gộp từ đơn đầu) ÷ số khách còn giữ. Kênh giảm sâu thường không lãi ở đơn đầu nên đắt hơn vẻ ngoài. Đây chưa phải LTV đầy đủ vì chưa tính lãi các đơn sau.' },
@@ -301,7 +301,7 @@ BAI_ADD({ mod:'dl04', lessons:[
     options:[{k:'a',t:'A, vì chi phí khách mới chỉ bằng một nửa B'},{k:'b',t:'B, vì tính trên khách còn ở lại thì B rẻ hơn'},
              {k:'c',t:'Hai kênh ngang nhau, vì cùng chi tầm 40–50 triệu'},{k:'d',t:'Chưa so được vì hai kênh khác nhau về hình thức'}],
     answer:'b', why:{a:'Rẻ ở cửa vào, nhưng 90% khách rơi đi.',
-      b:'Đúng. A: 500.000đ/khách giữ; B: khoảng 285.700đ/khách giữ.',
+      b:'Đúng. A: 500.000đ/khách giữ; B: 200.000đ/khách giữ sau khi trừ lãi đơn đầu (khoảng 285.700đ nếu chưa trừ).',
       c:'Tổng chi gần nhau nhưng số khách giữ lại khác nhau.',
       d:'Khác hình thức vẫn so được trên cùng thước đo khách còn giữ.'} },
   { type:'mcq', stem:'Sếp muốn cắt kênh B vì “gấp đôi chi phí mỗi khách”. Bạn đề xuất gì?',
@@ -345,7 +345,7 @@ BAI_ADD({ mod:'dl04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:dl04-07', skill:'measure', read:'6 phút', t:'Tỉ lệ mua lại 90 ngày: tính cho khách nào mới đúng?',
+{ id:'B:dl04-07', skill:'measure', read:'6 phút', assume:true, t:'Tỉ lệ mua lại 90 ngày: tính cho khách nào mới đúng?',
   situation:'Một shop đồ ăn vặt healthy trên Shopee muốn đo “tỉ lệ mua lại trong 90 ngày” để báo cáo cuối tháng 7. Tháng 4 có 600 khách mua lần đầu, trong đó 132 người mua lại trong 90 ngày. Tháng 5 và tháng 6 thêm 900 khách mới, chưa đủ 90 ngày. Bạn thực tập lấy tổng 1.500 khách mới ba tháng làm mẫu số.',
   concept:{ name:'Tỉ lệ mua lại trong N ngày và độ chín của cohort',
     body:'<b>Tỉ lệ mua lại trong 90 ngày</b> = số khách mua lần hai trong vòng 90 ngày từ đơn đầu ÷ số khách mua lần đầu. Điều kiện bắt buộc: chỉ tính các cohort đã <b>đủ 90 ngày</b>. Khách mới được hai tuần chưa có đủ thời gian để mua lại; đưa họ vào mẫu số sẽ kéo tỉ lệ xuống oan, và càng tăng trưởng nhanh con số càng tệ đi giả. Cohort chưa chín thì đọc sớm bằng cửa sổ ngắn hơn, so với cohort cũ ở cùng ngày tuổi, rồi chờ đủ 90 ngày mới chốt. Cửa sổ 90 ngày chọn theo nhịp mua: đồ ăn vặt, mỹ phẩm, thực phẩm hợp 90 ngày; điện thoại thì không.' },
@@ -402,7 +402,7 @@ BAI_ADD({ mod:'dl04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:dl04-08', skill:'measure', read:'7 phút', t:'Doanh thu tăng đều, sao vẫn gọi là xô thủng?',
+{ id:'B:dl04-08', skill:'measure', read:'7 phút', assume:true, t:'Doanh thu tăng đều, sao vẫn gọi là xô thủng?',
   situation:'Một chuỗi salon tóc ở TP.HCM có 5.000 khách hoạt động đầu năm. Mỗi tháng, nhờ chạy quảng cáo mạnh, chuỗi kéo được 800 khách mới. Doanh thu tăng ba quý liên tiếp và ban giám đốc hài lòng. Nhưng khi bạn lọc dữ liệu, mỗi tháng có khoảng 10% khách hoạt động không quay lại nữa.',
   concept:{ name:'Tăng trưởng che giấu rò rỉ',
     body:'Số khách cuối kỳ = đầu kỳ + khách mới − khách rời. Khi khách mới đổ vào nhanh hơn khách rời, tổng vẫn tăng và doanh thu vẫn đẹp — dù cái xô đang thủng. Hãy tách hai dòng: <b>khách mới cần để bù rò</b> (khách hoạt động × tỉ lệ rời bỏ) và <b>tăng ròng</b>. Khi quy mô lớn dần, phần bù rò lớn theo, trong khi chi phí kéo khách mới thường đắt dần. Đến một điểm, toàn bộ ngân sách chỉ đủ giữ đứng yên — lúc đó tăng trưởng dừng đột ngột và ai cũng bất ngờ.' },

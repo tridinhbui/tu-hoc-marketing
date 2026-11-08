@@ -4,7 +4,7 @@
 BAI_ADD({ mod:'in05', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:in05-01', skill:'comm', read:'6 phút', t:'"Hãy kể về một chiến dịch bạn thích" — trả lời sao cho không thành kể lể?',
+{ id:'B:in05-01', skill:'comm', read:'6 phút', assume:true, t:'"Hãy kể về một chiến dịch bạn thích" — trả lời sao cho không thành kể lể?',
   situation:'Vòng phỏng vấn Management Trainee của một công ty hàng tiêu dùng. Người phỏng vấn hỏi: "Kể cho chị nghe một chiến dịch marketing em thích." Minh hào hứng kể suốt hai phút về một TVC Tết rất cảm động: nhạc hay, diễn viên khóc thật, bạn bè Minh chia sẻ rất nhiều. Người phỏng vấn gật đầu rồi hỏi tiếp: "Vậy theo em nó giải quyết vấn đề gì cho thương hiệu?" Minh im lặng.',
   concept:{ name:'Kể chiến dịch theo khung Vấn đề – Insight – Ý tưởng – Kết quả – Bài học',
     body:'Câu hỏi này không kiểm tra gu của bạn, mà kiểm tra bạn có nhìn chiến dịch bằng mắt marketer không. Hãy kể theo năm nhịp: <b>vấn đề</b> kinh doanh thương hiệu đang gặp; <b>insight</b> về khách hàng mà chiến dịch dựa vào; <b>ý tưởng</b> biến insight thành thông điệp; <b>kết quả</b> bạn quan sát được hoặc được công bố, nói rõ đâu là suy đoán; và <b>bài học</b> bạn sẽ mang theo. Cảm xúc của bạn chỉ là câu mở đầu, không phải lý do.' },
@@ -65,7 +65,7 @@ BAI_ADD({ mod:'in05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:in05-02', skill:'insight', read:'7 phút', t:'Case "thị phần đang giảm, bạn bắt đầu từ đâu?"',
+{ id:'B:in05-02', skill:'insight', read:'7 phút', assume:true, t:'Case "thị phần đang giảm, bạn bắt đầu từ đâu?"',
   situation:'Vòng case của một công ty nước giải khát. Đề: "Thương hiệu trà đóng chai của chúng tôi mất thị phần năm nay. Em bắt đầu từ đâu?" Hùng trả lời ngay: "Em sẽ làm chiến dịch TikTok với KOL để kéo người trẻ lại." Người phỏng vấn hỏi: "Em có biết thị phần giảm vì sao không?" Hùng chưa hỏi gì cả.',
   concept:{ name:'Cây chẩn đoán thị phần',
     body:'Thị phần là tỉ lệ, nên nó giảm theo hai đường: <b>doanh số của mình giảm</b>, hoặc <b>thị trường tăng nhanh hơn mình</b>. Bước một là tách hai đường này. Sau đó chia doanh số theo công thức: số người mua × tần suất mua × giá trị mỗi lần. Tiếp theo chia theo kênh, vùng, sản phẩm để khoanh vùng. Chỉ khi biết "hỏng ở đâu" mới bàn "sửa bằng gì". Nói khung này ra thành lời trước khi đi sâu để người nghe theo kịp.' },
@@ -125,7 +125,7 @@ BAI_ADD({ mod:'in05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:in05-03', skill:'measure', read:'7 phút', t:'"Mỗi năm Việt Nam bán bao nhiêu hộp sữa chua?" — ước lượng thế nào khi không có số?',
+{ id:'B:in05-03', skill:'measure', read:'7 phút', assume:true, t:'"Mỗi năm Việt Nam bán bao nhiêu hộp sữa chua?" — ước lượng thế nào khi không có số?',
   situation:'Vòng phỏng vấn Marketing Executive, người phỏng vấn hỏi: "Em ước lượng giúp chị: mỗi năm ở TP.HCM bán được bao nhiêu hộp sữa chua ăn?" Không được tra mạng, có giấy bút và năm phút. Thảo nói: "Em đoán khoảng một tỉ hộp", rồi không giải thích được con số đó từ đâu ra.',
   concept:{ name:'Ước lượng thị trường từ trên xuống (market sizing)',
     body:'Người phỏng vấn không cần con số đúng; họ chấm <b>chuỗi giả định</b>. Cách làm: dân số → phần trăm người dùng → tần suất dùng → quy ra năm. Mỗi bước nói rõ giả định và lý do, làm tròn số cho dễ tính. Cuối cùng <b>kiểm tra độ hợp lý</b> bằng một góc khác, ví dụ đếm từ phía cửa hàng. Nếu người nghe không đồng ý một giả định, bạn chỉ cần sửa bước đó, không phải làm lại từ đầu.' },
@@ -181,7 +181,7 @@ BAI_ADD({ mod:'in05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:in05-04', skill:'insight', read:'6 phút', t:'Được đưa một quảng cáo và hỏi "em thấy sao?" — phân tích tại chỗ thế nào?',
+{ id:'B:in05-04', skill:'insight', read:'6 phút', assume:true, t:'Được đưa một quảng cáo và hỏi "em thấy sao?" — phân tích tại chỗ thế nào?',
   situation:'Người phỏng vấn mở trên laptop một quảng cáo ngắn của một hãng dầu gội, rồi hỏi: "Em nhận xét giúp chị." Vy nói: "Quảng cáo đẹp, màu sắc tươi, người mẫu xinh, nhạc bắt tai." Người phỏng vấn hỏi tiếp: "Vậy nó có hiệu quả không?" Vy lúng túng vì mới nói về cảm giác.',
   concept:{ name:'Bốn câu hỏi đọc nhanh một quảng cáo',
     body:'Đừng chấm đẹp xấu; hãy đọc theo bốn câu. <b>Nói với ai?</b> — nhìn diễn viên, bối cảnh, ngôn ngữ. <b>Muốn họ nghĩ hay làm gì?</b> — nhớ thương hiệu, hiểu lợi ích, hay mua ngay. <b>Vì sao họ nên tin?</b> — lý do tin là gì. <b>Thương hiệu có được nhớ không?</b> — logo, màu, âm thanh xuất hiện lúc nào. Sau đó nêu một điểm mạnh, một điểm có thể cải thiện, và nói rõ bạn cần số liệu gì mới kết luận được hiệu quả.' },
@@ -245,7 +245,7 @@ BAI_ADD({ mod:'in05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:in05-05', skill:'comm', read:'6 phút', t:'"Kể về một lần bạn gặp khó khăn" — trả lời câu hỏi hành vi bằng STAR ra sao?',
+{ id:'B:in05-05', skill:'comm', read:'6 phút', assume:true, t:'"Kể về một lần bạn gặp khó khăn" — trả lời câu hỏi hành vi bằng STAR ra sao?',
   situation:'Người phỏng vấn hỏi Tuấn: "Kể về một lần em phải thuyết phục người khác đổi ý." Tuấn nói về câu lạc bộ ở trường: "Tụi em làm sự kiện, có nhiều bất đồng, nhưng cuối cùng mọi người hiểu nhau và sự kiện thành công." Người phỏng vấn hỏi: "Cụ thể em đã làm gì?" Tuấn nhận ra mình toàn nói "tụi em".',
   concept:{ name:'Khung STAR',
     body:'Câu hỏi hành vi dựa trên giả định: cách bạn đã làm là cách bạn sẽ làm. Trả lời theo bốn phần: <b>Situation</b> — bối cảnh ngắn gọn; <b>Task</b> — nhiệm vụ của riêng bạn; <b>Action</b> — những việc cụ thể bạn đã làm, dùng "em" chứ không "tụi em"; <b>Result</b> — kết quả, có số nếu được, và điều bạn học. Phần Action nên chiếm nhiều thời gian nhất. Người phỏng vấn thường đào sâu: "vì sao em chọn cách đó, không chọn cách khác?", nên hãy nhớ phương án bạn đã cân nhắc và loại. Chuẩn bị sẵn vài câu chuyện có thể xoay cho nhiều câu hỏi.' },
@@ -306,7 +306,7 @@ BAI_ADD({ mod:'in05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:in05-06', skill:'comm', read:'6 phút', t:'Đề case mơ hồ — hỏi lại gì để không lạc đề?',
+{ id:'B:in05-06', skill:'comm', read:'6 phút', assume:true, t:'Đề case mơ hồ — hỏi lại gì để không lạc đề?',
   situation:'Đề case vòng hai: "Một thương hiệu nước mắm muốn tăng trưởng. Em đề xuất gì?" Ngọc lập tức phác một kế hoạch tiếp cận người trẻ thành phố. Mười lăm phút sau, người phỏng vấn nói: "Thật ra thương hiệu này bán chủ yếu cho nhà hàng, quán ăn." Ngọc phải làm lại gần hết.',
   concept:{ name:'Làm rõ đề trước khi giải',
     body:'Đề case thường cố ý mơ hồ để xem bạn có hỏi không. Trước khi giải, hỏi ba nhóm: <b>mục tiêu</b> — tăng trưởng doanh thu, lợi nhuận hay thị phần, trong bao lâu; <b>phạm vi</b> — sản phẩm nào, kênh nào, khách nào, vùng nào; <b>giới hạn</b> — ngân sách, năng lực, điều không được làm. Hỏi ngắn, tối đa ba bốn câu, và nhắc lại đề bằng lời của mình để xác nhận. Hỏi không phải yếu; giải sai đề mới là yếu.' },
@@ -370,7 +370,7 @@ BAI_ADD({ mod:'in05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:in05-07', skill:'measure', read:'6 phút', t:'Case 30 phút — chia thời gian thế nào để không hết giờ ở giữa bài?',
+{ id:'B:in05-07', skill:'measure', read:'6 phút', assume:true, t:'Case 30 phút — chia thời gian thế nào để không hết giờ ở giữa bài?',
   situation:'Đức làm case 30 phút: đề về tăng doanh số cho một thương hiệu bánh. Đức dành 20 phút phân tích thị trường rất kỹ, vẽ ba biểu đồ. Khi còn 5 phút, Đức mới bắt đầu nghĩ đề xuất, trình bày vội và không kịp nói kết luận. Người chấm ghi: "Phân tích tốt, không có khuyến nghị."',
   concept:{ name:'Ngân sách thời gian cho case',
     body:'Coi thời gian như ngân sách, chia ngay khi nhận đề. Gợi ý cho 30 phút: khoảng <b>10%</b> làm rõ đề, <b>35%</b> phân tích, <b>30%</b> xây đề xuất, <b>10%</b> chuẩn bị, <b>15%</b> trình bày thật. Ghi mốc giờ lên giấy và <b>viết kết luận nháp sớm</b>, khoảng giữa bài. Khi bị ngắt lời hoặc mất giờ, hãy lấy bù từ phân tích, vì đó là phần co lại ít đau nhất; đề xuất và trình bày là thứ người chấm cần. Có kết luận chưa hoàn hảo vẫn hơn phân tích hoàn hảo mà không có kết luận.' },
@@ -411,11 +411,11 @@ BAI_ADD({ mod:'in05', lessons:[
       c:'Tự đổi đề là không trả lời câu được hỏi.',
       d:'Đúng. Giữ ý tưởng lại mà không để nó ăn thời gian của bài chính.'} },
   { type:'mcq', stem:'Tình huống mới: bạn có 15 phút cho một case ngắn. Cách chia nào hợp lý nhất?',
-    options:[{k:'a',t:'Khoảng 2 phút làm rõ, 6 phân tích, 4 đề xuất, 3 chuẩn bị nói'},{k:'b',t:'Dành 12 phút phân tích, 3 phút còn lại vừa đề xuất vừa trình bày'},
-             {k:'c',t:'Bỏ phần làm rõ đề cho nhanh, dồn thời gian vào đề xuất'},{k:'d',t:'Không chia gì, vì case ngắn thì cứ làm liền một mạch là kịp'}],
-    answer:'a', why:{a:'Đúng. Giữ tỉ lệ tương tự, chỉ co lại theo tổng thời gian.',
+    options:[{k:'a',t:'Khoảng 1,5 phút làm rõ, 5 phân tích, 4,5 đề xuất, 1,5 chuẩn bị, 2,5 trình bày'},{k:'b',t:'Dành 12 phút phân tích cho chắc, 3 phút còn lại vừa đề xuất vừa trình bày kết luận'},
+             {k:'c',t:'Bỏ phần làm rõ đề, dồn vào 6 phút phân tích, 6 đề xuất, 1 chuẩn bị, 2 trình bày'},{k:'d',t:'Không chia trước, làm liền một mạch và chỉ nhìn đồng hồ khi còn khoảng 3 phút cuối'}],
+    answer:'a', why:{a:'Đúng. Giữ khung 10/35/30/10/15% của bài: 15 phút × 10% = 1,5; × 35% ≈ 5; × 30% = 4,5; × 10% = 1,5; × 15% ≈ 2,5. Chỉ co lại theo tổng thời gian và vẫn chừa phần trình bày thật.',
       b:'Lặp lại đúng lỗi của Đức: phân tích ăn hết thời gian.',
-      c:'Bỏ làm rõ đề tăng rủi ro giải sai đề.',
+      c:'Bỏ làm rõ đề tăng rủi ro giải sai đề; 6 phút đề xuất cho một đề có thể đã hiểu sai là phí.',
       d:'Case càng ngắn càng dễ hết giờ; càng cần chia.'} },
   { type:'mcq', stem:'Viết "kết luận nháp" ở giữa bài có tác dụng chính là gì?',
     options:[{k:'a',t:'Để có sẵn câu trả lời học thuộc, trình bày không phải nghĩ'},{k:'b',t:'Để khỏi phải phân tích thêm gì nữa sau mốc giữa bài'},
@@ -427,7 +427,7 @@ BAI_ADD({ mod:'in05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:in05-08', skill:'comm', read:'6 phút', t:'Case nhóm với người lạ — đóng góp sao cho được chấm điểm?',
+{ id:'B:in05-08', skill:'comm', read:'6 phút', assume:true, t:'Case nhóm với người lạ — đóng góp sao cho được chấm điểm?',
   situation:'Vòng assessment center: năm ứng viên chưa quen nhau, một đề case chung, 40 phút thảo luận rồi trình bày. Quân nói nhiều nhất, liên tục đưa ý và bác ý người khác. Hà im lặng gần hết buổi vì không chen được. Kết quả: cả hai đều bị đánh giá thấp ở phần làm việc nhóm.',
   concept:{ name:'Vai trò trong case nhóm',
     body:'Người chấm case nhóm không đếm ai nói nhiều nhất; họ xem ai <b>giúp nhóm đi tới kết quả tốt</b>. Có nhiều cách đóng góp: đề xuất cách chia thời gian, tóm tắt các ý đã có, kéo người im lặng vào, xây tiếp ý người khác bằng "đồng ý, và thêm là...", giữ nhóm bám đề. Phản biện được, nhưng phản biện ý chứ không phản biện người, và có lý do. Một câu đúng lúc có giá trị hơn mười câu lấn át.' },
@@ -491,7 +491,7 @@ BAI_ADD({ mod:'in05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:in05-09', skill:'brand', read:'6 phút', t:'"Vì sao em chọn công ty chúng tôi?" — trả lời sao cho không giống mọi người?',
+{ id:'B:in05-09', skill:'brand', read:'6 phút', assume:true, t:'"Vì sao em chọn công ty chúng tôi?" — trả lời sao cho không giống mọi người?',
   situation:'Mai phỏng vấn Management Trainee ở một tập đoàn hàng tiêu dùng. Khi được hỏi "vì sao chọn công ty mình", Mai nói: "Vì đây là công ty lớn, môi trường chuyên nghiệp, nhiều cơ hội học hỏi và thăng tiến." Người phỏng vấn cười: "Hôm nay chị nghe câu này lần thứ sáu rồi."',
   concept:{ name:'Ba lớp lý do: Công ty – Vai trò – Bạn',
     body:'Câu trả lời mạnh nối ba điều. <b>Công ty</b>: một điều cụ thể bạn quan sát được — một thương hiệu, một cách làm, một hướng đi gần đây — chứ không phải "lớn" hay "chuyên nghiệp". <b>Vai trò</b>: vì sao vị trí này, ở đây, giúp bạn học được điều bạn cần. <b>Bạn</b>: điều gì từ trải nghiệm của bạn khớp với nhu cầu của họ. Chỉ có một giờ thì quan sát ba nơi: sản phẩm của họ ở điểm bán, trang tuyển dụng hoặc báo chí gần đây, và một người đang làm ở đó. Mỗi nơi tìm một chi tiết mà công ty khác không có.' },
@@ -552,7 +552,7 @@ BAI_ADD({ mod:'in05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:in05-10', skill:'comm', read:'6 phút', t:'"Em có câu hỏi gì cho chị không?" — hỏi gì ở cuối buổi?',
+{ id:'B:in05-10', skill:'comm', read:'6 phút', assume:true, t:'"Em có câu hỏi gì cho chị không?" — hỏi gì ở cuối buổi?',
   situation:'Cuối buổi phỏng vấn Marketing Executive, người phỏng vấn hỏi: "Em có câu hỏi gì không?" Khoa đáp: "Dạ không ạ, chị đã giải thích rõ hết rồi." Một ứng viên khác hỏi: "Công ty có cho làm từ xa không, mấy giờ được về?" Cả hai đều bỏ lỡ cơ hội cuối để ghi điểm.',
   concept:{ name:'Câu hỏi cuối buổi như một tín hiệu',
     body:'Câu hỏi của bạn cho biết bạn quan tâm điều gì. Câu hỏi tốt thuộc ba nhóm: <b>công việc</b> — "ba tháng đầu, người ở vị trí này cần làm được gì?"; <b>thành công</b> — "người làm tốt nhất vị trí này khác người trung bình ở đâu?"; <b>đội và thách thức</b> — "thương hiệu đang ưu tiên bài toán nào năm nay?". Câu trả lời cũng là dữ liệu cho bạn: nếu ba tháng đầu được trả lời mơ hồ, quy trình đón người mới có thể yếu. Tránh hỏi điều đã có trên trang tuyển dụng; chế độ thì hỏi sau câu về công việc, hoặc khi đã có đề nghị. Chuẩn bị ba câu, hỏi một hai câu.' },

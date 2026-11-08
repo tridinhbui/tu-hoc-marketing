@@ -3,11 +3,11 @@
 BAI_ADD({ mod:'ob04', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:ob04-01', skill:'insight', read:'6 phút', t:'Quán cà phê của bạn đang cạnh tranh với ai — quán bên kia đường hay ly trà sữa?',
+{ id:'B:ob04-01', skill:'insight', read:'6 phút', assume:true, t:'Quán cà phê của bạn đang cạnh tranh với ai — quán bên kia đường hay ly trà sữa?',
   situation:'Bạn làm marketing cho một quán cà phê mang đi ở Quận 3, giá trung bình 35.000đ một ly. Chủ quán chỉ theo dõi hai quán cà phê cùng phố. Nhưng khảo sát nhanh 100 khách cũ đã bỏ đi cho thấy: 30 người chuyển sang quán cà phê khác, 45 người chuyển sang trà sữa hoặc nước ép, 25 người tự mang bình nước từ nhà hoặc dùng nước pha sẵn ở văn phòng.',
   concept:{ name:'Ba vòng đối thủ: trực tiếp, gián tiếp, thay thế',
     body:'<b>Đối thủ trực tiếp</b> bán cùng loại sản phẩm cho cùng khách (quán cà phê khác). <b>Đối thủ gián tiếp</b> là sản phẩm khác mà khách vẫn trả tiền cho ai đó, để làm cùng một “việc” (trà sữa cho buổi chiều tỉnh táo, cả cà phê gói mua ở siêu thị). <b>Sản phẩm thay thế</b> là cách khách tự giải mà không mua của ai (bình nước mang từ nhà). Ranh giới ba vòng không quan trọng bằng câu hỏi: khách đang “thuê” thứ gì để làm việc gì, vào lúc nào? Bằng chứng mạnh nhất là chuyển đổi thật của khách đã bỏ đi. Đừng xếp ưu tiên chỉ theo số khách: nhân số khách với mức chi của họ, rồi với phần bạn có khả năng kéo lại.' },
-  example:'Trong 100 khách bỏ đi, chỉ 30 người (30%) sang đối thủ trực tiếp; 45 người (45%) sang đối thủ gián tiếp và 25 người (25%) sang sản phẩm thay thế. Giảm giá để đấu với hai quán cùng phố là nhắm vào 30% vấn đề. Nhưng khảo sát này chỉ cho biết khách đi đâu, chưa cho biết vì sao: vị, sự mới lạ hay chỗ ngồi. Bước đúng là phỏng vấn vài chục khách đã sang trà sữa về lần cuối họ mua gì thay và vì sao; có lý do rồi mới thử một món chiều và đo tỉ lệ quay lại.',
+  example:'Trong 100 khách bỏ đi, chỉ 30 người (30%) sang đối thủ trực tiếp; 45 người (45%) sang đối thủ gián tiếp và 25 người (25%) sang sản phẩm thay thế. Giảm giá để đấu với hai quán cùng phố là nhắm vào 30% vấn đề. Nhưng 30% số khách không có nghĩa là 30% số tiền: nếu khách sang trà sữa chỉ uống 4 ly/tháng và khó kéo lại, còn khách sang quán khác uống 8 ly và dễ kéo lại hơn, thứ tự ưu tiên có thể đảo ngược (xem câu 7). Ngoài ra, khảo sát này chỉ cho biết khách đi đâu, chưa cho biết vì sao: vị, sự mới lạ hay chỗ ngồi. Bước đúng là phỏng vấn vài chục khách đã sang trà sữa về lần cuối họ mua gì thay và vì sao; có lý do rồi mới thử một món chiều và đo tỉ lệ quay lại.',
   takeaway:'Đối thủ là bất cứ ai nhận số tiền mà khách lẽ ra đã trả cho bạn, không chỉ người bán cùng món.',
   apply:'Chọn một sản phẩm bạn hay mua. Kể trong 60 giây: một đối thủ trực tiếp, một gián tiếp, một thay thế — và khi nào bạn chọn từng cái.',
   mistakes:['Chỉ liệt kê những hãng bán cùng loại sản phẩm, cùng tầm giá.','Coi cách khách tự làm lấy là “không phải đối thủ” vì không có thương hiệu.'],
@@ -22,10 +22,10 @@ BAI_ADD({ mod:'ob04', lessons:[
   { type:'mcq', stem:'Ngân sách quý tới chỉ đủ một bước đầu. Khảo sát cho 30/45/25 nhưng chưa biết vì sao khách sang trà sữa. Bạn làm bước nào trước?',
     options:[{k:'a',t:'Phỏng vấn 20 khách đã sang trà sữa để hỏi lý do chuyển'},{k:'b',t:'Giảm giá 15% để lấy lại khách từ hai quán cùng phố'},
              {k:'c',t:'Mở điểm bán gần văn phòng để lấy lại khách mang bình nước'},{k:'d',t:'Chạy quảng cáo so sánh chất lượng hạt với quán đối diện'}],
-    answer:'a', why:{a:'Đúng. Nhóm 45% lớn nhất nhưng chưa rõ họ thuê trà sữa làm việc gì; biết lý do trước mới thử món nhỏ mà không đoán mò.',
+    answer:'a', why:{a:'Đúng. Chưa biết lý do và khả năng kéo lại của nhóm này; phỏng vấn 20 người rẻ hơn mọi bước khác và cho biết nên thử gì.',
       b:'Đánh vào nhóm 30%, lại hy sinh biên lãi, trong khi chưa biết khách đi vì giá hay vì lý do khác.',
       c:'Nhóm tự giải chỉ 25%, và chưa có dữ kiện cho thấy khoảng cách là lý do họ mang bình.',
-      d:'Vẫn là cuộc đấu trong vòng trực tiếp, bỏ qua nơi tiền chảy đi nhiều nhất.'} },
+      d:'Vẫn là cuộc đấu trong vòng trực tiếp, lại tốn tiền khi chưa biết khách bỏ đi vì hạt cà phê.'} },
   { type:'calc', stem:'Quán mất 200 khách một tháng; 45% sang đồ uống khác loại. Mỗi khách chi 35.000đ × 8 ly/tháng. Doanh thu tháng mất vào tay đối thủ gián tiếp là bao nhiêu triệu đồng?',
     unit:'triệu đồng', ans:25.2, tol:0.1, wrong:[[56,'SAI_MAU_SO'],[3.15,'NGUOC_TAN_SUAT']], errors:['SAI_MAU_SO','NGUOC_TAN_SUAT'],
     steps:['Số khách sang gián tiếp = 200 × 45% = 90 khách.','Mỗi khách chi 35.000 × 8 = 280.000đ/tháng.','90 × 280.000 = 25.200.000đ = <b>25,2 triệu</b>.'] },
@@ -60,7 +60,7 @@ BAI_ADD({ mod:'ob04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:ob04-02', skill:'insight', read:'7 phút', t:'Vẽ bản đồ đối thủ thế nào để thấy chỗ trống?',
+{ id:'B:ob04-02', skill:'insight', read:'7 phút', assume:true, t:'Vẽ bản đồ đối thủ thế nào để thấy chỗ trống?',
   situation:'Bạn làm cho một thương hiệu bánh mì que mới ở Hà Nội. Trên thị trường có 8 thương hiệu bánh ăn sáng mang đi. Nhóm liệt kê cả 8 vào một bảng Excel 12 cột nhưng không ai rút ra được gì. Sếp yêu cầu: “Cho anh một hình, nhìn là biết mình nên đứng ở đâu.”',
   concept:{ name:'Bản đồ định vị hai trục',
     body:'Chọn <b>hai trục khách dùng để cân nhắc khi mua</b>, rút từ vài cuộc phỏng vấn (“khi chọn bánh sáng, hai điều bạn nghĩ tới đầu tiên?”) chứ không từ điều hãng thích nói. Đặt từng đối thủ lên đó theo dữ kiện: giá niêm yết, thành phần, lời hứa trên bao bì. Hai bản đồ cùng ngành nhưng khác trục cho hai kết luận khác nhau: bản đồ giá chỉ cho thấy ai đắt ai rẻ, bản đồ nhận thức cho thấy khách xếp ai gần ai. Chỗ đông là nơi cạnh tranh bằng giá; chỗ trống chỉ là giả thuyết: có thể là cơ hội, có thể là nơi không có khách, hoặc nơi làm không ra lãi.' },
@@ -117,10 +117,12 @@ BAI_ADD({ mod:'ob04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:ob04-03', skill:'creative', read:'7 phút', t:'Đối thủ đang chạy quảng cáo gì — và nó nói lên điều gì?',
+{ id:'B:ob04-03', skill:'creative', read:'7 phút', assume:true, t:'Đối thủ đang chạy quảng cáo gì — và nó nói lên điều gì?',
+  src:[{ t:'Meta Ad Library (Thư viện quảng cáo Meta) — trang chính thức', u:'https://www.facebook.com/ads/library/', d:'2026-11-07', st:'chua' },
+       { t:'Meta Business Help Center — tìm “Ad Library” để xem phạm vi hiển thị và cách dùng', u:'https://www.facebook.com/business/help/search?q=ad%20library', d:'2026-11-07', st:'chua' }],
   situation:'Bạn làm cho một thương hiệu kem chống nắng nội địa. Đối thủ chính vừa tăng mạnh hiện diện trên Facebook. Bạn mở Thư viện quảng cáo của Meta (Meta Ad Library), gõ tên trang đối thủ và thấy 24 quảng cáo đang chạy. Sếp hỏi: “Họ đang làm gì, mình có cần phản ứng không?”',
   concept:{ name:'Đọc thư viện quảng cáo như đọc chiến lược',
-    body:'Thư viện quảng cáo Meta cho mọi người xem các quảng cáo đang chạy của một trang, kèm ngày bắt đầu. Đừng đọc từng mẫu cho vui; hãy <b>đếm và phân loại</b>: bao nhiêu mẫu nói về thông điệp nào, bao nhiêu mẫu đã chạy lâu. Mẫu chạy lâu thường là mẫu hiệu quả, vì không ai trả tiền lâu cho mẫu kém. Thông điệp lặp nhiều là điều đối thủ đặt cược. Đây là tín hiệu, không phải số liệu doanh thu.' },
+    body:'Thư viện quảng cáo Meta (theo trang chính thức của Meta tại ngày kiểm 2026-11-07) cho mọi người xem các quảng cáo đang chạy của một trang, kèm ngày bắt đầu; phạm vi hiển thị có thể khác theo vùng và giao diện có thể đổi — nếu màn hình bạn thấy khác, tin trang chính thức. Đừng đọc từng mẫu cho vui; hãy <b>đếm và phân loại</b>: bao nhiêu mẫu nói về thông điệp nào, bao nhiêu mẫu đã chạy lâu. Mẫu chạy lâu thường là mẫu hiệu quả, vì không ai trả tiền lâu cho mẫu kém. Thông điệp lặp nhiều là điều đối thủ đặt cược. Đây là tín hiệu, không phải số liệu doanh thu.' },
   example:'Trong 24 mẫu: 14 mẫu nói “không bết dính, đi làm cả ngày”, 6 mẫu nói về giảm giá, 4 mẫu nói về thành phần. 5 mẫu chạy trên 60 ngày, và cả 5 đều thuộc nhóm “không bết dính”. Cách đọc: đối thủ đã thử nhiều hướng và đang dồn tiền vào lợi ích cảm giác khi dùng, chứ không phải giá. Nếu thương hiệu của bạn cũng mạnh về kết cấu nhẹ, bạn cần một cách nói khác để không trông như bản sao.',
   takeaway:'Đếm thông điệp và tìm mẫu chạy lâu: đó là nơi đối thủ đang đặt tiền thật.',
   points:["Quảng cáo chạy lâu là quảng cáo đang được nuôi, vì người trả tiền theo dõi kết quả. Thời gian chạy là bằng chứng gián tiếp về hiệu quả, rẻ hơn nhiều so với đoán.","Gom mẫu theo thông điệp biến một đống ảnh thành bảng đếm. Tỷ trọng thông điệp cho thấy đối thủ nghĩ khách quan tâm gì, chứ không cho biết mẫu nào đẹp nhất.","Kết quả chỉ nên làm giả thuyết để bạn thử, không phải bản mẫu để sao chép. Hiểu họ nhấn vào đâu giúp bạn chọn góc khác, nơi khách chưa nghe ai nói."],
@@ -177,7 +179,7 @@ BAI_ADD({ mod:'ob04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:ob04-04', skill:'measure', read:'7 phút', t:'Giá niêm yết của đối thủ có phải giá khách thật sự trả?',
+{ id:'B:ob04-04', skill:'measure', read:'7 phút', assume:true, t:'Giá niêm yết của đối thủ có phải giá khách thật sự trả?',
   situation:'Bạn bán nồi chiên không dầu trên Shopee với giá 1.290.000đ. Đối thủ niêm yết 1.390.000đ, cao hơn bạn 100.000đ, nhưng họ vẫn bán nhiều hơn. Sếp nghĩ khách không nhạy giá. Bạn quyết định ghi lại mọi khuyến mãi của đối thủ trong 4 tuần trước khi kết luận.',
   concept:{ name:'Giá thực trả (net price)',
     body:'Giá khách thật sự trả = giá niêm yết − mọi khoản giảm: mã giảm của shop, voucher sàn, quà tặng quy ra tiền, miễn phí vận chuyển. So sánh giá với đối thủ phải so <b>giá thực trả</b>, không phải giá trên nhãn. Cách làm: theo dõi đều đặn, ghi vào một bảng theo ngày, vì khuyến mãi thay đổi theo đợt (ngày đôi, cuối tháng).' },
@@ -233,7 +235,7 @@ BAI_ADD({ mod:'ob04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:ob04-05', skill:'brand', read:'7 phút', t:'Điểm mạnh nhất của đối thủ đang che giấu điểm yếu nào?',
+{ id:'B:ob04-05', skill:'brand', read:'7 phút', assume:true, t:'Điểm mạnh nhất của đối thủ đang che giấu điểm yếu nào?',
   situation:'Bạn làm cho một chuỗi phòng tập nhỏ ở Đà Nẵng, 2 cơ sở. Đối thủ là một chuỗi lớn với 15 cơ sở, máy tập hiện đại, giá hội viên 700.000đ/tháng. Nhóm bạn cảm thấy không có cửa. Nhưng các đánh giá trên Google Maps của đối thủ lặp lại một phàn nàn: đông, phải chờ máy giờ cao điểm.',
   concept:{ name:'Mặt trái của điểm mạnh',
     body:'Điểm mạnh lớn của đối thủ thường kèm một <b>cái giá</b> khó bỏ: chuỗi lớn thì đông và khó cá nhân hoá, rẻ thì khó phục vụ kỹ. Đó là chỗ hãng nhỏ có thể đứng, nhưng không tuyệt đối: đối thủ vẫn có thể tách thương hiệu riêng hoặc mở rộng thêm. Vì vậy cần hai bước. Một, mã hoá vài chục đến vài trăm đánh giá thành chủ đề, đếm tỉ lệ và phân biệt lỗi cấu trúc (đông vì mô hình cần nhiều hội viên) với lỗi vận hành (nhân viên lơ là, sửa được trong tuần). Hai, tính xem lời hứa của bạn có đủ tiền sống không.' },
@@ -290,7 +292,7 @@ BAI_ADD({ mod:'ob04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:ob04-06', skill:'measure', read:'7 phút', t:'Đối thủ giảm giá 20% — bạn có nên giảm theo?',
+{ id:'B:ob04-06', skill:'measure', read:'7 phút', assume:true, t:'Đối thủ giảm giá 20% — bạn có nên giảm theo?',
   situation:'Bạn bán bột giặt túi 3kg giá 150.000đ, chi phí biến đổi (hàng, bao bì, vận chuyển) 90.000đ mỗi túi, bán 2.000 túi mỗi tháng. Đối thủ chính vừa giảm 20% trong một tháng. Đội bán hàng hoảng và muốn giảm theo ngay 20%. Bạn cần tính trước khi trả lời.',
   concept:{ name:'Doanh số cần thêm để bù giảm giá',
     body:'Giảm giá cắt thẳng vào <b>lãi gộp trên mỗi đơn vị</b> (giá − chi phí biến đổi), không phải vào doanh thu. Muốn giữ tổng lãi gộp như cũ, số lượng bán phải tăng theo tỉ lệ: lãi cũ ÷ lãi mới. Biên lãi càng mỏng, giảm giá càng đắt. Trước khi giảm theo, hãy hỏi: đợt giảm của đối thủ kéo dài bao lâu, và khách của mình có thật sự chuyển đi không.' },
@@ -346,7 +348,7 @@ BAI_ADD({ mod:'ob04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:ob04-07', skill:'insight', read:'6 phút', t:'Một đối thủ mới vừa vào ngành — lo hay chưa cần lo?',
+{ id:'B:ob04-07', skill:'insight', read:'6 phút', assume:true, t:'Một đối thủ mới vừa vào ngành — lo hay chưa cần lo?',
   situation:'Bạn làm cho một thương hiệu nước mắm đóng chai bán ở siêu thị phía Nam. Một thương hiệu mới ra mắt rầm rộ trên TikTok với 3 triệu lượt xem video đầu tiên. Sếp lo lắng, muốn tăng ngân sách quảng cáo gấp đôi ngay tháng sau.',
   concept:{ name:'Ba câu hỏi đo sức đe doạ của người mới',
     body:'Tiếng ồn không bằng sức đe doạ. Hỏi ba câu: (1) <b>Họ lấy khách của ai</b> — cùng nhóm khách của bạn hay nhóm khác? (2) <b>Họ có mặt ở đâu khách mua</b> — độ phủ điểm bán thật sự? (3) <b>Khách có mua lại không</b> — thử một lần hay thành thói quen? Người mới chỉ đáng lo khi cả ba đều nghiêng về phía họ. Lượt xem là câu trả lời cho câu hỏi khác: khách có biết họ không.' },
@@ -406,7 +408,7 @@ BAI_ADD({ mod:'ob04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:ob04-08', skill:'comm', read:'6 phút', t:'Bảng so sánh đối thủ một trang: giữ gì, bỏ gì?',
+{ id:'B:ob04-08', skill:'comm', read:'6 phút', assume:true, t:'Bảng so sánh đối thủ một trang: giữ gì, bỏ gì?',
   situation:'Bạn vừa làm xong nghiên cứu đối thủ cho một thương hiệu balo học sinh: 40 trang slide về 6 đối thủ. Giám đốc chỉ có 10 phút trước cuộc họp ngân sách và nói: “Cho anh một trang, anh cần biết mình thắng ở đâu, thua ở đâu.”',
   concept:{ name:'Bảng so sánh một trang',
     body:'Một bảng tốt có <b>hàng là tiêu chí khách dùng để chọn</b>, rút từ review và phỏng vấn (khách hay khen chê điều gì khi so hãng) và xếp theo số người nhắc, không từ danh sách tính năng của hãng mình. <b>Cột là 3–4 đối thủ quan trọng nhất</b>, tức hãng khách thật sự cân nhắc cùng bạn, và bạn. Mỗi ô là một dữ kiện ngắn có nguồn, không phải tính từ. Khi hãng không công bố, ghi “không công bố” hoặc một ước lượng có nhãn, đừng điền số đoán như số thật. Dưới bảng là ba dòng: mình thắng ở đâu, thua ở đâu, đề xuất gì. Dòng đề xuất phải đủ rõ để người ra quyết định hành động ngay; mọi thứ khác vào phụ lục.' },
@@ -463,7 +465,7 @@ BAI_ADD({ mod:'ob04', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:ob04-09', skill:'brand', read:'6 phút', t:'Học từ đối thủ đến đâu thì thành sao chép?',
+{ id:'B:ob04-09', skill:'brand', read:'6 phút', assume:true, t:'Học từ đối thủ đến đâu thì thành sao chép?',
   situation:'Bạn làm cho một thương hiệu trà đóng chai mới. Hãng dẫn đầu vừa thành công với chiến dịch in tên người lên nhãn chai. Trong buổi họp, một bạn đề xuất: “Mình làm y vậy nhưng in biệt danh, rẻ hơn 20%.” Bạn cần phân biệt thứ nên học và thứ không nên chép.',
   concept:{ name:'Học nguyên lý, không chép hình thức',
     body:'Mỗi cách làm thành công có hai lớp: <b>hình thức</b> (in tên lên chai) và <b>nguyên lý</b> bên dưới (khách thích thấy mình trong sản phẩm, và thích chia sẻ điều mang tính cá nhân). Chép hình thức làm khách nhớ tới hãng đã làm trước. Để rút nguyên lý, hỏi “vì sao khách phản ứng?” vài lần liên tiếp rồi thử liệt kê ba hình thức khác cùng phục vụ nguyên lý đó. Chép nguyên bản chỉ hợp lý khi nó là chuẩn ngành khách mặc định đòi hỏi, như ghi hạn dùng hay chứng nhận an toàn.' },

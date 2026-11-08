@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'kn10', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kn10-01', skill:'channel', read:'6 phút', t:'Năm kênh chạy năm câu chuyện — sao khách không nhớ gì?',
+{ id:'B:kn10-01', skill:'channel', read:'6 phút', assume:true, t:'Năm kênh chạy năm câu chuyện — sao khách không nhớ gì?',
   situation:'Một hãng nước ép đóng chai ở TP.HCM chạy cùng lúc: TVC nói "tươi từ vườn", KOL TikTok làm thử thách nhảy, banner siêu thị ghi "mua 2 tặng 1", fanpage đăng mẹo giảm cân, email gửi mã giảm giá sinh nhật. Tổng chi 1,2 tỷ trong hai tháng. Khảo sát sau chiến dịch: rất ít người nhớ hãng nói gì.',
   concept:{ name:'Ý tưởng lớn xuyên kênh (big idea)',
     body:'Truyền thông tích hợp bắt đầu từ <b>một ý tưởng</b> mà mọi kênh kể lại theo cách riêng. Hai tiêu chí chọn ý: <b>đủ rộng</b> khi mỗi kênh tìm được chất liệu thật để quay, in, gửi; <b>đủ hẹp</b> khi đối thủ không thể nói y như vậy. Quá rộng ("sống khoẻ") thì kênh nào cũng kể được nhưng khách không nhận ra là của ai. Quá hẹp (một đợt khuyến mãi) thì chỉ sống được ở một kênh. Khi mỗi kênh tự nghĩ một ý, ngân sách bị chia thành nhiều chiến dịch nhỏ, mỗi cái đều quá yếu để được nhớ. Phép thử: che logo đi, khách xem hai điểm chạm bất kỳ có nhận ra cùng một chiến dịch không.' },
@@ -33,7 +33,7 @@ BAI_ADD({ mod:'kn10', lessons:[
       b:'Đếm số lần nhắc chỉ đo một kênh, không đo sự liên kết giữa các kênh.',
       c:'Đúng. Nếu không có logo mà vẫn nhận ra, ý tưởng đã đủ rõ để xuyên kênh.',
       d:'Agency làm theo brief chưa chắc kết quả nhận ra được là một.'} },
-  { type:'mcq', stem:'Một chuỗi phở chọn ý tưởng "Nồi nước dùng ninh 12 tiếng". Cách kể nào trên TikTok vẫn giữ đúng ý?',
+  { type:'mcq', stem:'Một chuỗi phở chọn ý tưởng "Nồi nước dùng ninh 12 tiếng". Cách kể nào vừa giữ đúng ý vừa hợp định dạng TikTok?',
     options:[{k:'a',t:'Video tua nhanh 12 tiếng ninh xương trong 30 giây, kết ở bát phở'},{k:'b',t:'Thử thách ăn phở nhanh nhất có thưởng, hot trend đang lên'},
              {k:'c',t:'Livestream bán voucher giảm 30% cho khách đặt qua app giao đồ ăn'},{k:'d',t:'Đăng lại nguyên TVC 30 giây đã phát trên truyền hình, không cắt ghép gì'}],
     answer:'a', why:{a:'Đúng. Cùng ý "12 tiếng", kể bằng ngôn ngữ của TikTok (tua nhanh, dọc, ngắn).',
@@ -54,13 +54,13 @@ BAI_ADD({ mod:'kn10', lessons:[
       b:'Đúng. Màu sắc giúp nhận ra hãng; ý tưởng chung giúp nhớ hãng nói gì.',
       c:'Một agency vẫn có thể làm năm ý rời; nhiều agency vẫn có thể cùng một ý.',
       d:'Lịch khởi động là chuyện điều phối, không phải điều kiện của tích hợp.'} },
-  { type:'calc', stem:'Cả chiến dịch mua được 6 triệu lượt tiếp xúc (số minh hoạ). Một người cần thấy cùng một ý khoảng 3 lần mới bắt đầu nhớ. Nếu chia đều cho 5 ý khác nhau, mỗi ý đủ lượt để bao nhiêu người thấy đủ 3 lần?',
+  { type:'calc', stem:'Cả chiến dịch mua được 6 triệu lượt tiếp xúc (số minh hoạ). Giả sử một người cần thấy cùng một ý khoảng 3 lần mới bắt đầu nhớ (giả định minh hoạ, ngưỡng thật tuỳ ngành và định dạng). Nếu chia đều cho 5 ý khác nhau, mỗi ý đủ lượt để nhiều nhất bao nhiêu người thấy đủ 3 lần?',
     unit:'người', ans:400000, tol:1000, wrong:[[1200000,'SAI_MAU_SO'],[2000000,'SAI_TINH_TOAN'],[3600000,'NGUOC_TAN_SUAT']], errors:['SAI_MAU_SO','NGUOC_TAN_SUAT','SAI_TINH_TOAN'],
-    steps:['Mỗi ý nhận 6.000.000 ÷ 5 = 1.200.000 lượt.','Mỗi người cần 3 lượt: 1.200.000 ÷ 3 = <b>400.000 người</b>.','Nếu cả 6 triệu lượt cùng đẩy một ý: 6.000.000 ÷ 3 = 2.000.000 người nhớ. Chia thành năm ý, số người nhớ còn 400.000 mỗi ý, và đó là một ý trong năm chứ không phải năm lần thắng.'] }
+    steps:['Mỗi ý nhận 6.000.000 ÷ 5 = 1.200.000 lượt.','Mỗi người cần 3 lượt: 1.200.000 ÷ 3 = <b>400.000 người</b>.','Nếu cả 6 triệu lượt cùng đẩy một ý: 6.000.000 ÷ 3 = 2.000.000 người nhớ cùng một điều về hãng. Chia năm ý thì tổng vẫn là 2 triệu lượt nhớ, nhưng rải thành năm mẩu rời, mỗi mẩu 400.000 người. Và khi tệp khách trùng nhau (ví dụ cùng 2 triệu người, mỗi người 3 lượt), một ý cho mỗi người đủ 3 lần, còn năm ý thì mỗi người chỉ thấy mỗi ý 0,6 lần, gần như không ai đủ 3 lần.'] }
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kn10-02', skill:'channel', read:'7 phút', t:'Mỗi kênh trong chiến dịch nên giữ vai trò gì?',
+{ id:'B:kn10-02', skill:'channel', read:'7 phút', assume:true, t:'Mỗi kênh trong chiến dịch nên giữ vai trò gì?',
   situation:'Một thương hiệu sữa hạt ra dòng sản phẩm mới, ngân sách 800 triệu. Bản kế hoạch có năm kênh: YouTube, TikTok KOL, Shopee, fanpage, Zalo OA. Nhưng mọi kênh đều được giao cùng một mục tiêu là "ra đơn", nên KOL bị đánh giá bằng số đơn và YouTube bị cắt vì "không ra đơn".',
   concept:{ name:'Phân vai kênh theo hành trình',
     body:'Mỗi kênh làm tốt một việc khác nhau: có kênh để <b>nhiều người biết</b> (video tầm rộng), có kênh để <b>người ta cân nhắc</b> (KOL review, nội dung chi tiết), có kênh để <b>chốt đơn</b> (sàn, tìm kiếm), và có kênh để <b>giữ khách</b> (Zalo OA, email). Giao cùng một chỉ số cho mọi kênh sẽ khiến kênh tầm rộng luôn thua, bị cắt, rồi kênh chốt đơn cạn người để chốt. Kế hoạch tốt ghi rõ vai trò của từng kênh trước khi chia tiền.' },
@@ -120,7 +120,7 @@ BAI_ADD({ mod:'kn10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kn10-03', skill:'channel', read:'7 phút', t:'Chiến dịch Tết nên bắt đầu từ lúc nào?',
+{ id:'B:kn10-03', skill:'channel', read:'7 phút', assume:true, t:'Chiến dịch Tết nên bắt đầu từ lúc nào?',
   situation:'Một hãng bánh kẹo lên kế hoạch Tết với 3 tỷ. Bản nháp dồn toàn bộ tiền vào 3 tuần trước Tết: TVC, KOL, khuyến mãi siêu thị cùng nổ một lúc. Không có gì chạy trước để khách biết mẫu hộp mới, và không có gì chạy sau Tết để giữ người đã mua.',
   concept:{ name:'Lịch chiến dịch ba pha: trước – trong – sau',
     body:'Một chiến dịch có ba pha. <b>Trước</b> (teasing, làm nóng): gieo ý tưởng, cho khách biết sắp có gì, xây tệp để nhắm lại. <b>Trong</b> (cao điểm): độ phủ lớn nhất, khuyến mãi, kênh chốt đơn chạy mạnh. <b>Sau</b> (duy trì): cảm ơn, nhắc mua lại, thu nội dung khách tạo ra. Dồn hết vào cao điểm thì tiền đắt nhất (giá quảng cáo mùa cao điểm tăng) mà người xem lần đầu nghe đến bạn đúng lúc họ đã quyết. Độ dài pha trước theo chu kỳ mua: quà biếu doanh nghiệp phải duyệt và đặt sớm nhiều tuần, khách lẻ mua sát Tết, nên chia theo tệp chứ không dùng một mốc chung.' },
@@ -177,7 +177,7 @@ BAI_ADD({ mod:'kn10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kn10-04', skill:'channel', read:'7 phút', t:'Khách gặp thương hiệu theo thứ tự nào?',
+{ id:'B:kn10-04', skill:'channel', read:'7 phút', assume:true, t:'Khách gặp thương hiệu theo thứ tự nào?',
   situation:'Một chuỗi phòng gym ở Hà Nội chạy chiến dịch tháng 1. Quảng cáo Facebook dẫn người xem vào thẳng trang "Đăng ký gói 12 tháng — 9 triệu". Tỉ lệ đăng ký dưới 0,3%. Khảo sát nhỏ cho thấy phần lớn người bấm chưa từng nghe tên phòng gym và chưa biết nó ở đâu.',
   concept:{ name:'Chuỗi điểm chạm (customer journey)',
     body:'Khách hiếm khi mua ở lần gặp đầu tiên với một món đắt. Họ đi qua một <b>chuỗi điểm chạm</b>: thấy lần đầu, tìm hiểu thêm, so sánh, thử, rồi mới mua. Kế hoạch tích hợp vẽ chuỗi này ra, đặt mỗi kênh vào đúng chỗ với lời mời phù hợp, và đo <b>tỉ lệ đi tiếp ở từng bước</b>: bước nào rơi mạnh nhất thì sửa bước đó, không đổ thêm tiền vào đầu chuỗi. Hỏi người mới gặp "đăng ký 12 tháng" giống cầu hôn ở lần gặp đầu. Món càng đắt, chuỗi càng dài; món rẻ mua theo thói quen thì chuỗi có thể chỉ một hai bước.' },
@@ -234,10 +234,11 @@ BAI_ADD({ mod:'kn10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kn10-05', skill:'channel', read:'7 phút', t:'Có 50 triệu thì kế hoạch khác 5 tỷ ở đâu?',
+{ id:'B:kn10-05', skill:'channel', read:'7 phút', assume:true, t:'Có 50 triệu thì kế hoạch khác 5 tỷ ở đâu?',
+  src:[{ t:'Meta Business Help Center: giai đoạn học (learning phase) — tìm “About the learning phase”', u:'https://www.facebook.com/business/help/search?q=learning%20phase', d:'2026-11-07', st:'chua' }],
   situation:'Hai bản kế hoạch đặt cạnh nhau. Một tiệm bánh mì ở Đà Nẵng có 50 triệu cho ba tháng. Một hãng bánh mì đóng gói toàn quốc có 5 tỷ. Chủ tiệm nhỏ sao chép khung của hãng lớn: TVC, KOL, Facebook, TikTok, Google, Shopee — mỗi kênh vài triệu.',
   concept:{ name:'Số kênh theo ngân sách',
-    body:'Mỗi kênh cần một mức tối thiểu để có tác dụng, và bạn ước được nó bằng phép tính ngược: <b>tiền tối thiểu = số kết quả cần có ÷ tỉ lệ chuyển đổi × giá mỗi nhấp</b>. Chẳng hạn Meta thường cần khoảng 50 sự kiện tối ưu mỗi 7 ngày cho mỗi nhóm quảng cáo thì hệ thống mới học xong; không đủ tiền cho mức đó thì tối ưu theo sự kiện nhẹ hơn (nhắn tin, nhấp) hoặc bỏ kênh. Cách chọn kênh: hỏi khách đang biết bạn từ đâu rồi dồn vào nơi khách sát nhất, cộng kênh sở hữu (không mất tiền mua chỗ, vẫn tốn công). Ngân sách lớn mới đủ ngưỡng cho nhiều kênh và phân vai đầy đủ. Ý tưởng vẫn một, số kênh thay đổi.' },
+    body:'Mỗi kênh cần một mức tối thiểu để có tác dụng, và bạn ước được nó bằng phép tính ngược: <b>tiền tối thiểu = số kết quả cần có ÷ tỉ lệ chuyển đổi × giá mỗi nhấp</b>. Chẳng hạn theo tài liệu Meta Business Help tại ngày kiểm, Meta thường cần khoảng 50 sự kiện tối ưu mỗi 7 ngày cho mỗi nhóm quảng cáo thì hệ thống mới học xong (nếu màn hình của bạn báo con số khác, tin trang chính thức); không đủ tiền cho mức đó thì tối ưu theo sự kiện nhẹ hơn (nhắn tin, nhấp) hoặc bỏ kênh. Cách chọn kênh: hỏi khách đang biết bạn từ đâu rồi dồn vào nơi khách sát nhất, cộng kênh sở hữu (không mất tiền mua chỗ, vẫn tốn công). Ngân sách lớn mới đủ ngưỡng cho nhiều kênh và phân vai đầy đủ. Ý tưởng vẫn một, số kênh thay đổi.' },
   example:'Tiệm bánh mì hỏi khách một tuần "anh chị biết tiệm từ đâu": 62% ở hoặc đi ngang trong 2 km, 25% thấy trên Google Maps, 13% bạn giới thiệu (minh hoạ). Tối ưu theo đơn cần 50 đơn × 150.000đ = 7,5 triệu mỗi tuần, trong khi 50 triệu chia 13 tuần chỉ khoảng 3,8 triệu. Nên tiệm chạy Facebook bán kính 2 km, tối ưu theo tin nhắn đặt bánh (30 triệu), hai food reviewer địa phương (10 triệu), bảng hiệu và tờ rơi (10 triệu); Zalo OA và Maps tự làm. Hãng 5 tỷ đủ ngưỡng cho TVC 2 tỷ, KOL 1 tỷ, siêu thị 1,2 tỷ, sàn 600 triệu, kênh sở hữu 200 triệu.',
   takeaway:'Ngân sách nhỏ thì ít kênh và sâu; ngân sách lớn mới phủ rộng và phân vai đầy đủ.',
   apply:'Giả sử bạn có 20 triệu cho một quán cà phê. Nói trong 60 giây: bạn chọn tối đa mấy kênh, kênh nào, và vì sao.',
@@ -257,7 +258,7 @@ BAI_ADD({ mod:'kn10', lessons:[
       b:'Số liệu cho thấy gần 90% khách ở quanh tiệm hoặc tìm trên Maps; KOL toàn quốc trả tiền cho người không thể đến mua.',
       c:'Đúng. Dồn tiền vào nơi khách thật sự đến từ, cộng kênh sở hữu ít tốn tiền.',
       d:'Chờ đợi mất doanh thu mỗi tuần; 50 triệu tập trung đúng nơi vẫn đủ để chạy.'} },
-  { type:'calc', stem:'Meta cần khoảng 50 đơn mỗi tuần cho một nhóm quảng cáo để học xong. Giả định (minh hoạ) 2% lượt nhấp ra đơn, mỗi nhấp 3.000đ. Cần bao nhiêu triệu đồng mỗi tuần?',
+  { type:'calc', stem:'Giả định nền tảng cần khoảng 50 đơn mỗi tuần cho một nhóm quảng cáo để học xong (ngưỡng theo trang chính thức của Meta tại ngày kiểm). Giả định (minh hoạ) 2% lượt nhấp ra đơn, mỗi nhấp 3.000đ. Cần bao nhiêu triệu đồng mỗi tuần?',
     unit:'triệu đồng', ans:7.5, tol:0.05, wrong:[[0.15,'QUEN_TI_LE_CHUYEN_DOI'],[0.003,'SAI_MAU_SO']], errors:['QUEN_TI_LE_CHUYEN_DOI','SAI_MAU_SO'],
     steps:['Số nhấp cần = 50 đơn ÷ 2% = 2.500 nhấp.','Tiền = 2.500 × 3.000đ = 7.500.000đ = <b>7,5 triệu</b> mỗi tuần. Lấy 50 × 3.000đ = 150.000đ là quên tỉ lệ chuyển đổi.'] },
   { type:'mcq', stem:'Vì sao hãng 5 tỷ vẫn dành 200 triệu cho kênh sở hữu dù đã có TVC lớn?',
@@ -291,7 +292,7 @@ BAI_ADD({ mod:'kn10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kn10-06', skill:'channel', read:'6 phút', t:'Một thông điệp, nhưng mỗi kênh một hình dạng?',
+{ id:'B:kn10-06', skill:'channel', read:'6 phút', assume:true, t:'Một thông điệp, nhưng mỗi kênh một hình dạng?',
   situation:'Hãng sữa chua uống có ý tưởng "Mỗi ngày một hũ, bụng nhẹ cả ngày". Agency làm một TVC 30 giây rồi dùng nguyên video đó cho TikTok, banner Shopee cắt từ khung hình TVC, poster siêu thị cũng vậy. Video trên TikTok bị lướt sau 2 giây, banner nhỏ đến mức không đọc được chữ.',
   concept:{ name:'Nhất quán ý, khác định dạng',
     body:'Tích hợp là giữ <b>ý tưởng, giọng và dấu hiệu nhận diện</b> giống nhau, nhưng để mỗi kênh có hình dạng riêng. TikTok cần video dọc, móc câu trong 2 giây đầu. Banner sàn cần một chữ lớn, sản phẩm rõ, đọc được trên điện thoại. Poster kệ cần đọc từ xa 2 mét. Email cần tiêu đề khiến người ta mở. Mỗi hình dạng có chỉ số kiểm tra riêng: tỉ lệ xem qua 3 giây đầu cho video dọc, CTR cho banner, tỉ lệ mở cho email. Sao chép một định dạng cho mọi nơi là nhất quán sai chỗ: đúng ý nhưng không ai tiếp nhận được.' },
@@ -351,7 +352,7 @@ BAI_ADD({ mod:'kn10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kn10-07', skill:'comm', read:'7 phút', t:'Bốn agency, ai giữ câu chuyện chung?',
+{ id:'B:kn10-07', skill:'comm', read:'7 phút', assume:true, t:'Bốn agency, ai giữ câu chuyện chung?',
   situation:'Một hãng điện máy thuê bốn đơn vị: agency sáng tạo làm TVC, agency media mua quảng cáo, agency KOL, và một đội thương mại điện tử. Mỗi đơn vị có brief riêng, họp riêng với một người khác nhau bên hãng. Hai tuần trước ngày chạy, KOL đã quay xong với thông điệp giá rẻ trong khi TVC nói về độ bền.',
   concept:{ name:'Điều phối nhiều agency',
     body:'Nhiều đơn vị cùng làm một chiến dịch cần ba thứ: <b>một bản brief gốc</b> chung cho mọi bên (ý tưởng, đối tượng, vai kênh, chỉ số), <b>một người chủ trì</b> bên hãng có quyền quyết khi các bên lệch nhau (nên là người giữ mục tiêu kinh doanh, vì mỗi agency tối ưu thứ riêng: media thường được tính theo mức chi, sáng tạo theo ý tưởng), và <b>lịch chung</b> có điểm duyệt chéo — trước khi sản xuất, các bên xem bản nháp của nhau. Thiếu một trong ba, mỗi agency sẽ tối ưu phần việc của mình, và khách nhận về bốn chiến dịch.' },
@@ -411,7 +412,7 @@ BAI_ADD({ mod:'kn10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kn10-08', skill:'measure', read:'7 phút', t:'Đo từng kênh hay đo cả chiến dịch?',
+{ id:'B:kn10-08', skill:'measure', read:'7 phút', assume:true, t:'Đo từng kênh hay đo cả chiến dịch?',
   situation:'Sau chiến dịch 2 tỷ của một hãng dầu gội, mỗi kênh gửi báo cáo riêng: TikTok 40 triệu lượt xem, KOL 2.000 đơn qua mã giảm giá, Shopee 6.000 đơn, Google 1.500 đơn. Cộng lại 9.500 đơn. Nhưng kho chỉ xuất 7.000 đơn mới trong kỳ. Sếp hỏi: rốt cuộc chiến dịch hiệu quả đến đâu?',
   concept:{ name:'Chỉ số từng kênh và chỉ số chung',
     body:'Mỗi kênh có <b>chỉ số theo vai</b>: độ phủ cho kênh làm biết, xem hết hoặc tìm kiếm tăng cho kênh làm tin, đơn và ROAS cho kênh chốt, mua lại cho kênh giữ khách. Nhưng mỗi nền tảng tự nhận công cho cùng một đơn, nên cộng các báo cáo kênh thường lớn hơn thực tế. Vì vậy cần thêm <b>một chỉ số chung</b> ở cấp doanh nghiệp: đơn thật, doanh thu thật, mức nhớ thương hiệu. Ngay đơn thật cũng chưa phải đơn do chiến dịch tạo ra, vì một phần là <b>đơn nền</b> vốn có dù không chạy. Phần đáng tính công là <b>đơn tăng thêm</b> = đơn kỳ chạy − đơn nền, cùng mùa vụ, cùng cách trừ hoàn. Chỉ số kênh để chỉnh kênh; chỉ số chung để trả lời có đáng tiền không, bằng cách đặt đơn tăng thêm cạnh lãi gộp.' },
@@ -468,7 +469,7 @@ BAI_ADD({ mod:'kn10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:kn10-09', skill:'channel', read:'6 phút', t:'Rà soát gì trước khi bấm chạy?',
+{ id:'B:kn10-09', skill:'channel', read:'6 phút', assume:true, t:'Rà soát gì trước khi bấm chạy?',
   situation:'Tối trước ngày chạy chiến dịch 11.11, một hãng giày phát hiện: link trong bio TikTok dẫn tới trang 404, mã giảm giá của KOL chưa được tạo trên Shopee, banner sàn ghi giảm 30% còn email ghi giảm 25%. Còn 8 tiếng. Không ai trong nhóm có danh sách kiểm tra chung.',
   concept:{ name:'Danh sách rà soát trước khi chạy',
     body:'Một kế hoạch tích hợp có nhiều mắt xích; hỏng một chỗ là đứt cả chuỗi. Rà soát đi theo <b>hành trình của khách</b>, không theo từng kênh: bấm thử từ quảng cáo tới thanh toán trên điện thoại, đặt một đơn thử, nhập thử từng mã, so mọi con số (giá, % giảm, ngày) giữa các ấn phẩm và thử tải cho giờ cao điểm. Xếp lỗi theo <b>ba mức</b>: chặn mua (khách không trả tiền được), sai niềm tin (con số lệch, hứa một đằng làm một nẻo), mất đo lường (pixel, UTM hỏng nên chạy xong không biết kết quả). Sửa theo thứ tự số khách bị chặn nhân mức nặng, không theo thứ tự tìm thấy. Danh sách viết từ trước, mỗi dòng có người chịu trách nhiệm, rà xong 48 giờ trước giờ G.' },
@@ -525,7 +526,7 @@ BAI_ADD({ mod:'kn10', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:kn10-10', skill:'channel', read:'7 phút', t:'Một kênh hỏng giữa chừng thì làm gì?',
+{ id:'B:kn10-10', skill:'channel', read:'7 phút', assume:true, t:'Một kênh hỏng giữa chừng thì làm gì?',
   situation:'Tuần thứ hai của chiến dịch ra mắt nồi chiên không dầu, tài khoản quảng cáo Facebook của hãng bị tạm khoá để xem xét. Kênh này chiếm 40% ngân sách 1 tỷ và đang mang về phần lớn lượt vào trang. Nhóm hoảng loạn: có người đòi dừng cả chiến dịch, có người đòi dồn hết tiền sang TikTok ngay trong đêm.',
   concept:{ name:'Kế hoạch dự phòng (plan B)',
     body:'Kế hoạch tích hợp tốt viết sẵn <b>phương án dự phòng</b> cho những kênh rủi ro cao: tài khoản bị khoá, KOL gặp sự cố, sàn đổi chính sách, hết hàng. Mỗi phương án ghi: dấu hiệu kích hoạt, kênh thay thế, phần tiền chuyển sang, người quyết. Kênh thay thế nên đã được <b>chạy thử nhỏ từ trước</b> để có sẵn tài khoản, nội dung và số liệu. Không dồn hết tiền sang một kênh chưa thử: nó cần thời gian học, và tăng ngân sách thì nên theo từng bước. Phòng ngừa từ đầu: nhiều quản trị viên, một tài khoản dự phòng đã xác minh, và danh sách khách xuất ra lưu riêng, vì mất tài khoản là mất luôn tệp nhắm lại và dữ liệu đo.' },

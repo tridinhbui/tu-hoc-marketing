@@ -3,11 +3,11 @@
 BAI_ADD({ mod:'tn05', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tn05-01', skill:'measure', read:'6 phút', t:'Ra mắt toàn quốc ngay hay bán thử ở một vùng trước?',
+{ id:'B:tn05-01', skill:'measure', read:'6 phút', assume:true, t:'Ra mắt toàn quốc ngay hay bán thử ở một vùng trước?',
   situation:'Một hãng nước uống ở Bình Dương làm xong dòng trà thảo mộc đóng chai. Giám đốc muốn phủ 3.000 cửa hàng trên cả nước trong tháng đầu, kèm quảng cáo trên TikTok và YouTube. Bạn đề xuất bán thử ở 150 cửa hàng tại Thủ Dầu Một trong 6 tuần trước. Giám đốc hỏi: thử như vậy mất thời gian, đối thủ bắt chước thì sao?',
   concept:{ name:'Ra mắt mềm (soft launch)',
     body:'Ra mắt mềm là bán thật, cho khách thật trả tiền thật, nhưng ở phạm vi nhỏ. Mục tiêu không phải doanh số mà là <b>trả lời vài câu hỏi trước khi chi lớn</b>: khách có mua lại không, hàng có về kịp cửa hàng không, giá có ổn không, bao bì có bị bỏ qua trên kệ không. Chỉ số quan trọng nhất ở giai đoạn này thường là <b>tỉ lệ mua lại</b>, vì lần mua đầu có thể do tò mò hay khuyến mãi, còn lần thứ hai mới cho biết sản phẩm có chỗ trong đời sống của khách. Soft launch đáng giá khi cái giá của một lần ra mắt hỏng lớn hơn nhiều so với vài tuần chậm.' },
-  example:'Sau 6 tuần ở 150 cửa hàng: 2.400 khách mua lần đầu, 480 người mua lần hai, tỉ lệ mua lại 20%. Hãng đặt ngưỡng trước là 30%. Phỏng vấn nhanh ở quầy cho thấy nhiều người chê vị đắng hậu. Hãng giảm độ đắng, thử thêm 4 tuần, mua lại lên 34%. Nếu phủ thẳng 3.000 cửa hàng với công thức cũ, phần lớn ngân sách quảng cáo sẽ đổ vào một sản phẩm khách thử một lần rồi thôi.',
+  example:'Sau 6 tuần ở 150 cửa hàng, nhận diện khách qua số điện thoại tích điểm ở quầy: 2.400 khách mua lần đầu trong tuần 1–2, 480 người trong số đó mua lần hai trong 4 tuần kế tiếp — tỉ lệ mua lại (cửa sổ 4 tuần) 20%. Hãng đặt ngưỡng trước là 30% (số minh hoạ; ngưỡng lấy từ tỉ lệ mua lại cùng cửa sổ của dòng trà hiện có của hãng). Phỏng vấn nhanh ở quầy cho thấy nhiều người chê vị đắng hậu. Hãng giảm độ đắng, thử thêm một vòng, đo cùng cách và cùng cửa sổ 4 tuần, mua lại lên 34%. Nếu phủ thẳng 3.000 cửa hàng với công thức cũ, phần lớn ngân sách quảng cáo sẽ đổ vào một sản phẩm khách thử một lần rồi thôi.',
   takeaway:'Bán thử nhỏ để biết khách có quay lại không; chi lớn chỉ sau khi con số mua lại vượt ngưỡng đã đặt.',
   apply:'Chọn một sản phẩm sắp ra mắt ở nơi bạn làm. Nói trong 60 giây: vùng thử nào, bao lâu, và con số nào phải đạt thì mới mở rộng.',
   mistakes:['Đo soft launch bằng doanh số tổng thay vì tỉ lệ mua lại.','Không đặt ngưỡng trước, xong rồi mới giải thích kết quả theo ý mình.','Thử ở vùng quá đặc biệt (gần nhà máy, nhiều người quen) nên số đẹp giả.'],
@@ -60,11 +60,11 @@ BAI_ADD({ mod:'tn05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tn05-02', skill:'channel', read:'7 phút', t:'Quảng cáo đã chạy mà khách ra tiệm không thấy hàng',
+{ id:'B:tn05-02', skill:'channel', read:'7 phút', assume:true, t:'Quảng cáo đã chạy mà khách ra tiệm không thấy hàng',
   situation:'Một hãng bánh snack ra mắt vị mới, chạy quảng cáo trên YouTube và TikTok toàn quốc ngay từ ngày 1 với ngân sách 600 triệu đồng cho tháng đầu. Đến tuần thứ hai, đội bán hàng báo: hàng mới chỉ có mặt ở 30% cửa hàng tạp hoá mục tiêu. Bình luận dưới video có nhiều câu kiểu: "Tìm mãi không thấy bán ở đâu".',
   concept:{ name:'Phủ hàng trước, quảng cáo sau',
     body:'Quảng cáo tạo ý muốn mua, nhưng ý muốn chỉ thành doanh số khi khách gặp được hàng. Chỉ số cần theo dõi là <b>độ phủ</b>: tỉ lệ điểm bán mục tiêu đang có hàng trên kệ. Nếu độ phủ thấp, phần lớn tiền quảng cáo rơi vào những người không thể mua, và họ còn có trải nghiệm tệ: tìm không thấy, lấy hàng đối thủ. Thứ tự đúng là đưa hàng tới điểm bán, kiểm tra hàng đã lên kệ thật, rồi mới bật quảng cáo diện rộng. Nếu buộc phải chạy sớm, hãy giới hạn quảng cáo theo vùng đã có hàng.' },
-  example:'Độ phủ 30% nghĩa là khoảng 70% người xem quảng cáo sống quanh những tiệm chưa có hàng. Với 600 triệu đồng, khoảng 420 triệu đồng đang tạo nhu cầu không có chỗ mua. Hãng tạm cắt quảng cáo toàn quốc, chỉ chạy ở các quận đã phủ trên 70%, dồn đội bán hàng đưa hàng ra tiệm trong 3 tuần, rồi mới bật lại diện rộng khi độ phủ chung đạt 65%.',
+  example:'Độ phủ 30% tính theo số tiệm. Nếu giả định các tiệm có lượng khách tương đương và người xem quảng cáo rải đều, thì khoảng 70% người xem sống quanh những tiệm chưa có hàng, và với 600 triệu đồng, khoảng 420 triệu đồng đang tạo nhu cầu không có chỗ mua. Thực tế đội bán hàng thường phủ tiệm lớn, đông khách trước, nên độ phủ tính theo lượng khách (độ phủ có trọng số) thường cao hơn 30% và 420 triệu là mức ước lượng cao nhất. Hãng tạm cắt quảng cáo toàn quốc, chỉ chạy ở các quận đã phủ trên 70%, dồn đội bán hàng đưa hàng ra tiệm trong 3 tuần, rồi mới bật lại diện rộng khi độ phủ chung đạt 65%.',
   takeaway:'Tiền quảng cáo chỉ sinh doanh số ở nơi khách với tới được hàng; đo độ phủ trước khi bật quảng cáo.',
   points:["Quảng cáo chỉ làm tăng ý định, còn hàng trên kệ mới biến ý định thành đơn. Người đã muốn mua mà không có hàng thường chọn món thay thế.","Độ phủ phải đo tại điểm bán, bằng người đi kiểm tra kệ, không bằng báo cáo xuất kho. Hàng nằm trong kho nhà phân phối chưa gọi là có mặt.","Giới hạn quảng cáo theo vùng đã có hàng giữ lại hiệu quả của từng đồng. Vùng phủ cao thu được đơn, còn vùng phủ thấp được chuẩn bị bằng việc đưa hàng đi trước."],
   counter:"Giả sử cũng hãng snack, nhưng sản phẩm bán qua sàn online, nơi người mua gặp hàng chỉ bằng một cú bấm. Khi đó độ phủ vật lý không còn là nút thắt, và chạy quảng cáo diện rộng ngay có thể đúng. Dấu hiệu nhận ra: bình luận không còn câu hỏi mua ở đâu, rủi ro chuyển sang hết hàng ở kho. Lúc đó hãy kiểm tra tồn kho và thời gian giao.",
@@ -93,7 +93,7 @@ BAI_ADD({ mod:'tn05', lessons:[
       b:'Không cần giả định gian lận; kể cả báo đúng thì hàng vẫn có thể đang nằm ở kho.',
       c:'Không có quy tắc như vậy; điều kiện là hàng đã lên kệ, không phải số tháng.',
       d:'Không có ràng buộc đó; nhà phân phối muốn bán càng nhanh càng tốt.'} },
-  { type:'calc', stem:'Ngân sách quảng cáo tháng đầu 600 triệu đồng, chạy đều toàn quốc. Độ phủ hàng là 30%. Ước tính bao nhiêu triệu đồng đang chi cho người sống quanh những tiệm chưa có hàng?',
+  { type:'calc', stem:'Ngân sách quảng cáo tháng đầu 600 triệu đồng, chạy đều toàn quốc. Độ phủ hàng là 30% số tiệm; giả sử các tiệm có lượng khách tương đương. Ước tính bao nhiêu triệu đồng đang chi cho người sống quanh những tiệm chưa có hàng?',
     unit:'triệu đồng', ans:420, tol:1, wrong:[[180,'NHAM_TI_LE_ROI'],[200,'SAI_TINH_TOAN']], errors:['NHAM_TI_LE_ROI'],
     steps:['Phần chưa có hàng = 100% − 30% = 70%.','600 × 70% = <b>420 triệu đồng</b>.'] },
   { type:'mcq', stem:'Một thương hiệu mỹ phẩm bán online mở bán sản phẩm mới trên Shopee. Việc "phủ hàng trước" trong trường hợp này tương ứng với điều gì?',
@@ -120,22 +120,22 @@ BAI_ADD({ mod:'tn05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tn05-03', skill:'comm', read:'6 phút', t:'Nhân viên quầy chưa biết món mới thì ai giới thiệu cho khách?',
+{ id:'B:tn05-03', skill:'comm', read:'6 phút', assume:true, t:'Nhân viên quầy chưa biết món mới thì ai giới thiệu cho khách?',
   situation:'Một chuỗi 40 cửa hàng cà phê ra dòng đồ uống kem muối. Tài liệu đào tạo gửi qua nhóm Zalo một ngày trước ra mắt. Tuần đầu, 12 cửa hàng có quản lý tự tổ chức buổi uống thử cho nhân viên. Ở 12 cửa hàng đó, 18% hoá đơn có món mới; ở 28 cửa hàng còn lại chỉ 7%. Khách hỏi "món này vị gì" thì nhân viên đáp "em cũng chưa uống".',
   concept:{ name:'Nội bộ là khán giả đầu tiên',
     body:'Trước khi thuyết phục khách, phải thuyết phục những người đứng giữa sản phẩm và khách: nhân viên quầy, đội bán hàng, chủ tiệm tạp hoá, tư vấn viên. Họ trả lời câu hỏi, gợi ý món, xếp hàng lên kệ. Nếu họ không hiểu hay không tin sản phẩm, quảng cáo tốt đến đâu cũng tắt ở quầy. Ra mắt nội bộ cần ba thứ: <b>họ đã tự dùng thử</b>, họ nói được một câu vì sao nên chọn, và họ biết trả lời hai ba câu hỏi hay gặp. Việc này phải xong trước ngày khách đầu tiên bước vào.' },
-  example:'Chênh lệch 18% và 7% gợi ý phần lớn khoảng cách đến từ đào tạo, vì 40 cửa hàng cùng giá và cùng quảng cáo. Chuỗi tổ chức uống thử ở 28 cửa hàng còn lại trong tuần thứ hai, kèm một thẻ nhỏ ở quầy với câu gợi ý: "Anh chị thử kem muối không, béo mà không ngấy". Hai tuần sau, tỉ lệ hoá đơn có món mới ở nhóm này lên 15%.',
+  example:'Chênh lệch 18% và 7% là tương quan, chưa phải bằng chứng: 12 cửa hàng tự tổ chức uống thử là nhóm tự chọn, quản lý chủ động thường vận hành tốt hơn ở mọi mặt (trưng bày, tốc độ, gợi ý thêm). Dù vậy 40 cửa hàng cùng giá và cùng quảng cáo, nên đào tạo là giả thuyết đáng thử nhất. Chuỗi tổ chức uống thử ở 28 cửa hàng còn lại trong tuần thứ hai, kèm một thẻ nhỏ ở quầy với câu gợi ý: "Anh chị thử kem muối không, béo mà không ngấy". Hai tuần sau, tỉ lệ hoá đơn có món mới ở nhóm này lên 15% — tăng rõ nhưng không tới 18%, cho thấy một phần chênh ban đầu đến từ chất lượng quản lý. Muốn chắc, lần sau chọn ngẫu nhiên cửa hàng được đào tạo trước.',
   takeaway:'Người đứng quầy phải uống thử và nói được một câu về món mới trước khi khách đầu tiên hỏi.',
   apply:'Viết một câu gợi ý dài dưới 15 chữ mà nhân viên có thể nói với khách về một sản phẩm bạn biết.',
   mistakes:['Gửi tài liệu qua nhóm chat rồi coi như đã đào tạo.','Đào tạo quản lý nhưng không tới được nhân viên ca tối, ca cuối tuần.'],
   q:[
-  { type:'mcq', stem:'Đoán trước: cùng một món mới, cùng quảng cáo, vì sao cửa hàng này bán gấp đôi cửa hàng kia?',
+  { type:'mcq', stem:'Đoán trước: hai cửa hàng cùng chuỗi, cùng loại vị trí và cùng bộ vật phẩm trưng bày, cùng một món mới, cùng quảng cáo — vì sao cửa hàng này bán gấp đôi cửa hàng kia?',
     options:[{k:'a',t:'Nhân viên ở đó đã thử món và chủ động gợi ý cho khách'},{k:'b',t:'Cửa hàng đó nằm ở khu dân cư có thu nhập cao hơn hẳn'},
              {k:'c',t:'Cửa hàng đó có nhiều khách quen nên ai cũng thử món mới'},{k:'d',t:'Cửa hàng đó treo poster lớn hơn nên khách dễ nhìn thấy hơn'}],
     answer:'a', why:{a:'Đúng. Trong một chuỗi cùng giá, cùng quảng cáo, người đứng quầy thường tạo khác biệt lớn nhất.',
-      b:'Thu nhập có ảnh hưởng, nhưng khó giải thích mức chênh gấp đôi khi các cửa hàng khác cũng ở khu tương tự.',
+      b:'Thu nhập có ảnh hưởng, nhưng đề cho biết hai cửa hàng cùng loại vị trí, nên khó giải thích mức chênh gấp đôi bằng khu dân cư.',
       c:'Khách quen thường gọi món cũ; họ thử món mới khi có người gợi ý.',
-      d:'Poster giúp khách biết món có, nhưng quyết định gọi thường xảy ra trong vài giây trao đổi ở quầy.'} },
+      d:'Hai cửa hàng cùng bộ vật phẩm trưng bày nên poster không khác; và quyết định gọi thường xảy ra trong vài giây trao đổi ở quầy.'} },
   { type:'mcq', stem:'Còn 5 ngày đến ra mắt món mới cho 40 cửa hàng. Bạn chọn làm gì với nhân viên?',
     options:[{k:'a',t:'Gửi video hướng dẫn pha chế qua nhóm Zalo cho tất cả nhân viên xem'},{k:'b',t:'Mỗi cửa hàng uống thử cả ca, tập một câu gợi ý và hai câu trả lời hay gặp'},
              {k:'c',t:'Chỉ đào tạo quản lý cửa hàng, quản lý sẽ tự truyền đạt lại cho nhân viên'},{k:'d',t:'Treo thêm poster tại quầy để khách tự đọc, nhân viên không cần giới thiệu'}],
@@ -177,11 +177,12 @@ BAI_ADD({ mod:'tn05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tn05-04', skill:'insight', read:'6 phút', t:'Khách đầu tiên của sản phẩm mới nên là ai?',
+{ id:'B:tn05-04', skill:'insight', read:'6 phút', assume:true, t:'Khách đầu tiên của sản phẩm mới nên là ai?',
   situation:'Một thương hiệu nước mắm nhỏ ở Phú Quốc ra dòng nước mắm nhĩ 40 độ đạm, giá 180.000 đồng/chai, gấp ba loại phổ thông. Đội marketing muốn chạy quảng cáo rộng cho mọi bà nội trợ ở TP.HCM. Trong danh sách khách cũ có 3.200 người đã mua loại 30 độ đạm ít nhất ba lần qua website.',
   concept:{ name:'Nhóm khách đầu tiên (beachhead)',
     body:'Sản phẩm mới không cần cả thị trường ngay. Nó cần một nhóm nhỏ mà <b>nhu cầu mạnh nhất, dễ với tới nhất và dễ nói lại với người khác nhất</b>. Nhóm này mua trước, cho phản hồi thật, tạo đánh giá và lời giới thiệu để nhóm lớn hơn tin theo. Thường đó là khách cũ đã tin thương hiệu, hoặc nhóm có vấn đề cụ thể mà sản phẩm giải quyết rõ nhất. Chọn đúng nhóm đầu giúp tiền quảng cáo đầu tiên không rải mỏng lên những người chưa sẵn sàng trả giá cao.' },
-  example:'3.200 khách mua lặp lại đã tin chất lượng và quen mua online. Hãng gửi tin nhắn mời mua thử kèm tặng chai nhỏ 60 ml: 640 người mua, 20%. Họ để lại 150 đánh giá có ảnh trong tháng đầu. Khi chạy quảng cáo rộng ở tháng thứ hai, trang sản phẩm đã có bằng chứng từ người thật, tỉ lệ chuyển đổi thường cao hơn so với lúc trang còn trống (nghiên cứu của Spiegel Research Center ghi nhận mức tăng rõ khi trang có vài đánh giá đầu tiên; mức tăng cụ thể tuỳ ngành và giá).',
+  example:'3.200 khách mua lặp lại đã tin chất lượng và quen mua online. Hãng gửi tin nhắn mời mua thử kèm tặng chai nhỏ 60 ml: 640 người mua, 20%. Họ để lại 150 đánh giá có ảnh trong tháng đầu. Khi chạy quảng cáo rộng ở tháng thứ hai, trang sản phẩm đã có bằng chứng từ người thật, tỉ lệ chuyển đổi thường cao hơn so với lúc trang còn trống (theo nghiên cứu “How Online Reviews Influence Sales” của Spiegel Research Center, Northwestern, 2017, tại ngày kiểm: mức tăng rõ khi trang có vài đánh giá đầu tiên; mức tăng cụ thể tuỳ ngành và giá). Chi phí đợt (số minh hoạ): chai 60 ml giá vốn 15k × 640 = 9,6 triệu, tin nhắn khoảng 2,6 triệu, tổng ≈ 12,2 triệu, trong 20 triệu ngân sách tháng đầu (Q2); lãi gộp 60k/chai × 640 = 38,4 triệu, nên đợt vừa có lãi vừa có 150 đánh giá — khoảng 81k mỗi đánh giá.',
+  src:[{ t:'Spiegel Research Center (Medill, Northwestern University), “How Online Reviews Influence Sales”, 2017', u:'https://spiegel.medill.northwestern.edu/online-reviews/', d:'2026-11-07', st:'chua' }],
   takeaway:'Bán cho người sẵn sàng nhất trước; lời của họ là thứ thuyết phục nhóm tiếp theo.',
   apply:'Nói trong 60 giây: với một sản phẩm mới bạn biết, 500 khách đầu tiên là ai và bạn liên lạc họ bằng kênh nào.',
   mistakes:['Nhắm "tất cả mọi người" ngay từ đầu vì sợ bỏ sót khách.','Chọn nhóm đầu theo độ lớn, không theo mức sẵn sàng mua.'],
@@ -234,7 +235,7 @@ BAI_ADD({ mod:'tn05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tn05-05', skill:'measure', read:'7 phút', t:'Đặt mục tiêu gì cho tuần đầu và tháng đầu ra mắt?',
+{ id:'B:tn05-05', skill:'measure', read:'7 phút', assume:true, t:'Đặt mục tiêu gì cho tuần đầu và tháng đầu ra mắt?',
   situation:'Một thương hiệu sữa hạt ra mắt dòng mới trên Shopee và 200 cửa hàng tiện lợi. Giám đốc đặt mục tiêu duy nhất: 3 tỉ đồng doanh số tháng đầu. Tuần đầu đạt 500 triệu đồng, cả đội hoảng. Nhưng chưa ai xem có bao nhiêu người mua lần hai, hàng đã lên kệ ở bao nhiêu cửa hàng, hay khách đánh giá ra sao.',
   concept:{ name:'Mục tiêu theo giai đoạn',
     body:'Một con số doanh số cho cả tháng đầu che mất câu hỏi quan trọng: <b>trục trặc ở khâu nào</b>. Tốt hơn là đặt mục tiêu theo thứ tự các việc phải xảy ra. Tuần 1–2: hàng có mặt (độ phủ), khách thấy và mua thử (số người mua lần đầu). Tuần 3–4: khách quay lại (tỉ lệ mua lại), đánh giá tốt. Tháng 2–3 mới đến doanh số ổn định. Mỗi mốc là chỉ số dẫn dắt cho mốc sau. Nếu mốc đầu trượt, sửa ngay thay vì chờ cuối tháng mới biết doanh số hụt.' },
@@ -294,7 +295,7 @@ BAI_ADD({ mod:'tn05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tn05-06', skill:'creative', read:'6 phút', t:'Có nên chạy teaser gây tò mò trước ngày ra mắt?',
+{ id:'B:tn05-06', skill:'creative', read:'6 phút', assume:true, t:'Có nên chạy teaser gây tò mò trước ngày ra mắt?',
   situation:'Một hãng giày nội địa định chi 150 triệu đồng cho hai tuần teaser trước khi mở bán mẫu mới: video bí ẩn, đếm ngược, không lộ sản phẩm. Ngày mở bán chỉ có 800 đôi, bán qua website. Trưởng nhóm hỏi: teaser có đáng không, hay dồn tiền vào tuần mở bán?',
   concept:{ name:'Teaser và điều kiện để nó có ích',
     body:'Teaser tạo chú ý trước khi khách mua được. Nó chỉ có ích khi sự chú ý <b>được giữ lại tới ngày mở bán</b>: người xem để lại số điện thoại, bấm nhắc lịch, theo dõi trang. Teaser hợp khi thương hiệu đã có người hâm mộ, sản phẩm có ngày mở bán rõ và hàng giới hạn khiến việc chờ đợi có ý nghĩa. Nó không hợp khi thương hiệu chưa ai biết, vì bí ẩn không có lý do để tò mò, hoặc khi chưa chắc hàng về đúng ngày. Cách đánh giá: tính <b>chi phí cho mỗi người đăng ký chờ</b>, xem bao nhiêu người thật sự mua, rồi so lãi của <b>phần bán thêm</b> với chi phí teaser. Người hâm mộ có thể mua dù không có teaser, nhất là khi bạn nhắn họ được qua kênh miễn phí.' },
@@ -351,7 +352,7 @@ BAI_ADD({ mod:'tn05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tn05-07', skill:'measure', read:'7 phút', t:'Ra mắt ế: đọc số nào để biết lỗi nằm ở đâu?',
+{ id:'B:tn05-07', skill:'measure', read:'7 phút', assume:true, t:'Ra mắt ế: đọc số nào để biết lỗi nằm ở đâu?',
   situation:'Một hãng mì ra vị lẩu Thái mới. Sau 6 tuần, doanh số chỉ đạt 40% kế hoạch. Cuộc họp chia phe: marketing nói do giá cao, bán hàng nói do quảng cáo yếu, sản xuất nói do đối thủ giảm giá. Không ai mang số liệu theo từng khâu.',
   concept:{ name:'Phễu ra mắt: có hàng – biết – thử – mua lại',
     body:'Doanh số của sản phẩm mới là tích của nhiều khâu: <b>hàng có ở điểm bán</b>, khách <b>biết</b> sản phẩm, khách <b>mua thử</b>, khách <b>mua lại</b>. Mỗi khâu có một con số: độ phủ, tỉ lệ nhận biết, tỉ lệ dùng thử, tỉ lệ mua lại. So từng con số với kế hoạch sẽ thấy khâu nào hụt nhiều nhất. Mỗi khâu hụt gợi ý một nguyên nhân khác: phủ thấp là chuyện phân phối; biết thấp là quảng cáo; biết cao mà thử thấp là giá, bao bì hay lời hứa; thử cao mà mua lại thấp là sản phẩm. Đọc phễu trước, tranh luận sau.' },
@@ -411,11 +412,11 @@ BAI_ADD({ mod:'tn05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tn05-08', skill:'brand', read:'7 phút', t:'Sản phẩm mới bán chạy nhưng lấy khách của chính sản phẩm cũ',
+{ id:'B:tn05-08', skill:'brand', read:'7 phút', assume:true, t:'Sản phẩm mới bán chạy nhưng lấy khách của chính sản phẩm cũ',
   situation:'Một hãng trà xanh đóng chai ra phiên bản không đường. Tháng đầu bán 200.000 chai, vượt kế hoạch. Nhưng trà xanh có đường của chính hãng giảm 120.000 chai so với cùng kỳ. Chai không đường lãi 3.000 đồng, chai có đường lãi 4.000 đồng. Giám đốc hỏi: ra mắt thành công hay thất bại?',
   concept:{ name:'Ăn thịt nội bộ (cannibalization)',
     body:'Khi sản phẩm mới lấy khách của sản phẩm cũ cùng hãng, một phần doanh số mới chỉ là tiền chuyển túi. Câu hỏi đúng không phải "sản phẩm mới bán bao nhiêu" mà là <b>tổng lợi nhuận của cả hãng tăng bao nhiêu</b>. Tính: lãi từ sản phẩm mới trừ lãi mất đi ở sản phẩm cũ. Ăn thịt nội bộ không phải lúc nào cũng xấu: nếu khách đằng nào cũng rời sản phẩm cũ sang đối thủ, thà họ chuyển sang sản phẩm mới của mình. Đo bằng <b>tỉ lệ ăn thịt</b> = số chai cũ mất ÷ số chai mới. Nhưng phải tính ra số, không nhìn riêng doanh số sản phẩm mới, và tách phần giảm vốn có của xu hướng ra khỏi phần do sản phẩm mới.' },
-  example:'Lãi từ chai không đường: 200.000 × 3.000 = 600 triệu. Lãi mất ở chai có đường: 120.000 × 4.000 = 480 triệu. Lãi tăng thêm: 120 triệu, chỉ bằng 1/5 con số đội báo cáo; tỉ lệ ăn thịt là 120.000 ÷ 200.000 = 60%, cứ 10 chai mới thì 6 chai là của khách cũ. Đó là ước tính thô: xu hướng giảm đường khiến một phần mức giảm vốn có, và chưa trừ chi phí ra mắt. Nếu ngành vốn kéo chai có đường giảm 40.000 chai và ra mắt tốn 60 triệu, lãi tăng thêm thực khoảng 220 triệu (Q7). Chỉ 40.000 chai là khách đằng nào cũng đi; 80.000 chai còn lại là do sản phẩm mới. Hãng nên giữ sản phẩm, nhưng đổi quảng cáo sang người chưa uống trà xanh của hãng.',
+  example:'Lãi từ chai không đường: 200.000 × 3.000 = 600 triệu. Lãi mất ở chai có đường: 120.000 × 4.000 = 480 triệu. Lãi tăng thêm: 120 triệu, chỉ bằng 1/5 con số đội báo cáo; tỉ lệ ăn thịt là 120.000 ÷ 200.000 = 60%. Đó là ước tính thô, chưa trừ chi phí ra mắt, và mức giảm 120.000 chai so cùng kỳ chưa có đối chứng: phần giảm vốn có do xu hướng bớt đường phải ước lượng từ vùng đối chứng (mức giảm của chai có đường ở các vùng chưa phân phối bản không đường, cùng tháng). Giả sử (số minh hoạ) vùng đối chứng cho thấy xu hướng vốn kéo chai có đường giảm 40.000 chai, và ra mắt tốn 60 triệu, lãi tăng thêm thực khoảng 220 triệu (Q7) — con số này đứng hay đổ tuỳ ước lượng 40.000. Chỉ 40.000 chai là khách đằng nào cũng đi; 80.000 chai còn lại là do sản phẩm mới. Hãng nên giữ sản phẩm, nhưng đổi quảng cáo sang người chưa uống trà xanh của hãng.',
   takeaway:'Đo ra mắt bằng lãi tăng thêm của cả hãng, không bằng doanh số riêng của sản phẩm mới.',
   apply:'Nói trong 60 giây: sản phẩm mới nào bạn biết có thể lấy khách của sản phẩm cũ cùng hãng, và bạn đo điều đó thế nào.',
   mistakes:['Báo cáo doanh số sản phẩm mới như thể toàn bộ là khách mới.','Bỏ ra mắt chỉ vì có ăn thịt nội bộ, không xét việc khách đằng nào cũng rời đi.'],
@@ -464,7 +465,7 @@ BAI_ADD({ mod:'tn05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tn05-09', skill:'measure', read:'7 phút', t:'Khi nào nên rút một sản phẩm vừa ra mắt?',
+{ id:'B:tn05-09', skill:'measure', read:'7 phút', assume:true, t:'Khi nào nên rút một sản phẩm vừa ra mắt?',
   situation:'Một hãng bánh kẹo ra dòng bánh quy yến mạch 9 tháng trước. Mỗi tháng bán 25.000 gói, lãi gộp 4.000 đồng/gói. Riêng sản phẩm này tốn 80 triệu đồng/tháng phí trưng bày và 40 triệu đồng/tháng quảng cáo duy trì. Đã thử đổi bao bì và giảm giá, doanh số không nhúc nhích. Đội sản phẩm vẫn muốn "cho thêm thời gian".',
   concept:{ name:'Tiêu chí rút sản phẩm đặt từ trước',
     body:'Rút sản phẩm khó vì đã tốn nhiều công, và luôn có người hy vọng tháng sau sẽ khá hơn. Vì vậy tiêu chí rút nên <b>đặt ngay từ lúc ra mắt</b>: sau bao lâu, nếu mua lại dưới mức nào và lãi sau các chi phí riêng dưới mức nào thì rút. Khi xét, chỉ tính các chi phí <b>sẽ mất đi nếu rút</b>: phí trưng bày, quảng cáo riêng, phần sản xuất riêng. Tiền đã chi cho nghiên cứu là quá khứ, không lấy lại được, không nên giữ sản phẩm vì nó. Ngoài số, xét thêm chỗ trên kệ: sản phẩm yếu đang chiếm chỗ của một sản phẩm khác có thể bán tốt hơn.' },

@@ -3,12 +3,12 @@
 BAI_ADD({ mod:'ob06', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:ob06-01', skill:'channel', read:'6 phút', t:'Hàng của bạn bán ở tạp hoá hay siêu thị — và vì sao điều đó đổi cả cách làm?',
+{ id:'B:ob06-01', skill:'channel', read:'6 phút', assume:true, t:'Hàng của bạn bán ở tạp hoá hay siêu thị — và vì sao điều đó đổi cả cách làm?',
   situation:'Bạn làm cho một hãng nước tăng lực mới. Báo cáo bán hàng tháng trước (minh hoạ): 1.000 thùng, trong đó 700 thùng đi qua tạp hoá và chợ, 200 thùng qua siêu thị và cửa hàng tiện lợi, 100 thùng qua sàn thương mại điện tử. Sếp muốn dồn toàn bộ ngân sách trưng bày vào chuỗi siêu thị vì "trông sang hơn".',
   concept:{ name:'Kênh truyền thống – hiện đại – online',
-    body:'Ở Việt Nam, <b>kênh truyền thống</b> (tạp hoá, chợ, sạp) vẫn là nơi đi qua phần lớn hàng tiêu dùng nhanh (các ước tính của NielsenIQ được báo chí dẫn lại ở mức khoảng 80–85% doanh số, cao hơn nữa ở nông thôn), nhất là ngoài các thành phố lớn. <b>Kênh hiện đại</b> (siêu thị, cửa hàng tiện lợi) mạnh ở thành thị, có kệ đẹp và dữ liệu rõ. <b>Online</b> tăng nhanh nhưng thường là tỉ trọng nhỏ với hàng giá thấp. Mỗi kênh có "người gác cổng" khác nhau: chủ tạp hoá quyết định bày gì, gợi ý gì; siêu thị bán chỗ trên kệ; sàn bán lượt hiển thị. Ngân sách phải đi theo nơi khách thật sự mua.' },
+    body:'Ở Việt Nam, <b>kênh truyền thống</b> (tạp hoá, chợ, sạp) vẫn là nơi đi qua phần lớn hàng tiêu dùng nhanh, nhất là ngoài các thành phố lớn; tỉ trọng cụ thể đổi theo năm và ngành hàng, nên tra báo cáo mới nhất của công ty nghiên cứu thị trường trước khi dùng số. <b>Kênh hiện đại</b> (siêu thị, cửa hàng tiện lợi) mạnh ở thành thị, có kệ đẹp và dữ liệu rõ. <b>Online</b> tăng nhanh nhưng thường là tỉ trọng nhỏ với hàng giá thấp. Mỗi kênh có "người gác cổng" khác nhau: chủ tạp hoá quyết định bày gì, gợi ý gì; siêu thị bán chỗ trên kệ; sàn bán lượt hiển thị. Ngân sách bắt đầu từ nơi khách thật sự mua; tỉ trọng sản lượng chỉ là điểm xuất phát, sau đó so lãi tăng thêm trên mỗi đồng trưng bày ở từng kênh, vì kênh nhỏ còn dư địa có thể cho lãi tăng thêm cao hơn.' },
   example:'Với 70% sản lượng ở tạp hoá, người quan trọng nhất là chủ tiệm: họ có tủ mát không, có treo dây hàng không, có mời khách mua thử không. Nếu dồn hết tiền vào siêu thị (20% sản lượng), hãng bỏ đói kênh đang nuôi mình. Cách hợp lý hơn: giữ phần lớn ngân sách cho chương trình trưng bày tủ mát và chiết khấu cho tạp hoá, dành phần nhỏ cho siêu thị để xây hình ảnh ở thành phố.',
-  takeaway:'Ngân sách đi theo nơi khách thật sự mua, không theo nơi trông đẹp nhất.',
+  takeaway:'Ngân sách bắt đầu từ nơi khách thật sự mua, không theo nơi trông đẹp nhất, rồi chỉnh theo lãi tăng thêm mỗi đồng ở từng kênh.',
   apply:'Hỏi một chủ tạp hoá gần nhà: hãng nào đang trả tiền để được bày ở tủ mát? Kể lại trong 60 giây.',
   mistakes:['Nghĩ siêu thị là kênh chính vì bản thân mình hay mua ở đó.','Coi chủ tạp hoá là người bán thụ động, không phải người ảnh hưởng quyết định mua.'],
   q:[
@@ -60,7 +60,7 @@ BAI_ADD({ mod:'ob06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:ob06-02', skill:'insight', read:'7 phút', t:'Cùng một gói gia vị, vì sao Bắc – Trung – Nam phản ứng khác nhau?',
+{ id:'B:ob06-02', skill:'insight', read:'7 phút', assume:true, t:'Cùng một gói gia vị, vì sao Bắc – Trung – Nam phản ứng khác nhau?',
   situation:'Hãng bạn tung một gói nước sốt kho "vị chuẩn" dùng chung toàn quốc. Sau ba tháng (số minh hoạ), miền Nam bán 6.000 gói/tháng, miền Bắc 2.500, miền Trung 1.500. Phản hồi từ nhân viên bán hàng: "Ngoài Bắc chê ngọt, miền Trung chê nhạt, trong Nam khen vừa miệng." Nhóm sản phẩm hỏi có nên làm ba công thức không.',
   concept:{ name:'Khác biệt vùng miền trong khẩu vị và cách mua',
     body:'Việt Nam dài và khẩu vị đổi theo vùng: nhìn chung miền Nam chuộng vị ngọt đậm hơn, miền Bắc chuộng vị thanh và đậm đà ít đường, miền Trung ưa cay mặn. Cách mua cũng khác: tỉ trọng chợ, cỡ gói ưa thích, thói quen nấu ăn. Đây là xu hướng chung, không phải luật cho từng người. Quyết định quan trọng là: khác biệt đó <b>có đủ lớn để đổi sản phẩm</b>, hay chỉ cần đổi cách nói và cỡ gói theo vùng.' },
@@ -120,7 +120,7 @@ BAI_ADD({ mod:'ob06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:ob06-03', skill:'insight', read:'6 phút', t:'Khách nông thôn mua ít hơn, hay mua khác đi?',
+{ id:'B:ob06-03', skill:'insight', read:'6 phút', assume:true, t:'Khách nông thôn mua ít hơn, hay mua khác đi?',
   situation:'Bạn phụ trách một dầu gội. Ở thành phố, chai 650ml bán tốt. Ở các xã của một tỉnh đồng bằng, doanh số rất thấp. Một đại lý huyện gợi ý: "Ở đây người ta mua vài gói nhỏ, mỗi lần chưa tới 5.000đ, ai mua chai hơn trăm nghìn một lần." Đội bạn đang định chạy khuyến mãi giảm 20% cho chai lớn ở nông thôn.',
   concept:{ name:'Thành thị – nông thôn: cỡ gói và dòng tiền',
     body:'Khác biệt lớn giữa thành thị và nông thôn thường không nằm ở chỗ "có muốn dùng hay không" mà ở <b>dòng tiền và cách mua</b>. Nhiều gia đình có thu nhập theo mùa vụ, chi tiêu theo ngày, mua ở tạp hoá gần nhà nhiều lần với số tiền nhỏ. Vì vậy cỡ gói nhỏ (gói dây, chai mini) và mức giá "tròn" dễ trả thường mở được cửa hơn một đợt giảm giá cho gói lớn. Câu hỏi đúng là: khách trả được bao nhiêu mỗi lần mua?' },
@@ -177,7 +177,7 @@ BAI_ADD({ mod:'ob06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:ob06-04', skill:'channel', read:'7 phút', t:'Tết đến sớm hơn bạn nghĩ: khi nào phải có hàng trên kệ?',
+{ id:'B:ob06-04', skill:'channel', read:'7 phút', assume:true, t:'Tết đến sớm hơn bạn nghĩ: khi nào phải có hàng trên kệ?',
   situation:'Tết Âm lịch năm nay rơi vào giữa tháng 2 dương lịch. Hãng bánh kẹo của bạn định lên kệ hộp quà Tết từ ngày 20 tháng Chạp. Một nhà phân phối lâu năm cảnh báo (theo kinh nghiệm riêng của ông, mốc có thể lệch theo ngành hàng và vùng): "Tạp hoá gom hàng Tết từ rằm tháng Mười Một. Lên kệ ngày 20 tháng Chạp là chỉ còn đứng nhìn."',
   concept:{ name:'Chu kỳ mùa Tết: đặt hàng – gom hàng – mua sắm',
     body:'Mùa Tết có ba nhịp chồng lên nhau. <b>Nhà phân phối và tạp hoá</b> nhập hàng sớm, thường từ khoảng một đến hai tháng trước Tết (theo kinh nghiệm của nhiều nhà phân phối, mốc cụ thể tuỳ ngành hàng), vì vốn và kho có hạn nên chọn hãng nào trước là giữ hãng đó. <b>Doanh nghiệp</b> đặt quà biếu nhân viên, đối tác cũng sớm. <b>Người tiêu dùng</b> mua dồn vào vài tuần cuối. Nếu bạn chỉ canh nhịp cuối, kệ đã đầy hàng đối thủ. Lịch Tết phải tính theo âm lịch, và lùi ngược từ nhịp sớm nhất.' },
@@ -234,10 +234,10 @@ BAI_ADD({ mod:'ob06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:ob06-05', skill:'brand', read:'6 phút', t:'Hộp quà Tết bán cho người ăn hay cho người nhận?',
+{ id:'B:ob06-05', skill:'brand', read:'6 phút', assume:true, t:'Hộp quà Tết bán cho người ăn hay cho người nhận?',
   situation:'Hãng hạt dinh dưỡng của bạn bán túi 500g giá 180.000đ quanh năm. Mùa Tết, nhóm thiết kế đề xuất hộp quà 2 túi giá 450.000đ, hộp cứng đỏ, có ngăn và thiệp. Có người phản đối: "Cùng 1kg hạt mà đắt hơn 90.000đ, khách nào chịu?" Bạn cần quyết định có làm hộp quà không.',
   concept:{ name:'Quà biếu: người mua không phải người dùng',
-    body:'Mùa Tết, rất nhiều hàng được mua để <b>biếu</b> (khảo sát NIQ về Tết 2025: khoảng 76% người mua có mục đích tặng quà cho gia đình): con cái biếu bố mẹ, nhân viên biếu sếp, doanh nghiệp tặng đối tác. Người mua lúc này không hỏi "ăn có ngon không" mà hỏi "đưa ra có <b>đủ trang trọng</b>, có giữ được thể diện không". Hộp đẹp, thương hiệu dễ nhận ra, lời chúc hợp dịp là một phần giá trị thật với người mua quà. Giá cao hơn không phải là trở ngại, đôi khi là điều người mua cần để món quà "đủ lễ".' },
+    body:'Mùa Tết, rất nhiều hàng được mua để <b>biếu</b> (nhiều khảo sát mùa Tết cho thấy phần lớn người mua có mục đích biếu tặng; con số cụ thể đổi theo năm, cần tra khảo sát mới nhất khi dùng): con cái biếu bố mẹ, nhân viên biếu sếp, doanh nghiệp tặng đối tác. Người mua lúc này không hỏi "ăn có ngon không" mà hỏi "đưa ra có <b>đủ trang trọng</b>, có giữ được thể diện không". Hộp đẹp, thương hiệu dễ nhận ra, lời chúc hợp dịp là một phần giá trị thật với người mua quà. Giá cao hơn không phải là trở ngại, đôi khi là điều người mua cần để món quà "đủ lễ".' },
   example:'Hộp 450.000đ chứa lượng hạt trị giá 360.000đ nếu mua lẻ; 90.000đ chênh là phần trả cho hộp, thiệp và sự trang trọng. Chi phí làm hộp giả sử 40.000đ, nên hãng lời thêm khoảng 50.000đ mỗi hộp so với bán túi. Quan trọng hơn: người nhận là bố mẹ, sếp — họ thử sản phẩm lần đầu nhờ quà. Hộp quà vừa tăng lãi, vừa là cách để hãng vào nhà người dùng mới.',
   takeaway:'Mùa Tết, hãy thiết kế cho người đưa quà: thể diện là một phần sản phẩm.',
   points:["Người mua quà trả tiền để giải một việc xã hội: tỏ lòng kính trọng và giữ thể diện. Sản phẩm chỉ là một phần, phần còn lại là cách trình bày khi đưa ra.","Hộp cứng, ngăn và thiệp giúp người mua đỡ công gói, đỡ nghĩ lời chúc. Giá trị ấy nằm ở thời gian được tiết kiệm đúng lúc Tết bận rộn, không nằm ở phần hạt.","So giá theo gram chỉ đúng với người tự ăn. Với quà biếu, người mua đặt hộp cạnh các hộp quà cùng tầm giá, nên mốc so sánh là hộp quà, không phải túi lẻ."],
@@ -294,7 +294,7 @@ BAI_ADD({ mod:'ob06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:ob06-06', skill:'measure', read:'6 phút', t:'Tháng Giêng doanh số rơi mạnh: báo động hay chuyện năm nào cũng thế?',
+{ id:'B:ob06-06', skill:'measure', read:'6 phút', assume:true, t:'Tháng Giêng doanh số rơi mạnh: báo động hay chuyện năm nào cũng thế?',
   situation:'Bạn mới vào làm ở một hãng nước ngọt. Số liệu minh hoạ: tháng Chạp bán 18.000 thùng, tháng Giêng chỉ 7.200 thùng. Giám đốc bán hàng lo lắng, đề xuất giảm giá 15% ngay để "cứu doanh số". Bạn mở số liệu hai năm trước thì thấy tháng Giêng năm nào cũng thấp.',
   concept:{ name:'Mùa trũng sau Tết và so sánh cùng kỳ',
     body:'Sau Tết, nhà nhà còn bánh kẹo, nước ngọt tồn; tạp hoá còn hàng cũ; nhiều người đã tiêu nhiều trong Tết. Đó là <b>mùa trũng</b>. So tháng Giêng với tháng Chạp luôn cho ra "sụt mạnh" — nhưng đó là so hai mùa khác nhau. Cách đọc đúng là <b>so cùng kỳ</b>: tháng Giêng năm nay với tháng Giêng năm trước (tính theo âm lịch khi Tết dịch chuyển). Chỉ khi cùng kỳ giảm mới có vấn đề thật.' },
@@ -354,7 +354,7 @@ BAI_ADD({ mod:'ob06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:ob06-07', skill:'channel', read:'6 phút', t:'Mùa tựu trường, mùa mưa, mùa nóng: lịch nào đang điều khiển ngành của bạn?',
+{ id:'B:ob06-07', skill:'channel', read:'6 phút', assume:true, t:'Mùa tựu trường, mùa mưa, mùa nóng: lịch nào đang điều khiển ngành của bạn?',
   situation:'Bạn làm cho một hãng sữa uống liền dạng hộp nhỏ. Kế hoạch năm chia đều ngân sách truyền thông cho 12 tháng. Số liệu minh hoạ năm trước: tháng 8 (trước tựu trường) bán 30.000 thùng, tháng 4–5 mùa nóng khoảng 22.000 thùng/tháng, hai tháng nghỉ hè (6–7) chỉ 14.000 thùng/tháng.',
   concept:{ name:'Lịch mùa vụ của ngành hàng',
     body:'Mỗi ngành có một <b>lịch nhu cầu</b> riêng, do trường học, thời tiết và lễ tết quyết định; việc đầu tiên là xác định ngành bạn chạy theo lịch nào. Sữa hộp, vở, cặp, giày theo lịch học (đỉnh tháng 8–9, trũng kỳ nghỉ hè). Nước giải khát, kem, điều hoà theo mùa nóng. Áo mưa, thuốc cảm, đồ ăn giao tận nhà theo mùa mưa, và mùa mưa lệch theo vùng: miền Trung mưa bão cuối năm, miền Nam mưa từ khoảng tháng 5 đến tháng 11. Để chia tiền, chấm một <b>chỉ số mùa</b> cho mỗi tháng (doanh số tháng ÷ trung bình tháng): ngân sách tháng = tổng ngân sách × chỉ số tháng ÷ tổng 12 chỉ số.' },
@@ -407,7 +407,8 @@ BAI_ADD({ mod:'ob06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:ob06-08', skill:'channel', read:'7 phút', t:'Ngày đôi 9.9, 11.11, 12.12 trên sàn: chạy theo hay đứng ngoài?',
+{ id:'B:ob06-08', skill:'channel', read:'7 phút', assume:true, t:'Ngày đôi 9.9, 11.11, 12.12 trên sàn: chạy theo hay đứng ngoài?',
+  src:[{ t:'Shopee Uni — Trung tâm hỗ trợ Người bán Shopee Việt Nam: tra điều kiện chiến dịch ngày đôi và phí sàn tại ngày kiểm', u:'https://banhang.shopee.vn/edu/', d:'2026-11-07', st:'chua' }],
   situation:'Shop mỹ phẩm của bạn trên Shopee bán trung bình 200 đơn/ngày. Sàn mời tham gia 11.11 với điều kiện giảm 25% và góp mã giảm giá. Năm ngoái (minh hoạ), ngày 11.11 bạn bán 1.600 đơn, nhưng 5 ngày trước đó chỉ 120 đơn/ngày và 5 ngày sau chỉ 140 đơn/ngày.',
   concept:{ name:'Ngày đôi: cao điểm thật hay dời đơn?',
     body:'Các sàn như Shopee, Lazada, TikTok Shop tạo ra "ngày đôi" (9.9, 10.10, 11.11, 12.12) và ngày giữa tháng, cuối tháng. Khách đã quen <b>chờ</b> những ngày này. Vì vậy một phần đơn ngày đôi là đơn <b>bị dời</b> từ những ngày xung quanh, không phải đơn mới. Muốn biết ngày đôi có lời không, phải tính cả giai đoạn trước – trong – sau, và trừ phần giảm giá, phí sàn tăng thêm.' },
@@ -415,14 +416,14 @@ BAI_ADD({ mod:'ob06', lessons:[
   takeaway:'Đo ngày đôi trên cả cửa sổ trước – trong – sau, không chỉ đỉnh của một ngày.',
   points:["Khách quen chờ ngày đôi nên nhu cầu có sẵn bị dồn vào một ngày. Phần tăng ở đỉnh là nhu cầu bị dời; chỉ phần vượt nền của cả cửa sổ là đơn thêm.","Giảm giá áp lên toàn bộ đơn trong ngày, kể cả khách vốn mua giá gốc. Chi phí thật là mức giảm nhân với tất cả đơn, không chỉ nhân với số đơn tăng thêm.","Cửa sổ trước – trong – sau gom ba giai đoạn vào một phép so với nền bình thường cùng số ngày, nên không bị lệch vì chỉ chọn ngày đẹp để khoe."],
   counter:"Biến thể: shop mới mở hoặc vừa ra sản phẩm mới, ngày đôi đưa về nhiều khách chưa từng mua. Khi đó cửa sổ lãi thấp hơn nền vẫn có thể đáng làm vì giá trị khách mới. Dấu hiệu nhận ra: tỉ lệ khách mới cao trong đơn ngày đôi và những người đó quay lại mua ở giá thường sau đó. Nếu phần lớn đơn đến từ khách cũ, khung tính cửa sổ này mới đúng như bài.",
-  deeper:"Sàn thường ưu tiên hiển thị cho shop tham gia, nên bỏ ngày đôi có thể mất cả lượng khách ngày thường. Đó là một đánh đổi ngoài bảng lãi. Tín hiệu cần theo dõi là tỉ lệ khách mới trong ngày đôi, tỉ lệ khách ấy quay lại sau đó và mức đơn các ngày xung quanh. Khái niệm kề cận là tỉ lệ quay lại theo nhóm: nhóm khách mua đúng ngày đôi là một cohort cần theo dõi riêng. Tuần này, lấy danh sách khách mua đúng 11.11 năm ngoái, đếm bao nhiêu người đã mua lại ở giá gốc, rồi so với khách mua một ngày thường.",
+  deeper:"Theo hiểu biết chung (cần kiểm theo chính sách chiến dịch của từng sàn tại thời điểm làm; nếu chính sách khác, tin trang chính thức), sàn thường ưu tiên hiển thị cho shop tham gia, nên bỏ ngày đôi có thể mất cả lượng khách ngày thường. Đó là một đánh đổi ngoài bảng lãi. Tín hiệu cần theo dõi là tỉ lệ khách mới trong ngày đôi, tỉ lệ khách ấy quay lại sau đó và mức đơn các ngày xung quanh. Khái niệm kề cận là tỉ lệ quay lại theo nhóm: nhóm khách mua đúng ngày đôi là một cohort cần theo dõi riêng. Tuần này, lấy danh sách khách mua đúng 11.11 năm ngoái, đếm bao nhiêu người đã mua lại ở giá gốc, rồi so với khách mua một ngày thường.",
   apply:'Mở trang một shop bạn hay mua. Nói trong 60 giây: bạn có từng chờ ngày đôi mới đặt hàng không, và điều đó nghĩa là gì với shop?',
   mistakes:['Khoe đơn ngày đôi mà không nhìn các ngày xung quanh bị trũng.','Quên rằng toàn bộ đơn trong ngày đôi đều bị giảm giá, kể cả đơn của khách vốn sẽ mua giá gốc.'],
   q:[
   { type:'mcq', stem:'Đoán trước: vì sao đơn hàng những ngày ngay trước 11.11 thường giảm?',
     options:[{k:'a',t:'Sàn chặn bớt lượt hiển thị của shop trước ngày đôi'},{k:'b',t:'Khách chờ đến ngày đôi để mua với giá tốt hơn'},
              {k:'c',t:'Shop thường hết hàng trước ngày đôi'},{k:'d',t:'Người dùng ít vào sàn vào đầu tháng 11'}],
-    answer:'b', why:{a:'Sàn không chặn hiển thị; đơn giảm vì khách chờ giá tốt hơn.',
+    answer:'b', why:{a:'Bài không có dữ kiện nào về việc sàn chặn hiển thị; đơn giảm vì khách chờ giá tốt hơn.',
       b:'Đúng. Khách đã học được thói quen chờ ngày đôi.',
       c:'Shop thường tích hàng trước ngày đôi chứ không hết hàng.',
       d:'Lượt vào có thể vẫn cao; họ xem và để vào giỏ.'} },
@@ -443,7 +444,7 @@ BAI_ADD({ mod:'ob06', lessons:[
     options:[{k:'a',t:'Khách mới lần đầu mua, có thể quay lại mua giá gốc sau này'},{k:'b',t:'Phí sàn ngày đôi thấp hơn ngày thường, nên lãi mỗi đơn cao'},
              {k:'c',t:'Hàng bán ngày đôi không bị trả lại'},{k:'d',t:'Đối thủ sẽ không tham gia ngày đôi'}],
     answer:'a', why:{a:'Đúng. Nếu tỉ lệ khách mới cao và họ mua lại, ngày đôi là kênh tìm khách.',
-      b:'Phí sàn ngày đôi thường không thấp hơn; lợi ích bị bỏ sót là khách mới có thể quay lại.',
+      b:'Bài không có dữ kiện cho thấy phí sàn ngày đôi thấp hơn (phí đổi theo chính sách từng sàn, cần kiểm); lợi ích bị bỏ sót là khách mới có thể quay lại.',
       c:'Tỉ lệ trả hàng không giảm vì ngày đôi.',
       d:'Hầu hết đối thủ đều tham gia.'} },
   { type:'mcq', stem:'Bạn nên đo gì sau ngày đôi để biết nó có mang về khách mới thật không?',
@@ -457,13 +458,13 @@ BAI_ADD({ mod:'ob06', lessons:[
     options:[{k:'a',t:'Khách thường thích quà hơn giảm giá'},{k:'b',t:'Sàn cấm giảm giá quá 20%'},
              {k:'c',t:'Tránh "dạy" khách chờ ngày giảm giá'},{k:'d',t:'Quà kèm không tính vào chi phí'}],
     answer:'c', why:{a:'Sở thích này chưa có căn cứ; lý lẽ chính là tránh dạy khách chờ ngày giảm.',
-      b:'Không có quy định chung như vậy.',
+      b:'Bài không có dữ kiện về quy định như vậy; mức giảm là điều kiện của từng chiến dịch, cần kiểm trang chính thức của sàn.',
       c:'Đúng. Quà kèm vẫn tạo ưu đãi nhưng ít làm giảm giá tham chiếu.',
       d:'Quà kèm vẫn là chi phí thật.'} },
   ]},
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:ob06-09', skill:'comm', read:'6 phút', t:'COD, ví điện tử và Zalo: khách Việt muốn trả tiền và nói chuyện ở đâu?',
+{ id:'B:ob06-09', skill:'comm', read:'6 phút', assume:true, t:'COD, ví điện tử và Zalo: khách Việt muốn trả tiền và nói chuyện ở đâu?',
   situation:'Bạn mở web bán đồ gia dụng, chỉ cho thanh toán thẻ và chuyển khoản trước, hỗ trợ qua email. Số liệu minh hoạ tháng đầu: 1.000 người vào trang thanh toán, chỉ 80 người hoàn tất. Khảo sát nhanh 50 người bỏ giữa chừng: 30 người nói "muốn nhận hàng rồi mới trả", 12 người hỏi "có Zalo không để hỏi thêm".',
   concept:{ name:'Thói quen thanh toán và kênh giao tiếp',
     body:'Khi khách bỏ ở bước thanh toán, đừng gộp mọi lý do thành một. Có hai rào cản khác bản chất: <b>rào cản thanh toán</b> (muốn COD, quen ví điện tử hay mã QR) và <b>rào cản hỏi đáp</b> (cần một kênh nhắn quen để hỏi trước khi trả tiền; với nhiều nhóm tuổi ở Việt Nam thường là Zalo, ít khi là email). Khảo sát nhỏ chỉ cho biết hướng, không cho biết bao nhiêu người thật sự sẽ đặt. Muốn biết từng cách sửa đóng góp bao nhiêu, bật từng cái một vài tuần và đo riêng. Chọn kênh nhắn theo nhóm khách bằng thử A/B, so theo lãi sau trừ phí từng tin.' },
@@ -516,7 +517,7 @@ BAI_ADD({ mod:'ob06', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:ob06-10', skill:'insight', read:'7 phút', t:'Mùng 1, ngày rằm và cả nhà cùng quyết: bạn đang bán cho một người hay một gia đình?',
+{ id:'B:ob06-10', skill:'insight', read:'7 phút', assume:true, t:'Mùng 1, ngày rằm và cả nhà cùng quyết: bạn đang bán cho một người hay một gia đình?',
   situation:'Hãng nhang trầm và hoa quả sấy của bạn thấy đơn tăng vọt vào hai ngày mỗi tháng. Số liệu minh hoạ: ngày thường 50 đơn, ngày mùng 1 và rằm mỗi ngày 200 đơn, và 1–2 ngày trước đó khoảng 120 đơn/ngày. Trong khi đó, lịch khuyến mãi của hãng đặt theo ngày 15 và 30 dương lịch.',
   concept:{ name:'Lịch âm và giá trị gia đình trong quyết định mua',
     body:'Nhiều gia đình Việt vẫn sống theo <b>lịch âm</b>: cúng mùng 1, rằm, giỗ, Rằm tháng Bảy, Tết Đoan Ngọ, Trung thu, nên nhu cầu hoa, trái cây, nhang, đồ cúng và đồ chay tăng đúng những ngày này. Với hàng dùng chung của gia đình, một đơn thường có bốn vai, có thể là bốn người khác nhau: người <b>đề xuất</b>, người <b>chọn</b>, người <b>trả tiền</b>, người <b>dùng</b>. Thông điệp phải nói với người giữ vai quyết định, không phải người bấm nút. Đừng đoán vai theo khuôn mẫu giới: hỏi và ghi lại ở vài chục đơn thật rồi mới kết luận.' },

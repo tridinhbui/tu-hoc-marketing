@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'dl01', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:dl01-01', skill:'measure', read:'6 phút', t:'Tỉ lệ chuyển đổi 2% là tốt hay xấu — 2% của bước nào?',
+{ id:'B:dl01-01', skill:'measure', read:'6 phút', assume:true, t:'Tỉ lệ chuyển đổi 2% là tốt hay xấu — 2% của bước nào?',
   situation:'Shop giày online của Hạnh báo cáo: "Tỉ lệ chuyển đổi tháng này 2%." Sếp hỏi lại: 2% là từ người vào trang ra đơn, hay từ người bỏ giỏ ra đơn? Hạnh mở số liệu: 10.000 lượt vào trang, 2.000 lượt xem sản phẩm, 500 lượt thêm giỏ, 200 đơn. Cùng một bộ số mà có bốn tỉ lệ khác nhau, và Hạnh không chắc nên đưa con số nào.',
   concept:{ name:'Tỉ lệ từng bước và tỉ lệ cả phễu',
     body:'<b>Tỉ lệ từng bước</b> = số người ở bước sau ÷ số người ở ngay bước trước; nó cho biết mắt xích nào yếu. <b>Tỉ lệ cả phễu</b> = số người ở đáy ÷ số người ở đỉnh; nó cho biết cả hệ thống biến bao nhiêu người thành khách. Tỉ lệ cả phễu bằng tích các tỉ lệ từng bước. Một con số "tỉ lệ chuyển đổi" không kèm mẫu số là con số vô nghĩa: luôn nói rõ "từ bước nào đến bước nào". Mẫu càng nhỏ, tỉ lệ càng nhảy: vài đơn chênh nhau chưa phải xu hướng.' },
@@ -59,11 +59,11 @@ BAI_ADD({ mod:'dl01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:dl01-02', skill:'measure', read:'7 phút', t:'Bước nào rò nhất: nơi mất nhiều người hay nơi tỉ lệ thấp nhất?',
+{ id:'B:dl01-02', skill:'measure', read:'7 phút', assume:true, t:'Bước nào rò nhất: nơi mất nhiều người hay nơi tỉ lệ thấp nhất?',
   situation:'Phễu đăng ký học thử của một trung tâm tiếng Anh ở Đà Nẵng: 20.000 người xem trang, 4.000 người bấm "Đăng ký", 1.000 người điền xong form, 600 người đến học thử. Trưởng nhóm nói bước form tệ nhất vì chỉ 25% người bấm điền xong. Một bạn khác cãi: bước đầu mất tới 16.000 người, đó mới là chỗ rò lớn nhất. Ngân sách chỉ đủ sửa một bước trong tháng này.',
   concept:{ name:'Rò theo số người và rò theo tỉ lệ',
     body:'Mỗi bước có hai con số rò: <b>số người mất</b> (bước trước trừ bước sau) và <b>tỉ lệ rò</b> (số người mất ÷ bước trước). Bước đầu thường mất nhiều người nhất chỉ vì nó to nhất, nên số tuyệt đối dễ đánh lừa. Tỉ lệ thấp bất thường cũng chưa đủ. Câu hỏi đúng là: nếu cải thiện bước này một mức <b>khả thi</b>, đáy phễu thêm bao nhiêu người, và tốn bao nhiêu công? So bằng số đơn thêm ở đáy, không so bằng số người mất ở giữa.' },
-  example:'Giả sử mỗi bước cải thiện được 5 điểm phần trăm. Bước đầu 20% → 25%: 5.000 bấm, 1.250 điền, 750 đến — thêm 150 người. Bước form 25% → 30%: 4.000 × 30% = 1.200 điền, 720 đến — thêm 120 người. Bước đầu thắng về số, nhưng sửa form thường chỉ là bớt ô nhập, rẻ hơn nhiều so với làm lại trang. Trung tâm quyết định sửa form trước vì chi phí trên mỗi người thêm thấp hơn, rồi mới làm lại trang.',
+  example:'Giả sử mỗi bước cải thiện được 5 điểm phần trăm. Bước đầu 20% → 25%: 5.000 bấm, 1.250 điền, 750 đến — thêm 150 người. Bước form 25% → 30%: 4.000 × 30% = 1.200 điền, 720 đến — thêm 120 người. Bước đầu thắng về số, nhưng phải chia cho công sức: bớt ô nhập mất khoảng 2 ngày công → 120 ÷ 2 = 60 người thêm mỗi ngày công; làm lại trang mất khoảng 3 tuần, tức 15 ngày công → 150 ÷ 15 = 10 người mỗi ngày công. Bước đầu chỉ thắng khi làm lại trang tốn dưới 150 ÷ 60 = 2,5 ngày công. Trung tâm quyết định sửa form trước vì số người thêm trên mỗi ngày công cao hơn, rồi mới làm lại trang.',
   takeaway:'Đừng chọn bước để sửa theo số người mất hay tỉ lệ thấp; chọn theo số khách thêm ở đáy trên mỗi đồng công sức.',
   apply:'Với một phễu bạn biết, giả định mỗi bước tăng 5 điểm phần trăm. Tính số khách thêm ở đáy cho từng bước và nói trong 60 giây bạn sửa bước nào trước.',
   mistakes:['Kết luận bước đầu là tệ nhất chỉ vì nó mất nhiều người nhất.','So các bước bằng tỉ lệ mà quên tính công sức cần để sửa mỗi bước.'],
@@ -116,7 +116,7 @@ BAI_ADD({ mod:'dl01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:dl01-03', skill:'measure', read:'7 phút', t:'Tỉ lệ chung 3% mà điện thoại chỉ 1,5% — nên xem phễu gộp hay tách?',
+{ id:'B:dl01-03', skill:'measure', read:'7 phút', assume:true, t:'Tỉ lệ chung 3% mà điện thoại chỉ 1,5% — nên xem phễu gộp hay tách?',
   situation:'Một shop đồ gia dụng thấy tỉ lệ vào trang → đơn là 3% và khá hài lòng. Khi tách theo thiết bị: máy tính có 4.000 lượt vào, 240 đơn (6%); điện thoại có 12.000 lượt vào, nhưng chỉ ra 240 đơn (2%). Hơn 70% khách vào bằng điện thoại, nhưng trang thanh toán được thiết kế và kiểm tra chủ yếu trên máy tính.',
   concept:{ name:'Tách phễu theo lát cắt',
     body:'Một tỉ lệ gộp là trung bình có trọng số của nhiều nhóm. Nó có thể che mất một nhóm rất tệ nếu nhóm khác kéo lên. Hãy tách phễu theo <b>thiết bị</b>, <b>kênh</b> (quảng cáo, tìm kiếm, mạng xã hội), <b>khách mới/cũ</b>. Khi một nhóm lớn có tỉ lệ thấp hẳn, đó thường là chỗ có đòn bẩy lớn nhất. Cũng nhớ: khi tỉ trọng các nhóm thay đổi, tỉ lệ gộp có thể giảm dù không nhóm nào xấu đi.' },
@@ -176,7 +176,7 @@ BAI_ADD({ mod:'dl01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:dl01-04', skill:'measure', read:'7 phút', t:'Tuần này đơn giảm 20% — so với tuần trước có đúng cách chưa?',
+{ id:'B:dl01-04', skill:'measure', read:'7 phút', assume:true, t:'Tuần này đơn giảm 20% — so với tuần trước có đúng cách chưa?',
   situation:'Thứ Hai, Minh mở báo cáo: tuần qua shop trà sữa giao online được 400 đơn, tuần trước 500 đơn. Sếp nhắn: "Giảm 20%, chuyện gì vậy?". Minh xem thêm: tuần trước có ngày lương 25 và một đợt freeship của app giao đồ; tuần này mưa bão hai ngày. Lượt vào trang giảm từ 10.000 xuống 8.000.',
   concept:{ name:'So sánh phễu giữa hai giai đoạn',
     body:'Trước khi kết luận, tách thay đổi ra hai phần: <b>lượng người vào đỉnh phễu</b> đổi bao nhiêu, và <b>tỉ lệ các bước</b> đổi bao nhiêu. Nếu tỉ lệ giữ nguyên mà chỉ lượng vào giảm, vấn đề nằm ở nguồn người (mùa vụ, ngân sách, thời tiết), không phải ở trang. So sánh công bằng khi hai kỳ giống nhau về ngày trong tuần, ngày lương, khuyến mãi; nếu không, hãy so với cùng kỳ tuần/tháng tương tự. Với nhóm nhỏ, chênh vài đơn là dao động bình thường.' },
@@ -236,11 +236,11 @@ BAI_ADD({ mod:'dl01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:dl01-05', skill:'measure', read:'7 phút', t:'Bán phần mềm cho doanh nghiệp: phễu lead → gặp → báo giá → ký đo thế nào?',
+{ id:'B:dl01-05', skill:'measure', read:'7 phút', assume:true, t:'Bán phần mềm cho doanh nghiệp: phễu lead → gặp → báo giá → ký đo thế nào?',
   situation:'Công ty phần mềm quản lý kho ở Bình Dương chạy quảng cáo LinkedIn và hội thảo. Quý này: 300 lead (người để lại thông tin), 90 cuộc gặp, 36 báo giá, 9 hợp đồng. Chu kỳ từ lead đến ký trung bình 75 ngày. Giám đốc muốn biết tháng sau cần bao nhiêu lead để ký 15 hợp đồng, và đang trách đội marketing vì "lead kém chất lượng".',
   concept:{ name:'Phễu bán hàng B2B',
     body:'Phễu B2B ít người, nhiều bước có con người tham gia, và kéo dài hàng tuần đến hàng tháng. Ba điều khác với phễu bán lẻ online: (1) <b>định nghĩa từng bước phải được hai đội thống nhất</b> — "lead đủ chuẩn" là gì, "cuộc gặp" tính khi nào; (2) <b>độ trễ</b>: lead tháng này ký vào tháng thứ ba, nên so tỉ lệ phải theo nhóm lead cùng tháng vào; (3) mỗi bước có người chịu trách nhiệm khác nhau, nên đọc tỉ lệ từng bước để biết cần sửa marketing hay bán hàng.' },
-  example:'Tỉ lệ từng bước: lead → gặp 90/300 = 30%; gặp → báo giá 36/90 = 40%; báo giá → ký 9/36 = 25%. Cả phễu 9/300 = 3%. Muốn ký 15 hợp đồng: 15 ÷ 3% = 500 lead, và phải có từ khoảng 2,5 tháng trước vì độ trễ. Bước gặp → báo giá 40% (cứ 10 lần gặp có 4 lần đủ nhu cầu để báo giá) chưa có gì bất thường so với kỳ vọng của dịch vụ cần tư vấn; bước lead → gặp 30%, tức 70% lead rơi ngay từ đầu, mới là chỗ hai đội cần xem lại định nghĩa "lead".',
+  example:'Tỉ lệ từng bước: lead → gặp 90/300 = 30%; gặp → báo giá 36/90 = 40%; báo giá → ký 9/36 = 25%. Cả phễu 9/300 = 3%. Muốn ký 15 hợp đồng: 15 ÷ 3% = 500 lead, và phải có từ khoảng 2,5 tháng trước vì độ trễ. Không có mốc ngành nào để nói bước nào "bất thường"; lập luận bằng dữ liệu nội bộ: bước lead → gặp 30%, tức 70% lead rơi ngay từ đầu, trong khi hai đội còn chưa có định nghĩa chung về "lead" — đó là chỗ rẻ nhất để làm rõ trước (thống nhất định nghĩa rồi đo lại), trước khi bàn tới bước gặp → báo giá 40% (cứ 10 lần gặp có 4 lần đủ nhu cầu để báo giá).',
   takeaway:'Phễu B2B cần định nghĩa chung giữa hai đội và phải đo theo nhóm lead cùng tháng vì độ trễ dài.',
   apply:'Viết định nghĩa một câu cho từng bước "lead", "cuộc gặp", "báo giá" của một doanh nghiệp B2B bạn biết, sao cho đội marketing và đội bán hàng đều đồng ý.',
   mistakes:['Chia số hợp đồng tháng này cho số lead tháng này, dù hợp đồng đến từ lead nhiều tháng trước.','Đổ lỗi "lead kém" khi chưa có định nghĩa lead đủ chuẩn mà hai đội cùng ký.'],
@@ -293,7 +293,7 @@ BAI_ADD({ mod:'dl01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:dl01-06', skill:'measure', read:'7 phút', t:'Tăng một bước của phễu thêm 5 điểm thì doanh thu tăng bao nhiêu?',
+{ id:'B:dl01-06', skill:'measure', read:'7 phút', assume:true, t:'Tăng một bước của phễu thêm 5 điểm thì doanh thu tăng bao nhiêu?',
   situation:'Chuỗi spa ở Hà Nội nhận lịch hẹn qua website. Mỗi tháng: 30.000 lượt vào, 3.000 người mở trang đặt lịch (10%), 900 người đặt (30%), 720 người đến (80%). Giá trị trung bình mỗi lượt đến 600.000đ. Agency đề xuất làm lại trang đặt lịch với giá 40 triệu, hứa nâng tỉ lệ đặt lịch từ 30% lên 35%. Chủ chuỗi muốn biết có đáng không.',
   concept:{ name:'Ước tính doanh thu thêm từ một bước',
     body:'Khi một bước tăng, người thêm ở bước đó vẫn phải đi qua <b>các bước còn lại phía sau</b>. Vì vậy: người thêm ở bước sửa × tỉ lệ các bước sau × giá trị mỗi khách = doanh thu thêm. Đem so với chi phí sửa, và nhớ rằng mức tăng hứa hẹn chỉ là giả định — hãy tính thêm kịch bản thận trọng (tăng một nửa mức hứa). Doanh thu thêm chưa phải lãi thêm: còn chi phí dịch vụ cho mỗi khách.' },
@@ -346,11 +346,12 @@ BAI_ADD({ mod:'dl01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:dl01-07', skill:'measure', read:'7 phút', t:'Phễu báo 130% người thêm giỏ đã mua — phễu gãy hay đo gãy?',
+{ id:'B:dl01-07', skill:'measure', read:'7 phút', assume:true, t:'Phễu báo 130% người thêm giỏ đã mua — phễu gãy hay đo gãy?',
+  src:[{ t:'Meta Business Help Center: cài đặt ghi nhận chuyển đổi (attribution setting) — tìm “About attribution settings”', u:'https://www.facebook.com/business/help/search?q=attribution%20setting', d:'2026-11-07', st:'chua' }],
   situation:'Báo cáo phễu của một shop thời trang tuần này: 5.000 lượt xem sản phẩm, 400 lượt thêm giỏ, 520 đơn. Số đơn lớn hơn số thêm giỏ — vô lý. Cùng tuần, trình quản lý quảng cáo báo 610 lượt mua, còn hệ thống đơn hàng của shop ghi 470 đơn thật. Shop vừa đổi giao diện trang web tuần trước.',
   concept:{ name:'Phễu gãy do đo sai',
     body:'Khi một bước có tỉ lệ trên 100%, hoặc tỉ lệ nhảy vọt/tụt hẳn ngay sau một thay đổi kỹ thuật, hãy nghi <b>đo sai</b> trước khi nghi hành vi khách. Các lỗi hay gặp: mã theo dõi (pixel) bị mất ở một trang sau khi đổi giao diện; sự kiện "mua" bắn hai lần khi khách tải lại trang cảm ơn; khách dùng nút "Mua ngay" bỏ qua giỏ nên không có sự kiện thêm giỏ. Luôn đối chiếu với <b>nguồn sự thật</b> — hệ thống đơn hàng — trước khi đọc tỉ lệ.' },
-  example:'Kiểm tra: sau khi đổi giao diện, nút "Thêm giỏ" mới không gắn sự kiện trên điện thoại, nên chỉ đếm được 400. Trang cảm ơn bị tải lại, bắn sự kiện mua hai lần với một phần đơn, nên phễu báo 520 dù chỉ có 470 đơn thật. Trình quảng cáo báo 610 vì còn tính cả đơn của người chỉ xem quảng cáo. Shop sửa gắn sự kiện, chặn bắn trùng theo mã đơn, và từ nay lấy 470 làm mốc.',
+  example:'Kiểm tra: sau khi đổi giao diện, nút "Thêm giỏ" mới không gắn sự kiện trên điện thoại, nên chỉ đếm được 400. Trang cảm ơn bị tải lại, bắn sự kiện mua hai lần với một phần đơn, nên phễu báo 520 dù chỉ có 470 đơn thật. Trình quảng cáo báo 610 vì gán đơn theo luật riêng của nền tảng: với cài đặt gán mặc định của nhiều nền tảng (ở Meta, theo hiểu biết chung tại ngày kiểm 2026-11-07, là 7 ngày sau khi bấm và 1 ngày sau khi chỉ xem), đơn của người chỉ xem quảng cáo cũng được tính — kiểm cài đặt gán trong tài khoản của bạn; nếu trang trợ giúp nói khác, tin trang trợ giúp. Shop sửa gắn sự kiện, chặn bắn trùng theo mã đơn, và từ nay lấy 470 làm mốc.',
   takeaway:'Tỉ lệ trên 100% hay nhảy vọt sau thay đổi kỹ thuật là dấu hiệu đo sai; đối chiếu hệ thống đơn hàng trước.',
   apply:'So số đơn trong báo cáo quảng cáo, công cụ phân tích web và hệ thống đơn hàng của một shop trong một tuần. Ghi độ lệch và đoán một nguyên nhân cho mỗi độ lệch.',
   mistakes:['Tin ngay tỉ lệ trên 100% hay tỉ lệ nhảy vọt mà không nghi mã theo dõi.','Lấy số đơn từ trình quản lý quảng cáo làm số đơn thật của shop.'],
@@ -403,7 +404,7 @@ BAI_ADD({ mod:'dl01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:dl01-08', skill:'measure', read:'6 phút', t:'Mục tiêu tỉ lệ chuyển đổi 10% — đặt theo đâu mới thực tế?',
+{ id:'B:dl01-08', skill:'measure', read:'6 phút', assume:true, t:'Mục tiêu tỉ lệ chuyển đổi 10% — đặt theo đâu mới thực tế?',
   situation:'Công ty bán nệm online mới thành lập. Giám đốc đọc một bài viết nói "shop giỏi có tỉ lệ chuyển đổi 10%", và đặt mục tiêu 10% cho quý tới. Hiện tại, tỉ lệ vào trang → đơn là 0,6%. Giá mỗi tấm nệm khoảng 8 triệu, khách thường xem nhiều lần, so nhiều hãng và hỏi thêm qua điện thoại trước khi mua.',
   concept:{ name:'Đặt mục tiêu tỉ lệ chuyển đổi thực tế',
     body:'Tỉ lệ chuyển đổi phụ thuộc mạnh vào <b>giá trị đơn</b>, <b>tần suất mua</b>, <b>độ ấm của người vào</b> và <b>cách định nghĩa bước</b>. Hàng rẻ mua thường xuyên có tỉ lệ cao hơn hàng đắt mua vài năm một lần. Con số "trung bình ngành" trên mạng thường không nói rõ mẫu số, nguồn khách hay ngành hàng. Mốc đáng tin nhất là <b>chính số liệu của bạn</b>. Mục tiêu = mức hiện tại + mức tăng mà một thay đổi cụ thể có thể mang lại, ước từ thử nghiệm nhỏ hoặc nhân qua từng bước phễu, rồi tính ngược ra số đơn. Mục tiêu không kèm cách đạt chỉ là một lời mong.' },

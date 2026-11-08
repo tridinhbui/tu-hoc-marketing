@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'tu04', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tu04-01', skill:'measure', read:'7 phút', t:'Mỗi khách hàng thật sự mang về bao nhiêu khách mới?',
+{ id:'B:tu04-01', skill:'measure', read:'7 phút', assume:true, t:'Mỗi khách hàng thật sự mang về bao nhiêu khách mới?',
   situation:'Một app học tiếng Anh ở Hà Nội mở chương trình "mời bạn nhận 1 tháng miễn phí". Sau một tháng, 2.000 học viên cũ đã gửi tổng cộng 1.600 lời mời, và 240 người được mời đăng ký học. Sếp hỏi: "Vậy chương trình tự lan được chưa, hay vẫn phải đổ tiền quảng cáo?"',
   concept:{ name:'Hệ số lan truyền (K)',
     body:'Hệ số lan truyền cho biết <b>trung bình mỗi khách hiện có kéo về bao nhiêu khách mới</b>. Nó bằng số lời mời trung bình mỗi khách gửi nhân với tỉ lệ người được mời chuyển thành khách. Nếu K lớn hơn 1, mỗi lớp khách tự sinh ra lớp sau lớn hơn — tăng trưởng tự nuôi. K nhỏ hơn 1 vẫn có ích: nó là phần khách "tặng thêm" trên mỗi khách bạn mua bằng quảng cáo, nhưng không tự chạy được. Chia cho <b>toàn bộ khách</b>, không chỉ người đã đi mời.' },
@@ -58,7 +58,7 @@ BAI_ADD({ mod:'tu04', lessons:[
       d:'25% người đi mời vẫn mang về khách; K thấp nhưng không bằng 0.'} } ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tu04-02', skill:'channel', read:'6 phút', t:'Thưởng cho người mời, người được mời, hay cả hai?',
+{ id:'B:tu04-02', skill:'channel', read:'6 phút', assume:true, t:'Thưởng cho người mời, người được mời, hay cả hai?',
   situation:'Một ví điện tử mới đang tặng 50.000đ cho người giới thiệu khi bạn bè mở ví. Tỉ lệ người được mời mở ví chỉ 6%. Nhóm marketing có đúng 50.000đ cho mỗi khách mới và phải chọn: giữ nguyên, chuyển hết cho người được mời, hay chia đôi mỗi bên 25.000đ.',
   concept:{ name:'Thưởng một phía và thưởng hai phía',
     body:'Thưởng cho người mời làm họ <b>chịu gửi lời mời</b>. Thưởng cho người được mời làm lời mời <b>dễ nhận hơn</b>, và có thể giúp người mời bớt ngại vì mình đang "tặng" bạn chứ không "kiếm tiền" từ bạn (cơ chế tâm lý hợp lý, chưa phải kết quả đo được ở mọi ngành). Chia hai phía thường hợp khi sản phẩm cần người mới vượt một rào cản (mở ví, cài app, mua lần đầu). Nếu vấn đề là không ai chịu mời, dồn thưởng cho người mời. Nếu lời mời đã nhiều mà ít người nhận, dồn cho người được mời. Hãy nhìn thừa số nào đang yếu.' },
@@ -117,11 +117,11 @@ BAI_ADD({ mod:'tu04', lessons:[
       d:'Đúng. Ưu đãi hạ rào cản thử lần đầu ở phía người nhận.'} } ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tu04-03', skill:'measure', read:'7 phút', t:'Thưởng giới thiệu bao nhiêu thì vẫn còn lãi?',
+{ id:'B:tu04-03', skill:'measure', read:'7 phút', assume:true, t:'Thưởng giới thiệu bao nhiêu thì vẫn còn lãi?',
   situation:'Một thương hiệu cà phê hạt bán online, đơn đầu trung bình 300.000đ, biên lãi gộp 40%. Khách mới mua trung bình 3 đơn trong đời. Họ định thưởng 100.000đ cho người mời và 100.000đ cho người được mời. Một bạn trong nhóm nói: "Lãi mỗi đơn 120.000đ, thưởng 200.000đ là lỗ rồi."',
   concept:{ name:'Trần thưởng giới thiệu',
     body:'Mức thưởng tối đa là <b>biên đóng góp kỳ vọng</b> của một khách mới trong đời (số đơn kỳ vọng × lãi mỗi đơn sau giá vốn, phí giao hàng, thanh toán, hoàn trả) trừ đi phần lãi bạn muốn giữ. Chữ "kỳ vọng" quan trọng: dùng số đơn trung bình thật của khách giới thiệu, không phải của khách tốt nhất. Với dịch vụ thuê bao như phòng gym, nhân thêm số năm khách giữ chân. Không so thưởng với doanh thu, cũng không chỉ so với lãi đơn đầu. Phải tính thưởng trên <b>khách thật sự mua</b>: thưởng người mời thường chỉ trả khi bạn bè mua, còn ưu đãi người được mời chỉ tốn khi họ dùng. So thưởng với chi phí có một khách qua quảng cáo để biết đây là kênh rẻ hay đắt.' },
-  example:'Lãi gộp mỗi đơn: 300.000 × 40% = 120.000đ (số minh hoạ, giả định đã trừ phí giao hàng và thanh toán). Ba đơn: 360.000đ lãi gộp trong đời. Thưởng hai phía 200.000đ còn lại 160.000đ — vẫn lãi, nếu khách mới thật sự mua đủ 3 đơn. Bạn trong nhóm chỉ nhìn đơn đầu nên thấy lỗ. Nhưng nếu khách đến vì quà chỉ mua 1 đơn rồi đi, 120.000 − 200.000 = lỗ 80.000đ. Vì vậy nhóm quyết định trả 100.000đ cho người mời chỉ khi bạn họ mua đơn thứ hai.',
+  example:'Lãi gộp mỗi đơn: 300.000 × 40% = 120.000đ (số minh hoạ, giả định đã trừ phí giao hàng và thanh toán). Ba đơn: 360.000đ lãi gộp trong đời. Thưởng hai phía 200.000đ còn lại 160.000đ — vẫn lãi, nếu khách mới thật sự mua đủ 3 đơn. Bạn trong nhóm chỉ nhìn đơn đầu nên thấy lỗ. Nhưng nếu khách đến vì quà chỉ mua 1 đơn rồi đi, 120.000 − 200.000 = lỗ 80.000đ. Vì vậy nhóm quyết định trả 100.000đ cho người mời chỉ khi bạn họ mua đơn thứ hai. Trần còn sai theo hai cách khác: khách đến qua giới thiệu có thể mua ít đơn hơn khách thường (1,5 đơn thì lãi chỉ 180.000đ, thưởng 200.000đ là lỗ), và thưởng trả ngay trong khi lãi đơn 2–3 về sau nhiều tháng, nên cần đặt ngân sách tiền mặt tối đa mỗi tháng.',
   takeaway:'Thưởng giới thiệu so với biên đóng góp kỳ vọng trong đời của khách mới, và trả theo hành vi mua thật.',
   apply:'Với một sản phẩm bạn biết giá, ước lãi gộp mỗi đơn và số đơn trong đời, rồi nói mức thưởng tối đa bạn dám trả.',
   mistakes:['So thưởng với doanh thu thay vì lãi gộp, hoặc bỏ quên số năm khách giữ chân khi tính.','Giả định khách đến vì quà sẽ trung thành như khách tự tìm đến.'],
@@ -165,14 +165,14 @@ BAI_ADD({ mod:'tu04', lessons:[
       d:'Chờ một năm với chương trình đang lỗ là để thiệt hại tích luỹ.'} } ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tu04-04', skill:'comm', read:'6 phút', t:'Nên xin khách giới thiệu vào lúc nào?',
+{ id:'B:tu04-04', skill:'comm', read:'6 phút', assume:true, t:'Nên xin khách giới thiệu vào lúc nào?',
   situation:'Một spa ở Đà Nẵng gửi tin nhắn "Mời bạn bè, nhận voucher 100.000đ" cho mọi khách vào ngày đầu tháng. Tỉ lệ khách bấm vào chỉ 1%. Chị quản lý để ý: khách hay khen ngay sau buổi massage, khi đang uống trà ở quầy, nhưng lúc đó không ai nhắc chuyện giới thiệu.',
   concept:{ name:'Khoảnh khắc hài lòng cao nhất',
     body:'Người ta thường dễ giới thiệu nhất <b>ngay sau một trải nghiệm tốt</b> (đây là quan sát thực hành phổ biến, nên đo lại với khách của bạn): vừa nhận hàng đẹp, vừa xong dịch vụ, vừa đạt kết quả (giảm cân, học xong khoá). Lúc đó cảm xúc còn nóng và câu chuyện còn rõ. Gửi lời xin giới thiệu vào một ngày ngẫu nhiên thì khách phải tự nhớ lại, nên ít người làm. Tìm khoảnh khắc bằng tín hiệu hài lòng: lời khen, điểm cao, đặt lịch tiếp. Chỉ mời khi có tín hiệu; mời đại trà hay lặp lại làm phiền cả người chưa hài lòng.' },
   example:'Số minh hoạ. Spa giữ nguyên voucher 100.000đ, chỉ đổi thời điểm: nhân viên quầy đưa thẻ QR khi khách đang uống trà sau massage, rồi gửi tin cảm ơn kèm đường dẫn trong 2 giờ. Trong 1.000 khách của tháng, 80 người gửi mã, so với 10 khi gửi tin đầu tháng. Nhưng thẻ trực tiếp và lời nhắc của nhân viên cũng là thay đổi, nên mức tăng thuộc về cả gói. Muốn biết riêng phần thời điểm, thử nửa số khách nhận thẻ tại quầy, nửa nhận cùng thẻ đó vào đầu tháng.',
   takeaway:'Xin giới thiệu khi khách vừa hài lòng, không phải khi lịch gửi tin của bạn tới hạn.',
   apply:'Với một dịch vụ bạn hay dùng, chỉ ra khoảnh khắc bạn hài lòng nhất và viết một câu mời giới thiệu đặt đúng lúc đó.',
-  mistakes:['Gửi lời mời hàng loạt theo lịch, không theo trải nghiệm.','Xin giới thiệu ngay khi khách vừa trả tiền, trước khi họ dùng.'],
+  mistakes:['Gửi lời mời hàng loạt theo lịch, không theo trải nghiệm.','Xin giới thiệu ngay khi khách vừa trả tiền, trước khi họ dùng.','Mời ngay lúc nhận hàng với sản phẩm cần thời gian mới thấy kết quả (kem trị mụn, khoá học), hoặc với dịch vụ khách ngại kể (trị liệu, y tế): lời khen bao bì chưa phải hài lòng về kết quả — dời sang khi khách thấy kết quả hoặc mua lần hai.'],
   q:[
   { type:'mcq', stem:'Trước khi đọc: spa gửi lời mời đầu tháng chỉ có 1% khách bấm. Bạn đoán nguyên nhân chính là gì?',
     options:[{k:'a',t:'Voucher 100.000đ quá nhỏ so với giá một buổi spa'},{k:'b',t:'Lời mời đến lúc khách không còn nhớ cảm giác hài lòng'},
@@ -221,11 +221,11 @@ BAI_ADD({ mod:'tu04', lessons:[
       d:'Voucher không sửa được cảm giác chưa hài lòng; còn khiến lời mời giống mua chuộc.'} } ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tu04-05', skill:'creative', read:'6 phút', t:'Làm sao để khách tự kể về bạn mà không cần thưởng?',
+{ id:'B:tu04-05', skill:'creative', read:'6 phút', assume:true, t:'Làm sao để khách tự kể về bạn mà không cần thưởng?',
   situation:'Một quán bún chả ở Hà Nội ngon, sạch, giá hợp lý, nhưng khách ăn xong ít ai nhắc lại với bạn bè. Quán bên cạnh bán bún chả "que tre" nướng kẹp tre, có bảng ghi "Ăn hết 3 suất trong 20 phút, miễn phí" — khách chụp ảnh và kể liên tục. Chủ quán hỏi: mình có cần giảm giá để được nói đến không?',
   concept:{ name:'Chuyện để kể',
-    body:'Người ta không kể về thứ "tốt", họ kể về thứ <b>đáng kể</b> (theo khung STEPPS của Jonah Berger trong sách Contagious): khác thường, gây bất ngờ, dễ chụp, hay giúp người kể trông thú vị hoặc tốt bụng. Ngon và sạch là điều khách mong đợi, nên không thành chuyện. Truyền miệng tự nhiên cần một chi tiết cụ thể mà khách có thể nói lại trong một câu. Chi tiết đó phải thật và gắn với sản phẩm, không phải mẹo vô nghĩa. Nó rẻ hơn thưởng giới thiệu và bền hơn, vì khách kể vì muốn kể.' },
-  example:'Quán bún chả thử một chi tiết: bưng nước mắm đựng trong bát sành nhỏ khắc tên quán, và tặng khách một chiếc chả viên nướng "ăn thử trước" khi ngồi xuống. Không giảm giá. Sau 2 tháng, trong 200 khách mới được hỏi, số người nói "bạn kể" tăng từ 20 lên 50. Khách lặp lại đúng một câu: "quán đó mời chả trước khi gọi món."',
+    body:'Người ta không kể về thứ "tốt", họ kể về thứ <b>đáng kể</b>: khác thường, gây bất ngờ, dễ chụp, hay giúp người kể trông thú vị hoặc tốt bụng. (Ý này lấy từ ba trong sáu yếu tố của khung STEPPS trong sách Contagious của Jonah Berger: social currency — kể để trông thú vị, public — dễ thấy, dễ chụp, và stories — một câu kể lại được.) Ngon và sạch là điều khách mong đợi, nên không thành chuyện. Truyền miệng tự nhiên cần một chi tiết cụ thể mà khách có thể nói lại trong một câu. Chi tiết đó phải thật và gắn với sản phẩm, không phải mẹo vô nghĩa. Nó rẻ hơn thưởng giới thiệu và bền hơn, vì khách kể vì muốn kể.' },
+  example:'Quán bún chả thử một chi tiết: bưng nước mắm đựng trong bát sành nhỏ khắc tên quán, và tặng khách một chiếc chả viên nướng "ăn thử trước" khi ngồi xuống. Không giảm giá. Sau 2 tháng, trong 200 khách mới được hỏi, số người nói "bạn kể" tăng từ 20 lên 50 (số minh hoạ). Khách lặp lại đúng một câu: "quán đó mời chả trước khi gọi món." Đây là so trước – sau nên chỉ là tín hiệu, cần so với cùng kỳ hoặc một quán không đổi. Chi phí cũng phải tính: giả sử chả viên tốn 3.000đ và quán có 6.000 lượt khách/tháng, đó là 18 triệu/tháng — chỉ đáng khi số khách mới tăng thêm nhân lãi mỗi khách vượt con số này.',
   takeaway:'Tốt là điều kiện cần; khách chỉ kể khi có một chi tiết đáng kể nói được trong một câu.',
   points:["Người ta kể để thấy mình thú vị, nên thứ được kể phải mới lạ hoặc bất ngờ so với kỳ vọng. Ngon và sạch chỉ là mức tối thiểu, chưa thành nội dung.","Một câu ngắn là đơn vị của truyền miệng: khách phải nhắc lại được ngay giữa cuộc trò chuyện. Chi tiết dài hoặc cần giải thích thường rơi mất trước khi tới người nghe.","Cách làm: tìm một khoảnh khắc khách chưa mong đợi, gắn nó vào món ăn, rồi hỏi vài khách xem họ kể lại bằng câu nào. Câu họ kể mới là chi tiết thật."],
   counter:"Giả sử quán bún chả chép luôn biển “ăn hết 3 suất trong 20 phút” của quán bên cạnh. Khách vẫn chụp ảnh, nhưng khi kể họ nhắc đến quán kia chứ không phải quán mình. Dấu hiệu cần đổi: khách kể về trò chơi mà không nhớ tên quán, hoặc không nói thêm gì về món. Chi tiết phải gắn với chính sản phẩm của bạn, nếu không công kể chuyện sẽ chảy sang đối thủ.",
@@ -280,7 +280,7 @@ BAI_ADD({ mod:'tu04', lessons:[
       d:'Đó là thưởng giới thiệu, không phải khách tự kể.'} } ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tu04-06', skill:'measure', read:'7 phút', t:'Chương trình giới thiệu tăng vọt — thật hay bị gian lận?',
+{ id:'B:tu04-06', skill:'measure', read:'7 phút', assume:true, t:'Chương trình giới thiệu tăng vọt — thật hay bị gian lận?',
   situation:'Một app mua sắm thưởng 50.000đ cho cả hai bên khi người mới đặt đơn đầu từ 100.000đ. Tuần này, khách mới qua giới thiệu tăng từ 400 lên 2.400. Nhóm vui mừng, cho đến khi kế toán thấy nhiều đơn giao cùng một địa chỉ, và nhiều tài khoản mới không bao giờ đặt đơn thứ hai.',
   concept:{ name:'Gian lận giới thiệu',
     body:'Khi thưởng bằng tiền, sẽ có người <b>tự mời chính mình</b>: tạo nhiều tài khoản, dùng nhiều số điện thoại, đặt đơn nhỏ rồi rút thưởng. Dấu hiệu: tăng đột biến, nhiều tài khoản chung thiết bị hoặc địa chỉ, tỉ lệ mua lại gần 0, người mời có hàng chục "bạn" trong một ngày. Chặn bằng thiết kế: trả thưởng sau khi đơn hoàn tất và qua thời gian đổi trả, giới hạn số lượt mỗi người, kiểm tra thiết bị và địa chỉ, thưởng bằng điểm dùng trong app thay vì tiền rút được.' },
@@ -335,14 +335,14 @@ BAI_ADD({ mod:'tu04', lessons:[
       d:'Số cũ là số có gian lận; quay lại mức đó không phải mục tiêu.'} } ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tu04-07', skill:'channel', read:'6 phút', t:'Review và video của khách có đáng đầu tư như giới thiệu?',
+{ id:'B:tu04-07', skill:'channel', read:'6 phút', assume:true, t:'Review và video của khách có đáng đầu tư như giới thiệu?',
   situation:'Một thương hiệu kem chống nắng nội địa bán trên Shopee có 150 đánh giá, điểm 4,8. Đối thủ có 3.000 đánh giá, 4,6 điểm, và hàng trăm video khách tự quay trên TikTok. Tỉ lệ người xem trang thành người mua của thương hiệu là 1,5%, của đối thủ ước khoảng 3%. Ngân sách tháng này chỉ đủ cho một việc.',
   concept:{ name:'Truyền miệng số: review và UGC',
-    body:'Đánh giá và nội dung khách tự tạo (<b>UGC</b>) là lời giới thiệu gửi tới <b>người lạ</b> thay vì bạn bè. Người mua online không hỏi được ai, nên họ đọc đánh giá, xem ảnh và video thật. Số lượng đánh giá quan trọng không kém điểm: nghiên cứu của Spiegel Research Center (Northwestern) cho thấy khả năng mua đạt đỉnh ở khoảng 4,2–4,5 sao, không phải 5 sao, và tăng theo số đánh giá; vì vậy 4,8 trên 150 đánh giá thường ít thuyết phục hơn 4,6 trên 3.000. Cách tăng: xin đánh giá ngay khi khách nhận và dùng thử, làm dễ việc đăng ảnh, trả lời cả đánh giá xấu. Không mua đánh giá giả: bị phát hiện là mất lòng tin.' },
+    body:'Đánh giá và nội dung khách tự tạo (<b>UGC</b>) là lời giới thiệu gửi tới <b>người lạ</b> thay vì bạn bè. Người mua online không hỏi được ai, nên họ đọc đánh giá, xem ảnh và video thật. Số lượng đánh giá quan trọng không kém điểm: theo hiểu biết chung tại ngày kiểm 2026-11-07 về nghiên cứu của Spiegel Research Center (Northwestern) trên dữ liệu bán lẻ online ở Mỹ, khả năng mua thường đạt đỉnh ở mức trên 4 sao nhưng dưới 5 sao, và tăng theo số đánh giá — hãy kiểm trên danh mục của bạn; vì vậy 4,8 trên 150 đánh giá thường ít thuyết phục hơn 4,6 trên 3.000. Cách tăng: xin đánh giá ngay khi khách nhận và dùng thử, làm dễ việc đăng ảnh, trả lời cả đánh giá xấu. Không mua đánh giá giả: bị phát hiện là mất lòng tin.' },
   example:'Thương hiệu dồn ngân sách vào xin đánh giá: thẻ cảm ơn trong hộp kèm hướng dẫn đăng ảnh, tin nhắn hỏi thăm sau 7 ngày dùng, và chọn 20 video thật của khách để đăng lại. Sau 2 tháng: 900 đánh giá, 4,7 điểm. Với 40.000 lượt xem trang mỗi tháng, tỉ lệ mua lên 2,2% — từ 600 lên 880 đơn mỗi tháng, không tăng tiền quảng cáo. (Số minh hoạ; ngoài đời cần A/B test hoặc nhóm đối chứng để biết phần tăng có thật do thay đổi này.)',
   takeaway:'Đánh giá và video của khách là truyền miệng tới người lạ; số lượng thật quan trọng như điểm số.',
   apply:'Mở trang một sản phẩm bạn định mua. Nói trong 60 giây: bạn tin đánh giá nào nhất và vì sao.',
-  mistakes:['Chỉ nhìn điểm sao, bỏ qua số lượng đánh giá.','Xoá hoặc lờ đi đánh giá xấu thay vì trả lời.'],
+  mistakes:['Chỉ nhìn điểm sao, bỏ qua số lượng đánh giá.','Xoá hoặc lờ đi đánh giá xấu thay vì trả lời.','Tặng quà kèm điều kiện “nếu đánh giá 5 sao”: sàn có thể coi là thao túng đánh giá. Chỉ xin đánh giá trung thực, chấp nhận điểm tụt nhẹ khi số đánh giá tăng, và theo dõi tỉ lệ mua thay vì chỉ nhìn điểm.'],
   q:[
   { type:'mcq', stem:'Trước khi đọc: 4,8 điểm với 150 đánh giá hay 4,6 điểm với 3.000 đánh giá — người mua lạ tin bên nào hơn?',
     options:[{k:'a',t:'4,8 điểm, vì điểm cao hơn tức là sản phẩm được chấm tốt hơn'},{k:'b',t:'4,6 với 3.000 đánh giá, vì nhiều người đã mua và kiểm chứng'},
@@ -391,14 +391,14 @@ BAI_ADD({ mod:'tu04', lessons:[
       d:'Phần lớn khách hài lòng không tự đánh giá nếu không được nhắc.'} } ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tu04-08', skill:'brand', read:'6 phút', t:'Nên thuê KOL hay nuôi cộng đồng đại sứ từ chính khách hàng?',
+{ id:'B:tu04-08', skill:'brand', read:'6 phút', assume:true, t:'Nên thuê KOL hay nuôi cộng đồng đại sứ từ chính khách hàng?',
   situation:'Một thương hiệu đồ chạy bộ ở TP.HCM có 50 triệu đồng mỗi quý. Lựa chọn một: thuê một KOL thể thao đăng 2 bài. Lựa chọn hai: chọn 25 khách đang chạy đều, tặng đồ, mời chạy nhóm hằng tuần và cho mã giới thiệu riêng. Giám đốc thích lựa chọn một vì "có lượt xem ngay".',
   concept:{ name:'Chương trình đại sứ từ khách hàng',
-    body:'Đại sứ là khách <b>đã yêu sản phẩm</b>, được thương hiệu chăm sóc để nói về nó trong vòng tròn của mình. Họ ít người theo dõi hơn KOL, nhưng người nghe thường quen biết họ ngoài đời nên dễ tin hơn; điều này cần kiểm bằng mã riêng chứ không mặc nhiên. Chọn theo mức dùng thật và vai trò trong nhóm, không theo số người theo dõi. Cho họ thứ tiền không mua được: sản phẩm sớm, gặp đội sản phẩm, được góp ý. KOL hợp khi cần nhận biết nhanh trong vài tuần; đại sứ hợp khi sản phẩm có cộng đồng dùng lặp. Lưu ý pháp lý: KOL hay đại sứ nhận tiền, quà hoặc hàng tặng thường phải ghi rõ là quảng cáo hoặc hợp tác theo Luật Quảng cáo (bản sửa đổi có hiệu lực từ 01/01/2026 bổ sung trách nhiệm của người chuyển tải quảng cáo như KOL); hỏi pháp chế, ghi nhãn ngay trong bài.' },
+    body:'Đại sứ là khách <b>đã yêu sản phẩm</b>, được thương hiệu chăm sóc để nói về nó trong vòng tròn của mình. Họ ít người theo dõi hơn KOL, nhưng người nghe thường quen biết họ ngoài đời nên dễ tin hơn; điều này cần kiểm bằng mã riêng chứ không mặc nhiên. Chọn theo mức dùng thật và vai trò trong nhóm, không theo số người theo dõi. Cho họ thứ tiền không mua được: sản phẩm sớm, gặp đội sản phẩm, được góp ý. KOL hợp khi cần nhận biết nhanh trong vài tuần; đại sứ hợp khi sản phẩm có cộng đồng dùng lặp. Lưu ý pháp lý: KOL hay đại sứ nhận tiền, quà hoặc hàng tặng thường phải ghi rõ là quảng cáo hoặc hợp tác theo Luật Quảng cáo; theo hiểu biết chung tại ngày kiểm 2026-11-07, bản sửa đổi hiệu lực từ 01/01/2026 thêm trách nhiệm cho người chuyển tải quảng cáo — hỏi pháp chế, ghi nhãn ngay trong bài.' },
   example:'Số minh hoạ. Quý trước thương hiệu trả 50 triệu cho hai bài KOL, thu 150 đơn qua mã: khoảng 333.000đ mỗi đơn, chưa tính phần nhận biết thương hiệu mà mã không đo được. Quý này họ chọn lựa chọn hai: mỗi đại sứ nhận đồ 1 triệu cộng 1 triệu chi phí chạy nhóm, tổng 50 triệu. 25 đại sứ mang về 400 đơn qua mã, tức 16 đơn mỗi người, gồm bạn chạy nhóm và người quen. Chi phí mỗi đơn: 50 triệu ÷ 400 = 125.000đ. So sánh này chưa tính nhận biết của KOL, chưa kiểm xem bao nhiêu đơn vẫn xảy ra dù không có đại sứ, và cần sẵn 25 người chạy đều để bắt đầu.',
   takeaway:'Đại sứ từ khách thật chạm ít người hơn KOL, nhưng thường được tin hơn và nói lâu hơn; hãy kiểm bằng mã riêng.',
   apply:'Nghĩ về một thương hiệu bạn thích. Nói trong 60 giây: nếu được mời làm đại sứ, bạn muốn nhận gì ngoài tiền.',
-  mistakes:['Chọn đại sứ theo số người theo dõi thay vì mức yêu sản phẩm.','Trả tiền cho mỗi bài đăng, biến đại sứ thành người quảng cáo thuê.'],
+  mistakes:['Chọn đại sứ theo số người theo dõi thay vì mức yêu sản phẩm.','Trả tiền cho mỗi bài đăng, biến đại sứ thành người quảng cáo thuê.','Bỏ qua rủi ro ngược: đại sứ bỏ ngang, nhóm chạy tan dần, hay đại sứ nói xấu khi sản phẩm lỗi làm chi phí mỗi đơn tăng nhanh — theo dõi số đại sứ còn hoạt động mỗi tháng và tính cả chi phí quản lý cộng đồng.'],
   q:[
   { type:'mcq', stem:'Trước khi đọc: cùng 50 triệu, 2 bài KOL có 800.000 lượt xem và 150 đơn qua mã; 25 đại sứ có 40.000 lượt xem và 400 đơn qua mã. Muốn bán hàng, so bằng số nào?',
     options:[{k:'a',t:'Lượt xem, vì đó là số đo được sớm nhất và lớn nhất của mỗi bài đăng'},{k:'b',t:'Cộng lượt xem và đơn thành một điểm chung để so sánh hai phương án'},
@@ -448,7 +448,7 @@ BAI_ADD({ mod:'tu04', lessons:[
  ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tu04-09', skill:'measure', read:'7 phút', t:'Làm sao đo được truyền miệng khi không có mã giới thiệu?',
+{ id:'B:tu04-09', skill:'measure', read:'7 phút', assume:true, t:'Làm sao đo được truyền miệng khi không có mã giới thiệu?',
   situation:'Một tiệm bánh mì ở Cần Thơ không chạy chương trình giới thiệu, nhưng chủ tiệm tin phần lớn khách mới đến vì "người ta kể". Công cụ quảng cáo chỉ báo 120 khách mới đến từ quảng cáo Facebook trong tháng. Chủ tiệm cần biết có nên tăng quảng cáo hay đầu tư thêm cho trải nghiệm tại tiệm.',
   concept:{ name:'Câu hỏi "biết qua đâu"',
     body:'Truyền miệng phần lớn không để lại dấu vết số: người ta nói chuyện ở quán, nhắn riêng, rồi tự tìm đến. Công cụ đo quảng cáo không thấy phần này. Cách đơn giản nhất là <b>hỏi khách mới</b> một câu: "Anh chị biết tiệm qua đâu?", với vài lựa chọn cố định (bạn bè/người thân kể, mạng xã hội, đi ngang qua, khác). Hỏi trên một mẫu đủ lớn, ghi đều đặn, và so theo thời gian. Kết quả không chính xác tuyệt đối vì người ta nhớ không đủ, nhưng cho biết tỉ trọng.' },

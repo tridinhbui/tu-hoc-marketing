@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'in01', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:in01-01', skill:'measure', read:'6 phút', t:'Chiến dịch “thành công” — nhưng so với mục tiêu nào?',
+{ id:'B:in01-01', skill:'measure', read:'6 phút', assume:true, t:'Chiến dịch “thành công” — nhưng so với mục tiêu nào?',
   situation:'Một chuỗi trà sữa ở Hà Nội vừa chạy xong chiến dịch ra vị mới trong 6 tuần. Cả phòng vui vì bán được 18.000 ly vị mới và bài đăng đạt 2 triệu lượt xem. Khi mở bản kế hoạch cũ, bạn thấy mục tiêu ghi: 25.000 ly, và tăng 15% khách mới so với cùng kỳ. Chưa ai nhắc tới hai con số đó trong buổi họp tổng kết.',
   concept:{ name:'So kết quả với mục tiêu đã chốt từ đầu',
     body:'Post-mortem bắt đầu bằng việc đặt kết quả cạnh <b>mục tiêu đã viết trước khi chạy</b>, không phải cạnh cảm giác hay cạnh con số đẹp nhất tìm được sau đó. Khi chiến dịch xong, ai cũng có xu hướng chọn chỉ số nào tốt để kể. Cách chống: mở lại bản brief, liệt kê từng mục tiêu, ghi kết quả thật và tỉ lệ đạt. Chỉ số phụ đẹp (lượt xem, lượt thích) được ghi riêng, không thay cho mục tiêu chính.' },
@@ -63,8 +63,8 @@ BAI_ADD({ mod:'in01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:in01-02', skill:'insight', read:'7 phút', t:'Bán vượt chỉ tiêu nhờ mình giỏi hay nhờ trời nắng?',
-  situation:'Một hãng nước giải khát chạy chiến dịch hè tháng 6 ở miền Bắc, mục tiêu 100.000 thùng, bán được 130.000 thùng. Cả nhóm muốn nhân đôi ngân sách cho năm sau. Nhưng tháng 6 năm đó nắng nóng kéo dài bất thường, và đối thủ chính bị gián đoạn nguồn hàng hai tuần.',
+{ id:'B:in01-02', skill:'insight', read:'7 phút', assume:true, t:'Bán vượt chỉ tiêu nhờ mình giỏi hay nhờ trời nắng?',
+  situation:'Một hãng nước giải khát chạy chiến dịch hè tháng 6 ở miền Bắc. Cùng kỳ năm trước vùng này bán 100.000 thùng, mục tiêu năm nay cũng đặt bằng mức đó; kết quả bán được 130.000 thùng. Cả nhóm muốn nhân đôi ngân sách cho năm sau. Nhưng tháng 6 năm đó nắng nóng kéo dài bất thường, và đối thủ chính bị gián đoạn nguồn hàng hai tuần.',
   concept:{ name:'Tách may rủi và năng lực',
     body:'Kết quả = quyết định của mình + yếu tố ngoài tầm kiểm soát. Post-mortem tốt tách hai phần đó ra. Hỏi: nếu thời tiết và đối thủ bình thường, ta ước đạt bao nhiêu? Dùng mốc so sánh: cùng kỳ năm trước, vùng không chạy chiến dịch, hoặc ngành hàng chung. Phần vượt mốc mới là phần có thể quy cho quyết định của mình. Không tách thì ta sẽ nhân rộng cả may mắn — và năm sau trời mát là vỡ kế hoạch.' },
   example:'Ở các tỉnh không chạy chiến dịch, doanh số cũng tăng 20% so với cùng kỳ nhờ nắng và đối thủ đứt hàng. Mốc “không làm gì” của vùng chiến dịch là 100.000 × 1,2 = 120.000 thùng. Phần chiến dịch tạo thêm chỉ khoảng 10.000 thùng, không phải 30.000. Nhân đôi ngân sách dựa trên con số 30.000 là đặt cược vào một mùa hè giống hệt.',
@@ -123,7 +123,7 @@ BAI_ADD({ mod:'in01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:in01-03', skill:'insight', read:'7 phút', t:'Landing page sập ngày ra mắt: lỗi của ai?',
+{ id:'B:in01-03', skill:'insight', read:'7 phút', assume:true, t:'Landing page sập ngày ra mắt: lỗi của ai?',
   situation:'Một thương hiệu giày chạy flash sale 12.12. Trang đích sập 40 phút đúng giờ cao điểm, mất ước khoảng 300 đơn. Buổi họp tổng kết nhanh chóng thành: “Bên kỹ thuật làm ẩu”, “Bên marketing báo lượng truy cập quá muộn”. Không ai viết được điều gì để lần sau khác đi.',
   concept:{ name:'Tìm nguyên nhân gốc, không tìm người để trách',
     body:'Post-mortem không đổ lỗi (blameless) giả định mỗi người đã làm điều hợp lý với thông tin họ có. Câu hỏi đổi từ “ai sai” sang “quy trình nào cho phép lỗi này xảy ra”. Công cụ đơn giản: hỏi <b>“vì sao” khoảng 5 lần</b>, mỗi lần xuống một tầng, tới khi gặp điều sửa được bằng quy trình hoặc công cụ. Hai giới hạn: một chuỗi chỉ lần theo một nhánh và dễ dừng ở chỗ dễ sửa nhất, nên sự cố thường cần vài chuỗi song song; và “không đổ lỗi” không có nghĩa không ai chịu trách nhiệm — mỗi hành động sửa vẫn có người nhận và hạn.' },
@@ -180,10 +180,10 @@ BAI_ADD({ mod:'in01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:in01-04', skill:'measure', read:'6 phút', t:'Cái gì giữ lại, cái gì bỏ cho lần sau?',
-  situation:'Chiến dịch back-to-school của một nhà sách online chạy 5 hoạt động: KOL review, livestream, voucher email, quảng cáo tìm kiếm và in tờ rơi tại trường. Tổng chi 200 triệu, doanh thu tăng thêm 600 triệu. Năm sau ngân sách vẫn 200 triệu. Sếp hỏi: “Giữ nguyên hết à?”',
+{ id:'B:in01-04', skill:'measure', read:'6 phút', assume:true, t:'Cái gì giữ lại, cái gì bỏ cho lần sau?',
+  situation:'Chiến dịch back-to-school của một nhà sách online chạy 5 hoạt động: KOL review, livestream, voucher email, quảng cáo tìm kiếm và in tờ rơi tại trường. Tổng chi 200 triệu, doanh thu tăng thêm 600 triệu (mỗi hoạt động đo bằng mã riêng và so với nhóm khách không nhận hoạt động đó — giả định minh hoạ). Năm sau ngân sách vẫn 200 triệu. Sếp hỏi: “Giữ nguyên hết à?”',
   concept:{ name:'Bảng Giữ – Bỏ – Thử lại',
-    body:'Tổng kết theo từng hoạt động, không chỉ theo tổng. Mỗi hoạt động xếp một trong ba cột: <b>Giữ</b> (hiệu quả rõ, lặp lại được), <b>Bỏ</b> (tốn mà không đóng góp), <b>Thử lại có sửa</b> (có dấu hiệu nhưng làm chưa đúng). Tổng tốt có thể che một hoạt động lỗ; tổng xấu có thể che một hoạt động rất tốt. Mỗi ô cần một dòng lý do và con số, để người sau hiểu vì sao. Chấm bằng <b>lãi tăng thêm</b> = doanh thu tăng thêm × biên đóng góp − chi phí, không chấm bằng doanh thu tăng thêm chia chi: doanh thu gấp đôi chi vẫn có thể lỗ.' },
+    body:'Tổng kết theo từng hoạt động, không chỉ theo tổng. Mỗi hoạt động xếp một trong ba cột: <b>Giữ</b> (hiệu quả rõ, lặp lại được), <b>Bỏ</b> (tốn mà không đóng góp), <b>Thử lại có sửa</b> (có dấu hiệu nhưng làm chưa đúng). Tổng tốt có thể che một hoạt động lỗ; tổng xấu có thể che một hoạt động rất tốt. Mỗi ô cần một dòng lý do và con số, để người sau hiểu vì sao. Chấm bằng <b>lãi tăng thêm</b> = doanh thu tăng thêm × biên đóng góp − chi phí, không chấm bằng doanh thu tăng thêm chia chi: doanh thu gấp đôi chi vẫn có thể lỗ. Cẩn thận với cách gán: nếu chỉ lấy đơn gắn mã hay last-click, kênh chạm khách cũ sắp mua như email dễ được ghi công quá tay (xem bài “Chiến dịch vượt chỉ tiêu có cần post-mortem không?”).' },
   example:'Chia theo hoạt động, với biên đóng góp 40% (sau giá vốn sách, phí giao, đóng gói): voucher email chi 20 triệu, tạo 180 triệu doanh thu tăng thêm → lãi tăng thêm 180 × 40% − 20 = +52 triệu; quảng cáo tìm kiếm chi 60 triệu, tạo 240 triệu → +36 triệu; KOL chi 70 triệu, tạo 140 triệu → 56 − 70 = −14 triệu; livestream chi 30 triệu, tạo 30 triệu → 12 − 30 = −18 triệu; tờ rơi chi 20 triệu, gần như không đo được. Giữ: email, tìm kiếm. Thử lại có sửa: KOL (đang lỗ nhẹ; đổi sang KOL nhỏ rẻ hơn, có mã riêng). Bỏ: tờ rơi. Livestream: thử lại một lần với sản phẩm khác; muốn hoà vốn cần doanh thu tăng thêm 30 ÷ 40% = 75 triệu, nếu vẫn dưới mức đó thì bỏ.',
   takeaway:'Tổng đẹp che hoạt động lỗ: tổng kết từng dòng vào ba cột Giữ – Bỏ – Thử lại.',
   apply:'Liệt kê các hoạt động của một chiến dịch bạn biết. Nói trong 60 giây: mỗi cái vào cột nào, lý do một câu.',
@@ -237,7 +237,7 @@ BAI_ADD({ mod:'in01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:in01-05', skill:'measure', read:'7 phút', t:'Khuyến mãi bán bùng tháng này — tháng sau thì sao?',
+{ id:'B:in01-05', skill:'measure', read:'7 phút', assume:true, t:'Khuyến mãi bán bùng tháng này — tháng sau thì sao?',
   situation:'Một hãng dầu gội chạy “mua 1 tặng 1” trong tháng 3, doanh số chai trả tiền tăng từ 40.000 lên 70.000 chai (chưa kể chai tặng). Báo cáo tháng 3 rất đẹp. Nhưng tháng 4 và 5 doanh số rơi xuống 28.000 chai mỗi tháng, rồi tháng 6 mới về lại 40.000.',
   concept:{ name:'Kết quả ngắn hạn và tác động dài hạn',
     body:'Nhiều chiến dịch “mượn” doanh số từ tương lai: khách tích trữ hàng lúc giảm giá rồi ngừng mua một thời gian. Post-mortem phải nhìn một cửa sổ đủ dài — trước, trong và sau chiến dịch — và tính <b>doanh số tăng thêm ròng</b> = phần tăng trong chiến dịch trừ phần hụt sau đó. Ngoài ra cần hỏi tác động khó đo hơn: khách có quen chờ giảm giá không (hụt kéo dài bao lâu còn tuỳ khách dùng hết hàng nhanh hay chậm), hình ảnh thương hiệu có bị rẻ đi không, có thêm khách mới ở lại không.' },
@@ -290,7 +290,7 @@ BAI_ADD({ mod:'in01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:in01-06', skill:'comm', read:'6 phút', t:'Buổi post-mortem nên mời ai, và ai nói trước?',
+{ id:'B:in01-06', skill:'comm', read:'6 phút', assume:true, t:'Buổi post-mortem nên mời ai, và ai nói trước?',
   situation:'Bạn tổ chức buổi tổng kết chiến dịch ra mắt sản phẩm của một hãng cà phê hoà tan. Dự án có 12 người từ marketing, sale, kỹ thuật, agency và chăm sóc khách hàng. Lần trước chỉ có 4 người marketing họp, và kết luận “sale chưa đẩy hàng đủ mạnh” không được đội sale công nhận.',
   concept:{ name:'Thành phần và luật nói trong buổi post-mortem',
     body:'Mời <b>mỗi khâu chạm vào chiến dịch một người</b>, gồm cả người gần khách nhất (sale, chăm sóc khách hàng), không chỉ người lập kế hoạch. Thiếu một khâu thì câu chuyện của khâu đó bị kể thay, thường theo hướng đổ lỗi. Luật nói: người thấp cấp nói trước, sếp nói sau — nếu sếp nêu kết luận trước, mọi người sẽ tự điều chỉnh theo. Có một người điều phối không trực tiếp chạy chiến dịch, và một người ghi chép.' },
@@ -350,7 +350,7 @@ BAI_ADD({ mod:'in01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:in01-07', skill:'insight', read:'7 phút', t:'“Biết ngay mà” — có thật là bạn đã biết?',
+{ id:'B:in01-07', skill:'insight', read:'7 phút', assume:true, t:'“Biết ngay mà” — có thật là bạn đã biết?',
   situation:'Chiến dịch Trung thu của một hãng bánh dùng tông đen – vàng sang trọng, bán kém hơn năm trước 25%. Trong buổi tổng kết, ba người nói: “Tôi đã thấy màu đen không hợp Trung thu.” Nhưng biên bản duyệt thiết kế hai tháng trước ghi: cả 3 người đều bỏ phiếu đồng ý, không ai nêu lo ngại về màu.',
   concept:{ name:'Thiên kiến “nhìn lại thì dễ” (hindsight bias)',
     body:'Khi đã biết kết quả, ta tự thấy nó hiển nhiên, và nhớ nhầm rằng mình đã lường trước. Hậu quả: rút bài học sai (đổ cho yếu tố dễ thấy nhất), và đánh giá người ra quyết định bằng thông tin họ không có lúc đó. Cách chống: đọc lại <b>tài liệu lúc ra quyết định</b> (brief, biên bản, dữ liệu có lúc ấy), hỏi “với thông tin khi đó, quyết định có hợp lý không?”, và tách chất lượng quyết định khỏi chất lượng kết quả.' },
@@ -410,7 +410,7 @@ BAI_ADD({ mod:'in01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:in01-08', skill:'insight', read:'6 phút', t:'Chiến dịch vượt chỉ tiêu có cần post-mortem không?',
+{ id:'B:in01-08', skill:'insight', read:'6 phút', assume:true, t:'Chiến dịch vượt chỉ tiêu có cần post-mortem không?',
   situation:'Chiến dịch ra mắt nước uống thể thao của một startup đạt 150% mục tiêu đơn hàng trong tháng đầu. Cả đội muốn bỏ qua buổi tổng kết để chạy ngay đợt hai với ngân sách gấp đôi. Trưởng nhóm nói: “Thắng rồi thì còn gì để học?”',
   concept:{ name:'Tổng kết cả khi thắng',
     body:'Thành công dễ bị hiểu sai hơn thất bại, vì không ai muốn mổ xẻ nó. Nếu không biết <b>vì sao thắng</b>, đợt sau có thể nhân rộng đúng phần không quan trọng và bỏ mất phần tạo ra kết quả. Post-mortem khi thắng hỏi: yếu tố nào thật sự kéo, yếu tố nào là may, cái gì suýt hỏng mà không ai thấy, và điều kiện nào có thể không lặp lại khi tăng quy mô. Trước khi tin một con số nguồn, kiểm cách ghi nhận: mã giảm giá hay last-click chỉ cho biết đơn đi qua kênh nào, không cho biết kênh đó tạo ra đơn hay chỉ đứng cuối đường.' },
@@ -467,7 +467,7 @@ BAI_ADD({ mod:'in01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:in01-09', skill:'comm', read:'6 phút', t:'Viết bài học sao cho người sau dùng được?',
+{ id:'B:in01-09', skill:'comm', read:'6 phút', assume:true, t:'Viết bài học sao cho người sau dùng được?',
   situation:'Thư mục tổng kết của một hãng sữa hạt có 14 file từ 3 năm. Bài học thường ghi: “Cần hiểu khách hàng hơn”, “Phối hợp tốt hơn giữa các phòng”, “Nội dung phải sáng tạo”. Một marketer mới đọc hết 14 file vẫn không biết nên làm gì khác trong chiến dịch sắp tới.',
   concept:{ name:'Biến bài học thành quy tắc',
     body:'Một bài học dùng được có dạng <b>“Khi [tình huống], làm [hành động], vì [bằng chứng], trừ khi [ngoại lệ]”</b>. Nó cụ thể tới mức người khác làm theo được, và nói rõ khi nào áp dụng, khi nào không. Bài học chung chung (“hiểu khách hơn”) đúng mọi lúc nên không giúp được lúc nào. Một quy tắc rút từ một sự việc mới là giả thuyết; ghi rõ bằng chứng là một lần hay nhiều lần để người sau biết mức tin cậy. Mỗi chiến dịch chỉ nên rút 3–5 quy tắc — ít mà dùng được hơn nhiều mà bị bỏ qua.' },
@@ -527,7 +527,7 @@ BAI_ADD({ mod:'in01', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:in01-10', skill:'comm', read:'6 phút', t:'Bài học nằm trong ổ đĩa ai đó thì có ích gì?',
+{ id:'B:in01-10', skill:'comm', read:'6 phút', assume:true, t:'Bài học nằm trong ổ đĩa ai đó thì có ích gì?',
   situation:'Một công ty mỹ phẩm có 5 marketer mới vào trong năm. Hai người lặp lại đúng lỗi chọn KOL không hợp tệp khách mà đội cũ đã tổng kết từ 2 năm trước. Bản tổng kết đó nằm trong máy tính của một người đã nghỉ việc, tên file “final_v3_sua.pptx”.',
   concept:{ name:'Thư viện bài học và thói quen đọc',
     body:'Post-mortem chỉ có giá trị khi người khác tìm được và đọc được. Cần một <b>thư viện chung</b>: mỗi chiến dịch một trang cùng mẫu (mục tiêu, kết quả, 3–5 quy tắc, liên kết số liệu), gắn thẻ theo ngành hàng, kênh, loại chiến dịch. Và cần thói quen: người mới đọc 5 bản tổng kết liên quan trong tuần đầu; mỗi brief mới phải trích ít nhất một quy tắc cũ đã áp dụng. Không có thói quen, thư viện thành kho lưu trữ không ai mở. Mỗi quy tắc cần ngày ghi, người giữ và hạn xem lại. Đo cả tỉ lệ trích lẫn tỉ lệ lỗi lặp lại: trích nhiều chưa chắc đã dùng đúng.' },

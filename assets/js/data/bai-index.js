@@ -5,7 +5,7 @@
    Phải tải SAU curriculum.js và TRƯỚC app.js: file này ghép module đã xuất bản vào STAGES/JOURNEY
    để hành trình, kỹ năng, "hôm nay" thấy bài mới mà không cần tải nội dung. */
 
-const BAI_V = 28;   // tăng khi sửa nội dung bất kỳ file bài/*.js
+const BAI_V = 31;   // tăng khi sửa nội dung bất kỳ file bài/*.js
 
 /* Bước hành trình → chặng nội dung (đề vượt chặng, cổng mở khoá). */
 const STEP_STAGE = { observe:'s1', understand:'s2', hypothesis:'s2', message:'s3', channel:'s4',
@@ -395,7 +395,7 @@ const BAI_INDEX = [
   { id:'B:tp08-01', mod:'tp08', skill:'creative', read:'6 phút', t:'Sếp nói "chiến dịch cần một big idea" — khẩu hiệu mới có đủ không?', c:'Big idea khác khẩu hiệu' },
   { id:'B:tp08-02', mod:'tp08', skill:'creative', read:'7 phút', t:'Ngồi họp cả buổi không ra ý tưởng — nên bắt đầu từ đâu?', c:'Ý tưởng là chỗ insight gặp sản phẩm' },
   { id:'B:tp08-03', mod:'tp08', skill:'creative', read:'7 phút', t:'Ý tưởng này chạy được một quý hay ba năm?', c:'Ý tưởng có đường băng dài' },
-  { id:'B:tp08-04', mod:'tp08', skill:'creative', read:'7 phút', t:'Ý tưởng nghe "đã" — nhưng có gắn tên hãng, đúng chiến lược và khác không?', c:'Ba câu hỏi chấm ý tưởng' },
+  { id:'B:tp08-04', mod:'tp08', skill:'creative', read:'7 phút', t:'Ý tưởng nghe “đã” — nhưng có gắn tên hãng, đúng chiến lược và khác không?', c:'Ba điều kiện cần của một ý tưởng' },
   { id:'B:tp08-05', mod:'tp08', skill:'brand', read:'6 phút', t:'Quảng cáo được cả mạng khen — sao khách không nhớ là của hãng nào?', c:'Sáng tạo không gắn tên hãng' },
   { id:'B:tp08-06', mod:'tp08', skill:'creative', read:'6 phút', t:'Có nên làm quảng cáo hài cho một sản phẩm chăm sóc sức khoẻ?', c:'Hài hước đúng lúc' },
   { id:'B:tp08-07', mod:'tp08', skill:'comm', read:'7 phút', t:'Trend đang nổ — nhảy vào ngay hay đứng ngoài?', c:'Bắt trend có bộ lọc' },
@@ -780,7 +780,7 @@ const BAI_INDEX = [
   { id:'B:in01-09', mod:'in01', skill:'comm', read:'6 phút', t:'Viết bài học sao cho người sau dùng được?', c:'Biến bài học thành quy tắc' },
   { id:'B:in01-10', mod:'in01', skill:'comm', read:'6 phút', t:'Bài học nằm trong ổ đĩa ai đó thì có ích gì?', c:'Thư viện bài học và thói quen đọc' },
   { id:'B:in02-01', mod:'in02', skill:'insight', read:'7 phút', t:'Highlands Coffee bán cà phê hay bán chỗ ngồi?', c:'Sản phẩm thật là việc khách cần làm' },
-  { id:'B:in02-02', mod:'in02', skill:'insight', read:'7 phút', t:'Vì sao "Đi để trở về" giúp Biti\'s Hunter trẻ lại?', c:'Gắn sản phẩm vào một sự thật văn hoá' },
+  { id:'B:in02-02', mod:'in02', skill:'insight', read:'7 phút', t:'“Đi để trở về”: thương hiệu lâu năm có thể trẻ lại bằng câu chuyện nào?', c:'Gắn sản phẩm vào một sự thật văn hoá' },
   { id:'B:in02-03', mod:'in02', skill:'insight', read:'6 phút', t:'Vinamilk dạy gì về chuyện "có mặt ở mọi nơi"?', c:'Sẵn có trong tâm trí và sẵn có trên kệ' },
   { id:'B:in02-04', mod:'in02', skill:'brand', read:'6 phút', t:'Khi điện thoại ở đâu cũng giống nhau, Thế Giới Di Động bán gì?', c:'Dịch vụ là khác biệt khi hàng hoá giống nhau' },
   { id:'B:in02-05', mod:'in02', skill:'brand', read:'6 phút', t:'Phúc Long giữ gì khi mở rộng sang kênh mới?', c:'Giữ lõi khi mở rộng kênh' },

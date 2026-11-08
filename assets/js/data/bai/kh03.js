@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'kh03', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kh03-01', skill:'insight', read:'6 phút', t:'Ly cà phê sữa đá 7 giờ sáng đang làm mấy việc cùng lúc?',
+{ id:'B:kh03-01', skill:'insight', read:'6 phút', assume:true, t:'Ly cà phê sữa đá 7 giờ sáng đang làm mấy việc cùng lúc?',
   situation:'Một quán cà phê mang đi gần khu văn phòng ở quận 3 bán 300 ly mỗi sáng. Chủ quán muốn tăng giá 3.000đ và định quảng cáo "cà phê nguyên chất, đậm vị". Nhân viên kể: nhiều khách chụp ly đặt lên bàn làm việc rồi đăng story, số khác uống vội trên xe, số khác nữa mua thêm một ly cho sếp.',
   concept:{ name:'Ba lớp của một việc: chức năng, cảm xúc, xã hội',
     body:'Khách "thuê" một sản phẩm để hoàn thành một việc, và việc đó thường có ba lớp. <b>Chức năng</b>: tỉnh táo, no bụng, đến nơi đúng giờ. <b>Cảm xúc</b>: thấy mình được thưởng, bớt căng thẳng, yên tâm. <b>Xã hội</b>: người khác nhìn mình thế nào — chăm chỉ, sành, biết quan tâm. Lớp chức năng dễ thấy nhất nên hay được quảng cáo, nhưng lớp cảm xúc và xã hội thường quyết định khách chịu trả thêm bao nhiêu. Một hành vi có thể chạm cả ba lớp; muốn tách, đo hành vi: cùng một khách, khi có và khi không có ai nhìn thấy, họ còn chọn món đó không?' },
@@ -60,7 +60,7 @@ BAI_ADD({ mod:'kh03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kh03-02', skill:'insight', read:'7 phút', t:'Cùng một người, vì sao sáng mua bánh mì mà tối lại gọi phở giao tận nhà?',
+{ id:'B:kh03-02', skill:'insight', read:'7 phút', assume:true, t:'Cùng một người, vì sao sáng mua bánh mì mà tối lại gọi phở giao tận nhà?',
   situation:'Một chuỗi bánh mì ở Hà Nội thấy doanh số buổi sáng rất tốt nhưng buổi tối gần như bằng không, dù cùng một nhóm khách văn phòng. Trưởng marketing đề xuất giảm giá 20% sau 18 giờ. Trước khi duyệt, giám đốc hỏi: tối khách đang thuê cái gì thay cho bánh mì?',
   concept:{ name:'Hoàn cảnh quyết định lựa chọn',
     body:'Cùng một người, ở hoàn cảnh khác nhau, có việc khác nhau. JTBD luôn gắn với <b>khi nào, ở đâu, với ai, đang vội hay thong thả</b>. Buổi sáng trên xe máy, việc là "no nhanh, cầm một tay, không bẩn áo". Buổi tối ở nhà sau ngày dài, việc là "ăn một bữa nóng, tử tế, không phải nấu". Khi hoàn cảnh đổi, danh sách lựa chọn và tiêu chí chấm điểm đổi theo. Giảm giá không biến món ăn sáng thành bữa tối.' },
@@ -120,7 +120,7 @@ BAI_ADD({ mod:'kh03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kh03-03', skill:'insight', read:'7 phút', t:'Ly cà phê buổi sáng thật ra đang cạnh tranh với những gì?',
+{ id:'B:kh03-03', skill:'insight', read:'7 phút', assume:true, t:'Ly cà phê buổi sáng thật ra đang cạnh tranh với những gì?',
   situation:'Một thương hiệu cà phê hoà tan lập danh sách đối thủ gồm ba hãng cà phê hoà tan khác và chỉ theo dõi giá của họ. Năm nay doanh số giảm 15% dù cả ba hãng kia cũng không tăng. Trợ lý thương hiệu được giao tìm xem "tiền của khách đã đi đâu".',
   concept:{ name:'Đối thủ theo việc, không theo ngành hàng',
     body:'Nếu việc là "tỉnh táo trong 30 phút đầu ngày làm việc", thì đối thủ không chỉ là cà phê hoà tan khác. Đó còn là ly cà phê mang đi, lon nước tăng lực, trà xanh đóng chai, thậm chí năm phút lướt điện thoại. JTBD vẽ lại bản đồ cạnh tranh: <b>mọi thứ khách có thể thuê cho cùng một việc</b> đều là đối thủ — kể cả "không làm gì". Nhìn theo ngành hàng, bạn chỉ thấy người giống mình; nhìn theo việc, bạn thấy người thật sự lấy khách.' },
@@ -180,7 +180,7 @@ BAI_ADD({ mod:'kh03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kh03-04', skill:'comm', read:'6 phút', t:'Viết câu job thế nào để cả nhóm cùng hiểu một việc?',
+{ id:'B:kh03-04', skill:'comm', read:'6 phút', assume:true, t:'Viết câu job thế nào để cả nhóm cùng hiểu một việc?',
   situation:'Buổi họp ra mắt ví điện tử cho sinh viên, mỗi người mô tả khách một kiểu: "Gen Z thích tiện", "sinh viên thiếu tiền", "người trẻ ghét tiền mặt". Sau hai tiếng, nhóm có 12 ý tưởng tính năng không liên quan nhau. Trưởng nhóm yêu cầu viết lại khách hàng thành đúng một câu có cấu trúc.',
   concept:{ name:'Câu job: "Khi…, tôi muốn…, để…"',
     body:'Dạng "job story" này do Alan Klement phổ biến trên blog Intercom (2013). Một câu job tốt có ba phần. <b>Khi…</b> là hoàn cảnh cụ thể có thời điểm, trạng thái. <b>Tôi muốn…</b> là tiến triển khách cố đạt, viết bằng động từ, không nêu tên sản phẩm hay tính năng. <b>Để…</b> là kết quả sâu hơn, thường chứa lớp cảm xúc hoặc xã hội. Câu job giúp cả nhóm chấm mọi ý tưởng bằng một thước đo: ý tưởng này giúp khách làm việc đó tốt hơn không? Không giúp thì gạt. Chuẩn kiểm: có hoàn cảnh cụ thể, không nêu giải pháp, kết quả sâu là cảm xúc hoặc xã hội.' },
@@ -237,7 +237,7 @@ BAI_ADD({ mod:'kh03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kh03-05', skill:'measure', read:'7 phút', t:'Khách "sa thải" ứng dụng của bạn thì họ đang thuê gì thay thế?',
+{ id:'B:kh03-05', skill:'measure', read:'7 phút', assume:true, t:'Khách "sa thải" ứng dụng của bạn thì họ đang thuê gì thay thế?',
   situation:'Một ứng dụng quản lý chi tiêu cá nhân có 20.000 người tải trong tháng 3. Đến cuối tháng 4 chỉ còn 3.000 người mở ứng dụng ít nhất một lần mỗi tuần. Nhóm sản phẩm đang định thêm biểu đồ đẹp hơn và giao diện màu mới.',
   concept:{ name:'Phỏng vấn "sa thải": vì sao khách bỏ',
     body:'Khách bỏ sản phẩm là đã <b>sa thải</b> nó khỏi một việc, và thường đã thuê thứ khác thay. Hỏi người bỏ đi ba điều: <b>lúc nào</b> bạn ngừng dùng, lúc đó bạn đang cố làm gì, và <b>giờ bạn dùng gì thay</b>. Câu trả lời thường không phải "giao diện xấu" mà là "tốn công hơn cách cũ". Cái thay thế — sổ tay, ghi chú điện thoại, hay không theo dõi nữa — cho bạn biết việc thật và tiêu chuẩn phải vượt.' },
@@ -263,9 +263,9 @@ BAI_ADD({ mod:'kh03', lessons:[
       b:'Đổ thêm khách vào một cái xô thủng; họ sẽ bỏ vì cùng lý do.',
       c:'Đúng. Đánh vào đúng lý do sa thải và vượt tiêu chuẩn của đối thủ thật là sao kê.',
       d:'Quà kéo mở app tạm thời, không làm việc bớt tốn công.'} },
-  { type:'calc', stem:'Tháng 3 có 20.000 người tải; cuối tháng 4 còn 3.000 người dùng hằng tuần. Tỉ lệ người đã rời bỏ là bao nhiêu phần trăm?',
+  { type:'calc', stem:'Tháng 3 có 20.000 người tải; cuối tháng 4 còn 3.000 người dùng hằng tuần. Tỉ lệ người không còn dùng hằng tuần (chưa chắc đã bỏ hẳn; muốn biết rời bỏ thật phải đếm người không mở lần nào trong tháng) là bao nhiêu phần trăm?',
     unit:'%', ans:85, tol:0.1, wrong:[[15,'NHAM_TI_LE_ROI'],[17000,'NHAM_SO_TUYET_DOI']], errors:['NHAM_TI_LE_ROI','NHAM_SO_TUYET_DOI'],
-    steps:['Rời bỏ = 20.000 − 3.000 = 17.000 người.','17.000 ÷ 20.000 = <b>85%</b>.'] },
+    steps:['Không còn dùng hằng tuần = 20.000 − 3.000 = 17.000 người.','17.000 ÷ 20.000 = <b>85%</b>.','Đây là tỉ lệ không dùng hằng tuần, không phải tỉ lệ rời bỏ: một phần trong 17.000 vẫn mở ứng dụng hằng tháng.'] },
   { type:'mcq', stem:'Câu hỏi nào hữu ích nhất khi phỏng vấn một người đã huỷ gói tập gym?',
     options:[{k:'a',t:'"Anh/chị chấm phòng tập bao nhiêu điểm trên thang 10?"'},{k:'b',t:'"Nếu giảm giá 20% thì anh/chị có quay lại đăng ký không?"'},
              {k:'c',t:'"Anh/chị thấy máy móc và huấn luyện viên có cần cải thiện gì?"'},{k:'d',t:'"Tuần cuối trước khi huỷ, anh/chị định tập lúc nào và giờ thay bằng gì?"'}],
@@ -291,13 +291,13 @@ BAI_ADD({ mod:'kh03', lessons:[
     options:[{k:'a',t:'Họ chọn "không làm gì" — việc chưa đủ đau để trả công sức'},{k:'b',t:'Họ không phải khách mục tiêu, nên loại khỏi phân tích cho gọn số'},
              {k:'c',t:'Họ đã giàu lên nên không cần theo dõi tiền bạc nữa'},{k:'d',t:'Họ bỏ vì một lỗi kỹ thuật của ứng dụng mà nhóm chưa phát hiện'}],
     answer:'a', why:{a:'Đúng. "Không làm gì" là đối thủ; muốn thắng thì phải làm việc gần như không tốn công.',
-      b:'Họ từng tải ứng dụng — họ có việc, chỉ là giải pháp chưa đáng.',
+      b:'Chưa đủ căn cứ để loại: tải về chưa chứng tỏ có việc hay không; trước hết kiểm họ từng nhập dữ liệu chưa rồi mới quyết.',
       c:'Không có dữ kiện nào nói vậy.',
       d:'Không ai nhắc lỗi kỹ thuật; đây là giả định vô cớ.'} }
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kh03-06', skill:'insight', read:'7 phút', t:'Thêm tính năng mới hay làm tốt hơn việc khách đang thuê?',
+{ id:'B:kh03-06', skill:'insight', read:'7 phút', assume:true, t:'Thêm tính năng mới hay làm tốt hơn việc khách đang thuê?',
   situation:'Một hãng nồi chiên không dầu đang bán mẫu 5 lít giá 2,5 triệu. Đội kỹ thuật đề xuất mẫu mới có 12 chế độ nấu, kết nối Wi-Fi, điều khiển qua app, giá 3,5 triệu. Bộ phận chăm sóc khách lại ghi nhận lời phàn nàn nhiều nhất là "khó rửa giỏ chiên".',
   concept:{ name:'Tính năng thừa và việc chưa làm tốt',
     body:'Khách không thuê tính năng, họ thuê kết quả. Mỗi việc có vài <b>tiêu chí thành công</b> khách tự đặt: nhanh, sạch, ít phải canh. Tính năng mới chỉ có giá trị khi giúp một tiêu chí đang <b>bị làm kém</b>. Nếu việc chính là "bữa tối giòn ngon trong 20 phút mà dọn dẹp nhẹ nhàng", thì 12 chế độ là thừa khi khâu rửa còn làm khách ngán. Thêm tính năng thừa làm sản phẩm đắt hơn, khó dùng hơn, mà không ai thuê nó nhiều hơn.' },
@@ -357,11 +357,11 @@ BAI_ADD({ mod:'kh03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kh03-07', skill:'brand', read:'6 phút', t:'Đặt tên và viết thông điệp theo việc của khách thế nào?',
+{ id:'B:kh03-07', skill:'brand', read:'6 phút', assume:true, t:'Đặt tên và viết thông điệp theo việc của khách thế nào?',
   situation:'Một hãng sữa chua uống ra dòng mới đóng chai 150ml, có men vi sinh. Ba tên được đề xuất: "ProBio Max 150", "Sữa chua uống men sống" và "Nhẹ bụng sau bữa". Ngân sách chỉ đủ thử hai phiên bản bao bì ở 40 cửa hàng tiện lợi trong 4 tuần.',
   concept:{ name:'Tên và thông điệp gọi đúng việc',
     body:'Khi khách đứng trước kệ vài giây, cái tên và dòng chữ lớn nhất trên bao bì phải <b>trả lời việc họ đang có</b>: "cái này giúp tôi làm xong chuyện gì?". Tên kỹ thuật như "ProBio Max" nói về sản phẩm; tên theo việc như "Nhẹ bụng sau bữa" nói về khách. Thông điệp theo việc cũng chỉ ra luôn <b>hoàn cảnh dùng</b> — sau bữa trưa, trên đường đi làm — giúp khách nhớ ra đúng lúc cần mua. Tên theo việc không cần sáng tạo lạ; nó cần khiến khách nhận ra mình. Đây là nguyên tắc thực hành rút ra từ cách nghĩ theo việc, không phải quy luật chắc chắn: luôn thử tên ở kệ thật trước khi chốt.' },
-  example:'Kịch bản giả định để minh hoạ cách thử: hãng thử hai bao bì, mỗi bản ở 20 cửa hàng. Sau 4 tuần, bản "ProBio Max 150" bán 1.600 chai, bản "Nhẹ bụng sau bữa" bán 2.400 chai. Doanh số bản theo việc cao hơn 50%. Khi hỏi khách mua, nhiều người nói "tôi hay đầy bụng sau bữa trưa ở công ty". Hãng giữ tên theo việc và đặt thêm quầy gần khu cơm văn phòng.',
+  example:'Kịch bản giả định để minh hoạ cách thử: hãng thử hai bao bì ở 40 cửa hàng ghép thành 20 cặp có doanh số nền tương đương, mỗi cặp một cửa hàng nhận một bản, sau 2 tuần đổi chéo bản để vị trí kệ không thiên về bên nào. Sau 4 tuần, bản "ProBio Max 150" bán 1.600 chai, bản "Nhẹ bụng sau bữa" bán 2.400 chai. Doanh số bản theo việc cao hơn 50%, và chênh lệch lặp lại ở 16 trong 20 cặp — mỗi cửa hàng chỉ bán vài chai một ngày, nên nếu chỉ thắng ở quá nửa số cặp thì phải coi là nhiễu. Khi hỏi khách mua, nhiều người nói "tôi hay đầy bụng sau bữa trưa ở công ty". Hãng giữ tên theo việc và đặt thêm quầy gần khu cơm văn phòng.',
   takeaway:'Tên tốt khiến khách nhận ra việc của mình trong vài giây, không bắt họ giải mã kỹ thuật.',
   apply:'Lấy một sản phẩm có tên kỹ thuật. Viết lại một cái tên hoặc một dòng chữ bao bì gọi đúng việc và hoàn cảnh dùng, rồi đọc to trong 60 giây.',
   mistakes:['Đặt tên theo thành phần hay công nghệ vì đội nội bộ thấy nó "xịn".','Viết thông điệp chung chung "tốt cho sức khoẻ" không gọi ra hoàn cảnh nào.'],
@@ -414,11 +414,11 @@ BAI_ADD({ mod:'kh03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kh03-08', skill:'creative', read:'7 phút', t:'Người ta đăng ký phòng gym để làm việc gì — và vì sao tháng thứ ba bỏ?',
+{ id:'B:kh03-08', skill:'creative', read:'7 phút', assume:true, t:'Người ta đăng ký phòng gym để làm việc gì — và vì sao tháng thứ ba bỏ?',
   situation:'Một phòng gym ở Đà Nẵng bán gói 12 tháng giá 6 triệu. Tháng 1 có 300 hội viên mới. Đến tháng 4, chỉ 90 người còn đến ít nhất hai buổi mỗi tuần. Quảng cáo hiện tại là ảnh máy tập hiện đại và dòng chữ "Trang thiết bị nhập khẩu 100%".',
   concept:{ name:'JTBD cho dịch vụ: việc là sự thay đổi của chính khách',
     body:'Với dịch vụ, khách không thuê máy móc hay giáo trình; họ thuê một <b>sự thay đổi ở chính mình</b>: "mặc lại vừa chiếc quần cũ trước đám cưới bạn", "nói được với khách nước ngoài". Dịch vụ thắng khi giúp khách thấy <b>tiến bộ sớm</b> và vượt qua những lúc muốn bỏ. Phần khó của việc thường không nằm ở giờ tập mà ở ngoài giờ: lịch bận, ngại đi một mình, không thấy thay đổi. Quảng cáo nói về máy là nói về công cụ, không nói về sự thay đổi.' },
-  example:'Phòng gym hỏi 60 người đã ngừng đến: 27 người nói "không thấy thay đổi gì sau 6 tuần", 18 người "không có ai đi cùng, ngại", 15 người "lịch làm thay đổi". Phòng thử gói mới cho 100 hội viên: đo cơ thể mỗi 2 tuần, ghép cặp bạn tập, lịch tập lại linh hoạt. Sau 3 tháng, 55 người trong nhóm thử còn đều đặn, so với 30% ở nhóm cũ.',
+  example:'Phòng gym hỏi 60 người đã ngừng đến: 27 người nói "không thấy thay đổi gì sau 6 tuần", 18 người "không có ai đi cùng, ngại", 15 người "lịch làm thay đổi". Phòng chia ngẫu nhiên 200 hội viên mới của cùng một tháng thành hai nhóm 100 người; nhóm thử nhận gói mới: đo cơ thể mỗi 2 tuần, ghép cặp bạn tập, lịch tập lại linh hoạt. Sau 3 tháng, 55 người trong nhóm thử còn đều đặn, so với 30% ở nhóm đối chứng cùng kỳ.',
   takeaway:'Dịch vụ bán sự thay đổi của khách; hãy thiết kế cho những lúc họ muốn bỏ.',
   points:["Tiến bộ nhìn thấy được giữ động lực qua giai đoạn đầu, lúc thói quen chưa thành. Sau vài tuần cơ thể chưa đổi, khách kết luận dịch vụ vô ích rồi ngừng.","Tập cùng người khác tạo cam kết xã hội, khiến việc bỏ buổi tốn kém hơn về cảm xúc. Ngại đi một mình là rào cản của việc, không phải tính cách của khách.","Lịch linh hoạt gỡ rào cản thực tế. Những lúc muốn bỏ thường trùng tuần bận, nên dịch vụ phải co giãn đúng lúc đó thay vì bắt khách bám một lịch cố định."],
   counter:"Khung này thiên về nhóm có sẵn động lực nhưng thiếu người đỡ. Biến thể: một nhóm hội viên có thẻ vì được công ty tặng và vốn không có sự thay đổi nào muốn đạt. Đo cơ thể, ghép cặp, lịch linh hoạt khó giữ được họ. Dấu hiệu nhận ra: họ không nêu được sự thay đổi mong muốn, chỉ nói “có thẻ thì đi”. Khi đó hãy cân nhắc họ có đáng là khách mục tiêu không.",
@@ -440,7 +440,7 @@ BAI_ADD({ mod:'kh03', lessons:[
       b:'Vẫn nói về công cụ, không nói về sự thay đổi.',
       c:'Đổ thêm người vào vòng bỏ cuộc; chi phí tìm khách tăng mà giữ chân không đổi.',
       d:'Đúng. Bán đúng việc và thiết kế cho ba lý do bỏ đã biết.'} },
-  { type:'calc', stem:'Nhóm thử 100 hội viên: sau 3 tháng còn 55 người tập đều. Nhóm cũ có tỉ lệ 30%. Nhóm thử cao hơn nhóm cũ bao nhiêu điểm phần trăm?',
+  { type:'calc', stem:'Nhóm thử 100 hội viên: sau 3 tháng còn 55 người tập đều. Nhóm đối chứng cùng kỳ có tỉ lệ 30%. Nhóm thử cao hơn nhóm đối chứng bao nhiêu điểm phần trăm?',
     unit:'điểm %', ans:25, tol:0.1, wrong:[[83.3,'NHAM_DIEM_PHAN_TRAM'],[55,'SAI_TINH_TOAN']], errors:['NHAM_DIEM_PHAN_TRAM','SAI_TINH_TOAN'],
     steps:['Tỉ lệ nhóm thử = 55 ÷ 100 = 55%.','Chênh lệch = 55% − 30% = <b>25 điểm phần trăm</b>.'] },
   { type:'calc', stem:'Tháng 1 có 300 hội viên mới, đến tháng 4 còn 90 người đến đều. Tỉ lệ còn tập đều là bao nhiêu phần trăm?',
@@ -470,7 +470,7 @@ BAI_ADD({ mod:'kh03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:kh03-09', skill:'measure', read:'7 phút', t:'Chọn việc nào để tập trung khi khách thuê bạn cho nhiều việc khác nhau?',
+{ id:'B:kh03-09', skill:'measure', read:'7 phút', assume:true, t:'Chọn việc nào để tập trung khi khách thuê bạn cho nhiều việc khác nhau?',
   situation:'Một thương hiệu bánh quy yến mạch có ngân sách quảng cáo 600 triệu cho quý tới. Khảo sát cho thấy khách thuê bánh cho ba việc: bữa sáng vội, ăn vặt giữa giờ làm, và làm quà biếu. Mỗi nhóm muốn một thông điệp khác. Giám đốc muốn chia đều 200 triệu mỗi việc.',
   concept:{ name:'Ưu tiên việc theo quy mô và mức chưa thoả mãn',
     body:'Khi sản phẩm được thuê cho nhiều việc, đừng chia đều. Chấm mỗi việc theo ba trục: <b>bao nhiêu người có việc đó</b>, <b>lựa chọn hiện có làm việc đó kém tới đâu</b>, và <b>mỗi đơn để lại bao nhiêu biên lãi</b>. Nhân ba con số cho điểm thô; nó chỉ để xếp thứ tự, không phải dự báo doanh thu. Việc đông mà ai cũng đã làm tốt thì khó chen; việc nhỏ mà chưa ai làm tốt có thể là cửa ngách; biên lãi cao cũng không cứu được việc quá nhỏ. Chia đều ngân sách cho mọi việc thường khiến không việc nào đủ tiếng nói để khách nhớ.' },
@@ -493,9 +493,9 @@ BAI_ADD({ mod:'kh03', lessons:[
       b:'Rải mỏng cho cả việc nhỏ và việc khách đã hài lòng.',
       c:'Biên lãi cao nhất (45%) nhưng chỉ 15% khách và mức chưa thoả mãn thấp nhất; điểm chỉ 101,25.',
       d:'Ăn vặt chỉ chiếm khoảng 28% điểm; khách đã khá hài lòng (4/10) nên khó chen.'} },
-  { type:'calc', stem:'Giả định minh hoạ: mỗi triệu quảng cáo mang về lãi gộp 1,5 triệu ở bữa sáng, 1,0 triệu ở ăn vặt, 0,8 triệu ở quà. Phương án A chia đều 200/200/200 triệu; phương án B chia 350/170/80 triệu. Phương án B lãi gộp hơn A bao nhiêu triệu đồng?',
+  { type:'calc', stem:'Giả định minh hoạ: mỗi triệu quảng cáo mang về lãi gộp 1,5 triệu ở bữa sáng, 1,0 triệu ở ăn vặt, 0,8 triệu ở quà, và hiệu suất này chỉ giữ được tới 400 triệu ở một việc (vượt mức đó hiệu suất giảm dần, nên không dồn hết vào bữa sáng). Phương án A chia đều 200/200/200 triệu; phương án B chia 350/170/80 triệu. Phương án B lãi gộp hơn A bao nhiêu triệu đồng?',
     unit:'triệu đồng', ans:99, tol:0.5, wrong:[[759,'SAI_TINH_TOAN'],[660,'SAI_TINH_TOAN']], errors:['SAI_TINH_TOAN'],
-    steps:['A = 200×1,5 + 200×1,0 + 200×0,8 = 300 + 200 + 160 = 660.','B = 350×1,5 + 170×1,0 + 80×0,8 = 525 + 170 + 64 = 759.','Chênh = 759 − 660 = <b>99 triệu đồng</b>.'] },
+    steps:['A = 200×1,5 + 200×1,0 + 200×0,8 = 300 + 200 + 160 = 660.','B = 350×1,5 + 170×1,0 + 80×0,8 = 525 + 170 + 64 = 759.','Chênh = 759 − 660 = <b>99 triệu đồng</b>.','Không dồn cả 600 triệu vào bữa sáng vì vượt 400 triệu hiệu suất giảm, và 80 triệu thử quà biếu là để lấy bằng chứng cho việc kế.'] },
   { type:'mcq', stem:'Biên lãi quà biếu tăng gấp đôi, từ 45% lên 90%. Nhận định nào đúng với bảng điểm?',
     options:[{k:'a',t:'Quà vượt ăn vặt vì biên lãi 90% là cao nhất nên đáng nhận ngân sách lớn hơn'},{k:'b',t:'Quà vượt bữa sáng vì biên lãi gấp đôi các việc khác cộng lại'},
              {k:'c',t:'Quà vẫn xếp cuối: điểm 202,5 so với 210 của ăn vặt, nên vẫn chỉ thử nhỏ'},{k:'d',t:'Điểm quà không đổi vì biên lãi không nằm trong công thức xếp hạng'}],

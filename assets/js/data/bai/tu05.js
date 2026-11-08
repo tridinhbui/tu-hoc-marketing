@@ -3,14 +3,14 @@
 BAI_ADD({ mod:'tu05', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tu05-01', skill:'measure', read:'6 phút', t:'Muốn doanh thu năm tăng 20%, nên kéo cần nào: số khách, tần suất hay giá trị đơn?',
+{ id:'B:tu05-01', skill:'measure', read:'6 phút', assume:true, t:'Muốn doanh thu năm tăng 20%, nên kéo cần nào: số khách, tần suất hay giá trị đơn?',
   situation:'Một tiệm cà phê hạt rang online có 2.000 khách mua trong năm, mỗi khách mua trung bình 3 lần, mỗi đơn 250.000 đồng. Sếp muốn doanh thu năm tăng 20% và đề xuất ngay: tăng ngân sách quảng cáo để kiếm thêm khách mới.',
   concept:{ name:'Phương trình doanh thu từ khách',
     body:'Doanh thu năm = <b>số khách × số lần mua mỗi khách × giá trị trung bình mỗi đơn</b>. Ba cần gạt nhân với nhau, nên tăng 10% ở hai cần đã cho khoảng 21%. Kiếm khách mới tốn tiền quảng cáo; tăng tần suất và giá trị đơn làm trên khách đã tin mình nên thường rẻ hơn, nhưng cũng có chi phí riêng (CRM, quà tặng, giảm biên), nên phải kiểm bằng lãi chứ không đoán. Ước tiềm năng từng cần: số khách so với thị trường và ngân sách; tần suất so với chu kỳ dùng hết sản phẩm; giá trị đơn so với nhóm khách mua nhiều nhất. Cần nào cách xa tiềm năng nhất thì thử trước.' },
   example:'Doanh thu hiện tại: 2.000 × 3 × 250.000 = 1,5 tỉ đồng. Nếu tần suất lên 3,3 lần (+10%) và giá trị đơn lên 275.000 (+10%): 2.000 × 3,3 × 275.000 = 1,815 tỉ, tăng 21% mà không thêm khách nào. Để đạt cùng mức chỉ bằng khách mới (và giả sử khách mới cũng mua 3 lần × 250.000 đồng), tiệm cần thêm 315 triệu ÷ 750.000 = 420 khách, tức phải chạy quảng cáo đủ để mua về 420 người. Cách nào tốt hơn thì phải so lãi sau chi phí của từng cách, không chỉ so doanh thu.',
   takeaway:'Tách doanh thu thành khách × tần suất × giá trị đơn; hai cần nhỏ nhân với nhau thường rẻ hơn một cần lớn.',
   apply:'Lấy số liệu một cửa hàng bạn biết, viết ba con số: số khách, số lần mua, giá trị đơn. Nói trong 60 giây cần nào đang yếu nhất.',
-  mistakes:['Mặc định tăng trưởng nghĩa là kiếm thêm khách mới.','Cộng phần trăm các cần gạt thay vì nhân chúng với nhau.'],
+  mistakes:['Mặc định tăng trưởng nghĩa là kiếm thêm khách mới.','Cộng phần trăm các cần gạt thay vì nhân chúng với nhau.','Kéo một cần đã sát trần: gói 500 gram dùng hết trong một tháng thì tần suất khó vượt khoảng 12 lần/năm; combo lớn để tăng giá trị đơn có thể làm khách mua thưa lại; tệp khách cũ đang rời đi thì không còn ai để làm. Ba cần kéo nhau, phải đo cùng lúc.'],
   q:[
   { type:'mcq', stem:'Đoán trước: tăng 10% tần suất mua và 10% giá trị đơn cùng lúc thì doanh thu tăng khoảng bao nhiêu?',
     options:[{k:'a',t:'Đúng 20%, vì cộng hai mức tăng lại với nhau'},{k:'b',t:'Khoảng 21%, vì hai cần gạt nhân với nhau'},
@@ -56,14 +56,14 @@ BAI_ADD({ mod:'tu05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tu05-02', skill:'channel', read:'7 phút', t:'Gợi ý bán thêm lúc nào: trước khi thanh toán hay sau khi đã mua?',
+{ id:'B:tu05-02', skill:'channel', read:'7 phút', assume:true, t:'Gợi ý bán thêm lúc nào: trước khi thanh toán hay sau khi đã mua?',
   situation:'Một shop giày thể thao trên sàn gắn gợi ý ở trang giỏ hàng: "Nâng lên mẫu cao cấp hơn 300.000 đồng" và "Thêm tất chạy bộ 59.000 đồng". Tỉ lệ bỏ giỏ tăng từ 60% lên 66% từ khi gắn cả hai.',
   concept:{ name:'Bán thêm (upsell) và bán kèm (cross-sell)',
     body:'<b>Bán thêm</b> là mời khách lấy bản tốt hơn, đắt hơn của cùng món. <b>Bán kèm</b> là mời thêm món khác bổ trợ. Bán thêm hợp lúc khách còn đang chọn, vì họ chưa chốt. Bán kèm món rẻ hợp lúc khách đã quyết, vì thêm một món nhỏ không bắt họ nghĩ lại. Đặt lời mời đắt tiền ở giỏ hàng dễ làm khách phân vân rồi bỏ đi. Còn một thời điểm nữa là <b>sau khi mua</b>: khách đã trả tiền nên không còn đơn để bỏ, và lời mời đắt hợp lúc dữ liệu dùng cho thấy món hiện tại chưa đủ (học viên kẹt ở bài khó, khách hết mẫu thử trong vài ngày). Ở thời điểm nào cũng nên đo cả doanh thu thêm lẫn đơn mất đi.' },
   example:'Shop chuyển gợi ý mẫu cao cấp lên trang sản phẩm, còn giỏ hàng chỉ giữ tất 59.000 đồng. Bỏ giỏ quay về 60%. Trên 1.000 giỏ, thêm 60 giỏ hoàn tất so với lúc gắn cả hai, mỗi đơn khoảng 900.000 đồng, tức 54 triệu doanh thu giữ lại. Nếu lúc đó có 25 khách nâng cấp ở giỏ, mỗi người trả thêm 300.000 đồng, họ chỉ đem 7,5 triệu (số minh hoạ), nên ròng vẫn hơn 46 triệu. Đây là so sánh trước và sau, chưa tách riêng tác động của mẫu cao cấp với tất; muốn chắc, chia ngẫu nhiên khách vào hai bản giỏ hàng (A/B) rồi so doanh thu trên mỗi giỏ.',
   takeaway:'Bán thêm khi khách còn chọn hoặc khi hành vi dùng cho thấy nhu cầu; bán kèm món nhỏ khi đã chốt; luôn đo cả đơn bị mất.',
   apply:'Mở một trang thương mại điện tử, chỉ ra một chỗ gợi ý bán thêm và một chỗ bán kèm. Nói trong 60 giây chỗ nào đặt đúng lúc.',
-  mistakes:['Nhồi mọi gợi ý vào bước thanh toán vì "khách đang có ví mở sẵn".','Chỉ đếm doanh thu từ gợi ý, không đếm đơn bị bỏ.'],
+  mistakes:['Nhồi mọi gợi ý vào bước thanh toán vì "khách đang có ví mở sẵn".','Chỉ đếm doanh thu từ gợi ý, không đếm đơn bị bỏ.','Coi mọi lời mời đắt ở giỏ đều sai, hay mọi món kèm nhỏ đều an toàn: bảo hành mở rộng cho đồ điện tử có thể hợp ở bước thanh toán vì nó trả lời nỗi lo lúc trả tiền, còn quá nhiều gợi ý nhỏ trên màn hình điện thoại vẫn gây bỏ giỏ — lấy doanh thu trên mỗi giỏ làm chỉ số tổng.'],
   q:[
   { type:'mcq', stem:'Đoán trước: gợi ý nâng lên mẫu đắt hơn 300.000 đồng ở giỏ hàng thường gây ra gì?',
     options:[{k:'a',t:'Tăng doanh thu vì khách đã sẵn sàng rút ví'},{k:'b',t:'Ít tác động, vì khách thường lướt qua gợi ý'},
@@ -96,13 +96,13 @@ BAI_ADD({ mod:'tu05', lessons:[
       b:'Ở nhiều quán, món thêm có biên lãi cao nên chuỗi mới muốn bán; hiệu quả của câu hỏi vẫn đến từ lời mời nhỏ, dễ nhận.',
       c:'Có thể có chút cảm giác được chăm sóc, nhưng lý do chính là lời mời nhỏ đúng lúc.',
       d:'Đúng. Bán kèm nhỏ sau khi khách đã chốt, nên gần như không gây phân vân.'} },
-  { type:'mcq', stem:'Sau khi đổi vị trí gợi ý, tỉ lệ đơn có món kèm 59.000 đồng tăng từ 8% lên 14%, nhưng bỏ giỏ tăng từ 60% lên 63% trên 1.000 giỏ, mỗi đơn 900.000 đồng. Kết luận nào đúng?',
+  { type:'mcq', stem:'Sau khi đổi vị trí gợi ý, tỉ lệ đơn có món kèm 59.000 đồng tăng từ 8% lên 14%, nhưng bỏ giỏ tăng từ 60% lên 63% trên 10.000 giỏ, mỗi đơn 900.000 đồng. Kết luận nào đúng?',
     options:[{k:'a',t:'Có lợi, vì tỉ lệ đơn có món kèm gần gấp đôi'},{k:'b',t:'Món kèm 59.000 đồng quá nhỏ nên không làm khách bỏ giỏ'},
-             {k:'c',t:'Lỗ ròng: mất 30 đơn chính, món kèm bù không nổi'},{k:'d',t:'Chưa kết luận được, vì chưa biết lượt xem gợi ý'}],
-    answer:'c', why:{a:'Tỉ lệ tăng nhưng tính trên số đơn đã giảm; phải so tổng tiền trên 1.000 giỏ.',
+             {k:'c',t:'Doanh thu giảm: mất 300 đơn chính, món kèm không bù nổi'},{k:'d',t:'Chưa kết luận được, vì chưa biết bao nhiêu khách đã thấy gợi ý'}],
+    answer:'c', why:{a:'Tỉ lệ tăng nhưng tính trên số đơn đã giảm; phải so tổng tiền trên 10.000 giỏ.',
       b:'Bỏ giỏ tăng 3 điểm là dữ kiện thật, nên thay đổi mới đang làm khách rời đi.',
-      c:'Đúng. Mất 30 × 900.000 = 27 triệu, còn món kèm thêm chỉ khoảng 20 đơn × 59.000 ≈ 1,2 triệu.',
-      d:'Số đã có đủ để tính doanh thu trên giỏ; lượt xem chỉ giúp giải thích, không đổi kết luận.'} },
+      c:'Đúng. Mất 300 × 900.000 = 270 triệu, còn món kèm thêm chỉ khoảng 200 đơn × 59.000 ≈ 11,8 triệu.',
+      d:'Với 10.000 giỏ, chênh 3 điểm bỏ giỏ đã vượt xa dao động ngẫu nhiên; số khách thấy gợi ý chỉ giúp giải thích, không đổi kết luận.'} },
   { type:'mcq', stem:'Một khoá học online có gói nâng cấp 1 kèm 1 với giảng viên. Học viên đã mua gói cơ bản. Khi nào mời nâng cấp là hợp lý nhất?',
     options:[{k:'a',t:'Ngay trang cảm ơn, lúc học viên vừa trả tiền gói cơ bản'},{k:'b',t:'Ngay trong quảng cáo đầu tiên, để khách biết có gói cao cấp'},
              {k:'c',t:'Sau khi khoá học kết thúc hẳn, khi học viên đã có chứng chỉ'},{k:'d',t:'Sau vài bài đầu, khi dữ liệu học cho thấy họ gặp chỗ khó'}],
@@ -113,7 +113,7 @@ BAI_ADD({ mod:'tu05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tu05-03', skill:'channel', read:'7 phút', t:'Nhắc mua lại vào ngày nào để khách không mua chỗ khác?',
+{ id:'B:tu05-03', skill:'channel', read:'7 phút', assume:true, t:'Nhắc mua lại vào ngày nào để khách không mua chỗ khác?',
   situation:'Một shop thức ăn cho mèo bán túi 1,5 kg. Một con mèo ăn khoảng 50 gram mỗi ngày. Shop gửi tin nhắc mua lại vào ngày thứ 45 sau đơn, thấy tỉ lệ mua lại chỉ 12%, trong khi nhiều khách kể đã mua ở siêu thị gần nhà.',
   concept:{ name:'Nhắc theo chu kỳ dùng',
     body:'Mỗi sản phẩm tiêu hao có <b>chu kỳ dùng</b>: số ngày từ lúc mua đến lúc hết. Tin nhắc nên đến <b>trước ngày hết vài ngày</b>, đủ thời gian giao hàng. Nhắc muộn thì khách đã tự mua chỗ khác; nhắc quá sớm thì khách còn đầy tủ, bỏ qua tin. Chu kỳ tính từ lượng dùng, rồi đối chiếu với khoảng cách giữa hai đơn thật của khách để chỉnh. Khoảng cách này trải rộng: nhắc theo trung vị thì một nửa khách đã mua trước đó, nên hãy nhìn phân vị thấp (ví dụ phân vị 25) để kịp phần đông.' },
@@ -173,7 +173,7 @@ BAI_ADD({ mod:'tu05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tu05-04', skill:'measure', read:'7 phút', t:'Có nên mở gói giao định kỳ giảm 10% không?',
+{ id:'B:tu05-04', skill:'measure', read:'7 phút', assume:true, t:'Có nên mở gói giao định kỳ giảm 10% không?',
   situation:'Một thương hiệu cà phê phin bán gói 500 gram giá 200.000 đồng, giá vốn 90.000 đồng. Khách quen mua trung bình 6 lần/năm. Nhóm đề xuất gói giao định kỳ mỗi tháng, giảm 10%, và kỳ vọng khách đăng ký sẽ nhận đủ 12 lần/năm.',
   concept:{ name:'Kinh tế của gói đăng ký',
     body:'Gói giao định kỳ đổi <b>một phần biên lãi lấy tần suất ổn định</b>. Nó có lợi khi phần tần suất tăng thêm lớn hơn phần lãi mất đi do giảm giá, tính trên cả năm. Phải tính trên lãi gộp (giá trừ giá vốn), vì giảm giá cắt thẳng vào lãi chứ không vào giá. Và phải tính cả khách huỷ giữa chừng: kỳ vọng 12 lần/năm hiếm khi đúng.' },
@@ -229,11 +229,11 @@ BAI_ADD({ mod:'tu05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tu05-05', skill:'insight', read:'6 phút', t:'Nên bán gì tiếp cho người đã mua sản phẩm chủ lực?',
+{ id:'B:tu05-05', skill:'insight', read:'6 phút', assume:true, t:'Nên bán gì tiếp cho người đã mua sản phẩm chủ lực?',
   situation:'Một thương hiệu nồi cơm điện có 20.000 khách trong hai năm. Nồi dùng 5–7 năm nên gần như không ai mua lại. Nhóm muốn tăng doanh thu từ khách cũ và đang cân nhắc giữa: ấm siêu tốc, lòng nồi thay thế, hay tai nghe không dây đang bán chạy trên sàn.',
   concept:{ name:'Mở rộng danh mục theo lý do khách tin bạn',
     body:'Khi sản phẩm chủ lực mua thưa, tần suất đến từ <b>món kế tiếp</b>. Chấm mỗi ý tưởng bằng ba câu hỏi: khách có tin hãng bán món này không, nó có mua lại nhanh hơn món chính không, và tỉ lệ mua × lãi mỗi món trên cả tệp là bao nhiêu. Món tốt để mở rộng là món nằm trong cùng lý do khách tin bạn (ở đây: đồ bếp bền, dễ dùng) và dùng hết hoặc hỏng nhanh hơn món chính. Món nằm ngoài lý do đó, như tai nghe, không được hưởng niềm tin sẵn có; bán cho khách cũ cũng khó như bán cho người lạ.' },
-  example:'Lòng nồi chống dính mòn sau khoảng 2 năm nên khách có lý do mua lại, nhưng không chắc chắn: nhiều người sẽ mua lòng nồi trôi nổi rẻ hơn. Giả định minh hoạ, trên 20.000 khách: lòng nồi 350.000đ, lãi gộp 40%, 10% mua, tức 2.000 × 140.000 = 280 triệu. Ấm siêu tốc cùng góc bếp nhưng không mòn theo chu kỳ: giá 600.000đ, lãi 20%, 5% mua, tức 1.000 × 120.000 = 120 triệu. Tai nghe nằm ngoài lý do khách tin: lãi 200.000đ, 0,5% mua, tức 100 × 200.000 = 20 triệu. Trừ chi phí nhắc khoảng 40 triệu, lòng nồi còn 240 triệu. Các tỉ lệ cần thử trên nhóm nhỏ trước.',
+  example:'Lòng nồi chống dính mòn sau khoảng 2 năm nên khách có lý do mua lại, nhưng không chắc chắn: nhiều người sẽ mua lòng nồi trôi nổi rẻ hơn. Giả định minh hoạ, trên 20.000 khách: lòng nồi 350.000đ, lãi gộp 40%, 10% mua, tức 2.000 × 140.000 = 280 triệu. Ấm siêu tốc cùng góc bếp nhưng không mòn theo chu kỳ: giá 600.000đ, lãi 20%, 5% mua, tức 1.000 × 120.000 = 120 triệu. Tai nghe nằm ngoài lý do khách tin: lãi 200.000đ, 0,5% mua, tức 100 × 200.000 = 20 triệu. Trừ chi phí nhắc khoảng 40 triệu, lòng nồi còn 240 triệu. Nhưng nếu lòng nồi trôi nổi kéo tỉ lệ mua xuống 3%, lòng nồi chỉ còn 600 × 140.000 − 40 triệu = 44 triệu, thua cả ấm siêu tốc (80 triệu nếu cùng chi phí nhắc) — khi đó nên bán lòng nồi kèm bảo hành nồi. Các tỉ lệ cần thử trên nhóm nhỏ trước.',
   takeaway:'Món kế tiếp nên nằm trong lý do khách tin bạn và mua lại nhanh hơn món chính.',
   apply:'Chọn một thương hiệu bạn biết chỉ bán một món chủ lực. Đề xuất một món kế tiếp và nói trong 60 giây vì sao khách sẽ tin.',
   mistakes:['Mở rộng sang món đang hot nhưng không liên quan tới lý do khách tin.','Chỉ nhìn biên lãi món mới, bỏ qua việc khách có tin mình bán món đó không.'],
@@ -286,11 +286,11 @@ BAI_ADD({ mod:'tu05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tu05-06', skill:'measure', read:'7 phút', t:'Giá trị đơn tăng 25% mà doanh thu gần như đứng yên: chuyện gì xảy ra?',
+{ id:'B:tu05-06', skill:'measure', read:'7 phút', assume:true, t:'Giá trị đơn tăng 25% mà doanh thu gần như đứng yên: chuyện gì xảy ra?',
   situation:'Một shop đồ ăn vặt đổi sang chỉ bán combo lớn. Giá trị đơn tăng từ 120.000 lên 150.000 đồng (+25%). Ba tháng sau, số khách mua trong quý vẫn khoảng 5.000 người mà doanh thu gần như đứng yên. Nhóm ăn mừng chỉ số giá trị đơn trong báo cáo.',
   concept:{ name:'Đánh đổi giá trị đơn và tần suất',
     body:'Gói lớn thường làm số đơn giảm: khách mua một lần cho nhiều ngày dùng; mức giảm tuỳ khách dùng đều hay tiêu thụ thêm khi có sẵn. Điều cần giữ không phải số đơn mà là <b>doanh thu và lãi trên mỗi khách theo thời gian</b> = giá trị đơn × số đơn. Nếu khách dùng đều thì gói lớn chỉ dời lịch mua; nếu họ mua thưa vì thấy khoản lớn hoặc đã chuyển sang nơi khác thì doanh thu rơi thật. Muốn phân biệt, theo dõi hai chỉ số cùng lúc trên cùng nhóm khách và cùng khoảng thời gian, rồi tách khách còn mua với khách đã ngừng.' },
-  example:'Số minh hoạ. Trước: 120.000 × 4 đơn/quý = 480.000 đồng/khách. Sau: 150.000 × 3,2 đơn/quý = 480.000 đồng/khách. Giá trị đơn +25%, tần suất −20%, doanh thu trên khách y nguyên. Doanh thu trên khách chưa tụt, còn lãi đi theo hai chiều: ít đơn hơn thì bớt chi phí giao và đóng gói mỗi khách, nhưng nếu combo phải giảm giá thì lãi tụt, và khách mua thưa có nhiều dịp thử shop khác. Nhóm cần đặt hai chỉ số cạnh nhau, kèm lãi trên khách, trong mọi báo cáo.',
+  example:'Số minh hoạ. Trước: 120.000 × 4 đơn/quý = 480.000 đồng/khách. Sau: 150.000 × 3,2 đơn/quý = 480.000 đồng/khách. Giá trị đơn +25%, tần suất −20%, doanh thu trên khách y nguyên. Doanh thu trên khách chưa tụt, còn lãi đi theo hai chiều: ít đơn hơn thì bớt chi phí giao và đóng gói mỗi khách (giả sử 20.000 đồng/đơn: 4 đơn tốn 80.000, 3,2 đơn tốn 64.000, lãi mỗi khách tăng 16.000 đồng/quý dù doanh thu y nguyên — khi đó combo là tốt hơn, chưa kể đồ ăn vặt có sẵn thì khách dễ ăn nhiều hơn), nhưng nếu combo phải giảm giá thì lãi tụt, và khách mua thưa có nhiều dịp thử shop khác. Nhóm cần đặt hai chỉ số cạnh nhau, kèm lãi trên khách, trong mọi báo cáo.',
   takeaway:'Không báo cáo giá trị đơn một mình; luôn nhân với tần suất trên cùng nhóm khách.',
   apply:'Lấy một chỉ số bạn từng thấy được khen, nói trong 60 giây chỉ số nào đi kèm có thể đang đi ngược.',
   mistakes:['Ăn mừng giá trị đơn tăng mà không nhìn số đơn.','So giá trị đơn tháng này với tần suất của một nhóm khách khác.'],
@@ -339,22 +339,22 @@ BAI_ADD({ mod:'tu05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tu05-07', skill:'insight', read:'7 phút', t:'Nhóm khách VIP chiếm bao nhiêu doanh thu, và nên đối xử khác thế nào?',
+{ id:'B:tu05-07', skill:'insight', read:'7 phút', assume:true, t:'Nhóm khách VIP chiếm bao nhiêu doanh thu, và nên đối xử khác thế nào?',
   situation:'Một shop mỹ phẩm có 5.000 khách trong năm, doanh thu 4 tỉ đồng. Lọc ra 500 khách mua nhiều nhất, nhóm này đóng góp 1,8 tỉ. Nhóm marketing vẫn gửi cho họ cùng tin khuyến mãi giảm 30% như mọi khách.',
   concept:{ name:'Tập trung doanh thu và đối xử theo giá trị',
     body:'Trong nhiều cửa hàng, một <b>nhóm nhỏ khách</b> tạo ra phần lớn doanh thu (xu hướng kiểu Pareto 80/20; mức tập trung khác nhau theo ngành, nên đo trên dữ liệu của chính bạn). Chọn VIP bằng <b>lãi gộp</b> thay vì doanh thu, và xếp theo mua gần đây, mua đều, mua nhiều (RFM). Với nhóm này, đòn bẩy thường không phải giảm giá sâu (nhiều người đã sẵn sàng mua, nên kiểm bằng nhóm đối chứng) mà là <b>ưu tiên và công nhận</b>: dùng thử hàng mới trước, tư vấn riêng, giao nhanh, đổi trả dễ. Mất một khách VIP bằng mất nhiều khách thường (ở shop này khoảng 7), nên mục tiêu là giữ tần suất và mở rộng món họ mua, không phải trợ giá cho lần mua vốn đã xảy ra.' },
   example:'500 khách (10%) đóng 1,8 tỉ (45%). Mỗi khách VIP đem 3,6 triệu/năm; 4.500 khách còn lại đem khoảng 489.000 đồng mỗi người. Giảm 30% cho nhóm VIP là cho đi khoảng 540 triệu nếu họ vẫn mua như cũ. Thay vào đó, shop cho 250 người quyền đặt trước hàng mới, giữ 250 người còn lại như cũ, rồi so tần suất và lãi sau 3 tháng.',
   takeaway:'Khách VIP cần được ưu tiên và công nhận, không cần được giảm giá cho những lần họ vốn sẽ mua.',
   apply:'Nghĩ về một nơi bạn mua thường xuyên. Nói trong 60 giây họ nên làm gì để bạn thấy được đối xử như khách quan trọng mà không cần giảm giá.',
-  mistakes:['Gửi cùng mức giảm giá cho mọi khách, kể cả người vốn mua đều.','Chỉ chăm khách VIP mà quên đo xem họ có đang rời đi.'],
+  mistakes:['Gửi cùng mức giảm giá cho mọi khách, kể cả người vốn mua đều.','Chỉ chăm khách VIP mà quên đo xem họ có đang rời đi.','Chọn VIP chỉ theo doanh thu cả năm mà bỏ qua lần mua gần nhất (chữ R trong RFM), hoặc gạt hẳn giảm giá cho mọi VIP: người mua đi bán lại hay khách đang bị đối thủ chào giá có thể cần chiết khấu thật — kiểm bằng nhóm đối chứng.'],
   q:[
   { type:'mcq', stem:'Đoán trước: 10% khách của một shop thường đóng góp bao nhiêu phần doanh thu?',
     options:[{k:'a',t:'Khoảng 10%, vì khách mua gần giống nhau'},{k:'b',t:'Thường nhiều hơn hẳn 10%, có khi gần một nửa'},
-             {k:'c',t:'Ít hơn 10%, vì khách mua nhiều thường được giảm giá'},{k:'d',t:'Không đoán được, mỗi ngành phân bổ khác nhau'}],
+             {k:'c',t:'Ít hơn 10%, vì khách mua nhiều thường được giảm giá'},{k:'d',t:'Gần như toàn bộ, vì khách còn lại hầu hết chỉ mua một lần'}],
     answer:'b', why:{a:'Mức mua giữa các khách chênh nhau rất nhiều.',
       b:'Đúng. Doanh thu thường tập trung ở một nhóm nhỏ; ở shop này là 45%.',
       c:'Giảm giá không làm nhóm mua nhiều đóng góp ít hơn tỉ lệ số người.',
-      d:'Có khác nhau giữa các ngành, nhưng xu hướng tập trung rất phổ biến.'} },
+      d:'Quá mức: khách mua một lần vẫn đóng góp doanh thu; ở shop này 4.500 khách còn lại vẫn mang về 55%.'} },
   { type:'mcq', stem:'Tháng tới có hàng mới. Bạn muốn biết quyền đặt trước có giữ VIP tốt hơn mã giảm 30% không. Bạn chọn cách nào?',
     options:[{k:'a',t:'Chia ngẫu nhiên 500 người thành hai nhóm, so tần suất và lãi sau 3 tháng'},{k:'b',t:'Gửi quyền đặt trước cho cả 500 người, rồi so với doanh thu tháng trước'},
              {k:'c',t:'Cho 50 người mua nhiều nhất đặt trước, so với 450 người còn lại'},{k:'d',t:'Hỏi khảo sát 500 người thích đặc quyền nào hơn, rồi chọn theo số phiếu'}],
@@ -396,11 +396,11 @@ BAI_ADD({ mod:'tu05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tu05-08', skill:'comm', read:'6 phút', t:'Làm gì sau khi giao hàng để khách mua lần sau?',
+{ id:'B:tu05-08', skill:'comm', read:'6 phút', assume:true, t:'Làm gì sau khi giao hàng để khách mua lần sau?',
   situation:'Một thương hiệu máy lọc nước bán 800 máy mỗi quý. Lõi lọc cần thay sau 6 tháng. Sau khi giao máy, thương hiệu không liên lạc lại; chỉ 25% khách mua lõi thay chính hãng, số còn lại mua lõi trôi nổi hoặc để quá hạn.',
   concept:{ name:'Hậu mãi là kênh bán hàng',
     body:'Hậu mãi là mọi điểm chạm sau khi khách nhận hàng: hướng dẫn dùng, kiểm tra sau lắp, bảo hành, nhắc bảo dưỡng. Nó không chỉ là chi phí dịch vụ mà là <b>lý do chính đáng để liên lạc lại</b>. Mỗi lần giúp khách dùng tốt hơn cũng là một lần đặt sẵn lần mua sau: lõi lọc, phụ kiện, bảo dưỡng định kỳ. Khách không mua lại thường không phải vì ghét hãng, mà vì không ai nhắc, hoặc mua chỗ khác dễ hơn.' },
-  example:'Thương hiệu thêm ba điểm chạm: gọi hỏi thăm sau 7 ngày, tin hướng dẫn vệ sinh ở tháng 3, nhắc thay lõi kèm đặt lịch kỹ thuật ở tháng 5,5. Tỉ lệ mua lõi chính hãng lên 45%. Với 800 máy và lõi giá 600.000 đồng, mỗi quý thêm 160 bộ lõi, tức 96 triệu đồng. Ba điểm chạm chỉ gửi cho khách đã đồng ý nhận liên hệ. Giả sử lãi gộp lõi 50% và mỗi điểm chạm tốn 10.000 đồng mỗi máy: lãi thêm 48 triệu, trừ 24 triệu chi phí liên lạc, còn 24 triệu. (Số minh hoạ; ngoài đời cần A/B test hoặc nhóm đối chứng để biết phần tăng có thật do thay đổi này.)',
+  example:'Thương hiệu thêm ba điểm chạm: gọi hỏi thăm sau 7 ngày, tin hướng dẫn vệ sinh ở tháng 3, nhắc thay lõi kèm đặt lịch kỹ thuật ở tháng 5,5. Tỉ lệ mua lõi chính hãng lên 45%. Với 800 máy và lõi giá 600.000 đồng, mỗi quý thêm 160 bộ lõi, tức 96 triệu đồng. Ba điểm chạm chỉ gửi cho khách đã đồng ý nhận liên hệ. Giả sử lãi gộp lõi 50% và mỗi điểm chạm tốn 10.000 đồng mỗi máy: lãi thêm 48 triệu, trừ 24 triệu chi phí liên lạc, còn 24 triệu — nếu mọi khách đều đồng ý. Chỉ 55% đồng ý thì phần tăng áp trên 440 máy: 88 bộ, lãi thêm 26,4 triệu, chi phí 13,2 triệu, còn 13,2 triệu; nên đo tỉ lệ đồng ý ngay lúc giao máy. (Số minh hoạ; ngoài đời cần A/B test hoặc nhóm đối chứng để biết phần tăng có thật do thay đổi này.)',
   takeaway:'Hậu mãi tốt là lý do liên lạc lại; mỗi lần giúp khách dùng tốt là đặt sẵn lần mua sau.',
   apply:'Chọn một món đồ gia dụng bạn đang dùng. Nói trong 60 giây ba điểm chạm hậu mãi hãng nên làm để bạn mua phụ kiện chính hãng.',
   mistakes:['Coi hậu mãi chỉ là chi phí, giao cho bộ phận kỹ thuật riêng.','Liên lạc sau bán chỉ để quảng cáo sản phẩm mới, không giúp gì khách.'],
@@ -449,7 +449,7 @@ BAI_ADD({ mod:'tu05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tu05-09', skill:'brand', read:'6 phút', t:'Có nên bán cỡ gói lớn cho khách quen không?',
+{ id:'B:tu05-09', skill:'brand', read:'6 phút', assume:true, t:'Có nên bán cỡ gói lớn cho khách quen không?',
   situation:'Một thương hiệu nước giặt bán chai 2 lít giá 150.000 đồng. Nhóm đề xuất thêm túi 4 lít giá 270.000 đồng cho khách quen, mới mua từ 3 lần trở lên. Có người lo cỡ lớn sẽ ăn bớt doanh thu của chai 2 lít.',
   concept:{ name:'Cỡ gói lớn và khoá chân khách',
     body:'Cỡ gói lớn giảm giá mỗi lít cho khách, đổi lại thương hiệu nhận <b>tiền trước và thời gian dùng dài hơn</b>. Trong thời gian đó khách không đi thử hãng khác, nên cỡ lớn giữ khách ở lại. Nó hợp với khách đã tin sản phẩm; người mới chưa dám mua nhiều. Việc cần tính là <b>điểm hoà vốn</b>: lãi gộp mỗi lít giảm bao nhiêu phần trăm, thì phải giữ lại ít nhất chừng đó phần trăm số khách vốn sẽ bỏ đi. Nếu không, cỡ lớn chỉ đổi chai lẻ sang túi lớn và ăn bớt lãi.' },
@@ -505,11 +505,11 @@ BAI_ADD({ mod:'tu05', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:tu05-10', skill:'measure', read:'7 phút', t:'Chọn đòn bẩy nào khi mỗi cái đều hứa tăng doanh thu năm?',
+{ id:'B:tu05-10', skill:'measure', read:'7 phút', assume:true, t:'Chọn đòn bẩy nào khi mỗi cái đều hứa tăng doanh thu năm?',
   situation:'Một chuỗi bánh mì online có 10.000 khách/năm, 5 đơn mỗi khách, 80.000 đồng mỗi đơn. Nhóm có ba đề xuất: (A) bán kèm nước uống, dự kiến giá trị đơn +8%; (B) gói giao sáng định kỳ, dự kiến tần suất +20% nhưng giá trị đơn −10%; (C) ưu đãi khách VIP, dự kiến giữ thêm 3% khách.',
   concept:{ name:'Quy mọi đòn bẩy về doanh thu năm và lãi năm',
     body:'Các đề xuất nói bằng những đơn vị khác nhau: phần trăm giá trị đơn, tần suất, tỉ lệ giữ khách. Để so, hãy <b>quy tất cả về một con số chung</b>: doanh thu năm thêm, rồi trừ chi phí để ra lãi năm thêm. Dùng phương trình khách × tần suất × giá trị đơn, đưa từng giả định vào. Đề xuất có số lớn nhất trên giấy vẫn phải được thử nhỏ trước khi làm toàn bộ.' },
-  example:'Gốc: 10.000 × 5 × 80.000 = 4 tỉ. (A) 10.000 × 5 × 86.400 = 4,32 tỉ, thêm 320 triệu. (B) 10.000 × 6 × 72.000 = 4,32 tỉ, cũng thêm 320 triệu, nhưng giảm giá mỗi đơn cắt lãi. (C) 10.300 × 5 × 80.000 = 4,12 tỉ, thêm 120 triệu. Doanh thu A và B ngang nhau; A giữ nguyên biên lãi nên được thử trước.',
+  example:'Gốc: 10.000 × 5 × 80.000 = 4 tỉ. (A) 10.000 × 5 × 86.400 = 4,32 tỉ, thêm 320 triệu. (B) 10.000 × 6 × 72.000 = 4,32 tỉ, cũng thêm 320 triệu, nhưng giảm giá mỗi đơn cắt lãi. (C) 10.300 × 5 × 80.000 = 4,12 tỉ, thêm 120 triệu. Doanh thu A và B ngang nhau, nhưng quy ra lãi gộp với biên 40% (giá vốn 48.000 đồng/đơn) thì khác hẳn: A thêm 128 triệu, C thêm 48 triệu (trước chi phí triển khai), còn B chỉ có 60.000 đơn × 24.000 = 1,44 tỉ so với gốc 1,6 tỉ — mất 160 triệu dù doanh thu thêm 320 triệu. B bị loại ngay; A được thử trước.',
   takeaway:'Quy mọi đề xuất về doanh thu và lãi năm thêm, rồi thử nhỏ cái đứng đầu.',
   points:["Phương trình khách nhân tần suất nhân giá trị đơn ép các đề xuất dùng chung một thước. Quy ra tiền rồi mới biết đề xuất nào lớn thật, đề xuất nào chỉ nghe lớn.","Doanh thu bằng nhau vẫn có thể cho lãi khác nhau, vì khác biệt nằm ở biên lãi mỗi đơn. Giảm giá trị đơn cắt thẳng vào lãi, còn bán thêm thì giữ nguyên.","Các số dự kiến chỉ là giả định của người đề xuất. Thử nhỏ trên một nhóm khách giúp thay giả định bằng số đo thật trước khi dồn tiền vào đề xuất đứng đầu."],
   counter:"Giả sử nhóm khách VIP ở đề xuất C vốn mua nhiều và chi đơn lớn hơn mức trung bình của cả chuỗi. Khi đó phần doanh thu từ 3% khách được giữ thêm cao hơn 120 triệu, và C có thể vượt A. Dấu hiệu: số đơn và giá trị đơn của nhóm này cao hơn trung bình. Lúc đó nên tính theo hành vi thực của đúng nhóm được giữ.",

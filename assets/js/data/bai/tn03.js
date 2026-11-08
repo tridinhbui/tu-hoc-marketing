@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'tn03', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tn03-01', skill:'creative', read:'6 phút', t:'Có nên quay TVC 300 triệu khi chưa biết ý tưởng nào chạy?',
+{ id:'B:tn03-01', skill:'creative', read:'6 phút', assume:true, t:'Có nên quay TVC 300 triệu khi chưa biết ý tưởng nào chạy?',
   situation:'Một thương hiệu nước mắm đóng chai ở Phú Quốc có ba ý tưởng cho chiến dịch Tết: "bữa cơm đoàn viên", "mẹ chọn nước mắm cho con", "vị biển thật". Agency báo giá quay một TVC hoàn chỉnh 300 triệu đồng. Giám đốc muốn chọn ngay ý tưởng mình thích nhất để kịp lịch lên sóng sau sáu tuần.',
   concept:{ name:'Thử concept trước khi sản xuất lớn',
     body:'Một <b>concept test</b> đưa ý tưởng ra trước khách thật ở dạng rẻ: ảnh tĩnh, video dựng từ ảnh có sẵn, một câu tiêu đề kèm hình minh hoạ. Mục tiêu không phải đo doanh số mà loại sớm những ý tưởng không khiến người ta dừng lại hay bấm vào; chi phí thường chỉ vài phần trăm chi phí sản xuất. Hai giới hạn cần nhớ. Một: chênh lệch phải vượt dao động may rủi (quy tắc ±2×√tổng ở bài "40 đơn so với 30 đơn") mới đáng tin. Hai: CTR đo sự chú ý trong vài giây, không đo sức xây thương hiệu; ý tưởng cảm xúc chậm có thể thua CTR mà vẫn đáng giữ (xem bài 07).' },
@@ -60,7 +60,7 @@ BAI_ADD({ mod:'tn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tn03-02', skill:'creative', read:'7 phút', t:'Ba giây đầu video giữ hay đánh rơi người xem?',
+{ id:'B:tn03-02', skill:'creative', read:'7 phút', assume:true, t:'Ba giây đầu video giữ hay đánh rơi người xem?',
   situation:'Một thương hiệu kem chống nắng nội địa chạy video 30 giây trên TikTok. Mở đầu là logo xoay trong 3 giây, sau đó cô gái mới xuất hiện dưới nắng. Báo cáo cho thấy 10.000 lượt hiển thị nhưng chỉ 1.800 người xem quá 3 giây. Đội muốn biết có nên quay lại cả video không.',
   concept:{ name:'Thử hook — ba giây đầu',
     body:'Trên mạng xã hội, người xem quyết định lướt hay dừng trong vài giây đầu. Phần mở đầu đó gọi là <b>hook</b>. Cách thử rẻ nhất là giữ nguyên thân video và chỉ thay 3 giây đầu: một bản mở bằng câu hỏi, một bản mở bằng cảnh "trước – sau", một bản mở bằng khoảnh khắc lạ. Vì thân video giống nhau, chênh lệch về tỉ lệ xem quá 3 giây gần như chỉ do hook. Thử hook thường cho khác biệt lớn với chi phí dựng rất nhỏ.' },
@@ -120,11 +120,11 @@ BAI_ADD({ mod:'tn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tn03-03', skill:'creative', read:'6 phút', t:'Đổi tiêu đề hay đổi ảnh chính trước?',
+{ id:'B:tn03-03', skill:'creative', read:'6 phút', assume:true, t:'Đổi tiêu đề hay đổi ảnh chính trước?',
   situation:'Một shop giày thể thao trên Shopee có tỉ lệ bấm vào sản phẩm thấp. Ảnh chính hiện là đôi giày chụp nền trắng, tiêu đề dài khoảng 120 ký tự (ví dụ minh hoạ) nhồi từ khoá. Chủ shop có một buổi chiều và muốn biết nên thử đổi thứ gì trước để thấy khác biệt nhanh nhất.',
   concept:{ name:'Thử yếu tố chính theo thứ tự tác động',
     body:'Trên sàn hay trang tìm kiếm, mắt người mua thường dừng ở ảnh <b>trước</b> rồi mới lướt tiêu đề (cách hiểu phổ biến, chưa phải quy luật; hãy tự kiểm bằng thử nghiệm của shop). Vì vậy ảnh chính là <b>giả thuyết nên thử đầu tiên</b> khi vấn đề là tỉ lệ bấm thấp. Nhưng tiêu đề có việc khác: quyết định bạn có hiện ra khi khách gõ từ khoá hay không. Nếu lượt hiển thị đã thấp, hãy thử tiêu đề trước. Nguyên tắc: mỗi lần đổi một yếu tố, và so hai bản chạy cùng lúc. Đổi cả ảnh lẫn tiêu đề một lượt thì dù tốt lên, bạn cũng không biết nhờ cái nào để áp dụng cho sản phẩm khác.' },
-  example:'Shop chạy cùng tuần trên hai mẫu giày gần như giống hệt nhau (hoặc dùng công cụ thử của sàn nếu có), giữ nguyên tiêu đề, chỉ khác ảnh chính: A nền trắng, B ảnh giày đang mang trên chân chạy bộ. Mỗi bản 12.000 hiển thị (số minh hoạ). A được 180 lượt bấm (1,5%), B được 288 lượt (2,4%). Chênh 0,9 điểm phần trăm, đủ lớn so với dao động thường gặp giữa các tuần của shop (khoảng ±0,2 điểm), nên shop thử kiểu ảnh này trên vài mẫu cùng nhóm trước khi nhân rộng. Rồi chạy song song, cùng ảnh B, hai tiêu đề 120 và 60 ký tự: CTR 2,4% và 2,5%, chênh 0,1 điểm, nhỏ hơn dao động, nên chưa thấy tiêu đề tạo khác biệt. Lưu ý: nếu chỉ so tuần này với tuần trước, mùa vụ và đợt sale lẫn vào kết quả (xem module tn02).',
+  example:'Shop chạy cùng tuần trên hai mẫu giày gần như giống hệt nhau (hoặc dùng công cụ thử của sàn nếu có), giữ nguyên tiêu đề, chỉ khác ảnh chính: A nền trắng, B ảnh giày đang mang trên chân chạy bộ. Đây là so sánh thô vì hai mẫu vẫn khác về giá, đánh giá, lịch sử bán; tuần sau đảo ảnh giữa hai mẫu (A↔B) rồi đọc chênh trung bình hai tuần để trừ phần khác biệt đó. Mỗi bản 12.000 hiển thị (số minh hoạ). A được 180 lượt bấm (1,5%), B được 288 lượt (2,4%). Chênh 0,9 điểm phần trăm, đủ lớn so với dao động thường gặp giữa các tuần của shop (khoảng ±0,2 điểm), nên shop thử kiểu ảnh này trên vài mẫu cùng nhóm trước khi nhân rộng. Rồi chạy song song, cùng ảnh B, hai tiêu đề 120 và 60 ký tự, đo cả hai tầng: hiển thị 12.000 và 11.850 (chênh chưa tới 2%), CTR 2,4% và 2,5% (chênh 0,1 điểm). Cả hai chênh đều nhỏ hơn dao động giữa các tuần, nên lần thử này chưa thấy tiêu đề tạo khác biệt, ở cả hiển thị lẫn bấm. Lưu ý: nếu chỉ so tuần này với tuần trước, mùa vụ và đợt sale lẫn vào kết quả (xem module tn02).',
   takeaway:'Thử từng yếu tố một, bắt đầu từ thứ khách nhìn thấy trước — thường là ảnh chính.',
   apply:'Chọn một sản phẩm bạn đang bán online. Nói trong 60 giây: yếu tố nào khách thấy đầu tiên, bạn sẽ thử phiên bản nào thay thế, và đo bằng chỉ số gì.',
   mistakes:['Đổi ảnh, tiêu đề, giá cùng một lúc rồi không biết cái gì tạo ra kết quả.','Chỉ tối ưu tiêu đề cho từ khoá mà quên ảnh chính mới là thứ khiến người ta bấm.'],
@@ -177,7 +177,7 @@ BAI_ADD({ mod:'tn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tn03-04', skill:'creative', read:'7 phút', t:'Hai thông điệp, hai hình ảnh: cần chạy mấy bản?',
+{ id:'B:tn03-04', skill:'creative', read:'7 phút', assume:true, t:'Hai thông điệp, hai hình ảnh: cần chạy mấy bản?',
   situation:'Một app học tiếng Anh có hai thông điệp: "Nói tự tin sau 30 ngày" và "Chỉ 10 phút mỗi ngày". Họ cũng có hai kiểu hình: người đi làm trong văn phòng và sinh viên ở quán cà phê. Trưởng nhóm muốn biết nên ghép cặp nào, hay cứ chạy một bản "đẹp nhất" cho nhanh.',
   concept:{ name:'Ma trận thử: thông điệp × hình ảnh',
     body:'Khi có hai yếu tố, mỗi yếu tố hai lựa chọn, bạn ghép thành <b>ma trận 2 × 2</b> gồm bốn bản. Nhìn theo hàng biết thông điệp nào mạnh hơn trung bình; nhìn theo cột biết hình nào mạnh hơn; nhìn ô biết cặp nào hợp nhau bất thường. Ma trận cho nhiều bài học hơn thử từng cặp riêng lẻ. Nhưng số ô tăng rất nhanh: 3 × 3 là 9 bản, mỗi bản cần đủ lượt hiển thị. Ngân sách nhỏ thì chỉ nên làm ma trận nhỏ.' },
@@ -237,7 +237,7 @@ BAI_ADD({ mod:'tn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tn03-05', skill:'measure', read:'7 phút', t:'Thumb-stop, xem hết, CTR: chỉ số nào nói gì?',
+{ id:'B:tn03-05', skill:'measure', read:'7 phút', assume:true, t:'Thumb-stop, xem hết, CTR: chỉ số nào nói gì?',
   situation:'Một thương hiệu đồ ăn vặt chạy hai video trên Facebook. Video A có tỉ lệ dừng lướt 35% nhưng chỉ 8% xem hết. Video B có tỉ lệ dừng lướt 22% nhưng 20% xem hết và CTR cao hơn. Trưởng nhóm hỏi: "Rốt cuộc bản nào tốt hơn?"',
   concept:{ name:'Đọc chỉ số creative theo tầng',
     body:'Mỗi chỉ số đo một tầng của video. <b>Thumb-stop rate</b> (tỉ lệ xem quá 3 giây trên lượt hiển thị) đo sức giữ ngón tay. <b>Tỉ lệ xem hết</b> đo nội dung có đủ hấp dẫn để người ta ở lại. <b>CTR</b> đo lời kêu gọi có đủ thuyết phục để người ta bấm. Một video có thể giỏi tầng này, kém tầng kia. Đọc theo tầng giúp bạn biết cần sửa phần nào: hook, thân video hay lời kêu gọi, thay vì bỏ cả video.' },
@@ -297,7 +297,7 @@ BAI_ADD({ mod:'tn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tn03-06', skill:'creative', read:'6 phút', t:'Quảng cáo đang thắng bỗng hụt hơi: khi nào thay?',
+{ id:'B:tn03-06', skill:'creative', read:'6 phút', assume:true, t:'Quảng cáo đang thắng bỗng hụt hơi: khi nào thay?',
   situation:'Một thương hiệu nệm cao su chạy một video suốt năm tuần. Tuần đầu CTR 1,6%, chi phí mỗi đơn 180.000 đồng. Đến tuần năm, CTR còn 0,9%, chi phí mỗi đơn lên 310.000 đồng, trong khi tần suất trung bình tăng từ 1,4 lên 4,2 lần mỗi người. Đội đang tranh luận có nên tăng ngân sách để "đẩy" lại.',
   concept:{ name:'Creative mỏi (creative fatigue)',
     body:'Khi cùng một nhóm người thấy cùng một quảng cáo quá nhiều lần, họ bắt đầu bỏ qua nó. Đó là <b>creative mỏi</b>. Dấu hiệu thường đi cùng nhau: tần suất tăng, CTR giảm dần, chi phí mỗi kết quả tăng. Thời điểm mỏi không cố định: tệp nhỏ và ngân sách lớn thì mỏi nhanh, tệp rộng thì lâu hơn. Cách phòng là chuẩn bị sẵn vài biến thể để thay dần, thay vì chờ đến khi hiệu quả đã sụp.' },
@@ -357,11 +357,11 @@ BAI_ADD({ mod:'tn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tn03-07', skill:'brand', read:'7 phút', t:'Quảng cáo thắng về click có đang làm hại thương hiệu?',
+{ id:'B:tn03-07', skill:'brand', read:'7 phút', assume:true, t:'Quảng cáo thắng về click có đang làm hại thương hiệu?',
   situation:'Một thương hiệu dầu gội thảo dược định vị "dịu nhẹ, tự nhiên". Trong đợt thử, bản có chữ đỏ "GIẢM 50% HÔM NAY", ảnh tóc rụng cận cảnh thắng rõ: CTR 2,4% so với 1,2% của bản kể chuyện bà hái bồ kết. Đội performance muốn dồn toàn bộ ngân sách quý cho bản thắng.',
   concept:{ name:'Thắng ngắn hạn vs khớp thương hiệu',
     body:'Chỉ số quảng cáo đo phản ứng tức thời: dừng, bấm, mua. Nhưng mỗi quảng cáo còn để lại một <b>dấu vết trong trí nhớ</b> về thương hiệu. Bản gây giật mình hay giảm giá sâu có thể thắng click nhưng dạy khách rằng "hãng này là hàng giảm giá" hoặc làm lệch định vị. Vì vậy khi chọn bản thắng, cần đặt thêm một câu hỏi: nó có nói đúng mình là ai không? Có thể dùng bản thắng cho phần chuyển đổi, nhưng không để nó trở thành gương mặt duy nhất.' },
-  example:'Đội chia ngân sách: 70% cho chuỗi quảng cáo kể chuyện bồ kết (xây nhận diện, chạy dài), 30% cho bản khuyến mãi nhắm người đã xem hoặc vào trang. Sau hai tháng, họ khảo sát nhanh 300 khách: người thấy chủ yếu bản khuyến mãi nhớ thương hiệu là "hay giảm giá"; người thấy bản kể chuyện nhớ "thảo dược, dịu nhẹ". Đội giữ tỉ lệ chia này cho quý sau.',
+  example:'Đội chia ngân sách: 70% cho chuỗi quảng cáo kể chuyện bồ kết (xây nhận diện, chạy dài), 30% cho bản khuyến mãi nhắm người đã xem hoặc vào trang. Sau hai tháng, họ khảo sát nhanh 300 khách: người thấy chủ yếu bản khuyến mãi nhớ thương hiệu là "hay giảm giá"; người thấy bản kể chuyện nhớ "thảo dược, dịu nhẹ". Khảo sát này chỉ gợi ý, chưa tách được ảnh hưởng của tệp nhắm: người thấy bản khuyến mãi vốn là người đã quan tâm, khác nhóm ngay từ đầu (lỗi chọn nhóm, xem tn02-02); muốn đo chắc, trong cùng tệp rộng giữ một nhóm ngẫu nhiên không thấy bản khuyến mãi rồi so câu trả lời giữa hai nhóm. Đội giữ tỉ lệ chia này cho quý sau.',
   takeaway:'Bản thắng click chưa chắc thắng thương hiệu; hỏi thêm nó dạy khách nhớ gì về mình.',
   points:["Click là phản ứng tức thời, còn thương hiệu là ký ức tích luỹ. Hai thứ đo ở hai thời điểm nên bản thắng click vẫn có thể làm mòn ký ức.","Khách nhớ thương hiệu qua thứ thấy lặp lại nhiều nhất. Nếu đó là chữ đỏ khuyến mãi, thương hiệu bị nhớ là hàng giảm giá, dù lời hứa gốc là dịu nhẹ.","Chia vai: bản kể chuyện lo nhận diện cho tệp rộng, bản khuyến mãi lo chốt người đã quan tâm. Mỗi bản được đo bằng chỉ số đúng vai của nó."],
   counter:"Giả sử cũng hãng dầu gội, nhưng là sản phẩm mới ra, chưa có định vị nào để bảo vệ và ngân sách chỉ nuôi nổi một chuỗi. Khi đó bản khuyến mãi có thể là cách nhanh nhất để có đơn đầu tiên và dữ liệu. Dấu hiệu nhận ra: chưa có nhận diện nào để mất. Lúc đó chạy bản chuyển đổi trước, nhưng giữ giọng và hình ảnh không mâu thuẫn với lời hứa.",
@@ -417,11 +417,11 @@ BAI_ADD({ mod:'tn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tn03-08', skill:'insight', read:'6 phút', t:'Cả phòng thích bản A, khách lại chọn bản B?',
+{ id:'B:tn03-08', skill:'insight', read:'6 phút', assume:true, t:'Cả phòng thích bản A, khách lại chọn bản B?',
   situation:'Một chuỗi bánh mì que ở Hải Phòng có hai poster. Bản A thiết kế tinh tế, tông pastel, chữ nhỏ. Bản B màu vàng đậm, chữ to "Giòn rụm – 10 nghìn". Cả 12 người trong văn phòng bỏ phiếu cho A. Chủ chuỗi định in 500 bản A để treo khắp các điểm bán.',
   concept:{ name:'Thử với khách thật vs hỏi ý kiến nội bộ',
     body:'Người trong nhà biết quá rõ sản phẩm, xem creative trên màn hình lớn, và chọn theo gu thẩm mỹ. Khách thì lướt qua trong hai giây, trên điện thoại hay từ xa trên xe máy, với nhu cầu cụ thể. Vì vậy <b>ý kiến nội bộ</b> hữu ích để loại lỗi, kiểm tra thông điệp đúng sai, nhưng không thay được <b>hành vi của khách thật</b>. Khi có thể, hãy để khách "bỏ phiếu" bằng hành động: bấm, dừng lại, mua.' },
-  example:'Chủ chuỗi treo A ở 3 điểm, B ở 3 điểm tương đương trong hai tuần. Điểm treo B bán trung bình 460 que mỗi ngày, điểm treo A 400 que. Nhìn từ xe máy cách 10 mét, bản A gần như không đọc được giá. Chủ chuỗi in B cho toàn hệ thống, giữ A cho fanpage nơi người xem nhìn gần.',
+  example:'Chủ chuỗi treo A ở 3 điểm, B ở 3 điểm tương đương trong hai tuần; bốn tuần trước khi treo, hai nhóm điểm bán xấp xỉ nhau: 405 và 410 que mỗi ngày. Sau khi treo, điểm treo B bán trung bình 460 que mỗi ngày, điểm treo A 400 que. Chênh 15% trên 3 điểm mỗi nhóm vẫn mỏng, nên đảo poster giữa hai nhóm ở hai tuần kế rồi đọc chênh trung bình cho chắc. Nhìn từ xe máy cách 10 mét, bản A gần như không đọc được giá. Chủ chuỗi in B cho toàn hệ thống, giữ A cho fanpage nơi người xem nhìn gần.',
   takeaway:'Nội bộ giúp loại lỗi; khách thật mới cho biết bản nào làm được việc.',
   points:["Người trong nhà xem creative từ gần, không vội, và đã biết sản phẩm. Khách thì lướt qua trong hai giây ngoài đường, nên phiếu nội bộ đo gu, không đo hành động.","Treo hai bản ở các điểm tương đương, cùng thời gian, để khác biệt chỉ đến từ poster. Điểm tương đương về lượng khách qua lại là điều kiện để đọc kết quả.","Đo bằng hành vi cần thước gắn với việc mua, như số que bán mỗi ngày. Hỏi “thích bản nào” cho câu trả lời lịch sự, còn đếm que cho câu thật."],
   counter:"Giả sử cũng chuỗi bánh mì que, nhưng hai poster treo ở hai khu rất khác nhau: A gần trường đại học, B ở chợ. Khi đó số que chênh có thể đến từ khách, không phải từ poster. Dấu hiệu nhận ra: các điểm đó đã bán chênh nhau trước khi treo poster. Lúc này hãy ghép điểm tương đương hoặc đổi poster qua lại giữa các điểm rồi đo lại.",
@@ -477,7 +477,7 @@ BAI_ADD({ mod:'tn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tn03-09', skill:'measure', read:'7 phút', t:'5 triệu mỗi tháng thì thử mấy biến thể?',
+{ id:'B:tn03-09', skill:'measure', read:'7 phút', assume:true, t:'5 triệu mỗi tháng thì thử mấy biến thể?',
   situation:'Một tiệm nail ở Đà Nẵng có 5 triệu đồng mỗi tháng cho quảng cáo Facebook. Chủ tiệm đọc được lời khuyên "hãy thử thật nhiều creative" nên làm 10 bản, mỗi bản 500.000 đồng. Sau một tháng, mỗi bản chỉ có 3–8 tin nhắn, và chủ tiệm không biết bản nào thật sự tốt.',
   concept:{ name:'Số biến thể hợp với ngân sách',
     body:'Mỗi biến thể cần đủ kết quả để phân biệt với may rủi. Một cách ước lượng thô: ước tính chi phí mỗi kết quả, chia ngân sách thử cho số kết quả cần ở mỗi bản, ra số bản tối đa. Với ngân sách nhỏ, <b>ít biến thể nhưng khác nhau rõ</b> tốt hơn nhiều biến thể na ná. Thử 2–3 hướng khác biệt lớn (ví dụ: ảnh kết quả, video quy trình, ưu đãi khách mới), chọn hướng thắng rồi mới tinh chỉnh chi tiết ở vòng sau.' },
@@ -534,7 +534,7 @@ BAI_ADD({ mod:'tn03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:tn03-10', skill:'creative', read:'6 phút', t:'Thử xong rồi quên: làm sao để lần sau không thử lại từ đầu?',
+{ id:'B:tn03-10', skill:'creative', read:'6 phút', assume:true, t:'Thử xong rồi quên: làm sao để lần sau không thử lại từ đầu?',
   situation:'Một thương hiệu cà phê hoà tan đã chạy hơn 60 creative trong năm. Nhân viên cũ nghỉ, người mới hỏi "hook nào từng chạy tốt?", không ai trả lời được. Các file nằm rải rác trong nhiều thư mục, báo cáo mỗi lần một kiểu, và đội đang chuẩn bị thử lại một ý tưởng đã thua cách đây sáu tháng.',
   concept:{ name:'Thư viện bài học creative',
     body:'Mỗi lần thử là một bài học; nếu không ghi lại, bạn trả tiền hai lần cho cùng một bài học. <b>Thư viện creative</b> là một bảng đơn giản: mỗi dòng một lần so sánh, ghi ngày chạy, tệp khách, yếu tố được thử, so với bản nào, số hiển thị, chỉ số chính, kết quả, <b>độ tin cậy</b> (chênh lệch có vượt dao động may rủi không) và câu "vì sao chúng tôi nghĩ". Câu đó chỉ là <b>giả thuyết</b> cho đến khi lặp lại ở những lần thử độc lập. Điều quý nhất không phải file thiết kế mà là câu rút ra dùng được cho lần sau.' },

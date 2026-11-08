@@ -4,7 +4,7 @@
 BAI_ADD({ mod:'tp03', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tp03-01', skill:'brand', read:'6 phút', t:'Tên mô tả, tên gợi hình hay tên tự đặt: chọn loại nào cho quán mới?',
+{ id:'B:tp03-01', skill:'brand', read:'6 phút', assume:true, t:'Tên mô tả, tên gợi hình hay tên tự đặt: chọn loại nào cho quán mới?',
   situation:'Hai vợ chồng chuẩn bị mở quán bún chả ở Cầu Giấy, vốn khoảng 400 triệu, gần như không có tiền quảng cáo. Ba cái tên trên bàn: "Bún Chả Hà Nội Gốc" (nói thẳng bán gì), "Khói Than" (gợi cảm giác nướng than), và "Bunza" (tự đặt, không có nghĩa). Người chồng thích Bunza vì nghe hiện đại.',
   concept:{ name:'Phổ tên: mô tả – gợi hình – tự đặt',
     body:'<b>Tên mô tả</b> nói luôn sản phẩm là gì: khách hiểu ngay, không tốn tiền giải thích, nhưng khó phân biệt vì đối thủ cũng dùng được chữ tương tự. <b>Tên tự đặt</b> (như Kodak, một từ do người sáng lập tự tạo, hay một từ vô nghĩa) dễ sở hữu riêng nhưng lúc đầu rỗng nghĩa — phải có tiền và thời gian để lấp nghĩa vào. <b>Tên gợi hình</b> nằm giữa: gợi một cảm giác liên quan, đủ riêng để nhớ, đủ gần để đoán. Chọn loại nào phụ thuộc vào ngân sách giải thích bạn có.' },
@@ -65,7 +65,7 @@ BAI_ADD({ mod:'tp03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tp03-02', skill:'brand', read:'7 phút', t:'Tên đã chọn xong — kiểm tra gì trước khi in biển và làm bao bì?',
+{ id:'B:tp03-02', skill:'brand', read:'7 phút', assume:true, t:'Tên đã chọn xong — kiểm tra gì trước khi in biển và làm bao bì?',
   situation:'Một thương hiệu bánh tráng trộn đóng gói ở TP.HCM chọn tên "Quýnh" vì vui tai. Trước khi đặt in 5.000 túi, bạn cho 40 người nghe tên qua điện thoại rồi nhờ gõ lại: chỉ 14 người gõ đúng, số còn lại gõ "Quýn", "Quỳnh", "Quinh". Fanpage tên "Quýnh" cũng đã có người dùng.',
   concept:{ name:'Năm phép thử một cái tên',
     body:'Trước khi tiêu tiền cho biển và bao bì, cho tên qua năm phép thử. <b>Nghe – viết</b>: đọc qua điện thoại, người nghe có gõ lại đúng không. <b>Gõ không dấu</b>: khách tìm trên mạng thường gõ không dấu, ra kết quả gì. <b>Tên miền và fanpage</b>: còn trống không. <b>Tra cứu nhãn hiệu</b>: đã có ai đăng ký tên giống hoặc gần giống trong cùng nhóm hàng chưa — việc này cần tra ở cơ sở dữ liệu chính thức hoặc hỏi người có chuyên môn, không đoán. <b>Nghĩa ngoài ý muốn</b>: ở vùng miền khác hoặc tiếng lóng, tên có nghĩa xấu không.' },
@@ -74,13 +74,13 @@ BAI_ADD({ mod:'tp03', lessons:[
   apply:'Đọc tên thương hiệu bạn đang làm cho ba người qua điện thoại, nhờ họ gõ lại. Nói trong 60 giây: bao nhiêu người gõ đúng, và họ sai ở đâu.',
   mistakes:['Chỉ hỏi "tên này hay không" mà không thử khách có gõ lại được không.','Tự kết luận "chưa ai đăng ký" sau khi tìm Google vài phút, không tra cứu đúng nơi.'],
   q:[
-  { type:'mcq', stem:'Đoán trước: phép thử nào thường bị bỏ qua nhất khi chủ shop tự đặt tên?',
-    options:[{k:'a',t:'Hỏi bạn bè xem tên nghe có hay, có sang không'},{k:'b',t:'Chọn màu và phông chữ để viết tên lên logo'},
-             {k:'c',t:'Kiểm tra tên có đẹp khi in trên áo đồng phục nhân viên không'},{k:'d',t:'Đọc tên qua điện thoại xem người nghe có viết lại đúng không'}],
-    answer:'d', why:{a:'Đây là việc gần như ai cũng làm — và là phép thử yếu nhất.',
-      b:'Logo thường được làm rất kỹ; nhưng đó là việc sau khi tên đã chốt.',
-      c:'Đồng phục là chi tiết phụ, ít ảnh hưởng tới việc khách tìm ra bạn.',
-      d:'Đúng. Khách giới thiệu nhau bằng lời; tên nghe xong không viết lại được là mất khách ở bước tìm kiếm.'} },
+  { type:'mcq', stem:'Đoán trước: với tên “Quýnh” trong tình huống, phép thử nào cho thấy khách được bạn bè giới thiệu dễ không tìm ra shop nhất?',
+    options:[{k:'a',t:'Kiểm tên miền và fanpage còn trống hay đã có người dùng chưa'},{k:'b',t:'Gõ tên không dấu lên thanh tìm kiếm xem ra những kết quả gì'},
+             {k:'c',t:'Hỏi người ở vùng miền khác xem tên có nghĩa xấu hay lóng không'},{k:'d',t:'Đọc tên qua điện thoại xem người nghe có viết lại đúng không'}],
+    answer:'d', why:{a:'Fanpage đã có chủ là một phép trượt, nhưng tình huống không cho số khách bị lạc vì nó; khách gõ đúng tên vẫn còn tìm được shop ở nơi khác.',
+      b:'Kết quả không dấu bị loãng vì trùng tên người, nhưng chuyện đó chỉ xảy ra sau khi khách đã gõ đúng chữ; phép nghe – viết chặn khách sớm hơn.',
+      c:'Tình huống không cho thấy “Quýnh” có nghĩa xấu ở vùng nào; phép thử này chưa bắt được lỗi gì cụ thể của tên.',
+      d:'Đúng. Chỉ 14 trên 40 người gõ đúng: khách nghe bạn bè kể tên thì khoảng hai trong ba người sẽ tìm sai chữ ngay từ đầu.'} },
   { type:'mcq', stem:'Tên "Quýnh" trượt phép nghe – viết, fanpage đã có chủ, nhưng chủ shop rất thích. Bạn đề xuất làm gì trước khi in?',
     options:[{k:'a',t:'Cứ in theo kế hoạch, rồi chạy quảng cáo thật nhiều để khách tự quen dần với cách viết đúng'},{k:'b',t:'Giữ tinh thần vui của tên, tìm vài phương án khác và cho qua đủ năm phép thử'},
              {k:'c',t:'Giữ tên, chỉ thêm dấu gạch ngang "Quý-nh" để khách dễ đọc hơn'},{k:'d',t:'Mua lại fanpage từ người đang dùng rồi giữ nguyên tên như cũ'}],
@@ -122,7 +122,7 @@ BAI_ADD({ mod:'tp03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tp03-03', skill:'brand', read:'6 phút', t:'Tên tiếng Anh hay tiếng Việt cho một thương hiệu Việt?',
+{ id:'B:tp03-03', skill:'brand', read:'6 phút', assume:true, t:'Tên tiếng Anh hay tiếng Việt cho một thương hiệu Việt?',
   situation:'Một xưởng làm bánh pía và bánh trung thu ở Sóc Trăng muốn ra hộp quà cao cấp bán ở TP.HCM và gửi biếu Việt kiều. Nhóm trẻ trong công ty muốn đặt tên "Golden Moon Bakery" cho "sang". Người sáng lập muốn giữ tên gia đình "Bà Sáu". Khách chính là người Việt mua làm quà.',
   concept:{ name:'Ngôn ngữ của tên là một lời hứa về nguồn gốc',
     body:'Ngôn ngữ của tên nói với khách <b>hàng này từ đâu tới</b>. Tên tiếng Anh gợi hiện đại, quốc tế — hợp khi khách chờ đợi điều đó (đồ công nghệ, thời trang theo xu hướng). Tên tiếng Việt gợi gốc gác, truyền thống, tay nghề — hợp khi nguồn gốc chính là lý do khách mua. Chọn sai, tên nói ngược với sản phẩm: một món đặc sản mang tên tiếng Anh chung chung thì mất đúng thứ khiến nó đáng tiền. Câu hỏi đúng không phải "tiếng nào sang hơn" mà "khách mua vì điều gì".' },
@@ -186,7 +186,7 @@ BAI_ADD({ mod:'tp03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tp03-04', skill:'creative', read:'6 phút', t:'Slogan này là một lời hứa hay chỉ là một câu cho vui?',
+{ id:'B:tp03-04', skill:'creative', read:'6 phút', assume:true, t:'Slogan này là một lời hứa hay chỉ là một câu cho vui?',
   situation:'Một chuỗi tiệm sửa xe máy ở Đà Nẵng có năm cửa hàng, đang in lại biển. Slogan cũ: "Chạy là mê". Chủ chuỗi phân vân với câu mới: "Báo giá trước, sửa sau — không phát sinh". Nhân viên thấy câu cũ vui hơn, câu mới "khô như nội quy".',
   concept:{ name:'Slogan là lời hứa có thể kiểm tra',
     body:'Một slogan làm việc tốt khi nó trả lời: <b>chọn chúng tôi thì bạn được gì mà nơi khác không chắc cho bạn</b>. Câu cho vui (chơi chữ, cảm xúc chung) dễ thích nhưng khó nhớ vì sao phải chọn bạn. Lời hứa có thể kiểm tra — khách tự thấy bạn giữ hay không — tạo lý do quay lại. Giữa hai cực còn một nấc: lời hứa cụ thể nhưng khách không quan tâm (khách nhìn thấy mà không thấy lợi gì) vẫn chưa làm việc. Câu tốt vừa có nhịp dễ nhớ, vừa hứa một điều cụ thể, vừa chạm đúng nỗi lo của khách.' },
@@ -247,7 +247,7 @@ BAI_ADD({ mod:'tp03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tp03-05', skill:'creative', read:'6 phút', t:'Slogan này đối thủ dán vào có đúng không?',
+{ id:'B:tp03-05', skill:'creative', read:'6 phút', assume:true, t:'Slogan này đối thủ dán vào có đúng không?',
   situation:'Một thương hiệu gạo đóng túi ở Cần Thơ trình ba phương án slogan: "Hạt ngọc trời ban", "Chất lượng tạo nên niềm tin", và "Gạo mới xay trong 7 ngày, in ngày xay trên túi". Giám đốc thích câu thứ hai vì "nghe chắc chắn". Bạn được nhờ chọn.',
   concept:{ name:'Phép thử dán tên đối thủ',
     body:'Lấy slogan của bạn, bỏ tên bạn đi, dán tên đối thủ vào. Nếu câu vẫn đúng và vẫn nghe hợp lý, <b>slogan đó không thuộc về bạn</b> — nó thuộc về cả ngành. Câu chung chung ("chất lượng", "uy tín", "tận tâm") qua được mọi thương hiệu nên không giúp khách chọn ai. Câu qua được phép thử thường chứa một điều cụ thể mà chỉ bạn đang làm, hoặc bạn làm trước và rõ nhất: một con số, một cách làm, một cam kết. Phép thử chỉ loại câu chung; câu qua được còn phải là điều khách quan tâm.' },
@@ -311,7 +311,7 @@ BAI_ADD({ mod:'tp03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tp03-06', skill:'brand', read:'7 phút', t:'Lời hứa "giao trong 30 phút" — vận hành có giữ được không?',
+{ id:'B:tp03-06', skill:'brand', read:'7 phút', assume:true, t:'Lời hứa "giao trong 30 phút" — vận hành có giữ được không?',
   situation:'Một chuỗi cơm tấm giao hàng ở Hà Nội định in lên hộp và chạy quảng cáo câu "Giao trong 30 phút, trễ tặng nước". Bạn kéo số liệu tháng trước: 2.000 đơn, 340 đơn giao quá 30 phút, phần lớn rơi vào giờ trưa 11h30–12h30 và những ngày mưa.',
   concept:{ name:'Lời hứa thương hiệu phải đi qua được vận hành',
     body:'Lời hứa thương hiệu không nằm ở câu chữ mà nằm ở <b>những lần khách trải nghiệm nó</b>. Mỗi lần thất hứa làm mất niềm tin nhiều hơn một lần giữ lời tạo ra, vì khách nhớ lần thất vọng rõ hơn. Trước khi công bố, hãy đo tỉ lệ giữ được lời hứa hiện tại, tìm chỗ hay vỡ, và quyết định: sửa vận hành cho kịp, hay thu hẹp lời hứa về mức giữ được (theo khu vực, theo khung giờ). Quảng cáo không tạo ra lời hứa — nó chỉ nhân lời hứa lên, kể cả khi lời hứa đang vỡ.' },
@@ -368,11 +368,11 @@ BAI_ADD({ mod:'tp03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tp03-07', skill:'brand', read:'6 phút', t:'Sếp mới muốn đổi slogan — khi nào đổi mới là đúng?',
+{ id:'B:tp03-07', skill:'brand', read:'6 phút', assume:true, t:'Sếp mới muốn đổi slogan — khi nào đổi mới là đúng?',
   situation:'Một thương hiệu nước giặt nội địa dùng câu "Sạch thơm cả tuần" suốt tám năm. Giám đốc marketing mới về, thấy câu "cũ và nhàm", muốn thay bằng câu mới trong chiến dịch sắp tới. Khảo sát nhỏ cho thấy nhiều khách vẫn nhắc đúng câu này khi được hỏi về thương hiệu.',
   concept:{ name:'Nhàm với người làm, mới với người mua',
     body:'Người trong công ty gặp slogan mỗi ngày nên thấy nhàm rất sớm; khách chỉ gặp nó vài lần một tháng, nên với họ câu vẫn đang được "học". Một slogan được nhớ là <b>tài sản tích luỹ</b>; đổi là xoá tài sản đó và bắt đầu lại. Đổi đúng khi: lời hứa cũ không còn đúng (sản phẩm đổi, vận hành không giữ được), lời hứa không còn quan trọng với khách, hoặc thương hiệu đổi hướng chiến lược thật. Không nên đổi chỉ vì người mới muốn để lại dấu ấn, hay vì nội bộ thấy chán. Muốn biết câu còn đáng giữ, hỏi cả hai: khách nhớ ở mức nào, và nếu thấp thì do câu yếu hay do chưa đủ tiếp xúc.' },
-  example:'"Sạch thơm cả tuần" vẫn đúng với sản phẩm, vẫn là điều khách mua nước giặt quan tâm, và khách vẫn nhắc đúng — cả ba lý do đổi đều không có. Cái giám đốc mới cảm thấy là nhàm của người trong cuộc. Việc hợp lý hơn: giữ câu, làm mới cách thể hiện — hình ảnh mới, tình huống mới, bằng chứng mới cho cùng một lời hứa. McDonald\'s giữ "I\'m lovin\' it" suốt hơn hai thập kỷ kể từ lúc ra mắt và chỉ làm mới cách kể quanh nó.',
+  example:'"Sạch thơm cả tuần" vẫn đúng với sản phẩm, vẫn là điều khách mua nước giặt quan tâm, và khách vẫn nhắc đúng — cả ba lý do đổi đều không có. Cái giám đốc mới cảm thấy là nhàm của người trong cuộc. Việc hợp lý hơn: giữ câu, làm mới cách thể hiện — hình ảnh mới, tình huống mới, bằng chứng mới cho cùng một lời hứa. McDonald\'s ra mắt "I\'m lovin\' it" từ năm 2003 và, theo hiểu biết chung tới ngày kiểm 2026-11-07 (cần đối chiếu tư liệu chính thức của hãng), vẫn giữ câu đó, chỉ làm mới cách kể quanh nó.',
   takeaway:'Đổi slogan khi lời hứa sai hoặc hết giá trị, không phải khi người trong công ty thấy chán.',
   apply:'Nghĩ về một thương hiệu đã đổi slogan gần đây. Nói trong 60 giây: lý do đổi là lời hứa hết đúng, hết quan trọng, hay chỉ là nội bộ muốn mới.',
   mistakes:['Lấy cảm giác nhàm của nội bộ làm căn cứ đổi slogan.','Đổi slogan mỗi chiến dịch, khiến khách không kịp nhớ câu nào.'],
@@ -429,7 +429,7 @@ BAI_ADD({ mod:'tp03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tp03-08', skill:'brand', read:'7 phút', t:'Sản phẩm con mới nên mang tên mẹ hay có tên riêng?',
+{ id:'B:tp03-08', skill:'brand', read:'7 phút', assume:true, t:'Sản phẩm con mới nên mang tên mẹ hay có tên riêng?',
   situation:'Một thương hiệu mỹ phẩm thiên nhiên nổi tiếng với dòng dầu gội bồ kết, định ra thêm hai sản phẩm: một kem chống nắng cho da mặt và một dòng xịt côn trùng cho gia đình. Đội sản phẩm đề xuất đặt tên riêng thật kêu cho từng món. Đội bán hàng muốn tất cả đều mang tên thương hiệu mẹ.',
   concept:{ name:'Kiến trúc thương hiệu',
     body:'Có ba cách chính. <b>Một nhà</b>: mọi sản phẩm mang tên mẹ (như Vinamilk với nhiều dòng sữa) — món mới hưởng ngay niềm tin cũ, nhưng món hỏng làm vạ lây cả nhà. <b>Nhiều nhà</b>: mỗi sản phẩm có tên riêng (Omo, Dove của Unilever; Toyota đặt Lexus riêng cho dòng hạng sang) — linh hoạt, tách rủi ro, nhưng mỗi tên phải tự xây từ đầu. <b>Bảo chứng</b>: tên riêng kèm dòng nhỏ "của [tên mẹ]" — vừa có cá tính riêng vừa mượn được niềm tin. Ba câu hỏi chọn: món mới có gần lời hứa gốc không; có cùng nhóm khách và mức giá không; nếu hỏng, hãng chịu để cả nhà bị kéo theo không.' },
@@ -490,7 +490,7 @@ BAI_ADD({ mod:'tp03', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tp03-09', skill:'creative', read:'7 phút', t:'Đặt tên cho chiến dịch sao cho khách nhắc được và nối về thương hiệu?',
+{ id:'B:tp03-09', skill:'creative', read:'7 phút', assume:true, t:'Đặt tên cho chiến dịch sao cho khách nhắc được và nối về thương hiệu?',
   situation:'Một chuỗi siêu thị mini ở Hà Nội chuẩn bị chiến dịch mùa tựu trường, ngân sách 300 triệu. Agency đề xuất tên "Back to School Mega Sale 2026". Sau đợt tương tự năm ngoái, khảo sát 200 khách: 120 người nhớ có chương trình, nhưng chỉ 30 người nói đúng đó là của chuỗi nào.',
   concept:{ name:'Tên chiến dịch phải mang dấu thương hiệu',
     body:'Tên chiến dịch có hai việc: <b>được nhắc</b> (khách nói ra được khi rủ nhau) và <b>được nối</b> (nghe là biết của ai). Tên kiểu "Mega Sale", "Siêu sale tựu trường" làm được việc thứ nhất nhưng không làm việc thứ hai — cả thị trường cùng dùng một kiểu tên, nên khách nhớ có khuyến mãi mà quên của ai. Tên tốt mượn một thứ đã thuộc về thương hiệu (tên, linh vật, màu, câu quen) hoặc một chi tiết riêng của chính chương trình, và nên giữ lặp lại qua nhiều năm để thành một dịp khách chờ.' },

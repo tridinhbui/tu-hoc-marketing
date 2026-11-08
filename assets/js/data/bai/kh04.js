@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'kh04', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:kh04-01', skill:'insight', read:'6 phút', t:'"Khách mua vào buổi tối" là insight hay chỉ là dữ kiện?',
+{ id:'B:kh04-01', skill:'insight', read:'6 phút', assume:true, t:'"Khách mua vào buổi tối" là insight hay chỉ là dữ kiện?',
   situation:'Bạn làm marketing cho một chuỗi bánh mì que ở Hải Phòng. Buổi họp đầu tuần, anh trưởng nhóm đưa ra "insight": khách mua nhiều nhất từ 5 đến 7 giờ tối. Chị bán hàng kể thêm: nhiều người mua hai túi, một túi ăn trên xe, một túi mang về. Sếp yêu cầu viết brief quảng cáo dựa trên "insight" đó trước thứ Sáu.',
   concept:{ name:'Bậc thang dữ kiện → quan sát → insight',
     body:'<b>Dữ kiện</b> là con số đo được: giờ mua, số túi. <b>Quan sát</b> là hành vi bạn thấy lặp lại: mua hai túi, ăn một túi ngay trên xe. <b>Insight</b> là lời giải thích vì sao họ làm vậy — một động cơ mà chính khách nhận ra khi nghe nhưng chưa từng nói thành lời. Dữ kiện trả lời "cái gì", quan sát trả lời "như thế nào", insight trả lời "vì sao". Chỉ bậc thứ ba mới đủ để viết một thông điệp chạm được người mua.' },
@@ -67,7 +67,7 @@ BAI_ADD({ mod:'kh04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:kh04-02', skill:'insight', read:'7 phút', t:'Vì sao "mẹ muốn con khoẻ" không phải là insight?',
+{ id:'B:kh04-02', skill:'insight', read:'7 phút', assume:true, t:'Vì sao "mẹ muốn con khoẻ" không phải là insight?',
   situation:'Một hãng sữa bột mới vào thị trường Việt Nam gửi agency brief với "insight": mẹ nào cũng muốn con khoẻ mạnh, thông minh. Agency trả về ba concept, cả ba đều là em bé chạy nhảy, cười tươi, kèm chữ "phát triển toàn diện". Nhóm thương hiệu thấy chúng giống hệt quảng cáo của mấy hãng đang dẫn đầu.',
   concept:{ name:'Insight là một căng thẳng',
     body:'Một câu ai cũng đồng ý thì không mở ra được gì — nó là <b>điều hiển nhiên</b>. Insight tốt thường có dạng căng thẳng: <b>"Tôi muốn A, nhưng B"</b>. Phần "muốn" là mong muốn chung; phần "nhưng" là rào cản, nỗi sợ hay mâu thuẫn khiến họ khó xử. Chính chỗ vướng đó là nơi thương hiệu có vai trò: gỡ nó, hoặc nói hộ nó. Chữ "nhưng" chỉ là dấu hiệu; có khi mâu thuẫn nằm trong cách kể mà không cần chữ ấy. Hãy kiểm bằng ba câu hỏi: câu này có đúng riêng một nhóm người không, có chạm cảm xúc không, và thương hiệu có gỡ được không?' },
@@ -128,11 +128,11 @@ BAI_ADD({ mod:'kh04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:kh04-03', skill:'insight', read:'7 phút', t:'Làm sao biết insight của bạn đúng trước khi làm quảng cáo?',
+{ id:'B:kh04-03', skill:'insight', read:'7 phút', assume:true, t:'Làm sao biết insight của bạn đúng trước khi làm quảng cáo?',
   situation:'Một ví điện tử muốn kéo người trên 45 tuổi dùng chuyển tiền. Nhóm có hai câu insight và chỉ đủ ngân sách làm một phim. Thay vì bỏ phiếu trong phòng họp, bạn đọc từng câu cho 20 người trên 45 tuổi ở một khu chợ tại Biên Hoà rồi ghi lại phản ứng đầu tiên của họ.',
   concept:{ name:'Phép thử "đúng quá"',
     body:'Insight thật gây ra một phản ứng rất riêng khi khách nghe: họ bật cười, gật đầu, hoặc nói "<b>đúng quá</b>", "y như nhà tôi". Nếu phản ứng là "ừ, hợp lý", câu đó mới chỉ đúng về lý. Nếu là "hả, không phải đâu", câu đó sai. Phép thử không cần phim hay mẫu lớn: đọc nguyên văn câu, không giải thích, ghi lại phản ứng trong ba giây đầu. Cái bạn đo là tỉ lệ người nhận ra chính mình. Đây là quy tắc thực hành của người làm nghiên cứu, không phải kết quả của một nghiên cứu học thuật cụ thể; hãy coi nó là tín hiệu để kiểm tra, không phải bằng chứng tuyệt đối.' },
-  example:'Câu 1: "Người lớn tuổi sợ chuyển nhầm tiền." Trong 20 người, 6 người gật đầu "đúng quá", phần lớn còn lại bảo "ừ, ai chả sợ". Câu 2: "Tôi muốn tự chuyển tiền cho con, nhưng ngại hỏi con mãi cách làm, sợ con nghĩ mình chậm." Có 14 người cười, gật, kể luôn chuyện nhà mình. Tỉ lệ "đúng quá" là 30% so với 70%. Câu 2 thắng rõ, và còn gợi ý phim: bố tự làm được mà không phải gọi con.',
+  example:'Câu 1: "Người lớn tuổi sợ chuyển nhầm tiền." Trong 20 người, 6 người gật đầu "đúng quá", phần lớn còn lại bảo "ừ, ai chả sợ". Câu 2: "Tôi muốn tự chuyển tiền cho con, nhưng ngại hỏi con mãi cách làm, sợ con nghĩ mình chậm." Có 14 người cười, gật, kể luôn chuyện nhà mình. Tỉ lệ "đúng quá" là 30% so với 70%. Với chỉ 20 người, quy tắc thô: chênh dưới khoảng 6 người (như 9 so với 11) nằm trong nhiễu, phải đọc thêm cho 20 người nữa; chênh 8 người như ở đây mới đủ tin. Câu 2 thắng rõ, và còn gợi ý phim: bố tự làm được mà không phải gọi con.',
   takeaway:'Đọc insight cho khách nghe: "đúng quá" là thật, "hợp lý" là chưa, "không phải" là sai.',
   apply:'Chọn một câu insight nhóm bạn đang dùng. Đọc nguyên văn cho 5 người trong tệp và ghi lại đúng phản ứng đầu tiên của mỗi người.',
   mistakes:['Giải thích thêm trước khi đọc, làm khách gật cho lịch sự.','Thử trên đồng nghiệp trong phòng họp thay vì người trong tệp khách.'],
@@ -181,7 +181,7 @@ BAI_ADD({ mod:'kh04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:kh04-04', skill:'creative', read:'7 phút', t:'Có insight rồi, làm sao ra được ý tưởng?',
+{ id:'B:kh04-04', skill:'creative', read:'7 phút', assume:true, t:'Có insight rồi, làm sao ra được ý tưởng?',
   situation:'Một hãng nước mắm mới ở Phú Quốc có insight đã được thử: "Tôi muốn nấu cơm nhà cho con ăn, nhưng tối nào đi làm về cũng chỉ còn sức làm món rang, món kho." Nhóm sáng tạo đưa ra ý tưởng: phim hai phút về nghề làm nước mắm ba đời. Ai cũng khen đẹp, nhưng bạn thấy có gì đó lệch.',
   concept:{ name:'Cây cầu insight → vai trò thương hiệu → ý tưởng',
     body:'Insight không tự thành quảng cáo. Giữa hai thứ là một câu hỏi: <b>thương hiệu làm gì với căng thẳng này?</b> Có ba vai trò thường gặp: <b>gỡ</b> vướng (đưa ra cách làm dễ hơn), <b>đổi góc nhìn</b> (nói rằng điều khách lo không đáng lo), hoặc <b>đứng về phía khách</b> (nói hộ điều họ ngại nói). Chọn một vai trò, rồi ý tưởng mới xuất hiện. Ý tưởng không nối được về phần "nhưng" của insight là ý tưởng đẹp nhưng lạc.' },
@@ -245,7 +245,7 @@ BAI_ADD({ mod:'kh04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:kh04-05', skill:'insight', read:'7 phút', t:'Sĩ diện, ngại từ chối, lo cho con — insight Việt nằm ở đâu?',
+{ id:'B:kh04-05', skill:'insight', read:'7 phút', assume:true, t:'Sĩ diện, ngại từ chối, lo cho con — insight Việt nằm ở đâu?',
   situation:'Một hãng bảo hiểm nhân thọ thấy khách tìm hiểu rất nhiều nhưng ít ký. Khảo sát nói lý do là "phí cao". Một tư vấn viên lâu năm lại kể khác: khách thường đồng ý khi người quen giới thiệu, dù không cần; còn khi tự tìm hiểu thì hay hẹn "để bàn với nhà" rồi im luôn.',
   concept:{ name:'Insight từ quy tắc ứng xử Việt',
     body:'Nhiều căng thẳng của khách Việt không nằm ở sản phẩm mà ở <b>quan hệ</b>: giữ thể diện, ngại từ chối thẳng, lo cho con hơn lo cho mình, sợ bị coi là "trù ẻo" khi nói chuyện rủi ro. Những điều này ít khi được nói ra trong khảo sát — người ta đưa lý do dễ nói ("phí cao") thay cho lý do thật ("nói chuyện chết chóc thì xui", "không muốn làm mất lòng người quen"). Đây là giả thuyết văn hoá cần kiểm, không phải quy luật: khác nhau theo vùng và thế hệ. Khi câu trả lời khảo sát quá gọn, đừng hỏi "vì sao" thêm lần nữa; hãy hỏi theo tình huống thật: "lần gần nhất bạn hẹn rồi không quay lại, chuyện gì xảy ra?"' },
@@ -306,7 +306,7 @@ BAI_ADD({ mod:'kh04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:kh04-06', skill:'measure', read:'7 phút', t:'Đọc 2.000 bình luận thế nào để ra insight?',
+{ id:'B:kh04-06', skill:'measure', read:'7 phút', assume:true, t:'Đọc 2.000 bình luận thế nào để ra insight?',
   situation:'Một thương hiệu nồi chiên không dầu có 2.000 bình luận trên Shopee và TikTok trong ba tháng. Bạn thực tập được giao "tổng hợp insight". Bản báo cáo nộp lên là biểu đồ cảm xúc: 80% tích cực, 15% trung tính, 5% tiêu cực, kèm đám mây từ khoá "đẹp", "tiện", "giao nhanh".',
   concept:{ name:'Đọc bình luận: tìm câu lạ, không đếm từ',
     body:'Đếm cảm xúc và từ khoá cho biết khách hài lòng tới đâu, không cho biết <b>vì sao</b>. Insight thường nằm ở những bình luận dài, có chuyện kể, hoặc lặp lại một chi tiết bất ngờ. Cách làm: lọc bình luận dài (20 chữ chỉ là điểm khởi đầu, kiểm lại bằng một mẫu ngẫu nhiên), ưu tiên người mua đã xác minh, có ảnh hoặc video, dùng lâu; bỏ bình luận viết theo mẫu hoặc để lấy xu. Đọc kỹ một mẫu, gắn nhãn theo <b>tình huống sử dụng và nỗi lo</b> chứ không theo khen/chê, rồi đếm nhãn nào lặp lại. Một nhãn lạ xuất hiện ở khoảng một phần mười bình luận dài thường đáng giá hơn mọi từ "đẹp".' },
@@ -363,7 +363,7 @@ BAI_ADD({ mod:'kh04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:kh04-07', skill:'insight', read:'6 phút', t:'Mẹ mua, con dùng — insight của ai?',
+{ id:'B:kh04-07', skill:'insight', read:'6 phút', assume:true, t:'Mẹ mua, con dùng — insight của ai?',
   situation:'Một hãng bàn chải điện trẻ em làm quảng cáo nhắm các bé: nhân vật hoạt hình, nhạc vui, "đánh răng như chơi". Bé nào xem cũng thích, nhưng doanh số không nhúc nhích. Chị trưởng nhóm hỏi lại: người rút ví là ai, và họ đang lo điều gì mỗi tối lúc đánh răng cho con?',
   concept:{ name:'Tách insight người mua và người dùng',
     body:'Khi người mua khác người dùng, có <b>hai căng thẳng khác nhau</b>. Người dùng (bé) muốn vui, không muốn bị ép. Người mua (bố mẹ) có nỗi lo riêng: con có đánh đủ sạch không, tối nào cũng phải dỗ dành, và cả cảm giác bất lực. Quảng cáo chỉ chạm người dùng thì tạo mong muốn nhưng không tạo quyết định; chỉ chạm người mua thì dễ mua một lần rồi bỏ xó vì bé không chịu dùng. Cần biết ai quyết, ai giữ thói quen, và nói với mỗi người điều họ cần nghe.' },
@@ -427,7 +427,7 @@ BAI_ADD({ mod:'kh04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:kh04-08', skill:'brand', read:'6 phút', t:'Insight từng đúng, sao giờ quảng cáo hết chạm?',
+{ id:'B:kh04-08', skill:'brand', read:'6 phút', assume:true, t:'Insight từng đúng, sao giờ quảng cáo hết chạm?',
   situation:'Một hãng mì gói từng thắng lớn với insight "sinh viên xa nhà nhớ bữa cơm mẹ nấu". Năm năm sau, chiến dịch tương tự được chạy lại nhưng lượt xem hết phim giảm một nửa và bình luận chỉ còn "cũ rồi". Sếp muốn làm phần hai "cho quen thuộc".',
   concept:{ name:'Insight có hạn dùng',
     body:'Insight dựa trên một hoàn cảnh sống. Khi hoàn cảnh đổi, căng thẳng cũng đổi, và insight <b>hết hạn</b>. Có ba dấu hiệu: hành vi nền đã khác (người ta không còn làm việc đó), căng thẳng đã được giải (có cách khác gỡ nó rồi), hoặc câu đã bị nói quá nhiều nên thành hiển nhiên. Giữ được tinh thần gốc thì tốt, nhưng phải kiểm lại phần "nhưng" trong đời sống hiện tại, không phải trong trí nhớ về chiến dịch cũ. Kiểm định kỳ: mỗi sáu tháng đọc lại câu cho khoảng mười khách và so với lần trước; số người nói "đúng quá" tụt, số người nói "biết rồi" tăng thì rà lại.' },
@@ -488,7 +488,7 @@ BAI_ADD({ mod:'kh04', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:kh04-09', skill:'comm', read:'7 phút', t:'Viết câu insight thế nào để cả nhóm dùng được?',
+{ id:'B:kh04-09', skill:'comm', read:'7 phút', assume:true, t:'Viết câu insight thế nào để cả nhóm dùng được?',
   situation:'Bạn cần gửi brief cho agency về một dòng nước uống bổ sung điện giải cho người lao động ngoài trời. Bản nháp insight đang dài năm dòng: vừa số liệu nhiệt độ, vừa tỉ lệ mất nước, vừa lời kể của thợ xây, vừa lợi ích sản phẩm. Agency trả lời: "Chưa rõ bọn em cần bám vào đâu."',
   concept:{ name:'Câu insight bốn phần',
     body:'Một câu insight dùng được thường có bốn phần: <b>ai</b> (cụ thể, không phải "mọi người"), <b>muốn gì</b>, <b>nhưng vướng gì</b>, và nói bằng <b>giọng của khách</b>, như họ tự nói. Không chứa tên sản phẩm, không chứa số liệu thị trường — những thứ đó để ở phần bối cảnh của brief. Một câu, đọc to trong một hơi. Nếu agency đọc xong mà hình dung được một người thật đang khó xử, câu đó làm xong việc. Kiểm chứng: câu phải truy ngược được về ít nhất ba lời kể thật, đính kèm trích ở phần bối cảnh; chỉ một người nói thì mới là giả thuyết.' },

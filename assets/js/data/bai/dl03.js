@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'dl03', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:dl03-01', skill:'measure', read:'6 phút', t:'ROAS 4 nghĩa là shop đang lãi gấp 4?',
+{ id:'B:dl03-01', skill:'measure', read:'6 phút', assume:true, t:'ROAS 4 nghĩa là shop đang lãi gấp 4?',
   situation:'Chủ một shop mỹ phẩm trên Shopee khoe trong nhóm bán hàng: "Tháng này chi 10 triệu quảng cáo, ra 40 triệu doanh thu, ROAS 4, lãi gấp bốn!" Một người hỏi lại giá vốn, phí sàn và phí vận chuyển là bao nhiêu. Chủ shop im lặng, vì chưa từng cộng những khoản đó.',
   concept:{ name:'ROAS: doanh thu trên mỗi đồng quảng cáo',
     body:'<b>ROAS = doanh thu do quảng cáo mang về ÷ chi phí quảng cáo</b>. ROAS 4 nghĩa là mỗi 1 đồng quảng cáo đi kèm 4 đồng doanh thu. Nó là tỉ lệ doanh thu, không phải tỉ lệ lãi: trong 4 đồng đó còn giá vốn hàng, phí sàn, đóng gói, vận chuyển, đơn hoàn. ROAS hữu ích để so các chiến dịch cùng sản phẩm với nhau, nhưng tự nó không trả lời câu hỏi "có lãi không". Muốn trả lời, phải đặt ROAS cạnh biên lãi gộp.' },
@@ -63,7 +63,7 @@ BAI_ADD({ mod:'dl03', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:dl03-02', skill:'measure', read:'7 phút', t:'ROAS bao nhiêu thì mới hết lỗ?',
+{ id:'B:dl03-02', skill:'measure', read:'7 phút', assume:true, t:'ROAS bao nhiêu thì mới hết lỗ?',
   situation:'Một shop bán bình giữ nhiệt trên TikTok Shop, giá 250.000đ. Giá vốn cộng phí sàn, đóng gói, vận chuyển mỗi đơn là 150.000đ. Chủ shop đặt mục tiêu "ROAS trên 2 là được", vì nghe một khoá học nói vậy. Tháng đó ROAS đạt 2,2, nhưng cuối tháng đối soát thì tiền trong tài khoản lại ít đi.',
   concept:{ name:'ROAS hoà vốn = 1 ÷ biên lãi gộp',
     body:'Biên lãi gộp là phần còn lại của mỗi đồng doanh thu sau giá vốn và chi phí biến đổi theo đơn (phí sàn, đóng gói, vận chuyển). Quảng cáo phải được trả từ phần này. Hoà vốn khi tiền quảng cáo đúng bằng lãi gộp: chi = doanh thu × biên, tức doanh thu ÷ chi = <b>1 ÷ biên lãi gộp</b>. Biên 50% thì ROAS hoà vốn là 2; biên 40% là 2,5; biên 25% là 4. Không có một "ROAS tốt" chung cho mọi shop. Lưu ý thuật ngữ: kế toán thường gọi "biên lãi gộp" là phần chỉ trừ giá vốn; phần trừ thêm phí sàn, đóng gói, vận chuyển đúng tên là <b>biên đóng góp</b> (contribution margin) — chính số này mới dùng để tính ROAS hoà vốn, nên khi nhận số biên từ kế toán hãy hỏi đã trừ những gì.' },
@@ -116,7 +116,7 @@ BAI_ADD({ mod:'dl03', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:dl03-03', skill:'measure', read:'6 phút', t:'ROAS 3 mà cuối tháng vẫn âm tiền — chuyện gì xảy ra?',
+{ id:'B:dl03-03', skill:'measure', read:'6 phút', assume:true, t:'ROAS 3 mà cuối tháng vẫn âm tiền — chuyện gì xảy ra?',
   situation:'Một thương hiệu đồ gia dụng nhỏ bán nồi chiên không dầu trên Lazada. Tháng 9 chi 10 triệu quảng cáo, doanh thu từ quảng cáo 30 triệu, ROAS 3 — cao nhất từ trước tới nay. Nhưng khi kế toán đối soát, phần lãi còn lại sau quảng cáo là con số âm. Đội marketing cho rằng kế toán tính sai.',
   concept:{ name:'ROAS cao vẫn có thể lỗ',
     body:'ROAS cao hay thấp chỉ có nghĩa khi so với ROAS hoà vốn của sản phẩm. Đồ điện, điện thoại, hàng thương hiệu lớn bán lại thường có biên lãi gộp mỏng; bài này lấy 30% làm ví dụ minh hoạ (biên thật khác nhau theo ngành hàng và nguồn nhập). Với biên 30%, hoà vốn ở ROAS 3,33; ROAS 3 vẫn nằm dưới vạch. Lợi nhuận sau quảng cáo = doanh thu × biên lãi gộp − chi quảng cáo. Khi kết quả âm, ROAS "cao" chỉ là cao so với các chiến dịch khác, không phải cao so với mức cần.' },
@@ -172,7 +172,7 @@ BAI_ADD({ mod:'dl03', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:dl03-04', skill:'measure', read:'7 phút', t:'Sau khi trả tiền quảng cáo, mỗi tháng thật sự còn lại bao nhiêu?',
+{ id:'B:dl03-04', skill:'measure', read:'7 phút', assume:true, t:'Sau khi trả tiền quảng cáo, mỗi tháng thật sự còn lại bao nhiêu?',
   situation:'Một thương hiệu cà phê rang xay bán online có doanh thu tháng 100 triệu. Giá vốn hạt và bao bì 45 triệu, phí sàn cộng vận chuyển 15 triệu, quảng cáo 25 triệu, tiền thuê xưởng và lương cố định 12 triệu. Chủ thương hiệu muốn một con số duy nhất để biết mảng bán online đang đóng góp bao nhiêu.',
   concept:{ name:'Lợi nhuận đóng góp sau quảng cáo',
     body:'<b>Lợi nhuận đóng góp sau quảng cáo = doanh thu − giá vốn − chi phí biến đổi theo đơn − chi quảng cáo.</b> Nó trả lời: sau khi bán hàng và trả tiền kéo khách, còn bao nhiêu để trả chi phí cố định và làm lãi. Con số này không trừ tiền thuê, lương cố định, vì những khoản đó không đổi dù bạn chạy thêm hay bớt quảng cáo. Nhờ vậy nó cho biết trực tiếp một quyết định quảng cáo làm tăng hay giảm tiền còn lại. Lưu ý thuật ngữ: "lãi gộp" theo kế toán chỉ là doanh thu − giá vốn; trừ thêm chi phí biến đổi theo đơn mới ra lãi đóng góp trước quảng cáo — bài này gọi gọn là "lãi gộp sau chi phí biến đổi", đừng lẫn với lãi gộp kế toán.' },
@@ -196,8 +196,8 @@ BAI_ADD({ mod:'dl03', lessons:[
       c:'Đúng. Tăng chi mà tiền còn lại giảm 2 triệu là quyết định sai.',
       d:'Quảng cáo đang đóng góp 15 triệu dương; cắt hết có thể mất phần lớn doanh thu.'} },
   { type:'calc', stem:'Doanh thu 100 triệu, giá vốn 45 triệu, phí sàn và vận chuyển 15 triệu, quảng cáo 25 triệu. Lợi nhuận đóng góp sau quảng cáo là bao nhiêu triệu?',
-    unit:'triệu đồng', ans:15, tol:0.01, wrong:[[40,'QUEN_TRU_CHI_PHI_QC'],[30,'QUEN_CHI_PHI_BIEN_DOI'],[3,'QUEN_CHI_PHI_CO_DINH']], errors:['QUEN_TRU_CHI_PHI_QC','QUEN_CHI_PHI_BIEN_DOI'],
-    steps:['Lãi gộp sau chi phí biến đổi = 100 − 45 − 15 = 40 triệu.','Trừ quảng cáo: 40 − 25 = <b>15 triệu</b>.','(Không trừ 12 triệu cố định ở bước này; trừ vào thì ra lãi ròng 3 triệu.)'] },
+    unit:'triệu đồng', ans:15, tol:0.01, wrong:[[40,'QUEN_TRU_CHI_PHI_QC'],[30,'QUEN_CHI_PHI_BIEN_DOI'],[3,'SAI_TINH_TOAN']], errors:['QUEN_TRU_CHI_PHI_QC','QUEN_CHI_PHI_BIEN_DOI'],
+    steps:['Lãi gộp sau chi phí biến đổi = 100 − 45 − 15 = 40 triệu.','Trừ quảng cáo: 40 − 25 = <b>15 triệu</b>.','(Không trừ 12 triệu cố định ở bước này; trừ vào thì ra lãi ròng 3 triệu — một con số khác, không phải lợi nhuận đóng góp.)'] },
   { type:'calc', stem:'Tháng sau doanh thu 120 triệu, giá vốn và phí biến đổi vẫn chiếm 60% doanh thu, quảng cáo 35 triệu. Lợi nhuận đóng góp sau quảng cáo là bao nhiêu triệu?',
     unit:'triệu đồng', ans:13, tol:0.01, wrong:[[85,'ROAS_LA_LOI_NHUAN'],[48,'QUEN_TRU_CHI_PHI_QC']], errors:['QUEN_TRU_CHI_PHI_QC'],
     steps:['Lãi gộp = 120 × (1 − 60%) = 48 triệu.','Trừ quảng cáo: 48 − 35 = <b>13 triệu</b>.'] },
@@ -225,10 +225,11 @@ BAI_ADD({ mod:'dl03', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:dl03-05', skill:'measure', read:'7 phút', t:'ROAS 6 nhờ khách cũ — có nên khoe không?',
+{ id:'B:dl03-05', skill:'measure', read:'7 phút', assume:true, t:'ROAS 6 nhờ khách cũ — có nên khoe không?',
+  src:[{ t:'Meta Business Help Center: cài đặt ghi nhận chuyển đổi (attribution setting) — tìm “About attribution settings”', u:'https://www.facebook.com/business/help/search?q=attribution%20setting', d:'2026-11-07', st:'chua' }],
   situation:'Một thương hiệu thời trang nữ chạy chiến dịch Facebook nhắm vào danh sách khách đã từng mua. Chi 10 triệu, doanh thu gắn với quảng cáo 60 triệu, ROAS 6. Nhóm prospecting nhắm khách lạ chỉ đạt ROAS 2. Trưởng nhóm muốn dồn tiền sang nhóm khách cũ. Dữ liệu cửa hàng cho thấy khoảng 40 triệu trong 60 triệu kia là của khách vẫn thường mua lại mỗi tháng.',
   concept:{ name:'ROAS khách mới và khách cũ',
-    body:'Quảng cáo nhắm khách cũ luôn có ROAS đẹp, vì những người này đã tin thương hiệu và nhiều người sẽ mua dù không thấy quảng cáo. Nền tảng vẫn gán đơn đó cho quảng cáo nếu họ lướt qua nó. Nên tách hai loại: <b>ROAS khách mới</b> (doanh thu từ người mua lần đầu ÷ chi) và ROAS trên phần doanh thu thật sự tăng thêm. Quảng cáo khách cũ không vô ích, nhưng phải được chấm bằng phần doanh thu nó thêm vào, không phải phần sẵn có.' },
+    body:'Quảng cáo nhắm khách cũ luôn có ROAS đẹp, vì những người này đã tin thương hiệu và nhiều người sẽ mua dù không thấy quảng cáo. Với cài đặt gán mặc định của nhiều nền tảng (ở Meta, theo hiểu biết chung tại ngày kiểm 2026-11-07, đơn trong 1 ngày sau khi chỉ xem quảng cáo cũng được tính), nền tảng vẫn gán đơn đó cho quảng cáo nếu họ lướt qua nó — kiểm cài đặt gán trong tài khoản của bạn. Nên tách hai loại: <b>ROAS khách mới</b> (doanh thu từ người mua lần đầu ÷ chi) và ROAS trên phần doanh thu thật sự tăng thêm. Quảng cáo khách cũ không vô ích, nhưng phải được chấm bằng phần doanh thu nó thêm vào, không phải phần sẵn có.' },
   example:'Trong 60 triệu, khoảng 40 triệu đến từ khách mua lại theo nhịp quen, không cần quảng cáo cũng mua. Phần doanh thu có thể coi là do quảng cáo tạo ra còn khoảng 20 triệu, ROAS tăng thêm chỉ khoảng 2 — không còn vượt trội như con số 6. Nhưng đừng so thẳng 2 này với ROAS 2 của nhóm khách lạ: ROAS 2 đó vẫn là ROAS <b>gán</b> của nền tảng, cũng có thể lẫn đơn đằng nào cũng đến (thường ít hơn nhóm khách cũ). Muốn so công bằng phải đo phần tăng thêm cho cả hai nhóm. Nếu dồn tiền sang khách cũ, danh sách sẽ cạn nhanh, tần suất tăng, và thương hiệu ngừng có người mua mới. Cách đúng là giữ ngân sách nhóm khách mới, và thử tắt quảng cáo khách cũ ở một nửa danh sách để đo phần tăng thêm.',
   takeaway:'ROAS khách cũ phần lớn là doanh thu có sẵn; hãy chấm quảng cáo theo phần khách mới và phần tăng thêm.',
   apply:'Nhìn một chiến dịch retargeting, nói trong 60 giây: bao nhiêu phần doanh thu của nó có thể vẫn đến dù không chạy.',
@@ -282,10 +283,13 @@ BAI_ADD({ mod:'dl03', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:dl03-06', skill:'measure', read:'7 phút', t:'Ba nền tảng cùng nhận công — doanh thu thật ở đâu?',
+{ id:'B:dl03-06', skill:'measure', read:'7 phút', assume:true, t:'Ba nền tảng cùng nhận công — doanh thu thật ở đâu?',
+  src:[{ t:'Meta Business Help Center: cài đặt ghi nhận chuyển đổi (attribution setting) — tìm “About attribution settings”', u:'https://www.facebook.com/business/help/search?q=attribution%20setting', d:'2026-11-07', st:'chua' },
+       { t:'TikTok Ads Help Center — tìm “attribution” (cửa sổ gán và cài đặt gán)', u:'https://ads.tiktok.com/help/', d:'2026-11-07', st:'chua' },
+       { t:'Google Ads Help — tìm “conversion window” (cửa sổ chuyển đổi và mô hình phân bổ)', u:'https://support.google.com/google-ads/', d:'2026-11-07', st:'chua' }],
   situation:'Một shop giày chi tổng 30 triệu mỗi tháng cho Facebook, TikTok và Google. Cuối tháng, trình quản lý quảng cáo của Facebook báo 50 triệu doanh thu, TikTok 40 triệu, Google 30 triệu — cộng lại 120 triệu. Nhưng hệ thống bán hàng của shop ghi tổng doanh thu đặt cả tháng, kể cả đơn không qua quảng cáo, chỉ là 90 triệu, chưa trừ khoảng 20% đơn bị huỷ hoặc hoàn.',
   concept:{ name:'Doanh thu nền tảng báo vs doanh thu thật',
-    body:'Mỗi nền tảng tự gán đơn cho mình theo cửa sổ và luật riêng: người xem video TikTok, bấm quảng cáo Facebook rồi tìm trên Google thì cả ba đều nhận đơn. Họ cũng đếm lúc đặt hàng, chưa trừ đơn huỷ, hoàn hay không nhận khi giao COD. Vì vậy ROAS nền tảng chỉ dùng để so chiến dịch trong cùng một kênh. Để quyết định tiền, đối chiếu với doanh thu thực nhận, rồi kiểm từng kênh bằng cách nằm ngoài nền tảng: hỏi khách "bạn biết shop từ đâu" ở bước thanh toán, gắn mã UTM cho từng link, hoặc <b>tắt thử một kênh ở vài khu vực</b> rồi xem doanh thu tổng giảm bao nhiêu.' },
+    body:'Mỗi nền tảng tự gán đơn cho mình theo cửa sổ và luật riêng: người xem video TikTok, bấm quảng cáo Facebook rồi tìm trên Google thì cả ba đều nhận đơn. Họ cũng thường đếm lúc đặt hàng, chưa trừ đơn huỷ, hoàn hay không nhận khi giao COD. Các cửa sổ gán khả dụng (ví dụ 1 hay 7 ngày sau khi bấm) đổi theo nền tảng và thời gian, nêu theo hiểu biết chung tại ngày kiểm 2026-11-07; nếu giao diện tài khoản khác, tin trang chính thức (xem nguồn). Vì vậy ROAS nền tảng chỉ dùng để so chiến dịch trong cùng một kênh. Để quyết định tiền, đối chiếu với doanh thu thực nhận, rồi kiểm từng kênh bằng cách nằm ngoài nền tảng: hỏi khách "bạn biết shop từ đâu" ở bước thanh toán, gắn mã UTM cho từng link, hoặc <b>tắt thử một kênh ở vài khu vực</b> rồi xem doanh thu tổng giảm bao nhiêu.' },
   example:'Tổng ROAS nền tảng: 120 triệu ÷ 30 triệu chi = 4. Nhưng doanh thu đặt thật chỉ 90 triệu, và trừ 20% huỷ/hoàn còn 72 triệu thực nhận, trong đó có cả đơn tự nhiên. Ngay cả khi coi mọi đơn là nhờ quảng cáo, ROAS thực nhận tối đa là 72 ÷ 30 = 2,4. Nếu biên lãi gộp 40%, hoà vốn là 2,5: shop đang lỗ trong khi cả ba bảng báo cáo đều xanh.',
   takeaway:'Nền tảng nào cũng nhận công; quyết định ngân sách bằng doanh thu thực nhận trong hệ thống của chính bạn.',
   apply:'Mở số liệu tháng trước, cộng doanh thu mà các nền tảng báo, so với doanh thu thực nhận; nói trong 60 giây độ chênh và lý do.',
@@ -339,7 +343,7 @@ BAI_ADD({ mod:'dl03', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:dl03-07', skill:'measure', read:'6 phút', t:'Không tin được ROAS từng kênh thì nhìn số nào?',
+{ id:'B:dl03-07', skill:'measure', read:'6 phút', assume:true, t:'Không tin được ROAS từng kênh thì nhìn số nào?',
   situation:'Một thương hiệu chăm sóc da trong nước chi cho marketing mỗi tháng: 120 triệu quảng cáo trên các nền tảng, 20 triệu cho KOC, 10 triệu cho hàng mẫu tặng. Doanh thu toàn công ty, mọi kênh, là 600 triệu. Giám đốc không muốn tranh cãi xem kênh nào nhận công đơn nào nữa. Chị chỉ cần một con số để biết marketing tổng thể có đang đáng tiền không.',
   concept:{ name:'MER — tỉ lệ hiệu quả marketing',
     body:'<b>MER = tổng doanh thu ÷ tổng chi marketing</b>, tính trên toàn doanh nghiệp, không gán đơn cho kênh nào. Vì dùng doanh thu thật và chi thật, nó không bị đếm trùng như ROAS nền tảng. Nhược điểm là nó không nói kênh nào tốt; nó trả lời câu hỏi lớn hơn: mọi đồng marketing cộng lại đang đi kèm bao nhiêu doanh thu. So MER theo tháng, đặt cạnh biên lãi gộp, là cách nhìn ngắn gọn cho cấp lãnh đạo.' },
@@ -395,7 +399,7 @@ BAI_ADD({ mod:'dl03', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:dl03-08', skill:'measure', read:'7 phút', t:'Giảm giá 20% thì mục tiêu ROAS phải đổi thế nào?',
+{ id:'B:dl03-08', skill:'measure', read:'7 phút', assume:true, t:'Giảm giá 20% thì mục tiêu ROAS phải đổi thế nào?',
   situation:'Một shop bán đồ ngủ lụa, giá 200.000đ, chi phí mỗi đơn (giá vốn, phí sàn, ship) 120.000đ. Dịp 11.11, shop giảm 20% còn 160.000đ và giữ nguyên mục tiêu ROAS 3 như ngày thường. Doanh thu tăng gấp đôi, ROAS đạt 3,2, cả nhóm ăn mừng. Đến khi tính lãi, kết quả lại tệ hơn tháng bình thường.',
   concept:{ name:'Giảm giá kéo ROAS hoà vốn lên',
     body:'Giảm giá lấy tiền trực tiếp từ lãi gộp, vì giá vốn và phí không giảm theo. Biên lãi co lại nhiều hơn tỉ lệ giảm giá: giảm 20% giá có thể cắt 50% lãi mỗi đơn. Khi biên co, <b>ROAS hoà vốn = 1 ÷ biên mới</b> tăng vọt. Mục tiêu ROAS ngày thường không còn đúng cho ngày giảm giá. Trước mỗi đợt khuyến mãi, tính lại biên theo giá mới rồi đặt lại mục tiêu.' },
@@ -451,7 +455,7 @@ BAI_ADD({ mod:'dl03', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:dl03-09', skill:'measure', read:'7 phút', t:'Một cửa hàng, hai sản phẩm — có nên dùng chung một mục tiêu ROAS?',
+{ id:'B:dl03-09', skill:'measure', read:'7 phút', assume:true, t:'Một cửa hàng, hai sản phẩm — có nên dùng chung một mục tiêu ROAS?',
   situation:'Một cửa hàng online bán cả tai nghe chính hãng (biên lãi gộp 12,5%) và ốp lưng tự thiết kế (biên 60%). Đội quảng cáo đặt chung mục tiêu ROAS 5 cho mọi sản phẩm. Kết quả: nhóm tai nghe đạt ROAS 6 và được tăng ngân sách, nhóm ốp lưng đạt ROAS 3 và bị cắt. Chủ cửa hàng thấy doanh thu tăng nhưng tiền lãi giảm.',
   concept:{ name:'Mục tiêu ROAS theo biên của từng sản phẩm',
     body:'Mỗi sản phẩm có ROAS hoà vốn riêng bằng 1 ÷ biên lãi gộp. Muốn có lãi mục tiêu, cộng thêm phần lãi mong muốn: nếu muốn giữ lại X% doanh thu sau quảng cáo, thì quảng cáo chỉ được chiếm (biên − X)% doanh thu, và <b>ROAS mục tiêu = 1 ÷ (biên − X)</b>. Một mục tiêu chung sẽ bắt sản phẩm biên cao phải đạt mức quá khắt khe và thả cho sản phẩm biên thấp chạy lỗ.' },
@@ -507,7 +511,7 @@ BAI_ADD({ mod:'dl03', lessons:[
   ]},
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:dl03-10', skill:'comm', read:'6 phút', t:'Sếp hỏi "tháng này quảng cáo thế nào" — trả lời bằng ROAS hay bằng lãi?',
+{ id:'B:dl03-10', skill:'comm', read:'6 phút', assume:true, t:'Sếp hỏi "tháng này quảng cáo thế nào" — trả lời bằng ROAS hay bằng lãi?',
   situation:'Một thương hiệu nước ép đóng chai, biên lãi gộp 40%. Tháng 1 chi 20 triệu quảng cáo, doanh thu 100 triệu, ROAS 5. Tháng 2 chi 50 triệu, doanh thu 200 triệu, ROAS 4. Bạn trình báo cáo tháng 2 và thấy sếp cau mày ngay ở dòng đầu: "ROAS giảm từ 5 xuống 4 à?"',
   concept:{ name:'Báo cáo lợi nhuận, để ROAS làm số phụ',
     body:'ROAS là tỉ lệ; sếp và chủ doanh nghiệp quan tâm tiền. Khi tăng ngân sách, ROAS gần như luôn giảm, vì những đồng chi thêm đi tới người khó mua hơn. Nếu dòng đầu báo cáo là ROAS, mọi đợt tăng trưởng đều trông như thất bại. Dòng đầu nên là <b>lợi nhuận đóng góp sau quảng cáo</b> và thay đổi so với kỳ trước, kèm doanh thu và chi. ROAS và ROAS hoà vốn đặt bên dưới để giải thích.' },

@@ -3,7 +3,7 @@
 BAI_ADD({ mod:'tu06', lessons:[
 
 /* ------------------------------------------------------------------ 01 */
-{ id:'B:tu06-01', skill:'measure', read:'7 phút', t:'Đã tiêu 200 triệu, có nên đổ thêm 100 triệu để “gỡ”?',
+{ id:'B:tu06-01', skill:'measure', read:'7 phút', assume:true, t:'Đã tiêu 200 triệu, có nên đổ thêm 100 triệu để “gỡ”?',
   situation:'Một chuỗi trà sữa ở Đà Nẵng chạy chiến dịch ra mắt vị mới được 6 tuần, đã chi 200 triệu. Đơn từ chiến dịch đều đặn nhưng mỗi đơn đang lỗ. Trưởng nhóm nói: “Tiêu 200 triệu rồi, dừng bây giờ là mất trắng. Thêm 100 triệu nữa cho đủ độ nhận biết.” Cả phòng im lặng vì không ai muốn là người nói “bỏ”.',
   concept:{ name:'Chi phí chìm (sunk cost)',
     body:'Tiền đã tiêu không lấy lại được, dù bạn dừng hay chạy tiếp. Vì vậy nó <b>không được</b> là lý do cho quyết định tiếp theo. Câu hỏi đúng chỉ có một: đồng tiền <b>kế tiếp</b> mang về bao nhiêu? Tâm lý tiếc làm người ta muốn “gỡ”, giống người đánh bạc cố thêm ván nữa. Cách tách tâm lý ra: tưởng tượng bạn vừa được giao chiến dịch này hôm nay, chưa tiêu đồng nào — với số liệu hiện tại, bạn có duyệt 100 triệu không?' },
@@ -63,7 +63,7 @@ BAI_ADD({ mod:'tu06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 02 */
-{ id:'B:tu06-02', skill:'creative', read:'7 phút', t:'Chi phí mỗi đơn tăng: do quảng cáo mỏi hay thị trường đã đổi?',
+{ id:'B:tu06-02', skill:'creative', read:'7 phút', assume:true, t:'Chi phí mỗi đơn tăng: do quảng cáo mỏi hay thị trường đã đổi?',
   situation:'Một shop giày thể thao online chạy cùng một bộ video suốt 8 tuần. Tuần 1 chi phí mỗi đơn là 60.000đ, tuần 8 lên 95.000đ. Chủ shop muốn tắt hẳn chiến dịch vì “hết ăn rồi”. Nhân viên chạy quảng cáo thì nghĩ chỉ cần thay video mới.',
   concept:{ name:'Creative mỏi và thị trường đổi',
     body:'Hai nguyên nhân cùng làm chi phí tăng nhưng cách xử lý ngược nhau. <b>Creative mỏi</b>: tần suất (số lần một người thấy) tăng cao, tỉ lệ nhấp giảm dần, nhưng người đã nhấp vẫn mua như cũ — lỗi ở mẩu quảng cáo, thay creative là đủ. <b>Thị trường đổi</b>: tỉ lệ nhấp có thể vẫn ổn, nhưng tỉ lệ mua sau khi nhấp giảm, hoặc mọi creative, kể cả mới, đều đắt lên cùng lúc — nhu cầu, mùa vụ hay đối thủ đã thay đổi. Chỉ trường hợp sau mới là lý do để dừng hoặc thiết kế lại chiến dịch.' },
@@ -109,7 +109,7 @@ BAI_ADD({ mod:'tu06', lessons:[
   { type:'mcq', stem:'Vì sao tắt cả chiến dịch khi chỉ creative mỏi là một quyết định tốn kém?',
     options:[{k:'a',t:'Vì tắt rồi bật lại có thể buộc hệ thống học lại, mất phần đã tối ưu'},{k:'b',t:'Vì nền tảng quảng cáo phạt tiền những tài khoản tắt chiến dịch'},
              {k:'c',t:'Vì chi phí đã chi sẽ bị tính lại gấp đôi khi bật chạy lại'},{k:'d',t:'Vì khách cũ sẽ nghĩ thương hiệu sắp phá sản khi thấy dừng'}],
-    answer:'a', why:{a:'Đúng. Trên nhiều nền tảng (như Meta, khi tắt quá 7 ngày) hệ thống phải học lại; đối tượng và phễu đang tốt bị bỏ đi trong khi chỉ cần thay mẩu quảng cáo.',
+    answer:'a', why:{a:'Đúng. Tuỳ nền tảng, tắt một thời gian rồi bật lại có thể buộc hệ thống học lại (ngưỡng cụ thể xem tài liệu chính thức của nền tảng tại ngày chạy); đối tượng và phễu đang tốt bị bỏ đi trong khi chỉ cần thay mẩu quảng cáo.',
       b:'Không có khoản phạt như vậy.',
       c:'Tiền đã chi không bị tính lại.',
       d:'Khách hầu như không theo dõi việc bạn tắt bật quảng cáo.'} },
@@ -123,7 +123,7 @@ BAI_ADD({ mod:'tu06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 03 */
-{ id:'B:tu06-03', skill:'brand', read:'7 phút', t:'Chiến dịch thương hiệu mới chạy 3 tuần chưa ra đơn — dừng được chưa?',
+{ id:'B:tu06-03', skill:'brand', read:'7 phút', assume:true, t:'Chiến dịch thương hiệu mới chạy 3 tuần chưa ra đơn — dừng được chưa?',
   situation:'Một hãng nước mắm ở Phan Thiết chạy chiến dịch video kể chuyện làng nghề, mục tiêu là để người nội trợ thành phố nhớ tên. Sau 3 tuần, đơn trên sàn gần như không đổi. Giám đốc bán hàng đòi cắt, chuyển toàn bộ tiền sang quảng cáo giảm giá “vì ra đơn ngay”.',
   concept:{ name:'Nhịp đo của chiến dịch thương hiệu',
     body:'Chiến dịch bán hàng nhắm người đang sẵn mua, nên đơn về trong vài ngày. Chiến dịch thương hiệu nhắm người <b>chưa</b> có nhu cầu hôm nay, để khi họ cần, tên bạn hiện lên trước. Hiệu ứng tích luỹ qua nhiều tháng. Vì vậy không đo nó bằng đơn tuần này, mà bằng chỉ số dẫn trước: tỉ lệ nhớ tên, lượt tìm kiếm tên thương hiệu, số người xem hết video. Điều kiện dừng phải đặt theo đúng nhịp đó: nếu sau thời gian hợp lý mà cả chỉ số dẫn trước cũng không nhúc nhích, lúc đó mới là tín hiệu thật.' },
@@ -183,10 +183,10 @@ BAI_ADD({ mod:'tu06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 04 */
-{ id:'B:tu06-04', skill:'measure', read:'6 phút', t:'Tắt một phát hay giảm dần ngân sách?',
+{ id:'B:tu06-04', skill:'measure', read:'6 phút', assume:true, t:'Tắt một phát hay giảm dần ngân sách?',
   situation:'Một thương hiệu đồ ăn vặt chạy chiến dịch 12 triệu/ngày. Hai tuần gần đây lãi biên giảm dần nhưng vẫn còn dương ở phần ngân sách đầu, còn phần cuối thì lỗ. Quản lý phân vân giữa tắt ngay toàn bộ hay cắt từng nấc.',
   concept:{ name:'Dừng hẳn và giảm dần',
-    body:'Mỗi đồng thêm vào chiến dịch thường kém hiệu quả hơn đồng trước, vì hệ thống phải với tới người ít quan tâm hơn. Nên một chiến dịch có thể <b>lãi ở mức chi thấp và lỗ ở mức chi cao</b>. Khi đó giảm dần là hợp lý: cắt phần lỗ, giữ phần lãi, và mỗi nấc cắt khoảng 20–30% để hệ thống ổn định lại rồi đo. Dừng hẳn hợp lý khi ngay cả phần hiệu quả nhất cũng lỗ, khi có rủi ro thương hiệu, hoặc khi sản phẩm hết hàng.' },
+    body:'Mỗi đồng thêm vào chiến dịch thường kém hiệu quả hơn đồng trước, vì hệ thống phải với tới người ít quan tâm hơn. Nên một chiến dịch có thể <b>lãi ở mức chi thấp và lỗ ở mức chi cao</b>. Khi đó giảm dần là hợp lý: cắt phần lỗ, giữ phần lãi, và mỗi nấc cắt khoảng 20–30% (mốc kinh nghiệm của người viết, không phải quy định của nền tảng; nền tảng thường khuyên đổi ngân sách vừa phải — kiểm tài liệu chính thức) để hệ thống ổn định lại và để tách tác động của nấc cắt khỏi dao động ngày thường, rồi mới đo. Dừng hẳn hợp lý khi ngay cả phần hiệu quả nhất cũng lỗ, khi có rủi ro thương hiệu, hoặc khi sản phẩm hết hàng.' },
   example:'Số minh hoạ, lãi gộp mỗi đơn 250.000 đồng. Nền tảng không báo lãi theo từng tranche, nên tự suy ra: chạy một tuần ở 12 triệu/ngày (50 đơn/ngày), một tuần ở 6 triệu/ngày (32 đơn/ngày), cùng mùa và cùng mẫu quảng cáo. Chi phí mỗi đơn trung bình ở 12 triệu là 240.000, trông vẫn dưới 250.000 nên báo cáo còn lãi 0,5 triệu. Nhưng chi phí biên = chênh chi ÷ chênh đơn = 6 triệu ÷ 18 đơn, khoảng 333.000 đồng, cao hơn lãi gộp mỗi đơn: 6 triệu thêm lỗ 1,5 triệu. Tắt hết là mất 2 triệu lãi mỗi ngày. Nên giảm 12 xuống 9 triệu (−25%), đo một tuần, rồi về khoảng 6,5 triệu nếu phần cuối vẫn lỗ.',
   takeaway:'Nếu phần đầu còn lãi, cắt phần lỗ bằng các nấc nhỏ; chỉ dừng hẳn khi cả phần tốt nhất cũng lỗ.',
   apply:'Nói trong 60 giây: với một chiến dịch bạn biết, nếu cắt nửa ngân sách, bạn đoán phần mất đi là phần lãi hay phần lỗ?',
@@ -203,7 +203,7 @@ BAI_ADD({ mod:'tu06', lessons:[
     options:[{k:'a',t:'Cắt thẳng từ 12 xuống 2 triệu ngay trong một lần cho nhanh'},{k:'b',t:'Cắt về 9 triệu, đo một tuần, rồi về 6,5 triệu nếu vẫn lỗ phần cuối'},
              {k:'c',t:'Tắt 3 ngày rồi bật lại ở 6 triệu để hệ thống làm lại từ đầu'},{k:'d',t:'Giữ ngân sách nhưng thu hẹp đối tượng xuống còn một tỉnh'}],
     answer:'b', why:{a:'Cắt quá mạnh làm hệ thống phân phối chao đảo, và bạn cắt cả phần lãi.',
-      b:'Đúng. 12 xuống 9 triệu là −25%, trong khoảng 20–30%; đo đủ một tuần để thấy tác động thật.',
+      b:'Đúng. 12 xuống 9 triệu là −25%, trong khoảng 20–30% theo mốc kinh nghiệm của bài; đo đủ một tuần để thấy tác động thật.',
       c:'Tắt rồi bật lại không cần thiết, lại có thể buộc hệ thống học lại (tuỳ nền tảng).',
       d:'Thu hẹp đối tượng mạnh mà giữ tiền làm tần suất tăng vọt và chi phí đắt thêm.'} },
   { type:'calc', stem:'Ở 12 triệu/ngày, chiến dịch lãi 0,5 triệu/ngày. Ở 6 triệu/ngày, lãi 2 triệu/ngày. Nếu giảm về 6 triệu và giữ 20 ngày, bạn có thêm bao nhiêu triệu lãi so với giữ 12 triệu?',
@@ -240,7 +240,7 @@ BAI_ADD({ mod:'tu06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 05 */
-{ id:'B:tu06-05', skill:'comm', read:'7 phút', t:'Bão lũ đang xảy ra, chiến dịch vui nhộn có nên tạm dừng?',
+{ id:'B:tu06-05', skill:'comm', read:'7 phút', assume:true, t:'Bão lũ đang xảy ra, chiến dịch vui nhộn có nên tạm dừng?',
   situation:'Một hãng đồ uống đang chạy chiến dịch “Sảng khoái cuối tuần” với video nhảy nhót và mã giảm giá. Cuối tuần đó bão lớn đổ bộ miền Trung, nhiều địa phương ngập nặng, mạng xã hội tràn tin cứu trợ. Quảng cáo vẫn đang chạy toàn quốc, kể cả vùng bị ảnh hưởng.',
   concept:{ name:'Tạm dừng khi có khủng hoảng xã hội',
     body:'Khi xã hội có biến cố lớn — thiên tai, tai nạn thảm khốc, tang lễ quốc gia — quảng cáo vui nhộn đặt cạnh tin đau buồn dễ bị xem là vô cảm, dù không có ý xấu. Nguyên tắc: <b>tạm dừng trước, đánh giá sau</b>, nhưng dừng đúng thứ: nội dung giọng vui, khuyến mãi, từ ngữ gợi liên tưởng xấu thì dừng toàn quốc; việc vận hành như giao hàng cho đại lý vẫn chạy. Một giờ đầu: (1) pause quảng cáo giọng vui, (2) rà bài hẹn giờ, (3) khoá từ khoá nhạy cảm, (4) theo dõi bình luận. Hỗ trợ thì làm thật, nói ít. Quay lại khi dư luận đã lắng, giọng nhẹ hơn.' },
@@ -301,7 +301,7 @@ BAI_ADD({ mod:'tu06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 06 */
-{ id:'B:tu06-06', skill:'measure', read:'6 phút', t:'Đạt mục tiêu sau 2 tuần thay vì 4 — dừng hay chạy nốt?',
+{ id:'B:tu06-06', skill:'measure', read:'6 phút', assume:true, t:'Đạt mục tiêu sau 2 tuần thay vì 4 — dừng hay chạy nốt?',
   situation:'Một trung tâm tiếng Anh ở Cần Thơ chạy chiến dịch tuyển sinh khoá hè, mục tiêu 120 học viên đóng phí, ngân sách 60 triệu cho 4 tuần. Sau 2 tuần có 125 đăng ký giữ chỗ, mới tiêu 28 triệu. Lớp chỉ có 130 chỗ, và các khoá trước chỉ khoảng 80% người giữ chỗ đóng phí thật. Nhân viên đề nghị “chạy nốt cho hết ngân sách đã duyệt”.',
   concept:{ name:'Dừng khi đạt mục tiêu sớm',
     body:'Ngân sách là <b>mức trần</b>, không phải chỉ tiêu phải tiêu hết. Trước khi dừng, kiểm tra hai điều. Một: đầu ra thật đã đủ chưa — đăng ký giữ chỗ khác đóng phí, nên quy đổi qua tỉ lệ rụng (125 giữ chỗ × 80% = 100 người thật). Hai: còn năng lực phục vụ không; hết chỗ, hết hàng hay đội chăm sóc quá tải thì đồng tiền tiếp theo chỉ tạo khách bị từ chối. Đủ cả hai thì dừng, hoặc chuyển sang mục tiêu có ích như danh sách chờ khoá sau. Tiền tiết kiệm ghi lại như kết quả, kèm bài học vì sao chiến dịch vượt dự kiến.' },
@@ -358,7 +358,7 @@ BAI_ADD({ mod:'tu06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 07 */
-{ id:'B:tu06-07', skill:'comm', read:'7 phút', t:'Muốn dừng chiến dịch nhưng đã ký hợp đồng với KOL?',
+{ id:'B:tu06-07', skill:'comm', read:'7 phút', assume:true, t:'Muốn dừng chiến dịch nhưng đã ký hợp đồng với KOL?',
   situation:'Một thương hiệu serum ký hợp đồng với một KOL làm đẹp: 4 video trong 2 tháng, tổng 80 triệu, đã trả trước 40 triệu. Sau video thứ 2, mã giảm giá riêng của KOL mới ra 12 đơn, dù lượt tìm tên thương hiệu tuần đó tăng khoảng 30% (số minh hoạ). Thương hiệu muốn dừng, nhưng hợp đồng chưa có điều khoản chấm dứt sớm rõ ràng.',
   concept:{ name:'Dừng khi có cam kết với đối tác',
     body:'Hợp đồng là lời hứa; dừng đơn phương làm mất uy tín và có thể phát sinh bồi thường, nên nhờ người hiểu pháp lý đọc điều khoản trước khi quyết. Rồi tách: phần <b>đã trả, đã làm</b> là chi phí chìm, không lấy lại được nên không dùng để quyết việc tiếp theo. Chỉ so <b>chi phí thoát</b> (phí chấm dứt, bồi hoàn) với <b>chi phí làm tiếp trừ giá trị kỳ vọng phần còn lại</b>, gồm đơn qua mã lẫn tác động gián tiếp như lượt tìm kiếm, nhận biết, đơn không qua mã. Thường có ba hướng: làm nốt nhưng đổi nội dung; chuyển sang hình thức khác (bài đăng, livestream); hoặc thoả thuận chấm dứt có bồi hoàn. Nói sớm và thẳng với đối tác. Lần sau: ghi điều khoản chấm dứt và chia hợp đồng theo đợt.' },
@@ -386,7 +386,7 @@ BAI_ADD({ mod:'tu06', lessons:[
     steps:['Chi phí thêm của A so với B = 40 − 15 = 25 triệu (40 triệu đã trả là chi phí chìm, cả hai phương án đều có).','Lãi trực tiếp thêm của A = 2 video × 40 đơn × 100.000 = 8 triệu.','Giá trị gián tiếp tối thiểu = 25 − 8 = <b>17 triệu</b>.'] },
   { type:'calc', stem:'Lần sau, KOL đề nghị trả trước 100% hợp đồng 80 triệu thì giảm 15%. Bạn ước 25% khả năng muốn dừng giữa chừng (nửa hợp đồng), lúc đó phần trả trước chưa làm không lấy lại được. Chi phí kỳ vọng do mất quyền dừng là bao nhiêu triệu đồng?',
     unit:'triệu đồng', ans:8.5, tol:0.05, wrong:[[10,'SAI_TINH_TOAN'],[34,'SAI_TINH_TOAN']], errors:['SAI_TINH_TOAN'],
-    steps:['Giá sau giảm = 80 × 85% = 68 triệu.','Nếu dừng giữa chừng, phần chưa làm = 68 ÷ 2 = 34 triệu.','Chi phí kỳ vọng = 25% × 34 = <b>8,5 triệu</b>, so với tiết kiệm 12 triệu: chênh lợi nhỏ (3,5 triệu) và đổi lấy mất quyền điều chỉnh; trả theo đợt thường an toàn hơn nếu bạn chưa chắc KOL hợp.'] },
+    steps:['Giá sau giảm = 80 × 85% = 68 triệu.','Nếu dừng giữa chừng, phần chưa làm = 68 ÷ 2 = 34 triệu.','Chi phí kỳ vọng = 25% × 34 = <b>8,5 triệu</b>. Muốn so với trả theo đợt thì so cùng mốc: kỳ vọng trả trước 68 triệu; trả theo đợt 0,75 × 80 + 0,25 × 40 = 70 triệu — trả trước chỉ lợi khoảng 2 triệu, đổi lấy mất quyền điều chỉnh; trả theo đợt thường an toàn hơn nếu bạn chưa chắc KOL hợp.'] },
   { type:'mcq', stem:'Tình huống mới: một quán cà phê đã ký với một nhà in 6 tháng in ly giấy theo chủ đề chiến dịch. Sau 2 tháng chiến dịch đổi hướng. Lựa chọn nào hợp lý nhất?',
     options:[{k:'a',t:'Ngừng nhận hàng, để nhà in tự xử lý số ly đã in sẵn'},{k:'b',t:'Tiếp tục in ly cũ đủ 6 tháng dù chiến dịch đã đổi hướng'},
              {k:'c',t:'Đăng lên mạng than phiền nhà in để có lý do huỷ hợp đồng'},{k:'d',t:'Bàn với nhà in đổi mẫu in cho các tháng còn lại, giữ khối lượng'}],
@@ -411,7 +411,7 @@ BAI_ADD({ mod:'tu06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 08 */
-{ id:'B:tu06-08', skill:'measure', read:'7 phút', t:'Doanh thu chiến dịch vẫn cao — sao lại nói nên dừng?',
+{ id:'B:tu06-08', skill:'measure', read:'7 phút', assume:true, t:'Doanh thu chiến dịch vẫn cao — sao lại nói nên dừng?',
   situation:'Một shop nồi chiên không dầu chạy chiến dịch Black Friday: chi 50 triệu quảng cáo, ra 400 đơn, doanh thu 480 triệu. Báo cáo ghi “ROAS 9,6 — rất tốt”. Nhưng mỗi nồi giá bán 1,2 triệu, giá vốn 850.000đ, phí sàn và vận chuyển 180.000đ. Kế toán nói chiến dịch đang lỗ.',
   concept:{ name:'Lãi biên sau quảng cáo',
     body:'Doanh thu và ROAS (doanh thu ÷ chi quảng cáo) không nói bạn lãi hay lỗ. Muốn biết, tính <b>lãi biên mỗi đơn</b>: giá bán trừ giá vốn trừ mọi chi phí biến đổi (phí sàn, vận chuyển, khuyến mãi, hoàn hàng). Nhân với số đơn rồi trừ chi quảng cáo. Nếu kết quả âm, chiến dịch đang mua doanh thu bằng tiền lỗ. Trước khi quyết dừng hay chạy, luôn đọc con số này, và hỏi thêm: khách mua lần này có quay lại mua đủ để bù không?' },
@@ -471,7 +471,7 @@ BAI_ADD({ mod:'tu06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 09 */
-{ id:'B:tu06-09', skill:'comm', read:'6 phút', t:'Dừng chương trình khuyến mãi: báo khách và đối tác thế nào?',
+{ id:'B:tu06-09', skill:'comm', read:'6 phút', assume:true, t:'Dừng chương trình khuyến mãi: báo khách và đối tác thế nào?',
   situation:'Một chuỗi gà rán địa phương có chương trình “thẻ tích điểm, 10 lần tặng 1 phần” chạy 6 tháng. Chi phí quá cao nên công ty quyết định dừng từ tháng sau. Khoảng 3.000 khách đang giữ thẻ dang dở, 8 đại lý giao hàng đã in chương trình lên menu của họ.',
   concept:{ name:'Thông báo dừng',
     body:'Dừng một chiến dịch đang chạy là thay đổi lời hứa với người đã tham gia; làm vội thì mất lòng khách trung thành nhất. Ba nguyên tắc: <b>báo trước</b> đủ thời gian (30 ngày là mốc gợi ý, không phải quy định); <b>tôn trọng phần đã tích</b> — cho đổi sớm hoặc quy đổi, chia theo mức tích vì giá vốn mỗi nhóm khác nhau; và <b>báo đối tác trước khách</b>, vì họ phải sửa menu, tài liệu. Trước khi công bố, đối chiếu điều khoản đã đăng, hạn dùng điểm, và hỏi pháp chế xem chương trình khuyến mại có phải thông báo hay điều chỉnh với cơ quan quản lý không. Nói lý do ngắn gọn, thật; có chương trình thay thế thì nói luôn trong cùng thông báo.' },
@@ -528,7 +528,7 @@ BAI_ADD({ mod:'tu06', lessons:[
   ] },
 
 /* ------------------------------------------------------------------ 10 */
-{ id:'B:tu06-10', skill:'measure', read:'6 phút', t:'Chiến dịch đã tắt — cần lưu lại những gì?',
+{ id:'B:tu06-10', skill:'measure', read:'6 phút', assume:true, t:'Chiến dịch đã tắt — cần lưu lại những gì?',
   situation:'Một thương hiệu balo học sinh vừa kết thúc chiến dịch mùa tựu trường, chi 150 triệu trên 3 kênh. Người chạy chính sắp nghỉ việc. Năm sau, người mới sẽ phải làm lại từ đầu nếu không ai ghi lại gì — điều đã xảy ra năm ngoái.',
   concept:{ name:'Hồ sơ đóng chiến dịch',
     body:'Khi dừng, thứ đáng giá nhất còn lại là <b>những gì đã học</b>. Một hồ sơ đóng chiến dịch nên có: mục tiêu ban đầu và kết quả thật; chi phí và lãi biên theo từng kênh; creative nào tốt, creative nào tệ và giả thuyết vì sao; lý do dừng và thời điểm dừng; tệp khách hàng, danh sách đối tác, hợp đồng; và 3 điều sẽ làm khác lần sau. Viết ngay khi vừa dừng, khi mọi người còn nhớ, và để ở nơi người mới tìm được.' },
