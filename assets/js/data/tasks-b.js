@@ -208,7 +208,7 @@ Object.assign(BAI_TASKS, {
   given: [
     ['Shop', 'Hạt cho mèo bán online'],
     ['Chi quảng cáo tháng này', '45 triệu đồng'],
-    ['Đơn tháng này', '900 đơn, trong đó 300 đơn của khách mua lần đầu'],
+    ['Đơn tháng này', '900 đơn, trong đó 300 đơn của 300 khách mua lần đầu (lọc theo số điện thoại, mỗi người một đơn)'],
     ['Giá trị đơn trung bình', '350.000đ'],
     ['Số lần mua trong vòng đời', '4'],
     ['Biên lãi gộp', '35%'],

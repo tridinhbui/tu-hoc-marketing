@@ -4,7 +4,7 @@
 
 **Ảnh hưởng tới khoá đáp án nếu câu trả lời là “không”:** qc04-01 Q6 & qc04-04 Q6 (danh mục quảng cáo đặc biệt cho tuyển dụng VN) · qc06-03/06/07 (bội số ngân sách Demand Gen 10× hay 15×) · qc05-06 Q5 (đổi tên Target CPA 6/2026) · qc07-02 Q6 (ngưỡng bắt buộc xác minh TikTok) · kn12-04 Q1/Q2/Q5 (NĐ 239/2026) · tu03-06 Q2 (điều kiện “không bán dưới giá đề xuất” và Luật Cạnh tranh) · dl03-06 Q6 (cửa sổ ghi nhận Meta).
 
-## Pháp lý — cần pháp chế đọc toàn văn (17)
+## Pháp lý — cần pháp chế đọc toàn văn (18)
 
 | Bài | Vị trí | Câu hỏi / việc cần làm |
 |---|---|---|
@@ -12,6 +12,7 @@
 | B:kn12-03 | VÍ DỤ | Câu hỏi cho pháp chế: (1) số hiệu, hình thức văn bản (Nghị quyết của Chính phủ có đúng là văn bản chuyển thẩm quyền hành chính này không) và ngày hiệu lực 1/7/2026; (2) cơ quan tiếp nhận hồ sơ xác nhận nội dung quảng cáo TPBVSK hiện tại; (3) cung cấp URL văn bản gốc để thêm src. Chưa thêm src vì không tự kiểm được toàn văn. |
 | B:kn12-04 | KHÁI NIỆM | Q1 b, Q2 d, Q5 đã tự dẫn 'theo tóm tắt' nên giữ. Câu hỏi cho pháp chế: đối chiếu toàn văn Nghị định 239/2026/NĐ-CP (và 81/2018, 128/2024) từng điểm: bỏ trần giảm giá 50%, bỏ trần giá trị hàng tặng, bỏ trần tổng thời gian giảm giá, yêu cầu khách chứng kiến với may rủi, trích 50% giải không người nhận, ngưỡng thông báo 100 triệu; cung cấp URL văn bản gốc và link tóm tắt KPMG/Luật Việt Nam để thêm src. Nếu điểm nào sai, khoá Q1/Q2/Q5 cần xem lại. |
 | B:kn12-06 | KHÁI NIỆM | Câu hỏi cho pháp chế: xác nhận số hiệu và ngày hiệu lực Luật 91/2025/QH15, nghị định hướng dẫn hiện hành (356/2025 có đúng thay 13/2023 không), điều khoản về đồng ý, rút đồng ý, dữ liệu mua từ bên thứ ba; phạm vi Nghị định 91/2020 với tin Zalo; cung cấp URL văn bản gốc để thêm src. Kết luận gửi/không gửi của bài (6.600 số, dừng 4.800 số mua ngoài) chưa đổi. |
+| B:qc04-04 | ĐÀO SÂU | *(Thêm 22/11/2026 từ audit CMO/LXD.)* Bài viết “Nghị định 330/2026 có mức phạt 30–50 triệu đồng”. Cần pháp chế đối chiếu số hiệu, điều khoản và mức phạt với toàn văn (cùng câu hỏi như B:qc03-05). |
 | B:qc03-05 | VÍ DỤ | Cần pháp chế: trích đúng điều, khoản của Nghị định 330/2026 cho (1) xử lý dữ liệu không có sự đồng ý và (2) mua bán dữ liệu cá nhân (theo Luật 91/2025), xác nhận mức 30–50 triệu và mức của hành vi mua bán. Không câu hỏi nào dùng con số này. Trường assume:true ở bài này do lượt trước thêm, giữ nguyên. |
 | B:tn04-10 | KHÁI NIỆM (quy định niêm yết giá) | Cần người thật xác nhận: (1) văn bản áp dụng cho niêm yết giá bán lẻ online hiện là Luật Giá 16/2023/QH15 + nghị định hướng dẫn nào (số hiệu, điều khoản về niêm yết giá); (2) URL trực tiếp của văn bản trên trang chính thức để thay URL tra cứu; sau đó đổi st sang 'doc'. |
 | B:tp08-06 | Tình huống / Ví dụ | Đã tự kiểm: bài hướng dẫn kịch bản quảng cáo thuốc không kê đơn mà không nhắc điều kiện pháp lý — lỗi thật. Phần hedge đã thêm, nhưng nội dung luật cần người thật kiểm: (1) văn bản hiện hành nào quy định xác nhận nội dung quảng cáo thuốc (Luật Dược 2016 Điều 79 và nghị định hướng dẫn còn hiệu lực sau Luật Quảng cáo sửa đổi 2025 không?); (2) câu cảnh báo bắt buộc đúng nguyên văn hiện nay (“Đọc kỹ hướng dẫn sử dụng trước khi dùng” hay đã đổi?); (3) có nên thay URL vbpl.vn bằng link văn bản cụ thể. |
@@ -26,7 +27,7 @@
 | B:kn05-04 | KHÁI NIỆM | Đã hedge, không có src: văn bản hiện hành về quảng cáo thực phẩm / sữa cho trẻ nhỏ |
 | B:kh06-01 | (thí điểm) | Ví dụ sữa bột đã đổi sang xe đẩy; nếu muốn giữ ví dụ sữa thì pháp chế xác nhận phạm vi cấm (Luật QC 2012 Đ.7, NĐ 100/2014) |
 
-## Nền tảng quảng cáo — cần người có tài khoản thật/trang trợ giúp hiện hành (12)
+## Nền tảng quảng cáo — cần người có tài khoản thật/trang trợ giúp hiện hành (13)
 
 | Bài | Vị trí | Câu hỏi / việc cần làm |
 |---|---|---|
@@ -41,6 +42,7 @@
 | B:qc06-06 | Chia tiền và Q2 | Phụ thuộc câu hỏi bội số ở B:qc06-03; nếu Google nêu 15×, đổi lịch 1,5 triệu/ngày × 10 ngày và lời giải Q2 a/d. |
 | B:qc07-02 | Khái niệm / Q6 | Khoá Q6 (d: vượt ngưỡng chi tiêu) vẫn dựa vào quy tắc chưa xác minh. Cần người mở Help Center TikTok kiểm: ở Việt Nam xác minh doanh nghiệp bắt buộc theo ngưỡng chi tiêu hay ngay khi tạo tài khoản? Nếu khác, đổi Q6 thành câu áp dụng “nên chuẩn bị giấy tờ lúc nào”. |
 | B:qc09-02 | Khái niệm (Lazada) | Tiêu đề “…Lazada khác gì?” cũng nằm trong bai-index.js (ngoài phạm vi được sửa), còn URL Lazada University công khai chưa chắc. Cần người quyết: (1) đổi tiêu đề ở cả bai/qc09.js và bai-index.js cho khớp phạm vi (“…và với Lazada cần kiểm gì?”), hoặc (2) cung cấp trang Lazada University công khai có tên công cụ (Sponsored Discovery/Affiliate) và ngày kiểm. |
+| B:kn06-08 | KHÁI NIỆM, Áp dụng, Q (calc) | *(Thêm 22/11/2026 từ audit CMO/LXD.)* Mốc “khoảng 50 sự kiện/7 ngày” để thoát giai đoạn học của Meta: kiểm trang trợ giúp hiện hành còn dùng mốc này không, và mốc của TikTok/Google. Câu tính ngân sách tuần dựa vào số 50. |
 | B:kn06-04 | KHÁI NIỆM | Đã hedge nhưng chưa xác nhận: tên hiện hành tính năng nhắm tự động của TikTok |
 
 ## Nghiên cứu/benchmark — cần mở nguồn gốc (5)
@@ -53,11 +55,13 @@
 | B:tu04-05 | Khái niệm | Đã sửa phần mô tả sai về STEPPS. Chưa gắn src vì không chắc URL trang chính thức của sách/tác giả. Cần người thật: thêm src (sách Contagious, năm xuất bản, trang tác giả hoặc nhà xuất bản). |
 | B:tu04-07 | Khái niệm | Bỏ dải số cụ thể vì không chắc khớp báo cáo gốc. Cần người thật: đối chiếu báo cáo Spiegel “How Online Reviews Influence Sales” (năm, dải sao chính xác) và thêm src. |
 
-## Case thương hiệu thật — cần nguồn có ngày (5)
+## Case thương hiệu thật — cần nguồn có ngày (7)
 
 | Bài | Vị trí | Câu hỏi / việc cần làm |
 |---|---|---|
-| B:in02-06 | Khái niệm — mô hình cung ứng | Cần người tìm nguồn thật cho việc Mixue tự cung ứng nguyên liệu cho chủ nhượng quyền (vd. bản cáo bạch niêm yết của tập đoàn Mixue hoặc bài báo lớn trong nước), rồi thêm src và bỏ câu “bài chưa gắn nguồn”. |
+| B:in02-06 | Khái niệm — mô hình cung ứng | *(22/11/2026: đã thêm src bản cáo bạch HKEX, st:'tim', bỏ câu “bài chưa gắn nguồn”; số “khoảng 97% doanh thu từ hàng hoá, thiết bị; phí nhượng quyền khoảng 2%” lấy từ tin tóm tắt 9 tháng 2024.)* Cần người mở bản cáo bạch, đối chiếu tỉ lệ và trang trích, rồi đổi st sang 'doc'. Q6 dựa trên dữ kiện này. |
+| B:in02-05 | src (Phúc Long kiosk) | Nguồn VnExpress và World Coffee Portal đang st:'tim'. Cần đọc bài gốc, xác nhận “khoảng 150 kiosk đóng nửa cuối 2022” rồi đổi sang 'doc'. |
+| B:in02-08 | Tình huống (Kido) | Đã ghi rõ KIDO’s Bakery (Kido quay lại bánh trung thu từ 2022), khác Kinh Đô của Mondelez; src Báo Đầu tư st:'tim'. Cần đọc bài và đổi st sang 'doc'. |
 | B:in03-04 | Khái niệm · Q1 | Cần người tìm một bản lưu quảng cáo 'Think Different' (1997) và một bài phân tích có ngày để gắn src; không chắc apple.com còn trang lưu chiến dịch nên không tự đặt URL. |
 | B:in03-05 | Khái niệm · Q1 | Cần người tìm bản lưu chiến dịch (P&G/Old Spice hoặc agency) và một bài phân tích có ngày về loạt video trả lời bình luận; không chắc URL chính thức nên không tự đặt. |
 | B:tp01-07 | Khái niệm | Chưa thêm src vì không chắc URL trang chính thức (Avis hoặc DDB) về chiến dịch 1962. Cần người thật: xác nhận năm 1962 và agency DDB, bổ sung src {t,u,d,st} tới tư liệu chính thức tương đương. |

@@ -294,11 +294,12 @@ BAI_ADD({ mod:'in02', lessons:[
 { id:'B:in02-06', skill:'brand', read:'6 phút', t:'Mixue lan nhanh ở Việt Nam nhờ những gì ai cũng thấy?',
   situation:'Chỉ trong thời gian ngắn, cửa hàng Mixue với biển đỏ và hình người tuyết đội vương miện xuất hiện dày đặc ở nhiều con phố. Kem và trà sữa giá thấp, đoạn nhạc ngắn về "yêu bạn" được phát lặp lại, nhiều người trẻ quay video nhảy theo. Sếp giao bạn tách case này thành các nguyên lý có thể học.',
   concept:{ name:'Bốn mảnh ghép cùng chiều: giá, nhận diện, độ phủ, cung ứng',
-    body:'Case này dễ bị tóm gọn thành "rẻ nên đông". Thực ra có bốn mảnh ghép cùng chiều: <b>giá thấp</b> hạ rào cản thử; <b>tài sản nhận diện lặp lại</b> (màu đỏ, người tuyết, đoạn nhạc) giúp nhận ra từ xa; <b>độ phủ dày</b> khiến quán luôn ở gần; và nền móng, theo thông tin công khai về mô hình của chuỗi (bài chưa gắn nguồn, người học nên tự kiểm), là <b>nhượng quyền gắn với cung ứng nội bộ</b>: hệ thống tự cung cấp nguyên liệu cho chủ cửa hàng ở quy mô lớn, nên giá thấp và mở nhanh mới khả thi. Cộng lại, chúng tạo vòng lặp: thấy nhiều → nhớ → ghé thử vì rẻ → thấy tiếp. Giới hạn: mở nhanh khó giữ chất lượng đồng đều, và chuỗi mở nhanh thường phải đóng bớt những điểm kém hiệu quả.' },
+    body:'Case này dễ bị tóm gọn thành "rẻ nên đông". Thực ra có bốn mảnh ghép cùng chiều: <b>giá thấp</b> hạ rào cản thử; <b>tài sản nhận diện lặp lại</b> (màu đỏ, người tuyết, đoạn nhạc) giúp nhận ra từ xa; <b>độ phủ dày</b> khiến quán luôn ở gần; và nền móng là <b>nhượng quyền gắn với cung ứng nội bộ</b>: theo bản cáo bạch niêm yết ở Hồng Kông (2/2025), khoảng 97% doanh thu của tập đoàn đến từ bán nguyên liệu, bao bì, thiết bị cho chủ cửa hàng, phí nhượng quyền chỉ khoảng 2%. Nhờ vậy giá thấp và mở nhanh mới khả thi. Cộng lại, chúng tạo vòng lặp: thấy nhiều → nhớ → ghé thử vì rẻ → thấy tiếp. Giới hạn: mở nhanh khó giữ chất lượng đồng đều, và chuỗi mở nhanh thường phải đóng bớt những điểm kém hiệu quả.' },
   example:'Giả sử một người đi học qua 3 cửa hàng cùng biển đỏ mỗi ngày, mỗi tuần 5 ngày → 15 lần nhìn thấy/tuần. Không cần quảng cáo, thương hiệu đã có 15 lần "nhắc tên". Kết hợp giá thấp, lần thử đầu gần như không có rủi ro. So với một quán trà sữa độc lập chỉ có 1 cửa hàng, người đó thấy 5 lần/tuần và giá gấp đôi — rào cản thử cao hơn nhiều.',
   takeaway:'Tăng trưởng nhanh thường đến từ vài mảnh ghép cùng chiều, không từ một chiêu duy nhất.',
   apply:'Chọn một chuỗi bạn thấy mở rất nhanh gần đây. Trong 60 giây, nêu ba mảnh ghép cùng chiều giúp nó lớn.',
   mistakes:['Tóm case thành một lý do duy nhất ("vì rẻ").','Chép giá thấp mà không có chuỗi cung ứng và quy mô để chịu được.'],
+  src:[{t:'Mixue Group: bản cáo bạch niêm yết HKEX (cơ cấu doanh thu bán hàng hoá, thiết bị cho cửa hàng nhượng quyền)', u:'https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0221/2025022100009.pdf', d:'2026-11-22', st:'tim'}],
   q:[
   { type:'mcq', stem:'Đoán trước: điều gì giúp người qua đường nhận ra cửa hàng Mixue từ rất xa?',
     options:[{k:'a',t:'Màu đỏ và hình người tuyết lặp lại ở các cửa hàng'},{k:'b',t:'Bảng giá ghi to trước cửa'},
@@ -368,7 +369,7 @@ BAI_ADD({ mod:'in02', lessons:[
     options:[{k:'a',t:'Giao hàng nội thành, tận dụng đúng đội tài xế và tài khoản khách đang có'},{k:'b',t:'Bán bảo hiểm xe máy theo năm ngay trong ứng dụng vì mỗi hợp đồng mang về khoản phí lớn'},
              {k:'c',t:'Đặt tour du lịch nước ngoài trọn gói cao cấp'},{k:'d',t:'Mở mạng xã hội chia sẻ ảnh cho người dùng'}],
     answer:'a', why:{a:'Đúng. Nhu cầu kề, dùng tài sản sẵn có (tài xế, khách), tần suất cao.',
-      b:'Gần hơn bảo hiểm nhân thọ nhưng chỉ mua mỗi năm một lần, tần suất rất thấp và không dùng đội tài xế.',
+      b:'Có dính tới xe máy, nhưng khách chỉ mua mỗi năm một lần, tần suất rất thấp và không dùng đến đội tài xế. Phí mỗi hợp đồng lớn không bù được việc khách không mở ứng dụng thường xuyên hơn.',
       c:'Không dùng được đội tài xế; lĩnh vực mới hoàn toàn.',
       d:'Không liên quan năng lực lõi; cạnh tranh với các nền tảng rất lớn.'} },
   { type:'calc', stem:'Giả sử một khách gọi xe 2 lần/tuần. Sau khi có đặt đồ ăn, họ đặt thêm 4 bữa/tuần. Số lần dùng ứng dụng tăng bao nhiêu phần trăm?',
@@ -402,13 +403,14 @@ BAI_ADD({ mod:'in02', lessons:[
 
 /* ------------------------------------------------------------------ 08 */
 { id:'B:in02-08', skill:'insight', read:'6 phút', t:'Bánh trung thu Kido: người mua có phải người ăn?',
-  situation:'Mỗi mùa Trung thu, các quầy bánh của Kido và nhiều hãng khác mọc lên dọc phố, bày những hộp bánh in hoa văn, có quai xách. Nhiều hộp được mua để biếu đối tác, người thân, thầy cô (quan sát chung tại quầy; không có số công khai về tỉ lệ mua biếu). Người mua cầm hộp, xem bao bì, hỏi giá — ít khi nếm thử. Bạn được giao phân tích: ai là khách hàng thật của hộp bánh?',
+  situation:'Mỗi mùa Trung thu, các quầy bánh của Kido (thương hiệu KIDO’s Bakery, Kido quay lại ngành bánh trung thu từ 2022; khác với bánh Kinh Đô, nay thuộc Mondelez) và nhiều hãng khác mọc lên dọc phố, bày những hộp bánh in hoa văn, có quai xách. Nhiều hộp được mua để biếu đối tác, người thân, thầy cô (quan sát chung tại quầy; không có số công khai về tỉ lệ mua biếu). Người mua cầm hộp, xem bao bì, hỏi giá — ít khi nếm thử. Bạn được giao phân tích: ai là khách hàng thật của hộp bánh?',
   concept:{ name:'Người mua, người duyệt, người ăn và dịp mua',
     body:'Với quà biếu, <b>người mua</b> và <b>người ăn</b> thường khác nhau; với đơn doanh nghiệp còn thêm <b>người duyệt</b>. Mỗi người lo một thứ: người mua lo hộp tươm tất, giao đúng hạn, có hoá đơn; người duyệt lo giá nằm trong ngân sách quà và thương hiệu đủ quen để không phải giải thích; người ăn lo vị bánh. Quảng cáo chỉ nói về vị là nói với người ít quyết định nhất. Sản phẩm mùa vụ như bánh trung thu còn gắn với <b>dịp</b>: bán trong vài tuần, nên có mặt đúng lúc quan trọng không kém chất lượng.' },
   example:'Giả sử (minh hoạ) phòng hành chính một công ty mua 40 hộp bánh biếu đối tác, mỗi hộp 550.000đ, tổng 22 triệu. Nhân viên hành chính là người mua: lo giao đúng hạn, có hoá đơn. Trưởng phòng là người duyệt: lo giá nằm trong ngân sách quà và thương hiệu quen để khỏi bị hỏi. Đối tác nhận hộp mới là người ăn. Một thông điệp "nhân thơm ngon" chỉ chạm người cuối cùng. Hãng cần ba thông điệp riêng: giao hẹn và hoá đơn cho người mua, mức giá theo hạng quà cho người duyệt, vị bánh cho người ăn.',
   takeaway:'Với quà biếu, hãy nói với người mua điều họ lo, không chỉ nói với người ăn điều họ thích.',
   apply:'Nghĩ về một món quà bạn từng mua biếu. Trong 60 giây, nói: bạn chọn dựa trên gì, và người nhận quan tâm điều gì.',
   mistakes:['Chỉ quảng cáo hương vị khi người quyết định mua là người không ăn.','Chuẩn bị muộn cho sản phẩm mùa vụ, lỡ đúng giai đoạn khách chọn mua.'],
+  src:[{t:'Báo Đầu tư: Cuộc đua ngành hàng bánh trung thu của Kido và Mondelez Kinh Đô', u:'https://baodautu.vn/cuoc-dua-nganh-hang-banh-trung-thu-cua-kido-va-mondelez-kinh-do-d222037.html', d:'2026-11-22', st:'tim'}],
   q:[
   { type:'mcq', stem:'Đoán trước: khi chọn hộp bánh trung thu để biếu sếp, người mua thường quan tâm điều gì nhất?',
     options:[{k:'a',t:'Thành phần dinh dưỡng chi tiết của từng loại nhân'},{k:'b',t:'Nguồn gốc xuất xứ của hạt sen trong nhân'},

@@ -341,7 +341,7 @@ Vì sao đây là điểm rơi:
 
 ## Nhật ký sửa nhóm A và B (22/11/2026)
 
-`BAI_V` 31 → 32. Validator: 0 lỗi; 18 cảnh báo, đúng bằng danh sách trước khi sửa. Test: gốc 192/192, API 49/49. `bank.json` đã dựng lại (5.721 câu). Chưa commit.
+`BAI_V` 31 → 32. Validator: 0 lỗi; 18 cảnh báo, đúng bằng danh sách trước khi sửa. Test: gốc 192/192, API 49/49. `bank.json` đã dựng lại (5.721 câu). Đã commit ở 7d7718f.
 
 | Mã | Bài | Đã sửa |
 |---|---|---|
@@ -360,3 +360,43 @@ Vì sao đây là điểm rơi:
 | B4 | kn06-05 | Tệp bám đuổi đổi từ 2.000 lên 20.000 người, tỉ lệ mua 0,28% và 0,2%. CPA tăng thêm vẫn khoảng 429.000đ, các câu tính giữ đáp án. Thêm phép kiểm tần suất (khoảng 5 lần/tuần). |
 
 **Còn chờ người duyệt:** mục D (Nghị định 330/2026, mốc 50 sự kiện, nguồn in02-06, Kido/Kinh Đô). Nguồn của in02-05 đang ở trạng thái `tim` (mới thấy qua kết quả tìm kiếm); cần đọc bài gốc rồi chuyển sang `doc`.
+
+## Nhật ký sửa nhóm C, D, E (22/11/2026)
+
+`BAI_V` 32 → 33. Validator: 0 lỗi, 18 cảnh báo (không đổi). Test: gốc 192/192, API 49/49. `bank.json` đã dựng lại (5.721 câu). Chưa commit.
+
+**Nhóm E (biên tập)**
+
+| Mã | Bài | Đã sửa |
+|---|---|---|
+| E1 | tp01-08 Q4 | "Bếp không dời được" thành "Khách sạn không dời được, cách âm cả toà thì quá tốn kém". |
+| E2 | tp01-09 | Khái niệm, ví dụ, câu 3 và quy tắc mã hoá ở Đào sâu cùng đếm **cả hai vế** (cho ai và khác gì). Chỉ nói một vế thì ghi riêng. Con số 46/200 = 23% giữ nguyên, nay khớp định nghĩa. |
+| E3 | in02-07 Q6 | Lời giải phương án b bỏ câu "bảo hiểm nhân thọ" lạc đề, nói thẳng vì sao bảo hiểm xe máy không hợp. |
+| E4 | dl02-03 (bài thực hành, `tasks-b.js`) | Đề ghi "300 đơn của 300 khách mua lần đầu (lọc theo số điện thoại, mỗi người một đơn)", khớp rubric "chia cho 300 khách mới". |
+
+**Nhóm D (chuyển cho người duyệt)**
+
+- Đã thêm vào `HUMAN-REVIEW-QUEUE.md`: qc04-04 (Nghị định 330/2026), kn06-08 (mốc 50 sự kiện/7 ngày), in02-05 (nguồn kiosk Phúc Long).
+- in02-06: đã có nguồn. Thêm `src` là bản cáo bạch HKEX của Mixue, `st:'tim'`. Bỏ câu "bài chưa gắn nguồn", ghi số cụ thể: khoảng 97% doanh thu đến từ bán hàng hoá và thiết bị cho cửa hàng, phí nhượng quyền khoảng 2%. Vẫn cần người đọc bản gốc.
+- in02-08: ghi rõ là KIDO’s Bakery (Kido quay lại ngành bánh trung thu từ 2022), khác với bánh Kinh Đô nay thuộc Mondelez. Thêm `src` Báo Đầu tư, `st:'tim'`.
+
+**Nhóm C (hoà giải mâu thuẫn: mỗi cặp có câu phân định ở cả hai bài)**
+
+| Mã | Bài | Đã sửa |
+|---|---|---|
+| C1 | tu02-02 | Thêm phản ví dụ: so tuần trước với tuần sau chỉ là giả thuyết. Ước nhiễu khoảng ±20 đơn, nên 60→52 nằm trong nhiễu. Dời một nấc vẫn hợp lý vì là cược nhỏ, rút lại được; muốn chắc thì làm nhóm đối chứng như qc02-08. Thêm lỗi hay gặp và `rel` sang qc02-08. |
+| C1 | qc02-08 | Ví dụ nói rõ 6 triệu/tuần chi ở vùng thử, Meta báo 40 đơn ở vùng đó. Đào sâu mở đầu bằng khoảng sai số: 20 ± 15 đơn/tuần, đầu tốt nhất CPA tăng thêm ≈ 170.000đ, tức ngang hoà vốn. Kết luận "không dồn thêm" vẫn đứng, còn 300.000đ chỉ là ước lượng giữa. Q2 lời giải d bỏ chữ "đã rõ". |
+| C2 | kh04-01 | Khái niệm phân vai: khách **kể ra** dữ kiện, marketer **ghép** thành động cơ. Q5 phương án a nói nhẹ lại ("dễ nghe được"), lời giải trỏ sang kh04-09. |
+| C2 | kh04-09 | Phần kiểm chứng thêm: lời kể là dữ kiện, câu insight là động cơ ghép lại, không chép nguyên một lời kể. |
+| C3 | kh04-04 Q7 | Lời giải a: "đúng quá" là tín hiệu, không phải bằng chứng (trỏ kh04-03), nhưng 70% là tín hiệu mạnh. Nên nghi bước gần chỗ hỏng nhất trước. |
+| C3 | kh04-03 | Thêm Đào sâu nối insight với hành vi: hai tiêu đề hoặc trang đích chạy cùng ngân sách, so tỉ lệ mua hoặc để lại số; trong phỏng vấn thì hỏi về lần gần nhất khách thật sự làm vậy. Thêm một lỗi hay gặp. |
+| C4 | gt06-01 | Câu hỏi "đòn bẩy rẻ nhất" giới hạn lại thành "ngắn hạn, mỗi đơn". Đào sâu đặt cạnh quan điểm Sharp: tăng trưởng qua nhiều quý cần dòng khách mới. |
+| C4 | tp01-05 | Đào sâu thêm câu phân định với gt06-01: định vị sắc để kéo người mua mới, nhưng không cắt kênh với khách cũ. |
+| C5 | dl03-10 | Thêm Đào sâu "ba quy tắc, một câu hỏi". (1) Quy tắc biên quyết định có chi thêm không: CAC biên < LTV tương đương ROAS biên > hoà vốn; khi khách mua lại thì dùng bản theo khách. (2) LTV/CAC trung bình 3 là kiểm sức khoẻ. (3) Hoàn vốn là giới hạn tiền mặt. Dừng ở điểm sớm nhất. Đây là phương án thay cho việc viết một bài tổng hợp mới. |
+| C5 | dl02-04, dl02-07 | Mỗi bài thêm một câu: mốc 3 không phải quy tắc dừng, nên dừng sớm hơn điểm CAC biên = LTV một chút. Cả hai trỏ sang dl03-10. |
+| C6 | tp01-05 | Phần thân ví dụ nói rõ phép tính một phần ba là theo doanh thu, quyết định phải chấm bằng lãi gộp (Đào sâu ra 50%). Q3 thêm bước nhắc điều này; đáp án 33,3 giữ nguyên. |
+| C6 | gt06-06 | Khái niệm: mức sàn 38% phải do chủ duyệt vì nó hoãn mục tiêu 45%. Đào sâu thêm con số bằng đồng: lãi gộp 1.248.000 so với 1.000.000 đồng, tức biên giảm còn 38,4% nhưng lãi tăng 25%. |
+| C6 | gt06-09 | Khái niệm: trần chi phí mỗi đơn có hai nguồn (ngân sách và lãi gộp mỗi đơn), lấy mức thấp hơn. Ví dụ gọi 50.000đ là trần ngân sách, có giả định lãi gộp để thấy đó là trần dùng được. |
+
+**Còn mở:** chưa viết bài tổng hợp riêng cho ba quy tắc dừng (đã gộp vào Đào sâu dl03-10). Các nguồn `st:'tim'` (in02-05, in02-06, in02-08) cần người đọc bản gốc. Quy tắc 1 (bài nào cũng có đầu ra, Hồ sơ shop) chưa bắt đầu.
+
