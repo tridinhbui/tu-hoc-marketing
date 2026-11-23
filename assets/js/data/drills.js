@@ -12,6 +12,7 @@ const ERRORS = {
   LTV_TINH_DOANH_THU:      'Tính LTV bằng doanh thu thay vì lãi gộp',
   RETENTION_TUYEN_TINH:    'Trừ tỉ lệ rời bỏ theo đường thẳng',
   GIAM_GIA_QUEN_BIEN:      'Quên rằng giảm giá ăn vào biên lợi nhuận',
+  PHI_PHAN_TRAM_COI_CO_DINH: 'Coi phí sàn tính theo % giá bán là chi phí cố định',
   QUEN_CHI_PHI_BIEN_DOI:   'Quên chi phí biến đổi khi tính hoà vốn',
   NHAM_GIA_VON:            'Chia cho giá vốn thay vì phần đóng góp',
   ROAS_LA_LOI_NHUAN:       'Coi doanh thu trừ quảng cáo là lợi nhuận',

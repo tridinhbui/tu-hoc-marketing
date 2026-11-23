@@ -118,7 +118,7 @@ BAI_ADD({ mod:'qc02', lessons:[
     options:[{k:'a',t:'Trang đích chắc chắn có lỗi, cần sửa ngay trong hôm nay'},{k:'b',t:'CTR chắc chắn cũng giảm theo, nên đổi luôn video cho chắc'},
              {k:'c',t:'Có thể chỉ là nhiễu do ít đơn; xem thêm một tuần hoặc gộp hai tuần'},{k:'d',t:'Tăng ngân sách gấp đôi để CVR quay về mức 2% như tuần trước'}],
     answer:'c', why:{a:'Với 12 đơn, chênh 2–3 đơn đủ tạo ra mức giảm này; chưa có bằng chứng trang lỗi.',
-      b:'CVR và CTR là hai thừa số độc lập; một cái đổi không kéo cái kia.',
+      b:'CVR giảm không có nghĩa CTR giảm. Hai thừa số này có liên quan với nhau (video giật tò mò thường làm CTR tăng mà CVR giảm), nên cần mở báo cáo CTR ra xem, không suy ra được. Đổi video khi chưa biết lỗi nằm ở đâu là đoán mò.',
       c:'Đúng. Số nhỏ dao động mạnh; gộp kỳ dài hơn trước khi kết luận.',
       d:'Ngân sách không quyết định CVR; tăng tiền không sửa được trang.'} },
   { type:'mcq', stem:'Gộp 5 chiến dịch lại, CPA tổng chỉ tăng 8%. Vì sao vẫn nên tách CPA từng chiến dịch?',

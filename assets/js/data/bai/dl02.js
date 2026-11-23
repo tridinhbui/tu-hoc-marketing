@@ -242,7 +242,7 @@ BAI_ADD({ mod:'dl02', lessons:[
     answer:'b', why:{a:'Tỉ lệ bỏ qua thời gian; tiền về sau 3 năm rủi ro hơn và giam vốn lâu hơn.',
       b:'Đúng. Cùng tỉ lệ, nhưng tiền về sớm thì quay vòng được sớm.',
       c:'Gắn bó lâu là tốt, nhưng cùng tổng lãi mà về chậm hơn thì kém hơn về dòng tiền.',
-      d:'Dữ kiện không nói gì về CAC của hai kênh; cùng tỉ lệ 3 thì lời trên mỗi khách tương đương.'} },
+      d:'Dữ kiện không nói gì về CAC của hai kênh; và cùng tỉ lệ cũng không có nghĩa là cùng số tiền lời: CAC 100.000đ với LTV 300.000đ lời 200.000đ mỗi khách, còn CAC 500.000đ với LTV 1,5 triệu lời 1 triệu.'} },
   { type:'mcq', stem:'Thương hiệu mới hoạt động 5 tháng. LTV 900.000đ là ước tính cho 2 năm dựa trên đường cong giữ chân giả định. Rủi ro lớn nhất khi dựa vào tỉ lệ 3 để tăng mạnh quảng cáo là gì?',
     options:[{k:'a',t:'LTV ước tính có thể quá lạc quan, nên cần đối chiếu với lãi gộp đã thu thật'},{k:'b',t:'CAC sẽ tự giảm khi chi nhiều hơn, nên rủi ro chủ yếu là chi quá ít'},
              {k:'c',t:'Tỉ lệ 3 là mốc thấp nhất cho phép, nên chưa có rủi ro nào đáng kể'},{k:'d',t:'Khách mới thường mua nhiều hơn dự kiến, nên LTV chỉ có thể cao hơn'}],

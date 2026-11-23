@@ -100,7 +100,7 @@ BAI_ADD({ mod:'gt06', lessons:[
              {k:'c',t:'Chưa SMART vì thiếu tên người phụ trách, nên phải viết lại từ đầu'},{k:'d',t:'Nên đổi sang tăng lượt truy cập vì truy cập là gốc của đơn hàng'}],
     answer:'a', why:{a:'Đúng. Mỗi điểm phần trăm bỏ giỏ giảm được là đơn hàng từ người đã có ý định mua.',
       b:'Nhắc giỏ hàng, phí ship rõ ràng, thanh toán gọn đều tác động được tỉ lệ này.',
-      c:'SMART không yêu cầu tên người phụ trách; mục tiêu này đã đủ các chữ.',
+      c:'Bản SMART gốc (Doran, 1981) có chữ A là Assignable, tức có yêu cầu ghi rõ ai phụ trách; nhiều bản sau đổi A thành Achievable. Thiếu tên người thì chỉ cần thêm một dòng phân công, không phải viết lại mục tiêu, và cũng không làm mục tiêu mất ý nghĩa.',
       d:'Thêm truy cập mà 70% vẫn bỏ giỏ thì tốn tiền kéo người vào rồi để rơi.'} },
   { type:'mcq', stem:'Vì sao follower hay được chọn làm mục tiêu dù không nối chắc về doanh thu?',
     options:[{k:'a',t:'Vì follower là thứ báo trước doanh thu sát nhất'},{k:'b',t:'Vì nền tảng buộc báo follower mỗi chiến dịch'},
